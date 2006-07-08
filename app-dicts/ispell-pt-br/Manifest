@@ -1,4 +1,17 @@
-MD5 d29f9651d5ae55becc94bbe47aa1481c ChangeLog 1578
+DIST br.ispell-2.4.tar.gz 125359
+DIST ispell-pt-br-2.4-palavras-gentoo.diff.bz2 14630
+EBUILD ispell-pt-br-2.4-r2.ebuild 1079 RMD160 4e31e94decad9f964a845a9e3b45a1cc40a1dc21 SHA1 af1dd185a7d4e606b6c85a3dc9918f0a214f935e SHA256 f3a2e4eb3b3552a814228e7f698b2e2be4c61577d7735e6f83d35ecdab88de7d
 MD5 7f80df15974d508ee2e2955e16fd2f4c ispell-pt-br-2.4-r2.ebuild 1079
+RMD160 4e31e94decad9f964a845a9e3b45a1cc40a1dc21 ispell-pt-br-2.4-r2.ebuild 1079
+SHA256 f3a2e4eb3b3552a814228e7f698b2e2be4c61577d7735e6f83d35ecdab88de7d ispell-pt-br-2.4-r2.ebuild 1079
+MISC ChangeLog 1578 RMD160 ff6e31ae2846a92da5c2b6b7c3fb250031c239c8 SHA1 4db712b17578190de6c7c29950da2d9dda861a36 SHA256 ebe2c3f8dd79180fcf9ec2ddc58a7cdcd3e90b15c19fc97832eb60c91ea345dd
+MD5 d29f9651d5ae55becc94bbe47aa1481c ChangeLog 1578
+RMD160 ff6e31ae2846a92da5c2b6b7c3fb250031c239c8 ChangeLog 1578
+SHA256 ebe2c3f8dd79180fcf9ec2ddc58a7cdcd3e90b15c19fc97832eb60c91ea345dd ChangeLog 1578
+MISC metadata.xml 162 RMD160 853d3c463af1132de9d434e4bdca16fd81a21eb0 SHA1 0d9e341c4b61e23adc1f3806989a0236b83257a0 SHA256 9629e7723cb4708c1910c25510cd14da2729d34eed4ebfc1563df4a1ed5e1b22
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
+RMD160 853d3c463af1132de9d434e4bdca16fd81a21eb0 metadata.xml 162
+SHA256 9629e7723cb4708c1910c25510cd14da2729d34eed4ebfc1563df4a1ed5e1b22 metadata.xml 162
 MD5 88b5e833fcd1949a6d905e6d9e89ee82 files/digest-ispell-pt-br-2.4-r2 150
+RMD160 67366cb1d75dfb921a4d887e0348402e08255505 files/digest-ispell-pt-br-2.4-r2 150
+SHA256 9b3a313c7617bcfb6d5d0b1079d5856634957446ddee8bafaad34fb738e9f6ac files/digest-ispell-pt-br-2.4-r2 150

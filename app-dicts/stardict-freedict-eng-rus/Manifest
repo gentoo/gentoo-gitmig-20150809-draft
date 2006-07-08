@@ -1,14 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST stardict-dictd_www.freedict.de_eng-rus-2.4.2.tar.bz2 52290
+EBUILD stardict-freedict-eng-rus-2.4.2.ebuild 507 RMD160 d3e3f6ce8e56f50152131182303d59c13e469eb1 SHA1 4250a99c4439fcc52e1257090c663fbd80b6519d SHA256 fda40f4cd5bb253f14e8556b32f06f103c3de4c19a2e9d8ba7972d5cf64fc5f4
 MD5 d9ced8bcefd64e221e23b6aaefdae90d stardict-freedict-eng-rus-2.4.2.ebuild 507
+RMD160 d3e3f6ce8e56f50152131182303d59c13e469eb1 stardict-freedict-eng-rus-2.4.2.ebuild 507
+SHA256 fda40f4cd5bb253f14e8556b32f06f103c3de4c19a2e9d8ba7972d5cf64fc5f4 stardict-freedict-eng-rus-2.4.2.ebuild 507
+MISC ChangeLog 1086 RMD160 1e1b325a5ef1d42a82772b4f6d7e89c83eb8eaa7 SHA1 e386ebfadc28db40cada1021130238fae4ee86dc SHA256 92101e6231f4f2a1ee8ac286db5b94b9bfca1f76d8548467ba727613724e31d2
 MD5 4978d67775b4366257425bc0706e9425 ChangeLog 1086
+RMD160 1e1b325a5ef1d42a82772b4f6d7e89c83eb8eaa7 ChangeLog 1086
+SHA256 92101e6231f4f2a1ee8ac286db5b94b9bfca1f76d8548467ba727613724e31d2 ChangeLog 1086
+MISC metadata.xml 219 RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 SHA1 aad05fa7d0ab2c9304502d4843d10f775afad2a8 SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
+SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
 MD5 45ada7b06ecef8d07eeaea69121c979e files/digest-stardict-freedict-eng-rus-2.4.2 96
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDLsMkKRy60XGEcJIRAmxAAKCWLLhGaY1m2hWjDlbLMPNl6IaBawCeMIR2
-wIrNBCbvyseCJY/HADZLhSo=
-=QCdK
------END PGP SIGNATURE-----
+RMD160 cc40534fd4deeaf7e70779b5a174d08744916449 files/digest-stardict-freedict-eng-rus-2.4.2 96
+SHA256 ef9a07cb3d8f50b701b0e391d547a00b5c8a5c988b0d30f4a25f58c521b0d556 files/digest-stardict-freedict-eng-rus-2.4.2 96

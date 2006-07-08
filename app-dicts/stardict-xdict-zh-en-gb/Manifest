@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+DIST stardict-xdict-ce-gb-2.1.0.tar.bz2 2582127
+DIST stardict-xdict-ce-gb-2.4.2.tar.bz2 2438365
+EBUILD stardict-xdict-zh-en-gb-2.1.0.ebuild 370 RMD160 e724ef484740e726cc419ec5cc1987dad8ff77a7 SHA1 58dc9354993250f939f9cb4d570afa242010384f SHA256 71bbd80988d477bea10a22fe6bd85953a121ef9069450087ccf4b40a4008ce9e
 MD5 fd2adc10c4e0f17fa9ca20a0b8df1a66 stardict-xdict-zh-en-gb-2.1.0.ebuild 370
+RMD160 e724ef484740e726cc419ec5cc1987dad8ff77a7 stardict-xdict-zh-en-gb-2.1.0.ebuild 370
+SHA256 71bbd80988d477bea10a22fe6bd85953a121ef9069450087ccf4b40a4008ce9e stardict-xdict-zh-en-gb-2.1.0.ebuild 370
+EBUILD stardict-xdict-zh-en-gb-2.4.2.ebuild 510 RMD160 18ad2141747428ce9e679ee2fa9647f6fc6e12ef SHA1 70c72999ee2c0adb57f13c2a8dda7b2b68770944 SHA256 2fd32478c12030abaf49f3906e44a236bcd391fdc6e725d11c4911082e1d9fb3
 MD5 13e07fbecc7fa6f7a9b4c4fe660cea96 stardict-xdict-zh-en-gb-2.4.2.ebuild 510
-MD5 a2351235ac3573cc2d61c384874430d4 metadata.xml 221
+RMD160 18ad2141747428ce9e679ee2fa9647f6fc6e12ef stardict-xdict-zh-en-gb-2.4.2.ebuild 510
+SHA256 2fd32478c12030abaf49f3906e44a236bcd391fdc6e725d11c4911082e1d9fb3 stardict-xdict-zh-en-gb-2.4.2.ebuild 510
+MISC ChangeLog 855 RMD160 26e060c9923f1ff4c4c235250b30b2930d7c5aee SHA1 784a4fa776930ee55768de7ae0f35405805ac3bf SHA256 0cad683a492e1dc3a4565ae3828685f3d4c439e7994addb0ee538367ecf24d45
 MD5 305dd577db3e674b16da81a63240a8b6 ChangeLog 855
+RMD160 26e060c9923f1ff4c4c235250b30b2930d7c5aee ChangeLog 855
+SHA256 0cad683a492e1dc3a4565ae3828685f3d4c439e7994addb0ee538367ecf24d45 ChangeLog 855
+MISC metadata.xml 221 RMD160 90f3698c29bec2ca3c3fced8e7b7f0bd18b4a050 SHA1 fb2b2c0ad00bfe8d7bd38a83d10b2db92e550769 SHA256 83ce5769df6ad434e554ae009a8c16bef3e37aa07f6ca0b8c44b365a0b293cd2
+MD5 a2351235ac3573cc2d61c384874430d4 metadata.xml 221
+RMD160 90f3698c29bec2ca3c3fced8e7b7f0bd18b4a050 metadata.xml 221
+SHA256 83ce5769df6ad434e554ae009a8c16bef3e37aa07f6ca0b8c44b365a0b293cd2 metadata.xml 221
 MD5 14b0aab475ae7681faa653935b2e45dc files/digest-stardict-xdict-zh-en-gb-2.1.0 80
+RMD160 753777e37e1b2d2ec8526929aaeb67525429100b files/digest-stardict-xdict-zh-en-gb-2.1.0 80
+SHA256 6148a511b0befbc77a6b5fddf211317a8824f214cff9fd483b132693bfe5c13d files/digest-stardict-xdict-zh-en-gb-2.1.0 80
 MD5 888e2a6b07424ff0a0be4ece9a1a24a6 files/digest-stardict-xdict-zh-en-gb-2.4.2 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC79h0KRy60XGEcJIRAq5PAJ0YfBDCiMSj85O5Jj7VPfWrJK8aDwCeOIVK
-q1AI6UP0QmzNNSoNK9wFzMA=
-=WZPg
------END PGP SIGNATURE-----
+RMD160 64a963301e1442b45a5c6a1842f8359789ed0995 files/digest-stardict-xdict-zh-en-gb-2.4.2 80
+SHA256 d87f63d9ca6b3614ca91fa5d1fa86c70fd6bdbdc0aef959268ba1b631fcd69bb files/digest-stardict-xdict-zh-en-gb-2.4.2 80

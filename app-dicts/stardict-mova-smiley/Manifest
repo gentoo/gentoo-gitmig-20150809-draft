@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+DIST stardict-dictd_www.mova.org_smiley-2.1.0.tar.bz2 3611
+DIST stardict-dictd_www.mova.org_smiley-2.4.2.tar.bz2 3625
+EBUILD stardict-mova-smiley-2.1.0.ebuild 370 RMD160 77e83139a8a8d020e6d62d8dbd271a753bad6100 SHA1 f282c71468fa1081bc5d3752dbe8838b05b4c9b2 SHA256 22e766ddfe017cb43c59b8fdbd3e2e890bb739259d52e6d76aa4c1048cedaea0
 MD5 d87f293521a91d54691a1d2115ceb199 stardict-mova-smiley-2.1.0.ebuild 370
+RMD160 77e83139a8a8d020e6d62d8dbd271a753bad6100 stardict-mova-smiley-2.1.0.ebuild 370
+SHA256 22e766ddfe017cb43c59b8fdbd3e2e890bb739259d52e6d76aa4c1048cedaea0 stardict-mova-smiley-2.1.0.ebuild 370
+EBUILD stardict-mova-smiley-2.4.2.ebuild 523 RMD160 33a6da289f09d27df9272fb06113573697c5d0aa SHA1 1141a6ad059d0f492fd756d301a78265560dbdea SHA256 2b833d797521426d5b977f28a4967a7b7e713a9f8d8b0887a5193598ca660700
 MD5 319dfde7144afff1b0f4e15a9eeb1eea stardict-mova-smiley-2.4.2.ebuild 523
+RMD160 33a6da289f09d27df9272fb06113573697c5d0aa stardict-mova-smiley-2.4.2.ebuild 523
+SHA256 2b833d797521426d5b977f28a4967a7b7e713a9f8d8b0887a5193598ca660700 stardict-mova-smiley-2.4.2.ebuild 523
+MISC ChangeLog 817 RMD160 8ae354ed04c179fedda2432682956546da467777 SHA1 6c5bf374af777a022c77ef1d29876f5a90f51532 SHA256 02849d62df6e4dd542f4d0edfbbb70ea6e6a387e01f821fa1a5db56998c7f129
 MD5 f26a85426bf0f777fdfbfe6cb4fd1236 ChangeLog 817
-MD5 ba057ab39426665e45b0c2629780bf1b files/digest-stardict-mova-smiley-2.4.2 91
+RMD160 8ae354ed04c179fedda2432682956546da467777 ChangeLog 817
+SHA256 02849d62df6e4dd542f4d0edfbbb70ea6e6a387e01f821fa1a5db56998c7f129 ChangeLog 817
+MISC metadata.xml 219 RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 SHA1 aad05fa7d0ab2c9304502d4843d10f775afad2a8 SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
+SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
 MD5 452e63b96be090bbf095d7eeafd5f1a2 files/digest-stardict-mova-smiley-2.1.0 91
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC79ZeKRy60XGEcJIRApdXAJ0d1JoEEAMiML9VLdZJx7+13yCv5gCgjtm5
-dY89KoIEm7JaH1jjAMVxfHI=
-=ow4H
------END PGP SIGNATURE-----
+RMD160 c8c84896d93a712394fd3def0dba81d1aabb9ceb files/digest-stardict-mova-smiley-2.1.0 91
+SHA256 19527445b8d6e6c0370cf60e05776cefbe990c424498e995deec60118b3a51ea files/digest-stardict-mova-smiley-2.1.0 91
+MD5 ba057ab39426665e45b0c2629780bf1b files/digest-stardict-mova-smiley-2.4.2 91
+RMD160 e53695934cabaf53d65403546d96b5cb05415dba files/digest-stardict-mova-smiley-2.4.2 91
+SHA256 2cbee4a11f8a31f319f6f2c1879ab3882593c30ccd627e421a4b1be9d7fbde82 files/digest-stardict-mova-smiley-2.4.2 91

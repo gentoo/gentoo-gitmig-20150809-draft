@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 cb1a7eba6a54e2a7b4278c97c409b305 stardict-quick-jpn-eng-2.4.2.ebuild 480
+DIST stardict-quick_jpn-eng-2.1.0.tar.bz2 841378
+DIST stardict-quick_jpn-eng-2.4.2.tar.bz2 842456
+EBUILD stardict-quick-jpn-eng-2.1.0.ebuild 340 RMD160 470fee095710241f28f17be3bab86d5090488c0c SHA1 16730c50623325508b66602445985fc489af1275 SHA256 d39bc5bb8e6331549486250be6ddd27bbfe9872d0e484b9096c3d9d2a1ad3181
 MD5 9a775f0995afcc514339cc58538dbde7 stardict-quick-jpn-eng-2.1.0.ebuild 340
+RMD160 470fee095710241f28f17be3bab86d5090488c0c stardict-quick-jpn-eng-2.1.0.ebuild 340
+SHA256 d39bc5bb8e6331549486250be6ddd27bbfe9872d0e484b9096c3d9d2a1ad3181 stardict-quick-jpn-eng-2.1.0.ebuild 340
+EBUILD stardict-quick-jpn-eng-2.4.2.ebuild 480 RMD160 37794c5fffab6a08a4c9e5be81bc94415edba0f2 SHA1 1a479e7e406d717efaf364fce413bfbc763c375f SHA256 651f8f62727d2633b070c50a1107b4a6da72beede135144eb130a0b9397c2647
+MD5 cb1a7eba6a54e2a7b4278c97c409b305 stardict-quick-jpn-eng-2.4.2.ebuild 480
+RMD160 37794c5fffab6a08a4c9e5be81bc94415edba0f2 stardict-quick-jpn-eng-2.4.2.ebuild 480
+SHA256 651f8f62727d2633b070c50a1107b4a6da72beede135144eb130a0b9397c2647 stardict-quick-jpn-eng-2.4.2.ebuild 480
+MISC ChangeLog 830 RMD160 76b90d0ee81b0e31a5110f03c5cc20f9145a44a7 SHA1 f4485e4e57bcd2928640b47a2a3c4c1631c021b1 SHA256 43b692f5f2f260fdac233dc7b5d8f34bebb9081e60bdb83956ee7ce1755419ab
 MD5 1644acb9a5eb9531d60e80fa727320f3 ChangeLog 830
-MD5 25ad25daaab5f74bffcab992c654aee9 files/digest-stardict-quick-jpn-eng-2.4.2 81
+RMD160 76b90d0ee81b0e31a5110f03c5cc20f9145a44a7 ChangeLog 830
+SHA256 43b692f5f2f260fdac233dc7b5d8f34bebb9081e60bdb83956ee7ce1755419ab ChangeLog 830
+MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
 MD5 5850402e3d844d813066ab9630d749ac files/digest-stardict-quick-jpn-eng-2.1.0 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC79eCKRy60XGEcJIRAmeSAJ45Od0aT1PtnPkCVQIk78KS6vLs8wCdFWWE
-mHalg1xmdqTdukJa4cfm5R4=
-=xAxM
------END PGP SIGNATURE-----
+RMD160 045775daa7c5e5eaba6f8cd4c6fed6e8341e1442 files/digest-stardict-quick-jpn-eng-2.1.0 81
+SHA256 30e2e0ad0798901b06d28725e4aa741bc70a1d832e5c3b22ffccd5188ce298a5 files/digest-stardict-quick-jpn-eng-2.1.0 81
+MD5 25ad25daaab5f74bffcab992c654aee9 files/digest-stardict-quick-jpn-eng-2.4.2 81
+RMD160 55763d6b6b0cdf36152ff04ac449d645e4779063 files/digest-stardict-quick-jpn-eng-2.4.2 81
+SHA256 c48d5dfcce4b651191c47f74ad32a0902795fedf945eba17453dd9c830e111a4 files/digest-stardict-quick-jpn-eng-2.4.2 81

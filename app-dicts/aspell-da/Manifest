@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST new_aspell-da-1.4.50.tar.gz 416054
 DIST new_aspell-da-1.4.51.tar.gz 411125
 DIST new_aspell-da-1.4.52.tar.gz 426839
@@ -49,10 +46,3 @@ SHA256 37e50da2936dd3929797b3eeda09a2d448f1c209c8d1919c165161c38c827a1a files/di
 MD5 da5c483418bd6ac2832e566bdff7a731 files/digest-aspell-da-1.4.54 262
 RMD160 21b5e3dca4d2dca0b255a067c11b58ca0cb5ba0b files/digest-aspell-da-1.4.54 262
 SHA256 7082b5da125f94f5873f57914b4a5c144c690baa28ea9301b6371851bbda4527 files/digest-aspell-da-1.4.54 262
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEpqGUmdTrptrqvGERAiMhAJ0Q/tW2cXTfBixaEyrLllyAKHJoqwCfVENc
-SoJdCXuN44L34Xdv1QUoypI=
-=IN7I
------END PGP SIGNATURE-----

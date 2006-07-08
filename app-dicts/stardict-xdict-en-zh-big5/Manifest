@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 05a2ba1e64562459c8a20e6d90bc4af2 stardict-xdict-en-zh-big5-2.4.2.ebuild 519
+DIST stardict-xdict-big5-2.1.0.tar.bz2 3658067
+DIST stardict-xdict-ec-big5-2.4.2.tar.bz2 3565145
+EBUILD stardict-xdict-en-zh-big5-2.1.0.ebuild 376 RMD160 cf0fa9bd0dbe77ce340538b9ec1a509ceb561efc SHA1 a7ba9e181f20a9eea36fc7243309cf91888536a7 SHA256 1de3e8fa960f14b53be5221b1cd41c0cf1b33a0c213c8211d4a218271653b367
 MD5 42ae503512f70c8c85e4d9b5a39a9933 stardict-xdict-en-zh-big5-2.1.0.ebuild 376
+RMD160 cf0fa9bd0dbe77ce340538b9ec1a509ceb561efc stardict-xdict-en-zh-big5-2.1.0.ebuild 376
+SHA256 1de3e8fa960f14b53be5221b1cd41c0cf1b33a0c213c8211d4a218271653b367 stardict-xdict-en-zh-big5-2.1.0.ebuild 376
+EBUILD stardict-xdict-en-zh-big5-2.4.2.ebuild 519 RMD160 0776160e3c66d11bd6181aa547753cb7f3af4185 SHA1 a9df20ee5933d4963eb4bb06a4d4ae99e93a4f27 SHA256 a6be2c68a146284d8cd09c0989daa21344cca3eec3dec8a1dc71d4ba07cacfce
+MD5 05a2ba1e64562459c8a20e6d90bc4af2 stardict-xdict-en-zh-big5-2.4.2.ebuild 519
+RMD160 0776160e3c66d11bd6181aa547753cb7f3af4185 stardict-xdict-en-zh-big5-2.4.2.ebuild 519
+SHA256 a6be2c68a146284d8cd09c0989daa21344cca3eec3dec8a1dc71d4ba07cacfce stardict-xdict-en-zh-big5-2.4.2.ebuild 519
+MISC ChangeLog 857 RMD160 bb359c14f94fc613af9a3ebfbc00876a1eac3234 SHA1 b7b73b7bbc5018587edba2e9aa8ed24e470753bf SHA256 b6488f1b172a38ff728ce0633a469cff76dbfb21f2812f0914f0ae4d4e9346e8
 MD5 679f7aa261b41159c8d79b95069197a4 ChangeLog 857
+RMD160 bb359c14f94fc613af9a3ebfbc00876a1eac3234 ChangeLog 857
+SHA256 b6488f1b172a38ff728ce0633a469cff76dbfb21f2812f0914f0ae4d4e9346e8 ChangeLog 857
+MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
 MD5 bcde95465cd57aa1b5f9cae41b3f328b files/digest-stardict-xdict-en-zh-big5-2.1.0 79
+RMD160 e83e159041cf3335bdeb19f1b63c5e0439bc26fe files/digest-stardict-xdict-en-zh-big5-2.1.0 79
+SHA256 61c8cc555d163f130805c746ec1846b512dd63babd3db556c5610fa136aeae4b files/digest-stardict-xdict-en-zh-big5-2.1.0 79
 MD5 bc2967109d00a89bfcc7f2e008ce6330 files/digest-stardict-xdict-en-zh-big5-2.4.2 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFC79fGKRy60XGEcJIRAsY5AJ4nO1dUzeQ5eyyPL/r7KQ0zEXF+6ACfQUJL
-z4vmAHWcfXS4eKT5WCBB7uE=
-=jnpU
------END PGP SIGNATURE-----
+RMD160 d19a854aa68aeb05e4d2b066ef51b288df4f6040 files/digest-stardict-xdict-en-zh-big5-2.4.2 82
+SHA256 a39381c81b6fd2b046798716f48c4813ee20e4ee4db6c5891bbd7d16b0549fe4 files/digest-stardict-xdict-en-zh-big5-2.4.2 82

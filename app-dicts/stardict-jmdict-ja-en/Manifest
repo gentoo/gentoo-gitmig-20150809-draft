@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8fe92bebc713ce88c4986cdb4623bfbf ChangeLog 1111
-MD5 581586287dfab0a58207f95a5f53f3bf files/digest-stardict-jmdict-ja-en-2.1.1 77
-MD5 09748aeaec578627158b611dad04c541 files/digest-stardict-jmdict-ja-en-2.4.2-r1 81
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+DIST stardict-jmdict-ja-en-2.1.1.tar 4208640
+DIST stardict-jmdict-ja-en-2.4.2.tar.bz2 4017230
+EBUILD stardict-jmdict-ja-en-2.1.1.ebuild 478 RMD160 e7facd8c7f8db58b59e85e2dbd2d2a776ebd0c4f SHA1 bd622b7ecc5342456b8be0e19e3f47210b308649 SHA256 bfd8ba5ef85231a1f4811ab670a358fc23971053311bb0a0eba2698e7d7a9b86
 MD5 6c93094d777396f74793b62083ad2bcf stardict-jmdict-ja-en-2.1.1.ebuild 478
+RMD160 e7facd8c7f8db58b59e85e2dbd2d2a776ebd0c4f stardict-jmdict-ja-en-2.1.1.ebuild 478
+SHA256 bfd8ba5ef85231a1f4811ab670a358fc23971053311bb0a0eba2698e7d7a9b86 stardict-jmdict-ja-en-2.1.1.ebuild 478
+EBUILD stardict-jmdict-ja-en-2.4.2-r1.ebuild 594 RMD160 118bdc22f42a266bbeb1a074d0db2b5cb3709b89 SHA1 7d66b6e399d6189f69b572855aa6ff835c6ec318 SHA256 8288d9185f5682c1b177962dbf29aa4b9732ac2bb2e8692f3ba68fe7f9e76bc4
 MD5 69fefbe62ab2849f33d87e9d9110a8b9 stardict-jmdict-ja-en-2.4.2-r1.ebuild 594
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDz5APwnQyISwouHwRAvCQAJ9VJepyh+IehQyQNGrZ7p77AkbSMgCeOHmI
-repU5sju1Ri5qRe51SUcJ0M=
-=n0OJ
------END PGP SIGNATURE-----
+RMD160 118bdc22f42a266bbeb1a074d0db2b5cb3709b89 stardict-jmdict-ja-en-2.4.2-r1.ebuild 594
+SHA256 8288d9185f5682c1b177962dbf29aa4b9732ac2bb2e8692f3ba68fe7f9e76bc4 stardict-jmdict-ja-en-2.4.2-r1.ebuild 594
+MISC ChangeLog 1111 RMD160 b7158713d659fc2505eaad77eb953a82be42da04 SHA1 33802ad90ed78777298d6d19514c35aab46946c8 SHA256 e7021eae44d793c90cd9c90823853b17491449e1d9fa96ef31f0e08e9092a6e9
+MD5 8fe92bebc713ce88c4986cdb4623bfbf ChangeLog 1111
+RMD160 b7158713d659fc2505eaad77eb953a82be42da04 ChangeLog 1111
+SHA256 e7021eae44d793c90cd9c90823853b17491449e1d9fa96ef31f0e08e9092a6e9 ChangeLog 1111
+MISC metadata.xml 156 RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad SHA1 8ccc2b0f20743002b783b1f7b5162c71f7f54c2e SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+RMD160 8adcf0a760a605cd42501f53097ca3a1c4e8daad metadata.xml 156
+SHA256 815820f2e5866d973fafb29a8b8027d022ccea43023309b6dc294cf077598215 metadata.xml 156
+MD5 581586287dfab0a58207f95a5f53f3bf files/digest-stardict-jmdict-ja-en-2.1.1 77
+RMD160 cba5c4daefd1c20b36831abaaceeb817aab1e1a6 files/digest-stardict-jmdict-ja-en-2.1.1 77
+SHA256 dd1d544c4c139132f1d046c9a5ba2c62a7f7974651b8261cb54f0748f11a499f files/digest-stardict-jmdict-ja-en-2.1.1 77
+MD5 09748aeaec578627158b611dad04c541 files/digest-stardict-jmdict-ja-en-2.4.2-r1 81
+RMD160 48af73cb98627672e488eb388e432e0a206fd5e7 files/digest-stardict-jmdict-ja-en-2.4.2-r1 81
+SHA256 ee347e4103a2a23b6243bfeff1cfe67c0490fbc603ffbe894a89726b20576568 files/digest-stardict-jmdict-ja-en-2.4.2-r1 81
