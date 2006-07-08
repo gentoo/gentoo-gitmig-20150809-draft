@@ -208,7 +208,23 @@ java-pkg_dojar() {
 # install things.
 #
 # Example:
-#	java-pkg-regjar ${D}/opt/foo/lib/foo.jar
+#	java-pkg_regjar ${D}/opt/foo/lib/foo.jar
+#
+# WARNING:
+#   if you want to use shell expansion, you have to use ${D}/... as the for in
+#   this function will not be able to expand the path, here's an example:
+#
+#   java-pkg_regjar /opt/my-java/lib/*.jar
+#
+#   will not work, because:
+#    * the `for jar in "$@"` can't expand the path to jar file names, as they
+#      don't exist yet
+#    * all `if ...` inside for will fail - the file '/opt/my-java/lib/*.jar'
+#      doesn't exist
+#   
+#   you have to use it as:
+#
+#   java-pkg_regjar ${D}/opt/my-java/lib/*.jar
 #
 # @param $@ - jars to record
 # ------------------------------------------------------------------------------
@@ -226,7 +242,12 @@ java-pkg_regjar() {
 	for jar in "$@"; do
 		# TODO use java-pkg_check-versioned-jar
 		if [[ -e "${jar}" ]]; then
-			java-pkg_append_ JAVA_PKG_CLASSPATH	"${jar}"
+			# nelchael: we should strip ${D} in this case too, here's why:
+			# imagine such call:
+			#    java-pkg_regjar ${D}/opt/java/*.jar
+			# such call will fall into this case (-e ${jar}) and will
+			# record paths with ${D} in package.env
+			java-pkg_append_ JAVA_PKG_CLASSPATH	"${jar#${D}}"
 		elif [[ -e "${D}${jar}" ]]; then
 			java-pkg_append_ JAVA_PKG_CLASSPATH	"${jar#${D}}"
 		else
