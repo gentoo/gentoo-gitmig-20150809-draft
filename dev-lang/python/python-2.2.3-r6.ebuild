@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.5 2006/02/16 21:34:33 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r6.ebuild,v 1.6 2006/07/08 19:13:37 cardoe Exp $
 
 inherit flag-o-matic eutils python versionator
 
@@ -19,10 +19,10 @@ SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tgz
 LICENSE="PSF-2.2"
 SLOT="2.2"
 KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64"
-IUSE="berkdb bootstrap build doc gdbm ncurses readline ssl tcltk nocxx"
+IUSE="berkdb bootstrap build doc gdbm ncurses readline ssl tk nocxx"
 
 DEPEND=">=sys-libs/zlib-1.1.3
-	!build? ( 	tcltk? ( >=dev-lang/tk-8.0 )
+	!build? ( 	tk? ( >=dev-lang/tk-8.0 )
 				ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
 				berkdb? ( >=sys-libs/db-3 )
 				dev-libs/expat
@@ -62,7 +62,7 @@ src_configure() {
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
 		use readline \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
-		use tcltk \
+		use tk \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
 		use ncurses \
 			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
@@ -124,9 +124,9 @@ src_install() {
 	# with compiling things with conflicting opts later.
 	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' /usr/lib/python${PYVER}/config/Makefile
 
-	# If USE tcltk lets install idle
+	# If USE tk lets install idle
 	# Need to script the python version in the path
-	if use tcltk; then
+	if use tk; then
 		dodir /usr/lib/python${PYVER}/tools
 		cp -r "${S}/Tools/idle" "${D}/usr/lib/python${PYVER}/tools/"
 		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle.py

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.22 2005/05/28 00:55:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.1.3-r1.ebuild,v 1.23 2006/07/08 19:13:37 cardoe Exp $
 
 inherit versionator
 
@@ -16,12 +16,12 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/Python-${PV}.tgz"
 LICENSE="PSF-2.1.1"
 SLOT="2.1"
 KEYWORDS="x86 sparc alpha ia64 ppc"
-IUSE="readline tcltk berkdb"
+IUSE="readline tk berkdb"
 
 DEPEND=">=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
-	tcltk? ( >=dev-lang/tk-8.0 )"
+	tk? ( >=dev-lang/tk-8.0 )"
 
 # The dev-python/python-fchksum RDEPEND is needed to that this python provides
 # the functionality expected from previous pythons.
@@ -64,9 +64,9 @@ src_install() {
 	insinto /usr/lib/python${PYVER}/config
 	doins ${S}/Misc/Makefile.pre.in
 
-	# If USE tcltk lets install idle
+	# If USE tk lets install idle
 	# Need to script the python version in the path
-	if use tcltk; then
+	if use tk; then
 		dodir /usr/lib/python${PYVER}/tools
 		mv "${S}/Tools/idle" "${D}/usr/lib/python${PYVER}/tools/"
 		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle-${PV}.py
