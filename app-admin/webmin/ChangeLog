@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.116 2006/06/16 15:03:34 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.117 2006/07/08 16:02:06 mcummings Exp $
+
+  08 Jul 2006; Michael Cummings <mcummings@gentoo.org> webmin-1.280.ebuild:
+  Closing bug 62123 - Authen-PAM is no longer broken
 
   16 Jun 2006; Stuart Longland <redhatter@gentoo.org>
   -files/webmin-1.130-webalizer.patch, -webmin-1.170-r3.ebuild:

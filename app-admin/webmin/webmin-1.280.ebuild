@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.280.ebuild,v 1.1 2006/06/23 19:09:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.280.ebuild,v 1.2 2006/07/08 16:02:06 mcummings Exp $
 
 IUSE="apache2 postgres ssl webmin-minimal"
 
@@ -24,10 +24,9 @@ DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	 ssl? ( dev-perl/Net-SSLeay )
 	 postgres? ( dev-perl/DBD-Pg )
+	 pam? ( dev-perl/Authen-PAM )
 	 dev-perl/XML-Generator"
 
-# See bug #62123
-#	 pam? ( dev-perl/Authen-PAM )
 
 
 src_unpack() {
