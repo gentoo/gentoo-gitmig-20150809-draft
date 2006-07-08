@@ -1,0 +1,13 @@
+diff --git a/usr/dash/Kbuild b/usr/dash/Kbuild
+index 8e5184e..6e743f8 100644
+--- a/usr/dash/Kbuild
++++ b/usr/dash/Kbuild
+@@ -18,7 +18,7 @@ DEFAULT_INCLUDES := \
+ 	-I$(srctree)/$(src) -I$(objtree)/$(obj) \
+ 	-include $(srctree)/$(src)/config.h
+ 
+-EXTRA_KLIBCCFLAGS := $(DEFS) $(DEFAULT_INCLUDES) $(CPPFLAGS) $(CFLAGS)
++KLIBCCFLAGS += $(DEFS) $(DEFAULT_INCLUDES) $(CPPFLAGS) $(CFLAGS)
+ HOST_EXTRACFLAGS := $(CPPFLAGS_FOR_BUILD) $(CFLAGS_FOR_BUILD)
+ 
+ SRCS :=	alias.c arith_yylex.c cd.c error.c eval.c exec.c expand.c \

@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.25 2006/07/07 13:43:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.26 2006/07/08 16:14:01 azarah Exp $
+
+*klibc-1.4.9 (08 Jul 2006)
+
+  08 Jul 2006; Martin Schlemmer <azarah@gentoo.org>
+  +files/klibc-1.4.8-dash-flags.patch, +files/klibc-1.4.9-mips32.patch,
+  +klibc-1.4.9.ebuild:
+  Update version. Try to do something about executable stack. Add mips n32
+  patch again. Disable the stdinc patch as it seems to support
+  -fno-stack-protector.
 
 *klibc-1.4.8 (07 Jul 2006)
 
