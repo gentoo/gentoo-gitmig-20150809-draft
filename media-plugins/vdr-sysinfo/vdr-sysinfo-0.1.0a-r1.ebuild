@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/vdr-sysinfo-0.1.0a-r1.ebuild,v 1.1 2006/05/22 21:18:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sysinfo/vdr-sysinfo-0.1.0a-r1.ebuild,v 1.2 2006/07/08 19:28:42 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -18,7 +18,9 @@ DEPEND=">=media-video/vdr-1.3.7"
 
 RDEPEND="sys-apps/lm_sensors"
 
-PATCHES="${DISTDIR}/${P}-firefly-20060520.tar.bz2 ${FILESDIR}/${P}-gentoo.diff"
+PATCHES="${DISTDIR}/${P}-firefly-20060520.tar.bz2
+		${FILESDIR}/${P}-gentoo.diff
+		${FILESDIR}/${P}-gcc4.diff"
 
 VDR_CONFD_FILE="${FILESDIR}/confd-${PV}"
 
