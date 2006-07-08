@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.0.ebuild,v 1.1 2006/07/08 04:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.0.ebuild,v 1.2 2006/07/08 16:08:28 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -8,7 +8,7 @@ DESCRIPTION="ivtv driver for Hauppauge PVR PCI cards"
 HOMEPAGE="http://www.ivtvdriver.org"
 
 FW_VER_DEC="pvr_1.18.21.22254_inf.zip"
-FW_VER_ENC="pvr_2.0.24.23035.zip"
+FW_VER_ENC="pvr_2.0.43.24103_whql.zip"
 #Switched to recommended firmware by driver
 
 SRC_URI="http://dl.ivtvdriver.org/ivtv/archive/0.7.x/${P}.tar.gz
@@ -74,7 +74,7 @@ src_install() {
 	make KERNELDIR="${KERNEL_DIR}" DESTDIR="${D}" PREFIX=/usr install || die "failed to install"
 
 	insinto /lib/firmware
-	newins "${WORKDIR}"/HcwMakoA.ROM v4l-cx25840.fw
+	newins "${WORKDIR}"/DriverA2/HcwMakoC.ROM v4l-cx25840.fw
 	newins ${S}/v4l-cx2341x-init.mpg v4l-cx2341x-init.mpg
 
 	cd ${S}
