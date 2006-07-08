@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5599 2006/07/08 00:58:24 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5600 2006/07/08 01:35:35 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (07 Jul 2006)
+# Masked for testing
+# Please see bug 136250 for more details
+>=net-analyzer/snort-2.6.0
 
 # Marcelo Goes <vanquirius@gentoo.org> (07 Jul 2006)
 # Pending removal
