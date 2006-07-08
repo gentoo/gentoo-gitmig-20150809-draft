@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r2.ebuild,v 1.6 2006/07/07 21:37:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.5-r2.ebuild,v 1.7 2006/07/08 23:37:31 genstef Exp $
 
 inherit eutils nsplugins rpm versionator
 
@@ -55,6 +55,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/acroread-scim.patch
 	epatch ${FILESDIR}/acroread-low-startup-fontissue.patch
+
+	# Allow it to work with gtk+-2.10, bug 139533
+	sed -r 's:\[0-9\]\\:[0-9]*\\:' -i bin/acroread
 }
 
 src_install() {
