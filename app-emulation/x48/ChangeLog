@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x48
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.8 2006/05/16 18:17:01 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.9 2006/07/08 08:04:29 corsair Exp $
+
+  08 Jul 2006; Markus Rothe <corsair@gentoo.org> x48-0.4.3-r1.ebuild:
+  Stable on ppc64
 
   11 May 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   x48-0.4.3-r1.ebuild:

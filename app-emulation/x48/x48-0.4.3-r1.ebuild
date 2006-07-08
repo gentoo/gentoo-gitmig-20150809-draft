@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.10 2006/05/16 18:17:01 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/x48-0.4.3-r1.ebuild,v 1.11 2006/07/08 08:04:29 corsair Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/x48/${P}.tar.gz
 LICENSE="|| ( ( GPL-2 free-noncomm ) GPL-2 )"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 ~sparc ~ppc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="|| ( ( x11-libs/libXext x11-libs/libX11 ) virtual/x11 )"
