@@ -35,6 +35,7 @@ lm_sensors
 firebird
 qdbm
 fftw
+netjack
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
