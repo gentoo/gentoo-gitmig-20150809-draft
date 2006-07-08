@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8b.ebuild,v 1.2 2006/05/14 15:09:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8b.ebuild,v 1.3 2006/07/08 14:59:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -110,7 +110,7 @@ src_compile() {
 
 src_test() {
 	# make sure sandbox doesnt die on *BSD
-	add_predict /dev/crypto
+	addpredict /dev/crypto
 
 	make test || die "make test failed"
 }
