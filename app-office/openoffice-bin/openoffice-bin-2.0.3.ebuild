@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3.ebuild,v 1.3 2006/07/07 19:58:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-2.0.3.ebuild,v 1.4 2006/07/08 16:54:39 suka Exp $
 
 inherit eutils fdo-mime rpm multilib
 
@@ -45,7 +45,7 @@ RDEPEND="!app-office/openoffice
 
 DEPEND="${RDEPEND}
 	sys-apps/findutils
-	app-admin/eselect-oodict"
+	>=app-admin/eselect-oodict-20060706"
 
 PROVIDE="virtual/ooo"
 RESTRICT="nostrip"
@@ -134,7 +134,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 
-	eselect oodict update
+	eselect oodict update --libdir $(get_libdir)
 
 	[ -x /sbin/chpax ] && [ -e /usr/lib/openoffice/program/soffice.bin ] && chpax -zm /usr/lib/openoffice/program/soffice.bin
 
