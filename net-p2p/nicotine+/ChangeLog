@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/nicotine+
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.1 2006/07/08 02:46:54 squinky86 Exp $
+
+*nicotine+-1.2.3 (08 Jul 2006)
+
+  08 Jul 2006; Jon Hood <squinky86@gentoo.org> +files/nicotine+.desktop,
+  +files/nicotine-n.png, +metadata.xml, +nicotine+-1.2.3.ebuild:
+  Initial import, fork of nicotine project, bug #139377. Ebuild by Josu Lopez
+  Fernandez <zamorate@zamorate.net>.
+
