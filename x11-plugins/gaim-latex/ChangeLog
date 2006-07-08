@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-latex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-latex/ChangeLog,v 1.6 2006/07/06 12:59:24 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-latex/ChangeLog,v 1.7 2006/07/08 21:19:29 gothgirl Exp $
+
+  08 Jul 2006; gothgirl <gothgirl@gentoo.org> gaim-latex-0.4.ebuild:
+  adjusted libdir wrt bug# 139589
 
 *gaim-latex-0.4 (06 Jul 2006)
 
