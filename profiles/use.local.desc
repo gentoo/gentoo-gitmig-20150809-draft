@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2009 2006/07/08 16:59:51 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2010 2006/07/08 21:00:41 fvdpol Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -774,7 +774,6 @@ media-sound/audacious:musepack - Build with musepack support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
-media-sound/audacity:ladspa - Enables the ability to support ladspa plugins
 media-sound/audacity:libsamplerate - Build with libsamplerate support
 media-sound/audacity:soundtouch - compile with support for soundtouch
 media-sound/banshee:daap - Build with Daap support
@@ -790,7 +789,6 @@ media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gnusound:libsamplerate - Build gnusound with support for converting sample rates using libsamplerate
 media-sound/gpodder:ipod - Build with ipod support
-media-sound/hydrogen:ladspa - Enables the ability to support ladspa plugins
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-audio-connection-kit:netjack - Build with support for Realtime Audio Transport over generic IP
@@ -799,7 +797,6 @@ media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservi
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
 media-sound/listen:ipod - Support for ipod devices via libgpod
-media-sound/mhwaveedit:ladspa - Enables the ability to support ladspa plugins
 media-sound/mhwaveedit:libsamplerate - Build with libsamplerate support
 media-sound/moc:libsamplerate - Support for libsamplerate (Sampling Conversion)
 media-sound/moc:musepack - Support for musepack (mpc) files
@@ -829,8 +826,6 @@ media-sound/rhythmbox:libnotify - support for libnotify
 media-sound/rhythmbox:musicbrainz - support for muzicbrains
 media-sound/rhythmbox:tagwriting - support for tag wriring in certian audio files
 media-sound/snd:gsl - Use the GNU scientific library for calculations
-media-sound/snd:ladspa - Enables the ability to support ladspa plugins
-media-sound/sonik:ladspa - Enables the ability to support ladspa plugin
 media-sound/timidity++:ao - Use libao for sound playback
 media-sound/zinf:corba - Enables corba interface support
 media-tv/gentoo-vdr-scripts:nvram - Add support for using nvram-wakeup to set wakeup time in bios
