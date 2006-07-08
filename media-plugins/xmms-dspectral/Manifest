@@ -1,18 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef2988ad708c30c3ad85d6d0400f2164 ChangeLog 1695
-MD5 d0e209eda595330bde03d065d31461cd xmms-dspectral-1.2.1.ebuild 968
-MD5 57318a7141783ed74f76720522302faf xmms-dspectral-1.2.ebuild 939
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 93c9a3ef8e20a698da81b9df5d6cd15e files/digest-xmms-dspectral-1.2.1 67
-MD5 165bef5a4a02af4b850331ee9f8623ea files/dspectral-v1.2.1-destdir.patch 539
-MD5 af0e88bb6fcfe3f2bcc2735d8cb75db1 files/digest-xmms-dspectral-1.2 64
+AUX dspectral-1.2-destdir.patch 491 RMD160 ad5a421e62e8bd3285907adf92368f26aa36574d SHA1 a622ac0ec5109e884caedd226a98b32b61e6fd9a SHA256 b0de50fe8b99f7351f387d09786bc55d284b929dd10b60f415ae015c5735bf62
 MD5 f16b8fdaca5d4ed44f56c5a992b661c8 files/dspectral-1.2-destdir.patch 491
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDGsuWj5H05b2HAEkRAtDKAKCfNek2S6Jt/WZE0uv0KL0Wg6XMcQCfeSwo
-gRwwJi5NW/OVjrQMrWxAjAA=
-=2fvt
------END PGP SIGNATURE-----
+RMD160 ad5a421e62e8bd3285907adf92368f26aa36574d files/dspectral-1.2-destdir.patch 491
+SHA256 b0de50fe8b99f7351f387d09786bc55d284b929dd10b60f415ae015c5735bf62 files/dspectral-1.2-destdir.patch 491
+AUX dspectral-v1.2.1-destdir.patch 539 RMD160 0b596a5fef463339c066a83894388ccc1b7372f5 SHA1 45b46a619570c32aa6e3ac08c3ebc6959e462fad SHA256 e141af130ace9f247a0dce18a830d0a70b026c9911132f53279ed545954ee5fe
+MD5 165bef5a4a02af4b850331ee9f8623ea files/dspectral-v1.2.1-destdir.patch 539
+RMD160 0b596a5fef463339c066a83894388ccc1b7372f5 files/dspectral-v1.2.1-destdir.patch 539
+SHA256 e141af130ace9f247a0dce18a830d0a70b026c9911132f53279ed545954ee5fe files/dspectral-v1.2.1-destdir.patch 539
+DIST dspectral-1.2.tar.gz 41866
+DIST dspectral-v1.2.1.tar.gz 43983
+EBUILD xmms-dspectral-1.2.1.ebuild 965 RMD160 f3a32bb62216a6a32c4ea76f6d39400d4b85fac8 SHA1 02baabc0c2371e1223a59a2caa6685a77d4f7070 SHA256 3321057dd8e7068d40db419ff72c026c8da2e45d4409351a641c33e149afe180
+MD5 fed6b3ea53f604868d99667a8ef214ba xmms-dspectral-1.2.1.ebuild 965
+RMD160 f3a32bb62216a6a32c4ea76f6d39400d4b85fac8 xmms-dspectral-1.2.1.ebuild 965
+SHA256 3321057dd8e7068d40db419ff72c026c8da2e45d4409351a641c33e149afe180 xmms-dspectral-1.2.1.ebuild 965
+EBUILD xmms-dspectral-1.2.ebuild 939 RMD160 e52edc6ef26be8df3f25c9ebc1c019c7775f5560 SHA1 ae428b8d3d2a889d3d3e3a590975347deccb03d3 SHA256 f76109a0b3b28af1f6194f1b469dc1be3a7792263790d8492bcfcd64eed5ad90
+MD5 57318a7141783ed74f76720522302faf xmms-dspectral-1.2.ebuild 939
+RMD160 e52edc6ef26be8df3f25c9ebc1c019c7775f5560 xmms-dspectral-1.2.ebuild 939
+SHA256 f76109a0b3b28af1f6194f1b469dc1be3a7792263790d8492bcfcd64eed5ad90 xmms-dspectral-1.2.ebuild 939
+MISC ChangeLog 1792 RMD160 586ce6fa2b9fce0a1206961eef7938c4ae1fb25b SHA1 0442c51a3779d95fa3d6f14e15444763b5ab65bc SHA256 a528f3b4ac8f4bf789efce124d80feda1a7420f0879c3269d3f896ca99e0e065
+MD5 0e5ccf3ac222365f6dbf2934079b4176 ChangeLog 1792
+RMD160 586ce6fa2b9fce0a1206961eef7938c4ae1fb25b ChangeLog 1792
+SHA256 a528f3b4ac8f4bf789efce124d80feda1a7420f0879c3269d3f896ca99e0e065 ChangeLog 1792
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 af0e88bb6fcfe3f2bcc2735d8cb75db1 files/digest-xmms-dspectral-1.2 64
+RMD160 16ad214014cae0b147abfac5b0efcc9f4a150358 files/digest-xmms-dspectral-1.2 64
+SHA256 4fd7e813e57f20ae6dee96fe19062b20bcc1bde7474b8ff75719f56f40d4388f files/digest-xmms-dspectral-1.2 64
+MD5 93c9a3ef8e20a698da81b9df5d6cd15e files/digest-xmms-dspectral-1.2.1 67
+RMD160 6e2d930ef56cc3d4901595130117df07a5f28191 files/digest-xmms-dspectral-1.2.1 67
+SHA256 28673b15c35ba96723c723a622ed0d3ee8e3a787f83c360c0853e827e4856d7d files/digest-xmms-dspectral-1.2.1 67
