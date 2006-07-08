@@ -1,0 +1,12 @@
+Index: pym/portage.py
+===================================================================
+--- pym/portage.py	(revision 3812)
++++ pym/portage.py	(revision 3813)
+@@ -5054,6 +5054,7 @@
+ 					writemsg("Uncaught handled exception: %(exception)s\n" % {"exception":str(e)})
+ 					raise
+ 
++			self.doebuild_settings.reset()
+ 			myret = doebuild(myebuild, "depend", "/", self.doebuild_settings,
+ 				dbkey=mydbkey, tree="porttree", mydbapi=self)
+ 			if myret:

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.202 2006/07/07 19:21:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.203 2006/07/08 00:53:14 zmedico Exp $
+
+*portage-2.1.1_pre2-r6 (08 Jul 2006)
+
+  08 Jul 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_pre2-r6.ebuild,
+  +files/depend_phase_category.patch:
+  2.1.1_pre2-r6 regression fix revbump. This fixes an issue with the ebuild
+  environment having an incorrect $CATEGORY value during the depend phase.
 
 *portage-2.1.1_pre2-r5 (07 Jul 2006)
 
