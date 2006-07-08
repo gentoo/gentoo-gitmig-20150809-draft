@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>net-im</herd>
 <herd>gnome</herd>
+<herd>net-im</herd>
 <longdescription>
 Gossip is a Gnome integrated and HIG compliant jabber messaging client.    
 </longdescription>
