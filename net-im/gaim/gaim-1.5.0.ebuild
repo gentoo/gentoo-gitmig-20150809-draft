@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.16 2006/07/08 21:48:23 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.17 2006/07/08 22:41:52 cardoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module perl-app
 
@@ -102,7 +102,8 @@ src_compile() {
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 	use eds || myconf="${myconf} --disable-gevolution"
-	use tcltk || myconf="${myconf} --disable-tcl --disable-tk"
+	use tcl || myconf="${myconf} --disable-tcl"
+	use tk || myconf="${myconf} --disable-tk"
 
 	if use gnutls ; then
 		einfo "Disabling NSS, using GnuTLS"

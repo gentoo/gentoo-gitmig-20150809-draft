@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.10 2006/07/08 21:48:23 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r1.ebuild,v 1.11 2006/07/08 22:41:52 cardoe Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-module perl-app
 
@@ -210,8 +210,8 @@ src_compile() {
 		$(use_enable perl) \
 		$(use_enable spell gtkspell) \
 		$(use_enable startup-notification) \
-		$(use_enable tcltk tcl) \
-		$(use_enable tcltk tk) \
+		$(use_enable tcl) \
+		$(use_enable tk) \
 		$(use_enable mono) \
 		$(use_enable krb4) \
 		$(use_enable debug) \
