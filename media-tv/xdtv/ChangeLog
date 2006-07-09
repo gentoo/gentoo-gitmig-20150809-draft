@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.37 2006/07/09 04:07:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.38 2006/07/09 05:36:01 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0-r1.ebuild:
+  Remove xorg-server fake depend, was an artefact produced by the first dep
+  checking scripts.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/xdtv-2.3.2-alevt-vbi.patch,
