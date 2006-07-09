@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.2.ebuild,v 1.10 2006/06/03 16:12:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.2.ebuild,v 1.11 2006/07/09 19:57:14 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -15,7 +15,7 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 	dev-lang/python
 	xmms? ( media-sound/xmms )
 	dev-libs/gmp
-	|| ( x11-libs/libXtst virtual/x11 )"
+	|| ( x11-libs/libXtst <virtual/x11-7 )"
 
 RDEPEND="${BOTH_DEPEND}
 	crypt? ( app-crypt/gnupg )
@@ -26,7 +26,7 @@ DEPEND="${BOTH_DEPEND}
 			x11-libs/libX11
 			x11-proto/xextproto
 			x11-proto/xproto
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	virtual/os-headers"
 
 src_unpack() {

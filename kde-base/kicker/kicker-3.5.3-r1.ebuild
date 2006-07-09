@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.3-r1.ebuild,v 1.1 2006/06/14 18:32:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.3-r1.ebuild,v 1.2 2006/07/09 19:50:09 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -22,7 +22,7 @@ $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 			x11-libs/libXfixes
 			x11-libs/libXrender
 			x11-libs/libXtst
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	xcomposite? ( || ( x11-libs/libXcomposite <x11-base/xorg-x11-7 ) )"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3-r1.ebuild,v 1.2 2006/07/07 14:13:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3-r1.ebuild,v 1.3 2006/07/09 19:48:39 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -27,7 +27,7 @@ BOTH_DEPEND="~kde-base/kdebase-${PV}
 		x11-libs/libXext
 		x11-libs/libXrender
 		x11-libs/libXScrnSaver
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	kernel_linux? ( virtual/opengl )"
 
 RDEPEND="${BOTH_DEPEND}
@@ -44,7 +44,7 @@ DEPEND="${BOTH_DEPEND}
 			x11-proto/xproto
 			kernel_linux? ( x11-libs/libXv )
 			x11-proto/scrnsaverproto
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	dev-util/pkgconfig"
 
 pkg_setup() {

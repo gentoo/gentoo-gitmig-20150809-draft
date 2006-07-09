@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.3.ebuild,v 1.1 2006/06/01 18:09:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.3.ebuild,v 1.2 2006/07/09 19:51:34 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -17,7 +17,7 @@ $(deprange $PV $MAXKDEVER kde-base/kdm)
 $(deprange $PV $MAXKDEVER kde-base/kcontrol)
 	xscreensaver? ( || ( (
 			x11-proto/scrnsaverproto
-			) virtual/x11 )
+			) <virtual/x11-7 )
 		)"
 	# Requires the desktop background settings module,
 	# so until we separate the kcontrol modules into separate ebuilds :-),
@@ -27,7 +27,7 @@ $(deprange 3.5.0 $MAXKDEVER kde-base/kcheckpass)
 $(deprange $PV $MAXKDEVER kde-base/kdialog)
 	xscreensaver? ( || ( (
 			x11-libs/libXScrnSaver
-			) virtual/x11 )
+			) <virtual/x11-7 )
 		)"
 
 KMCOPYLIB="libkonq libkonq/"
