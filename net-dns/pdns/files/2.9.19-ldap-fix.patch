@@ -1,9 +1,0 @@
-Index: modules/ldapbackend/powerldap.cc
-===================================================================
---- modules/ldapbackend/powerldap.cc	(revision 531)
-+++ modules/ldapbackend/powerldap.cc	(working copy)
-@@ -1,3 +1,4 @@
-+#include <pdns/utility.hh>
- #include "powerldap.hh"
- 
- 
