@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5608 2006/07/09 15:53:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5609 2006/07/09 16:58:15 mkennedy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matthew Kennedy <mkennedy@gentoo.org>
+# libecl.so linking problem
+=dev-lisp/ecls-0.9i
 
 # Diego Pettenò <flameeyes@gentoo.org> (09 Jul 2006)
 # Masked waiting for cairo-1.2.0 unmask
