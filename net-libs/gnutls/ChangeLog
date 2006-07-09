@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.95 2006/04/27 21:56:03 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.96 2006/07/09 00:52:58 kumba Exp $
+
+  09 Jul 2006; Joshua Kinard <kumba@gentoo.org> gnutls-1.2.10.ebuild:
+  Marked stable on mips.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-gnutls-1.2.3,
   files/digest-gnutls-1.2.4, files/digest-gnutls-1.2.9,
