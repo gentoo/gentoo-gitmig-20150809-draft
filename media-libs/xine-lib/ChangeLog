@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.376 2006/07/09 03:44:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.377 2006/07/09 05:23:12 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.1-r3.ebuild, xine-lib-1.1.2_pre20060328-r9.ebuild,
+  xine-lib-1.1.2_pre20060328-r11.ebuild,
+  xine-lib-1.1.2_pre20060630-r1.ebuild:
+  Remove xorg-server fake depend, was an artefact produced by the first dep
+  checking scripts.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.1-r3.ebuild, xine-lib-1.1.2_pre20060328-r9.ebuild,
