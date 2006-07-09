@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.3-r2.ebuild,v 1.3 2006/06/28 02:31:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.3-r2.ebuild,v 1.4 2006/07/09 06:01:34 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -46,7 +46,7 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 			x11-libs/libXext
 			xscreensaver? ( x11-libs/libXScrnSaver )
 			xinerama? ( x11-libs/libXinerama )
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
@@ -61,7 +61,7 @@ RDEPEND="${DEPEND}
 			x11-apps/xinit
 			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 DEPEND="${DEPEND}
 	xcomposite? ( || ( (
@@ -73,7 +73,7 @@ DEPEND="${DEPEND}
 			xscreensaver? ( x11-proto/scrnsaverproto )
 			xinerama? ( x11-proto/xineramaproto )
 			x11-apps/bdftopcf
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	dev-util/pkgconfig"
 
 PATCHES="${FILESDIR}/kdebase-startkde-3.5.3-xinitrcd.patch"

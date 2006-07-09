@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r3.ebuild,v 1.7 2006/02/12 18:38:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.2-r3.ebuild,v 1.8 2006/07/09 06:01:34 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 			x11-apps/mkfontdir
 			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	sys-apps/eject"
 
 src_unpack() {
