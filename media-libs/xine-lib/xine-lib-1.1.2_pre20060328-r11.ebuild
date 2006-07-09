@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r11.ebuild,v 1.10 2006/07/07 13:17:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2_pre20060328-r11.ebuild,v 1.11 2006/07/09 03:44:14 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -250,10 +250,10 @@ src_install() {
 
 pkg_postinst() {
 	if use win32codecs && ! use asf; then
-		einfo "You choose to build win32codecs support but disabled ASF"
-		einfo "demuxer. This way you'll have support for win32codecs in"
-		einfo "formats like AVI or Matroska, but not in WMV/WMA files."
-		einfo ""
-		einfo "To be able to play WMV/WMA files, please add asf useflag."
+		elog "You choose to build win32codecs support but disabled ASF"
+		elog "demuxer. This way you'll have support for win32codecs in"
+		elog "formats like AVI or Matroska, but not in WMV/WMA files."
+		elog ""
+		elog "To be able to play WMV/WMA files, please add asf useflag."
 	fi
 }
