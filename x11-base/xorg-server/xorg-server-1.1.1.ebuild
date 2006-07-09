@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.1 2006/07/09 06:36:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.2 2006/07/09 22:34:56 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -520,6 +520,7 @@ pkg_setup() {
 		$(use_enable kdrive)
 		$(use_enable !minimal xvfb)
 		$(use_enable !minimal xnest)
+		$(use_enable !minimal xorgcfg)
 		$(use_enable dri)
 		$(use_enable xorg)
 		$(use_enable xprint)
