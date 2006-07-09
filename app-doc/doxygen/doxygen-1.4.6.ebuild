@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.8 2006/07/03 16:01:22 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.6.ebuild,v 1.9 2006/07/09 22:56:19 nerdboy Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -105,13 +105,13 @@ src_install() {
 
 pkg_postinst() {
 
-	ewarn
+	einfo
 	einfo "The USE flags qt3, doc, and tetex will enable doxywizard, or"
 	einfo "the html and pdf documentation, respectively.  For examples"
 	einfo "and other goodies, see the source tarball.  For some example"
 	einfo "output, run doxygen on the doxygen source using the Doxyfile"
 	einfo "provided in the top-level source dir."
-	einfo ""
+	einfo
 	einfo "See the Doxygen homepage for additional language support tools."
-	ewarn
+	einfo
 }
