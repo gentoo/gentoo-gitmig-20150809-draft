@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r1.ebuild,v 1.11 2006/07/04 02:08:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvattr/xvattr-1.3-r1.ebuild,v 1.12 2006/07/09 20:11:40 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -19,13 +19,13 @@ RDEPEND="
 			x11-libs/libX11
 			x11-libs/libXv
 			x11-libs/libXext
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	gtk? (
 		=x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )"
 
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )"
+	|| ( x11-libs/libXt <virtual/x11-7 )"
 
 src_unpack() {
 	unpack ${A}
