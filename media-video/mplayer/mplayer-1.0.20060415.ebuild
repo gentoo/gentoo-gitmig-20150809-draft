@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.19 2006/07/03 18:41:14 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0.20060415.ebuild,v 1.20 2006/07/09 21:03:24 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
-	dga? ( || ( x11-libs/libXxf86dga virtual/x11 ) )
+	dga? ( || ( x11-libs/libXxf86dga <virtual/x11-7 ) )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdts )
 	dvb? ( media-tv/linuxtv-dvb-headers )
@@ -56,7 +56,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 				x11-libs/libXext
 				x11-libs/libXi
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 		=x11-libs/gtk+-2*
 		=dev-libs/glib-2*
@@ -82,7 +82,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 				x11-libs/libXxf86vm
 				x11-libs/libXext
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)
 	xmms? ( media-sound/xmms )
@@ -92,14 +92,14 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 				x11-libs/libXxf86vm
 				x11-libs/libXext
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)
-	xvmc? ( || ( x11-libs/libXvMC virtual/x11 ) )
+	xvmc? ( || ( x11-libs/libXvMC <virtual/x11-7 ) )
 	X? ( || ( ( x11-libs/libXxf86vm
 				x11-libs/libXext
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)"
 
@@ -111,24 +111,24 @@ DEPEND="${RDEPEND}
 		   dev-libs/libxslt
 		   )
 	nls? ( sys-devel/gettext )
-	dga? ( || ( x11-proto/xf86dgaproto virtual/x11 ) )
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
+	dga? ( || ( x11-proto/xf86dgaproto <virtual/x11-7 ) )
+	xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) )
 	xv? ( || ( ( x11-proto/videoproto
 				x11-proto/xf86vidmodeproto
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)
 	gtk? ( || ( ( x11-proto/xextproto
 				x11-proto/xf86vidmodeproto
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)
 	X? ( || ( ( x11-proto/xextproto
 				x11-proto/xf86vidmodeproto
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)"
 
