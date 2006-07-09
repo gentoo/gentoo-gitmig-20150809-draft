@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.4.ebuild,v 1.1 2006/07/01 05:57:50 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/mod_survey-3.2.4.ebuild,v 1.2 2006/07/09 20:40:12 rl03 Exp $
 
 inherit webapp
 
@@ -53,7 +53,7 @@ src_unpack() {
 		if ! grep -q ${LINGUAS:0:2} ${FILESDIR}/language-list.txt; then
 			ewarn "Language ${LINGUAS:0:2} is not supported, using English"
 		else
-			einfo "Using language ${LINGUAS:0:2}"
+			elog "Using language ${LINGUAS:0:2}"
 			locallang="$(grep ^${LINGUAS:0:2} ${FILESDIR}/language-list.txt)"
 			sed "s|\$lang = \"en\"|\$lang = \"${locallang}\"|" -i installer.pl
 		fi
