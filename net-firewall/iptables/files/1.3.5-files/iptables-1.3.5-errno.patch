@@ -1,0 +1,28 @@
+Index: libiptc/libiptc.c
+===================================================================
+--- libiptc/libiptc.c	(revision 6587)
++++ libiptc/libiptc.c	(revision 6588)
+@@ -2096,10 +2096,8 @@
+ 
+ 	ret = setsockopt(sockfd, TC_IPPROTO, SO_SET_REPLACE, repl,
+ 			 sizeof(*repl) + repl->size);
+-	if (ret < 0) {
+-		errno = ret;
++	if (ret < 0)
+ 		goto out_free_newcounters;
+-	}
+ 
+ 	/* Put counters back. */
+ 	strcpy(newcounters->name, (*handle)->info.name);
+@@ -2190,10 +2188,8 @@
+ 
+ 	ret = setsockopt(sockfd, TC_IPPROTO, SO_SET_ADD_COUNTERS,
+ 			 newcounters, counterlen);
+-	if (ret < 0) {
+-		errno = ret;
++	if (ret < 0)
+ 		goto out_free_newcounters;
+-	}
+ 
+ 	free(repl->counters);
+ 	free(repl);

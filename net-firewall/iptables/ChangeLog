@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.104 2006/06/12 17:08:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.105 2006/07/09 06:27:22 dragonheart Exp $
+
+*iptables-1.3.5-r3 (09 Jul 2006)
+
+  09 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/1.3.5-files/iptables-1.3.5-errno.patch, +iptables-1.3.5-r3.ebuild:
+  separated extensions patch as promised to vapier/hansmi/wolf31o2(?). Added
+  upstream patch for errnum (bug #139726) thanks to Rance Hall and upstream
+  dev Daniel
 
   12 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   iptables-1.3.5-r1.ebuild:
@@ -26,7 +34,7 @@
 
 *iptables-1.3.5-r2 (04 Jun 2006)
 
-  04 Jun 2006; Daniel Black <dragonheart@gentoo.org>  iptables-1.3.5-r2.ebuild files/digest-iptables-1.3.5-r2:
+  04 Jun 2006; Daniel Black <dragonheart@gentoo.org>  iptables-1.3.5-r2.ebuild:
   update l7-filter patch version
 
 *iptables-1.3.5-r1 (02 May 2006)
