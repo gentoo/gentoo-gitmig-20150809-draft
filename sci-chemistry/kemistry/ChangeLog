@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/kemistry
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.7 2006/06/25 19:17:41 cryos Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/ChangeLog,v 1.8 2006/07/09 18:51:05 markusle Exp $
+
+  09 Jul 2006; Markus Dittrich <markusle@gentoo.org> kemistry-0.7.ebuild:
+  Added missing dependency on aRts. This fixes bug #139681.
 
   20 Aug 2005; Olivier Fisette <ribosome@gentoo.org> kemistry-0.7.ebuild:
   Changed dependency from kdebase to kdelibs and kdesdk-misc (and

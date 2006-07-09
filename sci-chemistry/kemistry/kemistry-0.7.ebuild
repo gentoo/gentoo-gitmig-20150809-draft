@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/kemistry-0.7.ebuild,v 1.4 2005/08/20 16:44:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/kemistry/kemistry-0.7.ebuild,v 1.5 2006/07/09 18:51:05 markusle Exp $
 
+ARTS_REQUIRED="yes"
 inherit kde eutils
 
 DESCRIPTION="Kemistry--a set of chemistry related tools for KDE."
