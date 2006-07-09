@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.8.ebuild,v 1.1 2006/05/01 14:13:20 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cgiirc/cgiirc-0.5.8.ebuild,v 1.2 2006/07/09 20:35:59 rl03 Exp $
 
 IUSE=""
 
@@ -13,8 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 src_unpack() {
-	einfo "Note that file locations have changed."
-	einfo "CGI:IRC will be installed into cgi-bin/${P}"
+	elog "Note that file locations have changed."
+	elog "CGI:IRC will be installed into cgi-bin/${P}"
 	unpack ${A}
 	find ${S} -name .cvsignore -exec rm {} \;
 }
