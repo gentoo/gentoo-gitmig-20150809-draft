@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/dialign-t-0.2.1.ebuild,v 1.1 2006/02/21 20:50:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/dialign-t-0.2.1.ebuild,v 1.2 2006/07/09 07:17:23 dberkholz Exp $
 
 inherit multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://dialign-t.gobics.de/"
 SRC_URI="http://dialign-t.gobics.de/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
