@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.4.ebuild,v 1.2 2006/06/25 07:37:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.9.4.ebuild,v 1.3 2006/07/09 21:11:39 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -71,13 +71,13 @@ src_install() {
 }
 
 pkg_config() {
-	einfo "Type in your MySQL root password to create an empty tiki database:"
+	elog "Type in your MySQL root password to create an empty tiki database:"
 	mysqladmin -u root -p create tikiwiki
 }
 
 pkg_postinst() {
-	einfo "To setup a MySQL database, run:"
-	einfo "\"emerge --config =${PF}\""
-	einfo "If you are using PostgreSQL, consult your documentation"
+	elog "To setup a MySQL database, run:"
+	elog "\"emerge --config =${PF}\""
+	elog "If you are using PostgreSQL, consult your documentation"
 	webapp_pkg_postinst
 }
