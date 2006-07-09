@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wepdecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.7 2006/05/25 13:23:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepdecrypt/ChangeLog,v 1.8 2006/07/09 21:22:35 vanquirius Exp $
+
+*wepdecrypt-0.8 (09 Jul 2006)
+
+  09 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -wepdecrypt-0.6.ebuild,
+  +wepdecrypt-0.8.ebuild:
+  0.8 version bump for bug 139810. Thanks to Fernando Tarin Morales <icemanf
+  at gmail dot com>.
 
   25 May 2006; Daniel Black <dragonheart@gentoo.org>
   +files/wepdecrypt-0.7-makefile.patch, wepdecrypt-0.7.ebuild:
