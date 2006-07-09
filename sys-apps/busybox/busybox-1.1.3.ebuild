@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.3.ebuild,v 1.9 2006/07/09 02:34:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.3.ebuild,v 1.10 2006/07/09 11:18:54 solar Exp $
 
 inherit eutils
 
@@ -126,7 +126,8 @@ src_unpack() {
 
 src_compile() {
 	busybox_set_env
-	use ppc64 && CFLAGS="${CFLAGS} -mminimal-toc"
+	use ppc64 && CFLAGS="${CFLAGS} -mminimal-toc -nopie"
+	use ppc && CFLAGS="${CFLAGS} -nopie"
 	emake CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox_unstripped{,.bak}
