@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.68 2006/07/08 22:34:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.69 2006/07/09 03:03:20 chriswhite Exp $
+
+  09 Jul 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  Added no-herd for metadata.xml.
 
   08 Jul 2006; Doug Goldstein <cardoe@gentoo.org> swig-1.3.21.ebuild,
   swig-1.3.25.ebuild, swig-1.3.27.ebuild, swig-1.3.29.ebuild:
