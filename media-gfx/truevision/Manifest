@@ -1,7 +1,21 @@
-MD5 448a07f38710e8c0db557bfe9f7396f7 ChangeLog 2756
-MD5 fd3f729570328f8ed534b1490a977561 files/digest-truevision-0.3.10 226
-MD5 db96c3ee256871c2378ba6682336c31f files/digest-truevision-0.5.5.2 151
+AUX truevision-0.5.5.2-makefile-mime-magic.patch 877 RMD160 c64d93f0a3ce9caf6639ab24b9c3462c94bb791e SHA1 975e380af03c811a66f5d15b91cb826466e1ad35 SHA256 ac50eb97c85059c29d856d2ca763ac57e74989cd186cfacb3e7cd356efa8e83a
 MD5 af313393d2d89915d57517cba88c51ba files/truevision-0.5.5.2-makefile-mime-magic.patch 877
-MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
-MD5 9da200cf0cba8f50e7871458a1ae51cb truevision-0.3.10.ebuild 1121
+RMD160 c64d93f0a3ce9caf6639ab24b9c3462c94bb791e files/truevision-0.5.5.2-makefile-mime-magic.patch 877
+SHA256 ac50eb97c85059c29d856d2ca763ac57e74989cd186cfacb3e7cd356efa8e83a files/truevision-0.5.5.2-makefile-mime-magic.patch 877
+DIST truevision-0.5.5-2.tar.bz2 1799585
+DIST truevision-extramat-0.5.4.tar.bz2 2495571
+EBUILD truevision-0.5.5.2.ebuild 1684 RMD160 8448407eb866e33ba0d9820d5c8172110b1a3927 SHA1 8fc913851cc2e9e41af2593f8b553faaac5657a0 SHA256 d9438b8a39865c0a5c11ef25684f15121a91d8e1aa7e27be3c13b23bc68f899c
 MD5 cbaa343950f8c7fd358b8eb54d031310 truevision-0.5.5.2.ebuild 1684
+RMD160 8448407eb866e33ba0d9820d5c8172110b1a3927 truevision-0.5.5.2.ebuild 1684
+SHA256 d9438b8a39865c0a5c11ef25684f15121a91d8e1aa7e27be3c13b23bc68f899c truevision-0.5.5.2.ebuild 1684
+MISC ChangeLog 2859 RMD160 e8dded649b6059a1d0b644b5bd3b974ffdb168a5 SHA1 b65089347c6348a2fa3fb7deca91a2f7e0b0cd44 SHA256 f11712bad1cb6b466bfe155502eb68d5c436ce595b0f64d017e3cc59c9de8727
+MD5 81abec506876eae20387e1749df62e12 ChangeLog 2859
+RMD160 e8dded649b6059a1d0b644b5bd3b974ffdb168a5 ChangeLog 2859
+SHA256 f11712bad1cb6b466bfe155502eb68d5c436ce595b0f64d017e3cc59c9de8727 ChangeLog 2859
+MISC metadata.xml 161 RMD160 60f70b15d67f0e6aafc59833b2f0a30e30b51765 SHA1 1c35398222ef7ed670c31965e42cca77fe4b1da6 SHA256 e8daadc5e27e3ef1148993b5b48d96e93bc36d798a1f416693f7f8c84be427e1
+MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
+RMD160 60f70b15d67f0e6aafc59833b2f0a30e30b51765 metadata.xml 161
+SHA256 e8daadc5e27e3ef1148993b5b48d96e93bc36d798a1f416693f7f8c84be427e1 metadata.xml 161
+MD5 db96c3ee256871c2378ba6682336c31f files/digest-truevision-0.5.5.2 151
+RMD160 970e2e8109b0d67ce675e992586ae2ed6c36c9d3 files/digest-truevision-0.5.5.2 151
+SHA256 007a25018f8dbb2e49c9b1125ee443eca0762f31826246ebf7dbac2fedd0310a files/digest-truevision-0.5.5.2 151
