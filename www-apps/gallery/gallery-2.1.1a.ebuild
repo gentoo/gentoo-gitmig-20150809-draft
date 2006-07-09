@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.1a.ebuild,v 1.1 2006/04/20 17:34:34 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.1a.ebuild,v 1.2 2006/07/09 20:55:19 rl03 Exp $
 
 inherit webapp eutils
 
@@ -37,12 +37,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "You are strongly encouraged to back up your database"
-	einfo "and the g2data directory, as upgrading to 2.1.x will make"
-	einfo "irreversible changes to both."
-	einfo
-	einfo "g2data dir: cp -Rf /path/to/g2data/ /path/to/backup"
-	einfo "mysql: mysqldump --opt -u username -h hostname -p database > /path/to/backup.sql"
-	einfo "postgres: pg_dump -h hostname --format=t database > /path/to/backup.sql"
+	elog "You are strongly encouraged to back up your database"
+	elog "and the g2data directory, as upgrading to 2.1.x will make"
+	elog "irreversible changes to both."
+	elog
+	elog "g2data dir: cp -Rf /path/to/g2data/ /path/to/backup"
+	elog "mysql: mysqldump --opt -u username -h hostname -p database > /path/to/backup.sql"
+	elog "postgres: pg_dump -h hostname --format=t database > /path/to/backup.sql"
 	webapp_pkg_postinst
 }
