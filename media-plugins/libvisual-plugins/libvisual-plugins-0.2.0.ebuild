@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.12 2006/07/09 06:15:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.2.0.ebuild,v 1.13 2006/07/09 06:17:17 flameeyes Exp $
 
 inherit eutils
 
@@ -23,10 +23,10 @@ RDEPEND="~media-libs/libvisual-${PV}
 			x11-libs/libX11
 			x11-libs/libXext
 			x11-libs/libXrender
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )
+	|| ( x11-libs/libXt <virtual/x11-7 )
 	>=dev-util/pkgconfig-0.14"
 
 src_compile() {
