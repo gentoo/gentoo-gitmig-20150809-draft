@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vdr-dvd-scripts/vdr-dvd-scripts-0.0.2.ebuild,v 1.1 2006/07/09 14:20:32 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vdr-dvd-scripts/vdr-dvd-scripts-0.0.2.ebuild,v 1.2 2006/07/09 20:49:07 zzam Exp $
 
-DESCRIPTION="scripts for vdr-plugins vdrselect and vdrswitch"
+DESCRIPTION="dvd read/write commands for vdr-plugins dvdselect and dvdswitch"
 HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Dvdselect_readdvd.sh"
 SRC_URI=""
 
