@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.6 2005/01/01 15:47:30 eradicator Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.7.0.ebuild,v 1.7 2006/07/09 05:16:21 nerdboy Exp $
 
 inherit rpm
 
@@ -14,12 +12,15 @@ DESCRIPTION="Qtopia Deskyop sync application for Zaurus PDA's"
 SRC_URI="ftp://ftp.trolltech.com/qtopia/desktop/RedHat9.0/qtopia-desktop-${PV}${REV}rh9.i386.rpm"
 HOMEPAGE="http://www.trolltech.com/download/qtopia/"
 
-DEPEND="virtual/libc"
-RDEPEND="virtual/x11"
+DEPEND=""
+RDEPEND="virtual/libc
+	|| ( x11-libs/libX11 virtual/x11 )"
 
 LICENSE="trolltech_PUL-1.0"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
+
 RESTRICT="nomirror nostrip"
 
 src_install() {
@@ -36,6 +37,7 @@ src_install() {
 	newdoc opt/Qtopia/LICENSE.PERSONAL_USE LICENSE
 	dodir /etc/env.d
 	echo "PATH=${QD}/bin" > ${D}/etc/env.d/37qtopia-desktop-bin
+	echo "LDPATH=${QD}/lib" >> ${D}/etc/env.d/37qtopia-desktop-bin
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/qtopia-desktop-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/ChangeLog,v 1.10 2005/01/01 15:47:30 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/ChangeLog,v 1.11 2006/07/09 05:16:20 nerdboy Exp $
+
+*qtopia-desktop-bin-2.2.0 (09 Jul 2006)
+
+  09 Jul 2006; Steve Arnold <nerdboy@gentoo.org> +files/usb0.conf,
+  -qtopia-desktop-bin-1.6.2-r1.ebuild, +qtopia-desktop-bin-2.2.0.ebuild
+  qtopia-desktop-bin-1.7.0.ebuild:
+  Added new upstream version with multilib support and updated to modular X.
 
   26 Nov 2004; Steve Arnold <nerdboy@gentoo.org>
   qtopia-desktop-bin-1.6.2-r1.ebuild, qtopia-desktop-bin-1.7.0.ebuild:
