@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.0.ebuild,v 1.1 2006/07/01 08:06:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.0.ebuild,v 1.2 2006/07/09 07:21:38 cardoe Exp $
 
-inherit eutils autotools
+inherit eutils flag-o-matic
 
 DESCRIPTION="A vector graphics library with cross-device output support"
 HOMEPAGE="http://cairographics.org/"
@@ -11,7 +11,7 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc glitz pdf png svg X"
+IUSE="directfb doc glitz pdf png svg X"
 
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2.1.4
@@ -23,6 +23,7 @@ RDEPEND="media-libs/fontconfig
 		)
 		virtual/xft
 	)
+	directfb? ( dev-libs/DirectFB )
 	glitz? ( >=media-libs/glitz-0.5.1 )
 	png? ( media-libs/libpng )
 	pdf? (	>=app-text/poppler-bindings-0.4.1
@@ -37,16 +38,10 @@ DEPEND="${RDEPEND}
 		 ~app-text/docbook-xml-dtd-4.2 )"
 
 src_compile() {
-	echo
-	echo
-	echo
-	ewarn "This compiles but with tons of warnings.. but some Gentoo devs want this in masked.."
-	echo
-	echo
-	echo
-	echo
+	#gets rid of fbmmx.c inlining warnings
+	append-flags -finline-limit=1200
 
-	econf $(use_enable X xlib) $(use_enable doc gtk-doc) \
+	econf $(use_enable X xlib) $(use_enable doc gtk-doc) $(use_enable directfb) \
 		  $(use_enable png) $(use_enable svg) $(use_enable pdf) \
 		  $(use_enable glitz) --enable-freetype --enable-ps \
 		  || die "configure failed"
@@ -57,4 +52,10 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
+}
+
+pkg_postinst() {
+	echo
+	ewarn "You will most likely need to run revdep-rebuild after emerging this"
+	echo
 }

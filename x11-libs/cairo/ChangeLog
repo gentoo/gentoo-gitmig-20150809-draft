@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.74 2006/07/01 08:06:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.75 2006/07/09 07:21:38 cardoe Exp $
+
+  09 Jul 2006; Doug Goldstein <cardoe@gentoo.org> cairo-1.2.0.ebuild:
+  add notice about revdep-rebuild. add DirectFB backend support. Clean up warnings.
 
 *cairo-1.2.0 (01 Jul 2006)
 
