@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.10 2006/07/07 13:19:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.11 2006/07/09 05:51:18 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -85,6 +85,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# It tries to include FSlib.h directly, but this seems to have moved.
+	use X && has_version x11-libs/libFS && append-flags -I/usr/include/X11/fonts
+
 	econf \
 		$(use_with X x) \
 		$(use_enable xext xfree-ext) \
