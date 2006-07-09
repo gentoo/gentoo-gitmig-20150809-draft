@@ -1,0 +1,74 @@
+diff -ur plt.orig/src/Makefile.in plt/src/Makefile.in
+--- plt.orig/src/Makefile.in	2006-07-09 14:02:49.000000000 -0400
++++ plt/src/Makefile.in	2006-07-09 14:26:12.000000000 -0400
+@@ -2,15 +2,15 @@
+ # Builds MzScheme and MrEd
+ 
+ srcdir = @srcdir@
+-prefix = @prefix@
++prefix = $(DESTDIR)@prefix@
+ exec_prefix = @exec_prefix@
+ bindir = @bindir@
+-libdir = @libdir@
++libdir = $(DESTDIR)@libdir@
+ includepltdir = @includepltdir@
+-libpltdir = @libpltdir@
+-collectsdir = @collectsdir@
+-mandir = @mandir@
+-docdir = @docdir@
++libpltdir = $(DESTDIR)@libpltdir@
++collectsdir = $(DESTDIR)@collectsdir@
++mandir = $(DESTDIR)@mandir@
++docdir = $(DESTDIR)@docdir@
+ builddir = @builddir@
+ 
+ ALLDIRINFO = "$(bindir)" "$(collectsdir)" "$(docdir)" "$(libdir)" "$(includepltdir)" "$(libpltdir)" "$(mandir)"
+@@ -38,7 +38,7 @@
+ 
+ install-normal:
+ 	mkdir -p $(ALLDIRINFO)
+-	if [ ! -d $(prefix) ] ; then mkdir $(prefix) ; fi
++	if [ ! -d $(prefix) ] ; then mkdir -p $(prefix) ; fi
+ 	$(MAKE) mzinstall
+ 	$(MAKE) mredinstall-stub
+ 	$(MAKE) copytree-stub
+diff -ur plt.orig/src/mred/Makefile.in plt/src/mred/Makefile.in
+--- plt.orig/src/mred/Makefile.in	2006-07-09 14:02:49.000000000 -0400
++++ plt/src/mred/Makefile.in	2006-07-09 14:25:56.000000000 -0400
+@@ -1,11 +1,11 @@
+ 
+ srcdir = @srcdir@
+-prefix = @prefix@
++prefix = $(DESTDIR)@prefix@
+ exec_prefix = @exec_prefix@
+ bindir = @bindir@
+-libdir = @libdir@
+-libpltdir = @libpltdir@
+-collectsdir = @collectsdir@
++libdir = $(DESTDIR)@libdir@
++libpltdir = $(DESTDIR)@libpltdir@
++collectsdir = $(DESTDIR)@collectsdir@
+ builddir = @builddir@
+ 
+ # for version.mak:
+diff -ur plt.orig/src/mzscheme/Makefile.in plt/src/mzscheme/Makefile.in
+--- plt.orig/src/mzscheme/Makefile.in	2006-07-09 14:02:49.000000000 -0400
++++ plt/src/mzscheme/Makefile.in	2006-07-09 14:25:43.000000000 -0400
+@@ -3,13 +3,13 @@
+ #
+ 
+ srcdir = @srcdir@
+-prefix = @prefix@
++prefix = $(DESTDIR)@prefix@
+ exec_prefix = @exec_prefix@
+ bindir = @bindir@
+-libdir = @libdir@
++libdir = $(DESTDIR)@libdir@
+ includepltdir = @includepltdir@
+-libpltdir = @libpltdir@
+-collectsdir = @collectsdir@
++libpltdir = $(DESTDIR)@libpltdir@
++collectsdir = $(DESTDIR)@collectsdir@
+ builddir = @builddir@
+ 
+ # for version.mak:
