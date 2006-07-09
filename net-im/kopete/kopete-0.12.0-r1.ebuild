@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0-r1.ebuild,v 1.3 2006/07/05 20:59:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0-r1.ebuild,v 1.4 2006/07/09 04:11:57 flameeyes Exp $
 
 inherit kde eutils
 
@@ -35,7 +35,7 @@ BOTH_DEPEND="dev-libs/libxslt
 		x11-libs/libXext
 		x11-libs/libXrender
 		xscreensaver? ( x11-libs/libXScrnSaver )
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	kernel_linux? ( virtual/opengl )"
 
 RDEPEND="${BOTH_DEPEND}
@@ -52,7 +52,7 @@ DEPEND="${BOTH_DEPEND}
 			x11-proto/xproto
 			kernel_linux? ( x11-libs/libXv )
 			xscreensaver? ( x11-proto/scrnsaverproto )
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 need-kde 3.4
 
