@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r6.ebuild,v 1.2 2006/06/30 23:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r6.ebuild,v 1.3 2006/07/09 04:16:54 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic autotools
 
@@ -33,7 +33,7 @@ RDEPEND="media-libs/libpng
 			x11-libs/libXtst
 			x11-libs/libXft
 			x11-libs/libXinerama
-		) virtual/x11 ) )
+		) <virtual/x11-7 ) )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xproto
 			x11-proto/xf86vidmodeproto
 			x11-proto/xineramaproto
-		) virtual/x11 ) )"
+		) <virtual/x11-7 ) )"
 
 src_unpack() {
 	unpack ${A}
