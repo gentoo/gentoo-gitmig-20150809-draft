@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/jnettop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.15 2006/03/05 20:59:31 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.16 2006/07/09 22:49:49 vanquirius Exp $
+
+*jnettop-0.13.0 (09 Jul 2006)
+
+  09 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -jnettop-0.10.1.ebuild,
+  +jnettop-0.13.0.ebuild:
+  0.13.0 version bump.
 
   05 Mar 2006; Markus Ullmann <jokey@gentoo.org> jnettop-0.10.1.ebuild:
   INSTALL cleanup
