@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.5-r1.ebuild,v 1.4 2006/06/01 22:07:19 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.5-r1.ebuild,v 1.5 2006/07/09 20:37:49 rl03 Exp $
 
 inherit eutils webapp versionator
 
@@ -123,11 +123,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "The AWStats-Manual is available either inside"
-	einfo " the /usr/share/doc/${PF} - folder, or at"
-	einfo " http://awstats.sourceforge.net/docs/index.html ."
-	einfo
+	elog
+	elog "The AWStats-Manual is available either inside"
+	elog " the /usr/share/doc/${PF} - folder, or at"
+	elog " http://awstats.sourceforge.net/docs/index.html ."
+	elog
 	ewarn "Copy the /etc/awstats/awstats.model.conf to"
 	ewarn "/etc/awstats/awstats.<yourdomain>.conf and edit."
 	ewarn "use the command"
