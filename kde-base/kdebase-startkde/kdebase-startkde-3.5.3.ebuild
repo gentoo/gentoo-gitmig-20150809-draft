@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.3.ebuild,v 1.2 2006/06/11 13:01:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.3.ebuild,v 1.3 2006/07/09 04:38:55 flameeyes Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -26,7 +26,7 @@ RDEPEND="$RDEPEND
 			x11-apps/xset
 			x11-apps/xrandr
 			x11-apps/mkfontdir
-		) virtual/x11 )
+		) <virtual/x11-7 )
 $(deprange $PV $MAXKDEVER kde-base/kdesktop)
 $(deprange $PV $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/ksmserver)

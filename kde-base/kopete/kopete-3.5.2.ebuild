@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.2.ebuild,v 1.10 2006/06/27 08:26:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.2.ebuild,v 1.11 2006/07/09 04:40:05 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -27,7 +27,7 @@ BOTH_DEPEND="dev-libs/libxslt
 		x11-libs/libXext
 		x11-libs/libXrender
 		x11-libs/libXScrnSaver
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	kernel_linux? ( virtual/opengl )"
 
 RDEPEND="${BOTH_DEPEND}
@@ -41,7 +41,7 @@ DEPEND="${BOTH_DEPEND}
 			x11-proto/xproto
 			kernel_linux? ( x11-libs/libXv )
 			x11-proto/scrnsaverproto
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 pkg_setup() {
 	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
