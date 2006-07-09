@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/quodlibet-trayicon
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.1 2006/07/09 03:56:25 tcort Exp $
+
+*quodlibet-trayicon-3493 (09 Jul 2006)
+
+  09 Jul 2006; Thomas Cort <tcort@gentoo.org> +metadata.xml,
+  +quodlibet-trayicon-3493.ebuild:
+  Initial Commit. Ebuild by Kai Huuhko <kai.huuhko@gmail.com> and Thomas Cort
+  <tcort@gentoo.org>.
+
