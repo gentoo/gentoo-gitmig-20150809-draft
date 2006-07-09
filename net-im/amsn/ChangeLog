@@ -1,6 +1,14 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.52 2006/01/12 14:42:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.53 2006/07/09 21:52:24 tester Exp $
+
+*amsn-0.96_rc1 (09 Jul 2006)
+*amsn-0.95-r3 (09 Jul 2006)
+
+  09 Jul 2006; Olivier Crête <tester@gentoo.org> -amsn-0.95-r2.ebuild,
+  +amsn-0.95-r3.ebuild, +amsn-0.96_rc1.ebuild:
+  Version bump and cleanup of olders ebuilds, thanks to the work done on bug
+  #81893
 
   12 Jan 2006; Gustavo Zacarias <gustavoz@gentoo.org> amsn-0.94.ebuild:
   Stable on sparc
