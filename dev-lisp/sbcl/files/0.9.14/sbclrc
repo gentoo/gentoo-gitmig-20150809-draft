@@ -1,0 +1,16 @@
+;;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp; Package: CL-USER -*-
+
+;;; This file is installed as /etc/sbclrc and run on every invocation
+;;; of SBCL
+
+(if (probe-file "/etc/lisp-config.lisp")
+    (load "/etc/lisp-config.lisp")
+    (format t "~%;;; Warning: there is no /etc/lisp-config.lisp file"))
+
+;;; The following is required if you want source location functions to
+;;; work (such as those called when you use M-. (edit definition) in
+;;; ILISP or SLIME)
+
+(setf (logical-pathname-translations "SYS")
+      '(("SYS:SRC;**;*.*.*" #p"/usr/lib/sbcl/src/**/*.*")
+	("SYS:CONTRIB;**;*.*.*" #p"/usr/lib/sbcl/**/*.*")))
