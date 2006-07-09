@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.7.ebuild,v 1.9 2006/01/29 06:23:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.7.ebuild,v 1.10 2006/07/09 01:18:51 kumba Exp $
 
 DESCRIPTION="LIBrary of Assorted Spiffy Things"
 HOMEPAGE="http://www.eterm.org/download/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.eterm.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="imlib mmx pcre"
 
 DEPEND="|| ( ( x11-libs/libXt x11-proto/xproto x11-libs/libICE x11-libs/libSM x11-libs/libX11 ) virtual/x11 )
