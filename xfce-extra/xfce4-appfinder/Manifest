@@ -1,12 +1,47 @@
-MD5 3a6b920d7534eb4a967e20633f6a7bbf ChangeLog 3953
-MD5 2b2b57f0a3081b3994ca2a75b18bda75 files/digest-xfce4-appfinder-4.2.1 73
-MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2 73
-MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2-r1 73
-MD5 b52717ce63ed7d1ab44f53ac9637a4e4 files/digest-xfce4-appfinder-4.2.3 73
-MD5 06de1b22e14c02cf7dc9d3a4a4134611 files/digest-xfce4-appfinder-4.3.90.1 277
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+DIST xfce4-appfinder-4.2.1.tar.gz 442219
+DIST xfce4-appfinder-4.2.2.tar.gz 570719
+DIST xfce4-appfinder-4.2.3.tar.gz 691872 RMD160 3508de451d0559b45ff0610302ee6d02a4f44012 SHA1 327e657a06d2fa2ecd62f8407dd6b4cc3dab2878 SHA256 2eece086758c463cd91a3145dcc414687c913d0e3473d10dbd996129dd4a3875
+DIST xfce4-appfinder-4.3.90.1.tar.bz2 348433 RMD160 d698a8a8bef41c1d0b43446e953dc0afc31c7a83 SHA256 2ed77948e0530a71cb31dcde7851d901d7e33366368033e7dc02eca0f33cd97f
+EBUILD xfce4-appfinder-4.2.1.ebuild 404 RMD160 5168da27f682e4eeeb0278f1b795846726c0eb3d SHA1 680c1c0cdb924cc07a25f1382c84a334941f85fe SHA256 c721daa66e83fd4c76dc107c7f89f619856d2c8f5b78c903b5b5feed9af9e7c6
 MD5 a21173dc8cfdee45d47ff15bbcbf6f58 xfce4-appfinder-4.2.1.ebuild 404
+RMD160 5168da27f682e4eeeb0278f1b795846726c0eb3d xfce4-appfinder-4.2.1.ebuild 404
+SHA256 c721daa66e83fd4c76dc107c7f89f619856d2c8f5b78c903b5b5feed9af9e7c6 xfce4-appfinder-4.2.1.ebuild 404
+EBUILD xfce4-appfinder-4.2.2-r1.ebuild 496 RMD160 70e9ef156d285559e0a6849f8afb5ea047a50c7a SHA1 37b8ee3a649ae54a2e130cf8bf4eaf858fc1da10 SHA256 d70ff8cfaf602942a3f96b4c6b3da376a5b975349af7b07267adb8851820cac5
 MD5 a057d9e51ccfdcf6e89ae26f0e055931 xfce4-appfinder-4.2.2-r1.ebuild 496
+RMD160 70e9ef156d285559e0a6849f8afb5ea047a50c7a xfce4-appfinder-4.2.2-r1.ebuild 496
+SHA256 d70ff8cfaf602942a3f96b4c6b3da376a5b975349af7b07267adb8851820cac5 xfce4-appfinder-4.2.2-r1.ebuild 496
+EBUILD xfce4-appfinder-4.2.2.ebuild 395 RMD160 a8a98e368413465059bdf2b540eec5ba21b4ea93 SHA1 827fbd7838c8d461c7ea29cadded819fb3401c10 SHA256 e9d1112a8065b651e22b64989dd988ba1d23df52b410e5dfa4b69c3b46d12da8
 MD5 1448da78574ec85a732dc554e83a2f49 xfce4-appfinder-4.2.2.ebuild 395
-MD5 62e5f28cdbbee3180484f5cfc4086932 xfce4-appfinder-4.2.3.ebuild 489
+RMD160 a8a98e368413465059bdf2b540eec5ba21b4ea93 xfce4-appfinder-4.2.2.ebuild 395
+SHA256 e9d1112a8065b651e22b64989dd988ba1d23df52b410e5dfa4b69c3b46d12da8 xfce4-appfinder-4.2.2.ebuild 395
+EBUILD xfce4-appfinder-4.2.3.ebuild 486 RMD160 c16f75f985835fc58c35104a636710dfd9e9b7f7 SHA1 55237e1aa8b533a1af3e47b39fc31784651efe49 SHA256 098ce64aca87cf547f9e2c63acc88eaf5e294651f565b09908dca0e07842fe42
+MD5 9c196c0810d8f27c244931bf0981c366 xfce4-appfinder-4.2.3.ebuild 486
+RMD160 c16f75f985835fc58c35104a636710dfd9e9b7f7 xfce4-appfinder-4.2.3.ebuild 486
+SHA256 098ce64aca87cf547f9e2c63acc88eaf5e294651f565b09908dca0e07842fe42 xfce4-appfinder-4.2.3.ebuild 486
+EBUILD xfce4-appfinder-4.3.90.1.ebuild 515 RMD160 4a6da50c99bc8e383257d109dc4149368a0cef70 SHA1 16e0220680dc0a850d081f4e0d0337eebf402417 SHA256 84613cc00acdbe35160cee6382a9ffec3461be2f6cebc3e689e960d7f74df344
 MD5 7e8eac721f42f6ad3e3a6f249fb7f0f8 xfce4-appfinder-4.3.90.1.ebuild 515
+RMD160 4a6da50c99bc8e383257d109dc4149368a0cef70 xfce4-appfinder-4.3.90.1.ebuild 515
+SHA256 84613cc00acdbe35160cee6382a9ffec3461be2f6cebc3e689e960d7f74df344 xfce4-appfinder-4.3.90.1.ebuild 515
+MISC ChangeLog 4057 RMD160 26c670a02ab4d4c0d2fcff7e84e8488293af9fb9 SHA1 63975ad32c10c014f174ec5ddd42661a2b1775a5 SHA256 2cbc892e45c61b52f6b5fbed34dd37eb4ebc6d443e4266643ae756663047889d
+MD5 051c06c00ccfb378ff016c38844c6b0c ChangeLog 4057
+RMD160 26c670a02ab4d4c0d2fcff7e84e8488293af9fb9 ChangeLog 4057
+SHA256 2cbc892e45c61b52f6b5fbed34dd37eb4ebc6d443e4266643ae756663047889d ChangeLog 4057
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
+MD5 2b2b57f0a3081b3994ca2a75b18bda75 files/digest-xfce4-appfinder-4.2.1 73
+RMD160 6506a77cdac065c5ab060a18e3abb7db55ea6d90 files/digest-xfce4-appfinder-4.2.1 73
+SHA256 ae3d58150a7c3c816c0c3b788030a058ac848a348ee413479c822a1ed3be12c1 files/digest-xfce4-appfinder-4.2.1 73
+MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2 73
+RMD160 60d568bba30aa173c89f042f23641cbc3447a84b files/digest-xfce4-appfinder-4.2.2 73
+SHA256 f87f986e67cee3ed188cd7f332e7f625bd01eb84200114f349cb4278bdb02e91 files/digest-xfce4-appfinder-4.2.2 73
+MD5 40caedb5905dd010d04ffcbb0c4f9073 files/digest-xfce4-appfinder-4.2.2-r1 73
+RMD160 60d568bba30aa173c89f042f23641cbc3447a84b files/digest-xfce4-appfinder-4.2.2-r1 73
+SHA256 f87f986e67cee3ed188cd7f332e7f625bd01eb84200114f349cb4278bdb02e91 files/digest-xfce4-appfinder-4.2.2-r1 73
+MD5 7d27d3e021b4f8197b9e746a01859997 files/digest-xfce4-appfinder-4.2.3 265
+RMD160 58703301f7e9b2d7f2bc8c7aff672328c676c58c files/digest-xfce4-appfinder-4.2.3 265
+SHA256 a08b6e1576f7e3e89ab1e926d44e359a7a7c8576ddfb827d12bd5cff27f758ae files/digest-xfce4-appfinder-4.2.3 265
+MD5 06de1b22e14c02cf7dc9d3a4a4134611 files/digest-xfce4-appfinder-4.3.90.1 277
+RMD160 e7915180982adf149d6782078185d0b34687e743 files/digest-xfce4-appfinder-4.3.90.1 277
+SHA256 df15b042e1494a114506781dd61350032a17b75f04b8a16d2b04b2939d6c4ac1 files/digest-xfce4-appfinder-4.3.90.1 277

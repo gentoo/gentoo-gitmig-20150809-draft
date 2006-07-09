@@ -1,10 +1,39 @@
-MD5 409d5f6e2aee2d3a6b39bf4a4aab4fc7 ChangeLog 7842
-MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
-MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2 71
-MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2-r1 71
-MD5 a380e4fa96c66f556f086da63b3757ec files/digest-xfce4-iconbox-4.2.3 71
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+DIST xfce4-iconbox-4.2.1.tar.gz 395875
+DIST xfce4-iconbox-4.2.2.tar.gz 409710
+DIST xfce4-iconbox-4.2.3.tar.gz 424341 RMD160 43dfe64ca5ee56c80e533273f69dd9de241e6b2b SHA1 fb4a76a4b565c2e4a8b07612b7a3313e6175494b SHA256 9616a60e37830f5cc6dbcf2d051ea313854c8fa44aacfd82f6ce71093d6f6c0a
+EBUILD xfce4-iconbox-4.2.1.ebuild 394 RMD160 9115a0f78585f7ad35f6543269b412bbee3ac8d9 SHA1 55bc1b0acfc7f719150db68bef4e6a10fbc9198e SHA256 cb7a75427ddd86dc616d7aa6413eaf33018c3a3349c532c4ac3b2091769759ac
 MD5 1e9dbbf03132ef8c5abfbdabe720614d xfce4-iconbox-4.2.1.ebuild 394
+RMD160 9115a0f78585f7ad35f6543269b412bbee3ac8d9 xfce4-iconbox-4.2.1.ebuild 394
+SHA256 cb7a75427ddd86dc616d7aa6413eaf33018c3a3349c532c4ac3b2091769759ac xfce4-iconbox-4.2.1.ebuild 394
+EBUILD xfce4-iconbox-4.2.2-r1.ebuild 537 RMD160 bd6a4b22df0730c01ebc78e3424d23a7b057f8f5 SHA1 903bc8b7e0b21d25e363d49f1e1fc9fc6858dd6b SHA256 e87a2b83be42c7f11c2714f0e75d95bac78be776368bc7ac3e430c0a1b4dd9f6
 MD5 def301c52eb8072ff5ab441efe3fdbf5 xfce4-iconbox-4.2.2-r1.ebuild 537
+RMD160 bd6a4b22df0730c01ebc78e3424d23a7b057f8f5 xfce4-iconbox-4.2.2-r1.ebuild 537
+SHA256 e87a2b83be42c7f11c2714f0e75d95bac78be776368bc7ac3e430c0a1b4dd9f6 xfce4-iconbox-4.2.2-r1.ebuild 537
+EBUILD xfce4-iconbox-4.2.2.ebuild 381 RMD160 b4b11005da1dd8335ef3f8000acb086caf56bc1f SHA1 daee93471169cfbc41724403c9ed47a4e3d5e22b SHA256 5541b8c625a2c382783846c9c90ec55c1141241c255ddac8ed41f304cbe907e0
 MD5 3114250c061b866fa14c1c134691392f xfce4-iconbox-4.2.2.ebuild 381
-MD5 669ae2e06eeda4030c7a9ce3c14e3597 xfce4-iconbox-4.2.3.ebuild 530
+RMD160 b4b11005da1dd8335ef3f8000acb086caf56bc1f xfce4-iconbox-4.2.2.ebuild 381
+SHA256 5541b8c625a2c382783846c9c90ec55c1141241c255ddac8ed41f304cbe907e0 xfce4-iconbox-4.2.2.ebuild 381
+EBUILD xfce4-iconbox-4.2.3.ebuild 527 RMD160 76a6dac734389f8880ebd5e5b52ffdcb6d4abab0 SHA1 3278591fe8069674cc84e5cc2e1c8555ee0dedf3 SHA256 c1814b90d22c1cf0ba2138afa5b586b2925664c71facb1dbc525d2de965323cd
+MD5 734d470ab7b78f14ffc3faab32850713 xfce4-iconbox-4.2.3.ebuild 527
+RMD160 76a6dac734389f8880ebd5e5b52ffdcb6d4abab0 xfce4-iconbox-4.2.3.ebuild 527
+SHA256 c1814b90d22c1cf0ba2138afa5b586b2925664c71facb1dbc525d2de965323cd xfce4-iconbox-4.2.3.ebuild 527
+MISC ChangeLog 7942 RMD160 b8d66c268fa3a23bb744b4dda0a012bb59366e05 SHA1 8ce56560a3c6986155cd5f41d767d6ff0ff404a2 SHA256 3a1743f94bc40cd7681e51609683f18403de84ba0caa2aee99ad3770c1fd677e
+MD5 d02b200a08aa77817e44ff42fecc2fa0 ChangeLog 7942
+RMD160 b8d66c268fa3a23bb744b4dda0a012bb59366e05 ChangeLog 7942
+SHA256 3a1743f94bc40cd7681e51609683f18403de84ba0caa2aee99ad3770c1fd677e ChangeLog 7942
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
+MD5 5f893748301a580b15184398cf6613bc files/digest-xfce4-iconbox-4.2.1 71
+RMD160 9b03fed6b64ca6f1872fc43f8382ccc808e9fa3a files/digest-xfce4-iconbox-4.2.1 71
+SHA256 ccdda3bc5f25196aff96823a58fa28cddfaee08f930872eb642f9d800b30474f files/digest-xfce4-iconbox-4.2.1 71
+MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2 71
+RMD160 59270e165d01817c1e93f63f2bed9b204b94affc files/digest-xfce4-iconbox-4.2.2 71
+SHA256 305e665a8d8f834d51c3ef6554c67888d4e6300fd12251ff900f1f2f4d088f31 files/digest-xfce4-iconbox-4.2.2 71
+MD5 aa53567f90f6508bc2d48db4fdeda41c files/digest-xfce4-iconbox-4.2.2-r1 71
+RMD160 59270e165d01817c1e93f63f2bed9b204b94affc files/digest-xfce4-iconbox-4.2.2-r1 71
+SHA256 305e665a8d8f834d51c3ef6554c67888d4e6300fd12251ff900f1f2f4d088f31 files/digest-xfce4-iconbox-4.2.2-r1 71
+MD5 9b2a8425aa1b1eb374bf4fac3e851eac files/digest-xfce4-iconbox-4.2.3 259
+RMD160 00f73cea859358e2ef899d81baef92e4abbc92bc files/digest-xfce4-iconbox-4.2.3 259
+SHA256 2e61b2a284482dedb2d3f0f444c3842be04bc4a9dddff7f928d849f5e2423165 files/digest-xfce4-iconbox-4.2.3 259
