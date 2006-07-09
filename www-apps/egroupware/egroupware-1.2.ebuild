@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.ebuild,v 1.3 2006/06/29 21:02:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.ebuild,v 1.4 2006/07/09 20:53:05 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -35,7 +35,7 @@ pkg_setup () {
 	use postgres && php_flags="${php_flags} postgres"
 	require_php_with_use ${php_flags}
 
-	einfo "Consider installing an MTA if you want to use eGW's mail capabilities."
+	elog "Consider installing an MTA if you want to use eGW's mail capabilities."
 }
 
 src_unpack() {

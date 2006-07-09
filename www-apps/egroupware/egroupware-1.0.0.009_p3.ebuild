@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.009_p3.ebuild,v 1.6 2005/09/24 15:27:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.009_p3.ebuild,v 1.7 2006/07/09 20:53:05 rl03 Exp $
 
 inherit webapp #depend.php
 
@@ -25,16 +25,16 @@ pkg_setup () {
 	webapp_pkg_setup
 
 #	require_php_with_use imap
-	einfo "Your PHP needs to be compiled with IMAP support"
+	elog "Your PHP needs to be compiled with IMAP support"
 
 	if useq ldap; then
 #		require_php_with_use ldap
-		einfo "Your PHP needs to be compiled with LDAP support"
+		elog "Your PHP needs to be compiled with LDAP support"
 	fi
 
-	einfo "Please make sure that your PHP is compiled with MySQL|PostgreSQL support"
-	einfo
-	einfo "Consider installing an MTA if you want to use eGW's mail capabilities."
+	elog "Please make sure that your PHP is compiled with MySQL|PostgreSQL support"
+	elog
+	elog "Consider installing an MTA if you want to use eGW's mail capabilities."
 }
 
 src_unpack() {
