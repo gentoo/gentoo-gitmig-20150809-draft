@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.9.ebuild,v 1.1 2006/07/08 16:14:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.9.ebuild,v 1.2 2006/07/09 16:19:49 azarah Exp $
 
 inherit eutils linux-info multilib
 
@@ -78,7 +78,8 @@ src_unpack() {
 		die "Could not guess klibc's ARCH from your CTARGET!"
 	fi
 
-	kernel_arch=$(readlink "${KV_OUT_DIR}/include/asm" | sed -e 's:asm-::')
+	kernel_arch=$(readlink "${KV_OUT_DIR}/include/asm" | sed -e 's:asm-::' | \
+	              sed -e 's/powerpc/ppc/')
 	if [[ ${kernel_arch} != $(guess_arch) ]] ; then
 		echo
 		eerror "Your kernel sources are not configured for your chosen arch!"
