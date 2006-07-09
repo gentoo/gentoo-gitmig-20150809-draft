@@ -1,18 +1,44 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 332d16aeecf5bd51cce3ef777836bb4b phprojekt-5.0.1.ebuild 946
-MD5 a330d108aba1ec4937addc23fa5aac89 phprojekt-4.2.3.ebuild 1176
-MD5 fe97d5763d23068f4c94e21c00e21571 ChangeLog 3982
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 ea1a78c6499e50ff18624b82294686d6 files/postinstall-en.txt 612
+AUX phprojekt-4.2.3-fix-chat-vuln.diff 773 RMD160 31742a153cae20dfd963b94c4dca2ca760e1d555 SHA1 9321369d97a6e00173c8c48de3d5448dcf04986d SHA256 4ed9c0ded86d972dbd2fa8e9a027e8405b6dc020fc809a6bf6512a13ffcae0f4
 MD5 6eaeb910f5378708b62665ecdaaf8be2 files/phprojekt-4.2.3-fix-chat-vuln.diff 773
+RMD160 31742a153cae20dfd963b94c4dca2ca760e1d555 files/phprojekt-4.2.3-fix-chat-vuln.diff 773
+SHA256 4ed9c0ded86d972dbd2fa8e9a027e8405b6dc020fc809a6bf6512a13ffcae0f4 files/phprojekt-4.2.3-fix-chat-vuln.diff 773
+AUX postinstall-en.txt 612 RMD160 389b23ce164e3ea767bb1fc0eb1be0cb5e4a45d2 SHA1 c7d363e177687a546cfc5e06f04eb9a974c9b7d0 SHA256 3002b2984a9e3e511a7f5c855fcdc5a876ce43d82dd398051b0f0d56e0bed60d
+MD5 ea1a78c6499e50ff18624b82294686d6 files/postinstall-en.txt 612
+RMD160 389b23ce164e3ea767bb1fc0eb1be0cb5e4a45d2 files/postinstall-en.txt 612
+SHA256 3002b2984a9e3e511a7f5c855fcdc5a876ce43d82dd398051b0f0d56e0bed60d files/postinstall-en.txt 612
+DIST lib.zip 2149
+DIST phprojekt-4.2.3.tar.gz 1026462
+DIST phprojekt-5.0.1.tar.gz 1726560
+DIST setup.zip 2830
+EBUILD phprojekt-4.2.3.ebuild 1173 RMD160 f17d4db78a2a78acc0c7e886d910503452e5518b SHA1 6bceb6c1b63fcea53d62f616a642997c2fb97291 SHA256 922af37f91741027340eea9d6b81e1f4213abefafc283bdfd0a2650d428c28b7
+MD5 646f5f386521e3ed8c3e61924e2ea488 phprojekt-4.2.3.ebuild 1173
+RMD160 f17d4db78a2a78acc0c7e886d910503452e5518b phprojekt-4.2.3.ebuild 1173
+SHA256 922af37f91741027340eea9d6b81e1f4213abefafc283bdfd0a2650d428c28b7 phprojekt-4.2.3.ebuild 1173
+EBUILD phprojekt-5.0.1.ebuild 945 RMD160 eac9589d75eed7b71a6270e79f7dd08b949fbf28 SHA1 79b153f4ce157968be300bdab8b60aaf5d1cc03c SHA256 908c23ab5d8edb7b2745df8a7ceffe5f289c872f3321055bb32a83abcbf20a08
+MD5 8ae7098d2f6fc6a63a0e122bb43c34bf phprojekt-5.0.1.ebuild 945
+RMD160 eac9589d75eed7b71a6270e79f7dd08b949fbf28 phprojekt-5.0.1.ebuild 945
+SHA256 908c23ab5d8edb7b2745df8a7ceffe5f289c872f3321055bb32a83abcbf20a08 phprojekt-5.0.1.ebuild 945
+MISC ChangeLog 4093 RMD160 19909a65de48a7a8122cf6a1e71f6bfc3b31eab8 SHA1 bdbcb88b00ada0433ec4df3d698d4730cf613340 SHA256 0e2b06aa2369ffca5fa35eada9e12449ea86f8666612ea82f9d6c8d15b547172
+MD5 aec3011f98011271a9694f0c65630df8 ChangeLog 4093
+RMD160 19909a65de48a7a8122cf6a1e71f6bfc3b31eab8 ChangeLog 4093
+SHA256 0e2b06aa2369ffca5fa35eada9e12449ea86f8666612ea82f9d6c8d15b547172 ChangeLog 4093
+MISC metadata.xml 280 RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 SHA1 9be68166586fe2133dc7cc5347b8edddd34e4926 SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
+SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
 MD5 0a2c5111e69c0d6f6c3299c5d892f427 files/digest-phprojekt-4.2.3 170
+RMD160 1e336ef7428abc45c38851fa11398406d0c8061e files/digest-phprojekt-4.2.3 170
+SHA256 268eab1d17a2d42e6b9bfb3ce9b30b078db863d13ca45419ad9fc65e5d397a87 files/digest-phprojekt-4.2.3 170
 MD5 195b337dbdc69faa7a462ef7bae29418 files/digest-phprojekt-5.0.1 68
+RMD160 ef03c644fa0c440d2c6e7286e62b94bd8cbdda0f files/digest-phprojekt-5.0.1 68
+SHA256 a919dd1a55636abe720b12af853f26024cb4b71d16e55150e69ea7c2458c0c2e files/digest-phprojekt-5.0.1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDZiUgEzitwsaoONoRAsLiAJ9mvko1+0r84WqslxKJtahwhqGRqgCgk+qI
-SyeRFADDaLplojQWogGcHyo=
-=QCiQ
+iD8DBQFEsW8tEzitwsaoONoRAilIAJoDkoBKpGl3WpiZxSDPbkQ4O3BfKQCeJI8H
+KrVXJsPxqQn1BwdRPln6BGE=
+=LVy/
 -----END PGP SIGNATURE-----
