@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/files/vz-3.0.10.initd,v 1.1 2006/06/28 14:39:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/files/vz-3.0.10.initd,v 1.2 2006/07/09 10:29:24 phreak Exp $
 
 depend() {
 	need net
@@ -19,6 +19,7 @@ check_config() {
 	: ${VPSCONFDIR:=/etc/vz}
 	: ${PRELOAD_MODULES:="af_packet"}
 	: ${MODULES:="vzmon vzdquota vzdev"}
+	: ${MIGRATE_MODULES:="vzcpt vzrst"}
 	: ${NET_MODULES="vznetdev vznet"}
 	: ${VZDEV:=venet0}
 	: ${PARALLEL:=4}
@@ -226,6 +227,10 @@ start() {
 			eend ${rc} "failed to load module ${mod}"
 			return ${rc}
 		fi
+	done
+
+	for mod in ${MIGRATE_MODULES}; do
+		/sbin/modprobe ${mod} >/dev/null 2>&1
 	done
 	eend
 	
