@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.0.ebuild,v 1.1 2006/06/22 02:07:15 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.0.ebuild,v 1.2 2006/07/09 21:10:01 rl03 Exp $
 
 inherit webapp eutils
 
@@ -133,7 +133,7 @@ add_user_rt() {
 		die "No available uid's found"
 	fi
 
-	einfo " - Userid: ${euid}"
+	elog " - Userid: ${euid}"
 
 	enewuser rt ${euid} -1 /dev/null rt > /dev/null
 	return 0

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.4.ebuild,v 1.1 2006/07/06 23:23:59 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.4.ebuild,v 1.2 2006/07/09 21:12:57 rl03 Exp $
 
 inherit webapp eutils
 
@@ -75,7 +75,7 @@ pkg_postinst() {
 	ewarn "You are _strongly_ encouraged to to read the upgrade guide:"
 	ewarn "http://twiki.org/cgi-bin/view/TWiki/TWikiDocumentation"
 	ewarn
-	einfo "webapp-config will not be run automatically"
-	einfo
+	elog "webapp-config will not be run automatically"
+	elog
 	# webapp_pkg_postinst
 }

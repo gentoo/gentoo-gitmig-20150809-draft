@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.39 2006/06/30 07:23:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.40 2006/07/09 21:10:01 rl03 Exp $
+
+  09 Jul 2006; Renat Lumpau <rl03@gentoo.org> rt-3.4.5.ebuild,
+  rt-3.6.0.ebuild:
+  einfo->elog
 
   30 Jun 2006; Renat Lumpau <rl03@gentoo.org> files/3.4.5/reconfig:
   Clarified upgrade instructions
