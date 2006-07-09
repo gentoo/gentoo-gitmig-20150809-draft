@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.68 2006/07/08 21:19:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.69 2006/07/09 06:36:47 kumba Exp $
+
+  09 Jul 2006; Joshua Kinard <kumba@gentoo.org> sandbox-1.2.17.ebuild:
+  Marked stable on mips (even though it doesn't even work, best to keep up...)
 
 *sandbox-1.2.20_alpha1-r2 (08 Jul 2006)
 *sandbox-1.2.20_alpha1-r1 (08 Jul 2006)
