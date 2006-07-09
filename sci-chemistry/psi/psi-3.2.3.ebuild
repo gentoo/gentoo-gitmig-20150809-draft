@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.2.3.ebuild,v 1.1 2006/02/12 06:04:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/psi/psi-3.2.3.ebuild,v 1.2 2006/07/09 07:11:44 dberkholz Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/psicode/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/blas
