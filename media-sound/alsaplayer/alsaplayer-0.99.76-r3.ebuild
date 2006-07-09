@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r3.ebuild,v 1.4 2006/04/28 19:22:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r3.ebuild,v 1.5 2006/07/09 17:33:43 flameeyes Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Media player primarily utilising ALSA"
 HOMEPAGE="http://www.alsaplayer.org/"
@@ -40,6 +40,9 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/${P}-join-null-thread.patch"
+	epatch "${FILESDIR}/${P}-cxxflags.patch"
+
+	eautoreconf
 }
 
 src_compile() {
@@ -69,13 +72,14 @@ src_compile() {
 		$(use_enable vorbis oggvorbis) \
 		${myconf} \
 		--disable-gtk \
-		--disable-sgi --disable-dependency-tracking
+		--disable-sgi --disable-dependency-tracking \
+		|| die "econf failed"
 
 	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} docdir=${D}/usr/share/doc/${PF} install \
+	emake DESTDIR="${D}" docdir="${D}/usr/share/doc/${PF}" install \
 		|| die "make install failed"
 
 	dodoc AUTHORS ChangeLog README TODO

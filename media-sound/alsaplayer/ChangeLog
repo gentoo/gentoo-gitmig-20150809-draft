@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.47 2006/07/09 17:14:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.48 2006/07/09 17:33:43 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsaplayer-0.99.76-cxxflags.patch, alsaplayer-0.99.76-r3.ebuild:
+  Force a decent behaviour with respect to C(XX)FLAGS.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -alsaplayer-0.99.76.ebuild, -alsaplayer-0.99.76-r1.ebuild:

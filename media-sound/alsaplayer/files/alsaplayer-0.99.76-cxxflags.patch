@@ -1,0 +1,95 @@
+Index: alsaplayer-0.99.76/configure.ac
+===================================================================
+--- alsaplayer-0.99.76.orig/configure.ac
++++ alsaplayer-0.99.76/configure.ac
+@@ -585,17 +585,6 @@ AM_CONDITIONAL(ARCH_686,test "$ARCH_TYPE
+ AM_CONDITIONAL(ARCH_PPC,test "$ARCH_TYPE" = "ppc")
+ AM_CONDITIONAL(ARCH_ULTRA,test "$ARCH_TYPE" = "sun4u")
+ 
+-AC_MSG_CHECKING(for gcc optimization flags)
+-old_cflags=$CFLAGS
+-CFLAGS="$CFLAGS -O2 -fexpensive-optimizations -funroll-loops -finline-functions -ffast-math -Wall"
+-AC_TRY_COMPILE([#include <stdio.h>],
+-[ printf ("hello, world"); ],
+-[ EXTRA_OPT_CFLAGS="-O2 -fexpensive-optimizations -funroll-loops -finline-functions -ffast-math -Wall"],[ EXTRA_OPT_CFLAGS=""])
+-CFLAGS=$old_cflags
+-AC_MSG_RESULT([$EXTRA_OPT_CFLAGS])
+-
+-ARCH_CFLAGS="$EXTRA_OPT_CFLAGS $CFLAGS"
+-
+ if test "$ARCH_TYPE" = "i486" || test "$ARCH_TYPE" = "i586" || test "$ARCH_TYPE" = "i686"
+ then
+ 	AC_DEFINE(ARCH_X86, 1, [Define if on x86 platform])
+Index: alsaplayer-0.99.76/app/Makefile.am
+===================================================================
+--- alsaplayer-0.99.76.orig/app/Makefile.am
++++ alsaplayer-0.99.76/app/Makefile.am
+@@ -27,7 +27,6 @@ INCLUDES = -I$(top_srcdir)/alsaplayer -I
+ 
+ AM_CXXFLAGS = $(COMMON_FLAGS)
+ 
+-AM_CFLAGS = $(CXXFLAGS)
+ 
+ bin_PROGRAMS = alsaplayer
+ 
+Index: alsaplayer-0.99.76/input/mad/Makefile.am
+===================================================================
+--- alsaplayer-0.99.76.orig/input/mad/Makefile.am
++++ alsaplayer-0.99.76/input/mad/Makefile.am
+@@ -28,8 +28,6 @@ COMMON_CFLAGS = -I$(top_builddir) -I$(to
+ 
+ AM_CFLAGS = $(COMMON_CFLAGS)
+ 
+-AM_CXXFLAGS = $(CFLAGS)
+-
+ INCLUDES = -I$(ROOT_DIR)/app $(GLIB_CFLAGS)
+ 
+ libmad_in_la_SOURCES = $(mad_insources)
+Index: alsaplayer-0.99.76/interface/daemon/Makefile.am
+===================================================================
+--- alsaplayer-0.99.76.orig/interface/daemon/Makefile.am
++++ alsaplayer-0.99.76/interface/daemon/Makefile.am
+@@ -10,7 +10,6 @@ AM_CXXFLAGS = @DFLAGS@ $(COMMON_FLAGS) \
+ 		-D_REENTRANT -I$(top_builddir) -I$(top_srcdir)/alsaplayer \
+ 		-DADDON_DIR=\"$(ADDON_DIR)\"
+ 
+-AM_CFLAGS = $(CXXFLAGS)
+ 
+ libdir = $(ADDON_DIR)/interface
+ 
+Index: alsaplayer-0.99.76/interface/gtk/Makefile.am
+===================================================================
+--- alsaplayer-0.99.76.orig/interface/gtk/Makefile.am
++++ alsaplayer-0.99.76/interface/gtk/Makefile.am
+@@ -25,7 +25,6 @@ AM_CXXFLAGS = -I$(top_builddir) -I$(top_
+ 		@GLIB_CFLAGS@ @GTK_CFLAGS@ $(COMMON_FLAGS) \
+ 		-D_REENTRANT -DADDON_DIR=\"$(ADDON_DIR)\"
+ 
+-AM_CFLAGS = $(CXXFLAGS)
+ 
+ libdir = $(ADDON_DIR)/interface
+ 
+Index: alsaplayer-0.99.76/interface/text/Makefile.am
+===================================================================
+--- alsaplayer-0.99.76.orig/interface/text/Makefile.am
++++ alsaplayer-0.99.76/interface/text/Makefile.am
+@@ -10,7 +10,6 @@ AM_CXXFLAGS = @DFLAGS@ $(COMMON_FLAGS) \
+ 		-D_REENTRANT -I$(top_builddir) -I$(top_srcdir)/alsaplayer \
+ 		-DADDON_DIR=\"$(ADDON_DIR)\"
+ 
+-AM_CFLAGS = $(CXXFLAGS)
+ 
+ libdir = $(ADDON_DIR)/interface
+ 
+Index: alsaplayer-0.99.76/interface/xosd/Makefile.am
+===================================================================
+--- alsaplayer-0.99.76.orig/interface/xosd/Makefile.am
++++ alsaplayer-0.99.76/interface/xosd/Makefile.am
+@@ -22,7 +22,6 @@ AM_CXXFLAGS = @DFLAGS@ $(COMMON_FLAGS) \
+ 		-D_REENTRANT -I$(top_builddir) -I$(top_srcdir)/alsaplayer \
+ 		-DADDON_DIR=\"$(ADDON_DIR)\"
+ 
+-AM_CFLAGS = $(CXXFLAGS)
+ 
+ libdir = $(ADDON_DIR)/interface
+ 
