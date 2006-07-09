@@ -52,7 +52,7 @@ Index: mk/bsd.lib.mk
  	@${CC} ${LDFLAGS} -shared -Wl,-x \
  	    -o ${.TARGET} -Wl,-soname,${SONAME} \
 -	    `lorder ${SOBJS} | tsort -q` ${LDADD}
-+	    ${SOBJS} ${LDADD}
++	    `echo ${SOBJS} | xargs -n 1 echo | sort -u` ${LDADD}
  .endif
  
  .if defined(INSTALL_PIC_ARCHIVE) && defined(LIB) && !empty(LIB)
