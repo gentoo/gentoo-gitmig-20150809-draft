@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.5.0.1.ebuild,v 1.11 2006/06/24 00:07:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.5.0.1.ebuild,v 1.12 2006/07/09 06:06:17 flameeyes Exp $
 
 inherit eutils kde-functions flag-o-matic multilib
 
@@ -27,7 +27,7 @@ RDEPEND="
 				x11-libs/libXext
 				x11-libs/libXrender
 			  )
-		   	  virtual/x11 ) )
+		   	  <virtual/x11-7 ) )
 	gtk? ( >=x11-libs/gtk+-2 )
 	m17n-lib? ( dev-libs/m17n-lib )
 	!app-i18n/uim-svn

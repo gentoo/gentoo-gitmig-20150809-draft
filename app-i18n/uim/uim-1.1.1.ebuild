@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.1.1.ebuild,v 1.1 2006/07/07 13:22:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.1.1.ebuild,v 1.2 2006/07/09 06:06:17 flameeyes Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -26,7 +26,7 @@ RDEPEND="
 				x11-libs/libXext
 				x11-libs/libXrender
 			  )
-		   	  virtual/x11 ) )
+		   	  <virtual/x11-7 ) )
 	gtk? ( >=x11-libs/gtk+-2 )
 	m17n-lib? ( dev-libs/m17n-lib )
 	!app-i18n/uim-svn
@@ -39,7 +39,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
-	   	 	  virtual/x11 ) )
+	   	 	  <virtual/x11-7 ) )
 	dev-lang/perl
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
