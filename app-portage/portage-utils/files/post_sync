@@ -1,0 +1,14 @@
+#!/bin/sh
+# Copyright 2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/files/post_sync,v 1.1 2006/07/09 20:12:57 solar Exp $
+
+if [ -d /etc/portage/postsync.d/ ]; then
+	for f in /etc/portage/postsync.d/* ; do
+		if [ -x ${f} ] ; then
+			${f}
+		fi	
+	done
+else
+	:
+fi
