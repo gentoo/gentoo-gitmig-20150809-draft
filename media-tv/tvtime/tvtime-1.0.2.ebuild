@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.3 2006/04/20 05:00:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.4 2006/07/09 21:09:48 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -23,7 +23,7 @@ RDEPEND="|| ( ( x11-libs/libSM
 				x11-libs/libXtst
 				x11-libs/libXau
 				x11-libs/libXdmcp )
-			virtual/x11 )
+			<virtual/x11-7 )
 	>=media-libs/freetype-2
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.2
