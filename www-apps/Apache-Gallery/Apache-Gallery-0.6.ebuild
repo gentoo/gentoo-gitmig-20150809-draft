@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.12 2006/04/20 03:37:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.6.ebuild,v 1.13 2006/07/09 20:44:18 rl03 Exp $
 
 inherit perl-module
 
@@ -44,11 +44,9 @@ src_install() {
 pkg_postinst() {
 	install -d -o root -g root -m0755 ${ROOT}/etc/apache/conf/ssl
 
-	einfo
-	einfo "Execute \"emerge --config =${PF}\""
-	einfo "to have your apache.conf auto-updated."
-	einfo "You should then edit your /etc/apache/conf/apache-gallery.conf file to suit."
-	einfo
+	elog "Execute \"emerge --config =${PF}\""
+	elog "to have your apache.conf auto-updated."
+	elog "You should then edit your /etc/apache/conf/apache-gallery.conf file to suit."
 }
 
 pkg_config() {
