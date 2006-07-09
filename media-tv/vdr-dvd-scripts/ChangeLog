@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/vdr-dvd-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vdr-dvd-scripts/ChangeLog,v 1.7 2006/06/14 12:13:24 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vdr-dvd-scripts/ChangeLog,v 1.8 2006/07/09 14:20:32 zzam Exp $
+
+*vdr-dvd-scripts-0.0.2 (09 Jul 2006)
+
+  09 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.0.2/dvdchanger_readdvd.sh, +files/0.0.2/dvdchanger_writedvd.sh,
+  +vdr-dvd-scripts-0.0.2.ebuild:
+  Added version which is prepared for moving vdr-bg.sh to /usr/share/...
 
 *vdr-dvd-scripts-0.0.1-r5 (14 Jun 2006)
 
