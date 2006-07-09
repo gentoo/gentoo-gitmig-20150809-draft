@@ -1,28 +1,47 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b04a05402ef560925b9358f13db57899 groupoffice-2.02.ebuild 1865
-MD5 ed5cc77434c59133d35e0c4714a5df57 groupoffice-2.04.ebuild 1864
-MD5 e9f8498d6bf6f5a848e20729343f85cb groupoffice-2.09.ebuild 955
-MD5 db3d765f32e22da52b933016fc38d493 groupoffice-2.10.ebuild 955
-MD5 b417702e37814a93777fe92611ab3123 groupoffice-2.11a.ebuild 956
-MD5 9af82c8e056682b507eaf5e9ff95011a groupoffice-2.12.ebuild 956
-MD5 ea00f276ebf42d01ad99cd393d7abd74 groupoffice-2.13.ebuild 1634
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
-MD5 76c438f46da3c47bc3a9e74ba9bd93db ChangeLog 4250
-MD5 56c18997ce16cb2efd35f0cdfb679b67 files/digest-groupoffice-2.02 146
-MD5 0699a14fa9aca95a209915564dc81cd1 files/digest-groupoffice-2.04 146
-MD5 4de08382716b125fc1a27a1d5f6bb70b files/digest-groupoffice-2.09 73
-MD5 f26fd7d079d2d1b897e210d725f3f4e1 files/digest-groupoffice-2.10 73
-MD5 fb7074ba1a64d6bcecd6d5a55683497e files/digest-groupoffice-2.11a 74
-MD5 2ffc086e706637a4b29e375e2417a83b files/digest-groupoffice-2.12 73
-MD5 4f44d03fe37a5f608410fb1d13774f8c files/digest-groupoffice-2.13 73
-MD5 252288f5d0f5b81c836d57317005d1b7 files/postinstall-en.txt 403
+AUX postinstall2-en.txt 279 RMD160 a72b7191879c82658d858537c0c9ff35732f22ec SHA1 306bfaa8f45bc1a1268f3b0f61a368fa35150aa6 SHA256 ef8dd4712f76e2c5f5963230a9eb4f2ac1b622bb83f6e86657517749d0f20bd3
 MD5 e7703a13bc262885858c5dd9baa5d8e8 files/postinstall2-en.txt 279
+RMD160 a72b7191879c82658d858537c0c9ff35732f22ec files/postinstall2-en.txt 279
+SHA256 ef8dd4712f76e2c5f5963230a9eb4f2ac1b622bb83f6e86657517749d0f20bd3 files/postinstall2-en.txt 279
+DIST GO-theme-crystal-1.93.tar.gz 286777
+DIST groupoffice-com-2.02.tar.gz 2751178
+DIST groupoffice-com-2.04.tar.gz 2813088
+DIST groupoffice-com-2.13.tar.gz 4318805
+EBUILD groupoffice-2.02.ebuild 1865 RMD160 0da810878138bb87f56120e66ff8f5c5b6526740 SHA1 9ca4762a23be430efb6192f6289f20ca768e608b SHA256 afae3fdb7023e307e6a4babb74207aa1f5dc906b9c16d4c52509c4525a88a02d
+MD5 b04a05402ef560925b9358f13db57899 groupoffice-2.02.ebuild 1865
+RMD160 0da810878138bb87f56120e66ff8f5c5b6526740 groupoffice-2.02.ebuild 1865
+SHA256 afae3fdb7023e307e6a4babb74207aa1f5dc906b9c16d4c52509c4525a88a02d groupoffice-2.02.ebuild 1865
+EBUILD groupoffice-2.04.ebuild 1864 RMD160 8970f9e5e2de513cdb29e6d24fc01d8ea8040d16 SHA1 655f5d6315ac39e09d665038bde7363869410480 SHA256 b5c95a7e88b6f6e156e3e0ffda7b4ebb1ca44b26db314eea217c7bac43811614
+MD5 ed5cc77434c59133d35e0c4714a5df57 groupoffice-2.04.ebuild 1864
+RMD160 8970f9e5e2de513cdb29e6d24fc01d8ea8040d16 groupoffice-2.04.ebuild 1864
+SHA256 b5c95a7e88b6f6e156e3e0ffda7b4ebb1ca44b26db314eea217c7bac43811614 groupoffice-2.04.ebuild 1864
+EBUILD groupoffice-2.13.ebuild 1631 RMD160 cfaa60b4130a16aabe97384316d681162b341d09 SHA1 f5b28cbce9aa1a333870cb7feaa4f8d04ef4495a SHA256 16eea4d475880e8f6a36e0a5b411d1f96d24535457f0188036bd5ea157f86f82
+MD5 404e21f9e5de377efc84cd0b38796e6a groupoffice-2.13.ebuild 1631
+RMD160 cfaa60b4130a16aabe97384316d681162b341d09 groupoffice-2.13.ebuild 1631
+SHA256 16eea4d475880e8f6a36e0a5b411d1f96d24535457f0188036bd5ea157f86f82 groupoffice-2.13.ebuild 1631
+MISC ChangeLog 4486 RMD160 9a0c923fe49e3ca7a29f8e6c6606c65afa094caa SHA1 6e38daf395cf16c29b6fca166495494d28f3cf48 SHA256 d96e2f47c9fcd1d6bc3a27bfa2c84c278577309b37b85310d6d67771b2227ba7
+MD5 dddddeb7e8badaaf41d33329bd62766c ChangeLog 4486
+RMD160 9a0c923fe49e3ca7a29f8e6c6606c65afa094caa ChangeLog 4486
+SHA256 d96e2f47c9fcd1d6bc3a27bfa2c84c278577309b37b85310d6d67771b2227ba7 ChangeLog 4486
+MISC metadata.xml 280 RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 SHA1 9be68166586fe2133dc7cc5347b8edddd34e4926 SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+RMD160 c449ad35e8af3f158d8f8305f8a02ff98a420970 metadata.xml 280
+SHA256 fd37fa0f441b1b68ef8dc4bffbb0a51f0414aa7c370b48369453af5f4bff177a metadata.xml 280
+MD5 56c18997ce16cb2efd35f0cdfb679b67 files/digest-groupoffice-2.02 146
+RMD160 bcb40934520e1555012900e42dde3022663dbcf1 files/digest-groupoffice-2.02 146
+SHA256 345f958ff77362b4260654fdf040f1873b70e210f55b2814f7216b383eb28515 files/digest-groupoffice-2.02 146
+MD5 0699a14fa9aca95a209915564dc81cd1 files/digest-groupoffice-2.04 146
+RMD160 aef5349286ce27b90e4fff67cc29a5dbb7da6c69 files/digest-groupoffice-2.04 146
+SHA256 4c933dcf8300292672cdda70a59c98e94f3e5964a0efc5609c0664f0a2c4033d files/digest-groupoffice-2.04 146
+MD5 4f44d03fe37a5f608410fb1d13774f8c files/digest-groupoffice-2.13 73
+RMD160 88e06729e79f7d5d35f48c5c926da1fd29b03b3d files/digest-groupoffice-2.13 73
+SHA256 698eccb87cfd0e3a7ae6a0859deca503c063ca389b08b540219dddd5caaf2f04 files/digest-groupoffice-2.13 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDK/6kKf2g/qXtneoRAvcQAJkBWzORIoAqMzU76NkLQsya21XOrwCgsfiy
-PvwRUgLei8xS7QILBxYjtIs=
-=oIq9
+iD8DBQFEsW32EzitwsaoONoRAt4vAJ9BKAzBnmR/SwRdLp+wsEktXlyHcgCfT7yd
+JTRwJ02Fd7oUbtlhy+54KGk=
+=c0Mq
 -----END PGP SIGNATURE-----
