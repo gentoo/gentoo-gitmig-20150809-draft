@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-4.0.1.ebuild,v 1.11 2005/02/06 01:01:06 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-4.0.1.ebuild,v 1.12 2006/07/09 01:12:03 kumba Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lua.org/ftp/lua-${PV}.tar.gz"
 HOMEPAGE="http://www.lua.org/"
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="mips ppc ~sparc x86"
 LICENSE="lua"
 DEPEND="virtual/libc"
 
