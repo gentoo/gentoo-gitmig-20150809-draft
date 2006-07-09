@@ -1,9 +1,35 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e86b67eb637c874903596ceabc282648 ChangeLog 8039
-RMD160 0fa23d38be5fc2554ef4bb30ed49992a198b0298 ChangeLog 8039
-SHA256 12f54a9b909b656a1ba7cc681e9fb84620250797e409c2a3b37514387a20517d ChangeLog 8039
+DIST xfce-mcs-manager-4.2.1.tar.gz 503481
+DIST xfce-mcs-manager-4.2.2.tar.gz 642964
+DIST xfce-mcs-manager-4.2.3.tar.gz 764330 RMD160 e0839ac4fc8cbb4969d7e0b14196b2d867cd65af SHA1 be517073e756ce15f430d8e9435e21e28fbc122e SHA256 9bc1d715ee77a3d910214dd2fe6f537ee39960177f869a781361535a8d9a1828
+DIST xfce-mcs-manager-4.3.90.1.tar.bz2 619020 RMD160 50af964a68ca569d13ec0399697b7a0b2ffd7367 SHA256 8bdb4f634f7bcb45c0befeeb0736415d226ce278ba12d4670ad1b7b1112f6674
+EBUILD xfce-mcs-manager-4.2.1.ebuild 416 RMD160 ff27b9ae0a3442fe1de58639a0582c017423c588 SHA1 df1354c8c55d9468b2f1ab9d2ca8623481e256d4 SHA256 710768fd7211bd8f954ce6fdcfe1fba454e21d6b154161629ef3079ac5e714be
+MD5 f76927a257537559bdfeefc304cd979f xfce-mcs-manager-4.2.1.ebuild 416
+RMD160 ff27b9ae0a3442fe1de58639a0582c017423c588 xfce-mcs-manager-4.2.1.ebuild 416
+SHA256 710768fd7211bd8f954ce6fdcfe1fba454e21d6b154161629ef3079ac5e714be xfce-mcs-manager-4.2.1.ebuild 416
+EBUILD xfce-mcs-manager-4.2.2-r1.ebuild 507 RMD160 af96ca6ee412dd5947e4e0567ac7129a9762975d SHA1 8bba2a3fe8d0612732f6d309728adee95d7e3a53 SHA256 31538be7fa352c984935b3026a3f98fc6c214ab97c42722e34ee6143e0dcd816
+MD5 9868e6ea5466866d955aaa0968bf6f50 xfce-mcs-manager-4.2.2-r1.ebuild 507
+RMD160 af96ca6ee412dd5947e4e0567ac7129a9762975d xfce-mcs-manager-4.2.2-r1.ebuild 507
+SHA256 31538be7fa352c984935b3026a3f98fc6c214ab97c42722e34ee6143e0dcd816 xfce-mcs-manager-4.2.2-r1.ebuild 507
+EBUILD xfce-mcs-manager-4.2.2.ebuild 406 RMD160 46e67e75984725e648f5b193a418855834f3a240 SHA1 d001ea3dec829e22816d5ecd2ce94207fd7c644d SHA256 b88df85201fbee04ae021c65c05a62992b59f7a89a7a4dec669f743f320ca2f5
+MD5 3e940ebfaaee1dab650813e07a2c9e28 xfce-mcs-manager-4.2.2.ebuild 406
+RMD160 46e67e75984725e648f5b193a418855834f3a240 xfce-mcs-manager-4.2.2.ebuild 406
+SHA256 b88df85201fbee04ae021c65c05a62992b59f7a89a7a4dec669f743f320ca2f5 xfce-mcs-manager-4.2.2.ebuild 406
+EBUILD xfce-mcs-manager-4.2.3.ebuild 497 RMD160 bafdbff584d57f7a98978fefff800b2499094c2b SHA1 df0433369b9530e1aa50bbf240e899d2be74bd3a SHA256 02e33e700fda65d32434ce5de13b8a0aceea87b0db75604f319edce05d7c5b1f
+MD5 fe452aae84fa02dcc1c1cae83f926064 xfce-mcs-manager-4.2.3.ebuild 497
+RMD160 bafdbff584d57f7a98978fefff800b2499094c2b xfce-mcs-manager-4.2.3.ebuild 497
+SHA256 02e33e700fda65d32434ce5de13b8a0aceea87b0db75604f319edce05d7c5b1f xfce-mcs-manager-4.2.3.ebuild 497
+EBUILD xfce-mcs-manager-4.3.90.1.ebuild 674 RMD160 02e10d43212a6e7b98ad0a1216a0f272d0dcd8e8 SHA1 1a7e2cb9268108f436b0d49657fc853382f8605c SHA256 dec3806fba1f626bcab80edd85b75039572d405892c2c363ff76a5db909502fb
+MD5 ec32bd97dada26e35e9cb47b8cb538e5 xfce-mcs-manager-4.3.90.1.ebuild 674
+RMD160 02e10d43212a6e7b98ad0a1216a0f272d0dcd8e8 xfce-mcs-manager-4.3.90.1.ebuild 674
+SHA256 dec3806fba1f626bcab80edd85b75039572d405892c2c363ff76a5db909502fb xfce-mcs-manager-4.3.90.1.ebuild 674
+MISC ChangeLog 8144 RMD160 1cff67af927b8aaed4ec3d66b710e6e1d8aaa734 SHA1 3e7f52f2c260ce90d5d8f8fe581a1e63066d971d SHA256 c31ca5078eb9d9e0da2d50dd6f4028b53e2c2ea50d5e532fd545c257ea417f0f
+MD5 e7d997de26f7114fb00104f222af8ff1 ChangeLog 8144
+RMD160 1cff67af927b8aaed4ec3d66b710e6e1d8aaa734 ChangeLog 8144
+SHA256 c31ca5078eb9d9e0da2d50dd6f4028b53e2c2ea50d5e532fd545c257ea417f0f ChangeLog 8144
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 9cf685c1a7049e32d13f8e38a4825c0c files/digest-xfce-mcs-manager-4.2.1 74
 RMD160 70c7db272c08985a62c5fe9441915c7f837e0972 files/digest-xfce-mcs-manager-4.2.1 74
 SHA256 929617e38899c004137f22cb15ef54aa8f8be5f36d7ca3dcf3825308050837aa files/digest-xfce-mcs-manager-4.2.1 74
@@ -13,34 +39,9 @@ SHA256 e95ea4f6f5e32986a4d9cc06449203c21dd03d1788f487edd086f2770a884eda files/di
 MD5 4592f602a0965dfb63ab6616aafe0df6 files/digest-xfce-mcs-manager-4.2.2-r1 74
 RMD160 e8880a361b1b42ee0139ab000e3a152c9b7fbc63 files/digest-xfce-mcs-manager-4.2.2-r1 74
 SHA256 e95ea4f6f5e32986a4d9cc06449203c21dd03d1788f487edd086f2770a884eda files/digest-xfce-mcs-manager-4.2.2-r1 74
-MD5 f0e258de6c8f87c77f2f20ca5eb9123b files/digest-xfce-mcs-manager-4.2.3 74
-RMD160 539b7665a9d2ecbe8f999a38de45a728e82b14ca files/digest-xfce-mcs-manager-4.2.3 74
-SHA256 5e4b96e3206772b5dc68b2161d02b27f3b35ccd0a31564ecc0fdcb63b446389e files/digest-xfce-mcs-manager-4.2.3 74
+MD5 ea1c8b544994a1c43eba267e99919cfa files/digest-xfce-mcs-manager-4.2.3 268
+RMD160 3c493fb9aba7ea82e709b84c375d441173a35018 files/digest-xfce-mcs-manager-4.2.3 268
+SHA256 c5badd2f60ffd4bc1aeaab9e42228c94dc4d4c8df9587e0590ae001d6e6cdcda files/digest-xfce-mcs-manager-4.2.3 268
 MD5 087fa81fbdd2f651cc82b9d48d6f4718 files/digest-xfce-mcs-manager-4.3.90.1 280
 RMD160 0ed43984d8d897480211df13cfe64d0d2381f428 files/digest-xfce-mcs-manager-4.3.90.1 280
 SHA256 96d6f0f9d8df7420f89606f2b48986c652914cdb383a994789108b0031f11e6b files/digest-xfce-mcs-manager-4.3.90.1 280
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 f76927a257537559bdfeefc304cd979f xfce-mcs-manager-4.2.1.ebuild 416
-RMD160 ff27b9ae0a3442fe1de58639a0582c017423c588 xfce-mcs-manager-4.2.1.ebuild 416
-SHA256 710768fd7211bd8f954ce6fdcfe1fba454e21d6b154161629ef3079ac5e714be xfce-mcs-manager-4.2.1.ebuild 416
-MD5 9868e6ea5466866d955aaa0968bf6f50 xfce-mcs-manager-4.2.2-r1.ebuild 507
-RMD160 af96ca6ee412dd5947e4e0567ac7129a9762975d xfce-mcs-manager-4.2.2-r1.ebuild 507
-SHA256 31538be7fa352c984935b3026a3f98fc6c214ab97c42722e34ee6143e0dcd816 xfce-mcs-manager-4.2.2-r1.ebuild 507
-MD5 3e940ebfaaee1dab650813e07a2c9e28 xfce-mcs-manager-4.2.2.ebuild 406
-RMD160 46e67e75984725e648f5b193a418855834f3a240 xfce-mcs-manager-4.2.2.ebuild 406
-SHA256 b88df85201fbee04ae021c65c05a62992b59f7a89a7a4dec669f743f320ca2f5 xfce-mcs-manager-4.2.2.ebuild 406
-MD5 4e89a8359965c6836eeea93cd8850f0e xfce-mcs-manager-4.2.3.ebuild 501
-RMD160 bb227f2f4e6190614ca4c171729e56213a976b9e xfce-mcs-manager-4.2.3.ebuild 501
-SHA256 83a78434991947207ac9dc3153ef648411e527d6920d9c19e30e3d0d1f1b2a48 xfce-mcs-manager-4.2.3.ebuild 501
-MD5 ec32bd97dada26e35e9cb47b8cb538e5 xfce-mcs-manager-4.3.90.1.ebuild 674
-RMD160 02e10d43212a6e7b98ad0a1216a0f272d0dcd8e8 xfce-mcs-manager-4.3.90.1.ebuild 674
-SHA256 dec3806fba1f626bcab80edd85b75039572d405892c2c363ff76a5db909502fb xfce-mcs-manager-4.3.90.1.ebuild 674
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEUBij0K3RJaeXx6cRAtnWAJ4gz97obK103aMms3cI+YrvoY58EgCgxjCn
-e1l2TjIID9iWQlmQTxkvACc=
-=wDvm
------END PGP SIGNATURE-----
