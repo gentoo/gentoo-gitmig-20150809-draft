@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.94 2006/07/09 20:55:19 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.95 2006/07/09 21:55:17 rl03 Exp $
+
+  09 Jul 2006; Renat Lumpau <rl03@gentoo.org> gallery-2.1.1a.ebuild:
+  Add php checking from bug #137490.
 
   09 Jul 2006; Renat Lumpau <rl03@gentoo.org> -gallery-1.5.2_p2.ebuild,
   gallery-2.1.1a.ebuild:
