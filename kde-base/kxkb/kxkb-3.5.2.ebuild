@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.15 2006/06/27 08:29:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.2.ebuild,v 1.16 2006/07/09 06:08:56 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -18,7 +18,7 @@ RDEPEND="${RDEPEND}
 	|| ( (
 			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 KMEXTRACTONLY="${KMEXTRACTONLY}
 	kdm/configure.in.in"

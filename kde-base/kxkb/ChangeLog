@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kxkb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.61 2006/06/27 08:29:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.62 2006/07/09 06:08:56 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kxkb-3.5.2.ebuild,
+  kxkb-3.5.3.ebuild:
+  Pinpoint virtual/x11 version to less than 7.
 
   27 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> kxkb-3.5.2.ebuild:
   Backport the autoconf to current stable, to avoid a new version to go stable

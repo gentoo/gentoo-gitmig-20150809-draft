@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2-r1.ebuild,v 1.5 2006/06/28 02:25:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.2-r1.ebuild,v 1.6 2006/07/09 06:07:55 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -24,7 +24,7 @@ DEPEND="pam? ( kde-base/kdebase-pam )
 	$(deprange $PV $MAXKDEVER kde-base/kcontrol)"
 	# Requires the desktop background settings and kdm kcontrol modules
 RDEPEND="${DEPEND}
-	|| ( x11-apps/xinit virtual/x11 )
+	|| ( x11-apps/xinit <virtual/x11-7 )
 	kde-base/kdepasswd"
 
 
