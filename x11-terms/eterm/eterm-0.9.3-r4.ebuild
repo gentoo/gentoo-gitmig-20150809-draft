@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.6 2006/02/04 00:37:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.7 2006/07/09 01:37:46 kumba Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="escreen etwin mmx unicode"
 
 DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM x11-proto/xextproto x11-proto/xproto ) virtual/x11 )
