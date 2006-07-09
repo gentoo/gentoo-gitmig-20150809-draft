@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2.ebuild,v 1.16 2006/01/22 18:26:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/oneko-1.2.ebuild,v 1.17 2006/07/09 11:52:35 nelchael Exp $
 
 DESCRIPTION="A cat (or dog) which chases the mouse around the screen"
 HOMEPAGE="http://agtoys.sourceforge.net"
@@ -18,6 +18,7 @@ RDEPEND="|| ( (
 DEPEND="${RDEPEND}
 	|| ( (
 		x11-misc/gccmakedep
+		x11-misc/imake
 		app-text/rman
 		x11-proto/xextproto )
 	virtual/x11 )"

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/oneko
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.9 2006/01/22 18:26:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/oneko/ChangeLog,v 1.10 2006/07/09 11:52:35 nelchael Exp $
+
+  09 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> oneko-1.2.ebuild:
+  Added missing imake to DEPEND.
 
   22 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   oneko-1.2.ebuild:
