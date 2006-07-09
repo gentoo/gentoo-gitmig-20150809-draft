@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.1 2005/12/16 06:46:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/eden/eden-5.3.ebuild,v 1.2 2006/07/09 07:03:32 dberkholz Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.edencrystallography.org/"
 SRC_URI="http://www.edencrystallography.org/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="double-precision"
 RDEPEND="=sci-libs/fftw-2*
 	sci-libs/gsl"
