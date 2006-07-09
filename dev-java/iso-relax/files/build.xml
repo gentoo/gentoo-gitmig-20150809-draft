@@ -4,7 +4,7 @@
 	<!-- create a distribution package -->
 	<target name="release">
 		<tstamp />
-		
+
 		<!-- compile files -->
 		<mkdir	dir="temp" />
 		<javac	srcdir="src" debug="true"
@@ -12,10 +12,10 @@
 				classpath="lib/verifier.jar">
 			<include name="**/*.java" />
 		</javac>
-		
+
 		<!-- create a time stamp file -->
 		<echo file="temp/version.properties">version=${DSTAMP}</echo>
-		
+
 		<!-- creates src zip -->
 		<delete file="src.zip"/>
 		<zip	zipfile="src.zip"
@@ -28,7 +28,7 @@
 				</patternset>
 			</fileset>
 		</zip>
-		
+
 		<!-- creates binary jar -->
 		<delete file="isorelax.jar"/>
 		<jar	jarfile="isorelax.jar"
@@ -47,13 +47,13 @@
 			</fileset>
 		</jar>
 		<delete dir="temp" />
-		
+
 		<zip zipfile="isorelax.${DSTAMP}.zip" compress="true">
 			<fileset dir="." includes="isorelax.jar src.zip COPYING.txt"/>
 		</zip>
 	</target>
-	
-	
+
+
 	<!-- ant task test -->
 	<target name="ant-task-test">
 		<taskdef name="jarv" classname="org.iso_relax.ant.JARVTask">
@@ -61,16 +61,16 @@
 			<classpath path="lib/verifier.jar"/>
 			<classpath path="lib/verifier.manifest.jar"/>
 		</taskdef>
-		
+
 		<jarv
 			schemaLanguage="http://www.xml.gr.jp/xmlns/relaxCore"
 			schema="test/relax001.rlx"
 			file="test/relax001.v00.xml" />
-		
+
 		<jarv
 			schemaLanguage="http://www.xml.gr.jp/xmlns/relaxCore"
 			schema="test/relax001.rlx">
-			
+
 			<fileset dir="test" includes="*.xml"/>
 		</jarv>
 	</target>

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/iso-relax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.9 2006/05/14 07:22:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/ChangeLog,v 1.10 2006/07/09 15:25:48 nelchael Exp $
+
+*iso-relax-20050331-r1 (09 Jul 2006)
+
+  09 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/iso-relax-20050331-build.patch, files/build.xml,
+  -iso-relax-20050331.ebuild, +iso-relax-20050331-r1.ebuild:
+  Migrated to generation 2.
 
   14 May 2006; Petteri Räty <betelgeuse@gentoo.org>
   iso-relax-20050331.ebuild:
