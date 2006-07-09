@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.1 2006/01/20 21:19:22 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r2.ebuild,v 1.2 2006/07/09 12:50:10 stefaan Exp $
 
 inherit eutils versionator
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~x86"
 IUSE=""
 
-RDEPEND="virtual/opengl
+RDEPEND="media-libs/mesa
 	virtual/motif
 	>=media-libs/jpeg-6b
 	>=media-libs/freetype-2.0"
@@ -24,6 +24,16 @@ DEPEND="dev-util/byacc
 	${RDEPEND}"
 
 S="${WORKDIR}/${MY_PN}"
+
+pkg_setup() {
+	if ! built_with_use media-libs/mesa motif; then
+		echo
+		eerror "In order to compile openinventor, you need to have media-libs/mesa emerged"
+		eerror "with 'motif' in your USE flags. Please add that flag, re-emerge"
+		eerror "media-libs/mesa, and then emerge openinventor"
+		die "media-libs/mesa is missing motif"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
