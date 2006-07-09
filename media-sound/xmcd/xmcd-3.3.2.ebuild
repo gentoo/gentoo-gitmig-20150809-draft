@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.14 2006/01/27 21:47:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmcd/xmcd-3.3.2.ebuild,v 1.15 2006/07/09 20:20:02 flameeyes Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ RDEPEND="x11-libs/openmotif
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	|| ( ( x11-libs/libXt
 			x11-libs/libXp )
-		virtual/x11 )"
+		<virtual/x11-7 )"
 
 DEPEND="${RDEPEND}
 	sys-apps/sed
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 			x11-misc/gccmakedep
 			x11-proto/printproto
 			x11-proto/xextproto )
-		virtual/x11 )"
+		<virtual/x11-7 )"
 
 src_unpack() {
 	unpack ${A}
