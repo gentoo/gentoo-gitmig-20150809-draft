@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.1 2006/05/13 22:14:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.2 2006/07/09 07:05:46 dberkholz Exp $
 
 inherit autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/mopac7/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="mopac7"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE=""
 RDEPEND="dev-libs/libf2c"
 DEPEND="${RDEPEND}"

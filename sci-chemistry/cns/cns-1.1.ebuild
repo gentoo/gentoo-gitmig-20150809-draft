@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.1 2006/06/10 07:28:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.1.ebuild,v 1.2 2006/07/09 07:15:35 dberkholz Exp $
 
 inherit eutils fortran toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="${MY_P}_basic_inputs.tar.gz
 RESTRICT="fetch"
 LICENSE="cns"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE="test"
 RDEPEND="|| ( app-shells/tcsh app-shells/csh )
 	!app-text/dos2unix"

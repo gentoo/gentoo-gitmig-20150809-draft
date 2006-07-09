@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.1 2006/05/14 18:53:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.9.9.ebuild,v 1.2 2006/07/09 07:09:05 dberkholz Exp $
 
 inherit qt3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="$(qt_min_version 3.1)

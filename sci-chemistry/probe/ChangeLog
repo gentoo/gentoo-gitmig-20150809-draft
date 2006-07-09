@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/probe
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.2 2006/07/07 05:37:40 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/ChangeLog,v 1.3 2006/07/09 07:10:24 dberkholz Exp $
+
+  09 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  probe-2.11.050121.ebuild:
+  x86/ppc stable.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update to my new email address.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.11.050121.ebuild,v 1.1 2006/06/04 09:03:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.11.050121.ebuild,v 1.2 2006/07/09 07:10:24 dberkholz Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://kinemage.biochem.duke.edu/software/probe.php"
 SRC_URI="http://kinemage.biochem.duke.edu/ftpsite/pub/software/probe/${MY_P}.src.tgz"
 LICENSE="richardson"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"

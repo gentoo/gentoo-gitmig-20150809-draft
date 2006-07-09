@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.01.ebuild,v 1.3 2006/06/17 01:02:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ghemical-2.01.ebuild,v 1.4 2006/07/09 07:08:10 dberkholz Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://bioinformatics.org/ghemical/"
 SRC_URI="http://bioinformatics.org/ghemical/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE="threads openbabel toolbar"
 RDEPEND="virtual/glut
 	virtual/glu
