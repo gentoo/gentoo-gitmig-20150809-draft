@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.142 2006/07/07 02:38:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.143 2006/07/09 06:36:47 dberkholz Exp $
+
+*xorg-server-1.1.1 (09 Jul 2006)
+
+  09 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +xorg-server-1.1.1.ebuild:
+  Bump. Bunches of rendering and crasher fixes, incorporates security fix and
+  the 2 xprint patches, and more.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update to my new email address.
