@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.77 2006/04/27 16:49:33 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.78 2006/07/09 00:48:45 kumba Exp $
+
+  09 Jul 2006; Joshua Kinard <kumba@gentoo.org> libgcrypt-1.2.2-r1.ebuild:
+  Marked stable on mips.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-libgcrypt-1.1.12, files/digest-libgcrypt-1.1.94,
