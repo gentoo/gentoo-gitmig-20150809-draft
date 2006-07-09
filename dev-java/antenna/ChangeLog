@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/antenna
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.1 2006/07/09 16:51:20 nelchael Exp $
+
+*antenna-0.9.13-r1 (09 Jul 2006)
+
+  09 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/antenna-0.9.13-ant.patch, +metadata.xml, +antenna-0.9.13-r1.ebuild:
+  Initial version.
+
