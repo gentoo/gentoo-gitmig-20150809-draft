@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.330 2006/07/05 07:16:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.331 2006/07/09 06:04:31 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.4-r8.ebuild,
+  qt-3.3.4-r9.ebuild, qt-3.3.6.ebuild, qt-3.3.6-r1.ebuild, qt-4.1.1.ebuild,
+  qt-4.1.2.ebuild, qt-4.1.3.ebuild, qt-4.1.4.ebuild, qt-4.2.0_pre1.ebuild:
+  Pinpoint virtual/x11 version to less than 7.
 
   05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> qt-4.2.0_pre1.ebuild:
   typo: sys-libs/glib -> dev-libs/glib
