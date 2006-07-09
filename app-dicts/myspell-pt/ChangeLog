@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-pt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt/ChangeLog,v 1.5 2006/07/08 23:42:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt/ChangeLog,v 1.6 2006/07/09 01:16:59 kevquinn Exp $
+
+  09 Jul 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  myspell-pt-20060316.ebuild:
+  rearrange to avoid clobber of DESCRIPTION by multilib.eclass - thanks
+  Mr_Bones_ for the heads-up
 
   08 Jul 2006; Lars Weiler <pylon@gentoo.org> myspell-pt-20060316.ebuild:
   Stable on ppc.
