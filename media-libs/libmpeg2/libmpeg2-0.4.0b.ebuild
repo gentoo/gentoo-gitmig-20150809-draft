@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.28 2006/01/03 10:49:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.29 2006/07/09 20:27:19 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools libtool
 
@@ -22,7 +22,7 @@ DEPEND="sdl? ( media-libs/libsdl )
 				x11-libs/libXt
 				x11-proto/xextproto
 			)
-			virtual/x11
+			<virtual/x11-7
 		)
 	)"
 
