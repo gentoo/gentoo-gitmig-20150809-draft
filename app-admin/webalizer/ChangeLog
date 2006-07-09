@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webalizer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.57 2006/07/01 19:53:54 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.58 2006/07/09 20:26:47 rl03 Exp $
+
+  09 Jul 2006; Renat Lumpau <rl03@gentoo.org> webalizer-2.01.10-r12.ebuild,
+  webalizer-2.01.10-r13.ebuild:
+  einfo->elog
 
   01 Jul 2006; Renat Lumpau <rl03@gentoo.org> webalizer-2.01.10-r13.ebuild:
   Fix sys-libs/db stuff, bug #135766.

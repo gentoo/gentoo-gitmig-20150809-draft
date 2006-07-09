@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.14 2006/04/24 15:46:58 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r12.ebuild,v 1.15 2006/07/09 20:26:47 rl03 Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -35,7 +35,7 @@ pkg_setup() {
 	webapp_pkg_setup
 
 	if use search && ! use geoip; then
-		einfo "Please enable the geoip USE flag if you wish to use search"
+		elog "Please enable the geoip USE flag if you wish to use search"
 	fi
 
 	# prevents "undefined reference" errors... see bug #65163
@@ -61,7 +61,7 @@ src_unpack() {
 		if use search; then
 			epatch ${WORKDIR}/${PN}-search.patch || die
 		fi
-		use xtended && einfo "Xtended doesn't work with geolizer, skipping"
+		use xtended && elog "Xtended doesn't work with geolizer, skipping"
 	else
 		epatch ${FILESDIR}/${PN}-db4.2.patch || die
 		epatch ${FILESDIR}/${PN}-readability.patch || die
@@ -114,19 +114,19 @@ src_install() {
 }
 
 pkg_postinst(){
-	einfo
-	einfo "It is suggested that you restart apache before using webalizer"
-	einfo "You may want to review /etc/webalizer.conf and ensure that"
-	einfo "OutputDir is set correctly"
-	einfo
-	einfo "Then just type webalizer to generate your stats."
-	einfo "You can also use cron to generate them e.g. every day."
-	einfo "They can be accessed via http://localhost/webalizer"
-	einfo
-	einfo "A sample Apache config file has been installed into"
-	einfo "/usr/share/doc/${PF}/apache.webalizer"
-	einfo "Please edit and install it as necessary"
-	einfo
+	elog
+	elog "It is suggested that you restart apache before using webalizer"
+	elog "You may want to review /etc/webalizer.conf and ensure that"
+	elog "OutputDir is set correctly"
+	elog
+	elog "Then just type webalizer to generate your stats."
+	elog "You can also use cron to generate them e.g. every day."
+	elog "They can be accessed via http://localhost/webalizer"
+	elog
+	elog "A sample Apache config file has been installed into"
+	elog "/usr/share/doc/${PF}/apache.webalizer"
+	elog "Please edit and install it as necessary"
+	elog
 
 	if [ ${#LINGUAS} -gt 2 ] && use nls; then
 		ewarn
@@ -139,8 +139,8 @@ pkg_postinst(){
 	fi
 
 	if use xtended; then
-		einfo "Read http://www.irc.unizh.ch/users/pfrei/webalizer/rb07/INSTALL"
-		einfo "if you are switching from stock webalizer to xtended"
+		elog "Read http://www.irc.unizh.ch/users/pfrei/webalizer/rb07/INSTALL"
+		elog "if you are switching from stock webalizer to xtended"
 	fi
 
 	webapp_pkg_postinst
