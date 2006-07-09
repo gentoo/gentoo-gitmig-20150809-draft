@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.14 2006/07/01 15:36:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.15 2006/07/09 05:34:07 flameeyes Exp $
 
 inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2
 
@@ -91,7 +91,7 @@ RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 				x11-libs/libXext
 				xv? ( x11-libs/libXv )
 				xinerama? ( x11-libs/libXinerama )
-			) virtual/x11 )
+			) <virtual/x11-7 )
 			opengl? ( virtual/opengl )
 		)"
 
@@ -100,7 +100,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xproto
 			x11-proto/xextproto
 			xinerama? ( x11-proto/xineramaproto )
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	)
 	dev-util/pkgconfig"
 
