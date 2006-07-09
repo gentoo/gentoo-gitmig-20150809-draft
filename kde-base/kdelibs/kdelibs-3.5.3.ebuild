@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3.ebuild,v 1.3 2006/06/05 22:07:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3.ebuild,v 1.4 2006/07/09 04:48:48 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -51,7 +51,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 RDEPEND="${RDEPEND}
-	|| ( x11-apps/rgb virtual/x11 )"
+	|| ( x11-apps/rgb <virtual/x11-7 )"
 
 PATCHES="${FILESDIR}/${PN}-3.5.0-bindnow.patch
 	${FILESDIR}/${PN}-3.5.0-kicker-crash.patch"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3-r2.ebuild,v 1.2 2006/06/15 00:36:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.3-r2.ebuild,v 1.3 2006/07/09 04:48:48 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 RDEPEND="${RDEPEND}
-	|| ( x11-apps/rgb virtual/x11 )"
+	|| ( x11-apps/rgb <virtual/x11-7 )"
 
 pkg_setup() {
 	if use legacyssl ; then

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.344 2006/07/03 12:20:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.345 2006/07/09 04:48:48 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.2-r6.ebuild, kdelibs-3.5.3.ebuild, kdelibs-3.5.3-r1.ebuild,
+  kdelibs-3.5.3-r2.ebuild, kdelibs-3.5.3-r3.ebuild:
+  Pinpoint virtual/x11 version to less than 7.
 
   03 Jul 2006; Caleb Tennis <caleb@gentoo.org> kdelibs-3.5.2-r6.ebuild,
   kdelibs-3.5.3-r3.ebuild:
