@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/planet/planet-20040808.ebuild,v 1.4 2005/07/16 15:28:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/planet/planet-20040808.ebuild,v 1.5 2006/07/09 21:14:27 rl03 Exp $
 
 DESCRIPTION="App to create sites like http://planet.kde.org/"
 HOMEPAGE="http://planetplanet.org/"
@@ -26,9 +26,9 @@ src_install ()
 
 pkg_postinst ()
 {
-	einfo
-	einfo "Planet has been installed into /usr/lib/planet.  You will"
-	einfo "probably want to copy these files into a directory of your own"
-	einfo "before changing the templates and configuration file."
-	einfo
+	elog
+	elog "Planet has been installed into /usr/lib/planet.  You will"
+	elog "probably want to copy these files into a directory of your own"
+	elog "before changing the templates and configuration file."
+	elog
 }
