@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eventlog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.5 2006/07/09 04:27:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eventlog/ChangeLog,v 1.6 2006/07/09 04:33:15 tcort Exp $
+
+  09 Jul 2006; Thomas Cort <tcort@gentoo.org> eventlog-0.2.4.ebuild:
+  Added ~amd64 keyword wrt Bug #137617.
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> eventlog-0.2.4.ebuild:
   Added ~mips to KEYWORDS.
