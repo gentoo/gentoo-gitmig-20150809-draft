@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.1 2006/07/05 21:50:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.2 2006/07/09 04:07:33 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
 	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
-	!neXt? ( !Xaw3d? ( || ( x11-libs/libXaw virtual/x11 ) ) )
+	!neXt? ( !Xaw3d? ( || ( x11-libs/libXaw <virtual/x11-7 ) ) )
 	xvid? ( >=media-libs/xvid-1.1 )
 	encode? ( >=media-sound/lame-3.93 )
 	jpeg? ( media-libs/jpeg )
@@ -54,7 +54,7 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 			x11-libs/libXv
 			x11-apps/xset
 			xinerama? ( x11-libs/libXinerama )
-		) virtual/x11 )
+		) <virtual/x11-7 )
 	x264? ( media-libs/x264-svn )"
 
 DEPEND="${RDEPEND}
@@ -67,7 +67,7 @@ DEPEND="${RDEPEND}
 			x11-apps/mkfontdir
 			x11-apps/mkfontscale
 			xinerama? ( x11-proto/xineramaproto )
-		) virtual/x11 )"
+		) <virtual/x11-7 )"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"

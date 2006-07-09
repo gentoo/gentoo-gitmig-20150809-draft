@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.8 2006/02/28 03:51:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.9 2006/07/09 04:07:33 flameeyes Exp $
 
 inherit font multilib autotools
 
@@ -95,7 +95,7 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 		x11-libs/libSM
 		x11-libs/libXaw
 		x11-libs/libXv )
-		virtual/x11 )
+		<virtual/x11-7 )
 	"
 
 DEPEND="${RDEPEND}
@@ -104,7 +104,7 @@ DEPEND="${RDEPEND}
 		x11-proto/videoproto
 		x11-proto/xproto
 		x11-proto/xextproto )
-		virtual/x11 )"
+		<virtual/x11-7 )"
 
 FONT_S="${S}/font"
 FONT_SUFFIX="pcf.gz"
