@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/kdetv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.23 2006/06/03 14:19:49 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/ChangeLog,v 1.24 2006/07/09 05:56:38 flameeyes Exp $
+
+  09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kdetv-0.8.8-r1.ebuild:
+  Pinpoint virtual/x11 version to less than 7.
 
   03 Jun 2006; Ioannis Aslanidis <deathwing00@gentoo.org> kdetv-0.8.8.ebuild,
   kdetv-0.8.8.ebuild:
