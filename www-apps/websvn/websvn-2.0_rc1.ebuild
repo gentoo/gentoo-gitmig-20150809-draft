@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.0_rc1.ebuild,v 1.3 2006/06/23 12:35:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/websvn-2.0_rc1.ebuild,v 1.4 2006/07/09 13:43:54 uberlord Exp $
 
-inherit eutils webapp
+inherit depend.php eutils webapp
 
 MY_PV="${PV//_/}"
 DESCRIPTION="Web-based browsing tool for Subversion (SVN) repositories in PHP"
@@ -20,9 +20,12 @@ RDEPEND="virtual/php
 S="${WORKDIR}/WebSVN-${MY_PV}"
 
 pkg_setup() {
-	if ! built_with_use dev-lang/php xml ; then
-		eerror "You MUST re-emerge php with the xml USE flag"
-		die "current php install cannot support ${PN}"
+	webapp_pkg_setup
+
+	if ! has_version "=dev-lang/php-5*" ; then
+		require_php_with_use expat
+	else
+		require_php_with_use xml
 	fi
 }
 
