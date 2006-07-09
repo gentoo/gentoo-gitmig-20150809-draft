@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.5 2006/06/25 00:29:26 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.6 2006/07/09 17:00:52 brix Exp $
 
 inherit alternatives cvs eutils fdo-mime flag-o-matic
 
@@ -19,16 +19,12 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="-*"
 
-# add 'print' when >=x11-libs/gtk+-2.9.3 hits portage
-IUSE="alsa aalib altivec debug doc gtkhtml gnome jpeg lcms mmx mng pdf png python smp sse svg tiff wmf"
+IUSE="alsa aalib altivec debug doc gtkhtml gnome jpeg lcms mmx mng pdf png print python smp sse svg tiff wmf"
 
-# not yet in portage:
-#		print? ( >=x11-libs/gtk+-2.9.3 )
-RDEPEND=">=dev-libs/glib-2.8.2
-		>=x11-libs/gtk+-2.8.8
-		>=x11-libs/pango-1.4
+RDEPEND=">=dev-libs/glib-2.10.2
+		>=x11-libs/pango-1.12.2
 		>=media-libs/freetype-2.1.7
-		>=media-libs/fontconfig-2.2
+		>=media-libs/fontconfig-2.2.0
 		>=media-libs/libart_lgpl-2.3.8-r1
 		sys-libs/zlib
 		dev-libs/libxml2
@@ -47,10 +43,12 @@ RDEPEND=">=dev-libs/glib-2.8.2
 		mng? ( media-libs/libmng )
 		pdf? ( >=app-text/poppler-bindings-0.3.1 )
 		png? ( >=media-libs/libpng-1.2.2 )
+		print? ( >=x11-libs/gtk+-2.9.3 )
+		!print? ( >=x11-libs/gtk+-2.8.17 )
 		python?	( >=dev-lang/python-2.2.1
 				>=dev-python/pygtk-2 )
 		tiff? ( >=media-libs/tiff-3.5.7 )
-		svg? ( >=gnome-base/librsvg-2.2 )
+		svg? ( >=gnome-base/librsvg-2.8.0 )
 		wmf? ( >=media-libs/libwmf-0.2.8 )"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.12.0
@@ -84,9 +82,6 @@ src_compile() {
 
 	"${S}"/autogen.sh $(use_enable doc gtk-doc) || die "autogen.sh failed"
 
-	# requires >=x11-libs/gtk+-2.9.3, which is not yet in portaqe
-	# $(use_with print) \
-
 	econf \
 		--disable-default-binary \
 		--with-x \
@@ -103,6 +98,7 @@ src_compile() {
 		$(use_with mng libmng) \
 		$(use_with png libpng) \
 		$(use_with pdf poppler) \
+		$(use_with print) \
 		$(use_enable python) \
 		$(use_enable smp mp) \
 		$(use_enable sse) \

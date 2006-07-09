@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.168 2006/07/09 08:52:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.169 2006/07/09 17:00:52 brix Exp $
+
+  09 Jul 2006; Henrik Brix Andersen <brix@gentoo.org> gimp-9999.ebuild:
+  Updated dependencies, thanks to Petr Novak in bug #139699.
 
   09 Jul 2006; Rene Nussbaumer <killerfox@gentoo.org> gimp-2.2.12.ebuild:
   Stable on hppa. See bug #139524.
