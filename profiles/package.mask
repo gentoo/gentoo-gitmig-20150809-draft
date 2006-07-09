@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5609 2006/07/09 16:58:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5610 2006/07/09 20:42:40 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Patrick McLean <chutzpah@gentoo.org> (09 Jul 2005)
+# Broken at the moment, build system doesn't have an easy way to
+# redirect installs. This installs, but won't run at the moment.
+=dev-scheme/drscheme-350
 
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
