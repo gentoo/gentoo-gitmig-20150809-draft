@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.11 2006/07/09 05:51:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.12 2006/07/09 05:54:38 flameeyes Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -23,16 +23,11 @@ RDEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
 	media-libs/libpng
 	X? ( || ( (
-			media-libs/fontconfig
 			x11-libs/libFS
-			x11-libs/libICE
-			x11-libs/libXpm
 			x11-libs/libXmu
 			x11-libs/libX11
 			x11-libs/libXaw
 			x11-libs/libXt
-			x11-libs/libSM
-			x11-libs/libXft
 			x11-libs/libXext
 			x11-libs/libXrender
 			xext? (
