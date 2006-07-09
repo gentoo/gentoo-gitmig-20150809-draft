@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.562 2006/07/07 18:21:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.563 2006/07/09 14:44:55 geoman Exp $
+
+  09 Jul 2006; Stephen P. Becker <geoman@gentoo.org>
+  xorg-x11-6.8.2-r7.ebuild, xorg-x11-6.8.2-r8.ebuild:
+  removing mips keywords from the 6.8 series, please use 7.1 on mips, or 6.9.0
+  if you really really want the older monolithic style X
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-x11-6.8.2-r7.ebuild, xorg-x11-6.8.2-r8.ebuild,
