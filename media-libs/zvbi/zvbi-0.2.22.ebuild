@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.22.ebuild,v 1.1 2006/05/31 11:26:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.22.ebuild,v 1.2 2006/07/09 06:13:03 flameeyes Exp $
 
 inherit libtool
 
@@ -14,13 +14,13 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
-RDEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )
+RDEPEND="X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )
 	media-libs/libpng
 	sys-libs/zlib
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
-	X? ( || ( x11-libs/libXt virtual/x11 ) )
+	X? ( || ( x11-libs/libXt <virtual/x11-7 ) )
 	virtual/os-headers
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
