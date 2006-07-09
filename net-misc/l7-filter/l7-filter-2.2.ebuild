@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.2.ebuild,v 1.1 2006/06/04 13:01:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.2.ebuild,v 1.2 2006/07/09 11:18:47 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -39,6 +39,8 @@ which_patch() {
 }
 
 pkg_setup() {
+	linux-info_pkg_setup
+	pkg_preinstall
 	pkg_postinst
 }
 
@@ -77,11 +79,11 @@ src_unpack() {
 	FILES=$(patch -t --dry-run -p1 < ${S}/${PATCH} | grep "^patching file" | cut -f 3 -d ' ')
 	for F in ${FILES};
 	do
-		if [ -f ${F} ];
+		if [ -f "${F}" ];
 		then
-			cp -P ${F} ${S}/kernel/${F}
+			cp -P "${F}" "${S}/kernel/${F}"
 		else
-			touch ${S}/kernel/${F}
+			touch "${S}/kernel/${F}"
 		fi
 	done
 
@@ -92,7 +94,7 @@ src_unpack() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=106009#c5
 	if kernel_is eq 2 6 12
 	then
-		epatch ${DISTDIR}/additional_patch_for_2.6.13.diff
+		epatch "${DISTDIR}"/additional_patch_for_2.6.13.diff
 	fi
 }
 
@@ -101,33 +103,55 @@ src_compile() {
 }
 
 src_install() {
-	insinto "${KV_DIR}"
+	insinto "$(/bin/readlink -f ${KV_DIR})"
 	doins -r kernel/*
 	dodoc CHANGELOG README
 }
 
+pkg_preinstall() {
+	if has collision-protect ${FEATURES}; then	
+		ewarn
+		ewarn "Collisions are expected as this patches kernel code. Disable"
+		ewarn "FEATURES=collision-protect before use"
+		die 'incompatible FEATURES=collision-protect'
+	fi
+}
 
 pkg_postinst() {
 	ewarn "This may not work with all kernels. If it does not work please enter a bug at bugs.gentoo.org"
 	ewarn "This only patches the current kernel source code. (${KV_DIR})"
 	ewarn "Its up to you to recompile the kernel with the l7 options"
 	ewarn
-	ewarn 'You will also need to emerge iptables with the "extensions" USE flag'
+	ewarn 'You will also need to emerge iptables with the "extensions" or'
+	ewarn '"l7filter" USE flag (depend which version of iptables you emerge)'
 }
 
+#
+# Unpatching of patched files is required to avoid a broken kernel source tree
+
 pkg_prerm() {
-	if [ -f ${ROOT}/usr/src/linux/include/linux/netfilter_ipv4/ipt_layer7.h ]
+	# How to determine what version it was installed against? - measily
+	eval $(/bin/fgrep KV=2 ${ROOT}/var/db/pkg/net-misc/${PF}/environment |\
+		/bin/head -1)
+	KV_DIR=/usr/src/linux-"${KV}"
+	if [ -d  ${KV_DIR} ]; then
+		ewarn "${KV_DIR} nolonger exists"
+		return 0;
+	fi
+	echo "KV_DIR=$KV_DIR"
+	if [ -f ${KV_DIR}/include/linux/netfilter_ipv4/ipt_layer7.h ]
 	then
 		einfo 'attempting to unpatch l7-patch from kernel ${KV_FULL}'
 		which_patch
 		if kernel_is eq 2 6 12
 		then
-				patch -F 3 -d ${ROOT}/usr/src/linux -R -p1 \
-					<	${DISTDIR}/additional_patch_for_2.6.13.diff
+
+				patch -F 3 -d "${KV_DIR}" -R -p1 \
+					<	"${DISTDIR}"/additional_patch_for_2.6.13.diff
 		fi
-		cd ${T}
+		cd "${T}"
 		unpack ${MY_P}.tar.gz
 		EPATCH_SINGLE_MSG="removing previous patch" \
-			EPATCH_OPTS="-F 3 -d ${ROOT}/usr/src/linux -R" epatch "${T}/${MY_P}/${PATCH}"
+			EPATCH_OPTS="-F 3 -d "${KV_DIR}" -R" epatch "${T}/${MY_P}/${PATCH}"
 	fi
 }
