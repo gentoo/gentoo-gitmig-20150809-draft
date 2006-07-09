@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xsri
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.3 2006/01/13 13:25:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.4 2006/07/09 10:30:28 nelchael Exp $
+
+*xsri-2.1.0-r1 (09 Jul 2006)
+
+  09 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +xsri-2.1.0-r1.ebuild:
+  New version from Fedora 5.
 
   13 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> xsri-2.1.0.ebuild:
   Fixed DEPEND for modular X.
