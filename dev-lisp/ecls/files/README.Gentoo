@@ -1,4 +1,4 @@
--*- outline -*- $Id: README.Gentoo,v 1.1 2005/06/07 01:44:37 mkennedy Exp $
+-*- outline -*- $Id: README.Gentoo,v 1.2 2006/07/09 16:33:30 mkennedy Exp $
 
 Gentoo GNU/Linux specific notes for ECL
 ---------------------------------------
@@ -9,21 +9,6 @@ This is the README.Gentoo file from /usr/share/doc/@PF@/ directory.
     that TRUE and FALSE are not redefined if they're already included from
     elsewhere. This makes it easier to use ECL with other software which defines
     those C preprocesser symbols (eg. glib-2.0).
-
-  * Support for a kind of Common Lisp Controller is available since
-    dev-lisp/ecls-0.9f_p1 but not enabled by default. The controller included in
-    ECL simply puts /usr/share/common-lisp/systems/ into ASDF:*CENTRAL-REGISTRY*
-    and extends ASDF:OUTPUT-FILES so that FASLs are placed into
-    /var/cache/common-lisp-controller/<username>/ecl/.
-
-    To use this controller, either copy /usr/share/doc/@PF@/clc-lite.lisp to
-    your ~/.eclrc or source it from there.
-
-  * ECL versus dev-lisp/cl-*: ECL 0.9f_p1 and later will compile a lot of the
-    dev-lisp/cl-* ports. Quite a few ports will fail however. Should you come
-    across a failure, consider isolating it in an ECL without the clc-lite.lisp
-    code loaded. Submit your results preferably to the Gentoo Bugzilla or to
-    upstream if you're absolutely sure it isn't Gentoo related.
 
 If you encounter any problems or have suggestions, use http://bugs.gentoo.org.
 Please don't bother the upstream authors unless you are absolutely certain it is
