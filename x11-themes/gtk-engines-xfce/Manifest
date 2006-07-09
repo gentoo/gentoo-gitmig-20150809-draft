@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gtk-xfce-engine-2.2.5.tar.bz2 240452
 DIST gtk-xfce-engine-2.2.7.tar.gz 381970
-DIST gtk-xfce-engine-2.2.8.tar.gz 391386
+DIST gtk-xfce-engine-2.2.8.tar.gz 391386 RMD160 7ca5285a98f059c525ee6a661d6896194fed1f18 SHA1 b9458b5639a81dfb5be675921fd4a2d2f4cb4305 SHA256 31a2d0b8b426683cf2611bab653e5fd0ca72661a6c8a6461e61a321e6a3dc420
 DIST gtk-xfce-engine-2.3.90.1.tar.bz2 243119 RMD160 1b9ba0e61e31c35eaf5d7e1fc3db964ecb22f075 SHA256 3ac098539276b3f12744942526e2f640d8d7263b48371af04c09694ca0f9d3c2
 EBUILD gtk-engines-xfce-2.2.5.ebuild 746 RMD160 08f4110f2728798eb3a4669862cc1cf913fd4d22 SHA1 f64df772c0df128e281e8b3ead131eaab1b9f6c3 SHA256 84477dc033b4ce4b48d87c0982901dd7792e606485129dac2c816fb009541537
 MD5 0af1a5b11f984d5dcb747a9f890f0a90 gtk-engines-xfce-2.2.5.ebuild 746
@@ -17,18 +14,18 @@ EBUILD gtk-engines-xfce-2.2.7.ebuild 739 RMD160 42696e29e115b440486fca37ff850bfa
 MD5 8811732ac31d9365ce51abc1be5f73eb gtk-engines-xfce-2.2.7.ebuild 739
 RMD160 42696e29e115b440486fca37ff850bfab581eba2 gtk-engines-xfce-2.2.7.ebuild 739
 SHA256 ccb3aedecbeb481f76d2186a4e1de06d96e8b1b1a3ee6e46073312e603f236a2 gtk-engines-xfce-2.2.7.ebuild 739
-EBUILD gtk-engines-xfce-2.2.8.ebuild 892 RMD160 cc6c5f62720e7dc70eeed709a0e0322c60a2a519 SHA1 b7e9eed054355d593329f228bdb0ee3f73dec3ae SHA256 7cd07a6fdec0312155e2be2bce5437c7ffe8a49bb5f9a8af1acf9838ea590909
-MD5 04c4be33a66c9b9409f765a4201231ac gtk-engines-xfce-2.2.8.ebuild 892
-RMD160 cc6c5f62720e7dc70eeed709a0e0322c60a2a519 gtk-engines-xfce-2.2.8.ebuild 892
-SHA256 7cd07a6fdec0312155e2be2bce5437c7ffe8a49bb5f9a8af1acf9838ea590909 gtk-engines-xfce-2.2.8.ebuild 892
+EBUILD gtk-engines-xfce-2.2.8.ebuild 889 RMD160 d1e1ffb75120ec66caa98bd210b2c9a3647d9b40 SHA1 388f4d01d69362f1fdde301953b5130788181b4a SHA256 654b32e1725daafc867fbe8d399a54488578eae59b353d86bac282b1077003be
+MD5 9b0ea6e3232f6a528d7d1219c20fe67e gtk-engines-xfce-2.2.8.ebuild 889
+RMD160 d1e1ffb75120ec66caa98bd210b2c9a3647d9b40 gtk-engines-xfce-2.2.8.ebuild 889
+SHA256 654b32e1725daafc867fbe8d399a54488578eae59b353d86bac282b1077003be gtk-engines-xfce-2.2.8.ebuild 889
 EBUILD gtk-engines-xfce-2.3.90.1.ebuild 680 RMD160 ee827c22166d876c7e1add216f151aeba266dbe5 SHA1 c5a65427ebb63b37b6ceb913f2a3ff0ce7d4964b SHA256 04148840a64f40c7f4fc4957e974783ae08f8fb37a940a64148751f4b1718c5d
 MD5 cee32e3ea9c834af29288a3006618f3d gtk-engines-xfce-2.3.90.1.ebuild 680
 RMD160 ee827c22166d876c7e1add216f151aeba266dbe5 gtk-engines-xfce-2.3.90.1.ebuild 680
 SHA256 04148840a64f40c7f4fc4957e974783ae08f8fb37a940a64148751f4b1718c5d gtk-engines-xfce-2.3.90.1.ebuild 680
-MISC ChangeLog 6240 RMD160 1069d1a5fdf3ad97bd0b79f2954ebe8c85e41cfb SHA1 6baf204a633820afebb790ef85dd6234f096b962 SHA256 8ccf2019edb0448122a4863777d0a76bb04c730529a8865dba06950bbf3a0b20
-MD5 b1f1aece907b7dfe47d05a95e7a490fd ChangeLog 6240
-RMD160 1069d1a5fdf3ad97bd0b79f2954ebe8c85e41cfb ChangeLog 6240
-SHA256 8ccf2019edb0448122a4863777d0a76bb04c730529a8865dba06950bbf3a0b20 ChangeLog 6240
+MISC ChangeLog 6345 RMD160 d2fa23cb8b2a9c40df334945bceded7001e62220 SHA1 23111fba8665fe0693dfbc3ae2a777b0644aaaa8 SHA256 fddd864847dbb03b95b0943ca95d1892a9052ec1e720b54bbdcc6773a85836be
+MD5 02e868977e2a094cdce4ffece59347e0 ChangeLog 6345
+RMD160 d2fa23cb8b2a9c40df334945bceded7001e62220 ChangeLog 6345
+SHA256 fddd864847dbb03b95b0943ca95d1892a9052ec1e720b54bbdcc6773a85836be ChangeLog 6345
 MISC metadata.xml 176 RMD160 2b998851ab257a5a873aad39832b746d9bf370f4 SHA1 3b080b4e166cc5c8ec3f4cd9f7a44145e1911a65 SHA256 f6dd1795e73603898daafc0183f4bcba1eb702db34b9cee2cc547e0c508f0afc
 MD5 1a485fd099494a423e0f4287746045f0 metadata.xml 176
 RMD160 2b998851ab257a5a873aad39832b746d9bf370f4 metadata.xml 176
@@ -42,16 +39,9 @@ SHA256 a6178482850c0199422a837dac2e67b9ce4d5ee30535e44016aff99b7c85b3ed files/di
 MD5 cabd9581e9a63f94b86cf035624967fb files/digest-gtk-engines-xfce-2.2.7-r1 73
 RMD160 8364afbb59042e12c9befdd0490ef4fd2dda91e4 files/digest-gtk-engines-xfce-2.2.7-r1 73
 SHA256 a6178482850c0199422a837dac2e67b9ce4d5ee30535e44016aff99b7c85b3ed files/digest-gtk-engines-xfce-2.2.7-r1 73
-MD5 f34f2b9135822f4e4107afd4db7e27a0 files/digest-gtk-engines-xfce-2.2.8 73
-RMD160 a0fd30a3b567b88eb0e797999610b410702302bf files/digest-gtk-engines-xfce-2.2.8 73
-SHA256 4e96f5d02616508bf5508b85775c8cdc819c585ae9a3ac502df2d0f2d21dde2e files/digest-gtk-engines-xfce-2.2.8 73
+MD5 78f2df2abac7f4c478b1104c860c2150 files/digest-gtk-engines-xfce-2.2.8 265
+RMD160 8a688821c5b0aa67220e9256659697fd153d3d79 files/digest-gtk-engines-xfce-2.2.8 265
+SHA256 df0785cbc7c2fdca78069cf460fb86a7d9ff141e2fe6eb49d43efda8abc72c28 files/digest-gtk-engines-xfce-2.2.8 265
 MD5 4dec6c77fdaffdbd3a1f03a5b4668b5c files/digest-gtk-engines-xfce-2.3.90.1 277
 RMD160 659b88c5f89dde739804c2011688094cf09aa3fe files/digest-gtk-engines-xfce-2.3.90.1 277
 SHA256 f03b1f3004202729cfc41b1101820f202e42148cd17bff9e83dd0e42a04e1b1f files/digest-gtk-engines-xfce-2.3.90.1 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEiu3cI1lqEGTUzyQRAgf5AJ9UGeCgULIg4XjNRSq2vdpus/PIeACcC40a
-TFg2TKJqdOUkQExM0Go2Kg4=
-=+q7i
------END PGP SIGNATURE-----
