@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.199 2006/06/30 12:51:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.200 2006/07/09 20:11:20 phreak Exp $
+
+*vanilla-sources-2.6.17.4 (09 Jul 2006)
+*vanilla-sources-2.6.16.24 (09 Jul 2006)
+
+  09 Jul 2006; Christian Heim <phreak@gentoo.org>
+  +vanilla-sources-2.6.16.24.ebuild, +vanilla-sources-2.6.17.4.ebuild:
+  Version bump
 
   30 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   vanilla-sources-2.6.17.1.ebuild:
@@ -394,11 +401,11 @@
   +vanilla-sources-2.4.32.ebuild:
   Version bump to 2.4.32
 
-  28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  28 Nov 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.4.31.ebuild:
   ~alpha keyword.
 
-  28 Nov 2005; Bryan Østergaard <kloeri@gentoo.org>
+  28 Nov 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.6.14.2.ebuild:
   Stable on alpha.
 
@@ -484,7 +491,7 @@
   21 Sep 2005; <chainsaw@gentoo.org> +vanilla-sources-2.6.14_rc2.ebuild:
   Version bump.
 
-  15 Sep 2005; Bryan Østergaard <kloeri@gentoo.org>
+  15 Sep 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.6.12.5.ebuild:
   Stable on alpha, bug 102582.
 
@@ -677,7 +684,7 @@
   vanilla-sources-2.6.11.9.ebuild:
   stable on ia64 #92264
 
-  13 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  13 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   vanilla-sources-2.4.30.ebuild, vanilla-sources-2.6.11.8.ebuild:
   Bump stable kernels on alpha.
 
@@ -818,13 +825,13 @@
 
 *vanilla-sources-2.6.11_rc4 (13 Feb 2005)
 
-  13 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  13 Feb 2005; MichaÅ Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc4.ebuild:
   Version bump.
 
 *vanilla-sources-2.6.11_rc3 (04 Feb 2005)
 
-  04 Feb 2005; Michał Januszewski <spock@gentoo.org>
+  04 Feb 2005; MichaÅ Januszewski <spock@gentoo.org>
   +vanilla-sources-2.6.11_rc3.ebuild:
   Version bump.
 
