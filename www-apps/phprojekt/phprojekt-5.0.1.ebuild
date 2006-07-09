@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.0.1.ebuild,v 1.3 2005/10/31 14:03:42 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-5.0.1.ebuild,v 1.4 2006/07/09 21:03:33 rl03 Exp $
 
 inherit webapp
 
@@ -21,7 +21,7 @@ RDEPEND="net-www/apache
 
 pkg_setup () {
 	webapp_pkg_setup
-	einfo "Please make sure that your PHP is compiled with support for IMAP and your database of choice"
+	elog "Please make sure that your PHP is compiled with support for IMAP and your database of choice"
 }
 
 src_install() {

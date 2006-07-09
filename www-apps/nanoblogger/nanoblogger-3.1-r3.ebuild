@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r3.ebuild,v 1.5 2005/09/16 12:03:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r3.ebuild,v 1.6 2006/07/09 21:02:08 rl03 Exp $
 
 inherit bash-completion eutils
 
@@ -39,16 +39,16 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Documentation for getting started with nanoblogger may be found at"
-	einfo "/usr/share/doc/${PF}/html/nanoblogger.html or by running 'nb --manual;."
-	einfo
-	einfo "To create and configure a new weblog, run the following as your user:"
-	einfo "   nb -b /some/dir -a"
-	einfo "where /some/dir is a directory that DOES NOT exist."
-	einfo
-	einfo "To prevent having to specify your blog directory every time you use"
-	einfo "nanoblogger (with the -b switch), you can set a default value in your"
-	einfo "~/.nb.conf.  For example:"
-	einfo '   BLOG_DIR="$HOME/public_html/blog"'
+	elog "Documentation for getting started with nanoblogger may be found at"
+	elog "/usr/share/doc/${PF}/html/nanoblogger.html or by running 'nb --manual;."
+	elog
+	elog "To create and configure a new weblog, run the following as your user:"
+	elog "   nb -b /some/dir -a"
+	elog "where /some/dir is a directory that DOES NOT exist."
+	elog
+	elog "To prevent having to specify your blog directory every time you use"
+	elog "nanoblogger (with the -b switch), you can set a default value in your"
+	elog "~/.nb.conf.  For example:"
+	elog '   BLOG_DIR="$HOME/public_html/blog"'
 	bash-completion_pkg_postinst
 }
