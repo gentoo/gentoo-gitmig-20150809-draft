@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1.ebuild,v 1.1 2006/06/27 12:44:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1.ebuild,v 1.2 2006/07/09 22:52:20 tester Exp $
 
 inherit eutils multilib
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="ipv6 mmx v4l2 xvid nas alsa esd arts ffmpeg a52 mpeg2 lame aac id3 player mp4live x264"
 
-RDEPEND=" media-libs/libsdl
+RDEPEND=" <media-libs/libsdl-1.2.11
 	player? (
 		>=x11-libs/gtk+-2
 		ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
