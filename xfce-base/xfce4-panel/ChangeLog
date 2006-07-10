@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.67 2006/07/10 18:21:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.68 2006/07/10 18:54:07 bcowan Exp $
+
+  10 Jul 2006; Brad Cowan <bcowan@gentoo.org> xfce4-panel-4.3.90.2.ebuild:
+  Added mcs-manager dep.
 
 *xfce4-panel-4.3.90.2 (10 Jul 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.3.90.2.ebuild,v 1.1 2006/07/10 18:21:05 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.3.90.2.ebuild,v 1.2 2006/07/10 18:54:07 bcowan Exp $
 
 inherit xfce44
 
@@ -19,6 +19,7 @@ RDEPEND="|| ( ( x11-libs/libX11
 	>=x11-libs/gtk+-2.6
 	~xfce-base/libxfce4util-${PV}
 	~xfce-base/libxfcegui4-${PV}
+	~xfce-base/xfce-mcs-manager-${PV}
 	media-libs/libpng
 	startup-notification? ( >=x11-libs/startup-notification-0.5 )
 	>=dev-util/gtk-doc-1
