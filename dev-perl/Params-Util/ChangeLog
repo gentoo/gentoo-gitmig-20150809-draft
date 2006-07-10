@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Params-Util
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.22 2006/07/05 12:46:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.23 2006/07/10 17:17:46 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> Params-Util-0.11.ebuild:
+  Mark 0.11 stable on ia64
 
 *Params-Util-0.15 (05 Jul 2006)
 
