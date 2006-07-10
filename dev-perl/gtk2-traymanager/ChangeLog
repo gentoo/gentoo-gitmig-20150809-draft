@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-traymanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.6 2006/07/05 17:39:36 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.7 2006/07/10 23:17:55 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  gtk2-traymanager-0.05.ebuild:
+  Mark 0.05 stable on ia64
 
   05 Jul 2006; Christian Hartmann <ian@gentoo.org>
   gtk2-traymanager-0.05.ebuild:
