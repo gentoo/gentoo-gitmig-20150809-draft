@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.79 2006/07/08 17:31:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.80 2006/07/10 20:45:06 gustavoz Exp $
+
+  10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  sound-juicer-2.14.4.ebuild:
+  Stable on sparc wrt #139612
 
   08 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
   sound-juicer-2.14.4.ebuild:

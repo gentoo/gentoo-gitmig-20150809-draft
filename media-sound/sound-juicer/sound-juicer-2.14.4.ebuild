@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.14.4.ebuild,v 1.3 2006/07/08 17:31:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.14.4.ebuild,v 1.4 2006/07/10 20:45:06 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.burtonini.com/blog/computers/sound-juicer/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
 IUSE="flac ogg"
 
 RDEPEND=">=dev-libs/glib-2
