@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2016 2006/07/10 09:16:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2017 2006/07/10 09:18:31 chainsaw Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1216,6 +1216,7 @@ net-misc/asterisk:vmdbmysql - Enable mysql db support in voicemail application
 net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail application
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
 net-misc/bird:client - Enables the BIRD client
+net-misc/bird:ipv6only - Builds with only IPv6, note that this *disables* IPv4 entirely
 net-misc/bridge-utils:sysfs - Enable use of the sysfs filesystem (Linux-2.6+) via libsysfs
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
