@@ -1,28 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99f4462b28ad8019fc1f6cbac7f54f99 ChangeLog 1827
-RMD160 ba6b93b805e0305b91194ad6c36b7c01c606a1d8 ChangeLog 1827
-SHA256 606e13b697dd6e53c9900844624c2fd3fdface9a0053475edce2bb294306a62b ChangeLog 1827
+MD5 bac05106d0939f90f89010a5ccae4871 ChangeLog 1932
 MD5 61d4d52851f7a9aa8c507a5f8e809ccf Config-Simple-4.57.ebuild 535
-RMD160 5328d4f6b81fcdfeaec93596a96ea7b078310615 Config-Simple-4.57.ebuild 535
-SHA256 8a526e5ea630eda6adeccebc698f8f1d019782281dc5b36a5791bbf4f022d1ec Config-Simple-4.57.ebuild 535
-MD5 ee9cd2ab12462f51558a26d75fe509f4 Config-Simple-4.58.ebuild 531
-RMD160 83b6d17bc67e487976513e3daf7ea27b2c4eb830 Config-Simple-4.58.ebuild 531
-SHA256 5a0e27cca374aca9fdbfaefdb1a833a2dc652aa7b8aba6499e73b1e0303d5a46 Config-Simple-4.58.ebuild 531
+MD5 5a5c4acfd0f211488acad8634923bf5b Config-Simple-4.58.ebuild 530
 MD5 5326e7414783783c7ff4d73d8fc46c0f files/digest-Config-Simple-4.57 69
-RMD160 a68f368053b48e64be35f07891ef8587783fdf14 files/digest-Config-Simple-4.57 69
-SHA256 75a022d4bff3e4dac50094b102bbf04eb2efc0a38d7297dd696f8f94be03b1b5 files/digest-Config-Simple-4.57 69
 MD5 22f958f24883effd601fe1dd6cef16f1 files/digest-Config-Simple-4.58 69
-RMD160 e8426f1d7ae2d7aaef8400db63e4b1e56a8846b8 files/digest-Config-Simple-4.58 69
-SHA256 9a5937b563bcc72277d343e55873b29b1af6233b2b46255a9ee23348e02b378a files/digest-Config-Simple-4.58 69
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELFpuJrHF4yAQTrARAkK1AKDQ307njcnBrgEJABSkXOU+SAPUjQCfY3hi
-XMr/k0frG/ZJQInQi8Bj0uY=
-=4lgN
------END PGP SIGNATURE-----
