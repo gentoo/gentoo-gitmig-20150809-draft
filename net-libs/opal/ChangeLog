@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.2 2006/06/06 18:09:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.3 2006/07/10 21:08:40 gustavoz Exp $
+
+  10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org> opal-2.2.2.ebuild:
+  Stable on sparc wrt #139612 and #115652
 
 *opal-2.2.2 (06 Jun 2006)
 
