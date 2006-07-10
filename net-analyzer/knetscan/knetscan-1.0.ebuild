@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0.ebuild,v 1.14 2006/06/19 21:45:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0.ebuild,v 1.15 2006/07/10 15:19:27 blubb Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/knetscan/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=net-analyzer/nmap-2.54_beta36
