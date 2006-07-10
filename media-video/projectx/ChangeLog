@@ -1,6 +1,14 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.17 2006/07/05 19:21:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.18 2006/07/10 19:42:53 sbriesen Exp $
+
+*projectx-0.90.4.00-r2 (10 Jul 2006)
+
+  10 Jul 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +projectx-0.90.4.00-r2.ebuild:
+  Always create 'projectx_nogui' wrapper script and symlink 'projectx'
+  corresponding to the 'X' use-flag either to 'projectx_gui' or
+  'projectx_nogui', solving bug #139883.
 
 *projectx-0.90.4.00-r1 (05 Jul 2006)
 
