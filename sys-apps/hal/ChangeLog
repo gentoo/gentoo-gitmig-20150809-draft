@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.89 2006/06/06 04:58:26 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.90 2006/07/10 18:06:11 gustavoz Exp $
+
+  10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org> hal-0.5.7-r3.ebuild:
+  Stable on sparc wrt #139612
 
 *hal-0.5.7-r3 (06 Jun 2006)
 
