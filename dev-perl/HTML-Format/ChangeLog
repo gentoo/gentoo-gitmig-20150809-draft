@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Format
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.9 2006/07/04 09:51:34 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Format/ChangeLog,v 1.10 2006/07/10 15:53:22 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> HTML-Format-2.04.ebuild:
+  Mark 2.04 stable on ia64
 
   04 Jul 2006; Christian Hartmann <ian@gentoo.org> HTML-Format-2.04.ebuild:
   Fixed RDEPEND wrt bug #134781
