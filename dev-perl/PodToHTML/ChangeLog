@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PodToHTML
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PodToHTML/ChangeLog,v 1.5 2006/07/03 12:05:10 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PodToHTML/ChangeLog,v 1.6 2006/07/10 17:34:42 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> PodToHTML-0.05.ebuild:
+  Mark 0.05 stable on ia64
 
   03 Jul 2006; Christian Hartmann <ian@gentoo.org> PodToHTML-0.05.ebuild:
   Added missing RDEPEND
