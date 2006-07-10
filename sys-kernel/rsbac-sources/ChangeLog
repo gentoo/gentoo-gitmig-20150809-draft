@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.47 2006/06/09 21:42:11 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.48 2006/07/10 10:22:23 dams Exp $
+
+  10 Jul 2006; <dams@gentoo.org> rsbac-sources-2.6.14-r1.ebuild:
+  marked ~ppc
 
 *rsbac-sources-2.6.16 (09 Jun 2006)
 
