@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.1 2006/04/20 04:40:44 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce44.eclass,v 1.2 2006/07/10 18:31:49 bcowan Exp $
 
 # Xfce44 Eclass
 #
@@ -17,9 +17,9 @@ COMPRESS=".tar.bz2"
 
 INSTALL="make DESTDIR=${D} install"
 
-XFCE_BETA_VERSION="4.3.90.1"
+XFCE_BETA_VERSION="4.3.90.2"
 XFCE_VERSION="4.4"
-THUNAR_BETA_VERSION="0.3.0_beta1"
+THUNAR_BETA_VERSION="0.3.2_beta2"
 THUNAR_VERSION="1.0"
 
 ## sets {XFCE,THUNAR}_MASTER_VESION to {XFCE,THUNR}_BETA_VERSION
