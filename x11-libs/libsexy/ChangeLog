@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsexy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.7 2006/07/06 23:50:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.8 2006/07/10 13:01:34 tcort Exp $
+
+  10 Jul 2006; Thomas Cort <tcort@gentoo.org> libsexy-0.1.8.ebuild:
+  Added ~alpha keyword.
 
   06 Jul 2006; Luca Barbato <lu_zero@gentoo.org> libsexy-0.1.8.ebuild:
   Marked ppc
