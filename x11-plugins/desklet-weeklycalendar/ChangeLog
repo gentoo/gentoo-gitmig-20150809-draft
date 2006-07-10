@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-weeklycalendar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weeklycalendar/ChangeLog,v 1.1 2006/05/26 04:32:58 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-weeklycalendar/ChangeLog,v 1.2 2006/07/10 01:52:13 tcort Exp $
+
+  10 Jul 2006; Thomas Cort <tcort@gentoo.org>
+  desklet-weeklycalendar-0.41.ebuild:
+  Added ~alpha keyword wrt Bug #103966.
 
 *desklet-weeklycalendar-0.41 (26 May 2006)
 

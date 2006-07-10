@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-calendar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.5 2006/05/26 04:39:19 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/ChangeLog,v 1.6 2006/07/10 01:51:23 tcort Exp $
+
+  10 Jul 2006; Thomas Cort <tcort@gentoo.org> desklet-calendar-0.21.ebuild:
+  Added ~alpha keyword wrt Bug #103966.
 
 *desklet-calendar-0.21 (26 May 2006)
 

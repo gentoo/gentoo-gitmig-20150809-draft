@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/desklet-calendar-0.21.ebuild,v 1.1 2006/05/26 04:39:19 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-calendar/desklet-calendar-0.21.ebuild,v 1.2 2006/07/10 01:51:23 tcort Exp $
 
 inherit gdesklets
 
@@ -17,5 +17,5 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~alpha ~x86"
 RDEPEND=">=gnome-extra/gdesklets-core-0.34.3"
