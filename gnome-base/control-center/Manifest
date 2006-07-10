@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX control-center-1.4.0.5-cflags.patch 744 RMD160 ff6037cf0346a87164183c6c8eeb6b7a88539ce1 SHA1 5ece0bd4b5fb59c0fe9f563382f4948e2db5f083 SHA256 fec02a1e8ec40fca0591eeeb1f41bb0d8acf592a56a383f7f2dce9fffe13baa3
 MD5 dbc915ad73576e8f0ae8a948e52fb621 files/control-center-1.4.0.5-cflags.patch 744
 RMD160 ff6037cf0346a87164183c6c8eeb6b7a88539ce1 files/control-center-1.4.0.5-cflags.patch 744
@@ -22,6 +25,10 @@ AUX control-center-2.12.2-pathfix.patch 6758 RMD160 a60f2c88e038f394912cfcbfb679
 MD5 dac847149ae0099bb34f493727bed270 files/control-center-2.12.2-pathfix.patch 6758
 RMD160 a60f2c88e038f394912cfcbfb67951c7f9fe5f52 files/control-center-2.12.2-pathfix.patch 6758
 SHA256 6a72818353413885830e3b795445f4272730b0ca0a4b710a17ce94b908ed0096 files/control-center-2.12.2-pathfix.patch 6758
+AUX control-center-2.12.3-buttons.patch 2602 RMD160 a861585bfe2184d2f524131284b170d9761eaa20 SHA1 eb639e8f6db5c04959976a23871bc36d34a49f8c SHA256 f2ed3cde76fe4d68ccb3333e1306c6533011c6b0ba584320e807bfd23564eb4e
+MD5 d7d3d8bee73e24b1da32ef24e553ca59 files/control-center-2.12.3-buttons.patch 2602
+RMD160 a861585bfe2184d2f524131284b170d9761eaa20 files/control-center-2.12.3-buttons.patch 2602
+SHA256 f2ed3cde76fe4d68ccb3333e1306c6533011c6b0ba584320e807bfd23564eb4e files/control-center-2.12.3-buttons.patch 2602
 AUX control-center-2.13.5-disable-master-pty.patch 2757 RMD160 f6f794a9520913ebdbf430b8fb2581101b4f9c4e SHA1 c3f4ec64cac1f7fe5ccc6ddb3d93799e239f9188 SHA256 3606db5462447f6034047b8697762065681b9dbfe94c52afda7ea5e375b1a38f
 MD5 680d269279890131049c6d8ac4aee94f files/control-center-2.13.5-disable-master-pty.patch 2757
 RMD160 f6f794a9520913ebdbf430b8fb2581101b4f9c4e files/control-center-2.13.5-disable-master-pty.patch 2757
@@ -76,6 +83,10 @@ EBUILD control-center-2.12.2-r1.ebuild 2411 RMD160 b8dd8756a4325ed3ea419ea1fc255
 MD5 a513fab41ee4f08b5d5fa428ec9798a4 control-center-2.12.2-r1.ebuild 2411
 RMD160 b8dd8756a4325ed3ea419ea1fc255977f70feb80 control-center-2.12.2-r1.ebuild 2411
 SHA256 904ff17dd4dc80bfee7824e39a7fc736475655e942f0ecdf4044e9ed0e377b88 control-center-2.12.2-r1.ebuild 2411
+EBUILD control-center-2.12.3-r1.ebuild 2604 RMD160 4794e855e6c2bc9f1ac67e2ba7a6f79dcfeb0ec4 SHA1 a2f8d7afe30813bb4700b3371d525debda1c8c79 SHA256 311af1085fd0ed8dcc075637f07c9b579e8338f6bb26ec889d91465e2ffbe00d
+MD5 1cb465ca1c5ae321ec5eba7c77bed279 control-center-2.12.3-r1.ebuild 2604
+RMD160 4794e855e6c2bc9f1ac67e2ba7a6f79dcfeb0ec4 control-center-2.12.3-r1.ebuild 2604
+SHA256 311af1085fd0ed8dcc075637f07c9b579e8338f6bb26ec889d91465e2ffbe00d control-center-2.12.3-r1.ebuild 2604
 EBUILD control-center-2.12.3.ebuild 2530 RMD160 1ed05b0606f0d9f679df8e95eddcb930588b8865 SHA1 1e05bfea55923da29a2aa189276ef89d0b01ed2a SHA256 5cf26461c3565b4253888e8135321cc8f866c3be8ec4be294450b98a0e7a7748
 MD5 8291091e1094827a14c1f00a3f854099 control-center-2.12.3.ebuild 2530
 RMD160 1ed05b0606f0d9f679df8e95eddcb930588b8865 control-center-2.12.3.ebuild 2530
@@ -84,10 +95,10 @@ EBUILD control-center-2.14.2.ebuild 2445 RMD160 dcc409172b5a1a5744a86e868142facd
 MD5 c9102991ec06cf8ee937e566334df13e control-center-2.14.2.ebuild 2445
 RMD160 dcc409172b5a1a5744a86e868142facd6540a5af control-center-2.14.2.ebuild 2445
 SHA256 18e53774650195e0fb70993757e46ab01f12c880e68008523dad292474409d13 control-center-2.14.2.ebuild 2445
-MISC ChangeLog 24492 RMD160 df17346fdccc84f739338c57d03c313df1ef4456 SHA1 d45b064c738e1be894d37bdc662837428563d352 SHA256 b24999b66cde34de1cd399181c2e5f977019637a4e6906a388e3cbd8678f6ae0
-MD5 e6a0cbdadbf6db4276c046908448065a ChangeLog 24492
-RMD160 df17346fdccc84f739338c57d03c313df1ef4456 ChangeLog 24492
-SHA256 b24999b66cde34de1cd399181c2e5f977019637a4e6906a388e3cbd8678f6ae0 ChangeLog 24492
+MISC ChangeLog 24706 RMD160 5d1c4eb11b578794b15af46d62f54dcb2d960f26 SHA1 e56886c8f5b3864bf0114ff036527631294188f6 SHA256 693e0775341656e2e329b799bd1eafe2a167013e41ab4cb57749eb58ae1652dd
+MD5 bf14759d694d6af1be8d8ce642df9730 ChangeLog 24706
+RMD160 5d1c4eb11b578794b15af46d62f54dcb2d960f26 ChangeLog 24706
+SHA256 693e0775341656e2e329b799bd1eafe2a167013e41ab4cb57749eb58ae1652dd ChangeLog 24706
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -113,6 +124,16 @@ SHA256 f8f782a22d1b62797ac373d761399edaf0c0512e398ebe36f6f72fbf5f3a6c0d files/di
 MD5 f1439afc56e58e236e440bcb23a0d907 files/digest-control-center-2.12.3 271
 RMD160 ebb5ccb60ad8df389daaeaa348ddac018207a8c9 files/digest-control-center-2.12.3 271
 SHA256 364fe045ac062bb65a0efa57ceaf2a28a1aa7791f94ab023deb01417fce4a351 files/digest-control-center-2.12.3 271
+MD5 f1439afc56e58e236e440bcb23a0d907 files/digest-control-center-2.12.3-r1 271
+RMD160 ebb5ccb60ad8df389daaeaa348ddac018207a8c9 files/digest-control-center-2.12.3-r1 271
+SHA256 364fe045ac062bb65a0efa57ceaf2a28a1aa7791f94ab023deb01417fce4a351 files/digest-control-center-2.12.3-r1 271
 MD5 38815455f27e1d69dbbf2b2edb35035f files/digest-control-center-2.14.2 271
 RMD160 203deb01d53e54566a3d7a8bc477ad6cdeacca40 files/digest-control-center-2.14.2 271
 SHA256 3bf3043fb1d93928d2672697ddfd129eda99445af22cf40aff730ad11cbe6d14 files/digest-control-center-2.14.2 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEsa2RomPajV0RnrERAtPiAJ0Z0U+QtNqgepv8PUMgJ/cNydkwawCfS0kD
+IKNxM2ljp6oFxk96+xYSvS8=
+=FHFZ
+-----END PGP SIGNATURE-----
