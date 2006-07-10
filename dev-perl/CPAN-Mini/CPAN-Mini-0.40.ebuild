@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-0.40.ebuild,v 1.4 2006/07/03 20:33:26 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-0.40.ebuild,v 1.5 2006/07/10 20:00:55 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ia64 sparc x86"
+KEYWORDS="ia64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
