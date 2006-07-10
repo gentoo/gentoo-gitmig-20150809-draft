@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.183 2006/07/03 15:04:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.184 2006/07/10 20:16:22 gustavoz Exp $
+
+  10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  nautilus-2.14.1.ebuild:
+  Stable on sparc wrt #139612
 
 *nautilus-1.0.6-r10 (03 Jul 2006)
 
