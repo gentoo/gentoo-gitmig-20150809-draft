@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.3 2006/07/10 08:27:21 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.4 2006/07/10 08:32:28 truedfx Exp $
 
 inherit eutils
 
 S="${WORKDIR}/DND/DNDlib"
 DESCRIPTION="OffiX' Drag'n'drop library"
 HOMEPAGE="http://leb.net/offix"
-SRC_URI="http://leb.net/offix/dnd.1.1.tgz"
+SRC_URI="http://leb.net/offix/${PN}.${PV}.tgz"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
@@ -25,7 +25,7 @@ DEPEND="|| (
 	<virtual/x11-7.0 )"
 
 src_unpack() {
-	unpack dnd.1.1.tgz
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.diff || die
 	epatch "${FILESDIR}"/Makefile-fix.patch || die
