@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/Net-CIDR-Lite-0.20.ebuild,v 1.3 2006/06/29 17:23:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/Net-CIDR-Lite-0.20.ebuild,v 1.4 2006/07/10 16:56:40 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~dougw/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 mydoc="TODO"
