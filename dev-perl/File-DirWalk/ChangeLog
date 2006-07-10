@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-DirWalk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.5 2006/03/30 22:37:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.6 2006/07/10 15:32:36 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> File-DirWalk-0.2.ebuild:
+  Mark 0.2 stable on ia64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> File-DirWalk-0.2.ebuild:
   Mark 0.2 ~ia64
