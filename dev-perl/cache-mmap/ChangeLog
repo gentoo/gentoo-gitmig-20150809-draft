@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/cache-mmap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cache-mmap/ChangeLog,v 1.13 2006/07/05 14:03:49 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cache-mmap/ChangeLog,v 1.14 2006/07/10 23:09:30 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> cache-mmap-0.081.ebuild:
+  Mark 0.081 stable on ia64
 
   05 Jul 2006; Christian Hartmann <ian@gentoo.org> cache-mmap-0.09.ebuild,
   cache-mmap-0.081.ebuild:
