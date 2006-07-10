@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.9.1.ebuild,v 1.1 2006/07/04 02:23:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.9.1.ebuild,v 1.2 2006/07/10 01:07:42 mr_bones_ Exp $
 
 inherit games
 
@@ -48,7 +48,10 @@ src_compile() {
 		myconf="${myconf} --disable-sound"
 	fi
 	egamesconf ${myconf} || die
-	emake -j1 -C sound-src || die "sound building failed"
+	# bug 139785
+	if use alsa || use oss ; then
+		emake -j1 -C sound-src || die "sound building failed"
+	fi
 	emake || die "emake failed"
 }
 

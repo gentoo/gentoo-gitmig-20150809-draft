@@ -1,6 +1,11 @@
 # ChangeLog for games-roguelike/crossfire-client
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.16 2006/07/04 02:23:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/ChangeLog,v 1.17 2006/07/10 01:07:42 mr_bones_ Exp $
+
+  10 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  crossfire-client-1.9.1.ebuild:
+  fix building when neither oss or alsa is specified - patch from Preston Crow
+  via bug #139785
 
 *crossfire-client-1.9.1 (04 Jul 2006)
 
