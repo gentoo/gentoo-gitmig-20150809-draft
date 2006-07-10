@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e9adb5d2915e820efc34d6ad2201d7a ChangeLog 986
-RMD160 e0a2f4282957337af50ad5885de890711c9e3b04 ChangeLog 986
-SHA256 b4c0ecedc5676bfffbaa0487f355b6333687c0d6ba87dd3ecd6f75f51f84cfc5 ChangeLog 986
-MD5 ffe2bd255d3463ac31651ceb52c38ed1 Festival-Client-Async-0.0303.ebuild 516
-RMD160 6699626c169d77496e305665ae38e7a109e7dc5d Festival-Client-Async-0.0303.ebuild 516
-SHA256 f1e3cf235daf104fe891e8d51732cd9bf767bc8a238a5d1f16808ce103cafb3e Festival-Client-Async-0.0303.ebuild 516
+MD5 f80574796e554f672347fc4c95fe90a1 ChangeLog 1105
+MD5 925833ba0b2242d6b4351bc81e7978ad Festival-Client-Async-0.0303.ebuild 516
 MD5 0c01d40e89e9333725c2dbbd4df49243 files/digest-Festival-Client-Async-0.0303 79
-RMD160 d66dc6cecfa8dceb50ee28fde6c37b26b1ae25c8 files/digest-Festival-Client-Async-0.0303 79
-SHA256 6abd5f602ef67cacbd992a281ea8f3ece13bf5c2d64528fbae405fe192eaa598 files/digest-Festival-Client-Async-0.0303 79
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
-SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELF1bJrHF4yAQTrARAmuUAKCw9nuiujRC6BMJgGYJ0r6yLxf7GwCfe0dv
-HOay6DLwv+LCDkzMJb439EA=
-=9mQG
------END PGP SIGNATURE-----
