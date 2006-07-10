@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.42 2006/06/15 07:01:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.43 2006/07/10 00:52:34 rl03 Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -132,7 +132,7 @@ function webapp_configfile ()
 		local MY_FILE="$(webapp_strip_appdir "${m}")"
 		MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
 
-		einfo "(config) ${MY_FILE}"
+		elog "(config) ${MY_FILE}"
 		echo "${MY_FILE}" >> ${D}/${WA_CONFIGLIST}
 	done
 }
@@ -150,7 +150,7 @@ function webapp_hook_script ()
 {
 	webapp_checkfileexists "${1}"
 
-	einfo "(hook) ${1}"
+	elog "(hook) ${1}"
 	cp "${1}" "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")" || die "Unable to install ${1} into ${D}/${MY_HOOKSCRIPTSDIR}/"
 	chmod 555 "${D}/${MY_HOOKSCRIPTSDIR}/$(basename "${1}")"
 }
@@ -168,7 +168,7 @@ function webapp_postinst_txt ()
 {
 	webapp_checkfileexists "${2}"
 
-	einfo "(info) ${2} (lang: ${1})"
+	elog "(info) ${2} (lang: ${1})"
 	cp "${2}" "${D}/${MY_APPDIR}/postinst-${1}.txt"
 }
 
@@ -185,7 +185,7 @@ function webapp_postupgrade_txt ()
 {
 	webapp_checkfileexists "${2}"
 
-	einfo "(info) ${2} (lang: ${1})"
+	elog "(info) ${2} (lang: ${1})"
 	cp "${2}" "${D}/${MY_APPDIR}/postupgrade-${1}.txt"
 }
 
@@ -215,7 +215,7 @@ function webapp_serverowned ()
 				local MY_FILE="$(webapp_strip_appdir "${a}")"
 				MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
 
-				einfo "(server owned) ${MY_FILE}"
+				elog "(server owned) ${MY_FILE}"
 				echo "${MY_FILE}" >> "${D}/${WA_SOLIST}"
 			done
 		done
@@ -225,7 +225,7 @@ function webapp_serverowned ()
 			local MY_FILE="$(webapp_strip_appdir "${m}")"
 			MY_FILE="$(webapp_strip_cwd "${MY_FILE}")"
 
-			einfo "(server owned) ${MY_FILE}"
+			elog "(server owned) ${MY_FILE}"
 			echo "${MY_FILE}" >> "${D}/${WA_SOLIST}"
 		done
 	fi
@@ -264,7 +264,7 @@ function webapp_server_configfile ()
 	# do NOT change the naming convention used here without changing all
 	# the other scripts that also rely upon these names
 
-	einfo "(${1}) config file '${my_file}'"
+	elog "(${1}) config file '${my_file}'"
 	cp "${2}" "${D}/${MY_SERVERCONFIGDIR}/${my_file}"
 }
 
@@ -301,12 +301,12 @@ function webapp_sqlscript ()
 	# are we dealing with an 'upgrade'-type script?
 	if [ -n "${3}" ]; then
 		# yes we are
-		einfo "(${1}) upgrade script from ${PN}-${PVR} to ${3}"
+		elog "(${1}) upgrade script from ${PN}-${PVR} to ${3}"
 		cp "${2}" "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 		chmod 600 "${D}${MY_SQLSCRIPTSDIR}/${1}/${3}_to_${PVR}.sql"
 	else
 		# no, we are not
-		einfo "(${1}) create script for ${PN}-${PVR}"
+		elog "(${1}) create script for ${PN}-${PVR}"
 		cp "${2}" "${D}/${MY_SQLSCRIPTSDIR}/${1}/${PVR}_create.sql"
 		chmod 600 "${D}/${MY_SQLSCRIPTSDIR}/${1}/${PVR}_create.sql"
 	fi
@@ -421,17 +421,17 @@ function webapp_getinstalltype ()
 
 			if [ "${my_pn}" == "${PN}" ]; then
 				if [ "${my_pvr}" != "${PVR}" ]; then
-					einfo "This is an upgrade"
+					elog "This is an upgrade"
 					IS_UPGRADE=1
 				else
-					einfo "This is a re-installation"
+					elog "This is a re-installation"
 					IS_REPLACE=1
 				fi
 			else
-				einfo "${my_output} is installed there"
+				elog "${my_output} is installed there"
 			fi
 		else
-			einfo "This is an installation"
+			elog "This is an installation"
 		fi
 	fi
 }
@@ -474,7 +474,7 @@ function webapp_pkg_postinst ()
 
 	if ! use vhosts ; then
 		echo
-		einfo "vhosts USE flag not set - auto-installing using webapp-config"
+		elog "vhosts USE flag not set - auto-installing using webapp-config"
 
 		webapp_getinstalltype
 
@@ -483,17 +483,17 @@ function webapp_pkg_postinst ()
 		webapp_read_config
 
 		if [ "${IS_REPLACE}" = "1" ]; then
-			einfo "${PN}-${PVR} is already installed - replacing"
+			elog "${PN}-${PVR} is already installed - replacing"
 			my_mode=-I
 		elif [ "${IS_UPGRADE}" = "1" ]; then
-			einfo "${REMOVE_PKG} is already installed - upgrading"
+			elog "${REMOVE_PKG} is already installed - upgrading"
 			my_mode=-U
 		else
-			einfo "${PN}-${PVR} is not installed - using install mode"
+			elog "${PN}-${PVR} is not installed - using install mode"
 		fi
 
 		my_cmd="${WEBAPP_CONFIG} ${my_mode} -h localhost -u root -d ${INSTALL_DIR} ${PN} ${PVR}"
-		einfo "Running ${my_cmd}"
+		elog "Running ${my_cmd}"
 		${my_cmd}
 
 		# remove the old version
@@ -508,7 +508,7 @@ function webapp_pkg_postinst ()
 		# the user is relying on portage to do the magical thing for it
 
 		if [ "${IS_UPGRADE}" = "1" ] ; then
-			einfo "Removing old version ${REMOVE_PKG}"
+			elog "Removing old version ${REMOVE_PKG}"
 
 			emerge -C "${REMOVE_PKG}"
 		fi
@@ -517,16 +517,16 @@ function webapp_pkg_postinst ()
 		#
 		# let's tell the administrator what to do next
 
-		einfo
-		einfo "The 'vhosts' USE flag is switched ON"
-		einfo "This means that Portage will not automatically run webapp-config to"
-		einfo "complete the installation."
-		einfo
-		einfo "To install ${PN}-${PVR} into a virtual host, run the following command:"
-		einfo
-		einfo "    webapp-config -I -h <host> -d ${PN} ${PN} ${PVR}"
-		einfo
-		einfo "For more details, see the webapp-config(8) man page"
+		elog
+		elog "The 'vhosts' USE flag is switched ON"
+		elog "This means that Portage will not automatically run webapp-config to"
+		elog "complete the installation."
+		elog
+		elog "To install ${PN}-${PVR} into a virtual host, run the following command:"
+		elog
+		elog "    webapp-config -I -h <host> -d ${PN} ${PN} ${PVR}"
+		elog
+		elog "For more details, see the webapp-config(8) man page"
 	fi
 
 	return 0
