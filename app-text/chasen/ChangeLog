@@ -1,6 +1,11 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.23 2006/06/26 19:45:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.24 2006/07/10 05:28:58 usata Exp $
+
+  10 Jul 2006; Mamoru KOMACHI <usata@gentoo.org> chasen-2.3.3-r3.ebuild,
+  -chasen-2.4.0_pre1.ebuild, chasen-2.4.0_pre1-r1.ebuild:
+  Text::ChaSen from chasen distribution conflicts with dev-perl/Text-ChaSen.
+  (They are the same software but with different versions)
 
   26 Jun 2006; Mamoru KOMACHI <usata@gentoo.org>
   +files/chasen-2.3.3-darts-0.3.patch, chasen-2.3.3-r3.ebuild:

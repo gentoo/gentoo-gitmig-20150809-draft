@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.9 2006/06/26 19:45:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.10 2006/07/10 05:28:58 usata Exp $
 
 inherit perl-app eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 amd64 sparc ppc"
 IUSE="perl"
 
-RDEPEND=">=dev-libs/darts-0.2"
+RDEPEND=">=dev-libs/darts-0.2
+	perl? ( !dev-perl/Text-ChaSen )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 PDEPEND=">=app-dicts/ipadic-2.6.1"
