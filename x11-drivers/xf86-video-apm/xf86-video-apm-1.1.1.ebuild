@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-apm/xf86-video-apm-1.1.1.ebuild,v 1.3 2006/07/01 00:38:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-apm/xf86-video-apm-1.1.1.ebuild,v 1.4 2006/07/10 22:15:46 agriffis Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="X.Org driver for apm cards"
-KEYWORDS="~amd64 ~ia64 sh ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ia64 sh ~x86 ~x86-fbsd"
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
