@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5615 2006/07/10 05:57:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5616 2006/07/10 17:31:23 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -43,10 +43,6 @@ media-sound/bmpx
 # Deprecated and pending removal (bug #119923)
 # Please use media-gfx/fbida instead.
 media-gfx/fbi
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (08 Jul 2006)
-# Testing, doesn't build yet.
-dev-java/proguard
 
 # Luis Medinas <metalgod@gentoo.org> (08 Jul 2006)
 # Dead upstream it needs to be removed.
