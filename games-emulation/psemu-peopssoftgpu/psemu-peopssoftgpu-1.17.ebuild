@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.3 2006/01/25 02:40:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.4 2006/07/10 23:04:16 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/peops/PeopsSoftGpu${PV//./}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="sdl"
 
 RDEPEND="=x11-libs/gtk+-1*
@@ -31,9 +31,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	edos2unix src/makes/mk.fpse
-	epatch "${FILESDIR}"/${PN}-1.16-makefile-cflags.patch
-	epatch "${FILESDIR}"/${PN}-1.16-fix-noxf86vm.patch
-	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.16-makefile-cflags.patch \
+		"${FILESDIR}"/${PN}-1.16-fix-noxf86vm.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 
 	if [[ ${ARCH} != "x86" ]] ; then
 		cd src
