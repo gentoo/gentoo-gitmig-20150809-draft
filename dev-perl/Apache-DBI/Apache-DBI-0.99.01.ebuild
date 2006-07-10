@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-0.99.01.ebuild,v 1.3 2006/07/03 20:09:13 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-0.99.01.ebuild,v 1.4 2006/07/10 14:19:54 agriffis Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://search.cpan.org/~pgollucci/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ia64 ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/perl-Test-Simple
