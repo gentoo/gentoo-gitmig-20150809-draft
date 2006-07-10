@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.10 2006/02/26 19:06:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-4.2.6.ebuild,v 1.11 2006/07/10 12:41:27 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -18,7 +18,7 @@ LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
 IUSE="doc examples java mpi patented python tcltk threads"
-RDEPEND="java? ( virtual/jdk )
+RDEPEND="java? ( =virtual/jdk-1.4* )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
 	>=dev-lang/tcl-8.2.3

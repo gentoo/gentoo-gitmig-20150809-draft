@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.8 2006/07/10 12:41:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.1.ebuild,v 1.1 2006/07/10 12:41:27 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -17,12 +17,12 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE="doc examples java mpi patented python tcltk threads qt3 qt4"
+IUSE="doc examples java mpi patented python tcl tk threads qt3 qt4"
 RDEPEND="java? ( =virtual/jdk-1.4* )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
-	tcltk? ( >=dev-lang/tcl-8.2.3
-			>=dev-lang/tk-8.2.3 )
+	tcl? ( >=dev-lang/tcl-8.2.3 )
+	tk? ( >=dev-lang/tk-8.2.3 )
 	dev-libs/expat
 	media-libs/jpeg
 	media-libs/libpng
@@ -133,11 +133,15 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_QMAKE_EXECUTABLE:PATH=/usr/bin/qmake"
 	fi
 
-	if use tcltk; then
+	if use tcl; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=ON"
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_TK:BOOL=ON"
 	else
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_TCL:BOOL=OFF"
+	fi
+
+	if use tk; then
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_TK:BOOL=ON"
+	else
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_TK:BOOL=OFF"
 	fi
 
