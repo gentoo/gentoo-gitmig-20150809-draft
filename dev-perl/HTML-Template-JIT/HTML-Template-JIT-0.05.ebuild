@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/HTML-Template-JIT-0.05.ebuild,v 1.4 2006/07/04 10:19:51 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/HTML-Template-JIT-0.05.ebuild,v 1.5 2006/07/10 16:01:17 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~ia64 sparc ~x86"
+KEYWORDS="ia64 sparc ~x86"
 
 DEPEND=">=dev-perl/HTML-Template-2.8
 	dev-perl/Inline"
