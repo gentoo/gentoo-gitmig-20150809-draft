@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.56 2006/06/20 21:03:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.57 2006/07/10 19:33:03 gustavoz Exp $
+
+  10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org> vino-2.13.5.ebuild:
+  Stable on sparc wrt #139612
 
   20 Jun 2006; Daniel Gryniewicz <dang@gentoo.org> vino-2.13.5.ebuild:
   avahi support needs dbus in avahi.  Bug #133340
