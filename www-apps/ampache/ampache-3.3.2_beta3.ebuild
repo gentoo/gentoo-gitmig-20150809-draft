@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.1.7.ebuild,v 1.3 2006/07/10 00:48:52 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.3.2_beta3.ebuild,v 1.1 2006/07/10 00:48:52 marineam Exp $
 
 inherit webapp depend.php
 
 DESCRIPTION="Ampache is a PHP-based tool for managing, updating and playing your audio files via a web interface."
 HOMEPAGE="http://www.ampache.org/"
-SRC_URI="http://www.ampache.org/downloads/${P}.tar.gz"
+SRC_URI="http://www.ampache.org/downloads/${P/_beta/-beta}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~ppc ~x86"
@@ -17,6 +17,8 @@ RDEPEND="virtual/httpd-php
 DEPEND=""
 
 need_php
+
+S=${WORKDIR}/${P/_beta/-beta}
 
 pkg_setup() {
 	webapp_pkg_setup
