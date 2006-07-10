@@ -1,10 +1,40 @@
-MD5 fbe8ab6e4bed2a92d5d36f6f436dbc81 ChangeLog 6976
-MD5 bd2f470a5c1539f5368526c40c134464 files/digest-gst-plugins-a52dec-0.10.3 76
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-a52dec-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-a52dec-0.8.11 72
-MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-a52dec-0.8.12 72
-MD5 0ed0c58e5835fb3eb0cd6b24719dc4b0 gst-plugins-a52dec-0.10.3.ebuild 447
+DIST gst-plugins-0.8.10.tar.bz2 2397528
+DIST gst-plugins-0.8.11.tar.bz2 2439654
+DIST gst-plugins-0.8.12.tar.bz2 2506926
+DIST gst-plugins-ugly-0.10.3.tar.bz2 605833
+EBUILD gst-plugins-a52dec-0.10.3.ebuild 446 RMD160 422e0430bddb50ef10c3e6a5298a7fb079438de5 SHA1 8940cbe21740f413d5a65754a88845ec0e7b2b21 SHA256 dbf2feddbc51b60d60514da6b8476718b9c83043e40fab27a3695560c4c0dabb
+MD5 7bae6b8c98943db1609e6eeb722a7d56 gst-plugins-a52dec-0.10.3.ebuild 446
+RMD160 422e0430bddb50ef10c3e6a5298a7fb079438de5 gst-plugins-a52dec-0.10.3.ebuild 446
+SHA256 dbf2feddbc51b60d60514da6b8476718b9c83043e40fab27a3695560c4c0dabb gst-plugins-a52dec-0.10.3.ebuild 446
+EBUILD gst-plugins-a52dec-0.8.10.ebuild 370 RMD160 de67831e9b042b5af8251a82c5c87bb6db7165e9 SHA1 4bd93112b54bd6fcca0b23cfd4a1e3bca2350401 SHA256 aaae16eefd869976f6bce97b3ea2c48dfa4c7e2e25e3691868facef097a9aa47
 MD5 9ed8564b66270c6e2e2017eb0c45cbe9 gst-plugins-a52dec-0.8.10.ebuild 370
+RMD160 de67831e9b042b5af8251a82c5c87bb6db7165e9 gst-plugins-a52dec-0.8.10.ebuild 370
+SHA256 aaae16eefd869976f6bce97b3ea2c48dfa4c7e2e25e3691868facef097a9aa47 gst-plugins-a52dec-0.8.10.ebuild 370
+EBUILD gst-plugins-a52dec-0.8.11.ebuild 370 RMD160 514ed784c81b18fb660096bbfd702fb40bb3f346 SHA1 47a8f90bdd7f7a97241c78ad343053ba3de2c683 SHA256 e107f538e13cacf5b66c401cfd5e4b975ceb9dd23796d0fc8ef3c5c87994ab93
 MD5 41c8aca552390a361b6274f9c1fafcc0 gst-plugins-a52dec-0.8.11.ebuild 370
+RMD160 514ed784c81b18fb660096bbfd702fb40bb3f346 gst-plugins-a52dec-0.8.11.ebuild 370
+SHA256 e107f538e13cacf5b66c401cfd5e4b975ceb9dd23796d0fc8ef3c5c87994ab93 gst-plugins-a52dec-0.8.11.ebuild 370
+EBUILD gst-plugins-a52dec-0.8.12.ebuild 377 RMD160 d1bd6fa4120b4be432d32fab5e88588a093c95c7 SHA1 56af99ae8c22abc7290f42efce4d6f41d0d4e60f SHA256 740ab42a4c89862e10922f326552df3fcbb4af283cc7c9cc3d9bcb31ff29f5ba
 MD5 c50a4a19fc4b09393ed48c42e8123a36 gst-plugins-a52dec-0.8.12.ebuild 377
+RMD160 d1bd6fa4120b4be432d32fab5e88588a093c95c7 gst-plugins-a52dec-0.8.12.ebuild 377
+SHA256 740ab42a4c89862e10922f326552df3fcbb4af283cc7c9cc3d9bcb31ff29f5ba gst-plugins-a52dec-0.8.12.ebuild 377
+MISC ChangeLog 7078 RMD160 ef08d81783e9aa6649ceb7b1c40869f372ec6626 SHA1 3469424a26847088d86979f9551d6e1ff2ec5243 SHA256 ddcf23d4e8aa49fbeb1d118fd6bdf269a3874ca58f4f0213b27c6ee1e1fe65a0
+MD5 55a8021ea36712b255faf04ab3e37b0b ChangeLog 7078
+RMD160 ef08d81783e9aa6649ceb7b1c40869f372ec6626 ChangeLog 7078
+SHA256 ddcf23d4e8aa49fbeb1d118fd6bdf269a3874ca58f4f0213b27c6ee1e1fe65a0 ChangeLog 7078
+MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 bd2f470a5c1539f5368526c40c134464 files/digest-gst-plugins-a52dec-0.10.3 76
+RMD160 2d517001834fb74fc78d0a78fc5c2260035acad5 files/digest-gst-plugins-a52dec-0.10.3 76
+SHA256 6310963148974d9162aa8508177f000d541e94dc3f838fb9e72d6874f139484d files/digest-gst-plugins-a52dec-0.10.3 76
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-a52dec-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-a52dec-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-a52dec-0.8.10 72
+MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-a52dec-0.8.11 72
+RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-a52dec-0.8.11 72
+SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-a52dec-0.8.11 72
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-a52dec-0.8.12 72
+RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-a52dec-0.8.12 72
+SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-a52dec-0.8.12 72
