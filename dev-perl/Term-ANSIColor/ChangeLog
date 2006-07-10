@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ANSIColor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.15 2006/06/12 16:45:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/ChangeLog,v 1.16 2006/07/10 22:16:14 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  Term-ANSIColor-1.10.ebuild:
+  Mark 1.10 stable on ia64
 
   12 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   Term-ANSIColor-1.10.ebuild:
