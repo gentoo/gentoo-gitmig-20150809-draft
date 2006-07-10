@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/IP-Country-2.21.ebuild,v 1.4 2006/07/04 11:26:10 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/IP-Country-2.21.ebuild,v 1.5 2006/07/10 16:10:20 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~nwetters/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~amd64 hppa ~ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 SRC_TEST="do"
