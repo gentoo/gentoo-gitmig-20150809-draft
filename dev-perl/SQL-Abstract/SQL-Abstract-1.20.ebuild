@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.20.ebuild,v 1.4 2006/03/30 23:14:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.20.ebuild,v 1.5 2006/07/10 22:00:06 agriffis Exp $
 
 inherit perl-module
 SRC_TEST="do"
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/N/NW/NWIGER/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc x86"
+KEYWORDS="ia64 ~ppc x86"
 IUSE=""
 
 DEPEND=""
