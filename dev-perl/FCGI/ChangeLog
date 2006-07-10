@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FCGI
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.7 2006/03/30 22:35:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.8 2006/07/10 15:29:34 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> FCGI-0.67.ebuild:
+  Mark 0.67 stable on ia64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> FCGI-0.67.ebuild:
   Mark 0.67 ~ia64
