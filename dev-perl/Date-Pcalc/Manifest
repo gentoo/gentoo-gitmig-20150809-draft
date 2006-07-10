@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0150b7c3c29705317a396fb924bd6676 ChangeLog 863
-RMD160 ee28949a971ee2c8cab9fb5b1be25b66ad3fd4b9 ChangeLog 863
-SHA256 056fd8129dd5c0de7a98c16de893ff2b12612e224cd4ccbc352744f7d13c7401 ChangeLog 863
-MD5 399df99837b2be4f29f63f87843e56b3 Date-Pcalc-1.2.ebuild 514
-RMD160 4c0c3a86c4617472746ac0fdfe701a14edff2d7d Date-Pcalc-1.2.ebuild 514
-SHA256 2c04ccd8b4f4c632ca01c28be0c49f36278fd1906cdcc25a6e64bf2abf6a9c48 Date-Pcalc-1.2.ebuild 514
+MD5 457530f539979a70b94e471459b98eba ChangeLog 963
+MD5 687c3fc122063aa22f18fdaf162bcaff Date-Pcalc-1.2.ebuild 513
 MD5 d4fd47f16bce3b016ca590c6b1dac721 files/digest-Date-Pcalc-1.2 65
-RMD160 4f0aef813cac9714a60cc8ee7a44e50c9d89d787 files/digest-Date-Pcalc-1.2 65
-SHA256 53932fa3a9ba7a76644c82f4aa373813ef479426cf254f91770b17d8b1931722 files/digest-Date-Pcalc-1.2 65
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
-RMD160 20eb42c177eede01b15cb26692a3cdf9d09dbebb metadata.xml 157
-SHA256 6a11fd41a2a210a9760849de398ef8c62cf46cc742d09b2e1781def7848fa1ec metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELFwFJrHF4yAQTrARAqqkAKDPOwZi59ECcNCeNN4AHLmiXtgPCACgtjJ9
-6TD1GFljcx+9pulw+hvuDis=
-=uMPC
------END PGP SIGNATURE-----
