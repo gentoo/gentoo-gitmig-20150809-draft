@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.14 2006/04/20 05:56:37 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.15 2006/07/10 18:49:50 bcowan Exp $
+
+*terminal-0.2.5.4_beta2 (10 Jul 2006)
+
+  10 Jul 2006; Brad Cowan <bcowan@gentoo.org>
+  +terminal-0.2.5.4_beta2.ebuild:
+  Xfce beta 2 builds.
 
 *terminal-0.2.5.1_beta1 (20 Apr 2006)
 
