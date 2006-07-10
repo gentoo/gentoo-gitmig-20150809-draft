@@ -1,22 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a171d2334bafa6e51c1c55d71a702427 ChangeLog 1155
-RMD160 3c70e67b702cbd96236710f3dfb320c91cf02850 ChangeLog 1155
-SHA256 d6a4589a1cc2c71e183b45864b8bb8be9eff1672609893382cf6cc9436e4be2b ChangeLog 1155
-MD5 5ce6dcc1003a7c0b27966d5861770086 Module-Versions-Report-1.02.ebuild 587
-RMD160 d7f350580c32303edd34fe221ce35257bd75bc3d Module-Versions-Report-1.02.ebuild 587
-SHA256 ebe240c02569b5c113b664018d7e031d20c3baf85ca86ee7b1f760aa321d5aa0 Module-Versions-Report-1.02.ebuild 587
+MD5 3ab302e6445e16896a0dff084a83ce3d ChangeLog 1271
+MD5 d568e7094ea083f7b0800b400afeda43 Module-Versions-Report-1.02.ebuild 586
 MD5 88fda53493aa5becf42b7f0c80f0148e files/digest-Module-Versions-Report-1.02 77
-RMD160 9ccafe1dcd78cc52296c5de39829a4399818929e files/digest-Module-Versions-Report-1.02 77
-SHA256 078d1f361c07b911eaa1f55b4ba78f6354e96b1cd80d4da8bc38722c995393bb files/digest-Module-Versions-Report-1.02 77
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
-RMD160 20eb42c177eede01b15cb26692a3cdf9d09dbebb metadata.xml 157
-SHA256 6a11fd41a2a210a9760849de398ef8c62cf46cc742d09b2e1781def7848fa1ec metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFELGPYJrHF4yAQTrARAoJsAKCrU966B6dBa5WiQ24w8hHhx4VgYgCfX671
-LjEjhqnooHtgyjdy3LrX9bU=
-=gdIr
------END PGP SIGNATURE-----
