@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST nautilus-cd-burner-2.12.1.tar.bz2 614118 RMD160 909fa954231a81d2bec7ac19577b824ea35fc5b3 SHA256 93711a09c4c9262ce283b7b2ce5111e2d46fb591df39f5a66d3870eb6c7fdbe0
 DIST nautilus-cd-burner-2.12.2.tar.bz2 609215 RMD160 4c0c70ab8e31d8e072849ccffaddb577ea319049 SHA256 38298c78fbffa1e2ce8e482cdb761a7fe2f694e58d05aedef48c10c2fb50ab83
 DIST nautilus-cd-burner-2.12.3.tar.bz2 615109
@@ -19,10 +22,10 @@ EBUILD nautilus-cd-burner-2.14.1.ebuild 969 RMD160 e32f119e304e307ae86b2d1f41fb8
 MD5 9b2af783f64de4795908caefccab0153 nautilus-cd-burner-2.14.1.ebuild 969
 RMD160 e32f119e304e307ae86b2d1f41fb8d3ea35da7b2 nautilus-cd-burner-2.14.1.ebuild 969
 SHA256 7667a018db110d348c6d60eda3520a3317fb6b1c2a36316d59b92f817aed3089 nautilus-cd-burner-2.14.1.ebuild 969
-EBUILD nautilus-cd-burner-2.14.2.ebuild 968 RMD160 b2bb4ab8cb8a46e3f18e24dbfd7ad2a38bd58009 SHA1 d9c0de8525cdf6ac93abe6c08dbe6e494ffe94b1 SHA256 27e2da431f09ad6424bfc0852193832d603ef379e811094dc53334a22a52e127
-MD5 e7708a16658a428bc2cbb1bba8c8a38b nautilus-cd-burner-2.14.2.ebuild 968
-RMD160 b2bb4ab8cb8a46e3f18e24dbfd7ad2a38bd58009 nautilus-cd-burner-2.14.2.ebuild 968
-SHA256 27e2da431f09ad6424bfc0852193832d603ef379e811094dc53334a22a52e127 nautilus-cd-burner-2.14.2.ebuild 968
+EBUILD nautilus-cd-burner-2.14.2.ebuild 971 RMD160 65d424f3b0ae1a12d0485e1ff580ebe3760ff20b SHA1 9cd83116cd491d98c5c8db19b58cec4142243e5d SHA256 214193a15e45d22a6b3efff8e9d1083282549951113754135da75ee1a94ffa7f
+MD5 57468f10e57d77fed5bf35c993bfedba nautilus-cd-burner-2.14.2.ebuild 971
+RMD160 65d424f3b0ae1a12d0485e1ff580ebe3760ff20b nautilus-cd-burner-2.14.2.ebuild 971
+SHA256 214193a15e45d22a6b3efff8e9d1083282549951113754135da75ee1a94ffa7f nautilus-cd-burner-2.14.2.ebuild 971
 MISC ChangeLog 16950 RMD160 b6d0610fcaa515f1c06476722f322b7fa9b26eef SHA1 729e2c41219b4b13657b8f8dd7026ad72c834219 SHA256 8b785b8d73560c57f10710886aadc37c8c5e3cea5a247619fa9d5d9d9321b545
 MD5 cb05dff243389981e5b632e2c0e39e6d ChangeLog 16950
 RMD160 b6d0610fcaa515f1c06476722f322b7fa9b26eef ChangeLog 16950
@@ -46,3 +49,10 @@ SHA256 63f34c62e73f2cb2247d510a8e9c54a43559a170653f7509258af7885b957165 files/di
 MD5 fb8588af186d9af56bf02285be7253d3 files/digest-nautilus-cd-burner-2.14.2 280
 RMD160 089672639c6de51a754b630dce5ab1a010de6ded files/digest-nautilus-cd-burner-2.14.2 280
 SHA256 daae505f3e73167a7c921ec2c99c3ced67fd0678d3cd8f3fe38c65b02805de85 files/digest-nautilus-cd-burner-2.14.2 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEsrXoKRy60XGEcJIRApMoAJ9JLQ/D+0YbXyK8Ai3iRJ10z2/HmQCfa+Gh
+5lylDbWwmvxnAs05kRbUIW4=
+=S0eJ
+-----END PGP SIGNATURE-----
