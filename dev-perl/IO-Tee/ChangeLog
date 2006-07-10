@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.4 2006/03/30 22:53:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tee/ChangeLog,v 1.5 2006/07/10 16:09:04 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> IO-Tee-0.64.ebuild:
+  Mark 0.64 stable on ia64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> IO-Tee-0.64.ebuild:
   Mark 0.64 ~ia64
