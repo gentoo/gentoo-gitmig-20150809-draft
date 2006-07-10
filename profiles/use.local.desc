@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2014 2006/07/09 17:10:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2015 2006/07/10 01:34:01 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -785,6 +785,9 @@ media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recomme
 media-sound/bmpx:amazon - Enable Amazon album cover fetching
 media-sound/bmpx:irssi - Install irssi script (need dbus and perl)
 media-sound/bmpx:libnotify - Enable libnotify popup balloons
+media-sound/bmpx:musepack - Support for musepack (mpc) files
+media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
+media-sound/bmpx:stream - Build with support for streaming audio
 media-sound/bmpx:xchat - Install xchat script (need dbus and perl/python)
 media-sound/ecasound:libsamplerate - Build with libsamplerate support
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
