@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.0.ebuild,v 1.2 2006/07/09 07:21:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.2.0.ebuild,v 1.3 2006/07/10 06:05:27 cardoe Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,6 +12,9 @@ LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="directfb doc glitz pdf png svg X"
+
+# Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
+RESTRICT="test"
 
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2.1.4
@@ -26,9 +29,6 @@ RDEPEND="media-libs/fontconfig
 	directfb? ( dev-libs/DirectFB )
 	glitz? ( >=media-libs/glitz-0.5.1 )
 	png? ( media-libs/libpng )
-	pdf? (	>=app-text/poppler-bindings-0.4.1
-		x11-libs/pango
-		>=x11-libs/gtk+-2 )
 	svg? ( dev-libs/libxml2 )
 	!<x11-libs/cairo-0.2"
 DEPEND="${RDEPEND}
