@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.2 2006/05/04 16:17:40 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/dnd-1.1-r1.ebuild,v 1.3 2006/07/10 08:27:21 exg Exp $
 
 inherit eutils
 
 S="${WORKDIR}/DND/DNDlib"
 DESCRIPTION="OffiX' Drag'n'drop library"
-HOMEPAGE="http://leb.net/OffiX"
-SRC_URI="http://leb.net/OffiX/dnd.1.1.tgz"
+HOMEPAGE="http://leb.net/offix"
+SRC_URI="http://leb.net/offix/dnd.1.1.tgz"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
@@ -22,7 +22,7 @@ DEPEND="|| (
 	>=x11-libs/libSM-1.0.0
 	>=x11-libs/libXaw-1.0.1
 	>=x11-proto/xproto-7.0.4 )
-	virtual/x11 )"
+	<virtual/x11-7.0 )"
 
 src_unpack() {
 	unpack dnd.1.1.tgz
