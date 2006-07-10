@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/Msql-Mysql-modules-1.2219-r2.ebuild,v 1.7 2006/07/10 16:55:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/Msql-Mysql-modules-1.2219-r2.ebuild,v 1.8 2006/07/10 16:59:39 tsunam Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Msql/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha amd64 ia64 ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Data-ShowTable-3.3
