@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Kismet
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.6 2006/03/30 23:05:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.7 2006/07/10 17:04:10 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> Net-Kismet-0.04.ebuild:
+  Mark 0.04 stable on ia64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Net-Kismet-0.04.ebuild:
   Mark 0.04 ~ia64
