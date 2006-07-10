@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.9 2006/07/07 00:16:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.10 2006/07/10 13:02:15 tcort Exp $
+
+  10 Jul 2006; Thomas Cort <tcort@gentoo.org>
+  notification-daemon-0.3.5.ebuild:
+  Added ~alpha keyword.
 
   06 Jul 2006; Luca Barbato <lu_zero@gentoo.org>
   notification-daemon-0.3.5.ebuild:
