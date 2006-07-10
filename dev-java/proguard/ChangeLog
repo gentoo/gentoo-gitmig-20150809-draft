@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/proguard
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.2 2006/07/08 12:40:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proguard/ChangeLog,v 1.3 2006/07/10 17:29:29 nelchael Exp $
+
+  10 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml:
+  Added missing build.xml, thanks to Piotr Radkowski <nuada@silvermedia.pl>.
 
   08 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> proguard-3.6.ebuild:
   Fixed license, bug #139586.
