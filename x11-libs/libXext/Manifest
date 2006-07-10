@@ -1,5 +1,5 @@
-MD5 a1fc02d93491133f07ecd2ce2c7bd4e8 ChangeLog 3517
+MD5 49556a6522ec2ca11cbdc833863cea25 ChangeLog 3617
 MD5 05814fbdfae6b5e52fcd80de7d0d20a9 files/digest-libXext-1.0.1 66
 MD5 68769b5f5ffd78e38ebd2c58e4653649 files/fix_shadow_manpages.patch 963
-MD5 7a58c2ac7ff17b4c52972774ba511587 libXext-1.0.1.ebuild 637
+MD5 bc0ac4f0fbe193664421b7d6d820a92a libXext-1.0.1.ebuild 636
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
