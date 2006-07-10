@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tie-StrictHash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-StrictHash/ChangeLog,v 1.3 2006/03/30 23:32:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-StrictHash/ChangeLog,v 1.4 2006/07/10 22:34:55 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org> Tie-StrictHash-1.0.ebuild:
+  Mark 1.0 stable on ia64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Tie-StrictHash-1.0.ebuild:
   Mark 1.0 ~ia64
