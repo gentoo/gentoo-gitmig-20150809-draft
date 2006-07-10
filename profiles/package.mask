@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5612 2006/07/10 01:25:47 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5613 2006/07/10 02:15:45 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,8 +23,8 @@
 
 # Patrick McLean <chutzpah@gentoo.org> (09 Jul 2006)
 # Masking until I can get the situation with net-misc/neon sorted out
-# (see bug #139488)
->=media-sound/bmpx-0.20
+# (see bug #139488 and comment #4 on bug #139318).
+media-sound/bmpx
 
 # Michael Marineau <marineam@gentoo.org> (09 Jul 2006)
 # Beta, ok for ~arch but the stable version is also ~arch still :-P
