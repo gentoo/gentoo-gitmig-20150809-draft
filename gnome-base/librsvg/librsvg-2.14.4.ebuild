@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.14.4.ebuild,v 1.1 2006/06/30 20:45:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.14.4.ebuild,v 1.2 2006/07/10 19:05:28 gustavoz Exp $
 
 inherit eutils multilib gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE="doc gnome zlib"
 
 RDEPEND=">=media-libs/fontconfig-1.0.1
