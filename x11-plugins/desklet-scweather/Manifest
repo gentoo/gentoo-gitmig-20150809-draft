@@ -1,10 +1,39 @@
-MD5 39d91db343d3c5b557e64ae1763e80f8 ChangeLog 1457
+DIST SC-Weather-0.1.tar.bz2 379907
+DIST SC-Weather-0.3.tar.bz2 318692
+DIST SC-Weather-0.4.tar.bz2 319032
+EBUILD desklet-scweather-0.1-r1.ebuild 946 RMD160 d89a269c18f30c8e5bba467936d0708bbda5d1ef SHA1 3675ba2bda603c6bf8c8fda22e446fc7bcfc885d SHA256 5e43526f7ee5a38e6792849b3dce48fe1e343b6d8ac61ef7bd318c55d7c9f7ee
 MD5 c6a4b952544f09b5b2dcd5522a47ff76 desklet-scweather-0.1-r1.ebuild 946
+RMD160 d89a269c18f30c8e5bba467936d0708bbda5d1ef desklet-scweather-0.1-r1.ebuild 946
+SHA256 5e43526f7ee5a38e6792849b3dce48fe1e343b6d8ac61ef7bd318c55d7c9f7ee desklet-scweather-0.1-r1.ebuild 946
+EBUILD desklet-scweather-0.1.ebuild 799 RMD160 7a3de14f65bbc06ba0ba22ad5467d7c9309674c6 SHA1 682385c0be69bad8a824f12446d24518e14515db SHA256 6193e40b1516c3d6adc1b73c2d66260a1dddd8fb3836bd73ebbd81c7fee8caa2
 MD5 99c5658b8a80ad5d514d460c3a14c1ce desklet-scweather-0.1.ebuild 799
+RMD160 7a3de14f65bbc06ba0ba22ad5467d7c9309674c6 desklet-scweather-0.1.ebuild 799
+SHA256 6193e40b1516c3d6adc1b73c2d66260a1dddd8fb3836bd73ebbd81c7fee8caa2 desklet-scweather-0.1.ebuild 799
+EBUILD desklet-scweather-0.3.ebuild 683 RMD160 d25abb464c755153bc15acba84cc5735270c90a2 SHA1 c717bad27584a851ad10c7018fdf406a37f5d69e SHA256 ba3d973b8592408cdd90d705d989bf18a536e7e1cb1a27530462cd1241a324fe
 MD5 8b7d9c005445fd5758d12df12b7ab7a6 desklet-scweather-0.3.ebuild 683
-MD5 82178473238274851d28f559cef9c093 desklet-scweather-0.4.ebuild 700
-MD5 664529ad95448d873ba06cdc877adb23 files/digest-desklet-scweather-0.1 67
-MD5 664529ad95448d873ba06cdc877adb23 files/digest-desklet-scweather-0.1-r1 67
-MD5 3407b3a3afdfac43d375d0c93bfc8e6c files/digest-desklet-scweather-0.3 67
-MD5 c503993e7495e4624b4c724d41317cb3 files/digest-desklet-scweather-0.4 67
+RMD160 d25abb464c755153bc15acba84cc5735270c90a2 desklet-scweather-0.3.ebuild 683
+SHA256 ba3d973b8592408cdd90d705d989bf18a536e7e1cb1a27530462cd1241a324fe desklet-scweather-0.3.ebuild 683
+EBUILD desklet-scweather-0.4.ebuild 699 RMD160 b60ef64472d3d63c7379a674549310062876c403 SHA1 503cae11b1f06838e08f832700b71fd9489cf80a SHA256 472673f35188f33c1334be276e50ccbc5a2f9e671e6f54ce0d2a56d1d645950d
+MD5 f82f902299f1e569c0f29c9c462cf888 desklet-scweather-0.4.ebuild 699
+RMD160 b60ef64472d3d63c7379a674549310062876c403 desklet-scweather-0.4.ebuild 699
+SHA256 472673f35188f33c1334be276e50ccbc5a2f9e671e6f54ce0d2a56d1d645950d desklet-scweather-0.4.ebuild 699
+MISC ChangeLog 1570 RMD160 7d4f2eed9f9d829e41d553940ed055191219ff8b SHA1 0c65103ca4dba5bc11b9364f875a1e3b6571acf1 SHA256 e4c284148baeea7ab2a14d9ed166c33805d186d96a30e49f7152b2bab571c2fb
+MD5 bd49e6c80f0c665029a1834467bd8305 ChangeLog 1570
+RMD160 7d4f2eed9f9d829e41d553940ed055191219ff8b ChangeLog 1570
+SHA256 e4c284148baeea7ab2a14d9ed166c33805d186d96a30e49f7152b2bab571c2fb ChangeLog 1570
+MISC metadata.xml 162 RMD160 f0200a20b38bb00e3d7282928d8cd4a7f4ffe993 SHA1 72886a8316d003293955d4d014a55e402d5e8b53 SHA256 d26ee944c21492768d05c515a2a4c3e1e9e35938bef05a84578d01b1e99ecf2a
 MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
+RMD160 f0200a20b38bb00e3d7282928d8cd4a7f4ffe993 metadata.xml 162
+SHA256 d26ee944c21492768d05c515a2a4c3e1e9e35938bef05a84578d01b1e99ecf2a metadata.xml 162
+MD5 664529ad95448d873ba06cdc877adb23 files/digest-desklet-scweather-0.1 67
+RMD160 739f4366d851b2448834969d819de5d3d9b9b9b5 files/digest-desklet-scweather-0.1 67
+SHA256 86134b9240a77ece0b33e673b6c3524da940eb93de6a8601721d115c2e5fabeb files/digest-desklet-scweather-0.1 67
+MD5 664529ad95448d873ba06cdc877adb23 files/digest-desklet-scweather-0.1-r1 67
+RMD160 739f4366d851b2448834969d819de5d3d9b9b9b5 files/digest-desklet-scweather-0.1-r1 67
+SHA256 86134b9240a77ece0b33e673b6c3524da940eb93de6a8601721d115c2e5fabeb files/digest-desklet-scweather-0.1-r1 67
+MD5 3407b3a3afdfac43d375d0c93bfc8e6c files/digest-desklet-scweather-0.3 67
+RMD160 33f7d75d633c5e198bbb14da999aa814ab60ca45 files/digest-desklet-scweather-0.3 67
+SHA256 1fc28dd96a8227c8fe3f7f4a2937a0ee16dca292a9278e0a306f8b0b52420306 files/digest-desklet-scweather-0.3 67
+MD5 c503993e7495e4624b4c724d41317cb3 files/digest-desklet-scweather-0.4 67
+RMD160 4ab519a283f474530c0717ef6ffe4bf0ba65fa85 files/digest-desklet-scweather-0.4 67
+SHA256 560243b26069525da6eab60d8e5512ed32124731ec091876bb986f427cdb3f17 files/digest-desklet-scweather-0.4 67
