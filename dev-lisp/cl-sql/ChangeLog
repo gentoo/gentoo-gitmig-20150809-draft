@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-sql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.27 2006/04/30 05:54:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/ChangeLog,v 1.28 2006/07/10 17:18:27 mkennedy Exp $
+
+*cl-sql-3.6.3 (10 Jul 2006)
+
+  10 Jul 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/3.6.3-gentoo.patch, +cl-sql-3.6.3.ebuild:
+  New upstream version; Also adjust the UFFI library loading strategy for
+  PostgreSQL; Resolves Bug #139208.
 
   30 Apr 2006; Matthew Kennedy <mkennedy@gentoo.org>
   +files/3.5.6-gentoo.patch:
