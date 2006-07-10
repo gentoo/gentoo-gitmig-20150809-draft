@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-StackTrace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.27 2006/06/29 18:09:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.28 2006/07/10 15:18:38 agriffis Exp $
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  Devel-StackTrace-1.13.ebuild:
+  Mark 1.13 stable on ia64
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Devel-StackTrace-1.13.ebuild:
