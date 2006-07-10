@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/qpage-3.3.ebuild,v 1.3 2006/02/25 18:16:54 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/qpage-3.3.ebuild,v 1.4 2006/07/10 01:48:27 chutzpah Exp $
 
 inherit eutils
 
@@ -56,14 +56,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "Post-installation tasks:"
-	einfo
-	einfo "1. Create /etc/qpage/qpage.cf (see example.cf in that dir)."
-	einfo "2. Insure that the serial port selected in qpage.cf"
-	einfo "   is writable by user or group daemon."
-	einfo "3. Set automatic startup with rc-update add qpage default"
-	einfo "4. Send mail to tomiii@qpage.org telling him how"
-	einfo "   you like qpage! :-)"
-	einfo
+	elog
+	elog "Post-installation tasks:"
+	elog
+	elog "1. Create /etc/qpage/qpage.cf (see example.cf in that dir)."
+	elog "2. Insure that the serial port selected in qpage.cf"
+	elog "   is writable by user or group daemon."
+	elog "3. Set automatic startup with rc-update add qpage default"
+	elog "4. Send mail to tomiii@qpage.org telling him how"
+	elog "   you like qpage! :-)"
+	elog
 }
