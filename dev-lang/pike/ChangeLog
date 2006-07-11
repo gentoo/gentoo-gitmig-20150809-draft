@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/pike
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.22 2006/07/11 11:15:15 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.23 2006/07/11 12:52:28 araujo Exp $
+
+  11 Jul 2006; Luis F. Araujo <araujo@gentoo.org> pike-7.6.86-r1.ebuild:
+  Yet _another_ mandatory dep found. giflib
 
   11 Jul 2006; Luis F. Araujo <araujo@gentoo.org> pike-7.6.86-r1.ebuild:
   Fixing the gtk dependency bug reported in #136065
