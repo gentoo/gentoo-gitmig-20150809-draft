@@ -1,0 +1,23 @@
+--- Makefile.in
++++ Makefile.in
+@@ -31,7 +31,7 @@
+ 	README \
+ 	TODO
+ INSTALL = @INSTALL@
+-LIBS= @LIBS@
++LIBS= @LIBS@ @LDFLAGS@
+ 
+ all:	$(TARGET)
+ 
+@@ -59,9 +59,10 @@
+ mrproper:	cleanall
+ distclean:	cleanall
+ 
++BUILD_ROOT = $(DESTDIR)
+ install:
+ 	$(INSTALL) -d -m 755 $(BUILD_ROOT)$(BIN_DIR)
+-	$(INSTALL) -m 755 -s $(TARGET) $(BUILD_ROOT)$(BIN_DIR)
++	$(INSTALL) -m 755 $(TARGET) $(BUILD_ROOT)$(BIN_DIR)
+ 
+ tarball:
+ 	$(INSTALL) -d -m 755 ./$(PACKAGE_NAME)-$(PACKAGE_VERSION)
