@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/last-exit
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.1 2006/07/11 02:35:58 steev Exp $
+
+*last-exit-1.0 (11 Jul 2006)
+
+  11 Jul 2006; Steev Klimaszewski <steev@gentoo.org> +last-exit-1.0.ebuild:
+  Initial import.  Thanks to Agent86 <cjdaniel@gmail.com> for the initial
+  ebuild that I used for 0.2.  Updates from myself.   Thanks to the people in bug
+  #128843 Still need to figure out why you have to restart X even though the
+  schemas are installed.
+
