@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evkeyd/evkeyd-0.1_pre7.ebuild,v 1.5 2005/05/14 18:25:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evkeyd/evkeyd-0.1_pre7.ebuild,v 1.6 2006/07/11 06:07:23 vapier Exp $
+
+inherit eutils
 
 MY_PV=${PV/_/}
 DESCRIPTION="Input event layer media key activator"
@@ -18,12 +20,16 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
-	sed -e "s/_IOR('B', 6, 0)/_IOR('B', 6, int)/" -i ${S}/backlight.c
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
+	sed -i \
+		-e "s/_IOR('B', 6, 0)/_IOR('B', 6, int)/" \
+		backlight.c || die
 }
 
 src_install() {
 	dosbin evkeyd || die
 	insinto /etc
 	doins evkeyd.conf
-	newinitd ${FILESDIR}/evkeyd.rc evkeyd
+	newinitd "${FILESDIR}"/evkeyd.rc evkeyd
 }
