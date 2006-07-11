@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.12.ebuild,v 1.3 2006/07/11 12:19:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/libstatgrab-0.13.ebuild,v 1.1 2006/07/11 12:19:14 dragonheart Exp $
 
 DESCRIPTION="Provides cross platform access to statistics about the system on which it's run."
 HOMEPAGE="http://www.i-scream.org/libstatgrab/"
@@ -14,6 +14,9 @@ RDEPEND=">=sys-libs/ncurses-5.4-r1
 	virtual/libc"
 
 DEPEND="${RDEPEND}
+	sys-apps/gawk
+	sys-apps/grep
+	sys-devel/gcc
 	dev-util/pkgconfig"
 
 src_compile() {

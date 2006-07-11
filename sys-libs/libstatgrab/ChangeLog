@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libstatgrab
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.14 2006/04/01 20:00:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.15 2006/07/11 12:19:14 dragonheart Exp $
+
+*libstatgrab-0.13 (11 Jul 2006)
+
+  11 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  -libstatgrab-0.11.ebuild, -libstatgrab-0.11.1.ebuild,
+  libstatgrab-0.12.ebuild, +libstatgrab-0.13.ebuild:
+  version bump + cleanout
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> libstatgrab-0.12.ebuild:
   Mark 0.12 ~ia64
