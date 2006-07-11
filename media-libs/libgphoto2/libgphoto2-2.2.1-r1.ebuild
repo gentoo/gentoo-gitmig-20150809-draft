@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.1 2006/07/10 02:03:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.2 2006/07/11 10:21:33 dsd Exp $
 
 inherit libtool eutils
 
@@ -55,6 +55,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-2.1.2-norpm.patch
 	epatch ${FILESDIR}/${PN}-2.2.0-includes.patch
+
+	# bug #139534: already merged into upstream SVN
+	epatch ${FILESDIR}/${P}-ngettext.patch
 
 	# make default group 'plugdev', not camera
 	sed -e 's:=camera:=plugdev:' -i packaging/linux-hotplug/usbcam.group
