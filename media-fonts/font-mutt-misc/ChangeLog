@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-mutt-misc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-mutt-misc/ChangeLog,v 1.13 2006/07/02 19:01:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-mutt-misc/ChangeLog,v 1.14 2006/07/11 15:36:52 agriffis Exp $
+
+  11 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  font-mutt-misc-1.0.0.ebuild:
+  Mark 1.0.0 stable on ia64
 
   02 Jul 2006; Markus Rothe <corsair@gentoo.org>
   font-mutt-misc-1.0.0.ebuild:
