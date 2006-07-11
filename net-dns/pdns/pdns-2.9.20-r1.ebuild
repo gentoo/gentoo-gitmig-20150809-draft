@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r1.ebuild,v 1.2 2006/06/18 16:59:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r1.ebuild,v 1.3 2006/07/11 04:32:42 tsunam Exp $
 
 inherit multilib eutils autotools
 
@@ -9,7 +9,7 @@ SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
 HOMEPAGE="http://www.powerdns.com/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="debug doc ldap mysql postgres sqlite static tdb"
 
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
