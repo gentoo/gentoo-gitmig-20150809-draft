@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/intlfonts
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.8 2005/12/19 15:01:58 seemant Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.9 2006/07/11 18:33:23 agriffis Exp $
+
+  11 Jul 2006; Aron Griffis <agriffis@gentoo.org> intlfonts-1.2.1.ebuild:
+  Mark 1.2.1 stable on ia64
 
   19 Dec 2005; Seemant Kulleen <seemant@gentoo.org> intlfonts-1.2.1.ebuild:
   inherit the deps right from the fonts eclass
