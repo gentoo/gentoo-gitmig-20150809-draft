@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.11 2006/02/19 22:20:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.5.6.ebuild,v 1.12 2006/07/11 22:56:18 seemant Exp $
 
 inherit rpm eutils flag-o-matic
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
+DEPEND="!sys-libs/libutempter"
 RDEPEND="virtual/libc"
 
 PROVIDE="virtual/utempter"
