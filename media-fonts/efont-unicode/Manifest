@@ -1,18 +1,23 @@
-MD5 769ccda91ff3f926fee2f58199030132 ChangeLog 2046
-RMD160 b806447a07706e88836acb9d0fcf6959f22fa5b3 ChangeLog 2046
-SHA256 2f6f76fb5f181adeb9fc51780889e2fbb78052fda5d1c93a51193f1e074cb52b ChangeLog 2046
-MD5 bd71e0db76178fe1ac88325f22303524 efont-unicode-0.4.2-r1.ebuild 694
-RMD160 731568ae941561371a619b00e762b27bbeb18f9c efont-unicode-0.4.2-r1.ebuild 694
-SHA256 465f36fd21e8d9b9e00ca6f8ff07c3cd58e746221e2ca7d40b38ae4e4e6f2e91 efont-unicode-0.4.2-r1.ebuild 694
+DIST efont-unicode-bdf-0.4.2.tar.bz2 23999335 RMD160 87b2f68b10822ba05ea87cf5054ac48d70679c8b SHA1 2feed39e6f5345db560ccd003f39bfe20473b8d0 SHA256 7d3ed2b18955ddd090adfd0865f88d23582b8f79e00e0afc22459d83e7fd9b73
+EBUILD efont-unicode-0.4.2-r1.ebuild 700 RMD160 1596972ccdedc3234e1810398f64c4ab12cadcdb SHA1 925a8cf8e7bc3dda2ef6653c20b0fd660e29bfba SHA256 692176f28279a1818e3a790d2e1c626f73d1220f12297e94fa0b01ab20c31178
+MD5 35bdf36acaab79d8debd2862f2f2e352 efont-unicode-0.4.2-r1.ebuild 700
+RMD160 1596972ccdedc3234e1810398f64c4ab12cadcdb efont-unicode-0.4.2-r1.ebuild 700
+SHA256 692176f28279a1818e3a790d2e1c626f73d1220f12297e94fa0b01ab20c31178 efont-unicode-0.4.2-r1.ebuild 700
+EBUILD efont-unicode-0.4.2.ebuild 945 RMD160 ac7d3c4e157482ae7871a1a8aeaac23fb4686f78 SHA1 f9f030e7b29c5c52496bbcf899dfcfb49ab9fdb6 SHA256 800ad5b1005ea39fda3cc918ed4841c271f31d64ed6041e15ba4b5421c050c23
 MD5 64c37a58ffd298c4981b80153b8f2559 efont-unicode-0.4.2.ebuild 945
 RMD160 ac7d3c4e157482ae7871a1a8aeaac23fb4686f78 efont-unicode-0.4.2.ebuild 945
 SHA256 800ad5b1005ea39fda3cc918ed4841c271f31d64ed6041e15ba4b5421c050c23 efont-unicode-0.4.2.ebuild 945
-MD5 5c097610d90a81ce4fc3751c4d044dc0 files/digest-efont-unicode-0.4.2 78
-RMD160 5f7b197ad9eb3e25f8c5d8d0f4a95ef9dba19536 files/digest-efont-unicode-0.4.2 78
-SHA256 e48addc05fd472eb5ecb52e92d3ddb4c0b98b2c9e54f22327f43ca3c36894015 files/digest-efont-unicode-0.4.2 78
-MD5 5c097610d90a81ce4fc3751c4d044dc0 files/digest-efont-unicode-0.4.2-r1 78
-RMD160 5f7b197ad9eb3e25f8c5d8d0f4a95ef9dba19536 files/digest-efont-unicode-0.4.2-r1 78
-SHA256 e48addc05fd472eb5ecb52e92d3ddb4c0b98b2c9e54f22327f43ca3c36894015 files/digest-efont-unicode-0.4.2-r1 78
+MISC ChangeLog 2160 RMD160 504d68050666eaf5c0effb462be03032b3c6b5a1 SHA1 19f9228e7257e4bdb5c194a07c4fe49682dd6419 SHA256 fe96243bd114a7b07bb9966782e5e8f9c21f4e8d83db53c940f6b2cae8ee38ed
+MD5 8137832744e07938e00b90f66a6613ed ChangeLog 2160
+RMD160 504d68050666eaf5c0effb462be03032b3c6b5a1 ChangeLog 2160
+SHA256 fe96243bd114a7b07bb9966782e5e8f9c21f4e8d83db53c940f6b2cae8ee38ed ChangeLog 2160
+MISC metadata.xml 175 RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e SHA1 5f1d4ea1a9ccb9b3dbd74ddaed58f0df64f2ad63 SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
 RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e metadata.xml 175
 SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8 metadata.xml 175
+MD5 aa093a099b64d981d80d1dc4e48f5a42 files/digest-efont-unicode-0.4.2 280
+RMD160 11c3f7be153c7efac22417aa0e3c347e1a5d3379 files/digest-efont-unicode-0.4.2 280
+SHA256 cd754ca2ae75c0ac192e6301a4ce6a68e3d53164852e4ae5d9de21126c922a36 files/digest-efont-unicode-0.4.2 280
+MD5 aa093a099b64d981d80d1dc4e48f5a42 files/digest-efont-unicode-0.4.2-r1 280
+RMD160 11c3f7be153c7efac22417aa0e3c347e1a5d3379 files/digest-efont-unicode-0.4.2-r1 280
+SHA256 cd754ca2ae75c0ac192e6301a4ce6a68e3d53164852e4ae5d9de21126c922a36 files/digest-efont-unicode-0.4.2-r1 280
