@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+	<email>tove@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 Wyrd is a curses front end to the reminder programer, ideal for use in clients like mutt.
