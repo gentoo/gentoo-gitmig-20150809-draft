@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.69 2006/04/27 22:24:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.70 2006/07/11 00:21:53 chtekk Exp $
+
+*courier-0.53.2 (11 Jul 2006)
+
+  11 Jul 2006; Luca Longinotti <chtekk@gentoo.org> +files/courier-init-r1,
+  +courier-0.53.2.ebuild:
+  Version bump. Fixes security bug #135005 and bugs #130957, #133401, #107557
+  and #134027. Thanks to Marcin Semeniuk for his help.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-courier-0.48.1, files/digest-courier-0.48.1-r1,
