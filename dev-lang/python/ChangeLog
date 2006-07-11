@@ -1,7 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.203 2006/07/09 03:03:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.204 2006/07/11 19:57:53 liquidx Exp $
 
+  11 Jul 2006; Alastair Tse <liquidx@gentoo.org> python-2.4.3-r1.ebuild:
+  python-2.2.3-r6.ebuild, python-2.3.5-r2.ebuild, python-2.4.2.ebuild,
+  python-2.4.2-r1.ebuild, python-2.4.2-r2.ebuild, python-2.4.3.ebuild,
+  python-2.4.3-r1.ebuild:	
+  Typo fix in DESCRIPTION (#139463)
+	
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> python-2.4.3-r1.ebuild:
   Marked stable on mips.
 
