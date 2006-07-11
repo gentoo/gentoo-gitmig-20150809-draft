@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r2.ebuild,v 1.1 2006/07/06 16:18:52 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r2.ebuild,v 1.2 2006/07/11 23:31:07 exg Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -14,12 +14,12 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="krb4 static tcltk ipv6 doc"
+IUSE="krb4 static tcl ipv6 doc"
 
 RDEPEND="!virtual/krb5
 	sys-libs/com_err
 	sys-libs/ss
-	tcltk? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )"
 
 DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )"
@@ -44,7 +44,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		$(use_with krb4) \
-		$(use_with tcltk tcl) \
+		$(use_with tcl) \
 		$(use_enable ipv6) \
 		$(use_enable static) \
 		--enable-shared \
