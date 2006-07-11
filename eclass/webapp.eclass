@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.43 2006/07/10 00:52:34 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.44 2006/07/11 02:36:23 rl03 Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -352,17 +352,9 @@ function webapp_pkg_setup ()
 {
 	# add sanity checks here
 
-	if [ "${SLOT}+" != "${PVR}+" ]; then
-		# special case - some ebuilds *do* need to overwride the SLOT
-		if [ "${WEBAPP_MANUAL_SLOT}" != "yes" ]; then
-			die "ebuild sets SLOT, overrides webapp.eclass"
-		else
-			ewarn
-			ewarn "This ebuild overrides the default SLOT behaviour for webapps"
-			ewarn "If this package installs files into the htdocs dir, this is"
-			ewarn "probably a bug in the ebuild."
-			ewarn
-		fi
+	# special case - some ebuilds *do* need to overwride the SLOT
+	if [[ "${SLOT}+" != "${PVR}+" && "${WEBAPP_MANUAL_SLOT}" != "yes" ]]; then
+		die "Set WEBAPP_MANUAL_SLOT=\"yes\" if you need to SLOT manually"
 	fi
 
 	# pull in the shared configuration file
