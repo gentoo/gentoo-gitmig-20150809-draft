@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez-firmware
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.4 2006/05/23 01:52:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-firmware/ChangeLog,v 1.5 2006/07/11 22:44:22 liquidx Exp $
+
+*bluez-firmware-1.2 (11 Jul 2006)
+
+  11 Jul 2006; Alastair Tse <liquidx@gentoo.org> +bluez-firmware-1.2.ebuild:
+  Version bump with new support for STM Bluetooth chips.
 
   23 May 2006; Robin H. Johnson <robbat2@gentoo.org>
   bluez-firmware-1.1.ebuild:
