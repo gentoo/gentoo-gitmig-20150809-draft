@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2019 2006/07/11 04:15:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2020 2006/07/11 07:35:09 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -914,6 +914,8 @@ media-video/mpeg4ip:player - Build the player
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support for mp4live
 media-video/mpeg4ip:x264 - Enable x264 codec for mp4live (using x264-svn)
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
+media-video/mplayer:amr - Enables Adaptive Multi-Rate Audio support
+media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
