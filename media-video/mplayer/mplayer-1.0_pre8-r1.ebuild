@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.1 2006/07/11 10:07:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.2 2006/07/11 19:30:58 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,17 +56,12 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	enca? ( app-i18n/enca )
 	gif? ( media-libs/giflib )
 	ggi? ( media-libs/libggi )
-	gtk? (
-		media-libs/libpng
-		|| ( ( x11-libs/libXxf86vm
-				x11-libs/libXext
-				x11-libs/libXi
-			)
-			<virtual/x11-7
-		)
-		=x11-libs/gtk+-2*
-		=dev-libs/glib-2*
-		)
+	gtk? ( media-libs/libpng
+		   x11-libs/libXxf86vm
+		   x11-libs/libXext
+		   x11-libs/libXi
+		   =x11-libs/gtk+-2*
+		   =dev-libs/glib-2* )
 	jpeg? ( media-libs/jpeg )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
@@ -83,30 +78,19 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	theora? ( media-libs/libtheora )
 	live? ( >=media-plugins/live-2004.07.20 )
 	truetype? ( >=media-libs/freetype-2.1 )
-	xinerama? ( || ( ( x11-libs/libXinerama
+	xinerama? ( x11-libs/libXinerama
 				x11-libs/libXxf86vm
-				x11-libs/libXext
-			)
-			<virtual/x11-7
-		)
-	)
+				x11-libs/libXext )
 	xmms? ( media-sound/xmms )
 	xanim? ( >=media-video/xanim-2.80.1-r4 )
 	sys-libs/ncurses
-	xv? ( || ( ( x11-libs/libXv
-				x11-libs/libXxf86vm
-				x11-libs/libXext
-			)
-			<virtual/x11-7
-		)
-	)
-	xvmc? ( x11-libs/libXvMC )
-	X? ( || ( ( x11-libs/libXxf86vm
-				x11-libs/libXext
-			)
-			<virtual/x11-7
-		)
-	)"
+	xv? ( x11-libs/libXv
+		  x11-libs/libXxf86vm
+		  x11-libs/libXext
+		  xvmc? ( x11-libs/libXvMC ) )
+	X? ( x11-libs/libXxf86vm
+		 x11-libs/libXext )
+	"
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
@@ -115,26 +99,14 @@ DEPEND="${RDEPEND}
 		   >=app-text/docbook-xml-simple-dtd-1.50.0
 		   dev-libs/libxslt
 		   )
-	dga? ( || ( x11-proto/xf86dgaproto virtual/x11 ) )
-	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
-	xv? ( || ( ( x11-proto/videoproto
-				x11-proto/xf86vidmodeproto
-			)
-			<virtual/x11-7
-		)
-	)
-	gtk? ( || ( ( x11-proto/xextproto
-				x11-proto/xf86vidmodeproto
-			)
-			<virtual/x11-7
-		)
-	)
-	X? ( || ( ( x11-proto/xextproto
-				x11-proto/xf86vidmodeproto
-			)
-			<virtual/x11-7
-		)
-	)
+	dga? ( x11-proto/xf86dgaproto )
+	xinerama? ( x11-proto/xineramaproto )
+	xv? ( x11-proto/videoproto
+		  x11-proto/xf86vidmodeproto )
+	gtk? ( x11-proto/xextproto
+		   x11-proto/xf86vidmodeproto )
+	X? ( x11-proto/xextproto
+		 x11-proto/xf86vidmodeproto )
 	unicode? ( virtual/libiconv )"
 
 SLOT="0"
@@ -408,7 +380,7 @@ src_compile() {
 
 	myconf="${myconf} $(use_enable tga)"
 
-	if use xvmc
+	if use xv && use xvmc
 	then
 		myconf="${myconf} --enable-xvmc --with-xvmclib=XvMCW"
 	else
