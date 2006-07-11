@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2020 2006/07/11 07:35:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2021 2006/07/11 09:19:00 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -995,6 +995,11 @@ net-analyzer/echoping:smtp - enable supprt for SMTP protocol.
 net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/iptraf:suid - Allow app to be run with suid root
+net-analyzer/munin:munin-apache - installs deps for monitoring apache
+net-analyzer/munin:munin-dhcp - installs deps for monitoring DHCP
+net-analyzer/munin:munin-irc - installs deps for monitoring IRC
+net-analyzer/munin:munin-squid - installs deps for monitoring squid
+net-analyzer/munin:munin-surfboard - installs deps for monitoring a Motoro Surfboard Cable modem
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-nrpe:command-args - allow clients to specify command arguments
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
