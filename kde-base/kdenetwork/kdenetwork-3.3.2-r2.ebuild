@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r2.ebuild,v 1.10 2006/02/21 18:51:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.3.2-r2.ebuild,v 1.11 2006/07/11 18:46:13 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -55,4 +55,14 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/lisa.conf lisa
 	newins ${FILESDIR}/reslisa.conf reslisa
+}
+
+pkg_postinst() {
+	elog "Since 11 July 2006 the version of Kopete here built cannot connect to ICQ service"
+	elog "anymore."
+	elog "You're currently invited to use either >=kde-base/kopete-3.5.3-r2, >=net-im/kopete-0.12.0-r2"
+	elog "or >=kde-base/kdenetwork-3.5.2-r2 that are patched to support the new authentication."
+	elog "For more information, please look at the following bugs:"
+	elog "	  http://bugs.kde.org/show_bug.cgi?id=130630"
+	elog "	  http://bugs.gentoo.org/show_bug.cgi?id=140009"
 }

@@ -1,13 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3.ebuild,v 1.4 2006/07/11 18:46:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3-r2.ebuild,v 1.1 2006/07/11 18:46:13 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
-DESCRIPTION="KDE network apps: kopete, kppp, kget..."
+DESCRIPTION="KDE network applications: Kopete, KPPP, KGet,..."
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="rdesktop sametime slp ssl wifi xmms"
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/kdenetwork-3.5-patchset-01.tar.bz2"
 
 BOTH_DEPEND="~kde-base/kdebase-${PV}
 	dev-libs/libxslt
@@ -44,8 +47,7 @@ DEPEND="${BOTH_DEPEND}
 		) <virtual/x11-7 )
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kppp-3.5.0-bindnow.patch
-	${FILESDIR}/lisa-3.5.0-bindnow.patch"
+PATCHES="${FILESDIR}/kopete-3.5.3-icqfix.patch"
 
 pkg_setup() {
 	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
@@ -70,29 +72,19 @@ src_compile() {
 src_install() {
 	kde_src_install
 
-	chmod u+s ${D}/${KDEDIR}/bin/reslisa
+	chmod u+s "${D}/${KDEDIR}/bin/reslisa"
 
 	# empty config file needed for lisa to work with default settings
 	dodir /etc
-	touch ${D}/etc/lisarc
+	touch "${D}/etc/lisarc"
 
 	# lisa, reslisa initscripts
-	sed -e "s:_KDEDIR_:${KDEDIR}:g" ${FILESDIR}/lisa > ${T}/lisa
-	sed -e "s:_KDEDIR_:${KDEDIR}:g" ${FILESDIR}/reslisa > ${T}/reslisa
+	sed -e "s:_KDEDIR_:${KDEDIR}:g" "${WORKDIR}/patches/lisa" > "${T}/lisa"
+	sed -e "s:_KDEDIR_:${KDEDIR}:g" "${WORKDIR}/patches/reslisa" > "${T}/reslisa"
 	exeinto /etc/init.d
-	doexe ${T}/lisa ${T}/reslisa
+	doexe "${T}/lisa" "${T}/reslisa"
 
 	insinto /etc/conf.d
-	newins ${FILESDIR}/lisa.conf lisa
-	newins ${FILESDIR}/reslisa.conf reslisa
-}
-
-pkg_postinst() {
-	elog "Since 11 July 2006 the version of Kopete here built cannot connect to ICQ service"
-	elog "anymore."
-	elog "You're currently invited to use either >=kde-base/kopete-3.5.3-r2, >=net-im/kopete-0.12.0-r2"
-	elog "or >=kde-base/kdenetwork-3.5.2-r2 that are patched to support the new authentication."
-	elog "For more information, please look at the following bugs:"
-	elog "	  http://bugs.kde.org/show_bug.cgi?id=130630"
-	elog "	  http://bugs.gentoo.org/show_bug.cgi?id=140009"
+	newins "${WORKDIR}/patches/lisa.conf" lisa
+	newins "${WORKDIR}/patches/reslisa.conf" reslisa
 }
