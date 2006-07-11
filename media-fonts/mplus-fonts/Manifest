@@ -1,18 +1,24 @@
-MD5 c7dc21ec36cdc64c2743197f3dfbdfd8 ChangeLog 6858
-RMD160 21e8d34d868d806b269330f8ae878b9d264719db ChangeLog 6858
-SHA256 81fa2e017aad91cd65a630307d411e8d90152b4b5a0f3af6b708b01fcc1c070a ChangeLog 6858
-MD5 79f420242b150dcc1011d974c7e11ecd files/digest-mplus-fonts-2.2.3 76
-RMD160 98f5b3ac89525723ab4cfe60596428579aa46b57 files/digest-mplus-fonts-2.2.3 76
-SHA256 e3e752fb6679d81bbb14b9fd16a72fe6baaccda4b5309e2b2bb1517ea017723c files/digest-mplus-fonts-2.2.3 76
-MD5 f89858a065739e89033a3743de476614 files/digest-mplus-fonts-2.2.4 76
-RMD160 016299afda366b8eb7705c96014da788d6ab9dee files/digest-mplus-fonts-2.2.4 76
-SHA256 fc2a0a7165ade3f64493eb4b0e0bd6fd37b3cf93688639fa91b2592232dcfb3d files/digest-mplus-fonts-2.2.4 76
-MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e metadata.xml 175
-SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8 metadata.xml 175
+DIST mplus_bitmap_fonts-2.2.3.tar.gz 382524
+DIST mplus_bitmap_fonts-2.2.4.tar.gz 382574 RMD160 e7fb2ec56e12baa21915db5be724bfca9a999fcc SHA1 5a110ead34d8c9aad63f8813c09d78180adff0de SHA256 b16cf416b7fcf89f56a82feb43259aea9b979c3a660579f5a8e906c93414f1e2
+EBUILD mplus-fonts-2.2.3.ebuild 780 RMD160 b1cd46f06b220eb69a9ee90873ffafcaa7eac269 SHA1 e257f1d8f3e8a6b7c7799b70b6ce3caf7d357186 SHA256 17e9f9eeb8a519fc6d7ff3571ec4a63e93532ad16ba68ddd5d163c4d51bea2ad
 MD5 e8e3fd59b64d2eb9ecc7eacfbb7f631f mplus-fonts-2.2.3.ebuild 780
 RMD160 b1cd46f06b220eb69a9ee90873ffafcaa7eac269 mplus-fonts-2.2.3.ebuild 780
 SHA256 17e9f9eeb8a519fc6d7ff3571ec4a63e93532ad16ba68ddd5d163c4d51bea2ad mplus-fonts-2.2.3.ebuild 780
-MD5 8aa9f7256c8c0b5d502f03537eac5a7c mplus-fonts-2.2.4.ebuild 766
-RMD160 2fa1cf7539befe8f9c56d719a75007b4b9100308 mplus-fonts-2.2.4.ebuild 766
-SHA256 974612cb2e4598ac9ae778e9915cb925ecd6108f0e567dabc0ea83729dc770d2 mplus-fonts-2.2.4.ebuild 766
+EBUILD mplus-fonts-2.2.4.ebuild 766 RMD160 69b64c2e99d9fc540179123c4489a14c3652f9a7 SHA1 7df7f5c2b313e8f691789ed1c1ff580c57deb169 SHA256 f51988038507aea3a77e9ffdd151ef58fef062ee3f569f5337e3f10af7bc95fb
+MD5 a2e69f278ea7e9f88d90923302612508 mplus-fonts-2.2.4.ebuild 766
+RMD160 69b64c2e99d9fc540179123c4489a14c3652f9a7 mplus-fonts-2.2.4.ebuild 766
+SHA256 f51988038507aea3a77e9ffdd151ef58fef062ee3f569f5337e3f10af7bc95fb mplus-fonts-2.2.4.ebuild 766
+MISC ChangeLog 6962 RMD160 ad225e9eb41a47a4ee9e7d69f3f77062f8236c05 SHA1 3a4a4ac565eb8a642853c4dc0832391cd97be5bb SHA256 9115f4af0fb7d15ce7d56f184456a1bd8032d2a4c18c01a3ce5912c4c7ff37ad
+MD5 dd877c1ccb931ee3faab4fc402176978 ChangeLog 6962
+RMD160 ad225e9eb41a47a4ee9e7d69f3f77062f8236c05 ChangeLog 6962
+SHA256 9115f4af0fb7d15ce7d56f184456a1bd8032d2a4c18c01a3ce5912c4c7ff37ad ChangeLog 6962
+MISC metadata.xml 175 RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e SHA1 5f1d4ea1a9ccb9b3dbd74ddaed58f0df64f2ad63 SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8
+MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
+RMD160 e22fbca96af27631c4910bc93f69d81280ddd96e metadata.xml 175
+SHA256 0dc53674ee3ca2348bedd390f639dac96f537cce8cd0c550c13917de7b61f2e8 metadata.xml 175
+MD5 79f420242b150dcc1011d974c7e11ecd files/digest-mplus-fonts-2.2.3 76
+RMD160 98f5b3ac89525723ab4cfe60596428579aa46b57 files/digest-mplus-fonts-2.2.3 76
+SHA256 e3e752fb6679d81bbb14b9fd16a72fe6baaccda4b5309e2b2bb1517ea017723c files/digest-mplus-fonts-2.2.3 76
+MD5 aaeabc8ede3722af950a0dabbfd6bf21 files/digest-mplus-fonts-2.2.4 274
+RMD160 3f11212de9d9579a7ed5666f35e43149ecbad027 files/digest-mplus-fonts-2.2.4 274
+SHA256 79041ca2b37651ffe08809ae1505a9566339a92f6955554b1bd5554cff844ebe files/digest-mplus-fonts-2.2.4 274
