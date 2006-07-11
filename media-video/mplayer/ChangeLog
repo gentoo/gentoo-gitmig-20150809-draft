@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.396 2006/07/09 21:03:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.397 2006/07/11 10:07:03 lu_zero Exp $
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   mplayer-1.0_pre7-r1.ebuild, mplayer-1.0_pre8.ebuild,
@@ -8,6 +8,12 @@
   mplayer-1.0.20060302.ebuild, mplayer-1.0.20060408.ebuild,
   mplayer-1.0.20060415.ebuild:
   Pinpoint virtual/x11 version to less than 7.
+
+*mplayer-1.0_pre8-r1 (11 Jul 2006)
+
+  11 Jul 2006; Luca Barbato <lu_zero@gentoo.org>
+  +mplayer-1.0_pre8-r1.ebuild:
+  New ebuild, adds amr, enca and xvmc wrappers support
 
   03 Jul 2006; Thomas Cort <tcort@gentoo.org> mplayer-1.0.20060102.ebuild,
   mplayer-1.0.20060217.ebuild, mplayer-1.0.20060302.ebuild,
