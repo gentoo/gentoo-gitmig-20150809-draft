@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.20 2006/06/27 19:20:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.21 2006/07/11 13:14:51 chutzpah Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -50,3 +50,6 @@ x264
 clvm
 gulm
 cman
+
+# mask bmpx USE flag while waiting for neon fix
+bmpx
