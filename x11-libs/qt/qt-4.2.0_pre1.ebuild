@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.3 2006/07/09 06:04:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.4 2006/07/11 13:42:03 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -32,7 +32,7 @@ DEPEND="|| ( ( x11-libs/libXrandr
 	)
 	virtual/xft
 	>=media-libs/freetype-2
-	dbus? ( sys-apps/dbus )
+	dbus? ( >=sys-apps/dbus-0.62 )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	mng? ( media-libs/libmng )

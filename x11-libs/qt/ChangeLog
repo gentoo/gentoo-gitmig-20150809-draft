@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.331 2006/07/09 06:04:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.332 2006/07/11 13:42:03 caleb Exp $
+
+  11 Jul 2006; Caleb Tennis <caleb@gentoo.org> qt-4.2.0_pre1.ebuild:
+  require a specific version of dbus
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> qt-3.3.4-r8.ebuild,
   qt-3.3.4-r9.ebuild, qt-3.3.6.ebuild, qt-3.3.6-r1.ebuild, qt-4.1.1.ebuild,
