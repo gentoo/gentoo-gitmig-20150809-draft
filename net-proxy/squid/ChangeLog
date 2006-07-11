@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.80 2006/07/10 18:25:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.81 2006/07/11 18:55:35 mrness Exp $
+
+*squid-2.6.1-r1 (11 Jul 2006)
+
+  11 Jul 2006; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  -squid-2.6.1.ebuild, +squid-2.6.1-r1.ebuild:
+  Add current upstream patches (#139962).
 
 *squid-2.6.1 (10 Jul 2006)
 
