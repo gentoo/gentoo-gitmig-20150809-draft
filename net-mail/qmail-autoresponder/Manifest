@@ -1,7 +1,28 @@
-MD5 5be072f0ecec9a8d8b1ed119069ec58c ChangeLog 3069
-MD5 9f8689f8a0b50c22c0a351a281d6c77f files/digest-qmail-autoresponder-0.96.1-r1 77
-MD5 d67a702fb2e92265434fd9246f3a7811 files/digest-qmail-autoresponder-0.96.2 77
+AUX qmail-autoresponder-0.96.1-gcc33-multiline-string-fix.patch 1579 RMD160 10d47f0332cf3448c6a27db11deb6f8a4fb29a66 SHA1 9d01840fa4e2d1cf8b22f6085fef589db53257ab SHA256 6ff97075c2f9ffa136badc3905a8487920420aaddf5e50f413a3b420e36494c6
 MD5 6afa2313932bc099d5d9fce81ad915a6 files/qmail-autoresponder-0.96.1-gcc33-multiline-string-fix.patch 1579
+RMD160 10d47f0332cf3448c6a27db11deb6f8a4fb29a66 files/qmail-autoresponder-0.96.1-gcc33-multiline-string-fix.patch 1579
+SHA256 6ff97075c2f9ffa136badc3905a8487920420aaddf5e50f413a3b420e36494c6 files/qmail-autoresponder-0.96.1-gcc33-multiline-string-fix.patch 1579
+DIST qmail-autoresponder-0.96.1.tar.gz 21871
+DIST qmail-autoresponder-0.96.2.tar.gz 21110 RMD160 2f42a2e174f772be5c724eef15182e8b0ccf2a00 SHA1 15f2983a4209c046c9db16282d94cc3aedc9e860 SHA256 127329274dc20d524a29e7034469b1841100616129ca3d9c31f951a67698e40a
+EBUILD qmail-autoresponder-0.96.1-r1.ebuild 1659 RMD160 459bde0f72a1c7d9a2fda372c950adc59d655eea SHA1 025ebf001d989dc803263041929ab5ae83df87ea SHA256 28f682637f43900a81d1576ecc4c5f54407f86170820105e83ea6bbdc0059179
+MD5 08359caf1cdbbaa6cd9ab885fca8b6af qmail-autoresponder-0.96.1-r1.ebuild 1659
+RMD160 459bde0f72a1c7d9a2fda372c950adc59d655eea qmail-autoresponder-0.96.1-r1.ebuild 1659
+SHA256 28f682637f43900a81d1576ecc4c5f54407f86170820105e83ea6bbdc0059179 qmail-autoresponder-0.96.1-r1.ebuild 1659
+EBUILD qmail-autoresponder-0.96.2.ebuild 1409 RMD160 afe4ce7aa0c96221dd0a08336bd002824971485a SHA1 165b2d8ffe8608fccce370075bf4018194b1820f SHA256 8fd5d1bf6fda2a61527a338e642d8558f270b386153efc70345eea434c6df189
+MD5 2e833dc2d1305044d42f1868492f7526 qmail-autoresponder-0.96.2.ebuild 1409
+RMD160 afe4ce7aa0c96221dd0a08336bd002824971485a qmail-autoresponder-0.96.2.ebuild 1409
+SHA256 8fd5d1bf6fda2a61527a338e642d8558f270b386153efc70345eea434c6df189 qmail-autoresponder-0.96.2.ebuild 1409
+MISC ChangeLog 3291 RMD160 b76e7ce475367ad194a1c89d19f01e7dbab559b4 SHA1 b553f98d8bafb001c7f3bcd28d68b250219c288b SHA256 6775ad172ce2723dcf9097fb71e08be8dd493118d73c25f107cf53a4017002a4
+MD5 f910cd6fdc646a03012609da7f025588 ChangeLog 3291
+RMD160 b76e7ce475367ad194a1c89d19f01e7dbab559b4 ChangeLog 3291
+SHA256 6775ad172ce2723dcf9097fb71e08be8dd493118d73c25f107cf53a4017002a4 ChangeLog 3291
+MISC metadata.xml 497 RMD160 ba5661ec44b869a28d4333d5e740a31f24a30c04 SHA1 d1d00193ef2f3e334d2898434cd8be96f9c961c7 SHA256 c96f4b6bc9323cffdc2ed37c760ab7d413f6863c4b9745e8260c8618feaa79de
 MD5 4264dd598d40d84dd4d1e09c69020d1a metadata.xml 497
-MD5 c90058c2295c5d6a47743245dde0e956 qmail-autoresponder-0.96.1-r1.ebuild 1633
-MD5 80e4e9034a3c1f1fca7f4067bacb7b60 qmail-autoresponder-0.96.2.ebuild 1378
+RMD160 ba5661ec44b869a28d4333d5e740a31f24a30c04 metadata.xml 497
+SHA256 c96f4b6bc9323cffdc2ed37c760ab7d413f6863c4b9745e8260c8618feaa79de metadata.xml 497
+MD5 9f8689f8a0b50c22c0a351a281d6c77f files/digest-qmail-autoresponder-0.96.1-r1 77
+RMD160 a0b3ef4bd5c4d45aa399baae6f2f37aade2c824f files/digest-qmail-autoresponder-0.96.1-r1 77
+SHA256 a541f94edc68fd378c4fe7fc774091cf19d8468f9bca7d583ca3e09aef456427 files/digest-qmail-autoresponder-0.96.1-r1 77
+MD5 b250ddb734dc5a7988596d2c46dcedbc files/digest-qmail-autoresponder-0.96.2 277
+RMD160 2185e073d234737289afcaf36922e41690652b3e files/digest-qmail-autoresponder-0.96.2 277
+SHA256 c981f1172b319a7ec60516d8d8063298c71825092efe6c2c3a917558abb8006b files/digest-qmail-autoresponder-0.96.2 277

@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.12 2006/02/20 21:22:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.1-r1.ebuild,v 1.13 2006/07/11 18:54:54 bangert Exp $
 
 inherit fixheadtails eutils toolchain-funcs
 
 DESCRIPTION="Rate-limited autoresponder for qmail."
-SRC_URI="http://untroubled.org/qmail-autoresponder/${P}.tar.gz"
+SRC_URI="http://untroubled.org/qmail-autoresponder/archive/${P}.tar.gz"
 HOMEPAGE="http://untroubled.org/qmail-autoresponder/"
 
 SLOT="0"
@@ -14,7 +14,7 @@ KEYWORDS="alpha ~amd64 hppa mips ppc sparc x86"
 IUSE="mysql"
 
 DEPEND="virtual/libc
-		dev-libs/bglibs
+		>=dev-libs/bglibs-1.019-r1
 		mysql? ( dev-db/mysql )"
 RDEPEND="
 	${DEPEND}
@@ -35,8 +35,8 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	echo "/usr/lib/bglibs/include" > conf-bgincs
-	echo "/usr/lib/bglibs/lib" > conf-bglibs
+	echo "${ROOT}/usr/include/bglibs" > conf-bgincs
+	echo "${ROOT}/usr/lib/bglibs" > conf-bglibs
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 

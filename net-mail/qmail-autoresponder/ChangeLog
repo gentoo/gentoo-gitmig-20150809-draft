@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmail-autoresponder
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.19 2006/06/11 09:32:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.20 2006/07/11 18:54:54 bangert Exp $
+
+  11 Jul 2006; Thilo Bangert <bangert@gentoo.org>
+  qmail-autoresponder-0.96.1-r1.ebuild, qmail-autoresponder-0.96.2.ebuild:
+  fix SRC_URI - depend on newer version of bglibs
+  fixes bug #117521 - thanks Lincoln A Baxter
 
   11 Jun 2006; Thilo Bangert <bangert@gentoo.org> metadata.xml,
   qmail-autoresponder-0.96.2.ebuild:
