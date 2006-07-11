@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.41 2006/07/09 02:29:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.42 2006/07/11 03:56:50 tsunam Exp $
+
+  11 Jul 2006; Joshua Jackson <tsunam@gentoo.org> mdadm-2.5.2.ebuild:
+  stable x86; bug #138194
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> mdadm-2.5.2.ebuild:
   Marked stable on mips.
