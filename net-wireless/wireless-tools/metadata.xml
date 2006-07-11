@@ -8,8 +8,8 @@
   <name>Peter Johanson</name>
 </maintainer>
 <maintainer>
-  <email>brix@gentoo.org</email>
-  <name>Henrik Brix Andersen</name>
+  <email>uberlord@gentoo.org</email>
+  <name>Roy Marples</name>
 </maintainer>
 <longdescription>This package provides all the command line tools for configuring wireless networking devices with drivers that implement the Linux Wireless Extensions (almost all recent IEEE 802.11a/b/g drivers).</longdescription>
 </pkgmetadata>
