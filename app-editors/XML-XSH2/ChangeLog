@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/XML-XSH2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/ChangeLog,v 1.2 2006/05/01 19:26:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH2/ChangeLog,v 1.3 2006/07/11 10:24:56 mcummings Exp $
+
+  11 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-XSH2-2.0.2.ebuild:
+  Keywording ~amd64
 
   01 May 2006; <mcumming@gentoo.org> XML-XSH2-2.0.2.ebuild:
   Adding block against xml-xsh - bug 131497
