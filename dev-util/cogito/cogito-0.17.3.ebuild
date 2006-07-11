@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.17.3.ebuild,v 1.1 2006/06/18 22:07:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.17.3.ebuild,v 1.2 2006/07/11 15:41:26 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://kernel.org/pub/software/scm/cogito/${PN}-${MY_PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-libs/openssl
