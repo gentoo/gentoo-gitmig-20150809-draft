@@ -1,0 +1,78 @@
+diff -Nuar --exclude '*~' munin-1.3.2.orig/server/munin-graph.in munin-1.3.2/server/munin-graph.in
+--- munin-1.3.2.orig/server/munin-graph.in	2005-04-15 13:31:22.000000000 -0700
++++ munin-1.3.2/server/munin-graph.in	2006-07-10 21:41:42.000000000 -0700
+@@ -649,10 +649,10 @@
+ 	    elsif ($global_headers == 1)
+ 	    {
+ 		push (@rrd, "COMMENT:" . (" " x $max_field_len));
+-		push (@rrd, "COMMENT: Cur:");
+-		push (@rrd, "COMMENT:Min:");
+-		push (@rrd, "COMMENT:Avg:");
+-		push (@rrd, "COMMENT:Max:  \\j");
++		push (@rrd, "COMMENT: Cur\\:");
++		push (@rrd, "COMMENT:Min\\:");
++		push (@rrd, "COMMENT:Avg\\:");
++		push (@rrd, "COMMENT:Max\\:  \\j");
+ 		$global_headers++;
+ 	    }
+ 
+@@ -725,13 +725,13 @@
+ 	    }
+ 	    else
+ 	    {
+-		push (@rrd, "COMMENT: Cur:") unless $global_headers;
++		push (@rrd, "COMMENT: Cur\\:") unless $global_headers;
+ 		push (@rrd, "GPRINT:c$rrdname:LAST:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, "yes")?"%s":"") . "");
+-		push (@rrd, "COMMENT: Min:") unless $global_headers;
++		push (@rrd, "COMMENT: Min\\:") unless $global_headers;
+ 		push (@rrd, "GPRINT:i$rrdname:MIN:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "");
+-		push (@rrd, "COMMENT: Avg:") unless $global_headers;
++		push (@rrd, "COMMENT: Avg\\:") unless $global_headers;
+ 		push (@rrd, "GPRINT:g$rrdname:AVERAGE:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "");
+-		push (@rrd, "COMMENT: Max:") unless $global_headers;
++		push (@rrd, "COMMENT: Max\\:") unless $global_headers;
+ 		push (@rrd, "GPRINT:a$rrdname:MAX:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "\\j");
+ 		push (@{$total_pos{'min'}}, "i$rrdname");
+ 		push (@{$total_pos{'avg'}}, "g$rrdname");
+@@ -792,13 +792,13 @@
+ 	    
+ 	    push (@rrd, "CDEF:dpostotal=ipostotal,UN,ipostotal,UNKN,IF");
+ 	    push (@rrd, "LINE1:dpostotal#000000:" . $node->{client}->{$service}->{graph_total} . (" " x ($max_field_len - length ($node->{client}->{$service}->{graph_total}) + 1)));
+-	    push (@rrd, "COMMENT: Cur:") unless $global_headers;
++	    push (@rrd, "COMMENT: Cur\\:") unless $global_headers;
+ 	    push (@rrd, "GPRINT:gpostotal:LAST:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "");
+-	    push (@rrd, "COMMENT: Min:") unless $global_headers;
++	    push (@rrd, "COMMENT: Min\\:") unless $global_headers;
+ 	    push (@rrd, "GPRINT:ipostotal:MIN:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "");
+-	    push (@rrd, "COMMENT: Avg:") unless $global_headers;
++	    push (@rrd, "COMMENT: Avg\\:") unless $global_headers;
+ 	    push (@rrd, "GPRINT:gpostotal:AVERAGE:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "");
+-	    push (@rrd, "COMMENT: Max:") unless $global_headers;
++	    push (@rrd, "COMMENT: Max\\:") unless $global_headers;
+ 	    push (@rrd, "GPRINT:apostotal:MAX:%6.2lf" . (munin_get_bool_val ($node->{client}->{$service}->{graph_scale}, 1)?"%s":"") . "\\j");
+ 	}
+ 
+@@ -810,8 +810,10 @@
+ 	    # Do the header (title, vtitle, size, etc...)
+ 	    push @complete, @{&get_header ($node, $config, $domain, $name, $service, $time)};
+ 	    push @complete, @rrd;
+-
+-	    push (@complete, "COMMENT:Last update: " . localtime($lastupdate) .  "\\r");
++    
++	    my $commentstr = "Last update: " . localtime($lastupdate) .  "\\r";
++	    $commentstr =~ s/:/\\:/g;
++	    push (@complete, "COMMENT:".$commentstr);
+ 	    
+ 	    if (time - 300 < $lastupdate)
+ 	    {
+@@ -841,7 +843,9 @@
+ 			push @rrd_sum, "--end",(int($lastupdate/$resolutions{$time}))*$resolutions{$time};
+ 		}
+ 		push @rrd_sum, @rrd;
+-		push (@rrd_sum, "COMMENT:Last update: " . localtime($lastupdate) .  "\\r");
++		my $commentstr = ("Last update: " . localtime($lastupdate) .  "\\r");
++		$commentstr =~ s/:/\\:/g;
++		push (@rrd_sum, "COMMENT:".$commentstr);
+ 
+ 		my $labelled = 0;
+ 		my @defined = ();

@@ -1,0 +1,15 @@
+# ChangeLog for net-analyzer/munin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.1 2006/07/11 09:18:47 robbat2 Exp $
+
+*munin-1.3.2 (11 Jul 2006)
+
+  11 Jul 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/munin-1.3.2-Makefile.patch, +files/munin-1.3.2-crontab,
+  +files/munin-1.3.2-plugin-cleanup.patch, +files/munin-1.3.2-plugins.conf,
+  +files/munin-1.3.2-rrdtool-comments.patch, +files/munin-init.d,
+  +metadata.xml, +munin-1.3.2.ebuild:
+  Initial commit. Bug #76018. Final ebuild by Robin H. Johnson
+  <robbat2@gentoo.org>, with signicent contributions by Allen Parker
+  <infowolfe@gmail.com>.
+
