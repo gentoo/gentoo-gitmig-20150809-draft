@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.242 2006/07/06 19:59:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.243 2006/07/11 09:58:46 satya Exp $
+
+*samba-3.0.22-r3 (11 Jul 2006)
+
+  11 Jul 2006; Christian Andreetta <satya@gentoo.org>
+  +samba-3.0.22-r3.ebuild:
+  security memory DoS fix (CVE-2006-3403: bug #139369)
 
   06 Jul 2006; Seemant Kulleen <seemant@gentoo.org> samba-3.0.22-r2.ebuild:
   Add the fix for autoconf-2.60 reported by Polinik <polinik@lexx.eu.org> and
