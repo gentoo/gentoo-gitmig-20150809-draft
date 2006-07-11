@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.86-r1.ebuild,v 1.1 2006/07/11 07:42:53 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.86-r1.ebuild,v 1.2 2006/07/11 11:15:15 araujo Exp $
 
 DESCRIPTION="Pike programming language and runtime"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -17,7 +17,7 @@ DEPEND="dev-libs/nettle
 	fftw? ( sci-libs/fftw )
 	gdbm? ( sys-libs/gdbm )
 	gif? ( media-libs/giflib )
-	gtk? ( =x11-libs/gtk+-1.2* )
+	gtk? ( =x11-libs/gtk+-1.2* media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	kerberos? ( virtual/krb5 )
 	mysql? ( dev-db/mysql )
@@ -42,6 +42,8 @@ src_compile() {
 	# on hardened, disable runtime-generated code
 	# otherwise let configure work it out for itself
 	use hardened && myconf="${myconf} --without-machine-code"
+	# gtk support depends on gif libraries.
+	use gtk && myconf="${myconf} --with-GTK --with-gif"
 	make \
 		CONFIGUREARGS=" \
 			--prefix=/usr \
@@ -58,7 +60,6 @@ src_compile() {
 			$(use_with fftw) \
 			$(use_with gdbm) \
 			$(use_with gif) \
-			$(use_with gtk GTK) \
 			$(use_with jpeg jpeglib) \
 			$(use_with kerberos Kerberos) \
 			$(use_with mime MIME) \
