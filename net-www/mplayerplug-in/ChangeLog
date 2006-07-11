@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.65 2006/07/03 03:46:36 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.66 2006/07/11 16:18:31 josejx Exp $
+
+*mplayerplug-in-3.25-r1 (11 Jul 2006)
+
+  11 Jul 2006; Joseph Jezak <josejx@gentoo.org> +files/fix-cflags.patch,
+  +mplayerplug-in-3.25-r1.ebuild:
+  Removed moz/gecko-sdk references and fixed bug #139838.
 
   03 Jul 2006; Thomas Cort <tcort@gentoo.org> mplayerplug-in-3.21.ebuild:
   Stable on alpha wrt Bug #138735.
