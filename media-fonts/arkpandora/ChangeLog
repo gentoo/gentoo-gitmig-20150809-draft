@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/arkpandora
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.9 2006/04/27 22:45:22 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.10 2006/07/11 11:19:40 agriffis Exp $
+
+  11 Jul 2006; Aron Griffis <agriffis@gentoo.org> arkpandora-2.04.ebuild:
+  Mark 2.04 stable on ia64
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-arkpandora-2.04, Manifest:
