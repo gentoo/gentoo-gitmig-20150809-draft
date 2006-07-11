@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.1 2006/01/15 22:16:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.2 2006/07/11 17:41:19 pva Exp $
 
 inherit eutils
 
@@ -34,17 +34,17 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "You can edit /etc/conf.d/ip-sentinel to customize startup daemon"
-	einfo "settings."
-	einfo
-	einfo "Default ip-sentinel config is in /etc/ip-sentinel.cfg"
-	einfo
-	einfo "The ip-sentinel ebuild has chroot support."
-	einfo "If you like to run ip-sentinel in chroot AND this is a new install OR"
-	einfo "your ip-sentinel doesn't already run in chroot, simply run:"
-	einfo "emerge --config =${CATEGORY}/${PF}"
-	einfo "Before running the above command you might want to change the chroot"
-	einfo "dir in /etc/conf.d/ip-sentinel, otherwise /chroot/ip-sentinel will be used."
+	elog "You can edit /etc/conf.d/ip-sentinel to customize startup daemon"
+	elog "settings."
+	elog
+	elog "Default ip-sentinel config is in /etc/ip-sentinel.cfg"
+	elog
+	elog "The ip-sentinel ebuild has chroot support."
+	elog "If you like to run ip-sentinel in chroot AND this is a new install OR"
+	elog "your ip-sentinel doesn't already run in chroot, simply run:"
+	elog "emerge --config =${CATEGORY}/${PF}"
+	elog "Before running the above command you might want to change the chroot"
+	elog "dir in /etc/conf.d/ip-sentinel, otherwise /chroot/ip-sentinel will be used."
 	echo
 	ewarn "And please! DO NOT START THIS DAEMON thoughtlessly."
 	ewarn "If you DO this will BLOCK ALL communication inside your ethernet"

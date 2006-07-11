@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ip-sentinel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.3 2006/07/08 00:46:38 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.4 2006/07/11 17:41:19 pva Exp $
+
+  11 Jul 2006; Peter Volkov <pva@gentoo.org> files/ip-sentinel.init,
+  ip-sentinel-0.12.ebuild:
+  info replaced with elog.
 
   08 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> metadata.xml:
   Add Japanese metadata translation for bug 136268. Thanks to Yoshino

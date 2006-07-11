@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/files/ip-sentinel.init,v 1.2 2006/06/05 16:58:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/files/ip-sentinel.init,v 1.3 2006/07/11 17:41:19 pva Exp $
 
 CFG_FILE="/etc/ip-sentinel.cfg"
 
@@ -38,10 +38,10 @@ stop() {
 
 restart () {
 	svc_stop
-	echo "Please, wait while child process quit."
-	while `ps aux | grep -v 'init.d' |grep [i]p-sentinel >/dev/null`
+	echo "Please, wait while child process quit..."
+	while `ps aux | grep -v 'init.d' | grep [i]p-sentinel >/dev/null`
 	do
-		echo -n " . "
+		echo -n ". "
 		sleep 1
 	done
 	echo "[Done]"
