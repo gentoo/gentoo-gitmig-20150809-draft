@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.14.ebuild,v 1.3 2006/07/10 18:25:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.14.ebuild,v 1.4 2006/07/11 21:32:17 the_paya Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic
 
@@ -91,7 +91,7 @@ src_compile() {
 
 	if use kernel_linux; then
 		myconf="${myconf} --enable-linux-netfilter"
-	elif use kernel_freebsd || use kernel_openbsd || use kernel_netbsd ; then
+	elif use kernel_FreeBSD || use kernel_OpenBSD || use kernel_NetBSD ; then
 		if use pf-transparent; then
 			myconf="${myconf} --enable-pf-transparent"
 		elif use ipf-transparent; then

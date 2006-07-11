@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.81 2006/07/11 18:55:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.82 2006/07/11 21:32:17 the_paya Exp $
+
+  11 Jul 2006; Javier Villavicencio <the_paya@gentoo.org>
+  squid-2.5.14.ebuild, squid-2.6.1-r1.ebuild:
+  Fixed case of *BSD useflags.
 
 *squid-2.6.1-r1 (11 Jul 2006)
 
