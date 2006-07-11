@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.6 2006/05/26 15:32:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.7 2006/07/11 12:04:18 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -18,7 +18,7 @@ RDEPEND="net-wireless/wireless-tools"
 
 MODULE_NAMES="
 	80211(rt2x00:)
-	radiobtn(rt2x00:)
+	rfkill(rt2x00:)
 	rate_control(rt2x00:)
 	rt2400pci(rt2x00:)
 	rt2500pci(rt2x00:)
@@ -46,7 +46,7 @@ src_compile() {
 	# Build everything except ASM files
 	# Maybe have USE flags for each driver at some point?
 	for m in RT2400PCI RT2500PCI RT2500USB RT61PCI RT73USB \
-	D80211 RADIOBTN ; do
+		D80211 RFKILL; do
 		echo "CONFIG_${m}=y" >> config
 		echo "CONFIG_${m}_ASM=n" >> config
 		echo "CONFIG_${m}_DEBUG=${debug}" >> config
