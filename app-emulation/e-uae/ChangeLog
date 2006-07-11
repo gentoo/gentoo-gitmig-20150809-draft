@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.11 2006/06/16 19:55:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.12 2006/07/11 17:52:12 pva Exp $
+
+  11 Jul 2006; Peter Volkov <pva@gentoo.org> e-uae-0.8.28-r1.ebuild:
+  einfo replaced with elog. Additional elogs added to clearly state video output.
 
   16 Jun 2006; Peter Volkov <pva@gentoo.org> e-uae-0.8.27.ebuild,
   -e-uae-0.8.28.ebuild, e-uae-0.8.28-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.2 2006/06/16 19:55:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.3 2006/07/11 17:52:12 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,7 +40,7 @@ DEPEND="$RDEPEND
 pkg_setup() {
 	# Sound setup.
 	if use alsa; then
-		einfo "Choosing alsa as sound target to use."
+		elog "Choosing alsa as sound target to use."
 		myconf="--with-alsa --without-sdl-sound"
 	elif use sdl-sound ; then
 		if ! use sdl ; then
@@ -49,11 +49,11 @@ pkg_setup() {
 			myconf="--without-alsa --without-sdl-sound"
 			ebeep
 		else
-			einfo "Choosing sdl-sound as sound target to use."
+			elog "Choosing sdl-sound as sound target to use."
 			myconf="--without-alsa --with-sdl-sound"
 		fi
 	elif use oss ; then
-		einfo "Choosing oss as sound target to use."
+		elog "Choosing oss as sound target to use."
 		ewarn "oss will be autodetected. See output of configure."
 		myconf="--without-alsa --without-sdl-sound"
 	else
@@ -63,11 +63,14 @@ pkg_setup() {
 
 	# VIDEO setup. X is autodetected (there is no --with-X option).
 	if use X ; then
+		elog "Using X11 for video output."
 		myconf="$myconf --without-curses --without-sdl-gfx"
 		use dga && myconf="$myconf --enable-dga --enable-vidmode"
 	elif use sdl ; then
+		elog "Using sdl for video output."
 		myconf="$myconf --with-sdl --with-sdl-gfx --without-curses"
 	elif use ncurses; then
+		elog "Using ncurses for video output."
 		myconf="$myconf --with-curses --without-sdl-gfx"
 	else
 		ewarn "There is no X or sdl or ncurses in USE!"
