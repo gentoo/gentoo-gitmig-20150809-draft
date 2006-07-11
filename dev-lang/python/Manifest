@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX depreorder-topsort.py 1958 RMD160 4192ad9ed14064a9da42ce1faedcf28996094da3 SHA1 2c900abeb6cfcc4327f0e9418b5abd7761ce5879 SHA256 7406f639d17b8acab6a1db7e398e74379b44950d4821bc36901abd3455d63b3d
 MD5 7e423c353b08a2c05693d13f21e067d0 files/depreorder-topsort.py 1958
 RMD160 4192ad9ed14064a9da42ce1faedcf28996094da3 files/depreorder-topsort.py 1958
@@ -119,3 +122,10 @@ SHA256 3f77c805317ac37a5bbe788bc0ad4b723c3584c0d676d6ee4e2040291cb4177d files/di
 MD5 074466092860a2451d114cf7fad357f2 files/digest-python-2.4.3-r1 503
 RMD160 71a7eceb40337728f36e0d2970e1fb3956b7496a files/digest-python-2.4.3-r1 503
 SHA256 3f77c805317ac37a5bbe788bc0ad4b723c3584c0d676d6ee4e2040291cb4177d files/digest-python-2.4.3-r1 503
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEtAVnuB6ZT1m7QRERAibgAKCOf20A6dfs7m+ZEWZrLLh5gqBJGgCbBicp
+CfvqsiXcP7n1mT52yNL0bdk=
+=OSBR
+-----END PGP SIGNATURE-----
