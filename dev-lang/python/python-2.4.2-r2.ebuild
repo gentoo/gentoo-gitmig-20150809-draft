@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2-r2.ebuild,v 1.2 2006/07/08 19:13:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.2-r2.ebuild,v 1.3 2006/07/11 15:55:17 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -18,7 +18,7 @@ PATCHTAR="${PN}-${PYVER}-patches-2"
 
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="Python is an interpreted, interactive, object-orientated programming language."
+DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 	mirror://gentoo/${PATCHTAR}.tar.bz2"
