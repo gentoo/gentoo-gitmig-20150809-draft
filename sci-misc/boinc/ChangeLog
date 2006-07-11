@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.22 2006/07/10 13:14:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.23 2006/07/11 12:06:04 cryos Exp $
+
+  11 Jul 2006; Marcus D. Hanwell <cryos@gentoo.org> boinc-5.5.6.ebuild:
+  Updated to call the necessary autotools directly, should fix bug 139923.
 
 *boinc-5.5.6 (10 Jul 2006)
 

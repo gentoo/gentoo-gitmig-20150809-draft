@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.5.6.ebuild,v 1.1 2006/07/10 13:14:38 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.5.6.ebuild,v 1.2 2006/07/11 12:06:04 cryos Exp $
 
 inherit eutils
 
@@ -23,8 +23,10 @@ RDEPEND="sys-libs/zlib
 		>=dev-lang/python-2.2.3
 		>=dev-python/mysql-python-0.9.2 )"
 DEPEND=">=sys-devel/gcc-3.0.4
-	>=sys-devel/autoconf-2.59
-	>=sys-devel/automake-1.9.3
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.8
+	>=dev-util/pkgconfig-0.15
+	>=sys-devel/m4-1.4
 	X? (	|| ( ( x11-libs/libXmu
 				x11-libs/libXt
 				x11-libs/libX11
@@ -45,7 +47,12 @@ src_unpack() {
 }
 
 src_compile() {
-	./_autosetup || die "autosetup failed."
+	# Just run the necessary tools directly
+	einfo "Running necessary autotools..."
+	aclocal -I m4 || die "aclocal failed."
+	autoheader || die "autoheader failed."
+	automake || die "automake failed."
+	autoconf || die "autoconf failed."
 	econf \
 		--enable-client \
 		--disable-static-client \
