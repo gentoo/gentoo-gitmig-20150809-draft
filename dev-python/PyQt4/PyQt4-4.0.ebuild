@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.0.ebuild,v 1.1 2006/06/26 14:49:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.0.ebuild,v 1.2 2006/07/11 13:51:45 caleb Exp $
 
 inherit distutils
 
-MY_P="PyQt-x11-gpl-${PV/_beta/beta}"
+MY_P="PyQt-x11-gpl-${PV}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="PyQt is a set of Python bindings for the Qt toolkit."
@@ -54,6 +54,6 @@ src_install() {
 	use doc && dohtml doc/PyQt.html
 	if use examples ; then
 		dodir /usr/share/doc/${PF}/examples
-		cp -r examples3/* ${D}/usr/share/doc/${PF}/examples
+		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
 	fi
 }
