@@ -1,0 +1,11 @@
+# ChangeLog for net-ftp/tlswrap
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tlswrap/ChangeLog,v 1.1 2006/07/11 14:16:26 uberlord Exp $
+
+*tlswrap-1.02 (11 Jul 2006)
+
+  11 Jul 2006; Roy Marples <uberlord@gentoo.org>
+  +files/tlswrap-1.02-quiet-stderr.patch, +files/tlswrap.init,
+  +metadata.xml, +tlswrap-1.02.ebuild:
+  Initial import, #89131 thanks to Boris and Daniel Persson.
+
