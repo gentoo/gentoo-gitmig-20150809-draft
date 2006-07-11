@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.28 2006/06/26 15:11:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.29 2006/07/11 14:32:43 dragonheart Exp $
+
+*iozone-3.263 (11 Jul 2006)
+
+  11 Jul 2006; Daniel Black <dragonheart@gentoo.org> +iozone-3.263.ebuild:
+  version bump
 
   26 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> iozone-3.242.ebuild:
   Stable on sparc
