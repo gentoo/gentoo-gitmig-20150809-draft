@@ -1,6 +1,14 @@
 # ChangeLog for net-im/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.66 2006/07/09 04:11:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.67 2006/07/11 17:57:18 flameeyes Exp $
+
+*kopete-0.12.0-r2 (11 Jul 2006)
+
+  11 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kopete-0.12-icqfix.patch, +kopete-0.12.0-r2.ebuild:
+  Add patch to fix KDE BUG #130630 (unable to connect to ICQ since today), and
+  add a few useflags from bug #125782, thanks to Andrew Kirilenko. Dropped
+  ~ppc64 useflag because of missing netmeeting dependency.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   kopete-0.12.0-r1.ebuild:
