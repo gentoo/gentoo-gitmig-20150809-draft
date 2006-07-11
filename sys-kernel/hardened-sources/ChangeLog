@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.104 2006/07/03 17:25:56 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.105 2006/07/11 10:50:41 kang Exp $
+
+*hardened-sources-2.4.32-r7 (10 Jul 2006)
+
+  10 Jul 2006; Guillaume Destuynder <kang@gentoo.org>
+  +hardened-sources-2.4.32-r7.ebuild:
+  Bump PaX for RSBAC to test-17
 
 *hardened-sources-2.6.16-r9 (03 Jul 2006)
 
