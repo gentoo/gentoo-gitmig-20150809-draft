@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.5 2006/06/24 00:09:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.6 2006/07/12 13:49:47 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31
 	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
 	   	 	  virtual/x11 ) )
-	nls? ( sys-devel/gettext )"
+	nls? ( virtual/libintl )"
 RDEPEND="!app-i18n/uim
 	X? ( || ( (
 	   	 	    x11-libs/libX11
@@ -47,9 +47,9 @@ pkg_setup() {
 
 	local co_dir="${ESVN_STORE_DIR}/uim/trunk"
 
-	[ ! -e ${co_dir} ] && return
+	[ ! -e "${co_dir}" ] && return
 
-	local repo_uri=$(LANG=C svn info ${co_dir} | grep "^URL" | cut -d" " -f2)
+	local repo_uri=$(LANG=C svn info "${co_dir}" | grep "^URL" | cut -d" " -f2)
 
 	if [[ "${repo_uri}" != "${ESVN_REPO_URI}" ]]; then
 		die "Please remove ${co_dir}."
@@ -84,11 +84,12 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
-
-	rm doc/Makefile*
+	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS ChangeLog* NEWS README*
+
+	docinto doc
+	rm doc/Makefile*
 	dodoc doc/*
 
 	local u
@@ -116,7 +117,7 @@ src_install() {
 
 		fi
 
-		elisp-site-file-install ${FILESDIR}/50uim-gentoo.el
+		elisp-site-file-install "${FILESDIR}"/50uim-gentoo.el
 		dosed "s:@IM@:${im}:" ${SITELISP}/50uim-gentoo.el
 	fi
 
@@ -127,7 +128,7 @@ pkg_postinst() {
 	local chost
 
 	has_multilib_profile && chost=${CHOST}
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/${chost}/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/${chost}/gtk.immodules
 	use emacs && elisp-site-regen
 
 }
@@ -137,7 +138,7 @@ pkg_postrm() {
 	local chost
 
 	has_multilib_profile && chost=${CHOST}
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/${chost}/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/${chost}/gtk.immodules
 	has_version virtual/emacs && elisp-site-regen
 
 }
