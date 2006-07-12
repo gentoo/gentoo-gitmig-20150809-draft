@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.9 2006/07/12 18:39:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.10 2006/07/12 21:10:03 genstef Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -246,7 +246,8 @@ src_install() {
 	dodir /usr/$(get_libdir)/dri
 	exeinto /usr/$(get_libdir)/dri
 	ebegin "Installing drivers to ${EXEDESTTREE}"
-	find ${S}/lib* -name '*_dri.so' | xargs doexe
+	DRI_SO=$(find ${S}/lib* -name '*_dri.so')
+	doexe ${DRI_SO}
 	eend
 
 	if ! use motif; then
