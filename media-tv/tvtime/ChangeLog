@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.29 2006/07/09 21:14:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.30 2006/07/12 16:40:56 fuzzyray Exp $
+
+  12 Jul 2006; Paul Varner <fuzzyray@gentoo.org> tvtime-1.0.2.ebuild:
+  Stable on x86 wrt bug #139815
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/tvtime-0.9.10-make.patch, -tvtime-0.9.12.ebuild,
