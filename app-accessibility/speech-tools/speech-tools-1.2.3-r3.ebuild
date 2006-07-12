@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r3.ebuild,v 1.7 2006/06/05 08:12:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.3-r3.ebuild,v 1.8 2006/07/12 19:13:42 agriffis Exp $
 
 IUSE="doc esd X"
 
@@ -17,7 +17,7 @@ SRC_URI="${CSTR}/${MY_P}-release.tar.gz
 
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
