@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.31 2006/06/20 02:19:47 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.32 2006/07/12 16:20:14 wolf31o2 Exp $
+
+  12 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org> beagle-0.2.7.ebuild:
+  Stable on x86 wrt bug #139612.
 
 *beagle-0.2.7 (20 Jun 2006)
 
