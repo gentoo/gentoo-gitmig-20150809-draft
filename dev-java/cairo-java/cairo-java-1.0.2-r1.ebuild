@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/cairo-java-1.0.2-r1.ebuild,v 1.1 2006/03/28 04:10:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/cairo-java-1.0.2-r1.ebuild,v 1.2 2006/07/12 16:35:48 wolf31o2 Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -15,7 +15,7 @@ SRC_URI="http://research.operationaldynamics.com/linux/java-gnome/dist/${P}.tar.
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc gcj source"
 
 DEPS=">=x11-libs/cairo-1.0.0-r2
