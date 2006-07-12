@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.70 2006/07/11 00:21:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.71 2006/07/12 04:38:42 tsunam Exp $
+
+  12 Jul 2006; Joshua Jackson <tsunam@gentoo.org> courier-0.52.2.ebuild:
+  Stable x86; security bug #135005
 
 *courier-0.53.2 (11 Jul 2006)
 
