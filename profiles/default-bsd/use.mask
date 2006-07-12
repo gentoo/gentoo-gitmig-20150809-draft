@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.18 2006/07/09 16:07:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.19 2006/07/12 16:27:00 chtekk Exp $
 
 # Linux-dependant flags
 selinux
@@ -95,7 +95,7 @@ video_cards_v4l
 # Arch-specific
 altivec
 3dnow
-3dnowex
+3dnowext
 mmx
 mmxext
 sse
