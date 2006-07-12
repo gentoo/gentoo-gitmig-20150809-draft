@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.1.1.ebuild,v 1.3 2006/05/25 19:30:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-2.1.1.ebuild,v 1.4 2006/07/12 15:17:21 agriffis Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cherrypy.org/"
 DEPEND=">=dev-lang/python-2.3"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc x86"
+KEYWORDS="~amd64 ia64 ~ppc x86"
 LICENSE="BSD"
 S=${WORKDIR}/${MY_P}
 
