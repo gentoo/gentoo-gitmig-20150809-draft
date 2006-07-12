@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.54 2006/03/14 23:24:32 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.55 2006/07/12 15:16:24 kugelfang Exp $
+
+  12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org>
+  pure-ftpd-1.0.20-r1.ebuild:
+  QA: Added selinux to IUSE.
 
 *pure-ftpd-1.0.21 (14 Mar 2006)
 
