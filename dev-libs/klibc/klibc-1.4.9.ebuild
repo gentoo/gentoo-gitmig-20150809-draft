@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.9.ebuild,v 1.2 2006/07/09 16:19:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.4.9.ebuild,v 1.3 2006/07/12 06:08:21 azarah Exp $
 
 inherit eutils linux-info multilib
 
@@ -22,7 +22,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/libs/klibc/${P}.tar.bz2
 LICENSE="|| ( GPL-2 LGPL-2 )"
 # Mips patches needs updating ...
 KEYWORDS="~amd64 -mips ~ppc ~x86"
-IUSE="n32"
+IUSE="debug n32"
 RESTRICT="nostrip"
 
 DEPEND="dev-lang/perl
@@ -127,6 +127,8 @@ src_compile() {
 	[[ ${KV_DIR} != "${KV_OUT_DIR}" ]] && \
 		myargs="KLIBCKERNELOBJ='${KV_OUT_DIR}/' KBUILD_SRC='1'"
 
+	use debug && myargs="${myargs} V=1"
+
 	if is_cross ; then
 		einfo "ARCH = \"$(guess_arch)\""
 		einfo "CROSS = \"${CTARGET}-\""
@@ -159,6 +161,8 @@ src_install() {
 
 	[[ ${KV_DIR} != "${KV_OUT_DIR}" ]] && \
 		myargs="KLIBCKERNELOBJ='${KV_OUT_DIR}/' KBUILD_SRC='1'"
+
+	use debug && myargs="${myargs} V=1"
 
 	if is_cross ; then
 		klibc_prefix=$("${S}/klcc/${CTARGET}-klcc" -print-klibc-prefix)
