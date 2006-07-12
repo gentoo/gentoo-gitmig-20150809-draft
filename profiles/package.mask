@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5622 2006/07/12 02:28:15 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5623 2006/07/12 18:50:45 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -104,6 +104,7 @@ net-wireless/aircrack
 >=x11-libs/gtk+-2.10.0
 >=x11-libs/pango-1.13.0
 >=dev-libs/glib-2.12.0
+>=gnome-base/libgnomeui-2.15
 
 # Diego Pettenò <flameeyes@gentoo.org> (5 Jul 2006)
 # Beta version
