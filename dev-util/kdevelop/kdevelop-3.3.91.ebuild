@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.91.ebuild,v 1.2 2006/07/03 12:28:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.3.91.ebuild,v 1.3 2006/07/12 14:10:16 kugelfang Exp $
 
 inherit kde eutils db-use
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion"
+IUSE="ada clearcase cvs fortran haskell java pascal perforce perl php python ruby sql subversion graphviz"
 
 DEPEND="sys-devel/gdb
 	=sys-libs/db-4*
