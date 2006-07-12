@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mod_python
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.44 2006/06/28 10:59:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.45 2006/07/12 15:46:17 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  mod_python-3.1.4-r1.ebuild:
+  Mark 3.1.4-r1 stable on ia64
 
   28 Jun 2006; Simon Stelling <blubb@gentoo.org> mod_python-2.7.11.ebuild:
   keywording ~amd64 and applying the -fPIC patch from bug 106916; thanks to
