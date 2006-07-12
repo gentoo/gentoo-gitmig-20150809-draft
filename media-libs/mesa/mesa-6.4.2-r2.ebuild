@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.14 2006/07/12 18:38:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.15 2006/07/12 18:39:14 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -55,8 +55,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto
 	>=x11-proto/glproto-1.4-r1
 	motif? ( x11-proto/printproto )"
-
-PROVIDE="virtual/opengl virtual/glu"
 
 S="${WORKDIR}/${MY_P}"
 
