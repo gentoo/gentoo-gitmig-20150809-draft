@@ -1,0 +1,97 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+Fix compile errors when using Xorg 7.1.
+
+From: Peter Osterlund <petero2@telia.com>
+
+Initial patch from VMiklos <vmiklos@frugalware.org>. Somewhat
+modified by me.
+---
+
+ eventcomm.c |    5 +++++
+ ps2comm.h   |    1 +
+ psmcomm.c   |    2 ++
+ psmcomm.h   |    1 +
+ synaptics.c |    1 +
+ synproto.h  |    1 +
+ 6 files changed, 11 insertions(+), 0 deletions(-)
+
+diff --git a/eventcomm.c b/eventcomm.c
+index 6f6de7f..1b0f8bc 100644
+--- a/eventcomm.c
++++ b/eventcomm.c
+@@ -18,6 +18,11 @@
+  */
+ 
+ #include "eventcomm.h"
++#include <errno.h>
++#include <sys/types.h>
++#include <sys/stat.h>
++#include <fcntl.h>
++#include <stdio.h>
+ #include "synproto.h"
+ #include "synaptics.h"
+ #include <xf86.h>
+diff --git a/ps2comm.h b/ps2comm.h
+index d6f0a25..4a1a051 100644
+--- a/ps2comm.h
++++ b/ps2comm.h
+@@ -1,6 +1,7 @@
+ #ifndef _PS2COMM_H_
+ #define _PS2COMM_H_
+ 
++#include <unistd.h>
+ #include <sys/ioctl.h>
+ #include "xf86_OSproc.h"
+ 
+diff --git a/psmcomm.c b/psmcomm.c
+index e4df42b..257ec13 100644
+--- a/psmcomm.c
++++ b/psmcomm.c
+@@ -29,6 +29,8 @@
+  */
+ 
+ #include "psmcomm.h"
++#include <errno.h>
++#include <string.h>
+ #include "synproto.h"
+ #include "synaptics.h"
+ #include "ps2comm.h"			    /* ps2_print_ident() */
+diff --git a/psmcomm.h b/psmcomm.h
+index 6d64df6..a3162a2 100644
+--- a/psmcomm.h
++++ b/psmcomm.h
+@@ -1,6 +1,7 @@
+ #ifndef _PSMCOMM_H_
+ #define _PSMCOMM_H_
+ 
++#include <unistd.h>
+ #include <sys/ioctl.h>
+ #include "freebsd_mouse.h"
+ 
+diff --git a/synaptics.c b/synaptics.c
+index 2a17f81..63edebb 100644
+--- a/synaptics.c
++++ b/synaptics.c
+@@ -59,6 +59,7 @@
+  *	Standard Headers
+  ****************************************************************************/
+ 
++#include <unistd.h>
+ #include <sys/ioctl.h>
+ #include <misc.h>
+ #include <xf86.h>
+diff --git a/synproto.h b/synproto.h
+index 8562a75..ecc4357 100644
+--- a/synproto.h
++++ b/synproto.h
+@@ -19,6 +19,7 @@
+ #ifndef _SYNPROTO_H_
+ #define _SYNPROTO_H_
+ 
++#include <unistd.h>
+ #include <sys/ioctl.h>
+ #include <xf86Xinput.h>
+ #include <xisb.h>
