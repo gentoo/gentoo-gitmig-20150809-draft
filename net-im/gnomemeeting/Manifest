@@ -1,23 +1,90 @@
-MD5 a90d873b38a939fba966f9b04e58ac42 gnomemeeting-0.98.0.ebuild 1687
-MD5 5e442d151db50f960aa0ed3ef72c081a gnomemeeting-1.00.ebuild 2043
-MD5 eed4f567de688fc863665054fba871e6 metadata.xml 722
-MD5 d677e723fe6195a008184eb578985e2f ChangeLog 10634
-MD5 26eba92c1c989f6ecebf8c0614e0c6da gnomemeeting-1.2.1.ebuild 3020
-MD5 2eca81a5c31cfef1cd02675db4e996c6 gnomemeeting-1.0.2-r1.ebuild 2288
-MD5 600e50cb52f072809c3f46a0fe8d02ed gnomemeeting-0.98.5-r1.ebuild 1860
-MD5 698cb54471981882511cf00e76533a54 gnomemeeting-0.98.5.ebuild 1855
-MD5 9adb1bf9d688e8be734b36bc0e54c110 gnomemeeting-1.0.2.ebuild 2286
-MD5 4a22b08d5bda79ed889cc36d84c08985 gnomemeeting-1.2.2.ebuild 2946
-MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2-r1 71
-MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2 71
-MD5 637cd5da4664cab0b50c709e88908a31 files/digest-gnomemeeting-1.2.1 71
-MD5 67fe9473695e53f1d3eb2093e925fa9b files/digest-gnomemeeting-1.00 70
-MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5-r1 73
-MD5 22a027be44dee7bbf4a030a0392bcda8 files/digest-gnomemeeting-1.2.2 71
+AUX gnomemeeting-0.98.5-libxml_2.6.patch 406 RMD160 134bdd8f4cb2a57612cb75f609b9fb40e44d27a0 SHA1 6d1f1d46c44e5cc7ae5934c32b70403f8eba8688 SHA256 af5f586c88ab79e5ea280b0410d0144c143dd65faeb97a12e7917435d792ae10
 MD5 967c15eee4dba436c91d06bda647a525 files/gnomemeeting-0.98.5-libxml_2.6.patch 406
-MD5 c91514d9a4bf338c62c4ef78ddb97553 files/digest-gnomemeeting-0.98.0 73
-MD5 e154855fe35cc7fdcf276eaa2e4f2e4c files/gnomemeeting-1.2.2-dbus.diff 2007
-MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5 73
-MD5 683dfd499a4dd803dd3cb8797a4d0efe files/gnomemeeting-1.2.1-configure.patch 669
+RMD160 134bdd8f4cb2a57612cb75f609b9fb40e44d27a0 files/gnomemeeting-0.98.5-libxml_2.6.patch 406
+SHA256 af5f586c88ab79e5ea280b0410d0144c143dd65faeb97a12e7917435d792ae10 files/gnomemeeting-0.98.5-libxml_2.6.patch 406
+AUX gnomemeeting-1.0.2-configure.diff 1304 RMD160 78a3e6859d2bce11b64ac307120c87536994e1ea SHA1 1f47d0bdb11bc7b081e4bdf40f13e76bb16a0a28 SHA256 d17b70d8c5ca7c2a1bfa2345e2aec02e94dd1f43ba62b2e62c3a026b8528826d
 MD5 0c651ec46c87a73e45039d9ab14fddd0 files/gnomemeeting-1.0.2-configure.diff 1304
+RMD160 78a3e6859d2bce11b64ac307120c87536994e1ea files/gnomemeeting-1.0.2-configure.diff 1304
+SHA256 d17b70d8c5ca7c2a1bfa2345e2aec02e94dd1f43ba62b2e62c3a026b8528826d files/gnomemeeting-1.0.2-configure.diff 1304
+AUX gnomemeeting-1.00-gcc34.patch 892 RMD160 06a304db6472c914b5517612ccd239d82556ea41 SHA1 fc6919f67d76842563e3b60dc51b07912bf8fde4 SHA256 dd089096f3508bc55c7e5553a62695537e5cb18b20c8d3ba26e6d1fce21c775b
 MD5 0cc72cbb5df4cb6b2ac1e8d7953f79f0 files/gnomemeeting-1.00-gcc34.patch 892
+RMD160 06a304db6472c914b5517612ccd239d82556ea41 files/gnomemeeting-1.00-gcc34.patch 892
+SHA256 dd089096f3508bc55c7e5553a62695537e5cb18b20c8d3ba26e6d1fce21c775b files/gnomemeeting-1.00-gcc34.patch 892
+AUX gnomemeeting-1.2.1-configure.patch 669 RMD160 fa6cfdb6f1613e63b3af9a60d4f14b0260bae2db SHA1 c7f05a63821c2f890f6bc4dc9b3a848500833e7d SHA256 5c8ffcb27ebf51a0f39ae866e8b9637f56bad8fe113adb6122da4d973d55dd80
+MD5 683dfd499a4dd803dd3cb8797a4d0efe files/gnomemeeting-1.2.1-configure.patch 669
+RMD160 fa6cfdb6f1613e63b3af9a60d4f14b0260bae2db files/gnomemeeting-1.2.1-configure.patch 669
+SHA256 5c8ffcb27ebf51a0f39ae866e8b9637f56bad8fe113adb6122da4d973d55dd80 files/gnomemeeting-1.2.1-configure.patch 669
+AUX gnomemeeting-1.2.2-dbus.diff 2007 RMD160 bf610709cba205e1950f3cdb869c0ccc491020e9 SHA1 bc0981ca4c1b3e1bd8fcec5a976d1f49576cfc09 SHA256 18a71c4388bbf30ce88d166b9adb45a13ad07fc1e0b5c9e87e9bf4962078c211
+MD5 e154855fe35cc7fdcf276eaa2e4f2e4c files/gnomemeeting-1.2.2-dbus.diff 2007
+RMD160 bf610709cba205e1950f3cdb869c0ccc491020e9 files/gnomemeeting-1.2.2-dbus.diff 2007
+SHA256 18a71c4388bbf30ce88d166b9adb45a13ad07fc1e0b5c9e87e9bf4962078c211 files/gnomemeeting-1.2.2-dbus.diff 2007
+DIST gnomemeeting-0.98.0.tar.bz2 1467399
+DIST gnomemeeting-0.98.5.tar.bz2 1739613
+DIST gnomemeeting-1.0.2.tar.gz 4466016
+DIST gnomemeeting-1.00.tar.gz 4076861
+DIST gnomemeeting-1.2.1.tar.gz 5525398
+DIST gnomemeeting-1.2.2.tar.gz 6059950
+EBUILD gnomemeeting-0.98.0.ebuild 1687 RMD160 aa28e6f292ccfe92306a3a9de33cd7bcdcbe801d SHA1 83fa7ae9976074861f5512d0581a18c5ec15a272 SHA256 0d06d9969ba3bb042a18bb43f91b5c28090c836455ebaa875f8c63823404701c
+MD5 a90d873b38a939fba966f9b04e58ac42 gnomemeeting-0.98.0.ebuild 1687
+RMD160 aa28e6f292ccfe92306a3a9de33cd7bcdcbe801d gnomemeeting-0.98.0.ebuild 1687
+SHA256 0d06d9969ba3bb042a18bb43f91b5c28090c836455ebaa875f8c63823404701c gnomemeeting-0.98.0.ebuild 1687
+EBUILD gnomemeeting-0.98.5-r1.ebuild 1860 RMD160 0d0eb044ecd09d4ea05213a8d90c48996f30e777 SHA1 83e41406cad8338d2ccf953b1c72ab33314f5680 SHA256 9be4a0e09cc0439fd9f7a7ce38e39d2b2549743c38f18c2eb5ac9ed16c754b7d
+MD5 600e50cb52f072809c3f46a0fe8d02ed gnomemeeting-0.98.5-r1.ebuild 1860
+RMD160 0d0eb044ecd09d4ea05213a8d90c48996f30e777 gnomemeeting-0.98.5-r1.ebuild 1860
+SHA256 9be4a0e09cc0439fd9f7a7ce38e39d2b2549743c38f18c2eb5ac9ed16c754b7d gnomemeeting-0.98.5-r1.ebuild 1860
+EBUILD gnomemeeting-0.98.5.ebuild 1855 RMD160 b5898a6416af336e7758419cf3560f9f85d50cc9 SHA1 fe3538d035c057d3f3cc2ed678577d4a38b04e98 SHA256 ad621f9bb04823b6c580206ebdfebfafb960e380da69692541ce556238385414
+MD5 698cb54471981882511cf00e76533a54 gnomemeeting-0.98.5.ebuild 1855
+RMD160 b5898a6416af336e7758419cf3560f9f85d50cc9 gnomemeeting-0.98.5.ebuild 1855
+SHA256 ad621f9bb04823b6c580206ebdfebfafb960e380da69692541ce556238385414 gnomemeeting-0.98.5.ebuild 1855
+EBUILD gnomemeeting-1.0.2-r1.ebuild 2288 RMD160 5c096a1780545a9ec281da488c287e831bef9a88 SHA1 40eaa9db321c9351d753ef5f63dc2b48453a0d45 SHA256 275b9ebd37e9d223ffe34550ca73738bfa08997be64c47333091d964cf4b6a12
+MD5 2eca81a5c31cfef1cd02675db4e996c6 gnomemeeting-1.0.2-r1.ebuild 2288
+RMD160 5c096a1780545a9ec281da488c287e831bef9a88 gnomemeeting-1.0.2-r1.ebuild 2288
+SHA256 275b9ebd37e9d223ffe34550ca73738bfa08997be64c47333091d964cf4b6a12 gnomemeeting-1.0.2-r1.ebuild 2288
+EBUILD gnomemeeting-1.0.2.ebuild 2286 RMD160 c7cd1f40973b088142c73a305bb0ca81051d01c6 SHA1 da646711d603966406b9833be28f5d2da27fded9 SHA256 fd9e8144951363f5e600924727e9c09ddfb5673025d3275bb05b6f7595a332a9
+MD5 9adb1bf9d688e8be734b36bc0e54c110 gnomemeeting-1.0.2.ebuild 2286
+RMD160 c7cd1f40973b088142c73a305bb0ca81051d01c6 gnomemeeting-1.0.2.ebuild 2286
+SHA256 fd9e8144951363f5e600924727e9c09ddfb5673025d3275bb05b6f7595a332a9 gnomemeeting-1.0.2.ebuild 2286
+EBUILD gnomemeeting-1.00.ebuild 2043 RMD160 2a1b6be022dd218f6cd7c1c7e5d9db23e04687df SHA1 5d320d394d81a8d13cb54892974aa535101698c8 SHA256 b352cda24ed8ee8850ac2a3a5b1ba2c535f90d50a62ef7e0c89b324926253dbc
+MD5 5e442d151db50f960aa0ed3ef72c081a gnomemeeting-1.00.ebuild 2043
+RMD160 2a1b6be022dd218f6cd7c1c7e5d9db23e04687df gnomemeeting-1.00.ebuild 2043
+SHA256 b352cda24ed8ee8850ac2a3a5b1ba2c535f90d50a62ef7e0c89b324926253dbc gnomemeeting-1.00.ebuild 2043
+EBUILD gnomemeeting-1.2.1.ebuild 3020 RMD160 406b0e1386f44b6f5801a1f2730450f89a90bce2 SHA1 9a61c5d9ce8a24a3b3eec42558f1303d2086c1d3 SHA256 c396aac02edb522c04189bb69eb7136bbdb6217cc6d5e832fdc4bb3568e97373
+MD5 26eba92c1c989f6ecebf8c0614e0c6da gnomemeeting-1.2.1.ebuild 3020
+RMD160 406b0e1386f44b6f5801a1f2730450f89a90bce2 gnomemeeting-1.2.1.ebuild 3020
+SHA256 c396aac02edb522c04189bb69eb7136bbdb6217cc6d5e832fdc4bb3568e97373 gnomemeeting-1.2.1.ebuild 3020
+EBUILD gnomemeeting-1.2.2.ebuild 2956 RMD160 9ba7239bb564786bddd98cb35b40ec0477058bd1 SHA1 efdecc871b4b129165eb3df4adc1b5d7cdda1adb SHA256 7e819eb9c591a800a1061e17f715b13866ef9010ce617014ad59d9d389b9b5c6
+MD5 af5a398415324cfdcf92f0b97ec8f339 gnomemeeting-1.2.2.ebuild 2956
+RMD160 9ba7239bb564786bddd98cb35b40ec0477058bd1 gnomemeeting-1.2.2.ebuild 2956
+SHA256 7e819eb9c591a800a1061e17f715b13866ef9010ce617014ad59d9d389b9b5c6 gnomemeeting-1.2.2.ebuild 2956
+MISC ChangeLog 10725 RMD160 174026e04d59de7d8a2793c96a7a264e1c77a3dc SHA1 af7c480296a5d1ff3a781d54fab71b33506df422 SHA256 f41009c4b557b3ce4c47b6fcb8fce692b1c23cd6ec8512aa6ccf2240d6c6203e
+MD5 48be64847d471075feb110f43735fe56 ChangeLog 10725
+RMD160 174026e04d59de7d8a2793c96a7a264e1c77a3dc ChangeLog 10725
+SHA256 f41009c4b557b3ce4c47b6fcb8fce692b1c23cd6ec8512aa6ccf2240d6c6203e ChangeLog 10725
+MISC metadata.xml 722 RMD160 b42249f83a3094e61fc27b52570bccff3ee000d0 SHA1 8f6a3f643dba2433b7f8809c4bfdcbedb90d86fb SHA256 b4e08a8cf50e4cdab0ca7fd5df4cb18e48fec07cd8573878f3344699d885e369
+MD5 eed4f567de688fc863665054fba871e6 metadata.xml 722
+RMD160 b42249f83a3094e61fc27b52570bccff3ee000d0 metadata.xml 722
+SHA256 b4e08a8cf50e4cdab0ca7fd5df4cb18e48fec07cd8573878f3344699d885e369 metadata.xml 722
+MD5 c91514d9a4bf338c62c4ef78ddb97553 files/digest-gnomemeeting-0.98.0 73
+RMD160 6332a2a6c512afbd471e97665323322297cfc392 files/digest-gnomemeeting-0.98.0 73
+SHA256 351b035de018dfcdf3a2fb05dfe535e7710415a4f8eda1bacb6dde1fe363ae08 files/digest-gnomemeeting-0.98.0 73
+MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5 73
+RMD160 484d8af3f2ad7ee37bfbee911dbfe93018cbe32e files/digest-gnomemeeting-0.98.5 73
+SHA256 a9fc4623c8aafd0c0fc012f656d3d34007ac031d3dd56a80a00b57d615478eee files/digest-gnomemeeting-0.98.5 73
+MD5 1eeb16dcd662b2829936876613f02611 files/digest-gnomemeeting-0.98.5-r1 73
+RMD160 484d8af3f2ad7ee37bfbee911dbfe93018cbe32e files/digest-gnomemeeting-0.98.5-r1 73
+SHA256 a9fc4623c8aafd0c0fc012f656d3d34007ac031d3dd56a80a00b57d615478eee files/digest-gnomemeeting-0.98.5-r1 73
+MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2 71
+RMD160 e7760952bd566887311117f8f7b3445a673cf716 files/digest-gnomemeeting-1.0.2 71
+SHA256 94126d0c79667be8a9a21913fd4d89a2600502b41cbdf7c71368de2c14a58284 files/digest-gnomemeeting-1.0.2 71
+MD5 99311f0023ae8d29bca828f49a5bb750 files/digest-gnomemeeting-1.0.2-r1 71
+RMD160 e7760952bd566887311117f8f7b3445a673cf716 files/digest-gnomemeeting-1.0.2-r1 71
+SHA256 94126d0c79667be8a9a21913fd4d89a2600502b41cbdf7c71368de2c14a58284 files/digest-gnomemeeting-1.0.2-r1 71
+MD5 67fe9473695e53f1d3eb2093e925fa9b files/digest-gnomemeeting-1.00 70
+RMD160 cf84f5294788be2d2e3ce7db097904a76121e439 files/digest-gnomemeeting-1.00 70
+SHA256 f4978324b38a6933d15f87bd672eae1d69a931a517158fbbdcf79d1bf12a3edd files/digest-gnomemeeting-1.00 70
+MD5 637cd5da4664cab0b50c709e88908a31 files/digest-gnomemeeting-1.2.1 71
+RMD160 d104b411851e06073a9e6a5ad0117326fdfb61e5 files/digest-gnomemeeting-1.2.1 71
+SHA256 e0dcecb8352c13f88dd8150b93545d78240ef645db593359a4ab52559b8894f6 files/digest-gnomemeeting-1.2.1 71
+MD5 22a027be44dee7bbf4a030a0392bcda8 files/digest-gnomemeeting-1.2.2 71
+RMD160 f224799ca22068ff72810327aee8423a7cab01cb files/digest-gnomemeeting-1.2.2 71
+SHA256 18a297388c3c1b764a263c53440ac04513a7c5e456e0ac365dab9fef0904b85f files/digest-gnomemeeting-1.2.2 71
