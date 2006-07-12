@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.2.ebuild,v 1.1 2006/07/11 15:39:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.1.2.ebuild,v 1.2 2006/07/12 12:38:37 markusle Exp $
 
-inherit flag-o-matic eutils toolchain-funcs autotools fortran
+inherit flag-o-matic eutils toolchain-funcs autotools
 
 DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (DFT)"
 HOMEPAGE="http://www.fftw.org/"
