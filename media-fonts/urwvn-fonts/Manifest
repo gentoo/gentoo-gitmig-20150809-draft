@@ -1,6 +1,24 @@
-MD5 c7f63de78191cf3798a790c894f2d75e ChangeLog 1320
-MD5 a5a25439da2fa20c5aaedbc739806442 files/digest-urwvn-fonts-2.0 69
-MD5 f2df0e72bcb898052b2caac2fa50c188 files/digest-urwvn-fonts-3.02 67
-MD5 af8a5f3513b51e256b3c6b5b5e6754f1 metadata.xml 217
+DIST urwvn-2.0-type1.tar.bz2 2072337
+DIST urwvn-3.02-ttf.tar.bz2 918379
+EBUILD urwvn-fonts-2.0.ebuild 588 RMD160 4f0b1d2bceaf58b3bdde46bf8c2307a79847e96e SHA1 c845a289388c5f6fb8d1be7a20ed213afd961bde SHA256 c43a24c642c86f490339b4d1fff2d01fa9e4aef10053dd7b732081830653424e
 MD5 f7b8d55d58adebb8484ee47dbdb718ba urwvn-fonts-2.0.ebuild 588
-MD5 35224790749ec809aa8e5a97d9660681 urwvn-fonts-3.02.ebuild 604
+RMD160 4f0b1d2bceaf58b3bdde46bf8c2307a79847e96e urwvn-fonts-2.0.ebuild 588
+SHA256 c43a24c642c86f490339b4d1fff2d01fa9e4aef10053dd7b732081830653424e urwvn-fonts-2.0.ebuild 588
+EBUILD urwvn-fonts-3.02.ebuild 610 RMD160 3e1fe4c6b2a115fe5702cfc98b30236beae5d39a SHA1 c0526cdf159c080d1cb8cb219a97f92cb67db0ee SHA256 33e060e0f4dba59261fd2bcfa2d776564e499e417a306a8ab5b51af6a5812eff
+MD5 441a1b1312f03618f7189a511709cb95 urwvn-fonts-3.02.ebuild 610
+RMD160 3e1fe4c6b2a115fe5702cfc98b30236beae5d39a urwvn-fonts-3.02.ebuild 610
+SHA256 33e060e0f4dba59261fd2bcfa2d776564e499e417a306a8ab5b51af6a5812eff urwvn-fonts-3.02.ebuild 610
+MISC ChangeLog 1424 RMD160 f75ef2804dd8f1489cd38bbac0694d3a096095b3 SHA1 947682ff2f7335d6e29d872d95196da8a598704f SHA256 2e048f2085bf3637c2254e1270927271fc7a2ff896dbe802b15b0436bbb72d93
+MD5 017fc4b6ca4c0af91de231b7e0885d69 ChangeLog 1424
+RMD160 f75ef2804dd8f1489cd38bbac0694d3a096095b3 ChangeLog 1424
+SHA256 2e048f2085bf3637c2254e1270927271fc7a2ff896dbe802b15b0436bbb72d93 ChangeLog 1424
+MISC metadata.xml 217 RMD160 fd723bd2bb1b848b1f087596e85a77c65a0d510c SHA1 59074b0ca8eb4dfd800b61ed13bfea87f9f1f9c5 SHA256 d0bede3d3ee1ff0c249d3fe61ba7d94cf5f5dc49e8b99ac09f9b058b2bae5824
+MD5 af8a5f3513b51e256b3c6b5b5e6754f1 metadata.xml 217
+RMD160 fd723bd2bb1b848b1f087596e85a77c65a0d510c metadata.xml 217
+SHA256 d0bede3d3ee1ff0c249d3fe61ba7d94cf5f5dc49e8b99ac09f9b058b2bae5824 metadata.xml 217
+MD5 a5a25439da2fa20c5aaedbc739806442 files/digest-urwvn-fonts-2.0 69
+RMD160 382cc96c3596cf5192c9a17a0f0fbb93fb159ded files/digest-urwvn-fonts-2.0 69
+SHA256 3cf0a8b44c628c20fa053899e283bb894b88731a90fe2af34c784d2999e55c00 files/digest-urwvn-fonts-2.0 69
+MD5 f2df0e72bcb898052b2caac2fa50c188 files/digest-urwvn-fonts-3.02 67
+RMD160 d6d255738767463264e95fcd2f41a3c76dde338f files/digest-urwvn-fonts-3.02 67
+SHA256 ed0e7bcc318a8b8a5be854cfea9b92a956fd940831bc0810b69966d08bae2f25 files/digest-urwvn-fonts-3.02 67
