@@ -1,0 +1,21 @@
+--- lilo-22.5.8/Makefile.bak	2004-02-06 01:41:06.000000000 +0000
++++ lilo-22.5.8/Makefile	2004-02-06 02:02:57.000000000 +0000
+@@ -302,16 +302,8 @@
+ #  normal install, but doesn't make the diagnostic binaries
+ #
+ install:  all
+-	if [ ! -d $$ROOT$(SBIN_DIR) ]; then mkdir $$ROOT$(SBIN_DIR); fi
+-	if [ ! -d $$ROOT$(CFG_DIR) ]; then mkdir $$ROOT$(CFG_DIR); fi
+-	if [ ! -d $$ROOT$(BOOT_DIR) ]; then mkdir $$ROOT$(BOOT_DIR); fi
+-	if [ ! -d $$ROOT$(USRSBIN_DIR) ]; then \
+-	  mkdir -p $$ROOT$(USRSBIN_DIR); fi
+-	if [ ! -d $$ROOT$(MAN_DIR) ]; then mkdir $$ROOT$(MAN_DIR); fi  
+-	if [ ! -d $$ROOT$(MAN_DIR)/man5 ]; then \
+-	  mkdir $$ROOT$(MAN_DIR)/man5; fi  
+-	if [ ! -d $$ROOT$(MAN_DIR)/man8 ]; then \
+-	  mkdir $$ROOT$(MAN_DIR)/man8; fi  
++	mkdir -p $$ROOT$(SBIN_DIR) $$ROOT$(CFG_DIR) $$ROOT$(BOOT_DIR) \
++	  $$ROOT$(USRSBIN_DIR) $$ROOT$(MAN_DIR)/man5 $$ROOT$(MAN_DIR)/man8
+ 	if [ -f diag1.img ]; then \
+ 	  cp -f diag1.img $$ROOT$(BOOT_DIR); fi
+ 	if [ -f diag2.img ]; then \
