@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106.ebuild,v 1.8 2006/06/25 10:55:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.106.ebuild,v 1.9 2006/07/12 04:35:53 nerdboy Exp $
 
 inherit eutils multilib
 
@@ -20,14 +20,15 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.3.104-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 	sed -i -e "s:/lib/:/$(get_libdir)/:g" src/Makefile
 }
 
 src_install() {
-	make prefix="${D}"/usr install || die
+	make install prefix="${D}usr" libdir="${D}usr/$(get_libdir)" \
+	    root=${D} || die "make install failed"
 	doman man/*
-	dodoc ChangeLog TODO
+	dodoc ChangeLog TODO COPYING
 
 	# remove stuff provided by man-pages now
 	rm "${D}"/usr/share/man/man3/aio_{cancel,error,fsync,read,return,suspend,write}.*
