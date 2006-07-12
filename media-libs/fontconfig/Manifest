@@ -1,51 +1,77 @@
-MD5 d15080cee11969465ce856d428c4aa8f ChangeLog 10176
-RMD160 b3c1aa8aba50e51778a2f3e63542e40113e6d0f7 ChangeLog 10176
-SHA256 e7143fb0577c7faae1c71082bd9e04b91830580134f1baefb1186353d36e82ee ChangeLog 10176
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX fontconfig-2.3.2-docbook.patch 506 RMD160 c205d99ecc19866da8d0ac4ef7172dcef98a6299 SHA1 1054f38cef09c93baf34f08253345ca2ae638e4a SHA256 c6480dcf19fec22126a9205fa3d9b317e5a97613f86218cf1926a2a07848afd5
+MD5 083e41bbcbce3f6ee01214d8cecf150b files/fontconfig-2.3.2-docbook.patch 506
+RMD160 c205d99ecc19866da8d0ac4ef7172dcef98a6299 files/fontconfig-2.3.2-docbook.patch 506
+SHA256 c6480dcf19fec22126a9205fa3d9b317e5a97613f86218cf1926a2a07848afd5 files/fontconfig-2.3.2-docbook.patch 506
+AUX fontconfig-2.3.2-pkg_config.patch 421 RMD160 502c0bf09bf8ffe4fe0f64c8e7c42da7bbd8042e SHA1 5c1ee873eafcbb64cc6314a9a045eaf8cc8eedb0 SHA256 3b536251b30a12d200e40676ae6b040e08394fc19c163b201a1d8d8795d1ea88
+MD5 89e73e244d58f9a2f27bca903ed69000 files/fontconfig-2.3.2-pkg_config.patch 421
+RMD160 502c0bf09bf8ffe4fe0f64c8e7c42da7bbd8042e files/fontconfig-2.3.2-pkg_config.patch 421
+SHA256 3b536251b30a12d200e40676ae6b040e08394fc19c163b201a1d8d8795d1ea88 files/fontconfig-2.3.2-pkg_config.patch 421
+AUX fontconfig-2.3.2-symbol_alias.patch 532 RMD160 a3dbe468e362da99d4c639115f12437d1593dee0 SHA1 8108108700b3e4f3d8b13161d8e8c88611387256 SHA256 c5f30c8a1b8fad5bf3abc15569f74d9a6600af05522f49f32305951e5c595a58
+MD5 a64531ab26e1d4d97f4d6dbd1f7c245c files/fontconfig-2.3.2-symbol_alias.patch 532
+RMD160 a3dbe468e362da99d4c639115f12437d1593dee0 files/fontconfig-2.3.2-symbol_alias.patch 532
+SHA256 c5f30c8a1b8fad5bf3abc15569f74d9a6600af05522f49f32305951e5c595a58 files/fontconfig-2.3.2-symbol_alias.patch 532
+AUX patch/fontconfig-2.1-slighthint.patch 2171 RMD160 58ce193f26b0b14ae5da950a1dbfbadf733577b9 SHA1 1e45e1352a396a7b76a6ea82df1be3b638e23f52 SHA256 d356ed4533d1d21c8d326fb183199c1d554888a5a8dd1e4883c931bcb0b84dc4
+MD5 37e60cdff43bf3f04e9db8931e0d1f47 files/patch/fontconfig-2.1-slighthint.patch 2171
+RMD160 58ce193f26b0b14ae5da950a1dbfbadf733577b9 files/patch/fontconfig-2.1-slighthint.patch 2171
+SHA256 d356ed4533d1d21c8d326fb183199c1d554888a5a8dd1e4883c931bcb0b84dc4 files/patch/fontconfig-2.1-slighthint.patch 2171
+AUX patch/fontconfig-2.2-blacklist.patch 1216 RMD160 9603cd0241b4204bbc22305b8d4d03753c875937 SHA1 86f432773d93fe52842e31483e84616b0efca140 SHA256 e63b6663bb65ba054aa56f553db466d8a89b5a5937c8c03524be9205707ef019
+MD5 1636083efd15746d8f194aff41aa6e02 files/patch/fontconfig-2.2-blacklist.patch 1216
+RMD160 9603cd0241b4204bbc22305b8d4d03753c875937 files/patch/fontconfig-2.2-blacklist.patch 1216
+SHA256 e63b6663bb65ba054aa56f553db466d8a89b5a5937c8c03524be9205707ef019 files/patch/fontconfig-2.2-blacklist.patch 1216
+AUX patch/fontconfig-2.2-local_fontdir-r1.patch 487 RMD160 b458422ed36d28471eeb7054595815630984e87a SHA1 483d761c7815605f3f8f53d0d81369f6e319c54d SHA256 c4d47bf4d6f2f11612f0de54375ee45099a7c8c4b9ccfe9a1aaf0ba0bf6b7fe8
+MD5 4b5453071b61ecef4bb530b0bca695e1 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
+RMD160 b458422ed36d28471eeb7054595815630984e87a files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
+SHA256 c4d47bf4d6f2f11612f0de54375ee45099a7c8c4b9ccfe9a1aaf0ba0bf6b7fe8 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
+AUX patch/fontconfig-2.2-remove_subpixel_test.patch 441 RMD160 00b5baf29ab14998111c751c45c49f68d4bb323f SHA1 9464f6090d27617746c880fc2dbbdd4786c52b87 SHA256 efa79cf65ccbfe2255fddb3ba2fd38dcb38fca6768821daf38f7928f6bc3694d
+MD5 4d77167b56a7dff0d7c7b5b8168b85ba files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
+RMD160 00b5baf29ab14998111c751c45c49f68d4bb323f files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
+SHA256 efa79cf65ccbfe2255fddb3ba2fd38dcb38fca6768821daf38f7928f6bc3694d files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
+DIST fontconfig-2.2.2.tar.gz 743895
+DIST fontconfig-2.2.3.tar.gz 750035
+DIST fontconfig-2.3.2.tar.gz 964045 RMD160 42668475cca88f265a3b12c289eea2ff61ddaa2b SHA256 6f7b91d328d6408c097ec11777bf4b1c2c710613b573b399794bc5999ff12227
+EBUILD fontconfig-2.2.2.ebuild 2697 RMD160 f63ca3379cf7d92e5271c0664cb05b024279ef9a SHA1 110f610978128d6eb32b68fac541bcb6156322f2 SHA256 64bd58e2373b6f15e887b191d3ba2f91fd9c8dfc9c22983c3c4601ab3d9a43de
+MD5 6f36d026d3722add6b265c408667c502 fontconfig-2.2.2.ebuild 2697
+RMD160 f63ca3379cf7d92e5271c0664cb05b024279ef9a fontconfig-2.2.2.ebuild 2697
+SHA256 64bd58e2373b6f15e887b191d3ba2f91fd9c8dfc9c22983c3c4601ab3d9a43de fontconfig-2.2.2.ebuild 2697
+EBUILD fontconfig-2.2.3.ebuild 2752 RMD160 b3cdaddad6fc7b8e50fee6e987a804d2f66dee9b SHA1 09fa8099dc8b0a68f7126c0f1b00b06983499360 SHA256 3fbb8735612c0fc1fbc95732a22acf393f047e022de124775efd06f98b257f35
+MD5 7fe2a6a842745d66817206e354bc47d8 fontconfig-2.2.3.ebuild 2752
+RMD160 b3cdaddad6fc7b8e50fee6e987a804d2f66dee9b fontconfig-2.2.3.ebuild 2752
+SHA256 3fbb8735612c0fc1fbc95732a22acf393f047e022de124775efd06f98b257f35 fontconfig-2.2.3.ebuild 2752
+EBUILD fontconfig-2.3.2-r1.ebuild 2597 RMD160 1fbcfd58481a9c860851fe80de1404259d12da82 SHA1 c243325a740e76a2c9a633241a6dc7d1ef2a6a39 SHA256 04a17cbd15d60b34965e73e3a06e9960760e4ede7d48495618348fdc4d83753c
+MD5 e4c81d250afbccd60151ad8bec47ee48 fontconfig-2.3.2-r1.ebuild 2597
+RMD160 1fbcfd58481a9c860851fe80de1404259d12da82 fontconfig-2.3.2-r1.ebuild 2597
+SHA256 04a17cbd15d60b34965e73e3a06e9960760e4ede7d48495618348fdc4d83753c fontconfig-2.3.2-r1.ebuild 2597
+EBUILD fontconfig-2.3.2.ebuild 2169 RMD160 cb17f29befa2b9577c83cb43d9f5cf97661d3363 SHA1 5884352f6b5caedf07a8bbc0c6b028f8645016a6 SHA256 e1dae86754014d59880d8310455ce7107b7fe750dbe906c69a93c5bbc933434b
+MD5 a578afa9a421f842533106bb0b978d0d fontconfig-2.3.2.ebuild 2169
+RMD160 cb17f29befa2b9577c83cb43d9f5cf97661d3363 fontconfig-2.3.2.ebuild 2169
+SHA256 e1dae86754014d59880d8310455ce7107b7fe750dbe906c69a93c5bbc933434b fontconfig-2.3.2.ebuild 2169
+MISC ChangeLog 10297 RMD160 b6a9e27975b382b9ca7fc1a379cdd8d3c7820558 SHA1 cb6f0fcbf6d3a544a078cda07fb19dfe3803e6fa SHA256 9fe29ddb4bde23adc8e0cbf7a219a9900b3214c92ea9f09322023ee32d57d483
+MD5 6f5de5cd37e42ef76bb9707285370163 ChangeLog 10297
+RMD160 b6a9e27975b382b9ca7fc1a379cdd8d3c7820558 ChangeLog 10297
+SHA256 9fe29ddb4bde23adc8e0cbf7a219a9900b3214c92ea9f09322023ee32d57d483 ChangeLog 10297
+MISC metadata.xml 419 RMD160 898b8233ab233060d8137dadf28c291b83a65500 SHA1 ee62c352812f8765122e5a65b7df5f8794c6c485 SHA256 859faa6fc0c008e92a6432f0fd50a760170d724b15997e557d5d73088277c4db
+MD5 ae7171ca850597a2455b8b10c72a8de1 metadata.xml 419
+RMD160 898b8233ab233060d8137dadf28c291b83a65500 metadata.xml 419
+SHA256 859faa6fc0c008e92a6432f0fd50a760170d724b15997e557d5d73088277c4db metadata.xml 419
 MD5 d2b7ff87a89e51efb73ac1aaaa9a4957 files/digest-fontconfig-2.2.2 68
 RMD160 6ecec0aa3a722127b078f69c873677cc695bbadd files/digest-fontconfig-2.2.2 68
 SHA256 29107d3474bd814e27a8b065e772d6373ced9477657207b14683b4a6c4127619 files/digest-fontconfig-2.2.2 68
 MD5 343e067196a814af79985df16682b8ab files/digest-fontconfig-2.2.3 68
 RMD160 b78d092616492734a3cf084c9f12ae7d24f9370b files/digest-fontconfig-2.2.3 68
 SHA256 6279d05d4c738283365c60a3a551157a8237d2423c12b9c087a621900273025c files/digest-fontconfig-2.2.3 68
-MD5 10083207a4ef051d20d11e0838bdae94 files/digest-fontconfig-2.3.2 68
-RMD160 b7b2cd4916c2b16464ef99b60f694b2d183e3194 files/digest-fontconfig-2.3.2 68
-SHA256 bcf0550be26b78c15d8112b91ac08ec11e0645db20bd4acf0e6896039b66aeea files/digest-fontconfig-2.3.2 68
+MD5 c77d154bcfcfd17b636769089ba8a821 files/digest-fontconfig-2.3.2 250
+RMD160 1aeaff56f8319f0831d42d6a367f83a57b51e0f6 files/digest-fontconfig-2.3.2 250
+SHA256 94de40c9bac3de79a1bfc417f64d89398077e18e222d171493901211dac8bcae files/digest-fontconfig-2.3.2 250
 MD5 c77d154bcfcfd17b636769089ba8a821 files/digest-fontconfig-2.3.2-r1 250
 RMD160 1aeaff56f8319f0831d42d6a367f83a57b51e0f6 files/digest-fontconfig-2.3.2-r1 250
 SHA256 94de40c9bac3de79a1bfc417f64d89398077e18e222d171493901211dac8bcae files/digest-fontconfig-2.3.2-r1 250
-MD5 083e41bbcbce3f6ee01214d8cecf150b files/fontconfig-2.3.2-docbook.patch 506
-RMD160 c205d99ecc19866da8d0ac4ef7172dcef98a6299 files/fontconfig-2.3.2-docbook.patch 506
-SHA256 c6480dcf19fec22126a9205fa3d9b317e5a97613f86218cf1926a2a07848afd5 files/fontconfig-2.3.2-docbook.patch 506
-MD5 89e73e244d58f9a2f27bca903ed69000 files/fontconfig-2.3.2-pkg_config.patch 421
-RMD160 502c0bf09bf8ffe4fe0f64c8e7c42da7bbd8042e files/fontconfig-2.3.2-pkg_config.patch 421
-SHA256 3b536251b30a12d200e40676ae6b040e08394fc19c163b201a1d8d8795d1ea88 files/fontconfig-2.3.2-pkg_config.patch 421
-MD5 a64531ab26e1d4d97f4d6dbd1f7c245c files/fontconfig-2.3.2-symbol_alias.patch 532
-RMD160 a3dbe468e362da99d4c639115f12437d1593dee0 files/fontconfig-2.3.2-symbol_alias.patch 532
-SHA256 c5f30c8a1b8fad5bf3abc15569f74d9a6600af05522f49f32305951e5c595a58 files/fontconfig-2.3.2-symbol_alias.patch 532
-MD5 37e60cdff43bf3f04e9db8931e0d1f47 files/patch/fontconfig-2.1-slighthint.patch 2171
-RMD160 58ce193f26b0b14ae5da950a1dbfbadf733577b9 files/patch/fontconfig-2.1-slighthint.patch 2171
-SHA256 d356ed4533d1d21c8d326fb183199c1d554888a5a8dd1e4883c931bcb0b84dc4 files/patch/fontconfig-2.1-slighthint.patch 2171
-MD5 1636083efd15746d8f194aff41aa6e02 files/patch/fontconfig-2.2-blacklist.patch 1216
-RMD160 9603cd0241b4204bbc22305b8d4d03753c875937 files/patch/fontconfig-2.2-blacklist.patch 1216
-SHA256 e63b6663bb65ba054aa56f553db466d8a89b5a5937c8c03524be9205707ef019 files/patch/fontconfig-2.2-blacklist.patch 1216
-MD5 4b5453071b61ecef4bb530b0bca695e1 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
-RMD160 b458422ed36d28471eeb7054595815630984e87a files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
-SHA256 c4d47bf4d6f2f11612f0de54375ee45099a7c8c4b9ccfe9a1aaf0ba0bf6b7fe8 files/patch/fontconfig-2.2-local_fontdir-r1.patch 487
-MD5 4d77167b56a7dff0d7c7b5b8168b85ba files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
-RMD160 00b5baf29ab14998111c751c45c49f68d4bb323f files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
-SHA256 efa79cf65ccbfe2255fddb3ba2fd38dcb38fca6768821daf38f7928f6bc3694d files/patch/fontconfig-2.2-remove_subpixel_test.patch 441
-MD5 6f36d026d3722add6b265c408667c502 fontconfig-2.2.2.ebuild 2697
-RMD160 f63ca3379cf7d92e5271c0664cb05b024279ef9a fontconfig-2.2.2.ebuild 2697
-SHA256 64bd58e2373b6f15e887b191d3ba2f91fd9c8dfc9c22983c3c4601ab3d9a43de fontconfig-2.2.2.ebuild 2697
-MD5 7fe2a6a842745d66817206e354bc47d8 fontconfig-2.2.3.ebuild 2752
-RMD160 b3cdaddad6fc7b8e50fee6e987a804d2f66dee9b fontconfig-2.2.3.ebuild 2752
-SHA256 3fbb8735612c0fc1fbc95732a22acf393f047e022de124775efd06f98b257f35 fontconfig-2.2.3.ebuild 2752
-MD5 ac97c2cdc350aa15a6cef1f6c0c8177d fontconfig-2.3.2-r1.ebuild 2595
-RMD160 6853135ed9882e76a4f3ac5ce958443f721cfe73 fontconfig-2.3.2-r1.ebuild 2595
-SHA256 62beedde19d645b8d2625c622aad732ab7e8d0b1c1a9c597207d125bb62de0ae fontconfig-2.3.2-r1.ebuild 2595
-MD5 a578afa9a421f842533106bb0b978d0d fontconfig-2.3.2.ebuild 2169
-RMD160 cb17f29befa2b9577c83cb43d9f5cf97661d3363 fontconfig-2.3.2.ebuild 2169
-SHA256 e1dae86754014d59880d8310455ce7107b7fe750dbe906c69a93c5bbc933434b fontconfig-2.3.2.ebuild 2169
-MD5 ae7171ca850597a2455b8b10c72a8de1 metadata.xml 419
-RMD160 898b8233ab233060d8137dadf28c291b83a65500 metadata.xml 419
-SHA256 859faa6fc0c008e92a6432f0fd50a760170d724b15997e557d5d73088277c4db metadata.xml 419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEtTmKkT4lNIS36YERAvM4AJ9Ruzqxs6Bx0tfdxzDWNfi8g3kYvwCeIeao
+iDWUVKQq44KFJGbKWXIbdps=
+=22Ki
+-----END PGP SIGNATURE-----
