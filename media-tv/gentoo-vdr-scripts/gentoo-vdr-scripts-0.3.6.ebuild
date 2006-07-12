@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.6.ebuild,v 1.1 2006/07/09 16:32:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/gentoo-vdr-scripts-0.3.6.ebuild,v 1.2 2006/07/12 15:53:14 zzam Exp $
 
 inherit eutils
 
@@ -112,6 +112,9 @@ pkg_config() {
 		cd ${T}
 		cat >sudoedit-vdr.sh <<-SUDOEDITOR
 			#!/bin/bash
+			echo Commenting out old entry
+			sed -i \${1} -e '/\/usr\/lib\/vdr\/bin\/vdrshutdown-really.sh/s/^/#/'
+			echo Adding new entry
 			echo "" >> \${1}
 			echo "${VDRSUDOENTRY}" >> \${1}
 		SUDOEDITOR

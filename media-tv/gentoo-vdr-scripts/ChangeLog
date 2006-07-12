@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/gentoo-vdr-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.62 2006/07/09 16:32:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/gentoo-vdr-scripts/ChangeLog,v 1.63 2006/07/12 15:53:14 zzam Exp $
+
+  12 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  gentoo-vdr-scripts-0.3.6.ebuild:
+  Comment out old sudo-entry when adding new.
 
 *gentoo-vdr-scripts-0.3.6 (09 Jul 2006)
 
