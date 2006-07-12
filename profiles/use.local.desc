@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2026 2006/07/12 20:59:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2027 2006/07/12 21:01:35 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1141,7 +1141,7 @@ net-im/kadu:voice - Enables voice chat in kadu
 net-im/kopete:addbookmarks - Builds Add Bookmarks plugin
 net-im/kopete:alias - Builds Alias plugin
 net-im/kopete:autoreplace - Builds Auto-Replace plugin
-net-im/kopete:connectiosntatus - Builds Connection Status plugin
+net-im/kopete:connectionstatus - Builds Connection Status plugin
 net-im/kopete:contactnotes - Builds Contact Notes plugin
 net-im/kopete:gadu - Builds GaduGadu protocol handler
 net-im/kopete:groupwise - Builds Novell GroupWise protocol handler
