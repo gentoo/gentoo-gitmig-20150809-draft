@@ -1,6 +1,12 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.21 2006/06/02 10:46:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.22 2006/07/12 19:27:40 pylon Exp $
+
+*openttd-0.4.8_rc1 (12 Jul 2006)
+
+  12 Jul 2006; Lars Weiler <pylon@gentoo.org> +openttd-0.4.8_rc1.ebuild:
+  Version bump. There is currently no official -RC1-tarball available, but the
+  one on our mirros is created vom upstream's SVN with the RC1-tag.
 
   02 Jun 2006; Lars Weiler <pylon@gentoo.org> openttd-0.4.7.ebuild:
   Only depend on media-libs/libsdl when no dedicated server is built; bug
