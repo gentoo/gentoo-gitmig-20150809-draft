@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.8-r1.ebuild,v 1.2 2006/03/02 18:50:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.8-r1.ebuild,v 1.3 2006/07/12 10:17:24 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -113,6 +113,8 @@ src_unpack() {
 
 	# Setup the kernel object directory
 	echo "KRNLOBJ = ${KV_OUT_DIR}" >> ${S}/libs/klibc-${V_KLIBC}/MCONFIG
+
+	epunt_cxx
 }
 
 src_compile() {

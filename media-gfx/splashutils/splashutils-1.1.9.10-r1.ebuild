@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.4 2006/04/16 19:59:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.10-r1.ebuild,v 1.5 2006/07/12 10:17:24 spock Exp $
 
 inherit eutils multilib linux-mod
 
@@ -123,6 +123,8 @@ src_unpack() {
 	if ! use truetype ; then
 		sed -i -e 's/fbtruetype kbd/kbd/' ${SM}/Makefile
 	fi
+
+	epunt_cxx
 }
 
 src_compile() {
