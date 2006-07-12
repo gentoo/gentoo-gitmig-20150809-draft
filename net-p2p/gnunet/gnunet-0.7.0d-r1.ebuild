@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.2 2006/05/21 04:20:08 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.7.0d-r1.ebuild,v 1.3 2006/07/12 15:23:45 kugelfang Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu//${PN}/GNUnet-${PV}.tar.bz2"
 #tests don't work
 RESTRICT="test"
 
-IUSE="ipv6 mysql sqlite guile nls gtk"
+IUSE="ipv6 mysql sqlite guile ncurses nls gtk"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
