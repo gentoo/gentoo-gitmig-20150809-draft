@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/opengl-manpages
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.11 2006/06/30 14:41:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/ChangeLog,v 1.12 2006/07/12 18:28:27 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  opengl-manpages-20001215.ebuild:
+  Mark 20001215 stable on ia64. #120375
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   opengl-manpages-20001215.ebuild:
