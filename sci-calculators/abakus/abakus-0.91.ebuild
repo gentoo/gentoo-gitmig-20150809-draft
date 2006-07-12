@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.1 2006/06/30 16:15:01 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/abakus/abakus-0.91.ebuild,v 1.2 2006/07/12 15:29:25 kugelfang Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 # leave gmp out for now, does not work for me
-IUSE="debug" # gmp
+IUSE="debug gmp"
 
 DEPEND=">=dev-util/scons-0.96.1
 		gmp? ( dev-libs/mpfr )"
