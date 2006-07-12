@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.15.ebuild,v 1.1 2006/02/28 15:27:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.15.ebuild,v 1.2 2006/07/12 15:11:44 kugelfang Exp $
 
 inherit gnome2 mono
 
@@ -8,7 +8,7 @@ DESCRIPTION="Sussen is a tool for testing the security posture of computers and 
 HOMEPAGE="http://sussen.sourceforge.net/"
 SRC_URI="http://dev.mmgsecurity.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="doc"
 SLOT="0"
 KEYWORDS="~ppc -sparc ~x86"
 
