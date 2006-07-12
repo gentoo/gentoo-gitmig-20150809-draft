@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0-r2.ebuild,v 1.2 2006/07/12 09:09:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.0-r2.ebuild,v 1.3 2006/07/12 21:06:35 flameeyes Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,9 @@ LICENSE="GPL-2"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="jingle sametime ssl xmms xscreensaver slp kernel_linux latex crypt
-	  winpopup sms irc yahoo gadu groupwise netmeeting statistics"
+	  winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
+	  connectionstatus contactnotes translator webpresence texteffect highlight
+	  alias autoreplace history nowlistening addbookmarks"
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
@@ -89,6 +91,17 @@ src_unpack() {
 	use crypt || kopete_disable plugin cryptography
 	use netmeeting || kopete_disable plugin netmeeting
 	use statistics || kopete_disable plugin statistics
+	use autoreplace || kopete_disable plugin autoreplace
+	use connectionstatus || kopete_disable plugin connectionstatus
+	use contactnotes || kopete_disable plugin contactnotes
+	use translator || kopete_disable plugin translator
+	use webpresence || kopete_disable plugin webpresence
+	use texteffect || kopete_disable plugin texteffect
+	use highlight || kopete_disable plugin highlight
+	use alias || kopete_disable plugin alias
+	use addbookmarks || kopete_disable plugin addbookmarks
+	use history || kopete_disable plugin history
+	use nowlistening || kopete_disable plugin nowlistening
 
 	use winpopup || kopete_disable protocol winpopup
 	use gadu || kopete_disable protocol '\$(GADU)'
@@ -106,7 +119,8 @@ src_compile() {
 	local myconf="$(use_enable jingle)
 		$(use_enable sametime sametime-plugin)
 		$(use_with xmms) --without-external-libgadu
-		$(use_with xscreensaver) $(use_enable sms smsgsm)"
+		$(use_with xscreensaver) $(use_enable sms smsgsm)
+		$(use_enable debug testbed)"
 
 	kde_src_compile
 }
