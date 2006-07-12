@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.20 2006/04/17 16:05:44 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.21 2006/07/12 15:34:43 kugelfang Exp $
+
+  12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org> maxima-5.9.3.ebuild:
+  QA: Corrected typo: tcktk vs tcltk.
 
   17 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org>
   files/50maxima-gentoo.el:

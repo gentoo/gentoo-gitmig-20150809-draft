@@ -1,12 +1,56 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 90de39e0f30b325920693da85cce1f6c ChangeLog 6383
-RMD160 7e997342fb451526393bfa153eef6b075274c545 ChangeLog 6383
-SHA256 56882234e03f67b97ee4c1fa3c09362f8589f7b233d401f58662e04c77387d87 ChangeLog 6383
+AUX 50maxima-gentoo.el 625 RMD160 f82dced83cb2f6361ba15992bbaf982006bac9a5 SHA1 63c2e91229e6acbbd3c37fd939a30b260778d274 SHA256 f384d9bfe98f24b40acc32f6abbc6c4180865690f1cf80944ec6028f5cfaef5a
 MD5 b97aaf31b888a90139f3e81e504b63ce files/50maxima-gentoo.el 625
 RMD160 f82dced83cb2f6361ba15992bbaf982006bac9a5 files/50maxima-gentoo.el 625
 SHA256 f384d9bfe98f24b40acc32f6abbc6c4180865690f1cf80944ec6028f5cfaef5a files/50maxima-gentoo.el 625
+AUX maxima-5.9.1-fix-clisp-getpid.patch 473 RMD160 60874eaf099746cecb10556b3e94d8fcf87d40cd SHA1 e1e1341c06711c1b78c2686ed3ea63bd9612da5d SHA256 255e8300e92cecb6781d3e9f8b6c022354a7db8cb2c3c3581a86395d9c6333ce
+MD5 801d6f51244585c2fa72877f708e9843 files/maxima-5.9.1-fix-clisp-getpid.patch 473
+RMD160 60874eaf099746cecb10556b3e94d8fcf87d40cd files/maxima-5.9.1-fix-clisp-getpid.patch 473
+SHA256 255e8300e92cecb6781d3e9f8b6c022354a7db8cb2c3c3581a86395d9c6333ce files/maxima-5.9.1-fix-clisp-getpid.patch 473
+AUX maxima-5.9.1-no-kill-minus-one.patch 871 RMD160 c77640c2fdf035babf46bdfb24eed8a8339c1efa SHA1 9e706f20847195dbe35ca97145cc8d9a719db029 SHA256 45c35de5a4784eb9bc9b38f593eb4186b4888558c2e1af00f34c99e681594f38
+MD5 3fdd1a597381634159c90b916ede48ae files/maxima-5.9.1-no-kill-minus-one.patch 871
+RMD160 c77640c2fdf035babf46bdfb24eed8a8339c1efa files/maxima-5.9.1-no-kill-minus-one.patch 871
+SHA256 45c35de5a4784eb9bc9b38f593eb4186b4888558c2e1af00f34c99e681594f38 files/maxima-5.9.1-no-kill-minus-one.patch 871
+AUX maxima-5.9.1-unicode-fix.patch 9157 RMD160 9309981ef8f7131bde7dd16117bc542ba3041297 SHA1 9609c0449546d7b1fc61554724e8cad56e818d1e SHA256 85fcccd312f9a912148bf7568c52439d3ceda5af4b430e9cf276f98c44cefa02
+MD5 9d2fde2c70ca34c55c220ac2e46fe463 files/maxima-5.9.1-unicode-fix.patch 9157
+RMD160 9309981ef8f7131bde7dd16117bc542ba3041297 files/maxima-5.9.1-unicode-fix.patch 9157
+SHA256 85fcccd312f9a912148bf7568c52439d3ceda5af4b430e9cf276f98c44cefa02 files/maxima-5.9.1-unicode-fix.patch 9157
+AUX maxima-5.9.3-default-browser.patch 498 RMD160 b9cd13d68ed458e383b2a8d5dacb7088fad59926 SHA1 edba36a4b76df449736e1770968b5c515cc77f54 SHA256 dabf7128e55a2bc1178538d48ae0cbe47337a501bc6cab46a296850efc754c36
+MD5 19f868e092b9726a4d0371521ebce6ff files/maxima-5.9.3-default-browser.patch 498
+RMD160 b9cd13d68ed458e383b2a8d5dacb7088fad59926 files/maxima-5.9.3-default-browser.patch 498
+SHA256 dabf7128e55a2bc1178538d48ae0cbe47337a501bc6cab46a296850efc754c36 files/maxima-5.9.3-default-browser.patch 498
+AUX maxima-5.9.3-emaxima.patch 706 RMD160 deec6cf944fe75aa39f0ced6271dc7c5f9f74995 SHA1 13187ac7890b0d36eb746853eea6b5fa825824ec SHA256 717f2a81c0a5d643e50a0062018c1425f9661b3536af3f6ffa6836d193bd865e
+MD5 71f7028fab51b5e5378fd5021ffa1962 files/maxima-5.9.3-emaxima.patch 706
+RMD160 deec6cf944fe75aa39f0ced6271dc7c5f9f74995 files/maxima-5.9.3-emaxima.patch 706
+SHA256 717f2a81c0a5d643e50a0062018c1425f9661b3536af3f6ffa6836d193bd865e files/maxima-5.9.3-emaxima.patch 706
+AUX maxima-emacs.patch 826 RMD160 e6030b78934ace0c31b1cddf108e3e885cee7abf SHA1 cda574027e3a00a51638866454e8b4dc178420bf SHA256 eb28871fb0019c92961a96f27380400379798eac7b884943a3c75ba9832acce4
+MD5 55d928e715074355a442baf0934487de files/maxima-emacs.patch 826
+RMD160 e6030b78934ace0c31b1cddf108e3e885cee7abf files/maxima-emacs.patch 826
+SHA256 eb28871fb0019c92961a96f27380400379798eac7b884943a3c75ba9832acce4 files/maxima-emacs.patch 826
+DIST maxima-5.9.1.tar.gz 8093534
+DIST maxima-5.9.3.tar.gz 8629022 RMD160 4b00da6406bab222f4a7069c4e8820a9437277f9 SHA256 1807e46e12b5968ac70643eee32a3479fc06035613086d85366610440842abb9
+EBUILD maxima-5.9.1-r5.ebuild 2571 RMD160 ebac3868f73122da2777fa53b86d2eef0aebe7ab SHA1 34464fbf90699a11b730ba15375a3eddd79d5439 SHA256 9aee8bf82b4b47a1f3d04992de623cb2173862451591510cd49fc227b1f08db0
+MD5 f653050981b2fed1501454602f59ad11 maxima-5.9.1-r5.ebuild 2571
+RMD160 ebac3868f73122da2777fa53b86d2eef0aebe7ab maxima-5.9.1-r5.ebuild 2571
+SHA256 9aee8bf82b4b47a1f3d04992de623cb2173862451591510cd49fc227b1f08db0 maxima-5.9.1-r5.ebuild 2571
+EBUILD maxima-5.9.1.ebuild 2532 RMD160 a4145d603c61df84ece22b2a06631f487904c514 SHA1 1320a275640b088b452b78542dc472f545f83df2 SHA256 6bbb7dc68d8bc64954ee7e621a4c3afc26a8b777c6cea8eb7e50210fa1083bcc
+MD5 a5bd93bd68dec962956ea5ed64b5c276 maxima-5.9.1.ebuild 2532
+RMD160 a4145d603c61df84ece22b2a06631f487904c514 maxima-5.9.1.ebuild 2532
+SHA256 6bbb7dc68d8bc64954ee7e621a4c3afc26a8b777c6cea8eb7e50210fa1083bcc maxima-5.9.1.ebuild 2532
+EBUILD maxima-5.9.3.ebuild 3697 RMD160 17f6dd2ae0383e0cf325bcd176f87d2418f42f02 SHA1 145f2dbbfc7276fca05ab8d0e63d5cdb8e4cbb5c SHA256 bae587b50e697b26d1d72f4d7e92f7d69b32cfa419135265a9fb8b58590252cc
+MD5 011ac815579bb74f333da6c63bf30dc4 maxima-5.9.3.ebuild 3697
+RMD160 17f6dd2ae0383e0cf325bcd176f87d2418f42f02 maxima-5.9.3.ebuild 3697
+SHA256 bae587b50e697b26d1d72f4d7e92f7d69b32cfa419135265a9fb8b58590252cc maxima-5.9.3.ebuild 3697
+MISC ChangeLog 6499 RMD160 a192c7bac2ec637f38f16bbabe39d068b71a9f17 SHA1 8d36a1668e5a9228f25f4eb96858273eaad96ce8 SHA256 827b9358b11c23e18fd77d46f68cf5ee72cc693cc88cf6bd6f51dab60033a649
+MD5 faa8266af953dc2d2288656de83a8afc ChangeLog 6499
+RMD160 a192c7bac2ec637f38f16bbabe39d068b71a9f17 ChangeLog 6499
+SHA256 827b9358b11c23e18fd77d46f68cf5ee72cc693cc88cf6bd6f51dab60033a649 ChangeLog 6499
+MISC metadata.xml 156 RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 SHA1 da2b240a255820145b7c83a5c48e45b96b7e9ee6 SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 metadata.xml 156
+SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900 metadata.xml 156
 MD5 6f3becd603f999b2bb7488753ec07518 files/digest-maxima-5.9.1 65
 RMD160 cc408ee71151e1e8454f62c4f6c69b2c44121527 files/digest-maxima-5.9.1 65
 SHA256 253b31f30fec4f3e453a6f76975b902c40062750169e2d0d58644d388bf19465 files/digest-maxima-5.9.1 65
@@ -16,40 +60,10 @@ SHA256 253b31f30fec4f3e453a6f76975b902c40062750169e2d0d58644d388bf19465 files/di
 MD5 b0b6f0a0adb8e2b019e9a3d9decbcf14 files/digest-maxima-5.9.3 241
 RMD160 3954badfebef02d3ae2280deb98c9ee77f8e7f29 files/digest-maxima-5.9.3 241
 SHA256 e91682eae89570d2bb81449c39338148defb3bdda14cd1c815b2c26ca8c92927 files/digest-maxima-5.9.3 241
-MD5 801d6f51244585c2fa72877f708e9843 files/maxima-5.9.1-fix-clisp-getpid.patch 473
-RMD160 60874eaf099746cecb10556b3e94d8fcf87d40cd files/maxima-5.9.1-fix-clisp-getpid.patch 473
-SHA256 255e8300e92cecb6781d3e9f8b6c022354a7db8cb2c3c3581a86395d9c6333ce files/maxima-5.9.1-fix-clisp-getpid.patch 473
-MD5 3fdd1a597381634159c90b916ede48ae files/maxima-5.9.1-no-kill-minus-one.patch 871
-RMD160 c77640c2fdf035babf46bdfb24eed8a8339c1efa files/maxima-5.9.1-no-kill-minus-one.patch 871
-SHA256 45c35de5a4784eb9bc9b38f593eb4186b4888558c2e1af00f34c99e681594f38 files/maxima-5.9.1-no-kill-minus-one.patch 871
-MD5 9d2fde2c70ca34c55c220ac2e46fe463 files/maxima-5.9.1-unicode-fix.patch 9157
-RMD160 9309981ef8f7131bde7dd16117bc542ba3041297 files/maxima-5.9.1-unicode-fix.patch 9157
-SHA256 85fcccd312f9a912148bf7568c52439d3ceda5af4b430e9cf276f98c44cefa02 files/maxima-5.9.1-unicode-fix.patch 9157
-MD5 19f868e092b9726a4d0371521ebce6ff files/maxima-5.9.3-default-browser.patch 498
-RMD160 b9cd13d68ed458e383b2a8d5dacb7088fad59926 files/maxima-5.9.3-default-browser.patch 498
-SHA256 dabf7128e55a2bc1178538d48ae0cbe47337a501bc6cab46a296850efc754c36 files/maxima-5.9.3-default-browser.patch 498
-MD5 71f7028fab51b5e5378fd5021ffa1962 files/maxima-5.9.3-emaxima.patch 706
-RMD160 deec6cf944fe75aa39f0ced6271dc7c5f9f74995 files/maxima-5.9.3-emaxima.patch 706
-SHA256 717f2a81c0a5d643e50a0062018c1425f9661b3536af3f6ffa6836d193bd865e files/maxima-5.9.3-emaxima.patch 706
-MD5 55d928e715074355a442baf0934487de files/maxima-emacs.patch 826
-RMD160 e6030b78934ace0c31b1cddf108e3e885cee7abf files/maxima-emacs.patch 826
-SHA256 eb28871fb0019c92961a96f27380400379798eac7b884943a3c75ba9832acce4 files/maxima-emacs.patch 826
-MD5 f653050981b2fed1501454602f59ad11 maxima-5.9.1-r5.ebuild 2571
-RMD160 ebac3868f73122da2777fa53b86d2eef0aebe7ab maxima-5.9.1-r5.ebuild 2571
-SHA256 9aee8bf82b4b47a1f3d04992de623cb2173862451591510cd49fc227b1f08db0 maxima-5.9.1-r5.ebuild 2571
-MD5 a5bd93bd68dec962956ea5ed64b5c276 maxima-5.9.1.ebuild 2532
-RMD160 a4145d603c61df84ece22b2a06631f487904c514 maxima-5.9.1.ebuild 2532
-SHA256 6bbb7dc68d8bc64954ee7e621a4c3afc26a8b777c6cea8eb7e50210fa1083bcc maxima-5.9.1.ebuild 2532
-MD5 875d4e6d4c8f81fe48a0139ba7a5c4f4 maxima-5.9.3.ebuild 3693
-RMD160 fea5d328c1ae46cf63fc83213458d2ad1f451c6f maxima-5.9.3.ebuild 3693
-SHA256 880f2fd68349b0a4cf85b83b7919732dc14b2b23067f2a1d0594da98d2fb5312 maxima-5.9.3.ebuild 3693
-MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-RMD160 dc078172bfebcb25d69bdf8731714f9cce9d3e36 metadata.xml 156
-SHA256 5d22100902db7507a5b5493dd4a66cdb08025faf80a2c0b75e6392315c47f900 metadata.xml 156
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEQ7zjntT9W3vfTuoRAnDyAJ9Fw4oJqLE/xPnkinQl1ycVdsTcvQCfceNl
-rbrW1uY8c+UNR+nclPJBW/g=
-=1Avt
+iD8DBQFEtRkw5mJXAu5GbtIRAhiBAJ9B7r3mrWBm10WaIOdXzZRUIjRwmwCeMBll
+nrP+NHHVLcO+h26udXghYVc=
+=QPCE
 -----END PGP SIGNATURE-----

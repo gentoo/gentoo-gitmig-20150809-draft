@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.3.ebuild,v 1.1 2006/04/15 14:57:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.9.3.ebuild,v 1.2 2006/07/12 15:34:43 kugelfang Exp $
 
 inherit eutils elisp-common autotools
 
@@ -28,7 +28,7 @@ RDEPEND=">=sci-visualization/gnuplot-4.0
 	app-text/gv
 	sbcl?  ( app-misc/rlwrap )
 	cmucl? ( app-misc/rlwrap )
-	tcktk? ( >=dev-lang/tk-8.3.3 )"
+	tcltk? ( >=dev-lang/tk-8.3.3 )"
 
 # chosen apps are hardcoded in maxima source:
 # - ghostview for postscript (changed to gv)
