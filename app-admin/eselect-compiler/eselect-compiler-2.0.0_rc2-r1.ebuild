@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc2-r1.ebuild,v 1.2 2006/07/06 08:59:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc2-r1.ebuild,v 1.3 2006/07/12 06:40:18 kevquinn Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -19,20 +19,24 @@ RDEPEND=">=app-admin/eselect-1.0_rc1
 
 # We want to verify that compiler profiles exist for our toolchain
 pkg_setup() {
-	delete_invalid_profiles
+	# If not a first time install, verify existence of profiles (bug #139016)
+	if [[ -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
 
-	local abi
-	for abi in $(get_all_abis) ; do
-		local ctarget=$(get_abi_CHOST ${abi})
-		if ! grep -q "^[[:space:]]*ctarget=${ctarget}$" ${ROOT}/etc/eselect/compiler/*.conf ; then
-			eerror "We weren't able to find a valid eselect compiler profile for ${abi}."
-			eerror "Please do the following to re-emerge gcc, then retry emerging"
-			eerror "eselect-compiler:"
-			eerror "# emerge -v --oneshot sys-devel/gcc"
+		delete_invalid_profiles
 
-			die "Missing eselect-compiler profile for ${abi}"
-		fi
-	done
+		local abi
+		for abi in $(get_all_abis) ; do
+			local ctarget=$(get_abi_CHOST ${abi})
+			if ! grep -q "^[[:space:]]*ctarget=${ctarget}$" ${ROOT}/etc/eselect/compiler/*.conf ; then
+				eerror "We weren't able to find a valid eselect compiler profile for ${abi}."
+				eerror "Please do the following to re-emerge gcc, then retry emerging"
+				eerror "eselect-compiler:"
+				eerror "# emerge -v --oneshot sys-devel/gcc"
+
+				die "Missing eselect-compiler profile for ${abi}"
+			fi
+		done
+	fi
 }
 
 pkg_postinst() {
@@ -40,7 +44,9 @@ pkg_postinst() {
 	cp -f "${ROOT}"/usr/libexec/eselect/compiler/compiler-wrapper "${ROOT}"/lib/cpp
 
 	# Activate the profiles
-	if [[ ! -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
+	if [[ -f "${ROOT}/etc/eselect/compiler/selection.conf" ]] ; then
+		eselect compiler update
+	elif has_version sys-devel/gcc; then # (bug #139830)
 		ewarn "This looks like the first time you are installing eselect-compiler.  We are"
 		ewarn "activating toolchain profiles for the CTARGETs needed by your portage"
 		ewarn "profile.  You should have profiles installed from compilers that you emerged"
@@ -96,7 +102,7 @@ pkg_postinst() {
 			fi
 		done
 	else
-		eselect compiler update
+		ewarn "Note; eselect-compiler will not be operational until you install a compiler."
 	fi
 
 	local file
@@ -140,7 +146,7 @@ src_install() {
 delete_invalid_profiles() {
 	# Some toolchain.eclass installed confs had some bugs in them. We
 	# could just use sed to update them, but then portage won't remove
-	# them automatically on unmerge. 
+	# them automatically on unmerge.
 	local file
 	for file in $(grep "^[[:space:]]*chost=" ${ROOT}/etc/eselect/compiler/*.conf | cut -f1 -d:)  ; do
 		rm ${file}
