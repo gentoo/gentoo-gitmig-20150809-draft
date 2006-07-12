@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a.ebuild,v 1.1 2006/07/11 11:47:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a.ebuild,v 1.2 2006/07/12 13:11:27 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
 SRC_URI="http://www.truecrypt.org/downloads/truecrypt-${PV}-source-code.tar.gz"
 
-LICENSE="truecrypt-2.1"
+LICENSE="truecrypt-collective-1.0"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
