@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/nmrview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/ChangeLog,v 1.7 2006/02/05 06:41:38 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/ChangeLog,v 1.8 2006/07/12 13:38:19 ribosome Exp $
+
+  12 Jul 2006; Olivier Fisette <ribosome@gentoo.org>
+  -nmrview-5.2.2-r2.ebuild, nmrview-5.2.2-r3.ebuild:
+  Stable on x86. Pruned old revision (not ported to modular X).
 
   05 Feb 2006; Olivier Fisette <ribosome@gentoo.org>
   nmrview-5.2.2-r3.ebuild:
