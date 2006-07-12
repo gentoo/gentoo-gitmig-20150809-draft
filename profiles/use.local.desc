@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2025 2006/07/12 12:36:49 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2026 2006/07/12 20:59:36 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1138,15 +1138,26 @@ net-im/kadu:mail - Enables mail module in kadu
 net-im/kadu:pheaders - Enables precompiled headers in kadu
 net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
+net-im/kopete:addbookmarks - Builds Add Bookmarks plugin
+net-im/kopete:alias - Builds Alias plugin
+net-im/kopete:autoreplace - Builds Auto-Replace plugin
+net-im/kopete:connectiosntatus - Builds Connection Status plugin
+net-im/kopete:contactnotes - Builds Contact Notes plugin
 net-im/kopete:gadu - Builds GaduGadu protocol handler
 net-im/kopete:groupwise - Builds Novell GroupWise protocol handler
+net-im/kopete:highlight - Builds Highlight plugin
+net-im/kopete:history - Builds history plugin
 net-im/kopete:irc - Builds IRC protocol handler
 net-im/kopete:jingle - Enables voice calls for jabber
 net-im/kopete:latex - Builds LaTeX plugin
 net-im/kopete:netmeeting - Builds netmeeting plugin (require gnomemeeting)
+net-im/kopete:nowlistening - Builds Now Listening... plugin
 net-im/kopete:sametime - Enables support for the Sametime protocol for instant messaging
 net-im/kopete:sms - Builds SMS protocol handler
 net-im/kopete:statistics - Builds statistics plugin
+net-im/kopete:texteffect - Builds Text Effect plugin
+net-im/kopete:translator - Builds Translator plugin
+net-im/kopete:webpresence - Builds Web Presence plugin
 net-im/kopete:winpopup - Builds WinPopUp protocol handler
 net-im/kopete:xscreensaver - Enables support for XScreenSaver extension
 net-im/naim:screen - Enable screen support
