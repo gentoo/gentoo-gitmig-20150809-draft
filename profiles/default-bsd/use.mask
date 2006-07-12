@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.19 2006/07/12 16:27:00 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.20 2006/07/12 18:47:53 the_paya Exp $
 
 # Linux-dependant flags
 selinux
@@ -31,6 +31,9 @@ jack
 3dfx
 pmount
 dxr3
+nvidia
+win32codecs
+xvmc
 
 # This usually refers just to linux-dvb
 dvb
@@ -87,10 +90,13 @@ input_devices_evdev
 input_devices_linuxwacom
 input_devices_synaptics
 input_devices_ur98
+input_devices_vmmouse
 video_cards_fglrx
 video_cards_newport
 video_cards_sisusb
 video_cards_v4l
+video_cards_vmware
+video_cards_nvidia
 
 # Arch-specific
 altivec
