@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.4.2-r2.ebuild,v 1.4 2006/04/13 12:14:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.4.2-r2.ebuild,v 1.5 2006/07/12 14:47:06 kugelfang Exp $
 
 inherit eutils virtualx
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://listengnome.free.fr"
 SRC_URI="mirror://sourceforge/listengnome/${P}.tar.gz"
 
 LICENSE="GPL-2"
-IUSE="aac flac ipod mad vorbis"
+IUSE="aac cdr flac ipod mad vorbis"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
