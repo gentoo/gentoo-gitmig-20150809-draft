@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.0.0-r1.ebuild,v 1.1 2006/04/13 11:56:16 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.0.0-r1.ebuild,v 1.2 2006/07/12 13:56:34 kugelfang Exp $
 
 MY_P="${P/-/}"
 S="${WORKDIR}/${MY_P}"
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 #	SDLSKK	--	http://www.kmc.gr.jp/~ohai/
 
 # local USE flags "image mixer sge"
-IUSE="image mixer truetype mpeg"
+IUSE="image mixer truetype mpeg sge"
 
 RDEPEND="virtual/ruby
 	>=media-libs/libsdl-1.2.5
