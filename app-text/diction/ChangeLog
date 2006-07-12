@@ -1,6 +1,11 @@
 # ChangeLog for app-text/diction
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.17 2006/06/15 19:20:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.18 2006/07/12 12:12:31 seemant Exp $
+
+  12 Jul 2006; Seemant Kulleen <seemant@gentoo.org> -diction-1.02.ebuild:
+  remove cruft, since 1.07 is now stable on the same arches as 1.02 was,
+  closing bug #131637. The time for 1.09 to go stable is coming upon us soon,
+  I think
 
   15 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   diction-1.07-r1.ebuild:
