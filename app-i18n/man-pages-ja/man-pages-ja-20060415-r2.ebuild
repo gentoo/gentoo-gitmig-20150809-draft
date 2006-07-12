@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.2 2006/06/21 17:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/man-pages-ja-20060415-r2.ebuild,v 1.3 2006/07/12 12:34:47 hattya Exp $
 
 IUSE=""
 
-GENTOO_MAN_P="portage-${P}"
+GENTOO_MAN_P=portage-${P}
 
 DESCRIPTION="A collection of manual pages translated into Japanese"
 HOMEPAGE="http://www.linux.or.jp/JM/ http://www.gentoo.gr.jp/jpmain/translation.xml"
@@ -67,13 +67,13 @@ src_install() {
 
 	# remove man pages that are provided by other packages.
 	# - sys-apps/shadow +nls
-	rm -f ${D}/usr/share/man/ja/man1/{chfn,chsh,newgrp,su,passwd,groups}.1
-	rm -f ${D}/usr/share/man/ja/man8/{vigr,vipw}.8
+	rm -f "${D}"/usr/share/man/ja/man1/{chfn,chsh,newgrp,su,passwd,groups}.1
+	rm -f "${D}"/usr/share/man/ja/man8/{vigr,vipw}.8
 
 	dodoc ChangeLog README
 
 
-	cd ${WORKDIR}/${GENTOO_MAN_P}
+	cd "${WORKDIR}"/${GENTOO_MAN_P}
 
 	for x in *; do
 		if [ -d "$x" ]; then
@@ -92,18 +92,18 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo
-	einfo "You need to set appropriate LANG and PAGER variables to use"
-	einfo "Japanese manpages."
-	einfo "e.g."
-	einfo "\tLANG=\"ja_JP.eucJP\""
-	einfo "\tPAGER=\"jless\""
-	einfo "\tJLESSCHARSET=\"ja\""
-	einfo "\texport LANG PAGER JLESSCHARSET"
-	einfo "or"
-	einfo "\tLANG=\"ja_JP.eucJP\""
-	einfo "\tPAGER=\"lv -c\""
-	einfo "\texport LANG PAGER"
-	einfo
+	echo
+	elog "You need to set appropriate LANG and PAGER variables to use"
+	elog "Japanese manpages."
+	elog "e.g."
+	elog "\tLANG=\"ja_JP.eucJP\""
+	elog "\tPAGER=\"jless\""
+	elog "\tJLESSCHARSET=\"ja\""
+	elog "\texport LANG PAGER JLESSCHARSET"
+	elog "or"
+	elog "\tLANG=\"ja_JP.eucJP\""
+	elog "\tPAGER=\"lv -c\""
+	elog "\texport LANG PAGER"
+	echo
 
 }
