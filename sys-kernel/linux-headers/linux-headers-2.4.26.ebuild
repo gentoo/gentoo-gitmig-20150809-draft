@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.26.ebuild,v 1.12 2006/02/27 20:01:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.26.ebuild,v 1.13 2006/07/12 16:20:39 kugelfang Exp $
 
 ETYPE="headers"
 inherit eutils kernel
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/os-headers"
 KEYWORDS="-* -amd64"
-IUSE=""
+IUSE="gcc64"
 
 DEPEND="!virtual/os-headers"
 

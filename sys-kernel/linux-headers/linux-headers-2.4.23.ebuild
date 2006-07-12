@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.22 2005/07/21 17:14:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.23.ebuild,v 1.23 2006/07/12 16:20:39 kugelfang Exp $
 
 ETYPE="headers"
 inherit eutils kernel
-IUSE=""
+IUSE="gcc64"
 OKV="${PV/_/-}"
 KV="${OKV}"
 S=${WORKDIR}/linux-${OKV}
