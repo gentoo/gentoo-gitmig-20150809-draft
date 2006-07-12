@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.6 2006/06/12 11:43:28 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.7 2006/07/12 07:53:57 sebastian Exp $
+
+  12 Jul 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  ezc-Base-1.0.ebuild, ezc-Base-1.1.ebuild:
+  Keyword ~amd64.
 
 *ezc-Base-1.1 (12 Jun 2006)
 
