@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>ml</herd>
 <maintainer>
 	<email>tove@gentoo.org</email>
 </maintainer>
 <maintainer>
 	<email>twp@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>mcummings@gentoo.org</email>
+</maintainer>
 <longdescription lang="en">
-Wyrd is a curses front end to the reminder programer, ideal for use in clients like mutt.
+Wyrd is a text-based front-end to Remind, a sophisticated calendar and alarm
+program. Remind's power lies in its programmability, and Wyrd does not hide this
+capability behind flashy GUI dialogs. Rather, Wyrd is designed to make you more
+efficient at editing your reminder files directly. It also offers a scrollable
+timetable suitable for visualizing your schedule at a glance.
 </longdescription>
 </pkgmetadata>
