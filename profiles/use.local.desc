@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2023 2006/07/11 17:46:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2024 2006/07/12 03:57:17 nerdboy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1495,6 +1495,7 @@ sys-cluster/mpich2:cxx - Add cxx headers
 sys-cluster/mpich2:fast - Fast mode
 sys-cluster/mpich2:mpe - Add mpe support
 sys-cluster/mpich2:mpe-sdk - Include additional SDK support, jar files
+sys-cluster/mpich2:romio - Enable romio, a high-performance portable MPI-IO implementation
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/torque:scp - Use SCP instead of RCP for copying files between machines.
 sys-cluster/vserver-utils:diet - Enables linking against dietlibc
