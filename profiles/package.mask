@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5620 2006/07/11 20:27:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5621 2006/07/12 02:13:16 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,15 +20,6 @@
 ##
 ##   End example
 ##
-
-#  Michael Sterrett <mr_bones_@gentoo.org> (11 Jul 2006)
-# Broken deps
-#>=dev-util/netbeans-4.0
-=gnome-base/gnome-vfs-2.10.0-r2
-=gnome-base/gnome-vfs-2.10.1-r1
-=gnome-base/gnome-vfs-2.10.1-r2
-=gnome-extra/gnome-utils-2.10.0
-=gnome-extra/gnome-utils-2.10.1-r1
 
 # Diego Pettenò <flameeyes@gentoo.org> (11 Jul 2006)
 # Mask while testing, so that I don't need to revbump eventual changes.
