@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyunit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.10 2006/04/01 19:00:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyunit/ChangeLog,v 1.11 2006/07/12 16:56:27 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> pyunit-1.4.1.ebuild:
+  Mark 1.4.1 stable on ia64
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pyunit-1.4.1.ebuild:
   Mark 1.4.1 ~ia64
