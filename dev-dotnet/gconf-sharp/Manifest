@@ -1,9 +1,50 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 74f8176f4ea39377412e8b5106d89be9 ChangeLog 4922
-RMD160 345a79ed9a425344b1969e05ca8f6ffcea106fbe ChangeLog 4922
-SHA256 a67311c01f8077d683fbbc73620d9af0910cda5ea51c645673a1358e80aa0780 ChangeLog 4922
+DIST gtk-sharp-1.0.10-configurable.diff.gz 1718
+DIST gtk-sharp-1.0.10.tar.gz 1841067
+DIST gtk-sharp-1.0.8-configurable.diff.gz 1506
+DIST gtk-sharp-1.0.8.tar.gz 1841365
+DIST gtk-sharp-2.4.0-configurable.diff.gz 1340
+DIST gtk-sharp-2.4.0.tar.gz 2127668
+DIST gtk-sharp-2.4.2-configurable.diff.gz 1386 RMD160 55077ae632990f371bcedf1c098f240f1dad4ede SHA256 dec62584b7103599917dc61535dd2653dc65e0d82ce9a20a0f1b02dc0268b993
+DIST gtk-sharp-2.4.2.tar.gz 2147458 RMD160 4f42331fcd422ca01c62287ebc5d89510e61be7f SHA256 f86d387737308f22aa2c95984d76c493080e79520ba1c180de317ea4c18ff957
+DIST gtk-sharp-2.8.0-configurable.diff.gz 1342
+DIST gtk-sharp-2.8.0.tar.gz 2164774
+DIST gtk-sharp-2.8.2-configurable.diff.gz 1397 RMD160 19c010397051b077d6f168a7dbd03c6edcbba72a SHA256 78279f37d76dea454ac4e521114cec365e179d3d8e7e7e55fa4e50048e92eeed
+DIST gtk-sharp-2.8.2.tar.gz 2167942 RMD160 90b450617b1a817047a948ef28d45077cb3f9e59 SHA256 faea3c9da2691d09b9d273c10f6f8949a462695cb02051a531f88ae057463a20
+EBUILD gconf-sharp-1.0.10.ebuild 792 RMD160 57002bdb7b6ff62e8251b36fd5e72db20d4b8d20 SHA1 652daad7ba6fe1966e615e91e388ac3c2e2eb6e6 SHA256 94595b6103adc6b7bf397e9f08e5aab91176ec8fe57ba7199f877c31aca70c6a
+MD5 d79565607eb612d5b8f0f720794cc3ab gconf-sharp-1.0.10.ebuild 792
+RMD160 57002bdb7b6ff62e8251b36fd5e72db20d4b8d20 gconf-sharp-1.0.10.ebuild 792
+SHA256 94595b6103adc6b7bf397e9f08e5aab91176ec8fe57ba7199f877c31aca70c6a gconf-sharp-1.0.10.ebuild 792
+EBUILD gconf-sharp-1.0.8-r1.ebuild 794 RMD160 ae3b7261eec2b8f3a377db164176c3896795444d SHA1 99702be60597fd685f5ccc5103af3a8045d201aa SHA256 61d1227c5e8b3b21bc9ac0b3674d07b5ffa3ca7ed77309c0dd982ffce101da8c
+MD5 783d30c2861304d17e1db7d84ef70f00 gconf-sharp-1.0.8-r1.ebuild 794
+RMD160 ae3b7261eec2b8f3a377db164176c3896795444d gconf-sharp-1.0.8-r1.ebuild 794
+SHA256 61d1227c5e8b3b21bc9ac0b3674d07b5ffa3ca7ed77309c0dd982ffce101da8c gconf-sharp-1.0.8-r1.ebuild 794
+EBUILD gconf-sharp-2.4.0.ebuild 828 RMD160 5faafa9b3cd672aa1f362b53cb109ff79ac232e9 SHA1 67859356e18e517a56ba74f050ec22ec136d4f0c SHA256 71bcb105afd4c4dc0df72722953d1c492351ebdb6646bef5e5e0ac7ded866e88
+MD5 7d3920a2e0d328e6d34a8073e8912d2a gconf-sharp-2.4.0.ebuild 828
+RMD160 5faafa9b3cd672aa1f362b53cb109ff79ac232e9 gconf-sharp-2.4.0.ebuild 828
+SHA256 71bcb105afd4c4dc0df72722953d1c492351ebdb6646bef5e5e0ac7ded866e88 gconf-sharp-2.4.0.ebuild 828
+EBUILD gconf-sharp-2.4.2.ebuild 828 RMD160 671b34aff1825bfc80f509f776de291a6aefeeb0 SHA1 07eca26baf7e8576f898ab9e588d99596c0686c4 SHA256 6ca00715d81cea7ade706d3b5ab73bc4c036989ea383770c059e7a6ff1244f1f
+MD5 d6602e252c8081ffbc21b0712774ab9d gconf-sharp-2.4.2.ebuild 828
+RMD160 671b34aff1825bfc80f509f776de291a6aefeeb0 gconf-sharp-2.4.2.ebuild 828
+SHA256 6ca00715d81cea7ade706d3b5ab73bc4c036989ea383770c059e7a6ff1244f1f gconf-sharp-2.4.2.ebuild 828
+EBUILD gconf-sharp-2.8.0.ebuild 828 RMD160 f30412d96d52497010d1c23c9bd66ffb9066c6ea SHA1 7e8f204eb9f416a4773a8458b748a6ab9ce2397f SHA256 8bbe6f2d5f6d7eef02859ea7e68481e21c559eeab043abac53f096f2a7086ec3
+MD5 61ef7e07bf7b2fa25c43836525bb09ee gconf-sharp-2.8.0.ebuild 828
+RMD160 f30412d96d52497010d1c23c9bd66ffb9066c6ea gconf-sharp-2.8.0.ebuild 828
+SHA256 8bbe6f2d5f6d7eef02859ea7e68481e21c559eeab043abac53f096f2a7086ec3 gconf-sharp-2.8.0.ebuild 828
+EBUILD gconf-sharp-2.8.2.ebuild 828 RMD160 083323f192aa6e69c7ec37af0a986ccbc57cd06a SHA1 5a1ba19aa39698b73eabeff31fca0c780a78346a SHA256 3a57b991e1d5b4178d0d6ae66af350d7eeb42488562c347390cd06d6baf90671
+MD5 aea294cbf99b1ba35fb1080ce30d89b2 gconf-sharp-2.8.2.ebuild 828
+RMD160 083323f192aa6e69c7ec37af0a986ccbc57cd06a gconf-sharp-2.8.2.ebuild 828
+SHA256 3a57b991e1d5b4178d0d6ae66af350d7eeb42488562c347390cd06d6baf90671 gconf-sharp-2.8.2.ebuild 828
+MISC ChangeLog 5038 RMD160 ef6635623305c42f3a390cf0edb82e165c5e68f0 SHA1 93fe3a1683160a05f18f273134fc676736ea4feb SHA256 9b27f8218a86d5f633e46df25bb426a34a71aba29c31f9cb98a087fdf1547fe5
+MD5 86365483ee8b323ee6e2cc81b48edf45 ChangeLog 5038
+RMD160 ef6635623305c42f3a390cf0edb82e165c5e68f0 ChangeLog 5038
+SHA256 9b27f8218a86d5f633e46df25bb426a34a71aba29c31f9cb98a087fdf1547fe5 ChangeLog 5038
+MISC metadata.xml 222 RMD160 aafa4baf96cfa37bca8b5af9961b253e8d54deeb SHA1 0adada1945fd52cf6649dbafddd2e4ebd84e3543 SHA256 2291d7f74fb8845472f5527edd49d2004d0626025dfc6622cbe6a8fe22dc846d
+MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+RMD160 aafa4baf96cfa37bca8b5af9961b253e8d54deeb metadata.xml 222
+SHA256 2291d7f74fb8845472f5527edd49d2004d0626025dfc6622cbe6a8fe22dc846d metadata.xml 222
 MD5 302dbc192d1c69a0ba956625d73ef2c2 files/digest-gconf-sharp-1.0.10 149
 RMD160 07caac8c2b19da609c7cf0bb3cfaf3c39c657658 files/digest-gconf-sharp-1.0.10 149
 SHA256 d65dc9b73014342c6ce1f52aaf0fb3aa9c3e027dd1446668ee70aa02f27f1598 files/digest-gconf-sharp-1.0.10 149
@@ -22,31 +63,10 @@ SHA256 196a130b96c9316902964f5f35ac96716ccc11853360f41d6b52d8988727e7b4 files/di
 MD5 268ca99224bc45249db87e3d3c665028 files/digest-gconf-sharp-2.8.2 533
 RMD160 1a97a6d51142bdc89d63edd69720a838a42d2188 files/digest-gconf-sharp-2.8.2 533
 SHA256 f29502346cf9d7ec6a2b99e066c197cb107136aea0a01f6cecdf299ab09ac6a4 files/digest-gconf-sharp-2.8.2 533
-MD5 d79565607eb612d5b8f0f720794cc3ab gconf-sharp-1.0.10.ebuild 792
-RMD160 57002bdb7b6ff62e8251b36fd5e72db20d4b8d20 gconf-sharp-1.0.10.ebuild 792
-SHA256 94595b6103adc6b7bf397e9f08e5aab91176ec8fe57ba7199f877c31aca70c6a gconf-sharp-1.0.10.ebuild 792
-MD5 783d30c2861304d17e1db7d84ef70f00 gconf-sharp-1.0.8-r1.ebuild 794
-RMD160 ae3b7261eec2b8f3a377db164176c3896795444d gconf-sharp-1.0.8-r1.ebuild 794
-SHA256 61d1227c5e8b3b21bc9ac0b3674d07b5ffa3ca7ed77309c0dd982ffce101da8c gconf-sharp-1.0.8-r1.ebuild 794
-MD5 7d3920a2e0d328e6d34a8073e8912d2a gconf-sharp-2.4.0.ebuild 828
-RMD160 5faafa9b3cd672aa1f362b53cb109ff79ac232e9 gconf-sharp-2.4.0.ebuild 828
-SHA256 71bcb105afd4c4dc0df72722953d1c492351ebdb6646bef5e5e0ac7ded866e88 gconf-sharp-2.4.0.ebuild 828
-MD5 d6602e252c8081ffbc21b0712774ab9d gconf-sharp-2.4.2.ebuild 828
-RMD160 671b34aff1825bfc80f509f776de291a6aefeeb0 gconf-sharp-2.4.2.ebuild 828
-SHA256 6ca00715d81cea7ade706d3b5ab73bc4c036989ea383770c059e7a6ff1244f1f gconf-sharp-2.4.2.ebuild 828
-MD5 e36e219dc1f780ed35bac9c67492a982 gconf-sharp-2.8.0.ebuild 828
-RMD160 86f1cfa0006c327afa9433f49f94e205fd61de0c gconf-sharp-2.8.0.ebuild 828
-SHA256 b0648fdd78dbc7499264647a672535d78e04ac4aac8c60664df7172f00b185f4 gconf-sharp-2.8.0.ebuild 828
-MD5 aea294cbf99b1ba35fb1080ce30d89b2 gconf-sharp-2.8.2.ebuild 828
-RMD160 083323f192aa6e69c7ec37af0a986ccbc57cd06a gconf-sharp-2.8.2.ebuild 828
-SHA256 3a57b991e1d5b4178d0d6ae66af350d7eeb42488562c347390cd06d6baf90671 gconf-sharp-2.8.2.ebuild 828
-MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-RMD160 aafa4baf96cfa37bca8b5af9961b253e8d54deeb metadata.xml 222
-SHA256 2291d7f74fb8845472f5527edd49d2004d0626025dfc6622cbe6a8fe22dc846d metadata.xml 222
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFEHfVuwUpWvClEHQoRArkEAJ4vkOsjKAGGwKCi7o7AiN9lcMJS0gCff+SE
-4KBAQKiGEQD+1B1MMbxOaKs=
-=HdPR
+iD8DBQFEtSPMkT4lNIS36YERAsmfAJ9J135bGWFfhYQj/2vByXyIf3+VLQCgiipV
+6PgMBAVIF90g3XKjvrnuWvA=
+=3ZkG
 -----END PGP SIGNATURE-----
