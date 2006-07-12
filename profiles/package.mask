@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5621 2006/07/12 02:13:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5622 2006/07/12 02:28:15 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -432,12 +432,6 @@ www-client/amaya
 # Diego Pettenò <flameeyes@gentoo.org> (24 Apr 2006)
 # Pre-release snapshots
 =app-mobilephone/kmobiletools-0.5*
-
-# Marcelo Goes <vanquirius@gentoo.org> (23 Apr 2006)
-# Masked for removal
-# net-analyzer/base should replace net-analyzer/acid
-# For more information, please see bug 130980
-net-analyzer/acid
 
 # Marcelo Goes <vanquirius@gentoo.org> (21 Apr 2006)
 # utf8 patch remains to be ported
