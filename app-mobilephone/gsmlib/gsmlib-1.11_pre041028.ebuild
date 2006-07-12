@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.6 2006/02/26 09:06:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/gsmlib-1.11_pre041028.ebuild,v 1.7 2006/07/12 08:41:09 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pxh.de/fs/gsmlib/"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ppc ~ppc64 sparc x86"
 
 RESTRICT="test"
 
