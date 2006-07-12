@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/shed-1.11.ebuild,v 1.9 2006/05/12 01:44:47 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/shed-1.11.ebuild,v 1.10 2006/07/12 11:54:59 hattya Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
-	dodoc [A-Z][A-Z]* ChangeLog
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS BUGS ChangeLog README TODO
 
 }
