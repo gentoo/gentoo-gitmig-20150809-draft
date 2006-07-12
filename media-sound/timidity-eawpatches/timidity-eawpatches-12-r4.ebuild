@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.8 2006/06/15 14:25:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r4.ebuild,v 1.9 2006/07/12 20:56:06 genstef Exp $
 
 IUSE=""
 
@@ -43,7 +43,7 @@ src_install() {
 	done
 
 	# Install documentation, including subdirs
-	find . -name \*.txt | xargs dodoc
+	dodoc $(find . -name \*.txt)
 }
 
 pkg_postinst() {
