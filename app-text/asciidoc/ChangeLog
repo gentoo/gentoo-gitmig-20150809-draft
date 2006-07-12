@@ -1,6 +1,9 @@
 # ChangeLog for app-text/asciidoc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.32 2006/05/05 04:45:58 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/ChangeLog,v 1.33 2006/07/12 21:48:02 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> asciidoc-7.0.4.ebuild:
+  Mark 7.0.4 stable on ia64
 
   05 May 2006; Joshua Jackson <tsunam@gentoo.org> asciidoc-7.0.4.ebuild:
   Stable on x86; bug #131825
