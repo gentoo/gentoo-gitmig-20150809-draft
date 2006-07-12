@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD ezc-eZcomponents-1.0.1.ebuild 1007 RMD160 cf45b93188d727805cfcdfd9e811e9eb5b9b0db4 SHA1 d875005be0d3ddacf0da69f61880c35628ed2129 SHA256 41ec4480ecb8705c79e497ab68e00f0dd935829f7340abed5f1fca03f0c96f80
 MD5 959263eeb7d7331407fa536241f2e11e ezc-eZcomponents-1.0.1.ebuild 1007
 RMD160 cf45b93188d727805cfcdfd9e811e9eb5b9b0db4 ezc-eZcomponents-1.0.1.ebuild 1007
@@ -20,3 +23,10 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-ezc-eZcomponents-1.1 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-ezc-eZcomponents-1.1 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-ezc-eZcomponents-1.1 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEtKqyaGfFFLhbXWkRApvVAJ4p4E4gz/Gxwus7PUT7w5CNq3curgCdEjYD
+W5EqbQdbVaQ9SBr/ViOQX9U=
+=/RFl
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST PersistentObjectDatabaseSchemaTiein-1.0.tgz 5845 RMD160 56bc6779710508d4ad687e901b9ad99c35150503 SHA1 1af276b950301078088bb6a97e5987985fe33c51 SHA256 ebca789996e54cc3ac7535de7c3ea94c831d175f66b5ff683b024d3237123a84
 EBUILD ezc-PersistentObjectDatabaseSchemaTiein-1.0.ebuild 598 RMD160 78c2c2684c996dc75407e43fc60d62ddee92a83b SHA1 f2e122799efe9218d5ece35d642170055706b79c SHA256 d19e1b6fb87984552a93084ef3e27cb16fcb64f657cfd2279986d4402d1f3060
 MD5 745668d9f3178f4b8ce9b98fe3036b5c ezc-PersistentObjectDatabaseSchemaTiein-1.0.ebuild 598
@@ -14,3 +17,10 @@ SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata
 MD5 e4dd75c8a7d9940efe932411245ef72c files/digest-ezc-PersistentObjectDatabaseSchemaTiein-1.0 304
 RMD160 c61ec3607f5f76fa374c8c720376349b115d38f6 files/digest-ezc-PersistentObjectDatabaseSchemaTiein-1.0 304
 SHA256 4809a55d3face48215ef9ad5f041d470c02d93c99179613ecabb89530c8bc68d files/digest-ezc-PersistentObjectDatabaseSchemaTiein-1.0 304
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEtKqyaGfFFLhbXWkRAigOAJ9Ei67PYVjXdWl8oCeo3t8JRHFcEwCgidih
+WxqCKciOhXCG1qP7yk1kUdA=
+=S6Ps
+-----END PGP SIGNATURE-----

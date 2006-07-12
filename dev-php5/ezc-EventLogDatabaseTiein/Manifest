@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST EventLogDatabaseTiein-1.0.tgz 2847 RMD160 656d9fe1d9d8547b0885b5ee0b04ab02d317c1af SHA256 dab01a5261aba19d2d82495e3334a27aae0a17c6adaef0f68e89e6b819286ab3
 EBUILD ezc-EventLogDatabaseTiein-1.0.ebuild 490 RMD160 dbe0d601f5c8595a9419fd1b240141e197308319 SHA1 d2f167a9abeacb73942bc39bbdcbcc01ef1ddb87 SHA256 b6abda2d32c8093e93b45c253e5c5cb67ad7daf23bbfdc3cd07efa9fb19d11b8
 MD5 51c60257b44599d1120c5eacf9d156cc ezc-EventLogDatabaseTiein-1.0.ebuild 490
@@ -14,3 +17,10 @@ SHA256 f6d70434415ff7294f2a64e7870f32318c5fab9153fe63a58841b12d897da6ba metadata
 MD5 700a4a19d9d8d32c10a651a3ac47a9db files/digest-ezc-EventLogDatabaseTiein-1.0 262
 RMD160 ce577720c9c246985006d6fe6b74fd6d95caf819 files/digest-ezc-EventLogDatabaseTiein-1.0 262
 SHA256 68eb1db6d3f93c3c5e00a235da2e6cf9a8d4a3a65c6f9acc22a0018e46eecbdf files/digest-ezc-EventLogDatabaseTiein-1.0 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEtKqyaGfFFLhbXWkRAhTwAJ95IbvT0KuKivSpCKZzGzBYtGEkGQCfTe78
+8xYxeQj7F6X+NZHp8X1KJlU=
+=uZLg
+-----END PGP SIGNATURE-----
