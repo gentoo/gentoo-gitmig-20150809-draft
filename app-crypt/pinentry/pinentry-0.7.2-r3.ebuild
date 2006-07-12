@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.7 2006/06/26 02:43:10 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.8 2006/07/12 13:25:47 kugelfang Exp $
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
@@ -16,7 +16,7 @@ IUSE="gtk ncurses qt3 caps"
 DEPEND="gtk? ( =x11-libs/gtk+-2* )
 	ncurses? ( sys-libs/ncurses )
 	qt3? ( $(qt_min_version 3.3) )
-	!gtk? ( !qt? ( !ncurses? ( sys-libs/ncurses ) ) )
+	!gtk? ( !qt3? ( !ncurses? ( sys-libs/ncurses ) ) )
 	caps? ( sys-libs/libcap )"
 
 src_unpack() {
