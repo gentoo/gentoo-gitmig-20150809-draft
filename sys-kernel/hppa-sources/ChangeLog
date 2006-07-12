@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.72 2006/07/12 19:15:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.73 2006/07/12 19:30:14 gustavoz Exp $
+
+  12 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/CAN-2004-1056.patch, -files/CAN-2004-1235.patch,
+  -files/CVE-2005-3356.patch, -files/LKA-20050107.patch,
+  -files/LSM-capability-fix.patch, -files/ide-cdrom-fix.patch,
+  -files/nbd-no-panic.diff, -hppa-sources-2.6.10_p1.ebuild,
+  -hppa-sources-2.6.10_p2.ebuild, -hppa-sources-2.6.10_p4.ebuild,
+  -hppa-sources-2.6.10_p6.ebuild, -hppa-sources-2.6.10_p10.ebuild,
+  -hppa-sources-2.6.10_p11.ebuild, -hppa-sources-2.6.11_p2.ebuild,
+  -hppa-sources-2.6.12.2_p2.ebuild, -hppa-sources-2.6.12.4_p2.ebuild,
+  -hppa-sources-2.6.13_p1.ebuild, -hppa-sources-2.6.14.2_p0.ebuild,
+  -hppa-sources-2.6.14.3_p0.ebuild, -hppa-sources-2.6.15_p1.ebuild,
+  -hppa-sources-2.6.15.1_p4.ebuild, -hppa-sources-2.6.15.4_p4.ebuild,
+  -hppa-sources-2.6.16_p0.ebuild, -hppa-sources-2.6.16.5_p11.ebuild,
+  -hppa-sources-2.6.16.9_p11.ebuild, -hppa-sources-2.6.16.14_p11.ebuild,
+  -hppa-sources-2.6.16.22_p11.ebuild, -hppa-sources-2.6.16.23_p11.ebuild:
+  Wicked cleanup
 
 *hppa-sources-2.6.16.24_p11 (12 Jul 2006)
 
