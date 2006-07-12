@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.2 2006/07/11 19:30:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.3 2006/07/12 15:07:16 kugelfang Exp $
 
 inherit eutils flag-o-matic
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec amr arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
-dvdread encode esd fbcon gif ggi gtk ipv6 jack joystick jpeg libcaca
+dvdread enca encode esd fbcon gif ggi gtk ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode vorbis
 opengl openal oss png real rtc samba sdl speex sse sse2 svga tga theora
 truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
