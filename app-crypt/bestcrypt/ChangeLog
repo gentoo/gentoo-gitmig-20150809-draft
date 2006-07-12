@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.44 2006/06/29 12:56:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.45 2006/07/12 13:13:58 kugelfang Exp $
+
+  12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org> bestcrypt-1.6_p5.ebuild:
+  QA: Added pcmcia to IUSE, as it is used by linux-mod.eclass.
 
   29 Jun 2006; Daniel Black <dragonheart@gentoo.org>
   +files/bestcrypt-1.6_p5-gcc41.patch, bestcrypt-1.6_p5.ebuild:
