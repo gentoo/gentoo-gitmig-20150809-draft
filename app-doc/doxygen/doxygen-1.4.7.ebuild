@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.2 2006/07/09 22:56:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.3 2006/07/12 13:43:35 kugelfang Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc
 IUSE="doc qt3 tetex"
 
 RDEPEND=">=media-gfx/graphviz-2.6
-	qt? ( $(qt_min_version 3.3) )
+	qt3? ( $(qt_min_version 3.3) )
 	tetex? ( virtual/tetex )
 	virtual/ghostscript"
 DEPEND=">=sys-apps/sed-4
