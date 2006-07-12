@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.71 2006/05/01 18:06:15 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.72 2006/07/12 09:05:30 corsair Exp $
+
+  12 Jul 2006; Markus Rothe <corsair@gentoo.org> openh323-1.15.6.ebuild:
+  Added ~ppc64
 
   01 May 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/openh323-1.15.6-gcc4.diff, openh323-1.15.6.ebuild:
