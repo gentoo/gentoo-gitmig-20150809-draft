@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.82 2006/07/05 01:34:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.83 2006/07/12 15:29:41 gustavoz Exp $
+
+  12 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org> ocaml-3.09.2.ebuild:
+  Fast track stable on sparc since it fixes obvious issues
 
   05 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org> ocaml-3.09.2.ebuild:
   Keyworded ~sparc wrt #139014
