@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/empy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.9 2006/04/01 14:51:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.10 2006/07/12 15:18:18 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> empy-3.3.ebuild:
+  Mark 3.3 stable on ia64
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> empy-3.3.ebuild:
   Mark 3.3 ~ia64
