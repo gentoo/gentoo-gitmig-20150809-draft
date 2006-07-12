@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-0.2.0.0.ebuild,v 1.2 2006/06/02 14:51:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/schroedinger-0.2.0.0.ebuild,v 1.3 2006/07/12 14:43:35 kugelfang Exp $
 
 DESCRIPTION="C-based libraries and GStreamer plugins for the Dirac video codec"
 HOMEPAGE="http://schrodinger.sourceforge.net/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/schrodinger/${P}.tar.gz"
 LICENSE="|| ( MPL-1.1 LGPL-2.1 GPL-2 MIT )"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="debug profile examples"
+IUSE="debug profile examples doc"
 
 RDEPEND=">=dev-libs/liboil-0.3.2
 	doc? ( dev-util/gtk-doc )
