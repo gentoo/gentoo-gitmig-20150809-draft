@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.16.ebuild,v 1.5 2005/04/19 21:32:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.16.ebuild,v 1.6 2006/07/12 14:13:21 kugelfang Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 #Target Keywords  ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 
-IUSE="nls"
-# "doc"
+IUSE="nls doc"
 
 RDEPEND=">=dev-libs/boost-1.31.0
 	dev-libs/popt"
