@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/tpm-emulator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.2 2006/06/30 12:16:39 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.3 2006/07/12 13:27:57 kugelfang Exp $
+
+  12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org>
+  tpm-emulator-0.2a.ebuild, tpm-emulator-0.3.ebuild:
+  QA: Added pcmcia to IUSE, as it is used by linux-mod.eclass.
 
 *tpm-emulator-0.3 (30 Jun 2006)
 
