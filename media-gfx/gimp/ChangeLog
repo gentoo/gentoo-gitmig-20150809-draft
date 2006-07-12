@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.171 2006/07/11 12:44:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.172 2006/07/12 19:16:36 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> gimp-2.2.11-r1.ebuild,
+  gimp-2.2.12.ebuild, gimp-2.3.9.ebuild, gimp-2.3.10.ebuild:
+  Mark 2.2.12 stable on ia64 #139524
 
   11 Jul 2006; Jason Wever <weeve@gentoo.org> gimp-2.2.12.ebuild:
   Stable on SPARC wrt security bug #139524.
