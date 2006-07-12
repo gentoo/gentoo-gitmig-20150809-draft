@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7100b-r1.ebuild,v 1.9 2006/05/27 17:44:34 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7100b-r1.ebuild,v 1.10 2006/07/12 13:10:08 hattya Exp $
 
 inherit elisp-common eutils
 
@@ -14,8 +14,8 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc-macos ppc64 sparc x86"
 SLOT="0"
 
-DEPEND="emacs? ( virtual/emacs )
-	!app-i18n/anthy-ss"
+DEPEND="!app-i18n/anthy-ss
+	emacs? ( virtual/emacs )"
 
 src_compile() {
 
@@ -33,19 +33,19 @@ src_compile() {
 
 	unset TMPDIR
 	econf ${myconf} || die
-	emake || die
+	emake -j1 || die
 
 }
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
-	use emacs && elisp-site-file-install ${FILESDIR}/50anthy-gentoo.el
-
-	rm doc/Makefile*
+	use emacs && elisp-site-file-install "${FILESDIR}"/50anthy-gentoo.el
 
 	dodoc AUTHORS DIARY NEWS README ChangeLog
+
+	rm doc/Makefile*
 	dodoc doc/*
 
 }
