@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jaxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.6 2006/04/01 15:03:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jaxml/ChangeLog,v 1.7 2006/07/12 15:42:00 agriffis Exp $
+
+  12 Jul 2006; Aron Griffis <agriffis@gentoo.org> jaxml-3.01.ebuild:
+  Mark 3.01 stable on ia64
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> jaxml-3.01.ebuild:
   Mark 3.01 ~ia64
