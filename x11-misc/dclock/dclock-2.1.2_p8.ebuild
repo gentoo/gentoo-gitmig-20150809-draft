@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p5.ebuild,v 1.9 2006/07/12 02:50:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p8.ebuild,v 1.1 2006/07/12 02:50:42 g2boojum Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="|| ( (
 		x11-libs/libXt
 		x11-libs/libXext )
 	virtual/x11 )
-		app-text/rman"
+	app-text/rman"
 DEPEND="${RDEPEND}
 	|| ( (
 		x11-misc/imake
