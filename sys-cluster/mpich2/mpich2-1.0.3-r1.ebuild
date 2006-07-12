@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.2 2006/06/28 07:32:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.3 2006/07/12 04:59:31 nerdboy Exp $
 
 inherit fortran distutils eutils autotools kde-functions toolchain-funcs
 
@@ -12,7 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 # need more arches in here, like sparc...
-IUSE="crypt cxx doc debug fortran mpe mpe-sdk threads"
+IUSE="crypt cxx doc debug fortran mpe mpe-sdk romio threads"
 
 PROVIDE="virtual/mpi"
 DEPEND="virtual/libc
@@ -22,7 +22,8 @@ DEPEND="virtual/libc
 	sys-apps/coreutils
 	dev-lang/perl
 	sys-devel/gcc
-	mpe-sdk? ( >=virtual/jdk-1.4.2 )
+	mpe-sdk? ( dev-java/ibm-jdk-bin )
+	romio? ( >=dev-libs/libaio-0.3.106 )
 	>=dev-lang/python-2.3"
 RDEPEND="${DEPEND}
 	crypt? ( net-misc/openssh )
@@ -55,18 +56,20 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	need-autoconf 2.5
-	epatch ${FILESDIR}/${P}-soname.patch || die "soname patch failed"
 	ebegin "Reconfiguring"
 	    find . -name configure -print | xargs rm
 	    ./maint/updatefiles
 	    use mpe-sdk && ./src/mpe2/maint/updatefiles
 	eend
 	epatch ${FILESDIR}/${P}-make.patch || die "make patch failed"
+	# damn, have to patch the createshlib script here...
+	epatch ${FILESDIR}/${P}-soname.patch || die "soname patch failed"
 	#epatch ${FILESDIR}/${P}-make-test.patch || die "make test patch failed"
 }
 
 src_compile() {
 	export LDFLAGS='-Wl,-z,now'
+
 	local RSHCOMMAND
 
 	if use crypt ; then
@@ -81,20 +84,30 @@ src_compile() {
 	if ! use debug ; then
 	    myconf="${myconf} --enable-fast --enable-g=none"
 	else
-	    myconf="${myconf} --enable-g=dbg --enable-debuginfo"
+	    myconf="${myconf} --enable-g=dbg --enable-debuginfo \
+		--enable-error-messages=all"
 	fi
 
 	if ! use mpe-sdk ; then
 	    myconf="${myconf} --enable-graphics=no --enable-rlog=no \
 		--enable-clog=no --enable-slog2=no"
 	fi
+
 	use mpe && MPE_SRC_DIR=${S}/src/mpe2
 
+	if use threads ; then
+	    myconf="${myconf} --with-thread-package=pthreads"
+	else
+	    myconf="${myconf} --with-thread-package=none"
+	fi
+
 	./configure --prefix=/usr --exec-prefix=/usr \
-		--enable-sharedlibs=gcc \
+		--enable-sharedlibs=gcc --enable-nmpi-as-mpi \
+		--enable-error-checking=runtime --enable-timing=runtime \
 		${myconf} \
 		$(use_enable cxx) \
 		$(use_enable mpe) \
+		$(use_enable romio) \
 		$(use_enable threads) \
 		--includedir=/usr/include \
 		--libdir=/usr/$(get_libdir) \
@@ -115,12 +128,13 @@ src_compile() {
 	fi
 
 	# parallel makes are currently broken, so no emake...
-	make dependencies
+	#make dependencies
 	make || die "make failed"
 
 	if has test ${FEATURES} ; then
 	    # get setup for src_test
-	    export LDFLAGS='-L../../lib'
+	    #export LDFLAGS='-L../../lib'
+	    export LD_LIBRARY_PATH=${S}/lib:$LD_LIBRARY_PATH
 	    cd ${S}/test/mpi
 	    #make clean || die "make clean failed"
 	    echo

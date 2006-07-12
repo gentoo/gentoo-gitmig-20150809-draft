@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.8 2006/06/28 07:32:39 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.9 2006/07/12 04:59:31 nerdboy Exp $
+
+  12 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
+  files/mpich2-1.0.3-soname.patch, mpich2-1.0.3-r1.ebuild:
+  Finally killed the soname bug, added some additional configure options,
+  and made libaio a dependency for romio support (also fixed libaio).
 
   28 Jun 2006; Steve Arnold <nerdboy@gentoo.org> mpich2-1.0.3-r1.ebuild:
   reverted to original (and standard) library location

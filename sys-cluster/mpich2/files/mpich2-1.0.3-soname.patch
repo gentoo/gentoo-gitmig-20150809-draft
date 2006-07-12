@@ -13,7 +13,7 @@
      # Use syntax that works in both Make and the shell
      #C_LINK_SHL='${CC} -shared -Wl,-r'
 -    C_LINK_SHL='${CC} -shared'
-+    C_LINK_SHL='${CC} -shared -Wl,-soname,lib$MPILIBNAME.$SHLIB_EXT.0.0'
++    C_LINK_SHL='${CC} -shared -Wl,-soname'
      # For example, include the libname as ${LIBNAME_SHL}
      #C_LINK_SHL='${CC} -shared -Wl,-h,<finallibname>'
      # May need -fPIC
@@ -22,3 +22,15 @@
      C_LINKPATH_SHL="-Wl,-rpath -Wl,"
      # We need to test that this isn't osx.  The following is a
      # simple hack
+     esac 
+--- src/util/createshlib.in.orig	2006-07-11 19:52:47.000000000 -0700
++++ src/util/createshlib.in	2006-07-11 19:56:09.000000000 -0700
+@@ -172,7 +172,7 @@
+ 
+ 	*)
+         # This is the default model
+-	$Show ${C_LINK_SHL} -o $srclibbase.$SHLIB_EXT .tmp/*.o
++	$Show ${C_LINK_SHL} -Wl,$srclibbase.$SHLIB_EXT.0 -o $srclibbase.$SHLIB_EXT .tmp/*.o
+ 	;;
+     esac
+ 
