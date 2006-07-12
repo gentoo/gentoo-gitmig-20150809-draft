@@ -29,6 +29,14 @@
 	CVE-2006-1059 security fix: 3.0.21* shipped with a bug in the debug
 		functions of winbind (debug>=5 reveals secret ids in logs)
 
+3.0.23:
+    *sql and xml backends have been removed by upstream devs. SQL is
+        temporarily continued on SourceForge (http://pdbsql.sourceforge.net),
+        but it will be removed with samba 4.x (and maybe 3.2.x)
+    see also ldap changes below
+    CAN-2006-1059: memory exaustion DoS against smbd in all samba versions
+        between 3.0.x and 3.0.23
+
 General:
     If you experience client locks in file transfers _only_, try the parameter
              use sendfile = no (man smb.conf(5), man sendfile(2))
@@ -51,6 +59,10 @@ General:
     
 3.0.12:
     smbldap-tools is now a separate package for ease of upgrade
+
+3.0.23:
+    a new index is required: 'index sambaSID sub' (run slapindex afterwards)
+       use an updated samba.schema containing the correct 'sambaSID' definition
 
 #-------------------------------------------------------------------------
 # DOCS

@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.247 2006/07/11 23:45:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.248 2006/07/12 08:41:49 satya Exp $
+
+*samba-3.0.23 (12 Jul 2006)
+
+  12 Jul 2006; Christian Andreetta <satya@gentoo.org>
+  -files/035_all_samba-3.0.21-winbind_log.patch, files/README.gentoo,
+  +samba-3.0.23.ebuild:
+  version bump. ldap schema small change. xml and *sql backends removed. See
+  README.gentoo for further informations
 
   11 Jul 2006; Jason Wever <weeve@gentoo.org> samba-3.0.22-r3.ebuild:
   Stable on SPARC wrt security bug #139369.
