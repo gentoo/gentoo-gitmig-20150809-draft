@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.88 2006/07/10 17:39:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.89 2006/07/12 23:48:46 pvdabeel Exp $
 
   10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libsigc++-2.0.17.ebuild:
@@ -18,6 +18,12 @@
 
   04 Feb 2006; Aron Griffis <agriffis@gentoo.org> libsigc++-2.0.16.ebuild:
   Mark 2.0.16 stable on ia64
+
+*libsigc++-1.0.4-r3 (13 Jul 2006)
+
+  13 Jul 2006; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  +libsigc++-1.0.4-r3.ebuild:
+  closes bug #138112
 
 *libsigc++-2.0.17 (02 Feb 2006)
 
