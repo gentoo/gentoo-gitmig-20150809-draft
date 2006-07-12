@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.53 2006/06/27 09:11:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.54 2006/07/12 07:40:49 kevquinn Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -663,11 +663,11 @@ multilib_toolchain_setup() {
 	if has_version app-admin/eselect-compiler ; then
 		# Binutils doesn't have wrappers for ld and as (yet).  Eventually it
 		# will, and all this can just be handled with CHOST.
-		export LD="ld $(get_abi_LDFLAGS)"
-		export AS="as $(get_abi_ASFLAGS)"
+		export LD="ld $(get_abi_LDFLAGS $1)"
+		export AS="as $(get_abi_ASFLAGS $1)"
 
-		export CHOST=$(get_abi_CHOST)
-		export CBUILD=$(get_abi_CHOST)
+		export CHOST=$(get_abi_CHOST $1)
+		export CBUILD=$(get_abi_CHOST $1)
 	else
 		tc-export CC
 		export ABI=$1
