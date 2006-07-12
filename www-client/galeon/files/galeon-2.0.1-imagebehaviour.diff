@@ -1,0 +1,11 @@
+--- galeon-2.0.1/mozilla/mozilla-notifiers.cpp	2006-07-07 13:50:12.000000000 +0000
++++ galeon-2.0.1/mozilla/mozilla-notifiers.cpp-firefox	2006-07-07 13:39:33.000000000 +0000
+@@ -139,7 +139,7 @@
+ {
+ 	{ CONF_FILTERING_JAVA_ENABLED, BOOL_PREF, "security.enable_java"},
+ 	{ CONF_FILTERING_JAVASCRIPT_ENABLED, BOOL_PREF, "javascript.enabled"},
+-	{ CONF_FILTERING_IMAGE_LOADING_TYPE, INT_PREF, "network.image.imageBehavior"},
++	{ CONF_FILTERING_IMAGE_LOADING_TYPE, INT_PREF, "permissions.default.image"},
+ 	{ CONF_RENDERING_BG_COLOR, STRING_PREF, "browser.display.background_color"},
+ 	{ CONF_RENDERING_TEXT_COLOR, STRING_PREF, "browser.display.foreground_color"},
+ 	{ CONF_RENDERING_UNVISITED_LINKS, STRING_PREF, "browser.anchor_color"},
