@@ -5,6 +5,9 @@
 <maintainer>
 	<email>tove@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>twp@gentoo.org</email>
+</maintainer>
 <longdescription lang="en">
 Wyrd is a curses front end to the reminder programer, ideal for use in clients like mutt.
 </longdescription>
