@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.42 2006/03/20 00:16:02 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.43 2006/07/12 16:29:24 wolf31o2 Exp $
+
+  12 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  art-sharp-2.8.0.ebuild:
+  Stable on x86 wrt bug #139612.
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> art-sharp-1.0.10.ebuild:
   Stable on amd64.

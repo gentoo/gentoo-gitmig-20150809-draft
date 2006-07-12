@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/evolution-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.9 2006/05/08 16:10:46 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/ChangeLog,v 1.10 2006/07/12 16:30:04 wolf31o2 Exp $
+
+  12 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  evolution-sharp-0.11.1.ebuild:
+  Stable on x86 wrt bug #139612.
 
 *evolution-sharp-0.11.1 (08 May 2006)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gconf-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.38 2006/03/20 00:21:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.39 2006/07/12 16:30:46 wolf31o2 Exp $
+
+  12 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gconf-sharp-2.8.0.ebuild:
+  Stable on x86 wrt bug #139612.
 
   20 Mar 2006; Luis Medinas <metalgod@gentoo.org> gconf-sharp-1.0.10.ebuild:
   Stable on amd64.

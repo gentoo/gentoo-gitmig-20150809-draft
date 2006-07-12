@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.8.0.ebuild,v 1.1 2006/01/27 02:46:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/gconf-sharp-2.8.0.ebuild,v 1.2 2006/07/12 16:30:46 wolf31o2 Exp $
 
 inherit gtk-sharp-component
 
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="${DEPEND}
