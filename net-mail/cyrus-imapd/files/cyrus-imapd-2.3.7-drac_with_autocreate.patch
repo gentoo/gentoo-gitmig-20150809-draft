@@ -1,0 +1,58 @@
+--- contrib/drac_auth.patch.orig	2006-06-09 18:34:58.000000000 -0700
++++ contrib/drac_auth.patch	2006-06-09 18:35:54.000000000 -0700
+@@ -71,7 +71,7 @@
+ diff -u -r1.268.2.23 configure.in
+ --- configure.in	12 Apr 2005 20:05:20 -0000	1.268.2.23
+ +++ configure.in	23 May 2006 13:42:06 -0000
+-@@ -1003,6 +1003,19 @@
++@@ -1003,6 +1003,20 @@
+  SNMP_SUBDIRS=""
+  AC_SUBST(SNMP_SUBDIRS)
+  
+@@ -80,12 +80,13 @@
+ +dnl
+ +DRACLIBS=
+ +AC_ARG_WITH(drac, [  --with-drac=DIR         use DRAC library in <DIR> [no] ],
+-+	if test -d "$withval"; then
+-+		LDFLAGS="$LDFLAGS -L${withval}"
+-+		AC_CHECK_LIB(drac, dracauth,
+-+			AC_DEFINE(DRAC_AUTH,[],[Build DRAC support?])
+-+			DRACLIBS="-ldrac")
+-+	fi)
+++  drac="$withval",
+++  drac="no")
+++if test "$drac" != "no"; then
+++  AC_CHECK_LIB(drac, dracauth,
+++      AC_DEFINE(DRAC_AUTH,[],[Build DRAC support?])
+++      DRACLIBS="-ldrac")
+++fi
+ +AC_SUBST(DRACLIBS)
+ +
+  CMU_LIBWRAP
+--- contrib/drac_auth.patch.new	2006-07-11 16:50:55.000000000 -0700
++++ contrib/drac_auth.patch	2006-07-11 16:58:36.000000000 -0700
+@@ -111,8 +111,8 @@
+  imapd: xversion $(IMAPDOBJS) mutex_fake.o libimap.a $(DEPLIBS) $(SERVICE)
+  	$(CC) $(LDFLAGS) -o imapd \
+  	 $(SERVICE) $(IMAPDOBJS) mutex_fake.o \
+--	libimap.a $(DEPLIBS) $(LIBS) $(LIB_WRAP)
+-+	libimap.a $(DEPLIBS) $(LIBS) $(LIB_WRAP) $(DRAC_LIBS)
++-	libimap.a $(SIEVE_LIBS) $(DEPLIBS) $(LIBS) $(LIB_WRAP)
+++	libimap.a $(SIEVE_LIBS) $(DEPLIBS) $(LIBS) $(LIB_WRAP) $(DRAC_LIBS)
+  
+  imapd.pure: $(IMAPDOBJS) mutex_fake.o libimap.a $(DEPLIBS) $(SERVICE)
+  	$(PURIFY) $(PUREOPT) $(CC) $(LDFLAGS) -o imapd.pure \
+@@ -130,10 +130,10 @@
+  	libimap.a $(DEPLIBS)
+ @@ -230,7 +231,7 @@
+  pop3d: pop3d.o proxy.o backend.o tls.o mutex_fake.o libimap.a \
+- 	$(DEPLIBS) $(SERVICE)
++ 	$(SIEVE_LIBS) $(DEPLIBS) $(SERVICE)
+  	$(CC) $(LDFLAGS) -o pop3d pop3d.o proxy.o backend.o tls.o $(SERVICE) \
+--	 mutex_fake.o libimap.a $(DEPLIBS) $(LIBS) $(LIB_WRAP)
+-+	 mutex_fake.o libimap.a $(DEPLIBS) $(LIBS) $(LIB_WRAP) $(DRAC_LIBS)
++-	 mutex_fake.o libimap.a $(SIEVE_LIBS) $(DEPLIBS) $(LIBS) $(LIB_WRAP)
+++	 mutex_fake.o libimap.a $(SIEVE_LIBS) $(DEPLIBS) $(LIBS) $(LIB_WRAP) $(DRAC_LIBS)
+  
+  nntpd: nntpd.o proxy.o backend.o index.o smtpclient.o spool.o tls.o \
+  	 mutex_fake.o nntp_err.o libimap.a $(DEPLIBS) $(SERVICE)
