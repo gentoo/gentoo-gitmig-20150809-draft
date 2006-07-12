@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.13 2006/07/02 18:45:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.4.2-r2.ebuild,v 1.14 2006/07/12 18:38:34 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -31,6 +31,7 @@ IUSE_VIDEO_CARDS="
 	video_cards_via"
 IUSE="${IUSE_VIDEO_CARDS}
 	debug
+	doc
 	hardened
 	motif"
 
@@ -44,6 +45,7 @@ RDEPEND="dev-libs/expat
 	x11-libs/libICE
 	app-admin/eselect-opengl
 	motif? ( virtual/motif )
+	doc? ( app-doc/opengl-manpages )
 	!<=x11-base/xorg-x11-6.9"
 DEPEND="${RDEPEND}
 	x11-misc/makedepend
