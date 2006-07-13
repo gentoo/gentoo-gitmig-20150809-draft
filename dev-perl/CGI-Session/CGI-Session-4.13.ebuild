@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.13.ebuild,v 1.3 2006/07/03 20:30:43 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.13.ebuild,v 1.4 2006/07/13 04:12:31 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/M/MA/MARKSTOS/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
