@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.5 2006/05/07 20:41:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.6 2006/07/13 00:42:04 pvdabeel Exp $
 
 inherit eutils
 
@@ -24,10 +24,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-strerror.patch || die
 	epatch ${FILESDIR}/${P}-extra-arches.patch || die
 	epatch ${FILESDIR}/${P}-x86_64-segfault.patch || die
+	epatch ${FILESDIR}/${P}-gcc-4.1.patch || die
 
 # setup def files for other archs
 	cp conf/LINUX64.def conf/LINUXPPC64.def
 	cp conf/LINUX64.m4 conf/LINUXPPC64.m4
+
+	epatch ${FILESDIR}/${P}-ppc64.patch || die
 
 # s390 should go in this list if there is ever interest
 # Patch the 64bit def files to look in lib64 dirs as well for libraries.

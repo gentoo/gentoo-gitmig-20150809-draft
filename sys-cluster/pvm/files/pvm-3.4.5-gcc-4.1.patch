@@ -1,0 +1,49 @@
+Files pvm3.orig/bin/LINUXPPC/pvm_gstat and pvm3/bin/LINUXPPC/pvm_gstat differ
+Files pvm3.orig/bin/LINUXPPC/pvmgroups and pvm3/bin/LINUXPPC/pvmgroups differ
+Files pvm3.orig/bin/LINUXPPC/pvmgs and pvm3/bin/LINUXPPC/pvmgs differ
+Files pvm3.orig/bin/LINUXPPC/tracer and pvm3/bin/LINUXPPC/tracer differ
+Files pvm3.orig/bin/LINUXPPC/trcsort and pvm3/bin/LINUXPPC/trcsort differ
+Files pvm3.orig/lib/LINUXPPC/libfpvm3.a and pvm3/lib/LINUXPPC/libfpvm3.a differ
+Files pvm3.orig/lib/LINUXPPC/libgpvm3.a and pvm3/lib/LINUXPPC/libgpvm3.a differ
+Files pvm3.orig/lib/LINUXPPC/libpvm3.a and pvm3/lib/LINUXPPC/libpvm3.a differ
+Files pvm3.orig/lib/LINUXPPC/libpvmtrc.a and pvm3/lib/LINUXPPC/libpvmtrc.a differ
+Files pvm3.orig/lib/LINUXPPC/pvm and pvm3/lib/LINUXPPC/pvm differ
+Files pvm3.orig/lib/LINUXPPC/pvmd3 and pvm3/lib/LINUXPPC/pvmd3 differ
+Files pvm3.orig/lib/LINUXPPC/pvmgs and pvm3/lib/LINUXPPC/pvmgs differ
+diff -urN pvm3.orig/src/global.c pvm3/src/global.c
+--- pvm3.orig/src/global.c	2006-07-13 02:29:25.000000000 +0200
++++ pvm3/src/global.c	2006-07-13 02:31:06.000000000 +0200
+@@ -205,7 +205,7 @@
+ 
+ /* Trace Data Identifier Structures */
+ 
+-struct Pvmtevdid pvmtevdidlist[] =
++struct Pvmtevdid* pvmtevdidlist =
+ {
+ 	/* TEV_DID_AN */	"AN",	"PVM Architecture Name",
+ 	/* TEV_DID_AC */	"AC",	"PVM Architecture Code",
+@@ -335,7 +335,7 @@
+ 
+ /* Trace Event Info */
+ 
+-struct Pvmtevinfo pvmtevinfo[] =
++struct Pvmtevinfo* pvmtevinfo =
+ {
+ 	/* TEV_ADDHOSTS */		"addhosts",		0,	{ 0, 0 }, { 0, 0 }, 0,
+ 	/* TEV_BARRIER */		"barrier",		0,	{ 0, 0 }, { 0, 0 }, 0,
+diff -urN pvm3.orig/src/global.h pvm3/src/global.h
+--- pvm3.orig/src/global.h	2006-07-13 02:29:52.000000000 +0200
++++ pvm3/src/global.h	2006-07-13 02:29:14.000000000 +0200
+@@ -318,7 +318,7 @@
+ 
+ /* General Trace Globals Declarations */
+ 
+-extern	struct Pvmtevdid pvmtevdidlist[];
++extern	struct Pvmtevdid* pvmtevdidlist;
+ 
+-extern	struct Pvmtevinfo pvmtevinfo[];
++extern	struct Pvmtevinfo* pvmtevinfo;
+ 
+Files pvm3.orig/tracer/LINUXPPC/libpvmtrc.a and pvm3/tracer/LINUXPPC/libpvmtrc.a differ
+Files pvm3.orig/tracer/LINUXPPC/tracer and pvm3/tracer/LINUXPPC/tracer differ
+Files pvm3.orig/tracer/LINUXPPC/trcsort and pvm3/tracer/LINUXPPC/trcsort differ
