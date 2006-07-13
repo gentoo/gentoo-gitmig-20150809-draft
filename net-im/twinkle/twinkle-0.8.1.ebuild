@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.8.1.ebuild,v 1.1 2006/07/10 23:25:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.8.1.ebuild,v 1.2 2006/07/13 02:07:22 dragonheart Exp $
 
 inherit eutils qt3  autotools
 
@@ -15,8 +15,8 @@ IUSE="arts speex ilbc"
 
 # Requires libqt-mt actually...  Is that *always* built, or do we need to check?
 RDEPEND=">=net-libs/ccrtp-1.3.4
-	>=x11-libs/qt-3.3.4-r6
 	>=dev-cpp/commoncpp2-1.4.1
+	$(qt_min_version 3.3.0)
 	arts? ( kde-base/arts )
 	media-libs/libsndfile
 	media-libs/speex
@@ -31,12 +31,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}"/${PN}-0.4.1-badcflags.patch
-#	epatch "${FILESDIR}"/${P}-autoconfspeex.patch
-#	eautoreconf
 }
 
 src_compile() {
-	econf --disable-qt-check \
+	econf \
 			$(use_with ilbc) \
 			$(use_with arts) \
 			$(use_with speex) || die 'Error: conf failed'
