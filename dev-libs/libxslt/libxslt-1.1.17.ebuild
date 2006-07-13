@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.17.ebuild,v 1.3 2006/07/12 18:09:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.17.ebuild,v 1.4 2006/07/13 04:03:09 agriffis Exp $
 
 inherit libtool gnome.org eutils python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="crypt debug python"
 
 DEPEND=">=dev-libs/libxml2-2.6.25
