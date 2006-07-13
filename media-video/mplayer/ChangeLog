@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.400 2006/07/12 18:52:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.401 2006/07/13 02:24:04 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> mplayer-1.0_pre8.ebuild,
+  mplayer-1.0_pre8-r1.ebuild, mplayer-1.0.20060102.ebuild,
+  mplayer-1.0.20060217.ebuild, mplayer-1.0.20060302.ebuild,
+  mplayer-1.0.20060408.ebuild, mplayer-1.0.20060415.ebuild:
+  Mark 1.0_pre8 stable on ia64, mark 1.0_pre8-r1 ~ia64, arch-mask 1.0.20060415
+  1.0.20060408 1.0.20060302 1.0.20060217 1.0.20060102 on ia64. #136520 #139955
 
   12 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   mplayer-1.0_pre8-r1.ebuild:
