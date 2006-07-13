@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gnomemm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.18 2005/12/11 04:37:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.19 2006/07/13 01:10:24 pvdabeel Exp $
+
+  13 Jul 2006; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  +files/gnomemm-1.2.4-gcc41.patch, gnomemm-1.2.4.ebuild:
+  Add gcc41 patch which resolves bug #135358
 
   11 Dec 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/gnomemm-1.2.4-gcc4.patch, gnomemm-1.2.4.ebuild:

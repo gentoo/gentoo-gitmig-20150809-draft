@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.4.ebuild,v 1.6 2005/12/11 04:37:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.4.ebuild,v 1.7 2006/07/13 01:10:24 pvdabeel Exp $
 
 inherit toolchain-funcs eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	# http://bugzilla.gnome.org/show_bug.cgi?id=121307 gcc 3.3.x (#27061)
 	epatch "${FILESDIR}"/${P}-gcc33.patch
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
