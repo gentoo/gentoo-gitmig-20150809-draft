@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.36 2006/05/23 20:03:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.37 2006/07/13 17:57:31 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> gecko-sdk-1.7.13.ebuild:
+  Mark 1.7.13 stable on ia64
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> gecko-sdk-1.7.13.ebuild:
   Stable on ppc64
