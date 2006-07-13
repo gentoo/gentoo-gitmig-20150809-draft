@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.08.ebuild,v 1.4 2006/06/12 16:42:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.08.ebuild,v 1.5 2006/07/13 04:46:54 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/O/OV/OVID/${P}.tar.gz"
 IUSE=""
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc ~x86"
 
 SRC_TEST="do"
 
