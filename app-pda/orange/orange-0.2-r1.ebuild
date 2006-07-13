@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.2-r1.ebuild,v 1.8 2006/01/08 23:28:37 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/orange/orange-0.2-r1.ebuild,v 1.9 2006/07/13 20:51:35 liquidx Exp $
 
 DESCRIPTION="A tool and library for extracting cabs from executable installers."
-HOMEPAGE="http://sourceforge.net/projects/synce/"
+HOMEPAGE="http://synce.sourceforge.net/synce/orange.php"
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 LICENSE="MIT"
