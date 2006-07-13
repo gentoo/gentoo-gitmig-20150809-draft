@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r1.ebuild,v 1.9 2006/07/05 16:32:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r1.ebuild,v 1.10 2006/07/13 06:40:25 nerdboy Exp $
 
 inherit eutils libtool
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc-macos ppc64 s390 sh sparc
 IUSE="jpeg jbig nocxx zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
-	jbig? ( media-libs/jbigkit )
+	jbig? ( >=media-libs/jbigkit-1.6-r1 )
 	zlib? ( >=sys-libs/zlib-1.1.3-r2 )"
 
 src_unpack() {

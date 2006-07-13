@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.90 2006/07/05 16:32:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.91 2006/07/13 06:40:25 nerdboy Exp $
+
+  13 Jul 2006; Steve Arnold <nerdboy@gentoo.org> tiff-3.8.2-r1.ebuild:
+  updated jbig depend (fix for bug 139831)
 
   05 Jul 2006; Fabian Groffen <grobian@gentoo.org> tiff-3.8.2-r1.ebuild:
   Marked ppc-macos stable (bug #135881)
