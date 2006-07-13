@@ -1,9 +1,18 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.20 2006/07/12 21:19:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.21 2006/07/13 21:22:59 mrness Exp $
+
+  13 Jul 2006; Alin Nastac <mrness@gentoo.org>
+  -files/gammu-1.04.0-devfunc-sock.patch,
+  files/gammu-1.07.00-as-needed.patch, -gammu-1.04.0-r2.ebuild:
+  Remove obsolete version. Fix the as-needed patch (#140255).
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> gammu-1.05.00.ebuild:
   Mark 1.05.00 stable on ia64
+
+  13 Jul 2006; Alin Nastac <mrness@gentoo.org>
+  files/gammu-1.07.00-as-needed.patch:
+  Fix the as-needed patch (#140255).
 
 *gammu-1.07.00 (12 Jul 2006)
 

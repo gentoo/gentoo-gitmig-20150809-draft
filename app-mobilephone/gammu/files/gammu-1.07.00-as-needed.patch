@@ -15,7 +15,7 @@ diff -Nru gammu-1.07.00.orig/cfg/Makefile.glo gammu-1.07.00/cfg/Makefile.glo
  $(TOPDIR)/common/libGammu.so.$(SONAME_MAJOR).$(SONAME_MINOR): $(COMMON)
  	@echo Linking libGammu.so.$(SONAME_MAJOR).$(SONAME_MINOR)
 -	@$(CC) $(LDLIBS) -shared -Wl,-soname -Wl,libGammu.so.$(SONAME_MAJOR) -o $(TOPDIR)/common/libGammu.so.$(SONAME_MAJOR).$(SONAME_MINOR) $(COMMON) $(LDFLAGS)
-+	@$(CC) $(LDFLAGS) $(LDLIBS) -shared -Wl,-soname -Wl,libGammu.so.$(SONAME_MAJOR) -o $(TOPDIR)/common/libGammu.so.$(SONAME_MAJOR).$(SONAME_MINOR) $(COMMON)
++	@$(CC) $(LDFLAGS) -shared -Wl,-soname -Wl,libGammu.so.$(SONAME_MAJOR) $(COMMON) $(LDLIBS) -o $(TOPDIR)/common/libGammu.so.$(SONAME_MAJOR).$(SONAME_MINOR)
  	@$(LN) -s libGammu.so.$(SONAME_MAJOR).$(SONAME_MINOR) $(TOPDIR)/common/libGammu.so.$(SONAME_MAJOR)
  	@$(LN) -s libGammu.so.$(SONAME_MAJOR) $(TOPDIR)/common/libGammu.so
  
