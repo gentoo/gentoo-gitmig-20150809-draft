@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-001.ebuild,v 1.5 2006/06/13 11:07:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-001.ebuild,v 1.6 2006/07/13 19:03:02 phreak Exp $
 
 inherit toolchain-funcs multilib
 
@@ -26,7 +26,7 @@ src_compile() {
 	sed -i \
 		-e "s:^\(CFLAGS \:=.*\):\1 ${CFLAGS}:" \
 		-e "s:/usr/lib:/usr/$(get_libdir):" \
-		${S}/Makefile
+		"${S}"/Makefile
 
 	emake -j1 V=true DEBUG=${debug} NLS=${nls} \
 		CC=$(tc-getCC) LD=$(tc-getCC) AR=$(tc-getAR) STRIP=echo RANLIB=$(tc-getRANLIB) \
@@ -41,8 +41,8 @@ src_install() {
 	make DESTDIR="${D}" NLS=${nls} mandir=/usr/share/man install \
 		|| die "make install failed"
 
-	newconfd ${FILESDIR}/${P}-conf.d ${PN}
-	newinitd ${FILESDIR}/${P}-init.d ${PN}
+	newconfd "${FILESDIR}"/${P}-conf.d ${PN}
+	newinitd "${FILESDIR}"/${P}-init.d ${PN}
 
 	dodoc AUTHORS README
 }

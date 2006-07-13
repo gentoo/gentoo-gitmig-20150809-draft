@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-002.ebuild,v 1.2 2006/06/05 08:56:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-002.ebuild,v 1.3 2006/07/13 19:03:02 phreak Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -18,8 +18,8 @@ DEPEND="sys-fs/sysfsutils"
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-parallel-make.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
 }
 
 src_compile() {
@@ -41,8 +41,8 @@ src_install() {
 	make DESTDIR="${D}" NLS=${nls} mandir=/usr/share/man libdir=/usr/$(get_libdir) \
 		install || die "make install failed"
 
-	newconfd ${FILESDIR}/${P}-conf.d ${PN}
-	newinitd ${FILESDIR}/${P}-init.d ${PN}
+	newconfd "${FILESDIR}"/${P}-conf.d ${PN}
+	newinitd "${FILESDIR}"/${P}-init.d ${PN}
 
 	dodoc AUTHORS README
 }
