@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.2.ebuild,v 1.9 2006/05/28 14:57:00 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.9.2.ebuild,v 1.10 2006/07/13 18:39:16 phreak Exp $
 
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib
 
 DESCRIPTION="Hardware Monitoring user-space utilities"
 
-HOMEPAGE="http://secure.netroedge.com/~lm78/"
-SRC_URI="http://secure.netroedge.com/~lm78/archive/${P}.tar.gz"
+HOMEPAGE="http://www.lm-sensors.org/"
+SRC_URI="http://dl.lm-sensors.org/lm-sensors/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -69,8 +69,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-sensors-detect-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-sensors-detect-gentoo.patch
 
 	if use sensord; then
 		sed -i -e 's:^# \(PROG_EXTRA\):\1:' ${S}/Makefile
@@ -90,14 +90,14 @@ src_compile()  {
 }
 
 src_install() {
-	emake DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man LIBDIR=/usr/$(get_libdir) \
+	emake DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man LIBDIR=/usr/$(get_libdir) \
 		KERNELINCLUDEFILES="" user_install || die "emake user_install failed"
 
-	newinitd ${FILESDIR}/${P}-lm_sensors-init.d lm_sensors
+	newinitd "${FILESDIR}"/${P}-lm_sensors-init.d lm_sensors
 
 	if use sensord; then
-		newconfd ${FILESDIR}/${P}-sensord-conf.d sensord
-		newinitd ${FILESDIR}/${P}-sensord-init.d sensord
+		newconfd "${FILESDIR}"/${P}-sensord-conf.d sensord
+		newinitd "${FILESDIR}"/${P}-sensord-init.d sensord
 	fi
 
 	dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS INSTALL QUICKSTART \
