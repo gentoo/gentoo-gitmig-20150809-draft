@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-0.5.0-r3.ebuild,v 1.1 2006/06/26 21:13:50 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/twisted-web-0.5.0-r3.ebuild,v 1.2 2006/07/13 02:40:40 agriffis Exp $
 
 MY_PACKAGE=Web
 
@@ -8,7 +8,7 @@ inherit twisted eutils
 
 DESCRIPTION="Twisted web server, programmable in Python"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ia64 ~ppc ~sh ~sparc ~x86"
 
 DEPEND=">=dev-python/twisted-2
 	<dev-python/twisted-2.4"
