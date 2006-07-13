@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.46 2006/03/15 23:34:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.47 2006/07/13 18:48:59 phreak Exp $
+
+  13 Jul 2006; Christian Heim <phreak@gentoo.org> metadata.xml,
+  i2c-2.9.2.ebuild, i2c-2.10.0.ebuild:
+  Fixing HOMEPAGE, SRC_URI, Quoting, Copyright. Taking temporary maintainership
 
   15 Mar 2006; Henrik Brix Andersen <brix@gentoo.org> i2c-2.10.0.ebuild:
   Stable on x86.

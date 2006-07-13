@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.10.0.ebuild,v 1.2 2006/03/15 23:34:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.10.0.ebuild,v 1.3 2006/07/13 18:48:59 phreak Exp $
 
 inherit eutils toolchain-funcs linux-info
 
 DESCRIPTION="I2C Bus kernel modules for linux-2.4.x"
-HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
-SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
+HOMEPAGE="http://www.lm-sensors.org/"
+SRC_URI="ftp://ftp.netroedge.com/pub/lm-sensors/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,8 +37,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-module-path.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-module-path.patch
 }
 
 src_compile ()  {
@@ -59,7 +59,7 @@ src_install() {
 
 	emake CC=$(tc-getCC) \
 		LINUX=${KV_DIR} LINUX_INCLUDE_DIR=${KV_DIR}/include/linux MODPREF=/lib/modules/${KV_FULL} \
-		DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man install \
+		DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man install \
 		|| die "emake install failed"
 
 	dodoc CHANGES README TODO
