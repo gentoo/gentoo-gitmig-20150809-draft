@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.1.0.ebuild,v 1.9 2006/06/08 20:21:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/sqlite3-ruby-1.1.0.ebuild,v 1.10 2006/07/13 01:25:17 agriffis Exp $
 
 inherit ruby gems
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 # change the filename on the end, it still downloads the same file.
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
-KEYWORDS="amd64 ~ia64 ppc sparc x86"
+KEYWORDS="amd64 ia64 ppc sparc x86"
 SLOT="0"
 IUSE=""
 

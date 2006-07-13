@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sqlite3-ruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.9 2006/06/08 20:21:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3-ruby/ChangeLog,v 1.10 2006/07/13 01:25:17 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> sqlite3-ruby-1.1.0.ebuild:
+  Mark 1.1.0 stable on ia64. #138323
 
   08 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   sqlite3-ruby-1.1.0.ebuild:
