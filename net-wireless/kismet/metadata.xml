@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mobile</herd>
-<maintainer>
-  <email>latexer@gentoo.org</email>
-  <name>Peter Johanson</name>
-</maintainer>
-<maintainer>
-  <email>brix@gentoo.org</email>
-  <name>Henrik Brix Andersen</name>
-</maintainer>
+	<herd>mobile</herd>
+	<maintainer>
+		<email>latexer@gentoo.org</email>
+		<name>Peter Johanson</name>
+	</maintainer>
+	<maintainer>
+		<email>phreak@gentoo.org</email>
+		<name>Christian Heim</name>
+	</maintainer>
 </pkgmetadata>
