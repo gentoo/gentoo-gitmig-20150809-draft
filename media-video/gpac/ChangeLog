@@ -1,6 +1,15 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.19 2006/07/05 07:54:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.20 2006/07/13 20:43:42 chutzpah Exp $
+
+*gpac-0.4.1_pre20060122-r1 (13 Jul 2006)
+
+  13 Jul 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/gpac-0.4.1_pre20060122-DESTDIR.patch,
+  +gpac-0.4.1_pre20060122-r1.ebuild:
+  New revision. Rework ebuild to be less repetitive and more readable. Remove
+  mozilla USE flag since mozilla will masked soon. Fix for multilib-strict
+  (bug #127145).
 
   05 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> gpac-0.2.1.ebuild,
   gpac-0.4.0.ebuild, gpac-0.4.1_pre20060122.ebuild:
