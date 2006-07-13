@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmcoincoin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.16 2006/04/27 08:55:56 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.17 2006/07/13 13:16:12 nelchael Exp $
+
+  13 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -wmcoincoin-2.5.0c.ebuild:
+  Remove old version.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-wmcoincoin-2.5.0c, files/digest-wmcoincoin-2.5.0g, Manifest:
