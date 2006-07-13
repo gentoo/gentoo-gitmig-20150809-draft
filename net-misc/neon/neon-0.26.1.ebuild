@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.4 2006/07/13 13:21:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.5 2006/07/13 15:09:55 chutzpah Exp $
 
-inherit eutils libtool
+inherit eutils libtool versionator
 
 DESCRIPTION="HTTP and WebDAV client library"
 HOMEPAGE="http://www.webdav.org/neon/"
@@ -85,4 +85,14 @@ pkg_postinst() {
 	ewarn "upstream considers the socks support experimental.  If you"
 	ewarn "experience test failures (eg, bug 135863) then try rebuilding"
 	ewarn "glibc."
+	ewarn
+	ewarn "Neon has a policy of breaking API across versions, this means"
+	ewarn "that any packages that link against neon will be broken after"
+	ewarn "updating. They will remain broken until they are ported to the"
+	ewarn "new API. You can downgrade neon to the previous version by doing:"
+	ewarn
+	ewarn "  emerge --oneshot '<net-misc/neon-$(get_version_component_range 1-2 ${PV})'"
+	ewarn
+	ewarn "You may also have to downgrade any packages that have already been"
+	ewarn "ported to the new API."
 }
