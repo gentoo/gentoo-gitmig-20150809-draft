@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.23 2006/07/05 05:40:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.10.ebuild,v 1.24 2006/07/13 01:01:38 pvdabeel Exp $
 
 inherit gnome.org libtool multilib
 
@@ -22,10 +22,13 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	elibtoolize
+	aclocal
+	autoconf
+	automake
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
-	./configure --host=${CHOST} \
+	./configure --host="${CHOST}"\
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man \
