@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/aww
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.14 2006/06/06 02:33:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.15 2006/07/13 04:59:53 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> aww-0.34.ebuild:
+  Mark 0.34 stable on ia64
 
   06 Jun 2006; <mcummings@gentoo.org> aww-0.34.ebuild:
   marking stable sparc
