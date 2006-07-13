@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2030 2006/07/13 15:24:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2031 2006/07/13 20:02:40 caleb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -435,6 +435,7 @@ dev-ruby/og:kirbybase - enable Kirbybase support
 dev-ruby/ruby-gtkmozembed:firefox - compile against Firefox instead of Mozilla
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
+dev-ruby/ruby-sdl:sge   - enable sdl-sge support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-scheme/drscheme:cairo - Enable cairo support.
 dev-scheme/gauche-gl:cg - enable NVidia Cg binding
