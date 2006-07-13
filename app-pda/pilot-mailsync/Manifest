@@ -1,8 +1,50 @@
-MD5 809a89c8f338e81dfab49e1d99737ac9 ChangeLog 734
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST pilot-mailsync-0.8.0.2.tar.gz 1643040
+DIST pilot-mailsync-0.8.1.tar.gz 1799854
+DIST pilot-mailsync-0.8.3.tar.gz 2037489
+DIST pilot-mailsync-0.9.1.tar.gz 2249395 RMD160 9bceb0749b87a269259afd1d7525d0aab1723925 SHA1 d89e74fa34ed8cc365773f7922f8927ee946985c SHA256 e8bffeaf71464bc487a265f4c0ac8449caf59b5c59b236ed9b032023aee9508b
+EBUILD pilot-mailsync-0.8.0.2.ebuild 761 RMD160 770fbcf99a87b8c23b4e32cb6686c1ef61470470 SHA1 5692a108a53ba6c56cdacec75b119d980086b4fd SHA256 3e826dbccf68509700923f92567bd15c6accdcb48feb0e02a007b0cfc576cf5a
 MD5 c8cc33559ef60b592ec67bc3dd48cdd4 pilot-mailsync-0.8.0.2.ebuild 761
+RMD160 770fbcf99a87b8c23b4e32cb6686c1ef61470470 pilot-mailsync-0.8.0.2.ebuild 761
+SHA256 3e826dbccf68509700923f92567bd15c6accdcb48feb0e02a007b0cfc576cf5a pilot-mailsync-0.8.0.2.ebuild 761
+EBUILD pilot-mailsync-0.8.1.ebuild 760 RMD160 59353c8dd054aa3383229acb8fe7cfdd5bc04a9e SHA1 8ce0549d0941f36bbab65b2c3d336cd3e04eeb7f SHA256 830798cbf81454d7a7da9b82abcda8cfc0558ea03708ea83747fc70022b1579d
 MD5 6a51c29662580634d473ffe20de05ccd pilot-mailsync-0.8.1.ebuild 760
+RMD160 59353c8dd054aa3383229acb8fe7cfdd5bc04a9e pilot-mailsync-0.8.1.ebuild 760
+SHA256 830798cbf81454d7a7da9b82abcda8cfc0558ea03708ea83747fc70022b1579d pilot-mailsync-0.8.1.ebuild 760
+EBUILD pilot-mailsync-0.8.3.ebuild 1402 RMD160 d23d1e120c26867c8e5318e10032fae1d144e7ae SHA1 fee6256ff21a331c95b2336c8b38e78a59942211 SHA256 d051e758abd7ae7e28e88fc6e791115a8b14e97653369e6e1440b8952a613a4b
 MD5 625aeacb643db9d0076bb80326597305 pilot-mailsync-0.8.3.ebuild 1402
+RMD160 d23d1e120c26867c8e5318e10032fae1d144e7ae pilot-mailsync-0.8.3.ebuild 1402
+SHA256 d051e758abd7ae7e28e88fc6e791115a8b14e97653369e6e1440b8952a613a4b pilot-mailsync-0.8.3.ebuild 1402
+EBUILD pilot-mailsync-0.9.1.ebuild 1404 RMD160 bcb7e2dd44fb424c65678da49faae5d24c76fd86 SHA1 d3598a99be9ec3745341091192f5e6e5bf0c293a SHA256 ef86d1ef955e1ae0bea2dc57e6973c38942188ee569e6a0c52a009c7f72d710c
+MD5 e8f96cc24c8637024dff93e31363619b pilot-mailsync-0.9.1.ebuild 1404
+RMD160 bcb7e2dd44fb424c65678da49faae5d24c76fd86 pilot-mailsync-0.9.1.ebuild 1404
+SHA256 ef86d1ef955e1ae0bea2dc57e6973c38942188ee569e6a0c52a009c7f72d710c pilot-mailsync-0.9.1.ebuild 1404
+MISC ChangeLog 881 RMD160 70ee19534e6f6cc52147975eabbcff5f7b6755d5 SHA1 3d8c05f6eb8a18dfb6c4083bba349b32f6b01424 SHA256 37dc01cec85ffe439654676f2ce2f88237af0be9f2db7a858fc6f4893585cf6b
+MD5 4b047ada569e550b82faf0bc209d530f ChangeLog 881
+RMD160 70ee19534e6f6cc52147975eabbcff5f7b6755d5 ChangeLog 881
+SHA256 37dc01cec85ffe439654676f2ce2f88237af0be9f2db7a858fc6f4893585cf6b ChangeLog 881
+MISC metadata.xml 156 RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe SHA1 5b9cb277159d763c133920e483df8d3d587cf7e2 SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
 MD5 6f4db2e33b85320840d9490d4408773a files/digest-pilot-mailsync-0.8.0.2 75
+RMD160 defc073123c024c679a700240d6b207ea3dbd623 files/digest-pilot-mailsync-0.8.0.2 75
+SHA256 d1aa1272a925624db7a52423f9c3834869dbba66393536522a8da3a964214af2 files/digest-pilot-mailsync-0.8.0.2 75
 MD5 c40b06dccab65e88a6d81d42dcea483b files/digest-pilot-mailsync-0.8.1 73
+RMD160 f9b4bb86685d43b2a7c34bbb055e1ce721d75233 files/digest-pilot-mailsync-0.8.1 73
+SHA256 2a235007c378aabf17aed0e14ff03410dc9bd132d5daffa378593e62d41fd1ff files/digest-pilot-mailsync-0.8.1 73
 MD5 35a746c8fc6fc591cff6b6d3744c76c1 files/digest-pilot-mailsync-0.8.3 73
+RMD160 cc692e15619b467a4ab62ae50be36d6dfbf77238 files/digest-pilot-mailsync-0.8.3 73
+SHA256 6402f44a1d57ee118a7a3075ef34a957ebf6906095a6baf5d49a29aafb67bd24 files/digest-pilot-mailsync-0.8.3 73
+MD5 f1a0f04927ba38737f6f8948bbc3a8bc files/digest-pilot-mailsync-0.9.1 265
+RMD160 af6076f5e4b3d4cee97b3b682c2f7d20be12a9cc files/digest-pilot-mailsync-0.9.1 265
+SHA256 1ea3034ceb178dbc9ebd2f6329b903d89e598d8a8b6441b720156afd1fc14a3d files/digest-pilot-mailsync-0.9.1 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEtr0ruB6ZT1m7QRERAjG6AKC8veR+Jr0/wB8pKSXr1HbOskNpgACff8Is
+9nZdFuvHJaoE8rwiw7wpUh8=
+=sJS/
+-----END PGP SIGNATURE-----
