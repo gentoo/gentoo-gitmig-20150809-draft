@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-iconbox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.64 2006/07/09 03:43:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-iconbox/ChangeLog,v 1.65 2006/07/13 19:45:01 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  xfce4-iconbox-4.2.3.ebuild:
+  Mark 4.2.3 stable on ia64
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> xfce4-iconbox-4.2.3.ebuild:
   Marked stable on mips.
