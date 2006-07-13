@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.36 2006/04/23 13:32:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.37 2006/07/13 04:06:45 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> lzo-2.02-r1.ebuild:
+  Mark 2.02-r1 stable on ia64
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> lzo-1.08-r1.ebuild:
   Run elibtoolize and add ~x86-fbsd keyword.

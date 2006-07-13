@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.02-r1.ebuild,v 1.8 2006/04/22 17:17:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/lzo-2.02-r1.ebuild,v 1.9 2006/07/13 04:06:45 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.oberhumer.com/opensource/lzo/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="examples"
 
 DEPEND="x86? ( dev-lang/nasm )"
