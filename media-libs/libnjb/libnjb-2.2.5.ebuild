@@ -1,9 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-2.2.5.ebuild,v 1.1 2006/01/29 21:17:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/libnjb-2.2.5.ebuild,v 1.2 2006/07/13 16:23:04 flameeyes Exp $
 
-inherit eutils
-
+inherit eutils libtool
 
 DESCRIPTION="libnjb is a C library and API for communicating with the Creative Nomad JukeBox digital audio player under BSD and Linux."
 HOMEPAGE="http://libnjb.sourceforge.net/"
@@ -20,17 +19,18 @@ S=${WORKDIR}/${PN}-${PV/_*}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	sed -i "s:SUBDIRS = src sample doc:SUBDIRS = src doc:" Makefile.in || die "sed failed"
+	elibtoolize
 }
 
 src_compile() {
 	econf --enable-hotplugging || die "./configure failed."
-	emake -j1 || die "make failed."
+	emake || die "make failed."
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "failed to install"
+	emake DESTDIR="${D}" install || die "failed to install"
 
 	# Backwards compatability
 	dosym libnjb.so /usr/$(get_libdir)/libnjb.so.0
