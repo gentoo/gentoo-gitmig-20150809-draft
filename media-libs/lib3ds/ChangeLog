@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lib3ds
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.7 2006/04/01 19:56:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.8 2006/07/13 13:57:13 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> lib3ds-1.2.0.ebuild:
+  Mark 1.2.0 stable on ia64
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> lib3ds-1.2.0.ebuild:
   Mark 1.2.0 ~ia64
