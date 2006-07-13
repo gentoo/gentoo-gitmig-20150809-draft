@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color-tools/color-tools-1.3.0.ebuild,v 1.3 2006/03/30 03:25:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color-tools/color-tools-1.3.0.ebuild,v 1.4 2006/07/13 05:16:54 agriffis Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ruby-pdf.rubyforge.org/color-tools/"
 SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 x86"
+KEYWORDS="ia64 x86"
 IUSE=""
 
 USE_RUBY="ruby18"
