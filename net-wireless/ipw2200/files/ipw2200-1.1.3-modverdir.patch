@@ -1,0 +1,19 @@
+Index: ipw2200-1.1.3/Makefile
+===================================================================
+--- ipw2200-1.1.3.orig/Makefile
++++ ipw2200-1.1.3/Makefile
+@@ -153,13 +153,8 @@ clean:
+ distclean: clean
+ 	rm -f tags TAGS
+ 
+-TMP=$(PWD)/tmp
+-MODVERDIR=$(TMP)/.tmp_versions
+-
+ modules:
+-	mkdir -p $(MODVERDIR)
+-	-cp $(IEEE80211_MODVERDIR)/*.mod $(MODVERDIR)
+-	$(MAKE) -C $(KSRC) M=$(PWD) MODVERDIR=$(MODVERDIR) modules
++	$(MAKE) -C $(KSRC) M=$(PWD) modules
+ 
+ 
+ patch_kernel:
