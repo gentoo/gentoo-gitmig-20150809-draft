@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.2 2006/06/28 07:29:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.5-r1.ebuild,v 1.3 2006/07/13 05:05:56 nerdboy Exp $
 
 inherit fortran eutils toolchain-funcs
 
@@ -41,11 +41,6 @@ pkg_setup() {
 		    FORTRAN="ifc"
 		    fortran_pkg_setup
 		    einfo "Configuring for Intel fortran..."
-	    elif
-		test -f `which pgf90` ; then
-		    FORTRAN="pgf90"
-		    fortran_pkg_setup
-		    einfo "Configuring for PGI fortran..."
 	    elif use f90 ; then
 		einfo "Relying on H5Detect to configure Fortran compiler..."
 		FORTRAN=""
@@ -183,8 +178,8 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Use the fortran flag for gfortran, ifc, or pgf90, and add the"
-	einfo "f90 flag to override the fortran flag if you have a different"
+	einfo "Use the fortran flag for gfortran or ifc, and add the f90"
+	einfo "flag to override the fortran flag if you have a different"
 	einfo "f90 compiler installed (gfortran requires gcc 4.x). Note that"
 	einfo "gfortran only works as mpif90 and is not detected properly by"
 	einfo "configure without the mpi wrapper."
