@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.3 2006/07/12 04:59:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.4 2006/07/13 18:34:52 agriffis Exp $
 
 inherit fortran distutils eutils autotools kde-functions toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # need more arches in here, like sparc...
 IUSE="crypt cxx doc debug fortran mpe mpe-sdk romio threads"
 
