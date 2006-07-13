@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 0.8.9/synce-libsynce-0.8.9-gcc33.patch 431 RMD160 58d864993ee0739032d993d363e817bd0412bb07 SHA1 a02bf999f16ad65a33207ae4fa6726bc42f42054 SHA256 139fedab8820af22b443b64a5ba26d57967e37454ba5652e6e3927fca049ac2a
 MD5 32106e3bd72b88a593e10392242917fa files/0.8.9/synce-libsynce-0.8.9-gcc33.patch 431
 RMD160 58d864993ee0739032d993d363e817bd0412bb07 files/0.8.9/synce-libsynce-0.8.9-gcc33.patch 431
@@ -38,3 +41,10 @@ SHA256 2090b26a2ed968ee87a1e8d2ff602dd32fefd47d2b658c3e8ecb34ebeec94dba files/di
 MD5 ac0637e4ab1deb692cee761d65833169 files/digest-synce-libsynce-0.9.2 262
 RMD160 63c43bd203f5d8af7df7ca5d294611c1c294d279 files/digest-synce-libsynce-0.9.2 262
 SHA256 125f0e757643341a49356e89649bb789faa82d8b68108a107727cf7cf9a05a65 files/digest-synce-libsynce-0.9.2 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEtruluB6ZT1m7QRERAtbGAKCZMPQqCmBi8YbS5ad/QfY/hXRlcwCcCbfF
+PvaA6a2ChPnlXHOsJgRvQ24=
+=SVas
+-----END PGP SIGNATURE-----

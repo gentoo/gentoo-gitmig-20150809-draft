@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-librapi2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.20 2006/04/27 13:42:15 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-librapi2/ChangeLog,v 1.21 2006/07/13 21:28:47 liquidx Exp $
+
+*synce-librapi2-0.9.2 (13 Jul 2006)
+
+  13 Jul 2006; Alastair Tse <liquidx@gentoo.org>
+  +synce-librapi2-0.9.2.ebuild:
+  Version bump. (#135060)
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-synce-librapi2-0.7, files/digest-synce-librapi2-0.8.1,
