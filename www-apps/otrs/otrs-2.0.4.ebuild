@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.0.4.ebuild,v 1.3 2006/02/13 15:20:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.0.4.ebuild,v 1.4 2006/07/13 00:47:46 rl03 Exp $
 
 inherit webapp eutils
 
@@ -109,8 +109,8 @@ src_install() {
 pkg_postinst() {
 	ewarn "webapp-config will not be run automatically"
 	ewarn "That messes up Apache configs"
-	ewarn "Don't run webapp-config with -d otrs."
-	ewarn "Instead, use something like -d ot"
+	ewarn "Don't run webapp-config with -d otrs. Instead, try"
+	ewarn "webapp-config -I -h <host> -d ot ${PN} ${PVR}"
 	ewarn
 	# webapp_pkg_postinst
 }
