@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Kakasi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.13 2006/07/05 11:17:40 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/ChangeLog,v 1.14 2006/07/13 04:52:05 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> Text-Kakasi-2.04.ebuild:
+  Mark 2.04 stable on ia64
 
   05 Jul 2006; Christian Hartmann <ian@gentoo.org> Text-Kakasi-2.04.ebuild:
   Fixed RDEPEND wrt bug #134781
