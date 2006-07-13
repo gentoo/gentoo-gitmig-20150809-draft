@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.3.90.2.ebuild,v 1.2 2006/07/10 18:54:07 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.3.90.2.ebuild,v 1.3 2006/07/13 21:21:34 nichoj Exp $
 
-inherit xfce44
+inherit xfce44 eutils
 
 xfce44_beta
 
@@ -47,3 +47,9 @@ RDEPEND="|| ( ( x11-libs/libX11
 XFCE_CONFIG="$(use_enable startup-notification)"
 
 xfce44_core_package
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-asneeded.patch
+}

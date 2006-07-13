@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.69 2006/07/13 19:17:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.70 2006/07/13 21:21:34 nichoj Exp $
+
+  13 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  +files/xfce4-panel-4.3.90.2-asneeded.patch, xfce4-panel-4.3.90.2.ebuild:
+  Applied as-needed patch, as supplied by drac.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> xfce4-panel-4.2.3.ebuild:
   Mark 4.2.3 stable on ia64
