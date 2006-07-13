@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/Apache-AuthTicket-0.40.ebuild,v 1.5 2006/07/03 20:08:15 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/Apache-AuthTicket-0.40.ebuild,v 1.6 2006/07/13 04:09:43 agriffis Exp $
 
 inherit perl-module
 SRC_TEST="do"
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/M/MS/MSCHOUT/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ia64 x86"
+KEYWORDS="ia64 x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Apache-AuthCookie-3.0
