@@ -1,9 +1,58 @@
-MD5 22a953e4b16f1c852d9cc024e62ecfa3 ChangeLog 5663
-MD5 2875fd3dd88aa57c273a8227244675ef files/digest-hibernate-script-1.12-r1 72
-MD5 3226a34c958123a27378a2d9e0178de7 files/digest-hibernate-script-1.91 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX hibernate-script-1.12-gentoo.patch 834 RMD160 3eef1a8651344191491b2687d472a860d4af5bbd SHA1 128ddf545adb0c93d3169406a0cebf8d0f67f55f SHA256 e54d9ea0a6664dbe51cb44c1802f63472e3d3b493e0b5c2730366922a02d5aee
 MD5 4771f1307f9d9d0d08fdfa6b4de5af48 files/hibernate-script-1.12-gentoo.patch 834
+RMD160 3eef1a8651344191491b2687d472a860d4af5bbd files/hibernate-script-1.12-gentoo.patch 834
+SHA256 e54d9ea0a6664dbe51cb44c1802f63472e3d3b493e0b5c2730366922a02d5aee files/hibernate-script-1.12-gentoo.patch 834
+AUX hibernate-script-1.12-misc.patch 522 RMD160 adcbb3512be0c9a77474ac8569a8d917ee0336f0 SHA1 000b027dbf42fd59c4f28bac30569fac0ed74154 SHA256 37dc4bd19419c213ed69b541634cf9d4d3a74ba4ac073819a3a2771e2ca8913a
 MD5 296333753a66d9b42c6a1f25b2c432f3 files/hibernate-script-1.12-misc.patch 522
+RMD160 adcbb3512be0c9a77474ac8569a8d917ee0336f0 files/hibernate-script-1.12-misc.patch 522
+SHA256 37dc4bd19419c213ed69b541634cf9d4d3a74ba4ac073819a3a2771e2ca8913a files/hibernate-script-1.12-misc.patch 522
+AUX hibernate-script-1.91-gentoo.patch 834 RMD160 3eef1a8651344191491b2687d472a860d4af5bbd SHA1 128ddf545adb0c93d3169406a0cebf8d0f67f55f SHA256 e54d9ea0a6664dbe51cb44c1802f63472e3d3b493e0b5c2730366922a02d5aee
 MD5 4771f1307f9d9d0d08fdfa6b4de5af48 files/hibernate-script-1.91-gentoo.patch 834
+RMD160 3eef1a8651344191491b2687d472a860d4af5bbd files/hibernate-script-1.91-gentoo.patch 834
+SHA256 e54d9ea0a6664dbe51cb44c1802f63472e3d3b493e0b5c2730366922a02d5aee files/hibernate-script-1.91-gentoo.patch 834
+AUX hibernate-script-1.93-gentoo.patch 973 RMD160 8528563d7494bbb1c123a109f1448d124c9796a6 SHA1 b87684844c7e278984a5c19bb5ee7c5cdaad0905 SHA256 b89aca9c110bbbe72bf982dc98b83ceab1ee70f2aacd80728094ede94ce9e570
+MD5 bf6cf40b2c9cb0bdfffdaa4876bae48a files/hibernate-script-1.93-gentoo.patch 973
+RMD160 8528563d7494bbb1c123a109f1448d124c9796a6 files/hibernate-script-1.93-gentoo.patch 973
+SHA256 b89aca9c110bbbe72bf982dc98b83ceab1ee70f2aacd80728094ede94ce9e570 files/hibernate-script-1.93-gentoo.patch 973
+DIST hibernate-script-1.12.tar.gz 64752 RMD160 3c2811d633727afd63f12062730515c9f6b16c4c SHA1 ba572234e0189dd9a64e26f5bacd14610551aa45 SHA256 dd1c1bb297fc4bfdce73614322cb60d92d99db719e473b9cbb4c62e0ea444147
+DIST hibernate-script-1.91.tar.gz 67112 RMD160 f8ae4e45307610e536f464e3180919533080b50e SHA1 b81808f499068937a9696e977ef1cfd499d21eee SHA256 c942830773829037449ef88c697203e96f1e7511551ed3029570512700bf4d13
+DIST hibernate-script-1.93.tar.gz 68644 RMD160 bbb59d7ac5c7a26667cb00c5dd32224ad3eb8f01 SHA1 cea3ece2fdbe277c3e1878fd2acb9a728138c5f6 SHA256 8020d653cc09d1724f700e2b28cf5ce83eef3ffd287304141357eef2c22db366
+EBUILD hibernate-script-1.12-r1.ebuild 1974 RMD160 ccc26a0d4ab187628a79b8c4312038615e74573d SHA1 e277b36a60dc3f66802bccc8a47151f0c1ab8e3b SHA256 9d3fa9cd0ca38f4ab75056d4dc470176c9f9bd2cf00045be58f77083655b789d
 MD5 53831bcba1472acf2c180f2e6e754a63 hibernate-script-1.12-r1.ebuild 1974
+RMD160 ccc26a0d4ab187628a79b8c4312038615e74573d hibernate-script-1.12-r1.ebuild 1974
+SHA256 9d3fa9cd0ca38f4ab75056d4dc470176c9f9bd2cf00045be58f77083655b789d hibernate-script-1.12-r1.ebuild 1974
+EBUILD hibernate-script-1.91.ebuild 2114 RMD160 9128b1561b2685394b2df695400b008b18638d4c SHA1 f0fb4299b5c74d8c39632007f9b6e077f48c0e34 SHA256 e70673b014e72d9dc3616e4ff234e575f927fda4529913539167e049463ce73c
 MD5 9f8043f7a55fe38ebe5f1ad94c8dadd5 hibernate-script-1.91.ebuild 2114
-MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+RMD160 9128b1561b2685394b2df695400b008b18638d4c hibernate-script-1.91.ebuild 2114
+SHA256 e70673b014e72d9dc3616e4ff234e575f927fda4529913539167e049463ce73c hibernate-script-1.91.ebuild 2114
+EBUILD hibernate-script-1.93.ebuild 2234 RMD160 0279d9acc374c27d110b49fc8b0fe6b8f2b610a5 SHA1 bc3c15b6ea1dac0173343effc92b7ae5e1eea310 SHA256 8a215821de19a5d1f043ff194a83eccd1d6dd7ca6e637764299ee3e066c226aa
+MD5 aa8b4c69c0a0f1544f4b2bd8b149c95f hibernate-script-1.93.ebuild 2234
+RMD160 0279d9acc374c27d110b49fc8b0fe6b8f2b610a5 hibernate-script-1.93.ebuild 2234
+SHA256 8a215821de19a5d1f043ff194a83eccd1d6dd7ca6e637764299ee3e066c226aa hibernate-script-1.93.ebuild 2234
+MISC ChangeLog 5894 RMD160 f22f48563319dec0e887ac1c54abf7bf2ae876e0 SHA1 b4ff26bf665c40b1697e7b239b55f9c0ace14000 SHA256 fd86ce990769a13cfa6a21f57f18bc6e1a731a0c3c06ec1797f9b490ba411372
+MD5 e856b179487c40157df733808f85bd79 ChangeLog 5894
+RMD160 f22f48563319dec0e887ac1c54abf7bf2ae876e0 ChangeLog 5894
+SHA256 fd86ce990769a13cfa6a21f57f18bc6e1a731a0c3c06ec1797f9b490ba411372 ChangeLog 5894
+MISC metadata.xml 251 RMD160 0226ff71e891e912368bf90088fe0a0126b19e03 SHA1 efb434754f2a669e63b1c307a8e73666783244fb SHA256 bbd3bedb57926ce9632a7659dada60f3b2e40c2909859a40dcfce447e13a0c26
+MD5 c8e1f0c096787975a770bc93ef07cf2a metadata.xml 251
+RMD160 0226ff71e891e912368bf90088fe0a0126b19e03 metadata.xml 251
+SHA256 bbd3bedb57926ce9632a7659dada60f3b2e40c2909859a40dcfce447e13a0c26 metadata.xml 251
+MD5 0c2af54d8ff3276d4ad0f267a4e034ca files/digest-hibernate-script-1.12-r1 262
+RMD160 021b4883dc2d937fd49b8baf01418704172ae599 files/digest-hibernate-script-1.12-r1 262
+SHA256 245468f631843dc85438ff9e62e91fbee4a39ce575f577bf8b536de5078a39b9 files/digest-hibernate-script-1.12-r1 262
+MD5 42dd754f9773d3ddcc11790676bcf1b1 files/digest-hibernate-script-1.91 262
+RMD160 c4f34d98b2712106570cf2f413d5d8cd7cbe523a files/digest-hibernate-script-1.91 262
+SHA256 8fad1f0c3eb94816b472129104f3a1d5b6bd0bb40251647d6838a047943dd09a files/digest-hibernate-script-1.91 262
+MD5 6df4f13730ccce8b2c2c007a366e32d3 files/digest-hibernate-script-1.93 262
+RMD160 ea48cd11767637391c710a50b80e13cfd49ad29a files/digest-hibernate-script-1.93 262
+SHA256 9978a523acc1585caafd33a5cfe59cbbc184479cb65abef81141e8ae2e10ba37 files/digest-hibernate-script-1.93 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEtnxTflZ8QqxhrsMRAgOhAJ4kb6ywejqwtR5SMM//sJOKpMqkdACfclTm
+VsjwfjIpESZRzVYA0BSlb9Y=
+=knko
+-----END PGP SIGNATURE-----
