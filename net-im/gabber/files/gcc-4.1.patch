@@ -1,0 +1,83 @@
+diff -urN gabber-0.8.8.orig/jabberoo/include/jabberoo.hh gabber-0.8.8/jabberoo/include/jabberoo.hh
+--- gabber-0.8.8.orig/jabberoo/include/jabberoo.hh	2006-06-03 09:26:56.000000000 +0200
++++ gabber-0.8.8/jabberoo/include/jabberoo.hh	2006-06-03 09:27:43.000000000 +0200
+@@ -357,7 +357,7 @@
+ 		* be generated and sent.
+ 		* @return The delivered message event which should be sent.
+ 		*/
+-	       Message Message::delivered() const;
++	       Message delivered() const;
+ 
+ 	       /**
+ 		* Create a message event stating that this Message has been displayed.
+@@ -365,7 +365,7 @@
+ 		* be generated and sent.
+ 		* @return The displayed message event which should be sent.
+ 		*/	       
+-	       Message Message::displayed() const;
++	       Message displayed() const;
+ 
+ 	       /**
+ 		* Create a message event stating that this Message is being replied to.
+@@ -373,7 +373,7 @@
+ 		* be generated and sent.
+ 		* @return The composing message event which should be sent.
+ 		*/
+-	       Message Message::composing() const;
++	       Message composing() const;
+ 
+ 	       // Static class methods
+ 	       /**
+diff -urN gabber-0.8.8.orig/jabberoo/libjudo/src/judo.hpp gabber-0.8.8/jabberoo/libjudo/src/judo.hpp
+--- gabber-0.8.8.orig/jabberoo/libjudo/src/judo.hpp	2006-06-03 09:26:56.000000000 +0200
++++ gabber-0.8.8/jabberoo/libjudo/src/judo.hpp	2006-06-03 09:27:16.000000000 +0200
+@@ -317,7 +317,7 @@
+ 	   Delete the child Node designated by the supplied iterator.
+ 	   @param it Iterator pointing to the child Node 
+ 	*/
+-	void Element::erase(Element::iterator it)
++	void erase(Element::iterator it)
+ 	    { delete *it; _children.erase(it); }
+ 
+ 	Element* findElement(const std::string& name);
+diff -urN gabber-0.8.8.orig/src/AutoAway.hh gabber-0.8.8/src/AutoAway.hh
+--- gabber-0.8.8.orig/src/AutoAway.hh	2006-06-03 09:26:56.000000000 +0200
++++ gabber-0.8.8/src/AutoAway.hh	2006-06-03 09:29:39.000000000 +0200
+@@ -44,7 +44,7 @@
+      void on_session_disconnected();
+      void on_session_last(string &idletime);
+      gint auto_away_timer();
+-     void AutoAway::update_statusbar_aatime_msg(unsigned long idle_time);
++     void update_statusbar_aatime_msg(unsigned long idle_time);
+ 
+      void set_away(jabberoo::Presence::Show show);
+      void set_back();
+diff -urN gabber-0.8.8.orig/src/GabberApp.hh gabber-0.8.8/src/GabberApp.hh
+--- gabber-0.8.8.orig/src/GabberApp.hh	2006-06-03 09:26:56.000000000 +0200
++++ gabber-0.8.8/src/GabberApp.hh	2006-06-03 09:28:47.000000000 +0200
+@@ -87,7 +87,7 @@
+      void on_session_roster(const judo::Element& t);
+      void on_session_disconnected();
+      void on_session_version(string& name, string& version, string& os);
+-     void GabberApp::on_session_time(string& UTF8Time, string& UTF8TimeZone);
++     void on_session_time(string& UTF8Time, string& UTF8TimeZone);
+      void on_session_presence(const jabberoo::Presence& p, jabberoo::Presence::Type prev);
+      void on_session_my_presence(const jabberoo::Presence& p);
+ 
+diff -urN gabber-0.8.8.orig/src/GabberUtility.hh gabber-0.8.8/src/GabberUtility.hh
+--- gabber-0.8.8.orig/src/GabberUtility.hh	2006-06-03 09:26:56.000000000 +0200
++++ gabber-0.8.8/src/GabberUtility.hh	2006-06-03 09:29:17.000000000 +0200
+@@ -118,10 +118,10 @@
+      : public SigC::Object
+ {
+ public:
+-     FileSel::FileSel(const string& filename, const string& title, const string& log);
++     FileSel(const string& filename, const string& title, const string& log);
+ protected:
+-     void FileSel::on_ok_clicked();
+-     void FileSel::on_cancel_clicked();
++     void on_ok_clicked();
++     void on_cancel_clicked();
+ private:
+      const string& _log;
+      Gtk::FileSelection* _fileSel;
