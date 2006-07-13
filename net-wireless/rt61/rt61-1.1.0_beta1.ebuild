@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta1.ebuild,v 1.1 2006/07/01 12:12:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt61/rt61-1.1.0_beta1.ebuild,v 1.2 2006/07/13 22:04:49 genstef Exp $
 
 inherit linux-mod
 
@@ -29,7 +29,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	use debug && export debug="y"
+	use debug && BUILD_TARGETS="clean debug"
 	linux-mod_src_compile
 }
 
