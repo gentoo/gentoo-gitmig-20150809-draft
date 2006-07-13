@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6.ebuild,v 1.9 2006/04/12 13:15:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6.ebuild,v 1.10 2006/07/13 11:34:13 kevquinn Exp $
 
 MAN_VER=""
 PATCH_VER="1.0"
@@ -124,7 +124,7 @@ src_unpack() {
 			# this patch does, because if you are, you are probably already aware of what
 			# it does.
 			# All that said, the abilities of this patch are disabled by default and need
-			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
+			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels,
 			# There is the possibility it may be used for very specific userland apps too.
 			if use ip28 or use ip32r10k; then
 				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch
@@ -136,4 +136,37 @@ src_unpack() {
 			fi
 			;;
 	esac
+
+	# bug #139918 - conflict between gcc and java-config-2 for ownership of
+	# /usr/bin/rmi{c,registry}.  Done with mv & sed rather than a patch
+	# because patches would be large (thanks to the rename of man files),
+	# and it's clear from the sed invocations that all that changes is the
+	# rmi{c,registry} names to grmi{c,registry} names.
+	# Kevin F. Quinn 2006-07-12
+	einfo "Renaming jdk executables rmic and rmiregistry to grmic and grmiregistry."
+	# 1) Move the man files if present (missing prior to gcc-3.4)
+	for manfile in rmic rmiregistry; do
+		[[ -f ${S}/gcc/doc/${manfile}.1 ]] || continue
+		mv ${S}/gcc/doc/${manfile}.1 ${S}/gcc/doc/g${manfile}.1
+	done
+	# 2) Fixup references in the docs if present (mission prior to gcc-3.4)
+	for jfile in gcc/doc/gcj.info gcc/doc/grmic.1 gcc/doc/grmiregistry.1 gcc/java/gcj.texi; do
+		[[ -f ${S}/${jfile} ]] || continue
+		sed -i -e 's:rmiregistry:grmiregistry:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmiregistry"
+		sed -i -e 's:rmic:grmic:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmic"
+	done
+	# 3) Fixup Makefiles to build the changed executable names
+	#    These are present in all 3.x versions, and are the important bit
+	#    to get gcc to build with the new names.
+	for jfile in libjava/Makefile.am libjava/Makefile.in gcc/java/Make-lang.in; do
+		sed -i -e 's:rmiregistry:grmiregistry:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmiregistry"
+		# Careful with rmic on these files; it's also the name of a directory
+		# which should be left unchanged.  When it appears as a directory,
+		# it has a '/' after it.
+		sed -i -e 's:rmic\([$_ ]\):grmic\1:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmic"
+	done
 }

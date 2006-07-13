@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.561 2006/07/06 18:40:08 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.562 2006/07/13 11:34:13 kevquinn Exp $
+
+  13 Jul 2006; Kevin F. Quinn <kevquinn@gentoo.org> gcc-3.3.5-r1.ebuild,
+  gcc-3.3.5.20050130-r1.ebuild, gcc-3.3.6.ebuild, gcc-3.3.6-r1.ebuild,
+  gcc-3.4.4-r1.ebuild, gcc-3.4.5.ebuild, gcc-3.4.5-r1.ebuild,
+  gcc-3.4.6.ebuild, gcc-3.4.6-r1.ebuild, gcc-3.4.6-r2.ebuild:
+  Change names of rmic, rmiregistry to grmic, grmiregistry to avoid conflicts
+  with other java platforms.  Upstream already made this change for the same
+  reason in gcc-4 (bug #139918)
 
 *gcc-3.4.6-r2 (06 Jul 2006)
 
