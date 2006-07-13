@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.05.ebuild,v 1.2 2006/07/06 08:10:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.05.ebuild,v 1.3 2006/07/13 08:23:55 xmerlin Exp $
 
 MY_P="${PN/clvm/LVM2}.${PV}"
 
@@ -47,4 +47,8 @@ src_install() {
 	dodoc COPYING* INSTALL README VERSION WHATS_NEW doc/*.{conf,c,txt}
 
 	newinitd ${FILESDIR}/clvmd.rc clvmd || die
+
+	insinto /lib/rcscripts/addons
+	newins ${FILESDIR}/lvm2-start.sh lvm-start.sh || die
+	newins ${FILESDIR}/lvm2-stop.sh lvm-stop.sh || die
 }
