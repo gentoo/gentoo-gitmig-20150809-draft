@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.19.ebuild,v 1.1 2006/07/09 20:12:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.1.19.ebuild,v 1.2 2006/07/13 23:42:05 solar Exp $
 
 inherit toolchain-funcs
 
@@ -32,7 +32,22 @@ src_install() {
 pkg_postinst() {
 	[ -e ${ROOT}/etc/portage/bin/post_sync ] && return 0
 	mkdir -p ${ROOT}/etc/portage/bin/
-	cp "${FILESDIR}"/post_sync ${ROOT}/etc/portage/bin/
+
+cat <<__EOF__ > ${ROOT}/etc/portage/bin/post_sync
+#!/bin/sh
+# Copyright 2006-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+if [ -d /etc/portage/postsync.d/ ]; then
+	for f in /etc/portage/postsync.d/* ; do
+		if [ -x \${f} ] ; then
+			\${f}
+		fi
+	done
+else
+	:
+fi
+__EOF__
 	chmod 755 ${ROOT}/etc/portage/bin/post_sync
 	if [ ! -e ${ROOT}/etc/portage/postsync.d/q-reinitialize ]; then
 		mkdir -p ${ROOT}/etc/portage/postsync.d/

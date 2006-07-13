@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.52 2006/07/09 20:12:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.53 2006/07/13 23:42:05 solar Exp $
+
+  13 Jul 2006; <solar@gentoo.org>
+  -files/portage-utils-0.1.17-bug133514.patch, -files/post_sync,
+  portage-utils-0.1.19.ebuild:
+  - work around accessing filesdir when buildpkg is enabled
 
 *portage-utils-0.1.19 (09 Jul 2006)
 
