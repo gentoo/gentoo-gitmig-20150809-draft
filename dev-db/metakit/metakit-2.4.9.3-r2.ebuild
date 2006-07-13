@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.18 2006/04/01 14:30:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.19 2006/07/13 02:22:38 agriffis Exp $
 
 inherit python multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.equi4.com/pub/mk/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ppc s390 sparc x86"
+KEYWORDS="amd64 hppa ia64 ppc s390 sparc x86"
 IUSE="python tcltk"
 
 DEPEND=">=sys-apps/sed-4
