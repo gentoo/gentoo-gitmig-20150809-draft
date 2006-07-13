@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.12 2006/06/08 13:57:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.13 2006/07/13 13:03:51 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> akode-2.0_rc1.ebuild:
+  Mark 2.0_rc1 stable on ia64
 
   08 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> akode-2.0_rc1.ebuild:
   Add ~x86-fbsd keyword
