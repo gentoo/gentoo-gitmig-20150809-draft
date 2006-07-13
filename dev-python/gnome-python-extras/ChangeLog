@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.35 2006/07/12 16:45:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.36 2006/07/13 18:29:27 tsunam Exp $
+
+  13 Jul 2006; Joshua Jackson <tsunam@gentoo.org>
+  gnome-python-extras-2.14.0-r1.ebuild:
+  Stable x86; gnome stablization #139612
 
   12 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gnome-python-extras-2.14.0.ebuild:
