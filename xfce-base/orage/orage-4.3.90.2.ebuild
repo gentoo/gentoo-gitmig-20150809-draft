@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/orage-4.3.90.2.ebuild,v 1.1 2006/07/10 18:33:59 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/orage-4.3.90.2.ebuild,v 1.2 2006/07/13 21:15:22 nichoj Exp $
 
-inherit xfce44
+inherit xfce44 eutils
 
 xfce44_beta
 
@@ -33,3 +33,9 @@ if use berkdb; then
 fi
 
 xfce44_core_package
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-asneeded.patch
+}

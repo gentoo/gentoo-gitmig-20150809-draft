@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/orage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.5 2006/07/10 18:36:13 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/orage/ChangeLog,v 1.6 2006/07/13 21:15:22 nichoj Exp $
+
+  13 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  +files/orage-4.3.90.2-asneeded.patch, orage-4.3.90.2.ebuild:
+  Applied as-needed patch, as supplied by drac.
 
   10 Jul 2006; Brad Cowan <bcowan@gentoo.org> ChangeLog:
   Xfce beta 2 builds.
