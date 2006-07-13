@@ -1,18 +1,46 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5bc6b5f9cb9975bd3e1f667280e051ac ChangeLog 1154
-MD5 42497afa88c2cf81d6402ee3451bf7fc commons-betwixt-0.6-r1.ebuild 1462
-MD5 99bc76040f49977d74d5afc8786d4bdf commons-betwixt-0.7.ebuild 1815
+AUX commons-betwixt-0.6-noget.patch 980 RMD160 4949187d6428dfc3798c8638cb709c8be99a15cc SHA1 1d9c0e791998da306470cc2778d397d3830bd313 SHA256 57a9424247b285e281bbf8a9db29899b75f5053c36dd07a73edcdc8df10a86fc
 MD5 3b892742ca91101232da276492fa254c files/commons-betwixt-0.6-noget.patch 980
+RMD160 4949187d6428dfc3798c8638cb709c8be99a15cc files/commons-betwixt-0.6-noget.patch 980
+SHA256 57a9424247b285e281bbf8a9db29899b75f5053c36dd07a73edcdc8df10a86fc files/commons-betwixt-0.6-noget.patch 980
+AUX commons-betwixt-0.7-notests.patch 1171 RMD160 16aaa9d2789e38196f4f2390712a205bd46229bb SHA1 f6f3f4c1950a08e848ec7f33903d322398bfdf34 SHA256 9531b8d4d3b0a6df887bbb661899236c3d6d0411459799c7f6838052cb8b0ac9
 MD5 09366969e8959783230e9edd31dba372 files/commons-betwixt-0.7-notests.patch 1171
-MD5 c4db26920b75dccce46c479139741605 files/digest-commons-betwixt-0.6-r1 75
-MD5 0f3f6cf2fc69aa991b4f06a5c63bc0c4 files/digest-commons-betwixt-0.7 75
+RMD160 16aaa9d2789e38196f4f2390712a205bd46229bb files/commons-betwixt-0.7-notests.patch 1171
+SHA256 9531b8d4d3b0a6df887bbb661899236c3d6d0411459799c7f6838052cb8b0ac9 files/commons-betwixt-0.7-notests.patch 1171
+DIST commons-betwixt-0.6-src.tar.gz 292694 RMD160 260a8b4e0eb2e0c2ebec2b02a4ea45e295eba55f SHA1 9e030edb24f14586f6924794ff6fe6b9acb0efe5 SHA256 528fe562148ad6956f2dbd6a21f9b6011184765fe0b0f569dec591e30e5e4e4d
+DIST commons-betwixt-0.7-src.tar.gz 278140 RMD160 f101052ed9851ab5284751ed76d8f2cc7f929185 SHA1 8d6fa530cf7cea97d55c197d68fc01e9f1ad0456 SHA256 6b1adcfb0f573fe29b2440e87733ef176c07c0193f3f69587481772b3af148e4
+EBUILD commons-betwixt-0.6-r1.ebuild 1462 RMD160 84dd44c25910ce66d2f6d5695075eda7d7e01969 SHA1 c419c476f87c81a8b874fa7e099ec37fc50a984f SHA256 da1b84752efe65ebb73c6863a5691d1584901379ba34313d901e109aafb541a9
+MD5 42497afa88c2cf81d6402ee3451bf7fc commons-betwixt-0.6-r1.ebuild 1462
+RMD160 84dd44c25910ce66d2f6d5695075eda7d7e01969 commons-betwixt-0.6-r1.ebuild 1462
+SHA256 da1b84752efe65ebb73c6863a5691d1584901379ba34313d901e109aafb541a9 commons-betwixt-0.6-r1.ebuild 1462
+EBUILD commons-betwixt-0.6-r2.ebuild 1330 RMD160 ce8c28bff687e673fb185d78ea5db9eaea372490 SHA1 0759efdd316835471f7d23145a8cfd8c25dc2d69 SHA256 d610aacbe16ef0bd7b6b7b5e5c8da7546e31b0b83413eaf37e802c062aaea752
+MD5 6faefa7e006c4cb9005a856eca72e762 commons-betwixt-0.6-r2.ebuild 1330
+RMD160 ce8c28bff687e673fb185d78ea5db9eaea372490 commons-betwixt-0.6-r2.ebuild 1330
+SHA256 d610aacbe16ef0bd7b6b7b5e5c8da7546e31b0b83413eaf37e802c062aaea752 commons-betwixt-0.6-r2.ebuild 1330
+EBUILD commons-betwixt-0.7-r1.ebuild 1661 RMD160 2382833c8ad96fe1aaf839e4e36afccd4a40cfcd SHA1 bde3b0c4590bfd120cbc597f689ce523a4b6d5ce SHA256 80f7890824ef695e292d36c142a60ef21251eb3148d7bd1810fb4e88ae7a0146
+MD5 7bdf4c2d0ea8f3e635b24bb06fc53307 commons-betwixt-0.7-r1.ebuild 1661
+RMD160 2382833c8ad96fe1aaf839e4e36afccd4a40cfcd commons-betwixt-0.7-r1.ebuild 1661
+SHA256 80f7890824ef695e292d36c142a60ef21251eb3148d7bd1810fb4e88ae7a0146 commons-betwixt-0.7-r1.ebuild 1661
+EBUILD commons-betwixt-0.7.ebuild 1815 RMD160 81903cff3252aaded4aa6dd915099616f274aa0d SHA1 4751e43ced94d6f4d931c100b560f389dc2deff2 SHA256 f533fc48d81e4699f8ffc79f696784e8704e45180a29d660c29ccdda6ef86284
+MD5 99bc76040f49977d74d5afc8786d4bdf commons-betwixt-0.7.ebuild 1815
+RMD160 81903cff3252aaded4aa6dd915099616f274aa0d commons-betwixt-0.7.ebuild 1815
+SHA256 f533fc48d81e4699f8ffc79f696784e8704e45180a29d660c29ccdda6ef86284 commons-betwixt-0.7.ebuild 1815
+MISC ChangeLog 1395 RMD160 5d48ec635dc966a201365d59ff66ae2fe396f054 SHA1 874caf452d0d33cb51273976b826f867a8016853 SHA256 8edb6c28c5dc45ccae7fc7f62f075641deb0fd924bb53200f298d2dd86cef727
+MD5 1ce237f593a97ed17410821c1272f14e ChangeLog 1395
+RMD160 5d48ec635dc966a201365d59ff66ae2fe396f054 ChangeLog 1395
+SHA256 8edb6c28c5dc45ccae7fc7f62f075641deb0fd924bb53200f298d2dd86cef727 ChangeLog 1395
+MISC metadata.xml 739 RMD160 edcd9c21a2f7c3e48b4034dd1ea6e7ec5c9cdfe1 SHA1 9f1dcc20b346cb18d0f227369950afd9e09bdd90 SHA256 e3cb2eb0555c443124a02abcdc02dc70d5e83d1c0832c4c74b0c2bc2c146d8fc
 MD5 1eb638c237e8835b9fe6b49a60e42d9d metadata.xml 739
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDoP0ondWRXhKOboURAk+dAJ9fzWeoqRwadV2/NlzLDzEDw7PEwACg6ZjA
-cOL9DRwkWOq4FYH25GKsULM=
-=EgBX
------END PGP SIGNATURE-----
+RMD160 edcd9c21a2f7c3e48b4034dd1ea6e7ec5c9cdfe1 metadata.xml 739
+SHA256 e3cb2eb0555c443124a02abcdc02dc70d5e83d1c0832c4c74b0c2bc2c146d8fc metadata.xml 739
+MD5 93a42860da538facd3680c14c7aea8c1 files/digest-commons-betwixt-0.6-r1 271
+RMD160 ef7439668e2c2f6a2171ed282a83550c160a5ac2 files/digest-commons-betwixt-0.6-r1 271
+SHA256 b60755478baf45b6023875a01cbbcd393978f7adea964c82413a94184b35afc3 files/digest-commons-betwixt-0.6-r1 271
+MD5 93a42860da538facd3680c14c7aea8c1 files/digest-commons-betwixt-0.6-r2 271
+RMD160 ef7439668e2c2f6a2171ed282a83550c160a5ac2 files/digest-commons-betwixt-0.6-r2 271
+SHA256 b60755478baf45b6023875a01cbbcd393978f7adea964c82413a94184b35afc3 files/digest-commons-betwixt-0.6-r2 271
+MD5 6a72c000879b0ae6767c6f2bdbd0d0fc files/digest-commons-betwixt-0.7 271
+RMD160 622a3f55fef0e4cf5ff209c03cd4ee327d644f63 files/digest-commons-betwixt-0.7 271
+SHA256 1b94a3f2d5b3c9267c125c5bd1d2845d61ff6144c6ee537695e20b2f29b9c6a6 files/digest-commons-betwixt-0.7 271
+MD5 6a72c000879b0ae6767c6f2bdbd0d0fc files/digest-commons-betwixt-0.7-r1 271
+RMD160 622a3f55fef0e4cf5ff209c03cd4ee327d644f63 files/digest-commons-betwixt-0.7-r1 271
+SHA256 1b94a3f2d5b3c9267c125c5bd1d2845d61ff6144c6ee537695e20b2f29b9c6a6 files/digest-commons-betwixt-0.7-r1 271
