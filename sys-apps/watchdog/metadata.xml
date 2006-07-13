@@ -4,5 +4,6 @@
 	<herd>kernel</herd>
 	<maintainer>
 		<email>phreak@gentoo.org</email>
+		<name>Christian Heim</name>
 	</maintainer>
 </pkgmetadata>

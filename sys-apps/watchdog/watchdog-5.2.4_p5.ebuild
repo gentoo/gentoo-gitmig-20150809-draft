@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.2.4_p5.ebuild,v 1.5 2006/02/07 21:01:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.2.4_p5.ebuild,v 1.6 2006/07/13 17:16:49 phreak Exp $
 
 inherit eutils
 
@@ -36,8 +36,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	newconfd ${FILESDIR}/${P}-conf.d ${PN}
-	newinitd ${FILESDIR}/${P}-init.d ${PN}
+	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
+	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
 
 	dodoc AUTHORS README TODO
 	docinto examples
