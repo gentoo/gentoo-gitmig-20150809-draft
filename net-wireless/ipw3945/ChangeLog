@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.7 2006/06/25 10:55:42 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.8 2006/07/13 18:27:20 phreak Exp $
+
+*ipw3945-1.1.0_pre2 (13 Jul 2006)
+
+  13 Jul 2006; Christian Heim <phreak@gentoo.org> metadata.xml,
+  +ipw3945-1.1.0_pre2.ebuild:
+  Version bump; Taking temporary maintainership
 
   25 Jun 2006; Henrik Brix Andersen <brix@gentoo.org>
   -ipw3945-0.0.74.ebuild, -ipw3945-1.0.1.ebuild, -ipw3945-1.0.2.ebuild,
