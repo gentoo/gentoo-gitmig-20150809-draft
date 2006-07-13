@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.27 2006/07/08 10:53:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.28 2006/07/13 12:56:03 agriffis Exp $
+
+  13 Jul 2006; Aron Griffis <agriffis@gentoo.org> transfig-3.2.4-r2.ebuild:
+  Mark 3.2.4-r2 stable on ia64
 
   08 Jul 2006; Lars Weiler <pylon@gentoo.org> transfig-3.2.4-r2.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.
