@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5623 2006/07/12 18:50:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5624 2006/07/13 18:02:31 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (13 Jul 2006)
+# ieee80211-1.1.14 is breaking ABI!
+=net-wireless/ieee80211-1.1.14
 
 # Diego Pettenò <flameeyes@gentoo.org> (11 Jul 2006)
 # Mask while testing, so that I don't need to revbump eventual changes.
