@@ -1,0 +1,11 @@
+--- gfs-kernel/src/gfs/ops_inode.c.orig	2006-07-14 14:32:00.000000000 +0200
++++ gfs-kernel/src/gfs/ops_inode.c	2006-07-14 14:32:07.000000000 +0200
+@@ -24,7 +24,7 @@
+ #include <linux/mm.h>
+ #include <linux/xattr.h>
+ #include <linux/posix_acl.h>
+-#include <cluster/cnxman.h>
++#include <../dlm/cnxman.h>
+ 
+ #include "gfs.h"
+ #include "acl.h"
