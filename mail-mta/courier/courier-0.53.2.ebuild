@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.1 2006/07/11 00:21:53 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.2 2006/07/14 17:11:38 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -263,6 +263,20 @@ src_install() {
 	else
 		dosym /usr/bin/sendmail /usr/sbin/sendmail
 	fi
+}
+
+src_test() {
+	addpredict /
+	vecho ">>> Test phase [check]: ${CATEGORY}/${PF}"
+	if hasq userpriv ${FEATURES} ; then
+		if ! emake -j1 check; then
+			hasq test ${FEATURES} && die "Make check failed. See above for details."
+			hasq test ${FEATURES} || eerror "Make check failed. See above for details."
+		fi
+	else
+		hasq test ${FEATURES} && eerror "Make check needs FEATURES="userpriv" to work."
+	fi
+	SANDBOX_PREDICT="${SANDBOX_PREDICT%:/}"
 }
 
 pkg_postinst() {
