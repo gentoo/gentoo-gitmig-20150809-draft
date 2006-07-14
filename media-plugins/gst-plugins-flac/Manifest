@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gst-plugins-0.8.10.tar.bz2 2397528
-DIST gst-plugins-0.8.11.tar.bz2 2439654
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
 DIST gst-plugins-0.8.8.tar.bz2 2214274
 DIST gst-plugins-0.8.9.tar.bz2 2356958
@@ -22,10 +19,10 @@ EBUILD gst-plugins-flac-0.10.2.ebuild 363 RMD160 04d7abfcd7accc9ea0476ff33d57d07
 MD5 388d07386ce7416489eeeedbdf673b39 gst-plugins-flac-0.10.2.ebuild 363
 RMD160 04d7abfcd7accc9ea0476ff33d57d0770c04f0c5 gst-plugins-flac-0.10.2.ebuild 363
 SHA256 e65eb77bcdef022632e73d0d47426ffa6b7760464cf180be288669cefa82888f gst-plugins-flac-0.10.2.ebuild 363
-EBUILD gst-plugins-flac-0.10.3.ebuild 458 RMD160 f6920b9647c82b66cdf7cdb712db05836300a10e SHA1 ffe338cbde51de6a1a31769dda5b5aaf10e12b2b SHA256 77ccda03ba5203e27a7e895da598a581fb106319f19c15e9e148e1723e2d1538
-MD5 d828cb6b7dc7b670b3d63af500b7d2ef gst-plugins-flac-0.10.3.ebuild 458
-RMD160 f6920b9647c82b66cdf7cdb712db05836300a10e gst-plugins-flac-0.10.3.ebuild 458
-SHA256 77ccda03ba5203e27a7e895da598a581fb106319f19c15e9e148e1723e2d1538 gst-plugins-flac-0.10.3.ebuild 458
+EBUILD gst-plugins-flac-0.10.3.ebuild 459 RMD160 9f0737413eec71f47f6eb4115bdb878554c30ddf SHA1 8fa72b30a5bd6cee1dac0f8b389237e122a4513e SHA256 10a8112df7e6c52ad83f6a08b45cff4de8b64785c6818e88a4198af37e490830
+MD5 04315093bd7fd00069e1d5d6e241d4b1 gst-plugins-flac-0.10.3.ebuild 459
+RMD160 9f0737413eec71f47f6eb4115bdb878554c30ddf gst-plugins-flac-0.10.3.ebuild 459
+SHA256 10a8112df7e6c52ad83f6a08b45cff4de8b64785c6818e88a4198af37e490830 gst-plugins-flac-0.10.3.ebuild 459
 EBUILD gst-plugins-flac-0.8.10.ebuild 371 RMD160 801b21c65f85c5bb61bf54ae2df8643f5b47eb45 SHA1 c3cd32a699185a4d1e73da93c04b40bc811c70ab SHA256 dd8961929a86b34499b3e76d5e2dd1bb9c8dd316606552103db370169206f56c
 MD5 f7c9bb8f865389eec82fb50693062ffe gst-plugins-flac-0.8.10.ebuild 371
 RMD160 801b21c65f85c5bb61bf54ae2df8643f5b47eb45 gst-plugins-flac-0.8.10.ebuild 371
@@ -46,10 +43,10 @@ EBUILD gst-plugins-flac-0.8.9.ebuild 379 RMD160 082b0c1ddd4dda714c0e9fd1b0966d80
 MD5 decd926997ab22bc8b0b0066bb95c01e gst-plugins-flac-0.8.9.ebuild 379
 RMD160 082b0c1ddd4dda714c0e9fd1b0966d8006d99e98 gst-plugins-flac-0.8.9.ebuild 379
 SHA256 e9e519b69cd056af59a347a2f495a4543138ef9b320ffdced89729f2fb54e0a5 gst-plugins-flac-0.8.9.ebuild 379
-MISC ChangeLog 8204 RMD160 9746dc6f893d625463dba57eff139c31d928b9de SHA1 24119d48ef818ca5cf67dcea2fed0fd7bc2103d9 SHA256 c249c85c99443d1d84df502fbcd45c7ed8a1e67e9f74ba413aa71cf96f4f00c7
-MD5 5eba96279e730d07d548f2fc6a597264 ChangeLog 8204
-RMD160 9746dc6f893d625463dba57eff139c31d928b9de ChangeLog 8204
-SHA256 c249c85c99443d1d84df502fbcd45c7ed8a1e67e9f74ba413aa71cf96f4f00c7 ChangeLog 8204
+MISC ChangeLog 8323 RMD160 dd1e955ea2d64d48d0e2347b99f858f41718a8c3 SHA1 0a126e4dd0f97c8a953c4ef65db6508954d38558 SHA256 235c63d5d5ca407d57558a2e8d24a915be81c08877e5bc904b76ca66c6687d81
+MD5 96a1fa12455bdc3444fd443d81327e9b ChangeLog 8323
+RMD160 dd1e955ea2d64d48d0e2347b99f858f41718a8c3 ChangeLog 8323
+SHA256 235c63d5d5ca407d57558a2e8d24a915be81c08877e5bc904b76ca66c6687d81 ChangeLog 8323
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
@@ -69,9 +66,9 @@ SHA256 0be7c43b8feb4594d9ff28266d21cb341070ed587a67fcb346ae21e7b869d8ea files/di
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-flac-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-flac-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-flac-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-flac-0.8.11 72
-RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-flac-0.8.11 72
-SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-flac-0.8.11 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-flac-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-flac-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-flac-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-flac-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-flac-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-flac-0.8.12 262
@@ -81,10 +78,3 @@ SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/di
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-flac-0.8.9 71
 RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-flac-0.8.9 71
 SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-flac-0.8.9 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEtTEmkT4lNIS36YERAuGtAKCNNPYX5fy/+mUVSXncXui5bQzWBgCfajsO
-wm6Jker6BcWJ/J8/CBrbOdA=
-=nHir
------END PGP SIGNATURE-----

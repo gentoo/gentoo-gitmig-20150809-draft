@@ -1,16 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gst-plugins-0.8.10.tar.bz2 2397528
-DIST gst-plugins-0.8.11.tar.bz2 2439654
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926
 DIST gst-plugins-0.8.8.tar.bz2 2214274
 DIST gst-plugins-0.8.9.tar.bz2 2356958
 DIST gst-plugins-ugly-0.10.3.tar.bz2 605833
-EBUILD gst-plugins-mad-0.10.3.ebuild 507 RMD160 d9d0e644088a2864f8847ee0af22bc6c8fdb21df SHA1 682003e56a2a5f4edcff2daf01916eda154aa139 SHA256 bef93bf180375c5230d79b16bfa31207e5ab7f776b8ef84e6a9f35a8ff080820
-MD5 619a378eb86a242eb3f66fdfd11161ea gst-plugins-mad-0.10.3.ebuild 507
-RMD160 d9d0e644088a2864f8847ee0af22bc6c8fdb21df gst-plugins-mad-0.10.3.ebuild 507
-SHA256 bef93bf180375c5230d79b16bfa31207e5ab7f776b8ef84e6a9f35a8ff080820 gst-plugins-mad-0.10.3.ebuild 507
+EBUILD gst-plugins-mad-0.10.3.ebuild 508 RMD160 4b5020c41dd532c848af963290c06cde20917798 SHA1 77f636ade51472dad7479471098784184e9818e1 SHA256 dbaff21e299f72aea6bae27c4157db5ff2cd7168e867dff37d807a6d1996ad9d
+MD5 670f233dd9c5ef84e5841583ee7c91ae gst-plugins-mad-0.10.3.ebuild 508
+RMD160 4b5020c41dd532c848af963290c06cde20917798 gst-plugins-mad-0.10.3.ebuild 508
+SHA256 dbaff21e299f72aea6bae27c4157db5ff2cd7168e867dff37d807a6d1996ad9d gst-plugins-mad-0.10.3.ebuild 508
 EBUILD gst-plugins-mad-0.8.10.ebuild 445 RMD160 e17dbd2a8e3bfbb1421fef431e65ec862ce312d6 SHA1 2993aa5fa6c75438ac7580dca7437fbc1a93fbad SHA256 c1de8feebf2721cfe96955fcedd057d2a754f19f5bc4158356c593b0c1652a3a
 MD5 35b742a7d0813c3ff66dec647ff1607a gst-plugins-mad-0.8.10.ebuild 445
 RMD160 e17dbd2a8e3bfbb1421fef431e65ec862ce312d6 gst-plugins-mad-0.8.10.ebuild 445
@@ -31,10 +28,10 @@ EBUILD gst-plugins-mad-0.8.9.ebuild 452 RMD160 fd3a9c4c08287d7246487e2b9a0839bc2
 MD5 966bb7731c822b1e9ec61a6a19fe09f6 gst-plugins-mad-0.8.9.ebuild 452
 RMD160 fd3a9c4c08287d7246487e2b9a0839bc263be3af gst-plugins-mad-0.8.9.ebuild 452
 SHA256 0558f0d9643eeb39c0524c4bfb1e849d4f8fe09eb5b600e5b0d2caccc4391cb1 gst-plugins-mad-0.8.9.ebuild 452
-MISC ChangeLog 10436 RMD160 07ac4b932f424588180fa70a240feee073ffef86 SHA1 fa3a7d960f523a420568b75f722e429dfc726f47 SHA256 e6c7e3f3f27c8369c9e42d1fde581ab38841314995bbcb70a078cc061ec4bc79
-MD5 6c9f399bceec9d111ad33033a845743a ChangeLog 10436
-RMD160 07ac4b932f424588180fa70a240feee073ffef86 ChangeLog 10436
-SHA256 e6c7e3f3f27c8369c9e42d1fde581ab38841314995bbcb70a078cc061ec4bc79 ChangeLog 10436
+MISC ChangeLog 10554 RMD160 bf54f5c6a897dd02aea73ca670f411c8a148cb20 SHA1 3df716a08b6100c9d6b630f33659c8e51a9ea9ab SHA256 4b6c0d67f58af7688e2d648a84038195d4cceae9c383b15d542ce94d875678d7
+MD5 baf71ae4a945d3aba3722cc512bafcd6 ChangeLog 10554
+RMD160 bf54f5c6a897dd02aea73ca670f411c8a148cb20 ChangeLog 10554
+SHA256 4b6c0d67f58af7688e2d648a84038195d4cceae9c383b15d542ce94d875678d7 ChangeLog 10554
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
@@ -45,9 +42,9 @@ SHA256 6310963148974d9162aa8508177f000d541e94dc3f838fb9e72d6874f139484d files/di
 MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-mad-0.8.10 72
 RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-mad-0.8.10 72
 SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-mad-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-mad-0.8.11 72
-RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-mad-0.8.11 72
-SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-mad-0.8.11 72
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-mad-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-mad-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-mad-0.8.11 262
 MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-mad-0.8.12 72
 RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-mad-0.8.12 72
 SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-mad-0.8.12 72
@@ -57,10 +54,3 @@ SHA256 8c042a1f86509a2d902bbc3d63874d8347af12c132215e8c67582fa8835e6089 files/di
 MD5 c6551068a03bbc459e7e798d919c744a files/digest-gst-plugins-mad-0.8.9 71
 RMD160 59910917ac9fe162d7686f1702fb5bdd98a25154 files/digest-gst-plugins-mad-0.8.9 71
 SHA256 06e49fc70cfec9d2553ced28a9c9246324fdd21c25f6bea9142de83f1f5a8153 files/digest-gst-plugins-mad-0.8.9 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEtTFmkT4lNIS36YERAtFRAJ9UGoWgTboBla5Gjluhy96rdxEdDQCePhBP
-Z6+nDhPaSMCatKInrqAn54A=
-=m17F
------END PGP SIGNATURE-----
