@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12.ebuild,v 1.10 2005/07/13 14:18:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.12.ebuild,v 1.11 2006/07/14 18:05:22 langthang Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -38,7 +38,7 @@ check_useflag() {
 	local my_pkg=$(best_version ${1})
 	local my_flag=${2}
 
-	if [[ $(grep -wo ${my_flag} /var/db/pkg/${my_pkg}/USE) ]]; then
+	if [[ $(grep -wo ${my_flag} ${ROOT}/var/db/pkg/${my_pkg}/USE) ]]; then
 		return 0
 	fi
 
