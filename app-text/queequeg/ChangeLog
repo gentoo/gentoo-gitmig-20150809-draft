@@ -1,6 +1,9 @@
 # ChangeLog for app-text/queequeg
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.4 2005/11/20 21:12:59 grobian Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/queequeg/ChangeLog,v 1.5 2006/07/14 13:18:39 hattya Exp $
+
+  14 Jul 2006; Akinori Hattori <hattya@gentoo.org> queequeg-0.91.ebuild:
+  fixes bug #133023.
 
   20 Nov 2005; Fabian Groffen <grobian@gentoo.org> queequeg-0.91.ebuild:
   Marked ~ppc-macos (bug #112304)
