@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.02.1-r1.ebuild,v 1.2 2006/07/11 03:23:12 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.02.1-r1.ebuild,v 1.3 2006/07/14 21:57:03 genstef Exp $
 
 inherit linux-mod eutils
 
 DESCRIPTION="Compressed filesystem loopback kernel module"
-HOMEPAGE="http://www.knopper.net/knoppix/"
+HOMEPAGE="http://packages.debian.org/unstable/source/cloop http://www.knopper.net/knoppix"
 SRC_URI="mirror://debian/pool/main/c/cloop/${PN}_${PV}+eb.10.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,7 +29,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i 's:MODULE_PARM(\([^,]*\), "s");:module_param(\1, charp, 0);:' compressed_loop.c
+	kernel_is 2 4 || sed -i 's:MODULE_PARM(\([^,]*\), "s");:module_param(\1, charp, 0);:' compressed_loop.c
 	sed -i -e 's:__stringify(KBUILD_MODNAME):"cloop":' compressed_loop.c
 }
 

@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/cloop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.12 2006/07/11 03:23:12 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/ChangeLog,v 1.13 2006/07/14 21:57:03 genstef Exp $
+
+  14 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/cloop-2.01.5-netinet-gentoo.patch,
+  -files/cloop-2.02.1-netinet-gentoo.patch,
+  -files/cloop.fix-Makefile-for-kernel-2.6-and-amd64.patch,
+  -files/cloop.fix-incompatible-kernel-2.6.7-and-later.patch,
+  -files/cloop.fix-7z-syntax-for-gcc-3.4.patch,
+  -files/cloop.fix-create_compressed_fs-segfault-on-amd64.patch,
+  -cloop-2.01.5-r1.ebuild, -cloop-2.02.1.ebuild, cloop-2.02.1-r1.ebuild:
+  fix with 2.4 thanks to Christophe Garault <gentoo@garault.org> in bug
+  140375, remove old
 
   11 Jul 2006; Joshua Jackson <tsunam@gentoo.org> cloop-2.02.1-r1.ebuild:
   Stable x86 see previous message for info
