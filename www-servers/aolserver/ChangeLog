@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/aolserver
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.9 2005/08/23 16:00:57 port001 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.10 2006/07/14 17:26:05 chtekk Exp $
+
+  14 Jul 2006; Luca Longinotti <chtekk@gentoo.org>
+  -aolserver-4.0.9-r1.ebuild, aolserver-4.0.10.ebuild:
+  Fix bug #140388 and ebuild bla config call.
 
   23 Aug 2005; Ian Leitch <port001@gentoo.org> aolserver-4.0.9-r1.ebuild,
   aolserver-4.0.10.ebuild:

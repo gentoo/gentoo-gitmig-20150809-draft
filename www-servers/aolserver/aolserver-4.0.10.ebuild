@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.4 2005/08/23 16:00:57 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.5 2006/07/14 17:26:05 chtekk Exp $
 
 inherit eutils
 
@@ -201,7 +201,7 @@ pkg_postinst () {
 	ewarn "version 4.0.9. If you are upgrading from <= 4.0.9 it is"
 	ewarn "highly recommended you update your ${PN} user and group"
 	ewarn "settings. This can be done by running:"
-	ewarn "ebuild /var/db/pkg/www-servers/${PF}/${PF}.ebuild config"
+	ewarn "emerge --config =${CATEGORY}/${PF}"
 	ewarn "If this is your first install of ${PN}, you can safely"
 	ewarn "ignore this message."
 	echo
