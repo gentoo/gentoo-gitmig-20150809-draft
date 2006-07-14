@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.1.0_pre2.ebuild,v 1.1 2006/07/13 18:27:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ipw3945-1.1.0_pre2.ebuild,v 1.2 2006/07/14 11:40:24 phreak Exp $
 
 inherit linux-mod
+
+S="${WORKDIR}/${P/_pre/-pre}"
 
 IEEE80211_VERSION="1.1.13-r1"
 UCODE_VERSION="1.13"

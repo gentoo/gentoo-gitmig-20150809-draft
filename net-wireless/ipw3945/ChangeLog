@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/ipw3945
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.8 2006/07/13 18:27:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945/ChangeLog,v 1.9 2006/07/14 11:40:24 phreak Exp $
+
+  14 Jul 2006; Christian Heim <phreak@gentoo.org> ipw3945-1.1.0_pre2.ebuild:
+  Fixing $S, fixing bug #140339 (thanks to Patrick <mail at
+  patrick-nagel.net> for reporting)
 
 *ipw3945-1.1.0_pre2 (13 Jul 2006)
 
