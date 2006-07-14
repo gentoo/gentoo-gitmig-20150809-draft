@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.4.ebuild,v 1.12 2006/06/25 20:31:11 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.0.4.ebuild,v 1.13 2006/07/14 15:21:59 blubb Exp $
 
 inherit eutils
 
@@ -12,6 +12,8 @@ LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ~ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc glitz png X"
+# bug 118106: not entirely broken, just too flakey
+RESTRICT="test"
 
 RDEPEND="media-libs/fontconfig
 	>=media-libs/freetype-2.1
