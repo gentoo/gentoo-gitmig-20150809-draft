@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.02.00-r1.ebuild,v 1.2 2006/07/14 10:41:14 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.02.00-r1.ebuild,v 1.3 2006/07/14 11:40:31 xmerlin Exp $
 
 inherit eutils linux-mod
 
-CVS_RELEASE="20060713"
+CVS_RELEASE="20060714"
 MY_P="cluster-${PV}"
 
 DESCRIPTION="General-purpose Distributed Lock Manager kernel module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-${PV}-${CVS_RELEASE}-cvs.2.patch.gz
+	mirror://gentoo/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz
 	http://dev.gentoo.org/~xmerlin/gfs/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz"
 
 LICENSE="GPL-2"
@@ -22,7 +22,7 @@ DEPEND="|| (
 		>=sys-kernel/vanilla-sources-2.6.12
 		>=sys-kernel/gentoo-sources-2.6.12
 	)
-	>=sys-cluster/cman-headers-1.02.00"
+	>=sys-cluster/cman-headers-1.02.00-r1"
 
 RDEPEND=""
 

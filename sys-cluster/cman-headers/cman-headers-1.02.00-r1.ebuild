@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/cman-headers-1.02.00-r1.ebuild,v 1.1 2006/07/13 18:43:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/cman-headers-1.02.00-r1.ebuild,v 1.2 2006/07/14 11:43:17 xmerlin Exp $
 
 inherit eutils
 
-CVS_RELEASE="20060713"
+CVS_RELEASE="20060714"
 MY_P="cluster-${PV}"
 
 DESCRIPTION="CMAN cluster headers"
