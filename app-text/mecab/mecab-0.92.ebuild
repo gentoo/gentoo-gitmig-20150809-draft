@@ -1,12 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.92.ebuild,v 1.1 2006/07/10 05:23:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/mecab-0.92.ebuild,v 1.2 2006/07/14 13:04:47 hattya Exp $
 
 IUSE="unicode"
 
 DESCRIPTION="Yet Another Part-of-Speech and Morphological Analyzer"
 HOMEPAGE="http://mecab.sourceforge.jp/"
-#SRC_URI="http://prdownloads.sourceforge.jp/${PN}/20896/${P}.tar.gz"
 SRC_URI="mirror://sourceforge.jp/${PN}/20896/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -29,7 +28,7 @@ src_compile() {
 
 src_install() {
 
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README || die
 	dohtml doc/* || die
 
