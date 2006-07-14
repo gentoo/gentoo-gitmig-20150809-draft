@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.21 2006/06/04 22:59:15 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.22 2006/07/14 16:02:36 chtekk Exp $
 #
 # ########################################################################
 #
@@ -19,10 +19,9 @@
 #
 # ========================================================================
 
-CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix interbase mnogosearch msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
-EBUILD_SUPPORTS_SHAREDEXT="1"
+PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix interbase mnogosearch msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
 
-inherit flag-o-matic eutils phpconfutils libtool php-common-r1 toolchain-funcs
+inherit flag-o-matic toolchain-funcs libtool eutils phpconfutils php-common-r1
 
 # set MY_PHP_P in the ebuild
 
@@ -39,77 +38,75 @@ if [[ "${PHP_PACKAGE}" == 1 ]] ; then
 	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
-IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl db2 dbase dbmaker dbx debug doc empress empress-bcs esoob exif expat fastbuild frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external kerberos ldap libedit mcal mcve memlimit mhash ming mnogosearch msql mssql mysql ncurses nls oci8 oci8-instant-client odbc oracle7 overload ovrimos pcntl pcre pfpro pic posix postgres readline recode sapdb session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc threads tokenizer truetype unicode wddx xml xmlrpc xpm xsl yaz zip zlib"
+IUSE="adabas bcmath berkdb birdstep bzip2 calendar cdb cjk crypt ctype curl db2 dbase dbmaker dbx debug doc empress empress-bcs esoob exif expat frontbase fdftk filepro firebird flatfile ftp gd gd-external gdbm gmp hardenedphp hyperwave-api iconv imap informix inifile interbase iodbc ipv6 java-internal java-external kerberos ldap libedit mcal mcve memlimit mhash ming mnogosearch msql mssql mysql ncurses nls oci8 oci8-instant-client odbc oracle7 overload ovrimos pcntl pcre pfpro pic posix postgres readline recode sapdb session sharedext sharedmem snmp sockets solid spell sqlite ssl sybase sybase-ct sysvipc tokenizer truetype unicode wddx xml xmlrpc xpm xsl yaz zip zlib"
 
 # these USE flags should have the correct dependencies
-DEPEND="${DEPEND}
-	!dev-php/php
-	!dev-php/php-cgi
-	!dev-php/mod_php
-	adabas? ( >=dev-db/unixODBC-1.8.13 )
-	berkdb? ( =sys-libs/db-4* )
-	birdstep? ( >=dev-db/unixODBC-1.8.13 )
-	bzip2? ( app-arch/bzip2 )
-	cdb? ( dev-db/cdb )
-	cjk? ( !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
-	crypt? ( >=dev-libs/libmcrypt-2.4 )
-	curl? ( >=net-misc/curl-7.10.5 )
-	db2? ( >=dev-db/unixODBC-1.8.13 )
-	dbmaker? ( >=dev-db/unixODBC-1.8.13 )
-	empress? ( >=dev-db/unixODBC-1.8.13 )
-	empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
-	esoob? ( >=dev-db/unixODBC-1.8.13 )
-	exif? ( !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
-	fdftk? ( app-text/fdftk )
-	firebird? ( dev-db/firebird )
-	gd? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
-	gd-external? ( media-libs/gd )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	gmp? ( >=dev-libs/gmp-4.1.2 )
-	iconv? ( virtual/libiconv )
-	imap? ( virtual/imap-c-client )
-	iodbc? ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 )
-	java-internal? ( =virtual/jdk-1.4* dev-java/java-config !dev-php4/php-java-bridge )
-	kerberos? ( virtual/krb5 )
-	ldap? ( >=net-nds/openldap-1.2.11 )
-	libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )
-	mcal? ( dev-libs/libmcal !=dev-libs/libmcal-0.7-r2 )
-	mcve? ( net-libs/libmonetra >=dev-libs/openssl-0.9.7 )
-	mhash? ( app-crypt/mhash )
-	ming? ( media-libs/ming )
-	mssql? ( dev-db/freetds )
-	mysql? ( dev-db/mysql )
-	ncurses? ( sys-libs/ncurses )
-	nls? ( sys-devel/gettext )
-	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
-	odbc? ( >=dev-db/unixODBC-1.8.13 )
-	postgres? ( >=dev-db/libpq-7.1 )
-	readline? ( sys-libs/readline )
-	recode? ( app-text/recode )
-	sapdb? ( >=dev-db/unixODBC-1.8.13 )
-	sharedmem? ( dev-libs/mm )
-	snmp? ( >=net-analyzer/net-snmp-5.2 )
-	solid? ( >=dev-db/unixODBC-1.8.13 )
-	spell? ( >=app-text/aspell-0.50 )
-	ssl? ( >=dev-libs/openssl-0.9.7 )
-	sybase? ( dev-db/freetds )
-	truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
-	xml? ( dev-libs/libxml2 sys-libs/zlib xsl? ( dev-libs/libxslt ) )
-	xmlrpc? ( dev-libs/expat virtual/libiconv )
-	xpm? ( || ( x11-libs/libXpm virtual/x11 ) >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
-	xsl? ( app-text/sablotron dev-libs/expat virtual/libiconv )
-	zlib? ( sys-libs/zlib )
-	virtual/mta"
+DEPEND="adabas? ( >=dev-db/unixODBC-1.8.13 )
+		berkdb? ( =sys-libs/db-4* )
+		birdstep? ( >=dev-db/unixODBC-1.8.13 )
+		bzip2? ( app-arch/bzip2 )
+		cdb? ( dev-db/cdb )
+		cjk? ( !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
+		crypt? ( >=dev-libs/libmcrypt-2.4 )
+		curl? ( >=net-misc/curl-7.10.5 )
+		db2? ( >=dev-db/unixODBC-1.8.13 )
+		dbmaker? ( >=dev-db/unixODBC-1.8.13 )
+		empress? ( >=dev-db/unixODBC-1.8.13 )
+		empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
+		esoob? ( >=dev-db/unixODBC-1.8.13 )
+		exif? ( !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
+		fdftk? ( app-text/fdftk )
+		firebird? ( dev-db/firebird )
+		gd? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
+		gd-external? ( media-libs/gd )
+		gdbm? ( >=sys-libs/gdbm-1.8.0 )
+		gmp? ( >=dev-libs/gmp-4.1.2 )
+		iconv? ( virtual/libiconv )
+		imap? ( virtual/imap-c-client )
+		iodbc? ( dev-db/libiodbc >=dev-db/unixODBC-1.8.13 )
+		java-internal? ( >=virtual/jdk-1.4.2 dev-java/java-config !dev-php4/php-java-bridge )
+		kerberos? ( virtual/krb5 )
+		ldap? ( >=net-nds/openldap-1.2.11 )
+		libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )
+		mcal? ( dev-libs/libmcal !=dev-libs/libmcal-0.7-r2 )
+		mcve? ( net-libs/libmonetra >=dev-libs/openssl-0.9.7 )
+		mhash? ( app-crypt/mhash )
+		ming? ( media-libs/ming )
+		mssql? ( dev-db/freetds )
+		mysql? ( dev-db/mysql )
+		ncurses? ( sys-libs/ncurses )
+		nls? ( sys-devel/gettext )
+		oci8-instant-client? ( dev-db/oracle-instantclient-basic )
+		odbc? ( >=dev-db/unixODBC-1.8.13 )
+		postgres? ( >=dev-db/libpq-7.1 )
+		readline? ( sys-libs/readline )
+		recode? ( app-text/recode )
+		sapdb? ( >=dev-db/unixODBC-1.8.13 )
+		sharedmem? ( dev-libs/mm )
+		snmp? ( >=net-analyzer/net-snmp-5.2 )
+		solid? ( >=dev-db/unixODBC-1.8.13 )
+		spell? ( >=app-text/aspell-0.50 )
+		ssl? ( >=dev-libs/openssl-0.9.7 )
+		sybase? ( dev-db/freetds )
+		truetype? ( =media-libs/freetype-2* >=media-libs/t1lib-5.0.0 !gd? ( !gd-external? ( >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib ) ) )
+		xml? ( dev-libs/libxml2 sys-libs/zlib xsl? ( dev-libs/libxslt ) )
+		xmlrpc? ( dev-libs/expat virtual/libiconv )
+		xpm? ( || ( x11-libs/libXpm virtual/x11 ) >=media-libs/jpeg-6b media-libs/libpng sys-libs/zlib )
+		xsl? ( app-text/sablotron dev-libs/expat virtual/libiconv )
+		zlib? ( sys-libs/zlib )
+		virtual/mta"
 
 # libswf conflicts with ming and should not
 # be installed with the new PHP ebuilds
-DEPEND="${DEPEND} !media-libs/libswf"
+DEPEND="${DEPEND}
+		!media-libs/libswf"
 
 # 9libs causes a configure error
-DEPEND="${DEPEND} !dev-libs/9libs"
+DEPEND="${DEPEND}
+		!dev-libs/9libs"
 
 # simplistic for now
-RDEPEND="${RDEPEND} ${DEPEND}"
+RDEPEND="${DEPEND}"
 
 # those are only needed at compile-time
 DEPEND="${DEPEND}
@@ -123,8 +120,7 @@ DEPEND="${DEPEND}
 # Additional features
 #
 # They are in PDEPEND because we need PHP installed first!
-PDEPEND="${PDEPEND}
-		doc? ( app-doc/php-docs )
+PDEPEND="doc? ( app-doc/php-docs )
 		java-external? ( dev-php4/php-java-bridge )
 		sqlite? ( dev-php4/pecl-sqlite )
 		yaz? ( dev-php4/pecl-yaz )
@@ -135,6 +131,15 @@ PDEPEND="${PDEPEND}
 # ========================================================================
 
 PHP_INI_FILE="php.ini"
+PHP_INI_UPSTREAM="php.ini-dist"
+
+# ========================================================================
+
+# PHP patchsets support
+SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP_PATCHSET_REV}.tar.bz2"
+
+# Hardened-PHP patch support
+[[ -n "${HARDENEDPHP_PATCH}" ]] && SRC_URI="${SRC_URI} hardenedphp? ( http://gentoo.longitekk.com/${HARDENEDPHP_PATCH} )"
 
 # ========================================================================
 
@@ -206,13 +211,25 @@ php4_4-sapi_set_php_ini_dir() {
 php4_4-sapi_install_ini() {
 	destdir=/usr/$(get_libdir)/php4
 
-	# get the extension dir
-	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
+	# get the extension dir, if not already defined
+	[[ -z "${PHPEXTDIR}" ]] && PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
 
 	# work out where we are installing the ini file
 	php4_4-sapi_set_php_ini_dir
 
-	local phpinisrc=php.ini-dist
+	local phpinisrc=${PHP_INI_UPSTREAM}
+
+	# Set the extension dir
+	einfo "Setting extension_dir in php.ini"
+	sed -e "s|^extension_dir .*$|extension_dir = ${PHPEXTDIR}|g" -i ${phpinisrc}
+
+	# A patch for PHP for security
+	einfo "Securing fopen wrappers"
+	sed -e 's|^allow_url_fopen .*|allow_url_fopen = Off|g' -i ${phpinisrc}
+
+	# Set the include path to point to where we want to find PEAR packages
+	einfo "Setting correct include_path"
+	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:/usr/share/php4:/usr/share/php"|' -i ${phpinisrc}
 
 	dodir ${PHP_INI_DIR}
 	insinto ${PHP_INI_DIR}
@@ -246,10 +263,6 @@ php4_4-sapi_pkg_setup() {
 }
 
 php4_4-sapi_src_unpack() {
-	if [[ "${PHP_PACKAGE}" == 1 ]] ; then
-		unpack ${A}
-	fi
-
 	cd "${S}"
 
 	# Change PHP branding
@@ -305,15 +318,6 @@ php4_4-sapi_src_unpack() {
 		fi
 	fi
 
-	# fastbuild support
-	if useq fastbuild ; then
-		if [[ -n "${FASTBUILD_PATCH}" ]] && [[ -f "${WORKDIR}/${FASTBUILD_PATCH}" ]] ; then
-			epatch "${WORKDIR}/${FASTBUILD_PATCH}"
-		else
-			ewarn "There is no fastbuild patch available for this PHP release yet!"
-		fi
-	fi
-
 	# Fix configure scripts to correctly support Hardened-PHP
 	einfo "Running aclocal"
 	WANT_AUTOMAKE=1.9 aclocal --force || die "Unable to run aclocal successfully"
@@ -333,9 +337,11 @@ php4_4-sapi_src_unpack() {
 
 php4_4-sapi_src_compile() {
 	destdir=/usr/$(get_libdir)/php4
+
 	php4_4-sapi_set_php_ini_dir
 
 	cd "${S}"
+
 	phpconfutils_init
 
 	my_conf="${my_conf} --with-config-file-path=${PHP_INI_DIR} --with-config-file-scan-dir=${PHP_EXT_INI_DIR_ACTIVE} --without-pear"
@@ -356,7 +362,7 @@ php4_4-sapi_src_compile() {
 	phpconfutils_extension_with		"gettext"		"nls"			1
 	phpconfutils_extension_with		"gmp"			"gmp"			1
 	phpconfutils_extension_with		"hwapi"			"hyperwave-api"	1
-	phpconfutils_extension_with		"iconv"			"iconv"			1
+	phpconfutils_extension_with		"iconv"			"iconv"			0
 	phpconfutils_extension_with		"informix"		"informix"		1
 	phpconfutils_extension_disable	"ipv6"			"ipv6"			0
 	phpconfutils_extension_with		"kerberos"		"kerberos"		0 "/usr"
@@ -382,7 +388,7 @@ php4_4-sapi_src_compile() {
 	phpconfutils_extension_without	"pcre-regex"	"pcre"			0
 	phpconfutils_extension_with		"pfpro"			"pfpro"			1
 	phpconfutils_extension_with		"pgsql"			"postgres"		1
-	phpconfutils_extension_disable	"posix"			"posix"			1
+	phpconfutils_extension_disable	"posix"			"posix"			0
 	phpconfutils_extension_with		"pspell"		"spell"			1
 	phpconfutils_extension_with		"recode"		"recode"		1
 	phpconfutils_extension_enable	"shmop"			"sharedmem"		0
@@ -393,7 +399,7 @@ php4_4-sapi_src_compile() {
 	phpconfutils_extension_enable	"sysvmsg"		"sysvipc"		1
 	phpconfutils_extension_enable	"sysvsem"		"sysvipc"		1
 	phpconfutils_extension_enable	"sysvshm"		"sysvipc"		1
-	phpconfutils_extension_disable	"tokenizer"		"tokenizer"		1
+	phpconfutils_extension_disable	"tokenizer"		"tokenizer"		0
 	phpconfutils_extension_enable	"wddx"			"wddx"			1
 	phpconfutils_extension_disable	"xml"			"expat"			0
 	phpconfutils_extension_with		"xmlrpc"		"xmlrpc"		1
@@ -457,12 +463,12 @@ php4_4-sapi_src_compile() {
 
 	# MySQL support
 	# In PHP4, MySQL is enabled by default, so if no 'mysql' USE flag is set,
-	# we must turn it off.
+	# we must turn it off explicitely
 	if useq mysql ; then
 		phpconfutils_extension_with		"mysql"			"mysql"			1 "/usr"
 		phpconfutils_extension_with		"mysql-sock"	"mysql"			0 "/var/run/mysqld/mysqld.sock"
 	else
-		phpconfutils_extension_without	"mysql"			"mysql"			1 "/usr"
+		phpconfutils_extension_without	"mysql"			"mysql"			0
 	fi
 
 	# ODBC support
@@ -498,21 +504,15 @@ php4_4-sapi_src_compile() {
 
 	# Session support
 	if ! useq session && ! phpconfutils_usecheck session ; then
-		phpconfutils_extension_disable	"session"		"session"		1
+		phpconfutils_extension_disable	"session"		"session"		0
 	else
 		phpconfutils_extension_with		"mm"			"sharedmem"		0
 	fi
 
 	# Fix ELF-related problems
-	if useq pic ; then
+	if useq pic || phpconfutils_usecheck pic ; then
 		einfo "Enabling PIC support"
 		my_conf="${my_conf} --with-pic"
-	fi
-
-	# apache2 & threads support
-	if useq apache2 && useq threads ; then
-		my_conf="${my_conf} --enable-experimental-zts"
-		ewarn "Enabling ZTS for Apache2 MPM"
 	fi
 
 	# Catch CFLAGS problems
@@ -530,7 +530,7 @@ php4_4-sapi_src_compile() {
 	tc-export CC
 
 	# We don't use econf, because we need to override all of its settings
-	./configure --prefix=${destdir} --sysconfdir=/etc --cache-file=./config.cache ${my_conf} ${EXTRA_ECONF} || die "configure failed"
+	./configure --prefix=${destdir} --host=${CHOST} --mandir=${destdir}/man --infodir=${destdir}/info --sysconfdir=/etc --cache-file=./config.cache ${my_conf} ${EXTRA_ECONF} || die "configure failed"
 	emake || die "make failed"
 }
 
@@ -538,27 +538,23 @@ php4_4-sapi_src_install() {
 	destdir=/usr/$(get_libdir)/php4
 
 	cd "${S}"
+
 	addpredict /usr/share/snmp/mibs/.index
 
-	PHP_INSTALLTARGETS="install-build install-headers install-programs"
-	useq sharedext && PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules"
-	make INSTALL_ROOT="${D}" ${PHP_INSTALLTARGETS} || die "install failed"
+	# Install PHP
+	make INSTALL_ROOT="${D}" install-build install-headers install-programs || die "make install failed"
 
-	# Get the extension dir
-	PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
+	# Get the extension dir, if not already defined
+	[[ -z "${PHPEXTDIR}" ]] && PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
 
-	# Don't forget the php.ini file
-	local phpinisrc=php.ini-dist
-	einfo "Setting extension_dir in php.ini"
-	sed -e "s|^extension_dir .*$|extension_dir = ${PHPEXTDIR}|g" -i ${phpinisrc}
-
-	# A patch for PHP for security
-	einfo "Securing fopen wrappers"
-	sed -e 's|^allow_url_fopen .*|allow_url_fopen = Off|g' -i ${phpinisrc}
-
-	# Set the include path to point to where we want to find PEAR packages
-	einfo "Setting correct include_path"
-	sed -e 's|^;include_path = ".:/php/includes".*|include_path = ".:/usr/share/php4:/usr/share/php"|' -i ${phpinisrc}
+	# And install the modules to it
+	if useq sharedext ; then
+		for x in `ls "${S}/modules/"*.so | sort | sed -e "s|.*java.*||g"` ; do
+			insinto "${PHPEXTDIR}"
+			einfo "Installing PHP ${x/.so/} extension"
+			doins "modules/${x}"
+		done
+	fi
 
 	# Java module and support needs to be installed
 	php_install_java
@@ -571,85 +567,7 @@ php4_4-sapi_src_install() {
 }
 
 php4_4-sapi_pkg_postinst() {
-	# Update Apache1 to use mod_php
-	if useq apache ; then
-		"${ROOT}/usr/sbin/php-select" -t apache1 php4 > /dev/null 2>&1
-		exitStatus=$?
-		if [[ ${exitStatus} == 2 ]] ; then
-			php-select apache1 php4
-		elif [[ ${exitStatus} == 4 ]] ; then
-			ewarn
-			ewarn "Apache 1 is configured to load a different version of PHP."
-			ewarn "To make Apache 1 use PHP v4, use php-select:"
-			ewarn
-			ewarn "   php-select apache1 php4"
-			ewarn
-		fi
-	fi
-
-	# Update Apache2 to use mod_php
-	if useq apache2 ; then
-		"${ROOT}/usr/sbin/php-select" -t apache2 php4 > /dev/null 2>&1
-		exitStatus=$?
-		if [[ ${exitStatus} == 2 ]] ; then
-			php-select apache2 php4
-		elif [[ ${exitStatus} == 4 ]] ; then
-			ewarn
-			ewarn "Apache 2 is configured to load a different version of PHP."
-			ewarn "To make Apache 2 use PHP v4, use php-select:"
-			ewarn
-			ewarn "   php-select apache2 php4"
-			ewarn
-		fi
-	fi
-
-	# Create the symlinks for php-cli
-	if useq cli || phpconfutils_usecheck cli ; then
-		"${ROOT}/usr/sbin/php-select" -t php php4 > /dev/null 2>&1
-		exitStatus=$?
-		if [[ ${exitStatus} == 5 ]] ; then
-			php-select php php4
-		elif [[ ${exitStatus} == 4 ]] ; then
-			ewarn
-			ewarn "/usr/bin/php links to a different version of PHP."
-			ewarn "To make /usr/bin/php point to PHP v4, use php-select:"
-			ewarn
-			ewarn "   php-select php php4"
-			ewarn
-		fi
-	fi
-
-	# Create the symlinks for php-cgi
-	if useq cgi ; then
-		"${ROOT}/usr/sbin/php-select" -t php-cgi php4 > /dev/null 2>&1
-		exitStatus=$?
-		if [[ ${exitStatus} == 5 ]] ; then
-			php-select php-cgi php4
-		elif [[ ${exitStatus} == 4 ]] ; then
-			ewarn
-			ewarn "/usr/bin/php-cgi links to a different version of PHP."
-			ewarn "To make /usr/bin/php-cgi point to PHP v4, use php-select:"
-			ewarn
-			ewarn "   php-select php-cgi php4"
-			ewarn
-		fi
-	fi
-
-	# Create the symlinks for php-devel
-	"${ROOT}/usr/sbin/php-select" -t php-devel php4 > /dev/null 2>&1
-	exitStatus=$?
-	if [[ $exitStatus == 5 ]] ; then
-		php-select php-devel php4
-	elif [[ $exitStatus == 4 ]] ; then
-		ewarn
-		ewarn "/usr/bin/php-config and/or /usr/bin/phpize are linked to a"
-		ewarn "different version of PHP. To make them point to PHP v4, use"
-		ewarn "php-select:"
-		ewarn
-		ewarn "   php-select php-devel php4"
-		ewarn
-	fi
-
+	ewarn
 	ewarn "If you have additional third party PHP extensions (such as"
 	ewarn "dev-php4/phpdbg) you may need to recompile them now."
 	ewarn "A new way of enabling/disabling PHP extensions was introduced"
@@ -665,7 +583,7 @@ php4_4-sapi_pkg_postinst() {
 	fi
 	ewarn
 
-	if useq curl; then
+	if useq curl ; then
 		ewarn "Please be aware that CURL can allow the bypass of open_basedir restrictions."
 		ewarn "This can be a security risk!"
 		ewarn
@@ -675,8 +593,8 @@ php4_4-sapi_pkg_postinst() {
 	ewarn "With PIC enabled, your PHP installation may become slower, but"
 	ewarn "PIC is required on Hardened-Gentoo platforms (where the USE flag"
 	ewarn "is enabled automatically). You may also need this on other"
-	ewarn "configurations where you disabled TEXTRELs, for example using"
-	ewarn "PaX in the kernel."
+	ewarn "configurations where TEXTRELs are disabled, for example when using"
+	ewarn "certain PaX options in the kernel."
 	ewarn
 
 	ewarn "The 'xml' and 'xml2' USE flags were unified in only the 'xml' USE"

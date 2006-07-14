@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.7 2006/04/18 12:21:14 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-common-r1.eclass,v 1.8 2006/07/14 16:02:36 chtekk Exp $
 
 # ########################################################################
 #
@@ -115,16 +115,18 @@ php_install_java() {
 	# We put these into /usr/lib so that they cannot conflict with
 	# other versions of PHP (e.g. PHP 4 & PHP 5)
 	insinto "${PHPEXTDIR}"
+
+	einfo "Installing PHP java extension"
+	doins "modules/java.so"
+
+	einfo "Creating PHP java extension symlink"
+	dosym "${PHPEXTDIR}/java.so" "${PHPEXTDIR}/libphp_java.so"
+
 	einfo "Installing JAR for PHP"
 	doins "ext/java/php_java.jar"
 
 	einfo "Installing Java test page"
 	newins "ext/java/except.php" "java-test.php"
-
-	einfo "Installing Java extension for PHP"
-	doins "modules/java.so"
-
-	dosym "${PHPEXTDIR}/java.so" "${PHPEXTDIR}/libphp_java.so"
 }
 
 php_install_java_inifile() {

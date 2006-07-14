@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/phpconfutils.eclass,v 1.3 2006/04/20 12:15:35 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/phpconfutils.eclass,v 1.4 2006/07/14 16:02:36 chtekk Exp $
 #
 # ########################################################################
 #
 # eclass/phpconfutils.eclass
 #		Utility functions to help with configuring PHP
 #
-#		Based on stuart's work on the original confutils eclass
+#		Based on Stuart's work on the original confutils eclass
 #
 # Author(s)		Luca Longinotti
 #				<chtekk@gentoo.org>
@@ -16,15 +16,11 @@
 #
 # ========================================================================
 
-if [[ "${EBUILD_SUPPORTS_SHAREDEXT}" == "1" ]] ; then
-	IUSE="sharedext"
-fi
-
 # ========================================================================
 # List of USE flags that need deps that aren't yet in Portage
 # or that can't be (fex. certain commercial apps)
 #
-# You must define CONFUTILS_MISSING_DEPS if you need this
+# You must define PHPCONFUTILS_MISSING_DEPS if you need this
 
 # ========================================================================
 # phpconfutils_sort_flags()
@@ -46,7 +42,7 @@ phpconfutils_sort_flags() {
 
 phpconfutils_init() {
 	# Define wheter we shall support shared extensions or not
-	if [[ "${EBUILD_SUPPORTS_SHAREDEXT}" == "1" ]] && useq "sharedext" ; then
+	if useq "sharedext" ; then
 		shared="=shared"
 	else
 		shared=""
@@ -396,7 +392,7 @@ phpconfutils_warn_about_external_deps() {
 	local x
 	local my_found="0"
 
-	for x in ${CONFUTILS_MISSING_DEPS} ; do
+	for x in ${PHPCONFUTILS_MISSING_DEPS} ; do
 		if useq "${x}" || phpconfutils_usecheck "${x}" ; then
 			ewarn "USE flag ${x} enables support for software not present in Portage!"
 			my_found="1"
@@ -412,7 +408,7 @@ phpconfutils_warn_about_external_deps() {
 		ewarn "when using one of those flags, as we aren't able to support them."
 		ewarn "|=|=|=|=|=|=| You are on your own if you use them! |=|=|=|=|=|=|"
 		ewarn
-		sleep 5
+		ebeep 5
 	fi
 }
 
