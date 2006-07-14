@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.10.ebuild,v 1.1 2006/06/27 03:28:00 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/joomla-1.0.10.ebuild,v 1.2 2006/07/14 16:55:38 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -28,7 +28,7 @@ src_install () {
 	local files="administrator/backups administrator/components
 	administrator/modules administrator/templates cache components
 	images images/banners images/stories language mambots mambots/content
-	mambots/editors mambots/editors-xtd mambots/search
+	mambots/editors mambots/editors-xtd mambots/search mambots/system
 	media modules templates"
 
 	dodoc CHANGELOG.php INSTALL.php
