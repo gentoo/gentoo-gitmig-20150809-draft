@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-dvd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.3 2006/06/23 09:04:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvd/ChangeLog,v 1.4 2006/07/14 17:46:30 hd_brummy Exp $
+
+*vdr-dvd-0.3.7_pre20060204-r1 (14 Jul 2006)
+
+  14 Jul 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/dvd-a52drc.diff, metadata.xml,
+  +vdr-dvd-0.3.7_pre20060204-r1.ebuild:
+  add patch to enable A52 DRC Support; thanks to Sebastian Kemper
+  <sebastian_ml@gmx.net>
 
   23 Jun 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-dvd-0.3.7_pre20060204.ebuild:
