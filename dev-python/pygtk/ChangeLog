@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.116 2006/07/13 05:09:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.117 2006/07/14 17:44:25 dertobi123 Exp $
+
+  14 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
+  ppc stable, bug #139612
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> pygtk-2.8.6.ebuild:
   Mark 2.8.6 stable on ia64
