@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kbfx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.4 2006/05/20 05:49:50 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.5 2006/07/14 20:50:36 flameeyes Exp $
+
+  14 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kbfx-0.4.9.1.ebuild:
+  Leave to the eclass handling of admin dir (bug #140406). Fix quoting.
 
   20 May 2006; Jon Hood <squinky86@gentoo.org> kbfx-0.4.9.1.ebuild:
   Add ~amd64, #133794.
