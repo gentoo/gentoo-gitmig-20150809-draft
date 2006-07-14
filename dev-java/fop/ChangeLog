@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.26 2006/01/08 19:03:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.27 2006/07/14 16:29:08 nichoj Exp $
+
+*fop-0.20.5-r5 (14 Jul 2006)
+
+  14 Jul 2006; Joshua Nichols <jnichols@gentoo.org> +fop-0.20.5-r5.ebuild:
+  Revision bump to use new Java system. Addresses bug #139959.
 
   08 Jan 2006; Joshua Nichols <nichoj@gentoo.org> Manifest:
   Re-marked stable on amd64 (bug #116310).
