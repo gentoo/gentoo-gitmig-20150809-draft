@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.12 2006/07/12 14:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.13 2006/07/14 22:26:46 seemant Exp $
+
+*synaptics-0.14.5-r1 (14 Jul 2006)
+
+  14 Jul 2006; Seemant Kulleen <seemant@gentoo.org>
+  -synaptics-0.14.5.ebuild, +synaptics-0.14.5-r1.ebuild:
+  fix the build system to not install into /usr/local. I really should not be
+  checking version bumps in with such a hurry (ironic given how long the
+  ebuild languished in bugzilla). Anyway, this fixes the install location of
+  the binaries and the man pages. Closes bug #140388 by Martin Wegner
 
 *synaptics-0.14.5 (12 Jul 2006)
 
