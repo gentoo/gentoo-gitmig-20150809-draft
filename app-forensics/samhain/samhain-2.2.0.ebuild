@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.2.0.ebuild,v 1.1 2006/05/24 13:10:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/samhain/samhain-2.2.0.ebuild,v 1.2 2006/07/14 17:17:58 chtekk Exp $
 
 KEYWORDS="~x86"
 DESCRIPTION="Advanced file integrity and intrusion detection tool."
@@ -164,7 +164,7 @@ pkg_postinst() {
 		echo
 		einfo "Manual pages, documentation, and init script were NOT installed in order to"
 		einfo "obscure Samhain's presence. You should also remove samhain's installation"
-		einfo "traces from /var/cache/edb/world and /var/db/pkg."
+		einfo "traces from ${ROOT}/var/cache/edb/world and ${ROOT}/var/db/pkg."
 	fi
 
 	if [[ "${STEALTH}" == "full" ]] ; then
@@ -186,15 +186,15 @@ pkg_postinst() {
 		einfo "Enabling GnuPG support in Samhain requires that you sign your configuration"
 		einfo "and and database files. Please run the following commands as root:"
 		einfo
-		einfo "    gpg -a --clearsign --not-dash-escaped /etc/samhainrc"
-		einfo "    mv /etc/samhainrc.asc /etc/samhainrc"
-		einfo "    chmod 600 /etc/samhainrc"
+		einfo "    gpg -a --clearsign --not-dash-escaped ${ROOT}/etc/samhainrc"
+		einfo "    mv ${ROOT}/etc/samhainrc.asc ${ROOT}/etc/samhainrc"
+		einfo "    chmod 600 ${ROOT}/etc/samhainrc"
 		einfo
-		einfo "Run the same commands on /var/lib/samhain/samhain_file after initialization."
+		einfo "Run the same commands on ${ROOT}/var/lib/samhain/samhain_file after initialization."
 	fi
 
 	echo
-	einfo "Be sure to check your settings in /etc/samhainrc. When ready, run:"
+	einfo "Be sure to check your settings in ${ROOT}/etc/samhainrc. When ready, run:"
 	einfo "    samhain -t init"
 	einfo "to initialize Samhain."
 
