@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5624 2006/07/13 18:02:31 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5625 2006/07/14 00:43:51 langthang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tuấn Văn <langthang@gentoo.org> (13 Jul 2006)
+# mask for testing
+=net-mail/postfix-2.3.0
 
 # Christian Heim <phreak@gentoo.org> (13 Jul 2006)
 # ieee80211-1.1.14 is breaking ABI!
@@ -1168,6 +1172,7 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.8-r1
 =mail-mta/postfix-2.2.9-r1
 =mail-mta/postfix-2.2.10-r1
+=mail-mta/postfix-2.3.0-r1
 =mail-mta/sendmail-8.13.4-r1
 =mail-mta/sendmail-8.13.5
 =mail-mta/exim-4.50-r999
