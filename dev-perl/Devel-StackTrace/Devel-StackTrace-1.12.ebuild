@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/Devel-StackTrace-1.12.ebuild,v 1.7 2006/03/03 20:19:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/Devel-StackTrace-1.12.ebuild,v 1.8 2006/07/14 16:46:55 mcummings Exp $
 
 inherit perl-module
 
@@ -14,6 +14,6 @@ KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND="dev-perl/module-build"
+DEPEND=">=dev-perl/module-build-0.28"
 
 OPTIMIZE="$CFLAGS"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.22.ebuild,v 1.6 2006/07/04 07:44:29 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.22.ebuild,v 1.7 2006/07/14 16:45:46 mcummings Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="dev-perl/module-build
+DEPEND=">=dev-perl/module-build-0.28
 		dev-perl/Params-Validate"
 RDEPEND="${DEPEND}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.23.ebuild,v 1.7 2006/07/02 13:50:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.23.ebuild,v 1.8 2006/07/14 16:47:14 mcummings Exp $
 
 myconf='INSTALLDIRS=vendor'
 inherit perl-module
@@ -17,7 +17,7 @@ SRC_TEST="do"
 TDEPEND="dev-perl/Test-Pod"
 
 DEPEND="${DEPEND}
-	dev-perl/module-build"
+	>=dev-perl/module-build-0.28"
 
 RDEPEND=">=dev-perl/Class-Data-Inheritable-0.02
 	>=dev-perl/Devel-StackTrace-1.12
