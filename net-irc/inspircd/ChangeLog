@@ -1,0 +1,9 @@
+# ChangeLog for mail-mta/netqmail
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.1 2006/07/14 21:53:01 hansmi Exp $
+
+*inspircd-1.0.5 (14 Jul 2006)
+
+  14 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> +metadata.xml,
+  +inspircd-1.0.5.ebuild:
+  Added to portage, ebuild by William Pitcock <nenolod@nenolod.net>.
