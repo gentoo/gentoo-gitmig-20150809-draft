@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.22 2006/07/14 16:02:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.23 2006/07/14 21:07:33 chtekk Exp $
 #
 # ########################################################################
 #
@@ -550,9 +550,11 @@ php4_4-sapi_src_install() {
 	# And install the modules to it
 	if useq sharedext ; then
 		for x in `ls "${S}/modules/"*.so | sort | sed -e "s|.*java.*||g"` ; do
+			module=`basename ${x}`
+			modulename=${module/.so/}
 			insinto "${PHPEXTDIR}"
-			einfo "Installing PHP ${x/.so/} extension"
-			doins "modules/${x}"
+			einfo "Installing PHP ${modulename} extension"
+			doins "modules/${module}"
 		done
 	fi
 
