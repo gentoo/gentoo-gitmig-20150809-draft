@@ -1,8 +1,8 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.8.ebuild,v 1.1 2006/06/04 20:32:23 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libmatchbox/libmatchbox-1.8.ebuild,v 1.2 2006/07/14 17:20:21 yvasilev Exp $
 
-inherit libtool
+inherit eutils libtool
 
 DESCRIPTION="The Matchbox Library."
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
@@ -23,6 +23,17 @@ RDEPEND="|| ( (	x11-libs/libXext
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+pkg_setup() {
+	# Bug #138135
+	if use truetype && use pango; then
+		ewarn "You have both the truetype and pango USE flags set, pango"
+		ewarn "overrides and disables the XFT support truetype enables."
+		ewarn "If this isn't what you intended you should stop the build!"
+		ebeep 3
+		epause 3
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
