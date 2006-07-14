@@ -1,6 +1,15 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.105 2006/06/25 13:35:28 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.106 2006/07/14 00:55:16 langthang Exp $
+
+*postfix-2.3.0-r1 (14 Jul 2006)
+*postfix-2.3.0 (14 Jul 2006)
+
+  14 Jul 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/postfix-2.3.0-SASL_README.patch, +postfix-2.3.0.ebuild,
+  +postfix-2.3.0-r1.ebuild:
+  New release. Drop VDA patch for now as it is not yet available upstream.
+  Add new Dovecot SASL implementation support. read SASL_README.
 
   25 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> postfix-2.2.10.ebuild:
   Marked stable on amd64, bug 132702.
