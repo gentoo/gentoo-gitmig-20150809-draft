@@ -1,0 +1,256 @@
+Submitted By:            Hugo Villeneuve
+Date:                    2005-09-19
+Initial Package Version: 1.4.3
+Upstream Status:         Unknown
+Origin:                  http://mail-index.netbsd.org/tech-pkg/2005/09/05/0001.html
+Description:             Updated to new GSF_CLASS_FULL signature
+
+$LastChangedBy: randy $
+$Date: 2006/07/14 16:46:23 $
+
+
+diff -Naur gnumeric-1.4.3-orig/plugins/corba/corba-workbook.c gnumeric-1.4.3-patched/plugins/corba/corba-workbook.c
+--- gnumeric-1.4.3-orig/plugins/corba/corba-workbook.c	2004-09-24 16:35:15.000000000 -0400
++++ gnumeric-1.4.3-patched/plugins/corba/corba-workbook.c	2005-09-19 00:44:06.889772528 -0400
+@@ -313,8 +313,8 @@
+ }
+ 
+ GSF_CLASS_FULL (WorkbookControlCORBA, workbook_control_corba,
+-		wbcc_class_init, wbcc_init, 
+-		WORKBOOK_CONTROL_TYPE, 0,
++		NULL, NULL,wbcc_class_init, NULL,
++		wbcc_init, WORKBOOK_CONTROL_TYPE, 0,
+ 		GSF_INTERFACE (wbcc_gnm_cmd_context_init,
+ 			       GNM_CMD_CONTEXT_TYPE))
+ 
+diff -Naur gnumeric-1.4.3-orig/src/command-context-stderr.c gnumeric-1.4.3-patched/src/command-context-stderr.c
+--- gnumeric-1.4.3-orig/src/command-context-stderr.c	2004-06-13 14:48:34.000000000 -0400
++++ gnumeric-1.4.3-patched/src/command-context-stderr.c	2005-09-19 00:44:06.891772224 -0400
+@@ -107,6 +107,6 @@
+ }
+ 
+ GSF_CLASS_FULL (CmdContextStderr, cmd_context_stderr,
+-		NULL, ccs_init,
+-		G_TYPE_OBJECT, 0,
++		NULL, NULL, NULL, NULL,
++		ccs_init, G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (ccs_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))
+diff -Naur gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-axis.c gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-axis.c
+--- gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-axis.c	2005-02-09 16:54:29.000000000 -0500
++++ gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-axis.c	2005-09-19 00:44:06.896771464 -0400
+@@ -1678,8 +1678,8 @@
+ }
+ 
+ GSF_CLASS_FULL (GogAxis, gog_axis,
+-		gog_axis_class_init, gog_axis_init,
+-		GOG_STYLED_OBJECT_TYPE, 0,
++		NULL, NULL, gog_axis_class_init, NULL,
++		gog_axis_init, GOG_STYLED_OBJECT_TYPE, 0,
+ 		GSF_INTERFACE (gog_axis_dataset_init, GOG_DATASET_TYPE))
+ 
+ 
+diff -Naur gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-error-bar.c gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-error-bar.c
+--- gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-error-bar.c	2004-12-02 08:57:26.000000000 -0500
++++ gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-error-bar.c	2005-09-19 00:44:06.899771008 -0400
+@@ -488,8 +488,8 @@
+ }
+ 
+ GSF_CLASS_FULL (GogErrorBar, gog_error_bar,
+-		gog_error_bar_class_init, gog_error_bar_init,
+-		G_TYPE_OBJECT, 0,
++		NULL, NULL, gog_error_bar_class_init, NULL,
++		gog_error_bar_init, G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (gog_error_bar_persist_init, GOG_PERSIST_TYPE))
+ 
+ 
+diff -Naur gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-label.c gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-label.c
+--- gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-label.c	2004-10-25 16:36:05.000000000 -0400
++++ gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-label.c	2005-09-19 00:44:06.901770704 -0400
+@@ -176,8 +176,8 @@
+ }
+ 
+ GSF_CLASS_FULL (GogLabel, gog_label,
+-		gog_label_class_init, NULL,
+-		GOG_OUTLINED_OBJECT_TYPE, 0,
++		NULL, NULL, gog_label_class_init, NULL,
++		NULL, GOG_STYLED_OBJECT_TYPE, 0,
+ 		GSF_INTERFACE (gog_label_dataset_init, GOG_DATASET_TYPE))
+ 
+ /************************************************************************/
+diff -Naur gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-series.c gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-series.c
+--- gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-series.c	2005-01-05 13:05:53.000000000 -0500
++++ gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-series.c	2005-09-19 00:44:06.904770248 -0400
+@@ -589,8 +589,8 @@
+ }
+ 
+ GSF_CLASS_FULL (GogSeries, gog_series,
+-		gog_series_class_init, gog_series_init,
+-		GOG_STYLED_OBJECT_TYPE, 0,
++		NULL, NULL, gog_series_class_init, NULL,
++		gog_series_init, GOG_STYLED_OBJECT_TYPE, 0,
+ 		GSF_INTERFACE (gog_series_dataset_init, GOG_DATASET_TYPE))
+ 
+ /**
+diff -Naur gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-style.c gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-style.c
+--- gnumeric-1.4.3-orig/src/cut-n-paste-code/goffice/graph/gog-style.c	2004-11-19 10:49:12.000000000 -0500
++++ gnumeric-1.4.3-patched/src/cut-n-paste-code/goffice/graph/gog-style.c	2005-09-19 00:44:06.908769640 -0400
+@@ -1687,8 +1687,8 @@
+ }
+ 
+ GSF_CLASS_FULL (GogStyle, gog_style,
+-		gog_style_class_init, gog_style_init,
+-		G_TYPE_OBJECT, 0,
++		NULL, NULL, gog_style_class_init, NULL,
++		gog_style_init, G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (gog_style_persist_init, GOG_PERSIST_TYPE))
+ 
+ gboolean
+diff -Naur gnumeric-1.4.3-orig/src/gnm-so-filled.c gnumeric-1.4.3-patched/src/gnm-so-filled.c
+--- gnumeric-1.4.3-orig/src/gnm-so-filled.c	2004-10-16 22:36:05.000000000 -0400
++++ gnumeric-1.4.3-patched/src/gnm-so-filled.c	2005-09-19 00:44:06.911769184 -0400
+@@ -113,7 +113,7 @@
+ typedef FooCanvasGroup		FilledFooView;
+ typedef FooCanvasGroupClass	FilledFooViewClass;
+ static GSF_CLASS_FULL (FilledFooView, so_filled_foo_view,
+-	NULL, NULL,
++	NULL, NULL, NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_GROUP, 0,
+ 	GSF_INTERFACE (so_filled_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ #endif /* WITH_GTK */
+@@ -632,7 +632,7 @@
+ typedef FooCanvasPolygon	PolygonFooView;
+ typedef FooCanvasPolygonClass	PolygonFooViewClass;
+ static GSF_CLASS_FULL (PolygonFooView, so_polygon_foo_view,
+-	NULL, NULL,
++	NULL, NULL, NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_POLYGON, 0,
+ 	GSF_INTERFACE (so_polygon_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ #endif /* WITH_GTK */
+diff -Naur gnumeric-1.4.3-orig/src/gnm-so-line.c gnumeric-1.4.3-patched/src/gnm-so-line.c
+--- gnumeric-1.4.3-orig/src/gnm-so-line.c	2004-11-30 13:37:07.000000000 -0500
++++ gnumeric-1.4.3-patched/src/gnm-so-line.c	2005-09-19 00:44:06.913768880 -0400
+@@ -111,7 +111,7 @@
+ typedef FooCanvasLine		LineFooView;
+ typedef FooCanvasLineClass	LineFooViewClass;
+ static GSF_CLASS_FULL (LineFooView, so_line_foo_view,
+-	NULL, NULL,
++	NULL, NULL,NULL, NULL,NULL,
+ 	FOO_TYPE_CANVAS_LINE, 0,
+ 	GSF_INTERFACE (so_line_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ #endif /* WITH_GTK */
+diff -Naur gnumeric-1.4.3-orig/src/io-context-gtk.c gnumeric-1.4.3-patched/src/io-context-gtk.c
+--- gnumeric-1.4.3-orig/src/io-context-gtk.c	2004-10-29 23:51:35.000000000 -0400
++++ gnumeric-1.4.3-patched/src/io-context-gtk.c	2005-09-19 00:44:06.915768576 -0400
+@@ -367,8 +367,8 @@
+ }
+ 
+ GSF_CLASS_FULL (IOContextGtk, io_context_gtk,
+-		icg_class_init, icg_init,
+-		TYPE_IO_CONTEXT, 0,
++		NULL, NULL, icg_class_init, NULL,
++		icg_init, TYPE_IO_CONTEXT, 0,
+ 		GSF_INTERFACE (icg_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))
+ 
+ void
+diff -Naur gnumeric-1.4.3-orig/src/io-context.c gnumeric-1.4.3-patched/src/io-context.c
+--- gnumeric-1.4.3-orig/src/io-context.c	2004-07-19 20:37:13.000000000 -0400
++++ gnumeric-1.4.3-patched/src/io-context.c	2005-09-19 00:44:06.917768272 -0400
+@@ -117,8 +117,8 @@
+ }
+ 
+ GSF_CLASS_FULL (IOContext, io_context,
+-		io_context_class_init, io_context_init,
+-		G_TYPE_OBJECT, 0,
++		NULL,NULL,io_context_class_init,NULL,
++		io_context_init,G_TYPE_OBJECT, 0,
+ 		GSF_INTERFACE (io_context_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))
+ 
+ IOContext *
+diff -Naur gnumeric-1.4.3-orig/src/sheet-filter.c gnumeric-1.4.3-patched/src/sheet-filter.c
+--- gnumeric-1.4.3-orig/src/sheet-filter.c	2004-10-16 22:36:05.000000000 -0400
++++ gnumeric-1.4.3-patched/src/sheet-filter.c	2005-09-19 00:44:06.920767816 -0400
+@@ -563,7 +563,7 @@
+ typedef FooCanvasWidget		FilterFooView;
+ typedef FooCanvasWidgetClass	FilterFooViewClass;
+ static GSF_CLASS_FULL (FilterFooView, filter_foo_view,
+-	NULL, NULL,
++	NULL, NULL, NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_WIDGET, 0,
+ 	GSF_INTERFACE (filter_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
+diff -Naur gnumeric-1.4.3-orig/src/sheet-object-cell-comment.c gnumeric-1.4.3-patched/src/sheet-object-cell-comment.c
+--- gnumeric-1.4.3-orig/src/sheet-object-cell-comment.c	2005-01-14 00:48:29.000000000 -0500
++++ gnumeric-1.4.3-patched/src/sheet-object-cell-comment.c	2005-09-19 00:44:06.922767512 -0400
+@@ -123,7 +123,7 @@
+ typedef FooCanvasPolygon	CommentFooView;
+ typedef FooCanvasPolygonClass	CommentFooViewClass;
+ static GSF_CLASS_FULL (CommentFooView, comment_foo_view,
+-	NULL, NULL,
++	NULL, NULL,NULL,NULL,NULL,
+ 	FOO_TYPE_CANVAS_POLYGON, 0,
+ 	GSF_INTERFACE (comment_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
+diff -Naur gnumeric-1.4.3-orig/src/sheet-object-graph.c gnumeric-1.4.3-patched/src/sheet-object-graph.c
+--- gnumeric-1.4.3-orig/src/sheet-object-graph.c	2004-10-29 00:13:13.000000000 -0400
++++ gnumeric-1.4.3-patched/src/sheet-object-graph.c	2005-09-19 00:44:06.925767056 -0400
+@@ -94,7 +94,7 @@
+ typedef GogControlFooCanvas		SOGraphFooView;
+ typedef GogControlFooCanvasClass	SOGraphFooViewClass;
+ static GSF_CLASS_FULL (SOGraphFooView, so_graph_foo_view,
+-	NULL, NULL,
++	NULL, NULL, NULL, NULL, NULL,
+ 	GOG_CONTROL_FOOCANVAS_TYPE, 0,
+ 	GSF_INTERFACE (so_graph_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
+diff -Naur gnumeric-1.4.3-orig/src/sheet-object-image.c gnumeric-1.4.3-patched/src/sheet-object-image.c
+--- gnumeric-1.4.3-orig/src/sheet-object-image.c	2004-12-17 23:48:37.000000000 -0500
++++ gnumeric-1.4.3-patched/src/sheet-object-image.c	2005-09-19 00:44:06.929766448 -0400
+@@ -90,7 +90,7 @@
+ typedef FooCanvasPixbuf		SOImageFooView;
+ typedef FooCanvasPixbufClass	SOImageFooViewClass;
+ static GSF_CLASS_FULL (SOImageFooView, so_image_foo_view,
+-	NULL, NULL,
++	NULL, NULL, NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_PIXBUF, 0,
+ 	GSF_INTERFACE (so_image_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
+diff -Naur gnumeric-1.4.3-orig/src/sheet-object-widget.c gnumeric-1.4.3-patched/src/sheet-object-widget.c
+--- gnumeric-1.4.3-orig/src/sheet-object-widget.c	2005-02-09 16:54:29.000000000 -0500
++++ gnumeric-1.4.3-patched/src/sheet-object-widget.c	2005-09-19 00:44:06.933765840 -0400
+@@ -99,7 +99,7 @@
+ typedef FooCanvasWidget		SOWidgetFooView;
+ typedef FooCanvasWidgetClass	SOWidgetFooViewClass;
+ static GSF_CLASS_FULL (SOWidgetFooView, so_widget_foo_view,
+-	NULL, NULL,
++        NULL, NULL, NULL, NULL, NULL,
+ 	FOO_TYPE_CANVAS_WIDGET, 0,
+ 	GSF_INTERFACE (so_widget_foo_view_init, SHEET_OBJECT_VIEW_TYPE))
+ 
+diff -Naur gnumeric-1.4.3-orig/src/widgets/gnumeric-expr-entry.c gnumeric-1.4.3-patched/src/widgets/gnumeric-expr-entry.c
+--- gnumeric-1.4.3-orig/src/widgets/gnumeric-expr-entry.c	2004-09-07 15:28:41.000000000 -0400
++++ gnumeric-1.4.3-patched/src/widgets/gnumeric-expr-entry.c	2005-09-19 00:44:06.937765232 -0400
+@@ -503,8 +503,8 @@
+ }
+ 
+ GSF_CLASS_FULL (GnmExprEntry, gnm_expr_entry,
+-		gee_class_init, gee_init,
+-		GTK_TYPE_HBOX, 0,
++		NULL, NULL, gee_class_init, NULL,
++		gee_init, GTK_TYPE_HBOX, 0,
+ 		GSF_INTERFACE (gee_cell_editable_init, GTK_TYPE_CELL_EDITABLE))
+ 
+ /**
+diff -Naur gnumeric-1.4.3-orig/src/workbook-control-gui.c gnumeric-1.4.3-patched/src/workbook-control-gui.c
+--- gnumeric-1.4.3-orig/src/workbook-control-gui.c	2005-03-12 19:05:45.000000000 -0500
++++ gnumeric-1.4.3-patched/src/workbook-control-gui.c	2005-09-19 00:44:06.943764320 -0400
+@@ -2545,8 +2545,8 @@
+ }
+ 
+ GSF_CLASS_FULL (WorkbookControlGUI, workbook_control_gui,
+-		workbook_control_gui_class_init, workbook_control_gui_init,
+-		WORKBOOK_CONTROL_TYPE, G_TYPE_FLAG_ABSTRACT,
++		NULL,NULL,workbook_control_gui_class_init,NULL,
++		workbook_control_gui_init,WORKBOOK_CONTROL_TYPE, G_TYPE_FLAG_ABSTRACT,
+ 		GSF_INTERFACE (wbcg_go_plot_data_allocator_init, GOG_DATA_ALLOCATOR_TYPE);
+ 		GSF_INTERFACE (wbcg_gnm_cmd_context_init, GNM_CMD_CONTEXT_TYPE))
+ 

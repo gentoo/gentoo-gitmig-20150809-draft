@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.3-r3.ebuild,v 1.2 2006/07/12 16:21:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.3-r3.ebuild,v 1.3 2006/07/14 16:46:23 allanonjl Exp $
 
-inherit virtualx eutils flag-o-matic gnome2
+inherit virtualx eutils flag-o-matic gnome2 autotools
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
@@ -15,7 +15,7 @@ IUSE="gnome libgda python static"
 # bonobo gnomedb
 
 RDEPEND=">=dev-libs/glib-2.4
-	>=gnome-extra/libgsf-1.12
+	>=gnome-extra/libgsf-1.12.2
 	>=dev-libs/libxml2-2.4.12
 	>=x11-libs/pango-1.4
 
@@ -44,8 +44,6 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper"
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING NEWS README TODO"
-USE_DESTDIR="1"
-
 
 pkg_setup() {
 	if use gnome && ! built_with_use gnome-extra/libgsf gnome; then
@@ -71,7 +69,13 @@ src_unpack() {
 	# Backported patch to fix a potential integer overflow (bug #104010)
 	epatch ${FILESDIR}/${P}-pcre_int_overflow.patch
 
-	automake || die
+	# fix for MACRO problem with newer libgsf
+	epatch "${FILESDIR}"/${PN}-1.4.3-libgsf-1.patch
+
+	# blow away deprecated things
+	epatch "${FILESDIR}"/${P}-remove-deprecated.patch
+
+	eautoreconf
 }
 
 src_compile() {
