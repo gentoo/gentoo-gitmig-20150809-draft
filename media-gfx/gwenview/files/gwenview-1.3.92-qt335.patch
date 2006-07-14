@@ -1,0 +1,12 @@
+Index: gwenview-1.3.92/src/gvcore/filterbar.ui
+===================================================================
+--- gwenview-1.3.92.orig/src/gvcore/filterbar.ui
++++ gwenview-1.3.92/src/gvcore/filterbar.ui
+@@ -255,7 +255,4 @@ equal to this date</string>
+     <tabstop>mFilterButton</tabstop>
+ </tabstops>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>doublespinbox.h</includehint>
+-</includehints>
+ </UI>
