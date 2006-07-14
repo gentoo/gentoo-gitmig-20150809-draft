@@ -1,36 +1,35 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3.ebuild,v 1.5 2006/07/14 16:46:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.1 2006/07/14 16:46:06 nichoj Exp $
 
-inherit java-pkg
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="High-performance, full-featured text search engine written entirely in Java"
 HOMEPAGE="http://jakarta.apache.org/lucene"
 SRC_URI="mirror://apache/jakarta/lucene/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="~amd64 ~ppc x86"
-IUSE="doc jikes junit source"
-DEPEND=">=virtual/jdk-1.3
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="doc test source"
+DEPEND=">=virtual/jdk-1.2
 	>=dev-java/ant-1.5
-	jikes? ( dev-java/jikes )
-	junit? ( dev-java/junit )"
-RDEPEND=">=virtual/jdk-1.3"
+	test? ( dev-java/junit )"
+RDEPEND=">=virtual/jdk-1.2"
 
-src_unpack() {
+ant_src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	rm -f *.jar
-	java-pkg_jar-from junit
+	use test && java-pkg_jar-from junit
 }
 
 
 src_compile() {
-	local antflags="jar-core"
-	use doc && antflags="${antflags} javadocs"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use junit && antflags="${antflags} test"
-	ant ${antflags} || die "compilation failed"
+	eant jar-core $(use_doc javadocs)
+}
+
+src_test() {
+	eant test
 }
 
 src_install() {
