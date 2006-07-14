@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.3-r1.ebuild,v 1.2 2006/07/12 16:39:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.3-r1.ebuild,v 1.3 2006/07/14 18:24:59 dertobi123 Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -15,7 +15,7 @@ SRC_URI="http://research.operationaldynamics.com/linux/java-gnome/dist/${P}.tar.
 
 LICENSE="LGPL-2.1"
 SLOT="2.8"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc gcj source"
 
 DEPS=">=x11-libs/gtk+-2.8.3

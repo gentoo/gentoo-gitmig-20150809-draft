@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.12.1-r1.ebuild,v 1.2 2006/07/12 16:37:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.12.1-r1.ebuild,v 1.3 2006/07/14 18:25:44 dertobi123 Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -15,7 +15,7 @@ SRC_URI="http://research.operationaldynamics.com/linux/java-gnome/dist/${P}.tar.
 
 LICENSE="LGPL-2.1"
 SLOT="2.12"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="doc gcj source"
 
 DEPS=">=gnome-base/gconf-2.12.0
