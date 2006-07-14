@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.107 2006/06/23 12:45:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.108 2006/07/14 21:45:22 flameeyes Exp $
+
+  14 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-tools-1.0.10.ebuild, alsa-tools-1.0.11.ebuild,
+  alsa-tools-1.0.12_rc1.ebuild:
+  Fix DEPEND/RDEPEND, thanks to Yoshi Watanabe in bug #140308.
 
 *alsa-tools-1.0.12_rc1 (23 Jun 2006)
 
