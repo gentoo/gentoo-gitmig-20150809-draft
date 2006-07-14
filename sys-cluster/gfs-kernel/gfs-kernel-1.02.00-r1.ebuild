@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.1 2006/07/14 12:20:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.2 2006/07/14 15:01:46 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -10,8 +10,11 @@ MY_P="cluster-${PV}"
 DESCRIPTION="GFS kernel module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
-	mirror://gentoo/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs.patch.gz
-	http://dev.gentoo.org/~xmerlin/gfs/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs.patch.gz"
+	mirror://gentoo/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-part1.patch.gz
+	mirror://gentoo/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-part2.patch.gz
+	http://dev.gentoo.org/~xmerlin/gfs/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-part1.patch.gz
+	http://dev.gentoo.org/~xmerlin/gfs/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-part2.patch.gz
+	"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,8 +23,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="|| (
-		>=sys-kernel/vanilla-sources-2.6.17
-		>=sys-kernel/gentoo-sources-2.6.17
+		>=sys-kernel/vanilla-sources-2.6.12
+		>=sys-kernel/gentoo-sources-2.6.12
 	)
 	>=sys-cluster/dlm-headers-1.02.00-r1
 	>=sys-cluster/cman-headers-1.02.00-r1"
@@ -33,7 +36,13 @@ S="${WORKDIR}/${MY_P}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${WORKDIR}/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs.patch || die
+
+	epatch ${WORKDIR}/gfs-kernel-1.02.00-20060714-cvs-part1.patch || die
+	if kernel_is 2 6; then
+		if [ "$KV_PATCH" -gt "16" ] ; then
+			epatch ${WORKDIR}/gfs-kernel-1.02.00-20060714-cvs-part2.patch || die
+		fi
+	fi
 	epatch ${FILESDIR}/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-compile.patch || die
 }
 
