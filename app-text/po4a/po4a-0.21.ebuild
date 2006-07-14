@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.21.ebuild,v 1.4 2006/06/28 17:17:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.21.ebuild,v 1.5 2006/07/14 13:42:51 mcummings Exp $
 
 inherit perl-app
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 x86"
 DEPEND="${DEPEND}
 	dev-perl/SGMLSpm
 	>=sys-devel/gettext-0.13
-	>=dev-perl/module-build-0.25
+	>=dev-perl/module-build-0.28
 	app-text/openjade
 	dev-perl/Locale-gettext
 	dev-perl/TermReadKey
