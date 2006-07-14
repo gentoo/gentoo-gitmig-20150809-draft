@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.02.00-r1.ebuild,v 1.1 2006/07/13 18:48:26 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.02.00-r1.ebuild,v 1.2 2006/07/14 10:41:14 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -10,7 +10,7 @@ MY_P="cluster-${PV}"
 DESCRIPTION="General-purpose Distributed Lock Manager kernel module"
 HOMEPAGE="http://sources.redhat.com/cluster/"
 SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
-	mirror://gentoo/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz
+	mirror://gentoo/${PN}-${PV}-${CVS_RELEASE}-cvs.2.patch.gz
 	http://dev.gentoo.org/~xmerlin/gfs/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz"
 
 LICENSE="GPL-2"
