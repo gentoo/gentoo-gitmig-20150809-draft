@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/gauche
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.23 2006/04/20 14:48:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/ChangeLog,v 1.24 2006/07/14 13:27:39 hattya Exp $
+
+  14 Jul 2006; Akinori Hattori <hattya@gentoo.org>
+  -files/gauche-aclocal.m4-1.31.diff, -files/gauche-aclocal.m4-cc.diff,
+  +files/gauche-dbm.ac.diff, +files/gauche-gauche.m4.diff,
+  gauche-0.8.7.ebuild:
+  fixes dynamic link problem of dbm.ndbm.
 
 *gauche-0.8.7 (20 Apr 2006)
 
