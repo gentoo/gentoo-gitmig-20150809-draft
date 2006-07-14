@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/rgmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/ChangeLog,v 1.3 2006/07/13 09:25:23 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/ChangeLog,v 1.4 2006/07/14 13:32:43 xmerlin Exp $
+
+*rgmanager-1.02.00-r1 (14 Jul 2006)
+
+  14 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/rgmanager-1.02.00-20060713-cvs-clunfslock.patch,
+  +rgmanager-1.02.00-r1.ebuild:
+  1.02.00 updated to current stable.
 
 *rgmanager-1.02.00 (13 Jul 2006)
 
