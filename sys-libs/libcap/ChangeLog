@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.36 2006/07/13 15:44:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.37 2006/07/14 14:18:37 solar Exp $
+
+  14 Jul 2006; <solar@gentoo.org> -libcap-1.10-r6.ebuild:
+  - removed broken libcap-1.10-r6 from the tree. It is causing way to many
+  problems
 
   13 Jul 2006; <solar@gentoo.org> libcap-1.10-r7.ebuild:
   - work around broken python support when cross compile. Yanked the hack
