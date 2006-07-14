@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.2.ebuild,v 1.4 2006/05/24 20:17:45 hansmi Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.2.ebuild,v 1.5 2006/07/14 13:50:07 hattya Exp $
 
 inherit eutils
+
+IUSE=""
 
 DESCRIPTION="Utilities and library to convert to/from X-Face format"
 HOMEPAGE="http://www.xemacs.org/Download/optLibs.html"
@@ -14,21 +14,18 @@ LICENSE="MIT"
 KEYWORDS="~alpha ~amd64 ~hppa ia64 ppc ~ppc-macos ppc64 ~sparc x86"
 SLOT="0"
 
-DEPEND=""
-
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-destdir.diff
-	autoconf
+	epatch "${FILESDIR}"/${P}-destdir.diff
 
 }
 
 src_install() {
 
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	newbin xbm2xface{.pl,}
 	dodoc README ChangeLog

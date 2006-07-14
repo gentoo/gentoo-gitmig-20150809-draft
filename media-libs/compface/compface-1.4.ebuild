@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.24 2005/01/31 04:29:53 gongloo Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.4.ebuild,v 1.25 2006/07/14 13:50:07 hattya Exp $
 
 inherit eutils
+
+IUSE=""
 
 DESCRIPTION="Utilities and library to convert to/from X-Face format"
 HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/graphics/convert/"

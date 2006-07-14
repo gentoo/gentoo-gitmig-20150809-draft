@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/compface
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.33 2006/07/05 13:31:43 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.34 2006/07/14 13:50:07 hattya Exp $
+
+  14 Jul 2006; Akinori Hattori <hattya@gentoo.org> compface-1.4.ebuild,
+  compface-1.5.1.ebuild, compface-1.5.2.ebuild:
+  use emake for install. and 1.5.2 is unnecessary to invoke autoconf.
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org> compface-1.5.2.ebuild:
   Stable on ppc.
