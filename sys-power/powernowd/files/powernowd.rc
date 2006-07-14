@@ -1,7 +1,4 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/files/powernowd.rc,v 1.1 2005/03/14 22:06:09 ciaranm Exp $
 
 depend() {
 	need localmount
@@ -10,7 +7,7 @@ depend() {
 
 start() {
 	ebegin "Starting powernowd"
-	/usr/sbin/powernowd	-q ${POWERNOWD_OPTS}
+	/usr/sbin/powernowd -q ${POWERNOWD_OPTS}
 	eend $?
 }
 
