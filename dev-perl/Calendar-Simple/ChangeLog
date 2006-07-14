@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Calendar-Simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.2 2006/06/21 17:19:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.3 2006/07/14 13:43:55 mcummings Exp $
+
+  14 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  Calendar-Simple-1.13.ebuild:
+  Forcing mb version
 
   21 Jun 2006; <nixnut@gentoo.org> Calendar-Simple-1.13.ebuild:
   Added ~ppc wrt bug #137128
