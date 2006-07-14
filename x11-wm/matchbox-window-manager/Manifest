@@ -5,34 +5,26 @@ AUX matchbox-window-manager-1.0-use-nopng.patch 810 RMD160 f6173013aa3a6548baf0e
 MD5 1c048626780502663deb36c7e27e386d files/matchbox-window-manager-1.0-use-nopng.patch 810
 RMD160 f6173013aa3a6548baf0e254ee81a84a0a4c6fc7 files/matchbox-window-manager-1.0-use-nopng.patch 810
 SHA256 3e4480a588227dd05da7b042bf649199781df83a86ea7f6bbe7255a275a2d390 files/matchbox-window-manager-1.0-use-nopng.patch 810
-DIST matchbox-window-manager-0.9.5.tar.bz2 194444 RMD160 877fab047f3ae97892ae79285ab779bd027b7336 SHA1 bc0c71fc8278ad3ef072170fc91e67b910e47362 SHA256 404b96e165c746f1e44102895349a8659ed628b2bd358d127b27d3f9b82fe4ac
 DIST matchbox-window-manager-1.0.tar.bz2 200627 RMD160 5b792894f14c9ef776880f77b2907ea36b470266 SHA1 7362232889421f4f0374c3f8fb4c61128509e05e SHA256 34e7957d3afde9ce52682de510b39d3fc749cc96e10950b111d297278e9ed5fa
-EBUILD matchbox-window-manager-0.9.5.ebuild 1214 RMD160 dfa46ad4b3c558e94c39df70f6f92eb3d9c5aa99 SHA1 1eb5f2ba857ea6313ef16383493d0e4f64d4b906 SHA256 3bf23726e47f9f0be7d93bc5717a18c852611601027a42893d9f1bdeb27b0c22
-MD5 bf9834a416efa1179a55db9ed27369ba matchbox-window-manager-0.9.5.ebuild 1214
-RMD160 dfa46ad4b3c558e94c39df70f6f92eb3d9c5aa99 matchbox-window-manager-0.9.5.ebuild 1214
-SHA256 3bf23726e47f9f0be7d93bc5717a18c852611601027a42893d9f1bdeb27b0c22 matchbox-window-manager-0.9.5.ebuild 1214
-EBUILD matchbox-window-manager-1.0.ebuild 1477 RMD160 9ff22e2706827398c23f8144e8ad724c854561f6 SHA1 f85fc2e7186e907b6fbbdfc7f599fa71e711ac54 SHA256 919df987430e096faee02fa366f332fdab4172aebb03d55fb9f2b3e381597e5e
-MD5 5e92f905d5f6dcec5b60a14f53195f0b matchbox-window-manager-1.0.ebuild 1477
-RMD160 9ff22e2706827398c23f8144e8ad724c854561f6 matchbox-window-manager-1.0.ebuild 1477
-SHA256 919df987430e096faee02fa366f332fdab4172aebb03d55fb9f2b3e381597e5e matchbox-window-manager-1.0.ebuild 1477
-MISC ChangeLog 871 RMD160 e28ebc373a22292f05f82b2e7388a397350bb61e SHA1 93e6b2981f781f0c4e0eec1918e80b29dc6ca9b5 SHA256 138349ffbdd4aab16c89d59ebd95253729cbbca5a7d7cfda7298a5c2f5c7a12c
-MD5 55cec91b89b5ff8d7fea277630e13d02 ChangeLog 871
-RMD160 e28ebc373a22292f05f82b2e7388a397350bb61e ChangeLog 871
-SHA256 138349ffbdd4aab16c89d59ebd95253729cbbca5a7d7cfda7298a5c2f5c7a12c ChangeLog 871
+EBUILD matchbox-window-manager-1.0.ebuild 1660 RMD160 cad3904455793485a8e9996ee3fc618d9c5a0731 SHA1 dd8eaf676c420096f972c56dbec5c14b4166b1e2 SHA256 fef9f28549255d2a7bde53f33c408567b4b2ab39e0df318d2913279c2e04c147
+MD5 f42cb66cb3beb4fe6c2a52ee391e2da3 matchbox-window-manager-1.0.ebuild 1660
+RMD160 cad3904455793485a8e9996ee3fc618d9c5a0731 matchbox-window-manager-1.0.ebuild 1660
+SHA256 fef9f28549255d2a7bde53f33c408567b4b2ab39e0df318d2913279c2e04c147 matchbox-window-manager-1.0.ebuild 1660
+MISC ChangeLog 1058 RMD160 2f434e91b9ed15405f95696ef41f263984197039 SHA1 d1cbf833e977054341b2025b00c0906e6f9c2950 SHA256 8af120633e711c6b2e39ea611747c62c1321be9475c6e7b4d5dbe4ed77e04b81
+MD5 9123ec37a9818a59c972d09cea4b1112 ChangeLog 1058
+RMD160 2f434e91b9ed15405f95696ef41f263984197039 ChangeLog 1058
+SHA256 8af120633e711c6b2e39ea611747c62c1321be9475c6e7b4d5dbe4ed77e04b81 ChangeLog 1058
 MISC metadata.xml 247 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 SHA1 af1f5473be400926e7bf9a98a354866150c8b7a7 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55
 MD5 a80bc50cf196a9e5a2764d6f6081b56a metadata.xml 247
 RMD160 49e7f36b66be574d7f3341589ebff702e1c8c8a9 metadata.xml 247
 SHA256 09c798d19a28d8e2ee2b8494e011929f5fc1617190315d82bd03c32e911def55 metadata.xml 247
-MD5 8584d98683013230dc855cd1f3aaf1ec files/digest-matchbox-window-manager-0.9.5 292
-RMD160 1139193fb4082d4ae458c78887e3ce5767d44abf files/digest-matchbox-window-manager-0.9.5 292
-SHA256 564f4eba1deab54b4bc6495eea1ed7504b04629af2784efa92eec0b655d7929f files/digest-matchbox-window-manager-0.9.5 292
 MD5 e06f5b3b4df298e04df0da497430b800 files/digest-matchbox-window-manager-1.0 286
 RMD160 dbb8cd0fc157a1b164c9b4d03ffc07fbb63566e2 files/digest-matchbox-window-manager-1.0 286
 SHA256 a786ccf39804a6b27037b334c340e5ac7ce95daf7a72dcd4ddeed3241e2f7f9b files/digest-matchbox-window-manager-1.0 286
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEkITByZl4piiTjjYRAs4hAJ45bg9Pt0iCuUWiCXfw/7XWcrQHJQCeKf6a
-XglsDNIFOOi80nAZBrZJR/4=
-=Ojme
+iD8DBQFEt80dyZl4piiTjjYRAnYhAJ97rb9uAyid9a9IAWNEyen4UY8LHACgtGOY
+xIku0QaSkL0ghFEyHWquy1M=
+=e7N/
 -----END PGP SIGNATURE-----
