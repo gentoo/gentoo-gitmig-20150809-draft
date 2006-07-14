@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/matchbox-window-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.4 2006/06/14 21:50:45 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/ChangeLog,v 1.5 2006/07/14 16:58:06 yvasilev Exp $
+
+  14 Jul 2006; <yvasilev@gentoo.org> -matchbox-window-manager-0.9.5.ebuild,
+  matchbox-window-manager-1.0.ebuild:
+  Fixed gconf (USE=gnome) sandbox violation during install. Bug #138136
 
   14 Jun 2006; <yvasilev@gentoo.org>
   +files/matchbox-window-manager-1.0-use-nopng.patch,

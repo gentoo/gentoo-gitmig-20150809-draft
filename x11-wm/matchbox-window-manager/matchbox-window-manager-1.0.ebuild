@@ -1,8 +1,8 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.0.ebuild,v 1.2 2006/06/14 21:50:45 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.0.ebuild,v 1.3 2006/07/14 16:58:06 yvasilev Exp $
 
-inherit eutils versionator
+inherit eutils versionator gnome2
 
 DESCRIPTION="Light weight WM designed for use on PDA computers"
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
@@ -47,7 +47,12 @@ src_compile() {
 }
 
 src_install() {
+	# we must delay gconf schema installation due to sandbox
+	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	make DESTDIR="${D}" install || die "Installation failed"
+	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
+
+	gnome2_gconf_install
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
