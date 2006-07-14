@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.4 2006/06/26 20:32:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.5 2006/07/14 23:58:17 spock Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "In order to update your hddtemp database, run:"
-	einfo "  ebuild /var/db/pkg/app-admin/${PF}/${PF}.ebuild config"
+	einfo "  emerge --config =${CATEGORY}/${PF}"
 }
 
 pkg_config() {
