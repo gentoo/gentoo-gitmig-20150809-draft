@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.25 2006/06/16 13:54:25 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.26 2006/07/14 15:13:32 marienz Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -98,7 +98,8 @@ python_makesym() {
 python_tkinter_exists() {
 	if ! python -c "import Tkinter" >/dev/null 2>&1; then
 		eerror "You need to recompile python with Tkinter support."
-		eerror "That means: USE='X tcltk' emerge python"
+		eerror "That means: 'dev-lang/python X tcltk'"
+		eerror "in /etc/portage/package.use"
 		echo
 		die "missing tkinter support with installed python"
 	fi
