@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0_pre3.ebuild,v 1.1 2006/06/04 14:39:29 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0_pre3.ebuild,v 1.2 2006/07/14 15:20:21 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -62,7 +62,7 @@ src_install() {
 	# put it to the docs
 	rm -f ${D}/etc/drbd.conf
 	dodoc scripts/drbd.conf || die
-	dodoc upgrade*.txt || die
+	#dodoc upgrade*.txt || die
 }
 
 pkg_postinst() {
