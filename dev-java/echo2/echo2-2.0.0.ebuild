@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/echo2-2.0.0.ebuild,v 1.1 2006/07/06 11:40:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/echo2-2.0.0.ebuild,v 1.2 2006/07/14 14:07:50 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,7 +13,7 @@ DOWNLOAD_URI="http://www.nextapp.com/downloads/echo2/${PV}/NextApp_Echo2.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="doc"
+IUSE="doc source"
 
 RESTRICT="fetch"
 
@@ -58,6 +58,8 @@ src_install() {
 
 	java-pkg_dohtml "${S}/Documentation/index.html"
 	java-pkg_dohtml -r "${S}/Documentation/images"
+
+	use source && java-pkg_dosrc "${S}/SourceCode/src"
 
 	dodoc "${S}/readme.txt"
 
