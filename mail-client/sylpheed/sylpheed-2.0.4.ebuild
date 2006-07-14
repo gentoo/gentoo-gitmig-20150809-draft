@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.0.4.ebuild,v 1.8 2005/11/16 13:30:24 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.0.4.ebuild,v 1.9 2006/07/14 14:10:45 hattya Exp $
 
 inherit eutils
 
@@ -30,32 +30,31 @@ RDEPEND="${DEPEND}
 src_unpack() {
 
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-namespace.diff
-	epatch ${FILESDIR}/${PN}-procmime.diff
+	epatch "${FILESDIR}"/${PN}-namespace.diff
+	epatch "${FILESDIR}"/${PN}-procmime.diff
 
 }
 
 src_compile() {
 
 	econf \
-		`use_enable nls` \
-		`use_enable ssl` \
 		`use_enable crypt gpgme` \
-		`use_enable pda jpilot` \
-		`use_enable ldap` \
 		`use_enable ipv6` \
+		`use_enable ldap` \
+		`use_enable nls` \
+		`use_enable pda jpilot` \
+		`use_enable ssl` \
 		`use_enable xface compface` \
 		|| die
-
 	emake || die
 
 }
 
 src_install() {
 
-	einstall
+	emake DESTDIR="${D}" install
 
 	dodir /usr/share/pixmaps
 	insinto /usr/share/pixmaps
@@ -64,6 +63,6 @@ src_install() {
 	insinto /usr/share/applications
 	doins sylpheed.desktop
 
-	dodoc AUTHORS COPYING ChangeLog* INSTALL* NEWS* README* TODO*
+	dodoc AUTHORS ChangeLog* NEWS* README* TODO*
 
 }

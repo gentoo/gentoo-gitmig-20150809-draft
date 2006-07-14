@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.4.ebuild,v 1.7 2006/05/25 17:48:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.4.ebuild,v 1.8 2006/07/14 14:10:45 hattya Exp $
 
-inherit eutils
+inherit autotools eutils
 
 IUSE="crypt gnome ipv6 ldap nls pda spell ssl xface"
 
@@ -31,10 +31,10 @@ RDEPEND="${DEPEND}
 src_unpack() {
 
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.*.diff
-	automake
+	epatch "${FILESDIR}"/${PN}-2.*.diff
+	eautomake
 
 }
 
@@ -50,14 +50,13 @@ src_compile() {
 		`use_enable ssl` \
 		`use_enable xface compface` \
 		|| die
-
 	emake || die
 
 }
 
 src_install() {
 
-	einstall
+	emake DESTDIR="${D}" install
 
 	dodir /usr/share/pixmaps
 	insinto /usr/share/pixmaps
@@ -66,6 +65,6 @@ src_install() {
 	insinto /usr/share/applications
 	doins sylpheed.desktop
 
-	dodoc AUTHORS COPYING ChangeLog* INSTALL* NEWS* README* TODO*
+	dodoc AUTHORS ChangeLog* NEWS* README* TODO*
 
 }
