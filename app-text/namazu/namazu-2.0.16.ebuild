@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.16.ebuild,v 1.1 2006/04/28 13:44:51 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.16.ebuild,v 1.2 2006/07/14 13:13:01 hattya Exp $
 
 IUSE="chasen cjk emacs kakasi nls tcltk"
 
@@ -13,18 +13,21 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 
 DEPEND=">=dev-perl/File-MMagic-1.20
+	chasen? ( app-text/chasen )
 	cjk? ( app-i18n/nkf )
-	nls? ( sys-devel/gettext )
-	chasen? ( dev-perl/Text-ChaSen )
 	kakasi? ( dev-perl/Text-Kakasi )
-	tcltk?  ( dev-lang/tk www-client/lynx )"
+	nls? ( sys-devel/gettext )
+	tcltk? (
+		dev-lang/tk
+		www-client/lynx
+	)"
 
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	sed -i -e "s:\(rm -f \$(filterdir).*$\):# \1:" filter/Makefile.in
+	sed -i "s:\(rm -f \$(filterdir).*$\):# \1:" filter/Makefile.in
 
 }
 
@@ -47,8 +50,8 @@ src_compile() {
 
 src_install () {
 
-	make DESTDIR=${D} install || die
-	rm -rf ${D}/usr/share/namazu/{doc,etc}
+	emake DESTDIR="${D}" install || die
+	rm -rf "${D}"/usr/share/namazu/{doc,etc}
 
 	dodoc AUTHORS CREDITS ChangeLog* HACKING* NEWS README* THANKS TODO
 	dohtml -r doc/*

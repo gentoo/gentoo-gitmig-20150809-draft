@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.14.ebuild,v 1.6 2005/12/04 19:48:35 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.14.ebuild,v 1.7 2006/07/14 13:13:01 hattya Exp $
 
 IUSE="chasen cjk emacs kakasi nls tcltk"
 
@@ -13,11 +13,23 @@ KEYWORDS="x86 ppc64 ~ppc ~amd64"
 SLOT="0"
 
 DEPEND=">=dev-perl/File-MMagic-1.20
+	chasen? ( app-text/chasen )
 	cjk? ( app-i18n/nkf )
-	nls? ( sys-devel/gettext )
-	chasen? ( dev-perl/Text-ChaSen )
 	kakasi? ( dev-perl/Text-Kakasi )
-	tcltk?  ( dev-lang/tk www-client/lynx )"
+	nls? ( sys-devel/gettext )
+	tcltk? (
+		dev-lang/tk
+		www-client/lynx
+	)"
+
+src_unpack() {
+
+	unpack ${A}
+	cd "${S}"
+
+	sed -i "s:\(rm -f \$(filterdir).*$\):# \1:" filter/Makefile.in
+
+}
 
 src_compile() {
 
@@ -32,18 +44,16 @@ src_compile() {
 		`use_enable tcltk tknamazu` \
 		${myconf} \
 		|| die
-	sed -ie "s:\(rm -f \$(filterdir).*$\):# \1:" filter/Makefile
 	emake || die
 
 }
 
 src_install () {
 
-	make DESTDIR=${D} install || die
-	rm -r ${D}/usr/share/namazu/etc
+	emake DESTDIR="${D}" install || die
+	rm -rf "${D}"/usr/share/namazu/{doc,etc}
 
-	rm *NLS
-	dodoc [A-Z][A-Z]* ChangeLog*
+	dodoc AUTHORS CREDITS ChangeLog* HACKING* NEWS README* THANKS TODO
 
 	if use emacs; then
 		docinto lisp
