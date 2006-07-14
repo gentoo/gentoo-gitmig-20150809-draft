@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/module-build
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.45 2006/07/02 03:44:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.46 2006/07/14 15:09:03 tcort Exp $
+
+  14 Jul 2006; Thomas Cort <tcort@gentoo.org> module-build-0.28.ebuild:
+  Stable on alpha wrt Bug #136708.
 
   02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   module-build-0.28.ebuild:
