@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2032 2006/07/14 00:46:09 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2033 2006/07/14 15:24:29 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -905,6 +905,9 @@ media-video/ffmpeg:network - Enables network streaming support
 media-video/ffmpeg:x264 - Enables h264 encoding using x264
 media-video/flumotion:gstreamer08 - Use GStreamer 0.8 over GStreamer 0.10
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
+media-video/gpac:faad - Enable support for FAAD (Freeware Advanced Audio Decoder)
+media-video/gpac:ft - Enable support for the FreeType TrueType font renderer
+media-video/gpac:js - Enable support for SpiderMonkey ECMAScript
 media-video/kmplayer:mplayer - Enables video playback by mplayer
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
