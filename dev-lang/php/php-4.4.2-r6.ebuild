@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.4.ebuild,v 1.12 2006/07/14 16:04:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.2-r6.ebuild,v 1.1 2006/07/14 16:04:37 chtekk Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
 IUSE="cli cgi ${CGI_SAPI_USE} ${APACHE2_SAPI_USE} fastbuild"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
@@ -14,20 +14,20 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 PROVIDE="virtual/php virtual/httpd-php"
 
 # php package settings
-SLOT="5"
+SLOT="4"
 MY_PHP_PV="${PV}"
 MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE="1"
 
 # php patch settings, general
-PHP_PATCHSET_REV="1"
-HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.9-gentoo.patch.gz"
+PHP_PATCHSET_REV="7"
+HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.11-gentoo-r1.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-multilib-search-path.patch"
 # php patch settings, ebuild specific
 FASTBUILD_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-fastbuild.patch"
 CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-concurrent_apache_modules.patch"
 
-inherit php5_1-sapi apache-module
+inherit php4_4-sapi apache-module
 
 want_apache
 
@@ -103,7 +103,7 @@ pkg_setup() {
 		ewarn
 	fi
 
-	php5_1-sapi_pkg_setup
+	php4_4-sapi_pkg_setup
 }
 
 php_determine_sapis() {
@@ -157,7 +157,7 @@ src_unpack() {
 	fi
 
 	# Now let the eclass do the rest and regenerate the configure
-	php5_1-sapi_src_unpack
+	php4_4-sapi_src_unpack
 }
 
 src_compile() {
@@ -217,18 +217,18 @@ src_compile_fastbuild() {
 
 		# Threaded Apache2 support
 		if useq threads ; then
-			my_conf="${my_conf} --enable-maintainer-zts"
+			my_conf="${my_conf} --enable-experimental-zts"
 			ewarn "Enabling ZTS for Apache2 MPM"
 		fi
 
 		# Concurrent PHP Apache2 modules support
 		if useq concurrentmodphp ; then
-			append-ldflags "-Wl,--version-script=${FILESDIR}/php5-ldvs"
+			append-ldflags "-Wl,--version-script=${FILESDIR}/php4-ldvs"
 		fi
 	fi
 
 	# Now we know what we are building, build it
-	php5_1-sapi_src_compile
+	php4_4-sapi_src_compile
 
 	# To keep the separate php.ini files for each SAPI, we change the
 	# build-defs.h and recompile
@@ -238,8 +238,8 @@ src_compile_fastbuild() {
 		einfo "Building CLI SAPI"
 		einfo
 
-		sed -e 's|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH "/etc/php/cli-php5"|g;' -i main/build-defs.h
-		sed -e 's|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR "/etc/php/cli-php5/ext-active"|g;' -i main/build-defs.h
+		sed -e 's|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH "/etc/php/cli-php4"|g;' -i main/build-defs.h
+		sed -e 's|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR "/etc/php/cli-php4/ext-active"|g;' -i main/build-defs.h
 		for x in main/main.o main/main.lo main/php_ini.o main/php_ini.lo ; do
 			[[ -f ${x} ]] && rm -f ${x}
 		done
@@ -252,8 +252,8 @@ src_compile_fastbuild() {
 		einfo "Building CGI SAPI"
 		einfo
 
-		sed -e 's|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH "/etc/php/cgi-php5"|g;' -i main/build-defs.h
-		sed -e 's|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR "/etc/php/cgi-php5/ext-active"|g;' -i main/build-defs.h
+		sed -e 's|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH "/etc/php/cgi-php4"|g;' -i main/build-defs.h
+		sed -e 's|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR "/etc/php/cgi-php4/ext-active"|g;' -i main/build-defs.h
 		for x in main/main.o main/main.lo main/php_ini.o main/php_ini.lo ; do
 			[[ -f ${x} ]] && rm -f ${x}
 		done
@@ -266,8 +266,8 @@ src_compile_fastbuild() {
 		einfo "Building apache${APACHE_VERSION} SAPI"
 		einfo
 
-		sed -e "s|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH \"/etc/php/apache${APACHE_VERSION}-php5\"|g;" -i main/build-defs.h
-		sed -e "s|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR \"/etc/php/apache${APACHE_VERSION}-php5/ext-active\"|g;" -i main/build-defs.h
+		sed -e "s|^#define PHP_CONFIG_FILE_PATH.*|#define PHP_CONFIG_FILE_PATH \"/etc/php/apache${APACHE_VERSION}-php4\"|g;" -i main/build-defs.h
+		sed -e "s|^#define PHP_CONFIG_FILE_SCAN_DIR.*|#define PHP_CONFIG_FILE_SCAN_DIR \"/etc/php/apache${APACHE_VERSION}-php4/ext-active\"|g;" -i main/build-defs.h
 		for x in main/main.o main/main.lo main/php_ini.o main/php_ini.lo ; do
 			[[ -f ${x} ]] && rm -f ${x}
 		done
@@ -287,7 +287,7 @@ src_compile_normal() {
 		if [[ "${APACHE_VERSION}" != "0" ]] ; then
 			# Concurrent PHP Apache2 modules support
 			if useq concurrentmodphp ; then
-				append-ldflags "-Wl,--version-script=${FILESDIR}/php5-ldvs"
+				append-ldflags "-Wl,--version-script=${FILESDIR}/php4-ldvs"
 			fi
 		fi
 	fi
@@ -299,7 +299,7 @@ src_compile_normal() {
 			if [[ "${APACHE_VERSION}" != "0" ]] ; then
 				# Threaded Apache2 support
 				if useq threads ; then
-					my_conf="${my_conf} --enable-maintainer-zts"
+					my_conf="${my_conf} --enable-experimental-zts"
 					ewarn "Enabling ZTS for Apache2 MPM"
 				fi
 			fi
@@ -314,23 +314,23 @@ src_compile_normal() {
 		case ${x} in
 			cli)
 				my_conf="${my_conf} --enable-cli --disable-cgi"
-				php5_1-sapi_src_compile
+				php4_4-sapi_src_compile
 				cp sapi/cli/php php-cli || die "Unable to copy CLI SAPI"
 				;;
 			cgi)
 				my_conf="${my_conf} --disable-cli --enable-cgi --enable-fastcgi"
 				phpconfutils_extension_enable "discard-path" "discard-path" 0
 				phpconfutils_extension_enable "force-cgi-redirect" "force-cgi-redirect" 0
-				php5_1-sapi_src_compile
+				php4_4-sapi_src_compile
 				cp sapi/cgi/php php-cgi || die "Unable to copy CGI SAPI"
 				;;
 			apache1)
 				my_conf="${my_conf} --disable-cli --with-apxs=/usr/sbin/apxs"
-				php5_1-sapi_src_compile
+				php4_4-sapi_src_compile
 				;;
 			apache2)
 				my_conf="${my_conf} --disable-cli --with-apxs2=/usr/sbin/apxs2"
-				php5_1-sapi_src_compile
+				php4_4-sapi_src_compile
 				;;
 		esac
 
@@ -342,10 +342,10 @@ src_compile_normal() {
 src_install() {
 	php_determine_sapis
 
-	destdir=/usr/$(get_libdir)/php5
+	destdir=/usr/$(get_libdir)/php4
 
 	# Let the eclass do the common work
-	php5_1-sapi_src_install
+	php4_4-sapi_src_install
 
 	einfo
 	einfo "Installing SAPI(s) ${PHPSAPIS}"
@@ -360,42 +360,42 @@ src_install() {
 				einfo "Installing CLI SAPI"
 				into ${destdir}
 				newbin php-cli php || die "Unable to install ${x} sapi"
-				php5_1-sapi_install_ini
+				php4_4-sapi_install_ini
 				;;
 			cgi)
 				einfo "Installing CGI SAPI"
 				into ${destdir}
 				dobin php-cgi || die "Unable to install ${x} sapi"
-				php5_1-sapi_install_ini
+				php4_4-sapi_install_ini
 				;;
 			apache1)
 				einfo "Installing Apache${APACHE_VERSION} SAPI"
 				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
-				einfo "Installing Apache${APACHE_VERSION} config file for PHP5 (70_mod_php5.conf)"
+				einfo "Installing Apache${APACHE_VERSION} config file for PHP4 (70_mod_php.conf)"
 				insinto ${APACHE_MODULES_CONFDIR}
-				newins "${FILESDIR}/70_mod_php5.conf-apache1" "70_mod_php5.conf"
-				php5_1-sapi_install_ini
+				newins "${FILESDIR}/70_mod_php.conf-apache1" "70_mod_php.conf"
+				php4_4-sapi_install_ini
 				;;
 			apache2)
 				einfo "Installing Apache${APACHE_VERSION} SAPI"
 				make INSTALL_ROOT="${D}" install-sapi || die "Unable to install ${x} SAPI"
 				if useq concurrentmodphp ; then
-					einfo "Installing Apache${APACHE_VERSION} config file for PHP5-concurrent (70_mod_php5_concurr.conf)"
+					einfo "Installing Apache${APACHE_VERSION} config file for PHP4-concurrent (70_mod_php_concurr.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					newins "${FILESDIR}/70_mod_php5_concurr.conf-apache2" "70_mod_php5_concurr.conf"
+					newins "${FILESDIR}/70_mod_php_concurr.conf-apache2" "70_mod_php_concurr.conf"
 
 					# Put the ld version script in the right place so it's always accessible
 					insinto "/var/lib/php-pkg/${CATEGORY}/${PN}-${PVR}/"
-					doins "${FILESDIR}/php5-ldvs"
+					doins "${FILESDIR}/php4-ldvs"
 
 					# Redefine the extension dir to have the modphp suffix
 					PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`-versioned"
 				else
-					einfo "Installing Apache${APACHE_VERSION} config file for PHP5 (70_mod_php5.conf)"
+					einfo "Installing Apache${APACHE_VERSION} config file for PHP4 (70_mod_php.conf)"
 					insinto ${APACHE_MODULES_CONFDIR}
-					newins "${FILESDIR}/70_mod_php5.conf-apache2" "70_mod_php5.conf"
+					newins "${FILESDIR}/70_mod_php.conf-apache2" "70_mod_php.conf"
 				fi
-				php5_1-sapi_install_ini
+				php4_4-sapi_install_ini
 				;;
 		esac
 	done
@@ -404,95 +404,95 @@ src_install() {
 pkg_postinst() {
 	# Output some general info to the user
 	if useq apache || useq apache2 ; then
-		APACHE1_MOD_DEFINE="PHP5"
-		APACHE1_MOD_CONF="70_mod_php5"
-		APACHE2_MOD_DEFINE="PHP5"
+		APACHE1_MOD_DEFINE="PHP4"
+		APACHE1_MOD_CONF="70_mod_php"
+		APACHE2_MOD_DEFINE="PHP4"
 		if useq concurrentmodphp ; then
-			APACHE2_MOD_CONF="70_mod_php5_concurr"
+			APACHE2_MOD_CONF="70_mod_php_concurr"
 		else
-			APACHE2_MOD_CONF="70_mod_php5"
+			APACHE2_MOD_CONF="70_mod_php"
 		fi
 		apache-module_pkg_postinst
 	fi
 
 	# Update Apache1 to use mod_php
 	if useq apache ; then
-		"${ROOT}/usr/sbin/php-select" -t apache1 php5 > /dev/null 2>&1
+		"${ROOT}/usr/sbin/php-select" -t apache1 php4 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 2 ]] ; then
-			php-select apache1 php5
+			php-select apache1 php4
 		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
 			ewarn "Apache1 is configured to load a different version of PHP."
-			ewarn "To make Apache1 use PHP v5, use php-select:"
+			ewarn "To make Apache1 use PHP v4, use php-select:"
 			ewarn
-			ewarn "    php-select apache1 php5"
+			ewarn "    php-select apache1 php4"
 			ewarn
 		fi
 	fi
 
 	# Update Apache2 to use mod_php
 	if useq apache2 ; then
-		"${ROOT}/usr/sbin/php-select" -t apache2 php5 > /dev/null 2>&1
+		"${ROOT}/usr/sbin/php-select" -t apache2 php4 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 2 ]] ; then
-			php-select apache2 php5
+			php-select apache2 php4
 		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
 			ewarn "Apache2 is configured to load a different version of PHP."
-			ewarn "To make Apache2 use PHP v5, use php-select:"
+			ewarn "To make Apache2 use PHP v4, use php-select:"
 			ewarn
-			ewarn "    php-select apache2 php5"
+			ewarn "    php-select apache2 php4"
 			ewarn
 		fi
 	fi
 
 	# Create the symlinks for php-cli
 	if useq cli || phpconfutils_usecheck cli ; then
-		"${ROOT}/usr/sbin/php-select" -t php php5 > /dev/null 2>&1
+		"${ROOT}/usr/sbin/php-select" -t php php4 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 5 ]] ; then
-			php-select php php5
+			php-select php php4
 		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
 			ewarn "/usr/bin/php links to a different version of PHP."
-			ewarn "To make /usr/bin/php point to PHP v5, use php-select:"
+			ewarn "To make /usr/bin/php point to PHP v4, use php-select:"
 			ewarn
-			ewarn "    php-select php php5"
+			ewarn "    php-select php php4"
 			ewarn
 		fi
 	fi
 
 	# Create the symlinks for php-cgi
 	if useq cgi ; then
-		"${ROOT}/usr/sbin/php-select" -t php-cgi php5 > /dev/null 2>&1
+		"${ROOT}/usr/sbin/php-select" -t php-cgi php4 > /dev/null 2>&1
 		exitStatus=$?
 		if [[ ${exitStatus} == 5 ]] ; then
-			php-select php-cgi php5
+			php-select php-cgi php4
 		elif [[ ${exitStatus} == 4 ]] ; then
 			ewarn
 			ewarn "/usr/bin/php-cgi links to a different version of PHP."
-			ewarn "To make /usr/bin/php-cgi point to PHP v5, use php-select:"
+			ewarn "To make /usr/bin/php-cgi point to PHP v4, use php-select:"
 			ewarn
-			ewarn "    php-select php-cgi php5"
+			ewarn "    php-select php-cgi php4"
 			ewarn
 		fi
 	fi
 
 	# Create the symlinks for php-devel
-	"${ROOT}/usr/sbin/php-select" -t php-devel php5 > /dev/null 2>&1
+	"${ROOT}/usr/sbin/php-select" -t php-devel php4 > /dev/null 2>&1
 	exitStatus=$?
 	if [[ $exitStatus == 5 ]] ; then
-		php-select php-devel php5
+		php-select php-devel php4
 	elif [[ $exitStatus == 4 ]] ; then
 		ewarn
 		ewarn "/usr/bin/php-config and/or /usr/bin/phpize are linked to a"
-		ewarn "different version of PHP. To make them point to PHP v5, use"
+		ewarn "different version of PHP. To make them point to PHP v4, use"
 		ewarn "php-select:"
 		ewarn
-		ewarn "    php-select php-devel php5"
+		ewarn "    php-select php-devel php4"
 		ewarn
 	fi
 
-	php5_1-sapi_pkg_postinst
+	php4_4-sapi_pkg_postinst
 }

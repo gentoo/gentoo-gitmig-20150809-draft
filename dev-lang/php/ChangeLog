@@ -1,6 +1,21 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.102 2006/07/13 16:20:54 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.103 2006/07/14 16:04:37 chtekk Exp $
+
+*php-5.1.4-r4 (14 Jul 2006)
+*php-4.4.2-r6 (14 Jul 2006)
+
+  14 Jul 2006; Luca Longinotti <chtekk@gentoo.org>
+  +files/70_mod_php5_concurr.conf-apache2,
+  +files/70_mod_php_concurr.conf-apache2, +files/php4-ldvs,
+  +files/php5-ldvs, php-4.3.11-r5.ebuild, php-4.4.2.ebuild,
+  php-4.4.2-r2.ebuild, -php-4.4.2-r5.ebuild, +php-4.4.2-r6.ebuild,
+  php-5.0.5-r5.ebuild, php-5.1.4.ebuild, -php-5.1.4-r3.ebuild,
+  +php-5.1.4-r4.ebuild:
+  Restructure PHP ebuilds and eclasses to accomodate for future expansion and
+  new features, cleaner separation between eclasses and ebuilds. Fixes
+  security related bugs #133524, #136566, #138180, #135860 and bugs #137568,
+  #134171, #138665.
 
   13 Jul 2006; Luca Longinotti <chtekk@gentoo.org> -php-5.1.2.ebuild:
   Remove PHP 5.1.2.

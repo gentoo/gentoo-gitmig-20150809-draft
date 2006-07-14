@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.4.ebuild,v 1.12 2006/07/14 16:04:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.1.4-r4.ebuild,v 1.1 2006/07/14 16:04:37 chtekk Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
 IUSE="cli cgi ${CGI_SAPI_USE} ${APACHE2_SAPI_USE} fastbuild"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 
 # NOTE: Portage doesn't support setting PROVIDE based on the USE flags
 #		that have been enabled, so we have to PROVIDE everything for now
@@ -20,8 +20,8 @@ MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE="1"
 
 # php patch settings, general
-PHP_PATCHSET_REV="1"
-HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.9-gentoo.patch.gz"
+PHP_PATCHSET_REV="5"
+HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.11-gentoo-r1.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-multilib-search-path.patch"
 # php patch settings, ebuild specific
 FASTBUILD_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-fastbuild.patch"
