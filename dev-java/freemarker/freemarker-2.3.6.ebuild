@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.6.ebuild,v 1.2 2006/07/09 16:13:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.6.ebuild,v 1.3 2006/07/14 14:02:36 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="freemarker"
 SLOT="2.3"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="source doc"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core"
@@ -44,5 +44,6 @@ src_install() {
 	dodoc README.txt
 
 	use doc && java-pkg_dohtml -r build/api
+	use source && java-pkg_dosrc src
 
 }
