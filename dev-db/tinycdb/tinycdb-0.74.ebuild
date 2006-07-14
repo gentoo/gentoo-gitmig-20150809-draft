@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.74.ebuild,v 1.8 2006/01/23 15:16:28 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/tinycdb-0.74.ebuild,v 1.9 2006/07/14 14:25:58 hattya Exp $
 
 inherit eutils
 
@@ -14,13 +14,12 @@ LICENSE="public-domain"
 KEYWORDS="~hppa ia64 ppc x86"
 SLOT="0"
 
-DEPEND=""
-
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-libbase.diff
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-libbase.diff
 
 }
 
@@ -34,6 +33,6 @@ src_install() {
 
 	einstall LIBBASE=lib${PN} install-shared || die
 
-	mv ${D}/usr/include/{cdb,${PN}}.h
+	mv "${D}"/usr/include/{cdb,${PN}}.h
 
 }

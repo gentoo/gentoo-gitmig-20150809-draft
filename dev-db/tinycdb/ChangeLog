@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/tinycdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.8 2006/01/23 15:16:28 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.9 2006/07/14 14:25:58 hattya Exp $
+
+  14 Jul 2006; Akinori Hattori <hattya@gentoo.org> tinycdb-0.74.ebuild:
+  enclose D, S and FILESDIR in double quotes.
 
   23 Jan 2006; Rene Nussbaumer <killerfox@gentoo.org> tinycdb-0.74.ebuild:
   Unstable on hppa. See bug #115716.
