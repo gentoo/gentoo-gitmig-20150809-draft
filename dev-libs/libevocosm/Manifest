@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eef3e4cef65741848ef6132d185c0959 ChangeLog 803
-MD5 656fa42cfb283daaa76a91100b645244 files/digest-libevocosm-2.5.2 68
-MD5 60f4fcaa9eff9004be09d26f99793d9f files/digest-libevocosm-3.1.0 68
+DIST libevocosm-2.5.2.tar.gz 328537
+DIST libevocosm-3.1.0.tar.gz 357858
+EBUILD libevocosm-2.5.2.ebuild 566 RMD160 0c7ab85cd3c49e7544620c0819194f5f5f5f4d25 SHA1 8ba255d3ec754e1ddd01f3d3b33e9a768be0243f SHA256 79b38403f3b40d44a2bffb1ad1034285edbe8962a2feb1198f79e14252e4d9a0
 MD5 adc082fc46d5a78654c4dd628ce935f6 libevocosm-2.5.2.ebuild 566
+RMD160 0c7ab85cd3c49e7544620c0819194f5f5f5f4d25 libevocosm-2.5.2.ebuild 566
+SHA256 79b38403f3b40d44a2bffb1ad1034285edbe8962a2feb1198f79e14252e4d9a0 libevocosm-2.5.2.ebuild 566
+EBUILD libevocosm-3.1.0.ebuild 568 RMD160 611fbca5fea75babcc5fb3e53da01d906b9fb7b2 SHA1 00421c42723382c562cae52e17788c0b893fccc3 SHA256 ba362c3bf2dd42ea18ff2471a74b24d1d31bc2ce5e4804d6a36bc80230c9bd73
 MD5 f662eadc68e5b02cc1c9c00f4a182fbf libevocosm-3.1.0.ebuild 568
-MD5 5dea0891aac493884dcf72d394d42924 metadata.xml 216
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDprXeCRZPokWLroQRAt3AAJ9TKj8T+U1Y9fcRvuA4wmH1cIKS3gCfcfhb
-Tx+BhYoqMJX6ddxJwOqWfIM=
-=8kwd
------END PGP SIGNATURE-----
+RMD160 611fbca5fea75babcc5fb3e53da01d906b9fb7b2 libevocosm-3.1.0.ebuild 568
+SHA256 ba362c3bf2dd42ea18ff2471a74b24d1d31bc2ce5e4804d6a36bc80230c9bd73 libevocosm-3.1.0.ebuild 568
+MISC ChangeLog 919 RMD160 546d6263f98aa2b3717d8db9e6d71e4c42d0facc SHA1 9e104f698af1dfa62c7402b8a1e27aa29664691e SHA256 519b5befa081cf8962b92c8a370bb382cad5eeed95c3e7fc6d8494b938eb5c47
+MD5 c113c1918b8369b37c9e859f7e9f0bdb ChangeLog 919
+RMD160 546d6263f98aa2b3717d8db9e6d71e4c42d0facc ChangeLog 919
+SHA256 519b5befa081cf8962b92c8a370bb382cad5eeed95c3e7fc6d8494b938eb5c47 ChangeLog 919
+MISC metadata.xml 156 RMD160 537178ef5a820896e97475fb9aded47d50474bef SHA1 2a4ef4879b918a28132d21cd6d1bbaa2a30dccde SHA256 0e8490f9c62cb74e5894b52f643a02de0024d97dbfebad43082dce6bcb39555f
+MD5 41d7ac32dc54956e937401bb5a2c3810 metadata.xml 156
+RMD160 537178ef5a820896e97475fb9aded47d50474bef metadata.xml 156
+SHA256 0e8490f9c62cb74e5894b52f643a02de0024d97dbfebad43082dce6bcb39555f metadata.xml 156
+MD5 656fa42cfb283daaa76a91100b645244 files/digest-libevocosm-2.5.2 68
+RMD160 939040161f918e3c69151de9e82acc08a5cb3706 files/digest-libevocosm-2.5.2 68
+SHA256 e1cc488c6d33a538085020319cec51c3108b30b50603c3d66ef7df0ad526fc2a files/digest-libevocosm-2.5.2 68
+MD5 60f4fcaa9eff9004be09d26f99793d9f files/digest-libevocosm-3.1.0 68
+RMD160 6e5f9150f4940f512c61c6bfb07b85c69d60d7cb files/digest-libevocosm-3.1.0 68
+SHA256 b57c916463718e3c7940c2159145f7d8f4902933b6acc86d174ab7c539d9daf5 files/digest-libevocosm-3.1.0 68
