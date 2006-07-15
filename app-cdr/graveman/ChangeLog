@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.32 2006/06/06 07:52:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.33 2006/07/15 07:27:01 dertobi123 Exp $
+
+  15 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  graveman-0.3.12_p5.ebuild:
+  ppc stable
 
 *graveman-0.3.12_p5 (06 Jun 2006)
 
