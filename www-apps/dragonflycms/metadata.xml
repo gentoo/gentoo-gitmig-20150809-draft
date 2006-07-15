@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-<email>sejo@gentoo.org</email>
-<name>Jochen Maes</name>
-</maintainer>
 <longdescription lang="en">
 	CPG Dragonfly CMS is a feature-rich open source content management system
 	based off of PHP-Nuke 6.5
