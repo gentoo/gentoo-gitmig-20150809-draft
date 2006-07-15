@@ -1,20 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ffdd4ecc41a9d943ccd8619c20d14a9 ChangeLog 558
-MD5 0095a83c05118d9e346dd2d8ba18bb4f files/digest-pathfinder-1.0.53 63
-MD5 d54a926d81530863bfe613992128d46d files/digest-pathfinder-1.2.15 63
-MD5 8facf84e5d62d38f0aee44efd517f615 files/digest-pathfinder-1.4.12 63
-MD5 ef6bd59b06837347451172daa73db79f files/digest-pathfinder-1.5.4 62
-MD5 3b401d3544e002bdb1b763a56f851cb3 metadata.xml 223
+DIST fox-1.0.53.tar.gz 2120403
+DIST fox-1.2.15.tar.gz 3895260
+DIST fox-1.4.12.tar.gz 3922769
+DIST fox-1.5.4.tar.gz 4027866
+EBUILD pathfinder-1.0.53.ebuild 434 RMD160 6f6de7bbbb054cb7bfa1ef32d73dbfb88ec777c0 SHA1 c8cfb92722e9c1bd88d548bff4d2a341e84691e1 SHA256 f6191f668198670a7e1864e65cbba04c07f80cb154e4b62b6b16b530ed1ba637
 MD5 477d7229dc26de50acc9f7ef249b6fe8 pathfinder-1.0.53.ebuild 434
+RMD160 6f6de7bbbb054cb7bfa1ef32d73dbfb88ec777c0 pathfinder-1.0.53.ebuild 434
+SHA256 f6191f668198670a7e1864e65cbba04c07f80cb154e4b62b6b16b530ed1ba637 pathfinder-1.0.53.ebuild 434
+EBUILD pathfinder-1.2.15.ebuild 618 RMD160 3a1683951dbb1f7f7de54ebfc99b3a4cc04e1674 SHA1 a8c17a091b3b4d586d8830380e9cc0c0f683cdf4 SHA256 a04520387b7dbc158d1a9518412243934cfb96e90fd544c616049bacc01d21f6
 MD5 c5c38b0eca83095f04456f93a621467d pathfinder-1.2.15.ebuild 618
+RMD160 3a1683951dbb1f7f7de54ebfc99b3a4cc04e1674 pathfinder-1.2.15.ebuild 618
+SHA256 a04520387b7dbc158d1a9518412243934cfb96e90fd544c616049bacc01d21f6 pathfinder-1.2.15.ebuild 618
+EBUILD pathfinder-1.4.12.ebuild 617 RMD160 2527005ae0eb109d9bcc64329d8ad7b5588f351d SHA1 db8b245c18e2fe0d2992aad3ada2047bdcb35b80 SHA256 1724b91a892e0f37ade95dcb687856d0b3adb3fd45ba865ddd60e7b00424d69d
 MD5 60e57fc2006880ae4310062ce06f3d4d pathfinder-1.4.12.ebuild 617
+RMD160 2527005ae0eb109d9bcc64329d8ad7b5588f351d pathfinder-1.4.12.ebuild 617
+SHA256 1724b91a892e0f37ade95dcb687856d0b3adb3fd45ba865ddd60e7b00424d69d pathfinder-1.4.12.ebuild 617
+EBUILD pathfinder-1.5.4.ebuild 596 RMD160 f4cbd5ff97ed86bc8baba90253ef82dd4614c91f SHA1 13f4820a8d46410508f8c21e9eb520652b5f1317 SHA256 07c4a2fe305b55d3e0cebb33730e7663013bf2a187d26ec00e5a8bde0579dd0f
 MD5 b769f8871e9d7feec06fca51de25f18a pathfinder-1.5.4.ebuild 596
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCyR1GI1lqEGTUzyQRAiSgAJwMy2KJNGsPTQUiKrXzNPgRrbKJ+gCfVV5c
-9MwsX9y9+eczoMVDqKl2kIk=
-=VR3T
------END PGP SIGNATURE-----
+RMD160 f4cbd5ff97ed86bc8baba90253ef82dd4614c91f pathfinder-1.5.4.ebuild 596
+SHA256 07c4a2fe305b55d3e0cebb33730e7663013bf2a187d26ec00e5a8bde0579dd0f pathfinder-1.5.4.ebuild 596
+MISC ChangeLog 680 RMD160 ec8362dbd7ae7dbefb1a2f06ee275ec43b336c5f SHA1 472166b1d885db25492a074d37b5dc13bc1bb089 SHA256 92a9829d03481c56bf6f6fc856b14ddbdceb7e20a0ba706ddcdf1f251a7417a4
+MD5 84721efc2de5fe9dbe7c0cc1885cc9cf ChangeLog 680
+RMD160 ec8362dbd7ae7dbefb1a2f06ee275ec43b336c5f ChangeLog 680
+SHA256 92a9829d03481c56bf6f6fc856b14ddbdceb7e20a0ba706ddcdf1f251a7417a4 ChangeLog 680
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
+MD5 0095a83c05118d9e346dd2d8ba18bb4f files/digest-pathfinder-1.0.53 63
+RMD160 ccd7892dc943a01628df7c974fba8bc5ed57a4d8 files/digest-pathfinder-1.0.53 63
+SHA256 e4aba14ffaec510bf9fc95c58632d4eb4fb820b172e020f17e7ce47926e3e4cf files/digest-pathfinder-1.0.53 63
+MD5 d54a926d81530863bfe613992128d46d files/digest-pathfinder-1.2.15 63
+RMD160 15f4137124e537d358d643c10292da0092f5a7b5 files/digest-pathfinder-1.2.15 63
+SHA256 9a4073e04a3a1f037f0695128669e5f7a38135ce86732dac75cf85e800db7d0c files/digest-pathfinder-1.2.15 63
+MD5 8facf84e5d62d38f0aee44efd517f615 files/digest-pathfinder-1.4.12 63
+RMD160 576992085d709d781f8f2a42191df99a431f3233 files/digest-pathfinder-1.4.12 63
+SHA256 48151e5f289e0a85740bb22659517574a28b19694d22d9a1eed271a7b14a54e1 files/digest-pathfinder-1.4.12 63
+MD5 ef6bd59b06837347451172daa73db79f files/digest-pathfinder-1.5.4 62
+RMD160 ed73a08e6db90aff380d832fff74cad69949e540 files/digest-pathfinder-1.5.4 62
+SHA256 64b39e549ac3775283cb0139cf5347f2c14fbdfd9e36a6eb518125b703a3f7d1 files/digest-pathfinder-1.5.4 62
