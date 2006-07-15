@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.1.ebuild,v 1.3 2006/07/07 13:28:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.1.ebuild,v 1.4 2006/07/15 05:43:18 vapier Exp $
 
 inherit eutils autotools
 
@@ -23,18 +23,22 @@ RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXfixes
+		x11-libs/libXdamage
 		x11-libs/libXxf86vm
 		xrandr? ( x11-libs/libXrandr )
 		x11-libs/libXrender
-		x11-misc/xbitmaps
-		x11-proto/xextproto
 		x11-proto/xf86vidmodeproto
-		xinerama? ( x11-libs/libXinerama x11-proto/xineramaproto )
-		x11-proto/xproto
+		xinerama? ( x11-libs/libXinerama )
 		) virtual/x11 )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
+	|| ( (
+		x11-proto/xextproto
+		x11-proto/xf86vidmodeproto
+		xinerama? ( x11-proto/xineramaproto )
+		x11-proto/xproto
+		) virtual/x11 )
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( app-doc/edox-data )"
 
