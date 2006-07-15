@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.244 2006/07/06 23:53:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.245 2006/07/15 19:26:55 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -19,9 +19,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # must be an integer greater than zero.
 # Bug 62950, Ciaran McCreesh <ciaranm@gentoo.org> (05 Sep 2004)
 epause() {
-	if [ -z "$EPAUSE_IGNORE" ] && [ -t 1 ] ; then
-		sleep ${1:-5}
-	fi
+	[[ -z ${EPAUSE_IGNORE} ]] && sleep ${1:-5}
 }
 
 # Beep the specified number of times (defaults to five). If our output
@@ -30,7 +28,7 @@ epause() {
 # Bug 62950, Ciaran McCreesh <ciaranm@gentoo.org> (05 Sep 2004)
 ebeep() {
 	local n
-	if [ -z "$EBEEP_IGNORE" ] && [ -t 1 ] ; then
+	if [[ -z ${EBEEP_IGNORE} ]] ; then
 		for ((n=1 ; n <= ${1:-5} ; n++)) ; do
 			echo -ne "\a"
 			sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
