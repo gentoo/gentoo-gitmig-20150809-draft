@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.18 2006/05/22 10:02:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.19 2006/07/15 11:51:52 nixnut Exp $
+
+  15 Jul 2006; <nixnut@gentoo.org> htop-0.6.2.ebuild:
+  Stable on ppc. Bug #140458
 
   22 May 2006; Jeroen Roovers <jer@gentoo.org> htop-0.6.2.ebuild:
   Marked ~hppa (because it works).
