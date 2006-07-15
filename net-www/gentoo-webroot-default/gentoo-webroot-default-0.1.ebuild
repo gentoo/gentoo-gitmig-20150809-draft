@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.14 2005/09/24 04:25:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.15 2006/07/15 00:25:04 chtekk Exp $
 
 DESCRIPTION="This is the default Gentoo WebServer content"
 HOMEPAGE="http://www.gentoo.org/"
@@ -31,7 +31,7 @@ src_install() {
 pkg_postinst() {
 	if useq no-htdocs; then
 		einfo "Default webroot not installed into /var/www/localhost."
-		einfo "Execute \"ebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config\""
+		einfo "Execute \"emerge --config =${CATEGORY}/${PF}\""
 		einfo "to install it there."
 	fi
 }

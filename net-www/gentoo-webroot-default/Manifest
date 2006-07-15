@@ -1,28 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8fb3de61eecd65ff4bf4ea0168ce600c ChangeLog 2647
-RMD160 befd3bc8763b1cf71a2d2cfe0cf13e262c152afa ChangeLog 2647
-SHA256 2bca848ee41cb4386b3894de227491784dbf704b2a6f0de455058f5e396fb472 ChangeLog 2647
-MD5 eb9c26ec02c294d690dfd29918efb7f9 files/digest-gentoo-webroot-default-0.1 78
-RMD160 3c99aca150299aa0b29ab10fd9f96be73334f163 files/digest-gentoo-webroot-default-0.1 78
-SHA256 a24fc9e2a454e966325ac9859a004dd3f479a467def9fe5f59845b6e30127272 files/digest-gentoo-webroot-default-0.1 78
-MD5 87687721b2a51b31fca5f5ea98334175 files/digest-gentoo-webroot-default-0.2 78
-RMD160 0da3f673c6b9105a13d136d5e778a001b9468840 files/digest-gentoo-webroot-default-0.2 78
-SHA256 366a23b7638079dd87dd8314f3a474cd64e3359b971c2e101136c85dece12480 files/digest-gentoo-webroot-default-0.2 78
-MD5 5c0787044686fc763b013a0cf47c9923 gentoo-webroot-default-0.1.ebuild 1118
-RMD160 6e7efe6be52a0616515fadf4ebbe8df893206de8 gentoo-webroot-default-0.1.ebuild 1118
-SHA256 73b3bf07f43fc89323ccdf42e165c16b4a5c4e5f5661214aafbb80ae697ce02c gentoo-webroot-default-0.1.ebuild 1118
-MD5 b078a1d45ffd5f3bf25a97692bf3f3af gentoo-webroot-default-0.2.ebuild 1150
-RMD160 3071c6bde3ebb1012344abadbd9ffc528dc917b2 gentoo-webroot-default-0.2.ebuild 1150
-SHA256 981bede39107009d2fd5c053a43a54d561d4c882170fb48402407492f453cc7e gentoo-webroot-default-0.2.ebuild 1150
+DIST gentoo-webroot-default-0.1.tar.bz2 75959 RMD160 12e6ea0b09b7b0a0a90ea40f8a59eb648e98b475 SHA1 658d6e4345fe23dcecb6193d9e373df78023c2f8 SHA256 7df74143faa555b422d616bcf1af387ab2385cccb81db342a475c31768cae70a
+DIST gentoo-webroot-default-0.2.tar.bz2 66042 RMD160 c4c03df4fe3ed4a787d42890d56bfbc3f8f86b38 SHA1 45cf59992908449ed13f7444dbf229fd47d926ff SHA256 53a04ad4c2e2b8296c4cea3718c2fa13500b3694babb591b2b802a5dac700498
+EBUILD gentoo-webroot-default-0.1.ebuild 1100 RMD160 c04fcc7d5ef69137da65237091643de70a2dbf72 SHA1 2eed4a2f5502dfdb8733d99bbe615794968848ef SHA256 98f1862e34bad61d0261ec8b4a17d1a31f55507087aa0f83eef969b1f6df729f
+MD5 1362e91918e988202db9bc99ad3b03c3 gentoo-webroot-default-0.1.ebuild 1100
+RMD160 c04fcc7d5ef69137da65237091643de70a2dbf72 gentoo-webroot-default-0.1.ebuild 1100
+SHA256 98f1862e34bad61d0261ec8b4a17d1a31f55507087aa0f83eef969b1f6df729f gentoo-webroot-default-0.1.ebuild 1100
+EBUILD gentoo-webroot-default-0.2.ebuild 1129 RMD160 05880eb58504c622e8cc9b482d9a2458614ede3e SHA1 9e6d26b23ba3ad99aebfcfae1a7314891c57af85 SHA256 8744d647016eb5b6fcfc08255c7555837ed5ff8b5cd4b7d254ed19425554ab4e
+MD5 1660102b28aeaae198ef0b63f7b41b23 gentoo-webroot-default-0.2.ebuild 1129
+RMD160 05880eb58504c622e8cc9b482d9a2458614ede3e gentoo-webroot-default-0.2.ebuild 1129
+SHA256 8744d647016eb5b6fcfc08255c7555837ed5ff8b5cd4b7d254ed19425554ab4e gentoo-webroot-default-0.2.ebuild 1129
+MISC ChangeLog 2787 RMD160 e05cd8fc668f42f0cd1aaa589c0f9bb7e77a4591 SHA1 8d513aa3dc9c9b13eb4e84435f60b8ae41f86e01 SHA256 3d9d162de7287c6c6a7b35009d3898c38fdb963cace270914734d0f055b0eddb
+MD5 814552c153243526bb0d3ad2f335256c ChangeLog 2787
+RMD160 e05cd8fc668f42f0cd1aaa589c0f9bb7e77a4591 ChangeLog 2787
+SHA256 3d9d162de7287c6c6a7b35009d3898c38fdb963cace270914734d0f055b0eddb ChangeLog 2787
+MISC metadata.xml 264 RMD160 56354af572926213c71519cc66b7ba21dded855f SHA1 fcca6d484ebdbbbf1194edd463c0410e77ad84b8 SHA256 fc37a4af309f87dea5527319909db10d0a78a6c98f91bff2d863a2abf13ad640
 MD5 c5683447f4654608f8b9bc6ce7f5f3c8 metadata.xml 264
 RMD160 56354af572926213c71519cc66b7ba21dded855f metadata.xml 264
 SHA256 fc37a4af309f87dea5527319909db10d0a78a6c98f91bff2d863a2abf13ad640 metadata.xml 264
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFESqCSAiZjviIA2XgRArZYAJ49RtmgsRn0WLXF4A8s3nkjf+usSwCg5iYx
-zfuGkrTuH/zCP5TwgdbX+R0=
-=M8ge
------END PGP SIGNATURE-----
+MD5 001124c662a25162946dc7a462299606 files/digest-gentoo-webroot-default-0.1 280
+RMD160 cc4fdf0edc857021b91d6f7b3a9ff158316aacf6 files/digest-gentoo-webroot-default-0.1 280
+SHA256 6913a29628e63128a06e574fee37b630c312e1b7e151bfafeb86af6e3a9c5db2 files/digest-gentoo-webroot-default-0.1 280
+MD5 3537ac81151476fa867b509330e9c323 files/digest-gentoo-webroot-default-0.2 280
+RMD160 fa88ca6cefd354620aa3b8fb80de9d76952bc6dc files/digest-gentoo-webroot-default-0.2 280
+SHA256 1acc5456c2ba9b0fb05a0072076d5fe786080efccf078a1c2c1fa02e93902e3a files/digest-gentoo-webroot-default-0.2 280
