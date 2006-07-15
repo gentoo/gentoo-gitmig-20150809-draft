@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.4 2006/06/30 15:00:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.5 2006/07/15 13:55:06 grobian Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -40,7 +40,7 @@ java-vm-2_pkg_postinst() {
 			einfo "No valid generation-1 system-vm set, setting to ${P}"
 			java-config-1 --set-system-vm=${P}
 		# dirty check to see if we are upgrading current generation-1 system vm
-		elif [[ ${systemvm1} =~ "^${VMHANDLE}" ]]; then
+		elif [[ x${systemvm1} = x${VMHANDLE} ]]; then
 		    einfo "Upgrading generation-1 system-vm... updating its env file"
 		    java-config-1 --set-system-vm=${P}
 		fi
