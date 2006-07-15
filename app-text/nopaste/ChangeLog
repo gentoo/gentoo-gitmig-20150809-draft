@@ -1,6 +1,9 @@
 # ChangeLog for app-text/nopaste
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/ChangeLog,v 1.4 2006/06/20 14:31:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/ChangeLog,v 1.5 2006/07/15 23:27:06 tsunam Exp $
+
+  15 Jul 2006; Joshua Jackson <tsunam@gentoo.org> nopaste-1252.ebuild:
+  Stable x86; bug #138679
 
   20 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> nopaste-1252.ebuild:
   Add ~ppc keyword.
