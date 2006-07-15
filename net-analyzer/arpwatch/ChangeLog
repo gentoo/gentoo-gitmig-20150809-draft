@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.22 2006/06/14 10:36:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.23 2006/07/15 13:55:23 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove lanius from metadata.xml as he's retired.
 
   14 Jun 2006; Peter Volkov <pva@gentoo.org> arpwatch-2.1.11-r1.ebuild,
   arpwatch-2.1.13-r2.ebuild, arpwatch-2.1.13-r3.ebuild:
