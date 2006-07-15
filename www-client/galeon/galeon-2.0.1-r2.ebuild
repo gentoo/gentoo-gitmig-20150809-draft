@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.1-r2.ebuild,v 1.1 2006/07/12 22:13:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.1-r2.ebuild,v 1.2 2006/07/15 20:51:33 hanno Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ IUSE="seamonkey"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 RDEPEND="seamonkey? ( www-client/seamonkey )
-	firefox? ( >=www-client/mozilla-firefox-1.5.0.4 )
+	!seamonkey? ( >=www-client/mozilla-firefox-1.5.0.4 )
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/libxml2-2.6.6
