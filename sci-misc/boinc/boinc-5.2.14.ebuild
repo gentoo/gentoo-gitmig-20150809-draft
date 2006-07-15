@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.5 2006/04/14 19:14:47 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-5.2.14.ebuild,v 1.6 2006/07/15 20:31:13 cryos Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo//${P}.tar.bz2
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="server X"
+IUSE="server X unicode"
 
 RDEPEND="sys-libs/zlib
 	>=net-misc/curl-7.15.0
@@ -55,6 +55,7 @@ src_compile() {
 		--enable-client \
 		--disable-static-client \
 		--with-wx-config=$(which wx-config-2.6) \
+		$(use_enable unicode) \
 		$(use_enable server) \
 		$(use_with X x) || die "econf failed"
 	emake || die "emake failed"
