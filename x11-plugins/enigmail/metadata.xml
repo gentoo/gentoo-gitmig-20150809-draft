@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mozilla</herd>
-<maintainer>
-    <email>anarchy@gentoo.org</email>
-</maintainer>
 <longdescription>
 Gnupg encryption plugin for thunderbird.
 </longdescription>
