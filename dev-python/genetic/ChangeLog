@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/genetic
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genetic/ChangeLog,v 1.1 2006/07/15 19:46:31 dberkholz Exp $
+
+*genetic-0.1.1 (15 Jul 2006)
+
+  15 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/0.1.1-import-future-at-beginning.patch, +metadata.xml,
+  +genetic-0.1.1.ebuild:
+  A package for genetic algorithms in Python, will be used by
+  sci-chemistry/pymss.
+
