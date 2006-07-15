@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.17 2006/05/25 19:48:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.18 2006/07/15 18:57:15 kloeri Exp $
+
+*cal3d-0.11.0 (15 Jul 2006)
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> cal3d-0.10.0.ebuild,
+  +cal3d-0.11.0.ebuild:
+  Fix homepage + src_uri and added latest version. Thanks to Josef Reidinger
+  <queen.killer@seznam.cz> in bug 139230.
 
   25 May 2006; Bryan Østergaard <kloeri@gentoo.org> cal3d-0.10.0.ebuild,
   cal3d-0.11.0_pre20050823.ebuild:
