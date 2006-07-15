@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.93-r2.ebuild,v 1.1 2006/07/15 20:03:52 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.93-r2.ebuild,v 1.2 2006/07/15 20:15:51 phreak Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-last_result.patch
 	epatch "${FILESDIR}"/${P}-kde-lock-session.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-return.patch
 	ebegin "Applying ${P}-common.conf.patch"
 	sed -i \
 		-e "s:^# \(Distribution\).*:\1 gentoo:" \

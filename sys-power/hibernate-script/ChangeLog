@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.28 2006/07/15 20:06:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.29 2006/07/15 20:15:51 phreak Exp $
+
+  15 Jul 2006; Christian Heim <phreak@gentoo.org>
+  files/hibernate-script-1.93-gentoo.patch,
+  +files/hibernate-script-1.93-return.patch,
+  hibernate-script-1.93-r2.ebuild:
+  Adding a patch to fix #140512 (thanks to Marek Szuba <cyberman at
+  if.pw.edu.pl> for the patch)
 
   15 Jul 2006; Christian Heim <phreak@gentoo.org>
   -files/hibernate-script-1.91-gentoo.patch, -hibernate-script-1.91.ebuild,
