@@ -1,29 +1,24 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.10 2005/04/22 09:23:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.11 2006/07/15 03:13:09 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="CCMATH is a mathematics library, coded in C, that contains functions for linear algebra, numerical integration,
-	geometry and trigonometry, curve fitting, roots and optimization, Fourier analysis, simulation generation, statistics,
-	special functions, sorts and searches, time series models, complex arithmetic, and high precision computations."
-
-SRC_URI="http://www.ibiblio.org/pub/Linux/libs/${P}.tar.gz"
+DESCRIPTION="a math library that contains functions for a wide variety of computations"
 HOMEPAGE="http://freshmeat.net/projects/ccmath/"
+SRC_URI="http://www.ibiblio.org/pub/Linux/libs/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
-
-DEPEND="virtual/libc"
-
 IUSE=""
+
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	use amd64 && epatch ${FILESDIR}/${P}-fPIC.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-fPIC.patch
 }
 
 src_compile() {
@@ -32,9 +27,9 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so tmp/libccm.so
-	dolib.a tmp/libccm.a
+	dolib.so tmp/libccm.so || die
+	dolib.a tmp/libccm.a || die
 	insinto /usr/include
-	doins ccmath.h
+	doins ccmath.h || die
 	dodoc CHANGES INSTALL README manual/*
 }

@@ -1,7 +1,7 @@
-diff -Naur ccmath-2.2.1.orig/cfit/chcof.o ccmath-2.2.1/cfit/chcof.o
-diff -Naur ccmath-2.2.1.orig/makelibs.sh ccmath-2.2.1/makelibs.sh
---- ccmath-2.2.1.orig/makelibs.sh	2001-11-08 16:57:07.000000000 +0100
-+++ ccmath-2.2.1/makelibs.sh	2004-10-19 23:51:44.000000000 +0200
+note: this patch (well the build system) sucks and should be cleaned up to not suck
+
+--- ccmath-2.2.1/makelibs.sh
++++ ccmath-2.2.1/makelibs.sh
 @@ -16,23 +16,31 @@
    do
      cd $MDR/$dr
