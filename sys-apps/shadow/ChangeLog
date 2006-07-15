@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.156 2006/07/15 04:55:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.157 2006/07/15 20:14:08 vapier Exp $
+
+*shadow-4.0.17-r1 (15 Jul 2006)
+
+  15 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/shadow-4.0.17-login.defs.patch, +shadow-4.0.17-r1.ebuild:
+  Merge handling of login.defs (fixing #140451 along the way) and cut out
+  old/dead code related to forced upgrading of config files.
 
   15 Jul 2006; Mike Frysinger <vapier@gentoo.org>
   +files/shadow-4.0.17-no-local-getpass.patch, shadow-4.0.17.ebuild:
