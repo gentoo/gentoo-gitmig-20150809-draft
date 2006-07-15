@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.15 2006/07/08 23:44:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.16 2006/07/15 22:43:49 tsunam Exp $
+
+  15 Jul 2006; Joshua Jackson <tsunam@gentoo.org> hunspell-1.1.4-r1.ebuild:
+  Stable x86; for openoffice
 
   08 Jul 2006; Lars Weiler <pylon@gentoo.org> hunspell-1.1.4-r1.ebuild:
   Stable on ppc; bug 139310.
