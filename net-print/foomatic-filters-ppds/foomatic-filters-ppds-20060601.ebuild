@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20060601.ebuild,v 1.2 2006/06/04 21:35:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20060601.ebuild,v 1.3 2006/07/15 23:09:06 vapier Exp $
 
 DESCRIPTION="linuxprinting.org PPD files for non-postscript printers"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
@@ -9,7 +9,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="net-print/foomatic-filters"
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	./install -d ${D} -p /usr -z || die "ppds install failed"
+	./install -d "${D}" -p /usr -z || die "ppds install failed"
 
 	dodoc README
 }
