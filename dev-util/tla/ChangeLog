@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tla
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.35 2006/05/14 16:12:08 arj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.36 2006/07/15 11:11:49 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove rphillips from metadata.xml as he's retired.
 
   14 May 2006; Anders Rune Jensen <arj@gentoo.org> tla-1.3.4.ebuild:
   Fix #123358: allow one to specify CFLAGS and compiler to use when
