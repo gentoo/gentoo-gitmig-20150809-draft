@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.4.1.ebuild,v 1.3 2006/07/15 23:47:37 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.4.1.ebuild,v 1.4 2006/07/15 23:58:03 langthang Exp $
 
 inherit eutils
 
@@ -46,8 +46,8 @@ src_install() {
 	# prepare directory for private keys.
 	dodir /etc/mail/dk-filter
 	keepdir /etc/mail/dk-filter
-	fowners milter:milter /etc/mail/dk-milter
-	fperms 700 /etc/mail/dk-milter
+	fowners milter:milter /etc/mail/dk-filter
+	fperms 700 /etc/mail/dk-filter
 
 	dodir /usr/bin /usr/lib
 	dodir /usr/share/man/man{3,8}
