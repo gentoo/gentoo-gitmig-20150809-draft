@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.3.ebuild,v 1.3 2005/09/17 00:59:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.3.ebuild,v 1.4 2006/07/15 19:23:09 vapier Exp $
 
 DESCRIPTION="A simple, free, secure TCP and UDP tunnel program"
 HOMEPAGE="http://www.winton.org.uk/zebedee/"
@@ -8,9 +8,8 @@ SRC_URI="mirror://sourceforge/zebedee/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc64 s390 ~sparc ~x86"
 IUSE=""
-
 
 DEPEND="dev-lang/perl
 	dev-libs/openssl
@@ -30,19 +29,18 @@ src_compile() {
 
 src_install() {
 	make \
-		ROOTDIR=${D}/usr \
-		MANDIR=${D}/usr/share/man/man1 \
-		ZBDDIR=${D}/etc/zebedee \
+		ROOTDIR="${D}"/usr \
+		MANDIR="${D}"/usr/share/man/man1 \
+		ZBDDIR="${D}"/etc/zebedee \
 		OS=linux \
 		install || die
 
-	rm -f ${D}/etc/zebedee/*.{txt,html}
+	rm -f "${D}"/etc/zebedee/*.{txt,html}
 
 	dodoc *.txt
 	dohtml *.html
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/zebedee
+	newinitd "${FILESDIR}"/zebedee
 }
 
 pkg_postinst() {
