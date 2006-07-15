@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.36.ebuild,v 1.8 2006/07/12 20:02:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.36.ebuild,v 1.9 2006/07/15 05:03:50 vapier Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ia64 ppc ppc-macos sparc x86"
 IUSE="static"
 
-RDEPEND=""
+RDEPEND="virtual/mailx"
 DEPEND=">=sys-apps/portage-2.0.51"
 
 src_compile() {
