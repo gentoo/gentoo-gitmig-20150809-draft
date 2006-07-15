@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.205 2006/07/06 02:57:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.206 2006/07/15 17:16:52 azarah Exp $
+
+*udev-096 (15 Jul 2006)
+
+  15 Jul 2006; Martin Schlemmer <azarah@gentoo.org> +files/udev.rules-096,
+  +files/udev-096-udevtrigger.patch, +files/udev-start-096.sh,
+  +udev-096.ebuild:
+  Update version. Enable firmware loading, bug #138126. Add patches from bug
+  #119989.
 
   06 Jul 2006; Joshua Kinard <kumba@gentoo.org> udev-090-r1.ebuild:
   Marked stable on mips.
