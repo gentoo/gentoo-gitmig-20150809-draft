@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.17.ebuild,v 1.1 2006/07/11 03:36:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.17.ebuild,v 1.2 2006/07/15 04:55:12 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -57,6 +57,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.0.15-uclibc-missing-l64a.patch
 
 	epatch "${FILESDIR}"/${PN}-4.0.16-fix-useradd-usergroups.patch #128715
+
+	epatch "${FILESDIR}"/${PN}-4.0.17-no-local-getpass.patch
 
 	# Needed by the UCLIBC patches
 	eautoconf || die

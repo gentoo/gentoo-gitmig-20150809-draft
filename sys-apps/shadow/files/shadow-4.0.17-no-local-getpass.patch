@@ -1,0 +1,23 @@
+libshadow_getpass() was punted in 4.0.17
+
+http://bugs.gentoo.org/139966
+
+Patch by Ulrich Mueller
+
+Index: configure.in
+===================================================================
+RCS file: /cvsroot/shadow/configure.in,v
+retrieving revision 1.145
+diff -u -p -r1.145 configure.in
+--- configure.in	25 Jun 2006 12:30:47 -0000	1.145
++++ configure.in	15 Jul 2006 04:51:29 -0000
+@@ -329,9 +329,6 @@ if test "$with_skey" = "yes"; then
+ 	],[
+ 		skeychallenge((void*)0, (void*)0, (void*)0, 0);
+ 	],[AC_DEFINE(SKEY_BSD_STYLE, 1, [Define to support newer BSD S/Key API])])
+-	dnl libshadow_getpass() handles password prompt with enabled echo
+-	AC_DEFINE(getpass, libshadow_getpass,
+-		[Define to libshadow_getpass to use our own version of getpass().])
+ fi
+ 
+ AM_GNU_GETTEXT_VERSION(0.12.1)
