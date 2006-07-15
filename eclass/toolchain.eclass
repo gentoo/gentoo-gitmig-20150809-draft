@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.293 2006/06/17 19:56:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.294 2006/07/15 23:04:37 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -879,6 +879,7 @@ gcc-compiler_pkg_postinst() {
 			&& mkdir -p "${ROOT}"/sbin
 		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/lib/rcscripts/awk/ || die "installing fixlafiles.awk"
 		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/sbin/ || die "installing fix_libtool_files.sh"
+		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/sbin/ || die "installing c89/c99"
 	fi
 }
 
@@ -1678,6 +1679,7 @@ gcc-compiler_src_install() {
 		fi
 		exeinto "${DATAPATH}"
 		doexe "${GCC_FILESDIR}"/fix_libtool_files.sh || die
+		doexe "${GCC_FILESDIR}"/c{89,99} || die
 	fi
 
 	# use gid of 0 because some stupid ports don't have
