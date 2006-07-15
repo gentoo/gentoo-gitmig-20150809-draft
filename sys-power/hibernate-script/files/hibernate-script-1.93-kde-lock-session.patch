@@ -1,0 +1,22 @@
+Index: hibernate-script-1.93/scriptlets.d/lock
+===================================================================
+--- hibernate-script-1.93.orig/scriptlets.d/lock
++++ hibernate-script-1.93/scriptlets.d/lock
+@@ -45,9 +45,14 @@ LockKDE() {
+ 
+     # send the lock command to all sessions
+     for session in $avail_sessions; do
+-	vecho 1 "Locking $session"
+-	# dev/null because dcop warns if it can't connect to X (this is normal!)
+-	dcop --session "$session" --all-users kdesktop KScreensaverIface lock > /dev/null 2>&1
++	locked=`dcop --session "$session" --all-users kdesktop KScreensaverIface isBlanked 2>/dev/null`
++	if [ x"$locked" = "xtrue" ] ; then
++		vecho 1 "Session $session is already locked!"
++	else
++		vecho 1 "Locking session $session"
++		# dev/null because dcop warns if it can't connect to X (this is normal!)
++		dcop --session "$session" --all-users kdesktop KScreensaverIface lock > /dev/null 2>&1
++	fi
+     done
+ 
+     # returning 0 because dcop warns if it can't connect to X (this is normal!)

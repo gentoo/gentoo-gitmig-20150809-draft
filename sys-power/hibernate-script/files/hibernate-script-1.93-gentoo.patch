@@ -31,8 +31,8 @@ Index: hibernate-script-1.93/init.d/hibernate-cleanup.sh
  
 -exit 0
 +start() {
-+	ebegin "Clearing Software Suspend 2 signatures... "
++	ebegin "Clearing Software Suspend 2 signatures"
 +	check_swap_sig
 +	check_filewriter_sig
-+	eend $?
++	eend
 +}

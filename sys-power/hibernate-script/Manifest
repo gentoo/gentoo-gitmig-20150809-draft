@@ -13,10 +13,14 @@ AUX hibernate-script-1.91-gentoo.patch 834 RMD160 3eef1a8651344191491b2687d472a8
 MD5 4771f1307f9d9d0d08fdfa6b4de5af48 files/hibernate-script-1.91-gentoo.patch 834
 RMD160 3eef1a8651344191491b2687d472a860d4af5bbd files/hibernate-script-1.91-gentoo.patch 834
 SHA256 e54d9ea0a6664dbe51cb44c1802f63472e3d3b493e0b5c2730366922a02d5aee files/hibernate-script-1.91-gentoo.patch 834
-AUX hibernate-script-1.93-gentoo.patch 973 RMD160 8528563d7494bbb1c123a109f1448d124c9796a6 SHA1 b87684844c7e278984a5c19bb5ee7c5cdaad0905 SHA256 b89aca9c110bbbe72bf982dc98b83ceab1ee70f2aacd80728094ede94ce9e570
-MD5 bf6cf40b2c9cb0bdfffdaa4876bae48a files/hibernate-script-1.93-gentoo.patch 973
-RMD160 8528563d7494bbb1c123a109f1448d124c9796a6 files/hibernate-script-1.93-gentoo.patch 973
-SHA256 b89aca9c110bbbe72bf982dc98b83ceab1ee70f2aacd80728094ede94ce9e570 files/hibernate-script-1.93-gentoo.patch 973
+AUX hibernate-script-1.93-gentoo.patch 966 RMD160 f2563650afa668722d62a74fe884126bdfd54283 SHA1 a5b263b8033692910967bd55ff9adba596e941ed SHA256 99501aa00c0cd055e0cd59e3316907ce51dc28b8ad3756469585cba6094221ad
+MD5 d524f2e3952cd0c96ffb7e727fa7e87d files/hibernate-script-1.93-gentoo.patch 966
+RMD160 f2563650afa668722d62a74fe884126bdfd54283 files/hibernate-script-1.93-gentoo.patch 966
+SHA256 99501aa00c0cd055e0cd59e3316907ce51dc28b8ad3756469585cba6094221ad files/hibernate-script-1.93-gentoo.patch 966
+AUX hibernate-script-1.93-kde-lock-session.patch 1012 RMD160 d3e08db2c00fbaccd1079d24466f304669d60b9b SHA1 7ba0369c629062987547bb11e73853bb1e56f6b8 SHA256 12970bdab6d105f19e169fa65b32cf74672d368b81c28a5446d3fc2f970a3350
+MD5 0baf228bac29d4d4e77c72f5904dda0e files/hibernate-script-1.93-kde-lock-session.patch 1012
+RMD160 d3e08db2c00fbaccd1079d24466f304669d60b9b files/hibernate-script-1.93-kde-lock-session.patch 1012
+SHA256 12970bdab6d105f19e169fa65b32cf74672d368b81c28a5446d3fc2f970a3350 files/hibernate-script-1.93-kde-lock-session.patch 1012
 AUX hibernate-script-1.93-last_result.patch 617 RMD160 f4e234cb46a13f517548abc4ca3ebf1ac59c2049 SHA1 a15377ad3cea602683d39a15348389c216f4c332 SHA256 1c34d09131f10b14b9c53e44c455a37df018b0ca5c1414db3aab3c13419c9657
 MD5 a448f61b3214198e602e2f420097af75 files/hibernate-script-1.93-last_result.patch 617
 RMD160 f4e234cb46a13f517548abc4ca3ebf1ac59c2049 files/hibernate-script-1.93-last_result.patch 617
@@ -36,14 +40,18 @@ EBUILD hibernate-script-1.93-r1.ebuild 2282 RMD160 5aba8b75f84e6d1dc2ca4830712fa
 MD5 49bc60b3acf8f376531ce627983d7ccf hibernate-script-1.93-r1.ebuild 2282
 RMD160 5aba8b75f84e6d1dc2ca4830712fae2069a27559 hibernate-script-1.93-r1.ebuild 2282
 SHA256 212d04b598aad6a0b8d00d893fa73137f224365f5f35c31823fdad687eae62f6 hibernate-script-1.93-r1.ebuild 2282
+EBUILD hibernate-script-1.93-r2.ebuild 2343 RMD160 db048a6189cd4f888f99dbebce9736129b812992 SHA1 946711a3ef9644d1d2b0b803ae78872db9ec3401 SHA256 6e0fd95442b1de1da32016b39f1db6c02ba652e9db148d928d5ceca0b01e707c
+MD5 a7951206e9990fd081047e6f0ccd405c hibernate-script-1.93-r2.ebuild 2343
+RMD160 db048a6189cd4f888f99dbebce9736129b812992 hibernate-script-1.93-r2.ebuild 2343
+SHA256 6e0fd95442b1de1da32016b39f1db6c02ba652e9db148d928d5ceca0b01e707c hibernate-script-1.93-r2.ebuild 2343
 EBUILD hibernate-script-1.93.ebuild 2234 RMD160 0279d9acc374c27d110b49fc8b0fe6b8f2b610a5 SHA1 bc3c15b6ea1dac0173343effc92b7ae5e1eea310 SHA256 8a215821de19a5d1f043ff194a83eccd1d6dd7ca6e637764299ee3e066c226aa
 MD5 aa8b4c69c0a0f1544f4b2bd8b149c95f hibernate-script-1.93.ebuild 2234
 RMD160 0279d9acc374c27d110b49fc8b0fe6b8f2b610a5 hibernate-script-1.93.ebuild 2234
 SHA256 8a215821de19a5d1f043ff194a83eccd1d6dd7ca6e637764299ee3e066c226aa hibernate-script-1.93.ebuild 2234
-MISC ChangeLog 6184 RMD160 ae6c12faae53bcc6b074f0aebda0d1be41f29b90 SHA1 772fa035d400d63e806a7462162847c3a16b42e7 SHA256 c34c917dfa3d669a292c74dc9a644d0ac6322c18199be0a4a97b1fefbd993f1b
-MD5 4abe613b060bfbea5917d58ca0518e06 ChangeLog 6184
-RMD160 ae6c12faae53bcc6b074f0aebda0d1be41f29b90 ChangeLog 6184
-SHA256 c34c917dfa3d669a292c74dc9a644d0ac6322c18199be0a4a97b1fefbd993f1b ChangeLog 6184
+MISC ChangeLog 6631 RMD160 5933912a4446cf92f9245b8cde4bb1f79b8cc15e SHA1 5395be0d2735b453e30389f0cf03ecb210fb8150 SHA256 eb99144688f30ae0d76cc08edece663c02f1eb2867fbb801ea4a32327b51d166
+MD5 b746014c6e80352404f023f1ada3ef51 ChangeLog 6631
+RMD160 5933912a4446cf92f9245b8cde4bb1f79b8cc15e ChangeLog 6631
+SHA256 eb99144688f30ae0d76cc08edece663c02f1eb2867fbb801ea4a32327b51d166 ChangeLog 6631
 MISC metadata.xml 254 RMD160 2e69b345a5604844f1c5a8256ea172c7a3cc485f SHA1 653c702fdb89577e9d15e9cbca3891e4acdba061 SHA256 9bffc4ff1cf574848699e33b09ff0f6137d6b64b69d82c7b95cafb32ee75becb
 MD5 f3e68295a919220f58e91a1d3468c851 metadata.xml 254
 RMD160 2e69b345a5604844f1c5a8256ea172c7a3cc485f metadata.xml 254
@@ -60,10 +68,13 @@ SHA256 9978a523acc1585caafd33a5cfe59cbbc184479cb65abef81141e8ae2e10ba37 files/di
 MD5 6df4f13730ccce8b2c2c007a366e32d3 files/digest-hibernate-script-1.93-r1 262
 RMD160 ea48cd11767637391c710a50b80e13cfd49ad29a files/digest-hibernate-script-1.93-r1 262
 SHA256 9978a523acc1585caafd33a5cfe59cbbc184479cb65abef81141e8ae2e10ba37 files/digest-hibernate-script-1.93-r1 262
+MD5 6df4f13730ccce8b2c2c007a366e32d3 files/digest-hibernate-script-1.93-r2 262
+RMD160 ea48cd11767637391c710a50b80e13cfd49ad29a files/digest-hibernate-script-1.93-r2 262
+SHA256 9978a523acc1585caafd33a5cfe59cbbc184479cb65abef81141e8ae2e10ba37 files/digest-hibernate-script-1.93-r2 262
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEtzg/flZ8QqxhrsMRAi6WAJ9qou9ON0U+JAS0J0ruVGlgqb2sWQCbB9at
-99w0z/dXy1YrvkhQB2vdZ0Y=
-=Spwc
+iD8DBQFEuUo6flZ8QqxhrsMRAuVtAKDAA0yMX8lUw4ar/FPS1CQ//TlIlACgtqj0
+TWhkpFNnDVM9DyN3VkL9uwE=
+=xkvh
 -----END PGP SIGNATURE-----
