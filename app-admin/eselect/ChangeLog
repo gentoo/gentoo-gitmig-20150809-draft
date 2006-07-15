@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.28 2006/07/12 19:23:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.29 2006/07/15 02:07:03 metalgod Exp $
+
+  15 Jul 2006; Luis Medinas <metalgod@gentoo.org> eselect-1.0.2.ebuild:
+  Stable on amd64.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> eselect-1.0.2.ebuild:
   Mark 1.0.2 stable on ia64
