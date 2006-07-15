@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.18 2006/05/09 02:47:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.19 2006/07/15 10:37:16 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove anarchy from metadata.xml as he's retired.
 
   09 May 2006; Jory A. Pratt <anarchy@gentoo.org>
   +files/1.0/mozilla-1.7.13-as-needed.patch, nvu-1.0-r4.ebuild:
