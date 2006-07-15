@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xdx
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.6 2004/08/04 23:16:26 killsoft Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.7 2006/07/15 11:26:16 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove rphillips from metadata.xml as he's retired.
 
   04 Aug 2004; Robb Romans <killsoft@gentoo.org> xdx-1.2.ebuild:
   mark stable on x86.
