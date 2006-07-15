@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/dnd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/ChangeLog,v 1.17 2006/07/13 01:59:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/ChangeLog,v 1.18 2006/07/15 14:43:36 nixnut Exp $
+
+  15 Jul 2006; <nixnut@gentoo.org> dnd-1.1-r1.ebuild:
+  Stable on ppc. Bug #139839
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> dnd-1.1-r1.ebuild:
   Mark 1.1-r1 stable on ia64. #139839
