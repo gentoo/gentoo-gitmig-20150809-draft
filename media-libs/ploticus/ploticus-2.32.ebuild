@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.2 2006/01/17 21:27:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.32.ebuild,v 1.3 2006/07/15 15:21:50 nixnut Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ploticus.sourceforge.net"
 SRC_URI="http://ploticus.sourceforge.net/download/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE="gd flash nls cpulimit svg svgz truetype X"
 DEPEND="media-libs/libpng
 	gd? ( >=media-libs/gd-1.84 media-libs/jpeg )
