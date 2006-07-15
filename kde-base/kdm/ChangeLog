@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.65 2006/07/14 19:59:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.66 2006/07/15 06:50:01 flameeyes Exp $
+
+  15 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kdm-3.5.3-r2.ebuild:
+  Patch also the latest version that I forgot yesterday.
 
   14 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kdm-3.5.2-r1.ebuild:
   Don't enable shadow when pam is disabled on anything but glibc, as that is a
