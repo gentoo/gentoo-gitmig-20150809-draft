@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.18 2006/07/12 12:12:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.19 2006/07/15 13:52:23 grobian Exp $
+
+  15 Jul 2006; Fabian Groffen <grobian@gentoo.org> diction-1.07-r1.ebuild:
+  Marked ppc-macos stable (bug #131637)
 
   12 Jul 2006; Seemant Kulleen <seemant@gentoo.org> -diction-1.02.ebuild:
   remove cruft, since 1.07 is now stable on the same arches as 1.02 was,
