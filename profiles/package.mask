@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5627 2006/07/15 14:13:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5628 2006/07/15 15:04:55 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# John N. Laliberte <allanonjl@gentoo.org> (15 Jul 2006)
+# old, unsupported upstream.  Use evince.
+# possible security problems in the future.
+app-text/gpdf
 
 # Seemant Kulleen <seemant@gentoo.org> (15 Jul 2006)
 # Mask for testing
