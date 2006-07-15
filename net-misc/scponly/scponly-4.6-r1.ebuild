@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.6-r1.ebuild,v 1.1 2006/05/20 05:37:28 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.6-r1.ebuild,v 1.2 2006/07/15 00:42:27 matsuu Exp $
 
 inherit eutils
 
@@ -65,18 +65,18 @@ pkg_config() {
 	{ grep -v "^/usr/bin/scponly$" /etc/shells;
 	echo "/usr/bin/scponly"
 	} > ${T}/shells
-	mv -f ${T}/shells /etc/shells
+	cp ${T}/shells /etc/shells
 
 	{ grep -v "^/usr/sbin/scponlyc$" /etc/shells;
 	echo "/usr/sbin/scponlyc"
 	} > ${T}/shells
-	mv -f ${T}/shells /etc/shells
+	cp ${T}/shells /etc/shells
 
 	BINARIES="/usr/$(get_libdir)/misc/sftp-server /bin/ls /usr/bin/scp /bin/rm /bin/ln /bin/mv /bin/chmod /bin/chown /bin/chgrp /bin/mkdir /bin/rmdir /bin/pwd /bin/groups /usr/bin/ld /bin/echo /usr/bin/rsync"
 	if built_with_use ${PN} subversion; then
 	    BINARIES="$BINARIES /usr/bin/svn /usr/bin/svnserve"
 	fi
-	LIB_LIST=`/usr/bin/ldd $BINARIES 2> /dev/null | /bin/cut -f2 -d\> | /bin/cut -f1 -d\( | /bin/grep "^ " | /bin/sort -u`
+	LIB_LIST=`/usr/bin/ldd $BINARIES 2> /dev/null | /bin/cut -f2 -d\> | /bin/cut -f1 -d\( | /bin/grep "^[ 	]" | /bin/sort -u`
 	LDSO_LIST="/$(get_libdir)/ld.so /libexec/ld-elf.so /libexec/ld-elf.so.1 /usr/libexec/ld.so /$(get_libdir)/ld-linux.so.2 /usr/libexec/ld-elf.so.1"
 	for lib in $LDSO_LIST; do
 		if [ -f $lib ]; then
@@ -135,7 +135,15 @@ pkg_config() {
 	fi
 	/bin/chown $myuser:$myuser ${myhome}/incoming
 
-	grep "^${myuser}" /etc/passwd > ${myhome}/etc/passwd
+	if [ ! -e ${myhome}/etc/passwd ]; then
+		grep "^${myuser}" /etc/passwd > ${myhome}/etc/passwd
+	fi
+
+	# Bug 135505
+	if [ ! -e ${myhome}/dev/null ]; then
+		/bin/install -c -d ${myhome}/dev
+		/bin/mknod -m 777 ${myhome}/dev/null c 1 3
+	fi
 
 	einfo "if you experience a warning with winscp regarding groups, please install"
 	einfo "the provided hacked out fake groups program into your chroot, like so:"
