@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.42 2006/07/15 01:11:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.43 2006/07/15 13:37:43 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove aliz from metadata.xml as he's retired.
 
   15 Jul 2006; Michał Januszewski <spock@gentoo.org> files/hddtemp-conf.d,
   files/hddtemp-init:
