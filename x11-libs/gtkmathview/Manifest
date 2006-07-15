@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gtkmathview-0.5.1.tar.gz 480292
 DIST gtkmathview-0.5.2.tar.gz 573660
 DIST gtkmathview-0.6.3.tar.gz 756010
@@ -49,10 +46,3 @@ SHA256 36f4afbed48f4b81bf1db829cf9799b706df51749b4f657bc861d5cc0d1ccebe files/di
 MD5 95bf29d0268c0ff30bc18a5d63a1d429 files/digest-gtkmathview-0.7.6 253
 RMD160 3638cdf313861e6a0bd3a1fa0fc7e22c686d682f files/digest-gtkmathview-0.7.6 253
 SHA256 a85d64a8355c416803952e4a1ffe1ca807dc1edaf5e46f471921befcfc1e006f files/digest-gtkmathview-0.7.6 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEq3E/9AbAhSK0CiwRAtiXAJ96XuBcekgsPbooR3M+s+h45b926wCdFCDF
-W4uLVH9ydeWM++5VIRdGlMg=
-=vIw5
------END PGP SIGNATURE-----

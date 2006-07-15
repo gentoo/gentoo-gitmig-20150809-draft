@@ -1,15 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ba6a4403f24a097b6b86c7fd8750b5ec kylixlibs3-borqt-3.0.ebuild 977
+DIST kylixlibs3-borqt-3.0-2.tar.gz 2510963
+EBUILD kylixlibs3-borqt-3.0-r1.ebuild 775 RMD160 093c6904fc2b849e6bd6179aa7c67405dd2a7d61 SHA1 866c2f2f013798471dada8188d0a55464dcca853 SHA256 f87bb48990f1ef17c38c5c73500a814bae3ba4dc62d5716cb323ae10ddca3165
 MD5 41900f5eff601c69f3d2c9fbe0efa8ba kylixlibs3-borqt-3.0-r1.ebuild 775
+RMD160 093c6904fc2b849e6bd6179aa7c67405dd2a7d61 kylixlibs3-borqt-3.0-r1.ebuild 775
+SHA256 f87bb48990f1ef17c38c5c73500a814bae3ba4dc62d5716cb323ae10ddca3165 kylixlibs3-borqt-3.0-r1.ebuild 775
+EBUILD kylixlibs3-borqt-3.0.ebuild 977 RMD160 aac92c6894afff1f1022146410cbe273c8db9fde SHA1 d94c254d19cbcbc513d197bdedd517193f8bcc12 SHA256 1f85fbd38d0264691fe39e9870043dc5b4a452cb1a4003e25f8436d7a042a225
+MD5 ba6a4403f24a097b6b86c7fd8750b5ec kylixlibs3-borqt-3.0.ebuild 977
+RMD160 aac92c6894afff1f1022146410cbe273c8db9fde kylixlibs3-borqt-3.0.ebuild 977
+SHA256 1f85fbd38d0264691fe39e9870043dc5b4a452cb1a4003e25f8436d7a042a225 kylixlibs3-borqt-3.0.ebuild 977
+MISC ChangeLog 895 RMD160 e8283a698499bc079c3a1e4263735a42aecacac5 SHA1 08db937d96f51c70c1c342470d719ea0f0570a3f SHA256 faf5c3bc9121e4b95350bd0c1e0d019962ff970a440d76d5aa9d57988fc782bb
 MD5 5fee8d0303e7b83c3ea8abf2a25293ae ChangeLog 895
-MD5 d0b47d88e1002831dd7eb659bbd95826 files/digest-kylixlibs3-borqt-3.0-r1 75
+RMD160 e8283a698499bc079c3a1e4263735a42aecacac5 ChangeLog 895
+SHA256 faf5c3bc9121e4b95350bd0c1e0d019962ff970a440d76d5aa9d57988fc782bb ChangeLog 895
 MD5 d0b47d88e1002831dd7eb659bbd95826 files/digest-kylixlibs3-borqt-3.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDK2f+LLFUmVNQ7rkRAsKAAKDRLexSjePRCz9BT1duyi4r8Bho+ACeN4+g
-ryDVoem83ivvCgl68mbszxM=
-=Ap6C
------END PGP SIGNATURE-----
+RMD160 3e6268d91cb945457a23f0776924ebada6d67461 files/digest-kylixlibs3-borqt-3.0 75
+SHA256 4328b86c64c0bca5d8e6eb29274553fbe37fdd53c41661f222c43fde8a436c38 files/digest-kylixlibs3-borqt-3.0 75
+MD5 d0b47d88e1002831dd7eb659bbd95826 files/digest-kylixlibs3-borqt-3.0-r1 75
+RMD160 3e6268d91cb945457a23f0776924ebada6d67461 files/digest-kylixlibs3-borqt-3.0-r1 75
+SHA256 4328b86c64c0bca5d8e6eb29274553fbe37fdd53c41661f222c43fde8a436c38 files/digest-kylixlibs3-borqt-3.0-r1 75

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST Xsettings-client-0.10.tar.gz 181131
 EBUILD libxsettings-client-0.10.ebuild 882 RMD160 6f2a03a709e0d45b1a162062ae0fbea62482db06 SHA1 47dc9e6480a39f885e3906109bd80e8d76ba499a SHA256 6d2c14dc9663181eb10bbc1ed19c097fc3de14539d713fe0760fef25ad8f37f8
 MD5 af6708ab854f65013f8563eab199dc14 libxsettings-client-0.10.ebuild 882
@@ -17,10 +14,3 @@ SHA256 2f2c48f12680e78f700e809ba6ff98c67b1ea8b707291659c1bfb6b20d28835f metadata
 MD5 d621bb0c45c4244da9e57577827b19bb files/digest-libxsettings-client-0.10 73
 RMD160 da27e1d611386927e910965aed09753b0953dc1e files/digest-libxsettings-client-0.10 73
 SHA256 bb17359230879d3f9e420a2a400e22033da286046d4996d2a23d6a425fce824e files/digest-libxsettings-client-0.10 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEgqdbgo/w9rxVVVERAsk0AJ9hvWGYGUFvSt7Z17SIpOI3aDBOVQCfRyzg
-OcKmQoV0A9bG4dwuajCyXjA=
-=xq1n
------END PGP SIGNATURE-----
