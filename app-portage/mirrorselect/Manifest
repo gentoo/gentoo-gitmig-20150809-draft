@@ -1,8 +1,42 @@
-MD5 5de9ba7e7ee72335f65dac4fa1ff790a ChangeLog 12836
-MD5 994cb07a030c1f3874df022863133c5c files/digest-mirrorselect-0.89 65
-MD5 9669e3138fbf6c2752197f822242a31a files/digest-mirrorselect-1.1.7 69
-MD5 96269935da80a1eee28413cccc1c2aa0 files/digest-mirrorselect-1.2 67
-MD5 5fc74b7cdb5705246b9301024df6485f metadata.xml 444
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST mirrorselect-0.89.tbz2 4472
+DIST mirrorselect-1.1.7.tar.bz2 7181
+DIST mirrorselect-1.2.tar.bz2 7175
+EBUILD mirrorselect-0.89.ebuild 737 RMD160 6e5d36d5afe4541871092bc43a49889505c1caaf SHA1 7ae6089eb47d8abf7fbb25446b7c79e1d703b1c6 SHA256 5d4ff1fd48221a467f9ad5aa2ed0fb2661dfc9417e2c42a1331ac56033e657ed
 MD5 864d54a08aced2d4f33536c53e840218 mirrorselect-0.89.ebuild 737
+RMD160 6e5d36d5afe4541871092bc43a49889505c1caaf mirrorselect-0.89.ebuild 737
+SHA256 5d4ff1fd48221a467f9ad5aa2ed0fb2661dfc9417e2c42a1331ac56033e657ed mirrorselect-0.89.ebuild 737
+EBUILD mirrorselect-1.1.7.ebuild 605 RMD160 563f7bb594bf7faa589fb3e11e2e6767a2f2a352 SHA1 030faf9735f38f0fe8eb97a84cd6c76ff986fda7 SHA256 b14332d94f34d8c1588ab616edc5af491b57a33f76b66715ff68be1ceaf4e8d3
 MD5 618de520d7b2ad36b85f374c330f3faf mirrorselect-1.1.7.ebuild 605
-MD5 a75bb6ba8dd67d333bfb7b08aa0697c6 mirrorselect-1.2.ebuild 600
+RMD160 563f7bb594bf7faa589fb3e11e2e6767a2f2a352 mirrorselect-1.1.7.ebuild 605
+SHA256 b14332d94f34d8c1588ab616edc5af491b57a33f76b66715ff68be1ceaf4e8d3 mirrorselect-1.1.7.ebuild 605
+EBUILD mirrorselect-1.2.ebuild 614 RMD160 875f0b69d3474fb7fbac88cd1b40ef003ff3f1c8 SHA1 2edd106a231ad41675f439e8f5bf9edbcf2f58de SHA256 efa4e673d1a2800fd1101b4ee206fba7b9aa80a29137d704dc71cfbded8b952a
+MD5 a72fa7111b42bdba423c70f7bdf1de4d mirrorselect-1.2.ebuild 614
+RMD160 875f0b69d3474fb7fbac88cd1b40ef003ff3f1c8 mirrorselect-1.2.ebuild 614
+SHA256 efa4e673d1a2800fd1101b4ee206fba7b9aa80a29137d704dc71cfbded8b952a mirrorselect-1.2.ebuild 614
+MISC ChangeLog 12946 RMD160 9e9f0305e4a9628e3e77e66dd7b05f842a228394 SHA1 f709fa4450ae6321b13a38f04e6b474388034505 SHA256 f85dd5273d8d4c4e062a8c5011345ed28d672b8abfe8a4ce07849b45851829df
+MD5 2cd2b1dddd9a26c27d70428dc7dcb605 ChangeLog 12946
+RMD160 9e9f0305e4a9628e3e77e66dd7b05f842a228394 ChangeLog 12946
+SHA256 f85dd5273d8d4c4e062a8c5011345ed28d672b8abfe8a4ce07849b45851829df ChangeLog 12946
+MISC metadata.xml 444 RMD160 2d3e21f2842ba7aafe7e8da6ae8bfc46ccd01407 SHA1 1e888836a9f0651798cd70a8948c65f8d9b2645a SHA256 b2814165c8dc4fa5a7971b3a1586924031c1c514ef90f0e1b0789a96d16523c3
+MD5 5fc74b7cdb5705246b9301024df6485f metadata.xml 444
+RMD160 2d3e21f2842ba7aafe7e8da6ae8bfc46ccd01407 metadata.xml 444
+SHA256 b2814165c8dc4fa5a7971b3a1586924031c1c514ef90f0e1b0789a96d16523c3 metadata.xml 444
+MD5 994cb07a030c1f3874df022863133c5c files/digest-mirrorselect-0.89 65
+RMD160 53f5e9443cd0ddc631bb65e575b9dcea8920df06 files/digest-mirrorselect-0.89 65
+SHA256 3caff155fb53e4d3103341b343a9e16afde0abded5d90f2d90bf6ad32d1e21d4 files/digest-mirrorselect-0.89 65
+MD5 9669e3138fbf6c2752197f822242a31a files/digest-mirrorselect-1.1.7 69
+RMD160 77de81286d1454e3eaedb990e36667217f013437 files/digest-mirrorselect-1.1.7 69
+SHA256 8d8e9f4063bb5fa7932787fd495eadaaeda3cd7d79756446e490784df0fceddb files/digest-mirrorselect-1.1.7 69
+MD5 96269935da80a1eee28413cccc1c2aa0 files/digest-mirrorselect-1.2 67
+RMD160 67ddd26ba240de23ab503ad6947300a21d9c0906 files/digest-mirrorselect-1.2 67
+SHA256 19b54ddb79aa6e54dd7eb1ded831eef976f6c4eb2037ebc91761ec78b7199cb6 files/digest-mirrorselect-1.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuRa6AiZjviIA2XgRAlQ3AKDKGJM151oCs4X+0AS8yYD+rTuX1ACgnLAT
+vSl5/34cK0ovN8oXavUaMBY=
+=gTx9
+-----END PGP SIGNATURE-----
