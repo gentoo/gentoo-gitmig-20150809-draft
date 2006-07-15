@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.0.ebuild,v 1.3 2006/07/15 14:17:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.0-r1.ebuild,v 1.1 2006/07/15 14:17:27 seemant Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="postgres ofx hbci chipcard doc debug quotes nls"
+IUSE="postgres ofx hbci chipcard doc debug quotes nls graphviz tetex"
 
 RDEPEND=">=dev-libs/glib-2.4.0
 	>=dev-util/guile-1.6.4-r2
@@ -42,12 +42,14 @@ RDEPEND=">=dev-libs/glib-2.4.0
 		dev-perl/HTML-TableExtract )
 	postgres? ( dev-db/postgresql )
 	app-text/docbook-xsl-stylesheets
-	=app-text/docbook-xml-dtd-4.1.2*"
+	=app-text/docbook-xml-dtd-4.1.2*
+	nls? ( dev-util/intltool )
+	graphviz? ( media-gfx/graphviz )
+	tetex? ( app-text/tetex )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
-	dev-util/pkgconfig
-	nls? ( dev-util/intltool )"
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	built_with_use gnome-extra/libgsf gnome || die "gnome-extra/libgsf must be built with gnome"
@@ -56,13 +58,26 @@ pkg_setup() {
 
 src_compile() {
 
+	local myconf
+
+	if use doc ; then
+		myconf="$(use_enable graphviz dot)"
+		myconf="${myconf} $(use_enable tetex latex-docs)"
+	fi
+
 	econf \
 		$(use_enable debug) \
 		$(use_enable postgres sql) \
 		$(use_enable ofx) \
 		$(use_enable doc doxygen) \
+		$(use_enable doc html-docs) \
 		$(use_enable hbci) \
-			|| die "econf failed"
+		--disable-deprecated-glib \
+		--disable-deprecated-gdk \
+		--disable-deprecated-gtk \
+		--disable-deprecated-gnome \
+		--enable-locale-specific-tax \
+		${myconf} || die "econf failed"
 
 	MAKEOPTS="-j1"
 	emake || die "emake failed"

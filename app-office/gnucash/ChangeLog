@@ -1,6 +1,16 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.80 2006/07/12 12:46:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.81 2006/07/15 14:17:27 seemant Exp $
+
+*gnucash-2.0.0-r1 (15 Jul 2006)
+
+  15 Jul 2006; Seemant Kulleen <seemant@gentoo.org> gnucash-2.0.0.ebuild,
+  +gnucash-2.0.0-r1.ebuild:
+  fix bug #140467 by Jakub (nls is now in IUSE, and fixed the actual dep to
+  intltool. Also, 2.0.0-r1 is hard-masked, but needs testing by some of you
+  fine folks out there for its extra features: locale-specific-taxes, removal
+  of depreacted functions, documentation extras like LaTeX, dot (graphviz) and
+  html docs. Please test and report
 
   12 Jul 2006; Seemant Kulleen <seemant@gentoo.org> gnucash-2.0.0.ebuild:
   Update to the new GTK2 version. This has been a long time coming. Thanks a
