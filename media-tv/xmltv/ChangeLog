@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.57 2006/07/13 22:59:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.58 2006/07/15 10:14:29 mattepiu Exp $
+
+  15 Jul 2006; Matteo Azzali <mattepiu@gentoo.org> -xmltv-0.5.34.ebuild,
+  -xmltv-0.5.37-r1.ebuild, -xmltv-0.5.39.ebuild:
+  removed obsoleted ebuilds, for stabilization of the new ones see bug #140447.
 
   13 Jul 2006; Jason Wever <weeve@gentoo.org> xmltv-0.5.44.ebuild:
   Added ~sparc keyword wrt bug #139336.
