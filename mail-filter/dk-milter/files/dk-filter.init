@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/files/dk-filter.init,v 1.1 2006/07/15 21:54:34 langthang Exp $
+
+depend() {
+	# need net
+	use dns logger net
+}
+
+start() {
+	ebegin "Starting Domain Key Milter"
+	start-stop-daemon --start --quiet --background \
+		--exec /usr/bin/dk-filter -- ${DK_FILTER_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Domain Key Milter"
+	start-stop-daemon --stop --quiet --name dk-filter
+	eend $?
+}

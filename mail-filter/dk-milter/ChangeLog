@@ -1,0 +1,11 @@
+# ChangeLog for mail-filter/dk-filter
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/ChangeLog,v 1.1 2006/07/15 21:54:34 langthang Exp $
+
+*dk-milter-0.4.1 (15 Jul 2006)
+
+  15 Jul 2006; Tuấn Văn <langthang@gentoo.org> +files/dk-filter.conf,
+  +files/dk-filter.init, +files/site.config.m4, +metadata.xml,
+  +dk-milter-0.4.1.ebuild:
+  Initial commit.
+
