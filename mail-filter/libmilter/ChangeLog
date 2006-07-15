@@ -1,0 +1,10 @@
+# ChangeLog for mail-filter/libmilter
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.1 2006/07/15 21:36:46 langthang Exp $
+
+*libmilter-8.13.7 (15 Jul 2006)
+
+  15 Jul 2006; Tuấn Văn <langthang@gentoo.org> +metadata.xml,
+  +libmilter-8.13.7.ebuild:
+  Initial commit.
+
