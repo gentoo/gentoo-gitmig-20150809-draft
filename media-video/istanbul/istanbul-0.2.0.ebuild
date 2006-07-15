@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0.ebuild,v 1.1 2006/07/14 21:17:21 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0.ebuild,v 1.2 2006/07/15 11:17:40 zaheerm Exp $
 
 inherit eutils gnome2
 
@@ -9,6 +9,8 @@ KEYWORDS="~x86 ~amd64"
 HOMEPAGE="http://live.gnome.org/Istanbul"
 LICENSE="GPL-2"
 SLOT=0
+DESCRIPTION="Istanbul is a screencast application for the Unix desktop"
+IUSE=""
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.8
 	dev-lang/python
