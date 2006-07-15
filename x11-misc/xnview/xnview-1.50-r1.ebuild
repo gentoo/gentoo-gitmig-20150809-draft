@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50-r1.ebuild,v 1.1 2006/07/14 10:44:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.50-r1.ebuild,v 1.2 2006/07/15 11:04:41 nelchael Exp $
 
 inherit rpm
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_P}.ppc.rpm"
 
 SLOT="0"
 LICENSE="free-noncomm as-is"
-KEYWORDS="-* ~ppc"
+KEYWORDS="-* ppc"
 IUSE=""
 
 RDEPEND="|| ( (

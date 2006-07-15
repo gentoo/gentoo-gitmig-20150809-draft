@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xnview
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.22 2006/07/14 10:44:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/ChangeLog,v 1.23 2006/07/15 11:04:41 nelchael Exp $
+
+  15 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> -xnview-1.50.ebuild,
+  xnview-1.50-r1.ebuild, -xnview-1.70-r1.ebuild, xnview-1.70-r2.ebuild:
+  Fonts stable, xnview goes stable too.
 
 *xnview-1.70-r2 (13 Jul 2006)
 *xnview-1.50-r1 (13 Jul 2006)
