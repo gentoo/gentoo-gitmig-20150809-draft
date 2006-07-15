@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.24 2005/10/18 18:05:42 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.25 2006/07/15 18:31:20 dang Exp $
+
+  15 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> paxtest-0.9.6.ebuild:
+  Marked ~amd64 per bug# 127458
 
   18 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> paxtest-0.9.6.ebuild:
   Stable on sparc
