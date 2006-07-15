@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/grsync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.4 2006/07/02 19:26:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grsync/ChangeLog,v 1.5 2006/07/15 07:25:21 dertobi123 Exp $
+
+  15 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/grsync-0.3.2-destdir.patch, -grsync-0.3.2.ebuild,
+  grsync-0.4.2.ebuild:
+  ppc stable
 
 *grsync-0.4.3 (02 Jul 2006)
 
