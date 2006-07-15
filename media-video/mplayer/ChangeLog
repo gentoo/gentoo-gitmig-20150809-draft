@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.401 2006/07/13 02:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.402 2006/07/15 20:52:49 lu_zero Exp $
+
+  15 Jul 2006; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre8-r1.ebuild:
+  split unicode from iconv
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> mplayer-1.0_pre8.ebuild,
   mplayer-1.0_pre8-r1.ebuild, mplayer-1.0.20060102.ebuild,

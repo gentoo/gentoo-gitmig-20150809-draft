@@ -1,16 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.5 2006/07/13 02:24:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.6 2006/07/15 20:52:49 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
 RESTRICT="nostrip"
 IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec amr arts bidi bl bindist
-cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
-dvdread enca encode esd fbcon gif ggi gtk ipv6 jack joystick jpeg libcaca
-lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode vorbis
-opengl openal oss png real rtc samba sdl speex sse sse2 svga tga theora
-truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
+cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd
+dv dvdread enca encode esd fbcon gif ggi gtk iconv ipv6 jack joystick jpeg
+libcaca lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode
+vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
+theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid
+xvmc"
 
 BLUV=1.5
 SVGV=1.9.17
@@ -107,7 +108,7 @@ DEPEND="${RDEPEND}
 		   x11-proto/xf86vidmodeproto )
 	X? ( x11-proto/xextproto
 		 x11-proto/xf86vidmodeproto )
-	unicode? ( virtual/libiconv )"
+	iconv? ( virtual/libiconv )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -249,9 +250,9 @@ src_compile() {
 
 	myconf="${myconf} $(use_enable bidi fribidi)"
 
-	if use unicode
+	if use iconv
 	then
-		myconf="${myconf} --charset=UTF-8"
+		use unicode && myconf="${myconf} --charset=UTF-8"
 	else
 		myconf="${myconf} --charset=noconv"
 	fi
