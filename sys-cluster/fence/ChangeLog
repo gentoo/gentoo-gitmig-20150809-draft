@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/fence
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.24 2006/07/14 13:30:58 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/ChangeLog,v 1.25 2006/07/15 16:19:57 xmerlin Exp $
+
+  15 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org> +files/fence_xen,
+  fence-1.02.00.ebuild, fence-1.02.00-r1.ebuild:
+  Added fence_xen, closed bug #124345, thanks to 
+  Christopher G. Stach II <cgs@ldsys.net> for pointing it.
 
   14 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
   fence-1.02.00-r1.ebuild:

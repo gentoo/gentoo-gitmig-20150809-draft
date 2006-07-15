@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.02.00-r1.ebuild,v 1.2 2006/07/14 13:30:58 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.02.00-r1.ebuild,v 1.3 2006/07/15 16:19:57 xmerlin Exp $
 
 inherit eutils
 
@@ -39,6 +39,9 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	into /
+	dosbin ${FILESDIR}/${PN}_xen || die
 
 	newinitd ${FILESDIR}/${PN}d.rc ${PN}d || die
 	newconfd ${FILESDIR}/${PN}d.conf ${PN}d || die
