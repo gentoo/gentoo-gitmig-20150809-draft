@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.21 2006/07/09 20:34:13 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.22 2006/07/15 09:26:59 phreak Exp $
+
+*git-sources-2.6.18_rc1-r9 (15 Jul 2006)
+
+  15 Jul 2006; Christian Heim <phreak@gentoo.org>
+  -git-sources-2.6.16_rc5-r10.ebuild, -git-sources-2.6.16_rc5-r14.ebuild,
+  -git-sources-2.6.16_rc5-r15.ebuild, -git-sources-2.6.16-r11.ebuild,
+  -git-sources-2.6.17-r13.ebuild, +git-sources-2.6.18_rc1-r9.ebuild:
+  Dropping 2.6.16* and 2.6.17*; Version bump
 
 *git-sources-2.6.18_rc1-r2 (09 Jul 2006)
 
