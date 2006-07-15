@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.8.2.ebuild,v 1.1 2006/07/13 19:42:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.8.2.ebuild,v 1.2 2006/07/15 01:36:46 vapier Exp $
 
 DESCRIPTION="A VNC server for real X displays"
 HOMEPAGE="http://www.karlrunge.com/x11vnc/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.karlrunge.com/x11vnc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="jpeg zlib threads"
 
 RDEPEND="zlib? ( sys-libs/zlib )
