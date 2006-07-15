@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>aliz@gentoo.org</email>
-</maintainer>
 <longdescription>A (de)compressor for microsoft's compress.exe and expand.exe functions.</longdescription>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.23 2005/12/10 00:20:20 herbs Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.24 2006/07/15 13:13:10 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove aliz from metadata.xml as he's retired.
 
   10 Dec 2005; Herbie Hopkins <herbs@gentoo.org> arj-3.10.22-r1.ebuild:
   Stable on amd64 wrt bug #84142.

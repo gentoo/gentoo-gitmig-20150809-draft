@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.35 2006/06/22 18:27:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.36 2006/07/15 13:16:43 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove aliz from metadata.xml as he's retired.
 
   22 Jun 2006; Simon Stelling <blubb@gentoo.org> rar-3.5.1.ebuild:
   add RESTRICT=nostrip, bug 137611
