@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libgnomemm-2.0.0-pkgconfig.patch 1083 RMD160 fe4f23b20c563acbad261c5666aaf4abf97854ab SHA1 c95ec916216fa4ce2a2ef2eadd7905ad2966ca35 SHA256 6f52e0461633585bd1a4b22e94650455c7fd4d39a1c9d0b01b2ffaa70f65ea0a
 MD5 2d32d65a8f8c930689fc0c23f769946e files/libgnomemm-2.0.0-pkgconfig.patch 1083
 RMD160 fe4f23b20c563acbad261c5666aaf4abf97854ab files/libgnomemm-2.0.0-pkgconfig.patch 1083
 SHA256 6f52e0461633585bd1a4b22e94650455c7fd4d39a1c9d0b01b2ffaa70f65ea0a files/libgnomemm-2.0.0-pkgconfig.patch 1083
 DIST libgnomemm-2.0.0.tar.gz 334543
-DIST libgnomemm-2.0.1.tar.bz2 234593
+DIST libgnomemm-2.0.1.tar.bz2 234593 RMD160 38ae7071603671b33770fe8d8d44bc7605a3c946 SHA1 596be5ea34b4b22da17f5ac65baeac56be71a935 SHA256 9737553ec596aeda1f30a79eff3e6e5cca5767351db40a53e7f9ce11a25001ae
 DIST libgnomemm-2.10.0.tar.bz2 245085
-DIST libgnomemm-2.12.0.tar.bz2 245793
+DIST libgnomemm-2.12.0.tar.bz2 245793 RMD160 e1e4302e9e1429c076f488efad37fe388342c1f1 SHA1 9b8c4b2628de18d18cf251db1eaff3fa782bbc57 SHA256 a79805200e34a138036f679c6a3734fae6b74dba07e5294b180c31bfc4eff3cb
 DIST libgnomemm-2.12.2.tar.bz2 250741 RMD160 05927f6a840d18d3d65fc855422ed450fe908b0e SHA1 3bf2e4409e99e7abaf3bae6a2c21f762c8757569 SHA256 b04ddf0ebdec1273526316587220c522a771f7ce064e4601f36874650e96b7cd
 DIST libgnomemm-2.6.0.tar.bz2 238958
 EBUILD libgnomemm-2.0.0-r1.ebuild 740 RMD160 435d07694ea5a2a27850980456dc36fd57e2e9e9 SHA1 de51eb21ea27f0e3216c4ab8c00a745436a8df98 SHA256 c47afe0c4a0277916997d68f6a095ea7c7e10b8d8a297daf0651e10fdb74405c
@@ -24,10 +27,10 @@ EBUILD libgnomemm-2.12.0.ebuild 720 RMD160 d742ae476fbdbb3cc097c1e295ed1f938862c
 MD5 38726f388bf61f057649bff77ab91042 libgnomemm-2.12.0.ebuild 720
 RMD160 d742ae476fbdbb3cc097c1e295ed1f938862c90c libgnomemm-2.12.0.ebuild 720
 SHA256 66cc34e87b646c39665e659976673776ae4466f0825f6e19aa93e79aa121a5f0 libgnomemm-2.12.0.ebuild 720
-EBUILD libgnomemm-2.12.2.ebuild 737 RMD160 4ce74561a83dbf060e407314e7810ec0dfaabed4 SHA1 0285230563bf122d73a12c10ce23662a5c98b671 SHA256 675cc4eb5f62e9c2c6dec1ae7af6d6a15fd75b47da9fd9b99ef52a1e8fc682a8
-MD5 417a39fd29ced46a0c2349d03beba7be libgnomemm-2.12.2.ebuild 737
-RMD160 4ce74561a83dbf060e407314e7810ec0dfaabed4 libgnomemm-2.12.2.ebuild 737
-SHA256 675cc4eb5f62e9c2c6dec1ae7af6d6a15fd75b47da9fd9b99ef52a1e8fc682a8 libgnomemm-2.12.2.ebuild 737
+EBUILD libgnomemm-2.12.2.ebuild 732 RMD160 b8aab95c73e9da5e652a33a1356f3e13d73529b0 SHA1 bb73e6a2154c37a5df284624768a36c45cc43b19 SHA256 0fe7af3f95ea1e960224d23fa5672079576130282029c74525884b30fff1ab1c
+MD5 cf6cbdc74b83e260b9df5f9af36d8db1 libgnomemm-2.12.2.ebuild 732
+RMD160 b8aab95c73e9da5e652a33a1356f3e13d73529b0 libgnomemm-2.12.2.ebuild 732
+SHA256 0fe7af3f95ea1e960224d23fa5672079576130282029c74525884b30fff1ab1c libgnomemm-2.12.2.ebuild 732
 EBUILD libgnomemm-2.6.0.ebuild 718 RMD160 fe3ab6086b444af3ea83f6bd244812b8fc131fcd SHA1 2b4bf493dfbc2cea9d69e12ddf27d0f497194032 SHA256 75fe8ca1cd7d09105c335e6206a219fef5574b97bf3c4d7ef7b9aed7d422b94f
 MD5 51f2f13af678a1ce0be33da352ba66c6 libgnomemm-2.6.0.ebuild 718
 RMD160 fe3ab6086b444af3ea83f6bd244812b8fc131fcd libgnomemm-2.6.0.ebuild 718
@@ -43,18 +46,25 @@ SHA256 00ba82c241ad7007fe861877db3ae5aeaa967e05f0a6478e6ba9eb60ba31a3b6 metadata
 MD5 24c2db8638fe53dba09a9a20ca0844e9 files/digest-libgnomemm-2.0.0-r1 68
 RMD160 7129f936faa4f4e44a39d666aef06d3c5d2fe41e files/digest-libgnomemm-2.0.0-r1 68
 SHA256 e042f6d5c4f6e0b86422c502e391f72033451dbedc04080af68df0d526f9c6c1 files/digest-libgnomemm-2.0.0-r1 68
-MD5 18cc8e18bd644eca9920325ea0147cd7 files/digest-libgnomemm-2.0.1 69
-RMD160 bd3922429dff1210ee7eb601bef448ff4cf294c9 files/digest-libgnomemm-2.0.1 69
-SHA256 5fdae1befc935a5ff386e8c63e387bbbb63b33a6b6013399e14f99cc006618fd files/digest-libgnomemm-2.0.1 69
+MD5 1e319fd61c64c5730e99365e5f9aafe3 files/digest-libgnomemm-2.0.1 253
+RMD160 b9a598f87a3c88e45f28295e30c85105cc4b4dc5 files/digest-libgnomemm-2.0.1 253
+SHA256 6acc5d31910b9da2ba82f34a806d87a9b766453a95b280e2ce97648866b5c8e9 files/digest-libgnomemm-2.0.1 253
 MD5 7cd607992587f719817cfeb3b59ea70e files/digest-libgnomemm-2.10.0 70
 RMD160 9ef28b5d5c58df24346c053813c4626796d3cb95 files/digest-libgnomemm-2.10.0 70
 SHA256 06533724e0a5f01e666b9c91a9a800d382a20444a27d4cfb6d9a3751778399b0 files/digest-libgnomemm-2.10.0 70
-MD5 ba52478a173695ee09dd14652a5f5159 files/digest-libgnomemm-2.12.0 70
-RMD160 6cf2a3f835216b8c28de4eb757e83be01b49fa17 files/digest-libgnomemm-2.12.0 70
-SHA256 bf273444896991f0c5809b7b8902a15ac37b880ed910798108232ed60c84fde8 files/digest-libgnomemm-2.12.0 70
+MD5 00173568e1980d1bf0d03e7e78e66943 files/digest-libgnomemm-2.12.0 256
+RMD160 fac8c35a37461801cda7e099fe39d7805b86b9a1 files/digest-libgnomemm-2.12.0 256
+SHA256 dd713a6e4a907a1969b66d474496de70f73c50e05408a38366fda1765c35f89c files/digest-libgnomemm-2.12.0 256
 MD5 842720fea3ab058c03dfd3f606d22c81 files/digest-libgnomemm-2.12.2 256
 RMD160 0e2eaf5ec7e4264f18cbdf72fee60dfcba5f45d7 files/digest-libgnomemm-2.12.2 256
 SHA256 983aa266f7ea6a31be19469da0ec7ac6b8acb8a704536bd93012e937cbc2be0c files/digest-libgnomemm-2.12.2 256
 MD5 a4d6f8f16b66a52e759a36889b37a078 files/digest-libgnomemm-2.6.0 69
 RMD160 94937c95c529be2a06a5081d5ebd748ad82b2f95 files/digest-libgnomemm-2.6.0 69
 SHA256 e5b0494b6a7edcf413acca1f072ad3b01da837b020b068e4162fc3432c9efd6c files/digest-libgnomemm-2.6.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuF/KamhnQswr0vIRAjL3AKC6pCMNeOD5rKozQrTASaNYz53RwQCfY4Es
+ooGBkDCWBcfFXJKlwop7Qfk=
+=ElAh
+-----END PGP SIGNATURE-----
