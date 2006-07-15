@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a.ebuild,v 1.2 2006/07/12 13:11:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a.ebuild,v 1.3 2006/07/15 07:19:57 dragonheart Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -30,6 +30,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}/${P}"_kernel-2.6.18-rc1_fix.patch
 	cd "${S}"
 	linux-mod_pkg_setup
 	epatch "${FILESDIR}/${P}-makefile.patch"
