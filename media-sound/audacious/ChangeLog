@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.56 2006/07/12 13:49:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.57 2006/07/15 09:47:27 killerfox Exp $
+
+  15 Jul 2006; Rene Nussbaumer <killerfox@gentoo.org>
+  audacious-1.1.0.ebuild:
+  Stable on hppa. See bug #139957.
 
   12 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   audacious-1.1.0.ebuild:
