@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.47 2006/07/14 17:41:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.48 2006/07/15 14:45:05 tantive Exp $
+
+  15 Jul 2006; Michael Imhof <tantive@gentoo.org> -heartbeat-1.2.3.ebuild:
+  Removed old ebuild. Closes #140491.
 
   14 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
   +files/heartbeat-2.0.4-op_list.patch, heartbeat-2.0.4.ebuild:
