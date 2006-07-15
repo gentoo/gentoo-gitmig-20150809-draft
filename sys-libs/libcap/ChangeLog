@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.37 2006/07/14 14:18:37 solar Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.38 2006/07/15 05:27:30 vapier Exp $
+
+  15 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/libcap-1.10-nostrip.patch, libcap-1.10-r7.ebuild:
+  Cleanup ebuild a bit and fix stripping via patch rather than sed.
 
   14 Jul 2006; <solar@gentoo.org> -libcap-1.10-r6.ebuild:
   - removed broken libcap-1.10-r6 from the tree. It is causing way to many
