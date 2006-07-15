@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.18 2006/07/15 11:33:21 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.19 2006/07/15 23:01:02 tsunam Exp $
+
+  15 Jul 2006; Joshua Jackson <tsunam@gentoo.org> blt-2.4z-r1.ebuild:
+  Stable x86; bug #139751
 
   15 Jul 2006; Ferris McCormick <fmccor@gentoo.org> blt-2.4z-r1.ebuild:
   Stable on sparc, Bug #139751 --- builds as expected and runs its
