@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>commonbox</herd>
-<maintainer>
-	<email>anarchy@gentoo.org</email>
-	<name>Jory A. Pratt</name>
-</maintainer>
 </pkgmetadata>
