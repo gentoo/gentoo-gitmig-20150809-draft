@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5625 2006/07/14 00:43:51 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5626 2006/07/15 11:02:18 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -155,10 +155,6 @@ net-im/jive-messenger
 # Henrik Brix Andersen <brix@gentoo.org> (2 Jul 2006)
 # Masked pending removal, bug #132600
 net-wireless/bluez-kernel
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (1 Jul 2006)
-# Pending removal, please use www-servers/resin.
-www-servers/resin-ee
 
 # Diego Pettenò <flameeyes@gentoo.org> (30 Jun 2006)
 # beta versions.
