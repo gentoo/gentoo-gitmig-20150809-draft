@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/luabind
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/ChangeLog,v 1.9 2005/09/19 22:30:55 halcy0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luabind/ChangeLog,v 1.10 2006/07/15 11:22:26 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove rphillips from metadata.xml as he's retired.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
