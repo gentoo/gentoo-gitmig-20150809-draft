@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20060601.ebuild,v 1.3 2006/06/23 20:46:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/foomatic-db-engine-3.0.20060601.ebuild,v 1.4 2006/07/15 03:16:26 vapier Exp $
 
 inherit perl-app eutils versionator
 
@@ -12,18 +12,19 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/libxml2
 	net-print/foomatic-filters"
 PDEPEND="net-print/foomatic-db"
+
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/perl-module-3.0.1.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/perl-module-3.0.1.diff
 	sed -i -e "s:@LIB_CUPS@:$(cups-config --serverbin):" Makefile.in
 }
 
@@ -36,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	cd lib
 	perl-module_src_install
