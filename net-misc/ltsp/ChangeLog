@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.11 2005/06/06 12:48:46 lanius Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.12 2006/07/15 14:10:23 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove lanius from metadata.xml as he's retired.
 
   06 Jun 2005; Heinrich Wendel <lanius@gentoo.org> ltsp-4.1.1.ebuild:
   bug 93620
