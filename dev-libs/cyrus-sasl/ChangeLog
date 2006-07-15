@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.148 2006/07/15 22:25:44 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.149 2006/07/15 22:58:38 langthang Exp $
+
+  15 Jul 2006; Tuấn Văn <langthang@gentoo.org> -files/2.1.14-db4.patch,
+  -files/saslauthd-2.1.19.conf, -files/2.1.14-kerberos.patch,
+  -files/2.1.14-mysql.patch, -files/cyrus-sasl-1.5.21-des.patch,
+  -files/cyrus-sasl-1.5.24-rpath.patch,
+  -files/cyrus-sasl-1.5.27-scram.patch,
+  -files/cyrus-sasl-2.1.17-configdir.patch,
+  -files/cyrus-sasl-2.1.17-db4.patch,
+  -files/cyrus-sasl-2.1.18-cvs-1.172.patch,
+  -files/cyrus-sasl-2.1.18-db4.patch,
+  -files/cyrus-sasl-2.1.18-pam_mysql.patch,
+  -files/cyrus-sasl-2.1.18-sasl-path-fix.patch,
+  -files/cyrus-sasl-2.1.19-configdir.patch,
+  -files/cyrus-sasl-2.1.19-sasl-path-fix.patch,
+  -files/cyrus-sasl-configdir.patch, -files/cyrus-sasl-gcc32.patch,
+  -files/cyrus-sasl-heimdal-deps.patch, -files/cyrus-sasl-saslauthd.patch,
+  -files/saslauthd.conf, -files/saslauthd.rc6, -files/saslauthd2.conf:
+  remove unused files.
 
   15 Jul 2006; Tuấn Văn <langthang@gentoo.org>
   -cyrus-sasl-2.1.18-r2.ebuild, -cyrus-sasl-2.1.19-r1.ebuild,
