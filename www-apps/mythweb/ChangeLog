@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.19 2006/02/21 15:27:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.20 2006/07/15 17:20:18 cardoe Exp $
+
+*mythweb-0.19_p10505 (15 Jul 2006)
+
+  15 Jul 2006; Doug Goldstein <cardoe@gentoo.org> -mythweb-0.18.1.ebuild,
+  -mythweb-0.19_pre8642.ebuild, mythweb-0.19.ebuild,
+  +mythweb-0.19_p10505.ebuild:
+  Purge old revisions. Add release-0-19-fixes snapshot. Add mysql to required
+  PHP features.
 
   21 Feb 2006; Doug Goldstein <cardoe@gentoo.org> mythweb-0.18.1.ebuild,
   mythweb-0.19_pre8642.ebuild, mythweb-0.19.ebuild:
