@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-electronics</herd>
-  <maintainer>
-    <email>lanius@gentoo.org</email>
-    <name>Heinrich Wendel</name>
-  </maintainer>
   <longdescription>
   KTechlab provides a powerful environment for electronic circuits and
   microcontrollers. This includes simulation of a variety of components (logic,
