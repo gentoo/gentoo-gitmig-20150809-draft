@@ -1,8 +1,0 @@
-# ChangeLog for dev-libs/libgc
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgc/ChangeLog,v 1.1 2005/12/03 00:37:52 vapier Exp $
-
-*libgc-6.6 (02 Dec 2005)
-
-  02 Dec 2005; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Ian Bygrave #35767 by Adam Hewgill.
