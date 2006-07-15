@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5630 2006/07/15 21:28:17 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5631 2006/07/15 22:35:35 liquidx Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Alastair Tse <liquidx@gentoo.org> (15 Jul 2006)
+# Python 2.1 and 2.2 have reported vunerabilities. Masked pending
+# removal, along with net-zope/zope-2.6. (GLSA: 200509-08, 200502-09,
+# 200510-20)
+<dev-lang/python-2.3
+=net-zope/zope-2.6*
+
 
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
