@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r2.ebuild,v 1.4 2006/07/15 13:42:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r2.ebuild,v 1.5 2006/07/15 16:29:14 nelchael Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.students.tut.fi/~tuomov/dl/${P}.tar.gz"
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="ppc sparc ~x86"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 RDEPEND="|| (
