@@ -1,3 +1,4 @@
 sys-libs/glibc
 # breaks gcc and such
 dev-libs/libiconv
+=app-arch/tar-1.15.91
