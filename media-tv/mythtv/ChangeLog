@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.103 2006/07/07 20:15:11 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.104 2006/07/15 17:13:05 cardoe Exp $
+
+*mythtv-0.19_p10505 (15 Jul 2006)
+
+  15 Jul 2006; Doug Goldstein <cardoe@gentoo.org> -mythtv-0.19_p10281.ebuild,
+  +mythtv-0.19_p10505.ebuild:
+  Bumped patchset to include some more fixes. Also in line with mythweb
+  patchset release.
 
   07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
   mythtv-0.19_p9163-r1.ebuild, mythtv-0.19_p10281.ebuild:
