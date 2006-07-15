@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/asio
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.3 2005/10/20 17:21:09 rphillips Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.4 2006/07/15 11:10:10 kloeri Exp $
+
+  15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove rphillips from metadata.xml as he's retired.
 
   20 Oct 2005; <rphillips@gentoo.org> asio-0.3.4.ebuild:
   add doc use flag to pull in doxygen
