@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-clearlooks/gtk-engines-clearlooks-0.6.2.ebuild,v 1.1 2006/07/16 15:59:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-clearlooks/gtk-engines-clearlooks-0.6.2.ebuild,v 1.2 2006/07/16 19:34:47 nelchael Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-2*"
+DEPEND="=x11-libs/gtk+-2*
+	!x11-themes/gtk-engines"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 

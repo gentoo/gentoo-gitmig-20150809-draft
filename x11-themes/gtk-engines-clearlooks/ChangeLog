@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-clearlooks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-clearlooks/ChangeLog,v 1.1 2006/07/16 15:59:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-clearlooks/ChangeLog,v 1.2 2006/07/16 19:34:47 nelchael Exp $
+
+  16 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  gtk-engines-clearlooks-0.6.2.ebuild:
+  Added block against x11-themes/gtk-engines.
 
 *gtk-engines-clearlooks-0.6.2 (16 Jul 2006)
 
