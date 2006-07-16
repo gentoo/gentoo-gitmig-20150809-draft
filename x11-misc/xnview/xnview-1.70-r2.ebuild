@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.70-r2.ebuild,v 1.2 2006/07/15 11:04:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnview/xnview-1.70-r2.ebuild,v 1.3 2006/07/16 17:28:52 nelchael Exp $
 
 DESCRIPTION="XnView image viewer/converter"
 HOMEPAGE="http://www.xnview.com/"
@@ -18,7 +18,8 @@ RDEPEND="|| ( (
 		x11-libs/libXext
 		x11-libs/libXp
 		x11-libs/libXdmcp
-		|| ( media-fonts/font-bh-lucidatypewriter-100dpi media-fonts/font-bh-lucidatypewriter-75dpi ) )
+		media-fonts/font-bh-lucidatypewriter-100dpi
+		media-fonts/font-bh-lucidatypewriter-75dpi )
 	virtual/x11 )"
 DEPEND="${RDEPEND}
 		sys-libs/glibc"
