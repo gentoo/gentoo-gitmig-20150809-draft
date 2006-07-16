@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.64 2006/07/14 15:58:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.65 2006/07/16 11:17:46 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gnome-system-tools-2.14.0.ebuild:
+  hppa stable, bug #139612
 
   14 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-system-tools-2.14.0.ebuild:
