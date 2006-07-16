@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.16 2006/07/04 19:16:46 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.17 2006/07/16 17:23:50 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  mod_fcgid-1.08.ebuild:
+  ppc stable
 
 *mod_fcgid-1.10 (04 Jul 2006)
 *mod_fcgid-1.09 (04 Jul 2006)
