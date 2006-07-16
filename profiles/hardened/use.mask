@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.12 2006/07/16 09:53:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.13 2006/07/16 10:14:13 dragonheart Exp $
 
 # uclibc only in uclibc profiles.
 uclibc
@@ -26,6 +26,3 @@ ppcsha1
 sse
 sse2
 x264
-
-# mask bmpx USE flag while waiting for neon fix
-bmpx
