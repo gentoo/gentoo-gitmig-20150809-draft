@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.40.ebuild,v 1.3 2005/11/29 02:57:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.40.ebuild,v 1.4 2006/07/16 09:46:36 truedfx Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -33,7 +33,6 @@ src_compile() {
 		--with-{bin,man}grp=root \
 		--enable-largefile \
 		$(use_enable static) \
-		$(use_enable static staticz) \
 		$(use_enable readline) \
 		|| die
 	emake || die
