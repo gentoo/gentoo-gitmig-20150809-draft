@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sdsc-syslog
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.7 2005/10/07 08:52:12 dragonheart Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.8 2006/07/16 22:11:13 dragonheart Exp $
+
+  16 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  sdsc-syslog-1.0.2.ebuild:
+  remove prepallman (enabled by default) as per bug# 140697 thanks Brian Harring
 
   07 Oct 2005; Daniel Black <dragonheart@gentoo.org>
   sdsc-syslog-1.0.2.ebuild:

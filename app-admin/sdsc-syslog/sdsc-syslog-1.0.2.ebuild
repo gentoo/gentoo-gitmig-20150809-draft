@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.8 2005/10/07 08:52:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.9 2006/07/16 22:11:13 dragonheart Exp $
 
 DESCRIPTION="SDSC Secure Syslog provides RFC3080 and RFC3081 logging services"
 HOMEPAGE="http://security.sdsc.edu/software/sdsc-syslog/"
@@ -55,20 +55,17 @@ src_compile() {
 
 src_install() {
 	# Makefiles seem to be OK
-	emake DESTDIR=${D} install || die
-
-	# Gzip potential man pages
-	prepallman
+	emake DESTDIR="${D}" install || die
 
 	# Include normal documentation
 	dodoc AUTHORS docs/TODO
 
 	# move a few /usr/share/SDSCSyslogd files
 	dodir /etc
-	mv ${D}/usr/share/SDSCSyslogd/syslogd.conf* ${D}/etc
-	mv ${D}/usr/share/SDSCSyslogd/* ${D}/usr/share/doc/${PF}
-	rmdir ${D}/usr/share/SDSCSyslogd
-	rm ${D}/usr/share/doc/${PF}/COPYING
+	mv "${D}"/usr/share/SDSCSyslogd/syslogd.conf* "${D}"/etc
+	mv "${D}"/usr/share/SDSCSyslogd/* "${D}"/usr/share/doc/${PF}
+	rmdir "${D}"/usr/share/SDSCSyslogd
+	rm "${D}"/usr/share/doc/${PF}/COPYING
 
 	# ... and optionally doxygen-generated one
 	use doc && dohtml docs/html/*
