@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/quodlibet-trayicon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.3 2006/07/16 08:50:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/ChangeLog,v 1.4 2006/07/16 21:35:25 weeve Exp $
+
+  16 Jul 2006; Jason Wever <weeve@gentoo.org>
+  quodlibet-trayicon-3493.ebuild:
+  Added ~sparc keyword wrt bug #139869.
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   quodlibet-trayicon-3493.ebuild:
