@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/esdl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.12 2006/07/16 06:39:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/ChangeLog,v 1.13 2006/07/16 09:10:33 flameeyes Exp $
+
+  16 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> esdl-0.96.0626.ebuild:
+  Fix multilib-strictness.
 
 *esdl-0.96.0626 (16 Jul 2006)
 

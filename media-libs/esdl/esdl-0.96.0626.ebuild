@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.96.0626.ebuild,v 1.1 2006/07/16 06:39:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.96.0626.ebuild,v 1.2 2006/07/16 09:10:33 flameeyes Exp $
 
-inherit fixheadtails
+inherit fixheadtails multilib
 
 DESCRIPTION="Erlang bindings for the SDL library"
 HOMEPAGE="http://esdl.sourceforge.net/"
@@ -28,8 +28,8 @@ src_compile() {
 }
 
 src_install() {
-	addpredict /usr/lib/erlang/lib
-	ERLANG_DIR="/usr/lib/erlang/lib"
+	addpredict /usr/$(get_libdir)/erlang/lib
+	ERLANG_DIR="/usr/$(get_libdir)/erlang/lib"
 	ESDL_DIR="${ERLANG_DIR}/${P}"
 	dodir ${ESDL_DIR}
 	make install INSTALLDIR="${D}"/${ESDL_DIR} || die "make install"
