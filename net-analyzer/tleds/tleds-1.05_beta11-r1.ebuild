@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11-r1.ebuild,v 1.1 2006/01/19 01:57:38 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11-r1.ebuild,v 1.2 2006/07/16 13:47:41 dragonheart Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P/eta11/}"
@@ -13,12 +13,12 @@ SRC_URI="http://www.hut.fi/~jlohikos/tleds/public/${MY_P/11/10}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="X"
 
 DEPEND="X? (
 	|| ( ( >=x11-libs/libX11-1.0.0 )
-	virtual/x11 )
+	<virtual/x11-7 )
 	)"
 
 src_unpack() {
@@ -26,6 +26,12 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/${MY_P}.patch.bz2
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	local opts="$(echo '$(GCCOPTS)')"
+	sed -i -e "s:-O3 -Wall:${CFLAGS} -Wall:" \
+		-e "s:gcc ${opts}:$(tc-getCC) ${opts}:" \
+		-e "s:gcc -DNO_X_SUPPORT:$(tc-getCC) -DNO_X_SUPPORT:" \
+		-e "s:/usr/X11R6:/usr:g" \
+		Makefile || die "sed failed in Makefile"
 }
 
 src_compile() {
