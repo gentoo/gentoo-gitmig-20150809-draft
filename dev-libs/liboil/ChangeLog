@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.30 2006/06/08 19:39:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.31 2006/07/16 21:38:53 flameeyes Exp $
+
+  16 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> liboil-0.3.8.ebuild:
+  Add ~x86-fbsd keyword.
 
   08 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> liboil-0.3.7.ebuild,
   liboil-0.3.8.ebuild:
