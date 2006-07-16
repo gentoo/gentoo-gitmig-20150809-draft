@@ -1,18 +1,8 @@
 # ChangeLog for x11-libs/ewl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.9 2004/06/24 22:00:13 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ChangeLog,v 1.10 2006/07/16 05:44:43 vapier Exp $
 
-*ewl-0.0.3.* (18 Oct 2003)
-
-  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
-  ewl-0.0.2.20030310-r1.ebuild:
-  version bump for removal of pic nonsense
-
-  14 Mar 2003; Aron Griffis <agriffis@gentoo.org> ewl-0.0.2.20030310.ebuild:
-  Add ~alpha to KEYWORDS and use -fPIC on alpha
-
-  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> ewl-0.0.2.20030220.ebuild:
-  Fix dep (ewl should depend on etox).
+*ewl-* (18 Oct 2003)
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
