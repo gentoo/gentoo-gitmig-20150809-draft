@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.91 2006/07/14 17:28:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.92 2006/07/16 11:14:19 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  zenity-2.14.2.ebuild:
+  hppa stable, bug #139612
 
   14 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   zenity-2.14.2.ebuild:
