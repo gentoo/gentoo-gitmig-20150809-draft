@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r5.ebuild,v 1.3 2006/06/25 13:28:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r5.ebuild,v 1.4 2006/07/16 10:12:35 flameeyes Exp $
 
 inherit toolchain-funcs eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ijbswa/${P}-stable-src.tar.gz"
 
 IUSE="pcre selinux zlib"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ppc ~sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 
 DEPEND="=sys-devel/autoconf-2.1*
@@ -76,15 +76,15 @@ src_install () {
 	doman privoxy.1
 	dodoc LICENSE README AUTHORS doc/text/faq.txt ChangeLog
 
-	insopts -m 0644 -g root -o root
-	diropts -m 0755 -g root -o root
+	insopts -m 0644 -g 0 -o root
+	diropts -m 0755 -g 0 -o root
 	local i
 	for i in developer-manual faq man-page user-manual ; do
 		insinto "/usr/share/doc/${PF}/${i}"
 		doins doc/webserver/"${i}"/*
 	done
 
-	insopts -m 0750 -g root -o root
+	insopts -m 0750 -g 0 -o root
 	insinto /usr/sbin
 	doins privoxy
 	newinitd "${FILESDIR}/privoxy.rc7" privoxy
