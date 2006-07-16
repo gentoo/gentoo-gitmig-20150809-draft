@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.9.ebuild,v 1.1 2006/07/16 08:04:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.9.ebuild,v 1.2 2006/07/16 08:32:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,10 @@ RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 		>=dev-libs/libevent-1.0b
 		>=net-libs/libnfsidmap-0.16
 	)
-	kerberos? ( app-crypt/mit-krb5 )"
+	kerberos? (
+		net-libs/librpcsecgss
+		app-crypt/mit-krb5
+	)"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51"
 
