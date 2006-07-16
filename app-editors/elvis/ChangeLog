@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.20 2006/07/16 12:49:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.21 2006/07/16 18:34:50 weeve Exp $
+
+  16 Jul 2006; Jason Wever <weeve@gentoo.org> elvis-2.2.0-r1.ebuild:
+  Stable on SPARC wrt bug #140618.
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   elvis-2.2.0-r1.ebuild:
