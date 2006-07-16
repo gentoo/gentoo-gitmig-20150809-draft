@@ -9,8 +9,7 @@ depend() {
 
 start() {
 	ebegin "Starting pulseaudio"
-	# -D0 -> don't daemonize, leave that to s-s-d
-	start-stop-daemon --start --quiet --background --exec /usr/bin/pulseaudio -- $PULSEAUDIO_OPTIONS --fail=true -D0
+	start-stop-daemon --start --quiet --background --exec /usr/bin/pulseaudio -- ${PA_OPTS} --fail=true
 	eend $?
 }
 

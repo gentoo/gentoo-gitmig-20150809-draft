@@ -3,5 +3,5 @@
 # For more see "pulseaudio -h".
 
 # Startup options
-PULSEAUDIO_OPTIONS="--log-target=syslog"
+PA_OPTS="--log-target=syslog"
 
