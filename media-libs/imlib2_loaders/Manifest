@@ -1,18 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8f9bf5eb8132bca3e8d10cb57a7d37b1 metadata.xml 331
+DIST imlib2_loaders-1.2.2.001.tar.gz 339224 RMD160 9edde813764f5ea3a5f19914da235b45e5101b15 SHA1 06c1035519b40a9cb7e001838b64fe4196ae2b21 SHA256 2195a46b4160fd10fbdf5b202bcb531bd82d7c1ec9a8046a8a5bdb40c69044ed
+EBUILD imlib2_loaders-1.2.2.001.ebuild 487 RMD160 5a56221dcf8d3d877b1b38ccec0a473f33c4cd9d SHA1 550f23774d2228e0593face65214e8dea5abe153 SHA256 062407cb453773d4a4c0ea4e6bd361996ef89dd1f1d15708a75d60e912e9f503
+MD5 2d4ff86c33706dcc78b9615c683370c1 imlib2_loaders-1.2.2.001.ebuild 487
+RMD160 5a56221dcf8d3d877b1b38ccec0a473f33c4cd9d imlib2_loaders-1.2.2.001.ebuild 487
+SHA256 062407cb453773d4a4c0ea4e6bd361996ef89dd1f1d15708a75d60e912e9f503 imlib2_loaders-1.2.2.001.ebuild 487
+EBUILD imlib2_loaders-9999.ebuild 557 RMD160 fc9b6da57f9c04e60481195a57cd8b27fddc0b91 SHA1 4396a7b0ecf1cbf94070e931f946a96ed05e1c5a SHA256 e24d5d7069f07f3dc538b9ce2983e4d601b0e9070d70b92502d602d309b1574f
 MD5 0e4d159f7ab8e892761a98c9cb5ca0f1 imlib2_loaders-9999.ebuild 557
-MD5 eaa6ff2b5302858aabc269f43d17f9e9 imlib2_loaders-1.2.0.007.ebuild 562
-MD5 ab386ef6a85e78ecfbd6233a291c6eb6 imlib2_loaders-1.2.1.004.ebuild 487
-MD5 fd3200198ebf966b11d58505c0d9d5ad ChangeLog 543
-MD5 7c99378bd9a45bc139f3a1eae99caa47 files/digest-imlib2_loaders-1.2.1.004 76
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-imlib2_loaders-9999 0
-MD5 35d7bd2a26f29a3c7b69b66fac7976e3 files/digest-imlib2_loaders-1.2.0.007 76
+RMD160 fc9b6da57f9c04e60481195a57cd8b27fddc0b91 imlib2_loaders-9999.ebuild 557
+SHA256 e24d5d7069f07f3dc538b9ce2983e4d601b0e9070d70b92502d602d309b1574f imlib2_loaders-9999.ebuild 557
+MISC ChangeLog 351 RMD160 54afc56f92eaf1fe197095edbcfd2c8c8c19757f SHA1 25e77f03d45df58938bad81e888930cc8e482b5a SHA256 0dc2ea3e1381df4be71c80a9695da421c252a582f457715f55ec890aeec5fab7
+MD5 4d8ab4a2e24f2b2c033badc506e144ce ChangeLog 351
+RMD160 54afc56f92eaf1fe197095edbcfd2c8c8c19757f ChangeLog 351
+SHA256 0dc2ea3e1381df4be71c80a9695da421c252a582f457715f55ec890aeec5fab7 ChangeLog 351
+MISC metadata.xml 331 RMD160 234bad46959edaea90cbe46e6d3f1b70aa68abc0 SHA1 6dd757a4c5dd1cc0dc30b812c1f3fc24eda0e877 SHA256 b8470c76211ba72751ec3eacf3c8533e5fe960e3f3f285baf734212c67bf9cb6
+MD5 8f9bf5eb8132bca3e8d10cb57a7d37b1 metadata.xml 331
+RMD160 234bad46959edaea90cbe46e6d3f1b70aa68abc0 metadata.xml 331
+SHA256 b8470c76211ba72751ec3eacf3c8533e5fe960e3f3f285baf734212c67bf9cb6 metadata.xml 331
+MD5 099f0bfadd1c253ac43fb7eff6259cf5 files/digest-imlib2_loaders-1.2.2.001 274
+RMD160 48d1d8ebac0a0654c01964d6c728c5d38cddec66 files/digest-imlib2_loaders-1.2.2.001 274
+SHA256 5272c9f511d752b9b59842fee00a8dcabfc4067dab5365046c1385cec062b359 files/digest-imlib2_loaders-1.2.2.001 274
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-imlib2_loaders-9999 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-imlib2_loaders-9999 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-imlib2_loaders-9999 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDBr+vgIKl8Uu19MoRArjEAJ9i6utKlrdTsXX9URIm5sdxq0S6RgCffEuo
-FufBc8r1PBLbF6X8KSBMA0E=
-=siwu
+iD8DBQFEucq+amhnQswr0vIRAuxVAJwNTV0od3FkkUI4XuYvTAA6Tg6MpwCeN5yy
+6LOrI/zUsnYE7hbROvKAnyA=
+=oGDn
 -----END PGP SIGNATURE-----
