@@ -1,11 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.103 2006/07/16 03:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.104 2006/07/16 03:55:07 vapier Exp $
 
   16 Jul 2006; Mike Frysinger <vapier@gentoo.org>
   files/bash-3.0-bash-logger.patch, files/bash-3.1-bash-logger.patch:
   Fix by Victor Nawothnig so logger syslog() is called correctly when cmdline
-  is over 600 bytes.
+  is over 600 bytes #139043.
 
   06 May 2006; Mike Frysinger <vapier@gentoo.org>
   +files/bash-3.1-dev-fd-test-as-user.patch, bash-3.1_p16.ebuild,
