@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/esmart/esmart-9999.ebuild,v 1.7 2006/07/16 05:38:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/esmart/esmart-0.9.0.007.ebuild,v 1.1 2006/07/16 05:38:37 vapier Exp $
 
 inherit enlightenment
 
