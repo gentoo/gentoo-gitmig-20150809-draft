@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2038 2006/07/16 18:10:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2039 2006/07/16 18:14:43 weeve Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1114,6 +1114,7 @@ net-im/bitlbee:aimextras - Enables extra AIM patches not supported by upstream
 net-im/bitlbee:flood - Enable flood protection support
 net-im/bitlbee:gtalk - Enable Google Talk support
 net-im/bitlbee:msnextras - Enables extra MSN patches not supported by upstream
+net-im/bitlbee:nss - Use NSS for SSL support in MSN and Jabber.
 net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
 net-im/bitlbee:xinetd - Install an xinetd.d file for bitlbee
 net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
