@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/epeg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/epeg/ChangeLog,v 1.4 2004/08/10 03:32:42 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/epeg/ChangeLog,v 1.5 2006/07/16 05:33:05 vapier Exp $
 
-*epeg-0.0.1.* (08 Nov 2003)
+*epeg-* (08 Nov 2003)
 
   08 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
