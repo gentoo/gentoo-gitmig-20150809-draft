@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.40 2006/07/15 17:23:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.41 2006/07/16 03:33:12 tsunam Exp $
+
+  16 Jul 2006; Joshua Jackson <tsunam@gentoo.org> krusader-1.70.0-r1.ebuild:
+  Stable x86; bug #140510
 
   15 Jul 2006; <nixnut@gentoo.org> krusader-1.70.0-r1.ebuild:
   Stable on ppc. Bug #140510
