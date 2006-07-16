@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.4.1.ebuild,v 1.4 2006/07/15 23:58:03 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.4.1.ebuild,v 1.5 2006/07/16 01:04:18 langthang Exp $
 
 inherit eutils
 
@@ -56,6 +56,7 @@ src_install() {
 			install -C "${OBJDIR}"/${dir} \
 			|| die "make install failed"
 	done
+	doman dk-filter/dk-filter.8 libar/ar.3
 	dobin "$FILESDIR"/gentxt.sh || die "dobin failed"
 
 	newinitd "${FILESDIR}/dk-filter.init" dk-filter \
