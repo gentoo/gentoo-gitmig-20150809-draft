@@ -1,8 +1,8 @@
 # ChangeLog for dev-libs/embryo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.5 2004/09/14 22:57:07 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/ChangeLog,v 1.6 2006/07/16 05:29:28 vapier Exp $
 
-*eet-0.9.0.???????? (30 Mar 2004)
+*eet-* (30 Mar 2004)
 
   30 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
   Hello embryo !
