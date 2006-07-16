@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SVN-Simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.9 2006/07/10 22:03:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.10 2006/07/16 15:46:37 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  SVN-Simple-0.27.ebuild:
+  ppc stable
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> SVN-Simple-0.27.ebuild:
   Mark 0.27 stable on ia64

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.18.ebuild,v 1.4 2006/06/12 16:58:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/WWW-Mechanize-1.18.ebuild,v 1.5 2006/07/16 15:56:31 dertobi123 Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ IUSE="test"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 #KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ppc sparc ~x86"
 
 # Bug in the tests - improper use of HTTP::Server
 #SRC_TEST="do"
