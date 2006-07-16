@@ -1,9 +1,39 @@
-MD5 ed6c45bf0e802c0ddda7c6ced4b4a22c ChangeLog 2218
-MD5 e9bf6ffef211a35d6b024bcd355e2cc3 files/digest-tleds-1.05_beta11 133
-MD5 e9bf6ffef211a35d6b024bcd355e2cc3 files/digest-tleds-1.05_beta11-r1 133
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX tleds-1.05_beta11-gentoo.patch 920 RMD160 34c2fdcc14492ea0d70090c9d75aa02cc73d3ffc SHA1 eec965dc97b9dd366c5b64b7bfd36d7bbf0555d4 SHA256 6184535f5223de31bf6961397c1f502dbb37dac685d4b4595dec4ef7ed38307f
 MD5 1177e4e6d4091cef0df1228a62bdb21b files/tleds-1.05_beta11-gentoo.patch 920
+RMD160 34c2fdcc14492ea0d70090c9d75aa02cc73d3ffc files/tleds-1.05_beta11-gentoo.patch 920
+SHA256 6184535f5223de31bf6961397c1f502dbb37dac685d4b4595dec4ef7ed38307f files/tleds-1.05_beta11-gentoo.patch 920
+AUX tleds.conf.d 259 RMD160 0ba2b48c5a8f2b2a0a752dc783789a4481630f5c SHA1 574efc9b464ea326f1935f6f9c2ca99929a5bacd SHA256 43869069957f2ffb19948dbcb5a9e70d7af84994d7bb661864fa6e0c5d769f2b
 MD5 0b6ad0ff74307a277e6338d2978b661e files/tleds.conf.d 259
+RMD160 0ba2b48c5a8f2b2a0a752dc783789a4481630f5c files/tleds.conf.d 259
+SHA256 43869069957f2ffb19948dbcb5a9e70d7af84994d7bb661864fa6e0c5d769f2b files/tleds.conf.d 259
+AUX tleds.init.d 454 RMD160 4f05a0ed312c0ed9996b066a37a5257e1442ff87 SHA1 99dbb543fbadfa1429127e2581a9a5b06bec6fce SHA256 2afd978278e8a6f61bc47b166a542cec8fcfdb388930e3658ea878177b7e978c
 MD5 f46a1c71c42561200bc03d4c622a341e files/tleds.init.d 454
+RMD160 4f05a0ed312c0ed9996b066a37a5257e1442ff87 files/tleds.init.d 454
+SHA256 2afd978278e8a6f61bc47b166a542cec8fcfdb388930e3658ea878177b7e978c files/tleds.init.d 454
+DIST tleds-1.05beta10.tgz 28640
+DIST tleds-1.05beta11.patch.bz2 5540
+EBUILD tleds-1.05_beta11-r1.ebuild 1439 RMD160 ccea9fa1ceb6d14dcc5fece042569b1750ed58a5 SHA1 c3c6cd843931f7793541b3036bc9a486b3cde54c SHA256 0b4e06aff1b272e612dbc263776927063db588cf85b53851a562899d2f21389d
+MD5 8e849cd6d5dbc41c562a8d1b98113838 tleds-1.05_beta11-r1.ebuild 1439
+RMD160 ccea9fa1ceb6d14dcc5fece042569b1750ed58a5 tleds-1.05_beta11-r1.ebuild 1439
+SHA256 0b4e06aff1b272e612dbc263776927063db588cf85b53851a562899d2f21389d tleds-1.05_beta11-r1.ebuild 1439
+MISC ChangeLog 2486 RMD160 93d283b714938e7e6bc0821edc04aed4c31eecf0 SHA1 502492484ac72343e9d0d63a4c0c2ce92da66805 SHA256 14dadd2424452bf6fa353a3fb0d120fbe9d11f96debb2cf53ea8bec9deaacc0c
+MD5 a2ee3130514ce17439b1cf41bb970b7e ChangeLog 2486
+RMD160 93d283b714938e7e6bc0821edc04aed4c31eecf0 ChangeLog 2486
+SHA256 14dadd2424452bf6fa353a3fb0d120fbe9d11f96debb2cf53ea8bec9deaacc0c ChangeLog 2486
+MISC metadata.xml 294 RMD160 9cff45acc822eab5cfed6c0973c0831ceff4d989 SHA1 c22014a3fae41e9e3bc190ccaa6293f130cbe1a0 SHA256 61bc3eda09ff380bb1c4f02aaef008e08432d3a51a7348e329bcce574a9e8b8d
 MD5 1c666943e2fd156b434ed7ca34a8691e metadata.xml 294
-MD5 f431478d6c367019e502a6cfedce0e8a tleds-1.05_beta11-r1.ebuild 1168
-MD5 995e59f54e3499df77a3c2c4a0e31096 tleds-1.05_beta11.ebuild 1159
+RMD160 9cff45acc822eab5cfed6c0973c0831ceff4d989 metadata.xml 294
+SHA256 61bc3eda09ff380bb1c4f02aaef008e08432d3a51a7348e329bcce574a9e8b8d metadata.xml 294
+MD5 e9bf6ffef211a35d6b024bcd355e2cc3 files/digest-tleds-1.05_beta11-r1 133
+RMD160 2a26dcfcc3db89fd893577a3435dfa4ba8758bce files/digest-tleds-1.05_beta11-r1 133
+SHA256 b5e28b93af862db56f1d5298360e127a344e651bd8b0e9f881a1744528c5fdb9 files/digest-tleds-1.05_beta11-r1 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFEukOTmdTrptrqvGERAhRlAJ4rY6Cw9bQxj4Gfj9EpH54GuWADMACfXk8z
+CJWscPuFlsp5BbwdrT4CnsA=
+=cnIm
+-----END PGP SIGNATURE-----
