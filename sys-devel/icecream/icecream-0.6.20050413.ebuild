@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.6.20050413.ebuild,v 1.1 2006/06/21 18:46:54 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.6.20050413.ebuild,v 1.2 2006/07/16 21:51:23 tantive Exp $
 
 inherit eutils
 DESCRIPTION="Icecream is a program for distributed compiling of C(++) code across several machines based on ideas and code by distcc."
@@ -81,13 +81,13 @@ pkg_postinst() {
 	einfo '  ICECC_VERSION=<filename_of_archive_containing_your_environment>'
 	einfo
 	einfo "To use icecream with portage add the following line to /etc/make.conf"
-	einfo '  PREROOTPATH=/var/lib/icecream/bin'
+	einfo '  PREROOTPATH=/usr/lib/icecream/bin'
 	einfo
 	einfo "To use icecream with normal make use (e.g. in /etc/profile)"
-	einfo '  PATH=/var/lib/icecream/bin:$PATH'
+	einfo '  PATH=/usr/lib/icecream/bin:$PATH'
 	einfo
 	einfo "N.B. To use icecream with ccache, the ccache PATH should come first:"
-	einfo '  PATH=/var/lib/ccache/bin:/var/lib/icecream/bin:$PATH'
+	einfo '  PATH=/usr/lib/ccache/bin:/usr/lib/icecream/bin:$PATH'
 	einfo
 	einfo "Don't forget to open the following ports in your firewall(s):"
 	einfo " TCP/10245 on the daemon computers (required)"
