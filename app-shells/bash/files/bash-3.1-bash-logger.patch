@@ -70,7 +70,7 @@ http://www.nardware.co.uk/Security/html/bashlogger.htm
 +      char trunc[600];
 +      strncpy(trunc,string,sizeof(trunc));
 +      trunc[sizeof(trunc)-1]='\0';
-+      syslog(LOG_LOCAL5, LOG_INFO, "HISTORY: PID=%d UID=%d %s(++TRUNC)",
++      syslog(LOG_LOCAL5 | LOG_INFO, "HISTORY: PID=%d UID=%d %s(++TRUNC)",
 +          getpid(), getuid(), trunc);
 +    }
 +  }
