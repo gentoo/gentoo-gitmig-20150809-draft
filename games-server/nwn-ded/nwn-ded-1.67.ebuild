@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.67.ebuild,v 1.1 2006/05/16 21:51:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.67.ebuild,v 1.2 2006/07/16 16:18:53 wolf31o2 Exp $
 
 inherit games
 
@@ -37,7 +37,7 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack NWNDedicatedServer${PV}.zip
-	tar -zxf linuxdedserver166.tar.gz || die "unpack linuxdedserver"
+	tar -zxf linuxdedserver${PV/./}.tar.gz || die "unpack linuxdedserver"
 	rm -f *dedserver*.{tar.gz,sit,zip}
 	rm -f *.exe *.dll
 
