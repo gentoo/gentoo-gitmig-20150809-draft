@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.11 2006/05/13 03:30:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-9999.ebuild,v 1.12 2006/07/16 07:15:07 vapier Exp $
 
 ECVS_MODULE="evidence"
 ECVS_SERVER="evidence.cvs.sourceforge.net:/cvsroot/evidence"
@@ -12,18 +12,16 @@ HOMEPAGE="http://evidence.sourceforge.net/"
 LICENSE="GPL-2"
 IUSE="X debug gnome kde vorbis perl truetype xine mpeg"
 
-DEPEND=">=dev-util/pkgconfig-0.5
+RDEPEND=">=dev-util/pkgconfig-0.5
 	=x11-libs/gtk+-2*
 	vorbis? ( media-libs/libvorbis media-libs/libogg )
 	perl? ( dev-libs/libpcre )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libX11 x11-libs/libXt ) virtual/x11 ) )
 	truetype? ( =media-libs/freetype-2* )
 	kde? ( kde-base/kdelibs )
 	xine? ( >=media-libs/xine-lib-1_rc1 )
 	mpeg? ( media-libs/libmpeg3 )
 	media-libs/libao
-	virtual/libc
-	sys-devel/gcc
 	virtual/fam
 	>=x11-libs/evas-0.9.9
 	>=dev-db/edb-1.0.5
@@ -33,6 +31,8 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	gnome? ( >=gnome-base/gnome-vfs-2.0
 		>=media-libs/libart_lgpl-2.0
 		>=gnome-base/libgnomecanvas-2.0 )"
+DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xproto virtual/x11 ) )"
 
 src_compile() {
 	# if we turn this on evas gets turned off (bad !)
