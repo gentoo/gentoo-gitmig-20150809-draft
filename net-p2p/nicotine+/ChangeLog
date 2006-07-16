@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.2 2006/07/08 15:00:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.3 2006/07/16 12:23:36 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  nicotine+-1.2.3.ebuild:
+  Added ~ppc, bug #139722
 
   08 Jul 2006; Jon Hood <squinky86@gentoo.org> nicotine+-1.2.3.ebuild:
   Change make install to emake install thanks to Stefan (genstef) by email.
