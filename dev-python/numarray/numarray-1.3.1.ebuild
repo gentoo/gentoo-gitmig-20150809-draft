@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.3.1.ebuild,v 1.5 2005/11/24 19:44:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numarray/numarray-1.3.1.ebuild,v 1.6 2006/07/16 16:21:41 dertobi123 Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.stsci.edu/resources/software_hardware/numarray"
 DEPEND=">=dev-lang/python-2.2.2"
 IUSE=""
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc s390 x86"
+KEYWORDS="alpha amd64 ia64 ppc s390 x86"
 LICENSE="BSD"
 
 src_install() {
