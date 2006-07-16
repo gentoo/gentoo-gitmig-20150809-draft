@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.30 2006/07/13 00:42:04 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.31 2006/07/16 21:32:31 tantive Exp $
+
+  16 Jul 2006; Michael Imhof <tantive@gentoo.org> pvm-3.4.4-r1.ebuild,
+  pvm-3.4.4-r2.ebuild, pvm-3.4.4-r3.ebuild, -pvm-3.4.5.ebuild,
+  -pvm-3.4.5-r1.ebuild, pvm-3.4.5-r2.ebuild:
+  Cleaned out old ebuilds. Removed calling of "prepallman", closes 
+  #140697.
 
   13 Jul 2006; Pieter Van den Abeele <pvdabeel@gentoo.org> pvm-3.4.5-r2.ebuild:
   PPC64 fix and GCC-4.1 fix

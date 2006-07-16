@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r3.ebuild,v 1.3 2005/04/01 17:11:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.4-r3.ebuild,v 1.4 2006/07/16 21:32:31 tantive Exp $
 
 inherit eutils
 
@@ -50,7 +50,6 @@ src_install() {
 	dodir /usr/share/man
 	rm man/man1 -fr
 	mv man/man3 ${D}/usr/share/man/
-	prepallman
 
 	dodoc Readme
 
