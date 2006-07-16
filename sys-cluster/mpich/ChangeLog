@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/mpich
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.26 2006/05/01 18:25:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/ChangeLog,v 1.27 2006/07/16 21:26:31 tantive Exp $
+
+  16 Jul 2006; Michael Imhof <tantive@gentoo.org> mpich-1.2.5.2.ebuild,
+  -mpich-1.2.6-r3.ebuild, mpich-1.2.6-r4.ebuild, mpich-1.2.7_p1.ebuild:
+  Cleaned out old ebuild. Removed calling of "prepallman", closes #140697.
 
   01 May 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   mpich-1.2.7_p1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.10 2005/02/21 07:57:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.11 2006/07/16 21:26:31 tantive Exp $
 
 # Set the MPICH_CONFIGURE_OPTS environment variable to change the signal
 # mpich listens on or any other custom options (#38207).
@@ -111,7 +111,6 @@ src_install() {
 		${D}/usr/share/mpich/examples2/mpirun
 
 	mv ${D}/usr/man ${D}/usr/share/man
-	prepallman
 
 	#FIXME: Here, we should either clean the empty directories
 	# or use keepdir to make sure they stick around.

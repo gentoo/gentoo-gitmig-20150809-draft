@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.4 2006/05/01 18:25:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.5 2006/07/16 21:26:31 tantive Exp $
 
 inherit eutils
 
@@ -140,7 +140,6 @@ src_install() {
 		${D}/usr/share/mpich/examples2/mpirun
 
 	mv ${D}/usr/man ${D}/usr/share/man
-	prepallman
 
 	#FIXME: Here, we should either clean the empty directories
 	# or use keepdir to make sure they stick around.
