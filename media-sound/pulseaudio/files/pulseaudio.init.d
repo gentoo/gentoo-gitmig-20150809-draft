@@ -9,7 +9,8 @@ depend() {
 
 start() {
 	ebegin "Starting pulseaudio"
-	start-stop-daemon --start --quiet --background --exec /usr/bin/pulseaudio -- $PULSEAUDIO_START $PULSEAUDIO_OPTIONS
+	# -D0 -> don't daemonize, leave that to s-s-d
+	start-stop-daemon --start --quiet --background --exec /usr/bin/pulseaudio -- $PULSEAUDIO_OPTIONS --fail=true -D0
 	eend $?
 }
 
