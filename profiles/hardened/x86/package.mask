@@ -35,3 +35,5 @@ gnome-extra/hal-device-manager
 gnome-extra/gnome-power-manager
 sys-apps/pmount
 sys-apps/keyutils
+# Requires 2.6 kernel headers
+x11-drivers/xf86-input-evdev
