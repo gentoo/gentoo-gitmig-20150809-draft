@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.start,v 1.6 2006/07/10 18:37:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.start,v 1.7 2006/07/16 17:23:39 joshuabaergen Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -44,7 +44,7 @@ depend() {
 	# this should start as early as possible
 	# we can't do 'before *' as that breaks it
 	# (#139824) Start after ypbind and autofs for network authentication
-	after bootmisc readahead-list ypbind autofs
+	after bootmisc readahead-list ypbind autofs openvpn
 	before alsasound net.lo
 
 	# Start before X
