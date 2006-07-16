@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skim-scim-anthy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/ChangeLog,v 1.2 2006/04/27 12:57:04 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim-scim-anthy/ChangeLog,v 1.3 2006/07/16 04:31:47 tsunam Exp $
+
+  16 Jul 2006; Joshua Jackson <tsunam@gentoo.org>
+  skim-scim-anthy-0.9.0.1.ebuild:
+  adding ~x86; Thanks for reporting Wai Ling
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest for real, pass three...
