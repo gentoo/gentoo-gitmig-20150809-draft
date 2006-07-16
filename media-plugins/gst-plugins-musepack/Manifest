@@ -9,10 +9,10 @@ EBUILD gst-plugins-musepack-0.10.0.ebuild 360 RMD160 bc37abb3d4adf8d5ccc63c1aa78
 MD5 e2fc0bd03bb78dabb7789a0541ccb2cb gst-plugins-musepack-0.10.0.ebuild 360
 RMD160 bc37abb3d4adf8d5ccc63c1aa78c49b8f553f239 gst-plugins-musepack-0.10.0.ebuild 360
 SHA256 b1ad5802e51eb71db0fc8f180e7d4e839ff5a74276f16f80e635bb6e8567131d gst-plugins-musepack-0.10.0.ebuild 360
-EBUILD gst-plugins-musepack-0.10.3.ebuild 422 RMD160 0dec6652aac5eee869958c4bf4fe6ab365b4b32c SHA1 9b122eb08d84a60e9c4cbdeb15acc0ed1ec392d0 SHA256 feca7bcab8f6fb0e53adf43f2f9cff350dae360cb7af4d978e314ea9fcef3e5d
-MD5 7833e5b96f515969be54d83e0423d119 gst-plugins-musepack-0.10.3.ebuild 422
-RMD160 0dec6652aac5eee869958c4bf4fe6ab365b4b32c gst-plugins-musepack-0.10.3.ebuild 422
-SHA256 feca7bcab8f6fb0e53adf43f2f9cff350dae360cb7af4d978e314ea9fcef3e5d gst-plugins-musepack-0.10.3.ebuild 422
+EBUILD gst-plugins-musepack-0.10.3.ebuild 424 RMD160 232f758924ccfb6db515c61ace143dd057ef3e45 SHA1 17344b490586c836fb63fa2b3577a135d9d81e2a SHA256 6ae1aa26a2d64439c2b5c3527134d03fd61fc72b21c4ed386be966213ff37669
+MD5 d4a88d45d36d86c8c95e502f9066faae gst-plugins-musepack-0.10.3.ebuild 424
+RMD160 232f758924ccfb6db515c61ace143dd057ef3e45 gst-plugins-musepack-0.10.3.ebuild 424
+SHA256 6ae1aa26a2d64439c2b5c3527134d03fd61fc72b21c4ed386be966213ff37669 gst-plugins-musepack-0.10.3.ebuild 424
 EBUILD gst-plugins-musepack-0.8.10.ebuild 352 RMD160 71d61ceb7b47296db97d3ea22f60e958c4a3663b SHA1 a1a1b4c7b096d3e8feb1b6ed5e616380d5050a1a SHA256 3cf9433eed251a2230a2502da60792cfb0bab9cca829d81e07d07ee85e2b6278
 MD5 3ab936e200f7032c0a5af616007cd296 gst-plugins-musepack-0.8.10.ebuild 352
 RMD160 71d61ceb7b47296db97d3ea22f60e958c4a3663b gst-plugins-musepack-0.8.10.ebuild 352
@@ -33,10 +33,10 @@ EBUILD gst-plugins-musepack-0.8.9.ebuild 354 RMD160 37a5e781bfe14e27c7856452cf3a
 MD5 cc1f670ee25ff7921281e0b16b6a722a gst-plugins-musepack-0.8.9.ebuild 354
 RMD160 37a5e781bfe14e27c7856452cf3ae5422ddaa594 gst-plugins-musepack-0.8.9.ebuild 354
 SHA256 1b014ffc2e8504ff670244acd1b2e97f52ed20072b4e29f314a20aa8cbc80ae9 gst-plugins-musepack-0.8.9.ebuild 354
-MISC ChangeLog 4107 RMD160 f7fabec965f8864b3db8577e4d253bbcdd8de4f4 SHA1 548c4abc90190929e915a37e2cc6ad2c83232464 SHA256 e7c7185ac919112407e3a646b9e727e7719b1af122b865edf0aeb83eabb28465
-MD5 f060b337fc1bebc9e62ab240728d1adf ChangeLog 4107
-RMD160 f7fabec965f8864b3db8577e4d253bbcdd8de4f4 ChangeLog 4107
-SHA256 e7c7185ac919112407e3a646b9e727e7719b1af122b865edf0aeb83eabb28465 ChangeLog 4107
+MISC ChangeLog 4298 RMD160 e41e014d21772bef85a205aaf0f852aeba284fce SHA1 7180261ae176322a686136136ab08cdee82e97e5 SHA256 75586f3349b3396edf0e98b7a4c3dafa6d3d895b25019b22df7fb2926ff590f2
+MD5 13570059e2d7430ddce99b7e4bead604 ChangeLog 4298
+RMD160 e41e014d21772bef85a205aaf0f852aeba284fce ChangeLog 4298
+SHA256 75586f3349b3396edf0e98b7a4c3dafa6d3d895b25019b22df7fb2926ff590f2 ChangeLog 4298
 MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
