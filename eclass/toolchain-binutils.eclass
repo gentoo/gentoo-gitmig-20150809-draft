@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.61 2006/06/11 18:00:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.62 2006/07/16 03:05:56 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -137,10 +137,6 @@ tc-binutils_apply_patches() {
 	# Run misc portage update scripts
 	gnuconfig_update
 	elibtoolize --portage --no-uclibc
-
-	# make sure we filter $LINGUAS so that only ones that
-	# actually work make it through #42033
-	strip-linguas -u */po
 }
 
 toolchain-binutils_src_unpack() {
@@ -149,7 +145,12 @@ toolchain-binutils_src_unpack() {
 }
 
 toolchain-binutils_src_compile() {
-	strip-flags && replace-flags -O3 -O2 #47581
+	# make sure we filter $LINGUAS so that only ones that
+	# actually work make it through #42033
+	strip-linguas -u */po
+
+	# keep things sane
+	strip-flags
 
 	local x
 	echo
