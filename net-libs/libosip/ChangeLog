@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.23 2006/02/04 07:40:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.24 2006/07/16 16:50:42 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libosip-2.2.2.ebuild:
+  ppc stable
 
 *libosip-2.2.2 (04 Feb 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-2.2.2.ebuild,v 1.1 2006/02/04 07:40:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-2.2.2.ebuild,v 1.2 2006/07/16 16:50:42 dertobi123 Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/osip/libosip2-${PV}.tar.gz"
 S="${WORKDIR}/${PN}${MY_MPV}-${PV}"
 
 SLOT="${MY_MPV}"
-KEYWORDS="alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ppc ~sparc ~x86"
 LICENSE="LGPL-2"
 
 DEPEND="virtual/libc"
