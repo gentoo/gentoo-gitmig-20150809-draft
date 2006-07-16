@@ -1,0 +1,11 @@
+--- ntp-4.2.2p2/sntp/socket.c	2006-07-09 07:01:46.000000000 -0400
++++ ntp-4.2.2/sntp/socket.c	2006-06-06 16:17:16.000000000 -0400
+@@ -8,8 +8,6 @@
+ 
+ 
+ 
+-#include "config.h"
+-
+ #include "header.h"
+ #include "internet.h"
+ #include <fcntl.h>
