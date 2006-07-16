@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.16 2006/04/24 02:09:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.17 2006/07/16 21:51:08 vapier Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -91,8 +91,6 @@ src_install() {
 	fperms u+s,og-r /usr/bin/skeyinit /usr/bin/skeyinfo
 
 	dodoc README CHANGES
-
-	prepallman
 }
 
 pkg_postinst() {
