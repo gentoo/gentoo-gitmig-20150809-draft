@@ -1,12 +1,48 @@
-MD5 a3a267a57a7701bafd8e0f87d0fc1d19 ChangeLog 4690
-MD5 6e8180a336e024640a5ea66274f872d2 files/digest-gst-plugins-faad-0.10.0 271
-MD5 5ad6491663eb8de7602211b2c169f1df files/digest-gst-plugins-faad-0.10.1 271
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-faad-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-faad-0.8.11 72
-MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-faad-0.8.12 72
+DIST gst-plugins-0.8.10.tar.bz2 2397528
+DIST gst-plugins-0.8.11.tar.bz2 2439654
+DIST gst-plugins-0.8.12.tar.bz2 2506926
+DIST gst-plugins-bad-0.10.0.tar.bz2 580636 RMD160 a7539a3e5c94bdbb0ea21ac55383ddbe0b0f9f41 SHA256 2307cecff1c5015df68d2086ad94435c025fdb3d8e4769e99dfb936ba1677e3a
+DIST gst-plugins-bad-0.10.1.tar.bz2 652144 RMD160 bbd50895ceb2144165a6fd23c3be140eb1136246 SHA256 05d83a609aaea44ea8c979897f336cb8b5537a39b271af2831e6cca3851d3007
+EBUILD gst-plugins-faad-0.10.0.ebuild 325 RMD160 61086b4c544f70d7de0388b4c5717bf49eeef7b5 SHA1 4c8df602fa94c9964a0579fb03ac555642c339fa SHA256 220dabe4b03f68c0fc1d16efeccb26214dbc1270c5bdc5dd65be9667925f6bcd
 MD5 e029d6c4aeeb1bf450a36026a2b7e61b gst-plugins-faad-0.10.0.ebuild 325
-MD5 ddce3c16d0fb91914a01e852eafde96a gst-plugins-faad-0.10.1.ebuild 407
+RMD160 61086b4c544f70d7de0388b4c5717bf49eeef7b5 gst-plugins-faad-0.10.0.ebuild 325
+SHA256 220dabe4b03f68c0fc1d16efeccb26214dbc1270c5bdc5dd65be9667925f6bcd gst-plugins-faad-0.10.0.ebuild 325
+EBUILD gst-plugins-faad-0.10.1.ebuild 411 RMD160 dad703c51bda02270692c378e7de5259c23bd15a SHA1 546ede1d360172f56b6c79d87cd0ab2ea4a71643 SHA256 cc6cc9166d3eb9bdfc16d037e911212e667821e7f3d213afb6de86d7699f7155
+MD5 205b3ea5c9e6116928cfc32ece719a0e gst-plugins-faad-0.10.1.ebuild 411
+RMD160 dad703c51bda02270692c378e7de5259c23bd15a gst-plugins-faad-0.10.1.ebuild 411
+SHA256 cc6cc9166d3eb9bdfc16d037e911212e667821e7f3d213afb6de86d7699f7155 gst-plugins-faad-0.10.1.ebuild 411
+EBUILD gst-plugins-faad-0.8.10.ebuild 335 RMD160 f37cd03548b92f2482a8cd3f840aacdb1757e6da SHA1 52a9be52e258d4acb9d6462c1cf3cadf05a1049e SHA256 ddcd434173fa0343e794dfdad3f4ff8f8cc9b4c59b10a8e6e933976ee4e80af3
 MD5 b1daac8f62d89491670427aa7cde397c gst-plugins-faad-0.8.10.ebuild 335
+RMD160 f37cd03548b92f2482a8cd3f840aacdb1757e6da gst-plugins-faad-0.8.10.ebuild 335
+SHA256 ddcd434173fa0343e794dfdad3f4ff8f8cc9b4c59b10a8e6e933976ee4e80af3 gst-plugins-faad-0.8.10.ebuild 335
+EBUILD gst-plugins-faad-0.8.11.ebuild 337 RMD160 5c3167f1c147a853e3197d23b9dd5ef1aae7a9d3 SHA1 635bcf576efef93e6587f84aec68d0598d11b42b SHA256 5205ad3d03f995f73b70796d26f538ede5cdc27d408e0eff4b31be36d3164fd1
 MD5 c7cfc140a324efcf709030dae901a278 gst-plugins-faad-0.8.11.ebuild 337
+RMD160 5c3167f1c147a853e3197d23b9dd5ef1aae7a9d3 gst-plugins-faad-0.8.11.ebuild 337
+SHA256 5205ad3d03f995f73b70796d26f538ede5cdc27d408e0eff4b31be36d3164fd1 gst-plugins-faad-0.8.11.ebuild 337
+EBUILD gst-plugins-faad-0.8.12.ebuild 340 RMD160 b01a6bbc0aee641c310cb547f7be1d7b9921e808 SHA1 76b96bd58368dca7929870e5161dd98d0dac79ea SHA256 37f24d59ab4861f3efa7938fca2cd13c2411357c37aa6a2dbfab606a45ad8eae
 MD5 2ba4e3fe0dd6c07e028482f507ea7960 gst-plugins-faad-0.8.12.ebuild 340
+RMD160 b01a6bbc0aee641c310cb547f7be1d7b9921e808 gst-plugins-faad-0.8.12.ebuild 340
+SHA256 37f24d59ab4861f3efa7938fca2cd13c2411357c37aa6a2dbfab606a45ad8eae gst-plugins-faad-0.8.12.ebuild 340
+MISC ChangeLog 4799 RMD160 66ce94fcc18cabb78c2d7f06f2516c274ffc4a40 SHA1 457131337048aaf9da6630c83777a6da15e1df59 SHA256 d59744706052a80c3c01bcd365e452a6f39162c3bd5b04c589219c5869f2a715
+MD5 145d06e7c2a037fde37e6ad7d6c1054e ChangeLog 4799
+RMD160 66ce94fcc18cabb78c2d7f06f2516c274ffc4a40 ChangeLog 4799
+SHA256 d59744706052a80c3c01bcd365e452a6f39162c3bd5b04c589219c5869f2a715 ChangeLog 4799
+MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
+SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata.xml 181
+MD5 6e8180a336e024640a5ea66274f872d2 files/digest-gst-plugins-faad-0.10.0 271
+RMD160 3ee054ebbac7e2974aa842319332a76b2d03f4cd files/digest-gst-plugins-faad-0.10.0 271
+SHA256 d5fcb1425a4464d49d631e2f242008662be6cda981c552f031ad53ceb9280f0b files/digest-gst-plugins-faad-0.10.0 271
+MD5 5ad6491663eb8de7602211b2c169f1df files/digest-gst-plugins-faad-0.10.1 271
+RMD160 9c20843ba2136728e58a929ffd17834c51f2db4b files/digest-gst-plugins-faad-0.10.1 271
+SHA256 5c1b0f0737f438aa8d75e49e8e8f5b83884b4e38f30ef5852175234eb5f825da files/digest-gst-plugins-faad-0.10.1 271
+MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-faad-0.8.10 72
+RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-faad-0.8.10 72
+SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-faad-0.8.10 72
+MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-faad-0.8.11 72
+RMD160 07cd6ccf43ed8faecb5ed4337eea60fbc6e3e3bb files/digest-gst-plugins-faad-0.8.11 72
+SHA256 a76335f344c7fb9dc3151468f9e4fab17f2112d74ba799a05906df748b74f5fd files/digest-gst-plugins-faad-0.8.11 72
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-faad-0.8.12 72
+RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-faad-0.8.12 72
+SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-faad-0.8.12 72
