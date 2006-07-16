@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/slidentd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.15 2006/05/14 19:45:49 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/slidentd/ChangeLog,v 1.16 2006/07/16 16:47:27 dertobi123 Exp $
+
+  16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  slidentd-1.0.0.ebuild:
+  ppc stable
 
   14 May 2006; Thilo Bangert <bangert@gentoo.org> metadata.xml,
   slidentd-1.0.0.ebuild:
