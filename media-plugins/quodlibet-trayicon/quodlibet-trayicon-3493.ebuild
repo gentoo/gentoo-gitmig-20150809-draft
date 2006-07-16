@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/quodlibet-trayicon-3493.ebuild,v 1.2 2006/07/10 01:58:42 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-trayicon/quodlibet-trayicon-3493.ebuild,v 1.3 2006/07/16 08:50:38 dertobi123 Exp $
 
 inherit python eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.py.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=media-sound/quodlibet-0.22"
