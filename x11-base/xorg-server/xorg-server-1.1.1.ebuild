@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.2 2006/07/09 22:34:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.3 2006/07/16 17:58:02 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -613,6 +613,12 @@ src_install() {
 
 pkg_postinst() {
 	switch_opengl_implem
+
+	# Bug #135544
+	ewarn "Users of reduced blanking now need:"
+	ewarn "   Option \"ReducedBlanking\""
+	ewarn "In the relevant Monitor section(s)."
+	ewarn "Make sure your reduced blanking modelines are safe!"
 }
 
 pkg_postrm() {

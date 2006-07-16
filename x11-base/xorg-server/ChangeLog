@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.146 2006/07/11 01:01:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.147 2006/07/16 17:58:02 joshuabaergen Exp $
+
+  16 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.1.1.ebuild:
+  Add some warnings about the change in reduced blanking behaviour.  (Bug
+  #135544, Steffen Strobel)
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   xorg-server-1.1.0-r1.ebuild:
