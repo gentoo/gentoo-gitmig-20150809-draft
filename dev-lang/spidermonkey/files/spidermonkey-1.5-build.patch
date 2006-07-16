@@ -19,7 +19,7 @@
 +BINDIR := $(PREFIX)/bin
 +MY_LIBDIR := $(PREFIX)/$(LIBDIR)
 +INCLUDEDIR := $(PREFIX)/include/js
-+INSTALL := install -g root -o root
++INSTALL := install -g 0 -o root
 +install:
 +	$(INSTALL) -m 755 -d $(DESTDIR)$(INCLUDEDIR) $(DESTDIR)$(MY_LIBDIR) $(DESTDIR)$(BINDIR)
 +	$(INSTALL) -m 755 $(SHARED_LIBRARY) $(DESTDIR)$(MY_LIBDIR)
