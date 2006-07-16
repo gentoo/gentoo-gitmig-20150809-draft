@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.108 2006/06/15 14:45:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.109 2006/07/16 05:49:47 vapier Exp $
 #
 # Maintainer: base-system@gentoo.org
 
@@ -267,17 +267,19 @@ filter-mfpmath() {
 	local orig_mfpmath new_math prune_math
 
 	# save the original -mfpmath flag
-	orig_mfpmath="`get-flag -mfpmath`"
+	orig_mfpmath=$(get-flag -mfpmath)
 	# get the value of the current -mfpmath flag
-	new_math=" `get-flag mfpmath | tr , ' '` "
+	new_math=$(get-flag mfpmath)
+	new_math=" ${new_math//,/ } "
 	# figure out which math values are to be removed
 	prune_math=""
 	for prune_math in "$@" ; do
-		new_math="${new_math/ ${prune_math} / }"
+		new_math=${new_math/ ${prune_math} / }
 	done
-	new_math="`echo ${new_math:1:${#new_math}-2} | tr ' ' ,`"
+	new_math=$(echo ${new_math})
+	new_math=${new_math// /,}
 
-	if [ -z "${new_math}" ] ; then
+	if [[ -z ${new_math} ]] ; then
 		# if we're removing all user specified math values are
 		# slated for removal, then we just filter the flag
 		filter-flags ${orig_mfpmath}
