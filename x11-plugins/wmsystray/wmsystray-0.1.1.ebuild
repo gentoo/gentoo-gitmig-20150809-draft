@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.8 2006/01/31 20:58:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/wmsystray-0.1.1.ebuild,v 1.9 2006/07/16 21:49:14 nelchael Exp $
 
 inherit eutils
 
@@ -44,7 +44,6 @@ src_install() {
 
 	einstall || die "Installation failed"
 	dodoc AUTHORS HACKING README
-	prepallman
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/${PN}.desktop

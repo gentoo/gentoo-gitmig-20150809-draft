@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.2 2006/01/31 20:35:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmrecord/wmrecord-1.0.5.3-r1.ebuild,v 1.3 2006/07/16 21:47:22 nelchael Exp $
 
 IUSE=""
 
@@ -32,7 +32,6 @@ src_install()
 	dodir /usr/bin
 	dodir /usr/share/man/man1
 	einstall BINDIR="${D}/usr/bin" MANDIR="${D}/usr/share/man/man1" || die "make install failed"
-	prepallman
 
 	dodoc Changelog README TODO
 
