@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/entrance
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/ChangeLog,v 1.13 2005/12/14 04:24:02 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/ChangeLog,v 1.14 2006/07/16 05:42:57 vapier Exp $
 
   14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
   entrance-9999.ebuild:
