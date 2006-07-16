@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.5.ebuild,v 1.8 2006/07/11 15:44:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.5.ebuild,v 1.9 2006/07/16 14:39:48 liquidx Exp $
 
 inherit eutils python
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A robust high-performance CORBA ORB for Python."
 HOMEPAGE="http://omniorb.sourceforge.net/"
-SRC_URI="mirror://sourceforge/omniorb/${MY_P}.tar.gz http://www.cl.cam.ac.uk/~acnt2/files/omniORBpy-2.4-newstyleobjs02.patch"
+SRC_URI="mirror://sourceforge/omniorb/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -30,9 +30,6 @@ src_unpack() {
 		${S}/python/COS/dir.mk \
 		${S}/python/CosNaming/dir.mk \
 		${S}/CosNaming__POA/dir.mk
-
-	cd ${S}
-	epatch ${DISTDIR}/omniORBpy-2.4-newstyleobjs02.patch
 }
 
 src_compile() {
