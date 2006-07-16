@@ -46,3 +46,6 @@ elibc_OpenBSD
 elibc_Darwin
 elibc_DragonFly
 kernel_FreeBSD
+
+# mask bmpx USE flag while waiting for neon fix
+bmpx
