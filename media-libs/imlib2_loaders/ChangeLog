@@ -1,14 +1,8 @@
 # ChangeLog for media-libs/imlib2_loaders
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/ChangeLog,v 1.8 2004/08/31 22:34:43 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/ChangeLog,v 1.9 2006/07/16 05:11:20 vapier Exp $
 
-*imlib2_loaders-1.1.2 (31 Aug 2004)
-
-  31 Aug 2004; Mike Frysinger <vapier@gentoo.org>
-  -imlib2_loaders-1.1.1.ebuild, +imlib2_loaders-1.1.2.ebuild:
-  Version bump + stable for security.
-
-*imlib2_loaders-1.1.1 (09 Aug 2004)
+*imlib2_loaders-* (09 Aug 2004)
 
   09 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
