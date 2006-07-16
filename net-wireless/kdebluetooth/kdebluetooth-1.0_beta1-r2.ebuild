@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1-r2.ebuild,v 1.6 2006/06/27 14:36:29 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta1-r2.ebuild,v 1.7 2006/07/16 17:20:27 dertobi123 Exp $
 
 inherit kde autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kde-bluetooth/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ~ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="xmms irmc"
 
 DEPEND=">=dev-libs/openobex-1
