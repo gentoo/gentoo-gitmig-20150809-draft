@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/tsocks
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.8 2005/10/04 21:29:51 mrness Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.9 2006/07/16 17:51:21 flameeyes Exp $
+
+*tsocks-1.8_beta5-r1 (16 Jul 2006)
+
+  16 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tsocks-1.8_beta5-bsd.patch, +tsocks-1.8_beta5-r1.ebuild:
+  Add tsocks with a little cleanup and patch for BSD compatibility (bug #140612).
 
   04 Oct 2005; Alin Nastac <mrness@gentoo.org> -tsocks-1.8_beta4.ebuild,
   tsocks-1.8_beta5.ebuild:
