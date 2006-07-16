@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.2.ebuild,v 1.3 2005/02/21 02:43:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.3.2.ebuild,v 1.4 2006/07/16 21:55:01 vapier Exp $
 
 inherit eutils
 
@@ -42,5 +42,4 @@ src_compile() {
 
 src_install() {
 	einstall INSTROOT="${D}" USRBINDIR="${D}/sbin" || die
-	prepall
 }
