@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/myspell-it-20060316.ebuild,v 1.8 2006/07/09 01:11:38 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/myspell-it-20060316.ebuild,v 1.9 2006/07/16 08:02:54 tsunam Exp $
 
 MYSPELL_SPELLING_DICTIONARIES=(
 "it,IT,it_IT,Italian (Italy),it_IT.zip"
@@ -22,4 +22,4 @@ DESCRIPTION="Italian dictionaries for myspell/hunspell"
 LICENSE="GPL-2 LPPL-1.3b"
 HOMEPAGE="http://lingucomponent.openoffice.org/ http://sourceforge.net/projects/linguistico/"
 
-KEYWORDS="~amd64 ppc sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"

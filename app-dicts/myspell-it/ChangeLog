@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-it
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/ChangeLog,v 1.7 2006/07/09 01:11:38 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-it/ChangeLog,v 1.8 2006/07/16 08:02:54 tsunam Exp $
+
+  16 Jul 2006; Joshua Jackson <tsunam@gentoo.org>
+  myspell-it-20060316.ebuild:
+  x86 stable; for openoffice-2.0.3
 
   09 Jul 2006; Kevin F. Quinn <kevquinn@gentoo.org>
   myspell-it-20060316.ebuild:
