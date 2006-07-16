@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/express/express-9999.ebuild,v 1.1 2005/09/07 03:44:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/express/express-9999.ebuild,v 1.2 2006/07/16 04:48:49 vapier Exp $
 
 inherit enlightenment
 
@@ -11,5 +11,4 @@ DEPEND="x11-libs/esmart
 	x11-libs/evas
 	dev-db/edb
 	x11-libs/ecore
-	media-libs/etox
 	media-libs/edje"
