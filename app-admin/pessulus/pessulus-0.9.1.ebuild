@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-0.9.1.ebuild,v 1.5 2006/07/12 16:17:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-0.9.1.ebuild,v 1.6 2006/07/16 15:52:55 dertobi123 Exp $
 
 inherit gnome2 python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Pessulus"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~hppa ~ppc ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-python/pygtk-2.6.0
