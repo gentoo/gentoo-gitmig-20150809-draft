@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ploticus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ChangeLog,v 1.6 2006/07/15 15:21:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ChangeLog,v 1.7 2006/07/16 01:06:13 tsunam Exp $
+
+  16 Jul 2006; Joshua Jackson <tsunam@gentoo.org> ploticus-2.32.ebuild:
+  Stable x86; bug #140108
 
   15 Jul 2006; <nixnut@gentoo.org> ploticus-2.32.ebuild:
   Stable on ppc. Bug #140108
