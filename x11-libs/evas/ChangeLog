@@ -1,17 +1,8 @@
 # ChangeLog for x11-libs/evas
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/ChangeLog,v 1.17 2006/04/27 23:59:25 antarus Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/ChangeLog,v 1.18 2006/07/16 05:03:06 vapier Exp $
 
-  27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
-  Fixing SHA256 digest, pass four
-
-  14 Dec 2005; Doug Goldstein <cardoe@gentoo.org> evas-9999.ebuild:
-  Cleaned up modular X depends.
-
-  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> evas-9999.ebuild:
-  Added modular deps.
-
-*evas-1.0.0.*_pre12 (18 Oct 2003)
+*evas-* (18 Oct 2003)
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump to evas2 cause it pwns evas1 (CVS snapshot).

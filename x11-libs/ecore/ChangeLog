@@ -1,24 +1,8 @@
 # ChangeLog for x11-libs/ecore
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.15 2005/12/14 04:21:43 joshuabaergen Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ChangeLog,v 1.16 2006/07/16 05:06:26 vapier Exp $
 
-  14 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org> ecore-9999.ebuild:
-  Added modular X deps.
-
-*ecore-1.0.0_pre7 (09 Aug 2004)
-
-  09 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
-  Version bump.
-
-*ecore-1.0.0.* (18 Oct 2003)
-
-  18 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
-  Version bump.
-
-*ecore-0.0.2.20030220 (20 Feb 2003)
-
-  11 Mar 2003; Aron Griffis <agriffis@gentoo.org> ecore-0.0.2.20030220.ebuild:
-  Add ~alpha to KEYWORDS and use -fPIC on alpha
+*ecore-* (20 Feb 2003)
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.
