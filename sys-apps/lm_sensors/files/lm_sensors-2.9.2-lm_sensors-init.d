@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-2.9.2-lm_sensors-init.d,v 1.1 2005/09/06 21:06:02 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/files/lm_sensors-2.9.2-lm_sensors-init.d,v 1.2 2006/07/16 09:18:36 phreak Exp $
 
 checkconfig() {
 	if [ ! -f /etc/conf.d/lm_sensors ]; then
@@ -99,6 +99,12 @@ stop() {
 		if [ -e /proc/sys/dev/sensors ] ; then
 			ebegin "  Unloading i2c-proc"
 			rmmod i2c-proc &> /dev/null
+			eend $?
+		fi
+
+		if [[ -e /sys/bus/i2c || /sys/i2c ]] ; then
+			ebegin "  Unloading i2c-core"
+			rmmod i2c-core &> /dev/null
 			eend $?
 		fi
 	fi

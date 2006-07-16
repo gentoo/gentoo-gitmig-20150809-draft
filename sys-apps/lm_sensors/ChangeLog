@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.54 2006/07/16 09:15:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.55 2006/07/16 09:18:36 phreak Exp $
+
+*lm_sensors-2.10.0-r1 (16 Jul 2006)
+*lm_sensors-2.9.2-r1 (16 Jul 2006)
+
+  16 Jul 2006; Christian Heim <phreak@gentoo.org>
+  files/lm_sensors-2.9.2-lm_sensors-init.d,
+  files/lm_sensors-2.10.0-lm_sensors-init.d, +lm_sensors-2.9.2-r1.ebuild,
+  +lm_sensors-2.10.0-r1.ebuild:
+  Fix the init-script to also rmmod i2c-core (#140051 thanks to <lefti at bk.ru>)
 
   16 Jul 2006; Christian Heim <phreak@gentoo.org> lm_sensors-2.9.2.ebuild,
   lm_sensors-2.10.0.ebuild:
