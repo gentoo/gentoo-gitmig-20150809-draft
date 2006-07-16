@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.24.ebuild,v 1.5 2005/10/10 23:50:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.24.ebuild,v 1.6 2006/07/16 21:52:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,7 +44,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" libexecdir="${D}/usr/lib/find" install || die
-	prepallman
 
 	rm -rf "${D}"/usr/var
 	use build \
