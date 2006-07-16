@@ -1,6 +1,11 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.23 2006/05/30 18:56:00 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.24 2006/07/16 22:56:24 dragonheart Exp $
+
+  16 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/spca-20060501-defines.patch, spca5xx-20060501.ebuild:
+  applied patch to prevent hardened symbols in kernel - bug #140697. patch
+  thanks to me :-)
 
   30 May 2006; Mike Doty <kingtaco@gentoo.org> spca5xx-20060501.ebuild:
   ebuild enhancements from genstef
