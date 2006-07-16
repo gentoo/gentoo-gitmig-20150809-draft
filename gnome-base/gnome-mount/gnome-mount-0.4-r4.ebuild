@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r4.ebuild,v 1.4 2006/07/14 16:39:47 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r4.ebuild,v 1.5 2006/07/16 11:01:43 dertobi123 Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE="debug"
 
 RDEPEND=">=gnome-base/libgnomeui-2.13
