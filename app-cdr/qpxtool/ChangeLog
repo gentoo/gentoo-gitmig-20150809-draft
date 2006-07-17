@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/qpxtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.5 2006/06/10 23:42:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.6 2006/07/17 23:56:19 vapier Exp $
+
+*qpxtool-0.5.4 (17 Jul 2006)
+
+  17 Jul 2006; Mike Frysinger <vapier@gentoo.org> +qpxtool-0.5.4.ebuild:
+  Version bump from upstream author Thomas Maguin.
 
 *qpxtool-0.5.3 (10 Jun 2006)
 
