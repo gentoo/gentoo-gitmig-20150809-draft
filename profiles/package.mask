@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5633 2006/07/17 07:13:54 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5634 2006/07/17 10:09:33 zypher Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
+# media-video/piave, media-video/kdenlive-0.2.4
+# Masking broken versions, pending removal
+media-video/piave
+=media-video/kdenlive-0.2.4
 
 # Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
 # masking snapshot version, official release is out
