@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.45 2006/07/16 16:57:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.46 2006/07/17 16:05:29 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> gmime-2.1.19.ebuild:
+  Marked stable on amd64 for bug #139612
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> gmime-2.1.19.ebuild,
   gmime-2.2.1.ebuild:
