@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/thinkpad
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.15 2006/05/09 21:41:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.16 2006/07/17 20:02:35 dsd Exp $
+
+  17 Jul 2006; Daniel Drake <dsd@gentoo.org>
+  +files/thinkpad-5.9-module-param.patch, -thinkpad-5.7.ebuild,
+  -thinkpad-5.8.ebuild, thinkpad-5.9-r1.ebuild:
+  Fix compilation on Linux 2.6.17, thanks to Henryk Plotz in bug #137646
 
   09 May 2006; John N. Laliberte <allanonjl@gentoo.org>
   thinkpad-5.9-r1.ebuild:
