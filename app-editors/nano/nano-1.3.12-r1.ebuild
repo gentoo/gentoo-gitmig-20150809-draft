@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.12-r1.ebuild,v 1.2 2006/07/15 02:34:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.12-r1.ebuild,v 1.3 2006/07/17 04:36:20 vapier Exp $
 
 #ECVS_SERVER="savannah.gnu.org:/cvsroot/nano"
 #ECVS_MODULE="nano"
@@ -17,7 +17,7 @@ SRC_URI="http://www.nano-editor.org/dist/v1.3/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="build debug justify minimal ncurses nls slang spell unicode"
+IUSE="debug justify minimal ncurses nls slang spell unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
@@ -61,15 +61,14 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	if use build ; then
-		rm -rf "${D}"/usr/share
-	else
-		cat "${FILESDIR}"/nanorc-* >> doc/nanorc.sample
-		dodoc ChangeLog README doc/nanorc.sample AUTHORS BUGS NEWS TODO
-		dohtml *.html
-		insinto /etc
-		newins doc/nanorc.sample nanorc
-	fi
+	dodoc ChangeLog README doc/nanorc.sample AUTHORS BUGS NEWS TODO
+	dohtml *.html
+	insinto /etc
+	newins doc/nanorc.sample nanorc
+
+	insinto /usr/share/nano
+	doins "${FILESDIR}"/*.nanorc || die
+	echo $'\n''# include "/usr/share/nano/gentoo.nanorc"' >> "${D}"/etc/nanorc
 
 	dodir /usr/bin
 	dosym /bin/nano /usr/bin/nano
