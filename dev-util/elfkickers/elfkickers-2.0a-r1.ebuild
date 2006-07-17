@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r1.ebuild,v 1.2 2006/07/17 15:12:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a-r1.ebuild,v 1.3 2006/07/17 16:50:16 flameeyes Exp $
 
 inherit eutils
 
@@ -23,6 +23,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}.diff
 	epatch "${FILESDIR}"/${P}-elfls-core.patch
+	epatch "${FILESDIR}"/${P}-make.patch
+	epatch "${FILESDIR}"/${P}-bsd.patch
 
 	cp "${FILESDIR}"/sstrip-mjn3.c sstrip/sstrip.c || die "failed to update sstrip"
 
