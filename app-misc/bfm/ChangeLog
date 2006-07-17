@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/bfm
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.3 2005/04/04 17:04:20 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.4 2006/07/17 15:16:39 nichoj Exp $
+
+*bfm-1.2-r1 (17 Jul 2006)
+
+  17 Jul 2006; Joshua Nichols <jnichols@gentoo.org> +bfm-1.2-r1.ebuild:
+  Revision bump to support new Java system.
 
   04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> bfm-1.2.ebuild:
   added ~amd64 to KEYWORDS, now there are java3d implementations available for
