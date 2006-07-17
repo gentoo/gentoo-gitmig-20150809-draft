@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.22 2006/07/16 13:39:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.23 2006/07/17 15:59:42 liquidx Exp $
+
+*matplotlib-0.87.4 (17 Jul 2006)
+
+  17 Jul 2006; Alastair Tse <liquidx@gentoo.org>
+  +files/matplotlib-0.87.4-fix-bad-win32-detect.patch,
+  -matplotlib-0.87.3.ebuild, +matplotlib-0.87.4.ebuild:
+  version bump. fix broken compiling of c++ modules.
 
 *matplotlib-0.87.3 (16 Jul 2006)
 
