@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5632 2006/07/17 00:27:29 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5633 2006/07/17 07:13:54 zypher Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
+# masking snapshot version, official release is out
+=media-libs/mlt-20051209
 
 # Alec Warner <antarus@gentoo.org> (16 Jul 2006)
 # app-emulation/pose numerous open bugs, doens't compile
