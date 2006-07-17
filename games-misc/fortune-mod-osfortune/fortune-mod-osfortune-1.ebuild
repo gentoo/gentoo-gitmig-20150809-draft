@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-osfortune/fortune-mod-osfortune-1.ebuild,v 1.11 2005/08/27 18:06:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-osfortune/fortune-mod-osfortune-1.ebuild,v 1.12 2006/07/17 05:01:01 vapier Exp $
 
 inherit eutils
 
@@ -10,20 +10,20 @@ SRC_URI="http://www.dibona.com/opensources/osfortune.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND="games-misc/fortune-mod"
+RDEPEND="games-misc/fortune-mod"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/spelling.patch"
-	strfile osfortune
+	epatch "${FILESDIR}"/spelling.patch
+	strfile osfortune || die
 }
 
 src_install() {
 	insinto /usr/share/fortune
-	doins osfortune osfortune.dat
+	doins osfortune osfortune.dat || die
 }

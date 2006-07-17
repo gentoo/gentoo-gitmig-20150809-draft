@@ -1,8 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/fortune-mod-gentoo-forums-20041207.ebuild,v 1.5 2005/09/11 05:20:45 agriffis Exp $
-
-IUSE="offensive"
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/fortune-mod-gentoo-forums-20041207.ebuild,v 1.6 2006/07/17 04:59:11 vapier Exp $
 
 DESCRIPTION="Fortune database of quotes from forums.gentoo.org"
 HOMEPAGE="http://forums.gentoo.org/"
@@ -11,19 +9,20 @@ SRC_URI="http://dev.gentoo.org/~squinky86/files/gentoo-forums-${PV}.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~mips ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+IUSE="offensive"
 
-DEPEND="games-misc/fortune-mod"
+RDEPEND="games-misc/fortune-mod"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
-src_compile () {
-	mv gentoo-forums-${PV} gentoo-forums
+src_compile() {
+	mv gentoo-forums-${PV} gentoo-forums || die
 	use offensive && cat gentoo-forums-offensive-${PV} >> gentoo-forums
-	strfile gentoo-forums
+	strfile gentoo-forums || die
 }
 
-src_install () {
+src_install() {
 	insinto /usr/share/fortune
-	doins gentoo-forums gentoo-forums.dat
+	doins gentoo-forums gentoo-forums.dat || die
 }
