@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.30 2006/07/13 16:23:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.31 2006/07/17 23:12:40 spb Exp $
+
+  17 Jul 2006; Stephen Bennett <spb@gentoo.org> libnjb-2.2.5.ebuild:
+  Added ~x86-fbsd
 
   13 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
   libnjb-2.2.5.ebuild:
