@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.9 2006/01/24 22:41:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/wmclock-1.0.12.2.ebuild,v 1.10 2006/07/17 08:36:53 s4t4n Exp $
 
 IUSE=""
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 		x11-misc/gccmakedep
 		x11-proto/xproto
 		x11-proto/xextproto )
-	virtual/x11 )"
+	virtual/x11 )
+	>=x11-misc/imake-1.0.2"
 
 src_compile() {
 	econf || die "configure failed"

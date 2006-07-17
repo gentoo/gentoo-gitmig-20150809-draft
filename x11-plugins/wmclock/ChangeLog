@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmclock
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/ChangeLog,v 1.7 2006/01/24 22:41:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmclock/ChangeLog,v 1.8 2006/07/17 08:36:53 s4t4n Exp $
+
+  17 Jul 2006; Michele Noberasco <s4t4n@gentoo.org> wmclock-1.0.12.2.ebuild:
+  Added x11-misc/imake to DEPEND. Closes bug #140261.
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   wmclock-1.0.12.2.ebuild:
