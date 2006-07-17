@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.1-r1.ebuild,v 1.6 2006/07/17 11:42:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.15.4.ebuild,v 1.1 2006/07/17 11:42:37 liquidx Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
-inherit eutils
+inherit libtool eutils
 
 DESCRIPTION="A Client that groks URLs"
 HOMEPAGE="http://curl.haxx.se/"
@@ -12,7 +12,7 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT X11"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ssl ipv6 ldap ares gnutls idn kerberos krb4 test"
 
 RDEPEND="gnutls? ( net-libs/gnutls )
@@ -32,13 +32,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/curl-7.15-libtftp.patch
-	epatch ${FILESDIR}/curl-7.15-test46.patch
+	cd "${S}"
+	epatch ${FILESDIR}/${PN}-7.15-strip-ldflags.patch
+	elibtoolize
 }
 
 src_compile() {
-	local myconf
+
 	myconf="$(use_enable ldap)
 		$(use_with idn libidn)
 		$(use_enable kerberos gssapi)
@@ -88,9 +88,6 @@ src_install() {
 
 	insinto /usr/share/aclocal
 	doins docs/libcurl/libcurl.m4
-
-	#insinto /usr/lib/pkgconfig
-	#doins libcurl.pc
 
 	dodoc CHANGES README
 	dodoc docs/FEATURES docs/INTERNALS docs/LIBCURL
