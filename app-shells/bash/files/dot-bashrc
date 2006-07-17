@@ -21,6 +21,9 @@ else
 	eval `dircolors -b /etc/DIR_COLORS`
 fi
 
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+
 # Change the window title of X terminals 
 case ${TERM} in
 	xterm*|rxvt*|Eterm|aterm|kterm|gnome)
