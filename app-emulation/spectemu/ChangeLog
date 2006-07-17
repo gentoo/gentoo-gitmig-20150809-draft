@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.15 2006/01/24 23:55:49 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.16 2006/07/17 05:58:39 truedfx Exp $
+
+  17 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
+  +files/spectemu-0.99.3-qa.patch, spectemu-0.99.3.ebuild:
+  QA fixes (#140680)
 
   24 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> spectemu-0.99.3.ebuild:
   Make modular X friendly.
