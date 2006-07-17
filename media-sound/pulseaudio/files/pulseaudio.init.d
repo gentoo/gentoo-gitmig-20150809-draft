@@ -9,8 +9,14 @@ depend() {
 
 start() {
 	ebegin "Starting pulseaudio"
-	start-stop-daemon --start --quiet --background --exec /usr/bin/pulseaudio -- ${PA_OPTS} --fail=true
+	HOME=/var/run/pulse
+	start-stop-daemon --start --chuid pulse:pulse \
+			  --exec /usr/bin/pulseaudio -- ${PA_OPTS} --fail=true -D
 	eend $?
+
+	chgrp -R audio /var/run/pulse
+	chmod 0750 /var/run/pulse
+	chmod 0660 /var/run/pulse/native
 }
 
 stop() {

@@ -4,4 +4,3 @@
 
 # Startup options
 PA_OPTS="--log-target=syslog"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.3 2006/07/16 21:37:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.4 2006/07/17 15:38:20 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -39,6 +39,10 @@ pkg_setup() {
 		eerror "avahi, and then emerge polypaudio."
 		die "net-dns/avahi is missing the HOWL compatibility layer."
 	fi
+
+	enewgroup audio 18 # Just make sure it exists
+	enewgroup pulse
+	enewuser pulse -1 -1 /var/run/pulse pulse,audio
 }
 
 src_unpack() {
@@ -92,6 +96,17 @@ src_install() {
 	use alsa && extradepend="$extradepend alsasound"
 	sed -e "s/@extradepend@/$extradepend/" "${FILESDIR}/pulseaudio.init.d" > "${T}/pulseaudio"
 	doinitd "${T}/pulseaudio"
+
+	# This section changes the configuration files so that they are ready for
+	# the system-wide pulseaudio daemon. The changes are:
+	#  - use socket at /var/run/pulse/native
+	#  - enable anonymous access (relies on filesystem-level access to the socket)
+	#  - changes the dafault server path for the clients
+	sed -i -e '/load-module module-native-protocol-unix/s:$: auth-anonymous=1 socket=/var/run/pulse/native:' \
+		"${D}/etc/pulse/default.pa"
+	sed -i -e '/default-server/d' "${D}/etc/pulse/client.conf"
+	echo "default-server = unix:/var/run/pulse/native" >> \
+		"${D}/etc/pulse/client.conf"
 
 	dohtml -r doc
 	dodoc README doc/todo
