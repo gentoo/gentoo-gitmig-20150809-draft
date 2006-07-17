@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2041 2006/07/17 11:21:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2042 2006/07/17 14:30:18 plasmaroo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1590,6 +1590,7 @@ sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it 
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/hardened-sources:rsbac - Enables support for RSBAC (2.4 kernels)
 sys-kernel/linux-docs:html - Install HTML documentation
+sys-kernel/linux-headers:gcc64 - Use 64-bit kernel compiler
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-headers:ip27 - Enables support for SGI Origin (IP27)
 sys-kernel/mips-headers:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP28)

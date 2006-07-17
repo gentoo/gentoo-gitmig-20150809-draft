@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.181 2006/07/16 06:27:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.182 2006/07/17 14:30:18 plasmaroo Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -299,7 +299,7 @@ if [[ ${ETYPE} == sources ]]; then
 	IUSE="symlink build doc"
 elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
-	IUSE="gcc64"
+	[[ "${PN}" == 'linux-headers' ]] && IUSE="gcc64"
 
 	# Since we should NOT honour KBUILD_OUTPUT in headers
 	# lets unset it here.
