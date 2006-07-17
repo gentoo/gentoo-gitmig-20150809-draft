@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.6 2006/07/17 07:14:37 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.7 2006/07/17 14:41:15 zypher Exp $
+
+  17 Jul 2006; Marc Hildebrand <zypher@gentoo.org> mlt-0.2.2.ebuild
+  Some cleanup and fixes. Thanks to Tiziano Müller for all his work on this.
+
+*mlt-0.2.2 (01 Jan 2006)
 
   17 Jul 2006; Marc Hildebrand <zypher@gentoo.org> mlt-0.2.2.ebuild
   Version bump. Thanks to Danny (kugelfang@gentoo.org) for the amd64-fix.
