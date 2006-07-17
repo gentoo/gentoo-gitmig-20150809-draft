@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.24 2006/07/02 20:16:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.25 2006/07/17 16:12:15 phosphan Exp $
 
 inherit libtool
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86
 IUSE="opengl jpeg"
 
 RDEPEND="jpeg? ( media-libs/jpeg )
-		opengl? ( virtual/opengl )"
+		opengl? ( virtual/opengl virtual/glut )"
 DEPEND="${RDEPEND}
 		app-arch/unzip"
 
