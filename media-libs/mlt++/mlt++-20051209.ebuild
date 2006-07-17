@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20051209.ebuild,v 1.3 2006/02/15 00:45:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt++/mlt++-20051209.ebuild,v 1.4 2006/07/17 09:49:21 zypher Exp $
 
 DESCRIPTION="Various bindings for mlt"
 HOMEPAGE="http://mlt.sourceforge.net/"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 #				  dev-lang/ruby )
 #		tcl?	( dev-lang/swig
 #				  dev-lang/tcl )
-DEPEND=">=media-libs/mlt-${PV}"
+DEPEND="media-libs/mlt"
 
 src_compile() {
 #	languages=""
