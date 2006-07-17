@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5640 2006/07/17 19:19:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5641 2006/07/17 21:55:07 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -108,6 +108,7 @@ media-sound/pulseaudio
 media-sound/paman
 media-sound/pavucontrol
 media-sound/padevchooser
+media-plugins/libao-pulse
 
 # Michael Cummings <mcummings@gentoo.org> (10 Jul 2006)
 # Masking for removal - melted back into perl-core/Test-Simple
