@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.13 2006/07/17 11:07:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.14 2006/07/17 11:18:05 pva Exp $
+
+  17 Jul 2006; Peter Volkov <pva@gentoo.org> e-uae-0.8.28-r1.ebuild,
+  e-uae-0.8.28-r2.ebuild:
+  $S, $FILESDIR, $DESTDIR should be in double quotes `"'.
 
 *e-uae-0.8.28-r2 (17 Jul 2006)
 

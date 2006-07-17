@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.3 2006/07/11 17:52:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.28-r1.ebuild,v 1.4 2006/07/17 11:18:05 pva Exp $
 
 inherit eutils flag-o-matic
 
@@ -94,12 +94,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-shm-crash.patch
-	epatch ${FILESDIR}/${P}-fix-joystick-conflicts.patch
-	epatch ${FILESDIR}/${P}-fix-atoscroll-screen-support.patch
-	epatch ${FILESDIR}/${P}-fix-JIT-cache-on-NX-cpu.patch
+	epatch "${FILESDIR}/${P}-shm-crash.patch"
+	epatch "${FILESDIR}/${P}-fix-joystick-conflicts.patch"
+	epatch "${FILESDIR}/${P}-fix-atoscroll-screen-support.patch"
+	epatch "${FILESDIR}/${P}-fix-JIT-cache-on-NX-cpu.patch"
 }
 
 src_compile() {
@@ -119,9 +119,9 @@ src_install() {
 	doins amiga/{*hack,trans*,uae*,*.library}
 
 	# Rename it to e-uae
-	mv ${D}/usr/bin/uae ${D}/usr/bin/e-uae
-	mv ${D}/usr/bin/readdisk ${D}/usr/bin/e-readdisk
-	mv ${D}/usr/share/uae ${D}/usr/share/${PN}
+	mv "${D}/usr/bin/uae" "${D}/usr/bin/e-uae"
+	mv "${D}/usr/bin/readdisk" "${D}/usr/bin/e-readdisk"
+	mv "${D}/usr/share/uae" "${D}/usr/share/${PN}"
 
 	dodoc docs/* README ChangeLog CHANGES
 }
