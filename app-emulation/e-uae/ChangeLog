@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.12 2006/07/11 17:52:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.13 2006/07/17 11:07:09 pva Exp $
+
+*e-uae-0.8.28-r2 (17 Jul 2006)
+
+  17 Jul 2006; Peter Volkov <pva@gentoo.org>
+  +files/e-uae-0.8.28-gtkui_64bit_fix.diff, +e-uae-0.8.28-r2.ebuild:
+  Fix for crash that was reproducable on amd64 with newer versions of gcc. Thank
+  Ben Hodgetts for report (bug 140460) and Richard Drummond for the fix.
 
   11 Jul 2006; Peter Volkov <pva@gentoo.org> e-uae-0.8.28-r1.ebuild:
   einfo replaced with elog. Additional elogs added to clearly state video output.
