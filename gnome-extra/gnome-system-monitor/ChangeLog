@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.119 2006/07/16 11:09:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.120 2006/07/17 18:17:01 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-system-monitor-2.14.4.ebuild:
+  Marked stable on amd64 for bug #139612
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-system-monitor-2.14.4.ebuild:
