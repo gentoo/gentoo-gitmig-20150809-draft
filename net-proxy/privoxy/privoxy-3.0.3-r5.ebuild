@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r5.ebuild,v 1.4 2006/07/16 10:12:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.3-r5.ebuild,v 1.5 2006/07/17 05:07:19 mrness Exp $
 
 inherit toolchain-funcs eutils
 
@@ -62,33 +62,24 @@ pkg_preinst() {
 }
 
 src_install () {
-	diropts -m 0750 -g privoxy -o privoxy
-	insopts -m 0640 -g privoxy -o privoxy
-
-	keepdir /var/log/privoxy
+	dosbin privoxy
+	newinitd "${FILESDIR}/privoxy.rc7" privoxy
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/privoxy.logrotate" privoxy
 
 	insinto /etc/privoxy
 	doins default.action default.filter config standard.action trust user.action
-
 	insinto /etc/privoxy/templates
 	doins templates/*
 
 	doman privoxy.1
 	dodoc LICENSE README AUTHORS doc/text/faq.txt ChangeLog
-
-	insopts -m 0644 -g 0 -o root
-	diropts -m 0755 -g 0 -o root
 	local i
 	for i in developer-manual faq man-page user-manual ; do
 		insinto "/usr/share/doc/${PF}/${i}"
 		doins doc/webserver/"${i}"/*
 	done
 
-	insopts -m 0750 -g 0 -o root
-	insinto /usr/sbin
-	doins privoxy
-	newinitd "${FILESDIR}/privoxy.rc7" privoxy
-	insopts -m 0640
-	insinto /etc/logrotate.d
-	newins "${FILESDIR}/privoxy.logrotate" privoxy
+	diropts -m 0750 -g privoxy -o privoxy
+	keepdir /var/log/privoxy
 }
