@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.65 2006/07/16 10:26:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.66 2006/07/17 17:58:24 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> neon-0.25.3.ebuild:
+  Marked stable on amd64 for bug #139612
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> neon-0.25.3.ebuild:
   hppa stable, bug #139612
