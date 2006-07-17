@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.9.ebuild,v 1.10 2006/02/20 04:49:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.9.ebuild,v 1.11 2006/07/17 03:35:55 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -45,8 +45,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-
-	prepallman
 
 	dodoc AUTHORS ChangeLog INSTALL NEWS PORTS README \
 		doc/{syslog-ng.conf.sample,syslog-ng.conf.demo,stresstest.sh} \

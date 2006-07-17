@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.132 2006/07/12 23:59:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.133 2006/07/17 03:35:55 mr_bones_ Exp $
+
+  17 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-1.6.9.ebuild, syslog-ng-1.6.11.ebuild:
+  no need for prepallman (bug #140697)
 
   12 Jul 2006; <solar@gentoo.org> files/syslog-ng.conf.gentoo.hardened:
   - use correct facility for uucp log filter. bug #140168
