@@ -1,6 +1,9 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.67 2006/04/27 14:37:47 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.68 2006/07/17 16:34:52 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Marked stable on amd64 for bug #139612
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-scrollkeeper-0.3.14-r1, Manifest:
