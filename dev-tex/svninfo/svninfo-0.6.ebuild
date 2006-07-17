@@ -1,6 +1,6 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.6.ebuild,v 1.1 2006/07/16 18:59:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/svninfo-0.6.ebuild,v 1.2 2006/07/17 10:45:32 cryos Exp $
 
 inherit latex-package eutils
 
@@ -21,5 +21,5 @@ src_unpack() {
 }
 
 src_compile() {
-	emake || die "compilation failed"
+	emake -j1 || die "compilation failed"
 }

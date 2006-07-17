@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 2005-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.6 2006/07/16 18:59:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.7 2006/07/17 10:45:32 cryos Exp $
+
+  17 Jul 2006; Marcus D. Hanwell <cryos@gentoo.org> svninfo-0.6.ebuild:
+  Added -j1 to emake to solve parallel build issues encountered.
 
 *svninfo-0.6 (16 Jul 2006)
 
