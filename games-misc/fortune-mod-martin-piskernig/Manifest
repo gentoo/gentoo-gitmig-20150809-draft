@@ -1,14 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 21b15d5c37631d1d9ef481f416b3d2a0 fortune-mod-martin-piskernig-20030120.ebuild 682
-MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+DIST fortune-mod-martin.piskernig-20030120.tar.gz 18365
+EBUILD fortune-mod-martin-piskernig-20030120.ebuild 728 RMD160 be7f2e2a02edf94279ccf881b358c6cb9c785a05 SHA1 6072baebb336d4236e2303d24875d95df8f3abf8 SHA256 701ab74c93b20d6477688c1c1bbd0f6cf5690a46c5d8f7cca1796769937482bc
+MD5 ab720140462072d11d9adda4082a45a8 fortune-mod-martin-piskernig-20030120.ebuild 728
+RMD160 be7f2e2a02edf94279ccf881b358c6cb9c785a05 fortune-mod-martin-piskernig-20030120.ebuild 728
+SHA256 701ab74c93b20d6477688c1c1bbd0f6cf5690a46c5d8f7cca1796769937482bc fortune-mod-martin-piskernig-20030120.ebuild 728
+MISC ChangeLog 1110 RMD160 8567dad432013ffd98117c70ff2c73d9804edd1a SHA1 e2350f3ebe072c306c7665b371a5cab90253e5d2 SHA256 d41422b2cbb8e2b7ddefab553224df5a29966890287eabb85e600cd811eada90
 MD5 08d5c1d2783c7738183d187150854d7a ChangeLog 1110
+RMD160 8567dad432013ffd98117c70ff2c73d9804edd1a ChangeLog 1110
+SHA256 d41422b2cbb8e2b7ddefab553224df5a29966890287eabb85e600cd811eada90 ChangeLog 1110
+MISC metadata.xml 257 RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 SHA1 27230f62caa0859bdea50238e5bd0e2805ae1113 SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658
+MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 metadata.xml 257
+SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658 metadata.xml 257
 MD5 0d2a4acc18e84c4f09d7d45d1788e71f files/digest-fortune-mod-martin-piskernig-20030120 88
+RMD160 b01eecb4207f184459ac79373b6477e619be10ca files/digest-fortune-mod-martin-piskernig-20030120 88
+SHA256 77d212727e06146cb28741de6bb1d0b2e1a6a9febc342cd1dff575844f9f4ea9 files/digest-fortune-mod-martin-piskernig-20030120 88
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDK0RMLLFUmVNQ7rkRAkMZAJ4+QNMx59wL9gpu9bddd9jz53AGsgCgyglC
-HUGWMT7UQiRo5lTWewSScHw=
-=I2n/
+iD8DBQFEux7GamhnQswr0vIRAtixAKC9fKbIJG7a3HYb/rU3owZHPCYkcgCfWw5E
+b/XYnJuJQq9i6xs+eUfQK4U=
+=x3A1
 -----END PGP SIGNATURE-----

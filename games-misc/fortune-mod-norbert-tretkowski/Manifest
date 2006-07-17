@@ -1,14 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4f7212e20ede68df3d6ed0cafca0c8cb fortune-mod-norbert-tretkowski-20030120.ebuild 694
-MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+DIST fortune-mod-norbert.tretkowski-20030120.tar.gz 11501
+EBUILD fortune-mod-norbert-tretkowski-20030120.ebuild 739 RMD160 b1d709ce337e7f2e8c9ca1676a156729c27a3dc3 SHA1 d6fe1be74738ec7a6b62a55910481d2d6e5b8b6c SHA256 30d42ecbd6a523d51001a5a6a5940913ba7c621821f2782549f15cb41b3f76f5
+MD5 36308ae98b1686f0f752ad90e589cd58 fortune-mod-norbert-tretkowski-20030120.ebuild 739
+RMD160 b1d709ce337e7f2e8c9ca1676a156729c27a3dc3 fortune-mod-norbert-tretkowski-20030120.ebuild 739
+SHA256 30d42ecbd6a523d51001a5a6a5940913ba7c621821f2782549f15cb41b3f76f5 fortune-mod-norbert-tretkowski-20030120.ebuild 739
+MISC ChangeLog 1126 RMD160 a4b4a4797dec346d3af3e1ac8cf8d8ed4006cd01 SHA1 43b055c925d5216bda5c44fb4473645abf755175 SHA256 4005e8f7767e430ceac460ec88db5b3fa43abc0819357f08825898c82ea16c8e
 MD5 a5f26540c3b902ec47ae984447e0c39d ChangeLog 1126
+RMD160 a4b4a4797dec346d3af3e1ac8cf8d8ed4006cd01 ChangeLog 1126
+SHA256 4005e8f7767e430ceac460ec88db5b3fa43abc0819357f08825898c82ea16c8e ChangeLog 1126
+MISC metadata.xml 257 RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 SHA1 27230f62caa0859bdea50238e5bd0e2805ae1113 SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658
+MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 metadata.xml 257
+SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658 metadata.xml 257
 MD5 6e4fe98448ce5dae312dc19b2c420385 files/digest-fortune-mod-norbert-tretkowski-20030120 90
+RMD160 94b34f1991ee83565b4d0434e5b7e33553ab3236 files/digest-fortune-mod-norbert-tretkowski-20030120 90
+SHA256 685f373e9ccb871362a616bf8efe8491ffe29b22f7a793679781bfe4e64902ae files/digest-fortune-mod-norbert-tretkowski-20030120 90
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDK0STLLFUmVNQ7rkRAh/tAJ0RS3gC8l5Cky3STFZ9TkMuqWdC4ACggtSv
-ZtF2MITSm7DqHuiwU8oGfw4=
-=pT/R
+iD8DBQFEux8KamhnQswr0vIRAqoXAJ9o3tcamN/wJhAajJyvf/2SrdGZAQCglb+/
+RbO2rhDZ55ts4/TDGkbbJWo=
+=PgQl
 -----END PGP SIGNATURE-----

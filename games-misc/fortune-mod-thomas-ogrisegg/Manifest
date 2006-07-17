@@ -1,14 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8149fb9547487dba8c8dd5d7c2f4854e fortune-mod-thomas-ogrisegg-20030120.ebuild 676
-MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+DIST fortune-mod-thomas.ogrisegg-20030120.tar.gz 15662
+EBUILD fortune-mod-thomas-ogrisegg-20030120.ebuild 721 RMD160 09b6f6000ce0b703cd56d450a8b5a68f4a07be8b SHA1 605d058f47f5eb0b4ca458f17f0399869769cfdc SHA256 563cb2b17b9b817bc2891064f201ebb9e0ad23607af59d75fdbd8b31204fd6cf
+MD5 98781b0c85cdabc679f6b3c536524edf fortune-mod-thomas-ogrisegg-20030120.ebuild 721
+RMD160 09b6f6000ce0b703cd56d450a8b5a68f4a07be8b fortune-mod-thomas-ogrisegg-20030120.ebuild 721
+SHA256 563cb2b17b9b817bc2891064f201ebb9e0ad23607af59d75fdbd8b31204fd6cf fortune-mod-thomas-ogrisegg-20030120.ebuild 721
+MISC ChangeLog 1117 RMD160 4e617dcfdd059d27eeeb06858c791cfd5ec850bb SHA1 5d8461b7d43ed8e0c1e246d1ef06e78dc5517e38 SHA256 a97ae86caf7ec92590db61bfaa3bd66869efc081bd57030fa8c64f0e90f7a994
 MD5 be0ad4c0159378db250b00eeaea9e791 ChangeLog 1117
+RMD160 4e617dcfdd059d27eeeb06858c791cfd5ec850bb ChangeLog 1117
+SHA256 a97ae86caf7ec92590db61bfaa3bd66869efc081bd57030fa8c64f0e90f7a994 ChangeLog 1117
+MISC metadata.xml 257 RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 SHA1 27230f62caa0859bdea50238e5bd0e2805ae1113 SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658
+MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 metadata.xml 257
+SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658 metadata.xml 257
 MD5 4545de61d6fd31694241083fd1bcee51 files/digest-fortune-mod-thomas-ogrisegg-20030120 87
+RMD160 929f593e052fd3caa6872a990d0b5dffa206ec36 files/digest-fortune-mod-thomas-ogrisegg-20030120 87
+SHA256 a8af80cc8ba58498b04bef695fd433d1c900ab9c04488dd314fa473fff5d4ab9 files/digest-fortune-mod-thomas-ogrisegg-20030120 87
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDK0TlLLFUmVNQ7rkRAhIfAJ4yY3nXzsWqQP8UW9MOIlgt5IfhgACdHuBW
-7eH5BGys/7c1Gxv23Vctu8c=
-=728u
+iD8DBQFEux9JamhnQswr0vIRApNoAJ4jQzsOOom4FxMC8tqNXqWdyrSfPACfQ42r
+Mv4LGxB6uK6DOX89mu2D6CQ=
+=Cf5d
 -----END PGP SIGNATURE-----
