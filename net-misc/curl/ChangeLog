@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.75 2006/07/17 11:42:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.76 2006/07/17 23:23:50 liquidx Exp $
+
+  17 Jul 2006; Alastair Tse <liquidx@gentoo.org> curl-7.15.1-r1.ebuild:
+  fix stupid typo
 
 *curl-7.15.4 (17 Jul 2006)
 
