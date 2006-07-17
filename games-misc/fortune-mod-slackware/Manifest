@@ -1,18 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST slack-fortunes-all-1.10.tgz 81920
+DIST slack-fortunes-all-1.12.tgz 92160 RMD160 2c3886212aa52d2a4ab2d31f7b4939bc9b773561 SHA256 227879572442adad573a8a8bacc3b6fb7380e149ebbf28ba40fb0d1179da4800
+EBUILD fortune-mod-slackware-1.10.ebuild 750 RMD160 f1defb4c72f717177e9649c27d5474dbee54c397 SHA1 4c0e7b9f243b2c7004ece2c83973c4b602f13eef SHA256 fe149cf81389e1dac04a20d9301a4db61c5b40d976c6c689a88bd043f89413f9
+MD5 4fae43d447a82882195083a2cf878ce3 fortune-mod-slackware-1.10.ebuild 750
+RMD160 f1defb4c72f717177e9649c27d5474dbee54c397 fortune-mod-slackware-1.10.ebuild 750
+SHA256 fe149cf81389e1dac04a20d9301a4db61c5b40d976c6c689a88bd043f89413f9 fortune-mod-slackware-1.10.ebuild 750
+EBUILD fortune-mod-slackware-1.12.ebuild 1073 RMD160 49dc10513cbb2e6b23ee3aff691937696ee67cd4 SHA1 93ddbde26d9a68eb681c83a88db6eb76a5f1407a SHA256 c8e796913b95d8303a6c372a9fef14726f607925153b2913b10003841a704303
+MD5 9a1f19e52782a661049c29c4d8c70968 fortune-mod-slackware-1.12.ebuild 1073
+RMD160 49dc10513cbb2e6b23ee3aff691937696ee67cd4 fortune-mod-slackware-1.12.ebuild 1073
+SHA256 c8e796913b95d8303a6c372a9fef14726f607925153b2913b10003841a704303 fortune-mod-slackware-1.12.ebuild 1073
+MISC ChangeLog 623 RMD160 a80d01b125fdf44031b92cf14147db4dc3505bbf SHA1 87d3b2599a58302d13c95984c1fb2722c1510815 SHA256 dc73317157cbea848721f6822e56be37083c8b4359bc5a8c2b2ca1de1cb99fbc
 MD5 ea9cb6b5b783ca2ca4fec915e213dd90 ChangeLog 623
 RMD160 a80d01b125fdf44031b92cf14147db4dc3505bbf ChangeLog 623
 SHA256 dc73317157cbea848721f6822e56be37083c8b4359bc5a8c2b2ca1de1cb99fbc ChangeLog 623
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 6ca591bd3e84a114f5d7766e08cd28e4 files/digest-fortune-mod-slackware-1.10 71
 RMD160 7bbd1cbfd4cfcdd7294d7cb128ae2dddffe8e72a files/digest-fortune-mod-slackware-1.10 71
 SHA256 f2f3f51ce43ff7c045519ed3db2f3d40b15e9a5b0eebf7f4fc4d6e2537caad43 files/digest-fortune-mod-slackware-1.10 71
 MD5 41dff42b0970fd03aae31ca77ba20fa3 files/digest-fortune-mod-slackware-1.12 259
 RMD160 e516d1691bdb21d976831b45733b4ba1765ebc8e files/digest-fortune-mod-slackware-1.12 259
 SHA256 537df2cffe218e3847486344255819d9d5b288d192d10a1ebd9de64db2cd4244 files/digest-fortune-mod-slackware-1.12 259
-MD5 0576d705f55fd704fb97da3991f25914 fortune-mod-slackware-1.10.ebuild 693
-RMD160 99002ac631d3500d9aabbd7e1702dcf5fe50cacc fortune-mod-slackware-1.10.ebuild 693
-SHA256 28c1590ffc63c4f636beb17394d40e608d9741cae20b6775d4167afc0cd2355d fortune-mod-slackware-1.10.ebuild 693
-MD5 07337ecce515e7fb5d11bb3678895565 fortune-mod-slackware-1.12.ebuild 1016
-RMD160 df26f27b9061dcf36799c7fe982ddc806ae78388 fortune-mod-slackware-1.12.ebuild 1016
-SHA256 8ecc2f443a3798722ffd12cef063c3242ae7496d265d572ff502388ab0d1e56f fortune-mod-slackware-1.12.ebuild 1016
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
-SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuxoxamhnQswr0vIRAq26AJwKedcgnH2mVtXvoDZYw4zuyBGXiwCggMqF
+8AmI9xueqXag8c+xBzPWVjk=
+=g4nE
+-----END PGP SIGNATURE-----

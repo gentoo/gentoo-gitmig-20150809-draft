@@ -1,22 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+DIST fortune-mod-at.linux-20030120.tar.gz 81012
+EBUILD fortune-mod-at-linux-20030120.ebuild 681 RMD160 52eaa173e377856f5ae1bdfc105fdac728ccbd98 SHA1 84c95fac88bc99c2fe6b997d39f1fbce2d962b0f SHA256 6d70f4790f23c6a74319174f8f13eb3588da41260077b50a746a97fe9bd2afba
+MD5 09dc7b7d2757f79b9c05ccb3adfb3b1e fortune-mod-at-linux-20030120.ebuild 681
+RMD160 52eaa173e377856f5ae1bdfc105fdac728ccbd98 fortune-mod-at-linux-20030120.ebuild 681
+SHA256 6d70f4790f23c6a74319174f8f13eb3588da41260077b50a746a97fe9bd2afba fortune-mod-at-linux-20030120.ebuild 681
+MISC ChangeLog 1393 RMD160 655e17cb229db36a68ece9dc2d2b2f941eeb597d SHA1 c31bf7e01365906c3d3f9c0aad5d4240fe0c2128 SHA256 9e7100322025d3cb1152f2776a62366817b5ef1d9b2e5b979059464605b3a7aa
 MD5 acf9a0e4023ae3690615db1198878231 ChangeLog 1393
 RMD160 655e17cb229db36a68ece9dc2d2b2f941eeb597d ChangeLog 1393
 SHA256 9e7100322025d3cb1152f2776a62366817b5ef1d9b2e5b979059464605b3a7aa ChangeLog 1393
-MD5 d72ede7a09c13925f4735d8d9bdd2e6d files/digest-fortune-mod-at-linux-20030120 80
-RMD160 afeba3f1cb464da0996985145da2e6cb2bade41a files/digest-fortune-mod-at-linux-20030120 80
-SHA256 22e72b0e190a09995a3af2d1d65c5f5c295b74de969b21b41dd04f8dbe061dce files/digest-fortune-mod-at-linux-20030120 80
-MD5 f94f4004443262a0a7ac21c0d0d6dc02 fortune-mod-at-linux-20030120.ebuild 653
-RMD160 e163093ab6e250b0d7e339692c8dcdb3292bc251 fortune-mod-at-linux-20030120.ebuild 653
-SHA256 9e68acc5198e396f3e8184fb43be28915c3bf644c8618136a03ba48c37d9af34 fortune-mod-at-linux-20030120.ebuild 653
+MISC metadata.xml 257 RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 SHA1 27230f62caa0859bdea50238e5bd0e2805ae1113 SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
 RMD160 16be0fe0968469b169cdaa8247757d7d37c03bf6 metadata.xml 257
 SHA256 bf87ce89dc7a4bbe3b49d43f9b61f5f590f7dfde7357d6220a486a4bf1ea2658 metadata.xml 257
+MD5 d72ede7a09c13925f4735d8d9bdd2e6d files/digest-fortune-mod-at-linux-20030120 80
+RMD160 afeba3f1cb464da0996985145da2e6cb2bade41a files/digest-fortune-mod-at-linux-20030120 80
+SHA256 22e72b0e190a09995a3af2d1d65c5f5c295b74de969b21b41dd04f8dbe061dce files/digest-fortune-mod-at-linux-20030120 80
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFD8IfxwUpWvClEHQoRAqIGAJ91XT1eDeFkBe7BJhbh2bGqxekgcgCfVyGt
-p7ZoZM7aosi3MzsJZjpRoIU=
-=Ht+J
+iD8DBQFEuxiDamhnQswr0vIRArTFAJ9LN0uvcKAnePPNtGfZKw89hV4nKgCcCBjS
+FbN4paht32pNqPY6FHSvvew=
+=GtOk
 -----END PGP SIGNATURE-----

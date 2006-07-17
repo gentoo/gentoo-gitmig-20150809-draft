@@ -1,5 +1,32 @@
-MD5 9fd89953347b367ca655a292af0846fb fortune-mod-gentoo-forums-20040922.ebuild 901
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gentoo-forums-20040922.gz 7904 RMD160 ee550d8f4b112f598ca2958341d4170c14781378 SHA1 6ebf53a8f7adbfe7fb23809e8285e5da6169efac SHA256 2749ad39ea6eef35f3e26553e5db5143089908ffc71b7c6bde61b382fe28992a
+DIST gentoo-forums-20041207.gz 8809 RMD160 004d4b9f335a6df6924c5b23815a57bf98d5d190 SHA1 0718f6d0d30b2d6d0b37385d0459d6926f3e243a SHA256 d6cababfefde07a250d043416488bcb4a0298c4aae1ecc4fc4f55755653c5f72
+DIST gentoo-forums-offensive-20040922.gz 1416
+DIST gentoo-forums-offensive-20041207.gz 1510
+EBUILD fortune-mod-gentoo-forums-20040922.ebuild 944 RMD160 65717ae4956a3b4716c5cefa122e82df4a08b6a4 SHA1 c471e1dcd3aa4db5471888c13eb1cce6b773eaea SHA256 ed2f98472169f1afc91e3fbcbc72d2b969108369a8b2efca9f581f95e0ed578e
+MD5 4343acc97c28199b6db1654f4d1ab702 fortune-mod-gentoo-forums-20040922.ebuild 944
+RMD160 65717ae4956a3b4716c5cefa122e82df4a08b6a4 fortune-mod-gentoo-forums-20040922.ebuild 944
+SHA256 ed2f98472169f1afc91e3fbcbc72d2b969108369a8b2efca9f581f95e0ed578e fortune-mod-gentoo-forums-20040922.ebuild 944
+EBUILD fortune-mod-gentoo-forums-20041207.ebuild 944 RMD160 010ef0577f525b280d37e2c41c57170a67de462f SHA1 e9b220df84e8b49da37e7449db7754a5520051e1 SHA256 57eddae5b0c1fc5f4999fe6b58a5da8f39dba73fbf8841e4671de6182ef72686
+MD5 4cc99fef04d8b5a1988c11342be3f9be fortune-mod-gentoo-forums-20041207.ebuild 944
+RMD160 010ef0577f525b280d37e2c41c57170a67de462f fortune-mod-gentoo-forums-20041207.ebuild 944
+SHA256 57eddae5b0c1fc5f4999fe6b58a5da8f39dba73fbf8841e4671de6182ef72686 fortune-mod-gentoo-forums-20041207.ebuild 944
+MISC ChangeLog 1953 RMD160 036d81088d3dd084fd0512a3d30f06659794f0f8 SHA1 0f219fa98c87f7da3d34b83942ce2fc293d46b59 SHA256 27a2b7c54c3291a8f41a648b956811aab32817c166332a6a3e1c7903a469248e
 MD5 cec304e31092800e7ae05da84d67756d ChangeLog 1953
-MD5 5810023159875f4fda3f59b70bb00753 fortune-mod-gentoo-forums-20041207.ebuild 913
-MD5 6e6b8d30148648380dc1247b9a81d5fe files/digest-fortune-mod-gentoo-forums-20041207 146
-MD5 91dcd0a0a5de4ba3ff2ac2fd72f14ff3 files/digest-fortune-mod-gentoo-forums-20040922 146
+RMD160 036d81088d3dd084fd0512a3d30f06659794f0f8 ChangeLog 1953
+SHA256 27a2b7c54c3291a8f41a648b956811aab32817c166332a6a3e1c7903a469248e ChangeLog 1953
+MD5 26f7226aef53ce7b2a152a10591b8d9f files/digest-fortune-mod-gentoo-forums-20040922 328
+RMD160 07f1bbb42aa6101c30cfc1f981f3d3d9843cfeee files/digest-fortune-mod-gentoo-forums-20040922 328
+SHA256 f326c4430e10187897ba601f31fb371b0dc625ddc6f69b2921d5098d4970170f files/digest-fortune-mod-gentoo-forums-20040922 328
+MD5 ed64e0d3469b5323e9230375ab8d125f files/digest-fortune-mod-gentoo-forums-20041207 328
+RMD160 2b2da1f00d6027d1b0ad21fa01517c799b97c7ae files/digest-fortune-mod-gentoo-forums-20041207 328
+SHA256 92bdffbd076e9be335973a7e42072f07d4ef38dc19c1cd5f58f3f5258e7efdb5 files/digest-fortune-mod-gentoo-forums-20041207 328
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuxlqamhnQswr0vIRApxKAJ9/6niZy0EFvflJsfjCwJ5DvTNVDwCgpoyK
+rxhNt8iQI0S+5r2i8eqjwNg=
+=b/eE
+-----END PGP SIGNATURE-----

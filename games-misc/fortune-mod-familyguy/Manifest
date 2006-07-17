@@ -1,4 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST fortune-mod-familyguy-0.1.tar.gz 37591 RMD160 b55a15815f153bbc395fa4b70e2e4c9a0f0ddd8f SHA1 d0f9f357c120a20bc9929d48e3ccf1eb68f3f6ac SHA256 fd0c99589e1744bfb05d8bae28123e655f1f4030aa6b434d6abb577979bcdd11
+EBUILD fortune-mod-familyguy-0.1.ebuild 651 RMD160 e38bf1369502e98b2d31c6e6f2622ff2b08296b6 SHA1 3a4c27255a184d9145f26182fc60e83856d2fba9 SHA256 e9a3692b942b8363db82036bc5b348d4ccacc66c564d4aa255a32e4c632d8633
+MD5 9f70cfe89ed35cbc1ee0910f83c22a84 fortune-mod-familyguy-0.1.ebuild 651
+RMD160 e38bf1369502e98b2d31c6e6f2622ff2b08296b6 fortune-mod-familyguy-0.1.ebuild 651
+SHA256 e9a3692b942b8363db82036bc5b348d4ccacc66c564d4aa255a32e4c632d8633 fortune-mod-familyguy-0.1.ebuild 651
+MISC ChangeLog 674 RMD160 3a0e37051dee2a1935f2bd47bafdedf41010b65e SHA1 4f0f9351d359cc8ff63f2e4cb8b867c3f9181bf8 SHA256 7cceac71bf1fe699fcab73d371b8442785d5b6892dbf1d78278f52fc87bbcd48
 MD5 f922e3d1dc917aee556fbc64f3c8bec1 ChangeLog 674
-MD5 f95e520bec1afe5f61b3e0629f52fb65 fortune-mod-familyguy-0.1.ebuild 623
+RMD160 3a0e37051dee2a1935f2bd47bafdedf41010b65e ChangeLog 674
+SHA256 7cceac71bf1fe699fcab73d371b8442785d5b6892dbf1d78278f52fc87bbcd48 ChangeLog 674
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 c7b56006e976173589980e0de7d780d2 files/digest-fortune-mod-familyguy-0.1 76
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
+MD5 3b033bc310d5515dc142d4f11da1567e files/digest-fortune-mod-familyguy-0.1 274
+RMD160 7a61e4c0672553a3e2e1ba2cb3b1b1ba6520fd64 files/digest-fortune-mod-familyguy-0.1 274
+SHA256 26e94f418cd8ab5e9312013f38eaad34cd5ecdecb614997f50f9300dd986c924 files/digest-fortune-mod-familyguy-0.1 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuxkOamhnQswr0vIRAk7VAJ99SMGLv84+dOhnVnKUjidVWZbQDgCeKcCw
+LrI2XS9cs/SXXEU3b6NF324=
+=Zs/I
+-----END PGP SIGNATURE-----

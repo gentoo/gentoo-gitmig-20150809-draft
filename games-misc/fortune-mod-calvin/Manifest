@@ -1,4 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST fortune-mod-calvin-0.1.1.tar.gz 6787
+EBUILD fortune-mod-calvin-0.1.1.ebuild 623 RMD160 bbcf7963c613aaeb579faa3833c23b8369ae7ba6 SHA1 4d7b618ae374e6f4504910eea986cf00d57c6c9e SHA256 90cb3270ad24ebe85b551e7fa1573058b472b7df8c1f9ece4782554ab722d1a1
+MD5 0ac8cdb0e7e18dc35517ddca557c63a6 fortune-mod-calvin-0.1.1.ebuild 623
+RMD160 bbcf7963c613aaeb579faa3833c23b8369ae7ba6 fortune-mod-calvin-0.1.1.ebuild 623
+SHA256 90cb3270ad24ebe85b551e7fa1573058b472b7df8c1f9ece4782554ab722d1a1 fortune-mod-calvin-0.1.1.ebuild 623
+MISC ChangeLog 1026 RMD160 ff9fa644b38abe3d3b4a237b9131fe54366f08cf SHA1 78d6099253a7500bc4eba5b85a94794e0dc85b66 SHA256 2ad382b677d3faad92c62002770b56fb503b16448496ebefccaf5b2542f4e9c8
 MD5 9974f9b781fe359a56935f58eaeb703a ChangeLog 1026
-MD5 1ab4ef26aedc55b79f1dee8dc422890c fortune-mod-calvin-0.1.1.ebuild 594
+RMD160 ff9fa644b38abe3d3b4a237b9131fe54366f08cf ChangeLog 1026
+SHA256 2ad382b677d3faad92c62002770b56fb503b16448496ebefccaf5b2542f4e9c8 ChangeLog 1026
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 714ffb1975285c44960d48dde8a55690 files/digest-fortune-mod-calvin-0.1.1 74
+RMD160 28efb0b36955a6e83c5a7e72cc4b5cae262207ab files/digest-fortune-mod-calvin-0.1.1 74
+SHA256 2b158fb537c84be79821748d69a9cb4f8dc9df8d7d5d3d94b2e26842ff9b3274 files/digest-fortune-mod-calvin-0.1.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuximamhnQswr0vIRAmlqAKCZjnycltTkdEPZprV6t1dHH3xa+wCgvojC
+BFkfZuCiA4utA05B21DTD8k=
+=8p2i
+-----END PGP SIGNATURE-----

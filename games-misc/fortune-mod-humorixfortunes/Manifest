@@ -1,4 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST humorixfortunes-1.4.tar.gz 97053
+EBUILD fortune-mod-humorixfortunes-1.4-r1.ebuild 763 RMD160 0831f5bf5203290f98e3e3269d3c27a08327bd7b SHA1 0e04e44aa33a8c68f7ea1136571f1229d2184587 SHA256 d1887bca571274131c93d956d56fd617823a1a3089accb94075be121b08e148a
+MD5 6afe11a1629e0c3f32d81c2f340613b2 fortune-mod-humorixfortunes-1.4-r1.ebuild 763
+RMD160 0831f5bf5203290f98e3e3269d3c27a08327bd7b fortune-mod-humorixfortunes-1.4-r1.ebuild 763
+SHA256 d1887bca571274131c93d956d56fd617823a1a3089accb94075be121b08e148a fortune-mod-humorixfortunes-1.4-r1.ebuild 763
+MISC ChangeLog 1274 RMD160 ffcae8fbe724e0fa4d5e66a41ff4264a5616eb77 SHA1 6068d06deecc179f923f8e0fe87a30d9ced6928e SHA256 7112e143004d7dafe994e3ecae9e6f2d7df3fc1808dbb2001f3084313a42bff3
 MD5 f3573e54f5946c3c03c1a7f04445d500 ChangeLog 1274
-MD5 f794c4d7069b066959967e978ea0e990 fortune-mod-humorixfortunes-1.4-r1.ebuild 729
+RMD160 ffcae8fbe724e0fa4d5e66a41ff4264a5616eb77 ChangeLog 1274
+SHA256 7112e143004d7dafe994e3ecae9e6f2d7df3fc1808dbb2001f3084313a42bff3 ChangeLog 1274
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 5d8a53e99c9ffd3db76d7b24a79b42b2 files/digest-fortune-mod-humorixfortunes-1.4-r1 70
+RMD160 57f7ec314144cc5085d091763d6c898005baadcb files/digest-fortune-mod-humorixfortunes-1.4-r1 70
+SHA256 5a2b122ed83337d89951535cb86ecad58e14d3baaa08f450ebc9f1cc3f2c0add files/digest-fortune-mod-humorixfortunes-1.4-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuxmgamhnQswr0vIRAinVAJ9NFWhJR3XHLG+2ZpUDdyTcWVNMAQCcDJc+
+fqOGL623t9/YsCl15SmwriU=
+=tb0f
+-----END PGP SIGNATURE-----

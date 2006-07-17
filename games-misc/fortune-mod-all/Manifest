@@ -1,6 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD fortune-mod-all-1.ebuild 1722 RMD160 80a7cbe724ed45e40ddf73d5276a5b96232c6f33 SHA1 20fb9d580f9a02c92e4f1eceb19993fe6186281f SHA256 990f7eb0fcc65b67d3c98870a77e6de4ec6705821fbe9529d87652d4432bf4fa
 MD5 586a3985cd3c48780f50e877eed7264d fortune-mod-all-1.ebuild 1722
 RMD160 80a7cbe724ed45e40ddf73d5276a5b96232c6f33 fortune-mod-all-1.ebuild 1722
@@ -16,10 +19,17 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-fortune-mod-all-1 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-fortune-mod-all-1 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-fortune-mod-all-1 1
------BEGIN PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
 iD8DBQFEuxhiamhnQswr0vIRAs4sAKCxsVynU9VlXySD3blwvYnMnBpR9wCdF/Ch
 WKT96l9BYgCOp+iUeuPhr3w=
 =K0rG
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuxhyamhnQswr0vIRAjPQAJ4pXWVl0uodx2JCkhjvRMYXgmH71QCgs1KH
+rUdzi9EZS9P65yVKSTHOS4g=
+=HRe7
 -----END PGP SIGNATURE-----

@@ -1,4 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST fortune-hitchhiker.tgz 11586
+EBUILD fortune-mod-hitchhiker-0.1.ebuild 721 RMD160 e0e601cf4a6572c37dd1f1ebdde7ae07dbcccf4e SHA1 4402937e235524e60191b16fd612c45cd95391ee SHA256 39676f7a485a359c22adde1ace62d8c12b4e62858ec6c200eaf6ff2c877742e7
+MD5 2a9b8b41e3fdad5cb6034c12fb1e69f9 fortune-mod-hitchhiker-0.1.ebuild 721
+RMD160 e0e601cf4a6572c37dd1f1ebdde7ae07dbcccf4e fortune-mod-hitchhiker-0.1.ebuild 721
+SHA256 39676f7a485a359c22adde1ace62d8c12b4e62858ec6c200eaf6ff2c877742e7 fortune-mod-hitchhiker-0.1.ebuild 721
+MISC ChangeLog 935 RMD160 0459b6b3b0eec28b824cc26fd686c7fc089a8bae SHA1 33bb1cc1928816e9c64a5641c5f48ba326f214cd SHA256 4d65eeea198f1f1f474024b2f0f5fc6955f7b0fdb1322cbc76193f948e88a718
 MD5 802ad512b1eb6f4d5e290fccf2ee14e1 ChangeLog 935
-MD5 f75da9596857df11d4a82f09275e93ec fortune-mod-hitchhiker-0.1.ebuild 694
+RMD160 0459b6b3b0eec28b824cc26fd686c7fc089a8bae ChangeLog 935
+SHA256 4d65eeea198f1f1f474024b2f0f5fc6955f7b0fdb1322cbc76193f948e88a718 ChangeLog 935
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 29aa506fd3d1163117b33aea9352f526 files/digest-fortune-mod-hitchhiker-0.1 66
+RMD160 691589c1bc95102a7567ce338b1cda43dd95c420 files/digest-fortune-mod-hitchhiker-0.1 66
+SHA256 b9a11d28f7ba964ccc626e6fd7c1cb737ddca5cf025bfde3cd171146229a86ea files/digest-fortune-mod-hitchhiker-0.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFEuxl8amhnQswr0vIRAmu7AKCBRJH4pDGtk+DDsfqDR3ira1wCRgCgqmAU
+wkijrwObcRBNpTXlMPFmV/8=
+=dhVY
+-----END PGP SIGNATURE-----
