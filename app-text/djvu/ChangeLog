@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.48 2006/07/16 11:23:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.49 2006/07/17 16:13:43 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> djvu-3.5.17.ebuild:
+  Marked stable on amd64 for bug #139612
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> djvu-3.5.17.ebuild:
   hppa stable, bug #139612
