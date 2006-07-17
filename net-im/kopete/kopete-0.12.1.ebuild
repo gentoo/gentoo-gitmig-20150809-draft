@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.1.ebuild,v 1.1 2006/07/14 15:22:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.1.ebuild,v 1.2 2006/07/17 10:34:08 flameeyes Exp $
 
 inherit kde eutils
 
@@ -47,7 +47,7 @@ RDEPEND="${BOTH_DEPEND}
 	!kde-base/kopete
 	!kde-base/kdenetwork
 	!net-libs/libjingle
-	latex? ( app-text/tetex )
+	latex? ( virtual/tetex )
 	crypt? ( app-crypt/gnupg )
 	netmeeting? ( net-im/gnomemeeting )"
 
