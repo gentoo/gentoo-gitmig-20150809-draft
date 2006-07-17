@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5639 2006/07/17 18:19:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5640 2006/07/17 19:19:56 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -989,7 +989,7 @@ app-backup/mondo-rescue
 
 # Michael Sterrett <mr_bones_@gentoo.org> (04 Nov 2005)
 # Security masked due to remote exploitable bugs (bug #111421)
-games-strategy/scorched3d
+<games-strategy/scorched3d-40
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Previous SCons upgrade broke lots of packages, so latest version is getting some testing first!
