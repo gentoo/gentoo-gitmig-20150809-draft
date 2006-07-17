@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.294 2006/07/15 23:04:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.295 2006/07/17 06:02:18 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -138,19 +138,19 @@ else
 		[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 		[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 		[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
-	fi
 
-	# gcc-{nios2,bfin} don't accept these
-	if [[ ${PN} == "gcc" ]] ; then
-		IUSE="${IUSE} ip28 ip32r10k n32 n64"
-	fi
+		# gcc-{nios2,bfin} don't accept these
+		if [[ ${PN} == "gcc" ]] ; then
+			IUSE="${IUSE} ip28 ip32r10k n32 n64"
+		fi
 
-	# these are features introduced in 4.0
-	if tc_version_is_at_least "4.0" ; then
-		IUSE="${IUSE} objc-gc mudflap"
-
-		if tc_version_is_at_least "4.1" ; then
-			IUSE="${IUSE} objc++"
+		# these are features introduced in 4.0
+		if tc_version_is_at_least "4.0" ; then
+			IUSE="${IUSE} objc-gc mudflap"
+	
+			if tc_version_is_at_least "4.1" ; then
+				IUSE="${IUSE} objc++"
+			fi
 		fi
 	fi
 
@@ -516,11 +516,12 @@ libc_has_ssp() {
 # This is to make sure we don't accidentally try to enable support for a
 # language that doesnt exist. GCC 3.4 supports f77, while 4.0 supports f95, etc.
 #
-# Travis Tilley <lv@gentoo.org> (26 Oct 2004)
-#
+# Also add a hook so special ebuilds (kgcc64) can control which languages
+# exactly get enabled
 gcc-lang-supported() {
-	grep ^language=\"${1}\" "${S}"/gcc/*/config-lang.in > /dev/null && return 0
-	return 1
+	grep ^language=\"${1}\" "${S}"/gcc/*/config-lang.in > /dev/null || return 1
+	[[ -z ${TOOLCHAIN_ALLOWED_LANGS} ]] && return 0
+	has $1 ${TOOLCHAIN_ALLOWED_LANGS}
 }
 
 #----<< support checks >>----
@@ -2207,7 +2208,7 @@ disgusting_gcc_multilib_HACK() {
 disable_multilib_libjava() {
 	if is_gcj ; then
 		# We dont want a multilib libjava, so lets use this hack taken from fedora
-		pushd ${S} > /dev/null
+		pushd "${S}" > /dev/null
 		sed -i -e 's/^all: all-redirect/ifeq (\$(MULTISUBDIR),)\nall: all-redirect\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
 		sed -i -e 's/^install: install-redirect/ifeq (\$(MULTISUBDIR),)\ninstall: install-redirect\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
 		sed -i -e 's/^check: check-redirect/ifeq (\$(MULTISUBDIR),)\ncheck: check-redirect\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
@@ -2240,64 +2241,50 @@ is_uclibc() {
 	[[ ${CTARGET} == *-uclibc ]]
 }
 
-is_allowed() {
-	return 0
-#	[[ -z ${TOOLCHAIN_ALLOWED_LANGS} ]] && return 0
-#	[[ " ${TOOLCHAIN_ALLOWED_LANGS} " != " "*$1*" " ]]
-}
-
 is_cxx() {
 	gcc-lang-supported 'c++' || return 1
-	is_allowed 'c++' || return 1
 	use build && return 1
 	! use nocxx
 }
 
 is_f77() {
 	gcc-lang-supported f77 || return 1
-	is_allowed 'f77' || return 1
 	use build && return 1
 	use fortran
 }
 
 is_f95() {
 	gcc-lang-supported f95 || return 1
-	is_allowed 'f95' || return 1
 	use build && return 1
 	use fortran
 }
 
 is_fortran() {
 	gcc-lang-supported fortran || return 1
-	is_allowed 'fortran' || return 1
 	use build && return 1
 	use fortran
 }
 
 is_gcj() {
 	gcc-lang-supported java || return 1
-	is_allowed 'gcj' || return 1
 	use build && return 1
 	use gcj
 }
 
 is_objc() {
 	gcc-lang-supported objc || return 1
-	is_allowed 'objc' || return 1
 	use build && return 1
 	use objc
 }
 
 is_objcxx() {
 	gcc-lang-supported 'obj-c++' || return 1
-	is_allowed 'obj-c++' || return 1
 	use build && return 1
 	use objc++
 }
 
 is_ada() {
 	gcc-lang-supported ada || return 1
-	is_allowed 'ada' || return 1
 	use build && return 1
 	use ada
 }
