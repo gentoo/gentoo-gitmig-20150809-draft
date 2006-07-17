@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST fortune-mod-smac-0.1.tar.gz 22205
-EBUILD fortune-mod-smac-0.1.ebuild 658 RMD160 08dedc255dbf017df8a710606e15865cbbb69e7b SHA1 6b67b84c8ad750e24f3926c26bb8b29183c148c0 SHA256 3e8bb6a30566417a9345ece534ccfbdcc203c6b9f2e578a9df73bd71da35ccd6
-MD5 fffea7a5bcb97687de76e8508e7599d4 fortune-mod-smac-0.1.ebuild 658
-RMD160 08dedc255dbf017df8a710606e15865cbbb69e7b fortune-mod-smac-0.1.ebuild 658
-SHA256 3e8bb6a30566417a9345ece534ccfbdcc203c6b9f2e578a9df73bd71da35ccd6 fortune-mod-smac-0.1.ebuild 658
+DIST fortune-mod-smac-0.1.tar.gz 22205 RMD160 28ca787cc18c3cbc3b4a2b1a75d885c9ef262e04 SHA1 0669103ef119be19b12321bfadbfae1a375a9b99 SHA256 a22cfbdfda9073aaa6ed68e0559f6d99447060dcab6a155f122b49400a0d2942
+EBUILD fortune-mod-smac-0.1.ebuild 625 RMD160 f58c51c5e4bcf937653dc3d7d30a67613cfaf59c SHA1 57057bc64a90569b4436d41d315233190b9ce5a3 SHA256 c654fe2d1206ae897b603147c48eeb3209c812b8d05f631a26cd506ac65516b9
+MD5 3a101c261cb58364f6a4a9ea86320c98 fortune-mod-smac-0.1.ebuild 625
+RMD160 f58c51c5e4bcf937653dc3d7d30a67613cfaf59c fortune-mod-smac-0.1.ebuild 625
+SHA256 c654fe2d1206ae897b603147c48eeb3209c812b8d05f631a26cd506ac65516b9 fortune-mod-smac-0.1.ebuild 625
 MISC ChangeLog 805 RMD160 dc6c7ff683aa2569955a3d915f5cd6e20a67ae9c SHA1 8a9a2e2817dc537dc71aecef03f301ba8efa2a3e SHA256 98a5514dfa2e70113f0ae9f31387a97a7dcc481431e1105c4feacc3c58c6e3cf
 MD5 67878ddb0c50687db30a1cf1c182618e ChangeLog 805
 RMD160 dc6c7ff683aa2569955a3d915f5cd6e20a67ae9c ChangeLog 805
@@ -14,13 +14,13 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 7509f3036bc993611b8b86f39244af7b files/digest-fortune-mod-smac-0.1 71
-RMD160 8005485279aef431136cd302d45bf015297cbc65 files/digest-fortune-mod-smac-0.1 71
-SHA256 99682b34643c7f20e99e60541bef941ded57fc131fb8802e2b2e3d62f3cd208d files/digest-fortune-mod-smac-0.1 71
+MD5 5b446daf7a5dc62eaf8b85e84d13024c files/digest-fortune-mod-smac-0.1 259
+RMD160 cb9409c68f5b08c10a48feb8693797fb5854b7e7 files/digest-fortune-mod-smac-0.1 259
+SHA256 896ff71a5ab96326ad461bdce79634bf069c4422bcd82a188b12779fb2296263 files/digest-fortune-mod-smac-0.1 259
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEuxpDamhnQswr0vIRAuwEAJ4ieNTVaqrDdW0vWC4Fao2k8/KslACgiU4v
-vhIzbnAUJoZg+wW4Odd29qw=
-=JH3G
+iD8DBQFEuyDQamhnQswr0vIRAsy5AJ0VmpDYZYvJMBDNXJ4i0a6S/lW23gCgir/O
+ZsPJZb0lONKzMjSS1z4qAS0=
+=XcIg
 -----END PGP SIGNATURE-----
