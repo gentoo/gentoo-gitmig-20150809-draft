@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.8 2006/07/10 15:33:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.9 2006/07/17 19:15:57 superlag Exp $
+
+  17 Jul 2006; Aaron Kulbe <superlag@gentoo.org> File-HomeDir-0.52.ebuild,
+  File-HomeDir-0.58.ebuild:
+  Adding ~amd64 to satisfy CPAN-Mini dependency.
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> File-HomeDir-0.52.ebuild:
   Mark 0.52 stable on ia64
