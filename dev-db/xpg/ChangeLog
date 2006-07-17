@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/xpg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xpg/ChangeLog,v 1.5 2006/07/15 10:57:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xpg/ChangeLog,v 1.6 2006/07/17 14:51:17 nichoj Exp $
+
+*xpg-0.1-r1 (17 Jul 2006)
+
+  17 Jul 2006; Joshua Nichols <jnichols@gentoo.org> metadata.xml,
+  +xpg-0.1-r1.ebuild:
+  Added java to metadata. Revision bump to support new build system.
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove SeJo from metadata.xml as he's retired.
