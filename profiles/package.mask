@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5636 2006/07/17 17:34:06 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5637 2006/07/17 17:46:48 caleb Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1051,12 +1051,6 @@ games-rpg/nwn-data
 # guy.
 >=games-board/ggz-kde-client-0.0.11
 >=games-board/ggz-kde-games-0.0.11
-
-# Gregorio Guidi <greg_g@gentoo.org> (19 Sep 2005)
-# Qt-3.3.5 causes a lot of compilation failures.
-# See bug #106402.
-~x11-libs/qt-embedded-3.3.5
-~dev-db/qt-unixODBC-3.3.5
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
