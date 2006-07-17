@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5635 2006/07/17 17:28:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5636 2006/07/17 17:34:06 malverian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Package is a maintenance nightmare, it has depended
+# on unreleased versions of several other packages
+# for a very long time. This doesn't appear to be
+# changing any time in the near future.
+# Candidate for treecleaners
+games-rpg/planeshift
 
 # Marc Hildebrand <zypher@gentoo.org> (17 Jul 2006)
 # media-video/piave, media-video/kdenlive-0.2.4
