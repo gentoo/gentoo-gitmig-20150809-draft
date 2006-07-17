@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.8 2006/06/14 01:06:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.9 2006/07/17 16:24:50 liquidx Exp $
+
+  17 Jul 2006; Alastair Tse <liquidx@gentoo.org> -numpy-0.9.6.ebuild,
+  -numpy-0.9.6-r1.ebuild, numpy-0.9.8.ebuild:
+  Stable bump for x86. Block on !dev-python/f2py because numpy provides
+  this package. (#131833)
 
 *numpy-0.9.8 (14 Jun 2006)
 

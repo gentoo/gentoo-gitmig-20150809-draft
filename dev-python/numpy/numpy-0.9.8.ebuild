@@ -1,18 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.8.ebuild,v 1.1 2006/06/14 01:06:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.8.ebuild,v 1.2 2006/07/17 16:24:50 liquidx Exp $
 
 inherit distutils
 
 DESCRIPTION="Multi-dimensional array object and processing for Python."
 SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz"
 HOMEPAGE="http://numeric.scipy.org/"
+# numpy provides the latest version of dev-python/f2py
 DEPEND=">=dev-lang/python-2.3
+	!dev-python/f2py
 	lapack? ( virtual/blas
 		virtual/lapack )"
 IUSE="lapack"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 LICENSE="BSD"
 
 src_unpack() {
