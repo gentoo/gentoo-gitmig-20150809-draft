@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.118 2006/07/16 19:39:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.119 2006/07/17 16:52:38 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> pygtk-2.8.6.ebuild:
+  Marked stable on amd64 for bug #139612
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> pygtk-2.8.6.ebuild:
   hppa stable, bug #139612
