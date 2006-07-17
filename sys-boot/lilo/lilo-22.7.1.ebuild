@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.1.ebuild,v 1.1 2006/01/07 13:42:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.7.1.ebuild,v 1.2 2006/07/17 20:40:09 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -60,6 +60,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# lilo needs this. bug 140209
+	export LC_ALL=C
+
 	# hardened automatic PIC plus PIE building should be suppressed
 	# because of assembler instructions that cannot be compiled PIC
 	HARDENED_CFLAGS="`test-flags-CC -fno-pic -nopie`"
