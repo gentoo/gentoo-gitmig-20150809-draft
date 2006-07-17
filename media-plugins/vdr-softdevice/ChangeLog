@@ -1,6 +1,20 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.8 2006/07/15 17:43:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.9 2006/07/17 10:14:17 zzam Exp $
+
+*vdr-softdevice-0.2.3.20060511-r7 (17 Jul 2006)
+
+  17 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-softdevice-0.2.3-picture-settings-use-defaults.diff,
+  -vdr-softdevice-0.2.3.20060511.ebuild,
+  -vdr-softdevice-0.2.3.20060511-r1.ebuild,
+  -vdr-softdevice-0.2.3.20060511-r2.ebuild,
+  -vdr-softdevice-0.2.3.20060511-r3.ebuild,
+  -vdr-softdevice-0.2.3.20060511-r4.ebuild,
+  -vdr-softdevice-0.2.3.20060511-r5.ebuild,
+  -vdr-softdevice-0.2.3.20060511-r6.ebuild,
+  +vdr-softdevice-0.2.3.20060511-r7.ebuild, -vdr-softdevice-0.2.3a.ebuild:
+  Added patch for handling default-picture settings. Removed older versions.
 
 *vdr-softdevice-0.2.3.20060511-r6 (15 Jul 2006)
 

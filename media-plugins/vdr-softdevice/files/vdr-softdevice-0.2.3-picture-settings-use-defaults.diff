@@ -1,0 +1,141 @@
+Index: setup-softdevice.c
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/setup-softdevice.c,v
+retrieving revision 1.45
+diff -u -r1.45 setup-softdevice.c
+--- setup-softdevice.c	25 Jun 2006 13:46:12 -0000	1.45
++++ setup-softdevice.c	16 Jul 2006 19:48:50 -0000
+@@ -91,6 +91,8 @@
+ {
+   xvAspect      = 1;   // XV_FORMAT_NORMAL;
+   xvMaxArea     = 0;
++  xvFullscreen  = 0;
++  xvUseDefaults = 0;
+   outputMethod  = 0;
+   cropMode      = 0;
+   cropModeToggleKey = 0;
+Index: setup-softdevice.h
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/setup-softdevice.h,v
+retrieving revision 1.32
+diff -u -r1.32 setup-softdevice.h
+--- setup-softdevice.h	25 Jun 2006 13:46:12 -0000	1.32
++++ setup-softdevice.h	16 Jul 2006 19:48:51 -0000
+@@ -125,6 +125,7 @@
+     int   xvAspect;
+     int   xvMaxArea;
+     int   xvFullscreen;
++    int   xvUseDefaults;
+     int   outputMethod;
+     int   pixelFormat;
+     bool  pixelFormatLocked;
+Index: softdevice.c
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/softdevice.c,v
+retrieving revision 1.64
+diff -u -r1.64 softdevice.c
+--- softdevice.c	11 Jul 2006 20:31:37 -0000	1.64
++++ softdevice.c	16 Jul 2006 19:48:52 -0000
+@@ -368,6 +368,8 @@
+   {
+     esyslog("[softdevice] could not load (%s)[%s] exiting\n",
+             subPluginFileName, err);
++    fprintf(stderr,"[softdevice] could not load (%s)[%s] exiting\n",
++            subPluginFileName, err);
+     exit(1);
+   }
+ }
+@@ -705,6 +707,7 @@
+   "  -vo xv:aspect=normal     use a  4:3 display area (768x576)\n"
+   "  -vo xv:max-area          use maximum available area\n"
+   "  -vo xv:full              startup fullscreen\n"
++  "  -vo xv:use-defaults      don't change brigtness etc on startup\n"
+ #endif
+ #ifdef FB_SUPPORT
+   "  -vo fb:                  enable output via framebuffer\n"
+@@ -782,6 +785,11 @@
+               fprintf (stderr,
+                        "[ProcessArgs] xv: start up fullscreen\n");
+               vo_argv += 4;
++            } else if (!strncmp (vo_argv, "use-defaults", 12)) {
++              fprintf (stderr,
++                       "[ProcessArgs] xv: don't change brigtness etc on startup\n");
++              setupStore.xvUseDefaults=true;
++              vo_argv += 12;
+             } else {
+                     fprintf(stderr,"[softdevice] ignoring unrecognized option \"%s\"!\n",argv[i]);
+                     esyslog("[softdevice] ignoring unrecognized option \"%s\"\n",argv[i]);
+Index: video-xv.c
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/video-xv.c,v
+retrieving revision 1.57
+diff -u -r1.57 video-xv.c
+--- video-xv.c	16 Jul 2006 02:09:22 -0000	1.57
++++ video-xv.c	16 Jul 2006 19:48:54 -0000
+@@ -126,6 +126,21 @@
+ 
+ /* ---------------------------------------------------------------------------
+  */
++int cXvPortAttributeStore::GetValuePercent(int index)
++{
++      int value = portAttributeCurrentValues[index];
++
++      value = (int) (((double) value - (double) portAttributes[index].min_value) * 100.0
++              / ((double) portAttributes[index].max_value - (double) portAttributes[index].min_value));
++
++      if (value <= 100 &&
++          value >= 0)
++        return value;
++      return 0;
++}
++
++/* ---------------------------------------------------------------------------
++ */
+ void cXvPortAttributeStore::SetValuePercent(char *name, int value)
+ {
+   for (int i = 0; i < portAttributeCount; ++i)
+@@ -217,13 +232,29 @@
+         portAttributeCurrentValues[i] = portAttributeSaveValues[i];
+       }
+       if (!strcmp(portAttributes[i].name, "XV_BRIGHTNESS"))
++      {
+         setupStore->vidCaps |= CAP_BRIGHTNESS;
++        if (setupStore->xvUseDefaults)
++                setupStore->vidBrightness = currBrightness = GetValuePercent(i);
++      }
+       if (!strcmp(portAttributes[i].name, "XV_CONTRAST"))
++      {
+         setupStore->vidCaps |= CAP_CONTRAST;
++        if (setupStore->xvUseDefaults)
++                setupStore->vidContrast = currContrast = GetValuePercent(i);
++      }
+       if (!strcmp(portAttributes[i].name, "XV_HUE"))
++      {
+         setupStore->vidCaps |= CAP_HUE;
++        if (setupStore->xvUseDefaults)
++                setupStore->vidHue = currHue = GetValuePercent(i);
++      }
+       if (!strcmp(portAttributes[i].name, "XV_SATURATION"))
++      {
+         setupStore->vidCaps |= CAP_SATURATION;
++        if (setupStore->xvUseDefaults)
++                setupStore->vidSaturation = currSaturation = GetValuePercent(i);
++      }
+ 
+       dsyslog("[XvVideoOut]:"
+               "   %-25s %-4sXvGettable %-4sXvSettable "
+Index: video-xv.h
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/video-xv.h,v
+retrieving revision 1.21
+diff -u -r1.21 video-xv.h
+--- video-xv.h	27 May 2006 19:12:42 -0000	1.21
++++ video-xv.h	16 Jul 2006 19:48:54 -0000
+@@ -91,6 +91,7 @@
+   void SetXInfo(Display *dpy, XvPortID port, cSetupStore *setupStore);
+   void SetValue(char *name, int value);
+   void SetValuePercent(char *name, int value);
++  int GetValuePercent(int index);
+   void SetColorkey(int value);
+   void Increment(char *name);
+   void Decrement(char *name);
