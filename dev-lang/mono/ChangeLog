@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.88 2006/07/14 18:16:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.89 2006/07/17 15:42:01 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> mono-1.1.13.6.ebuild:
+  Marked stable on amd64 for bug #139612
 
   14 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   mono-1.1.13.6.ebuild:
