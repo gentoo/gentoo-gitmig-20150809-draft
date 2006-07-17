@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.7 2006/01/10 23:07:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.8 2006/07/17 04:39:59 vapier Exp $
 
 inherit eutils games
 
 DESCRIPTION="shoot through crazy psychedelic 3D environments"
-HOMEPAGE="http://www.pompom.org.uk/"
+HOMEPAGE="http://www.pompomgames.com/"
 SRC_URI="ftp://ggdev-1.homelan.com/mutantstorm/MutantStormDemo_${PV/./_}.sh.bin"
 
 LICENSE="POMPOM"
