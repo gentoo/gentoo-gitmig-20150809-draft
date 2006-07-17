@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libart_lgpl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.38 2006/04/01 02:57:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libart_lgpl/ChangeLog,v 1.39 2006/07/17 16:48:21 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Marked stable on amd64 for bug #139612
 
   01 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   libart_lgpl-2.3.17.ebuild:
