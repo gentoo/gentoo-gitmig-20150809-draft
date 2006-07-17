@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glib-java
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.10 2006/07/14 18:21:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/ChangeLog,v 1.11 2006/07/17 19:11:57 dang Exp $
+
+  17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
+  glib-java-0.2.3-r1.ebuild:
+  Marked stable on amd64 for bug #139612
 
   14 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   glib-java-0.2.3-r1.ebuild:
