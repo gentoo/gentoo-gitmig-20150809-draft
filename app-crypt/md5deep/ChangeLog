@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/md5deep
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.18 2006/07/16 07:06:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md5deep/ChangeLog,v 1.19 2006/07/18 21:34:34 hansmi Exp $
+
+  18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> md5deep-1.8.ebuild:
+  Stable on ppc.
 
 *md5deep-1.12 (16 Jul 2006)
 
