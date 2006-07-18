@@ -278,7 +278,7 @@ java-pkg_newjar() {
 	local new_jar_dest="${T}/${new_jar}"
 
 	[[ -z ${original_jar} ]] && die "Must specify a jar to install"
-	[[ ! -f ${original_jar} ]] && die "${new_jar} does not exist!"
+	[[ ! -f ${original_jar} ]] && die "${original_jar} does not exist!"
 
 	rm -f "${new_jar_dest}" || die "Failed to remove ${new_jar_dest}"
 	cp "${original_jar}" "${new_jar_dest}" \
@@ -1233,7 +1233,9 @@ eant() {
 ejavac() {
 	debug-print-function ${FUNCNAME} $*
 
-	local compiler_executable=$(java-pkg_get-javac)
+	# FIXME using get-javac ends up printing stuff with einfo
+#	local compiler_executable=$(java-pkg_get-javac)
+	local compiler_executable="javac"
 
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ${compiler_executable} $(java-pkg_javac-args) "${@}"
 	${compiler_executable} $(java-pkg_javac-args) "${@}" || die "ejavac failed"
