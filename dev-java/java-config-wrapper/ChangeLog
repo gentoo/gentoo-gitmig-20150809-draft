@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.9 2006/07/18 00:12:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.10 2006/07/18 00:21:26 nichoj Exp $
+
+  18 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
+  java-config-wrapper-0.10-r1.ebuild:
+  Added rdepend on portage-utils, as per bug #140750
 
 *java-config-wrapper-0.10-r1 (18 Jul 2006)
 
