@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.3 2006/07/16 21:05:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.4 2006/07/18 21:33:18 langthang Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils gnuconfig flag-o-matic autotools
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -59,6 +59,11 @@ src_unpack() {
 	cd ${S}
 	use norewrite && epatch ${FILESDIR}/norewrite.patch
 	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
+	if ! use fam ; then
+		epatch ${FILESDIR}/fam-disable-check.patch
+		cd ${S}/maildir
+		eautoreconf
+	fi
 }
 
 src_compile() {
@@ -76,17 +81,7 @@ src_compile() {
 	[ -e /etc/mime.types ] && \
 		myconf="${myconf} --enable-mimetypes=/etc/mime.types"
 
-	use fam || (
-		epatch ${FILESDIR}/fam-disable-check.patch
-		export WANT_AUTOCONF="2.5"
-		gnuconfig_update
-		cd ${S}/maildir
-		libtoolize --copy --force
-		ebegin "Recreating maildir without fam"
-		autoconf ||  die "recreate maildir failed"
-		eend $?
-		myconf="${myconf} --without-fam"
-	)
+	myconf="${myconf} $(use_with fam)"
 
 	einfo "Configuring courier: `echo ${myconf} | xargs echo`"
 

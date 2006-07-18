@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.73 2006/07/16 21:05:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.74 2006/07/18 21:33:18 langthang Exp $
+
+  18 Jul 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/fam-disable-check.patch, courier-0.53.2.ebuild:
+  add fam-disable-check patch. Bug #140883.
+  mv epatch to src_unpack and use eautoreconf instead.
 
   16 Jul 2006; Jason Wever <weeve@gentoo.org> courier-0.53.2.ebuild:
   Stable on SPARC wrt security bug #135005.
