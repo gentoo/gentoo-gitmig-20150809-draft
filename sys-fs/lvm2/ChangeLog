@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.75 2006/06/23 15:42:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.76 2006/07/18 18:31:59 tsunam Exp $
+
+  18 Jul 2006; Joshua Jackson <tsunam@gentoo.org> lvm2-2.02.06.ebuild:
+  Stable x86; bug #131662
 
 *lvm2-2.02.06 (23 Jun 2006)
 
