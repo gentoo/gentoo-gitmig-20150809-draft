@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.119 2006/07/17 14:36:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.120 2006/07/18 01:46:44 allanonjl Exp $
+
+*gnome-terminal-2.14.2-r1 (18 Jul 2006)
+
+  18 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-terminal-2.10.0.ebuild, -gnome-terminal-2.14.0.ebuild,
+  -gnome-terminal-2.14.1.ebuild, +gnome-terminal-2.14.2-r1.ebuild:
+  re-enable patch to report as "gnome" and not "xterm". see #91055 and
+  #122566. archs, this revision is not to be stabled with 2.14.2.
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
   gnome-terminal-2.14.2.ebuild:
