@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.10 2005/05/17 06:02:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.11 2006/07/18 07:59:25 flameeyes Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.greyhelm.com/pub/Games/Moria/source/um${PV}.tar.Z
 
 LICENSE="Moria"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5"
@@ -29,7 +29,8 @@ src_unpack() {
 
 	epatch \
 		"${FILESDIR}"/${PV}-gentoo-paths.patch \
-		"${FILESDIR}"/${PV}-glibc.patch
+		"${FILESDIR}"/${PV}-glibc.patch \
+		"${FILESDIR}"/${PV}-fbsd.patch
 
 	for f in source/* unix/* ; do
 		ln -s ${f} $(basename ${f})
