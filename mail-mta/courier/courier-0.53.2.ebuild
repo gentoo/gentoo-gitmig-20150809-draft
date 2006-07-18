@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.4 2006/07/18 21:33:18 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.53.2.ebuild,v 1.5 2006/07/18 21:43:01 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic autotools
 
@@ -59,11 +59,11 @@ src_unpack() {
 	cd ${S}
 	use norewrite && epatch ${FILESDIR}/norewrite.patch
 	use elibc_uclibc && sed -i -e 's:linux-gnu\*:linux-gnu\*\ \|\ linux-uclibc:' config.sub
-	if ! use fam ; then
-		epatch ${FILESDIR}/fam-disable-check.patch
-		cd ${S}/maildir
-		eautoreconf
-	fi
+
+	# disable link to fam.
+	epatch ${FILESDIR}/fam-disable-check.patch
+	cd ${S}/maildir
+	eautoreconf
 }
 
 src_compile() {
