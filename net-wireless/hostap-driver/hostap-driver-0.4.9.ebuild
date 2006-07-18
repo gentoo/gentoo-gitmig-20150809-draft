@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.9.ebuild,v 1.2 2006/06/26 22:09:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.9.ebuild,v 1.3 2006/07/18 12:30:57 genstef Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -13,7 +13,8 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="pcmcia"
 SLOT="0"
 
-RDEPEND=">=net-wireless/wireless-tools-25"
+RDEPEND=">=net-wireless/wireless-tools-25
+	pcmcia? ( virtual/pcmcia )"
 
 BUILD_TARGETS="all"
 MODULESD_HOSTAP_DOCS="README"
@@ -24,6 +25,34 @@ MODULESD_HOSTAP_CRYPT_CCMP_ENABLED="no"
 CONFIG_CHECK="!HOSTAP NET_RADIO"
 ERROR_HOSTAP="${P} requires the in-kernel version of the hostap driver to be disabled (CONFIG_HOSTAP)"
 ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+
+pcmcia_src_unpack() {
+	local pcmcia_tbz="${ROOT}/usr/src/pcmcia-cs/pcmcia-cs-build-env.tbz2"
+	local PCMCIA_SOURCE_DIR="${WORKDIR}/pcmcia-cs/"
+
+	# if the kernel has pcmcia support built in, then we just ignore all this.
+	if linux_chkconfig_present PCMCIA; then
+		einfo "Kernel based PCMCIA support has been detected."
+	else
+		if kernel_is 2 6; then
+			einfo "We have detected that you are running a 2.6 kernel"
+			einfo "but you are not using the built-in PCMCIA support."
+			einfo "We will assume you know what you are doing, but please"
+			einfo "consider using the built in PCMCIA support instead."
+			epause 10
+		fi
+
+		ebegin "Decompressing pcmcia-cs sources"
+		mkdir -p ${PCMCIA_SOURCE_DIR}
+		tar -xjf ${pcmcia_tbz} -C ${PCMCIA_SOURCE_DIR}
+		eend $?
+
+		if [[ -f ${PCMCIA_SOURCE_DIR}/pcmcia-cs-version ]]; then
+			PCMCIA_VERSION=$(cat ${PCMCIA_SOURCE_DIR}/pcmcia-cs-version)
+			einfo "Found pcmcia-cs-${PCMCIA_VERSION}"
+		fi
+	fi
+}
 
 pkg_setup() {
 	linux-mod_pkg_setup

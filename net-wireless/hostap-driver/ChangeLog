@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.55 2006/06/26 22:09:46 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.56 2006/07/18 12:30:57 genstef Exp $
+
+  18 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  hostap-driver-0.4.7.ebuild, hostap-driver-0.4.9.ebuild:
+  Move pcmcia functions from the eclass, bug 140116
 
   26 Jun 2006; Henrik Brix Andersen <brix@gentoo.org>
   hostap-driver-0.4.9.ebuild:
