@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.5 2006/07/18 17:43:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.6 2006/07/18 22:22:05 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -41,6 +41,7 @@ pkg_setup() {
 	fi
 
 	enewgroup audio 18 # Just make sure it exists
+	enewgroup pulse-access
 	enewgroup pulse
 	enewuser pulse -1 -1 /var/run/pulse pulse,audio
 }
@@ -103,12 +104,23 @@ src_install() {
 	#  - use socket at /var/run/pulse/native
 	#  - enable anonymous access (relies on filesystem-level access to the socket)
 	#  - changes the dafault server path for the clients
-	sed -i -e '/load-module module-native-protocol-unix/s:$: auth-anonymous=1 socket=/var/run/pulse/native:' \
-		"${D}/etc/pulse/default.pa"
-	sed -i -e '/default-server/d' "${D}/etc/pulse/client.conf"
+	sed -e '/load-module module-native-protocol-unix/s:$: auth-anonymous=1 socket=/var/run/pulse/native:' \
+		"${D}/etc/pulse/default.pa" > "${D}/etc/pulse/system.pa"
+	cp "${D}"/etc/pulse/client.conf{,.system}
+	sed -i -e '/default-server/d' "${D}/etc/pulse/client.conf.system"
 	echo "default-server = unix:/var/run/pulse/native" >> \
-		"${D}/etc/pulse/client.conf"
+		"${D}/etc/pulse/client.conf.system"
 
 	dohtml -r doc
 	dodoc README doc/todo
+}
+
+pkg_postinst() {
+	elog "PulseAudio in Gentoo can use a system-wide pulseaudio daemon."
+	elog "This support is enabled by starting the pulsedaemon init.d and is configured"
+	elog "to read the settings from /etc/pulse/system.pa ."
+	elog "To be able to use that global daemon, you need also to replace the configuration"
+	elog "file /etc/pulse/client.conf with the copy in /etc/pulse/client.conf.system"
+	elog "(or to put it in your ~/.pulse/client.conf)."
+	elog "To be able to access that you need to be in the group pulse-access."
 }
