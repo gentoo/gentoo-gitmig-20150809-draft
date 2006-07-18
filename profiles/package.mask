@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5643 2006/07/18 13:14:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5644 2006/07/18 18:52:19 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -466,9 +466,8 @@ games-strategy/netpanzer
 games-mud/kmc
 
 # Carsten Lohrke <carlo@gentoo.org> (20 May 2006)
-# Digikam and KTorrent pre release versions
+# KTorrent pre release versions
 >=net-p2p/ktorrent-2.0_beta1
->=media-gfx/digikam-0.8.2_rc1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (19 May 2006)
 # Masked to force people to "downgrade" to the lower version.  The ebuild is the
