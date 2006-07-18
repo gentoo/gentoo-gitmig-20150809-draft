@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.120 2006/07/18 01:46:44 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.121 2006/07/18 01:59:38 allanonjl Exp $
+
+  18 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gnome-terminal-2.13.90-TERM-gnome.patch:
+  need the patch too
 
 *gnome-terminal-2.14.2-r1 (18 Jul 2006)
 
