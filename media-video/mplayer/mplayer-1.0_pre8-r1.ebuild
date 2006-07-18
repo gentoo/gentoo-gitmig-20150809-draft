@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.6 2006/07/15 20:52:49 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.7 2006/07/18 17:55:18 wolf31o2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,7 +35,9 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
-	win32codecs? ( >=media-libs/win32codecs-20040916 )
+	win32codecs? (
+		!livecd? (
+			!bindist? ( >=media-libs/win32codecs-20040916 ) ) )
 	x86? ( real? ( >=media-video/realplayer-10.0.3 ) )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
@@ -333,7 +335,8 @@ src_compile() {
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	use x86 && myconf="${myconf} $(use_enable real)"
-	myconf="${myconf} $(use_enable win32codecs win32)"
+	!use livecd && !use bindist && \
+		myconf="${myconf} $(use_enable win32codecs win32)"
 
 	#############
 	# Video Output #
