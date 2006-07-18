@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.169 2006/06/30 20:49:21 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.170 2006/07/18 13:51:50 wolf31o2 Exp $
+
+  18 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  koffice-1.5.1-r1.ebuild:
+  Stable on amd64 and x86 wrt bug #138099.
 
   30 Jun 2006; Lars Weiler <pylon@gentoo.org> koffice-1.5.1-r1.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.
