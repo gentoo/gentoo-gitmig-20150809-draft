@@ -1,6 +1,14 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.10 2006/05/09 12:04:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.11 2006/07/18 21:13:32 flameeyes Exp $
+
+*freebsd-share-6.1-r1 (18 Jul 2006)
+
+  18 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-share-6.1-utf8.patch, -freebsd-share-6.1.ebuild,
+  +freebsd-share-6.1-r1.ebuild:
+  Drop the symlink patch that breaks UTF-8 support, and add patch for proper
+  UTF-8 CTYPE, thanks to Timothy Redaelli for the help.
 
   09 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-share-6.1.ebuild:
