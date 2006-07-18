@@ -1,6 +1,12 @@
 # ChangeLog for app-office/pybliographer
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.10 2005/12/06 22:45:49 marienz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/pybliographer/ChangeLog,v 1.11 2006/07/18 17:02:29 nattfodd Exp $
+
+*pybliographer-1.2.9 (18 Jul 2006)
+
+  18 Jul 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  +pybliographer-1.2.9.ebuild:
+  Bump to 1.2.9 (requested in bug #130696).
 
   06 Dec 2005; Marien Zwart <marienz@gentoo.org> pybliographer-1.2.4.ebuild,
   pybliographer-1.2.6.2.ebuild:
