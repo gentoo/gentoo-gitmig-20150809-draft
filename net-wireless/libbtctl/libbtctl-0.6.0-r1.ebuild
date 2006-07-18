@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.6.0-r1.ebuild,v 1.3 2006/06/26 14:49:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.6.0-r1.ebuild,v 1.4 2006/07/18 21:54:44 hansmi Exp $
 
 inherit gnome2 mono multilib eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://usefulinc.com/software/gnome-bluetooth/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="mono doc"
 
 RDEPEND=">=dev-libs/glib-2
