@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adodb-py
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.14 2006/07/16 14:35:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.15 2006/07/18 21:43:00 hansmi Exp $
+
+  18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> adodb-py-2.00.ebuild:
+  Stable on ppc.
 
 *adodb-py-2.01 (16 Jul 2006)
 
