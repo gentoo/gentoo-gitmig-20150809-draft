@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0-r1.ebuild,v 1.1 2006/07/17 14:56:37 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0-r1.ebuild,v 1.2 2006/07/18 13:15:29 allanonjl Exp $
 
 inherit eutils gnome2 python autotools
 
@@ -33,6 +33,7 @@ src_unpack() {
 	ln -s /bin/true ${S}/py-compile
 	echo "py_compile = /bin/true" > common/python.mk
 
+	intltoolize --force --copy || die
 	AT_M4DIR="common" eautoreconf
 }
 
