@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5642 2006/07/18 01:00:14 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5643 2006/07/18 13:14:35 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (18 Jul 2006)
+# Masked for removal, please use ekiga now, #136615
+net-im/gnomemeeting
 
 # Tuấn Văn <langthang@gentoo.org> (15 Jul 2006)
 # Initial import. Masked for testing
