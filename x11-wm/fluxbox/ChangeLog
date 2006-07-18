@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.191 2006/07/16 12:01:28 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.192 2006/07/18 19:50:31 herbs Exp $
+
+  18 Jul 2006; Herbie Hopkins <herbs@gentoo.org> fluxbox-0.9.15.1-r1.ebuild:
+  Stable on amd64 wrt bug #139876.
 
   16 Jul 2006; Rene Nussbaumer <killerfox@gentoo.org>
   fluxbox-0.9.15.1-r1.ebuild:
