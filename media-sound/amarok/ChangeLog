@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.150 2006/07/13 15:29:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.151 2006/07/18 17:53:33 tsunam Exp $
+
+  18 Jul 2006; Joshua Jackson <tsunam@gentoo.org> amarok-1.4.0a-r1.ebuild:
+  Stable x86; bug #139095
 
 *amarok-1.4.1-r2 (13 Jul 2006)
 
@@ -11,6 +14,9 @@
   08 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   amarok-1.4.0a-r1.ebuild:
   stable on ppc (Bug #139095)
+
+  05 Jul 2006; Joshua Jackson <tsunam@gentoo.org> amarok-1.4.0a-r1.ebuild:
+  Stable x86; bug #139095
 
   04 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   amarok-1.4.0a-r1.ebuild:
