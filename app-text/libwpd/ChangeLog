@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.31 2006/07/12 22:42:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.32 2006/07/18 21:35:48 jer Exp $
+
+  18 Jul 2006; Jeroen Roovers <jer@gentoo.org> libwpd-0.8.4.ebuild:
+  Marking ~hppa for app-office/koffice
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> libwpd-0.8.4.ebuild:
   Mark 0.8.4 stable on ia64
