@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.75 2006/07/18 21:43:01 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.76 2006/07/18 22:10:09 hansmi Exp $
+
+  18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> courier-0.52.2.ebuild:
+  Stable on ppc.
 
   18 Jul 2006; Tuấn Văn <langthang@gentoo.org> courier-0.53.2.ebuild:
   remove conditional patch. should be always or `use_with fam` won't work.
