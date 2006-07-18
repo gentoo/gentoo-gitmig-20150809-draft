@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.16 2006/06/30 02:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.2-r3.ebuild,v 1.17 2006/07/18 05:08:21 vapier Exp $
 
 PATCH_VER="1.6"
 PATCH_GCC_VER="4.0.2"
@@ -59,6 +59,8 @@ fi
 
 src_unpack() {
 	gcc_src_unpack
+
+	use vanilla && return 0
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
 
