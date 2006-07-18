@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6d.ebuild,v 1.2 2006/07/02 20:29:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6d.ebuild,v 1.3 2006/07/18 20:07:39 the_paya Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -58,6 +58,9 @@ src_unpack() {
 
 	# use non-lazy binds for man
 	epatch "${FILESDIR}"/man-1.6b-build.patch
+
+	# Fixes compilation in FreeBSD wrt #138123
+	epatch "${FILESDIR}"/man-1.6d-fbsd.patch
 
 	strip-linguas $(eval $(grep ^LANGUAGES= configure) ; echo ${LANGUAGES//,/ })
 }
