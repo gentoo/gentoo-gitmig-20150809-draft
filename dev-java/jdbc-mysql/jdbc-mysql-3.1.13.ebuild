@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.12.ebuild,v 1.4 2006/07/18 01:28:00 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.13.ebuild,v 1.1 2006/07/18 01:28:00 nichoj Exp $
 
-inherit eutils java-pkg
+inherit eutils java-pkg-2
 
 MY_PN="mysql-connector-java"
 MY_P="${MY_PN}-${PV}"
@@ -14,19 +14,26 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="c3p0"
-RDEPEND=">=virtual/jre-1.2
+COMMON_DEP="
 	dev-java/log4j
 	c3p0? ( dev-java/c3p0 )
 	dev-java/jdbc2-stdext"
-DEPEND=">=virtual/jdk-1.2
-	${RDEPEND}
+RDEPEND=">=virtual/jre-1.2
+	${COMMON_DEP}"
+# FIXME doesn't like Java 1.6's JDBC API
+DEPEND="|| (
+		=virtual/jdk-1.3*
+		=virtual/jdk-1.4*
+		=virtual/jdk-1.5*
+	)
+	${COMMON_DEP}
 	sys-apps/sed
 	dev-java/ant-core
 	dev-java/junit"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
+ant_src_unpack() {
 	unpack ${A}
 	cd ${S}
 	rm -f *.jar
@@ -41,8 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="dist"
-	ant ${antflags} || die "ant failed"
+	eant dist
 }
 
 src_install() {
