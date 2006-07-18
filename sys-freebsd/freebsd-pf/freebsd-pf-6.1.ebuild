@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.1.ebuild,v 1.1 2006/05/09 07:39:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-6.1.ebuild,v 1.2 2006/07/18 19:30:49 the_paya Exp $
 
 inherit bsdmk freebsd
 
@@ -14,7 +14,6 @@ IUSE=""
 SRC_URI="mirror://gentoo/${USBIN}.tar.bz2
 		mirror://gentoo/${SBIN}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
-		mirror://gentoo/${LIBEXEC}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2"
 
 RDEPEND="net-libs/libpcap"
@@ -24,7 +23,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}"
 
-SUBDIRS="libexec/ftp-proxy usr.sbin/authpf sbin/pfctl sbin/pflogd"
+SUBDIRS="usr.sbin/authpf sbin/pfctl sbin/pflogd"
 
 PATCHES="${FILESDIR}/${PN}-6.0-pcap.patch"
 
