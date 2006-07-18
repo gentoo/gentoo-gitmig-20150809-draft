@@ -1,0 +1,13 @@
+--- sid-filter/sid-filter.c.orig	2006-07-17 16:01:52.000000000 -0700
++++ sid-filter/sid-filter.c	2006-07-17 16:16:37.000000000 -0700
+@@ -1867,6 +1867,10 @@
+ 	assert(ctx != NULL);
+ #endif /* !DEBUG */
+ 
++	ret = mlfi_eoh(ctx);
++	if (ret != SMFIS_CONTINUE)
++		return ret;
++
+ 	memset(stathdr, '\0', sizeof stathdr);
+ 
+ 	sic = (Context) smfi_getpriv(ctx);

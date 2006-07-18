@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/files/sid-filter.init,v 1.1 2006/07/18 01:06:48 langthang Exp $
+
+depend() {
+	# need net
+	use dns logger net
+}
+
+start() {
+	ebegin "Starting Sender-ID Filter"
+	start-stop-daemon --start --quiet --background \
+		--exec /usr/bin/sid-filter -- ${SID_FILTER_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Sender-ID Filter"
+	start-stop-daemon --stop --quiet --name sid-filter
+	eend $?
+}
