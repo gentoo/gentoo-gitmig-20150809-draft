@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.120 2006/07/17 18:23:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.121 2006/07/18 23:32:38 dang Exp $
+
+  18 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> Manifest:
+  Fix digest.
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
   gnome-utils-2.14.0.ebuild:
