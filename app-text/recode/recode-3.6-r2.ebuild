@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.7 2006/07/17 04:44:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r2.ebuild,v 1.8 2006/07/18 04:45:14 flameeyes Exp $
 
-inherit flag-o-matic eutils libtool
+inherit flag-o-matic eutils libtool toolchain-funcs
 
 DEB_VER=11
 DESCRIPTION="Convert files between various character sets"
@@ -21,15 +21,18 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-debian-${DEB_VER}.patch
 
+	# Needed under FreeBSD, too
+	epatch "${FILESDIR}"/${P}-ppc-macos.diff
+	cp lib/error.c lib/xstrdup.c src/ || die "file copy failed"
+
 	if use ppc-macos; then
-		epatch "${FILESDIR}"/${P}-ppc-macos.diff
-		cp lib/error.c lib/xstrdup.c src/ || die "file copy failed"
-		elibtoolize
 		append-ldflags -lgettextlib
 	fi
+	elibtoolize
 }
 
 src_compile() {
+	tc-export CC LD
 	econf $(use_enable nls) || die "econf failed"
 	emake || die "emake failed"
 }
