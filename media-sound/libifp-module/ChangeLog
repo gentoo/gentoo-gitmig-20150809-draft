@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/libifp-module
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/libifp-module/ChangeLog,v 1.9 2006/07/13 15:26:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/libifp-module/ChangeLog,v 1.10 2006/07/18 17:33:39 tsunam Exp $
+
+  18 Jul 2006; Joshua Jackson <tsunam@gentoo.org>
+  libifp-module-1.0.0.2.ebuild:
+  Stable x86 for libifp, and amarok
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   libifp-module-1.0.0.2.ebuild:
