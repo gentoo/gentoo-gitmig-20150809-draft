@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.2 2006/07/11 10:21:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.3 2006/07/18 11:30:43 liquidx Exp $
 
-inherit libtool eutils
+inherit libtool eutils autotools
 
 DESCRIPTION="Library that implements support for numerous digital cameras"
 HOMEPAGE="http://www.gphoto.org/"
@@ -24,7 +24,9 @@ RDEPEND="usb? (
 	hal? ( >=sys-apps/hal-0.5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc 
+		=app-text/docbook-sgml-dtd-4.2*
+	)"
 
 # By default, drivers for all supported cards will be compiled.
 # If you want to only compile for specific card(s), set CAMERAS
@@ -61,6 +63,13 @@ src_unpack() {
 
 	# make default group 'plugdev', not camera
 	sed -e 's:=camera:=plugdev:' -i packaging/linux-hotplug/usbcam.group
+
+	# fix typo for apidoc
+	# originally in : libgphoto2_port/m4/gp-documentation.m4
+	# but we save on running autoconf again by just patching configure
+	sed -i -e 's:apidocdir\}:apidocdir:g' \
+		configure \
+		libgphoto2_port/configure
 }
 
 src_compile() {
@@ -84,36 +93,19 @@ src_compile() {
 
 	econf \
 		--with-drivers=${cameras} \
+		--with-doc-dir=/usr/share/doc/${PF} \
+		--with-html-dir=/usr/share/doc/${PF}/html \
+		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
 		$(use_enable nls) \
 		$(use_enable doc docs) \
 		${myconf} || die "econf failed"
 
-	# or the documentation fails.
-	emake || die "make failed"
+	emake apidocdir=/usr/share/doc/${PF}/api || die "make failed"
 }
 
 src_install() {
-	if use usb && use kernel_linux; then
-		make DESTDIR=${D} \
-			gphotodocdir=/usr/share/doc/${PF} \
-			HTML_DIR=/usr/share/doc/${PF}/sgml \
-			hotplugdocdir=/usr/share/doc/${PF}/linux-hotplug \
-			install || die "install failed"
-	else
-		make DESTDIR=${D} \
-			gphotodocdir=/usr/share/doc/${PF} \
-			HTML_DIR=/usr/share/doc/${PF}/sgml \
-			install || die "install failed"
-	fi
-
-	# manually move apidocs
-	if use doc; then
-		dodir /usr/share/doc/${PF}/api
-		mv ${D}/usr/share/doc/libgphoto2/html/api/* ${D}/usr/share/doc/${PF}/api/
-		mv ${D}/usr/share/doc/libgphoto2_port/html/api/* ${D}/usr/share/doc/${PF}/api/
-	fi
-	rm -rf ${D}/usr/share/doc/libgphoto2
-	rm -rf ${D}/usr/share/doc/libgphoto2_port
+	make DESTDIR=${D} install \
+		apidocdir=/usr/share/doc/${PF}/api || die "install failed"
 
 	dodoc ChangeLog NEWS* README AUTHORS TESTERS MAINTAINERS HACKING CHANGES
 

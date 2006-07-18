@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6-r1.ebuild,v 1.10 2006/07/07 11:20:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.6-r1.ebuild,v 1.11 2006/07/18 11:30:43 liquidx Exp $
 
 inherit libtool eutils
 
@@ -21,9 +21,12 @@ RDEPEND="!nousb? (
 		sys-apps/hotplug
 	)
 	exif? ( >=media-libs/libexif-0.5.9 )"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc 
+		=app-text/docbook-sgml-dtd-4.2*
+	)"
 
 # By default, drivers for all supported cards will be compiled.
 # If you want to only compile for specific card(s), set CAMERAS
@@ -53,7 +56,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-2.1.2-norpm.patch
-
+	epatch ${FILESDIR}/${P}-gtk-doc-digit-attribute.patch
 	# make default group 'plugdev', not camera
 	sed -e 's:=camera:=plugdev:' -i packaging/linux-hotplug/usbcam.group
 }
