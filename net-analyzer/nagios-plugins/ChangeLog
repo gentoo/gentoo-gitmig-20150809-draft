@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.49 2006/05/15 23:52:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.50 2006/07/18 16:30:34 ramereth Exp $
+
+*nagios-plugins-1.4.3-r1 (18 Jul 2006)
+
+  18 Jul 2006; Lance Albertson <ramereth@gentoo.org>
+  +files/nagios-plugins-1.4.3-check_disk-fix.patch,
+  +files/nagios-plugins-1.4-autoconf-fix.patch,
+  -nagios-plugins-1.4.3.ebuild, +nagios-plugins-1.4.3-r1.ebuild:
+  * Fix configure.in, bug #138690
+  * Add patch for check_disk, bug #138731
+  * Clean up old ebuild
 
   15 May 2006; Robin H. Johnson <robbat2@gentoo.org>
   nagios-plugins-1.4.ebuild, nagios-plugins-1.4.1.ebuild,

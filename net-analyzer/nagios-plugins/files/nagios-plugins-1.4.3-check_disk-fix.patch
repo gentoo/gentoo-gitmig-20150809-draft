@@ -1,0 +1,65 @@
+Source: <URL:http://nagiosplug.cvs.sourceforge.net/nagiosplug/nagiosplug/plugins/check_disk.c?r1=1.64&r2=1.65&diff_format=u>
+
+--- nagiosplug-old/plugins/check_disk.c	2006/03/27 08:19:01	1.64
++++ nagiosplug-new/plugins/check_disk.c	2006/05/02 08:30:21	1.65
+@@ -14,13 +14,13 @@
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+ 
+- $Id: nagios-plugins-1.4.3-check_disk-fix.patch,v 1.1 2006/07/18 16:30:34 ramereth Exp $
++ $Id: nagios-plugins-1.4.3-check_disk-fix.patch,v 1.1 2006/07/18 16:30:34 ramereth Exp $
+  
+ *****************************************************************************/
+ 
+ const char *progname = "check_disk";
+ const char *program_name = "check_disk";  /* Required for coreutils libs */
+-const char *revision = "$Revision: 1.1 $";
++const char *revision = "$Revision: 1.1 $";
+ const char *copyright = "1999-2005";
+ const char *email = "nagiosplug-devel@lists.sourceforge.net";
+ 
+@@ -462,6 +462,8 @@
+       se->c_df = c_df;
+       se->w_dfp = w_dfp;
+       se->c_dfp = c_dfp;
++      se->w_idfp = w_idfp;
++      se->c_idfp = c_idfp;
+       se->found = 0;
+       se->found_len = 0;
+       *pathtail = se;
+@@ -480,6 +482,8 @@
+                         se->c_df = 0;
+                         se->w_dfp = 0;
+                         se->c_dfp = 0;
++			se->w_idfp = 0;
++			se->c_idfp = 0;
+       se->found = 0;
+       se->found_len = 0;
+       *dptail = se;
+@@ -497,6 +501,8 @@
+                         se->c_df = 0;
+                         se->w_dfp = 0;
+                         se->c_dfp = 0;
++			se->w_idfp = 0;
++			se->c_idfp = 0;
+       se->found = 0;
+       se->found_len = 0;
+       *fstail = se;
+@@ -519,6 +525,8 @@
+       c_df = 0;
+       w_dfp = -1.0;
+       c_dfp = -1.0;
++      w_idfp = -1.0;
++      c_idfp = -1.0;
+       break;
+     case 'V':                 /* version */
+       print_revision (progname, revision);
+@@ -547,6 +555,8 @@
+     se->c_df = c_df;
+     se->w_dfp = w_dfp;
+     se->c_dfp = c_dfp;
++    se->w_idfp = w_idfp;
++    se->c_idfp = c_idfp;
+     se->found =0;
+     se->found_len = 0;
+     *pathtail = se;
