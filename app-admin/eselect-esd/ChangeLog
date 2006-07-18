@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-esd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-esd/ChangeLog,v 1.1 2006/07/18 23:59:36 flameeyes Exp $
+
+*eselect-esd-20060719 (18 Jul 2006)
+
+  18 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +eselect-esd-20060719.ebuild:
+  Initial import: eselect module to choose between esd implementation/wrapper.
+
