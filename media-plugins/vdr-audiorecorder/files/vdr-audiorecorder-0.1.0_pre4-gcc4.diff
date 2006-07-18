@@ -1,0 +1,12 @@
+diff -ru audiorecorder-0.1.0-pre4-orig/dispatcher.c audiorecorder-0.1.0-pre4/dispatcher.c
+--- audiorecorder-0.1.0-pre4-orig/dispatcher.c	2006-07-18 19:20:11.315905384 +0200
++++ audiorecorder-0.1.0-pre4/dispatcher.c	2006-07-18 19:20:23.753107513 +0200
+@@ -46,7 +46,7 @@
+         audioreceivers = NULL;
+         
+         /* initialize one receiver for each channel */
+-        audioreceivers = new (cAudioReceiver *)[num_rds_channels];
++        audioreceivers = new cAudioReceiver *[num_rds_channels];
+         for (c = 0; c < num_rds_channels; c++) {
+                 channel_id = tChannelID::FromString(rds_channels[c]);
+                 
