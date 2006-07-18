@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dxpc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.8 2006/07/11 08:45:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.9 2006/07/18 21:36:16 hansmi Exp $
+
+  18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> dxpc-3.8.2-r1.ebuild:
+  Stable on ppc.
 
   11 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> dxpc-3.8.2-r1.ebuild:
   Stable on x86 for modular X.
