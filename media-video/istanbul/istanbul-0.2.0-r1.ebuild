@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0-r1.ebuild,v 1.2 2006/07/18 13:15:29 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0-r1.ebuild,v 1.3 2006/07/18 14:43:04 zaheerm Exp $
 
 inherit eutils gnome2 python autotools
 
@@ -18,9 +18,10 @@ RDEPEND=">=media-libs/gst-plugins-base-0.10.8
 	>=dev-python/gnome-python-extras-2.11.3
 	gnome-base/gconf
 	>=dev-python/gst-python-0.10.0
-	media-plugins/gst-plugins-ogg
-	media-plugins/gst-plugins-theora
-	>=media-libs/libtheora-1.0_alpha6"
+	=media-plugins/gst-plugins-ogg-0.10*
+	=media-plugins/gst-plugins-theora-0.10*
+	>=media-libs/libtheora-1.0_alpha6
+	=media-plugins/gst-plugins-gconf-0.10*"
 
 DEPEND="${RDEPEND}"
 SRC_URI="http://zaheer.merali.org/${P}.tar.bz2"

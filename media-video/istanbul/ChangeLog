@@ -1,6 +1,10 @@
 # ChangeLog for media-video/istanbul
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.4 2006/07/18 13:15:29 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.5 2006/07/18 14:43:04 zaheerm Exp $
+
+  18 Jul 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  istanbul-0.2.0-r1.ebuild:
+  fix plugin deps
 
   18 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
   istanbul-0.2.0-r1.ebuild:
