@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.4.1.ebuild,v 1.5 2006/07/16 01:04:18 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-0.4.1.ebuild,v 1.6 2006/07/18 00:55:38 langthang Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl
+	>=sys-libs/db-3.2
 	mail-filter/libmilter"
 
 S=${WORKDIR}/${P}
@@ -30,7 +31,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}" && cd "${S}"
+
+	# Postfix queue ID patch. See MILTER_README.html#workarounds
+	epatch "${FILESDIR}"/${P}-queueID.patch
 
 	confCCOPTS="${CFLAGS}"
 	conf_libmilter_INCDIRS="-I/usr/include/libmilter"
@@ -49,14 +53,13 @@ src_install() {
 	fowners milter:milter /etc/mail/dk-filter
 	fperms 700 /etc/mail/dk-filter
 
-	dodir /usr/bin /usr/lib
-	dodir /usr/share/man/man{3,8}
-	for dir in dk-filter  libar  libdk  libsm; do
-		make DESTDIR=${D} MANROOT=/usr/share/man/man \
-			install -C "${OBJDIR}"/${dir} \
+	dodir /usr/bin /usr/share/man/man8
+
+	make DESTDIR=${D} MANROOT=/usr/share/man/man \
+		install -C "${OBJDIR}"/dk-filter \
 			|| die "make install failed"
-	done
-	doman dk-filter/dk-filter.8 libar/ar.3
+
+	doman dk-filter/dk-filter.8
 	dobin "$FILESDIR"/gentxt.sh || die "dobin failed"
 
 	newinitd "${FILESDIR}/dk-filter.init" dk-filter \
