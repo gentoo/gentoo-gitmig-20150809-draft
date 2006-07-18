@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.1.ebuild,v 1.1 2006/05/09 07:36:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-6.1.ebuild,v 1.2 2006/07/18 19:14:32 the_paya Exp $
 
 inherit bsdmk freebsd pam
 
@@ -34,6 +34,12 @@ pkg_setup() {
 	use nis || mymakeopts="${mymakeopts} NO_NIS= "
 
 	mymakeopts="${mymakeopts} NO_SENDMAIL= NO_PF= "
+}
+
+src_compile() {
+	NOSSP_FLAGS="$(test-flags -fno-stack-protector -fno-stack-protector-all)"
+	export NOSSP_FLAGS
+	freebsd_src_compile
 }
 
 PATCHES="${FILESDIR}/${PN}-setXid.patch
