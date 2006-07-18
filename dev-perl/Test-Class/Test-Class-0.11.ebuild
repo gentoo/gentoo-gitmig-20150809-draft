@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.11.ebuild,v 1.12 2006/07/10 15:40:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.11.ebuild,v 1.13 2006/07/18 01:10:44 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 sparc x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-Storable-2
-	dev-perl/module-build
+	>=dev-perl/module-build-0.28
 	>=virtual/perl-Test-Simple-0.62
 	dev-perl/Test-Differences
 	dev-perl/Test-Exception

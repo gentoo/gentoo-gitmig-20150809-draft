@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.17 2006/07/16 08:24:32 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.18 2006/07/18 01:11:38 mcummings Exp $
+
+  18 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-Glob-0.06.ebuild:
+  Forcing mb version
 
 *Text-Glob-0.07 (16 Jul 2006)
 

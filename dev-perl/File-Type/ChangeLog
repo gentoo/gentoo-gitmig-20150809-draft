@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Type
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.10 2006/06/29 16:55:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.11 2006/07/18 01:02:31 mcummings Exp $
+
+  18 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  File-Type-0.22.ebuild:
+  Forcing mb version
 
   29 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org> File-Type-0.22.ebuild:
   Stable on hppa

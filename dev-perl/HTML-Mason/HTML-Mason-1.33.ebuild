@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.33.ebuild,v 1.1 2006/06/24 17:07:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.33.ebuild,v 1.2 2006/07/18 01:05:24 mcummings Exp $
 
 inherit perl-module
 
@@ -27,7 +27,7 @@ DEPEND="
 			>=www-apache/mod_perl-2 )
 	)
 	>=dev-perl/Params-Validate-0.7
-	dev-perl/module-build
+	>=dev-perl/module-build-0.28
 	>=dev-perl/Class-Container-0.08
 	>=dev-perl/Exception-Class-1.15
 	virtual/perl-Scalar-List-Utils
