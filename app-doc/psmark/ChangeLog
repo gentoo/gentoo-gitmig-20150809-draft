@@ -1,0 +1,12 @@
+# ChangeLog for app-doc/psmark
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/ChangeLog,v 1.1 2006/07/18 04:40:02 nerdboy Exp $
+
+*psmark-2.1 (18 Jul 2006)
+
+  18 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
+  +files/psmark-2.1-string.patch, +metadata.xml, +psmark-2.1.ebuild:
+  Initial version of psmark utility for adding a postscript watermark
+  to an existing document.  Not yet 64bit clean (patches welcome),
+  used with Hylafax.
+
