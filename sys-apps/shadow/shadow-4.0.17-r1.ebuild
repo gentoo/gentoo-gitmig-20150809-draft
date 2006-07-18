@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.17-r1.ebuild,v 1.1 2006/07/15 20:14:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.17-r1.ebuild,v 1.2 2006/07/18 08:25:41 azarah Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -172,20 +172,11 @@ src_install() {
 	newins etc/login.defs login.defs
 
 	# comment out options that pam hates
-	# XXX: this sucks running sed so many times ... should fix that ...
 	if use pam ; then
-		local d pam_opts
-		pam_opts=$(gawk '{
-			if ($2 == "USE_PAM")
-				start_printing = 1
-			else if ($1 == "#endif")
-				exit 0
-			else if (start_printing == 1)
-				print substr($1,3,length($1)-4)
-		}' lib/getdef.c)
-		for d in ${pam_opts} ; do
-			sed -i -e "/^$d\>/{s:^:#:;s:$:\t(NOT SUPPORTED WITH PAM):}" "${D}"/etc/login.defs
-		done
+		cd "${S}"
+		awk -f "${FILESDIR}"/login_defs.awk \
+			lib/getdef.c etc/login.defs \
+			> "${D}"/etc/login.defs
 	fi
 
 	# Remove manpages that are handled by other packages

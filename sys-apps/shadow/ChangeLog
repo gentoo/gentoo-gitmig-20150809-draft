@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.157 2006/07/15 20:14:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.158 2006/07/18 08:25:41 azarah Exp $
+
+  18 Jul 2006; Martin Schlemmer <azarah@gentoo.org> +files/login_defs.awk,
+  shadow-4.0.17-r1.ebuild:
+  Also comment the already commented options as not supported by pam. Fix
+  Mike's problem with running sed multiple times.
 
 *shadow-4.0.17-r1 (15 Jul 2006)
 
