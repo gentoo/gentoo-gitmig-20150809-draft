@@ -1,26 +1,33 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.24 2006/04/17 10:53:27 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.25 2006/07/18 06:52:35 bass Exp $
+
+*cherokee-0.5.4 (18 Jul 2006)
+
+  18 Jul 2006; J. Alberto Suárez López <bass@gentoo.org>
+  -cherokee-0.4.30.ebuild, -cherokee-0.5.0.ebuild, -cherokee-0.5.1.ebuild,
+  +cherokee-0.5.4.ebuild:
+  version bump
 
 *cherokee-0.5.2 (17 Apr 2006)
 
-  17 Apr 2006; J. Alberto Suárez López <bass@gentoo.orgrg>
+  17 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
   +cherokee-0.5.2.ebuild:
   New version. Important bugfix.
 
-  10 Apr 2006; J. Alberto Suárez López <bass@gentoo.orgrg>
+  10 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
   -cherokee-0.4.25.ebuild, -cherokee-0.4.29.ebuild, +cherokee-0.5.1.ebuild:
   New version
 
 *cherokee-0.5.1 (10 Apr 2006)
 
-  10 Apr 2006; J. Alberto Suárez López <bass@gentoo.orgrg>
+  10 Apr 2006; J. Alberto Suárez López <bass@gentoo.org>
   -cherokee-0.4.25.ebuild, -cherokee-0.4.29.ebuild, +cherokee-0.5.1.ebuild:
   New version
 
 *cherokee-0.5.0 (03 Apr 2006)
 
-  03 Apr 2006; J. Alberto Suárez López <bass@gentoo.ororg>
+  03 Apr 2006; J. Alberto Suárez López <bass@gentoo.oro>
   +cherokee-0.5.0.ebuild:
   Version bump. Added USE scgi and fcgi.
 
