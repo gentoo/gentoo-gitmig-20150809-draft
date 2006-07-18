@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-txt-client
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.10 2006/07/09 01:39:47 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.11 2006/07/18 21:47:57 hansmi Exp $
+
+  18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
+  ggz-txt-client-0.0.13.ebuild:
+  Stable on ppc.
 
   08 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   ggz-txt-client-0.0.9.ebuild:
