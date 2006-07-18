@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.1 2006/05/27 02:21:41 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.32.ebuild,v 1.2 2006/07/18 06:09:06 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~arm amd64 ppc ppc64 ~sparc x86"
 
 IUSE="X usb dbus"
 
