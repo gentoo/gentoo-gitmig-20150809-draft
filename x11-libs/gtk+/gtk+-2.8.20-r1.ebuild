@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.0.ebuild,v 1.5 2006/07/18 19:13:57 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.20-r1.ebuild,v 1.1 2006/07/18 19:13:57 allanonjl Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -23,10 +23,10 @@ RDEPEND="|| ( (
 			x11-libs/libXfixes
 			xinerama? ( x11-libs/libXinerama ) )
 		virtual/x11 )
-	>=dev-libs/glib-2.12.0
-	>=x11-libs/pango-1.13.0
+	>=dev-libs/glib-2.10.1
+	>=x11-libs/pango-1.9
 	>=dev-libs/atk-1.10.1
-	>=x11-libs/cairo-1.2.0
+	>=x11-libs/cairo-0.9.2
 	media-libs/fontconfig
 	x11-misc/shared-mime-info
 	>=media-libs/libpng-1.2.1
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 			x11-proto/xextproto
 			x11-proto/xproto
 			x11-proto/inputproto
-			x11-proto/xineramaproto )
+			xinerama? ( x11-proto/xineramaproto ) )
 		virtual/x11 )
 	doc? (
 		>=dev-util/gtk-doc-1.4
@@ -49,12 +49,11 @@ DEPEND="${RDEPEND}
 
 RESTRICT="confcache"
 
-
 pkg_setup() {
 
-	if ! built_with_use x11-libs/cairo X pdf ; then
-		einfo "Please re-emerge x11-libs/cairo with the X and pdf USE flag set"
-		die "cairo needs the X and pdf flag set"
+	if ! built_with_use x11-libs/cairo X; then
+		einfo "Please re-emerge x11-libs/cairo with the X USE flag set"
+		die "cairo needs the X flag set"
 	fi
 
 }
@@ -130,7 +129,7 @@ src_install() {
 	dodir ${GTK2_CONFDIR}
 	keepdir ${GTK2_CONFDIR}
 
-	# see bug #133241
+	# # see bug #133241
 	echo 'gtk-fallback-icon-theme = "gnome"' > ${D}/${GTK2_CONFDIR}/gtkrc
 
 	# Enable xft in environment as suggested by <utx@gentoo.org>
@@ -161,9 +160,4 @@ pkg_postinst() {
 	einfo "in your xorg.conf.  NVIDIA is working on this issue. "
 	einfo "See http://bugs.gentoo.org/113123 for more information."
 
-	if [ -e /usr/lib/gtk-2.0/2.[^1]* ]; then
-		elog "You need to rebuild ebuilds that installed into" /usr/lib/gtk-2.0/2.[^1]*
-		elog "to do that you can use qfile from portage-utils:"
-		elog "emerge -va1 \$(qfile -qC" /usr/lib/gtk-2.0/2.[^1]* ")"
-	fi
 }
