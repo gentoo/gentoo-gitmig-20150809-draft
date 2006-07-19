@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.32 2006/07/03 14:39:22 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.33 2006/07/19 05:52:51 ticho Exp $
+
+*libetpan-0.46 (12 Jul 2006)
+
+  12 Jul 2006; Andrej Kacian <ticho@gentoo.org> +libetpan-0.46.ebuild:
+  Version bump. Updated the version in soname warning in pkg_postinst(), since
+  the soname has changed again. Also, use ewarn instead of einfo.
 
   03 Jul 2006; Thomas Cort <tcort@gentoo.org> libetpan-0.45.ebuild:
   Stable on amd64.
