@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.38 2006/06/30 20:32:35 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.39 2006/07/19 17:02:39 flameeyes Exp $
+
+*kivio-1.5.2 (19 Jul 2006)
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +kivio-1.5.2.ebuild:
+  Version bump
 
   30 Jun 2006; Lars Weiler <pylon@gentoo.org> kivio-1.5.1.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.

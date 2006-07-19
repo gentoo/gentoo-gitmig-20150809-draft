@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.14 2006/06/30 20:37:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.15 2006/07/19 17:07:54 flameeyes Exp $
+
+*kplato-1.5.2 (19 Jul 2006)
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +kplato-1.5.2.ebuild:
+  Version bump
 
   30 Jun 2006; Lars Weiler <pylon@gentoo.org> kplato-1.5.1.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.

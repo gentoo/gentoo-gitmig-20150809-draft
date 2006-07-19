@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.38 2006/06/30 20:39:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.39 2006/07/19 17:08:52 flameeyes Exp $
+
+*kpresenter-1.5.2 (19 Jul 2006)
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kpresenter-1.5.2.ebuild:
+  Version bump
 
   30 Jun 2006; Lars Weiler <pylon@gentoo.org> kpresenter-1.5.1.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.
