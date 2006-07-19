@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.7 2006/07/07 20:20:32 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.8 2006/07/19 06:33:09 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -12,7 +12,6 @@ LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 RESTRICT="mirror strip"
-QA_EXECSTACK_x86="opt/googleearth/libcrypto.so.0.9.8"
 IUSE=""
 
 RDEPEND="x86? (
@@ -26,7 +25,7 @@ RDEPEND="x86? (
 		x11-libs/libXext
 		x11-libs/libXft
 		x11-libs/libXrender )
-		virtual/x11 ) )
+		<virtual/x11-7.0 ) )
 	amd64? (
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-baselibs
