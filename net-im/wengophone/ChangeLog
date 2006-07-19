@@ -1,6 +1,10 @@
 # ChangeLog for net-im/wengophone
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/ChangeLog,v 1.7 2006/06/01 17:15:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/ChangeLog,v 1.8 2006/07/19 06:55:36 genstef Exp $
+
+  19 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  wengophone-2.0_pre20099999.ebuild:
+  update liveCVS ebuild to work with gcc-4.1
 
   01 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   wengophone-1.0_pre20060408.ebuild:
