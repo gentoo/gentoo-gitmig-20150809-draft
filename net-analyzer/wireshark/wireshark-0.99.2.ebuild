@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.5 2006/07/19 15:33:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.6 2006/07/19 21:49:25 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils autotools libtool
 
@@ -48,6 +48,14 @@ pkg_setup() {
 		ebeep 5
 		die "dev-lang/perl compiled with USE=minimal"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-libgcrypt-asneeded.patch
+	cd "${S}"
+	AT_M4DIR="${S}/aclocal-fallback" eautoreconf
+	#elibtoolize
 }
 
 src_compile() {
