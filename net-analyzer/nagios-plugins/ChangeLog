@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.50 2006/07/18 16:30:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.51 2006/07/19 04:18:26 ramereth Exp $
+
+  19 Jul 2006; Lance Albertson <ramereth@gentoo.org>
+  files/nagios-plugins-1.4.3-check_disk-fix.patch:
+  * Fix check_disk patch. Forgot to axe out the CVS Id tags from it, was making
+  things puke.
 
 *nagios-plugins-1.4.3-r1 (18 Jul 2006)
 
