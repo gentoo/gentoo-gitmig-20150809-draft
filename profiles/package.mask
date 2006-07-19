@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5646 2006/07/18 23:58:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5647 2006/07/19 03:27:36 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -527,10 +527,6 @@ www-client/amaya
 # Diego Pettenò <flameeyes@gentoo.org> (24 Apr 2006)
 # Pre-release snapshots
 =app-mobilephone/kmobiletools-0.5*
-
-# Marcelo Goes <vanquirius@gentoo.org> (21 Apr 2006)
-# utf8 patch remains to be ported
-=www-client/links-2.1_pre21
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Apr 2006)
 # unresolved security issues #125491
