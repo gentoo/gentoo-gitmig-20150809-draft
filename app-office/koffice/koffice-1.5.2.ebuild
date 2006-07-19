@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5.2.ebuild,v 1.1 2006/07/19 17:03:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5.2.ebuild,v 1.2 2006/07/19 22:15:51 flameeyes Exp $
 
 inherit kde
 
-RV="1.5.1"
+RV="${PV}"
 MY_P="koffice-${RV}"
 S="${WORKDIR}/${MY_P}"
 
@@ -49,9 +49,6 @@ need-kde 3.4
 # TODO: kword sql plugin needs Qt compiled with sql support
 # the dependency on python is needed for scripting support in kexi
 # and for kivio/kiviopart/kiviosdk.
-
-PATCHES="${FILESDIR}/kexi-1.5.1-form_plugins.patch
-	${FILESDIR}/kexi-1.5.1-kexi_checkbox_data_saving.patch"
 
 src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql) $(use_enable opengl gl)"
