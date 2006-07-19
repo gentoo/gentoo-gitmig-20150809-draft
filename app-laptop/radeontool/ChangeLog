@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/radeontool
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.17 2006/02/13 15:28:06 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.18 2006/07/19 11:21:15 uberlord Exp $
+
+  19 Jul 2006; Roy Marples <uberlord@gentoo.org> metadata.xml,
+  radeontool-1.5-r3.ebuild:
+  Fix some potential quoting issues.
 
   13 Feb 2006; Henrik Brix Andersen <brix@gentoo.org>
   -radeontool-1.5-r1.ebuild:
