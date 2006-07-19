@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-0.93.ebuild,v 1.3 2005/07/09 19:02:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-0.93.ebuild,v 1.4 2006/07/19 04:03:58 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://mms.sunsite.dk/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="debug lirc svga sdl xine"
 
 RDEPEND="media-libs/imlib2

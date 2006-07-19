@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mmsv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.18 2006/05/14 16:39:49 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.19 2006/07/19 04:03:58 mr_bones_ Exp $
+
+  19 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> mmsv2-0.93.ebuild:
+  moved back to ~x86 since it needs a stable media-tv/xmltv
 
   14 May 2006; Anders Rune Jensn <arj@gentoo.org> mmsv2-1.0.7.ebuild,
   -mmsv2-1.0.5.ebuild, -mmsv2-1.0.6.ebuild:
