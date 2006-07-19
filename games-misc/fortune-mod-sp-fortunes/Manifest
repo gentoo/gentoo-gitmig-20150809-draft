@@ -7,14 +7,14 @@ EBUILD fortune-mod-sp-fortunes-0.1.ebuild 700 RMD160 ef6da212f8984dbfd28264c5edc
 MD5 85a94633d2ac30ed3b5e35c776ccaace fortune-mod-sp-fortunes-0.1.ebuild 700
 RMD160 ef6da212f8984dbfd28264c5edc6cd855d0c704d fortune-mod-sp-fortunes-0.1.ebuild 700
 SHA256 4365bf2f635e00ec44fdd564413939551ecfbd905b19a6021c697c1543ee320f fortune-mod-sp-fortunes-0.1.ebuild 700
-EBUILD fortune-mod-sp-fortunes-0.2.ebuild 719 RMD160 af67960f4dfd9ef3c20b7d7e9e207fdaf9f57a60 SHA1 70d1c802dbfd6916dba3fac9fb8e3b91e7c7ef7d SHA256 759bbb7b21e07c066dc89ec44300258c2dd2213a621468063895e72a198e5af6
-MD5 8f6b3bf5ee8bca7f7a5993a2beb256ae fortune-mod-sp-fortunes-0.2.ebuild 719
-RMD160 af67960f4dfd9ef3c20b7d7e9e207fdaf9f57a60 fortune-mod-sp-fortunes-0.2.ebuild 719
-SHA256 759bbb7b21e07c066dc89ec44300258c2dd2213a621468063895e72a198e5af6 fortune-mod-sp-fortunes-0.2.ebuild 719
-MISC ChangeLog 1081 RMD160 cc45a5cddebcedc914ae47c4458aad0c94ce5ea2 SHA1 a91bbbf657f64ae3cf298ab8c50921627e93b3b1 SHA256 33f29fa820176da823b5d92d6391a9a1b439aaba8d293dbf9372adab3a84dc9b
-MD5 c1098243ffd4af2dd2ffc351d34ff174 ChangeLog 1081
-RMD160 cc45a5cddebcedc914ae47c4458aad0c94ce5ea2 ChangeLog 1081
-SHA256 33f29fa820176da823b5d92d6391a9a1b439aaba8d293dbf9372adab3a84dc9b ChangeLog 1081
+EBUILD fortune-mod-sp-fortunes-0.2.ebuild 732 RMD160 791bba8034053cd613a3503dd7b3021976304fda SHA1 77392f829ec203cca51b50ae54f343cc32bdb8c6 SHA256 c00486efcb9bd8e3f60f94ea835a879d961abb05bd52f38098bee675e2601378
+MD5 c3a6b2fd9f378f3c64f774b45165a3cb fortune-mod-sp-fortunes-0.2.ebuild 732
+RMD160 791bba8034053cd613a3503dd7b3021976304fda fortune-mod-sp-fortunes-0.2.ebuild 732
+SHA256 c00486efcb9bd8e3f60f94ea835a879d961abb05bd52f38098bee675e2601378 fortune-mod-sp-fortunes-0.2.ebuild 732
+MISC ChangeLog 1200 RMD160 62081b0d1eca8fc22bfc30cfb248ff95d4ddf8ad SHA1 2ef1c235b459cecd65da2f6254d639ee6bbf9295 SHA256 14145eb379d1313e22c2f87ff941e6bb71fceba46c456573433e946665aca61f
+MD5 eea3582b6e67b05399ddcf5a96c196d5 ChangeLog 1200
+RMD160 62081b0d1eca8fc22bfc30cfb248ff95d4ddf8ad ChangeLog 1200
+SHA256 14145eb379d1313e22c2f87ff941e6bb71fceba46c456573433e946665aca61f ChangeLog 1200
 MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
@@ -28,7 +28,7 @@ SHA256 687ac234df715f14d9c7e8af7404a7bbde309942725a00dccd42f63315f57553 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEuxpVamhnQswr0vIRAhK+AJ9tFSf5YBXj/yUZ1cvYeC53ov0PHwCZAcNg
-wtv9NzM+gmtvo9XxnekD2Ug=
-=7YhH
+iD8DBQFEvo81AiZjviIA2XgRAlHjAKDGrqfevyo+He8sdJDT96xt1GPXAQCgv6Vz
+XCtKx0Pc0GB6WBBENl5aAsI=
+=8Q4A
 -----END PGP SIGNATURE-----

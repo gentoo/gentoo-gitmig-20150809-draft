@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST fortune-simpsons-chalkboard.tgz 5803
-EBUILD fortune-mod-simpsons-chalkboard-0.1.ebuild 783 RMD160 ea0d6d216912775ff5144b5abb83c075719485a1 SHA1 0d0a7a8751e728315577516c7c70f5bed913ff05 SHA256 6de1c26ccab3edd66b7fc5c0a367351a26cc1d94064108562f1a0316b5d1b226
-MD5 8bbd88b992b4c9df4f46b45eabd41db3 fortune-mod-simpsons-chalkboard-0.1.ebuild 783
-RMD160 ea0d6d216912775ff5144b5abb83c075719485a1 fortune-mod-simpsons-chalkboard-0.1.ebuild 783
-SHA256 6de1c26ccab3edd66b7fc5c0a367351a26cc1d94064108562f1a0316b5d1b226 fortune-mod-simpsons-chalkboard-0.1.ebuild 783
-MISC ChangeLog 995 RMD160 9df5fab87816200d567c455bdac4eba231138956 SHA1 1c50063cf835803f2f8f149a3670aafb36052094 SHA256 479377ffe9f9b96c40384ceaecc672087a8b60fe8f7662f582e16e789580ffd8
-MD5 4c832ac25753da16f045f03fc6f461dc ChangeLog 995
-RMD160 9df5fab87816200d567c455bdac4eba231138956 ChangeLog 995
-SHA256 479377ffe9f9b96c40384ceaecc672087a8b60fe8f7662f582e16e789580ffd8 ChangeLog 995
+DIST fortune-simpsons-chalkboard.tgz 5803 RMD160 3ccf53e02f31f4e0572938fc7ee88e308d47f341 SHA1 a3effee140c457d22873e87144c79e4811badc78 SHA256 8cfa7ecec784314b90b46531943d507c8f556c96008c8dc44089f016e5504b35
+EBUILD fortune-mod-simpsons-chalkboard-0.1.ebuild 796 RMD160 2890b4feccde482175f5173c8f5c8b520f5520bf SHA1 69f8ce021d64faa45fe1b5394098c46d602aa374 SHA256 25b26dca14612f4f36f6a478dd56d41c25120dad5be55969e9a8497d7db9012b
+MD5 7a0b634c34efd3bcae38f0a94a4cef64 fortune-mod-simpsons-chalkboard-0.1.ebuild 796
+RMD160 2890b4feccde482175f5173c8f5c8b520f5520bf fortune-mod-simpsons-chalkboard-0.1.ebuild 796
+SHA256 25b26dca14612f4f36f6a478dd56d41c25120dad5be55969e9a8497d7db9012b fortune-mod-simpsons-chalkboard-0.1.ebuild 796
+MISC ChangeLog 1121 RMD160 45cf07ea2b06d5647b1dcb32603e8f82238c1827 SHA1 a1d1247d4d3581de0c029d578b7d4c5192e022ce SHA256 4b999be30cf4ff19f2f9ae43b12eaa7069877614bb16dba5ce62287f6e9893d4
+MD5 bb9ffc04731d9a9b0f1cd771a902ca1c ChangeLog 1121
+RMD160 45cf07ea2b06d5647b1dcb32603e8f82238c1827 ChangeLog 1121
+SHA256 4b999be30cf4ff19f2f9ae43b12eaa7069877614bb16dba5ce62287f6e9893d4 ChangeLog 1121
 MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 e497cf405e41d508c87bdcf9e344f784 files/digest-fortune-mod-simpsons-chalkboard-0.1 74
-RMD160 0cac6cd26b1ecac5b7b507eff22222d4b2befb94 files/digest-fortune-mod-simpsons-chalkboard-0.1 74
-SHA256 6e6b65f242394994cd5c21ae943811e61a2cd4e6e009fed8d3cbec37826ebc92 files/digest-fortune-mod-simpsons-chalkboard-0.1 74
+MD5 9c0e6a5dfc5e8f3b184f93ff811df787 files/digest-fortune-mod-simpsons-chalkboard-0.1 268
+RMD160 7eb448dc1058e8affe005eebec31c922ac9f510e files/digest-fortune-mod-simpsons-chalkboard-0.1 268
+SHA256 deb2a30b75e5d1b3dcd05592192df066477e3caabf50b203e7c7ff92348e3ba9 files/digest-fortune-mod-simpsons-chalkboard-0.1 268
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEuxofamhnQswr0vIRArNgAJ4h/pXWtaY/hRqWbJr0gkFZcRiYZwCfX45L
-rLppaLMrlBiWtJVgx33mRIE=
-=4aqJ
+iD8DBQFEvo68AiZjviIA2XgRAtJ3AKDPqjX+Osx7Ag7nslEtoXixOF7qBACgqzTb
+t9vcg9FAGqvF9z5POobrHEY=
+=ukn8
 -----END PGP SIGNATURE-----

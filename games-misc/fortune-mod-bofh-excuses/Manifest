@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST fortune-bofh-excuses-1.2.tar.gz 12753
-EBUILD fortune-mod-bofh-excuses-1.2.ebuild 721 RMD160 e9df696ac74b9cadf62c3efd25500e7b0aba2f1f SHA1 391ea9505ff6544670ddc6a8d26c45fe8af1de6e SHA256 5b7d01b56f295e78dc255fc46b021e1beaa4631dcaadfb05315a949e517dad61
-MD5 5b004ffb9197888b8a931ed66bd24c53 fortune-mod-bofh-excuses-1.2.ebuild 721
-RMD160 e9df696ac74b9cadf62c3efd25500e7b0aba2f1f fortune-mod-bofh-excuses-1.2.ebuild 721
-SHA256 5b7d01b56f295e78dc255fc46b021e1beaa4631dcaadfb05315a949e517dad61 fortune-mod-bofh-excuses-1.2.ebuild 721
-MISC ChangeLog 1009 RMD160 770fa33625198ada76799ebeaf3b262c2ed56bb1 SHA1 14bfebf7f01f7c2901bad109746fbb75522b180b SHA256 dfe9a6372e63067e0b8735c9f6870f47f1bcf7a0208d778eab2a5de077d0a654
-MD5 384d75ee8ce15621e2524f5b7eead494 ChangeLog 1009
-RMD160 770fa33625198ada76799ebeaf3b262c2ed56bb1 ChangeLog 1009
-SHA256 dfe9a6372e63067e0b8735c9f6870f47f1bcf7a0208d778eab2a5de077d0a654 ChangeLog 1009
+DIST fortune-bofh-excuses-1.2.tar.gz 12753 RMD160 bbe218911d63f7052c4a6bf3b6dbf2f233d73526 SHA1 3aba7fa06e063d4059218c9b2c9c644a88a2de16 SHA256 37f7bc54bd591c71ff8df2233e9856f22d0b1357799fa7775aca2d96d2f8d4ba
+EBUILD fortune-mod-bofh-excuses-1.2.ebuild 734 RMD160 677ffdd672d73f3621e18b4a37613886631f3e80 SHA1 36dd2ef0ccda43b44de36f297bace50074b24d41 SHA256 d560cc4f5fe8384289866c72ad697a77cea86ae270d0957e2d0b8e99f4ccfc48
+MD5 a398f660c3fe7994f2baf752f00d608a fortune-mod-bofh-excuses-1.2.ebuild 734
+RMD160 677ffdd672d73f3621e18b4a37613886631f3e80 fortune-mod-bofh-excuses-1.2.ebuild 734
+SHA256 d560cc4f5fe8384289866c72ad697a77cea86ae270d0957e2d0b8e99f4ccfc48 fortune-mod-bofh-excuses-1.2.ebuild 734
+MISC ChangeLog 1128 RMD160 3b63c7397fd8817613d27f1fced2b0782f88137e SHA1 b1000eb513c19c73b7175a8f03a4a634222c7897 SHA256 ba5ad8b64a5c977752a58843c3f5ffef1d150f765e518a528ceb6224658ce271
+MD5 5fb9884576b6a46b633bd2c6fcc5a2cf ChangeLog 1128
+RMD160 3b63c7397fd8817613d27f1fced2b0782f88137e ChangeLog 1128
+SHA256 ba5ad8b64a5c977752a58843c3f5ffef1d150f765e518a528ceb6224658ce271 ChangeLog 1128
 MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 969d98469f035783de2d3a9bf9619a65 files/digest-fortune-mod-bofh-excuses-1.2 75
-RMD160 bc76d720c2d8f805c03468a0ada6178f971bf738 files/digest-fortune-mod-bofh-excuses-1.2 75
-SHA256 adca00baabb584ea2562829270774aaf6979b34c7b81a25d63acf29fda987902 files/digest-fortune-mod-bofh-excuses-1.2 75
+MD5 c93ccaf32ab6c9ff7a8e64585c85f691 files/digest-fortune-mod-bofh-excuses-1.2 271
+RMD160 02f6cc0645c027d9e6f8bc3ff9130bdbe812287f files/digest-fortune-mod-bofh-excuses-1.2 271
+SHA256 4ec92afb02564ac25ccc42a8563819974c1a054fadfb01ba3fe89ce7257643c9 files/digest-fortune-mod-bofh-excuses-1.2 271
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEuxiUamhnQswr0vIRAqKhAJ4y32grC7uYMYh+cDQ7fJnVvUnSQgCfe7tq
-Lqf/yQHtchXnP0cDVqAkmA4=
-=Eb4t
+iD8DBQFEvosRAiZjviIA2XgRAi3MAKC3BUgaAIxgmeXxd1XGvtHmlkAgCgCfXF0W
+rGE7U1saL473BxKSqCwpKWY=
+=QGxX
 -----END PGP SIGNATURE-----
