@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.12-r1.ebuild,v 1.3 2006/07/17 04:36:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.12-r1.ebuild,v 1.4 2006/07/19 15:25:24 vapier Exp $
 
 #ECVS_SERVER="savannah.gnu.org:/cvsroot/nano"
 #ECVS_MODULE="nano"
@@ -29,6 +29,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-path.patch
 	epatch "${FILESDIR}"/${P}-scroll.patch
+	epatch "${FILESDIR}"/${P}-fix2.patch
 }
 
 src_compile() {
