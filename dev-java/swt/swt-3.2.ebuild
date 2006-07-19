@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.ebuild,v 1.2 2006/07/19 03:39:11 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.ebuild,v 1.3 2006/07/19 04:24:42 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -69,7 +69,12 @@ src_unpack() {
 
 	# Patch for GCC 4.x warnings
 	epatch ${FILESDIR}/${PN}-3.2-gcc-4.x-warning-fix.patch
-	epatch ${FILESDIR}/${PN}-3.2-cairo-signedness.patch
+
+	if [[ ${ARCH} == "amd64" ]] ; then
+		epatch ${FILESDIR}/${PN}-3.2-cairo-signedness-x86_64.patch
+	else
+		epatch ${FILESDIR}/${PN}-3.2-cairo-signedness-x86.patch
+	fi
 }
 
 src_compile() {
