@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.5 2006/05/25 14:58:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.6 2006/07/19 22:57:45 mr_bones_ Exp $
+
+*warzone2100-2.0.3 (19 Jul 2006)
+
+  19 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/warzone2100-2.0.3-16bpp.patch, +warzone2100-2.0.3.ebuild:
+  version bump - upstream patch and ebuild submitted by Tristan Heaven via bug
+  #140419
 
   25 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   warzone2100-0.2.2.ebuild:
