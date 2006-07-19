@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-sp-fortunes
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-sp-fortunes/ChangeLog,v 1.7 2005/10/13 00:34:56 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-sp-fortunes/ChangeLog,v 1.8 2006/07/19 19:59:42 flameeyes Exp $
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fortune-mod-sp-fortunes-0.2.ebuild:
+  Add ~x86-fbsd keyword
 
 *fortune-mod-sp-fortunes-0.2 (13 Oct 2005)
 

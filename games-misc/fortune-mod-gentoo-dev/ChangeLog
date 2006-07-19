@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-dev
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.21 2006/05/28 16:01:15 avenj Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-dev/ChangeLog,v 1.22 2006/07/19 19:49:14 flameeyes Exp $
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fortune-mod-gentoo-dev-20051222.ebuild:
+  Add ~x86-fbsd keyword
 
   28 May 2006; Jon Portnoy <avenj@gentoo.org> fortune-mod-gentoo-dev-20051222.ebuild,
   fortune-mod-gentoo-dev-20050503.ebuild, fortune-mod-gentoo-dev-20050106.ebuild :

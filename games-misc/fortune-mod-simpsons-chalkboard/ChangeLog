@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-simpsons-chalkboard
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-simpsons-chalkboard/ChangeLog,v 1.7 2005/08/27 18:06:46 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-simpsons-chalkboard/ChangeLog,v 1.8 2006/07/19 19:57:41 flameeyes Exp $
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fortune-mod-simpsons-chalkboard-0.1.ebuild:
+  Add ~x86-fbsd keyword
 
   27 Aug 2005; Markus Rothe <corsair@gentoo.org>
   fortune-mod-simpsons-chalkboard-0.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-zx-error
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/ChangeLog,v 1.4 2005/08/27 18:10:11 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-zx-error/ChangeLog,v 1.5 2006/07/19 20:02:56 flameeyes Exp $
+
+  19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fortune-mod-zx-error-1.0.ebuild:
+  Add ~x86-fbsd keyword
 
   27 Aug 2005; Markus Rothe <corsair@gentoo.org>
   fortune-mod-zx-error-1.0.ebuild:
