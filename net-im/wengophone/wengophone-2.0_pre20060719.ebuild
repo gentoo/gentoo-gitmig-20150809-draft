@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_pre20099999.ebuild,v 1.4 2006/07/19 11:36:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_pre20060719.ebuild,v 1.1 2006/07/19 11:36:12 genstef Exp $
 
-inherit subversion eutils toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Wengophone NG is a VoIP client featuring the SIP protcol"
 HOMEPAGE="http://dev.openwengo.com"
-SRC_URI=""
-ESVN_REPO_URI="http://dev.openwengo.com/svn/openwengo/wengophone-ng/trunk"
-ESVN_OPTIONS="--username guest --password guest"
+SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.bz2"
+#ESVN_REPO_URI="http://dev.openwengo.com/svn/openwengo/wengophone-ng/trunk"
+#ESVN_OPTIONS="--username guest --password guest"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="dev-libs/boost
@@ -44,25 +44,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	# use system ffmpeg
-	cp ${FILESDIR}/ffmpeg-system.scons libs/ffmpeg/SConscript
-	sed -i -e "s:<avcodec.h:<ffmpeg/avcodec.h:" \
-		./libs/pixertool/src/ffmpeg/ffmpeg-pixertool.c \
-		./libs/pixertool/include/pixertool/pixertool.h \
-		./libs/pixertool/include/pixertool/ffmpeg-pixertool.h \
-		./wifo/phapi/phcodec-mpeg4.c \
-		./wifo/phapi/phcodec-mpeg4.h \
-		./wifo/phapi/phcodec-avcodec-wrapper.c \
-		./wifo/phapi/phcodec-avcodec-wrapper.h \
-		./wifo/phapi/phmedia-video-bwcontrol.c \
-		./wifo/phapi/phmedia-video.c \
-		./wifo/phapi/phmedia-video-control.c \
-		./wifo/phapi/phapi.c \
-		./wifo/phapi/phcodec-h263.c \
-		./wifo/phapi/phcodec-h263.h \
-		./wifo/phapi/phcodec-h264.c \
-		./wengophone/src/presentation/qt/QtAbout.cpp
-
 	QTLIBDIR=/usr/lib/qt4 QTDIR=/usr QTINCLUDEDIR=/usr/include/qt4 \
 		scons qtwengophone \
 		mode=release || die "scons failed"
