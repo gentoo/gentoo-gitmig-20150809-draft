@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-MDB2_Driver_mysql
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysql/ChangeLog,v 1.1 2006/07/19 11:53:02 chtekk Exp $
+
+*PEAR-MDB2_Driver_mysql-1.1.0 (19 Jul 2006)
+
+  19 Jul 2006; Luca Longinotti <chtekk@gentoo.org> +metadata.xml,
+  +PEAR-MDB2_Driver_mysql-1.1.0.ebuild:
+  New ebuild to fix PEAR-MDB2 (doesn't work without drivers).
+
