@@ -1,7 +1,7 @@
 #!/sbin/runscript
  
 depend() {
-    before local
+    before local xdm
 }
  
 start() {
