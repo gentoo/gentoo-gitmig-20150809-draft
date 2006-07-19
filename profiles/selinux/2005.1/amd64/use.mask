@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/use.mask,v 1.4 2006/06/28 02:46:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/amd64/use.mask,v 1.5 2006/07/19 18:21:49 vapier Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib is forced on when we have ${MULTILIB_ABIS} defined
@@ -15,24 +15,12 @@ drac
 # WON'T BUILD - SECTION
 
 # 2004/06/22 - Taken from 2004.0 profile
-# Anything that relies on vm86.h will not built on amd64
-# SVGAlib doesnt build
-svga
-
-# 2004/06/22 - Taken from 2004.0 profile
 # Firebird doesnt build on amd64
 firebird
 
 # 2004/06/22 - Taken from 2004.0 profile
 # x86 binary only, used by php
 fdftk
-
-# 2004/06/22 - Taken from 2004.0 profile
-# versions that are in portage do not support amd64,
-# will be removed when Intel issues an update and it gets into portage
-# (it seems to be in the works)
-icc
-ifc
 
 # 2004/06/22 - Taken from 2004.0 profile
 # masked
@@ -44,18 +32,6 @@ ifc
 libcaca
 
 # NOT NECESSARY - SECTION
-
-# 2004/06/22 - Taken from 2004.0 profile
-# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
-# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
-# not be many flag dependant in this case
-mmx
-sse
-sse2
-3dnow
-
-# altivec is a ppc instruction set.
-altivec
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org

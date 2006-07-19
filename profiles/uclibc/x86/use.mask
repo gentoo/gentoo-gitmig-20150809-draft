@@ -1,8 +1,8 @@
+-3dnow
+-3dnowext
 -mmx
 -mmxext
 -sse
 -sse2
--3dnow
--3dnowext
 -win32codecs
 -kqemu

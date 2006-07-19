@@ -10,9 +10,6 @@ acpi
 3dfx
 directfb
 avi
-icc
-icc-pgo
-ifc
 krb4
 lm_sensors
 mplayer
@@ -20,7 +17,6 @@ pcmcia
 pda
 prelude
 ruby
-svga
 firebird
 mzscheme
 chasen
@@ -29,7 +25,6 @@ mono
 beagle
 rar
 nvtv
-mmx
 
 # should be ok
 jikes

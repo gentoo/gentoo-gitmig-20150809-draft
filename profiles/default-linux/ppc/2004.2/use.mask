@@ -9,14 +9,9 @@ birdstep
 cmucl
 fdftk
 hdf
-icc
-icc-pgo
-ifc
 lm_sensors
 real
-svga
 tcc
-x86 
 fmod
 #keep and eye on firebird and interbase as pair
 firebird
@@ -25,9 +20,6 @@ interbase
 i8x0
 xvmc
 nvidia
-
-# Unmask our instruction sets
--altivec
 
 # Fixes bug #86787
 fusion

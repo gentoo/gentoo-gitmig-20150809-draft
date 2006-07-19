@@ -5,12 +5,8 @@ acpi
 afs
 avi
 fdftk
-icc
-icc-pgo
-ifc
 lm_sensors
 rar
-svga
 
 #keep and eye on firebird and interbase as pair
 firebird
@@ -18,9 +14,8 @@ interbase
 
 # Unmask our instruction sets
 -altivec
-
-# Unmask pbbuttonsd
 -pbbuttonsd
+-ppcsha1
 
 # codec support
 -x264

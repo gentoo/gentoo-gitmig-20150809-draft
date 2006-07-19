@@ -1,18 +1,22 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.20 2006/06/27 19:19:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/use.mask,v 1.21 2006/07/19 18:21:49 vapier Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
 # profile have a USE flag associated with (such as altivec, mmx, etc).
 
 # Unmask x86 instruction sets
+-3dnow
+-3dnowext
+-icc
+-icc-pgo
+-ifc
 -mmx
 -mmxext
 -sse
 -sse2
--3dnow
--3dnowext
+-svga
 -kqemu
 
 # Unmask nvidia XvMC support

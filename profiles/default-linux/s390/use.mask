@@ -9,17 +9,12 @@ gpm
 acpi
 afs
 alsa
-altivec
 apm
 directfb
-icc
-icc-pgo
 informix
 firebird
 lirc
 oci8
-sse
-svga
 trusted
 voodoo3
 wavelan

@@ -4,11 +4,6 @@
 blas
 lapack
 
-# These will probably never be supported, for obvious reasons (wrong arch)
-svga
-icc
-icc-pgo
-
 # These are debatable, since technically an ia64 could support this hardware
 pcmcia
 3dfx

@@ -9,15 +9,10 @@ birdstep
 cmucl
 fdftk
 hdf
-icc
-icc-pgo
-ifc
 ip28
 lm_sensors
 real
-svga
 tcc
-x86 
 fmod
 oci8
 oci8-direct-client
@@ -27,9 +22,6 @@ interbase
 
 i8x0
 xvmc
-
-# Unmask our instruction sets
--altivec
 
 # Fixes bug #86787
 fusion

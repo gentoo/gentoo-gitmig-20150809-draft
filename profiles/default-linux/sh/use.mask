@@ -11,9 +11,6 @@ java-internal
 java-external
 
 # dont make sense on this arch
-icc
-icc-pgo
-svga
 fdftk
 3dfx
 

@@ -1,16 +1,11 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/alpha/use.mask,v 1.1 2006/02/22 18:12:33 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/alpha/use.mask,v 1.2 2006/07/19 18:21:49 vapier Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
 # profile (such as the selinux profiles) have a USE flag associated with
 # them.
-
-# These will probably never be supported, for obvious reasons (wrong arch)
-icc
-icc-pgo
-svga
 
 # These are debatable, since technically an alpha could support this hardware
 pcmcia
@@ -43,7 +38,6 @@ tcc
 # I don't think that openafs really works on other architectures,
 # despite some internal Gentoo efforts (mine) to port it
 afs
-uclibc
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
@@ -77,9 +71,6 @@ djbfft
 lm_sensors
 
 gnustep
-
-# Mask intel fortran compiler
-ifc
 
 emboss
 

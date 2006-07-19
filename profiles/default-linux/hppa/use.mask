@@ -173,12 +173,9 @@ apm
 afs
 ev6
 i8x0
-icc
-icc-pgo
 nocardbus
 pcmcia
 pda
-svga
 trusted
 wavelan
 firebird

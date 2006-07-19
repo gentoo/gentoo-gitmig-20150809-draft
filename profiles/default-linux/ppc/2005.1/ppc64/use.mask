@@ -6,9 +6,6 @@ acpi
 3dfx
 directfb
 avi
-icc
-icc-pgo
-ifc
 krb4
 lm_sensors
 mplayer
@@ -16,7 +13,6 @@ pcmcia
 pda
 prelude
 ruby
-svga
 firebird
 mzscheme
 chasen
@@ -60,9 +56,6 @@ diet
 
 #pyste has untested/unkeyworded deps on ppc64
 pyste
-
-# Unmask our instruction sets
--altivec
 
 # we don't have hardware to test. also see bug #113398
 dvb

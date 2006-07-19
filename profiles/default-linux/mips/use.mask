@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.54 2006/07/09 00:57:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.55 2006/07/19 18:21:48 vapier Exp $
 
 # Until someone actually needs fuse, we'll mask it as
 # it holds up stablizing ntfsprogs
@@ -215,43 +215,21 @@ eds
 3dfx
 acpi
 afs
-altivec
 apm
 arts
 directfb
 dvdr
-icc
-icc-pgo
+ibm
 informix
 firebird
 ggi
 lirc
 oci8
-svga
 tcc
 trusted
 voodoo3
 smartcard
 emacs
-
-# And arch flags (and ones related to non-mips archs) that don't work
-alpha
-amd64
-arm
-hppa
-ia64
-m68k
-mips
-ppc
-ppc64
-ppc-macos
-s390
-sh
-sparc
-x86
-x86-obsd
-x86-fbsd
-ibm
 
 # should work but jasper not tested yet
 jpeg2k

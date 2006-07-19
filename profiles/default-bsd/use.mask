@@ -1,10 +1,9 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.20 2006/07/12 18:47:53 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.21 2006/07/19 18:21:48 vapier Exp $
 
 # Linux-dependant flags
 selinux
-uclibc
 nptl
 alsa
 v4l
@@ -14,18 +13,13 @@ directfb
 ev6
 hal
 gpm
-icc
-icc-pgo
-ifc
 lirc
 multilib
-svga
 sysfs
 lm_sensors
 nodroproot
 caps
 vidix
-pbbuttonsd
 madwifi
 jack
 3dfx
@@ -97,16 +91,6 @@ video_cards_sisusb
 video_cards_v4l
 video_cards_vmware
 video_cards_nvidia
-
-# Arch-specific
-altivec
-3dnow
-3dnowext
-mmx
-mmxext
-sse
-sse2
-sse3
 
 # Apache's MPM-itk requires sys-libs/libcap
 mpm-itk

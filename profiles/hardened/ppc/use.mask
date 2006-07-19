@@ -24,9 +24,6 @@ fusion
 hdf
 hyperwave
 i8x0
-icc
-icc-pgo
-ifc
 informix
 ingres
 interbase
@@ -41,7 +38,6 @@ pfpro
 rar
 real
 solid
-svga
 sybase
 sybase-ct
 tcc

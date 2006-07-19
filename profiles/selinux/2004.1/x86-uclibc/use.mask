@@ -1,13 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86-uclibc/use.mask,v 1.4 2005/05/14 20:53:38 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86-uclibc/use.mask,v 1.5 2006/07/19 18:21:49 vapier Exp $
 
 # unmask uclibc
 -uclibc
 
 -win32codecs
-
-# PPC instructions
-altivec
 
 nls

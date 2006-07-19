@@ -1,8 +1,33 @@
 win32codecs
 real
-vis
-mmxext
+
+# profile specific USE flags
 selinux
+uclibc
+
+# amd64/x86 arch specific USE flags
+3dnow
+3dnowext
+icc
+icc-pgo
+ifc
+mmx
+mmxext
+sse
+sse2
+svga
+
+# ppc arch specific USE flags
+altivec
+pbbuttonsd
+ppcsha1
+
+# mips arch specific USE flags
+n32
+n64
+
+# sparc arch specific USE flags
+vis
 
 # nVidia XvMC requires nvidia-glx
 nvidia

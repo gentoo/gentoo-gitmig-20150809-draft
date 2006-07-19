@@ -2,8 +2,6 @@
 
 # these will more than likely never work on darwin
 3dfx
-3dnow
-3dnowext
 acpi
 alsa
 apm
@@ -18,20 +16,12 @@ fmod
 ggi
 gpm
 hardened
-icc
-icc-pgo
-mmx
-mmxext
 on-the-fly-crypt  # requires device-mapper
 oss
 solid
-sse
-sse2
-svga
 sybase
 sybase-ct
 rtc
-uclibc
 voodoo3
 pvm
 v4l
