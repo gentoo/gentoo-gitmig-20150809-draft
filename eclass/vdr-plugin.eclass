@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.27 2006/07/19 19:19:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.28 2006/07/19 20:24:53 hd_brummy Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -126,7 +126,7 @@ vdr-plugin_pkg_setup() {
 }
 
 vdr-plugin_src_unpack() {
-	[ -z "$1" ] && vdr-plugin_src_unpack unpack patchmakefile add_local_patch
+	[ -z "$1" ] && vdr-plugin_src_unpack unpack add_local_patch patchmakefile
 
 	while [ "$1" ]; do
 
@@ -183,6 +183,7 @@ vdr-plugin_src_unpack() {
 			eend $?
 			;;
 		add_local_patch)
+			cd ${S}
 			if test -d "${VDR_LOCAL_PATCHES_DIR}/${PN}"; then
 				echo
 				einfo "Applying local patches"
