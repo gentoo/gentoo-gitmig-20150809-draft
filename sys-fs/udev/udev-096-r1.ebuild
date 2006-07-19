@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-096-r1.ebuild,v 1.1 2006/07/17 08:36:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-096-r1.ebuild,v 1.2 2006/07/19 17:13:39 azarah Exp $
 
 inherit eutils flag-o-matic
 
@@ -144,10 +144,6 @@ src_install() {
 	insinto /etc
 	doins extras/scsi_id/scsi_id.config
 
-	# set up symlinks in /etc/hotplug.d/default
-	dodir /etc/hotplug.d/default
-	dosym ../../../sbin/udevsend /etc/hotplug.d/default/10-udev.hotplug
-
 	# set up the /etc/dev.d directory tree
 	dodir /etc/dev.d/default
 	dodir /etc/dev.d/net
@@ -194,6 +190,12 @@ pkg_preinst() {
 	if [ -h "${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug" ]
 	then
 		rm -f ${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
+	fi
+
+	# delete the old wait_for_sysfs.hotplug symlink if it is present
+	if [ -h "${ROOT}/etc/hotplug.d/default/10-udev.hotplug" ]
+	then
+		rm -f ${ROOT}/etc/hotplug.d/default/10-udev.hotplug
 	fi
 
 	# is there a stale coldplug initscript? (CONFIG_PROTECT leaves it behind)
