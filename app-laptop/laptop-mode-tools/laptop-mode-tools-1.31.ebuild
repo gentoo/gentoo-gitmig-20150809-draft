@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.31.ebuild,v 1.2 2006/05/26 12:10:59 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.31.ebuild,v 1.3 2006/07/19 11:16:26 uberlord Exp $
 
 inherit fixheadtails linux-info
 
-MY_P=${PN}_${PV}
+MY_P="${PN}_${PV}"
 
 DESCRIPTION="Linux kernel laptop_mode user-space utilities"
 HOMEPAGE="http://www.xs4all.nl/~bsamwel/laptop_mode/tools/"
@@ -38,7 +38,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	ht_fix_file ${S}/usr/sbin/lm-profiler
+	ht_fix_file "${S}"/usr/sbin/lm-profiler
 }
 
 src_install() {
@@ -50,7 +50,7 @@ src_install() {
 	doins etc/laptop-mode/laptop-mode.conf
 	doins etc/laptop-mode/lm-profiler.conf
 
-	newinitd ${FILESDIR}/${P}-init.d laptop_mode
+	newinitd "${FILESDIR}"/laptop_mode.init laptop_mode
 
 	keepdir /etc/laptop-mode/batt-start
 	keepdir /etc/laptop-mode/batt-stop
