@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.10 2006/07/17 06:52:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.5.ebuild,v 1.11 2006/07/19 16:09:16 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -114,7 +114,7 @@ src_install() {
 		rm -rf "${D}"/usr/share/emacs
 	fi
 
-	dodoc AUTHORS BUGS ChangeLog DISCLAIM NEWS README* THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README THANKS
 }
 
 pkg_postinst() {
