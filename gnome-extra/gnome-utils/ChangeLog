@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.121 2006/07/18 23:32:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.122 2006/07/19 05:33:03 tester Exp $
+
+  19 Jul 2006; Olivier Crête <tester@gentoo.org>
+  -files/gnome-utils-2.10.1-gdict_pref.patch, -gnome-utils-2.10.0.ebuild,
+  -gnome-utils-2.10.1-r1.ebuild:
+  Cleanup old version, fixed manifest
 
   18 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> Manifest:
   Fix digest.
