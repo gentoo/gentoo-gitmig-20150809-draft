@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.6 2006/07/18 22:22:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.7 2006/07/19 00:22:36 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -27,7 +27,8 @@ RDEPEND="X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )
 	>=dev-libs/liboil-0.3.0
 	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
 	tcpd? ( sys-apps/tcp-wrappers )
-	lirc? ( app-misc/lirc )"
+	lirc? ( app-misc/lirc )
+	app-admin/eselect-esd"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -123,4 +124,6 @@ pkg_postinst() {
 	elog "file /etc/pulse/client.conf with the copy in /etc/pulse/client.conf.system"
 	elog "(or to put it in your ~/.pulse/client.conf)."
 	elog "To be able to access that you need to be in the group pulse-access."
+
+	eselect esd update --if-unset
 }
