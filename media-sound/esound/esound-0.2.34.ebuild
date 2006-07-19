@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.34.ebuild,v 1.15 2005/12/31 11:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.34.ebuild,v 1.16 2006/07/19 00:02:27 flameeyes Exp $
 
 inherit libtool gnome.org eutils
 
@@ -15,6 +15,8 @@ IUSE="tcpd alsa ipv6"
 DEPEND=">=media-libs/audiofile-0.1.5
 	alsa? ( >=media-libs/alsa-lib-0.5.10b )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r2 )"
+RDEPEND="${DEPEND}
+	!app-admin/eselect-esd"
 
 src_unpack() {
 
