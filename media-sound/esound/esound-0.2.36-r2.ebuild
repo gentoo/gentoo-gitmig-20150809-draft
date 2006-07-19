@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r2.ebuild,v 1.1 2006/07/19 00:02:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.36-r2.ebuild,v 1.2 2006/07/19 00:19:52 flameeyes Exp $
 
 inherit libtool gnome.org eutils autotools flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86-fbsd"
 IUSE="alsa debug ipv6 tcpd"
 
 # esound comes with arts support, but it hasn't been tested yet, feel free to
@@ -57,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install  || die "Installation failed"
+	emake -j1 DESTDIR="${D}" install  || die "Installation failed"
 	mv "${D}/usr/bin/"{esd,esound-esd}
 
 	dodoc AUTHORS ChangeLog MAINTAINERS NEWS README TIPS TODO
