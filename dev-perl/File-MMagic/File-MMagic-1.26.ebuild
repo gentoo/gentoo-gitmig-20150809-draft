@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/File-MMagic-1.26.ebuild,v 1.3 2006/07/10 15:34:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/File-MMagic-1.26.ebuild,v 1.4 2006/07/19 19:30:42 kloeri Exp $
 
 inherit perl-module
 
@@ -11,5 +11,5 @@ SRC_TEST="do"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
