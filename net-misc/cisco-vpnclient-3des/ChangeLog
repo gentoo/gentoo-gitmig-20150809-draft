@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.41 2006/05/30 21:01:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.42 2006/07/19 21:11:53 wolf31o2 Exp $
+
+  19 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/vpnclient.rc:
+  Moved check for the vpnclient executable and added a sleep 1. Closing bug
+  #141065.
 
   30 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   cisco-vpnclient-3des-4.0.1a-r1.ebuild,
