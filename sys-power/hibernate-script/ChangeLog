@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.29 2006/07/15 20:15:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.30 2006/07/19 06:39:03 phreak Exp $
+
+*hibernate-script-1.93-r3 (19 Jul 2006)
+
+  19 Jul 2006; Christian Heim <phreak@gentoo.org>
+  +files/hibernate-script-1.93-rt2500-blacklist.patch,
+  -hibernate-script-1.93-r2.ebuild, +hibernate-script-1.93-r3.ebuild:
+  Revision bump. According to #140931 net-wireless/rt2500 (and to the rt2500
+  ticket #1472869) it should now work properly after resuming. Thanks to Colin
+  Carle <colin.carle at gmail.com> for the patches!
 
   15 Jul 2006; Christian Heim <phreak@gentoo.org>
   files/hibernate-script-1.93-gentoo.patch,
