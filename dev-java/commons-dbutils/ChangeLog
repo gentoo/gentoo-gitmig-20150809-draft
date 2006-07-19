@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/commons-dbutils
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbutils/ChangeLog,v 1.1 2006/07/19 20:33:35 nelchael Exp $
+
+*commons-dbutils-1.0 (19 Jul 2006)
+
+  19 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +commons-dbutils-1.0.ebuild:
+  Initial version.
+
