@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.9.1.ebuild,v 1.5 2006/07/06 20:54:07 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-0.9.1.ebuild,v 1.6 2006/07/19 13:02:36 uberlord Exp $
 
 inherit eutils
 
@@ -40,8 +40,8 @@ src_install() {
 	dodoc CHANGES README TODO radvd.conf.example
 	dohtml INTRO.html
 
-	newinitd "${FILESDIR}"/${P}-init.d ${PN}
-	newconfd "${FILESDIR}"/${P}-conf.d ${PN}
+	newinitd "${FILESDIR}/${PN}".init "${PN}"
+	newconfd "${FILESDIR}/${PN}".conf "${PN}"
 
 	# location of radvd.pid needs to be writeable by the radvd user
 	keepdir /var/run/radvd
@@ -57,4 +57,7 @@ pkg_postinst() {
 	einfo "An example configuration file has been installed as"
 	einfo "/usr/share/doc/${PF}/radvd.conf.example.gz"
 	einfo
+	einfo "grsec users should allow a specific group to read /proc"
+	einfo "and add the radvd user to that group, otherwise radvd may"
+	einfo "segfault on startup"
 }
