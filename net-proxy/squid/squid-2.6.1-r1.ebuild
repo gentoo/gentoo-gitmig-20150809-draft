@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.1-r1.ebuild,v 1.2 2006/07/11 21:32:17 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.1-r1.ebuild,v 1.3 2006/07/19 11:06:07 mrness Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic autotools
 
@@ -29,7 +29,8 @@ RDEPEND="pam? ( virtual/pam )
 	ssl? ( >=dev-libs/openssl-0.9.7j )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.21 )
 	selinux? ( sec-policy/selinux-squid )
-	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )"
+	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
+	>=sys-libs/db-4"
 DEPEND="${RDEPEND} dev-lang/perl"
 
 S="${WORKDIR}/${S_PP}"
