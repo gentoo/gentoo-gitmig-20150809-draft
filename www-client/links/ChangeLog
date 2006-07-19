@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.67 2006/07/19 03:25:59 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.68 2006/07/19 06:08:06 grobian Exp $
+
+  19 Jul 2006; Fabian Groffen <grobian@gentoo.org> links-2.1_pre20.ebuild:
+  Marked ppc-macos stable (bug #140992)
 
 *links-2.1_pre22 (19 Jul 2006)
 
