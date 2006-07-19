@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.295 2006/07/17 06:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.296 2006/07/19 17:48:22 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -536,17 +536,17 @@ make_gcc_hard() {
 	if hardened_gcc_works ; then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP ${gcc_common_hard} |" \
-			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
 	elif hardened_gcc_works pie ; then
 		einfo "Updating gcc to use automatic PIE building ..."
 		ewarn "SSP has not been enabled by default"
 		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE ${gcc_common_hard} |" \
-			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
 	elif hardened_gcc_works ssp ; then
 		einfo "Updating gcc to use automatic SSP building ..."
 		ewarn "PIE has not been enabled by default"
 		sed -e "s|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP ${gcc_common_hard} |" \
-			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
 	else
 		# do nothing if hardened isnt supported, but dont die either
 		ewarn "hardened is not supported for this arch in this gcc version"
@@ -1039,6 +1039,7 @@ gcc_src_unpack() {
 	gnuconfig_update
 
 	# update configure files
+	local f
 	einfo "Fixing misc issues in configure files"
 	for f in $(grep -l 'autoconf version 2.13' $(find "${S}" -name configure)) ; do
 		ebegin "  Updating ${f/${S}\/}"
@@ -1047,7 +1048,11 @@ gcc_src_unpack() {
 		eend $?
 	done
 
-	./contrib/gcc_update --touch &> /dev/null
+	einfo "Touching generated files"
+	./contrib/gcc_update --touch | \
+		while read f ; do
+			einfo "  ${f%%...}"
+		done
 
 	disable_multilib_libjava || die "failed to disable multilib java"
 }
@@ -1460,7 +1465,7 @@ gcc_src_compile() {
 	einfo "Configuring ${PN} ..."
 	gcc_do_configure
 
-	touch ${S}/gcc/c-gperf.h
+	touch "${S}"/gcc/c-gperf.h
 
 	# Do not make manpages if we do not have perl ...
 	[[ ! -x /usr/bin/perl ]] \
@@ -1884,7 +1889,7 @@ do_gcc_SSP_patches() {
 			sspdocs="no"
 		elif tc_version_is_at_least 3.2.3 ; then
 			# earlier versions have no directory structure or docs
-			mv ${S}/protector.{c,h} ${S}/gcc
+			mv "${S}"/protector.{c,h} "${S}"/gcc
 			ssppatch="${S}/protector.dif"
 			sspdocs="no"
 		fi
@@ -1935,7 +1940,7 @@ update_gcc_for_libc_ssp() {
 	if libc_has_ssp ; then
 		einfo "Updating gcc to use SSP from libc ..."
 		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
-			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+			-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
 	fi
 }
 
@@ -1943,7 +1948,7 @@ update_gcc_for_libc_ssp() {
 update_gcc_for_libssp() {
 	einfo "Updating gcc to use SSP from libssp..."
 	sed -e 's|^\(INTERNAL_CFLAGS.*\)$|\1 -D_LIBSSP_PROVIDES_SSP_|' \
-		-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+		-i "${S}"/gcc/Makefile.in || die "Failed to update gcc!"
 }
 
 # do various updates to PIE logic
@@ -1976,7 +1981,7 @@ do_gcc_PIE_patches() {
 	# than ALL_CFLAGS...
 	sed -e '/^ALL_CFLAGS/iHARD_CFLAGS = ' \
 		-e 's|^ALL_CFLAGS = |ALL_CFLAGS = $(HARD_CFLAGS) |' \
-		-i ${S}/gcc/Makefile.in
+		-i "${S}"/gcc/Makefile.in
 
 	release_version="${release_version}, pie-${PIE_VER}"
 }
@@ -2202,7 +2207,7 @@ disgusting_gcc_multilib_HACK() {
 	fi
 
 	einfo "updating multilib directories to be: ${libdirs}"
-	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" ${S}/gcc/config/${config}
+	sed -i -e "s:^MULTILIB_OSDIRNAMES.*:MULTILIB_OSDIRNAMES = ${libdirs}:" "${S}"/gcc/config/${config}
 }
 
 disable_multilib_libjava() {
