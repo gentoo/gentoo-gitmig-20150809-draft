@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.39 2006/04/22 21:41:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.40 2006/07/19 20:58:50 wrobel Exp $
+
+*webapp-config-1.50.15 (19 Jul 2006)
+
+  19 Jul 2006; <wrobel@gentoo.org> +webapp-config-1.50.15.ebuild:
+  Release of webapp-config-1.50.15. rl03 added the webapp-cleaner.
 
   22 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   webapp-config-1.50.14.ebuild:
