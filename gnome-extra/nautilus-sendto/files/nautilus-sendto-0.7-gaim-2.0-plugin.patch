@@ -1,0 +1,25 @@
+--- gaim_plugin/nautilus-sendto-plugin.c.orig	2006-07-04 14:37:15.000000000 -0500
++++ gaim_plugin/nautilus-sendto-plugin.c	2006-07-04 14:37:51.000000000 -0500
+@@ -37,7 +37,7 @@
+ #include <unistd.h>
+ #include <dirent.h>
+ 
+-#include "internal.h"
++#include "plugin.h"
+ #include "conversation.h"
+ #include "core.h"
+ #include "debug.h"
+@@ -300,10 +300,10 @@
+     GAIM_PRIORITY_DEFAULT,		/* priority */
+     
+     "gtk-nautilus",					/* id */
+-    N_("Nautilus Integration"),				/* name */
++    "Nautilus Integration",				/* name */
+     "0.2",						/* version */
+-    N_("Provides integration with Nautilus"),		/* summary */ 
+-    N_("Provides integration with Nautilus"),		/* description */
++    "Provides integration with Nautilus",		/* summary */ 
++    "Provides integration with Nautilus",		/* description */
+     
+     "Roberto Majadas <roberto@hispalinux.es>",	/* author */
+     "www.gnome.org",                    /* homepage */
