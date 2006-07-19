@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.3.3-r1.ebuild,v 1.7 2006/06/15 23:55:07 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/vpnc-0.3.3-r1.ebuild,v 1.8 2006/07/19 08:33:45 kugelfang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.unix-ag.uni-kl.de/~massar/vpnc/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libgcrypt-1.1.91
