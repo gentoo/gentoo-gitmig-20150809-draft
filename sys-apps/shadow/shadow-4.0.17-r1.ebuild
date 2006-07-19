@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.17-r1.ebuild,v 1.2 2006/07/18 08:25:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.17-r1.ebuild,v 1.3 2006/07/19 16:30:14 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -167,13 +167,13 @@ src_install() {
 			-exec rm {} \;
 	fi
 
+	cd "${S}"
 	insinto /etc
 	insopts -m0644
 	newins etc/login.defs login.defs
 
 	# comment out options that pam hates
 	if use pam ; then
-		cd "${S}"
 		awk -f "${FILESDIR}"/login_defs.awk \
 			lib/getdef.c etc/login.defs \
 			> "${D}"/etc/login.defs
