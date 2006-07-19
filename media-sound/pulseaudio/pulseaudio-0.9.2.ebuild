@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.8 2006/07/19 00:35:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.2.ebuild,v 1.9 2006/07/19 11:58:24 flameeyes Exp $
 
 inherit eutils libtool autotools
 
@@ -106,7 +106,7 @@ src_install() {
 	#  - use socket at /var/run/pulse/native
 	#  - enable anonymous access (relies on filesystem-level access to the socket)
 	#  - changes the dafault server path for the clients
-	sed -e '/load-module module-native-protocol-unix/s:$: auth-anonymous=1 socket=/var/run/pulse/native:' \
+	sed -e '/load-module module-\(native\|esound\)-protocol-unix/s:$: auth-anonymous=1 socket=/var/run/pulse/native:' \
 		"${D}/etc/pulse/default.pa" > "${D}/etc/pulse/system.pa"
 	cp "${D}"/etc/pulse/client.conf{,.system}
 	sed -i -e '/default-server/d' "${D}/etc/pulse/client.conf.system"

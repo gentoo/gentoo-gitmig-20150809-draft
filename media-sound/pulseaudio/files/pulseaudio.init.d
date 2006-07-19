@@ -22,6 +22,12 @@ start() {
 		chmod 0750 /var/run/pulse
 		chmod 0660 /var/run/pulse/native
 	fi
+
+        if [[ $(readlink /usr/bin/esd | xargs basename) == "esdcompat" ]] && [[ -S /tmp/.esd/socket ]]; then
+		chgrp -R pulse-access /tmp/.esd
+		chmod 0750 /tmp/.esd
+		chmod 0660 /tmp/.esd/socket
+        fi
 }
 
 stop() {
