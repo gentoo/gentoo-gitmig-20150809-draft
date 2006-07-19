@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.ebuild,v 1.1 2006/07/17 01:40:23 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2.ebuild,v 1.2 2006/07/19 03:39:11 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -73,8 +73,6 @@ src_unpack() {
 }
 
 src_compile() {
-	JAVA_HOME=$(java-config -O)
-
 	# Identify the AWT path
 	# The IBM VMs and the GNU GCC implementations do not store the AWT libraries
 	# in the same location as the rest of the binary VMs.
