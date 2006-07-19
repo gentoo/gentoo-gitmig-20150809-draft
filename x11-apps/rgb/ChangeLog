@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rgb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.31 2006/07/10 19:10:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.32 2006/07/19 13:48:40 gmsoft Exp $
+
+  19 Jul 2006; Guy Martin <gmsoft@gentoo.org> rgb-1.0.1.ebuild:
+  Stable on hppa.
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> rgb-1.0.1.ebuild:
   Mark 1.0.1 stable on ia64
