@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.26 2006/07/08 15:28:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.27 2006/07/19 19:19:00 hd_brummy Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
+#   Joerg Bornkessel <hd_brummy@gentoo.org>
 
 # vdr-plugin.eclass
 #
@@ -44,6 +45,18 @@
 #     This file is sourced by the startscript when plugin is activated in /etc/conf.d/vdr
 #     It could be used for special startup actions for this plugins, or to create the
 #     plugin command line options from a nicer version of a conf.d file.
+
+# HowTo use own local patches; Example
+#
+#	Add to your /etc/make.conf:
+# 	VDR_LOCAL_PATCHES_DIR="/usr/local/patch"
+#
+#	Add two DIR's in your local patch dir, ${PN}/${PV},
+#	e.g for vdr-burn-0.1.0 should be:
+#	/usr/local/patch/vdr-burn/0.1.0/
+#
+#	all patches which ending on diff or patch in this DIR will automatically applied
+#
 
 inherit base multilib eutils flag-o-matic
 
@@ -113,7 +126,7 @@ vdr-plugin_pkg_setup() {
 }
 
 vdr-plugin_src_unpack() {
-	[ -z "$1" ] && vdr-plugin_src_unpack unpack patchmakefile
+	[ -z "$1" ] && vdr-plugin_src_unpack unpack patchmakefile add_local_patch
 
 	while [ "$1" ]; do
 
@@ -168,6 +181,15 @@ vdr-plugin_src_unpack() {
 				-e '/^STRIP =/d' \
 				-e '/@.*\$(STRIP)/d'
 			eend $?
+			;;
+		add_local_patch)
+			if test -d "${VDR_LOCAL_PATCHES_DIR}/${PN}"; then
+				echo
+				einfo "Applying local patches"
+				for LOCALPATCH in ${VDR_LOCAL_PATCHES_DIR}/${PN}/${PV}/*.{diff,patch}; do
+					test -f "${LOCALPATCH}" && epatch "${LOCALPATCH}"
+				done
+			fi
 			;;
 		esac
 
