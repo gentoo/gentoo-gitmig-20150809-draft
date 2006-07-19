@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/sid-filter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.1 2006/07/18 01:06:48 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.2 2006/07/19 15:42:23 langthang Exp $
+
+  19 Jul 2006; Tuấn Văn <langthang@gentoo.org>
+  files/sid-milter-0.2.13-queueID.patch:
+  incomplete patch.
 
 *sid-milter-0.2.13 (18 Jul 2006)
 
