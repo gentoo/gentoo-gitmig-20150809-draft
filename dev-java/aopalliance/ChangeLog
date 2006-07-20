@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aopalliance
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/ChangeLog,v 1.5 2006/07/16 11:53:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/ChangeLog,v 1.6 2006/07/20 17:46:25 corsair Exp $
+
+  20 Jul 2006; Markus Rothe <corsair@gentoo.org> aopalliance-1.0-r1.ebuild:
+  Added ~ppc64; bug #139779
 
   16 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   aopalliance-1.0-r1.ebuild:
