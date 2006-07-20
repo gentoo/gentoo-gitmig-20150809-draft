@@ -1,0 +1,10 @@
+# ChangeLog for app-shells/pdsh
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdsh/ChangeLog,v 1.1 2006/07/20 05:29:57 dberkholz Exp $
+
+*pdsh-2.9 (20 Jul 2006)
+
+  20 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +pdsh-2.9.ebuild:
+  (#81171) Add the parallel distributed shell (jghobrial@uh.edu).
+
