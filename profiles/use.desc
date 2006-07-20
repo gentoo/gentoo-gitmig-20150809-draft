@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.300 2006/07/08 21:00:41 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.301 2006/07/20 12:31:35 dragonheart Exp $
 
 # Keep them sorted
 
@@ -84,7 +84,6 @@ emul-linux-x86 - Pull in binary support libraries for x86 applications
 encode - Adds support for encoding of audio or video files
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 esoob - Adds support for Easysoft OOD database
-ethereal - Adds support for ethereal wiretap log support in kismet
 ev6 - Assume Alpha processor is EV6 or better
 evo - Adds support for evolution in gnumeric and multisync
 examples - Install example source code
