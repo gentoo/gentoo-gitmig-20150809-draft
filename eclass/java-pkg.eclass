@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.38 2006/07/01 20:28:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.39 2006/07/20 19:01:58 nichoj Exp $
 
 inherit multilib
 
@@ -12,15 +12,21 @@ EXPORT_FUNCTIONS pkg_setup
 # First we make sure java-config-1 will be used
 export WANT_JAVA_CONFIG="1"
 
-# VMHANDLE is defined in /etc/env.d/20java. This is the handle java-config-2
-# uses for determining which VM to use.
+# VMHANDLE is the variable in an env file that identifies how java-config-2
+# knows a VM. With each VM, we have a 'compatible' env file installed to
+# /etc/env.d/java, so java-config-1 can work.
 #
-# We set GENTOO_VM to this, to ensure that /usr/bin/java and company are using
-# the right VM.
-export GENTOO_VM="${VMHANDLE}"
+# When java-config-1 -S is used, the env file for the selected VM gets copied
+# from /etc/env.d/java/ to /etc/env.d/20java. By this, VMHANDLE in the
+# environment points to the generation-1 system VM.
+#
+# java-config-2 and /usr/bin/java and company respect GENTOO_VM to indicate
+# what VM to use. So, here we set GENTOO_VM to be VMHANDLE, and thus to the
+# generation-1 system VM.
+export GENTOO_VM=${VMHANDLE}
 
-# During pkg_setup, we need to live some crumb trails that we're using
-# in a mixed generation-1/generation-2 environment
+# During pkg_setup, we need to do a few extra things to ensure things work in a
+# mixed generation-1/generation-2 environment
 # TODO need to make sure everything that inherits java-pkg and has a pkg_setup
 # uses java-pkg_pkg_setup
 java-pkg_pkg_setup() {
@@ -28,20 +34,61 @@ java-pkg_pkg_setup() {
 	
 	# We need to do a little magic if java-config-2 is around
 	if has_version "=dev-java/java-config-2*"; then
-		ebegin "Enabling generation-2 compatibility"
-		if [[ -n ${GENTOO_VM} ]]; then
-			einfo "Using ${GENTOO_VM}"
-			eend 0
-		else
-			eerror "There was a problem determining which VM to use for generation-1"
-			eerror "You may need to set your generation-1 VM again, and run env-update && source/etc/profile"
-			eerror "Also, make sure you have followed the Java Upgrade Guide:"
-			eerror "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
-			eend 1
-			die "Couldn't determine VM for generation-1"
+		# we only want to enable the Java stuff if 
+		# there isn't a Java use flag (means its a pure Java pckage)
+		# or if there is a Java use flag and it is enabled
+		if ! hasq java ${IUSE} || use java; then
+			if [[ -n ${GENTOO_VM} ]]; then
+				einfo "Using ${GENTOO_VM}"
+				initialize-java-home
+				eend 0
+			else
+				eerror "There was a problem determining which VM to use for generation-1"
+				eerror "You may need to set your generation-1 VM again, and run env-update && source/etc/profile"
+				eerror "Also, make sure you have followed the Java Upgrade Guide:"
+				eerror "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
+				eend 1
+				die "Expected VMHANDLE to be defined in the env, but it wasn't"
+			fi
 		fi
 	fi
 }
+
+initialize-java-home() {
+	if has_version "=dev-java/java-config-2*"; then
+		# use java-config-2, with GENTOO_VM set to generation-1 system vm, to
+		# setup JAVA_HOME
+		export JAVA_HOME=$(java-config-2 --jdk-home)
+	fi
+	# Otherwise, JAVA_HOME should be defined already
+}
+
+# These are pre hooks to make sure JAVA_HOME is set properly.
+# note: don't need pkg_setup, since we define it here
+pre_src_unpack() {
+	initialize-java-home
+}
+
+pre_src_compile() {
+	initialize-java-home
+}
+
+pre_src_install() {
+	initialize-java-home
+}
+
+pre_src_test() {
+	initialize-java-home
+}
+
+pre_pkg_preinst() {
+	initialize-java-home
+}
+
+pre_pkg_postinst() {
+	initialize-java-home
+}
+
 
 
 pkglistpath="${T}/java-pkg-list"
