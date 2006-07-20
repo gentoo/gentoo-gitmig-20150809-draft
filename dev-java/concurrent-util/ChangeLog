@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/concurrent-util
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/ChangeLog,v 1.10 2006/01/08 09:05:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/ChangeLog,v 1.11 2006/07/20 11:23:33 nelchael Exp $
+
+*concurrent-util-1.3.4-r1 (20 Jul 2006)
+
+  20 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +concurrent-util-1.3.4-r1.ebuild:
+  Migrated to Generation 2.
 
   08 Jan 2006; Joseph Jezak <josejx@gentoo.org>
   concurrent-util-1.3.4.ebuild:
