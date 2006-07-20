@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.46 2006/07/17 11:40:08 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.47 2006/07/20 05:46:45 tsunam Exp $
+
+  20 Jul 2006; Joshua Jackson <tsunam@gentoo.org> rxvt-2.7.10-r3.ebuild:
+  Stable x86; bug #140657
 
   17 Jul 2006; Jose Luis Rivero <yoswink@gentoo.org> rxvt-2.7.10-r3.ebuild:
   alpha stable wrt bug #140657. Tested by Mike Hlavac <mike@flyingpenguins.org>
