@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-4_beta0.ebuild,v 1.1 2006/06/24 18:02:52 tercel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-4_beta0.ebuild,v 1.2 2006/07/20 16:35:32 blubb Exp $
 
-inherit distutils versionator
+inherit distutils versionator multilib
 
 MY_P=$(replace_version_separator _ . ${P})
 
@@ -65,8 +65,8 @@ src_install() {
 
 	python_version
 
-	mv ${D}/usr/lib/python${PYVER}/site-packages/cvisualmodule* \
-		${D}/usr/lib/python${PYVER}/site-packages/visual
+	mv ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/cvisualmodule* \
+		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/visual
 
 	#the vpython script does not work, and is unnecessary
 	rm ${D}/usr/bin/vpython
