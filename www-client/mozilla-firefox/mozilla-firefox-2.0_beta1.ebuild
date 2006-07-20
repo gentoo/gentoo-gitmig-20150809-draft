@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_beta1.ebuild,v 1.1 2006/07/20 16:28:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_beta1.ebuild,v 1.2 2006/07/20 17:41:22 azarah Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
-PVER="1.0"
+PVER="1.2"
 LANGS="ca cs da de el en-GB es-AR es-ES fi fr hu it ja lt mn nb-NO nl pl ru sk sl sv-SE tr zh-CN zh-TW"
 SHORTLANGS="pt-PT nn-NO"
 MY_PV=${PV/_beta/b}
@@ -99,7 +99,7 @@ src_unpack() {
 }
 
 src_compile() {
-	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
+	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 
 	mozconfig_init
 	mozconfig_config
@@ -183,7 +183,8 @@ src_install() {
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/firefox-icon.png
-	domenu "${FILESDIR}"/icon/mozillafirefox-1.5.desktop
+	newmenu "${FILESDIR}"/icon/mozillafirefox-1.5.desktop \
+		mozillafirefox-2.0.desktop
 
 	# Fix icons to look the same everywhere
 	insinto "${MOZILLA_FIVE_HOME}"/icons
