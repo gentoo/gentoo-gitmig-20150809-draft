@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.31 2006/07/17 23:12:40 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.32 2006/07/20 17:55:28 corsair Exp $
+
+  20 Jul 2006; Markus Rothe <corsair@gentoo.org> libnjb-2.2.5.ebuild:
+  Added ~ppc64; bug #140243
 
   17 Jul 2006; Stephen Bennett <spb@gentoo.org> libnjb-2.2.5.ebuild:
   Added ~x86-fbsd
