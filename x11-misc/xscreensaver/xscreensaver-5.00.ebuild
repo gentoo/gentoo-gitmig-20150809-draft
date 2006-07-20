@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.3 2006/06/11 13:08:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.4 2006/07/20 23:26:21 exg Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
-IUSE="gnome jpeg kerberos krb4 insecure-savers new-login nls offensive opengl pam xinerama"
+IUSE="gnome jpeg insecure-savers new-login nls offensive opengl pam xinerama"
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -27,7 +27,6 @@ RDEPEND="|| ( (
 	>=gnome-base/libglade-1.99
 	>=dev-libs/glib-2
 	pam? ( virtual/pam )
-	kerberos? ( krb4? ( >=app-crypt/mit-krb5-1.2.5 ) )
 	jpeg? ( media-libs/jpeg )
 	opengl? ( virtual/opengl
 	          >=media-libs/gle-3.0.1 )
@@ -51,17 +50,6 @@ filter-flags -maltivec
 append-flags -U__VEC__
 
 pkg_setup() {
-
-	if use kerberos && ! use krb4 ; then
-		ewarn
-		ewarn "You have enabled kerberos without krb4 support. Kerberos will be"
-		ewarn "disabled unless kerberos 4 support has been compiled with your"
-		ewarn "kerberos libraries. To do that, you should abort now and do:"
-		ewarn
-		ewarn " USE=\"krb4\" emerge mit-krb5"
-		ewarn
-		epause
-	fi
 
 	if use arm && use new-login; then
 		ewarn "gnome-base/gdm is required for USE=\"new-login\", and is not"
@@ -91,11 +79,6 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf
-	use kerberos && use krb4 \
-		&& myconf="${myconf} --with-kerberos" \
-		|| myconf="${myconf} --without-kerberos"
-
 	unset BC_ENV_ARGS
 	econf \
 		--with-hackdir=/usr/lib/misc/xscreensaver \
@@ -113,6 +96,7 @@ src_compile() {
 		--enable-locking \
 		--with-gtk \
 		--with-xml \
+		--without-kerberos \
 		$(use_with insecure-savers setuid-hacks) \
 		$(use_with new-login login-manager) \
 		$(use_with xinerama xinerama-ext) \
@@ -120,7 +104,7 @@ src_compile() {
 		$(use_with opengl gl) $(use_with opengl gle) \
 		$(use_with jpeg) \
 		$(use_enable nls) \
-		${myconf} || die "econf failed"
+		|| die "econf failed"
 
 	emake || die "emake failed"
 
