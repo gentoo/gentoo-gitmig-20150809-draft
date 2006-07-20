@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.23 2006/07/08 10:55:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/ChangeLog,v 1.24 2006/07/20 06:09:36 tsunam Exp $
+
+  20 Jul 2006; Joshua Jackson <tsunam@gentoo.org> xfig-3.2.4-r2.ebuild:
+  Stable x86; bug #140904
 
   08 Jul 2006; Lars Weiler <pylon@gentoo.org> xfig-3.2.4-r2.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.
