@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.38 2006/07/01 05:25:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.39 2006/07/20 12:28:50 genstef Exp $
+
+*hplip-1.6.6a (20 Jul 2006)
+
+  20 Jul 2006; Stefan Schweizer <genstef@gentoo.org> -hplip-1.6.6.ebuild,
+  -hplip-1.6.6-r1.ebuild, +hplip-1.6.6a.ebuild:
+  bump the foomatic-db, properly name 1.6.6a
 
 *hplip-1.6.6-r1 (01 Jul 2006)
 
