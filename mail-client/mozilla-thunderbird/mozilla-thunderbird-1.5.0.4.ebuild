@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.6 2006/06/15 00:55:02 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.7 2006/07/20 20:27:11 flameeyes Exp $
 
-unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
+unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
 
 PVER="0.1"
@@ -96,7 +96,7 @@ src_compile() {
 	####################################
 	append-flags -freorder-blocks -fno-reorder-functions
 
-	# Export CPU_ARCH_TEST  as it is not exported by default.
+	# Export CPU_ARCH_TEST	as it is not exported by default.
 	case $(tc-arch) in
 	amd64) [[ ${ABI} == "x86" ]] && CPU_ARCH_TEST="x86" || CPU_ARCH_TEST="x86_64" ;;
 	ia64) CPU_ARCH_TEST="ia64" ;;
@@ -133,7 +133,7 @@ src_install() {
 
 	# Most of the installation happens here
 	dodir ${MOZILLA_FIVE_HOME}
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}${MOZILLA_FIVE_HOME}
+	cp -RL "${S}/dist/bin/"* "${D}${MOZILLA_FIVE_HOME}" || die "Copy of files failed"
 
 	# Create directory structure to support portage-installed extensions.
 	# See update_chrome() in mozilla-launcher
