@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.20-r1.ebuild,v 1.3 2006/06/29 01:34:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.20-r1.ebuild,v 1.4 2006/07/20 02:14:02 vapier Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 			-e '/^PREFIX=/s:/local::' \
 			-e 's:$(DESTDIR)/:$(DESTDIR):' \
 			-e "/^LIBDIR=/s:/lib$:/$(get_libdir):" \
+			-e '/^MANDIR=/s:)/man:)/share/man:' \
 			$i || die "sed of $i failed"
 	done
 }
