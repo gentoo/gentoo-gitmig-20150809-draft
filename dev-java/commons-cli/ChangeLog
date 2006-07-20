@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.21 2006/07/20 11:18:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.22 2006/07/20 11:20:48 nelchael Exp $
+
+  20 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  commons-cli-1.0-r5.ebuild:
+  Fixed src_unpack().
 
 *commons-cli-1.0-r5 (20 Jul 2006)
 
