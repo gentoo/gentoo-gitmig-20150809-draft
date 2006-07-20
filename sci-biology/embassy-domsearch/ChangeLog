@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-domsearch
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domsearch/ChangeLog,v 1.4 2005/10/03 23:54:12 ribosome Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domsearch/ChangeLog,v 1.5 2006/07/20 21:19:12 ribosome Exp $
+
+  20 Jul 2006; Olivier Fisette <ribosome@gentoo.org>
+  embassy-domsearch-0.1.0.ebuild:
+  Fixed download URL (silent upstream repackaging).
 
   03 Oct 2005; Olivier Fisette <ribosome@gentoo.org>
   embassy-domsearch-0.1.0.ebuild:
