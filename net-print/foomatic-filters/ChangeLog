@@ -1,6 +1,12 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.36 2006/07/13 18:17:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.37 2006/07/20 09:00:59 genstef Exp $
+
+*foomatic-filters-3.0.20060720 (20 Jul 2006)
+
+  20 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  +foomatic-filters-3.0.20060720.ebuild:
+  version bump
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   foomatic-filters-3.0.2-r1.ebuild:
