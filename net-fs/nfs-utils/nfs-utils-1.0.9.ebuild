@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.9.ebuild,v 1.2 2006/07/16 08:32:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.9.ebuild,v 1.3 2006/07/20 02:07:36 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,7 +73,6 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/exports
 	use !nonfsv4 && doins utils/idmapd/idmapd.conf
-	use kerberos && newins support/gssapi/SAMPLE_gssapi_mech.conf
 
 	doinitd "${FILESDIR}"/nfs "${FILESDIR}"/nfsmount
 	newconfd "${FILESDIR}"/nfs.confd nfs
