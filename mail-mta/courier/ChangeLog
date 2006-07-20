@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.77 2006/07/18 22:13:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.78 2006/07/20 07:01:38 tsunam Exp $
+
+  20 Jul 2006; Joshua Jackson <tsunam@gentoo.org> courier-0.53.2.ebuild:
+  marking the right version stable for x86 this time
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> courier-0.53.2.ebuild:
   Stable on ppc, too.
