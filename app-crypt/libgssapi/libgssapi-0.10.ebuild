@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libgssapi/libgssapi-0.10.ebuild,v 1.1 2006/07/16 08:31:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libgssapi/libgssapi-0.10.ebuild,v 1.2 2006/07/20 02:07:21 vapier Exp $
 
 inherit eutils
 
@@ -18,4 +18,6 @@ DEPEND=""
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README
+	insinto /etc
+	doins doc/gssapi_mech.conf || die
 }
