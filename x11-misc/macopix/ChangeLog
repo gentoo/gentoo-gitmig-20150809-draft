@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/macopix
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.10 2004/12/09 11:15:20 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.11 2006/07/20 00:28:02 malc Exp $
+
+  20 Jul 2006; <malc@gentoo.org> macopix-1.2.1.ebuild:
+  Add ~amd64 - bug #140061
 
   09 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> macopix-1.2.1.ebuild:
   Stable on x86 and ppc.
