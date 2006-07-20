@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5649 2006/07/19 11:34:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5650 2006/07/20 11:48:04 satya Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Andreetta <satya@gentoo.org> (20 Jul 2006)
+# Masked due to authentication and wins name mapping
+#   bug #140332, upstream bug #3548
+=net-fs/samba-3.0.23
 
 # Stefan Schweizer <genstef@gentoo.org> (18 Jul 2006)
 # Masked for removal, please use ekiga now, #136615
