@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.105 2006/07/20 02:18:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.106 2006/07/20 06:40:42 vapier Exp $
+
+  20 Jul 2006; Mike Frysinger <vapier@gentoo.org> files/bashrc:
+  Enable histappend option by default #139609 by Trenton D. Adams and add
+  small rewrite by Michael A. Smith to use bash builtins instead of grep for
+  detecting term color capabilities #140266.
 
   20 Jul 2006; Mike Frysinger <vapier@gentoo.org> files/dot-bashrc:
   Only run dircolors on /etc/DIR_COLORS if /etc/DIR_COLORS exists #140628.
