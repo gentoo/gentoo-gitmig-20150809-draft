@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.22 2006/07/18 03:43:47 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.23 2006/07/20 18:17:16 corsair Exp $
+
+  20 Jul 2006; Markus Rothe <corsair@gentoo.org> elvis-2.2.0-r1.ebuild:
+  Stable on ppc64; bug #140618
 
   18 Jul 2006; Joshua Jackson <tsunam@gentoo.org> elvis-2.2.0-r1.ebuild:
   Stable x86; bug #140618
