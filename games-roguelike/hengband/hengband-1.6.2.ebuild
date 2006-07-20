@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2.ebuild,v 1.3 2006/07/18 07:37:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2.ebuild,v 1.4 2006/07/20 02:10:29 flameeyes Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/hengband/10331/${P}.tar.bz2"
 KEYWORDS="ppc x86 ~x86-fbsd"
 LICENSE="Moria"
 SLOT="0"
-IUSE="cjk X"
+IUSE="X linguas_ja"
 
 RDEPEND=">=sys-libs/ncurses-5
 	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
@@ -34,17 +34,19 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+	use linguas_ja || myconf="--disable-japanese"
 	egamesconf \
 		--with-setgid=${GAMES_GROUP} \
-		`use_enable cjk japanese` \
 		`use_with X x` \
+		${myconf} \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	if use cjk ; then
+	if use linguas_ja ; then
 		dodoc readme.txt autopick.txt readme_eng.txt autopick_eng.txt
 	else
 		newdoc readme_eng.txt readme.txt
