@@ -1,13 +1,18 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.31 2006/07/20 13:38:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.32 2006/07/20 18:25:40 lu_zero Exp $
+
+  20 Jul 2006; Luca Barbato <lu_zero@gentoo.org>
+  files/yafray-0.0.9-libdir.patch:
+  typo fixed
 
 *yafray-0.0.9 (20 Jul 2006)
 
   20 Jul 2006; Luca Barbato <lu_zero@gentoo.org>
   +files/yafray-0.0.9-libdir.patch, +files/yafray-0.0.9-scons.patch,
   +yafray-0.0.9.ebuild:
-  New version
+  New version, thanks to Steve Yin <steve@chinavfx.net> for the headup
+  and the initial ebuild and patches.
 
   30 Jun 2006; Luca Barbato <lu_zero@gentoo.org> yafray-0.0.8.ebuild:
   Make scons parallebuild work

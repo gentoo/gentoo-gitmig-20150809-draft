@@ -14,7 +14,7 @@
  
 -def get_libpath(args): return prefix+"/lib"
 -def get_pluginpath(args): return prefix+"/lib/yafray"
-+def get_libpath(args): return prefix+libdif
++def get_libpath(args): return prefix+libdir
 +def get_pluginpath(args): return prefix+libdir+"/yafray"
  def get_binpath(args): return prefix+"/bin"
  def get_confpath(args): return prefix+"/etc"
