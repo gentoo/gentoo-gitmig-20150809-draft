@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.14 2006/03/05 20:21:51 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.15 2006/07/20 20:36:38 flameeyes Exp $
+
+  20 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  fping-2.4_beta2-r1.ebuild:
+  Add ~x86-fbsd keyword as per bug #141142.
 
   05 Mar 2006; Markus Ullmann <jokey@gentoo.org> fping-2.4_beta2.ebuild,
   fping-2.4_beta2-r1.ebuild:
