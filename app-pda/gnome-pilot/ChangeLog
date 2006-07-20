@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.25 2006/05/24 19:54:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.26 2006/07/20 10:35:56 liquidx Exp $
+
+*gnome-pilot-2.0.13-r1 (20 Jul 2006)
+
+  20 Jul 2006; Alastair Tse <liquidx@gentoo.org>
+  +gnome-pilot-2.0.13-r1.ebuild:
+  Adding CVS version of gnome-pilot from january which has a netsync patch
+  applied (#88511)
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
   gnome-pilot-2.0.13.ebuild:
