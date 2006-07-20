@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/neti
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.10 2006/04/27 21:37:11 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.11 2006/07/20 11:41:58 dragonheart Exp $
+
+*neti-1.01-r2 (20 Jul 2006)
+
+  20 Jul 2006; Daniel Black <dragonheart@gentoo.org> +files/neti-init2,
+  +neti-1.01-r2.ebuild, +neti-2.0.ebuild:
+  wireshark version of 1.01
+
+*neti-2.0 (20 Jul 2006)
+
+  20 Jul 2006; Daniel Black <dragonheart@gentoo.org> +files/neti-init2,
+  +neti-2.0.ebuild:
+  version bump
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-neti-1.01-r1,
   Manifest:
