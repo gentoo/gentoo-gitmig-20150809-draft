@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.3 2006/07/18 11:30:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.4 2006/07/20 14:00:37 liquidx Exp $
 
 inherit libtool eutils autotools
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls doc exif usb hal"
+RESTRICT="test confcache"
 
 # needs >usbutils-0.11-r2 to avoid /usr/lib/libusb*
 # conflicts with dev-libs/libusb
@@ -38,8 +39,6 @@ IUSE_CAMERAS="adc65 agfa-cl20 aox barbie canon casio clicksmart310
 	pccam600 polaroid ptp2 ricoh samsung sierra sipix smal sonix sonydscf1
 	sonydscf55 soundvision spca50x sq905 stv0674 stv0680 sx330z template
 	toshiba"
-
-RESTRICT="confcache"
 
 pkg_setup() {
 	if [[ -z "${CAMERAS}" ]] ; then
