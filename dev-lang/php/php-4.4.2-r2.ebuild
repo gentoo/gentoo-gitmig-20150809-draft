@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.2-r2.ebuild,v 1.11 2006/07/14 16:04:37 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.2-r2.ebuild,v 1.12 2006/07/20 14:26:12 chtekk Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -29,12 +29,12 @@ CONCURRENTMODPHP_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-concurrent_apache_modul
 
 inherit php4_4-sapi apache-module
 
-want_apache
-
 DESCRIPTION="The PHP language runtime engine: CLI, CGI and Apache SAPIs."
 
 DEPEND="app-admin/php-toolkit"
 RDEPEND="${DEPEND}"
+
+want_apache
 
 pkg_setup() {
 	PHPCONFUTILS_AUTO_USE=""
