@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.162 2006/07/07 21:31:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.163 2006/07/20 16:28:04 azarah Exp $
+
+*mozilla-firefox-2.0_beta1 (20 Jul 2006)
+
+  20 Jul 2006; Martin Schlemmer <azarah@gentoo.org>
+  +mozilla-firefox-2.0_beta1.ebuild:
+  Add cleaned up ebuild for 2.0b1 from Piotr Jaroszynski <peper@aster.pl>. Fix
+  up dist stuff to use Gentoo infra, and add back dropped patches and prefs.
 
   07 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
   mozilla-firefox-1.5.0.4.ebuild:
