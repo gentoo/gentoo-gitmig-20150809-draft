@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.95_beta.ebuild,v 1.2 2006/06/16 13:04:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.95_beta.ebuild,v 1.3 2006/07/20 03:51:27 williamh Exp $
 
 inherit eutils toolchain-funcs
 
@@ -55,6 +55,10 @@ src_unpack() {
 
 	# Fix hardcoded path for examples that will be finally installed in /usr/$(get_libdir)/festival/examples
 	sed -i -e "s:\.\./examples/:/usr/share/doc/${PF}/examples/:" ${S}/festival/lib/festival.scm
+
+	# gcc 4.1 compatibility patches
+	epatch ${FILESDIR}/${P}-gcc41.patch
+	use amd64 && epatch ${FILESDIR}/${P}-gcc41-amd64.patch
 }
 
 src_compile() {
