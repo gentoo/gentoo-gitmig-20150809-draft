@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.17 2006/05/07 20:23:08 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.18 2006/07/20 04:58:45 nerdboy Exp $
+
+  20 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
+  +files/sourcenav-5.1.4-bash3.patch, +files/sourcenav-5.1.4-gcc4.patch,
+  sourcenav-5.1.4.ebuild, sourcenav-5.2_beta2.ebuild,
+  -sourcenav-5.1.1.ebuild:
+  removed broken older version and updated stable with gcc4 and bash3 patches
+  (old bug reopened).  Still thinking about stablizing a beta release (since
+  it may be the last official upstream release for the forseeable future).
 
   07 May 2006; Steve Arnold <nerdboy@gentoo.org>
   +files/sourcenav-5.2_beta2-gcc4.patch, sourcenav-5.2_beta2.ebuild:
