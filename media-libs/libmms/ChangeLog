@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.4 2006/04/27 23:08:23 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.5 2006/07/20 14:23:51 allanonjl Exp $
+
+*libmms-0.2-r1 (20 Jul 2006)
+
+  20 Jul 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/libmms_0.2-7-cumulative.diff, +libmms-0.2-r1.ebuild:
+  apply patch to fix #139320
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-libmms-0.1,
   Manifest:
