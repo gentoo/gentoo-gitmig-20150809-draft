@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.9 2006/06/10 16:19:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf.eclass,v 1.10 2006/07/20 14:04:43 azarah Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -249,6 +249,14 @@ mozconfig_use_with() {
 mozconfig_use_extension() {
 	declare minus=$(useq $1 || echo -)
 	mozconfig_annotate "${minus:-+}$1" --enable-extensions=${minus}${2}
+}
+
+# Add all the variables for building the final product.
+mozconfig_build_opts() {
+	echo "export BUILD_OFFICIAL=1" >>.mozconfig
+	echo "export MOZILLA_OFFICIAL=1" >>.mozconfig
+	echo "mk_add_options BUILD_OFFICIAL=1" >>.mozconfig
+	echo "mk_add_options MOZILLA_OFFICIAL=1" >>.mozconfig
 }
 
 # mozconfig_final: display a table describing all configuration options paired
