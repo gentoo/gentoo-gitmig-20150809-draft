@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.214 2006/06/05 10:47:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.215 2006/07/20 02:35:49 psi29a Exp $
+
+  19 Jul 2006; <psi29a@gentoo.org> kdepim-3.5.2-r2.ebuild:
+  stable on mips
 
   05 Jun 2006; Guy Martin <gmsoft@gentoo.org> kdepim-3.5.2-r3.ebuild,
   kdepim-3.5.3.ebuild:
