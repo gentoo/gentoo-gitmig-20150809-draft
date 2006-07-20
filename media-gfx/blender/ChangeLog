@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.89 2006/07/17 20:30:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.90 2006/07/20 12:33:52 lu_zero Exp $
+
+  20 Jul 2006; Luca Barbato <lu_zero@gentoo.org> blender-2.42.ebuild:
+  Saner paths, plugins path not yet sane
 
   17 Jul 2006; Luca Barbato <lu_zero@gentoo.org> blender-2.42.ebuild:
   missing dep
