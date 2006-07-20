@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r2.ebuild,v 1.4 2006/07/19 18:25:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/fortune-mod-1.99.1-r2.ebuild,v 1.5 2006/07/20 08:08:46 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,8 +30,12 @@ src_unpack() {
 		-e "/^OFFENSIVE=/s:=.*:=`use offensive && echo 1 || echo 0`:" \
 		Makefile || die "sed Makefile failed"
 
-	use elibc_FreeBSD && sed -i -e '/^REGEXLIBS=/s:=.*:= -lcompat:' \
-		Makefile || die "sed REGEXLIBS failed"
+	if use elibc_FreeBSD ; then
+		sed -i \
+			-e '/^REGEXLIBS=/s:=.*:= -lcompat:' \
+			Makefile \
+			|| die "sed REGEXLIBS failed"
+	fi
 }
 
 src_compile() {
