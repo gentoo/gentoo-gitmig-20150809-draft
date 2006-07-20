@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2044 2006/07/19 11:38:36 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2045 2006/07/20 07:51:04 dostrow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1813,6 +1813,6 @@ xfce-base/thunar:xslt - Build HTML based docs from xml.
 xfce-base/xfdesktop:exo - Build with libexo support (required for thunar-vfs integration).
 xfce-base/xfdesktop:panel-plugin - Enable the xfdesktop menu plugin for xfce4-panel.
 xfce-base/xfdesktop:thunar-vfs - Enable thunar-vfs support for desktop icons.
-xfce-base/xfprint:lpr - Build LPr/LPd support
+xfce-base/xfprint:lpr - Build LPr/LPd support instead of CUPS support.
 xfce-base/xfwm4:xcomposite - Support for Xorg composite extension.
 xfce-extra/terminal:xslt - Build HTML based docs from xml.
