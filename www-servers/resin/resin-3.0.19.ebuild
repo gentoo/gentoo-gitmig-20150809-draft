@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.19.ebuild,v 1.1 2006/07/06 11:25:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.19.ebuild,v 1.2 2006/07/20 17:48:15 corsair Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -14,7 +14,7 @@ IUSE="doc"
 # 2006/01/21: keywords (ppc, ppc64, sparc) dropped due to deps:
 #  - aopalliance has (amd64, x86)
 #  - iso-relax has (amd64, ppc, x86)
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/iso-relax-20050331"
