@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.11.ebuild,v 1.10 2005/07/02 20:30:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.11.ebuild,v 1.11 2006/07/20 23:13:44 exg Exp $
 
 inherit eutils gnome.org flag-o-matic
 
@@ -16,11 +16,6 @@ DEPEND="virtual/libc"
 
 src_compile() {
 	filter-flags -fno-exceptions
-	if use ppc-macos ; then
-		if [ -e /usr/lib/lib/libgcc_s.1.dylib ] ; then
-			append-ldflags -lgcc_s
-		fi
-	fi
 	local myconf
 	use debug \
 		&& myconf="--enable-debug=yes" \
