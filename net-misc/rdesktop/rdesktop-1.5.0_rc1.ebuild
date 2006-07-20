@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.5.0_rc1.ebuild,v 1.1 2006/07/05 16:14:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.5.0_rc1.ebuild,v 1.2 2006/07/20 22:42:28 wolf31o2 Exp $
 
 inherit eutils
 
@@ -33,7 +33,9 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	sed -i -e '/-O2/c\' -e 'cflags="$cflags ${CFLAGS}"' configure
-	sed -i -e 's:strip:true:' Makefile.in
+	local strip="$(echo '$(STRIP) $(DESTDIR)$(bindir)/rdesktop')"
+	sed -i -e "s:${strip}::" Makefile.in \
+		|| die "sed failed in Makefile.in"
 	econf \
 		--with-openssl=/usr \
 		`use_with debug` \
