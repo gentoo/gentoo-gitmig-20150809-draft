@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.346 2006/07/17 02:11:44 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.347 2006/07/20 18:12:51 flameeyes Exp $
+
+*kdelibs-3.5.3-r4 (20 Jul 2006)
+
+  20 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdelibs-3.5.3-konqcrash.patch, +kdelibs-3.5.3-r4.ebuild:
+  Add patch to fix Konqueror crash. Patch from Dirk Mueller <mueller@kde.org>,
+  thanks to Hanno Boeck for reporting. See bug #141173.
 
   16 Jul 2006; <psi29a@gentoo.org> kdelibs-3.5.2-r6.ebuild:
   marked as stable
