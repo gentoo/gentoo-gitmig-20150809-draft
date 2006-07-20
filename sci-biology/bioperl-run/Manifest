@@ -1,15 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3aa2552cccf16c1d5ed8257a66c1817d ChangeLog 2069
-MD5 ede6a317da6b1ba511beeb256cb71453 bioperl-run-1.4.ebuild 1303
+AUX bioperl-run-Pise-test-patch.diff 722 RMD160 85c3744bfc14db91971e4df2dfd967c5ad9f0310 SHA1 0498546ae9f12d0db5194c41a360910833870eac SHA256 84c8280f8d3af311b53c8b6edd4e6ffa9acc0824528d96d7f1c2537404d3e30f
 MD5 21ad123058f1e670f289ee1a87de4e82 files/bioperl-run-Pise-test-patch.diff 722
+RMD160 85c3744bfc14db91971e4df2dfd967c5ad9f0310 files/bioperl-run-Pise-test-patch.diff 722
+SHA256 84c8280f8d3af311b53c8b6edd4e6ffa9acc0824528d96d7f1c2537404d3e30f files/bioperl-run-Pise-test-patch.diff 722
+DIST bioperl-run-1.4.tar.gz 830774
+EBUILD bioperl-run-1.4.ebuild 1303 RMD160 042856b0ab449d9ffe203d4c0515f96c75b9930c SHA1 7dce164a3042784cf7ebdffdac3fa8a7447e318e SHA256 8d9a807e7e4cf4deff1b0f7cdc405bc324410c882bc70915128b70656b1a0ab2
+MD5 ede6a317da6b1ba511beeb256cb71453 bioperl-run-1.4.ebuild 1303
+RMD160 042856b0ab449d9ffe203d4c0515f96c75b9930c bioperl-run-1.4.ebuild 1303
+SHA256 8d9a807e7e4cf4deff1b0f7cdc405bc324410c882bc70915128b70656b1a0ab2 bioperl-run-1.4.ebuild 1303
+MISC ChangeLog 2069 RMD160 147bfc11b0fa887418b30095dd0473168f1ce1ea SHA1 a3a156d20bceb901bfa206f15ecc0e026c2bdf6e SHA256 7b8f7dd2d184dd4b5d34ac02cb0cffd6e3e24153ae5f06e8fd7b3237bcb56bfa
+MD5 3aa2552cccf16c1d5ed8257a66c1817d ChangeLog 2069
+RMD160 147bfc11b0fa887418b30095dd0473168f1ce1ea ChangeLog 2069
+SHA256 7b8f7dd2d184dd4b5d34ac02cb0cffd6e3e24153ae5f06e8fd7b3237bcb56bfa ChangeLog 2069
+MISC metadata.xml 262 RMD160 4eabcbcb990d4d5e3b34db8c27bcd2c0cfcf7501 SHA1 3c024ca60a2b93ed0e0311f6b05ef5ef117bee31 SHA256 89af818a993faf14a4a87e2f254943420156c2a317c385480a9533ba682b650f
+MD5 5f35ae4b4cb1cd144db7c7c093d3fd80 metadata.xml 262
+RMD160 4eabcbcb990d4d5e3b34db8c27bcd2c0cfcf7501 metadata.xml 262
+SHA256 89af818a993faf14a4a87e2f254943420156c2a317c385480a9533ba682b650f metadata.xml 262
 MD5 47db6a1f839dd45f8c891b5f6ab2ff2a files/digest-bioperl-run-1.4 67
-MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8KDXtG5z4I8BtQoRAkHUAJ0Qz6HVBKzEZD7s8BusuidMgkyzzwCeJ31U
-fYoVtBXCLz8R3ydd+orjQuY=
-=/OrV
------END PGP SIGNATURE-----
+RMD160 ea531db028c33bfb9ddd97545bfb5f852010f6d2 files/digest-bioperl-run-1.4 67
+SHA256 aa030e3823bd4e0cf56adc1264604e473fec0720814b358dd08472a7c28efe0a files/digest-bioperl-run-1.4 67

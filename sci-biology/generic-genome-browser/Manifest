@@ -1,14 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4157d1b507972bb3050d55eeaceaced2 ChangeLog 1385
-MD5 a46a3f4a12816bb198f2f532a605ba11 files/digest-generic-genome-browser-1.58 80
+DIST Generic-Genome-Browser-1.58.tar.gz 1207583
+EBUILD generic-genome-browser-1.58.ebuild 2032 RMD160 2e6d2d2cd4e655a110eb49f66d6bf47aac65e8a2 SHA1 b31554d1f8ff84a7a284c9118d40d5c8062ccd7a SHA256 5be926d03de179b6fe609fb1686801e8aa90815e5ed952460f48ccc147df535d
 MD5 e5c61cca5f76988697bbd195d88053d8 generic-genome-browser-1.58.ebuild 2032
-MD5 f189a3c4ff5ae55bcee4f8ed0ace5d20 metadata.xml 254
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFD8KECtG5z4I8BtQoRAobmAJ9bHJB/GOaNhLgGPx22E5zi0Y1TvgCfcYGa
-BMlnoMcidPjslR0fWx9jnLQ=
-=Uy3a
------END PGP SIGNATURE-----
+RMD160 2e6d2d2cd4e655a110eb49f66d6bf47aac65e8a2 generic-genome-browser-1.58.ebuild 2032
+SHA256 5be926d03de179b6fe609fb1686801e8aa90815e5ed952460f48ccc147df535d generic-genome-browser-1.58.ebuild 2032
+MISC ChangeLog 1385 RMD160 191c8018cfa5d9c531372f11efa47f484823c98c SHA1 8dd165f42eaf90e591b768b2b3154645eb000110 SHA256 b8614edaed84fc7a799f15b45077d2c112bf24b1fe9d4a2ae15a4a505a40bdd4
+MD5 4157d1b507972bb3050d55eeaceaced2 ChangeLog 1385
+RMD160 191c8018cfa5d9c531372f11efa47f484823c98c ChangeLog 1385
+SHA256 b8614edaed84fc7a799f15b45077d2c112bf24b1fe9d4a2ae15a4a505a40bdd4 ChangeLog 1385
+MISC metadata.xml 262 RMD160 4eabcbcb990d4d5e3b34db8c27bcd2c0cfcf7501 SHA1 3c024ca60a2b93ed0e0311f6b05ef5ef117bee31 SHA256 89af818a993faf14a4a87e2f254943420156c2a317c385480a9533ba682b650f
+MD5 5f35ae4b4cb1cd144db7c7c093d3fd80 metadata.xml 262
+RMD160 4eabcbcb990d4d5e3b34db8c27bcd2c0cfcf7501 metadata.xml 262
+SHA256 89af818a993faf14a4a87e2f254943420156c2a317c385480a9533ba682b650f metadata.xml 262
+MD5 a46a3f4a12816bb198f2f532a605ba11 files/digest-generic-genome-browser-1.58 80
+RMD160 f646620d9b7085ff8ac65c2b99d453e2570c93cf files/digest-generic-genome-browser-1.58 80
+SHA256 8a61104947f00a196a147fb99209c4fad946fecfd630c6fc7f89e66603b1ff2e files/digest-generic-genome-browser-1.58 80
