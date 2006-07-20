@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.3.90.2.ebuild,v 1.1 2006/07/10 18:19:43 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.3.90.2.ebuild,v 1.2 2006/07/20 07:30:26 dostrow Exp $
 
 inherit eutils xfce44
 
@@ -10,7 +10,8 @@ DESCRIPTION="Xfce 4 utilities"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="|| ( x11-apps/xrdb
+RDEPEND="|| ( ( x11-apps/xrdb
+	x11-apps/xmessage )
 	virtual/x11 )
 	dev-libs/dbh
 	>=dev-libs/glib-2.2
