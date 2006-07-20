@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.5.2.ebuild,v 1.1 2006/07/19 17:00:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.5.2.ebuild,v 1.2 2006/07/20 16:58:26 flameeyes Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -39,9 +39,6 @@ KMCOPYLIB="
 KMEXTRACTONLY="lib/"
 
 need-kde 3.4
-
-PATCHES="${FILESDIR}/kexi-1.5.1-form_plugins.patch
-	${FILESDIR}/kexi-1.5.1-kexi_checkbox_data_saving.patch"
 
 src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql) --enable-kexi-reports"
