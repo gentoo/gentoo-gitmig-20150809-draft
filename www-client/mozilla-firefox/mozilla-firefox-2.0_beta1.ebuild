@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_beta1.ebuild,v 1.3 2006/07/20 17:51:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_beta1.ebuild,v 1.4 2006/07/20 18:55:20 azarah Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -37,7 +37,6 @@ for X in ${SHORTLANGS} ; do
 		linguas_${X%%-*}? ( mirror://gentoo/${P}-${X}.xpi
 							http://dev.gentoo.org/~azarah/firefox/${P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X%%-*}"
-	echo "linguas_${X/%%-*}"
 done
 
 RDEPEND="java? ( virtual/jre )
