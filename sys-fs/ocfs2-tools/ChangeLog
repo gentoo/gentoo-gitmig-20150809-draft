@@ -1,0 +1,13 @@
+# ChangeLog for sys-fs/ocfs2-tools
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ChangeLog,v 1.1 2006/07/20 05:13:14 dberkholz Exp $
+
+*ocfs2-tools-1.2.1 (20 Jul 2006)
+
+  20 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/INSTALL.GENTOO, +files/ocfs2.conf, +files/ocfs2.init,
+  +metadata.xml, +ocfs2-tools-1.2.1.ebuild:
+  (#98024) Add userland tools for the OCFS2 clustering filesystem. Ebuild and
+  related files written by Mauricio Zambrano, Lazar Obradovic and others. I've
+  fixed up some grammer and the ebuild for addition to the tree.
+
