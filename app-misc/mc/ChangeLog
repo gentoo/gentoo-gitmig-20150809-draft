@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.105 2006/07/12 16:22:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.106 2006/07/20 22:11:48 exg Exp $
+
+  20 Jul 2006; Emanuele Giaquinta <exg@gentoo.org>
+  -files/mc-4.6.0-bug-102356.patch,
+  -files/mc-4.6.0-can-2004-1004-1005-1092-1176.patch,
+  -files/mc-4.6.0-cpan-2003-1023.patch, -files/mc-4.6.0-find.patch,
+  -files/mc-4.6.0-ftp.patch, -files/mc-4.6.0-gcc4.patch,
+  -files/mc-4.6.0-key.c.patch, -files/mc-4.6.0-largefile.patch,
+  -files/mc-4.6.0-vfs.patch, -mc-4.6.0-r14.ebuild:
+  Cleanup.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> mc-4.6.1.ebuild:
   Mark 4.6.1 stable on ia64. #130229
