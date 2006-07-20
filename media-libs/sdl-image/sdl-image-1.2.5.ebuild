@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5.ebuild,v 1.1 2006/05/19 18:39:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5.ebuild,v 1.2 2006/07/20 02:04:55 vapier Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ DESCRIPTION="image file loading library"
 HOMEPAGE="http://www.libsdl.org/projects/SDL_image/index.html"
 SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gif jpeg tiff png"
@@ -24,7 +24,6 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable gif) \
 		$(use_enable jpeg jpg) \
 		$(use_enable tiff tif) \
