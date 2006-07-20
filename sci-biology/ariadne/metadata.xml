@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		ARIADNE is a package of two programs, ariadne and prospero, that
 		compare protein sequences and profiles using the Smith-Waterman

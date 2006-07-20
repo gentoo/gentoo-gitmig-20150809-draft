@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		The Restriction Enzyme data BASE is a collection of information about
 		restriction enzymes and related proteins. It is maintained by New

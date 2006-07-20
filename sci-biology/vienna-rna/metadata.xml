@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		The Vienna RNA Package consists of a C code library and several
 		stand-alone programs for the prediction and comparison of RNA secondary

@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		T-Coffee is a multiple sequence alignment package. Given a set of
 		sequences (Proteins or DNA), T-Coffee generates a multiple sequence

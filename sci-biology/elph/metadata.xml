@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		ELPH is a general-purpose Gibbs sampler for finding motifs in a set of
 		DNA or protein sequences. The program takes as input a set containing

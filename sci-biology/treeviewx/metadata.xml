@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		TreeView X is a program for displaying phylogenetic trees on Linux and
 		UNIX platforms. It can read and display NEXUS and Newick format tree

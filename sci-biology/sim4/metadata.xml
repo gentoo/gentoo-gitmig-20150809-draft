@@ -5,7 +5,7 @@
 		<email>ribosome@gentoo.org</email>
 		<name>Olivier Fisette</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 	<longdescription>
 		sim4 is a similarity-based tool for aligning an expressed DNA sequence
 		(EST, cDNA, mRNA) with a genomic sequence for the gene. It also detects
