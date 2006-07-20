@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfprint
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.67 2006/07/13 20:39:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfprint/ChangeLog,v 1.68 2006/07/20 07:45:51 dostrow Exp $
+
+  20 Jul 2006; Daniel Ostrow <dostrow@gentoo.org> xfprint-4.3.90.1.ebuild,
+  xfprint-4.3.90.2.ebuild:
+  Shuffle around useflag behavior on beta ebuilds to prevent non-interactive
+  build failure. Thanks to drac on bug #140377 for the catch.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> xfprint-4.2.3.ebuild:
   Mark 4.2.3 stable on ia64
