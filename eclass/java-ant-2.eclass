@@ -12,11 +12,8 @@ inherit java-utils-2
 # ant to build. In particular, it will attempt to fix build.xml files, so that
 # they use the appropriate 'target' and 'source' attributes.
 
-# Only exports src_unpack
-EXPORT_FUNCTIONS src_unpack
-
-# We need some tools from java-toolkit
-DEPEND=">=dev-java/javatoolkit-0.1.5"
+# We need some tools from javatoolkit. We also need portage 2.1 for phase hooks
+DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP}"
 
 # ------------------------------------------------------------------------------
 # @global JAVA_ANT_BSFIX
@@ -69,8 +66,11 @@ JAVA_ANT_BSFIX_SOURCE_TAGS=${JAVA_PKG_BSFIX_SOURCE_TAGS:="javadoc javac xjavac j
 #
 # Unpacks the source, and attempts to fix build files.
 # ------------------------------------------------------------------------------
-java-ant-2_src_unpack() {
-	ant_src_unpack
+post_src_unpack() {
+	if java-pkg_func-exists ant_src_unpack; then
+		java-pkg_announce-qa-violation "Using old ant_src_unpack. Should be src_unpack"
+		ant_src_unpack
+	fi
 	java-ant_bsfix
 }
 
@@ -80,12 +80,12 @@ java-ant-2_src_unpack() {
 # Helper function which does the actual unpacking
 # ------------------------------------------------------------------------------
 # TODO maybe use base.eclass for some patching love?
-ant_src_unpack() {
-	debug-print-function ${FUNCNAME} $*
-	if [[ -n "${A}" ]]; then
-		unpack ${A}
-	fi
-}
+#ant_src_unpack() {
+#	debug-print-function ${FUNCNAME} $*
+#	if [[ -n "${A}" ]]; then
+#		unpack ${A}
+#	fi
+#}
 
 # ------------------------------------------------------------------------------
 # @private java-ant_bsfix

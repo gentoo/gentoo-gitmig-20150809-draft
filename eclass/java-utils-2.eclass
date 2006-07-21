@@ -35,6 +35,9 @@ inherit eutils versionator multilib
 # Make sure we use java-config-2
 export WANT_JAVA_CONFIG="2"
 
+# TODO document
+JAVA_PKG_PORTAGE_DEP=">=sys-apps/portage-2.1_pre1"
+
 # -----------------------------------------------------------------------------
 # @variable-internal JAVA_PKG_E_DEPEND
 #
@@ -42,7 +45,7 @@ export WANT_JAVA_CONFIG="2"
 # the version of java-config we want to use. We also need a recent version 
 # portage, that includes phase hooks.
 # -----------------------------------------------------------------------------
-JAVA_PKG_E_DEPEND=">=dev-java/java-config-2.0.19-r1 >=sys-apps/portage-2.1_pre1"
+JAVA_PKG_E_DEPEND=">=dev-java/java-config-2.0.19-r1 ${JAVA_PKG_PORTAGE_DEP}"
 
 # -----------------------------------------------------------------------------
 # @variable-external JAVA_PKG_ALLOW_VM_CHANGE
@@ -1730,6 +1733,37 @@ java-pkg_die() {
 	echo "JAVACFLAGS=\"${JAVACFLAGS}\" COMPILER=\"${GENTOO_COMPILER}\"" >&2
 	echo "and of course, the output of emerge --info" >&2
 }
+
+
+# TODO document
+# List jars in the source directory, ${S}
+java-pkg_jar-list() {
+	if [[ -n "${JAVA_PKG_DEBUG}" ]]; then
+		einfo "Linked Jars"
+		find "${S}" -type l -name '*.jar' -print0 | xargs -0 -r -n 500 ls -ald | sed -e "s,${WORKDIR},\${WORKDIR},"
+		einfo "Jars"
+		find "${S}" -type f -name '*.jar' -print0 | xargs -0 -r -n 500 ls -ald | sed -e "s,${WORKDIR},\${WORKDIR},"
+		einfo "Classes"
+		find "${S}" -type f -name '*.class' -print0 | xargs -0 -r -n 500 ls -ald | sed -e "s,${WORKDIR},\${WORKDIR},"
+	fi
+}
+
+# TODO document
+# Verify that the classes were compiled for the right source / target
+java-pkg_verify-classes() {
+	ebegin "Verifying java class versions"
+	#$(find ${D} -type f -name '*.jar' -o -name '*.class')
+	class-version-verify.py -t $(java-pkg_get-target) -r ${D} 
+	result=$?
+	eend ${result}
+	if [[ ${result} == 0 ]]; then
+		einfo "All good"
+	else
+		ewarn "Possible problem"
+		die "Bad class files found"
+	fi
+}
+
 
 # ------------------------------------------------------------------------------
 # @section-end internal
