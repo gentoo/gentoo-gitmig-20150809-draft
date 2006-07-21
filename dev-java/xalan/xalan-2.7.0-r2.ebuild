@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r2.ebuild,v 1.2 2006/07/21 00:24:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.7.0-r2.ebuild,v 1.3 2006/07/21 18:32:17 nichoj Exp $
 
-inherit java-pkg-2 eutils versionator
+inherit java-pkg-2 java-ant-2 eutils versionator
 
 MY_PN="${PN}-j"
 MY_PV="$(replace_all_version_separators _)"
