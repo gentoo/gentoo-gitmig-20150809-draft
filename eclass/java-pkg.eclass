@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.39 2006/07/20 19:01:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.40 2006/07/21 15:26:44 nichoj Exp $
 
 inherit multilib
 
@@ -39,7 +39,7 @@ java-pkg_pkg_setup() {
 		# or if there is a Java use flag and it is enabled
 		if ! hasq java ${IUSE} || use java; then
 			if [[ -n ${GENTOO_VM} ]]; then
-				einfo "Using ${GENTOO_VM}"
+				einfo "Using Generation-1 System VM: ${GENTOO_VM}"
 				initialize-java-home
 				eend 0
 			else
