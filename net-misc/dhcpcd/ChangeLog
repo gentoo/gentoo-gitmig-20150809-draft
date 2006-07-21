@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.100 2006/07/12 14:06:26 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.101 2006/07/21 09:59:52 uberlord Exp $
+
+*dhcpcd-2.0.8-r1 (21 Jul 2006)
+
+  21 Jul 2006; Roy Marples <uberlord@gentoo.org>
+  +files/dhcpcd-2.0.8-loglevel.patch, +dhcpcd-2.0.8-r1.ebuild:
+  Fix loglevel option (-v), thanks to Bert Van Leeuwen, #141205.
 
 *dhcpcd-2.0.8 (12 Jul 2006)
 
