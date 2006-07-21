@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r4.ebuild,v 1.6 2005/08/23 13:38:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r4.ebuild,v 1.7 2006/07/21 17:12:45 hanno Exp $
 
 inherit eutils depend.apache
 IUSE="apache2"
@@ -9,7 +9,7 @@ DESCRIPTION="A python-based mailing list server with an extensive web interface"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://www.list.org/"
 
-SLOT="O"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc amd64"
 
