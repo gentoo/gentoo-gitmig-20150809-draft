@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.6 2005/11/07 09:45:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.7 2006/07/21 00:36:06 flameeyes Exp $
 
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
@@ -10,6 +10,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE="quicktime real"
+
+RDEPEND="real? ( =virtual/libstdc++-3.3* )"
 
 S=${WORKDIR}/all-${PV}
 
