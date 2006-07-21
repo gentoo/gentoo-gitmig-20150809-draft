@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.30 2006/07/21 02:25:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.31 2006/07/21 15:33:03 nichoj Exp $
+
+  21 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  commons-collections-3.1-r1.ebuild:
+  Added java-ant-2 to inherit.
 
 *commons-collections-3.1-r1 (21 Jul 2006)
 
