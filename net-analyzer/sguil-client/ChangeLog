@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sguil-client
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/ChangeLog,v 1.3 2006/03/01 14:10:15 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-client/ChangeLog,v 1.4 2006/07/21 10:27:09 strerror Exp $
+
+  21 Jul 2006; Benjamin Smee <strerror@gentoo.org>
+  sguil-client-0.6.1.ebuild:
+  Change to ebuild for bug #141151
 
 *sguil-client-0.6.1 (01 Mar 2006)
 
