@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.11 2006/07/20 16:24:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.25-r1.ebuild,v 1.12 2006/07/21 16:45:10 mr_bones_ Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -15,7 +15,7 @@ IUSE="spamassassin"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-RESTRICT="userpriv sandbox"
+RESTRICT="userpriv usersandbox"
 
 DEPEND=">=dev-lang/perl-5.6.1-r1
 	>=virtual/perl-Time-HiRes-01.20-r2
