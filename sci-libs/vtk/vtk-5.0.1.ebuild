@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.1.ebuild,v 1.1 2006/07/10 12:41:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.1.ebuild,v 1.2 2006/07/21 02:09:59 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
-inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg python qt3
+inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3
 
 # Short package version
 SPV="$(get_version_component_range 1-2)"
@@ -17,7 +17,7 @@ SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
 LICENSE="BSD"
 KEYWORDS="~x86"
 SLOT="0"
-IUSE="doc examples java mpi patented python tcl tk threads qt3 qt4"
+IUSE="doc examples mpi patented python tcl tk threads qt3 qt4"
 RDEPEND="java? ( =virtual/jdk-1.4* )
 	mpi? ( sys-cluster/mpich )
 	python? ( >=dev-lang/python-2.0 )
@@ -39,6 +39,7 @@ S="${WORKDIR}"/VTK
 
 
 pkg_setup() {
+	java-pkg-opt-2_pkg_setup
 	if use qt3 && use qt4; then
 		echo
 		ewarn "qt3 and qt4 support for vtk are mutually exclusive and"
@@ -161,7 +162,7 @@ src_compile() {
 		|| die "Failed to patch javac"
 	fi
 
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
