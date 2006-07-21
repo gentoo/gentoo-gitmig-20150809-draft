@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.19 2006/05/13 20:22:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.20 2006/07/21 02:32:05 psi29a Exp $
+
+  20 Jul 2006; <psi29a@gentoo.org> elementtree-1.2.6.ebuild:
+  stable on mips
 
   13 May 2006; Thomas Cort <tcort@gentoo.org> elementtree-1.2.6.ebuild:
   Added ~alpha keyword.
