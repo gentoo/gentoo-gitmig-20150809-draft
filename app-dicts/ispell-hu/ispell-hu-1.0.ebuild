@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.0.ebuild,v 1.1 2006/03/19 18:57:29 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.0.ebuild,v 1.2 2006/07/21 22:33:16 arj Exp $
+
+inherit eutils
 
 MY_P=magyarispell-${PV}
 S=${WORKDIR}/${MY_P}
@@ -16,8 +18,7 @@ DEPEND="app-text/ispell"
 IUSE=""
 
 src_compile() {
-	sed "s/#ispell:/ispell:/" Makefile > Makefile.tmp
-	cp Makefile.tmp Makefile
+	epatch ${FILESDIR}/ispell-hu-1.0-fix-build.patch
 	make ispell || die
 }
 
