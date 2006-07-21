@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.4 2006/04/27 20:19:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.5 2006/07/21 02:05:55 metalgod Exp $
+
+  21 Jul 2006; Luis Medinas <metalgod@gentoo.org>
+  gnome-power-manager-2.14.3.ebuild:
+  Stable on amd64. See bug #141001.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
