@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.46 2006/07/20 05:34:10 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.47 2006/07/21 03:22:59 marineam Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -310,6 +310,7 @@ get_version() {
 
 	# For things like git that can append extra stuff:
 	[ -e ${KV_DIR}/scripts/setlocalversion ] &&
+		linux_chkconfig_builtin LOCALVERSION_AUTO &&
 		KV_LOCAL="${KV_LOCAL}$(sh ${KV_DIR}/scripts/setlocalversion ${KV_DIR})"
 
 	# And we should set KV_FULL to the full expanded version
