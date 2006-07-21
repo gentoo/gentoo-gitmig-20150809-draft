@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.7.ebuild,v 1.1 2006/03/23 21:53:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.7.ebuild,v 1.2 2006/07/21 00:42:58 flameeyes Exp $
 
 inherit nsplugins eutils rpm
 
@@ -20,8 +20,12 @@ RDEPEND="!amd64? (
 			>=dev-libs/glib-2
 			>=x11-libs/pango-1.2
 			>=x11-libs/gtk+-2.2
+			=virtual/libstdc++-3.3*
 		)
-		amd64? ( app-emulation/emul-linux-x86-gtklibs )"
+		amd64? (
+			app-emulation/emul-linux-x86-gtklibs
+			app-emulation/emul-linux-x86-compat
+		)"
 DEPEND="${RDEPEND}"
 RESTRICT="nostrip nomirror"
 
