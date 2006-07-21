@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.1.0.ebuild,v 1.1 2006/06/16 06:00:56 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.1.0.ebuild,v 1.2 2006/07/21 07:59:18 hanno Exp $
 
 inherit kde-functions
 
@@ -52,7 +52,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-        rm -rf ${D}/usr/share/doc
+	rm -rf ${D}/usr/share/doc
 	dodoc AUTHORS README doc/*
 }
 
