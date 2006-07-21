@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.63 2006/07/18 21:52:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.64 2006/07/21 18:56:45 betelgeuse Exp $
+
+  21 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
+  -gnu-classpath-0.14.ebuild:
+  Removed an old version.
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   gnu-classpath-0.90.ebuild:
