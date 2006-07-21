@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.30 2006/07/21 01:48:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.31 2006/07/21 13:55:37 nelchael Exp $
+
+*jsch-0.1.21-r2 (21 Jul 2006)
+
+  21 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> -jsch-0.1.21-r1.ebuild,
+  +jsch-0.1.21-r2.ebuild:
+  Add java-ant-2.
 
 *jsch-0.1.21-r1 (21 Jul 2006)
 
