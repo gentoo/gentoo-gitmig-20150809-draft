@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.35 2006/03/11 20:06:22 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.36 2006/07/21 19:03:16 nichoj Exp $
+
+  21 Jul 2006; Joshua Nichols <jnichols@gentoo.org> rhino-1.5.5-r3.ebuild,
+  rhino-1.6.1-r3.ebuild:
+  Added java-ant-2 to inherit.
 
   11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> rhino-1.6.1-r2.ebuild:
   Stable on ppc.
