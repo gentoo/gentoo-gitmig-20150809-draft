@@ -1,7 +1,12 @@
 # ChangeLog for dev-util/bazaar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/ChangeLog,v 1.10 2006/01/14 16:24:06 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/ChangeLog,v 1.11 2006/07/21 20:02:46 arj Exp $
 
+*bazaar-1.4.2-r1 (21 Jul 2006)
+
+  21 Jul 2006; Anders Rune Jensen <arj@gentoo.org> +bazaar-1.4.2-r1.ebuild:
+  Bumped version since this one only works with neon > 0.26
+	
   14 Jan 2006; Anders Rune Jensen <arj@gentoo.org> bazaar-1.4.2.ebuild,
   -bazaar-1.1.ebuild, -bazaar-1.1.1.ebuild, -bazaar-1.2.ebuild,
   -bazaar-1.3.ebuild: 
