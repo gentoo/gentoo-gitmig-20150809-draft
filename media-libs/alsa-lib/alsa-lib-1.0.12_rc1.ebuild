@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.12_rc1.ebuild,v 1.2 2006/06/26 22:27:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.12_rc1.ebuild,v 1.3 2006/07/21 01:35:57 flameeyes Exp $
 
 inherit eutils autotools libtool
 
@@ -45,6 +45,8 @@ src_compile() {
 
 	if use doc; then
 		emake doc || die "failed to generate docs"
+		fgrep -Zrl "${S}" "${S}/doc/doxygen/html" | \
+			xargs -0 sed -i -e "s:${S}::"
 	fi
 }
 
