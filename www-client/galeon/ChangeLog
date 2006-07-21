@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.29 2006/07/16 10:29:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.30 2006/07/21 07:24:35 tsunam Exp $
+
+  21 Jul 2006; Joshua Jackson <tsunam@gentoo.org> galeon-2.0.1-r1.ebuild:
+  Stable x86; same bug as everyone else did it for
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   galeon-2.0.1-r1.ebuild:
