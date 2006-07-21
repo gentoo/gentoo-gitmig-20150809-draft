@@ -3,13 +3,8 @@
 <pkgmetadata>
   <herd>media-tv</herd>
 	<maintainer>
-	  <email>hd_brummy@gentoo.org</email>
-	  <name>Joerg Bornkessel</name>
-	  <description>Please contacts maintainer before you something change.</description>
-	</maintainer>
-	<maintainer>
-	  <email>zzam@gentoo.org</email>
-	  <name>Matthias Schwarzott</name>
+	  <email>vdr@gentoo.org</email>
+	  <name>Gentoo VDR Project</name>
 	</maintainer>
 	  <longdescription>
 	  The "Soppalusikka" is a standalone skin is based on "enElchi" text2skin addon.
