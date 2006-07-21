@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r3.ebuild,v 1.1 2006/07/20 23:26:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.2-r3.ebuild,v 1.2 2006/07/21 15:54:08 nichoj Exp $
 
-inherit java-pkg-2
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Servlet API 2.2 from jakarta.apache.org"
 HOMEPAGE="http://jakarta.apache.org/"
