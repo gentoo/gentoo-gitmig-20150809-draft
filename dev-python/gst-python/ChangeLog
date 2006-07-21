@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.20 2006/07/21 12:02:57 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.21 2006/07/21 21:58:52 mr_bones_ Exp $
+
+  21 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  gst-python-0.10.4.ebuild, gst-python-0.10.5.ebuild:
+  fix invalid dep atom
 
 *gst-python-0.10.5 (21 Jul 2006)
 
