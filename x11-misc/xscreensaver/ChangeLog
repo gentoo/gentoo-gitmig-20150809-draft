@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.145 2006/07/20 23:26:21 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.146 2006/07/21 08:17:22 nelchael Exp $
+
+  21 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  xscreensaver-4.22-r4.ebuild, xscreensaver-4.23-r1.ebuild,
+  xscreensaver-4.24.ebuild, xscreensaver-5.00.ebuild:
+  Fixed typo - see bug #141178. Thanks to Ruud Althuizen <ruud@il.fontys.nl>.
 
   20 Jul 2006; Emanuele Giaquinta <exg@gentoo.org> xscreensaver-5.00.ebuild:
   Remove Kerberos 4 support; if you need Kerberos use sys-auth/pam_krb5.

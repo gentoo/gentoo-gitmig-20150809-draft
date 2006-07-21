@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.4 2006/07/20 23:26:21 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.00.ebuild,v 1.5 2006/07/21 08:17:22 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -167,7 +167,7 @@ pkg_postinst() {
 		ewarn "has made every effort to make sure these savers do not"
 		ewarn "abuse their setuid root status, the possibilty exists that"
 		ewarn "someone will exploit xscreensaver and will be able to gain"
-		ewarn "root privledges. You have been warned."
+		ewarn "root privileges. You have been warned."
 		ewarn
 	fi
 
