@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/files/iscan-usb.sh,v 1.1 2006/04/15 00:05:28 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/files/iscan-usb.sh,v 1.2 2006/07/21 10:54:30 sbriesen Exp $
 
 # This file is part of media-gfx/iscan
 #
@@ -23,5 +23,5 @@ PERMS="0660"
 DEVICE="${DEVNAME/dev/proc}"
 
 if [ "${ACTION}" = "add" -a "${SUBSYSTEM}" = "usb_device" -a -f "${DEVICE}" ]; then
-    chmod ${PERMS} "${DEVICE}" && chown ${OWNER}:${GROUP} "${DEVICE}
+    chmod ${PERMS} "${DEVICE}" && chown ${OWNER}:${GROUP} "${DEVICE}"
 fi

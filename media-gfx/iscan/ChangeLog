@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.9 2006/06/25 12:36:00 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.10 2006/07/21 10:54:30 sbriesen Exp $
+
+  21 Jul 2006; Stefan Briesenick <sbriesen@gentoo.org> files/iscan-usb.sh:
+  fixed legacy udev script
 
 *iscan-2.1.0 (25 Jun 2006)
 
