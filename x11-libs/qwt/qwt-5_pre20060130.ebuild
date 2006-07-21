@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5_pre20060130.ebuild,v 1.2 2006/05/07 07:30:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5_pre20060130.ebuild,v 1.3 2006/07/21 17:55:57 caleb Exp $
 
-inherit multilib
+inherit multilib eutils
 
 MY_PV="${PV/5_pre/}"
 
@@ -22,6 +22,7 @@ DEPEND="=x11-libs/qt-4*
 
 src_unpack () {
 	unpack ${A}
+	epatch ${FILESDIR}/qwt-20060130-buildfix.patch
 	cd ${S}
 	find . -type f -name "*.pro" | while read file; do
 		sed -e 's/.*no-exceptions.*//g' -i ${file}

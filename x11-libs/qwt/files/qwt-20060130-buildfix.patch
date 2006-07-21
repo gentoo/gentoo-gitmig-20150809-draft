@@ -1,0 +1,12 @@
+diff -ur qwt-20060130-old/include/qwt_scale_draw.h qwt-20060130/include/qwt_scale_draw.h
+--- qwt-20060130-old/include/qwt_scale_draw.h	2006-01-30 22:16:16.000000000 +0100
++++ qwt-20060130/include/qwt_scale_draw.h	2006-07-21 19:36:57.000000000 +0200
+@@ -41,7 +41,7 @@
+ 
+     virtual ~QwtScaleDraw();
+ 
+-    QwtScaleDraw &QwtScaleDraw::operator=(const QwtScaleDraw &other);
++    QwtScaleDraw &operator=(const QwtScaleDraw &other);
+ 
+     void getBorderDistHint(const QFont &, int &start, int &end) const;
+     int minLabelDist(const QFont &) const;
