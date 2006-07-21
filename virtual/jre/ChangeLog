@@ -1,6 +1,10 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.3 2006/07/08 18:38:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.4 2006/07/21 00:26:32 flameeyes Exp $
+
+  21 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> jre-1.5.0.ebuild:
+  Add diablo-jre-bin as option for the jre 1.5, for FreeBSD, and add ~x86-fbsd
+  keyword. See bug #141071.
 
   08 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> jre-1.4.1.ebuild:
   Remove invalid versions.
