@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.0-r1.ebuild,v 1.1 2006/07/06 16:54:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.0-r1.ebuild,v 1.2 2006/07/21 18:02:45 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -36,7 +36,7 @@ RDEPEND="
 	media-libs/freealut
 	media-libs/libvorbis
 	>=dev-libs/libxml2-2.6.7
-	=media-libs/cal3d-0.10.0
+	>=media-libs/cal3d-0.10.0
 	>=media-libs/libpng-1.2.8
 	~games-rpg/${PN}-data-${PV}"
 
