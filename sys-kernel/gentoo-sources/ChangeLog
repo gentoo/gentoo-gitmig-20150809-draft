@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.312 2006/07/15 17:02:00 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.313 2006/07/21 23:35:07 dsd Exp $
+
+*gentoo-sources-2.6.17-r4 (21 Jul 2006)
+
+  21 Jul 2006; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.17-r4.ebuild:
+  Import some patches from the upcoming 2.6.17.7 release. Fix vesafb-tng mtrr
+  module parameter. Fix various IRQ/ACPI-related problems on VIA motherboards.
+  Boot/resume driver order fix. Add support for a new r8169 device, and
+  Broadcom 5787 ethernet. Update to sky2 v1.5.
 
   15 Jul 2006; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.16-r13.ebuild:
