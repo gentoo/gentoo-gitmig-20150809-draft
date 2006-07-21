@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.10 2006/07/18 00:21:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.11 2006/07/21 00:19:46 flameeyes Exp $
+
+  21 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  java-config-wrapper-0.10-r1.ebuild:
+  Add ~x86-fbsd keyword as needed to add diablo-jre-bin (see bug #141071).
 
   18 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   java-config-wrapper-0.10-r1.ebuild:
