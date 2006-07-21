@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r10.ebuild,v 1.8 2006/04/19 17:24:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.34-r10.ebuild,v 1.9 2006/07/21 03:36:06 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -41,6 +41,12 @@ DEPEND="dev-lang/perl
 PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_ver}-r10 )"
 
 S=${WORKDIR}/${PN}_${PV}
+
+pkg_setup() {
+	# setup apache user and group
+	enewgroup apache 81
+	enewuser apache 81 -1 /var/www apache
+}
 
 src_unpack() {
 	unpack ${A} || die
@@ -139,12 +145,6 @@ src_compile() {
 	fi
 }
 
-pkg_preinst() {
-	# setup apache user and group
-	enewgroup apache 81
-	enewuser apache 81 -1 /var/www apache
-}
-
 src_install() {
 	# general install
 	make install-quiet root=${D} || die
@@ -237,9 +237,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# setup apache user and group
-	enewgroup apache 81
-	enewuser apache 81 -1 /var/www apache
 
 	if has_version '<net-www/apache-1.3.33-r10' ; then
 		einfo "Configuration locations have changed, you will need to migrate"

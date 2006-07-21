@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.20 2006/04/19 17:24:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.21 2006/07/21 03:36:06 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -71,6 +71,10 @@ big_fat_warnings() {
 pkg_setup() {
 	big_fat_warnings
 	select_mpms
+
+	# setup apache user and group
+	enewgroup apache 81
+	enewuser apache 81 -1 /var/www apache
 }
 
 src_unpack() {
@@ -178,12 +182,6 @@ src_compile() {
 		rm -f ab.lo ab.o
 		make ab || die
 	fi
-}
-
-pkg_preinst() {
-	# setup apache user and group
-	enewgroup apache 81
-	enewuser apache 81 -1 /var/www apache
 }
 
 src_install () {
@@ -309,10 +307,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	# setup apache user and group
-	enewgroup apache 81
-	enewuser apache 81 -1 /var/www apache
-
 	# Automatically generate test ceritificates if ssl USE flag is being set
 	if useq ssl -a !-e ${ROOT}/etc/apache2/ssl/server.crt; then
 		cd ${ROOT}/etc/apache2/ssl

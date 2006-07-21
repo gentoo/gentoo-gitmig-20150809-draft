@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.58.ebuild,v 1.9 2006/07/02 20:26:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.58.ebuild,v 1.10 2006/07/21 03:36:06 vericgar Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib
 
@@ -59,6 +59,10 @@ big_fat_warnings() {
 pkg_setup() {
 	big_fat_warnings
 	select_mpms
+
+	# setup apache user and group
+	enewgroup apache 81
+	enewuser apache 81 -1 /var/www apache
 }
 
 src_unpack() {
@@ -182,12 +186,6 @@ src_compile() {
 	fi
 }
 
-pkg_preinst() {
-	# setup apache user and group
-	enewgroup apache 81
-	enewuser apache 81 -1 /var/www apache
-}
-
 src_install () {
 	# general install
 	make DESTDIR=${D} install || die
@@ -309,11 +307,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	# setup apache user and group
-	# we do this twice for binary packages
-	enewgroup apache 81
-	enewuser apache 81 -1 /var/www apache
-
 	# Automatically generate test ceritificates if ssl USE flag is being set
 	if useq ssl -a !-e ${ROOT}/etc/apache2/ssl/server.crt; then
 		cd ${ROOT}/etc/apache2/ssl
