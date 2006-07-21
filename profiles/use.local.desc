@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2047 2006/07/20 13:36:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2048 2006/07/21 07:40:18 hanno Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1688,7 +1688,6 @@ www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:nntp - Enable support for the NNTP
 www-client/epiphany-extensions:firefox - build against firefox instead of mozilla
 www-client/epiphany:firefox - build against firefox instead of mozilla
-www-client/galeon:firefox - build against firefox instead of mozilla
 www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase-cvs:firefox - Use firefox's Gecko engine.
 www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
