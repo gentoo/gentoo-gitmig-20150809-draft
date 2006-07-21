@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.0.ebuild,v 1.2 2006/07/21 22:33:16 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-1.0.ebuild,v 1.3 2006/07/21 22:37:37 arj Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
-DEPEND="app-text/ispell"
+DEPEND="app-text/ispell
+	app-text/recode"
 IUSE=""
 
 src_compile() {
