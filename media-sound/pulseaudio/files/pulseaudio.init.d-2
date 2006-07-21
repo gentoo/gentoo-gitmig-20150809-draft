@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+
+depend() {
+	use net@extradepend@
+}
+
+start() {
+	ebegin "Starting pulseaudio"
+	PA_ALL_OPTS="${PA_OPTS} --fail=1 --daemonize=1 --system"
+	start-stop-daemon --start --exec /usr/bin/pulseaudio -- ${PA_ALL_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pulseaudio"
+	start-stop-daemon --stop --quiet --exec /usr/bin/pulseaudio
+	eend $?
+}
