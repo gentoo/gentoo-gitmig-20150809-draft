@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/pingtunnel/pingtunnel-0.61.ebuild,v 1.4 2006/03/06 20:47:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/pingtunnel/pingtunnel-0.61.ebuild,v 1.5 2006/07/21 05:28:12 vapier Exp $
 
 DESCRIPTION="Tunnel TCP over ICMP"
 HOMEPAGE="http://www.cs.uit.no/~daniels/PingTunnel"
@@ -8,21 +8,20 @@ SRC_URI="http://www.cs.uit.no/~daniels/PingTunnel/PingTunnel-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
 IUSE="doc"
 
 DEPEND="net-libs/libpcap"
 
-S="${WORKDIR}/PingTunnel"
+S=${WORKDIR}/PingTunnel
 
 src_unpack() {
 	unpack ${A}
-
-	#Don't force CC to gcc and use our CFLAGS
 	sed -r -i \
-		-e 's:^CC[ \t]+=:#&:' \
-		-e 's:^(CFLAGS[ \t]+)=:\1+=:' \
-		"${S}/Makefile"
+		-e '/^CC[[:space:]]/d' \
+		-e '/^CFLAGS/s:=.*:+= -Wall:' \
+		-e '/^LDOPTS/s:$: $(LDFLAGS):' \
+		"${S}"/Makefile
 }
 
 src_install() {
