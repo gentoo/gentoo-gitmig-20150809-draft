@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.1.ebuild,v 1.2 2006/07/21 12:35:44 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kid/kid-0.9.3.ebuild,v 1.1 2006/07/21 12:35:44 lucass Exp $
 
 inherit distutils eutils
 
@@ -25,11 +25,16 @@ src_unpack() {
 	epatch ${FILESDIR}/kid-0.9-ezsetup-gentoo.patch
 }
 
+src_test() {
+	${python} test_kid.py || die "test_kid.py failed"
+}
+
 src_install() {
 	distutils_src_install
 
 	dobin bin/*
 
+	dodoc doc/*.txt COPYING HISTORY RELEASING
 	dohtml -r doc/html/*
 
 	insinto /usr/share/doc/${PF}
