@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0-r1.ebuild,v 1.3 2006/07/18 14:43:04 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/istanbul-0.2.0-r1.ebuild,v 1.4 2006/07/21 13:02:16 zaheerm Exp $
 
 inherit eutils gnome2 python autotools
 
@@ -44,6 +44,7 @@ src_compile() {
 	export GST_REGISTRY=${T}/home/registry.cache.xml
 	addpredict /root/.gconfd
 	addpredict /root/.gconf
+	addpredict /root/.gnome2
 	econf
 	emake
 }
