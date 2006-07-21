@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.4.ebuild,v 1.4 2006/07/21 12:02:57 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.5.ebuild,v 1.1 2006/07/21 12:02:57 zaheerm Exp $
 
 NEED_PYTHON=2.3
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-python/pygtk-2.6.3
 		>=dev-libs/glib-2.6
 		>=x11-libs/gtk+-2.6
 		>=media-libs/gstreamer-0.10.2
-		>=media-libs/gst-plugins-base-0.10.1
+		>=media-libs/gst-plugins-base-0.10.2
 		>=dev-libs/libxml2"
 
 DEPEND="${RDEPEND}
