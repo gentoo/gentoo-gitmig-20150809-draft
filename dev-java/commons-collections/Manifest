@@ -1,14 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9f79c53f9c06e99b16c43e4a8eddadaa ChangeLog 4184
+DIST commons-collections-3.1-src.tar.gz 1137330 RMD160 68b927a1aaac246171acd756d1b7b3f0f3f80a16 SHA1 e60d8e0cef284e79ed9a36da97bc71a08ad4cc82 SHA256 10ae70ecb4f548d7ca30f7f009581194a681604ede1c4144c55d3a764d905213
+EBUILD commons-collections-3.1-r1.ebuild 886 RMD160 801eb09287d720df3deadc7cc9e30baa1ec078ba SHA1 c8e40c290c1d83c90ceac7436aeebd21eadddae7 SHA256 2ad02b374c4fbdfc444fd4bfe2821850e8b65d64b681d21efe5a4c0edf760318
+MD5 76619c5bcf5a1bd7148ea3110d24a4ac commons-collections-3.1-r1.ebuild 886
+RMD160 801eb09287d720df3deadc7cc9e30baa1ec078ba commons-collections-3.1-r1.ebuild 886
+SHA256 2ad02b374c4fbdfc444fd4bfe2821850e8b65d64b681d21efe5a4c0edf760318 commons-collections-3.1-r1.ebuild 886
+EBUILD commons-collections-3.1.ebuild 1199 RMD160 64ec9e418370da5f5ec15aac34857c6c08992cb8 SHA1 c54b2cf9ba95ca9530a826368d85583894329dd2 SHA256 e67f9c6582353b024a846c2a0161fdfdba0abe2b23b43c148545514bcd4a2ced
 MD5 112048358e93067b8d55e9ee7119d16b commons-collections-3.1.ebuild 1199
-MD5 d6999c3ed2ac2f04284b7b49641afcc9 files/digest-commons-collections-3.1 80
+RMD160 64ec9e418370da5f5ec15aac34857c6c08992cb8 commons-collections-3.1.ebuild 1199
+SHA256 e67f9c6582353b024a846c2a0161fdfdba0abe2b23b43c148545514bcd4a2ced commons-collections-3.1.ebuild 1199
+MISC ChangeLog 4354 RMD160 a3a55a475ac4066ba0896e6a2596c726f16f0d17 SHA1 726ab182c783f31a47edc2653e9675415f0d41a3 SHA256 38cb7fecd36c53ebb9889ff3c3ab82473e729667dac7b3bbdc28f00101e2f4c9
+MD5 a335239a0024928b170b1488fd656b60 ChangeLog 4354
+RMD160 a3a55a475ac4066ba0896e6a2596c726f16f0d17 ChangeLog 4354
+SHA256 38cb7fecd36c53ebb9889ff3c3ab82473e729667dac7b3bbdc28f00101e2f4c9 ChangeLog 4354
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDbJTbQiJ/wx066S4RAm6TAJ9VtF+UE1iBuRBPE6HrE2/wxZgI8ACeINp3
-pYLFHg3Zc+Cg+olYUyu2VDc=
-=M3E8
------END PGP SIGNATURE-----
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 38abd3744c9ff0532f926e1449ae15a9 files/digest-commons-collections-3.1 286
+RMD160 d9fdbb4731cd73d5f3f0e3b3d554f8fd8b80e51c files/digest-commons-collections-3.1 286
+SHA256 81959f79fb394d005680266b2809b301130ca40a31f4c51ac109489fa5cb3380 files/digest-commons-collections-3.1 286
+MD5 38abd3744c9ff0532f926e1449ae15a9 files/digest-commons-collections-3.1-r1 286
+RMD160 d9fdbb4731cd73d5f3f0e3b3d554f8fd8b80e51c files/digest-commons-collections-3.1-r1 286
+SHA256 81959f79fb394d005680266b2809b301130ca40a31f4c51ac109489fa5cb3380 files/digest-commons-collections-3.1-r1 286
