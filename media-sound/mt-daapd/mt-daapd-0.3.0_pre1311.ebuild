@@ -1,26 +1,38 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.ebuild,v 1.5 2006/07/21 16:48:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre1311.ebuild,v 1.1 2006/07/21 16:48:50 flameeyes Exp $
 
-inherit eutils autotools
+inherit eutils flag-o-matic base
 
-MY_P="${P/_/-}"
+SVN="${PV#*pre}"
+
+if [[ -n ${SVN} ]] ; then
+	MY_P="${PN}-svn-${SVN}"
+	SRC_URI="http://nightlies.mt-daapd.org/${MY_P}.tar.gz"
+else
+	MY_P="${P/_/-}"
+	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
+fi
+
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="A multi-threaded implementation of Apple's DAAP server"
 HOMEPAGE="http://www.mt-daapd.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc-macos ~sh sparc x86"
-IUSE="howl vorbis avahi"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sh ~sparc ~x86"
+IUSE="howl vorbis avahi sqlite3 flac ffmpeg"
 
 DEPEND="sys-libs/zlib
 	media-libs/libid3tag
-	sys-libs/gdbm
+	!sqlite3? ( =dev-db/sqlite-2* )
+	sqlite3? ( =dev-db/sqlite-3* )
 	howl? ( !avahi? ( >=net-misc/howl-0.9.2 )
 		avahi? ( net-dns/avahi ) )
-	vorbis? ( media-libs/libvorbis )"
+	vorbis? ( media-libs/libvorbis )
+	flac? ( media-libs/flac )
+	ffmpeg? ( media-video/ffmpeg )"
 
 pkg_setup() {
 	if use howl && use avahi && ! built_with_use net-dns/avahi howl-compat; then
@@ -33,20 +45,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${PN}-0.2.3-pidfile.patch"
-	epatch "${FILESDIR}/${PN}-0.2.3-persist-fix.patch"
-	epatch "${FILESDIR}/${PN}-0.2.3-sparc.patch"
-	epatch "${FILESDIR}/${PN}-0.2.3-libsorder.patch"
-
-	eautoreconf
-}
-
 src_compile() {
 	local myconf=""
 	local howlincludes
+
+	append-flags -fno-strict-aliasing
 
 	# howl support?
 	if use howl; then
@@ -65,7 +68,14 @@ src_compile() {
 		myconf="${myconf} --enable-oggvorbis"
 	fi
 
-	econf ${myconf} || die "configure failed"
+	econf \
+		$(use_enable vorbis oggvorbis) \
+		$(use_enable flac) \
+		$(use_enable !sqlite3 sqlite) \
+		$(use_enable sqlite3) \
+		$(use_enable ffmpeg) \
+		--with-ffmpeg-includes=${ROOT}/usr/include/ffmpeg \
+		${myconf} || die "configure failed"
 	emake || die "make failed"
 
 	cp ${FILESDIR}/${PN}.init.2 ${WORKDIR}/initd
@@ -82,7 +92,7 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
 	insinto /etc
-	newins contrib/mt-daapd.conf mt-daapd.conf.example
+	newins ${FILESDIR}/mt-daapd.conf.example mt-daapd.conf.example
 	doins contrib/mt-daapd.playlist
 
 	newinitd ${WORKDIR}/initd ${PN}

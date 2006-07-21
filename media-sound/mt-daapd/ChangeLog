@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mt-daapd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.40 2006/07/13 15:02:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/ChangeLog,v 1.41 2006/07/21 16:48:50 flameeyes Exp $
+
+*mt-daapd-0.3.0_pre1311 (21 Jul 2006)
+
+  21 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> mt-daapd-0.2.4.ebuild,
+  -mt-daapd-0.3.0_pre1303.ebuild, +mt-daapd-0.3.0_pre1311.ebuild:
+  Version bump and, while I'm here, replace einfo with elog for important
+  messages.
 
 *mt-daapd-0.3.0_pre1303 (13 Jul 2006)
 
