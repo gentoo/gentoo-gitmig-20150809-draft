@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r2.ebuild,v 1.1 2006/07/10 19:42:53 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00-r2.ebuild,v 1.2 2006/07/22 22:08:52 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -40,7 +40,7 @@ mainclass() {
 	sed -n "s/^Main-Class: \([^ ]\+\).*/\1/p" "${S}/MANIFEST.MF"
 }
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
