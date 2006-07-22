@@ -10,16 +10,16 @@ MD5 296333753a66d9b42c6a1f25b2c432f3 files/hibernate-script-1.12-misc.patch 522
 RMD160 adcbb3512be0c9a77474ac8569a8d917ee0336f0 files/hibernate-script-1.12-misc.patch 522
 SHA256 37dc4bd19419c213ed69b541634cf9d4d3a74ba4ac073819a3a2771e2ca8913a files/hibernate-script-1.12-misc.patch 522
 DIST hibernate-script-1.12.tar.gz 64752 RMD160 3c2811d633727afd63f12062730515c9f6b16c4c SHA1 ba572234e0189dd9a64e26f5bacd14610551aa45 SHA256 dd1c1bb297fc4bfdce73614322cb60d92d99db719e473b9cbb4c62e0ea444147
-DIST hibernate-script-1.93-patches-0.1.tar.bz2 3184 RMD160 d9c0d4d4c5e55ca39b858ee5d2c1ec51b997071a SHA1 f929ed9540a2f28886a9db322d98db7588774e3a SHA256 c0b53f2398b4da55a25b4a7823cb7c93932dd2c118e272558e959a36a89ee6cb
+DIST hibernate-script-1.93-patches-0.2.tar.bz2 2954 RMD160 eb2fece800f6e0c09ffe34075d4b3f3d72fd91a8 SHA1 46b2fa612d395283dcebaa38aa5ff9512b7aeae8 SHA256 b7089ea3cf722d745175c2e3f52238836a5c4abc3ed9dcf3438f3c3c604b1101
 DIST hibernate-script-1.93.tar.gz 68644 RMD160 bbb59d7ac5c7a26667cb00c5dd32224ad3eb8f01 SHA1 cea3ece2fdbe277c3e1878fd2acb9a728138c5f6 SHA256 8020d653cc09d1724f700e2b28cf5ce83eef3ffd287304141357eef2c22db366
 EBUILD hibernate-script-1.12-r1.ebuild 1974 RMD160 ccc26a0d4ab187628a79b8c4312038615e74573d SHA1 e277b36a60dc3f66802bccc8a47151f0c1ab8e3b SHA256 9d3fa9cd0ca38f4ab75056d4dc470176c9f9bd2cf00045be58f77083655b789d
 MD5 53831bcba1472acf2c180f2e6e754a63 hibernate-script-1.12-r1.ebuild 1974
 RMD160 ccc26a0d4ab187628a79b8c4312038615e74573d hibernate-script-1.12-r1.ebuild 1974
 SHA256 9d3fa9cd0ca38f4ab75056d4dc470176c9f9bd2cf00045be58f77083655b789d hibernate-script-1.12-r1.ebuild 1974
-EBUILD hibernate-script-1.93-r4.ebuild 2028 RMD160 7124e1fba3fb8ccc933feb93cf6bd0630610bfa1 SHA1 098b7e5d7321130345eea6f3a4dbc26a9af9fd49 SHA256 7facb94fa5cd5dc94364f777d337e3959a75a623c81bb51cae7a177becf13d39
-MD5 b321d0593d0a0f57600d7fe620eeae5b hibernate-script-1.93-r4.ebuild 2028
-RMD160 7124e1fba3fb8ccc933feb93cf6bd0630610bfa1 hibernate-script-1.93-r4.ebuild 2028
-SHA256 7facb94fa5cd5dc94364f777d337e3959a75a623c81bb51cae7a177becf13d39 hibernate-script-1.93-r4.ebuild 2028
+EBUILD hibernate-script-1.93-r4.ebuild 2028 RMD160 f37dce5f2b8d45000a438ab2edda07d65a7dea6a SHA1 083cff55b245648e5f324ca475255a0d815459f5 SHA256 b9967a90515f1d13976626234fa46f7f48c427d5478aafa51c3fc2aab264348d
+MD5 77fa8912ce3e4644c82f18f969227f51 hibernate-script-1.93-r4.ebuild 2028
+RMD160 f37dce5f2b8d45000a438ab2edda07d65a7dea6a hibernate-script-1.93-r4.ebuild 2028
+SHA256 b9967a90515f1d13976626234fa46f7f48c427d5478aafa51c3fc2aab264348d hibernate-script-1.93-r4.ebuild 2028
 MISC ChangeLog 8248 RMD160 14f829a7fcfceee3c25cef4ff90e396189ed9e32 SHA1 df2ed9f283512794e21fc0f98773813cd926ac8d SHA256 b98ba78a1da51e8d03d35928b39207983b34cebb7b2b0349fd96c0140eecac73
 MD5 76d2f391c718b342d840b765554f30bd ChangeLog 8248
 RMD160 14f829a7fcfceee3c25cef4ff90e396189ed9e32 ChangeLog 8248
@@ -31,13 +31,13 @@ SHA256 9bffc4ff1cf574848699e33b09ff0f6137d6b64b69d82c7b95cafb32ee75becb metadata
 MD5 0c2af54d8ff3276d4ad0f267a4e034ca files/digest-hibernate-script-1.12-r1 262
 RMD160 021b4883dc2d937fd49b8baf01418704172ae599 files/digest-hibernate-script-1.12-r1 262
 SHA256 245468f631843dc85438ff9e62e91fbee4a39ce575f577bf8b536de5078a39b9 files/digest-hibernate-script-1.12-r1 262
-MD5 c08cbd333e65548e8748e3badf6b256e files/digest-hibernate-script-1.93-r4 560
-RMD160 5d9b38025f31dd14db02a98af21c60f80a3c2c13 files/digest-hibernate-script-1.93-r4 560
-SHA256 e085f4442e842de51e2ae93343f72d990747342993b8508f5a3a04dfc1c12827 files/digest-hibernate-script-1.93-r4 560
+MD5 dc35bd5bc6ff3524cf395ae67ab3509d files/digest-hibernate-script-1.93-r4 560
+RMD160 2cdf297e5dc38cec0765e15ad13ed6b8ada26184 files/digest-hibernate-script-1.93-r4 560
+SHA256 6fe4d2792bbb48a70dbf27b1cb5c3105822169bdb8044ac24e9cf370fafc4c1c files/digest-hibernate-script-1.93-r4 560
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEwXNyflZ8QqxhrsMRAgRQAJ4hLA90+NyApRo6tmC2DwY4vCzCCACfUtIO
-hGTbO7jDqP//MeViCWTJrPQ=
-=jsOS
+iD8DBQFEwXXLflZ8QqxhrsMRAuWRAKCdh6LV/4FEhLi5IrbPIQF5IUgXPwCgl9B0
+geaUEXxW7JqwDVnD1i8dRVA=
+=n1Rw
 -----END PGP SIGNATURE-----

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.93-r4.ebuild,v 1.1 2006/07/22 00:33:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.93-r4.ebuild,v 1.2 2006/07/22 00:48:05 phreak Exp $
 
 inherit eutils
 
-PATCH_VERSION="0.1"
+PATCH_VERSION="0.2"
 
 DESCRIPTION="Hibernate script supporting multiple suspend methods"
 HOMEPAGE="http://www.suspend2.net/"
