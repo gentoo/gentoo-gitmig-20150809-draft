@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.32 2006/07/21 01:04:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.33 2006/07/22 22:10:31 tcort Exp $
+
+  22 Jul 2006; Thomas Cort <tcort@gentoo.org> dejavu-2.7.ebuild:
+  Stable on alpha wrt Bug #141108.
 
   21 Jul 2006; Luca Barbato <lu_zero@gentoo.org> dejavu-2.7.ebuild:
   Marked ppc

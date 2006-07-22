@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.7.ebuild,v 1.4 2006/07/21 01:04:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/dejavu-2.7.ebuild,v 1.5 2006/07/22 22:10:31 tcort Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ LICENSE="BitstreamVera"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ppc sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DOCS="AUTHORS BUGS LICENSE NEWS README status.txt langcover.txt unicover.txt"
