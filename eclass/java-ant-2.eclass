@@ -122,7 +122,7 @@ java-ant_bsfix() {
 		bsfix_these[${i}]="${line}"
 		let i+=1
 	done <<-EOF 
-			$(find ${find_args})
+			$(find . ${find_args})
 		EOF
 
 	local want_source="$(java-pkg_get-source)"
