@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>media-tv</herd>
 	<maintainer>
-		<email>zzam@gentoo.org</email>
-		<name>Matthias Schwarzott</name>
+		<email>vdr@gentoo.org</email>
+		<name>Gentoo VDR Project</name>
 	</maintainer>
 </pkgmetadata>
