@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.3.ebuild,v 1.1 2006/07/21 00:30:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.3.ebuild,v 1.2 2006/07/22 01:50:59 lu_zero Exp $
 
 inherit eutils libtool # autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86-fbsd"
 
 IUSE="alsa avahi caps jack lirc oss tcpd X"
 
@@ -102,7 +102,7 @@ pkg_postinst() {
 
 	elog "To use the ESounD wrapper while using a system-wide daemon, you also"
 	elog "need to enable auth-anonymous for the esound-unix module, or to copy"
-	elog "/var/run/pulse/.esdcookie into each home directory."
+	elog "/var/run/pulse/.esd_auth into each home directory."
 
 	eselect esd update --if-unset
 }
