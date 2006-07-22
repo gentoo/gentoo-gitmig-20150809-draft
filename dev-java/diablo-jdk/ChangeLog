@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/diablo-jdk
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/ChangeLog,v 1.1 2006/07/22 19:05:41 flameeyes Exp $
+
+*diablo-jdk-1.5.0.07.00 (22 Jul 2006)
+
+  22 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +files/diablo-jdk.env,
+  +metadata.xml, +diablo-jdk-1.5.0.07.00.ebuild:
+  Initial import, ebuild from Timothy Redaelli in bug #141380.
+
