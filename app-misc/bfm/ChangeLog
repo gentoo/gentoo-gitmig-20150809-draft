@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.4 2006/07/17 15:16:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.5 2006/07/22 21:57:57 nelchael Exp $
+
+  22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> bfm-1.2-r1.ebuild:
+  ant_src_unpack -> src_unpack
 
 *bfm-1.2-r1 (17 Jul 2006)
 

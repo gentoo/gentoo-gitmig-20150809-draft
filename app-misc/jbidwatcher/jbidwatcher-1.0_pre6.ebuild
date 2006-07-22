@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-1.0_pre6.ebuild,v 1.1 2006/07/17 17:42:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-1.0_pre6.ebuild,v 1.2 2006/07/22 21:59:18 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${MY_P}"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 

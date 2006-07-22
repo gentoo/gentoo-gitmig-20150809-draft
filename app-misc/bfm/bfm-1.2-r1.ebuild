@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2-r1.ebuild,v 1.1 2006/07/17 15:16:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/bfm-1.2-r1.ebuild,v 1.2 2006/07/22 21:57:57 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core
 	source? ( app-arch/zip )"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 
 	cd ${S}
