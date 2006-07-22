@@ -1,0 +1,15 @@
+--- vncserver.ori	2006-07-22 19:21:09.000000000 +0100
++++ vncserver	2006-07-22 19:25:56.000000000 +0100
+@@ -41,10 +41,10 @@
+ $fontPath = "unix/:-1";
+ 
+ # Here is another example of setting the font path:
+-$fontPath = "/usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
++$fontPath = "/usr/share/fonts/misc/,/usr/share/fonts/75dpi/,/usr/share/fonts/100dpi/,/usr/share/fonts/corefonts/";
+ 
+ # X colors database path is optional, uncomment and edit to use:
+-# $colorPath = "/usr/lib/X11/rgb";
++$colorPath = "/usr/share/X11/rgb";
+ 
+ # You might wish to make your vnc directory under /tmp, to make sure
+ # passwords are always kept on the local filesystem. To do that, just
