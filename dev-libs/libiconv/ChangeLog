@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libiconv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.20 2006/07/21 17:28:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.21 2006/07/22 11:14:16 flameeyes Exp $
+
+  22 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libiconv-1.9.2-RPATH-fix.patch, -libiconv-1.9.2-r3.ebuild:
+  Drop old version, removing amd64 and x86 stable keywords. See bug #141312.
 
 *libiconv-1.11 (21 Jul 2006)
 
