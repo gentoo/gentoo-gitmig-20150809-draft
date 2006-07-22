@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.1 2006/06/26 11:41:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.2 2006/07/22 23:09:33 flameeyes Exp $
 
 inherit java-pkg-2 eutils
 
@@ -45,7 +45,7 @@ S="${WORKDIR}/apache-ant-${MY_PV}"
 
 src_compile() {
 	addwrite "/proc/self/maps"
-	if [ `arch` == "ppc" ] ; then
+	if [[ $(uname -m) == "ppc" ]] ; then
 		# We're compiling _ON_ PPC
 		export THREADS_FLAG="green"
 	fi
