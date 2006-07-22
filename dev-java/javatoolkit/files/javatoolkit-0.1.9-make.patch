@@ -1,0 +1,29 @@
+Index: javatoolkit-0.1.9/Makefile
+===================================================================
+--- javatoolkit-0.1.9.orig/Makefile
++++ javatoolkit-0.1.9/Makefile
+@@ -15,7 +15,7 @@ all:
+ 	echo $(sbindir)
+ 	echo $(mandir)
+ 	for x in bsfix; do \
+-		( cd src/$$x; make all ) \
++		( cd src/$$x; $(MAKE) all ) \
+ 	done
+ 
+ dist: dist-javatoolkit
+@@ -24,7 +24,7 @@ dist-javatoolkit:
+ 	mkdir -p release/javatoolkit-$(VERSION)$(RELEASE_TAG)
+ 	rm -rf release/javatoolkit-$(VERSION)$(RELEASE_TAG)/
+ 	for x in sun-fetch findclass bsfix buildparser javatoolkit ; do \
+-		( cd src/$$x ; make distdir=release/javatoolkit-$(VERSION)$(RELEASE_TAG) dist ) \
++		( cd src/$$x ; $(MAKE) distdir=release/javatoolkit-$(VERSION)$(RELEASE_TAG) dist ) \
+ 	done
+ 	cp Makefile AUTHORS README TODO COPYING NEWS ChangeLog release/javatoolkit-$(VERSION)$(RELEASE_TAG)/
+ 	cat makedefs.mak | \
+@@ -45,5 +45,5 @@ install-javatoolkit:
+ 	install -m 0644 AUTHORS ChangeLog COPYING NEWS README TODO $(docdir)/
+ 
+ 	for x in sun-fetch findclass bsfix buildparser javatoolkit ; do \
+-		( cd src/$$x ; make DESTDIR=$(DESTDIR) install )  \
++		( cd src/$$x ; $(MAKE) DESTDIR=$(DESTDIR) install )  \
+ 	done
