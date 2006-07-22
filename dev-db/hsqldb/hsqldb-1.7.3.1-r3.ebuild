@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.1 2006/07/01 16:40:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.2 2006/07/22 22:02:17 nelchael Exp $
 
 inherit java-pkg-2 eutils versionator java-ant-2
 
@@ -36,7 +36,7 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 }
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 		rm *.jar

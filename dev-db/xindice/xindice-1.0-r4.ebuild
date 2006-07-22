@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.1 2006/07/01 18:46:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0-r4.ebuild,v 1.2 2006/07/22 22:05:25 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -27,7 +27,7 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 }
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-r3.patch
