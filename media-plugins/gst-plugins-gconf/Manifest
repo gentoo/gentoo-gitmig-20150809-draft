@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gst-plugins-good-0.10.0.tar.bz2 898690
 DIST gst-plugins-good-0.10.1.tar.bz2 928881
 DIST gst-plugins-good-0.10.2.tar.bz2 963026 RMD160 63103286d064dc47a464c365604579c9a9ecfdab SHA1 2a4116d8bfb815b3fff117df3414b977e821dcec SHA256 dd92993d08930cca071893b5d3f5cb40a4498f3ddaf12da98c0bbe8c27605e81
@@ -17,14 +14,14 @@ EBUILD gst-plugins-gconf-0.10.2.ebuild 762 RMD160 ea05481e3f703bfb3c93c16aafd952
 MD5 32384cee32df1d180bc314827572f59e gst-plugins-gconf-0.10.2.ebuild 762
 RMD160 ea05481e3f703bfb3c93c16aafd9520747fcb15a gst-plugins-gconf-0.10.2.ebuild 762
 SHA256 c12a763f01a9499cc4e3248a18a4c9b5a5663029f57bd1f2f1aab9dab0f0ab3d gst-plugins-gconf-0.10.2.ebuild 762
-EBUILD gst-plugins-gconf-0.10.3.ebuild 859 RMD160 4168e41da72a6f618c26a7b143a96eb584cc0f8f SHA1 1f26b5aaa369c6c4de2ecbb0356f8a966f639f7d SHA256 2fab5735682acc78c8382ff9f02f46ec95ae736fd0d430a756617fbe5bfb61d3
-MD5 05189b88e838c830dc7192048dbc8796 gst-plugins-gconf-0.10.3.ebuild 859
-RMD160 4168e41da72a6f618c26a7b143a96eb584cc0f8f gst-plugins-gconf-0.10.3.ebuild 859
-SHA256 2fab5735682acc78c8382ff9f02f46ec95ae736fd0d430a756617fbe5bfb61d3 gst-plugins-gconf-0.10.3.ebuild 859
-MISC ChangeLog 2294 RMD160 a25220c34e008aff839fcafccab8bd51aaad34ed SHA1 0b415a124bea74ec03b3ec69d88ead20bb6d360f SHA256 e5ff29133d4b9c81dcbceb61fc9b135a1accf71c72ba485127675654b142ae90
-MD5 810e53cc0455abbd0a0f85e9e2cf2577 ChangeLog 2294
-RMD160 a25220c34e008aff839fcafccab8bd51aaad34ed ChangeLog 2294
-SHA256 e5ff29133d4b9c81dcbceb61fc9b135a1accf71c72ba485127675654b142ae90 ChangeLog 2294
+EBUILD gst-plugins-gconf-0.10.3.ebuild 859 RMD160 8f2051dec0c53054d729a19d5fa050b96b2b58b5 SHA1 e12868a8f07a4ba39f0294638fbad7ecb7207565 SHA256 69ef9ebf53a4b58a293bebcd75e40d71ea8deaa4e3a53d574db4fc534a8af53d
+MD5 364b19a5cb44e12da82f91363690ea33 gst-plugins-gconf-0.10.3.ebuild 859
+RMD160 8f2051dec0c53054d729a19d5fa050b96b2b58b5 gst-plugins-gconf-0.10.3.ebuild 859
+SHA256 69ef9ebf53a4b58a293bebcd75e40d71ea8deaa4e3a53d574db4fc534a8af53d gst-plugins-gconf-0.10.3.ebuild 859
+MISC ChangeLog 2396 RMD160 83eeb880947b681b5d6f1bcf778d2bb56e2f2a0e SHA1 ec0aaaf4e761ea228194330196459b9074c784f0 SHA256 8bf7a89f5e9c05d6de774292c3ec8cb1e428b0bf11bc1d4d6592880b368e029e
+MD5 23561696f8b61411df9e5e4642a383c1 ChangeLog 2396
+RMD160 83eeb880947b681b5d6f1bcf778d2bb56e2f2a0e ChangeLog 2396
+SHA256 8bf7a89f5e9c05d6de774292c3ec8cb1e428b0bf11bc1d4d6592880b368e029e ChangeLog 2396
 MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
@@ -41,10 +38,3 @@ SHA256 9b259ce24ad9f7b760050d3916bb8f2e376b3118bbc5b6b55c61eda4a7c54fac files/di
 MD5 057902ada65c96bc6629874aac6c56ae files/digest-gst-plugins-gconf-0.10.3 277
 RMD160 f3e88dabe4f78e8068e2a126106b8ddafddadf55 files/digest-gst-plugins-gconf-0.10.3 277
 SHA256 0be7c43b8feb4594d9ff28266d21cb341070ed587a67fcb346ae21e7b869d8ea files/digest-gst-plugins-gconf-0.10.3 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEu9dOomPajV0RnrERAp+fAJ4ympaXFUAPXQYg8H5La9S6ldaQfQCfZ1ju
-q1/P6MLC0csA//6UiAzofrU=
-=XI8A
------END PGP SIGNATURE-----
