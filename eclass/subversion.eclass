@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.32 2006/05/16 13:54:08 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.33 2006/07/22 13:52:38 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -48,7 +48,7 @@ ESVN_UPDATE_CMD="svn update"
 #
 # the options passed to checkout or update.
 #
-[ -z "${ESVN_OPTIONS}" ] && ESVN_OPTIONS=
+: ESVN_OPTIONS=${ESVN_OPTIONS:=}
 
 
 ## -- ESVN_REPO_URI:  repository uri
@@ -59,11 +59,12 @@ ESVN_UPDATE_CMD="svn update"
 #   http://
 #   https://
 #   svn://
+#   svn+ssh://
 #
-[ -z "${ESVN_REPO_URI}" ]  && ESVN_REPO_URI=""
+: ESVN_REPO_URI=${ESVN_REPO_URI:=}
 
 
-## -- ESVN_PROJECT:  project name of your ebuild
+## -- ESVN_PROJECT:  project name of your ebuild (= name space)
 #
 # subversion eclass will check out the subversion repository like:
 #
@@ -75,16 +76,22 @@ ESVN_UPDATE_CMD="svn update"
 #
 #   ${ESVN_STORE_DIR}/subversion/trunk
 #
+# this is not used in order to declare the name of the upstream project.
+# so that you can declare this like:
+#
+#   # jakarta commons-loggin
+#   ESVN_PROJECT=commons/logging
+#
 # default: ${PN/-svn}.
 #
-[ -z "${ESVN_PROJECT}" ] && ESVN_PROJECT="${PN/-svn}"
+: ESVN_PROJECT=${ESVN_PROJECT:=${PN/-svn}}
 
 
 ## -- ESVN_BOOTSTRAP:
 #
 # bootstrap script or command like autogen.sh or etc..
 #
-[ -z "${ESVN_BOOTSTRAP}" ] && ESVN_BOOTSTRAP=""
+: ESVN_BOOTSTRAP=${ESVN_BOOTSTRAP:=}
 
 
 ## -- ESVN_PATCHES:
@@ -98,20 +105,37 @@ ESVN_UPDATE_CMD="svn update"
 #   2. scan it under FILESDIR and epatch it, if the patch exists in FILESDIR.
 #   3. die.
 #
-[ -z "${ESVN_PATCHES}" ] && ESVN_PATCHES=""
+: ESVN_PATCHES=${ESVN_PATCHES:=}
 
 
-## -- subversion_svn_fetch() ------------------------------------------------- #
+## -- ESVN_RESTRICT:
+#
+# this should be a space delimited list of subversion eclass features to restrict.
+#   export)
+#     don't export the working copy to S.
+#
+: ESVN_RESTRICT=${ESVN_RESTRICT:=}
 
-function subversion_svn_fetch() {
 
-	local ESVN_CO_DIR
+## -- subversion_fetch() ----------------------------------------------------- #
 
-	# ESVN_REPO_URI is empty.
-	[ -z "${ESVN_REPO_URI}" ] && die "${ESVN}: ESVN_REPO_URI is empty."
+function subversion_fetch() {
 
-	# check for the protocol.
-	case ${ESVN_REPO_URI%%:*} in
+	local repo_uri=${1:-${ESVN_REPO_URI}}
+
+	if [[ -z "${repo_uri}" ]]; then
+		die "${ESVN}: ESVN_REPO_URI is empty."
+	fi
+
+	# delete trailing slash
+	if [[ -z "${repo_uri##*/}" ]]; then
+		repo_uri=${repo_uri%/}
+	fi
+
+	# check for the protocol
+	local protocol=${repo_uri%%:*}
+
+	case "${protocol}" in
 		http|https)
 			if built_with_use dev-util/subversion nowebdav; then
 				eerror "In order to emerge this package, you need to"
@@ -119,23 +143,22 @@ function subversion_svn_fetch() {
 				die "Please run 'USE=-nowebdav emerge subversion'"
 			fi
 			;;
-		svn)	;;
+		svn|svn+ssh)
+			;;
 		*)
-			die "${ESVN}: fetch from "${ESVN_REPO_URI%:*}" is not yet implemented."
+			die "${ESVN}: fetch from "${protocol}" is not yet implemented."
 			;;
 	esac
 
-	if [ ! -d "${ESVN_STORE_DIR}" ]; then
+	if [[ ! -d "${ESVN_STORE_DIR}" ]]; then
 		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
 
 		addwrite /
-		mkdir -p "${ESVN_STORE_DIR}"      || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
-		chmod -f o+rw "${ESVN_STORE_DIR}" || die "${ESVN}: can't chmod ${ESVN_STORE_DIR}."
-		export SANDBOX_WRITE="${SANDBOX_WRITE%%:/}"
+		mkdir -p "${ESVN_STORE_DIR}" || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
+		export SANDBOX_WRITE=${SANDBOX_WRITE%%:/}
 	fi
 
-	cd -P "${ESVN_STORE_DIR}" || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
-	ESVN_STORE_DIR=${PWD}
+	cd "${ESVN_STORE_DIR}" || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
 
 	# every time
 	addwrite "/etc/subversion"
@@ -151,37 +174,40 @@ function subversion_svn_fetch() {
 
 	fi
 
-	[ -z "${ESVN_REPO_URI##*/}" ] && ESVN_REPO_URI="${ESVN_REPO_URI%/}"
-	ESVN_CO_DIR="${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"
+	local wc_path=${ESVN_PROJECT}/${repo_uri##*/}
 
 	debug-print "${FUNCNAME}: ESVN_OPTIONS = \"${ESVN_OPTIONS}\""
 
-	if [ ! -d "${ESVN_CO_DIR}/.svn" ]; then
+	if [[ ! -d "${wc_path}/.svn" ]]; then
 		# first check out
 		einfo "subversion check out start -->"
-		einfo "     repository: ${ESVN_REPO_URI}"
+		einfo "     repository: ${repo_uri}"
 
 		mkdir -p "${ESVN_PROJECT}"      || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
-		chmod -f o+rw "${ESVN_PROJECT}" || die "${ESVN}: can't chmod ${ESVN_PROJECT}."
 		cd "${ESVN_PROJECT}"
-		${ESVN_FETCH_CMD} ${ESVN_OPTIONS} "${ESVN_REPO_URI}" || die "${ESVN}: can't fetch from ${ESVN_REPO_URI}."
+		${ESVN_FETCH_CMD} ${ESVN_OPTIONS} "${repo_uri}" || die "${ESVN}: can't fetch from ${repo_uri}."
 
 	else
 		# update working copy
 		einfo "subversion update start -->"
-		einfo "     repository: ${ESVN_REPO_URI}"
+		einfo "     repository: ${repo_uri}"
 
-		cd "${ESVN_CO_DIR}"
-		${ESVN_UPDATE_CMD} ${ESVN_OPTIONS} || die "${ESVN}: can't update from ${ESVN_REPO_URI}."
+		cd "${wc_path}"
+		${ESVN_UPDATE_CMD} ${ESVN_OPTIONS} || die "${ESVN}: can't update from ${repo_uri}."
 
 	fi
 
-	einfo "   working copy: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
+	einfo "   working copy: ${ESVN_STORE_DIR}/${wc_path}"
 
-	# export to the ${WORKDIR}
-	# "svn export" has a bug.  see http://bugs.gentoo.org/119236
-	#svn export "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${S}" || die "${ESVN}: can't export to ${S}."
-	rsync -rlpgo --exclude=".svn/" "${ESVN_STORE_DIR}/${ESVN_CO_DIR}/" "${S}" || die "${ESVN}: can't export to ${S}."
+	if ! has "export" ${ESVN_RESTRICT}; then
+		cd "${ESVN_STORE_DIR}/${wc_path}"
+
+		# export to the ${WORKDIR}
+		#*  "svn export" has a bug.  see http://bugs.gentoo.org/119236
+		#* svn export . "${S}" || die "${ESVN}: can't export to ${S}."
+		rsync -rlpgo --exclude=".svn/" . "${S}" || die "${ESVN}: can't export to ${S}."
+	fi
+
 	echo
 
 }
@@ -191,36 +217,44 @@ function subversion_svn_fetch() {
 
 function subversion_bootstrap() {
 
-	local patch lpatch
+	if has "export" ${ESVN_RESTRICT}; then
+		return
+	fi
 
 	cd "${S}"
 
-	if [ "${ESVN_PATCHES}" ]; then
+	if [[ -n "${ESVN_PATCHES}" ]]; then
 		einfo "apply patches -->"
 
-		for patch in ${ESVN_PATCHES}; do
-			if [ -f "${patch}" ]; then
-				epatch ${patch}
+		local p=
+
+		for p in ${ESVN_PATCHES}; do
+			if [[ -f "${p}" ]]; then
+				epatch "${p}"
 
 			else
-				for lpatch in ${FILESDIR}/${patch}; do
-					if [ -f "${lpatch}" ]; then
-						epatch ${lpatch}
+				local q=
+
+				for q in ${FILESDIR}/${p}; do
+					if [[ -f "${q}" ]]; then
+						epatch "${q}"
 
 					else
-						die "${ESVN}; ${patch} is not found"
+						die "${ESVN}; ${p} is not found"
 
 					fi
 				done
 			fi
 		done
+
 		echo
+
 	fi
 
-	if [ "${ESVN_BOOTSTRAP}" ]; then
+	if [[ -n "${ESVN_BOOTSTRAP}" ]]; then
 		einfo "begin bootstrap -->"
 
-		if [ -f "${ESVN_BOOTSTRAP}" -a -x "${ESVN_BOOTSTRAP}" ]; then
+		if [[ -f "${ESVN_BOOTSTRAP}" && -x "${ESVN_BOOTSTRAP}" ]]; then
 			einfo "   bootstrap with a file: ${ESVN_BOOTSTRAP}"
 			eval "./${ESVN_BOOTSTRAP}" || die "${ESVN}: can't execute ESVN_BOOTSTRAP."
 
@@ -238,7 +272,33 @@ function subversion_bootstrap() {
 
 function subversion_src_unpack() {
 
-	subversion_svn_fetch || die "${ESVN}: unknown problem in subversion_svn_fetch()."
+	subversion_fetch     || die "${ESVN}: unknown problem in subversion_fetch()."
 	subversion_bootstrap || die "${ESVN}: unknown problem in subversion_bootstrap()."
+
+}
+
+
+## -- subversion_wc_info() --------------------------------------------------- #
+
+function subversion_wc_info() {
+
+	local repo_uri=${ESVN_REPO_URI}
+
+	# delete trailing slash
+	if [[ -z "${repo_uri##*/}" ]]; then
+		repo_uri="${repo_uri%/}"
+	fi
+
+	local wc_path=${ESVN_STORE_DIR}/${ESVN_PROJECT}/${repo_uri##*/}
+
+	if [[ ! -e "${wc_path}" ]]; then
+		return 1
+	fi
+
+	local k=
+
+	for k in url revision; do
+		export ESVN_WC_$(echo "${k}" | tr [a-z] [A-Z])=$(env LANG=C svn info "${wc_path}" | grep -i "^${k}" | cut -d" " -f2)
+	done
 
 }
