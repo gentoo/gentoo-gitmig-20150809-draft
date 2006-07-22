@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.0.0-r1.ebuild,v 1.1 2006/07/09 14:55:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.0.0-r1.ebuild,v 1.2 2006/07/22 22:10:22 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -39,7 +39,7 @@ pkg_setup() {
 	fi
 }
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-for.patch
