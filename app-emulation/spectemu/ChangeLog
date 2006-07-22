@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.16 2006/07/17 05:58:39 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.17 2006/07/22 15:40:16 dertobi123 Exp $
+
+  22 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  spectemu-0.99.3.ebuild:
+  ppc stable, bug #140680
 
   17 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
   +files/spectemu-0.99.3-qa.patch, spectemu-0.99.3.ebuild:
