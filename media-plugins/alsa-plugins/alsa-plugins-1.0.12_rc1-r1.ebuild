@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.12_rc1-r1.ebuild,v 1.1 2006/07/17 11:23:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.12_rc1-r1.ebuild,v 1.2 2006/07/22 16:16:10 zaheerm Exp $
 
 inherit libtool autotools eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/plugins/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="jack ffmpeg libsamplerate pulseaudio debug"
 
 # It could support polypaudio if it was in portage
