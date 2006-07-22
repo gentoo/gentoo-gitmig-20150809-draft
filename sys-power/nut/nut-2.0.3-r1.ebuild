@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.3-r1.ebuild,v 1.9 2006/07/07 04:35:57 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.3-r1.ebuild,v 1.10 2006/07/22 04:48:06 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -34,7 +34,8 @@ NUT_PRIVATE_FILES="/etc/nut/{upsd.conf,upsd.users,upsmon.conf}"
 
 pkg_setup() {
 	enewgroup nut 84
-	enewuser nut 84 -1 /var/state/nut nut
+	enewuser nut 84 -1 /var/state/nut nut,tty
+	warningmsg
 }
 
 src_unpack() {
@@ -171,4 +172,13 @@ pkg_postinst() {
 
 	eval chown root:root ${ROOT}${NUT_PUBLIC_FILES} 2>/dev/null
 	eval chmod 0644 ${ROOT}${NUT_PUBLIC_FILES} 2>/dev/null
+
+	warningmsg
+}
+
+warningmsg() {
+	ewarn "Please note that NUT now runs under the 'nut' user."
+	ewarn "NUT is in the tty group for access to RS-232 UPS."
+	ewarn "However if you use a USB UPS you may need to look at the udev or"
+	ewarn "hotplug rules that are installed."
 }
