@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.2 2006/07/15 19:06:50 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.3 2006/07/22 20:25:00 dang Exp $
+
+  22 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
+  ntfs3g-0.1_beta20070714.ebuild:
+  Marked ~amd64 per bug #140775
 
   15 Jul 2006; Patrick McLean <chutzpah@gentoo.org>
   ntfs3g-0.1_beta20070714.ebuild:
