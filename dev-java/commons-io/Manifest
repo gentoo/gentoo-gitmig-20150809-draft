@@ -1,18 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 022d0e14f0edcb41758434aa900b4040 ChangeLog 852
-MD5 19777a525a3840cd2f2d08d286e6f4ab commons-io-1.0.ebuild 1358
-MD5 a68959909875fa4e0c1c44570d2313c0 commons-io-1.1.ebuild 1542
+AUX commons-io-1.0-gentoo.diff 932 RMD160 c577d6564b7a028e36a71b24c6be59f60e0c67fc SHA1 413e9cc9a7191234a868e1736fc5b7bfdac132b8 SHA256 7fb257f9e926df403a9fdfc653eee41a9621c77986dc4901a5aedc1cfaae2652
 MD5 d1ce414440c549e8c25716008f452630 files/commons-io-1.0-gentoo.diff 932
+RMD160 c577d6564b7a028e36a71b24c6be59f60e0c67fc files/commons-io-1.0-gentoo.diff 932
+SHA256 7fb257f9e926df403a9fdfc653eee41a9621c77986dc4901a5aedc1cfaae2652 files/commons-io-1.0-gentoo.diff 932
+AUX commons-io-1.1-gentoo.diff 508 RMD160 fd5ad828bde427ce8bfc62214b84d85132a9743d SHA1 74c2dcd676c8bdc99e71b40dbd607394869492b9 SHA256 925de8632fae344eb2564b0e0e26d41329bcd9e511813b561d1371366413f75b
 MD5 c85588e58e9dcc2fcde64e1d4615bb12 files/commons-io-1.1-gentoo.diff 508
-MD5 5c8037358c1bd4650695b23df55e89fe files/digest-commons-io-1.0 70
-MD5 bfb5089b2c9985a4bcb9e9ff84e022a7 files/digest-commons-io-1.1 70
+RMD160 fd5ad828bde427ce8bfc62214b84d85132a9743d files/commons-io-1.1-gentoo.diff 508
+SHA256 925de8632fae344eb2564b0e0e26d41329bcd9e511813b561d1371366413f75b files/commons-io-1.1-gentoo.diff 508
+DIST commons-io-1.0-src.tar.gz 132118
+DIST commons-io-1.1-src.tar.gz 197922 RMD160 ad7be482ee4eebcdc193fe78497ed17394309ab1 SHA1 25a9302eaee611655ead3cd7e1a087e8ab745a99 SHA256 375983a026c86afee9b07405a616b3614de3f844b2530d54a5f12c06a666b92c
+EBUILD commons-io-1.0.ebuild 1358 RMD160 0526b6e397ddafd468e5a74a0e97ad329c199a0c SHA1 198c5c617f0d1f104f4680a1a836ac4ec0ab2941 SHA256 a5513bf32eff45ccb8f7b2fdcc64a3a205edd94497b5d80dea1d8b6bffde1f6f
+MD5 19777a525a3840cd2f2d08d286e6f4ab commons-io-1.0.ebuild 1358
+RMD160 0526b6e397ddafd468e5a74a0e97ad329c199a0c commons-io-1.0.ebuild 1358
+SHA256 a5513bf32eff45ccb8f7b2fdcc64a3a205edd94497b5d80dea1d8b6bffde1f6f commons-io-1.0.ebuild 1358
+EBUILD commons-io-1.1-r1.ebuild 1461 RMD160 347b66ad6e1a7b37535077de24a1e3c8bdca4cf8 SHA1 0ba6a8e80c5c8e4dd6ed95f8148c41a56fc6d526 SHA256 328b2b688f74f21513092de0992be4b36bc70c3fee5a594e5faeb7bdecd4e6c5
+MD5 f513a9f7888b36a210f7d6610f54fc4f commons-io-1.1-r1.ebuild 1461
+RMD160 347b66ad6e1a7b37535077de24a1e3c8bdca4cf8 commons-io-1.1-r1.ebuild 1461
+SHA256 328b2b688f74f21513092de0992be4b36bc70c3fee5a594e5faeb7bdecd4e6c5 commons-io-1.1-r1.ebuild 1461
+EBUILD commons-io-1.1.ebuild 1542 RMD160 1b51fdde51613887c20770f0145ce9c43bd504bd SHA1 8246a36af549ac6ff1e513e44fd9a329661f6ec5 SHA256 cf72d5ac61b6ec8d9ed308cbea2d6a1ba35841c3166839827605f4efd4b679b2
+MD5 a68959909875fa4e0c1c44570d2313c0 commons-io-1.1.ebuild 1542
+RMD160 1b51fdde51613887c20770f0145ce9c43bd504bd commons-io-1.1.ebuild 1542
+SHA256 cf72d5ac61b6ec8d9ed308cbea2d6a1ba35841c3166839827605f4efd4b679b2 commons-io-1.1.ebuild 1542
+MISC ChangeLog 999 RMD160 a75becf41b6e87a1b2363cb9b1370adb7c6c0bc2 SHA1 fc7c667682c53f1aa0b7b1e392daa46e717ff4f5 SHA256 c3746f4ac668b73444f16998f82bc38a58b1bfb8affce071653b055500c52145
+MD5 d554502b208b47ce641abee1fbf04734 ChangeLog 999
+RMD160 a75becf41b6e87a1b2363cb9b1370adb7c6c0bc2 ChangeLog 999
+SHA256 c3746f4ac668b73444f16998f82bc38a58b1bfb8affce071653b055500c52145 ChangeLog 999
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 5c8037358c1bd4650695b23df55e89fe files/digest-commons-io-1.0 70
+RMD160 be8311c54a4ef88784a81c46cdfe9bdf1fe186c4 files/digest-commons-io-1.0 70
+SHA256 ece0180cb3c5ab9fe2438ffe170ccd441288dd4edb32e85b743e4d857cc286d3 files/digest-commons-io-1.0 70
+MD5 bc1ffbee448015bc91fa01027dde0fc4 files/digest-commons-io-1.1 256
+RMD160 cf11facacd17ab742a02e9e9e996b77144b1d1a6 files/digest-commons-io-1.1 256
+SHA256 e61a0c2ef412f92221612ef4339403b97a7251b950e4e0216f383b6a193dad47 files/digest-commons-io-1.1 256
+MD5 bc1ffbee448015bc91fa01027dde0fc4 files/digest-commons-io-1.1-r1 256
+RMD160 cf11facacd17ab742a02e9e9e996b77144b1d1a6 files/digest-commons-io-1.1-r1 256
+SHA256 e61a0c2ef412f92221612ef4339403b97a7251b950e4e0216f383b6a193dad47 files/digest-commons-io-1.1-r1 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDkzzPndWRXhKOboURAgBHAKC/+zV5ZKZ0ZXR+t1P0kAVlajPldACgz+eW
-Dw6lnWkvVzGirtAB+5017gc=
-=E1fs
+iD8DBQFEwqxwgo/w9rxVVVERAuIyAJ9FgKF3QDXfaSl4XvlKwzN303d2+gCfYIEh
+OI0mB3mO7jaA6aXj55M4VS8=
+=fFZj
 -----END PGP SIGNATURE-----
