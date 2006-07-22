@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.1 2006/07/14 16:46:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.2 2006/07/22 20:49:46 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -16,7 +16,7 @@ DEPEND=">=virtual/jdk-1.2
 	test? ( dev-java/junit )"
 RDEPEND=">=virtual/jdk-1.2"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	rm -f *.jar

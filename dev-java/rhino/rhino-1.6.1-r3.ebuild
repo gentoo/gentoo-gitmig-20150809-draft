@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r3.ebuild,v 1.2 2006/07/21 19:03:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.6.1-r3.ebuild,v 1.3 2006/07/22 20:51:22 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -21,7 +21,7 @@ DEPEND="dev-java/ant-core
 	source? ( app-arch/zip )
 	${RDEPEND}"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${MY_P}.zip
 	cd ${S}
 

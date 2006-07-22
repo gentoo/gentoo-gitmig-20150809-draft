@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-contrib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.10 2006/07/02 04:48:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.11 2006/07/22 20:47:43 nelchael Exp $
+
+  22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  ant-contrib-1.0_beta2-r1.ebuild:
+  ant_src_unpack -> src_unpack
 
   02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +ant-contrib-1.0_beta2-r1.ebuild:

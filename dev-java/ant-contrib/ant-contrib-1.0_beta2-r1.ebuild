@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r1.ebuild,v 1.1 2006/07/02 04:48:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r1.ebuild,v 1.2 2006/07/22 20:47:43 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -22,7 +22,7 @@ DEPEND=">=virtual/jdk-1.4
 
 S=${WORKDIR}/${PN}
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	java-pkg_jar-from bcel bcel.jar bcel-5.1.jar

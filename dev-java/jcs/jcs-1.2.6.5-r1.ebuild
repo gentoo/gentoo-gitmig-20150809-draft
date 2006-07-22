@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.6.5-r1.ebuild,v 1.1 2006/07/06 20:54:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-1.2.6.5-r1.ebuild,v 1.2 2006/07/22 20:46:40 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -37,7 +37,7 @@ RDEPEND=">=virtual/jre-1.4
 
 LIBRARY_PKGS="jgroups,servletapi-2.3,commons-lang,xmlrpc,concurrent-util,velocity,jisp-2.5,struts-1.1,hsqldb"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 
 	cd ${S}
