@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.22.ebuild,v 1.1 2006/07/09 03:49:17 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.22.ebuild,v 1.2 2006/07/22 14:29:09 tcort Exp $
 
 inherit eutils python
 
@@ -39,8 +39,7 @@ RDEPEND="${DEPEND}
 		dev-python/feedparser )
 	dbus? ( >=sys-apps/dbus-0.62 )"
 
-# uncomment once all arches KEYWORD quodlibet-trayicon
-#PDEPEND="trayicon? ( media-plugins/quodlibet-trayicon )"
+PDEPEND="trayicon? ( media-plugins/quodlibet-trayicon )"
 
 pkg_setup() {
 	if use dbus && ! built_with_use sys-apps/dbus python ; then
