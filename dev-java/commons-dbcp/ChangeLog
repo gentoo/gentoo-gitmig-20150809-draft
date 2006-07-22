@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-dbcp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.22 2005/12/08 14:02:41 nichoj Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.23 2006/07/22 22:36:41 nelchael Exp $
+
+*commons-dbcp-1.2.1-r1 (22 Jul 2006)
+
+  22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +commons-dbcp-1.2.1-r1.ebuild:
+  Migrated to Generation 2.
 
   08 Dec 2005; Joshua Nichols <nichoj@gentoo.org> commons-dbcp-1.2.1.ebuild:
   Changed ant dependency to just ant-core.
