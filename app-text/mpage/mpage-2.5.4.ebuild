@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.4.ebuild,v 1.2 2006/03/17 07:49:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/mpage-2.5.4.ebuild,v 1.3 2006/07/22 18:09:42 wormo Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Many to one page printing utility"
 HOMEPAGE="http://www.mesa.nl/"
 SRC_URI="http://www.mesa.nl/pub/mpage/${P}.tgz"
 
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~x86 ~sparc ~amd64 ppc"
 LICENSE="freedist"
 SLOT="0"
 IUSE=""
