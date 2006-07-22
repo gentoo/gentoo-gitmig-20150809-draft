@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.3.ebuild,v 1.2 2006/07/20 21:57:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.3.ebuild,v 1.3 2006/07/22 03:02:05 mr_bones_ Exp $
 
-inherit eutils versionator games
+inherit debug eutils versionator games
 
 MY_PV="$(get_version_component_range -2 ${PV})"
 DESCRIPTION="3D real-time strategy game"
@@ -12,9 +12,11 @@ SRC_URI="http://download.gna.org/warzone/releases/${MY_PV}/warzone-${PV}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+# upstream requested debug support
+IUSE="debug mp3"
 
 RDEPEND="dev-games/physfs
+	mp3? ( >=media-libs/libmad-0.15 )
 	media-libs/jpeg
 	media-libs/libogg
 	media-libs/libpng
@@ -33,10 +35,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i \
-		-e 's/-m32 //' \
-		configure \
-		|| die "sed failed"
 	epatch "${FILESDIR}/${P}-16bpp.patch"
 }
 
@@ -44,7 +42,8 @@ src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--with-ogg \
-		--without-mp3 \
+		$(use_with mp3) \
+		$(use_enable debug) \
 		|| die "egamesconf failed"
 
 	emake || die "emake failed"
