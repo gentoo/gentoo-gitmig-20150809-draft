@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.2 2006/07/12 13:52:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.3 2006/07/22 21:33:18 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -24,7 +24,7 @@ IUSE="doc source"
 
 S=${WORKDIR}
 
-ant_src_unpack() {
+src_unpack() {
 	jar xf ${DISTDIR}/${A} || die "failed to unpack"
 
 	cd ${S}/lib

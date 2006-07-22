@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.25 2006/07/07 02:33:33 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.26 2006/07/22 21:32:21 nelchael Exp $
+
+  22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  commons-beanutils-1.6.1-r3.ebuild, commons-beanutils-1.7.0-r2.ebuild:
+  ant_src_unpack -> src_unpack
 
 *commons-beanutils-1.7.0-r2 (07 Jul 2006)
 *commons-beanutils-1.6.1-r3 (07 Jul 2006)

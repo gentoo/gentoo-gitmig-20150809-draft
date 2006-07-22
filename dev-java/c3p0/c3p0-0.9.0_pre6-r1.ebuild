@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.9.0_pre6-r1.ebuild,v 1.1 2006/07/04 19:41:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/c3p0/c3p0-0.9.0_pre6-r1.ebuild,v 1.2 2006/07/22 21:49:12 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -24,7 +24,7 @@ IUSE="doc"
 
 S=${WORKDIR}/${PN}-${MY_PV}.src
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	echo "j2ee.jar.base.dir=${JAVA_HOME}" > build.properties

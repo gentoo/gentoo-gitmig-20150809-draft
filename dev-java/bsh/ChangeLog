@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.29 2006/07/04 19:26:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.30 2006/07/22 21:47:19 nelchael Exp $
+
+  22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  bsh-2.0_beta4-r1.ebuild:
+  ant_src_unpack -> src_unpack
 
 *bsh-2.0_beta4-r1 (04 Jul 2006)
 

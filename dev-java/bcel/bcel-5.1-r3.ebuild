@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1-r3.ebuild,v 1.1 2006/07/04 18:50:30 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1-r3.ebuild,v 1.2 2006/07/22 21:41:50 nelchael Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.3
 	source? ( app-arch/zip )
 	${COMMON_DEP}"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	unzip -q "${P}-src.zip" || die "failed to unpack"
 

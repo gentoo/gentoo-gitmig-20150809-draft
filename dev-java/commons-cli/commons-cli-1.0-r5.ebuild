@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.2 2006/07/20 11:20:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r5.ebuild,v 1.3 2006/07/22 21:50:36 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=virtual/jdk-1.3
 	source? ( app-arch/zip )
 	>=dev-java/ant-core-1.6.2"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 

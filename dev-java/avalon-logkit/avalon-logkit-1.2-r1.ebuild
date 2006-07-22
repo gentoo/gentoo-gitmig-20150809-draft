@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r1.ebuild,v 1.1 2006/07/02 20:47:09 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2-r1.ebuild,v 1.2 2006/07/22 21:29:53 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -41,7 +41,7 @@ IUSE="doc javamail jms source"
 
 S=${WORKDIR}/LogKit-${PV}
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	rm -f *.jar

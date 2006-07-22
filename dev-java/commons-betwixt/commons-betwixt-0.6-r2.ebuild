@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.6-r2.ebuild,v 1.1 2006/07/13 21:59:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-betwixt/commons-betwixt-0.6-r2.ebuild,v 1.2 2006/07/22 21:37:10 nelchael Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -26,7 +26,7 @@ DEPEND=">=virtual/jdk-1.3
 
 S="${WORKDIR}/${P}-src/"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 
 	cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r3.ebuild,v 1.1 2006/07/02 06:09:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-1.4.3-r3.ebuild,v 1.2 2006/07/22 21:26:56 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -16,7 +16,7 @@ DEPEND=">=virtual/jdk-1.3
 	dev-java/ant-owanttask"
 RDEPEND=">=virtual/jre-1.3"
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 	echo "objectweb.ant.tasks.path /usr/share/ant-owanttask/lib/ow_util_ant_tasks.jar" \
