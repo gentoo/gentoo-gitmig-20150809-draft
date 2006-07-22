@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim-svn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.23 2006/07/12 13:49:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/ChangeLog,v 1.24 2006/07/22 15:18:50 hattya Exp $
+
+  22 Jul 2006; Akinori Hattori <hattya@gentoo.org> uim-svn-20060320.ebuild:
+  use subversion_wc_info in pkg_setup.
 
   12 Jul 2006; Akinori Hattori <hattya@gentoo.org> uim-svn-20060320.ebuild:
   use emake for install. and change sys-apps/gettext -> virtual/libintl.

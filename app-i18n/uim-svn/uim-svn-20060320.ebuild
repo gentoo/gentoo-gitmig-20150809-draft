@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.6 2006/07/12 13:49:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.7 2006/07/22 15:18:50 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -20,7 +20,10 @@ SLOT="0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31
-	X? ( || ( ( x11-proto/xextproto x11-proto/xproto )
+	X? ( || ( (
+				x11-proto/xextproto
+				x11-proto/xproto
+			  )
 	   	 	  virtual/x11 ) )
 	nls? ( virtual/libintl )"
 RDEPEND="!app-i18n/uim
@@ -45,15 +48,12 @@ RDEPEND="!app-i18n/uim
 
 pkg_setup() {
 
-	local co_dir="${ESVN_STORE_DIR}/uim/trunk"
+	subversion_wc_info
 
-	[ ! -e "${co_dir}" ] && return
+	[[ $? -ne 0 ]] && return
 
-	local repo_uri=$(LANG=C svn info "${co_dir}" | grep "^URL" | cut -d" " -f2)
-
-	if [[ "${repo_uri}" != "${ESVN_REPO_URI}" ]]; then
-		die "Please remove ${co_dir}."
-
+	if [[ "${ESVN_WC_URL}" != "${ESVN_REPO_URI}" ]]; then
+		die "Please remove your working copy."
 	fi
 
 }
