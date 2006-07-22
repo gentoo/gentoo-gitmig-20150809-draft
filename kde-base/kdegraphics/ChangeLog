@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.262 2006/06/28 10:45:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.263 2006/07/22 20:26:27 psi29a Exp $
+
+  20 Jul 2006; <psi29a@gentoo.org> kdegraphics-3.5.2.ebuild:
+  stable on mips
 
   28 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdegraphics-3.5.2.ebuild, kdegraphics-3.5.3.ebuild:
