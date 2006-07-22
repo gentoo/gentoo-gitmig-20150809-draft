@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.12 2006/05/21 17:35:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.1.ebuild,v 1.13 2006/07/22 15:10:22 dertobi123 Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cryptopp/cryptopp${PV//.}.zip"
 
 LICENSE="cryptopp"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 IUSE=""
