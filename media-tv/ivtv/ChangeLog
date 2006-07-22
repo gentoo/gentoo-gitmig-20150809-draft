@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.50 2006/07/08 16:08:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.51 2006/07/22 22:11:50 cardoe Exp $
+
+  22 Jul 2006; Doug Goldstein <cardoe@gentoo.org> ivtv-0.7.0.ebuild:
+  Added VIDEO_V4L1 to CONFIG_CHECK since it doesn't enforce depends
 
   08 Jul 2006; Doug Goldstein <cardoe@gentoo.org> ivtv-0.7.0.ebuild:
   Updated firmware
