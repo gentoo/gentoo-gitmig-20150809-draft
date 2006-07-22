@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.0.ebuild,v 1.3 2006/07/22 22:11:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.7.0.ebuild,v 1.4 2006/07/22 22:44:24 cardoe Exp $
 
 inherit eutils linux-mod
 
@@ -24,7 +24,6 @@ IUSE=""
 
 BUILD_TARGETS="all"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"
-CONFIG_CHECK="I2C_ALGOBIT VIDEO_DEV I2C_CHARDEV I2C VIDEO_V4L1 EXPERIMENTAL"
 
 RDEPEND="sys-apps/hotplug"
 DEPEND="app-arch/unzip"
@@ -35,8 +34,9 @@ pkg_setup() {
 			saa717x(extra:${S}/i2c-drivers)"
 
 	if kernel_is 2 6 17; then
+		CONFIG_CHECK="EXPERIMENTAL VIDEO_DEV I2C VIDEO_V4L1 VIDEO_V4L2 FW_LOADER"
 		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_WM8775 VIDEO_MSP3400 VIDEO_CX25840 VIDEO_TUNER"
-		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_SAA711X VIDEO_SAA7127 VIDEO_BT848 VIDEO_TVEEPROM"
+		CONFIG_CHECK="${CONFIG_CHECK} VIDEO_SAA711X VIDEO_SAA7127 VIDEO_TVEEPROM"
 	else
 		die "This only works on 2.6.17 kernels"
 	fi
