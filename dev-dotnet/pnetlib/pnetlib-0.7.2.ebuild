@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.7.2.ebuild,v 1.1 2006/01/12 06:16:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.7.2.ebuild,v 1.2 2006/07/22 21:56:32 tcort Exp $
 
 inherit eutils
 
@@ -15,7 +15,10 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="truetype X"
 
 DEPEND="=dev-dotnet/pnet-${PV}*
-	X? ( virtual/x11 )
+	X? ( || (
+	( x11-libs/libSM
+	x11-libs/libXft )
+	virtual/x11 ) )
 	truetype? ( virtual/xft )"
 
 src_unpack() {

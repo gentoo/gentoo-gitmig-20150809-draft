@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.27 2006/01/12 06:16:34 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.28 2006/07/22 21:56:32 tcort Exp $
+
+  22 Jul 2006; Thomas Cort <tcort@gentoo.org> pnetlib-0.6.10.ebuild,
+  pnetlib-0.6.12.ebuild, pnetlib-0.7.0.ebuild, pnetlib-0.7.2.ebuild:
+  Ported all ebuilds to modular X for Bug #126934.
 
 *pnetlib-0.7.2 (12 Jan 2006)
 

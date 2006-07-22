@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.10.ebuild,v 1.6 2005/08/05 14:26:00 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.10.ebuild,v 1.7 2006/07/22 21:56:32 tcort Exp $
 
 DESCRIPTION="Portable .NET C# library"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -12,7 +12,10 @@ KEYWORDS="amd64 arm hppa ia64 ppc ppc64 x86"
 IUSE="truetype X"
 
 DEPEND="=dev-dotnet/pnet-${PV}*
-	X? ( virtual/x11 )
+	X? ( || (
+	( x11-libs/libSM
+	x11-libs/libXft )
+	virtual/x11 ) )
 	truetype? ( virtual/xft )"
 
 src_compile() {
