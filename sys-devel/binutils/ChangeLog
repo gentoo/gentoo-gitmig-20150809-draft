@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.262 2006/07/17 04:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.263 2006/07/23 16:38:36 plasmaroo Exp $
+
+  23 Jul 2006; <plasmaroo@gentoo.org> binutils-2.16.1-r2.ebuild,
+  binutils-2.16.1-r3.ebuild:
+  Push 2.16.1 back to ~ia64 due to stable glibc refusing to compile with it.
 
 *binutils-2.17.50.0.3 (17 Jul 2006)
 
