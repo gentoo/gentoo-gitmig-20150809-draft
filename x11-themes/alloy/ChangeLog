@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/alloy
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.24 2005/10/02 19:21:34 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.25 2006/07/23 17:09:41 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> alloy-0.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> alloy-0.5.2.ebuild:
   Mark 0.5.2 stable on ia64

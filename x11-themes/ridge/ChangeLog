@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/ridge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ridge/ChangeLog,v 1.4 2006/07/23 01:24:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ridge/ChangeLog,v 1.5 2006/07/23 17:16:02 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> ridge-0.3.2.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Put under kde herd.
