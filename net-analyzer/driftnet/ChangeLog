@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.24 2006/04/27 21:30:34 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.25 2006/07/23 22:45:53 vanquirius Exp $
+
+  23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -driftnet-0.1.6-r1.ebuild, -driftnet-0.1.6-r2.ebuild,
+  driftnet-0.1.6-r3.ebuild:
+  Mark 0.1.6-r3 x86 stable, remove old ebuilds.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-driftnet-0.1.6,
   files/digest-driftnet-0.1.6-r1, files/digest-driftnet-0.1.6-r2, Manifest:
