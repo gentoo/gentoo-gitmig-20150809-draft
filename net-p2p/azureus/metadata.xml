@@ -6,4 +6,5 @@
 		<name>Petteri Räty</name>
 		<description>Maintainer</description>
 	</maintainer>
+	<herd>java</herd>
 </pkgmetadata>

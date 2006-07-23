@@ -1,6 +1,17 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.16 2006/02/12 11:36:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.17 2006/07/23 20:51:50 nichoj Exp $
+
+*azureus-2.4.0.2 (23 Jul 2006)
+
+  23 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  +files/azureus-2.4.0.2-pre, +files/fedora/azureus-cache-size.patch,
+  +files/fedora/azureus-no-restart.patch,
+  +files/fedora/azureus-remove-manifest-classpath.patch,
+  +files/fedora/azureus-remove-win32-PlatformManagerUpdateChecker.patch,
+  +files/fedora/azureus-remove-win32-osx-platforms.patch, metadata.xml,
+  +azureus-2.4.0.2.ebuild:
+  Version bump. Now supports the new Java aystem.
 
   12 Feb 2006; Petteri Räty <betelgeuse@gentoo.org>
   azureus-2.3.0.6-r1.ebuild:
