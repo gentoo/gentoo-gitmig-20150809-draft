@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/trigger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.13 2006/06/14 12:12:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.14 2006/07/23 03:36:30 mr_bones_ Exp $
+
+  23 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/trigger-0.5.2-physfs.patch, trigger-0.5.2.ebuild,
+  trigger-0.5.2-r1.ebuild:
+  patch to fix use of latest sdl-image (bug #141072), patch from Tristan Heaven
 
   14 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   trigger-0.5.2-r1.ebuild:

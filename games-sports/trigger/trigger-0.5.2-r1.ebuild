@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2-r1.ebuild,v 1.4 2006/06/14 12:12:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2-r1.ebuild,v 1.5 2006/07/23 03:36:30 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -44,7 +44,9 @@ src_unpack() {
 		src/glew/GL/glxew.h \
 		|| die "sed failed"
 	epatch "${FILESDIR}"/${P}-freealut.patch \
-		"${FILESDIR}/${P}"-gcc41.patch
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}/${P}"-physfs.patch
+
 }
 
 src_compile() {
