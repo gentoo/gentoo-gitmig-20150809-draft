@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.302 2006/07/23 16:34:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.303 2006/07/23 16:35:08 mkennedy Exp $
 
 # Keep them sorted
 
@@ -345,7 +345,7 @@ wxwindows - Adds support for wxWindows/wxGTK GUI toolkit
 xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
 xine - Add support for the XINE movie libraries
 xinerama - Add support for the xinerama X11 extension, which allows you to stretch your display across multiple monitors
-xinetd - Add support for the xinetd super-sever
+xinetd - Add support for the xinetd super-server
 xml - Add support for XML files
 xmlrpc - Support for xml-rpc library
 xmms - Check/Support for XMMS (X MultiMedia System) player
