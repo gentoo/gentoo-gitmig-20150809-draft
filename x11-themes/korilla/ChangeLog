@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/korilla
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/korilla/ChangeLog,v 1.7 2005/08/03 18:23:53 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/korilla/ChangeLog,v 1.8 2006/07/23 02:03:42 flameeyes Exp $
+
+*korilla-1.3.4-r1 (23 Jul 2006)
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +korilla-1.3.4-r1.ebuild:
+  Revision bump, by removing the useless inheritance of kde and installing in
+  /usr/share instead of in KDE's prefix. Also point to Gentoo mirrors as the
+  original site is now unavailable.
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> korilla-1.3.4.ebuild:
   Stable on sparc
