@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.80 2006/07/23 15:30:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.81 2006/07/23 15:36:01 hattya Exp $
 
 *qdbm-1.8.62 (23 Jul 2006)
 
@@ -9,4 +9,278 @@
   +qdbm-1.8.62.ebuild:
   new upstream release. this ebuild is not affected by bug #140295. arm, s390
   and sparc is removed from KEYWORDS due to java-config dependency problem.
+
+  23 Jul 2006; Akinori Hattori <hattya@gentoo.org>
+  +files/qdbm-perl-runpath.diff, qdbm-1.8.33-r2.ebuild, qdbm-1.8.46.ebuild,
+  qdbm-1.8.48.ebuild, qdbm-1.8.49.ebuild, qdbm-1.8.53.ebuild:
+  rename qdbm-runpath.diff to qdbm-perl-runpath.diff.
+
+  27 May 2006; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.48.ebuild:
+  Stable on alpha.
+
+  24 May 2006; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.48.ebuild:
+  Stable on ppc.
+
+  21 May 2006; Markus Rothe <corsair@gentoo.org> qdbm-1.8.48.ebuild:
+  Stable on ppc64
+
+  17 May 2006; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.48.ebuild:
+  Stable on sparc
+
+  16 May 2006; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.35.ebuild,
+  qdbm-1.8.48.ebuild:
+  stable on x86 and ia64.
+
+*qdbm-1.8.53 (16 May 2006)
+
+  16 May 2006; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.53.ebuild:
+  new upstream release.
+
+  30 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org> qdbm-1.8.46.ebuild:
+  ppc stable
+
+*qdbm-1.8.49 (28 Apr 2006)
+
+  28 Apr 2006; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.49.ebuild:
+  new upstream release.
+
+  22 Apr 2006; Markus Rothe <corsair@gentoo.org> qdbm-1.8.46.ebuild:
+  Stable on ppc64
+
+  21 Apr 2006; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.46.ebuild:
+  Stable on sparc
+
+*qdbm-1.8.48 (20 Apr 2006)
+
+  20 Apr 2006; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.48.ebuild:
+  new upstream release.
+
+  20 Apr 2006; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.46.ebuild:
+  stable on x86.
+
+  27 Mar 2006; Markus Rothe <corsair@gentoo.org> qdbm-1.8.35.ebuild:
+  Stable on ppc64
+
+  24 Mar 2006; Aron Griffis <agriffis@gentoo.org> qdbm-1.8.35.ebuild:
+  Mark 1.8.35 stable on ia64
+
+  22 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.35.ebuild:
+  Stable on ppc.
+
+  21 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> qdbm-1.8.46.ebuild:
+  Added missing ? after bzip2 in DEPEND.
+
+  20 Mar 2006; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.35.ebuild:
+  Stable on sparc
+
+*qdbm-1.8.46 (20 Mar 2006)
+
+  20 Mar 2006; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.46.ebuild:
+  new upstream release.
+
+  20 Mar 2006; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.35.ebuild:
+  stable on x86.
+
+*qdbm-1.8.35 (14 Dec 2005)
+
+  14 Dec 2005; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.16.ebuild,
+  -qdbm-1.8.17.ebuild, -qdbm-1.8.30.ebuild, +qdbm-1.8.35.ebuild:
+  new upstream release.
+
+  01 Nov 2005; Brent Baude <ranger@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  Remarking qdbm-1.8.33-r2 as ppc64 stable for 108534; didnt take the first time
+
+  31 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  Stable on ppc. See bug #108534.
+
+  31 Oct 2005; Brent Baude <ranger@gentoo.org> ChangeLog:
+  marking qdbm-1.8.33-r2 ppc64 for bug 108534
+
+  31 Oct 2005; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  Stable on alpha, bug 108534.
+
+  31 Oct 2005; Jason Wever <weeve@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  Stable on SPARC wrt security bug #108534.
+
+  30 Oct 2005; Mark Loeser <halcy0n@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  Stable on x86; bug #108534
+
+  30 Oct 2005; Simon Stelling <blubb@gentoo.org> qdbm-1.8.33-r2.ebuild:
+  stable on amd64 wrt bug 108534
+
+*qdbm-1.8.33-r2 (24 Oct 2005)
+
+  24 Oct 2005; Akinori Hattori <hattya@gentoo.org> files/qdbm-runpath.diff,
+  -qdbm-1.8.33-r1.ebuild, +qdbm-1.8.33-r2.ebuild:
+  fixes bug #108534.
+
+  15 Oct 2005; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.24.ebuild:
+  remove old ebuild.
+
+*qdbm-1.8.33-r1 (15 Oct 2005)
+
+  15 Oct 2005; Akinori Hattori <hattya@gentoo.org> +files/qdbm-runpath.diff,
+  -qdbm-1.8.33.ebuild, +qdbm-1.8.33-r1.ebuild:
+  fixes bug #108534.
+
+  13 Oct 2005; Aron Griffis <agriffis@gentoo.org> qdbm-1.8.31.ebuild:
+  Mark 1.8.31 stable on alpha
+
+  13 Oct 2005; Aron Griffis <agriffis@gentoo.org> qdbm-1.8.31.ebuild:
+  Mark 1.8.31 stable on ia64
+
+  08 Oct 2005; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.31.ebuild:
+  Stable on ppc.
+
+  06 Oct 2005; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.31.ebuild:
+  Stable on sparc
+
+  06 Oct 2005; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.31.ebuild:
+  stable on x86.
+
+*qdbm-1.8.33 (06 Oct 2005)
+
+  06 Oct 2005; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.33.ebuild:
+  new upstream release.
+
+  26 Aug 2005; Aron Griffis <agriffis@gentoo.org> qdbm-1.8.31.ebuild:
+  add ~ia64
+
+  08 Aug 2005; Markus Rothe <corsair@gentoo.org> qdbm-1.8.30.ebuild:
+  Stable on ppc64
+
+  03 Aug 2005; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.30.ebuild:
+  Stable on alpha.
+
+  31 Jul 2005; Tobias Scherbaum <dertobi123@gentoo.org> qdbm-1.8.30.ebuild:
+  ppc stable
+
+  25 Jul 2005; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.30.ebuild:
+  Stable on sparc
+
+  24 Jul 2005; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.21.ebuild:
+  remove old ebuild.
+
+*qdbm-1.8.31 (24 Jul 2005)
+
+  24 Jul 2005; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.31.ebuild:
+  new upstream release.
+
+  24 Jul 2005; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.30.ebuild:
+  stable on x86.
+
+  03 Jul 2005; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.24.ebuild:
+  Stable on ppc.
+
+  03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.24.ebuild:
+  Stable on alpha.
+
+  27 Jun 2005; Markus Rothe <corsair@gentoo.org> qdbm-1.8.24.ebuild:
+  Stable on ppc64
+
+  24 Jun 2005; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.24.ebuild:
+  Stable on sparc
+
+  24 Jun 2005; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.24.ebuild:
+  stable on x86.
+
+*qdbm-1.8.30 (24 Jun 2005)
+
+  24 Jun 2005; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.30.ebuild:
+  new upstream release.
+
+  17 Jun 2005; Michael Hanselmann <hansmi@gentoo.org> qdbm-1.8.21.ebuild:
+  Stable on ppc.
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> qdbm-1.8.21.ebuild:
+  Stable on ppc64
+
+  06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.21.ebuild:
+  Stable on sparc
+
+  05 May 2005; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.21.ebuild:
+  stable on x86.
+
+*qdbm-1.8.24 (05 May 2005)
+
+  05 May 2005; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.13.ebuild,
+  -qdbm-1.8.14.ebuild, -qdbm-1.8.15.ebuild, +qdbm-1.8.24.ebuild:
+  new upstream release.
+
+*qdbm-1.8.21 (18 Feb 2005)
+
+  18 Feb 2005; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.21.ebuild:
+  new upstream release.
+
+  04 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> qdbm-1.8.17.ebuild:
+  Fixed multilib issues in src_install().
+
+  04 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org> qdbm-1.8.17.ebuild:
+  Stable on amd64
+
+  27 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.17.ebuild:
+  Stable on alpha.
+
+  22 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> qdbm-1.8.17.ebuild:
+  Stable on sparc wrt #72440
+
+  05 Dec 2004; Jason Wever <weeve@gentoo.org> qdbm-1.8.17.ebuild:
+  Added ~sparc keyword wrt bug #73460.
+
+  06 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.17.ebuild:
+  ~alpha keyword, bug 73460.
+
+  07 Nov 2004; Markus Rothe <corsair@gentoo.org> qdbm-1.8.17.ebuild:
+  Stable on ppc64; bug #60442
+
+  01 Nov 2004; Lars Weiler <pylon@gentoo.org> qdbm-1.8.17.ebuild:
+  Stable on ppc wrt PHP5.
+
+  17 Oct 2004; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.17.ebuild:
+  stable on x86.
+
+*qdbm-1.8.17 (27 Sep 2004)
+
+  27 Sep 2004; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.17.ebuild:
+  new upstream release.
+
+  22 Sep 2004; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.16.ebuild:
+  stable on x86.
+
+  19 Sep 2004; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.15.ebuild:
+  stable on x86.
+
+  07 Sep 2004; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.14.ebuild:
+  stable on x86.
+
+  28 Aug 2004; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.13.ebuild:
+  stable on x86.
+
+*qdbm-1.8.16 (23 Aug 2004)
+
+  23 Aug 2004; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.16.ebuild:
+  new upstream release.
+
+*qdbm-1.8.15 (19 Aug 2004)
+
+  19 Aug 2004; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.15.ebuild:
+  new upstream release.
+
+  14 Aug 2004; David Holm <dholm@gentoo.org> qdbm-1.8.14.ebuild:
+  Added to ~ppc.
+
+*qdbm-1.8.14 (06 Aug 2004)
+
+  06 Aug 2004; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.14.ebuild:
+  new upstream release.
+
+  31 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> qdbm-1.8.13.ebuild:
+  Added to ~amd64.
+
+*qdbm-1.8.13 (25 Jul 2004)
+
+  25 Jul 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
+  +qdbm-1.8.13.ebuild:
+  Initial revision. Based on the ebuild from Atzm Watanabe
+  <sitosito@p.chan.ne.jp> in bug #55574, and modified by me.
 
