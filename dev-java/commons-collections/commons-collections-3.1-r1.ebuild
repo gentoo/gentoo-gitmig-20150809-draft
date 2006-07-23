@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.1-r1.ebuild,v 1.2 2006/07/21 15:33:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.1-r1.ebuild,v 1.3 2006/07/23 00:50:53 flameeyes Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/collections/source/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.3

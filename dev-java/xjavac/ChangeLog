@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.9 2006/07/20 23:55:12 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.10 2006/07/23 00:46:38 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xjavac-20041208-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *xjavac-20041208-r2 (20 Jul 2006)
 

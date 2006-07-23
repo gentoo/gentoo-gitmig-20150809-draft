@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.30 2006/07/22 20:06:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.31 2006/07/23 00:52:43 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> jdepend-2.9-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *jdepend-2.9-r2 (22 Jul 2006)
 

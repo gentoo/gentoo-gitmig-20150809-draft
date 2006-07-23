@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r3.ebuild,v 1.1 2006/07/22 20:12:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1-r3.ebuild,v 1.2 2006/07/23 00:48:42 flameeyes Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 HOMEPAGE="http://www.junit.org/"
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc source"
 DEPEND=">=virtual/jdk-1.3
 	source? ( app-arch/zip )

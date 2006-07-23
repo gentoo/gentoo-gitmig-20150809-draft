@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.23 2006/07/22 20:12:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.24 2006/07/23 00:48:42 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> junit-3.8.1-r3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *junit-3.8.1-r3 (22 Jul 2006)
 
