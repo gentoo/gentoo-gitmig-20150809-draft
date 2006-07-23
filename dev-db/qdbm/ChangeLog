@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.78 2006/05/27 18:03:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.79 2006/07/23 14:49:33 hattya Exp $
+
+  23 Jul 2006; Akinori Hattori <hattya@gentoo.org>
+  +files/qdbm-perl-runpath.diff, qdbm-1.8.33-r2.ebuild, qdbm-1.8.46.ebuild,
+  qdbm-1.8.48.ebuild, qdbm-1.8.49.ebuild, qdbm-1.8.53.ebuild:
+  rename qdbm-runpath.diff to qdbm-perl-runpath.diff.
 
   27 May 2006; Bryan Østergaard <kloeri@gentoo.org> qdbm-1.8.48.ebuild:
   Stable on alpha.

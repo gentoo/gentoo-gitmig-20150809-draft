@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.48.ebuild,v 1.6 2006/05/27 18:03:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.48.ebuild,v 1.7 2006/07/23 14:49:33 hattya Exp $
 
 inherit eutils java-pkg multilib
 
@@ -24,8 +24,9 @@ DEPEND="bzip2? ( app-arch/bzip2 )
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-runpath.diff
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${PN}-perl-runpath.diff
 
 }
 

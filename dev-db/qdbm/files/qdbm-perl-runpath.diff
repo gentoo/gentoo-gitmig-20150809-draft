@@ -1,0 +1,34 @@
+--- perl/Makefile.in.orig	2005-10-09 16:35:47.000000000 +1000
++++ perl/Makefile.in	2005-10-09 16:41:46.000000000 +1000
+@@ -43,15 +43,15 @@
+ 	cd depot && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+ 	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
+-	  $(RUNENV) make
++	  $(RUNENV) make LD_RUN_PATH=""
+ 	cd curia && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+ 	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
+-	  $(RUNENV) make
++	  $(RUNENV) make LD_RUN_PATH=""
+ 	cd villa && [ -f Makefile ] || \
+ 	  $(RUNENV) perl Makefile.PL CC="$(CC)" INC="$(INC)" OPTIMIZE="$(OPTIMIZE)" \
+ 	    LD="$(LD)" LIBS="$(LIBS)" PREFIX="$(prefix)" ; \
+-	  $(RUNENV) make
++	  $(RUNENV) make LD_RUN_PATH=""
+ 	@printf '\n'
+ 	@printf '#================================================================\n'
+ 	@printf '# Ready to install.\n'
+@@ -69,9 +69,9 @@
+ 
+ 
+ install :
+-	cd depot && $(RUNENV) make install
+-	cd curia && $(RUNENV) make install
+-	cd villa && $(RUNENV) make install
++	cd depot && $(RUNENV) make LD_RUN_PATH="" install
++	cd curia && $(RUNENV) make LD_RUN_PATH="" install
++	cd villa && $(RUNENV) make LD_RUN_PATH="" install
+ 	mkdir -p $(DESTDIR)$(MYBINDIR)
+ 	cp -f $(MYBINS) $(DESTDIR)$(MYBINDIR)
+ 	mkdir -p $(DESTDIR)$(MYDATADIR)
