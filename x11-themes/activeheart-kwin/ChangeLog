@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart-kwin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.8 2005/09/19 13:35:30 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.9 2006/07/23 16:37:52 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  activeheart-kwin-1.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   activeheart-kwin-1.1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.7 2005/09/19 13:34:36 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.8 2006/07/23 16:36:49 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  activeheart-1.2.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   19 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   activeheart-1.2.1.ebuild:
