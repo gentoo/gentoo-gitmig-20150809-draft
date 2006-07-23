@@ -1,6 +1,14 @@
 --- nvi-1.79/build/Makefile.in
 +++ nvi-1.79/build/Makefile.in
-@@ -75,7 +75,7 @@
+@@ -60,7 +60,6 @@
+ ln=	@vi_cv_path_ln@
+ mkdir=	@vi_cv_path_mkdir@
+ rm=	@vi_cv_path_rm@
+-strip=	@vi_cv_path_strip@
+ 
+ prefix=	@prefix@
+ bindir=	@bindir@
+@@ -75,26 +74,15 @@
  transform=@program_transform_name@
  
  install: all install_common
@@ -9,9 +17,9 @@
  	[ -d $(bindir) ] || \
  	    ($(mkdir) $(bindir) && $(chmod) $(dmode) $(bindir))
  	cd $(bindir) && $(rm) -f `echo vi | sed '$(transform)'`
-@@ -83,41 +83,16 @@
- 	cd $(bindir) && [ -f $(strip) ] && \
- 	    $(strip) `echo vi | sed '$(transform)'`
+ 	$(cp) nvi $(bindir)/`echo vi | sed '$(transform)'`
+-	cd $(bindir) && [ -f $(strip) ] && \
+-	    $(strip) `echo vi | sed '$(transform)'`
  	cd $(bindir) && $(chmod) $(emode) `echo vi | sed '$(transform)'`
 -	cd $(bindir) && $(rm) -f `echo ex | sed '$(transform)'`
 -	cd $(bindir) && $(rm) -f `echo view | sed '$(transform)'`
@@ -25,18 +33,10 @@
 -	    ($(mkdir) $(mandir)/cat1 && $(chmod) $(dmode) $(mandir)/cat1)
  	@echo "Installing man pages: $(mandir) ..."
 -	cd $(mandir)/cat1 && $(rm) -f `echo vi.0 | sed '$(transform)'`
--	$(cp) $(srcdir)/docs/USD.doc/vi.man/vi.0 \
--	    $(mandir)/cat1/`echo vi.0 | sed '$(transform)'`
--	cd $(mandir)/cat1 && $(chmod) $(fmode) `echo vi.0 | sed '$(transform)'`
--	cd $(mandir)/cat1 && $(rm) -f `echo ex.0 | sed '$(transform)'`
--	cd $(mandir)/cat1 && $(rm) -f `echo view.0 | sed '$(transform)'`
--	cd $(mandir)/cat1 && $(ln) \
--	    `echo vi.0 | sed '$(transform)'` `echo ex.0 | sed '$(transform)'`
--	cd $(mandir)/cat1 && $(ln) \
--	    `echo vi.0 | sed '$(transform)'` `echo view.0 | sed '$(transform)'`
- 	[ -d $(mandir)/man1 ] || \
- 	    ($(mkdir) $(mandir)/man1 && $(chmod) $(dmode) $(mandir)/man1)
- 	cd $(mandir)/man1 && $(rm) -f `echo vi.1 | sed '$(transform)'`
+ 	#$(cp) $(srcdir)/docs/USD.doc/vi.man/vi.0 \
+ 	    #$(mandir)/cat1/`echo vi.0 | sed '$(transform)'`
+ 	#cd $(mandir)/cat1 && $(chmod) $(fmode) `echo vi.0 | sed '$(transform)'`
+@@ -110,12 +98,6 @@
  	$(cp) $(srcdir)/docs/USD.doc/vi.man/vi.1 \
  	    $(mandir)/man1/`echo vi.1 | sed '$(transform)'`
  	cd $(mandir)/man1 && $(chmod) $(fmode) `echo vi.1 | sed '$(transform)'`
@@ -47,29 +47,5 @@
 -	cd $(mandir)/man1 && $(ln) \
 -	    `echo vi.1 | sed '$(transform)'` `echo view.1 | sed '$(transform)'`
  
--cat=	dutch english french german ru_SU.KOI8-R spanish swedish
+ cat=	dutch english french german ru_SU.KOI8-R spanish swedish
  install_common:
- 	[ -f $(chmod) ]
- 	[ -f $(cp) ]
-@@ -132,21 +107,6 @@
- 	    ($(mkdir) $(datadir) && $(chmod) $(dmode) $(datadir))
- 	$(rm) -rf $(datadir)/vi
- 	$(mkdir) $(datadir)/vi && $(chmod) $(dmode) $(datadir)/vi
--	@echo "Installing message catalogs: $(datadir)/vi/catalog ..."
--	$(mkdir) $(datadir)/vi/catalog && \
--	    $(chmod) $(dmode) $(datadir)/vi/catalog
--	(cd $(srcdir)/catalog && $(cp) $(cat) $(datadir)/vi/catalog && \
--	    cd $(datadir)/vi/catalog && $(chmod) $(fmode) *)
--	@echo "Installing Perl scripts: $(datadir)/vi/perl ..."
--	$(mkdir) $(datadir)/vi/perl && $(chmod) $(dmode) $(datadir)/vi/perl
--	[ -f VI.pm ] && $(cp) VI.pm $(datadir)/vi/perl && \
--	    cd $(datadir)/vi/perl && $(chmod) $(fmode) VI.pm)
--	(cd $(srcdir)/perl_scripts && $(cp) *.pl $(datadir)/vi/perl && \
--	    cd $(datadir)/vi/perl && $(chmod) $(fmode) *.pl)
--	@echo "Installing Tcl scripts: $(datadir)/vi/tcl ..."
--	$(mkdir) $(datadir)/vi/tcl && $(chmod) $(dmode) $(datadir)/vi/tcl
--	(cd $(srcdir)/tcl_scripts && $(cp) *.tcl $(datadir)/vi/tcl && \
--	    cd $(datadir)/vi/tcl && $(chmod) $(fmode) *.tcl)
- 	@echo "Installing recover script: $(datadir)/vi/recover ..."
- 	($(cp) recover $(datadir)/vi/recover && \
- 	    $(chmod) $(emode) $(datadir)/vi/recover)

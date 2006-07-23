@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.79.ebuild,v 1.1 2006/07/23 10:50:14 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.79.ebuild,v 1.2 2006/07/23 12:04:12 truedfx Exp $
 
 inherit eutils
 
 DESCRIPTION="Vi clone"
 HOMEPAGE="http://www.bostic.com/vi/"
-SRC_URI="ftp://ftp.sleepycat.com/pub/${P}.tar.gz"
+SRC_URI="ftp://ftp.sleepycat.com/pub/${P}.tar.gz
+	mirror://debian/pool/main/n/${PN}/${P/-/_}-24.diff.gz"
 
 LICENSE="Sleepycat"
 SLOT="0"
@@ -21,6 +22,7 @@ PROVIDE="virtual/editor"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${DISTDIR}"/${P/-/_}-24.diff.gz
 	epatch "${FILESDIR}"/${P}-build.patch
 	# Fix bug 23888
 	epatch "${FILESDIR}"/${PN}-1.81.5-tcsetattr.patch
