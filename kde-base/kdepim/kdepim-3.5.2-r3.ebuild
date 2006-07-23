@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.2-r3.ebuild,v 1.5 2006/06/05 10:47:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.5.2-r3.ebuild,v 1.6 2006/07/23 03:19:05 psi29a Exp $
 
 inherit kde-dist
 
@@ -9,7 +9,7 @@ DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer, kmail, 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/kdepim-3.5.2-patchset.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 mips ppc ~ppc64 ~sparc ~x86"
 IUSE="crypt gnokii pda"
 
 DEPEND="~kde-base/kdebase-${PV}
