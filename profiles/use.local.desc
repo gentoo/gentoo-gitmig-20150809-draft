@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2050 2006/07/23 13:34:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2051 2006/07/23 15:22:13 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1325,6 +1325,8 @@ net-misc/tsclient:vnc - Adds vncviewer support.
 net-misc/vino:avahi - Build with avahi support
 net-misc/vnc:server - Build VNC server
 net-misc/wanpipe:adsl - Build with adsl support
+net-misc/xf4vnc:vncviewer - Install the vncviewer binary
+net-misc/xf4vnc:xvnc - Install the Xvnc binary
 net-misc/xsupplicant:gsm - Add support for EAP-SIM authentication algorithm
 net-misc/yate:fax - Build fax plugin
 net-misc/yate:gsm - Build gsm codec plugin
