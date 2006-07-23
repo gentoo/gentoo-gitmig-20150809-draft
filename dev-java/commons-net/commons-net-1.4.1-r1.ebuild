@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.4.1-r1.ebuild,v 1.2 2006/07/23 00:37:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.4.1-r1.ebuild,v 1.3 2006/07/23 11:19:28 nelchael Exp $
 
-inherit eutils java-pkg-2
+inherit eutils java-pkg-2 java-ant-2
 
 MY_P="${P}-src"
 DESCRIPTION="The purpose of the library is to provide fundamental protocol access, not higher-level abstractions."
