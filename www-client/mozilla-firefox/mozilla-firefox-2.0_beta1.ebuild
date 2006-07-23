@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_beta1.ebuild,v 1.4 2006/07/20 18:55:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_beta1.ebuild,v 1.5 2006/07/23 12:17:16 genstef Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -42,7 +42,7 @@ done
 RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.39
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.10
+	>=dev-libs/nss-3.11.1-r1
 	>=dev-libs/nspr-4.6.1
 	~sys-devel/autoconf-2.13"
 
