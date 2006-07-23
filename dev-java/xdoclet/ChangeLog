@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.18 2006/05/14 07:30:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.19 2006/07/23 09:11:46 nelchael Exp $
+
+*xdoclet-1.2.3 (23 Jul 2006)
+
+  23 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +xdoclet-1.2.3.ebuild:
+  Version bump, new verion uses Generation 2 build system.
 
   14 May 2006; Petteri Räty <betelgeuse@gentoo.org> -xdoclet-1.2.1.ebuild:
   Removed old version.
