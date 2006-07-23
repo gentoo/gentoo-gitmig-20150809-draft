@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.173 2006/07/09 05:28:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.174 2006/07/23 01:21:58 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -218,9 +218,17 @@ kde_src_compile() {
 				# This is needed to fix building with autoconf 2.60.
 				# Many thanks to who preferred such a stupid check rather
 				# than a working arithmetic comparison.
-				[[ -f admin/cvs.sh ]] &&
+				if [[ -f admin/cvs.sh ]]; then
 					sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
 						admin/cvs.sh
+				fi
+
+				# For some reasons, autoconf 2.60 throws up lots of warnings when using
+				# older versions of automake, so force automake 1.9 when using that
+				if [[ $(autoconf --version) == autoconf*2.60* ]]; then
+					einfo "Forcing automake 1.9 when using autoconf 2.60"
+					export WANT_AUTOMAKE="1.9"
+				fi
 
 				# rebuild configure script, etc
 				# This can happen with e.g. a cvs snapshot
