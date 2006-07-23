@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/Tulliana
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/ChangeLog,v 1.2 2006/06/15 14:11:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/Tulliana/ChangeLog,v 1.3 2006/07/23 01:01:21 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> Tulliana-2.0.ebuild:
+  Add binchecks and strip restricts.
 
   15 Jun 2006; Stefan Schweizer <genstef@gentoo.org> Tulliana-2.0.ebuild:
   Add the ~x86 KEYWORD
