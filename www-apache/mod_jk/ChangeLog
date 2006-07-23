@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.7 2006/05/26 09:51:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.8 2006/07/23 09:31:44 nelchael Exp $
+
+*mod_jk-1.2.15 (23 Jul 2006)
+
+  23 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> files/88_mod_jk.conf,
+  +mod_jk-1.2.15.ebuild:
+  Version bump, fixes bug #112225 and bug #110170.
 
   26 May 2006; <nixnut@gentoo.org> mod_jk-1.2.13.ebuild:
   Added ~ppc. bug #134330
