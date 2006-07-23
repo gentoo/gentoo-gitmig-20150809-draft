@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nvi
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.23 2005/02/10 15:03:29 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.24 2006/07/23 10:50:14 truedfx Exp $
+
+*nvi-1.79 (23 Jul 2006)
+
+  23 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
+  +files/nvi-1.79-build.patch, +metadata.xml, +nvi-1.79.ebuild:
+  Add 1.79 as 1.8* don't build with GCC4
+  Mark myself as maintainer
 
   10 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> nvi-1.81.4.ebuild,
   nvi-1.81.5-r1.ebuild, nvi-1.81.5-r2.ebuild, nvi-1.81.5.ebuild:
