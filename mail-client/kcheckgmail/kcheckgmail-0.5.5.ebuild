@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/kcheckgmail-0.5.5.ebuild,v 1.3 2006/06/14 14:32:58 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/kcheckgmail/kcheckgmail-0.5.5.ebuild,v 1.4 2006/07/23 22:17:29 flameeyes Exp $
 
 inherit kde
 
@@ -19,5 +19,5 @@ src_unpack() {
 	kde_src_unpack
 
 	# The tarball was not created in a clean way.
-	make -f admin/Makefile.common || die
+	rm -f "${S}/configure"
 }
