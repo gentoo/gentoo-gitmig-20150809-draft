@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.103 2006/05/22 15:10:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.104 2006/07/23 08:03:58 exg Exp $
+
+  23 Jul 2006; Emanuele Giaquinta <exg@gentoo.org> heimdal-0.7.2.ebuild,
+  -heimdal-0.7.2-r1.ebuild, heimdal-0.7.2-r2.ebuild:
+  Punt unneeded deps. Cleanup.
 
 *heimdal-0.7.2-r2 (22 May 2006)
 
