@@ -1,34 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f922d1120e1c1c28153ffa957c0cf18 ChangeLog 7534
-RMD160 ee3eafdcd1688187605d15992c4a1ad33f8823bf ChangeLog 7534
-SHA256 63c38f0061d5e41b86e8d6ca1dc5e4391741d75aa1984e0d1c7430b52077f4db ChangeLog 7534
-MD5 dfce78f39ce5b4b53c1b5e148dcf3154 baghira-0.6e-r1.ebuild 754
-RMD160 c111535ba4cc00e49f1a28d3ad6098ef98d5cb53 baghira-0.6e-r1.ebuild 754
-SHA256 785bd0b833cc87c3f6b65cb51ddae5c365484ad91c538f4a152aebcadfb8a5d8 baghira-0.6e-r1.ebuild 754
-MD5 5c1ef5321b54a73185a6c166207dfcfc baghira-0.7.ebuild 652
-RMD160 40b7cf4a5abea6aaea4424144426cb30888f98ee baghira-0.7.ebuild 652
-SHA256 817486046c16afd7eed48a6db8e5cbffa3c91822a2e5ab146ff7ceb494f974f0 baghira-0.7.ebuild 652
+AUX baghira-0.6e-drop_resize_handle.patch 1175 RMD160 e2680d1d92f907b0fe605599e429682ef21d25b3 SHA1 499488fe503ca1e5be29db4f3c0c1ab356ddb45f SHA256 3ccb3e7502305ed2a8b0132e6fc6efe08e79c52736034aa06be614718040b33b
 MD5 c96920407fffcc205cfd48375eafde0e files/baghira-0.6e-drop_resize_handle.patch 1175
 RMD160 e2680d1d92f907b0fe605599e429682ef21d25b3 files/baghira-0.6e-drop_resize_handle.patch 1175
 SHA256 3ccb3e7502305ed2a8b0132e6fc6efe08e79c52736034aa06be614718040b33b files/baghira-0.6e-drop_resize_handle.patch 1175
+AUX baghira-0.7-gcc41.patch 913 RMD160 1e8f24e78c3e496c4a5cd5914eed546895fd420e SHA1 67b1276177ba03df7dfff9393d1adf7ff40ecf07 SHA256 de43770942aa693f11ced1b9f9a58151af04b0ecb6b9ce94c9f332b8dcb6e248
 MD5 111fd63c03d078b5b43b641e58bbd9dc files/baghira-0.7-gcc41.patch 913
 RMD160 1e8f24e78c3e496c4a5cd5914eed546895fd420e files/baghira-0.7-gcc41.patch 913
 SHA256 de43770942aa693f11ced1b9f9a58151af04b0ecb6b9ce94c9f332b8dcb6e248 files/baghira-0.7-gcc41.patch 913
-MD5 0676bc4d0ab8344a3fdbcd7168f26b25 files/digest-baghira-0.6e-r1 65
-RMD160 b2285eaf7d2a0c83b3e50f58d1fa6d6177c28795 files/digest-baghira-0.6e-r1 65
-SHA256 21e75bec27de5a4486907d64fc532b5c11b0b868d23f4615e8f4fe8e71faed82 files/digest-baghira-0.6e-r1 65
-MD5 dd076d09f198a5c744fcd93be58a49bf files/digest-baghira-0.7 64
-RMD160 6a16fbcc20289700b62cf181a8ecab093ed1f044 files/digest-baghira-0.7 64
-SHA256 4d52ccf8cbeb63b6f6e66bf537130941fbae49a64f9130d1ad8aa8da816caccc files/digest-baghira-0.7 64
+DIST baghira-0.6e.tar.bz2 807928
+DIST baghira-0.7.tar.bz2 846152 RMD160 e85f6f7144b8549bdc023db26eeb6d0edea82267 SHA1 958c48a0be2ad6cecf86714da68354a593cc740a SHA256 4088ba3fb51561cef0346ec13628abcb20e10f3a372d1a9e3a1a9ed20219f1fa
+EBUILD baghira-0.6e-r1.ebuild 754 RMD160 c111535ba4cc00e49f1a28d3ad6098ef98d5cb53 SHA1 5912f2e98bde598c137e35a06cd7d9cd13160c5b SHA256 785bd0b833cc87c3f6b65cb51ddae5c365484ad91c538f4a152aebcadfb8a5d8
+MD5 dfce78f39ce5b4b53c1b5e148dcf3154 baghira-0.6e-r1.ebuild 754
+RMD160 c111535ba4cc00e49f1a28d3ad6098ef98d5cb53 baghira-0.6e-r1.ebuild 754
+SHA256 785bd0b833cc87c3f6b65cb51ddae5c365484ad91c538f4a152aebcadfb8a5d8 baghira-0.6e-r1.ebuild 754
+EBUILD baghira-0.7.ebuild 652 RMD160 8837db8591d56d1be03c31876e235c9b74880855 SHA1 3933665dd0be8d798a3f70d1a3beb2aada76f06c SHA256 02233fcd60d8bba56a5514220a89efc8cb5a1ab7f1bfeb3d2195d3d899787b5a
+MD5 8f8caa12179c2cac54454ee0cfd85dd7 baghira-0.7.ebuild 652
+RMD160 8837db8591d56d1be03c31876e235c9b74880855 baghira-0.7.ebuild 652
+SHA256 02233fcd60d8bba56a5514220a89efc8cb5a1ab7f1bfeb3d2195d3d899787b5a baghira-0.7.ebuild 652
+MISC ChangeLog 7638 RMD160 d2c39b6fe3b5e329b5360a12d85dce9b38746fdc SHA1 9f082117370944d1c02df94bb798fd8e7a05b4a8 SHA256 3b75cec449d08c5d1bb710f12fa4d994daec827ef3f29b6a58f122f4de64f158
+MD5 25979aa032e47fe3a232a19dec6ee8da ChangeLog 7638
+RMD160 d2c39b6fe3b5e329b5360a12d85dce9b38746fdc ChangeLog 7638
+SHA256 3b75cec449d08c5d1bb710f12fa4d994daec827ef3f29b6a58f122f4de64f158 ChangeLog 7638
+MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEGrhvAiZjviIA2XgRAsuFAJ94OmIwiEn5Xhx7sUtAmuFJP1e92wCgvDM7
-/XbL9zK6/uk+rv+kOnl6Hhg=
-=zwqW
------END PGP SIGNATURE-----
+MD5 0676bc4d0ab8344a3fdbcd7168f26b25 files/digest-baghira-0.6e-r1 65
+RMD160 b2285eaf7d2a0c83b3e50f58d1fa6d6177c28795 files/digest-baghira-0.6e-r1 65
+SHA256 21e75bec27de5a4486907d64fc532b5c11b0b868d23f4615e8f4fe8e71faed82 files/digest-baghira-0.6e-r1 65
+MD5 abe9c6e0c83968af70a1b1e965748a2f files/digest-baghira-0.7 238
+RMD160 c4a9bf02b2c6f392dc590d5d96ff8138d14d7c11 files/digest-baghira-0.7 238
+SHA256 f5f1fc45d0a4a9a9e8809dff5902c71f21bd2eebcfbf6a5129c54c52874f3de7 files/digest-baghira-0.7 238
