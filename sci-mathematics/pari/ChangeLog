@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.37 2006/05/23 20:17:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.38 2006/07/23 11:31:22 markusle Exp $
+
+*pari-2.3.0 (23 Jul 2006)
+
+  23 Jul 2006; Markus Dittrich <markusle@gentoo.org> +pari-2.3.0.ebuild:
+  Version bump. Thanks to Soroosh Yazdani <syazdani@gmail.com>
+  for his ebuild. This fixes bug #141206.
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> pari-2.1.7-r1.ebuild:
   Stable on ppc64
