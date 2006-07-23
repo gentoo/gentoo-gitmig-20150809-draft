@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.5.2.ebuild,v 1.2 2006/07/20 16:58:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.5.2.ebuild,v 1.3 2006/07/23 12:10:01 greg_g Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -39,6 +39,9 @@ KMCOPYLIB="
 KMEXTRACTONLY="lib/"
 
 need-kde 3.4
+
+# avoid an automake error that causes bug #141311.
+PATCHES="${FILESDIR}/${P}-automake-error.patch"
 
 src_compile() {
 	local myconf="$(use_enable mysql) $(use_enable postgres pgsql) --enable-kexi-reports"

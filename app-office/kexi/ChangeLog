@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.39 2006/07/20 16:58:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.40 2006/07/23 12:10:01 greg_g Exp $
+
+  23 Jul 2006; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kexi-1.5.2-automake-error.patch, kexi-1.5.2.ebuild:
+  Fix automake error causing bug #141311.
 
   20 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kexi-1.5.2.ebuild:
   Forgot to remove patches, bug #141128.

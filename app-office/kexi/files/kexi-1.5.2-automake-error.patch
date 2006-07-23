@@ -1,0 +1,11 @@
+diff -Nur koffice-1.5.2/kexi/plugins/Makefile.am koffice-1.5.2.new/kexi/plugins/Makefile.am
+--- koffice-1.5.2/kexi/plugins/Makefile.am	2006-07-09 04:09:43.000000000 +0200
++++ koffice-1.5.2.new/kexi/plugins/Makefile.am	2006-07-23 12:03:23.000000000 +0200
+@@ -7,6 +7,6 @@
+   SCRIPTINGDIR=scripting
+ endif
+ 
+-SUBDIRS = tables relations migration queries forms $(REPORTS) $(SCRIPTINGDIR) importexport
++SUBDIRS = tables relations migration queries forms $(SCRIPTINGDIR) importexport
+ 
+ #importwizard relations
