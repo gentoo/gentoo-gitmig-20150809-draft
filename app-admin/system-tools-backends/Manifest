@@ -2,17 +2,12 @@
 Hash: SHA1
 
 DIST system-tools-backends-1.2.0.tar.bz2 532611
-DIST system-tools-backends-1.4.0.tar.bz2 706880
 DIST system-tools-backends-1.4.1.tar.bz2 706808
 DIST system-tools-backends-1.4.2.tar.bz2 708733 RMD160 00fd27b4dc886a7e4a735d48d241f0035af4f80e SHA1 b047c30fdc5635c048f1509a5c0d4130c83cbe5a SHA256 32762567ece8c0ab59dc1b2186ee8cfeac6d1f92574dfb3011483431135d8940
 EBUILD system-tools-backends-1.2.0.ebuild 754 RMD160 7c3672d78aa83cb9aa76e49ec3aef90f20671d9a SHA1 9bb3a8191e137661308a6e0498fc9839d2de06c3 SHA256 9e6db3348b0b15f68fc0415bf468fe0f150ad684f334bb15bab3d32fa738ab6e
 MD5 aab38d32daaa9ee6e5c99cd978603fac system-tools-backends-1.2.0.ebuild 754
 RMD160 7c3672d78aa83cb9aa76e49ec3aef90f20671d9a system-tools-backends-1.2.0.ebuild 754
 SHA256 9e6db3348b0b15f68fc0415bf468fe0f150ad684f334bb15bab3d32fa738ab6e system-tools-backends-1.2.0.ebuild 754
-EBUILD system-tools-backends-1.4.0.ebuild 763 RMD160 71125ad4125dc7046cb2d8dd415c116074ac4457 SHA1 c503d03b552fcd1827442219753572b91c83fb84 SHA256 67ab02bd8cbe8ebee57ab8b68b9eb8587e3ca258538d41dfaa0e5180d3e61b91
-MD5 481c8379524aaefeedacf79c8438321b system-tools-backends-1.4.0.ebuild 763
-RMD160 71125ad4125dc7046cb2d8dd415c116074ac4457 system-tools-backends-1.4.0.ebuild 763
-SHA256 67ab02bd8cbe8ebee57ab8b68b9eb8587e3ca258538d41dfaa0e5180d3e61b91 system-tools-backends-1.4.0.ebuild 763
 EBUILD system-tools-backends-1.4.1.ebuild 764 RMD160 fd2cc9340f735549c06d7c440643450f49d14fe7 SHA1 cf356065204609faa4c675d2b467d70907c49c51 SHA256 18e882503ecbd050f2e7b7a9e4cd4a84eae9a0e0b2132fa318c1c4d7773f9dda
 MD5 fae31db36d742218cec23f62d63ecbce system-tools-backends-1.4.1.ebuild 764
 RMD160 fd2cc9340f735549c06d7c440643450f49d14fe7 system-tools-backends-1.4.1.ebuild 764
@@ -21,10 +16,10 @@ EBUILD system-tools-backends-1.4.2.ebuild 773 RMD160 bd7ed401c03294f8ceea89cc2a5
 MD5 016e762fd91b5db7162228088bbf4caa system-tools-backends-1.4.2.ebuild 773
 RMD160 bd7ed401c03294f8ceea89cc2a5f68a33b4a6e07 system-tools-backends-1.4.2.ebuild 773
 SHA256 2f49e92dfcbaaea066f506fbb3946d0cd14797381d7924957e72b32170ace783 system-tools-backends-1.4.2.ebuild 773
-MISC ChangeLog 4200 RMD160 38e49dd28ae21cce430d90fd43c67a167de8a53c SHA1 6f90f5c2ef5cb90d71f4440d6f7b6a93ddcc8586 SHA256 7bdbbe08c3ccf4ff87eb63a82187a557579ba9f6869a9a49bad4b3f065f9efe8
-MD5 fcf9c492583e563f5616ef750f8ae00b ChangeLog 4200
-RMD160 38e49dd28ae21cce430d90fd43c67a167de8a53c ChangeLog 4200
-SHA256 7bdbbe08c3ccf4ff87eb63a82187a557579ba9f6869a9a49bad4b3f065f9efe8 ChangeLog 4200
+MISC ChangeLog 4323 RMD160 615c582b1c0805210e7f3803e933fee02bf8b395 SHA1 21889ce0b7d6f7103648eb191ff9aea233bdaf28 SHA256 612177143c3e0ca0cb926908968496e4ba4ccf09eb41b57419cc626f9fb7e9a7
+MD5 4c1586d1c31d18bbb0fefd37a3cd3b06 ChangeLog 4323
+RMD160 615c582b1c0805210e7f3803e933fee02bf8b395 ChangeLog 4323
+SHA256 612177143c3e0ca0cb926908968496e4ba4ccf09eb41b57419cc626f9fb7e9a7 ChangeLog 4323
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -32,9 +27,6 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 946729e7340edc6a1bae2e1a5e02a1d2 files/digest-system-tools-backends-1.2.0 80
 RMD160 62fa08badb8dbb4ca2b417cd9723c8a339485dab files/digest-system-tools-backends-1.2.0 80
 SHA256 cb290901bc7113c777bbc5a3feece9d1d4e60819f9659bec72c1b4963f39e771 files/digest-system-tools-backends-1.2.0 80
-MD5 54db3221ddfb6a9393e2f1576f8d7a5e files/digest-system-tools-backends-1.4.0 80
-RMD160 917bfcaac5ff3fe2779bfc1a3434f392f9d46ae3 files/digest-system-tools-backends-1.4.0 80
-SHA256 5609a633034a94d8905fec92f5ca68b08d78218f96a82204c49d5cca4cd809d6 files/digest-system-tools-backends-1.4.0 80
 MD5 db143143d44f996cd2407f556fc67c92 files/digest-system-tools-backends-1.4.1 80
 RMD160 3d3078c637fcb6b36de7641ff012a746c206eb19 files/digest-system-tools-backends-1.4.1 80
 SHA256 df475718509c04eb6d4b4e1cb0f01840310cd97868c68394e8e375aff4614444 files/digest-system-tools-backends-1.4.1 80
@@ -44,7 +36,7 @@ SHA256 3228d1653f99e908254d3e11adcae217a1cce177deb157d21042caf35b7ffb7f files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEu6RSomPajV0RnrERAqHeAJ0Zqsfpqk9MaaBXdFTbo4Mo/th2ZgCdGUye
-bAefbyz08FkrvFHLus5NJ2k=
-=v7fs
+iD8DBQFEw72FomPajV0RnrERAnyoAJ90QDeeM7Yn4hp/5XLmBLGvufSN9ACfdEp7
+56egd39P61gqGJzerJptnrU=
+=sSBh
 -----END PGP SIGNATURE-----
