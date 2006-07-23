@@ -1,12 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/yersinia-0.7.ebuild,v 1.1 2006/07/23 20:50:15 vanquirius Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/yersinia-0.7.ebuild,v 1.2 2006/07/23 20:54:20 vanquirius Exp $
 
 DESCRIPTION="A layer 2 attack framework"
 HOMEPAGE="http://www.yersinia.net/"
 SRC_URI="http://www.yersinia.net/download/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"

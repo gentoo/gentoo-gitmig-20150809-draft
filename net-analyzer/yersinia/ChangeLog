@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/yersinia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.1 2006/07/23 20:50:15 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.2 2006/07/23 20:54:20 vanquirius Exp $
+
+  23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> yersinia-0.7.ebuild:
+  Do not inherit eutils, not needed.
 
 *yersinia-0.7 (23 Jul 2006)
 
