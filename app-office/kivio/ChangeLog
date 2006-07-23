@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.39 2006/07/19 17:02:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.40 2006/07/23 21:34:14 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kivio-1.5.2.ebuild:
+  Add ~x86-fbsd keyword.
 
 *kivio-1.5.2 (19 Jul 2006)
 
