@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/freetds
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.32 2005/09/04 10:13:10 stuart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.33 2006/07/23 19:29:27 chtekk Exp $
+
+*freetds-0.64 (23 Jul 2006)
+
+  23 Jul 2006; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  -freetds-0.61-r1.ebuild, -freetds-0.62.1.ebuild, freetds-0.62.3.ebuild,
+  -freetds-0.62.4.ebuild, -freetds-0.63.ebuild, +freetds-0.64.ebuild:
+  Version bump, cleanup old ebuilds, cleanup existing ebuilds.
 
 *freetds-0.63 (04 Sep 2005)
 
