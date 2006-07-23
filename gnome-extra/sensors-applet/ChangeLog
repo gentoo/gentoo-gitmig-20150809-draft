@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.16 2006/07/21 13:39:32 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.17 2006/07/23 03:35:55 steev Exp $
+
+*sensors-applet-1.7.4 (23 Jul 2006)
+
+  23 Jul 2006; Steev Klimaszewski <steev@gentoo.org>
+  -sensors-applet-1.7.3.ebuild, +sensors-applet-1.7.4.ebuild:
+  Version bump, fixes a number of bugs, and also first version to work on my
+  system now.  Thanks to pragmatine for the assistance, and all the reporters and
+  testers.
 
 *sensors-applet-1.7.3 (21 Jul 2006)
 
