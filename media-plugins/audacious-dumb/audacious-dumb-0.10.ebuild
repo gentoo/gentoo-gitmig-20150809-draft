@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.10.ebuild,v 1.1 2006/05/30 03:50:31 joker Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/audacious-dumb-0.10.ebuild,v 1.2 2006/07/23 13:59:52 joker Exp $
 
 DESCRIPTION="Audacious Plug-in for accurate, high-quality IT/XM/S3M/MOD playback."
 HOMEPAGE="http://www.netswarm.net/"
@@ -14,10 +12,8 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-RDEPEND=">=media-sound/audacious-1.0.0
+DEPEND=">=media-sound/audacious-1.0.0
 	>=media-libs/dumb-0.9.3"
-
-DEPEND="${RDEPEND}"
 
 src_compile() {
 	emake || die
