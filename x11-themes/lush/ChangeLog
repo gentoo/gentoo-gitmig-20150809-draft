@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/lush
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.12 2006/07/23 02:17:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.13 2006/07/23 15:43:15 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> lush-0.1.0-r2.ebuild:
+  Add ~x86-fbsd keyword.
 
   23 Jul 2006; Luca Barbato <lu_zero@gentoo.org> lush-0.1.0-r2.ebuild:
   Marked ppc
