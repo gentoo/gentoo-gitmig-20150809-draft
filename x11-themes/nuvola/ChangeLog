@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/nuvola
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.16 2006/05/05 07:53:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.17 2006/07/23 01:00:08 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> nuvola-1.0-r1.ebuild:
+  Add ~x86-fbsd keyword, add binchecks restrict (installs only icon files),
+  fix installation of documentation files.
 
   05 May 2006; Markus Rothe <corsair@gentoo.org> nuvola-1.0-r1.ebuild:
   Stable on ppc64
