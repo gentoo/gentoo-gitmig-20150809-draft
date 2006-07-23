@@ -1,0 +1,14 @@
+# ChangeLog for net-analyzer/yersinia
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.1 2006/07/23 20:50:15 vanquirius Exp $
+
+*yersinia-0.7 (23 Jul 2006)
+
+  23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +yersinia-0.7.ebuild:
+  Initial commit for bug 87965. Thanks to Michael Zanetta <grimmlin at pentoo
+  dot ch>, Marco Morales <soulse at gmail dot com>, Thorsten Fischer <thorsten
+  at irmplc dot com>, Jacob Lindberg <jni at laps dot dk>, Stefan Schlott
+  <stefan.schlott at informatik.uni-ulm.de>, Taku Murakami <murakami.taku at
+  gmail dot com> and others.
+
