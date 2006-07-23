@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.93 2006/07/17 18:28:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.94 2006/07/23 18:47:39 dang Exp $
+
+  23 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> -zenity-2.10.0.ebuild,
+  -zenity-2.14.0.ebuild, -zenity-2.14.1.ebuild:
+  Clean up unnecessary versions
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> zenity-2.14.2.ebuild:
   Marked stable on amd64 for bug #139612
