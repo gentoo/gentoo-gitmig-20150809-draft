@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1.ebuild,v 1.7 2005/01/01 11:53:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1.ebuild,v 1.8 2006/07/23 06:53:00 wormo Exp $
 
 DESCRIPTION="build a self-extracting and self-installing binary package"
 HOMEPAGE="http://pdv.sourceforge.net/"
