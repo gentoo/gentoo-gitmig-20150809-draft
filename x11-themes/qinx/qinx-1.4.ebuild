@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/qinx-1.4.ebuild,v 1.6 2005/10/02 20:00:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/qinx-1.4.ebuild,v 1.7 2006/07/23 01:32:04 flameeyes Exp $
 
-inherit kde eutils
+inherit kde
 
 DESCRIPTION="A KDE style inspired by QNX Photon microGUI."
 SRC_URI="http://www.usermode.org/code/${P}.tar.bz2"
