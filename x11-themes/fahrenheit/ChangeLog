@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/fahrenheit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/ChangeLog,v 1.3 2005/08/03 19:16:31 gustavoz Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fahrenheit/ChangeLog,v 1.4 2006/07/23 01:19:15 flameeyes Exp $
+
+  23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  fahrenheit-0.1.ebuild:
+  Put this in kde herd, and force a newer admindir for compatibility with
+  autoconf 2.6 / automake 1.9.
 
   03 Aug 2005; Gustavo Zacarias <gustavoz@gentoo.org> fahrenheit-0.1.ebuild:
   Keyworded ~sparc
