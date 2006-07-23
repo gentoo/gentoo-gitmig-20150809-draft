@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.59 2006/07/09 10:20:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.60 2006/07/23 20:48:51 hollow Exp $
+
+*util-vserver-0.30.210-r16 (23 Jul 2006)
+
+  23 Jul 2006; Benedikt Böhm <hollow@gentoo.org>
+  +util-vserver-0.30.210-r16.ebuild:
+  fix vschedcalc, thanks to Wilhelm Meier
 
 *util-vserver-0.30.210-r15 (09 Jul 2006)
 
