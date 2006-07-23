@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5654 2006/07/23 11:27:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5655 2006/07/23 15:52:23 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luis Medinas <metalgod@gentoo.org> (23 Jul 2006)
+# Marked for removal see bug #132449
+=media-plugins/xmms-xmmsd-0.3
 
 # Markus Dittrich <markusle@gentoo.org> (23 Jul 2006)
 # masked for further testing (see bug #141206)
