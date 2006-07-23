@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.171 2006/07/17 14:56:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.172 2006/07/23 03:42:38 dang Exp $
+
+  23 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
+  -files/file-roller-2.8.0-use_bin_tar.patch,
+  -files/file-roller-2.10.0-fix_whitespace.patch,
+  -files/file-roller-2.10.2-fix_unrar.patch, -file-roller-2.10.0-r1.ebuild,
+  -file-roller-2.10.3.ebuild, -file-roller-2.12.1.ebuild,
+  -file-roller-2.12.2.ebuild:
+  Clean up unnecessary versions
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
   file-roller-2.14.3.ebuild:
