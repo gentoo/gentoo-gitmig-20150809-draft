@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r3.ebuild,v 1.1 2006/07/23 16:08:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r3.ebuild,v 1.2 2006/07/23 16:11:32 nichoj Exp $
 
 inherit gnuconfig java-pkg-2 mono distutils multilib
 
@@ -20,7 +20,6 @@ RDEPEND=">=virtual/jdk-1.2
 DEPEND="${RDEPEND}
 	script? ( !dev-util/pccts )
 	>=sys-apps/sed-4
-	sys-apps/findutils
 	source? ( app-arch/zip )"
 
 src_compile() {
