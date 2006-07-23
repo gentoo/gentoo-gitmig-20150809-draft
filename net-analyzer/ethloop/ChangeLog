@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethloop
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.4 2005/09/10 03:01:52 vanquirius Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethloop/ChangeLog,v 1.5 2006/07/23 23:40:18 vanquirius Exp $
+
+  23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -ethloop-10.ebuild,
+  ethloop-10-r1.ebuild:
+  Mark 10-r1 x86 stable, remove old ebuild.
 
 *ethloop-10-r1 (10 Sep 2005)
 
