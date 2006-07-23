@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycdf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.5 2006/04/01 15:17:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.6 2006/07/23 22:17:32 liquidx Exp $
+
+*pycdf-0.6.2_rc1 (23 Jul 2006)
+
+  23 Jul 2006; Alastair Tse <liquidx@gentoo.org> +pycdf-0.6.2_rc1.ebuild:
+  version bump (#141165). Changed LICENSE, DESCRIPTION and HOMEPAGE.
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> pycdf-0.5.2.ebuild:
   Mark 0.5.2 ~ia64
