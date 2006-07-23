@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.39.ebuild,v 1.1 2006/07/23 06:17:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.39.ebuild,v 1.2 2006/07/23 13:03:43 dertobi123 Exp $
 
 inherit flag-o-matic common-lisp-common-2 eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc-macos -sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos -sparc ~x86"
 IUSE="X new-clx fastcgi pcre postgres readline zlib"
 
 RDEPEND=">=dev-libs/libsigsegv-2.4
