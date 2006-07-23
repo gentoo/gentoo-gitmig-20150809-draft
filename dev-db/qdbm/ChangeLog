@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.81 2006/07/23 15:36:01 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.82 2006/07/23 15:38:11 hattya Exp $
 
 *qdbm-1.8.62 (23 Jul 2006)
 
@@ -8,7 +8,7 @@
   +files/qdbm-perl-runpath-vendor.diff, files/qdbm-runpath.diff,
   +qdbm-1.8.62.ebuild:
   new upstream release. this ebuild is not affected by bug #140295. arm, s390
-  and sparc is removed from KEYWORDS due to java-config dependency problem.
+  and sparc are removed from KEYWORDS due to java-config dependency problem.
 
   23 Jul 2006; Akinori Hattori <hattya@gentoo.org>
   +files/qdbm-perl-runpath.diff, qdbm-1.8.33-r2.ebuild, qdbm-1.8.46.ebuild,
