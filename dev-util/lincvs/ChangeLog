@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lincvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.49 2006/04/04 23:42:10 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/ChangeLog,v 1.50 2006/07/23 09:33:14 kugelfang Exp $
+
+  23 Jul 2006; Danny van Dyk <kugelfang@gentoo.org> lincvs-1.4.4.ebuild:
+  Marked stable on amd64.
 
   04 Apr 2006; Carsten Lohrke <carlo@gentoo.org>
   +files/lincvs-1.4.4-gcc-4.1.diff, lincvs-1.4.4.ebuild:
