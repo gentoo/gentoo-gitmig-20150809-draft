@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.1.ebuild,v 1.6 2006/01/08 09:27:24 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/b2evolution/b2evolution-0.9.1.ebuild,v 1.7 2006/07/24 16:04:01 dsd Exp $
 
 inherit webapp eutils
 
@@ -32,6 +32,7 @@ src_install() {
 
 	# Identify the configuration files that this app uses
 	# User can want to make changes to these!
+	webapp_configfile ${MY_HTDOCSDIR}/conf/_config.php
 	webapp_serverowned ${MY_HTDOCSDIR}/conf/_config.php
 	webapp_serverowned ${MY_HTDOCSDIR}
 
