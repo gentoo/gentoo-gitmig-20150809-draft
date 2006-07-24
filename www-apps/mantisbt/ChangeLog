@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.32 2006/07/24 20:57:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.33 2006/07/24 21:00:41 rl03 Exp $
+
+*mantisbt-1.0.4 (24 Jul 2006)
+
+  24 Jul 2006; Renat Lumpau <rl03@gentoo.org> +mantisbt-1.0.4.ebuild:
+  Version bump
 
   24 Jul 2006; Renat Lumpau <rl03@gentoo.org> -files/0.19.4-debian.patch,
   -files/postinstall-en.txt, -mantisbt-0.19.4.ebuild,
