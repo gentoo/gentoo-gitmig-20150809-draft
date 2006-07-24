@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.1 2006/06/11 11:52:56 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.2 2006/07/24 19:14:33 bangert Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Syslog message handling tools"
 HOMEPAGE="http://untroubled.org/syslogread/"
-SRC_URI="${HOMEPAGE}archive/${P}.tar.gz"
+SRC_URI="http://untroubled.org/syslogread/archive/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
