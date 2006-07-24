@@ -3,8 +3,8 @@
 <pkgmetadata>
     <herd>no-herd</herd>
     <maintainer>
-        <email>hd_brummy@gentoo.org</email>
-        <name>Joerg Bornkessel</name>
+        <email>vdr@gentoo.org</email>
+        <name>gentoo-vdr-project</name>
     </maintainer>
     <longdescription lang="en">
         This package provides Graphical LCD Driver.
