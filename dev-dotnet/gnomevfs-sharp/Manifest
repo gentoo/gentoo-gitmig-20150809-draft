@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gtk-sharp-2.4.0-configurable.diff.gz 1340
 DIST gtk-sharp-2.4.0.tar.gz 2127668
 DIST gtk-sharp-2.4.2-configurable.diff.gz 1386 RMD160 55077ae632990f371bcedf1c098f240f1dad4ede SHA256 dec62584b7103599917dc61535dd2653dc65e0d82ce9a20a0f1b02dc0268b993
@@ -42,3 +45,10 @@ SHA256 1cb001520314e44370cf56d79fa2f62a61493cd37ffd9c4689c247ebeefd3f54 files/di
 MD5 268ca99224bc45249db87e3d3c665028 files/digest-gnomevfs-sharp-2.8.2 533
 RMD160 1a97a6d51142bdc89d63edd69720a838a42d2188 files/digest-gnomevfs-sharp-2.8.2 533
 SHA256 f29502346cf9d7ec6a2b99e066c197cb107136aea0a01f6cecdf299ab09ac6a4 files/digest-gnomevfs-sharp-2.8.2 533
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFExB7dmOfEJZHYOKcRAjwxAKDFwnpTu3JuvipiDCSaA2OIgP6+7gCcDfAa
+AIx+2IGkoijWgc6MH2IxchI=
+=pKPj
+-----END PGP SIGNATURE-----

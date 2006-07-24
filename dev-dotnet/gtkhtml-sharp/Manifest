@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gtk-sharp-1.0.10-configurable.diff.gz 1718
 DIST gtk-sharp-1.0.10.tar.gz 1841067
 DIST gtk-sharp-1.0.8-configurable.diff.gz 1506
@@ -60,3 +63,10 @@ SHA256 1cb001520314e44370cf56d79fa2f62a61493cd37ffd9c4689c247ebeefd3f54 files/di
 MD5 268ca99224bc45249db87e3d3c665028 files/digest-gtkhtml-sharp-2.8.2 533
 RMD160 1a97a6d51142bdc89d63edd69720a838a42d2188 files/digest-gtkhtml-sharp-2.8.2 533
 SHA256 f29502346cf9d7ec6a2b99e066c197cb107136aea0a01f6cecdf299ab09ac6a4 files/digest-gtkhtml-sharp-2.8.2 533
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFExB7dmOfEJZHYOKcRAjgRAKCc+cM5YW+4hZOGC/MV9jLfHJ6YSACgoyuT
+z1Yf6nRs1BoYZevgRA1soGs=
+=G1yL
+-----END PGP SIGNATURE-----
