@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3.ebuild,v 1.2 2006/03/21 00:22:36 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.16.3.ebuild,v 1.3 2006/07/24 14:11:07 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ IUSE="expat nls rsh ssl webdav xml zlib"
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.lyra.org/sitecopy/"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 # gnome support is disabled at this point
