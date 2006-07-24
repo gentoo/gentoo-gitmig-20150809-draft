@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.9 2006/03/21 20:47:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.10 2006/07/24 08:00:09 genstef Exp $
+
+*misdn-20060722 (24 Jul 2006)
+
+  24 Jul 2006; Stefan Schweizer <genstef@gentoo.org> -files/misdn.modulesd,
+  -misdn-20051017.ebuild, +misdn-20060722.ebuild:
+  version bump, use misdn-init, kernel 2.6.18 support thanks to Martin von
+  Gagern <Martin.vGagern@gmx.net> in bug 141020
 
 *misdn-20060321 (21 Mar 2006)
 
