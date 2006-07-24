@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.14.2-r1.ebuild,v 1.1 2006/07/23 22:43:50 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.14.2-r1.ebuild,v 1.2 2006/07/24 01:08:32 allanonjl Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
@@ -71,4 +71,6 @@ src_unpack() {
 
 	# fix unresolved symbols #133096
 	epatch "${FILESDIR}"/${PN}-2.14.2-http_module-undef-neon-symbols.patch
+
+	eautomake
 }
