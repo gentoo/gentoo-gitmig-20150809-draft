@@ -1,11 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.23a.ebuild,v 1.1 2006/07/23 15:46:10 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.23a.ebuild,v 1.2 2006/07/24 12:14:53 satya Exp $
 
 inherit eutils versionator
 
 IUSE_LINGUAS="ja pl"
-IUSE="acl async automount cups doc examples kerberos kernel_linux ldap ldapsam
+IUSE="acl async automount cups doc examples kerberos kernel_linux ldap
+	linguas_ja linguas_pl
 	oav pam python quotas readline selinux swat syslog winbind"
 #RESTRICT="test" # tests are enabled with --enable-socket-wrapper
 
@@ -75,19 +76,17 @@ src_compile() {
 
 	local myconf
 	local mylangs
+	local mymod_shared
 
-	mylangs="en"
+	mylangs="--with-manpages-langs=en"
 	use linguas_ja && mylangs="${mylangs},ja"
 	use linguas_pl && mylangs="${mylangs},pl"
-	myconf="${myconf} --with-manpages-langs=${mylangs}"
 
+	use winbind && mymod_shared="--with-shared-modules=idmap_rid"
 	if use ldap; then
-		myconf="${myconf} $(use_with ldap) $(use_with kerberos ads)"
-		myconf="${myconf} $(use_with ldapsam)"
-	else
-		myconf="${myconf} --without-ldapsam $(use_with ldap)"
+		myconf="${myconf} $(use_with kerberos ads)"
+		use winbind && mymod_shared="${mymod_shared},idmap_ad"
 	fi
-	use winbind && myconf="${myconf} $(use_with winbind) --with-shared-modules=idmap_rid,idmap_ad"
 
 	[[ ${CHOST} == *-*bsd* ]] && myconf="${myconf} --disable-pie"
 	use hppa && myconf="${myconf} --disable-pie"
@@ -111,13 +110,15 @@ src_compile() {
 		$(use_with automount) \
 		$(use_enable cups) \
 		$(use_with kerberos krb5) \
+		$(use_with ldap) \
 		$(use_with pam) $(use_with pam pam_smbpass) \
 		$(use_with python) \
 		$(use_with quotas) $(use_with quotas sys-quotas) \
 		$(use_with readline) \
 		$(use_with kernel_linux smbmount) \
 		$(use_with syslog) \
-		${myconf} || die
+		$(use_with winbind) \
+		${myconf} ${mylangs} ${mymod_shared} || die
 
 	emake proto || die "SAMBA make proto error"
 	emake everything || die "SAMBA make everything error"
@@ -286,8 +287,6 @@ pkg_postinst() {
 		einfo "swat must be enabled by xinetd:"
 		einfo "    change the /etc/xinetd.d/swat configuration"
 	fi
-	einfo "As of 3.0.20: New USE flags: syslog, automount, async (default: disabled)"
-	einfo "As of 3.0.20b: New USE flags: ldapsam, swat (default: disabled)"
 	einfo "Latest info: README.gentoo in documentation directory"
 }
 
