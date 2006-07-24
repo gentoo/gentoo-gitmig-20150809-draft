@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.66 2006/06/20 19:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.67 2006/07/24 20:18:09 genstef Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -86,11 +86,10 @@
 inherit eutils linux-info multilib
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst src_install src_compile pkg_postrm
 
-IUSE="" # don't put pcmcia here, rather in the ebuilds that actually support pcmcia
+IUSE="kernel_linux"
 SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
-RDEPEND="kernel_linux? ( virtual/modutils
-	pcmcia? ( virtual/pcmcia ) )"
+RDEPEND="kernel_linux? ( virtual/modutils )"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 
@@ -131,51 +130,6 @@ check_vermagic() {
 		ewarn "To fix this either change the version of GCC you wish to use"
 		ewarn "to match the kernel, or recompile the kernel first."
 		die "GCC Version Mismatch."
-	fi
-}
-
-unpack_pcmcia_sources() {
-	# So while the two eclasses exist side-by-side and also the ebuilds inherit
-	# both we need to check for PCMCIA_SOURCE_DIR, and if we find it, then we
-	# bail out and assume pcmcia.eclass is working on it.
-	[[ -n ${PCMCIA_SOURCE_DIR} ]] && return 1
-
-	if [[ -f "${1}" ]]; then
-		PCMCIA_SOURCE_DIR="${WORKDIR}/pcmcia-cs/"
-
-		ebegin "Decompressing pcmcia-cs sources"
-		mkdir -p ${PCMCIA_SOURCE_DIR}
-		tar -xjf ${1} -C ${PCMCIA_SOURCE_DIR}
-		eend $?
-
-		if [[ -f ${PCMCIA_SOURCE_DIR}/pcmcia-cs-version ]]; then
-			PCMCIA_VERSION=$(cat ${PCMCIA_SOURCE_DIR}/pcmcia-cs-version)
-			einfo "Found pcmcia-cs-${PCMCIA_VERSION}"
-		fi
-	fi
-}
-
-# Dummy function for compatibility.
-pcmcia_configure() { return 0; }
-
-pcmcia_src_unpack() {
-	local pcmcia_tbz="${ROOT}/usr/src/pcmcia-cs/pcmcia-cs-build-env.tbz2"
-
-	# if the kernel has pcmcia support built in, then we just ignore all this.
-	if linux_chkconfig_present PCMCIA; then
-		einfo "Kernel based PCMCIA support has been detected."
-	else
-		if kernel_is 2 4; then
-			unpack_pcmcia_sources ${pcmcia_tbz};
-		else
-			einfo "We have detected that you are running a 2.6 kernel"
-			einfo "but you are not using the built-in PCMCIA support."
-			einfo "We will assume you know what you are doing, but please"
-			einfo "consider using the built in PCMCIA support instead."
-			epause 10
-
-			unpack_pcmcia_sources ${pcmcia_tbz};
-		fi
 	fi
 }
 
