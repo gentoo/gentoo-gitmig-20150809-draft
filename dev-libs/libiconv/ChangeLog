@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libiconv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.21 2006/07/22 11:14:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.22 2006/07/24 00:51:53 ticho Exp $
+
+  24 Jul 2006; Andrej Kacian <ticho@gentoo.org> libiconv-1.11.ebuild:
+  Removed ~x86 from KEYWORDS, see bug #141312.
 
   22 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/libiconv-1.9.2-RPATH-fix.patch, -libiconv-1.9.2-r3.ebuild:
