@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r3.ebuild,v 1.1 2006/07/24 19:18:55 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.5.5.1-r3.ebuild,v 1.2 2006/07/24 20:10:01 zzam Exp $
 
-inherit eutils multilib
+inherit eutils autotools
 
 DESCRIPTION="libdvb package with added CAM library and libdvbmpegtools as well as dvb-mpegtools"
 HOMEPAGE="http://www.metzlerbros.org/dvb/"
@@ -19,16 +19,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Disable compilation of sample programs
-	# and use DESTDIR when installing
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-gentoo-file-collisions.patch
-	epatch "${FILESDIR}"/${P}-shared-libs.patch
+	epatch "${FILESDIR}/${P}-autotools.patch"
+	epatch "${FILESDIR}/${P}-rename-analyze.patch"
 
-	sed -i -e '/^CFLAGS=/d' config.mk || die
-	sed -i Makefile \
-		-e 's-/include-/include/libdvb-' \
-		-e 's-/lib/-/$(LIBDIR)/-'
+	eautoreconf
 }
 
 src_install() {
@@ -36,13 +30,20 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	make DESTDIR="${D}" PREFIX=/usr LIBDIR=$(get_libdir) install || die "Problem at make install"
 
-	use doc && insinto "/usr/share/doc/${PF}/sample_progs" && \
-	doins sample_progs/* && \
-	insinto "/usr/share/doc/${PF}/samplerc" && \
-	doins samplerc/*
+	cd ${D}/usr/bin
+	mv dia dia_dvb
 
-	einfo "The script called 'dia' has been installed as dia-dvb"
+	cd ${S}
+	if use doc; then
+		insinto "/usr/share/doc/${PF}/sample_progs"
+		doins sample_progs/*
+		insinto "/usr/share/doc/${PF}/samplerc"
+		doins samplerc/*
+	fi
+
+	einfo "The script called 'dia' has been installed as dia_dvb"
 	einfo "so that it doesn't overwrite the binary of app-office/dia."
+	einfo "analyze has been renamed to analyze_mpg."
 
 	dodoc README
 }
