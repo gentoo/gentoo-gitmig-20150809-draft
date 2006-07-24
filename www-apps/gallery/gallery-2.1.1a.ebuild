@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.1a.ebuild,v 1.3 2006/07/09 21:55:17 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.1a.ebuild,v 1.4 2006/07/24 22:14:32 rl03 Exp $
 
 inherit webapp eutils depend.php
 
@@ -31,12 +31,35 @@ pkg_setup() {
 	webapp_pkg_setup
 
 	local php_flags="session"
+	local DIE=
 
-	use gd && php_flags="${php_flags} gd"
 	use mysql && php_flags="${php_flags} mysql"
 	use postgres && php_flags="${php_flags} postgres"
 
-	require_php_with_use ${php_flags}
+	if ! PHPCHECKNODIE="yes" require_php_with_use ${php_flags}; then
+		DIE="yes"
+	fi
+	if use gd; then
+		if ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
+			DIE="yes"
+		fi
+	fi
+
+	if [[ ${DIE} == "yes" ]]; then
+		eerror
+		eerror "${PHP_PKG} needs to be re-installed with all of the following"
+		eerror "USE flags enabled:"
+		eerror
+		eerror "${php_flags}"
+		eerror
+		if use gd; then
+			eerror "as well as any of the following USE flags enabled:"
+			eerror
+			eerror "gd gd-external"
+			eerror
+		fi
+		die "Re-install ${PHP_PKG}"
+	fi
 }
 
 src_install() {
