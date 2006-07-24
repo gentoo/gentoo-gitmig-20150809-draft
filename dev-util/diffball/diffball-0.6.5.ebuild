@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-0.6.5.ebuild,v 1.3 2005/05/30 19:59:06 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/diffball-0.6.5.ebuild,v 1.4 2006/07/24 01:42:31 wormo Exp $
 
 IUSE="debug"
 
