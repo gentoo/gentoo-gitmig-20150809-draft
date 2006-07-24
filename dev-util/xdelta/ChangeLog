@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.18 2006/07/03 00:41:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.19 2006/07/24 00:37:38 ticho Exp $
+
+  24 Jul 2006; Andrej Kacian <ticho@gentoo.org> xdelta-1.1.3-r1.ebuild:
+  Stable on x86, bug #141249.
 
   03 Jul 2006; Lars Weiler <pylon@gentoo.org> xdelta-1.1.3-r1.ebuild:
   Stable on ppc; gcc-4 related; bug #138099.
