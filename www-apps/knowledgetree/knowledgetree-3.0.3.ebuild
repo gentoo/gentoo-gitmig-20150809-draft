@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.3.ebuild,v 1.1 2006/06/01 14:50:02 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/knowledgetree/knowledgetree-3.0.3.ebuild,v 1.2 2006/07/24 08:38:55 wrobel Exp $
 
 inherit webapp
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.ktdms.com/"
 SRC_URI="mirror://sourceforge/kt-dms/${MY_P}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="office opendoc pdf ps"
 
 DEPEND="virtual/httpd-php
