@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mlmmj
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.12 2006/05/20 19:08:35 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.13 2006/07/24 00:45:36 ticho Exp $
+
+  24 Jul 2006; Andrej Kacian <ticho@gentoo.org> mlmmj-1.2.11-r1.ebuild:
+  Stable on x86, bug #141252.
 
   20 May 2006; <lcars@gentoo.org> +mlmmj-1.2.11-r1.ebuild:
   Revision bump. Added patch for bug #117092.
