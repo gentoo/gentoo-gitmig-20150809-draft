@@ -1,91 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a3221c9f69c41859c8229a7fd5a4f1a ChangeLog 4954
-RMD160 974d9df4ad50e7ec3a3bb82c07730551097042e5 ChangeLog 4954
-SHA256 01232984b5d4727b613bff69a9e3bfa1087cb378ee24f60574c7804a0b0d98ca ChangeLog 4954
-MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r1 64
-RMD160 9def9a8104acdb5e3212ad6370808411731a781d files/digest-libdvb-0.5.0-r1 64
-SHA256 ea6857e8ff1c59c8dcce4035588ab6def070af0bfc746627ab980030ca4517bc files/digest-libdvb-0.5.0-r1 64
-MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r2 64
-RMD160 9def9a8104acdb5e3212ad6370808411731a781d files/digest-libdvb-0.5.0-r2 64
-SHA256 ea6857e8ff1c59c8dcce4035588ab6def070af0bfc746627ab980030ca4517bc files/digest-libdvb-0.5.0-r2 64
-MD5 b60c65ce69975d3a63cce5830639e6fd files/digest-libdvb-0.5.0-r3 64
-RMD160 9def9a8104acdb5e3212ad6370808411731a781d files/digest-libdvb-0.5.0-r3 64
-SHA256 ea6857e8ff1c59c8dcce4035588ab6def070af0bfc746627ab980030ca4517bc files/digest-libdvb-0.5.0-r3 64
-MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5 64
-RMD160 f1057605603110e607d510f35e3830286d2d8663 files/digest-libdvb-0.5.5 64
-SHA256 fd36606a417e214ad7f76ef9c8c57f432a6d6d24318b9a87d3cfd1246ad1a3cb files/digest-libdvb-0.5.5 64
-MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5-r1 64
-RMD160 f1057605603110e607d510f35e3830286d2d8663 files/digest-libdvb-0.5.5-r1 64
-SHA256 fd36606a417e214ad7f76ef9c8c57f432a6d6d24318b9a87d3cfd1246ad1a3cb files/digest-libdvb-0.5.5-r1 64
-MD5 32ee5372809634529d6892a5aa76b7ad files/digest-libdvb-0.5.5-r2 64
-RMD160 f1057605603110e607d510f35e3830286d2d8663 files/digest-libdvb-0.5.5-r2 64
-SHA256 fd36606a417e214ad7f76ef9c8c57f432a6d6d24318b9a87d3cfd1246ad1a3cb files/digest-libdvb-0.5.5-r2 64
-MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1 66
-RMD160 57aba140585f7961572c9bef07af7b6bf9b9c9c6 files/digest-libdvb-0.5.5.1 66
-SHA256 4b57e85146c239cecfb2ce3de29ee7fad612fed3a6ba3fce93da234ecaa78dc2 files/digest-libdvb-0.5.5.1 66
-MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1-r1 66
-RMD160 57aba140585f7961572c9bef07af7b6bf9b9c9c6 files/digest-libdvb-0.5.5.1-r1 66
-SHA256 4b57e85146c239cecfb2ce3de29ee7fad612fed3a6ba3fce93da234ecaa78dc2 files/digest-libdvb-0.5.5.1-r1 66
-MD5 780b4f37ff13c0c42c9966bf4ddf0640 files/digest-libdvb-0.5.5.1-r2 66
-RMD160 57aba140585f7961572c9bef07af7b6bf9b9c9c6 files/digest-libdvb-0.5.5.1-r2 66
-SHA256 4b57e85146c239cecfb2ce3de29ee7fad612fed3a6ba3fce93da234ecaa78dc2 files/digest-libdvb-0.5.5.1-r2 66
-MD5 69502406503f38e60bd8e35f2f80e586 files/errno.patch 258
-RMD160 8dc65bbeee3bd589448453ad0e5b1fdeec952a57 files/errno.patch 258
-SHA256 664baa8f778e38b4191609193245bec02ae897fe32830bbb9aa5d36e84950e41 files/errno.patch 258
-MD5 170099215f05e824a2320838ef728199 files/libdvb-0.5.0-gentoo-file-collisions.patch 4051
-RMD160 64b069f91b7b149537a9e8dcf4b32b8669e09623 files/libdvb-0.5.0-gentoo-file-collisions.patch 4051
-SHA256 f16c3cdf24fa001cafff6de06c22dbc63454834699056d57071caf617b1913cd files/libdvb-0.5.0-gentoo-file-collisions.patch 4051
-MD5 76dfb6639fdd6868d34b0eec46123c06 files/libdvb-0.5.0-gentoo.patch 2448
-RMD160 8367025ee303cba87ce0be604d1ce5b3eeb1184c files/libdvb-0.5.0-gentoo.patch 2448
-SHA256 16857df3fee32458f3fd42b64a35e93b061778fda1dfdb9c2510e3609d568473 files/libdvb-0.5.0-gentoo.patch 2448
-MD5 f9f9ac189a879c339aade17f3bacb284 files/libdvb-0.5.5-gentoo-file-collisions.patch 4796
-RMD160 5a1560aa05affc1eff09f71ff04f66971615057e files/libdvb-0.5.5-gentoo-file-collisions.patch 4796
-SHA256 61f350d5af255a621e32682c7634b6a778cfb475ece2bcf30d50552c3ade2d04 files/libdvb-0.5.5-gentoo-file-collisions.patch 4796
-MD5 2be0eba6ba9919ca334c327d3310a254 files/libdvb-0.5.5-gentoo.patch 1065
-RMD160 c47c4b207a041e6254ee00eae4203fcf07f0647e files/libdvb-0.5.5-gentoo.patch 1065
-SHA256 0ae6b558fb4706e0f32652f84379fed16f3b8ae84bcf346edc46072c355f3bbe files/libdvb-0.5.5-gentoo.patch 1065
+AUX libdvb-0.5.5.1-gentoo-file-collisions.patch 4796 RMD160 5a1560aa05affc1eff09f71ff04f66971615057e SHA1 8a5f8b379b08c20da95fc4e8866012344ebf354a SHA256 61f350d5af255a621e32682c7634b6a778cfb475ece2bcf30d50552c3ade2d04
 MD5 f9f9ac189a879c339aade17f3bacb284 files/libdvb-0.5.5.1-gentoo-file-collisions.patch 4796
 RMD160 5a1560aa05affc1eff09f71ff04f66971615057e files/libdvb-0.5.5.1-gentoo-file-collisions.patch 4796
 SHA256 61f350d5af255a621e32682c7634b6a778cfb475ece2bcf30d50552c3ade2d04 files/libdvb-0.5.5.1-gentoo-file-collisions.patch 4796
+AUX libdvb-0.5.5.1-gentoo.patch 1052 RMD160 16b94bbb5ccf30208dddeb778679599b18c5c788 SHA1 c8178b20313af38b397ce1a7eaa3ba909d27beff SHA256 371d977bca97c3f3c5649980108e4f5a74da5c9560cbc1debc0edfc1a34d0cde
 MD5 34510a9d50277d893ab3a8b316291349 files/libdvb-0.5.5.1-gentoo.patch 1052
 RMD160 16b94bbb5ccf30208dddeb778679599b18c5c788 files/libdvb-0.5.5.1-gentoo.patch 1052
 SHA256 371d977bca97c3f3c5649980108e4f5a74da5c9560cbc1debc0edfc1a34d0cde files/libdvb-0.5.5.1-gentoo.patch 1052
-MD5 f79da3c4a236c545a907834f93083e32 libdvb-0.5.0-r1.ebuild 1040
-RMD160 728236ac7320b643c75622b3d499712e905d1353 libdvb-0.5.0-r1.ebuild 1040
-SHA256 32936bde3362886f292850d9ff255aff5addcdf79bfbb2cd8c00392254907575 libdvb-0.5.0-r1.ebuild 1040
-MD5 2c60dd613ef2148b1521cf8050543019 libdvb-0.5.0-r2.ebuild 1098
-RMD160 a1b4a595e3437cf4d09cfb2471bfa8821fc78950 libdvb-0.5.0-r2.ebuild 1098
-SHA256 45863db5f5e938cd3ea9af5deff9615e1529bae13a8a56edaad88c3648c7741f libdvb-0.5.0-r2.ebuild 1098
-MD5 1a4e30f8861072dbbfb4a8080de3b425 libdvb-0.5.0-r3.ebuild 1112
-RMD160 9b506696b7d62e6e30534b1aee3bbd7c114f102d libdvb-0.5.0-r3.ebuild 1112
-SHA256 a0f4a9b26a7398474819a261317d7ccbc3e7bdfdf4f0aba6abda0cf5193b1fe9 libdvb-0.5.0-r3.ebuild 1112
-MD5 0cf2384cdbe98ee50f1f3936c39769d5 libdvb-0.5.5-r1.ebuild 1323
-RMD160 ab79e4da97dc09080dcd62aaece4bdb624abe8f0 libdvb-0.5.5-r1.ebuild 1323
-SHA256 67ffbe2a409cff02a1b4f6a7b22accfd35a5069494103ac3dc172a1778dd8a81 libdvb-0.5.5-r1.ebuild 1323
-MD5 1f40dcf158d27b59ed7e23133a60ec7c libdvb-0.5.5-r2.ebuild 1337
-RMD160 114eaaef7f217fec818576627c3d91b0724b9324 libdvb-0.5.5-r2.ebuild 1337
-SHA256 f300b50e6953e77bca322c55cc35f71cca53b73c5d3682282db5d2a750047f2b libdvb-0.5.5-r2.ebuild 1337
-MD5 5caee1be99c00b1e2b8b995fd1e0c27f libdvb-0.5.5.1-r1.ebuild 1246
-RMD160 367c9a8c6590bba62a4ba1612ac7fad4ab196f8e libdvb-0.5.5.1-r1.ebuild 1246
-SHA256 5696cd77d0ab108354fa787be6ff6da8bc2aeb0acb3341d034390d15426062f3 libdvb-0.5.5.1-r1.ebuild 1246
+DIST libdvb-0.5.5.1.tar.gz 312295 RMD160 d6d938fb0dee08de632c25ad134f944fe3dfcddb SHA1 9f62be81e220a1902d4f7f80fe1330ca4ee655e4 SHA256 941e8020129111377652bd7253ea85e6c133fd1c23c66bd9fc0ca9eabab1385a
+EBUILD libdvb-0.5.5.1-r2.ebuild 1278 RMD160 9c741344e70f9d9c450665cb3ee3087ee1840889 SHA1 8405d0a61fdcf9ceb727b02cfa1feaa1d9fa1759 SHA256 608841f8b8dfe08be623f665c96c011a5174c72adadf6af43508b6a92bb1232f
 MD5 06e586d679c37c587df6142b20739f88 libdvb-0.5.5.1-r2.ebuild 1278
 RMD160 9c741344e70f9d9c450665cb3ee3087ee1840889 libdvb-0.5.5.1-r2.ebuild 1278
 SHA256 608841f8b8dfe08be623f665c96c011a5174c72adadf6af43508b6a92bb1232f libdvb-0.5.5.1-r2.ebuild 1278
-MD5 f0126a8de9e25da1e1647eb51e47f2c8 libdvb-0.5.5.1.ebuild 1212
-RMD160 9ee49ec1fcd63d09af67731b5f0af44434048c00 libdvb-0.5.5.1.ebuild 1212
-SHA256 f97ed2e93ebf9b80e09ee6e6cf60ff80213d43d81978fded3c4f8a95dcf7088c libdvb-0.5.5.1.ebuild 1212
-MD5 6815f62e80f6702425cee7e1e3d619b1 libdvb-0.5.5.ebuild 1304
-RMD160 55ec082af53ca5e4afdce3b8fcdaaa3b07fcd042 libdvb-0.5.5.ebuild 1304
-SHA256 82170362c6ea5ca09aaa491354547e7c699c36d675b73421a537d749f8986e32 libdvb-0.5.5.ebuild 1304
+MISC ChangeLog 5433 RMD160 7d61e82b78cb4e9e0a225e1e29ad37c71bb5d1fb SHA1 d20c9a5d99789edd180d19461fe94d0832cb2f1c SHA256 a41290f94f2a3554f9d796e1780ecee74a500a88ff3e796da257d4aa24d01e25
+MD5 bd511ceded5c02d9cc4af15058eeeb95 ChangeLog 5433
+RMD160 7d61e82b78cb4e9e0a225e1e29ad37c71bb5d1fb ChangeLog 5433
+SHA256 a41290f94f2a3554f9d796e1780ecee74a500a88ff3e796da257d4aa24d01e25 ChangeLog 5433
+MISC metadata.xml 217 RMD160 2daa552f0b03b2d6ab99fec1eee8ab6648890b75 SHA1 a3ae417f36e171df6c47fbb7460f85a3f957ed3a SHA256 11770dd9c2b190c9d2ba13d3ce36a56e6dddcc8d8a9d11eb20d930cac5d7990f
 MD5 dff9ded73ffb6549a59f5e6144af1cfd metadata.xml 217
 RMD160 2daa552f0b03b2d6ab99fec1eee8ab6648890b75 metadata.xml 217
 SHA256 11770dd9c2b190c9d2ba13d3ce36a56e6dddcc8d8a9d11eb20d930cac5d7990f metadata.xml 217
+MD5 0f4390fadb7298c9d14bac79fd4150b0 files/digest-libdvb-0.5.5.1-r2 244
+RMD160 ba71c7ec6d839319437b723a5bb125cc4ec5ae0d files/digest-libdvb-0.5.5.1-r2 244
+SHA256 58ef6a24c4da3a72b8450c043efd7890ca4d435d613b518df95eff062178d9c8 files/digest-libdvb-0.5.5.1-r2 244
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEHEUjugEuf3OQ0akRAm9vAJ9Gw3c0lWw4dtWiM6a/hzrnkPtY0gCfVgRI
-c0ALjqJv8jwEQD5DRSsQJL4=
-=Bya3
+iD8DBQFExKJ6t2vP6XvVdOcRAj/VAJ4ou9sK9RdaV5NSYqpfEosR19W8lwCaAgYx
+IldvmMb/fT+tQ4vCFlU4WUc=
+=r520
 -----END PGP SIGNATURE-----
