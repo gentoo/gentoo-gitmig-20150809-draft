@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.3.ebuild,v 1.6 2006/01/27 21:50:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.3.ebuild,v 1.7 2006/07/24 00:21:59 ticho Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.logarithmic.net/pfh-files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="sdl svga esd"
 
 RDEPEND="|| ( ( x11-libs/libXext
