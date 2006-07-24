@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.182 2006/07/17 14:30:18 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.183 2006/07/24 21:03:26 dsd Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -284,9 +284,7 @@ kernel_is_2_6() {
 # Capture the sources type and set DEPENDs
 if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
-					  >=sys-devel/binutils-2.11.90.0.31 )
-			doc? ( app-text/docbook-sgml-utils
-				   app-text/xmlto )"
+					  >=sys-devel/binutils-2.11.90.0.31 )"
 	RDEPEND="!build? ( >=sys-libs/ncurses-5.2
 			           sys-devel/make )
 			 virtual/dev-manager"
@@ -296,7 +294,7 @@ if [[ ${ETYPE} == sources ]]; then
 
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the ${KV_MAJOR}.${KV_MINOR} linux kernel"
-	IUSE="symlink build doc"
+	IUSE="symlink build"
 elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
 	[[ "${PN}" == 'linux-headers' ]] && IUSE="gcc64"
@@ -410,14 +408,6 @@ unpack_fix_install_path() {
 	sed	-i -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' Makefile
 }
 
-unpack_fix_docbook() {
-	if [[ -d ${S}/Documentation/DocBook ]]; then
-		cd "${S}"/Documentation/DocBook
-		sed -ie "s:db2:docbook2:g" Makefile
-		cd ${OLDPWD}
-	fi
-}
-
 # Compile Functions
 #==============================================================
 compile_headers() {
@@ -472,11 +462,6 @@ compile_headers_tweak_config() {
 
 	# no changes, so lets do nothing
 	return 1
-}
-
-compile_manpages() {
-	einfo "Making manpages ..."
-	env -u ARCH -u KBUILD_OUTPUT make mandocs
 }
 
 # install functions
@@ -559,7 +544,7 @@ install_headers() {
 }
 
 install_sources() {
-	local doc docs file
+	local file
 
 	cd "${S}"
 	dodir /usr/src
@@ -583,28 +568,7 @@ install_sources() {
 			> "${S}"/patches.txt
 	fi
 
-	if use doc ; then
-		install_manpages
-
-		for doc in ${UNIPATCH_DOCS}; do	[[ -f ${doc} ]] && docs="${docs} ${doc}"; done
-		if [[ -f ${S}/patches.txt ]]; then docs="${docs} ${S}/patches.txt"; fi
-		[[ -n ${docs} ]] && dodoc ${docs}
-	fi
-
 	mv ${WORKDIR}/linux* ${D}/usr/src
-}
-
-install_manpages() {
-	kernel_is lt 2 5 && return
-
-	local myfiles="Documentation/DocBook/Makefile"
-	kernel_is lt 2 6 12 && myfiles="scripts/makeman ${myfiles}"
-
-	sed -ie "s#/usr/local/man#${D}/usr/share/man#g" ${myfiles}
-	ebegin "Installing manpages"
-	env -u ARCH make installmandocs
-	eend $?
-	sed -ie "s#${D}/usr/share/man#/usr/local/man#g" ${myfiles}
 }
 
 # pkg_preinst functions
@@ -1024,7 +988,6 @@ kernel-2_src_unpack() {
 	debug-print "Doing unpack_set_extraversion"
 
 	[[ -z ${K_NOSETEXTRAVERSION} ]] && unpack_set_extraversion
-	unpack_fix_docbook
 	unpack_fix_install_path
 
 	# Setup xmakeopts and cd into sourcetree.
@@ -1044,8 +1007,6 @@ kernel-2_src_unpack() {
 kernel-2_src_compile() {
 	cd "${S}"
 	[[ ${ETYPE} == headers ]] && compile_headers
-	[[ ${ETYPE} == sources ]] && \
-		use doc && compile_manpages
 }
 
 kernel-2_pkg_preinst() {
