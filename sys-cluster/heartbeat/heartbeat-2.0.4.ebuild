@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.4.ebuild,v 1.5 2006/07/14 17:41:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.4.ebuild,v 1.6 2006/07/24 17:59:10 xmerlin Exp $
 
 inherit flag-o-matic eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-op_list.patch || die
+	epatch ${FILESDIR}/${PN}-2.0.4-fix-local-DOS-attack.patch || die
 }
 
 src_compile() {

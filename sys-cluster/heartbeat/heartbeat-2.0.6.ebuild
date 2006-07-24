@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.6.ebuild,v 1.1 2006/07/20 13:11:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.6.ebuild,v 1.2 2006/07/24 17:59:10 xmerlin Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -41,6 +41,11 @@ DEPEND="
 	)
 	"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	#epatch ${FILESDIR}/${PN}-2.0.4-fix-local-DOS-attack.patch || die
+}
 
 src_compile() {
 	append-ldflags $(bindnow-flags)

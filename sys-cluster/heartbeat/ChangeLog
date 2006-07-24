@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.49 2006/07/20 13:11:24 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.50 2006/07/24 17:59:10 xmerlin Exp $
+
+  24 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/heartbeat-2.0.4-fix-local-DOS-attack.patch, heartbeat-2.0.4.ebuild,
+  heartbeat-2.0.5.ebuild, heartbeat-2.0.6.ebuild:
+  Local DOS attack fix.
 
 *heartbeat-2.0.6 (20 Jul 2006)
 
