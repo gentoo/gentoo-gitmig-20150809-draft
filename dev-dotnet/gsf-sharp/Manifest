@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483 RMD160 38bfdf14e1d5d3dc307026bde565032799693320 SHA1 9940de311e5645f9da9bae1d9b0c41d9d7e3d99e SHA256 3718a4f1906cb982ff24ab0eafe7f53f6df40a01e9a868821a3b22be30d343fd
 MD5 e031f398fd247ee39bef0fe2d64f2736 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
 RMD160 38bfdf14e1d5d3dc307026bde565032799693320 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
@@ -29,10 +26,3 @@ SHA256 4491ec520b80ae6373327b6683e20d27191925d93c34e24496262fe9358e9dae files/di
 MD5 a7554cd752a124a85d18742a43448b6b files/digest-gsf-sharp-0.8 241
 RMD160 8ea55ca2900ea747a9cd33fde8e0ff8818b86aee files/digest-gsf-sharp-0.8 241
 SHA256 a2cad903bf189c3e4e07c55dbca3d3a1af158f878b43f48cd618988bcbb9acf4 files/digest-gsf-sharp-0.8 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEu7UYomPajV0RnrERAsTSAJ98e7nLmtk8GhbkAbutHdAbJbuddACfUQFc
-2ynTg9zjYm3Pv+qvQh5UU4Y=
-=49pO
------END PGP SIGNATURE-----
