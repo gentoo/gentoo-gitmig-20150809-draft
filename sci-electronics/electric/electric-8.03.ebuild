@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-8.03.ebuild,v 1.1 2006/07/23 15:07:20 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-8.03.ebuild,v 1.2 2006/07/24 12:29:28 calchan Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/electric/electric.html"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/electric/${PN}Binary-${PV}.jar"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=">=virtual/jre-1.3"
 
