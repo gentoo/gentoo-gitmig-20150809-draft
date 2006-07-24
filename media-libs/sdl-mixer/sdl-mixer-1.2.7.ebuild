@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.7.ebuild,v 1.2 2006/07/20 02:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.7.ebuild,v 1.3 2006/07/24 08:30:56 mr_bones_ Exp $
+
+inherit eutils
 
 MY_P=${P/sdl-/SDL_}
 DESCRIPTION="Simple Direct Media Layer Mixer Library"
@@ -23,17 +25,20 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-libmikmod.patch"
 	sed -i \
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
 		timidity/config.h \
 		|| die "sed timidity/config.h failed"
+	aclocal && autoconf || die "autotools failed"
 }
 
 src_compile() {
-	# don't use the internal mikmod library, use the system one if USE=mikmod
 	econf \
-		--disable-music-mod \
+		--disable-dependency-tracking \
+		$(use_enable timidity music-midi) \
 		$(use_enable timidity timidity-midi) \
+		$(use_enable mikmod music-mod) \
 		$(use_enable mikmod music-libmikmod) \
 		$(use_enable mp3 music-mp3) \
 		$(use_enable vorbis music-ogg) \
