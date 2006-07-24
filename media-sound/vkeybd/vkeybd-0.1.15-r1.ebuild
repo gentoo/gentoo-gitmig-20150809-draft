@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.4 2006/07/19 16:47:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.5 2006/07/24 00:26:46 tsunam Exp $
 
 IUSE="alsa oss ladcca"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.alsa-project.org/~iwai/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc x86"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	>=dev-lang/tk-8.3
