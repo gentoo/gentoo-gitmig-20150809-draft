@@ -1,0 +1,288 @@
+diff -urpN libdvb-0.5.5.1/dvb-mpegtools/Makefile libdvb-0.5.5.1.az/dvb-mpegtools/Makefile
+--- libdvb-0.5.5.1/dvb-mpegtools/Makefile	2006-07-24 19:15:35.000000000 +0200
++++ libdvb-0.5.5.1.az/dvb-mpegtools/Makefile	2006-07-24 19:15:54.000000000 +0200
+@@ -29,7 +29,7 @@ links: dvb-mpegtools_main
+ 	done
+ 
+ clean:
+-	- rm -f *.o .depend dvb-mpegtools_main dvb-mplex ctest *~ $(LINKS) ctest audiofilter show_dvb_image\
++	-rm -f *.o .depend dvb-mpegtools_main dvb-mplex ctest *~ $(LINKS) ctest audiofilter show_dvb_image \
+ 	dvbaudio
+ 
+ dvb-mpegtools_main: main.o
+diff -urpN libdvb-0.5.5.1/libdvb/Makefile libdvb-0.5.5.1.az/libdvb/Makefile
+--- libdvb-0.5.5.1/libdvb/Makefile	2005-03-22 15:23:25.000000000 +0200
++++ libdvb-0.5.5.1.az/libdvb/Makefile	2006-07-24 19:30:31.000000000 +0200
+@@ -1,26 +1,34 @@
+ 
+ include ../config.mk
+ 
+-OBJS=devices.o DVB.o OSD.o 
++OBJS=OSD.o devices.o DVB.o 
++A_OBJS=$(addprefix a_,$(OBJS))
++SO_OBJS=$(addprefix so_,$(OBJS)) 
+ LIBS=-L./ -lpthread
+-DVB_LIBS=libdvb.a
++DVB_LIBS=libdvb.a libdvb.so.0
+ 
+ main: $(DVB_LIBS) 
+ 
+-libdvb.a: $(OBJS)
+-	ar -rcs libdvb.a $(OBJS) 
++libdvb.a: $(A_OBJS)
++	ar -rcs $@ $(A_OBJS) 
+ 
+-DVB.o: DVB.cc ../include/DVB.hh
+-	$(CXX) $(INCLUDES) $(CFLAGS) -c $<
++libdvb.so.0: $(SO_OBJS)
++	$(CXX) -shared -Wl,-soname,$@ $(LDFLAGS) -o $@ $(SO_OBJS)
+ 
+-devices.o: devices.cc ../include/devices.hh
+-	$(CXX) $(INCLUDES) $(CFLAGS) -c $<
++a_%.o: %.c
++	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
+ 
+-.c.o: 
+-	$(CC) $(INCLUDES) $(CFLAGS) -c $<
++a_%.o: %.cc
++	$(CXX) $(INCLUDES) $(CFLAGS) -c $< -o $@
+ 
+-.cc.o: 
+-	$(CXX) $(INCLUDES) $(CFLAGS) -c $<
++so_%.o: %.c
++	$(CC) -fPIC $(INCLUDES) $(CFLAGS) -c $< -o $@
++
++so_%.o: %.cc
++	$(CXX) -fPIC $(INCLUDES) $(CFLAGS) -c $< -o $@
++
++*DVB.o:: DVB.cc ../include/DVB.hh
++*devices.o:: devices.cc ../include/devices.hh
+ 
+ clean:
+-	-rm -f *.o $(DVB_LIBS) *~
++	-rm -f *.o $(DVB_LIBS) *.0 *~
+diff -urpN libdvb-0.5.5.1/libdvbci/Makefile libdvb-0.5.5.1.az/libdvbci/Makefile
+--- libdvb-0.5.5.1/libdvbci/Makefile	2005-03-22 15:23:25.000000000 +0200
++++ libdvb-0.5.5.1.az/libdvbci/Makefile	2006-07-24 19:30:23.000000000 +0200
+@@ -2,22 +2,32 @@
+ include ../config.mk
+ 
+ CI_OBJS=ci.o ci2.o
++A_CI_OBJS=$(addprefix a_,$(CI_OBJS))
++SO_CI_OBJS=$(addprefix so_,$(CI_OBJS)) 
+ LIBS=-L./ -lpthread
+-DVB_LIBS=libdvbci.a
++DVB_LIBS=libdvbci.a libdvbci.so.0
+ 
+ main: $(DVB_LIBS)
+ 
+-libdvbci.a: $(CI_OBJS)
+-	ar -rcs libdvbci.a $(CI_OBJS) 
++libdvbci.a: $(A_CI_OBJS)
++	ar -rcs $@ $(A_CI_OBJS) 
+ 
+-ci.o: ci.cc ../include/ci.hh
+-	$(CXX) $(INCLUDES) $(CFLAGS) -c $<
++libdvbci.so.0: $(SO_CI_OBJS)
++	$(CXX) -shared -Wl,-soname,$@ $(LDFLAGS) -o $@ $(SO_CI_OBJS)
+ 
+-.c.o: 
+-	$(CC) $(INCLUDES) $(CFLAGS) -c $<
++a_%.o: %.c
++	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@
+ 
+-.cc.o: 
+-	$(CXX) $(INCLUDES) $(CFLAGS) -c $<
++a_%.o: %.cc
++	$(CXX) $(INCLUDES) $(CFLAGS) -c $< -o $@
++
++so_%.o: %.c
++	$(CC) -fPIC $(INCLUDES) $(CFLAGS) -c $< -o $@
++
++so_%.o: %.cc
++	$(CXX) -fPIC $(INCLUDES) $(CFLAGS) -c $< -o $@
++
++*ci.o:: ci.cc ../include/ci.hh
+ 
+ clean:
+-	-rm -f *.o $(DVB_LIBS) *~
++	-rm -f *.o $(DVB_LIBS) *.0 *~
+diff -urpN libdvb-0.5.5.1/libdvbmpeg/Makefile libdvb-0.5.5.1.az/libdvbmpeg/Makefile
+--- libdvb-0.5.5.1/libdvbmpeg/Makefile	2005-03-22 15:23:25.000000000 +0200
++++ libdvb-0.5.5.1.az/libdvbmpeg/Makefile	2006-07-24 19:30:46.000000000 +0200
+@@ -2,35 +2,53 @@
+ include ../config.mk
+ 
+ DCFLAGS =  $(CFLAGS) -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+-MFLAG  = -M
++MFLAG  = -MM
+ OBJS = ctools.o ringbuffy.o transform.o cpptools.o
++A_OBJS = $(addprefix a_,$(OBJS))
++SO_OBJS = $(addprefix so_,$(OBJS)) 
+ SRC  = $(wildcard *.c)
+ CPPSRC = $(wildcard *.cpp)
+ CSRC = $(wildcard *.cc) 
+ INCS = -I../include
++DVB_LIBS = libdvbmpegtools.a libdvbmpegtools.so.0 
+ 
+-all: libdvbmpegtools.a
++all: $(DVB_LIBS)
+ 
+ .PHONY: depend clean install uninstall
+ 
+ clean:
+-	- rm -f *.o  *~ *.a .depend
++	- rm -f *.o  *~ $(DVB_LIBS) *.0 .*_depend
+ 
+-libdvbmpegtools.a: $(OBJS)
+-	ar -rcs libdvbmpegtools.a $(OBJS) 
++libdvbmpegtools.a: $(A_OBJS)
++	ar -rcs $@ $(A_OBJS) 
+ 
+-%.o:    %.cc 
+-	$(CXX) -c $(DCFLAGS) $(INCLUDES) $(DEFINES) $<
++libdvbmpegtools.so.0: $(SO_OBJS)
++	$(CXX) -shared -Wl,-soname,$@ $(LDFLAGS) -o $@ $(SO_OBJS) 
+ 
+-%.o:    %.cpp
+-	$(CXX) -c $(DCFLAGS) $(INCLUDES) $(DEFINES) $<
++a_%.o: %.c
++	$(CC) $(DCFLAGS) $(INCLUDES) $(DEFINES) -c $< -o $@
+ 
+-%.o:    %.c 
+-	$(CC) -c $(DCFLAGS) $(INCLUDES) $(DEFINES) $<
++a_%.o: %.cc
++	$(CXX) $(DCFLAGS) $(INCLUDES) $(DEFINES) -c $< -o $@
+ 
+-.depend: 
+-	$(CXX) $(DEFINES) $(MFLAG) $(SRC) $(CSRC) $(CPPSRC) $(INCLUDES)> .depend
++so_%.o: %.c
++	$(CC) -fPIC $(DCFLAGS) $(INCLUDES) $(DEFINES) -c $< -o $@
+ 
++so_%.o: %.cc
++	$(CXX) -fPIC $(DCFLAGS) $(INCLUDES) $(DEFINES) -c $< -o $@
+ 
++.a_depend: $(SRC) $(CSRC) $(CPPSRC)
++	@rm -f $@
++	@for x in $(SRC) $(CSRC) $(CPPSRC) ; do \
++		$(CXX) $(DEFINES) $(MFLAG) -MT "a_$${x/.*/.o}" $$x $(INCLUDES) >> $@; \
++	done
+ 
+-include .depend
++.so_depend: $(SRC) $(CSRC) $(CPPSRC)
++	@rm -f $@
++	@for x in $(SRC) $(CSRC) $(CPPSRC) ; do \
++		$(CXX) $(DEFINES) $(MFLAG) -MT "so_$${x/.*/.o}" $$x $(INCLUDES) >> $@; \
++	done
++
++
++-include .a_depend
++-include .so_depend
+diff -urpN libdvb-0.5.5.1/Makefile libdvb-0.5.5.1.az/Makefile
+--- libdvb-0.5.5.1/Makefile	2006-07-24 19:15:35.000000000 +0200
++++ libdvb-0.5.5.1.az/Makefile	2006-07-24 19:34:35.000000000 +0200
+@@ -1,7 +1,9 @@
+ 
+ SOURCEDIRS=include libdvb libdvbci libdvbmpeg sample_progs dvb-mpegtools samplerc 
+ DVB-MPEGTOOLS= dvb-mpegtools_main dvb-mplex audiofilter dvbaudio
+-DVB_LIBS=libdvb.a libdvbci.a libdvbmpegtools.a
++DVB_A_LIBS=libdvb.a libdvbci.a libdvbmpegtools.a
++DVB_SO_LIBS=$(DVB_A_LIBS:.a=.so.0)
++DVB_LIBS=$(DVB_A_LIBS) $(DVB_SO_LIBS)
+ HEADERS=include/DVB.hh include/ci.hh include/devices.hh include/channel.h include/ctools.h \
+ 	include/transform.h include/ringbuffy.h include/cpptools.hh include/OSD.h \
+ 	include/osd.hh
+@@ -16,6 +18,10 @@ main: $(DVB_LIBS) $(DVB-MPEGTOOLS)
+ install: $(DVB_LIBS) $(HEADERS)
+ 	mkdir -p $(DESTDIR)$(PREFIX)/lib
+ 	install -m 644 $(DVB_LIBS) $(DESTDIR)$(PREFIX)/lib/
++	for x in $(DVB_SO_LIBS) ; do \
++		rm -f $(DESTDIR)$(PREFIX)/lib/$${x/.0/}; \
++		ln -s $$x $(DESTDIR)$(PREFIX)/lib/$${x/.0/}; \
++	done
+ 	mkdir -p $(DESTDIR)$(PREFIX)/include
+ 	install -m 644 $(HEADERS) $(DESTDIR)$(PREFIX)/include
+ 	make -C dvb-mpegtools install
+@@ -25,52 +31,55 @@ uninstall: 
+ 	for i in $(HEADERS); do rm -f $(DESTDIR)$(PREFIX)/$$i;done
+ 	make -C dvb-mpegtools uninstall
+ 
+-libdvb.a: libdvb/libdvb.a
+-	cp libdvb/libdvb.a .
++libdvb.%: libdvb/libdvb.%
++	cp $< .
+ 
+-libdvbci.a: libdvbci/libdvbci.a
+-	cp libdvbci/libdvbci.a .
++libdvbci.%: libdvbci/libdvbci.%
++	cp $< .
+ 
+-libdvbmpegtools.a: libdvbmpeg/libdvbmpegtools.a
+-	cp libdvbmpeg/libdvbmpegtools.a .
++libdvbmpegtools.%: libdvbmpeg/libdvbmpegtools.%
++	cp $< .
+ 
+-libdvb/libdvb.a:
+-	make -C libdvb main
+-
+-libdvbci/libdvbci.a:
+-	make -C libdvbci main
+-
+-libdvbmpeg/libdvbmpegtools.a:
+-	make -C libdvbmpeg libdvbmpegtools.a
+-
+-merge_dvb: libdvb.a sample_progs/merge.cc
+-conv:      libdvb.a sample_progs/conv.cc
+-satscan:   libdvb.a sample_progs/satscan.cc
+-quickscan:   libdvb.a sample_progs/quickscan.cc
+-cam_set:   libdvbci.a sample_progs/cam_set.cc
+-cam_test:  libdvb.a libdvbmpegtools.a sample_progs/cam_test.cc
++%.so: %.so.0
++	ln -s $< $@
++
++libdvb/libdvb.%: $(basename $@)
++	make -C libdvb $<
++
++libdvbci/libdvbci.%: $(basename $@)
++	make -C libdvbci $<
++
++libdvbmpeg/libdvbmpegtools.%: $(basename $@)
++	make -C libdvbmpeg $<
++
++merge_dvb: libdvb.so sample_progs/merge.cc
++conv:      libdvb.so sample_progs/conv.cc
++satscan:   libdvb.so sample_progs/satscan.cc
++quickscan:   libdvb.so sample_progs/quickscan.cc
++cam_set:   libdvbci.so sample_progs/cam_set.cc
++cam_test:  libdvb.so libdvbmpegtools.so sample_progs/cam_test.cc
+ 	make -C sample_progs main
+ 	for f in $(TEST_PROGS); do cp sample_progs/$$f . ; done
+ 
+-dvb-mpegtools_main: libdvbmpegtools.a dvb-mpegtools/main.cc
+-dvb-mplex:          libdvbmpegtools.a dvb-mpegtools/mplex.cpp
++dvb-mpegtools_main: libdvbmpegtools.so dvb-mpegtools/main.cc
++dvb-mplex:          libdvbmpegtools.so dvb-mpegtools/mplex.cpp
+ audiofilter:        dvb-mpegtools/audiofilter.c
+-dvbaudio:           libdvb.a libdvbmpegtools.a dvb-mpegtools/dvbaudio.cc
++dvbaudio:           libdvb.so libdvbmpegtools.so dvb-mpegtools/dvbaudio.cc
+ 	make -C dvb-mpegtools all
+ 	for f in $(DVB-MPEGTOOLS); do cp dvb-mpegtools/$$f . ; done
+ 
+-dvbs:  libdvb.a libdvbmpegtools.a dvbserver/dvbs_main.cc
++dvbs:  libdvb.so libdvbmpegtools.so dvbserver/dvbs_main.cc
+ 	make -C dvbserver  dvbs_main
+ 
+ 
+ clean:
+-	-rm -f libdvb-$(VERSION).tar.gz $(DVB_LIBS) $(TEST_PROGS) $(DVB-MPEGTOOLS) *~
++	-rm -f libdvb-$(VERSION).tar.gz $(DVB_LIBS) *.so $(TEST_PROGS) $(DVB-MPEGTOOLS) *~
+ 	make -C libdvb clean
+ 	make -C libdvbci clean
+ 	make -C libdvbmpeg clean
+ 	make -C sample_progs clean
+ 	make -C dvb-mpegtools clean
+-	rm include/*~
++	rm -f include/*~
+ 
+ dist:	
+ 	mkdir libdvb-$(VERSION)

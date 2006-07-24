@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.29 2006/07/24 10:35:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.30 2006/07/24 19:18:55 zzam Exp $
+
+*libdvb-0.5.5.1-r3 (24 Jul 2006)
+
+  24 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/libdvb-0.5.5.1-shared-libs.patch, +libdvb-0.5.5.1-r3.ebuild:
+  Added patch created by azarah for linking correct shared-libraries with PIC.
+  Installs now to correct dirs with help of multilib.
 
   24 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
   -files/libdvb-0.5.0-gentoo.patch,
