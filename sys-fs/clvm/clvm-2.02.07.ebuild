@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.05.ebuild,v 1.4 2006/07/24 01:40:01 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/clvm/clvm-2.02.07.ebuild,v 1.1 2006/07/24 01:40:01 xmerlin Exp $
 
 MY_P="${PN/clvm/LVM2}.${PV}"
 
 DESCRIPTION="User-land utilities for clvm (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/cluster/clvm/"
-SRC_URI="ftp://sources.redhat.com/pub/lvm2/old/${MY_P}.tgz"
+SRC_URI="ftp://sources.redhat.com/pub/lvm2/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
