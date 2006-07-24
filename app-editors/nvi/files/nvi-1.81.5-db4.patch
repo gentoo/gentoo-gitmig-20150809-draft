@@ -1,0 +1,33 @@
+--- nvi-1.81.5/common/exf.c
++++ nvi-1.81.5/common/exf.c
+@@ -282,7 +282,7 @@
+ #define NOMMAPIFFCNTL 0
+ #endif
+ 
+-	if ((sp->db_error = ep->db->open(ep->db, ep->rcv_path, NULL, DB_RECNO, 
++	if ((sp->db_error = ep->db->open(ep->db, NULL, ep->rcv_path, NULL, DB_RECNO, 
+ 	    ((rcv_name == 0) ? DB_TRUNCATE : 0) | VI_DB_THREAD | NOMMAPIFFCNTL,
+ 	    S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)) != 0) {
+ 		msgq_str(sp,
+--- nvi-1.81.5/common/log.c
++++ nvi-1.81.5/common/log.c
+@@ -108,7 +108,7 @@
+ 	ep->l_high = ep->l_cur = 1;
+ 
+ 	if (db_create(&ep->log, sp->gp->env, 0) != 0 ||
+-	    ep->log->open(ep->log, NULL, NULL, DB_RECNO, 
++	    ep->log->open(ep->log, NULL, NULL, NULL, DB_RECNO, 
+ 			  DB_CREATE | VI_DB_THREAD, S_IRUSR | S_IWUSR) != 0) {
+ 		msgq(sp, M_SYSERR, "009|Log file");
+ 		F_SET(ep, F_NOLOG);
+--- nvi-1.81.5/common/msg.c
++++ nvi-1.81.5/common/msg.c
+@@ -721,7 +721,7 @@
+ 		p = file;
+ 	if ((sp->db_error = db_create(&db, sp->gp->env, 0)) != 0 ||
+ 	    (sp->db_error = db->set_re_source(db, p)) != 0 ||
+-	    (sp->db_error = db->open(db, NULL, NULL, DB_RECNO, 0, 0)) != 0) {
++	    (sp->db_error = db->open(db, NULL, NULL, NULL, DB_RECNO, 0, 0)) != 0) {
+ 		if (first) {
+ 			first = 0;
+ 			return (1);
