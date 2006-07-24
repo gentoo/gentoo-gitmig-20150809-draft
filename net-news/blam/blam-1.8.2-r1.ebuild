@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.2-r1.ebuild,v 1.1 2005/12/05 15:15:02 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.2-r1.ebuild,v 1.2 2006/07/24 22:21:38 dsd Exp $
 
 inherit mono eutils
 
@@ -28,8 +28,12 @@ src_unpack() {
 			-e "s:@prefix@/lib:@prefix@/$(get_libdir):" \
 			${S}/{,lib,libblam,src}/Makefile.{in,am} ${S}/blam.in || die
 	fi
+
 	# Fix for bug 94524, bad int definition
 	epatch ${FILESDIR}/${P}-64-bit-int.diff
+
+	# build against seamonkey
+	epatch ${FILESDIR}/${P}-seamonkey.patch
 }
 
 src_compile() {

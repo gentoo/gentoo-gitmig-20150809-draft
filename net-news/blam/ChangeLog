@@ -1,6 +1,10 @@
 # ChangeLog for net-news/blam
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.29 2005/12/05 15:15:02 herbs Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.30 2006/07/24 22:21:38 dsd Exp $
+
+  24 Jul 2006; Daniel Drake <dsd@gentoo.org>
+  +files/blam-1.8.2-seamonkey.patch, blam-1.8.2-r1.ebuild:
+  Allow compilation/operation against seamonkey rather than mozilla
 
 *blam-1.8.2-r1 (05 Dec 2005)
 
