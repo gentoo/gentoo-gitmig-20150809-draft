@@ -1,0 +1,128 @@
+--- pvfs2-1.5.1/Makefile.in.orig	2006-07-13 02:04:06.000000000 +1000
++++ pvfs2-1.5.1/Makefile.in	2006-07-13 02:06:06.000000000 +1000
+@@ -55,6 +55,10 @@
+ prefix = @prefix@
+ mandir = @mandir@
+ exec_prefix = @exec_prefix@
++sbindir = @sbindir@
++bindir = @bindir@
++libdir = @libdir@
++includedir = @includedir@
+ 
+ VPATH = $(srcdir)
+ SHELL = @SHELL@
+@@ -807,48 +811,48 @@
+  --quiet examples/fs.conf examples/server.conf
+ 
+ install_doc:
+-	install -d $(mandir)/man1
+-	install -d $(mandir)/man5
+-	install -m 644 $(srcdir)/doc/man/*.1 $(mandir)/man1
+-	install -m 644 $(srcdir)/doc/man/*.5 $(mandir)/man5
++	install -d $(DESTDIR)$(mandir)/man1
++	install -d $(DESTDIR)$(mandir)/man5
++	install -m 644 $(srcdir)/doc/man/*.1 $(DESTDIR)$(mandir)/man1
++	install -m 644 $(srcdir)/doc/man/*.5 $(DESTDIR)$(mandir)/man5
+ 
+ install:: all install_doc
+-	install -d $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-request.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-debug.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-sysint.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-mgmt.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-types.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-util.h $(prefix)/include
+-	install -m 644 $(srcdir)/include/pvfs2-encode-stubs.h $(prefix)/include
++	install -d $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-request.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-debug.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-sysint.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-mgmt.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-types.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-util.h $(DESTDIR)$(includedir)
++	install -m 644 $(srcdir)/include/pvfs2-encode-stubs.h $(DESTDIR)$(includedir)
+ 
+-	install -d $(prefix)/lib
+-	install -m 755 $(LIBRARIES) $(prefix)/lib
++	install -d $(DESTDIR)$(libdir)
++	install -m 755 $(LIBRARIES) $(DESTDIR)$(libdir)
+ 
+ ifdef TARGET_OS_DARWIN
+ #       TOC needs to be regenerated in libs after they get moved
+ 	ranlib $(patsubst %,$(prefix)/%,$(LIBRARIES))
+ endif
+ 
+-	install -d $(prefix)/bin
+-	install -m 755 $(ADMINTOOLS) $(prefix)/bin
+-	install -m 755 src/apps/admin/pvfs2-config $(prefix)/bin
++	install -d $(DESTDIR)$(bindir)
++	install -m 755 $(ADMINTOOLS) $(DESTDIR)$(bindir)
++	install -m 755 src/apps/admin/pvfs2-config $(DESTDIR)$(bindir)
+ 	@# if we ever auto-generate genconfig, remove the $(srcdir)
+-	install -m 755 $(srcdir)/src/apps/admin/pvfs2-genconfig $(prefix)/bin
++	install -m 755 $(srcdir)/src/apps/admin/pvfs2-genconfig $(DESTDIR)$(bindir)
+ ifdef BUILD_KARMA
+-	install -m 755 $(KARMA) $(prefix)/bin
++	install -m 755 $(KARMA) $(DESTDIR)$(bindir)
+ endif
+ 
+-	install -d $(prefix)/sbin
++	install -d $(DESTDIR)$(sbindir)
+ 
+ ifdef BUILD_SERVER
+-	install -m 755 $(ADMINTOOLS_SERVER) $(prefix)/bin
++	install -m 755 $(ADMINTOOLS_SERVER) $(DESTDIR)$(bindir)
+     ifeq ($(NPTL_WORKAROUND),)
+-	install -m 755 $(SERVER) $(prefix)/sbin
++	install -m 755 $(SERVER) $(DESTDIR)$(sbindir)
+     else
+-	install -m 755 $(srcdir)/$(SERVER_STUB) $(prefix)/sbin/pvfs2-server
+-	install -m 755 $(SERVER) $(prefix)/sbin/pvfs2-server.bin
++	install -m 755 $(srcdir)/$(SERVER_STUB) $(DESTDIR)$(sbindir)/pvfs2-server
++	install -m 755 $(SERVER) $(DESTDIR)$(sbindir)/pvfs2-server.bin
+     endif
+ endif
+ 
+@@ -864,13 +868,13 @@
+ 
+ .PHONY: just_kmod_install
+ just_kmod_install: just_kmod
+-	install -d $(KMOD_DIR)
+-	install -m 755 src/kernel/linux-2.6/pvfs2.ko $(KMOD_DIR)
++	install -d $(DESTDIR)$(KMOD_DIR)
++	install -m 755 src/kernel/linux-2.6/pvfs2.ko $(DESTDIR)$(KMOD_DIR)
+ 
+ .PHONY: kmod_install
+ kmod_install: kmod kernapps just_kmod_install
+-	install -d $(prefix)/sbin
+-	install -m 755 $(KERNAPPS) $(prefix)/sbin
++	install -d $(DESTDIR)$(sbindir)
++	install -m 755 $(KERNAPPS) $(DESTDIR)$(sbindir)
+ endif
+ 
+ ifneq (,$(LINUX24_KERNEL_SRC))
+@@ -885,16 +889,16 @@
+ 
+ .PHONY: just_kmod24_install
+ just_kmod24_install: just_kmod24
+-	install -d $(KMOD_DIR)
+-	install -m 755 src/kernel/linux-2.4/pvfs2.o $(KMOD_DIR)
++	install -d $(DESTDIR)$(KMOD_DIR)
++	install -m 755 src/kernel/linux-2.4/pvfs2.o $(DESTDIR)$(KMOD_DIR)
+ 
+ .PHONY: kmod24_install
+ kmod24_install: kmod24 kernapps just_kmod24_install
+-	install -d $(prefix)/sbin
+-	install -m 755 $(KERNAPPS) $(prefix)/sbin
+-	install -m 755 src/apps/kernel/linux/mount.pvfs2 $(prefix)/sbin
++	install -d $(DESTDIR)$(sbindir)
++	install -m 755 $(KERNAPPS) $(DESTDIR)$(sbindir)
++	install -m 755 src/apps/kernel/linux/mount.pvfs2 $(DESTDIR)$(sbindir)
+ 	@echo ""
+ 	@echo "For improved linux-2.4 support,"
+-	@echo "install $(prefix)/sbin/mount.pvfs2 to /sbin/mount.pvfs2"
++	@echo "install $(sbindir)/mount.pvfs2 to /sbin/mount.pvfs2"
+ 	@echo ""
+ endif

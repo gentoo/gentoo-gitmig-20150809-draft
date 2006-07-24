@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/pvfs2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.3 2005/09/06 00:14:48 spyderous Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvfs2/ChangeLog,v 1.4 2006/07/24 22:06:41 genstef Exp $
+
+  24 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/pvfs2-1.5.1-destdir.patch:
+  Version bump, use linux-mod.eclass thanks to Daniel Black
+  <dragonheart@gentoo.org> in bug 121962
 
   06 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; pvfs2-1.2.0.ebuild:
   (#103487) Don't use cp -a, it's GNU-specific.
