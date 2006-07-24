@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.3 2006/02/27 19:31:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-2.1.ebuild,v 1.4 2006/07/24 19:24:14 bangert Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="qmail-queue multi-filter front end"
-SRC_URI="http://untroubled.org/qmail-qfilter/${P}.tar.gz"
+SRC_URI="http://untroubled.org/qmail-qfilter/archive/${P}.tar.gz"
 HOMEPAGE="http://untroubled.org/qmail-qfilter/"
 
 SLOT="0"
@@ -25,15 +25,15 @@ src_compile() {
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	echo "${D}${QMAIL_BINDIR}" > conf-bin
 	echo "${D}/usr/share/man/" > conf-man
-	echo "/usr/include/bglibs" > conf-bgincs
-	echo "/usr/lib/bglibs" > conf-bglibs
+	echo "${ROOT}/usr/include/bglibs" > conf-bgincs
+	echo "${ROOT}/usr/lib/bglibs" > conf-bglibs
 	make || die
 }
 
 src_install () {
 	dodir ${QMAIL_BINDIR} /usr/share/man/
 	emake install || die "Installer failed"
-	dodoc ANNOUNCEMENT NEWS README TODO VERSION
+	dodoc ANNOUNCEMENT NEWS README TODO
 	docinto samples
 	dodoc samples/*
 }
