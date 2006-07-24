@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST directory_administrator-1.4.tar.gz 433971 RMD160 0a162a3392f10fb46e284a67372a559d23453206 SHA256 bd42ec3c29b56575623bf901d555fabb021eb1fa0dd2d6c657ee8a523979fe7b
 DIST directory_administrator-1.5.1.tar.gz 460818 RMD160 3f85f03dba3a9e6ea8d50bd6e344cc1969bdad6f SHA1 5d52327afb218c765c077f0ec32219f62b0a9d35 SHA256 d785fd8575ca068254b3fead5ee54a2b01ed701622a79796661d02a70f664490
 DIST directory_administrator-1.7.1.tar.gz 473157 RMD160 fad58e822bf90e2864e72506defbb5572aaad318 SHA256 74f6e1da83050849d016c1089ac3eb96c5c8588d525d8fd0d5a4594ad50650f3
@@ -9,14 +12,14 @@ EBUILD directoryadministrator-1.5.1.ebuild 776 RMD160 4dbd1b373c551fe658d0006f1f
 MD5 c985feae23b22f2ae1ecd2df14dd98cd directoryadministrator-1.5.1.ebuild 776
 RMD160 4dbd1b373c551fe658d0006f1f9f3a0452f0e9e9 directoryadministrator-1.5.1.ebuild 776
 SHA256 0ac3aea662dc3b7762eb33661138fdea474cec08500fc8ab88a034bbc64f59e2 directoryadministrator-1.5.1.ebuild 776
-EBUILD directoryadministrator-1.7.1.ebuild 806 RMD160 4e5857cf84d45114c6c76d0b8f81496a51f4c925 SHA1 2465214fc48bc4271881d64b3da569dfada772cc SHA256 214e16e92b45a2d513a83052c28f6d72c764a9c0a6ad66a58b61a13373155b69
-MD5 7c0667854bcf66bd23869d3f00b98eb9 directoryadministrator-1.7.1.ebuild 806
-RMD160 4e5857cf84d45114c6c76d0b8f81496a51f4c925 directoryadministrator-1.7.1.ebuild 806
-SHA256 214e16e92b45a2d513a83052c28f6d72c764a9c0a6ad66a58b61a13373155b69 directoryadministrator-1.7.1.ebuild 806
-MISC ChangeLog 1562 RMD160 979fa0088e5b24e83d6c373e6bfea888eefc9fa2 SHA1 802125b0f53c5ea3310fd31a87d8167d036bf04a SHA256 7869d6b66f4ab031fbeee5c2fba37698a65d5eb89ccd629bbdd3de7f9da828a6
-MD5 456e8cd6ee6713526a8e2da02252baf8 ChangeLog 1562
-RMD160 979fa0088e5b24e83d6c373e6bfea888eefc9fa2 ChangeLog 1562
-SHA256 7869d6b66f4ab031fbeee5c2fba37698a65d5eb89ccd629bbdd3de7f9da828a6 ChangeLog 1562
+EBUILD directoryadministrator-1.7.1.ebuild 806 RMD160 cba3b471323ed2066b6db6c119e8f13489ea867d SHA1 d05f127b8ea21025b7e6d69a589b5088acfff511 SHA256 0d0e56b7817124fa76033fc8a022aa12a457fd37f7fafbac9ce12ab3953eaeb9
+MD5 971ed4e883ad28303d98615dd8afc0db directoryadministrator-1.7.1.ebuild 806
+RMD160 cba3b471323ed2066b6db6c119e8f13489ea867d directoryadministrator-1.7.1.ebuild 806
+SHA256 0d0e56b7817124fa76033fc8a022aa12a457fd37f7fafbac9ce12ab3953eaeb9 directoryadministrator-1.7.1.ebuild 806
+MISC ChangeLog 1688 RMD160 734c2bffad4924ed669e15bab0a5468f80199bca SHA1 0dca815507b4304764e0403deb49010046e53639 SHA256 6142f9ffe246c31a22bdae172b1774efa7d9c4b6cde5e7bb2fdefca7f7d0a069
+MD5 74b4a9c21e2f8d908d66dfe86d0dec47 ChangeLog 1688
+RMD160 734c2bffad4924ed669e15bab0a5468f80199bca ChangeLog 1688
+SHA256 6142f9ffe246c31a22bdae172b1774efa7d9c4b6cde5e7bb2fdefca7f7d0a069 ChangeLog 1688
 MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
@@ -30,3 +33,10 @@ SHA256 a685bd9f7019b9948b3bce8741abb3d77422034cfda14a7cc861c3fce4e5c2d3 files/di
 MD5 117641aef72e5d008fe42c6a004cb446 files/digest-directoryadministrator-1.7.1 289
 RMD160 4a56f53fa83e077304177841ecc9c61bbfc05c72 files/digest-directoryadministrator-1.7.1 289
 SHA256 5bf453f13e65a4d536a55d02f3b61c4b106e7abfa50cf866583bfecbeb4dc5d8 files/digest-directoryadministrator-1.7.1 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2.2 (GNU/Linux)
+
+iD8DBQFExCn42ZWR0Jhg/EsRAqkVAJ9noJ9yh0p9NE7ZUUq/N26pSXIJrgCff6TS
+4au66bGtykRiaE4HccyW8/8=
+=JNFs
+-----END PGP SIGNATURE-----
