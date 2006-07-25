@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.8 2006/07/13 13:24:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.9 2006/07/25 06:46:54 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,13 +31,15 @@ S=${WORKDIR}/DevIL-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-png-types.patch
-	epatch "${FILESDIR}"/${P}-sdl-checks.patch
+	epatch \
+		"${FILESDIR}"/${P}-png-types.patch \
+		"${FILESDIR}"/${P}-sdl-checks.patch
 	autoconf || die
 }
 
 src_compile() {
 	econf \
+		--disable-dependency-tracking \
 		$(use_enable gif) \
 		$(use_enable jpeg) \
 		$(use_enable mng) \
@@ -50,11 +52,12 @@ src_compile() {
 		$(use_with X x) \
 		--disable-directx \
 		--disable-win32 \
+		--enable-static \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS BUGS CREDITS ChangeLog* NEWS* README*
 }
