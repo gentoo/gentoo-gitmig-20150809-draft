@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5.4.ebuild,v 1.1 2006/07/25 04:56:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.5.4.ebuild,v 1.2 2006/07/25 17:23:32 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -24,10 +24,10 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kdepim-wizards)
 	$(deprange $PV $MAXKDEVER kde-base/kitchensync)
 	$(deprange $PV $MAXKDEVER kde-base/kmail)
-	$(deprange 3.5.3 $MAXKDEVER kde-base/kmailcvt)
+	$(deprange 3.5.1 $MAXKDEVER kde-base/kmailcvt)
 	$(deprange $PV $MAXKDEVER kde-base/knode)
 	$(deprange $PV $MAXKDEVER kde-base/knotes)
-	$(deprange 3.5.3 $MAXKDEVER kde-base/kode)
+	$(deprange 3.5.2 $MAXKDEVER kde-base/kode)
 	$(deprange $PV $MAXKDEVER kde-base/konsolekalendar)
 	$(deprange $PV $MAXKDEVER kde-base/kontact)
 	$(deprange $PV $MAXKDEVER kde-base/kontact-specialdates)
@@ -44,6 +44,6 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/libkpgp)
 	$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
 	$(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
-	$(deprange 3.5.3 $MAXKDEVER kde-base/libksieve)
+	$(deprange 3.5.0 $MAXKDEVER kde-base/libksieve)
 	$(deprange $PV $MAXKDEVER kde-base/mimelib)
 	$(deprange $PV $MAXKDEVER kde-base/networkstatus)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.5.4.ebuild,v 1.1 2006/07/25 04:21:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-3.5.4.ebuild,v 1.2 2006/07/25 17:18:36 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -17,11 +17,11 @@ $(deprange $PV $MAXKDEVER kde-base/kdebase-startkde)
 $(deprange $PV $MAXKDEVER kde-base/drkonqi)
 $(deprange $PV $MAXKDEVER kde-base/kappfinder)
 $(deprange $PV $MAXKDEVER kde-base/kate)
-$(deprange 3.5.3 $MAXKDEVER kde-base/kcheckpass)
+$(deprange 3.5.0 $MAXKDEVER kde-base/kcheckpass)
 $(deprange 3.5.3 $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kcontrol)
-$(deprange 3.5.3 $MAXKDEVER kde-base/kdcop)
-$(deprange 3.5.3 $MAXKDEVER kde-base/kdebugdialog)
+$(deprange 3.5.1 $MAXKDEVER kde-base/kdcop)
+$(deprange 3.5.0 $MAXKDEVER kde-base/kdebugdialog)
 $(deprange $PV $MAXKDEVER kde-base/kdepasswd)
 $(deprange $PV $MAXKDEVER kde-base/kdeprint)
 $(deprange $PV $MAXKDEVER kde-base/kdesktop)
@@ -39,13 +39,13 @@ $(deprange $PV $MAXKDEVER kde-base/konqueror)
 $(deprange $PV $MAXKDEVER kde-base/konsole)
 $(deprange $PV $MAXKDEVER kde-base/kpager)
 $(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
-$(deprange 3.5.3 $MAXKDEVER kde-base/kreadconfig)
+$(deprange 3.5.0 $MAXKDEVER kde-base/kreadconfig)
 $(deprange 3.5.3 $MAXKDEVER kde-base/kscreensaver)
 $(deprange $PV $MAXKDEVER kde-base/ksmserver)
 $(deprange $PV $MAXKDEVER kde-base/ksplashml)
-$(deprange 3.5.3 $MAXKDEVER kde-base/kstart)
+$(deprange 3.5.0 $MAXKDEVER kde-base/kstart)
 $(deprange $PV $MAXKDEVER kde-base/ksysguard)
-$(deprange 3.5.3 $MAXKDEVER kde-base/ksystraycmd)
+$(deprange 3.5.1 $MAXKDEVER kde-base/ksystraycmd)
 $(deprange $PV $MAXKDEVER kde-base/ktip)
 $(deprange $PV $MAXKDEVER kde-base/kwin)
 $(deprange $PV $MAXKDEVER kde-base/kxkb)
