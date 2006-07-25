@@ -13,7 +13,7 @@ diff -urN hwsetup-1.1.orig/hwsetup.c hwsetup-1.1/hwsetup.c
 -#define XPATH "/usr/X11R6/bin/"
 -#define XMODPATH "/usr/X11R6/lib/modules/drivers/"
 +#define XPATH "/usr/bin/"
-+#define XMODPATH "/usr/lib/modules/drivers/"
++#define XMODPATH "/usr/lib/xorg/modules/drivers/"
  
  #define VERBOSE_PRINT 1
 -#define VERBOSE_PROMPT 2
@@ -43,6 +43,15 @@ diff -urN hwsetup-1.1.orig/hwsetup.c hwsetup-1.1/hwsetup.c
     if(!strncasecmp(d->driver,"Card:",5)) /* RedHat Cards-DB */
      { /* Kudzu "Cards" format */
       FILE *cardsdb;
+@@ -255,7 +256,7 @@
+              char xmodule[32];
+              char fullpath[128];
+              sscanf(&buffer[7],"%31s",xmodule);
+-             sprintf(fullpath,XMODPATH"%.31s_drv.o",xmodule);
++             sprintf(fullpath,XMODPATH"%.31s_drv.so",xmodule);
+              if(exists(fullpath))
+               {
+                strncpy(xi.xmodule,xmodule,sizeof(xi.xmodule));
 @@ -279,9 +280,9 @@
           if(*xfree3server&&!*xi.xmodule)
             strncpy(xi.xserver,xfree3server,sizeof(xi.xserver));
