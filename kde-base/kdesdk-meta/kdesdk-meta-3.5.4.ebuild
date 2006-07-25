@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-3.5.4.ebuild,v 1.2 2006/07/25 18:10:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/kdesdk-meta-3.5.4.ebuild,v 1.3 2006/07/25 18:13:46 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -21,7 +21,7 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kdesdk-kfile-plugins)
 	$(deprange 3.5.0 $MAXKDEVER kde-base/kdesdk-misc)
 	$(deprange $PV $MAXKDEVER kde-base/kdesdk-scripts)
-	elibc_glibc? ( $(deprange 3.5.3 $MAXKDEVER kde-base/kmtrace) )
+	elibc_glibc? ( $(deprange 3.5.2 $MAXKDEVER kde-base/kmtrace) )
 	$(deprange $PV $MAXKDEVER kde-base/kompare)
 	$(deprange 3.5.0 $MAXKDEVER kde-base/kspy)
 	$(deprange $PV $MAXKDEVER kde-base/kuiviewer)
