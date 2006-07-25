@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/liboil
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.31 2006/07/16 21:38:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboil/ChangeLog,v 1.32 2006/07/25 14:35:10 zaheerm Exp $
+
+*liboil-0.3.8-r1 (25 Jul 2006)
+*liboil-0.3.6-r1 (25 Jul 2006)
+
+  25 Jul 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  -liboil-0.3.6.ebuild, +liboil-0.3.6-r1.ebuild, -liboil-0.3.8.ebuild,
+  +liboil-0.3.8-r1.ebuild:
+  Force CFLAGS to -O2 -g to not crash software that deps on liboil
 
   16 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> liboil-0.3.8.ebuild:
   Add ~x86-fbsd keyword.
