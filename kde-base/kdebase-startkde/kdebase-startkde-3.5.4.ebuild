@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.4.ebuild,v 1.1 2006/07/25 04:24:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-3.5.4.ebuild,v 1.2 2006/07/25 11:38:04 flameeyes Exp $
 
 KMNAME=kdebase
 KMNOMODULE=true
@@ -35,7 +35,7 @@ $(deprange $PV $MAXKDEVER kde-base/kpersonalizer)
 $(deprange 3.5.0 $MAXKDEVER kde-base/kreadconfig)
 $(deprange $PV $MAXKDEVER kde-base/ksplashml)"
 
-PATCHES="${FILESDIR}/${P}-xinitrcd.patch"
+PATCHES="${FILESDIR}/${PN}-3.5.3-xinitrcd.patch"
 
 src_compile() {
 	einfo "Nothing to compile"
@@ -43,37 +43,37 @@ src_compile() {
 
 src_install() {
 	# startkde script
-	exeinto ${KDEDIR}/bin
+	exeinto "${KDEDIR}/bin"
 	doexe startkde
 
 	# startup and shutdown scripts
-	insinto ${KDEDIR}/env
-	doins ${FILESDIR}/agent-startup.sh
+	insinto "${KDEDIR}/env"
+	doins "${FILESDIR}/agent-startup.sh"
 
-	exeinto ${KDEDIR}/shutdown
-	doexe ${FILESDIR}/agent-shutdown.sh
+	exeinto "${KDEDIR}/shutdown"
+	doexe "${FILESDIR}/agent-shutdown.sh"
 
 	# freedesktop environment variables
-	cat <<EOF > ${T}/xdg.sh
+	cat <<EOF > "${T}/xdg.sh"
 export XDG_DATA_DIRS="${KDEDIR}/share:/usr/share"
 export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg"
 EOF
-	insinto ${KDEDIR}/env
-	doins ${T}/xdg.sh
+	insinto "${KDEDIR}/env"
+	doins "${T}/xdg.sh"
 
 	# x11 session script
-	cat <<EOF > ${T}/kde-${SLOT}
+	cat <<EOF > "${T}/kde-${SLOT}"
 #!/bin/sh
 exec ${KDEDIR}/bin/startkde
 EOF
 	exeinto /etc/X11/Sessions
-	doexe ${T}/kde-${SLOT}
+	doexe "${T}/kde-${SLOT}"
 
 	# freedesktop compliant session script
 	sed -e "s:@KDE_BINDIR@:${KDEDIR}/bin:g;s:Name=KDE:Name=KDE ${SLOT}:" \
-		${S}/kdm/kfrontend/sessions/kde.desktop.in > ${T}/kde-${SLOT}.desktop
+		"${S}/kdm/kfrontend/sessions/kde.desktop.in" > "${T}/kde-${SLOT}.desktop"
 	insinto /usr/share/xsessions
-	doins ${T}/kde-${SLOT}.desktop
+	doins "${T}/kde-${SLOT}.desktop"
 }
 
 pkg_postinst () {
