@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.9 2006/07/25 14:00:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.10 2006/07/25 14:44:10 dragonheart Exp $
 
-inherit libtool flag-o-matic eutils autotools libtool
+inherit libtool flag-o-matic eutils autotools
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -17,7 +17,6 @@ KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE="adns gtk ipv6 snmp ssl kerberos threads selinux"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
-	!net-analyzer/ethereal
 	snmp? ( >=net-analyzer/net-snmp-5.1.1 )
 	gtk? ( >=dev-libs/glib-2.0.4
 		=x11-libs/gtk+-2*
@@ -56,14 +55,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libgcrypt-asneeded.patch
 	cd "${S}"
 	AT_M4DIR="${S}/aclocal-fallback" eautoreconf
-	#elibtoolize
 }
 
 src_compile() {
 	replace-flags -O? -O
-
-	# Fix gcc-3.4 segfault #49238
-	#[ "`gcc-version`" == "3.4" ] && append-flags -fno-unroll-loops
 
 	local myconf
 

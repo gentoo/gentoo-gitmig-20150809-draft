@@ -1,10 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.14 2006/07/25 14:00:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.15 2006/07/25 14:44:10 dragonheart Exp $
 
   25 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   wireshark-0.99.2.ebuild:
   added RDEPEND on selinux-wireshark for USE=selinux. Thanks to Petre bug #141156
+  removed RDEPEND=!net-analyzer in preparation for ethereal->wireshark move.
 
   20 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   wireshark-0.99.2.ebuild:
