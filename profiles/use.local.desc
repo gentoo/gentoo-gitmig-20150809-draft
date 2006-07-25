@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2052 2006/07/24 22:12:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2053 2006/07/25 02:42:18 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -220,7 +220,6 @@ app-text/sword:lucene - Enable lucene support for faster searching
 app-text/xpdf:nodrm - Disable the drm feature decoder.
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
 dev-cpp/sptk:fltk - Enable FLTK support
-dev-db/firebird:xinetd - If you want inetd version instead of a superserver (daemon)
 dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering.
 dev-db/mysql:embedded - Build embedded server (libmysqld)
@@ -1116,18 +1115,15 @@ net-ftp/proftpd:shaper - Enable support for the mod_shaper
 net-ftp/proftpd:softquota - Enable support for the mod_quotatab
 net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:vroot - Enable support for virtual root module
-net-ftp/proftpd:xinetd - Enable support for starting from xinetd
 net-ftp/proftpd:opensslcrypt - Enable support for openssly crypto
 net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
 net-ftp/vsftpd:logrotate - Use logrotate for rotating logs
-net-ftp/vsftpd:xinetd - Add support for running under xinetd
 net-im/bitlbee:aimextras - Enables extra AIM patches not supported by upstream
 net-im/bitlbee:flood - Enable flood protection support
 net-im/bitlbee:gtalk - Enable Google Talk support
 net-im/bitlbee:msnextras - Enables extra MSN patches not supported by upstream
 net-im/bitlbee:nss - Use NSS for SSL support in MSN and Jabber.
 net-im/bitlbee:openssl - Use OpenSSL for SSL support in MSN and Jabber.
-net-im/bitlbee:xinetd - Install an xinetd.d file for bitlbee
 net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
 net-im/centericq:irc - Enable support for the IRC protocol
 net-im/centericq:lj - Enable support for the LiveJournal weblog system
@@ -1247,7 +1243,6 @@ net-mail/mailman:xmail - Build with delivery options for xmail
 net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
-net-mail/qpopper:xinetd - If you want inetd version instead of standalone
 net-mail/teapop:virtual - Enable teapop's virtual domain support.
 net-mail/uw-imap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vimap:clearpasswd - Enables cleartext logins outside of SSL sessions
@@ -1283,7 +1278,6 @@ net-misc/hylafax:html - Adds HTML documentation
 net-misc/hylafax:mgetty - Adds support for mgetty and vgetty
 net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/linphone:ilbc - Build ILBC codec plugin
-net-misc/linux-identd:xinetd - Use xinetd instead of the initscript
 net-misc/ltsp:floppyd - Enable local floppy access on LTSP terminals via mtools
 net-misc/mico:qt - Enable QT GUI Toolkit (remove when package leaves portage or is fixed)
 net-misc/ntp:logrotate - Install support files for logrotate
@@ -1315,7 +1309,6 @@ net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessi
 net-misc/quagga:realms - Enable realms support (see http://vcalinus.gemenii.ro/quaggarealms.html)
 net-misc/quagga:tcp-zebra - Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain sockets are choosen otherwise.
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
-net-misc/rsync:xinetd - Install an xinetd.d file for rsyncd
 net-misc/scponly:subversion - Enable support for the subversion version control system
 net-misc/sitecopy:gssapi - Enables GSSAPI (Generic Security Services Application Programming Interface).  This is a client-server authentication method that promotes a standard API for authentication systems.  This is included in kerbos distributions and allows vendors to define a specific system with a more generic API layer to coordinate with other authentication systems.
 net-misc/sitecopy:rsh - This allows the use of rsh (remote shell) and rcp (remote copy) for authoring websites.  sftp is a much more secure protocol and is prefered.
@@ -1377,7 +1370,6 @@ net-proxy/squid:pf-transparent - Adds transparent proxy support for systems usin
 net-proxy/squid:underscores - Enables support for domain names containing underscores
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch (http://www.it-academy.bg/zph/)
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
-net-proxy/ziproxy:xinetd - If you want inetd version instead of a superserver (daemon)
 net-wireless/bluez-utils:udev - Enable udev rules file installation
 net-wireless/hostapd:logwatch - Install support files for logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
