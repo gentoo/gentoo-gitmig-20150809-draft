@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ghostwhitecrab
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ChangeLog,v 1.6 2006/06/19 19:24:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ChangeLog,v 1.7 2006/07/25 03:59:56 tsunam Exp $
+
+  25 Jul 2006; Joshua Jackson <tsunam@gentoo.org>
+  ghostwhitecrab-0.9.7.2.ebuild:
+  Stable x86; bug #137287
 
   19 Jun 2006; Jon Hood <squinky86@gentoo.org>
   ghostwhitecrab-0.9.7.2.ebuild:
