@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.165 2006/07/21 02:04:39 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.166 2006/07/25 10:00:24 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdeartwork-3.3.2-gl-kdesavers.patch, -kdeartwork-3.3.2.ebuild:
+  Drop 3.3 versions.
 
   20 Jul 2006; <psi29a@gentoo.org> kdeartwork-3.5.2.ebuild:
   stable on mips

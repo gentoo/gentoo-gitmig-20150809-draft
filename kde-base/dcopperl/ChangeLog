@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcopperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.30 2006/07/25 02:47:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.31 2006/07/25 09:51:54 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -dcopperl-3.3.1-r2.ebuild:
+  Drop 3.3 versions.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> dcopperl-3.5.0.ebuild:
   Bump to 3.5.4 (pre-release).

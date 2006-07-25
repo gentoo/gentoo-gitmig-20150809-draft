@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.187 2006/07/21 02:37:38 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.188 2006/07/25 10:06:56 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdeedu-3.3.2-r2.ebuild:
+  Drop 3.3 versions.
 
   20 Jul 2006; <psi29a@gentoo.org> kdeedu-3.5.2.ebuild:
   stable on mips

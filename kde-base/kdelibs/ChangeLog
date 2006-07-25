@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.348 2006/07/25 04:38:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.349 2006/07/25 10:18:01 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/kdelibs-3.3.2-anchor-fix.patch,
+  -files/kdelibs-3.3.2-aspell-dir.patch,
+  -files/post-3.3.2-kdelibs-kate.diff, -files/kdelibs-3.3.2-ppc64.patch,
+  -kdelibs-3.3.2-r10.ebuild:
+  Drop 3.3 versions.
 
 *kdelibs-3.5.4 (25 Jul 2006)
 
