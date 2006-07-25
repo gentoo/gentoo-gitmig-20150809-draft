@@ -1,6 +1,10 @@
 # ChangeLog for media-video/istanbul
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.6 2006/07/21 13:02:16 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/istanbul/ChangeLog,v 1.7 2006/07/25 14:56:19 zaheerm Exp $
+
+  25 Jul 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  istanbul-0.2.0-r1.ebuild:
+  add build dep on new version of intltool
 
   21 Jul 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
   istanbul-0.2.0-r1.ebuild:
