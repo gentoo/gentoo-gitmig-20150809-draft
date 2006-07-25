@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/habak
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.22 2006/05/23 20:28:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.23 2006/07/25 21:02:58 lucass Exp $
+
+  25 Jul 2006; Lukasz Strzygowski <lucass@gentoo.org> habak-0.2.5.ebuild:
+  Fix for as-needed, bug #141709.
 
   23 May 2006; Markus Rothe <corsair@gentoo.org> habak-0.2.4.1.ebuild:
   Stable on ppc64
