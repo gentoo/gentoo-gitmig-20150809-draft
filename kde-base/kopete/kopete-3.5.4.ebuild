@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.4.ebuild,v 1.1 2006/07/25 07:14:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.4.ebuild,v 1.2 2006/07/25 11:17:47 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -46,7 +46,7 @@ DEPEND="${BOTH_DEPEND}
 			x11-proto/scrnsaverproto
 		) <virtual/x11-7 )"
 
-PATCHES="${FILESDIR}/${P}-icqfix.patch"
+PATCHES="${FILESDIR}/${PN}-3.5.x-oscarcontacts.patch"
 
 pkg_setup() {
 	if use kernel_linux && ! built_with_use =x11-libs/qt-3* opengl; then
