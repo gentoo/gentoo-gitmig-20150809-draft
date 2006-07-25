@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.4.ebuild,v 1.2 2006/07/25 17:47:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.4.ebuild,v 1.3 2006/07/25 23:32:24 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -19,6 +19,3 @@ libkpinterfaces kontact/interfaces"
 KMEXTRACTONLY="libkdepim
 kontact/interfaces"
 KMEXTRA="kontact/plugins/akregator"
-
-PATCHES="${FILESDIR}/akregator-3.5-hppa.patch"
-
