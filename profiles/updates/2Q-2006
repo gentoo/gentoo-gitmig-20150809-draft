@@ -33,3 +33,5 @@ move sci-misc/xfoil sci-physics/xfoil
 move sci-chemistry/abinit sci-physics/abinit
 move sci-libs/root sci-physics/root
 move dev-libs/libgc dev-libs/boehm-gc
+move net-analyzer/ethereal net-analyzer/wireshark
+move sec-policy/selinux-ethereal sec-policy/selinux-wireshark
