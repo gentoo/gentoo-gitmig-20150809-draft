@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.8 2006/06/23 21:41:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.9 2006/07/25 09:08:07 bangert Exp $
 
 inherit eutils autotools depend.php
 
@@ -159,7 +159,7 @@ src_install() {
 	update_config
 
 	# docs
-	dodoc AUTHORS README COPYING INSTALL NEWS ChangeLog doc/*.sh
+	dodoc AUTHORS README NEWS ChangeLog doc/*.sh
 	newdoc doc/lighttpd.conf lighttpd.conf.distrib
 
 	use doc && dohtml -r doc/*
