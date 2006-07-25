@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.8 2006/05/02 20:09:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx/pcsx-1.5-r1.ebuild,v 1.9 2006/07/25 04:19:19 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -16,7 +16,7 @@ IUSE="opengl"
 
 DEPEND="sys-libs/zlib
 	app-arch/unzip
-	x11-libs/gtk+
+	>=x11-libs/gtk+-2
 	gnome-base/libglade"
 RDEPEND="games-emulation/psemu-cdr
 	games-emulation/psemu-cdriso
@@ -30,11 +30,11 @@ RDEPEND="games-emulation/psemu-cdr
 
 src_unpack() {
 	unpack PcsxSrc-${PV}.tgz
-	cd ${S}
+	cd "${S}"
 
 	edos2unix `find -regex '.*\.[ch]'`
 
-	epatch ${FILESDIR}/${PV}-gentoo.patch \
+	epatch "${FILESDIR}"/${PV}-gentoo.patch \
 		"${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:Plugin/:${GAMES_LIBDIR}/psemu/plugins/:" \
@@ -55,13 +55,13 @@ src_unpack() {
 src_compile() {
 	cd Linux
 	econf || die "econf failed"
-	emake OPTIMIZE="${CFLAGS}" || die "emake failed"
+	emake OPTIMIZE="${CFLAGS}" STRIP=true || die "emake failed"
 }
 
 src_install() {
 	newgamesbin Linux/pcsx pcsx.bin
-	dogamesbin ${FILESDIR}/pcsx
-	insinto ${GAMES_DATADIR}/${PN}
+	dogamesbin "${FILESDIR}"/pcsx
+	insinto "${GAMES_DATADIR}"/${PN}
 	doins Linux/.pixmaps/*
 	dodoc Docs/*
 	prepgamesdirs
