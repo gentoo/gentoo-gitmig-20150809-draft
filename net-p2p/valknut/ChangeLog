@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.26 2006/07/22 08:55:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.27 2006/07/25 04:45:12 tsunam Exp $
+
+  25 Jul 2006; Joshua Jackson <tsunam@gentoo.org> valknut-0.3.7.ebuild:
+  Stable x86; bug #140724
 
   22 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   valknut-0.3.7.ebuild:
