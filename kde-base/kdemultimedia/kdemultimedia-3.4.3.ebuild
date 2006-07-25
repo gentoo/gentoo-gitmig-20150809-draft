@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.3.ebuild,v 1.11 2006/04/03 21:08:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.3.ebuild,v 1.12 2006/07/25 10:41:34 flameeyes Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, juk..."
 
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
-IUSE="alsa audiofile encode flac gstreamer jack mp3 musicbrainz speex theora vorbis xine"
+IUSE="alsa audiofile encode flac gstreamer jack mp3 speex theora vorbis xine"
 
 DEPEND="~kde-base/kdebase-${PV}
 	media-sound/cdparanoia
@@ -23,15 +23,14 @@ DEPEND="~kde-base/kdebase-${PV}
 	speex? ( media-libs/speex )
 	theora? ( media-libs/libtheora )
 	gstreamer? ( =media-libs/gstreamer-0.8*
-	             =media-libs/gst-plugins-0.8* )
-	>=media-libs/taglib-1.2
-	musicbrainz? ( media-libs/tunepimp media-libs/musicbrainz )"
+				 =media-libs/gst-plugins-0.8* )
+	>=media-libs/taglib-1.2"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
-		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
-		               =media-plugins/gst-plugins-vorbis-0.8* )
-		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
+			 vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+					   =media-plugins/gst-plugins-vorbis-0.8* )
+			 flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
@@ -57,7 +56,7 @@ src_compile() {
 		$(use_with vorbis) $(use_with encode lame)
 		$(use_with flac) $(use_with speex)
 		$(use_with mp3 libmad) $(use_with jack)
-		$(use_with xine) $(use_with musicbrainz)"
+		$(use_with xine) --without-musicbrainz"
 
 	kde_src_compile
 }

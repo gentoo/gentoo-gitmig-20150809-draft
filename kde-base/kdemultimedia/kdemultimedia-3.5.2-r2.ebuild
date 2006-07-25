@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.14 2006/07/20 04:20:57 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.2-r2.ebuild,v 1.15 2006/07/25 10:41:34 flameeyes Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE multimedia apps: Noatun, KsCD, Juk..."
 
 KEYWORDS="alpha amd64 hppa ~ia64 mips ppc ppc64 sparc x86"
-IUSE="alsa akode audiofile encode flac gstreamer mp3 musicbrainz theora vorbis xine"
+IUSE="alsa akode audiofile encode flac gstreamer mp3 theora vorbis xine"
 
 DEPEND="~kde-base/kdebase-${PV}
 	media-sound/cdparanoia
@@ -21,19 +21,17 @@ DEPEND="~kde-base/kdebase-${PV}
 	alsa? ( media-libs/alsa-lib )
 	theora? ( media-libs/libtheora )
 	gstreamer? ( =media-libs/gstreamer-0.8*
-	             =media-libs/gst-plugins-0.8* )
-	musicbrainz? ( media-libs/tunepimp
-	               media-libs/musicbrainz )
+				 =media-libs/gst-plugins-0.8* )
 	encode? ( mp3? ( media-sound/lame )
-	          vorbis? ( media-sound/vorbis-tools )
-	          flac? ( media-libs/flac ) )
+			  vorbis? ( media-sound/vorbis-tools )
+			  flac? ( media-libs/flac ) )
 	!arts? ( !gstreamer? ( media-libs/akode ) )"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
-		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
-		               =media-plugins/gst-plugins-vorbis-0.8* )
-		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
+			 vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+					   =media-plugins/gst-plugins-vorbis-0.8* )
+			 flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 pkg_setup() {
 	kde_pkg_setup
@@ -44,24 +42,24 @@ pkg_setup() {
 
 src_compile() {
 	local myconf="--with-cdparanoia --with-taglib
-	              --with-akode $(use_with alsa)
-	              $(use_with audiofile) $(use_with gstreamer)
-	              $(use_with xine) $(use_with theora)
-	              $(use_with musicbrainz)"
+				  --with-akode $(use_with alsa)
+				  $(use_with audiofile) $(use_with gstreamer)
+				  $(use_with xine) $(use_with theora)
+				  --without-musicbrainz"
 
 	# encoding can happen through:
 	# - kio_audiocd (based on libflac for flac,
-	#   on libvorbis for vorbis, on the lame binary for mp3)
+	#	on libvorbis for vorbis, on the lame binary for mp3)
 	# - kaudiocreator (based on the flac binary for flac,
-	#   on the lame binary for mp3, on the oggenc binary for vorbis)
+	#	on the lame binary for mp3, on the oggenc binary for vorbis)
 	# - krec (based on libvorbis for vorbis,
-	#   on libmp3lame for mp3)
+	#	on libmp3lame for mp3)
 	if use encode; then
 		myconf="${myconf} $(use_with mp3 lame)
-	                $(use_with vorbis) $(use_with flac)"
+					$(use_with vorbis) $(use_with flac)"
 	else
 		myconf="${myconf} --without-lame
-	                --without-vorbis --without-flac"
+					--without-vorbis --without-flac"
 	fi
 
 	if ! use arts && ! use gstreamer ; then

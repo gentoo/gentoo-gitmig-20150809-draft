@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.4.ebuild,v 1.1 2006/07/25 02:54:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.4.ebuild,v 1.2 2006/07/25 10:46:10 flameeyes Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -12,21 +12,19 @@ SRC_URI="${SRC_URI}
 
 DESCRIPTION="Jukebox and music manager for KDE."
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="akode flac gstreamer mp3 vorbis musicbrainz"
+IUSE="akode flac gstreamer mp3 vorbis"
 
 DEPEND="media-libs/taglib
-	musicbrainz? ( 	media-libs/tunepimp
-			media-libs/musicbrainz )
 	gstreamer? ( =media-libs/gstreamer-0.8*
-	             =media-libs/gst-plugins-0.8* )
+				 =media-libs/gst-plugins-0.8* )
 	akode? ( media-libs/akode )
 	!arts? ( !gstreamer? ( media-libs/akode ) )"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
-		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+			 vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
 				  =media-plugins/gst-plugins-vorbis-0.8* )
-		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
+			 flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 KMEXTRACTONLY="arts/configure.in.in"
 
@@ -38,7 +36,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	local myconf="$(use_with gstreamer) $(use_with musicbrainz)"
+	local myconf="$(use_with gstreamer) --without-musicbrainz"
 
 	if ! use arts && ! use gstreamer ; then
 		myconf="${myconf} --with-akode"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.3.ebuild,v 1.10 2006/06/22 12:52:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.4.3.ebuild,v 1.11 2006/07/25 10:46:11 flameeyes Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -9,20 +9,18 @@ inherit kde-meta eutils
 
 DESCRIPTION="Jukebox and music manager for KDE"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-IUSE="flac gstreamer mp3 vorbis musicbrainz"
+IUSE="flac gstreamer mp3 vorbis"
 
 DEPEND="media-libs/taglib
-	musicbrainz? ( 	media-libs/tunepimp
-			media-libs/musicbrainz )
 	gstreamer? ( =media-libs/gstreamer-0.8*
-	             =media-libs/gst-plugins-0.8* )
+				 =media-libs/gst-plugins-0.8* )
 	$(deprange $PV $MAXKDEVER kde-base/akode)"
 
 RDEPEND="${DEPEND}
 	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.8* )
-		     vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
+			 vorbis? ( =media-plugins/gst-plugins-ogg-0.8*
 				  =media-plugins/gst-plugins-vorbis-0.8* )
-		     flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
+			 flac? ( =media-plugins/gst-plugins-flac-0.8* ) )"
 
 PATCHES="$FILESDIR/configure-fix-kdemultimedia-juk.patch"
 
@@ -39,6 +37,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	myconf="$myconf $(use_with gstreamer) $(use_with musicbrainz)"
+	myconf="$myconf $(use_with gstreamer) --without-musicbrainz"
 	kde-meta_src_compile
 }
