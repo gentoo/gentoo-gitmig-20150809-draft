@@ -1,0 +1,35 @@
+diff -Naur sussen-0.26.orig/agent/Main.cs sussen-0.26/agent/Main.cs
+--- sussen-0.26.orig/agent/Main.cs	2006-07-18 18:52:01.000000000 +0400
++++ sussen-0.26/agent/Main.cs	2006-07-25 17:08:45.000000000 +0400
+@@ -330,6 +330,13 @@
+ 				}
+ 			}
+ 
++			if (definitionFile == string.Empty || definitionFile == null) {				
++				Console.WriteLine ("ERROR: No definitions file specified.");
++				PrintUsage ();
++				
++				Environment.Exit (-1);
++			}
++
+ 			if (familyName == null)
+ #if MONO_BUILD
+ 				familyName = "linux";
+diff -Naur sussen-0.26.orig/Makefile.am sussen-0.26/Makefile.am
+--- sussen-0.26.orig/Makefile.am	2006-07-25 17:07:29.000000000 +0400
++++ sussen-0.26/Makefile.am	2006-07-25 17:08:45.000000000 +0400
+@@ -1,12 +1,12 @@
+ ACLOCAL_AMFLAGS = -I m4
+ 
+ if ENABLE_GNOME
+-GNOME_DIRS = applet editor
++GNOME_DIRS = applet editor resources
+ else
+ GNOME_DIRS =
+ endif
+ 
+-SUBDIRS = debian oval agent $(GNOME_DIRS) resources po www xml m4
++SUBDIRS = debian oval agent $(GNOME_DIRS) po www xml m4
+ 
+ EXTRA_DIST =\
+ 	README \
