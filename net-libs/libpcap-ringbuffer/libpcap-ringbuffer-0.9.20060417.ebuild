@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-0.9.20060417.ebuild,v 1.1 2006/06/26 17:46:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap-ringbuffer/libpcap-ringbuffer-0.9.20060417.ebuild,v 1.2 2006/07/25 09:01:17 dragonheart Exp $
 
 inherit eutils toolchain-funcs linux-info multilib libtool autotools
 
@@ -64,8 +64,8 @@ pkg_postinst() {
 	einfo "   env-update && source /etc/profile"
 	echo
 	einfo "To continue to use libpcap-ringbuffer without the ringbuffer,  just set PCAP_FRAMES=0"
-	einfo "in the env.d file. Alternatively, you could run ethereal like this:"
-	einfo "   PCAP_FRAMES=0 ethereal"
+	einfo "in the env.d file. Alternatively, you could run wireshark like this:"
+	einfo "   PCAP_FRAMES=0 wireshark"
 	echo
 	einfo "For further details see:"
 	einfo "   /usr/share/doc/${PF}/README.ring.gz"
