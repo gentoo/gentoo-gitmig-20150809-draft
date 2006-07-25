@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.10 2006/07/25 14:44:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.11 2006/07/25 15:21:46 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils autotools
 
@@ -111,6 +111,8 @@ src_install() {
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins "${S}"/image/hi48-app-wireshark.png wireshark.png
 	make_desktop_entry wireshark "Wireshark" wireshark
+	dosym tshark /usr/bin/tethereal
+	dosym wireshark /usr/bin/ethereal
 }
 
 pkg_postinst() {
