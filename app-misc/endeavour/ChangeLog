@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.21 2006/07/22 18:36:47 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.22 2006/07/25 04:54:34 tsunam Exp $
+
+  25 Jul 2006; Joshua Jackson <tsunam@gentoo.org> endeavour-2.4.6.ebuild:
+  Stable x86; bug #141406
 
   22 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> metadata.xml,
   endeavour-2.4.6.ebuild:
