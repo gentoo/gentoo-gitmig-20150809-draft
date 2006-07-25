@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.6 2006/06/12 21:07:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.7 2006/07/25 20:48:29 wolf31o2 Exp $
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="ICA Client"
 HOMEPAGE="http://www.citrix.com/"
@@ -10,8 +10,8 @@ SRC_URI="ICAClient-9.0-1.i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
-IUSE="gnome"
+KEYWORDS="-* amd64 x86"
+IUSE=""
 RESTRICT="fetch"
 
 RDEPEND="virtual/libc
@@ -88,8 +88,10 @@ src_install() {
 	insinto /usr/$(get_libdir)/nsbrowser/plugins
 	dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
 
-	if use gnome; then
-		insinto /usr/share/applications
-		doins lib/ICAClient/desktop/*.desktop
-	fi
+	# The .desktop file included in the rpm links to /usr/lib, so we make a new one
+	# The program gives errors and has slowdowns if the locale is not English, so
+	# strip it since it has no translations anyway
+	doicon lib/ICAClient/icons/*
+	make_wrapper wfcmgr 'env LC_ALL="" LANG="" /opt/ICAClient/wfcmgr'
+	make_desktop_entry wfcmgr 'Citrix ICA Client' citrix48.xpm
 }
