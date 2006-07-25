@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.27 2006/07/25 03:33:39 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/ChangeLog,v 1.28 2006/07/25 15:49:20 pva Exp $
+
+  25 Jul 2006; Peter Volkov <pva@gentoo.org>
+  -files/sarg-1.4.1-2.6.fix.patch, -sarg-1.4.1-r2.ebuild,
+  -sarg-2.0.8.ebuild, -sarg-2.1.ebuild:
+  Cleaning out old versions.
 
   25 Jul 2006; Joshua Jackson <tsunam@gentoo.org> sarg-2.2.1.ebuild:
   Stable x86; bug #135492
