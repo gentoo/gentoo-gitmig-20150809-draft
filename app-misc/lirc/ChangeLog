@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.100 2006/07/23 14:51:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.101 2006/07/25 14:29:34 zzam Exp $
+
+*lirc-0.8.0-r4 (25 Jul 2006)
+
+  25 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/lirc-0.8.0-kernel-2.6.18.diff, +files/modulesd.lirc,
+  +lirc-0.8.0-r4.ebuild:
+  Added patch for compatibility with kernel 2.6.18. Set compiled in default
+  device-node depending on activated driver (for e.g. usbirboy), removed older
+  hack for setting device-node. Without set driver use option userspace. Added
+  /etc/modules.d/lirc.
 
   23 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   lirc-0.8.0-r1.ebuild, lirc-0.8.0-r3.ebuild:
