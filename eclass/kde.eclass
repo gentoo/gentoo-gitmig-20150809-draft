@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.174 2006/07/23 01:21:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.175 2006/07/25 07:29:07 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -18,7 +18,7 @@ fi
 
 if [[ ${CATEGORY} == "kde-base" ]]; then
 	IUSE="${IUSE} kdeenablefinal"
-	if [[ ${PV} == "3.5"* ]]; then
+	if [[ ${PV} == "3.5"* ]] && [[ ${PN} != "kdemultimedia" && ${KMNAME} != "kdemultimedia" ]]; then
 		IUSE="${IUSE} kdehiddenvisibility"
 	fi
 fi
@@ -255,8 +255,17 @@ kde_src_compile() {
 
 				if hasq kdehiddenvisibility ${IUSE} && use kdehiddenvisibility; then
 					if [[ $(gcc-major-version)$(gcc-minor-version) -ge 41 ]]; then
-						unset kde_cv_prog_cxx_fvisibility_hidden
-						myconf="$myconf $(use_enable kdehiddenvisibility gcc-hidden-visibility)"
+						if [[ ${PN} != "kdelibs" && ${PN} != "arts" ]] && \
+							! fgrep -q "#define __KDE_HAVE_GCC_VISIBILITY" "${KDEDIR}/include/kdemacros.h"; then
+
+							eerror "You asked to enable hidden visibility, but your kdelibs was"
+							eerror "built without its support. Please rebuild kdelibs with the"
+							eerror "kdehiddenvisibility useflag enabled."
+							die "kdelibs without hidden visibility"
+						else
+							unset kde_cv_prog_cxx_fvisibility_hidden
+							myconf="$myconf $(use_enable kdehiddenvisibility gcc-hidden-visibility)"
+						fi
 					else
 						eerror "You're trying to enable hidden visibility, but"
 						eerror "you are using an old GCC version. Hidden visibility"
