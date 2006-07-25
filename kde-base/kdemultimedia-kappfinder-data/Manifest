@@ -4,6 +4,7 @@ Hash: SHA1
 DIST kdemultimedia-3.4.3.tar.bz2 5495757 RMD160 318ebd3149019ec2e5d98b57a548d3ef350a7924 SHA256 adc29df6c427b505c3b1559c2ea393e9a65c3120dfce5207419ba5dd16aa2d4e
 DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
 DIST kdemultimedia-3.5.3.tar.bz2 6276838 RMD160 2ae4ba9266b84b972e3bcd106896b6ea0124aa32 SHA1 2a75ba49bbc513b4ab5cb0d039949984742f94f5 SHA256 4e976190f71b4a86feb2350d014bb775d230feee0013ac92b40e4b0aaf23a12f
+DIST kdemultimedia-3.5.4.tar.bz2 6276789 RMD160 43cb463eb609fc7d8104b069e64d8e6550440fff SHA1 a435563cc45fb8f26090471792956c03d50c51c2 SHA256 3ea07b8bd6340516642629b7e741d18cae53984ebb7d007acdb184e1c6f79d4b
 EBUILD kdemultimedia-kappfinder-data-3.4.3.ebuild 485 RMD160 8b0e40cf413bdfcd6c11dad57255803ea2724b27 SHA1 5cf39547b67c993f7acb2e2e41dd3c663027b87d SHA256 411db2b49cf650af78db381771713f5b7abc3beea8e6fddb4b56ed1358ce9a9f
 MD5 ecd68e8d70ed2408e00adf375f0edcc5 kdemultimedia-kappfinder-data-3.4.3.ebuild 485
 RMD160 8b0e40cf413bdfcd6c11dad57255803ea2724b27 kdemultimedia-kappfinder-data-3.4.3.ebuild 485
@@ -16,10 +17,14 @@ EBUILD kdemultimedia-kappfinder-data-3.5.3.ebuild 503 RMD160 acacc8c2682db4fe377
 MD5 4a8d08d9d1c657a36182abd292137ff0 kdemultimedia-kappfinder-data-3.5.3.ebuild 503
 RMD160 acacc8c2682db4fe3776d334c938015785581c35 kdemultimedia-kappfinder-data-3.5.3.ebuild 503
 SHA256 d5f9b4fb7b12a0d43ccb1260a237bdc4aa03d4a4cfbbbc761fdd7cedaff9ea3d kdemultimedia-kappfinder-data-3.5.3.ebuild 503
-MISC ChangeLog 7520 RMD160 a1d38f21af4e9e724fd7bddb562bab6efb469984 SHA1 9690c33794014c5b16c0339a11621c5cb6eb5e71 SHA256 27255fb4242ee0c1905c1e6b891dc9d641eec7a3b92a6f5df61fce24bf8075f5
-MD5 e73101d9b531e57d2046b020c768d8cb ChangeLog 7520
-RMD160 a1d38f21af4e9e724fd7bddb562bab6efb469984 ChangeLog 7520
-SHA256 27255fb4242ee0c1905c1e6b891dc9d641eec7a3b92a6f5df61fce24bf8075f5 ChangeLog 7520
+EBUILD kdemultimedia-kappfinder-data-3.5.4.ebuild 503 RMD160 47d4a3d9af61423a09a2f2ccb2d1e83c1e0df4e0 SHA1 581ed4e6df5bfcc3b861e3e796dd5821ca6b9da4 SHA256 c4cce01a7d13cfc8434bb10e27c10ef82839450a1f537d7624c37545aebae8a6
+MD5 6ef4721629fd777ade86665f82148724 kdemultimedia-kappfinder-data-3.5.4.ebuild 503
+RMD160 47d4a3d9af61423a09a2f2ccb2d1e83c1e0df4e0 kdemultimedia-kappfinder-data-3.5.4.ebuild 503
+SHA256 c4cce01a7d13cfc8434bb10e27c10ef82839450a1f537d7624c37545aebae8a6 kdemultimedia-kappfinder-data-3.5.4.ebuild 503
+MISC ChangeLog 7704 RMD160 c14a652eb48b56c66dd68ad54ec45430ee534558 SHA1 d4011e9879c2dcb503c5e3affd8caa41ac5dbbc2 SHA256 d2a78b4695e6ef4f41ddf2d304b747c96b42f19b8c61765c4c6c2a3d28366157
+MD5 cd21fd83bd62a039154bcdfb96fafe1c ChangeLog 7704
+RMD160 c14a652eb48b56c66dd68ad54ec45430ee534558 ChangeLog 7704
+SHA256 d2a78b4695e6ef4f41ddf2d304b747c96b42f19b8c61765c4c6c2a3d28366157 ChangeLog 7704
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -33,10 +38,13 @@ SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/di
 MD5 ce67ee8c3e2975ac7bc343af2f0ef87f files/digest-kdemultimedia-kappfinder-data-3.5.3 265
 RMD160 1dedc9e07392c66c424497d1e686c3af8ec30ff5 files/digest-kdemultimedia-kappfinder-data-3.5.3 265
 SHA256 40d78b21ca110b497ec4b7377ae5dff2436e974a675297ec5d269b4a747f7920 files/digest-kdemultimedia-kappfinder-data-3.5.3 265
+MD5 1f9576dca7cad899cdc4ed331e7dd98b files/digest-kdemultimedia-kappfinder-data-3.5.4 265
+RMD160 ff95d47813141fe56a50a542737ea01a1ad5d736 files/digest-kdemultimedia-kappfinder-data-3.5.4 265
+SHA256 fe2c54837176f0f36f4fe7f008c1590521101a0d636e6fe5fed7f09975dcf8e7 files/digest-kdemultimedia-kappfinder-data-3.5.4 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEiCuGAiZjviIA2XgRAsSTAJ9ZWHj2xoqRkCsY55GjVI0/E7+MtACg7JpU
-dBC2JuBt04wKjOfPrgq/saY=
-=Ycgg
+iD8DBQFExaG9AiZjviIA2XgRApPHAJoDGVozwvnUVmEgVsrgAUfG6bsR0wCdEyMl
+0myz5BFxhVhRu2sNu986gkU=
+=/39s
 -----END PGP SIGNATURE-----

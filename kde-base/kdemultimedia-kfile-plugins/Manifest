@@ -4,6 +4,7 @@ Hash: SHA1
 DIST kdemultimedia-3.4.3.tar.bz2 5495757 RMD160 318ebd3149019ec2e5d98b57a548d3ef350a7924 SHA256 adc29df6c427b505c3b1559c2ea393e9a65c3120dfce5207419ba5dd16aa2d4e
 DIST kdemultimedia-3.5.2.tar.bz2 6272386 RMD160 4f6fcb790e63f4af7a309677babd5e2ed938514f SHA1 68e5e24709a2c06777bb3f12fc76e733f5896c5d SHA256 01562af68008c10c04346a94d0dea7cedcb77673c0b7cd5cfc74360bf309a2f8
 DIST kdemultimedia-3.5.3.tar.bz2 6276838 RMD160 2ae4ba9266b84b972e3bcd106896b6ea0124aa32 SHA1 2a75ba49bbc513b4ab5cb0d039949984742f94f5 SHA256 4e976190f71b4a86feb2350d014bb775d230feee0013ac92b40e4b0aaf23a12f
+DIST kdemultimedia-3.5.4.tar.bz2 6276789 RMD160 43cb463eb609fc7d8104b069e64d8e6550440fff SHA1 a435563cc45fb8f26090471792956c03d50c51c2 SHA256 3ea07b8bd6340516642629b7e741d18cae53984ebb7d007acdb184e1c6f79d4b
 EBUILD kdemultimedia-kfile-plugins-3.4.3.ebuild 671 RMD160 69e4660a835e6a3b6cc5fdf46bbbc84f259e30f3 SHA1 75e26860db1f2e3a36e9f7bf4173486f6dc798a6 SHA256 0e9d935642d03682978142ffec7e0ae3ff4a253eaaefc37d65013b07765656ac
 MD5 937af5b05f577b850c8d5ce38f12d977 kdemultimedia-kfile-plugins-3.4.3.ebuild 671
 RMD160 69e4660a835e6a3b6cc5fdf46bbbc84f259e30f3 kdemultimedia-kfile-plugins-3.4.3.ebuild 671
@@ -16,10 +17,14 @@ EBUILD kdemultimedia-kfile-plugins-3.5.3.ebuild 689 RMD160 535260b43044c7287f6c3
 MD5 8d4ab8f4b4b06a9d0703c582a05f1dbb kdemultimedia-kfile-plugins-3.5.3.ebuild 689
 RMD160 535260b43044c7287f6c36543b994de2428fec72 kdemultimedia-kfile-plugins-3.5.3.ebuild 689
 SHA256 bb937c46c6a52347fe75d307879ad5f9ca8f801e08688169f765f1467a0a5078 kdemultimedia-kfile-plugins-3.5.3.ebuild 689
-MISC ChangeLog 7668 RMD160 0f39ed04e6c85cc470ed64b219ecf2d59a172d11 SHA1 8a01ec818c740ea2117cc4090c73e2e37e5f7612 SHA256 76d4996a24ecc9f1aab29e8c0d68bfabbae87a2b6eac96eff2c4ce9f47cc65af
-MD5 0d381c55a9c37995274192fd0d94be7d ChangeLog 7668
-RMD160 0f39ed04e6c85cc470ed64b219ecf2d59a172d11 ChangeLog 7668
-SHA256 76d4996a24ecc9f1aab29e8c0d68bfabbae87a2b6eac96eff2c4ce9f47cc65af ChangeLog 7668
+EBUILD kdemultimedia-kfile-plugins-3.5.4.ebuild 689 RMD160 804adb789a3c71f45721ac567585a0fdc07d495b SHA1 ba05445db2bf2fd683a353e3fa44e79bddec8fed SHA256 da25b5f4faeb3f131802723ae54797159d016c1d9ecff92c60483397f1f86f47
+MD5 3fd128e2a90b3a033822e5c37df0c4b1 kdemultimedia-kfile-plugins-3.5.4.ebuild 689
+RMD160 804adb789a3c71f45721ac567585a0fdc07d495b kdemultimedia-kfile-plugins-3.5.4.ebuild 689
+SHA256 da25b5f4faeb3f131802723ae54797159d016c1d9ecff92c60483397f1f86f47 kdemultimedia-kfile-plugins-3.5.4.ebuild 689
+MISC ChangeLog 7848 RMD160 f61dc71b37f49c1cbb66462ddf477f017e8958e9 SHA1 7172f1ef9780fbc88288b83e0079803e4e5b8500 SHA256 0d3fa01c734127fb70a23f731a34752c6aa26ef751e7f7e30fd80d35c07e4627
+MD5 e15b9de70524a64e83427cbafe3056c0 ChangeLog 7848
+RMD160 f61dc71b37f49c1cbb66462ddf477f017e8958e9 ChangeLog 7848
+SHA256 0d3fa01c734127fb70a23f731a34752c6aa26ef751e7f7e30fd80d35c07e4627 ChangeLog 7848
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -33,10 +38,13 @@ SHA256 da5960a94d94974711cce49b9e15a2465e392feb2dd48db846adce8d9e02d864 files/di
 MD5 ce67ee8c3e2975ac7bc343af2f0ef87f files/digest-kdemultimedia-kfile-plugins-3.5.3 265
 RMD160 1dedc9e07392c66c424497d1e686c3af8ec30ff5 files/digest-kdemultimedia-kfile-plugins-3.5.3 265
 SHA256 40d78b21ca110b497ec4b7377ae5dff2436e974a675297ec5d269b4a747f7920 files/digest-kdemultimedia-kfile-plugins-3.5.3 265
+MD5 1f9576dca7cad899cdc4ed331e7dd98b files/digest-kdemultimedia-kfile-plugins-3.5.4 265
+RMD160 ff95d47813141fe56a50a542737ea01a1ad5d736 files/digest-kdemultimedia-kfile-plugins-3.5.4 265
+SHA256 fe2c54837176f0f36f4fe7f008c1590521101a0d636e6fe5fed7f09975dcf8e7 files/digest-kdemultimedia-kfile-plugins-3.5.4 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEiCuvAiZjviIA2XgRAt1dAJ0S4qlhWQvpgajMFtUVbDderIEPFgCfRHyq
-vskQBXzQCQ0CbIvl0CRyrQk=
-=yfS6
+iD8DBQFExaIDAiZjviIA2XgRApicAKCMqv7ZzytNsUBauwbIePRAcMC5HwCfcVyQ
+QELmq3G5BBxjxrPvQCsr9Jw=
+=9k8r
 -----END PGP SIGNATURE-----

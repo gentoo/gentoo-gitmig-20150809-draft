@@ -8,6 +8,7 @@ SHA256 b0a2bfee291d830ad6f936ad112eecd4cc4325d218508a7faa2c10d5cbb105f1 files/co
 DIST kdegraphics-3.4.3.tar.bz2 6554272 RMD160 adc456d6987f759f0a03b20e21a98b0cc5f096dd SHA256 c686cbc88d4d49c16f8ff16f2d2a9c3527cd8578b8ec1fcc76d126bd1cee50fb
 DIST kdegraphics-3.5.2.tar.bz2 7288264 RMD160 cf2fce91b76af7d570b20f336ba551c5c3bd767f SHA1 80703d46fd90b7ab95f92d7b7c411a04f431d13b SHA256 b33e26d99188f0aee2dc0ff95923a1c1bca7f2a2510a1f761b155b8d2781e64f
 DIST kdegraphics-3.5.3.tar.bz2 7300366 RMD160 9c3ee5d1f7e767eb2be854fd0e3a9b0ac90d81bf SHA1 7ea559a592bfcd914cc9c1ef923bcc63f2db7c2c SHA256 1ee3895002a2cb7e6da2d27cd330141acf40dbdb9f3683c7685fd4ff71319861
+DIST kdegraphics-3.5.4.tar.bz2 7326485 RMD160 a3faa89ffe551af7078c0fc52f0dada178f22d47 SHA1 62613a9bdfc2d4975e24f9cc689cac00dcb72637 SHA256 88d9801bd13eec622f17528f61ccfb509a8aeb34befa1f2428ad36b7b57e756e
 EBUILD kdegraphics-kfile-plugins-3.4.3.ebuild 799 RMD160 879cf10566174ebc61330bdecb965eada87b1bff SHA1 a68024a8871f8d4909e10d2a13d44c973df8ccf8 SHA256 2b1ae487a287c84774618c1cc0d5e36996c0f2634003681f74f35012102ae256
 MD5 6f5d5435323e929500d392365a5196f8 kdegraphics-kfile-plugins-3.4.3.ebuild 799
 RMD160 879cf10566174ebc61330bdecb965eada87b1bff kdegraphics-kfile-plugins-3.4.3.ebuild 799
@@ -20,10 +21,14 @@ EBUILD kdegraphics-kfile-plugins-3.5.3.ebuild 845 RMD160 6988c941babdfe12e303bf1
 MD5 7c9f86ec8bf02a1583d27919bc9edf16 kdegraphics-kfile-plugins-3.5.3.ebuild 845
 RMD160 6988c941babdfe12e303bf113e5adeb9a7f14431 kdegraphics-kfile-plugins-3.5.3.ebuild 845
 SHA256 761278b64dff1f4eeb38256a04e70fc080836a0640085e2efaf50ee89957ce02 kdegraphics-kfile-plugins-3.5.3.ebuild 845
-MISC ChangeLog 7783 RMD160 d36337ea2e6b784ca5f4e98bd2621155b0e30578 SHA1 31be530dbc7c5fc577494d54c491d08887c5b347 SHA256 2ac6c1a3439f8ba20fa4b4cb082cd1b6f3057abd2add35a4e1d544ae0761a1f6
-MD5 82e4eb982a75b883211313c485c1ad77 ChangeLog 7783
-RMD160 d36337ea2e6b784ca5f4e98bd2621155b0e30578 ChangeLog 7783
-SHA256 2ac6c1a3439f8ba20fa4b4cb082cd1b6f3057abd2add35a4e1d544ae0761a1f6 ChangeLog 7783
+EBUILD kdegraphics-kfile-plugins-3.5.4.ebuild 845 RMD160 90143cbc0ba5fa8dfc91f700ab76256029dbada4 SHA1 29fefd76d53484d95af69ccaa5d8e136508cfddd SHA256 4f533188d1b7248217621def67ce61e4ac0300f41532d2fbe531fa13d3782f0f
+MD5 7db135f8289c646f13d250a21f0cccf7 kdegraphics-kfile-plugins-3.5.4.ebuild 845
+RMD160 90143cbc0ba5fa8dfc91f700ab76256029dbada4 kdegraphics-kfile-plugins-3.5.4.ebuild 845
+SHA256 4f533188d1b7248217621def67ce61e4ac0300f41532d2fbe531fa13d3782f0f kdegraphics-kfile-plugins-3.5.4.ebuild 845
+MISC ChangeLog 7959 RMD160 8043f6cbe24bb0145b23e4b00b5c8c19523e412d SHA1 fc720c82e269d01797b73675ca35339cfde5226d SHA256 650cca9f0dd17693dfef15695682ea60a752871a1f9e245027bf35318def0b9f
+MD5 40417d67a938cbfc77956733ad3987d1 ChangeLog 7959
+RMD160 8043f6cbe24bb0145b23e4b00b5c8c19523e412d ChangeLog 7959
+SHA256 650cca9f0dd17693dfef15695682ea60a752871a1f9e245027bf35318def0b9f ChangeLog 7959
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -37,10 +42,13 @@ SHA256 087152d6d869b8938c16752f1b5571e63dc1db0fa19f2e8913c00e77cebe3970 files/di
 MD5 03c1345aa6237d6cb73d22270a183117 files/digest-kdegraphics-kfile-plugins-3.5.3 259
 RMD160 d77db58818ab5e93d4fd806625841703d5f6a37d files/digest-kdegraphics-kfile-plugins-3.5.3 259
 SHA256 9d1e4c77ffd79004d3acdf478297dfb48c8f906e4312e681ee9316d528cae3fe files/digest-kdegraphics-kfile-plugins-3.5.3 259
+MD5 788c3cbb2a49b3eab447bf1c2919fe62 files/digest-kdegraphics-kfile-plugins-3.5.4 259
+RMD160 7f06dfe6cd7e25dcc4e87486919c80447f065ca5 files/digest-kdegraphics-kfile-plugins-3.5.4 259
+SHA256 1a8fe4344db81cda0a73f7c284c13169b3c17d13dc0e644a578fb5f12e5cf48a files/digest-kdegraphics-kfile-plugins-3.5.4 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEmpj6AiZjviIA2XgRAvdAAJ4kF/L0ecr+5Y6x74ZrML5hpc0pUACfUz1I
-wiv0c4ps3Zy+gDjX2zzfCuM=
-=cfKy
+iD8DBQFExZ9mAiZjviIA2XgRAo2GAKCyzOYlEDlVaTQvPgLCmFo4Tboe5wCgq0jx
+xjnSjxuWmrxpOpgK/NAmJm8=
+=qUvZ
 -----END PGP SIGNATURE-----

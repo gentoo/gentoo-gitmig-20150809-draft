@@ -4,6 +4,7 @@ Hash: SHA1
 DIST kdeaddons-3.4.3.tar.bz2 1593317 RMD160 1c11919ecbf1cfc31423e9fcda21e3c223ec1b28 SHA256 eec9d764d67cb2b93d86b3bde61736ff29214da1cf8a02fa7c7d80c6170de41b
 DIST kdeaddons-3.5.2.tar.bz2 1640284 RMD160 bc2ce1f93b34fcb2c7662da22edf4894c6524a12 SHA1 9d47ca0accdb37aa5c1f05dccd2991119800dbc8 SHA256 2a3eea9ff6b550b90d3f51d4862f7d7b992182ac225fdac0684cc16fb990c2ec
 DIST kdeaddons-3.5.3.tar.bz2 1646490 RMD160 c9b3eb823c4a66fc0b92fa932fc8312143c4fee3 SHA1 fd202fd051983765ec7b38bf0d5a7ac4c36cfb1f SHA256 a78e407820e7734b6374fd008560a7d3c0b22518cc29264560fa9df4239d6329
+DIST kdeaddons-3.5.4.tar.bz2 1653229 RMD160 59c0f608f93192291ae7ca37382896d5cea55aea SHA1 1e3957d7effb394a92f35a2d1b12d1c4023fcfbc SHA256 b80db0ba118ce345315d99800d56972a3c93b95f598830f71de27af7ba5b003c
 EBUILD konqueror-akregator-3.4.3.ebuild 668 RMD160 21f032aaafdcafc8fe06a5116bfecea00d7bbec0 SHA1 b688c078fce8279fe9eb3a34895c490a5dcd01ac SHA256 fd6d88cf25c0a993fc79a4e4e69e45a05afef2270543830b1b623aa0e2b3c0ef
 MD5 9d037595ab71867865909bc152a9e5b8 konqueror-akregator-3.4.3.ebuild 668
 RMD160 21f032aaafdcafc8fe06a5116bfecea00d7bbec0 konqueror-akregator-3.4.3.ebuild 668
@@ -16,10 +17,14 @@ EBUILD konqueror-akregator-3.5.3.ebuild 676 RMD160 18c5c6ec8ddbffd656d2a4eb52a48
 MD5 31dc56560e831b8048c6c9299afedce9 konqueror-akregator-3.5.3.ebuild 676
 RMD160 18c5c6ec8ddbffd656d2a4eb52a48350a9c2e0d6 konqueror-akregator-3.5.3.ebuild 676
 SHA256 6ad77074938b22098ceffc08b14f5f8f9373e72ec691f9c84423139667551eaf konqueror-akregator-3.5.3.ebuild 676
-MISC ChangeLog 6490 RMD160 1e387fb874f1b9e86ead9dbee5b37fad6c6d85c0 SHA1 25a634dcc2c19e76ef830a7bdc2a26298dd1c75d SHA256 0b6440771b8579faeb87c2250f8b4f3bd393a30d01f7b5afc6e2770c9e36693d
-MD5 39b582fe8dea46d7e90f9b507ca59061 ChangeLog 6490
-RMD160 1e387fb874f1b9e86ead9dbee5b37fad6c6d85c0 ChangeLog 6490
-SHA256 0b6440771b8579faeb87c2250f8b4f3bd393a30d01f7b5afc6e2770c9e36693d ChangeLog 6490
+EBUILD konqueror-akregator-3.5.4.ebuild 674 RMD160 21d8c4625a2e50f68afc2114c832f9451f1c6bc1 SHA1 60f0dea71729af03f3f6f8f979e87408feb3df2c SHA256 cab0f406ac135bedd9e7bfdf683fdfb2de4251bb5cd7f81c0adfad71e04d67c0
+MD5 ddea5a4c8ff6327b1998c9989171bf63 konqueror-akregator-3.5.4.ebuild 674
+RMD160 21d8c4625a2e50f68afc2114c832f9451f1c6bc1 konqueror-akregator-3.5.4.ebuild 674
+SHA256 cab0f406ac135bedd9e7bfdf683fdfb2de4251bb5cd7f81c0adfad71e04d67c0 konqueror-akregator-3.5.4.ebuild 674
+MISC ChangeLog 6654 RMD160 21545975ae124b43d97aabed2ecede482d542581 SHA1 933c61bfdf6778ec10f3babef94be708c51b0df2 SHA256 ea02ccef7ee8979864aa1b1bc6e2ed4e05a9659b8762c98e052206252206471e
+MD5 ef6828e9aaf5c0d5a67ceb2984cbe8e6 ChangeLog 6654
+RMD160 21545975ae124b43d97aabed2ecede482d542581 ChangeLog 6654
+SHA256 ea02ccef7ee8979864aa1b1bc6e2ed4e05a9659b8762c98e052206252206471e ChangeLog 6654
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -33,10 +38,13 @@ SHA256 f5eb118862fc6790d69ceb8771ddb6feb108003b6c8147c31412bea7a36b4d8b files/di
 MD5 fe87aa2a226c3d223f80fd6695141fa8 files/digest-konqueror-akregator-3.5.3 253
 RMD160 7cbfbb5dde613e0ab1039a5b9124ffd9e6f413c5 files/digest-konqueror-akregator-3.5.3 253
 SHA256 1bf34385e31edf42e9463af567e33db94d4c568246f174df253041b90ac55ec2 files/digest-konqueror-akregator-3.5.3 253
+MD5 ddb030b325d9ae183b03c0bf584e6246 files/digest-konqueror-akregator-3.5.4 253
+RMD160 164541f669efbb5ce8c9aff492a5af4aee4c9c16 files/digest-konqueror-akregator-3.5.4 253
+SHA256 5df449cd3a839cdacd0eaf590422aba818c5d5af82f91763f3e8f5efb41f5ef2 files/digest-konqueror-akregator-3.5.4 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEfz3HAiZjviIA2XgRAqa5AJ9czsHqWhO21OvpagFbazx737EARgCg9DSS
-WGhQZ2cyNjOH1w1yWEHzOgs=
-=mZOh
+iD8DBQFExcMGAiZjviIA2XgRAlSzAKCgezZSA7qGrBKRdFgzpQ0a4NdH5wCfWFz3
+BT3a/u+kETWDVa+CQSpMfgI=
+=/9LG
 -----END PGP SIGNATURE-----
