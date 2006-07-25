@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-mpg123
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/ChangeLog,v 1.35 2006/06/01 16:26:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-mpg123/ChangeLog,v 1.36 2006/07/25 02:36:55 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  artsplugin-mpg123-3.5.0.ebuild:
+  Bump to 3.5.4 (pre-release).
 
   01 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   artsplugin-mpg123-3.5.0.ebuild:

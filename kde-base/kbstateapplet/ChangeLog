@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kbstateapplet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbstateapplet/ChangeLog,v 1.47 2006/06/01 17:04:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbstateapplet/ChangeLog,v 1.48 2006/07/25 03:31:35 flameeyes Exp $
+
+*kbstateapplet-3.5.4 (25 Jul 2006)
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kbstateapplet-3.5.4.ebuild:
+  Bump to 3.5.4 (pre-release).
 
 *kbstateapplet-3.5.3 (01 Jun 2006)
 

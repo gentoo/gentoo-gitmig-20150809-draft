@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.28 2006/07/07 09:33:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.29 2006/07/25 02:48:30 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  dcoppython-3.5.0.ebuild:
+  Bump to 3.5.4 (pre-release).
 
   07 Jul 2006; Markus Rothe <corsair@gentoo.org> dcoppython-3.5.0.ebuild:
   Stable on ppc64
