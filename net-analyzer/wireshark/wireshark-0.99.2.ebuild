@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.8 2006/07/20 18:31:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.2.ebuild,v 1.9 2006/07/25 14:00:18 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils autotools libtool
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.wireshark.org/download/src/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
-IUSE="adns gtk ipv6 snmp ssl kerberos threads"
+IUSE="adns gtk ipv6 snmp ssl kerberos threads selinux"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	!net-analyzer/ethereal
@@ -29,7 +29,8 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	net-libs/libpcap
 	>=dev-libs/libpcre-4.2
 	adns? ( net-libs/adns )
-	kerberos? ( virtual/krb5 )"
+	kerberos? ( virtual/krb5 )
+	selinux? ( sec-policy/selinux-wireshark )"
 # lua fails with version 5.0 and 5.1 is not in portage yet - 2006-04-25	
 #	lua? ( >=dev-lang/lua-5.1 )"
 
