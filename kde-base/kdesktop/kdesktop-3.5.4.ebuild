@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.4.ebuild,v 1.1 2006/07/25 05:12:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/kdesktop-3.5.4.ebuild,v 1.2 2006/07/25 11:29:53 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -39,8 +39,6 @@ KMCOMPILEONLY="kcontrol/background
 	kdmlib/"
 KMNODOCS=true
 
-PATCHES="${FILESDIR}/${P}-screensaver.patch"
-
 src_compile() {
 	myconf="${myconf} $(use_with xscreensaver)"
 	kde-meta_src_compile
@@ -50,9 +48,9 @@ src_install() {
 	# ugly, needs fixing: don't install kcontrol/background
 	kde-meta_src_install
 
-	rmdir ${D}/${PREFIX}/share/templates/.source/emptydir
+	rmdir "${D}/${PREFIX}/share/templates/.source/emptydir"
 }
 
 pkg_postinst() {
-	mkdir -p ${PREFIX}/share/templates/.source/emptydir
+	mkdir -p "${PREFIX}/share/templates/.source/emptydir"
 }
