@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.4 2005/07/07 09:54:28 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.5 2006/07/25 09:29:20 dragonheart Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ src_install () {
 	fi
 
 	dodoc README
-	newdoc ethereal/README  README.ethereal
+	newdoc ethereal/README  README.wireshark
 	newdoc irattach/README  README.irattach
 	newdoc irdadump/README  README.irdadump
 	newdoc irdaping/README  README.irdaping

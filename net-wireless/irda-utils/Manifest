@@ -1,11 +1,54 @@
-MD5 45dfce76b4f3226d1d00accfad1d992e ChangeLog 4238
-MD5 ef26e8a578b5a78843863316b3223e67 files/digest-irda-utils-0.9.16-r1 69
-MD5 ed1b63c514ba2eaf9aa76adc8f53b8b1 files/digest-irda-utils-0.9.17_pre5 74
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX irda-utils-0.9.16-irkbd.patch 505 RMD160 0d23d2f5e72500378592fbbafa2582cac58787f7 SHA1 fc4ba50e3fb5e378fdcb64c9c86c44f398436f64 SHA256 1c97c8d5a3e4266a5be4c0da41368b0d8cf43a1645285a85e3f0a7c1744dc6cd
 MD5 b8b13a78fe0cbed2c3ce00afecd5adc1 files/irda-utils-0.9.16-irkbd.patch 505
+RMD160 0d23d2f5e72500378592fbbafa2582cac58787f7 files/irda-utils-0.9.16-irkbd.patch 505
+SHA256 1c97c8d5a3e4266a5be4c0da41368b0d8cf43a1645285a85e3f0a7c1744dc6cd files/irda-utils-0.9.16-irkbd.patch 505
+AUX irda-utils-gcc3.4-fix.patch 400 RMD160 bd8e0fd36370bf01593a7e300625244fdc91a30a SHA1 f31963c39038d37f0141149a1c50c92e2e645302 SHA256 26510de6ac30016a11d67eb2c912d9203828c42257f049bf64b7ca0305dc2326
 MD5 23a2271075f62051f30dd6ed9bbd3f85 files/irda-utils-gcc3.4-fix.patch 400
+RMD160 bd8e0fd36370bf01593a7e300625244fdc91a30a files/irda-utils-gcc3.4-fix.patch 400
+SHA256 26510de6ac30016a11d67eb2c912d9203828c42257f049bf64b7ca0305dc2326 files/irda-utils-gcc3.4-fix.patch 400
+AUX irda-utils-rh1.patch 444 RMD160 97a24330f9b3c639f9d53ad25008d07b59391af6 SHA1 7fbbb6438b1057eaad65597dff29a1727d09573e SHA256 725cd43b05dfc9f05f49ee8d3a81050d3421639c8440092c4d9bed5de1c31b30
 MD5 fa2075c93b60699aaa4017ace46406ef files/irda-utils-rh1.patch 444
+RMD160 97a24330f9b3c639f9d53ad25008d07b59391af6 files/irda-utils-rh1.patch 444
+SHA256 725cd43b05dfc9f05f49ee8d3a81050d3421639c8440092c4d9bed5de1c31b30 files/irda-utils-rh1.patch 444
+AUX irda.conf 313 RMD160 45626a6869a6e40b5da57b95c5a72b5996cc66eb SHA1 48d2ecf98c3493b658d51192db2855167d330777 SHA256 c5c014af8bef432a6d987c7199d9aaca64fe74941502914fc445aa8f2f2dd4e7
 MD5 db4f871dba7e66e861503b792ca0a7e3 files/irda.conf 313
+RMD160 45626a6869a6e40b5da57b95c5a72b5996cc66eb files/irda.conf 313
+SHA256 c5c014af8bef432a6d987c7199d9aaca64fe74941502914fc445aa8f2f2dd4e7 files/irda.conf 313
+AUX irda.rc 993 RMD160 efdc4abacb06477ba716be8f5b079a5654bd8e7a SHA1 481afc6158f164106d98fae3a58e66732fbe53dd SHA256 30dddbc86255fc226cf49d6ea7662423654ae500a3a75a8b5e4849f5570ab2ac
 MD5 a6ae7b1fa78d450f264d35fa41efb0b3 files/irda.rc 993
+RMD160 efdc4abacb06477ba716be8f5b079a5654bd8e7a files/irda.rc 993
+SHA256 30dddbc86255fc226cf49d6ea7662423654ae500a3a75a8b5e4849f5570ab2ac files/irda.rc 993
+DIST irda-utils-0.9.16.tar.gz 306262
+DIST irda-utils-0.9.17-pre5.tar.gz 311160
+EBUILD irda-utils-0.9.16-r1.ebuild 2014 RMD160 07335c87d4ab4ea7837e3bc7fe6e5251a62fde19 SHA1 41f3a0ecd9fff4f8b76e755de720605d97558dd7 SHA256 f2c0b03b54a5c076df6625418c7fb3c1604633ab781d7ca763184c16184dc1eb
 MD5 fb7c6c008346d4926c62cc7078e11989 irda-utils-0.9.16-r1.ebuild 2014
-MD5 b4b8b0e48c7fbd6f606e1da66da2b0c3 irda-utils-0.9.17_pre5.ebuild 2016
+RMD160 07335c87d4ab4ea7837e3bc7fe6e5251a62fde19 irda-utils-0.9.16-r1.ebuild 2014
+SHA256 f2c0b03b54a5c076df6625418c7fb3c1604633ab781d7ca763184c16184dc1eb irda-utils-0.9.16-r1.ebuild 2014
+EBUILD irda-utils-0.9.17_pre5.ebuild 2024 RMD160 716c0273e18fa3031015ff8fd9f35f43ce7f5555 SHA1 263d5c49e0c15c431c89be4b91db1e26daa573c8 SHA256 1ebed9d409176d39bb067b0e1dce996f8f86fa29fefa2fa470afccd932f9b85a
+MD5 a35dbe03cb70c980bac59f1553590eed irda-utils-0.9.17_pre5.ebuild 2024
+RMD160 716c0273e18fa3031015ff8fd9f35f43ce7f5555 irda-utils-0.9.17_pre5.ebuild 2024
+SHA256 1ebed9d409176d39bb067b0e1dce996f8f86fa29fefa2fa470afccd932f9b85a irda-utils-0.9.17_pre5.ebuild 2024
+MISC ChangeLog 4368 RMD160 0da22aa3eba0cb8adb7edbd8cd483f0d391db238 SHA1 87ced85b53c5ee3f976be13dc27ef9c78fb047b9 SHA256 1c90c1974a2e407e0576dd34bc097e7afb93dd9bbc32fbae5e6ec914fba764ea
+MD5 65558294aeff0e66ecc4980ca93c19ad ChangeLog 4368
+RMD160 0da22aa3eba0cb8adb7edbd8cd483f0d391db238 ChangeLog 4368
+SHA256 1c90c1974a2e407e0576dd34bc097e7afb93dd9bbc32fbae5e6ec914fba764ea ChangeLog 4368
+MISC metadata.xml 219 RMD160 632d03e5f089d22e5e3c1fb3a8e9617199c55b75 SHA1 62d8542e685c17cbc8d4098253a22f09b315d08f SHA256 e81c6959d93f6ad6ad395b681eb13b0b8ba12ed3ff5db392e3b93c68eedcebfb
 MD5 dc1773fc29727c205a632b4a780a5d21 metadata.xml 219
+RMD160 632d03e5f089d22e5e3c1fb3a8e9617199c55b75 metadata.xml 219
+SHA256 e81c6959d93f6ad6ad395b681eb13b0b8ba12ed3ff5db392e3b93c68eedcebfb metadata.xml 219
+MD5 ef26e8a578b5a78843863316b3223e67 files/digest-irda-utils-0.9.16-r1 69
+RMD160 4f0ed209e4bcbfb831f8847b4e30bd63b60b2e8a files/digest-irda-utils-0.9.16-r1 69
+SHA256 53dc54bc98dbdd3a51dbe18f1a0bfd1af84ce05bb8c701226b5337a7851dbaea files/digest-irda-utils-0.9.16-r1 69
+MD5 ed1b63c514ba2eaf9aa76adc8f53b8b1 files/digest-irda-utils-0.9.17_pre5 74
+RMD160 9daf3830d9c5e03f1b31bd40be13614cef164da9 files/digest-irda-utils-0.9.17_pre5 74
+SHA256 10bd29be89567600be69c75ecc0c4414709f24fc5eb121fde957b4f409bd8f64 files/digest-irda-utils-0.9.17_pre5 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFExeTdmdTrptrqvGERAkbqAKCa9yf0kieC2zho1OoNvXdE/VLBBwCffk0F
+b87TJv0C5jlObG2PgjdSiMk=
+=WRjj
+-----END PGP SIGNATURE-----
