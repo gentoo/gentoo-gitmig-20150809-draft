@@ -6,6 +6,7 @@ net-misc/lksctp-tools
 net-misc/lksctp-tools
 net-misc/mrouted
 sys-apps/hal
+sys-apps/hwinfo
 sys-apps/ivman
 sys-apps/raidutils
 sys-cluster/cman-headers
