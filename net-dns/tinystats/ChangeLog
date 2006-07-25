@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/tinystats
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/tinystats/ChangeLog,v 1.1 2006/05/14 14:33:52 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/tinystats/ChangeLog,v 1.2 2006/07/25 08:50:17 bangert Exp $
+
+  12 Jun 2006; Thilo Bangert <bangert@gentoo.org> ChangeLog:
+  fix ChangeLog
+
+*tinystats-1.1 (14 May 2006)
 
   14 May 2006; Thilo Bangert <bangert@gentoo.org> ChangeLog:
   initial import. tinystats is a filter that reads tinydns logs 
