@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/libptp2-1.1.0.ebuild,v 1.5 2006/07/25 04:26:13 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/libptp2-1.1.0.ebuild,v 1.6 2006/07/25 04:47:20 dragonheart Exp $
 
 inherit eutils
 
-DESCRIPTION="Library communicating with PTP enabled devices (digital photo cameras and so on)."
+DESCRIPTION="Library and client for communicating with PTP enabled devices (e.g. digital photo cameras)."
 HOMEPAGE="http://sourceforge.net/projects/libptp/"
 SRC_URI="mirror://sourceforge/libptp/${P}.tar.gz"
 LICENSE="GPL-2"

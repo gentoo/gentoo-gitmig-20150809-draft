@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libptp2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.14 2006/07/25 04:26:13 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/ChangeLog,v 1.15 2006/07/25 04:47:20 dragonheart Exp $
+
+  25 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/libptp2-1.0.1-libusbversion.patch,
+  -files/libptp2-1.0.2-libusbversion.patch,
+  -files/libptp2-1.0.2-parallel.patch, -libptp2-1.0.1.ebuild,
+  -libptp2-1.0.2.ebuild, libptp2-1.1.0.ebuild:
+  improved description (bug #140720) suggested by Christian 'Opfer' Faulhammer
+  and removed older versions
 
   25 Jul 2006; Joshua Jackson <tsunam@gentoo.org> libptp2-1.1.0.ebuild:
   Stable x86; bug #140720
