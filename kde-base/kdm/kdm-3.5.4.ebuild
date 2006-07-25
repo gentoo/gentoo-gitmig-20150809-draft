@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.4.ebuild,v 1.1 2006/07/25 05:25:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.4.ebuild,v 1.2 2006/07/25 11:17:03 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -32,9 +32,6 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466)
 	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
-
-	# Fix KDM symlink vulnerability, bug #136201
-	epatch "${FILESDIR}/post-3.5.0-kdebase-kdm.diff"
 
 	epatch "${FILESDIR}/${P}-strict-aliasing.patch"
 }
