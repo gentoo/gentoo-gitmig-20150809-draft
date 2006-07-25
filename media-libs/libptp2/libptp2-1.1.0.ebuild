@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/libptp2-1.1.0.ebuild,v 1.4 2006/07/22 08:59:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libptp2/libptp2-1.1.0.ebuild,v 1.5 2006/07/25 04:26:13 tsunam Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/libptp/"
 SRC_URI="mirror://sourceforge/libptp/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE=""
 RDEPEND=">=dev-libs/libusb-0.1.8"
 DEPEND="${RDEPEND}
