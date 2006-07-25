@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-3.5.3.ebuild,v 1.1 2006/06/01 19:49:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/kscreensaver-3.5.3.ebuild,v 1.2 2006/07/25 07:52:59 flameeyes Exp $
 
 KMNAME=kdebase
-MAXKDEVER=$PV
+MAXKDEVER=3.5.4
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

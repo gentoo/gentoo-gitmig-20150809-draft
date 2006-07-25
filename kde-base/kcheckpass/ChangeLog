@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.52 2006/06/11 15:00:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.53 2006/07/25 03:45:43 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kcheckpass-3.5.0.ebuild:
+  Bump to 3.5.4 (pre-release).
 
   11 Jun 2006; Carsten Lohrke <carlo@gentoo.org> kcheckpass-3.5.0.ebuild:
   Restore keywords.

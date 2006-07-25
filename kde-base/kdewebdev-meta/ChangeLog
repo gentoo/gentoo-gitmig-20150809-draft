@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.48 2006/06/01 18:14:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.49 2006/07/25 05:19:36 flameeyes Exp $
+
+*kdewebdev-meta-3.5.4 (25 Jul 2006)
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kdewebdev-meta-3.5.4.ebuild:
+  Bump to 3.5.4 (pre-release).
 
 *kdewebdev-meta-3.5.3 (01 Jun 2006)
 

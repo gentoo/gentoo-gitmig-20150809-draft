@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeedu-applnk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.44 2006/06/01 17:40:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-applnk/ChangeLog,v 1.45 2006/07/25 04:30:29 flameeyes Exp $
+
+*kdeedu-applnk-3.5.4 (25 Jul 2006)
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kdeedu-applnk-3.5.4.ebuild:
+  Bump to 3.5.4 (pre-release).
 
 *kdeedu-applnk-3.5.3 (01 Jun 2006)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mpeglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.38 2006/07/09 19:55:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.39 2006/07/25 09:22:13 flameeyes Exp $
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> mpeglib-3.5.1.ebuild:
+  Bump to 3.5.4 (pre-release).
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> mpeglib-3.5.1.ebuild:
   Pinpoint virtual/x11 version to less than 7.

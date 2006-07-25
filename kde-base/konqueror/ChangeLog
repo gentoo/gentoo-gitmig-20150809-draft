@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.54 2006/06/01 19:18:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.55 2006/07/25 07:05:37 flameeyes Exp $
+
+*konqueror-3.5.4 (25 Jul 2006)
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +konqueror-3.5.4.ebuild:
+  Bump to 3.5.4 (pre-release).
 
 *konqueror-3.5.3 (01 Jun 2006)
 

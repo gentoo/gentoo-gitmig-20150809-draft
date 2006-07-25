@@ -1,21 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.2.ebuild,v 1.7 2006/07/07 09:36:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/kdejava-3.5.2.ebuild,v 1.8 2006/07/25 04:36:31 flameeyes Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY=qtjava
 KMCOPYLIB="libqtjavasupport qtjava/javalib/qtjava"
 KM_MAKEFILESREV=1
-MAXKDEVER=3.5.3
+MAXKDEVER=3.5.4
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE java bindings"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
-COMMONDEPEND="$(deprange-dual $PV 3.5.3 kde-base/kwin)
-	$(deprange-dual $PV 3.5.3 kde-base/kcontrol)
-	$(deprange $PV 3.5.3 kde-base/qtjava)"
+COMMONDEPEND="$(deprange-dual $PV 3.5.4 kde-base/kwin)
+	$(deprange-dual $PV 3.5.4 kde-base/kcontrol)
+	$(deprange $PV 3.5.4 kde-base/qtjava)"
 DEPEND="virtual/jdk $COMMONDEPEND"
 RDEPEND="virtual/jre $COMMONDEPEND"
 OLDDEPEND="~kde-base/kwin-$PV ~kde-base/kcontrol-$PV ~kde-base/qtjava-$PV virtual/jdk"

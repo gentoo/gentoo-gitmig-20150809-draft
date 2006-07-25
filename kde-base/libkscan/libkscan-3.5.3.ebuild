@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/libkscan-3.5.3.ebuild,v 1.1 2006/06/01 20:58:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/libkscan-3.5.3.ebuild,v 1.2 2006/07/25 09:12:55 flameeyes Exp $
 
 KMNAME=kdegraphics
-MAXKDEVER=$PV
+MAXKDEVER=3.5.4
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

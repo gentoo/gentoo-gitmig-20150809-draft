@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeartwork-wallpapers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.38 2006/06/01 17:31:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.39 2006/07/25 04:17:06 flameeyes Exp $
+
+*kdeartwork-wallpapers-3.5.4 (25 Jul 2006)
+
+  25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kdeartwork-wallpapers-3.5.4.ebuild:
+  Bump to 3.5.4 (pre-release).
 
 *kdeartwork-wallpapers-3.5.3 (01 Jun 2006)
 
