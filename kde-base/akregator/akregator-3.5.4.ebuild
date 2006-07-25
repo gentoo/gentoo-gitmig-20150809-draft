@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.4.ebuild,v 1.1 2006/07/25 02:27:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.4.ebuild,v 1.2 2006/07/25 17:47:56 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE news feed aggregator"
-KEYWORDS="~amd64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/kontact)
