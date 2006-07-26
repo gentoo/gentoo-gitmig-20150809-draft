@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.10 2006/07/15 09:46:39 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.11 2006/07/26 22:59:24 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -15,7 +15,7 @@ else
 	SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.bz2"
 fi
 
-PATCHLEVEL="57"
+PATCHLEVEL="58"
 
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -121,7 +121,7 @@ src_compile() {
 
 	# debug useflag used to emulate debug make targets. See bug #112980 and the
 	# xine maintainers guide.
-	use debug && append-flags -DDEBUG
+	use debug && append-flags -UNDEBUG -DDEBUG
 
 	local myconf
 
