@@ -1,3 +1,7 @@
+This patch was taken from http://blogs.gnome.org/view/rbultje/2006/07/21/0
+Thanks go to Ronald Bultje
+
+
 Index: uvcvideo.c
 ===================================================================
 --- uvcvideo.c	(revision 40)
