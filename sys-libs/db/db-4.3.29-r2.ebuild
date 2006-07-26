@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29-r2.ebuild,v 1.1 2006/07/25 21:14:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29-r2.ebuild,v 1.2 2006/07/26 09:11:38 azarah Exp $
 
 inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
 PATCHNO=${PV/*.*.*_p}
-if [ "${PATCHNO}" == "${PV}" ]; then
+if [[ ${PATCHNO} == "${PV}" ]] ; then
 	MY_PV=${PV}
 	MY_P=${P}
 	PATCHNO=0
@@ -16,12 +16,12 @@ else
 	MY_P=${PN}-${MY_PV}
 fi
 
-S=${WORKDIR}/${MY_P}/build_unix
+S="${WORKDIR}/${MY_P}/build_unix"
 DESCRIPTION="Berkeley DB"
 HOMEPAGE="http://www.sleepycat.com/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 #SRC_URI="ftp://ftp.sleepycat.com/releases/${MY_P}.tar.gz"
-for (( i=1 ; i<=$PATCHNO ; i++ )) ; do
+for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.sleepycat.com/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
@@ -37,23 +37,25 @@ RDEPEND="tcltk? ( dev-lang/tcl )
 	java? ( >=virtual/jre-1.4 )"
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd ${WORKDIR}/${MY_P}
-	for (( i=1 ; i<=$PATCHNO ; i++ ))
+	unpack "${MY_P}".tar.gz
+	cd "${WORKDIR}"/"${MY_P}"
+	for (( i=1 ; i<=${PATCHNO} ; i++ ))
 	do
-		epatch ${DISTDIR}/patch.${MY_PV}.${i}
+		epatch "${DISTDIR}"/patch."${MY_PV}"."${i}"
 	done
-	epatch ${FILESDIR}/${PN}-${SLOT}-libtool.patch
+	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-libtool.patch
 
-	epatch ${FILESDIR}/${PN}-4.3.27-fix-dep-link.patch
+	epatch "${FILESDIR}"/"${PN}"-4.3.27-fix-dep-link.patch
 
 	# use the includes from the prefix
-	epatch ${FILESDIR}/${PN}-${SLOT}-jni-check-prefix-first.patch
-	epatch ${FILESDIR}/${PN}-${SLOT}-listen-to-java-options.patch
+	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-jni-check-prefix-first.patch
+	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-listen-to-java-options.patch
 
-	gnuconfig_update "${S}/../dist"
+	gnuconfig_update "${S}"/../dist
 
-	sed -i -e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" ${S}/../dist/configure
+	sed -i \
+		-e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" \
+		"${S}"/../dist/configure
 }
 
 src_compile() {
@@ -99,11 +101,11 @@ src_compile() {
 		--datadir=/usr/share \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
-		--libdir=/usr/$(get_libdir) \
+		--libdir=/usr/"$(get_libdir)" \
 		--enable-compat185 \
 		--without-uniquename \
 		--enable-rpc \
-		--host=${CHOST} \
+		--host="${CHOST}" \
 		${myconf}  "${javaconf}" || die "configure failed"
 
 	emake -j1 || die "make failed"
@@ -121,12 +123,12 @@ src_install() {
 	db_src_install_usrlibcleanup
 
 	dodir /usr/sbin
-	mv ${D}/usr/bin/berkeley_db_svc ${D}/usr/sbin/berkeley_db43_svc
+	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db43_svc
 
 	if use java; then
-		java-pkg_regso ${D}/usr/lib/libdb_java*.so
-		java-pkg_dojar ${D}/usr/lib/*.jar
-		rm ${D}/usr/lib/*.jar
+		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
+		java-pkg_dojar "${D}"/usr/"$(get_libdir)"/*.jar
+		rm -f "${D}"/usr/"$(get_libdir)"/*.jar
 	fi
 }
 
