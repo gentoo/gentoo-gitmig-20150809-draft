@@ -1,6 +1,15 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.166 2006/07/23 12:17:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.167 2006/07/26 05:14:01 kumba Exp $
+
+  26 Jul 2006; Joshua Kinard <kumba@gentoo.org>
+  mozilla-firefox-1.5.0.4.ebuild:
+  Bump the patch version up to 1.2 because we added two mips patches that
+  allows firefox to work on mips. Also, the patches are now stored in CVS, and
+  are no longer individually compressed (*.patch vs. *.patch.bz2). See
+  gentoo/src/patchsets for more info, plus the make-tarball.sh script that can
+  generate new patchballs. Oh, and add unstable mips to keywords for a few
+  days.
 
   23 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
   mozilla-firefox-2.0_beta1.ebuild:

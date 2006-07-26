@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.4.ebuild,v 1.9 2006/07/20 08:13:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.4.ebuild,v 1.10 2006/07/26 05:14:01 kumba Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -8,15 +8,14 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedi
 
 LANGS="ar ca cs da de el en-GB es-AR es-ES fi fr ga-IE he hu it ja ko mk nb-NO nl pl pt-BR ro ru sk sl sv-SE tr zh-CN zh-TW"
 SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
-PVER="1.1"
+PVER="1.2"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
-	mirror://gentoo/${P}-patches-${PVER}.tar.bz2
-	http://gentooexperimental.org/~genstef/dist/${P}-patches-${PVER}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
-KEYWORDS="-* arm amd64 hppa ~ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="-* arm amd64 hppa ~ia64 ppc sparc x86 ~x86-fbsd ~mips"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
@@ -86,7 +85,9 @@ src_unpack() {
 
 	# Apply our patches
 	cd ${S} || die "cd failed"
-	EPATCH_FORCE="yes" epatch ${WORKDIR}/patch
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch ${WORKDIR}/patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
@@ -182,10 +183,10 @@ pkg_preinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	echo ""
-	einfo "We are removing old install before we continue. This is to help"
-	einfo "eliminate any problems during the install, sorry for those of you"
-	einfo "who disagree with this but this will ensure a sane build for everyone"
-	einfo "Comments and suggestion should be addressed to mozilla@gentoo.org"
+	einfo "Removing old installs though some really ugly code.  It potentially"
+	einfo "eliminates any problems during the install, however suggestions to"
+	einfo "replace this are highly welcome.  Send comments and suggestions to"
+	einfo "mozilla@gentoo.org"
 	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
 	echo ""
 }
