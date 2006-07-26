@@ -1,4 +1,6 @@
 MD5 4197da32cddfea28c963712c6c366408 gentoo-headers-2.6.11-5.tar.bz2 20873
+RMD160 f1d432d534ea49db77cb74396b3b90a32fc5e082 gentoo-headers-2.6.11-5.tar.bz2 20873
+SHA256 6b9ef1243c42d1bbb008c9df3766aaed30c0955e21aa552aea4e8f63aed4750f gentoo-headers-2.6.11-5.tar.bz2 20873
 MD5 0880556aadd7dc0b77258dcf4ea9b88b linux-2.6.11-m68k-headers.patch.bz2 12090
 RMD160 d3fc9886b6d2d17b01e37638fc831e1c29d7bdf7 linux-2.6.11-m68k-headers.patch.bz2 12090
 SHA256 0050ad1f1135289e004e45c952d81a58aa6bf947c57b6c31976ae518fb98be86 linux-2.6.11-m68k-headers.patch.bz2 12090
