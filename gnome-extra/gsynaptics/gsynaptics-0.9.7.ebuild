@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.7.ebuild,v 1.1 2006/07/04 18:57:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.7.ebuild,v 1.2 2006/07/26 15:57:14 compnerd Exp $
 
 inherit gnome2
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 pkg_postinst() {
-	gnome2_postinst
+	gnome2_pkg_postinst
 
 	echo
 	einfo "Ensure that the following line is in the InputDevice section in"
