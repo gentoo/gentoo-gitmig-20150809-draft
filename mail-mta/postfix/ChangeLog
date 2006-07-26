@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.106 2006/07/14 00:55:16 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.107 2006/07/26 16:14:38 langthang Exp $
+
+*postfix-2.2.11 (26 Jul 2006)
+
+  26 Jul 2006; Tuấn Văn <langthang@gentoo.org> +postfix-2.2.11.ebuild:
+  bump to patch 11. bump VDA patch to 2.2.10, bug #140099 reported by Alan Mosca 
+  <nitbix@nitbix.com>
 
 *postfix-2.3.0-r1 (14 Jul 2006)
 *postfix-2.3.0 (14 Jul 2006)
