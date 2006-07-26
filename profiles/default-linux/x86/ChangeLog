@@ -1,6 +1,25 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.8 2006/07/26 19:58:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.9 2006/07/26 20:30:23 wolf31o2 Exp $
+
+  26 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org> +2006.1/deprecated,
+  +2006.1/desktop/deprecated, +2006.1/desktop/make.defaults,
+  +2006.1/desktop/parent, +2006.1/desktop/virtuals, +2006.1/make.defaults,
+  +2006.1/packages, +2006.1/parent, +2006.1/profile.bashrc,
+  +2006.1/server/deprecated, +2006.1/server/make.defaults,
+  +2006.1/server/parent, +2006.1/server/profile.bashrc, -dev/2006.1/README,
+  -dev/2006.1/desktop/make.defaults, -dev/2006.1/desktop/parent,
+  -dev/2006.1/desktop/virtuals, -dev/2006.1/make.defaults,
+  -dev/2006.1/packages, -dev/2006.1/parent,
+  -dev/2006.1/server/make.defaults, -dev/2006.1/server/parent, +dev/parent,
+  -dev/profile.bashrc:
+  This is a fairly extensive change, though not invasive to anyone.  I have
+  moved the 2006.1 development profile out from the dev folder.  I have also
+  added a profile.bashrc to warn any users using it, as well as deprecation
+  files.  The parent for the dev profile has been set to ".." so it will be
+  identical to the x86 profile at this time.  The profile.bashrc for the
+  "server" subprofile informs users that it is not suitable for use, nor
+  supported, and recommends server users to use the hardened profiles.
 
   26 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org> -2005.0/deprecated,
   -2005.0/make.defaults, -2005.0/packages, -2005.0/parent:
