@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.2.ebuild,v 1.8 2006/07/25 09:37:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.2.ebuild,v 1.9 2006/07/26 07:35:18 flameeyes Exp $
 
 KMNAME=kdebindings
-KMEXTRACTONLY="kalyptus/kalyptus kalyptus/*.pm"
+KMEXTRACTONLY="kalyptus/"
 KM_MAKEFILESREV=1
 MAXKDEVER=3.5.4
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -25,6 +25,9 @@ PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 # so it's best to turn it off here. (I don't have that much RAM, so can't estimate
 # how much would be enough, but it's at least that much... --danarmak)
 src_compile() {
+	# Remove this to avoid strange errors
+	rm -f "${S}/kalyptus/configure.in"
+
 	kde-meta_src_compile myconf
 	# override myconf's setting of enable-final
 	myconf="$myconf --disable-final"
