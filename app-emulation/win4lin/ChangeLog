@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/win4lin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.23 2005/09/16 21:20:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/ChangeLog,v 1.24 2006/07/26 22:09:24 liquidx Exp $
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
@@ -84,12 +84,12 @@
  02 Mar 2003; J.Alberto Suárez L. <bass@gentoo.org> win4lin-4.0.16.ebuild:
  New version
 
-*win4lin-4.0.12 (10 Jan 2002)
+*win4lin-4.0.12 (10 Jan 2003)
   
-  28 Feb 2002; Alastair Tse <liquidx@gentoo.org> win4lin-4.0.12.ebuild:
+  28 Feb 2003; Alastair Tse <liquidx@gentoo.org> win4lin-4.0.12.ebuild:
   Updated IUSE field
 
-  10 Jan 2002; J.Alberto Suárez L. <bass@gentoo.org> win4lin-4.0.12.ebuild:
+  10 Jan 2003; J.Alberto Suárez L. <bass@gentoo.org> win4lin-4.0.12.ebuild:
   The next-generation :)
   -Added evaluation-license
   -The rpm is auto-fetched
