@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.1 2006/06/09 15:12:46 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.2 2006/07/26 19:56:24 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -24,6 +24,7 @@ app-office/ooextras
 app-office/oooqs
 app-office/ooqstart-gnome
 app-office/openoffice-bin
+app-pda/qtopia-desktop-bin
 app-emulation/cedega
 app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
@@ -88,6 +89,7 @@ games-fps/quake3-bin
 games-fps/quake3-brainworks
 games-fps/quake3-cpma
 games-fps/quake3-defrag
+games-fps/quake3-demo
 games-fps/quake3-matrix
 games-fps/quake3-nsco
 games-fps/quake3-osp
@@ -113,6 +115,7 @@ games-fps/ut2004-demo
 games-fps/vendetta-online-bin
 games-puzzle/hoh-bin
 games-roguelike/adom
+games-rpg/nwmouse
 games-rpg/nwn
 games-rpg/nwn-cep
 games-server/nwn-ded
@@ -157,4 +160,5 @@ sys-libs/lib-compat-loki
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
+x11-misc/googleearth
 x11-misc/qcomicbook
