@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.4 2006/07/11 15:07:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.5 2006/07/26 19:27:33 genstef Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="dbus gsm madwifi qt3 qt4 readline ssl"
+IUSE="dbus gsm madwifi qt3 qt4 readline ssl kernel_linux kernel_FreeBSD"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 		gsm? ( sys-apps/pcsc-lite )
