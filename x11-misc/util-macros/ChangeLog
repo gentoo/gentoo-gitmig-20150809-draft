@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/util-macros
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.32 2006/07/19 08:51:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.33 2006/07/26 02:56:30 joshuabaergen Exp $
+
+*util-macros-1.1.0 (26 Jul 2006)
+
+  26 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.1.0-driver-man-suffix.patch, +util-macros-1.1.0.ebuild:
+  Version bump.  Contains macros that may be used by future X packages.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> util-macros-1.0.2.ebuild:
   Stable on hppa.
