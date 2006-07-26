@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18.ebuild,v 1.1 2006/07/20 09:01:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18.ebuild,v 1.2 2006/07/26 12:51:45 phosphan Exp $
 
 inherit eutils
 
@@ -111,7 +111,8 @@ src_compile() {
 }
 
 src_install () {
-	einstall docdir=${D}/usr/share/doc/${PF}
+	make INSTALL_LOCKPATH="" DESTDIR="${D}" install \
+		docdir=/usr/share/doc/${PF}
 	keepdir /var/lib/lock/sane
 	fowners root:scanner /var/lib/lock/sane
 	fperms g+w /var/lib/lock/sane
