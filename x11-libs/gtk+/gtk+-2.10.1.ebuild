@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.1.ebuild,v 1.1 2006/07/24 21:10:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.10.1.ebuild,v 1.2 2006/07/26 16:14:24 genstef Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -24,7 +24,7 @@ RDEPEND="|| ( (
 			xinerama? ( x11-libs/libXinerama ) )
 		virtual/x11 )
 	>=dev-libs/glib-2.12.1
-	>=x11-libs/pango-1.13.0
+	>=x11-libs/pango-1.12.0
 	>=dev-libs/atk-1.10.1
 	>=x11-libs/cairo-1.2.0
 	media-libs/fontconfig
