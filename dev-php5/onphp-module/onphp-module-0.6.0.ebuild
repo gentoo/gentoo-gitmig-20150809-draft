@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp-module/onphp-module-0.6.0.ebuild,v 1.3 2006/07/22 17:06:20 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/onphp-module/onphp-module-0.6.0.ebuild,v 1.4 2006/07/26 10:32:51 voxus Exp $
 
 PHP_EXT_NAME="onphp"
 PHP_EXT_INI="yes"
@@ -36,7 +36,6 @@ pkg_setup() {
 pkg_postinst() {
 	einfo
 	ewarn "If you're using eAccelerator, you should either upgrade to"
-	ewarn "    >dev-php5/eaccelerator-0.9.5_beta2 (not released yet)"
-	ewarn "or disable it completely due to \"final constructor\" bug."
+	ewarn "           >=dev-php5/eaccelerator-0.9.5_rc1"
 	einfo
 }
