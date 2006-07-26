@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.20 2006/07/25 18:49:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.21 2006/07/26 13:23:50 chutzpah Exp $
+
+  26 Jul 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/gle-3.1.0-amd64-skip-example.patch, gle-3.1.0.ebuild:
+  Add patch to exclude the examples dir from compilation (bug 141780). Thanks
+  to Samuli Suominen <sasuomin@uusikaupunki.fi> for the ebuild and patch.
 
 *gle-3.1.0 (25 Jul 2006)
 
