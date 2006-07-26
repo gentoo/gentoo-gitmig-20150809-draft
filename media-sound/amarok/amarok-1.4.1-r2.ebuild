@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.1-r2.ebuild,v 1.3 2006/07/25 08:12:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.1-r2.ebuild,v 1.4 2006/07/26 21:21:58 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
@@ -55,7 +55,6 @@ DEPEND="${DEPEND}
 need-kde 3.3
 
 src_compile() {
-	export WANT_AUTOMAKE="1.9" # Force usage of automake 1.9 for safety
 	append-flags -fno-inline
 
 	# Extra, unsupported engines are forcefully disabled.
