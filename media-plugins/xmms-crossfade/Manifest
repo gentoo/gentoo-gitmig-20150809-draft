@@ -1,21 +1,62 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5b684327b232811e03d6d5854b208c49 ChangeLog 3548
-MD5 506a0b7272934d1ba7d4871040c93d38 files/digest-xmms-crossfade-0.3.10 73
-MD5 fca01d6a0ca85be3532efac855b1869f files/digest-xmms-crossfade-0.3.4 72
-MD5 9bd20128f860dc9821976ce49fd6f70f files/digest-xmms-crossfade-0.3.8 72
-MD5 6c1f6389e8095123f12c43f6fc47cd13 files/digest-xmms-crossfade-0.3.9 72
+AUX xmms-crossfade-0.3.9-gcc4.patch 399 RMD160 226e2da415fa5d00288c6d60b70485b9ab756c85 SHA1 edc520751031f1c2330c3455ceebb8afb5a4a9d5 SHA256 f051e6be436a79351d2610c4158f60069a3ec1d62eb1fea760d270202311c0b2
 MD5 26c20becb985cd35bef2b67d66ed2616 files/xmms-crossfade-0.3.9-gcc4.patch 399
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 226e2da415fa5d00288c6d60b70485b9ab756c85 files/xmms-crossfade-0.3.9-gcc4.patch 399
+SHA256 f051e6be436a79351d2610c4158f60069a3ec1d62eb1fea760d270202311c0b2 files/xmms-crossfade-0.3.9-gcc4.patch 399
+DIST xmms-crossfade-0.3.10.tar.gz 476290 RMD160 8d4d06d16224f21ad0602dd617695cb20a6e2c4e SHA1 6f74334e962020a7819abcefcbb6273bc59a8e08 SHA256 47bf100674a179799e80030bf0da68bce1b10b5427a62e0a9de108d40bac2aaf
+DIST xmms-crossfade-0.3.11.tar.gz 494334 RMD160 a42b319fc8cdfb8cce4d011c5d3818efd8b34bd7 SHA1 e9f2f92a30910afe08570e6af69ed14ed24b1ac5 SHA256 2229fc32e96293e213d8a5d60a7f95225dfc25cec4be8a4a9702cac5defcb33b
+DIST xmms-crossfade-0.3.4.tar.gz 293320
+DIST xmms-crossfade-0.3.8.tar.gz 435761
+DIST xmms-crossfade-0.3.9.tar.gz 475648
+EBUILD xmms-crossfade-0.3.10.ebuild 974 RMD160 ad0b6ea8ca565ddf0d58bf322754991afde8d7a9 SHA1 a929c6b13edc886ceb7b1207bd9c918fb3c890a2 SHA256 2bbbccda4931f9aa03e34e2069ca54fe3baa89f4d9e6d2cc431b47404478002c
 MD5 9787b7c5ca08a9daa74acff727073eb6 xmms-crossfade-0.3.10.ebuild 974
+RMD160 ad0b6ea8ca565ddf0d58bf322754991afde8d7a9 xmms-crossfade-0.3.10.ebuild 974
+SHA256 2bbbccda4931f9aa03e34e2069ca54fe3baa89f4d9e6d2cc431b47404478002c xmms-crossfade-0.3.10.ebuild 974
+EBUILD xmms-crossfade-0.3.11.ebuild 974 RMD160 82e500e0cc77f054f4bc7e8b209cf3c65e739e4c SHA1 8cb063897fd1af4e08883acf6185f4c9c845f7d8 SHA256 d3637a236edd0de0f3cab01fdb37b56b952768ea892ee7bf5c723d3534d34a80
+MD5 e41d8917584b4152af795ed5a4e86c53 xmms-crossfade-0.3.11.ebuild 974
+RMD160 82e500e0cc77f054f4bc7e8b209cf3c65e739e4c xmms-crossfade-0.3.11.ebuild 974
+SHA256 d3637a236edd0de0f3cab01fdb37b56b952768ea892ee7bf5c723d3534d34a80 xmms-crossfade-0.3.11.ebuild 974
+EBUILD xmms-crossfade-0.3.4.ebuild 626 RMD160 294816c0c1a8ef664257f150ea77bd2f0bb81d2c SHA1 c27cef0979a4509e2fe693bae6dc81fb88f9b674 SHA256 d0f53dbc5488e021b9ea6dd2e2e8db232a46697496bc70638045607cd3ec570e
 MD5 a632c8ee128cfb941b4233433440b6dc xmms-crossfade-0.3.4.ebuild 626
+RMD160 294816c0c1a8ef664257f150ea77bd2f0bb81d2c xmms-crossfade-0.3.4.ebuild 626
+SHA256 d0f53dbc5488e021b9ea6dd2e2e8db232a46697496bc70638045607cd3ec570e xmms-crossfade-0.3.4.ebuild 626
+EBUILD xmms-crossfade-0.3.8.ebuild 953 RMD160 913b0c8de93668dda549159fa9f47166f02e4153 SHA1 951e303ccaf07f9a07f2bf5893ced4ba06c6842e SHA256 b51a26404820f5c7e4c9c52e9f4227ebf5878b90258416916e45f9d1c13d5729
 MD5 0c71cfa3c87b8b12dd05b0cf8bd89b1d xmms-crossfade-0.3.8.ebuild 953
+RMD160 913b0c8de93668dda549159fa9f47166f02e4153 xmms-crossfade-0.3.8.ebuild 953
+SHA256 b51a26404820f5c7e4c9c52e9f4227ebf5878b90258416916e45f9d1c13d5729 xmms-crossfade-0.3.8.ebuild 953
+EBUILD xmms-crossfade-0.3.9.ebuild 1049 RMD160 20ce4acce77cdeb96a9954d915daecf1d5e4a378 SHA1 027b85ab274946a248c749ebf0bcfff3a2d67e90 SHA256 93f3d03d6a570e03d7305ebc00ecce8e814e806ee74efb2236ec435b5f835f80
 MD5 bd26571584711f6944eced5020a21f2b xmms-crossfade-0.3.9.ebuild 1049
+RMD160 20ce4acce77cdeb96a9954d915daecf1d5e4a378 xmms-crossfade-0.3.9.ebuild 1049
+SHA256 93f3d03d6a570e03d7305ebc00ecce8e814e806ee74efb2236ec435b5f835f80 xmms-crossfade-0.3.9.ebuild 1049
+MISC ChangeLog 3686 RMD160 683b6b44d839e08b17f75d1243b14182837933dd SHA1 507b9b655f0da3afd6bab4f08cb9500841bf7cef SHA256 295cc34344f7425c5d6e454b1676b065a2ca7f375cb9d53c9cd84d1edd1c8f86
+MD5 9aa0a522489071430e4568e70c8de552 ChangeLog 3686
+RMD160 683b6b44d839e08b17f75d1243b14182837933dd ChangeLog 3686
+SHA256 295cc34344f7425c5d6e454b1676b065a2ca7f375cb9d53c9cd84d1edd1c8f86 ChangeLog 3686
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 07bf3371ef0d87c82b037dc23906622e files/digest-xmms-crossfade-0.3.10 265
+RMD160 28d75c64dfc13e4b2939a7d1187841d7550149f8 files/digest-xmms-crossfade-0.3.10 265
+SHA256 f738eb573a999c785321b7eedc37b6f9f2567a68694327c1a9005fde8f929af4 files/digest-xmms-crossfade-0.3.10 265
+MD5 be7334fd3df404d83f249de8a48d12b5 files/digest-xmms-crossfade-0.3.11 265
+RMD160 f291ae7f91ac47321ebe109846d9d50c5d395431 files/digest-xmms-crossfade-0.3.11 265
+SHA256 819ad223d1173885295830a53740aff63d88a59b31ca413bb068eb3d1aba1483 files/digest-xmms-crossfade-0.3.11 265
+MD5 fca01d6a0ca85be3532efac855b1869f files/digest-xmms-crossfade-0.3.4 72
+RMD160 dcea1310deb6262bb40b306af1a8f3d48c2e677c files/digest-xmms-crossfade-0.3.4 72
+SHA256 e0e5b9ee3bb5aca27ab905e79dcdba7f2736f6922c51b162aa7e536aaca0734c files/digest-xmms-crossfade-0.3.4 72
+MD5 9bd20128f860dc9821976ce49fd6f70f files/digest-xmms-crossfade-0.3.8 72
+RMD160 78d0875c328af682e1b986c3af4294dbef0187c8 files/digest-xmms-crossfade-0.3.8 72
+SHA256 6945552129f5cfe9c1fa0de55192b429b51304ff5fcbc8c5db37f6e4d1b13161 files/digest-xmms-crossfade-0.3.8 72
+MD5 6c1f6389e8095123f12c43f6fc47cd13 files/digest-xmms-crossfade-0.3.9 72
+RMD160 72aa0ff9b85f37732216d77816358d6721f57f7d files/digest-xmms-crossfade-0.3.9 72
+SHA256 1b2b22c03f00a657516f40b7d26025bf97019318fe4c282bfa77493be9376220 files/digest-xmms-crossfade-0.3.9 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFDlPcBwUpWvClEHQoRAterAJ9vrCIxO20NTE3NT5nIZORSA7AO9gCeN0Dq
-XSf6zQbQxKVujGqbfgZ/pmU=
-=TeqI
+iD8DBQFExsyhwUpWvClEHQoRAuy1AJ0Xx+GzLXh3XGncTbigBiCj5usbmwCfSF87
+AxkIrU2jMKcMfq2q1Om8IA8=
+=QLG0
 -----END PGP SIGNATURE-----
