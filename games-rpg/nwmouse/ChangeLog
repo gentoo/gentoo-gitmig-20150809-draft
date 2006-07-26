@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/nwmouse
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/ChangeLog,v 1.1 2006/07/26 19:58:58 wolf31o2 Exp $
+
+*nwmouse-0.1 (26 Jul 2006)
+
+  26 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +nwmouse-0.1.ebuild:
+  Initial import.  Ebuild by me.  Closing bug #109619.
+
