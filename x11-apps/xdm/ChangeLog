@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.56 2006/07/23 18:19:58 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.57 2006/07/26 01:58:04 joshuabaergen Exp $
+
+  26 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org> xdm-1.0.5.ebuild:
+  Add missing libXinerama dependency.  (bug #138719, far jump)
 
   23 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org> xdm-1.0.5.ebuild:
   Added missing xineramaproto dependency (bug #138719, far jump).
