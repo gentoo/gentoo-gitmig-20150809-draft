@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.8 2006/07/22 16:16:10 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.9 2006/07/26 23:20:54 flameeyes Exp $
+
+  26 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  alsa-plugins-1.0.12_rc1.ebuild, alsa-plugins-1.0.12_rc1-r1.ebuild:
+  Require 1.0.12 alsa-lib, although upstream didn't change the requirements in
+  the configure file, it fails to build otherwise.
 
   22 Jul 2006; Zaheer Abbas Merali <zaheerm@gentoo.org>
   alsa-plugins-1.0.12_rc1-r1.ebuild:
