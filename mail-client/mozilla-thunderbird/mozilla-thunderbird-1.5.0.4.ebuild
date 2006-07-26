@@ -1,19 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.7 2006/07/20 20:27:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.4.ebuild,v 1.8 2006/07/26 05:07:02 kumba Exp $
 
 unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PVER="0.1"
+PVER="0.2"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/source/thunderbird-${PV}-source.tar.bz2
-	mirror://gentoo/${P}-patches-${PVER}.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/${P}-patches-${PVER}.tar.bz2"
+	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
-KEYWORDS="amd64 ~ia64 ppc sparc x86"
+KEYWORDS="amd64 ~ia64 ppc sparc x86 ~mips"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="ldap crypt"
@@ -35,16 +34,13 @@ export MOZILLA_OFFICIAL=1
 export MOZ_CO_PROJECT=mail
 
 src_unpack() {
-	declare x
-
-	for x in ${A}; do
-		[[ $x == *.tar.* ]] || continue
-		unpack $x || die "unpack failed"
-	done
+	unpack ${A}
 	cd ${S} || die "cd failed"
 
 	# Apply our patches
-	EPATCH_FORCE="yes" epatch ${WORKDIR}/patch
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch ${WORKDIR}/patch
 
 	# Fix a compilation issue using the 32-bit userland with 64-bit kernel on
 	# PowerPC, because with that configuration, it detects a ppc64 system.
@@ -121,11 +117,12 @@ pkg_preinst() {
 	declare MOZILLA_FIVE_HOME=/usr/$(get_libdir)/${PN}
 
 	echo ""
-	einfo "We are removing old install before we continue. This is to help"
-	einfo "eliminate any problems during the install, sorry for those of you"
-	einfo "who disagree with this but this will ensure a sane build for everyone"
-	einfo "Comments and suggestion should be addressed to mozilla@gentoo.org"
+	einfo "Removing old installs though some really ugly code.  It potentially"
+	einfo "eliminates any problems during the install, however suggestions to"
+	einfo "replace this are highly welcome.  Send comments and suggestions to"
+	einfo "mozilla@gentoo.org"
 	rm -rf ${ROOT}${MOZILLA_FIVE_HOME}
+	echo ""
 }
 
 src_install() {
