@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.154 2006/07/25 10:26:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.155 2006/07/26 09:00:05 flameeyes Exp $
+
+*kdetoys-3.5.4 (26 Jul 2006)
+
+  26 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +kdetoys-3.5.4.ebuild:
+  Bump to 3.5.4 (pre-release).
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -kdetoys-3.3.2.ebuild:
   Drop 3.3 versions.
