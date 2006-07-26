@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.21 2006/06/04 02:41:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.22 2006/07/26 22:10:22 liquidx Exp $
 
   04 Jun 2006; Brent Baude <ranger@gentoo.org> pyserial-2.2.ebuild:
   Marking pyserial-2.2 ppc64 stable as a dep to twisted and in turn avahi per
@@ -64,10 +64,10 @@
   12 Nov 2003; Alastair Tse <liquidx@gentoo.org> pyserial-2.0.ebuild:
   version bump, added PYTHON_MODNAME
 
-*pyserial-1.18 (27 Feb 2002)
+*pyserial-1.18 (27 Feb 2003)
 
   25 Mar 2003; Alastair Tse <liquidx@gentoo.org> pyserial-1.18.ebuild:
   bump to stable
 
-  27 Feb 2002; Alastair Tse <liquidx@gentoo.org> pyserial-1.18.ebuild:
+  27 Feb 2003; Alastair Tse <liquidx@gentoo.org> pyserial-1.18.ebuild:
   Initial Import. Bug #11928
