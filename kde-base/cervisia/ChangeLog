@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.42 2006/07/25 02:44:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.43 2006/07/26 21:58:58 carlo Exp $
+
+  26 Jul 2006; Carsten Lohrke <carlo@gentoo.org> cervisia-3.5.4.ebuild:
+  Restore keywords.
 
 *cervisia-3.5.4 (25 Jul 2006)
 
