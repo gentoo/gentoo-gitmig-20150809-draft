@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.99 2006/07/06 05:03:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.100 2006/07/26 17:27:09 kumba Exp $
+
+*mips-sources-2.6.17.7 (27 Jul 2006)
+*mips-sources-2.6.16.27 (27 Jul 2006)
+
+  27 Jul 2006; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.16.22.ebuild, +mips-sources-2.6.16.27.ebuild,
+  -mips-sources-2.6.17.3.ebuild, +mips-sources-2.6.17.7.ebuild:
+  Update 2.6.16.22 to 2.6.16.27 and 2.6.17.3 to 2.6.17.7. This includes some
+  newer patches to fix up IP27 support a little, and one or two generic
+  patches.
 
 *mips-sources-2.6.15.7-r2 (06 Jul 2006)
 
