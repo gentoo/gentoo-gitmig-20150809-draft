@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.26 2006/07/19 15:37:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.27 2006/07/26 20:52:34 wolf31o2 Exp $
+
+*mkxf86config-0.9.6 (26 Jul 2006)
+
+  26 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +mkxf86config-0.9.6.ebuild:
+  Version bump to include patch from Andrew Gaffney <agaffney@gentoo.org> to
+  enable vmmouse support when VMware is detected. Closing bug #141807.
 
   19 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   files/mkxf86config-init:
