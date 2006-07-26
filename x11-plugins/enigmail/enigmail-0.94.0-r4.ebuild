@@ -1,22 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r4.ebuild,v 1.5 2006/06/06 17:06:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.0-r4.ebuild,v 1.6 2006/07/26 05:03:57 kumba Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf makeedit multilib autotools
 
 EMVER=${PV}
 TBVER="1.5.0.4"
-TBPVER="0.1"
+TBPVER="0.2"
 
 DESCRIPTION="Gnupg encryption plugin for thunderbird."
 HOMEPAGE="http://www.enigmail.mozdev.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVER}/source/thunderbird-${TBVER}-source.tar.bz2
 	mirror://gentoo/mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/mozilla-thunderbird-${TBVER}-patches-${TBPVER}.tar.bz2
 	http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz"
 
-KEYWORDS="amd64 ~ia64 ppc sparc x86"
+KEYWORDS="amd64 ~ia64 ppc sparc x86 ~mips"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
@@ -40,7 +39,9 @@ src_unpack() {
 	cd ${S} || die "cd failed"
 
 	# Apply our patches
-	EPATCH_FORCE="yes" epatch ${WORKDIR}/patch
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch ${WORKDIR}/patch
 
 	# Unpack the enigmail plugin
 	cd ${S}/mailnews/extensions || die
