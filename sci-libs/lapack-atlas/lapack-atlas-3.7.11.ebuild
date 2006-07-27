@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.3 2006/04/01 19:59:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11.ebuild,v 1.4 2006/07/27 00:18:07 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -13,7 +13,7 @@ SRC_URI2="http://www.netlib.org/lapack/lapack.tgz"
 SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/lapack-20020531-20021004.patch.bz2
 	mirror://gentoo/lapack-gentoo.patch
-	mirror://gentoo/${MY_PN}3.6.0-shared-libs.1.patch.bz2"
+	mirror://gentoo/${MY_PN}3.6.0-shared-libs.2.patch.bz2"
 
 SLOT="0"
 IUSE="ifc doc"
@@ -66,7 +66,7 @@ src_unpack() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}"/unbuffered.patch
 	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
-	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.1.patch.bz2
+	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.2.patch.bz2
 	epatch "${DISTDIR}"/lapack-20020531-20021004.patch.bz2
 	epatch "${DISTDIR}"/lapack-gentoo.patch
 	cp "${FILESDIR}"/war "${S}"
@@ -86,6 +86,15 @@ src_unpack() {
 			${S}/makes/Make.lib \
 			|| die "Failed to update for gcc-4"
 	fi
+
+	# make sure shared libs link against proper libraries
+	if [[ ${FORTRANC} == "gfortran" ]]; then
+		libs="-lpthread -lgfortran"
+	else
+		libs="-lpthread -lg2c"
+	fi
+	sed -e "s/SHRD_LNK/${libs}/g" -i ${S}/Make.top || \
+	die "Failed to add addtional libs to shared object build"
 }
 
 atlas_fail() {
