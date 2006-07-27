@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-0.1_beta20070714.ebuild,v 1.3 2006/07/22 20:25:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-0.1_beta20070714.ebuild,v 1.4 2006/07/27 21:27:09 chutzpah Exp $
 
 DESCRIPTION="Open source read-write NTFS driver that runs under FUSE"
 HOMEPAGE="http://sourceforge.net/mailarchive/forum.php?thread_id=23836054&forum_id=2697"
@@ -21,11 +21,6 @@ MY_PV="${MY_PV}-BETA"
 
 S="${WORKDIR}/${MY_P}-${MY_PV}"
 
-src_compile() {
-	econf
-	emake
-}
-
 src_install() {
-	make DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 }
