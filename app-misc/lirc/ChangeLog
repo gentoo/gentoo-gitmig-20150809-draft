@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.101 2006/07/25 14:29:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.102 2006/07/27 17:33:24 zzam Exp $
+
+  27 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
+  files/lirc-0.8.0-kernel-2.6.17.diff:
+  Small change to match the patch in lirc-cvs.
 
 *lirc-0.8.0-r4 (25 Jul 2006)
 
