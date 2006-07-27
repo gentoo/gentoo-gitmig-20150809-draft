@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.290.ebuild,v 1.1 2006/07/24 18:20:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.290.ebuild,v 1.2 2006/07/27 06:55:36 stuart Exp $
 
-IUSE="apache2 postgres ssl webmin-minimal"
+IUSE="apache2 pam postgres ssl webmin-minimal"
 
 inherit eutils pam
 
