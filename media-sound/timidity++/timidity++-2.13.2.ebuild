@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.13 2006/02/19 02:10:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2.ebuild,v 1.14 2006/07/27 23:31:20 flameeyes Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	nas? ( >=media-libs/nas-1.4 )
 	alsa? ( media-libs/alsa-lib )
 	motif? ( virtual/motif )
-	slang? ( >=sys-libs/slang-1.4 )
+	slang? ( =sys-libs/slang-1.4* )
 	arts? ( kde-base/arts )
 	jack? ( media-sound/jack-audio-connection-kit )
 	portaudio? ( !ppc? ( media-libs/portaudio ) )
