@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/netkit-timed
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.15 2006/05/16 23:38:50 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/ChangeLog,v 1.16 2006/07/27 05:47:37 wormo Exp $
+
+*netkit-timed-0.17-r8 (28 Jul 2006)
+
+  26 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/0.17-timed-opt-parsing.patch, netkit-timed-0.17-r7.ebuild,
+  +netkit-timed-0.17-r8.ebuild:
+  Fixed compilation with modern glibc: 
+  Thanks to Martin von Gagern for both reporting this issue and submitting
+  the patch (see Bug #141439)
+  Fixed a bug in command line parsing:
+  problem detecting end of args on arches where 'char' defaults to unsigned
 
   16 May 2006; Cory Visi <visi@gentoo.org> netkit-timed-0.17-r7.ebuild:
   Keyworded for unstable on amd64
