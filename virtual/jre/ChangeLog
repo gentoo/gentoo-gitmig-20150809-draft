@@ -1,6 +1,13 @@
 # ChangeLog for gentoo-x86/virtual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.4 2006/07/21 00:26:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.5 2006/07/27 15:16:29 cardoe Exp $
+
+  27 Jul 2006; <dougg@gentoo.org> jre-1.3.ebuild, jre-1.4.1.ebuild,
+  jre-1.4.2.ebuild, jre-1.5.0.ebuild:
+  Moving virtual/jdk depends first so that the JDK's JRE will provide
+  thisvirtual rather then requiring a JDK & a JRE to be installed by default.
+  Discussed a similiar change with nichoj which involved moving the body of
+  the virtual/jdk's depends to here but this is more effiecent and portable.
 
   21 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> jre-1.5.0.ebuild:
   Add diablo-jre-bin as option for the jre 1.5, for FreeBSD, and add ~x86-fbsd
