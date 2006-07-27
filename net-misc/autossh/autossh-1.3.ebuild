@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.3.ebuild,v 1.1 2005/12/24 18:21:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.3.ebuild,v 1.2 2006/07/27 06:26:51 wormo Exp $
 
 inherit toolchain-funcs
 

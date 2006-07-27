@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/autossh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.18 2006/07/15 13:25:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.19 2006/07/27 06:26:51 wormo Exp $
+
+*autossh-1.4a (29 Jul 2006)
+
+  26 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +autossh-1.4a.ebuild:
+  Version bump - submitted by Alexander Skwar (Bug #140899)
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove aliz from metadata.xml as he's retired.
