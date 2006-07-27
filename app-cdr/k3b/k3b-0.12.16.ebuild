@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.16.ebuild,v 1.1 2006/06/30 17:27:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.16.ebuild,v 1.2 2006/07/27 08:53:03 flameeyes Exp $
 
 inherit kde eutils
 
@@ -66,14 +66,12 @@ pkg_setup() {
 src_unpack() {
 	kde_src_unpack
 
-	local MAKE_LANGS
-	for X in ${LANGS}; do
-		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X}"
-	done
-
 	if [ -d "${WORKDIR}/${I18N}" ]; then
 		cd "${WORKDIR}/${I18N}"
-		sed -i -e "s,^SUBDIRS = .*,SUBDIRS = ${MAKE_LANGS}," Makefile.in
+		for X in ${LANGS}; do
+			use linguas_${X} || rm -rf "${X}"
+		done
+		rm -f configure
 	fi
 }
 
