@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.13 2006/07/09 20:25:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.14 2006/07/27 23:32:30 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="ncurses slang doc imlib X"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
-	slang? ( >=sys-libs/slang-1.4.2 )
+	slang? ( =sys-libs/slang-1.4* )
 	imlib? ( media-libs/imlib2 )
 	X? ( || ( ( x11-libs/libX11
 		x11-libs/libXt )
@@ -30,7 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
 	# Let libtool build the libraries, see BUG #57359
-	epatch ${FILESDIR}/${P}-libtool.patch
+	epatch "${FILESDIR}/${P}-libtool.patch"
 	cd "${S}"
 	eautoreconf
 }
