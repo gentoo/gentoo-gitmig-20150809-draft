@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.9 2006/05/11 17:01:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.10 2006/07/27 23:41:04 xmerlin Exp $
 
 inherit eutils flag-o-matic pam
 
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/newt-0.51.6
 	app-arch/bzip2
-	>=sys-libs/slang-1.4.5-r2
+	=sys-libs/slang-1*
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sys-devel/autoconf"
