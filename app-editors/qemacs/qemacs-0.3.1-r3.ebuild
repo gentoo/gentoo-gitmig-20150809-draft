@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.1 2006/07/25 14:17:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.2 2006/07/27 04:31:41 tsunam Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fabrice.bellard.free.fr/qemacs/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="X png unicode xv"
 
 # For those so inclined, the libXv dep can probably
