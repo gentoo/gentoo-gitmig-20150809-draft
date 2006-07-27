@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r3.ebuild,v 1.2 2006/04/17 18:31:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r3.ebuild,v 1.3 2006/07/27 15:12:12 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -13,15 +13,7 @@ ANY_ANY="vmware-any-any-update101"
 NP="VMware-workstation-4.5.3-19414"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
-	http://download3.vmware.com/software/wkst/${NP}.tar.gz
-	http://download.vmware.com/htdocs/software/wkst/${NP}.tar.gz
-	http://www.vmware.com/download1/software/wkst/${NP}.tar.gz
-	ftp://download1.vmware.com/pub/software/wkst/${NP}.tar.gz
-	http://vmware-chil.www.conxion.com/software/wkst/${NP}.tar.gz
-	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
-	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
-	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
+SRC_URI="mirror://vmware/software/wkst/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz

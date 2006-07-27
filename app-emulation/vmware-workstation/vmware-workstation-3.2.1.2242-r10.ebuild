@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r10.ebuild,v 1.2 2006/04/17 18:31:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r10.ebuild,v 1.3 2006/07/27 15:12:12 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -13,13 +13,7 @@ ANY_ANY="vmware-any-any-update101"
 NP="VMware-workstation-3.2.1-2242"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-SRC_URI="http://vmware-svca.www.conxion.com/software/${NP}.tar.gz
-	http://www.vmware.com/download1/software/${NP}.tar.gz
-	ftp://download1.vmware.com/pub/software/${NP}.tar.gz
-	http://vmware-chil.www.conxion.com/software/${NP}.tar.gz
-	http://vmware-heva.www.conxion.com/software/${NP}.tar.gz
-	http://vmware.wespe.de/software/${NP}.tar.gz
-	ftp://vmware.wespe.de/pub/software/${NP}.tar.gz
+SRC_URI="mirror://vmware/software/${NP}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obsolete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
