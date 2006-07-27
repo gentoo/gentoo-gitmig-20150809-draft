@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.5.ebuild,v 1.7 2006/06/06 01:23:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.3.5.ebuild,v 1.8 2006/07/27 17:16:09 grobian Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
 # This ebuild mod'd from libstdc++ compatbility package ebuild to create
 #   a similar structure for libffi, which is also included in gcc sources.
-#   __Armando Di Cianno <fafhrd@gentoo.org>
+#   __Armando Di Cianno <fafhrd@gentoo.org> (no longer a dev)
 
 do_filter_flags() {
 	declare setting
@@ -97,15 +97,13 @@ DEPEND="virtual/libc
 	>=sys-devel/bison-1.875
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	=sys-devel/gcc-3.3.5*
-	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
+	nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/libc
 	!nptl? ( !uclibc? ( >=sys-libs/glibc-2.3.2-r3 ) )
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
-	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
+	>=sys-apps/texinfo-4.2-r4"
 
 pkg_setup() {
 	if test_version_info ${PV}
@@ -138,11 +136,11 @@ src_compile() {
 
 	local myconf=
 
-	if ! use nls || use build
+	if use nls
 	then
-		myconf="${myconf} --disable-nls"
-	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
+	else
+		myconf="${myconf} --disable-nls"
 	fi
 
 	#use amd64 && myconf="${myconf} --disable-multilib"

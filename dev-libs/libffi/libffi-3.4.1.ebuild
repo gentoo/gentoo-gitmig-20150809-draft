@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.12 2006/06/06 01:23:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.13 2006/07/27 17:16:09 grobian Exp $
 
 IUSE="nls nptl"
 SLOT="0"
@@ -8,7 +8,7 @@ inherit eutils flag-o-matic libtool versionator multilib
 
 # This ebuild mod'd from libstdc++ compatbility package ebuild to create
 #   a similar structure for libffi, which is also included in gcc sources.
-#   __Armando Di Cianno <fafhrd@gentoo.org>
+#   __Armando Di Cianno <fafhrd@gentoo.org> (not a dev any more)
 
 # Compile problems with these (bug #6641 among others)...
 #filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
@@ -93,15 +93,13 @@ DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	>=sys-devel/bison-1.875
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
-	!build? ( >=sys-libs/ncurses-5.2-r2
-	          nls? ( sys-devel/gettext ) )"
+	nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
-	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
+	>=sys-apps/texinfo-4.2-r4"
 
 PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
 
@@ -130,11 +128,11 @@ src_compile() {
 
 	local myconf=
 
-	if ! use nls || use build
+	if use nls
 	then
-		myconf="${myconf} --disable-nls"
-	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
+	else
+		myconf="${myconf} --disable-nls"
 	fi
 
 	use amd64 && myconf="${myconf} --disable-multilib"
