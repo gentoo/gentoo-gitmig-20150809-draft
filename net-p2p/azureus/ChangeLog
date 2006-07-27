@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.17 2006/07/23 20:51:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.18 2006/07/27 15:54:24 nichoj Exp $
+
+  27 Jul 2006; Joshua Nichols <nichoj@gentoo.org> files/azureus.png,
+  azureus-2.4.0.2.ebuild:
+  Changed ant_src_unpack to src_unpack
+
+  23 Jul 2006; Joshua Nichols <nichoj@gentoo.org> files/azureus.png:
+  Updated icon for bug #131050
 
 *azureus-2.4.0.2 (23 Jul 2006)
 
