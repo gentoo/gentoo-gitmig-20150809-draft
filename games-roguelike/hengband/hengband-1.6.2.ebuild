@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2.ebuild,v 1.4 2006/07/20 02:10:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/hengband/hengband-1.6.2.ebuild,v 1.5 2006/07/27 07:24:12 flameeyes Exp $
 
-inherit games
+inherit toolchain-funcs games
 
 DESCRIPTION="An Angband variant, with a Japanese/fantasy theme"
 HOMEPAGE="http://hengband.sourceforge.jp/en/"
@@ -36,6 +36,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use linguas_ja || myconf="--disable-japanese"
+
+	tc-export CC
 	egamesconf \
 		--with-setgid=${GAMES_GROUP} \
 		`use_with X x` \
