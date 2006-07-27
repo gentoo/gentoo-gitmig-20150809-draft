@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/csharp-mode
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.1 2006/07/27 01:26:02 mkennedy Exp $
+
+*csharp-mode-0.5.0 (27 Jul 2006)
+
+  27 Jul 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/80csharp-mode-gentoo.el, +metadata.xml, +csharp-mode-0.5.0.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>;
+  Resolves Bug #130918.
+
