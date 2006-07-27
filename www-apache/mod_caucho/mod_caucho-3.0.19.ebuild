@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.19.ebuild,v 1.1 2006/07/06 11:32:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-3.0.19.ebuild,v 1.2 2006/07/27 06:40:13 nelchael Exp $
 
 inherit apache-module autotools
 
@@ -40,8 +40,8 @@ src_compile() {
 
 	econf --with-apxs=${APXS2} || die "econf failed"
 
-	emake -C "${S}/modules/c/src/common/" || die "emake failed"
-	emake -C "${S}/modules/c/src/apache2/" || die "emake failed"
+	emake -j1 -C "${S}/modules/c/src/common/" || die "emake failed"
+	emake -j1 -C "${S}/modules/c/src/apache2/" || die "emake failed"
 
 }
 
