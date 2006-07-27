@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5668 2006/07/26 18:39:31 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5669 2006/07/27 01:48:21 pclouds Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> (27 Jul 2006)
+# Mask for removal (#141802)
+x11-misc/gdeskcal
 
 # Stefan Schweizer <genstef@gentoo.org> (26 Jul 2006)
 # release candidate for 2.6.18 support, please report bugs to
