@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.8.2.ebuild,v 1.3 2006/07/27 17:34:03 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.8.2.ebuild,v 1.4 2006/07/27 18:08:15 liquidx Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://libvncserver.sourceforge.net/LibVNCServer-${PV/_}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86"
 IUSE="nobackchannel no24bpp zlib jpeg"
 
 DEPEND="zlib? ( sys-libs/zlib )
