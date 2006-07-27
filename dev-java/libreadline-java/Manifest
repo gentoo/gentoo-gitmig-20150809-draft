@@ -1,15 +1,27 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2afcb59fafd97db77c8fd32b17962d66 ChangeLog 2551
-MD5 15965747957a7f0df15cdc7b4b6d2b21 libreadline-java-0.8.0-r1.ebuild 1018
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 9e6c8c38a34f297ef3ff5d65648dc214 files/digest-libreadline-java-0.8.0-r1 77
+AUX termcap-to-ncurses.patch 498 RMD160 fc25fda35386128dbf61dc73bb2ee347e73be296 SHA1 c92c7080618b00d5e27c88f4755ea441bf21cbc7 SHA256 de636c7cc3e812a276ac530b571d7c9a0fd63cd7011868ceb46a59fc55f2e337
 MD5 dcfb40cea2d4ce6b93a3a05548f702a0 files/termcap-to-ncurses.patch 498
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCz/Yu/rLF9B432nYRAmmLAJ9QHT0tN8/ZbKtq4DVxEeNPnEX7DwCePQas
-PXSH88S7cE+NUecKsBV8pRM=
-=tr0D
------END PGP SIGNATURE-----
+RMD160 fc25fda35386128dbf61dc73bb2ee347e73be296 files/termcap-to-ncurses.patch 498
+SHA256 de636c7cc3e812a276ac530b571d7c9a0fd63cd7011868ceb46a59fc55f2e337 files/termcap-to-ncurses.patch 498
+DIST libreadline-java-0.8.0-src.tar.gz 77122 RMD160 1e1d6f6e3bd37867d8222421857cbc73d072a3c1 SHA1 1f5574f9345afc039e9c7a09ae4979129891d52a SHA256 cdcfd9910bfe2dca4cd08b2462ec05efee7395e9b9c3efcb51e85fa70548c890
+EBUILD libreadline-java-0.8.0-r1.ebuild 1018 RMD160 1b91da15c010c0d98e485574c6d353f93044a3a2 SHA1 f1783e0e98ff176f41befe8c5e7f4f88de02eba1 SHA256 3054b366fba352b9a6e1799bebe9e0ff63fa27652362cc8df0299122877a61e7
+MD5 15965747957a7f0df15cdc7b4b6d2b21 libreadline-java-0.8.0-r1.ebuild 1018
+RMD160 1b91da15c010c0d98e485574c6d353f93044a3a2 libreadline-java-0.8.0-r1.ebuild 1018
+SHA256 3054b366fba352b9a6e1799bebe9e0ff63fa27652362cc8df0299122877a61e7 libreadline-java-0.8.0-r1.ebuild 1018
+EBUILD libreadline-java-0.8.0-r2.ebuild 1137 RMD160 3146ea9d5deaf05099ae47a89038a2ebc0068e96 SHA1 17a3179f961130eda88ac7ca8f632f7f1224b198 SHA256 8af55bf04a2237dd8a75ee4003e7b5b64fbce275c426792b0756e400165a94d0
+MD5 04cfaeb16c155b52b27f4ae6d656bff5 libreadline-java-0.8.0-r2.ebuild 1137
+RMD160 3146ea9d5deaf05099ae47a89038a2ebc0068e96 libreadline-java-0.8.0-r2.ebuild 1137
+SHA256 8af55bf04a2237dd8a75ee4003e7b5b64fbce275c426792b0756e400165a94d0 libreadline-java-0.8.0-r2.ebuild 1137
+MISC ChangeLog 2729 RMD160 fcf7008731c67de6bd98445abd399aa25d492d1f SHA1 2ae7bcccc7daf1e799c71e65e5bd0f4108b557f8 SHA256 3848fd2e8a7d8579683a7bad6092e8e846b88b9480c0b798fe1066d2f9a8e707
+MD5 b7798b208d6951b9e1341c3e0bfe5bcb ChangeLog 2729
+RMD160 fcf7008731c67de6bd98445abd399aa25d492d1f ChangeLog 2729
+SHA256 3848fd2e8a7d8579683a7bad6092e8e846b88b9480c0b798fe1066d2f9a8e707 ChangeLog 2729
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 57ecc31dce638b5ef5e5d1d121fd51af files/digest-libreadline-java-0.8.0-r1 277
+RMD160 7a11b1da4014d71b089b816defb7c77283283a15 files/digest-libreadline-java-0.8.0-r1 277
+SHA256 50577b43ebda894f8d553f5796932815dddae22e88967aff3a720fbdf932fc55 files/digest-libreadline-java-0.8.0-r1 277
+MD5 57ecc31dce638b5ef5e5d1d121fd51af files/digest-libreadline-java-0.8.0-r2 277
+RMD160 7a11b1da4014d71b089b816defb7c77283283a15 files/digest-libreadline-java-0.8.0-r2 277
+SHA256 50577b43ebda894f8d553f5796932815dddae22e88967aff3a720fbdf932fc55 files/digest-libreadline-java-0.8.0-r2 277
