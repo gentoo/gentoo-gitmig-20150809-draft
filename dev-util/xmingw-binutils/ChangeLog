@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/xmingw-binutils
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/ChangeLog,v 1.8 2005/11/10 22:22:41 cretin Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-binutils/ChangeLog,v 1.9 2006/07/27 23:49:54 fmccor Exp $
+
+  27 Jul 2006; Ferris McCormick <fmccor@gentoo.org>
+  xmingw-binutils-2.15.94.20050118.1.ebuild:
+  Add ~sparc keyword at user's request --- Dan Watson, Bug #141931 --- package
+  builds and the binaries (/opt/xmingw/bin/i386-mingw32msvc-xxx) appear to work
+  as expected.
 
   10 Nov 2005; Stefan Jones <cretin@gentoo.org>
   +files/xmingw-binutils-2.15.94.20050118.1-gcc4.patch,
