@@ -1,6 +1,9 @@
 # ChangeLog for net-www/dotproject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.10 2006/07/27 16:28:55 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.11 2006/07/27 16:30:38 stuart Exp $
+
+  27 Jul 2006; Stuart Herbert <stuart@gentoo.org> -dotproject-2.0.3.ebuild:
+  Removed old, vulnerable version from the tree.
 
 *dotproject-2.0.4 (27 Jul 2006)
 
