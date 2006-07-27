@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.11 2005/05/18 05:03:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.12 2006/07/27 17:56:50 liquidx Exp $
 
 inherit toolchain-funcs eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${P}-gcc3-gentoo.diff
 	fi
 	epatch ${FILESDIR}/${P}-gcc3.4.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-kernel.patch
 }
 
