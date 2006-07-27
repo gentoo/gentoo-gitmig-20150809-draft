@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim-tables
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.39 2006/07/03 19:37:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.40 2006/07/27 17:02:39 usata Exp $
+
+*scim-tables-0.5.6-r1 (27 Jul 2006)
+
+  27 Jul 2006; Mamoru KOMACHI <usata@gentoo.org>
+  +scim-tables-0.5.6-r1.ebuild:
+  Added LINGUAS support. (It dramatically reduces startup time to disable
+  languages you do not use at all)
 
   03 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   scim-tables-0.5.6.ebuild:
