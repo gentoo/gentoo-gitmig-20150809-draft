@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.290.ebuild,v 1.4 2006/07/27 21:09:19 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.290.ebuild,v 1.5 2006/07/27 22:43:04 weeve Exp $
 
 IUSE="apache2 pam postgres ssl webmin-minimal"
 
@@ -18,7 +18,7 @@ LICENSE="BSD"
 SLOT="0"
 
 # ~mips removed because of broken deps. Bug #86085
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ppc ~ppc64 ~s390 ~sh sparc x86"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
