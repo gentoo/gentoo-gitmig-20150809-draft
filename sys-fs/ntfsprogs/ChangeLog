@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.37 2006/07/09 00:58:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.38 2006/07/27 21:31:05 chutzpah Exp $
+
+  27 Jul 2006; Patrick McLean <chutzpah@gentoo.org> ntfsprogs-1.13.0.ebuild,
+  ntfsprogs-1.13.1.ebuild:
+  Add block against sys-fs/ntfs3g as per comment #1 on bug #141926.
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> ntfsprogs-1.13.0.ebuild:
   Marked stable on mips.
