@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/otcl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.22 2006/07/07 00:21:29 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.23 2006/07/27 04:01:41 tsunam Exp $
+
+  27 Jul 2006; Joshua Jackson <tsunam@gentoo.org> otcl-1.11.ebuild:
+  Stable x86; bug #123209
 
   07 Jul 2006; Jon Hood <squinky86@gentoo.org> otcl-1.11.ebuild:
   Stable on amd64, bug #123209.
