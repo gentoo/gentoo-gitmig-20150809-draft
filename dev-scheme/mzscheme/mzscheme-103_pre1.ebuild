@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mzscheme/mzscheme-103_pre1.ebuild,v 1.1 2006/05/11 21:50:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mzscheme/mzscheme-103_pre1.ebuild,v 1.2 2006/07/27 21:42:41 chutzpah Exp $
 
 S=${WORKDIR}/plt
 DESCRIPTION="MzScheme scheme compiler"
 SRC_URI="http://www.cs.rice.edu/CS/PLT/packages/download/103p1/mzscheme/mzscheme.src.unix.tar.gz"
 HOMEPAGE="http://www.plt-scheme.org/software/mzscheme/"
-DEPEND=""
+DEPEND="!>=dev-scheme/drscheme-350"
 #RDEPEND=""
 SLOT="0"
 LICENSE="LGPL-2.1"

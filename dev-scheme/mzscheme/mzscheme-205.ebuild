@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mzscheme/mzscheme-205.ebuild,v 1.1 2006/05/11 21:50:11 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/mzscheme/mzscheme-205.ebuild,v 1.2 2006/07/27 21:42:41 chutzpah Exp $
 
 inherit flag-o-matic
 
@@ -8,7 +8,8 @@ S=${WORKDIR}/plt
 DESCRIPTION="MzScheme scheme compiler"
 HOMEPAGE="http://www.plt-scheme.org/software/mzscheme/"
 SRC_URI="http://www.cs.utah.edu/plt/download/${PV}/${PN}/${P}.src.unix.tar.gz"
-DEPEND=">=sys-devel/gcc-2.95.3-r7"
+DEPEND=">=sys-devel/gcc-2.95.3-r7
+	!>=dev-scheme/drscheme-350"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ppc ~sparc"
