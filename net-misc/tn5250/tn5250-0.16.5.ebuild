@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.10 2006/06/19 14:43:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/tn5250-0.16.5.ebuild,v 1.11 2006/07/27 23:38:38 flameeyes Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="X ssl slang"
 
 RDEPEND="sys-libs/ncurses
 	ssl? ( dev-libs/openssl )
-	slang? ( sys-libs/slang )"
+	slang? ( =sys-libs/slang-1* )"
 DEPEND="${RDEPEND}
 	X? ( || ( x11-libs/libXt virtual/x11 ) )"
 
@@ -23,14 +23,14 @@ src_unpack() {
 	unpack ${A}
 
 	# First, for some reason, TRUE and FALSE aren't defined
-	# for the compile.  This causes some problems.  ???
-	echo                               >> "${S}/src/tn5250-config.h.in"
+	# for the compile.	This causes some problems.	???
+	echo							   >> "${S}/src/tn5250-config.h.in"
 	echo "/* Define TRUE and FALSE */" >> "${S}/src/tn5250-config.h.in"
-	echo "#define FALSE 0"             >> "${S}/src/tn5250-config.h.in"
-	echo "#define TRUE !FALSE"         >> "${S}/src/tn5250-config.h.in"
+	echo "#define FALSE 0"			   >> "${S}/src/tn5250-config.h.in"
+	echo "#define TRUE !FALSE"		   >> "${S}/src/tn5250-config.h.in"
 
 	# Next, the Makefile for the terminfo settings tries to remove
-	# some files it doesn't have access to.  We can just remove those
+	# some files it doesn't have access to.	 We can just remove those
 	# lines.
 	cd "${S}/linux"
 	sed -i \
@@ -50,11 +50,11 @@ src_compile() {
 
 src_install() {
 	# The TERMINFO variable needs to be defined for the install
-	# to work, because the install calls "tic."  man tic for
+	# to work, because the install calls "tic."	 man tic for
 	# details.
 	dodir /usr/share/terminfo
 	make DESTDIR="${D}" \
-	     TERMINFO="${D}/usr/share/terminfo" install \
+		 TERMINFO="${D}/usr/share/terminfo" install \
 		 || die "make install failed"
 	dodoc AUTHORS BUGS NEWS README README.ssl TODO
 	dohtml -r doc/*

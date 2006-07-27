@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tn5250
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.9 2006/06/19 14:43:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.10 2006/07/27 23:38:38 flameeyes Exp $
+
+  27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> tn5250-0.16.5.ebuild:
+  Fix dependency on slang 1, see bug #141947.
 
   19 Jun 2006; Brent Baude <ranger@gentoo.org> tn5250-0.16.5.ebuild:
   stablizing tn5250-0.16.5 for ppc
