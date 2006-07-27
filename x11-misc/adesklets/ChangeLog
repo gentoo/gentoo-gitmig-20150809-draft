@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.25 2006/04/30 16:49:27 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.26 2006/07/27 11:40:20 s4t4n Exp $
+
+  27 Jul 2006; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.5.0.ebuild:
+  Added yet another modular X dep.
+  adesklets-0.6.1.ebuild:
+  Added patch to fix bug #131813.
+  Bumped up python version requirement to fix bug #132031.
+  Fixed python and perl script building. Closes bug #131675.
+  Stable for x86, closing bug #140771.
 
   30 Apr 2006; Sven Blumenstein <bazik@gentoo.org> adesklets-0.6.1.ebuild:
   Added ~sparc keyword.

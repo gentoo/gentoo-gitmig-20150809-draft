@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.2 2006/04/30 16:49:27 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.3 2006/07/27 11:40:20 s4t4n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/adesklets/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="X python perl debug ctrlmenu"
 
 RDEPEND="X? ( || ( (
@@ -25,7 +25,7 @@ RDEPEND="X? ( || ( (
 
 DEPEND=">=media-libs/imlib2-1.2.0-r2
 	X? ( || ( x11-proto/xproto virtual/x11 ) )
-	python? ( >=dev-lang/python-2.3.4-r1 )
+	python? ( >=dev-lang/python-2.4.3-r1 )
 	perl? ( >=dev-lang/perl-5.8.2 )"
 
 src_unpack()
@@ -36,11 +36,12 @@ src_unpack()
 	#Fix for bug #123538: control context menu fix
 	epatch ${FILESDIR}/${PN}-ctrlmenu.patch
 
+	#Fix for bug #131813: linker flags ordering
+	epatch ${FILESDIR}/${P}-fix-as-needed.patch
+
 	# when performing minor changes to src/adesklets.c or src/commands.c,
 	# touching these files will avoid unneeded processing
-	touch scripting/enums scripting/prototypes \
-		scripting/python/adesklets/commands.py \
-		scripting/perl/adesklets.pm
+	touch scripting/enums scripting/prototypes
 }
 
 src_compile()
