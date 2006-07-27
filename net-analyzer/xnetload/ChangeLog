@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/xnetload
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.10 2006/01/19 02:22:15 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.11 2006/07/27 03:10:25 vanquirius Exp $
+
+  27 Jul 2006; Marcelo Goes <vanquirius@gentoo.org>
+  xnetload-1.11.3-r1.ebuild:
+  Mark 1.11.3-r1 x86 stable, add QA fixes for bug 140645. Thanks to Jakub Moc
+  <jakub at gentoo dot org>.
 
 *xnetload-1.11.3-r1 (19 Jan 2006)
 
