@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>angusyoung@gentoo.org</email>
-  <name>Otavio R. Piske</name>
-</maintainer>
 </pkgmetadata>
