@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.49 2006/06/15 17:07:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.50 2006/07/27 13:14:38 usata Exp $
+
+*mlterm-2.9.3-r1 (27 Jul 2006)
+
+  27 Jul 2006; Mamoru KOMACHI <usata@gentoo.org> +mlterm-2.9.3-r1.ebuild:
+  Added scim USE flag. Dropped hppa keyword for the moment.
 
 *mlterm-2.9.3 (15 Jun 2006)
 
