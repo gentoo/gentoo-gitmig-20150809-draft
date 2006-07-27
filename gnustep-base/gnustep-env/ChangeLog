@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.22 2006/03/25 15:48:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.23 2006/07/27 17:36:08 grobian Exp $
+
+*gnustep-env-0.1.8 (27 Jul 2006)
+
+  27 Jul 2006; Fabian Groffen <grobian@gentoo.org>
+  gnustep-env-0.1.6-r1.ebuild, -gnustep-env-0.1.7.ebuild,
+  +gnustep-env-0.1.8.ebuild:
+  bump, update requirements to latest versions, "fix" homepage.  Dropped
+  ~alpha as they don't meet the requirements for gnustep-base, gnustep-make,
+  gnustep-gui and gnustep-back
 
 *gnustep-env-0.1.7 (25 Mar 2006)
 

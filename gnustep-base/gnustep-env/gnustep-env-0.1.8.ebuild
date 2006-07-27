@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6-r1.ebuild,v 1.6 2006/07/27 17:36:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.8.ebuild,v 1.1 2006/07/27 17:36:08 grobian Exp $
 
 inherit gnustep
 
@@ -10,12 +10,12 @@ DESCRIPTION="This is a convience package that installs all base GNUstep librarie
 HOMEPAGE="http://www.gnustep.org"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 IUSE=""
-DEPEND="~gnustep-base/gnustep-make-1.10.0
-	>=gnustep-base/gnustep-base-1.10.2
-	>=gnustep-base/gnustep-gui-0.9.5
+DEPEND=">=gnustep-base/gnustep-make-1.12
+	>=gnustep-base/gnustep-base-1.12
+	>=gnustep-base/gnustep-gui-0.10
 	virtual/gnustep-back"
 #RDEPEND="${GS_RDEPEND}"
 RDEPEND="${DEPEND}"
