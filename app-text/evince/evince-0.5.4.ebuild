@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.4.ebuild,v 1.1 2006/07/14 14:17:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.4.ebuild,v 1.2 2006/07/27 16:33:02 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
 	dvi? (
-		app-text/tetex
+		virtual/tetex
 		t1lib? ( >=media-libs/t1lib-5.0.0 )
 	)
 	dbus? ( >=sys-apps/dbus-0.33 )
