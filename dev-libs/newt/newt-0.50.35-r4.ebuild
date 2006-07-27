@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.5 2005/05/30 03:03:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.6 2006/07/27 23:26:31 xmerlin Exp $
 
 inherit python toolchain-funcs
 
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ppc64"
 IUSE=""
-DEPEND=">=sys-libs/slang-1.4
+DEPEND="=sys-libs/slang-1*
 	>=dev-libs/popt-1.6
 	dev-lang/python
 	elibc_uclibc? ( sys-libs/ncurses )"

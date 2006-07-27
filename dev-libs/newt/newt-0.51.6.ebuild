@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.9 2006/05/11 15:30:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.10 2006/07/27 23:26:31 xmerlin Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="gpm"
 
-DEPEND=">=sys-libs/slang-1.4
+DEPEND="=sys-libs/slang-1*
 	>=dev-libs/popt-1.6
 	dev-lang/python
 	elibc_uclibc? ( sys-libs/ncurses )

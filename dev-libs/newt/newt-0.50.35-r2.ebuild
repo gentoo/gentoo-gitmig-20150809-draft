@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r2.ebuild,v 1.12 2005/02/06 17:58:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r2.ebuild,v 1.13 2006/07/27 23:26:31 xmerlin Exp $
 
 inherit python
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc hppa amd64 alpha"
 IUSE=""
 
-DEPEND=">=sys-libs/slang-1.4
+DEPEND="=sys-libs/slang-1*
 	>=dev-libs/popt-1.6
 	dev-lang/python"
 
