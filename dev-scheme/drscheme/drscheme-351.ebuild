@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-351.ebuild,v 1.1 2006/07/27 18:20:26 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-351.ebuild,v 1.2 2006/07/27 18:46:09 chutzpah Exp $
 
-inherit eutils flag-o-matic multilib
+inherit eutils multilib
 
 DESCRIPTION="DrScheme programming environment.  Includes mzscheme."
 HOMEPAGE="http://www.plt-scheme.org/software/drscheme/"
@@ -72,4 +72,7 @@ src_install() {
 	# needed so online help works
 	keepdir /usr/share/plt
 	dosym "/usr/share/doc/${P}" "/usr/share/plt/doc"
+
+	newicon "${WORKDIR}/plt/collects/icons/PLT-206.png" drscheme.png
+	make_desktop_entry drscheme "DrScheme" drscheme.png "Development"
 }
