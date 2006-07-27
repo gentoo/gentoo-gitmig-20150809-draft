@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r4.ebuild,v 1.1 2006/07/25 14:29:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r4.ebuild,v 1.2 2006/07/27 18:00:27 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -142,6 +142,7 @@ pkg_setup() {
 
 		if use lirc_devices_xboxusb; then
 			add_device atiusb "device xboxusb"
+			NEED_XBOX_PATCH=1
 		fi
 
 		if use lirc_devices_usbirboy; then
@@ -153,6 +154,7 @@ pkg_setup() {
 			if [[ "${PROFILE_ARCH}" == "xbox" ]]; then
 				# on xbox: use special driver
 				add_device atiusb "device xboxusb"
+				NEED_XBOX_PATCH=1
 			else
 				# no driver requested
 				einfo
@@ -224,13 +226,16 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	# Apply kernel compatibility patches
 	epatch ${FILESDIR}/${P}-kernel-2.6.16.diff
 	epatch ${FILESDIR}/${P}-kernel-2.6.17.diff
 	epatch ${FILESDIR}/${P}-kernel-2.6.18.diff
 
+	# Work with udev-094 and greater
 	epatch ${FILESDIR}/${PN}-udev-094.diff
 
-	use lirc_devices_xboxusb && epatch ${FILESDIR}/lirc-0.8.0pre4-xbox-remote.diff
+	# Apply patches needed for some special device-types
+	[[ ${NEED_XBOX_PATCH:-0} == 1 ]] && epatch ${FILESDIR}/lirc-0.8.0pre4-xbox-remote.diff
 	use lirc_devices_imon_pad2keys && epatch ${FILESDIR}/${P}-imon-pad2keys.patch
 
 	# remove parallel driver on SMP systems
@@ -238,6 +243,7 @@ src_unpack() {
 		sed -i -e "s:lirc_parallel::" drivers/Makefile.in
 	fi
 
+	# respect CFLAGS
 	sed -i -e 's:CFLAGS="-O2:CFLAGS=""\n#CFLAGS="-O2:' configure.in
 
 	# setting default device-node
