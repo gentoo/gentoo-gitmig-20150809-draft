@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.5 2006/02/25 23:50:20 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-5.2.0.ebuild,v 1.6 2006/07/27 02:47:09 vanquirius Exp $
 
 inherit eutils
 
@@ -17,6 +17,20 @@ IUSE="gnutls http icp idn priority smtp ssl tos"
 DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	ssl?	( >=dev-libs/openssl-0.9.7d )
 	idn?	( net-dns/libidn )"
+
+pkg_setup() {
+	# bug 141782 - conflicting USE flags - ssl and gnutls
+	if use ssl && use gnutls ; then
+		eerror "You cannot emerge net-analyzer/echoping with both"
+		eerror "ssl and gnutls USE flags set. Please choose one."
+		eerror
+		eerror "For example, you can add the line"
+		eerror
+		eerror "net-analyzer/echoping -gnutls"
+		eerror "to your /etc/portage/package.use"
+		die "echoping cannot use both ssl and gnutls at once"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
