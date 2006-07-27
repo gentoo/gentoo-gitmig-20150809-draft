@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.14 2006/06/24 19:57:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.15 2006/07/27 01:39:48 flameeyes Exp $
+
+  27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -files/bug130389.patch,
+  -freebsd-baselayout-20060420-r2.ebuild:
+  Remove obsolete version.
 
   24 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-baselayout-20060624.ebuild:
