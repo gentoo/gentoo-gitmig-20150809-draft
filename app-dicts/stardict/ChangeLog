@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.28 2006/05/07 19:57:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.29 2006/07/27 21:13:34 liquidx Exp $
+
+*stardict-2.4.8 (27 Jul 2006)
+
+  27 Jul 2006; Alastair Tse <liquidx@gentoo.org> -stardict-2.2.1.ebuild,
+  -stardict-2.4.1.ebuild, stardict-2.4.2.ebuild, -stardict-2.4.3.ebuild,
+  -stardict-2.4.4.ebuild, stardict-2.4.6-r1.ebuild, +stardict-2.4.8.ebuild:
+  version bump (#130608). stable bump for x86 for 2.4.6-r1.
 
   07 May 2006; Markus Rothe <corsair@gentoo.org> stardict-2.4.6-r1.ebuild:
   Stable on ppc64; bug #108571

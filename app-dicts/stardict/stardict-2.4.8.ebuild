@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.6-r1.ebuild,v 1.4 2006/07/27 21:13:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.8.ebuild,v 1.1 2006/07/27 21:13:34 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,7 @@ RESTRICT="test"
 LICENSE="GPL-2"
 SLOT="0"
 # when adding keywords, remember to add to stardict.eclass
-KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 
 RDEPEND="gnome? ( >=gnome-base/libbonobo-2.2.0
@@ -39,6 +39,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export PKG_CONFIG=`which pkg-config`
 	G2CONF="$(use_enable gnome gnome-support)"
 	gnome2_src_compile
 }
