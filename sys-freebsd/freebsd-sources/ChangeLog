@@ -1,6 +1,14 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.17 2006/07/27 01:30:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.18 2006/07/27 01:43:51 flameeyes Exp $
+
+  27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/SA-06-04-ipfw.patch, -files/SA-06-06-kmem60.patch,
+  -files/SA-06-11-ipsec.patch, -files/freebsd-sources-6.0-gentoover.patch,
+  -files/SA-06-05-80211.patch, -files/SA-06-07-pf.patch,
+  -files/SA-06-14-fpu.patch, -freebsd-sources-6.1-r1.ebuild,
+  -freebsd-sources-6.1-r2.ebuild:
+  Drop old versions and stray patches.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -freebsd-sources-6.0-r5.ebuild:
