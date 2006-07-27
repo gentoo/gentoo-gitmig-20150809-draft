@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellmss
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.16 2005/04/27 20:01:46 herbs Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.17 2006/07/27 06:41:38 wormo Exp $
+
+  26 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  gkrellmss-2.3.ebuild, gkrellmss-2.4.ebuild, gkrellmss-2.6.ebuild:
+  Homepage moved - reported by John Holden (Bug #85831)
 
   27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrellmss-2.6.ebuild:
   multilib fixes
