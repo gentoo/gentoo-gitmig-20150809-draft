@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.14 2006/07/23 22:22:36 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.15 2006/07/27 17:34:03 tcort Exp $
+
+  27 Jul 2006; <tcort@gentoo.org> libvncserver-0.8.2.ebuild:
+  Stable on amd64 wrt security Bug #136916.
 
   23 Jul 2006; Joshua Jackson <tsunam@gentoo.org> ChangeLog:
   Stable x86; bug #136916
