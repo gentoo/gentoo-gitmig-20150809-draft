@@ -1,0 +1,10 @@
+# ChangeLog for games-board/glchess
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/ChangeLog,v 1.1 2006/07/27 02:43:25 mr_bones_ Exp $
+
+*glchess-0.9.5 (27 Jul 2006)
+
+  27 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +glchess-0.9.5.ebuild:
+  initial commit - ebuild from Tupone Alfredo via bug #84171
+
