@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.7 2006/07/23 11:51:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.8 2006/07/27 04:55:01 tsunam Exp $
 
 inherit eutils qt3
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gnu.org/pub/gnu/electric/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DEPEND="virtual/libc
 	!qt3? ( virtual/motif )
