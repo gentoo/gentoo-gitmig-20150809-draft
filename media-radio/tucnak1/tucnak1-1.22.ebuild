@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/tucnak1-1.22.ebuild,v 1.4 2006/03/19 00:12:48 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak1/tucnak1-1.22.ebuild,v 1.5 2006/07/27 23:41:00 flameeyes Exp $
 
 DESCRIPTION="Amateur Radio VHF Contest Logbook"
 HOMEPAGE="http://tucnak.nagano.cz/tucnak1en.html"
@@ -15,8 +15,8 @@ RDEPEND="virtual/libc
 	dev-libs/glib
 	sdl? ( media-libs/libpng
 		media-libs/libsdl
-	    media-radio/tucnak1-data
-		sys-libs/slang
+		media-radio/tucnak1-data
+		=sys-libs/slang-1*
 		sys-libs/zlib )"
 
 src_compile() {
@@ -35,9 +35,9 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "tucnak1 can be used with the following additional packages:"
-	einfo "    media-libs/libsdl          : Enable graphics in tucnak1"
-	einfo "    media-libs/tucnak1-data    : Also required for graphics"
-	einfo "    media-radio/cwdaemon       : Morse code daemon"
-	einfo "    media-radio/ssbd           : SSB (voice keyer) daemon"
+	einfo "	   media-libs/libsdl		  : Enable graphics in tucnak1"
+	einfo "	   media-libs/tucnak1-data	  : Also required for graphics"
+	einfo "	   media-radio/cwdaemon		  : Morse code daemon"
+	einfo "	   media-radio/ssbd			  : SSB (voice keyer) daemon"
 	einfo ""
 }
