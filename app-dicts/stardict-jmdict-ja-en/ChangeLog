@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/stardict-jmdict-ja-en
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-ja-en/ChangeLog,v 1.8 2006/01/19 13:09:37 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-ja-en/ChangeLog,v 1.9 2006/07/27 21:14:46 liquidx Exp $
+
+  27 Jul 2006; Alastair Tse <liquidx@gentoo.org>
+  -stardict-jmdict-ja-en-2.1.1.ebuild,
+  stardict-jmdict-ja-en-2.4.2-r1.ebuild:
+  stable bump for x86
 
 *stardict-jmdict-ja-en-2.4.2-r1 (19 Jan 2006)
 
