@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.7-r1.ebuild,v 1.2 2006/07/23 00:53:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/jzlib-1.0.7-r1.ebuild,v 1.3 2006/07/27 12:27:51 nelchael Exp $
 
-inherit java-pkg-2
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="JZlib is a re-implementation of zlib in pure Java."
 HOMEPAGE="http://www.jcraft.com/jzlib/"
