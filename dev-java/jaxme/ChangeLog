@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.7 2006/03/11 20:01:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.8 2006/07/27 20:26:58 nelchael Exp $
+
+*jaxme-0.3.1-r1 (27 Jul 2006)
+
+  27 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +jaxme-0.3.1-r1.ebuild:
+  Migrated to Generation 2.
 
   11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> jaxme-0.3.1.ebuild:
   Stable on ppc.
