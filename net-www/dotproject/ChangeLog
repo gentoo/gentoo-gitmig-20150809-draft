@@ -1,6 +1,11 @@
 # ChangeLog for net-www/dotproject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.9 2006/06/11 16:58:58 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dotproject/ChangeLog,v 1.10 2006/07/27 16:28:55 stuart Exp $
+
+*dotproject-2.0.4 (27 Jul 2006)
+
+  27 Jul 2006; Stuart Herbert <stuart@gentoo.org> +dotproject-2.0.4.ebuild:
+  Version bump; fixes bug 138118
 
 *dotproject-2.0.3 (11 Jun 2006)
 
