@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lirc_devices.desc,v 1.2 2006/06/24 11:18:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lirc_devices.desc,v 1.3 2006/07/27 17:21:25 zzam Exp $
 
 # This file contains descriptions of LIRC_DEVICES USE_EXPAND flags.
 
@@ -49,6 +49,7 @@ imon - LIRC_DEVICES setting to add support for imon receiver device
 imon_pad - LIRC_DEVICES setting to add support for imon_pad receiver device
 imon_pad2keys - LIRC_DEVICES setting to add support for imon_pad receiver device (converting pad events to keypresses)
 imon_rsc - LIRC_DEVICES setting to add support for imon_rsc receiver device
+inputlirc - LIRC_DEVICES setting to grab events from /dev/input/event* with inputlircd
 irdeo - LIRC_DEVICES setting to add support for irdeo receiver device
 irdeo_remote - LIRC_DEVICES setting to add support for irdeo_remote receiver device
 irman - LIRC_DEVICES setting to add support for irman receiver device
