@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.14.0.ebuild,v 1.4 2006/04/03 22:49:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-0.14.0.ebuild,v 1.5 2006/07/27 16:17:14 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/irrlicht/${P}.zip
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 RDEPEND="media-libs/jpeg

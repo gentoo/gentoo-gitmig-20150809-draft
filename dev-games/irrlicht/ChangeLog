@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.16 2006/04/03 22:49:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.17 2006/07/27 16:17:14 wolf31o2 Exp $
+
+  27 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -irrlicht-0.12.0.ebuild, irrlicht-0.14.0.ebuild:
+  Marking stable for gcc 4.1.1 and bug #140707.
 
   03 Apr 2006; <Tupone@gentoo.org> +files/irrlicht-0.14.0-gcc41.patch,
   irrlicht-0.14.0.ebuild:
