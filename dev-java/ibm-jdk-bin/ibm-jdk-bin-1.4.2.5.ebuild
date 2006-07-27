@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.5 2006/07/11 03:15:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.6 2006/07/27 03:41:56 nichoj Exp $
 
 inherit java-vm-2 eutils versionator rpm
 
@@ -11,15 +11,19 @@ RPM_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 if use x86 ; then
 	JDK_DIST="IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm"
 	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.i386.rpm"
+	S="${WORKDIR}/opt/IBMJava2-142"
 elif use amd64 ; then
 	JDK_DIST="IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm"
 	JAVACOMM_DIST="IBMJava2-JAVACOMM-AMD64-${RPM_PV}.x86_64.rpm"
+	S="${WORKDIR}/opt/IBMJava2-amd64-142"
 elif use ppc ; then
 	JDK_DIST="IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm"
 	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.ppc.rpm"
+	S="${WORKDIR}/opt/IBMJava2-ppc-142"
 elif use ppc64 ; then
 	JDK_DIST="IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm"
 	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.ppc64.rpm"
+	S="${WORKDIR}/opt/IBMJava2-ppc64-142"
 fi
 
 DESCRIPTION="IBM Java Development Kit"
@@ -61,22 +65,11 @@ DEPEND="X? ( || (
 				)
 			)"
 RDEPEND="${DEPEND}
-		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )"
+		 !ppc64? ( !amd64? ( sys-libs/lib-compat ) )
+		 virtual/libstdc++"
 PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 RESTRICT="fetch"
-
-
-
-if use ppc; then
-	S="${WORKDIR}/opt/IBMJava2-ppc-142"
-elif use ppc64; then
-	S="${WORKDIR}/opt/IBMJava2-ppc64-142"
-elif use amd64; then
-	S="${WORKDIR}/opt/IBMJava2-amd64-142"
-else
-	S="${WORKDIR}/opt/IBMJava2-142"
-fi
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
