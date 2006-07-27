@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2056 2006/07/27 13:01:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2057 2006/07/27 17:32:36 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -444,7 +444,9 @@ dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-ruby/ruby-sdl:sge   - enable sdl-sge support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
+dev-scheme/drscheme:backtrace - support GC backtrace dumps
 dev-scheme/drscheme:cairo - Enable cairo support.
+dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
 dev-scheme/gauche-gl:cg - enable NVidia Cg binding
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
