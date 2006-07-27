@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.19 2006/06/16 19:35:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.20 2006/07/27 22:08:42 flameeyes Exp $
+
+  27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  knutclient-0.8.6.ebuild, knutclient-0.9_pre1.ebuild:
+  Update homepage.
 
   16 Jun 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regen manifest.
