@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.10 2006/07/08 08:14:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.11 2006/07/27 17:01:34 usata Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
 # Keep it sorted.
 
 af - Afrikaans locale
+am - Amharic locale
 ar - Arabic locale
 as_IN - Assamese locale for India
 az - Azeri locale
@@ -39,6 +40,7 @@ fy - Frisian locale
 ga - Irish locale
 ga_IE - Irish locale for Ireland
 gl - Galician locale
+gu - Gujarati locale
 gu_IN - Gujarati locale for India
 he - Hebrew locale
 hi - Hindi locale
@@ -53,6 +55,7 @@ ja - Japanese locale
 ka - Georgian locale
 kk - Kazakh locale
 km - Khmer locale
+kn - Kannada locale
 ko - Korean locale
 ku - Kurdish (latin) locale
 la - Latin2 locale
@@ -60,6 +63,7 @@ lo - Lao locale
 lt - Lithuanian locale
 lv - Latvian locale
 mk - Macedonian locale
+ml - Malayalam locale
 ml_IN - Malayalam locale for India
 mr_IN - Marathi locale for India
 mn - Mongolian locale
@@ -68,6 +72,7 @@ mt - Maltese locale
 nb - Norwegian (Bokmal) locale
 nb_NO - Norwegian (Bokmal) locale for Norway
 nds - Low Saxon locale
+ne - Nepali locale
 nl - Dutch locale
 nn - Nynorsk locale
 no - Norwegian locale
@@ -97,6 +102,7 @@ sv_SE - Swedish locale for Sweden
 sw_TZ - Swahili locale for Tanzania
 ta - Tamil locale
 ta_IN - Tamil locale
+te - Telugu locale
 te_IN - Telugu locale for India
 tg - Tajik locale
 th - Thai locale
@@ -109,6 +115,7 @@ uk - Ukrainian locale
 uz - Uzbek locale
 vi - Vietnamese locale
 xh - Xhosa locale
+zh - Chinese locale
 zh_CN - Chinese locale for Peoples Republic of China
 zh_TW - Chinese locale for Taiwan
 zu - Zulu locale
