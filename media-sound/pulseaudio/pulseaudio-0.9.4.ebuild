@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.4.ebuild,v 1.1 2006/07/27 00:27:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.4.ebuild,v 1.2 2006/07/27 20:15:38 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -22,7 +22,7 @@ RDEPEND="X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )
 	>=dev-libs/liboil-0.3.6
 	alsa? ( >=media-libs/alsa-lib-1.0.10 )
 	>=dev-libs/glib-2.4.0
-	avahi? ( net-dns/avahi )
+	avahi? ( >=net-dns/avahi-0.6.12 )
 	>=dev-libs/liboil-0.3.0
 	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
 	tcpd? ( sys-apps/tcp-wrappers )
