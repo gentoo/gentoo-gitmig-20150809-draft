@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.1 2006/05/09 07:41:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.2 2006/07/27 01:36:43 flameeyes Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -24,8 +24,7 @@ DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-sources-${RV}*
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
 
-PROVIDE="virtual/dev-manager
-	virtual/dhcpc"
+PROVIDE="virtual/dev-manager"
 
 S="${WORKDIR}/sbin"
 
@@ -59,10 +58,10 @@ src_install() {
 	freebsd_src_install
 	keepdir /var/log
 
-	newinitd ${FILESDIR}/ipfw.initd ipfw
-	newinitd ${FILESDIR}/sysctl.initd sysctl
+	newinitd "${FILESDIR}/ipfw.initd" ipfw
+	newinitd "${FILESDIR}/sysctl.initd" sysctl
 
-	cd ${WORKDIR}/etc/
+	cd "${WORKDIR}/etc/"
 	insinto /etc
 	doins devd.conf pccard_ether defaults/pccard.conf minfree rc.firewall \
 		sysctl.conf
