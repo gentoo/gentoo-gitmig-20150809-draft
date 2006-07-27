@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ajaxterm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ChangeLog,v 1.4 2006/07/23 12:25:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ajaxterm/ChangeLog,v 1.5 2006/07/27 02:28:07 deltacow Exp $
+
+  27 Jul 2006; Scott Stoddard <deltacow@gentoo.org> ajaxterm-0.9.ebuild:
+  Added ~amd64 (bug #134626).
 
 *ajaxterm-0.9 (23 Jul 2006)
 
