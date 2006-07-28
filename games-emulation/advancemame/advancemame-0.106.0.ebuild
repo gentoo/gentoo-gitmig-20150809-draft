@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.1 2006/07/27 21:20:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.106.0.ebuild,v 1.2 2006/07/28 00:59:08 mr_bones_ Exp $
 
 inherit eutils flag-o-matic games
 
@@ -16,7 +16,7 @@ IUSE="alsa expat fbcon oss sdl slang static svga truetype zlib"
 RDEPEND="app-arch/unzip
 	app-arch/zip
 	sdl? ( media-libs/libsdl )
-	slang? ( sys-libs/slang )
+	slang? ( =sys-libs/slang-1* )
 	alsa? ( media-libs/alsa-lib )
 	expat? ( >=dev-libs/expat-1.95.6 )
 	zlib? ( sys-libs/zlib )
@@ -30,6 +30,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}/${P}-pic.patch"
 	sed -i \
 		-e 's/"-s"//' \
 		configure \

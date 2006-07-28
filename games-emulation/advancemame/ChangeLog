@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/advancemame
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.39 2006/07/27 21:20:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/ChangeLog,v 1.40 2006/07/28 00:59:08 mr_bones_ Exp $
+
+  28 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/advancemame-0.106.0-pic.patch, advancemame-0.106.0.ebuild:
+  add back in pic patch to try to fix bug #118836; fix up slang dep (bug #141947)
 
 *advancemame-0.106.0 (27 Jul 2006)
 
