@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.2.ebuild,v 1.4 2006/07/28 08:16:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-2.3.ebuild,v 1.1 2006/07/28 08:16:19 dragonheart Exp $
 
 inherit linux-info eutils
 
@@ -23,10 +23,10 @@ RDEPEND="net-misc/l7-protocols"
 which_patch() {
 	if kernel_is ge 2 6 17
 	then
-		die 'cannot work with a >=2.6.17 kernel version - try the latest l7-filter version'
+		PATCH=kernel-2.6.17-layer7-2.3.patch
 	elif kernel_is ge 2 6 13
 	then
-		PATCH=kernel-2.6.13-2.6.16-layer7-2.2.patch
+		PATCH=for_older_kernels/kernel-2.6.13-2.6.16-layer7-2.2.patch
 	elif kernel_is ge 2 6 11
 	then
 		PATCH=for_older_kernels/kernel-2.6.11-2.6.12-layer7-1.4.patch
