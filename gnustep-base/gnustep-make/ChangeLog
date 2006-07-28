@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.32 2006/05/21 19:01:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.33 2006/07/28 13:09:12 grobian Exp $
+
+  28 Jul 2006; Fabian Groffen <grobian@gentoo.org>
+  gnustep-make-1.12.0-r1.ebuild:
+  Marked ppc-macos stable (bug #139385) and removed annoying ebeep/esleep
 
   21 May 2006; Markus Rothe <corsair@gentoo.org>
   gnustep-make-1.10.0-r2.ebuild:

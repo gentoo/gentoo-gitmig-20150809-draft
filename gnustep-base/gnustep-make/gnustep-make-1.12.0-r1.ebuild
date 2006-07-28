@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.12.0-r1.ebuild,v 1.1 2006/03/26 07:55:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.12.0-r1.ebuild,v 1.2 2006/07/28 13:09:12 grobian Exp $
 
 inherit gnustep
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNUstep Makefile Package"
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc-macos ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -104,15 +104,11 @@ pkg_setup() {
 		egnustep_user_root '~/GNUstep'
 	fi
 
-#	if use layout-from-conf-file || use layout-osx-like; then
-		einfo "GNUstep installation will be laid out as follows:"
-		einfo "\tGNUSTEP_SYSTEM_ROOT=`egnustep_system_root`"
-		einfo "\tGNUSTEP_LOCAL_ROOT=`egnustep_local_root`"
-		einfo "\tGNUSTEP_NETWORK_ROOT=`egnustep_network_root`"
-		einfo "\tGNUSTEP_USER_ROOT=`egnustep_user_root`"
-		ebeep
-		epause 10
-#	fi
+	einfo "GNUstep installation will be laid out as follows:"
+	einfo "\tGNUSTEP_SYSTEM_ROOT=`egnustep_system_root`"
+	einfo "\tGNUSTEP_LOCAL_ROOT=`egnustep_local_root`"
+	einfo "\tGNUSTEP_NETWORK_ROOT=`egnustep_network_root`"
+	einfo "\tGNUSTEP_USER_ROOT=`egnustep_user_root`"
 }
 
 src_compile() {
