@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.4 2006/07/11 13:42:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.5 2006/07/28 12:33:57 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -175,6 +175,9 @@ src_install() {
 	if use doc; then
 		make INSTALL_ROOT=${D} install_htmldocs || die
 	fi
+
+        # Install the translations.  This may get use flagged later somehow
+        make INSTALL_ROOT=${D} install_translations || die
 
 	# The private header files of QTestLib aren't installed, but are needed by the test library.
 	# This is supposedly fixed in Qt 4.1.1, so this can probably be removed when it is released
