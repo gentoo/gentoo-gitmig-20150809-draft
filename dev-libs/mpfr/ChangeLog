@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.25 2006/07/18 14:08:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.26 2006/07/28 14:58:17 dragonheart Exp $
+
+*mpfr-2.2.0_p14 (28 Jul 2006)
+
+  28 Jul 2006; Daniel Black <dragonheart@gentoo.org> +files/2.2.0/patch13,
+  +files/2.2.0/patch14, +mpfr-2.2.0_p14.ebuild:
+  more upstream patches
 
 *mpfr-2.2.0_p12 (19 Jul 2006)
 
