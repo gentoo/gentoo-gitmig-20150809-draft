@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/pftpfxp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.8 2006/07/13 03:05:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.9 2006/07/28 15:44:37 dragonheart Exp $
+
+*pftpfxp-0.11.4.6-r3 (28 Jul 2006)
+
+  28 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/0.11.4.6-correct_bookmark_path.patch, -pftpfxp-0.11.4.6-r1.ebuild,
+  -pftpfxp-0.11.4.6-r2.ebuild, +pftpfxp-0.11.4.6-r3.ebuild:
+  another patch to handle bookmarks in home directory thanks to Daniel Persson
+  in bug #140143
 
 *pftpfxp-0.11.4.6-r2 (13 Jul 2006)
 
