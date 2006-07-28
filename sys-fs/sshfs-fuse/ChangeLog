@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.21 2006/06/05 10:17:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.22 2006/07/28 06:47:00 genstef Exp $
+
+  28 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/sshfs-fuse-2.6.0_pre3.patch, sshfs-fuse-1.6.ebuild:
+  Add patch for fue 2.6.0_pre3 thanks to gardo <dbiscocho@skydsl.com.ph> and
+  <candrews@compucrafters.com> in bug 141768
 
   05 Jun 2006; Stefan Schweizer <genstef@gentoo.org> -sshfs-fuse-1.2.ebuild,
   -sshfs-fuse-1.3.ebuild, sshfs-fuse-1.6.ebuild:
