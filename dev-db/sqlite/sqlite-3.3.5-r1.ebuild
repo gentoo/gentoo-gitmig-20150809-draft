@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5-r1.ebuild,v 1.8 2006/07/22 20:25:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5-r1.ebuild,v 1.9 2006/07/28 19:28:30 cardoe Exp $
 
 inherit eutils alternatives
 
@@ -11,11 +11,11 @@ SRC_URI="http://www.sqlite.org/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="3"
 KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc ~x86"
-IUSE="nothreadsafe doc tcltk debug"
+IUSE="nothreadsafe doc tcl debug"
 
 DEPEND="virtual/libc
 	doc? ( dev-lang/tcl )
-	tcltk? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )"
 
 SOURCE="/usr/bin/lemon"
 ALTERNATIVES="${SOURCE}-3 ${SOURCE}-0"
@@ -27,8 +27,8 @@ src_unpack() {
 			ewarn "The userpriv feature must be enabled to run tests."
 			ewarn "Testsuite will not be run."
 		fi
-		if ! use tcltk; then
-			ewarn "The tcltk useflag must be enabled to run tests."
+		if ! use tcl; then
+			ewarn "The tcl useflag must be enabled to run tests."
 			ewarn "Testsuite will not be run."
 		fi
 	fi
@@ -59,7 +59,7 @@ src_compile() {
 		myconf="${myconf} --disable-threadsafe"
 	fi
 
-	if ! use tcltk; then
+	if ! use tcl; then
 		myconf="${myconf} --disable-tcl"
 	fi
 
@@ -76,7 +76,7 @@ src_compile() {
 }
 
 src_test() {
-	if use tcltk ; then
+	if use tcl ; then
 		if has usepriv ${FEATURES} ; then
 			cd ${S}
 			if use debug; then

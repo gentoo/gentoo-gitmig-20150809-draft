@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.7 2006/07/22 20:25:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.8 2006/07/28 19:28:30 cardoe Exp $
 
 inherit eutils toolchain-funcs alternatives
 
@@ -12,10 +12,10 @@ SRC_URI="http://www.sqlite.org/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 ~sh sparc ~x86 ~x86-fbsd"
-IUSE="nls doc tcltk"
+IUSE="nls doc tcl"
 
 DEPEND="doc? ( dev-lang/tcl )
-	tcltk? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )"
 
 SOURCE="/usr/bin/lemon"
 ALTERNATIVES="${SOURCE}-3 ${SOURCE}-0"
@@ -27,8 +27,8 @@ src_unpack() {
 			ewarn "The userpriv feature must be enabled to run tests."
 			ewarn "The testsuite will be skipped."
 	fi
-		if ! use tcltk; then
-			ewarn "The tcltk useflag must be enabled to run tests."
+		if ! use tcl; then
+			ewarn "The tcl useflag must be enabled to run tests."
 			ewarn "The testsuite will be skipped."
 		fi
 	fi
@@ -61,7 +61,7 @@ src_compile() {
 	myconf="--enable-incore-db --enable-tempdb-in-ram"
 	myconf="${myconf} `use_enable nls utf8`"
 
-	if ! use tcltk; then
+	if ! use tcl; then
 		myconf="${myconf} --without-tcl"
 	fi
 
@@ -72,7 +72,7 @@ src_compile() {
 		emake doc || die
 	fi
 
-	if use tcltk; then
+	if use tcl; then
 		cp -P ${FILESDIR}/maketcllib.sh ${S}
 		chmod +x ./maketcllib.sh
 		./maketcllib.sh
@@ -80,7 +80,7 @@ src_compile() {
 }
 
 src_test() {
-	if use tcltk ; then
+	if use tcl ; then
 		if has userpriv ${FEATURES} ; then
 			einfo "sqlite 2.x is known to have problems on 64 bit architectures"
 			einfo "if you observe segmentation faults please use 3.x instead"
@@ -106,7 +106,7 @@ src_install () {
 		dohtml doc/*.html doc/*.txt doc/*.png
 	fi
 
-	if use tcltk; then
+	if use tcl; then
 		mkdir ${D}/usr/$(get_libdir)/tclsqlite${PV}
 		cp ${S}/tclsqlite.so ${D}/usr/$(get_libdir)/tclsqlite${PV}/
 		cp ${S}/pkgIndex.tcl ${D}/usr/$(get_libdir)/tclsqlite${PV}/
