@@ -1,14 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b40b67a2f6cecea50c80875c28e0b405 ChangeLog 624
-MD5 b2e89a91daa1fb03eea0ee2ae7eecf94 files/digest-service-discovery-applet-0.3 80
-MD5 fee6e15994a6028b5d4ca280c4cabe09 metadata.xml 303
+DIST service-discovery-applet-0.3.tar.gz 169604 RMD160 be290b4b8d3b82a47134bd2f9b619020633dfa33 SHA1 bb20e0c64dd9a29c378e33d2b77eb06a7ea682dc SHA256 462de9c5df4412f1b1d036a6f1a95b8c427ae56608157631439180e1b0091094
+DIST service-discovery-applet-0.4.1.tar.gz 173828 RMD160 21e9b8526a738c20509c9c189c8c788b19c58c0f SHA1 4dfb282ecc4cfbc48936d055dea6c413ff632d91 SHA256 45ffb522d0a714c4e99c78c7d025a0d07b49cb7f3458cfcb08006cefb80fff78
+EBUILD service-discovery-applet-0.3.ebuild 918 RMD160 32f94aed79f5bdd9360889ce92546fdb5a41649c SHA1 ca3d52070a54d68bc40f4d970921befb96906743 SHA256 fdc14e9511e647ddc05fa8258897907b0d2575857970980bf2645763af0663af
 MD5 79f9b8b25a7683f6ae6936c520b63093 service-discovery-applet-0.3.ebuild 918
+RMD160 32f94aed79f5bdd9360889ce92546fdb5a41649c service-discovery-applet-0.3.ebuild 918
+SHA256 fdc14e9511e647ddc05fa8258897907b0d2575857970980bf2645763af0663af service-discovery-applet-0.3.ebuild 918
+EBUILD service-discovery-applet-0.4.1.ebuild 962 RMD160 440e3021949f4964e21e2f08ed59cebb7fcf5b9c SHA1 b2aeff702a2bc8fb18d1b3d8af80fe1ca7042b64 SHA256 c5e1eb7d41a0ecab2e85317408296c0034ddb3ed60e05b960c6c5f444184475a
+MD5 a97e6a47196b7fee4b0e3094f3854ea6 service-discovery-applet-0.4.1.ebuild 962
+RMD160 440e3021949f4964e21e2f08ed59cebb7fcf5b9c service-discovery-applet-0.4.1.ebuild 962
+SHA256 c5e1eb7d41a0ecab2e85317408296c0034ddb3ed60e05b960c6c5f444184475a service-discovery-applet-0.4.1.ebuild 962
+MISC ChangeLog 780 RMD160 90559e8dce32b7a23943638150f4e293763da4cb SHA1 c7a19f00a5d10d3e1f22199e6adda28a3763edce SHA256 931cc02f8ae3f6a5da2a85a18aafc8a2b01c726c465920e7194bfd9ca47101c6
+MD5 ec2232525ef0b68cca8cb5098b80cfa2 ChangeLog 780
+RMD160 90559e8dce32b7a23943638150f4e293763da4cb ChangeLog 780
+SHA256 931cc02f8ae3f6a5da2a85a18aafc8a2b01c726c465920e7194bfd9ca47101c6 ChangeLog 780
+MISC metadata.xml 303 RMD160 428b21f484596242b9fa1a661036deba38a37f5d SHA1 6a611ce605af4aad8b26ec906525ca8a3cf92c60 SHA256 881198f8abbd9947a66c04de6e286ec442cfa2b892afd741f0c1fc32d7db9f22
+MD5 fee6e15994a6028b5d4ca280c4cabe09 metadata.xml 303
+RMD160 428b21f484596242b9fa1a661036deba38a37f5d metadata.xml 303
+SHA256 881198f8abbd9947a66c04de6e286ec442cfa2b892afd741f0c1fc32d7db9f22 metadata.xml 303
+MD5 bfd9d89cc20ac7b20b3bf5f0edd635a5 files/digest-service-discovery-applet-0.3 286
+RMD160 0bb007c2142797a2c02c5934e74bb2b59062a7b9 files/digest-service-discovery-applet-0.3 286
+SHA256 74c9e06a22bb02998b0754d57fe4331681bd5562124f1155eab7ab1e9fa68e08 files/digest-service-discovery-applet-0.3 286
+MD5 1bc4b65a93182125ace44243d9578218 files/digest-service-discovery-applet-0.4.1 292
+RMD160 4571db58f49da6c56ff603cf342eb45b07517153 files/digest-service-discovery-applet-0.4.1 292
+SHA256 b030a43bd2a1ab2544d64348abb063c966628cd12cba91b75dd7c1f3a3af0740 files/digest-service-discovery-applet-0.4.1 292
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.3 (GNU/Linux)
 
-iD8DBQFDRtDuI1lqEGTUzyQRAhksAJ9Xh6NAqOdGhrfW2qms4CbDJ3WXEgCeIPvi
-NOnFVr5nwAIqLN8+BXwaFwg=
-=MQaV
+iD8DBQFEyl4yI1lqEGTUzyQRAotRAJ9Gdfkrk1bhMxGW6ljQKlothPMzmwCgzU17
+3dDvGIDTkjD4oFDe5d2TlG0=
+=cykj
 -----END PGP SIGNATURE-----
