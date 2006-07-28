@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.2-r3.ebuild,v 1.1 2006/07/24 15:03:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.3.2-r3.ebuild,v 1.2 2006/07/28 12:28:24 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache perl-module java-pkg-opt-2
 
@@ -141,7 +141,7 @@ src_compile() {
 		# ensure that the destination dir exists, else some compilation fails
 		mkdir -p ${S}/subversion/bindings/java/javahl/classes
 		# Compile javahl
-		make JAVACFLAGS="$(java-pkg_javac-args) -encoding iso8859-1" javahl || die "Compilation failed"
+		make JAVAC_FLAGS="$(java-pkg_javac-args) -encoding iso8859-1" javahl || die "Compilation failed"
 	fi
 
 	if use emacs; then
