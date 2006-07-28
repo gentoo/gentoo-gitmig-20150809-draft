@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r7.ebuild,v 1.1 2006/07/27 15:24:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r7.ebuild,v 1.2 2006/07/28 11:58:52 nelchael Exp $
 
 inherit java-pkg-2
 
@@ -16,8 +16,7 @@ IUSE="readline source doc"
 # servlet
 
 RDEPEND=">=virtual/jre-1.2
-	readline? ( >=dev-java/libreadline-java-0.8.0 )
-	jikes? ( >=dev-java/jikes-1.18 )"
+	readline? ( >=dev-java/libreadline-java-0.8.0 )"
 #	servlet? ( >=net-www/tomcat-5.0 )
 DEPEND=">=virtual/jdk-1.2
 	source? ( app-arch/zip )

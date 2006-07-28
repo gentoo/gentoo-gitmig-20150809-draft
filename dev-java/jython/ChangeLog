@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.30 2006/07/27 15:24:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.31 2006/07/28 11:58:52 nelchael Exp $
+
+  28 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> jython-2.1-r7.ebuild:
+  Removed jikes.
 
 *jython-2.1-r7 (20 Jul 2006)
 
