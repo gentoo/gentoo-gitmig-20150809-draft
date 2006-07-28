@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/beaglefs
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/beaglefs/ChangeLog,v 1.1 2006/07/28 19:08:04 metalgod Exp $
+
+*beaglefs-1.0.3 (28 Jul 2006)
+
+  28 Jul 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
+  +beaglefs-1.0.3.ebuild:
+  Initial import.
+
