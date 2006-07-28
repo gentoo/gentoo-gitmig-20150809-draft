@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r2.ebuild,v 1.2 2006/05/21 23:34:37 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r2.ebuild,v 1.3 2006/07/28 22:21:05 tupone Exp $
 
 inherit eutils games
 
@@ -16,6 +16,7 @@ KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="!games-misc/wtf
+	!app-misc/banner
 	sys-libs/ncurses
 	sys-apps/miscfiles"
 DEPEND="${RDEPEND}
