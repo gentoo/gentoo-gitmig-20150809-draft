@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.14 2006/01/07 18:43:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.15 2006/07/28 05:59:39 ming Exp $
+
+*qterm-0.4.0 (28 Jul 2006)
+
+  28 Jul 2006; Ming Zhao <ming@gentoo.org> -files/qstring.patch,
+  -qterm-0.4.0_pre2.ebuild, -qterm-0.4.0_pre3.ebuild, +qterm-0.4.0.ebuild:
+  Version bumped. Remove beta versions and qstring.patch(integrated by
+  upstream).
 
   07 Jan 2006; Carsten Lohrke <carlo@gentoo.org> qterm-0.4.0_pre3.ebuild:
   QA: need-qt() needs to be called after R/DEPEND.
