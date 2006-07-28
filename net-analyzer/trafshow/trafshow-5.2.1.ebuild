@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.1.ebuild,v 1.6 2006/02/17 16:31:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-5.2.1.ebuild,v 1.7 2006/07/28 06:42:15 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ IUSE="slang"
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses
-	slang? ( >=sys-libs/slang-1.4.2 )"
+	slang? ( =sys-libs/slang-1* )"
 
 src_unpack() {
 	unpack ${A}; cd "${S}"

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/trafshow
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.24 2006/03/21 23:16:10 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/ChangeLog,v 1.25 2006/07/28 06:42:15 dragonheart Exp $
+
+  28 Jul 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/trafshow-4.0-gentoo.patch, -trafshow-4.0.ebuild,
+  trafshow-5.2.1.ebuild, trafshow-5.2.3.ebuild:
+  slang dependency fix as per bug #141947 thanks Diego. remove old version
 
 *trafshow-5.2.3 (21 Mar 2006)
 
