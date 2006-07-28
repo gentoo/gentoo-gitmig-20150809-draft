@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.9 2006/07/20 18:20:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.10 2006/07/28 13:46:19 usata Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -74,7 +74,7 @@ src_compile() {
 		--enable-smart-resize \
 		--enable-256-color \
 		--enable-menubar \
-		$(use_enable cjk langauges) \
+		$(use_enable cjk languages) \
 		--enable-xim \
 		--enable-shared \
 		--enable-keepscrolling \
