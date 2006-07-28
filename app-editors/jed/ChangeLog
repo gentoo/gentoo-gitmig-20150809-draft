@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jed
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.31 2006/02/13 02:51:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/ChangeLog,v 1.32 2006/07/28 09:04:29 liquidx Exp $
+
+  28 Jul 2006; Alastair Tse <liquidx@gentoo.org> jed-0.99.16-r2.ebuild:
+  slotting dependencies for slang-2 (#141947)
 
   13 Feb 2006; Mark Loeser <halcy0n@gentoo.org> jed-0.99.16-r2.ebuild:
   Fix leading and trailing spaces
