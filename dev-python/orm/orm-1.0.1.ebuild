@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-1.0.1.ebuild,v 1.1 2004/10/14 00:23:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-1.0.1.ebuild,v 1.2 2006/07/28 12:03:51 liquidx Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ DEPEND="virtual/python
 	dev-python/egenix-mx-base
 	firebird? ( >=dev-python/kinterbasdb-3.1_pre7 )
 	mysql? ( >=dev-python/mysql-python-0.9.2 )
-	postgres? ( >=dev-python/psycopg-1.1.5.1 )"
+	postgres? ( <dev-python/psycopg-1.99 )"
 
 SLOT="0"
 LICENSE="GPL-2"

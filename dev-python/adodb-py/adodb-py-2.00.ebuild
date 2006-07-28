@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.00.ebuild,v 1.4 2006/07/18 21:43:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.00.ebuild,v 1.5 2006/07/28 11:59:45 liquidx Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~ia64 ppc x86"
 IUSE="mysql postgres sqlite"
 
 RDEPEND=">=dev-lang/python-2.3
-	postgres? ( >=dev-python/psycopg-1.1.5.1 )
+	postgres? ( <dev-python/psycopg-1.99 )
 	mysql? ( >=dev-python/mysql-python-0.9.2 )
 	sqlite? ( >=dev-python/pysqlite-2.0 ) "
 DEPEND="${RDEPEND}

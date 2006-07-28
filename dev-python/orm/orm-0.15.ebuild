@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-0.15.ebuild,v 1.3 2004/06/25 01:35:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-0.15.ebuild,v 1.4 2006/07/28 12:03:51 liquidx Exp $
 
 IUSE="firebird mysql postgres"
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-lang/python-2.2.3
 	dev-python/egenix-mx-base
 	firebird? ( >=dev-python/kinterbasdb-3.1_pre7 )
 	mysql? ( >=dev-python/mysql-python-0.9.2 )
-	postgres? ( >=dev-python/psycopg-1.1.5.1 )"
+	postgres? ( <=dev-python/psycopg-1.99 )"
 
 SLOT="0"
 KEYWORDS="~x86"

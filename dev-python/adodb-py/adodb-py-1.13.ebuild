@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-1.13.ebuild,v 1.4 2006/03/22 18:23:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-1.13.ebuild,v 1.5 2006/07/28 11:59:45 liquidx Exp $
 
 inherit distutils
 
@@ -16,7 +16,7 @@ KEYWORDS="ppc x86"
 IUSE="mysql postgres"
 
 RDEPEND=">=dev-lang/python-2.3
-	postgres? ( >=dev-python/psycopg-1.1.5.1 )
+	postgres? ( <dev-python/psycopg-1.99 )
 	mysql? ( >=dev-python/mysql-python-0.9.2 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
