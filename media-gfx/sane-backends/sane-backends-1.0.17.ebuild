@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.7 2006/07/27 03:37:48 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.8 2006/07/28 09:12:14 phosphan Exp $
 
 inherit eutils
 
@@ -126,9 +126,7 @@ src_install () {
 		cd ../..
 	fi
 
-	docinto backend
-	cd backend
-	dodoc GUIDE *.README *.BUGS *.CHANGES *.FAQ *.TODO
+	dodoc NEWS AUTHORS LICENSE ChangeLog* README README.linux
 
 	echo "SANE_CONFIG_DIR=/etc/sane.d" > 30sane
 	insinto /etc/env.d

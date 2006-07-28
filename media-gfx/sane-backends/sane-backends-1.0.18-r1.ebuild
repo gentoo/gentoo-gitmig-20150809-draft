@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18.ebuild,v 1.3 2006/07/28 09:12:14 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r1.ebuild,v 1.1 2006/07/28 09:12:14 phosphan Exp $
 
 inherit eutils
 
@@ -89,7 +89,7 @@ src_unpack() {
 		sed -e 's/bh canon/bh brother canon/' -i configure || \
 			die "could not add 'brother' to backend list"
 	fi
-
+	epatch ${FILESDIR}/scsi-udev-rule.patch
 }
 
 src_compile() {
@@ -116,6 +116,7 @@ src_install () {
 	keepdir /var/lib/lock/sane
 	fowners root:scanner /var/lib/lock/sane
 	fperms g+w /var/lib/lock/sane
+	dodir /etc/env.d
 	if use usb; then
 		cd tools/hotplug
 		insinto /etc/hotplug/usb
@@ -123,13 +124,15 @@ src_install () {
 		doins libsane.usermap
 		doexe libusbscanner
 		newdoc README README.hotplug
+		echo >> ${D}/etc/env.d/30sane "USB_DEVFS_PATH=/dev/bus/usb"
 		cd ../..
 	fi
+	cd tools/udev
+	dodir /etc/udev/rules.d
+	insinto /etc/udev/rules.d
+	newins libsane.rules 99-libsane.rules
+	cd ../..
 
 	dodoc NEWS AUTHORS LICENSE ChangeLog* README README.linux
-
-	echo "SANE_CONFIG_DIR=/etc/sane.d" > 30sane
-	insinto /etc/env.d
-	doins 30sane
-
+	echo "SANE_CONFIG_DIR=/etc/sane.d" >> ${D}/etc/env.d/30sane
 }
