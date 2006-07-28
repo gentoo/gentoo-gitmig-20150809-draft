@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.9 2006/01/14 09:19:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.2.2-r1.ebuild,v 1.10 2006/07/28 15:08:09 hanno Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,7 @@ RDEPEND="X? (
 	) )
 	svga? ( media-libs/svgalib )
 	gpm? ( sys-libs/gpm )
-	sys-libs/slang"
+	=sys-libs/slang-1.4*"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.57"

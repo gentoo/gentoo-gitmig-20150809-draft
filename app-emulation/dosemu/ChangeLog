@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.32 2006/01/24 02:00:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.33 2006/07/28 15:08:09 hanno Exp $
+
+  28 Jul 2006; Hanno Boeck <hanno@gentoo.org> dosemu-1.2.2-r1.ebuild,
+  dosemu-1.3.2.ebuild:
+  Change slang dep for slotting.
 
   24 Jan 2006; Hanno Boeck <hanno@gentoo.org> dosemu-1.3.2.ebuild:
   Add some missing modular x deps.
