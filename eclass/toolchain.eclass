@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.296 2006/07/19 17:48:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.297 2006/07/28 06:36:07 kevquinn Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -147,7 +147,7 @@ else
 		# these are features introduced in 4.0
 		if tc_version_is_at_least "4.0" ; then
 			IUSE="${IUSE} objc-gc mudflap"
-	
+
 			if tc_version_is_at_least "4.1" ; then
 				IUSE="${IUSE} objc++"
 			fi
@@ -955,6 +955,40 @@ guess_patch_type_in_dir() {
 		&& EPATCH_SUFFIX="patch.bz2" \
 		|| EPATCH_SUFFIX="patch"
 }
+do_gcc_rename_java_bins() {
+	# bug #139918 - conflict between gcc and java-config-2 for ownership of
+	# /usr/bin/rmi{c,registry}.  Done with mv & sed rather than a patch
+	# because patches would be large (thanks to the rename of man files),
+	# and it's clear from the sed invocations that all that changes is the
+	# rmi{c,registry} names to grmi{c,registry} names.
+	# Kevin F. Quinn 2006-07-12
+	einfo "Renaming jdk executables rmic and rmiregistry to grmic and grmiregistry."
+	# 1) Move the man files if present (missing prior to gcc-3.4)
+	for manfile in rmic rmiregistry; do
+		[[ -f ${S}/gcc/doc/${manfile}.1 ]] || continue
+		mv ${S}/gcc/doc/${manfile}.1 ${S}/gcc/doc/g${manfile}.1
+	done
+	# 2) Fixup references in the docs if present (mission prior to gcc-3.4)
+	for jfile in gcc/doc/gcj.info gcc/doc/grmic.1 gcc/doc/grmiregistry.1 gcc/java/gcj.texi; do
+		[[ -f ${S}/${jfile} ]] || continue
+		sed -i -e 's:rmiregistry:grmiregistry:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmiregistry"
+		sed -i -e 's:rmic:grmic:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmic"
+	done
+	# 3) Fixup Makefiles to build the changed executable names
+	#    These are present in all 3.x versions, and are the important bit
+	#    to get gcc to build with the new names.
+	for jfile in libjava/Makefile.am libjava/Makefile.in gcc/java/Make-lang.in; do
+		sed -i -e 's:rmiregistry:grmiregistry:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmiregistry"
+		# Careful with rmic on these files; it's also the name of a directory
+		# which should be left unchanged.  Replace occurrences of 'rmic$',
+		# 'rmic_' and 'rmic '.
+		sed -i -e 's:rmic\([$_ ]\):grmic\1:g' ${S}/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmic"
+	done
+}
 gcc_src_unpack() {
 	local release_version="Gentoo ${GCC_PVR}"
 
@@ -1030,6 +1064,14 @@ gcc_src_unpack() {
 	   [[ ${GCCMAJOR}.${GCCMINOR}.${GCCMICRO} < 3.4.4 ]]
 	then
 		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g "${S}"/gcc/config.in
+	fi
+
+	# In gcc 3.3.x and 3.4.x, rename the java bins to gcc-specific names
+	# in line with gcc-4.
+	if [[ ${GCCMAJOR} == 3 ]] &&
+	   [[ ${GCCMINOR} -ge 3 ]]
+	then
+		do_gcc_rename_java_bins
 	fi
 
 	# Fixup libtool to correctly generate .la files with portage
