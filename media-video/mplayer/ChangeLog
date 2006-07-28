@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.403 2006/07/18 17:55:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.404 2006/07/28 13:25:07 chrb Exp $
+
+  28 Jul 2006; Chris Bainbridge <chrb@gentoo.org> mplayer-1.0_pre8.ebuild,
+  mplayer-1.0_pre8-r1.ebuild:
+  Fix "line 338: !use: command not found"
 
   18 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   mplayer-1.0_pre8.ebuild, mplayer-1.0_pre8-r1.ebuild:

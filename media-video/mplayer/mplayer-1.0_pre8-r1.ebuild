@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.7 2006/07/18 17:55:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.8 2006/07/28 13:25:07 chrb Exp $
 
 inherit eutils flag-o-matic
 
@@ -335,7 +335,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	use x86 && myconf="${myconf} $(use_enable real)"
-	!use livecd && !use bindist && \
+	! use livecd && ! use bindist && \
 		myconf="${myconf} $(use_enable win32codecs win32)"
 
 	#############
