@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.3.ebuild,v 1.16 2004/07/14 15:07:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.3.ebuild,v 1.17 2006/07/28 17:51:53 dertobi123 Exp $
 
 MY_P=${PN}2d5
 S=${WORKDIR}/${PN}
@@ -17,6 +17,8 @@ RDEPEND=">=dev-util/guile-1.4"
 DEPEND="${RDEPEND}
 	>=app-arch/unzip-5.21
 	>=dev-util/guile-1.4"
+
+RESTRICT="test"
 
 src_install() {
 	insinto /usr/share/guile/site/slib

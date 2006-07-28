@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/slib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.15 2005/10/02 11:57:17 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.16 2006/07/28 17:51:53 dertobi123 Exp $
+
+  28 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> slib-2.4.2.ebuild,
+  slib-2.4.3.ebuild, slib-2.4.6.ebuild, slib-3.1.1.ebuild:
+  2.4.6 ppc stable, restrict tests
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> slib-2.4.6.ebuild:
   Mark 2.4.6 stable on ia64
