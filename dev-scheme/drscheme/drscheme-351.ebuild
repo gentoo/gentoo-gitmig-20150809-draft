@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-351.ebuild,v 1.2 2006/07/27 18:46:09 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-351.ebuild,v 1.3 2006/07/28 01:32:59 chutzpah Exp $
 
 inherit eutils multilib
 
@@ -27,6 +27,8 @@ DEPEND="|| ( ( x11-libs/libICE
 	jpeg? ( media-libs/jpeg )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )"
+
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/plt/src"
 GL_COLLECTS="sgl games/gobblet games/checkers games/jewel games/gl-board-game"
