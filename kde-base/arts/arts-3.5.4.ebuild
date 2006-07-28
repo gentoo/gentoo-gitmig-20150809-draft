@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.4.ebuild,v 1.1 2006/07/25 02:31:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.4.ebuild,v 1.2 2006/07/28 08:20:12 flameeyes Exp $
 
-inherit kde flag-o-matic eutils
+inherit kde flag-o-matic eutils versionator
 set-kdedir 3.5
 
-MY_PV=1.5.3
+MY_PV="1.$(get_version_component_range 2-3)"
 S=${WORKDIR}/${PN}-${MY_PV}
 
 RESTRICT="test"
@@ -24,7 +24,7 @@ RDEPEND="$(qt_min_version 3.3)
 	>=dev-libs/glib-2
 	alsa? ( media-libs/alsa-lib )
 	vorbis? ( media-libs/libogg
-	          media-libs/libvorbis )
+			  media-libs/libvorbis )
 	esd? ( media-sound/esound )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.90 )
 	mp3? ( media-libs/libmad )
@@ -35,8 +35,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 PATCHES="${FILESDIR}/arts-1.3.2-alsa-bigendian.patch
-	${FILESDIR}/arts-1.5.0-bindnow.patch
-	${FILESDIR}/arts-1.2.x.diff"
+	${FILESDIR}/arts-1.5.0-bindnow.patch"
 
 src_unpack() {
 	kde_src_unpack
@@ -55,8 +54,8 @@ src_unpack() {
 
 src_compile() {
 	myconf="$(use_enable alsa) $(use_enable vorbis)
-	        $(use_enable mp3 libmad) $(use_with jack)
-	        $(use_with esd) $(use_with nas)
+			$(use_enable mp3 libmad) $(use_with jack)
+			$(use_with esd) $(use_with nas)
 		--with-audiofile --without-mas"
 
 	#fix bug 13453
