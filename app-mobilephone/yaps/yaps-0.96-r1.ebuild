@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.6 2006/01/03 11:46:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/yaps/yaps-0.96-r1.ebuild,v 1.7 2006/07/28 01:15:51 sbriesen Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE="capi lua slang unicode"
 
 RDEPEND="capi? ( net-dialup/capi4k-utils )
-	slang? ( sys-libs/slang )
+	slang? ( =sys-libs/slang-1* )
 	lua? ( dev-lang/lua )"
 DEPEND="${RDEPEND}
 	lua? ( dev-util/pkgconfig )"
