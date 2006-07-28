@@ -95,19 +95,17 @@ post_src_unpack() {
 # 	JAVA_PKG_BSFIX
 #	JAVA_PKG_BSFIX_ALL
 #	JAVA_PKG_BSFIX_NAME,
-#	JAVA_PKG_BSFIX_SOURCE_TAGS
-#	JAVA_PKG_BSFIX_TARGET_TAGS)
 # ------------------------------------------------------------------------------
 java-ant_bsfix() {
 	debug-print-function ${FUNCNAME} $*
 
-	[[ "${JAVA_PKG_BSFIX}" != "on" ]] && return 
-	if ! java-pkg_needs-vm; then 
+	[[ "${JAVA_PKG_BSFIX}" != "on" ]] && return
+	if ! java-pkg_needs-vm; then
 		echo "QA Notice: Package is using java-ant, but doesn't depend on a Java VM"
 	fi
 
 	cd "${S}"
-	
+
 	local find_args="-type f"
 	if [[ "${JAVA_PKG_BSFIX_ALL}" == "yes" ]]; then
 		find_args="${find_args} -name ${JAVA_PKG_BSFIX_NAME// / -o -name }"
@@ -125,31 +123,51 @@ java-ant_bsfix() {
 			$(find . ${find_args})
 		EOF
 
+	for (( i = 0 ; i < ${#bsfix_these[@]} ; i++ )); do
+		local file="${bsfix_these[${i}]}"
+		java-ant_bsfix_one "${file}"
+	done
+}
+
+# ------------------------------------------------------------------------------
+# @public java-ant_bsfix_one
+#
+# Attempts to fix named build file. The following variables will affect its behavior
+# as listed above:
+#	JAVA_PKG_BSFIX_SOURCE_TAGS
+#	JAVA_PKG_BSFIX_TARGET_TAGS
+# ------------------------------------------------------------------------------
+java-ant_bsfix_one() {
+	debug-print-function ${FUNCNAME} $*
+
+	if [ -z "${1}" ]; then
+		eerror "java-ant_bsfix_one needs one argument"
+		die "java-ant_bsfix_one needs one argument"
+	fi
+
 	local want_source="$(java-pkg_get-source)"
 	local want_target="$(java-pkg_get-target)"
 
-	debug-print "bsfix: target: ${want_target} source: ${want_source}"
+	debug-print "bsfix_one: target: ${want_target} source: ${want_source}"
 
 	if [ -z "${want_source}" -o -z "${want_target}" ]; then
 		eerror "Could not find valid -source/-target values"
 		eerror "Please file a bug about this on bugs.gentoo.org"
 		die "Could not find valid -source/-target values"
 	else
-		for (( i = 0 ; i < ${#bsfix_these[@]} ; i++ )); do
-			local file="${bsfix_these[${i}]}"
-			echo "Rewriting ${file}"
-			debug-print "bsfix: ${file}"
+		local file="${1}"
+		echo "Rewriting ${file}"
+		debug-print "bsfix: ${file}"
 
-			cp "${file}" "${file}.orig" || die "failed to copy ${file}"
+		cp "${file}" "${file}.orig" || die "failed to copy ${file}"
 
-			chmod u+w "${file}"
+		chmod u+w "${file}"
 
-			xml-rewrite.py -f "${file}" -c -e ${JAVA_PKG_BSFIX_SOURCE_TAGS// / -e } -a source -v ${want_source} || die "xml-rewrite failed: ${file}"
-			xml-rewrite.py -f "${file}" -c -e ${JAVA_PKG_BSFIX_TARGET_TAGS// / -e } -a target -v ${want_target} || die "xml-rewrite failed: ${file}"
+		xml-rewrite.py -f "${file}" -c -e ${JAVA_PKG_BSFIX_SOURCE_TAGS// / -e } -a source -v ${want_source} || die "xml-rewrite failed: ${file}"
+		xml-rewrite.py -f "${file}" -c -e ${JAVA_PKG_BSFIX_TARGET_TAGS// / -e } -a target -v ${want_target} || die "xml-rewrite failed: ${file}"
 
-			if [[ -n "${JAVA_PKG_DEBUG}" ]]; then
-				diff -NurbB "${file}.orig" "${file}"
-			fi
-		done
+		if [[ -n "${JAVA_PKG_DEBUG}" ]]; then
+			diff -NurbB "${file}.orig" "${file}"
+		fi
 	fi
 }
