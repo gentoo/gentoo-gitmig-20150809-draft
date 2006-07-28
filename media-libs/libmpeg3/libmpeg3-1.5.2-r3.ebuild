@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.7 2006/07/18 12:50:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.8 2006/07/28 06:27:37 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -24,7 +24,16 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	if [[ $(gcc-version) == "3.3" ]]; then
+		eerror "You're using an old version of GCC, but this package is"
+		eerror "designed to work only with GCC 3.4 or later."
+		eerror "Please upgrade your GCC or change the selected profile"
+		eerror "and then merge this again."
+		die "Package won't build with GCC 3.3."
+	fi
+
 	# The Makefile is patched to install the header files as well.
 	# This patch was generated using the info in the src.rpm that
 	# SourceForge provides for this package.
