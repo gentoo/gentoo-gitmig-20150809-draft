@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r4.ebuild,v 1.1 2006/07/28 07:36:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r4.ebuild,v 1.2 2006/07/28 21:06:59 azarah Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -97,7 +97,7 @@ src_defs() {
 	use ipv6 || myconf="${myconf} DO_IPV6=0"
 	use static && myconf="${myconf} NO_SHARED_LIBS=0"
 	export myconf
-	if ! use l7filter && ! use imq; then
+	if ! use l7filter && ! use imq && ! use extensions ; then
 		export KERNEL_DIR="/usr"
 		diemsg="failure"
 	else
