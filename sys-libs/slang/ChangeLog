@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.52 2006/07/22 15:47:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.53 2006/07/28 00:05:33 flameeyes Exp $
+
+*slang-2.0.6 (28 Jul 2006)
+
+  28 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +slang-2.0.6.ebuild:
+  Version bump for slang, slotted to be installed side-by-side with slang 1.x.
+  Thanks to Mark Lee and Alastair Tse in bug #95247 for the work and the
+  brainstorm. Masked till bug #141947 is completed.
 
   22 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> slang-1.4.9-r2.ebuild:
   Stable on alpha.
