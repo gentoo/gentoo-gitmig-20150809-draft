@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/ri-li
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ri-li/ChangeLog,v 1.1 2006/07/28 03:09:30 mr_bones_ Exp $
+
+*ri-li-1.0.3 (28 Jul 2006)
+
+  28 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +ri-li-1.0.3.ebuild:
+  initial commit - ebuild submitted by Benoit GANNE via bug #139359
+
