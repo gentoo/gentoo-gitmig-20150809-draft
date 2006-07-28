@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.5 2006/07/23 18:18:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.6 2006/07/28 22:36:26 genstef Exp $
+
+  28 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/lastfmplayer-amd64.patch, lastfmplayer-1.0.0.1_p2113.ebuild:
+  Add patch to allow compiling on amd64 again thanks to Mehmet Kemal EROL
+  <mehmetkemal@gmx.net> and David Li <matrixhax0r@gmail.com> in bug 141729
 
 *lastfmplayer-1.0.0.1_p2113 (23 Jul 2006)
 
