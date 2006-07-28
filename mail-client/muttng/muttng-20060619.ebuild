@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060619.ebuild,v 1.1 2006/06/20 16:54:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060619.ebuild,v 1.2 2006/07/28 09:29:05 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND="nls? ( sys-devel/gettext )
 		gdbm?  ( sys-libs/gdbm )
 		!gdbm? ( berkdb? ( >=sys-libs/db-4 ) )
 	)
-	slang?   ( >=sys-libs/slang-1.4.2 )
+	slang?   ( =sys-libs/slang-1.4* )
 	smtp?    ( net-libs/libesmtp )
 	imap?    (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
