@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.9 2006/07/05 05:25:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.10 2006/07/28 13:47:22 liquidx Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -48,4 +48,8 @@ s:tk.getvar('tcl_version'):str(Tkinter.TclVersion):g;
 s:tk.getvar('tk_library'):${TKLIBRARY}:g;
 s:tk.getvar('tcl_library'):${TCLLIBRARY}:g;"""
 	sed -i -e "${SEDED}" togl_setup.py
+
+	# replace malloc.h with stdlib.h for freebsd (#140940)
+	cd "${S}"
+	epatch ${FILESDIR}/${P}-malloc.patch
 }
