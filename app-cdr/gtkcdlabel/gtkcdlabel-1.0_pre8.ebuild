@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre8.ebuild,v 1.1 2006/05/14 03:03:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre8.ebuild,v 1.2 2006/07/28 21:23:49 metalgod Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND=">=app-cdr/cdlabelgen-2.3.0
 	>=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2
-	>=app-text/ggv-2.8"
+	>=app-text/evince-0.5"
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
