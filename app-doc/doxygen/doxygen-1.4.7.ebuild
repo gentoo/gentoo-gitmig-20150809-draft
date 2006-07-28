@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.3 2006/07/12 13:43:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.4 2006/07/28 12:29:57 caleb Exp $
 
 inherit eutils toolchain-funcs qt3
 
@@ -42,13 +42,13 @@ src_compile() {
 	export ECFLAGS="${CFLAGS}" ECXXFLAGS="${CXXFLAGS}" ELDFLAGS="${LDFLAGS}"
 	# set ./configure options (prefix, Qt based wizard, docdir)
 	local my_conf="--prefix ${D}usr"
-	if use qt; then
+	if use qt3; then
 	    einfo "using QTDIR: '$QTDIR'."
 	    export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
 	    export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
 	    einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
 	    einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-	    ./configure ${my_conf} $(use_with qt doxywizard) || die 'configure failed'
+	    ./configure ${my_conf} $(use_with qt3 doxywizard) || die 'configure failed'
 	else
 	    ./configure ${my_conf} || die 'configure failed'
 	fi
