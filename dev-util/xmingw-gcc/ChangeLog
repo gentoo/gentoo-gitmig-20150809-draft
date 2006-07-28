@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xmingw-gcc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.15 2006/03/03 19:07:57 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmingw-gcc/ChangeLog,v 1.16 2006/07/28 11:37:32 fmccor Exp $
+
+  28 Jul 2006; Ferris McCormick <fmccor@gentoo.org> xmingw-gcc-3.4.4.ebuild:
+  Add ~sparc keyword at user request --- Dan Watson, Bug #141931 --- Builds and
+  works as claimed.
 
   03 Mar 2006; Stefan Jones <cretin@gentoo.org> xmingw-gcc-3.4.2.ebuild,
   xmingw-gcc-3.4.2-r1.ebuild, xmingw-gcc-3.4.4.ebuild:
