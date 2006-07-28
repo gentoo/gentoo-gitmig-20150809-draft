@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxme
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.8 2006/07/27 20:26:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/ChangeLog,v 1.9 2006/07/28 08:19:32 nelchael Exp $
+
+  28 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> jaxme-0.3.1-r1.ebuild:
+  Fixed rewriting of build files, see bug #141940.
 
 *jaxme-0.3.1-r1 (27 Jul 2006)
 

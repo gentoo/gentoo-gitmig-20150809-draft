@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r1.ebuild,v 1.1 2006/07/27 20:26:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r1.ebuild,v 1.2 2006/07/28 08:19:32 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -27,6 +27,9 @@ DEPEND=">=virtual/jdk-1.4
 
 S="${WORKDIR}/${MY_P}"
 
+# We do it later
+JAVA_PKG_BSFIX="off"
+
 src_unpack() {
 	unpack ${A}
 
@@ -42,6 +45,13 @@ src_unpack() {
 	java-pkg_jarfrom xerces-2
 	java-pkg_jarfrom xmldb xmldb-api.jar xmldb-api-20021118.jar
 	java-pkg_jarfrom xmldb xmldb-api-sdk.jar xmldb-api-sdk-20021118.jar
+
+	# Special case: jaxme uses build<foo>.xml files, so rewriting them by hand
+	# is better:
+	cd ${S}
+	for i in build*.xml src/webapp/build.xml src/test/jaxb/build.xml; do
+		java-ant_bsfix_one "${i}"
+	done
 }
 
 src_compile() {
