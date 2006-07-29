@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.2 2006/04/13 20:11:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.3 2006/07/29 08:03:54 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="race marbles through crazy stages"
-HOMEPAGE="http://garagegames.com/pg/product/view.php?id=15"
+HOMEPAGE="http://www.garagegames.com/pg/product/view.php?id=15"
 SRC_URI="ftp://ggdev-1.homelan.com/marbleblastgold/MarbleBlastGoldDemo-${PV}.sh.bin"
 
 LICENSE="MARBLEBLAST"
