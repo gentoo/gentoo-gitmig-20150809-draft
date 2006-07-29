@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.168 2006/07/29 09:43:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.169 2006/07/29 13:32:48 kloeri Exp $
+
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-firefox-1.5.0.5.ebuild:
+  Fix 1.5.0.5 langpacks.
 
 *mozilla-firefox-1.5.0.5 (29 Jul 2006)
 
