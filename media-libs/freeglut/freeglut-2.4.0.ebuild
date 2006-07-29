@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.15 2006/07/11 20:03:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.16 2006/07/29 18:04:10 joshuabaergen Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,9 +20,13 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 
 	# fixes bug #97390
 	epatch ${FILESDIR}/${P}-macos.patch
+
+	# #131856
+	epatch ${FILESDIR}/${PN}-gcc42.patch
 
 	# bug #134586
 	replace-flags -O3 -O2

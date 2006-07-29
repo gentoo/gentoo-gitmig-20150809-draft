@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.36 2006/07/11 20:03:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.37 2006/07/29 18:04:10 joshuabaergen Exp $
+
+  29 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/freeglut-gcc42.patch, freeglut-2.4.0.ebuild:
+  Add a patch for GCC 4.2 compatibility.  Fixes bug #131856.
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org> freeglut-2.4.0.ebuild:
   Mark 2.4.0 stable on ia64
