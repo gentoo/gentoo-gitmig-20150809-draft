@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5673 2006/07/28 00:00:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5674 2006/07/29 05:22:47 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (29 Jul 2006)
+# Masking for initial import
+x11-terms/roxterm
 
 # Diego Pettenò <flameeyes@gentoo.org> (28 Jul 2006)
 # Masking till all dependencies are fixed, bug #141947
