@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.177 2006/07/21 01:35:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.178 2006/07/29 20:08:52 flameeyes Exp $
+
+*alsa-lib-1.0.12_rc1-r1 (29 Jul 2006)
+
+  29 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-lib-1.0.12_rc1-bindings-crash.patch,
+  +alsa-lib-1.0.12_rc1-r1.ebuild:
+  Apply patch to fix NULL pointer dereference when using dmix settings in
+  asound.conf. Thanks to Adrian von Buttlar for reporting in bug #142111.
 
   21 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   alsa-lib-1.0.11-r1.ebuild, alsa-lib-1.0.12_rc1.ebuild:
