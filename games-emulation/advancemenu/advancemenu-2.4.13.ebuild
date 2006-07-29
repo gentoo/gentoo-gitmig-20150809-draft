@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.2 2006/07/28 00:57:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/advancemenu-2.4.13.ebuild,v 1.3 2006/07/29 07:51:27 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -29,9 +29,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	# gcc4 patch - bug #120712
+	# pic patch - bug #142021
 	epatch \
 		"${FILESDIR}"/${P}-alsa-pkg-config.patch \
-		"${FILESDIR}"/${P}-gcc4.patch
+		"${FILESDIR}"/${P}-gcc4.patch \
+		"${FILESDIR}"/${P}-pic.patch
+	sed -i \
+		-e 's/"-s"//' \
+		configure \
+		|| die "sed failed"
+
 	use x86 && ln -s $(which nasm) "${T}/${CHOST}-nasm"
 	use sdl && ln -s $(which sdl-config) "${T}/${CHOST}-sdl-config"
 	use truetype && ln -s $(which freetype-config) "${T}/${CHOST}-freetype-config"
@@ -54,7 +61,7 @@ src_compile() {
 		$(use_enable x86 asm) \
 		$(use_enable zlib) \
 		|| die
-	emake || die "emake failed"
+	STRIPPROG=true emake || die "emake failed"
 }
 
 src_install() {

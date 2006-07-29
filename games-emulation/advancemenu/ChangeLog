@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/advancemenu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.23 2006/03/25 05:21:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.24 2006/07/29 07:51:27 mr_bones_ Exp $
+
+  29 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/advancemenu-2.4.13-pic.patch, advancemenu-2.4.13.ebuild:
+  add patch for compiling under hardened from advancemame (bug #142021);
+  also prevent premature stripping
 
 *advancemenu-2.4.13 (25 Mar 2006)
 
