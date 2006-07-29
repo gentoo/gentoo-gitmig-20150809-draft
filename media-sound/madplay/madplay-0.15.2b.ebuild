@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.18 2006/04/03 17:41:27 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.2b.ebuild,v 1.19 2006/07/29 07:18:03 flameeyes Exp $
 
 inherit eutils
 
@@ -26,9 +26,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epunt_cxx #74499
-	epatch ${FILESDIR}/${PN}-macos.patch
+	epatch "${FILESDIR}/${PN}-macos.patch"
 }
 
 src_compile() {
