@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0-r1.ebuild,v 1.1 2006/07/29 15:20:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0-r1.ebuild,v 1.2 2006/07/29 22:59:07 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,19 +11,22 @@ LICENSE="jaxen"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc junit source"
-RDEPEND="|| ( >=virtual/jre-1.3* )
+COMMON_DEP="
 	dev-java/xalan
 	>=dev-java/xerces-2.6.2-r1
 	=dev-java/dom4j-1*
 	~dev-java/jdom-1.0_beta9
 	dev-java/saxpath"
 
-DEPEND="|| ( >=virtual/jdk-1.3* )
+RDEPEND="|| ( >=virtual/jre-1.3* )
+	${COMMON_DEP}"
+# FIXME doesn't like Java 1.5's XML API
+DEPEND="|| ( =virtual/jdk-1.3* =virtual/jdk-1.4* )
 	dev-java/ant
 	junit? ( dev-java/junit )
-	${RDEPEND}"
+	${COMMON_DEP}"
 
-S=${WORKDIR}/${P}-FCS
+S="${WORKDIR}/${P}-FCS"
 
 src_unpack() {
 	unpack ${A}
@@ -56,4 +59,3 @@ src_install() {
 	use doc && java-pkg_dohtml -r build/doc/*
 	use source && java-pkg_dosrc src/java/main/*
 }
-
