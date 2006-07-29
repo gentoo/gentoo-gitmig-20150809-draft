@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.15 2006/07/05 18:35:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.16 2006/07/29 04:52:20 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,12 +10,14 @@ DESCRIPTION="Neverwinter Nights Data Files"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/${MY_PV}/nwclient${MY_PV}.tar.gz
 	linguas_fr? (
+		http://files.bioware.com/neverwinternights/updates/linux/nwfrench${MY_PV}.tar.gz
 		ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwfrench${MY_PV}.tar.gz )
 	linguas_it? (
 		http://nwdownloads.bioware.com/neverwinternights/linux/${MY_PV}/nwitalian${MY_PV}.tar.gz )
 	linguas_es? (
 		http://nwdownloads.bioware.com/neverwinternights/linux/${MY_PV}/nwspanish${MY_PV}.tar.gz )
 	linguas_de? (
+		http://files.bioware.com/neverwinternights/updates/linux/nwgerman${MY_PV}.tar.gz
 		http://xfer06.fileplanet.com/%5E389272944/082003/nwgerman${MY_PV}.tar.gz )
 	nowin? (
 		http://files.bioware.com/neverwinternights/updates/linux/nwresources${MY_PV}.tar.gz
@@ -84,11 +86,11 @@ src_unpack() {
 	else
 		touch .metadata/linguas_en || die "touching en"
 	fi
-	unpack nwclient129.tar.gz
+	unpack nwclient${MY_PV}.tar.gz
 	if use nowin
 	then
 		cd "${WORKDIR}"
-		unpack nwresources129.tar.gz || die "unpacking nwresources129.tar.gz"
+		unpack nwresources${MY_PV}.tar.gz || die "unpacking nwresources${MY_PV}.tar.gz"
 		cd "${S}"
 	fi
 	rm -rf override/*
