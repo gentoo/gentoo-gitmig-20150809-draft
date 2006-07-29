@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.56 2006/05/26 04:32:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.57 2006/07/29 18:03:25 vanquirius Exp $
+
+  29 Jul 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -libpcap-0.8.3-r1.ebuild:
+  Remove old ebuild.
 
   26 May 2006; Mike Frysinger <vapier@gentoo.org> ChangeLog:
   Dont strip binaries #133580 by Diego Pettenò.
