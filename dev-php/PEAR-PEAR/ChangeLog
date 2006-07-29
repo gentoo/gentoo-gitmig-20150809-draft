@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.68 2006/07/12 05:56:38 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.69 2006/07/29 22:29:46 chtekk Exp $
+
+  29 Jul 2006; Luca Longinotti <chtekk@gentoo.org>
+  -files/fix-packagingroot-1.4.6.patch, -PEAR-PEAR-1.4.6-r1.ebuild:
+  Remove old version.
 
 *PEAR-PEAR-1.4.9-r2 (12 Jul 2006)
 
