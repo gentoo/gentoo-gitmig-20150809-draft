@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.0.6.ebuild,v 1.1 2006/07/28 00:05:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.0.6.ebuild,v 1.2 2006/07/29 10:14:55 flameeyes Exp $
 
 inherit eutils
 
@@ -26,7 +26,8 @@ src_unpack() {
 		-e '/^SLANG_INST_LIB/s/-L@libdir@/-L@OBJDIR@ -L@ELFDIR@ -L@libdir@/' \
 		slsh/Makefile.in || die
 
-	epatch "${FILESDIR}"/${PN}-2.0.6-slsh-libs.patch
+	epatch "${FILESDIR}/${PN}-2.0.6-slsh-libs.patch"
+	epatch "${FILESDIR}/${PN}-2.0.6-foreground.patch"
 
 	grep -rlZ -- '-lslang\>' "${S}" | xargs -0 sed -i -e 's:-lslang:-lslang-2:g'
 }
@@ -42,7 +43,7 @@ src_compile() {
 }
 
 src_install() {
-	emake THIS_LIB="slang-2" DESTDIR="${D}" install install-elf || die "make install failed"
+	emake -j1 THIS_LIB="slang-2" DESTDIR="${D}" install install-elf || die "make install failed"
 
 	# Move headers around
 	dodir /usr/include/slang-2
