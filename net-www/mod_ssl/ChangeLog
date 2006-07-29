@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.109 2006/06/05 03:22:38 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.110 2006/07/29 20:04:34 kloeri Exp $
+
+*mod_ssl-2.8.28 (29 Jul 2006)
+
+  29 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> +mod_ssl-2.8.28.ebuild:
+  Bump version, bug 141986.
 
   05 Jun 2006; Michael Stewart <vericgar@gentoo.org> -mod_ssl-2.8.21.ebuild,
   -mod_ssl-2.8.22.ebuild, -mod_ssl-2.8.22-r1.ebuild, -mod_ssl-2.8.24.ebuild,
