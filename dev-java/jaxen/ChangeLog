@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.23 2006/07/22 21:22:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.24 2006/07/29 15:20:52 nelchael Exp $
+
+*jaxen-1.0-r1 (29 Jul 2006)
+
+  29 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +jaxen-1.0-r1.ebuild:
+  Migrated to Generation 2.
 
 *jaxen-1.1_beta7-r2 (22 Jul 2006)
 
