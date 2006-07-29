@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.4.ebuild,v 1.2 2006/07/27 20:15:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.4.ebuild,v 1.3 2006/07/29 15:34:18 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -78,19 +78,22 @@ src_compile() {
 }
 
 src_install() {
-	local extradepend
-
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	newconfd "${FILESDIR}/pulseaudio.conf.d" pulseaudio
 
+	local extradepend
 	use alsa && extradepend="$extradepend alsasound"
 	use avahi && extradepend="$extradepend avahi"
 	sed -e "s/@extradepend@/$extradepend/" "${FILESDIR}/pulseaudio.init.d-2" > "${T}/pulseaudio"
 	doinitd "${T}/pulseaudio"
 
 	dohtml -r doc
-	dodoc README doc/todo
+	dodoc README
+
+	# Create the state directory
+	diropts -o pulse -g pulse -m0755
+	keepdir /var/run/pulse
 }
 
 pkg_postinst() {
