@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.1 2006/07/28 18:43:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.2 2006/07/29 20:23:06 chutzpah Exp $
 
 inherit eutils multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="backtrace cairo jpeg opengl perl png sgc"
 
-DEPEND="|| ( ( x11-libs/libICE
+RDEPEND="|| ( ( x11-libs/libICE
 			x11-libs/libSM
 			x11-libs/libXaw
 			x11-libs/libXft
@@ -28,7 +28,7 @@ DEPEND="|| ( ( x11-libs/libICE
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )"
 
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/plt/src"
 GL_COLLECTS="sgl games/gobblet games/checkers games/jewel games/gl-board-game"
