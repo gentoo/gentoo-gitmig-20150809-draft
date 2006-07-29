@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.31 2006/07/28 11:58:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.32 2006/07/29 21:29:58 betelgeuse Exp $
+
+*jython-2.1-r8 (29 Jul 2006)
+
+  29 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/2.1-assert.patch, +jython-2.1-r8.ebuild:
+  Fixed bug #142099 so jython does not try to override the assert function
+  introduced in 1.5. Thanks to Hanno Meyer-Thurow <h.mth@web.de> for the fix.
 
   28 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> jython-2.1-r7.ebuild:
   Removed jikes.
