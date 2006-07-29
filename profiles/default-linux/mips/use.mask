@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.56 2006/07/26 04:46:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.57 2006/07/29 23:08:35 kumba Exp $
 
 # We don't use this (yet).  It's a dep for gnome-vfs with four of its own.
 # Excluding it on mips until someone reports a need for it.
@@ -135,10 +135,6 @@ scanner
 # Stephen P. Becker <geoman@gentoo.org>
 # mad just spits out static on mips (ip22)
 mad
-
-# Stephen P. Becker <geoman@gentoo.org>
-# masked until an alsa driver finally works on mips
-alsa
 
 # Armando Di Cianno <fafhrd@gentoo.org>
 # gnustep is currently unbuildable on mips - masking this to repair windowmaker
