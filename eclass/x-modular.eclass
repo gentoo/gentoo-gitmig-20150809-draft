@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.71 2006/07/04 02:11:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.72 2006/07/29 17:42:11 joshuabaergen Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -132,9 +132,11 @@ if [[ "${PN/#xf86-video}" != "${PN}" ]] || [[ "${PN/#xf86-input}" != "${PN}" ]];
 	# Enable driver code in the rest of the eclass
 	DRIVER="yes"
 
-	# Add driver patchset to SRC_URI
-	SRC_URI="${SRC_URI}
-		http://dev.gentoo.org/~joshuabaergen/distfiles/x11-driver-patches-${XDPVER}.tar.bz2"
+	if [[ ${XDPVER} != -1 ]]; then
+		# Add driver patchset to SRC_URI
+		SRC_URI="${SRC_URI}
+			http://dev.gentoo.org/~joshuabaergen/distfiles/x11-driver-patches-${XDPVER}.tar.bz2"
+	fi
 fi
 
 # Debugging -- ignore packages that can't be built with debugging
@@ -224,7 +226,8 @@ x-modular_patch_source() {
 	# If this is a driver package we need to fix man page install location.
 	# Running autoreconf will use the patched util-macros to make the
 	# change for us, so we only need to patch if it is not going to run.
-	if [[ -n "${DRIVER}" ]] && [[ "${SNAPSHOT}" != "yes" ]]; then
+	if [[ -n "${DRIVER}" ]] && [[ "${SNAPSHOT}" != "yes" ]]\
+		&& [[ ${XDPVER} != -1 ]]; then
 		PATCHES="${PATCHES} ${DISTDIR}/x11-driver-patches-${XDPVER}.tar.bz2"
 	fi
 
