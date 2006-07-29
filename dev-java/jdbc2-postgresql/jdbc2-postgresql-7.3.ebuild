@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/jdbc2-postgresql-7.3.ebuild,v 1.10 2005/07/18 15:39:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/jdbc2-postgresql-7.3.ebuild,v 1.11 2006/07/29 16:44:13 nichoj Exp $
 
 inherit java-pkg
 
@@ -14,6 +14,7 @@ IUSE=""
 LICENSE="POSTGRESQL"
 SLOT="5"
 DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.2"
 
 src_install() {
