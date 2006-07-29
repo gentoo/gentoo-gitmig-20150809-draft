@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.2-r1.ebuild,v 1.2 2006/07/22 21:34:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-6.5.2-r1.ebuild,v 1.3 2006/07/29 18:27:11 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~ppc ~x86"
 
 IUSE="doc source"
 
-COMMOND_DEP=">=dev-java/gnu-jaxp-1.3
+COMMON_DEP=">=dev-java/gnu-jaxp-1.3
 	dev-java/xom
 	~dev-java/jdom-1.0
 	dev-java/fop"
