@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0.ebuild,v 1.1 2006/07/28 05:59:39 ming Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.4.0.ebuild,v 1.2 2006/07/29 07:11:55 ming Exp $
 
 inherit kde-functions eutils
 
@@ -19,6 +19,9 @@ need-qt 3
 src_compile() {
 
 	cd ${S}
+
+	# fix the broken language files
+	lrelease qterm/po/qterm_ch*.ts
 
 	# yeah, it's --disable-ssh to disable ssl
 	local myconf="`use_enable esd` `use_enable ssl ssh`"

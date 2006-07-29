@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.15 2006/07/28 05:59:39 ming Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.16 2006/07/29 07:11:55 ming Exp $
+
+  29 Jul 2006; Ming Zhao <ming@gentoo.org> qterm-0.4.0.ebuild:
+  fix the broken language files.
 
 *qterm-0.4.0 (28 Jul 2006)
 
