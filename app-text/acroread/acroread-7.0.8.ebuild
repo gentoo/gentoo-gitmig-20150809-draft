@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.8.ebuild,v 1.2 2006/06/22 18:03:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.8.ebuild,v 1.3 2006/07/29 14:45:21 genstef Exp $
 
 inherit eutils nsplugins
 
@@ -10,20 +10,21 @@ IUSE="cups ldap nsplugin nls"
 
 SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/7x/${PV}"
 SRC_FOOT="-${PV}-1.i386.tar.gz"
-LINS=("de" "fr" "sv" "es" "pt" "no" "it" "fi" "nl" "da" "ja" "ko" "zh_CN"
-	"zh_TW")
-SRCS=("deu" "fra" "sve" "esp" "ptb" "nor" "ita" "suo" "nld" "dan" "jpn" "kor"
-	"chs" "cht")
+LINS=("de"  "fr"  "ja"  "ko" "zh_CN" "zh_TW")
+SRCS=("deu" "fra" "jpn" "kor" "chs" "cht")
+#LINS=("de" "fr" "sv" "es" "pt" "no" "it" "fi" "nl" "da" "ja" "ko" "zh_CN"
+#	"zh_TW")
+#SRCS=("deu" "fra" "sve" "esp" "ptb" "nor" "ita" "suo" "nld" "dan" "jpn" "kor"
+#	"chs" "cht")
 
 SRC_URI="nls? ( "
-# no translations yet :(
-#for ((i=0;i<${#LINS[@]};i++)) do
-#	IUSE="${IUSE} linguas_${LINS[$i]}"
-#	SRC_URI="${SRC_URI} linguas_${LINS[$i]}? ( ${SRC_HEAD}/${SRCS[$i]}/AdobeReader_${SRCS[$i]}${SRC_FOOT} ) !linguas_${LINS[$i]}? ("
-#	[ "$[ ${#LINS[@]} - 1 ]" -eq "${i}" ] && \
+for ((i=0;i<${#LINS[@]};i++)) do
+	IUSE="${IUSE} linguas_${LINS[$i]}"
+	SRC_URI="${SRC_URI} linguas_${LINS[$i]}? ( ${SRC_HEAD}/${SRCS[$i]}/AdobeReader_${SRCS[$i]}${SRC_FOOT} ) !linguas_${LINS[$i]}? ("
+	[ "$[ ${#LINS[@]} - 1 ]" -eq "${i}" ] && \
 		SRC_URI="${SRC_URI} ${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT}"
-#	SRC_END="${SRC_END} )"
-#done
+	SRC_END="${SRC_END} )"
+done
 SRC_URI="${SRC_URI}${SRC_END} )
 	!nls? ( ${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT} )
 	x86? ( !cups? ( mirror://gentoo/libcups.so-i386.bz2 ) )"
