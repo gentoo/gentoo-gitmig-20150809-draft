@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5675 2006/07/29 08:39:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5676 2006/07/29 14:47:39 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -681,10 +681,6 @@ app-admin/scotty
 # Masked pending removal, due to open bug #88302 and
 # lack of maintainer.
 app-text/bow
-
-# Stefan Schweizer <genstef@gentoo.org> (18 Jun 2006)
-# New version of acroread, does not have localization yet
-=app-text/acroread-7.0.8*
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Jun 2006)
 # Retiring these packages... masking them so depends
