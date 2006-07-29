@@ -3,7 +3,9 @@
 <pkgmetadata>
 <herd>mobile</herd>
 <maintainer>
-  <email>brix@gentoo.org</email>
-  <name>Henrik Brix Andersen</name>
+  <email>robbat2@gentoo.org</email>
+  <name>Robin H. Johnson</name>
+  <description>Maintainer, as I have a WiSpy hardware device. Please assign
+	  directly to me.</description>
 </maintainer>
 </pkgmetadata>
