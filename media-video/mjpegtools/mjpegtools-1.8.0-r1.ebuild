@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.15 2006/02/12 17:50:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.16 2006/07/30 11:42:48 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -40,8 +40,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e '/ARCHFLAGS=/s:=.*:=:' configure
-	epatch "${FILESDIR}"/${P}-gcc41.patch
-	epatch "${FILESDIR}"/${P}-parallelmake.patch
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}/${P}-parallelmake.patch"
+	has_version ">=media-libs/libquicktime-0.9.9" && epatch "${FILESDIR}/${P}-libquicktime.patch"
+
 	elibtoolize
 }
 
@@ -80,7 +83,7 @@ src_compile() {
 	econf \
 		$(use_with X x) \
 		$(use_enable dga xfree-ext) \
-		$(use_with quicktime) \
+		$(use_with quicktime libquicktime) \
 		$(use_with v4l) \
 		$(use_with gtk) \
 		$(use_with sdl) \
@@ -95,7 +98,7 @@ src_compile() {
 	for infofile in mjpeg*info*; do
 		echo "INFO-DIR-SECTION Miscellaneous" >> ${infofile}
 		echo "START-INFO-DIR-ENTRY" >> ${infofile}
-		echo "* mjpeg-howto: (mjpeg-howto).                  How to use the mjpeg-tools" >> ${infofile}
+		echo "* mjpeg-howto: (mjpeg-howto).					 How to use the mjpeg-tools" >> ${infofile}
 		echo "END-INFO-DIR-ENTRY" >> ${infofile}
 	done
 }
