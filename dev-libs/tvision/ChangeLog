@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tvision
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.9 2005/09/03 07:54:19 dragonheart Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.10 2006/07/30 19:53:42 vapier Exp $
+
+  30 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/tvision-2.0.3-gcc4.patch, tvision-2.0.3.ebuild:
+  Fix building with gcc-4 #130223 by Håvard Wall.
 
   03 Sep 2005; Daniel Black <dragonheart@gentoo.org> -tvision-2.0.2.ebuild,
   tvision-2.0.3.ebuild:

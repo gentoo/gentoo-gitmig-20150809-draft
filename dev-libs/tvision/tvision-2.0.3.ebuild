@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.0.3.ebuild,v 1.5 2005/09/03 07:56:35 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.0.3.ebuild,v 1.6 2006/07/30 19:53:42 vapier Exp $
 
-inherit flag-o-matic
+inherit eutils
 
 DESCRIPTION="Text User Interface that implements the well known CUA widgets"
 HOMEPAGE="http://tvision.sourceforge.net/"
@@ -10,17 +10,21 @@ SRC_URI="mirror://sourceforge/tvision/rhtvision-${PV}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+}
+
 src_compile() {
-	append-flags -fpermissive
 	./configure \
 		--prefix=/usr \
 		--fhs \
-		--no-intl \
 		|| die
 	emake || die
 }
