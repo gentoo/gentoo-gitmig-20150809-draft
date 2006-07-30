@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.2.1.ebuild,v 1.4 2006/02/11 05:41:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.2.1.ebuild,v 1.5 2006/07/30 16:54:46 vapier Exp $
 
 MY_P="cedega_${PV}-1.i386"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -38,7 +38,7 @@ pkg_postinst() {
 	einfo ""
 	einfo "Optionally, if you have binfmt_misc compiled into your kernel,"
 	einfo "you can add the following to /etc/sysctl.conf to allow direct"
-	einfo "excecution of Windows binaries through the cedega wrapper:"
+	einfo "execution of Windows binaries through the cedega wrapper:"
 	einfo ""
 	einfo "  fs.binfmt_misc.register = :WINEXE:M::MZ::/usr/bin/cedega:"
 	einfo ""
@@ -48,7 +48,7 @@ pkg_postinst() {
 	einfo ""
 	einfo "  none  /proc/sys/fs/binfmt_misc  binfmt_misc  defaults 0 0"
 	einfo ""
-	einfo "Note: Binaries will still need excecutable permissions to run."
+	einfo "Note: Binaries will still need executable permissions to run."
 	einfo "Note: If binfmt_misc is compiled as a module, make sure you"
 	einfo "have it loaded on startup by adding it to"
 	einfo "/etc/modules.autoload.d/<your kernel version>"
