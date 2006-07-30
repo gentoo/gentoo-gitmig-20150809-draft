@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/ufraw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.7 2006/06/15 17:41:25 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.8 2006/07/30 23:45:56 nattfodd Exp $
+
+  30 Jul 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  -ufraw-0.5.ebuild, -ufraw-0.6.ebuild:
+  Cleaned up some old ebuilds which hadn't been stabilized. Better use the
+  newer versions.
+
+*ufraw-0.8.1-r2 (30 Jul 2006)
+
+  30 Jul 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  -ufraw-0.8.1-r1.ebuild, +ufraw-0.8.1-r2.ebuild:
+  Added exiv2 useflag to support reading exif tags through the media-gfx/exiv2
+  library. Adds support for canon .crw files. Bug #137260.
 
 *ufraw-0.8.1-r1 (15 Jun 2006)
 
