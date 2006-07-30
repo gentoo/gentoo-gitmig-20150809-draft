@@ -34,7 +34,7 @@
 +CC ?= gcc
 +CFLAGS ?= -O
 +CFLAGS += -W -Wall -DPTHREAD
-+LDFLAGS ?= -O -s
++LDFLAGS ?= -O
 +LIBS = -lpthread
  
  all:	dagrab
