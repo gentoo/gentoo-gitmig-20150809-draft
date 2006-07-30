@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.40 2006/07/30 23:53:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.41 2006/07/30 23:54:41 weeve Exp $
+
+  30 Jul 2006; Jason Wever <weeve@gentoo.org> liferea-1.0.16.ebuild:
+  Stable on SPARC wrt bug #140644.
 
   30 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Take maintainership from (retired) former maintiner
