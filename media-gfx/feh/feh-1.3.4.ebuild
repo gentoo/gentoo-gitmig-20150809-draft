@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.3.4.ebuild,v 1.8 2006/07/16 06:21:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.3.4.ebuild,v 1.9 2006/07/30 17:03:18 vapier Exp $
 
 inherit eutils autotools
 
@@ -35,6 +35,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-xinerama.patch
 	epatch "${FILESDIR}"/${P}-headers.patch
 	sed -i -e "/^docsdir =/s:doc/feh:share/doc/${PF}:" Makefile.am || die
+	# the bundled autotool code was generated with automake-1.4
+	# but there's no reason to restrict to that version #141427
+	export WANT_AUTOMAKE=1.9
 	eautoreconf
 }
 
