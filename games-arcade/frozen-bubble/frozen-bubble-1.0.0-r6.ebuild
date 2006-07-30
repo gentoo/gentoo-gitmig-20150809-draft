@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.2 2006/05/04 17:21:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.3 2006/07/30 07:06:52 mr_bones_ Exp $
 
 inherit eutils perl-module games
 
@@ -22,6 +22,16 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	dev-perl/sdl-perl"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
+
+pkg_setup() {
+	if ! built_with_use -a media-libs/sdl-image gif png ; then
+		ewarn "Frozen-bubble uses GIF and PNG image files."
+		ewarn "You must emerge media-libs/sdl-image with GIF and PNG support."
+		ewarn "Please USE=\"gif png\" emerge media-libs/sdl-image"
+		die "Cannot emerge without gif and png USE flags on sdl-image"
+	fi
+	games_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
