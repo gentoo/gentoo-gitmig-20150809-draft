@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lde
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lde/ChangeLog,v 1.4 2004/06/24 22:51:46 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lde/ChangeLog,v 1.5 2006/07/30 23:46:03 vapier Exp $
+
+*lde-2.6.1 (30 Jul 2006)
+
+  30 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/lde-2.6.1-no-shadowing.patch, +lde-2.6.1.ebuild:
+  Version bump and fix building with gcc-4 #141881 by Martin Mokrejs.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lde-2.6.0.ebuild:
   Add inherit eutils
