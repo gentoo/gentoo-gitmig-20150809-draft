@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/HTML-Parser
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.75 2006/07/04 09:57:54 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/ChangeLog,v 1.76 2006/07/30 01:55:22 mcummings Exp $
+
+*HTML-Parser-3.55 (30 Jul 2006)
+
+  30 Jul 2006; Michael Cummings <mcummings@gentoo.org>
+  +HTML-Parser-3.55.ebuild:
+  Version bump
 
   04 Jul 2006; Christian Hartmann <ian@gentoo.org>
   HTML-Parser-3.36-r1.ebuild, HTML-Parser-3.45.ebuild,
