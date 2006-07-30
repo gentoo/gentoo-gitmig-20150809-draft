@@ -1,11 +1,46 @@
-MD5 6863859d71a0439232d7be39fb9ae07d openmosixview-1.5-r1.ebuild 2022
-MD5 fa585118cece038541c0b437898b31bf openmosixview-1.4-r1.ebuild 2292
-MD5 1a7532d8e3e655988101b2532dc37c61 ChangeLog 2432
-MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 d61ecf92714eac96e7d05665ea2cf911 files/openmosixview-1.5-nonodestmp.diff 2724
-MD5 083d52867bbb40018618629f5c9263c4 files/openmosixview-1.5-usesyslog.diff 2698
-MD5 d5017d88ab775aaf821cb3e426827008 files/digest-openmosixview-1.4-r1 70
-MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5-r1 69
-MD5 c825cce4d4bc77595bb8d6584d4a1c25 files/openmosixview-1.5-typos.patch 999
-MD5 fa2bdec7a865ea57b111efb92da5910f files/openmosixview-1.5-logdirectory.diff 4538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX openmosixcollector.init 499 RMD160 83b762a9827c60583fe1497248f8ed1313580fc6 SHA1 baf9f1b2ad929114d4b8be8c690fa80d514143da SHA256 5a40602e9742e22bd5bd982aff355bb695041d0d0f1ce76d6eccb33c9f4492f2
 MD5 40351f8cbabc76e8c9b6860e8d92025a files/openmosixcollector.init 499
+RMD160 83b762a9827c60583fe1497248f8ed1313580fc6 files/openmosixcollector.init 499
+SHA256 5a40602e9742e22bd5bd982aff355bb695041d0d0f1ce76d6eccb33c9f4492f2 files/openmosixcollector.init 499
+AUX openmosixview-1.5-logdirectory.diff 4538 RMD160 2310d3e9999a8434347ce725104d7423f4928f64 SHA1 21516aa777b4396d5c149c6bf950978bb3a16842 SHA256 e93d84a8e9410d9d84e244bedff8aef924161c13314f9824fbf348cefbd1d350
+MD5 fa2bdec7a865ea57b111efb92da5910f files/openmosixview-1.5-logdirectory.diff 4538
+RMD160 2310d3e9999a8434347ce725104d7423f4928f64 files/openmosixview-1.5-logdirectory.diff 4538
+SHA256 e93d84a8e9410d9d84e244bedff8aef924161c13314f9824fbf348cefbd1d350 files/openmosixview-1.5-logdirectory.diff 4538
+AUX openmosixview-1.5-nonodestmp.diff 2724 RMD160 715c34f30f7d3aef46931ebacd72bf7e3cb3a0c9 SHA1 db8ed8d5a203a7aaccd60906380529918db73a10 SHA256 cb84fef8e4a63271c65d972634023ab45de5c2f9ee9256c0f0247e14e8aace52
+MD5 d61ecf92714eac96e7d05665ea2cf911 files/openmosixview-1.5-nonodestmp.diff 2724
+RMD160 715c34f30f7d3aef46931ebacd72bf7e3cb3a0c9 files/openmosixview-1.5-nonodestmp.diff 2724
+SHA256 cb84fef8e4a63271c65d972634023ab45de5c2f9ee9256c0f0247e14e8aace52 files/openmosixview-1.5-nonodestmp.diff 2724
+AUX openmosixview-1.5-typos.patch 999 RMD160 548052c6e745bd7bb2b08dee80c454de0f63ac72 SHA1 885708a52f301b130533c0bf4f1b4ebb3f70d086 SHA256 6384038bf0b3f5c7e96e1bba286ea5e6395a0cf16088e4143b4256dd5ec96dad
+MD5 c825cce4d4bc77595bb8d6584d4a1c25 files/openmosixview-1.5-typos.patch 999
+RMD160 548052c6e745bd7bb2b08dee80c454de0f63ac72 files/openmosixview-1.5-typos.patch 999
+SHA256 6384038bf0b3f5c7e96e1bba286ea5e6395a0cf16088e4143b4256dd5ec96dad files/openmosixview-1.5-typos.patch 999
+AUX openmosixview-1.5-usesyslog.diff 2698 RMD160 4b27f863448dc2f69e06ec7df08d0201d8f0f86d SHA1 53dea4ecb9c0f5cb31452142b7f97393415f7a39 SHA256 e76330146686c6735aa7d6f980e44bacc49297f39cf00e5867255c92d62a2c20
+MD5 083d52867bbb40018618629f5c9263c4 files/openmosixview-1.5-usesyslog.diff 2698
+RMD160 4b27f863448dc2f69e06ec7df08d0201d8f0f86d files/openmosixview-1.5-usesyslog.diff 2698
+SHA256 e76330146686c6735aa7d6f980e44bacc49297f39cf00e5867255c92d62a2c20 files/openmosixview-1.5-usesyslog.diff 2698
+DIST openmosixview-1.5.tar.gz 970328
+EBUILD openmosixview-1.5-r1.ebuild 2022 RMD160 71b7dc9b829664e7eb71ac057ee2c07af3edf3d7 SHA1 e4af5f8eed93a8c98c9ee3c398512f54fadb2cfe SHA256 2524e676d8427a0902d87c456f690b9fd09bef6b6de11d0e20dc087d97f856ef
+MD5 6863859d71a0439232d7be39fb9ae07d openmosixview-1.5-r1.ebuild 2022
+RMD160 71b7dc9b829664e7eb71ac057ee2c07af3edf3d7 openmosixview-1.5-r1.ebuild 2022
+SHA256 2524e676d8427a0902d87c456f690b9fd09bef6b6de11d0e20dc087d97f856ef openmosixview-1.5-r1.ebuild 2022
+MISC ChangeLog 2556 RMD160 c76655b637d770c63604d67cc41531c7276a0038 SHA1 21dc6824c7b16274b4eb26cb1391658a4932b2ef SHA256 93e0b1039b217bfa8793c8ef1666a4968201867df49755895b67bab72010e410
+MD5 29e7d388bf9cf23422e378e9843e1d01 ChangeLog 2556
+RMD160 c76655b637d770c63604d67cc41531c7276a0038 ChangeLog 2556
+SHA256 93e0b1039b217bfa8793c8ef1666a4968201867df49755895b67bab72010e410 ChangeLog 2556
+MISC metadata.xml 312 RMD160 6cfe7222819f902eed7dfdb6fa48a19b7c37172e SHA1 d9e2361eabc2098c0fa0b2fe45ba7cf317ad00a2 SHA256 7cd6722fa6245eccb8afde378bb57d0ac955b778512b3bef8789f2c463884e52
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
+RMD160 6cfe7222819f902eed7dfdb6fa48a19b7c37172e metadata.xml 312
+SHA256 7cd6722fa6245eccb8afde378bb57d0ac955b778512b3bef8789f2c463884e52 metadata.xml 312
+MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5-r1 69
+RMD160 df54f1241ac0d2745fd05593224452907b559bc9 files/digest-openmosixview-1.5-r1 69
+SHA256 f414ba761ebf501ce3f26e47d316a2750c077aa880edb6c32a0d3251d862e706 files/digest-openmosixview-1.5-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.3 (GNU/Linux)
+
+iD8DBQFEzNh6I1lqEGTUzyQRApWTAKDM5oNbjB+sL8UgxdNubdFMrkndSgCdErBh
+FIVzLf6Fw/l5XJQUIb53jvA=
+=oWS2
+-----END PGP SIGNATURE-----
