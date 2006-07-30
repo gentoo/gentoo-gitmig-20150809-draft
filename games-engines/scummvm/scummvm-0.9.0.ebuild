@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.0.ebuild,v 1.1 2006/06/26 05:47:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.9.0.ebuild,v 1.2 2006/07/30 08:14:31 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="alsa debug flac fluidsynth mp3 ogg vorbis sdl zlib"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
@@ -70,7 +70,18 @@ src_install() {
 	dogamesbin scummvm || die "dobin failed"
 	doman dists/scummvm.6
 	dodoc AUTHORS NEWS README TODO
+	insinto "${GAMES_DATADIR}"/${PN}/engines
+	doins gui/themes/modern.*
 	doicon icons/scummvm.xpm
 	make_desktop_entry scummvm ScummVM scummvm.xpm
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	echo
+	einfo "If you want to use the new \"modern\" theme for ${PN},"
+	einfo "add the following line to the [scummvm] section of"
+	einfo "your ~/.scummvmrc file (after running scummvm once):"
+	einfo "themepath=${GAMES_DATADIR}/${PN}/engines/"
 }
