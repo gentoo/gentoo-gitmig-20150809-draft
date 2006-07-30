@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.25 2006/07/29 22:59:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.26 2006/07/30 14:12:03 nichoj Exp $
+
+  30 Jul 2006; Joshua Nichols <nichoj@gentoo.org> jaxen-1.0-r1.ebuild:
+  Fixed jre atom
 
   29 Jul 2006; Joshua Nichols <nichoj@gentoo.org> jaxen-1.0-r1.ebuild:
   Fixed JDK dependencies, so Java 1.5 won't be used

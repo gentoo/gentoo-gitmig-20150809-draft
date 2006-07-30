@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0-r1.ebuild,v 1.2 2006/07/29 22:59:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.0-r1.ebuild,v 1.3 2006/07/30 14:12:03 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -18,7 +18,7 @@ COMMON_DEP="
 	~dev-java/jdom-1.0_beta9
 	dev-java/saxpath"
 
-RDEPEND="|| ( >=virtual/jre-1.3* )
+RDEPEND=">=virtual/jre-1.3
 	${COMMON_DEP}"
 # FIXME doesn't like Java 1.5's XML API
 DEPEND="|| ( =virtual/jdk-1.3* =virtual/jdk-1.4* )
