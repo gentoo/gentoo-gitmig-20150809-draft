@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.303 2006/07/26 08:17:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.304 2006/07/30 21:02:00 flameeyes Exp $
+
+  30 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/nsplugins-3.5.3-applet-redirects.patch, kdebase-3.5.4.ebuild:
+  Add patch to fix redirects on embedded plugins, see KDE BUG #121964.
 
 *kdebase-3.5.4 (26 Jul 2006)
 

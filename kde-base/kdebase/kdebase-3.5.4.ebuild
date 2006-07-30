@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.4.ebuild,v 1.1 2006/07/26 08:17:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.4.ebuild,v 1.2 2006/07/30 21:02:00 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -76,7 +76,8 @@ DEPEND="${DEPEND}
 		) <virtual/x11-7 )
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kdebase-startkde-3.5.3-xinitrcd.patch"
+PATCHES="${FILESDIR}/kdebase-startkde-3.5.3-xinitrcd.patch
+	${FILESDIR}/nsplugins-3.5.3-applet-redirects.patch"
 
 pkg_setup() {
 	kde_pkg_setup
@@ -93,7 +94,7 @@ src_unpack() {
 
 	# Avoid using imake (kde bug 114466).
 	epatch "${WORKDIR}/patches/kdebase-3.5.0_beta2-noimake.patch"
-	rm -f ${S}/configure
+	rm -f "${S}/configure"
 
 	epatch "${FILESDIR}/kdm-3.5.4-strict-aliasing.patch"
 }
@@ -133,38 +134,38 @@ src_install() {
 
 	# startup and shutdown scripts
 	insinto ${KDEDIR}/env
-	doins ${FILESDIR}/agent-startup.sh
+	doins "${FILESDIR}/agent-startup.sh"
 
 	exeinto ${KDEDIR}/shutdown
-	doexe ${FILESDIR}/agent-shutdown.sh
+	doexe "${FILESDIR}/agent-shutdown.sh"
 
 	# freedesktop environment variables
-	cat <<EOF > ${T}/xdg.sh
+	cat <<EOF > "${T}/xdg.sh"
 export XDG_DATA_DIRS="${KDEDIR}/share:/usr/share"
 export XDG_CONFIG_DIRS="${KDEDIR}/etc/xdg"
 EOF
 	insinto ${KDEDIR}/env
-	doins ${T}/xdg.sh
+	doins "${T}/xdg.sh"
 
 	# x11 session script
-	cat <<EOF > ${T}/kde-${SLOT}
+	cat <<EOF > "${T}/kde-${SLOT}"
 #!/bin/sh
 exec ${KDEDIR}/bin/startkde
 EOF
 	exeinto /etc/X11/Sessions
-	doexe ${T}/kde-${SLOT}
+	doexe "${T}/kde-${SLOT}"
 
 	# freedesktop compliant session script
 	sed -e "s:@KDE_BINDIR@:${KDEDIR}/bin:g;s:Name=KDE:Name=KDE ${SLOT}:" \
-		${S}/kdm/kfrontend/sessions/kde.desktop.in > ${T}/kde-${SLOT}.desktop
+		"${S}/kdm/kfrontend/sessions/kde.desktop.in" > "${T}/kde-${SLOT}.desktop"
 	insinto /usr/share/xsessions
-	doins ${T}/kde-${SLOT}.desktop
+	doins "${T}/kde-${SLOT}.desktop"
 
 	# Customize the kdmrc configuration
 	sed -i -e "s:#SessionsDirs=:SessionsDirs=/usr/share/xsessions\n#SessionsDirs=:" \
-		${D}/${KDEDIR}/share/config/kdm/kdmrc || die
+		"${D}/${KDEDIR}/share/config/kdm/kdmrc" || die
 
-	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
+	rmdir "${D}/${KDEDIR}/share/templates/.source/emptydir"
 }
 
 pkg_postinst() {
@@ -180,7 +181,7 @@ pkg_postinst() {
 			"${ROOT}${KDEDIR}/share/apps/kdm/faces/root.face.icon"
 	fi
 
-	mkdir -p ${ROOT}${KDEDIR}/share/templates/.source/emptydir
+	mkdir -p "${ROOT}${KDEDIR}/share/templates/.source/emptydir"
 
 	echo
 	einfo "To enable gpg-agent and/or ssh-agent in KDE sessions,"
