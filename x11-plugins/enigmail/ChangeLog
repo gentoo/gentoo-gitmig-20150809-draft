@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.26 2006/07/26 05:03:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.27 2006/07/30 11:12:09 kloeri Exp $
+
+*enigmail-0.94.0-r5 (30 Jul 2006)
+
+  30 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
+  +enigmail-0.94.0-r5.ebuild:
+  Bump patches to match thunderbird-1.5.0.5. Patch provided by Joshua Baergen
+  <joshuabaergen@gentoo.org>.
 
   26 Jul 2006; Joshua Kinard <kumba@gentoo.org> enigmail-0.94.0-r4.ebuild:
   Modified ebuild to use the 0.2 patchball from thunderbird, uses *.patch
