@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-3.4.4.ebuild,v 1.2 2006/05/11 12:56:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-3.4.4.ebuild,v 1.3 2006/07/30 08:55:17 herbs Exp $
 
 DESCRIPTION="QT 2/3 libraries for emulation of 32bit x86 on amd64"
 SRC_URI="immqt-bc? ( mirror://gentoo/emul-linux-x86-qtlibs-immqt-${PV}.tar.bz2 )
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE="immqt-bc"
 
 RDEPEND="virtual/libc

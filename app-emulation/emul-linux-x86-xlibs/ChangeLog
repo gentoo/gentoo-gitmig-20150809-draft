@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.43 2006/05/31 13:34:22 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.44 2006/07/30 08:54:04 herbs Exp $
+
+  30 Jul 2006; Herbie Hopkins <herbs@gentoo.org>
+  emul-linux-x86-xlibs-7.0-r1.ebuild:
+  Stable on amd64 wrt bug #138766.
 
   31 May 2006; Mike Doty <kingtaco@gentoo.org>
   files/digest-emul-linux-x86-xlibs-7.0-r1, Manifest:
