@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.3 2006/07/30 07:06:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.4 2006/07/30 07:36:21 mr_bones_ Exp $
 
 inherit eutils perl-module games
 
@@ -29,6 +29,11 @@ pkg_setup() {
 		ewarn "You must emerge media-libs/sdl-image with GIF and PNG support."
 		ewarn "Please USE=\"gif png\" emerge media-libs/sdl-image"
 		die "Cannot emerge without gif and png USE flags on sdl-image"
+	fi
+	if ! built_with_use media-libs/sdl-mixer mikmod ; then
+		ewarn "You must emerge media-libs/sdl-mikmod with mikmod support."
+		ewarn "    USE=mikmod emerge media-libs/sdl-mikmod"
+		die "missing mikmod USE flag for sdl-mixer"
 	fi
 	games_pkg_setup
 }
