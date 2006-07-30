@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.39 2006/07/03 22:04:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.40 2006/07/30 23:53:19 dang Exp $
+
+  30 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Take maintainership from (retired) former maintiner
 
 *liferea-1.0.16 (03 Jul 2006)
 
