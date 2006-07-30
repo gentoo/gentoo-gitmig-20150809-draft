@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/rlog
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.8 2005/12/10 01:25:33 vanquirius Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.9 2006/07/30 18:05:41 vanquirius Exp $
+
+  30 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> rlog-1.3.6.ebuild,
+  rlog-1.3.7.ebuild:
+  Update HOMEPAGE for bug 142188, thanks to Milton YATES <milton.yates at
+  enst-bretagne dot fr>.
 
 *rlog-1.3.7 (10 Dec 2005)
 

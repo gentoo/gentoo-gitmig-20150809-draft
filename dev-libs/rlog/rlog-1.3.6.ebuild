@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/rlog-1.3.6.ebuild,v 1.4 2005/09/17 21:14:19 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/rlog-1.3.6.ebuild,v 1.5 2006/07/30 18:05:41 vanquirius Exp $
 
 DESCRIPTION="A C++ logging library"
 SRC_URI="http://arg0.net/users/vgough/download/${P}.tgz"
-HOMEPAGE="http://arg0.net/users/vgough/rlog/"
+HOMEPAGE="http://arg0.net/wiki/rlog"
 LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
