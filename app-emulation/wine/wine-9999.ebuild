@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.12 2006/06/24 07:46:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.13 2006/07/30 17:46:53 vapier Exp $
 
 ECVS_SERVER="cvs.winehq.org:/home/wine"
 ECVS_MODULE="wine"
@@ -39,7 +39,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	glut? ( virtual/glut )
 	lcms? ( media-libs/lcms )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
-	truetype? ( media-libs/freetype media-gfx/fontforge )
+	>=media-gfx/fontforge-20060406
 	scanner? ( media-gfx/sane-backends )
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-2.1
@@ -59,10 +59,6 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 S=${WORKDIR}/${ECVS_MODULE}
-
-pkg_setup() {
-	use amd64 && has_multilib_profile && export ABI=x86
-}
 
 src_unpack() {
 	cvs_src_unpack
@@ -87,9 +83,9 @@ config_cache() {
 
 src_compile() {
 	export LDCONFIG=/bin/true
-	use arts    || export ARTSCCONFIG=""
-	use esd     || export ESDCONFIG=""
-	use scanner || export sane_devel="no"
+	use arts    || export ac_cv_path_ARTSCCONFIG=""
+	use esd     || export ac_cv_path_ESDCONFIG=""
+	use scanner || export ac_cv_path_sane_devel="no"
 	config_cache jack jack/jack.h
 	config_cache cups cups/cups.h
 	config_cache alsa alsa/asoundlib.h sys/asoundlib.h asound:snd_pcm_open
@@ -101,14 +97,13 @@ src_compile() {
 	config_cache jpeg jpeglib.h
 	config_cache oss sys/soundcard.h machine/soundcard.h soundcard.h
 	config_cache lcms lcms.h
-	use x86 && config_cache truetype freetype:FT_Init_FreeType
 
 	strip-flags
-	use lcms && append-flags -I"${ROOT}"/usr/include/lcms
+
+	use amd64 && multilib_toolchain_setup x86
 
 	#	$(use_enable amd64 win64)
 	econf \
-		CC=$(tc-getCC) \
 		--sysconfdir=/etc/wine \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
