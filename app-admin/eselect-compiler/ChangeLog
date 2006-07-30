@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.29 2006/07/12 06:40:18 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.30 2006/07/30 14:58:29 flameeyes Exp $
+
+  30 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  eselect-compiler-2.0.0_rc1-r6.ebuild:
+  Remove ~x86-fbsd keyword, failure related to libgcc_s.so not being copied
+  over to /lib.
 
   12 Jul 2006; Kevin F. Quinn <kevquinn@gentoo.org>
   eselect-compiler-2.0.0_rc2-r1.ebuild:
