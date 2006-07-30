@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.297 2006/07/28 06:36:07 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.298 2006/07/30 17:43:01 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -128,10 +128,10 @@ fi
 
 #---->> SLOT+IUSE logic <<----
 if [[ ${ETYPE} == "gcc-library" ]] ; then
-	IUSE="nls build"
+	IUSE="nls build test"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
-	IUSE="multislot"
+	IUSE="multislot test"
 
 	if [[ ${PN} != "kgcc64" ]] ; then
 		IUSE="${IUSE} altivec bootstrap build doc fortran gcj gtk hardened multilib nls nocxx objc vanilla"
