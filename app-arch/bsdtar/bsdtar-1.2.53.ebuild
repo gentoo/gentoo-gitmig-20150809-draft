@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53.ebuild,v 1.4 2006/06/09 20:15:28 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53.ebuild,v 1.5 2006/07/30 14:43:57 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# Create tar symlink for FreeBSD
 	if [[ ${CHOST} == *-freebsd* ]]; then
