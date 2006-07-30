@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.4.ebuild,v 1.2 2006/07/05 07:45:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.1.4.ebuild,v 1.3 2006/07/30 22:30:54 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -45,9 +45,6 @@ RDEPEND="virtual/libc
 
 PG_DIR="/var/lib/postgresql"
 
-# misc files
-FILES_VER="8.1.3"
-
 pkg_setup() {
 	if [ -f ${PG_DIR}/data/PG_VERSION ] ; then
 		PG_MAJOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f1 -d.`
@@ -68,12 +65,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S}
-#	use pg-hier && epatch ${WORKDIR}/${P_HIERPG}.diff
-
-	epatch ${FILESDIR}/${PN}-${FILES_VER}-gentoo.patch
-	epatch ${FILESDIR}/${PN}-${FILES_VER}-sh.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-${PV%.*}-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-${PV%.*}-sh.patch"
 }
 
 src_compile() {
@@ -158,10 +153,10 @@ src_install() {
 
 	cd ${S}
 	exeinto /etc/init.d/
-	newexe ${FILESDIR}/postgresql.init-${FILES_VER} postgresql || die
+	newexe "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
 
 	insinto /etc/conf.d/
-	newins ${FILESDIR}/postgresql.conf-${FILES_VER} postgresql || die
+	newins "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
 
 	rm ${D}/usr/include/postgres_ext.h
 }

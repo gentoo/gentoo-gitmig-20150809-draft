@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.13.ebuild,v 1.10 2006/07/05 07:45:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.13.ebuild,v 1.11 2006/07/30 22:30:54 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
@@ -48,9 +48,6 @@ RDEPEND="virtual/libc
 PG_DIR="/var/lib/postgresql"
 MAX_CONNECTIONS=1024
 
-# misc files
-FILES_VER="7.4.12"
-
 pkg_setup() {
 	if [ -f ${PG_DIR}/data/PG_VERSION ] ; then
 		PG_MAJOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f1 -d.`
@@ -80,25 +77,21 @@ check_java_config() {
 }
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
+	unpack ${A}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PN}-${FILES_VER}-gentoo.patch
+	epatch "${FILESDIR}/${PN}-${PV%.*}-gentoo.patch"
 
-	if use pg-hier; then
-		cd ${S} || die
-		epatch ${WORKDIR}/${P_HIERPG}.diff
+	if use pg-hier ; then
+		epatch "${WORKDIR}/${P_HIERPG}.diff"
 	fi
 
-	if use pg-vacuumdelay; then
-		cd ${S} || die
-		epatch ${FILESDIR}/${PN}-${FILES_VER}-vacuum-delay.patch
+	if use pg-vacuumdelay ; then
+		epatch "${FILESDIR}/${PN}-${PV%.*}-vacuum-delay.patch"
 	fi
 
-	if [ "${ARCH}" = "hppa" ]
-	then
-		cd ${S}
-		epatch ${FILESDIR}/${PN}-${FILES_VER}-hppa-testandset.patch
+	if [[ "${ARCH}" = "hppa" ]] ; then
+		epatch "${FILESDIR}/${PN}-${PV%.*}-hppa-testandset.patch"
 	fi
 }
 
@@ -208,13 +201,13 @@ src_install() {
 
 	cd ${S}
 	exeinto /etc/init.d/
-	newexe ${FILESDIR}/postgresql.init-${FILES_VER} postgresql || die
-	newexe ${FILESDIR}/pg_autovacuum.init-${FILES_VER} pg_autovacuum || die
+	newexe "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
+	newexe "${FILESDIR}/pg_autovacuum.init-${PV%.*}" pg_autovacuum || die
 	dosed "s:___DOCDIR___:/usr/share/doc/${PF}:" /etc/init.d/pg_autovacuum
 
 	insinto /etc/conf.d/
-	newins ${FILESDIR}/postgresql.conf-${FILES_VER} postgresql || die
-	newins ${FILESDIR}/pg_autovacuum.conf-${FILES_VER} pg_autovacuum || die
+	newins "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
+	newins "${FILESDIR}/pg_autovacuum.conf-${PV%.*}" pg_autovacuum || die
 }
 
 pkg_postinst() {

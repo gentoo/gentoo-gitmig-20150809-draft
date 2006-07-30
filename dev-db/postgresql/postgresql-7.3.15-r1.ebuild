@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.15-r1.ebuild,v 1.2 2006/07/16 12:12:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.15-r1.ebuild,v 1.3 2006/07/30 22:30:54 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 mips ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ppc ~s390 ~sh ~sparc ~x86"
 IUSE="doc java libg++ nls pam perl python readline ssl tcltk zlib threads selinux"
 
 DEPEND="virtual/libc
@@ -42,9 +42,6 @@ RDEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"
-
-# misc files
-FILES_VER="7.3.14"
 
 pkg_setup() {
 	if [ -f ${PG_DIR}/data/PG_VERSION ] ; then
@@ -75,11 +72,10 @@ check_java_config() {
 }
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
-
-	epatch ${FILESDIR}/${PN}-${FILES_VER}-gentoo.patch
-	epatch ${FILESDIR}/${P}-cubeparse.patch
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-${PV%.*}-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-${PV}-cubeparse.patch"
 }
 
 src_compile() {
@@ -176,10 +172,10 @@ src_install() {
 
 	cd ${S}
 	exeinto /etc/init.d/
-	newexe ${FILESDIR}/postgresql.init-${FILES_VER} postgresql || die
+	newexe "${FILESDIR}/postgresql.init-${PV%.*}" postgresql || die
 
 	insinto /etc/conf.d/
-	newins ${FILESDIR}/postgresql.conf postgresql || die
+	newins "${FILESDIR}/postgresql.conf-${PV%.*}" postgresql || die
 
 	keepdir /var/lib/postgresql
 }

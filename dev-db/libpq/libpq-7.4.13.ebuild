@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.4.13.ebuild,v 1.9 2006/06/28 03:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-7.4.13.ebuild,v 1.10 2006/07/30 22:32:28 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -41,10 +41,8 @@ pkg_preinst() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	# patch from 7.4.12 is ok
-	epatch ${FILESDIR}/${P/3/2}-gentoo.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_compile() {
