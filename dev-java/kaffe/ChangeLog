@@ -1,8 +1,8 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.50 2006/07/30 19:56:43 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.51 2006/07/30 20:00:16 wormo Exp $
 
-  01 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  30 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   kaffe-1.1.6-r2.ebuild:
   stable on ppc (Bug #137827)
 
