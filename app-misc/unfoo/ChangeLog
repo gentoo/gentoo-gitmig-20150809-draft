@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.17 2005/12/02 21:27:43 dang Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.18 2006/07/30 01:52:28 deltacow Exp $
+
+  30 Jul 2006; Scott Stoddard <deltacow@gentoo.org> unfoo-1.0.5.ebuild:
+  Stable on amd64 (re bug 142119)
 
   02 Dec 2005; <dang@gentoo.org> unfoo-1.0.5.ebuild:
   Marked ~amd64

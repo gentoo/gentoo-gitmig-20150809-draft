@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.5.ebuild,v 1.8 2005/12/02 21:27:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.5.ebuild,v 1.9 2006/07/30 01:52:28 deltacow Exp $
 
 DESCRIPTION="A simple bash driven frontend to simplify decompression of files"
 HOMEPAGE="http://obsoleet.org/code/unfoo"
 SRC_URI="${HOMEPAGE}/${P}.sh"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 s390 sparc x86"
+KEYWORDS="amd64 ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=""
