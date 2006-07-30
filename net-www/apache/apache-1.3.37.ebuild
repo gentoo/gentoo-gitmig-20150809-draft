@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.37.ebuild,v 1.1 2006/07/29 20:08:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.37.ebuild,v 1.2 2006/07/30 04:35:11 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
 GENTOO_PATCHSTAMP="20060729"
-GENTOO_DEVSPACE="kloeri"
+GENTOO_DEVSPACE="vericgar"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 # The mod_ssl archive is only for providing the EAPI patch in here.
@@ -63,7 +63,13 @@ src_unpack() {
 	# 90-99 security patches
 	EPATCH_SUFFIX="patch"
 	epatch ${GENTOO_PATCHDIR}/patches/[0-2]*
-	#epatch ${GENTOO_PATCHDIR}/patches/9*
+
+	# security patches are version based
+	# 99_all_${PV}_Name.patch
+	if $(ls ${GENTOO_PATCHDIR}/patches/9?_*_${PV}_* &>/dev/null); then
+		epatch ${GENTOO_PATCHDIR}/patches/9?_*_${PV}_* || \
+			die "Patching for version ${PV} failed"
+	fi
 
 	# setup the filesystem layout config
 	cat ${GENTOO_PATCHDIR}/patches/config.layout >> config.layout
