@@ -1,0 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/package.unmask,v 1.1 2006/07/30 22:04:07 kugelfang Exp $
+
+# Danny van Dyk <kugelfang@gentoo.org>
+# Version 1000 is a stub package for stray dependencies.
+=app-emulation/emul-linux-x86-glibc-1000
