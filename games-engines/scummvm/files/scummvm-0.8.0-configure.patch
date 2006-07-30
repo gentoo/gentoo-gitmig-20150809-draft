@@ -1,8 +1,0 @@
---- configure
-+++ configure
-@@ -433,4 +433,5 @@
-         _backend=`echo $ac_option | cut -d '=' -f 2`
-         ;;
-+      --enable-debug);;
-       --disable-debug)
-         DEBFLAGS=""
