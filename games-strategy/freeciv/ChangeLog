@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.46 2006/07/13 03:58:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.47 2006/07/30 03:33:10 kumba Exp $
+
+  30 Jul 2006; Joshua Kinard <kumba@gentoo.org> freeciv-2.0.8.ebuild:
+  Add pkgconfig as a DEP because freeciv needs it to find gtk. If gtk is
+  merged from binpkg, the possibility exists for pkgconfig to not get merged
+  due to being only in gtk's DEP and not RDEP.
 
   13 Jul 2006; Joshua Kinard <kumba@gentoo.org> freeciv-2.0.8.ebuild:
   Added x11-proto/xextproto to DEPEND to satisfy a need for shape.h, and

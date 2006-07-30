@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8.ebuild,v 1.9 2006/07/13 04:50:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8.ebuild,v 1.10 2006/07/30 03:33:10 kumba Exp $
 
 inherit games
 
@@ -25,6 +25,7 @@ RDEPEND="sys-libs/zlib
 	readline? ( sys-libs/readline )
 	!dedicated? (
 		gtk? (
+			>=dev-util/pkgconfig-0.9
 			>=x11-libs/gtk+-2.0.0
 			>=dev-libs/glib-2.0.0
 			>=dev-libs/atk-1.0.3
