@@ -1,0 +1,8 @@
+# ChangeLog for sys-fs/yaffs2-utils
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/ChangeLog,v 1.1 2006/07/30 19:11:29 vapier Exp $
+
+*yaffs2-utils-9999 (30 Jul 2006)
+
+  30 Jul 2006; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
