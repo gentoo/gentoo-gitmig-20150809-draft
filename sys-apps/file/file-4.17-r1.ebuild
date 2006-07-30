@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.13 2006/07/09 02:24:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.17-r1.ebuild,v 1.14 2006/07/30 23:23:57 vapier Exp $
 
-inherit distutils libtool
+inherit eutils distutils libtool
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"
 HOMEPAGE="ftp://ftp.astron.com/pub/file/"
@@ -27,6 +27,7 @@ src_unpack() {
 	rm ltconfig || die
 
 	elibtoolize
+	epunt_cxx
 
 	# make sure python links against the current libmagic #54401
 	sed -i "/library_dirs/s:'\.\./src':'../src/.libs':" python/setup.py
