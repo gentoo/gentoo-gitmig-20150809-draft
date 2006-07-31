@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.1 2006/07/31 01:56:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.2 2006/07/31 14:52:01 flameeyes Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -85,7 +85,7 @@ src_install() {
 	# older gettext's sometimes installed libintl ...
 	# need to keep the linked version or the system
 	# could die (things like sed link against it :/)
-	local libname="libintl$(get_libname 2)"
+	local libname="libintl$(get_libname 7)"
 	if [[ -e ${ROOT}/usr/$(get_libdir)/${libname} ]] ; then
 		cp -pPR ${ROOT}/usr/$(get_libdir)/${libname}* "${D}"/usr/$(get_libdir)/
 		touch "${D}"/usr/$(get_libdir)/${libname}*
@@ -119,7 +119,7 @@ pkg_postinst() {
 	ewarn "Any package that linked against the previous version"
 	ewarn "of gettext will have to be rebuilt."
 	ewarn "Please 'emerge gentoolkit' and run:"
-	ewarn "revdep-rebuild --library libintl.so.2"
+	ewarn "revdep-rebuild --library libintl.so.7"
 }
 
 pkg_postrm() {
