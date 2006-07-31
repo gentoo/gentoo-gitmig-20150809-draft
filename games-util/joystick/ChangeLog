@@ -1,6 +1,12 @@
 # ChangeLog for games-util/joystick
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.3 2005/08/23 03:18:02 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.4 2006/07/31 04:51:35 vapier Exp $
+
+*joystick-20060731 (31 Jul 2006)
+
+  31 Jul 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/joystick-jstest-segv.patch, +joystick-20060731.ebuild:
+  Version bump and fix by Matt Anderson for segv in jstest #132607.
 
   23 Aug 2005; Mike Frysinger <vapier@gentoo.org>
   +files/joystick-MCS-defines.patch, joystick-20050720.ebuild:
