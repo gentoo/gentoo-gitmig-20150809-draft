@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.43 2006/07/20 06:19:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.44 2006/07/31 04:50:12 dberkholz Exp $
+
+  31 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/7.1.2-lam_prog_f77.m4.patch:
+  (#141152) Add missing patch.
 
 *lam-mpi-7.1.2 (20 Jul 2006)
 
