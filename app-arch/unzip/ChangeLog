@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.37 2006/04/05 19:28:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.38 2006/07/31 23:42:10 ticho Exp $
+
+  31 Jul 2006; Andrej Kacian <ticho@gentoo.org> unzip-5.52-r1.ebuild:
+  Stable on x86. Bug #142149, by Daniel Black <dragonheart at gentoo.org>.
 
   05 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> unzip-5.52-r1.ebuild:
   Add ~x86-fbsd keyword.
