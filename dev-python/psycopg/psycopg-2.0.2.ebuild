@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.1 2006/07/28 12:32:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.2.ebuild,v 1.2 2006/07/31 13:50:44 tgall Exp $
 
 inherit eutils distutils
 
@@ -12,7 +12,7 @@ DEPEND=">=dev-lang/python-2.4
 	>=dev-db/postgresql-7.1.3"
 
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="GPL-2"
 IUSE="debug"
 
