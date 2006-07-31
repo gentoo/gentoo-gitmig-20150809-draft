@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5684 2006/07/31 17:49:32 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5685 2006/07/31 20:25:57 ikelos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Mike Auty <ikelos@gentoo.org> (31 Jul 2006)
+# Masked to give the distfiles a day to catch up
+app-emulation/vmware-server
+app-emulation/vmware-server-console
+app-emulation/vmware-modules
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (31 Jul 2006)
 # Masked for security issues
