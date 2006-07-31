@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.57 2006/07/13 01:26:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.58 2006/07/31 08:27:50 blubb Exp $
+
+  31 Jul 2006; Simon Stelling <blubb@gentoo.org> rails-1.1.4.ebuild:
+  stable on amd64 wrt bug 138323
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> rails-1.1.4.ebuild:
   Mark 1.1.4 stable on ia64. #138323
