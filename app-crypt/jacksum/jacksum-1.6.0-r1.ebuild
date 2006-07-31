@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.6.0-r1.ebuild,v 1.1 2006/07/31 03:50:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.6.0-r1.ebuild,v 1.2 2006/07/31 03:52:26 nichoj Exp $
 
-inherit java-pkg-2
+inherit java-pkg-2 java-ant-2
 
 DESCRIPTION="Java utility for computing and verifying checksums: CRC*, MD*, RIPEMD*, SHA*, TIGER*, WHIRLPOOL"
 HOMEPAGE="http://www.jonelo.de/java/jacksum/"
