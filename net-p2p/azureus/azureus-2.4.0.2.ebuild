@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2.ebuild,v 1.2 2006/07/27 15:54:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2.ebuild,v 1.3 2006/07/31 03:34:44 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://azureus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/azureus/Azureus_${PV}_source.zip"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="source"
 
@@ -22,6 +22,7 @@ RDEPEND=">=virtual/jre-1.4
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.6.2
+	amd64? ( =dev-java/eclipse-ecj-3.1* )
 	>=app-arch/unzip-5.0"
 
 S=${WORKDIR}/${PN}
@@ -61,12 +62,8 @@ src_compile() {
 		ant_extra_opts="-Dbootclasspath=$(java-config --jdk-home)/jre/lib/core.jar:$(java-config --jdk-home)/jre/lib/xml.jar:$(java-config --jdk-home)/jre/lib/graphics.jar"
 	fi
 
-	# Fails to build on amd64 or x86 without this
-	# Making this big  makes x86 machines with
-	# little memory fail...
-	if use amd64 || use x86; then
-		ANT_OPTS="${ANT_OPTS} -Xmx248m"
-	fi
+	# amd64 runs out of memory with javac... use ecj instead
+	use amd64  && java-pkg_force-compiler ecj-3.1
 
 	eant ${ant_extra_opts} jar
 }
