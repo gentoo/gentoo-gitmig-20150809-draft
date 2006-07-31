@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.5.ebuild,v 1.1 2006/07/29 10:32:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.5.ebuild,v 1.2 2006/07/31 11:53:48 blubb Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -9,7 +9,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/linux
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird"
 RESTRICT="nostrip"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE=""
