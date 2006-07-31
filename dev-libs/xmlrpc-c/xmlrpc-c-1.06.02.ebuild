@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.05-r2.ebuild,v 1.2 2006/07/31 06:35:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.02.ebuild,v 1.1 2006/07/31 06:35:57 hollow Exp $
 
 inherit eutils
 
@@ -32,14 +32,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-iostream.patch
-	epatch "${FILESDIR}"/${P}-no-extra-qual.patch
-	epatch "${FILESDIR}"/${P}-client-global.patch
-	epatch "${FILESDIR}"/${P}-pic.patch
+	epatch "${FILESDIR}"/${PN}-1.05-pic.patch
+	epatch "${FILESDIR}"/${PN}-1.06.02-threadupdatestatus.patch
+	epatch "${FILESDIR}"/${PN}-1.06.02-strsol.patch
 }
 
 src_compile() {
-	econf --disable-wininet-client \
+	econf --disable-wininet-client --enable-libxml2-backend \
 		$(use_enable threads abyss-threads) \
 		$(use_enable curl curl-client) \
 		$(use_enable libwww libwww-client) || die "econf failed"
