@@ -1,9 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/files/mpd.rc6,v 1.4 2005/10/24 13:42:28 ticho Exp $
-
-pidfile="/var/run/mpd/mpd.pid"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/files/mpd.rc6,v 1.5 2006/07/31 22:52:13 ticho Exp $
 
 depend() {
 	need localmount
@@ -23,12 +21,12 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting Music Player Daemon" 
-	start-stop-daemon --start --exec /usr/bin/mpd -- --no-create-db /etc/mpd.conf
+	/usr/bin/mpd --no-create-db /etc/mpd.conf
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping Music Player Daemon"
-	start-stop-daemon --stop --pidfile ${pidfile}
+	/usr/bin/mpd --kill
 	eend $? 
 }

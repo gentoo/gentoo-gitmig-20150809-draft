@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.29 2006/07/24 22:18:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.30 2006/07/31 22:52:13 ticho Exp $
+
+  31 Jul 2006; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6,
+  -mpd-svn-20051220.ebuild, -mpd-svn-20060321.ebuild,
+  mpd-svn-20060723.ebuild:
+  Do not use start-stop-daemon in the initscript, now that mpd --kill works
+  nicely. Removed glib dependency, since we don't depend on it anymore.
+  Removed use_enable calls on mpd-mad and mpd-id3tag. Removed fifo USE flag
+  per request from upstream. Removed ebuild for old snapshots.
 
 *mpd-svn-20060723 (24 Jul 2006)
 
