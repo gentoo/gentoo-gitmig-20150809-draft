@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.31 2006/07/30 14:43:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.32 2006/07/31 11:19:54 flameeyes Exp $
+
+  31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  bsdtar-1.2.53-r1.ebuild:
+  Use -j1 to actually install.
 
   30 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> bsdtar-1.2.53.ebuild,
   bsdtar-1.2.53-r1.ebuild:
