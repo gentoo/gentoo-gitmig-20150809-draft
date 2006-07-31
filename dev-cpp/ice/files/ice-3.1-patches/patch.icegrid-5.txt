@@ -1,0 +1,14 @@
+Index: src/IceGrid/Database.cpp
+===================================================================
+RCS file: /home/cvsroot/ice/src/IceGrid/Database.cpp,v
+retrieving revision 1.86
+diff -r1.86 Database.cpp
+55c55,60
+< 	return _database->getAdapterDirectProxy(current.id.name);
+---
+> 	Ice::ObjectPrx proxy = _database->getAdapterDirectProxy(current.id.name);
+> 	if(!proxy)
+> 	{
+> 	    throw Ice::ObjectNotExistException(__FILE__, __LINE__);
+> 	}
+> 	return proxy;

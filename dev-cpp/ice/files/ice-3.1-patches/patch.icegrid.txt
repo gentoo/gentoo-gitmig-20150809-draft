@@ -1,0 +1,204 @@
+Index: src/IceGrid/AdapterCache.cpp
+===================================================================
+RCS file: /home/cvsroot/ice/src/IceGrid/AdapterCache.cpp,v
+retrieving revision 1.37
+diff -r1.37 AdapterCache.cpp
+401d400
+<     auto_ptr<Ice::Exception> exception;
+414c413
+< 	catch(const Ice::Exception& ex)
+---
+> 	catch(const NodeUnreachableException&)
+416,419d414
+< 	    if(!exception.get())
+< 	    {
+< 		exception.reset(ex.ice_clone());
+< 	    }
+423,427d417
+<     if(exception.get())
+<     {
+< 	exception->ice_throw();
+<     }
+< 
+Index: src/IceGrid/DescriptorBuilder.cpp
+===================================================================
+RCS file: /home/cvsroot/ice/src/IceGrid/DescriptorBuilder.cpp,v
+retrieving revision 1.40
+diff -r1.40 DescriptorBuilder.cpp
+830,843d829
+<     
+<     AdapterDescriptor& desc = _descriptor->adapters.back();
+<     assert(desc.name == "IceBox.ServiceManager");
+<     desc.id = attrs("id", desc.id);
+<     desc.replicaGroupId = attrs("replica-group", desc.replicaGroupId);
+<     desc.registerProcess = attrs.asBool("register-process", desc.registerProcess);
+<     if(desc.id == "" && attrs.contains("wait-for-activation"))
+<     {
+< 	throw "the attribute `wait-for-activation' can only be set if the adapter has an non empty id";
+<     }
+<     else
+<     {
+< 	desc.waitForActivation = attrs.asBool("wait-for-activation", desc.waitForActivation);
+<     }
+845c831,832
+<     if(attrs.contains("endpoints"))
+---
+>     PropertyDescriptorSeq::iterator p = _hiddenProperties.begin();
+>     while(p != _hiddenProperties.end())
+847,855c834,841
+<  	PropertyDescriptorSeq::iterator p;
+<  	for(p = _descriptor->propertySet.properties.begin(); p != _descriptor->propertySet.properties.end(); ++p)
+<  	{
+<  	    if(p->name == "IceBox.ServiceManager.Endpoints")
+<  	    {
+<  		p->value = attrs("endpoints");
+<  		break;
+<  	    }
+<  	}
+---
+> 	if(p->name == "IceBox.ServiceManager.Endpoints" || p->name == "IceBox.ServiceManager.RegisterProcess")
+> 	{
+> 	    p = _hiddenProperties.erase(p);
+> 	}
+> 	else
+> 	{
+> 	    ++p;
+> 	}
+856a843,844
+> 
+>     ServerDescriptorBuilder::addAdapter(attrs);
+Index: test/IceGrid/replication/AllTests.cpp
+===================================================================
+RCS file: /home/cvsroot/ice/test/IceGrid/replication/AllTests.cpp,v
+retrieving revision 1.8
+diff -r1.8 AllTests.cpp
+23c23
+< instantiateServer(const AdminPrx& admin, const string& templ, const map<string, string>& params)
+---
+> instantiateServer(const AdminPrx& admin, const string& templ, const string& node, const map<string, string>& params)
+29c29
+<     nodeUpdate.name = "localnode";
+---
+>     nodeUpdate.name = node;
+54a55,57
+>     catch(const NodeUnreachableException&)
+>     {
+>     }
+98c101
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+100c103
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+102c105
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+124c127
+< 	instantiateServer(admin, "IceBox", params);
+---
+> 	instantiateServer(admin, "IceBox", "localnode", params);
+147c150
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+149c152
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+151c154
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+172c175
+< 	instantiateServer(admin, "IceBox", params);
+---
+> 	instantiateServer(admin, "IceBox", "localnode", params);
+194c197
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+196c199
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+198c201
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+221c224
+< 	instantiateServer(admin, "IceBox", params);
+---
+> 	instantiateServer(admin, "IceBox", "localnode", params);
+248c251
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+250c253
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+252c255
+< 	instantiateServer(admin, "Server", params);
+---
+> 	instantiateServer(admin, "Server", "localnode", params);
+275c278
+< 	instantiateServer(admin, "IceBox", params);
+---
+> 	instantiateServer(admin, "IceBox", "localnode", params);
+295a299,344
+> 
+>     cout << "testing replication with inactive nodes... " << flush;
+>     {
+> 	map<string, string> params;
+> 
+> 	params["replicaGroup"] = "Random";
+> 	params["id"] = "Server1";
+> 	instantiateServer(admin, "Server", "inactivenode", params);
+> 	params["id"] = "Server2";
+> 	instantiateServer(admin, "Server", "localnode", params);
+> 	TestIntfPrx obj = TestIntfPrx::uncheckedCast(comm->stringToProxy("Random"));
+> 	test(obj->getReplicaIdAndShutdown() == "Server2.ReplicatedAdapter");
+> 	removeServer(admin, "Server1");
+> 	removeServer(admin, "Server2");
+> 
+> 	params["replicaGroup"] = "RoundRobin";
+> 	params["id"] = "Server1";
+> 	instantiateServer(admin, "Server", "inactivenode", params);
+> 	params["id"] = "Server2";
+> 	instantiateServer(admin, "Server", "localnode", params);
+> 	obj = TestIntfPrx::uncheckedCast(comm->stringToProxy("RoundRobin"));
+> 	test(obj->getReplicaIdAndShutdown() == "Server2.ReplicatedAdapter");
+> 	removeServer(admin, "Server1");
+> 	removeServer(admin, "Server2");
+> 
+> 	params["replicaGroup"] = "Adaptive";
+> 	params["id"] = "Server1";
+> 	instantiateServer(admin, "Server", "inactivenode", params);
+> 	params["id"] = "Server2";
+> 	instantiateServer(admin, "Server", "localnode", params);
+> 	obj = TestIntfPrx::uncheckedCast(comm->stringToProxy("Adaptive"));
+> 	test(obj->getReplicaIdAndShutdown() == "Server2.ReplicatedAdapter");
+> 	removeServer(admin, "Server1");
+> 	removeServer(admin, "Server2");
+> 
+> 	params["replicaGroup"] = "Random";
+> 	params["id"] = "IceBox1";
+> 	instantiateServer(admin, "IceBox", "localnode", params);
+> 	params["id"] = "Server1";
+> 	instantiateServer(admin, "Server", "inactivenode", params);
+> 	obj = TestIntfPrx::uncheckedCast(comm->stringToProxy("Random"));
+> 	test(svcReplicaIds.find(obj->getReplicaIdAndShutdown()) != svcReplicaIds.end());
+> 	removeServer(admin, "IceBox1");
+> 	removeServer(admin, "Server1");
+>     };
+>     cout << "ok" << endl;
+Index: test/IceGrid/replication/application.xml
+===================================================================
+RCS file: /home/cvsroot/ice/test/IceGrid/replication/application.xml,v
+retrieving revision 1.5
+diff -r1.5 application.xml
+47a48
+>         <adapter name="IceBox.ServiceManager" endpoints="tcp -h 127.0.0.1" register-process="true"/>

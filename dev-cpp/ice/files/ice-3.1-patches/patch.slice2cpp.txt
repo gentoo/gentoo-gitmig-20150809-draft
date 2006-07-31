@@ -1,0 +1,28 @@
+*** src/Slice/CPlusPlusUtil.cpp	2006-07-31 09:58:33.000000000 -0230
+--- /home/dwayne/src/release/ice_31_branch/src/Slice/CPlusPlusUtil.cpp	2006-07-31 09:43:09.000000000 -0230
+*************** Slice::writeMarshalUnmarshalCode(Output&
+*** 857,862 ****
+--- 857,866 ----
+  		    StringList md;
+  		    md.push_back("cpp:array");
+  		    string tmpParam = "___";
++                     //
++                     // Catch some case in which it is not possible to just prepend
++                     // underscores to param to use as temporary variable.
++                     //
+  		    if(fixedParam.find("(*") == 0)
+  		    {
+  		        tmpParam += fixedParam.substr(2, fixedParam.length() - 3);
+*************** Slice::writeMarshalUnmarshalCode(Output&
+*** 865,870 ****
+--- 869,878 ----
+  		    {
+  		        tmpParam += fixedParam.substr(0, fixedParam.length() - 3);
+  		    }
++                     else if(fixedParam.find("->second") != string::npos)
++                     {
++                         tmpParam += fixedParam.substr(0, fixedParam.length() - 8);
++                     }
+  		    else
+  		    {
+  		        tmpParam += fixedParam;

@@ -1,6 +1,16 @@
 # ChangeLog for dev-cpp/ice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ChangeLog,v 1.8 2006/07/14 12:04:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ChangeLog,v 1.9 2006/07/31 13:37:49 caleb Exp $
+
+*ice-3.1.0-r6 (31 Jul 2006)
+
+  31 Jul 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1-patches/Gen.cpp, +files/ice-3.1-patches/ice310-3.patch,
+  +files/ice-3.1-patches/patch.icegrid.txt,
+  +files/ice-3.1-patches/patch.icegrid-5.txt,
+  +files/ice-3.1-patches/patch.slice2cpp.txt, +ice-3.1.0-r6.ebuild:
+  This adds the first 6 patches that have been released since Ice 3.1.0 was
+  released. I bumped it to -r6 to signify this
 
 *ice-3.1.0-r1 (14 Jul 2006)
 
