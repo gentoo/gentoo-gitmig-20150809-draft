@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.17 2006/02/17 20:10:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.18 2006/07/31 04:08:31 nichoj Exp $
+
+*jitac-0.2.0-r2 (31 Jul 2006)
+
+  31 Jul 2006; Joshua Nichols <nichoj@gentoo.org> +jitac-0.2.0-r2.ebuild:
+  Revision bump to support new Java system
 
   17 Feb 2006; Michael Hanselmann <hansmi@gentoo.org> jitac-0.2.0-r1.ebuild:
   Stable on ppc.
