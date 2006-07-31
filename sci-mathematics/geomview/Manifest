@@ -1,16 +1,34 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2aeba514c28e0d283ef2b72f25f52afe ChangeLog 1301
-MD5 198d709a2060c952b869fd28e23f286b geomview-1.8.1-r3.ebuild 839
-MD5 3fbaa47f9b0997b5153ab4c51e2543e8 metadata.xml 418
+AUX geomview-1.8.1-configure.diff 345 RMD160 70adb3ddd706fddf8f8ec0d858ff2ea395a19308 SHA1 84846508ef5fae80fd0869ad73909c1add995435 SHA256 c9ac2e438d6aa53a794a1d618acd8bd38c0979e19f7df1aacf9fb53f2bb2282b
 MD5 3d18ce933a28b57ce8532b5855eb4c18 files/geomview-1.8.1-configure.diff 345
+RMD160 70adb3ddd706fddf8f8ec0d858ff2ea395a19308 files/geomview-1.8.1-configure.diff 345
+SHA256 c9ac2e438d6aa53a794a1d618acd8bd38c0979e19f7df1aacf9fb53f2bb2282b files/geomview-1.8.1-configure.diff 345
+AUX geomview-1.8.1-stdiostream.diff 3679 RMD160 29f114ab6b438e17a3d30780f38f429b9ea62729 SHA1 d7715b72a6fa1e2aeaf3c215b7bcd4aae481b8e1 SHA256 13e6a320e4a966572f7ddbbcf677c7175fbb0aeb9c4aa308a5d582cb4edd82ac
 MD5 516cbbb8f525f64c20a456811b93c9fc files/geomview-1.8.1-stdiostream.diff 3679
+RMD160 29f114ab6b438e17a3d30780f38f429b9ea62729 files/geomview-1.8.1-stdiostream.diff 3679
+SHA256 13e6a320e4a966572f7ddbbcf677c7175fbb0aeb9c4aa308a5d582cb4edd82ac files/geomview-1.8.1-stdiostream.diff 3679
+DIST geomview-1.8.1.tar.gz 2766832
+EBUILD geomview-1.8.1-r3.ebuild 839 RMD160 65891f6b1fb92581e98fcd05deccc5aa8711b9c0 SHA1 caec2d73df6f9fd2c074f80a8f793dc94fc9360f SHA256 d65dc454e6f0b7a90681ebeff8e0d7090c416e5fe72bd7517301d3ba28c32168
+MD5 198d709a2060c952b869fd28e23f286b geomview-1.8.1-r3.ebuild 839
+RMD160 65891f6b1fb92581e98fcd05deccc5aa8711b9c0 geomview-1.8.1-r3.ebuild 839
+SHA256 d65dc454e6f0b7a90681ebeff8e0d7090c416e5fe72bd7517301d3ba28c32168 geomview-1.8.1-r3.ebuild 839
+MISC ChangeLog 1301 RMD160 516457e474ea3dfc613ceb9786ae673d2b663d5c SHA1 adac5b87c62114ea7848822dabd2c5c98d314630 SHA256 911c4fcc2764a3c65f0145840b1bc4c4f9148b9f7458fc8d7c7b6fed9b343efc
+MD5 2aeba514c28e0d283ef2b72f25f52afe ChangeLog 1301
+RMD160 516457e474ea3dfc613ceb9786ae673d2b663d5c ChangeLog 1301
+SHA256 911c4fcc2764a3c65f0145840b1bc4c4f9148b9f7458fc8d7c7b6fed9b343efc ChangeLog 1301
+MISC metadata.xml 430 RMD160 69587f0c882c6d46eae5fe0baf06609f1f26c426 SHA1 a49102099313c1499e112ac58c98e8e9d652e509 SHA256 562657a247d7e4c0537adfa97ab2660c1d661d36fa8a7c28a305e4bc1b4ada4a
+MD5 442ddbe198a6f92c339dbd155b375d82 metadata.xml 430
+RMD160 69587f0c882c6d46eae5fe0baf06609f1f26c426 metadata.xml 430
+SHA256 562657a247d7e4c0537adfa97ab2660c1d661d36fa8a7c28a305e4bc1b4ada4a metadata.xml 430
 MD5 4a24ace30f19b0c7d510c15d67f60ee2 files/digest-geomview-1.8.1-r3 67
+RMD160 6ada528c55a21789922be923f2f124f4a31f4a00 files/digest-geomview-1.8.1-r3 67
+SHA256 375649ff85114ca661a9bc54fb068ff05704e0241d3bab6adbffd9635e1be972 files/digest-geomview-1.8.1-r3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFB0b0QI1lqEGTUzyQRAjZtAKDUKEIRtDvvelv1mm73CB+91UxLIgCgzwP4
-7CeroG4XsbpppNps4CGvKUc=
-=p1qM
+iD8DBQFEzX/ewUpWvClEHQoRAoUpAJ4ghaniI1BXKt7Eanoty+Sqh8OzOwCdHB5H
+NYzZIwGdUEtJF/22Qnc3tfI=
+=PLMg
 -----END PGP SIGNATURE-----
