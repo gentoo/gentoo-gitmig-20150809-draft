@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.171 2006/07/30 21:03:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.172 2006/07/31 11:08:16 blubb Exp $
+
+  31 Jul 2006; Simon Stelling <blubb@gentoo.org>
+  mozilla-firefox-1.5.0.5.ebuild:
+  stable on amd64 wrt bug 141842
 
   30 Jul 2006; Jason Wever <weeve@gentoo.org>
   mozilla-firefox-1.5.0.5.ebuild:
