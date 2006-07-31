@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.15-r1.ebuild,v 1.3 2006/07/30 22:30:54 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.15-r1.ebuild,v 1.4 2006/07/31 23:30:08 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -75,7 +75,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-${PV%.*}-gentoo.patch"
-	epatch "${FILESDIR}/${PN}-${PV}-cubeparse.patch"
+	epatch "${FILESDIR}/${PN}-${PV%.*}-cubeparse.patch"
 }
 
 src_compile() {
