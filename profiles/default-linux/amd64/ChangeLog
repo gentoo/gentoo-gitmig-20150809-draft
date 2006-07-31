@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.10 2006/07/30 22:04:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.11 2006/07/31 11:43:24 wolf31o2 Exp $
+
+  31 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  2005.0/no-multilib/package.mask, 2005.1/no-multilib/package.mask,
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
+  Masked games-rpg/nwn-data on no-multilib profiles.
 
   30 Jul 2006; Danny van Dyk <kugelfang@gentoo.org> 2005.0/package.mask,
   +2005.0/package.unmask, 2005.1/package.mask, +2005.1/package.unmask,
