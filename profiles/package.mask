@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5683 2006/07/31 16:58:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5684 2006/07/31 17:49:32 malverian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -432,6 +432,7 @@ net-im/gnomemeeting
 # Initial import. Masked for testing
 mail-filter/sid-milter
 
+# Philip Walls <malverian@gentoo.org> (18 Jul 2006)
 # Package is a maintenance nightmare, it has depended
 # on unreleased versions of several other packages
 # for a very long time. This doesn't appear to be
