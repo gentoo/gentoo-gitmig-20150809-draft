@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r3.ebuild,v 1.6 2006/07/09 05:34:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r3.ebuild,v 1.7 2006/07/31 23:51:57 flameeyes Exp $
 
 inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2
 
@@ -23,16 +23,16 @@ LICENSE="GPL-2"
 SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="a52 3dfx nls debug altivec httpd vlm gnutls live v4l cdda ogg matroska
+IUSE="a52 3dfx debug altivec httpd vlm gnutls live v4l cdda ogg matroska
 dvb dvd vcd ffmpeg dts flac mpeg vorbis theora X opengl truetype svg fbcon svga
 oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc stream
-mp3 xv bidi sdl png xml samba daap corba screen mod speex shout rtsp
+mp3 xv bidi sdl png xml samba daap corba mod speex shout rtsp
 win32codecs skins hal avahi xinerama cddb directfb upnp"
 
 RDEPEND="cdda? ( >=dev-libs/libcdio-0.71
 			cddb? ( >=media-libs/libcddb-1.2.0 ) )
 		live? ( >=media-plugins/live-2005.01.29 )
-		dvd? (  media-libs/libdvdread
+		dvd? (	media-libs/libdvdread
 				media-libs/libdvdcss
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
