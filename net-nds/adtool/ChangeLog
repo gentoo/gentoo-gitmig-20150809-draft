@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/adtool
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.6 2006/04/04 14:32:56 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/adtool/ChangeLog,v 1.7 2006/07/31 11:25:01 satya Exp $
+
+  31 Jul 2006; Christian Andreetta <satya@gentoo.org> adtool-1.2-r1.ebuild,
+  adtool-1.3.ebuild, adtool-1.3-r1.ebuild:
+  website changed: from c128.org to gp2x.org
 
   04 Apr 2006; Christian Andreetta <satya@gentoo.org> -adtool-1.2.ebuild:
   old ebuild cleanup
