@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/indent
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.22 2005/07/30 09:25:01 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.23 2006/07/31 06:10:31 wormo Exp $
+
+*indent-2.2.9-r3 (01 Aug 2006)
+
+  30 Jul 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> +metadata.xml,
+  +files/2.2.9-indent-off-segfault.patch, +indent-2.2.9-r3.ebuild:
+  Patch to fix bug in handling of "*INDENT-OFF*" directive (Bug #125648):
+  make "inhibited" flag global so handle_token_comment() can tell if the comment
+  was really the "*INDENT-OFF*" directive -- if so, print_comment() will be 
+  skipped because the line already  got used up during the initial dump_line()
 
   30 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/2.2.9-malloc.patch, indent-2.2.9-r2.ebuild:
