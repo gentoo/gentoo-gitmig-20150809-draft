@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.5 2006/07/28 12:33:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_pre1.ebuild,v 1.6 2006/07/31 12:10:21 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -15,7 +15,7 @@ LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 #KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 KEYWORDS="-*"
-IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
+IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres sqlite xinerama zlib"
 
 # need glib and dbus
 
@@ -142,6 +142,8 @@ src_compile() {
 
 	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
 	use glib	&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
+
+	use pch		&& myconf="${myconf} -pch"
 
 	myconf="${myconf} -tablet -xrender -xrandr -xkb -xshape -sm"
 
