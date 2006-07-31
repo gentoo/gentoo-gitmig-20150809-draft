@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.72 2006/07/25 11:21:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.73 2006/07/31 18:54:13 flameeyes Exp $
+
+*kopete-3.5.3-r4 (31 Jul 2006)
+
+  31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kopete-0.12.1-icqfix3.patch, +kopete-3.5.3-r4.ebuild,
+  kopete-3.5.4.ebuild:
+  Add patch to fix yet-again more ICQ protocol changes, see KDE BUG #130630.
 
 *kopete-3.5.3-r3 (25 Jul 2006)
 

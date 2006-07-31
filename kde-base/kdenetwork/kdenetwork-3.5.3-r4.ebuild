@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.4.ebuild,v 1.2 2006/07/31 18:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3-r4.ebuild,v 1.1 2006/07/31 18:55:31 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -47,7 +47,8 @@ DEPEND="${BOTH_DEPEND}
 		) <virtual/x11-7 )
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kopete-3.5.x-oscarcontacts.patch
+PATCHES="${FILESDIR}/kopete-3.5.3-icqfix.patch
+	${FILESDIR}/kopete-3.5.x-oscarcontacts.patch
 	${FILESDIR}/kopete-0.12.1-icqfix3.patch"
 
 pkg_setup() {

@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.213 2006/07/26 08:37:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.214 2006/07/31 18:55:31 flameeyes Exp $
+
+*kdenetwork-3.5.3-r4 (31 Jul 2006)
+
+  31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kopete-0.12.1-icqfix3.patch, +kdenetwork-3.5.3-r4.ebuild,
+  kdenetwork-3.5.4.ebuild:
+  Add patch to fix yet-again more ICQ protocol changes, see KDE BUG #130630.
 
 *kdenetwork-3.5.4 (26 Jul 2006)
 *kdenetwork-3.5.3-r3 (26 Jul 2006)

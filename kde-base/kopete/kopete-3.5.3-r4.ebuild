@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.4.ebuild,v 1.3 2006/07/31 18:54:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.3-r4.ebuild,v 1.1 2006/07/31 18:54:13 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -46,7 +46,8 @@ DEPEND="${BOTH_DEPEND}
 			x11-proto/scrnsaverproto
 		) <virtual/x11-7 )"
 
-PATCHES="${FILESDIR}/${PN}-3.5.x-oscarcontacts.patch
+PATCHES="${FILESDIR}/${P}-icqfix.patch
+	${FILESDIR}/${PN}-3.5.x-oscarcontacts.patch
 	${FILESDIR}/${PN}-0.12.1-icqfix3.patch"
 
 pkg_setup() {
