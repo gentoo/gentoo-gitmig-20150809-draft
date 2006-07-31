@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.23 2006/05/09 09:30:40 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.24 2006/07/31 16:42:47 dberkholz Exp $
+
+  31 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  satya's leaving, add cluster herd as primary.
 
   09 May 2006; Christian Andreetta <satya@gentoo.org>
   unionfs-1.1.4-r2.ebuild:
