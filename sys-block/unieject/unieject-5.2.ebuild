@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.2.ebuild,v 1.1 2006/06/05 05:50:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-5.2.ebuild,v 1.2 2006/07/31 23:28:03 flameeyes Exp $
 
 inherit libtool
 
 DESCRIPTION="Multiplatform command to eject and load CD-Rom drives"
-HOMEPAGE="http://dev.gentoo.org/~flameeyes/projects"
+HOMEPAGE="http://flameeyes.is-a-geek.org/projects#unieject"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
