@@ -1,0 +1,39 @@
+--- drivers/lirc_i2c/lirc_i2c.c	2006/03/04 23:16:03	1.36
++++ drivers/lirc_i2c/lirc_i2c.c	2006/06/26 23:21:34	1.38
+@@ -430,12 +430,19 @@
+ 		break;
+ 	case 0x18:
+ 	case 0x1a:
+-		if (adap->id == (I2C_ALGO_BIT | I2C_HW_B_BT848)) {
++#ifdef I2C_HW_B_CX2341X
++		if (adap->id == (I2C_ALGO_BIT | I2C_HW_B_BT848) ||
++		    adap->id == (I2C_ALGO_BIT | I2C_HW_B_CX2341X))
++#else
++		if (adap->id == (I2C_ALGO_BIT | I2C_HW_B_BT848))
++#endif
++		{
+ 			strcpy(ir->c.name,"Hauppauge IR");
+ 			ir->l.code_length = 13;
+ 			ir->l.add_to_buf=add_to_buf_haup;
+ 		}
+-		else {
++		else /* I2C_HW_B_CX2388x */
++		{
+ 			strcpy(ir->c.name,"Leadtek IR");
+ 			ir->l.code_length = 8;
+ 			ir->l.add_to_buf=add_to_buf_pvr2000;
+@@ -508,7 +515,13 @@
+ 		-1};
+ 	struct i2c_client c; char buf; int i,rc;
+ 
+-	if (adap->id == (I2C_ALGO_BIT | I2C_HW_B_BT848)) {
++#ifdef I2C_HW_B_CX2341X
++	if (adap->id == (I2C_ALGO_BIT | I2C_HW_B_BT848) ||
++	    adap->id == (I2C_ALGO_BIT | I2C_HW_B_CX2341X))
++#else
++	if (adap->id == (I2C_ALGO_BIT | I2C_HW_B_BT848))
++#endif
++	{
+ 		memset(&c,0,sizeof(c));
+ 		c.adapter = adap;
+ 		for (i = 0; -1 != probe[i]; i++) {
