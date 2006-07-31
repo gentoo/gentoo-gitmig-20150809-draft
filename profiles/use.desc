@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.303 2006/07/23 16:35:08 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.304 2006/07/31 12:16:44 blubb Exp $
 
 # Keep them sorted
 
@@ -97,6 +97,7 @@ ffmpeg - Enable ffmpeg support
 fftw - Use FFTW library for computing Fourier transforms
 filepro - Adds support for filePro databases
 firebird - Adds support for the Firebird relational database
+firefox - Build against Firefox instead of Mozilla
 flac - Adds support for the flac audio codec
 flash - Adds support for creating flash files using Ming
 flatfile - Adds dbm support for flat files
