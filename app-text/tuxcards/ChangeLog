@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tuxcards
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.14 2005/10/03 11:52:49 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.15 2006/07/31 23:17:21 ticho Exp $
+
+  31 Jul 2006; Andrej Kacian <ticho@gentoo.org> tuxcards-1.2.ebuild:
+  Do not try to include ccolorbar.h. Bug #132393, reported by gentoo at
+  streamonix.com, fix by Wolfgang Frisch <xororand at frexx.de>.
 
   03 Oct 2005; Andrej Kacian <ticho@gentoo.org> tuxcards-1.2.ebuild:
   Do not install generic COPYING and INSTALL files.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.13 2005/10/03 11:52:49 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.14 2006/07/31 23:17:21 ticho Exp $
 
 inherit kde-functions
 
@@ -26,6 +26,10 @@ src_compile() {
 		-e 's:/usr/doc/tuxcards:/usr/share/tuxcards:g' tuxcards.pro
 	sed -i -e 's:/usr/local/doc:/usr/share:g' src/CTuxCardsConfiguration.cpp
 	sed -i -e 's:/usr/local/bin/:/usr/bin/:g' \
+		src/gui/dialogs/optionsDialog/IOptionsDialog.ui
+
+	# bug #132393
+	sed -i -e 's/<includehint>ccolorbar.h<\/includehint>//' \
 		src/gui/dialogs/optionsDialog/IOptionsDialog.ui
 
 	# Use qt3's qmake (bug #96201)
