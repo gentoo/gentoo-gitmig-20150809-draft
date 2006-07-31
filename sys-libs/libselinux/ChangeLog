@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.47 2006/04/07 04:02:47 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.48 2006/07/31 01:23:47 pebenito Exp $
+
+  31 Jul 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.30.ebuild:
+  Mark stable, long overdue.
 
   07 Apr 2006; Chris PeBenito <pebenito@gentoo.org> libselinux-1.30.ebuild:
   Split python wrapper compile into a separate emake to ensure the main
