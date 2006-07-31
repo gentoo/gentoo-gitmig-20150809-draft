@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.5 2006/07/26 19:27:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.6 2006/07/31 09:45:03 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -147,6 +147,10 @@ src_install() {
 	elif use qt3; then
 		into /usr
 		dobin wpa_gui/wpa_gui
+	fi
+
+	if use qt3 || use qt4; then
+		make_desktop_entry wpa_gui "WPA_Supplicant Administration GUI"
 	fi
 
 	dodoc ChangeLog COPYING eap_testing.txt README todo.txt
