@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.2 2006/07/31 14:52:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.3 2006/07/31 16:40:14 grobian Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -38,11 +38,6 @@ src_unpack() {
 		gettext-tools/configure \
 		gettext-tools/examples/installpaths.in \
 		|| die "sed docdir"
-
-	if use ppc-macos ; then
-		glibtoolize
-		append-flags -bind_at_load
-	fi
 
 	# sanity check for Bug 105304
 	if [[ -z ${USERLAND} ]] ; then

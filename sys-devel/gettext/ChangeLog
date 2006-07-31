@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.113 2006/07/31 14:52:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.114 2006/07/31 16:40:14 grobian Exp $
+
+  31 Jul 2006; Fabian Groffen <grobian@gentoo.org> gettext-0.15.ebuild:
+  Remove OSX hack, as it's not needed anymore (bug #142232)
 
   31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> gettext-0.15.ebuild:
   Preserve libintl library version 7, or it will break Gentoo/FreeBSD pretty
