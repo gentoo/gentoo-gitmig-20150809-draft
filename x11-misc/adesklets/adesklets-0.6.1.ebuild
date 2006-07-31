@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.3 2006/07/27 11:40:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.4 2006/07/31 08:29:02 s4t4n Exp $
 
-inherit eutils
+inherit eutils perl-module
 
 DESCRIPTION="An interactive Imlib2 console for the X Window system"
 HOMEPAGE="http://adesklets.sf.net/"
@@ -71,6 +71,9 @@ src_install()
 		echo 'ADESKLETS_LOG="/tmp/adesklets_log"' > 70adesklets
 		doenvd 70adesklets
 	}
+
+	# Fix for bug #142169
+	use perl && fixlocalpod
 }
 
 pkg_postinst()
