@@ -1257,6 +1257,19 @@ java-pkg_filter-compiler() {
 }
 
 # ------------------------------------------------------------------------------
+# @ebuild-function java-pkg_force-compiler
+#
+# Used to force the use of particular compilers. Should be used in src_compile.
+# A common use of this would be to force ecj-3.1 to be used on amd64, to avoid
+# OutOfMemoryErrors that may come up.
+#
+# @param $@ - compilers to force
+# ------------------------------------------------------------------------------
+java-pkg_force-compiler() {
+	JAVA_PKG_FORCE_COMPILER="$@"
+}
+
+# ------------------------------------------------------------------------------
 # @ebuild-function use_doc
 #
 # Helper function for getting ant to build javadocs. If the user has USE=doc,
