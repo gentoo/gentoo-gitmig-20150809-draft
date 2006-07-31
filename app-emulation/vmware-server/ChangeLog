@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.1 2006/07/31 20:23:50 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.2 2006/07/31 21:24:30 ikelos Exp $
+
+  31 Jul 2006; Mike Auty <ikelos@gentoo.org>
+  vmware-server-1.0.0.28343.ebuild:
+  Alter the indentation and fix the modular X dependencies.
 
 *vmware-server-1.0.0.28343 (31 Jul 2006)
 
