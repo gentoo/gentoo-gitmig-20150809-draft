@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.14 2006/07/09 20:10:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.15 2006/07/31 23:37:00 flameeyes Exp $
+
+  31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/rsibreak-0.6.0-parallel.patch, -rsibreak-0.6.0.ebuild:
+  Drop old versions and related files.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> rsibreak-0.6.0.ebuild,
   rsibreak-0.7.0.ebuild:
