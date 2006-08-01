@@ -173,10 +173,10 @@ AUX bash-3.1-gentoo.patch 2005 RMD160 e742be7d88ec20bdf7fb7bca415abb8ab46acde2 S
 MD5 0ea8241cac27acdecd7bddfc5d89e806 files/bash-3.1-gentoo.patch 2005
 RMD160 e742be7d88ec20bdf7fb7bca415abb8ab46acde2 files/bash-3.1-gentoo.patch 2005
 SHA256 7cd63a3e66de5f885824e6c02c29f004e08eb5bd6b6c189bc8021c5893aeae3f files/bash-3.1-gentoo.patch 2005
-AUX bash-3.1-ulimit.patch 3375 RMD160 c954e2791cc1dbff06df258e7624eb91a83e16eb SHA1 4078d67ca11f69567842ddb40bddbf36847e8605 SHA256 dfa4445169b8603e91bd0f9fec5d04e4f2408c561b343dbf188fe02500cd5fc4
-MD5 122ea660f0f9f4839ff1a7b403e9121e files/bash-3.1-ulimit.patch 3375
-RMD160 c954e2791cc1dbff06df258e7624eb91a83e16eb files/bash-3.1-ulimit.patch 3375
-SHA256 dfa4445169b8603e91bd0f9fec5d04e4f2408c561b343dbf188fe02500cd5fc4 files/bash-3.1-ulimit.patch 3375
+AUX bash-3.1-ulimit.patch 3736 RMD160 c68da557d0797c6e6a1b41ba1a6451011ae00a44 SHA1 3e4411090a271ba70becbc34247e9b4c64ddcf76 SHA256 e27d41117dab8814e3812833d2038ca4f5d5fde8a0da2322eb3111a6a6245443
+MD5 a36e38d7b45d6b50583f257b75106b90 files/bash-3.1-ulimit.patch 3736
+RMD160 c68da557d0797c6e6a1b41ba1a6451011ae00a44 files/bash-3.1-ulimit.patch 3736
+SHA256 e27d41117dab8814e3812833d2038ca4f5d5fde8a0da2322eb3111a6a6245443 files/bash-3.1-ulimit.patch 3736
 AUX bash_logout 205 RMD160 fa6064b67bd02cf66dc490759442a0127770d420 SHA1 a6983665cc842bde96fbc8811be89cf8fda71a45 SHA256 15aaded954389c05d7de5d36c4887db61975ad52c87ad78baf1062ec8997289d
 MD5 229ccc2980a94877f2e87f957e9da7bf files/bash_logout 205
 RMD160 fa6064b67bd02cf66dc490759442a0127770d420 files/bash_logout 205
@@ -302,7 +302,7 @@ SHA256 04f2452aacb4b2e69a683d9ee5b2a9a04f3c9d0ef9b5bb0f28ec88b48db25bf6 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEvyVyamhnQswr0vIRAliWAJ9UkAfvgCaP2lYfTpkvdMoV/aLs2ACdHgIi
-8+9wsfwa8G7NuFItjAVGJeM=
-=qvVk
+iD8DBQFEztLcamhnQswr0vIRAnogAKCAREoDiVPcTFAN+mIrGW3w3AHzXQCghtQZ
+8+gD9dpWR+4fsfrytyXElf0=
+=33yJ
 -----END PGP SIGNATURE-----
