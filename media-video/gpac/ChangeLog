@@ -1,6 +1,15 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.22 2006/08/01 14:18:01 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.23 2006/08/01 17:12:56 chutzpah Exp $
+
+*gpac-0.4.2 (01 Aug 2006)
+
+  01 Aug 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/gpac-0.4.2-DESTDIR.patch, +files/gpac-0.4.2-configure-ogg.patch,
+  +files/gpac-0.4.2-nostrip.patch, +files/gpac-0.4.2-soname.patch,
+  +files/gpac-0.4.2-static-defs.patch, +gpac-0.4.2.ebuild:
+  Version bump. Add patch to stop the makefile from stripping binaries (bug
+  #137639). Add patch so library has a SONAME field.
 
   01 Aug 2006; Patrick McLean <chutzpah@gentoo.org>
   gpac-0.4.1_pre20060122-r1.ebuild:
