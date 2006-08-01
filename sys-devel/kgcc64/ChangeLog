@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.2 2006/07/17 06:03:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.3 2006/08/01 05:44:10 kumba Exp $
+
+  02 Aug 2006; Joshua Kinard <kumba@gentoo.org> kgcc64-3.4.6.ebuild:
+  The beginning of the end for sys-devel/mips64 draws near. Mark kgcc64 stable
+  on mips, and update it to use v4 of the r10k cache barriers patchset. It'll
+  replace sys-devel/gcc-mips64 soon.
 
 *kgcc64-4.1.1 (17 Jul 2006)
 *kgcc64-3.4.6 (17 Jul 2006)
