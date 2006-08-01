@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-2.0.ebuild,v 1.1 2006/07/30 03:32:24 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-2.0.ebuild,v 1.2 2006/08/01 16:28:27 metalgod Exp $
 
 inherit mono gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.o-hand.com/~iain/last-exit/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=gnome-base/gconf-2.0
