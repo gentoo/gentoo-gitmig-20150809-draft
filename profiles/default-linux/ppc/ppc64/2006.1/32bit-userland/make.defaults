@@ -28,6 +28,5 @@ CHOST_ppc="powerpc-unknown-linux-gnu"
 CDEFINE_ppc="!__powerpc64__"
 LIBDIR_ppc="lib"
 
-CFLAGS_ppc64="-m64"
 LDFLAGS_ppc64="-m elf64ppc"
 CHOST_ppc64="powerpc64-unknown-linux-gnu"
