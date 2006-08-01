@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.39 2006/07/27 17:16:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.40 2006/08/01 21:37:10 ticho Exp $
+
+  01 Aug 2006; Andrej Kacian <ticho@gentoo.org> libffi-3.4.3.ebuild:
+  Added ~x86, bug #105020.
 
   27 Jul 2006; Fabian Groffen <grobian@gentoo.org> libffi-3.3.5.ebuild,
   libffi-3.4.1.ebuild, libffi-3.4.1-r1.ebuild, libffi-3.4.3.ebuild:
