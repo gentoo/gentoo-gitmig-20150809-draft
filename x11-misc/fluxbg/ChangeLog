@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxbg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.9 2006/03/16 13:12:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxbg/ChangeLog,v 1.10 2006/08/01 00:21:04 mcummings Exp $
+
+  01 Aug 2006; Michael Cummings <mcummings@gentoo.org> fluxbg-0.7.ebuild:
+  Keywording ~amd64
 
   16 Mar 2006; Caleb Tennis <caleb@gentoo.org> fluxbg-0.7.ebuild:
   Fix X dep to modular X
