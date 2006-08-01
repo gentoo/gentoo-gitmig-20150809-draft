@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.1 2006/05/27 13:47:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.2 2006/08/01 20:30:28 jokey Exp $
+
+*signing-party-0.4.7 (01 Aug 2006)
+
+  01 Aug 2006; Markus Ullmann <jokey@gentoo.org>
+  +signing-party-0.4.7.ebuild:
+  Version bump, thanks to dberkholz in bug #142208 for reporting
 
 *signing-party-0.4.6 (27 May 2006)
 
