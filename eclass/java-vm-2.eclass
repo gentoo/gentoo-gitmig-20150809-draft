@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.6 2006/08/01 12:23:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.7 2006/08/01 13:43:04 cardoe Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -13,7 +13,7 @@ DEPEND="
 RDEPEND="
 	=dev-java/java-config-2.0*
 	=dev-java/java-config-1.3*
-	>=sys-apps/bash-3"
+	>=app-shells/bash-3"
 
 export WANT_JAVA_CONFIG=2
 
