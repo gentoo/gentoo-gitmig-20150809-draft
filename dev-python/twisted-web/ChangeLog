@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.23 2006/07/16 10:35:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.24 2006/08/01 15:15:30 blubb Exp $
+
+  01 Aug 2006; Simon Stelling <blubb@gentoo.org>
+  twisted-web-0.5.0-r1.ebuild:
+  stable on amd64
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   twisted-web-0.6.0.ebuild:
