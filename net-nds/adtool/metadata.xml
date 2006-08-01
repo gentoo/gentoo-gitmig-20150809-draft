@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>satya@gentoo.org</email>
-	<name>Christian Andreetta</name>
+	<email>dertobi123@gentoo.org</email>
+	<name>Tobias Scherbaum</name>
 </maintainer>
 <longdescription>
 adtool is a unix command line utility for Active Directory administration, through ldap repository management.
