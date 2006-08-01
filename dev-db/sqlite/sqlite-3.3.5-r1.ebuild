@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5-r1.ebuild,v 1.9 2006/07/28 19:28:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.3.5-r1.ebuild,v 1.10 2006/08/01 18:34:13 tove Exp $
 
 inherit eutils alternatives
 
@@ -77,7 +77,7 @@ src_compile() {
 
 src_test() {
 	if use tcl ; then
-		if has usepriv ${FEATURES} ; then
+		if has userpriv ${FEATURES} ; then
 			cd ${S}
 			if use debug; then
 				emake fulltest || die "some test failed"
