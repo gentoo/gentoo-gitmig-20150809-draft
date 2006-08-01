@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/rhapsody
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.5 2005/08/27 02:19:42 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rhapsody/ChangeLog,v 1.6 2006/08/01 20:42:18 swegener Exp $
+
+*rhapsody-0.28b (01 Aug 2006)
+
+  01 Aug 2006; Sven Wegener <swegener@gentoo.org> +rhapsody-0.28b.ebuild:
+  Version bump.
 
 *rhapsody-0.26b (27 Aug 2005)
 
