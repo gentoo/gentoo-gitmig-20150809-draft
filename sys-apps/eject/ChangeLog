@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.54 2006/04/27 22:34:17 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.55 2006/08/01 10:58:41 uberlord Exp $
+
+*eject-2.1.5 (01 Aug 2006)
+
+  01 Aug 2006; Roy Marples <uberlord@gentoo.org> +eject-2.1.5.ebuild:
+  Version bump thanks to Flameeyes.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-eject-2.0.13-r1, files/digest-eject-2.0.13-r2, Manifest:
