@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.65 2006/04/18 16:34:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.66 2006/08/01 05:20:25 vapier Exp $
+
+*grep-2.5.1a-r1 (01 Aug 2006)
+
+  01 Aug 2006; Mike Frysinger <vapier@gentoo.org> +grep-2.5.1a-r1.ebuild:
+  Add back in pcre #141609.
 
   18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/grep-2.5.1a-nls.patch, grep-2.5.1a.ebuild:
