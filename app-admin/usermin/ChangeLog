@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.92 2006/07/29 09:25:40 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.93 2006/08/01 12:25:17 yoswink Exp $
+
+  01 Aug 2006; Jose Luis Rivero <yoswink@gentoo.org> usermin-1.220.ebuild:
+  Stable on alpha wrt security bug #138552.
 
   29 Jul 2006; Rene Nussbaumer <killerfox@gentoo.org> usermin-1.220.ebuild:
   Stable on hppa. See bug #138552.
