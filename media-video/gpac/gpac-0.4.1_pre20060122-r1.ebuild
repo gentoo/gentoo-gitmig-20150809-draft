@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122-r1.ebuild,v 1.1 2006/07/13 20:43:42 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.1_pre20060122-r1.ebuild,v 1.2 2006/08/01 14:18:01 chutzpah Exp $
 
 inherit wxwidgets flag-o-matic multilib
 
@@ -11,13 +11,14 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="aac amr debug faad ffmpeg ft jpeg js mad ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml xvid"
+IUSE="aac amr debug ffmpeg ft jpeg javascript mad ogg opengl oss png sdl ssl theora truetype vorbis wxwindows xml xvid"
 
 S="${WORKDIR}/${PN}"
 
 RDEPEND="aac? ( media-libs/faad2 )
 	ffmpeg? ( media-video/ffmpeg )
 	jpeg? ( media-libs/jpeg )
+	javascript? ( dev-lang/spidermonkey )
 	mad? ( media-libs/libmad )
 	opengl? ( virtual/opengl )
 	ogg? ( media-libs/libogg )
@@ -38,11 +39,11 @@ RDEPEND="aac? ( media-libs/faad2 )
 DEPEND="${RDEPEND}"
 
 my_use() {
-	local flag="$1"
+	local flag="$1" pflag="${2:-$1}"
 	if use ${flag}; then
-		echo "--use-${flag}=system"
+		echo "--use-${pflag}=system"
 	else
-		echo "--use-${flag}=no"
+		echo "--use-${pflag}=no"
 	fi
 }
 
@@ -105,10 +106,10 @@ src_compile() {
 		$(use_enable oss oss-audio) \
 		$(use_enable ssl) \
 		$(my_use ffmpeg) \
-		$(my_use faad) \
+		$(my_use aac faad) \
 		$(my_use jpeg) \
 		$(my_use mad) \
-		$(my_use js) \
+		$(my_use javascript js) \
 		$(my_use png) \
 		$(my_use ft) \
 		$(my_use xvid) \
