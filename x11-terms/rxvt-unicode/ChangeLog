@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.76 2006/07/20 18:59:25 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.77 2006/08/01 14:30:16 exg Exp $
+
+*rxvt-unicode-7.8-r1 (31 Jul 2006)
+
+  31 Jul 2006; Emanuele Giaquinta <exg@gentoo.org>
+  +rxvt-unicode-7.8-r1.ebuild:
+  Drop scrolling-one-line.patch as it adds bindings that override default ones,
+  bug #141908.
 
 *rxvt-unicode-7.8 (20 Jul 2006)
 
