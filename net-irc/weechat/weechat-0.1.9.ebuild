@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.1.9.ebuild,v 1.1 2006/07/01 14:01:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.1.9.ebuild,v 1.2 2006/08/01 20:34:14 swegener Exp $
 
 DESCRIPTION="Portable and multi-interface IRC client."
 HOMEPAGE="http://weechat.flashtux.org/"
@@ -19,8 +19,11 @@ DEPEND="sys-libs/ncurses
 	ssl? ( net-libs/gnutls )"
 
 src_compile() {
+	# The qt and gtk frontends are not usable, so they're disabled
 	econf \
-		--enable-curses \
+		--enable-ncurses \
+		--disable-qt \
+		--disable-gtk \
 		$(use_enable perl) \
 		$(use_enable python) \
 		$(use_enable ruby) \
