@@ -35,13 +35,13 @@ JAVA_ANT_BSFIX=${JAVA_PKG_BSFIX:="on"}
 JAVA_ANT_BSFIX_ALL=${JAVA_PKG_BSFIX_ALL:="yes"}
 
 # ------------------------------------------------------------------------------
-# @global JAVA_ANT_BSFIX_NAME
+# @global JAVA_PKG_BSFIX_NAME
 #
 # Filename of build files to fix/search for
 #
 # default: build.xml
 # ------------------------------------------------------------------------------
-JAVA_ANT_BSFIX_NAME=${JAVA_PKG_BSFIX_NAME:="build.xml"}
+JAVA_PKG_BSFIX_NAME=${JAVA_PKG_BSFIX_NAME:="build.xml"}
 
 # ------------------------------------------------------------------------------
 # @global JAVA_ANT_BSFIX_TARGETS_TAGS
