@@ -1,6 +1,10 @@
 # ChangeLog for www-client/ochusha
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.14 2006/06/17 12:30:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.15 2006/08/01 08:55:16 usata Exp $
+
+  01 Aug 2006; Mamoru KOMACHI <usata@gentoo.org>
+  +files/ochusha-0.5.8.2-glib-2.10.diff, ochusha-0.5.8.2-r1.ebuild:
+  Fixed compile error against newer glib. Added ~amd64 keyword.
 
 *ochusha-0.5.8.2-r1 (17 Jun 2006)
 
