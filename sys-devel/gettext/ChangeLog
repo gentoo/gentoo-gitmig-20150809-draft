@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.114 2006/07/31 16:40:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.115 2006/08/01 19:26:17 flameeyes Exp $
+
+  01 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> gettext-0.15.ebuild:
+  Fix for Gentoo/FreeBSD: copy the old library even when it's in /lib rather
+  than /usr/lib, and move the new one in /lib.
 
   31 Jul 2006; Fabian Groffen <grobian@gentoo.org> gettext-0.15.ebuild:
   Remove OSX hack, as it's not needed anymore (bug #142232)
