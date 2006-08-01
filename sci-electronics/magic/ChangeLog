@@ -1,6 +1,14 @@
 # ChangeLog for sci-electronics/magic
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.17 2006/08/01 14:45:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.18 2006/08/01 15:07:25 calchan Exp $
+
+  01 Aug 2006; Denis Dupeyron <calchan@gentoo.org> -files/defs.mak-7.1-r2,
+  -files/defs.mak-7.1-r3, -files/magic-7.1-fhs.patch,
+  -files/magic-7.1-gcc3.2.patch, -files/magic-7.1-misc.patch,
+  -files/magic-7.1-ppc-endian.patch, -files/magic-7.1-remove-decl.patch,
+  -files/10magic, -files/README.Gentoo, -magic-7.1-r5.ebuild,
+  -magic-7.4.14.ebuild, -magic-7.4.16.ebuild:
+  Cleaned up stale files following complete stabilization of magic-7.4.19.
 
   01 Aug 2006; Simon Stelling <blubb@gentoo.org> magic-7.4.19.ebuild:
   stable on amd64
