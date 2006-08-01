@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.14 2006/07/27 00:18:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.15 2006/08/01 00:32:27 markusle Exp $
+
+  31 Jul 2006; Markus Dittrich <markusle@gentoo.org>
+  files/3.7.11-allow-any-gcc-version.patch:
+  Synced patch with fixed version from blas-atlas CVS tree to enable
+  compilation on ppc using gcc-4 (see blas-atlas Changelog entry 
+  from 05/07/2006). Thanks to Matti Bickel <kabel@cat0.de> for
+  pointing this out. This fixes bug #142294. 
 
   26 Jul 2006; Markus Dittrich <markusle@gentoo.org>
   lapack-atlas-3.7.11.ebuild, lapack-atlas-3.7.11-r1.ebuild:
