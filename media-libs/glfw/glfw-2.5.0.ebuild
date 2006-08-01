@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.5.0.ebuild,v 1.3 2006/04/12 19:51:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-2.5.0.ebuild,v 1.4 2006/08/01 20:11:29 chutzpah Exp $
 
 DESCRIPTION="The Portable OpenGL FrameWork"
 HOMEPAGE="http://glfw.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="examples"
 
 RDEPEND="|| (
