@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.0.2.ebuild,v 1.1 2006/06/28 06:56:23 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-1.0.2.ebuild,v 1.2 2006/08/01 17:36:18 nelchael Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://codespeak.net/lxml/${P}.tgz"
 
 LICENSE="BSD GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libxml2-2.6.16
