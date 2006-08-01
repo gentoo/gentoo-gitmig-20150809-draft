@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.4 2006/01/22 14:43:14 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.5 2006/08/01 23:24:39 vanquirius Exp $
 
 inherit eutils
 
@@ -44,7 +44,9 @@ findtclver() {
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	EPATCH_OPTS="-d ${S} -p0" epatch ${DISTDIR}/${P}.patch
+	EPATCH_OPTS="-d ${S} -p0" epatch "${DISTDIR}"/${P}.patch
+	# bug 137053
+	epatch "${FILESDIR}"/${PN}-1.11-gcc4.patch
 }
 
 src_compile() {
