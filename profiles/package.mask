@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5691 2006/08/01 20:20:24 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5692 2006/08/01 23:25:50 rl03 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -655,10 +655,6 @@ www-client/skipstone
 # Mike Frysinger <vapier@gentoo.org> (27 Jun 2006)
 # Package is obsolete, use the bundled wine setup code #120575
 app-emulation/winesetuptk
-
-# Renat Lumpau <rl03@gentoo.org> (26 Jun 2006)
-# pending removal on 26 Jul 2006; see bug #74951.
-www-apps/phpmp2
 
 # Diego Pettenò <flameeyes@gentoo.org> (25 Jun 2006)
 # confcache really needs more work before prime-time
