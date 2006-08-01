@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2062 2006/07/31 22:51:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2063 2006/08/01 12:35:14 uberlord Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1377,6 +1377,11 @@ net-wireless/madwifi-ng:amrr - Use Adaptive Multi Rate Retry bit rate control al
 net-wireless/madwifi-ng:onoe - Use Atsushi Onoe's bit rate control algorithm
 net-wireless/madwifi-old:amrr - Use Adaptive Multi Rate Retry bit rate control algorithm
 net-wireless/madwifi-old:onoe - Use Atsushi Onoe's bit rate control algorithm
+net-wireless/rt2x00:asm - Build ASM files
+net-wireless/rt2x00:rt2400 - Build rt2400pci driver
+net-wireless/rt2x00:rt2500 - Build rt2500pci and rt2500usb driver
+net-wireless/rt2x00:rt61 - Build rt61pci driver
+net-wireless/rt2x00:rt73 - Build rt73usb driver
 net-wireless/wepattack:john - Build with johntheripper support
 net-wireless/wifiscanner:wireshark - use wireshark's wtap library
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
