@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/jinit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.10 2005/04/19 10:14:10 beu Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.11 2006/08/01 04:37:38 tsunam Exp $
+
+  01 Aug 2006; Joshua Jackson <tsunam@gentoo.org> jinit-0.1.11.ebuild:
+  Moving to ~x86 in prep for it being removed from the tree
 
   19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
