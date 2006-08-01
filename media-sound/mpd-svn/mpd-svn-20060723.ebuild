@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060723.ebuild,v 1.2 2006/07/31 22:52:13 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060723.ebuild,v 1.3 2006/08/01 00:40:32 ticho Exp $
 
 inherit eutils
 
@@ -11,20 +11,19 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="aac alsa ao audiofile flac icecast ipv6 mad mikmod mp3 musepack oss
+IUSE="aac alsa ao audiofile flac icecast ipv6 mp3 mikmod mp3 musepack oss
 pulseaudio unicode vorbis"
 
 DEPEND="dev-util/gperf
 	!media-sound/mpd
 	sys-libs/zlib
-	>=dev-libs/glib-2.0.0
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	alsa? ( media-sound/alsa-utils )
 	ao? ( >=media-libs/libao-0.8.4 )
 	audiofile? ( media-libs/audiofile )
 	flac? ( >=media-libs/flac-1.1.0 )
 	icecast? ( media-libs/libshout )
-	mad? ( media-libs/libmad
+	mp3? ( media-libs/libmad
 	       media-libs/libid3tag )
 	mikmod? ( media-libs/libmikmod )
 	musepack? ( media-libs/libmpcdec )
@@ -64,6 +63,8 @@ src_compile() {
 		$(use_enable flac oggflac) \
 		$(use_enable icecast shout) \
 		$(use_enable ipv6) \
+		$(use_enable mp3) \
+		$(use_enable mp3 id3) \
 		$(use_enable mikmod libmikmodtest) \
 		$(use_enable mikmod mod) \
 		$(use_enable musepack mpc) \
