@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.17 2006/07/25 19:30:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.18 2006/08/01 22:26:11 mr_bones_ Exp $
+
+  01 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> tmw-0.0.20.ebuild:
+  needs guichan-0.4
 
 *tmw-0.0.20 (25 Jul 2006)
 

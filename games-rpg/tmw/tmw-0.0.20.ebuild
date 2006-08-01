@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.20.ebuild,v 1.1 2006/07/25 19:30:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.20.ebuild,v 1.2 2006/08/01 22:26:11 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-games/physfs-1.0.0
 	media-libs/sdl-image
 	media-libs/sdl-net
 	net-misc/curl
-	>=dev-games/guichan-0.4.0"
+	~dev-games/guichan-0.4.0"
 
 pkg_setup() {
 	games_pkg_setup
