@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.16.ebuild,v 1.4 2006/07/31 18:18:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.16.ebuild,v 1.5 2006/08/01 13:34:09 ticho Exp $
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="dbus firefox gtkhtml seamonkey"
 
 RDEPEND=">=x11-libs/gtk+-2.4.0
