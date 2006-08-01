@@ -1,3 +1,7 @@
+AUX java-config-wrapper-0.10-check.patch 1438 RMD160 62fee54cc7db434d811cbc75f6732375a5e2d5bc SHA1 f264e1c53f2b4f4a148b755f07048821b76d54c1 SHA256 9817dbc77210b47c11e4c2ccc77ad2b7f95c08075f37daec2ebf6e38a96928e8
+MD5 87bee5c42386dc78f74b14072e5bd302 files/java-config-wrapper-0.10-check.patch 1438
+RMD160 62fee54cc7db434d811cbc75f6732375a5e2d5bc files/java-config-wrapper-0.10-check.patch 1438
+SHA256 9817dbc77210b47c11e4c2ccc77ad2b7f95c08075f37daec2ebf6e38a96928e8 files/java-config-wrapper-0.10-check.patch 1438
 AUX java-config-wrapper-0.10-fixer.patch 2351 RMD160 95bd486ee7c1942f79ffaeab2e7f1b59c38322dd SHA1 20fb767be1edbad26e379299f8d39356a9482361 SHA256 3d44ca9f1577ef6537dea800adec494fb5379cdb87a2c7b9d1455952ec23f90a
 MD5 eceb5ac61c1df4b132e7b88c8a4822fc files/java-config-wrapper-0.10-fixer.patch 2351
 RMD160 95bd486ee7c1942f79ffaeab2e7f1b59c38322dd files/java-config-wrapper-0.10-fixer.patch 2351
@@ -31,10 +35,14 @@ EBUILD java-config-wrapper-0.10-r2.ebuild 832 RMD160 3aefb2404d3d584e3f82214ebf3
 MD5 19270f7a2dda1cf959867b6c58966e8a java-config-wrapper-0.10-r2.ebuild 832
 RMD160 3aefb2404d3d584e3f82214ebf30f14bb5bc23b4 java-config-wrapper-0.10-r2.ebuild 832
 SHA256 2503a1b0e5321bf2e35aa2983c80b346288c73254ad7ac6fb24f852352db4281 java-config-wrapper-0.10-r2.ebuild 832
-MISC ChangeLog 3021 RMD160 b4dbe66e333cbc5554b324884d0bfe67181f4e60 SHA1 7bb353f7a2958306615d0a18ed80190766c2be02 SHA256 eef7828507282279fde12268e6b24834877c3169ff04195cf64f0fefffbf06ea
-MD5 3f438d0b7f29b49a62459cf1c9e32be8 ChangeLog 3021
-RMD160 b4dbe66e333cbc5554b324884d0bfe67181f4e60 ChangeLog 3021
-SHA256 eef7828507282279fde12268e6b24834877c3169ff04195cf64f0fefffbf06ea ChangeLog 3021
+EBUILD java-config-wrapper-0.10-r3.ebuild 869 RMD160 742794b6e66e2d8c42472b6eed3b5c5aba021801 SHA1 4adddc0e619a99fb6f984c8674f2c6805c905caa SHA256 444035ac848203f05b4d0cf502f576355c04c652541a7ea7502b733113949fd1
+MD5 8831a40af0817cf6a99ba8aea181b534 java-config-wrapper-0.10-r3.ebuild 869
+RMD160 742794b6e66e2d8c42472b6eed3b5c5aba021801 java-config-wrapper-0.10-r3.ebuild 869
+SHA256 444035ac848203f05b4d0cf502f576355c04c652541a7ea7502b733113949fd1 java-config-wrapper-0.10-r3.ebuild 869
+MISC ChangeLog 3275 RMD160 c1cf62b428f8c7ea29e205d6f98cb830cbffc4a4 SHA1 32fe6287be46955edd8f01858028add68702180a SHA256 8f53fcd9bd2fca0e4febccdb5e7751ee638c69651fcd7f73e6795404b9e30153
+MD5 baf0fead1684da4e2c9eb265e577b668 ChangeLog 3275
+RMD160 c1cf62b428f8c7ea29e205d6f98cb830cbffc4a4 ChangeLog 3275
+SHA256 8f53fcd9bd2fca0e4febccdb5e7751ee638c69651fcd7f73e6795404b9e30153 ChangeLog 3275
 MISC metadata.xml 158 RMD160 493079b5fb71d66863beea1b023901c90ba81be5 SHA1 77cd509a8b3c377b9a24480b48a5d5481b7874f1 SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 RMD160 493079b5fb71d66863beea1b023901c90ba81be5 metadata.xml 158
@@ -42,3 +50,6 @@ SHA256 ea882ceccfd160b16cf7e79de423bdcc12b3fa000f124491a6df36f5783894fb metadata
 MD5 9c3a6c4135a8bda4f8bee326cac00ba3 files/digest-java-config-wrapper-0.10-r2 271
 RMD160 3ffb177712eec2358b03768ab8a8f3ad1ae11e6c files/digest-java-config-wrapper-0.10-r2 271
 SHA256 0b7b345df70a8eadbab3e0e264020f24554ea0c98aee219b09153849d7c9ed13 files/digest-java-config-wrapper-0.10-r2 271
+MD5 9c3a6c4135a8bda4f8bee326cac00ba3 files/digest-java-config-wrapper-0.10-r3 271
+RMD160 3ffb177712eec2358b03768ab8a8f3ad1ae11e6c files/digest-java-config-wrapper-0.10-r3 271
+SHA256 0b7b345df70a8eadbab3e0e264020f24554ea0c98aee219b09153849d7c9ed13 files/digest-java-config-wrapper-0.10-r3 271
