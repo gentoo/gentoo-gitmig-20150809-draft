@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.1 2006/08/01 09:46:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.2 2006/08/01 19:09:16 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -27,6 +27,14 @@ S="${WORKDIR}/${P/-softmmu/}"
 set_target_list() {
 	TARGET_LIST="i386-softmmu ppc-softmmu sparc-softmmu x86_64-softmmu arm-softmmu mips-softmmu"
 	export TARGET_LIST
+}
+
+pkg_setup() {
+	if [ "$(gcc-major-version)" == "4" ]; then
+	eerror "qemu requires gcc-3 in order to build and work correctly"
+	eerror "please compile it with gcc-3"
+	die "gcc 4 cannot build qemu"
+	fi
 }
 
 #RUNTIME_PATH="/emul/gnemul/"
