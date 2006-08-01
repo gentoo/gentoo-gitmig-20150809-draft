@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.6 2006/07/28 11:59:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.7 2006/08/01 16:44:53 lucass Exp $
+
+*django-0.95 (01 Aug 2006)
+
+  01 Aug 2006; Lukasz Strzygowski <lucass@gentoo.org> +django-0.95.ebuild:
+  Version bump, bug #142375.
 
   28 Jul 2006; Alastair Tse <liquidx@gentoo.org> django-0.91.ebuild:
   Preparing psycopg deps for slotted psycopg-2.0.2 (#125719)
