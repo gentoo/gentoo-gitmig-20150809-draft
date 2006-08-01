@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r2.ebuild,v 1.9 2006/08/01 00:53:12 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.4-r2.ebuild,v 1.10 2006/08/01 01:01:38 chutzpah Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_P=${PN}.${PV}
 S=${WORKDIR}/${MY_P}
@@ -45,7 +45,7 @@ src_unpack() {
 
 src_compile() {
 	xmkmf || die
-	make BINDIR=/usr/bin XFIGLIBDIR=/usr/lib/xfig || die
+	make BINDIR=/usr/bin XFIGLIBDIR=/usr/$(get_libdir)/xfig || die
 }
 
 src_install() {
@@ -53,7 +53,7 @@ src_install() {
 	make \
 		DESTDIR=${D} \
 		BINDIR=/usr/bin \
-		XFIGLIBDIR=/usr/lib/xfig \
+		XFIGLIBDIR=/usr/$(get_libdir)/xfig \
 		MANDIR=/usr/share/man/man1 \
 		MANSUFFIX=1 \
 		install install.all || die
