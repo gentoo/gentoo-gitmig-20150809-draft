@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/dagrab
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dagrab/ChangeLog,v 1.1 2006/05/23 17:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dagrab/ChangeLog,v 1.2 2006/08/01 15:04:42 blubb Exp $
+
+  01 Aug 2006; Simon Stelling <blubb@gentoo.org> dagrab-0.513.ebuild:
+  stable on amd64
 
 *dagrab-0.513 (23 May 2006)
 
