@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.109 2006/07/16 05:49:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.110 2006/08/01 00:49:16 vapier Exp $
 #
 # Maintainer: base-system@gentoo.org
 
@@ -108,7 +108,7 @@ setup-allowed-flags() {
 		-mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow \
 		-mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 \
 		-msoft-float -mno-soft-float -mhard-float -mno-hard-float -mfpu \
-		-mieee -mieee-with-inexact \
+		-mieee -mieee-with-inexact -mschedule \
 		-mtls-direct-seg-refs -mno-tls-direct-seg-refs \
 		-mflat -mno-flat -mno-faster-structs -mfaster-structs \
 		-m32 -m64 -mabi -mlittle-endian -mbig-endian -EL -EB -fPIC \
