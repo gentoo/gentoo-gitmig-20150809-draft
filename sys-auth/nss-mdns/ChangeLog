@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/nss-mdns
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.10 2006/07/29 22:42:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-mdns/ChangeLog,v 1.11 2006/08/01 14:52:20 blubb Exp $
+
+  01 Aug 2006; Simon Stelling <blubb@gentoo.org> nss-mdns-0.8.ebuild:
+  stable on amd64
 
   29 Jul 2006; Alastair Tse <liquidx@gentoo.org> nss-mdns-0.8.ebuild:
   stable bump x86 (#141895)
