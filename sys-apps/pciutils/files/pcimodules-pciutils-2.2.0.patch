@@ -117,7 +117,7 @@
 +static unsigned long desired_class;
 +static unsigned long desired_classmask; /* Default is 0: accept all classes.*/
 +
-+void
++static void
 +read_pcimap(void)
 +{
 +	struct utsname utsname;
