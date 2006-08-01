@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.1.ebuild,v 1.9 2006/07/13 04:59:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.1.ebuild,v 1.10 2006/08/01 15:45:11 blubb Exp $
 
 inherit fortran eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://my.unidata.ucar.edu/content/software/netcdf/index.html"
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE="fortran"
-KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 ~sparc x86"
 
 S="${WORKDIR}/${P}/src"
 
