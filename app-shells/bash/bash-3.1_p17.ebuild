@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.2 2006/05/06 00:58:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.3 2006/08/01 19:59:06 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -108,7 +108,7 @@ src_compile() {
 		--disable-profiling \
 		--without-gnu-malloc \
 		${myconf} || die
-	emake -j1 || die "make failed"  # see bug 102426
+	emake -j1 || die "make failed"	# see bug 102426
 }
 
 src_install() {
@@ -126,6 +126,10 @@ src_install() {
 		newins "${FILESDIR}"/dot-${f} .${f}
 	done
 
+	if use userland_GNU; then
+		sed -i -e 's:^#GNU#::' "${D}/etc/skel/.bashrc"
+	fi
+
 	if use build ; then
 		rm -rf "${D}"/usr
 	else
@@ -141,7 +145,7 @@ pkg_preinst() {
 		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
 	fi
 
-	# our bash_logout is just a place holder so dont 
+	# our bash_logout is just a place holder so dont
 	# force users to go through etc-update all the time
 	if [[ -e ${ROOT}/etc/bash/bash_logout ]] ; then
 		rm -f "${D}"/etc/bash/bash_logout

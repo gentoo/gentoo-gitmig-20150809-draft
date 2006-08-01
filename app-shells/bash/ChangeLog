@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.106 2006/07/20 06:40:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.107 2006/08/01 19:59:06 flameeyes Exp $
+
+  01 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> files/dot-bashrc,
+  bash-3.1_p17.ebuild:
+  Don't make the ls alias when not using GNU userland, or it will break;
+  export CLICOLOR for Gentoo/FreeBSD compatibility.
 
   20 Jul 2006; Mike Frysinger <vapier@gentoo.org> files/bashrc:
   Enable histappend option by default #139609 by Trenton D. Adams and add
