@@ -1,9 +1,0 @@
-Fix aclocal warning:
-/usr/share/aclocal/ksba.m4:17: warning: underquoted definition of AM_PATH_KSBA
---- libksba-0.9.8/src/ksba.m4
-+++ libksba-0.9.8/src/ksba.m4
-@@ -16,3 +16,3 @@
- dnl
--AC_DEFUN(AM_PATH_KSBA,
-+AC_DEFUN([AM_PATH_KSBA],
- [ AC_ARG_WITH(ksba-prefix,
