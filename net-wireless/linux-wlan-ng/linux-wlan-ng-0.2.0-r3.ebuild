@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.12 2005/12/19 11:01:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.13 2006/08/01 19:54:47 ticho Exp $
 
 inherit pcmcia
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/openssl
 SLOT="0"
 # includes dual licensed files but also stuff only under MPL-1.1
 LICENSE="|| ( GPL-2 MPL-1.1 ) MPL-1.1"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 pkg_setup() {
 	check_KV
