@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.20 2006/07/24 12:06:39 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.21 2006/08/01 14:04:25 blubb Exp $
+
+  01 Aug 2006; Simon Stelling <blubb@gentoo.org> unclutter-8-r1.ebuild:
+  stable on amd64
 
   24 Jul 2006; Jose Luis Rivero <yoswink@gentoo.org> unclutter-8-r1.ebuild:
   Stable on alpha wrt bug #140654

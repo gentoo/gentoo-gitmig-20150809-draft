@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0-r3.ebuild,v 1.4 2006/07/24 10:52:58 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sux/sux-1.0-r3.ebuild,v 1.5 2006/08/01 14:01:49 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://fgouget.free.fr/sux/sux"
 LICENSE="X11"
 SLOT="0"
 
-KEYWORDS="alpha ~amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE=""
 S=${WORKDIR}
 
