@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.145 2006/08/01 19:50:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.146 2006/08/01 20:04:15 wolf31o2 Exp $
+
+*genkernel-3.4.0-r1 (01 Aug 2006)
+
+  01 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/genkernel-3.4.0-splash.patch, -genkernel-3.4.0.ebuild,
+  +genkernel-3.4.0-r1.ebuild:
+  revision bump to include a patch for the path to splash_geninitramfs.
+  Closing bug #142412.
 
   01 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -genkernel-3.3.11.ebuild, -genkernel-3.3.11a.ebuild,

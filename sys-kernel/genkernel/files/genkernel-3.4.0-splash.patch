@@ -1,0 +1,12 @@
+diff -urN genkernel-3.4.0.orig/gen_initramfs.sh genkernel-3.4.0/gen_initramfs.sh
+--- genkernel-3.4.0.orig/gen_initramfs.sh	2006-07-31 12:19:17.000000000 -0400
++++ genkernel-3.4.0/gen_initramfs.sh	2006-08-01 15:57:51.000000000 -0400
+@@ -288,7 +288,7 @@
+ create_gensplash(){	
+ 	if [ "${GENSPLASH}" -eq '1' ]
+ 	then
+-		if [ -x /sbin/splash_geninitramfs ]
++		if [ -x /usr/bin/splash_geninitramfs -o -x /sbin/splash_geninitramfs ]
+ 		then
+ 			[ -z "${GENSPLASH_THEME}" ] && [ -e /etc/conf.d/splash ] && source /etc/conf.d/splash
+ 			[ -z "${GENSPLASH_THEME}" ] && GENSPLASH_THEME=default
