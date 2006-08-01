@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5-r2.ebuild,v 1.7 2005/05/06 09:48:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5-r2.ebuild,v 1.8 2006/08/01 00:14:18 chtekk Exp $
 
 MY_PGSQL="postgresql-7.3.6"
 DESCRIPTION="adds support for geographic objects to PostgreSQL"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="tcltk python perl java ssl nls libg++"
 
-DEPEND="~dev-db/postgresql-7.3.6
+DEPEND="=dev-db/postgresql-7.3*
 	sci-libs/proj
 	>=sys-apps/sed-4"
 
