@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bsdsfv
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.18 2005/09/20 12:32:55 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.19 2006/08/01 13:41:08 ticho Exp $
+
+  01 Aug 2006; Andrej Kacian <ticho@gentoo.org> bsdsfv-1.18-r1.ebuild:
+  Stable on x86, bug #142351.
 
   20 Sep 2005; Diego Pettenò <flameeyes@gentoo.org>
   files/bsdsfv-1.18-64bit.patch:
