@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.184 2006/07/28 21:01:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.185 2006/08/01 01:31:19 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -390,15 +390,15 @@ universal_unpack() {
 	find . -iname "*~" -exec rm {} \; 2> /dev/null
 
 	# fix a problem on ppc where TOUT writes to /usr/src/linux breaking sandbox
-	use ppc && \
-		sed -ie 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
+	sed -i \
+		-e 's|TOUT	:= .tmp_gas_check|TOUT	:= $(T).tmp_gas_check|' \
 		"${S}"/arch/ppc/Makefile
 }
 
 unpack_set_extraversion() {
 	cd "${S}"
 	sed -i -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" Makefile
-	cd ${OLDPWD}
+	cd "${OLDPWD}"
 }
 
 # Should be done after patches have been applied
