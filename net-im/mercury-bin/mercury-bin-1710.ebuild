@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/mercury-bin-1710.ebuild,v 1.2 2005/12/29 00:17:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mercury-bin/mercury-bin-1710.ebuild,v 1.3 2006/08/01 03:38:44 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -61,7 +61,7 @@ src_install() {
 	#Start installing stuff
 	insinto /opt/${PN}/resources
 	doins -r resources/*
-	dojar lib/*
+	java-pkg_dojar lib/*
 
 
 	insinto /usr/share/pixmaps
