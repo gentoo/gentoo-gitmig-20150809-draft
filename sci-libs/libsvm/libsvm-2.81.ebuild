@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.81.ebuild,v 1.1 2006/01/02 20:20:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.81.ebuild,v 1.2 2006/08/01 03:41:25 nichoj Exp $
 
-inherit toolchain-funcs python
+inherit toolchain-funcs python java-pkg
 
 DESCRIPTION="Library for Support Vector Machines"
 HOMEPAGE="http://www.csie.ntu.edu.tw/~cjlin/libsvm/"
@@ -60,7 +60,7 @@ src_install() {
 
 	if use java ; then
 		cd java
-		dojar libsvm.jar
+		java-pkg_dojar libsvm.jar
 		dohtml test_applet.html
 		cd -
 	fi
