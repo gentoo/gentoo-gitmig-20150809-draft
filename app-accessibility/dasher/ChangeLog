@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.68 2006/07/31 08:38:43 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.69 2006/08/01 10:42:21 leonardop Exp $
+
+*dasher-4.0.4 (01 Aug 2006)
+
+  01 Aug 2006; Leonardo Boshell <leonardop@gentoo.org>
+  -files/dasher-4.0.3-intl_fix.patch, -dasher-4.0.3.ebuild,
+  +dasher-4.0.4.ebuild:
+  New release, which includes our old patches.
 
 *dasher-4.0.3 (31 Jul 2006)
 
