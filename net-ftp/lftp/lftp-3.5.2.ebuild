@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.2.ebuild,v 1.1 2006/07/31 13:11:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.2.ebuild,v 1.2 2006/08/02 14:17:59 dragonheart Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
@@ -17,8 +17,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~spa
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND=">=sys-libs/ncurses-5.1
-		socks5? ( >=net-proxy/dante-1.1.12 )
-		socks5? ( virtual/pam )
+		socks5? ( 
+			>=net-proxy/dante-1.1.12
+			virtual/pam )
 		ssl? (
 			gnutls? ( >=net-libs/gnutls-1.2.3 )
 			!gnutls? ( >=dev-libs/openssl-0.9.6 )
@@ -30,9 +31,20 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-lang/perl"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-install_data_hook.patch
+	epatch "${FILESDIR}"/${P}-socklib.patch
+	epatch "${FILESDIR}"/${P}-noautoflags.patch
+	AT_M4DIR="m4" eaclocal
+	eautoconf
+	eautomake
+}
+
 
 src_compile() {
-	local myconf="$(use_enable nls)"
+	local myconf="$(use_enable nls) --enable-packager-mode"
 
 	if use ssl && use gnutls ; then
 		myconf="${myconf} --without-openssl"
@@ -48,18 +60,15 @@ src_compile() {
 	use ppc-macos && myconf="${myconf} --with-included-readline"
 	econf \
 		--sysconfdir=/etc/lftp \
-		--without-modules \
+		--with-modules \
 		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
-
-	# hrmph, empty..
-	rm -rf ${D}/usr/lib
+	emake install DESTDIR="${D}" || die
 
 	dodoc BUGS ChangeLog FAQ FEATURES MIRRORS \
-		NEWS README* THANKS TODO
+			NEWS README* THANKS TODO
 }
