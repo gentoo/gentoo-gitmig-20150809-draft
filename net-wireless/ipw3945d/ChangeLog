@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ipw3945d
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.3 2006/07/13 18:23:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw3945d/ChangeLog,v 1.4 2006/08/02 12:16:29 phreak Exp $
+
+*ipw3945d-1.7.22-r1 (02 Aug 2006)
+
+  02 Aug 2006; Christian Heim <phreak@gentoo.org> -ipw3945d-1.7.22.ebuild,
+  +ipw3945d-1.7.22-r1.ebuild:
+  Revision bump. Fixing #142518 (thanks to Sebastian Rijkers <srrijkers at
+  gmail.com> for reporting).
 
 *ipw3945d-1.7.22 (13 Jul 2006)
 
