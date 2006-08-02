@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.4 2006/08/01 19:26:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.5 2006/08/02 09:34:27 flameeyes Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -96,7 +96,7 @@ src_install() {
 		# Move dynamic libs and creates ldscripts into /usr/lib
 		dodir /$(get_libdir)
 		mv "${D}"/usr/$(get_libdir)/${libname}* "${D}"/$(get_libdir)/
-		gen_usr_ldscript libintl$(get_libname)
+		gen_usr_ldscript ${libname}
 	fi
 
 	if ! use doc ; then
