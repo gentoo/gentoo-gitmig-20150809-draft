@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.4.0.ebuild,v 1.3 2006/04/01 14:51:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.4.0.ebuild,v 1.4 2006/08/02 03:31:33 tgall Exp $
 
 inherit distutils eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/Epsilon-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~ia64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.4 2006/04/01 14:51:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.5 2006/08/02 03:31:33 tgall Exp $
+
+  01 Aug 2006; Tom Gall <tgall@gentoo.org> epsilon-0.4.0.ebuild:
+  added ~ppc64
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> epsilon-0.4.0.ebuild:
   Mark 0.4.0 ~ia64
