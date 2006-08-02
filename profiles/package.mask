@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5692 2006/08/01 23:25:50 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5693 2006/08/02 01:21:11 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,41 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# app-antivirus/vlnx masked for Treecleaners for bug(s) 117650
+# Removal in 30 days
+app-antivirus/vlnx
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# www-client/skipstone masked for Treecleaners for bug(s) 138287
+# Removal in 30 days
+www-client/skipstone
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# app-admin/runset masked for Treecleaners for bug(s) 142454 
+# Removal in 30 days
+app-admin/runset 
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# media-gfx/pornview masked for Treecleaners for bug(s) 141588 93500 120376
+# Removal in 30 days
+media-gfx/pornview
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# net-libs/libical-moz masked for Treecleaners for bug(s) 123016 33171
+# Removal in 30 days
+net-libs/libical-moz
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# net-misc/bk2site masked for Treecleaners for bug(s) 67352 
+# Removal in 30 days
+net-misc/bk2site
+
+# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
+# x11-plugins/gkrellm-alltraxclock masked for Treecleaners for bug(s) 62373
+# Removal in 30 days
+x11-plugins/gkrellm-alltraxclock
 
 # Daniel Black <dragonheart@gentoo.org> (01 Aug 2006)
 # API bumps - needs extensive testing against all dependent apps
