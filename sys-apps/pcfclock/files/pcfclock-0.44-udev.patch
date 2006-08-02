@@ -1,10 +1,26 @@
 --- linux/pcfclock.c.orig	2004-05-17 18:26:12.000000000 +0200
-+++ linux/pcfclock.c	2005-11-05 22:07:57.000000000 +0100
-@@ -93,6 +93,20 @@
++++ linux/pcfclock.c	2006-08-02 20:54:39.000000000 +0200
+@@ -56,6 +56,9 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ #include <linux/device.h>
+ #endif
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
++#include <linux/moduleparam.h>
++#endif
+ 
+ #include <asm/uaccess.h>
+ #include <asm/semaphore.h>
+@@ -93,6 +96,26 @@
  
  static struct pcfclock_struct pcfclock_table[PCFCLOCK_NO];
  
-+#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,13)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
++#  define CLASS_CREATE(owner, name) class_create(owner, name)
++#  define CLASS_DESTROY(class) class_destroy(class)
++#  define CLASS_DEVICE_CREATE(class, dev, device, fmt, rest) class_device_create(class, NULL, dev, device, fmt, rest)
++#  define CLASS_DEVICE_DESTROY(class, dev) class_device_destroy(class, dev)
++static struct class *pcfclock_class;
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,13)
 +#  define CLASS_CREATE(owner, name) class_create(owner, name)
 +#  define CLASS_DESTROY(class) class_destroy(class)
 +#  define CLASS_DEVICE_CREATE(class, dev, device, fmt, rest) class_device_create(class, dev, device, fmt, rest)
@@ -21,7 +37,19 @@
  /*
   * The radio clock transmits data only to the PC when requested.  While the
   * time signal is received for the first time no communication between the PC
-@@ -442,6 +456,7 @@
+@@ -401,7 +424,11 @@
+ static int parport_nr[PCFCLOCK_NO] = {[0 ... PCFCLOCK_NO - 1] = PCFCLOCK_PARPORT_UNSPEC };
+ static char *parport[PCFCLOCK_NO] = { NULL, };
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
++module_param_array(parport, charp, NULL, 0);
++#else
+ MODULE_PARM(parport, "1-" __MODULE_STRING(PCFCLOCK_NO) "s");
++#endif
+ 
+ #ifndef MODULE
+ static int __init
+@@ -442,6 +469,7 @@
  		return 1;
  
  #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
@@ -29,7 +57,7 @@
  	devfs_mk_cdev(MKDEV(PCFCLOCK_MAJOR, n), S_IFCHR | S_IRUGO, "pcfclocks/%d", n);
  #else
  	sprintf(name, "%d", n);
-@@ -509,6 +524,7 @@
+@@ -509,6 +537,7 @@
  		printk(KERN_ERR "pcfclock: unable to get major %d\n", PCFCLOCK_MAJOR);
  		return -EIO;
  	}
@@ -37,7 +65,7 @@
  	devfs_mk_dir("pcfclocks");
  #else
  	if (devfs_register_chrdev(PCFCLOCK_MAJOR, "pcfclock", &pcfclock_fops)) {
-@@ -563,9 +579,11 @@
+@@ -563,9 +592,11 @@
  	for (n = 0; n < PCFCLOCK_NO; n++) {
  		if (pcfclock_table[n].dev != NULL) {
  			parport_unregister_device(pcfclock_table[n].dev);
