@@ -1,0 +1,75 @@
+diff -Nur urlgfe-1.0.orig/configure.in urlgfe-1.0/configure.in
+--- urlgfe-1.0.orig/configure.in	2006-07-07 03:39:42.000000000 +0000
++++ urlgfe-1.0/configure.in	2006-08-02 22:13:27.557523459 +0000
+@@ -32,6 +32,33 @@
+ dnl MKINSTALLDIRS="\$(top_srcdir)/install-sh -d"
+ MKINSTALLDIRS="install-sh -d"
+ 
++PKG_CHECK_MODULES(GTK, gtk+-2.0)
++PKG_CHECK_MODULES(GLIB, glib-2.0)
++PKG_CHECK_MODULES(GTHREAD, gthread-2.0)
++
++AC_PATH_PROG(GETCONF, getconf)
++if test "x$GETCONF" != "x" ; then
++	LFS_CFLAGS=`$GETCONF LFS_CFLAGS`
++	LFS_LDFLAGS=`$GETCONF LFS_LDFLAGS`
++fi
++AC_SUBST(LFS_CFLAGS LFS_LDFLAGS)
++
++AC_PATH_PROG(CURL_CONFIG, curl-config)
++if test "x$CURL_CONFIG" = "x" ; then
++	AC_MSG_ERROR(Unable to find curl-config, please install libcurl)
++fi
++CURL_CFLAGS=`$CURL_CONFIG --cflags`
++CURL_LIBS=`$CURL_CONFIG --libs`
++AC_SUBST(CURL_CFLAGS CURL_LIBS)
++
++AC_PATH_PROG(PCRE_CONFIG, pcre-config)
++if test "x$PCRE_CONFIG" = "x" ; then
++	AC_MSG_ERROR(Unable to find pcre-config, please install libpcre)
++fi
++PCRE_CFLAGS=`$PCRE_CONFIG --cflags`
++PCRE_LIBS=`$PCRE_CONFIG --libs`
++AC_SUBST(PCRE_CFLAGS PCRE_LIBS)
++
+ dnl Setup output files -----
+ AC_OUTPUT(Makefile src/Makefile urlglib/Makefile pixmaps/Makefile po/Makefile.in intl/Makefile)
+ 
+diff -Nur urlgfe-1.0.orig/src/Makefile.am urlgfe-1.0/src/Makefile.am
+--- urlgfe-1.0.orig/src/Makefile.am	2006-07-07 03:29:45.000000000 +0000
++++ urlgfe-1.0/src/Makefile.am	2006-08-02 22:06:16.942709543 +0000
+@@ -34,9 +34,8 @@
+ bin_PROGRAMS = urlgfe
+ 
+ urlgfe_CPPFLAGS = -I$(top_srcdir) -DDATADIR=\"$(datadir)\"
+-urlgfe_LDADD = ../urlglib/liburlglib.a
+-urlgfe_CFLAGS = `pkg-config --cflags gtk+-2.0 gthread-2.0` `curl-config --cflags` `pcre-config --cflags`
+-urlgfe_LDFLAGS = `pkg-config --libs gtk+-2.0 gthread-2.0` `curl-config --libs` `pcre-config --libs`
++urlgfe_LDADD = ../urlglib/liburlglib.a @GTK_LIBS@ @GTHREAD_LIBS@ @CURL_LIBS@ @PCRE_LIBS@
++urlgfe_CFLAGS = @GTK_CFLAGS@ @GTHREAD_CFLAGS@ @CURL_CFLAGS@ @PCRE_CFLAGS@
+ 
+ urlgfe_SOURCES = urlgfe.c item_list_model.c node_list_model.c \
+ 	category_tree_model.c category_tree_view.c download_list_view.c proxy_list_view.c \
+diff -Nur urlgfe-1.0.orig/urlglib/Makefile.am urlgfe-1.0/urlglib/Makefile.am
+--- urlgfe-1.0.orig/urlglib/Makefile.am	2006-07-07 03:29:45.000000000 +0000
++++ urlgfe-1.0/urlglib/Makefile.am	2006-08-02 22:06:16.946709828 +0000
+@@ -25,7 +25,7 @@
+ 
+ liburlglib_a_CPPFLAGS = -I$(top_srcdir)
+ 
+-liburlglib_a_CFLAGS = `getconf LFS_CFLAGS` `pkg-config --cflags glib-2.0 gthread-2.0` `curl-config --cflags` `pcre-config --cflags`
++liburlglib_a_CFLAGS = @LFS_CFLAGS@ @GLIB_CFLAGS@ @GTHREAD_CFLAGS@ @CURL_CFLAGS@ @PCRE_CFLAGS@
+ 
+ 
+ liburlglib_a_SOURCES = base_node.c urlglib_util.c \
+@@ -49,8 +49,8 @@
+ noinst_PROGRAMS = test_urlglib
+ 
+ test_urlglib_CPPFLAGS = -I$(top_srcdir) -D_FILE_OFFSET_BITS=64
+-test_urlglib_LDADD = liburlglib.a
++test_urlglib_LDADD = liburlglib.a @GLIB_LIBS@ @GTHREAD_LIBS@ @CURL_LIBS@ @PCRE_LIBS@
+ test_urlglib_CFLAGS =  $(liburlglib_a_CFLAGS) `getconf LFS_CFLAGS`
+-test_urlglib_LDFLAGS = `getconf LFS_LDFLAGS` `pkg-config --libs glib-2.0 gthread-2.0` `curl-config --libs` `pcre-config --libs`
++test_urlglib_LDFLAGS = @LFS_LDFLAGS@
+ 
+ test_urlglib_SOURCES = test_urlglib.c
