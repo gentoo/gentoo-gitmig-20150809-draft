@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.5.ebuild,v 1.2 2006/08/01 22:41:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.5.ebuild,v 1.3 2006/08/02 06:13:20 corsair Exp $
 
 inherit eutils flag-o-matic linux-info
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnupg/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="bzip2 curl ecc idea ldap nls readline selinux smartcard static usb zlib X linguas_ru"
 # IUSE+=caps
 
