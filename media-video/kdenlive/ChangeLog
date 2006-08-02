@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.12 2006/07/17 10:08:45 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.13 2006/08/02 13:25:37 zypher Exp $
+
+  02 Aug 2006; Marc Hildebrand <zypher@gentoo.org> kdenlive-0.3.0.ebuild:
+  Fixed missing IUSE.
 
 *kdenlive-0.3.0 (30 May 2006)
 
