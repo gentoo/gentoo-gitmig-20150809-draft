@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/gst-plugins-mad-0.8.8.ebuild,v 1.12 2005/09/06 10:22:07 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/gst-plugins-mad-0.8.8.ebuild,v 1.13 2006/08/02 06:08:10 kumba Exp $
 
 inherit gst-plugins
 
-KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libmad-0.15.1b
