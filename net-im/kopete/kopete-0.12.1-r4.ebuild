@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.1-r4.ebuild,v 1.1 2006/08/01 20:09:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.1-r4.ebuild,v 1.2 2006/08/02 15:03:33 flameeyes Exp $
 
 inherit kde eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="jingle sametime ssl xmms xscreensaver slp kernel_linux latex crypt
 	  winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
 	  connectionstatus contactnotes translator webpresence texteffect highlight
-	  alias autoreplace history nowlistening addbookmarks"
+	  alias autoreplace history nowlistening addbookmarks kdehiddenvisibility"
 
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
