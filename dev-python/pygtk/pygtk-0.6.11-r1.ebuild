@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11-r1.ebuild,v 1.12 2006/07/05 05:33:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11-r1.ebuild,v 1.13 2006/08/02 03:56:13 tgall Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v1.2/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sh ~sparc x86"
 IUSE="opengl"
 
 DEPEND="virtual/python
