@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.3.ebuild,v 1.3 2006/03/24 04:26:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.3.ebuild,v 1.4 2006/08/02 21:07:27 leonardop Exp $
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Gnome Database Access Library"
 HOMEPAGE="http://www.gnome-db.org/"
@@ -61,13 +61,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack "${A}"
-	cd "${S}"
+	gnome2_src_unpack
 
 	# Fix freetds API problems
-	epatch "${FILESDIR}"/${PN}-1.0.2-freetds_fix.patch
+	epatch "${FILESDIR}"/${P}-freetds_api_fixes.patch
 	# Fix compilation of the mdb provider
 	epatch "${FILESDIR}"/${PN}-1.2.1-mdb_fix.patch
 
-	gnome2_omf_fix doc/Makefile.in
+	sed -n -e '/GTK_DOC_CHECK/,/IT_PROG_INTLTOOL/p' aclocal.m4 > gtk-doc.m4
+	AT_M4DIR="." eautoreconf
 }
