@@ -1,4 +1,7 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.57 2006/07/29 23:08:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.58 2006/08/02 16:10:28 kumba Exp $
+
+# Don't need this either
+gstreamer
 
 # We don't use this (yet).  It's a dep for gnome-vfs with four of its own.
 # Excluding it on mips until someone reports a need for it.
