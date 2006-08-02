@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r3.ebuild,v 1.1 2006/07/27 15:23:53 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hessian/hessian-3.0.8-r3.ebuild,v 1.2 2006/08/02 04:28:10 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -49,5 +49,5 @@ src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
 	use doc && java-pkg_dohtml -r dist/doc/api
-	use source && java-pkg_dosrc src/*
+	use source && java-pkg_dosrc src/com
 }
