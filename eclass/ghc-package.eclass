@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.18 2006/08/02 19:49:03 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.19 2006/08/02 19:52:04 dcoutts Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 # Maintained by: Haskell herd <haskell@gentoo.org>
@@ -61,17 +61,12 @@ ghc-bestcabalversion() {
 	local cabalpackage
 	local cabalversion
 	if ghc-cabal; then
-		# Try if ghc-pkg can determine the latest version.
-		# If not, use portage.
-		cabalpackage="$($(ghc-getghcpkg) latest Cabal 2> /dev/null)"
-		if [[ $? -eq 0 ]]; then
-			cabalversion="${cabalpackage#Cabal-}"
-		else
-			cabalpackage="$(best_version cabal)"
-			cabalversion="${cabalpackage#dev-haskell/cabal-}"
-			cabalversion="${cabalversion%-r*}"
-			cabalversion="${cabalversion%_pre*}"
-		fi
+		# We ask portage, not ghc, so that we only pick up
+		# portage-installed cabal versions.
+		cabalpackage="$(best_version cabal)"
+		cabalversion="${cabalpackage#dev-haskell/cabal-}"
+		cabalversion="${cabalversion%-r*}"
+		cabalversion="${cabalversion%_pre*}"
 		echo "Cabal-${cabalversion}"
 	else
 		# older ghc's don't support package versioning
