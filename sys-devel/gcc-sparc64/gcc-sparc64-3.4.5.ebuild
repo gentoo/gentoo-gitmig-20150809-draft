@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.4.5.ebuild,v 1.5 2006/06/06 01:26:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.4.5.ebuild,v 1.6 2006/08/02 14:37:07 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,7 +30,7 @@ RDEPEND="virtual/libc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
+	>=sys-libs/ncurses-5.2-r2"
 
 # Ripped from toolchain.eclass
 gcc_version_patch() {
