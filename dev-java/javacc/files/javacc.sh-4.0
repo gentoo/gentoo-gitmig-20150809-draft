@@ -5,8 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 
-. /etc/env.d/java/22javacc
-[ -f "${HOME}/.gentoo/env.d/22javacc" ] && . ${HOME}/.gentoo/env.d/22javacc
+export VERSION=4.0
 
 java=$(java-config --java)
 classpath=$(java-config --classpath=javacc)

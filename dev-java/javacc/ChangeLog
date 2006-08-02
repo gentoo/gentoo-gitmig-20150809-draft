@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/javacc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.17 2006/07/03 14:29:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.18 2006/08/02 20:42:02 nelchael Exp $
+
+*javacc-4.0-r2 (02 Aug 2006)
+
+  02 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org> files/javacc-4.0,
+  files/javacc.sh-4.0, files/jjdoc-4.0, files/jjtree-4.0,
+  -javacc-4.0.ebuild, -javacc-4.0-r1.ebuild, +javacc-4.0-r2.ebuild:
+  Revision bump to fix bug #140829 - VERSION in env.
 
 *javacc-4.0-r1 (03 Jul 2006)
 
