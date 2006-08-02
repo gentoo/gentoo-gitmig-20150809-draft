@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7.ebuild,v 1.5 2006/07/06 11:01:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7.ebuild,v 1.6 2006/08/02 04:18:08 nichoj Exp $
 
 inherit base eutils java-vm-2 flag-o-matic
 
@@ -89,7 +89,7 @@ src_compile() {
 		$(use_with esd) \
 		$(use_with gmp) \
 		$(use_enable nls) \
-		$(use_with gtk classpath-gtk-awt) \
+		$(use_enable gtk gtk-peer) \
 		${confargs} \
 		--with-jikes \
 		--disable-gjdoc || die "Failed to configure."
