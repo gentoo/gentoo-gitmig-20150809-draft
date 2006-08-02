@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.13-r2.ebuild,v 1.1 2006/07/29 15:30:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-mysql/jdbc-mysql-3.1.13-r2.ebuild,v 1.2 2006/08/02 12:46:17 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -17,7 +17,8 @@ IUSE="c3p0 source"
 COMMON_DEP="
 	dev-java/log4j
 	c3p0? ( dev-java/c3p0 )
-	dev-java/jdbc2-stdext"
+	dev-java/jdbc2-stdext
+	dev-java/commons-logging"
 RDEPEND=">=virtual/jre-1.2
 	${COMMON_DEP}"
 # FIXME doesn't like Java 1.6's JDBC API
