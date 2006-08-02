@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.13 2006/07/16 17:59:41 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.14 2006/08/02 16:33:37 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -102,10 +102,10 @@ IUSE_VIDEO_CARDS="
 	video_cards_vga
 	video_cards_via
 	video_cards_vmware
-	video_cards_voodoo"
+	video_cards_voodoo
 
+	video_cards_fglrx"
 #	video_cards_nvidia
-#	video_cards_fglrx"
 IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
@@ -146,8 +146,7 @@ RDEPEND="x11-libs/libXfont
 	kdrive? ( sdl? ( media-libs/libsdl ) )
 	!media-video/nvidia-glx
 	!x11-drivers/nvidia-drivers
-	!x11-drivers/nvidia-legacy-drivers
-	!x11-drivers/ati-drivers"
+	!x11-drivers/nvidia-legacy-drivers"
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
 	# Xaw is dmx- and xorgcfg-dependent
 	# Xpm is dmx- and xorgcfg-dependent, pulls in Xt
@@ -326,6 +325,7 @@ PDEPEND="
 				video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.1.0 )
 
 				video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
+				video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.27.10 )
 			)
 			!minimal? (
 				>=x11-drivers/xf86-video-dummy-0.2.0
