@@ -1,16 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.5.ebuild,v 1.1 2006/08/01 20:45:12 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.0.5.ebuild,v 1.2 2006/08/02 14:26:40 rl03 Exp $
 
 inherit webapp
 
 IUSE="mysql postgres"
+MY_P=mantis_${PV}
 
 DESCRIPTION="PHP/MySQL/Web based bugtracking system"
 HOMEPAGE="http://www.mantisbt.org/"
-SRC_URI="mirror://sourceforge/${PN}/mantis_${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-S=${WORKDIR}/mantis-${PV}
+S=${WORKDIR}/${MY_P}
 
 KEYWORDS="~amd64 ~ppc ~x86"
 
