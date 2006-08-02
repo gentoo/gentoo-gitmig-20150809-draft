@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.4.ebuild,v 1.2 2006/07/28 08:20:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.4.ebuild,v 1.3 2006/08/02 09:42:57 flameeyes Exp $
 
 inherit kde flag-o-matic eutils versionator
 set-kdedir 3.5
@@ -46,10 +46,12 @@ src_unpack() {
 
 	nosspflags="$(test-flags -fno-stack-protector -fno-stack-protector-all)"
 	sed -i -e "s:KDE_CXXFLAGS =\(.*\):KDE_CXXFLAGS = \1 ${nosspflags}:" \
-		${S}/mcopidl/Makefile.am
+		"${S}/mcopidl/Makefile.am"
 
 	# Fix libao/gaim problems with aRTs. See bug #116290.
 	epatch "${FILESDIR}/arts-1.5.0-check_tmp_dir.patch"
+
+	rm -f "${S}/configure"
 }
 
 src_compile() {
@@ -87,7 +89,7 @@ LDPATH=${libdirs:1}
 CONFIG_PROTECT=\"${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown\"" > ${D}/etc/env.d/45kdepaths-3.5 # number goes down with version upgrade
 
 	# used for realtime priority, but off by default as it is a security hazard
-	use artswrappersuid && chmod u+s ${D}/${PREFIX}/bin/artswrapper
+	use artswrappersuid && chmod u+s "${D}/${PREFIX}/bin/artswrapper"
 }
 
 pkg_postinst() {
