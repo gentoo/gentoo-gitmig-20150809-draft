@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.10 2006/07/24 17:27:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.11 2006/08/02 19:31:09 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -59,7 +59,7 @@ RDEPEND="
 	X? ( || ( x11-libs/libX11 virtual/x11 ) )
 	opengl? ( virtual/opengl
 			  virtual/glu virtual/glut
-			  openal? ( media-libs/openal ) )"
+			  openal? ( media-libs/openal media-libs/freealut ) )"
 
 # ghc cannot usually be bootstrapped using later versions ...
 DEPEND="${RDEPEND}
@@ -178,6 +178,9 @@ src_unpack() {
 	# Patch to fix a mis-compilation in the rts due to strict aliasing,
 	# should be fixed upstream for 6.4.3 and 6.6. Fixes bug #135651.
 	echo 'GC_HC_OPTS += -optc-fno-strict-aliasing' >> "${S}/ghc/rts/Makefile"
+
+	# Don't strip binaries on install. See QA warnings in bug #140369.
+	sed -i -e 's/SRC_INSTALL_BIN_OPTS	+= -s//' ${S}/mk/config.mk.in
 }
 
 src_compile() {
