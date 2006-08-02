@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.6 2006/03/13 09:57:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.7 2006/08/02 19:49:03 dcoutts Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -169,7 +169,7 @@ cabal-pkg() {
 	local err
 
 	if [[ -n ${CABAL_HAS_LIBRARIES} ]]; then
-		sed -i 's:ghc-pkg:/usr/bin/true:' .setup-config
+		sed -i "s|$(ghc-getghcpkg)|/usr/bin/true|" .setup-config
 		./setup register || die "setup register failed"
 		if [[ -f .installed-pkg-config ]]; then
 			ghc-setup-pkg .installed-pkg-config
