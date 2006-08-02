@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.298 2006/07/30 17:43:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.299 2006/08/02 18:01:03 solar Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -880,7 +880,13 @@ gcc-compiler_pkg_postinst() {
 			&& mkdir -p "${ROOT}"/sbin
 		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/lib/rcscripts/awk/ || die "installing fixlafiles.awk"
 		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/sbin/ || die "installing fix_libtool_files.sh"
-		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/sbin/ || die "installing c89/c99"
+
+		# These don't seem to exist when using the -K option and a hardened compiler and probably other cases also.
+		for x in "${ROOT}/${DATAPATH}"/c{89,99} ; do
+			if [[ -e ${x} ]]; then
+				cp ${x} "${ROOT}"/usr/sbin/ || die "installing c89/c99"
+			fi
+		done
 	fi
 }
 
