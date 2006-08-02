@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.15.0.ebuild,v 1.1 2006/04/02 18:19:06 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.15.0.ebuild,v 1.2 2006/08/02 03:23:29 tgall Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/common/${P#logilab-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="|| ( >=dev-python/optik-1.4 >=dev-lang/python-2.3 )"
