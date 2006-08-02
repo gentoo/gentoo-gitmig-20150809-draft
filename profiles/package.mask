@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5695 2006/08/02 19:29:53 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5696 2006/08/02 21:48:42 kugelfang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -325,7 +325,7 @@ net-wireless/aircrack
 
 # Danny van Dyk <kugelfang@gentoo.org>
 # Masked pending addition of new modules
-=app-admin/eselect-1.0.3
+>=app-admin/eselect-1.0.3
 app-admin/eselect-blas
 app-admin/eselect-cblas
 app-admin/eselect-lapack
