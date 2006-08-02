@@ -1215,6 +1215,11 @@ eant() {
 			antflags="${antflags} -lib $(java-config -p ${build_compiler_deps})"
 		fi
 	fi
+
+	if is-java-strict; then
+		einfo "Disabling system classpath for ant"
+		antflags="${antflags} -Dbuild.sysclasspath=ignore"
+	fi
 	
 	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
 		antflags="${antflags} -debug"
@@ -1785,8 +1790,7 @@ java-pkg_verify-classes() {
 java-pkg_check-phase() {
 	local phase=${1}
 	local funcname=${2}
-	# TODO add check for java-stricter
-	if [[ ${EBUILD_PHASE} != ${phase} ]]; then
+	if is-java-strict && [[ ${EBUILD_PHASE} != ${phase} ]]; then
 		java-pkg_announce-qa-violation \
 			"${funcname} used outside of src_${phase}"
 	fi
@@ -1807,7 +1811,7 @@ java-pkg_check-jikes() {
 }
 
 java-pkg_announce-qa-violation() {
-	if hasq java-strict ${FEATURES}; then
+	if is-java-strict; then
 		echo "Java QA Notice: $@" >&2
 		increment-qa-violations
 	fi
@@ -1816,6 +1820,11 @@ java-pkg_announce-qa-violation() {
 increment-qa-violations() {
 	let "JAVA_PKG_QA_VIOLATIONS+=1"
 	export JAVA_PKG_QA_VIOLATIONS
+}
+
+is-java-strict() {
+	hasq java-strict ${FEATURES};
+	return $?
 }
 
 # ------------------------------------------------------------------------------
