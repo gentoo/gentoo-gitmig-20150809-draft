@@ -21,9 +21,8 @@ elif [[ -f /etc/DIR_COLORS ]] ; then
 	eval $(dircolors -b /etc/DIR_COLORS)
 fi
 
-export CLICOLOR=1 # For FreeBSD
-
-#GNU#alias ls='ls --color=auto'
+#BSD#@export CLICOLOR=1
+#GNU#@alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 
 # Change the window title of X terminals 

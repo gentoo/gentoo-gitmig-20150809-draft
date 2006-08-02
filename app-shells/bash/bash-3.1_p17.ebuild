@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.3 2006/08/01 19:59:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.4 2006/08/02 16:17:49 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="afs nls build bashlogger"
+IUSE="afs nls bashlogger"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
@@ -126,17 +126,16 @@ src_install() {
 		newins "${FILESDIR}"/dot-${f} .${f}
 	done
 
-	if use userland_GNU; then
-		sed -i -e 's:^#GNU#::' "${D}/etc/skel/.bashrc"
+	if use userland_GNU ; then
+		sed -i -e 's:^#GNU#@::' "${D}"/etc/skel/.bashrc
+	elif use userland_BSD ; then
+		sed -i -e 's:^#BSD#@::' "${D}"/etc/skel/.bashrc
 	fi
+	sed -i -e '/#@/d' "${D}"/etc/skel/.bashrc
 
-	if use build ; then
-		rm -rf "${D}"/usr
-	else
-		doman doc/*.1
-		dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
-		dosym bash.info.gz /usr/share/info/bashref.info.gz
-	fi
+	doman doc/*.1
+	dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
+	dosym bash.info.gz /usr/share/info/bashref.info.gz
 }
 
 pkg_preinst() {
