@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.107 2006/07/27 23:51:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.108 2006/08/02 09:07:59 exg Exp $
+
+*mc-4.6.1-r2 (02 Aug 2006)
+
+  02 Aug 2006; Emanuele Giaquinta <exg@gentoo.org> +mc-4.6.1-r2.ebuild:
+  Update the utf8 patch to the latest debian version to fix a compile error, bug
+  #140802. Bump u7z extension.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> mc-4.6.1.ebuild,
   mc-4.6.1-r1.ebuild:
