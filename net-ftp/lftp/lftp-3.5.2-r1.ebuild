@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.2.ebuild,v 1.3 2006/08/03 00:25:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.2-r1.ebuild,v 1.1 2006/08/03 00:25:02 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -37,6 +37,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-install_data_hook.patch
 	epatch "${FILESDIR}"/${P}-socklib.patch
 	epatch "${FILESDIR}"/${P}-noautoflags.patch
+	EPATCH_OPTS="-d ${S}/src" epatch "${FILESDIR}"/${P}-gnutls-segv.patch
 	AT_M4DIR="m4" eaclocal
 	eautoconf
 	eautomake
