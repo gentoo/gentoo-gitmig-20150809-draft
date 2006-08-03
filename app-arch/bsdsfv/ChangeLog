@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.20 2006/08/02 11:41:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.21 2006/08/03 17:42:37 gustavoz Exp $
+
+  03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> bsdsfv-1.18-r1.ebuild:
+  Stable on sparc wrt #142351
 
   02 Aug 2006; Fabian Groffen <grobian@gentoo.org> bsdsfv-1.18-r1.ebuild:
   Marked ppc-macos stable (bug #142351)
