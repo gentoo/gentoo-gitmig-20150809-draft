@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/Digest-MD5-2.36.ebuild,v 1.6 2006/07/17 23:33:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-MD5/Digest-MD5-2.36.ebuild,v 1.7 2006/08/03 00:01:36 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/perl-digest-base"
+DEPEND="dev-lang/perl
+		virtual/perl-digest-base"
 RDEPEND="${DEPEND}"
 
 mydoc="rfc*.txt"
