@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.11.ebuild,v 1.3 2006/07/28 08:22:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/libiconv-1.11.ebuild,v 1.4 2006/08/03 01:08:44 gustavoz Exp $
 
 inherit eutils multilib flag-o-matic autotools libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/libiconv/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~ppc ~sparc ~x86-fbsd"
+KEYWORDS="~ppc ~x86-fbsd"
 IUSE="build"
 
 DEPEND="!sys-libs/glibc"
