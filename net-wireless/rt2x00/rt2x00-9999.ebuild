@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.9 2006/08/02 12:00:14 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.10 2006/08/03 09:26:08 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -17,10 +17,10 @@ RDEPEND="net-wireless/wireless-tools"
 
 IUSE_RT2X00_DEVICES="rt2400pci rt2500pci rt2500usb rt61pci rt73usb"
 IUSE_RT2X00_EXTRA="rfkill"
-IUSE="debug"
+IUSE="asm debug"
 
 for x in ${IUSE_RT2X00_DEVICES} ${IUSE_RT2X00_EXTRA} ; do
-	IUSE="${IUSE} rt2x00_devices_${x}"
+	IUSE="${IUSE} ${x}"
 done
 
 pkg_setup() {
@@ -32,21 +32,21 @@ pkg_setup() {
 	ERROR_CRYPTO_AES="${P} requires support for AES Cryptography (CONFIG_CRYPTO_AES)."
 	ERROR_CRYPTO_MICHAEL_MIC="${P} requires support for Michael MIC Cryptography (CONFIG_CRYPTO_MICHAEL_MIC)."
 
-	if use rt2x00_devices_rfkill ; then
+	if use rfkill ; then
 		CONFIG_CHECK="${CONFIG_CHECK} INPUT"
 	fi
 
-	if use rt2x00_devices_rt2400pci \
-		|| use rt2x00_devices_rt2500pci \
-		|| use rt2x00_devices_rt61pci ; then
+	if use rt2400pci \
+		|| use rt2500pci \
+		|| use rt61pci ; then
 		CONFIG_CHECK="${CONFIG_CHECK} PCI"
 	fi
 
-	if use rt2x00_devices_rt2500usb || use rt2x00_devices_rt73usb ; then
+	if use rt2500usb || use rt73usb ; then
 		CONFIG_CHECK="${CONFIG_CHECK} USB"
 	fi
 
-	if use rt2x00_devices_rt61pci || use rt2x00_devices_rt73usb ; then
+	if use rt61pci || use rt73usb ; then
 		CONFIG_CHECK="${CONFIG_CHECK} FW_LOADER"
 		ERROR_FW_LOADER="${P} requires support for Firmware module loading (CONFIG_FW_LOADER)."
 	fi
@@ -58,18 +58,20 @@ pkg_setup() {
 }
 
 src_compile() {
-	local m= button="n" debug="n" full="y" yn= M=
+	local m= asm="n" button="n" debug="n" full="y" yn= M=
+
+	use asm && asm="y"
+	use debug && debug="y"
 
 	for m in ${IUSE_RT2X00_DEVICES} ; do
-		if use "rt2x00_devices_${m}" ; then
+		if use "${m}" ; then
 			full="n"
 			break
 		fi
 	done
 
 	if [[ ${full} == "n" ]] ; then
-		use debug && debug="y"
-		use rt2x00_devices_rfkill && button="y"
+		use rfkill && button="y"
 	else
 		ewarn "No module specified in USE flags - building everything."
 		button="y"
@@ -83,12 +85,11 @@ src_compile() {
 	for m in d80211 ${IUSE_RT2X00_EXTRA} ${IUSE_RT2X00_DEVICES} ; do
 		local yn="n" M=$(echo "${m}" | tr '[:lower:]' '[:upper:]')
 
-		if [[ ${m} == "d80211" || ${full} == "y" ]] \
-			|| use "rt2x00_devices_${m}" ; then
+		if [[ ${m} == "d80211" || ${full} == "y" ]] || use "${m}" ; then
 			yn="y"
 		fi
 		echo "CONFIG_${M}=${yn}" >> config
-		echo "CONFIG_${M}_ASM=n" >> config
+		echo "CONFIG_${M}_ASM=${asm}" >> config
 		echo "CONFIG_${M}_DEBUG=${debug}" >> config
 		echo "CONFIG_${M}_BUTTON=${button}" >> config
 
@@ -99,7 +100,7 @@ src_compile() {
 
 	# RT61 and RT73 require CONFIG_CRC_ITU_T
 	if [[ ${full} == "y" ]] || \
-		use rt2x00_devices_rt61pci || use rt2x00_devices_rt73usb ; then
+		use rt61pci || use rt73usb ; then
 		echo "CONFIG_CRC_ITU_T=y" >> config
 	fi
 
