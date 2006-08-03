@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.32 2005/07/10 20:59:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.33 2006/08/03 23:46:04 cardoe Exp $
 
 inherit eutils gnuconfig db
 
@@ -28,12 +28,12 @@ done
 LICENSE="DB"
 SLOT="4.1"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 sh"
-IUSE="tcltk java doc"
+IUSE="tcl java doc"
 
-DEPEND="tcltk? ( dev-lang/tcl )
+DEPEND="tcl? ( dev-lang/tcl )
 	java? ( virtual/jdk )"
 
-RDEPEND="tcltk? ( dev-lang/tcl )
+RDEPEND="tcl? ( dev-lang/tcl )
 	java? ( virtual/jre )"
 
 src_unpack() {
@@ -62,7 +62,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-java" \
 		|| myconf="${myconf} --disable-java"
 
-	use tcltk \
+	use tcl \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --disable-tcl"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29-r2.ebuild,v 1.2 2006/07/26 09:11:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29-r2.ebuild,v 1.3 2006/08/03 23:46:04 cardoe Exp $
 
 inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
@@ -28,12 +28,12 @@ done
 LICENSE="DB"
 SLOT="4.3"
 KEYWORDS="~amd64 ~ia64 ~m68k ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="tcltk java doc nocxx bootstrap"
+IUSE="tcl java doc nocxx bootstrap"
 
-DEPEND="tcltk? ( >=dev-lang/tcl-8.4 )
+DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
 	java? ( >=virtual/jdk-1.4 )
 	>=sys-devel/binutils-2.16.1"
-RDEPEND="tcltk? ( dev-lang/tcl )
+RDEPEND="tcl? ( dev-lang/tcl )
 	java? ( >=virtual/jre-1.4 )"
 
 src_unpack() {
@@ -67,7 +67,7 @@ src_compile() {
 		&& myconf="${myconf} --disable-cxx" \
 		|| myconf="${myconf} $(use_enable !nocxx cxx)"
 
-	use tcltk \
+	use tcl \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --disable-tcl"
 
@@ -82,7 +82,7 @@ src_compile() {
 	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
 
 	# the entire testsuite needs the TCL functionality
-	if use tcltk && has test $FEATURES ; then
+	if use tcl && has test $FEATURES ; then
 		myconf="${myconf} --enable-test"
 	else
 		myconf="${myconf} --disable-test"

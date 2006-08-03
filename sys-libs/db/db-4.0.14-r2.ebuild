@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.29 2005/07/10 20:59:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.30 2006/08/03 23:46:04 cardoe Exp $
 
 inherit eutils gnuconfig db
 
@@ -8,12 +8,12 @@ S="${WORKDIR}/${P}/build_unix"
 DESCRIPTION="Berkeley DB"
 SRC_URI="ftp://ftp.sleepycat.com/releases/${P}.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
-IUSE="tcltk java doc"
+IUSE="tcl java doc"
 SLOT="4"
 LICENSE="DB"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
 
-DEPEND="tcltk? ( dev-lang/tcl )
+DEPEND="tcl? ( dev-lang/tcl )
 	java? ( virtual/jdk )"
 
 src_unpack() {
@@ -45,7 +45,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-java" \
 		|| myconf="${myconf} --disable-java"
 
-	use tcltk \
+	use tcl \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --disable-tcl"
 

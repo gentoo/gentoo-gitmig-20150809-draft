@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.165 2006/07/26 09:11:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.166 2006/08/03 23:46:04 cardoe Exp $
+
+  03 Aug 2006; Doug Goldstein <cardoe@gentoo.org> db-3.2.9-r10.ebuild,
+  db-4.0.14-r2.ebuild, db-4.0.14-r3.ebuild, db-4.1.25_p1-r3.ebuild,
+  db-4.1.25_p1-r4.ebuild, db-4.1.25_p2.ebuild, db-4.2.52_p2.ebuild,
+  db-4.2.52_p2-r1.ebuild, db-4.2.52_p4.ebuild, db-4.2.52_p4-r2.ebuild,
+  db-4.3.27.ebuild, db-4.3.29.ebuild, db-4.3.29-r2.ebuild,
+  db-4.4.20_p2.ebuild:
+  Changed tcltk USE flag to tcl as per bug #17808
 
   26 Jul 2006; Martin Schlemmer <azarah@gentoo.org> db-4.2.52_p4-r2.ebuild,
   db-4.3.29-r2.ebuild:

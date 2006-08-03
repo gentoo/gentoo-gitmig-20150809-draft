@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.23 2006/01/18 23:03:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.24 2006/08/03 23:46:04 cardoe Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -84,8 +84,8 @@ src_compile() {
 	# TCL support is also broken
 	# Robin H. Johnson <robbat2@gentoo.org> (18 Oct 2003)
 	# conf_shared="${conf_shared}
-	#	`use_enable tcltk tcl`
-	#	`use_with tcltk tcl /usr/lib`"
+	#	`use_enable tcl tcl`
+	#	`use_with tcl tcl /usr/lib`"
 
 	# NOTE: we should not build both shared and static versions
 	#       of the libraries in the same build root!
