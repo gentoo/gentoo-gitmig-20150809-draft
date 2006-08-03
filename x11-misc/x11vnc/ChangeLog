@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.24 2006/07/16 12:25:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.25 2006/08/03 18:30:53 dertobi123 Exp $
+
+  03 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> x11vnc-0.8.2.ebuild:
+  ppc stable, bug #142559
 
   16 Jul 2006; Sven Wegener <swegener@gentoo.org> x11vnc-0.8.2.ebuild:
   Update SRC_URI to SourceForge and fix digest.
