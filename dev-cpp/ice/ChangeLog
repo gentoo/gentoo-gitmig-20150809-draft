@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/ice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ChangeLog,v 1.9 2006/07/31 13:37:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ChangeLog,v 1.10 2006/08/03 12:49:30 caleb Exp $
+
+  03 Aug 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1-patches/ice-makefile-speedup.patch, ice-3.1.0-r6.ebuild:
+  Remove building of test and demos during normal compilation. Speeds things
+  up tremendously
 
 *ice-3.1.0-r6 (31 Jul 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.1.0-r6.ebuild,v 1.1 2006/07/31 13:37:49 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.1.0-r6.ebuild,v 1.2 2006/08/03 12:49:30 caleb Exp $
 
 inherit eutils
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/ice-3.1-patches/patch.icegrid.txt
 	epatch "${FILESDIR}"/ice-3.1-patches/patch.icegrid-5.txt
 	epatch "${FILESDIR}"/ice-3.1-patches/patch.slice2cpp.txt
+	epatch "${FILESDIR}"/ice-3.1-patches/ice-makefile-speedup.patch
 
 	if use amd64; then
 		sed -i -e "s:^#LP64:LP64:g" ${S}/config/Make.rules \
@@ -62,4 +63,8 @@ src_unpack() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "Install Failed!"
+}
+
+src_test() {
+	make test || die "Test failed"
 }
