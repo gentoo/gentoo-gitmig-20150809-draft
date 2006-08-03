@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.72 2006/06/12 14:40:49 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.73 2006/08/03 17:04:47 foser Exp $
 
 # GNOME 2 ECLASS
 inherit libtool gnome.org debug fdo-mime eutils
@@ -102,6 +102,7 @@ gnome2_src_install() {
 
 
 gnome2_gconf_install() {
+
 	if [[ -x ${GCONFTOOL_BIN} ]]; then
 		# We are ready to install the GCONF Scheme now
 		unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
@@ -117,7 +118,13 @@ gnome2_gconf_install() {
 				${GCONFTOOL_BIN} --makefile-install-rule ${F} 1>/dev/null
 			fi
 		done
+
+		# have gconf reload the new schemas
+		ebegin "Reloading GConf schemas"
+		killall -HUP gconfd-2
+		eend $?
 	fi
+
 }
 
 gnome2_gconf_uninstall() {
