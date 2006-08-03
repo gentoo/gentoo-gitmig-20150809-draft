@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.8.0.ebuild,v 1.2 2006/08/03 12:45:10 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.9.0.ebuild,v 1.1 2006/08/03 12:45:10 s4t4n Exp $
 
 DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
@@ -8,19 +8,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
-IUSE="crypto_openssl crypto_libgcrypt emacs gpm pam static"
+KEYWORDS="~x86 ~ppc ~amd64"
+IUSE="crypto_openssl crypto_libgcrypt emacs gpm pam static X"
 
 RDEPEND=">=dev-libs/DirectFB-0.9.18
 	crypto_openssl?   ( >=dev-libs/openssl-0.9.7e )
 	crypto_libgcrypt? ( >=dev-libs/libgcrypt-1.2.1 )
 	emacs?            ( virtual/emacs )
 	pam?              ( >=sys-libs/pam-0.75-r11 )
-	>=sys-libs/ncurses-5.4-r6
-	|| ( (
-		x11-libs/libX11
-		x11-libs/libXScrnSaver )
-	virtual/x11 )"
+	X?                ( || ( (
+	                           x11-libs/libX11
+	                           x11-libs/libXScrnSaver )
+	                           virtual/x11 ) )
+	>=sys-libs/ncurses-5.4-r6"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
@@ -52,6 +52,7 @@ src_compile()
 		`use_enable pam`                 \
 		`use_enable static static-build` \
 		`use_enable gpm gpm-lock`        \
+		`use_enable X x-support`         \
 		${crypto_support}                \
 		|| die "Configuration failed"
 	emake || die "Compilation failed"
