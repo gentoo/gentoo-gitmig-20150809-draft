@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.2-r1.ebuild,v 1.1 2006/08/03 00:25:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.2-r1.ebuild,v 1.2 2006/08/03 03:06:57 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -29,7 +29,8 @@ RDEPEND=">=sys-libs/ncurses-5.1
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-lang/perl"
+	dev-lang/perl
+	>=sys-devel/autoconf-2.60"
 
 src_unpack() {
 	unpack ${A}
