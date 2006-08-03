@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101-r1.ebuild,v 1.1 2006/08/03 16:29:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.101-r1.ebuild,v 1.2 2006/08/03 16:31:18 foser Exp $
 
 inherit font
 
@@ -29,7 +29,7 @@ src_unpack() {
 src_install () {
 	font_src_install
 
-	insinto /etc/fonts/conf.d/${PN}
+	insinto /etc/fonts/conf.d/
 	doins culmus.conf
 	dosym /etc/fonts/conf.d/culmus.conf /etc/fonts/conf.d/10-culmus.conf
 }
