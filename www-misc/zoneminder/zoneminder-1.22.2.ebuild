@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.2.ebuild,v 1.1 2006/07/01 05:48:19 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.22.2.ebuild,v 1.2 2006/08/03 16:39:31 rl03 Exp $
 
 inherit eutils webapp autotools depend.php
 
@@ -68,7 +68,7 @@ src_install() {
 	webapp_src_preinst
 
 	dodir /var/run/zm
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake -j1 DESTDIR=${D} install || die "emake install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README README.[prt]* TODO
 	dohtml README.html
 
