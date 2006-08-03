@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.33 2006/07/27 05:51:06 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.34 2006/08/03 12:28:16 fmccor Exp $
+
+  03 Aug 2006; Ferris McCormick <fmccor@gentoo.org> octave-2.1.72.ebuild:
+  Sparc stable --- Bug #141446 --- builds and passes all tests (but note running
+  tests requires dejagnu).
 
   27 Jul 2006; Joshua Jackson <tsunam@gentoo.org> octave-2.1.72.ebuild:
   Stable x86; bug #141446
