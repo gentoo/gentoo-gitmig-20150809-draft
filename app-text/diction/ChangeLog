@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.23 2006/07/29 22:51:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.24 2006/08/03 04:08:41 weeve Exp $
+
+  03 Aug 2006; Jason Wever <weeve@gentoo.org> diction-1.09-r1.ebuild:
+  Stable on SPARC wrt bug #142060.
 
   29 Jul 2006; Alastair Tse <liquidx@gentoo.org> diction-1.09-r1.ebuild:
   stable bump for x86 (#142060)
