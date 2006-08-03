@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5699 2006/08/03 22:13:26 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5700 2006/08/03 22:23:59 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -22,6 +22,11 @@
 ##
 
 # Alec Warner <antarus@gentoo.org> (03 Aug 2006)
+# media-libs/openvrml masked for treecleaners for bug(s) 137775
+# Removal in 30 days
+media-libs/openvrml
+
+# Alec Warner <antarus@gentoo.org> (03 Aug 2006)
 # sys-fs/dmraid masked for treecleaners for bug(s) 139860,103912, 
 # 134050, 138823 Removal in 30 days
 sys-fs/dmraid
@@ -36,11 +41,6 @@ sys-fs/dmraid
 # dev-tex/cweb_latex masked for Treecleaners for bug(s) 142572
 # Removal in 30 days
 dev-tex/cweb_latex
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# app-antivirus/vlnx masked for Treecleaners for bug(s) 117650
-# Removal in 30 days
-app-antivirus/vlnx
 
 # Alec Warner <antarus@gentoo.org> (01 Aug 2006)
 # www-client/skipstone masked for Treecleaners for bug(s) 138287
