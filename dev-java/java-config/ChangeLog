@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.100 2006/07/29 20:27:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.101 2006/08/03 02:13:58 nichoj Exp $
+
+*java-config-2.0.26-r6 (03 Aug 2006)
+*java-config-1.3.0-r3 (03 Aug 2006)
+
+  03 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/java-config-1.3.0-JAVA_HOME.patch, +files/java-config-2.profiled,
+  +java-config-1.3.0-r3.ebuild, +java-config-2.0.26-r6.ebuild:
+  Version bumps. java-config-1 has been patched to read VMHANDLE from
+  environment instead of JAVA_HOME. java-config-2 now installs a profile.d
+  entry that sets JAVA_HOME appropriate, ie it is no longer set to
+  generation-1 system vm. This is work towards bug #139889
 
 *java-config-2.0.26-r5 (29 Jul 2006)
 
