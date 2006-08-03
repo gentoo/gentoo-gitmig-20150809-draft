@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0.ebuild,v 1.8 2006/01/31 20:23:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0.ebuild,v 1.9 2006/08/03 16:03:11 usata Exp $
 
-inherit ruby
+inherit ruby flag-o-matic
 
 IUSE=""
 
@@ -22,4 +22,10 @@ DEPEND=">=app-text/sary-1.2.0"
 src_unpack() {
 	unpack ${A}
 	rm -rf ${S}/debian	# workaround for ruby19
+}
+
+src_compile() {
+	append-flags   `pkg-config sary --cflags`
+	append-ldflags `pkg-config sary --libs`
+	ruby_src_compile || die
 }
