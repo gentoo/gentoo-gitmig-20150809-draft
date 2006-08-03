@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.1.ebuild,v 1.1 2006/08/01 04:13:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.1.ebuild,v 1.2 2006/08/03 23:15:39 dragonheart Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -19,15 +19,10 @@ RDEPEND=">=dev-libs/libgcrypt-1.2.2
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc
 	>=dev-libs/lzo-2
-	dev-libs/libgpg-error"
-#	>=dev-libs/libtasn1-0.3.4
-#	crypt? ( >=app-crypt/opencdk-0.5.5 )
+	dev-libs/libgpg-error
+	>=dev-libs/libtasn1-0.3.4"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
-
-# gnutls has its own version of these. should maybe avoid using.
-#	libtasn1
-#	opencdk
 
 src_unpack() {
 	unpack ${A}
@@ -44,7 +39,6 @@ src_compile() {
 	econf  \
 		$(use_with zlib) \
 		--without-included-minilzo \
-		--without-included-libtasn1 \
 		--without-included-opencdk \
 		$(use_enable doc gtk-doc) \
 		${myconf} || die
