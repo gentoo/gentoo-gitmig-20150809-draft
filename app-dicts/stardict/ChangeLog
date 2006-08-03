@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.30 2006/07/30 17:22:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.31 2006/08/03 18:08:16 gustavoz Exp $
+
+  03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  stardict-2.4.6-r1.ebuild:
+  Stable on sparc
 
   30 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   stardict-2.4.6-r1.ebuild:
