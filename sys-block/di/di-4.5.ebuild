@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/di-4.5.ebuild,v 1.4 2006/08/01 13:27:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/di-4.5.ebuild,v 1.5 2006/08/03 01:59:45 dang Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gentoo.com/di/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ia64 ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="app-shells/bash"
