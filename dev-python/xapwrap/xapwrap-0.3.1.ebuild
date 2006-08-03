@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xapwrap/xapwrap-0.3.1.ebuild,v 1.1 2006/05/05 16:18:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xapwrap/xapwrap-0.3.1.ebuild,v 1.2 2006/08/03 18:43:21 swegener Exp $
 
 inherit distutils eutils
 
@@ -23,7 +23,7 @@ DOCS="README NEWS.txt"
 
 
 pkg_setup() {
-	if ! built_with_use xapian-bindings python; then
+	if ! built_with_use dev-libs/xapian-bindings python; then
 		eerror "Need xapian-bindings compiled with USE=python"
 		die "Need xapian-bindings compiled with USE=python"
 	fi
