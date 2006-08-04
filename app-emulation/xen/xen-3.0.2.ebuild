@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.5 2006/06/02 09:01:27 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.6 2006/08/04 15:09:42 chrb Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -22,6 +22,8 @@ IUSE="debug custom-cflags pae hardened"
 
 DEPEND="sys-devel/dev86"
 RDEPEND=""
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
