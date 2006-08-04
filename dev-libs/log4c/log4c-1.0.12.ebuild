@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.5 2005/07/29 23:30:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.6 2006/08/04 02:57:58 dragonheart Exp $
 
 inherit eutils
 
@@ -15,18 +15,18 @@ IUSE="doc"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.2.15
 		virtual/tetex
-		virtual/ghostscript )
-	>=media-gfx/graphviz-1.7.15-r2"
+		virtual/ghostscript )"
+RDEPEND=">=media-gfx/graphviz-1.7.15-r2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-function.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-function.patch
 }
 
 src_compile() {
 
-	econf --enable-test `use_enable doc` || die
+	econf --enable-test $(use_enable doc) || die
 	use doc && addwrite "${ROOT}/var/cache/fonts"
 	emake || die
 }
@@ -34,10 +34,10 @@ src_compile() {
 src_test() {
 	# test case broken
 	#${S}/tests/log4c/test_rc || die "test_rc failed"
-	${S}/tests/log4c/test_category || die "test_rc failed"
+	"${S}"/tests/log4c/test_category || die "test_rc failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	prepalldocs.new || prepalldocs
+	emake DESTDIR="${D}" install || die
+	prepalldocs
 }

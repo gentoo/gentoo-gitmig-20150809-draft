@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.8 2005/07/29 23:30:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.9 2006/08/04 02:57:58 dragonheart Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/expat-1.95.2
 	>=media-gfx/graphviz-1.7.15-r2
 	virtual/logger"
 
-DEPEND="${RDEPEND}
+DEPEND=">=dev-libs/expat-1.95.2
 	doc? ( >=app-doc/doxygen-1.2.15 )"
 
 src_unpack() {

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.10 2005/07/29 23:31:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.11 2006/08/04 02:57:58 dragonheart Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Log4c is a library of C for flexible logging to files, syslog and other destinations. It is modeled after the Log for Java library (http://jakarta.apache.org/log4j/), staying as close to their API as is reasonable."
 SRC_URI="mirror://sourceforge/log4c/${P}.tar.gz"
@@ -15,18 +15,18 @@ IUSE="doc"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.2.15
 		virtual/tetex
-		virtual/ghostscript )
-	sys-devel/autoconf
-	>=media-gfx/graphviz-1.7.15-r2"
+		virtual/ghostscript )"
+RDEPEND=">=media-gfx/graphviz-1.7.15-r2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/makefile.doc.am.patch
-	epatch ${FILESDIR}/makefile.doc.in.patch
-	epatch ${FILESDIR}/configure.in.patch
-	epatch ${FILESDIR}/log4c_1.0.11_test.patch
-	epatch ${FILESDIR}/${P}-function.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/makefile.doc.am.patch
+	epatch "${FILESDIR}"/makefile.doc.in.patch
+	epatch "${FILESDIR}"/configure.in.patch
+	epatch "${FILESDIR}"/log4c_1.0.11_test.patch
+	epatch "${FILESDIR}"/${P}-function.patch
+	eautoreconf
 }
 
 src_compile() {
@@ -38,17 +38,16 @@ src_compile() {
 	#	myconf="${myconf} --enable-test"
 	#fi
 
-	autoconf
-	econf --enable-test `use_enable doc` || die
+	econf --enable-test $(use_enable doc) || die
 	use doc && addwrite "${ROOT}/var/cache/fonts"
 	emake || die
 }
 
 src_test() {
-	${S}/tests/log4c/test_category || die "test_rc failed"
+	"${S}"/tests/log4c/test_category || die "test_rc failed"
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
-	prepalldocs.new || prepalldocs
+	emake DESTDIR="${D}" install || die
+	prepalldocs
 }

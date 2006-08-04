@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/log4c
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.26 2005/07/29 23:30:05 dragonheart Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/ChangeLog,v 1.27 2006/08/04 02:57:58 dragonheart Exp $
+
+  04 Aug 2006; Daniel Black <dragonheart@gentoo.org> log4c-1.0.10-r1.ebuild,
+  log4c-1.0.11.ebuild, log4c-1.0.12.ebuild:
+  QA fixes + graphviz is only a RDEPEND - bug #142719 thanks Carsten Lohrke
 
   29 Jul 2005; Daniel Black <dragonheart@gentoo.org> log4c-1.0.10-r1.ebuild,
   log4c-1.0.11.ebuild, log4c-1.0.12.ebuild:
