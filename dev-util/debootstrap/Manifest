@@ -1,9 +1,9 @@
-DIST debootstrap_0.2.41-0.2.tar.gz 32239
-DIST debootstrap_0.2.45-0.2.tar.gz 33682
-DIST debootstrap_0.2.45.tar.gz 33510
-DIST debootstrap_0.3.2.2.tar.gz 205457
-DIST debootstrap_0.3.3.tar.gz 218441
-DIST devices.tar.gz 47835
+DIST debootstrap_0.2.41-0.2.tar.gz 32239 RMD160 1c234c6b94ce9a3a7667d747cf843af83f65f65f SHA1 f07aad70e2d8e8a83c8435081497d3894850f7ab SHA256 4189934825899553238ecc22073444e3a0177bce7b51731b2b1b51dfd47f1414
+DIST debootstrap_0.2.45-0.2.tar.gz 33682 RMD160 a4f097eebce6645f76999cef5fac57798cff8685 SHA1 69fc68974af2b080fd585e55a9763883a0082a69 SHA256 5d49216c2578bd0d17745b98d04e20d07f76fdf257086c26e3023621d1d9ebda
+DIST debootstrap_0.2.45.tar.gz 33510 RMD160 32c11e0abc066fc5af12b9c13fcf28ccb7d81887 SHA1 81e7196fc2ad5ef108cdab29ff5cf8b22ae2254c SHA256 9fd00b983ca0fd352bc8c88e682d6fbfd7e00388af85baefa1ebfb3a9ae4c190
+DIST debootstrap_0.3.2.2.tar.gz 205457 RMD160 3cd5581595c53c3cdd8da444bcec473c9c13862d SHA1 4861ad0117f5e65bbd269a7cbce9f346bf880106 SHA256 8ebf12e8e6224ce58c4b99c7cea6913b79a5a0320f538ba0cdfe969b05a6335f
+DIST debootstrap_0.3.3.tar.gz 218441 RMD160 f8c8b24a5651ef32bb67bebfc6f4d70a89e9c407 SHA1 1ba93658f30c0150545133fcd3108efa77618b12 SHA256 1373a165cfbdee523da31a0cde4ff1d8d05c6b93750f689be8c979cf5f80d270
+DIST devices.tar.gz 47835 RMD160 5ef7477a58c48a25765ce6aae981e36a794e5440 SHA1 90d717258702cb147e1e7a2fe2ae5352794565c2 SHA256 0d93f93c8b21160069d14e74f8f990a2e0e1e5a90dc828b29e6b3f5aa5829e48
 EBUILD debootstrap-0.2.41.ebuild 832 RMD160 4375644b0db39ed5b8f4d347cdfeb498343e6c31 SHA1 3495e4ddc2035a3f25b8f48966885299fcfa331d SHA256 42bf4a0320d9ee734902d50cc28b9d6c2d728673c0add16b9c770a74f5d924d9
 MD5 422abd3076e30f5df3d545e41fa39cbf debootstrap-0.2.41.ebuild 832
 RMD160 4375644b0db39ed5b8f4d347cdfeb498343e6c31 debootstrap-0.2.41.ebuild 832
@@ -20,6 +20,10 @@ EBUILD debootstrap-0.3.2.2.ebuild 828 RMD160 5f6b48efe5b596112acca48f038107836e3
 MD5 17e2a46e747b2217e9af3555592e1d87 debootstrap-0.3.2.2.ebuild 828
 RMD160 5f6b48efe5b596112acca48f038107836e3f3dbd debootstrap-0.3.2.2.ebuild 828
 SHA256 3ce42d19094bf1ad2994dc7c25a5d91d3a889b5a627dbceca3af9351ac205776 debootstrap-0.3.2.2.ebuild 828
+EBUILD debootstrap-0.3.3-r1.ebuild 869 RMD160 db777112e9f8354ee9b055656a5834e5ecb89ce8 SHA1 9220086749ddf9b9f7ab2ad2f82a3c2196259edf SHA256 33cb9c54a6d26db8aa40a39d6633ca57c429bb8c87b70a3096eda0ee64ce1df9
+MD5 696f1848cf77db9f6636836fb36b6f5d debootstrap-0.3.3-r1.ebuild 869
+RMD160 db777112e9f8354ee9b055656a5834e5ecb89ce8 debootstrap-0.3.3-r1.ebuild 869
+SHA256 33cb9c54a6d26db8aa40a39d6633ca57c429bb8c87b70a3096eda0ee64ce1df9 debootstrap-0.3.3-r1.ebuild 869
 EBUILD debootstrap-0.3.3.ebuild 846 RMD160 29273528a0c4982da33f1a91db0773c80a58ef76 SHA1 a37cc190a37964796e1ad49f16adbe994a669b2c SHA256 efc4e6559a5391a053a6c1904f976eb3c9bacaced524f399192d534d8298ac91
 MD5 bb8c5a039eab3008e980475cd4113358 debootstrap-0.3.3.ebuild 846
 RMD160 29273528a0c4982da33f1a91db0773c80a58ef76 debootstrap-0.3.3.ebuild 846
@@ -32,18 +36,21 @@ MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
-MD5 3645961adfa8ca0fedba837f677d623c files/digest-debootstrap-0.2.41 131
-RMD160 ecb9c0417fe569b4690b7e354eaefa7f41da13e7 files/digest-debootstrap-0.2.41 131
-SHA256 b3f9e0fd0b059a56b5e104eb5e9dec2852901a7c11d2ec1a521db2214dbcdf73 files/digest-debootstrap-0.2.41 131
-MD5 a6ff3d4eafa9f103d12d1427399e6ba6 files/digest-debootstrap-0.2.45 127
-RMD160 1ea01e9f6186cc125e9dda9e868d220a0d5e81bd files/digest-debootstrap-0.2.45 127
-SHA256 54bdfafa05df5f8aea82435efba3dbdd3432b309878a1145d8ba2c690ebb32e2 files/digest-debootstrap-0.2.45 127
-MD5 87e52d4186fe402689fd0ee696bcafd8 files/digest-debootstrap-0.2.45-r1 131
-RMD160 fd10e32a8db024a030822c6b9ae7e8a1244ff914 files/digest-debootstrap-0.2.45-r1 131
-SHA256 26f36a1a6ead89e18c6a6569b9b15540673a37603c97c4e5089bb94ef2ee0789 files/digest-debootstrap-0.2.45-r1 131
-MD5 f862cbd5bf7c6fd718d98cf35f87fab9 files/digest-debootstrap-0.3.2.2 129
-RMD160 9eeaaa82a8a62a5a0bd8d64179653cef33f7f5f5 files/digest-debootstrap-0.3.2.2 129
-SHA256 0bcafd5c4f8647b6abdd2d142c5206620b8e27ed480b35c6603f784c8c00d5e3 files/digest-debootstrap-0.3.2.2 129
-MD5 6266067e834b6b504668ccc1823b8dfc files/digest-debootstrap-0.3.3 127
-RMD160 46c9a9366c079edaf8a403fc9f9800cbf01ac153 files/digest-debootstrap-0.3.3 127
-SHA256 d75ab5c33dc7c7a2b8cf31650193a6a9cc052f909ddd7f1aed14e33151401420 files/digest-debootstrap-0.3.3 127
+MD5 eb2afc9bc84aabd313b33820593ee093 files/digest-debootstrap-0.2.41 485
+RMD160 6122b43e0def6a3c90a2d2912fdaac938034f0d0 files/digest-debootstrap-0.2.41 485
+SHA256 bd7f0fa79555683f2be63488e33b840d944274b5636d5b8fbd610c3f58522fcc files/digest-debootstrap-0.2.41 485
+MD5 bc6b6e40912df5ad282c06fe8725b68b files/digest-debootstrap-0.2.45 473
+RMD160 1410bdd748e51a971ebfc15be39b41a8ebb8f1b1 files/digest-debootstrap-0.2.45 473
+SHA256 242951b0a84033d788ff0136c697c00418e123ec89c163ed28f3279be8fdb4ae files/digest-debootstrap-0.2.45 473
+MD5 11812fe962a113fa8e7b4a1123ce21a8 files/digest-debootstrap-0.2.45-r1 485
+RMD160 e837ee47740f708513eb2794e292a64adb20adbd files/digest-debootstrap-0.2.45-r1 485
+SHA256 b1ded7e8dab919f36fffd4028384d9eb602ed37dd74362df0c9d8071666ecae4 files/digest-debootstrap-0.2.45-r1 485
+MD5 96f5e23e10b9783db3f3327394414615 files/digest-debootstrap-0.3.2.2 479
+RMD160 5920116f2f7c4da86cd70e8f121a7909c8d0fcb2 files/digest-debootstrap-0.3.2.2 479
+SHA256 22ada10591701142757d498967f72e09347ebd23b2ca7d603d8957042f2244e9 files/digest-debootstrap-0.3.2.2 479
+MD5 3ee28766a282d5768957d3a11becc184 files/digest-debootstrap-0.3.3 473
+RMD160 9cac1b6bdac005c4978fedbe0da9c21c2aa9b991 files/digest-debootstrap-0.3.3 473
+SHA256 da5101af45c2e534f31b607de9a24fae85c0816f26665b6e72b72e300961d910 files/digest-debootstrap-0.3.3 473
+MD5 3ee28766a282d5768957d3a11becc184 files/digest-debootstrap-0.3.3-r1 473
+RMD160 9cac1b6bdac005c4978fedbe0da9c21c2aa9b991 files/digest-debootstrap-0.3.3-r1 473
+SHA256 da5101af45c2e534f31b607de9a24fae85c0816f26665b6e72b72e300961d910 files/digest-debootstrap-0.3.3-r1 473
