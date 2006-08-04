@@ -1,11 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.5 2006/08/04 00:24:29 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.21-r3.ebuild,v 1.1 2006/08/04 00:24:29 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
 ntlm_patch=${P}-ntlm_impl-spnego.patch.gz
-SASLAUTHD_CONF_VER=2.1.21
 
 DESCRIPTION="The Cyrus SASL (Simple Authentication and Security Layer)"
 HOMEPAGE="http://asg.web.cmu.edu/sasl/"
@@ -65,6 +64,18 @@ pkg_setup() {
 		ewarn "(Control-C to abort)..."
 		epause 10
 	fi
+
+	echo
+	einfo "This version include a "-r" option for saslauthd to instruct it to reassemble"
+	einfo "realm and username into a username of "user@realm" form."
+	echo
+	einfo "If you are still using postfix->sasl->saslauthd->pam->mysql for"
+	einfo "authentication, please edit /etc/conf.d/saslauthd to read:"
+	einfo "SASLAUTHD_OPTS=\"\${SASLAUTH_MECH} -a pam -r\""
+	einfo "Don't forget to restart the service: \`/etc/init.d/saslauthd restart\`."
+	echo
+	einfo "Pause 10 seconds before continuing."
+	epause 10
 }
 
 src_unpack() {
@@ -75,50 +86,38 @@ src_unpack() {
 	sed -e '/define DEFAULT_REMOTE_SERVICE/s:imap:imap2:' \
 		-i saslauthd/auth_rimap.c || die "sed failed"
 
-	# Fixed upstream. Add openldap 2.3 compile patch - bug #113914
-	# epatch "${FILESDIR}/${PN}-2.1.21-configure.patch"
+	# Add openldap 2.3 compile patch - bug #113914
+	epatch "${FILESDIR}/${PN}-2.1.21-configure.patch"
 
-	# Fixed upstream. Add configdir support.
-	# epatch "${FILESDIR}/${PN}-2.1.20-configdir.patch"
+	# Add configdir support.
+	epatch "${FILESDIR}/${PN}-2.1.20-configdir.patch"
 
 	# Fix include path for newer PostgreSQL versions.
 	epatch "${FILESDIR}/${PN}-2.1.17-pgsql-include.patch"
 
-	# Fixed upstream. Fix for gcc-4.0
-	# epatch "${FILESDIR}/${PN}-2.1.20-gcc4.patch"
+	# Fix for gcc-4.0
+	epatch "${FILESDIR}/${PN}-2.1.20-gcc4.patch"
 
 	# UNSUPPORTED ntlm patch. Bug #81342
 	use ntlm_unsupported_patch && epatch "${DISTDIR}/${ntlm_patch}"
-
-	# --as-needed.
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-
-	# Support for crypted passwords. Bug #45181
-	use crypt && epatch "${FILESDIR}/cyrus-sasl-2.1.19-checkpw.c.patch"
-
-	# Upstream doesn't even honor their own configure options... grumble
-	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' "${S}"/plugins/Makefile.{am,in}
 
 	# Recreate configure.
 	export WANT_AUTOCONF="2.5"
 	rm -rf configure config.h.in autom4te.cache
 	ebegin "Recreating configure"
-	aclocal -I "${S}/cmulocal" -I "${S}/config" && autoheader && autoconf || \
-	 	die "recreate configure failed"
+	aclocal -I cmulocal -I config && autoheader && autoconf || \
+		die "recreate configure failed"
 	eend $?
 
-	# Recreate configure in saslauthd.
-	cd "${S}/saslauthd" || die "cd ${S}/saslauthd failed"
-	rm -rf configure config.h.in autom4te.cache
-	ebegin "Recreating configure in saslauthd"
-	aclocal -I "${S}/cmulocal" -I "${S}/config" && autoheader && autoconf || \
-	 	die "recreate configure failed"
-	eend $?
+	# Support for crypted passwords. Bug #45181
+	use crypt && epatch "${FILESDIR}/cyrus-sasl-2.1.19-checkpw.c.patch"
 
+	# Upstream doesn't even honor their own configure options... grumble
+	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' ${S}/plugins/Makefile.{am,in}
 }
 
 src_compile() {
-	local myconf="--enable-login --enable-ntlm --enable-auth-sasldb --disable-krb4 --disable-otp"
+	local myconf="--enable-login --enable-ntlm --disable-krb4 --disable-otp"
 #	myconf="${myconf} `use_enable static`" -- doesn't work upstream Bug #94137
 	myconf="${myconf} `use_with ssl openssl`"
 	myconf="${myconf} `use_with pam`"
@@ -172,9 +171,9 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	# Upstream doesn't even honor their own configure options... grumble
-	# We sed'd Makefile.in already. Remove this block after testing period.
-	# sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' ${S}/plugins/Makefile
+	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' ${S}/plugins/Makefile
 
+	einfo "build with MAKEOPTS=$MAKEOPTS"
 	# we force -j1 for bug #110066
 	emake -j1 || die "compile problem"
 
@@ -217,13 +216,24 @@ src_install () {
 	if use java; then
 		java-pkg_dojar ${PN}.jar
 		#hackish, don't wanna dig though makefile
-		rm -rf "${D}/usr/$(get_libdir)/java"
+		rm -rf ${D}/usr/$(get_libdir)/java
 		docinto java
-		dodoc "${S}/java/README" "${FILESDIR}/java.README.gentoo" "${S}"/java/doc/*
-		mkdir "${D}/usr/share/doc/${PF}/java/Test/" \
+		dodoc ${S}/java/README ${FILESDIR}/java.README.gentoo ${S}/java/doc/*
+		mkdir ${D}/usr/share/doc/${PF}/java/Test/ \
 			|| die "failed to create ${D}/usr/share/doc/${PF}/java/Test/"
-		cp "${S}"/java/Test/*.java "${D}/usr/share/doc/${PF}/java/Test/" \
+		cp ${S}/java/Test/*.java ${D}/usr/share/doc/${PF}/java/Test/ \
 			|| die "failed to copy java files to ${D}/usr/share/doc/${PF}/java/Test/"
+	fi
+
+	# Generate an empty sasldb2 with correct permissions.
+	if use berkdb || use gdbm; then
+		LD_OLD="${LD_LIBRARY_PATH}"
+		export LD_LIBRARY_PATH="${D}/usr/$(get_libdir)" SASL_PATH="${D}/usr/$(get_libdir)/sasl2"
+		echo "p" | "${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -p login
+		"${D}/usr/sbin/saslpasswd2" -f "${D}/etc/sasl2/sasldb2" -d login
+		export LD_LIBRARY_PATH="${LD_OLD}"
+		chown root:mail "${D}/etc/sasl2/sasldb2"
+		chmod 0640 "${D}/etc/sasl2/sasldb2"
 	fi
 
 	docinto ""
@@ -239,28 +249,15 @@ src_install () {
 		die "failed to install pwcheck to /etc/init.d"
 	newinitd "${FILESDIR}/saslauthd2.rc6" saslauthd || \
 		die "failed to install saslauthd to /etc/init.d"
-	newconfd "${FILESDIR}/saslauthd-${SASLAUTHD_CONF_VER}.conf" saslauthd || \
+	newconfd "${FILESDIR}/saslauthd-${PV}.conf" saslauthd || \
 		die "failed to install /etc/conf.d/saslauthd"
 
-	exeinto "${ROOT}/usr/sbin"
+	exeinto ${ROOT}/usr/sbin
 	newexe "${S}/saslauthd/testsaslauthd" testsaslauthd || \
 		die "failed to install testsaslauthd."
 }
 
 pkg_postinst () {
-	# Generate an empty sasldb2 with correct permissions.
-	if ( use berkdb || use gdbm ) && [[ ! -f "${ROOT}/etc/sasl2/sasldb2" ]]; then
-		einfo "Generate an empty sasldb2 with correct permissions."
-		echo "p" | "${ROOT}/usr/sbin/saslpasswd2" -f "${ROOT}/etc/sasl2/sasldb2" -p login \
-			|| die "failed to generate sasldb2"
-		"${ROOT}/usr/sbin/saslpasswd2" -f "${ROOT}/etc/sasl2/sasldb2" -d login \
-			|| die "failed to delete temp user"
-		chown root:mail "${ROOT}/etc/sasl2/sasldb2" \
-			|| die "failed to chown ${ROOT}/etc/sasl2/sasldb2"
-		chmod 0640 "${ROOT}/etc/sasl2/sasldb2" \
-			|| die "failed to chmod ${ROOT}/etc/sasl2/sasldb2"
-	fi
-
 	if use sample; then
 		einfo "You have chosen to install sources for example client and server."
 		einfo "To build these, please type:"
