@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cgi-Simple
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.19 2006/02/08 23:26:44 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.20 2006/08/04 23:00:32 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Cgi-Simple-0.077.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   28 Nov 2005; Tom Gall <tgall@gentoo.org> Cgi-Simple-0.077.ebuild:
   stable on ppc64
