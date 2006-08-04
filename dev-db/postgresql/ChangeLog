@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.285 2006/07/31 23:30:07 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.286 2006/08/04 14:36:38 cardoe Exp $
+
+  04 Aug 2006; <dougg@gentoo.org> postgresql-7.3.11.ebuild,
+  postgresql-7.3.15-r1.ebuild, postgresql-7.4.13.ebuild,
+  postgresql-8.0.8.ebuild, postgresql-8.1.4.ebuild:
+  USE flag split tcltk-> tcl & tk per bug #17808
 
   31 Jul 2006; Luca Longinotti <chtekk@gentoo.org>
   -files/postgresql-7.3.15-cubeparse.patch,
