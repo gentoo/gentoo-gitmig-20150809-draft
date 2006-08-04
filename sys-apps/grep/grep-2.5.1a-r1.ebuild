@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a-r1.ebuild,v 1.1 2006/08/01 05:20:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a-r1.ebuild,v 1.2 2006/08/04 15:28:25 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
-IUSE="build nls static"
+IUSE="nls pcre static"
 
 RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -64,16 +64,5 @@ src_install() {
 	ln -sfn grep "${D}"/bin/egrep || die "ln egrep failed"
 	ln -sfn grep "${D}"/bin/fgrep || die "ln fgrep failed"
 
-	if use build ; then
-		rm -r "${D}"/usr/share
-	else
-		dodoc AUTHORS ChangeLog NEWS README THANKS TODO
-	fi
-}
-
-pkg_postinst() {
-	if has pcre ${USE} ; then
-		ewarn "This grep ebuild no longer supports pcre.  If you want this"
-		ewarn "functionality, please use 'pcregrep' from the libpcre package."
-	fi
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
