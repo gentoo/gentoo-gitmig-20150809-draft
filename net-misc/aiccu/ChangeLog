@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.7 2006/05/17 14:15:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.8 2006/08/04 07:46:34 gmsoft Exp $
+
+  04 Aug 2006; Guy Martin <gmsoft@gentoo.org> aiccu-2005.01.31-r1.ebuild:
+  Stable on x86.
 
   17 May 2006; Guy Martin <gmsoft@gentoo.org>
   +files/init-after-ntp-client.patch, aiccu-2005.01.31-r1.ebuild:
