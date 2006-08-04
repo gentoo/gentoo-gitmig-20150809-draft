@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-Accessor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.25 2006/07/19 22:57:33 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Accessor/ChangeLog,v 1.26 2006/08/04 23:05:36 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-Accessor-0.19.ebuild, Class-Accessor-0.22.ebuild,
+  Class-Accessor-0.25.ebuild, Class-Accessor-0.27.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
 *Class-Accessor-0.27 (19 Jul 2006)
 
