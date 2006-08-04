@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/domi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.6 2006/06/10 14:17:58 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/domi/ChangeLog,v 1.7 2006/08/04 14:50:00 chrb Exp $
+
+*domi-20060630 (04 Aug 2006)
+
+  04 Aug 2006; Chris Bainbridge <chrb@gentoo.org> +domi-20060630.ebuild:
+  Bump thanks to Andrew Ross, #136726.
 
   10 Jun 2006; Chris Bainbridge <chrb@gentoo.org> -domi-20060406-r2.ebuild:
   remove old version
