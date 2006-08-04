@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/Class-Inspector-1.16.ebuild,v 1.2 2006/07/04 04:46:19 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/Class-Inspector-1.16.ebuild,v 1.3 2006/08/04 23:22:16 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/perl-Test-Simple"
+DEPEND="virtual/perl-Test-Simple
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
