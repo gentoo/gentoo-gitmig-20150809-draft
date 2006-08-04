@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.185 2006/08/01 01:31:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.186 2006/08/04 04:24:22 plasmaroo Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -962,7 +962,7 @@ headers___fix() {
 	# Voodoo to partially fix broken upstream headers.
 	# Issues with this function should go to plasmaroo.
 	sed -i \
-		-e '/^\#define.*TYPES_H/{:loop n; bloop}' \
+		-e '/^\#define.*_TYPES_H/{:loop n; bloop}' \
 		-e 's:\<\([us]\(8\|16\|32\|64\)\)\>:__\1:g' \
 		-e "s/ inline / __inline__ /g" \
 		"$@"
