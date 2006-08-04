@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.9.ebuild,v 1.9 2006/03/19 11:14:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.9.ebuild,v 1.10 2006/08/04 02:11:54 leonardop Exp $
 
 inherit java-pkg gnome2
 
@@ -38,6 +38,8 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	if use freetts; then
+		java-pkg_pkg_setup
+
 		local JABDIR="${ROOT}/usr/share/java-access-bridge/lib/"
 
 		G2CONF="--with-java-home=${JAVA_HOME} \

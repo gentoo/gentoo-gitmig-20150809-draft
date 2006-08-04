@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.0.ebuild,v 1.6 2006/07/17 14:49:22 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.0.ebuild,v 1.7 2006/08/04 02:11:54 leonardop Exp $
 
 inherit java-pkg gnome2
 
@@ -36,6 +36,8 @@ pkg_setup() {
 	G2CONF="--with-festival --with-speech-dispatcher"
 
 	if use freetts; then
+		java-pkg_pkg_setup
+
 		local JABDIR="${ROOT}/usr/share/java-access-bridge/lib/"
 
 		G2CONF="${G2CONF} --with-java-home=${JAVA_HOME} \
