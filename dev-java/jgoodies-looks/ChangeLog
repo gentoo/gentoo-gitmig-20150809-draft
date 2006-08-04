@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jgoodies-looks
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.13 2005/12/10 07:06:15 compnerd Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.14 2006/08/04 01:37:54 nichoj Exp $
+
+*jgoodies-looks-1.3.2-r1 (04 Aug 2006)
+*jgoodies-looks-1.2.2-r1 (04 Aug 2006)
+
+  04 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
+  +jgoodies-looks-1.2.2-r1.ebuild, +jgoodies-looks-1.3.2-r1.ebuild:
+  Revision bumps to support new Java system.
 
   10 Dec 2005; Saleem Abdulrasool <compnerd@gentoo.org>
   jgoodies-looks-1.3.2.ebuild:
