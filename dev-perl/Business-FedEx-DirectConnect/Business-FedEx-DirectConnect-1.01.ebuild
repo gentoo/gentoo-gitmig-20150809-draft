@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/Business-FedEx-DirectConnect-1.01.ebuild,v 1.7 2006/07/13 04:11:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/Business-FedEx-DirectConnect-1.01.ebuild,v 1.8 2006/08/04 22:39:30 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,6 @@ KEYWORDS="ia64 x86"
 SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
-	dev-perl/Tie-StrictHash"
+	dev-perl/Tie-StrictHash
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

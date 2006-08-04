@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/Apache-SessionX-2.01.ebuild,v 1.6 2006/07/10 14:21:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-SessionX/Apache-SessionX-2.01.ebuild,v 1.7 2006/08/04 22:18:47 mcummings Exp $
 
 inherit perl-module
 
@@ -19,7 +19,8 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 
-DEPEND="dev-perl/Apache-Session"
+DEPEND="dev-perl/Apache-Session
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {

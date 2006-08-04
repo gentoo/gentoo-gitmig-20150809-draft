@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.15.ebuild,v 1.10 2006/07/03 20:12:32 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.15.ebuild,v 1.11 2006/08/04 22:20:16 mcummings Exp $
 
 inherit perl-module
 
@@ -12,7 +12,8 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ppc sparc alpha ia64"
 SRC_TEST="skip"
-DEPEND="net-www/apache"
+DEPEND="net-www/apache
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_install() {

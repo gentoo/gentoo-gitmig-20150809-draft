@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.80-r1.ebuild,v 1.2 2006/07/16 09:01:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/Apache-Session-1.80-r1.ebuild,v 1.3 2006/08/04 22:17:59 mcummings Exp $
 
 inherit perl-module
 IUSE=""
@@ -14,9 +14,9 @@ LICENSE="Artistic"
 #KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="${DEPEND}
-	dev-perl/Test-Deep
+DEPEND="dev-perl/Test-Deep
 	virtual/perl-Digest-MD5
-	virtual/perl-Storable"
+	virtual/perl-Storable
+	dev-lang/perl"
 
 RDEPEND="${DEPEND}"

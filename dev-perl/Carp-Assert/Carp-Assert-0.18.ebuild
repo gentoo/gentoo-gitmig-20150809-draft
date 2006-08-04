@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert/Carp-Assert-0.18.ebuild,v 1.10 2006/07/10 14:38:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert/Carp-Assert-0.18.ebuild,v 1.11 2006/08/04 22:56:46 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,6 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="virtual/perl-Test-Simple"
+DEPEND="virtual/perl-Test-Simple
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

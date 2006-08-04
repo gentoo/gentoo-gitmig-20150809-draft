@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.28.ebuild,v 1.2 2006/07/03 20:23:30 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.28.ebuild,v 1.3 2006/08/04 22:35:26 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -17,7 +17,8 @@ SRC_TEST="do"
 # Install DB_File if you want older support. BerkleyDB no longer
 # supports less than 2.0.
 
-DEPEND=">=sys-libs/db-2.0"
+DEPEND=">=sys-libs/db-2.0
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

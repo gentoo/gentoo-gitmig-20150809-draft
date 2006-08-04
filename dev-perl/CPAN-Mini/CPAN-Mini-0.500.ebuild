@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-0.500.ebuild,v 1.1 2006/07/18 19:18:56 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/CPAN-Mini-0.500.ebuild,v 1.2 2006/08/04 22:46:53 mcummings Exp $
 
 inherit perl-module
 
@@ -18,5 +18,6 @@ SRC_TEST="do"
 DEPEND="dev-perl/libwww-perl
 		>=dev-perl/Compress-Zlib-1.20
 		dev-perl/File-HomeDir
-		dev-perl/URI"
+		dev-perl/URI
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

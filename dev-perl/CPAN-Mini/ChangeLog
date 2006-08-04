@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CPAN-Mini
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.7 2006/07/18 19:18:56 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini/ChangeLog,v 1.8 2006/08/04 22:46:53 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  CPAN-Mini-0.40.ebuild, CPAN-Mini-0.500.ebuild:
+  Adding perl dep; fixed DEPEND
 
 *CPAN-Mini-0.500 (17 Jul 2006)
 

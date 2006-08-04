@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/Algorithm-Annotate-0.10.ebuild,v 1.12 2006/07/03 20:01:14 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Annotate/Algorithm-Annotate-0.10.ebuild,v 1.13 2006/08/04 22:09:46 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,6 @@ KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/Algorithm-Diff-1.15"
+DEPEND=">=dev-perl/Algorithm-Diff-1.15
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

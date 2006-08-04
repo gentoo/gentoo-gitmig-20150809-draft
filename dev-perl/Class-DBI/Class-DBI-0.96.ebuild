@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-0.96.ebuild,v 1.17 2006/07/03 21:05:24 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-0.96.ebuild,v 1.18 2006/08/04 23:10:02 mcummings Exp $
 
 inherit perl-module
 
@@ -23,5 +23,6 @@ DEPEND="dev-perl/Class-Data-Inheritable
 		virtual/perl-Test-Simple
 		virtual/perl-Scalar-List-Utils
 		dev-perl/Ima-DBI
-		dev-perl/UNIVERSAL-moniker"
+		dev-perl/UNIVERSAL-moniker
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

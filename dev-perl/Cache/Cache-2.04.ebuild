@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/Cache-2.04.ebuild,v 1.1 2006/04/17 06:17:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/Cache-2.04.ebuild,v 1.2 2006/08/04 22:51:27 mcummings Exp $
 
 inherit perl-module
 
@@ -13,6 +13,7 @@ RDEPEND="	>=virtual/perl-DB_File-1.72
 			>=virtual/perl-Storable-1
 			>=dev-perl/Digest-SHA1-2.01
 			dev-perl/Heap
+			dev-lang/perl
 			>=dev-perl/IO-String-1.02
 			dev-perl/TimeDate
 			dev-perl/File-NFSLock"

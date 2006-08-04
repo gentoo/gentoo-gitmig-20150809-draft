@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Boulder/Boulder-1.30.ebuild,v 1.6 2006/07/10 14:30:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Boulder/Boulder-1.30.ebuild,v 1.7 2006/08/04 22:38:28 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,6 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/XML-Parser"
+DEPEND="dev-perl/XML-Parser
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
