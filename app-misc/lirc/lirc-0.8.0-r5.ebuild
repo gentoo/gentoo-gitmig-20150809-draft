@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.1 2006/07/31 09:03:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.2 2006/08/04 11:10:03 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -236,6 +236,9 @@ src_unpack() {
 
 	# Bugfix for i2c-driver in combination with newer ivtv and Kernel 2.6.17
 	epatch ${FILESDIR}/${P}-i2c-kernel-2.6.17.diff
+
+	# Wrong config-filename for LIRC_DEVICES=pixelview_bt878
+	epatch ${FILESDIR}/${P}-conf-pixelview_bt878.diff
 
 	# Apply patches needed for some special device-types
 	[[ ${NEED_XBOX_PATCH:-0} == 1 ]] && epatch ${FILESDIR}/lirc-0.8.0pre4-xbox-remote.diff
