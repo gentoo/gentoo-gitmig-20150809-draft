@@ -3,14 +3,15 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>A user ebuild that I felt obliged to include. Please take over if you want 
-it</description>
-</maintainer>
-<maintainer>
   <email>marienz@gentoo.org</email>
   <name>Marien Zwart</name>
  </maintainer>
-<longdescription></longdescription>
+<longdescription>
+Xapian is an Open Source Probabilistic Information Retrieval library, released
+under the GPL. It's written in C++, with bindings to allow use from Perl,
+Python, PHP, Java, TCL, C#, and Ruby (so far!)
+
+Xapian is designed to be a highly adaptable toolkit to allow developers to
+easily add advanced indexing and search facilities to their own applications.
+</longdescription>
 </pkgmetadata>
