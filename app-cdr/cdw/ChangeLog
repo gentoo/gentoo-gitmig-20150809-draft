@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.14 2006/05/08 02:52:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.15 2006/08/04 05:49:40 tsunam Exp $
+
+  04 Aug 2006; Joshua Jackson <tsunam@gentoo.org> cdw-0.2.4.ebuild:
+  Stable x86; bug #142570
 
   08 May 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/cdw-0.2.4-gcc4.patch, cdw-0.2.4.ebuild:
