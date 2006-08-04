@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.27 2006/08/04 12:43:58 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.28 2006/08/04 17:15:06 tcort Exp $
+
+  04 Aug 2006; Thomas Cort <tcort@gentoo.org> x11vnc-0.8.2.ebuild:
+  Stable on amd64 wrt security Bug #142559.
 
   04 Aug 2006; Rene Nussbaumer <killerfox@gentoo.org> x11vnc-0.8.2.ebuild:
   Stable on hppa. See bug #142559.
