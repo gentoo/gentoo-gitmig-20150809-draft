@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/Authen-SASL-2.04.ebuild,v 1.18 2005/08/15 09:52:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/Authen-SASL-2.04.ebuild,v 1.19 2006/08/04 22:32:36 mcummings Exp $
 
 inherit perl-module
 
@@ -15,3 +15,5 @@ IUSE=""
 
 export OPTIMIZE="$CFLAGS"
 AUTHOR="GBARR"
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

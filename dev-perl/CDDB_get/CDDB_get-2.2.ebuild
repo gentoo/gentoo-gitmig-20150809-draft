@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/CDDB_get-2.2.ebuild,v 1.7 2004/10/16 23:57:20 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB_get/CDDB_get-2.2.ebuild,v 1.8 2006/08/04 22:42:06 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,5 @@ SLOT="2"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ~ppc sparc ~alpha"
 IUSE=""
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

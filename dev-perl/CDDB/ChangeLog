@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CDDB
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.18 2006/07/10 14:32:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB/ChangeLog,v 1.19 2006/08/04 22:40:44 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org> CDDB-1.12.ebuild,
+  CDDB-1.15.ebuild, CDDB-1.16.ebuild, CDDB-1.17.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> CDDB-1.17.ebuild:
   Mark 1.17 stable on ia64
