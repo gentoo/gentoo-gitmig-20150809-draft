@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r4.ebuild,v 1.1 2006/08/04 14:46:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r4.ebuild,v 1.2 2006/08/04 15:24:46 wolf31o2 Exp $
 
 inherit vmware eutils
 
@@ -47,3 +47,8 @@ RUN_UPDATE="no"
 dir=/opt/vmware/workstation
 Ddir=${D}/${dir}
 
+src_install() {
+	vmware_src_install
+
+	make_desktop_entry vmware "VMWare Workstation" vmware.png
+}

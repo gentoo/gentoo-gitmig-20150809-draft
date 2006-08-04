@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r11.ebuild,v 1.1 2006/08/04 14:46:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r11.ebuild,v 1.2 2006/08/04 15:24:46 wolf31o2 Exp $
 
 inherit toolchain-funcs eutils vmware
 
@@ -64,11 +64,6 @@ src_install() {
 	vmware_src_install
 	# We also remove libgdk_pixbuf stuff, to resolve bug #81344.
 	rm -rf ${Ddir}/lib/lib/libgdk_pixbuf.so.2
-
-	# A simple icon I made
-	insinto ${dir}/lib/icon
-	doins ${DISTDIR}/vmware.png || die
-	doicon ${DISTDIR}/vmware.png || die
 
 	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
