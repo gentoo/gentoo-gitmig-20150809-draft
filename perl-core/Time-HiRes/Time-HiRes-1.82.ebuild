@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/Time-HiRes-1.82.ebuild,v 1.8 2006/02/25 23:42:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/Time-HiRes-1.82.ebuild,v 1.9 2006/08/04 13:34:47 mcummings Exp $
 
 inherit perl-module
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 mydoc="TODO"
 

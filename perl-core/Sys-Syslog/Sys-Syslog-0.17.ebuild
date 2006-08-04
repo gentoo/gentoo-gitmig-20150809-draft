@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/Sys-Syslog-0.17.ebuild,v 1.1 2006/07/30 02:14:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/Sys-Syslog-0.17.ebuild,v 1.2 2006/08/04 13:31:15 mcummings Exp $
 
 inherit perl-module
 
@@ -15,3 +15,5 @@ IUSE=""
 
 # Tests disabled - they attempt to verify on the live system
 #SRC_TEST="do"
+
+DEPEND="dev-lang/perl"

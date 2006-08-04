@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.6 2006/07/30 02:14:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.7 2006/08/04 13:31:15 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Sys-Syslog-0.13.ebuild, Sys-Syslog-0.16.ebuild, Sys-Syslog-0.17.ebuild:
+  Adding perl dep
 
 *Sys-Syslog-0.17 (30 Jul 2006)
 

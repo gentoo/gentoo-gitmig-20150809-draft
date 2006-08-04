@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/MIME-Base64-3.01.ebuild,v 1.1 2005/05/25 14:05:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/MIME-Base64/MIME-Base64-3.01.ebuild,v 1.2 2006/08/04 13:27:06 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,5 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ppc64"
 IUSE=""
 
 SRC_TEST="do"
+
+DEPEND="dev-lang/perl"

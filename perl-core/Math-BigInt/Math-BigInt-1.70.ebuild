@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.70.ebuild,v 1.1 2005/05/24 17:52:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/Math-BigInt-1.70.ebuild,v 1.2 2006/08/04 13:28:28 mcummings Exp $
 
 inherit perl-module
 
@@ -13,3 +13,5 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~mips ~ppc ~sparc ~s390"
 IUSE=""
+
+DEPEND="dev-lang/perl"

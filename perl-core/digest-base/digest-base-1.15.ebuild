@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/digest-base-1.15.ebuild,v 1.2 2006/07/05 20:04:01 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/digest-base/digest-base-1.15.ebuild,v 1.3 2006/08/04 13:37:55 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/perl-MIME-Base64"
+DEPEND="dev-lang/perl
+		virtual/perl-MIME-Base64"
 RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
