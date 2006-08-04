@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4-r1.ebuild,v 1.7 2006/07/15 22:43:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4-r1.ebuild,v 1.8 2006/08/04 22:51:51 kevquinn Exp $
 
 inherit eutils multilib autotools libtool
 
@@ -32,6 +32,11 @@ src_unpack() {
 	# Also includes a small change for libtool.
 	epatch "${FILESDIR}/${P}-renameexes.patch"
 
+	# Set AT_M4DIR to workaround eautoreconf limitation, and copy
+	# mkinstalldirs script to the po subdirectory for compatibility
+	# with gettext-0.15 (see bug #142565)
+	cp ${S}/mkinstalldirs ${S}/po/
+	export AT_M4DIR="${S}/m4"
 	# Makefile.am modified, libtool added, hence autoreconfi
 	# and elibtoolize.
 	WANT_AUTOMAKE="1.9" eautoreconf
