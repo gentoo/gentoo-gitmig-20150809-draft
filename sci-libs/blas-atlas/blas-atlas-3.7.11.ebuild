@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.8 2006/07/27 00:10:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.9 2006/08/04 13:31:40 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://math-atlas.sourceforge.net/"
 MY_PN=${PN/blas-/}
 MY_PV=3.6.0
 SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
-		mirror://gentoo/atlas${MY_PV}-shared-libs.2.patch.bz2"
+		mirror://gentoo/atlas${MY_PV}-shared-libs.3.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -32,7 +32,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/unbuffered.patch
 	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
-	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.2.patch.bz2
+	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.3.patch.bz2
 	epatch "${FILESDIR}"/${PV}-ppc-configure.patch
 	sed -i \
 		-e "s:ASM:ASM VOLATILE:" \
