@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/Class-Singleton-1.03.ebuild,v 1.11 2005/09/17 00:36:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/Class-Singleton-1.03.ebuild,v 1.12 2006/08/04 23:31:10 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,5 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
 IUSE=""
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
