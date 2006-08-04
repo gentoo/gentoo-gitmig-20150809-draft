@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Factory-Util
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.12 2005/10/02 12:25:03 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.13 2006/08/04 23:16:47 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Class-Factory-Util-1.6.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org>
   Class-Factory-Util-1.6.ebuild:
