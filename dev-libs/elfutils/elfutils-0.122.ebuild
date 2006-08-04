@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.122.ebuild,v 1.1 2006/07/25 14:32:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.122.ebuild,v 1.2 2006/08/04 15:34:11 vapier Exp $
 
 inherit eutils autotools
 
@@ -34,9 +34,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.118-libelf-link.patch
 	epatch "${FILESDIR}"/${PN}-0.118-PaX-support.patch
 	epatch "${FILESDIR}"/${PN}-0.118-no-nested-functions.patch #116968
-	epatch "${FILESDIR}"/${PN}-0.120-mkinstalldirs.patch
+	epatch "${FILESDIR}"/${PN}-0.122-aux-config-dir.patch #
+	# this will make more files than need be, but who cares really
+	chmod a+rx config/*
 
-	eautoreconf
+	AT_M4DIR="${S}/m4" eautoreconf
 
 	find . -name Makefile.in -print0 | xargs -0 sed -i -e 's:-W\(error\|extra\)::g'
 }

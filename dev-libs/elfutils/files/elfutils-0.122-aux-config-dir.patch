@@ -1,0 +1,33 @@
+--- configure.ac
++++ configure.ac
+@@ -19,7 +19,7 @@
+ AC_INIT([Red Hat elfutils],[0.122],[http://bugzilla.redhat.com/bugzilla/],
+ 	[elfutils])
+ 
+-AC_CONFIG_AUX_DIR([config])
++AC_CONFIG_AUX_DIR([$PWD/config])
+ AC_CONFIG_FILES([config/Makefile])
+ 
+ AC_COPYRIGHT([Copyright (C) 1996-2003, 2004, 2005, 2006 Red Hat, Inc.])
+--- libelf-po/Makefile.in.in
++++ libelf-po/Makefile.in.in
+@@ -28,7 +28,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_builddir)/$(MKINSTALLDIRS)" ;; esac`
++mkinstalldirs = $(SHELL) $(MKINSTALLDIRS)
+ 
+ GMSGFMT = @GMSGFMT@
+ MSGFMT = @MSGFMT@
+--- po/Makefile.in.in
++++ po/Makefile.in.in
+@@ -28,7 +28,7 @@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+ MKINSTALLDIRS = @MKINSTALLDIRS@
+-mkinstalldirs = $(SHELL) `case "$(MKINSTALLDIRS)" in /*) echo "$(MKINSTALLDIRS)" ;; *) echo "$(top_builddir)/$(MKINSTALLDIRS)" ;; esac`
++mkinstalldirs = $(SHELL) $(MKINSTALLDIRS)
+ 
+ GMSGFMT = @GMSGFMT@
+ MSGFMT = @MSGFMT@
