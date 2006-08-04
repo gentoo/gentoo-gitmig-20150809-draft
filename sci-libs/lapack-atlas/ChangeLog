@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.15 2006/08/01 00:32:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.16 2006/08/04 13:37:50 markusle Exp $
+
+  04 Aug 2006; Markus Dittrich <markusle@gentoo.org>
+  lapack-atlas-3.7.11.ebuild, lapack-atlas-3.7.11-r1.ebuild:
+  Removed unnecessary but harmless cruft from 
+  atlas3.6.0-shared-libs.2.patch and bumped patch to revision 3.
 
   31 Jul 2006; Markus Dittrich <markusle@gentoo.org>
   files/3.7.11-allow-any-gcc-version.patch:
