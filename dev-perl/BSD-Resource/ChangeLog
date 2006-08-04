@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.21 2006/07/10 14:28:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.22 2006/08/04 22:08:53 mcummings Exp $
+
+  04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  BSD-Resource-1.24.ebuild, BSD-Resource-1.25.ebuild,
+  BSD-Resource-1.26.ebuild, BSD-Resource-1.28.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> BSD-Resource-1.25.ebuild:
   Mark 1.25 stable on ia64
