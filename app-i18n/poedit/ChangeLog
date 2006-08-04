@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/poedit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.27 2006/08/03 17:30:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/ChangeLog,v 1.28 2006/08/04 05:32:00 tsunam Exp $
+
+  04 Aug 2006; Joshua Jackson <tsunam@gentoo.org> poedit-1.3.4.ebuild:
+  Stable x86; bug #142612
 
   03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> poedit-1.3.4.ebuild:
   Stable on sparc wrt #142612
