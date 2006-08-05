@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r4.ebuild,v 1.2 2006/07/28 21:06:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.5-r4.ebuild,v 1.3 2006/08/05 23:54:42 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -12,13 +12,13 @@ IMQ_PATCH="iptables-1.3.0-imq1.diff"
 DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.iptables.org/ http://www.linuximq.net/ http://l7-filter.sf.net/"
 SRC_URI="http://iptables.org/projects/iptables/files/${P}.tar.bz2
-	imq? (	http://www.linuximq.net/patchs/${IMQ_PATCH} )
-	l7filter? (	mirror://sourceforge/l7-filter/${L7_P}.tar.gz )"
+	imq? ( http://www.linuximq.net/patchs/${IMQ_PATCH} )
+	l7filter? ( mirror://sourceforge/l7-filter/${L7_P}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ipv6 static imq l7filter extensions"
+IUSE="extensions imq ipv6 l7filter static"
 
 DEPEND="virtual/os-headers
 	l7filter? ( virtual/linux-sources )
@@ -81,11 +81,23 @@ src_unpack() {
 		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/${L7_P}/${L7_PATCH}
 		chmod +x extensions/.layer7-test*
 	fi
-}
 
+	# the net directory is moving around so account for new/old locations
+	cd "${S}"/extensions
+	local x
+	for x in .*-test* ; do
+		sed -e 's:net/ipv[46]/netfilter:net/netfilter:g' ${x} > .new-${x}
+		if cmp ${x} .new-${x} > /dev/null ; then
+			rm -f .new-${x}
+		else
+			chmod a+rx .new-${x}
+		fi
+	done
+}
 
 src_defs() {
 	# these are used in both of src_compile and src_install
+	myconf=""
 	myconf="${myconf} PREFIX="
 	myconf="${myconf} LIBDIR=/$(get_libdir)"
 	myconf="${myconf} BINDIR=/sbin"
@@ -106,17 +118,12 @@ src_defs() {
 	export diemsg
 }
 
-
 src_compile() {
 	src_defs
 
 	# iptables will NOT work correctly unless -O[123] are present!
 	replace-flags -O0 -O2
 	get-flag -O || append-flags -O2
-
-	# prevent it from causing ICMP errors.
-	# http://bugs.gentoo.org/show_bug.cgi?id=23645
-	filter-flags -fstack-protector
 
 	emake -j1 \
 		COPT_FLAGS="${CFLAGS}" ${myconf} \
