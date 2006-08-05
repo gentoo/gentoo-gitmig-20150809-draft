@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.3 2006/08/04 05:49:40 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.4 2006/08/05 11:57:29 dertobi123 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="gtk2 and ncurses-based console frontend to cdrecord and mkisofs"
 HOMEPAGE="http://cdw.sourceforge.net"
 SRC_URI="mirror://sourceforge/cdw/${PN}-${PV/_/-}.tar.gz"
 
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="ppc ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="encode gtk mysql nls vorbis sqlite"
