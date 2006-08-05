@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4-r1.ebuild,v 1.9 2006/08/05 21:09:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4-r1.ebuild,v 1.10 2006/08/05 21:11:42 vapier Exp $
 
 inherit fixheadtails eutils multilib autotools
 
 DESCRIPTION="Hunspell spell checker - an improved replacement for myspell in OOo"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://hunspell.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ncurses readline"
-KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 
 DEPEND="readline? ( sys-libs/readline )
 	ncurses? ( sys-libs/ncurses )
@@ -60,7 +60,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	# hunspell is derived from myspell
 	dodoc AUTHORS.myspell README.myspell license.myspell
