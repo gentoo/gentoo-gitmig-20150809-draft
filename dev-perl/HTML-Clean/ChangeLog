@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Clean
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.18 2006/02/08 23:39:27 tove Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Clean/ChangeLog,v 1.19 2006/08/05 04:18:42 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Clean-0.8-r1.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   09 Dec 2005; Tom Gall <tgall@gentoo.org> HTML-Clean-0.8-r1.ebuild:
   stable on ppc64

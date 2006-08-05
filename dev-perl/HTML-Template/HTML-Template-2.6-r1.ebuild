@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/HTML-Template-2.6-r1.ebuild,v 1.12 2005/07/09 22:45:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template/HTML-Template-2.6-r1.ebuild,v 1.13 2006/08/05 04:30:28 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,7 @@ LICENSE="|| ( Artistic GPL-1 GPL-2 )"
 SLOT="0"
 KEYWORDS="x86 amd64 sparc ppc alpha"
 IUSE=""
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

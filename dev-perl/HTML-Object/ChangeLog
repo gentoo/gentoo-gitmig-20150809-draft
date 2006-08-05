@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Object
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.15 2005/11/27 22:50:45 tgall Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Object/ChangeLog,v 1.16 2006/08/05 04:24:57 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Object-2.15.ebuild, HTML-Object-2.15-r1.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   27 Nov 2005; Tom Gall <tgall@gentoo.org> HTML-Object-2.15-r1.ebuild:
   stable on ppc64
