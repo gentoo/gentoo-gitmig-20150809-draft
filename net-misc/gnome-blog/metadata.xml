@@ -10,5 +10,10 @@
     Blogger software that features a clean interface, support for many
     different kinds of blogs, spell checking, drag and drop
     capabilities and more.
-  </longdescription>
+ </longdescription>
+ <longdescription lang="ja">
+    Blogger は簡潔なインターフェイスであり、様々な形態のブログを
+    サポートし、スペルチェック機能にドラッグ・アンド・ドロップ機能
+    などを持つソフトウェアです。
+ </longdescription>
 </pkgmetadata>

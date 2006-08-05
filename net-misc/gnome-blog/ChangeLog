@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gnome-blog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.16 2006/07/27 04:00:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-blog/ChangeLog,v 1.17 2006/08/05 23:02:17 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  metadata.xml translation by Yoshino-san in bug #135160
 
 *gnome-blog-0.9.1 (27 Jul 2006)
 
