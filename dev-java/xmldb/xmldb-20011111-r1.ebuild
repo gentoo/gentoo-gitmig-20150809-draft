@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.1 2006/08/05 17:20:20 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.2 2006/08/05 19:00:44 nichoj Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -40,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant jar $(use_doc) -lib $(java-pkg_getjars xerces-2,xalan)
+	eant jar $(use_doc) -Dclasspath=$(java-pkg_getjars xerces-2,xalan,junit)
 }
 
 src_install() {
