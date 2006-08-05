@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.32.ebuild,v 1.12 2006/06/06 00:37:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.32.ebuild,v 1.13 2006/08/05 02:09:09 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ppc64"
 
 DEPEND="virtual/perl-Test-Simple
 	dev-perl/DBI
-	dev-db/postgresql"
+	dev-db/postgresql
+	dev-lang/perl"
 
 RDEPEND="${DEPEND}"
 

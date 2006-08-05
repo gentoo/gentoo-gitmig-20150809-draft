@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.51.ebuild,v 1.1 2006/06/20 06:49:42 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.51.ebuild,v 1.2 2006/08/05 02:14:48 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/PlRPC-0.2"
+DEPEND=">=dev-perl/PlRPC-0.2
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 mydoc="ToDo"

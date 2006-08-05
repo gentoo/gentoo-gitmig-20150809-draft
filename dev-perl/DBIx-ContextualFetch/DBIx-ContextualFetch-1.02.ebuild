@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/DBIx-ContextualFetch-1.02.ebuild,v 1.5 2006/07/04 07:22:58 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/DBIx-ContextualFetch-1.02.ebuild,v 1.6 2006/08/05 02:21:28 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,7 @@ SRC_TEST="do"
 
 # DBD-SQLite is for testing
 DEPEND=">=dev-perl/DBI-1.37
-		dev-perl/DBD-SQLite
-		virtual/perl-Test-Simple"
+	dev-perl/DBD-SQLite
+		virtual/perl-Test-Simple
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
