@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/eselect-blas-0.1.ebuild,v 1.2 2006/07/03 07:18:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/eselect-blas-0.1.ebuild,v 1.3 2006/08/05 04:55:40 dberkholz Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~ppc ~x86"
 
 IUSE=""
 # Need skel.bash lib
-RDEPEND=">=app-admin/eselect-1.0.3"
+RDEPEND=">=app-admin/eselect-1.0.4"
 DEPEND="${RDEPEND}"
 
 src_install() {

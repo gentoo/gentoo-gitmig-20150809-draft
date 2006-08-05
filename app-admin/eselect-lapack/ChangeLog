@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-lapack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.3 2006/07/07 05:51:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.4 2006/08/05 04:56:41 dberkholz Exp $
+
+  05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  eselect-lapack-0.1.ebuild:
+  Update minimum dep to eselect-1.0.4, 1.0.3 was broken.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update to my new email address.
