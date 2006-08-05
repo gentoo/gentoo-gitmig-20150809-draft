@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.0.0.ebuild,v 1.12 2006/08/05 06:10:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.4.0.ebuild,v 1.1 2006/08/05 06:10:54 genone Exp $
 
-IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc"
+IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
 
 inherit eutils
 
@@ -19,7 +19,7 @@ fi
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc x86"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.4
 	pda? ( >=app-pda/jpilot-0.99 )
@@ -30,9 +30,9 @@ COMMONDEPEND=">=x11-libs/gtk+-2.4
 	spell? ( virtual/aspell-dict )
 	clamav? ( app-antivirus/clamav )
 	kde? ( kde-base/kdelibs )
-	imap? ( >=net-libs/libetpan-0.41 )
+	imap? ( >=net-libs/libetpan-0.45 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
-	x11-libs/startup-notification
+	startup-notification? ( x11-libs/startup-notification )
 	!mail-client/sylpheed-claws-pgpinline"	# included in the main package now
 
 DEPEND="${COMMONDEPEND}
@@ -46,7 +46,7 @@ RDEPEND="${COMMONDEPEND}
 
 PROVIDE="virtual/sylpheed"
 
-PLUGIN_NAMES="acpi-notifier att-remover cachesaver etpan-privacy fetchinfo maildir mailmbox perl rssyl vcalendar"
+PLUGIN_NAMES="acpi-notifier att-remover cachesaver etpan-privacy fetchinfo gtkhtml maildir mailmbox newmail notification perl rssyl smime synce vcalendar"
 
 src_compile() {
 	local myconf
@@ -61,6 +61,7 @@ src_compile() {
 	myconf="${myconf} `use_enable ssl openssl`"
 	myconf="${myconf} `use_enable xface compface`"
 	myconf="${myconf} `use_enable doc manual`"
+	myconf="${myconf} `use_enable startup-notification`"
 
 	# Optional plugins
 	myconf="${myconf} `use_enable clamav clamav-plugin`"
@@ -71,7 +72,6 @@ src_compile() {
 	myconf="${myconf} `use_enable spamassassin spamassassin-plugin`"
 
 	econf \
-		--enable-startup-notification \
 		--enable-trayicon-plugin \
 		${myconf} || die "./configure failed"
 
@@ -81,12 +81,11 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	# wait for upstream: move manpage
-	mv ${D}/usr/share/man/man1/sylpheed{,-claws}.1
-
-	dodir /usr/share/applications
-	mv ${D}/usr/share/{gnome/apps/Internet,applications}/sylpheed-claws.desktop
-	rm -rf ${D}/usr/share/gnome
+	if [ -d ${D}/usr/share/gnome ]; then
+		dodir /usr/share/applications
+		mv ${D}/usr/share/{gnome/apps/Internet,applications}/sylpheed-claws.desktop
+		rm -rf ${D}/usr/share/gnome
+	fi
 
 	# Makefile install sylpheed-claws.png in /usr/share/icons/hicolor/48x48/apps
 	# => also install it in /usr/share/pixmaps for other desktop envs
