@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.19.ebuild,v 1.10 2006/07/18 16:39:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.19.ebuild,v 1.11 2006/08/05 20:32:57 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="alpha ~amd64 arm hppa ia64 m68k mips ~ppc ppc64 s390 sh sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

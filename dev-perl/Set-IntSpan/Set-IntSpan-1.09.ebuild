@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/Set-IntSpan-1.09.ebuild,v 1.5 2006/07/18 16:36:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/Set-IntSpan-1.09.ebuild,v 1.6 2006/08/05 20:30:33 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,7 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha ~amd64 hppa ia64 ~ppc sparc ~x86"
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
