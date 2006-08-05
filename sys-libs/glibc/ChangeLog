@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.475 2006/07/28 14:52:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.476 2006/08/05 01:05:13 kugelfang Exp $
+
+  05 Aug 2006; Danny van Dyk <kugelfang@gentoo.org> glibc-2.3.6-r4.ebuild,
+  glibc-2.4-r3.ebuild:
+  Fixed bug #142832: wrapped crosscompile-fix in 'if is_crosscompile && ...'.
 
   28 Jul 2006; <plasmaroo@gentoo.org> glibc-2.3.5-r3.ebuild:
   Stable on IA64; fix bug #141681.

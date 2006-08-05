@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.26 2006/07/22 15:45:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.27 2006/08/05 01:05:13 kugelfang Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -381,7 +381,7 @@ toolchain-glibc_src_install() {
 
 	# When cross-compiling for a non-multilib setup, make sure we have
 	# lib and a proper symlink setup
-	if ! use multilib && ! has_multilib_profile && [[ $(get_libdir) != "lib" ]] ; then
+	if is_crosscompile && ! use multilib && ! has_multilib_profile && [[ $(get_libdir) != "lib" ]] ; then
 		cd "${D}"$(alt_libdir)/..
 		mv $(get_libdir) lib || die
 		ln -s lib $(get_libdir) || die
