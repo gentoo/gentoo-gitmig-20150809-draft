@@ -11,4 +11,10 @@
   Zeroconf standardizes networking protocols for delivering hassle-free ad-hoc
   networking, service discovery, and IP configuration.
  </longdescription>
+ <!-- ChrisWhite: hassle-free to 使用は容易  -->
+ <longdescription lang="ja">
+  Howl はクロスプラットフォームに対応した Zeroconf networking standard の実装です。
+  Zeroconf は、使用は容易 ad-hoc ネットワーク配送、サービス探索、IP 配置を実現する
+  ネットワーク・プロトコルを標準化します。
+ </longdescription>
 </pkgmetadata>
