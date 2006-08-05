@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/Device-SerialPort-1.002.ebuild,v 1.6 2006/06/08 21:13:15 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/Device-SerialPort-1.002.ebuild,v 1.7 2006/08/05 02:58:17 mcummings Exp $
 
 inherit perl-module
 
@@ -17,3 +17,7 @@ IUSE=""
 # If you run 'make test', you must make sure that nothing is plugged
 # into '/dev/ttyS1'!
 # Doesn't sound wise to enable SRC_TEST="do" - mcummings
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

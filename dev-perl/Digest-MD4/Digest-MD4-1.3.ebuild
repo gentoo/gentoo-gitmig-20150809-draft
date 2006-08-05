@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.3.ebuild,v 1.14 2005/08/15 10:11:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/Digest-MD4-1.3.ebuild,v 1.15 2006/08/05 03:00:21 mcummings Exp $
 
 inherit perl-module
 
@@ -17,3 +17,7 @@ IUSE=""
 
 SRC_TEST="do"
 mydoc="README Changes"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
