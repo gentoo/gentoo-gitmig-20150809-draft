@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/Mail-POP3Client-2.17.ebuild,v 1.9 2006/07/04 12:00:51 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/Mail-POP3Client-2.17.ebuild,v 1.10 2006/08/05 13:52:39 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,9 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=virtual/perl-libnet-1.0703"
+DEPEND=">=virtual/perl-libnet-1.0703
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 mydoc="FAQ"
+

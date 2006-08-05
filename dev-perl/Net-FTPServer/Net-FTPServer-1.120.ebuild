@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.13 2006/07/04 13:37:04 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.14 2006/08/05 14:18:24 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE="postgres"
 SRC_TEST="do"
 
 DEPEND="dev-perl/Archive-Zip
-		dev-perl/Authen-PAM
+	dev-perl/Authen-PAM
 		dev-perl/BSD-Resource
 		dev-perl/Compress-Zlib
 		virtual/perl-Digest-MD5
@@ -24,7 +24,8 @@ DEPEND="dev-perl/Archive-Zip
 		virtual/perl-libnet
 		dev-perl/File-Sync
 		dev-perl/IO-stringy
-		postgres? ( dev-perl/DBI )"
+		postgres? ( dev-perl/DBI )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -32,3 +33,4 @@ src_unpack() {
 	cd ${S}
 	sed -i -e "s:/etc:${D}/etc:" Makefile.PL
 }
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/Mail-Procmail-1.08.ebuild,v 1.10 2006/07/04 12:02:00 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/Mail-Procmail-1.08.ebuild,v 1.11 2006/08/05 13:54:45 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,7 @@ IUSE=""
 
 DEPEND="virtual/perl-Getopt-Long
 	>=dev-perl/MailTools-1.15
-	>=dev-perl/LockFile-Simple-0.2.5"
+	>=dev-perl/LockFile-Simple-0.2.5
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

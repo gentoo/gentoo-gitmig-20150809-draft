@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/Module-Pluggable-3.1.ebuild,v 1.1 2006/07/23 03:57:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/Module-Pluggable-3.1.ebuild,v 1.2 2006/08/05 14:02:05 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,8 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/module-build-0.28"
+DEPEND=">=dev-perl/module-build-0.28
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
+
+

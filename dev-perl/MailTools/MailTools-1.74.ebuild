@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.74.ebuild,v 1.5 2006/07/10 16:50:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/MailTools-1.74.ebuild,v 1.6 2006/08/05 14:00:00 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,7 @@ KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND=">=virtual/perl-libnet-1.0703"
+DEPEND=">=virtual/perl-libnet-1.0703
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

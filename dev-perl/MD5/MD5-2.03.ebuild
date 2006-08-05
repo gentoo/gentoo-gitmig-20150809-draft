@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/MD5-2.03.ebuild,v 1.12 2006/07/04 11:46:51 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MD5/MD5-2.03.ebuild,v 1.13 2006/08/05 13:38:57 mcummings Exp $
 
 inherit perl-module
 
@@ -13,8 +13,10 @@ LICENSE="Artistic"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/perl-Digest-MD5"
+DEPEND="virtual/perl-Digest-MD5
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 SRC_TEST="do"
 
 export OPTIMIZE="${CFLAGS}"
+

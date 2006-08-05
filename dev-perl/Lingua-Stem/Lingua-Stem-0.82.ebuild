@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.82.ebuild,v 1.1 2006/07/30 02:08:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.82.ebuild,v 1.2 2006/08/05 13:27:13 mcummings Exp $
 
 inherit perl-module
 
@@ -16,11 +16,13 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Snowball-Norwegian
-		dev-perl/Snowball-Swedish
+	dev-perl/Snowball-Swedish
 		dev-perl/Lingua-Stem-Snowball-Da
 		dev-perl/Lingua-Stem-Fr
 		dev-perl/Lingua-Stem-It
 		dev-perl/Lingua-Stem-Ru
 		dev-perl/Lingua-PT-Stemmer
-		dev-perl/Text-German"
+		dev-perl/Text-German
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/Mail-Sender-0.8.13.ebuild,v 1.3 2006/07/04 12:25:02 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sender/Mail-Sender-0.8.13.ebuild,v 1.4 2006/08/05 13:57:22 mcummings Exp $
 
 inherit perl-module
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
-DEPEND="virtual/perl-MIME-Base64"
+DEPEND="virtual/perl-MIME-Base64
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "n" | perl-module_src_compile
 }
+

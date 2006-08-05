@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/Net-Domain-TLD-1.62.ebuild,v 1.4 2006/02/13 12:08:25 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/Net-Domain-TLD-1.62.ebuild,v 1.5 2006/08/05 14:17:11 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,10 @@ KEYWORDS="x86 sparc alpha amd64 hppa ia64 ppc ppc64 ~mips"
 IUSE=""
 
 TDEPEND=">=dev-perl/Test-Pod-Coverage-1.04"
+DEPEND="dev-lang/perl"
+		
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
+
+

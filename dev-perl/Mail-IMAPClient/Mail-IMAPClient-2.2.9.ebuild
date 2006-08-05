@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-2.2.9.ebuild,v 1.14 2006/07/10 16:47:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-IMAPClient/Mail-IMAPClient-2.2.9.ebuild,v 1.15 2006/08/05 13:49:08 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -18,7 +18,8 @@ IUSE=""
 #SRC_TEST="do"
 
 DEPEND=">=virtual/perl-libnet-1.0703
-	dev-perl/Parse-RecDescent"
+	dev-perl/Parse-RecDescent
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 mydoc="FAQ"
@@ -28,3 +29,4 @@ src_unpack(){
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-skiptest.patch
 }
+

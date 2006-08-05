@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/Msql-Mysql-modules-1.2219-r2.ebuild,v 1.8 2006/07/10 16:59:39 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Msql-Mysql-modules/Msql-Mysql-modules-1.2219-r2.ebuild,v 1.9 2006/08/05 14:06:32 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND=">=dev-perl/Data-ShowTable-3.3
 	>=dev-db/mysql-3.23.30
-	>=dev-perl/DBI-1.14"
+	>=dev-perl/DBI-1.14
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 myconf="--mysql-install \
@@ -32,3 +33,4 @@ src_unpack(){
 	cd ${S}
 	epatch "${FILESDIR}"/${PN}-mysql-4.1.patch
 }
+

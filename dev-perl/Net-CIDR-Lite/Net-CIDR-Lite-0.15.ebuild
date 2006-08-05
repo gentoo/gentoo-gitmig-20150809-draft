@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/Net-CIDR-Lite-0.15.ebuild,v 1.10 2006/05/01 20:54:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/Net-CIDR-Lite-0.15.ebuild,v 1.11 2006/08/05 14:08:31 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="~alpha ppc ppc64 sparc x86"
 IUSE=""
 
 mydoc="TODO"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

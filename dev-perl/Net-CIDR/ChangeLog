@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-CIDR
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.17 2006/08/02 17:52:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR/ChangeLog,v 1.18 2006/08/05 14:07:51 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org> Net-CIDR-0.10.ebuild,
+  Net-CIDR-0.11.ebuild:
+  Adding perl dep; fixed DEPEND
 
   02 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> Net-CIDR-0.11.ebuild:
   Stable on hppa

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/Net-Domain-TLD-1.5.ebuild,v 1.2 2006/01/18 19:23:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/Net-Domain-TLD-1.5.ebuild,v 1.3 2006/08/05 14:17:11 mcummings Exp $
 
 inherit perl-module
 S=${WORKDIR}/${PN}
@@ -15,3 +15,7 @@ KEYWORDS="x86 sparc alpha amd64 hppa ia64 ppc ~ppc64"
 IUSE=""
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

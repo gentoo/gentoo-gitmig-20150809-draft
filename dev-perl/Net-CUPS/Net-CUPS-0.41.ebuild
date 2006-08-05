@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/Net-CUPS-0.41.ebuild,v 1.2 2006/06/26 20:14:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CUPS/Net-CUPS-0.41.ebuild,v 1.3 2006/08/05 14:10:53 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND=""
-RDEPEND=">=net-print/cups-1.1.21
-		dev-perl/Exporter-Cluster"
-
+DEPEND=">=net-print/cups-1.1.21
+		dev-perl/Exporter-Cluster
+		dev-lang/perl"
+RDEPEND="${DEPEND}"
