@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/trove
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.3 2005/04/30 20:09:09 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.4 2006/08/05 17:07:21 nichoj Exp $
+
+*trove-1.0.2-r1 (05 Aug 2006)
+
+  05 Aug 2006; Joshua Nichols <nichoj@gentoo.org> +trove-1.0.2-r1.ebuild:
+  Revision bump to support new Java system
 
   30 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> trove-1.0.2.ebuild:
   stable on amd64 and x86, added ~ppc to KEYWORDS. introduced support for the
