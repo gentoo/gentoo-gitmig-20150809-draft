@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.2 2006/04/19 19:33:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.2.ebuild,v 1.3 2006/08/05 15:15:49 truedfx Exp $
 
 inherit eutils
 
@@ -76,11 +76,11 @@ src_compile() {
 	set_pp new
 
 	# We cannot do this at once!
-	for d in rtl packages fcl; do
+	for d in rtl packages fcl fv; do
 		make -j1 -C $d clean PP=${pp} || die "make -C $d clean failed!"
 	done
 
-	make -j1 rtl packages_base_all fcl packages_extra_all PP=${pp} \
+	make -j1 rtl packages_base_all fcl fv packages_extra_all PP=${pp} \
 		|| die "make rtl packages_base_all fcl packages_extra_all failed!"
 
 	make -j1 utils PP=${pp} DATA2INC=${S}/utils/data2inc \
@@ -91,7 +91,7 @@ src_install() {
 	local pp
 	set_pp new
 
-	make compiler_install rtl_install fcl_install \
+	make compiler_install rtl_install fcl_install fv_install \
 		packages_install utils_install \
 		PP="${pp}" FPCMAKE="${S}/utils/fpcm/fpcmake" \
 		INSTALL_PREFIX="${D}usr" || die "make install failed!"
