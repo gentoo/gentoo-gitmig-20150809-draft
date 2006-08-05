@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/msv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.6 2006/03/11 19:59:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.7 2006/08/05 17:17:59 nichoj Exp $
+
+*msv-20050627-r1 (05 Aug 2006)
+
+  05 Aug 2006; Joshua Nichols <nichoj@gentoo.org> +msv-20050627-r1.ebuild:
+  Revision bump to support new Java system
 
   11 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> msv-20050627.ebuild:
   Stable on ppc.

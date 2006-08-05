@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/qdox
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.4 2005/05/04 20:05:58 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.5 2006/08/05 17:15:48 nichoj Exp $
+
+*qdox-20050104-r1 (05 Aug 2006)
+
+  05 Aug 2006; Joshua Nichols <nichoj@gentoo.org> +qdox-20050104-r1.ebuild:
+  Revision bump to support new Java system
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> qdox-20050104.ebuild:
   stable on amd64, ppc and x86
