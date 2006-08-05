@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/GD-SVG-0.27.ebuild,v 1.5 2006/02/04 00:43:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/GD-SVG-0.27.ebuild,v 1.6 2006/08/05 04:08:09 mcummings Exp $
 
 inherit perl-module
 
 DEPEND="dev-perl/GD
-		dev-perl/SVG
-		"
+	dev-perl/SVG
+		
+	dev-lang/perl"
 
 RDEPEND="${DEPEND}"
 
@@ -17,3 +18,5 @@ IUSE=""
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
+
+
