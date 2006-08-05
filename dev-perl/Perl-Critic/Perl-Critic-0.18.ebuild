@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.18.ebuild,v 1.1 2006/07/22 03:01:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.18.ebuild,v 1.2 2006/08/05 19:55:24 mcummings Exp $
 
 inherit perl-module
 
@@ -17,10 +17,12 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Module-Pluggable
-		dev-perl/Config-Tiny
+	dev-perl/Config-Tiny
 		dev-perl/List-MoreUtils
 		dev-perl/IO-String
 		dev-perl/String-Format
 		dev-perl/perltidy
-		dev-perl/PPI"
+		dev-perl/PPI
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

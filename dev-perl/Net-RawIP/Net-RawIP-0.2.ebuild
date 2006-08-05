@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.2.ebuild,v 1.12 2006/07/04 13:43:25 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RawIP/Net-RawIP-0.2.ebuild,v 1.13 2006/08/05 19:30:03 mcummings Exp $
 
 inherit eutils perl-module
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://cpan/authors/id/S/SK/SKOLYCHEV/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/"
 
 DEPEND="net-libs/libpcap
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
@@ -40,3 +41,5 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
+
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/NetPacket-0.03.ebuild,v 1.10 2006/07/10 17:11:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/NetPacket-0.03.ebuild,v 1.11 2006/08/05 19:35:36 mcummings Exp $
 
 inherit perl-module
 
@@ -11,3 +11,7 @@ IUSE=""
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="amd64 ia64 ppc x86"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

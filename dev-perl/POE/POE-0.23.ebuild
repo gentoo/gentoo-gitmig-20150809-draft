@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23.ebuild,v 1.15 2006/02/13 13:52:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-0.23.ebuild,v 1.16 2006/08/05 19:47:29 mcummings Exp $
 
 IUSE="gtk tcltk libwww ncurses"
 
@@ -14,8 +14,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
-DEPEND="${DEPEND}
-	dev-perl/Event
+DEPEND="dev-perl/Event
 	virtual/perl-Time-HiRes
 	dev-perl/Compress-Zlib
 	virtual/perl-Storable
@@ -25,10 +24,14 @@ DEPEND="${DEPEND}
 	tcltk? ( dev-perl/perl-tk )
 	gtk? ( dev-perl/gtk-perl )
 	libwww? ( dev-perl/libwww-perl )
-	ncurses? ( dev-perl/Curses )"
+	ncurses? ( dev-perl/Curses )
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 mymake="/usr"
 
 src_compile() {
 	echo "n" | perl-module_src_compile
 }
+
+

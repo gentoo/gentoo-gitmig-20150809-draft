@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/PAR-Dist-0.07.ebuild,v 1.2 2006/06/12 16:03:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/PAR-Dist-0.07.ebuild,v 1.3 2006/08/05 19:43:00 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

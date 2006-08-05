@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/Pod-Simple-3.04.ebuild,v 1.7 2006/08/02 17:55:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Simple/Pod-Simple-3.04.ebuild,v 1.8 2006/08/05 20:03:00 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-perl/Pod-Escapes-1.04"
+DEPEND=">=dev-perl/Pod-Escapes-1.04
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

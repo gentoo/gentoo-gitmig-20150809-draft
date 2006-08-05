@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Proc-Daemon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Daemon/ChangeLog,v 1.15 2006/07/14 23:43:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Daemon/ChangeLog,v 1.16 2006/08/05 20:06:29 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Proc-Daemon-0.03.ebuild:
+  Adding perl dep; fixed DEPEND
 
   14 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   Proc-Daemon-0.03.ebuild:

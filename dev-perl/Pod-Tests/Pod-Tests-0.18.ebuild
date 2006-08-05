@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/Pod-Tests-0.18.ebuild,v 1.12 2006/03/22 20:47:30 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Tests/Pod-Tests-0.18.ebuild,v 1.13 2006/08/05 20:03:52 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,8 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=virtual/perl-Test-Harness-1.22"
+DEPEND=">=virtual/perl-Test-Harness-1.22
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
+
+

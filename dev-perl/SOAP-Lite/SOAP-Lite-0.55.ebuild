@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.12 2006/07/04 19:53:22 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.13 2006/08/05 20:16:01 mcummings Exp $
 
 IUSE=""
 
@@ -18,10 +18,12 @@ KEYWORDS="alpha amd64 ppc ~sparc x86"
 
 DEPEND="dev-perl/XML-Parser
 	dev-perl/MIME-Lite
-	dev-perl/MIME-tools"
+	dev-perl/MIME-tools
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	(echo yes) | perl-module_src_compile || perl-module_src_compile || die "compile failed"
 	perl-module_src_test || die "test failed"
 }
+

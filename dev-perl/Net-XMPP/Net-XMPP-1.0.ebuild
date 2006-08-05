@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/Net-XMPP-1.0.ebuild,v 1.13 2006/07/04 14:02:54 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-XMPP/Net-XMPP-1.0.ebuild,v 1.14 2006/08/05 19:34:24 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/XML-Stream-1.22
-	dev-perl/Digest-SHA1"
+	dev-perl/Digest-SHA1
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

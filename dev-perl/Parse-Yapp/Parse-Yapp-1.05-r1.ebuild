@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/Parse-Yapp-1.05-r1.ebuild,v 1.18 2006/06/29 17:05:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/Parse-Yapp-1.05-r1.ebuild,v 1.19 2006/08/05 19:53:04 mcummings Exp $
 
 inherit perl-module
 
@@ -23,3 +23,7 @@ src_install() {
 	insinto /usr/share/doc/${PF}/examples
 	doins Calc.yp YappParse.yp
 }
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
