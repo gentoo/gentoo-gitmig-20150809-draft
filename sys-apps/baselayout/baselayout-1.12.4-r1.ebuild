@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r1.ebuild,v 1.1 2006/08/04 13:46:55 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r1.ebuild,v 1.2 2006/08/05 13:00:23 herbs Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -383,8 +383,11 @@ src_install() {
 	#
 	# Install baselayout utilities
 	#
+	local libdir="lib"
+	[[ ${SYMLINK_LIB} == "yes" ]] && libdir=$(get_abi_LIBDIR "${DEFAULT_ABI}")
+
 	cd "${S}"/src
-	make DESTDIR="${D}" LIBDIR="$(get_libdir)" install || die
+	make DESTDIR="${D}" LIBDIR="${libdir}" install || die
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir
