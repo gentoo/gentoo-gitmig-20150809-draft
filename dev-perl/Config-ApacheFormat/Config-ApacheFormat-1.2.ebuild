@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/Config-ApacheFormat-1.2.ebuild,v 1.9 2006/07/04 04:57:17 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-ApacheFormat/Config-ApacheFormat-1.2.ebuild,v 1.10 2006/08/05 00:58:04 mcummings Exp $
 
 inherit perl-module
 MY_PV=${PV/0/}
@@ -20,5 +20,6 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/Class-MethodMaker
 		perl-core/Text-Balanced
-		virtual/perl-File-Spec"
+		virtual/perl-File-Spec
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

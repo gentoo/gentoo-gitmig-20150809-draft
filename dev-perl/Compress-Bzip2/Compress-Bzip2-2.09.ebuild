@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/Compress-Bzip2-2.09.ebuild,v 1.8 2006/07/10 14:53:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/Compress-Bzip2-2.09.ebuild,v 1.9 2006/08/05 00:55:55 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ~mips sparc x86"
 IUSE=""
 
-DEPEND="app-arch/bzip2"
+DEPEND="app-arch/bzip2
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
