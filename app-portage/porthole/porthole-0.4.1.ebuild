@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.7 2006/01/06 01:15:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/porthole-0.4.1.ebuild,v 1.8 2006/08/05 18:37:51 truedfx Exp $
 
 inherit distutils eutils
 
@@ -19,8 +19,7 @@ DEPEND=">=dev-lang/python-2.3
 RDEPEND="${DEPEND} debug? ( >=dev-python/pycrash-0.4_pre3 )"
 
 pkg_setup() {
-	if ! built_with_use dev-python/pygtk gnome ; then
-		echo
+	if ! built_with_use '<dev-python/pygtk-2.8.0-r2' gnome ; then
 		eerror "pygtk was not merged with the gnome"
 		eerror "USE flag. Porthole requires pygtk be"
 		eerror "built with this flag for libglade support."

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.24 2006/04/27 13:44:30 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.25 2006/08/05 18:37:51 truedfx Exp $
+
+  05 Aug 2006; Harald van Dĳk <truedfx@gentoo.org> porthole-0.4.1.ebuild:
+  Disable USE=gnome check for recent pygtk (#110961)
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-porthole-0.4.1, Manifest:
