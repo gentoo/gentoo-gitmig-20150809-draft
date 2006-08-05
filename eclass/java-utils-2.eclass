@@ -1053,6 +1053,19 @@ java-pkg_is-vm-version-ge() {
 	fi
 }
 
+java-pkg_set-current-vm() {
+	export GENTOO_VM=${1}
+}
+
+java-pkg_get-current-vm() {
+	echo ${GENTOO_VM}
+}
+
+java-pkg_current-vm-matches() {
+	hasq java-pkg_get-currenv-vm ${@}
+	return $?
+}
+
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_get-source
 # 
@@ -1203,6 +1216,12 @@ java-pkg_ensure-gcj() {
 # ------------------------------------------------------------------------------
 eant() {
 	debug-print-function ${FUNCNAME} $*
+
+	# FIXME get this working
+#	if is-java-strict && [[ ! ${DEPEND} =~ "dev-java/ant" ]]; then
+#		java-pkg_announce-qa-violation \
+#			"Using eant, but not depending on dev-java/ant or dev-java/ant-core"
+#	fi
 
 	local antflags
 	java-pkg_init-compiler_
