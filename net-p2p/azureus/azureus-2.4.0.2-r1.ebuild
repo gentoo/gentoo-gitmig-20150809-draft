@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2-r1.ebuild,v 1.1 2006/08/01 20:34:00 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2-r1.ebuild,v 1.2 2006/08/05 13:06:58 dertobi123 Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://azureus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/azureus/Azureus_${PV}_source.zip"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="source"
 
