@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/Term-ANSIScreen-1.42.ebuild,v 1.10 2006/07/10 22:17:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/Term-ANSIScreen-1.42.ebuild,v 1.11 2006/08/05 23:11:36 mcummings Exp $
 
 IUSE=""
 
@@ -15,3 +15,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="amd64 ia64 ~ppc sparc x86"
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

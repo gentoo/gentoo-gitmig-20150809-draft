@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.09.ebuild,v 1.10 2006/07/04 20:51:49 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.09.ebuild,v 1.11 2006/08/05 23:10:20 mcummings Exp $
 
 inherit perl-module
 
@@ -12,7 +12,8 @@ SLOT="0"
 LICENSE="Artistic GPL-2"
 KEYWORDS="alpha amd64 ppc sparc x86"
 
-DEPEND=">=dev-perl/AppConfig-1.52"
+DEPEND=">=dev-perl/AppConfig-1.52
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 #The installer tries to install to /usr/local/tt2...,
@@ -20,3 +21,4 @@ RDEPEND="${DEPEND}"
 # 1) make install doesn't violate the sandbox rule
 # 2) perl Makefile.pl just uses reasonable defaults, and doesn't ask for input
 myconf="${myconf} TT_PREFIX=${D}/usr/share/template-toolkit2 TT_ACCEPT='y'"
+

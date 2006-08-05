@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.08.ebuild,v 1.5 2006/07/13 04:46:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.08.ebuild,v 1.6 2006/08/05 23:06:44 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,8 @@ KEYWORDS="~amd64 ia64 ~ppc sparc ~x86"
 SRC_TEST="do"
 
 DEPEND="virtual/perl-Test-Simple
-		>=dev-perl/Test-Exception-0.21"
+	>=dev-perl/Test-Exception-0.21
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
+
+

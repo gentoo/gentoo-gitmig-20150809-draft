@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/Term-ANSIColor-1.09.ebuild,v 1.7 2006/02/06 20:36:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIColor/Term-ANSIColor-1.09.ebuild,v 1.8 2006/08/05 23:11:03 mcummings Exp $
 
 IUSE=""
 
@@ -18,3 +18,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
 SRC_TEST="do"
 S="${WORKDIR}/$MY_P"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

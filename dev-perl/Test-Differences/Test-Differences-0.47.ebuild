@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/Test-Differences-0.47.ebuild,v 1.9 2006/07/13 04:47:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Differences/Test-Differences-0.47.ebuild,v 1.10 2006/08/05 23:19:29 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ia64 sparc x86"
 IUSE=""
 
-DEPEND="dev-perl/Text-Diff"
+DEPEND="dev-perl/Text-Diff
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
