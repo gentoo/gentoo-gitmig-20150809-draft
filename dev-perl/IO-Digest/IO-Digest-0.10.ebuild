@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/IO-Digest-0.10.ebuild,v 1.11 2006/07/04 10:28:11 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Digest/IO-Digest-0.10.ebuild,v 1.12 2006/08/05 04:40:36 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,7 @@ KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 SRC_TEST="do"
 IUSE=""
 DEPEND=">=dev-perl/PerlIO-via-dynamic-0.10
-	virtual/perl-digest-base"
+	virtual/perl-digest-base
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

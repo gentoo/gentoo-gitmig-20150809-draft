@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTTP-Server-Simple-Mason
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple-Mason/ChangeLog,v 1.5 2006/07/04 10:26:54 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple-Mason/ChangeLog,v 1.6 2006/08/05 04:38:10 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  HTTP-Server-Simple-Mason-0.05.ebuild,
+  HTTP-Server-Simple-Mason-0.09.ebuild:
+  Adding perl dep; fixed DEPEND
 
   04 Jul 2006; Christian Hartmann <ian@gentoo.org>
   HTTP-Server-Simple-Mason-0.05.ebuild,

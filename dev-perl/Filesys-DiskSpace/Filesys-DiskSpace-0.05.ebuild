@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/Filesys-DiskSpace-0.05.ebuild,v 1.4 2006/06/12 15:24:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/Filesys-DiskSpace-0.05.ebuild,v 1.5 2006/08/05 04:02:06 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,5 @@ IUSE=""
 #Disabled - assumes you have ext2 mounts actively mounted!?!
 #SRC_TEST="do"
 
-DEPEND=""
-RDEPEND=""
-
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

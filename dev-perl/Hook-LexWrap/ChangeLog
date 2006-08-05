@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Hook-LexWrap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.8 2006/07/10 16:06:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hook-LexWrap/ChangeLog,v 1.9 2006/08/05 04:39:58 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Hook-LexWrap-0.20.ebuild:
+  Adding perl dep; fixed DEPEND
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> Hook-LexWrap-0.20.ebuild:
   Mark 0.20 stable on ia64

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.32.ebuild,v 1.2 2006/07/04 08:52:03 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.32.ebuild,v 1.3 2006/08/05 04:06:43 mcummings Exp $
 
 inherit eutils perl-module
 
@@ -18,7 +18,8 @@ DEPEND=">=media-libs/gd-2.0.28
 	jpeg? ( media-libs/jpeg )
 	truetype? ( =media-libs/freetype-2* )
 	xpm? ( || ( x11-libs/libXpm virtual/x11 ) )
-	gif? ( media-libs/giflib )"
+	gif? ( media-libs/giflib )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
@@ -33,3 +34,4 @@ src_compile() {
 }
 
 mydoc="GD.html"
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/HTML-LinkExtractor-0.13.ebuild,v 1.9 2006/07/10 15:54:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/HTML-LinkExtractor-0.13.ebuild,v 1.10 2006/08/05 04:23:03 mcummings Exp $
 
 inherit perl-module
 
@@ -12,5 +12,7 @@ LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 
-DEPEND="dev-perl/HTML-Parser"
+DEPEND="dev-perl/HTML-Parser
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

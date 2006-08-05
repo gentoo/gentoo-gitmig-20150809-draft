@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/HTML-Element-Extended-1.13.ebuild,v 1.13 2006/07/04 09:49:47 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/HTML-Element-Extended-1.13.ebuild,v 1.14 2006/08/05 04:19:18 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/HTML-Tree-3.01"
+DEPEND=">=dev-perl/HTML-Tree-3.01
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

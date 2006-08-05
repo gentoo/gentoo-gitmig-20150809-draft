@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.48.ebuild,v 1.12 2006/07/04 09:57:54 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.48.ebuild,v 1.13 2006/08/05 04:26:01 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="unicode"
 
-DEPEND=">=dev-perl/HTML-Tagset-3.03"
+DEPEND=">=dev-perl/HTML-Tagset-3.03
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 mydoc="ANNOUNCEMENT TODO"
@@ -29,3 +30,4 @@ src_compile() {
 	fi
 	perl-module_src_test
 }
+

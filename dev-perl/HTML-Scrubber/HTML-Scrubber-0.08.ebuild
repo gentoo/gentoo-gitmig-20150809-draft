@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/HTML-Scrubber-0.08.ebuild,v 1.13 2006/07/10 15:55:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/HTML-Scrubber-0.08.ebuild,v 1.14 2006/08/05 04:26:36 mcummings Exp $
 
 # this is an RT dependency
 
@@ -16,6 +16,8 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 
 DEPEND="virtual/perl-Test-Simple
-	dev-perl/HTML-Parser"
+	dev-perl/HTML-Parser
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 IUSE=""
+

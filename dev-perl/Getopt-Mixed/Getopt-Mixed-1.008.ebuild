@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/Getopt-Mixed-1.008.ebuild,v 1.13 2006/06/29 18:13:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Mixed/Getopt-Mixed-1.008.ebuild,v 1.14 2006/08/05 04:11:56 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

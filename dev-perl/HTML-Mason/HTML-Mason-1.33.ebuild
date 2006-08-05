@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.33.ebuild,v 1.2 2006/07/18 01:05:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.33.ebuild,v 1.3 2006/08/05 04:24:19 mcummings Exp $
 
 inherit perl-module
 
@@ -14,8 +14,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="apache2 modperl doc"
 SRC_TEST="do"
 
-DEPEND="
-	!modperl? ( virtual/perl-CGI )
+DEPEND="!modperl? ( virtual/perl-CGI )
 	modperl? (
 		!apache2? (
 			=net-www/apache-1*
@@ -32,7 +31,8 @@ DEPEND="
 	>=dev-perl/Exception-Class-1.15
 	virtual/perl-Scalar-List-Utils
 	virtual/perl-File-Spec
-	>=dev-perl/Cache-Cache-1.01"
+	>=dev-perl/Cache-Cache-1.01
+	dev-lang/perl"
 
 RDEPEND="${DEPEND}"
 
@@ -61,3 +61,5 @@ src_install () {
 	# rendhalver - the html docs have subdirs so this gets all of them
 	use doc && dohtml -r htdocs/*
 }
+
+

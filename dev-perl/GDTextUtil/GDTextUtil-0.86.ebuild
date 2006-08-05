@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/GDTextUtil-0.86.ebuild,v 1.14 2006/07/04 08:57:01 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/GDTextUtil-0.86.ebuild,v 1.15 2006/08/05 04:09:30 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,8 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="dev-perl/GD"
+DEPEND="dev-perl/GD
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -21,3 +22,4 @@ src_unpack() {
 	cd ${S}
 	perl-module_src_prep
 }
+

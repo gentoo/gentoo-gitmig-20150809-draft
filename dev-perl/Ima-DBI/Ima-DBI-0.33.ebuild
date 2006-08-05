@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/Ima-DBI-0.33.ebuild,v 1.14 2006/07/04 11:29:34 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/Ima-DBI-0.33.ebuild,v 1.15 2006/08/05 04:51:51 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,9 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/DBI
-		dev-perl/Class-WhiteHole
+	dev-perl/Class-WhiteHole
 		dev-perl/DBIx-ContextualFetch
-		virtual/perl-Test-Simple"
+		virtual/perl-Test-Simple
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

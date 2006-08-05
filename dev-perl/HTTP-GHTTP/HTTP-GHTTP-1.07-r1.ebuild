@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/HTTP-GHTTP-1.07-r1.ebuild,v 1.17 2006/07/04 10:25:32 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/HTTP-GHTTP-1.07-r1.ebuild,v 1.18 2006/08/05 04:36:42 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,8 @@ LICENSE="Artistic"
 KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=gnome-base/libghttp-1.0.9-r1"
+DEPEND=">=gnome-base/libghttp-1.0.9-r1
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/Jcode-0.83.ebuild,v 1.14 2006/07/04 11:37:47 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/Jcode-0.83.ebuild,v 1.15 2006/08/05 04:59:56 mcummings Exp $
 
 inherit perl-module
 
@@ -16,10 +16,12 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
 IUSE=""
 
-DEPEND=">=virtual/perl-MIME-Base64-2.1"
+DEPEND=">=virtual/perl-MIME-Base64-2.1
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	perl-module_src_compile
 	perl-module_src_test || die "test failed"
 }
+
