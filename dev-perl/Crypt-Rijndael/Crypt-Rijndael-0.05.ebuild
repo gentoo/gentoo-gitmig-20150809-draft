@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/Crypt-Rijndael-0.05.ebuild,v 1.7 2006/06/24 17:37:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/Crypt-Rijndael-0.05.ebuild,v 1.8 2006/08/05 01:51:03 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -20,3 +20,5 @@ src_unpack() {
 	unpack ${A}
 	use amd64 && cd ${S} && epatch ${FILESDIR}/crypt-rijndael-amd64.patch
 }
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

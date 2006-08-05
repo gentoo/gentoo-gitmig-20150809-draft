@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-SmbHash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.18 2006/07/04 07:07:15 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SmbHash/ChangeLog,v 1.19 2006/08/05 01:54:28 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Crypt-SmbHash-0.02.ebuild, Crypt-SmbHash-0.12.ebuild:
+  Adding perl dep; fixed DEPEND
 
   04 Jul 2006; Christian Hartmann <ian@gentoo.org>
   Crypt-SmbHash-0.02.ebuild, Crypt-SmbHash-0.12.ebuild:

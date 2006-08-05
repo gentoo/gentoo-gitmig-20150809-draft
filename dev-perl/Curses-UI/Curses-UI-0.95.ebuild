@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/Curses-UI-0.95.ebuild,v 1.10 2006/07/10 15:04:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses-UI/Curses-UI-0.95.ebuild,v 1.11 2006/08/05 01:57:23 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,6 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/Curses
 	dev-perl/Test-Pod
-	dev-perl/TermReadKey"
+	dev-perl/TermReadKey
+	dev-lang/perl"
 RDEPEND="${DEPEND}"

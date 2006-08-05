@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.14.ebuild,v 1.1 2006/06/07 06:05:11 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.14.ebuild,v 1.2 2006/08/05 01:56:13 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -15,8 +15,8 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="${DEPEND}
-	>=sys-libs/ncurses-5"
+DEPEND=">=sys-libs/ncurses-5
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 myconf="${myconf} GEN PANELS MENUS"

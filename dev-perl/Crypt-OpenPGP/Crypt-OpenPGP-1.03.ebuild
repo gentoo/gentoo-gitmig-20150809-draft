@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.12 2006/06/24 19:22:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.13 2006/08/05 01:45:53 mcummings Exp $
 
 inherit perl-module
 
@@ -41,5 +41,6 @@ DEPEND=">=dev-perl/data-buffer-0.04
 		dev-perl/Crypt-RIPEMD160
 		dev-perl/Crypt-Blowfish
 		>=dev-perl/Crypt-Twofish-2.00
-		dev-perl/ExtUtils-AutoInstall"
+		dev-perl/ExtUtils-AutoInstall
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
