@@ -1195,6 +1195,14 @@ java-pkg_ensure-gcj() {
 	fi
 }
 
+java-pkg_ensure-test() {
+	if hasq test ${FEATURES} && ! hasq -test ${FEATURES} && ! use test; then
+		eerror "You specified FEATURES=test, but USE=test is needed"
+		eerror "to pull in the additional dependencies for testing"
+		die "Need USE=test enabled"
+	fi
+}
+
 # ------------------------------------------------------------------------------
 # @section-end helper
 # ------------------------------------------------------------------------------
