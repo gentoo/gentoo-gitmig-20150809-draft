@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxmozilla
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.7 2006/04/28 00:14:53 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxmozilla/ChangeLog,v 1.8 2006/08/05 12:03:55 leio Exp $
+
+  05 Aug 2006; Mart Raudsepp <leio@gentoo.org> metadata.xml:
+  Remove fserb from metadata (retired), add wxwindows as a herd.
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-wxmozilla-0.5.3, files/digest-wxmozilla-0.5.4, Manifest:
