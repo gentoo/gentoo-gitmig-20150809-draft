@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.19 2006/07/13 01:22:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.20 2006/08/05 15:54:49 phreak Exp $
+
+*fcgi-2.4.0-r1 (05 Aug 2006)
+
+  05 Aug 2006; Christian Heim <phreak@gentoo.org>
+  +files/fcgi-2.4.0-Makefile.patch,
+  +files/fcgi-2.4.0-clientdata-pointer.patch, +metadata.xml,
+  +fcgi-2.4.0-r1.ebuild:
+  Revision bump. Fixing build issues I encountered while compiling on uclibc.
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> fcgi-2.4.0.ebuild:
   Mark 2.4.0 stable on ia64. #138323
