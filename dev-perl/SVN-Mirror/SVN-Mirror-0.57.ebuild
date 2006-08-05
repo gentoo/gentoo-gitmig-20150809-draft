@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.57.ebuild,v 1.5 2006/07/04 19:54:52 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/SVN-Mirror-0.57.ebuild,v 1.6 2006/08/05 20:26:08 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,8 @@ IUSE=""
 DEPEND=">=dev-util/subversion-1.0.4
 	dev-perl/URI
 	dev-perl/TermReadKey
-	dev-perl/SVN-Simple"
+	dev-perl/SVN-Simple
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
@@ -27,3 +28,4 @@ pkg_setup() {
 		die "Need Subversion compiled with Perl bindings."
 	fi
 }
+

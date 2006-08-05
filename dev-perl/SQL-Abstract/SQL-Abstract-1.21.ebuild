@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.21.ebuild,v 1.2 2006/07/06 08:26:25 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.21.ebuild,v 1.3 2006/08/05 20:22:38 mcummings Exp $
 
 inherit perl-module
 SRC_TEST="do"
@@ -14,6 +14,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

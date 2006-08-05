@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.5 2006/07/10 22:10:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.6 2006/08/05 20:36:58 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Spreadsheet-ParseExcel-0.2603.ebuild:
+  Adding perl dep; fixed DEPEND
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   Spreadsheet-ParseExcel-0.2603.ebuild:

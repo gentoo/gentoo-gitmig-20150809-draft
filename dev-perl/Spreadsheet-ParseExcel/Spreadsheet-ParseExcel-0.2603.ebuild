@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.2603.ebuild,v 1.5 2006/07/10 22:10:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.2603.ebuild,v 1.6 2006/08/05 20:36:58 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/OLE-StorageLite"
+DEPEND="dev-perl/OLE-StorageLite
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
