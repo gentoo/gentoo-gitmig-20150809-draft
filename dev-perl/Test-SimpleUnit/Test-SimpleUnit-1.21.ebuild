@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/Test-SimpleUnit-1.21.ebuild,v 1.10 2006/07/13 04:48:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/Test-SimpleUnit-1.21.ebuild,v 1.11 2006/08/05 23:54:05 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/ExtUtils-AutoInstall
-		dev-perl/Data-Compare"
+	dev-perl/Data-Compare
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

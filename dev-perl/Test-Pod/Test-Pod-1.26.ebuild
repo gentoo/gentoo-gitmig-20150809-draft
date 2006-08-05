@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/Test-Pod-1.26.ebuild,v 1.1 2006/07/24 10:52:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/Test-Pod-1.26.ebuild,v 1.2 2006/08/05 23:51:44 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,8 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-perl/Pod-Simple
-	 	>=virtual/perl-Test-Simple-0.62"
+	>=virtual/perl-Test-Simple-0.62
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/Test-NoWarnings-0.082.ebuild,v 1.2 2006/07/16 09:00:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/Test-NoWarnings-0.082.ebuild,v 1.3 2006/08/05 23:51:05 mcummings Exp $
 
 inherit perl-module
 IUSE=""
@@ -15,5 +15,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/Test-Tester"
+DEPEND="dev-perl/Test-Tester
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+
