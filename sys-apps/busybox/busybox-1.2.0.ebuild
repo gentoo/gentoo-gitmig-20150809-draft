@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.0.ebuild,v 1.4 2006/07/15 02:51:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.0.ebuild,v 1.5 2006/08/05 20:04:58 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,14 +67,16 @@ src_unpack() {
 	# [package].config
 
 	if use savedconfig ; then
+		local conf root
 		[[ -r .config ]] && rm .config
-		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
-			configfile=${ROOT}/etc/${PN}/${CHOST}/${conf}.config
-			[[ -r ${configfile} ]] || configfile=/etc/${PN}/${CHOST}/${conf}.config
-			if [[ -r ${configfile} ]] ; then
-				cp ${configfile} ${S}/.config
-				break
-			fi
+		for conf in {${PF},${P},${PN}}{,-${CHOST}} ; do
+			for root in "${ROOT}" / ; do
+				configfile=${root}etc/portage/savedconfig/${conf}.config
+				if [[ -r ${configfile} ]] ; then
+					cp ${configfile} "${S}"/.config
+					break
+				fi
+			done
 		done
 		if [[ -r ${S}/.config ]] ; then
 			einfo "Found your ${configfile} and using it."
@@ -217,10 +219,10 @@ src_install() {
 	fi
 
 	if use savedconfig ; then
-		einfo "Saving this build config to /etc/${PN}/${CHOST}/${PN}-${PV}-${PR}.config"
+		einfo "Saving this build config to /etc/portage/savedconfig/${PVR}.config"
 		einfo "Read this ebuild for more info on how to take advantage of this option"
-		insinto /etc/${PN}/${CHOST}/
-		newins "${S}"/.config ${PN}-${PV}-${PR}.config
+		insinto /etc/portage/savedconfig
+		newins "${S}"/.config ${PVR}.config
 	fi
 }
 
