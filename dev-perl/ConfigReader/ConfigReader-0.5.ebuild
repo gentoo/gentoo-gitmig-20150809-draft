@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ConfigReader-0.5.ebuild,v 1.6 2006/07/10 14:56:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ConfigReader-0.5.ebuild,v 1.7 2006/08/05 01:33:17 mcummings Exp $
 
 # No sense in inheriting since this package is a flat set of files.
 # No Makefile.PL/Build.PL to work with at all.
@@ -16,6 +16,7 @@ KEYWORDS="ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	eval `perl '-V:installvendorlib'`
