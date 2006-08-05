@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/Crypt-DES-2.03-r1.ebuild,v 1.17 2005/10/02 12:30:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/Crypt-DES-2.03-r1.ebuild,v 1.18 2006/08/05 01:44:53 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,6 @@ IUSE=""
 
 DEPEND="virtual/libc
 	>=dev-lang/perl-5"
+RDEPEND="${DEPEND}"
 
 export OPTIMIZE="${CFLAGS}"
