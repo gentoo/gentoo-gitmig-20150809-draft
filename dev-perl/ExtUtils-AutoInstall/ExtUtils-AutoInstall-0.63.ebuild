@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.63.ebuild,v 1.8 2006/07/04 08:18:16 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.63.ebuild,v 1.9 2006/08/05 03:30:39 mcummings Exp $
 
 inherit perl-module
 
@@ -16,9 +16,11 @@ IUSE=""
 # TESTS BAD. Wants to write to cpan's config on the live system
 #SRC_TEST="do"
 
-DEPEND="dev-perl/Sort-Versions"
+DEPEND="dev-perl/Sort-Versions
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "n" | perl-module_src_compile
 }
+

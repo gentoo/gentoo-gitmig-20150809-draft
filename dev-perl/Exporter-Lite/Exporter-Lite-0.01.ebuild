@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Lite/Exporter-Lite-0.01.ebuild,v 1.11 2005/06/17 20:40:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Lite/Exporter-Lite-0.01.ebuild,v 1.12 2006/08/05 03:29:35 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
