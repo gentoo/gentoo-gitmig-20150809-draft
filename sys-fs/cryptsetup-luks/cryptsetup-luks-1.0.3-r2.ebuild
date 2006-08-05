@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.8 2006/07/10 18:03:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.9 2006/08/05 21:27:55 vapier Exp $
 
 inherit autotools linux-info eutils flag-o-matic multilib
 
@@ -49,8 +49,10 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/"${PN}-${PV}-selinux.patch"
-	eautoreconf
+	epatch "${FILESDIR}"/${P}-selinux.patch
+	rm -f po/Makefile.in.in #142362
+	autopoint -f || die
+	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_compile() {
