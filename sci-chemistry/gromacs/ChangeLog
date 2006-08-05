@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.9 2006/07/07 05:33:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.10 2006/08/05 05:10:29 dberkholz Exp $
+
+  05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Remove myself as maintainer, anyone feel free to work on this, although I'll
+  continue to do so as well.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update to my new email address.
