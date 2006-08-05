@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.122.ebuild,v 1.2 2006/08/04 15:34:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.122.ebuild,v 1.3 2006/08/05 21:10:27 vapier Exp $
 
 inherit eutils autotools
 
@@ -34,8 +34,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.118-libelf-link.patch
 	epatch "${FILESDIR}"/${PN}-0.118-PaX-support.patch
 	epatch "${FILESDIR}"/${PN}-0.118-no-nested-functions.patch #116968
-	epatch "${FILESDIR}"/${PN}-0.122-aux-config-dir.patch #
-	# this will make more files than need be, but who cares really
+	# this will make more files +x than need be, but who cares really
 	chmod a+rx config/*
 
 	AT_M4DIR="${S}/m4" eautoreconf
