@@ -80,6 +80,14 @@ x86		default-linux/x86/2006.1/desktop		dev
 x86-fbsd	default-bsd/fbsd/6.1/x86			dev
 
 
+# hardened multiarch profiles
+amd64		hardened/amd64					stable
+amd64		hardened/amd64/multilib				stable
+ppc		hardened/ppc					dev
+ppc64		hardened/ppc64					dev
+x86		hardened/x86					stable
+x86		hardened/x86/2.6				stable
+
 # uclibc/embedded multiarch profiles
 #amd64		uclibc/amd64					dev
 #arm		uclibc/arm					dev
