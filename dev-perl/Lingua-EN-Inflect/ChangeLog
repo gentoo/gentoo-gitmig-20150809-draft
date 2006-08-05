@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-EN-Inflect
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.16 2006/02/06 20:26:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.17 2006/08/05 13:23:17 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Lingua-EN-Inflect-1.88.ebuild, Lingua-EN-Inflect-1.89.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   06 Feb 2006; Simon Stelling <blubb@gentoo.org>
   Lingua-EN-Inflect-1.89.ebuild:
