@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-ReadBackwards/File-ReadBackwards-1.02.ebuild,v 1.9 2006/02/13 12:59:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-ReadBackwards/File-ReadBackwards-1.02.ebuild,v 1.10 2006/08/05 03:44:40 mcummings Exp $
 
 inherit perl-module
 
@@ -12,4 +12,8 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 amd64 ~ppc alpha sparc ~hppa ~ppc64"
 SRC_TEST="do"
-DEPEND="virtual/perl-Test-Simple"
+DEPEND="virtual/perl-Test-Simple
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
+
+
