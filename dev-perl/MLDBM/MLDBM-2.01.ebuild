@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/MLDBM-2.01.ebuild,v 1.14 2006/01/16 20:05:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/MLDBM-2.01.ebuild,v 1.15 2006/08/05 13:41:57 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,7 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="alpha amd64 ia64 ppc s390 sparc x86"
 IUSE=""
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

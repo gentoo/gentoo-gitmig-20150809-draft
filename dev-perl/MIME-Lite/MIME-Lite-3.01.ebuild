@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.01.ebuild,v 1.11 2005/10/02 12:55:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Lite/MIME-Lite-3.01.ebuild,v 1.12 2006/08/05 13:39:45 mcummings Exp $
 
 IUSE=""
 
@@ -21,3 +21,7 @@ src_install() {
 	cd ${S}
 	cp ${S}/contrib/*.pm ${BUILD_VENDOR_LIB}/
 }
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
