@@ -231,7 +231,7 @@ java-pkg_dojar() {
 #
 # @param $@ - jars to record
 # ------------------------------------------------------------------------------
-# TODO fix me!
+# TODO should we be making sure the jar is present on ${D} or wherever?
 java-pkg_regjar() {
 	debug-print-function ${FUNCNAME} $*
 
@@ -1165,10 +1165,21 @@ java-pkg_javac-args() {
 java-pkg_get-jni-cflags() {
 	local flags="-I${JAVA_HOME}/include"
 
+	# TODO do a check that the directories are valid
 	# TODO figure out how to cope with other things than linux...
 	flags="${flags} -I${JAVA_HOME}/include/linux"
 
 	echo ${flags}
+}
+
+java-pkg_ensure-gcj() {
+	if ! built_with_use sys-devel/gcc gcj ; then
+		ewarn
+		ewarn "You must build gcc with the gcj support to build with gcj"
+		ewarn
+		ebeep 5
+		die "No GCJ support found!"
+	fi
 }
 
 # ------------------------------------------------------------------------------
