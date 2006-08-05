@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r1.ebuild,v 1.3 2006/07/15 21:47:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r1.ebuild,v 1.4 2006/08/05 18:12:32 herbs Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -68,7 +68,7 @@ src_unpack() {
 	epatch ${FILESDIR}/splashutils-1.3-pthreads.patch
 
 	# Check whether the kernel tree has been patched with fbsplash.
-	if [[ ! -e ${ROOT}/usr/lib/klibc/include/linux/console_splash.h ]]; then
+	if [[ ! -e ${ROOT}/usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
 		ewarn "The kernel tree against which dev-libs/klibc was built was not patched"
 		ewarn "with a compatible version of fbsplash. Splashutils will be compiled"
 		ewarn "without fbsplash support (ie. verbose mode will not work)."
@@ -88,11 +88,14 @@ src_unpack() {
 	if ! use truetype ; then
 		sed -i -e 's/fbtruetype kbd/kbd/' ${SM}/Makefile
 	fi
+
+	# Fix path to klibc headers on multilib systems
+	sed -i -e "s:/lib/klibc:/$(get_libdir)/klibc:" ${S}/Makefile
 }
 
 src_compile() {
 	local myconf=""
-	if [[ ! -e ${ROOT}/usr/lib/klibc/include/linux/console_splash.h ]]; then
+	if [[ ! -e ${ROOT}/usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
 		myconf="--without-fbsplash"
 	else
 		myconf="--with-fbsplash"
