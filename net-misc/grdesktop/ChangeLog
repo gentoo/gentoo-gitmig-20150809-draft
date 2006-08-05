@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.21 2006/03/16 13:08:31 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.22 2006/08/05 23:04:17 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  metadata.xml translation by Yoshino-san in bug #135465
 
   16 Mar 2006; John N. Laliberte <allanonjl@gentoo.org>
   grdesktop-0.22-r1.ebuild, grdesktop-0.23.ebuild:
