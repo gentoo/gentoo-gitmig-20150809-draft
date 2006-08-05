@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.22 2006/04/24 15:42:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.23 2006/08/05 23:42:30 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Manifest-1.11.ebuild, Test-Manifest-1.14.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   24 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   Test-Manifest-1.14.ebuild:
