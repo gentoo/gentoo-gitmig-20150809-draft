@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/IPC-Run-0.80.ebuild,v 1.2 2006/07/04 11:27:30 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/IPC-Run-0.80.ebuild,v 1.3 2006/08/05 04:49:16 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,7 @@ LICENSE="Artistic"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-perl/IO-Tty-1.0"
+DEPEND=">=dev-perl/IO-Tty-1.0
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

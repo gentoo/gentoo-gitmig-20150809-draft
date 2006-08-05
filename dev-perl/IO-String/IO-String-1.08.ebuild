@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/IO-String-1.08.ebuild,v 1.11 2006/05/28 15:26:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/IO-String-1.08.ebuild,v 1.12 2006/08/05 04:45:00 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-f
 IUSE=""
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
