@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.187 2006/08/04 21:58:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.188 2006/08/05 04:49:55 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -362,7 +362,7 @@ unpack_2_6() {
 
 	# quick fix for bug #132152 which triggers when it cannot include linux
 	# headers (ie, we have not installed it yet)
-	if ! (make -s defconfig ${xmakeopts} &>/dev/null 2>&1); then
+	if ! make -s defconfig ${xmakeopts} &>/dev/null 2>&1 ; then
 		touch .config
 		eerror "make defconfig failed."
 		eerror "assuming you dont have any headers installed yet and continuing"
