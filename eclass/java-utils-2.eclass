@@ -1834,7 +1834,7 @@ increment-qa-violations() {
 }
 
 is-java-strict() {
-	hasq java-strict ${FEATURES};
+	hasq java-strict ${FEATURES} && ! hasq -java-strict ${FEATURES}
 	return $?
 }
 
