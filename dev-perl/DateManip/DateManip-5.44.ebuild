@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.44.ebuild,v 1.9 2006/04/01 01:55:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.44.ebuild,v 1.10 2006/08/05 02:46:08 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -15,3 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-f
 IUSE=""
 
 mydoc="HISTORY TODO"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

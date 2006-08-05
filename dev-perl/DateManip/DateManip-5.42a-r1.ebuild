@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.42a-r1.ebuild,v 1.17 2005/05/22 02:05:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.42a-r1.ebuild,v 1.18 2006/08/05 02:46:08 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -20,3 +20,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/safe-taint-check.patch
 }
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
