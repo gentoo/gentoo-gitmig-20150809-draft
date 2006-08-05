@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/Email-Valid-0.175.ebuild,v 1.2 2006/07/04 07:54:19 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/Email-Valid-0.175.ebuild,v 1.3 2006/08/05 03:10:47 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,7 @@ LICENSE="|| ( GPL-2 Artistic )"
 IUSE=""
 SRC_TEST="do"
 DEPEND="dev-perl/MailTools
-	dev-perl/Net-DNS"
+	dev-perl/Net-DNS
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

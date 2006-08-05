@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.22 2006/07/04 07:39:14 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.23 2006/08/05 02:43:13 mcummings Exp $
 
 inherit perl-module
 
@@ -22,5 +22,7 @@ DEPEND="dev-perl/Date-Leapyear
 	virtual/perl-Test-Simple
 	virtual/perl-Time-Local
 	virtual/perl-Time-HiRes
-	virtual/perl-Storable"
+	virtual/perl-Storable
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/Data-Hierarchy-0.22.ebuild,v 1.2 2006/07/04 07:36:55 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/Data-Hierarchy-0.22.ebuild,v 1.3 2006/08/05 02:39:39 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/Clone"
+DEPEND="dev-perl/Clone
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
