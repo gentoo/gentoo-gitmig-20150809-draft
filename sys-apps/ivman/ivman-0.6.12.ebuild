@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.12.ebuild,v 1.4 2006/08/05 08:15:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.6.12.ebuild,v 1.5 2006/08/05 15:17:19 genstef Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ pkg_postinst() {
 	# execute...
 	# The group here is intended to be the one needed to use pmount, but Ivman
 	# will still work as long as the group in IvmConfigBase.xml is correct.
-	enewuser ivman -1 -1 /dev/null plugdev || die "Problem adding ivman user"
+	enewuser ivman -1 -1 /dev/null plugdev
 
 	if has_version "<sys-apps/hal-0.5.0"; then
 		einfo "Ivman was built against HAL 0.4.x.  If you later upgrade to HAL 0.5,"

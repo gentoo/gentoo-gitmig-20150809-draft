@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.42 2006/08/05 08:15:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.43 2006/08/05 15:17:19 genstef Exp $
+
+  05 Aug 2006; Stefan Schweizer <genstef@gentoo.org> -ivman-0.6.8.ebuild,
+  ivman-0.6.11.ebuild, ivman-0.6.12.ebuild:
+  remove old, fix enewuser thanks to jakub in bug 142758
 
   05 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> ivman-0.6.12.ebuild:
   Stable on ppc.
