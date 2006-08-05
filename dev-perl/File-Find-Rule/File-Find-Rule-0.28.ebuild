@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/File-Find-Rule-0.28.ebuild,v 1.21 2006/07/18 00:59:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/File-Find-Rule-0.28.ebuild,v 1.22 2006/08/05 03:39:39 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,8 @@ DEPEND="virtual/perl-Test-Simple
 	virtual/perl-File-Spec
 	dev-perl/Number-Compare
 	dev-perl/Text-Glob
-	>=dev-perl/module-build-0.28"
+	>=dev-perl/module-build-0.28
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

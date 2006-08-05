@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/File-NFSLock-1.20.ebuild,v 1.1 2006/04/17 06:08:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NFSLock/File-NFSLock-1.20.ebuild,v 1.2 2006/08/05 03:43:59 mcummings Exp $
 
 inherit perl-module
 
@@ -13,3 +13,7 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~x86"
 IUSE=""
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
