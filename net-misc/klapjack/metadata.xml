@@ -11,4 +11,9 @@ KLapJack is a KDE client for the popular online journalling site LiveJournal,
 but will also work with any LiveJournal compatible site, such as Blurty.com and
 DeadJournal.
 </longdescription>
+<longdescription lang="ja">
+KLapJack は人気オンライン・ジャーナリング・サイト LiveJournal の KDE クライ
+アントです。LiveJournal 互換のサイト、例えば Blurty.com や DeadJournal にも
+利用できます。
+</longdescription>
 </pkgmetadata>
