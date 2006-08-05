@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.25 2006/07/24 11:03:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.26 2006/08/05 21:42:43 nichoj Exp $
+
+  05 Aug 2006; Joshua Nichols <nichoj@gentoo.org> jmeter-2.0.1-r1.ebuild:
+  Fixed dependencies to account for java-strict.
 
   24 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   files/digest-jmeter-1.9.1, Manifest:
