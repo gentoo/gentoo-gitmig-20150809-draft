@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/videogen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/ChangeLog,v 1.8 2006/02/23 23:20:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/videogen/ChangeLog,v 1.9 2006/08/05 05:01:20 dberkholz Exp $
 
-  23 Feb 2006; Donnie Berkholz <spyderous@gentoo.org>; videogen-0.32.ebuild:
+  05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Update my email address: spyderous -> dberkholz.
+
+  23 Feb 2006; Donnie Berkholz <dberkholz@gentoo.org>; videogen-0.32.ebuild:
   Remove redundant src_compile(), reported by ciaranm.
 
   26 Jul 2005; David Holm <dholm@gentoo.org> videogen-0.32.ebuild:
@@ -11,10 +14,10 @@
   14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> videogen-0.32.ebuild:
   added ~amd64 to KEYWORDS. fixes bug #77950.
 
-  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; videogen-0.32.ebuild:
+  28 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>; videogen-0.32.ebuild:
   x86.
 
-  28 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>; videogen-0.32.ebuild:
+  28 Oct 2004; Donnie Berkholz <dberkholz@gentoo.org>; videogen-0.32.ebuild:
   Change from CC to tc-getCC in toolchain-funcs eclass to fix for newer
   gcc-config.
 
@@ -23,7 +26,7 @@
 
 *videogen-0.32 (19 Oct 2003)
 
-  19 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml,
+  19 Oct 2003; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml,
   videogen-0.32.ebuild:
   Initial commit. Thanks to Andrew Kirilenko <icedank@gmx.net> for the work on
   the ebuild in bug #31552.
