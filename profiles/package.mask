@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5700 2006/08/03 22:23:59 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5701 2006/08/05 00:05:19 langthang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tuấn Văn <langthang@gentoo.org> (04 Aug 2006)
+# Incomplete patch.
+=net-mail/cyrus-imapd-2.2.12-r5
 
 # Alec Warner <antarus@gentoo.org> (03 Aug 2006)
 # media-libs/openvrml masked for treecleaners for bug(s) 137775
