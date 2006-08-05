@@ -9,4 +9,7 @@
 <longdescription>
 	ICAClient is a Linux client to a Citrix Metaframe Server.
 </longdescription>
+<longdescription lang="ja">
+	ICAClient は Citrix Metaframe Server への Linux 用クライアントです。
+</longdescription>
 </pkgmetadata>
