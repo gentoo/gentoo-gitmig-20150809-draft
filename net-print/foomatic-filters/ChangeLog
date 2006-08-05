@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.37 2006/07/20 09:00:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.38 2006/08/05 17:44:43 genstef Exp $
+
+  05 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  foomatic-filters-3.0.20060720.ebuild:
+  Fix DEPEND thanks to Tiger!P <gentoo-tigerp@tigerp.net> in bug 142825
 
 *foomatic-filters-3.0.20060720 (20 Jul 2006)
 

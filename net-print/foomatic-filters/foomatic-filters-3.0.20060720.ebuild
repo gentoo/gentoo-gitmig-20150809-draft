@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.1 2006/07/20 09:00:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.2 2006/08/05 17:44:43 genstef Exp $
 
 inherit eutils versionator autotools
 
@@ -24,6 +24,7 @@ RDEPEND="cups? ( >=net-print/cups-1.1.19 )
 		app-text/mpage
 	)
 	virtual/ghostscript"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
