@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-2.99-r1.ebuild,v 1.13 2005/11/27 22:35:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-2.99-r1.ebuild,v 1.14 2006/08/05 04:55:08 mcummings Exp $
 
 inherit perl-module
 
@@ -16,3 +16,7 @@ KEYWORDS="x86 amd64 sparc alpha ppc ppc64"
 IUSE=""
 
 mydoc="ToDo"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
