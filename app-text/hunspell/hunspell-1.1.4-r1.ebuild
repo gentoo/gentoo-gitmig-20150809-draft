@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4-r1.ebuild,v 1.8 2006/08/04 22:51:51 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.1.4-r1.ebuild,v 1.9 2006/08/05 21:09:04 vapier Exp $
 
-inherit eutils multilib autotools libtool
+inherit fixheadtails eutils multilib autotools
 
-DESCRIPTION="Hunspell spell checker - an improved replacement for myspell in OOo."
+DESCRIPTION="Hunspell spell checker - an improved replacement for myspell in OOo"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://hunspell.sourceforge.net/"
 
@@ -19,28 +19,25 @@ DEPEND="readline? ( sys-libs/readline )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i -e 's:tail +:tail -n +:' ${S}/tests/test.sh ||\
-		die "Failed to fix-up tail for POSIX compliance"
+	cd "${S}"
+	ht_fix_file tests/test.sh
 	# Rework to use libtool, so as to get shared libraries
 	# where appropriate, instead of the archive-only approach
 	# taken upstream.
-	epatch "${FILESDIR}/${P}-libtool.patch"
+	epatch "${FILESDIR}"/${P}-libtool.patch
 	# Upstream package creates executables 'example', 'munch'
 	# and 'unmunch' which are too generic to be placed in
 	# /usr/bin - this patch prefixes them with 'hunspell-'.
 	# Also includes a small change for libtool.
-	epatch "${FILESDIR}/${P}-renameexes.patch"
+	epatch "${FILESDIR}"/${P}-renameexes.patch
 
 	# Set AT_M4DIR to workaround eautoreconf limitation, and copy
 	# mkinstalldirs script to the po subdirectory for compatibility
 	# with gettext-0.15 (see bug #142565)
 	cp ${S}/mkinstalldirs ${S}/po/
 	export AT_M4DIR="${S}/m4"
-	# Makefile.am modified, libtool added, hence autoreconfi
-	# and elibtoolize.
+	# Makefile.am modified, libtool added, hence autoreconf
 	WANT_AUTOMAKE="1.9" eautoreconf
-	elibtoolize
 }
 
 src_compile() {
