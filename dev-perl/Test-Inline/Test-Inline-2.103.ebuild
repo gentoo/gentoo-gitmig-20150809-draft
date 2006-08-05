@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.103.ebuild,v 1.12 2006/03/22 20:52:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/Test-Inline-2.103.ebuild,v 1.13 2006/08/05 23:39:53 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,8 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="virtual/perl-Test-Simple
-	>=dev-perl/Test-ClassAPI-1.02"
+	>=dev-perl/Test-ClassAPI-1.02
+	dev-lang/perl"
 RDEPEND="virtual/perl-Memoize
 	virtual/perl-Test-Harness
 	>=virtual/perl-File-Spec-0.80
@@ -32,3 +33,5 @@ RDEPEND="virtual/perl-Memoize
 	>=dev-perl/Pod-Tests-0.18"
 
 S=${WORKDIR}/${MY_P}
+
+
