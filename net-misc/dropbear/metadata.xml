@@ -12,4 +12,12 @@ the result. It implements most required features of the SSH 2 protocol, and othe
 as X11, TCP and Authentication Agent forwarding. Dropbear is Open Source software, distributed 
 under a MIT-style license.
 </longdescription>
+<longdescription lang="ja">
+私は 4MB の RAM とハードディスクを搭載しないラップトップ型にぴったりな小さ
+くて安全な SSH サーバを探していました。しかし満足するものは見つけられません
+でした。私は自身で作ろうと決意しました。その結果が Dropbear です。SSH 2 プ
+ロトコルに必要な機能の大半、他にも X11 や TCP、認証エージェント・フォワーデ
+ィングといった機能が実装してあります。Dropbear はオープンソースで、MIT スタ
+イルのライセンス下で配布されます。
+</longdescription>
 </pkgmetadata>
