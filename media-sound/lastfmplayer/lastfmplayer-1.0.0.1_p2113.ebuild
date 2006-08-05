@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.2 2006/07/28 22:36:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.3 2006/08/05 17:35:45 genstef Exp $
 
 inherit eutils subversion versionator
 
@@ -13,7 +13,7 @@ ESVN_OPTIONS="--revision ${PV#*_p}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="debug"
 
 DEPEND="=x11-libs/qt-4*"
 RDEPEND="${DEPEND}"
@@ -29,10 +29,19 @@ pkg_setup() {
 
 		die "no gif or png support in qt"
 	fi
+
+	if use debug && ! built_with_use x11-libs/qt debug ; then
+		eerror "In order to use debug, you need to compile Qt 4"
+		eerror "with debug USE flag."
+	fi
 }
 
 src_compile() {
-	qmake || die "qmake failed"
+	if use debug ; then
+		qmake CONFIG+=debug || die "qmake failed"
+	else
+		qmake CONFIG-=debug QMAKE_TARGET=LastFM || die "qmake failed"
+	fi	
 	emake qmake_all || die "emake qmake_all failed"
 	epatch ${FILESDIR}/lastfmplayer-amd64.patch
 	emake || die "emake failed"
@@ -47,9 +56,16 @@ src_install() {
 	local destination="/opt/lastfm"
 	cd bin
 
+	#Bin name
+	if ! use debug ; then
+		MY_B=LastFM
+	else
+		MY_B=LastFM_debug
+	fi
+
 	# Install the player
 	exeinto ${destination}
-	doexe LastFM
+	doexe ${MY_B}
 
 	# Install libraries and symlinks
 	v=( $(get_version_components ) )
@@ -70,7 +86,7 @@ src_install() {
 	keepdir ${destination}/cache
 
 	# Icon, menu, protcol
-	make_wrapper lastfm ./LastFM ${destination} ${destination}
+	make_wrapper lastfm ./${MY_B} ${destination} ${destination}
 	newicon data/icon.png lastfm.png
 	make_desktop_entry lastfm "Last.fm Player" lastfm.png
 
