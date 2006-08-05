@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/Net-Netmask-1.9004.ebuild,v 1.8 2005/04/28 17:47:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/Net-Netmask-1.9004.ebuild,v 1.9 2006/08/05 14:22:44 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="x86 amd64 ~ppc sparc alpha mips"
 IUSE=""
 
 mydoc="TODO"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
