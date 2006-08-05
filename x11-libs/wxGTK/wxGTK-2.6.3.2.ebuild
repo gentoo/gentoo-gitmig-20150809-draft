@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.2.ebuild,v 1.4 2006/07/10 01:14:00 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.2.ebuild,v 1.5 2006/08/05 14:10:04 leio Exp $
 
 inherit wxlib gnuconfig versionator flag-o-matic
 
@@ -20,9 +20,9 @@ RDEPEND="${RDEPEND}
 		>=dev-libs/glib-2.0
 		media-libs/tiff )
 	odbc? ( dev-db/unixODBC )
-	x86? ( sdl? ( media-libs/sdl-sound ) )
-	amd64? ( sdl? ( media-libs/sdl-sound ) )
-	ppc? ( sdl? ( media-libs/sdl-sound ) )"
+	x86? ( sdl? ( >=media-libs/libsdl-1.2 ) )
+	amd64? ( sdl? ( >=media-libs/libsdl-1.2 ) )
+	ppc? ( sdl? ( >=media-libs/libsdl-1.2 ) )"
 
 DEPEND="${RDEPEND}
 	${DEPEND}
