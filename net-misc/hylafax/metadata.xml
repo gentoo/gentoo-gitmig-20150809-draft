@@ -8,4 +8,8 @@
   <description>Primary Maintainer</description>
 </maintainer>
 <longdescription>HylaFAX(tm) client-server fax system with email gateway, paging, and multi-platform client support.</longdescription>
+<longdescription lang="ja">
+HylaFAX(tm) はメールゲートウェイ、ページング、マルチプラットフォーム・クライアントをサポートした
+クライアント/サーバ・FAX・システムです。
+</longdescription>
 </pkgmetadata>
