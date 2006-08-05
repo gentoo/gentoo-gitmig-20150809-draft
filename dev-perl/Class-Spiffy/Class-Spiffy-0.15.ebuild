@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/Class-Spiffy-0.15.ebuild,v 1.4 2006/07/10 14:46:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/Class-Spiffy-0.15.ebuild,v 1.5 2006/08/05 00:49:50 mcummings Exp $
 
 inherit perl-module
 
@@ -15,3 +15,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND=">=dev-lang/perl-5.6.1"
+RDEPEND="${DEPEND}"
