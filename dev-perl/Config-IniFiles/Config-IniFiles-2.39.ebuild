@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/Config-IniFiles-2.39.ebuild,v 1.1 2006/07/02 17:35:35 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/Config-IniFiles-2.39.ebuild,v 1.2 2006/08/05 01:27:40 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="test"
 SRC_TEST="do"
-DEPEND="test? ( virtual/perl-Test-Harness )"
-RDEPEND=""
+DEPEND="test? ( virtual/perl-Test-Harness )
+	dev-lang/perl"
+RDEPEND="dev-lang/perl"
