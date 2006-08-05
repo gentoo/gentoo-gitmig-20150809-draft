@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-CRL/OpenCA-CRL-0.9.17.ebuild,v 1.11 2005/10/02 13:04:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-CRL/OpenCA-CRL-0.9.17.ebuild,v 1.12 2006/08/05 19:40:18 mcummings Exp $
 
 inherit perl-module
 
@@ -16,3 +16,7 @@ IUSE=""
 SRC_TEST="do"
 
 export OPTIMIZE="${CFLAGS}"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

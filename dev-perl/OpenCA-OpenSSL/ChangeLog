@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OpenCA-OpenSSL
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.21 2006/07/04 14:12:57 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/ChangeLog,v 1.22 2006/08/05 19:40:58 mcummings Exp $
+
+  05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  OpenCA-OpenSSL-0.8.43-r1.ebuild, OpenCA-OpenSSL-0.9.91.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   04 Jul 2006; Christian Hartmann <ian@gentoo.org>
   OpenCA-OpenSSL-0.9.91.ebuild:

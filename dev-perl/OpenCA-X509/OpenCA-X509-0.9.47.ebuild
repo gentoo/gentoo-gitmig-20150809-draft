@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-X509/OpenCA-X509-0.9.47.ebuild,v 1.7 2006/02/06 20:32:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-X509/OpenCA-X509-0.9.47.ebuild,v 1.8 2006/08/05 19:42:21 mcummings Exp $
 
 inherit perl-module
 
@@ -22,3 +22,7 @@ src_compile() {
 	perl-module_src_compile
 
 }
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

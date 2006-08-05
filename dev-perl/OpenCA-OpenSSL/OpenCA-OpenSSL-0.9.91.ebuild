@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/OpenCA-OpenSSL-0.9.91.ebuild,v 1.14 2006/07/04 14:12:57 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-OpenSSL/OpenCA-OpenSSL-0.9.91.ebuild,v 1.15 2006/08/05 19:40:58 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,8 @@ IUSE=""
 export OPTIMIZE="${CFLAGS}"
 
 DEPEND="dev-perl/X500-DN
-	dev-libs/openssl"
+	dev-libs/openssl
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+
