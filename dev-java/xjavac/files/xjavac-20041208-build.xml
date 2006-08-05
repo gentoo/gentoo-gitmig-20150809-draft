@@ -22,6 +22,7 @@
 		<mkdir dir="${build.dir}" />
 		<javac srcdir="${src.dir}" 
 			destdir="${build.dir}"
+			classpath="${classpath}"
 			source="${target.jdk}"
 			target="${target.jdk}"/>
 	</target>

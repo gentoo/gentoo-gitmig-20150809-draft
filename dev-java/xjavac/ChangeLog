@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xjavac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.10 2006/07/23 00:46:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.11 2006/08/05 20:15:51 nelchael Exp $
+
+*xjavac-20041208-r3 (05 Aug 2006)
+
+  05 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/xjavac-ibm-1_5.patch, files/xjavac-20041208-build.xml,
+  +xjavac-20041208-r3.ebuild:
+  Apply a patch for IBM JDK, see bug #142692.
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   xjavac-20041208-r2.ebuild:
