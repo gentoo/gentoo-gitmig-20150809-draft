@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bcprov
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.2 2006/07/31 03:25:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.3 2006/08/05 13:00:51 dertobi123 Exp $
+
+  05 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  bcprov-1.31-r1.ebuild:
+  Added ~ppc, bug #141528
 
   31 Jul 2006; Joshua Nichols <nichoj@gentoo.org> bcprov-1.31-r1.ebuild:
   Keyworded ~amd64 for bug #141528
