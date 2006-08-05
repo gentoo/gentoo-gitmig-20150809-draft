@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.12 2006/01/10 00:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.13 2006/08/05 07:55:20 ticho Exp $
+
+  05 Aug 2006; <ticho@gentoo.org> rssh-2.3.2.ebuild:
+  Stable on x86. Security bug #142399.
 
 *rssh-2.3.2 (10 Jan 2006)
 
