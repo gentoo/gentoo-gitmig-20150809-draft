@@ -7,4 +7,5 @@
 		<name>Roy Marples</name>
 	</maintainer>
 	<longdescription>A DHCP client</longdescription>
+	<longdescription lang="ja">DHCP クライアントです。</longdescription>
 </pkgmetadata>

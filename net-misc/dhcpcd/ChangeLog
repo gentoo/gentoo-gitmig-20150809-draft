@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.102 2006/07/22 16:33:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.103 2006/08/05 20:44:35 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  metadata.xml translation by Yoshino-san in bug #135033
 
 *dhcpcd-2.0.8-r2 (22 Jul 2006)
 
