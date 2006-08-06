@@ -171,3 +171,31 @@ java-ant_bsfix_one() {
 		fi
 	fi
 }
+
+# ------------------------------------------------------------------------------
+# @public java-ant_rewrite-classpath
+#
+# Adds 'classpath="${gentoo.classpath}"' to specified build file.
+# ------------------------------------------------------------------------------
+java-ant_rewrite-classpath() {
+	debug-print-function ${FUNCNAME} $*
+
+	if [ -z "${1}" ]; then
+		eerror "java-ant_rewrite-classpath needs one argument"
+		die "java-ant_rewrite-classpath needs one argument"
+	fi
+
+	local file="${1}"
+	echo "Adding gentoo.classpath to ${file}"
+	debug-print "java-ant_rewrite-classpath: ${file}"
+
+	cp "${file}" "${file}.orig" || die "failed to copy ${file}"
+
+	chmod u+w "${file}"
+
+	xml-rewrite.py -f "${file}" --change -e javac -e xjavac -a classpath -v '${gentoo.classpath}' || die "xml-rewrite failed: ${file}"
+
+	if [[ -n "${JAVA_PKG_DEBUG}" ]]; then
+		diff -NurbB "${file}.orig" "${file}"
+	fi
+}
