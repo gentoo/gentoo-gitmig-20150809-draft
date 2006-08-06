@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.53.ebuild,v 1.4 2006/06/12 17:02:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.53.ebuild,v 1.5 2006/08/06 03:16:36 mcummings Exp $
 
 inherit perl-module
 
@@ -17,12 +17,15 @@ KEYWORDS="~hppa ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-Test-Simple-0.62
-		>=dev-perl/Test-Base-0.47
+	>=dev-perl/Test-Base-0.47
 		>=dev-perl/Class-Spiffy-0.12
 		>=dev-lang/perl-5.6.1"
+RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 
 src_compile() {
 	echo "" | perl-module_src_compile
 }
+
+
