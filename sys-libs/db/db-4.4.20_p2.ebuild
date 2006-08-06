@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p2.ebuild,v 1.3 2006/08/03 23:46:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p2.ebuild,v 1.4 2006/08/06 12:24:03 pauldv Exp $
 
-inherit eutils gnuconfig db flag-o-matic
+inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
 #Number of official patches
 #PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
 PATCHNO=${PV/*.*.*_p}
-if [ "${PATCHNO}" == "${PV}" ]; then
+if [[ ${PATCHNO} == "${PV}" ]] ; then
 	MY_PV=${PV}
 	MY_P=${P}
 	PATCHNO=0
@@ -16,11 +16,11 @@ else
 	MY_P=${PN}-${MY_PV}
 fi
 
-S=${WORKDIR}/${MY_P}/build_unix
+S="${WORKDIR}/${MY_P}/build_unix"
 DESCRIPTION="Berkeley DB"
 HOMEPAGE="http://www.sleepycat.com/"
 SRC_URI="ftp://ftp.sleepycat.com/releases/${MY_P}.tar.gz"
-for (( i=1 ; i<=$PATCHNO ; i++ )) ; do
+for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.sleepycat.com/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
@@ -30,29 +30,32 @@ KEYWORDS="~amd64 ~ia64 ~m68k ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="tcl java doc nocxx bootstrap"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
-	java? ( virtual/jdk )
+	java? ( >=virtual/jdk-1.4 )
 	>=sys-devel/binutils-2.16.1"
 RDEPEND="tcl? ( dev-lang/tcl )
-	java? ( virtual/jre )"
+	java? ( >=virtual/jre-1.4 )"
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd ${WORKDIR}/${MY_P}
-	for (( i=1 ; i<=$PATCHNO ; i++ ))
+	unpack "${MY_P}".tar.gz
+	cd "${WORKDIR}"/"${MY_P}"
+	for (( i=1 ; i<=${PATCHNO} ; i++ ))
 	do
-		epatch ${DISTDIR}/patch.${MY_PV}.${i}
+		epatch "${DISTDIR}"/patch."${MY_PV}"."${i}"
 	done
-	epatch ${FILESDIR}/${PN}-${SLOT}-jarlocation.patch
-	epatch ${FILESDIR}/${PN}-${SLOT}-libtool.patch
+	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-libtool.patch
 
-	gnuconfig_update "${S}/../dist"
+	# use the includes from the prefix
+	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-jni-check-prefix-first.patch
+	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-listen-to-java-options.patch
 
-	sed -i -e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" ${S}/../dist/configure
+	gnuconfig_update "${S}"/../dist
+
+	sed -i \
+		-e "s,\(ac_compiler\|\${MAKEFILE_CC}\|\${MAKEFILE_CXX}\|\$CC\)\( *--version\),\1 -dumpversion,g" \
+		"${S}"/../dist/configure
 }
 
 src_compile() {
-	addwrite /proc/self/maps
-
 	local myconf=""
 
 	use amd64 && myconf="${myconf} --with-mutex=x86/gcc-assembly"
@@ -66,9 +69,11 @@ src_compile() {
 		|| myconf="${myconf} --disable-tcl"
 
 	myconf="${myconf} $(use_enable java)"
-	if use java && [[ -n ${JAVAC} ]] ; then
-		export PATH=`dirname ${JAVAC}`:${PATH}
-		export JAVAC=`basename ${JAVAC}`
+	if use java; then
+		myconf="${myconf} --with-java-prefix=${JAVA_HOME}"
+		# Can't get this working any other way, since it returns spaces, and
+		# bash doesn't seem to want to pass correctly in any way i try
+		local javaconf="-with-javac-flags=$(java-pkg_javac-args)"
 	fi
 
 	[[ -n ${CBUILD} ]] && myconf="${myconf} --build=${CBUILD}"
@@ -93,12 +98,12 @@ src_compile() {
 		--datadir=/usr/share \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
-		--libdir=/usr/$(get_libdir) \
+		--libdir=/usr/"$(get_libdir)" \
 		--enable-compat185 \
 		--without-uniquename \
 		--enable-rpc \
-		--host=${CHOST} \
-		${myconf} || die "configure failed"
+		--host="${CHOST}" \
+		${myconf}  "${javaconf}" || die "configure failed"
 
 	emake -j1 || die "make failed"
 }
@@ -115,21 +120,19 @@ src_install() {
 	db_src_install_usrlibcleanup
 
 	dodir /usr/sbin
-	mv ${D}/usr/bin/berkeley_db_svc ${D}/usr/sbin/berkeley_db44_svc
+	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db44_svc
 
 	if use java; then
-		mkdir -p ${D}/usr/share/db
-		cat <<EOF >${D}/usr/share/db/package.env
-DESCRIPTION=The java bindings for berkeley db version ${MY_PV}
-CLASSPATH=:/usr/lib/db-${SLOT}.jar
-EOF
+		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
+		java-pkg_dojar "${D}"/usr/"$(get_libdir)"/*.jar
+		rm -f "${D}"/usr/"$(get_libdir)"/*.jar
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	db_fix_so
 }
 
-pkg_postrm () {
+pkg_postrm() {
 	db_fix_so
 }
