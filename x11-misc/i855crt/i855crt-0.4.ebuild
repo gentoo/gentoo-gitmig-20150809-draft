@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/i855crt-0.4.ebuild,v 1.4 2006/08/06 10:01:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/i855crt-0.4.ebuild,v 1.5 2006/08/06 10:39:26 blubb Exp $
 
 DESCRIPTION="Intel Montara 855GM CRT out auxiliary driver"
 HOMEPAGE="http://i855crt.sourceforge.net/"
@@ -16,6 +16,7 @@ DEPEND="|| ( ( x11-libs/libXext
 			)
 		virtual/x11
 		)"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

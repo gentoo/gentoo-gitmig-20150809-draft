@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/i855crt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.4 2006/08/06 10:01:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i855crt/ChangeLog,v 1.5 2006/08/06 10:39:26 blubb Exp $
+
+  06 Aug 2006; Simon Stelling <blubb@gentoo.org> i855crt-0.4.ebuild:
+  re-adding explicit RDEPEND
 
   06 Aug 2006; Simon Stelling <blubb@gentoo.org> i855crt-0.4.ebuild:
   fix SRC_URI
