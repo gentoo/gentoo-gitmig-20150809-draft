@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gproftpd
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.13 2005/06/27 19:00:31 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.14 2006/08/06 02:11:53 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> -gproftpd-8.1.4.ebuild,
+  -gproftpd-8.1.6.ebuild:
+  Security punts for bug #140498.
 
   27 Jun 2005; Simon Stelling <blubb@gentoo.org> gproftpd-8.2.2.ebuild:
   added ~amd64 keyword
