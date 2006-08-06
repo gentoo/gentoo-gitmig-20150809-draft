@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/Text-Shellwords-1.00.ebuild,v 1.11 2005/04/29 15:14:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/Text-Shellwords-1.00.ebuild,v 1.12 2006/08/06 00:29:29 mcummings Exp $
 
 IUSE=""
 
@@ -19,3 +19,7 @@ src_compile() {
 	perl-module_src_compile
 	perl-module_src_test || die "test failed"
 }
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
