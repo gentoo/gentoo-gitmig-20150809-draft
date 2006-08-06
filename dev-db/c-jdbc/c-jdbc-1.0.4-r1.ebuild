@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.9 2006/03/11 17:56:34 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.10 2006/08/06 04:22:48 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -38,9 +38,8 @@ S=${WORKDIR}/${P}-src
 
 pkg_setup() {
 	# add a user for cjdbc
-	if ! enewgroup cjdbc || ! enewuser cjdbc -1 /bin/sh /dev/null cjdbc; then
-		die "Unable to add cjdbc user and cjdbc group."
-	fi
+	enewgroup cjdbc 
+	enewuser cjdbc -1 /bin/sh /dev/null cjdbc
 }
 
 src_unpack() {
