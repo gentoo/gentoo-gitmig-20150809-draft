@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.22 2006/06/16 16:45:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.23 2006/08/06 23:33:56 matsuu Exp $
+
+  06 Aug 2006; MATSUU Takuto <matsuu@gentoo.org> -libotf-0.9.3.ebuild:
+  Remove old version.
 
 *libotf-0.9.4 (16 Jun 2006)
 
