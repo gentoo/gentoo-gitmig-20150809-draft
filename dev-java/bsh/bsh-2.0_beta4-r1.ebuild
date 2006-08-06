@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.2 2006/07/22 21:47:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/bsh-2.0_beta4-r1.ebuild,v 1.3 2006/08/06 17:43:36 nelchael Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -38,10 +38,13 @@ src_unpack() {
 }
 
 src_compile() {
-	local classpath="bsf-2.3,servletapi-2.4"
-	use readline && classpath="${classpath},libreadline-java"
+	cd "${S}/lib/"
+	java-pkg_jar-from servletapi-2.4
+	java-pkg_jar-from bsf-2.3
+	use readline && java-pkg_jar-from libreadline-java
+	cd "${S}"
 
-	eant -lib $(java-pkg_getjars ${classpath}) $(use_doc) jarall
+	eant $(use_doc) jarall
 }
 
 src_install() {
