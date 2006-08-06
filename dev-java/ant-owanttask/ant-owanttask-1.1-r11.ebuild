@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r11.ebuild,v 1.1 2006/07/01 14:22:53 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-owanttask/ant-owanttask-1.1-r11.ebuild,v 1.2 2006/08/06 00:09:40 nichoj Exp $
 
-inherit java-ant-2 java-pkg-2
+inherit java-ant-2 java-pkg-2 eutils
 
 DESCRIPTION="ObjectWeb's Ant tasks"
 HOMEPAGE="http://monolog.objectweb.org"
@@ -13,8 +13,19 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
-	dev-java/ant-core"
+	dev-java/ant-core
+	dev-java/xalan"
 S=${WORKDIR}/owanttask-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-classpath.patch
+	mkdir lib
+	cd lib
+	java-pkg_jar-from ant-core ant.jar
+	java-pkg_jar-from xalan
+}
 
 src_compile() {
 	eant jar
