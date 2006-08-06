@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.050831.ebuild,v 1.1 2006/07/12 12:05:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.050831.ebuild,v 1.2 2006/08/06 14:44:34 seemant Exp $
 
 inherit distutils eutils toolchain-funcs versionator
 
@@ -10,17 +10,28 @@ DESCRIPTION="Tools for working with the ipkg binary package format"
 HOMEPAGE="http://www.openembedded.org/"
 SRC_URI="http://handhelds.org/download/packages/ipkg-utils/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="minimal"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 S=${WORKDIR}/${MY_P}
 
-DEPEND="dev-lang/python"
+RDEPEND="dev-lang/python
+	!minimal? (
+		app-crypt/gnupg
+		net-misc/curl
+	)"
+
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}; cd ${S}
 
-	epatch ${FILESDIR}/${PN}-1.7-build_fixes.patch
+	sed '/python setup.py build/d' -i Makefile
+
+	if use minimal; then
+		einfo "ipkg-upload is not installed when the \`minimal' USE flag is set.  If you"
+		einfo "need ipkg-upload then rebuild this package without the \`minimal' USE flag."
+	fi
 }
 
 src_compile() {
@@ -30,7 +41,7 @@ src_compile() {
 
 src_install() {
 	distutils_src_install
-	make DESTDIR=${D} install || die
+	use minimal && rm ${D}/usr/bin/ipkg-upload
 }
 
 pkg_postinst() {

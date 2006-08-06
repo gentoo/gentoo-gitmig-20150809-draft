@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ipkg-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.7 2006/07/12 12:05:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.8 2006/08/06 14:44:34 seemant Exp $
+
+  06 Aug 2006; Seemant Kulleen <seemant@gentoo.org> ipkg-utils-1.7.ebuild,
+  ipkg-utils-1.7.050831.ebuild:
+  Some cleanups from James in bug #142980. Also, explicitly setting RDEPEND
 
 *ipkg-utils-1.7.050831 (12 Jul 2006)
 
