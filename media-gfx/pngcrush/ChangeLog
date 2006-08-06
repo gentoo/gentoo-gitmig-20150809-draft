@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.17 2006/05/25 21:28:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.18 2006/08/06 02:07:48 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> -pngcrush-1.5.10.ebuild:
+  Security punts for bug #140498.
 
 *pngcrush-1.6.3 (25 May 2006)
 
