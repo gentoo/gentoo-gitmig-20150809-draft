@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mhwaveedit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.17 2006/02/15 11:07:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mhwaveedit/ChangeLog,v 1.18 2006/08/06 03:34:32 matsuu Exp $
+
+*mhwaveedit-1.4.8 (06 Aug 2006)
+
+  06 Aug 2006; MATSUU Takuto <matsuu@gentoo.org> +mhwaveedit-1.4.8.ebuild:
+  Version bumped, bug #141808.
 
   15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org>
   mhwaveedit-1.4.5b.ebuild:
