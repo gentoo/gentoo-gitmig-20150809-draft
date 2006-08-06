@@ -1,19 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.4.1.ebuild,v 1.5 2006/08/03 19:58:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/pyrex-0.9.4.1.ebuild,v 1.6 2006/08/06 16:35:44 vapier Exp $
 
 inherit distutils portability
 
 MY_P="Pyrex-${PV}"
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="a language for writing Python extension modules"
 HOMEPAGE="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex"
 SRC_URI="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
+
+S=${WORKDIR}/${MY_P}
 
 PYTHON_MODNAME="Pyrex"
 
