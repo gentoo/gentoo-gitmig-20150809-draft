@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.41 2006/02/26 03:48:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.42 2006/08/06 01:57:56 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-Writer-0.510.ebuild, XML-Writer-0.545.ebuild, XML-Writer-0.600.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   26 Feb 2006; Joshua Kinard <kumba@gentoo.org> XML-Writer-0.600.ebuild:
   Marked stable on mips.
