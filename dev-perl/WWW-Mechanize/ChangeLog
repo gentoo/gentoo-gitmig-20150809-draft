@@ -1,6 +1,18 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.29 2006/07/16 15:56:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.30 2006/08/06 01:04:47 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  WWW-Mechanize-1.04.ebuild, WWW-Mechanize-1.12.ebuild,
+  WWW-Mechanize-1.16.ebuild, WWW-Mechanize-1.18.ebuild,
+  WWW-Mechanize-1.0301.ebuild:
+  Accidently lost rdeps. recoverd.
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  WWW-Mechanize-1.04.ebuild, WWW-Mechanize-1.12.ebuild,
+  WWW-Mechanize-1.16.ebuild, WWW-Mechanize-1.18.ebuild,
+  WWW-Mechanize-1.0301.ebuild:
+  Adding perl dep; fixed DEPEND
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   WWW-Mechanize-1.18.ebuild:

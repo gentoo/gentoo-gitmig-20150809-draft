@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.17 2006/08/06 01:01:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.18 2006/08/06 01:08:22 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  WWW-Bugzilla-0.4.ebuild, WWW-Bugzilla-0.6.ebuild, WWW-Bugzilla-0.8.ebuild:
+  Accidently lost rdeps. recoverd.
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   WWW-Bugzilla-0.2.ebuild, WWW-Bugzilla-0.4.ebuild, WWW-Bugzilla-0.6.ebuild,
