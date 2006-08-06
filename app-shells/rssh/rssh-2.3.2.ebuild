@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.2.ebuild,v 1.5 2006/08/05 09:36:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.2.ebuild,v 1.6 2006/08/06 16:50:57 weeve Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/rssh/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE="static"
 
 RDEPEND="virtual/ssh"
