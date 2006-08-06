@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-misc-meltho-1.0.0.tar.bz2 1491421 RMD160 c44264ae31c2b8b4434a1c8285dae0c0bfb8c3ae SHA256 c7e12b9926b6053f3567eae548840f0b3d283ce34f842b06309a81c1d98d3924
-EBUILD font-misc-meltho-1.0.0.ebuild 604 RMD160 8ffe7d91ee54835a51b89e4e321c145d2551f082 SHA1 d6bdf125bafb3df1f0d19849faf2d08d70697364 SHA256 ca91adc5e9264ebeaf08b51745776b0f125dac851acbddd301c738b70401f411
-MD5 7596b04d8f0cea4b85cff3a349ded3f5 font-misc-meltho-1.0.0.ebuild 604
-RMD160 8ffe7d91ee54835a51b89e4e321c145d2551f082 font-misc-meltho-1.0.0.ebuild 604
-SHA256 ca91adc5e9264ebeaf08b51745776b0f125dac851acbddd301c738b70401f411 font-misc-meltho-1.0.0.ebuild 604
+EBUILD font-misc-meltho-1.0.0.ebuild 606 RMD160 d86f30a0b1e6eec6dfa8a22aa905c4db4b7faf65 SHA1 73c2c3ac29bde0bc9250856ad5dc1b0687371927 SHA256 0f3c214b7fc09922aa4a9989a293d69e9a0641bcb82e7fdcc50160ee7f6eb6f5
+MD5 a62491d22b388339e006822e59b0d94f font-misc-meltho-1.0.0.ebuild 606
+RMD160 d86f30a0b1e6eec6dfa8a22aa905c4db4b7faf65 font-misc-meltho-1.0.0.ebuild 606
+SHA256 0f3c214b7fc09922aa4a9989a293d69e9a0641bcb82e7fdcc50160ee7f6eb6f5 font-misc-meltho-1.0.0.ebuild 606
 MISC ChangeLog 2984 RMD160 a1d56124ada633e053e227b46f8c8c63e4442c15 SHA1 71d8043be0a398a42c91eaf88386db06dbc0e97b SHA256 4b063a7cfca17bcf55767b41e682f7f7427712c1605076741c16e6950da9fdee
 MD5 4a597adc9ea62dc63d26427c14c6dbd0 ChangeLog 2984
 RMD160 a1d56124ada633e053e227b46f8c8c63e4442c15 ChangeLog 2984
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 d3c4b9093146ec097e52a65da1bf1821 files/digest-font-misc-meltho-1.0.0 274
 RMD160 e6ec6e7725df065aef195fe4c6e5f17862ea816f files/digest-font-misc-meltho-1.0.0 274
 SHA256 e6ba1cb81ee9f423ad3a55387f37ad8e5d2bfe438f96080cfb65f7c6d8e5820a files/digest-font-misc-meltho-1.0.0 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFE1h9namhnQswr0vIRAsOkAKCpbn1xW4UccKYPErlHeHQ8qoySTgCeJ1n+
+BrkfI3/Me3BSiUYwCy+fik4=
+=ZWrP
+-----END PGP SIGNATURE-----
