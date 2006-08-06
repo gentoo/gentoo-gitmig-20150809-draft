@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/at-poke
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/ChangeLog,v 1.8 2006/07/25 00:14:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/ChangeLog,v 1.9 2006/08/06 11:27:36 leonardop Exp $
+
+  06 Aug 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +files/at-poke-0.2.2-gcc4.patch, at-poke-0.2.2.ebuild:
+  Added upstream patch to fix compilation with GCC 4 (bug #142932).
 
 *at-poke-0.2.3 (25 Jul 2006)
 
