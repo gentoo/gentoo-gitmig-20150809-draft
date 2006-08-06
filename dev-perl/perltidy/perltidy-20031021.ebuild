@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20031021.ebuild,v 1.11 2005/10/02 13:43:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perltidy/perltidy-20031021.ebuild,v 1.12 2006/08/06 03:04:53 mcummings Exp $
 
 inherit perl-module
 
@@ -15,3 +15,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 mymake="/usr"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
