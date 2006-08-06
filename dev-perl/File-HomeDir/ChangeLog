@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.11 2006/08/05 11:09:04 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.12 2006/08/06 00:58:49 nigoro Exp $
+
+  06 Aug 2006; Yuta SATOH <nigoro@gentoo.org> File-HomeDir-0.58.ebuild:
+  added ~ppc64, bug #142788
 
   05 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   File-HomeDir-0.58.ebuild:
