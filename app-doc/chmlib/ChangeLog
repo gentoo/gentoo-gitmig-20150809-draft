@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/chmlib
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.17 2006/05/23 20:10:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.18 2006/08/06 01:53:16 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> -chmlib-0.31.ebuild,
+  -chmlib-0.32.ebuild, -chmlib-0.33.ebuild, -chmlib-0.35.ebuild:
+  Security punts for bug #140498.
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata, bug 131936.
