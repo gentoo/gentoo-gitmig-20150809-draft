@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/XML-NodeFilter-0.01.ebuild,v 1.10 2005/09/17 03:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/XML-NodeFilter-0.01.ebuild,v 1.11 2006/08/06 01:39:59 mcummings Exp $
 
 inherit perl-module
 
@@ -12,3 +12,7 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
