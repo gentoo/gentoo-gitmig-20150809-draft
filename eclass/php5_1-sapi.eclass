@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.29 2006/07/14 21:07:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_1-sapi.eclass,v 1.30 2006/08/06 22:51:45 chtekk Exp $
 #
 # ########################################################################
 #
@@ -504,7 +504,8 @@ php5_1-sapi_src_compile() {
 	# PDO support
 	if useq pdo || phpconfutils_usecheck pdo ; then
 		phpconfutils_extension_with		"pdo-dblib"		"mssql"			1
-		phpconfutils_extension_with		"pdo-firebird"	"firebird"		1
+		# The PDO-Firebird driver is broken and unmaintained upstream
+		# phpconfutils_extension_with	"pdo-firebird"	"firebird"		1
 		phpconfutils_extension_with		"pdo-mysql"		"mysql"			1 "/usr"
 		if useq oci8 ; then
 			phpconfutils_extension_with	"pdo-oci"		"oci8"			1
