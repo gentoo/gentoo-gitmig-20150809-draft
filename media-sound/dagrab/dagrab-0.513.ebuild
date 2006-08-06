@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dagrab/dagrab-0.513.ebuild,v 1.3 2006/08/01 18:23:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dagrab/dagrab-0.513.ebuild,v 1.4 2006/08/06 19:05:08 vapier Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-freedb.patch
 }
 
 src_install() {
