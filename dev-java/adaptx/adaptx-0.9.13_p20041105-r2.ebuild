@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r2.ebuild,v 1.1 2006/07/02 04:01:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r2.ebuild,v 1.2 2006/08/06 04:14:43 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -31,7 +31,7 @@ src_compile() {
 	# tried to build sources with jikes but
 	# failed all the time on different
 	# plattforms (amd64, x86)
-	local antflags="jar -lib $(java-pkg_getjars xerces-2,xml-commons,rhino-1.5,gnu-jaxp,log4j)" || die
+	local antflags="jar -Dclasspath=$(java-pkg_getjars xerces-2,xml-commons,rhino-1.5,gnu-jaxp,log4j,ant-core)" || die
 	antflags="${antflags} $(use_doc)"
 	eant ${antflags} || die "failed too build"
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/adaptx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.18 2006/07/02 04:01:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/ChangeLog,v 1.19 2006/08/06 04:14:43 nichoj Exp $
+
+  06 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
+  adaptx-0.9.13_p20041105-r2.ebuild:
+  Fixed building with java-strict.
 
   02 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +adaptx-0.9.13_p20041105-r2.ebuild:
