@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.290.ebuild,v 1.9 2006/08/04 16:55:04 tcort Exp $
-
-IUSE="apache2 pam postgres ssl webmin-minimal"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.290.ebuild,v 1.10 2006/08/06 16:20:59 vapier Exp $
 
 inherit eutils pam
 
@@ -16,9 +14,9 @@ SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 
 LICENSE="BSD"
 SLOT="0"
-
 # ~mips removed because of broken deps. Bug #86085
-KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc ppc64 s390 sh sparc x86"
+IUSE="apache2 pam postgres ssl webmin-minimal"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
@@ -30,38 +28,38 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# in webmin-minimal apache2 are not present
 	if ! use webmin-minimal ; then
 		# Bug #50810, #51943
 		if use apache2; then
-			epatch ${FILESDIR}/${PN}-1.140-apache2.patch
+			epatch "${FILESDIR}"/${PN}-1.140-apache2.patch
 		fi
 
 		# Correct ldapness
-		epatch ${FILESDIR}/${PN}-1.270-ldap-useradmin.patch
+		epatch "${FILESDIR}"/${PN}-1.270-ldap-useradmin.patch
 
 		# Postfix should modify the last entry of the maps file
-		epatch ${FILESDIR}/${PN}-1.170-postfix.patch
+		epatch "${FILESDIR}"/${PN}-1.170-postfix.patch
 
 		mv ${WORKDIR}/virtual-server-${VM_V}.wbm ${T}/vs.tar
 		tar -xf ${T}/vs.tar
 
 		# Don't create ${HOME}/cgi-bin on new accounts
-		epatch ${FILESDIR}/virtual-server-2.60-nocgibin.patch
+		epatch "${FILESDIR}"/virtual-server-2.60-nocgibin.patch
 
 		# Check if a newly added IP is already active
-		epatch ${FILESDIR}/virtual-server-2.610-checkip.patch
+		epatch "${FILESDIR}"/virtual-server-2.610-checkip.patch
 
 		# Verify Postgres usernames
-		epatch ${FILESDIR}/virtual-server-2.31-pgsql.patch
+		epatch "${FILESDIR}"/virtual-server-2.31-pgsql.patch
 
 		# Fix some all name virtual items
-		epatch ${FILESDIR}/virtual-server-2.31-namevirtual.patch
+		epatch "${FILESDIR}"/virtual-server-2.31-namevirtual.patch
 	fi
 
-	epatch ${FILESDIR}/${PN}-1.170-setup-nocheck.patch
+	epatch "${FILESDIR}"/${PN}-1.170-setup-nocheck.patch
 }
 
 src_install() {
@@ -84,9 +82,9 @@ src_install() {
 			${D}/usr/libexec/webmin/openslp/config-gentoo-linux
 	fi
 
-	newinitd ${FILESDIR}/init.d.webmin webmin
+	newinitd "${FILESDIR}"/init.d.webmin webmin
 
-	newpamd ${FILESDIR}/webmin-pam webmin
+	newpamd "${FILESDIR}"/webmin-pam webmin
 	echo gentoo > ${D}/usr/libexec/webmin/install-type
 
 	# Fix ownership
@@ -139,5 +137,5 @@ pkg_postinst() {
 }
 
 pkg_prerm() {
-	${ROOT}/etc/init.d/webmin stop >& /dev/null
+	"${ROOT}"/etc/init.d/webmin stop >& /dev/null
 }
