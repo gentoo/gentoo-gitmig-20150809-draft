@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r3.ebuild,v 1.2 2006/07/22 21:45:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r3.ebuild,v 1.3 2006/08/06 17:35:51 nelchael Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -26,18 +26,19 @@ DEPEND=">=virtual/jdk-1.4
 src_unpack() {
 	unpack ${A}
 
-	epatch ${WORKDIR}/bsf-rhino-1.5.patch
+	epatch "${WORKDIR}/bsf-rhino-1.5.patch"
+	epatch "${FILESDIR}/${P}-classpath.patch"
 }
 
 src_compile() {
-	use rhino && cp="${cp}:$(java-pkg_getjars rhino-1.5)"
-	use jython && cp="${cp}:$(java-pkg_getjars jython)"
+	has_version dev-java/rhino && cp="${cp}:$(java-pkg_getjars rhino-1.5)"
+	has_version dev-java/jython && cp="${cp}:$(java-pkg_getjars jython)"
 
 	cd ${S}/src/taglib
 	eant -Dservlet.jar="$(java-pkg_getjars servletapi-2.3)" compile
 
 	cd ${S}/src
-	eant -Dclasspath=${cp} compile $(use_doc javadocs)
+	eant -Dgentoo.classpath=${cp} compile $(use_doc javadocs)
 }
 
 src_install() {
