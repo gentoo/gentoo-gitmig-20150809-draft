@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/X10-0.03.ebuild,v 1.4 2006/07/05 13:07:58 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X10/X10-0.03.ebuild,v 1.5 2006/08/06 01:10:29 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,8 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Device-SerialPort
-		dev-perl/Astro-SunTime
-		dev-perl/Time-modules"
+	dev-perl/Astro-SunTime
+		dev-perl/Time-modules
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

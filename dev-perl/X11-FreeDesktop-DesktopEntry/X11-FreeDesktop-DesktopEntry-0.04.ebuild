@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-FreeDesktop-DesktopEntry/X11-FreeDesktop-DesktopEntry-0.04.ebuild,v 1.6 2006/07/10 22:54:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-FreeDesktop-DesktopEntry/X11-FreeDesktop-DesktopEntry-0.04.ebuild,v 1.7 2006/08/06 01:12:41 mcummings Exp $
 
 inherit perl-module
 
@@ -14,6 +14,5 @@ KEYWORDS="ia64 ppc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND=""
-RDEPEND=""
-
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

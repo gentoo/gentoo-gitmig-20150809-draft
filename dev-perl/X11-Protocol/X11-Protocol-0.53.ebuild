@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.53.ebuild,v 1.13 2006/07/05 13:08:50 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.53.ebuild,v 1.14 2006/08/06 01:14:06 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -14,8 +14,10 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="|| ( ( x11-libs/libXrender
-			x11-libs/libXext
+	x11-libs/libXext
 		)
 		virtual/x11
-	)"
+	)
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
