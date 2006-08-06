@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netpipes
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.2 2005/01/13 12:16:55 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.3 2006/08/06 00:03:25 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  metadata.xml translation by Yoshino-san in bug #136639
 
   13 Jan 2005; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
