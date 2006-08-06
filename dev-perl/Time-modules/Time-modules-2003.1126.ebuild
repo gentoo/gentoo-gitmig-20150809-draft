@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/Time-modules-2003.1126.ebuild,v 1.10 2005/11/26 02:45:45 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/Time-modules-2003.1126.ebuild,v 1.11 2006/08/06 00:39:39 mcummings Exp $
 
 inherit perl-module
 
@@ -15,3 +15,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 mymake="/usr"
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

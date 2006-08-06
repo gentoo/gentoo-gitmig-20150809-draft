@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/Time-modules-2003.0211.ebuild,v 1.6 2005/04/29 15:22:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/Time-modules-2003.0211.ebuild,v 1.7 2006/08/06 00:39:39 mcummings Exp $
 
 inherit perl-module
 
@@ -13,3 +13,7 @@ LICENSE="Artistic"
 KEYWORDS="x86 amd64 ppc ~sparc alpha"
 
 mymake="/usr"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
