@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.222 2006/08/06 11:09:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.223 2006/08/06 20:23:25 metalgod Exp $
+
+  06 Aug 2006; Luis Medinas <metalgod@gentoo.org> portage-2.1-r2.ebuild:
+  Stable on amd64 see bug #142283.
 
 *portage-2.1.1_pre4-r4 (06 Aug 2006)
 
