@@ -1,8 +1,17 @@
 # ChangeLog for media-sound/specimen
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.10 2005/11/07 12:09:20 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/specimen/ChangeLog,v 1.11 2006/08/06 05:04:20 matsuu Exp $
 
-  07 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> specimen-0.4.1.ebuild:
+*specimen-0.5.1 (06 Aug 2006)
+
+  06 Aug 2006; MATSUU Takuto <matsuu@gentoo.org>
+  +files/specimen-0.5.1-gentoo.patch, -specimen-0.4.1.ebuild,
+  +specimen-0.5.1.ebuild:
+  Version bumped, bug 100357.
+  Fixed amd64 int/pointer casting.
+  Removed old version.
+
+  07 Nov 2005; Diego Petten嘆 <flameeyes@gentoo.org> specimen-0.4.1.ebuild:
   Don't install INSTALL or COPYING files.
 
   12 Jun 2005; Sven Wegener <swegener@gentoo.org> specimen-0.4.1.ebuild,
