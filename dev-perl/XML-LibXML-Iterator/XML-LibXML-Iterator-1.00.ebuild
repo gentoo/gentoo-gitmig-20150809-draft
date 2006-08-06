@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Iterator/XML-LibXML-Iterator-1.00.ebuild,v 1.11 2006/07/05 13:28:58 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Iterator/XML-LibXML-Iterator-1.00.ebuild,v 1.12 2006/08/06 01:36:12 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,8 @@ KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/XML-LibXML
-	dev-perl/XML-NodeFilter"
+	dev-perl/XML-NodeFilter
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/XML-LibXML-XPathContext-0.07.ebuild,v 1.7 2006/07/10 23:02:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/XML-LibXML-XPathContext-0.07.ebuild,v 1.8 2006/08/06 01:36:50 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,8 @@ IUSE="gnome"
 SRC_TEST="do"
 
 DEPEND=">=dev-perl/XML-LibXML-1.58
-		dev-libs/libxml2
-		gnome? ( dev-perl/XML-GDOME )"
+	dev-libs/libxml2
+		gnome? ( dev-perl/XML-GDOME )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

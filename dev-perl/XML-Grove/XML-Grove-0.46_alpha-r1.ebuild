@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/XML-Grove-0.46_alpha-r1.ebuild,v 1.13 2006/07/05 13:25:44 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/XML-Grove-0.46_alpha-r1.ebuild,v 1.14 2006/08/06 01:32:15 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,8 @@ SLOT="0"
 KEYWORDS="x86 amd64 ppc sparc alpha ia64"
 IUSE=""
 
-DEPEND=">=dev-perl/libxml-perl-0.07-r1"
+DEPEND=">=dev-perl/libxml-perl-0.07-r1
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

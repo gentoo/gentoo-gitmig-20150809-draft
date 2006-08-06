@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.31-r1.ebuild,v 1.12 2006/07/05 13:33:10 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Parser/XML-Parser-2.31-r1.ebuild,v 1.13 2006/08/06 01:40:39 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,7 @@ LICENSE="Artistic"
 KEYWORDS="x86 amd64 ppc sparc alpha hppa mips"
 IUSE=""
 
-DEPEND=">=dev-libs/expat-1.95.1-r1"
+DEPEND=">=dev-libs/expat-1.95.1-r1
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

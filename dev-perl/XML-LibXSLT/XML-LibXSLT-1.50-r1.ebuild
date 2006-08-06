@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.50-r1.ebuild,v 1.10 2006/07/05 13:31:25 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.50-r1.ebuild,v 1.11 2006/08/06 01:37:38 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,7 @@ KEYWORDS="x86 amd64 alpha ppc sparc"
 IUSE=""
 
 DEPEND=">=dev-libs/libxslt-1.0.1
-	>=dev-perl/XML-LibXML-1.49"
+	>=dev-perl/XML-LibXML-1.49
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
