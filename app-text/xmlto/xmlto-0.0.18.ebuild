@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.18.ebuild,v 1.17 2006/05/24 17:41:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.18.ebuild,v 1.18 2006/08/06 18:07:58 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://cyberelk.net/tim/data/xmlto/stable/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="app-shells/bash
@@ -35,6 +35,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" prefix="/usr" install || die
 	dodoc AUTHORS ChangeLog FAQ NEWS README
-	insinto /usr/share/doc/${P}/xml
+	insinto /usr/share/doc/${PF}/xml
 	doins doc/*.xml
 }
