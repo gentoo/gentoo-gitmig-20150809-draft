@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.28 2006/06/04 14:53:32 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.29 2006/08/06 19:46:01 blubb Exp $
+
+  06 Aug 2006; Simon Stelling <blubb@gentoo.org> opensc-0.10.1.ebuild:
+  stable on amd64
 
 *opensc-0.11.0-r1 (04 Jun 2006)
 
