@@ -22,10 +22,10 @@ EBUILD gnome-doc-utils-0.4.4.ebuild 1142 RMD160 039c07c8e958a8c94e136d07449423a4
 MD5 bea6f1dd79e0c26493701db95b458843 gnome-doc-utils-0.4.4.ebuild 1142
 RMD160 039c07c8e958a8c94e136d07449423a4ac7fdd80 gnome-doc-utils-0.4.4.ebuild 1142
 SHA256 f58dcad06234797834a9a4e4a7f417407c5e1d2f2f1bade1ee6325a1c0ea8226 gnome-doc-utils-0.4.4.ebuild 1142
-EBUILD gnome-doc-utils-0.6.1.ebuild 1112 RMD160 5039e58c2cc00d9dded8b2885020ec9cc5297e6d SHA1 e7ebe767f599a05290f7937748a534e2ad8d34c8 SHA256 3a9da617609a178ac0a5920d520f0a57e2e056a17bdd1141c35e4f7e55da305b
-MD5 d7d4a293e3fae5b606c30bc808d07df7 gnome-doc-utils-0.6.1.ebuild 1112
-RMD160 5039e58c2cc00d9dded8b2885020ec9cc5297e6d gnome-doc-utils-0.6.1.ebuild 1112
-SHA256 3a9da617609a178ac0a5920d520f0a57e2e056a17bdd1141c35e4f7e55da305b gnome-doc-utils-0.6.1.ebuild 1112
+EBUILD gnome-doc-utils-0.6.1.ebuild 1112 RMD160 384b8f27ae81ee170ddb895bafa56e6ff4463b8d SHA1 0eec272c5636d36b0da102e5f7eac870ec9c0501 SHA256 aa7ecb0c48028832e5cbcd41149e8d641e926e210c04a24c060b89e2e97c2e35
+MD5 fbec3edfdce8aff3eaba0081ba5fe359 gnome-doc-utils-0.6.1.ebuild 1112
+RMD160 384b8f27ae81ee170ddb895bafa56e6ff4463b8d gnome-doc-utils-0.6.1.ebuild 1112
+SHA256 aa7ecb0c48028832e5cbcd41149e8d641e926e210c04a24c060b89e2e97c2e35 gnome-doc-utils-0.6.1.ebuild 1112
 MISC ChangeLog 7840 RMD160 25fd1a841002397cc97fd9e285f51d245b8e94e6 SHA1 033a9733f77c8109ab85d297e792e1ae8cb05bef SHA256 0b3f819773dd9585ab8a45bb4c5576710fa311e3695b53d353f0cb4991c17ccd
 MD5 29f02bb15d46308aeb336639d86b90f7 ChangeLog 7840
 RMD160 25fd1a841002397cc97fd9e285f51d245b8e94e6 ChangeLog 7840
@@ -50,9 +50,9 @@ MD5 347d8d19f24b71a3b1e786798e6d2d37 files/digest-gnome-doc-utils-0.6.1 268
 RMD160 e64aeb2799b8d9f349df04be17c1b7e000b8c428 files/digest-gnome-doc-utils-0.6.1 268
 SHA256 b325eb1c7bed25530a2e05e871e2e2816bea466f1bf9edee159094b3a8e1b77c files/digest-gnome-doc-utils-0.6.1 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEw5NoomPajV0RnrERAifJAJ9bxauWNMO3fW+jM55uMEE+2+x/RgCfVdAH
-YjctSNLZnzijCO6cvcziINI=
-=mFI8
+iD8DBQFE1hf0amhnQswr0vIRAjfBAJsHjPeMAU53ThMnNOgVCVVNOtF+uwCgq8iB
+nPXQ1gWiKBeY7PkhjN9OfbQ=
+=vj9k
 -----END PGP SIGNATURE-----
