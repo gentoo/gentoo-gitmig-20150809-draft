@@ -1,6 +1,11 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.17 2006/08/04 22:51:51 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.18 2006/08/06 01:25:54 kevquinn Exp $
+
+  06 Aug 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  hunspell-1.1.4-r1.ebuild:
+  Fix mkinstalldirs issue properly, as advised by SpanKY (bug #142565)
+  Also various tidy-ups by SpanKY.
 
   04 Aug 2006; Kevin F. Quinn <kevquinn@gentoo.org>
   hunspell-1.1.4-r1.ebuild:
