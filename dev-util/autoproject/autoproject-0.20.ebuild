@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/autoproject/autoproject-0.20.ebuild,v 1.1 2006/08/06 00:07:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/autoproject/autoproject-0.20.ebuild,v 1.2 2006/08/06 16:06:23 vapier Exp $
 
 inherit eutils
 
@@ -13,10 +13,12 @@ SRC_URI="mirror://debian/pool/main/a/autoproject/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE=""
+IUSE="test"
 
-DEPEND="sys-devel/automake
+RDEPEND="sys-devel/automake
 	sys-devel/autoconf"
+DEPEND="${RDEPEND}
+	test? ( sys-apps/texinfo )"
 
 src_unpack() {
 	unpack ${A}
