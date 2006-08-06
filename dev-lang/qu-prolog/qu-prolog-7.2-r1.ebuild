@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.4 2006/06/29 08:18:51 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-7.2-r1.ebuild,v 1.5 2006/08/06 04:14:48 keri Exp $
 
 inherit autotools eutils versionator
 
@@ -43,10 +43,10 @@ src_compile() {
 
 	if use qt3 || use qt4; then
 		cd "${S}"/src/xqp
-		if use qt3; then
-			"${QTDIR}"/bin/qmake || die "qmake xqp failed"
-		else
+		if use qt4; then
 			qmake || die "qmake xqp failed"
+		else
+			"${QTDIR}"/bin/qmake || die "qmake xqp failed"
 		fi
 		emake || die "emake xqp failed"
 	fi
