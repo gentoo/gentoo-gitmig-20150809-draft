@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.30.ebuild,v 1.10 2005/07/12 04:55:19 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.30.ebuild,v 1.11 2006/08/06 10:14:27 blubb Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="GNOME CUPS Printer Management Interface"
 HOMEPAGE="http://www.gnome.org/"
@@ -23,6 +23,13 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29"
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# bug 141929
+	use amd64 && replace-flags -O* -O0
+}
 
 src_install() {
 	gnome2_src_install
