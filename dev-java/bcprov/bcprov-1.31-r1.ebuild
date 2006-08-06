@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.31-r1.ebuild,v 1.3 2006/08/05 13:00:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/bcprov-1.31-r1.ebuild,v 1.4 2006/08/06 00:15:19 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${MY_P}
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cp ${FILESDIR}/build.xml ${S}
 }
