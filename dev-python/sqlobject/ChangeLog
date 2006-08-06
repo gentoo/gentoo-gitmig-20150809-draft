@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.11 2006/07/28 12:04:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlobject/ChangeLog,v 1.12 2006/08/06 01:36:02 chriswhite Exp $
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
+  metadata.xml translation by Yoshino-san in bug #132003
 
   28 Jul 2006; Alastair Tse <liquidx@gentoo.org> sqlobject-0.6.ebuild,
   sqlobject-0.6.1.ebuild, sqlobject-0.6.1-r1.ebuild, sqlobject-0.7.0.ebuild:
