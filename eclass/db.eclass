@@ -1,13 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.28 2006/08/06 11:50:52 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.29 2006/08/06 11:58:51 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
 
-IUSE="doc"
+IUSE="doc test"
 
 EXPORT_FUNCTIONS src_test
+
+DEPEND="test? ( >=dev-lang/tcl-8.4 )"
+
+RDEPEND=""
 
 db_fix_so () {
 	LIB="${ROOT}/usr/$(get_libdir)"
