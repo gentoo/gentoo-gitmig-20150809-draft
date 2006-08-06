@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/dumb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.29 2006/08/06 19:32:16 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.30 2006/08/06 21:38:03 ticho Exp $
+
+  06 Aug 2006; Andrej Kacian <ticho@gentoo.org> dumb-0.9.3-r1.ebuild:
+  Stable on x86. Security bug 142387, tested by Christian 'Opfer' Faulhammer
+  <gentoo at faulhammer.org>.
 
   06 Aug 2006; Simon Stelling <blubb@gentoo.org> dumb-0.9.3-r1.ebuild:
   stable on amd64
