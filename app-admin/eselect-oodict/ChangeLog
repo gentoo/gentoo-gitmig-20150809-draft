@@ -1,10 +1,17 @@
 # ChangeLog for app-admin/eselect-oodict
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.16 2006/08/03 18:23:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/ChangeLog,v 1.17 2006/08/06 18:40:41 kevquinn Exp $
+
+  06 Aug 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +eselect-oodict-20060806.ebuild:
+  Modify to install all dictionaries files for a language where the language
+  has more than one - bug #139669
 
   03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   eselect-oodict-20060706.ebuild:
   Stable on sparc
+
+*eselect-oodict-20060806 (06 Aug 2006)
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   eselect-oodict-20060706.ebuild:
