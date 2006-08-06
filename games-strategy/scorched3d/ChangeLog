@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.30 2006/05/12 18:40:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.31 2006/08/06 21:47:20 wolf31o2 Exp $
+
+*scorched3d-40 (06 Aug 2006)
+
+  06 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/scorched3d-40-freealut.patch, +files/scorched3d-40-unicode.patch,
+  +scorched3d-40.ebuild:
+  Version bump. Ebuild by Tristan Heaven <tristanheaven@gmail.com> as well as
+  patches. Closing bug #140643.
 
 *scorched3d-39.1-r1 (12 May 2006)
 
