@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ethtool
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.22 2006/07/08 23:54:04 kumba Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.23 2006/08/06 20:05:34 vapier Exp $
+
+*ethtool-4 (06 Aug 2006)
+
+  06 Aug 2006; Mike Frysinger <vapier@gentoo.org> +ethtool-4.ebuild:
+  Version bump #143007 by Shark.
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> ethtool-3.ebuild:
   Marked stable on mips.
