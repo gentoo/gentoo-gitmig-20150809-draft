@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.92 2006/04/27 09:17:10 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.93 2006/08/06 16:30:29 taviso Exp $
+
+*sudo-1.6.8_p12-r1 (06 Aug 2006)
+
+  06 Aug 2006; Tavis Ormandy <taviso@gentoo.org> +sudo-1.6.8_p12-r1.ebuild:
+  clean gcc-bin from PATH. bug #136027
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-sudo-1.6.8_p9,
   files/digest-sudo-1.6.8_p9-r2, files/digest-sudo-1.6.8_p11,
