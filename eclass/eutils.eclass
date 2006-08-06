@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.245 2006/07/15 19:26:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.246 2006/08/06 20:20:14 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1589,7 +1589,7 @@ built_with_use() {
 
 	# if the USE file doesnt exist, assume the $PKG is either
 	# injected or package.provided
-	[[ ! -e ${USEFILE} ]] && return 0
+	[[ ! -e ${USEFILE} ]] && die "Unable to determine what USE flags $PKG was built with"
 
 	local USE_BUILT=$(<${USEFILE})
 	while [[ $# -gt 0 ]] ; do
