@@ -13,4 +13,11 @@
 	chooses how old of strips to show, the comic strips downloaded will
 	actually be from different dates, but they'll always be the latest.
 </longdescription>
+<longdescription lang="ja">
+	Netcomics はウェブ上から今日の日替わり漫画をダウンロードし、回収できた
+	ものをローカル・ディレクトリに保存します。これは漫画を連載している各
+	ウェブサイトが掲載期間を決めていて、実際にダウンロードされる漫画が
+	今日のではないかもしれませんが、ダウンロードしたものが最新のものだ
+	ということを意味します。
+</longdescription>
 </pkgmetadata>
