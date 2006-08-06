@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.53 2006/07/05 12:48:44 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.54 2006/08/06 00:50:27 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org> URI-1.28.ebuild,
+  URI-1.30.ebuild, URI-1.31.ebuild, URI-1.33.ebuild, URI-1.34.ebuild,
+  URI-1.35.ebuild:
+  Adding perl dep; fixed DEPEND
 
   05 Jul 2006; Christian Hartmann <ian@gentoo.org> URI-1.28.ebuild,
   URI-1.30.ebuild, URI-1.31.ebuild, URI-1.33.ebuild, URI-1.34.ebuild,

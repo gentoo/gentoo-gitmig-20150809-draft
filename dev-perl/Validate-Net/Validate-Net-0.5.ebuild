@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/Validate-Net-0.5.ebuild,v 1.13 2006/07/05 13:00:52 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/Validate-Net-0.5.ebuild,v 1.14 2006/08/06 00:59:09 mcummings Exp $
 
 inherit perl-module
 
@@ -17,5 +17,7 @@ SRC_TEST="do"
 
 DEPEND="virtual/perl-Test-Simple
 	dev-perl/Class-Default
-	dev-perl/Class-Inspector"
+	dev-perl/Class-Inspector
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

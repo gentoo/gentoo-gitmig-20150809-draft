@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-moniker/UNIVERSAL-moniker-0.08.ebuild,v 1.10 2006/07/10 22:46:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-moniker/UNIVERSAL-moniker-0.08.ebuild,v 1.11 2006/08/06 00:49:34 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,7 @@ IUSE=""
 SRC_TEST="do"
 
 #Funny...no longer a dep, but needed for tests
-DEPEND="dev-perl/Lingua-EN-Inflect"
+DEPEND="dev-perl/Lingua-EN-Inflect
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

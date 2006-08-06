@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.103.ebuild,v 1.2 2006/07/16 08:59:26 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.103.ebuild,v 1.3 2006/08/06 00:11:28 mcummings Exp $
 
 inherit perl-module
 IUSE=""
@@ -14,3 +14,7 @@ LICENSE="Artistic"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

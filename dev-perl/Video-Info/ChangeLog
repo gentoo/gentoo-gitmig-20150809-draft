@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Video-Info
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.7 2006/03/30 23:36:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.8 2006/08/06 01:00:19 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Video-Info-0.993.ebuild:
+  Adding perl dep; fixed DEPEND
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> Video-Info-0.993.ebuild:
   Mark 0.993 ~ia64

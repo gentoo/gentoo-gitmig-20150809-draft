@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/Text-Kakasi-2.04.ebuild,v 1.17 2006/07/13 04:52:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Kakasi/Text-Kakasi-2.04.ebuild,v 1.18 2006/08/06 00:26:44 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=app-i18n/kakasi-2.3.4"
+DEPEND=">=app-i18n/kakasi-2.3.4
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -21,3 +22,4 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/Text-Kakasi-1.05-gentoo.diff
 }
+

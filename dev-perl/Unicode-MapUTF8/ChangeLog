@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-MapUTF8
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.13 2006/07/11 17:02:33 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-MapUTF8/ChangeLog,v 1.14 2006/08/06 00:52:25 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Unicode-MapUTF8-1.11.ebuild:
+  Adding perl dep; fixed DEPEND
 
   11 Jul 2006; Christian Hartmann <ian@gentoo.org>
   Unicode-MapUTF8-1.11.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/Time-Piece-1.08.ebuild,v 1.6 2006/03/30 23:32:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Piece/Time-Piece-1.08.ebuild,v 1.7 2006/08/06 00:38:48 mcummings Exp $
 
 inherit perl-module
 
@@ -14,3 +14,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

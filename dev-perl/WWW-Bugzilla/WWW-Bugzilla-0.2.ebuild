@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/WWW-Bugzilla-0.2.ebuild,v 1.8 2006/07/05 13:01:53 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/WWW-Bugzilla-0.2.ebuild,v 1.9 2006/08/06 01:01:45 mcummings Exp $
 
 inherit perl-module
 
@@ -14,5 +14,8 @@ KEYWORDS="x86 sparc amd64"
 IUSE=""
 
 DEPEND="dev-perl/WWW-Mechanize
-	dev-perl/Class-MethodMaker"
+	dev-perl/Class-MethodMaker
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

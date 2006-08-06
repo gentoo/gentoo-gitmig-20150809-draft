@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.1-r1.ebuild,v 1.10 2006/07/05 12:25:43 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-TableMatrix/Tk-TableMatrix-1.1-r1.ebuild,v 1.11 2006/08/06 00:44:51 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE=""
 
-DEPEND="dev-perl/perl-tk"
+DEPEND="dev-perl/perl-tk
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -21,3 +22,4 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/patch.diff
 }
+

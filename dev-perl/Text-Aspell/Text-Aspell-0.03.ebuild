@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Aspell/Text-Aspell-0.03.ebuild,v 1.11 2006/07/05 11:13:05 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Aspell/Text-Aspell-0.03.ebuild,v 1.12 2006/08/06 00:16:05 mcummings Exp $
 
 inherit perl-module
 
@@ -13,5 +13,8 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 alpha ~hppa ~mips ppc sparc"
 IUSE=""
 
-DEPEND="app-text/aspell"
+DEPEND="app-text/aspell
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

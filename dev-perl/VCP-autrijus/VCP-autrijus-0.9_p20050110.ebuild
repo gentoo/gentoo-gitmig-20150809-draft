@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110.ebuild,v 1.5 2006/07/05 12:56:17 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/VCP-autrijus/VCP-autrijus-0.9_p20050110.ebuild,v 1.6 2006/08/06 00:57:10 mcummings Exp $
 
 inherit perl-module
 
@@ -13,9 +13,10 @@ LICENSE="BSD"
 KEYWORDS="~amd64 sparc x86"
 
 DEPEND="dev-perl/Text-Diff
-		dev-perl/XML-AutoWriter
+	dev-perl/XML-AutoWriter
 		dev-perl/HTML-Tree
-		dev-perl/IPC-Run3"
+		dev-perl/IPC-Run3
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/VCP-autrijus-snapshot-0.9-20050110"
@@ -25,3 +26,4 @@ S="${WORKDIR}/VCP-autrijus-snapshot-0.9-20050110"
 # there may be other (more relevant) errors, but they're hard to track
 # down by such a lot of dump in stdout. -- trapni/2005-04-09.
 #SRC_TEST="do"
+
