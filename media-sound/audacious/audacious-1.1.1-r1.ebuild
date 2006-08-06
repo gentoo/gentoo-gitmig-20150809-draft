@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.1-r1.ebuild,v 1.1 2006/08/06 14:08:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.1-r1.ebuild,v 1.2 2006/08/06 20:18:48 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -55,6 +55,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-remove-15instrument-magic.diff
+	epatch ${FILESDIR}/${PV}-ffwma-asm.diff
 }
 
 src_compile() {
@@ -87,7 +88,7 @@ src_compile() {
 		$(use_enable musepack) \
 		$(use_enable jack) \
 		$(use_enable timidity) \
-		$(use_enable charset chardet) \
+		$(use_enable chardet) \
 		|| die
 
 	emake || die "make failed"
