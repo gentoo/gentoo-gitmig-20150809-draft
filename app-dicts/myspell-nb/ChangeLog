@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/myspell-nb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.8 2006/08/01 14:33:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.9 2006/08/06 18:45:12 kevquinn Exp $
+
+*myspell-nb-20060530 (06 Aug 2006)
+
+  06 Aug 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +myspell-nb-20060530.ebuild:
+  Bump to new data from http://spell-norwegian.alioth.debian.org/ - bug #142459
 
   01 Aug 2006; Simon Stelling <blubb@gentoo.org> myspell-nb-20060316.ebuild:
   stable on amd64
