@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.6.ebuild,v 1.8 2006/08/03 22:03:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.8.6.ebuild,v 1.9 2006/08/06 16:34:01 vapier Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ~ppc64 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc ~ppc64 sh sparc x86"
 IUSE="opengl doc"
 
 RDEPEND=">=dev-lang/python-2.3.5
@@ -21,11 +21,10 @@ RDEPEND=">=dev-lang/python-2.3.5
 	>=dev-libs/atk-1.8.0
 	>=gnome-base/libglade-2.5.0
 	>=dev-python/pycairo-0.9.0
-	!arm? ( dev-python/numeric )
+	dev-python/numeric
 	opengl? ( virtual/opengl
 		dev-python/pyopengl
 		>=x11-libs/gtkglarea-1.99 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
@@ -35,8 +34,8 @@ src_unpack() {
 		unpack pygtk2reference.tbz2
 	fi
 	# disable pyc compiling
-	mv ${S}/py-compile ${S}/py-compile.orig
-	ln -s /bin/true ${S}/py-compile
+	mv "${S}"/py-compile "${S}"/py-compile.orig
+	ln -s /bin/true "${S}"/py-compile
 }
 
 src_compile() {
@@ -59,7 +58,7 @@ src_install() {
 		${D}/usr/$(get_libdir)/python${PYVER}/site-packages/pygtk.pth-2.0
 
 	if use doc; then
-		cd ${S}/../
+		cd "${S}"/../
 		dodir /usr/share/gtk-doc/html
 		cp -pPR pygtk2reference	${D}/usr/share/gtk-doc/html/
 	fi
