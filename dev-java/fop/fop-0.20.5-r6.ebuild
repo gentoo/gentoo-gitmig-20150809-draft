@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r6.ebuild,v 1.1 2006/07/22 21:18:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5-r6.ebuild,v 1.2 2006/08/06 03:33:16 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -38,6 +38,7 @@ src_unpack() {
 
 	cd ${S}/lib
 	rm -f *.jar
+	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from avalon-framework-4.1
 	java-pkg_jar-from batik-1.5 batik-all.jar batik.jar
 	java-pkg_jar-from xalan
