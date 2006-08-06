@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.803.ebuild,v 1.5 2006/07/05 17:42:47 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.803.ebuild,v 1.6 2006/08/06 02:45:47 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,8 @@ DEPEND="virtual/perl-libnet
 	>=virtual/perl-Digest-MD5-2.12
 	>=virtual/perl-MIME-Base64-2.12
 	dev-perl/Compress-Zlib
-	ssl? ( dev-perl/Crypt-SSLeay )"
+	ssl? ( dev-perl/Crypt-SSLeay )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
@@ -29,3 +30,4 @@ src_compile() {
 pkg_postinst() {
 	perl-module_pkg_postinst
 }
+

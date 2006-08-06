@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmenu/perlmenu-4.0.ebuild,v 1.1 2006/06/24 20:01:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmenu/perlmenu-4.0.ebuild,v 1.2 2006/08/06 03:02:45 mcummings Exp $
 
 inherit perl-module
 
@@ -18,10 +18,13 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/Curses"
+DEPEND="dev-perl/Curses
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cp ${FILESDIR}/Makefile.PL ${S}
 }
+
+

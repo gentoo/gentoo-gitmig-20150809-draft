@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.53.ebuild,v 1.9 2006/07/05 14:06:42 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.53.ebuild,v 1.10 2006/08/06 02:08:31 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,9 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Devel-StackTrace
-	dev-perl/Test-Inline"
+	dev-perl/Test-Inline
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
+

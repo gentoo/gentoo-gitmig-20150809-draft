@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/mecab-perl-0.92.ebuild,v 1.2 2006/07/10 05:54:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/mecab-perl-0.92.ebuild,v 1.3 2006/08/06 02:49:43 mcummings Exp $
 
 inherit perl-module
 
@@ -13,7 +13,9 @@ LICENSE="|| ( GPL-2 LGPL-2.1 BSD )"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=app-text/mecab-${PV}"
+DEPEND=">=app-text/mecab-${PV}
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 src_test() {
 	perl test.pl  || die "test.pl failed"
@@ -25,3 +27,5 @@ src_install() {
 	dohtml bindings.html    || die "dohtml failed"
 	dodoc test.pl test2.pl  || die "dodoc test{,2}.pl failed"
 }
+
+

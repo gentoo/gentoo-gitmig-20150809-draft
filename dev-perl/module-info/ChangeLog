@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/module-info
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.38 2006/07/19 19:52:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.39 2006/08/06 02:53:26 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  module-info-0.20.ebuild, module-info-0.26.ebuild, module-info-0.28.ebuild,
+  module-info-0.29.0.ebuild, module-info-0.30.ebuild:
+  Adding perl dep; fixed DEPEND
 
   19 Jul 2006; Bryan Østergaard <kloeri@gentoo.org>
   module-info-0.30.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.301.ebuild,v 1.6 2006/07/13 04:55:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.301.ebuild,v 1.7 2006/08/06 01:48:09 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,9 @@ IUSE=""
 #SRC_TEST="do"
 
 DEPEND=">=dev-perl/TimeDate-1.16
-		dev-perl/XML-Elemental
+	dev-perl/XML-Elemental
 		>=dev-perl/XML-RSS-Parser-4
-		dev-perl/Class-XPath"
+		dev-perl/Class-XPath
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

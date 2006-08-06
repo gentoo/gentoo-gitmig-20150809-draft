@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/libxml-perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.27 2006/07/05 18:19:27 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libxml-perl/ChangeLog,v 1.28 2006/08/06 02:46:30 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  libxml-perl-0.07-r1.ebuild, libxml-perl-0.07-r2.ebuild,
+  libxml-perl-0.08.ebuild:
+  Adding perl dep; fixed DEPEND
 
   05 Jul 2006; Christian Hartmann <ian@gentoo.org>
   libxml-perl-0.07-r1.ebuild, libxml-perl-0.07-r2.ebuild,

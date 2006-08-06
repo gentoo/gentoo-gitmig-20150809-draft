@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.30.ebuild,v 1.3 2006/07/05 18:50:22 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.30.ebuild,v 1.4 2006/08/06 02:55:52 mcummings Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~mips ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Math-GMP-1.04
-		>=dev-perl/string-crc32-1.2
+	>=dev-perl/string-crc32-1.2
 		>=dev-perl/math-pari-2.001804
 		virtual/perl-Digest-MD5
 		>=dev-perl/Digest-SHA1-2.10
@@ -30,9 +30,11 @@ DEPEND=">=dev-perl/Math-GMP-1.04
 		dev-perl/crypt-idea
 		dev-perl/Crypt-OpenSSL-RSA
 		dev-perl/crypt-rsa
-		dev-perl/digest-bubblebabble"
+		dev-perl/digest-bubblebabble
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "" | perl-module_src_compile
 }
+

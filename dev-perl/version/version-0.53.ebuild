@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/version-0.53.ebuild,v 1.6 2006/07/18 01:17:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/version-0.53.ebuild,v 1.7 2006/08/06 03:15:19 mcummings Exp $
 
 inherit perl-module
 
@@ -14,6 +14,9 @@ KEYWORDS="~amd64 ~ia64 ~ppc ppc64 sparc x86"
 IUSE=""
 SRC_TEST="do"
 
-DEPEND=">=dev-perl/module-build-0.28"
-RDEPEND=""
+DEPEND=">=dev-perl/module-build-0.28
+	dev-lang/perl"
+RDEPEND="${DEPEND}"
+
+
 

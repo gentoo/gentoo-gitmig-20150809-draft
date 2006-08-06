@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/text-autoformat-1.13.ebuild,v 1.6 2006/07/10 23:47:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/text-autoformat-1.13.ebuild,v 1.7 2006/08/06 03:11:26 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=dev-perl/text-reform-1.11"
+DEPEND=">=dev-perl/text-reform-1.11
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

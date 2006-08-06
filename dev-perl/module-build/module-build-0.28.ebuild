@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28.ebuild,v 1.12 2006/07/14 15:09:03 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28.ebuild,v 1.13 2006/08/06 02:52:41 mcummings Exp $
 
 inherit perl-module
 
@@ -22,7 +22,8 @@ IUSE=""
 PDEPEND=">=dev-perl/ExtUtils-CBuilder-0.15
 	>=dev-perl/extutils-parsexs-1.02"
 
-DEPEND="dev-perl/yaml
+DEPEND="dev-lang/perl
+	dev-perl/yaml
 	>=dev-perl/Archive-Tar-1.09"
 
 SRC_TEST="do"

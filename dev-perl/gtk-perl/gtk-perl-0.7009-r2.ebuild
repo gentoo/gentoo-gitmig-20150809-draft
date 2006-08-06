@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7009-r2.ebuild,v 1.9 2006/07/05 17:28:32 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7009-r2.ebuild,v 1.10 2006/08/06 02:35:06 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -22,7 +22,8 @@ DEPEND="media-libs/gdk-pixbuf
 	gnome? ( gnome-base/gnome-libs
 			gnome-print? ( gnome-base/gnome-print )
 			applet? ( =gnome-base/gnome-applets-1.4.0.5 ) )
-	gtkhtml? ( =gnome-extra/gtkhtml-1* )"
+	gtkhtml? ( =gnome-extra/gtkhtml-1* )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 mydoc="VERSIONS WARNING NOTES"
@@ -52,3 +53,4 @@ src_compile() {
 	perl Makefile.PL ${myconf} \
 	PREFIX=${D}/usr INSTALLDIRS=vendor
 }
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.85.ebuild,v 1.14 2006/04/04 09:30:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/net-server-0.85.ebuild,v 1.15 2006/08/06 02:54:10 mcummings Exp $
 
 inherit perl-module
 
@@ -17,3 +17,7 @@ IUSE=""
 
 mydoc="README"
 
+
+
+DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"

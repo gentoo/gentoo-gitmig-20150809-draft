@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.13.ebuild,v 1.1 2006/07/21 21:09:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.13.ebuild,v 1.2 2006/08/06 02:33:55 mcummings Exp $
 
 IUSE=""
 inherit perl-module eutils
@@ -19,7 +19,8 @@ DEPEND=">=dev-perl/glib-perl-1.042
 	>=dev-perl/gtk2-perl-1.042
 	>=x11-libs/libwnck-2.12.0
 	dev-perl/extutils-pkgconfig
-	>=dev-perl/extutils-depends-0.2"
+	>=dev-perl/extutils-depends-0.2
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -32,3 +33,5 @@ src_unpack() {
 	epatch ${FILESDIR}/window_close_patch
 
 }
+
+

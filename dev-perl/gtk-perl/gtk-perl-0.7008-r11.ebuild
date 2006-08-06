@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r11.ebuild,v 1.12 2006/07/05 17:28:32 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r11.ebuild,v 1.13 2006/08/06 02:35:06 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -19,7 +19,8 @@ DEPEND="media-libs/gdk-pixbuf
 	dev-perl/XML-Writer
 	dev-perl/XML-Parser
 	opengl? ( =x11-libs/gtkglarea-1.2* )
-	gnome? ( gnome-base/gnome-libs )"
+	gnome? ( gnome-base/gnome-libs )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 mydoc="VERSIONS WARNING NOTES"
@@ -44,3 +45,4 @@ src_compile() {
 	perl Makefile.PL ${myconf} \
 	PREFIX=${D}/usr INSTALLDIRS=vendor
 }
+

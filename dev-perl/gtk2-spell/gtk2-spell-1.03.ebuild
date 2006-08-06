@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.03.ebuild,v 1.11 2006/07/05 17:37:58 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.03.ebuild,v 1.12 2006/08/06 02:40:00 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,8 @@ IUSE=""
 DEPEND=">=x11-libs/gtk+-2
 	>=app-text/gtkspell-2
 	>=dev-perl/glib-perl-1.012
-	>=dev-perl/gtk2-perl-1.012"
+	>=dev-perl/gtk2-perl-1.012
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
@@ -27,3 +28,4 @@ src_unpack() {
 	# Without this it cannot find gtkspell <rigo@home.nl>
 	sed -ie "s:\#my:my:g" Makefile.PL || die "sed failed"
 }
+

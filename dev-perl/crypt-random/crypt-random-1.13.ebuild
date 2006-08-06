@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/crypt-random-1.13.ebuild,v 1.11 2006/07/05 14:23:16 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/crypt-random-1.13.ebuild,v 1.12 2006/08/06 02:15:14 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,7 @@ KEYWORDS="~alpha amd64 hppa ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/math-pari
-	dev-perl/class-loader"
+	dev-perl/class-loader
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

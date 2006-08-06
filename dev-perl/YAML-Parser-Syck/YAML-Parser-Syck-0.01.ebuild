@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Parser-Syck/YAML-Parser-Syck-0.01.ebuild,v 1.3 2006/07/05 14:02:41 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Parser-Syck/YAML-Parser-Syck-0.01.ebuild,v 1.4 2006/08/06 02:02:14 mcummings Exp $
 
 inherit perl-module
 
@@ -15,5 +15,7 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="|| ( dev-libs/syck >=dev-lang/ruby-1.8 )"
+DEPEND="|| ( dev-libs/syck >=dev-lang/ruby-1.8 )
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

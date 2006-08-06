@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.50.ebuild,v 1.16 2006/07/05 14:24:06 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.50.ebuild,v 1.17 2006/08/06 02:16:00 mcummings Exp $
 
 inherit perl-module
 
@@ -29,5 +29,7 @@ DEPEND="dev-perl/math-pari
 	dev-perl/tie-encryptedhash
 	dev-perl/data-buffer
 	dev-perl/crypt-primes
-	dev-perl/crypt-cbc"
+	dev-perl/crypt-cbc
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

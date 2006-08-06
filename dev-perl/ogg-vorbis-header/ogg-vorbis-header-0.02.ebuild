@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.02.ebuild,v 1.10 2006/07/05 18:53:05 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.02.ebuild,v 1.11 2006/08/06 02:56:31 mcummings Exp $
 
 inherit perl-module
 
@@ -16,6 +16,9 @@ KEYWORDS="x86 ~ppc alpha sparc amd64"
 IUSE=""
 
 DEPEND="dev-perl/Inline
-		media-libs/libogg
-		media-libs/libvorbis"
+	media-libs/libogg
+		media-libs/libvorbis
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+
+

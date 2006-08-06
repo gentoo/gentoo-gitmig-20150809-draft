@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-1.01.ebuild,v 1.8 2006/07/05 13:52:01 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-1.01.ebuild,v 1.9 2006/08/06 01:54:43 mcummings Exp $
 
 inherit perl-module
 
@@ -17,7 +17,9 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="app-text/sablotron
-		dev-libs/expat"
+	dev-libs/expat
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
 myconf="SABLOTLIBPATH=/usr/lib SABLOTINCPATH=/usr/include"
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/frontier-rpc-0.07_beta4.ebuild,v 1.12 2006/07/10 23:13:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/frontier-rpc-0.07_beta4.ebuild,v 1.13 2006/08/06 02:21:17 mcummings Exp $
 
 inherit perl-module
 
@@ -17,5 +17,7 @@ KEYWORDS="ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/XML-Parser
-		dev-perl/libwww-perl"
+	dev-perl/libwww-perl
+	dev-lang/perl"
 RDEPEND="${DEPEND}"
+

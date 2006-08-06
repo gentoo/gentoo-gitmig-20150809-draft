@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/regexp-common
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.16 2006/03/17 20:27:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.17 2006/08/06 03:07:14 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  regexp-common-2.120.ebuild:
+  Adding perl dep; fixed DEPEND
 
   17 Mar 2006; Chris White <chriswhite@gentoo.org>
   -regexp-common-2.113.ebuild, regexp-common-2.120.ebuild:
