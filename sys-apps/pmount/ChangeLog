@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.25 2006/06/16 19:43:14 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.26 2006/08/06 09:07:13 dertobi123 Exp $
+
+  06 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> pmount-0.9.9.ebuild:
+  ppc stable, bug #136695
 
 *pmount-0.9.11 (16 Jun 2006)
 
