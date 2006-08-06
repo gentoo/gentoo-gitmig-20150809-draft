@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.91 2006/08/03 18:26:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.92 2006/08/06 10:40:42 leonardop Exp $
+
+  06 Aug 2006; Leonardo Boshell <leonardop@gentoo.org>
+  files/libgda-1.2.3-freetds_api_fixes.patch:
+  Fix compilation problem with freetds-0.62, as mentioned in bug #142587.
 
   03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> libgda-1.2.3.ebuild:
   Stable on sparc

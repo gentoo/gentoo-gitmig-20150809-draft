@@ -1,6 +1,6 @@
 diff -NurdB libgda-1.2.3/configure.in libgda-1.2.3-patched/configure.in
 --- libgda-1.2.3/configure.in	2005-10-27 04:18:24.000000000 -0500
-+++ libgda-1.2.3-patched/configure.in	2006-08-02 04:13:23.000000000 -0500
++++ libgda-1.2.3-patched/configure.in	2006-08-06 02:13:21.000000000 -0500
 @@ -440,45 +440,23 @@
  		AC_MSG_WARN(tds backend not used)
  	else
@@ -60,7 +60,7 @@ diff -NurdB libgda-1.2.3/configure.in libgda-1.2.3-patched/configure.in
  fi
 diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-patched/providers/freetds/gda-freetds-provider.c
 --- libgda-1.2.3/providers/freetds/gda-freetds-provider.c	2004-12-28 08:26:11.000000000 -0500
-+++ libgda-1.2.3-patched/providers/freetds/gda-freetds-provider.c	2006-08-02 15:09:05.000000000 -0500
++++ libgda-1.2.3-patched/providers/freetds/gda-freetds-provider.c	2006-08-06 04:13:59.000000000 -0500
 @@ -103,7 +103,7 @@
                                                       const gint col,
                                                       const gint row);
@@ -144,18 +144,20 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  	int result_type = 0;
  #endif
  
-@@ -802,7 +806,9 @@
+@@ -802,7 +806,11 @@
  	}
  
  	/* there should not be any result tokens */
 -#ifdef HAVE_FREETDS_VER0_6X
-+#if FREETDS_VERSION > 6200
++#if FREETDS_VERSION >= 6400
++	while ((tds_cnc->rc = tds_process_tokens (tds_cnc->tds, &tds_cnc->result_type, NULL, TDS_RETURN_ROWFMT | TDS_RETURN_COMPUTEFMT | TDS_RETURN_DONE | TDS_STOPAT_ROW | TDS_STOPAT_COMPUTE | TDS_RETURN_PROC))
++#elif FREETDS_VERSION >= 6200
 +	while ((tds_cnc->rc = tds_process_result_tokens (tds_cnc->tds, &tds_cnc->result_type, NULL))
 +#elif FREETDS_VERSION > 6000
  	while ((tds_cnc->rc = tds_process_result_tokens (tds_cnc->tds, &tds_cnc->result_type))
  #else
  	while ((tds_cnc->rc = tds_process_result_tokens (tds_cnc->tds)) 
-@@ -1002,7 +1008,7 @@
+@@ -1002,7 +1010,7 @@
  	provider_class->supports = gda_freetds_provider_supports;
  	provider_class->get_schema = gda_freetds_provider_get_schema;
  
@@ -164,7 +166,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  	if (tds_cbs_initialized == FALSE) {
  		tds_cbs_initialized = TRUE;
  
-@@ -1025,7 +1031,7 @@
+@@ -1025,7 +1033,7 @@
  
  	g_return_if_fail (GDA_IS_FREETDS_PROVIDER (provider));
  
@@ -173,7 +175,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  	tds_cbs_initialized = FALSE;
  	g_tds_msg_handler = NULL;
  	g_tds_err_handler = NULL;
-@@ -1058,9 +1064,15 @@
+@@ -1058,9 +1066,15 @@
  	                      TDS_SUCCEED);
  
  	msg = g_strdup_printf(_("Msg %d, Level %d, State %d, Server %s, Line %d\n%s\n"),
@@ -189,7 +191,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  	                      (msg_info->server ? msg_info->server : ""),
  	                      msg_info->line_number,
  	                      msg_info->message ? msg_info->message : "");
-@@ -1070,7 +1082,11 @@
+@@ -1070,7 +1084,11 @@
  		if (cnc != NULL) {
  			error = gda_error_new ();
  			gda_error_set_description (error, msg);
@@ -201,7 +203,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  			gda_error_set_source (error, "gda-freetds");
  			if (msg_info->sql_state != NULL) {
  				gda_error_set_sqlstate (error,
-@@ -1095,14 +1111,14 @@
+@@ -1095,14 +1113,14 @@
  	return TDS_SUCCEED;
  }
  
@@ -218,7 +220,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  							(void *) msg,
  #else
  							(void *) tds->msg_info,
-@@ -1117,14 +1133,14 @@
+@@ -1117,14 +1135,14 @@
  }
  #endif
  
@@ -237,7 +239,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.c libgda-1.2.3-p
  							(void *) tds->msg_info,
 diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.h libgda-1.2.3-patched/providers/freetds/gda-freetds-provider.h
 --- libgda-1.2.3/providers/freetds/gda-freetds-provider.h	2005-10-27 04:18:24.000000000 -0500
-+++ libgda-1.2.3-patched/providers/freetds/gda-freetds-provider.h	2006-08-02 15:38:55.000000000 -0500
++++ libgda-1.2.3-patched/providers/freetds/gda-freetds-provider.h	2006-08-06 02:13:21.000000000 -0500
 @@ -30,14 +30,16 @@
  
  G_BEGIN_DECLS
@@ -273,7 +275,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-provider.h libgda-1.2.3-p
  	TDSCONFIGINFO  *config;     /* tds config struct */
 diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-recordset.c libgda-1.2.3-patched/providers/freetds/gda-freetds-recordset.c
 --- libgda-1.2.3/providers/freetds/gda-freetds-recordset.c	2004-12-28 08:26:11.000000000 -0500
-+++ libgda-1.2.3-patched/providers/freetds/gda-freetds-recordset.c	2006-08-02 15:25:34.000000000 -0500
++++ libgda-1.2.3-patched/providers/freetds/gda-freetds-recordset.c	2006-08-06 04:09:11.000000000 -0500
 @@ -279,7 +279,7 @@
  		
  		/* set pointers to NULL */
@@ -283,16 +285,29 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-recordset.c libgda-1.2.3-
  		copy->column_varaddr = NULL;
  #else
  		copy->varaddr = NULL;
-@@ -339,7 +339,7 @@
+@@ -339,9 +339,20 @@
  	recset->priv->tds_cnc = tds_cnc;
  	recset->priv->res = tds_cnc->tds->res_info;
  
 -#ifdef HAVE_FREETDS_VER0_6X
 +#if FREETDS_VERSION > 6000
++#if FREETDS_VERSION >= 6400
++	while ((tds_cnc->rc = tds_process_tokens (tds_cnc->tds,
++							 &tds_cnc->result_type, NULL,
++							 TDS_RETURN_ROWFMT | TDS_RETURN_COMPUTEFMT |
++							 TDS_RETURN_DONE | TDS_STOPAT_ROW |
++							 TDS_STOPAT_COMPUTE | TDS_RETURN_PROC))
++#elif FREETDS_VERSION >= 6200
++	while ((tds_cnc->rc = tds_process_result_tokens (tds_cnc->tds,
++							 &tds_cnc->result_type, NULL))
++#else
  	while ((tds_cnc->rc = tds_process_result_tokens (tds_cnc->tds,
  							 &tds_cnc->result_type))
++#endif
  	       == TDS_SUCCEED) {
-@@ -378,7 +378,11 @@
+ 		if (tds_cnc->result_type == TDS_ROW_RESULT) {
+ 			gint row_type, compute_id;
+@@ -378,7 +389,11 @@
  				g_object_unref (recset);
  				recset = NULL;
  				return NULL;
@@ -306,7 +321,7 @@ diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-recordset.c libgda-1.2.3-
  				gda_connection_add_error (cnc, error);
 diff -NurdB libgda-1.2.3/providers/freetds/gda-freetds-types.c libgda-1.2.3-patched/providers/freetds/gda-freetds-types.c
 --- libgda-1.2.3/providers/freetds/gda-freetds-types.c	2003-03-09 13:55:34.000000000 -0500
-+++ libgda-1.2.3-patched/providers/freetds/gda-freetds-types.c	2006-08-02 01:38:55.000000000 -0500
++++ libgda-1.2.3-patched/providers/freetds/gda-freetds-types.c	2006-08-06 02:13:21.000000000 -0500
 @@ -191,7 +191,7 @@
  	const TDS_INT max_size = 255;
  	TDS_INT col_size = 0;
