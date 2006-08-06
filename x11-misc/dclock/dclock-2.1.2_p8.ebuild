@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p8.ebuild,v 1.1 2006/07/12 02:50:42 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/dclock-2.1.2_p8.ebuild,v 1.2 2006/08/06 21:17:09 deltacow Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="ftp://ftp.ac-grenoble.fr/ge/Xutils/"
 S=${WORKDIR}/${PN}
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="|| ( (
