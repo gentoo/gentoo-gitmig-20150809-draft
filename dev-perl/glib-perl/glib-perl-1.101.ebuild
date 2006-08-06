@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.101.ebuild,v 1.9 2006/02/06 20:46:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/glib-perl-1.101.ebuild,v 1.10 2006/08/06 02:27:14 mcummings Exp $
 
 inherit perl-module
 
@@ -19,6 +19,7 @@ SRC_TEST="do"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
+	dev-lang/perl
 	xml? ( dev-perl/XML-Writer
 		dev-perl/XML-Parser )"
 DEPEND="${RDEPEND}
