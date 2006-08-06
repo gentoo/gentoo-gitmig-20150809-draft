@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/digest-md2
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.12 2005/10/02 13:37:33 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.13 2006/08/06 02:18:39 mcummings Exp $
+
+  06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  digest-md2-2.03.ebuild:
+  Adding perl dep; fixed header; fixed DEPEND
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> digest-md2-2.03.ebuild:
   Mark 2.03 stable on ia64
