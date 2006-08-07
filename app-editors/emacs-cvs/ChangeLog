@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.47 2006/06/26 22:21:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.48 2006/08/07 05:24:48 mkennedy Exp $
+
+*emacs-cvs-22.0.50-r3 (07 Aug 2006)
+
+  07 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +emacs-cvs-22.0.50-r3.ebuild:
+  Remove the (commented out) XFT support in favour of the emacs-unicode-2
+  branch support in the emacs-cvs-23.0.0 ebuild; Support the source USE flag
+  which would install the Emacs C source.
 
   26 Jun 2006; Diego Pettenò <flameeyes@gentoo.org>
   emacs-cvs-22.0.50-r2.ebuild:
