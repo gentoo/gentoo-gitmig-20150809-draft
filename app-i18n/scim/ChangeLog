@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.93 2006/07/28 03:28:02 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.94 2006/08/07 10:14:26 jer Exp $
+
+  07 Aug 2006; Jeroen Roovers <jer@gentoo.org> scim-1.4.4.ebuild:
+  Marked ~hppa (bug #141886).
 
   28 Jul 2006; Joshua Jackson <tsunam@gentoo.org> scim-1.4.4.ebuild:
   Stable x86; bug #139097
