@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5704 2006/08/07 19:55:14 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5705 2006/08/07 20:40:57 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -95,11 +95,6 @@ x11-plugins/gkrellm-alltraxclock
 # API bumps - needs extensive testing against all dependent apps
 >=net-libs/gnutls-1.4.1
 >=dev-libs/libtasn1-0.3.4
-
-# Michael Sterrett <mr_bones_@gentoo.org> (31 Jul 2006)
-# Masked for security issues
-# http://bugs.gentoo.org/show_bug.cgi?id=141563
-games-strategy/freeciv
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (31 Jul 2006)
 # Masked for security issues
