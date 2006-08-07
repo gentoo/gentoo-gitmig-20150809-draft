@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.90 2006/08/07 16:18:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.91 2006/08/07 18:14:47 deltacow Exp $
+
+  07 Aug 2006; Scott Stoddard <deltacow@gentoo.org> gawk-3.1.5-r2.ebuild:
+  Stable on amd64 re bug 142936.
 
   07 Aug 2006; Luca Barbato <lu_zero@gentoo.org> gawk-3.1.5-r2.ebuild:
   Marked ppc
