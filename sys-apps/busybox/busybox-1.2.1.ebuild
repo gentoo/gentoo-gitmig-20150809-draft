@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.1 2006/08/05 20:06:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.2 2006/08/07 02:45:59 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -77,14 +77,14 @@ src_unpack() {
 					break
 				fi
 			done
+			[[ -e .config ]] && break
 		done
 		if [[ -r ${S}/.config ]] ; then
 			einfo "Found your ${configfile} and using it."
 			yes "" | make oldconfig > /dev/null
 			return 0
 		else
-			einfo "Could not locate user configfile, going with default"
-			yes "" | make oldconfig > /dev/null
+			die "Could not locate user configfile, please fix"
 		fi
 	fi
 	if use netboot ; then
