@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.12.ebuild,v 1.1 2006/07/30 11:11:33 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.12.ebuild,v 1.2 2006/08/07 20:12:01 ferdy Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -48,6 +48,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} && cd "${S}" || die "unpack failed"
+
+	# fix for linking problem (bug #142520) in configure.in
+	epatch "${FILESDIR}"/${P}-fix-pop-c.patch
 
 	if ! use vanilla ; then
 		if ! use nntp ; then
