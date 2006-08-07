@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/matchbox-panel-manager-0.1.ebuild,v 1.1 2006/03/13 00:19:07 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/matchbox-panel-manager/matchbox-panel-manager-0.1.ebuild,v 1.2 2006/08/07 17:08:48 yvasilev Exp $
 
 inherit versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://projects.o-hand.com/matchbox/sources/${PN}/$(get_version_compone
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~arm"
 IUSE=""
 
 DEPEND=">=x11-libs/libmatchbox-1.5
