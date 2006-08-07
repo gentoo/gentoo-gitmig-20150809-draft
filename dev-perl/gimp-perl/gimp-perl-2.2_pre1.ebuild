@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.3 2006/06/22 19:19:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/gimp-perl-2.2_pre1.ebuild,v 1.4 2006/08/07 12:01:59 lu_zero Exp $
 
 inherit perl-module
 
@@ -14,13 +14,13 @@ SRC_URI="ftp://ftp.gimp.org/pub/gimp/plug-ins/v2.2/perl/${MY_P}.tar.gz
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="~amd64 sparc x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8
 	>=dev-perl/PDL-2.4
 	>=dev-perl/gtk2-perl-1.00
-	=media-gfx/gimp-2.2*"
+	>=media-gfx/gimp-2.2"
 DEPEND="${RDEPEND}
 	dev-perl/extutils-depends
 	dev-util/pkgconfig"
