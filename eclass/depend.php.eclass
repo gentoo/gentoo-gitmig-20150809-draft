@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.15 2006/05/13 15:39:11 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.16 2006/08/07 07:10:16 chtekk Exp $
 #
 # ========================================================================
 #
@@ -521,7 +521,8 @@ php_binary_extension() {
 
 	# Binary extensions do not support the change of PHP
 	# API version, so they can't be installed when USE flags
-	# are enabled wich change the PHP API version
+	# are enabled which change the PHP API version, they also
+	# don't provide correctly versioned symbols for our use
 
 	if built_with_use =${PHP_PKG} hardenedphp || phpconfutils_built_with_use =${PHP_PKG} hardenedphp ; then
 		eerror
@@ -543,8 +544,18 @@ php_binary_extension() {
 		PUSE_ENABLED="1"
 	fi
 
+	if built_with_use =${PHP_PKG} concurrentmodphp || phpconfutils_built_with_use =${PHP_PKG} concurrentmodphp ; then
+		eerror
+		eerror "You cannot install binary PHP extensions when"
+		eerror "the 'concurrentmodphp' USE flag is enabled!"
+		eerror "Please reemerge dev-lang/php with the"
+		eerror "'concurrentmodphp' USE flag turned off."
+		eerror
+		PUSE_ENABLED="1"
+	fi
+
 	if [[ -n ${PUSE_ENABLED} ]] ; then
-		die "'hardenedphp' and/or 'debug' USE flags turned on"
+		die "'hardenedphp' and/or 'debug' and/or 'concurrentmodphp' USE flags turned on!"
 	fi
 }
 
