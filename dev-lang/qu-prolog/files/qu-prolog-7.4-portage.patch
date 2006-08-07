@@ -95,20 +95,17 @@
  %.qo: %.qs
 -	$(COMPILE.qc) -c -o $@ $<
 +	@QPHOME@/src/qa -i $< -o $@
---- qp7.2.orig/prolog/qc1/Makefile.in	2006-02-20 16:22:58.000000000 +1300
-+++ qp7.2/prolog/qc1/Makefile.in	2006-03-24 23:28:45.000000000 +1200
-@@ -1,8 +1,8 @@
+--- qp7.4.orig/prolog/qc1/Makefile.in	2006-07-27 16:27:35.000000000 +1200
++++ qp7.4/prolog/qc1/Makefile.in	2006-08-07 21:11:56.000000000 +1200
+@@ -3,6 +3,7 @@
  #
- # Makefile for "qc1.qup"
- #
--PROGRAM		= @QPHOME@/bin/qc1.qup
--
-+PROGRAM		= @QPHOME@/bin/qc1
+ PROGRAM		= @QPHOME@/bin/qc1.qup
+ 
 +SAVEFILE	= qc1.qx
  SOURCES		= qc1.ql
  
  BASES		= $(basename $(SOURCES))
-@@ -13,8 +13,12 @@
+@@ -13,8 +14,12 @@
  all: $(PROGRAM)
  
  $(PROGRAM): $(OBJECTS)
