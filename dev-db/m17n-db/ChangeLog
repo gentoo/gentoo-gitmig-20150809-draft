@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/m17n-db
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.19 2005/04/08 14:36:03 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.20 2006/08/07 00:03:25 matsuu Exp $
+
+
+*m17n-db-1.3.3 (06 Aug 2006)
+
+  06 Aug 2006; MATSUU Takuto <matsuu@gentoo.org> -m17n-db-1.0.2.ebuild,
+  -m17n-db-1.1.0.ebuild, +m17n-db-1.3.3.ebuild:
+  Version bumped.
+  Removed old versions.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> m17n-db-1.2.0.ebuild:
   Stable on ppc64
