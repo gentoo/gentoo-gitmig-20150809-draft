@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r2.ebuild,v 1.1 2006/07/28 11:12:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r2.ebuild,v 1.2 2006/08/07 00:11:55 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -15,15 +15,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source"
 
-RDEPEND=">=virtual/jre-1.4
+COMMON_DEP="
 	dev-db/hsqldb
 	>=dev-java/xerces-2.6
 	dev-java/junit
 	>=dev-java/log4j-1.2.8
 	dev-java/xmldb"
-DEPEND=">=virtual/jdk-1.4
+RDEPEND=">=virtual/jre-1.4
+	${COMMON_DEP}"
+# FIXME doesn't like to compile with Java 1.6
+DEPEND="|| (
+		=virtual/jdk-1.4*
+		=virtual/jdk-1.5*
+	)
 	dev-java/ant-core
-	${RDEPEND}"
+	${COMMON_DEP}"
 
 S="${WORKDIR}/${MY_P}"
 
