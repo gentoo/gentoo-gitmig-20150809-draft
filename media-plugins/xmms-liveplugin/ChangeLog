@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-liveplugin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.10 2006/08/01 19:28:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-liveplugin/ChangeLog,v 1.11 2006/08/07 19:32:52 tcort Exp $
+
+  07 Aug 2006; Thomas Cort <tcort@gentoo.org>
+  xmms-liveplugin-0.2.5-r1.ebuild:
+  Stable on amd64 wrt Bug #117153.
 
   01 Aug 2006; Andrej Kacian <ticho@gentoo.org>
   xmms-liveplugin-0.2.5-r1.ebuild:
