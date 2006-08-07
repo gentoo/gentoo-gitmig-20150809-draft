@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-9999.ebuild,v 1.4 2006/07/16 05:28:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-9999.ebuild,v 1.5 2006/08/07 02:35:04 vapier Exp $
 
 ECVS_MODULE="e17/apps/e"
 inherit enlightenment
@@ -8,7 +8,6 @@ inherit enlightenment
 DESCRIPTION="the e17 window manager"
 
 DEPEND="sys-devel/libtool
-	x11-libs/evas
 	x11-libs/ecore
 	media-libs/edje
 	dev-libs/eet
