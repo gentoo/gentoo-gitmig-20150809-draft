@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Element-Extended
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.17 2006/08/05 04:19:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Element-Extended/ChangeLog,v 1.18 2006/08/07 23:24:45 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Element-Extended-1.17.ebuild:
+  Marking amd64, sparc stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Element-Extended-1.13.ebuild, HTML-Element-Extended-1.16.ebuild,
