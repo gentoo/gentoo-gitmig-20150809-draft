@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.206 2006/07/21 19:09:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.207 2006/08/07 12:30:09 fmccor Exp $
+
+  07 Aug 2006; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.4-r3.ebuild:
+  Stable on sparc --- Bug #133002 --- builds and runs fine.  (But notice
+  Comments 2, 16, and 20 on the referenced bug:  they apply as well to sparc.)
 
   21 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org> ruby-1.8.4-r3.ebuild:
   Stable on amd64 and x86 wrt bug #133002.
