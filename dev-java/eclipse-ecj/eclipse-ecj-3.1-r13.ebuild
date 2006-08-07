@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.1-r13.ebuild,v 1.2 2006/07/22 21:12:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.1-r13.ebuild,v 1.3 2006/08/07 12:05:34 nelchael Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 	dev-java/ant-core"
 
 src_compile() {
-	eant jar $(use_doc)
+	java-ant_rewrite-classpath "${S}/build.xml"
+	eant -Dgentoo.classpath=$(java-pkg_getjars ant-core) jar $(use_doc)
 }
 
 src_install() {
