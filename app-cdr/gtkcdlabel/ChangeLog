@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.27 2006/08/06 21:57:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.28 2006/08/07 19:38:01 tcort Exp $
+
+  07 Aug 2006; Thomas Cort <tcort@gentoo.org> gtkcdlabel-1.0_pre8.ebuild:
+  Stable on amd64 wrt Bug #142039.
 
   06 Aug 2006; Jason Wever <weeve@gentoo.org> gtkcdlabel-1.0_pre8.ebuild:
   Stable on SPARC wrt bug #142039.
