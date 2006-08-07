@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-skinelchi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.6 2006/07/05 19:20:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinelchi/ChangeLog,v 1.7 2006/08/07 12:48:54 zzam Exp $
+
+  07 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-skinelchi-0.1.1_pre2.ebuild:
+  Marked stable on x86.
 
 *vdr-skinelchi-0.1.1_pre2 (05 Jul 2006)
 
