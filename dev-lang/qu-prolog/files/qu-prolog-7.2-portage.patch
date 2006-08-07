@@ -103,7 +103,7 @@
  #
 -PROGRAM		= @QPHOME@/bin/qc1.qup
 -
-+PROGRAM		= @QPHOME@/bin/qc1
++PROGRAM		= @QPHOME@/bin/qc1.qup
 +SAVEFILE	= qc1.qx
  SOURCES		= qc1.ql
  
@@ -204,3 +204,24 @@
 -	$(COMPILE.qc) -c -o $@ $<
 +	@QPHOME@/src/qa -i $< -o $@
  
+--- qp7.2.orig/src/Makefile.in	2006-04-06 14:14:37.000000000 +1200
++++ qp7.2/src/Makefile.in	2006-05-27 09:00:47.000000000 +1200
+@@ -40,7 +40,7 @@
+ 
+ #export DEBUGGING=
+ 
+-export CXXFLAGS = @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 $(OPTIMISATION) @DEBUGGING@ -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized
++#export CXXFLAGS = @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 $(OPTIMISATION) @DEBUGGING@ -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized
+ export QACXXFLAGS = -Wall -D_GNU_SOURCE=1 @DEBUGGING@ -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized
+ 
+ .PHONY: all
+@@ -80,6 +80,9 @@
+ 
+ # Targets
+ 
++.cc.o:
++	$(CXX) $(CXXFLAGS) @GCC_ALIAS_FLAG@ -Wall -D_GNU_SOURCE=1 @DEBUGGING@ -I@ICMHOME@/include @GCCINCLUDES@ -Wno-uninitialized -c $<
++
+ .PHONY: commands
+ commands: $(GENERATED) $(LIBRARIES) $(BIG_LIBRARY)
+ 	@$(MAKE) $(ALL_COMMANDS)
