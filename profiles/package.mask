@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5701 2006/08/05 00:05:19 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5702 2006/08/07 02:55:25 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (06 Aug 2006)
+# Masked for security issues
+# https://bugs.gentoo.org/show_bug.cgi?id=142389
+games-strategy/warzone2100
 
 # Tuấn Văn <langthang@gentoo.org> (04 Aug 2006)
 # Incomplete patch.
@@ -81,7 +86,7 @@ x11-plugins/gkrellm-alltraxclock
 >=net-libs/gnutls-1.4.1
 >=dev-libs/libtasn1-0.3.4
 
-#  Michael Sterrett <mr_bones_@gentoo.org> (31 Jul 2006)
+# Michael Sterrett <mr_bones_@gentoo.org> (31 Jul 2006)
 # Masked for security issues
 # http://bugs.gentoo.org/show_bug.cgi?id=141563
 games-strategy/freeciv
@@ -310,7 +315,7 @@ net-wireless/aircrack
 # /etc/sandbox.d/00default.
 >=sys-apps/sandbox-1.2.20_alpha1
 
-#  Michael Sterrett <mr_bones_@gentoo.org> (07 Jul 2006)
+# Michael Sterrett <mr_bones_@gentoo.org> (07 Jul 2006)
 # Added back mask for dev-util/netbeans-4 until tomcat is fixed up
 >=dev-util/netbeans-4.0
 
@@ -438,7 +443,7 @@ app-text/bow
 <sys-apps/dbus-0.60
 <sys-apps/hal-0.5.0
 
-#  Michael Sterrett <mr_bones_@gentoo.org> (17 Jun 2006)
+# Michael Sterrett <mr_bones_@gentoo.org> (17 Jun 2006)
 # Needs newer linux-headers.  masked until then
 >=sys-process/audit-1.1.6
 
