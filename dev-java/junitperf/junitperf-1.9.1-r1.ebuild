@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.1 2006/08/05 17:03:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.2 2006/08/07 19:08:07 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,6 @@ IUSE="doc junit source"
 DEPEND=">=virtual/jdk-1.3
 	app-arch/unzip
 	dev-java/ant-core
-	jikes? ( >=dev-java/jikes-1.21 )
 	junit? ( dev-java/ant-tasks )
 	source? ( app-arch/zip )"
 
