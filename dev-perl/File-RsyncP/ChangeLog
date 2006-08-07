@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/File-RsyncP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.8 2006/08/05 03:51:18 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.9 2006/08/07 22:55:09 mcummings Exp $
+
+*File-RsyncP-0.64 (07 Aug 2006)
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  +File-RsyncP-0.64.ebuild:
+  Version bump, fixed SRC to use CPAN so we can track it. Builds with current
+  rsync (last ebuild didn't anymore).
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   File-RsyncP-0.52.ebuild, File-RsyncP-0.62.ebuild:
