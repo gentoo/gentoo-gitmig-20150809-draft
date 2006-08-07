@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.16 2006/05/17 14:37:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-0.9.0.ebuild,v 1.17 2006/08/07 13:29:26 kevquinn Exp $
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org/"
@@ -22,8 +22,12 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-linux26-headers.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
+	# Modify configure check that tries to compile the cpuid
+	# instruction to work on hardened compiler.  Modified acinclude.m4.
+	epatch ${FILESDIR}/${P}-configure-cpuid-pic.patch
 
-	elibtoolize
+	# Since acinclude.m4 is modified, need to autoreconf.
+	eautoreconf
 }
 
 src_compile() {
