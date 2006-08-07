@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5703 2006/08/07 03:00:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5704 2006/08/07 19:55:14 smithj Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Jonathan Smith <smithj@gentoo.org> (07 Aug 2006)
+# pending removal
+# https://bugs.gentoo.org/show_bug.cgi?id=140498
+media-gfx/xzgv
 
 # Michael Sterrett <mr_bones_@gentoo.org> (06 Aug 2006)
 # Masked for security issues
