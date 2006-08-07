@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.2 2006/06/19 20:19:57 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-1.0.ebuild,v 1.3 2006/08/07 17:21:23 yvasilev Exp $
 
 DESCRIPTION="Meta package for the Matchbox desktop, a light weight desktop environment designed for use on PDA computers"
 HOMEPAGE="http://projects.o-hand.com/matchbox/"
@@ -10,7 +10,7 @@ IUSE="minimal"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~arm"
 
 RDEPEND="x11-wm/matchbox-common
 	x11-wm/matchbox-desktop
