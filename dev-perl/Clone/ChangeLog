@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.25 2006/07/10 14:51:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.26 2006/08/07 00:27:55 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org> Clone-0.20.ebuild:
+  Marking amd64 stable
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> Clone-0.20.ebuild:
   Mark 0.20 stable on ia64
