@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.15 2006/04/28 12:42:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.16 2006/08/07 04:05:31 leio Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -69,7 +69,6 @@ subconfigure() {
 	ECONF_SOURCE="${S}" \
 		econf \
 			--disable-precomp-headers \
-			--disable-debugreport \
 			--with-zlib \
 			$(use_enable debug) $(use_enable debug debug_gdb) \
 			$* || die "./configure failed"
