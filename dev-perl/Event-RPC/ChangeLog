@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Event-RPC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.17 2006/08/05 03:21:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.18 2006/08/07 21:06:32 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Event-RPC-0.90.ebuild:
+  Marking amd64 stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Event-RPC-0.84.ebuild, Event-RPC-0.85.ebuild, Event-RPC-0.88.ebuild,
