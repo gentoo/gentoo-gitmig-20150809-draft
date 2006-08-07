@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/ezc-Mail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Mail/ChangeLog,v 1.8 2006/07/12 07:53:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Mail/ChangeLog,v 1.9 2006/08/07 07:30:56 sebastian Exp $
+
+*ezc-Mail-1.1.1 (07 Aug 2006)
+
+  07 Aug 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  +ezc-Mail-1.1.1.ebuild:
+  Version bump.
 
   12 Jul 2006; Sebastian Bergmann <sebastian@gentoo.org>
   ezc-Mail-1.0.1.ebuild, ezc-Mail-1.1.ebuild:
