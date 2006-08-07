@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.4 2006/03/23 14:57:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.3-r1.ebuild,v 1.5 2006/08/07 07:51:37 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -8,7 +8,8 @@ extra_ver="4870"
 MY_P=${P}.${extra_ver}
 DESCRIPTION="A relational database offering many ANSI SQL-99 features"
 HOMEPAGE="http://firebird.sourceforge.net/"
-SRC_URI="mirror://sourceforge/firebird/${MY_P}.tar.bz2
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+	 mirror://gentoo/${PN}-1.5-gcc4.patch.bz2
 		doc? (	http://firebird.sourceforge.net/pdfmanual/Firebird-1.5-QuickStart.pdf
 				ftp://ftpc.inprise.com/pub/interbase/techpubs/ib_b60_doc.zip )"
 
@@ -40,9 +41,14 @@ src_unpack() {
 	fi
 
 	unpack ${MY_P}.tar.bz2
+	unpack ${PN}-1.5-gcc4.patch.bz2
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-1.5-build.patch
+	epatch ${WORKDIR}/${PN}-1.5-gcc4.patch
+
+	# This file must be regenerated during build
+	rm ${S}/src/dsql/parse.cpp
 }
 
 src_compile() {
