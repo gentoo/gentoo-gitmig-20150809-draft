@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.2 2006/08/07 02:45:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.3 2006/08/07 02:48:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,19 +73,14 @@ src_unpack() {
 			for root in "${ROOT}" / ; do
 				configfile=${root}etc/portage/savedconfig/${conf}.config
 				if [[ -r ${configfile} ]] ; then
+					einfo "Found your ${configfile} and using it."
 					cp ${configfile} "${S}"/.config
-					break
+					yes "" | make oldconfig > /dev/null
+					return 0
 				fi
 			done
-			[[ -e .config ]] && break
 		done
-		if [[ -r ${S}/.config ]] ; then
-			einfo "Found your ${configfile} and using it."
-			yes "" | make oldconfig > /dev/null
-			return 0
-		else
-			die "Could not locate user configfile, please fix"
-		fi
+		die "Could not locate user configfile, please fix"
 	fi
 	if use netboot ; then
 		cp "${FILESDIR}"/config-netboot .config
