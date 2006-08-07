@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.335 2006/07/31 12:10:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.336 2006/08/07 23:07:09 ticho Exp $
+
+  07 Aug 2006; Andrej Kacian <ticho@gentoo.org> qt-4.1.4.ebuild,
+  qt-4.2.0_pre1.ebuild:
+  Stable on x86. Bug #134341. Fix leading spaces in the 4.2.0_pre1 ebuild.
 
   31 Jul 2006; Caleb Tennis <caleb@gentoo.org> qt-4.2.0_pre1.ebuild:
   Add pch support for qt-4.2
