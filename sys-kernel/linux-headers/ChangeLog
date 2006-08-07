@@ -1,9 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.188 2006/08/07 15:12:35 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.189 2006/08/07 15:55:43 plasmaroo Exp $
 
   07 Aug 2006; <plasmaroo@gentoo.org> linux-headers-2.6.17.ebuild:
-  Keyword ~x86.
+  Keyword ~x86, fix bug #142994.
 
   28 Jul 2006; <plasmaroo@gentoo.org> linux-headers-2.6.11-r2.ebuild,
   linux-headers-2.6.11-r3.ebuild, linux-headers-2.6.11-r4.ebuild,
