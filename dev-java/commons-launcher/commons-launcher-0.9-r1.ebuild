@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9-r1.ebuild,v 1.1 2006/07/22 22:59:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/commons-launcher-0.9-r1.ebuild,v 1.2 2006/08/07 11:49:29 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -18,9 +18,10 @@ RDEPEND=">=virtual/jre-1.4"
 S=${WORKDIR}/${PN}
 
 src_compile() {
+	java-ant_rewrite-classpath "${S}/build.xml"
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
-	eant ${antflags} || die "compilation problem"
+	eant -Dgentoo.classpath=$(java-pkg_getjars ant-core) ${antflags} || die "compilation problem"
 }
 
 src_install() {
