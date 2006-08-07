@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Getopt-ArgvFile
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/ChangeLog,v 1.13 2006/08/05 04:11:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/ChangeLog,v 1.14 2006/08/07 23:07:23 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  -Getopt-ArgvFile-1.08.ebuild, Getopt-ArgvFile-1.10.ebuild:
+  Marking amd64 stable; cleaning out stale ebuild
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Getopt-ArgvFile-1.08.ebuild, Getopt-ArgvFile-1.10.ebuild:
