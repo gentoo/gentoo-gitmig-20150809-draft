@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.24 2006/08/03 18:30:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.25 2006/08/07 09:44:33 liquidx Exp $
+
+  07 Aug 2006; Alastair Tse <liquidx@gentoo.org> gdome2-0.8.1-r1.ebuild:
+  disable gtkdoc-fixxref to stop sandbox violation with USE=doc. stable bump
+  for x86. (#114596)
 
   03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gdome2-0.8.1-r1.ebuild:
