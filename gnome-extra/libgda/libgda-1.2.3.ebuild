@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.3.ebuild,v 1.5 2006/08/03 18:26:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.2.3.ebuild,v 1.6 2006/08/07 06:34:18 leonardop Exp $
 
 inherit autotools eutils gnome2
 
@@ -69,5 +69,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.2.1-mdb_fix.patch
 
 	sed -n -e '/GTK_DOC_CHECK/,/IT_PROG_INTLTOOL/p' aclocal.m4 > gtk-doc.m4
+	intltoolize --automake -c -f || die "intltoolize failed"
 	AT_M4DIR="." eautoreconf
 }
