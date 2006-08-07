@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.21.ebuild,v 1.1 2006/08/06 07:12:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.21.ebuild,v 1.2 2006/08/07 18:35:04 mr_bones_ Exp $
 
 inherit games
 
@@ -18,6 +18,7 @@ DEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.0
 	media-libs/libpng
 	media-libs/sdl-net
+	media-libs/sdl-ttf
 	media-libs/sdl-image
 	media-libs/libvorbis
 	>=media-libs/speex-1.1
