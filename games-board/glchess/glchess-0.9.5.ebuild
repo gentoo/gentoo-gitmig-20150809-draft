@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-0.9.5.ebuild,v 1.1 2006/07/27 02:43:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-0.9.5.ebuild,v 1.2 2006/08/07 21:07:41 malc Exp $
 
 inherit distutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="dev-python/pygtkglext
