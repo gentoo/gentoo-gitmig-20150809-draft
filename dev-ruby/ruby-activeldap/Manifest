@@ -1,28 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d50221fa195b3bcb5b6e91380ff88cf ChangeLog 714
-RMD160 f0475a42755f974e9228c8531f7915a2c837910b ChangeLog 714
-SHA256 c26a615f5629627f57c046ed2d56872854ede53270c88a017485884a43ec950a ChangeLog 714
+DIST ruby-activeldap-0.5.7.gem 27648
+DIST ruby-activeldap-0.6.0.gem 28160 RMD160 ee41c60fe0c0fd6e2f0345de80ccea3dd4eedbc9 SHA256 48b01007761962715274f824c9ca74f7b276f61dad0295a8a78e5c4771ddd0a4
+DIST ruby-activeldap-0.7.4.gem 32768 RMD160 f9391eb8333e70f795da6f9897d001cb793c9705 SHA1 979d9a2303bc056341879d1c60a0283a7df37827 SHA256 1b09fdb00129fa4f9f66e550fc96891464e626443b2371805d2a659b3b770623
+EBUILD ruby-activeldap-0.5.7.ebuild 594 RMD160 c5414731642773fde5acbaea534350c0f90bb44b SHA1 62645c084b0109b555b1b6d96f98bbd8ad5c5ef0 SHA256 a8c92d08ac3cbb64d9cff7892f5a2add7d79efae24c388d735b5ae3abc5e10bd
+MD5 9013873f512acf60f2fbf6dd9c5b9653 ruby-activeldap-0.5.7.ebuild 594
+RMD160 c5414731642773fde5acbaea534350c0f90bb44b ruby-activeldap-0.5.7.ebuild 594
+SHA256 a8c92d08ac3cbb64d9cff7892f5a2add7d79efae24c388d735b5ae3abc5e10bd ruby-activeldap-0.5.7.ebuild 594
+EBUILD ruby-activeldap-0.6.0.ebuild 611 RMD160 05269dc59236296a68773f8829bcc6211c005464 SHA1 f328838fa98ee86b77c795a05e6f5bc11310fe38 SHA256 281564e36646137c10a29b0cc1f9dba416ac83bdd926c180677974672eff68f7
+MD5 45593dccc1fd0d94ffab8a6c48834487 ruby-activeldap-0.6.0.ebuild 611
+RMD160 05269dc59236296a68773f8829bcc6211c005464 ruby-activeldap-0.6.0.ebuild 611
+SHA256 281564e36646137c10a29b0cc1f9dba416ac83bdd926c180677974672eff68f7 ruby-activeldap-0.6.0.ebuild 611
+EBUILD ruby-activeldap-0.7.4.ebuild 609 RMD160 eeaafa50b3aea97556b5e65b249bac9301bafaea SHA1 e6cd6abf4caf59ad126b2f5e78298d757cdfe229 SHA256 2fd82576add94eeb1017b72a558e28ac79430fbcfa4c218ab246240bf15699bf
+MD5 331a2b9c063024d1c60a36622481e2cf ruby-activeldap-0.7.4.ebuild 609
+RMD160 eeaafa50b3aea97556b5e65b249bac9301bafaea ruby-activeldap-0.7.4.ebuild 609
+SHA256 2fd82576add94eeb1017b72a558e28ac79430fbcfa4c218ab246240bf15699bf ruby-activeldap-0.7.4.ebuild 609
+MISC ChangeLog 845 RMD160 ddefc7ce00c051934c2266b1986e953568ba277a SHA1 16240bafedc2382eb1914710a4d1cdcaa116c884 SHA256 2d5cf467b02c4f5432ba5dc874254cf8d3b352e53c8477fe01245716f557195a
+MD5 5def0209f1d86389e9a4673e465b1677 ChangeLog 845
+RMD160 ddefc7ce00c051934c2266b1986e953568ba277a ChangeLog 845
+SHA256 2d5cf467b02c4f5432ba5dc874254cf8d3b352e53c8477fe01245716f557195a ChangeLog 845
+MISC metadata.xml 157 RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 SHA1 8ce15dcc608eeb5616aeec610dc695cbe6f93e02 SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
+SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
 MD5 5edc679d6e09aca2242c2169462f51a6 files/digest-ruby-activeldap-0.5.7 69
 RMD160 afce7052b5a2b7d77ce3c1d13eb5040b8cbd8071 files/digest-ruby-activeldap-0.5.7 69
 SHA256 a50e07c54d877fdaf4c015c42f6b92f5bbe268ec876243bb844824d10d45d498 files/digest-ruby-activeldap-0.5.7 69
 MD5 1d614ab368fc1a5f867ac5412e6e84c6 files/digest-ruby-activeldap-0.6.0 253
 RMD160 12514cbe063ee49bc5afebde59088f251317bdd4 files/digest-ruby-activeldap-0.6.0 253
 SHA256 965cf4b9a68cdd1bb7da81afc65a9c4d55ffc563cb8cde9f637f7d3edac9e105 files/digest-ruby-activeldap-0.6.0 253
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-RMD160 5d9e2c7ecba96ffebd936d38acedf859cdea84e1 metadata.xml 157
-SHA256 11fba03a217e2d996f5cd8895493a5692ece8ddac2c1a2dfc71d0e830555121c metadata.xml 157
-MD5 9013873f512acf60f2fbf6dd9c5b9653 ruby-activeldap-0.5.7.ebuild 594
-RMD160 c5414731642773fde5acbaea534350c0f90bb44b ruby-activeldap-0.5.7.ebuild 594
-SHA256 a8c92d08ac3cbb64d9cff7892f5a2add7d79efae24c388d735b5ae3abc5e10bd ruby-activeldap-0.5.7.ebuild 594
-MD5 45593dccc1fd0d94ffab8a6c48834487 ruby-activeldap-0.6.0.ebuild 611
-RMD160 05269dc59236296a68773f8829bcc6211c005464 ruby-activeldap-0.6.0.ebuild 611
-SHA256 281564e36646137c10a29b0cc1f9dba416ac83bdd926c180677974672eff68f7 ruby-activeldap-0.6.0.ebuild 611
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFEK1QZJrHF4yAQTrARAinjAJ9FObKdv3Gky2pS/ISOy+KQGycmxgCdFzHN
-g0rNGnWzET1OBbtGCeW3XcM=
-=lTti
------END PGP SIGNATURE-----
+MD5 1258259b4d5d3f43182cc51afbac5a94 files/digest-ruby-activeldap-0.7.4 253
+RMD160 a8942570d298df4874956298377238f52cabc605 files/digest-ruby-activeldap-0.7.4 253
+SHA256 ca7afce57fde51d3a8eb50d3f0b66535d13984066d818f80bd644a3f0bb2d0c6 files/digest-ruby-activeldap-0.7.4 253
