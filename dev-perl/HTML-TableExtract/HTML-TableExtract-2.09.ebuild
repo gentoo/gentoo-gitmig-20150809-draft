@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/HTML-TableExtract-2.09.ebuild,v 1.3 2006/08/05 04:29:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TableExtract/HTML-TableExtract-2.09.ebuild,v 1.4 2006/08/07 23:31:37 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/HTML/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 mydoc="TODO"
@@ -18,5 +18,3 @@ mydoc="TODO"
 DEPEND=">=dev-perl/HTML-Element-Extended-1.16
 	dev-perl/HTML-Parser
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

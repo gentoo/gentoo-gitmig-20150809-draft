@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GDGraph
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.18 2006/08/05 04:08:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.19 2006/08/07 23:05:12 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  GDGraph-1.43.08.ebuild:
+  Marking amd64 stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org> GDGraph-1.43.ebuild,
   GDGraph-1.43.07.ebuild, GDGraph-1.43.08.ebuild:

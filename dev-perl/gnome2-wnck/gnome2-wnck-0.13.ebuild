@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.13.ebuild,v 1.2 2006/08/06 02:33:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.13.ebuild,v 1.3 2006/08/07 23:20:18 mcummings Exp $
 
 IUSE=""
 inherit perl-module eutils
@@ -13,7 +13,7 @@ HOMEPAGE="http://gtk2-perl.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
-SRC_TEST="do"
+#SRC_TEST="do"
 
 DEPEND=">=dev-perl/glib-perl-1.042
 	>=dev-perl/gtk2-perl-1.042

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Scrubber
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.13 2006/08/05 04:26:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Scrubber/ChangeLog,v 1.14 2006/08/07 23:29:31 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Scrubber-0.08.ebuild:
+  Marking amd64 stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Scrubber-0.08.ebuild:

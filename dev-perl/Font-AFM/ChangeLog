@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-AFM
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.9 2006/08/05 04:04:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.10 2006/08/07 23:00:20 mcummings Exp $
+
+  07 Aug 2006; Michael Cummings <mcummings@gentoo.org> Font-AFM-1.19.ebuild:
+  Marking amd64 stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org> Font-AFM-1.19.ebuild:
   Adding perl dep; fixed DEPEND
