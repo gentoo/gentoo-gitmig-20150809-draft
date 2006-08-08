@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.1.ebuild,v 1.1 2006/08/08 19:04:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/mercurial-0.9.1.ebuild,v 1.2 2006/08/08 20:46:49 agriffis Exp $
 
 inherit bash-completion distutils
 
@@ -40,7 +40,7 @@ src_compile() {
 		done
 	fi
 
-	rm -rf contrib/vim	# app-vim/hgcommand app-vim/hg-menu app-vim/patchreview
+	rm -rf contrib/vim	# app-vim/hgcommand app-vim/hgmenu
 }
 
 src_install() {
