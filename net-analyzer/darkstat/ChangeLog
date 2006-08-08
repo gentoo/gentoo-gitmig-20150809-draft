@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.19 2006/07/10 15:58:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.20 2006/08/08 00:48:50 vanquirius Exp $
+
+*darkstat-3.0.540 (08 Aug 2006)
+
+  08 Aug 2006; Marcelo Goes <vanquirius@gentoo.org>
+  -darkstat-3.0.524.ebuild, +darkstat-3.0.540.ebuild:
+  3.0.540 version bump. Thanks to Emil Mikulic <emil at dmr dot ath dot cx>
+  for letting us know via email.
 
   10 Jul 2006; Fabian Groffen <grobian@gentoo.org> darkstat-3.0.524.ebuild:
   Marked ~ppc-macos (bug #139628)
