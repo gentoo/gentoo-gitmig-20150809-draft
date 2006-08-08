@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.3 2006/08/07 02:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.4 2006/08/08 01:41:50 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -215,12 +215,15 @@ src_install() {
 			&& tar --no-same-owner -jcvf ${WORKDIR}/${MY_P}-${ARCH}.bz2 . \
 			&& cd ..
 	fi
+}
 
+pkg_preinst() {
 	if use savedconfig ; then
-		einfo "Saving this build config to /etc/portage/savedconfig/${PVR}.config"
+		local config_dir="${PORTAGE_CONFIGROOT:-${ROOT}}/etc/portage/savedconfig"
+		einfo "Saving this build config to ${config_dir}/${PF}.config"
 		einfo "Read this ebuild for more info on how to take advantage of this option"
-		insinto /etc/portage/savedconfig
-		newins "${S}"/.config ${PVR}.config
+		mkdir -p "${config_dir}"
+		cp "${S}"/.config "${config_dir}"/${PF}.config
 	fi
 }
 
