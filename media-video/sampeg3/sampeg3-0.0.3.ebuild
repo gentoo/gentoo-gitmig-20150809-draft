@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.7 2006/03/07 17:15:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.8 2006/08/08 04:15:08 beandog Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="MPEG video encoder targeted for optimum picture quality"
 HOMEPAGE="http://rachmaninoff.informatik.uni-mannheim.de/sampeg/"

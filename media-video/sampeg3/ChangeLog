@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sampeg3
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.9 2006/03/07 17:15:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/ChangeLog,v 1.10 2006/08/08 04:15:08 beandog Exp $
+
+  08 Aug 2006; Steve Dibb <steve@gentoo.org> sampeg3-0.0.3.ebuild:
+  Inherit eutils
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/sampeg3-0.0.3-gcc4.patch, metadata.xml, sampeg3-0.0.3.ebuild:
