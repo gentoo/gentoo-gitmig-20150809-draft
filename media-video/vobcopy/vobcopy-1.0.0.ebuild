@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-1.0.0.ebuild,v 1.1 2006/08/08 03:25:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/vobcopy-1.0.0.ebuild,v 1.2 2006/08/08 03:43:38 beandog Exp $
 
 IUSE=""
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=media-libs/libdvdread-0.9.4"
-RDEPEND=""
 
 src_compile() {
 	./configure.sh --with-lfs
