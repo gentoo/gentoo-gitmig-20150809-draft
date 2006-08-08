@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/gaim-libnotify
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/ChangeLog,v 1.1 2006/08/08 04:21:36 metalgod Exp $
+
+*gaim-libnotify-0.11 (08 Aug 2006)
+
+  08 Aug 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
+  +gaim-libnotify-0.11.ebuild:
+  Initial import. Thanks all people involved on bug #127675. Duarte will be
+  the maintainer for this package.
+
