@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.46 2006/08/08 01:27:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.47 2006/08/08 03:03:30 dang Exp $
+
+  08 Aug 2006; Daniel Gryniewicz <dang@gentoo.org>
+  -files/liferea-firefox-1.5.patch, -liferea-1.0-r1.ebuild,
+  -liferea-1.0.3.ebuild, -liferea-1.0.4.ebuild, -liferea-1.0.15.ebuild:
+  Remove old versions
 
 *liferea-1.0.20 (08 Aug 2006)
 
