@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/gaim-libnotify-0.11.ebuild,v 1.1 2006/08/08 04:21:36 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/gaim-libnotify-0.11.ebuild,v 1.2 2006/08/08 13:35:13 metalgod Exp $
 
 DESCRIPTION="gaim-libnotify provides popups for gaim via a libnotify interface"
 HOMEPAGE="http://gaim-libnotify.sourceforge.net/"
@@ -13,7 +13,7 @@ IUSE="nls debug"
 
 DEPEND=">=x11-libs/libnotify-0.3.2"
 
-RDEPEND=">=net-im/gaim-1.5.0"
+RDEPEND=">=net-im/gaim-1.9.99"
 
 src_compile() {
 	local myconf
