@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/hgcommand
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/hgcommand/ChangeLog,v 1.1 2006/08/08 20:06:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/hgcommand/ChangeLog,v 1.2 2006/08/08 20:20:10 agriffis Exp $
+
+  08 Aug 2006; Aron Griffis <agriffis@gentoo.org> hgcommand-0.9.1.ebuild:
+  This plugin has an evil documentation auto-unpacker. Convert to Gentoo-style
+  tarball that includes the unpacked txt
 
 *hgcommand-0.9.1 (08 Aug 2006)
 
