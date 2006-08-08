@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.157 2006/08/05 22:04:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.158 2006/08/08 15:43:30 blubb Exp $
+
+  08 Aug 2006; Simon Stelling <blubb@gentoo.org> amarok-1.4.0a-r1.ebuild:
+  stable on amd64
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> amarok-1.4.1-r3.ebuild:
   Re-added ~sparc keyword wrt bug #140243.
