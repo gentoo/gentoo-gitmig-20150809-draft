@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.336 2006/08/05 13:00:23 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.337 2006/08/08 10:05:39 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.4-r2 (08 Aug 2006)
+
+  08 Aug 2006; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.12.4-clock-bootmisc.patch,
+  +baselayout-1.12.4-r2.ebuild:
+  Add vapiers patchs to solve silly network lookups #139411 and to make the
+  clock init script always return 0 as there's nothing the user can generally
+  do until the system has finished booting, #139950.
 
   05 Aug 2006; Herbie Hopkins <herbs@gentoo.org>
   baselayout-1.12.4-r1.ebuild:
