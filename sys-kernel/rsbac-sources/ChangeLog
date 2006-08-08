@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.48 2006/07/10 10:22:23 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.49 2006/08/08 13:34:02 kang Exp $
+
+*rsbac-sources-2.6.16-r1 (08 Aug 2006)
+
+  08 Aug 2006; Guillaume Destuynder <kang@gentoo.org>
+  -rsbac-sources-2.4.31.ebuild, -rsbac-sources-2.4.32.ebuild,
+  -rsbac-sources-2.4.99.ebuild, +rsbac-sources-2.6.16-r1.ebuild:
+  bump genpatches to ver 15, removed 2.4 ebuilds (had a warning for deletion
+  since a few monthes => sys-kernel/hardened-sources has 2.4 ebuilds)
+  See http://www.gentoo.org/proj/en/hardened/rsbac/transition.xml
 
   10 Jul 2006; <dams@gentoo.org> rsbac-sources-2.6.14-r1.ebuild:
   marked ~ppc
