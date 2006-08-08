@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.27 2006/08/06 08:07:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.28 2006/08/08 20:27:45 chrb Exp $
+
+*ode-0.6-r1 (08 Aug 2006)
+
+  08 Aug 2006; Chris Bainbridge <chrb@gentoo.org> +ode-0.6-r1.ebuild:
+  Add src_test(). It currently fails, see #143247
 
   06 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> ode-0.6.ebuild:
   stable for x86
