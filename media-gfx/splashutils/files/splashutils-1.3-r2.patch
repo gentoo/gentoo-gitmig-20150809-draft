@@ -1,0 +1,156 @@
+diff --git a/core/Makefile b/core/Makefile
+index daed866..ed56105 100644
+--- a/core/Makefile
++++ b/core/Makefile
+@@ -51,7 +51,7 @@ ROOT = $(shell pwd)
+ 
+ # Flags for the kernel utilities
+ K_CFLAGS = -w -ffunction-sections -fdata-sections $(MISCINCS) \
+-		-I$(ROOT)/$(ZLIBSRC) -I$(ROOT)/$(FT2SRC)/include \
++		-I$(ROOT)/$(ZLIBSRC) -I$(ROOT)/$(FT2SRC)/include -I$(ROOT)/$(OBJDIR)/jpeglib \
+ 		-DWITH_ERRLIST -DTARGET_KERNEL -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER
+ 
+ PNGDEFS = -DPNG_NO_WRITE_TIME -DPNG_NO_FLOATING_POINT_SUPPORTED -DPNG_NO_WRITE_SUPPORTED -DPNG_NO_READ_iTXt \
+@@ -183,7 +183,7 @@ jpeglib:
+ 		$(ROOT)/$(JPEGSRC)/configure > $(OUTPUT) ; \
+ 		echo "#define NO_GETENV 1" >> jconfig.h ; \
+ 		sed -i "s#CFLAGS=.*#CFLAGS=$(K_CFLAGS) -I$(ROOT)/$(OBJDIR)/jpeglib#" Makefile ; \
+-		sed -i "s:#define JMESSAGE.*::" jerror.c ; \
++		[ -e jerror.c ] && sed -i "s:#define JMESSAGE.*::" jerror.c ; \
+ 	fi ; \
+ 	if ! make -q CC=$(KLCC) libjpeg.a; then $(call infmsg,MAKE,libjpeg) ; fi ; \
+ 	make CC=$(KLCC) libjpeg.a > $(OUTPUT)
+@@ -220,7 +220,7 @@ splash_kern: jpeglib $(K_DEPS) $(OBJDIR)
+ 
+ clean:	clean_all
+ 
+-clean_all:	clean_zlib clean_png
++clean_all:	clean_zlib clean_png 
+ 	@$(call infmsg,CLEAN,all)
+ 	$(Q)rm -rf $(OBJDIR)/*
+ 
+diff --git a/core/common.c b/core/common.c
+index 14018f9..cb5eacd 100644
+--- a/core/common.c
++++ b/core/common.c
+@@ -13,14 +13,11 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <sys/types.h>
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <termios.h>
+ #include <sys/ioctl.h>
+-#include <sys/vt.h>
+-#include <linux/kd.h>
+ 
+ #include "splash.h"
+ 
+diff --git a/core/daemon.c b/core/daemon.c
+index 5f3f7db..0cf2e23 100644
+--- a/core/daemon.c
++++ b/core/daemon.c
+@@ -98,9 +98,10 @@ void *thf_anim(void *unused)
+ 	anim *a = NULL, *ca;
+ 	item *i;
+ 	mng_anim *mng;
+-	int delay = 10000;
++	int delay = 10000, oldstate;
+ 
+ 	/* Render the first frame of all animations on the screen. */
++	pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, &oldstate);
+ 	pthread_mutex_lock(&mtx_paint);
+ 	for (i = anims.head; i != NULL; i = i->next) {
+ 		ca = i->p;
+@@ -113,9 +114,10 @@ void *thf_anim(void *unused)
+ 			anim_render_frame(ca);
+ 	}
+ 	pthread_mutex_unlock(&mtx_paint);
++	pthread_setcancelstate(oldstate, NULL);
+ 
+ 	while(1) {
+-
++		pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, &oldstate);
+ 		pthread_mutex_lock(&mtx_paint);
+ 		/* Find the shortest delay. */
+ 		for (i = anims.head; i != NULL; i = i->next) {
+@@ -133,9 +135,11 @@ void *thf_anim(void *unused)
+ 			}
+ 		}
+ 		pthread_mutex_unlock(&mtx_paint);
++		pthread_setcancelstate(oldstate, NULL);
+ 
+ 		usleep(delay * 1000);
+ 
++		pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, &oldstate);
+ 		pthread_mutex_lock(&mtx_paint);
+ 		/* Don't paint anything if we aren't in silent mode. */
+ 		if (ctty != CTTY_SILENT)
+@@ -161,6 +165,7 @@ void *thf_anim(void *unused)
+ 		}
+ 	
+ next:	pthread_mutex_unlock(&mtx_paint);
++		pthread_setcancelstate(oldstate, NULL);
+ 		
+ 		a = NULL;
+ 		delay = 10000;
+diff --git a/core/kernel.c b/core/kernel.c
+index 005ed19..8fedd94 100644
+--- a/core/kernel.c
++++ b/core/kernel.c
+@@ -22,6 +22,7 @@ #include <sys/mman.h>
+ #include <linux/kd.h>
+ #include <linux/tty.h>
+ #include <linux/tiocl.h>
++#include <linux/vt.h>
+ 
+ #include "splash.h"
+ 
+diff --git a/core/render.c b/core/render.c
+index 290ea97..47319a8 100644
+--- a/core/render.c
++++ b/core/render.c
+@@ -9,8 +9,15 @@
+  *
+  */
+ 
++/* 
++ * HACK WARNING: 
++ * This is necessary to get FD_SET and FD_ZERO on platforms other than x86. 
++ */
++
+ #ifdef TARGET_KERNEL
++#define __KERNEL__
+ #include <linux/posix_types.h>
++#undef __KERNEL__
+ #endif
+ 
+ #include <stdio.h>
+diff --git a/core/splash.h b/core/splash.h
+index 2b70008..5dccfe0 100644
+--- a/core/splash.h
++++ b/core/splash.h
+@@ -4,11 +4,20 @@ #define __SPLASH_H
+ #include "config.h"
+ #include <stdio.h>
+ #include <sys/types.h>
+-#include <sys/vt.h>
+ #include <linux/kd.h>
+ #include <linux/tty.h>
+ #include <linux/input.h>
+ 
++/* FIXME:
++ * It should be perfectly OK to include sys/vt.h when building the kernel 
++ * helper, but we don't do that to avoid problems with broken klibc versions.
++ */
++#ifdef TARGET_KERNEL
++	#include <linux/vt.h>
++#else
++	#include <sys/vt.h>
++#endif
++
+ /*
+  * HACK WARNING:
+  * -------------
