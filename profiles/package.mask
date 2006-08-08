@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5709 2006/08/08 00:15:30 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5710 2006/08/08 03:44:04 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
+# New Galago Release
+>=dev-libs/libgalago-0.5.0
+>=sys-apps/galago-daemon-0.5.0
+>=x11-plugins/gaim-galago-0.5.0
+>=dev-dotnet/galago-sharp-0.5.0
 
 # Tim Yamin <plasmaroo@gentoo.org> (07 Aug 2006)
 # Security mask
