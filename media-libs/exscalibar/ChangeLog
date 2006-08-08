@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exscalibar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/ChangeLog,v 1.13 2006/07/18 17:50:57 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exscalibar/ChangeLog,v 1.14 2006/08/08 15:43:15 blubb Exp $
+
+  08 Aug 2006; Simon Stelling <blubb@gentoo.org> exscalibar-1.0.4.ebuild:
+  stable on amd64
 
   18 Jul 2006; Joshua Jackson <tsunam@gentoo.org> exscalibar-1.0.4.ebuild:
   Stable x86; for amarok of course
