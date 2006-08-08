@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/rtl8187
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/ChangeLog,v 1.2 2006/06/05 09:44:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/ChangeLog,v 1.3 2006/08/08 08:41:31 genstef Exp $
+
+  08 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/module-param-and-isoc.patch, rtl8187-1.10.ebuild:
+  fix build problems, bug 143103, thanks to Jack Eids_no_google_me_ness <jack
+  at hh.peril.org>
 
   05 Jun 2006; Stefan Schweizer <genstef@gentoo.org> rtl8187-1.10.ebuild:
   Add !IEEE80211 dep thanks to Thomas Schäfer <t.schaefer@bigfoot.de> in bug

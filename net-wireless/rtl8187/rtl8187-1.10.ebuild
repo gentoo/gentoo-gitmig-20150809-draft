@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/rtl8187-1.10.ebuild,v 1.2 2006/06/05 09:44:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8187/rtl8187-1.10.ebuild,v 1.3 2006/08/08 08:41:31 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/${PN}_linuxdrv_V${PV/0}
 MODULE_NAMES="ieee80211_crypt-rtl(net:${S}/ieee80211) ieee80211_crypt_wep-rtl(net:${S}/ieee80211)
 	ieee80211_crypt_tkip-rtl(net:${S}/ieee80211) ieee80211_crypt_ccmp-rtl(net:${S}/ieee80211)
 	ieee80211-rtl(net:${S}/ieee80211) r8187(net:${S}/beta-8187)"
-CONFIG_CHECK="NET_RADIO CRYPTO CRYPTO_ARC4 CRC32 !IEEE80211"
+#CONFIG_CHECK="NET_RADIO CRYPTO CRYPTO_ARC4 CRC32 !IEEE80211"
 ERROR_IEEE80211="${P} requires the in-kernel version of the IEEE802.11 subsystem to be disabled (CONFIG_IEEE80211)"
 BUILD_TARGETS=" "
 MODULESD_R8187_ALIASES=("wlan0 r8187")
@@ -42,6 +42,9 @@ src_unpack() {
 	cd ${S}
 	tar xzf stack.tar.gz || die "Could not extract IEEE80211 stack."
 	tar xzf drv.tar.gz || die "Could not extract driver."
+
+	sed -i -e 's:MODVERDIR=$(PWD) ::' {beta-8187,ieee80211}/Makefile
+	epatch ${FILESDIR}/module-param-and-isoc.patch
 }
 
 src_install() {
