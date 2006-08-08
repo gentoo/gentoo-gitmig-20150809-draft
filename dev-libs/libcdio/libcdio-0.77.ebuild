@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.11 2006/07/02 20:02:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.12 2006/08/08 13:52:28 beandog Exp $
 
-inherit libtool autotools
+inherit eutils libtool autotools
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control"
 HOMEPAGE="http://www.gnu.org/software/libcdio/"
