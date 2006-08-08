@@ -1,0 +1,11 @@
+--- macros/kde.m4.orig	2006-08-06 11:52:41.000000000 +0200
++++ macros/kde.m4	2006-08-06 11:53:03.000000000 +0200
+@@ -1869,7 +1869,7 @@
+ 
+ KDE_DEFAULT_CXXFLAGS="-DQT_CLEAN_NAMESPACE -DQT_NO_ASCII_CAST -DQT_NO_STL -DQT_NO_COMPAT -DQT_NO_TRANSLATION"
+  
+-KDE_LDFLAGS=`echo $kde_libraries | sed -e 's:/usr/lib64::;s:/usr/lib::'`
++KDE_LDFLAGS="-L`echo $kde_libraries | sed -e 's:/usr/lib64::;s:/usr/lib::'`"
+ 
+ if test ! "$kde_libraries" = "$x_libraries" && test ! "$kde_libraries" = "$qt_libraries" ; then 
+  all_libraries="$KDE_LDFLAGS $all_libraries"

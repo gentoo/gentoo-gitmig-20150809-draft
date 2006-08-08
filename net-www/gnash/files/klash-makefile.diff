@@ -1,0 +1,34 @@
+--- Makefile.am.orig	2006-08-06 08:43:09.000000000 +0200
++++ Makefile.am	2006-08-06 08:44:13.000000000 +0200
+@@ -50,11 +50,16 @@
+ PLUGIN_DIRS = plugin
+ endif
+ 
++if KLASH
++KLASH_DIRS = plugin/klash
++endif
++
++
+ if DOCBOOK
+ DOC_DIRS = doc
+ endif
+ 
+-SUBDIRS      = $(STD_DIRS) $(DOC_DIRS) $(PLUGIN_DIRS)
++SUBDIRS      = $(STD_DIRS) $(DOC_DIRS) $(PLUGIN_DIRS) $(KLASH_DIRS)
+ 
+ # libamf isn't used yet, but we still want it in the distribution
+ DIST_SUBDIRS = $(STD_DIRS) doc testsuite libamf plugin
+--- plugin/Makefile.am.orig	2006-08-06 08:43:00.000000000 +0200
++++ plugin/Makefile.am	2006-08-06 08:43:21.000000000 +0200
+@@ -38,11 +38,6 @@
+ 
+ AUTOMAKE_OPTIONS = dejagnu
+ 
+-if KLASH
+-KLASH = klash
+-endif
+-SUBDIRS = $(KLASH) # test mozilla-sdk
+-
+ if MP3
+ MP3_CFLAGS = $(MAD_CFLAGS)
+ MP3_LIBS = $(MAD_LIBS)
