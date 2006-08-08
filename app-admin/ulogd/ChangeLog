@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.36 2006/07/27 04:39:18 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.37 2006/08/08 23:27:34 wolf31o2 Exp $
+
+  08 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> ulogd-1.23.ebuild:
+  Stable on amd64 wrt bug #141441.
 
   27 Jul 2006; Joshua Jackson <tsunam@gentoo.org> ulogd-1.23.ebuild:
   Stable x86; bug #141441
