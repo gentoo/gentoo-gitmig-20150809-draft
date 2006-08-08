@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.30 2006/08/06 22:04:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.31 2006/08/08 03:56:32 metalgod Exp $
+
+  08 Aug 2006; Luis Medinas <metalgod@gentoo.org> gcombust-0.1.55-r1.ebuild:
+  Stable on amd64. Bug #141450.
 
   06 Aug 2006; Andrej Kacian <ticho@gentoo.org> gcombust-0.1.55-r1.ebuild:
   Stable on x86, bug #141450.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55-r1.ebuild,v 1.5 2006/08/06 22:04:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55-r1.ebuild,v 1.6 2006/08/08 03:56:32 metalgod Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.abo.fi/~jmunsin/gcombust/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
