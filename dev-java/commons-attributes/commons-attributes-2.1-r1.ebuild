@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/commons-attributes-2.1-r1.ebuild,v 1.1 2006/07/06 03:45:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/commons-attributes-2.1-r1.ebuild,v 1.2 2006/08/08 19:48:13 betelgeuse Exp $
 
-inherit eutils java-pkg-2
+inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Commons Attributes enables Java programmers to use C#/.Net-style attributes in their code."
 HOMEPAGE="http://jakarta.apache.org/commons/attributes/"
