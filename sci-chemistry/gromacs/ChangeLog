@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.10 2006/08/05 05:10:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.11 2006/08/08 02:54:41 markusle Exp $
+
+*gromacs-3.3.1 (08 Aug 2006)
+
+  08 Aug 2006; Markus Dittrich <markusle@gentoo.org> +gromacs-3.3.1.ebuild:
+  Version bump. Ebuild now inherits the fortran.eclass and forces
+  the use of g77 since gfortran is presently missing some of the 
+  fortran intrinsics needed by gromacs. See bug #141672.
 
   05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer, anyone feel free to work on this, although I'll
