@@ -1,8 +1,9 @@
 # ChangeLog for net-misc/arpstar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/ChangeLog,v 1.6 2006/08/08 10:13:00 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/ChangeLog,v 1.7 2006/08/08 13:26:22 phreak Exp $
 
   08 Aug 2006; Christian Heim <phreak@gentoo.org> arpstar-0.5.5-r1.ebuild:
+  Including cleanups from Barbu Eros Iulian.
   arpstar should explicitly inherit eutils. No errors before since it is
   already included via linux-mod.eclass
 
