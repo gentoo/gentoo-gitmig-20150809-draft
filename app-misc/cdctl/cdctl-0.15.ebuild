@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/cdctl-0.15.ebuild,v 1.17 2006/08/08 21:25:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/cdctl-0.15.ebuild,v 1.18 2006/08/08 21:26:20 spock Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-Makefile.in.patch
-	epatch ${FILESDIR}/${P}-cdc_ioctls.patch 
+	epatch ${FILESDIR}/${P}-cdc_ioctls.patch
 }
 
 src_install() {
