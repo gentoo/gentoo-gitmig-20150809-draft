@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-RsyncP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.9 2006/08/07 22:55:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-RsyncP/ChangeLog,v 1.10 2006/08/08 13:43:59 ian Exp $
+
+  08 Aug 2006; Christian Hartmann <ian@gentoo.org> -File-RsyncP-0.62.ebuild:
+  Removed broken version; bug #141088
 
 *File-RsyncP-0.64 (07 Aug 2006)
 
