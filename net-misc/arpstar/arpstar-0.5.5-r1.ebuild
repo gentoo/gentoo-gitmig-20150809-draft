@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/arpstar-0.5.5-r1.ebuild,v 1.1 2006/08/08 09:59:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpstar/arpstar-0.5.5-r1.ebuild,v 1.2 2006/08/08 10:13:00 phreak Exp $
 
-inherit linux-mod
+inherit eutils linux-mod
 
 DESCRIPTION="ARPStar kernel module for protection against arp poisoning."
 HOMEPAGE="http://arpstar.sourceforge.net"
