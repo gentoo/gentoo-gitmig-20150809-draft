@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gofish
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.10 2006/01/09 17:05:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.11 2006/08/08 01:01:51 vanquirius Exp $
+
+*gofish-1.1 (08 Aug 2006)
+
+  08 Aug 2006; Marcelo Goes <vanquirius@gentoo.org> -gofish-0.29.ebuild,
+  +gofish-1.1.ebuild:
+  1.1 version bump for bug 143032. Thanks to Robert Gill <locke at sdf dot
+  lonestar dot org> and Andrew Ross <aross at gentoo dot org>.
 
   09 Jan 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove retired dev from metadata.xml
