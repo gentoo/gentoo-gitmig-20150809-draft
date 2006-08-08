@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/mac-fdisk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.13 2006/07/19 20:33:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.14 2006/08/08 23:47:45 wormo Exp $
+
+*mac-fdisk-0.1-r6 (10 Aug 2006)
+
+  08 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  -mac-fdisk-0.1-r5.ebuild, +mac-fdisk-0.1-r6.ebuild:
+  mac-fdisk and mac-pdisk got swapped in -r5, put them back to normal
+  (Bug #142873)
 
 *mac-fdisk-0.1-r5 (19 Jul 2006)
 
