@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.27 2006/03/04 05:52:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.28 2006/08/08 14:15:28 kang Exp $
+
+*svk-1.08 (08 Aug 2006)
+
+  08 Aug 2006; Guillaume Destuynder <kang@gentoo.org>
+  -files/svk-1.00-nognupgtest.patch, -files/svk-1.01-nognupgtest.patch,
+  -files/svk-1.02-nognupgtest.patch, -files/svk-1.04-nognupgtest.patch,
+  -files/svk-1.05-nognupgtest.patch, +files/svk-1.08-xxdiff.patch,
+  -svk-1.00.ebuild, -svk-1.01.ebuild, -svk-1.02.ebuild, -svk-1.04.ebuild,
+  -svk-1.05.ebuild, +svk-1.08.ebuild:
+  bump to 1.08. Removed svn-mirror useflag, not very useful. Fix #141664
+  Cleaned up old versions.
 
 *svk-1.07-r1 (04 Mar 2006)
 
