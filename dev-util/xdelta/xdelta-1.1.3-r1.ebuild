@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-1.1.3-r1.ebuild,v 1.8 2006/08/03 22:49:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-1.1.3-r1.ebuild,v 1.9 2006/08/08 04:05:59 metalgod Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xdelta/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="=dev-libs/glib-1.2*
