@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4-r1.ebuild,v 1.1 2006/07/20 11:23:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4-r1.ebuild,v 1.2 2006/08/08 19:15:35 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -17,9 +17,7 @@ DEPEND=">=virtual/jdk-1.2
 IUSE="doc source"
 
 src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} doc"
-	eant ${antflags} || die "failed to build"
+	eant $(use_doc doc) jar
 }
 
 src_install() {
