@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.27 2006/07/12 04:35:53 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.28 2006/08/08 18:30:54 agriffis Exp $
 
   12 Jul 2006; Steve Arnold <nerdboy@gentoo.org> libaio-0.3.106.ebuild:
   Backported fixes to 106 version to use updated patch, but without the
@@ -9,7 +9,7 @@
   10 Jul 2006; Steve Arnold <nerdboy@gentoo.org>
   +files/libaio-0.3.106-build.patch, libaio-0.3.106-r1.ebuild:
   Fixed build patch, soname, and QA issues, works now on amd64.  Note the
-  tests still need a Maekfile patch to work correctly, and I'm not sure
+  tests still need a Makefile patch to work correctly, and I'm not sure
   about the status of the kernel support (upstream kernel patches stop about
   a year ago at 2.6.12).  This is used by the ROMIO support in mpich2.
 
