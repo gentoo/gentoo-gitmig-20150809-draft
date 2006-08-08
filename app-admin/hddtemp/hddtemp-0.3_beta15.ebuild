@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.5 2006/07/14 23:58:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.6 2006/08/08 21:07:40 spock Exp $
 
 inherit eutils
 
@@ -23,8 +23,6 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-byteswap.patch
-	cp ${FILESDIR}/hddtemp.db ${T}
-	EPATCH_OPTS="-d ${T}" epatch ${FILESDIR}/${P}-maxtor-diamondmax10.patch
 }
 
 src_compile() {
@@ -58,7 +56,4 @@ pkg_config() {
 
 	einfo "Trying to download the latest hddtemp.db file"
 	wget http://www.guzu.net/linux/hddtemp.db -O hddtemp.db
-
-	einfo "Attempting to apply gentoo patches for further entries."
-	epatch ${FILESDIR}/${P}-maxtor-diamondmax10.patch
 }
