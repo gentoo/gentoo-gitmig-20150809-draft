@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/pymacs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.9 2005/07/11 18:30:46 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.10 2006/08/08 07:09:17 mkennedy Exp $
+
+*pymacs-0.22-r1 (08 Aug 2006)
+
+  08 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.22-character-encoding-gentoo.patch, +pymacs-0.22-r1.ebuild:
+  Correct character encoding in Python source files; Resolves Bug #97943.
 
   11 Jul 2005; Matthew Kennedy <mkennedy@gentoo.org>
   files/50pymacs-gentoo.el:
