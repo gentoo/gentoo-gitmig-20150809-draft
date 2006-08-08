@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.9 2006/05/25 19:58:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.4.1.ebuild,v 1.10 2006/08/08 15:25:48 tester Exp $
 
 inherit eutils multilib
 
@@ -124,7 +124,7 @@ src_install () {
 	make install DESTDIR="${D}" || die "make install failed"
 
 	rm -f ${D}/usr/include/mp4.h
-	rm -f ${D}/usr/lib/libmp4v2*
+	rm -f ${D}/usr/$(get_libdir)/libmp4v2*
 
 	dodoc doc/MPEG4IP_Guide.pdf doc/*txt AUTHORS TODO
 

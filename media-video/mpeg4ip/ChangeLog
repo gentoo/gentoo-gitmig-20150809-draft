@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.38 2006/07/09 22:52:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.39 2006/08/08 15:25:48 tester Exp $
+
+  08 Aug 2006; Olivier Crête <tester@gentoo.org> mpeg4ip-1.4.1.ebuild,
+  mpeg4ip-1.4.1-r1.ebuild, mpeg4ip-1.5.0.1.ebuild:
+  Fix multilib installation
 
   09 Jul 2006; Olivier Crête <tester@gentoo.org> mpeg4ip-1.5.0.1.ebuild:
   Require libsdl <1.2.11 to fix bug #138739
