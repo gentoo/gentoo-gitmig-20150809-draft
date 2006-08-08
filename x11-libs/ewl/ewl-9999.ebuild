@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-9999.ebuild,v 1.10 2006/08/06 19:59:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-9999.ebuild,v 1.11 2006/08/08 15:32:55 vapier Exp $
 
 inherit enlightenment
 
@@ -16,7 +16,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/tetex )"
 
 pkg_setup() {
-	if ! built_with_use media-libs/evas png ; then
+	if ! built_with_use x11-libs/evas png ; then
 		eerror "Re-emerge evas with USE=png"
 		die "Re-emerge evas with USE=png"
 	fi
