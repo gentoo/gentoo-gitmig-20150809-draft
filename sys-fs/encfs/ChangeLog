@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.21 2006/04/29 18:05:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.22 2006/08/08 16:52:50 deltacow Exp $
+
+  08 Aug 2006; Scott Stoddard <deltacow@gentoo.org> encfs-1.2.5.1.ebuild:
+  Stable on amd64 (re bug# 138660).
 
   29 Apr 2006; Marcelo Goes <vanquirius@gentoo.org> encfs-1.2.5.1.ebuild:
   Mark 1.2.5.1 x86 stable. Fixes bug 131627, reported by Daniel Webert <rockoo
