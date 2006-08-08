@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5708 2006/08/07 21:53:35 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5709 2006/08/08 00:15:30 spock Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -280,11 +280,6 @@ dev-perl/Test-Builder-Tester
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
 =dev-lisp/ecls-0.9i
-
-# Michał Januszewski <spock@gentoo.org> (08 Jul 2006)
-# Deprecated and pending removal (bug #119923)
-# Please use media-gfx/fbida instead.
-media-gfx/fbi
 
 # Luis Medinas <metalgod@gentoo.org> (08 Jul 2006)
 # Dead upstream it needs to be removed.
