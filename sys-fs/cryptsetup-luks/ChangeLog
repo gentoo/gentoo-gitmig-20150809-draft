@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.37 2006/08/08 02:38:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.38 2006/08/08 04:01:01 metalgod Exp $
+
+  08 Aug 2006; Luis Medinas <metalgod@gentoo.org>
+  cryptsetup-luks-1.0.3-r2.ebuild:
+  Stable on amd64. Bug #134607.
 
   08 Aug 2006; Mike Frysinger <vapier@gentoo.org>
   cryptsetup-luks-1.0.3-r2.ebuild:
