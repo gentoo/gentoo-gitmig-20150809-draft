@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.20 2006/07/02 15:08:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.21 2006/08/08 03:25:23 beandog Exp $
+
+*vobcopy-1.0.0 (08 Aug 2006)
+*vobcopy-0.5.16 (08 Aug 2006)
+*vobcopy-0.5.15 (08 Aug 2006)
+
+  08 Aug 2006; Steve Dibb <steve@gentoo.org> +vobcopy-0.5.15.ebuild,
+  +vobcopy-0.5.16.ebuild, +vobcopy-1.0.0.ebuild:
+  Version bumps
 
   02 Jul 2006; Jason Wever <weeve@gentoo.org> vobcopy-0.5.14.ebuild:
   Stable on SPARC wrt bug #138001.
