@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/lsdvd-0.15.ebuild,v 1.10 2006/08/05 08:07:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/lsdvd-0.15.ebuild,v 1.11 2006/08/08 04:02:27 beandog Exp $
 
-inherit autotools
+inherit eutils autotools
 
 DESCRIPTION="Utility for getting info out of DVDs"
 HOMEPAGE="http://untrepid.com/lsdvd/"
