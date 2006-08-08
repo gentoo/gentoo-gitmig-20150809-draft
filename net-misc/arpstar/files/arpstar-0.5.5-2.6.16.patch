@@ -1,0 +1,38 @@
+Index: arpstar-0.5.5/arpstar.c
+===================================================================
+--- arpstar-0.5.5.orig/arpstar.c
++++ arpstar-0.5.5/arpstar.c
+@@ -45,16 +45,17 @@
+         ((unsigned char *)&addr)[4], \
+         ((unsigned char *)&addr)[5]
+ 
+-static int verbose=0;
+-MODULE_PARM (verbose,"i");
+-static char * trustedmac="000000000000";
+-MODULE_PARM (trustedmac, "s");
+-static int coldrop=1;
+-MODULE_PARM (coldrop,"i");
+-static int heal=1;
+-MODULE_PARM (heal,"i");
+-static char * trustedip="";
+-MODULE_PARM (trustedip,"s");
++static int verbose = 0;
++static int coldrop = 1;
++static int heal = 1;
++static char * trustedmac = "000000000000";
++static char * trustedip = "";
++
++module_param(verbose, int, 0044);
++module_param(trustedmac, charp, 0044);
++module_param(coldrop, int, 0044);
++module_param(heal, int, 0044);
++module_param(trustedip, charp, 0044);
+ 
+ struct arpsentnode
+ {
+@@ -717,4 +718,5 @@ module_init(arpstar_init);
+ module_exit(arpstar_exit);
+ MODULE_LICENSE("Dual BSD/GPL");
+ MODULE_AUTHOR("WestAnnex");
++MODULE_DESCRIPTION("Kernel module capable of protection against ARP poisoning");
+  
