@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.9 2006/08/05 21:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/cryptsetup-luks-1.0.3-r2.ebuild,v 1.10 2006/08/08 02:38:39 vapier Exp $
 
 inherit autotools linux-info eutils flag-o-matic multilib
 
@@ -11,15 +11,14 @@ SRC_URI="http://luks.endorphin.org/source/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 arm ia64 ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="dynamic nls pic selinux"
+IUSE="dynamic nls selinux"
+RESTRICT="confcache"
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libgpg-error-1.0-r1
 	selinux? ( sys-libs/libselinux )
 	!sys-fs/cryptsetup"
-
-RESTRICT="confcache"
 
 dm-crypt_check() {
 	ebegin "Checking for dm-crypt support"
@@ -43,38 +42,31 @@ dm-crypt_check() {
 
 pkg_setup() {
 	linux-info_pkg_setup
-	dm-crypt_check;
+	dm-crypt_check
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-selinux.patch
-	rm -f po/Makefile.in.in #142362
-	autopoint -f || die
-	AT_M4DIR="${S}/m4" eautoreconf
+	eautoconf || die
+	touch aclocal.m4 Makefile.in configure
 }
 
 src_compile() {
-	local PIC_FLAG=""
-	if use pic ; then
-		PIC_FLAG="--with-pic"
-	fi
-
 	if use dynamic ; then
 		ewarn "If you need cryptsetup for an initrd or initramfs then you"
 		ewarn "should NOT use the dynamic USE flag"
 		epause 5
-		econf --sbindir=/bin --disable-static --libdir=/usr/$(get_libdir) "${PIC_FLAG}" \
-		$(use_enable nls) \
-		$(use_enable selinux) \
-		|| die
-	else
-		econf --sbindir=/bin --enable-static --libdir=/usr/$(get_libdir) "${PIC_FLAG}" \
-		$(use_enable nls) \
-		$(use_enable selinux) \
-		|| die
 	fi
+
+	econf \
+		--sbindir=/bin \
+		$(use_enable !dynamic static) \
+		--libdir=/usr/$(get_libdir) \
+		$(use_enable nls) \
+		$(use_enable selinux) \
+		|| die
 
 	emake || die
 }
@@ -83,7 +75,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	rmdir "${D}/usr/$(get_libdir)/cryptsetup"
 	insinto /lib/rcscripts/addons
-	newconfd ${FILESDIR}/cryptfs.confd cryptfs
+	newconfd "${FILESDIR}"/cryptfs.confd cryptfs
 	doins "${FILESDIR}"/dm-crypt-{start,stop}.sh
 }
 

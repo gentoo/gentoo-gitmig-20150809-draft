@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.36 2006/08/05 21:27:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.37 2006/08/08 02:38:39 vapier Exp $
+
+  08 Aug 2006; Mike Frysinger <vapier@gentoo.org>
+  cryptsetup-luks-1.0.3-r2.ebuild:
+  Cleanup src_compile(), punt invalid USE=pic, and make sure that just running
+  autoconf works.
 
   05 Aug 2006; Mike Frysinger <vapier@gentoo.org>
   cryptsetup-luks-1.0.3-r2.ebuild:
