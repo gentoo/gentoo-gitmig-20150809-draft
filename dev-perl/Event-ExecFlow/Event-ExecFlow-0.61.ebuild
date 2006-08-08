@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/Event-ExecFlow-0.61.ebuild,v 1.8 2006/08/05 03:20:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/Event-ExecFlow-0.61.ebuild,v 1.9 2006/08/08 03:44:32 tsunam Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.exit1.org/${PN}/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 SRC_TEST="do"
 
