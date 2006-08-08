@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.4 2006/08/06 11:51:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.5 2006/08/08 04:03:51 tsunam Exp $
+
+  08 Aug 2006; Joshua Jackson <tsunam@gentoo.org>
+  nvidia-drivers-1.0.8762-r1.ebuild:
+  Stable x86; bug #140922
 
   06 Aug 2006; Simon Stelling <blubb@gentoo.org>
   nvidia-drivers-1.0.8762-r1.ebuild:
