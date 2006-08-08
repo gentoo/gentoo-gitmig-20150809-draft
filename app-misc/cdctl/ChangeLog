@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cdctl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.8 2006/01/28 12:56:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdctl/ChangeLog,v 1.9 2006/08/08 21:25:25 spock Exp $
+
+  08 Aug 2006; Michał Januszewski <spock@gentoo.org>
+  +files/cdctl-0.15-cdc_ioctls.patch, cdctl-0.15.ebuild:
+  Add a patch to fix compilation with modern 2.6 kernels.
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/cdctl-0.15-Makefile.in.patch, -files/00_all_Makefile.in.patch.bz2,
