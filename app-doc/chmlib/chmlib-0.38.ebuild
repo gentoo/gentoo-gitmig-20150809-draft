@@ -1,17 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.37.4.ebuild,v 1.5 2006/08/08 22:14:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.38.ebuild,v 1.1 2006/08/08 22:14:39 wormo Exp $
 
 inherit eutils multilib flag-o-matic versionator
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
-SRC_URI="http://66.93.236.84/~jedwin/projects/chmlib/${P}.tgz"
+SRC_URI="http://66.93.236.84/~jedwin/projects/chmlib/${P}.tar.gz"
 DEPEND=">=sys-apps/sed-4"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 
 MY_PV=$(get_version_component_range 1-2 )
@@ -24,26 +24,24 @@ src_unpack() {
 			s,@LIBTOOL@,libtool,g;
 			s,(\\\$\\{INSTALLPREFIX\\})/lib,\1/$(get_libdir),g" \
 			Makefile.in || die "sed failed"
-#	sed -i "s:gcc-3.2:gcc:" Makefile
-#	sed -i "s:/usr/local/:/${D}/usr/:" Makefile
+
 	if [ "${ARCH}" = "ppc" ]; then
 		# In this case it is safe to take this rather
 		# stupid action =)
 		sed -i "s:__i386__:__powerpc__:" src/chm_lib.c
 	fi
-	if [ "${ARCH}" == "amd64" ]; then
-		sed -i "s:__i386__:__x86_64__:" src/chm_lib.c
+
+	if [ "${ARCH}" == "hppa" ]; then
+		sed -i "s:__i386__:__hppa__:" src/chm_lib.c
 	fi
 }
+
 
 src_compile() {
 	append-flags "-L${S}/src/.libs"
 
-	econf || die "econf failed"
+	econf --enable-examples=yes|| die "econf failed"
 	emake || die
-
-	# Build additional utils, making this lib useful by itself.
-	emake chm_http extract_chmLib || die
 }
 
 src_install() {
@@ -54,10 +52,6 @@ src_install() {
 	dodir /usr/share/doc/${PF}/examples/
 
 	make install DESTDIR=${D}
-
-	exeinto /usr/bin
-	newexe extract_chmLib chmextract
-	newexe chm_http chmhttp
 
 	#Install examples as well.
 	insinto /usr/share/doc/${PF}/examples/
