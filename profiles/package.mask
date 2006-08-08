@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5710 2006/08/08 03:44:04 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5711 2006/08/08 13:33:45 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luis Medinas <metalgod@gentoo.org> (08 Aug 2006)
+# Mask gaim-libnotify because it only works with gaim-2.0.0
+x11-plugins/gaim-libnotify
 
 # Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
 # New Galago Release
