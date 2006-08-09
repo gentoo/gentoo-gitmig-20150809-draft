@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.11 2005/10/24 14:42:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ilisp-5.12.0-r3.ebuild,v 1.12 2006/08/09 05:00:54 mkennedy Exp $
 
 inherit elisp
 
@@ -22,7 +22,8 @@ IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	sys-apps/texinfo
 	virtual/tetex
-	app-text/texi2html"
+	app-text/texi2html
+	!app-editors/emacs-cvs"
 
 
 S="${WORKDIR}/${P}+${DEBCVS}"

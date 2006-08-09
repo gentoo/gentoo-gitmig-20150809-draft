@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp-cvs/ilisp-cvs-5.12.0.ebuild,v 1.4 2005/01/01 13:50:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp-cvs/ilisp-cvs-5.12.0.ebuild,v 1.5 2006/08/09 05:03:00 mkennedy Exp $
 
 ECVS_SERVER="cvs-pserver.sourceforge.net:80/cvsroot/ilisp"
 ECVS_MODULE="ILISP"
@@ -19,7 +19,8 @@ IUSE="doc"
 
 DEPEND="virtual/emacs
 	dev-lisp/common-lisp-controller
-	doc? ( virtual/tetex sys-apps/texinfo app-text/texi2html )"
+	doc? ( virtual/tetex sys-apps/texinfo app-text/texi2html )
+	!app-editors/emacs-cvs"
 
 S=${WORKDIR}/ILISP
 
