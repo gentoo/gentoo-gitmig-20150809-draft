@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.2/make.defaults,v 1.13 2006/06/27 16:14:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.2/make.defaults,v 1.14 2006/08/09 19:26:53 cardoe Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
 
 # System-wide defaults for the Portage system
 
-USE="berkdb bitmap-fonts crypt cups encode font-server foomaticdb fortran gdbm gif gnome gpm gtk gtk2 imlib jpeg kde libg++ libwww mikmod motif ncurses nls oggvorbis opengl oss pam pdflib pic png python qt qt3 qt4 quicktime readline sdl spell ssl svga tcpd truetype truetype-fonts type1-fonts X xml2 xmms xv zlib"
+USE="berkdb bitmap-fonts crypt cups encode font-server foomaticdb fortran gdbm gif gnome gpm gtk gtk2 imlib jpeg kde libg++ libwww mikmod motif ncurses nls oggvorbis opengl oss pam pdflib pic png python qt3 qt4 quicktime readline sdl spell ssl svga tcpd truetype truetype-fonts type1-fonts X xml2 xmms xv zlib"
