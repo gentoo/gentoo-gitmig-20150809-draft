@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-2.21.030604.ebuild,v 1.2 2006/07/09 07:10:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-2.21.030604.ebuild,v 1.3 2006/08/09 16:19:38 dberkholz Exp $
 
 # If you want to fix the warnings about friend declaration 'foo' declared as
 # a non-template function, see http://gcc.gnu.org/faq.html#friend.
@@ -10,8 +10,8 @@ inherit eutils toolchain-funcs
 MY_P="${PN}.${PV}"
 DESCRIPTION="Adds hydrogens to a Protein Data Bank (PDB) molecule structure file"
 HOMEPAGE="http://kinemage.biochem.duke.edu/software/reduce.php"
-SRC_URI="http://kinemage.biochem.duke.edu/ftpsite/pub/software/reduce/${MY_P}.src.tgz
-	http://kinemage.biochem.duke.edu/ftpsite/pub/software/reduce/reduce_het_dict.txt.zip"
+SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/reduce/${MY_P}.src.tgz
+	http://kinemage.biochem.duke.edu/downloads/software/reduce/reduce_het_dict.txt.zip"
 LICENSE="richardson"
 SLOT="0"
 KEYWORDS="ppc x86"
