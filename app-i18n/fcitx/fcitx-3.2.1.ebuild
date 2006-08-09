@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.1.1.ebuild,v 1.6 2006/08/09 10:44:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-3.2.1.ebuild,v 1.1 2006/08/09 10:44:36 matsuu Exp $
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
@@ -8,37 +8,28 @@ SRC_URI="http://www.fcitx.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="truetype"
 
 RDEPEND="|| ( ( x11-libs/libX11 x11-libs/libXrender x11-libs/libXt )
-		     virtual/x11 )
+		virtual/x11 )
 	truetype? ( || ( x11-libs/libXft virtual/xft ) )"
 
 DEPEND="${RDEPEND}"
 src_compile() {
-	myconf=
-	if use truetype ; then
-		myconf=" --with-xft "
-	else
-		myconf=" --disable-xft "
-	fi
-	econf ${myconf} || die "configure failed"
+	econf $(use_enable truetype xft) || die "configure failed"
 	emake || die "make failed"
 }
 
 src_install()
 {
-	dobin src/fcitx
-	insinto /usr/share/fcitx/data
-	doins data/*.mb
-	doins data/*.dat
-	doins data/*.conf
-	insinto /usr/share/fcitx/xpm
-	doins xpm/*.xpm
-	insinto /usr/share/fcitx/doc
-	doins doc/*.txt
-	doins doc/*.htm
+	emake DESTDIR="${D}" install || die
+
+	dodoc AUTHORS ChangeLog README THANKS TODO
+
+	rm -rf "${D}"/usr/share/fcitx/doc/
+	dodoc doc/pinyin.txt doc/cjkvinput.txt doc/fcitx3.pdf
+	dohtml doc/wb_fh.htm
 }
 
 pkg_postinst()
