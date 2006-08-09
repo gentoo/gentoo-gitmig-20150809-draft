@@ -1,0 +1,14 @@
+diff -ru audiorecorder-0.1.0-pre4-orig/dispatcher.c audiorecorder-0.1.0-pre4/dispatcher.c
+--- audiorecorder-0.1.0-pre4-orig/dispatcher.c	2006-08-09 19:01:04.000000000 +0200
++++ audiorecorder-0.1.0-pre4/dispatcher.c	2006-08-09 19:25:13.000000000 +0200
+@@ -334,8 +334,8 @@
+         
+         if (statfs(cPluginAudiorecorder::get_recdir(), &stat_fs) != 0)
+                 return false;
+-        
+-        if (stat_fs.f_bavail * stat_fs.f_bsize < MIN_FREE_DISC_SPACE)
++
++        if (stat_fs.f_bavail < MIN_FREE_DISC_SPACE / stat_fs.f_bsize)
+                 return false;
+         
+         return true;
