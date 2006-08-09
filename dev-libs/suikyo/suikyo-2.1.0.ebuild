@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-2.1.0.ebuild,v 1.8 2006/03/05 05:36:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-2.1.0.ebuild,v 1.9 2006/08/09 10:50:48 matsuu Exp $
 
 inherit ruby elisp-common
 
