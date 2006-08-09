@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.0.6.ebuild,v 1.2 2006/07/29 10:14:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.0.6.ebuild,v 1.3 2006/08/09 12:40:51 liquidx Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://space.mit.edu/pub/davis/slang/v${PV%.*}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 # USE=cjk is broken; see http://www.jedsoft.org/pipermail/slang-users_jedsoft.org/2006/000399.html
 IUSE="pcre png"
 
