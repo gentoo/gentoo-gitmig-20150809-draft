@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.3/make.defaults,v 1.15 2005/08/21 21:49:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.3/make.defaults,v 1.16 2006/08/09 19:57:24 cardoe Exp $
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="ppc"
@@ -13,4 +13,4 @@ FEATURES="sandbox sfperms"
 
 GRP_STAGE23_USE="berkdb gpm ipv6 ncurses nls pam perl python readline ssl tcpd unicode"
 
-USE="alsa berkdb bitmap-fonts crypt cups dvd emboss font-server fortran gif gnome gpm gtk gtk2 ipv6 jpeg kde libwww mp3 motif mpeg ncurses nls oggvorbis opengl pam pdflib perl png python qt readline spell ssl tcpd truetype truetype-fonts type1-fonts X  xml2 xv unicode zlib"
+USE="alsa berkdb bitmap-fonts crypt cups dvd emboss font-server fortran gif gnome gpm gtk gtk2 ipv6 jpeg kde libwww mp3 motif mpeg ncurses nls oggvorbis opengl pam pdflib perl png python qt3 qt4 readline spell ssl tcpd truetype truetype-fonts type1-fonts X  xml2 xv unicode zlib"

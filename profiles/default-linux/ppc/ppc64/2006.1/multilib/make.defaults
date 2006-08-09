@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/multilib/make.defaults,v 1.1 2006/07/14 05:29:51 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/2006.1/multilib/make.defaults,v 1.2 2006/08/09 19:57:25 cardoe Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
@@ -13,7 +13,7 @@ CXXFLAGS=${CFLAGS}
 ACCEPT_KEYWORDS="ppc64"
 
 STAGE1_USE="unicode"
-USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk ibm imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls nptl ogg opengl oss pam perl pdflib png python qt qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml xmms xv zlib"
+USE="${STAGE1_USE} alsa apache2 apm arts berkdb bitmap-fonts cups eds emboss encode esd fortran foomaticdb gdbm gif gnome gpm gstreamer gtk ibm imlib ipv6 jpeg kde libg++ libwww mad mikmod motif mp3 mpeg ncurses nls nptl ogg opengl oss pam perl pdflib png python qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts udev vorbis X xml xmms xv zlib"
 
 # This profile doesn't fully support multilib portage yet.  We still rely
 # on the emul-* packages.  As such, we have -multilib-pkg here to emphasise
