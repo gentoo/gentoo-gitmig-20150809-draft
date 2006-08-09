@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.6-r1.ebuild,v 1.1 2006/07/20 17:57:23 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.6-r1.ebuild,v 1.2 2006/08/09 18:32:03 sanchan Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://nescc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/nescc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="-*"
 IUSE="doc"
 DEPEND=">=dev-lang/perl-5.8.5-r2
 	>=dev-tinyos/tos-1.1.0
