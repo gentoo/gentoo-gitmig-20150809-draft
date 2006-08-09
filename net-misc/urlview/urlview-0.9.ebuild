@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.23 2005/10/18 21:35:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/urlview-0.9.ebuild,v 1.24 2006/08/09 20:24:38 grobian Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://gd.tuwien.ac.at/infosys/mail/mutt/contrib/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc-macos ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
