@@ -1,0 +1,41 @@
+From: Marcelo Tosatti <marcelo@dmt.cnet>
+Date: Tue, 31 Jan 2006 22:26:40 +0000 (-0600)
+Subject: Alpha: fix recursive inlining failure in pci_iommu.c
+X-Git-Tag: v2.4.33-pre2
+X-Git-Url: http://kernel.org/git/?p=linux/kernel/git/marcelo/linux-2.4.git;a=commitdiff;h=0c283a469515ac2eb468921a73058a892f67a96e
+
+Alpha: fix recursive inlining failure in pci_iommu.c
+
+From: Solar Designer <solar@openwall.com>
+
+2.4.32 fails to build on my Alpha like this:
+
+make[1]: Entering directory
+`/stuff/owl-2006-1/usr/src/linux-2.4.32-ow1/arch/alpha/kernel'
+gcc -D__KERNEL__ -I/stuff/owl-2006-1/usr/src/linux-2.4.32-ow1/include
+-Wall -Wstrict-prototypes -Wno-trigraphs -O2 -fno-strict-aliasing
+-fno-common -fomit-frame-pointer -pipe -mno-fp-regs -ffixed-8 -mcpu=pca56
+-Wa,-mev6   -nostdinc -iwithprefix include -DKBUILD_BASENAME=pci_iommu
+-c -o pci_iommu.o pci_iommu.c
+pci_iommu.c: In function `sg_fill':
+pci_iommu.c:510: sorry, unimplemented: inlining failed in call to
+'sg_fill': recursive inlining
+pci_iommu.c:558: sorry, unimplemented: called from here
+make[1]: *** [pci_iommu.o] Error 1
+
+This is with gcc 3.4.5.  Simply removing the "inline" from the
+declaration
+of sg_fill() makes it build and work.
+---
+
+--- a/arch/alpha/kernel/pci_iommu.c
++++ b/arch/alpha/kernel/pci_iommu.c
+@@ -503,7 +503,7 @@ sg_classify(struct scatterlist *sg, stru
+ /* Given a scatterlist leader, choose an allocation method and fill
+    in the blanks.  */
+ 
+-static inline int
++static int
+ sg_fill(struct scatterlist *leader, struct scatterlist *end,
+ 	struct scatterlist *out, struct pci_iommu_arena *arena,
+ 	dma_addr_t max_dma, int dac_allowed)
