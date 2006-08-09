@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.107.ebuild,v 1.1 2006/08/09 17:30:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.107.ebuild,v 1.2 2006/08/09 18:47:28 swegener Exp $
 
 inherit eutils
 
@@ -17,8 +17,8 @@ RDEPEND=">=dev-libs/glib-2.4.0
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/libpcre-5.0
 	>=dev-libs/gmime-2.1.0
-	>=app-text/gtkspell-2.0.7
-	>=gnome-base/libgnome-2.0"
+	spell? ( >=app-text/gtkspell-2.0.7 )
+	gnome? ( >=gnome-base/libgnome-2.0 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
