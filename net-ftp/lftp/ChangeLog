@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.114 2006/08/03 03:06:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.115 2006/08/09 12:27:33 dragonheart Exp $
+
+*lftp-3.5.4 (09 Aug 2006)
+
+  09 Aug 2006; Daniel Black <dragonheart@gentoo.org> +lftp-3.5.4.ebuild:
+  version bump - fixed bug #142615 autoconf depend on gnutls thanks to Fritz
+  Heinrichmeyer
 
   03 Aug 2006; Daniel Black <dragonheart@gentoo.org> lftp-3.5.2.ebuild,
   lftp-3.5.2-r1.ebuild:
