@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.1-r1.ebuild,v 1.2 2006/08/06 20:18:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.1-r1.ebuild,v 1.3 2006/08/09 08:57:11 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -20,6 +20,7 @@ RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/libglade-2.3.1
 	>=dev-cpp/libbinio-1.4
+	media-libs/taglib
 	alsa? ( >=media-libs/alsa-lib-1.0.9_rc2 )
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.30 )
@@ -31,9 +32,7 @@ RDEPEND="app-arch/unzip
 		media-sound/jack-audio-connection-kit )
 	lirc? ( app-misc/lirc )
 	modplug? ( media-libs/libmodplug )
-	musepack? ( media-libs/libmpcdec
-		    media-libs/taglib )
-	mp3? ( media-libs/taglib )
+	musepack? ( media-libs/libmpcdec )
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
 	timidity? ( media-sound/timidity++ )
