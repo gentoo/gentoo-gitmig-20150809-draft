@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.540.ebuild,v 1.1 2006/08/08 00:48:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.540.ebuild,v 1.2 2006/08/09 17:34:24 blubb Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="darkstat is a network traffic analyzer"
 HOMEPAGE="http://dmr.ath.cx/net/darkstat/"
 SRC_URI="http://dmr.ath.cx/net/darkstat/${P}.tar.bz2"
 
-KEYWORDS="~ppc ~ppc-macos ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~x86"
 IUSE="nls"
 LICENSE="GPL-2"
 SLOT="0"
