@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.2 2006/08/09 09:10:52 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.3 2006/08/09 09:51:44 aross Exp $
 
 inherit mount-boot flag-o-matic distutils eutils
 
@@ -89,7 +89,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myopt, myconf
+	local myopt myconf
 	use debug && myopt="${myopt} debug=y"
 
 	myconf="${myconf} $(use_enable vnc)"
