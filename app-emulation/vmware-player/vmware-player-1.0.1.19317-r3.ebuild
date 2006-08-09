@@ -1,10 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317-r3.ebuild,v 1.3 2006/07/27 15:13:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.1.19317-r3.ebuild,v 1.4 2006/08/09 09:33:55 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
 # which the user must run manually.
+
+# Alter ebuild so that the metadata cache is invalidated.
 
 inherit eutils
 

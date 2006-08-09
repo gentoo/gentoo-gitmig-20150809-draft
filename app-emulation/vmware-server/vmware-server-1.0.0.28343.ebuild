@@ -1,10 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.0.28343.ebuild,v 1.2 2006/07/31 21:24:30 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-1.0.0.28343.ebuild,v 1.3 2006/08/09 09:21:07 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
 # which the user must run manually.
+
+# Change ebuild to get cache rebuilt.
 
 inherit eutils versionator vmware
 
