@@ -1,8 +1,51 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.6 2006/08/09 12:08:38 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.7 2006/08/09 18:18:00 solar Exp $
 
 inherit eutils flag-o-matic
+
+################################################################################
+# BUSYBOX ALTERNATE CONFIG MINI-HOWTO
+#
+# Busybox can be modified in many different ways. Here's a few ways to do it:
+#
+# (1) Emerge busybox with FEATURES=keepwork so the work directory won't
+#     get erased afterwards. Add a definition like ROOT=/my/root/path to the
+#     start of the line if you're installing to somewhere else than the root
+#     directory. This command will save the default configuration to
+#     ${PORTAGE_CONFIGROOT} (or ${ROOT} if ${PORTAGE_CONFIGROOT} is not 
+#     defined), and it will tell you that it has done this. Note the location
+#     where the config file was saved.
+#
+#     FEATURES=keepwork USE=savedconfig emerge busybox
+#
+# (2) Go to the work directory and change the configuration of busybox using its
+#     menuconfig feature.
+#
+#     cd /var/tmp/portage/busybox*/work
+#     make menuconfig
+#
+#
+# (3) Save your configuration to the default location and copy it to the
+#     savedconfig location as follows. Replace X.X.X by the version of 
+#     busybox, and change the path if you're overriding ${ROOT} or
+#     ${PORTAGE_CONFIGROOT}. The file should overwrite the default config
+#     file that was written by the ebuild during step 1.
+#
+#     cp .config /etc/portage/savedconfig/busybox-X.X.X.config
+#
+# (4) Execute the same command as in step 1 to build the new busybox config;
+#     the FEATURES=keepwork option is probably no longer necessary unless you
+#     want to modify the configuration further.
+#
+################################################################################
+#
+# (1) Alternatively skip the above steps and simply emerge busybox with 
+#     USE=savedconfig and edit the file it saves by hand. Then remerge bb as 
+#     needed.
+#
+################################################################################
+
 
 #SNAPSHOT=20040726
 SNAPSHOT=""
@@ -217,20 +260,21 @@ src_install() {
 	fi
 }
 
-pkg_preinst() {
+pkg_postinst() {
 	if use savedconfig ; then
 		local config_dir="${PORTAGE_CONFIGROOT:-${ROOT}}/etc/portage/savedconfig"
 		einfo "Saving this build config to ${config_dir}/${PF}.config"
 		einfo "Read this ebuild for more info on how to take advantage of this option"
 		mkdir -p "${config_dir}"
 		cp "${S}"/.config "${config_dir}"/${PF}.config
+		return 0
 	fi
-}
-
-pkg_postinst() {
 	echo
 	einfo "This ebuild has support for user defined configs"
 	einfo "Please read this ebuild for more details and re-emerge as needed"
 	einfo "if you want to add or remove functionality for ${PN}"
 	echo
 }
+
+
+
