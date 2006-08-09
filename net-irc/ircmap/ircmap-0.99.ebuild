@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.10 2005/02/14 21:25:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircmap/ircmap-0.99.ebuild,v 1.11 2006/08/09 20:22:12 swegener Exp $
 
 DESCRIPTION="This script connects to the specified IRC server and creates a diagram of the network performing LINKS command."
 HOMEPAGE="http://pasky.ji.cz/~pasky/irc/"
@@ -10,16 +10,16 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	media-gfx/graphviz
-	dev-lang/perl"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="dev-lang/perl"
+RDEPEND="${RDEPEND}
+	media-gfx/graphviz"
+DEPEND="${DEPEND}
+		>=sys-apps/sed-4"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 src_compile() {
-	eval `perl -V:installprivlib`
+	eval $(perl -V:installprivlib)
 
 	sed -i \
 		-e "s:/home/pasky/ircmap:${installprivlib}/ircmap:" \
@@ -30,9 +30,9 @@ src_install () {
 	dodoc README
 	dobin ircmapS.pl ircmapC.pl ircmapR-aa.pl ircmapR-gvdot.pl ircmapR-ircnet.pl
 
-	eval `perl -V:installprivlib`
+	eval $(perl -V:installprivlib)
 
-	insinto /${installprivlib}/ircmap
+	insinto /"${installprivlib}"/ircmap
 	doins IHash.pm
 }
 
