@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.58 2006/08/09 15:26:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.59 2006/08/09 21:00:39 ranger Exp $
+
+  09 Aug 2006; Brent Baude <ranger@gentoo.org> rpm-4.2-r2.ebuild:
+  Marking rpm-4.2-r2 ppc64 stable for bug #140721
 
   09 Aug 2006; Danny van Dyk <kugelfang@gentoo.org> rpm-4.2-r2.ebuild:
   Marked stable wrt bug #140721.
