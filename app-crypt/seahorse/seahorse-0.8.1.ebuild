@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.1.ebuild,v 1.6 2006/05/19 18:53:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.8.1.ebuild,v 1.7 2006/08/09 20:25:51 kugelfang Exp $
 
 inherit gnome2 eutils autotools flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://seahorse.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 
 RDEPEND=">=app-crypt/gnupg-1.2.0
 	>=app-crypt/gpgme-1.0.0
