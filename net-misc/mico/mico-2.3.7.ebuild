@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.7.ebuild,v 1.6 2004/07/01 21:28:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.7.ebuild,v 1.7 2006/08/09 18:37:22 cardoe Exp $
 
-IUSE="ssl tcltk"
+IUSE="ssl tcl"
 
 DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 HOMEPAGE="http://www.mico.org/"
@@ -15,7 +15,7 @@ DEPEND="virtual/libc
 	sys-devel/flex
 	sys-devel/bison
 	ssl? ( dev-libs/openssl )
-	tcltk? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )"
 
 S="${WORKDIR}/${PN}"
 
@@ -33,7 +33,7 @@ src_compile() {
 
 	use ssl && myopts="${myopts} --with-ssl=/usr" \
 		|| myopts="${myopts} --without-ssl"
-	use tcltk && myopts="${myopts} --with-tcl=/usr" \
+	use tcl && myopts="${myopts} --with-tcl=/usr" \
 		|| myopts="${myopts} --without-tcl"
 
 	./configure \

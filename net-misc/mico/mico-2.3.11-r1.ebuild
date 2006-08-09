@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.11-r1.ebuild,v 1.1 2005/08/04 20:33:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.11-r1.ebuild,v 1.2 2006/08/09 18:37:22 cardoe Exp $
 
-inherit eutils
+inherit eutils qt3
 
-IUSE="ssl tcltk qt gtk postgres"
+IUSE="ssl tcl qt3 gtk postgres"
 
 DESCRIPTION="A freely available and fully compliant implementation of the CORBA standard"
 HOMEPAGE="http://www.mico.org/"
@@ -17,8 +17,8 @@ DEPEND="virtual/libc
 	>=sys-devel/flex-2.5.2
 	>=sys-devel/bison-1.22
 	ssl? ( dev-libs/openssl )
-	tcltk? ( dev-lang/tcl )
-	qt? ( x11-libs/qt )
+	tcl? ( dev-lang/tcl )
+	qt3? ( $(qt_min_version 3.3) )
 	postgres? ( dev-db/postgresql )"
 
 S="${WORKDIR}/${PN}"
@@ -38,9 +38,9 @@ src_compile() {
 
 	use ssl && myopts="${myopts} --with-ssl=/usr" \
 		|| myopts="${myopts} --without-ssl"
-	use tcltk && myopts="${myopts} --with-tcl=/usr" \
+	use tcl && myopts="${myopts} --with-tcl=/usr" \
 		|| myopts="${myopts} --without-tcl"
-	use qt && myopts="${myopts} --with-qt=${QTDIR}" \
+	use qt3 && myopts="${myopts} --with-qt=${QTDIR}" \
 		|| myopts="${myopts} --without-qt"
 	use gtk && myopts="${myopts} --with-gtk=/usr" \
 		|| myopts="${myopts} --without-gtk"
