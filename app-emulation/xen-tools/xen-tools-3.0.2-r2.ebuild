@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.1 2006/08/04 13:53:26 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.2 2006/08/09 09:10:52 aross Exp $
 
 inherit mount-boot flag-o-matic distutils eutils
 
@@ -81,6 +81,11 @@ src_unpack() {
 
 	# Allow --as-needed LDFLAGS
 	epatch "${FILESDIR}/${P}"--as-needed.patch
+
+	# Fix upstream's broken test cases (bug #141233)
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-test-uuid.patch
+	epatch "${FILESDIR}/${P}"-test-xauthority.patch
 }
 
 src_compile() {
