@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.3 2006/06/08 19:51:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.4 2006/08/09 16:47:13 wolf31o2 Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
 ECVS_MODULE="avp"
 #inherit eutils cvs games
-inherit eutils games
+inherit eutils multilib games
 
 DESCRIPTION="Linux port of Aliens vs Predator"
 HOMEPAGE="http://www.icculus.org/avp/"
@@ -39,7 +39,9 @@ src_unpack() {
 
 	cd "${S}"
 
+	sed -i '/alut.h/d' openal.c || die "sed openal.c failed"
 	sed -i \
+		-e "s:-lopenal:/usr/$(get_libdir)/libopenal.a:" \
 		-e "/^CFLAGS =/s:=.*:=${CFLAGS}:" Makefile \
 		|| die "sed Makefile failed"
 	epatch "${FILESDIR}/${P}-gcc34.patch"
