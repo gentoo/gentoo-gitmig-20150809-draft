@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.4 2006/08/05 08:17:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.5 2006/08/09 18:30:21 tcort Exp $
 
 inherit eutils libtool autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rapidsvn.tigris.org/"
 SRC_URI="http://www.rapidsvn.org/download/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="doc static"
 
 DEPEND=">=dev-util/subversion-1.3.2-r1
