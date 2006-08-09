@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.4 2006/08/08 01:41:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.5 2006/08/09 02:11:41 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -70,7 +70,7 @@ src_unpack() {
 		local conf root
 		[[ -r .config ]] && rm .config
 		for conf in {${PF},${P},${PN}}{,-${CHOST}} ; do
-			for root in "${ROOT}" / ; do
+			for root in "${PORTAGE_CONFIGROOT}" "${ROOT}" / ; do
 				configfile=${root}etc/portage/savedconfig/${conf}.config
 				if [[ -r ${configfile} ]] ; then
 					einfo "Found your ${configfile} and using it."
