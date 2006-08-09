@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.15b-r1.ebuild,v 1.1 2006/02/14 13:09:21 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.15b-r1.ebuild,v 1.2 2006/08/09 12:22:21 leonardop Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="gnome kde nls"
 
-DEPEND="media-libs/libpng
+DEPEND=">=media-libs/libpng-1.2
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer
 	media-libs/sdl-image

@@ -1,6 +1,6 @@
-diff -NurdB tuxpaint-0.9.15b-orig/Makefile tuxpaint-0.9.15b/Makefile
---- tuxpaint-0.9.15b-orig/Makefile	2005-11-27 01:44:15.000000000 -0500
-+++ tuxpaint-0.9.15b/Makefile	2006-02-14 08:00:18.000000000 -0500
+diff -NurdB tuxpaint-0.9.15b/Makefile tuxpaint-0.9.15b-patched/Makefile
+--- tuxpaint-0.9.15b/Makefile	2005-11-27 01:44:15.000000000 -0500
++++ tuxpaint-0.9.15b-patched/Makefile	2006-08-09 07:13:53.000000000 -0500
 @@ -17,7 +17,7 @@
  
  # Where to install things:
@@ -87,3 +87,12 @@ diff -NurdB tuxpaint-0.9.15b-orig/Makefile tuxpaint-0.9.15b/Makefile
  
  
  # Install the program:
+@@ -933,7 +937,7 @@
+ 	@$(CC) $(CFLAGS) $(DEBUG_FLAGS) $(SDL_CFLAGS) $(DEFS) \
+ 		-o tuxpaint obj/tuxpaint.o $(HQXX_O) \
+ 		$(ARCH_LIBS) $(SDL_LIBS) \
+-		-lm $(ARCH_LINKS)
++		-lm -lpng12 $(ARCH_LINKS)
+ 	@$(RSRC_CMD)
+ 	@$(MIMESET_CMD)
+ 
