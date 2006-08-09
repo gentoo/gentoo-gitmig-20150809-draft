@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/kseg-0.403.ebuild,v 1.2 2006/08/05 12:54:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kseg/kseg-0.403.ebuild,v 1.3 2006/08/09 20:24:17 ranger Exp $
 
 inherit eutils qt3
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mit.edu/~ibaran/kseg.html"
 SRC_URI="http://www.mit.edu/~ibaran/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="examples"
 DEPEND="$(qt_min_version 3.3)"
 
