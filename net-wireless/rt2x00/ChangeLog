@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.12 2006/08/03 09:26:08 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.13 2006/08/09 09:04:56 uberlord Exp $
+
+  09 Aug 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
+  Install the crc-itu-t.ko module correctly.
 
   03 Aug 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
   Change back to local USE flags for each driver.
