@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.1.0.ebuild,v 1.1 2006/06/23 10:30:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-channelscan/vdr-channelscan-0.1.0.ebuild,v 1.2 2006/08/09 13:55:14 zzam Exp $
 
 inherit vdr-plugin
 
@@ -19,7 +19,8 @@ RDEPEND="${DEPEND}"
 
 # access transponder-data under /usr/share/vdr/channelscan-transponders
 PATCHES="${FILESDIR}/${P}-shared-data.diff
-		${FILESDIR}/${P}-show-only-basename.diff"
+		${FILESDIR}/${P}-show-only-basename.diff
+		${FILESDIR}/${P}-gcc4.diff"
 
 src_unpack() {
 	vdr-plugin_src_unpack
