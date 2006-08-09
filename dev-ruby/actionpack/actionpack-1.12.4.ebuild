@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-1.12.4.ebuild,v 1.3 2006/08/09 19:48:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-1.12.4.ebuild,v 1.4 2006/08/09 20:48:49 tcort Exp $
 
 inherit ruby gems
 
@@ -13,7 +13,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="1.1"
-KEYWORDS="~amd64 ~ia64 ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ia64 ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8.2
