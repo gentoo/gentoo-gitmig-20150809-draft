@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r2.ebuild,v 1.4 2006/08/06 23:19:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.9-r2.ebuild,v 1.5 2006/08/09 18:48:23 tcort Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ DESCRIPTION="A great client/server software package allowing remote network acce
 SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
 HOMEPAGE="http://www.tightvnc.com/"
 
-KEYWORDS="~alpha ~amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ppc sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
 
