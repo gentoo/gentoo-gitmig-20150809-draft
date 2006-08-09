@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2005.0/make.defaults,v 1.5 2006/06/27 15:39:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2005.0/make.defaults,v 1.6 2006/08/09 19:13:37 cardoe Exp $
 
 ARCH="alpha"
 ACCEPT_KEYWORDS="alpha"
@@ -14,4 +14,4 @@ CXXFLAGS="${CFLAGS}"
 # has a conditional dependency on java (which it does,) then a JDK will be 
 # pulled in during *emerge system*!
 
-USE="arts avi berkdb bitmap-fonts crypt cups eds encode fortran font-server foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mpeg mp3 ncurses nls ogg oggvorbis opengl oss pam pdflib png python qt qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml2 xmms xv zlib"
+USE="arts avi berkdb bitmap-fonts crypt cups eds encode fortran font-server foomaticdb gdbm gif gnome gpm gstreamer gtk gtk2 imlib jpeg kde libg++ libwww mad mikmod motif mpeg mp3 ncurses nls ogg oggvorbis opengl oss pam pdflib png python qt3 qt4 quicktime readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xml2 xmms xv zlib"
