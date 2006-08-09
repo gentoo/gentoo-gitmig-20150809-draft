@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.115 2006/08/09 12:27:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.116 2006/08/09 21:53:45 dragonheart Exp $
+
+  09 Aug 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/lftp-3.5.2-gnutls-segv.patch,
+  -files/lftp-3.5.2-install_data_hook.patch,
+  -files/lftp-3.5.2-noautoflags.patch, -files/lftp-3.5.2-socklib.patch,
+  -lftp-3.5.2.ebuild, -lftp-3.5.2-r1.ebuild:
+  removed lftp-3.5.2* - too many problems which are all fixed in lftp-3.5.4.
 
 *lftp-3.5.4 (09 Aug 2006)
 
