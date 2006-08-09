@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.64 2006/08/02 20:18:40 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.65 2006/08/09 16:44:05 wolf31o2 Exp $
+
+  09 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/openal-20040817-alsa_capture.diff,
+  -files/openal-20040817-destdir.patch,
+  -files/openal-20050504-alsa_capture.patch,
+  -files/openal-20050504-alsa_dmix.patch,
+  -files/openal-20050504-destdir.patch,
+  -files/openal-20051024-alsa_dmix.patch,
+  -files/openal-20051024-amd64-configure.patch, -openal-20050504-r1.ebuild,
+  -openal-20050504-r2.ebuild, -openal-20051024.ebuild:
+  Removing the older CVS snapshot ebuilds in favor of the released 0.0.8 version.
 
   02 Aug 2006; Thomas Cort <tcort@gentoo.org> openal-0.0.8.ebuild:
   Stable on alpha wrt Bug #133501.
