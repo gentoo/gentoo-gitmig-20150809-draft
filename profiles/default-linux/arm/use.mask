@@ -20,7 +20,6 @@ fdftk
 3dfx
 
 # havent tested yet
-qt
 qt3
 qt4
 arts
