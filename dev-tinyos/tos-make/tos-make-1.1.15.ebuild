@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-make/tos-make-1.1.15.ebuild,v 1.1 2006/02/12 17:58:50 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-make/tos-make-1.1.15.ebuild,v 1.2 2006/08/09 19:51:22 sanchan Exp $
 
 inherit eutils
 
@@ -56,15 +56,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "In order to use this, just add in your Makefile something like:"
-	einfo "TOSMAKE_PATH += \${YOUR_ADDITIONAL_RULES_DIRECTORY}"
-	einfo "MAKERULES = \${TOSROOT}/tools/make/Makerules\n"
+	elog "In order to use this, just add in your Makefile something like:"
+	elog "TOSMAKE_PATH += \${YOUR_ADDITIONAL_RULES_DIRECTORY}"
+	elog "MAKERULES = \${TOSROOT}/tools/make/Makerules\n"
 
-	ewarn "If you want to use TinyOS on real hardware you need a cross compiler."
-	ewarn "You should emerge sys-devel/crossdev and compile any toolchain you need"
-	ewarn "Example: for Mica2 and Mica2 Dot: crossdev --target avr"
-	ewarn "You also need >=dev-tinyos/tos-uisp-1.1.14 in order to flash your mote."
-	ewarn "You also need >=dev-java/ibm-sdk-bin-1.4.0 if you plan to use deluge."
+	elog "If you want to use TinyOS on real hardware you need a cross compiler."
+	elog "You should emerge sys-devel/crossdev and compile any toolchain you need"
+	elog "Example: for Mica2 and Mica2 Dot: crossdev --target avr"
+	elog "You also need >=dev-tinyos/tos-uisp-1.1.14 in order to flash your mote."
+	elog "You also need >=dev-java/ibm-sdk-bin-1.4.0 if you plan to use deluge."
 
 	ebeep 5
 	epause 5

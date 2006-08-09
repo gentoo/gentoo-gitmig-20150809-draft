@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-scripts/tos-scripts-1.1.15.ebuild,v 1.2 2006/02/21 21:06:23 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/tos-scripts/tos-scripts-1.1.15.ebuild,v 1.3 2006/08/09 19:46:17 sanchan Exp $
 
 inherit eutils java-utils
 
@@ -88,15 +88,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "In order to automatically use codeGeneration emerge tos-make,"
-	einfo "add in your Makefile something like:"
-	einfo "TOSMAKE_PATH += \${TOSROOT}/tools/scripts/codeGeneration"
-	einfo "and add registy, hood or rpc to your make target eg.: make pc hood"
+	elog "In order to automatically use codeGeneration emerge tos-make,"
+	elog "add in your Makefile something like:"
+	elog "TOSMAKE_PATH += \${TOSROOT}/tools/scripts/codeGeneration"
+	elog "and add registy, hood or rpc to your make target eg.: make pc hood"
 
-	ewarn "If you want to use TinyOS on real hardware you need a cross compiler."
-	ewarn "You should emerge sys-devel/crossdev and compile any toolchain you need"
-	ewarn "Example: for Mica2 and Mica2 Dot: crossdev --target avr"
-	ewarn "You also need >=dev-tinyos/tos-uisp-1.1.14 in order to flash your mote."
+	elog "If you want to use TinyOS on real hardware you need a cross compiler."
+	elog "You should emerge sys-devel/crossdev and compile any toolchain you need"
+	elog "Example: for Mica2 and Mica2 Dot: crossdev --target avr"
+	elog "You also need >=dev-tinyos/tos-uisp-1.1.14 in order to flash your mote."
 
 	ebeep 5
 	epause 5
