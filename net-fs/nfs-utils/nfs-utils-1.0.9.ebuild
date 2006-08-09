@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.9.ebuild,v 1.3 2006/07/20 02:07:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.9.ebuild,v 1.4 2006/08/09 02:23:35 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="NFS client and server daemons"
 HOMEPAGE="http://nfs.sourceforge.net/"
@@ -96,9 +96,9 @@ pkg_postinst() {
 	# the daemons actually use the files in /var/lib/nfs.  This fixes
 	# bug 30486
 	local f
-	for f in "${ROOT}"/usr/lib/nfs/*; do
-		[[ -f ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
-		einfo "Copying default ${f##*/} from /usr/lib/nfs to /var/lib/nfs"
-		cp -pPR ${f} "${ROOT}"/var/lib/nfs/
+	for f in "${ROOT}"/usr/$(get_libdir)/nfs/*; do
+		[[ -e ${ROOT}/var/lib/nfs/${f##*/} ]] && continue
+		einfo "Copying default ${f##*/} from /usr/$(get_libdir)/nfs to /var/lib/nfs"
+		cp -pPR "${f}" "${ROOT}"/var/lib/nfs/
 	done
 }
