@@ -1,0 +1,12 @@
+--- cedet-1.0pre3/speedbar/sb-info.el	2005-06-30 05:08:02.000000000 +0200
++++ cedet-1.0pre3/speedbar/sb-infonew.el	2006-06-27 14:43:32.000000000 +0200
+@@ -249,7 +249,7 @@
+ 
+ ;;; Overriding preinstalled code.
+ ;;;###autoload
+-(eval-after-load "info" '(require 'sb-info))
+-
+ (provide 'sb-info)
++
++(eval-after-load "info" '(require 'sb-info))
+ ;;; sb-info.el ends here

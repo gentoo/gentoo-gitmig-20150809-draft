@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r1.ebuild,v 1.1 2006/05/15 16:38:03 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cedet/cedet-1.0_pre3-r1.ebuild,v 1.2 2006/08/09 05:17:14 mkennedy Exp $
 
 inherit elisp eutils
 
@@ -25,6 +25,7 @@ SITEFILE="60cedet-gentoo.el"
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/1.0_pre3-eieio-tests-gentoo.patch # Bug #124598
+	epatch ${FILESDIR}/1.0_pre3-sb-info-circular-dep-gentoo.patch # Bug #138190
 }
 
 src_compile() {
