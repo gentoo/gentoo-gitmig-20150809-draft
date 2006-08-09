@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.1.0.ebuild,v 1.2 2006/07/21 07:59:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.1.0.ebuild,v 1.3 2006/08/09 16:46:19 cardoe Exp $
 
 inherit kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/aqbanking/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="chipcard debug dtaus geldkarte hbci kde ofx python qt yellownet"
+IUSE="chipcard debug dtaus geldkarte hbci kde ofx python qt3 yellownet"
 DEPEND=">=sys-libs/gwenhywfar-2.3.0
 	>=app-misc/ktoblzcheck-1.10
 	ofx? ( >=dev-libs/libofx-0.8 )
@@ -18,20 +18,20 @@ DEPEND=">=sys-libs/gwenhywfar-2.3.0
 	chipcard? ( >=sys-libs/libchipcard-2.1.6 )"
 
 # gtk2 doesn't build without X, not needed at the moment because no app uses it.
-#	gtk2? >=dev-util/glade-2"
+#	gtk? >=dev-util/glade-2"
 
 S=${WORKDIR}/${P}
 MAKEOPTS="${MAKEOPTS} -j1"
 
-use qt && need-qt 3.1
+use qt3 && need-qt 3.1
 use kde && need-kde 3.1
 
 src_compile() {
 	local FRONTENDS="cbanking"
-	(use qt || use kde) && FRONTENDS="${FRONTENDS} qbanking"
+	(use qt3 || use kde) && FRONTENDS="${FRONTENDS} qbanking"
 	use kde && FRONTENDS="${FRONTENDS} kbanking"
 
-#	use gtk2 && FRONTENDS="${FRONTENDS} g2banking"
+#	use gtk && FRONTENDS="${FRONTENDS} g2banking"
 
 	local BACKENDS=""
 	use hbci && BACKENDS="aqhbci"
