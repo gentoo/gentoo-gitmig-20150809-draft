@@ -1,2 +1,2 @@
 STAGE1_USE="nptl nptlonly nossp"
-USE="nptl nptlonly"
+USE="nptl nptlonly nossp"
