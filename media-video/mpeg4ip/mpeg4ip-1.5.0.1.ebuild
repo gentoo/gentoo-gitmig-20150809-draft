@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1.ebuild,v 1.3 2006/08/08 15:25:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.5.0.1.ebuild,v 1.4 2006/08/09 00:22:48 tester Exp $
 
 inherit eutils multilib
 
@@ -46,6 +46,15 @@ DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake
 	player? ( x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) ) )"
+
+pkg_setup() {
+	if ! built_with_use media-libs/libsdl X;
+	then
+		eerror "media-libs/libsdl does not has X support"
+		eerror "You need to rebuild media-libs/libsdl with USE=X"
+		die
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
