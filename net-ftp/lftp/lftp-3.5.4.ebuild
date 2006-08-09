@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.4.ebuild,v 1.1 2006/08/09 12:27:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.5.4.ebuild,v 1.2 2006/08/09 12:32:05 dragonheart Exp $
 
 inherit eutils
 
@@ -29,8 +29,7 @@ RDEPEND=">=sys-libs/ncurses-5.1
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-lang/perl
-	>=sys-devel/autoconf-2.60"
+	dev-lang/perl"
 
 src_compile() {
 	local myconf="$(use_enable nls) --enable-packager-mode"
