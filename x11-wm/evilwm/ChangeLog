@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.36 2006/08/05 08:16:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.37 2006/08/09 22:20:51 tcort Exp $
+
+  09 Aug 2006; Thomas Cort <tcort@gentoo.org> evilwm-0.99.25.ebuild:
+  Stable on alpha wrt Bug #142610.
 
   05 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> evilwm-0.99.25.ebuild:
   Stable on ppc.
