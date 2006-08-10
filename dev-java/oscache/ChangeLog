@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/oscache
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/ChangeLog,v 1.4 2005/10/15 13:19:25 axxo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oscache/ChangeLog,v 1.5 2006/08/10 04:18:52 nichoj Exp $
+
+*oscache-2.0.2-r1 (10 Aug 2006)
+
+  10 Aug 2006; Joshua Nichols <nichoj@gentoo.org> +oscache-2.0.2-r1.ebuild:
+  Migrated to the new Java system by nathanegge@yahoo.com, bug #143285
 
   15 Oct 2005; Thomas Matthijs <axxo@gentoo.org> oscache-2.0.2.ebuild:
   move dev-java/jms dev-java/sun-jms
