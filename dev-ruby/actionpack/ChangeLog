@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.44 2006/08/09 20:48:49 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.45 2006/08/10 03:39:36 tsunam Exp $
+
+  10 Aug 2006; Joshua Jackson <tsunam@gentoo.org> actionpack-1.12.4.ebuild:
+  stable x86; security bug #143369
 
   09 Aug 2006; Thomas Cort <tcort@gentoo.org> actionpack-1.12.4.ebuild:
   Stable on amd64.
