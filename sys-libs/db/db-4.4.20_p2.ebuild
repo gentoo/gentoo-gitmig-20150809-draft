@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p2.ebuild,v 1.4 2006/08/06 12:24:03 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p2.ebuild,v 1.5 2006/08/10 13:47:59 pauldv Exp $
 
 inherit eutils gnuconfig db flag-o-matic java-pkg-opt-2
 
@@ -45,8 +45,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-libtool.patch
 
 	# use the includes from the prefix
-	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-jni-check-prefix-first.patch
-	epatch "${FILESDIR}"/"${PN}"-"${SLOT}"-listen-to-java-options.patch
+	epatch "${FILESDIR}"/"${PN}"-4.3-jni-check-prefix-first.patch
+	epatch "${FILESDIR}"/"${PN}"-4.3-listen-to-java-options.patch
 
 	gnuconfig_update "${S}"/../dist
 
