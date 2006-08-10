@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.114 2006/08/10 23:32:26 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.115 2006/08/10 23:43:32 chtekk Exp $
+
+  10 Aug 2006; Luca Longinotti <chtekk@gentoo.org> php-4.4.3-r1.ebuild:
+  Revert, now it got even worse, fails on some of my systems too. :S
 
   10 Aug 2006; Luca Longinotti <chtekk@gentoo.org> php-4.4.3-r1.ebuild:
   Update patchset for PHP 4.4.3, it seems one of the patches randomly failed
