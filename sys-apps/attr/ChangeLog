@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.63 2006/04/27 22:31:45 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.64 2006/08/10 03:20:51 vapier Exp $
+
+*attr-2.4.32 (10 Aug 2006)
+
+  10 Aug 2006; Mike Frysinger <vapier@gentoo.org> +attr-2.4.32.ebuild:
+  Version bump.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
