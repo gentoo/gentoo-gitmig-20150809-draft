@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.30 2006/08/10 01:36:29 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.31 2006/08/10 22:27:25 joshuabaergen Exp $
+
+*xf86-video-i810-1.6.4-r1 (10 Aug 2006)
+
+  10 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.6.4-fix_dri_abi.patch, -xf86-video-i810-1.6.4.ebuild,
+  +xf86-video-i810-1.6.4-r1.ebuild:
+  Add a patch from upstream that fixes the DRI ABI.  (Bug #143419, Sebastian
+  Bergmann.  Thanks to Roderick B. Greening for the upstream poking.)
 
 *xf86-video-i810-1.6.4 (10 Aug 2006)
 
