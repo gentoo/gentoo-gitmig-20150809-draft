@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.7 2006/07/16 05:42:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.8 2006/08/10 23:36:36 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -20,7 +20,6 @@ RDEPEND="|| ( x11-libs/libXau virtual/x11 )
 	>=x11-libs/ecore-0.9.9
 	>=media-libs/edje-0.5.0
 	>=x11-libs/esmart-0.9.0"
-
 DEPEND="${RDEPEND}
 	|| ( x11-libs/libXt virtual/x11	)"
 
@@ -49,35 +48,10 @@ src_compile() {
 
 src_install() {
 	enlightenment_src_install
-	rm -rf ${D}/etc/init.d
+	use pam || rm -r "${D}"/etc/pam.d
+	rm -rf "${D}"/etc/init.d
 	insinto /usr/share/entrance/images/sessions
-	doins ${WORKDIR}/extraicons/*
+	doins "${WORKDIR}"/extraicons/*
 	exeinto /usr/share/entrance
 	doexe data/config/build_config.sh
-
-	cd /etc/X11/Sessions
-	local edb="${D}/etc/entrance_config.db"
-	local count="`edb_ed ${edb} get /entrance/session/count int`"
-	local datadir="${D}/usr/share/entrance/images/sessions"
-	local icon=""
-	while [ ${count} -ge 0 ] ; do
-		edb_ed ${edb} del /entrance/session/${count}/icon
-		edb_ed ${edb} del /entrance/session/${count}/session
-		edb_ed ${edb} del /entrance/session/${count}/title
-		count=$((${count} - 1))
-	done
-	count=0
-	for s in default * failsafe ; do
-		[ "${s}" == "Xsession" ] && continue
-		icon="`find ${datadir} -iname ${s}.png -printf %f`"
-		if [ -z "${icon}" ] ; then
-			edb_ed ${edb} add /entrance/session/${count}/icon str default.png
-		else
-			edb_ed ${edb} add /entrance/session/${count}/icon str ${icon}
-		fi
-		edb_ed ${edb} add /entrance/session/${count}/session str ${s}
-		edb_ed ${edb} add /entrance/session/${count}/title str ${s}
-		count=$((${count} + 1))
-	done
-	edb_ed ${edb} add /entrance/session/count int ${count}
 }
