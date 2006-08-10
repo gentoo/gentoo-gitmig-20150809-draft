@@ -14,4 +14,8 @@
   <email>aross@gentoo.org</email>
   <name>Andrew Ross</name>
 </maintainer>
+<maintainer>
+  <email>swegener@gentoo.org</email>
+  <name>Sven Wegener</name>
+</maintainer>
 </pkgmetadata>

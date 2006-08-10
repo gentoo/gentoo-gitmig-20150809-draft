@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.3 2006/08/09 09:51:44 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.4 2006/08/10 21:29:01 swegener Exp $
 
-inherit mount-boot flag-o-matic distutils eutils
+inherit mount-boot flag-o-matic distutils eutils multilib
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.sourceforge.net"
@@ -57,6 +57,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -75,15 +77,21 @@ src_unpack() {
 		sed -e "s/CFLAGS :=/CFLAGS := ${HARDFLAGS}/" \
 		-i "${S}"/tools/firmware/hvmloader/Makefile \
 		"${S}"/tools/firmware/vmxassist/Makefile
-		cd "${S}"
-		epatch "${FILESDIR}"/hardened-bx-clobber.patch
 	fi
+
+	# Disable the 32bit-only vmxassist, if we are not on x86 and we don't support the x86 ABI
+	if ! use x86 && ! has x86 $(get_all_abis); then
+		sed -i -e "/SUBDIRS += vmxassist/d" "${S}"tools/firmware/Makefile
+	fi
+
+	# Fixes for hardened and amd64
+	epatch "${FILESDIR}"/${P}-bxclobber.patch
+	epatch "${FILESDIR}"/${P}-pushpop.patch
 
 	# Allow --as-needed LDFLAGS
 	epatch "${FILESDIR}/${P}"--as-needed.patch
 
 	# Fix upstream's broken test cases (bug #141233)
-	cd "${S}"
 	epatch "${FILESDIR}/${P}"-test-uuid.patch
 	epatch "${FILESDIR}/${P}"-test-xauthority.patch
 }
