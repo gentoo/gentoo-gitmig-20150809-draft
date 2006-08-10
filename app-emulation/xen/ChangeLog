@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.39 2006/08/04 15:09:42 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.40 2006/08/10 07:56:58 aross Exp $
+
+  11 Aug 2006; Andrew Ross <aross@gentoo.org> metadata.xml:
+  Add myself as a maintainer
 
   04 Aug 2006; Chris Bainbridge <chrb@gentoo.org> xen-3.0.2.ebuild:
   Remove in package testing - tests are for xen-tools, not xen hypervisor. Bug
