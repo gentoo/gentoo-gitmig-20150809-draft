@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopenal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.16 2006/06/25 13:13:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenal/ChangeLog,v 1.17 2006/08/10 05:44:07 mr_bones_ Exp $
+
+  10 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/pyopenal-1.3.patch, -pyopenal-0.1.2.ebuild, -pyopenal-0.1.3.ebuild,
+  -pyopenal-0.1.4.ebuild:
+  clean out old versions
 
   25 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   pyopenal-0.1.6.ebuild:
