@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST Module-Versions-Report-1.02.tar.gz 4671
-EBUILD Module-Versions-Report-1.02.ebuild 633 RMD160 0a871e0a7a3c30e2ff80f7675863a290a2c70532 SHA1 6a4f272bee9eb1c8281bfe44404999623b2b4f3e SHA256 ffa1d416ca56eb52714b8a6f8de06d12f8b3649fe68875fb2edf246fed076bde
-MD5 fb3abefafb320e438d4eb8fb6129b0ff Module-Versions-Report-1.02.ebuild 633
-RMD160 0a871e0a7a3c30e2ff80f7675863a290a2c70532 Module-Versions-Report-1.02.ebuild 633
-SHA256 ffa1d416ca56eb52714b8a6f8de06d12f8b3649fe68875fb2edf246fed076bde Module-Versions-Report-1.02.ebuild 633
+EBUILD Module-Versions-Report-1.02.ebuild 637 RMD160 0118c54e38f861c9834cef4144eb0c96cfb715df SHA1 46747075a7aa3bed327eae9fffc9f96f89e32155 SHA256 49e5982a94661c4e9cfd3fa4c9dd372b9ecd870f2ea3efb018f34b5029eebcf8
+MD5 71d9ccfded6d39ef203b3e7185cf1cc9 Module-Versions-Report-1.02.ebuild 637
+RMD160 0118c54e38f861c9834cef4144eb0c96cfb715df Module-Versions-Report-1.02.ebuild 637
+SHA256 49e5982a94661c4e9cfd3fa4c9dd372b9ecd870f2ea3efb018f34b5029eebcf8 Module-Versions-Report-1.02.ebuild 637
 MISC ChangeLog 1399 RMD160 7dc0c1962ab1a4dab4f0f275f6475ddb4e298676 SHA1 aba38f6d45cc4d574079a122fa44a0d9cf438600 SHA256 6fa2453ecdb66128c002b7ef59b6e4c380b9cbedb6bc28e62c0d30187e5a0557
 MD5 3f06bda76454c0efe5c9f87bcf855321 ChangeLog 1399
 RMD160 7dc0c1962ab1a4dab4f0f275f6475ddb4e298676 ChangeLog 1399
@@ -17,10 +14,3 @@ SHA256 6a11fd41a2a210a9760849de398ef8c62cf46cc742d09b2e1781def7848fa1ec metadata
 MD5 88fda53493aa5becf42b7f0c80f0148e files/digest-Module-Versions-Report-1.02 77
 RMD160 9ccafe1dcd78cc52296c5de39829a4399818929e files/digest-Module-Versions-Report-1.02 77
 SHA256 078d1f361c07b911eaa1f55b4ba78f6354e96b1cd80d4da8bc38722c995393bb files/digest-Module-Versions-Report-1.02 77
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFE1KWVtG5z4I8BtQoRAj65AJ9iVW5xX/Usl7SOxQtZj3qUsHVCbQCcCYFs
-f0xPiOAPSwE9vVJTMHg7v3w=
-=X+kM
------END PGP SIGNATURE-----
