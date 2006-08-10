@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/pam_mysql-0.7_rc1-r1.ebuild,v 1.1 2006/06/24 13:47:06 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/pam_mysql-0.7_rc1-r1.ebuild,v 1.2 2006/08/10 14:33:44 kugelfang Exp $
 
 inherit libtool
 
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} libdir=$(get_libdir)/security install || die
 
 	dodoc CREDITS ChangeLog NEWS README
 }
