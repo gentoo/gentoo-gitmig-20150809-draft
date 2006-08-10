@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.44 2006/07/24 08:44:20 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.45 2006/08/10 07:25:53 mr_bones_ Exp $
+
+  10 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -ddd-3.3.1-r1.ebuild,
+  -ddd-3.3.1-r2.ebuild, -ddd-3.3.7.ebuild, -ddd-3.3.8.ebuild,
+  -ddd-3.3.9.ebuild:
+  clean out old ebuilds
 
   24 Jul 2006; Jose Luis Rivero <yoswink@gentoo.org> ddd-3.3.11.ebuild:
   Stable on alpha wrt bug #129126
