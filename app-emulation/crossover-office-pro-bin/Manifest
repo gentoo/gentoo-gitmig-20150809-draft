@@ -38,13 +38,13 @@ SHA256 82abac549f0b15cc0f31bb66b537be738fca35a74251b7af9fb0531d1f4be2cd files/di
 MD5 627453e13afd2d4db6b72268f4b1ae6b files/digest-crossover-office-pro-bin-5.0.1 77
 RMD160 e887b10bcf9fb85fb14e59220c80c60c76b9c32a files/digest-crossover-office-pro-bin-5.0.1 77
 SHA256 6ac75a022c8c77b4de59885e9d4f5d63a8002461ae326f7bdc749865beae9097 files/digest-crossover-office-pro-bin-5.0.1 77
-MD5 5a8612d55c83412f42c4f86738ffde46 files/digest-crossover-office-pro-bin-5.0.3 363
-RMD160 4e2ee8b45cd49c79a5ffebdafeb0f57bbaee47f4 files/digest-crossover-office-pro-bin-5.0.3 363
-SHA256 d0a15c8bddc9aa8c07c39a4da0d1755509470679a1c5c847d4b0897b93f031d5 files/digest-crossover-office-pro-bin-5.0.3 363
+MD5 5e23b663b453db542e2389ff35ef9fba files/digest-crossover-office-pro-bin-5.0.3 277
+RMD160 04ffa34c5c81a360d93dcb41930294839df830fb files/digest-crossover-office-pro-bin-5.0.3 277
+SHA256 0a849aa04318299b5ec7278ff540ddb23541fd690b93c7c3bf4bd4e8b48ecddc files/digest-crossover-office-pro-bin-5.0.3 277
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEvw8lamhnQswr0vIRAszdAKCSh8aA+Z3bI1pJh3dv8MQfIpjaKACfU3Vw
-HnFNb1b6jMHdUWHivky+mzM=
-=95Td
+iD8DBQFE2qJeamhnQswr0vIRAk+0AJ0a199ng+4JVpFz3SD0tB9QiTTbHgCgnc4+
+xZvWjqkQg5+PKg2XpvOP/QM=
+=6T0F
 -----END PGP SIGNATURE-----
