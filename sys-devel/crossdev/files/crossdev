@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.68 2006/06/27 08:08:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.69 2006/08/10 03:52:50 vapier Exp $
 
 cd /
 
@@ -222,10 +222,14 @@ uninstall() {
 
 	[[ -d ${PORTDIR_OVERLAY}/cross-${CTARGET} ]] \
 		&& rm -r ${PORTDIR_OVERLAY}/cross-${CTARGET}
-	for f in package.{mask,keywords,use} categories ; do
+	sed -i -e "/^cross-${CTARGET}$/d" /etc/portage/categories
+	for f in package.{mask,keywords,use} ; do
 		f="/etc/portage/${f}"
-		[[ ! -e ${f} ]] && continue
-		sed -i -e "/cross-${CTARGET}\//d" "${f}"
+		if [[ -d ${f} ]] ; then
+			rm -f "${f}"/cross-${CTARGET}
+		elif [[ -f ${f} ]] ; then
+			sed -i -e "/cross-${CTARGET}\//d" "${f}"
+		fi
 	done
 
 	if [[ ! -d /var/db/pkg/cross-${CTARGET} ]] ; then
@@ -441,24 +445,41 @@ emerge --info >> ${PORT_LOGDIR}/cross-${CTARGET}-info.log
 ### Fix up portage files / paths ###
 
 set_keywords() {
-	local pkg=$1 ver=$2
+	local pkg=$1 ver=$2 output
 	[[ -z ${pkg} ]] && return 0
-	sed -i -e "/^cross-${CTARGET}\/${pkg} /d" package.keywords
-	if [[ ${ver} == "[latest]" ]] || [[ -z ${ver} ]] ; then
-		echo "cross-${CTARGET}/${pkg} $TARCH ~$TARCH" >> package.keywords
+	if [[ -f package.keywords ]] ; then
+		output="package.keywords"
+		sed -i -e "/^cross-${CTARGET}\/${pkg} /d" ${output}
 	else
-		sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.mask
-		echo ">cross-${CTARGET}/${pkg}-${ver}" >> package.mask
-		echo "cross-${CTARGET}/${pkg} * ~* -*" >> package.keywords
+		output="package.keywords/cross-${CTARGET}"
+		rm -f ${output}
+	fi
+	if [[ ${ver} == "[latest]" ]] || [[ -z ${ver} ]] ; then
+		echo "cross-${CTARGET}/${pkg} $TARCH ~$TARCH" >> ${output}
+	else
+		echo "cross-${CTARGET}/${pkg} * ~* -*" >> ${output}
+		if [[ -f package.mask ]] ; then
+			output="package.mask"
+			sed -i -e "/cross-${CTARGET}\/${pkg}/d" ${output}
+		else
+			output="package.mask/cross-${CTARGET}"
+			rm -f ${output}
+		fi
+		echo ">cross-${CTARGET}/${pkg}-${ver}" >> ${output}
 	fi
 }
 set_use() {
-	local pkg=$1
+	local pkg=$1 output
 	shift
 	local use=$@
 	[[ -z ${use} ]] && return 0
-	sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.use
-	echo "cross-${CTARGET}/${pkg} ${use}" >> package.use
+	if [[ -f package.use ]] ; then
+		output="package.use"
+		sed -i -e "/cross-${CTARGET}\/${pkg}/d" ${output}
+	else
+		output="package.use/cross-${CTARGET}"
+	fi
+	echo "cross-${CTARGET}/${pkg} ${use}" >> ${output}
 }
 set_links() {
 	local cat=$1 pkg=$2
@@ -490,7 +511,9 @@ grep -qs "^cross-${CTARGET}$" /etc/portage/categories \
 	|| echo cross-${CTARGET} >> /etc/portage/categories
 mkdir -p "${PORTDIR_OVERLAY}"/cross-${CTARGET}
 cd /etc/portage
-touch package.{keywords,mask,use}
+for f in package.{keywords,mask,use} ; do
+	[[ ! -e ${f} ]] && mkdir ${f}
+done
 
 set_portage ${BCAT} ${BPKG} ${BVER}
 set_portage ${GCAT} ${GPKG} ${GVER}
