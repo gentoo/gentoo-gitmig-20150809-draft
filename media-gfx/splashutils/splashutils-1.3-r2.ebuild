@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r2.ebuild,v 1.1 2006/08/08 22:01:02 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.3-r2.ebuild,v 1.2 2006/08/10 22:52:46 spock Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -67,11 +67,22 @@ src_unpack() {
 
 	epatch ${FILESDIR}/splashutils-1.3-r2.patch
 
+	# Make sure the static version of splash_util is linked against the nptl
+	# libraries and not the linuxthreads ones.
+	sed -i -e 's#$(LDLIBS) -static#$(LDLIBS) -L/usr/lib/nptl -static#' Makefile
+
 	# Check whether the kernel tree has been patched with fbsplash.
 	if [[ ! -e ${ROOT}/usr/$(get_libdir)/klibc/include/linux/console_splash.h ]]; then
 		ewarn "The kernel tree against which dev-libs/klibc was built was not patched"
 		ewarn "with a compatible version of fbsplash. Splashutils will be compiled"
 		ewarn "without fbsplash support (ie. verbose mode will not work)."
+	fi
+
+	if has_version sys-libs/glibc && ! built_with_use sys-libs/glibc nptl ; then
+		eerror "Your sys-libs/glibc has been built with support for linuxthreads only."
+		eerror "This package requires nptl to work correctly. Please recompile glibc"
+		eerror "with the 'nptl' USE flag enabled."
+		die "nptl not available"
 	fi
 
 	if built_with_use sys-devel/gcc vanilla ; then
