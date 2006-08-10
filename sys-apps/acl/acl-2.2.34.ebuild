@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.34.ebuild,v 1.2 2006/04/20 01:36:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.34.ebuild,v 1.3 2006/08/10 03:13:25 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND=">=sys-apps/attr-2.4
