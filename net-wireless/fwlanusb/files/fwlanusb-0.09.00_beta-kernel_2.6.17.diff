@@ -1,0 +1,52 @@
+--- src/tools.h.orig	2005-12-23 15:12:10.000000000 +0100
++++ src/tools.h	2006-08-10 18:20:38.000000000 +0200
+@@ -25,6 +25,7 @@
+ 
+ #include <asm/atomic.h>
+ #include <linux/types.h>
++#include <linux/version.h>
+ #include <linux/spinlock.h>
+ #include <stdarg.h>
+ #include "defs.h"
+@@ -72,12 +73,14 @@
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17))
+ static inline unsigned long atomic_xchg (
+ 	volatile atomic_t *	v, 
+ 	unsigned		value
+ ) {
+ 	return __xchg (value, &v->counter, sizeof (unsigned));
+ } /* atomic_xchg */
++#endif
+ 
+ /*---------------------------------------------------------------------------*\
+ \*---------------------------------------------------------------------------*/
+--- src/main.c.orig	2006-08-10 17:46:32.000000000 +0200
++++ src/main.c	2006-08-10 18:16:00.000000000 +0200
+@@ -20,6 +20,7 @@
+  * Contact: AVM GmbH, Alt-Moabit 95, 10559 Berlin, Germany, email: info@avm.de
+  */
+ 
++#include <linux/version.h>
+ #include <linux/kernel.h>
+ #include <linux/sched.h>
+ #include <linux/slab.h>
+@@ -62,11 +63,16 @@
+ 
+ struct usb_driver usb_driver = {
+ 
++#if (LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17))
+ 	.owner =	THIS_MODULE,
++#endif
+ 	.name =		TARGET,
+ 	.id_table =	usb_id_table,
+ 	.probe =	fwlanusb_probe,
+ 	.disconnect =	fwlanusb_disconnect,
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17))
++	.no_dynamic_id = 1,
++#endif
+ } ;
+ 
+ MODULE_DEVICE_TABLE (usb, usb_id_table);
