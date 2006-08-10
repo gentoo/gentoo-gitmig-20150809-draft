@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5718 2006/08/10 05:53:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5719 2006/08/10 10:14:58 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -172,10 +172,6 @@ media-video/yanc
 # scheduled for removal.
 media-libs/tunepimp
 media-sound/trm
-
-# Alec Warner <antarus@gentoo.org> (24 Jul 2006)
-# removal by treecleaners, see bug # 140792
-sys-apps/qtparted
 
 # Luis Medinas <metalgod@gentoo.org> (23 Jul 2006)
 # Marked for removal see bug #132449
