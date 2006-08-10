@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.42 2006/08/09 20:50:13 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.43 2006/08/10 03:49:03 tsunam Exp $
+
+  10 Aug 2006; Joshua Jackson <tsunam@gentoo.org>
+  activerecord-1.14.4.ebuild:
+  Stable x86; bug #143369
 
   09 Aug 2006; Thomas Cort <tcort@gentoo.org> activerecord-1.14.4.ebuild:
   Stable on amd64.
