@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5719 2006/08/10 10:14:58 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5720 2006/08/10 22:42:16 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -45,6 +45,8 @@ sys-kernel/openmosix-sources
 sys-cluster/openmosixview
 sys-cluster/openmosixtest
 sys-cluster/openmosix-user
+sys-cluster/openmosixwebview
+sys-cluster/openmosix-3dmon-stats
 
 # Jonathan Smith <smithj@gentoo.org> (07 Aug 2006)
 # pending removal
