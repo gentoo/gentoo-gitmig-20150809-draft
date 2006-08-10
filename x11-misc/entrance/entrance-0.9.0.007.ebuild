@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.007.ebuild,v 1.2 2006/08/10 23:36:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.007.ebuild,v 1.3 2006/08/10 23:47:25 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -26,6 +26,7 @@ src_compile() {
 	else
 		export MY_ECONF="--with-auth-mode=shadow"
 	fi
+	MY_ECONF="${MY_ECONF} $(use_enable pam)"
 	enlightenment_src_compile
 }
 
