@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.8.ebuild,v 1.6 2006/08/06 00:28:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.8.ebuild,v 1.7 2006/08/10 14:01:21 cardoe Exp $
 
 # this is an RT dependency
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/J/JE/JESSE/${P}.readme"
 SRC_TEST="do"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="ia64 ~ppc sparc x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 
 DEPEND="dev-perl/text-autoformat
 	dev-perl/Text-Tabs+Wrap
