@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/packages,v 1.4 2004/12/02 14:25:58 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/packages,v 1.5 2006/08/10 15:18:26 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -13,5 +13,3 @@
 >=sys-kernel/hardened-sources-2.4.22
 >=sys-kernel/gentoo-dev-sources-2.6.0
 ##############################################################################
-
-*sys-devel/bin86

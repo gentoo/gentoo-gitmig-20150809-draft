@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/x86/packages,v 1.1 2005/04/02 15:48:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/x86/packages,v 1.2 2006/08/10 15:18:26 pebenito Exp $
 
 ##############################################################################
 # SELinux required versionings
@@ -9,5 +9,3 @@
 >=sys-boot/grub-0.94
 
 ##############################################################################
-
-*sys-devel/bin86
