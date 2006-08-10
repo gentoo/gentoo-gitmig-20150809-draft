@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.5 2006/07/01 19:38:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.6 2006/08/10 18:30:10 hansmi Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -92,14 +92,14 @@ src_unpack() {
 		fi
 	fi
 
-	if [[ -n "${QMAIL_PATCH_DIR}" ]]
+	if [[ -n "${QMAIL_PATCH_DIR}" && -d "${QMAIL_PATCH_DIR}" ]]
 	then
 		echo
 		ewarn "You enabled custom patches from ${QMAIL_PATCH_DIR}."
 		ewarn "Be warned that you won't get any support when using "
 		ewarn "this feature. You're on your own from now!"
 		ebeep
-		EPATCH_SOURCE="${QMAIL_PATCH_DIR}" epatch
+		epatch "${QMAIL_PATCH_DIR}/"*
 		echo
 	fi
 

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.14 2006/07/01 19:38:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.15 2006/08/10 18:30:10 hansmi Exp $
+
+  10 Aug 2006; Michael Hanselmann <hansmi@gentoo.org>
+  netqmail-1.05-r4.ebuild:
+  Fixed QMAIL_PATCH_DIR implementation, reported by Pedro Venda.
 
   01 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   +files/tcprules.d-Makefile.qmail, netqmail-1.05-r4.ebuild:
