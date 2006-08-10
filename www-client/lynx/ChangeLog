@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.35 2006/06/10 09:21:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.36 2006/08/10 08:31:54 exg Exp $
+
+  10 Aug 2006; Emanuele Giaquinta <exg@gentoo.org> lynx-2.8.5-r3.ebuild,
+  lynx-2.8.6_pre18.ebuild:
+  Limit emake to -j1, see bug #124562.
 
   10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> lynx-2.8.5-r3.ebuild:
   Stable on ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6_pre18.ebuild,v 1.3 2006/06/30 02:40:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6_pre18.ebuild,v 1.4 2006/08/10 08:31:54 exg Exp $
 
 inherit eutils versionator
 
@@ -60,7 +60,7 @@ src_compile() {
 		$(use_with bzip2 bzlib) \
 		${myconf} || die
 
-	emake || die
+	emake -j1 || die
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.13 2006/06/30 02:40:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.5-r3.ebuild,v 1.14 2006/08/10 08:31:54 exg Exp $
 
 inherit eutils flag-o-matic
 
@@ -55,7 +55,7 @@ src_compile() {
 		$(use_enable cjk) \
 		${myconf} || die
 
-	emake || die "compile problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install() {
