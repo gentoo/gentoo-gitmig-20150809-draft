@@ -1,6 +1,17 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.404 2006/07/28 13:25:07 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.405 2006/08/10 14:05:24 lu_zero Exp $
+
+  10 Aug 2006; Luca Barbato <lu_zero@gentoo.org>
+  -files/mplayer-1.0_pre7-gcc4-amd64.patch,
+  -files/mplayer-1.0_pre7-gcc4.patch,
+  -files/mplayer-1.0_pre7-gcc_detection.patch,
+  -files/mplayer-1.0_pre7-ppc64.patch,
+  -files/gcc-3-register_allocation.patch, -files/mplayer-mythtv.patch,
+  -mplayer-1.0_pre7-r1.ebuild, -mplayer-1.0.20060102.ebuild,
+  -mplayer-1.0.20060217.ebuild, -mplayer-1.0.20060302.ebuild,
+  -mplayer-1.0.20060408.ebuild, -mplayer-1.0.20060415.ebuild:
+  Cleanup
 
   28 Jul 2006; Chris Bainbridge <chrb@gentoo.org> mplayer-1.0_pre8.ebuild,
   mplayer-1.0_pre8-r1.ebuild:
