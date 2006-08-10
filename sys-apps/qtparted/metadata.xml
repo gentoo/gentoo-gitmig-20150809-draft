@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>maintainer-needed</herd>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>kevquinn@gentoo.org</email>
+		<name>Kevin F. Quinn</name>
+	</maintainer>
+	<longdescription lang="en">
+		Disk partition manager in the style of Partition Magic.  Provides
+		a QT front-end (good for KDE) using libparted backend.
+	</longdescription>
 </pkgmetadata>
+

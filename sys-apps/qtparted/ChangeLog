@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/qtparted
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.24 2006/04/27 22:39:37 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.25 2006/08/10 10:06:39 kevquinn Exp $
+
+*qtparted-0.4.5 (10 Aug 2006)
+
+  10 Aug 2006; Kevin F. Quinn <kevquinn@gentoo.org> metadata.xml,
+  +qtparted-0.4.5.ebuild:
+  Revision bump, bug #111026; also resolves bug #101307
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-qtparted-0.4.4,
   Manifest:
