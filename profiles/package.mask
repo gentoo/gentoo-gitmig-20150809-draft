@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5716 2006/08/09 19:44:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5717 2006/08/10 04:52:16 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,6 +42,9 @@ x11-plugins/gaim-libnotify
 # Bugs #135167, #137623, #137626, #138617, #139321,
 # #139475, #139641, #140444, #141503, #142616, #142617 
 sys-kernel/openmosix-sources
+sys-cluster/openmosixview
+sys-cluster/openmosixtest
+sys-cluster/openmosix-user
 
 # Jonathan Smith <smithj@gentoo.org> (07 Aug 2006)
 # pending removal
