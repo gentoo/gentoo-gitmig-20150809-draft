@@ -38,15 +38,11 @@
   (format t "~
 Welcome to the Gentoo GNU/Linux port of CMUCL.
 
-If you aren't running this with ILISP (see: app-emacs/ilisp or
-app-xemacs/ilisp) in Emacs, or don't intend to use Hemlock
-(see: dev-lisp/cmucl-source) then you deserve to lose. :-)
-
 The CMUCL REPL does not have GNU Readline-like support, however
 you may wish to install rlwap (see: app-misc/rlwrap) to achieve
 the same effect.
 
-If you think you found a bug, please use http://bugs.gentoo.org
+If you think you found a bug, please use http://bugs.gentoo.org/
 
 Read the documentation in /usr/share/doc/@PF@.
 
