@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/mico
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.12 2006/08/09 18:37:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.13 2006/08/10 13:38:47 cardoe Exp $
 
-  09 Aug 2006; <dougg@gentoo.org> mico-2.3.7.ebuild, mico-2.3.9.ebuild,
+  09 Aug 2006; Doug Goldstein <cardoe@gentoo.org> mico-2.3.7.ebuild, mico-2.3.9.ebuild,
   mico-2.3.11.ebuild, mico-2.3.11-r1.ebuild:
   fixed qt USE flag and tcltk USE flag to conform to bug #137785
 
