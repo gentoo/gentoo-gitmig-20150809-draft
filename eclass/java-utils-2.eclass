@@ -1062,7 +1062,7 @@ java-pkg_get-current-vm() {
 }
 
 java-pkg_current-vm-matches() {
-	hasq java-pkg_get-currenv-vm ${@}
+	hasq $(java-pkg_get-current-vm) ${@}
 	return $?
 }
 
