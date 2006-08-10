@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.18.ebuild,v 1.9 2006/01/31 23:58:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-1.1.18.ebuild,v 1.10 2006/08/10 21:20:18 liquidx Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.initd.org/software/psycopg"
 
 DEPEND="virtual/python
 	>=dev-python/egenix-mx-base-2.0.3
-	>=dev-db/postgresql-7.1.3"
+	>=dev-db/libpq-7.1.3"
 
 SLOT="0"
 KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
