@@ -74,7 +74,7 @@
  
 -echo "exec $execute $Eoptions $lflag -Q '$savefile' \$* $*" >$execfile
 +echo "QPPATH=@prefix@/bin:$QPHOME/bin" >$execfile
-+echo "QPLIBPATH=$QPHOME/compiler:$QPHOME/library" >>$execfile
++echo "QPLIBPATH=$QPHOME/compiler:$QPHOME/library:$QPLIBPATH" >>$execfile
 +echo "export QPPATH QPLIBPATH" >>$execfile
 +echo "exec $execute $Eoptions $lflag -Q '$savefile' \$* $*" >>$execfile
  chmod a+x $execfile
@@ -192,7 +192,7 @@
 -	$(COMPILE.qc) -o $(PROGRAM) $(OBJECTS)
 +	@QPHOME@/src/ql -o $(SAVEFILE) @QPHOME@/prolog/compiler/*.qo @QPHOME@/prolog/library/*.qo $(OBJECTS)
 +	@echo "QPPATH=@prefix@/bin:$(QPHOME)/bin" >$(PROGRAM)
-+	@echo "QPLIBPATH=$(QPHOME)/compiler:$(QPHOME)/library" >>$(PROGRAM)
++	@echo -e "QPLIBPATH=$(QPHOME)/compiler:$(QPHOME)/library:\044QPLIBPATH:." >>$(PROGRAM)
 +	@echo "export QPPATH QPLIBPATH" >>$(PROGRAM)
 +	@echo -e "exec qem -Q $(QPHOME)/bin/$(SAVEFILE) \044\052" >>$(PROGRAM)
  
