@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/porthole
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.25 2006/08/05 18:37:51 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porthole/ChangeLog,v 1.26 2006/08/10 16:24:41 truedfx Exp $
+
+  10 Aug 2006; Harald van Dĳk <truedfx@gentoo.org> porthole-0.4.1.ebuild:
+  Modify gnome check to work with built_with_use changes
 
   05 Aug 2006; Harald van Dĳk <truedfx@gentoo.org> porthole-0.4.1.ebuild:
   Disable USE=gnome check for recent pygtk (#110961)
