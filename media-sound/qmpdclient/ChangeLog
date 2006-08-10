@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.5 2006/07/31 22:30:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.6 2006/08/10 19:59:45 jer Exp $
+
+  10 Aug 2006; Jeroen Roovers <jer@gentoo.org> qmpdclient-1.0.5.ebuild:
+  Marked ~hppa.
 
 *qmpdclient-1.0.5 (31 Jul 2006)
 
