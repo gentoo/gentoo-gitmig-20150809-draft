@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.31 2006/08/01 00:40:32 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.32 2006/08/10 23:34:36 ticho Exp $
+
+*mpd-svn-20060810 (10 Aug 2006)
+
+  10 Aug 2006; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20060810.ebuild:
+  Snapshot update. Use the rc1 tarball, in fact.
 
   01 Aug 2006; Andrej Kacian <ticho@gentoo.org> mpd-svn-20060723.ebuild:
   Actually remove the glib dependency. Use flag mp3 instead of mad for mp3/id3
