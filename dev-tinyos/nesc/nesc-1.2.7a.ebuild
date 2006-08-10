@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.7a.ebuild,v 1.1 2006/08/09 19:30:02 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tinyos/nesc/nesc-1.2.7a.ebuild,v 1.2 2006/08/10 20:20:48 sanchan Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ DEPEND=">=dev-lang/perl-5.8.5-r2
 RDEPEND=">=dev-lang/perl-5.8.5-r2
 	>=dev-tinyos/tos-1.1.0
 	>=virtual/jre-1.4.2
-	dev-perl/XML-Simple"
+	dev-perl/XML-Simple
+	media-gfx/graphviz"
 
 pkg_setup() {
 	if [ -z "${TOSDIR}" ]
@@ -57,4 +58,11 @@ src_install() {
 	dodoc doc/README
 	newdoc tools/java/net/tinyos/nesc/dump/README README.dump
 	newdoc tools/java/net/tinyos/nesc/wiring/README README.wiring
+}
+
+pkg_postinst() {
+	elog "If you want better support for nesc language editing, see the"
+	elog "readme.txt files for your editor in /usr/share/ncc/editor-modes"
+	ebeep 5
+	epause 5
 }
