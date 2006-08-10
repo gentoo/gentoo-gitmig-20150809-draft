@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>fonts</herd>
 <maintainer>
-  <email>robbat2@gentoo.org</email>
+	<email>robbat2@gentoo.org</email>
+	<description>Maintainer and upstream author.</description>
 </maintainer>
 </pkgmetadata>
