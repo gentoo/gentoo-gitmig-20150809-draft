@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.61 2006/08/09 20:25:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.62 2006/08/11 21:40:04 dragonheart Exp $
+
+  11 Aug 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/seahorse-0.7.6-gnome-2.10.patch,
+  -files/seahorse-0.7.9-gedit-2.12.patch, metadata.xml,
+  -seahorse-0.7.6.ebuild, -seahorse-0.7.8.ebuild, -seahorse-0.7.9.ebuild:
+  removed seahorse-0.7* (former development series) and removed myself as a
+  maintainer.
 
   09 Aug 2006; Danny van Dyk <kugelfang@gentoo.org> seahorse-0.8.1.ebuild:
   Marke stable on amd64 wrt bug #130624.

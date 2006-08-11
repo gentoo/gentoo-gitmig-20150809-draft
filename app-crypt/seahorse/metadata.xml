@@ -6,12 +6,6 @@
 	<email>gnome@gentoo.org</email>
 	<description>Maintainers of the stable branch 0.6* and 0.8*</description>
 </maintainer>
-<maintainer>
-	<email>dragonheart@gentoo.org</email>
-	<description>Maintainer of the unstable branch 0.7*. Note this has been introduced out of 
-	courtesy. This is an unstable branch so I won't be jumping on every problem that occurs.
-	</description>
-</maintainer>
 <longdescription>Seahorse is a Gnome interface for GnuPG.  It's main purpose is to be a PGP/GPG Key Manager, though 
 it has other components including a text editor and file manager.
 
