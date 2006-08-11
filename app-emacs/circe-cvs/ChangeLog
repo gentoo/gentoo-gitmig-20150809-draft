@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/circe-cvs
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe-cvs/ChangeLog,v 1.1 2006/08/11 01:18:24 mkennedy Exp $
+
+*circe-cvs-20060810 (10 Aug 2006)
+
+  10 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50circe-cvs-gentoo.el, +metadata.xml, +circe-cvs-20060810.ebuild:
+  Initial port. Ebuild contributed by Tassilo Horn <thorn@fastmail.fm>;
+  Resolves Bug #143472.
+
