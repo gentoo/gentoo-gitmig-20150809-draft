@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/misdnuser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/ChangeLog,v 1.4 2006/04/27 21:40:15 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdnuser/ChangeLog,v 1.5 2006/08/11 21:28:16 genstef Exp $
+
+*misdnuser-0.1_pre20060810 (11 Aug 2006)
+
+  11 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  -misdnuser-0.1_pre20060307.ebuild, +misdnuser-0.1_pre20060810.ebuild:
+  version bump, use tarball again, remove old ebuilds
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
