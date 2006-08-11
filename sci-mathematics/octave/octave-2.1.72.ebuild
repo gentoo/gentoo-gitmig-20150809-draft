@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.9 2006/08/05 08:14:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.72.ebuild,v 1.10 2006/08/11 21:30:44 corsair Exp $
 
 inherit flag-o-matic fortran
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 
 SLOT="0"
 IUSE="emacs static readline zlib doc hdf5 mpi blas"
-KEYWORDS="~alpha ~amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ppc ppc64 sparc x86"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r3
