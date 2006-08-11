@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.48 2006/08/10 02:08:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.49 2006/08/11 19:19:19 dang Exp $
+
+  11 Aug 2006; Daniel Gryniewicz <dang@gentoo.org> liferea-1.0.20.ebuild,
+  liferea-1.0.21.ebuild:
+  liferea deps on gnome-open, which is in libgnome
 
 *liferea-1.0.21 (10 Aug 2006)
 
