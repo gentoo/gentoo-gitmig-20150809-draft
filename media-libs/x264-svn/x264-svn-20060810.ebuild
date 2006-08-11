@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060810.ebuild,v 1.1 2006/08/10 15:27:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264-svn/x264-svn-20060810.ebuild,v 1.2 2006/08/11 10:23:15 christel Exp $
 
 inherit multilib eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="mp4? ( >=media-video/gpac-0.4.1_pre20060122 )"
 
