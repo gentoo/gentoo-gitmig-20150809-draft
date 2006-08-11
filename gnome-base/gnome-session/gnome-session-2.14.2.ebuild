@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.6 2006/07/17 18:03:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.14.2.ebuild,v 1.7 2006/08/11 20:40:38 dang Exp $
 
 inherit eutils gnome2
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.10.40
 	>=dev-util/pkgconfig-0.17
 	dev-util/intltool
+	=sys-devel/automake-1.9*
 	!gnome-base/gnome-core"
 
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
@@ -53,7 +54,6 @@ src_unpack() {
 	#support notification support at this time
 	epatch ${FILESDIR}/${PN}-2.14.0-no_libnotify.patch
 
-	export WANT_AUTOMAKE=1.9.6
 	cp aclocal.m4 old_macros.m4
 	aclocal -I . || die "aclocal failed"
 	autoconf || die "autoconf failed"
