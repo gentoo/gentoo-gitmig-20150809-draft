@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-EBUILD fortune-mod-all-1.ebuild 1756 RMD160 5c12a10502b0f5c3c9e3478936a2aa1752f5fee8 SHA1 3fafde74d2b27a4ab6f5b34dc22141480b0b18b1 SHA256 1d093fa6cb5a004e1fc333b8ed48ca06b4d0b7c84640892b07d6832be961ba19
-MD5 f9c45227e66b29b6ea1121208dd1ceba fortune-mod-all-1.ebuild 1756
-RMD160 5c12a10502b0f5c3c9e3478936a2aa1752f5fee8 fortune-mod-all-1.ebuild 1756
-SHA256 1d093fa6cb5a004e1fc333b8ed48ca06b4d0b7c84640892b07d6832be961ba19 fortune-mod-all-1.ebuild 1756
+EBUILD fortune-mod-all-1.ebuild 1683 RMD160 8f0ffedba4a1bc5f3f37ba5537dcd79f6729c83f SHA1 b0277975ea2a86f1c2256564fa8bc502cbe190a4 SHA256 01f31d7ed44fde838c057c512c58585da15d34787cdf9aa3754f87b37de7c3eb
+MD5 6353f8b1fe28e1ffa7f205d9ce981a03 fortune-mod-all-1.ebuild 1683
+RMD160 8f0ffedba4a1bc5f3f37ba5537dcd79f6729c83f fortune-mod-all-1.ebuild 1683
+SHA256 01f31d7ed44fde838c057c512c58585da15d34787cdf9aa3754f87b37de7c3eb fortune-mod-all-1.ebuild 1683
 MISC ChangeLog 1470 RMD160 df4acf6d8a30febbb2a30ebbc6544b4fcb0ec8cc SHA1 6728a9daaf5a51042cc867859c1fdfd7037d9dcd SHA256 2f1eb60cbd17d6f63c634bb5b1d29b31d787aa9a37c0e3631a91561fcb233e5b
 MD5 6c3fe9b373af1fce87ad54cdb1b605fe ChangeLog 1470
 RMD160 df4acf6d8a30febbb2a30ebbc6544b4fcb0ec8cc ChangeLog 1470
@@ -19,7 +19,7 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFEvuOMamhnQswr0vIRAt2jAKCNoSAuHqC47ItrTdXN9LdSX2jEaACfY06h
-XEQeKyrZRkYniZ5Dxd6zVBc=
-=/kOs
+iD8DBQFE2+sFamhnQswr0vIRAuU9AKCZtLqqZAdAKsRAf6krp9alJfV8RwCeM5Fc
+7Wh5lnQtdHVRjdxDnUgUMds=
+=UiWM
 -----END PGP SIGNATURE-----
