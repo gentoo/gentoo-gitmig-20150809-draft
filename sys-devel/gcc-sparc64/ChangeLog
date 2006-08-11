@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-sparc64
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.36 2006/08/11 14:45:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.37 2006/08/11 16:59:55 gustavoz Exp $
+
+  11 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> ChangeLog:
+  Fix digest, bleh me
 
 *gcc-sparc64-4.0.3 (11 Aug 2006)
 
