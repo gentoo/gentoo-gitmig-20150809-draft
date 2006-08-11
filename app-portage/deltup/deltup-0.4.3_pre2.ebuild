@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.3_pre2.ebuild,v 1.1 2006/08/11 23:39:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.3_pre2.ebuild,v 1.2 2006/08/11 23:42:57 genstef Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -42,7 +42,7 @@ src_compile () {
 
 src_install () {
 	emake DESTDIR=${D} install || die "emake install failed"
-	dodoc README ChangeLog GENTOO
+	dodoc README ChangeLog
 	doman deltup.1
 
 	dobin ${WORKDIR}/bzip2-1.0.2/bzip2_old
