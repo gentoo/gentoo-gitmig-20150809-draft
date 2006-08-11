@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/use.mask,v 1.5 2006/07/19 18:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/use.mask,v 1.6 2006/08/11 00:17:11 pebenito Exp $
+
+-n32
+-n64
 
 # Henrik Brix Andersen <brix@gentoo.org>
 # According to the mips herd, we currently have no way of testing
