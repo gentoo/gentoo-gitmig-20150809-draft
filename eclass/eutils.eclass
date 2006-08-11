@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.246 2006/08/06 20:20:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.247 2006/08/11 02:21:47 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1583,6 +1583,7 @@ built_with_use() {
 	[[ ${opt:0:1} = "-" ]] && shift || opt="-a"
 
 	local PKG=$(best_version $1)
+	[[ -z ${PKG} ]] && die "Unable to resolve $1 to an installed package"
 	shift
 
 	local USEFILE=${ROOT}/var/db/pkg/${PKG}/USE
