@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/gputils-0.13.3-r1.ebuild,v 1.4 2006/08/03 01:07:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/gputils-0.13.3-r1.ebuild,v 1.5 2006/08/11 05:10:19 tsunam Exp $
 
 DESCRIPTION="Collection of tools including assembler, linker and librarian for PIC microcontrollers."
 HOMEPAGE="http://gputils.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/gputils/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc ~x86"
+KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=""
