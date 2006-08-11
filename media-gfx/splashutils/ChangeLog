@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.64 2006/08/10 22:52:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.65 2006/08/11 18:37:46 spock Exp $
+
+  11 Aug 2006; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.3-r2.ebuild:
+  Add a dependency on klibc-1.4.13 or newer to allow clean compilation with
+  ccache (bug #143594).
 
   10 Aug 2006; Michał Januszewski <spock@gentoo.org>
   splashutils-1.3-r2.ebuild:
