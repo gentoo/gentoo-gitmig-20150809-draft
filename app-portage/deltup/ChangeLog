@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/deltup
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.11 2005/08/13 23:55:01 yoswink Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.12 2006/08/11 23:39:51 genstef Exp $
+
+*deltup-0.4.3_pre2 (11 Aug 2006)
+
+  11 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  +deltup-0.4.3_pre2.ebuild:
+  version bump thanks to Hub441
 
   13 Aug 2005; Jose Luis Rivero <yoswink@gentoo.org> deltup-0.4.2-r1.ebuild:
   Keyworded ~alpha wrt #93379 deltup-0.4.2-r1.ebuild
