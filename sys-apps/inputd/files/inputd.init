@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/files/inputd.init,v 1.1 2006/08/11 22:30:51 killerfox Exp $
+
+depend() {
+    need logger
+}
+
+start() {
+    ebegin "Starting inputd"
+        start-stop-daemon --start --quiet --background --exec /usr/sbin/inputd
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping inputd"
+        start-stop-daemon --stop --quiet --name inputd
+    eend $?
+}
