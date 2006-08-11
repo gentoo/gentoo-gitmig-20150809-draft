@@ -1,0 +1,33 @@
+diff -Naur kino-0.9.0.bak/src/frame.h kino-0.9.0/src/frame.h
+--- kino-0.9.0.bak/src/frame.h	2006-08-09 19:44:42.000000000 -0400
++++ kino-0.9.0/src/frame.h	2006-08-09 20:29:05.000000000 -0400
+@@ -313,7 +313,7 @@
+ 	}
+ 	void Resample( input_t *input, double input_rate, int channels, int samples )
+ 	{
+-		src_short_to_float_array( input, input_buffer, samples * channels );
++		src_short_to_float_array((const short int*) input, input_buffer, samples * channels );
+ 
+ 		// Setup resampler
+ 		data.input_frames = samples;
+@@ -513,7 +513,7 @@
+ 	{
+ 		int out_samples = src_callback_read( m_state, rate / m_rate, samples, m_internalOutput );
+ // cerr << "AsyncAudioResample::Process rate " << rate << " req samples " << samples << " out samples " << out_samples << endl;
+-		src_float_to_short_array( m_internalOutput, m_output, out_samples * m_channels );
++		src_float_to_short_array( m_internalOutput, (short int*)  m_output, out_samples * m_channels );
+ 		return out_samples;
+ 	}
+ 
+diff -Naur kino-0.9.0.bak/src/page_export_audio.cc kino-0.9.0/src/page_export_audio.cc
+--- kino-0.9.0.bak/src/page_export_audio.cc	2006-08-09 19:44:43.000000000 -0400
++++ kino-0.9.0/src/page_export_audio.cc	2006-08-09 20:11:25.000000000 -0400
+@@ -215,7 +215,7 @@
+ 
+ 				int requestedSamples = frame.CalculateNumberSamples( resampleRate, j );
+ 				int nsamples = resampler->Process( adjustedRate, requestedSamples );
+-				if ( nsamples > 0 && !outputPipe->OutputAudioFrame( resampler->GetOutput(), nsamples * channels * sizeof(int16_t) ) )
++				if ( nsamples > 0 && !outputPipe->OutputAudioFrame( (short int *)resampler->GetOutput(), nsamples * channels * sizeof(int16_t) ) )
+ 				{
+ 					modal_message( _( "Error during audio export - aborting." ) );
+ 					status = EXPORT_RESULT_FAILURE;

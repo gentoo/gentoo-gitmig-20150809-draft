@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.0.ebuild,v 1.3 2006/06/14 17:38:18 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.9.0.ebuild,v 1.4 2006/08/11 02:24:10 josejx Exp $
+
+inherit eutils
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -42,6 +44,8 @@ src_unpack() {
 	if ! use alsa ; then
 		sed -i -e "s:HAVE_ALSA 1:HAVE_ALSA 0:" configure || die "sed failed!"
 	fi
+
+	epatch ${FILESDIR}/${P}-compile-fix.patch
 }
 
 src_compile() {
