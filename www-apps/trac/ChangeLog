@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.39 2006/07/13 18:19:15 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.40 2006/08/11 14:30:09 betelgeuse Exp $
+
+  11 Aug 2006; Petteri Räty <betelgeuse@gentoo.org> trac-0.9.6.ebuild:
+  Added a check for clearsilver being built with USE=python. Resolves bug
+  #143572.
 
   13 Jul 2006; Joshua Jackson <tsunam@gentoo.org> trac-0.9.6.ebuild:
   stable x86; security bug #139467

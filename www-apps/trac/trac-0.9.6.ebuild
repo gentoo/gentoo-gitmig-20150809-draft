@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.6.ebuild,v 1.3 2006/07/13 18:19:15 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.9.6.ebuild,v 1.4 2006/08/11 14:30:09 betelgeuse Exp $
 
 inherit distutils webapp
 
@@ -45,6 +45,16 @@ pkg_setup () {
 		die "pkg_setup failed"
 	fi
 
+	if ! built_with_use dev-libs/clearsilver python ; then
+		eerror "Your clearsilver has been built without python bindings,"
+		eerror "please enable the 'python' useflag and recompile"
+		eerror "dev-libs/clearsilver."
+		eerror ""
+		eerror "See the Handbook for more information about use flags:"
+		eerror "http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=2&chap=2"
+		die "clearsilver built without python support"
+	fi
+
 	ebegin "Creating tracd group and user"
 	enewgroup tracd
 	enewuser tracd -1 -1 -1 tracd
@@ -86,6 +96,6 @@ src_install () {
 
 	webapp_src_install
 
-	cp ${FILESDIR}/tracd.confd ${T}/tracd && doconfd ${T}/tracd
-	cp ${FILESDIR}/tracd.initd ${T}/tracd && doinitd ${T}/tracd
+	newconfd "${FILESDIR}"/tracd.confd tracd
+	newinitd "${FILESDIR}"/tracd.initd tracd
 }
