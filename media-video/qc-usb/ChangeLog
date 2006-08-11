@@ -1,6 +1,11 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.15 2006/05/29 19:42:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.16 2006/08/11 08:32:17 liquidx Exp $
+
+  11 Aug 2006; Alastair Tse <liquidx@gentoo.org>
+  +files/qc-usb-0.6.4-koutput.patch, qc-usb-0.6.4.ebuild:
+  added patch for makefile to use OUTPUT_DIR when installing. thanks to Sourav
+  Mandal (#135630)
 
 *qc-usb-0.6.4 (29 May 2006)
 

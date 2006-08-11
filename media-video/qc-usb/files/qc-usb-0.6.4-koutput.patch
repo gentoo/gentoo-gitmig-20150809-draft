@@ -1,0 +1,58 @@
+diff -urN qc-usb-0.6.4.old/Makefile qc-usb-0.6.4/Makefile
+--- qc-usb-0.6.4.old/Makefile	2006-05-02 06:18:30.000000000 -0700
++++ qc-usb-0.6.4/Makefile	2006-06-05 05:29:25.000000000 -0700
+@@ -41,7 +41,7 @@
+ MODULE_DIR := /lib/modules/$(shell uname -r)
+ else
+ # Note: the brackets on line below contain a space and a _tab_!
+-RELEASE := $(shell awk -F \" '/[ 	]*\#[ 	]*define[ 	]*UTS_RELEASE[ 	]*/ { print $$2 }' $(LINUX_DIR)/include/linux/version.h|tail -n 1)
++RELEASE := $(shell awk -F \" '/[ 	]*\#[ 	]*define[ 	]*UTS_RELEASE[ 	]*/ { print $$2 }' $(OUTPUT_DIR)/include/linux/version.h|tail -n 1)
+ MODULE_DIR := /lib/modules/$(RELEASE)
+ endif
+ endif
+@@ -51,6 +51,11 @@
+ LINUX_DIR := $(MODULE_DIR)/build
+ endif
+ 
++# Due to delayed subsitution, can handle OUTPUT_DIR here
++ifndef OUTPUT_DIR
++OUTPUT_DIR := $(LINUX_DIR)
++endif
++
+ ifndef USER_OPT
+ USER_OPT := 
+ endif
+@@ -60,7 +65,7 @@
+ DEPMOD  := $(shell which depmod || which /sbin/depmod || echo "true You should now run depmod")
+ 
+ # Get VERSION_CODE (from version.h in kernel source directory)
+-VERSION_CODE := $(shell awk '/[ 	]*\#[ 	]*define[ 	]*LINUX_VERSION_CODE[ 	]*/ { print $$3 }' $(LINUX_DIR)/include/linux/version.h|tail -n 1)
++VERSION_CODE := $(shell awk '/[ 	]*\#[ 	]*define[ 	]*LINUX_VERSION_CODE[ 	]*/ { print $$3 }' $(OUTPUT_DIR)/include/linux/version.h|tail -n 1)
+ 
+ ifeq ($(shell if [ $(VERSION_CODE) -ge 132608 ]; then echo y; fi),y)
+ MODULE_NAME := quickcam.ko	# for 2.6.x
+@@ -76,6 +81,7 @@
+ 	@echo "make all - Compile driver and utilities against current running kernel"
+ 	@echo "make all USER_OPT=-DDEBUG - Compile with debugging code and messages"
+ 	@echo "make all LINUX_DIR=/usr/src/linux - Compile against specified kernel source"
++	@echo "make all OUTPUT_DIR=/var/tmp/kernel-output/2.6.13 - Specifiy binary output dir"
+ 	@echo "make install - Copy driver and utilities into standard locations (needs root)"
+ 	@echo "make install PREFIX=/usr - Copy utilities to /usr/bin instead of /usr/local/bin"
+ 	@echo "make install MODULE_DIR=/lib/modules/2.4.0 - Copy module to /lib/modules/2.4.0/misc"
+@@ -93,6 +99,7 @@
+ 	@echo "Current configuration:"
+ 	@echo "Driver source directory (PWD):         $(PWD)"
+ 	@echo "Kernel source directory (LINUX_DIR):   $(LINUX_DIR)"
++	@echo "Kernel output directory (OUTPUT_DIR):  $(OUTPUT_DIR)"
+ 	@echo "Module install directory (MODULE_DIR): $(MODULE_DIR)"
+ 	@echo "Utility install directory (PREFIX):    $(PREFIX)"
+ 	@echo "User options (USER_OPT):               $(USER_OPT)"
+@@ -115,7 +122,7 @@
+ else
+ # No, 2.4.x or older
+ 
+-MODULE_INC    := -I$(LINUX_DIR)/include -nostdinc -iwithprefix include
++MODULE_INC    := -I$(LINUX_DIR)/include -I$(OUTPUT_DIR)/include -nostdinc -iwithprefix include
+ MODULE_DEF    := -DMODULE -D__KERNEL__ -DNOKERNEL
+ MODULE_OPT    := -O2 -fomit-frame-pointer -fno-strict-aliasing -fno-common
+ MODULE_WARN   := -Wall -Wstrict-prototypes -Wno-trigraphs
