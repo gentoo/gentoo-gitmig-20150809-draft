@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.4-r1.ebuild,v 1.1 2006/07/30 13:45:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.4-r1.ebuild,v 1.2 2006/08/11 15:46:49 gustavoz Exp $
 
 inherit eutils libtool # autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86-fbsd ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86-fbsd ~x86"
 
 IUSE="alsa avahi caps jack lirc oss tcpd X"
 
