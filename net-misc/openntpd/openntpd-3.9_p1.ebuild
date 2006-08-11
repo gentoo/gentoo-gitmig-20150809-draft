@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1.ebuild,v 1.1 2006/05/29 13:57:39 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1.ebuild,v 1.2 2006/08/11 17:40:27 bangert Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ pkg_setup() {
 	enewgroup ntp 123
 	enewuser ntp 123 -1 /var/empty ntp
 
-	if ! built_with_use net-misc/ntp openntpd ; then
+	if has_version net-misc/ntp && ! built_with_use net-misc/ntp openntpd ; then
 		die "you need to emerge ntp with USE=openntpd"
 	fi
 }
