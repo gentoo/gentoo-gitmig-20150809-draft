@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.7.8.ebuild,v 1.1 2006/07/01 11:42:12 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.7.8.ebuild,v 1.2 2006/08/11 23:10:24 weeve Exp $
 
 DESCRIPTION="A small Jabber console client that includes features such as SSL
 support, MUC (Multi-User Chat) support, history logging, commands completion,
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 
 IUSE="ssl"
 
