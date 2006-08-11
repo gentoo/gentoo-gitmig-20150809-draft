@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.76 2006/08/11 10:57:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.77 2006/08/11 20:42:21 corsair Exp $
+
+  11 Aug 2006; Markus Rothe <corsair@gentoo.org> esound-0.2.36-r2.ebuild:
+  Added ~ppc64; bug #141223
 
   11 Aug 2006; Jeroen Roovers <jer@gentoo.org> esound-0.2.36-r2.ebuild:
   Marked ~hppa (bug #141223).
