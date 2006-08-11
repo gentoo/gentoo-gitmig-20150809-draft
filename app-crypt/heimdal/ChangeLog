@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.104 2006/07/23 08:03:58 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.105 2006/08/11 02:18:56 seemant Exp $
+
+*heimdal-0.7.2-r3 (11 Aug 2006)
+
+  11 Aug 2006; Seemant Kulleen <seemant@gentoo.org>
+  +heimdal-0.7.2-r3.ebuild:
+  revision bump for heimdal/mit setuid security advisory. see bug #143371
 
   23 Jul 2006; Emanuele Giaquinta <exg@gentoo.org> heimdal-0.7.2.ebuild,
   -heimdal-0.7.2-r1.ebuild, heimdal-0.7.2-r2.ebuild:
