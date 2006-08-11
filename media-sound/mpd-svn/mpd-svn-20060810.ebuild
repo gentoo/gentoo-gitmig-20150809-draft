@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060810.ebuild,v 1.1 2006/08/10 23:34:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060810.ebuild,v 1.2 2006/08/11 00:17:34 ticho Exp $
 
 inherit eutils
 
 MY_PV="0.12.0rc1"
 DESCRIPTION="A development version of Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="http://musicpd.org/upload/files/mpd-${MY_PV}.tar.bz2"
+SRC_URI="http://musicpd.org/uploads/files/mpd-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

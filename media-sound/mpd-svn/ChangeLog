@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.32 2006/08/10 23:34:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.33 2006/08/11 00:17:34 ticho Exp $
+
+  11 Aug 2006; Andrej Kacian <ticho@gentoo.org> mpd-svn-20060810.ebuild:
+  Fix URL.
 
 *mpd-svn-20060810 (10 Aug 2006)
 
