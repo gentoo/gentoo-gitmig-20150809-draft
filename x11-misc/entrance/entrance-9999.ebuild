@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.10 2006/08/11 00:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-9999.ebuild,v 1.11 2006/08/11 00:53:26 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -39,5 +39,13 @@ src_install() {
 	insinto /usr/share/entrance/images/sessions
 	doins "${WORKDIR}"/extraicons/*
 	exeinto /usr/share/entrance
-	doexe data/config/build_config.sh
+	doexe data/config/build_config.sh || die
+}
+
+pkg_preinst() {
+	if [[ -d ${ROOT}/etc/X11/Sessions ]] ; then
+		"${D}"/usr/share/entrance/build_config.sh \
+			-c "${D}"/etc/entrance_config.cfg \
+			-d "${ROOT}"/etc/X11/Sessions
+	fi
 }
