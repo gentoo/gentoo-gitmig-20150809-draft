@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.106 2006/08/11 19:33:08 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.107 2006/08/11 19:47:49 gustavoz Exp $
+
+  11 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> git-1.4.1.1.ebuild:
+  Stable on sparc wrt #143586
 
   11 Aug 2006; Daniel Gryniewicz <dang@gentoo.org> git-1.4.1.1.ebuild:
   Marked stable on amd64 for
