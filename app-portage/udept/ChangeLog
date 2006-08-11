@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/udept
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.1 2006/08/11 22:16:32 fuzzyray Exp $
+
+*udept-0.5.95.2-r1 (11 Aug 2006)
+
+  11 Aug 2006; Paul Varner <fuzzyray@gentoo.org> +metadata.xml,
+  +udept-0.5.95.2-r1.ebuild:
+  Adding udept-0.5.95.2-r1 to the tree.
+
