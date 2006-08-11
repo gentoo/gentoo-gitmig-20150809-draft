@@ -644,14 +644,21 @@ java-pkg_recordjavadoc()
 # Makes a symlink to a jar from a certain package
 # A lot of java packages include dependencies in a lib/ directory
 # You can use this function to replace these bundled dependencies.
+# The dependency is recorded into package.env DEPEND line, unless "--build-only"
+# is passed as the very first argument, for jars that have to be present only
+# at build time and are not needed on runtime (junit testing etc).
 #
 # Example: get all jars from xerces slot 2
 #	java-pkg_jar-from xerces-2
 # Example: get a specific jar from xerces slot 2
 # 	java-pkg_jar-from xerces-2 xml-apis.jar
-# Example get a specific jar from xerces slot 2, and name it diffrently
+# Example: get a specific jar from xerces slot 2, and name it diffrently
 # 	java-pkg_jar-from xerces-2 xml-apis.jar xml.jar
+# Example: get junit.jar which is needed only for building
+#	java-pkg_jar-from --build-only junit junit.jar
 #
+# @param $1 - (optional) "--build-only" makes the jar(s) not added into
+#	package.env DEPEND line.
 # @param $1 - Package to get jars from.
 # @param $2 - jar from package. If not specified, all jars will be used.
 # @param $3 - When a single jar is specified, destination filename of the
@@ -660,6 +667,13 @@ java-pkg_recordjavadoc()
 # TODO could probably be cleaned up a little
 java-pkg_jar-from() {
 	debug-print-function ${FUNCNAME} $*
+
+	local build_only=""
+
+	if [[ "${1}" = "--build-only" ]]; then
+		build_only="true"
+		shift
+	fi
 
 	local target_pkg="${1}" target_jar="${2}" destjar="${3}" 
 	
@@ -683,13 +697,13 @@ java-pkg_jar-from() {
 			[[ -f "${target_jar}" ]]  && rm "${target_jar}"
 			ln -snf "${jar}" \
 				|| die "Failed to make symlink from ${jar} to ${jar_name}"
-			java-pkg_record-jar_ "${target_pkg}" "${jar}"
+			[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${target_pkg}" "${jar}"
 		# otherwise, if the current jar is the target jar, link it
 		elif [[ "${jar_name}" == "${target_jar}" ]] ; then
 			[[ -f "${destjar}" ]]  && rm "${destjar}"
 			ln -snf "${jar}" "${destjar}" \
 				|| die "Failed to make symlink from ${jar} to ${destjar}"
-			java-pkg_record-jar_ "${target_pkg}" "${jar}"
+			[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${target_pkg}" "${jar}"
 			return 0
 		fi
 	done
@@ -716,16 +730,29 @@ java-pkg_jarfrom() {
 #
 # Get the classpath provided by any number of packages
 # Among other things, this can be passed to 'javac -classpath' or 'ant -lib'.
-#
+# The providing packages are recorded as dependencies into package.env DEPEND
+# line, unless "--build-only" is passed as the very first argument, for jars
+# that have to be present only at build time and are not needed on runtime
+# (junit testing etc).
+# 
 # Example: Get the classpath for xerces-2, 
 #	java-pkg_getjars xerces-2 xalan
 # Example Return:
 #	/usr/share/xerces-2/lib/xml-apis.jar:/usr/share/xerces-2/lib/xmlParserAPIs.jar:/usr/share/xalan/lib/xalan.jar
-#
+# 
+# @param $1 - (optional) "--build-only" makes the jar(s) not added into
+#	package.env DEPEND line.
 # @param $@ - list of packages to get jars from
 # ------------------------------------------------------------------------------
 java-pkg_getjars() {
 	debug-print-function ${FUNCNAME} $*
+
+	local build_only=""
+
+	if [[ "${1}" = "--build-only" ]]; then
+		build_only="true"
+		shift
+	fi
 
 	[[ ${#} -lt 1 ]] && die "At least one argument needed"
 
@@ -741,7 +768,8 @@ java-pkg_getjars() {
 		else
 			classpath="${classpath}:${jars}"
 		fi
-		java-pkg_record-jar_ "${pkg}"
+		# Only record jars that aren't build-only
+		[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${pkg}"
 	done
 	echo "${classpath}"
 }
@@ -750,17 +778,30 @@ java-pkg_getjars() {
 # @ebuild-function java-pkg_getjar
 #
 # Get the filename of a single jar from a package
+# The providing package is recorded as runtime dependency into package.env
+# DEPEND line, unless "--build-only" is passed as the very first argument, for
+# jars that have to be present only at build time and are not needed on runtime
+# (junit testing etc).
 #
 # @example
 #	java-pkg_getjar xerces-2 xml-apis.jar
 # @example-return
 #	/usr/share/xerces-2/lib/xml-apis.jar
-#
+# 
+# @param $1 - (optional) "--build-only" makes the jar not added into
+#	package.env DEPEND line.
 # @param $1 - package to use
 # @param $2 - jar to get
 # ------------------------------------------------------------------------------
 java-pkg_getjar() {
 	debug-print-function ${FUNCNAME} $*
+
+	local build_only=""
+
+	if [[ "${1}" = "--build-only" ]]; then
+		build_only="true"
+		shift
+	fi
 
 	local pkg="${1}" target_jar="${2}" jar
 	[[ -z ${pkg} ]] && die "Must specify package to get a jar from"
@@ -771,11 +812,12 @@ java-pkg_getjar() {
 	[[ $? != 0 ]] && die "There could not find classpath for ${pkg}. Are you sure its installed?"
 	for jar in ${classpath//:/ }; do
 		if [[ ! -f "${jar}" ]] ; then
-			die "Installation problems with jars in ${pkg} - is it installed?"
+			die "Installation problem with jar ${jar} in ${pkg} - is it installed?"
 		fi
 
 		if [[ "$(basename ${jar})" == "${target_jar}" ]] ; then
-			java-pkg_record-jar_ "${pkg}" "${jar}"
+			# Only record jars that aren't build-only
+			[[ -z "${build_only}" ]] && java-pkg_record-jar_ "${pkg}" "${jar}"
 			echo "${jar}"
 			return 0
 		fi
