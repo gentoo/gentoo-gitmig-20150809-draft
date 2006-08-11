@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/texpower
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.20 2006/05/28 11:39:30 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/texpower/ChangeLog,v 1.21 2006/08/11 12:15:56 fmccor Exp $
+
+  11 Aug 2006; Ferris McCormick <fmccor@gentoo.org> texpower-0.2.ebuild:
+  Stable on sparc.  Works fine, so this is mostly bookkeeping.
 
   28 May 2006; Lars Weiler <pylon@gentoo.org> texpower-0.2.ebuild:
   Stable on ppc and x86.
