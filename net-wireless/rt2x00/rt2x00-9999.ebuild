@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.11 2006/08/09 09:04:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-9999.ebuild,v 1.12 2006/08/11 16:34:47 uberlord Exp $
 
 inherit linux-mod cvs
 
@@ -85,7 +85,7 @@ src_compile() {
 	if [[ ${full} == "y" ]] || \
 		use rt61pci || use rt73usb ; then
 		echo "CONFIG_CRC_ITU_T=y" >> config
-		MODULE_NAMES="${MODULES_NAMES} crc-itu-t(rt2x00:)"
+		MODULE_NAMES="${MODULE_NAMES} crc-itu-t(rt2x00:)"
 	fi
 
 	for m in d80211 ${IUSE_RT2X00_EXTRA} ${IUSE_RT2X00_DEVICES} ; do
