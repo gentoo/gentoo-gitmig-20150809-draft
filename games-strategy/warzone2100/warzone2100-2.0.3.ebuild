@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.3.ebuild,v 1.3 2006/07/22 03:02:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.0.3.ebuild,v 1.4 2006/08/11 20:38:22 wolf31o2 Exp $
 
 inherit debug eutils versionator games
 
 MY_PV="$(get_version_component_range -2 ${PV})"
 DESCRIPTION="3D real-time strategy game"
-HOMEPAGE="http://home.gna.org/warzone/"
+HOMEPAGE="http://wz.rootzilla.de/"
 SRC_URI="http://download.gna.org/warzone/releases/${MY_PV}/warzone-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
