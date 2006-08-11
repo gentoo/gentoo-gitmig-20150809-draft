@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.6 2006/08/08 21:07:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.7 2006/08/11 10:39:47 spock Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_install() {
 	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
-	doins ${T}/hddtemp.db
+	doins ${FILESDIR}/hddtemp.db
 
 	newconfd ${FILESDIR}/hddtemp-conf.d hddtemp
 	newinitd ${FILESDIR}/hddtemp-init hddtemp
