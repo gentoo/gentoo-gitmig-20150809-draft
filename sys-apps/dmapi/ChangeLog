@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.32 2006/08/10 03:26:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.33 2006/08/11 18:29:18 ticho Exp $
+
+  11 Aug 2006; Andrej Kacian <ticho@gentoo.org> dmapi-2.2.3.ebuild:
+  Stable on x86. bug #143412.
 
 *dmapi-2.2.5 (10 Aug 2006)
 
