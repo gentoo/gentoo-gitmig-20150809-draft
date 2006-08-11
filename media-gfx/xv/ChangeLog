@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.78 2006/05/23 18:16:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.79 2006/08/11 19:34:49 mr_bones_ Exp $
+
+  11 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/xv-3.10a-r11-xv-osx.patch, -xv-3.10a-r8.ebuild,
+  -xv-3.10a-r9.ebuild, -xv-3.10a-r10.ebuild, -xv-3.10a-r11.ebuild:
+  clean out old versions
 
   23 May 2006; Fabian Groffen <grobian@gentoo.org> xv-3.10a-r12.ebuild:
   Marked ppc-macos stable
