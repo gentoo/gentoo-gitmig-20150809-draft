@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/neXtaw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.25 2006/07/31 02:51:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.26 2006/08/11 12:55:35 corsair Exp $
+
+  11 Aug 2006; Markus Rothe <corsair@gentoo.org> neXtaw-0.15.1-r1.ebuild:
+  Stable on ppc64; bug #115045
 
   31 Jul 2006; Jason Wever <weeve@gentoo.org> neXtaw-0.15.1-r1.ebuild:
   Stable on SPARC wrt bug #115045.
