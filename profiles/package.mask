@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5721 2006/08/11 00:22:46 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5722 2006/08/11 16:34:38 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1063,10 +1063,6 @@ app-backup/mondo-rescue
 # Saleem Abdulrasool <compnerd@gentoo.org> (07 Nov 2005)
 # Masking Nini for initial import
 =dev-dotnet/nini-1.0.0
-
-# Michael Sterrett <mr_bones_@gentoo.org> (04 Nov 2005)
-# Security masked due to remote exploitable bugs (bug #111421)
-<games-strategy/scorched3d-40
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Previous SCons upgrade broke lots of packages, so latest version is getting some testing first!
