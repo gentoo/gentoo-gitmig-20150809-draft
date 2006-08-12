@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/viaideinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.3 2006/05/27 10:44:28 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/viaideinfo/ChangeLog,v 1.4 2006/08/12 15:50:12 dsd Exp $
+
+*viaideinfo-0.4 (12 Aug 2006)
+
+  12 Aug 2006; Daniel Drake <dsd@gentoo.org> +viaideinfo-0.4.ebuild:
+  Version bump: Adds VT8237A support
 
   27 May 2006; Daniel Drake <dsd@gentoo.org> viaideinfo-0.3.ebuild:
   Stable on x86
