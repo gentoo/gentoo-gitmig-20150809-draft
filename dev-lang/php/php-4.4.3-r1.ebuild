@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.3-r1.ebuild,v 1.8 2006/08/12 15:21:38 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.4.3-r1.ebuild,v 1.9 2006/08/12 21:56:16 weeve Exp $
 
 CGI_SAPI_USE="discard-path force-cgi-redirect"
 APACHE2_SAPI_USE="concurrentmodphp threads"
@@ -20,7 +20,7 @@ MY_PHP_P="php-${MY_PHP_PV}"
 PHP_PACKAGE="1"
 
 # php patch settings, general
-PHP_PATCHSET_REV="2"
+PHP_PATCHSET_REV="3"
 HARDENEDPHP_PATCH="hardening-patch-${MY_PHP_PV}-0.4.13-gentoo.patch.gz"
 MULTILIB_PATCH="${MY_PHP_PV}/opt/php${MY_PHP_PV}-multilib-search-path.patch"
 # php patch settings, ebuild specific
