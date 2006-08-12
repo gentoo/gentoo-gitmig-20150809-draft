@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/xgraph-12.1-r1.ebuild,v 1.2 2006/08/12 03:08:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/xgraph-12.1-r1.ebuild,v 1.3 2006/08/12 14:16:21 markusle Exp $
+
+inherit eutils
 
 DESCRIPTION="X11 Plotting Utility"
 HOMEPAGE="http://www.isi.edu/nsnam/xgraph/"
@@ -13,6 +15,11 @@ DEPEND="|| ( ( x11-libs/libSM
 		x11-libs/libX11
 	)
 	virtual/x11 )"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${PN}-makefile-gentoo.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "Compilation failed."

@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/xgraph
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.5 2006/08/12 03:10:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.6 2006/08/12 14:16:21 markusle Exp $
+
+  12 Aug 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/xgraph-makefile-gentoo.patch, xgraph-12.1-r1.ebuild:
+  Added patch to have makefile properly honor the user's CFLAGS.
+  See bug #143661.
 
   12 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -xgraph-12.1.ebuild:
   clean out old, non-mod-X ebuild
