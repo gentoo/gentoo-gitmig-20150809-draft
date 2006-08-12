@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/zd1211-firmware
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.1 2006/07/06 19:17:20 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211-firmware/ChangeLog,v 1.2 2006/08/12 15:59:44 dsd Exp $
+
+*zd1211-firmware-1.2 (12 Aug 2006)
+
+  12 Aug 2006; Daniel Drake <dsd@gentoo.org> +zd1211-firmware-1.2.ebuild:
+  Version bump: Add largepacket support, and install the extra (ur) firmware
+  files needed by newest driver code
 
 *zd1211-firmware-1.1 (06 Jul 2006)
 
