@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2.ebuild,v 1.1 2006/08/11 16:44:21 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2.ebuild,v 1.2 2006/08/12 05:00:57 dragonheart Exp $
 
 BI_VER="20060811"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/gentoo-artwork-0.2.tar.bz2
 		 mirror://gentoo/gentoo-artwork-0.4.tar.bz2
 		 mirror://gentoo/gentoo-artwork-0.4.1.tar.bz2
 		 mirror://gentoo/gentoo-artwork-0.4.2.tar.bz2
-		 mirros://gentoo/gentoo-bubble-icons-${BI_VER}.tar.gz"
+		 mirror://gentoo/gentoo-bubble-icons-${BI_VER}.tar.gz"
 HOMEPAGE="http://www.gentoo.org/index-graphics.html"
 
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
