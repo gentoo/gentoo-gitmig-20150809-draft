@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.82 2006/08/12 21:01:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.83 2006/08/12 21:04:40 seemant Exp $
+
+  12 Aug 2006; Seemant Kulleen <seemant@gentoo.org> gnucash-2.0.1.ebuild:
+  Removing graphviz USE flag and dep, since doxygen takes care of that. Thanks
+  to Carlo in bug #142714
 
 *gnucash-2.0.1 (12 Aug 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.1.ebuild,v 1.1 2006/08/12 21:01:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.1.ebuild,v 1.2 2006/08/12 21:04:40 seemant Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="postgres ofx hbci chipcard doc debug quotes nls graphviz tetex"
+IUSE="postgres ofx hbci chipcard doc debug quotes nls tetex"
 
 RDEPEND=">=dev-libs/glib-2.4.0
 	>=dev-util/guile-1.6.4-r2
@@ -44,7 +44,6 @@ RDEPEND=">=dev-libs/glib-2.4.0
 	app-text/docbook-xsl-stylesheets
 	=app-text/docbook-xml-dtd-4.1.2*
 	nls? ( dev-util/intltool )
-	graphviz? ( media-gfx/graphviz )
 	tetex? ( app-text/tetex )"
 
 DEPEND="${RDEPEND}
