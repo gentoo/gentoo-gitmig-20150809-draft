@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.14-r1.ebuild,v 1.5 2006/08/06 01:53:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.14-r1.ebuild,v 1.6 2006/08/12 12:55:45 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -17,7 +17,6 @@ DEPEND=">=dev-perl/XML-NamespaceSupport-1.04
 	>=dev-libs/libxml2-2.4.1
 	>=sys-apps/sed-4
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 
