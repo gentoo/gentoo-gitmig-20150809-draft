@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.23 2006/07/14 21:07:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.24 2006/08/12 21:53:20 weeve Exp $
 #
 # ########################################################################
 #
@@ -136,7 +136,10 @@ PHP_INI_UPSTREAM="php.ini-dist"
 # ========================================================================
 
 # PHP patchsets support
-SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP_PATCHSET_REV}.tar.bz2"
+
+# Temporarily change in SRC_URI for the patchset as per jakub's blessing.
+#SRC_URI="${SRC_URI} http://gentoo.longitekk.com/php-patchset-${MY_PHP_PV}-r${PHP_PATCHSET_REV}.tar.bz2"
+SRC_URI="${SRC_URI} mirror://gentoo/php-patchset-${MY_PHP_PV}-r${PHP_PATCHSET_REV}.tar.bz2"
 
 # Hardened-PHP patch support
 [[ -n "${HARDENEDPHP_PATCH}" ]] && SRC_URI="${SRC_URI} hardenedphp? ( http://gentoo.longitekk.com/${HARDENEDPHP_PATCH} )"
