@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-0.2.45-r1.ebuild,v 1.2 2005/07/13 15:24:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/debootstrap-0.2.45-r1.ebuild,v 1.3 2006/08/12 18:44:10 weeve Exp $
 
 MY_PV=${PV}-0.2
 DESCRIPTION="Debian bootstrap scripts"
 HOMEPAGE="http://packages.qa.debian.org/d/debootstrap.html"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc amd64 ppc"
+KEYWORDS="amd64 ppc sparc x86"
 SRC_URI="mirror://debian/pool/main/d/debootstrap/debootstrap_${MY_PV}.tar.gz
 	mirror://gentoo/devices.tar.gz"
 DEPEND="sys-devel/binutils
