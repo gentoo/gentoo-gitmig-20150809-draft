@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.45 2006/08/12 13:54:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.46 2006/08/12 13:56:59 swegener Exp $
+
+  12 Aug 2006; Sven Wegener <swegener@gentoo.org> -diffstat-1.39.ebuild:
+  Cleanup.
 
 *diffstat-1.43 (12 Aug 2006)
 
