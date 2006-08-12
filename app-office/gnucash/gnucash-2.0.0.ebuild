@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.0.ebuild,v 1.3 2006/07/15 14:17:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.0.ebuild,v 1.4 2006/08/12 21:07:27 seemant Exp $
 
 inherit eutils gnome2
 
@@ -42,7 +42,8 @@ RDEPEND=">=dev-libs/glib-2.4.0
 		dev-perl/HTML-TableExtract )
 	postgres? ( dev-db/postgresql )
 	app-text/docbook-xsl-stylesheets
-	=app-text/docbook-xml-dtd-4.1.2*"
+	=app-text/docbook-xml-dtd-4.1.2*
+	gnome-extra/yelp"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
