@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-1.0.ebuild,v 1.7 2005/02/22 11:03:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-bluefw/bluez-bluefw-1.0.ebuild,v 1.8 2006/08/12 13:30:58 liquidx Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
-DEPEND="sys-apps/hotplug
+DEPEND="sys-apps/hotplug-base
 	>=net-wireless/bluez-libs-2.2"
 
 src_unpack() {
