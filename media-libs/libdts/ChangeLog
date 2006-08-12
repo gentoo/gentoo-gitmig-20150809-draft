@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.35 2006/08/03 04:04:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.36 2006/08/12 12:38:01 corsair Exp $
+
+  12 Aug 2006; Markus Rothe <corsair@gentoo.org> libdts-0.0.2-r5.ebuild:
+  Stable on ppc64; bug #141971
 
   03 Aug 2006; Jason Wever <weeve@gentoo.org> libdts-0.0.2-r5.ebuild:
   Stable on SPARC wrt bug #141971.
