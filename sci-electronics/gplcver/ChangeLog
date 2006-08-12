@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gplcver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.6 2006/07/02 13:55:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/ChangeLog,v 1.7 2006/08/12 11:42:09 chrb Exp $
+
+  12 Aug 2006; Chris Bainbridge <chrb@gentoo.org> -gplcver-1.10j.ebuild,
+  -gplcver-2.10c.ebuild, gplcver-2.11a.ebuild:
+  stable on x86. remove old ebuilds.
 
   02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Adjusted metadata, see bug #138062.
