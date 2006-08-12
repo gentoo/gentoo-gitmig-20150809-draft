@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.5 2006/06/01 16:22:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.6 2006/08/12 22:58:10 genstef Exp $
 
 inherit eutils
 
@@ -41,6 +41,14 @@ pkg_setup() {
 	einfo "Adding captive user and group"
 	enewgroup captive || die "enewgroup captive failed"
 	enewuser captive -1 -1 /dev/null captive || die "enewuser captive failed"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if has_version '>=sys-fs/fuse-2.6.0_pre3'; then
+		epatch ${FILESDIR}/captive-fuse-2.6.0_pre3.patch
+	fi
 }
 
 src_compile() {
