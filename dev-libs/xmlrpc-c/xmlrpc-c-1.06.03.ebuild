@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.03.ebuild,v 1.1 2006/08/12 07:37:06 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.03.ebuild,v 1.2 2006/08/12 09:50:36 hollow Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.05-pic.patch
 	epatch "${FILESDIR}"/${PN}-1.06.02-threadupdatestatus.patch
 	epatch "${FILESDIR}"/${PN}-1.06.02-strsol.patch
-	epatch "${FILESDIR}"/${PN}-1.06.03-cppmustbuildclient.patch
+	epatch "${FILESDIR}"/${PN}-1.06.03-mustbuildclient.patch
 }
 
 src_compile() {

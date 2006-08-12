@@ -95,3 +95,57 @@ Index: xmlrpc-c-1.06.03/tools/Makefile
  
  .PHONY: all clean distclean install check dep
  
+Index: xmlrpc-c-1.06.03/xmlrpc-c-config.in
+===================================================================
+--- xmlrpc-c-1.06.03.orig/xmlrpc-c-config.in
++++ xmlrpc-c-1.06.03/xmlrpc-c-config.in
+@@ -108,26 +108,31 @@ while test $# -gt 0; do
+       ;;
+     client|libwww-client)
+       # libwww-client is for backward compatibility
+-      the_libs="-lxmlrpc_client $the_libs"
+ 
+-      if test "${MUST_BUILD_WININET_CLIENT}" = "yes"; then
+-        the_libs="@WININET_LDADD@ $the_libs"
+-        the_rpath="@WININET_RPATH@ $the_rpath"
+-        the_wl_rpath="@WININET_WL_RPATH@ $the_wl_rpath"
+-      fi
+-      if test "${MUST_BUILD_CURL_CLIENT}" = "yes"; then
+-        the_libs="@CURL_LDADD@ $the_libs"
+-        the_rpath="@CURL_RPATH@ $the_rpath"
+-        the_wl_rpath="@CURL_WL_RPATH@ $the_wl_rpath"
+-      fi
+-      if test "${MUST_BUILD_LIBWWW_CLIENT}" = "yes"; then
+-        the_libs="@LIBWWW_LDADD@ $the_libs"
+-        the_rpath="@LIBWWW_RPATH@ $the_rpath"
+-        the_wl_rpath="@LIBWWW_WL_RPATH@ $the_wl_rpath"
+-      fi
+-      if test "${needCpp}" = "yes"; then
+-        the_libs="-lxmlrpc_client++ $the_libs"
++      if test "${MUST_BUILD_WININET_CLIENT}" = "yes" || \
++         test "${MUST_BUILD_CURL_CLIENT}" = "yes" || \
++         test "${MUST_BUILD_LIBWWW_CLIENT}" = "yes"; then
++        the_libs="-lxmlrpc_client $the_libs"
++
++        if test "${MUST_BUILD_WININET_CLIENT}" = "yes"; then
++          the_libs="@WININET_LDADD@ $the_libs"
++          the_rpath="@WININET_RPATH@ $the_rpath"
++          the_wl_rpath="@WININET_WL_RPATH@ $the_wl_rpath"
+         fi
++        if test "${MUST_BUILD_CURL_CLIENT}" = "yes"; then
++          the_libs="@CURL_LDADD@ $the_libs"
++          the_rpath="@CURL_RPATH@ $the_rpath"
++          the_wl_rpath="@CURL_WL_RPATH@ $the_wl_rpath"
++        fi
++        if test "${MUST_BUILD_LIBWWW_CLIENT}" = "yes"; then
++          the_libs="@LIBWWW_LDADD@ $the_libs"
++          the_rpath="@LIBWWW_RPATH@ $the_rpath"
++          the_wl_rpath="@LIBWWW_WL_RPATH@ $the_wl_rpath"
++        fi
++        if test "${needCpp}" = "yes"; then
++          the_libs="-lxmlrpc_client++ $the_libs"
++        fi
++      fi
+       ;;
+     --version)
+       echo "@VERSION@"
