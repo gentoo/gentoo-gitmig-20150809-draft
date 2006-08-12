@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5726 2006/08/12 14:56:20 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5727 2006/08/12 15:17:11 corsair Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -500,10 +500,6 @@ games-fps/quake1
 >=net-libs/obby-0.4.0_rc2
 >=app-editors/gobby-0.4.0_rc2
 >=net-misc/sobby-0.4.0_rc1
-
-# Robin H. Johnson <robbat2@gentoo.org> (10 Jun 2006)
-# Temporary mask until it gets a bit more checking.
->=sys-devel/gcc-powerpc64-4
 
 # Joseph Jezak <josejx@gentoo.org> (05 Jun 2006)
 # The softmac stack is in 2.6.17, the ebuilds are obsolete
