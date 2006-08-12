@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.67 2006/08/11 21:24:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.68 2006/08/12 14:48:01 corsair Exp $
+
+  12 Aug 2006; Markus Rothe <corsair@gentoo.org> attr-2.4.28-r1.ebuild:
+  Stable on ppc64; bug #143411
 
   11 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   attr-2.4.28-r1.ebuild:
