@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r3.ebuild,v 1.7 2006/08/10 14:14:56 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.4.3-r3.ebuild,v 1.8 2006/08/12 23:59:44 vapier Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -13,28 +13,26 @@ SRC_URI="http://web.mit.edu/kerberos/dist/krb5/${P_DIR}/${MY_P}-signed.tar"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="krb4 static tcl ipv6 doc"
 
 RDEPEND="!virtual/krb5
 	sys-libs/com_err
 	sys-libs/ss
 	tcl? ( dev-lang/tcl )"
-
 DEPEND="${RDEPEND}
 	doc? ( virtual/tetex )"
-
 PROVIDE="virtual/krb5"
 
 src_unpack() {
 	unpack ${MY_P}-signed.tar
 	unpack ./${MY_P}.tar.gz
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-lazyldflags.patch
-	epatch ${FILESDIR}/${PN}-robustgnu.patch
-	epatch ${FILESDIR}/${PN}-pthreads.patch
-	epatch ${FILESDIR}/${PN}-setupterm.patch
-	epatch ${FILESDIR}/${P}-setuid.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-lazyldflags.patch
+	epatch "${FILESDIR}"/${PN}-robustgnu.patch
+	epatch "${FILESDIR}"/${PN}-pthreads.patch
+	epatch "${FILESDIR}"/${PN}-setupterm.patch
+	epatch "${FILESDIR}"/${P}-setuid.patch
 	ebegin "Reconfiguring configure scripts (be patient)"
 	cd ${S}/appl/telnet
 	eautoconf --force -I ${S}
@@ -90,8 +88,8 @@ src_install() {
 		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
 	done
 
-	newinitd ${FILESDIR}/mit-krb5kadmind.initd mit-krb5kadmind
-	newinitd ${FILESDIR}/mit-krb5kdc.initd mit-krb5kdc
+	newinitd "${FILESDIR}"/mit-krb5kadmind.initd mit-krb5kadmind
+	newinitd "${FILESDIR}"/mit-krb5kdc.initd mit-krb5kdc
 
 	insinto /etc
 	newins /usr/share/doc/${PF}/examples/krb5.conf krb5.conf.example
