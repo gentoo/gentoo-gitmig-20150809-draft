@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.1.1.ebuild,v 1.7 2006/08/12 02:50:08 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.1.1.ebuild,v 1.8 2006/08/12 14:41:23 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -21,7 +21,8 @@ DEPEND="dev-libs/openssl
 		sys-libs/zlib
 		!app-misc/git
 		curl? ( net-misc/curl )
-		webdav? ( dev-libs/expat )"
+		webdav? ( dev-libs/expat )
+		emacs? ( app-editors/emacs )"
 RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
