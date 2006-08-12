@@ -98,6 +98,7 @@ net-nntp
 net-p2p
 net-print
 net-proxy
+net-voip
 net-wireless
 net-www
 net-zope
