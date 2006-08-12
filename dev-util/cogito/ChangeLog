@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cogito
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.40 2006/07/11 15:41:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/ChangeLog,v 1.41 2006/08/12 21:08:35 ferdy Exp $
+
+  12 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org> cogito-0.17.3.ebuild:
+  Stable on alpha.
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org> cogito-0.17.3.ebuild:
   Mark 0.17.3 stable on ia64
