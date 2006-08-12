@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5723 2006/08/11 18:53:04 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5724 2006/08/12 13:20:08 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Luca Barbato <lu_zero@gentoo.org> (12 Aug 2006)
+# x264 doesn't play nice with older version, temp mask for a better
+# transition
+=media-libs/x264-svn-20060810
+=media-video/mplayer-1.0_pre20060810
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (11 Aug 2006)
 # k3b pre-release versions. Apart from being pre-release,
@@ -607,6 +613,28 @@ games-mud/kmc
 # Security mask; bug #112791.
 sys-kernel/kurobox-sources
 
+<<<<<<< package.mask
+# Fernando J. Pereda <ferdy@gentoo.org> (18 May 2006)
+# This ebuild is for patch testing purposes. Things might break.
+>=mail-client/mutt-1.5.11-r30
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (11 May 2006)
+# These are masked, since they only work with the 0.0.8 version of openal with
+# the split out freealut.  They will *not* work with the "best version" stable
+# or ~arch openal in the tree.  These are perfectly safe to use if you have
+# openal-0.0.8 and freealut installed.
+=games-action/chromium-0.9.12-r6
+=games-arcade/excido-0.1.5c-r1
+=games-fps/blackshades-cvs-20031110-r1
+=games-rps/eternal-lands-1.2.0_p1-r2
+=games-sports/torcs-1.2.4-r1
+=games-sports/trigger-0.5.2-r1
+=games-sports/ultimatestunts-0.6.1-r1
+=games-strategy/boson-0.11-r1
+=games-strategy/scorched3d-39.1-r1
+
+=======
+>>>>>>> 1.5723
 # Roy Marples <uberlord@gentoo.org> (09 May 2006)
 # Masked for testing, although it works very well for me.
 >=net-misc/openvpn-2.1_beta
