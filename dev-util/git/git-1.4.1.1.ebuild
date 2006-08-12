@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.1.1.ebuild,v 1.6 2006/08/11 21:20:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.1.1.ebuild,v 1.7 2006/08/12 02:50:08 lu_zero Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ~ppc-macos ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ppc ~ppc-macos ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="curl doc emacs gtk mozsha1 ppcsha1 webdav X"
 
 DEPEND="dev-libs/openssl
