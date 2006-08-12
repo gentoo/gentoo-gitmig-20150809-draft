@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20090909.ebuild,v 1.1 2006/08/08 12:00:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20090909.ebuild,v 1.2 2006/08/12 23:39:04 genstef Exp $
 
 inherit nsplugins kde-functions autotools cvs
 
@@ -60,24 +60,14 @@ src_unpack() {
 	cvs_src_unpack
 	cd ${S}
 
-	# as-needed fixes
-	epatch ${FILESDIR}/gnash-as-needed.diff
-
 	# build klash even without nsplugin
 	epatch ${FILESDIR}/klash-makefile.diff
 
 	# we need -L for linking 
 	epatch ${FILESDIR}/kdedir.diff
 
-	# height, width, mouse* are obviously not available externally
-	epatch ${FILESDIR}/klash-int-not-external.diff
-
 	# we want sound
-	einfo "do_sound grep before: "
-	grep "bool do_sound = false;" backend/gnash.cpp || die soundsed failed
-	sed -i -e "s:bool do_sound = false;:bool do_sound = true;:" backend/gnash.cpp
-	einfo "do_sound grep after: "
-	grep "bool do_sound = true;" backend/gnash.cpp || die soundsed failed
+	epatch ${FILESDIR}/do-sound.diff
 
 	AT_M4DIR="macros" eautoreconf
 }
