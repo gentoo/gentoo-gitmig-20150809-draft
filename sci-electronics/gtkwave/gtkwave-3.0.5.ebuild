@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.0.5.ebuild,v 1.1 2006/06/30 18:18:41 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-3.0.5.ebuild,v 1.2 2006/08/12 14:24:51 plasmaroo Exp $
 
 inherit eutils
 
@@ -82,6 +82,13 @@ src_unpack() {
 		-e 's:-o ghwdump:$(LDFLAGS) -o ghwdump:' \
 		src/helpers/Makefile.in \
 		|| die "sed failed"
+}
+
+src_compile() {
+	econf || die 'econf failed!'
+
+	# Bug #142871
+	emake -j1 || die 'emake failed!'
 }
 
 src_install() {
