@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5727 2006/08/12 15:17:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5728 2006/08/12 21:05:22 seemant Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -288,10 +288,6 @@ mail-client/mahogany
 # old, unsupported upstream.  Use evince.
 # possible security problems in the future.
 app-text/gpdf
-
-# Seemant Kulleen <seemant@gentoo.org> (15 Jul 2006)
-# Mask for testing
-=app-office/gnucash-2.0.0-r1
 
 # Christian Heim <phreak@gentoo.org> (13 Jul 2006)
 # ieee80211-1.1.14 is breaking ABI!
