@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.410 2006/08/10 21:40:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.411 2006/08/12 01:07:35 lu_zero Exp $
+
+  12 Aug 2006; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre8.ebuild,
+  mplayer-1.0_pre8-r1.ebuild:
+  Pin x264 version to avoid build issue with snapshots too new
 
   10 Aug 2006; Luca Barbato <lu_zero@gentoo.org>
   mplayer-1.0_pre20060810.ebuild:
