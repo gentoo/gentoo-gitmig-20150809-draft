@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.24 2006/08/12 18:44:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.25 2006/08/12 23:05:46 weeve Exp $
+
+  12 Aug 2006; Jason Wever <weeve@gentoo.org> debootstrap-0.3.3-r1.ebuild:
+  Added ~sparc keyword (not sure where it went in the last few
+  version/revision bumps).
 
   12 Aug 2006; Jason Wever <weeve@gentoo.org> debootstrap-0.2.45-r1.ebuild:
   Stable on SPARC.
