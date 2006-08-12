@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.116 2006/08/10 23:58:55 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.117 2006/08/12 14:25:27 corsair Exp $
+
+  12 Aug 2006; Markus Rothe <corsair@gentoo.org> php-4.4.3-r1.ebuild,
+  php-5.1.4-r6.ebuild:
+  Stable on ppc64; bug #143126
 
   10 Aug 2006; Luca Longinotti <chtekk@gentoo.org> php-4.4.3-r1.ebuild:
   Retry with manually diffed patch, works here now, hopefully out there too. ;)
