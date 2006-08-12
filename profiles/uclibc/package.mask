@@ -3,3 +3,6 @@ sys-libs/glibc
 dev-libs/libiconv
 =app-arch/tar-1.15.91
 >=sys-fs/xfsprogs-2.8.10
+# We hate it.
+app-admin/eselect-compiler
+>=sys-devel/gcc-config-2
