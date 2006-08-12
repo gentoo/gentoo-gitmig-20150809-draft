@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060811.ebuild,v 1.1 2006/08/12 03:20:02 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060811.ebuild,v 1.2 2006/08/12 05:59:00 keri Exp $
 
 inherit eutils versionator
 
@@ -33,6 +33,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-portage.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-bootstrap.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-LIBDIR.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-libgrades.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-docs.patch
 
 	cd "${TESTDIR}"
@@ -41,15 +44,35 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		--disable-dotnet-grades \
+	local myconf
+	myconf="--disable-dotnet-grades \
 		$(use_enable debug debug-grades) \
 		$(use_enable threads par-grades) \
 		$(use_enable !minimal most-grades) \
 		$(use_with readline) \
-		PACKAGE_VERSION=${PV} \
-		|| die "econf failed"
-	emake || die "emake failed"
+		PACKAGE_VERSION=${PV}"
+
+	einfo "Performing stage 1 bootstrap"
+	econf \
+		${myconf} \
+		BOOTSTRAP_STAGE="1" \
+		|| die "econf stage 1 failed"
+	emake || die "emake stage 1 failed"
+
+	einfo "Performing stage 2 bootstrap"
+	cp "${S}"/compiler/mercury_compile "${S}"/mercury_compile
+	econf \
+		${myconf} \
+		BOOTSTRAP_STAGE="2" \
+		|| die "econf stage 2 failed"
+	emake \
+		MERCURY_COMPILER="${S}"/mercury_compile \
+		|| die "emake stage 2 failed"
+
+	einfo "Compiling libgrades"
+	emake \
+		MERCURY_COMPILER="${S}"/compiler/mercury_compile \
+		libgrades || die "emake libgrades failed"
 }
 
 src_test() {
@@ -65,7 +88,6 @@ src_test() {
 
 src_install() {
 	make \
-		MERCURY_COMPILER="${D}"/usr/bin/${PN}_compile \
 		INSTALL_PREFIX="${D}"/usr \
 		INSTALL_MAN_DIR="${D}"/usr/share/man \
 		INSTALL_INFO_DIR="${D}"/usr/share/info \

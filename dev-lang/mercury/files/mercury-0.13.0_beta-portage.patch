@@ -18,38 +18,6 @@
  
  # `mmake clean' has a different meaning to the usual GNU standard `make clean':
  # it removes the .c files, which makes bootstrapping impossible unless you
---- mercury-compiler-0.13.0-beta-2006-06-09.orig/Mmakefile	2005-08-12 03:56:57.000000000 +1200
-+++ mercury-compiler-0.13.0-beta-2006-06-09/Mmakefile	2006-06-14 22:46:40.000000000 +1200
-@@ -483,28 +483,13 @@
- 	@echo
- 	@echo "-- Installation complete."
- 	@echo
--	@echo "-- Don't forget to add $(INSTALL_BINDIR) to your PATH,"
--	@echo "-- $(INSTALL_MAN_DIR) to your MANPATH,"
--	@echo "-- and $(INSTALL_INFO_DIR) to your INFOPATH,"
--	@if test $(ENABLE_DEEP_PROFILER) != yes || \
--		cmp -s deep_profiler/mdprof_cgi \
--			$(INSTALL_CGI_DIR)/mdprof_cgi; \
--	then true ; else \
--		echo "-- to copy deep_profiler/mdprof_cgi" \
--			"to $(INSTALL_CGI_DIR),"; \
--	fi
--	@echo "-- and to add the following lines to the \`.emacs' file"
--	@echo "-- in your home directory:"
--	@echo "	(setq load-path (cons (expand-file-name "
--	@echo "		\"$(INSTALL_ELISP_DIR)\") load-path))"
--	@echo "	(autoload 'mdb \"gud\" \"Invoke the Mercury debugger\" t)"
- 
- .PHONY: install_main
- install_main: all \
- 		install_scripts install_util install_runtime install_boehm_gc \
- 		install_library install_mdbcomp install_browser install_trace \
- 		install_compiler install_slice install_profiler \
--		install_deep_profiler install_doc install_config
-+		install_deep_profiler install_doc
- 
- .PHONY: install_scripts
- install_scripts: scripts
 --- mercury-compiler-0.13.0-beta-2006-06-09.orig/runtime/Mmakefile	2006-03-30 18:13:48.000000000 +1200
 +++ mercury-compiler-0.13.0-beta-2006-06-09/runtime/Mmakefile	2006-06-14 22:49:57.000000000 +1200
 @@ -434,8 +434,6 @@
@@ -106,9 +74,18 @@
  	-rm -f $(INSTALL_BINDIR)/mmake.old
  
  .PHONY: install_config
---- mercury-compiler-0.13.0-beta-2006-06-15.orig/configure	2006-06-15 22:36:38.000000000 +1200
-+++ mercury-compiler-0.13.0-beta-2006-06-15/configure	2006-06-17 20:49:30.000000000 +1200
-@@ -9140,7 +9140,6 @@
+--- mercury-compiler-0.13.0-beta-2006-08-11.orig/configure	2006-08-11 22:37:07.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-08-11/configure	2006-08-12 16:14:59.000000000 +1200
+@@ -9048,7 +9048,7 @@
+ # Check whether --enable-debug-grades or --disable-debug-grades was given.
+ if test "${enable_debug_grades+set}" = set; then
+   enableval="$enable_debug_grades"
+-  enable_debug_grades="enableval"
++  enable_debug_grades="$enableval"
+ else
+   enable_debug_grades=yes
+ fi;
+@@ -9148,7 +9148,6 @@
  	enable_mm_grades=no
  	enable_dmm_grades=no
  	enable_hlc_prof_grades=no

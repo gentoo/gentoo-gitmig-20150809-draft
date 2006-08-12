@@ -1,0 +1,59 @@
+--- mercury-compiler-0.13.0-beta-2006-08-11.orig/configure	2006-08-11 22:37:07.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-08-11/configure	2006-08-12 16:22:17.000000000 +1200
+@@ -8977,34 +8977,34 @@
+ 
+ if test "$BEST_GRADE_FOR_COMPILER" != "$BOOTSTRAP_GRADE"; then
+ 	if test "$BOOTSTRAP_MC" = ""; then
+-		GRADE="$BOOTSTRAP_GRADE"
+-		{ echo "$as_me:$LINENO: WARNING: Mercury compiler not yet installed
+-****	cannot use grade \`$BEST_GRADE_FOR_COMPILER'
+-****	using grade \`$GRADE' to compile the compiler
+-****	after installation is complete you should reinstall
+-****	from scratch so you can use the more efficient
+-****	grade \`$BEST_GRADE_FOR_COMPILER'." >&5
+-echo "$as_me: WARNING: Mercury compiler not yet installed
+-****	cannot use grade \`$BEST_GRADE_FOR_COMPILER'
+-****	using grade \`$GRADE' to compile the compiler
+-****	after installation is complete you should reinstall
+-****	from scratch so you can use the more efficient
+-****	grade \`$BEST_GRADE_FOR_COMPILER'." >&2;}
++		if test "$BOOTSTRAP_STAGE" = "1"; then
++			GRADE="$BOOTSTRAP_GRADE"
++		else
++			GRADE=$BEST_GRADE_FOR_COMPILER
++			find library compiler browser mdbcomp analysis \
++				profiler deep_profiler \
++				-name \*.c -o -name \*.c_date | \
++				xargs rm > /dev/null 2>&1
++			find -name \*.o -o -name \*.a -o -name \*.so | \
++				xargs rm > /dev/null 2>&1
++			rm -f compiler/mercury_compile profiler/mercury_profile
++		fi
+ 
+ 	else
+-		GRADE=$BEST_GRADE_FOR_COMPILER
+-		echo "using grade \`$GRADE' to compile the compiler
+-	compiler and library will be rebuilt with new grade
+-	installation may take a long time" 1>&6
+-		find library compiler browser mdbcomp analysis \
+-			profiler deep_profiler \
+-			-name \*.c -o -name \*.c_date | \
+-			xargs rm > /dev/null 2>&1
++		if test "$BOOTSTRAP_STAGE" = "1"; then
++			GRADE=$BEST_GRADE_FOR_COMPILER
++			find library compiler browser mdbcomp analysis \
++				profiler deep_profiler \
++				-name \*.c -o -name \*.c_date | \
++				xargs rm > /dev/null 2>&1
++		else
++			GRADE=$BEST_GRADE_FOR_COMPILER
++		fi
+ 	fi
+ else
+ 	GRADE=$BEST_GRADE_FOR_COMPILER
+-	echo "using grade \`$GRADE' to compile the compiler" 1>&6
+ fi
++echo "using grade \`$GRADE' to compile the compiler" 1>&6
+ 
+ 
+ #-----------------------------------------------------------------------------#
