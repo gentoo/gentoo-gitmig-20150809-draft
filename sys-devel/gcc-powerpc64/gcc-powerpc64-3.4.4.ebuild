@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/gcc-powerpc64-3.4.4.ebuild,v 1.5 2006/06/06 01:24:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/gcc-powerpc64-3.4.4.ebuild,v 1.6 2006/08/12 15:12:48 corsair Exp $
 
 inherit eutils flag-o-matic
 
-# Variables 
+# Variables
 MYARCH="$(echo ${PN} | cut -d- -f2)"
 TMP_P="${P/-${MYARCH}/}"
 TMP_PN="${PN/-${MYARCH}/}"
@@ -31,7 +31,7 @@ RDEPEND="virtual/libc
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
-	!build? ( >=sys-libs/ncurses-5.2-r2 )"
+	>=sys-libs/ncurses-5.2-r2"
 
 # Ripped from toolchain.eclass
 gcc_version_patch() {
