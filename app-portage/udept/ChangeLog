@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/udept
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.2 2006/08/12 07:35:13 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.3 2006/08/12 08:18:06 fuzzyray Exp $
+
+  12 Aug 2006; Paul Varner <fuzzyray@gentoo.org> udept-0.5.95.2-r1.ebuild,
+  udept-0.5.96.2.ebuild:
+  Remove misspelled and unneeded pgk_postinst function.
 
 *udept-0.5.96.2 (12 Aug 2006)
 

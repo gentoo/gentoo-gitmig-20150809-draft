@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.95.2-r1.ebuild,v 1.1 2006/08/11 22:16:32 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.95.2-r1.ebuild,v 1.2 2006/08/12 08:18:06 fuzzyray Exp $
 
 inherit bash-completion
 
@@ -26,8 +26,4 @@ src_install() {
 	doman dep.1
 	dodoc ChangeLog*
 	dobashcompletion dep.completion dep
-}
-
-pkg_posinst() {
-	bash-completion_pkg_postinst
 }

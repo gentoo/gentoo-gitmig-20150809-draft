@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.96.2.ebuild,v 1.1 2006/08/12 07:35:13 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/udept-0.5.96.2.ebuild,v 1.2 2006/08/12 08:18:06 fuzzyray Exp $
 
 inherit bash-completion eutils
 
@@ -29,8 +29,4 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc ChangeLog*
-}
-
-pkg_posinst() {
-	bash-completion_pkg_postinst
 }
