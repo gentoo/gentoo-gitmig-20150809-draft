@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gnu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.24 2006/05/26 17:20:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ChangeLog,v 1.25 2006/08/12 22:06:22 genstef Exp $
+
+  12 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-gnu-8.16-r1.ebuild, ghostscript-gnu-8.16-r3.ebuild:
+  block -gpl instead of -afpl, thanks to Marco Clocchiatti
+  <ziapannocchia@gmail.com> in bug 143654
 
   26 May 2006; Markus Rothe <corsair@gentoo.org>
   ghostscript-gnu-8.16-r3.ebuild:

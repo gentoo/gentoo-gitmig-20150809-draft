@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1_p20060430.ebuild,v 1.10 2006/07/02 19:37:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.1_p20060430.ebuild,v 1.11 2006/08/12 22:04:33 genstef Exp $
 
 inherit eutils autotools flag-o-matic versionator
 
@@ -30,7 +30,7 @@ DEP="virtual/libc
 	xml? ( >=dev-libs/libxml2-2.6.8 )
 	media-libs/fontconfig
 	!app-text/ghostscript-gnu
-	!app-text/ghostscript-afpl"
+	!app-text/ghostscript-gpl"
 
 RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.10 2006/04/02 16:30:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-7.07.1-r8.ebuild,v 1.11 2006/08/12 22:04:33 genstef Exp $
 
 inherit flag-o-matic eutils toolchain-funcs libtool
 
@@ -27,7 +27,7 @@ DEP="virtual/libc
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( net-print/cups )
 	!app-text/ghostscript-gnu
-	!app-text/ghostscript-afpl"
+	!app-text/ghostscript-gpl"
 
 RDEPEND="${DEP}
 	cjk? ( media-fonts/arphicfonts
