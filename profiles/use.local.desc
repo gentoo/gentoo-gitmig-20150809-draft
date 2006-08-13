@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2079 2006/08/10 22:31:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2080 2006/08/13 05:42:32 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1688,6 +1688,7 @@ www-client/elinks:nntp - Enable support for the NNTP
 www-client/kazehakase-cvs:estraier - enable estraier support for full-text search in history.
 www-client/kazehakase-cvs:thumbnail - enable thumbnail support.
 www-client/kazehakase:estraier - enable estraier support for full-text search in history.
+www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
 www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
