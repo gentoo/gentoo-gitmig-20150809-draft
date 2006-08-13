@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.36 2006/08/13 15:35:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.37 2006/08/13 17:21:11 corsair Exp $
+
+  13 Aug 2006; Markus Rothe <corsair@gentoo.org> recode-3.6-r2.ebuild:
+  Stable on ppc64; bug #143787
 
   13 Aug 2006; Fabian Groffen <grobian@gentoo.org> recode-3.6-r2.ebuild:
   Marked ppc-macos stable (bug #143787)
