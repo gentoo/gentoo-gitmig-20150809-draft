@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.4.5.ebuild,v 1.2 2006/08/13 17:21:07 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.4.5.ebuild,v 1.3 2006/08/13 20:59:18 yuval Exp $
 
 inherit base eutils multilib
 
@@ -50,8 +50,8 @@ src_install()	{
 	#maybe this should depend on a USE-Flag i.e. apache
 
 	#install libparrot.a into /usr/lib/
-	dolib.a blib/$(get_libdir)/*.a
-	dolib.so blib/$(get_libdir)/*.so*
+	dolib.a blib/lib/*.a
+	dolib.so blib/lib/*.so*
 	dosym /usr/$(get_libdir)/${P}/bin/parrot /usr/$(get_libdir)/${P}/parrot
 	dosym /usr/$(get_libdir)/${P} /usr/$(get_libdir)/parrot
 
