@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/eaccelerator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/ChangeLog,v 1.8 2006/07/27 11:28:00 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/ChangeLog,v 1.9 2006/08/13 14:24:10 chtekk Exp $
+
+  13 Aug 2006; Luca Longinotti <chtekk@gentoo.org>
+  eaccelerator-0.9.5_rc1.ebuild:
+  Fix wrong blocker, thanks to Weeve for noticing!
 
 *eaccelerator-0.9.5_rc1 (27 Jul 2006)
 
