@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.1.ebuild,v 1.11 2006/08/06 22:19:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.1.ebuild,v 1.12 2006/08/13 17:42:40 nerdboy Exp $
 
 inherit fortran eutils toolchain-funcs
 
@@ -17,27 +17,8 @@ S="${WORKDIR}/${P}/src"
 
 pkg_setup() {
 	if use fortran ; then
-	    if test -d /opt/intel/fortran90 ; then
-		FORTRAN="ifc"
-		need_fortran "ifc"
-		einfo "Configuring for Intel Fortran..."
-	    elif [ $(gcc-major-version) -ge 4 ] \
-	    && built_with_use sys-devel/gcc fortran ; then
-		FORTRAN="gfortran"
-		need_fortran "gfortran"
-		einfo "Configuring for GNU Fortran 90..."
-	    else
-		ewarn "Can't find a usable Fortran 90 compiler."
-		ewarn "No F90 interface should be built, however,"
-		ewarn "another Fortran compiler may be detected by"
-		ewarn "configure."
-	    fi
-	    if [ $(gcc-major-version) -eq 3 ] \
-	    && built_with_use sys-devel/gcc fortran ; then
-		FORTRAN="g77"
-		need_fortran "g77"
-		einfo "Configuring for GNU Fortran 77..."
-	    fi
+	    need_fortran "gfortran ifc g77"
+#	    fortran_pkg_setup
 	else
 	    FORTRAN=""
 	fi

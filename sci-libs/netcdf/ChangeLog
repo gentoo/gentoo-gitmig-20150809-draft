@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.28 2006/08/06 22:19:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.29 2006/08/13 17:42:40 nerdboy Exp $
+
+  13 Aug 2006; Steve Arnold <nerdboy@gentoo.org> netcdf-3.6.1.ebuild:
+  Simplified fortran handling in pkg_setup (see bug 82431) to let the
+  eclass do the work (and hopefully handle the ifc/ifort thing correctly).
 
   06 Aug 2006; Jason Wever <weeve@gentoo.org> netcdf-3.6.1.ebuild:
   Stable on SPARC wrt bug #82431.
