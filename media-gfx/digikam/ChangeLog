@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.53 2006/07/18 18:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.54 2006/08/13 14:41:38 deathwing00 Exp $
+
+  13 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  digikam-0.8.2.ebuild:
+  Resolves bug #143584: added media-gfx/dcraw as dependency. Thanks to Samir
+  M. Nassar for reporting.
 
 *digikam-0.8.2 (18 Jul 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.2.ebuild,v 1.1 2006/07/18 18:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.8.2.ebuild,v 1.2 2006/08/13 14:41:38 deathwing00 Exp $
 
 inherit kde
 
@@ -23,7 +23,8 @@ DEPEND=">=media-libs/libgphoto2-2
 	>=media-libs/libkipi-0.1.1
 	media-libs/imlib2
 	media-libs/tiff
-	sys-libs/gdbm"
+	sys-libs/gdbm
+	media-gfx/dcraw"
 RDEPEND="${DEPEND}
 	|| ( ( kde-base/kgamma kde-base/kamera ) kde-base/kdegraphics )"
 
