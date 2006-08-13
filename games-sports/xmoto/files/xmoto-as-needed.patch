@@ -1,0 +1,24 @@
+diff -ur xmoto-0.2.0.orig/Makefile.am xmoto-0.2.0/Makefile.am
+--- xmoto-0.2.0.orig/Makefile.am	2006-08-05 20:46:01.000000000 +0200
++++ xmoto-0.2.0/Makefile.am	2006-08-05 20:38:48.000000000 +0200
+@@ -47,7 +47,7 @@
+ 	src/EditorData.cpp src/EditorLog.cpp src/Editor.h src/EditorData.h \
+ 	src/EditorLog.h src/Packager.cpp src/Packager.h
+ 
+-xmoto_edit_LDADD = $(common_LDADD)
++xmoto_edit_LDADD = $(common_LDADD) $(SDL_LIBS)
+ 
+ xmoto_SOURCES = $(common_SOURCES) src/BSP.cpp src/Game.cpp src/GameMain.cpp \
+ 	src/GameMenus.cpp src/GUIBestTimes.cpp src/GUIButton.cpp src/GUI.cpp \
+diff -ur xmoto-0.2.0.orig/Makefile.in xmoto-0.2.0/Makefile.in
+--- xmoto-0.2.0.orig/Makefile.in	2006-08-05 20:45:39.000000000 +0200
++++ xmoto-0.2.0/Makefile.in	2006-08-05 20:46:29.000000000 +0200
+@@ -269,7 +269,7 @@
+ 	src/EditorData.cpp src/EditorLog.cpp src/Editor.h src/EditorData.h \
+ 	src/EditorLog.h src/Packager.cpp src/Packager.h
+ 
+-xmoto_edit_LDADD = $(common_LDADD)
++xmoto_edit_LDADD = $(common_LDADD) $(SDL_LIBS)
+ xmoto_SOURCES = $(common_SOURCES) src/BSP.cpp src/Game.cpp src/GameMain.cpp \
+ 	src/GameMenus.cpp src/GUIBestTimes.cpp src/GUIButton.cpp src/GUI.cpp \
+ 	src/GUIFrame.cpp src/GUIList.cpp src/GUIStatic.cpp src/GUITabView.cpp \
