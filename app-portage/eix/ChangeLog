@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.100 2006/08/08 16:42:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.101 2006/08/13 15:24:07 genstef Exp $
+
+  13 Aug 2006; Stefan Schweizer <genstef@gentoo.org> eix-0.6.3.ebuild:
+  add dodoc thanks to Petteri Räty <betelgeuse@gentoo.org> in bug 143780,
+  trim postinst einfo notes
 
 *eix-0.6.3 (08 Aug 2006)
 
