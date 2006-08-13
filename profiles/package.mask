@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5728 2006/08/12 21:05:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5729 2006/08/13 12:46:39 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,17 @@
 ##
 ##   End example
 ##
+
+# Petteri Räty <betelgeuse@gentoo.org> (13 Aug 2006)
+# Masked because of bug #132578 
+# http://bugs.gentoo.org/show_bug.cgi?id=132578
+#
+# The from source version net-p2p/azureus has various
+# improvements and will replace the -bin version as
+# soon as it is marked stable. Please migrate to 
+# that version if you want to continue using the ~arch
+# version of Azureus.
+=net-p2p/azureus-bin-2.4*
 
 # Luca Barbato <lu_zero@gentoo.org> (12 Aug 2006)
 # x264 doesn't play nice with older version, temp mask for a better
