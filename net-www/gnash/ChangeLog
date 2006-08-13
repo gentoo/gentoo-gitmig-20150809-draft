@@ -1,6 +1,11 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.17 2006/08/12 23:39:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.18 2006/08/13 18:05:59 genstef Exp $
+
+  13 Aug 2006; Stefan Schweizer <genstef@gentoo.org> -files/do-sound.diff,
+  -files/kdedir.diff, -files/klash-makefile.diff,
+  gnash-0.7.1_p20090909.ebuild:
+  remove some patches that got applied upstream
 
   12 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +files/do-sound.diff,
   -files/gnash-as-needed.diff, -files/klash-int-not-external.diff,

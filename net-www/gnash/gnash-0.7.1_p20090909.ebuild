@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20090909.ebuild,v 1.2 2006/08/12 23:39:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20090909.ebuild,v 1.3 2006/08/13 18:05:59 genstef Exp $
 
 inherit nsplugins kde-functions autotools cvs
 
@@ -60,15 +60,6 @@ src_unpack() {
 	cvs_src_unpack
 	cd ${S}
 
-	# build klash even without nsplugin
-	epatch ${FILESDIR}/klash-makefile.diff
-
-	# we need -L for linking 
-	epatch ${FILESDIR}/kdedir.diff
-
-	# we want sound
-	epatch ${FILESDIR}/do-sound.diff
-
 	AT_M4DIR="macros" eautoreconf
 }
 
@@ -116,4 +107,6 @@ pkg_postinst() {
 	ewarn "ALPHA"
 	ewarn "gnash is still in heavy development"
 	ewarn "please report gnash bugs upstream to the gnash devs"
+	echo
+	ewarn "To try out sound support use \"gnash -r 3 file.swf\""
 }
