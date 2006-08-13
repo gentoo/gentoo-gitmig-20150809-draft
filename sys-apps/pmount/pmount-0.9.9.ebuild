@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.9.ebuild,v 1.9 2006/08/12 14:12:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.9.ebuild,v 1.10 2006/08/13 00:18:46 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.piware.de/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ia64 ppc ppc64 ~sh sparc x86"
+KEYWORDS="amd64 arm hppa ~ia64 ppc ppc64 sh sparc x86"
 IUSE="crypt"
 
 DEPEND=">=sys-apps/dbus-0.33
