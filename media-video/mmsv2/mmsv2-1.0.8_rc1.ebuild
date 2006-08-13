@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.8_rc1.ebuild,v 1.1 2006/07/21 21:15:43 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.8_rc1.ebuild,v 1.2 2006/08/13 16:00:13 arj Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug lirc svga sdl dvb xine dxr3"
 
 RDEPEND="media-libs/imlib2
+	x11-libs/libXScrnSaver
 	media-libs/taglib
 	>=dev-libs/libpcre-4.3
 	=dev-db/sqlite-2*
