@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.1 2006/08/13 20:50:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.2 2006/08/13 22:56:30 mr_bones_ Exp $
+
+  13 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  xmoto-0.2.0.ebuild:
+  tidy ebuild; fixup metadata
 
 *xmoto-0.2.0 (13 Aug 2006)
 
