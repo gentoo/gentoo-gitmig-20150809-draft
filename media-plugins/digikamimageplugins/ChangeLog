@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/digikamimageplugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.25 2006/07/18 18:52:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.26 2006/08/13 17:13:41 deathwing00 Exp $
+
+*digikamimageplugins-0.9.0_beta1 (13 Aug 2006)
+
+  13 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  digikamimageplugins-0.8.2.ebuild, +digikamimageplugins-0.9.0_beta1.ebuild:
+  Version bump. See bug #143603 for details. Fixed documentation for versions
+  0.8.2 and above from 0.8.0 to 0.8.2
 
 *digikamimageplugins-0.8.2 (18 Jul 2006)
 
