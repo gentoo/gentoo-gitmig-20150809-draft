@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-dialup</herd>
-<maintainer>
-  <email>hansmi@gentoo.org</email>
-  <name>Michael Hanselmann</name>
-</maintainer>
 <longdescription>
 MultiImonC is a graphical client for the imond running on fli4l.
 </longdescription>
