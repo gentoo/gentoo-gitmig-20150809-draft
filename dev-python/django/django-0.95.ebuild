@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.ebuild,v 1.1 2006/08/01 16:44:53 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-0.95.ebuild,v 1.2 2006/08/13 15:40:12 lucass Exp $
 
 inherit distutils
 
@@ -19,7 +19,8 @@ DEPEND=">=dev-lang/python-2.3
 RDEPEND=">=dev-lang/python-2.3
 		sqlite? ( >=dev-python/pysqlite-2.0.3 )
 		postgres? ( <dev-python/psycopg-1.99 )
-		mysql? ( dev-python/mysql-python )"
+		mysql? ( dev-python/mysql-python )
+		dev-python/imaging"
 
 S="${WORKDIR}/${MY_P}"
 DOCS="docs/* AUTHORS INSTALL LICENSE"

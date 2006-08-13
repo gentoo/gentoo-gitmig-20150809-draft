@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.7 2006/08/01 16:44:53 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.8 2006/08/13 15:40:12 lucass Exp $
+
+  13 Aug 2006; Lukasz Strzygowski <lucass@gentoo.org> django-0.95.ebuild:
+  Added dev-python/imaging rdep, bug #143788.
 
 *django-0.95 (01 Aug 2006)
 
