@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-2.0_rc1.ebuild,v 1.6 2006/03/16 13:31:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/jahshaka-2.0_rc1.ebuild,v 1.7 2006/08/13 01:08:45 dberkholz Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/mlt++
-	>=media-libs/glut-3.7.1
+	virtual/glut
 	>=media-libs/freetype-2.1.9
 	=x11-libs/qt-3*"
 
