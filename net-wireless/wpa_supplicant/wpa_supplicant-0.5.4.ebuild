@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.7 2006/08/13 10:58:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.8 2006/08/13 11:16:49 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -105,6 +105,14 @@ src_unpack() {
 		# FreeBSD specific driver
 		echo "CONFIG_DRIVER_BSD=y" >> "${CONFIG}"
 	fi
+
+	# people seem to take the example configuration file too literally
+	# bug #102361
+	sed -i \
+		-e "s:^\(opensc_engine_path\):#\1:" \
+		-e "s:^\(pkcs11_engine_path\):#\1:" \
+		-e "s:^\(pkcs11_module_path\):#\1:" \
+		${S}/wpa_supplicant.conf || die
 
 	# Change configuration to match Gentoo locations, #143750
 	sed -i \
