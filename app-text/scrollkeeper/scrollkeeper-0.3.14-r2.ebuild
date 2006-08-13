@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r2.ebuild,v 1.10 2006/05/25 21:34:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.3.14-r2.ebuild,v 1.11 2006/08/13 00:13:55 vapier Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="FDL-1.1 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/libxml2-2.4.19
@@ -51,8 +51,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ -d ${ROOT}/usr/share/scrollkeeper/Templates ]]
-	then
+	if [[ -d ${ROOT}/usr/share/scrollkeeper/Templates ]] ; then
 		rm -rf "${ROOT}"/usr/share/scrollkeeper/Templates
 	fi
 }
@@ -62,7 +61,7 @@ pkg_postinst() {
 	"${ROOT}"/usr/bin/xmlcatalog --noout --add "public" \
 		"-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" \
 		"`echo "${ROOT}/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd" | sed -e "s://:/:g"`" \
-		${ROOT}/etc/xml/catalog
+		"${ROOT}"/etc/xml/catalog
 	einfo "Rebuilding Scrollkeeper database..."
 	scrollkeeper-rebuilddb -q -p "${ROOT}"/var/lib/scrollkeeper
 	einfo "Updating Scrollkeeper database..."
@@ -70,17 +69,16 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ ! -x ${ROOT}/usr/bin/scrollkeeper-config ]
-	then
+	if [[ ! -x ${ROOT}/usr/bin/scrollkeeper-config ]] ; then
 		# SK is being removed, not upgraded.
 		# Remove all generated files
 		einfo "Cleaning up ${ROOT}/var/lib/scrollkeeper..."
-		rm -rf ${ROOT}/var/lib/scrollkeeper
-		rm -rf ${ROOT}/var/log/scrollkeeper.log
-		rm -rf ${ROOT}/var/log/scrollkeeper.log.1
-		${ROOT}/usr/bin/xmlcatalog --noout --del \
+		rm -rf "${ROOT}"/var/lib/scrollkeeper
+		rm -rf "${ROOT}"/var/log/scrollkeeper.log
+		rm -rf "${ROOT}"/var/log/scrollkeeper.log.1
+		"${ROOT}"/usr/bin/xmlcatalog --noout --del \
 			"${ROOT}/usr/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd" \
-			${ROOT}/etc/xml/catalog
+			"${ROOT}"/etc/xml/catalog
 
 		einfo "Scrollkeeper ${PV} unmerged, if you removed the package"
 		einfo "you might want to clean up /var/lib/scrollkeeper."
