@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bin86
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.16 2005/12/29 23:28:26 tester Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.17 2006/08/13 10:36:46 chrb Exp $
+
+  13 Aug 2006; Chris Bainbridge <chrb@gentoo.org> metadata.xml,
+  -bin86-0.16.0.ebuild:
+  Add myself as maintainer, remove old ebuild.
 
   29 Dec 2005; Olivier Crête <tester@gentoo.org> bin86-0.16.17.ebuild:
   Stable on amd64
