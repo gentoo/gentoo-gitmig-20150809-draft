@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.03.ebuild,v 1.5 2006/07/05 10:19:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-8.03.ebuild,v 1.6 2006/08/13 14:28:22 plasmaroo Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cybercom.net/~dcoffin/dcraw/"
 SRC_URI="http://dev.gentoo.org/~wschlich/src/media-gfx/dcraw/${P}.tar.bz2"
 LICENSE="freedist GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 DEPEND="virtual/libc
 	>=media-libs/jpeg-6b
 	media-libs/lcms"
