@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.17 2006/07/02 19:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.18 2006/08/13 11:27:27 yuval Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ PERLSLOT="1"
 SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
 MY_PV="${PV%_rc*}"
-DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
+DESCRIPTION="Larry Wall's Practical Extraction and Report Language"
 S="${WORKDIR}/${MY_P}"
 SRC_URI="mirror://cpan/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.perl.org/"
