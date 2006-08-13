@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/parrot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.13 2006/05/22 00:52:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.14 2006/08/13 15:18:37 yuval Exp $
+
+*parrot-0.4.5 (13 Aug 2006)
+
+  13 Aug 2006; <yuval@gentoo.org> +parrot-0.4.5.ebuild:
+  Version bump
 
   22 May 2006; <mcummings@gentoo.org> -parrot-0.2.3.ebuild:
   Cleaning up upld parrot ebuilds. Yuval has a copy of the new one coming
