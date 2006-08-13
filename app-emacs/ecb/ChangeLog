@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.25 2006/05/24 19:59:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.26 2006/08/13 08:38:10 grobian Exp $
+
+  13 Aug 2006; Fabian Groffen <grobian@gentoo.org> ecb-2.32-r1.ebuild:
+  Marked ~ppc-macos (bug #103166)
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org> ecb-2.32-r1.ebuild:
   Stable on ppc.

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/jde
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.22 2006/05/21 09:33:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jde/ChangeLog,v 1.23 2006/08/13 08:36:06 grobian Exp $
+
+  13 Aug 2006; Fabian Groffen <grobian@gentoo.org> jde-2.3.5.1.ebuild:
+  Marked ~ppc-macos (bug #103166)
 
   21 May 2006; Simon Stelling <blubb@gentoo.org> jde-2.3.5-r1.ebuild,
   jde-2.3.5.1.ebuild:
