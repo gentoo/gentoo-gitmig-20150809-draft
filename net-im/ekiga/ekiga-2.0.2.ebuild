@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.2.ebuild,v 1.8 2006/07/20 18:13:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekiga/ekiga-2.0.2.ebuild,v 1.9 2006/08/13 15:36:46 genstef Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -46,7 +46,7 @@ pkg_setup() {
 		die "Pwlib w/o ldap-support detected."
 	fi
 
-	if ! built_with_use net-dns/avahi dbus; then
+	if use avahi && ! built_with_use net-dns/avahi dbus; then
 		einfo "You need to build net-dns/avahi with USE=dbus enabled."
 		die "Avahi without dbus-support detected."
 	fi
