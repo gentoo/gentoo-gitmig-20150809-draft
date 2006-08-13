@@ -1,0 +1,10 @@
+--- src/ops/experimental.ops.old	2006-08-13 19:50:21.000000000 +0300
++++ src/ops/experimental.ops	2006-08-13 19:50:23.000000000 +0300
+@@ -224,7 +224,6 @@
+   goto NEXT();
+ }
+ 
+-=back
+ 
+ =item B<classname>(out PMC, in PMC)
+ 

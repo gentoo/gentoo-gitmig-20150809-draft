@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.4.5.ebuild,v 1.1 2006/08/13 15:18:37 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.4.5.ebuild,v 1.2 2006/08/13 17:21:07 yuval Exp $
 
 inherit base eutils multilib
 
@@ -26,6 +26,10 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/parrot-hints.patch
+	# Problem with the POD test:
+	# http://rt.perl.org/rt3//Public/Bug/Display.html?id=39734
+	# So we provide a patch
+	epatch ${FILESDIR}/${P}-pod-test.patch
 }
 
 src_compile()	{
