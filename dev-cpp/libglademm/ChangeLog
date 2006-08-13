@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.47 2006/07/18 05:11:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.48 2006/08/13 18:29:10 corsair Exp $
+
+  13 Aug 2006; Markus Rothe <corsair@gentoo.org> libglademm-2.4.1.ebuild,
+  libglademm-2.6.0.ebuild, libglademm-2.6.1.ebuild, libglademm-2.6.2.ebuild:
+  removed ppc64 from the list of archs running autoconf etc. because it is not
+  longer needed in those versions
 
   18 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   libglademm-2.6.2.ebuild:
