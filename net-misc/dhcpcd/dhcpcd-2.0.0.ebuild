@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.0.ebuild,v 1.14 2005/09/16 02:56:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.0.ebuild,v 1.15 2006/08/13 19:33:48 uberlord Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,6 +30,9 @@ src_unpack() {
 
 	# Fix compiling on gcc2
 	epatch "${FILESDIR}/${P}-gcc2.patch"
+
+	# Never take the interface down
+	epatch "${FILESDIR}/${PN}-2.0.0-alwaysup.patch"
 
 	# Redefine the location of ntp.drift
 	sed -i 's:/etc/ntp\.drift:/var/lib/ntp/ntp.drift:' src/dhcpconfig.c

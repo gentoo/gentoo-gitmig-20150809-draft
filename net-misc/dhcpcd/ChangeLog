@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.103 2006/08/05 20:44:35 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.104 2006/08/13 19:33:47 uberlord Exp $
+
+  13 Aug 2006; Roy Marples <uberlord@gentoo.org>
+  +files/dhcpcd-2.0.0-alwaysup.patch, +files/dhcpcd-2.0.8-alwaysup.patch,
+  dhcpcd-2.0.0.ebuild, dhcpcd-2.0.3.ebuild, dhcpcd-2.0.5.ebuild,
+  dhcpcd-2.0.8-r2.ebuild:
+  Ensure that interface is always up as future dhcpcd's will do this
+  automatically and probably drop the -o option.
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #135033
