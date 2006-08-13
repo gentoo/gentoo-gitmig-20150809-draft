@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/showconsole
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.13 2006/06/07 09:44:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/ChangeLog,v 1.14 2006/08/13 14:46:11 vapier Exp $
+
+  13 Aug 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/showconsole-1.08-build.patch, showconsole-1.08.ebuild:
+  Fix stripping of binaries #143768 by Jan Kundrát.
 
   07 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   showconsole-1.08.ebuild:

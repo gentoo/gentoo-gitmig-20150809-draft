@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.6 2006/06/07 09:44:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.7 2006/08/13 14:46:11 vapier Exp $
 
 # This tarball is extracted from SuSe's sysvinit-2.86-#.src.rpm
 # You can find said src rpm via opensuse.org:
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.07-no-TIOCGDEV.patch
 	epatch "${FILESDIR}"/${P}-quiet.patch
 	epatch "${FILESDIR}"/${P}-no-pthread-yield.patch #119762
+	epatch "${FILESDIR}"/${P}-build.patch #143768
 }
 
 src_compile() {
