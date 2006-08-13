@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.5 2006/04/29 00:39:08 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.6 2006/08/13 17:48:01 markusle Exp $
+
+*vmd-1.8.4-r1 (13 Aug 2006)
+
+  13 Aug 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/vmd-1.8.4-paratool.patch, +vmd-1.8.4-r1.ebuild:
+  VMD now depends on stride in order to properly display secondary
+  structure information. Also patched a paratool plugin error under
+  tcl-8.4.13.
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix SHA256 digests.

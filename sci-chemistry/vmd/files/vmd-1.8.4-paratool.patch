@@ -1,0 +1,28 @@
+diff -Naur plugins/paratool/paratool_readwrite.tcl plugins-new/paratool/paratool_readwrite.tcl
+--- plugins/paratool/paratool_readwrite.tcl	2006-04-05 18:53:03.000000000 -0400
++++ plugins-new/paratool/paratool_readwrite.tcl	2006-08-01 22:05:50.000000000 -0400
+@@ -651,12 +651,8 @@
+ ##########################################################
+ 
+ proc ::Paratool::load_basemolecule { file {file2 {}}} {
+-<<<<<<< paratool_readwrite.tcl
+-    puts "Files $file $file2"
+-=======
+    puts "Loading base molecule $file"
+ 
+->>>>>>> 1.20
+    save_viewpoint_orig
+    set newmolid [mol new $file]
+    if {[llength $file2]} {
+diff -Naur plugins/resptool/resptool.tcl plugins-new/resptool/resptool.tcl
+--- plugins/resptool/resptool.tcl	2005-12-20 11:08:16.000000000 -0500
++++ plugins-new/resptool/resptool.tcl	2006-08-01 22:06:00.000000000 -0400
+@@ -14,7 +14,7 @@
+ # * Clear selection button
+ 
+ package provide resptool 1.0
+-package require paratool
++#package require paratool
+ 
+ namespace eval ::RESPTool:: {
+   variable w
