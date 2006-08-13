@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.22 2006/05/12 15:53:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.23 2006/08/13 16:40:34 kolmodin Exp $
+
+  13 Aug 2006; <kolmodin@gentoo.org> hmake-3.11.ebuild:
+  Fix to always use Gentoo installed GHC compiler. Se bug #134379.
+  Thanks to Mario Blazevi for reporting the bug.
 
 *hmake-3.11 (12 May 2006)
 

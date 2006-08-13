@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.1 2006/05/12 15:53:10 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.2 2006/08/13 16:40:34 kolmodin Exp $
 
-inherit base eutils fixheadtails
+inherit base eutils fixheadtails ghc-package
 
 DESCRIPTION="a make tool for Haskell programs"
 HOMEPAGE="http://www.haskell.org/hmake/"
@@ -41,7 +41,7 @@ src_compile() {
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man/man1 \
-		--buildwith=ghc \
+		--buildwith="$(ghc-getghc)" \
 		|| die "./configure failed"
 
 	# emake tested; parallel make does not work
