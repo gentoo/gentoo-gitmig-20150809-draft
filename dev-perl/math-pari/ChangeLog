@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.29 2006/08/12 21:30:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.30 2006/08/13 05:54:16 chriswhite Exp $
+
+  13 Aug 2006; Chris White <chriswhite@gentoo.org>
+  math-pari-2.010706.ebuild:
+  Moved use sparc logic to src_compile and out of global scope for bug #143727.
 
   12 Aug 2006; Jason Wever <weeve@gentoo.org> math-pari-2.010706.ebuild:
   Adjusted machine detection for SPARC as the native SPARC assembly routines
