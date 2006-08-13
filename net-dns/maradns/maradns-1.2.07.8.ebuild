@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.2.03.3.ebuild,v 1.2 2006/08/13 00:48:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.2.07.8.ebuild,v 1.1 2006/08/13 00:48:10 matsuu Exp $
 
 inherit eutils
 
@@ -49,8 +49,6 @@ src_install() {
 	insinto /etc/maradns; newins doc/en/examples/example_csv2 db.example.net
 	keepdir /etc/maradns/logger
 
-	builddir/mara.startup maradns
-	builddir/zoneserver.startup maradns.zoneserver
 	newinitd "${FILESDIR}"/maradns.rc6 maradns
 	newinitd "${FILESDIR}"/zoneserver.rc6 zoneserver
 }
