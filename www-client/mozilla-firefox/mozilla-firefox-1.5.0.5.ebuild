@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.5.ebuild,v 1.8 2006/08/01 03:29:26 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.5.ebuild,v 1.9 2006/08/13 22:05:21 kloeri Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -279,7 +279,7 @@ pkg_postinst() {
 	ewarn "is the case, please search at http://bugs.gentoo.org and open a new bug"
 	ewarn "if one does not exist. Before filing any bugs, please move or remove ~/.mozilla"
 	ewarn "and test with a clean profile directory."
-	ewarn "Thank you! anarchy@gentoo.org."
+	ewarn "Thank you! mozilla@gentoo.org."
 
 	echo     ""
 	einfo "Any regchrome errors can be ignored right now, this is due to"
