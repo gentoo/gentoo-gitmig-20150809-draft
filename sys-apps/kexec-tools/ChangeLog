@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.9 2006/06/13 20:48:55 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.10 2006/08/13 11:22:05 uberlord Exp $
+
+  13 Aug 2006; Roy Marples <uberlord@gentoo.org> files/kexec.conf,
+  files/kexec.init:
+  Update the init script so that it's more intelligent working things out
+  so it should just work for most peoples installs.
+  
+  We now confiure kexec on shutdown by default instead of startup.
 
 *kexec-tools-1.101-r3 (13 Jun 2006)
 
