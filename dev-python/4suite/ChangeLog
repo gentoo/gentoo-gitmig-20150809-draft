@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.24 2006/08/05 09:29:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.25 2006/08/13 22:59:08 weeve Exp $
+
+  13 Aug 2006; Jason Wever <weeve@gentoo.org> 4suite-1.0_beta1.ebuild:
+  Stable on SPARC wrt bug #123394.
 
   05 Aug 2006; Michael Hanselmann <hansmi@gentoo.org>
   4suite-1.0_beta3.ebuild:
