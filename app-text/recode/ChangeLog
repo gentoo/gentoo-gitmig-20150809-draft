@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.35 2006/07/18 04:45:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.36 2006/08/13 15:35:21 grobian Exp $
+
+  13 Aug 2006; Fabian Groffen <grobian@gentoo.org> recode-3.6-r2.ebuild:
+  Marked ppc-macos stable (bug #143787)
 
   18 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> recode-3.6-r2.ebuild:
   Move the ppc-macos patch out of if, as it's needed on FreeBSD and does not
