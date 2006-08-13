@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.4 2006/07/06 08:11:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.5 2006/08/13 17:49:10 dberkholz Exp $
 
 inherit multilib eutils
 
@@ -21,6 +21,7 @@ IUSE="voodoo5 voodoo3 voodoo2 voodoo1"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
 DEPEND="${RDEPEND}
+	dev-lang/nasm
 	|| ( x11-libs/libXt virtual/x11 )"
 
 src_compile() {

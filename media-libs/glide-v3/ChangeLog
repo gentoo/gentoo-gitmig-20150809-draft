@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glide-v3
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.27 2006/07/06 08:11:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.28 2006/08/13 17:49:10 dberkholz Exp $
+
+  13 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  glide-v3-20060203.ebuild:
+  Requires nasm to build (hoppee@fh-brandenburg.de).
 
   06 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
   glide-v3-20060203.ebuild:
