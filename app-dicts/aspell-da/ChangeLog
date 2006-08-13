@@ -1,6 +1,14 @@
 # ChangeLog for app-dicts/aspell-da
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.28 2006/07/01 16:13:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.29 2006/08/13 15:44:06 arj Exp $
+
+*aspell-da-1.6.0 (13 Aug 2006)
+
+  13 Aug 2006; Anders Rune Jensen <arj@gentoo.org> +aspell-da-1.6.0.ebuild,
+  -aspell-da-1.4.50.ebuild, -aspell-da-1.4.51.ebuild,
+  -aspell-da-1.4.52.ebuild, -aspell-da-1.4.53.ebuild:
+  Version bump. Now only uses words which have been checked 3 times.
+  Remove old versions
 
   01 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   aspell-da-1.4.50.ebuild, aspell-da-1.4.51.ebuild, aspell-da-1.4.52.ebuild,
