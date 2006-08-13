@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.12.0.ebuild,v 1.12 2006/07/15 03:20:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.12.0.ebuild,v 1.13 2006/08/13 18:03:36 corsair Exp $
 
 inherit gnome2 eutils
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS COPYING* ChangeLog NEWS README INSTALL"
 
 src_compile() {
-	if useq amd64 || useq ppc64; then
+	if useq amd64; then
 		aclocal -I scripts
 		libtoolize --force --copy
 		automake -c -f
