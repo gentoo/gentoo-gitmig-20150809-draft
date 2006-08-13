@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.39.ebuild,v 1.1 2006/08/01 04:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.39.ebuild,v 1.2 2006/08/13 00:27:42 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -70,11 +70,11 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "PLEASE PLEASE take note of this"
-	einfo "Please make *sure* to run revdep-rebuild now"
-	einfo "Certain things on your system may have linked against a"
-	einfo "different version of com_err -- those things need to be"
-	einfo "recompiled.  Sorry for the inconvenience"
+	ewarn "PLEASE PLEASE take note of this"
+	ewarn "Please make *sure* to run revdep-rebuild now"
+	ewarn "Certain things on your system may have linked against a"
+	ewarn "different version of com_err -- those things need to be"
+	ewarn "recompiled.  Sorry for the inconvenience"
 	echo
 	epause 10
 	ebeep
