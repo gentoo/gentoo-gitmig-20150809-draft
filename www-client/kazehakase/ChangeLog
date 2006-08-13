@@ -1,6 +1,14 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.26 2006/02/08 21:03:09 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.27 2006/08/13 05:47:00 matsuu Exp $
+
+*kazehakase-0.3.9 (13 Aug 2006)
+
+  13 Aug 2006; MATSUU Takuto <matsuu@gentoo.org> -kazehakase-0.2.7.ebuild,
+  +kazehakase-0.3.9.ebuild:
+  Version bumped.
+  Ebuild cleanup. Added hyperestraier USE flag.
+  Removed ~sparc because app-text/hyperestraier has no ~sparc KEYWORD.
 
 *kazehakase-0.3.5 (08 Feb 2006)
 
