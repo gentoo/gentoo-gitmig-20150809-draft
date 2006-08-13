@@ -1,9 +1,35 @@
-MD5 b6c2525770cf418f06440c4b13e5cf0e portage-prefpane-0.3-r1.ebuild 749
-MD5 304bd7a8b9c71b4bd19d4e37d8ac7d8f portage-prefpane-0.3.1.ebuild 664
-MD5 fc07be6b02d2a0d491bb936bf1ae73a4 metadata.xml 256
-MD5 ae39e22f54b2188b0922e3fe328e9b61 ChangeLog 1732
-MD5 115a710c5769f6158b265c62c67c487b portage-prefpane-0.3.ebuild 667
+AUX 0.3-autoconfig.patch 572 RMD160 9f309e9090508286e6d4ad3ac8a8d39f8447d23f SHA1 d649db739817e2c8150045cdba248fd7cccfa217 SHA256 e48cda29606e0f7d15fff18ebb9aed124b181b2c9d8f938fee241d8cc3d821ce
 MD5 2e76979cf82306eed05044e50b0b24bd files/0.3-autoconfig.patch 572
-MD5 d98b8522da6063f7c1a0e2db4de235b6 files/digest-portage-prefpane-0.3-r1 72
+RMD160 9f309e9090508286e6d4ad3ac8a8d39f8447d23f files/0.3-autoconfig.patch 572
+SHA256 e48cda29606e0f7d15fff18ebb9aed124b181b2c9d8f938fee241d8cc3d821ce files/0.3-autoconfig.patch 572
+DIST portage-prefpane-0.3.1.tar.bz2 34254
+DIST portage-prefpane-0.3.tar.bz2 34127
+EBUILD portage-prefpane-0.3-r1.ebuild 749 RMD160 b7a03eafe63481bd4418013cf9a31d8bea01cbcc SHA1 f31cbf1afea1ce1eb267b3413cf87fe4bb5091af SHA256 3693b2bcef810056b90f849e2d72a0745dacef0cb2abcfea0c88602de23d9660
+MD5 b6c2525770cf418f06440c4b13e5cf0e portage-prefpane-0.3-r1.ebuild 749
+RMD160 b7a03eafe63481bd4418013cf9a31d8bea01cbcc portage-prefpane-0.3-r1.ebuild 749
+SHA256 3693b2bcef810056b90f849e2d72a0745dacef0cb2abcfea0c88602de23d9660 portage-prefpane-0.3-r1.ebuild 749
+EBUILD portage-prefpane-0.3.1.ebuild 664 RMD160 21ab124057f49534125af9bd6e4f91e5b4874c33 SHA1 7ca8cb716b6633f2c780ac27bd2d7c70b525ddd7 SHA256 1b63d4bf49fc4dd199a74324a752beece0f053c2a8aadcdbf0ae3fa1adf8f846
+MD5 304bd7a8b9c71b4bd19d4e37d8ac7d8f portage-prefpane-0.3.1.ebuild 664
+RMD160 21ab124057f49534125af9bd6e4f91e5b4874c33 portage-prefpane-0.3.1.ebuild 664
+SHA256 1b63d4bf49fc4dd199a74324a752beece0f053c2a8aadcdbf0ae3fa1adf8f846 portage-prefpane-0.3.1.ebuild 664
+EBUILD portage-prefpane-0.3.ebuild 667 RMD160 a72e50fe4e07bc5a983d5b1df9cabc613b8ae533 SHA1 c9e028bcb4eb6dba22241c2e308469520601cc41 SHA256 b14db4a27bee37863483bdb8913b17e17386fec9ce6eae2fdd84c75c2e8ea091
+MD5 115a710c5769f6158b265c62c67c487b portage-prefpane-0.3.ebuild 667
+RMD160 a72e50fe4e07bc5a983d5b1df9cabc613b8ae533 portage-prefpane-0.3.ebuild 667
+SHA256 b14db4a27bee37863483bdb8913b17e17386fec9ce6eae2fdd84c75c2e8ea091 portage-prefpane-0.3.ebuild 667
+MISC ChangeLog 1732 RMD160 db72bf9b334b6170029acff99d2fedb17f6fe275 SHA1 c50ab1e51e4d4aadff0599080ccc652edf4bdfb2 SHA256 8a0a422aa617fa9c99d5d5b575e8b0a06f9d9ab7e0d7a714c591fc58b8266bd8
+MD5 ae39e22f54b2188b0922e3fe328e9b61 ChangeLog 1732
+RMD160 db72bf9b334b6170029acff99d2fedb17f6fe275 ChangeLog 1732
+SHA256 8a0a422aa617fa9c99d5d5b575e8b0a06f9d9ab7e0d7a714c591fc58b8266bd8 ChangeLog 1732
+MISC metadata.xml 160 RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 SHA1 d6147d00f16e8cfeef893d0764b0675a93d62849 SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+RMD160 d86217bb48cf4283e08e43bcaabbc919101ad795 metadata.xml 160
+SHA256 56fca1e06f6dcbe3bc12e7d3962998c7cb79d74f218ce8a17b07771b3e06f49e metadata.xml 160
 MD5 d98b8522da6063f7c1a0e2db4de235b6 files/digest-portage-prefpane-0.3 72
+RMD160 ae9958ca30f588d38c917be0e14ad7ae7e2f9243 files/digest-portage-prefpane-0.3 72
+SHA256 26a879b7d65890bbb59b0b10333a95637a8b742a419149c61e8ca883a4872601 files/digest-portage-prefpane-0.3 72
+MD5 d98b8522da6063f7c1a0e2db4de235b6 files/digest-portage-prefpane-0.3-r1 72
+RMD160 ae9958ca30f588d38c917be0e14ad7ae7e2f9243 files/digest-portage-prefpane-0.3-r1 72
+SHA256 26a879b7d65890bbb59b0b10333a95637a8b742a419149c61e8ca883a4872601 files/digest-portage-prefpane-0.3-r1 72
 MD5 1daf05412c8d87915885da232bf5a76c files/digest-portage-prefpane-0.3.1 74
+RMD160 93e8ec5dae0eed9cb6e5c355b1f428871f3bd959 files/digest-portage-prefpane-0.3.1 74
+SHA256 016225ab2eb8fa1428dd41c0d7de679f5cdbe94bbbef9026b53b7940b0b50016 files/digest-portage-prefpane-0.3.1 74
