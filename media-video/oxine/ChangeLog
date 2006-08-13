@@ -1,6 +1,11 @@
 # ChangeLog for media-video/oxine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.12 2006/05/03 20:59:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.13 2006/08/13 21:33:00 beandog Exp $
+
+*oxine-0.5 (13 Aug 2006)
+
+  13 Aug 2006; beandog +oxine-0.5.ebuild:
+  Version bump
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.
