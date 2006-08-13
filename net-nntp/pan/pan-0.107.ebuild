@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.107.ebuild,v 1.2 2006/08/09 18:47:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.107.ebuild,v 1.3 2006/08/13 13:31:09 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gnome spell"
 
 RDEPEND=">=dev-libs/glib-2.4.0
