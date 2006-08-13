@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2081 2006/08/13 10:59:38 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2082 2006/08/13 20:36:45 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -957,6 +957,8 @@ media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/nvidia-glx:dlloader - Enable dynamic module loader instead of ELF loader.  Installs nvidia_drv.so instead of nvidia_drv.o.
 media-video/ogmrip:subp - Subtitle ripping preliminary support
+media-video/oxine:mjpeg - Enables mjpegtools support
+media-video/oxine:polling - Enables support to automatically check the drive for a new disc
 media-video/totem:nvtv - Support for nvtv to use tv in on nvidia cards
 media-video/transcode:extrafilters - Install some filters only if we ask for them
 media-video/transcode:fame - Enables libfame support
