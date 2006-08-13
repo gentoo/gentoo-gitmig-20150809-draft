@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5729 2006/08/13 12:46:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5730 2006/08/13 18:19:10 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -586,10 +586,6 @@ sys-apps/resmgr
 # Diego Pettenò <flameeyes@gentoo.org> (26 May 2006)
 # Pending removal - superseded by xine-lib itself
 media-plugins/xine-vcdx
-
-# Stefan Schweizer <genstef@gentoo.org> (24 May 2006)
-# Masked for testing, svn snapshot
-=net-im/wengophone-2.0_pre20060719
 
 # Luca Longinotti <chtekk@gentoo.org> (24 May 2006)
 # Masked for more testing, breaks with stealth mode.
@@ -1216,11 +1212,6 @@ gnustep-apps/vindaloo
 # with the episode cleanup window.  However, those that don't use
 # it should be ok.
 media-sound/ipodder
-
-# Stefan Schweizer <genstef@gentoo.org> (08 Jul 2005)
-# Masked because of "UnixAppOpenFilePerform() Buffer Overflow", #98101
-<=app-text/acroread-5.10
-=media-fonts/acroread-asianfonts-5.0.20020815
 
 # Caleb Tennis <caleb@gentoo.org> (01 Jul 2005)
 # Seems to not be compatible with kde 3.4 though
