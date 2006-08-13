@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.35 2006/05/25 01:57:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.36 2006/08/13 18:52:58 swegener Exp $
+
+  13 Aug 2006; Sven Wegener <swegener@gentoo.org> gpa-0.7.3.ebuild:
+  No longer install pixmap files and additional .desktop file, closes bug
+  #131860.
 
 *gpa-0.7.3 (25 May 2006)
 

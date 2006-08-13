@@ -1,11 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.3.ebuild,v 1.1 2006/05/25 01:57:04 vanquirius Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.3.ebuild,v 1.2 2006/08/13 18:52:58 swegener Exp $
 
 DESCRIPTION="Standard GUI for GnuPG"
-HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/index.html"
+HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/"
 SRC_URI="mirror://gnupg/alpha/gpa/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -25,18 +23,17 @@ src_compile() {
 	# check if it is in uncommon /usr/lib/gnupg, and change libexecdir
 	# if so.  If we do not do this, hkp server types is not usable,
 	# as gpa cannot find gpgkeys_hkp ...
-	[ -f "/usr/lib/gnupg/gpgkeys_hkp" ] && myconf="--libexecdir=/usr/lib"
+	[[ -f /usr/lib/gnupg/gpgkeys_hkp ]] && myconf="--libexecdir=/usr/lib"
 
-	GPGME_CONFIG=/usr/bin/gpgme-config \
-	econf $(use_enable nls) \
-		${myconf} || die "econf failed"
-	emake || die
+	econf \
+		--with-gpgme-prefix=/usr \
+		$(use_enable nls) \
+		${myconf} \
+		|| die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README NEWS TODO
-	insinto /usr/share/pixmaps/gpa
-	doins gpa-logo-48x48.png pixmaps/*.xpm
-	make_desktop_entry gpa "Gnu Privacy Assistant" gpa/gpa-logo-48x48.png Utility
 }
