@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.30 2006/07/17 19:08:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.31 2006/08/13 18:14:47 corsair Exp $
+
+  13 Aug 2006; Markus Rothe <corsair@gentoo.org> gnome-vfsmm-2.10.0.ebuild,
+  gnome-vfsmm-2.11.1.ebuild, gnome-vfsmm-2.12.0.ebuild:
+  removed ppc64 from the list of archs running autoconf etc. because it is not
+  longer needed in those versions
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
   Marked stable on amd64 for bug #139612
