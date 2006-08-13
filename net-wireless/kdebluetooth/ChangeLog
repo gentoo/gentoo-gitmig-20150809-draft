@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.49 2006/07/16 17:20:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.50 2006/08/13 13:38:26 deathwing00 Exp $
+
+  13 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kdebluetooth-1.0_beta1-r2.ebuild:
+  Fixed bug #138277. Thanks to Michael Mauch for reporting it. Changed
+  keywords from amd64 to ~amd64 and hppa to ~hppa due to broken dependency:
+  >=dev-libs/openobex-1.1 required.
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   kdebluetooth-1.0_beta1-r2.ebuild:
