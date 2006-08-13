@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/cperl-mode
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cperl-mode/ChangeLog,v 1.1 2006/08/13 02:30:35 mkennedy Exp $
+
+*cperl-mode-5.20 (13 Aug 2006)
+
+  13 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/50cperl-mode-gentoo.el, +cperl-mode-5.20.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>;
+  Resolves Bug #92428.
+
