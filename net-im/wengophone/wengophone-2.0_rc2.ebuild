@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_rc2.ebuild,v 1.1 2006/08/13 18:14:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_rc2.ebuild,v 1.2 2006/08/14 21:55:41 genstef Exp $
 
 inherit eutils toolchain-funcs
 
@@ -57,6 +57,9 @@ src_unpack() {
 	for dpatch in debian/patches/*.patch; do
 		epatch ${dpatch}
 	done
+
+	# ffmpeg include is not always found, bug 143907
+	epatch ${FILESDIR}/ffmpeg-include.patch
 }
 
 src_compile() {
