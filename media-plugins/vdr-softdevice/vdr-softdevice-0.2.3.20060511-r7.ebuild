@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060511-r7.ebuild,v 1.3 2006/08/03 09:08:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060511-r7.ebuild,v 1.4 2006/08/14 18:51:33 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -42,7 +42,7 @@ DEPEND="${RDEPEND}
 
 
 S=${WORKDIR}/${VDRPLUGIN}-${MY_PV}
-PATCHES="${FILESDIR}/${MY_P}-Makefile.diff ${FILESDIR}/${MY_P}-CVS-20060511.diff
+PATCHES="${FILESDIR}/${MY_P}-CVS-20060511.diff
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-contrast.diff
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-key-init.diff
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-fullscreen.diff
