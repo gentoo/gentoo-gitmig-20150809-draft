@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.6-r1.ebuild,v 1.1 2006/07/27 17:02:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/scim-tables-0.5.6-r1.ebuild,v 1.2 2006/08/14 13:11:56 liquidx Exp $
 
 inherit kde-functions autotools eutils
 
@@ -41,7 +41,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-fixconfigure.patch"
 	epatch "${FILESDIR}/${PN}-qt335.patch"
 
-	AT_NO_RECURSIVE=yes eautoreconf
+	#AT_NO_RECURSIVE=yes eautoreconf
+	AT_NO_RECURSIVE=yes AT_M4DIR=${S}/m4 eautoreconf
 }
 
 src_compile() {
