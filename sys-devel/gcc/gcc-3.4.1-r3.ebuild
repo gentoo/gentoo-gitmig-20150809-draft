@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.24 2006/06/22 05:38:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.25 2006/08/14 16:32:23 solar Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened n32 n64 emul-linux-x86"
 
@@ -40,7 +40,7 @@ RDEPEND="virtual/libc
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
-PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
+PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
 [ "${ABI}" != "n32" ] && [ "${ABI}" != "n64" ] && PDEPEND="${PDEPEND}
 	!n32? ( !n64? ( !s390? ( !elibc_uclibc? ( sys-libs/libstdc++-v3 ) ) ) )"
 

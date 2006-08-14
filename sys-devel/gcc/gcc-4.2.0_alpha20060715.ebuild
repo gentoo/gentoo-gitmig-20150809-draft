@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.0_alpha20060715.ebuild,v 1.2 2006/07/18 05:08:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.0_alpha20060715.ebuild,v 1.3 2006/08/14 16:32:23 solar Exp $
 
 ETYPE="gcc-compiler"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="-*"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
+	|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )
 	virtual/libiconv
 	fortran? (
 		>=dev-libs/gmp-4.2.1
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
 	>=${CATEGORY}/binutils-2.16.1"
-PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
+PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
 if [[ ${CATEGORY} != cross-* ]] ; then
 	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
 fi

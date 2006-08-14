@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.21 2006/06/22 05:38:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.22 2006/08/14 16:32:23 solar Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -123,7 +123,7 @@ RDEPEND=">=sys-libs/glibc-2.3.2-r3
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
-PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
+PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
 
 
 # Hack used to patch Makefiles to install into the build dir

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.31 2006/07/28 06:39:21 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.32 2006/08/14 16:32:23 solar Exp $
 
 MAN_VER="3.3.5"
 #BRANCH_UPDATE="20041025"
@@ -70,7 +70,7 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )"
+PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
 
 src_unpack() {
 	gcc_src_unpack

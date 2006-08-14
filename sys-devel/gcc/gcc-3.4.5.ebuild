@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.5.ebuild,v 1.17 2006/07/28 06:39:21 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.5.ebuild,v 1.18 2006/08/14 16:32:23 solar Exp $
 
 MAN_VER=""
 PATCH_VER="1.2"
@@ -43,7 +43,7 @@ KEYWORDS="-* amd64 ~arm -hppa ~ia64 mips ~ppc ~ppc64 ~s390 sh sparc x86"
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
-RDEPEND="|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
+RDEPEND="|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )
 	>=sys-libs/zlib-1.1.4
 	elibc_glibc? (
 		>=sys-libs/glibc-2.3.3_pre20040420-r1
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND="|| ( app-admin/eselect-compiler sys-devel/gcc-config )
+PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )
 	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) ) ) ) )"
 
 src_unpack() {
