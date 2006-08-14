@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>mobile-phone</herd>
-<longdescription>This is the apps that comes with the Open OBEX C-library. 
-These are not meant to be more than test-programs to look at 
-if you want to see how use the library itself.</longdescription>
-</pkgmetadata>
