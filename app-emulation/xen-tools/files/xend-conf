@@ -1,7 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xend-conf,v 1.1 2006/03/24 23:55:01 agriffis Exp $
-
-# set to YES to enable the web frontend to xend on port 8080.
-# To change the port, edit /usr/lib/python/xen/sv/params.py
-XENSV="NO"
