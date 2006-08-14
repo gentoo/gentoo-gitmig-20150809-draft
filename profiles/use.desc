@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.304 2006/07/31 12:16:44 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.305 2006/08/14 14:44:30 cardoe Exp $
 
 # Keep them sorted
 
@@ -316,7 +316,7 @@ symlink - Force kernel ebuilds to automatically update the /usr/src/linux symlin
 sysvipc - Support for System V-compatible inter-process communication
 szip - Use the szip compression library
 tcl - Adds support the Tcl language
-tcltk - Support for Tcl and/or Tk GUI toolkits
+tcltk - Support for Tcl and/or Tk GUI toolkits (deprecated for tcl/tk USE)
 tcpd - Adds support for TCP wrappers
 test - Workaround to pull in packages needed to run with FEATURES=maketest / FEATURES=test
 tetex - Adds support for teTeX (typesetting package)
