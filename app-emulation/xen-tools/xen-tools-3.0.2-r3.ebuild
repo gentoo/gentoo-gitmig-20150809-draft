@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r2.ebuild,v 1.5 2006/08/14 07:11:47 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.0.2-r3.ebuild,v 1.1 2006/08/14 07:11:47 aross Exp $
 
 inherit mount-boot flag-o-matic distutils eutils multilib
 
@@ -20,25 +20,25 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc debug screen custom-cflags hardened vnc sdl"
 
-DEPEND="sys-devel/gcc
-	dev-lang/python"
-
-RDEPEND=">=app-emulation/xen-3.0.2
-	dev-lang/python
-	sys-apps/iproute2
-	net-misc/bridge-utils
+CDEPEND="dev-lang/python
 	sys-libs/zlib
+	sdl? ( media-libs/libsdl )
+	vnc? ( media-libs/libsdl )"
+
+DEPEND="${CDEPEND}
+	sys-devel/gcc
+	dev-lang/perl
+	app-misc/pax-utils
 	doc? (
 		dev-tex/latex2html
 		media-gfx/transfig
 	)
-	sdl? (
-		media-libs/libsdl
-	)
-	vnc? (
-		net-libs/libvncserver
-		media-libs/libsdl
-	)
+	vnc? ( net-libs/libvncserver )"
+
+RDEPEND="${CDEPEND}
+	>=app-emulation/xen-3.0.2
+	sys-apps/iproute2
+	net-misc/bridge-utils
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -52,6 +52,13 @@ pkg_setup() {
 		ewarn "You have the 'vnc' USE flag set, but not 'sdl'."
 		ewarn "VNC functionality requires SDL support, so it"
 		ewarn "will be enabled anyway."
+	fi
+
+	if [[ "$(scanelf -s __guard -q `which python`)" ]] ; then
+		eerror "xend doesn't work when python is built with stack smashing protection (ssp)."
+		eerror "Please append the following to your CFLAGS and remerge python:"
+		eerror "  '-fno-stack-protector -fno-stack-protector-all'"
+		die "python was built with stack smashing protection (ssp)"
 	fi
 }
 
@@ -108,6 +115,7 @@ src_compile() {
 	fi
 
 	use custom-cflags || unset CFLAGS
+	gcc-specs-ssp && append-flags -fno-stack-protector -fno-stack-protector-all
 
 	(cd tools/ioemu && econf ${myconf}) || die "configure failured"
 	emake -C tools ${myopt} || die "compile failed"
@@ -126,6 +134,9 @@ src_install() {
 	make DESTDIR="${D}" ${myopt} install-tools \
 		|| die "install failed"
 
+	# Remove RedHat-specific stuff
+	rm -rf "${D}"/etc/sysconfig
+
 	if use doc; then
 		make DESTDIR="${D}" -C docs install || die "install docs failed"
 		# Rename doc/xen to the Gentoo-style doc/xen-x.y
@@ -135,15 +146,18 @@ src_install() {
 	doman docs/man?/*
 
 	newinitd "${FILESDIR}"/xend-init xend
-	newconfd "${FILESDIR}"/xendomains-conf xendomains
-	newinitd "${FILESDIR}"/xendomains-init xendomains
+	newconfd "${FILESDIR}"/xendomains.confd xendomains
+	newinitd "${FILESDIR}"/xendomains.initd xendomains
 
 	if use screen; then
-		sed -i -e 's/SCREEN="no"/SCREEN="yes"/' "${D}"/etc/init.d/xendomains
+		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains
+		cp "${FILESDIR}"/xen-consoles.logrotate "${D}"/etc/xen/
+		keepdir /var/log/xen-consoles
 	fi
 
 	# xend expects these to exist
 	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump
+
 
 	# for upstream change tracking
 	if [[ -n ${XEN_UNSTABLE} ]]; then
@@ -159,6 +173,12 @@ pkg_postinst() {
 		echo
 		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
 		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
+	fi
+
+	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then
+		echo
+		elog "xensv is broken upstream (Gentoo bug #142011)."
+		elog "Please remove '${ROOT%/}/etc/conf.d/xend', as it is no longer needed."
 	fi
 
 	if [[ -n ${XEN_UNSTABLE} ]]; then
