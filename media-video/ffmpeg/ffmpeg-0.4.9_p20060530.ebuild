@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.10 2006/08/12 13:10:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.11 2006/08/14 13:29:29 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -75,6 +75,7 @@ src_unpack() {
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
 
 	epatch ${FILESDIR}/ffmpeg-unknown-options.patch
+	epatch ${FILESDIR}/${P}-snow-mmx.patch
 
 	# .pc files contain wrong libdir path
 	epatch ${FILESDIR}/${PN}-libdir.patch
