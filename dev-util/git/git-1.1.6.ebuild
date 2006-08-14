@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.1.6.ebuild,v 1.8 2006/02/18 12:18:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.1.6.ebuild,v 1.9 2006/08/14 14:33:45 cardoe Exp $
 
 inherit python toolchain-funcs eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc x86"
-IUSE="mozsha1 ppcsha1 doc curl tcltk gitsendemail webdav"
+IUSE="mozsha1 ppcsha1 doc curl tk gitsendemail webdav"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
@@ -26,7 +26,7 @@ RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
 		app-text/rcs
-		tcltk? ( dev-lang/tk )
+		tk? ( dev-lang/tk )
 		dev-perl/String-ShellQuote
 		gitsendemail? ( dev-perl/Mail-Sendmail dev-perl/Email-Valid )"
 
@@ -78,7 +78,7 @@ src_compile() {
 src_install() {
 	make ${MY_MAKEOPTS} DESTDIR=${D} prefix=/usr install || die "make install failed"
 
-	use tcltk || rm ${D}/usr/bin/gitk
+	use tk || rm ${D}/usr/bin/gitk
 
 	doman ${WORKDIR}/${PN}-man-${DOC_VER}/man?/*
 

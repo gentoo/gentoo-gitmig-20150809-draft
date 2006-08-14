@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.2 2006/08/13 18:00:47 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.3 2006/08/14 14:33:45 cardoe Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/software/scm/git/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="curl doc emacs gtk mozsha1 ppcsha1 webdav X"
+IUSE="curl doc emacs gtk mozsha1 ppcsha1 tk webdav"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 		dev-lang/perl
 		>=dev-lang/python-2.3
 		app-text/rcs
-		X? ( dev-lang/tk )
+		tk? ( dev-lang/tk )
 		gtk? ( >=dev-python/pygtk-2.6 )"
 
 # This is needed because for some obscure reasons future calls to make don't
@@ -84,7 +84,7 @@ src_compile() {
 src_install() {
 	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr install || die "make install failed"
 
-	use X || rm "${D}"/usr/bin/gitk
+	use tk || rm "${D}"/usr/bin/gitk
 
 	doman "${WORKDIR}"/man?/*
 
