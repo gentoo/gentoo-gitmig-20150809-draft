@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/yasuc
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yasuc/ChangeLog,v 1.1 2006/08/14 19:36:49 nelchael Exp $
+
+*yasuc-0.4.1 (14 Aug 2006)
+
+  14 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
+  +yasuc-0.4.1.ebuild:
+  Initial version, see bug #57406. Thanks to Conrad Kostecki <ConiKost@gmx.de>
+  and Przemyslaw Maciag <p_maciag@wp.pl> for ebuild.
+
