@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.32 2006/08/11 00:05:35 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.33 2006/08/14 01:29:02 joshuabaergen Exp $
+
+  14 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org> ChangeLog:
+  Fixed up the ChangeLog.  Thanks to nelchael for noticing.
 
 *xf86-video-i810-1.6.5 (11 Aug 2006)
 
@@ -10,3 +13,162 @@
   Version bump.  Includes previous patch and various other fixes, including
   improved i915 textured video support.
 
+*xf86-video-i810-1.6.4-r1 (10 Aug 2006)
+
+  10 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.6.4-fix_dri_abi.patch, -xf86-video-i810-1.6.4.ebuild,
+  +xf86-video-i810-1.6.4-r1.ebuild:
+  Add a patch from upstream that fixes the DRI ABI.  (Bug #143419, Sebastian
+  Bergmann.  Thanks to Roderick B. Greening for the upstream poking.)
+
+*xf86-video-i810-1.6.4 (10 Aug 2006)
+
+  10 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.6.4.ebuild:
+  Version bump.  Adds MergedFB and i965 support.
+
+*xf86-video-i810-1.6.1 (29 Jul 2006)
+
+  29 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.6.1.ebuild:
+  Version bump.  Includes a bunch of code cleanups and fixes.
+
+  10 Jul 2006; Aron Griffis <agriffis@gentoo.org>
+  xf86-video-i810-1.6.0.ebuild:
+  Mark 1.6.0 stable on ia64
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-i810-1.6.0.ebuild:
+  stable on sh
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  xf86-video-i810-1.4.1.3.ebuild:
+  Stable on amd64.
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-i810-1.4.1.3.ebuild:
+  x86 stable.
+
+  17 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-i810-1.6.0.ebuild:
+  ~x86-fbsd keyworded the lower version but not this.
+
+  16 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xf86-video-i810-1.4.1.3.ebuild:
+  Add ~x86-fbsd keyword.
+
+  14 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xf86-video-i810-1.5.1.0.ebuild:
+  Remove older masked version.
+
+*xf86-video-i810-1.6.0 (14 Apr 2006)
+
+  14 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.6.0.ebuild:
+  Bump for 7.1 RC1.
+
+  07 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  xf86-video-i810-1.5.1.0.ebuild:
+  (#129072) Change xorg-server dep to minimum 1.0.2 for randrstr.h. Fix by
+  Alberto Bertogli.
+
+*xf86-video-i810-1.5.1.0 (01 Apr 2006)
+
+  01 Apr 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.5.1.0.ebuild:
+  Add new i810 driver.  The 1.5.x series will only work with Mesa 6.5/HEAD.
+
+  30 Jan 2006; Patrick McLean <chutzpah@gentoo.org>
+  xf86-video-i810-1.4.1.3.ebuild:
+  Added to ~amd64.
+
+  26 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -xf86-video-i810-1.4.1.1.ebuild, -xf86-video-i810-1.4.1.2.ebuild:
+  Pull old versions.
+
+*xf86-video-i810-1.4.1.3 (23 Dec 2005)
+
+  23 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.4.1.3.ebuild:
+  Bump for 7.0.
+
+*xf86-video-i810-1.4.1.2 (18 Dec 2005)
+
+  18 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.4.1.2.ebuild:
+  Bump for 7.0RC4.
+
+  09 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  files/digest-xf86-video-i810-1.4.1.1, Manifest:
+  Update digest to match patch introduced by x-modular.eclass changes.
+
+  09 Dec 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xf86-video-i810-1.4.0-r3.ebuild, -xf86-video-i810-1.4.0.1.ebuild,
+  -xf86-video-i810-1.4.1.ebuild:
+  Pull old versions.
+
+*xf86-video-i810-1.4.1.1 (04 Dec 2005)
+
+  04 Dec 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.4.1.1.ebuild:
+  Bump for 7.0RC3.
+
+*xf86-video-i810-1.4.1 (11 Nov 2005)
+
+  11 Nov 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.4.1.ebuild:
+  Bump for 7.0RC2.
+
+*xf86-video-i810-1.4.0.1 (20 Oct 2005)
+
+  20 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xf86-video-i810-1.4.0.1.ebuild:
+  Bump for 7.0 RC1.
+
+  09 Sep 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
+  Add metadata.
+
+  06 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  xf86-video-i810-1.4.0-r3.ebuild:
+  Moved x11-libs/libXvMC from DEPEND to RDEPEND.
+
+  02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/xf86-video-i810-1.4.0-add-i830-shadow.patch:
+  Oops, missed removing this patch in the first run.
+
+*xf86-video-i810-1.4.0-r3 (02 Sep 2005)
+
+  02 Sep 2005; Joshua Baergen <joshuabaergen@gentoo.org>
+  -files/1.4.0-i810-unresolved-symbols.patch,
+  -xf86-video-i810-1.4.0-r2.ebuild, +xf86-video-i810-1.4.0-r3.ebuild:
+  Sent a new snapshot to the mirrors bringing this driver in sync with CVS.  This
+  snapshot includes both prior patches.  Also added the x11-libs/XvMC dep as
+  XvMC support has been added as required for the time being.
+
+  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xf86-video-i810-1.4.0.ebuild, -xf86-video-i810-1.4.0-r1.ebuild:
+  Pull old versions.
+
+*xf86-video-i810-1.4.0-r2 (23 Aug 2005)
+
+  23 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/1.4.0-i810-unresolved-symbols.patch,
+  +xf86-video-i810-1.4.0-r2.ebuild:
+  (fd.o #4066) Add 1.4.0-i810-unresolved-symbols.patch to make i810 driver work.
+
+  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; -files/dri.patch:
+  Pull unused patch.
+
+*xf86-video-i810-1.4.0-r1 (12 Aug 2005)
+
+  12 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/xf86-video-i810-1.4.0-add-i830-shadow.patch,
+  +xf86-video-i810-1.4.0-r1.ebuild:
+  Bump to link in i830_shadow.c. This should allow X to start properly.
+  Reported by Joshua Baerge <joshuabaergen@gentoo.org>.
+
+*xf86-video-i810-1.4.0 (08 Aug 2005)
+
+  08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +files/dri.patch,
+  +xf86-video-i810-1.4.0.ebuild:
+  Initial commit for modular X.
