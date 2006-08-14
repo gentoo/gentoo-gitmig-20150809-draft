@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.3 2006/08/14 14:33:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.4 2006/08/14 21:27:58 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -112,6 +112,9 @@ src_install() {
 
 src_test() {
 	cd "${S}"
+
+	has_version dev-util/subversion || \
+		MY_MAKEOPTS="${MY_MAKEOPTS} NO_SVN_TESTS=YesPlease"
 	emake ${MY_MAKEOPTS} DESTDIR="${D}" prefix=/usr test || die "tests failed"
 }
 

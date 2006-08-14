@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.116 2006/08/14 14:33:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.117 2006/08/14 21:27:58 ferdy Exp $
+
+  14 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org> git-1.4.2.ebuild:
+  Only run git-svn tests if we have dev-util/subversion
 
   14 Aug 2006; <dougg@gentoo.org> git-1.1.6.ebuild, git-1.4.0-r1.ebuild,
   git-1.4.1.1.ebuild, git-1.4.2.ebuild:
