@@ -1,6 +1,9 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.39 2006/08/13 21:44:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.40 2006/08/14 08:42:23 lu_zero Exp $
+
+  14 Aug 2006; Luca Barbato <lu_zero@gentoo.org> recode-3.6-r2.ebuild:
+  Marked ppc
 
   13 Aug 2006; Jason Wever <weeve@gentoo.org> recode-3.6-r2.ebuild:
   Stable on SPARC wrt bug #143787.
