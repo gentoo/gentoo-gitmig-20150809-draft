@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1-r1.ebuild,v 1.1 2005/11/26 12:03:27 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.0.1-r1.ebuild,v 1.2 2006/08/14 17:56:12 ferdy Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -55,14 +55,14 @@ src_unpack() {
 			epatch ${FILESDIR}/${PN}-1.8.0-db4.patch
 			cd ${S}/bdbobj
 			libtoolize --copy --force
-			WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (bdbobj)"
+			WANT_AUTOCONF=2.5 autoconf || die "recreate configure failed (bdbobj)"
 	fi
 
 	if ! use fam ; then
 		cd ${S}
 		epatch ${FILESDIR}/${PN}-1.8.1-disable-fam.patch
 		cd ${S}/maildir
-		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (maildir)"
+		WANT_AUTOCONF=2.5 autoconf || die "recreate configure failed (maildir)"
 	fi
 
 	# Only recreate configure if needed
@@ -70,7 +70,7 @@ src_unpack() {
 		cd ${S}
 		gnuconfig_update
 		libtoolize --copy --force
-		WANT_AUTOCONF=2.59 autoconf || die "recreate configure failed (topdir)"
+		WANT_AUTOCONF=2.5 autoconf || die "recreate configure failed (topdir)"
 	fi
 }
 
