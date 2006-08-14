@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.3.ebuild,v 1.6 2006/07/09 06:04:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.3.ebuild,v 1.7 2006/08/14 11:00:28 jer Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -79,8 +79,8 @@ src_unpack() {
 
 	unpack ${A}
 	epatch ${FILESDIR}/qt-4.1.3-mysql4-support.diff
-	epatch ${FILESDIR}/qt4-parisc-linux.diff
 	cd ${S}
+	epatch ${FILESDIR}/qt4-parisc-linux.diff
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure
 
