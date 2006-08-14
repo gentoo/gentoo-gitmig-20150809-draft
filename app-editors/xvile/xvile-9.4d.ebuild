@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d.ebuild,v 1.8 2006/05/12 01:40:57 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.4d.ebuild,v 1.9 2006/08/14 08:22:30 mr_bones_ Exp $
 
 inherit eutils
 
@@ -19,7 +19,15 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="perl"
 
 RDEPEND="perl? ( dev-lang/perl )
-	virtual/x11
+	|| (
+	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libXt-1.0.0
+	>=x11-libs/libICE-1.0.0
+	>=x11-libs/libSM-1.0.0
+	>=x11-libs/libXaw-1.0.1
+	>=x11-libs/libXpm-3.5.4.2
+	>=x11-proto/xproto-7.0.4 )
+	virtual/x11 )
 	=app-editors/vile-${PVR}"
 DEPEND="${RDEPEND}
 	sys-devel/flex"
