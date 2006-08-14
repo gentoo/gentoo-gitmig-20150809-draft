@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/powersave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.6 2006/08/14 09:41:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/ChangeLog,v 1.7 2006/08/14 13:32:23 genstef Exp $
+
+*powersave-0.13.5 (14 Aug 2006)
+
+  14 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  -powersave-0.12.20.ebuild, -powersave-0.13.4.ebuild,
+  +powersave-0.13.5.ebuild:
+  version bump thanks to GerbilSoft <gerbilsoft@comcast.net> in bug 143859
 
 *powersave-0.12.21 (14 Aug 2006)
 
