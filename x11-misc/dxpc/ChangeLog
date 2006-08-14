@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dxpc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.9 2006/07/18 21:36:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/ChangeLog,v 1.10 2006/08/14 19:52:41 nelchael Exp $
+
+  14 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  files/dxpc-3.8.2-lzo2.patch, -dxpc-3.8.2.ebuild:
+  Remove old version, fix patch to compile with lzo2, updated patch by
+  Przemyslaw Maciag <p_maciag@wp.pl>. See bug #140855.
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> dxpc-3.8.2-r1.ebuild:
   Stable on ppc.

@@ -1,7 +1,21 @@
-diff -ru dxpc-3.8.2.orig/configure dxpc-3.8.2/configure
---- dxpc-3.8.2.orig/configure	2002-11-14 15:52:02.000000000 +1100
-+++ dxpc-3.8.2/configure	2005-11-13 19:16:57.000000000 +1100
-@@ -3102,16 +3597,19 @@
+diff -ru dxpc-3.8.2-orig/Compresser.H dxpc-3.8.2/Compresser.H
+--- dxpc-3.8.2-orig/Compresser.H	1999-08-19 19:58:28.000000000 +0200
++++ dxpc-3.8.2/Compresser.H	2006-08-14 17:45:19.000000000 +0200
+@@ -1,8 +1,8 @@
+ #ifndef COMPRESSER_H_
+ #define COMPRESSER_H_
+ 
+-#include "lzo1x.h"
+-#include "lzo1c.h"
++#include "lzo/lzo1x.h"
++#include "lzo/lzo1c.h"
+ 
+ class EncodeBuffer;
+ struct cEntry;
+diff -ru dxpc-3.8.2-orig/configure dxpc-3.8.2/configure
+--- dxpc-3.8.2-orig/configure	2002-11-14 05:52:02.000000000 +0100
++++ dxpc-3.8.2/configure	2006-08-14 17:45:19.000000000 +0200
+@@ -3102,16 +3102,19 @@
  fi
  
  
@@ -27,7 +41,7 @@ diff -ru dxpc-3.8.2.orig/configure dxpc-3.8.2/configure
  
  /* Override any gcc2 internal prototype to avoid an error.  */
  #ifdef __cplusplus
-@@ -3130,29 +3628,41 @@
+@@ -3130,29 +3133,41 @@
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -79,7 +93,7 @@ diff -ru dxpc-3.8.2.orig/configure dxpc-3.8.2/configure
  else
    { { echo "$as_me:$LINENO: error: lzo library required: you may need to use the --with-lzo-lib
  option to specify path to LZO if it is installed in a non-standard
-@@ -3482,31 +4069,44 @@
+@@ -3482,31 +3497,44 @@
  if test $ac_cv_header_lzoconf_h = yes; then
    :
  else
@@ -137,7 +151,7 @@ diff -ru dxpc-3.8.2.orig/configure dxpc-3.8.2/configure
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3515,20 +4115,24 @@
+@@ -3515,20 +3543,24 @@
    ac_header_compiler=yes
  else
    echo "$as_me: failed program was:" >&5
@@ -169,7 +183,7 @@ diff -ru dxpc-3.8.2.orig/configure dxpc-3.8.2/configure
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -3558,33 +4164,50 @@
+@@ -3558,33 +3590,50 @@
  echo "${ECHO_T}$ac_header_preproc" >&6
  
  # So?  What about this header?
@@ -241,9 +255,9 @@ diff -ru dxpc-3.8.2.orig/configure dxpc-3.8.2/configure
  else
    { { echo "$as_me:$LINENO: error: lzoconf.h required (part of LZO library)" >&5
  echo "$as_me: error: lzoconf.h required (part of LZO library)" >&2;}
-diff -ru dxpc-3.8.2.orig/configure.in dxpc-3.8.2/configure.in
---- dxpc-3.8.2.orig/configure.in	2002-11-14 15:26:28.000000000 +1100
-+++ dxpc-3.8.2/configure.in	2005-11-13 19:14:06.000000000 +1100
+diff -ru dxpc-3.8.2-orig/configure.in dxpc-3.8.2/configure.in
+--- dxpc-3.8.2-orig/configure.in	2002-11-14 05:26:28.000000000 +0100
++++ dxpc-3.8.2/configure.in	2006-08-14 17:45:19.000000000 +0200
 @@ -21,8 +21,8 @@
  dnl Checks for header files.
  AC_PATH_XTRA
@@ -266,8 +280,21 @@ diff -ru dxpc-3.8.2.orig/configure.in dxpc-3.8.2/configure.in
  		   AC_MSG_ERROR([lzoconf.h required (part of LZO library)]))])
  
  AC_DEFUN(dxpc_ACCEPT_LENGTH_T,
---- dxpc-3.8.2/Makefile.in.orig	2005-11-13 19:28:00.000000000 +1100
-+++ dxpc-3.8.2/Makefile.in	2005-11-13 19:28:44.000000000 +1100
+diff -ru dxpc-3.8.2-orig/Decompresser.H dxpc-3.8.2/Decompresser.H
+--- dxpc-3.8.2-orig/Decompresser.H	1999-08-19 20:00:16.000000000 +0200
++++ dxpc-3.8.2/Decompresser.H	2006-08-14 17:45:19.000000000 +0200
+@@ -1,7 +1,7 @@
+ #ifndef DECOMPRESSER_H_
+ #define DECOMPRESSER_H_
+ 
+-#include "lzo1c.h"
++#include "lzo/lzo1c.h"
+ 
+ class DecodeBuffer;
+ #include "Compresser.H"
+diff -ru dxpc-3.8.2-orig/Makefile.in dxpc-3.8.2/Makefile.in
+--- dxpc-3.8.2-orig/Makefile.in	2002-11-11 19:37:52.000000000 +0100
++++ dxpc-3.8.2/Makefile.in	2006-08-14 17:45:19.000000000 +0200
 @@ -53,12 +53,12 @@
  install: install.bin install.man
  
