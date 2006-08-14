@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.6 2006/08/10 20:52:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.7 2006/08/14 05:56:35 dertobi123 Exp $
+
+  14 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> pybugz-0.6.3.ebuild:
+  Added ~ppc
 
 *pybugz-0.6.3 (10 Aug 2006)
 
