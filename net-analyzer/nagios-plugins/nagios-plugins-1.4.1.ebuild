@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.9 2006/05/15 23:52:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.1.ebuild,v 1.10 2006/08/14 09:49:25 dragonheart Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_unpack() {
 		EPATCH_OPTS="-p0 -d ${S}" epatch ${FILESDIR}/nagios-plugins-1.4-noradius.patch
 	fi
 	if ! use radius; then
-		export WANT_AUTOCONF=2.58
+		export WANT_AUTOCONF=2.5
 		export WANT_AUTMAKE=1.8
 		cd ${S}
 		aclocal -I m4 || die "Failed to run aclocal"

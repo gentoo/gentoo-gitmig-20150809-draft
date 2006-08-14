@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6f_p1.ebuild,v 1.8 2006/05/23 19:58:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/cacti-cactid-0.8.6f_p1.ebuild,v 1.9 2006/08/14 09:46:08 dragonheart Exp $
 
 MY_PV=${PV/_p/-}
 DESCRIPTION="Cactid is a poller for Cacti that primarily strives to be as fast
@@ -30,7 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export WANT_AUTOCONF=2.59
+	export WANT_AUTOCONF=2.5
 	aclocal || die "aclocal failed"
 	autoconf || die "autoconf failed"
 	econf || die "econf failed"

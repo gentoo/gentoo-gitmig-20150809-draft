@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scli
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.5 2005/10/09 10:51:01 mkay Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.6 2006/08/14 09:41:21 dragonheart Exp $
+
+  14 Aug 2006; Daniel Black <dragonheart@gentoo.org> scli-0.2.12.ebuild:
+  WANT_AUTOCONF changed to 2.5 as per QA bug #143429
 
   09 Oct 2005; <mkay@gentoo.org> scli-0.2.12.ebuild:
   Fixing dependencies (bug #108118). Also - changing autoreconf to autoconf,

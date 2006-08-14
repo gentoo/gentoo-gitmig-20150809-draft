@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.3-r1.ebuild,v 1.1 2006/07/18 16:30:34 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.3-r1.ebuild,v 1.2 2006/08/14 09:49:25 dragonheart Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_unpack() {
 	${FILESDIR}/nagios-plugins-1.4.3-check_disk-fix.patch
 
 	if ! use radius; then
-		export WANT_AUTOCONF=2.58
+		export WANT_AUTOCONF=2.5
 		export WANT_AUTMAKE=1.8
 		cd ${S}
 		aclocal -I m4 || die "Failed to run aclocal"
