@@ -1,33 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.10-r1.ebuild,v 1.2 2006/08/14 17:48:48 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.13.ebuild,v 1.1 2006/08/14 17:48:48 ferdy Exp $
 
-inherit eutils flag-o-matic
-
-patch_assumed_charset="patch-1.5.10.tt.assumed_charset.1.gz"
-patch_compressed="patch-${PV}.rr.compressed.gz"
-patch_mbox_hook="patch-1.5.6.dw.mbox-hook.1"
-patch_pgp_timeout="patch-1.5.6.dw.pgp-timeout.1"
-patch_imap_fcc_status="mutt-1.5.4-imap-fcc-status.patch"
-patch_collapse_flagged="patch-1.5.4.lpr.collapse_flagged"
-opt_patch_nntp="patch-${PV}.vvv.nntp-gentoo.bz2"
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="a small but very powerful text-based mail client"
 HOMEPAGE="http://www.mutt.org"
-SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}i.tar.gz
+SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	!vanilla? (
-		http://www.emaillab.org/${PN}/${PV}/${patch_assumed_charset}
-		http://mutt.kiev.ua/download/${P}/${patch_compressed}
-		http://www.woolridge.ca/${PN}/patches/${patch_mbox_hook}
-		http://www.woolridge.ca/${PN}/patches/${patch_pgp_timeout}
-		http://www.plumlocosoft.com/software/download/${patch_imap_fcc_status}
-		http://debian.lpr.ch/Mutt/${patch_collapse_flagged}
-		nntp? (
-			http://dev.gentoo.org/~agriffis/dist/${opt_patch_nntp}
-			mirror://gentoo/mutt-1.5.7-mixmaster+nntp.patch
-		)
+		mirror://gentoo/${P}-gentoo-patches.tar.bz2
 	)"
-IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme imap mbox nls nntp pop sasl smime ssl vanilla"
+IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop sasl smime ssl vanilla"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
@@ -45,49 +28,32 @@ RDEPEND="nls? ( sys-devel/gettext )
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
-	gpgme?   ( >=app-crypt/gpgme-0.9.0 )"
+	idn?     ( net-dns/libidn )
+	gpgme?   ( >=app-crypt/gpgme-0.9.0 )
+	smime?   ( >=dev-libs/openssl-0.9.6 )
+	app-misc/mime-types"
 DEPEND="${RDEPEND}
-	net-mail/mailbase
-	sys-devel/autoconf
-	!vanilla? ( sys-devel/automake )"
+	net-mail/mailbase"
 
-pkg_setup() {
-	if ! use imap; then
-		echo
-		einfo "The USE variable 'imap' is not in your USE flags."
-		einfo "For imap support in mutt, you will need to restart the build with USE=imap"
-		echo
-	fi
-}
+PATCHDIR="${WORKDIR}"/${P}-gentoo-patches
 
 src_unpack() {
-	unpack ${P}i.tar.gz && cd ${S} || die "unpack failed"
-
-	# fix sasl support in configure.in
-	epatch ${FILESDIR}/mutt-1.5.9-sasl.patch
-
-	# disable sgml conversion since it fails with sgml2html
-	epatch ${FILESDIR}/mutt-1.5.10-nodoc.patch
+	unpack ${A} && cd "${S}" || die "unpack failed"
 
 	if ! use vanilla ; then
-		for p in ${!patch_*} ; do
-			epatch ${DISTDIR}/${!p}
-		done
-
-		if use nntp; then
-			epatch ${DISTDIR}/${opt_patch_nntp}
-			# Allow mutt to build with mixmaster and nntp both enabled
-			epatch ${DISTDIR}/mutt-1.5.7-mixmaster+nntp.patch
+		if ! use nntp ; then
+			rm "${PATCHDIR}"/07-vvv.nntp-gentoo.patch
+			rm "${PATCHDIR}"/08-mixmaster_nntp.patch
 		fi
 
-		rm -rf configure autom4te.cache
-		aclocal -I m4					|| die "aclocal failed"
-		autoheader						|| die "autoheader failed"
-		emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
-		automake --foreign				|| die "automake failed"
-	fi
+		for p in "${PATCHDIR}"/*.patch ; do
+			epatch "${p}"
+		done
 
-	WANT_AUTOCONF=2.1 autoconf		|| die "autoconf failed"
+		AT_M4DIR="m4" eautoreconf
+	else
+		eautoconf
+	fi
 }
 
 src_compile() {
@@ -100,14 +66,14 @@ src_compile() {
 		$(use_enable smime) \
 		$(use_enable cjk default-japanese) \
 		$(use_enable debug) \
+		$(use_with idn) \
 		--with-curses \
 		--sysconfdir=/etc/${PN} \
 		--with-docdir=/usr/share/doc/${PN}-${PVR} \
 		--with-regex \
 		--disable-fcntl --enable-flock \
 		--enable-nfs-fix --enable-external-dotlock \
-		--with-mixmaster \
-		--without-sasl"
+		--with-mixmaster"
 
 	# See Bug #22787
 	unset WANT_AUTOCONF_2_5 WANT_AUTOCONF
@@ -132,9 +98,9 @@ src_compile() {
 			myconf="${myconf} --with-ssl"
 		fi
 		# not sure if this should be mutually exclusive with the other two
-		myconf="${myconf} $(use_with sasl sasl2)"
+		myconf="${myconf} $(use_with sasl)"
 	else
-		myconf="${myconf} --without-gnutls --without-ssl --without-sasl2"
+		myconf="${myconf} --without-gnutls --without-ssl --without-sasl"
 	fi
 
 	# See Bug #11170
@@ -162,7 +128,7 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die "configure failed"
-	make || die "make failed"
+	emake || die "make failed"
 }
 
 src_install() {
@@ -175,6 +141,10 @@ src_install() {
 		insinto /etc/mutt
 		doins ${FILESDIR}/Muttrc
 	fi
+
+	# A newer file is provided by app-misc/mime-types. So we link it.
+	rm ${D}/etc/${PN}/mime.types
+	dosym /etc/mime.types /etc/${PN}/mime.types
 
 	dodoc BEWARE COPYRIGHT ChangeLog NEWS OPS* PATCHES README* TODO VERSION
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.11 2005/08/11 22:57:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.8-r1.ebuild,v 1.12 2006/08/14 17:48:48 ferdy Exp $
 
 inherit eutils flag-o-matic
 IUSE="cjk ssl nls slang crypt imap mbox nntp sasl vanilla"
@@ -31,7 +31,7 @@ SRC_URI="ftp://ftp.mutt.org/mutt/devel/mutt-${PV}i.tar.gz
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	slang? ( >=sys-libs/slang-1.4.2 )
+	slang? ( =sys-libs/slang-1* )
 	!vanilla? ( sys-libs/gdbm )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )"
 DEPEND="${RDEPEND}
@@ -72,7 +72,7 @@ src_unpack() {
 		autoheader						|| die "autoheader failed"
 		make -C m4 -f Makefile.am.in	|| die "make in m4 failed"
 		automake --foreign				|| die "automake failed"
-		WANT_AUTOCONF=2.13 autoconf		|| die "autoconf failed"
+		WANT_AUTOCONF=2.1 autoconf		|| die "autoconf failed"
 	fi
 }
 
