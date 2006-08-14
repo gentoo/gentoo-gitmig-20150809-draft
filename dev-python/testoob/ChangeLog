@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testoob
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.10 2006/08/11 04:59:15 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.11 2006/08/14 23:18:23 lucass Exp $
+
+  14 Aug 2006; Lukasz Strzygowski <lucass@gentoo.org> testoob-1.11.ebuild:
+  Fixed src_test, bug #143946.
 
   11 Aug 2006; Joshua Jackson <tsunam@gentoo.org> testoob-1.11.ebuild:
   Stable x86; bug #143310
