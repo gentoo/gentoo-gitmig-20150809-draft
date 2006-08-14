@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.5 2006/06/15 18:13:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r1.ebuild,v 1.6 2006/08/14 06:45:18 mr_bones_ Exp $
 
-inherit games toolchain-funcs
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A fast paced action game"
 HOMEPAGE="http://icculus.org/excido/"
