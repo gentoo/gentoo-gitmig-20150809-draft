@@ -1,6 +1,19 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.14 2006/08/02 22:54:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.15 2006/08/14 21:19:05 nelchael Exp $
+
+*resin-3.0.21 (14 Aug 2006)
+
+  14 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org> -files/3.0.12/21resin,
+  -files/3.0.12/gentoo.diff, -files/3.0.12/resin.conf,
+  -files/3.0.12/resin.init, -files/3.0.12/wrapper.pl.diff,
+  -files/3.0.19/resin-3.0.19-gentoo.patch, -files/3.0.19/resin.conf,
+  -files/3.0.19/resin.init, -files/3.0.20/resin-3.0.20-gentoo.patch,
+  -files/3.0.20/resin.conf, -files/3.0.20/resin.init,
+  +files/3.0.21/resin-3.0.21-gentoo.patch, +files/3.0.21/resin.conf,
+  +files/3.0.21/resin.init, -resin-3.0.12.ebuild, -resin-3.0.19.ebuild,
+  -resin-3.0.20.ebuild, +resin-3.0.21.ebuild:
+  Version bump, cleaned up old versions.
 
   02 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.0.20.ebuild:
   Fixed DEPEND on dev-java/sun-jaf-bin.
