@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.16 2006/04/12 02:53:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.0-r1.ebuild,v 1.17 2006/08/14 09:40:10 dragonheart Exp $
 
 inherit libtool eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/libgpg-error-1.0-locale.h.patch
 	if ! use ppc-macos ; then
-		env WANT_AUTOCONF=2.59 autoconf || die "autoconf failed"
+		env WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 		autoheader || die "autoheader failed"
 	fi
 	elibtoolize
