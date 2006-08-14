@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.4 2005/07/26 08:50:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.5 2006/08/14 15:47:20 foser Exp $
 
 inherit font
 
 DESCRIPTION="Mathematica's Fonts for MathML"
 
 HOMEPAGE="http://support.wolfram.com/mathematica/systems/windows/general/latestfonts.html"
-DOWNLOAD_URI="http://support.wolfram.com/mathematica/systems/windows/general/"
+DOWNLOAD_URI="http://support.wolfram.com/mathematica/systems/windows/general/files/"
 TRUETYPE_FILE="MathFonts_TrueType_${PV//./}.exe"
 TYPE1_FILE="MathFonts_Type1_${PV//./}.exe"
 

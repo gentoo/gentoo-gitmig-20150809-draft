@@ -1,6 +1,16 @@
 # ChangeLog for media-fonts/mathematica-fonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.3 2005/07/26 08:50:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/ChangeLog,v 1.4 2006/08/14 15:47:20 foser Exp $
+
+*mathematica-fonts-5.2 (14 Aug 2006)
+
+  14 Aug 2006; Marinus Schraal <foser@gentoo.org> mathematica-fonts-5.2.ebuild :
+  Clean up the ebuild
+  remove freetype USE, it all comes in one pack now
+  remove nofetch restrict
+
+  14 Aug 2006; Marinus Schraal <foser@gentoo.org> mathematica-fonts-4.2.ebuild :
+  Fix download URI, thanks to Felix and Jason in #136836
 
   26 Jul 2005; Diego Pettenò <flameeyes@gentoo.org>
   mathematica-fonts-4.2.ebuild:
