@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5732 2006/08/14 09:43:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5733 2006/08/14 12:42:40 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -439,12 +439,6 @@ app-emulation/winesetuptk
 # confcache really needs more work before prime-time
 # please don't file bugs for this unless you also have a solution
 dev-util/confcache
-
-# Alin Nastac <mrness@gentoo.org> (25 Jun 2006)
-# Pending for removal on 25 Jul 2006; upstream decided to unify it with openobex package.
-# Most programs found in this package were included in >=dev-libs/openobex-1.2.
-# The only exception, obexserver, have a better replacement in app-mobilephone/sobexsrv.
-app-mobilephone/openobex-apps
 
 # Colin Kingsley <tercel@gentoo.org> (24 Jun 2006)
 # Masked for testing
