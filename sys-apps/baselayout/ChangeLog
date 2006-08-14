@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.339 2006/08/13 23:15:32 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.340 2006/08/14 15:03:20 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.12.4-r4 (14 Aug 2006)
+
+  14 Aug 2006; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.12.4-prism54.patch, +baselayout-1.12.4-r4.ebuild:
+  Add patches to fix #143716 and #141832
 
 *baselayout-1.12.4-r3 (13 Aug 2006)
 
