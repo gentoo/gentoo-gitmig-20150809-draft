@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.13 2006/07/27 17:16:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.14 2006/08/14 16:51:18 phreak Exp $
 
 IUSE="nls nptl"
 SLOT="0"
@@ -92,12 +92,12 @@ DEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	>=sys-devel/bison-1.875
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
+	|| ( >=sys-devel/gcc-config-1.3.1 app-admin/eselect-compiler )
 	nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/libc
 	!nptl? ( >=sys-libs/glibc-2.3.2-r3 )
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
+	|| ( >=sys-devel/gcc-config-1.3.1 app-admin/eselect-compiler )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4"
 
