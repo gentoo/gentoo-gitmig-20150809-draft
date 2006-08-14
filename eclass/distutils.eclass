@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.32 2006/08/07 00:21:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.33 2006/08/14 21:01:01 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -39,6 +39,14 @@ distutils_src_compile() {
 }
 
 distutils_src_install() {
+
+	# need this for python-2.5 + setuptools in cases where
+	# a package uses distutils but does not install anything
+	# in site-packages. (eg. dev-java/java-config-2.x)
+	# - liquidx (14/08/2006)
+	pylibdir="$(${python} -c 'from distutils.sysconfig import get_python_lib; print get_python_lib()')"
+	[ -n "${pylibdir}" ] && dodir "${pylibdir}"
+	
 	if has_version ">=dev-lang/python-2.3"; then
 		${python} setup.py install --root=${D} --no-compile "$@" || die
 	else
