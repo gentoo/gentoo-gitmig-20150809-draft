@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2-r1.ebuild,v 1.5 2006/08/14 15:33:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2-r1.ebuild,v 1.6 2006/08/14 15:37:58 genstef Exp $
 
 inherit eutils kde-functions multilib
 
@@ -19,12 +19,12 @@ IUSE="ssl socks5 qt3 kde ncurses crypt msn"
 # need-kde and their eclass friends inject things into DEPEND. But we only
 # want them enabled if the kde USE flag is set. We get around this in the
 # following dep lines:
-RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
 DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt3? ( =x11-libs/qt-3* )
 	ncurses? ( sys-libs/ncurses >=dev-libs/cdk-4.9.11.20031210-r1 )
 	crypt? ( >=app-crypt/gpgme-1.0.0 )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
