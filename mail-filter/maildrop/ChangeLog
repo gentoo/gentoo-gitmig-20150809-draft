@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.60 2006/08/14 17:56:12 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.61 2006/08/14 21:06:39 ferdy Exp $
+
+  14 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  maildrop-2.0.2-r1.ebuild:
+  Added net-mail/mailbase dependency. maildrop needs /var/spool/mail to exist.
 
   14 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org>
   -files/maildrop-1.7.0-0x0B-fix.patch,
