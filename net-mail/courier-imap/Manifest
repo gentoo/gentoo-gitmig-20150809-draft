@@ -160,8 +160,8 @@ RMD160 424c61ae95914f267397a1180dcb8fee64586ea3 files/mkpop3dcert 996
 SHA256 c241ccca359b5d126dc56fc73f21991d8a7bffb5c211d8b0a1e4e88e693eb7cb files/mkpop3dcert 996
 DIST courier-imap-3.0.7.tar.bz2 1702769
 DIST courier-imap-3.0.8.tar.bz2 1713447
-DIST courier-imap-4.0.1.tar.bz2 3032350
-DIST courier-imap-4.0.4.tar.bz2 3156707
+DIST courier-imap-4.0.1.tar.bz2 3032350 RMD160 3c22688f51165132f101bff2f77900976fcb40a3 SHA1 747c122c7b7f033ff9f9ab5ba3e4b689aa5d4189 SHA256 510f3d8d9542c103d38fb023e378811e35e109bf5443f5fc885d167a779911bf
+DIST courier-imap-4.0.4.tar.bz2 3156707 RMD160 438559fe800ca47fb2d1cf5c3c3605964bab4cb1 SHA1 101f9d7868842e3cbc700cf7ac32ae32f0ef512b SHA256 21a6bf6228d08c28786e42057e3fbf7e11fa8ad66305cb02be82a5160a78e7c1
 DIST courier-imap-4.0.6.tar.bz2 3157577 RMD160 4006c5ec4db6b2adac393e2ebdf9ee99af3a8b2a SHA1 d7fee884cc0015586459c511dbe03bc2a8466c7f SHA256 27e6847507ddecfab1672fdf52447f8351f4cf046145974768ea93ebfea6ddbb
 EBUILD courier-imap-3.0.7.ebuild 9233 RMD160 919b1f910d690cc4ce9cb7cebca2b3ec891c1877 SHA1 a8039e9ca096331da855eac89b2f88317ca6f54d SHA256 356c47daa61c8fb5954ebd410a1e0c82d7e13f8556c271c413cbebbb640d93b6
 MD5 0eb5c2c89ea48e6dc483009b9aa7306b courier-imap-3.0.7.ebuild 9233
@@ -183,18 +183,18 @@ EBUILD courier-imap-4.0.1.ebuild 10125 RMD160 e73247969907819dd8cffda3632d93a02c
 MD5 66302691dea4b9ec5f43d3173b5532fb courier-imap-4.0.1.ebuild 10125
 RMD160 e73247969907819dd8cffda3632d93a02c6b633c courier-imap-4.0.1.ebuild 10125
 SHA256 37dd6bcfa33a9f2368f37b16185f0562f1c64f9cb536e668a55c38f6d83247a1 courier-imap-4.0.1.ebuild 10125
-EBUILD courier-imap-4.0.4.ebuild 9915 RMD160 ed03a4aadd23d369bb9bd57b0a08ed1f6e9c5235 SHA1 7c5920578f4dad2cdbef2ee15e496dcaefdb92ee SHA256 bba7a1e5f58c697df6cbcdcccd030bda1059c5a16ac1d4bc4467824f0d9b2288
-MD5 a53366905749ab64702c6c76898ba235 courier-imap-4.0.4.ebuild 9915
-RMD160 ed03a4aadd23d369bb9bd57b0a08ed1f6e9c5235 courier-imap-4.0.4.ebuild 9915
-SHA256 bba7a1e5f58c697df6cbcdcccd030bda1059c5a16ac1d4bc4467824f0d9b2288 courier-imap-4.0.4.ebuild 9915
+EBUILD courier-imap-4.0.4.ebuild 9911 RMD160 32c1c3363bcdc63d11a8ff766a788410280f687c SHA1 b81e0a8646aaaf6aa8dd6e4df1e1de10580e5ce0 SHA256 ca04df771c431a308846f73d820bd24fd0d31c0c427039acd540af43e507128f
+MD5 3735c8ddd1e34046ab96a8f743244681 courier-imap-4.0.4.ebuild 9911
+RMD160 32c1c3363bcdc63d11a8ff766a788410280f687c courier-imap-4.0.4.ebuild 9911
+SHA256 ca04df771c431a308846f73d820bd24fd0d31c0c427039acd540af43e507128f courier-imap-4.0.4.ebuild 9911
 EBUILD courier-imap-4.0.6.ebuild 9919 RMD160 7d9e0b80b51a043bb1c7f8c9198cc313bd9cfb7c SHA1 4fd5ea81806891d1865ce35614bd1cfb497f35ad SHA256 7d8436eaa0119dfdab082c52bd5a900fb5033f8b4de89da582e4e8f204f2b9fe
 MD5 d72e34439ed9e5aa0a548112c7c09554 courier-imap-4.0.6.ebuild 9919
 RMD160 7d9e0b80b51a043bb1c7f8c9198cc313bd9cfb7c courier-imap-4.0.6.ebuild 9919
 SHA256 7d8436eaa0119dfdab082c52bd5a900fb5033f8b4de89da582e4e8f204f2b9fe courier-imap-4.0.6.ebuild 9919
-MISC ChangeLog 24448 RMD160 4b8284f43ed217ebe7b9a2610910edb5fc62d34d SHA1 e9f2892384f3e973cf16bdf2e9bad31d7bd47b9e SHA256 561658d030a7ba552025a58d2f1f2d26f6f23d23f4764af24f336df0a11fe43c
-MD5 00045ede644af89b0140955e3040aba7 ChangeLog 24448
-RMD160 4b8284f43ed217ebe7b9a2610910edb5fc62d34d ChangeLog 24448
-SHA256 561658d030a7ba552025a58d2f1f2d26f6f23d23f4764af24f336df0a11fe43c ChangeLog 24448
+MISC ChangeLog 24553 RMD160 093bb67262a710b70f9d4ee3c6506f2d9789e474 SHA1 e73c1a3ce9c1200917dac284eb35629a972d4524 SHA256 dfd66d938fc0b6d6db43443ef621bf4357999bae61371b2b12cf271fe1510d00
+MD5 cb62a545e613c347ee79488c761868ab ChangeLog 24553
+RMD160 093bb67262a710b70f9d4ee3c6506f2d9789e474 ChangeLog 24553
+SHA256 dfd66d938fc0b6d6db43443ef621bf4357999bae61371b2b12cf271fe1510d00 ChangeLog 24553
 MISC metadata.xml 280 RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 SHA1 4b9a055d510dca2f97d61f7df74fcefbc0cc0a2c SHA256 1e7cf6dbb378d12f4d6569350ba23c49aa55a855240b78b5487532028b0ff540
 MD5 9d0c568ea32cf6b45797c6e7c82b4a67 metadata.xml 280
 RMD160 9f5cd4ae71c9c7e45161110dd38d67f6604cd7b8 metadata.xml 280
@@ -205,18 +205,18 @@ SHA256 c98b737392aadb083a8a2dde22b0b04fb5197698fd061c991e4a8b1325620203 files/di
 MD5 140a2653b4e3e2b7c9967d691da7a9ea files/digest-courier-imap-3.0.8 72
 RMD160 a98043e905478cf6b201d06fa7c4e816db966d43 files/digest-courier-imap-3.0.8 72
 SHA256 e801a80ca5b57d031e5f2a1b52f67d801b82407eb31625d0ec2e078d5fef9db7 files/digest-courier-imap-3.0.8 72
-MD5 65f527fa528cdb0231ccbf2d733bfdc1 files/digest-courier-imap-4.0.1 72
-RMD160 e93227320d51dfdde86b61376ef2a211b514c506 files/digest-courier-imap-4.0.1 72
-SHA256 24e6c908cc3c90f089df2b6f9b179ad0e8eb48e06f9037a2eee1916ace9d0b6c files/digest-courier-imap-4.0.1 72
-MD5 65f527fa528cdb0231ccbf2d733bfdc1 files/digest-courier-imap-4.0.1-r1 72
-RMD160 e93227320d51dfdde86b61376ef2a211b514c506 files/digest-courier-imap-4.0.1-r1 72
-SHA256 24e6c908cc3c90f089df2b6f9b179ad0e8eb48e06f9037a2eee1916ace9d0b6c files/digest-courier-imap-4.0.1-r1 72
-MD5 65f527fa528cdb0231ccbf2d733bfdc1 files/digest-courier-imap-4.0.1-r2 72
-RMD160 e93227320d51dfdde86b61376ef2a211b514c506 files/digest-courier-imap-4.0.1-r2 72
-SHA256 24e6c908cc3c90f089df2b6f9b179ad0e8eb48e06f9037a2eee1916ace9d0b6c files/digest-courier-imap-4.0.1-r2 72
-MD5 0762b928d8a502e81c788ce14b25f884 files/digest-courier-imap-4.0.4 72
-RMD160 1ff350163d1961ebfe2f166916e9f786ddb420c5 files/digest-courier-imap-4.0.4 72
-SHA256 6ee52a47729d4ea2891111f21cc5a5a1ffda7257409d3bf6b6c28ed046da1419 files/digest-courier-imap-4.0.4 72
+MD5 dbed3c930fae1ec1686b55084b00fc1c files/digest-courier-imap-4.0.1 262
+RMD160 05c1ccc92d794133b599ef15a627e95959a91aa1 files/digest-courier-imap-4.0.1 262
+SHA256 0a954053115b6c3953c9eaa46c5fa6c1651e08067b1ebe58ae182bd679ed29f7 files/digest-courier-imap-4.0.1 262
+MD5 dbed3c930fae1ec1686b55084b00fc1c files/digest-courier-imap-4.0.1-r1 262
+RMD160 05c1ccc92d794133b599ef15a627e95959a91aa1 files/digest-courier-imap-4.0.1-r1 262
+SHA256 0a954053115b6c3953c9eaa46c5fa6c1651e08067b1ebe58ae182bd679ed29f7 files/digest-courier-imap-4.0.1-r1 262
+MD5 dbed3c930fae1ec1686b55084b00fc1c files/digest-courier-imap-4.0.1-r2 262
+RMD160 05c1ccc92d794133b599ef15a627e95959a91aa1 files/digest-courier-imap-4.0.1-r2 262
+SHA256 0a954053115b6c3953c9eaa46c5fa6c1651e08067b1ebe58ae182bd679ed29f7 files/digest-courier-imap-4.0.1-r2 262
+MD5 1d1d1eaead77dcfea00844bfc4b08056 files/digest-courier-imap-4.0.4 262
+RMD160 b4fcc0a112e0b326b72cf813e0bf11ae0ff0c1dc files/digest-courier-imap-4.0.4 262
+SHA256 600c9f86d4fc9f5a5fa19815037042f46f2754d1e4366074e92b63ddca79fb03 files/digest-courier-imap-4.0.4 262
 MD5 a0dd501fdeeb92ac5fca1408ac919288 files/digest-courier-imap-4.0.6 262
 RMD160 9ef1122d21d9d29de6d2ae8f02fb3bd559c9d6b7 files/digest-courier-imap-4.0.6 262
 SHA256 3e0023761481fb070682400be05dfb6c3c02547c4a5db2fe0d8c1beffb37d7bf files/digest-courier-imap-4.0.6 262
