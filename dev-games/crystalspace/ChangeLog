@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/crystalspace
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.17 2005/09/06 13:02:47 wolf31o2 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.18 2006/08/14 09:49:23 genstef Exp $
+
+  14 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  crystalspace-0.98.4.ebuild:
+  remove boost-jam as option because it will no longer provide the jam binary
+  thanks to dev-zero in #gentoo-games
 
   06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   crystalspace-0.98.4.ebuild, crystalspace-0.99_pre20050823.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.11 2005/09/06 13:02:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.12 2006/08/14 09:49:23 genstef Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ RDEPEND="sys-libs/zlib
 	>=dev-lang/perl-5.6.1"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51
-	|| ( dev-util/jam dev-util/boost-jam )
+	dev-util/jam
 	x86? ( dev-lang/nasm )"
 
 S="${WORKDIR}/CS"
