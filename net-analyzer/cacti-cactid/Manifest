@@ -1,8 +1,42 @@
-MD5 b0dfcfe6c1de8696526bd551c674d560 ChangeLog 3260
-MD5 302b1aa298be2fb64bcae605e741efe8 cacti-cactid-0.8.6e.ebuild 1435
-MD5 5529b1d3060addb4662c82939c4e1273 cacti-cactid-0.8.6f_p1.ebuild 1541
-MD5 8df8bf83176cabe171afe70478195fc1 cacti-cactid-0.8.6g.ebuild 1466
-MD5 58c86d50c9315285ddaf0c5f24269e2d files/digest-cacti-cactid-0.8.6e 71
-MD5 c0e5c0f4c74e06f2c99e6e086be7dfd7 files/digest-cacti-cactid-0.8.6f_p1 73
-MD5 6e99d3e5ce243eb591fd62dd172237a0 files/digest-cacti-cactid-0.8.6g 71
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST cacti-cactid-0.8.6e.tar.gz 132059
+DIST cacti-cactid-0.8.6f-1.tar.gz 136217
+DIST cacti-cactid-0.8.6g.tar.gz 148921
+EBUILD cacti-cactid-0.8.6e.ebuild 1437 RMD160 87d6a5a6895045f6c89685dfdf594c5ec59c4624 SHA1 88f7e54b4aebcbc31aeadad030c49cdb012e66ee SHA256 ae95afe24ec27b8818c19caad47c6a186182c99808c505b3369ba692a23ebc25
+MD5 15382ed0379b7a091530392b20316f57 cacti-cactid-0.8.6e.ebuild 1437
+RMD160 87d6a5a6895045f6c89685dfdf594c5ec59c4624 cacti-cactid-0.8.6e.ebuild 1437
+SHA256 ae95afe24ec27b8818c19caad47c6a186182c99808c505b3369ba692a23ebc25 cacti-cactid-0.8.6e.ebuild 1437
+EBUILD cacti-cactid-0.8.6f_p1.ebuild 1544 RMD160 81120805f97c50227889b3915600e650adaf34c7 SHA1 870eb4dfadba41e7f57d903af92c74d43bf6e17f SHA256 d077638ba4ad676be5310b499c553cd9aa93d46ae96eb7b67d6c92344d71651c
+MD5 ecb8b8c409cd7e09f2a59ad19036e02a cacti-cactid-0.8.6f_p1.ebuild 1544
+RMD160 81120805f97c50227889b3915600e650adaf34c7 cacti-cactid-0.8.6f_p1.ebuild 1544
+SHA256 d077638ba4ad676be5310b499c553cd9aa93d46ae96eb7b67d6c92344d71651c cacti-cactid-0.8.6f_p1.ebuild 1544
+EBUILD cacti-cactid-0.8.6g.ebuild 1468 RMD160 3efb4c90be768c5293107bbd3da7d57f36fff75c SHA1 67aabd2d61969ecb4a08c0cc0d7b9a8b8a75db13 SHA256 b7606cc796f890e09d9287bef703b1f18b92f9fab991e71fccea4f407e490651
+MD5 e97b52616d4a335f6639eff229f73faf cacti-cactid-0.8.6g.ebuild 1468
+RMD160 3efb4c90be768c5293107bbd3da7d57f36fff75c cacti-cactid-0.8.6g.ebuild 1468
+SHA256 b7606cc796f890e09d9287bef703b1f18b92f9fab991e71fccea4f407e490651 cacti-cactid-0.8.6g.ebuild 1468
+MISC ChangeLog 3462 RMD160 34ed6ff607223e7cad8e4fb89d24e7c645a57a6a SHA1 34b3d15ffb5f31aa27bfb92194a6e7b111591ba1 SHA256 717410e9b0395ac646ce1c471d9d3590f88a815f1a3fc4a4d793192c18356f95
+MD5 39a7a7d721b28858ef1599cd20cef750 ChangeLog 3462
+RMD160 34ed6ff607223e7cad8e4fb89d24e7c645a57a6a ChangeLog 3462
+SHA256 717410e9b0395ac646ce1c471d9d3590f88a815f1a3fc4a4d793192c18356f95 ChangeLog 3462
+MISC metadata.xml 682 RMD160 6151c59b37c78fc476077aef062f78e1839575d7 SHA1 066f25955d4a474f6971b9963b86b304a92c6fa7 SHA256 920d0ffe4d80f62d59f06dfe513e27a9923a397d206c8b7ce67286efb00c78e1
 MD5 528bed3e0527d5e490f39fdd9c98daa6 metadata.xml 682
+RMD160 6151c59b37c78fc476077aef062f78e1839575d7 metadata.xml 682
+SHA256 920d0ffe4d80f62d59f06dfe513e27a9923a397d206c8b7ce67286efb00c78e1 metadata.xml 682
+MD5 58c86d50c9315285ddaf0c5f24269e2d files/digest-cacti-cactid-0.8.6e 71
+RMD160 1f7e2eeba6cae41f00ce8df56c4b4880d4ac2854 files/digest-cacti-cactid-0.8.6e 71
+SHA256 c19b93a504e3a4f3c503aa3374a2213a654e2266d43b0aba8cffff1dcb778605 files/digest-cacti-cactid-0.8.6e 71
+MD5 c0e5c0f4c74e06f2c99e6e086be7dfd7 files/digest-cacti-cactid-0.8.6f_p1 73
+RMD160 165c33843f1bbb874d520f14ee9ce2262a3ba84e files/digest-cacti-cactid-0.8.6f_p1 73
+SHA256 d65615db314e391bac67272d46fc4df2c90380d9b65a0715449f00200b9e262c files/digest-cacti-cactid-0.8.6f_p1 73
+MD5 6e99d3e5ce243eb591fd62dd172237a0 files/digest-cacti-cactid-0.8.6g 71
+RMD160 5d5dfefe0c6bf812d9eb13d933755958523ad176 files/digest-cacti-cactid-0.8.6g 71
+SHA256 ad56040581c92ae11b8516ecadfeebecedb468b494d0cdb183f8971f34729fcf files/digest-cacti-cactid-0.8.6g 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFE4EfrmdTrptrqvGERAtmFAJ4n+iLrus/ch5YvlP/sM/ZqON38gQCeOQCn
+/eqQzN6MlH05IlCjQ030E+8=
+=urxT
+-----END PGP SIGNATURE-----
