@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.1 2006/08/12 01:42:13 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.2 2006/08/14 07:51:40 keri Exp $
 
 inherit eutils
 
@@ -71,14 +71,25 @@ src_compile() {
 }
 
 src_test() {
-	cd "${TESTDIR}"
+	cd "${S}"
+	TEST_GRADE=`scripts/ml --print-grade`
+	if [ -d "${S}"/libgrades/${TEST_GRADE} ] ; then
+		TWS="${S}"/libgrades/${TEST_GRADE}
+		cp browser/mer_browser.init "${TWS}"/browser/
+		cp mdbcomp/mer_mdbcomp.init "${TWS}"/mdbcomp/
+		cp runtime/mer_rt.init "${TWS}"/runtime/
+	else
+		TWS="${S}"
+	fi
 
-	PATH="${S}"/scripts:"${S}"/util:"${PATH}" \
-	WORKSPACE="${S}" \
-	MERCURY_COMPILER="${S}"/compiler/${PN}_compile \
-	MMAKE_DIR="${S}"/scripts \
+	cd "${TESTDIR}"
+	PATH="${TWS}"/scripts:"${TWS}"/util:"${PATH}" \
+	WORKSPACE="${TWS}" \
+	MERCURY_COMPILER="${TWS}"/compiler/mercury_compile \
+	MMAKE_DIR="${TWS}"/scripts \
 	MERCURY_DEBUGGER_INIT="${TESTDIR}"/mdbrc \
-	mmake || die "mmake test failed"
+	GRADE=${TEST_GRADE} \
+		mmake || die "mmake test failed"
 }
 
 src_install() {
@@ -89,5 +100,8 @@ src_install() {
 		INSTALL_HTML_DIR="${D}"/usr/share/doc/${PF}/html \
 		install || die "make install failed"
 
-	dodoc BUGS HISTORY LIMITATIONS NEWS README README.Java README.Linux README.Linux-Alpha README.Linux-m68k README.Linux-PPC RELEASE_NOTES TODO VERSION WORK_IN_PROGRESS
+	dodoc \
+		BUGS HISTORY LIMITATIONS NEWS README README.Linux \
+		README.Linux-Alpha README.Linux-m68k README.Linux-PPC \
+		RELEASE_NOTES TODO VERSION WORK_IN_PROGRESS
 }
