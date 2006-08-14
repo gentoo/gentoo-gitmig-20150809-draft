@@ -1,22 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20090909.ebuild,v 1.4 2006/08/14 15:28:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060814.ebuild,v 1.1 2006/08/14 15:28:19 genstef Exp $
 
-inherit nsplugins kde-functions autotools cvs
+inherit nsplugins kde-functions autotools
 
 DESCRIPTION="Gnash is a GNU Flash movie player that supports many SWF v7 features"
 HOMEPAGE="http://www.gnu.org/software/gnash"
 #SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${PV}/${P}.tar.bz2"
-ECVS_SERVER="cvs.sv.gnu.org:/sources/${PN}"
-ECVS_MODULE="${PN}"
-ECVS_CO_OPTS="-D ${PV/0.7.1_p}"
-ECVS_UP_OPTS="-dP ${ECVS_CO_OPTS}"
-S=${WORKDIR}/${PN}
+SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-*"
-IUSE="gstreamer mad nsplugin nptl xml kde video_cards_i810"
+IUSE="mad nsplugin nptl xml kde video_cards_i810"
 #dmalloc, broken see bug 142939
 #dmalloc? ( dev-libs/dmalloc )
 #		$(use_enable dmalloc) \
@@ -43,19 +39,20 @@ RDEPEND="
 		x11-proto/xproto )
 		virtual/x11
 	)
-	gstreamer? ( media-libs/gstreamer )
-	!gstreamer? ( media-libs/sdl-mixer )
 	dev-libs/atk
 	dev-libs/glib
 	>x11-libs/gtk+-2
 	x11-libs/pango
+	media-libs/sdl-mixer
 	x11-libs/gtkglext"
 	#cairo? ( x11-libs/cairo )
+	#gstreamer? ( media-libs/gstreamer )
+	#!gstreamer? ( media-libs/sdl-mixer )
 
 set-kdedir
 
 src_unpack() {
-	cvs_src_unpack
+	unpack ${A}
 	cd ${S}
 
 	# enable sound by default
@@ -83,11 +80,11 @@ src_compile() {
 	#				SDL -> has no controls, we do not USE it
 	#$(use_enable gtk glext) with USE=-gtk, fails to detect gtkglext, bug 135010
 	#--enable-sound=gst,sdl
-	if use gstreamer; then
-		myconf="${myconf} --enable-sound=gst"
-	else
+	#if use gstreamer; then
+	#	myconf="${myconf} --enable-sound=gst"
+	#else
 		myconf="${myconf} --enable-sound=sdl"
-	fi
+	#fi
 
 	econf \
 		$(use_enable kde klash) \

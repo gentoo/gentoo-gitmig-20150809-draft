@@ -1,6 +1,14 @@
 # ChangeLog for net-www/gnash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.18 2006/08/13 18:05:59 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/ChangeLog,v 1.19 2006/08/14 15:28:19 genstef Exp $
+
+*gnash-0.7.1_p20060814 (14 Aug 2006)
+
+  14 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  gnash-0.7.1_p20060704.ebuild, +gnash-0.7.1_p20060814.ebuild,
+  gnash-0.7.1_p20090909.ebuild:
+  new snapshot currently -* because clicking does not work for me, sed sound
+  support to on again
 
   13 Aug 2006; Stefan Schweizer <genstef@gentoo.org> -files/do-sound.diff,
   -files/kdedir.diff, -files/klash-makefile.diff,

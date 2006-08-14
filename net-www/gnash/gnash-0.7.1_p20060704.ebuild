@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060704.ebuild,v 1.3 2006/08/08 12:00:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20060704.ebuild,v 1.4 2006/08/14 15:28:19 genstef Exp $
 
 inherit nsplugins kde-functions autotools
 
@@ -43,8 +43,6 @@ RDEPEND="
 	>x11-libs/gtk+-2
 	x11-libs/gtkglext
 	x11-libs/pango"
-
-S=${WORKDIR}/gnash
 
 set-kdedir
 
