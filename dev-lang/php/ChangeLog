@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.119 2006/08/12 21:56:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.120 2006/08/14 17:57:01 yoswink Exp $
+
+  14 Aug 2006; Jose Luis Rivero <yoswink@gentoo.org> php-4.4.3-r1.ebuild,
+  php-5.1.4-r6.ebuild:
+  Stable on alpha wrt security bug #143126
 
   12 Aug 2006; Jason Wever <weeve@gentoo.org> php-4.4.3-r1.ebuild:
   Updated the patchset for php-4.4.3-r1 to fix bug #143508 (with permission
