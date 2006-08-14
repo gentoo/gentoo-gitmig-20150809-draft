@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.3.ebuild,v 1.4 2005/10/26 14:06:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.3.ebuild,v 1.5 2006/08/14 09:35:49 dragonheart Exp $
 
 inherit eutils libtool
 
@@ -21,7 +21,7 @@ DEPEND=">=app-crypt/gnupg-1.2.2
 	>=dev-libs/libgpg-error-0.5
 	dev-libs/pth"
 
-# For when gnupg-1.9+ gets unmasked
+# For when gnupg-1.9+ gets unmasked TODO soon
 #	!smime? ( >=app-crypt/gnupg-1.2.2 )
 #	smime? ( >=app-crypt/gnupg-1.9.6 )
 

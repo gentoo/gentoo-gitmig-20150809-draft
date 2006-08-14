@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.2.ebuild,v 1.16 2005/10/18 03:56:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.0.2.ebuild,v 1.17 2006/08/14 09:35:49 dragonheart Exp $
 
 inherit eutils libtool
 
@@ -42,7 +42,7 @@ src_compile() {
 		aclocal
 	fi
 
-	WANT_AUTOCONF=2.57
+	export WANT_AUTOCONF=2.5
 	autoconf || die "failed to autoconfigure"
 	if use ppc-macos; then
 		automake || die "failed to automake"
