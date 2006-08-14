@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/usermode-utilities
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.20 2005/04/13 21:15:21 johnm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.21 2006/08/14 00:54:09 dang Exp $
+
+*usermode-utilities-20060216 (14 Aug 2006)
+
+  14 Aug 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/usermode-utilities-20060216-unlazy.patch, +metadata.xml,
+  +usermode-utilities-20060216.ebuild:
+  Add new upstream for bug #123703 and bug #72366, and take maintainership
 
   13 Apr 2005; John Mylchreest <johnm@gentoo.org>
   +files/20040406-CAN-2004-1295.patch:
