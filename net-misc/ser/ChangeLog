@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ser
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.20 2006/06/20 19:55:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ChangeLog,v 1.21 2006/08/14 08:18:00 genstef Exp $
+
+  14 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml:
+  Add metadata thanks to Daniel Webert <rockoo@gmail.com> in bug 143843
 
   20 Jun 2006; Stefan Schweizer <genstef@gentoo.org> ser-0.9.0.ebuild,
   ser-0.9.4.ebuild:
