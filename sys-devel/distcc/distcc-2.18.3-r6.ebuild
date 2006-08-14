@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r6.ebuild,v 1.2 2006/06/06 01:31:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r6.ebuild,v 1.3 2006/08/14 16:53:22 phreak Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ia64 amd64 ~s390"
 IUSE="gnome gtk selinux ipv6"
 
 DEPEND=">=sys-apps/portage-2.0.49-r6
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
+	|| ( >=sys-devel/gcc-config-1.3.1 app-admin/eselect-compiler )
 	sys-apps/shadow
 	gnome? (
 	  dev-util/pkgconfig
