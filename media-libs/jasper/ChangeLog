@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jasper
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.25 2006/07/17 16:12:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/ChangeLog,v 1.26 2006/08/14 08:12:05 phosphan Exp $
+
+  14 Aug 2006; Patrick Kursawe <phosphan@gentoo.org> jasper-1.701.0.ebuild:
+  Added a hint about potential OpenGL trouble (bug #133609) if make fails.
 
   17 Jul 2006; Patrick Kursawe <phosphan@gentoo.org> jasper-1.701.0.ebuild:
   Adding optional GLUT dependency, see bug #139735

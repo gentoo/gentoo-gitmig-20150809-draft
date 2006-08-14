@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.25 2006/07/17 16:12:15 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.26 2006/08/14 08:12:05 phosphan Exp $
 
 inherit libtool
 
@@ -31,7 +31,7 @@ src_compile() {
 		$(use_enable opengl) \
 		--enable-shared \
 		|| die
-	emake || die
+	emake || die "If you got undefined references to OpenGL related libraries,please try 'eselect opengl xorg-x11' before emerging. See bug #133609."
 }
 
 src_install() {
