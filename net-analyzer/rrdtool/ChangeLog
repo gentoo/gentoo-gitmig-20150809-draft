@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.94 2006/07/21 10:39:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.95 2006/08/14 08:12:15 phreak Exp $
+
+*rrdtool-1.2.15-r2 (14 Aug 2006)
+
+  14 Aug 2006; Christian Heim <phreak@gentoo.org>
+  +files/rrdtool-1.2.15-no-man.patch, +rrdtool-1.2.15-r2.ebuild:
+  Revision bump. Fixing an error occuring within an uclibc chroot, where no
+  man/groff is present.
 
 *rrdtool-1.2.15-r1 (21 Jul 2006)
 
