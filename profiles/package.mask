@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5731 2006/08/13 23:01:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5732 2006/08/14 09:43:30 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -31,6 +31,10 @@
 # that version if you want to continue using the ~arch
 # version of Azureus.
 =net-p2p/azureus-bin-2.4*
+
+# Stefan Schweizer <genstef@gentoo.org> (14 Aug 2006)
+# Does not detect battery level, bug 143859
+>=sys-power/powersave-0.13
 
 # Luca Barbato <lu_zero@gentoo.org> (12 Aug 2006)
 # x264 doesn't play nice with older version, temp mask for a better
