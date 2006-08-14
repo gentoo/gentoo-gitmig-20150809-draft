@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/gcc-powerpc64-4.1.1.ebuild,v 1.2 2006/08/12 15:12:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-powerpc64/gcc-powerpc64-4.1.1.ebuild,v 1.3 2006/08/14 17:45:15 phreak Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,10 +25,10 @@ KEYWORDS="~ppc ~ppc64"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.7
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )"
+	|| ( >=sys-devel/gcc-config-1.3.1 app-admin/eselect-compiler )"
 
 RDEPEND="virtual/libc
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.1 )
+	|| ( >=sys-devel/gcc-config-1.3.1 app-admin/eselect-compiler )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-libs/ncurses-5.2-r2"
