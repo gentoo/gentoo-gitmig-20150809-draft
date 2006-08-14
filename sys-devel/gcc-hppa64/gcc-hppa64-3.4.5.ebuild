@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.4.5.ebuild,v 1.5 2006/08/02 17:00:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.4.5.ebuild,v 1.6 2006/08/14 17:03:34 phreak Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,10 +24,10 @@ KEYWORDS="hppa"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-hppa64-2.16.1
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )"
+	|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )"
 
 RDEPEND="virtual/libc
-	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12-r4 )
+	|| ( >=sys-devel/gcc-config-1.3.12-r4 app-admin/eselect-compiler )
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
