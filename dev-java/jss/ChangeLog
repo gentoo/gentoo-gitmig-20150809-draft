@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jss
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.7 2005/08/05 16:06:59 betelgeuse Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.8 2006/08/14 23:03:33 nelchael Exp $
+
+*jss-3.4-r1 (14 Aug 2006)
+
+  14 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/jss-3.4-target_source.patch, +jss-3.4-r1.ebuild:
+  Migrated to new Java build system.
 
   05 Aug 2005; Petteri Räty <betelgeuse@gentoo.org> jss-3.4.ebuild:
   the ebuild now inherits linux-info.eclass to fix bug 101427
