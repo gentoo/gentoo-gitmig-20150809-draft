@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2-r1.ebuild,v 1.4 2006/06/24 00:29:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2-r1.ebuild,v 1.5 2006/08/14 15:33:29 genstef Exp $
 
 inherit eutils kde-functions multilib
 
@@ -205,7 +205,7 @@ src_install() {
 	doexe ${S}/upgrade/*
 
 	# fixes bug #22136
-	rm -fR ${D}/var
+	rm -fR ${D}/$(echo ${D} | awk -F / '{print $2}')
 }
 
 pkg_postinst() {
