@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5735 2006/08/14 14:03:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5736 2006/08/14 15:08:48 solar Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,8 +23,10 @@
 
 # Ned Ludd <solar/gentoo.org> (Aug 14 2006)
 # This this breaks working systems and eradicator
-# has gone MIA yet again. Bug 137917
->=sys-devel/gcc-config-2
+# has gone MIA yet again. 
+# Bugs 143697, 108398, 112156, 135702, 137917, 
+# 138296, 139016, 139629, 143684
+>=sys-devel/gcc-config-2.0.0_rc1
 app-admin/eselect-compiler
 
 # Petteri Räty <betelgeuse@gentoo.org> (13 Aug 2006)
