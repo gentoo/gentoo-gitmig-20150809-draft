@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.18 2006/07/18 06:09:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.19 2006/08/14 06:40:01 robbat2 Exp $
+
+*gpsd-2.33-r1 (14 Aug 2006)
+
+  14 Aug 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/gpsd-2.33-duplicate-device-add-hang.patch,
+  +files/gpsd-2.33-hotplug-background-fix.patch, +gpsd-2.33-r1.ebuild:
+  Fix bug #132288 and also two other hotplug issues that I personally ran
+  into. The patches have been submitted upstream.
 
   18 Jul 2006; Steve Arnold <nerdboy@gentoo.org> -gpsd-2.31.ebuild,
   gpsd-2.32.ebuild:
