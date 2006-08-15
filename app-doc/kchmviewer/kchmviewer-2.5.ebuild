@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-2.5.ebuild,v 1.2 2006/04/07 11:12:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kchmviewer/kchmviewer-2.5.ebuild,v 1.3 2006/08/15 17:46:38 carlo Exp $
 
 inherit kde-functions eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="arts kde"
 
 DEPEND="=x11-libs/qt-3*
-	~app-doc/chmlib-0.37.4
+	app-doc/chmlib
 	kde? ( kde-base/kdelibs )"
 
 pkg_setup() {
