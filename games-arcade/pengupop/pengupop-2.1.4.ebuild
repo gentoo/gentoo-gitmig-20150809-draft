@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/pengupop-2.1.4.ebuild,v 1.1 2006/08/13 22:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/pengupop-2.1.4.ebuild,v 1.2 2006/08/15 07:46:01 mr_bones_ Exp $
 
 inherit games
 
@@ -16,7 +16,10 @@ IUSE=""
 DEPEND="media-libs/libsdl"
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
+	insinto /usr/share/applications
+	doins pengupop.desktop || die "doins failed"
+	doicon pengupop.png
 	prepgamesdirs
 }
