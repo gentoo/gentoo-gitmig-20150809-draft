@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.2 2006/08/13 22:56:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.3 2006/08/15 12:52:34 genstef Exp $
+
+  15 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +files/xmoto.xpm,
+  xmoto-0.2.0.ebuild:
+  Add desktop entry for xmoto-edit and icon thanks to SnowBear <dark@gd2d.net>
+  in bug 107968
 
   13 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   xmoto-0.2.0.ebuild:

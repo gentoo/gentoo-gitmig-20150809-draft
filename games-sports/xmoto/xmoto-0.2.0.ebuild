@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.0.ebuild,v 1.2 2006/08/13 22:56:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.0.ebuild,v 1.3 2006/08/15 12:52:34 genstef Exp $
 
 inherit eutils games
 
@@ -36,7 +36,12 @@ src_unpack() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
 	dodoc README TODO ChangeLog
-	make_desktop_entry xmoto Xmoto
+
+	doicon ${FILESDIR}/${PN}.xpm
+	make_desktop_entry ${PN} 'Xmoto' ${PN}.xpm
+	make_desktop_entry ${PN}-edit 'Xmoto Level Editor' ${PN}.xpm
+
 	prepgamesdirs
 }
