@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.6.4.ebuild,v 1.5 2006/08/15 20:57:14 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.3.ebuild,v 1.1 2006/08/15 20:57:14 wormo Exp $
 
 DESCRIPTION="Program and text file generation"
 HOMEPAGE="http://www.gnu.org/software/autogen/"
@@ -8,11 +8,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86 ~ia64 ~ppc"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
 # autogen doesn't build with lower versions of guile on ia64
-DEPEND=">=dev-util/guile-1.6.6"
+DEPEND=">=dev-util/guile-1.6.6
+	dev-libs/libxml2"
 
 src_compile() {
 	econf || die "econf failed"
@@ -20,5 +21,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
+	rm -f ${D}/usr/share/autogen/libopts-*.tar.gz
 }
