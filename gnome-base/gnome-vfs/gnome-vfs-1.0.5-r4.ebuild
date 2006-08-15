@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.12 2006/07/05 06:04:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.13 2006/08/15 14:28:11 allanonjl Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -23,7 +23,7 @@ RDEPEND="=gnome-base/gconf-1.0*
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.8.0
 	>=dev-util/intltool-0.11
-	>=gnome-base/gnome-common-1.2.4
+	=gnome-base/gnome-common-1.2*
 	nls? ( sys-devel/gettext )
 	doc? ( dev-util/gtk-doc )"
 # gnome-common is for m4 macros needed for patches ...
