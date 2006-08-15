@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hsshellscript
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.13 2006/08/15 00:28:58 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.14 2006/08/15 00:32:33 araujo Exp $
+
+  15 Aug 2006; Luis F. Araujo <araujo@gentoo.org>
+  hsshellscript-2.6.0.ebuild:
+  Fixing glib name
 
 *hsshellscript-2.6.3 (15 Aug 2006)
 

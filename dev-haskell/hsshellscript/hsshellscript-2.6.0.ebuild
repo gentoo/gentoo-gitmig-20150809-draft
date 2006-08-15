@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.6.0.ebuild,v 1.5 2006/04/20 10:49:32 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/hsshellscript-2.6.0.ebuild,v 1.6 2006/08/15 00:32:33 araujo Exp $
 
 inherit base eutils multilib ghc-package
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.volker-wysk.de/hsshellscript/dist/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=virtual/ghc-6.4
@@ -27,7 +27,6 @@ src_unpack() {
 	# Don't register the package
 	sed -i "/ghc-pkg/d" "${S}/Makefile"
 	# Fix hsshellscript.cabal library path
-	sed -i "s:glib:glib-2.0:" "${S}/lib/hsshellscript.cabal"
 	sed -i "s:@DEST_LIB:${HSLIB}:" "${S}/lib/hsshellscript.cabal"
 	sed -i "s:@DEST_IMPORTS:${HSLIB}/imports:" "${S}/lib/hsshellscript.cabal"
 }
