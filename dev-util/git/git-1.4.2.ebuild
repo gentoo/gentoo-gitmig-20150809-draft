@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.4 2006/08/14 21:27:58 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.5 2006/08/15 14:51:06 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -133,7 +133,7 @@ pkg_postinst() {
 	einfo "If you want to manage subversion repositories using git, consider"
 	einfo "using git-svn. You should install dev-util/subversion and dev-perl/libwww-perl"
 	einfo
-	einfo "If you want to import a quilt series into git, donsider using the"
+	einfo "If you want to import a quilt series into git, consider using the"
 	einfo "git-quiltimport command. You should install dev-util/quilt before"
 	einfo
 	einfo "If you want to use the included CVS server you will need to install"
