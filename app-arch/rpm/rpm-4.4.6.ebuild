@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6.ebuild,v 1.2 2006/08/15 04:40:12 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6.ebuild,v 1.3 2006/08/15 14:01:41 ian Exp $
 
-inherit eutils autotools distutils
+inherit eutils autotools distutils perl-module
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm.org/"
@@ -78,6 +78,9 @@ src_install() {
 
 	dodoc CHANGES CREDITS GROUPS README* RPM*
 	use doc && dohtml -r apidocs/html/*
+
+	# Fix perllocal.pod file collision
+	use perl && fixlocalpod
 }
 
 pkg_postinst() {
