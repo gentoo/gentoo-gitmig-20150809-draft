@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/pecl-zip-1.7.0.ebuild,v 1.1 2006/08/14 16:37:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/pecl-zip-1.7.0.ebuild,v 1.2 2006/08/15 11:41:13 sebastian Exp $
 
 PHP_EXT_NAME="zip"
 PHP_EXT_INI="yes"
@@ -15,6 +15,6 @@ SLOT="0"
 IUSE=""
 
 DEPEND="${DEPEND}
-		dev-libs/zziplib"
+		sys-libs/zlib"
 
 need_php_by_category

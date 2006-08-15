@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-zip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.13 2006/08/14 16:37:24 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-zip/ChangeLog,v 1.14 2006/08/15 11:41:13 sebastian Exp $
+
+  15 Aug 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  pecl-zip-1.7.0.ebuild:
+  DEPEND=dev-libs/zziplib -> sys-libs/zlib.
 
 *pecl-zip-1.7.0 (14 Aug 2006)
 
