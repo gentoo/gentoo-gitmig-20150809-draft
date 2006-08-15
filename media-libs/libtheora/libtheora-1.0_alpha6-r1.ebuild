@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha6-r1.ebuild,v 1.1 2006/07/30 14:38:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha6-r1.ebuild,v 1.2 2006/08/15 18:56:45 genstef Exp $
 
 inherit flag-o-matic libtool autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.xiph.org/releases/theora/${P/_}.tar.bz2"
 
 LICENSE="xiph"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="encode doc examples"
 
 RDEPEND=">=media-libs/libogg-1.1.0
