@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.13 2006/07/02 19:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.14 2006/08/15 13:48:22 ian Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -164,6 +164,8 @@ src_compile() {
 	filter-flags "-malign-double"
 	# Fixes bug #97645
 	use ppc && filter-flags -mpowerpc-gpopt
+	# Fixes bug #143895 on gcc-4.1.1
+	filter-flags "-fsched2-use-superblocks"
 
 	export LC_ALL="C"
 

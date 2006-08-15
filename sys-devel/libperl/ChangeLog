@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.116 2006/06/18 16:46:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.117 2006/08/15 13:48:22 ian Exp $
+
+  15 Aug 2006; Christian Hartmann <ian@gentoo.org> libperl-5.8.8.ebuild,
+  libperl-5.8.8-r1.ebuild:
+  Fix bug #143895
 
   18 Jun 2006; Bryan Østergaard <kloeri@gentoo.org>
   libperl-5.8.8-r1.ebuild:
