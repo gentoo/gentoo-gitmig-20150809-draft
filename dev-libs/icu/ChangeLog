@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.35 2005/11/10 03:18:25 weeve Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.36 2006/08/15 07:25:29 sebastian Exp $
+
+*icu-3.4.1 (15 Aug 2006)
+
+  15 Aug 2006; Sebastian Bergmann <sebastian@gentoo.org> +icu-3.4.1.ebuild:
+  Version bump.
 
   10 Nov 2005; Jason Wever <weeve@gentoo.org> icu-3.4.ebuild:
   Added ~sparc keyword as it went the way of the dodo in the version bump.
