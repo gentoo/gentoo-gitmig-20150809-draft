@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5738 2006/08/15 12:31:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5739 2006/08/15 18:26:14 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -494,10 +494,6 @@ app-text/bow
 # Mike Frysinger <games@gentoo.org> (17 Jun 2006)
 # Use quakeforge or another quake1 client
 games-fps/quake1
-
-# Diego Pettenò <flameeyes@gentoo.org> (16 Jun 2006)
-# Pre-release
->=net-misc/knutclient-0.9_pre1
 
 # Gustavo Zacarias <gustavoz@gentoo.org> (15 Jun 2006)
 # Masked because of crash issues bug #131686
