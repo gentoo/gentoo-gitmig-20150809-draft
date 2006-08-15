@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.16 2006/01/14 04:13:15 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/libflash-0.4.10-r1.ebuild,v 1.17 2006/08/15 20:15:40 wormo Exp $
 
 inherit eutils
 
 DESCRIPTION="A library for flash animations"
 HOMEPAGE="http://www.swift-tools.com/Flash/"
-SRC_URI="http://www.directfb.org/download/contrib/${P}.tar.gz"
+SRC_URI="http://www.directfb.org/downloads/Misc/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
