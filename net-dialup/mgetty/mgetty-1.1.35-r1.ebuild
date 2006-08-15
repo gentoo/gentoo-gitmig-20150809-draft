@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r1.ebuild,v 1.4 2006/08/04 13:51:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.35-r1.ebuild,v 1.5 2006/08/15 18:26:10 mrness Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -18,7 +18,7 @@ DEPEND="doc? ( virtual/tetex )
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 hppa ia64 ~mips ppc sparc x86"
-IUSE="doc"
+IUSE="doc fidonet"
 
 pkg_setup() {
 	enewgroup fax
@@ -67,6 +67,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use fidonet && append-flags "-DFIDO"
 	append-flags "-DAUTO_PPP"
 
 	# parallel make fix later - 'sedscript' issue
