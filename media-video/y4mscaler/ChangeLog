@@ -1,6 +1,10 @@
 # ChangeLog for media-video/y4mscaler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.1 2006/01/01 19:01:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/y4mscaler/ChangeLog,v 1.2 2006/08/15 18:13:35 ticho Exp $
+
+  15 Aug 2006; Andrej Kacian <ticho@gentoo.org> y4mscaler-9.0.ebuild:
+  Stable on x86. Closes bug #138027, reported by Sebastian <sebastian_ml at
+  gmx.net>.
 
 *y4mscaler-9.0 (01 Jan 2006)
 
