@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2084 2006/08/15 11:42:45 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2085 2006/08/15 17:59:42 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1053,6 +1053,9 @@ net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Securit
 net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-analyzer/snort:timestats - Enable TimeStats functionality
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
+net-dialup/bewan-adsl:kt400 - Enable workaround for KT400 motherboards
+net-dialup/bewan-adsl:pcitimer - Use 2ms PCI hardware timer
+net-dialup/bewan-adsl:slowpcibridge - Enable workaround for low performance PCI bridges
 net-dialup/capi4k-utils:fax - Installs capi-fax demo programs
 net-dialup/capi4k-utils:pppd - Installs pppdcapiplugin modules
 net-dialup/freeradius:edirectory - Enables Novell eDirectory integration
@@ -1295,7 +1298,7 @@ net-misc/nxserver-freenx:nxclient - Add support for the commerial nxclient
 net-misc/nxserver-personal:prebuilt - Use the libraries shipped by nomachine, instead of building them locally
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support
-NEt-misc/openssh:hpn - Enable high performance ssh
+net-misc/openssh:hpn - Enable high performance ssh
 net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
