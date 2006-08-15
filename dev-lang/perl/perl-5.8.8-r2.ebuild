@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.18 2006/08/13 11:27:27 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.19 2006/08/15 13:41:43 ian Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -143,6 +143,8 @@ src_configure() {
 	filter-flags -malign-double
 	# Fixes bug #97645
 	use ppc && filter-flags -mpowerpc-gpopt
+	# Fixes bug #143895 on gcc-4.1.1
+	filter-flags "-fsched2-use-superblocks"
 
 	export LC_ALL="C"
 
