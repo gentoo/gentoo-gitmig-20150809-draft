@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a.ebuild,v 1.2 2006/08/12 12:10:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a.ebuild,v 1.3 2006/08/15 11:42:24 lu_zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -27,8 +27,8 @@ RDEPEND="
 	openal? ( ~media-libs/openal-0.0.8
 			   media-libs/freealut )
 	sdl? ( >=media-libs/libsdl-1.2 )
-	ffmpeg? ( media-video/ffmpeg )
-	=media-libs/x264-svn-20060612
+	ffmpeg? ( ~media-video/ffmpeg-0.4.9_p20060530 )
+	~media-libs/x264-svn-20060612
 	>=dev-libs/openssl-0.9.6
 	>=media-gfx/yafray-0.0.7
 	nls? ( >=media-libs/ftgl-2.1 )
@@ -81,7 +81,7 @@ src_compile() {
 	myconf="${myconf} $(blend_with blender-game gameengine)"
 
 	scons ${MAKEOPTS} ${myconf} \
-			WITH_BF_PLAYER=0
+			WITH_BF_PLAYER=0 || die
 
 #	sed -i -e "s/-O2/${CFLAGS// /\' ,\'}/g" ${S}/SConstruct
 #	scons ${MAKEOPTS} || die

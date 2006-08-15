@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.93 2006/08/12 12:10:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.94 2006/08/15 11:42:24 lu_zero Exp $
+
+  12 Aug 2006; Luca Barbato <lu_zero@gentoo.org> blender-2.42a.ebuild:
+  Dep pinned with ~, thanks to Jackub for making me reconsider
 
   12 Aug 2006; Luca Barbato <lu_zero@gentoo.org> blender-2.42a.ebuild:
   x264 silent dep of ffmpeg added (blender has an internal copy)
