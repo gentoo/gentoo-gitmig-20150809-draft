@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2083 2006/08/14 14:38:17 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2084 2006/08/15 11:42:45 uberlord Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -44,6 +44,7 @@ app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinint b
 app-backup/kdar:dar32 - Support libdar32.so to use.
 app-backup/kdar:dar64 - Support libdar64.so to use.
 app-backup/rdiff-backup:xattr - if you want extended attributes enabled
+app-benchmarks/bootchart:acct - Enable process accounting
 app-cdr/bonfire:beagle - Enable Beagle support for searches.
 app-cdr/bonfire:gdl - Enable gld support for customisable GUI.
 app-cdr/bonfire:libnotify - Enable libinotify support for system notifications.
