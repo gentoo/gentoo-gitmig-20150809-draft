@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.23 2006/08/04 13:26:57 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.24 2006/08/15 10:09:21 keri Exp $
+
+  15 Aug 2006; Keri Harris <keri@gentoo.org>
+  +files/swi-prolog-packages-sparc-alignment.patch,
+  swi-prolog-5.6.17.ebuild:
+  Add sparc-alignment patch to resolve bus error in semweb package. Reported,
+  debugged and fixed by Ferris McCormick <fmccor@gentoo.org>
 
   04 Aug 2006; Ferris McCormick <fmccor@gentoo.org>
   swi-prolog-5.6.17.ebuild:
