@@ -1,7 +1,32 @@
-MD5 507b121997c47447fc272ea54cb1021c ChangeLog 879
-MD5 ffe9980a4253d6b885b1c20fb2de06e5 files/digest-mysql-super-smack-1.2 66
-MD5 20ddb2dc6c360638e1a010d9315e0d50 files/digest-mysql-super-smack-1.3 67
+AUX mysql-super-smack-1.2.destdir.patch 420 RMD160 f2e6c4cf2f8d5472c4b3b1d348c6e9c346b73272 SHA1 2490c73678c5f03d07a4a7d19766bfbaca6868e4 SHA256 584454ce2cf04dddb37a05785a2544e79e7fb141e7619298444969ecdd47b3b7
 MD5 d070039b24303c845cbcbf72ed2e088f files/mysql-super-smack-1.2.destdir.patch 420
-MD5 62ae293ebc3602342f798f1b3b044eba metadata.xml 225
+RMD160 f2e6c4cf2f8d5472c4b3b1d348c6e9c346b73272 files/mysql-super-smack-1.2.destdir.patch 420
+SHA256 584454ce2cf04dddb37a05785a2544e79e7fb141e7619298444969ecdd47b3b7 files/mysql-super-smack-1.2.destdir.patch 420
+AUX mysql-super-smack-1.3.amd64.patch 702 RMD160 d944432c9fadc500d9780f05b0b1f6ea5dc0576f SHA1 1a187b45c64c33eabdcdf21ded7b88cb451388ef SHA256 c88a75a35851433689bfa2f2922bd389344643a3ad6bcafa1ce3f4a80e4ef564
+MD5 9c65af01effab93e667e0be53b64c15f files/mysql-super-smack-1.3.amd64.patch 702
+RMD160 d944432c9fadc500d9780f05b0b1f6ea5dc0576f files/mysql-super-smack-1.3.amd64.patch 702
+SHA256 c88a75a35851433689bfa2f2922bd389344643a3ad6bcafa1ce3f4a80e4ef564 files/mysql-super-smack-1.3.amd64.patch 702
+DIST super-smack-1.2.tar.gz 99478
+DIST super-smack-1.3.tar.gz 155375 RMD160 bea82e7b26070f0e6ba0ea2ffb187cc374f6204e SHA1 1db165de4f82c9646e31f393ece56f57670de34d SHA256 969d40e772faa8580f8e8f2dfa2a381fbadbd79fc0c94304347d594dba2a9bd9
+EBUILD mysql-super-smack-1.2.ebuild 1280 RMD160 b7ea96c82e30ea4515d1ff57a36fde1da86ab23b SHA1 d31608622bba419950ce961dab3fc2fe1694835c SHA256 b780ad1304f428a6124cc3b7acf76ad528bb574769e901bee2e2223c46ae70d2
 MD5 e03a1c0a4cb07373fd701bd15610e65d mysql-super-smack-1.2.ebuild 1280
-MD5 a0080b36086e9c9443cccda9eaa753a6 mysql-super-smack-1.3.ebuild 1303
+RMD160 b7ea96c82e30ea4515d1ff57a36fde1da86ab23b mysql-super-smack-1.2.ebuild 1280
+SHA256 b780ad1304f428a6124cc3b7acf76ad528bb574769e901bee2e2223c46ae70d2 mysql-super-smack-1.2.ebuild 1280
+EBUILD mysql-super-smack-1.3.ebuild 1346 RMD160 7ea1a7a4fa4095b6a629e2329a0327c04a7891c7 SHA1 4e60c6eeac20fb8535b36d1d80ef4d753333bdf5 SHA256 95b94b334518efa2d00bc655935035d1ba612759799945a0f3bd196e65dc06e8
+MD5 ae41eb43c0d666097d8e2f33a292830b mysql-super-smack-1.3.ebuild 1346
+RMD160 7ea1a7a4fa4095b6a629e2329a0327c04a7891c7 mysql-super-smack-1.3.ebuild 1346
+SHA256 95b94b334518efa2d00bc655935035d1ba612759799945a0f3bd196e65dc06e8 mysql-super-smack-1.3.ebuild 1346
+MISC ChangeLog 1094 RMD160 ee78094bdcc252cd59414fab36fac72388181c02 SHA1 2c43b38397ba0fb79ba6177325de79d5d3eb99b8 SHA256 b3e52369229d03ccd9344ce11fe4d997e3a9972daa278b603597d6b0c6dca5b8
+MD5 f570cfd629dc5856d8269283d74430f3 ChangeLog 1094
+RMD160 ee78094bdcc252cd59414fab36fac72388181c02 ChangeLog 1094
+SHA256 b3e52369229d03ccd9344ce11fe4d997e3a9972daa278b603597d6b0c6dca5b8 ChangeLog 1094
+MISC metadata.xml 225 RMD160 74879797e03923649e534769cbd28d301a84623e SHA1 7d843700f0bf221e490ffba7d31c2361a1ea8394 SHA256 9072914e1f255004795621cc128734730b730ffaabda8ca955d781a0e0398b13
+MD5 62ae293ebc3602342f798f1b3b044eba metadata.xml 225
+RMD160 74879797e03923649e534769cbd28d301a84623e metadata.xml 225
+SHA256 9072914e1f255004795621cc128734730b730ffaabda8ca955d781a0e0398b13 metadata.xml 225
+MD5 ffe9980a4253d6b885b1c20fb2de06e5 files/digest-mysql-super-smack-1.2 66
+RMD160 0aef4e4855f47ea6039e4de63da1bc61ae1a5f2b files/digest-mysql-super-smack-1.2 66
+SHA256 587c09be1dd93b6e6b735a14ae94cf1581e615d18ce3e60053c79babd8c28be0 files/digest-mysql-super-smack-1.2 66
+MD5 6503b37b805807b8a23b3a51b05c092d files/digest-mysql-super-smack-1.3 247
+RMD160 ab4869345e42469b8879886a8df32417fc57e9a5 files/digest-mysql-super-smack-1.3 247
+SHA256 866ba4a1bce301a57450d66bfa6bc14bcf11e66a7721eeaa0b7678f09db0a124 files/digest-mysql-super-smack-1.3 247
