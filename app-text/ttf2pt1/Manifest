@@ -1,7 +1,50 @@
-MD5 6facc1bbc6009954f85f57862b8588d6 ttf2pt1-3.4.0.ebuild 854
-MD5 22ce8dfddad1e22dfdf1907891c13a05 ttf2pt1-3.3.3.ebuild 854
-MD5 a972d9260722181a27a6590667c339bb ChangeLog 1791
-MD5 70a68cff133872cdf8743b63425beffe files/digest-ttf2pt1-3.3.3 62
-MD5 d8a381f600cd8b500edd31175e462ada files/ttf2pt1-3.4.0-Makefile-gentoo.diff 1347
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX ttf2pt1-3.3.3-Makefile-gentoo.diff 1203 RMD160 5621b3e61c25e7f1eb72e1d4c69d904d0e1b93c9 SHA1 d6f22e9344b74bcd721ecd373d40d4f121acebef SHA256 da28583d8208985f66c5043cdff0f2a07b5ea6c513ce098deca64a31a85f20db
 MD5 0199933f9e9763b60bfd6120daaead19 files/ttf2pt1-3.3.3-Makefile-gentoo.diff 1203
-MD5 abb6440d86a5663c3148eba7976a1f59 files/digest-ttf2pt1-3.4.0 62
+RMD160 5621b3e61c25e7f1eb72e1d4c69d904d0e1b93c9 files/ttf2pt1-3.3.3-Makefile-gentoo.diff 1203
+SHA256 da28583d8208985f66c5043cdff0f2a07b5ea6c513ce098deca64a31a85f20db files/ttf2pt1-3.3.3-Makefile-gentoo.diff 1203
+AUX ttf2pt1-3.4.0-Makefile-gentoo.diff 1347 RMD160 4ab09ec152f3bf3eeced442a527e60d17efb24f0 SHA1 3eb8f7682b23a34f15c8b00a6b83ceb0b38c144b SHA256 a93f99bd7cea48f1f6467c5b93989f5c099fd02ff48730339fbe21af707dfb9e
+MD5 d8a381f600cd8b500edd31175e462ada files/ttf2pt1-3.4.0-Makefile-gentoo.diff 1347
+RMD160 4ab09ec152f3bf3eeced442a527e60d17efb24f0 files/ttf2pt1-3.4.0-Makefile-gentoo.diff 1347
+SHA256 a93f99bd7cea48f1f6467c5b93989f5c099fd02ff48730339fbe21af707dfb9e files/ttf2pt1-3.4.0-Makefile-gentoo.diff 1347
+AUX ttf2pt1-3.4.0-Makefile-multiline-sed.diff 1443 RMD160 3f0ad04593d5d60589e7d26cc340d4a30d0512af SHA1 870b3d56b64e6aa12e9acbd12453e94a2fe4e1c2 SHA256 a3d85202bbcb47816fa3f01b6f366ed6fefab5cb7e2e8da335518bffd1db6e35
+MD5 570b25a2b27c56d990226b80c68a7f95 files/ttf2pt1-3.4.0-Makefile-multiline-sed.diff 1443
+RMD160 3f0ad04593d5d60589e7d26cc340d4a30d0512af files/ttf2pt1-3.4.0-Makefile-multiline-sed.diff 1443
+SHA256 a3d85202bbcb47816fa3f01b6f366ed6fefab5cb7e2e8da335518bffd1db6e35 files/ttf2pt1-3.4.0-Makefile-multiline-sed.diff 1443
+AUX ttf2pt1-3.4.0-man-pages.diff 1441 RMD160 f155ab414656f1d7835da6fd71e851f8d3a5a5e9 SHA1 6991807901f90ccf09d1496cb1e2f59034e095aa SHA256 9ee30134825bcddde474f9df69e8ef410825396482fb84e2554755ef36614093
+MD5 ac57bac3e9f5fff0a1b04cce8afa3787 files/ttf2pt1-3.4.0-man-pages.diff 1441
+RMD160 f155ab414656f1d7835da6fd71e851f8d3a5a5e9 files/ttf2pt1-3.4.0-man-pages.diff 1441
+SHA256 9ee30134825bcddde474f9df69e8ef410825396482fb84e2554755ef36614093 files/ttf2pt1-3.4.0-man-pages.diff 1441
+DIST ttf2pt1-3.3.3.tgz 179356
+DIST ttf2pt1-3.4.0.tgz 204811 RMD160 42426b09ca964a5628ff3b7c2db7bf1c2ce43c48 SHA1 1e11478ab5f6dae26ea743dc1149603d652746bb SHA256 f05184ce4f3c7c6e0931ddf25a0c792aaaa27a1ca890036703cb6566dc482eae
+EBUILD ttf2pt1-3.3.3.ebuild 849 RMD160 c19675796adb14dec5a0c7d55e42c569a9190db1 SHA1 b1202a0baeddebd086d9f73b5f1b7251198fb5a9 SHA256 81ebb4f3ea38342f627eae2e05dd380b31b4cf939d1b65ed7bff5ea6ed47bb55
+MD5 854af9de65d90865cf29dfef42d6b390 ttf2pt1-3.3.3.ebuild 849
+RMD160 c19675796adb14dec5a0c7d55e42c569a9190db1 ttf2pt1-3.3.3.ebuild 849
+SHA256 81ebb4f3ea38342f627eae2e05dd380b31b4cf939d1b65ed7bff5ea6ed47bb55 ttf2pt1-3.3.3.ebuild 849
+EBUILD ttf2pt1-3.4.0.ebuild 946 RMD160 196826ce4841cdfb8f253c37ee8aefb5166fe41b SHA1 1b883eb3a31aa997e3d33c6232618f5fb9ea0c8d SHA256 29bdf5af340269876f2ce6f7c7b69b08e78967d16cb59e24d52fa4cbb38ae79b
+MD5 a0d4f8c5d9a7793fe9143d7ce985a5e8 ttf2pt1-3.4.0.ebuild 946
+RMD160 196826ce4841cdfb8f253c37ee8aefb5166fe41b ttf2pt1-3.4.0.ebuild 946
+SHA256 29bdf5af340269876f2ce6f7c7b69b08e78967d16cb59e24d52fa4cbb38ae79b ttf2pt1-3.4.0.ebuild 946
+MISC ChangeLog 2117 RMD160 8cc5740a6cf26bf8425483c8cdc52a5956ad8a0d SHA1 8cd2ad3bc32cf9e1fad8aab56b682b1e378b9737 SHA256 95907c612531b0dd463d80730c125beea514bd3b97fd26dd1ef5b2adec7180c0
+MD5 616b41d419709728e8a39285f1490f13 ChangeLog 2117
+RMD160 8cc5740a6cf26bf8425483c8cdc52a5956ad8a0d ChangeLog 2117
+SHA256 95907c612531b0dd463d80730c125beea514bd3b97fd26dd1ef5b2adec7180c0 ChangeLog 2117
+MISC metadata.xml 233 RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 SHA1 9b94f113e7f382076b1749c2a856e409c96cade3 SHA256 dce03f6cdd96135caf3c971a5ca4a8c916f44532fe8cfb6df88b7bdade407e8b
+MD5 4eda2fda81ea6a89d8f1f4a2dcd12a85 metadata.xml 233
+RMD160 d81ec1a0582856aeac5ef3bfec5c80d9850216f6 metadata.xml 233
+SHA256 dce03f6cdd96135caf3c971a5ca4a8c916f44532fe8cfb6df88b7bdade407e8b metadata.xml 233
+MD5 70a68cff133872cdf8743b63425beffe files/digest-ttf2pt1-3.3.3 62
+RMD160 12c75f54922f8e862ce720be748225c693a2e52e files/digest-ttf2pt1-3.3.3 62
+SHA256 e1f0dbfa3dd8574a3cfe4c1c203502413d9bc65a8c542f921115691f1399ffb0 files/digest-ttf2pt1-3.3.3 62
+MD5 5ff0e333bbd3a9cbb78e33266f5c118b files/digest-ttf2pt1-3.4.0 232
+RMD160 b89c36dbc0a65924e16e28d75be6f9957aa3a1db files/digest-ttf2pt1-3.4.0 232
+SHA256 a4bf74bf275bdb00cc3fd1548d4b49afe9a837041da91306f4af79c983e65d2d files/digest-ttf2pt1-3.4.0 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFE5NCA/NoSW7FuNV8RAvCQAKCXKi+DXcGFCNzqrrrecpzfgWDGagCgkwzE
+WxLBpoYnLJtseqFdu76j7Lo=
+=YV+y
+-----END PGP SIGNATURE-----

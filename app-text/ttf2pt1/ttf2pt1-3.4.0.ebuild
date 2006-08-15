@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.4.0.ebuild,v 1.22 2005/04/24 02:58:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.4.0.ebuild,v 1.23 2006/08/15 19:46:49 wormo Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-Makefile-gentoo.diff
+	epatch ${FILESDIR}/${P}-Makefile-multiline-sed.diff
+	epatch ${FILESDIR}/${P}-man-pages.diff
 }
 
 src_compile() {
