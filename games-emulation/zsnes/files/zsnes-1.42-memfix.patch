@@ -1,0 +1,19 @@
+diff -NurdB zsnes_1_42/src/linux/zfilew.c zsnes_1_42-patched/src/linux/zfilew.c
+--- zsnes_1_42/src/linux/zfilew.c	2005-01-14 08:11:19.000000000 -0500
++++ zsnes_1_42-patched/src/linux/zfilew.c	2006-03-16 02:16:42.000000000 -0500
+@@ -476,9 +476,13 @@
+   {
+     homedir = (char *)malloc(ZCFG_DIR_LEN);
+     getcwd(homedir, ZCFG_DIR_LEN);
++    strcpy(zcfgdir, homedir);
++    free(homedir);
++  }
++  else
++  {
++    strcpy(zcfgdir, homedir);
+   }
+-  strcpy(zcfgdir, homedir);
+-  free(homedir);
+   strcat(zcfgdir, ZCFG_DIR);
+   tmp = opendir(zcfgdir);
+   if (tmp == NULL) 

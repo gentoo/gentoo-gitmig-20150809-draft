@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.21 2006/04/13 20:36:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.22 2006/08/15 17:41:03 mr_bones_ Exp $
+
+  15 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/zsnes-1.42-memfix.patch, zsnes-1.42.ebuild:
+  add patch from Leonardo Boshell via bug #125861 to fix memory issue
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> zsnes-1.42.ebuild:
   Moved games_pkg_setup to the beginning of pkg_setup.
