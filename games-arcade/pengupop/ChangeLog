@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pengupop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.2 2006/08/13 22:49:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/ChangeLog,v 1.3 2006/08/15 21:35:20 wormo Exp $
+
+  15 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  pengupop-2.1.4.ebuild:
+  mark ~ppc, thanks to Henrique Rodrigues (Bug #143997)
 
 *pengupop-2.1.4 (13 Aug 2006)
 

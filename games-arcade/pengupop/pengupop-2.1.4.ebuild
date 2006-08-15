@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/pengupop-2.1.4.ebuild,v 1.3 2006/08/15 07:46:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/pengupop-2.1.4.ebuild,v 1.4 2006/08/15 21:35:20 wormo Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.junoplay.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND="media-libs/libsdl"
