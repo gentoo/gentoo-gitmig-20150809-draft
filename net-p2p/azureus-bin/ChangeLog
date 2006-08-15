@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.44 2006/08/06 09:04:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/ChangeLog,v 1.45 2006/08/15 04:18:20 tsunam Exp $
+
+  15 Aug 2006; Joshua Jackson <tsunam@gentoo.org>
+  azureus-bin-2.3.0.6.ebuild:
+  Stable x86; bug #132846
 
   06 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   azureus-bin-2.3.0.6.ebuild:
