@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/codebreaker/codebreaker-1.2.1-r1.ebuild,v 1.6 2006/02/14 04:29:18 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/codebreaker/codebreaker-1.2.1-r1.ebuild,v 1.7 2006/08/15 13:49:31 tcort Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/c/codebreaker/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="|| ( x11-libs/libXi virtual/x11 )

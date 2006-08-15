@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/bastet
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/ChangeLog,v 1.6 2005/05/19 13:25:05 nigoro Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/ChangeLog,v 1.7 2006/08/15 13:44:44 tcort Exp $
+
+  15 Aug 2006; Thomas Cort <tcort@gentoo.org> bastet-0.41.ebuild:
+  Stable on amd64 wrt Bug #143961
 
   19 May 2005; Yuta SATOH <nigoro@gentoo.org> bastet-0.41.ebuild:
   Stable on ppc64
