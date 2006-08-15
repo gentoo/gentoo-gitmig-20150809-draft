@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r1.ebuild,v 1.2 2006/03/12 08:28:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r1.ebuild,v 1.3 2006/08/15 18:02:28 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.bewan.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="usb doc"
+IUSE="usb pcitimer slowpcibridge kt400"
 
 DEPEND="virtual/linux-sources"
 RDEPEND=""
@@ -38,6 +38,11 @@ src_unpack() {
 	# Fix "unresolved symbol set_cpus_allowed" on SMP kernels (#122103)
 	# Upstream consider actual version to be thread safe
 	epatch "${FILESDIR}/${P}-smp.patch"
+
+	# Declare desired COPTIONS in the Makefile for the PCI module
+	use kt400 && sed -i 's/^\(COPTIONS *= *\)/\1 -DKT400/g' "${PCI_S}/Makefile"
+	use pcitimer && sed -i 's/^\(COPTIONS *= *\)/\1 -DUSE_HW_TIMER/g' "${PCI_S}/Makefile"
+	use slowpcibridge && sed -i 's/^\(COPTIONS *= *\)/\1 -DPCI_BRIDGE_WORKAROUND/g' "${PCI_S}/Makefile"
 
 	# Fix up broken Makefiles
 	convert_to_m "${PCI_S}/Makefile"
@@ -70,15 +75,13 @@ src_install() {
 		die "Cannot install unicorntest"
 	doman "${S}/Documentation/unicorntest.8"
 
-	if use doc; then
-		#Install documantation	
-		cd "${S}"
-		dodoc README
-		docinto RFCs
-		dodoc RFCs/*
-		docinto scripts
-		dodoc scripts/*
-	fi
+	#Install documantation	
+	cd "${S}"
+	dodoc README
+	docinto RFCs
+	dodoc RFCs/*
+	docinto scripts
+	dodoc scripts/*
 }
 
 pkg_postinst() {
