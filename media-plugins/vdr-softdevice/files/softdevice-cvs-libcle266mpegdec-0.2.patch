@@ -1,0 +1,56 @@
+Index: configure
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/configure,v
+retrieving revision 1.20
+diff -u -r1.20 configure
+--- configure	10 Jul 2006 19:40:25 -0000	1.20
++++ configure	13 Jul 2006 11:38:08 -0000
+@@ -299,15 +299,17 @@
+ #
+ if test "${dfb}" = "yes" ; then
+   echo -n "Checking for libcle266mpegdec ... "
+-  cle266_cflags=`PKG_CONFIG_PATH=$PKG_CONFIG_PATH pkg-config --cflags libcle266mpegdec 2>>config.log` || cle266="no"
++  cle266_version=`PKG_CONFIG_PATH=$PKG_CONFIG_PATH pkg-config --modversion libcle266mpegdec 2>>config.log` || cle266="no"
+   if test "${cle266}" = "yes" ; then
++    cle266_cflags=`PKG_CONFIG_PATH=$PKG_CONFIG_PATH pkg-config --cflags libcle266mpegdec`
+     cle266_libs=`PKG_CONFIG_PATH=$PKG_CONFIG_PATH pkg-config --libs libcle266mpegdec`
+     cle266_opts="${cle266_cflags} ${cle266_libs}"
+   fi
+ 
+-  if test "${cle266}" = "yes" ; then
++  if test "${cle266}" = "yes" && test "${cle266_version}" = "0.2"; then
+     echo "Enabled cle266 hardware decoding."
+   else
++    cle266="no"
+     echo "Not found."
+   fi
+ else
+Index: mpeg2decoder.c
+===================================================================
+RCS file: /cvsroot/softdevice/softdevice/mpeg2decoder.c,v
+retrieving revision 1.66
+diff -u -r1.66 mpeg2decoder.c
+--- mpeg2decoder.c	17 Jun 2006 16:27:34 -0000	1.66
++++ mpeg2decoder.c	13 Jul 2006 11:38:08 -0000
+@@ -757,7 +757,7 @@
+ };
+ 
+ #ifdef HAVE_CLE266_MPEG_DECODER
+-float aspect_ratio_values[5]={1.0, 1.0, 4.0/3.0, 16.0/9.0, 221.0/110 };
++float aspect_ratio_values[5]={1.0, 1.0, 4.0/3.0, 16.0/9.0, 2.21 };
+ 
+ int cVideoStreamDecoder::DecodePicture_cle266(sPicBuffer *&pic, 
+                 int &got_picture,uint8_t *data, int length, int64_t pkt_pts) {
+@@ -790,9 +790,9 @@
+   pic->width = decoder.width;
+   pic->height = decoder.height;
+   pic->pts = pkt_pts;
+-  pic->edge_width=pic->edge_height=0;
+-  pic->dtg_active_format = 0; // currently not parsed
+-  pic->interlaced_frame = true; // FIXME Do we have that information?
++  pic->edge_width = pic->edge_height = 0;
++  pic->dtg_active_format = decoder.dtg_active_format;
++  pic->interlaced_frame = decoder.progressive_sequence ? false : true;
+   pic->aspect_ratio = ( decoder.aspect_ratio_info >= 0 
+     && decoder.aspect_ratio_info < 5 ) ?
+     aspect_ratio_values[decoder.aspect_ratio_info] : 1.0;

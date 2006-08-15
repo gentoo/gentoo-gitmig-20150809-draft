@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.13 2006/08/14 18:51:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.14 2006/08/15 08:43:43 zzam Exp $
+
+*vdr-softdevice-0.2.3.20060814 (15 Aug 2006)
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/softdevice-cvs-libcle266mpegdec-0.2.patch,
+  +vdr-softdevice-0.2.3.20060814.ebuild:
+  Added new cvs snapshot. Cleaned up mmx handling. Removed now obsolete
+  patches. Subplugins has been renamed. Added xinerama use-flag. Added patch
+  for cle266 support.
 
   14 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   -files/vdr-softdevice-0.2.3a-Makefile.diff,
