@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.34 2006/07/11 04:32:42 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.35 2006/08/15 19:35:52 swegener Exp $
+
+  15 Aug 2006; Sven Wegener <swegener@gentoo.org> files/pdns:
+  Convert the init script from myservice to SVCNAME and allow . and - as
+  separator in multiple instances mode.
 
   11 Jul 2006; Joshua Jackson <tsunam@gentoo.org> pdns-2.9.20-r1.ebuild:
   Stable x86 ;bug #136288
