@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/pengupop-2.1.4.ebuild,v 1.2 2006/08/15 07:46:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pengupop/pengupop-2.1.4.ebuild,v 1.3 2006/08/15 07:46:39 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Networked multiplayer-only Puzzle Bubble clone"
 HOMEPAGE="http://www.junoplay.com/pengupop"
