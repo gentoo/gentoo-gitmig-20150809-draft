@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-taste
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-taste/ChangeLog,v 1.1 2006/03/05 11:25:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-taste/ChangeLog,v 1.2 2006/08/15 09:59:25 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
 *vdr-taste-0.0.2d (05 Mar 2006)
 

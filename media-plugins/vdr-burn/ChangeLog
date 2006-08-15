@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.9 2006/05/21 12:36:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.10 2006/08/15 10:31:49 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
   21 May 2006; Joerg Bornkessel <hd_brummy@gentoo.org> +files/confd-0.0.9,
   +files/rc-addon-0.0.9.sh, -files/confd, -files/rc-addon.sh,

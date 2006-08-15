@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-dxr3
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.2 2006/06/14 07:56:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.3 2006/08/15 10:17:55 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
   14 Jun 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-dxr3-0.2.6.ebuild:
   Removed optional dependency em8300-libraries-cvs which does not exist in

@@ -3,12 +3,8 @@
 <pkgmetadata>
 	<herd>media-tv</herd>
 		<maintainer>
-  			<email>hd_brummy@gentoo.org</email>
-			<name>Joerg Bornkessel</name>
-		</maintainer>
-		<maintainer>
-    		<email>zzam@gentoo.org</email>
-	        <name>Matthias Schwarzott</name>
+  			<email>vdr@gentoo.org</email>
+			<name>Gentoo VDR Project</name>
 		</maintainer>
 	<longdescription>
 	  With this Plugin one knows records with a pin code before the access by children protected

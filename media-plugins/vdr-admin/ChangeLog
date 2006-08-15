@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-admin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.4 2006/06/30 16:16:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/ChangeLog,v 1.5 2006/08/15 10:35:56 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
   30 Jun 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-admin-0.4.0.ebuild:
   Changed description to warn about name-similarity to vdradmin.

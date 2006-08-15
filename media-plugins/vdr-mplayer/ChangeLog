@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-mplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.5 2006/07/07 08:04:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.6 2006/08/15 10:28:40 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
 *vdr-mplayer-0.9.14-r2 (07 Jul 2006)
 

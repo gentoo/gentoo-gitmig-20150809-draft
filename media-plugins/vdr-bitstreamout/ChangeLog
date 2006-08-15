@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-bitstreamout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/ChangeLog,v 1.4 2006/04/17 16:38:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-bitstreamout/ChangeLog,v 1.5 2006/08/15 10:24:51 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
   17 Apr 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-bitstreamout-0.85.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-videosystem
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-videosystem/ChangeLog,v 1.1 2006/05/15 08:26:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-videosystem/ChangeLog,v 1.2 2006/08/15 10:01:37 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Assigned to Gentoo VDR Project.
 
 *vdr-videosystem-0.0.1 (15 May 2006)
 

@@ -3,12 +3,8 @@
 <pkgmetadata>
 	<herd>media-tv</herd>
 		<maintainer>
-			<email>zzam@gentoo.org</email>
-			<name>Matthias Schwarzott</name>
-		</maintainer>
-		<maintainer>
-			<email>hd_brummy@gentoo.org</email>
-			<name>Joerg Bornkessel</name>
+			<email>vdr@gentoo.org</email>
+			<name>Gentoo VDR Project</name>
 		</maintainer>
   <longdescription>VDR plugin to play dvds and dvd file structures</longdescription>
 </pkgmetadata>
