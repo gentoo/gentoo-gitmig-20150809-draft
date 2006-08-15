@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.3.ebuild,v 1.1 2005/09/25 10:32:57 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.3.ebuild,v 1.2 2006/08/15 23:14:16 wormo Exp $
 
 inherit eutils
 
