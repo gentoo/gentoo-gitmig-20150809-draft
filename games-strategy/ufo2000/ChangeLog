@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/ufo2000
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.14 2006/05/31 22:00:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.15 2006/08/15 07:30:36 mr_bones_ Exp $
+
+*ufo2000-0.7.1062 (15 Aug 2006)
+
+  15 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +ufo2000-0.7.1062.ebuild:
+  version bump - ebuild submitted by Siarhei Siamashka via bug #143421
 
   31 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ufo2000-0.6.627.ebuild:
