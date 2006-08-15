@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.29 2006/08/06 11:58:51 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.30 2006/08/15 19:43:17 pauldv Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -51,10 +51,10 @@ db_fix_so () {
 	target=`find . -maxdepth 1 -type d -name 'db[0-9]*' | sort -n |cut -d/ -f2- | tail -n1`
 	if [ -n "${target}" ] && [ -e "${target}/db.h" ] && ( ! [[ -e db.h ]] || [[ -h db.h ]] ); then
 		einfo "Creating db.h symlinks to ${target}"
-		ln -sf ${target}/db.h .
-		ln -sf ${target}/db_185.h .
+		ln -sf "${target}"/db.h .
+		ln -sf "${target}"/db_185.h .
 	elif [ ! -e "${target}/db.h" ]; then
-		if [ -n ${target} ]; then
+		if [ -n "${target}" ]; then
 			ewarn "Could not find ${target}/db.h"
 		elif [ -h db.h ]; then
 			einfo "Apparently you just removed the last instance of $PN. Removing the symlinks"
