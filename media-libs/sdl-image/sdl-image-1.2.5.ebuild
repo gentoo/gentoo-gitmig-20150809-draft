@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5.ebuild,v 1.2 2006/07/20 02:04:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5.ebuild,v 1.3 2006/08/15 23:08:53 mr_bones_ Exp $
 
 inherit flag-o-matic
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="image file loading library"
 HOMEPAGE="http://www.libsdl.org/projects/SDL_image/index.html"
-SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz"
+SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz
+	mirror://debian/pool/main/s/sdl-image1.2/sdl-image1.2_${PV}-2.diff.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -21,6 +22,12 @@ DEPEND="sys-libs/zlib
 	tiff? ( media-libs/tiff )"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${WORKDIR}/sdl-image1.2_${PV}-2.diff"
+}
 
 src_compile() {
 	econf \

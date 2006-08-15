@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.25 2006/05/19 18:39:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.26 2006/08/15 23:08:53 mr_bones_ Exp $
+
+  15 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-image-1.2.5.ebuild:
+  add Debian patch the fixes up the image loading in 1.2.5.  Fixes bug #143674
+  and probably others.
 
 *sdl-image-1.2.5 (19 May 2006)
 
