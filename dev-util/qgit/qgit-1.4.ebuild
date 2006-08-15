@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.4.ebuild,v 1.1 2006/07/30 10:33:45 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qgit/qgit-1.4.ebuild,v 1.2 2006/08/15 09:15:01 corsair Exp $
 
 inherit qt3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="=x11-libs/qt-3*"
