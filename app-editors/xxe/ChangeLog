@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.27 2006/01/20 00:04:51 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.28 2006/08/15 15:12:12 genstef Exp $
+
+*xxe-3.4.0 (15 Aug 2006)
+
+  15 Aug 2006; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  -xxe-3.0_p1.ebuild, +xxe-3.4.0.ebuild:
+  version bump thanks to Gioele Barabucci <dev@gioelebarabucci.com>, Sascha
+  Teske <gentoo@slasha.de>, Alexander Skwar <askwar@digitalprojects.com>,
+  Benigno B. Junior <bbj@gentoo.org>, Almad <bugs@almad.net>, CJ Kucera
+  <gentoo@apocalyptech.com> and Sergey Belyashov <b-s-a@narod.ru> in bug
+  124618
 
 *xxe-3.0_p1 (20 Jan 2006)
 
