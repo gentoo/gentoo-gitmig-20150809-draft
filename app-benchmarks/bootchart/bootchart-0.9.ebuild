@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9.ebuild,v 1.1 2006/08/15 11:44:28 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9.ebuild,v 1.2 2006/08/15 16:02:03 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -22,7 +22,7 @@ RDEPEND="
 		>=virtual/jdk-1.3
 		dev-java/commons-cli
 	)
-	acct? sys-process/acct
+	acct? ( sys-process/acct )
 "
 
 LICENSE="GPL-2"
