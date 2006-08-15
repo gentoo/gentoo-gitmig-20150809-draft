@@ -1,0 +1,56 @@
+--- po/tr.po.orig	2006-08-14 23:16:00.000000000 -0400
++++ po/tr.po	2006-08-14 23:16:41.000000000 -0400
+@@ -81,15 +81,13 @@
+ #, c-format
+ msgid "%s has lost %u point of energy."
+ msgid_plural "%s has lost %u points of energy."
+-msgstr[0] "%s, %u enerji kaybetti."
+-msgstr[1] "%s, %u enerji kaybetti."
++msgstr[0] "%s, %u enerji kaybetti."
+ 
+ #: src/object/bonus_box.cpp:144
+ #, c-format
+ msgid "%s has won %u point of energy!"
+ msgid_plural "%s has won %u points of energy!"
+-msgstr[0] "%s, %u enerji kazandı!"
+-msgstr[1] "%s, %u enerji kazandı!"
++msgstr[0] "%s, %u enerji kazandı!"
+ 
+ #: src/game/game_loop.cpp:720
+ #, c-format
+@@ -110,22 +108,19 @@
+ #, c-format
+ msgid "%s team has won %u automatic bazooka!"
+ msgid_plural "%s team has won %u automatic bazookas!"
+-msgstr[0] "%s takımı %u otomatik bazuka kazandı!"
+-msgstr[1] "%s takımı %u otomatik bazuka kazandı!"
++msgstr[0] "%s takımı %u otomatik bazuka kazandı!"
+ 
+ #: src/object/bonus_box.cpp:181
+ #, c-format
+ msgid "%s team has won %u stick of dynamite!"
+ msgid_plural "%s team has won %u sticks of dynamite!"
+-msgstr[0] "%s takımı %u dinamit lokumu kazandı!"
+-msgstr[1] "%s takımı %u dinamit lokumu kazandı!"
++msgstr[0] "%s takımı %u dinamit lokumu kazandı!"
+ 
+ #: src/object/bonus_box.cpp:135
+ #, c-format
+ msgid "%s team has won %u teleportation."
+ msgid_plural "%s team has won %u teleportations."
+-msgstr[0] "%s takımı %u ışınlanma kazandı."
+-msgstr[1] "%s takımı %u ışınlanma kazandı."
++msgstr[0] "%s takımı %u ışınlanma kazandı."
+ 
+ #: src/game/game.cpp:192
+ #, c-format
+@@ -136,8 +131,7 @@
+ #, c-format
+ msgid "'%s has won %u air attack"
+ msgid_plural "'%s has won %u air attacks"
+-msgstr[0] "%s takımı %u hava saldırısı kazandı"
+-msgstr[1] "%s takımı %u hava saldırısı kazandı"
++msgstr[0] "%s takımı %u hava saldırısı kazandı"
+ 
+ #: src/interface/interface.cpp:164
+ msgid "(dead)"
