@@ -1,0 +1,12 @@
+diff -ur Transmission-0.6.1/configure Transmission-0 (copy).6.1/configure
+--- Transmission-0.6.1/configure	2006-06-26 00:34:41.000000000 +0300
++++ Transmission-0 (copy).6.1/configure	2006-08-11 08:23:25.000000000 +0300
+@@ -173,7 +173,7 @@
+   verbose gtk_test
+   if runcmd pkg-config gtk+-2.0
+   then
+-    if runcmd expr `pkg-config --modversion gtk+-2.0` '>=' 2.6.0
++    if runcmd pkg-config --atleast-version=2.6.0 gtk+-2.0
+     then
+       cat > testconf.c << EOF
+       #include <gtk/gtk.h>

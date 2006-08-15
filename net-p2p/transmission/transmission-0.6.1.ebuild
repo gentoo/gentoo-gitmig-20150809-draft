@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.6.1.ebuild,v 1.1 2006/07/01 14:37:57 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-0.6.1.ebuild,v 1.2 2006/08/15 23:58:18 squinky86 Exp $
 
 inherit eutils
 
@@ -21,6 +21,12 @@ DEPEND="sys-devel/gettext
 	ssl? ( dev-libs/openssl )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-configure.patch
+}
 
 src_compile() {
 	econf $(use_enable ssl openssl) \

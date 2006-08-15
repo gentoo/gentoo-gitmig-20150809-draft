@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.4 2006/07/01 14:37:57 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.5 2006/08/15 23:58:18 squinky86 Exp $
+
+  15 Aug 2006; Jon Hood <squinky86@gentoo.org> +files/0.6.1-configure.patch,
+  transmission-0.6.1.ebuild:
+  Patch to work with gtk-2.10, thanks to Serkan Kaba <serkan_kaba@yahoo.com>,
+  bug #143529.
 
 *transmission-0.6.1 (01 Jul 2006)
 
