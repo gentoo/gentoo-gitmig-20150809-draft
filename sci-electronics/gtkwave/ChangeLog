@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.15 2006/08/12 14:24:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.16 2006/08/15 04:29:15 tsunam Exp $
+
+  15 Aug 2006; Joshua Jackson <tsunam@gentoo.org> gtkwave-3.0.5.ebuild:
+  Stable x86; bug #143656
 
   12 Aug 2006; <plasmaroo@gentoo.org> gtkwave-3.0.5.ebuild:
   Fix bug #142871.
