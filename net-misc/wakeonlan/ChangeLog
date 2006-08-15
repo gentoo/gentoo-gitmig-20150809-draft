@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.10 2005/11/28 13:14:46 mcummings Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.11 2006/08/15 22:48:37 wormo Exp $
+
+*wakeonlan-0.41-r1 (17 Aug 2006)
+
+  15 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> +metadata.xml,
+  +files/wakeonlan-0.41-ethers-lookup.patch, +wakeonlan-0.41-r1.ebuild:
+  mark ~ppc
+  add patch from Timo Weingartner to support the use of /etc/ethers 
+  (suggested by Christian Gnägi in Bug #142760)
 
   28 Nov 2005; <mcumming@gentoo.org> wakeonlan-0.40.ebuild,
   wakeonlan-0.41.ebuild:
