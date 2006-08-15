@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5737 2006/08/14 19:46:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5738 2006/08/15 12:31:53 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -39,10 +39,6 @@ app-admin/eselect-compiler
 # that version if you want to continue using the ~arch
 # version of Azureus.
 =net-p2p/azureus-bin-2.4*
-
-# Stefan Schweizer <genstef@gentoo.org> (14 Aug 2006)
-# has proven to be unstable, bug 143859
->=sys-power/powersave-0.13
 
 # Luca Barbato <lu_zero@gentoo.org> (12 Aug 2006)
 # x264 doesn't play nice with older version, temp mask for a better
