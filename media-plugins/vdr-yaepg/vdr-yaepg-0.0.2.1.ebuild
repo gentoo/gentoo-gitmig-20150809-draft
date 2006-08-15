@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/vdr-yaepg-0.0.2.1.ebuild,v 1.3 2006/06/17 19:07:42 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/vdr-yaepg-0.0.2.1.ebuild,v 1.4 2006/08/15 13:54:37 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -25,11 +25,11 @@ pkg_setup() {
 	vdr-plugin_pkg_setup
 
 	einfo "Checking driver"
-	grep -q OSD_OpenRaw ${DVB_INCLUDE_DIR}/linux/dvb/*.h
+	grep -q OSD_OpenRaw /usr/include/linux/dvb/*.h
 	eend $? "You need to update your DVB-Driver!" || die "Too old DVB-Driver installed!"
 
 	einfo "Checking for patched vdr"
-	grep -q fontYaepg ${VDR_INCLUDE_DIR}/vdr/font.h
+	grep -q fontYaepg /usr/include/vdr/font.h
 	eend $? "You need to emerge vdr with use-flag yaepg set!" || die "Unpatched vdr detected!"
 }
 

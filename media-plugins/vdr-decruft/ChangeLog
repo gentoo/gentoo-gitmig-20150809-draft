@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-decruft
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.3 2006/08/02 19:15:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/ChangeLog,v 1.4 2006/08/15 13:56:05 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-decruft-0.0.4.ebuild:
+  No longer use internal vdr-plugin.eclass-variable.
 
   02 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned package to VDR-Project.

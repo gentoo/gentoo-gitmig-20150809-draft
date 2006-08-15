@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/vdr-rotor-0.1.4.ebuild,v 1.2 2006/03/30 11:10:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rotor/vdr-rotor-0.1.4.ebuild,v 1.3 2006/08/15 13:57:06 zzam Exp $
 
 inherit vdr-plugin
 
@@ -20,7 +20,7 @@ pkg_setup() {
 	vdr-plugin_pkg_setup
 
 	einfo "Checking for patched vdr"
-	if ! grep -q SendDiseqcCmd ${VDR_INCLUDE_DIR}/vdr/device.h; then
+	if ! grep -q SendDiseqcCmd /usr/include/vdr/device.h; then
 		ewarn "You need to emerge vdr with use-flag rotor set!"
 		die "Unpatched vdr detected!"
 	fi
