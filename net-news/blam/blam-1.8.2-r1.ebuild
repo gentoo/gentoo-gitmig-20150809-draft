@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.2-r1.ebuild,v 1.2 2006/07/24 22:21:38 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.2-r1.ebuild,v 1.3 2006/08/15 10:35:48 dsd Exp $
 
-inherit mono eutils
+inherit mono eutils autotools
 
 DESCRIPTION="A RSS aggregator written in C#"
 HOMEPAGE="http://www.imendio.com/projects/blam/"
@@ -23,6 +23,8 @@ DEPEND=">=dev-lang/mono-1.1.4
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+
 	if [ $(get_libdir) != "lib" ] ; then
 		sed -i -e 's:$(prefix)/lib/blam:$(libdir)/blam:' \
 			-e "s:@prefix@/lib:@prefix@/$(get_libdir):" \
@@ -34,6 +36,9 @@ src_unpack() {
 
 	# build against seamonkey
 	epatch ${FILESDIR}/${P}-seamonkey.patch
+
+	eautoconf
+	eautoheader
 }
 
 src_compile() {
