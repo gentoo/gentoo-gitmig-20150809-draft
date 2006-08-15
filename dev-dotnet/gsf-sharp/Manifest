@@ -1,13 +1,7 @@
-AUX gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483 RMD160 38bfdf14e1d5d3dc307026bde565032799693320 SHA1 9940de311e5645f9da9bae1d9b0c41d9d7e3d99e SHA256 3718a4f1906cb982ff24ab0eafe7f53f6df40a01e9a868821a3b22be30d343fd
-MD5 e031f398fd247ee39bef0fe2d64f2736 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-RMD160 38bfdf14e1d5d3dc307026bde565032799693320 files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-SHA256 3718a4f1906cb982ff24ab0eafe7f53f6df40a01e9a868821a3b22be30d343fd files/gsf-sharp-0.7-no-libgsf-gnome-dep.patch 483
-DIST gsf-sharp-0.7.tar.gz 318225
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gsf-sharp-0.8.tar.gz 323880 RMD160 272af9fb8d6167619c581b8c4abfe93da6b1b180 SHA1 558f5d905f6d220bcd5bb8b8eb8b64ad732aea9a SHA256 0368f1982f85b4d474aae4c140af92a1dc4a07572f42989212548b2731309470
-EBUILD gsf-sharp-0.7.ebuild 811 RMD160 75da934118e186a0e2d22fc54f4f80a980d52d8d SHA1 fc5ea2729c3343bee74d12edd1838326b0fb872d SHA256 ed2964049347c3327df506a68866fbe1f119eb97bd2eceb37ae8a48eff0037e8
-MD5 ed1ac9aa1612dcd8b577f5bd56f549ca gsf-sharp-0.7.ebuild 811
-RMD160 75da934118e186a0e2d22fc54f4f80a980d52d8d gsf-sharp-0.7.ebuild 811
-SHA256 ed2964049347c3327df506a68866fbe1f119eb97bd2eceb37ae8a48eff0037e8 gsf-sharp-0.7.ebuild 811
 EBUILD gsf-sharp-0.8.ebuild 611 RMD160 14e581ae8e770bcb1463cc5611ecc2aa3e8cf89e SHA1 0b4d3854db17b522345fbd3324c4c61b24158069 SHA256 63072ad3bf1ad3125617ebbbf932c57191d60214646b883a2bc6d87b6122fb59
 MD5 df001cee4e6a182be88c419bbcc7c147 gsf-sharp-0.8.ebuild 611
 RMD160 14e581ae8e770bcb1463cc5611ecc2aa3e8cf89e gsf-sharp-0.8.ebuild 611
@@ -20,9 +14,13 @@ MISC metadata.xml 308 RMD160 6070e5bc9d8a4e0983004f0e24da1de81f52d2c4 SHA1 2841e
 MD5 41c8c61dcf74c45eb359a4a41958abb3 metadata.xml 308
 RMD160 6070e5bc9d8a4e0983004f0e24da1de81f52d2c4 metadata.xml 308
 SHA256 d4e9c60cc0ce735082c4f3cb0837a68a34a51d6bfc38dc2b2bd2ce044e7c7259 metadata.xml 308
-MD5 40bf819ef0659755fdb5fe700063ef2d files/digest-gsf-sharp-0.7 65
-RMD160 b166889d710c92f065e22ccf05eb5091855282d4 files/digest-gsf-sharp-0.7 65
-SHA256 4491ec520b80ae6373327b6683e20d27191925d93c34e24496262fe9358e9dae files/digest-gsf-sharp-0.7 65
 MD5 a7554cd752a124a85d18742a43448b6b files/digest-gsf-sharp-0.8 241
 RMD160 8ea55ca2900ea747a9cd33fde8e0ff8818b86aee files/digest-gsf-sharp-0.8 241
 SHA256 a2cad903bf189c3e4e07c55dbca3d3a1af158f878b43f48cd618988bcbb9acf4 files/digest-gsf-sharp-0.8 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE4aKgTOXg++0VvJQRAqIhAJ94OQNzMVsm71413twHAG0F4bQJDgCgvAqD
+UIgrHGF5hOaXXQ3mhExuwoI=
+=6Art
+-----END PGP SIGNATURE-----
