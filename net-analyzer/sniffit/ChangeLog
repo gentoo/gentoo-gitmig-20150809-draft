@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sniffit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.11 2006/02/15 23:54:33 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.12 2006/08/15 09:12:21 blubb Exp $
+
+  15 Aug 2006; Simon Stelling <blubb@gentoo.org> sniffit-0.3.7-r1.ebuild:
+  stable on amd64
 
   15 Feb 2006; Markus Ullmann <jokey@gentoo.org> sniffit-0.3.7.ebuild,
   sniffit-0.3.7-r1.ebuild:

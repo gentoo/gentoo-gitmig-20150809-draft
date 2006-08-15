@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tleds
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.17 2006/07/16 13:47:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.18 2006/08/15 09:14:17 blubb Exp $
+
+  15 Aug 2006; Simon Stelling <blubb@gentoo.org>
+  tleds-1.05_beta11-r1.ebuild:
+  stable on amd64
 
   16 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   -tleds-1.05_beta11.ebuild, tleds-1.05_beta11-r1.ebuild:

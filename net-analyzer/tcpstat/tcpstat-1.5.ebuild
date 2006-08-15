@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.5.ebuild,v 1.10 2006/02/17 16:14:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.5.ebuild,v 1.11 2006/08/15 09:08:01 blubb Exp $
 
 IUSE="berkdb"
 
@@ -13,7 +13,7 @@ DEPEND="net-libs/libpcap
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 
 src_install () {
 

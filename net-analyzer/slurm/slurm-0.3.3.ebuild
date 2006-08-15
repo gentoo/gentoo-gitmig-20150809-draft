@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.3.3.ebuild,v 1.5 2006/01/09 22:17:58 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.3.3.ebuild,v 1.6 2006/08/15 09:15:51 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.wormulon.net/files/code/slurm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
