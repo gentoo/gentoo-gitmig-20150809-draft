@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060814.ebuild,v 1.1 2006/08/15 08:43:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060814.ebuild,v 1.2 2006/08/15 19:55:14 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -47,6 +47,7 @@ S=${WORKDIR}/${VDRPLUGIN}-cvs-${MY_PV}
 PATCHES="
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-key-init.diff
 		${FILESDIR}/vdr-softdevice-0.2.3-shm-fullscreen.diff
+		${FILESDIR}/softdevice-cvs-xinerama-configure-opts.patch
 		${FILESDIR}/softdevice-cvs-libcle266mpegdec-0.2.patch"
 
 pkg_setup() {

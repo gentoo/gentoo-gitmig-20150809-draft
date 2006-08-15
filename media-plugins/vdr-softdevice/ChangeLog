@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.14 2006/08/15 08:43:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.15 2006/08/15 19:55:14 zzam Exp $
+
+  15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  files/softdevice-cvs-libcle266mpegdec-0.2.patch,
+  +files/softdevice-cvs-xinerama-configure-opts.patch,
+  vdr-softdevice-0.2.3.20060814.ebuild:
+  Adds missing configure option to disable xinerama, rediffed the patch.
 
 *vdr-softdevice-0.2.3.20060814 (15 Aug 2006)
 

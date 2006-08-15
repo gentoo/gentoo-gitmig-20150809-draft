@@ -1,11 +1,7 @@
-Index: configure
-===================================================================
-RCS file: /cvsroot/softdevice/softdevice/configure,v
-retrieving revision 1.20
-diff -u -r1.20 configure
---- configure	10 Jul 2006 19:40:25 -0000	1.20
-+++ configure	13 Jul 2006 11:38:08 -0000
-@@ -299,15 +299,17 @@
+diff -ru softdevice-cvs-20060814/configure softdevice-cvs-20060814-try1/configure
+--- softdevice-cvs-20060814/configure	2006-08-14 20:50:22.000000000 +0200
++++ softdevice-cvs-20060814-try1/configure	2006-08-15 21:40:58.000000000 +0200
+@@ -328,15 +328,17 @@
  #
  if test "${dfb}" = "yes" ; then
    echo -n "Checking for libcle266mpegdec ... "
@@ -24,14 +20,9 @@ diff -u -r1.20 configure
 +    cle266="no"
      echo "Not found."
    fi
- else
-Index: mpeg2decoder.c
-===================================================================
-RCS file: /cvsroot/softdevice/softdevice/mpeg2decoder.c,v
-retrieving revision 1.66
-diff -u -r1.66 mpeg2decoder.c
---- mpeg2decoder.c	17 Jun 2006 16:27:34 -0000	1.66
-+++ mpeg2decoder.c	13 Jul 2006 11:38:08 -0000
+ elsediff -ru softdevice-cvs-20060814/mpeg2decoder.c softdevice-cvs-20060814-try1/mpeg2decoder.c
+--- softdevice-cvs-20060814/mpeg2decoder.c	2006-08-14 20:50:22.000000000 +0200
++++ softdevice-cvs-20060814-try1/mpeg2decoder.c	2006-08-15 21:40:58.000000000 +0200
 @@ -757,7 +757,7 @@
  };
  
@@ -54,3 +45,4 @@ diff -u -r1.66 mpeg2decoder.c
    pic->aspect_ratio = ( decoder.aspect_ratio_info >= 0 
      && decoder.aspect_ratio_info < 5 ) ?
      aspect_ratio_values[decoder.aspect_ratio_info] : 1.0;
+
