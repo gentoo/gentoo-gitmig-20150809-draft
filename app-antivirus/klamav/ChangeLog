@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.14 2006/06/02 09:24:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.15 2006/08/15 09:05:14 corsair Exp $
+
+  15 Aug 2006; Markus Rothe <corsair@gentoo.org> klamav-0.37.ebuild:
+  Added ~ppc64
 
 *klamav-0.37 (02 Jun 2006)
 
