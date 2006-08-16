@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/rt2570
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.6 2006/06/24 01:31:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2570/ChangeLog,v 1.7 2006/08/16 21:55:11 steev Exp $
+
+*rt2570-1.1.0_beta2 (16 Aug 2006)
+
+  16 Aug 2006; Steev Klimaszewski <steev@gentoo.org>
+  +rt2570-1.1.0_beta2.ebuild:
+  Finally bumping to the new upstream release.  Closes bug #139684.  Thank you to
+  Mario Emmenlauer <supermar@gmx.de> for reporting, and Wernfried Haas for
+  testing.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> rt2570-1.1.0_beta1.ebuild:
   Doesn't USE qt so removing it from IUSE
