@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7500b.ebuild,v 1.6 2006/07/18 21:57:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7500b.ebuild,v 1.7 2006/08/16 14:26:57 corsair Exp $
 
 inherit elisp-common eutils autotools libtool
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://anthy.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/anthy/19902/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ia64 ppc ~ppc-macos ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc ~ppc-macos ppc64 ~sparc x86"
 SLOT="0"
 
 DEPEND="!app-i18n/anthy-ss
