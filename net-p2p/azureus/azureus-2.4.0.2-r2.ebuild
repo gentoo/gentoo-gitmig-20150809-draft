@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2-r2.ebuild,v 1.1 2006/08/11 12:36:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2-r2.ebuild,v 1.2 2006/08/16 08:07:19 nichoj Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -24,6 +24,7 @@ DEPEND=">=virtual/jdk-1.4
 	dev-util/desktop-file-utils
 	>=dev-java/ant-core-1.6.2
 	amd64? ( =dev-java/eclipse-ecj-3.1* )
+	source? ( app-arch/zip )
 	>=app-arch/unzip-5.0"
 
 S=${WORKDIR}/${PN}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.6-r1.ebuild,v 1.2 2006/02/12 11:36:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.3.0.6-r1.ebuild,v 1.3 2006/08/16 08:07:19 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -21,6 +21,7 @@ RDEPEND=">=virtual/jre-1.4
 	!net-p2p/azureus-bin"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
+	source? ( app-arch/zip )
 	>=dev-java/ant-core-1.6.2
 	>=app-arch/unzip-5.0"
 
