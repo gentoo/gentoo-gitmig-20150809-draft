@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07-r3.ebuild,v 1.1 2006/07/29 19:24:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07-r3.ebuild,v 1.2 2006/08/16 08:10:11 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -20,7 +20,8 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/jdk-${MY_PVA}-distro-linux
 SLOT="1.5"
 LICENSE="dlj-1.1"
 KEYWORDS="~x86 ~amd64 -*"
-RESTRICT="nostrip"
+# Restrict stricter because of textrels
+RESTRICT="nostrip stricter"
 IUSE="X alsa doc examples jce nsplugin"
 
 JAVA_VM_NO_GENERATION1=true

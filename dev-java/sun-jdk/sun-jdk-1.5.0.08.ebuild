@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.07-r1.ebuild,v 1.2 2006/08/16 08:10:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.08.ebuild,v 1.1 2006/08/16 08:10:11 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -8,28 +8,31 @@ MY_PVL=${PV%.*}_${PV##*.}
 MY_PVA=${PV//./_}
 S="${WORKDIR}/jdk${MY_PVL}"
 
+X86_AT="jdk-${MY_PVA}-dlj-linux-i586.bin"
+AMD64_AT="jdk-${MY_PVA}-dlj-linux-amd64.bin"
 if use x86; then
-	At=jdk-${MY_PVA}-distro-linux-i586.bin
+	At=${X86_AT}
 elif use amd64; then
-	At=jdk-${MY_PVA}-distro-linux-amd64.bin
+	At=${AMD64_AT}
 fi
 DESCRIPTION="Sun's J2SE Development Kit, version ${PV}"
 HOMEPAGE="http://java.sun.com/j2se/1.5.0/"
-SRC_URI="x86? ( http://download.java.net/dlj/binaries/jdk-${MY_PVA}-distro-linux-i586.bin )
-		amd64? ( http://download.java.net/dlj/binaries/jdk-${MY_PVA}-distro-linux-amd64.bin )"
+SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
+		amd64? ( http://download.java.net/dlj/binaries/${AMD64_AT} )"
 SLOT="1.5"
 LICENSE="dlj-1.1"
 KEYWORDS="~x86 ~amd64 -*"
 # Restrict stricter because of textrels
 RESTRICT="nostrip stricter"
-IUSE="X alsa doc examples nsplugin"
+IUSE="X alsa doc examples jce nsplugin"
 
 JAVA_VM_NO_GENERATION1=true
 
 #
 DEPEND=">=dev-java/java-config-1.2
 	sys-apps/sed
-	doc? ( =dev-java/java-sdk-docs-1.5.0* )"
+	doc? ( =dev-java/java-sdk-docs-1.5.0* )
+	jce? ( =dev-java/sun-jce-bin-1.5.0* )"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )
@@ -94,16 +97,14 @@ src_install() {
 		fi
 	fi
 
-#	if use jce ; then
-#		cd ${D}/opt/${P}/jre/lib/security
-#		unzip ${DISTDIR}/${jcefile} || die "failed to unzip jce"
-#		mv jce unlimited-jce
-#		dodir /opt/${P}/jre/lib/security/strong-jce
-#		mv ${D}/opt/${P}/jre/lib/security/US_export_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
-#		mv ${D}/opt/${P}/jre/lib/security/local_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
-#		dosym /opt/${P}/jre/lib/security/unlimited-jce/US_export_policy.jar /opt/${P}/jre/lib/security/
-#		dosym /opt/${P}/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
-#	fi
+	if use jce; then
+		cd ${D}/opt/${P}/jre/lib/security
+		dodir /opt/${P}/jre/lib/security/strong-jce
+		mv ${D}/opt/${P}/jre/lib/security/US_export_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
+		mv ${D}/opt/${P}/jre/lib/security/local_policy.jar ${D}/opt/${P}/jre/lib/security/strong-jce
+		dosym /opt/sun-jce-bin-1.5.0/jre/lib/security/unlimited-jce/US_export_policy.jar /opt/${P}/jre/lib/security/
+		dosym /opt/sun-jce-bin-1.5.0/jre/lib/security/unlimited-jce/local_policy.jar /opt/${P}/jre/lib/security/
+	fi
 
 	if use nsplugin; then
 		local plugin_dir="ns7-gcc29"
@@ -128,11 +129,11 @@ src_install() {
 
 	# install control panel for Gnome/KDE
 	sed -e "s/INSTALL_DIR\/JRE_NAME_VERSION/\/opt\/${P}\/jre/" \
-		-e "s/\(Name=Java\)/\1 Control Panel/" \
+		-e "s/\(Name=Java\)/\1 Control Panel ${SLOT}/" \
 		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
-		${T}/sun_java.desktop
+		${T}/sun_java-${SLOT}.desktop
 
-	domenu ${T}/sun_java.desktop
+	domenu ${T}/sun_java-${SLOT}.desktop
 
 	set_java_env
 }
