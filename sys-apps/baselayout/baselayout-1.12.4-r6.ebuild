@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r6.ebuild,v 1.2 2006/08/16 10:37:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r6.ebuild,v 1.3 2006/08/16 14:11:04 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -571,15 +571,15 @@ pkg_postinst() {
 	einfo "  # etc-update"
 	echo
 
-	for f in /etc/init.d/net.eth*; do
-		[[ -L ${f} ]] && continue
+	for f in ${ROOT}etc/init.d/net.* ; do
+		[[ -L ${f} || ${f} == "${ROOT}etc/init.d/net.lo" ]] && continue
 		echo
-		einfo "WARNING: You have older net.eth* files in ${ROOT}/etc/init.d/"
+		einfo "WARNING: You have older net.* files in ${ROOT}etc/init.d/"
 		einfo "They need to be converted to symlinks to net.lo.  If you haven't"
 		einfo "made personal changes to those files, you can update with the"
 		einfo "following command:"
 		einfo
-		einfo "  # /bin/ls /etc/init.d/net.eth* | xargs -n1 ln -sfvn net.lo"
+		einfo " /bin/ls ${ROOT}etc/init.d/net.* | grep -v '/net.lo$' | xargs -n1 ln -sfvn net.lo"
 		echo
 		break
 	done
