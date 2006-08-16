@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Module-Pluggable
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/ChangeLog,v 1.7 2006/08/05 14:02:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/ChangeLog,v 1.8 2006/08/16 11:06:38 yuval Exp $
+
+*Module-Pluggable-3.1-r1 (16 Aug 2006)
+
+  16 Aug 2006; <yuval@gentoo.org> +Module-Pluggable-3.1-r1.ebuild:
+  Revision bump. Added a missing dep on dev-perl/Class-Inspector
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Module-Pluggable-2.97.ebuild, Module-Pluggable-3.01.ebuild,
