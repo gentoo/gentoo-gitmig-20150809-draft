@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/keylookup
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keylookup/ChangeLog,v 1.7 2006/02/19 18:11:54 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keylookup/ChangeLog,v 1.8 2006/08/16 00:29:48 squinky86 Exp $
+
+  16 Aug 2006; Jon Hood <squinky86@gentoo.org> keylookup-2.2.ebuild:
+  Stable on amd64, bug #143875.
 
   19 Feb 2006; <malc@gentoo.org> keylookup-2.2.ebuild:
   ~amd64 - bug #122602
