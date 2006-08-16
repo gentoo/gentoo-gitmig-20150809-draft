@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r6.ebuild,v 1.3 2006/08/16 14:11:04 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r6.ebuild,v 1.4 2006/08/16 18:46:24 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -600,7 +600,7 @@ pkg_postinst() {
 	fi
 
 	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/net 2>/dev/null \
-		| egrep -q '\<(ifconfig|aliases|broadcasts|netmasks|inet6|ipaddr|iproute)_'; then
+		| egrep -q '\<(iface_|gateway=|ifconfig_|aliases_|broadcasts_|netmasks_|inet6_|ipaddr_|iproute_)'; then
 			echo
 			ewarn "You are using deprecated variables in ${ROOT}/etc/conf.d/net"
 			ewarn
