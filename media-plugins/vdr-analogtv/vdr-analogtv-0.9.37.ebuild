@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.4 2006/05/16 13:26:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/vdr-analogtv-0.9.37.ebuild,v 1.5 2006/08/16 11:32:47 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -17,7 +17,8 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6
-	media-libs/libdvb"
+	media-libs/libdvb
+	!media-video/mp1e"
 
 src_unpack()
 {

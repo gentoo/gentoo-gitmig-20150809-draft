@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-analogtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.5 2006/05/16 13:26:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.6 2006/08/16 11:32:47 zzam Exp $
+
+*vdr-analogtv-0.9.37-r1 (16 Aug 2006)
+
+  16 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-analogtv-sane-c++.diff, metadata.xml,
+  vdr-analogtv-0.9.37.ebuild, +vdr-analogtv-0.9.37-r1.ebuild:
+  Moved mp1e to its own ebuild. Added patch against TEXTREL - now all files
+  get compiled with c++ compiler. Assigned package to Gentoo VDR Project.
 
   16 May 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-analogtv-0.9.37.ebuild:
