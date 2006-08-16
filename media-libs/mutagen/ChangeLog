@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.23 2006/08/15 23:57:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.24 2006/08/16 00:37:28 tcort Exp $
+
+  16 Aug 2006; Thomas Cort <tcort@gentoo.org> mutagen-1.5.ebuild,
+  mutagen-1.5.1.ebuild, mutagen-1.6.ebuild:
+  Add deps for FEATURES=test so that all tests are run.
 
   15 Aug 2006; Jason Wever <weeve@gentoo.org> mutagen-1.5.1.ebuild:
   Stable on SPARC wrt bug #144026.
