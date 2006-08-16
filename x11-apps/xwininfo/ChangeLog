@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwininfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.17 2006/08/15 17:48:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.18 2006/08/16 01:37:25 jer Exp $
+
+  16 Aug 2006; Jeroen Roovers <jer@gentoo.org> xwininfo-1.0.2.ebuild:
+  Stable for HPPA.
 
   15 Aug 2006; Guy Martin <gmsoft@gentoo.org> ChangeLog:
   Marked stable on hppa.
