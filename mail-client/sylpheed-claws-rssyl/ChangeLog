@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-rssyl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-rssyl/ChangeLog,v 1.8 2006/06/18 16:52:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-rssyl/ChangeLog,v 1.9 2006/08/16 14:56:02 ticho Exp $
+
+  16 Aug 2006; Andrej Kacian <ticho@gentoo.org>
+  sylpheed-claws-rssyl-0.5.ebuild:
+  Stable on x86.
 
 *sylpheed-claws-rssyl-0.5 (18 Jun 2006)
 
