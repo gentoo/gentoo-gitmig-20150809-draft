@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.30.ebuild,v 1.2 2006/05/07 10:50:02 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.30.ebuild,v 1.3 2006/08/16 12:22:45 caleb Exp $
 
 inherit eutils versionator qt4
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	app-text/psutils
 	virtual/ghostscript
 	media-libs/netpbm
-	$(qt_min_version 4.1)"
+	$(qt4_min_version 4.1)"
 
 src_compile() {
 	cd ${S}
