@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu-user
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.16 2006/06/09 06:19:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-user/ChangeLog,v 1.17 2006/08/16 14:55:00 lu_zero Exp $
+
+*qemu-user-0.8.2 (16 Aug 2006)
+
+  16 Aug 2006; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-0.7.0-ppc-linker.patch, +qemu-user-0.8.2.ebuild:
+  New version, I gave up about the sparc module (broken upstream)
 
   09 Jun 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -qemu-user-0.7.0-r1.ebuild, -qemu-user-0.7.1.ebuild,
