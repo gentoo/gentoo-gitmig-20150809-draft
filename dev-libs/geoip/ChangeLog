@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.53 2006/08/04 13:30:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.54 2006/08/16 15:03:52 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> geoip-1.3.14.ebuild:
+  Stable on ppc64
 
   04 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> geoip-1.3.14.ebuild:
   Stable on hppa & sparc
