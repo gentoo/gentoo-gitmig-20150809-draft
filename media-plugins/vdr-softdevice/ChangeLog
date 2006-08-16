@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.15 2006/08/15 19:55:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.16 2006/08/16 07:21:19 zzam Exp $
+
+*vdr-softdevice-0.2.3.20060814-r1 (16 Aug 2006)
+
+  16 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -vdr-softdevice-0.2.3.20060814.ebuild,
+  +vdr-softdevice-0.2.3.20060814-r1.ebuild:
+  Added installation of header-files.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   files/softdevice-cvs-libcle266mpegdec-0.2.patch,
