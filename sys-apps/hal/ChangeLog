@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.94 2006/07/17 17:35:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.95 2006/08/16 03:36:55 steev Exp $
+
+*hal-0.5.7.1 (16 Aug 2006)
+
+  16 Aug 2006; Steev Klimaszewski <steev@gentoo.org> +hal-0.5.7.1.ebuild:
+  New upstream release, with fixes for sysfs changes with kernels > 2.6.17.
+  Closes bug #141950.  Thanks to David Watzke for reporting.
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> hal-0.5.7-r3.ebuild:
   Marked stable on amd64 for bug #139612
