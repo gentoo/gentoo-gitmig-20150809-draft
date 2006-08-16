@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccrypt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.7 2005/10/17 05:11:06 josejx Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.8 2006/08/16 00:16:50 squinky86 Exp $
+
+  16 Aug 2006; Jon Hood <squinky86@gentoo.org> ccrypt-1.7.ebuild:
+  Stable on amd64, bug #143865. Thanks postmodern <brodigan@pdx.edu>.
 
   17 Oct 2005; Joseph Jezak <josejx@gentoo.org> ccrypt-1.7.ebuild:
   Marked ppc stable for bug #108173.
