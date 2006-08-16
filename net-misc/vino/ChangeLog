@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.62 2006/07/23 18:32:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.63 2006/08/16 18:10:34 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> vino-2.13.5.ebuild:
+  Stable on ppc64
 
   23 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> -vino-2.8.1.ebuild:
   Clean up unnecessary versions
