@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.20 2006/08/16 02:06:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.21 2006/08/16 18:06:04 ranger Exp $
+
+  16 Aug 2006; Brent Baude <ranger@gentoo.org> xkeyboard-config-0.8.ebuild:
+  Keywording ppc64 stable per MrBones request
 
   16 Aug 2006; Brent Baude <ranger@gentoo.org> xkeyboard-config-0.8.ebuild:
   Marking ~ppc64 per MrBones request
