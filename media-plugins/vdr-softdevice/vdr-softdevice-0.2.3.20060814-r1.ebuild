@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060814-r1.ebuild,v 1.1 2006/08/16 07:21:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.2.3.20060814-r1.ebuild,v 1.2 2006/08/16 09:42:17 zzam Exp $
 
 inherit vdr-plugin versionator
 
@@ -94,8 +94,17 @@ src_compile() {
 	use directfb || MYOPTS="${MYOPTS} --disable-dfb"
 
 	# MMX-Support
-	use mmx || MYOPTS="${MYOPTS} --disable-mmx"
-	use mmxext || MYOPTS="${MYOPTS} --disable-mmx2"
+	# hardcode mmx for amd64 - do not disable even without use-flag
+	if ! use amd64; then
+		use mmx || MYOPTS="${MYOPTS} --disable-mmx"
+		use mmxext || MYOPTS="${MYOPTS} --disable-mmx2"
+
+		if use !mmx && use !mmxext; then
+			ewarn "${PN}"' does not compile with USE="-mmx -mmxext".'
+			ewarn 'Please enable at least one of these two use-flags.'
+			die "${PN}"' does not compile with USE="-mmx -mmxext".'
+		fi
+	fi
 
 	use xinerama || MYOPTS="${MYOPTS} --disable-xinerama"
 
