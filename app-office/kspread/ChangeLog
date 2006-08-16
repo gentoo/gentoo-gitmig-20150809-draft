@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kspread
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.49 2006/08/11 20:31:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/ChangeLog,v 1.50 2006/08/16 12:47:52 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> kspread-1.5.1.ebuild:
+  Stable on ppc64
 
   11 Aug 2006; Markus Rothe <corsair@gentoo.org> kspread-1.4.2-r1.ebuild:
   Stable on ppc64; bug #141354

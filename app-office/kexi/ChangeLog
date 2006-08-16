@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.41 2006/07/23 21:41:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.42 2006/08/16 12:53:40 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> kexi-1.5.1.ebuild:
+  Stable on ppc64
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kexi-1.5.2.ebuild:
   Add ~x86-fbsd keyword.
