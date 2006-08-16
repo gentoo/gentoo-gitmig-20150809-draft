@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.33 2006/08/14 21:01:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.34 2006/08/16 16:24:20 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -106,13 +106,7 @@ distutils_pkg_postinst() {
 # e.g. insinto ${ROOT}/usr/include/python${PYVER}
 
 distutils_python_version() {
-	local tmpstr="$(${python} -V 2>&1 )"
-	export PYVER_ALL="${tmpstr#Python }"
-
-	export PYVER_MAJOR=$(echo ${PYVER_ALL} | cut -d. -f1)
-	export PYVER_MINOR=$(echo ${PYVER_ALL} | cut -d. -f2)
-	export PYVER_MICRO=$(echo ${PYVER_ALL} | cut -d. -f3-)
-	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+	python_version
 }
 
 # checks for if tkinter support is compiled into python

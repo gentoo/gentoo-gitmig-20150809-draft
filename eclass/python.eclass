@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.27 2006/08/07 00:21:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.28 2006/08/16 16:24:20 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -38,6 +38,9 @@ __python_eclass_test() {
 	__python_version_extract 2.4
 	echo -n "2.4 -> PYVER: $PYVER PYVER_MAJOR: $PYVER_MAJOR"
 	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
+	__python_version_extract 2.5b3
+	echo -n "2.5b3 -> PYVER: $PYVER PYVER_MAJOR: $PYVER_MAJOR"
+	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
 }
 
 #
@@ -68,7 +71,9 @@ __python_version_extract() {
 	verstr=$1
 	export PYVER_MAJOR=${verstr:0:1}
 	export PYVER_MINOR=${verstr:2:1}
-	export PYVER_MICRO=${verstr:4}
+	if [ "${verstr:3}x" = ".x" ]; then
+	   export PYVER_MICRO=${verstr:4}
+	fi
 	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 }
 
@@ -113,7 +118,7 @@ python_tkinter_exists() {
 #         not exist.
 # exam:
 #         if python_mod_exists gtk; then
-#             echo "gtk support enabled
+#             echo "gtk support enabled"
 #         fi
 #
 python_mod_exists() {
