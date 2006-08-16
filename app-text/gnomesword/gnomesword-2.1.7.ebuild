@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.7.ebuild,v 1.4 2006/07/09 08:11:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnomesword/gnomesword-2.1.7.ebuild,v 1.5 2006/08/16 00:11:47 squinky86 Exp $
 
 inherit libtool gnome2 eutils
 
@@ -30,6 +30,12 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_enable spell pspell)"
 DOCS="NEWS ChangeLog README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-commentary_dialog.c.patch
+}
 
 pkg_postinst() {
 	gnome2_pkg_postinst
