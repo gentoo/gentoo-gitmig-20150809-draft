@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r6.ebuild,v 1.1 2006/08/15 21:45:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.4-r6.ebuild,v 1.2 2006/08/16 10:37:50 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -19,12 +19,15 @@ IUSE="bootstrap build static unicode"
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
+# We need to block old dhcpcd versions as they are no longer in system
+# but may not be in users world file either. See bug #143885
 RDEPEND=">=sys-apps/sysvinit-2.86-r3
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
 		>=app-shells/bash-3.1_p7
 		>=sys-apps/coreutils-5.2.1
-	) )"
+	) )
+	!<net-misc/dhcpcd-2.0.0"
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.51"
 PROVIDE="virtual/baselayout"

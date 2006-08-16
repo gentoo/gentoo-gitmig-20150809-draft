@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.342 2006/08/15 21:45:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.343 2006/08/16 10:37:50 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  16 Aug 2006; Roy Marples <uberlord@gentoo.org>
+  baselayout-1.12.4-r6.ebuild:
+  Block old versions of dhcpcd to stop bugs like #143885.
 
 *baselayout-1.12.4-r6 (15 Aug 2006)
 
