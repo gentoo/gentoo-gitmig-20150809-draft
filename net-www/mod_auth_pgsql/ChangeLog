@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pgsql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.29 2006/06/04 19:31:45 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.30 2006/08/16 18:52:53 vericgar Exp $
+
+  16 Aug 2006; Michael Stewart <vericgar@gentoo.org>
+  -mod_auth_pgsql-2.0.2-r2.ebuild:
+  Remove old insecure version
 
   04 Jun 2006; Michael Stewart <vericgar@gentoo.org>
   -mod_auth_pgsql-0.9.12.ebuild, -mod_auth_pgsql-2.0.2-r1.ebuild:
