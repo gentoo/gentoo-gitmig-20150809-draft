@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.08.ebuild,v 1.1 2006/08/16 08:10:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.08.ebuild,v 1.2 2006/08/16 20:56:36 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -22,9 +22,10 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 SLOT="1.5"
 LICENSE="dlj-1.1"
 KEYWORDS="~x86 ~amd64 -*"
-# Restrict stricter because of textrels
-RESTRICT="nostrip stricter"
+RESTRICT="nostrip"
 IUSE="X alsa doc examples jce nsplugin"
+
+QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so opt/${P}/jre/lib/i386/libdeploy.so"
 
 JAVA_VM_NO_GENERATION1=true
 
