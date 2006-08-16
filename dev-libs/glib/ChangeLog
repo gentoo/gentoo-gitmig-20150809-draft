@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.210 2006/07/26 04:28:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.211 2006/08/16 14:20:07 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> glib-2.10.3.ebuild:
+  Stable on ppc64
 
   26 Jul 2006; Joshua Kinard <kumba@gentoo.org> glib-2.10.3.ebuild:
   Marking stable on mips (dep needed by gnome-vfs).
