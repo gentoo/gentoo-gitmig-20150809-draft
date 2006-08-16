@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.70 2006/07/17 14:51:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.71 2006/08/16 13:10:54 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> gok-1.0.10.ebuild:
+  Stable on ppc64
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> gok-1.0.10.ebuild:
   Marked stable on amd64 for bug #139612

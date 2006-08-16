@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.65 2006/08/07 00:48:27 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.66 2006/08/16 13:07:02 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> gnome-speech-0.4.0.ebuild:
+  Stable on ppc64
 
 *gnome-speech-0.4.3 (07 Aug 2006)
 
