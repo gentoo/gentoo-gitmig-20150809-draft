@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kqemu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.12 2006/07/07 10:04:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.13 2006/08/16 13:56:06 lu_zero Exp $
+
+*kqemu-1.3.0_pre9 (16 Aug 2006)
+
+  16 Aug 2006; Luca Barbato <lu_zero@gentoo.org> +kqemu-1.3.0_pre9.ebuild:
+  New version
 
   07 Jul 2006; Luca Barbato <lu_zero@gentoo.org> kqemu-1.3.0_pre7.ebuild:
   fix kqemu udev rule, thanks to Michael Croes <mycroes@zonnet.nl> that
