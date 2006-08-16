@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gstreamer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.15 2005/12/04 14:46:02 zaheerm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gstreamer/ChangeLog,v 1.16 2006/08/16 03:16:17 metalgod Exp $
+
+  16 Aug 2006; Luis Medinas <metalgod@gentoo.org>
+  ruby-gstreamer-0.14.1.ebuild:
+  Added ~amd64 keyword.
 
   04 Dec 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   ruby-gstreamer-0.10.1.ebuild, ruby-gstreamer-0.11.0.ebuild,
