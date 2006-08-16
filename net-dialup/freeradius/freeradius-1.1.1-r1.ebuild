@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.3 2006/04/21 19:46:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.4 2006/08/16 00:27:09 squinky86 Exp $
 
-inherit eutils flag-o-matic libtool
+inherit eutils flag-o-matic libtool multilib
 
 DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
@@ -38,7 +38,7 @@ pkg_setup() {
 
 	#TODO: Remove this function 6 months after all <1.1.1-r1 versions 
 	#      has been removed from the tree.
-	if cd "${ROOT}/usr/lib" ; then
+	if cd "${ROOT}/usr/$(get_libdir)" ; then
 		einfo "Cleaning up lefovers from previous versions..."
 
 		local la_prefix file
@@ -105,7 +105,7 @@ src_compile() {
 	fi
 
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-		--mandir=/usr/share/man \
+		--mandir=/usr/share/man --libdir=/usr/$(get_libdir)\
 		--with-large-files --disable-ltdl-install --with-pic \
 		${myconf} || die "configure failed"
 

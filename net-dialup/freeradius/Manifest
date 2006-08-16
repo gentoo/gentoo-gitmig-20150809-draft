@@ -1,19 +1,36 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e69e9365d187bbfd63727773ae704cc ChangeLog 9515
-MD5 0936eb82363dd9098d21fc7787f8e4cc files/digest-freeradius-1.1.1-r1 69
+AUX freeradius-1.1.1-libradius_install.patch 563 RMD160 515871e2737a1425a530763adac0e8ece03ecd63 SHA1 9d256bc1a2cea71d603dfb30d5dc397579081d0d SHA256 a69ba1d0af46281da2b72280dd33e81bf89ea8083a9425d84d21da228ccd182b
 MD5 89b8fea5ed51f1e569af0ca7adf7827a files/freeradius-1.1.1-libradius_install.patch 563
+RMD160 515871e2737a1425a530763adac0e8ece03ecd63 files/freeradius-1.1.1-libradius_install.patch 563
+SHA256 a69ba1d0af46281da2b72280dd33e81bf89ea8083a9425d84d21da228ccd182b files/freeradius-1.1.1-libradius_install.patch 563
+AUX freeradius-1.1.1-versionless-la-files.patch 1592 RMD160 f01b327cc3d6f3a6ff70b15bade2ac8e7f01cd8e SHA1 bc79a95dea04d487490839b4c642843adb1c7968 SHA256 f454a28a61aea195ed95b0637ffbd0b5cb1bbcf8e6636307aef96ef506712c60
 MD5 542dfb5aa04290906b1e9fd5ef99673b files/freeradius-1.1.1-versionless-la-files.patch 1592
+RMD160 f01b327cc3d6f3a6ff70b15bade2ac8e7f01cd8e files/freeradius-1.1.1-versionless-la-files.patch 1592
+SHA256 f454a28a61aea195ed95b0637ffbd0b5cb1bbcf8e6636307aef96ef506712c60 files/freeradius-1.1.1-versionless-la-files.patch 1592
+AUX freeradius-1.1.1-whole-archive-gentoo.patch 1728 RMD160 c301351431202ef2edcf8469c599cf720b93ce32 SHA1 95cb15ddfa1ad098aef803b7a2a2135d547fe50b SHA256 8a1a086a724aea110ded4b3baa7292ad2f71b205bbb7335ec17868c49f9921d6
 MD5 73e25b78f2cdb07ed8bbddbcdb9ac08b files/freeradius-1.1.1-whole-archive-gentoo.patch 1728
+RMD160 c301351431202ef2edcf8469c599cf720b93ce32 files/freeradius-1.1.1-whole-archive-gentoo.patch 1728
+SHA256 8a1a086a724aea110ded4b3baa7292ad2f71b205bbb7335ec17868c49f9921d6 files/freeradius-1.1.1-whole-archive-gentoo.patch 1728
+AUX radius.conf 129 RMD160 2509d00c869ddb2d4db84e0e4b5a9334ffd69964 SHA1 174194106a6a7698f92e884463f49f0f974cb569 SHA256 2d5b3e1af1299373182f2c8021bdf45c29db5d82b0a077b965a16ded32cb6292
 MD5 fc6693f3df5a0694610110287a28568a files/radius.conf 129
+RMD160 2509d00c869ddb2d4db84e0e4b5a9334ffd69964 files/radius.conf 129
+SHA256 2d5b3e1af1299373182f2c8021bdf45c29db5d82b0a077b965a16ded32cb6292 files/radius.conf 129
+AUX radius.init 1675 RMD160 775b6b12a64a4eb862027dab006d689b5138e3c7 SHA1 632777631218896a981505d79b18e0da0e360526 SHA256 821a03a93b9d0f75559ac9a76b2444c5c4e62a89f7fd578dd7d1157a55ceff9e
 MD5 adc7e9af3a2ab37f1ab021de3e279d41 files/radius.init 1675
-MD5 3d99f4cdc58eb12e4ab9bc0ec8e9b54f freeradius-1.1.1-r1.ebuild 4874
+RMD160 775b6b12a64a4eb862027dab006d689b5138e3c7 files/radius.init 1675
+SHA256 821a03a93b9d0f75559ac9a76b2444c5c4e62a89f7fd578dd7d1157a55ceff9e files/radius.init 1675
+DIST freeradius-1.1.1.tar.gz 2358196 RMD160 f9947c299ec2a7d0189d0718edf10c8dc5783119 SHA1 efc52b20fa88148b8ebf58fa0ae5c36df204b703 SHA256 413bf3181b35dc547c0bf8718603e5d706706d7da3618f5925566265c4d58388
+EBUILD freeradius-1.1.1-r1.ebuild 4923 RMD160 84f2ccda94c2196d1e4cfdff41cd6df23d62cd53 SHA1 905df9f0959b2ee2faff7b89c6a6028ee9c21e84 SHA256 276767d4abe544f0419b31c036200f047816be8c406979bffbce012aa360fb74
+MD5 14b356d5b3f21c88ca451a223644a425 freeradius-1.1.1-r1.ebuild 4923
+RMD160 84f2ccda94c2196d1e4cfdff41cd6df23d62cd53 freeradius-1.1.1-r1.ebuild 4923
+SHA256 276767d4abe544f0419b31c036200f047816be8c406979bffbce012aa360fb74 freeradius-1.1.1-r1.ebuild 4923
+MISC ChangeLog 9636 RMD160 40873b6baf8acc39f2c11c41f2808c7f954b9587 SHA1 b8dededc31066bd0cdd1c376323439aee6047132 SHA256 4d67e2e7c781076d6ea991e04e1c4ebf37caffa101b7235198b3fdb6dbdff54c
+MD5 6bf3d5b1ed38c168ed3b7cc69edf2ea4 ChangeLog 9636
+RMD160 40873b6baf8acc39f2c11c41f2808c7f954b9587 ChangeLog 9636
+SHA256 4d67e2e7c781076d6ea991e04e1c4ebf37caffa101b7235198b3fdb6dbdff54c ChangeLog 9636
+MISC metadata.xml 252 RMD160 aaf9aae6ca234ce5c447d0a6c29d732a5b2a58f0 SHA1 6b1b24914e633321a409132870aea89053fac655 SHA256 5c0974054864b2e9a572cd3c30b97aadae0b2781da4dabec791e23afdfa5ee76
 MD5 1542bf76e28581e9d6bcfdc75e46f33d metadata.xml 252
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEZuNpjG8pv1lIUX4RAtxtAKC1oQUSP547Ae+lPQk7JR2XQ9DymgCggQ93
-F+dFZuzk4SJeQLPmYEPGEcc=
-=0LWl
------END PGP SIGNATURE-----
+RMD160 aaf9aae6ca234ce5c447d0a6c29d732a5b2a58f0 metadata.xml 252
+SHA256 5c0974054864b2e9a572cd3c30b97aadae0b2781da4dabec791e23afdfa5ee76 metadata.xml 252
+MD5 78ba22a9dfb7ab2532fe1f9271ce0e1c files/digest-freeradius-1.1.1-r1 253
+RMD160 d3086e496d5fa6a0be623a239bc32dd8e18e7ca7 files/digest-freeradius-1.1.1-r1 253
+SHA256 e18fa7565a9735a1bc342deb1825bb0876285d955ea0ba2252209ca04f837782 files/digest-freeradius-1.1.1-r1 253
