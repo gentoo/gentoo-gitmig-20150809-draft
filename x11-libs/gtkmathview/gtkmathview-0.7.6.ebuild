@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.7.6.ebuild,v 1.5 2006/08/03 18:37:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.7.6.ebuild,v 1.6 2006/08/16 18:52:33 corsair Exp $
 
 DESCRIPTION="Rendering engine for MathML documents"
 HOMEPAGE="http://helm.cs.unibo.it/mml-widget/"
@@ -8,7 +8,7 @@ SRC_URI="http://helm.cs.unibo.it/mml-widget/sources/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc64 sparc ~x86"
 IUSE="gtk svg t1lib"
 
 RDEPEND=">=dev-libs/glib-2.2.1

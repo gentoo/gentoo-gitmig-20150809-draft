@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.15 2006/08/03 18:37:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.16 2006/08/16 18:52:33 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> gtkmathview-0.7.6.ebuild:
+  Stable on ppc64; bug #144120
 
   03 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gtkmathview-0.7.6.ebuild:
