@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/steghide
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.12 2006/04/27 09:39:59 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/ChangeLog,v 1.13 2006/08/16 00:39:09 squinky86 Exp $
+
+  16 Aug 2006; Jon Hood <squinky86@gentoo.org> steghide-0.5.1.ebuild:
+  Stable on amd64, bug #143891. Thanks postmodern <brodigan@pdx.edu>.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing duff SHA256 digests: Bug # 131293
