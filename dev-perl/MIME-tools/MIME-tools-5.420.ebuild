@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.420.ebuild,v 1.8 2006/08/05 13:41:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.420.ebuild,v 1.9 2006/08/16 12:13:18 yuval Exp $
 
 inherit perl-module
 
 DESCRIPTION="A Perl module for parsing and creating MIME entities"
 SRC_URI="mirror://cpan/authors/id/D/DS/DSKOLL/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~dskoll/${P}/"
+HOMEPAGE="http://search.cpan.org/dist/MIME-tools/"
 
 SLOT="0"
 LICENSE="Artistic"
