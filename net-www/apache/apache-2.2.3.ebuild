@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3.ebuild,v 1.1 2006/07/30 05:56:28 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.2.3.ebuild,v 1.2 2006/08/16 17:09:20 vericgar Exp $
 
 inherit eutils flag-o-matic gnuconfig multilib autotools
 
@@ -387,6 +387,7 @@ pkg_postinst() {
 		einfo "emerge --config =${PF}"
 	else
 		einfo "Installing default webroot to ${ROOT}/var/www/localhost"
+		mkdir -p ${ROOT}/var/www/localhost
 		cp -r ${ROOT}/usr/share/doc/${PF}/webroot/* ${ROOT}/var/www/localhost
 		chown -R apache: ${ROOT}/var/www/localhost
 	fi
@@ -424,6 +425,7 @@ pkg_postinst() {
 pkg_config() {
 
 	einfo "Installing default webroot to ${ROOT}/var/www/localhost"
+	mkdir -p ${ROOT}/var/www/localhost
 	cp -r ${ROOT}/usr/share/doc/${PF}/webroot/* ${ROOT}/var/www/localhost
 	chown -R apache: ${ROOT}/var/www/localhost
 
