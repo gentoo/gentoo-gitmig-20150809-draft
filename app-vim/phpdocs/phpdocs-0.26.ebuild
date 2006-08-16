@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/phpdocs-0.26.ebuild,v 1.13 2005/09/05 04:21:02 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/phpdocs-0.26.ebuild,v 1.14 2006/08/16 00:35:29 squinky86 Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: PHPDoc Support in VIM"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=520"
 LICENSE="vim"
-KEYWORDS="x86 alpha sparc ia64 ppc ~ppc-macos"
+KEYWORDS="alpha ~amd64 ia64 ppc ~ppc-macos sparc x86"
 IUSE=""
 DEPEND="${DEPEND} >=sys-apps/sed-4"
 VIM_PLUGIN_HELPURI="http://www.vim.org/scripts/script.php?script_id=520"

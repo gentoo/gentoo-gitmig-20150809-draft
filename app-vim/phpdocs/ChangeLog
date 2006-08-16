@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/phpdocs
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/ChangeLog,v 1.12 2005/09/05 04:21:02 j4rg0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/ChangeLog,v 1.13 2006/08/16 00:35:29 squinky86 Exp $
+
+  16 Aug 2006; Jon Hood <squinky86@gentoo.org> phpdocs-0.26.ebuild:
+  Add ~amd64, bug #143877 by Hanno Boeck <hanno@gentoo.org>.
 
   05 Sep 2005; Lina Pezzella <j4rg0n@gentoo.org> phpdocs-0.26.ebuild:
   Testing ppc-macos on Progressive profile
