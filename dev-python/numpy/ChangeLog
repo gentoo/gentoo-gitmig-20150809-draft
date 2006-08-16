@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.9 2006/07/17 16:24:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.10 2006/08/16 10:44:27 liquidx Exp $
+
+*numpy-1.0_beta2 (16 Aug 2006)
+
+  16 Aug 2006; Alastair Tse <liquidx@gentoo.org> +numpy-1.0_beta2.ebuild:
+  version bump (#143964). restricted test because it does not work in sandbox.
 
   17 Jul 2006; Alastair Tse <liquidx@gentoo.org> -numpy-0.9.6.ebuild,
   -numpy-0.9.6-r1.ebuild, numpy-0.9.8.ebuild:
