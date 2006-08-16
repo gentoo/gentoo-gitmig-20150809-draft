@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.48 2006/08/13 18:29:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.49 2006/08/16 15:01:40 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> libglademm-2.6.2.ebuild:
+  Stable on ppc64
 
   13 Aug 2006; Markus Rothe <corsair@gentoo.org> libglademm-2.4.1.ebuild,
   libglademm-2.6.0.ebuild, libglademm-2.6.1.ebuild, libglademm-2.6.2.ebuild:
