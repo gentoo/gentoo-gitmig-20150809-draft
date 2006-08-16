@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.15 2006/08/05 04:41:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.16 2006/08/16 10:57:11 yuval Exp $
+
+  16 Aug 2006; <yuval@gentoo.org> IO-Multiplex-1.08.ebuild:
+  Fixed HOMEPAGE
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   IO-Multiplex-1.08.ebuild:
