@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/hashcash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.15 2006/06/19 20:32:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.16 2006/08/16 20:46:49 kloeri Exp $
+
+  16 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  -files/hashcash-1.16-format-string.diff, -hashcash-1.16-r1.ebuild:
+  Kill old, vulnerable version.
 
   19 Jun 2006; Andrej Kacian <ticho@gentoo.org> hashcash-1.22.ebuild:
   Stable on x86, bug #134960.
