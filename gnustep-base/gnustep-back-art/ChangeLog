@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-art
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.34 2006/03/25 15:28:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/ChangeLog,v 1.35 2006/08/16 00:57:39 weeve Exp $
+
+  16 Aug 2006; Jason Wever <weeve@gentoo.org>
+  gnustep-back-art-0.10.3.ebuild:
+  Stable on SPARC wrt bug #139385.
 
 *gnustep-back-art-0.10.3 (25 Mar 2006)
 

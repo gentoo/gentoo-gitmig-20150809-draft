@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.10.3.ebuild,v 1.1 2006/03/25 15:20:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.10.3.ebuild,v 1.2 2006/08/16 00:58:29 weeve Exp $
 
 inherit gnustep
 
@@ -10,7 +10,7 @@ DESCRIPTION="Default X11 back-end component for the GNUstep GUI Library"
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~ppc sparc ~x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 

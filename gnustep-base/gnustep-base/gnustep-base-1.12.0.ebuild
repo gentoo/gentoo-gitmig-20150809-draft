@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.12.0.ebuild,v 1.5 2006/07/28 13:15:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.12.0.ebuild,v 1.6 2006/08/16 00:55:42 weeve Exp $
 
 inherit gnustep
 
@@ -8,7 +8,7 @@ DESCRIPTION="The GNUstep Base Library: general-purpose, non-gui Obj-C objects"
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~ppc ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ppc-macos sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 
