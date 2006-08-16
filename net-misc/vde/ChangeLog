@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.6 2006/06/26 09:17:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.7 2006/08/16 23:46:41 genstef Exp $
+
+*vde-2.1.1 (16 Aug 2006)
+
+  16 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +vde-2.1.1.ebuild:
+  version bump thanks to Clemmitt M. Sigler <csigler@vt.edu> in bug 144150
 
   26 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/vde-1.5.8-makefile.patch, -files/vde.init.d, -vde-1.5.8.ebuild,
