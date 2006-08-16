@@ -1,7 +1,10 @@
 # ChangeLog for kde-misc/kblogger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.6 2006/08/01 00:05:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/ChangeLog,v 1.7 2006/08/16 04:03:10 tsunam Exp $
 
+  16 Aug 2006; Joshua Jackson <tsunam@gentoo.org> kblogger-0.6.2.ebuild:
+  adding ~x86, as something apparently went wrong with the commit..or lackthereof, David's keeping a eye one me ^.^
+  
   01 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> kblogger-0.6.2.ebuild:
   Add missing kicker dependency, see bug #142324.
 

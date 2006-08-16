@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.6.2.ebuild,v 1.2 2006/08/01 00:05:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.6.2.ebuild,v 1.3 2006/08/16 04:03:10 tsunam Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="http://kblogger.pwsp.net/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="kde-base/kicker"
