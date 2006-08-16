@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r2.ebuild,v 1.2 2006/05/24 09:41:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r2.ebuild,v 1.3 2006/08/16 19:31:13 metalgod Exp $
 
 inherit eutils linux-info
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.speedtouch.com/download/drivers/USB/SpeedTouch330_firmware_$
 # Taken from http://www.speedtouch.com/driver_upgrade_lx_3.0.1.2.htm
 LICENSE="SpeedTouch-USB-Firmware"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=net-dialup/ppp-2.4.3-r11

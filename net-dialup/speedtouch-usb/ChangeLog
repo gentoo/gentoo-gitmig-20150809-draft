@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/speedtouch-usb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/ChangeLog,v 1.5 2006/05/23 17:16:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/ChangeLog,v 1.6 2006/08/16 19:31:13 metalgod Exp $
+
+  16 Aug 2006; Luis Medinas <metalgod@gentoo.org>
+  speedtouch-usb-3.0.1.2-r2.ebuild:
+  Added ~amd64 keyword.
 
 *speedtouch-usb-3.0.1.2-r2 (23 May 2006)
 
