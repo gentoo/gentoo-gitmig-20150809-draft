@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.9.6.ebuild,v 1.8 2006/08/09 20:37:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.9.6.ebuild,v 1.9 2006/08/16 13:14:12 corsair Exp $
 
 DESCRIPTION="A parallel version of BZIP2"
 HOMEPAGE="http://compression.ca/pbzip2/"
@@ -8,7 +8,7 @@ SRC_URI="http://compression.ca/${PN}/${P}.tar.gz"
 
 LICENSE="PBZIP2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE="static"
 
 DEPEND="app-arch/bzip2"
