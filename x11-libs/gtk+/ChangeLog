@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.253 2006/07/26 16:14:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.254 2006/08/16 14:56:56 corsair Exp $
+
+  16 Aug 2006; Markus Rothe <corsair@gentoo.org> gtk+-2.8.19.ebuild:
+  Stable on ppc64
 
   26 Jul 2006; Stefan Schweizer <genstef@gentoo.org> gtk+-2.10.1.ebuild:
   Pango 1.12 is enough thanks to Todd Merrill <todd.merrill@comcast.net> in
