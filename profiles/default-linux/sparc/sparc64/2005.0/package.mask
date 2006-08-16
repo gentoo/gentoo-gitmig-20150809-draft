@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.23 2006/06/29 19:06:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2005.0/package.mask,v 1.24 2006/08/16 19:03:39 gustavoz Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # We mask core 2.6 stuff to avoid bootstrap issues
@@ -80,3 +80,7 @@ sys-apps/pmount
 # Jason Wever <weeve@gentoo.org>
 # Masking versions of net-firewall/ipsec-tools that need 2.6 kernel headers
 >=net-firewall/ipsec-tools-0.5
+
+# Gustavo Zacarias <gustavoz@gentoo.org>
+# Doesn't work with gcc 3.3
+>=media-libs/libmpeg3-1.5.2-r3
