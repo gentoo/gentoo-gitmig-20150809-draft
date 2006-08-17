@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.4 2006/08/17 18:21:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.5 2006/08/17 18:22:29 dberkholz Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -199,4 +199,6 @@ pkg_postinst() {
 	elog "link using -lcblas"
 	elog
 	elog "If using threaded ATLAS, you may also need to link with -lpthread."
+	elog
+	elog "Configuration now uses eselect rather than blas-config."
 }

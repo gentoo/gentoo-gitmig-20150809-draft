@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.29 2006/08/17 18:21:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.30 2006/08/17 18:22:29 dberkholz Exp $
+
+  17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  blas-atlas-3.6.0-r2.ebuild, blas-atlas-3.7.11-r1.ebuild:
+  Note that configuration now uses eselect rather than blas-config.
 
   17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   blas-atlas-3.6.0-r2.ebuild, blas-atlas-3.7.11-r1.ebuild:
