@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/ChangeLog,v 1.6 2006/06/13 17:03:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/ChangeLog,v 1.7 2006/08/17 03:47:29 mkennedy Exp $
+
+*gtk-server-2.0.12 (17 Aug 2006)
+
+  17 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  gtk-server-2.0.10.ebuild, +gtk-server-2.0.12.ebuild:
+  DEPEND on >=sys-devel/autoconf-2.60; Resolves Bug #138196; New upstream
+  version.
 
 *gtk-server-2.0.10 (13 Jun 2006)
 
