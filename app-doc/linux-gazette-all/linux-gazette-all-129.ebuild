@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-113.ebuild,v 1.2 2006/08/17 22:08:38 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette-all/linux-gazette-all-129.ebuild,v 1.1 2006/08/17 22:08:38 wormo Exp $
 
 DESCRIPTION="Linux Gazette - all issues"
 HOMEPAGE="http://linuxgazette.net/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="OPL"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="
@@ -118,4 +118,20 @@ RDEPEND="
 	=app-doc/linux-gazette-111
 	=app-doc/linux-gazette-112
 	=app-doc/linux-gazette-113
+	=app-doc/linux-gazette-114
+	=app-doc/linux-gazette-115
+	=app-doc/linux-gazette-116
+	=app-doc/linux-gazette-117
+	=app-doc/linux-gazette-118
+	=app-doc/linux-gazette-119
+	=app-doc/linux-gazette-120
+	=app-doc/linux-gazette-121
+	=app-doc/linux-gazette-122
+	=app-doc/linux-gazette-123
+	=app-doc/linux-gazette-124
+	=app-doc/linux-gazette-125
+	=app-doc/linux-gazette-126
+	=app-doc/linux-gazette-127
+	=app-doc/linux-gazette-128
+	=app-doc/linux-gazette-129
 	"
