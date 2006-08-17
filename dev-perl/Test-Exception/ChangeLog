@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.24 2006/08/05 23:38:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.25 2006/08/17 01:41:54 tcort Exp $
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> Test-Exception-0.21.ebuild:
+  Added ~alpha keyword wrt Bug #142139.
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Test-Exception-0.20.ebuild, Test-Exception-0.21.ebuild:
