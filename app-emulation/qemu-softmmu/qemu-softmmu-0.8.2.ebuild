@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.3 2006/08/17 07:37:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.4 2006/08/17 08:09:42 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Multi-platform & multi-targets cpu emulator and dynamic translator"
 HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
-SRC_URI="${HOMEPAGE}${P/-softmmu/}.tar.gz
-	kqemu? ( ${HOMEPAGE}kqemu-1.3.0pre7.tar.gz )"
+SRC_URI="${HOMEPAGE}${P/-softmmu/}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1 KQEMU"
 SLOT="0"
@@ -41,12 +40,6 @@ pkg_setup() {
 #RUNTIME_PATH="/emul/gnemul/"
 src_unpack() {
 	unpack ${A}
-	if use kqemu; then
-		mv ${WORKDIR}/kqemu ${S}
-		cd ${S}/kqemu
-		#Let the configure find kqemu but NOT build it
-		sed -i -e 's:$(MAKE) -C kqemu*::' ${S}/Makefile
-	fi
 
 	cd ${S}
 	epatch "${FILESDIR}/qemu-${PV}-sparc-fp.patch"
