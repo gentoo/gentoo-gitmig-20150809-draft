@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-SAX
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.41 2006/08/15 04:48:17 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/ChangeLog,v 1.42 2006/08/17 19:41:15 corsair Exp $
+
+  17 Aug 2006; Markus Rothe <corsair@gentoo.org> XML-SAX-0.14-r1.ebuild:
+  Stable on ppc64
 
   15 Aug 2006; Joshua Jackson <tsunam@gentoo.org> XML-SAX-0.14-r1.ebuild:
   Stable x86; bug #127735
