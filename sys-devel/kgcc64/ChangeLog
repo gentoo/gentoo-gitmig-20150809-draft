@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.3 2006/08/01 05:44:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.4 2006/08/17 15:58:25 kumba Exp $
+
+  17 Aug 2006; Joshua Kinard <kumba@gentoo.org> kgcc64-3.4.6.ebuild,
+  kgcc64-4.1.1.ebuild:
+  Make gcc-mips64 a blocker for kgcc64.
 
   02 Aug 2006; Joshua Kinard <kumba@gentoo.org> kgcc64-3.4.6.ebuild:
   The beginning of the end for sys-devel/mips64 draws near. Mark kgcc64 stable

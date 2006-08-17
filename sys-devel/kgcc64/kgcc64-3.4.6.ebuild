@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.6.ebuild,v 1.2 2006/08/01 05:44:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.6.ebuild,v 1.3 2006/08/17 15:58:25 kumba Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -26,7 +26,8 @@ KEYWORDS="-* ~hppa mips ~ppc ~s390 ~sparc ~x86"
 
 # unlike every other target, hppa has not unified the 32/64 bit
 # ports in binutils yet
-DEPEND="hppa? ( sys-devel/binutils-hppa64 )"
+DEPEND="hppa? ( sys-devel/binutils-hppa64 )
+	!sys-devel/gcc-mips64"
 
 src_unpack() {
 	gcc_src_unpack
