@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.36 2006/08/05 04:54:22 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.37 2006/08/17 21:25:44 mcummings Exp $
+
+  17 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  ImageInfo-1.20.ebuild:
+  Marking amd64 stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   ImageInfo-1.15.ebuild, ImageInfo-1.16.ebuild, ImageInfo-1.20.ebuild,

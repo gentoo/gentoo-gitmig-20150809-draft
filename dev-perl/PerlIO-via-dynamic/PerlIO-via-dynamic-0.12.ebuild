@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/PerlIO-via-dynamic-0.12.ebuild,v 1.5 2006/08/05 19:57:01 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/PerlIO-via-dynamic-0.12.ebuild,v 1.6 2006/08/17 21:17:57 mcummings Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/PerlIO/${P}.readme"
 SLOT="0"
 LICENSE="Artistic"
 SRC_TEST="do"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/perl-File-Temp-0.14
