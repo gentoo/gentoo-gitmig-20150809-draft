@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.1 2006/08/17 08:33:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.2 2006/08/17 13:59:28 genstef Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
@@ -122,6 +122,7 @@ src_compile() {
 
 	if use server; then
 		cd xorg-server-*
+		eautoreconf
 		econf \
 			--enable-xorg \
 			--disable-dependency-tracking \
