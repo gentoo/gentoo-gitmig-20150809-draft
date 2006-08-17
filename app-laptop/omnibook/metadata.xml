@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>mobile</herd>
-  <maintainer>
-    <email>genstef@gentoo.org</email>
-    <name>Stefan Schweizer</name>
-  </maintainer>
 </pkgmetadata>
