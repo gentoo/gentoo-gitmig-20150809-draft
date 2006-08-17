@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.18 2006/08/17 18:25:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.19 2006/08/17 18:27:16 dberkholz Exp $
+
+  17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  lapack-atlas-3.6.0-r2.ebuild, lapack-atlas-3.7.11-r1.ebuild:
+  Note that configuration now uses eselect rather than lapack-config.
 
   17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   lapack-atlas-3.6.0-r2.ebuild, lapack-atlas-3.7.11-r1.ebuild:
