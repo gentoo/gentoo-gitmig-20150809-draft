@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.35 2006/07/27 15:10:39 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.36 2006/08/17 11:34:01 agriffis Exp $
+
+  17 Aug 2006; Aron Griffis <agriffis@gentoo.org> worker-2.11.1.ebuild:
+  Mark 2.11.1 stable on ia64
 
   27 Jul 2006; Scott Stoddard <deltacow@gentoo.org> worker-2.11.1.ebuild:
   Stable on amd64 (re bug #140617)
