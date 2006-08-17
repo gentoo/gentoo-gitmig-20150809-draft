@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.9 2006/07/03 08:06:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.10 2006/08/17 20:10:29 dberkholz Exp $
+
+  17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  lapack-reference-3.0-r4.ebuild:
+  Note that configuration now uses eselect rather than lapack-config.
 
 *lapack-reference-3.0-r4 (03 Jul 2006)
 

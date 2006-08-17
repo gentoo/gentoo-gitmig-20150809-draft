@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0-r4.ebuild,v 1.1 2006/07/03 08:06:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0-r4.ebuild,v 1.2 2006/08/17 20:10:29 dberkholz Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -55,4 +55,6 @@ pkg_postinst() {
 	if [[ -z "$(eselect lapack show)" ]]; then
 		eselect lapack set reference
 	fi
+
+	elog "Configuration now uses eselect rather than lapack-config."
 }
