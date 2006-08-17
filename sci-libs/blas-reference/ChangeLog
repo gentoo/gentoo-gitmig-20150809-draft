@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.12 2006/07/03 08:05:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.13 2006/08/17 20:08:59 dberkholz Exp $
+
+  17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  blas-reference-19940131-r4.ebuild:
+  Note that configuration now uses eselect rather than blas-config.
 
 *blas-reference-19940131-r4 (03 Jul 2006)
 

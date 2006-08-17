@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r2.ebuild,v 1.1 2006/07/03 08:05:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r2.ebuild,v 1.2 2006/08/17 20:09:41 dberkholz Exp $
 
 inherit autotools eutils fortran multilib
 
@@ -51,4 +51,6 @@ pkg_postinst() {
 	if [[ -z "$(eselect cblas show)" ]]; then
 		eselect cblas set reference
 	fi
+
+	elog "Configuration now uses eselect rather than blas-config."
 }

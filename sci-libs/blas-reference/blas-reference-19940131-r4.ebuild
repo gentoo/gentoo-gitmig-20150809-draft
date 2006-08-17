@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r4.ebuild,v 1.1 2006/07/03 08:05:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r4.ebuild,v 1.2 2006/08/17 20:08:59 dberkholz Exp $
 
 inherit autotools fortran multilib
 
@@ -51,4 +51,6 @@ pkg_postinst() {
 	if [[ -z "$(eselect blas show)" ]]; then
 		eselect blas set reference
 	fi
+
+	elog "Configuration now uses eselect rather than blas-config."
 }
