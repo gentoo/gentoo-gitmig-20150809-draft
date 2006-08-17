@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.1 2006/08/17 06:02:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.2 2006/08/17 14:34:56 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -21,7 +21,7 @@ IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
 
 DEPEND="imlib? ( media-libs/imlib2 )
 	truetype? ( >=media-libs/freetype-2 )
-	sdl? ( >=media-libs/libsdl-1.2.1 )
+	sdl? ( >=media-libs/libsdl-1.2.10 )
 	doc? ( app-text/texi2html )
 	encode? ( media-sound/lame )
 	ogg? ( media-libs/libogg )
