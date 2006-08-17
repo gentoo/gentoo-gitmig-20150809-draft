@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.0.2.004.ebuild,v 1.1 2006/07/03 08:30:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-8.0.2.004.ebuild,v 1.2 2006/08/17 20:12:15 dberkholz Exp $
 
 inherit fortran rpm flag-o-matic
 
@@ -41,13 +41,13 @@ pkg_setup() {
 		eerror "Please locate your license file and run:"
 		eerror "\t INTEL_LICENSE=/my/license/files emerge ${PN}"
 		eerror "or place your license in /opt/intel/licenses and run emerge ${PN}"
-		einfo
-		einfo "http://www.intel.com/cd/software/products/asmo-na/eng/perflib/mkl/219859.htm"
-		einfo "From the above url you can get a free, non-commercial"
-		einfo "license to use the Intel Math Kernel Libary emailed to you."
-		einfo "You cannot use mkl without this license file."
-		einfo "Read the website for more information on this license."
-		einfo
+		elog
+		elog "http://www.intel.com/cd/software/products/asmo-na/eng/perflib/mkl/219859.htm"
+		elog "From the above url you can get a free, non-commercial"
+		elog "license to use the Intel Math Kernel Libary emailed to you."
+		elog "You cannot use mkl without this license file."
+		elog "Read the website for more information on this license."
+		elog
 	fi
 }
 
@@ -217,10 +217,10 @@ pkg_postinst() {
 		eselect lapack set mkl
 	fi
 
-	einfo "To use MKL's BLAS features, you have to issue (as root):"
-	einfo "\n\teselect blas set mkl"
-	einfo "To use MKL's CBLAS features, you have to issue (as root):"
-	einfo "\n\teselect cblas set mkl"
-	einfo "To use MKL's LAPACK features, you have to issue (as root):"
-	einfo "\n\teselect lapack set mkl"
+	elog "To use MKL's BLAS features, you have to issue (as root):"
+	elog "\n\teselect blas set mkl"
+	elog "To use MKL's CBLAS features, you have to issue (as root):"
+	elog "\n\teselect cblas set mkl"
+	elog "To use MKL's LAPACK features, you have to issue (as root):"
+	elog "\n\teselect lapack set mkl"
 }
