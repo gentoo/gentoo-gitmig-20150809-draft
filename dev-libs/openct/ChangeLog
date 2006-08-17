@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.23 2006/08/16 15:06:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.24 2006/08/17 21:10:40 gustavoz Exp $
+
+  17 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> openct-0.6.8.ebuild:
+  Stable on sparc
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> openct-0.6.8.ebuild:
   Stable on ppc64
