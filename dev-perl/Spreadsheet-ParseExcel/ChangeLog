@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Spreadsheet-ParseExcel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.6 2006/08/05 20:36:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/ChangeLog,v 1.7 2006/08/17 14:53:02 ian Exp $
+
+  17 Aug 2006; Christian Hartmann <ian@gentoo.org>
+  Spreadsheet-ParseExcel-0.2603.ebuild:
+  Missing dev-perl/IO-stringy dependency added; META.yml does not say so but
+  the package needs dev-perl/IO-stringy to work correctly
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Spreadsheet-ParseExcel-0.2603.ebuild:
