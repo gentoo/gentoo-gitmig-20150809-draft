@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.13 2006/06/23 15:39:10 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.14 2006/08/17 19:45:22 corsair Exp $
+
+  17 Aug 2006; Markus Rothe <corsair@gentoo.org> detex-2.7.ebuild:
+  Stable on ppc64
 
   23 Jun 2006; Joshua <joslwah@gentoo.org> +files/detex-flexbrackets.patch,
   detex-2.7.ebuild:
