@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.25 2006/08/07 09:44:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.26 2006/08/17 18:50:20 jer Exp $
+
+  17 Aug 2006; Jeroen Roovers <jer@gentoo.org> gdome2-0.8.1-r1.ebuild:
+  Stable for HPPA (bug #144120).
 
   07 Aug 2006; Alastair Tse <liquidx@gentoo.org> gdome2-0.8.1-r1.ebuild:
   disable gtkdoc-fixxref to stop sandbox violation with USE=doc. stable bump
