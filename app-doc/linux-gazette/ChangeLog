@@ -1,6 +1,19 @@
 # ChangeLog for app-doc/linux-gazette
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.15 2006/06/23 18:30:42 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.16 2006/08/17 23:14:20 wormo Exp $
+
+*linux-gazette-129 (17 Aug 2006)
+
+  17 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +linux-gazette-114.ebuild, +linux-gazette-115.ebuild,
+  +linux-gazette-116.ebuild, +linux-gazette-117.ebuild,
+  +linux-gazette-118.ebuild, +linux-gazette-119.ebuild,
+  +linux-gazette-120.ebuild, +linux-gazette-121.ebuild,
+  +linux-gazette-122.ebuild, +linux-gazette-123.ebuild,
+  +linux-gazette-124.ebuild, +linux-gazette-125.ebuild,
+  +linux-gazette-126.ebuild, +linux-gazette-127.ebuild,
+  +linux-gazette-128.ebuild, +linux-gazette-129.ebuild:
+  Version bump, thanks to Ryan Hill (Bug #139050)
 
   23 Jun 2006; <antarus@gentoo.org> +metadata.xml:
   Fix Digests for bug # 137262
