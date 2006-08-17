@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-mips64
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.20 2006/06/12 05:45:21 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-mips64/ChangeLog,v 1.21 2006/08/17 16:08:47 kumba Exp $
+
+  17 Aug 2006; Joshua Kinard <kumba@gentoo.org> -gcc-mips64-3.4.4.ebuild,
+  -gcc-mips64-3.4.5.ebuild, gcc-mips64-3.4.6.ebuild:
+  Remove older ebuilds and make kgcc64 a blocker for gcc-mips64.
 
   12 Jun 2006; Joshua Kinard <kumba@gentoo.org> gcc-mips64-3.4.6.ebuild:
   Marked stable on mips -- we want it for release building.
