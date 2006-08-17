@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.16 2006/08/10 06:48:38 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.17 2006/08/17 04:21:16 tsunam Exp $
+
+  17 Aug 2006; Joshua Jackson <tsunam@gentoo.org> qu-prolog-7.2-r1.ebuild:
+  Stable x86; bug #142960
 
   10 Aug 2006; Keri Harris <keri@gentoo.org>
   files/qu-prolog-7.2-portage.patch, files/qu-prolog-7.4-portage.patch:
