@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.3_pre20060729.ebuild,v 1.1 2006/08/17 22:36:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.3_pre20060729.ebuild,v 1.2 2006/08/17 22:42:22 cardoe Exp $
 
 inherit eutils
 
@@ -23,8 +23,6 @@ RDEPEND="dev-perl/DBI
 	>=media-video/ffmpeg-0.4.9_p20050226-r1
 	media-video/mjpegtools
 	>=media-video/transcode-0.6.14
-	media-video/avidemux
-	media-video/lve
 	media-libs/id3lib
 	media-video/mplayer
 	media-tv/mythtv"
