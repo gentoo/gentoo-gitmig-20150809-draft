@@ -4,9 +4,9 @@
  #endif /* CONFIG_RT2X00_DEBUG */
  
  static struct usb_driver rt2x00_usb_driver = {
-+#ifdef LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 15)
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 15)
  	.owner		= THIS_MODULE,
-+#ifdef /* LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 15) */
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 15) */
  	.name		= DRV_NAME,
  	.id_table	= rt2x00_device_usb_tbl,
  	.probe		= rt2x00_usb_probe,
