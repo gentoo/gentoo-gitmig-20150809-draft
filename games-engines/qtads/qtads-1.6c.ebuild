@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.2 2005/07/10 12:12:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/qtads/qtads-1.6c.ebuild,v 1.3 2006/08/17 02:58:57 mr_bones_ Exp $
 
-inherit flag-o-matic games
+inherit flag-o-matic qt3 games
 
 DESCRIPTION="QT based GUI interpreter for Tads2/Tads3 games"
 HOMEPAGE="http://qtads.sourceforge.net/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/qt-3*"
+DEPEND="$(qt_min_version 3)"
 
 src_compile () {
 	append-flags -fno-strict-aliasing
