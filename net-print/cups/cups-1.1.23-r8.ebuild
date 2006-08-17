@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r8.ebuild,v 1.2 2006/07/03 20:05:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r8.ebuild,v 1.3 2006/08/17 23:59:44 genstef Exp $
 
 inherit eutils flag-o-matic pam autotools
 
@@ -167,5 +167,15 @@ pkg_postinst() {
 	einfo "For more information about installing a printer take a look at:"
 	einfo "http://www.gentoo.org/doc/en/printing-howto.xml."
 
-	einfo "You need to emerge ghostscript with the cups-USEflag turned on"
+	local good_gs=false
+	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu app-text/ghostscript-esp; do
+		if built_with_use ${x} cups; then
+			good_gs=true
+			break
+		fi
+	done;
+	if ! ${good_gs}; then
+		ewarn
+		ewarn "You need to emerge ghostscript with the cups-USEflag turned on"
+	fi
 }
