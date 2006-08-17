@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.24 2006/08/14 08:42:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.25 2006/08/17 03:22:36 tsunam Exp $
+
+  17 Aug 2006; Joshua Jackson <tsunam@gentoo.org> openttd-0.4.8.ebuild:
+  Stable x86; security bug #131010
 
 *openttd-0.4.8 (14 Aug 2006)
 
