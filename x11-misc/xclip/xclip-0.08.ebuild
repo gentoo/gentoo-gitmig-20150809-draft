@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/xclip-0.08.ebuild,v 1.10 2006/03/25 03:14:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xclip/xclip-0.08.ebuild,v 1.11 2006/08/17 01:44:43 agriffis Exp $
 
 S=${WORKDIR}/xclip
 DESCRIPTION="Command-line utility to read data from standard in and place it in an X selection for pasting into X applications."
@@ -34,6 +34,6 @@ src_install () {
 	make DESTDIR=${D} MANPATH=/usr/share/man MANSUFFIX=1 \
 		install.man || die
 	rm -f ${D}/usr/lib/X11/doc/html/*
-	find ${D} -type d -depth | xargs -n1 rmdir 2>/dev/null
+	find ${D} -depth -type d | xargs -n1 rmdir 2>/dev/null
 	dodoc README CHANGES
 }
