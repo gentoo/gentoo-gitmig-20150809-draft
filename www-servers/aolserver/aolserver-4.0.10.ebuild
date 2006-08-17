@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.5 2006/07/14 17:26:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.6 2006/08/17 04:20:24 wormo Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/aolserver/${P}-src.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND=">=dev-lang/tcl-8.4.3"
 
@@ -66,6 +66,9 @@ check_tcl_threads() {
 pkg_setup() {
 
 	check_tcl_threads
+
+	enewgroup aolserver
+	enewuser aolserver -1 -1 ${ns_data} aolserver
 }
 
 src_unpack() {
@@ -104,9 +107,6 @@ src_install () {
 	dodir ${ns_log}
 	dodir /var/run/aolserver
 	keepdir /var/run/aolserver
-
-	enewgroup aolserver
-	enewuser aolserver -1 -1 ${ns_data} aolserver
 
 	chown -R root:aolserver ${D}/${ns_data}
 	chmod -R g+w ${D}/${ns_data}
