@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.8.ebuild,v 1.8 2006/07/16 05:02:03 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.8.ebuild,v 1.9 2006/08/17 20:18:36 corsair Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://releases.chipx86.com/libsexy/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.6
