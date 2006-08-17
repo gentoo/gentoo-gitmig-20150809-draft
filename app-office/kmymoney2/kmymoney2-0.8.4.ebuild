@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.8.4.ebuild,v 1.1 2006/05/28 21:14:22 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-0.8.4.ebuild,v 1.2 2006/08/17 00:52:25 carlo Exp $
 
 inherit kde
 
@@ -40,6 +40,9 @@ src_compile() {
 	local myconf="$(use_enable ofx ofxplugin)
 			$(use_enable hbci kbanking)
 			--disable-cppunit"
+
+	# bug 132665
+	replace-flags "-Os" "-O2"
 
 	kde_src_compile
 }
