@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/memdump-1.0.ebuild,v 1.5 2005/08/10 15:48:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/memdump-1.0.ebuild,v 1.6 2006/08/17 00:50:52 tcort Exp $
 
 DESCRIPTION="Simple memory dumper for UNIX-Like systems"
 HOMEPAGE="http://www.porcupine.org/forensics"
 SRC_URI="http://www.porcupine.org/forensics/${P}.tar.gz"
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 DEPEND="sys-apps/sed
 	sys-apps/grep"
 RDEPEND="virtual/libc"

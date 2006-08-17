@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/memdump
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.5 2005/08/10 15:48:53 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.6 2006/08/17 00:50:52 tcort Exp $
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> memdump-1.0.ebuild:
+  Stable on amd64 wrt Bug #144138.
 
   10 Aug 2005; Simon Stelling <blubb@gentoo.org> memdump-1.0.ebuild:
   added ~amd64 keyword
