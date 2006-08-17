@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.79 2006/08/05 23:53:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.80 2006/08/17 21:56:38 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -179,3 +179,7 @@ njb
 # Jason Wever <weeve@gentoo.org> - 5 Aug 2006
 # Mask mp4 use flag as media-video/gpac fails to build currently
 mp4
+
+# Gustavo Zacarias <gustavoz@gentoo.org> - 17 Aug 2006
+# Masking hardened, it isn't really supported, see bugs #144126 #78951
+hardened
