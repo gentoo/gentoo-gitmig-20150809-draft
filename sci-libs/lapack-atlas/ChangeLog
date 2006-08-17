@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.17 2006/08/17 00:45:07 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.18 2006/08/17 18:25:12 dberkholz Exp $
+
+  17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  lapack-atlas-3.6.0-r2.ebuild, lapack-atlas-3.7.11-r1.ebuild:
+  Change einfo uses that should get read to elog.
 
   16 Aug 2006; Markus Dittrich <markusle@gentoo.org>
   lapack-atlas-3.6.0.ebuild, lapack-atlas-3.6.0-r1.ebuild, lapack-atlas-3.6.0-r2.ebuild:

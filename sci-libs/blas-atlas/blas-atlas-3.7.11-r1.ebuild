@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.3 2006/08/04 13:31:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.4 2006/08/17 18:21:03 dberkholz Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -192,11 +192,11 @@ pkg_postinst() {
 		eselect cblas set ${THREADED}atlas
 	fi
 
-	einfo
-	einfo "Fortran users link using -lblas"
-	einfo
-	einfo "C users compile against the header ${ROOT}usr/include/atlas/cblas.h and"
-	einfo "link using -lcblas"
-	einfo
-	einfo "If using threaded ATLAS, you may also need to link with -lpthread."
+	elog
+	elog "Fortran users link using -lblas"
+	elog
+	elog "C users compile against the header ${ROOT}usr/include/atlas/cblas.h and"
+	elog "link using -lcblas"
+	elog
+	elog "If using threaded ATLAS, you may also need to link with -lpthread."
 }

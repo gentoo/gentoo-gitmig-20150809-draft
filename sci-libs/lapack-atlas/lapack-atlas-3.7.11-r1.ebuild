@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11-r1.ebuild,v 1.3 2006/08/04 13:37:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.11-r1.ebuild,v 1.4 2006/08/17 18:25:12 dberkholz Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -42,19 +42,19 @@ RPATH="${TOP_PATH}/atlas"
 ifc_info() {
 	if [ -z "${IFCFLAGS}" ]
 	then
-		einfo
-		einfo "You may want to set some ifc optimization flags by running this"
-		einfo "ebuild as, for example:"
-		einfo
-		einfo "IFCFLAGS=\"-O3 -tpp7 -xW\" emerge lapack-atlas"
-		einfo "(Pentium 4 exclusive optimizations)."
-		einfo
-		einfo "ifc defaults to -O2, with code tuned for Pentium 4, but that"
-		einfo "will run on any processor."
-		einfo
-		einfo "Beware that ifc's -O3 is very aggressive, sometimes resulting in"
-		einfo "significantly worse performance."
-		einfo
+		elog
+		elog "You may want to set some ifc optimization flags by running this"
+		elog "ebuild as, for example:"
+		elog
+		elog "IFCFLAGS=\"-O3 -tpp7 -xW\" emerge lapack-atlas"
+		elog "(Pentium 4 exclusive optimizations)."
+		elog
+		elog "ifc defaults to -O2, with code tuned for Pentium 4, but that"
+		elog "will run on any processor."
+		elog
+		elog "Beware that ifc's -O3 is very aggressive, sometimes resulting in"
+		elog "significantly worse performance."
+		elog
 	fi
 }
 
@@ -218,11 +218,11 @@ pkg_postinst() {
 		eselect lapack set atlas
 	fi
 
-	einfo
-	einfo "To link with ATLAS LAPACK from C or Fortran, simply use:"
-	einfo
-	einfo "-llapack"
-	einfo
-	einfo "C users: your header is /usr/include/atlas/clapack.h"
-	einfo
+	elog
+	elog "To link with ATLAS LAPACK from C or Fortran, simply use:"
+	elog
+	elog "-llapack"
+	elog
+	elog "C users: your header is /usr/include/atlas/clapack.h"
+	elog
 }
