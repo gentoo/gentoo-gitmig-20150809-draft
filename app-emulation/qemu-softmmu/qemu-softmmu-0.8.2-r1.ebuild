@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.3 2006/08/17 07:37:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2-r1.ebuild,v 1.1 2006/08/17 07:37:25 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,14 +12,14 @@ SRC_URI="${HOMEPAGE}${P/-softmmu/}.tar.gz
 LICENSE="GPL-2 LGPL-2.1 KQEMU"
 SLOT="0"
 KEYWORDS="-alpha ~amd64 ~ppc -sparc ~x86"
-IUSE="sdl kqemu"  #qvm86 debug nptl qemu-fast nptlonly"
+IUSE="sdl kqemu alsa"  #qvm86 debug nptl qemu-fast nptlonly"
 RESTRICT="nostrip test"
 
 DEPEND="virtual/libc
 	sdl? ( media-libs/libsdl )
 	alsa? ( media-libs/alsa-lib )
 	!<=app-emulation/qemu-0.7.0
-	kqemu? ( app-emulation/kqemu )
+	kqemu? ( >=app-emulation/kqemu-1.3.0_pre7 )
 	app-text/texi2html"
 RDEPEND="sdl? ( media-libs/libsdl )"
 
@@ -74,16 +74,16 @@ src_compile() {
 	if ! use sdl ; then
 		myconf="$myconf --disable-gfx-check"
 	fi
-
 	./configure \
 		--prefix=/usr \
 		--target-list="${TARGET_LIST}" \
-		--enable-slirp \
+		--enable-slirp --enable-adlib \
 		--cc=$(tc-getCC) \
 		--host-cc=$(tc-getCC) \
 		--kernel-path=${KV_DIR} \
 		$(use_enable sdl)\
 		$(use_enable kqemu) \
+		$(use_enable alsa) \
 		${myconf} \
 		|| die "could not configure"
 

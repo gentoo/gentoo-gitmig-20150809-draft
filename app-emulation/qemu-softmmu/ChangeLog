@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.23 2006/08/01 19:09:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.24 2006/08/17 07:37:25 lu_zero Exp $
+
+*qemu-softmmu-0.8.2-r1 (17 Aug 2006)
+
+  17 Aug 2006;  Luca Barbato <lu_zero@gentoo.org>
+  qemu-softmmu-0.8.2-r1.ebuild, files/digest-qemu-softmmu-0.8.2-r1:
+  Added alsa support as requested in bug #116599 by Ivan Yosifov <ivan@yosifov.net>
+  and adlib support as requested by Jan Simons <gentoo@onkos.de> on the same bug;
+  use tc-getCC, patch from Damien THEBAULT <damien.thebault@laposte.net> in
+  bug #132602, set correct kqemu deps, should solve bug #141721
 
   01 Aug 2006; Luca Barbato <lu_zero@gentoo.org> qemu-softmmu-0.8.2.ebuild:
   False hope, gcc-3 is still required.
