@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.9 2006/01/11 16:24:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.10 2006/08/17 00:45:07 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -178,7 +178,7 @@ src_install () {
 
 	insinto /usr/include/atlas
 	cd ${S}/include
-	doins clapack.h atlas_misc.h atlas_enum.h
+	doins clapack.h || die "failed to install clapack.h"
 
 	cd ${S}
 	dodoc README
