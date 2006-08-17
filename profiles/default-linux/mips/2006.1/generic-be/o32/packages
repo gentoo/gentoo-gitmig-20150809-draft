@@ -1,9 +1,9 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.1/generic-be/o32/packages,v 1.1 2006/06/08 20:26:07 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/2006.1/generic-be/o32/packages,v 1.2 2006/08/17 15:50:27 kumba Exp $
 
 # o32-specific packages
 
 # Since we're running a mips64 kernel w/ 32bit (o32) userland,
-# we need gcc-mips64 for kernels
+# we need kgcc64 to build kernels.
 *sys-devel/kgcc64
