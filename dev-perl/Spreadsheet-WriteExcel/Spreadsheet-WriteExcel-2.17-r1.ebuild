@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/Spreadsheet-WriteExcel-2.17-r1.ebuild,v 1.1 2006/08/17 15:06:28 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/Spreadsheet-WriteExcel-2.17-r1.ebuild,v 1.2 2006/08/17 21:49:18 lu_zero Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~jmcnamara/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~ia64 ~sparc ~x86"
+KEYWORDS="~ia64 ~ppc ~sparc ~x86"
 
 SRC_TEST="do"
 
