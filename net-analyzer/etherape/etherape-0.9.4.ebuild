@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.4.ebuild,v 1.5 2006/03/10 19:34:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.4.ebuild,v 1.6 2006/08/17 00:21:57 tcort Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://etherape.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND=">=gnome-base/libglade-2.0
