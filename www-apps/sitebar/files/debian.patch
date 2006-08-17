@@ -1,0 +1,11 @@
+--- sitebar-3.3.8.orig/command.php
++++ sitebar-3.3.8/command.php
+@@ -5809,7 +5809,7 @@
+ ?>
+ <div id="<?php echo ($cw->hasErrors()?$errId:'command').'Head'?>" class="cmnTitle">
+ <div id="help" onclick="SB_openHelp('<?php echo $onlineHelp ?>')">?</div>
+-<div id="command"><?php echo SB_T($cw->command)?></div>
++<div id="command"><?php echo htmlspecialchars(SB_T($cw->command))?></div>
+ </div>
+ <div id="<?php echo ($cw->hasErrors()?$errId:'command').'Body'?>">
+ <?php
