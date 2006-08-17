@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.13 2006/08/07 22:48:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.14 2006/08/17 01:45:33 tcort Exp $
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> File-HomeDir-0.58.ebuild:
+  Added ~alpha keyword wrt Bug #142788.
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   File-HomeDir-0.58.ebuild:
