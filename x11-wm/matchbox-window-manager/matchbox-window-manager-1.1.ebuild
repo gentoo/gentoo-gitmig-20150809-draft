@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.0.ebuild,v 1.5 2006/08/17 15:54:21 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-window-manager/matchbox-window-manager-1.1.ebuild,v 1.1 2006/08/17 15:54:21 yvasilev Exp $
 
 inherit eutils versionator gnome2
 
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 
 	# Allows to build with USE=-png
-	epatch "${FILESDIR}/${P}-use-nopng.patch"
+	epatch "${FILESDIR}/${PN}-1.0-use-nopng.patch"
 }
 
 src_compile() {
