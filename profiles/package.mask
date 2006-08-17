@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5742 2006/08/16 21:57:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5743 2006/08/17 21:23:53 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (17 Aug 2006)
+# still breaks some compilations, please update ebuilds to 
+# support xulrunner because it will be important in future
+net-libs/xulrunner
 
 # Doug Goldstein <cardoe@gentoo.org> (Aug 15 2006)
 # QT 4.2 needs to be masked... it's not even released yet
@@ -524,10 +529,6 @@ net-wireless/bcm43xx
 # Joshua Baergen <joshuabaergen@gentoo.org> (03 Jun 2006)
 # X.Org development snapshots
 >=x11-base/xorg-server-1.1.99
-
-# Jory A. Pratt <anarchy@gentoo.org> (01 Jun 2006)
-# masked for testing
-net-libs/xulrunner
 
 # Markus Ullmann <jokey@gentoo.org> (01 Jun 2006)
 # masking older versions due to security bug #134010 and bug #133898
@@ -1393,12 +1394,6 @@ kde-base/dcopjava
 # <chriswhite@gentoo.org> (25 Aug 2004)
 # alpha version, seems ok to ~arch, but just to be safe..
 media-video/jahshaka
-
-# <agriffis@gentoo.org> (19 Aug 2004)
-# Masking because this package is not ready for prime, but want it in
-# portage for better observation (and users are clamoring)
-app-office/mozilla-sunbird-bin
-#app-office/mozilla-sunbird
 
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
