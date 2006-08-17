@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.30 2006/08/06 18:28:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.31 2006/08/17 01:53:10 tcort Exp $
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> Apache-Session-1.80-r1.ebuild:
+  Re-added ~alpha keyword wrt Bug #139107.
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Apache-Session-1.80-r1.ebuild:
