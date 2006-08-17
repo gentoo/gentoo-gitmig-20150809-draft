@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Tester
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.4 2006/08/06 18:26:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.5 2006/08/17 01:49:14 tcort Exp $
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> Test-Tester-0.103.ebuild:
+  Added ~alpha keyword wrt Bug #139107.
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Test-Tester-0.103.ebuild:
