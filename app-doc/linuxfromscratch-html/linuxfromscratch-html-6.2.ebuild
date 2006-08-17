@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-6.0.ebuild,v 1.2 2006/08/17 04:54:21 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch-html/linuxfromscratch-html-6.2.ebuild,v 1.1 2006/08/17 04:54:21 wormo Exp $
 
 MY_P="LFS-BOOK-${PV}-HTML"
 DESCRIPTION="The Linux From Scratch Book. HTML Format"
