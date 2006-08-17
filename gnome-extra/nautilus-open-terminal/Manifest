@@ -1,28 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7b42887f6f2eac6789b52850bee7985 ChangeLog 1496
-RMD160 d039fd6563994d30aad913a73e35730d890189df ChangeLog 1496
-SHA256 bd61092e7107ce7a2e578c4c288ad5729f128293c5df4986c4bddb176bfdfa4e ChangeLog 1496
-MD5 b75720f4371a90dcb84d54b5e2b7a145 files/digest-nautilus-open-terminal-0.4 78
-RMD160 6a0bfbf682bb1da4517e94f285fce12f1a36b890 files/digest-nautilus-open-terminal-0.4 78
-SHA256 3b3d492720a8906342c6fac280d55b4ae00e601464051ecaf66fe15177f644bb files/digest-nautilus-open-terminal-0.4 78
-MD5 20c94d9313e66430e25d1f132b706c31 files/digest-nautilus-open-terminal-0.6 280
-RMD160 3455d866d8b1fc5a9be2be7c09d2b4ab95f56a80 files/digest-nautilus-open-terminal-0.6 280
-SHA256 02d6a8c02cea36810328fd075572dd8145975acab6c3941c89fa46190b179e6e files/digest-nautilus-open-terminal-0.6 280
-MD5 50f2cc1fcef3723bd92ec0e9bca49566 metadata.xml 309
-RMD160 d0977e13825c236d9aad744a216e73eeb3b9d4c7 metadata.xml 309
-SHA256 0790ea36963eed639f41684d2b2eae7c19c7b44a6f1b8b89b600cb29524a7595 metadata.xml 309
+DIST nautilus-open-terminal-0.4.tar.gz 341609 RMD160 5f107549fa6ef6e658fc07416cb7450073ffba1f SHA1 805a8690b19be0d07b6d3af0ed35d3a92c3382ea SHA256 dcee2a4a7ab063110a55563fddfef3813d80d6ed8be554a9b6bdb0538431e3b3
+DIST nautilus-open-terminal-0.6.tar.gz 346513 RMD160 7d2ee2ed488e1fe4d69b792f5122185bc4cb210f SHA1 3959f93ca7d852e1de84141fc6aad7a50a0b8ca8 SHA256 66c91c009a53e8eb44b49bdd54759c6f461d5bfaf02be4cbd50fe349f29ec48a
+DIST nautilus-open-terminal-0.7.tar.gz 360315 RMD160 fa7539f5ec245453387a3debe623305a680a69d1 SHA1 8a5447efe420a77a8cc19e27c95b1d78492f14fe SHA256 136adadbabed4b2436ddbff49f967c8dc17ad632aaaf1bff69f2fa17182e64eb
+EBUILD nautilus-open-terminal-0.4.ebuild 773 RMD160 86900d161735eab061ce7ff75db6944fca532191 SHA1 6944b4e2f76fd96e2c6e4ee4269d0b8d3ac4081b SHA256 73e1b2acd67bece1570d5ed0ef048305389b3c9d2cd9710eccbc66cb246a538b
 MD5 2d41251f04ca43d652351e1672d554d1 nautilus-open-terminal-0.4.ebuild 773
 RMD160 86900d161735eab061ce7ff75db6944fca532191 nautilus-open-terminal-0.4.ebuild 773
 SHA256 73e1b2acd67bece1570d5ed0ef048305389b3c9d2cd9710eccbc66cb246a538b nautilus-open-terminal-0.4.ebuild 773
+EBUILD nautilus-open-terminal-0.6.ebuild 813 RMD160 1d0a5a411c06deec893a935f84926c3a70780f7f SHA1 f1ffd3450da241134cc68a95b0f5f2a026713b93 SHA256 d797eb479357f8899b39931b53f286539b201e29a1eba97cdd8f1b1c0b8493c6
 MD5 10378460f4b5ed535bb38837ff4d23a2 nautilus-open-terminal-0.6.ebuild 813
 RMD160 1d0a5a411c06deec893a935f84926c3a70780f7f nautilus-open-terminal-0.6.ebuild 813
 SHA256 d797eb479357f8899b39931b53f286539b201e29a1eba97cdd8f1b1c0b8493c6 nautilus-open-terminal-0.6.ebuild 813
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEJ85qwUpWvClEHQoRAqpXAJ0SO9hCj3oXUdDn6QC73sYYp7J8MQCeM19V
-8mSWD/IFVrxhxSjBjE7tag8=
-=5hd6
------END PGP SIGNATURE-----
+EBUILD nautilus-open-terminal-0.7.ebuild 836 RMD160 3a1dea89f4e82144f2def7e8c2c11d80857bd9cf SHA1 93e93e415fb5cf7525d10d8907729ab0c4cedc7a SHA256 e7a431eb72d760b8ec0e590b7f1655a1a65e1663a3e8b7114239fd248aee4df1
+MD5 e58ef690c6fdcfdb9af4e4837e69ed7c nautilus-open-terminal-0.7.ebuild 836
+RMD160 3a1dea89f4e82144f2def7e8c2c11d80857bd9cf nautilus-open-terminal-0.7.ebuild 836
+SHA256 e7a431eb72d760b8ec0e590b7f1655a1a65e1663a3e8b7114239fd248aee4df1 nautilus-open-terminal-0.7.ebuild 836
+MISC ChangeLog 1677 RMD160 05be904623617e3af0e4a30666d22687d6d4817b SHA1 fe06b926f5fda03fd1290181b6e9bb64968fe85a SHA256 1b91bf2f59d7f992a70098292b430361dcb11386e2c19d208312c7f07c1a5c9b
+MD5 f9803ad3efd756f46e9d7845e6b2a427 ChangeLog 1677
+RMD160 05be904623617e3af0e4a30666d22687d6d4817b ChangeLog 1677
+SHA256 1b91bf2f59d7f992a70098292b430361dcb11386e2c19d208312c7f07c1a5c9b ChangeLog 1677
+MISC metadata.xml 309 RMD160 d0977e13825c236d9aad744a216e73eeb3b9d4c7 SHA1 f1790c28d5d6a7fbbc3c0d686040913237eb18a3 SHA256 0790ea36963eed639f41684d2b2eae7c19c7b44a6f1b8b89b600cb29524a7595
+MD5 50f2cc1fcef3723bd92ec0e9bca49566 metadata.xml 309
+RMD160 d0977e13825c236d9aad744a216e73eeb3b9d4c7 metadata.xml 309
+SHA256 0790ea36963eed639f41684d2b2eae7c19c7b44a6f1b8b89b600cb29524a7595 metadata.xml 309
+MD5 1e8572c52e6901a64d80edfc3b958d78 files/digest-nautilus-open-terminal-0.4 280
+RMD160 01f2408aa1b1e00bae99c8c87c460e31defb6584 files/digest-nautilus-open-terminal-0.4 280
+SHA256 ff4543836b2e6de8ea5243b7bd0932c85bd3420e0383f5cb8788dfd12bfe2e04 files/digest-nautilus-open-terminal-0.4 280
+MD5 20c94d9313e66430e25d1f132b706c31 files/digest-nautilus-open-terminal-0.6 280
+RMD160 3455d866d8b1fc5a9be2be7c09d2b4ab95f56a80 files/digest-nautilus-open-terminal-0.6 280
+SHA256 02d6a8c02cea36810328fd075572dd8145975acab6c3941c89fa46190b179e6e files/digest-nautilus-open-terminal-0.6 280
+MD5 9ca5be80658e2594e23a32e4ba9dbecf files/digest-nautilus-open-terminal-0.7 280
+RMD160 c76a3735deda6cfa2f8f2856fff22e40a87968f9 files/digest-nautilus-open-terminal-0.7 280
+SHA256 bf60c112371a4c124d3cc87d2e3e1911319b7e3a9b4ccd7c3b8c5f7bbf350849 files/digest-nautilus-open-terminal-0.7 280
