@@ -1,6 +1,18 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.85 2006/06/24 01:17:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.86 2006/08/17 23:02:01 matsuu Exp $
+
+*lyx-1.4.2 (17 Aug 2006)
+
+  17 Aug 2006; MATSUU Takuto <matsuu@gentoo.org>
+  -files/lyx-1.3.2-nomktex.patch, -files/lyx-1.3.3-configure-diff,
+  -files/lyx-1.3.4-gcc34.patch, -files/lyx-1.3.5-boost.patch,
+  -files/lyx-1.3.6-gentoo.diff, +files/lyx-1.4.2-gentoo.patch,
+  -lyx-1.3.4.ebuild, -lyx-1.3.5-r1.ebuild, -lyx-1.3.5-r2.ebuild,
+  -lyx-1.3.6.ebuild, +lyx-1.4.2.ebuild:
+  Version bumped, bug 140989.
+  ebuild cleanup, bug 142336.
+  Removed old versions.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> lyx-1.3.4.ebuild,
   lyx-1.3.5-r1.ebuild, lyx-1.3.5-r2.ebuild, lyx-1.3.6.ebuild,
@@ -16,7 +28,7 @@
   21 May 2006; <nixnut@gentoo.org> lyx-1.4.1-r1.ebuild:
   Stable on ppc. bug #133942
 
-  21 May 2006; Olivier Crête <tester@gentoo.org> lyx-1.4.1-r1.ebuild:
+  21 May 2006; Olivier Cr棚te <tester@gentoo.org> lyx-1.4.1-r1.ebuild:
   Stable on amd64 per bug #133942
 
   21 May 2006; Martin Ehmsen <ehmsen@gentoo.org>
