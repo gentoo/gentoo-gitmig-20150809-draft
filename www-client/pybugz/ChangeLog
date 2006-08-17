@@ -1,6 +1,13 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.8 2006/08/16 14:53:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.9 2006/08/17 23:47:47 liquidx Exp $
+
+*pybugz-0.6.7 (17 Aug 2006)
+
+  17 Aug 2006; Alastair Tse <liquidx@gentoo.org> -pybugz-0.6.3.ebuild,
+  -pybugz-0.6.5.ebuild, -pybugz-0.6.6.ebuild, +pybugz-0.6.7.ebuild:
+  version bump. fix attachment download (view is ok, but download was broken.)
+  (#144213). someone needs to write me some unit tests
 
 *pybugz-0.6.6 (16 Aug 2006)
 
