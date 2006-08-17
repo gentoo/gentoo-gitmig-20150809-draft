@@ -1,3 +1,28 @@
-MD5 f2cd63b29e6afa1cbecb512c5e59504d ChangeLog 393
-MD5 eb0e3740bca3220504b5cfe1e493ac05 linux-gazette-all-113.ebuild 3272
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-all-113 0
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+EBUILD linux-gazette-all-113.ebuild 3271 RMD160 48d189b8ce9a43355f1b2b9361d60a1cd0e98faf SHA1 7ac5a2a23fa1dc909fbebacb04220cced00b443d SHA256 c390feabb167fe655c9505592634755f0184559059064355d1412248f2f18df2
+MD5 b19fa4a0896507757a84bcf54fd4d082 linux-gazette-all-113.ebuild 3271
+RMD160 48d189b8ce9a43355f1b2b9361d60a1cd0e98faf linux-gazette-all-113.ebuild 3271
+SHA256 c390feabb167fe655c9505592634755f0184559059064355d1412248f2f18df2 linux-gazette-all-113.ebuild 3271
+EBUILD linux-gazette-all-129.ebuild 3769 RMD160 f5f3fcd2931086764d378297b06d70ef01da1d02 SHA1 bae0b4a45230d30cc0ac21b47fd7449b000c9e61 SHA256 e352ecba64dc4f3dbd6cb4760927999367deaa10838dc19eb0d668d49ed543d3
+MD5 f636ea406e9f5a1b846aac3e4983f696 linux-gazette-all-129.ebuild 3769
+RMD160 f5f3fcd2931086764d378297b06d70ef01da1d02 linux-gazette-all-129.ebuild 3769
+SHA256 e352ecba64dc4f3dbd6cb4760927999367deaa10838dc19eb0d668d49ed543d3 linux-gazette-all-129.ebuild 3769
+MISC ChangeLog 574 RMD160 0af99b12a08f80eb29bc09dee94d4723408957d4 SHA1 07bc14a03b1587a7bb09629a63e046fdc5012059 SHA256 cdaddc81ca0ebae828a27166f98f5e88e4fb3a069e5d2bbc4884a3b89c3770a1
+MD5 f82e63a6b814baa852ef0e455822aad2 ChangeLog 574
+RMD160 0af99b12a08f80eb29bc09dee94d4723408957d4 ChangeLog 574
+SHA256 cdaddc81ca0ebae828a27166f98f5e88e4fb3a069e5d2bbc4884a3b89c3770a1 ChangeLog 574
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-linux-gazette-all-113 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-linux-gazette-all-113 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-linux-gazette-all-113 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-linux-gazette-all-129 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-linux-gazette-all-129 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-linux-gazette-all-129 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFE55S8/NoSW7FuNV8RAk7IAKC4uinai78jtbRPrPrvX6htWBxVGACfYmBQ
+ZjwdC1UlmAYsDFTFT1vevZU=
+=CTJY
+-----END PGP SIGNATURE-----

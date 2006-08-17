@@ -1,23 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST lg-base-113.tar.gz 1540716 size 1540716
-EBUILD linux-gazette-base-113.ebuild 796 RMD160 aec52aed2ff31c8e0aeb1914d412ca39a512ecdb SHA1 52146449d1fb7e1a3cf0da01f88ae0ce4c8cc15f SHA256 5afbed90a5915b5b397d20597e0ab8ee4e9836c1c28b7bd873e634fc97782e32 size 796
+DIST lg-base-113.tar.gz 1540716
+DIST lg-base-129.tar.gz 1783789 RMD160 55409b3dcfb379df32d4f667aa68f1583ef63559 SHA1 e6a14b79ded0e51e99ff0972301ce7a53cb6f160 SHA256 b3bff479870f2bb583b2abba942f81edfbd5153eb23e5855c6113fe8fdbc3b57
+EBUILD linux-gazette-base-113.ebuild 796 RMD160 aec52aed2ff31c8e0aeb1914d412ca39a512ecdb SHA1 52146449d1fb7e1a3cf0da01f88ae0ce4c8cc15f SHA256 5afbed90a5915b5b397d20597e0ab8ee4e9836c1c28b7bd873e634fc97782e32
 MD5 8eb3a380ea0a7bb507f16fbda1dea19d linux-gazette-base-113.ebuild 796
 RMD160 aec52aed2ff31c8e0aeb1914d412ca39a512ecdb linux-gazette-base-113.ebuild 796
 SHA256 5afbed90a5915b5b397d20597e0ab8ee4e9836c1c28b7bd873e634fc97782e32 linux-gazette-base-113.ebuild 796
-MISC ChangeLog 396 RMD160 7e38afdeb2be34c06ab58f3eb4a99aee2c264a00 SHA1 7d3d1eb2e5f73475c60842c93d9cd6b5cf5b47c6 SHA256 f9fb3af0e20fbcfcee89213534f81f98c29f3e3813f2b8e4626610a7560fd796 size 396
-MD5 89e825744f683ff9a7f33f240c9f1d08 ChangeLog 396
-RMD160 7e38afdeb2be34c06ab58f3eb4a99aee2c264a00 ChangeLog 396
-SHA256 f9fb3af0e20fbcfcee89213534f81f98c29f3e3813f2b8e4626610a7560fd796 ChangeLog 396
+EBUILD linux-gazette-base-129.ebuild 795 RMD160 de9f220dc54ecf3b0b3eea9954549de2f3210433 SHA1 4ec042aa2bf127141d1e2431f8d00e56cf4d35bc SHA256 922dd674519dff738f1a3ad27bb0a97283fb1d8a9c318fadbd6c018792f955b4
+MD5 cfc73653c472899d0b98810ba69e878a linux-gazette-base-129.ebuild 795
+RMD160 de9f220dc54ecf3b0b3eea9954549de2f3210433 linux-gazette-base-129.ebuild 795
+SHA256 922dd674519dff738f1a3ad27bb0a97283fb1d8a9c318fadbd6c018792f955b4 linux-gazette-base-129.ebuild 795
+MISC ChangeLog 579 RMD160 565a91a9ed2e7f4efaf68d4652ffb76e18f9256d SHA1 303e0dc13d03a106a74a423d2f1dbd4a9dbfeecc SHA256 b9846285daf13fd0a219027a69c8dbf7dcdc8b01e82bf18b7f2036ccfaf46bfe
+MD5 4c770b0e4667eb6dfeb9e96fd61743c4 ChangeLog 579
+RMD160 565a91a9ed2e7f4efaf68d4652ffb76e18f9256d ChangeLog 579
+SHA256 b9846285daf13fd0a219027a69c8dbf7dcdc8b01e82bf18b7f2036ccfaf46bfe ChangeLog 579
 MD5 50b2c6c8a0f7527d284086edd4d2afaf files/digest-linux-gazette-base-113 64
 RMD160 7e215788b01288e9ad274c90fd44c35a2edfcda2 files/digest-linux-gazette-base-113 64
 SHA256 d1296f113e03afff89080ae6e61f2142bfd9bacee8f097e52f9018cdd3c0c44e files/digest-linux-gazette-base-113 64
-size 64 files/digest-linux-gazette-base-113 64
+MD5 d5f1ff3fce67ac8f6981dae5bad4f218 files/digest-linux-gazette-base-129 238
+RMD160 43edcf4bf3cc9427a0d3717df64a1967b9bb43e1 files/digest-linux-gazette-base-129 238
+SHA256 96780e7c0fb51e26fc062397b585f55be671cf559994b225460710f2403c0d89 files/digest-linux-gazette-base-129 238
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFERW1I2+ySkm8kpY0RAhZRAJ9gF6aH9EdzCVlsZrGUkJWcbW7pbQCdHGHF
-dQc+3ZrZKOV2a+dc10vP4Xk=
-=eQeu
+iD8DBQFE55Tk/NoSW7FuNV8RAgsBAKCPo/zWzGHjPU7FqqoaYvgomrRhVwCeOTzX
+TZawjxPOWW5mfi+D2TmO/MI=
+=FZxz
 -----END PGP SIGNATURE-----
