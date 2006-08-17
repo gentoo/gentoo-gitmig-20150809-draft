@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Hierarchy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.16 2006/08/07 17:19:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.17 2006/08/17 01:42:35 tcort Exp $
+
+  17 Aug 2006; Thomas Cort <tcort@gentoo.org> Data-Hierarchy-0.30.ebuild:
+  Re-added ~alpha keyword wrt Bug #142139.
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Data-Hierarchy-0.22.ebuild:
