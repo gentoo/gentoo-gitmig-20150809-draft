@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-CIDR-Lite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.24 2006/08/05 14:08:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-CIDR-Lite/ChangeLog,v 1.25 2006/08/17 22:05:08 mcummings Exp $
+
+  17 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Net-CIDR-Lite-0.20.ebuild:
+  Marking amd64 stable
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Net-CIDR-Lite-0.15.ebuild, Net-CIDR-Lite-0.18.ebuild,
