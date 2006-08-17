@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.4 2006/07/07 12:02:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.5 2006/08/17 03:38:08 tsunam Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.latex2html.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="gif png"
 
 DEPEND="virtual/ghostscript
