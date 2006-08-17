@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.2 2006/05/12 10:30:13 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/rt2x00-2.0.0_beta3.ebuild,v 1.3 2006/08/17 11:55:34 uberlord Exp $
 
 inherit linux-mod eutils
 
@@ -49,6 +49,14 @@ pkg_setup() {
 	else
 		BUILD_TARGETS="rt2x00-nodebug"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Allow compilation on newer kernels
+	epatch "${FILESDIR}/${P}-compat.patch"
 }
 
 src_install() {
