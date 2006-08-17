@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.47 2006/08/12 12:48:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.48 2006/08/17 21:01:06 gustavoz Exp $
+
+  17 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> gmime-2.1.19.ebuild:
+  Stable on sparc
 
   12 Aug 2006; Markus Rothe <corsair@gentoo.org> gmime-2.2.1.ebuild:
   Added ~ppc64; bug #142589
