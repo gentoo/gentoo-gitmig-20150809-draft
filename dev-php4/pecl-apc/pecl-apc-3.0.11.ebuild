@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.10.ebuild,v 1.3 2006/08/17 07:10:05 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.11.ebuild,v 1.1 2006/08/17 07:10:05 sebastian Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -16,8 +16,7 @@ SLOT="0"
 IUSE="mmap"
 
 DEPEND="${DEPEND}
-		!dev-php4/eaccelerator
-		!>=dev-lang/php-5.2.0"
+		!dev-php4/eaccelerator"
 
 need_php_by_category
 
