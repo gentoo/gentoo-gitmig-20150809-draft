@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/rapidsvn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.35 2006/08/12 19:39:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.36 2006/08/17 19:46:13 corsair Exp $
+
+  17 Aug 2006; Markus Rothe <corsair@gentoo.org> rapidsvn-0.9.3.ebuild:
+  Stable on ppc64
 
   12 Aug 2006; Jason Wever <weeve@gentoo.org> rapidsvn-0.9.3.ebuild:
   Stable on SPARC.
