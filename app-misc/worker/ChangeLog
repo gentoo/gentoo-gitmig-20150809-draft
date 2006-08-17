@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.36 2006/08/17 11:34:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.37 2006/08/17 19:50:26 wormo Exp $
+
+*worker-2.13.1 (17 Aug 2006)
+
+  17 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +worker-2.13.1.ebuild:
+  bump, thanks to Tristan Heaven, David Watzke, and Milos Popovic (Bug #131939)
 
   17 Aug 2006; Aron Griffis <agriffis@gentoo.org> worker-2.11.1.ebuild:
   Mark 2.11.1 stable on ia64
