@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.1.0-r1.ebuild,v 1.3 2006/08/15 21:22:14 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/acml-3.1.0-r1.ebuild,v 1.4 2006/08/17 20:06:58 dberkholz Exp $
 
 inherit eutils
 
@@ -80,10 +80,10 @@ pkg_postinst() {
 		eselect lapack set acml
 	fi
 
-	einfo "To use ACML's BLAS features, you have to issue (as root):"
-	einfo "\n\teselect blas set acml"
-	einfo "To use ACML's CBLAS features, you have to issue (as root):"
-	einfo "\n\teselect cblas set acml"
-	einfo "To use ACML's LAPACK features, you have to issue (as root):"
-	einfo "\n\teselect lapack set acml"
+	elog "To use ACML's BLAS features, you have to issue (as root):"
+	elog "\n\teselect blas set acml"
+	elog "To use ACML's CBLAS features, you have to issue (as root):"
+	elog "\n\teselect cblas set acml"
+	elog "To use ACML's LAPACK features, you have to issue (as root):"
+	elog "\n\teselect lapack set acml"
 }
