@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.15 2006/08/17 19:48:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.16 2006/08/17 20:13:49 lucass Exp $
+
+*paramiko-1.6.2 (17 Aug 2006)
+
+  17 Aug 2006; Lukasz Strzygowski <lucass@gentoo.org> -paramiko-0.9h.ebuild,
+  -paramiko-1.3.ebuild, -paramiko-1.5.ebuild, -paramiko-1.5.2.ebuild,
+  -paramiko-1.5.4.ebuild, +paramiko-1.6.2.ebuild:
+  Version bump. Removed old versions.
 
   17 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org> paramiko-1.6.ebuild:
   Stable on x86.
