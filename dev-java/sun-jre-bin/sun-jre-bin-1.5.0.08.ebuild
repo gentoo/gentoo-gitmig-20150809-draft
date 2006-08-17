@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.08.ebuild,v 1.1 2006/08/17 07:21:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.08.ebuild,v 1.2 2006/08/17 20:43:47 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -67,7 +67,9 @@ src_unpack() {
 }
 
 src_install() {
-	local dirs="bin javaws lib man plugin"
+	local dirs="bin lib man"
+	# only X86 has the plugin and javaws
+	use x86 && dirs="${dirs} javaws plugin"
 	dodir /opt/${P}
 
 	for i in $dirs ; do
