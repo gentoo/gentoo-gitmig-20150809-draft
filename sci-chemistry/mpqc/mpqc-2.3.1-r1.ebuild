@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.2 2006/07/09 07:02:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.3 2006/08/17 20:00:14 corsair Exp $
 
 inherit fortran
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mpqc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # Should work on x86, amd64 and ppc, at least
-KEYWORDS="~amd64 ppc ~ppc64 x86"
+KEYWORDS="~amd64 ppc ppc64 x86"
 IUSE="doc threads tcltk"
 
 RDEPEND="virtual/blas

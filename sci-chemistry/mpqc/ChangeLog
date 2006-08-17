@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mpqc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.12 2006/07/09 07:02:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.13 2006/08/17 20:00:14 corsair Exp $
+
+  17 Aug 2006; Markus Rothe <corsair@gentoo.org> mpqc-2.3.1-r1.ebuild:
+  Stable on ppc64
 
   09 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; mpqc-2.3.1-r1.ebuild:
   x86/ppc stable.
