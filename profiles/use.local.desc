@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2087 2006/08/16 21:15:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2088 2006/08/18 05:52:18 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -67,6 +67,7 @@ app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-editors/cssed:plugin - Install plugin development files
 app-editors/emacs-cvs:aqua - Build Carbon Emacs
+app-editors/emacs-cvs:gzip-el - Compress bundled Emacs Lisp source
 app-editors/emacs-cvs:xft - Build Emacs with support for the XFT font renderer (ie. the XFT_JHD_BRANCH branch from CVS)
 app-editors/emacs:aqua - Build Carbon Emacs
 app-editors/emacs:multi-tty - Add multi-tty support
