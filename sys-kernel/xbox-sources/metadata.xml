@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>x86-kernel</herd>
-<herd>kernel</herd>
-<maintainer>
-  <email>chrb@gentoo.org</email>
-  <name>Chris Bainbridge</name>
-</maintainer>
-<maintainer>
-  <email>gimli@gentoo.org</email>
-  <name>Edgar Hucek</name>
-</maintainer>
-<longdescription>
-Full sources for the Xbox Linux kernel
-</longdescription>
+	<herd>kernel</herd>
+	<maintainer>
+		<email>chrb@gentoo.org</email>
+		<name>Chris Bainbridge</name>
+	</maintainer>
+	<maintainer>
+		<email>gimli@gentoo.org</email>
+		<name>Edgar Hucek</name>
+	</maintainer>
+	<longdescription>
+		Full sources for the Xbox Linux kernel
+	</longdescription>
 </pkgmetadata>
