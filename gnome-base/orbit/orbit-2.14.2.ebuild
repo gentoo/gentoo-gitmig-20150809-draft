@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.2.ebuild,v 1.2 2006/07/26 04:38:28 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.2.ebuild,v 1.3 2006/08/18 19:14:57 compnerd Exp $
 
 inherit gnome2
 
@@ -33,3 +33,12 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README* TODO"
+
+src_compile() {
+	# We need to unset IDL_DIR, which is set by RSI's IDL.  This causes certain
+	# files to be not found by autotools when compiling ORBit.  See bug #58540
+	# for more information.  Please don't remove -- 8/18/06
+	unset IDL_DIR
+
+	gnome2_src_compile
+}
