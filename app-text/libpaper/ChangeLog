@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.7 2006/06/27 11:22:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.8 2006/08/18 00:46:35 genstef Exp $
+
+*libpaper-1.1.19 (18 Aug 2006)
+
+  18 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  +libpaper-1.1.19.ebuild:
+  version bump
 
   27 Jun 2006; Guy Martin <gmsoft@gentoo.org> libpaper-1.1.14.8.ebuild:
   Added ~hppa to KEYWORDS.
