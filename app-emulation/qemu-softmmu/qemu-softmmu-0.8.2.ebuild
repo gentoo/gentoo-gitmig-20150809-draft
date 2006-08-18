@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.4 2006/08/17 08:09:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.8.2.ebuild,v 1.5 2006/08/18 12:23:59 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,6 @@ RESTRICT="nostrip test"
 
 DEPEND="virtual/libc
 	sdl? ( media-libs/libsdl )
-	alsa? ( media-libs/alsa-lib )
 	!<=app-emulation/qemu-0.7.0
 	kqemu? ( app-emulation/kqemu )
 	app-text/texi2html"
