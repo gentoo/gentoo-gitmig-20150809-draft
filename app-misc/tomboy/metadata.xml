@@ -3,6 +3,9 @@
 <pkgmetadata>
 <herd>dotnet</herd>
 <maintainer>
+	<email>compnerd@gentoo.org</email>
+</maintainer>
+<maintainer>
   <email>latexer@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
