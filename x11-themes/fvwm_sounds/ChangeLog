@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm_sounds
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_sounds/ChangeLog,v 1.13 2006/07/08 08:42:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm_sounds/ChangeLog,v 1.14 2006/08/18 02:26:40 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  fvwm_sounds-1.0.ebuild:
+  Marking amd64 stable
 
   08 Jul 2006; Markus Rothe <corsair@gentoo.org> fvwm_sounds-1.0.ebuild:
   Stable on ppc64
