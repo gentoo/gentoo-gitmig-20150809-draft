@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.5 2006/08/12 23:04:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.6 2006/08/18 17:20:37 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -182,313 +182,88 @@ DEPEND="${RDEPEND}
 		x11-apps/mkfontscale )"
 
 # Drivers
-###############################################################################
-###############################################################################
-##                                                                           ##
-##   REMEMBER TO EDIT USE.MASK FILES IF CHANGING ARCHITECTURE DEPENDENCIES   ##
-##                                                                           ##
-###############################################################################
-###############################################################################
 PDEPEND="
-	xorg? ( || (
-			(
-				input_devices_acecad? ( >=x11-drivers/xf86-input-acecad-1.1.0 )
-				input_devices_aiptek? ( >=x11-drivers/xf86-input-aiptek-1.0.1 )
-				input_devices_calcomp? ( >=x11-drivers/xf86-input-calcomp-1.1.0 )
-				input_devices_citron? ( >=x11-drivers/xf86-input-citron-2.2.0 )
-				input_devices_digitaledge? ( >=x11-drivers/xf86-input-digitaledge-1.1.0 )
-				input_devices_dmc? ( >=x11-drivers/xf86-input-dmc-1.1.0 )
-				input_devices_dynapro? ( >=x11-drivers/xf86-input-dynapro-1.1.0 )
-				input_devices_elo2300? ( >=x11-drivers/xf86-input-elo2300-1.1.0 )
-				input_devices_elographics? ( >=x11-drivers/xf86-input-elographics-1.1.0 )
-				input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-1.1.1 )
-				input_devices_fpit? ( >=x11-drivers/xf86-input-fpit-1.1.0 )
-				input_devices_hyperpen? ( >=x11-drivers/xf86-input-hyperpen-1.1.0 )
-				input_devices_jamstudio? ( >=x11-drivers/xf86-input-jamstudio-1.1.0 )
-				input_devices_joystick? ( >=x11-drivers/xf86-input-joystick-1.1.0 )
-				input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.1.0 )
-				input_devices_magellan? ( >=x11-drivers/xf86-input-magellan-1.1.0 )
-				input_devices_microtouch? ( >=x11-drivers/xf86-input-microtouch-1.1.0 )
-				input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.1.0 )
-				input_devices_mutouch? ( >=x11-drivers/xf86-input-mutouch-1.1.0 )
-				input_devices_palmax? ( >=x11-drivers/xf86-input-palmax-1.1.0 )
-				input_devices_penmount? ( >=x11-drivers/xf86-input-penmount-1.1.0 )
-				input_devices_spaceorb? ( >=x11-drivers/xf86-input-spaceorb-1.1.0 )
-				input_devices_summa? ( >=x11-drivers/xf86-input-summa-1.1.0 )
-				input_devices_tek4957? ( >=x11-drivers/xf86-input-tek4957-1.1.0 )
-				input_devices_ur98? ( >=x11-drivers/xf86-input-ur98-1.1.0 )
-				input_devices_vmmouse? ( >=x11-drivers/xf86-input-vmmouse-12.4.0 )
-				input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.0 )
+	xorg? (
+		input_devices_acecad? ( >=x11-drivers/xf86-input-acecad-1.1.0 )
+		input_devices_aiptek? ( >=x11-drivers/xf86-input-aiptek-1.0.1 )
+		input_devices_calcomp? ( >=x11-drivers/xf86-input-calcomp-1.1.0 )
+		input_devices_citron? ( >=x11-drivers/xf86-input-citron-2.2.0 )
+		input_devices_digitaledge? ( >=x11-drivers/xf86-input-digitaledge-1.1.0 )
+		input_devices_dmc? ( >=x11-drivers/xf86-input-dmc-1.1.0 )
+		input_devices_dynapro? ( >=x11-drivers/xf86-input-dynapro-1.1.0 )
+		input_devices_elo2300? ( >=x11-drivers/xf86-input-elo2300-1.1.0 )
+		input_devices_elographics? ( >=x11-drivers/xf86-input-elographics-1.1.0 )
+		input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-1.1.1 )
+		input_devices_fpit? ( >=x11-drivers/xf86-input-fpit-1.1.0 )
+		input_devices_hyperpen? ( >=x11-drivers/xf86-input-hyperpen-1.1.0 )
+		input_devices_jamstudio? ( >=x11-drivers/xf86-input-jamstudio-1.1.0 )
+		input_devices_joystick? ( >=x11-drivers/xf86-input-joystick-1.1.0 )
+		input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.1.0 )
+		input_devices_magellan? ( >=x11-drivers/xf86-input-magellan-1.1.0 )
+		input_devices_microtouch? ( >=x11-drivers/xf86-input-microtouch-1.1.0 )
+		input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.1.0 )
+		input_devices_mutouch? ( >=x11-drivers/xf86-input-mutouch-1.1.0 )
+		input_devices_palmax? ( >=x11-drivers/xf86-input-palmax-1.1.0 )
+		input_devices_penmount? ( >=x11-drivers/xf86-input-penmount-1.1.0 )
+		input_devices_spaceorb? ( >=x11-drivers/xf86-input-spaceorb-1.1.0 )
+		input_devices_summa? ( >=x11-drivers/xf86-input-summa-1.1.0 )
+		input_devices_tek4957? ( >=x11-drivers/xf86-input-tek4957-1.1.0 )
+		input_devices_ur98? ( >=x11-drivers/xf86-input-ur98-1.1.0 )
+		input_devices_vmmouse? ( >=x11-drivers/xf86-input-vmmouse-12.4.0 )
+		input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.0 )
 
-				input_devices_synaptics? ( x11-drivers/synaptics )
-				input_devices_wacom? ( x11-misc/linuxwacom )
-			)
-			!minimal? (
-				>=x11-drivers/xf86-input-acecad-1.1.0
-				>=x11-drivers/xf86-input-calcomp-1.1.0
-				>=x11-drivers/xf86-input-citron-2.2.0
-				>=x11-drivers/xf86-input-digitaledge-1.1.0
-				>=x11-drivers/xf86-input-dmc-1.1.0
-				>=x11-drivers/xf86-input-dynapro-1.1.0
-				>=x11-drivers/xf86-input-elo2300-1.1.0
-				>=x11-drivers/xf86-input-elographics-1.1.0
-				>=x11-drivers/xf86-input-fpit-1.1.0
-				>=x11-drivers/xf86-input-hyperpen-1.1.0
-				>=x11-drivers/xf86-input-jamstudio-1.1.0
-				>=x11-drivers/xf86-input-joystick-1.1.0
-				>=x11-drivers/xf86-input-keyboard-1.1.0
-				>=x11-drivers/xf86-input-magellan-1.1.0
-				>=x11-drivers/xf86-input-microtouch-1.1.0
-				>=x11-drivers/xf86-input-mouse-1.1.0
-				>=x11-drivers/xf86-input-mutouch-1.1.0
-				>=x11-drivers/xf86-input-palmax-1.1.0
-				>=x11-drivers/xf86-input-penmount-1.1.0
-				>=x11-drivers/xf86-input-spaceorb-1.1.0
-				>=x11-drivers/xf86-input-summa-1.1.0
-				>=x11-drivers/xf86-input-tek4957-1.1.0
-				>=x11-drivers/xf86-input-void-1.1.0
+		input_devices_synaptics? ( x11-drivers/synaptics )
+		input_devices_wacom? ( x11-misc/linuxwacom )
 
-				kernel_linux? (
-					>=x11-drivers/xf86-input-aiptek-1.0.1
-					>=x11-drivers/xf86-input-evdev-1.1.1
-					>=x11-drivers/xf86-input-ur98-1.1.0
-				)
+		video_cards_apm? ( >=x11-drivers/xf86-video-apm-1.1.1 )
+		video_cards_ark? ( >=x11-drivers/xf86-video-ark-0.6.0 )
+		video_cards_chips? ( >=x11-drivers/xf86-video-chips-1.1.1 )
+		video_cards_cirrus? ( >=x11-drivers/xf86-video-cirrus-1.1.0 )
+		video_cards_cyrix? ( >=x11-drivers/xf86-video-cyrix-1.1.0 )
+		video_cards_dummy? ( >=x11-drivers/xf86-video-dummy-0.2.0 )
+		video_cards_fbdev? ( >=x11-drivers/xf86-video-fbdev-0.2.0 )
+		video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.1.1 )
+		video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.2.0 )
+		video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.1.0 )
+		video_cards_i810? ( >=x11-drivers/xf86-video-i810-1.6.0 )
+		video_cards_impact? ( >=x11-drivers/xf86-video-impact-0.2.0 )
+		video_cards_imstt? ( >=x11-drivers/xf86-video-imstt-1.1.0 )
+		video_cards_mach64? ( >=x11-drivers/xf86-video-ati-6.6.0 )
+		video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.1 )
+		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.1.1 )
+		video_cards_newport? ( >=x11-drivers/xf86-video-newport-0.2.0 )
+		video_cards_nsc? ( >=x11-drivers/xf86-video-nsc-2.8.1 )
+		video_cards_nv? ( >=x11-drivers/xf86-video-nv-1.1.1 )
+		video_cards_r128? ( >=x11-drivers/xf86-video-ati-6.6.0 )
+		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.6.0 )
+		video_cards_rendition? ( >=x11-drivers/xf86-video-rendition-4.1.0 )
+		video_cards_s3? ( >=x11-drivers/xf86-video-s3-0.4.1 )
+		video_cards_s3virge? ( >=x11-drivers/xf86-video-s3virge-1.9.1 )
+		video_cards_savage? ( >=x11-drivers/xf86-video-savage-2.1.1 )
+		video_cards_siliconmotion? ( >=x11-drivers/xf86-video-siliconmotion-1.4.1 )
+		video_cards_sis? ( >=x11-drivers/xf86-video-sis-0.9.1 )
+		video_cards_sisusb? ( >=x11-drivers/xf86-video-sisusb-0.8.1 )
+		video_cards_sunbw2? ( >=x11-drivers/xf86-video-sunbw2-1.1.0 )
+		video_cards_suncg14? ( >=x11-drivers/xf86-video-suncg14-1.1.0 )
+		video_cards_suncg3? ( >=x11-drivers/xf86-video-suncg3-1.1.0 )
+		video_cards_suncg6? ( >=x11-drivers/xf86-video-suncg6-1.1.0 )
+		video_cards_sunffb? ( >=x11-drivers/xf86-video-sunffb-1.1.0 )
+		video_cards_sunleo? ( >=x11-drivers/xf86-video-sunleo-1.1.0 )
+		video_cards_suntcx? ( >=x11-drivers/xf86-video-suntcx-1.1.0 )
+		video_cards_tdfx? ( >=x11-drivers/xf86-video-tdfx-1.2.1 )
+		video_cards_tga? ( >=x11-drivers/xf86-video-tga-1.1.0 )
+		video_cards_trident? ( >=x11-drivers/xf86-video-trident-1.2.1 )
+		video_cards_tseng? ( >=x11-drivers/xf86-video-tseng-1.1.0 )
+		video_cards_v4l? ( >=x11-drivers/xf86-video-v4l-0.1.1 )
+		video_cards_vesa? ( >=x11-drivers/xf86-video-vesa-1.1.0 )
+		video_cards_vga? ( >=x11-drivers/xf86-video-vga-4.1.0 )
+		video_cards_via? ( >=x11-drivers/xf86-video-via-0.2.1 )
+		video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.13.0 )
+		video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.1.0 )
 
-				x86? ( >=x11-drivers/xf86-input-vmmouse-12.4.0
-					x11-drivers/synaptics
-					x11-misc/linuxwacom
-				)
-				x86-fbsd? ( >=x11-drivers/xf86-input-vmmouse-12.4.0 )
-				amd64? ( >=x11-drivers/xf86-input-vmmouse-12.4.0
-					x11-drivers/synaptics
-					x11-misc/linuxwacom
-				)
-				ppc? ( x11-drivers/synaptics
-					x11-misc/linuxwacom
-				)
-				ppc64? ( x11-drivers/synaptics
-					x11-misc/linuxwacom
-				)
-			)
-		)
-	input_devices_synaptics? ( >=x11-drivers/synaptics-0.14.4-r2 )
-	|| (
-			(
-				video_cards_apm? ( >=x11-drivers/xf86-video-apm-1.1.1 )
-				video_cards_ark? ( >=x11-drivers/xf86-video-ark-0.6.0 )
-				video_cards_chips? ( >=x11-drivers/xf86-video-chips-1.1.1 )
-				video_cards_cirrus? ( >=x11-drivers/xf86-video-cirrus-1.1.0 )
-				video_cards_cyrix? ( >=x11-drivers/xf86-video-cyrix-1.1.0 )
-				video_cards_dummy? ( >=x11-drivers/xf86-video-dummy-0.2.0 )
-				video_cards_fbdev? ( >=x11-drivers/xf86-video-fbdev-0.2.0 )
-				video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.1.1 )
-				video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.2.0 )
-				video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.1.0 )
-				video_cards_i810? ( >=x11-drivers/xf86-video-i810-1.6.0 )
-				video_cards_impact? ( >=x11-drivers/xf86-video-impact-0.2.0 )
-				video_cards_imstt? ( >=x11-drivers/xf86-video-imstt-1.1.0 )
-				video_cards_mach64? ( >=x11-drivers/xf86-video-ati-6.6.0 )
-				video_cards_mga? ( >=x11-drivers/xf86-video-mga-1.4.1 )
-				video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.1.1 )
-				video_cards_newport? ( >=x11-drivers/xf86-video-newport-0.2.0 )
-				video_cards_nsc? ( >=x11-drivers/xf86-video-nsc-2.8.1 )
-				video_cards_nv? ( >=x11-drivers/xf86-video-nv-1.1.1 )
-				video_cards_r128? ( >=x11-drivers/xf86-video-ati-6.6.0 )
-				video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.6.0 )
-				video_cards_rendition? ( >=x11-drivers/xf86-video-rendition-4.1.0 )
-				video_cards_s3? ( >=x11-drivers/xf86-video-s3-0.4.1 )
-				video_cards_s3virge? ( >=x11-drivers/xf86-video-s3virge-1.9.1 )
-				video_cards_savage? ( >=x11-drivers/xf86-video-savage-2.1.1 )
-				video_cards_siliconmotion? ( >=x11-drivers/xf86-video-siliconmotion-1.4.1 )
-				video_cards_sis? ( >=x11-drivers/xf86-video-sis-0.9.1 )
-				video_cards_sisusb? ( >=x11-drivers/xf86-video-sisusb-0.8.1 )
-				video_cards_sunbw2? ( >=x11-drivers/xf86-video-sunbw2-1.1.0 )
-				video_cards_suncg14? ( >=x11-drivers/xf86-video-suncg14-1.1.0 )
-				video_cards_suncg3? ( >=x11-drivers/xf86-video-suncg3-1.1.0 )
-				video_cards_suncg6? ( >=x11-drivers/xf86-video-suncg6-1.1.0 )
-				video_cards_sunffb? ( >=x11-drivers/xf86-video-sunffb-1.1.0 )
-				video_cards_sunleo? ( >=x11-drivers/xf86-video-sunleo-1.1.0 )
-				video_cards_suntcx? ( >=x11-drivers/xf86-video-suntcx-1.1.0 )
-				video_cards_tdfx? ( >=x11-drivers/xf86-video-tdfx-1.2.1 )
-				video_cards_tga? ( >=x11-drivers/xf86-video-tga-1.1.0 )
-				video_cards_trident? ( >=x11-drivers/xf86-video-trident-1.2.1 )
-				video_cards_tseng? ( >=x11-drivers/xf86-video-tseng-1.1.0 )
-				video_cards_v4l? ( >=x11-drivers/xf86-video-v4l-0.1.1 )
-				video_cards_vesa? ( >=x11-drivers/xf86-video-vesa-1.1.0 )
-				video_cards_vga? ( >=x11-drivers/xf86-video-vga-4.1.0 )
-				video_cards_via? ( >=x11-drivers/xf86-video-via-0.2.1 )
-				video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.13.0 )
-				video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.1.0 )
-
-				video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
-				video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.27.10 )
-			)
-			!minimal? (
-				>=x11-drivers/xf86-video-dummy-0.2.0
-				>=x11-drivers/xf86-video-fbdev-0.2.0
-
-				!hppa? (
-					kernel_linux? ( >=x11-drivers/xf86-video-v4l-0.1.1 )
-				)
-
-				3dfx? ( >=media-libs/glide-v3-3.10 )
-
-				alpha? ( >=x11-drivers/xf86-video-cirrus-1.1.0
-					>=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-rendition-4.1.0
-					>=x11-drivers/xf86-video-s3-0.4.1
-					>=x11-drivers/xf86-video-s3virge-1.9.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-siliconmotion-1.4.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-tga-1.1.0
-					>=x11-drivers/xf86-video-vga-4.1.0
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				amd64? ( >=x11-drivers/xf86-video-apm-1.1.1
-					>=x11-drivers/xf86-video-ark-0.6.0
-					>=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-chips-1.1.1
-					>=x11-drivers/xf86-video-cirrus-1.1.0
-					>=x11-drivers/xf86-video-cyrix-1.1.0
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-i128-1.2.0
-					>=x11-drivers/xf86-video-i810-1.6.0
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-neomagic-1.1.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-rendition-4.1.0
-					>=x11-drivers/xf86-video-s3-0.4.1
-					>=x11-drivers/xf86-video-s3virge-1.9.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-siliconmotion-1.4.1
-					>=x11-drivers/xf86-video-sis-0.9.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-tga-1.1.0
-					>=x11-drivers/xf86-video-trident-1.2.1
-					>=x11-drivers/xf86-video-tseng-1.1.0
-					>=x11-drivers/xf86-video-vesa-1.1.0
-					>=x11-drivers/xf86-video-vga-4.1.0
-					>=x11-drivers/xf86-video-via-0.2.1
-					>=x11-drivers/xf86-video-vmware-10.13.0
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				arm? ( >=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-chips-1.1.1
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-s3-0.4.1
-					>=x11-drivers/xf86-video-s3virge-1.9.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-sis-0.9.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-trident-1.2.1
-					>=x11-drivers/xf86-video-vga-4.1.0
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				ia64? ( >=x11-drivers/xf86-video-apm-1.1.1
-					>=x11-drivers/xf86-video-ark-0.6.0
-					>=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-chips-1.1.1
-					>=x11-drivers/xf86-video-cirrus-1.1.0
-					>=x11-drivers/xf86-video-cyrix-1.1.0
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-i128-1.2.0
-					>=x11-drivers/xf86-video-i740-1.1.0
-					>=x11-drivers/xf86-video-i810-1.6.0
-					>=x11-drivers/xf86-video-imstt-1.1.0
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-neomagic-1.1.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-rendition-4.1.0
-					>=x11-drivers/xf86-video-s3-0.4.1
-					>=x11-drivers/xf86-video-s3virge-1.9.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-siliconmotion-1.4.1
-					>=x11-drivers/xf86-video-sis-0.9.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-tga-1.1.0
-					>=x11-drivers/xf86-video-trident-1.2.1
-					>=x11-drivers/xf86-video-tseng-1.1.0
-					>=x11-drivers/xf86-video-vesa-1.1.0
-					>=x11-drivers/xf86-video-vga-4.1.0
-					>=x11-drivers/xf86-video-via-0.2.1
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				mips? ( >=x11-drivers/xf86-video-impact-0.2.0
-					>=x11-drivers/xf86-video-newport-0.2.0 )
-				ppc? ( >=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-chips-1.1.1
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-imstt-1.1.0
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-s3-0.4.1
-					>=x11-drivers/xf86-video-s3virge-1.9.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-sis-0.9.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-trident-1.2.1
-					>=x11-drivers/xf86-video-vga-4.1.0
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				ppc64? ( >=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1 )
-				sparc? ( >=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-sunbw2-1.1.0
-					>=x11-drivers/xf86-video-suncg14-1.1.0
-					>=x11-drivers/xf86-video-suncg3-1.1.0
-					>=x11-drivers/xf86-video-suncg6-1.1.0
-					>=x11-drivers/xf86-video-sunffb-1.1.0
-					>=x11-drivers/xf86-video-sunleo-1.1.0
-					>=x11-drivers/xf86-video-suntcx-1.1.0
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				x86? ( >=x11-drivers/xf86-video-apm-1.1.1
-					>=x11-drivers/xf86-video-ark-0.6.0
-					>=x11-drivers/xf86-video-ati-6.6.0
-					>=x11-drivers/xf86-video-chips-1.1.1
-					>=x11-drivers/xf86-video-cirrus-1.1.0
-					>=x11-drivers/xf86-video-cyrix-1.1.0
-					>=x11-drivers/xf86-video-glint-1.1.1
-					>=x11-drivers/xf86-video-i128-1.2.0
-					>=x11-drivers/xf86-video-i740-1.1.0
-					>=x11-drivers/xf86-video-i810-1.6.0
-					>=x11-drivers/xf86-video-imstt-1.1.0
-					>=x11-drivers/xf86-video-mga-1.4.1
-					>=x11-drivers/xf86-video-neomagic-1.1.1
-					>=x11-drivers/xf86-video-nsc-2.8.1
-					>=x11-drivers/xf86-video-nv-1.1.1
-					>=x11-drivers/xf86-video-rendition-4.1.0
-					>=x11-drivers/xf86-video-s3-0.4.1
-					>=x11-drivers/xf86-video-s3virge-1.9.1
-					>=x11-drivers/xf86-video-savage-2.1.1
-					>=x11-drivers/xf86-video-siliconmotion-1.4.1
-					>=x11-drivers/xf86-video-sis-0.9.1
-					>=x11-drivers/xf86-video-sisusb-0.8.1
-					>=x11-drivers/xf86-video-tdfx-1.2.1
-					>=x11-drivers/xf86-video-tga-1.1.0
-					>=x11-drivers/xf86-video-trident-1.2.1
-					>=x11-drivers/xf86-video-tseng-1.1.0
-					>=x11-drivers/xf86-video-vesa-1.1.0
-					>=x11-drivers/xf86-video-vga-4.1.0
-					>=x11-drivers/xf86-video-via-0.2.1
-					>=x11-drivers/xf86-video-vmware-10.13.0
-					>=x11-drivers/xf86-video-voodoo-1.1.0 )
-				x86-fbsd? (
-					>=x11-drivers/xf86-video-vmware-10.13.0 )
-			)
-		) )"
+		video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
+		video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.27.10 )
+	)"
 LICENSE="${LICENSE} MIT"
 
 pkg_setup() {
