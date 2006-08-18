@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/koverartist
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.8 2006/07/27 15:58:40 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.9 2006/08/18 01:56:30 malc Exp $
+
+  18 Aug 2006; <malc@gentoo.org> koverartist-0.4.ebuild:
+  Stable on amd64 - Bug #140234
 
 *koverartist-0.4.3 (27 Jul 2006)
 
