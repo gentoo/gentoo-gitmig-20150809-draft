@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ir/xmms-ir-1.2.10-r1.ebuild,v 1.1 2006/05/24 04:50:20 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ir/xmms-ir-1.2.10-r1.ebuild,v 1.2 2006/08/18 20:44:05 dertobi123 Exp $
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=media-sound/xmms-1.2.10"
 
