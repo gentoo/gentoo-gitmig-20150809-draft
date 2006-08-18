@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.9 2006/08/18 00:47:36 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.10 2006/08/18 01:13:10 metalgod Exp $
 
 inherit eutils gnustep-funcs flag-o-matic multilib
 
@@ -34,7 +34,9 @@ fi
 src_unpack() {
 	is-flag -fstack-protector && filter-flags -fstack-protector \
 		&& ewarn "CFLAG -fstack-protector has been disabled, as it is known to cause bugs with WindowMaker (bug #78051)" && ebeep 2
-	filter-flags -Os
+	replace-flags "-Os" "-O2"
+	replace-flags "-O3" "-O2"
+
 	unpack ${A}
 	cd "${S}"
 	epatch ${FILESDIR}/${PV/0.92/0.91}/singleclick-shadeormaxopts-0.9x.patch2
