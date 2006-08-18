@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.36 2006/08/18 23:34:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.37 2006/08/18 23:41:36 carlo Exp $
+
+*rosegarden-1.2.4 (18 Aug 2006)
+
+  18 Aug 2006; Carsten Lohrke <carlo@gentoo.org>
+  -files/rosegarden-4.1.2.3-kde.py.diff, +rosegarden-1.2.4.ebuild,
+  -rosegarden-4.1.2.3.ebuild:
+  Version bump. Major version 4 has been dropped upstream.
 
   18 Aug 2006; Carsten Lohrke <carlo@gentoo.org>
   +files/4.1.0-includehints.patch, rosegarden-4.1.0-r1.ebuild:
