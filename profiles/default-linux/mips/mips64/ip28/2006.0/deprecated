@@ -1,0 +1,6 @@
+If you are using an SGI Indigo2 R10000 system (IP28), use the following profile:
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/mips/2006.1/ip28/o32 make.profile

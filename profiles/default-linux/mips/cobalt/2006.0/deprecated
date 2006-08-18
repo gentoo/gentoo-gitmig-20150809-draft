@@ -1,0 +1,8 @@
+If you are using a Cobalt RaQ/Qube (1/2) system, use the following profile:
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/mips/2006.1/cobalt/o32 make.profile
+
+

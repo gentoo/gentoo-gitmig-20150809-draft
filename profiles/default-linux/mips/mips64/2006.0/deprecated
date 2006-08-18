@@ -1,0 +1,24 @@
+Switch to one of the profiles listed below, depending on your system:
+
+If you are using an SGI Origin 200/2000 system (IP27), use the following profile:
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/mips/2006.1/ip27/o32 make.profile
+
+
+If you are using an SGI Octane system (IP30), use the following profile:
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/mips/2006.1/ip30/o32 make.profile
+
+
+If you are using an SGI O2 system (IP32), use the following profile:
+
+# emerge -n '>=sys-apps/portage-2.0.51'
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default-linux/mips/2006.1/generic-be/o32 make.profile
