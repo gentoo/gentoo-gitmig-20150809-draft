@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5743 2006/08/17 21:23:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5744 2006/08/18 14:45:34 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (18 Aug 2006)
+# media-sound/alsaplayer masked by treecleaners for bug(s) 143402
+# Removal in 30 days (thats 15 Sept 2006)
+media-sound/alsaplayer
 
 # Stefan Schweizer <genstef@gentoo.org> (17 Aug 2006)
 # still breaks some compilations, please update ebuilds to 
