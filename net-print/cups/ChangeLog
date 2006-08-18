@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.193 2006/08/17 23:59:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.194 2006/08/18 19:53:34 genstef Exp $
+
+  18 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.2.ebuild:
+  Depend with X useflag on xdg-utils to select the browser thanks to Wiktor
+  Wandachowicz <siryes@gmail.com> in bug 137934
 
   17 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.1.23-r8.ebuild,
   cups-1.2.2.ebuild:

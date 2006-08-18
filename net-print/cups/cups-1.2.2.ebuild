@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.2 2006/08/17 23:59:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.3 2006/08/18 19:53:34 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -14,7 +14,7 @@ SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ssl slp pam samba nls gnutls dbus tiff png ppds jpeg"
+IUSE="ssl slp pam samba nls gnutls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
 	ssl? (
@@ -44,7 +44,10 @@ RDEPEND="${DEP}
 		media-gfx/gimp-print
 		net-print/foo2zjs
 		net-print/cups-pdf
-	) )"
+	) )
+	X? ( x86? ( x11-misc/xdg-utils ) )
+	"
+	# keywording xdg-utils in bug 144345
 PDEPEND="samba? ( >=net-fs/samba-3.0.8 )
 	virtual/ghostscript"
 PROVIDE="virtual/lpr"
@@ -137,6 +140,13 @@ src_install() {
 
 	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
 		/var/run/cups/certs /var/cache/cups /var/spool/cups/tmp
+
+	# .desktop handling. X useflag. xdg-open from freedesktop is preferred
+	if use X; then
+		sed -i -e "s:htmlview:xdg-open:" ${D}/usr/share/applications/cups.desktop
+	else
+		rm -r ${D}/usr/share/applications
+	fi
 }
 
 pkg_preinst() {
