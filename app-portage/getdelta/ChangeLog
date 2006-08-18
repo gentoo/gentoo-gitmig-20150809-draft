@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/getdelta
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.7 2005/08/13 23:59:44 yoswink Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.8 2006/08/18 21:01:51 genstef Exp $
+
+*getdelta-0.7.2 (18 Aug 2006)
+
+  18 Aug 2006; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  -getdelta-0.7.0.ebuild, +getdelta-0.7.2.ebuild:
+  version bump
 
   13 Aug 2005; Jose Luis Rivero <yoswink@gentoo.org> getdelta-0.7.0.ebuild:
   Keyworded ~alpha wrt #93379 getdelta-0.7.0.ebuild
