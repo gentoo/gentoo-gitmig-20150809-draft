@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/caver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/ChangeLog,v 1.4 2006/08/05 05:05:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/ChangeLog,v 1.5 2006/08/18 16:48:41 ribosome Exp $
+
+*caver-0.99.4 (18 Aug 2006)
+
+  18 Aug 2006; Olivier Fisette <ribosome@gentoo.org>
+  +files/caver-0.99.4-001.patch, +caver-0.99.4.ebuild:
+  New upstream version; thanks to Richard Daigle <rdaigle@rsvs.ulaval.ca> for
+  his work (fixes bug #144329). Added pdb2caver script; thanks to Rossen
+  Apostolov <rossen@protein.osaka-u.ac.jp> for his work (fixes bug #141549).
+  Added man page. Ebuild clean-up.
 
   05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer, anyone feel free to work on this, although I'll
