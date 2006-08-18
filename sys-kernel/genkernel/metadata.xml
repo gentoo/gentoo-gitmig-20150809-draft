@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
 <pkgmetadata>
-<herd>x86-kernel</herd>
-<maintainer>
-  <email>plasmaroo@gentoo.org</email>
-</maintainer>
+	<herd>kernel</herd>
+	<maintainer>
+		<email>plasmaroo@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>
