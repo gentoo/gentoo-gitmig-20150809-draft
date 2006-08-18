@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r1.ebuild,v 1.3 2006/01/31 19:35:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmix/wmix-3.1-r1.ebuild,v 1.4 2006/08/18 02:03:42 malc Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ne.jp/asahi/linux/timecop/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 
 RDEPEND="|| ( (
 		x11-libs/libX11
