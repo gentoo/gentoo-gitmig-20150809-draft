@@ -2,13 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>x86-kernel</herd>
-  <maintainer>
-    <email>x86-kernel@gentoo.org</email>
-    <name>x86 kernel team</name>
-    <description>Actively maintained</description>
-  </maintainer>
-  <longdescription>
-    Con Kolivas' kernel sources, very good for destop use
-  </longdescription>
+	<herd>kernel</herd>
+	<maintainer>
+		<email>kernel@gentoo.org</email>
+		<name>xkernel team</name>
+		<description>Actively maintained</description>
+	</maintainer>
+	<longdescription>
+		Con Kolivas' kernel sources, very good for desktop use
+	</longdescription>
 </pkgmetadata>
