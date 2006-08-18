@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.36 2006/07/26 07:35:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.37 2006/08/18 15:37:55 gustavoz Exp $
+
+  18 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> smoke-3.5.2.ebuild:
+  Give us teh ~sparc
 
   26 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> smoke-3.5.2.ebuild:
   Extract the whole kalyptus sources or it fails on some cases. Reported by
