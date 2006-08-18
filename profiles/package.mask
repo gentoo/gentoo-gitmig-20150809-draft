@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5746 2006/08/18 16:29:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5747 2006/08/18 21:47:03 steev Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Steev Klimaszewski <steev@gentoo.org> (18 Aug 2006)
+# New dbus, split bindings, qt3 and mono don't exist anymore
+# New mono bindings being worked on... qt3... eh...
+>=sys-apps/dbus-0.91
+>=sys-apps/dbus-core-0.92
+>=dev-libs/dbus-glib-0.71
+>=dev-python/dbus-python-0.71
 
 # Christian Heim <phreak@gentoo.org> (18 Aug 2006)
 # media-sound/alsaplayer masked by treecleaners for bug(s) 143402,
