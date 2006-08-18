@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.19 2006/08/15 13:41:43 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r2.ebuild,v 1.20 2006/08/18 22:07:19 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -589,8 +589,9 @@ pkg_postinst() {
 		enc2xs -C
 		ebegin "Converting C header files to the corresponding Perl format"
 		cd /usr/include;
-		h2ph * sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/*
-		cd /usr/include/linux;
+		h2ph *
+		h2ph -r sys/* arpa/* netinet/* bits/* security/* asm/* gnu/* linux/* gentoo*
+		cd /usr/include/linux
 		h2ph *
 	fi
 
