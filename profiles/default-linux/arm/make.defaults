@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/make.defaults,v 1.5 2006/01/06 01:07:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/make.defaults,v 1.6 2006/08/18 17:04:23 dberkholz Exp $
 
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"
@@ -10,3 +10,8 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 
 USE="berkdb gpm crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
+
+# 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
+# Defaults for video drivers
+VIDEO_CARDS="ati chips dummy fbdevglint mga nv s3 s3virge savage sis sisusb tdfx
+	trident v4l vga voodoo"

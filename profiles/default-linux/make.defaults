@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.22 2006/08/18 15:55:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.23 2006/08/18 17:04:23 dberkholz Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -39,3 +39,8 @@ INPUT_DEVICES="keyboard mouse evdev"
 # 2006/07/01 - Donnie Berkholz <dberkholz@gentoo.org>
 # X: Build dlloader-using drivers, since >=6.9 uses dlloader, not elfloader
 USE="${USE} dlloader"
+
+# 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
+# Lowest common denominator defaults for video drivers,
+# except hppa, which lacks v4l so removes it in the hppa profile
+VIDEO_CARDS="dummy fbdev v4l"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/make.defaults,v 1.6 2005/12/07 22:28:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/make.defaults,v 1.7 2006/08/18 17:04:23 dberkholz Exp $
 
 ARCH="alpha"
 ACCEPT_KEYWORDS="alpha"
@@ -12,3 +12,8 @@ CXXFLAGS="${CFLAGS}"
 FEATURES="sandbox sfperms"
 
 USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
+
+# 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
+# Defaults for video drivers
+VIDEO_CARDS="cirrus ati dummy fbdev glint mga nv rendition s3 s3virge savage
+	siliconmotion sisusb tdfx tga v4l vga voodoo"

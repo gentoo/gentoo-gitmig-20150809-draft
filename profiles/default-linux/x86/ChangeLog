@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.14 2006/08/18 15:56:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.15 2006/08/18 17:04:23 dberkholz Exp $
+
+  18 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
+  Defaults for video drivers.
 
   09 Aug 2006; Doug Goldstein <cardoe@gentoo.org> 2005.1/make.defaults,
   gcc2/make.defaults, 2006.0/make.defaults, no-nptl/make.defaults,

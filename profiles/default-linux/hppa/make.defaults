@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/make.defaults,v 1.5 2006/06/29 18:48:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/make.defaults,v 1.6 2006/08/18 17:04:23 dberkholz Exp $
 
 ARCH="hppa"
 ACCEPT_KEYWORDS="hppa"
@@ -12,3 +12,7 @@ CXXFLAGS="-O1 -pipe"
 FEATURES="sandbox sfperms strict"
 
 USE="berkdb crypt cups foomaticdb fortran gdbm gpm imlib ipv6 libwww ncurses nls pam perl pic python readline spell ssl tcpd xml2 zlib firefox"
+
+# 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
+# Defaults for video drivers
+VIDEO_CARDS="dummy fbdev"

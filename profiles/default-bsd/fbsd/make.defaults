@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.4 2006/07/18 08:37:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.5 2006/08/18 17:04:23 dberkholz Exp $
 
 FEATURES="-sandbox"
 
@@ -12,3 +12,6 @@ MAKE="gmake"
 
 USE="gdbm ipv6 ncurses oss pam perl python readline ssl tcpd zlib cups gif jpeg ogg png symlink truetype X xml xv xorg"
 
+# 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
+# Defaults for video drivers
+VIDEO_CARDS="dummy fbdev vmware"
