@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/dialogblocks
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/ChangeLog,v 1.1 2006/08/18 13:35:54 mrness Exp $
+
+*dialogblocks-3.06 (18 Aug 2006)
+
+  18 Aug 2006; Alin Nastac <mrness@gentoo.org> +files/dialogblocks.desktop,
+  +files/dialogblocks.sh, +metadata.xml, +dialogblocks-3.06.ebuild:
+  Initial ebuild import from the version published on DialogBlocks homepage.
+  Closed bug #69791.
+
