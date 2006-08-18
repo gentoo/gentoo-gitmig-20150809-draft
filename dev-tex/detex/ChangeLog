@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.14 2006/08/17 19:45:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.15 2006/08/18 09:55:23 cryos Exp $
+
+  18 Aug 2006; Marcus D. Hanwell <cryos@gentoo.org> detex-2.7.ebuild:
+  Marked ~amd64, closes bug 144168.
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> detex-2.7.ebuild:
   Stable on ppc64
