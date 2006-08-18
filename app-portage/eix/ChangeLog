@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.109 2006/08/17 21:05:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.110 2006/08/18 05:47:49 wormo Exp $
+
+  17 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> :
+  stable on ppc (Bug #144080)
 
 *eix-0.6.4 (17 Aug 2006)
 
