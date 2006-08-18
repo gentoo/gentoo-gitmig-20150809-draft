@@ -3,12 +3,8 @@
 <pkgmetadata>
 <herd>media-tv</herd>
 	<maintainer>
-		<email>hd_brummy@gentoo.org</email>
-	    <name>Joerg Bornkessel</name>
-	</maintainer>
-	<maintainer>
-		<email>zzam@gentoo.org</email>
-		<name>Matthias Schwartzott</name>
+		<email>vdr@gentoo.org</email>
+	    <name>Gentoo VDR Project</name>
 	</maintainer>
 	<longdescription>Many Templates for the vdr-burn Plugin</longdescription>
 </pkgmetadata>
