@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.3 2006/06/24 01:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/rt2400-1.2.2_beta3.ebuild,v 1.4 2006/08/18 21:03:07 genstef Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -30,6 +30,12 @@ pkg_setup() {
 		 BUILD_TARGETS="modules"
 	else die "please use a kernel >=2.6.6"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/rt2400-1.2.3_beta3-2.6.17.patch
 }
 
 src_compile() {

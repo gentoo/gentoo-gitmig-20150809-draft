@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/rt2400
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/ChangeLog,v 1.3 2006/06/24 01:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2400/ChangeLog,v 1.4 2006/08/18 21:03:07 genstef Exp $
+
+  18 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/rt2400-1.2.3_beta3-2.6.17.patch, rt2400-1.2.2_beta3.ebuild:
+  2.6.17 patch thanks to sabayon linux
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> rt2400-1.2.2_beta3.ebuild:
   USE flag qt->qt3/qt4 change bug #137785
