@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.53 2006/08/16 16:02:13 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.54 2006/08/18 10:37:58 xmerlin Exp $
+
+  18 Aug 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  heartbeat-1.2.5.ebuild, heartbeat-2.0.7.ebuild:
+  Stable on x86. Fixed bug #141894.
 
 *heartbeat-1.2.5 (16 Aug 2006)
 
