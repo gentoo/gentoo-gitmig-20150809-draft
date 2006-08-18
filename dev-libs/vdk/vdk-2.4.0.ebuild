@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.10 2006/05/29 19:31:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.11 2006/08/18 18:26:56 gustavoz Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A Visual Development Kit for RAD"
 SRC_URI="mirror://sourceforge/vdkbuilder/${P}.tar.gz"
-HOMEPAGE="http://http://www.mariomotta.it/vdklib/"
+HOMEPAGE="http://www.mariomotta.it/vdklib/"
 
 SLOT="0"
 LICENSE="GPL-2"
