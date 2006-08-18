@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pd
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.27 2005/11/11 23:16:07 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.28 2006/08/18 20:17:50 dertobi123 Exp $
+
+  18 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> pd-0.39_p1.ebuild:
+  ppc stable, bug #144322
 
   11 Nov 2005; Michael Hanselmann <hansmi@gentoo.org> pd-0.38.4.ebuild:
   Stable on ppc.
