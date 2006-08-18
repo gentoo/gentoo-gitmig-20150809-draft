@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.14 2006/08/18 15:45:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.15 2006/08/18 23:58:09 tcort Exp $
+
+  18 Aug 2006; Thomas Cort <tcort@gentoo.org> atftp-0.7-r1.ebuild:
+  Stable on amd64 wrt Bug #144324.
 
   18 Aug 2006; Markus Rothe <corsair@gentoo.org> atftp-0.7-r1.ebuild:
   Stable on ppc64
