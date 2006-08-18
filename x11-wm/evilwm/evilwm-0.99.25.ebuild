@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.25.ebuild,v 1.5 2006/08/09 22:20:51 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/evilwm-0.99.25.ebuild,v 1.6 2006/08/18 01:54:54 metalgod Exp $
 
 inherit toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://evilwm.sourceforge.net"
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="alpha ~amd64 ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ppc ~ppc-macos sparc x86"
 
 RDEPEND="|| ( x11-libs/libXext virtual/x11 )"
 
