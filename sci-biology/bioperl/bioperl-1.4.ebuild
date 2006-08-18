@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.13 2006/03/30 23:54:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.4.ebuild,v 1.14 2006/08/18 02:21:58 mcummings Exp $
 
 inherit perl-app eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.${PN}.org/ftp/DIST/${P}.tar.bz2"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="mysql gd"
 
 DEPEND="virtual/perl-File-Temp
