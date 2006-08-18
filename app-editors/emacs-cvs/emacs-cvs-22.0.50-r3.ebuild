@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r3.ebuild,v 1.1 2006/08/07 05:24:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r3.ebuild,v 1.2 2006/08/18 05:54:02 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -9,7 +9,7 @@ ECVS_BRANCH="HEAD"
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
-IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff source"
+IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff source gzip-el"
 
 S=${WORKDIR}/emacs
 
@@ -140,6 +140,10 @@ EOF
   (setq find-function-C-source-directory "/usr/share/emacs/${SLOT}/src"))
 EOF
 		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
+	fi
+
+	if ! use gzip-el; then
+		find ${D} -type f -name \*.el.gz -print0 |xargs -0 gunzip
 	fi
 	dodoc BUGS ChangeLog README
 	insinto /usr/share/applications
