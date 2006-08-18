@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/phing
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.3 2006/02/16 19:08:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phing/ChangeLog,v 1.4 2006/08/18 22:49:43 chtekk Exp $
+
+  18 Aug 2006; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
+  phing-2.1.1.ebuild:
+  Fix needed USE flags.
 
 *phing-2.1.1 (04 Jan 2006)
 
