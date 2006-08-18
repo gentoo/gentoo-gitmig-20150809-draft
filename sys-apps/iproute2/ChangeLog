@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.56 2006/07/15 07:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.57 2006/08/18 10:21:25 uberlord Exp $
+
+  18 Aug 2006; Roy Marples <uberlord@gentoo.org>
+  iproute2-2.6.16.20060323.ebuild:
+  Use correct iptables location for tc, #144265 thanks to Malte Starostik.
 
   15 Jul 2006; Mike Frysinger <vapier@gentoo.org>
   +files/iproute2-2.6.16.20060323-routef-safe.patch,

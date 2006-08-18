@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.16.20060323.ebuild,v 1.5 2006/07/15 07:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.16.20060323.ebuild,v 1.6 2006/08/18 10:21:25 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,7 +26,7 @@ S=${WORKDIR}/${PN}-${MY_PV}-${SNAP}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
+	sed -i "s:-O2:${CFLAGS}:" Makefile || die "sed Makefile failed"
 
 	epatch "${FILESDIR}"/${P}-ifcfg-catch-missing-argument.patch #130243
 	epatch "${FILESDIR}"/${P}-build.patch #137574
@@ -42,6 +42,9 @@ src_unpack() {
 	sed -i 's:/usr/local:/usr:' tc/m_ipt.c include/iptables.h
 	sed -i "s:/usr/lib:/usr/$(get_libdir):g" \
 		netem/Makefile tc/{Makefile,tc.c,q_netem.c,m_ipt.c} include/iptables.h || die
+	# Use correct iptables dir, #144265.
+	sed -i "s:/usr/local/lib/iptables:/$(get_libdir)/iptables:g" \
+		include/iptables.h
 }
 
 src_compile() {
