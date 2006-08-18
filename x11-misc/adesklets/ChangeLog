@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/adesklets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.27 2006/07/31 08:29:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/ChangeLog,v 1.28 2006/08/18 03:27:51 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  adesklets-0.6.1.ebuild:
+  Marking amd64 stable
 
   31 Jul 2006; Michele Noberasco <s4t4n@gentoo.org> adesklets-0.6.1.ebuild:
   Added call to fixlocalpod to fix bug #142169.
