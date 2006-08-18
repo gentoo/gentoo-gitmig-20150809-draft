@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ldapdns
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.16 2005/12/31 13:50:23 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ChangeLog,v 1.17 2006/08/18 04:40:29 tsunam Exp $
+
+  18 Aug 2006; Joshua Jackson <tsunam@gentoo.org> ldapdns-2.06.ebuild:
+  Stable x86 for gcc4.1
 
   31 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> ldapdns-2.05.ebuild:
   Change /bin/false to -1 in enewuser call.
