@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/submount
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.19 2006/03/25 13:49:49 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/ChangeLog,v 1.20 2006/08/18 10:12:46 phreak Exp $
+
+  18 Aug 2006; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Reassigning the package to kernel@g.o, the x86-kernel bugzilla-alias is
+  burried/dead.
 
   25 Mar 2006; Daniel Drake <dsd@gentoo.org>
   +files/submount-0.9-sem2mutex.patch, submount-0.9-r2.ebuild:

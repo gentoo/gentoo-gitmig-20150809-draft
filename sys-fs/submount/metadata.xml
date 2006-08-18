@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>x86-kernel</herd>
-<longdescription>
-Submount is a replacemnt for supermount. It allows for automatic mounting and unmounting
-of devices such as cd's.
-</longdescription>
+	<herd>kernel</herd>
+	<longdescription>
+		Submount is a replacemnt for supermount. It allows for automatic mounting and unmounting
+		of devices such as cd's.
+	</longdescription>
 </pkgmetadata>
-	
