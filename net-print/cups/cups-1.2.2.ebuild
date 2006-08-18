@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.3 2006/08/18 19:53:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.4 2006/08/18 22:27:38 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -166,7 +166,7 @@ pkg_postinst() {
 
 	local good_gs=false
 	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu app-text/ghostscript-esp; do
-		if built_with_use ${x} cups; then
+		if has_version ${x} && built_with_use ${x} cups; then
 			good_gs=true
 			break
 		fi
@@ -189,8 +189,8 @@ pkg_postinst() {
 		ewarn "installed into /usr/lib/cups and /etc/cups, qfile is in portage-utils:"
 		ewarn "# FEATURES=-collision-protect emerge -va1 \$(qfile -qC /usr/lib/cups /etc/cups | sed \"s:net-print/cups$::\")"
 		ewarn
-		einfo "FEATURES=-collision-protect is needed to overwrite the compatibility"
-		einfo "symlinks installed by this package, it wont be needed on later merges."
+		ewarn "FEATURES=-collision-protect is needed to overwrite the compatibility"
+		ewarn "symlinks installed by this package, it wont be needed on later merges."
 		ewarn "You should also run revdep-rebuild"
 
 		# place symlinks to make the update smoothless
