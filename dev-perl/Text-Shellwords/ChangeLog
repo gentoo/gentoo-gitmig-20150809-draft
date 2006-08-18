@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Shellwords
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.19 2006/08/06 00:29:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.20 2006/08/18 01:54:52 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Text-Shellwords-1.08.ebuild:
+  Marking amd64 stable
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Text-Shellwords-1.00.ebuild, Text-Shellwords-1.07.ebuild,

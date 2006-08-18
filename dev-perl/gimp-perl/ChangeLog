@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gimp-perl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/ChangeLog,v 1.7 2006/08/07 12:01:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gimp-perl/ChangeLog,v 1.8 2006/08/18 02:11:48 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  gimp-perl-2.2_pre1.ebuild:
+  Marking amd64 stable
 
   07 Aug 2006; Luca Barbato <lu_zero@gentoo.org> gimp-perl-2.2_pre1.ebuild:
   Works with 2.3 and ppc

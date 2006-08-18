@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.24 2006/08/06 01:14:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.25 2006/08/18 02:07:43 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  X11-Protocol-0.55.ebuild:
+  Marking amd64 stable
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   X11-Protocol-0.53.ebuild, X11-Protocol-0.54.ebuild,

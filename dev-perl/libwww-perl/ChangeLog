@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.73 2006/08/06 02:45:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.74 2006/08/18 02:13:26 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  libwww-perl-5.805.ebuild:
+  Marking amd64 stable
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   libwww-perl-5.69-r2.ebuild, libwww-perl-5.79.ebuild,
