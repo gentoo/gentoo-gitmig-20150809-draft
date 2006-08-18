@@ -37,7 +37,7 @@ netjack
 # mask Oracle
 oci8
 
-# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      
 dri
 

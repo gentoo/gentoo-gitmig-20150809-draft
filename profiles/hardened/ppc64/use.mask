@@ -83,7 +83,7 @@ mozilla
 firefox
 seamonkey
 
-# 2006/03/20 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/03/20 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_apm
 video_cards_ark

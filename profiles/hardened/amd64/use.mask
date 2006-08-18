@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.13 2006/07/19 18:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.14 2006/08/18 15:56:00 dberkholz Exp $
 
 # 2006/06/13 - Danny van Dyk <kugelfang@gentoo.org>
 # Mask clvm on amd64, as it isn't keyworded at all.
@@ -27,14 +27,14 @@ plugin
 # codec support x264
 -x264
 
-# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_i740
 video_cards_imstt
 video_cards_newport
 video_cards_nsc
 
-# 2006/01/28 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/01/28 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: unmask for architectures on which they are available
 -input_devices_synaptics
 -input_devices_vmmouse

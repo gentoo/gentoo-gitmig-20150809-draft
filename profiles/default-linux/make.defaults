@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.21 2006/07/01 21:53:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.22 2006/08/18 15:55:59 dberkholz Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -16,7 +16,7 @@ USE="bitmap-fonts truetype-fonts type1-fonts"
 # make sure toolchain has sane defaults
 USE="${USE} fortran"
 
-# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Support direct rendering by default
 USE="${USE} dri"
 
@@ -28,14 +28,14 @@ USE="${USE} pppd isdnlog"
 # Make sure dev-lang/php works right.  See bug #120088 for more info.
 USE="${USE} cli pcre reflection session spl"
 
-# 2006/04/21 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/04/21 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: Build the Xorg X server by default
 USE="${USE} xorg"
 
-# 2006/06/30 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/06/30 - Donnie Berkholz <dberkholz@gentoo.org>
 # Sane defaults for input drivers
 INPUT_DEVICES="keyboard mouse evdev"
 
-# 2006/07/01 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/07/01 - Donnie Berkholz <dberkholz@gentoo.org>
 # X: Build dlloader-using drivers, since >=6.9 uses dlloader, not elfloader
 USE="${USE} dlloader"

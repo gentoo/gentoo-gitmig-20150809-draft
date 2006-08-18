@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.59 2006/08/04 03:30:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.60 2006/08/18 15:56:00 dberkholz Exp $
 
 # need stable libtiff (need to stablize media-libs/jbigkit for jbig support)
 jbig
@@ -14,7 +14,7 @@ avahi
 # it holds up stablizing ntfsprogs
 fuse
 
-# 2006/03/07 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering
 dri
 
@@ -80,7 +80,7 @@ video_cards_trident
 video_cards_vmware
 video_cards_voodoo
 
-# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_apm
 video_cards_ark

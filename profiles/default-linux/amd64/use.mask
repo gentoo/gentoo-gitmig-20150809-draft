@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.36 2006/07/19 18:21:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.37 2006/08/18 15:55:59 dberkholz Exp $
 
 # SECTION: Unmask
 
@@ -20,7 +20,7 @@
 # codec support x264
 -x264
 
-# 2006/01/28 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/01/28 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: unmask for architectures on which they are available
 -input_devices_synaptics
 -input_devices_vmmouse
@@ -46,7 +46,7 @@ vidix
 # which deps on libemf
 plugin
 
-# 2006/02/05 - Donnie Berkholz <spyderous@gentoo.org>
+# 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_i740
 video_cards_imstt
