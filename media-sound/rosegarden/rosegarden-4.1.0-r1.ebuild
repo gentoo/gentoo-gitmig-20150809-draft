@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r1.ebuild,v 1.7 2006/02/21 18:15:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r1.ebuild,v 1.8 2006/08/18 23:34:58 carlo Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -27,7 +27,9 @@ DEPEND="arts? ( || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia ) )
 need-kde 3
 
 PATCHES="${FILESDIR}/4.1.0-dssi.patch
-	${FILESDIR}/4.1.0-gcc4.diff"
+	${FILESDIR}/4.1.0-gcc4.diff
+	${FILESDIR}/4.1.0-includehints.patch"
+
 pkg_setup() {
 	echo
 	if use arts ; then
@@ -46,4 +48,9 @@ src_compile() {
 	strip-flags -fvisibility-inlines-hidden
 	use arts && myconf="" || myconf="$(use_with jack) --with-ladspa"
 	kde_src_compile
+}
+
+pkg_postinstall() {
+	elog "The developers of Rosegarden dropped the \"4\" as major version. If you're"
+	elog "interested in the latest testing release, hard mask >=media-sound/rosegarden-4."
 }

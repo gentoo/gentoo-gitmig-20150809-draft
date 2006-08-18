@@ -1,0 +1,11 @@
+--- gui/rosegardentransport.ui.orig	2006-07-30 00:16:37.000000000 +0200
++++ gui/rosegardentransport.ui	2006-07-30 00:16:50.000000000 +0200
+@@ -4308,8 +4308,4 @@
+     <tabstop>FfwdEndButton</tabstop>
+ </tabstops>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>rosegardenlabel.h</includehint>
+-    <includehint>rosegardenlabel.h</includehint>
+-</includehints>
+ </UI>

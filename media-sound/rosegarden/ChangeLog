@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.35 2006/02/22 16:06:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.36 2006/08/18 23:34:58 carlo Exp $
+
+  18 Aug 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/4.1.0-includehints.patch, rosegarden-4.1.0-r1.ebuild:
+  Fix bug #134121, thanks to Christian Becke.
 
   22 Feb 2006; Carsten Lohrke <carlo@gentoo.org>
   +files/rosegarden-4.1.2.3-kde.py.diff:
