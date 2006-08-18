@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/String-ShellQuote-1.03.ebuild,v 1.7 2006/08/05 23:06:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-ShellQuote/String-ShellQuote-1.03.ebuild,v 1.8 2006/08/18 01:29:40 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~rosch/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 
