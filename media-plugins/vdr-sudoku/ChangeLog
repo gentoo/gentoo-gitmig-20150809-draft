@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-sudoku
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.4 2006/08/15 09:53:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-sudoku/ChangeLog,v 1.5 2006/08/18 10:25:36 zzam Exp $
+
+  18 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Changed herd to media-tv.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
