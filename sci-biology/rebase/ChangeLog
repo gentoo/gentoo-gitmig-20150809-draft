@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.68 2006/08/17 03:00:14 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.69 2006/08/18 02:47:44 weeve Exp $
+
+  18 Aug 2006; Jason Wever <weeve@gentoo.org> rebase-601-r1.ebuild:
+  Added ~sparc keyword wrt bug #144241.
 
 *rebase-608 (17 Aug 2006)
 

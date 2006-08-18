@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/prints
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.17 2006/01/21 18:05:18 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.18 2006/08/18 02:48:20 weeve Exp $
+
+  18 Aug 2006; Jason Wever <weeve@gentoo.org> prints-38.0.ebuild:
+  Added ~sparc keyword wrt bug #144241.
 
   21 Jan 2006; Olivier Fisette <ribosome@gentoo.org> -prints-37.0.ebuild:
   Removed obsolete version.

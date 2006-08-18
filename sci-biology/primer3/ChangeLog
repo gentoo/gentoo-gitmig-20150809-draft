@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/primer3
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.10 2005/10/11 15:07:20 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.11 2006/08/18 02:45:47 weeve Exp $
+
+  18 Aug 2006; Jason Wever <weeve@gentoo.org> primer3-1.0.0.ebuild:
+  Added ~sparc keyword wrt bug #144241.
 
   11 Oct 2005; Luis Medinas <metalgod@gentoo.org> primer3-1.0.0.ebuild:
   Marked Stable on amd64.
