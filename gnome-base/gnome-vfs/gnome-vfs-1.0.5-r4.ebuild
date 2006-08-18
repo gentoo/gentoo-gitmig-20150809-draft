@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.13 2006/08/15 14:28:11 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.14 2006/08/18 22:59:37 allanonjl Exp $
 
-inherit eutils libtool toolchain-funcs
+inherit eutils libtool toolchain-funcs autotools
 
 DESCRIPTION="GNOME Virtual File System"
 HOMEPAGE="http://www.gnome.org/"
@@ -29,9 +29,9 @@ DEPEND="${RDEPEND}
 # gnome-common is for m4 macros needed for patches ...
 
 src_unpack() {
-	unpack ${A}
-
+	unpack "${A}"
 	cd "${S}"
+
 	# Add missing macros for charset conversion
 	epatch "${FILESDIR}"/1.0/${P}-codeset.patch
 	# Use GNOME2 Gconf keys for proxy settings
@@ -53,11 +53,12 @@ src_unpack() {
 	# CAN-2005-0706 (#84936)
 	epatch "${FILESDIR}"/${PN}-2-CAN-2005-0706.patch
 
-	autoheader || die
-	aclocal -I /usr/share/aclocal/gnome-macros || die
-	autoconf || die
+	# preserve some macros
+	sed -n -e '/AC_DEFUN(XML_I18N_TOOLS_NEWER_THAN_0_9/,/# Like AC_CONFIG_HEADER,/p' aclocal.m4 > old_macros.m4
 
-	elibtoolize
+	sed -n -e '/# Check whether LC_MESSAGES/,/dnl AM_PATH_GCONF/p' aclocal.m4 >> old_macros.m4
+
+	AT_M4DIR=". /usr/share/aclocal/gnome-macros" eautoreconf
 }
 
 src_compile() {
