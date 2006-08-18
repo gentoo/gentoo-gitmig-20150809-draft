@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-2.0.4.ebuild,v 1.1 2006/08/18 17:59:58 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-2.0.4.ebuild,v 1.2 2006/08/18 18:06:48 compnerd Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -41,6 +41,6 @@ src_compile() {
 src_install() {
 	java-pkg_newjar looks-${PV}.jar looks.jar
 
-	dodoc RELEASE-NOTES.txt
+	dodoc RELEASE-NOTES.txt README.html
 	use doc && java-pkg_dohtml -r build/docs/*
 }
