@@ -60,6 +60,8 @@ lirc
 
 # mono compiler doesn't build on ia64 (20 Jan 2005 agriffis)
 mono
+# beagle depends on dev-dotnet/gnome-sharp.. masked for testing (19 Aug 2006 kloeri)
+beagle
 
 # need to wait for it jrockit to go stable
 java
