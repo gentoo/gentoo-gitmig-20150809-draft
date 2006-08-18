@@ -1,0 +1,40 @@
+diff -Naur spcxmms-0.2.1/configure.in spcxmms-0.2.1.mine/configure.in
+--- spcxmms-0.2.1/configure.in  2000-10-28 12:02:31.000000000 -0700
++++ spcxmms-0.2.1.mine/configure.in     2006-08-12 13:30:59.000000000 -0700
+@@ -57,5 +57,7 @@
+        AC_DEFINE(ENABLE_XMDSP)
+ fi
+ 
++AC_CHECK_LIB(pthread, pthread_join)
++
+ dnl Finally create all the generated files
+ AC_OUTPUT(Makefile libspc/Makefile spcplay/Makefile xmms-plugin/Makefile)
+
+diff -Naur spcxmms-0.2.1/spcplay/Makefile.am spcxmms-0.2.1.mine/spcplay/Makefile.am
+--- spcxmms-0.2.1/spcplay/Makefile.am   2006-08-12 13:52:54.000000000 -0700
++++ spcxmms-0.2.1/spcplay/Makefile.am.mine      2006-08-12 13:52:47.000000000 -0700
+@@ -2,5 +2,6 @@
+ 
+ spcplay_SOURCES = getopt.c getopt1.c getopt.h main.c
+ spcplay_LDADD = ../libspc/libspc.la
++CCLD = $(CXX)
+ 
+ INCLUDES = -I../libspc
+
+--- spcxmms-0.2.1/xmms-plugin/Makefile.am	2006-08-12 15:37:39.000000000 -0700
++++ spcxmms-0.2.1/xmms-plugin/Makefile.am.mine	2006-08-12 15:38:15.000000000 -0700
+@@ -2,10 +2,13 @@
+ 
+ lib_LTLIBRARIES = libspc.la
+ libspc_la_LDFLAGS = -module -avoid-version
+-libspc_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@ ../libspc/libspc.la
++libspc_la_LIBADD = @GTK_LIBS@ ../libspc/libspc.la
+ libspc_la_SOURCES = spcxmms.c spcxmms.h \
+ 	interface.c interface.h support.c support.h callbacks.h gui.c
+ 
+ INCLUDES = @GTK_CFLAGS@ -I../libspc
+ 
+ EXTRA_DIST = spcxmms.glade
++
++CCLD=$(CXX)
++
