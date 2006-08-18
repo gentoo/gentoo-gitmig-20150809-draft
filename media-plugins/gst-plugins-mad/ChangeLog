@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.95 2006/08/02 06:08:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.96 2006/08/18 23:51:49 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gst-plugins-mad-0.10.3.ebuild:
+  Add ~ia64 keyword.
 
   03 Aug 2006; Joshua Kinard <kumba@gentoo.org>
   gst-plugins-mad-0.8.8.ebuild, gst-plugins-mad-0.8.9.ebuild,
