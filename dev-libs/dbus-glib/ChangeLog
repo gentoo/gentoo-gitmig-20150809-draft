@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/dbus
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.1 2006/08/18 22:09:48 steev Exp $
+
+*dbus-glib-0.71 (18 Aug 2006)
+
+  18 Aug 2006; Steev Klimaszewski <steev@gentoo.org>
+  +files/dbus-glib-introspection.patch, +metadata.xml,
+  +dbus-glib-0.71.ebuild:
+  Glib bindings for dbus.  Initial import
+
