@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Taint
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.8 2006/08/05 23:57:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.9 2006/08/18 01:51:17 mcummings Exp $
+
+  18 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Taint-1.04.ebuild:
+  Keywording ~amd64, tested for ian
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Test-Taint-1.04.ebuild:
