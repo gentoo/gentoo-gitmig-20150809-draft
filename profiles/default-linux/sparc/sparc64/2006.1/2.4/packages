@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/packages,v 1.2 2006/06/22 15:08:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.1/2.4/packages,v 1.3 2006/08/18 17:53:10 gustavoz Exp $
 
 # Force 2.4 headers
 *<sys-kernel/linux-headers-2.5
@@ -9,4 +9,4 @@
 <sys-libs/glibc-2.4
 
 # Doesn't build 2.4 kernels
-*<sys-devel/gcc-sparc64-4.1.1
+*<sys-devel/gcc-sparc64-4.0.3
