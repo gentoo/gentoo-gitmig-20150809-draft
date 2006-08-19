@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/inotify-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.1 2006/07/30 16:18:32 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/ChangeLog,v 1.2 2006/08/19 16:38:34 tester Exp $
+
+  19 Aug 2006; Olivier Crête <tester@gentoo.org> inotify-tools-2.2.ebuild:
+  Marked ~amd64 per bug #144428
 
 *inotify-tools-2.2 (30 Jul 2006)
 
