@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.01.ebuild,v 1.1 2006/08/09 00:24:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.01.ebuild,v 1.2 2006/08/19 00:21:12 jer Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
@@ -57,7 +57,6 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 src_unpack() {
 	unpack ${A}
-	echo ${S}
 	cd ${S}
 	epatch "${FILESDIR}/${PN}-9.00-install.patch"
 	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
