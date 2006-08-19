@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.5 2006/08/17 03:38:08 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1_pre20041025-r1.ebuild,v 1.6 2006/08/19 14:14:07 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ JA_P="l2h-${BASE_PV//./-}+jp2.0"	# l2h-2002-2-1+jp2.0
 
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
+DESCRIPTION="convertor written in Perl that converts LATEX documents to HTML"
 # Downloaded from:
 # http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/latex2html-2002-2-1.tar.gz
 SRC_URI="mirror://gentoo/${MY_P}+${SNAP_PV}.tar.gz"
@@ -20,9 +20,9 @@ SRC_URI="mirror://gentoo/${MY_P}+${SNAP_PV}.tar.gz"
 HOMEPAGE="http://www.latex2html.org/"
 #	"http://takeno.iee.niit.ac.jp/~shige/TeX/latex2html/ltx2html.html"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~ppc ~ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 IUSE="gif png"
 
 DEPEND="virtual/ghostscript
