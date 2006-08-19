@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.6.2.ebuild,v 1.6 2005/07/15 17:23:01 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.6.2.ebuild,v 1.7 2006/08/19 13:11:29 herbs Exp $
 
 inherit distutils
 
@@ -20,6 +20,12 @@ DEPEND="virtual/python
 	>=media-libs/sdl-mixer-1.2.4
 	>=dev-python/numeric-22.0
 	>=media-libs/smpeg-0.4.4-r1"
+
+src_unpack() {
+	unpack ${A}
+	# Search correct libdir for existing sdl libs
+	sed -i -e "s:/lib:/$(get_libdir):" ${S}/config_unix.py || die
+}
 
 src_install() {
 	mydoc=WHATSNEW
