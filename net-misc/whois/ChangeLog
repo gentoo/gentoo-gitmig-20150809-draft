@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.55 2006/08/17 20:31:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.56 2006/08/19 01:35:53 tcort Exp $
+
+  19 Aug 2006; Thomas Cort <tcort@gentoo.org> whois-4.7.12.ebuild:
+  Stable on alpha wrt Bug #144183.
 
   17 Aug 2006; Luca Barbato <lu_zero@gentoo.org> whois-4.7.12.ebuild:
   Marked ppc
