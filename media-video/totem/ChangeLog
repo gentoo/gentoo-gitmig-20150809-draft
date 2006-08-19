@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.125 2006/07/23 18:25:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.126 2006/08/19 00:51:00 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> totem-1.4.2-r1.ebuild:
+  Add ~ia64 keyword.
 
   23 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
   -files/totem-dbus-0.60.patch, -files/totem-1.2.1-gecko-sdk.patch,
