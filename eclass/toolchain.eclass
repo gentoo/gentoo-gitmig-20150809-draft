@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.300 2006/08/04 21:58:03 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.301 2006/08/19 13:36:10 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -846,8 +846,8 @@ gcc-compiler_pkg_postinst() {
 
 	if ! is_crosscompile ; then
 		echo
-		einfo "If you have issues with packages unable to locate libstdc++.la,"
-		einfo "then try running 'fix_libtool_files.sh' on the old gcc versions."
+		ewarn "If you have issues with packages unable to locate libstdc++.la,"
+		ewarn "then try running 'fix_libtool_files.sh' on the old gcc versions."
 		echo
 	fi
 
@@ -861,14 +861,14 @@ gcc-compiler_pkg_postinst() {
 
 	if ! is_crosscompile && ! use multislot && [[ ${GCCMAJOR}.${GCCMINOR} == 3.4 ]] ; then
 		echo
-		einfo "You should make sure to rebuild all your C++ packages when"
-		einfo "upgrading between different versions of gcc.  For example,"
-		einfo "when moving to gcc-3.4 from gcc-3.3, emerge gentoolkit and run:"
-		einfo "  # revdep-rebuild --library libstdc++.so.5"
+		ewarn "You should make sure to rebuild all your C++ packages when"
+		ewarn "upgrading between different versions of gcc.  For example,"
+		ewarn "when moving to gcc-3.4 from gcc-3.3, emerge gentoolkit and run:"
+		ewarn "  # revdep-rebuild --library libstdc++.so.5"
 		echo
-		einfo "For more information on the steps to take when upgrading "
-		einfo "from gcc-3.3 please refer to: "
-		einfo "http://www.gentoo.org/doc/en/gcc-upgrading.xml"
+		ewarn "For more information on the steps to take when upgrading "
+		ewarn "from gcc-3.3 please refer to: "
+		ewarn "http://www.gentoo.org/doc/en/gcc-upgrading.xml"
 		echo
 	fi
 
