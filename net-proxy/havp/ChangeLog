@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/havp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.5 2006/06/18 15:58:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/ChangeLog,v 1.6 2006/08/19 06:35:43 mrness Exp $
+
+*havp-0.82 (19 Aug 2006)
+
+  19 Aug 2006; Alin Nastac <mrness@gentoo.org>
+  -files/havp-0.79-gentoo.patch, +files/havp-0.82-gentoo.patch,
+  files/havp.initd, -havp-0.79.ebuild, +havp-0.82.ebuild:
+  Remove old version. Version bump (#142767). Demote "need clamd" to "use
+  clamd" (havp can use clamlib instead clamd).
 
 *havp-0.81 (18 Jun 2006)
 

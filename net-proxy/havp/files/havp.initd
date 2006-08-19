@@ -3,9 +3,10 @@
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
-	need net clamd
-	#havp could be used in conjuction with any parent proxies from below
-	use squid apache2 bfilter mman junkbuster oops polipo privoxy tinyproxy wwwoffled
+	need net
+	use clamd \
+		squid apache2 bfilter mman junkbuster oops polipo privoxy tinyproxy wwwoffled
+	#havp could be used in conjuction with any parent proxies enumerated above
 }
 
 get_havp_opt() {

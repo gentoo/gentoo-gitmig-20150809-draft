@@ -1,0 +1,56 @@
+diff -Nurd havp-0.82.orig/etc/havp/havp.config havp-0.82/etc/havp/havp.config
+--- havp-0.82.orig/etc/havp/havp.config	2006-08-10 20:03:49.000000000 +0200
++++ havp-0.82/etc/havp/havp.config	2006-08-10 20:04:45.000000000 +0200
+@@ -187,7 +187,7 @@
+ # Path to template files.
+ #
+ # Default:
+-# TEMPLATEPATH /usr/local/etc/havp/templates/en
++# TEMPLATEPATH /etc/havp/templates/en
+ 
+ #
+ # Set to true if you want to prefer Whitelist.
+@@ -201,13 +201,13 @@
+ # List of URLs not to scan.
+ #
+ # Default:
+-# WHITELIST /usr/local/etc/havp/whitelist
++# WHITELIST /etc/havp/whitelist
+ 
+ #
+ # List of URLs that are denied access.
+ #
+ # Default:
+-# BLACKLIST /usr/local/etc/havp/blacklist
++# BLACKLIST /etc/havp/blacklist
+ 
+ #
+ # Is scanner error fatal?
+diff -Nurd havp-0.82.orig/havp/default.h.in havp-0.82/havp/default.h.in
+--- havp-0.82.orig/havp/default.h.in	2006-08-10 20:03:49.000000000 +0200
++++ havp-0.82/havp/default.h.in	2006-08-10 20:04:11.000000000 +0200
+@@ -51,7 +51,7 @@
+  "ENABLEAVAST","AVASTSOCKET","AVASTSERVER","AVASTPORT"
+ //SCANNERS
+ 
+-#define CONFIGFILE "/usr/local/etc/havp/havp.config"
++#define CONFIGFILE "/etc/havp/havp.config"
+ 
+ 
+ //##############################################################
+diff -Nurd havp-0.82.orig/havp/params.cpp havp-0.82/havp/params.cpp
+--- havp-0.82.orig/havp/params.cpp	2006-08-10 20:03:49.000000000 +0200
++++ havp-0.82/havp/params.cpp	2006-08-10 20:05:52.000000000 +0200
+@@ -58,9 +58,9 @@
+     SetConfig("KEEPBACKTIME",	"5");
+     SetConfig("TRICKLING",	"30");
+     SetConfig("WHITELISTFIRST",	"true");
+-    SetConfig("WHITELIST",	"/usr/local/etc/havp/whitelist");
+-    SetConfig("BLACKLIST",	"/usr/local/etc/havp/blacklist");
+-    SetConfig("TEMPLATEPATH",	"/usr/local/etc/havp/templates/en");
++    SetConfig("WHITELIST",	"/etc/havp/whitelist");
++    SetConfig("BLACKLIST",	"/etc/havp/blacklist");
++    SetConfig("TEMPLATEPATH",	"/etc/havp/templates/en");
+     SetConfig("TEMPDIR",	"/var/tmp");
+     SetConfig("SCANTEMPFILE",	"/var/tmp/havp/havp-XXXXXX");
+     SetConfig("PIDFILE",	"/var/run/havp/havp.pid");
