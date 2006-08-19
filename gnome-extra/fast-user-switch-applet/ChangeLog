@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/fast-user-switch-applet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/ChangeLog,v 1.14 2006/08/17 19:49:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/fast-user-switch-applet/ChangeLog,v 1.15 2006/08/19 00:15:53 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  fast-user-switch-applet-2.14.2.ebuild:
+  Add ~ia64 keyword.
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org>
   fast-user-switch-applet-2.14.2.ebuild:
