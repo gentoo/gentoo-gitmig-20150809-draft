@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.75 2006/07/16 07:03:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.76 2006/08/19 15:33:33 vapier Exp $
+
+*ntp-4.2.2_p3 (19 Aug 2006)
+
+  19 Aug 2006; Mike Frysinger <vapier@gentoo.org> +ntp-4.2.2_p3.ebuild:
+  Version bump #144107 by Conrad Kostecki.
 
 *ntp-4.2.2_p2 (16 Jul 2006)
 
