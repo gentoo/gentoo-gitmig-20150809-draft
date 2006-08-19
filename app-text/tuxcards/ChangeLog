@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.15 2006/07/31 23:17:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.16 2006/08/19 18:46:27 malc Exp $
+
+  19 Aug 2006; <malc@gentoo.org> tuxcards-1.2.ebuild:
+  Stable on amd64
 
   31 Jul 2006; Andrej Kacian <ticho@gentoo.org> tuxcards-1.2.ebuild:
   Do not try to include ccolorbar.h. Bug #132393, reported by gentoo at
