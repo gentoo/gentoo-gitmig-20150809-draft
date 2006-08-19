@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5751 2006/08/19 08:01:42 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5752 2006/08/19 08:39:07 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -493,11 +493,6 @@ net-misc/freenet6
 # Masked for removal by treecleaners
 # bug # 27515
 media-tv/zapping
-
-# Alec Warner <antarus@gentoo.org> (21 Jun 2006)
-# Masked for removal by treecleaners
-# bug # 77501
-app-admin/scotty
 
 # Marinus Schraal <foser@gentoo.org> (19 Jun 2006)
 # removes internal API headers, breaks stuff that depends on internals
