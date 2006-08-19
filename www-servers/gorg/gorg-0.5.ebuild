@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.5.ebuild,v 1.5 2006/03/28 07:16:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.5.ebuild,v 1.6 2006/08/19 19:57:39 dertobi123 Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ IUSE="apache fastcgi"
 SLOT="0"
 USE_RUBY="ruby18"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 
 DEPEND=">=dev-libs/libxml2-2.6.16
 		>=dev-libs/libxslt-1.1.12"
