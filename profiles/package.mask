@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5756 2006/08/19 16:01:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5757 2006/08/19 16:41:02 ikelos Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Mike Auty <ikelos@gentoo.org> (19 Aug 2006)
+# Masked for a couple days of testing
+=app-emulation/vmware-server-1.0.0.29996
+=app-emulation/vmware-server-console-1.0.0.29996
 
 # Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
 # Development versions of FWbuilder.
