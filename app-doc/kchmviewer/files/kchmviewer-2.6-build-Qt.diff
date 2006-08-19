@@ -1,0 +1,11 @@
+--- src/kde-qt.h.orig	2006-08-19 17:13:53.000000000 +0200
++++ src/kde-qt.h	2006-08-19 17:15:18.000000000 +0200
+@@ -59,7 +59,7 @@
+ 	#include <qmessagebox.h>
+ 	#include <qprogressdialog.h>
+ 
+-	#define i18n(A)		tr(A)
++	#define i18n(A)		QObject::tr(A)
+ 
+ #endif /* USE_KDE */
+ 
