@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.152 2006/08/16 14:26:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.153 2006/08/19 00:54:58 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> gedit-2.14.4.ebuild:
+  Add ~ia64 keyword.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> gedit-2.14.3.ebuild:
   Stable on ppc64
