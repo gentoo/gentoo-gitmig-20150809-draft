@@ -25,7 +25,8 @@ depend() {
 }
 
 do_hdparm() {
-	if [[ -n ${args:=${all_args} ${!extra_args}} ]] ; then
+	local my_all_args="${all_args} ${!extra_args}"
+	if [[ -n ${args:=${my_all_args}} ]] ; then
 		local orgdevice=$(readlink -f ${device})
 		if [[ -b ${orgdevice} ]] ; then
 			ebegin "Running hdparm on ${device}"
