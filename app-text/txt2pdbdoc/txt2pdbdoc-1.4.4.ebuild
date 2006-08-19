@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/txt2pdbdoc-1.4.4.ebuild,v 1.6 2006/03/16 13:04:26 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2pdbdoc/txt2pdbdoc-1.4.4.ebuild,v 1.7 2006/08/19 14:43:03 tcort Exp $
 
 DESCRIPTION="Text to Doc file converter for the Palm Pilot.  Also includes an HTML to Doc converter."
 SRC_URI="http://homepage.mac.com/pauljlucas/software/${P}.tar.gz"
 HOMEPAGE="http://homepage.mac.com/pauljlucas/software.html"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 
