@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Expect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.8 2006/08/07 22:28:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.9 2006/08/19 17:24:26 mcummings Exp $
+
+*Expect-1.20 (19 Aug 2006)
+
+  19 Aug 2006; Michael Cummings <mcummings@gentoo.org> +Expect-1.20.ebuild:
+  Version bump
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org> Expect-1.17.ebuild:
   Marking stable amd64, sparc
