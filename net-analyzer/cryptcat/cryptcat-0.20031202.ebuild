@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-0.20031202.ebuild,v 1.1 2006/08/19 15:17:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-0.20031202.ebuild,v 1.2 2006/08/19 15:22:05 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,8 +22,8 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/${MY_P}-2.diff
+	cd "${S}"
+	epatch "${WORKDIR}"/${MY_P}-2.diff
 	echo "#define arm arm_timer" >> generic.h
 	sed -i 's:#define HAVE_BIND:#undef HAVE_BIND:' netcat.c
 	sed -i 's:#define FD_SETSIZE 16:#define FD_SETSIZE 1024:' netcat.c #34250
@@ -39,5 +39,5 @@ src_compile() {
 src_install() {
 	dobin cryptcat || die
 	dodoc Changelog README README.cryptcat
-	doman ${P}/debian/cryptcat.1
+	doman */debian/cryptcat.1
 }
