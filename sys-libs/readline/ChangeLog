@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.80 2006/04/27 23:23:39 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.81 2006/08/19 15:43:36 grobian Exp $
+
+  19 Aug 2006; Fabian Groffen <grobian@gentoo.org> readline-5.1_p4.ebuild:
+  Marked ppc-macos stable for progressive users (bug #129885)
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-readline-4.3-r5, files/digest-readline-4.3-r6,
