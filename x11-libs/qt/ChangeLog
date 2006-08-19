@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.339 2006/08/14 11:00:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.340 2006/08/19 11:58:16 jer Exp $
+
+  19 Aug 2006; Jeroen Roovers <jer@gentoo.org> qt-4.1.4.ebuild:
+  Stable for HPPA (bug #134341).
 
   14 Aug 2006; Jeroen Roovers <jer@gentoo.org> files/qt4-parisc-linux.diff,
   qt-4.1.3.ebuild, qt-4.1.4.ebuild:
