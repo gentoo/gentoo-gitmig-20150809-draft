@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gjdoc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.14 2006/08/13 19:12:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gjdoc/ChangeLog,v 1.15 2006/08/19 14:37:12 tcort Exp $
+
+  19 Aug 2006; Thomas Cort <tcort@gentoo.org> gjdoc-0.7.7.ebuild:
+  Stable on amd64 wrt Bug #141048.
 
   13 Aug 2006; Markus Rothe <corsair@gentoo.org> gjdoc-0.7.7.ebuild:
   Stable on ppc64; bug #141048
