@@ -97,3 +97,6 @@ seamonkey
 
 # depends on ibm-jdk-bin which isn't available for ia64
 mpe-sdk
+
+# mask nvtv as I don't have the hardware to test it (19 Aug 2006 kloeri)
+nvtv
