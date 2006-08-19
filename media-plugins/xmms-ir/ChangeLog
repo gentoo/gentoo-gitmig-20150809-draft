@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-ir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ir/ChangeLog,v 1.7 2006/08/18 20:44:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ir/ChangeLog,v 1.8 2006/08/19 18:31:52 corsair Exp $
+
+  19 Aug 2006; Markus Rothe <corsair@gentoo.org> xmms-ir-1.2.10-r1.ebuild:
+  Stable on ppc64; bug #143836
 
   18 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   xmms-ir-1.2.10-r1.ebuild:
