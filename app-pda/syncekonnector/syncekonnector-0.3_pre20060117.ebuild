@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/syncekonnector-0.3_pre20060117.ebuild,v 1.2 2006/01/22 01:32:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/syncekonnector-0.3_pre20060117.ebuild,v 1.3 2006/08/19 20:12:29 chriswhite Exp $
 
 inherit eutils kde autotools
 
@@ -17,6 +17,7 @@ DEPEND=">=app-pda/synce-libsynce-0.9.1
 	>=app-pda/synce-rra-0.9.1
 	>=app-pda/orange-0.3
 	>=app-arch/unshield-0.5
+	|| ( =kde-base/ksync-3.5* =kde-base/kdepim-3.5* )
 	app-pda/dynamite
 	!app-pda/rapip"
 

@@ -1,24 +1,65 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e4fff73015a3f0b06fe615af99a10512 ChangeLog 1227
-MD5 eec13d229bb82896de30fe9113e9d787 files/digest-syncekonnector-0.2.1 72
-MD5 eec13d229bb82896de30fe9113e9d787 files/digest-syncekonnector-0.2.1-r1 72
-MD5 5b28c0d0a6cbc34e6e0fba617d10e009 files/digest-syncekonnector-0.3_pre20060108 83
-MD5 c7c1be561a9c340e678c9c0e6766fe1c files/digest-syncekonnector-0.3_pre20060117 83
+AUX kpimprefs.h 2560 RMD160 dfc29f3edbbe17320ef66cfd79a2cb085842a1fb SHA1 6d2f7b935588c2217e4d4e84801c9d4b43f9517d SHA256 fa20918952dcab9a2791015312edceef693cfc07c60a1f453186cd79692d4704
 MD5 7d6ad97eacbd230faa55492dc0eff8d9 files/kpimprefs.h 2560
+RMD160 dfc29f3edbbe17320ef66cfd79a2cb085842a1fb files/kpimprefs.h 2560
+SHA256 fa20918952dcab9a2791015312edceef693cfc07c60a1f453186cd79692d4704 files/kpimprefs.h 2560
+AUX syncekonnector-0.2.1-configure.in.in 251 RMD160 ae6e6977caef72c9513f5c91d95d30e84f26c6dd SHA1 9d52b360383c917af90637201af1dbc204fe6c53 SHA256 0245907140487cbdeadb4883d74bacc7eb71ae9dde33b9c72a82f887ec42c6a1
 MD5 194181682125a9331ab009c397137a35 files/syncekonnector-0.2.1-configure.in.in 251
+RMD160 ae6e6977caef72c9513f5c91d95d30e84f26c6dd files/syncekonnector-0.2.1-configure.in.in 251
+SHA256 0245907140487cbdeadb4883d74bacc7eb71ae9dde33b9c72a82f887ec42c6a1 files/syncekonnector-0.2.1-configure.in.in 251
+AUX syncekonnector-0.2.1-kde3.5.patch 2202 RMD160 8c963000f46bded576bc0aba5d7d887ada27d72e SHA1 428871054dd3b4431bc77907bf2a72e7d7312110 SHA256 99f2f28c2ecc0a82e1fee458841f1f13ed218e8e0f525ccc6f21be7919caeb19
 MD5 9ae9937872a01966f183fad5a8797416 files/syncekonnector-0.2.1-kde3.5.patch 2202
+RMD160 8c963000f46bded576bc0aba5d7d887ada27d72e files/syncekonnector-0.2.1-kde3.5.patch 2202
+SHA256 99f2f28c2ecc0a82e1fee458841f1f13ed218e8e0f525ccc6f21be7919caeb19 files/syncekonnector-0.2.1-kde3.5.patch 2202
+AUX syncekonnector-0.3_pre20060108-autotools.patch 1990 RMD160 dea71208c317c388f149b03bf2f281ecae8a8d75 SHA1 0a426ed6ef50419ae2d53cb0c08ec0b2b4ecf074 SHA256 839e2663515f7cd79d582a25092436fd621be5d871f20efeca64ea03fac0ff88
 MD5 e56b3970d9ada66c4cd7c262de6c6e05 files/syncekonnector-0.3_pre20060108-autotools.patch 1990
-MD5 3e8a9f3bc9a5c8aabcc8b7e4d41f7fb8 metadata.xml 249
+RMD160 dea71208c317c388f149b03bf2f281ecae8a8d75 files/syncekonnector-0.3_pre20060108-autotools.patch 1990
+SHA256 839e2663515f7cd79d582a25092436fd621be5d871f20efeca64ea03fac0ff88 files/syncekonnector-0.3_pre20060108-autotools.patch 1990
+DIST syncekonnector-0.2.1.tar.gz 635690
+DIST syncekonnector-0.3_pre20060108.tar.bz2 222123
+DIST syncekonnector-0.3_pre20060117.tar.bz2 222123 RMD160 24bf58f53922095fa6e68ab2b40efb7d0eaf14a0 SHA1 92838217d94e2fddca00d46ad99712c00d40458b SHA256 c993bb124cb6e4b19960b941fd25833ee151076a377f9a89dc0f84aa1b9ec96d
+EBUILD syncekonnector-0.2.1-r1.ebuild 974 RMD160 ae1d92f17887aac58fb8e623a1528842ba487017 SHA1 7c2c65caf605fd16f645897f4049b1c46e3da5d3 SHA256 eff2d03bc948377978633a30956766af437e138c0483b2a9019ad059403cbc1b
 MD5 7dda6d348a6d7f9e3f145a94fb963b49 syncekonnector-0.2.1-r1.ebuild 974
+RMD160 ae1d92f17887aac58fb8e623a1528842ba487017 syncekonnector-0.2.1-r1.ebuild 974
+SHA256 eff2d03bc948377978633a30956766af437e138c0483b2a9019ad059403cbc1b syncekonnector-0.2.1-r1.ebuild 974
+EBUILD syncekonnector-0.2.1.ebuild 804 RMD160 eea95a3bf962e53d07d189dbce268ec118a53525 SHA1 03c3713519ad3fdaba037a0e5d90ad6fffbb9b56 SHA256 5ed2942929a75f98dbf9fb29ee7c436876b3419c6f7bbc3616e42c26285fe45a
 MD5 b8bc0a9574e150038216631527352813 syncekonnector-0.2.1.ebuild 804
+RMD160 eea95a3bf962e53d07d189dbce268ec118a53525 syncekonnector-0.2.1.ebuild 804
+SHA256 5ed2942929a75f98dbf9fb29ee7c436876b3419c6f7bbc3616e42c26285fe45a syncekonnector-0.2.1.ebuild 804
+EBUILD syncekonnector-0.3_pre20060108.ebuild 929 RMD160 4c9c347ab84cd15baa1dbe4ffccb95fc0f88a8fa SHA1 71226abf79e89c19b94682d8251f4f598fe02751 SHA256 554a627e39ddafc896708a11a38776707d707fbb245884018dc335aa3bbc0e65
 MD5 a18b7ca43e390562f4bee4a5af0cc240 syncekonnector-0.3_pre20060108.ebuild 929
-MD5 a50fd612bbeb3ea39763b7fd411716ca syncekonnector-0.3_pre20060117.ebuild 896
+RMD160 4c9c347ab84cd15baa1dbe4ffccb95fc0f88a8fa syncekonnector-0.3_pre20060108.ebuild 929
+SHA256 554a627e39ddafc896708a11a38776707d707fbb245884018dc335aa3bbc0e65 syncekonnector-0.3_pre20060108.ebuild 929
+EBUILD syncekonnector-0.3_pre20060117.ebuild 947 RMD160 f51cd78ddb20bf51faddc8239015c35c716b7ee5 SHA1 7d635bcfa2c65c1fa20bba9a554e7942b81f4279 SHA256 73a35324280db8e1df82e84f7f86c612fde01a88c5fdff80b0c69d4d1a6e5bf4
+MD5 60c556fffa89c05eb37f241867266d3e syncekonnector-0.3_pre20060117.ebuild 947
+RMD160 f51cd78ddb20bf51faddc8239015c35c716b7ee5 syncekonnector-0.3_pre20060117.ebuild 947
+SHA256 73a35324280db8e1df82e84f7f86c612fde01a88c5fdff80b0c69d4d1a6e5bf4 syncekonnector-0.3_pre20060117.ebuild 947
+MISC ChangeLog 1366 RMD160 7b5825d2fd140eb2596586f2f66ec6148f948001 SHA1 295ab39665993b4b8ba7d9cf78dae55f49202255 SHA256 bfc4397df564550b41feb5ce094a5af46d4a3aa02ab56c70d888abd17e7062f1
+MD5 6b55b4deacb0cf91e36d55a3d33075e5 ChangeLog 1366
+RMD160 7b5825d2fd140eb2596586f2f66ec6148f948001 ChangeLog 1366
+SHA256 bfc4397df564550b41feb5ce094a5af46d4a3aa02ab56c70d888abd17e7062f1 ChangeLog 1366
+MISC metadata.xml 249 RMD160 75d575dcd73b17d5019f66fbb61ef2a71ca8e7d9 SHA1 a4f73b0626f3289ee7e638235aa37c764c086ee1 SHA256 29e43df70dd42effb64c3eab89789e9386aa5c31bb3553b74f26b3e52ea0449e
+MD5 3e8a9f3bc9a5c8aabcc8b7e4d41f7fb8 metadata.xml 249
+RMD160 75d575dcd73b17d5019f66fbb61ef2a71ca8e7d9 metadata.xml 249
+SHA256 29e43df70dd42effb64c3eab89789e9386aa5c31bb3553b74f26b3e52ea0449e metadata.xml 249
+MD5 eec13d229bb82896de30fe9113e9d787 files/digest-syncekonnector-0.2.1 72
+RMD160 7bb2f68f38b29201474885ac945fdff140ca1153 files/digest-syncekonnector-0.2.1 72
+SHA256 e1bc07bceef7bf6b8392f16639523d009fad132645986644ffa2f5aa6607a743 files/digest-syncekonnector-0.2.1 72
+MD5 eec13d229bb82896de30fe9113e9d787 files/digest-syncekonnector-0.2.1-r1 72
+RMD160 7bb2f68f38b29201474885ac945fdff140ca1153 files/digest-syncekonnector-0.2.1-r1 72
+SHA256 e1bc07bceef7bf6b8392f16639523d009fad132645986644ffa2f5aa6607a743 files/digest-syncekonnector-0.2.1-r1 72
+MD5 5b28c0d0a6cbc34e6e0fba617d10e009 files/digest-syncekonnector-0.3_pre20060108 83
+RMD160 0149fc3b92b9579356d6046c3b239f84be9daa3b files/digest-syncekonnector-0.3_pre20060108 83
+SHA256 54a23d8afd01d602e8c8a813c8652c05282561be734d6c7dda5fe1eaf59bc5af files/digest-syncekonnector-0.3_pre20060108 83
+MD5 e9efb4ff737081e4209abf982135532f files/digest-syncekonnector-0.3_pre20060117 295
+RMD160 9d66c4d5ea448c847f17ea788372c69b5c1cfbb1 files/digest-syncekonnector-0.3_pre20060117 295
+SHA256 fc6e5dc4fd865e9d996febe92f9957fde4ff3d34f5178a27025df5bdeb923571 files/digest-syncekonnector-0.3_pre20060117 295
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFD0uDQFdQwWVoAgN4RAvObAJ9pktY6WfCkEzVGvwXgxc5593ddhwCgpan/
-tcG8L/FE3/KufKL82/L+KR8=
-=d/o4
+iD8DBQFE53C5FdQwWVoAgN4RAjn9AJ9V8IZq991OR9Ii6a+B9QkuMF+1+gCfUlEF
+IB/Mjt1+l3f9cE9lYAmgd6E=
+=VqcB
 -----END PGP SIGNATURE-----

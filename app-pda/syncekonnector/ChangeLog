@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/syncekonnector
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.5 2006/01/22 01:32:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.6 2006/08/19 20:12:29 chriswhite Exp $
+
+  19 Aug 2006; Chris White <chriswhite@gentoo.org>
+  syncekonnector-0.3_pre20060117.ebuild:
+  Dependancy on kdepim/ksync for bug #139953.
 
   22 Jan 2006; Chris White <chriswhite@gentoo.org>
   syncekonnector-0.3_pre20060108.ebuild,
