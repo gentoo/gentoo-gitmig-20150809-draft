@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.3 2006/07/18 17:08:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.4 2006/08/19 09:34:36 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,22 +41,20 @@ src_compile() {
 	# wont compile with -O3, needs -O2
 	replace-flags -O[3-9] -O2
 
-	./configure \
+	econf \
 		$(use_enable nls) \
 		$(use_enable kerberos) \
 		$(use_enable ssl) \
-		--prefix=/usr \
 		--disable-setuid \
 		--with-userid=lp \
 		--with-groupid=lp \
 		--with-lpd_conf_path=/etc/lprng/lpd.conf \
 		--with-lpd_perms_path=/etc/lprng/lpd.perms \
-		--libexecdir=/usr/lib \
+		--libexecdir=/usr/libexec/lprng \
 		--sysconfdir=/etc/lprng \
-		--mandir=/usr/share/man \
-		--host=${CHOST} || die
+		--disable-strip || die "econf failed"
 
-	make || die "printer on fire!"
+	emake || die "printer on fire!"
 }
 
 src_install() {
@@ -64,18 +62,13 @@ src_install() {
 	diropts -m 700 -o lp -g lp
 	dodir /var/spool/lpd/lp
 
-	make install \
+	emake install \
 		DESTDIR=${D} \
 		POSTINSTALL="NO" \
-		gnulocaledir=${D}/usr/share/locale || die
-
-	# now included in foomatic 3.0
-	#exeinto /usr/bin
-	#doexe ${FILESDIR}/lpdomatic
+		gnulocaledir=${D}/usr/share/locale || die "emake install failed"
 
 	dodoc CHANGES COPYRIGHT LICENSE README VERSION \
-		HOWTO/LPRng-HOWTO.pdf ${FILESDIR}/printcap \
-		lpd.conf lpd.perms
+		${FILESDIR}/printcap lpd.conf lpd.perms
 	dohtml HOWTO/*
 
 	insinto /etc/lprng
