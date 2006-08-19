@@ -1,6 +1,9 @@
 # ChangeLog for app-text/man2html
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.17 2005/10/13 17:30:07 metalgod Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.18 2006/08/19 19:06:07 malc Exp $
+
+  19 Aug 2006; <malc@gentoo.org> man2html-1.5l-r2.ebuild:
+  Stable on amd64
 
   13 Oct 2005; Luis Medinas <metalgod@gentoo.org> man2html-1.5l-r2.ebuild:
   Added ~amd64 keyword. Bug #109085.

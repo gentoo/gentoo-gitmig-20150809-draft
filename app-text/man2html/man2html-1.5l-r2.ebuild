@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l-r2.ebuild,v 1.12 2006/06/21 17:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/man2html-1.5l-r2.ebuild,v 1.13 2006/08/19 19:06:07 malc Exp $
 
 inherit eutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://freshmeat.net/projects/man/"
 SRC_URI="mirror://kernel/linux/utils/man/man-${PV}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 DEPEND="app-misc/glimpse
