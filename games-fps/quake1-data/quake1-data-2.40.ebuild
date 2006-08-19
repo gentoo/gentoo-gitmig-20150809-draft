@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.11 2006/08/11 02:38:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.12 2006/08/19 22:21:39 vapier Exp $
 
 # TODO: if installing off of the 1.01 cd, need to fetch the
 #       quake shareware and use that pak0
@@ -55,10 +55,10 @@ src_install() {
 		0)  doins "${CDROM_ROOT}"/id1/* || die "doins pak files"
 		    dodoc "${CDROM_ROOT}"/*.txt
 		    ;;
-		1)  doins id1/* || die "doins pak files"
+		1|3)doins id1/* || die "doins pak files"
 		    dodoc *.txt
 		    ;;
-		2|3)newins "${CDROM_ROOT}"/Setup/ID1/PAK0.PAK pak0.pak \
+		2)  newins "${CDROM_ROOT}"/Setup/ID1/PAK0.PAK pak0.pak \
 				|| die "ins pak0.pak failed"
 		    newins "${CDROM_ROOT}"/Setup/ID1/PAK1.PAK pak1.pak \
 				|| die "ins pak1.pak failed"
