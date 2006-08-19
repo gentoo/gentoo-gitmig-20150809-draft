@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-20031202.ebuild,v 1.12 2005/10/14 01:33:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cryptcat/cryptcat-0.20031202.ebuild,v 1.1 2006/08/19 15:17:05 vapier Exp $
 
 inherit eutils toolchain-funcs
 
 DEB_PVER=2
-MY_P=${PN}_${PV}
+MY_P=${PN}_${PV#0.}
 DESCRIPTION="netcat clone extended with twofish encryption"
 HOMEPAGE="http://farm9.org/Cryptcat/"
 SRC_URI="http://farm9.org/Cryptcat/${MY_P}.tar.gz
