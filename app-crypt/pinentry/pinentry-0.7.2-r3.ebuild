@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.10 2006/07/23 03:13:27 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.11 2006/08/19 09:07:17 kloeri Exp $
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ia64 mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="gtk ncurses qt3 caps"
 
 DEPEND="gtk? ( =x11-libs/gtk+-2* )
