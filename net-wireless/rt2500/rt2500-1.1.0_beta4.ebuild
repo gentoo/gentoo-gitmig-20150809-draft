@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta4.ebuild,v 1.2 2006/07/10 11:43:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta4.ebuild,v 1.3 2006/08/19 14:23:46 dertobi123 Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -11,7 +11,7 @@ HOMEPAGE="http://rt2x00.serialmonkey.com"
 SRC_URI="mirror://sourceforge/rt2400/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="qt3"
 DEPEND="net-wireless/wireless-tools
 	qt3? ( =x11-libs/qt-3* )"
