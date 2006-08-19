@@ -13,7 +13,7 @@ AUX libtheora-1.0alpha6-buildfixes.patch 3977 RMD160 58061a155a4fbdb35ec87288d33
 MD5 1eb2cfa449ce65cb36b04b1d8c93933f files/libtheora-1.0alpha6-buildfixes.patch 3977
 RMD160 58061a155a4fbdb35ec87288d332001906ba457e files/libtheora-1.0alpha6-buildfixes.patch 3977
 SHA256 d2770fadcef32f8c4ea585865974ad82b8e55b4c6b874168d258b5c65e5d2701 files/libtheora-1.0alpha6-buildfixes.patch 3977
-DIST libtheora-1.0alpha3.tar.bz2 871744
+DIST libtheora-1.0alpha3.tar.bz2 871744 RMD160 57f0ab9919015daccd194266898d50667ca841a7 SHA1 ae01e03439bce495dc0d124c19de29c7fd4b5ad5 SHA256 ac002180477522ca7447f7f481c9904f81c60663898f61bfff46c9cd918d45a4
 DIST libtheora-1.0alpha4.tar.bz2 1755132
 DIST libtheora-1.0alpha5.tar.bz2 1765512 RMD160 47317a42ef6165a167dc45bb697d6528e1209469 SHA1 8e740ccd7219861de83ac17ecceb13c02ed7e24a SHA256 d219151452677ace53998f7401d106fd615aa607575740cc26442d7b8622d2f2
 DIST libtheora-1.0alpha6.tar.bz2 1559318 RMD160 b0d81dab81ec96d51e2d6a4c047beff807de6077 SHA1 0fa7314a432e60c6178a7d98b6408c7a950155ed SHA256 4e6044cb24d2cdb42e5d9402c709644886e8761f7b166781469ffda44240da92
@@ -29,10 +29,10 @@ EBUILD libtheora-1.0_alpha5.ebuild 1240 RMD160 32bb1624140b5b3719bee6fde37f7ccc7
 MD5 ec899c4e644f4fad96d375d369d6d05e libtheora-1.0_alpha5.ebuild 1240
 RMD160 32bb1624140b5b3719bee6fde37f7ccc7a38d556 libtheora-1.0_alpha5.ebuild 1240
 SHA256 81ed04561ac6d5132610964694ea187a65cf58b17bc9df3d779f53c981935630 libtheora-1.0_alpha5.ebuild 1240
-EBUILD libtheora-1.0_alpha6-r1.ebuild 1699 RMD160 1f32c4824f32ba9be78df9bb2020f106da3a5eca SHA1 e2baf1443062dee95ebb4b33ffefcd1a24d44cc9 SHA256 dde28bfe26b153b4e17023e040283fa6ec001f786b15a4eae5c6e67d5dea604a
-MD5 31d1ecf1ee2f507dcf03af171d963e20 libtheora-1.0_alpha6-r1.ebuild 1699
-RMD160 1f32c4824f32ba9be78df9bb2020f106da3a5eca libtheora-1.0_alpha6-r1.ebuild 1699
-SHA256 dde28bfe26b153b4e17023e040283fa6ec001f786b15a4eae5c6e67d5dea604a libtheora-1.0_alpha6-r1.ebuild 1699
+EBUILD libtheora-1.0_alpha6-r1.ebuild 1694 RMD160 a8569c4547a4f3eccaff9c2088e186461c58cf3b SHA1 e812cbe5f269fddede97e5fb4dbd9d0aa58d2610 SHA256 58f12273a8029fec3352ef6a500d32ce135911d535c71c32d505b7ded462a11f
+MD5 3ecad835e74038d644295091f9e0d9c4 libtheora-1.0_alpha6-r1.ebuild 1694
+RMD160 a8569c4547a4f3eccaff9c2088e186461c58cf3b libtheora-1.0_alpha6-r1.ebuild 1694
+SHA256 58f12273a8029fec3352ef6a500d32ce135911d535c71c32d505b7ded462a11f libtheora-1.0_alpha6-r1.ebuild 1694
 EBUILD libtheora-1.0_alpha6.ebuild 1594 RMD160 33ee8188956bf2e2975ab3d1eaef48ae69ce815f SHA1 562e8256a8cd3a56a55cacedd822795812bc9a0b SHA256 e7c192f0f60b1db3fc0be2398828f9047547ad05ab0544b13fd8f9833971eac5
 MD5 1b2ce35bb8bbcf35d6134e2fce387faa libtheora-1.0_alpha6.ebuild 1594
 RMD160 33ee8188956bf2e2975ab3d1eaef48ae69ce815f libtheora-1.0_alpha6.ebuild 1594
@@ -45,9 +45,9 @@ MISC metadata.xml 225 RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d SHA1 1b8cc
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 RMD160 6e3fccd1ae62f02a0cb28d319aa185af0020822d metadata.xml 225
 SHA256 1a7f3e805478b42bc379b2a36944579d34d7e66ba5bf418a651e1cd58ad0a7f5 metadata.xml 225
-MD5 a9f9ea68a0659a1bd63f423e5028d5bf files/digest-libtheora-1.0_alpha3 72
-RMD160 3ae7d00ff16d4d03d4fabc369f7ea7926826ac74 files/digest-libtheora-1.0_alpha3 72
-SHA256 bf134173556aa96fa795e9cf3bfa1cea76d381485b9fc053b4f32d04327c269b files/digest-libtheora-1.0_alpha3 72
+MD5 e0f7f0e73b94f13952a4baeb7d2b1773 files/digest-libtheora-1.0_alpha3 262
+RMD160 b9bb731aa5ee00a781ccc836dda471e18790a033 files/digest-libtheora-1.0_alpha3 262
+SHA256 43edac56ad275d846f34fcfec9acff3abf02ffcf4b957bb02575cd8d29354f1b files/digest-libtheora-1.0_alpha3 262
 MD5 f828864823910f80ec4368be981c0a61 files/digest-libtheora-1.0_alpha4-r1 73
 RMD160 cb4ffb5aee1e9b22c34d5770a31499cd8748e4b3 files/digest-libtheora-1.0_alpha4-r1 73
 SHA256 89537af80b260bd31e330de057b218d1fb5f5897d737a133372296d1b52ce38b files/digest-libtheora-1.0_alpha4-r1 73
@@ -61,9 +61,9 @@ MD5 06ec218ca2c06cddc319fb505528640c files/digest-libtheora-1.0_alpha6-r1 265
 RMD160 dd56d04d82b9c5e471a4908d09e50f9af736acf8 files/digest-libtheora-1.0_alpha6-r1 265
 SHA256 749c39f8feedca85f21af8969bc98c8c33c3d786faf52a5ed656dd7c063f1c00 files/digest-libtheora-1.0_alpha6-r1 265
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFE5NCqKRy60XGEcJIRAkTDAKClDTPJOqv7PEyXdKj9STV6JUG+oACdGwqv
-ucuz4nV6u0JjlenglIYtZLk=
-=7XoB
+iD8DBQFE5x0LamhnQswr0vIRAtHHAJ9qSdN3XU0Q+1YInnMh3yZhc/X2TQCbB1a7
+HWUndoqkGTON8rLPpNbg2XI=
+=t5LZ
 -----END PGP SIGNATURE-----
