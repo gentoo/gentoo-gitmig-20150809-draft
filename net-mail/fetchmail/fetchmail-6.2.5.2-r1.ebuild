@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2-r1.ebuild,v 1.11 2006/03/01 10:40:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.2-r1.ebuild,v 1.12 2006/08/19 23:33:59 tove Exp $
 
 inherit eutils gnuconfig
 
@@ -97,7 +97,7 @@ pkg_postinst() {
 		einfo "don't seem to have Python with tkinter support."
 		einfo
 		einfo "If you want to be able to use fetchmailconf(1), do the following:"
-		einfo "  1.  Include 'tcltk' in USE variable in your /etc/make.conf."
+		einfo "  1.  Add 'tk' to the USE variable in /etc/make.conf."
 		einfo "  2.  (Re-)merge Python."
 		einfo
 	fi

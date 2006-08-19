@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.105 2006/06/30 14:49:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.106 2006/08/19 23:33:59 tove Exp $
+
+  19 Aug 2006; Torsten Veller <tove@gentoo.org> fetchmail-6.2.5.2-r1.ebuild,
+  fetchmail-6.3.2.ebuild, fetchmail-6.3.2-r1.ebuild, fetchmail-6.3.3.ebuild,
+  fetchmail-6.3.4.ebuild:
+  dev-lang/python has changed the useflag: tcltk -> tk
 
   30 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   fetchmail-6.3.4.ebuild:
