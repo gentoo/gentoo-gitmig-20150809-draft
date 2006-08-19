@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.59 2006/06/28 16:19:46 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.60 2006/08/19 13:52:02 vapier Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -247,3 +247,47 @@ gcc-specs-ssp-to-all() {
 	directive=$(gcc-specs-directive cc1)
 	return $([[ ${directive/\{!fno-stack-protector-all:} != ${directive} ]])
 }
+
+
+# This function generate linker scripts in /usr/lib for dynamic
+# libs in /lib.  This is to fix linking problems when you have
+# the .so in /lib, and the .a in /usr/lib.  What happens is that
+# in some cases when linking dynamic, the .a in /usr/lib is used
+# instead of the .so in /lib due to gcc/libtool tweaking ld's
+# library search path.  This cause many builds to fail.
+# See bug #4411 for more info.
+#
+# To use, simply call:
+#
+#   gen_usr_ldscript libfoo.so
+#
+# Note that you should in general use the unversioned name of
+# the library, as ldconfig should usually update it correctly
+# to point to the latest version of the library present.
+_tc_gen_usr_ldscript() {
+	local lib libdir=$(get_libdir) output_format=""
+	# Just make sure it exists
+	dodir /usr/${libdir}
+
+	# OUTPUT_FORMAT gives hints to the linker as to what binary format
+	# is referenced ... makes multilib saner
+	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
+	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
+
+	for lib in "$@" ; do
+		cat > "${D}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
+		/* GNU ld script
+		   Since Gentoo has critical dynamic libraries
+		   in /lib, and the static versions in /usr/lib,
+		   we need to have a "fake" dynamic lib in /usr/lib,
+		   otherwise we run into linking problems.
+
+		   See bug http://bugs.gentoo.org/4411 for more info.
+		 */
+		${output_format}
+		GROUP ( /${libdir}/${lib} )
+		END_LDSCRIPT
+		fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
+	done
+}
+gen_usr_ldscript() { _tc_gen_usr_ldscript "$@" ; }

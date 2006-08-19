@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.247 2006/08/11 02:21:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.248 2006/08/19 13:52:02 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -57,6 +57,14 @@ ebeep() {
 # <azarah@gentoo.org> (26 Oct 2002)
 #
 gen_usr_ldscript() {
+	if [[ $(type -t _tc_gen_usr_ldscript) == "function" ]] ; then
+		_tc_gen_usr_ldscript "$@"
+		return $?
+	fi
+
+	ewarn "QA Notice: Please upgrade your ebuild to use toolchain-funcs"
+	ewarn "QA Notice:  rather than gen_usr_ldscript() from eutils"
+
 	local lib libdir=$(get_libdir)
 	# Just make sure it exists
 	dodir /usr/${libdir}
