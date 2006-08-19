@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.1 2006/07/08 13:30:41 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.2 2006/08/19 14:29:51 dertobi123 Exp $
+
+  19 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  vidalia-0.0.7.ebuild:
+  Added ~ppc, bug #143929
 
 *vidalia-0.0.7 (08 Jul 2006)
 
