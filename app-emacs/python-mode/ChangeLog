@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.22 2006/08/19 18:59:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.23 2006/08/19 19:44:50 mkennedy Exp $
+
+  19 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/55python-mode-gentoo.el, -files/50python-mode-gentoo.el,
+  -python-mode-4.6.ebuild, -python-mode-4.63-r1.ebuild,
+  -python-mode-4.70.ebuild:
+  Remove old ebuilds; Resolves Bug #115186; 1.0 is the new latest version
+  apparently.
 
   19 Aug 2006; Fabian Groffen <grobian@gentoo.org> python-mode-1.0.ebuild:
   Marked ppc-macos stable (bug #115186)
