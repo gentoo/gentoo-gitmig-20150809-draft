@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.85 2006/08/16 17:38:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.86 2006/08/19 00:26:19 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  sound-juicer-2.14.4.ebuild:
+  Add ~ia64 keyword.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> sound-juicer-2.14.4.ebuild:
   Stable on ppc64
