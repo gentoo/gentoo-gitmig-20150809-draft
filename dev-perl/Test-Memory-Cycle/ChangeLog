@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Memory-Cycle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.15 2006/08/05 23:50:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.16 2006/08/19 00:05:37 mcummings Exp $
+
+  19 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-Memory-Cycle-1.02.ebuild:
+  Marking amd64 stable, ack, forgot to commit?
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Test-Memory-Cycle-1.02.ebuild:
