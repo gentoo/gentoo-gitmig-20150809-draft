@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.78 2006/08/16 17:27:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.79 2006/08/19 00:18:39 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gst-plugins-flac-0.10.3.ebuild:
+  Add ~ia64 keyword.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org>
   gst-plugins-flac-0.10.3.ebuild:
