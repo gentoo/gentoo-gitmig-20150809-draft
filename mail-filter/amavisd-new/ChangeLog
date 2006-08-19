@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.93 2006/08/18 10:03:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.94 2006/08/19 21:18:12 weeve Exp $
+
+  19 Aug 2006; Jason Wever <weeve@gentoo.org> amavisd-new-2.4.1.ebuild:
+  Stable on SPARC wrt bug #143333.
 
   18 Aug 2006; Marcus D. Hanwell <cryos@gentoo.org>
   amavisd-new-2.4.1.ebuild:
