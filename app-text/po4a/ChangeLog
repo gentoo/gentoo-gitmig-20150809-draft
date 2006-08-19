@@ -1,6 +1,9 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.9 2006/08/19 15:00:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.10 2006/08/19 20:03:09 weeve Exp $
+
+  19 Aug 2006; Jason Wever <weeve@gentoo.org> po4a-0.25.ebuild:
+  Added ~sparc keyword wrt bug #144414.
 
   19 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> po4a-0.25.ebuild:
   Added ~ppc, bug #144414
