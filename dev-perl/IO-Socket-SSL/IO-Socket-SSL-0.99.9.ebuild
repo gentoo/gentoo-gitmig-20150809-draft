@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.98.1.ebuild,v 1.3 2006/08/19 17:49:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.99.9.ebuild,v 1.1 2006/08/19 17:49:05 mcummings Exp $
 
 inherit perl-module versionator
 
-MY_PV="$(replace_version_separator 2 '_' ${PV})"
+MY_PV="$(replace_version_separator 2 "" ${PV})"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Nearly transparent SSL encapsulation for IO::Socket::INET"
