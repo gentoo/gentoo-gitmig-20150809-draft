@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5754 2006/08/19 08:54:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5755 2006/08/19 13:53:10 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (19 Aug 2006)
+# media-video/mmsv2 is depending on masked pkg
+# media-video/alsaplayer (see #144412)
+media-video/mmsv2
 
 # Christian Heim <phreak@gentoo.org> (19 Aug 2006)
 # www-misc/squidalyser masked by treecleaners for bug(s) 107960,
