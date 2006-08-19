@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.62 2006/07/15 10:54:11 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.63 2006/08/19 00:42:48 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gst-plugins-theora-0.10.9.ebuild:
+  Add ~ia64 keyword.
 
 *gst-plugins-theora-0.10.9 (15 Jul 2006)
 
