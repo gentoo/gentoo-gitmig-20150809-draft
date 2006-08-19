@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.195 2006/08/18 22:27:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.196 2006/08/19 00:07:18 genstef Exp $
+
+  19 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.2.ebuild:
+  make gnutls mandatory because it does not work with openssl, thanks to
+  Jari-Matti Mäkelä <jmjmak@utu.fi> and Bret Towe <magnade@gmail.com> in bug
+  138275
 
   18 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.1.23-r8.ebuild,
   cups-1.2.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.4 2006/08/18 22:27:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.5 2006/08/19 00:07:18 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -14,13 +14,10 @@ SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ssl slp pam samba nls gnutls dbus tiff png ppds jpeg X"
+IUSE="ssl slp pam samba nls dbus tiff png ppds jpeg X"
 
 DEP="pam? ( virtual/pam )
-	ssl? (
-		!gnutls? ( >=dev-libs/openssl-0.9.6b )
-		gnutls? ( net-libs/gnutls )
-		)
+	ssl? ( net-libs/gnutls )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	dbus? ( sys-apps/dbus )
 	png? ( >=media-libs/libpng-1.2.1 )
@@ -80,11 +77,6 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	use ssl && \
-		myconf="${myconf} $(use_enable gnutls) $(use_enable !gnutls openssl)"
-
 	export DSOFLAGS="${LDFLAGS}"
 	econf \
 		--with-cups-user=lp \
@@ -95,6 +87,7 @@ src_compile() {
 		--with-bindnow=$(bindnow-flags) \
 		$(use_enable pam) \
 		$(use_enable ssl) \
+		--enable-gnutls \
 		$(use_enable slp) \
 		$(use_enable nls) \
 		$(use_enable dbus) \
@@ -105,7 +98,6 @@ src_compile() {
 		--enable-threads \
 		--enable-static \
 		--disable-pdftops \
-		${myconf} \
 		|| die "econf failed"
 
 	# Install in /usr/libexec always, instead of using /usr/lib/cups, as that
