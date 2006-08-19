@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.15 2006/08/17 12:17:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.16 2006/08/19 15:46:55 dertobi123 Exp $
+
+  19 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  goffice-0.2.1.ebuild:
+  ppc stable, bug #144120
 
   17 Aug 2006; Jeroen Roovers <jer@gentoo.org> goffice-0.2.1.ebuild:
   Stable for HPPA (bug #144120).
