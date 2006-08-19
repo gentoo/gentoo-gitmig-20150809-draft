@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.10.1.ebuild,v 1.1 2006/08/08 13:45:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.10.1.ebuild,v 1.2 2006/08/19 15:27:02 hanno Exp $
 
 inherit gnome2
 
@@ -25,5 +25,10 @@ RDEPEND="${DEPEND}
 	>=media-plugins/gst-plugins-ffmpeg-0.10.0
 	>=media-plugins/gst-plugins-xvideo-0.10.0
 	>=media-plugins/gst-plugins-libpng-0.10.0"
-	
+
 DOCS="AUTHORS ChangeLog NEWS RELEASE"
+
+src_compile() {
+	addpredict $(unset HOME; echo ~)/{.gconf,.gconfd,.gstreamer-0.10}
+	gnome2_src_compile
+}
