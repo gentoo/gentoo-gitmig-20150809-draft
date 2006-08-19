@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.5.ebuild,v 1.6 2004/06/25 02:33:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-4.5.ebuild,v 1.7 2006/08/19 17:31:53 wormo Exp $
 
 DEPEND=">=sys-libs/glibc-2.2"
 DESCRIPTION="Global can find the locations of specified object in C, C++, Yacc, Java and assembler source files."
