@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5755 2006/08/19 13:53:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5756 2006/08/19 16:01:47 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
+# Development versions of FWbuilder.
+>=net-libs/libfwbuilder-2.1.5
+>=net-firewall/fwbuilder-2.1.5
 
 # Christian Heim <phreak@gentoo.org> (19 Aug 2006)
 # media-video/mmsv2 is depending on masked pkg
