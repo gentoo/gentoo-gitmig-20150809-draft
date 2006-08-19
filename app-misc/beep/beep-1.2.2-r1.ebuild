@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2-r1.ebuild,v 1.2 2006/07/01 18:57:26 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beep/beep-1.2.2-r1.ebuild,v 1.3 2006/08/19 11:00:37 kloeri Exp $
 
 inherit eutils base
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.johnath.com/beep/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 PATCHES="${FILESDIR}/${P}-nosuid.patch"
