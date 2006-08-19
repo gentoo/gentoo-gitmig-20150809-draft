@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.10 2006/03/10 00:52:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-1.0.0.ebuild,v 1.11 2006/08/19 14:18:33 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,10 +10,10 @@ SRC_URI="http://www.porchdogsoft.com/download/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ppc64 ~s390 ~sh sparc ~x86"
+KEYWORDS="~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc-macos ppc64 s390 sh sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 # sys-devel/automake - needed if we remove the html docs from /usr/share
 
 # sw_log is unprovided (Bug #87436)
@@ -21,9 +21,9 @@ RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	# patch fixes #84030 (missing linux/types.h include)
-	epatch ${FILESDIR}/${PN}-0.9.8-types.patch
+	epatch "${FILESDIR}"/${PN}-0.9.8-types.patch
 }
 
 src_compile() {
@@ -39,19 +39,19 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	dohtml -r docs/
 
 	# Install conf files
 	insinto /etc/conf.d
-	newins ${FILESDIR}/nifd.conf.d nifd
-	newins ${FILESDIR}/mDNSResponder.conf.d mDNSResponder
+	newins "${FILESDIR}"/nifd.conf.d nifd
+	newins "${FILESDIR}"/mDNSResponder.conf.d mDNSResponder
 
 	# Install init scripts
 	insinto /etc/init.d
-	newins ${FILESDIR}/nifd.init.d nifd
-	newins ${FILESDIR}/mDNSResponder.init.d mDNSResponder
+	newins "${FILESDIR}"/nifd.init.d nifd
+	newins "${FILESDIR}"/mDNSResponder.init.d mDNSResponder
 
 	# Fix the perms on the init scripts
 	fperms a+x /etc/init.d/nifd /etc/init.d/mDNSResponder
