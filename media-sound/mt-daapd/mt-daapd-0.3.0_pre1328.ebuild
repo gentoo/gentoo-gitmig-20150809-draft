@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre1328.ebuild,v 1.1 2006/07/29 07:34:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.3.0_pre1328.ebuild,v 1.2 2006/08/19 14:16:55 vapier Exp $
 
 inherit eutils flag-o-matic base
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.mt-daapd.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc-macos ~sh ~sparc ~x86"
 IUSE="howl vorbis avahi sqlite3 flac ffmpeg"
 
 DEPEND="sys-libs/zlib
