@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.16 2006/08/13 13:31:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.17 2006/08/19 23:03:33 swegener Exp $
+
+*pan-0.109 (19 Aug 2006)
+
+  19 Aug 2006; Sven Wegener <swegener@gentoo.org> +pan-0.109.ebuild:
+  Version bump.
 
   13 Aug 2006; Markus Rothe <corsair@gentoo.org> pan-0.107.ebuild:
   Added ~ppc64; bug #142589
