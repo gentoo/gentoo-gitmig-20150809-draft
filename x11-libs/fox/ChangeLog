@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.50 2006/07/18 21:33:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.51 2006/08/19 20:57:13 weeve Exp $
+
+  19 Aug 2006; Jason Wever <weeve@gentoo.org> fox-1.2.6-r3.ebuild:
+  Stable on SPARC wrt bug #138871.
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org> fox-1.2.6-r3.ebuild:
   Stable on ppc.
