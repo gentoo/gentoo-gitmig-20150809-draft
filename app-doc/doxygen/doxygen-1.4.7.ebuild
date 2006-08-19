@@ -1,18 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.5 2006/08/12 12:33:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.6 2006/08/19 14:12:24 vapier Exp $
 
 inherit eutils toolchain-funcs qt3
 
-DESCRIPTION="Doxygen is a documentation system for C++, C, Java, Objective-C,
-	Python, IDL , and other C-like languages."
+DESCRIPTION="documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages"
 HOMEPAGE="http://www.doxygen.org/"
 SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
-#		unicode? ( mirror://gentoo/${PN}-utf8-ru.patch.gz )"
+#	unicode? ( mirror://gentoo/${PN}-utf8-ru.patch.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc qt3 tetex"
 
 RDEPEND=">=media-gfx/graphviz-2.6
@@ -96,7 +95,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "The USE flags qt, doc, and tetex will enable doxywizard, or"
 	einfo "the html and pdf documentation, respectively.  For examples"
