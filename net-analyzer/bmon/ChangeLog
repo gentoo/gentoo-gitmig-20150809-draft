@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.29 2006/03/07 11:48:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.30 2006/08/19 12:56:39 jer Exp $
+
+  19 Aug 2006; Jeroen Roovers <jer@gentoo.org> +files/bmon-nostrip.patch,
+  bmon-2.1.0-r2.ebuild:
+  No stripping (bug #144370).
 
   07 Mar 2006; Jeroen Roovers <jer@gentoo.org> bmon-2.1.0-r2.ebuild:
   Stable on hppa.
