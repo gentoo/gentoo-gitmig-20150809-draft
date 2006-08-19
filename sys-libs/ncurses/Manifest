@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ncurses-5.4-c++-templates.patch 351 RMD160 d9a0e9387367be813e7067b4ddeddf907a2217b8 SHA1 80471645bee521e6f154c7ff5a9acdc2e87879ef SHA256 853fc14f7ab2f5eb156b2e7d658d79243877102a18cd2845e3ebd4eb24193d7c
 MD5 118971faee11066510aa77e6c6a2c51b files/ncurses-5.4-c++-templates.patch 351
 RMD160 d9a0e9387367be813e7067b4ddeddf907a2217b8 files/ncurses-5.4-c++-templates.patch 351
@@ -18,24 +21,12 @@ AUX ncurses-5.5-terminfo-gnome.patch 597 RMD160 08f295ee2441dfae36b692f29fdb39dc
 MD5 d4e86212987c8a600a510b09d1c27090 files/ncurses-5.5-terminfo-gnome.patch 597
 RMD160 08f295ee2441dfae36b692f29fdb39dcd7e1390a files/ncurses-5.5-terminfo-gnome.patch 597
 SHA256 cc5110c84c1cdfdc13ea11c8cecf0f48a35c4096a25e10ba814889e5f3df2696 files/ncurses-5.5-terminfo-gnome.patch 597
-AUX xterm-debian.ti 342 RMD160 7f0506819afd9687891eaf03548c659c0ee1abd7 SHA1 dba1f761fe5ec11ac4c9549512bb5be35cc4da77 SHA256 1b10cdbff41f757c9f23f42c58dd6966e3c253b36fc6ceae1034233535743de0
-MD5 2167b54d7c96964183554e767e5f5376 files/xterm-debian.ti 342
-RMD160 7f0506819afd9687891eaf03548c659c0ee1abd7 files/xterm-debian.ti 342
-SHA256 1b10cdbff41f757c9f23f42c58dd6966e3c253b36fc6ceae1034233535743de0 files/xterm-debian.ti 342
 DIST ncurses-5.4.tar.gz 2154022 RMD160 36369f4e2c76c396de51809deb8a671d8ca3d19e SHA1 c0dfaf2c4d383915f898a97c8caeace8a0a2c8b7 SHA256 5abce063cf431790f4e6a801a96c7eea0b33a41ecd0970f6312f52575c083b36
 DIST ncurses-5.5.tar.gz 2314030 RMD160 aac34d2530519fbb0fde7af87a365205339ba230 SHA1 46414a72e91a62f63a8c9af00f0d65497f5ecc5a SHA256 27a63f3a2ac9d13c1ed9a0a33ee4497c19a6b5810b8f9738e7654a0e12225b93
-EBUILD ncurses-5.4-r5.ebuild 6166 RMD160 f6a4712ae6d8d1ead3acc8db05e10dc5eb562c3a SHA1 f6f191c785d8dbb08b8cd72af638c9fc86a1c9e4 SHA256 1b95a17a60084781e1cf459520bded8c6ddf78568f18becbd03d373bb1c7a288
-MD5 c4e36fac20ae91b9fb5bf7d0961cc6ba ncurses-5.4-r5.ebuild 6166
-RMD160 f6a4712ae6d8d1ead3acc8db05e10dc5eb562c3a ncurses-5.4-r5.ebuild 6166
-SHA256 1b95a17a60084781e1cf459520bded8c6ddf78568f18becbd03d373bb1c7a288 ncurses-5.4-r5.ebuild 6166
 EBUILD ncurses-5.4-r6.ebuild 5465 RMD160 94046d6c0c855ebacfd0815a9dc68a576d8bac72 SHA1 c2190dd1fcf260c3312394111482bbef728a7fe4 SHA256 64c5e129d6d1c8f42cb4b973e300f212916c2b7335d342844acb04cbb3083dbd
 MD5 3a23bee1fd81e1d279ec4632e9cc383e ncurses-5.4-r6.ebuild 5465
 RMD160 94046d6c0c855ebacfd0815a9dc68a576d8bac72 ncurses-5.4-r6.ebuild 5465
 SHA256 64c5e129d6d1c8f42cb4b973e300f212916c2b7335d342844acb04cbb3083dbd ncurses-5.4-r6.ebuild 5465
-EBUILD ncurses-5.5-r1.ebuild 5351 RMD160 4554c8bae8bc28c5735210bcaabf5b4cd51097d5 SHA1 ab702e3d353d6b7ff165499f70a8fbab8ad61bb7 SHA256 0ae216813de6c1597e35907221682fa730136a3c207cbae2d384bc1a53716ea8
-MD5 09ffb43a04a942aa18f6e40b991da362 ncurses-5.5-r1.ebuild 5351
-RMD160 4554c8bae8bc28c5735210bcaabf5b4cd51097d5 ncurses-5.5-r1.ebuild 5351
-SHA256 0ae216813de6c1597e35907221682fa730136a3c207cbae2d384bc1a53716ea8 ncurses-5.5-r1.ebuild 5351
 EBUILD ncurses-5.5-r2.ebuild 5402 RMD160 d99b702ef4932c727be6c008ff9d3161ca6b4071 SHA1 ea71c9c932725ffe89963bac6ae57af6ab41d671 SHA256 3cb9c682545c2f534b7d05978845028dc37b949ec303ba84c3928b1d009f89d2
 MD5 ddc3408ed01dd382c8bd2943c6eb7df7 ncurses-5.5-r2.ebuild 5402
 RMD160 d99b702ef4932c727be6c008ff9d3161ca6b4071 ncurses-5.5-r2.ebuild 5402
@@ -44,10 +35,6 @@ EBUILD ncurses-5.5-r3.ebuild 5491 RMD160 3f39fc085f54768e0d9fd33a5ffe0be992469e9
 MD5 34df5fc0f3fecaafd264b94eced6d49d ncurses-5.5-r3.ebuild 5491
 RMD160 3f39fc085f54768e0d9fd33a5ffe0be992469e96 ncurses-5.5-r3.ebuild 5491
 SHA256 e5b9ceb57f0f29f7dc2ea4fa539dac5179d5427e266945644235a8d4822b7c88 ncurses-5.5-r3.ebuild 5491
-EBUILD ncurses-5.5.ebuild 5253 RMD160 3a75fe57295da50e2aa666c3382f4c67dbdbf6d0 SHA1 a687ed912a1c29c68ea48f70dbfb3dca5c2df739 SHA256 1b4bf44e80fd126e6141ef3b968323914e5313cdcb2a6cb9b1105f71d9d0a5d1
-MD5 05ffcf86aeb3d3f5c9a5bfd5a72fb2d2 ncurses-5.5.ebuild 5253
-RMD160 3a75fe57295da50e2aa666c3382f4c67dbdbf6d0 ncurses-5.5.ebuild 5253
-SHA256 1b4bf44e80fd126e6141ef3b968323914e5313cdcb2a6cb9b1105f71d9d0a5d1 ncurses-5.5.ebuild 5253
 MISC ChangeLog 18037 RMD160 740e18ae67d9186186a79a9fd2a08b0ff6c77b5b SHA1 41e7a6a8c893b9c2535c49577699fa960dce9eac SHA256 fadf0c3578e3be66b031562cea8f41c13b67e227e25237ada48761382dd17baa
 MD5 2d027207677d6bee172d89efc3b8a493 ChangeLog 18037
 RMD160 740e18ae67d9186186a79a9fd2a08b0ff6c77b5b ChangeLog 18037
@@ -56,21 +43,19 @@ MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
-MD5 f392f8bd1bddd04e1e8d26e3f270e7d0 files/digest-ncurses-5.4-r5 238
-RMD160 2799f66e435f80b5914c6c5c75872cf4990555eb files/digest-ncurses-5.4-r5 238
-SHA256 de50b8338b918f8782530f0ef1481d4a31e0f126103561ff18a39467b709e56f files/digest-ncurses-5.4-r5 238
 MD5 f392f8bd1bddd04e1e8d26e3f270e7d0 files/digest-ncurses-5.4-r6 238
 RMD160 2799f66e435f80b5914c6c5c75872cf4990555eb files/digest-ncurses-5.4-r6 238
 SHA256 de50b8338b918f8782530f0ef1481d4a31e0f126103561ff18a39467b709e56f files/digest-ncurses-5.4-r6 238
-MD5 6a01577df5b8434affdc1217be2ba5b1 files/digest-ncurses-5.5 238
-RMD160 755dd213b7e9f190613456f3bc9f419dcbc84271 files/digest-ncurses-5.5 238
-SHA256 f86ecfaaa7faef60ffbc739f005574acbd940ee20502129d8d6c6aa433e1ecee files/digest-ncurses-5.5 238
-MD5 6a01577df5b8434affdc1217be2ba5b1 files/digest-ncurses-5.5-r1 238
-RMD160 755dd213b7e9f190613456f3bc9f419dcbc84271 files/digest-ncurses-5.5-r1 238
-SHA256 f86ecfaaa7faef60ffbc739f005574acbd940ee20502129d8d6c6aa433e1ecee files/digest-ncurses-5.5-r1 238
 MD5 6a01577df5b8434affdc1217be2ba5b1 files/digest-ncurses-5.5-r2 238
 RMD160 755dd213b7e9f190613456f3bc9f419dcbc84271 files/digest-ncurses-5.5-r2 238
 SHA256 f86ecfaaa7faef60ffbc739f005574acbd940ee20502129d8d6c6aa433e1ecee files/digest-ncurses-5.5-r2 238
 MD5 6a01577df5b8434affdc1217be2ba5b1 files/digest-ncurses-5.5-r3 238
 RMD160 755dd213b7e9f190613456f3bc9f419dcbc84271 files/digest-ncurses-5.5-r3 238
 SHA256 f86ecfaaa7faef60ffbc739f005574acbd940ee20502129d8d6c6aa433e1ecee files/digest-ncurses-5.5-r3 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFE5xaJamhnQswr0vIRAmRxAJ9JKmWtgGm9LlsZbIxL5giSLiuJ/wCgshCY
+FeponQET7FMjGzhIJ5Jxhwg=
+=C7WT
+-----END PGP SIGNATURE-----
