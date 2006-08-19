@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.16 2006/08/12 00:26:59 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.17 2006/08/19 22:54:06 weeve Exp $
+
+  19 Aug 2006; Jason Wever <weeve@gentoo.org> gerbv-1.0.2.ebuild:
+  Added ~sparc keyword.
 
 *gerbv-1.0.2 (12 Aug 2006)
 
