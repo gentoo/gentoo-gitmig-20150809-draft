@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5752 2006/08/19 08:39:07 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5753 2006/08/19 08:51:52 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,7 +21,7 @@
 ##   End example
 ##
 
-# Christian Heim <phreak@gentoo.org> (18 Aug 2006)
+# Christian Heim <phreak@gentoo.org> (19 Aug 2006)
 # net-irc/dancer-ircd masked by treecleaners for bug(s) 72691
 # Removal in 30 days (thats 16 Sept 2006)
 net-irc/dancer-ircd
