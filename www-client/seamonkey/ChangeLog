@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.19 2006/08/02 11:37:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.20 2006/08/19 00:46:57 kloeri Exp $
+
+  19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> seamonkey-1.0.3.ebuild:
+  Add ~ia64 keyword.
 
   02 Aug 2006; Simon Stelling <blubb@gentoo.org> seamonkey-1.0.3.ebuild:
   stable on amd64 wrt bug 141842
