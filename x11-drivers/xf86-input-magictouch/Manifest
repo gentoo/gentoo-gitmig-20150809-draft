@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST x11-driver-patches-1.tar.bz2 389 RMD160 0c57d4b235d83f3d7c46691c13857fd121ddec2d SHA1 6e2ac0cd255d3c4dc97d35092fe3ef64a71d7ac5 SHA256 64787d5b57d2845c0fa9297a9d924093ba191fc3551798239d9983f0bcca9b3e
 DIST xf86-input-magictouch-1.0.0.5.tar.bz2 218289
-EBUILD xf86-input-magictouch-1.0.0.5.ebuild 582 RMD160 37636e975e5e95696bfccdf495b861868e5f6057 SHA1 d5caf7bbb1d9d11c60b99fb81bfd8ce3bf60420c SHA256 b8f4d5d3a418eded72966bf065b361fdbb6957dd79864e07302e54eaae0eb682
-MD5 eca781f4415fc869e38b62afa2b0921b xf86-input-magictouch-1.0.0.5.ebuild 582
-RMD160 37636e975e5e95696bfccdf495b861868e5f6057 xf86-input-magictouch-1.0.0.5.ebuild 582
-SHA256 b8f4d5d3a418eded72966bf065b361fdbb6957dd79864e07302e54eaae0eb682 xf86-input-magictouch-1.0.0.5.ebuild 582
+EBUILD xf86-input-magictouch-1.0.0.5.ebuild 582 RMD160 e8a939dcf7ecca639d234ed597baeda908b59eea SHA1 d71c01a0c6d97cf26f9045a3575a5dd8c9c96ccb SHA256 d19f18a2c57662430cb62d392521ed0e3cd16ff6d26972e414f9d0dbf7093adb
+MD5 9e8f02b06df6169ef4f0f030e1ad3b7f xf86-input-magictouch-1.0.0.5.ebuild 582
+RMD160 e8a939dcf7ecca639d234ed597baeda908b59eea xf86-input-magictouch-1.0.0.5.ebuild 582
+SHA256 d19f18a2c57662430cb62d392521ed0e3cd16ff6d26972e414f9d0dbf7093adb xf86-input-magictouch-1.0.0.5.ebuild 582
 MISC ChangeLog 3134 RMD160 98f14c47e76b1a3ad7bafa1e2b64125a22ff151e SHA1 69987cd759a24f28d451463983c920483bb5ac8e SHA256 333a5508eb20ccfbf1075c8670a8949a6d7901c97229fb9ac83030fddb94680a
 MD5 f0366e02a96ba002eccec8aca1c12661 ChangeLog 3134
 RMD160 98f14c47e76b1a3ad7bafa1e2b64125a22ff151e ChangeLog 3134
@@ -15,3 +18,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 ceeb5a95ffa99a1dfd77da5a5ba98454 files/digest-xf86-input-magictouch-1.0.0.5 338
 RMD160 e872457936fca0b9b4badaf95986c9830dfde711 files/digest-xf86-input-magictouch-1.0.0.5 338
 SHA256 c05d76464b21d97c8bf5287b4ca42b0bfac7fd03a225cb2732f7ab9d8b5bbe14 files/digest-xf86-input-magictouch-1.0.0.5 338
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFE5x7/amhnQswr0vIRApvWAKC6xoASFtQClAW4QpL0Y5vNBwxa2gCfUrX3
+mJe6suR4YLzRiTNPUnR5olk=
+=h/L9
+-----END PGP SIGNATURE-----
