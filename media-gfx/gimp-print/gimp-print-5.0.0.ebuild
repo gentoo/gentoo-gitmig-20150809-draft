@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0.ebuild,v 1.1 2006/08/16 20:14:46 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0.ebuild,v 1.2 2006/08/19 09:32:34 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -14,7 +14,6 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ppc64"
 SRC_URI="mirror://sourceforge/gimp-print/${MY_P}.tar.bz2"
 
 RDEPEND="cups? ( >=net-print/cups-1.1.14 )
-	media-gfx/imagemagick
 	virtual/ghostscript
 	sys-libs/readline
 	gtk? ( x11-libs/gtk+ )
