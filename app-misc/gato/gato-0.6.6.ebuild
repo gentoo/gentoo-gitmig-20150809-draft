@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gato/gato-0.6.6.ebuild,v 1.4 2005/07/21 17:18:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gato/gato-0.6.6.ebuild,v 1.5 2006/08/19 18:14:48 wormo Exp $
 
 DESCRIPTION="An interface to the at UNIX command"
 HOMEPAGE="http://www.arquired.es/users/aldelgado/proy/gato/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-RDEPEND="=x11-libs/gtk+-1*"
+RDEPEND="=x11-libs/gtk+-1*
+	sys-process/at"
 DEPEND="${RDEPEND}
 	sys-devel/automake
 	sys-devel/autoconf"
