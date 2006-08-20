@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.20 2006/06/11 12:19:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.21 2006/08/20 07:09:49 wormo Exp $
+
+*ming-0.3.0 (22 Aug 2006)
+
+  22 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +ming-0.3.0.ebuild:
+  version bump including php and perl bindings added -- ebuild courtesy 
+  of Adam Penser (Bug #121716)
 
 *ming-0.2a-r3 (11 Jun 2006)
 
