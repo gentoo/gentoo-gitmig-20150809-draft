@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53-r1.ebuild,v 1.3 2006/07/31 11:19:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53-r1.ebuild,v 1.4 2006/08/20 21:11:58 vapier Exp $
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 MY_P="libarchive-${PV}"
 
@@ -19,19 +19,19 @@ RDEPEND="!dev-libs/libarchive
 	kernel_linux? (
 		acl? ( sys-apps/acl )
 		xattr? ( sys-apps/attr )
-		)"
+	)"
 DEPEND="kernel_linux? ( sys-fs/e2fsprogs
 	virtual/os-headers )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch "${FILESDIR}/libarchive-1.2.51-linking.patch"
-	epatch "${FILESDIR}/libarchive-1.2.51-acl.patch"
-	epatch "${FILESDIR}/libarchive-1.2.53-strict-aliasing.patch"
+	epatch "${FILESDIR}"/libarchive-1.2.51-linking.patch
+	epatch "${FILESDIR}"/libarchive-1.2.51-acl.patch
+	epatch "${FILESDIR}"/libarchive-1.2.53-strict-aliasing.patch
 
 	eautoreconf
 	epunt_cxx
@@ -40,13 +40,14 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if use static || use build; then
+	if use static || use build ; then
 		myconf="${myconf} --enable-static-bsdtar"
 	else
 		myconf="${myconf} --disable-static-bsdtar"
 	fi
 
-	econf --bindir=/bin \
+	econf \
+		--bindir=/bin \
 		$(use_enable acl) \
 		$(use_enable xattr) \
 		${myconf} || die "econf failed"
@@ -64,7 +65,7 @@ src_install() {
 
 	if [[ ${CHOST} != *-darwin* ]]; then
 		dodir /$(get_libdir)
-		mv ${D}/usr/$(get_libdir)/*.so* ${D}/$(get_libdir)
+		mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
 		gen_usr_ldscript libarchive.so
 	fi
 }

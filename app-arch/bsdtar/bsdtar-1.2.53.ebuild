@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53.ebuild,v 1.5 2006/07/30 14:43:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.2.53.ebuild,v 1.6 2006/08/20 21:11:58 vapier Exp $
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 MY_P="libarchive-${PV}"
 
@@ -19,7 +19,7 @@ RDEPEND="!dev-libs/libarchive
 	kernel_linux? (
 		acl? ( sys-apps/acl )
 		xattr? ( sys-apps/attr )
-		)"
+	)"
 DEPEND="kernel_linux? ( sys-fs/e2fsprogs
 	virtual/os-headers )"
 
