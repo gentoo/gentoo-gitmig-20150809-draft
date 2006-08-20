@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.5.ebuild,v 1.3 2005/11/29 03:53:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.5.ebuild,v 1.4 2006/08/20 21:19:10 vapier Exp $
 
-inherit eutils
+inherit toolchain-funcs
 
 DESCRIPTION="library required by reiser4progs"
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
