@@ -1,0 +1,23 @@
+fix from upstream
+
+http://bugs.gentoo.org/143639
+
+===================================================================
+RCS file: /horde/cvs/framework/Perms/Perms/datatree.php,v
+retrieving revision 1.6.2.11
+retrieving revision 1.6.2.12
+diff -p --unified=3 -r1.6.2.11 -r1.6.2.12
+--- lib/Horde/Perms/datatree.php	2006/05/04 13:26:16	1.6.2.11
++++ lib/Horde/Perms/datatree.php	2006/07/20 18:50:05	1.6.2.12
+@@ -137,7 +137,11 @@ class Perms_datatree extends Perms {
+      */
+     function &getPermissionById($cid)
+     {
+-        $object = $this->_datatree->getObjectById($cid, 'DataTreeObject_Permission');
++        if ($cid == DATATREE_ROOT) {
++            $object = &$this->newPermission(DATATREE_ROOT);
++        } else {
++            $object = &$this->_datatree->getObjectById($cid, 'DataTreeObject_Permission');
++        }
+         return $object;
+     }
