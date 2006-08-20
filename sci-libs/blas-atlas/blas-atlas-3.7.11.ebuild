@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.9 2006/08/04 13:31:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11.ebuild,v 1.10 2006/08/20 22:49:58 dberkholz Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -16,9 +16,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
-DEPEND="app-admin/eselect
+RDEPEND="sci-libs/blas-config"
+DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5"
-RDEPEND="app-admin/eselect"
 PROVIDE="virtual/blas"
 
 
@@ -179,9 +179,9 @@ src_install () {
 pkg_postinst() {
 	if [ -d "${RPATH}"/threaded-atlas ]
 	then
-		/usr/bin/eselect blas set threaded-ATLAS
+		${DESTTREE}/bin/blas-config threaded-ATLAS
 	else
-		/usr/bin/eselect blas set ATLAS
+		${DESTTREE}/bin/blas-config ATLAS
 	fi
 
 	einfo
