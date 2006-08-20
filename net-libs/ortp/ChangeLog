@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.8 2006/07/07 01:24:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.9 2006/08/20 20:06:58 genstef Exp $
+
+*ortp-0.10.1 (20 Aug 2006)
+
+  20 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +ortp-0.10.1.ebuild:
+  version bump
 
   07 Jul 2006; Brent Baude <ranger@gentoo.org> ortp-0.7.1-r1.ebuild:
   Marking ortp-0.7.1-r1 ~ppc64 to satisfy a kopete broken dep per Mr. Bones
