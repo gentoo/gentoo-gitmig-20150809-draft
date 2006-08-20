@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-XML
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.1 2006/08/20 09:51:16 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.2 2006/08/20 17:17:20 tester Exp $
+
+  20 Aug 2006; Olivier Crête <tester@gentoo.org> Template-XML-2.16.ebuild:
+  Added ~amd64 for bug #144505
 
 *Template-XML-2.16 (20 Aug 2006)
 
