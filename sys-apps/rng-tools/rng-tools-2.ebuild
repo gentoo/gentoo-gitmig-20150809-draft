@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-2.ebuild,v 1.4 2006/07/13 11:56:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/rng-tools-2.ebuild,v 1.5 2006/08/20 09:13:30 blubb Exp $
 
 DESCRIPTION="Daemon to use hardware random number generators."
 HOMEPAGE="http://gkernel.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gkernel/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ppc x86"
+KEYWORDS="~alpha amd64 ia64 ppc x86"
 IUSE=""
 DEPEND="virtual/libc"
 

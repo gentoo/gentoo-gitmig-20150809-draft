@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.16 2006/07/13 11:56:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.17 2006/08/20 09:13:30 blubb Exp $
+
+  20 Aug 2006; Simon Stelling <blubb@gentoo.org> rng-tools-2.ebuild:
+  stable on amd64
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> rng-tools-2.ebuild:
   Mark 2 stable on ia64. #139162
