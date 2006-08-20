@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.6 2006/08/19 20:33:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.7 2006/08/20 02:07:07 dang Exp $
+
+  20 Aug 2006; Daniel Gryniewicz <dang@gentoo.org>
+  xdg-utils-1.0_beta3.ebuild:
+  Marked ~amd64 for bug #144345
 
   19 Aug 2006; Jason Wever <weeve@gentoo.org> xdg-utils-1.0_beta3.ebuild:
   Added ~sparc keyword wrt bug #144345.
