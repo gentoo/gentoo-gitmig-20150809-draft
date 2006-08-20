@@ -1,0 +1,582 @@
+diff --git a/hw/xfree86/common/compiler.h b/hw/xfree86/common/compiler.h
+index 39c8b8c..e9406d8 100644
+--- a/hw/xfree86/common/compiler.h
++++ b/hw/xfree86/common/compiler.h
+@@ -120,8 +120,7 @@ # if defined(NO_INLINE) || defined(DO_PR
+ 
+ #  if !defined(__arm__)
+ #   if !defined(__sparc__) && !defined(__arm32__) \
+-      && !(defined(__alpha__) && defined(linux)) \
+-      && !(defined(__ia64__) && defined(linux)) \
++      && !(defined(__alpha__) && defined(linux))
+ 
+ extern void outb(unsigned short, unsigned char);
+ extern void outw(unsigned short, unsigned short);
+@@ -159,7 +158,7 @@ # endif
+ 
+ # ifndef NO_INLINE
+ #  ifdef __GNUC__
+-#   if (defined(linux) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)) && (defined(__alpha__))
++#   if (defined(linux) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)) && defined(__alpha__)
+ 
+ #    ifdef linux
+ /* for Linux on Alpha, we use the LIBC _inx/_outx routines */
+@@ -491,16 +490,11 @@ #    endif
+ #    undef outb
+ #    undef outw
+ #    undef outl
+-#    undef inb
+-#    undef inw
+-#    undef inl
+-extern void outb(unsigned long port, unsigned char val);
+-extern void outw(unsigned long port, unsigned short val);
+-extern void outl(unsigned long port, unsigned int val);
+-extern unsigned int inb(unsigned long port);
+-extern unsigned int inw(unsigned long port);
+-extern unsigned int inl(unsigned long port);
+  
++#    define outb(a,b)	_outb(b,a)
++#    define outw(a,b)	_outw(b,a)
++#    define outl(a,b)	_outl(b,a) 
++
+ #   elif defined(linux) && defined(__amd64__) 
+  
+ #    include <inttypes.h>
+diff --git a/hw/xfree86/common/xf86Bus.c b/hw/xfree86/common/xf86Bus.c
+index 057dfb0..3da549b 100644
+--- a/hw/xfree86/common/xf86Bus.c
++++ b/hw/xfree86/common/xf86Bus.c
+@@ -1860,7 +1860,7 @@ xf86RegisterResources(int entityIndex, r
+ 	    range.type = (range.type & ~ResAccMask) | (access & ResAccMask);
+ 	}
+  	range.type &= ~ResEstimated;	/* Not allowed for drivers */
+-#if !((defined(__alpha__) || (defined(__ia64__))) && defined(linux))
++#if !(defined(__alpha__) && defined(linux))
+ 	/* On Alpha Linux, do not check for conflicts, trust the kernel. */
+ 	if (checkConflict(&range, Acc, entityIndex, SETUP,TRUE)) 
+ 	    res = xf86AddResToList(res,&range,entityIndex);
+@@ -2480,8 +2480,8 @@ #ifdef REDUCER
+ #endif
+     }
+     xf86FreeResList(acc);
++
+ #if !(defined(__alpha__) && defined(linux)) && \
+-    !(defined(__ia64__) && defined(linux)) && \
+     !(defined(__sparc64__) && defined(__OpenBSD__))
+     /* 
+      * No need to validate on Alpha Linux or OpenBSD/sparc64, 
+diff --git a/hw/xfree86/common/xf86pciBus.c b/hw/xfree86/common/xf86pciBus.c
+index 4d587a1..177e354 100644
+--- a/hw/xfree86/common/xf86pciBus.c
++++ b/hw/xfree86/common/xf86pciBus.c
+@@ -1649,14 +1649,10 @@ getValidBIOSBase(PCITAG tag, int num)
+ 	/* Return a possible window */
+ 	ret = findPciRange(tag,m,avoid,biosSize);
+     } else {
+-#if !defined(__ia64__) /* on ia64, trust the kernel, don't look for overlaps */
+-	if (mem)
+-	    pciConvertListToHost(pvp->bus,pvp->device,pvp->func, mem);
+ 	if (!xf86IsSubsetOf(range, m) || 
+ 	    ChkConflict(&range, avoid, SETUP) 
+ 	    || (mem && ChkConflict(&range, mem, SETUP))) 
+ 	    ret = 0;
+-#endif 
+     }
+ 
+     xf86FreeResList(avoid);
+diff --git a/hw/xfree86/loader/xf86sym.c b/hw/xfree86/loader/xf86sym.c
+index ad4f773..6536442 100644
+--- a/hw/xfree86/loader/xf86sym.c
++++ b/hw/xfree86/loader/xf86sym.c
+@@ -1098,12 +1098,12 @@ #if !defined(Lynx)
+ #endif
+ #endif
+ #if defined(__ia64__)
+-    SYMFUNC(outw)
+-    SYMFUNC(outb)
+-    SYMFUNC(outl)
+-    SYMFUNC(inb)
+-    SYMFUNC(inw)
+-    SYMFUNC(inl)
++    SYMFUNC(_outw)
++    SYMFUNC(_outb)
++    SYMFUNC(_outl)
++    SYMFUNC(_inb)
++    SYMFUNC(_inw)
++    SYMFUNC(_inl)
+ #endif
+ #if defined(__arm__)
+     SYMFUNC(outw)
+diff --git a/hw/xfree86/os-support/bus/Pci.h b/hw/xfree86/os-support/bus/Pci.h
+index a91c6b2..98ab31a 100644
+--- a/hw/xfree86/os-support/bus/Pci.h
++++ b/hw/xfree86/os-support/bus/Pci.h
+@@ -261,6 +261,7 @@ #elif defined(__ia64__)
+ # if defined(linux)
+ #  define ARCH_PCI_INIT linuxPciInit
+ #  define INCLUDE_XF86_MAP_PCI_MEM
++#  define INCLUDE_XF86_NO_DOMAIN
+ # elif defined(FreeBSD)
+ #  define ARCH_PCI_INIT freebsdPciInit
+ #  define INCLUDE_XF86_MAP_PCI_MEM
+diff --git a/hw/xfree86/os-support/bus/linuxPci.c b/hw/xfree86/os-support/bus/linuxPci.c
+index 0714c9c..f5b41f1 100644
+--- a/hw/xfree86/os-support/bus/linuxPci.c
++++ b/hw/xfree86/os-support/bus/linuxPci.c
+@@ -63,7 +63,6 @@ #include "Pci.h"
+ static CARD32 linuxPciCfgRead(PCITAG tag, int off);
+ static void linuxPciCfgWrite(PCITAG, int off, CARD32 val);
+ static void linuxPciCfgSetBits(PCITAG tag, int off, CARD32 mask, CARD32 bits);
+-static ADDRESS linuxTransAddrBusToHost(PCITAG tag, PciAddrType type, ADDRESS addr);
+ #if defined(__powerpc__)
+ static ADDRESS linuxPpcBusAddrToHostAddr(PCITAG, PciAddrType, ADDRESS);
+ static ADDRESS linuxPpcHostAddrToBusAddr(PCITAG, PciAddrType, ADDRESS);
+@@ -84,7 +83,7 @@ #if defined(__powerpc__)
+ /* pciAddrBusToHost */	linuxPpcBusAddrToHostAddr,
+ #else
+ /* pciAddrHostToBus */	pciAddrNOOP,
+-/* pciAddrBusToHost */	linuxTransAddrBusToHost,
++/* pciAddrBusToHost */	pciAddrNOOP,
+ #endif
+ 
+ /* pciControlBridge */		NULL,
+@@ -236,26 +235,6 @@ linuxPciCfgSetBits(PCITAG tag, int off, 
+ 	}
+ }
+ 
+-/*
+- * This function will convert a BAR address into a host address
+- * suitable for passing into the mmap function of a /proc/bus
+- * device.
+- */
+-ADDRESS linuxTransAddrBusToHost(PCITAG tag, PciAddrType type, ADDRESS addr)
+-{
+-    ADDRESS ret = xf86GetOSOffsetFromPCI(tag, PCI_MEM|PCI_IO, addr);
+-
+-    if (ret)
+-	return ret;
+-
+-    /*
+-     * if it is not a BAR address, it must be legacy, (or wrong)
+-     * return it as is..
+-     */
+-    return addr;
+-}
+-
+-
+ #if defined(__powerpc__)
+ 
+ #ifndef __NR_pciconfig_iobase
+@@ -508,9 +487,6 @@ xf86GetPciDomain(PCITAG Tag)
+     if (pPCI && (result = PCI_DOM_FROM_BUS(pPCI->busnum)))
+ 	return result;
+ 
+-    if (!pPCI || pPCI->fakeDevice)
+-	return 1;		/* Domain 0 is reserved */
+-
+     if ((fd = linuxPciOpenFile(pPCI ? pPCI->tag : 0,FALSE)) < 0)
+ 	return 0;
+ 
+@@ -551,7 +527,7 @@ # endif
+ 	if (Flags & VIDMEM_FRAMEBUFFER)
+ 	    mmapflags = MAP_SHARED | MAP_WRITECOMBINED;
+ 	else
+-	    mmapflags = MAP_SHARED | MAP_NONCACHED;
++	    mmapflags = MAP_SHARED | MAP_NONCACHED
+ 
+ #else /* !__ia64__ */
+ 
+@@ -576,7 +552,7 @@ #endif /* ?__ia64__ */
+ 	result = mmap(NULL, Size + Offset, prot, mmapflags, fd, realBase);
+ 
+ 	if (!result || ((pointer)result == MAP_FAILED))
+-	    return NULL;
++	    FatalError("linuxMapPci() mmap failure:  %s\n", strerror(errno));
+ 
+ 	xf86MakeNewMapping(ScreenNum, Flags, realBase, Size + Offset, result);
+ 
+@@ -647,37 +624,12 @@ _X_EXPORT pointer
+ xf86MapDomainMemory(int ScreenNum, int Flags, PCITAG Tag,
+ 		    ADDRESS Base, unsigned long Size)
+ {
+-    int domain = xf86GetPciDomain(Tag);
+-    int fd;
+-
+-    /*
+-     * We use /proc/bus/pci on non-legacy addresses or if the Linux sysfs
+-     * legacy_mem interface is unavailable.
+-     */
+-    if (Base > 1024*1024)
+-	return linuxMapPci(ScreenNum, Flags, Tag, Base, Size,
+-			   PCIIOC_MMAP_IS_MEM);
+-
+-    if ((fd = linuxOpenLegacy(Tag, "legacy_mem")) < 0)
+-	return linuxMapPci(ScreenNum, Flags, Tag, Base, Size,
+-			   PCIIOC_MMAP_IS_MEM);
+-
+-
+-    /* If we haven't already mapped this legacy space, try to. */
+-    if (!DomainMmappedMem[domain]) {
+-	DomainMmappedMem[domain] = mmap(NULL, 1024*1024, PROT_READ|PROT_WRITE,
+-					MAP_SHARED, fd, 0);
+-	if (DomainMmappedMem[domain] == MAP_FAILED) {
+-	    close(fd);
+-	    perror("mmap failure");
+-	    FatalError("xf86MapDomainMem():  mmap() failure\n");
+-	}
+-    }
+-
+-    close(fd);
+-    return (pointer)((char *)DomainMmappedMem[domain] + Base);
++    return linuxMapPci(ScreenNum, Flags, Tag, Base, Size, PCIIOC_MMAP_IS_MEM);
+ }
+ 
++#define MAX_DOMAINS 257
++static pointer DomainMmappedIO[MAX_DOMAINS];
++
+ /*
+  * xf86MapDomainIO - map I/O space in this domain
+  *
+@@ -698,30 +650,23 @@ xf86MapDomainIO(int ScreenNum, int Flags
+ 		IOADDRESS Base, unsigned long Size)
+ {
+     int domain = xf86GetPciDomain(Tag);
+-    int fd;
+ 
+     if ((domain <= 0) || (domain >= MAX_DOMAINS))
+ 	FatalError("xf86MapDomainIO():  domain out of range\n");
+ 
+-    if (DomainMmappedIO[domain])
+-	return (IOADDRESS)DomainMmappedIO[domain] + Base;
+-
+     /* Permanently map all of I/O space */
+-    if ((fd = linuxOpenLegacy(Tag, "legacy_io")) < 0) {
+-	    DomainMmappedIO[domain] = linuxMapPci(ScreenNum, Flags, Tag,
+-						  0, linuxGetIOSize(Tag),
+-						  PCIIOC_MMAP_IS_IO);
+-	    /* ia64 can't mmap legacy IO port space */
+-	    if (!DomainMmappedIO[domain])
+-		return Base;
+-    }
+-    else { /* legacy_io file exists, encode fd */
+-	DomainMmappedIO[domain] = (pointer)(fd << 24);
++    if (!DomainMmappedIO[domain]) {
++	DomainMmappedIO[domain] = linuxMapPci(ScreenNum, Flags, Tag,
++					      0, linuxGetIOSize(Tag),
++					      PCIIOC_MMAP_IS_IO);
++	if (!DomainMmappedIO[domain])
++	    FatalError("xf86MapDomainIO():  mmap() failure\n");
+     }
+ 
+     return (IOADDRESS)DomainMmappedIO[domain] + Base;
+ }
+
++/* +<<<<<<< .merge_file_1mFYhf */
+ /*
+  * xf86ReadDomainMemory - copy from domain memory into a caller supplied buffer
+  */
+@@ -733,40 +678,6 @@ xf86ReadDomainMemory(PCITAG Tag, ADDRESS
+     unsigned long size;
+     int len, pagemask = getpagesize() - 1;
+ 
+-    unsigned int i, dom, bus, dev, func;
+-    unsigned int fd;
+-    char file[256];
+-    struct stat st;
+-
+-    dom  = PCI_DOM_FROM_TAG(Tag);
+-    bus  = PCI_BUS_FROM_TAG(Tag);
+-    dev  = PCI_DEV_FROM_TAG(Tag);
+-    func = PCI_FUNC_FROM_TAG(Tag);
+-    sprintf(file, "/sys/devices/pci%04x:%02x/%04x:%02x:%02x.%1x/rom",
+-	    dom, bus, dom, bus, dev, func);
+-
+-    /*
+-     * If the caller wants the ROM and the sysfs rom interface exists,
+-     * try to use it instead of reading it from /proc/bus/pci.
+-     */
+-    if (((Base & 0xfffff) == 0xC0000) && (stat(file, &st) == 0)) {
+-        if ((fd = open(file, O_RDWR)))
+-            Base = 0x0;
+-
+-	/* enable the ROM first */
+-	write(fd, "1", 2);
+-	lseek(fd, 0, SEEK_SET);
+-
+-        /* copy the ROM until we hit Len, EOF or read error */
+-        for (i = 0; i < Len && read(fd, Buf, 1) > 0; Buf++, i++)
+-            ;
+-
+-	write(fd, "0", 2);
+-	close(fd);
+-
+-	return Len;
+-    }
+-
+     /* Ensure page boundaries */
+     offset = Base & ~pagemask;
+     size = ((Base + Len + pagemask) & ~pagemask) - offset;
+diff --git a/hw/xfree86/os-support/linux/lnx_ia64.c b/hw/xfree86/os-support/linux/lnx_ia64.c
+index 5f742d0..6580f2e 100644
+--- a/hw/xfree86/os-support/linux/lnx_ia64.c
++++ b/hw/xfree86/os-support/linux/lnx_ia64.c
+@@ -30,7 +30,6 @@ #endif
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+-#include <sys/utsname.h>
+ #include <unistd.h>
+ #include <stdlib.h>
+ 
+@@ -41,34 +40,11 @@ #if defined OS_PROBE_PCI_CHIPSET
+ IA64Chipset OS_PROBE_PCI_CHIPSET(scanpciWrapperOpt flags)
+ {
+     struct stat unused;
+-    struct utsname utsName;
+ 
+     if (!stat("/proc/bus/mckinley/zx1",&unused) 
+ 	|| !stat("/proc/bus/mckinley/zx2",&unused))
+ 	return ZX1_CHIPSET;
+ 
+-    if (!stat("/proc/sgi_sn/licenseID", &unused)) {
+-        int major, minor, patch;
+-        char *c;
+-
+-	/* We need a 2.6.11 or better kernel for Altix support */
+-	uname(&utsName);
+-        c = utsName.release;
+-        
+-        major = atoi(c);
+-        c = strstr(c, ".") + 1;
+-        minor = atoi(c);
+-        c = strstr(c, ".") + 1;
+-        patch = atoi(c);
+-        
+-	if (major < 2 || (major == 2 && minor < 6) ||
+-            (major == 2 && minor == 6 && patch < 11)) {
+-	    ErrorF("Kernel 2.6.11 or better needed for Altix support\n");
+-	    return NONE_CHIPSET;
+-	}
+-	return ALTIX_CHIPSET;
+-    }
+-
+     return NONE_CHIPSET;
+ }
+ #endif
+diff --git a/hw/xfree86/os-support/shared/ia64Pci.c b/hw/xfree86/os-support/shared/ia64Pci.c
+index 1fe119d..b8e13cd 100644
+--- a/hw/xfree86/os-support/shared/ia64Pci.c
++++ b/hw/xfree86/os-support/shared/ia64Pci.c
+@@ -33,165 +33,12 @@ #ifdef HAVE_XORG_CONFIG_H
+ #include <xorg-config.h>
+ #endif
+ 
+-#include <fcntl.h>
+-#include <unistd.h>
+-#include <signal.h>
+-#include <dirent.h>
+-#include <sys/types.h>
+-#include <sys/stat.h>
+-#include <sys/ioctl.h>
+-#include <linux/pci.h>
+-
+-#include "compiler.h"
+ #include "460gxPCI.h"
+ #include "e8870PCI.h"
+ #include "zx1PCI.h"
+-#include "altixPCI.h"
+ #include "Pci.h"
+ #include "ia64Pci.h"
+ 
+-/*
+- * We use special in/out routines here since Altix platforms require the
+- * use of the sysfs legacy_io interface.  The legacy_io file maps to the I/O
+- * space of a given PCI domain; reads and writes are used to do port I/O.
+- * The file descriptor for the file is stored in the upper bits of the
+- * value passed in by the caller, and is created and populated by
+- * xf86MapDomainIO.
+- *
+- * If the legacy_io interface doesn't exist, we fall back to the glibc in/out
+- * routines, which are prefixed by an underscore (e.g. _outb).
+- */
+-static int ia64_port_to_fd(unsigned long port)
+-{
+-    return (port >> 24) & 0xffffffff;
+-}
+-
+-_X_EXPORT void outb(unsigned long port, unsigned char val)
+-{
+-    int fd = ia64_port_to_fd(port);
+-
+-    if (!fd) {
+-	_outb(val, port & 0xffff);
+-	goto out;
+-    }
+-    if (lseek(fd, port & 0xffff, SEEK_SET) == -1) {
+-	ErrorF("I/O lseek failed\n");
+-	goto out;
+-    }
+-    if (write(fd, &val, 1) != 1) {
+-	ErrorF("I/O write failed\n");
+-	goto out;
+-    }
+- out:
+-    return;
+-}
+-
+-_X_EXPORT void outw(unsigned long port, unsigned short val)
+-{
+-    int fd = ia64_port_to_fd(port);
+-
+-    if (!fd) {
+-	_outw(val, port & 0xffff);
+-	goto out;
+-    }
+-    if (lseek(fd, port & 0xffff, SEEK_SET) == -1) {
+-	ErrorF("I/O lseek failed\n");
+-	goto out;
+-    }
+-    if (write(fd, &val, 2) != 2) {
+-	ErrorF("I/O write failed\n");
+-	goto out;
+-    }
+- out:
+-    return;
+-}
+-
+-_X_EXPORT void outl(unsigned long port, unsigned int val)
+-{
+-    int fd = ia64_port_to_fd(port);
+-
+-    if (!fd) {
+-	_outl(val, port & 0xffff);
+-	goto out;
+-    }
+-    if (lseek(fd, port & 0xffff, SEEK_SET) == -1) {
+-	ErrorF("I/O lseek failed\n");
+-	goto out;
+-    }
+-    if (write(fd, &val, 4) != 4) {
+-	ErrorF("I/O write failed\n");
+-	goto out;
+-    }
+- out:
+-    return;
+-}
+-
+-_X_EXPORT unsigned int inb(unsigned long port)
+-{
+-    int fd = ia64_port_to_fd(port);
+-    unsigned char val;
+-
+-    if (!fd)
+-	return _inb(port & 0xffff);
+-
+-    if (lseek(fd, port & 0xffff, SEEK_SET) == -1) {
+-	ErrorF("I/O lseek failed\n");
+-	val = -1;
+-	goto out;
+-    }
+-    if (read(fd, &val, 1) != 1) {
+-	ErrorF("I/O read failed\n");
+-	val = -1;
+-	goto out;
+-    }
+- out:
+-    return val;
+-}
+-
+-_X_EXPORT unsigned int inw(unsigned long port)
+-{
+-    int fd = ia64_port_to_fd(port);
+-    unsigned short val;
+-
+-    if (!fd)
+-	return _inw(port & 0xffff);
+-
+-    if (lseek(fd, port & 0xffff, SEEK_SET) == -1) {
+-	ErrorF("I/O lseek failed\n");
+-	val = -1;
+-	goto out;
+-    }
+-    if (read(fd, &val, 2) != 2) {
+-	ErrorF("I/O read failed\n");
+-	val = -1;
+-	goto out;
+-    }
+- out:
+-    return val;
+-}
+-
+-_X_EXPORT unsigned int inl(unsigned long port)
+-{
+-    int fd = ia64_port_to_fd(port);
+-    unsigned int val;
+-
+-    if (!fd)
+-	return _inl(port & 0xffff);
+-
+-    if (lseek(fd, port & 0xffff, SEEK_SET) == -1) {
+-	ErrorF("I/O lseek failed\n");
+-	val = -1;
+-	goto out;
+-    }
+-    if (read(fd, &val, 4) != 4) {
+-	ErrorF("I/O read failed\n");
+-	val = -1;
+-	goto out;
+-    }
+- out:
+-    return val;
+-}
+-
+ void
+ ia64ScanPCIWrapper(scanpciWrapperOpt flags)
+ {
+@@ -215,9 +62,6 @@ #ifdef OS_PROBE_PCI_CHIPSET
+ 	    case ZX1_CHIPSET:
+ 		xf86PreScanZX1();
+ 		return;
+-	    case ALTIX_CHIPSET:
+-		xf86PreScanAltix();
+-		return;
+ 	    default:
+ 		return;
+ 	}
+@@ -234,9 +78,6 @@ #endif
+ 	    case ZX1_CHIPSET:
+ 		xf86PostScanZX1();
+ 		return;
+-	    case ALTIX_CHIPSET:
+-		xf86PostScanAltix();
+-		return;
+ 	    default:
+ 		return;
+ 	}
+diff --git a/hw/xfree86/os-support/shared/ia64Pci.h b/hw/xfree86/os-support/shared/ia64Pci.h
+index 978c9ff..ccd6c24 100644
+--- a/hw/xfree86/os-support/shared/ia64Pci.h
++++ b/hw/xfree86/os-support/shared/ia64Pci.h
+@@ -36,8 +36,7 @@ typedef enum {
+     NONE_CHIPSET,
+     I460GX_CHIPSET,
+     E8870_CHIPSET,
+-    ZX1_CHIPSET,
+-    ALTIX_CHIPSET
++    ZX1_CHIPSET
+ } IA64Chipset;
+ 
+ # ifdef OS_PROBE_PCI_CHIPSET
+diff --git a/hw/xfree86/os-support/xf86_OSproc.h b/hw/xfree86/os-support/xf86_OSproc.h
+index 83ce9ed..4d42917 100644
+--- a/hw/xfree86/os-support/xf86_OSproc.h
++++ b/hw/xfree86/os-support/xf86_OSproc.h
+@@ -262,8 +262,6 @@ resPtr xf86AccResFromOS(resPtr ret);
+ #endif /* NEED_OS_RAC_PROTOS */
+ 
+ extern Bool xf86GetPciSizeFromOS(PCITAG tag, int indx, int* bits);
+-extern Bool xf86GetPciOffsetFromOS(PCITAG tag, int indx, unsigned long* bases);
+-extern unsigned long xf86GetOSOffsetFromPCI(PCITAG tag, int space, unsigned long base);
+ 
+ extern void xf86MakeNewMapping(int, int, unsigned long, unsigned long, pointer);
+ extern void xf86InitVidMem(void);
