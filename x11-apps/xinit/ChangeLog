@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.65 2006/08/14 01:50:07 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.66 2006/08/20 19:11:12 dberkholz Exp $
+
+  20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; files/xdm.start:
+  (#143878) Start after gpm, otherwise using the gpm device for mouse is
+  broken. (#143928) Start after netmount, or required directories may not be
+  mounted.
 
   14 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xinit-1.0.2-r6.ebuild:
