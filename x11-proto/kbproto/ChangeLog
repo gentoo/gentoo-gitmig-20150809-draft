@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/kbproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.28 2006/07/26 02:54:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/kbproto/ChangeLog,v 1.29 2006/08/20 21:56:15 dberkholz Exp $
+
+  20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; kbproto-1.0.3.ebuild:
+  Stable on x86/ppc.
 
 *kbproto-1.0.3 (26 Jul 2006)
 
