@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.7.11.ebuild,v 1.9 2006/07/12 19:59:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.7.11.ebuild,v 1.10 2006/08/20 21:24:43 vapier Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="xfs filesystem utilities"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.5.ebuild,v 1.4 2005/11/29 03:53:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.5.ebuild,v 1.5 2006/08/20 21:23:43 vapier Exp $
 
-inherit eutils
+inherit toolchain-funcs
 
 MY_P=${PN}-${PV/_p/-}
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."

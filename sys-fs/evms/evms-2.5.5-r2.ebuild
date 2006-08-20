@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r2.ebuild,v 1.1 2006/06/01 21:31:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r2.ebuild,v 1.2 2006/08/20 21:23:00 vapier Exp $
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
@@ -24,12 +24,12 @@ RDEPEND="virtual/libc
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}/raid5_degrade_fix.patch
-	epatch ${FILESDIR}/${PV}/md_super_fix.patch
-	epatch ${FILESDIR}/${PV}/raid5_remove_spare_fix.patch
-	epatch ${FILESDIR}/${PV}/raid5_remove_spare_fix_2.patch
-	epatch ${FILESDIR}/evms-2.5.5-as-needed.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}/raid5_degrade_fix.patch
+	epatch "${FILESDIR}"/${PV}/md_super_fix.patch
+	epatch "${FILESDIR}"/${PV}/raid5_remove_spare_fix.patch
+	epatch "${FILESDIR}"/${PV}/raid5_remove_spare_fix_2.patch
+	epatch "${FILESDIR}"/evms-2.5.5-as-needed.patch
 }
 
 src_compile() {

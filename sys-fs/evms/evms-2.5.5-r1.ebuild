@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r1.ebuild,v 1.9 2006/08/20 21:21:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r1.ebuild,v 1.10 2006/08/20 21:23:00 vapier Exp $
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
