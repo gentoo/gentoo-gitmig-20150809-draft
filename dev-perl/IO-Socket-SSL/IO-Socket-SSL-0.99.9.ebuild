@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.99.9.ebuild,v 1.1 2006/08/19 17:49:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.99.9.ebuild,v 1.2 2006/08/20 21:07:50 yuval Exp $
 
 inherit perl-module versionator
 
@@ -24,4 +24,5 @@ IUSE=""
 
 DEPEND=">=dev-perl/Net-SSLeay-1.21
 	dev-lang/perl"
-S="${WORKDIR}/${P%.1}"
+MY_PV=$(replace_version_separator 2 '')
+S="${WORKDIR}/${PN}-${MY_PV}"
