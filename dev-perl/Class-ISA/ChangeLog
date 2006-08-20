@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-ISA
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.9 2006/08/20 03:12:23 mcummings Exp $
+
+*Class-ISA-0.33 (20 Aug 2006)
+
+  20 Aug 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Class-ISA-0.33.ebuild:
+  Dep for Email-Abstract
+
