@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/cutecom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.8 2006/03/12 09:54:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.9 2006/08/20 05:48:23 mrness Exp $
+
+*cutecom-0.14.0 (20 Aug 2006)
+
+  20 Aug 2006; Alin Nastac <mrness@gentoo.org> +cutecom-0.14.0.ebuild:
+  Version bump (#144405).
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> metadata.xml,
   -cutecom-0.12.0.ebuild, -cutecom-0.13.1.ebuild:
