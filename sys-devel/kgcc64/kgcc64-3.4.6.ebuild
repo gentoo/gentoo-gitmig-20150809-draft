@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.6.ebuild,v 1.3 2006/08/17 15:58:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-3.4.6.ebuild,v 1.4 2006/08/20 06:06:04 vapier Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -30,7 +30,7 @@ DEPEND="hppa? ( sys-devel/binutils-hppa64 )
 	!sys-devel/gcc-mips64"
 
 src_unpack() {
-	gcc_src_unpack
+	toolchain_src_unpack
 
 	epatch "${GCC_FILESDIR}"/3.4.4/gcc-3.4.4-cross-compile.patch
 
@@ -55,4 +55,14 @@ src_unpack() {
 			epatch "${GCC_FILESDIR}"/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch
 			;;
 	esac
+}
+
+src_install() {
+	toolchain_src_install
+
+	local x
+	for x in gcc cpp ; do
+		newbin "${FILESDIR}"/wrapper ${CTARGET%%-*}-linux-gnu-${x}
+		dosed "s:TARGET:${CTARGET}-${x}:" /usr/bin/${CTARGET%%-*}-linux-gnu-${x}
+	done
 }
