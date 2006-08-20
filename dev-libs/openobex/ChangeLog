@@ -1,9 +1,6 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.38 2006/08/20 09:41:09 liquidx Exp $
-
-  20 Aug 2006; Alastair Tse <liquidx@gentoo.org> ChangeLog:
-  stable for x86
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.39 2006/08/20 09:42:54 liquidx Exp $
 
   20 Aug 2006; Simon Stelling <blubb@gentoo.org> openobex-1.2-r1.ebuild:
   stable on amd64
