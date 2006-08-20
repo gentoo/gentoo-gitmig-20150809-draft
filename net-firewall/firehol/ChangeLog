@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.20 2006/07/23 08:55:03 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.21 2006/08/20 03:58:25 weeve Exp $
+
+  20 Aug 2006; Jason Wever <weeve@gentoo.org> firehol-1.226-r1.ebuild:
+  Added ~sparc keyword wrt bug #137899.
 
   23 Jul 2006; Dominik Stadler <centic@gentoo.org>
   -files/firehol-1.191-bash-3.0.patch, -firehol-1.120.ebuild,
