@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-config/blas-config-1.0.1.ebuild,v 1.2 2006/01/29 16:25:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-config/blas-config-1.0.1.ebuild,v 1.3 2006/08/20 22:49:51 dberkholz Exp $
 
 DESCRIPTION="Utility to change the default BLAS library"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc ppc64 sparc alpha"
+KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=""
