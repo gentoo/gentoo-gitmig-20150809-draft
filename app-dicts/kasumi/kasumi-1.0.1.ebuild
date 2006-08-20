@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-1.0.1.ebuild,v 1.1 2006/07/07 13:10:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-1.0.1.ebuild,v 1.2 2006/08/20 12:14:12 liquidx Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	>=dev-libs/atk-1.4
 	>=dev-libs/expat-1.95
 	>=x11-libs/pango-1.2
-	nls? ( virtual/libintl )"
+	nls? ( virtual/libintl )
+	app-i18n/anthy"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
