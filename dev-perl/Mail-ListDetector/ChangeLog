@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Mail-ListDetector
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.1 2006/08/20 03:14:46 mcummings Exp $
+
+*Mail-ListDetector-0.34 (20 Aug 2006)
+
+  20 Aug 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Mail-ListDetector-0.34.ebuild:
+  Dep for Mail-Audit
+
