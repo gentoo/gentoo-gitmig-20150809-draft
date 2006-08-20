@@ -1,28 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ce93f7c91a1fce5ea4c7c236c9bca337 ChangeLog 1605
-RMD160 98b00e9e49e437297df85228bda3219631abdfe1 ChangeLog 1605
-SHA256 047636a37f72147cee97df004b7bf1a6f2aa9c86a6754b4827d14ceae46916e7 ChangeLog 1605
-MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1 68
-RMD160 225e6a5d84dcebd1ced4dc8511635dfb6dc221ac files/digest-xquery-syntax-0.1 68
-SHA256 977b2af9ad75c41cfe7b181c46b65227451ff4b5497645bef9ab70032669323c files/digest-xquery-syntax-0.1 68
-MD5 c73e6d5d78dd2898f11ffe6bfd0157a0 files/digest-xquery-syntax-0.1-r1 68
-RMD160 225e6a5d84dcebd1ced4dc8511635dfb6dc221ac files/digest-xquery-syntax-0.1-r1 68
-SHA256 977b2af9ad75c41cfe7b181c46b65227451ff4b5497645bef9ab70032669323c files/digest-xquery-syntax-0.1-r1 68
-MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
-RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
-SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
-MD5 9f17ccdf7fab27f5d806213b6bac7495 xquery-syntax-0.1-r1.ebuild 716
-RMD160 36de8d59494df8ad3f3ba0744dfe8d5e2534e2ba xquery-syntax-0.1-r1.ebuild 716
-SHA256 a00fe97d71138a2c2b2442184898ee4f9b9ccb4c648867c952b467f7631540cd xquery-syntax-0.1-r1.ebuild 716
+DIST xquery-syntax-0.1.tar.bz2 1552 RMD160 4101230faa43005cdf0391dad3581f3af4fdbc63 SHA1 8a1fdf022b9e13edf2fa4b4bf5523832b65dd0c1 SHA256 b1939738070242ad2d7448b7cf4203e63afefce9020f61cc0b3280e99b9bd448
+EBUILD xquery-syntax-0.1-r1.ebuild 711 RMD160 805c33e04c0bc585aed43eb59b472e0021674ba4 SHA1 d2c6fb94f2d0ee0e5ed2147a8f42cd2f138fdd20 SHA256 416ab6c6cf9d77e73e8a667f311984fcf02dd43eb0c52e8c05c0b2c5c3b5eaf4
+MD5 48141699f9c3bda9ae62eea05c41bb6d xquery-syntax-0.1-r1.ebuild 711
+RMD160 805c33e04c0bc585aed43eb59b472e0021674ba4 xquery-syntax-0.1-r1.ebuild 711
+SHA256 416ab6c6cf9d77e73e8a667f311984fcf02dd43eb0c52e8c05c0b2c5c3b5eaf4 xquery-syntax-0.1-r1.ebuild 711
+EBUILD xquery-syntax-0.1.ebuild 531 RMD160 9e99d2565ac96cb0f499cf0d7b44833e2e6c2b7d SHA1 87bdecaf77b5b403b47460af20994b7496278d94 SHA256 71160e64365fdfd279348ef49d862b371a8c585e370e62a0720d522b8ec74af0
 MD5 c8ea498569f73d4871c6db61666015b4 xquery-syntax-0.1.ebuild 531
 RMD160 9e99d2565ac96cb0f499cf0d7b44833e2e6c2b7d xquery-syntax-0.1.ebuild 531
 SHA256 71160e64365fdfd279348ef49d862b371a8c585e370e62a0720d522b8ec74af0 xquery-syntax-0.1.ebuild 531
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFENtpiugEuf3OQ0akRAjLJAKCbwgqS8XtZuT3I+NlAXxg/mGjCOgCgnSWG
-gnizXtuBr95x0ktJezv6NB8=
-=V6Lm
------END PGP SIGNATURE-----
+MISC ChangeLog 1684 RMD160 3f6671f8ba089ee630a55a3dc15f24722f7317ac SHA1 28cf57de6e133fd8b34e0697c583c0c9cf3936e8 SHA256 39ec56c24a64bdb82ece503b3bb14b1f166f384254db1f38d87c910f7cb78ae2
+MD5 5e8dd0618687dd35d2bbe9131bad65dd ChangeLog 1684
+RMD160 3f6671f8ba089ee630a55a3dc15f24722f7317ac ChangeLog 1684
+SHA256 39ec56c24a64bdb82ece503b3bb14b1f166f384254db1f38d87c910f7cb78ae2 ChangeLog 1684
+MISC metadata.xml 157 RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a SHA1 22983b8e9ba3045d8ccbc2b14393423f7f05d2ee SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a
+MD5 03408b23ff38d83b09d299387892f54d metadata.xml 157
+RMD160 adcd6494e1e562ab5e0bd090e114622782ac753a metadata.xml 157
+SHA256 106c8618581360c66c2b535fcb7a6cb9ff318f1bd8e6c8f40f2f2f2d54e6787a metadata.xml 157
+MD5 dfb223e3bdf2f1eb2efcaabab99c6ed5 files/digest-xquery-syntax-0.1 250
+RMD160 fc86e432858efda16f69b797f0bfde7a4dda5621 files/digest-xquery-syntax-0.1 250
+SHA256 5e31e32cea0b92d953c49d5ddf19413d75ebd12511df1c8a7eea2bb88d35cd53 files/digest-xquery-syntax-0.1 250
+MD5 dfb223e3bdf2f1eb2efcaabab99c6ed5 files/digest-xquery-syntax-0.1-r1 250
+RMD160 fc86e432858efda16f69b797f0bfde7a4dda5621 files/digest-xquery-syntax-0.1-r1 250
+SHA256 5e31e32cea0b92d953c49d5ddf19413d75ebd12511df1c8a7eea2bb88d35cd53 files/digest-xquery-syntax-0.1-r1 250
