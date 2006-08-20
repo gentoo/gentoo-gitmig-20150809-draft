@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.91.ebuild,v 1.1 2006/08/19 00:22:11 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.91.ebuild,v 1.2 2006/08/20 21:22:50 genstef Exp $
 
 DESCRIPTION="Meta package for D-Bus"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -14,9 +14,9 @@ IUSE="gtk python" #perl,java,mono,qt3 to come later.
 
 RDEPEND=">=sys-apps/dbus-core-0.91
 	python? ( >=dev-python/dbus-python-0.71 )
+	qt3? ( >=dev-libs/dbus-qt3-old-0.70 )
 	gtk? ( >=dev-libs/dbus-glib-0.71 )"
 #	mono? ( >=dev-dotnet/dbus-sharp-0.63 )
-#	qt3? ( >=dev-libs/dbus-qt3-0.2 )
 #	perl? ( >=dev-perl/Net-DBus-0.33.3 )
 #	java (there are 2 java packages, one for 1.4 and one for 1.5)
 #	( >=dev-java/libdbus-java-0.4 ) # 1.4
