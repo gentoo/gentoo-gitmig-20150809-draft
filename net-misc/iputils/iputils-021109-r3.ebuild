@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.25 2006/06/08 10:57:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.26 2006/08/20 07:26:41 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-syserror.patch
 	epatch "${FILESDIR}"/${PV}-uclibc-no-ether_ntohost.patch
 	epatch "${FILESDIR}"/${P}-bindnow.patch #77526
+	epatch "${FILESDIR}"/${P}-ipv6-updates.patch #134751
 	# make iputils work with newer glibc snapshots
 	epatch "${FILESDIR}"/${P}-linux-udp-header.patch
 
