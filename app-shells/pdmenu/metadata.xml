@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+<email>alex@stener.nu></email>
+<name>Alexander H. Færøy</name>
+</maintainer>
+<maintainer>
+<email>kloeri@gentoo.org</email>
+<name>Bryan Østergaard</name>
+</maintainer>
+<longdescription lang="en">
+</longdescription>
+</pkgmetadata>
+
