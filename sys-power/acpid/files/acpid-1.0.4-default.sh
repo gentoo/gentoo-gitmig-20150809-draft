@@ -1,26 +1,53 @@
 #!/bin/sh
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-1.0.4-default.sh,v 1.1 2005/03/15 19:15:53 ciaranm Exp $
-
+# /etc/acpi/default.sh
 # Default acpi script that takes an entry for all actions
 
 set $*
 
 group=${1/\/*/}
 action=${1/*\//}
+device=$2
+id=$3
+value=$4
+
+log_unhandled() {
+	logger "ACPI event unhandled: $*"
+}
 
 case "$group" in
 	button)
 		case "$action" in
-			power)	/sbin/init 0
+			power)
+				/sbin/init 0
 				;;
-			*)	logger "ACPI action $action is not defined"
-				;;
+
+			# if your laptop doesnt turn on/off the display via hardware
+			# switch and instead just generates an acpi event, you can force
+			# X to turn off the display via dpms.  note you will have to run
+			# 'xhost +local:0' so root can access the X DISPLAY.
+			#lid)
+			#	xset dpms force off
+			#	;;
+
+			*)	log_unhandled $* ;;
 		esac
 		;;
 
-	*)
-		logger "ACPI group $group / action $action is not defined"
+	ac_adapter)
+		case "$value" in
+			# Add code here to handle when the system is unplugged
+			# (maybe change cpu scaling to powersave mode)
+			#*0)
+			#	;;
+
+			# Add code here to handle when the system is plugged in
+			# (maybe change cpu scaling to performance mode)
+			#*1)
+			#	;;
+
+			*)	log_unhandled $* ;;
+		esac
 		;;
+
+	*)	log_unhandled $* ;;
 esac
