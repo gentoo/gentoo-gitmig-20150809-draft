@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/eruby-syntax/eruby-syntax-2.0-r1.ebuild,v 1.4 2005/10/02 19:14:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/eruby-syntax/eruby-syntax-2.0-r1.ebuild,v 1.5 2006/08/20 23:13:06 malc Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: syntax highlighting for eruby"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=403"
 LICENSE="as-is"
-KEYWORDS="alpha ~amd64 ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT="This plugin provides syntax highlighting for eruby"
