@@ -1,7 +1,4 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-1.0.4-default,v 1.2 2005/04/24 16:21:45 brix Exp $
-
+# /etc/acpi/events/default
 # This is the ACPID default configuration, it takes all
 # events and passes them to /etc/acpi/default.sh for further
 # processing.
