@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.10 2006/08/18 01:13:10 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r3.ebuild,v 1.11 2006/08/20 15:08:06 metalgod Exp $
 
 inherit eutils gnustep-funcs flag-o-matic multilib
 
@@ -12,7 +12,8 @@ SRC_URI="ftp://ftp.windowmaker.info/pub/source/release/${P/windowm/WindowM}.tar.
 HOMEPAGE="http://www.windowmaker.info/"
 
 IUSE="gif gnustep jpeg nls png tiff modelock xinerama"
-DEPEND="|| ( ( x11-libs/libXv )
+DEPEND="|| ( ( x11-libs/libXv
+	x11-libs/libXft )
 	virtual/x11 )
 	media-libs/fontconfig
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
