@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.1 2006/05/04 02:25:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.2 2006/08/20 21:40:04 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -56,9 +56,6 @@ src_unpack() {
 
 	# make sure we don't try to regen the manpages
 	touch *.5
-
-	rm -f missing
-	automake --add-missing || die
 }
 
 src_compile() {
