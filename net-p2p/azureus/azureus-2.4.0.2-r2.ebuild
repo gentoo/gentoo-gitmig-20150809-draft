@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2-r2.ebuild,v 1.2 2006/08/16 08:07:19 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.4.0.2-r2.ebuild,v 1.3 2006/08/20 08:39:09 betelgeuse Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -13,14 +13,18 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="source"
 
-RDEPEND=">=virtual/jre-1.4
-	>dev-java/swt-3.2_pre1
+# >=swt-3.2 for bug 
+# https://bugs.gentoo.org/show_bug.cgi?id=135835
+
+RDEPEND="
+	>=virtual/jre-1.4
+	>=dev-java/swt-3.2
 	>=dev-java/log4j-1.2.8
 	>=dev-java/commons-cli-1.0
 	>=dev-java/bcprov-1.31
 	!net-p2p/azureus-bin"
-DEPEND=">=virtual/jdk-1.4
-	${RDEPEND}
+DEPEND="${RDEPEND}
+	>=virtual/jdk-1.4
 	dev-util/desktop-file-utils
 	>=dev-java/ant-core-1.6.2
 	amd64? ( =dev-java/eclipse-ecj-3.1* )
