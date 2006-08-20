@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/dbus-qt3-old
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.1 2006/08/20 21:19:56 genstef Exp $
+
+*dbus-qt3-old-0.70 (20 Aug 2006)
+
+  20 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +dbus-qt3-old-0.70.ebuild:
+  initial import thanks to sourcemage, http://bugs.sourcemage.org/12907
+
