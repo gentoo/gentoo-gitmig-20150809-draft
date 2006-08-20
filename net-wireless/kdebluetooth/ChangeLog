@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.50 2006/08/13 13:38:26 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.51 2006/08/20 09:10:06 blubb Exp $
+
+  20 Aug 2006; Simon Stelling <blubb@gentoo.org>
+  kdebluetooth-1.0_beta1-r2.ebuild:
+  stable on amd64
 
   13 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   kdebluetooth-1.0_beta1-r2.ebuild:
