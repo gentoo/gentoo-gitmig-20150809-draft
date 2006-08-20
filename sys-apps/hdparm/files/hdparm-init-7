@@ -121,7 +121,7 @@ scan_nondevfs() {
 		# check that the block device really exists by
 		# opening it for reading
 		local errmsg status
-		errmsg=$(: 2>&1 <$device)
+		errmsg=$(export LC_ALL=C ; : 2>&1 <$device)
 		status=$?
 		if [[ -b $device ]] && \
 		   [[ ${status} == 0 || ${errmsg} == *": No medium found" ]]
