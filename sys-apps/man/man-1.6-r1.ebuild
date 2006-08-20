@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6-r1.ebuild,v 1.6 2006/08/17 14:20:16 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6-r1.ebuild,v 1.7 2006/08/20 12:30:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -108,6 +108,6 @@ pkg_postinst() {
 	if [[ ${files/$'\n'} != ${files} ]] ; then
 		ewarn "You have multiple makewhatis cron files installed."
 		ewarn "You might want to delete all but one of these:"
-		echo ${files}
+		ewarn ${files}
 	fi
 }
