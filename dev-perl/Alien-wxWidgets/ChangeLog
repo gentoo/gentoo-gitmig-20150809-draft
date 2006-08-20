@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.2 2006/08/20 02:34:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.3 2006/08/20 15:48:41 yuval Exp $
+
+*Alien-wxWidgets-0.20-r1 (20 Aug 2006)
+
+  20 Aug 2006; Yuval Yaari <yuval@gentoo.org>
+  +Alien-wxWidgets-0.20-r1.ebuild:
+  Revision bump: making sure wxGTK's SLOTs don't make problems (reported by
+  Patterner over IRC)
 
 *Alien-wxWidgets-0.20 (20 Aug 2006)
 
