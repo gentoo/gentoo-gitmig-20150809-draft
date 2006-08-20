@@ -1,22 +1,25 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.15 2006/04/19 22:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.16 2006/08/20 06:44:59 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
 DESCRIPTION="hardware-accelerated canvas API"
 
-IUSE="X directfb fbcon jpeg mmx opengl png sse cairo altivec"
+IUSE="altivec cairo directfb gif fbcon jpeg mmx opengl png sse svg tiff X xpm"
 
 RDEPEND="X? ( || ( x11-libs/libXrender virtual/x11 ) )
 	opengl? ( virtual/opengl )
 	>=media-libs/imlib2-1.2.0
 	>=dev-libs/eet-0.9.9
 	>=dev-db/edb-1.0.5
-	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
-	directfb? ( >=dev-libs/DirectFB-0.9.16 )
 	cairo? ( >=x11-libs/cairo-0.2.0 )
+	directfb? ( >=dev-libs/DirectFB-0.9.16 )
+	gif? ( media-libs/giflib )
+	jpeg? ( media-libs/jpeg )
+	png? ( media-libs/libpng )
+	svg? ( gnome-base/librsvg )
+	tiff? ( media-libs/tiff )
 	dev-util/pkgconfig"
 #	X? ( xcb-util )
 DEPEND="${RDEPEND}
@@ -33,11 +36,15 @@ src_compile() {
 		--enable-buffer \
 		$(use_enable opengl gl-x11) \
 		$(use_enable X xrender-x11) \
+		$(use_enable gif image-loader-gif) \
 		$(use_enable png image-loader-png) \
 		$(use_enable jpeg image-loader-jpeg) \
 		--enable-image-loader-eet \
 		--enable-font-loader-eet \
 		--enable-image-loader-edb \
+		$(use_enable tiff image-loader-tiff) \
+		$(use_enable xpm image-loader-xpm) \
+		$(use_enable svg image-loader-svg) \
 		$(use_enable mmx cpu-mmx) \
 		$(use_enable sse cpu-sse) \
 		$(use_enable altivec cpu-altivec) \
