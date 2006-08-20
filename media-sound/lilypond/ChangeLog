@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.46 2006/07/07 06:55:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.47 2006/08/20 08:13:19 genstef Exp $
+
+  20 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  lilypond-2.8.0-r1.ebuild:
+  use virtual/ghostscript, because all ghostscript-8 are now stable,thanks to
+  Ryan Van Wagoner <whiteviz@gmail.com> in bug 138620
 
   07 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
   lilypond-2.8.0-r1.ebuild:
