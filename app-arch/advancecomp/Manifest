@@ -1,22 +1,48 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e9cdfbd98ffa4ea1596f0a8ecf5846d ChangeLog 3394
-MD5 7f9fbc70c2da2b26d8f3991577c3aa77 advancecomp-1.10.ebuild 1012
-MD5 b77ed1c8c1793ef8ee942a7721bf425e advancecomp-1.13.ebuild 1033
-MD5 f218b76194e48d6a32b460b3b0bef546 advancecomp-1.14.ebuild 1055
+AUX advancecomp-1.10-64bit.diff 1397 RMD160 78cdea70b124f886ba4081aa660a86319929c844 SHA1 cbc4023a4514a5c707e54cb50120c3ff8947ab94 SHA256 c8780f7a4b83a5c634c32a964ff6aacad71c171170fc62e799691182eccd84c0
 MD5 c4ee8a7020e9f5b73d86620830dc3825 files/advancecomp-1.10-64bit.diff 1397
+RMD160 78cdea70b124f886ba4081aa660a86319929c844 files/advancecomp-1.10-64bit.diff 1397
+SHA256 c8780f7a4b83a5c634c32a964ff6aacad71c171170fc62e799691182eccd84c0 files/advancecomp-1.10-64bit.diff 1397
+AUX advancecomp-1.10-bzip2-compile-plz-k-thx.diff 3836 RMD160 8f890624658ca4f0886eaff31aa36e1f7e8c6f27 SHA1 1b6ca062ebcbe17da6f4b1619abef6026d38fe92 SHA256 f7a0c0f64035100a8bf4025cbd64d6ec43819468ecf4d4dacd3c219ea29fafdc
 MD5 30d064db7f588a0ec0566436c363af83 files/advancecomp-1.10-bzip2-compile-plz-k-thx.diff 3836
+RMD160 8f890624658ca4f0886eaff31aa36e1f7e8c6f27 files/advancecomp-1.10-bzip2-compile-plz-k-thx.diff 3836
+SHA256 f7a0c0f64035100a8bf4025cbd64d6ec43819468ecf4d4dacd3c219ea29fafdc files/advancecomp-1.10-bzip2-compile-plz-k-thx.diff 3836
+AUX advancecomp-1.13-64bit.diff 1391 RMD160 6ef2a9841fd9b3c128f97f9eba7d0d64e8316904 SHA1 dce3a51a8e43bce8528c00e7af28201aec26bdd6 SHA256 cc802f6debe33059a4d92cff996fe113a6be5aded257df81355f559775037877
 MD5 5cab2e3e3245584e09efe472ed141427 files/advancecomp-1.13-64bit.diff 1391
+RMD160 6ef2a9841fd9b3c128f97f9eba7d0d64e8316904 files/advancecomp-1.13-64bit.diff 1391
+SHA256 cc802f6debe33059a4d92cff996fe113a6be5aded257df81355f559775037877 files/advancecomp-1.13-64bit.diff 1391
+AUX advancecomp-1.13-bzip2-compile-plz-k-thx.diff 3555 RMD160 3fd3ab86113b6738641f2dc8dd9611610d621f26 SHA1 e0750d9e628bedbfa8be74872aadc46946b5141c SHA256 e13a7d32e7ee6e35eecc8c74d9d2ae37fb5711d365d62de68c4a2bae13eadb09
 MD5 20b77a8d8e7dea44fb75a6dbc8f85ef6 files/advancecomp-1.13-bzip2-compile-plz-k-thx.diff 3555
-MD5 9d834207835ed921e599c4bfd613eceb files/digest-advancecomp-1.10 68
-MD5 f0385606d50630dd8e8c63b2371e2828 files/digest-advancecomp-1.13 68
-MD5 6c4f3bbaa1165127f7eb67bcd19f166b files/digest-advancecomp-1.14 68
+RMD160 3fd3ab86113b6738641f2dc8dd9611610d621f26 files/advancecomp-1.13-bzip2-compile-plz-k-thx.diff 3555
+SHA256 e13a7d32e7ee6e35eecc8c74d9d2ae37fb5711d365d62de68c4a2bae13eadb09 files/advancecomp-1.13-bzip2-compile-plz-k-thx.diff 3555
+DIST advancecomp-1.10.tar.gz 353727
+DIST advancecomp-1.13.tar.gz 256677
+DIST advancecomp-1.14.tar.gz 259552 RMD160 b77fa27e41df522fa303f6a1aaa26f2715e93e33 SHA1 57776e9d915ed4b43587a639434cb5905752c8c9 SHA256 10278bddccbeca266180fd7b3c81bd6ac59cc47d864c6213d48d1cda50574f22
+EBUILD advancecomp-1.10.ebuild 1012 RMD160 1548d65875df261630e770cdfb4d308f526a626b SHA1 25223fd5e1a8820727689d049a0fdf807aa050f4 SHA256 b6a7be2b2a27bb7f1d089e6a95952e6a11f46212dcf2e6dd95cf598fba60640a
+MD5 7f9fbc70c2da2b26d8f3991577c3aa77 advancecomp-1.10.ebuild 1012
+RMD160 1548d65875df261630e770cdfb4d308f526a626b advancecomp-1.10.ebuild 1012
+SHA256 b6a7be2b2a27bb7f1d089e6a95952e6a11f46212dcf2e6dd95cf598fba60640a advancecomp-1.10.ebuild 1012
+EBUILD advancecomp-1.13.ebuild 1033 RMD160 5dfc36d141dc80508e173da0eb4a30cbe4d8f691 SHA1 b90b865da2aa0be1a0258ace3033f70b3b6ac76d SHA256 47626e8c14ae95c96ef5023207c8dcd747dbca605766412c5b1c83120d1226eb
+MD5 b77ed1c8c1793ef8ee942a7721bf425e advancecomp-1.13.ebuild 1033
+RMD160 5dfc36d141dc80508e173da0eb4a30cbe4d8f691 advancecomp-1.13.ebuild 1033
+SHA256 47626e8c14ae95c96ef5023207c8dcd747dbca605766412c5b1c83120d1226eb advancecomp-1.13.ebuild 1033
+EBUILD advancecomp-1.14.ebuild 1052 RMD160 5ba8ffc6b5e16b559ea6c3a031fe7788e48e7ac6 SHA1 12fd379d0689f2c4cc420c78ef6ec7ef06100872 SHA256 99fa4d7bb109b07298d7d065e72d9ab894dea3b72111847179ec00234b95827d
+MD5 786441659ebdafec5caa707638ae121f advancecomp-1.14.ebuild 1052
+RMD160 5ba8ffc6b5e16b559ea6c3a031fe7788e48e7ac6 advancecomp-1.14.ebuild 1052
+SHA256 99fa4d7bb109b07298d7d065e72d9ab894dea3b72111847179ec00234b95827d advancecomp-1.14.ebuild 1052
+MISC ChangeLog 3469 RMD160 474ebe1f174c74f751b32b45db7ecc29a01f4f2f SHA1 c0806917cb4dc57c0e8b8e05833b146606d7f5b5 SHA256 eb51af38d19781b936c20f891c8213e3d8b5be27b87acbb1c217834b1682b74a
+MD5 e18ac9fb967564c6d02e70313a42c38c ChangeLog 3469
+RMD160 474ebe1f174c74f751b32b45db7ecc29a01f4f2f ChangeLog 3469
+SHA256 eb51af38d19781b936c20f891c8213e3d8b5be27b87acbb1c217834b1682b74a ChangeLog 3469
+MISC metadata.xml 371 RMD160 461e007e7844889945a531ae6e1afdc6e4391aea SHA1 e12d6879d6db0bba9bdc11c3fd75a5968f0317bd SHA256 6ac884b2d3f75a0eb04e924f47b3450477b4e1d8b1e01c1aa426b7a7b570fbd3
 MD5 52b587de750eaf83b62c0205f5a890a0 metadata.xml 371
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDi8OugIKl8Uu19MoRAoQ9AJ93eQ1ckqr5ZItXxrXidxG50qn+CwCfXQSK
-yzaZy3Ytq25KZF7WfAia+KA=
-=DSLP
------END PGP SIGNATURE-----
+RMD160 461e007e7844889945a531ae6e1afdc6e4391aea metadata.xml 371
+SHA256 6ac884b2d3f75a0eb04e924f47b3450477b4e1d8b1e01c1aa426b7a7b570fbd3 metadata.xml 371
+MD5 9d834207835ed921e599c4bfd613eceb files/digest-advancecomp-1.10 68
+RMD160 f8d30c358e23b132a25c00f26e02f45c2978eb4c files/digest-advancecomp-1.10 68
+SHA256 98721b044e3d8e41e79bf12ee467bc0418697fb0825c763e2c77cc8e9855003d files/digest-advancecomp-1.10 68
+MD5 f0385606d50630dd8e8c63b2371e2828 files/digest-advancecomp-1.13 68
+RMD160 4a76f379ebc7c30c836840a55414d048e4eb2e32 files/digest-advancecomp-1.13 68
+SHA256 e6a84a56107ccd49a3cab774c841fc0957d7324a77a097e97535bd7791c646ec files/digest-advancecomp-1.13 68
+MD5 b85b5d6c40bbf3b44dc5aeec4944783b files/digest-advancecomp-1.14 250
+RMD160 58bf44d53e4841848eadc666ea4767bfd9f2842f files/digest-advancecomp-1.14 250
+SHA256 678e19fe7ceea93b5d5723adf867a27c738141b19a8b1317506e74ced6188b5f files/digest-advancecomp-1.14 250
