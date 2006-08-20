@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbedic
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.19 2005/09/14 19:13:59 josejx Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.20 2006/08/20 19:57:27 malc Exp $
+
+  20 Aug 2006; <malc@gentoo.org> kbedic-4.0.ebuild:
+  Stable on amd64
 
   14 Sep 2005; Joseph Jezak <josejx@gentoo.org>
   +files/ppc-gfxopt.patch, kbedic-4.0.ebuild:
