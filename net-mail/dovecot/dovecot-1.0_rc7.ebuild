@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc7.ebuild,v 1.1 2006/08/18 08:32:23 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc7.ebuild,v 1.2 2006/08/20 12:28:03 uberlord Exp $
 
 inherit autotools eutils
 
@@ -81,7 +81,9 @@ src_install () {
 	fi
 
 	# Listen on ipv6 and ipv4
-	use ipv6 && sed -i -e 's/^#listen = \*/listen = \[::\]/g' "${conf}" || die
+	if use ipv6 ; then
+		sed -i -e 's/^#listen = \*/listen = \[::\]/g' "${conf}" || die
+	fi
 
 	# Install SQL configuration
 	if use mysql || use postgres ; then
