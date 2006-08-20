@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0.ebuild,v 1.2 2006/08/20 13:17:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.3.0.ebuild,v 1.3 2006/08/20 20:32:19 wormo Exp $
 
 PHP_EXT_NAME="php_ming"
 inherit eutils toolchain-funcs java-pkg perl-module php-ext-source-r1 python distutils
@@ -33,7 +33,9 @@ RDEPEND="java? ( virtual/jre )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch "${FILESDIR}/${P}-java-compiler.patch"
+	if use java; then
+		epatch "${FILESDIR}/${P}-java-compiler.patch"
+	fi
 }
 
 src_compile() {

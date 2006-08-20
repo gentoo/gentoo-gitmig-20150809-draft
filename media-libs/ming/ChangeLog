@@ -1,13 +1,16 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.22 2006/08/20 13:17:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.23 2006/08/20 20:32:19 wormo Exp $
+
+  20 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> ming-0.3.0.ebuild:
+  applying java patch needs to be conditional on java useflag (Bug #144548)
 
   20 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> ming-0.3.0.ebuild:
   Fix python dependency.
 
 *ming-0.3.0 (22 Aug 2006)
 
-  22 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  20 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   +ming-0.3.0.ebuild:
   version bump including php and perl bindings added -- ebuild courtesy 
   of Adam Penser (Bug #121716)
