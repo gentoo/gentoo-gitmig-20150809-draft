@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Template-GD
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.1 2006/08/20 09:53:39 yuval Exp $
+
+*Template-GD-2.66 (20 Aug 2006)
+
+  20 Aug 2006; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
+  +Template-GD-2.66.ebuild:
+  Adding Template::GD to the tree as dev-perl/Template-Toolkit-2.15 no longer
+  provides it (bug #142297)
+
