@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/libapreq2
 # Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.16 2006/07/02 13:59:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.17 2006/08/20 14:12:17 yuval Exp $
+
+  20 Aug 2006; Yuval Yaari <yuval@gentoo.org> -libapreq2-2.04.03.ebuild,
+  -libapreq2-2.06.ebuild:
+  security cleanup (bug #140543)
 
   02 Jul 2006; Michael Cummings <mcummings@gentoo.org>
   libapreq2-2.07.ebuild:
