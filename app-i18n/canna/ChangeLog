@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.50 2006/01/25 07:24:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.51 2006/08/20 14:14:09 liquidx Exp $
+
+*canna-3.7_p3 (20 Aug 2006)
+
+  20 Aug 2006; Alastair Tse <liquidx@gentoo.org> canna-3.6_p4.ebuild,
+  canna-3.7_p2.ebuild, +canna-3.7_p3.ebuild:
+  version bump. Fixed deprecated sort invocation (#142818)
 
   25 Jan 2006; Donnie Berkholz <spyderous@gentoo.org>; canna-3.7_p2.ebuild:
   (#118603) Add modular X deps.

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.18 2005/01/01 14:26:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.19 2006/08/20 14:14:09 liquidx Exp $
 
 inherit cannadic eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="A client-server based Kana-Kanji conversion system"
 HOMEPAGE="http://canna.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/canna/6059/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="doc"
