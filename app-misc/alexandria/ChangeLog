@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.17 2006/03/24 12:46:18 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.18 2006/08/20 07:50:41 wormo Exp $
+
+  20 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  alexandria-0.6.0.ebuild, alexandria-0.6.1.ebuild:
+  add scrollkeeper dependency, thanks to Chris Langdon and Petr Pisar
+  for reporting (#Bug 107401)
 
   24 Mar 2006; Caleb Tennis <caleb@gentoo.org> alexandria-0.6.1.ebuild:
   Change dep to ruby-gnome2 0.14.1, per bug #127178

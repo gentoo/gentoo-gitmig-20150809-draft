@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.0.ebuild,v 1.2 2005/09/24 11:11:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.6.0.ebuild,v 1.3 2006/08/20 07:50:41 wormo Exp $
 
 inherit ruby gnome2 eutils
 
@@ -26,6 +26,9 @@ RDEPEND=">=dev-lang/ruby-1.8.0
 	>=dev-ruby/ruby-gdkpixbuf2-0.12.0
 	>=dev-ruby/ruby-amazon-0.8.3
 	>=dev-ruby/ruby-zoom-0.2.0"
+
+DEPEND="${RDEPEND}
+	app-text/scrollkeeper"
 
 src_compile() {
 	ruby install.rb config || die
