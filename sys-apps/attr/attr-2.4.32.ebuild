@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.32.ebuild,v 1.1 2006/08/10 03:20:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.32.ebuild,v 1.2 2006/08/20 21:16:33 vapier Exp $
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 MY_P="${PN}_${PV}-1"
 DESCRIPTION="Extended attributes tools"

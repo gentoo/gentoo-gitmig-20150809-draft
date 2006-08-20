@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.5.ebuild,v 1.1 2006/08/10 03:26:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.2.5.ebuild,v 1.2 2006/08/20 21:17:36 vapier Exp $
 
-inherit eutils autotools
+inherit eutils toolchain-funcs autotools
 
 MY_P="${PN}_${PV}-1"
 DESCRIPTION="XFS data management API library"

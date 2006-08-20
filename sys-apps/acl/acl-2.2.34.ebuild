@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.34.ebuild,v 1.9 2006/08/20 21:13:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.34.ebuild,v 1.10 2006/08/20 21:14:17 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Access control list utilities, libraries and headers"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.39.ebuild,v 1.1 2006/08/10 03:14:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.39.ebuild,v 1.2 2006/08/20 21:14:17 vapier Exp $
 
-inherit eutils autotools
+inherit eutils autotools toolchain-funcs
 
 MY_P="${PN}_${PV}-1"
 DESCRIPTION="Access control list utilities, libraries and headers"
