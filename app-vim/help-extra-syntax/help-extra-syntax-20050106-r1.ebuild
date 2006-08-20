@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/help-extra-syntax-20050106-r1.ebuild,v 1.1 2005/08/08 22:10:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/help-extra-syntax/help-extra-syntax-20050106-r1.ebuild,v 1.2 2006/08/20 23:44:02 malc Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: extra syntax highlighting for help files"
 HOMEPAGE="http://mysite.verizon.net/astronaut/vim/"
 LICENSE="as-is"
-KEYWORDS="alpha ~amd64 arm hppa ia64 mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ppc64 sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPTEXT=\

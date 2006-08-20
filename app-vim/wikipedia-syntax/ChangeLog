@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/wikipedia-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/wikipedia-syntax/ChangeLog,v 1.10 2006/04/07 22:41:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/wikipedia-syntax/ChangeLog,v 1.11 2006/08/20 23:45:31 malc Exp $
+
+  20 Aug 2006; <malc@gentoo.org> wikipedia-syntax-20050212.ebuild:
+  Stable on amd64
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.
