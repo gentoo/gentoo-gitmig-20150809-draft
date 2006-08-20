@@ -50,10 +50,10 @@ EBUILD module-init-tools-3.2.1.ebuild 5859 RMD160 73800223657e4561b0e7f0caf4ef92
 MD5 b0fbdf2a890920ad30858c1820dfbc5a module-init-tools-3.2.1.ebuild 5859
 RMD160 73800223657e4561b0e7f0caf4ef9275835da99f module-init-tools-3.2.1.ebuild 5859
 SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54 module-init-tools-3.2.1.ebuild 5859
-EBUILD module-init-tools-3.2.2-r1.ebuild 4830 RMD160 a9eea6dd5dcfc51b604bd90f2d43c06bdb2dbfab SHA1 038f462f492d6ba6226a49342eab8a29b8b052c4 SHA256 cc239ebb1e2af7625bc4640e40fa4e3685903501615afe210debb155ae22e194
-MD5 5519b403bf07b6d45649a62e292d7611 module-init-tools-3.2.2-r1.ebuild 4830
-RMD160 a9eea6dd5dcfc51b604bd90f2d43c06bdb2dbfab module-init-tools-3.2.2-r1.ebuild 4830
-SHA256 cc239ebb1e2af7625bc4640e40fa4e3685903501615afe210debb155ae22e194 module-init-tools-3.2.2-r1.ebuild 4830
+EBUILD module-init-tools-3.2.2-r1.ebuild 4826 RMD160 6898d8c629c1f8b2a0cfdda18b38f6a23e8e7e06 SHA1 5460b41d8d666f9fbaa6d9fba7ed6585429f580d SHA256 2e7ca785bb090e6030090b6b462ce6434e6dd8ce533a5754008e51b691d54e31
+MD5 079caeb502684a9f0dd0f1216fc89c17 module-init-tools-3.2.2-r1.ebuild 4826
+RMD160 6898d8c629c1f8b2a0cfdda18b38f6a23e8e7e06 module-init-tools-3.2.2-r1.ebuild 4826
+SHA256 2e7ca785bb090e6030090b6b462ce6434e6dd8ce533a5754008e51b691d54e31 module-init-tools-3.2.2-r1.ebuild 4826
 EBUILD module-init-tools-3.2.2.ebuild 5874 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 SHA1 878a834dc1dbddceb4cf07288f93849deb131d08 SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1
 MD5 cf9cd5eaa065e208551fdd004fc04b40 module-init-tools-3.2.2.ebuild 5874
 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 module-init-tools-3.2.2.ebuild 5874
@@ -84,7 +84,7 @@ SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFE6NcCamhnQswr0vIRAvsOAJ0aJpG/6Ta9KBOqcJfq4e1dY4ycHACeLu+P
-PcWgGsE97mWwNtw5ZKV7FZg=
-=kxYJ
+iD8DBQFE6Nc8amhnQswr0vIRAgLNAKC8zQazL+wa0E0iFTtwdV2WTwWPMwCfaZMW
+rxTuVBNyysM8ZqgKxTzn38s=
+=5ndN
 -----END PGP SIGNATURE-----
