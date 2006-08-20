@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Time-modules
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.15 2006/08/06 00:39:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.16 2006/08/20 01:24:11 mcummings Exp $
+
+*Time-modules-2006.0814 (20 Aug 2006)
+
+  20 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  Time-modules-2003.0211.ebuild, Time-modules-2003.1126.ebuild,
+  +Time-modules-2006.0814.ebuild:
+  Version bump
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Time-modules-2003.0211.ebuild, Time-modules-2003.1126.ebuild:

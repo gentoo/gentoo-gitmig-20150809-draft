@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Locale-Maketext-Simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-Maketext-Simple/ChangeLog,v 1.14 2006/08/17 21:33:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-Maketext-Simple/ChangeLog,v 1.15 2006/08/20 01:15:36 mcummings Exp $
+
+*Locale-Maketext-Simple-0.17 (20 Aug 2006)
+
+  20 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  +Locale-Maketext-Simple-0.17.ebuild:
+  Version bump
 
   17 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Locale-Maketext-Simple-0.16.ebuild:
