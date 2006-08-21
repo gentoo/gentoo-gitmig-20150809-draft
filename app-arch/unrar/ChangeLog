@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.72 2006/08/20 16:27:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.73 2006/08/21 11:23:23 weeve Exp $
+
+  21 Aug 2006; Jason Wever <weeve@gentoo.org> unrar-3.6.7.ebuild:
+  Stable on SPARC wrt bug #144492.
 
   20 Aug 2006; Olivier Crête <tester@gentoo.org> unrar-3.6.7.ebuild:
   Stable on amd64 per bug #144492
