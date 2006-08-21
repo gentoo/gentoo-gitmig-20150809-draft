@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/hugs98
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.36 2006/08/15 19:55:56 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.37 2006/08/21 16:28:45 fmccor Exp $
+
+  21 Aug 2006; Ferris McCormick <fmccor@gentoo.org> hugs98-2005.3-r2.ebuild:
+  Stable on sparc --- Bug #126324 --- seems fine and is a dependency for some
+  utilities.
 
   15 Aug 2006; Chris Parrott <cparrott@gentoo.org> hugs98-2005.3-r2.ebuild:
   Marked stable for amd64.
