@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.3.ebuild,v 1.3 2006/08/15 21:13:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.3.ebuild,v 1.4 2006/08/21 00:14:56 mr_bones_ Exp $
 
-inherit eutils games
+inherit eutils debug games
 
 DESCRIPTION="A free Worms clone"
 HOMEPAGE="http://www.wormux.org/"
@@ -31,6 +31,11 @@ src_unpack() {
 		"${FILESDIR}/${P}-fix-gettext-Makefile.patch" \
 		"${FILESDIR}/${P}-user-CFLAGS.patch" \
 		"${FILESDIR}/${P}-fix-tr.po.patch"
+	# avoid the strip on install
+	sed -i \
+		-e "s/@INSTALL_STRIP_PROGRAM@/@INSTALL_PROGRAM@/" \
+		src/Makefile.in \
+		|| die "sed failed"
 }
 
 src_compile() {
