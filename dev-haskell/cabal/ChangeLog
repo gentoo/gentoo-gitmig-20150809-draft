@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cabal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.21 2006/08/16 06:38:20 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.22 2006/08/21 02:16:44 dang Exp $
+
+  21 Aug 2006; Daniel Gryniewicz <dang@gentoo.org> cabal-1.1.4.ebuild:
+  Marked stable on amd64 for bug #140369
 
   16 Aug 2006; Joshua Jackson <tsunam@gentoo.org> cabal-1.1.4.ebuild:
   Stable x86 for ghc bug #140369
