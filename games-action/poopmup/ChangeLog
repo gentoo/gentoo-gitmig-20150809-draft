@@ -1,6 +1,11 @@
 # ChangeLog for games-action/poopmup
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.9 2006/03/25 01:50:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/ChangeLog,v 1.10 2006/08/21 07:03:42 mr_bones_ Exp $
+
+  21 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/poopmup-1.2-freeglut.patch, poopmup-1.2.ebuild:
+  Add patch from Tristan Heaven to enable poopmup to work with freeglut (bug
+  #132103)
 
   25 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> poopmup-1.2.ebuild:
   no need to clear screen in Makefile (bug #120907)

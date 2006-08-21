@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.12 2006/03/25 01:50:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/poopmup/poopmup-1.2.ebuild,v 1.13 2006/08/21 07:03:41 mr_bones_ Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="You are now free to fly around the city and poop on passers-by"
 HOMEPAGE="http://poopmup.sourceforge.net/"
@@ -33,6 +33,8 @@ src_unpack() {
 	sed -i \
 		-e '/clear/d' \
 		Makefile || die "sed failed" # bug #120907
+
+	epatch "${FILESDIR}/${P}-freeglut.patch"
 	rm -rf $(find -name CVS)
 }
 
