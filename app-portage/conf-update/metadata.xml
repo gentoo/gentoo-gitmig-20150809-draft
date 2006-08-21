@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>blubb@gentoo.org</email>
+	<name>Simon Stelling</name>
+</maintainer>
+<longdescription lang="en">
+conf-update is a ncurses-based config managment tool
+</longdescription>
+</pkgmetadata>

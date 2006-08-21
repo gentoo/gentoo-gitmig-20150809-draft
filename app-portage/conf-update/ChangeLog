@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/conf-update
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.3 2006/08/21 09:13:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.4 2006/08/21 16:55:25 blubb Exp $
+
+  21 Aug 2006; <blubb@gentoo.org> +metadata.xml, conf-update-0.9.ebuild:
+  fix bug 144633 and add the lost metadata.xml
 
   21 Aug 2006; Thomas Cort <tcort@gentoo.org> conf-update-0.9.ebuild:
   Added ~alpha keyword.
