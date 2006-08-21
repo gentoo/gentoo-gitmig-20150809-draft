@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.175 2006/07/25 07:29:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.176 2006/08/21 18:22:52 wolf31o2 Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
 # Revisions Caleb Tennis <caleb@gentoo.org>
-# The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
+# The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit
+# straight from here.
 
 inherit base eutils kde-functions flag-o-matic libtool
 DESCRIPTION="Based on the $ECLASS eclass"
@@ -36,6 +37,7 @@ DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/make
 	dev-util/pkgconfig
 	dev-lang/perl
+	|| ( x11-proto/xf86vidmodeproto <virtual/x11-7 )
 	~kde-base/kde-env-3
 	xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) )"
 
