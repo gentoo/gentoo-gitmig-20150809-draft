@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/md4sum
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/ChangeLog,v 1.1 2006/08/21 16:08:48 hanno Exp $
+
+*md4sum-0.02.01 (21 Aug 2006)
+
+  21 Aug 2006; Hanno Boeck <hanno@gentoo.org> +metadata.xml,
+  +md4sum-0.02.01.ebuild:
+  Initial commit, tool to create md4 and edonkey checksums.
+
