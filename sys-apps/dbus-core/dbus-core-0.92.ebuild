@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/dbus-core-0.92.ebuild,v 1.1 2006/08/18 22:03:31 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/dbus-core-0.92.ebuild,v 1.2 2006/08/21 15:25:56 cardoe Exp $
 
 inherit eutils multilib debug autotools
 
@@ -30,7 +30,7 @@ src_compile() {
 	econf \
 		$(use_with X x) \
 		$(use_enable kernel_linux dnotify) \
-		--disable-gcj \
+		$(use_enable kernel_FreeBSD kqueue) \
 		$(use_enable selinux) \
 		$(use_enable debug verbose-mode) \
 		$(use_enable debug checks) \
@@ -60,7 +60,8 @@ src_install() {
 	newinitd "${FILESDIR}"/dbus.init-0.61 dbus
 
 	# dbus X session script (#77504)
-	# FIXME : turns out to only work for GDM, better solution needed
+	# turns out to only work for GDM. has been merged into other desktop
+	# (kdm and such scripts)
 	exeinto /etc/X11/xinit/xinitrc.d/
 	doexe "${FILESDIR}"/30-dbus
 
