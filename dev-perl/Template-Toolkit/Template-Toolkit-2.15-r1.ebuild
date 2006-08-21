@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15-r1.ebuild,v 1.2 2006/08/20 17:18:17 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.15-r1.ebuild,v 1.3 2006/08/21 19:24:40 corsair Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~abw/${P}/"
 IUSE="xml gd mysql postgres latex"
 SLOT="0"
 LICENSE="Artistic GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 
 DEPEND="dev-perl/text-autoformat
 	mysql? ( dev-perl/DBD-mysql )

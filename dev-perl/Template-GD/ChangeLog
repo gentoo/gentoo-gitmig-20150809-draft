@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-GD
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.2 2006/08/20 17:16:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.3 2006/08/21 19:19:18 corsair Exp $
+
+  21 Aug 2006; Markus Rothe <corsair@gentoo.org> Template-GD-2.66.ebuild:
+  Added ~ppc64; bug #144505
 
   20 Aug 2006; Olivier Crête <tester@gentoo.org> Template-GD-2.66.ebuild:
   Added ~amd64 for bug #144505

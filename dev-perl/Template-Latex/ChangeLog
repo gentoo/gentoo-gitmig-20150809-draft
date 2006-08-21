@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-Latex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.2 2006/08/15 16:30:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.3 2006/08/21 19:22:29 corsair Exp $
+
+  21 Aug 2006; Markus Rothe <corsair@gentoo.org> Template-Latex-2.17.ebuild:
+  Added ~ppc64; bug #144505
 
   15 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Template-Latex-2.17.ebuild:
