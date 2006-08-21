@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.78 2006/06/29 01:38:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.79 2006/08/21 07:47:27 beandog Exp $
+
+*dvdrip-0.98.0 (21 Aug 2006)
+
+  21 Aug 2006; beandog +dvdrip-0.98.0.ebuild:
+  Version bump
 
   29 Jun 2006; Michael Cummings <mcummings@gentoo.org>
   +files/nptl-amd64.patch, dvdrip-0.97.10.ebuild:
