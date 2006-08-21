@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.10 2006/08/17 21:17:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.4.2.ebuild,v 1.11 2006/08/21 02:17:46 dang Exp $
 
 # Note to users of hardened gcc-3.x:
 #
@@ -28,7 +28,7 @@ SRC_URI="alpha?		( mirror://gentoo/${P}-alpha.tbz2 )
 		 x86-fbsd?  ( mirror://gentoo/${P}-x86-fbsd.tbz2 )"
 
 LICENSE="as-is"
-KEYWORDS="-* ~alpha ~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="-* ~alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE="" # use the non-binary version if you want to have more choice
 
