@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.1 2006/06/17 20:51:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.2 2006/08/21 08:40:52 pylon Exp $
+
+*dvdisaster-0.70.1 (21 Aug 2006)
+
+  21 Aug 2006; Lars Weiler <pylon@gentoo.org> +dvdisaster-0.70.1.ebuild:
+  Version bump; bug #143468.
 
 *dvdisaster-0.66 (17 Jun 2006)
 
