@@ -1,0 +1,28 @@
+--- Template-XML-2.16/lib/Template/Plugin/XML/LibXML.pm 2006-05-15
+09:19:23.000000000 -0500
++++ Template-XML-2.16-new/lib/Template/Plugin/XML/LibXML.pm     2006-08-21
+13:00:16.000000000 -0500
+@@ -112,7 +112,7 @@
+         eval { $parser->$method($args->{$method}) };
+
+         # if there's a problem throw a Tempalte::Exception
+-        $self->throw("option '$method' not supported") if $@;
++        $class->throw("option '$method' not supported") if $@;
+     }
+
+     # parse
+diff -Nru Template-XML-2.16/lib/Template/Plugin/XML/XPath.pm
+Template-XML-2.16-new/lib/Template/Plugin/XML/XPath.pm
+--- Template-XML-2.16/lib/Template/Plugin/XML/XPath.pm  2006-01-31
+11:52:53.000000000 -0600
++++ Template-XML-2.16-new/lib/Template/Plugin/XML/XPath.pm      2006-08-21
+12:49:39.000000000 -0500
+@@ -19,7 +19,7 @@
+ package Template::Plugin::XML::XPath;
+
+ use strict;
+-usw warnings;
++use warnings;
+ use Template::Exception;
+ use base 'Template::Plugin';
+ use XML::XPath;
