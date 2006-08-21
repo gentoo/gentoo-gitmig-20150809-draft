@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.8.ebuild,v 1.4 2006/08/18 22:23:31 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.8.ebuild,v 1.5 2006/08/21 07:58:38 pylon Exp $
 
 inherit eutils games
 
 SCENARIOS_A="${P}-scenarios.tar.bz2"
+SCENARIOS_DIR="${P}-RC1-scenarios"
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
 HOMEPAGE="http://www.openttd.com/"
@@ -75,7 +76,7 @@ src_install() {
 
 	if use scenarios; then
 		insinto "${GAMES_DATADIR}/${PN}/scenario"
-		doins scenario/* || die "doins failed (scenario)"
+		doins scenario/${SCENARIOS_DIR}/* || die "doins failed (scenario)"
 	fi
 
 	insinto "${GAMES_DATADIR}/${PN}/scripts"
