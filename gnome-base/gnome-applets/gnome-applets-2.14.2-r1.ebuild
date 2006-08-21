@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.1 2006/08/17 02:56:33 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.2 2006/08/21 03:00:45 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -58,7 +58,11 @@ pkg_setup() {
 		G2CONF="${G2CONF} --with-gstreamer=0.10"
 	fi
 
-	if ! use apm && ! use acpi; then
+	if ! use ppc && ! use apm && ! use acpi; then
+		G2CONF="${G2CONF} --disable-battstat"
+	fi
+
+	if use ppc && ! use apm && ! use hal; then
 		G2CONF="${G2CONF} --disable-battstat"
 	fi
 }

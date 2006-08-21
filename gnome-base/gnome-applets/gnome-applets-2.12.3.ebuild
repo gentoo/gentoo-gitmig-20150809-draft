@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.3.ebuild,v 1.10 2006/06/28 15:32:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.12.3.ebuild,v 1.11 2006/08/21 03:00:45 dang Exp $
 
 inherit eutils gnome2
 
@@ -54,7 +54,11 @@ pkg_setup() {
 		$(use_enable ipv6)
 		$(use_with hal)"
 
-	if ! use apm && ! use acpi; then
+	if ! use ppc && ! use apm && ! use acpi; then
+		G2CONF="${G2CONF} --disable-battstat"
+	fi
+
+	if use ppc && ! use apm && ! use hal; then
 		G2CONF="${G2CONF} --disable-battstat"
 	fi
 }
