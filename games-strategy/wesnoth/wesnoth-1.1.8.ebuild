@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.1.8.ebuild,v 1.1 2006/08/21 03:18:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.1.8.ebuild,v 1.2 2006/08/21 15:38:33 mr_bones_ Exp $
 
 inherit autotools eutils toolchain-funcs flag-o-matic games
 
@@ -57,7 +57,6 @@ src_compile() {
 		filter-flags -fstack-protector
 		append-flags -fno-stack-protector
 	fi
-	# the icon and desktop stuff doesn't work yet...
 	egamesconf \
 		--disable-dependency-tracking \
 		--without-fribidi \
@@ -81,7 +80,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	#mv "${D}${GAMES_DATADIR}/"{icons,applnk,applications} "${D}/usr/share/"
 	dodoc MANUAL changelog
 	if use server; then
 		keepdir "${GAMES_STATEDIR}/run/wesnothd"
