@@ -1,6 +1,18 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.56 2006/08/19 16:41:56 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.57 2006/08/21 16:44:28 solar Exp $
+
+*portage-utils-0.1.21 (21 Aug 2006)
+
+  21 Aug 2006; <solar@gentoo.org> -portage-utils-0.1.18.ebuild,
+  -portage-utils-0.1.19.ebuild, +portage-utils-0.1.21.ebuild:
+  - q update from solar. Make sure we invoke quiet mode if PORTAGE_QUIET
+  exists in the env. - qlist update from solar. Unifiy iuse->use umap
+  handling. - qmerge update from solar. Display diff colors when using -sv for
+  installed packages. yellow for update pending. - qfile update from TGL. New
+  -R/--root-prefix switch which assume arguments are already prefixed by $ROOT
+  - qcache update from tcort. New -n/--not switch to list packages that are
+  not keyworded on a given arch. - qlop update from jmbsvicetto. Fixed typo.
 
   19 Aug 2006; <solar@gentoo.org> portage-utils-0.1.20.ebuild:
   - added a note about how to disable the reinitialize script the first time
