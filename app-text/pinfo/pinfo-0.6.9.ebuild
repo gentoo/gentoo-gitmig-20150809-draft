@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.3 2006/06/27 11:50:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.4 2006/08/21 23:03:23 jer Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="https://alioth.debian.org/download.php/1498/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls readline"
 
 RDEPEND="sys-libs/ncurses
