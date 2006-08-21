@@ -34,6 +34,7 @@ gnome-base/gnome-mount
 gnome-base/gnome-volume-manager
 gnome-extra/hal-device-manager
 gnome-extra/gnome-power-manager
+app-crypt/luks-tools
 sys-apps/pmount
 sys-apps/keyutils
 # Requires 2.6 kernel headers
