@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.1 2006/08/12 22:51:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.2 2006/08/21 05:05:39 mkennedy Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -164,12 +164,28 @@ update-alternatives() {
 
 pkg_postinst() {
 	update-alternatives
-	if use nosendmail ; then
-	ewarn
-	ewarn "You disabled sendmail support for Emacs. If you will install any MTA"
-	ewarn "you need to recompile Emacs after that. See bug #11104."
-	ewarn
+	if use nosendmail; then
+		while read line; do einfo "${line}"; done<<'EOF'
+
+You disabled sendmail support for Emacs.  If you later install a MTA
+then you will need to recompile Emacs.	See Bug #11104.
+
+EOF
 	fi
+	if use X; then
+		while read line; do einfo "${line}"; done<<'EOF'
+
+You need to install some fonts for Emacs.  Under monolithic
+XFree86/Xorg you typically had such fonts installed by default.	 With
+modular Xorg, you will have to perform this step yourself.
+
+Installing media-fonts/font-adobe-{75,100}dpi would satisfy basic
+Emacs requirements under X11.
+
+EOF
+	fi
+
+
 }
 
 pkg_postrm() {
