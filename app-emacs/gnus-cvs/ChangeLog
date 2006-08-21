@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus-cvs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.12 2006/02/27 19:50:43 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/ChangeLog,v 1.13 2006/08/21 17:52:16 mkennedy Exp $
+
+  21 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org> gnus-cvs-5.11.ebuild:
+  Don't depend on app-emacs/w3; Resolves Bug #144616.
 
   27 Feb 2006; Matthew Kennedy <mkennedy@gentoo.org> gnus-cvs-5.11.ebuild:
   Remove SANDBOX_DISABLED=1 since it is not a problem with Emacs Lisp
