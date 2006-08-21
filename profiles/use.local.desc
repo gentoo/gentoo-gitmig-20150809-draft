@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2090 2006/08/20 19:59:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2091 2006/08/21 16:23:27 mattepiu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -55,6 +55,7 @@ app-cdr/disc-cover:cdrom - Enable audio CD support. This is not needed to make w
 app-cdr/k3b:css - Enables ripping of encrypted dvds
 app-cdr/k3b:musepack - Enable support for musepack files
 app-cdr/k3b:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
+app-cdr/koverartist:cddb - Enable support for cddb for audio-cd
 app-cdr/pxlinux:gnuplot - enable gnuplot support
 app-cdr/serpentine:muine - Enable Muine support
 app-crypt/ccid:chipcard2 - Enable libchipcard support
