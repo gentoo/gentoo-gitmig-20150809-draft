@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5762 2006/08/20 21:29:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5763 2006/08/21 02:30:07 mkennedy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Matthew Kennedy <mkennedy@gentoo.org> (20 Aug 2006)
+# Unmaintained upstream, problems with recent Emacs.
+app-emacs/w3
 
 # Michael Sterrett <mr_bones_@gentoo.org> (19 Aug 2006)
 # dev-games/guichan is only used by games-rpg/tmw and that
