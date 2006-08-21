@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.69 2006/08/10 03:52:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.70 2006/08/21 01:46:09 vapier Exp $
 
 cd /
 
@@ -69,7 +69,7 @@ parse_target() {
 			cris*)                   CPOST="axis-linux-gnu";;
 			x86|i?86*|amd64|x86_64*) CPOST="pc-linux-gnu";;
 			s390*)                   CPOST="ibm-linux-gnu";;
-			bfin*|nios2*)            CPOST="elf";;
+			bfin*|nios2*|spu*)       CPOST="elf";;
 			*)                       CPOST="unknown-linux-gnu";;
 		esac
 	fi
@@ -129,6 +129,18 @@ parse_target() {
 
 		vax*) TARCH=${HARCH};
 		      LPKG="uclibc";;
+
+		cell*)einfo "The cell target is really an alias for the spu/ppu targets"
+		      ${CROSSDEV} -t ppu || exit 1
+		      ${CROSSDEV} -t spu-elf || exit 1
+		      exit 0;;
+		spu*) TARCH=ppc64;
+		      GPKG="gcc-cell";
+		      KPKG="[none]";
+		      LPKG="newlib";;
+		ppu*) TARCH=ppc64;
+		      CPRE=powerpc64;
+		      GPKG="gcc-cell";;
 
 		ps2*) einfo "The ps2 target is really an alias for the ee/iop/dvp targets"
 		      ${CROSSDEV} -t ee  || exit 1
