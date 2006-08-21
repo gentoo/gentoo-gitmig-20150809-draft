@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.9.ebuild,v 1.1 2006/08/20 10:15:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.9.ebuild,v 1.2 2006/08/21 03:54:43 tcort Exp $
 
 DESCRIPTION="${PN} is a ncurses-based config management utility"
 HOMEPAGE="http://www.gentoo.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
