@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.91.ebuild,v 1.2 2006/08/20 21:22:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.91.ebuild,v 1.3 2006/08/21 12:07:16 genstef Exp $
 
 DESCRIPTION="Meta package for D-Bus"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -10,7 +10,7 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
-IUSE="gtk python" #perl,java,mono,qt3 to come later.
+IUSE="gtk python qt3" #perl,java,mono to come later.
 
 RDEPEND=">=sys-apps/dbus-core-0.91
 	python? ( >=dev-python/dbus-python-0.71 )
