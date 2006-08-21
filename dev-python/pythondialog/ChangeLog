@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythondialog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.15 2006/01/28 14:25:14 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythondialog/ChangeLog,v 1.16 2006/08/21 18:17:26 wolf31o2 Exp $
+
+  21 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  pythondialog-2.7.ebuild:
+  Stable on ppc for the Gentoo Linux Installer.
 
   28 Jan 2006; Lukasz Strzygowski <lucass@gentoo.org>
   -files/00_all_setup.py.patch.bz2, -pythondialog-1.0.ebuild:
