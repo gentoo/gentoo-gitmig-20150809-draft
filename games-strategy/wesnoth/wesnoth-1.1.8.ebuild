@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.0.2.ebuild,v 1.10 2006/08/21 03:18:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.1.8.ebuild,v 1.1 2006/08/21 03:18:33 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs flag-o-matic games
+inherit autotools eutils toolchain-funcs flag-o-matic games
 
 MY_PV=${PV/_/}
 DESCRIPTION="Battle for Wesnoth - A fantasy turn-based strategy game"
@@ -45,16 +45,25 @@ src_unpack() {
 			> "${T}"/wesnothd \
 			|| die "sed failed"
 	fi
-
+	cd "${S}"
+	cp "${FILESDIR}/configure.ac" . || die
+	cp "${FILESDIR}/Makefile.am" icons/ || die
+	eautoreconf
 }
+
 src_compile() {
 	filter-flags -ftracer -fomit-frame-pointer
 	if [[ $(gcc-major-version) -eq 3 ]] ; then
 		filter-flags -fstack-protector
 		append-flags -fno-stack-protector
 	fi
+	# the icon and desktop stuff doesn't work yet...
 	egamesconf \
 		--disable-dependency-tracking \
+		--without-fribidi \
+		--with-localedir=/usr/share/locale \
+		--with-icondir=/usr/share/icons \
+		--with-desktopdir=/usr/share/applications \
 		$(use_enable lite) \
 		$(use_enable server) \
 		$(use_enable server campaign-server) \
@@ -72,7 +81,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	mv "${D}${GAMES_DATADIR}/"{icons,applnk,applications} "${D}/usr/share/"
+	#mv "${D}${GAMES_DATADIR}/"{icons,applnk,applications} "${D}/usr/share/"
 	dodoc MANUAL changelog
 	if use server; then
 		keepdir "${GAMES_STATEDIR}/run/wesnothd"

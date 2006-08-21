@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.73 2006/05/21 18:50:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.74 2006/08/21 03:18:33 mr_bones_ Exp $
+
+*wesnoth-1.1.8 (21 Aug 2006)
+
+  21 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> +files/Makefile.am,
+  +files/configure.ac, wesnoth-1.0.2.ebuild, +wesnoth-1.1.8.ebuild:
+  Try to fix bug #116374 with --dummy-locales per upstream; added package masked
+  beta for 1.2
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> wesnoth-1.0.2.ebuild:
   Stable on ppc64
