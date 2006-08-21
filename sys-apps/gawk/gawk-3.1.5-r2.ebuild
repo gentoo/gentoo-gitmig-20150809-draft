@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5-r2.ebuild,v 1.9 2006/08/13 00:16:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.5-r2.ebuild,v 1.10 2006/08/21 02:03:44 vapier Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/gawk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ~ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="nls build"
+IUSE="nls"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -97,21 +97,17 @@ src_install() {
 	# We do not want 'acconfig.h' in there ...
 	rm -f "${D}"/usr/include/awk/acconfig.h
 
-	if ! use build ; then
-		cd "${S}"
-		rm -f "${D}"/usr/share/man/man1/pgawk.1
-		dosym gawk.1.gz /usr/share/man/man1/pgawk.1.gz
-		[[ ${USERLAND} == "GNU" ]] && dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
-		dodoc AUTHORS ChangeLog FUTURES LIMITATIONS NEWS PROBLEMS POSIX.STD README
-		docinto README_d
-		dodoc README_d/*
-		docinto awklib
-		dodoc awklib/ChangeLog
-		docinto pc
-		dodoc pc/ChangeLog
-		docinto posix
-		dodoc posix/ChangeLog
-	else
-		rm -r "${D}"/usr/share
-	fi
+	cd "${S}"
+	rm -f "${D}"/usr/share/man/man1/pgawk.1
+	dosym gawk.1.gz /usr/share/man/man1/pgawk.1.gz
+	[[ ${USERLAND} == "GNU" ]] && dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
+	dodoc AUTHORS ChangeLog FUTURES LIMITATIONS NEWS PROBLEMS POSIX.STD README
+	docinto README_d
+	dodoc README_d/*
+	docinto awklib
+	dodoc awklib/ChangeLog
+	docinto pc
+	dodoc pc/ChangeLog
+	docinto posix
+	dodoc posix/ChangeLog
 }
