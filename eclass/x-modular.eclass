@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.72 2006/07/29 17:42:11 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.73 2006/08/21 00:22:52 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -168,6 +168,7 @@ if [[ "${PN/util-macros}" = "${PN}" ]]; then
 fi
 
 RDEPEND="${RDEPEND}
+	>=sys-apps/man-1.6b-r2
 	!<=x11-base/xorg-x11-6.9"
 # Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
