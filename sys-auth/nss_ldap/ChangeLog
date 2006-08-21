@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.26 2006/06/14 23:35:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.27 2006/08/21 21:29:18 robbat2 Exp $
+
+*nss_ldap-252 (21 Aug 2006)
+
+  21 Aug 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/nss_ldap-252-reconnect-timeouts.patch, +nss_ldap-252.ebuild:
+  Bump to 252, with autofs-4.1.3 support changes from upstream. Candidate for
+  stable.
 
   14 Jun 2006; Robin H. Johnson <robbat2@gentoo.org>
   +files/nss_ldap-250-reconnect-timeouts.patch:
