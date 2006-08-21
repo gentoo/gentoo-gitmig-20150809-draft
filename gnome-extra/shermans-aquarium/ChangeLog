@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/shermans-aquarium
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/ChangeLog,v 1.11 2006/02/22 15:48:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/ChangeLog,v 1.12 2006/08/21 03:22:39 tcort Exp $
+
+  21 Aug 2006; Thomas Cort <tcort@gentoo.org>
+  shermans-aquarium-2.2.0.ebuild:
+  Stable on amd64 wrt Bug #144479.
 
   22 Feb 2006; <dang@gentoo.org> shermans-aquarium-2.2.0.ebuild:
   Fix modular X deps.  All provided by gtk+ dep

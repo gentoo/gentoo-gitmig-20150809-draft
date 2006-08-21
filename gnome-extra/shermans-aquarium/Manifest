@@ -1,25 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f6809b516d1d430c2094b6ff37a7b842 ChangeLog 1596
-RMD160 c00bd67c5941ca2b483337f07e6b8fd74c435288 ChangeLog 1596
-SHA256 a64558917d4ae47793ca9a36d472a2848a2b29806761da0372f01b564ec6ed3f ChangeLog 1596
-MD5 c2a0a3e72dacfda8e71c6df8bedfbafd files/digest-shermans-aquarium-2.2.0 271
-RMD160 e71ed006e2ab97f48329b3b2a14e37364f6d5831 files/digest-shermans-aquarium-2.2.0 271
-SHA256 98249f78cf7dfcc11baebdf1427ddd114d5f80f5cef96b7cc071fd551f9d1f1a files/digest-shermans-aquarium-2.2.0 271
+AUX shermans-aquarium-2.2.0-gcc-v.patch 508 RMD160 7b4765f8b2999160b9fce81627f2469b7259defe SHA1 7761ff20c620e54764dbfa9244bd241c4705716c SHA256 3835349644bf79bb16b581d9a33a729b171fa6a6e00610503014d71b0bb3524f
 MD5 db0ad320466766d2de4b54ef908f5639 files/shermans-aquarium-2.2.0-gcc-v.patch 508
 RMD160 7b4765f8b2999160b9fce81627f2469b7259defe files/shermans-aquarium-2.2.0-gcc-v.patch 508
 SHA256 3835349644bf79bb16b581d9a33a729b171fa6a6e00610503014d71b0bb3524f files/shermans-aquarium-2.2.0-gcc-v.patch 508
+DIST shermans_aquarium-2.2.0.tar.gz 209105 RMD160 87471964ae961433cf242cd174963f03fda00955 SHA1 0d2ae8b544bceabf8bfc8205aa1661846d63df79 SHA256 14f228631b35d447bc78e7c851aab644951bb6bf2f872d556a53cf474d1dc4c2
+EBUILD shermans-aquarium-2.2.0.ebuild 1342 RMD160 ad91b43f52759c47ff9bd33ca503c951b36595cb SHA1 8810f6638a9ed1398b3024ac25b56272422a8efe SHA256 23260fd1fa058c8ded91293e5ebc61a4f0f7a2f95ff8bb92de27a3cc3d91befe
+MD5 4a39deb3cc27553c579880612ba42bff shermans-aquarium-2.2.0.ebuild 1342
+RMD160 ad91b43f52759c47ff9bd33ca503c951b36595cb shermans-aquarium-2.2.0.ebuild 1342
+SHA256 23260fd1fa058c8ded91293e5ebc61a4f0f7a2f95ff8bb92de27a3cc3d91befe shermans-aquarium-2.2.0.ebuild 1342
+MISC ChangeLog 1713 RMD160 bef78bb37d9e4b1497fff328d52a0157ce57f27d SHA1 19bafbb5e40af402a7c9839eecf5979ac6e67f6f SHA256 5434035aee2add4a4b332183d23f15ff0ca282f88f6c34a34e845d76e998e440
+MD5 70d041bd304be8ff560a0fec254a1c50 ChangeLog 1713
+RMD160 bef78bb37d9e4b1497fff328d52a0157ce57f27d ChangeLog 1713
+SHA256 5434035aee2add4a4b332183d23f15ff0ca282f88f6c34a34e845d76e998e440 ChangeLog 1713
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 f3b50efcc1846f5690d468c8dab25c4c shermans-aquarium-2.2.0.ebuild 1342
-RMD160 2fcd180cbcb41553adf398350d3044bb451a70df shermans-aquarium-2.2.0.ebuild 1342
-SHA256 8a0693d28deeb5a45b507ee23c9b2540e8ecdeaea355911db4fbf0c870fd68df shermans-aquarium-2.2.0.ebuild 1342
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFD/IfGomPajV0RnrERAgAmAJ9s+eqERZP16RJyfiqWzWN/9cYJggCfWJsb
-bSWk8L5gNTZ/nOcJYd4wKe8=
-=LxCK
------END PGP SIGNATURE-----
+MD5 c2a0a3e72dacfda8e71c6df8bedfbafd files/digest-shermans-aquarium-2.2.0 271
+RMD160 e71ed006e2ab97f48329b3b2a14e37364f6d5831 files/digest-shermans-aquarium-2.2.0 271
+SHA256 98249f78cf7dfcc11baebdf1427ddd114d5f80f5cef96b7cc071fd551f9d1f1a files/digest-shermans-aquarium-2.2.0 271
