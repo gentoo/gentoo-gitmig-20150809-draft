@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.26 2006/06/05 14:52:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.27 2006/08/21 14:08:17 dertobi123 Exp $
+
+*drupal-4.7.3 (21 Aug 2006)
+*drupal-4.6.9 (21 Aug 2006)
+
+  21 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  +drupal-4.6.9.ebuild, +drupal-4.7.3.ebuild:
+  Security bump, bug #142774
 
   05 Jun 2006; Roy Marples <uberlord@gentoo.org> drupal-4.7.2.ebuild:
   Depend on virtual/httpd-php instead of apache, #117759.
