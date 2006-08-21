@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.2 2006/06/23 11:06:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.3 2006/08/21 18:11:12 zzam Exp $
 
 
 : ${EHG_REPO_URI:=http://linuxtv.org/hg/v4l-dvb}
@@ -11,7 +11,7 @@ DESCRIPTION="live development version of v4l&dvb-driver for Kernel 2.6"
 SRC_URI=""
 HOMEPAGE="http://www.linuxtv.org"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""

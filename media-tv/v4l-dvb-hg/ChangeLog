@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/v4l-dvb-hg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.5 2006/06/23 11:08:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/ChangeLog,v 1.6 2006/08/21 18:11:12 zzam Exp $
+
+  21 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  v4l-dvb-hg-0.1-r2.ebuild:
+  Keyworded ~amd64.
 
   23 Jun 2006; Matthias Schwarzott <zzam@gentoo.org> -v4l-dvb-hg-0.1.ebuild,
   -v4l-dvb-hg-0.1-r1.ebuild:
