@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.3.2.ebuild,v 1.2 2006/08/21 21:38:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gli/gli-0.4.2.ebuild,v 1.1 2006/08/21 21:38:58 wolf31o2 Exp $
 
 inherit python eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~agaffney/${PN}/releases/installer-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="gtk"
 
 RDEPEND=">=dev-python/pyparted-1.6.6
@@ -21,11 +21,14 @@ RDEPEND=">=dev-python/pyparted-1.6.6
 	sys-fs/ntfsprogs
 	sys-fs/reiserfsprogs
 	sys-fs/dosfstools
-	!amd64? (
+	ppc? (
+		sys-fs/hfsutils
+		sys-fs/hfsplusutils )
+	x86? (
 		sys-fs/hfsutils
 		sys-fs/hfsplusutils )"
 
-S=${WORKDIR}/installer/src
+S=${WORKDIR}/installer
 
 dir=/opt/installer
 Ddir=${D}/${dir}
@@ -33,14 +36,15 @@ Ddir=${D}/${dir}
 src_install() {
 	dodir ${dir}
 	exeinto ${dir}/bin
-	use !gtk && rm -rf ${S}/fe/gtk
-	cp -a ${S}/* ${Ddir}
-	doexe ${FILESDIR}/installer-dialog ${FILESDIR}/installer \
-		|| die "copying dialog/installer scripts"
+	use !gtk && rm -rf ${S}/src/fe/gtk
+	# We need to make sure we get our scripts
+	doexe ${S}/bin/installer ${S}/bin/installer-dialog || \
+		die "copying installer scripts"
+	cp -a ${S}/src/* ${Ddir}
 	chown -R root:0 ${Ddir}
 	dodir /usr/bin
 	if use gtk; then
-		doexe ${FILESDIR}/installer-gtk || die "copying gtk script"
+		doexe ${S}/bin/installer-gtk || die "copying gtk script"
 		make_wrapper installer-gtk ./installer-gtk ${dir}/bin
 	fi
 	make_wrapper installer-dialog ./installer-dialog ${dir}/bin
