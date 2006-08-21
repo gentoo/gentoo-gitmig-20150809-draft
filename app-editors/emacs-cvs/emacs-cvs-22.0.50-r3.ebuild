@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r3.ebuild,v 1.2 2006/08/18 05:54:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r3.ebuild,v 1.3 2006/08/21 05:22:40 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -160,6 +160,18 @@ update-alternatives() {
 pkg_postinst() {
 	use ppc-macos || update-alternatives
 	elisp-site-regen
+	if use X; then
+		while read line; do einfo "${line}"; done<<'EOF'
+
+You need to install some fonts for Emacs.  Under monolithic
+XFree86/Xorg you typically had such fonts installed by default.	 With
+modular Xorg, you will have to perform this step yourself.
+
+Installing media-fonts/font-adobe-{75,100}dpi would satisfy basic
+Emacs requirements under X11.
+
+EOF
+	fi
 }
 
 pkg_postrm() {
