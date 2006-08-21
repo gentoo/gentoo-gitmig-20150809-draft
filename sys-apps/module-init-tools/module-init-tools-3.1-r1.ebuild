@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.8 2006/01/29 08:24:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.1-r1.ebuild,v 1.9 2006/08/21 06:44:21 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
 MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
 MODUTILS_PV="2.4.27"
-DESCRIPTION="Kernel module tools for the development kernel >=2.5.48"
+DESCRIPTION="Kernel module tools for the 2.6 kernel"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/rusty/modules"
 SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MYP}.tar.bz2
 	mirror://kernel/linux/kernel/people/rusty/modules/old/${MYP}.tar.bz2

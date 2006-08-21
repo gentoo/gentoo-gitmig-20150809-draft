@@ -38,26 +38,26 @@ DIST module-init-tools-3.1.tar.bz2 123114 RMD160 0d5f5f7ebd5242930b6d2589fad633d
 DIST module-init-tools-3.2.1.tar.bz2 167981 RMD160 da9b6ef81c6910cccc301769bdffd572dc2ccf4e SHA1 f982949eaba759b28ec2cccec9a3625b2c58a299 SHA256 f7c66e151d3d89df02c41f82cae5c384cad76ad3956519a872d98d5676bddd47
 DIST module-init-tools-3.2.2.tar.bz2 169182 RMD160 42abfe10709315180898106e3c7c1ce916e01166 SHA1 b51e8ac170be23a1f2e301a1dddd47a47ec2186a SHA256 c080f7e42e60456eab33051026da388b5d21a360e9d2bee26ce9991427a758aa
 DIST modutils-2.4.27.tar.bz2 234963 RMD160 3179d364106859cf6dbd1fad82d8356337634735 SHA1 fa268b48d98e0efab349d45fa7fb2372d58320c1 SHA256 ab4c9191645f9ffb455ae7c014d8c45339c13a1d0f6914817cfbf30a0bc56bf0
-EBUILD module-init-tools-3.0-r2.ebuild 5628 RMD160 269dfaf8a5ce91ef3fa841bc865762ed49a50bfe SHA1 a678c8bb6c820f45f8102b0e896ac5ded837c1a3 SHA256 79dd9e08809f82bdb1b61fc95cf603a62bc8ed1b4b0e1f68b8fc68c887d7d46a
-MD5 3e2546d3dcec80540a104faf7767b449 module-init-tools-3.0-r2.ebuild 5628
-RMD160 269dfaf8a5ce91ef3fa841bc865762ed49a50bfe module-init-tools-3.0-r2.ebuild 5628
-SHA256 79dd9e08809f82bdb1b61fc95cf603a62bc8ed1b4b0e1f68b8fc68c887d7d46a module-init-tools-3.0-r2.ebuild 5628
-EBUILD module-init-tools-3.1-r1.ebuild 5550 RMD160 0e4994609de3193a1a3481b72ceb32735b50dc5d SHA1 1045bcbac13c7eeb3af3a3412915b58f8c1f972f SHA256 25dabf4903c1dddf8c31cf99798e0569d8018a97c83ce544cc982608b86da44b
-MD5 47229c8c9b55ff325e42a6d1fa6cb4aa module-init-tools-3.1-r1.ebuild 5550
-RMD160 0e4994609de3193a1a3481b72ceb32735b50dc5d module-init-tools-3.1-r1.ebuild 5550
-SHA256 25dabf4903c1dddf8c31cf99798e0569d8018a97c83ce544cc982608b86da44b module-init-tools-3.1-r1.ebuild 5550
-EBUILD module-init-tools-3.2.1.ebuild 5859 RMD160 73800223657e4561b0e7f0caf4ef9275835da99f SHA1 0f53bb175ad4513308372e30a880ec45c8dfd788 SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54
-MD5 b0fbdf2a890920ad30858c1820dfbc5a module-init-tools-3.2.1.ebuild 5859
-RMD160 73800223657e4561b0e7f0caf4ef9275835da99f module-init-tools-3.2.1.ebuild 5859
-SHA256 e1731fabd92e919d5c7e6e44e418da0fddca195aa505e2ed4dd13aac923abc54 module-init-tools-3.2.1.ebuild 5859
-EBUILD module-init-tools-3.2.2-r1.ebuild 4823 RMD160 96cf64204ec7748c0aad5a0c2704e89286e0d679 SHA1 1d5be7f9ad46c5bff0ee519a40d0b568ded0869c SHA256 70287bd1129edfdfaa8c97bacde9ce5e900c4088b68d960304c80dc8cc78051f
-MD5 a332c90577d36955a1fba76b00295470 module-init-tools-3.2.2-r1.ebuild 4823
-RMD160 96cf64204ec7748c0aad5a0c2704e89286e0d679 module-init-tools-3.2.2-r1.ebuild 4823
-SHA256 70287bd1129edfdfaa8c97bacde9ce5e900c4088b68d960304c80dc8cc78051f module-init-tools-3.2.2-r1.ebuild 4823
-EBUILD module-init-tools-3.2.2.ebuild 5874 RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 SHA1 878a834dc1dbddceb4cf07288f93849deb131d08 SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1
-MD5 cf9cd5eaa065e208551fdd004fc04b40 module-init-tools-3.2.2.ebuild 5874
-RMD160 fc6dbac0b1dfec66ea6ed08019c5460b9546d184 module-init-tools-3.2.2.ebuild 5874
-SHA256 ee4307c886eafaf6b281baf164445ce96c8e7626fd0a4f376fb9692a21cb25f1 module-init-tools-3.2.2.ebuild 5874
+EBUILD module-init-tools-3.0-r2.ebuild 5611 RMD160 9f56c175a32d6a2db9c0541253a94132bf98c56d SHA1 ce1baea5f565b6dfc0cdc5daee0d0d141f8354f4 SHA256 f1705239a92208ebda5d8bc072db6a4ac44b4c41c97f29afa147b681312de9a8
+MD5 2a2935a0441d9568f55eb117645572aa module-init-tools-3.0-r2.ebuild 5611
+RMD160 9f56c175a32d6a2db9c0541253a94132bf98c56d module-init-tools-3.0-r2.ebuild 5611
+SHA256 f1705239a92208ebda5d8bc072db6a4ac44b4c41c97f29afa147b681312de9a8 module-init-tools-3.0-r2.ebuild 5611
+EBUILD module-init-tools-3.1-r1.ebuild 5533 RMD160 4bc598d7a20dd4175acc8b337c10dad27f1d60a6 SHA1 4d6994747ba36188cb0abcc8f984dd61f93e0bc9 SHA256 f250ae5c648af7725218221eb64c7c54d3c0eb6285498232d5146a31a1063895
+MD5 7dbf9f4c4035dd6831ba5451011958de module-init-tools-3.1-r1.ebuild 5533
+RMD160 4bc598d7a20dd4175acc8b337c10dad27f1d60a6 module-init-tools-3.1-r1.ebuild 5533
+SHA256 f250ae5c648af7725218221eb64c7c54d3c0eb6285498232d5146a31a1063895 module-init-tools-3.1-r1.ebuild 5533
+EBUILD module-init-tools-3.2.1.ebuild 5842 RMD160 2115b4b158fc8318d85fc57fb02cb98311dd332a SHA1 5ac4f713f97d25106572fdecb1986a47f5f2c0ad SHA256 621d61ba90aa8ec76e6f5fcc0b811f99ded40610dc262b0a809621bb7b9e637f
+MD5 04cb46bf9258589c5a6bb1fd3ecf6148 module-init-tools-3.2.1.ebuild 5842
+RMD160 2115b4b158fc8318d85fc57fb02cb98311dd332a module-init-tools-3.2.1.ebuild 5842
+SHA256 621d61ba90aa8ec76e6f5fcc0b811f99ded40610dc262b0a809621bb7b9e637f module-init-tools-3.2.1.ebuild 5842
+EBUILD module-init-tools-3.2.2-r1.ebuild 4808 RMD160 d8871c1bc592ddc1b0250312849de1d9d65b5175 SHA1 f7b7b23a8f3e86289ca836fbea6f53c3d6857d47 SHA256 82aea4c2e8a87c12b83719214261c5f18905325dd603119851e1fc656bb0e38a
+MD5 7b210c30a7a6f98d31c423fa7766650f module-init-tools-3.2.2-r1.ebuild 4808
+RMD160 d8871c1bc592ddc1b0250312849de1d9d65b5175 module-init-tools-3.2.2-r1.ebuild 4808
+SHA256 82aea4c2e8a87c12b83719214261c5f18905325dd603119851e1fc656bb0e38a module-init-tools-3.2.2-r1.ebuild 4808
+EBUILD module-init-tools-3.2.2.ebuild 5857 RMD160 7ecebf600be7bd1a8bfe520a8e80b1c8da4c123e SHA1 32585575b84f26d46c6e368296db932f869323bd SHA256 587011fe780ee072d874d994ca18cf0fb533f7beda43484f40cae6253a94594a
+MD5 21fcd7585ea3b45797f42d3f39a588f7 module-init-tools-3.2.2.ebuild 5857
+RMD160 7ecebf600be7bd1a8bfe520a8e80b1c8da4c123e module-init-tools-3.2.2.ebuild 5857
+SHA256 587011fe780ee072d874d994ca18cf0fb533f7beda43484f40cae6253a94594a module-init-tools-3.2.2.ebuild 5857
 MISC ChangeLog 19559 RMD160 bb9eeb7b28828a877d88def975b0891a6bfe3d70 SHA1 d2eccbd7ac492380813d1115daf69620e5befba8 SHA256 f20dab2dfbbb29e0bd8c6cf7fee22824d8b19883e5248553e7715748c9592cbe
 MD5 59df039cade7862fe5d60a4ff61bbe79 ChangeLog 19559
 RMD160 bb9eeb7b28828a877d88def975b0891a6bfe3d70 ChangeLog 19559
@@ -82,9 +82,9 @@ MD5 de56fee3dadb3285694b097dfa7848a0 files/digest-module-init-tools-3.2.2-r1 524
 RMD160 dfc478dc854fdd48bb3526ef421d560becb4a37e files/digest-module-init-tools-3.2.2-r1 524
 SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/digest-module-init-tools-3.2.2-r1 524
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD4DBQFE6RXaomPajV0RnrERAj8/AJ9AnyM6kXHumFAZm5kcupzUjK1xvwCYuN6p
-VderORhhyfEGZpeJi27XQQ==
-=9lJ6
+iD8DBQFE6VaVamhnQswr0vIRAgf3AKCuqhg9+iBPobSwGaQJzGjX2AtecQCdF99i
+UJA1xyNYIJpEmHpeheZ0Phc=
+=Jg7z
 -----END PGP SIGNATURE-----
