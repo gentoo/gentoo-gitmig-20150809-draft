@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5_rc1.ebuild,v 1.1 2006/07/26 10:32:33 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5_rc1.ebuild,v 1.2 2006/08/21 17:52:20 chtekk Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -87,6 +87,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	has_php
+
 	# You only need to restart the webserver if you're using mod_php.
 	if built_with_use =${PHP_PKG} apache || built_with_use =${PHP_PKG} apache2 ; then
 		einfo
