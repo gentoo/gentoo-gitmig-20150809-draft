@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-make
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.35 2006/08/16 00:54:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.36 2006/08/21 02:06:35 tgall Exp $
+
+  20 Aug 2006; Tom Gall <tgall@gentoo.org> gnustep-make-1.12.0-r1.ebuild:
+  added ~ppc64
 
   16 Aug 2006; Jason Wever <weeve@gentoo.org> gnustep-make-1.12.0-r1.ebuild:
   Stable on SPARC wrt bug #139385.
@@ -130,7 +133,7 @@
   gnustep-make-1.10.1_pre20041030.ebuild:
   added ~amd64
 
-  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  31 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   gnustep-make-1.10.1_pre20040928.ebuild:
   ~alpha keyword.
 
@@ -182,7 +185,7 @@
   gnustep-make-1.7.2.ebuild:
   virtual/glibc -> virtual/libc
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnustep-make-1.7.2.ebuild:
+  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnustep-make-1.7.2.ebuild:
   Stable on alpha.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> gnustep-make-1.6.0.ebuild:
