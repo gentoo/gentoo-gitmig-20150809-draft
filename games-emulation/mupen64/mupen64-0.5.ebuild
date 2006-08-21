@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5.ebuild,v 1.1 2006/01/27 23:31:55 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5.ebuild,v 1.2 2006/08/21 18:22:20 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -31,6 +31,7 @@ src_unpack() {
 		|| die "sed failed"
 
 	sed -i \
+		-e '/strip/d' \
 		-e "s:CFLAGS.*=\(.*\):CFLAGS=-fPIC ${CFLAGS}:" \
 		-e "s:CXXFLAGS.*=\(.*\):CXXFLAGS=-fPIC ${CXXFLAGS}:" \
 		Makefile \
@@ -72,9 +73,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	ewarn "If you are upgrading from previous version of mupen64"
-	ewarn "backup your saved games then do a rm -rf on your"
-	ewarn ".mupen64 directory. After launching then new mupen copy"
-	ewarn "your saved games to the original place."
+	ewarn "If you are upgrading from a previous version of mupen64,"
+	ewarn "backup your saved games then run rm -rf on your"
+	ewarn ".mupen64 directory. After launching the new version, copy"
+	ewarn "your saved games to their original place."
 	echo
 }
