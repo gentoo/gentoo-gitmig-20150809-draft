@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/poker-eval
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/ChangeLog,v 1.4 2006/08/06 21:45:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/poker-eval/ChangeLog,v 1.5 2006/08/21 12:41:37 tcort Exp $
+
+*poker-eval-132.0 (21 Aug 2006)
+
+  21 Aug 2006; Thomas Cort <tcort@gentoo.org> +poker-eval-132.0.ebuild:
+  Version bump to 132.0.
 
   06 Aug 2006; Andrej Kacian <ticho@gentoo.org> poker-eval-131.0.ebuild:
   Stable on x86. Bug #142984.
