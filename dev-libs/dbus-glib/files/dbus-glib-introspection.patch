@@ -1,6 +1,6 @@
 diff -Npru dbus-glib-0.71-orig/tools/dbus-bus-introspect.xml dbus-glib-0.71/tools/dbus-bus-introspect.xml
---- dbus-glib-0.71-orig/tools/dbus-bus-introspect.xml	1969-12-31 17:00:00.000000000 -0700
-+++ dbus-glib-0.71/tools/dbus-bus-introspect.xml	2006-07-24 14:32:01.000000000 -0600
+--- tools/dbus-bus-introspect.xml	1969-12-31 17:00:00.000000000 -0700
++++ tools/dbus-bus-introspect.xml	2006-07-24 14:32:01.000000000 -0600
 @@ -0,0 +1,74 @@
 +   <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
 +"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
