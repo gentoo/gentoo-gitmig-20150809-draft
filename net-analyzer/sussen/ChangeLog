@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.26 2006/07/25 15:42:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.27 2006/08/21 14:43:10 pva Exp $
+
+*sussen-0.27 (21 Aug 2006)
+
+  21 Aug 2006; Peter Volkov <pva@gentoo.org> +sussen-0.27.ebuild:
+  Version bump. Thank upstream dev Loren Bandiera for report.
 
 *sussen-0.26 (25 Jul 2006)
 
