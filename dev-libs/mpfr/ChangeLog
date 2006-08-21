@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.26 2006/07/28 14:58:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.27 2006/08/21 18:08:33 wolf31o2 Exp $
+
+  21 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> mpfr-2.2.0_p10.ebuild:
+  Stable on amd64 and x86 wrt release snapshot. This is in preparation for an
+  eventual GCC 4.1.1 going stable.
 
 *mpfr-2.2.0_p14 (28 Jul 2006)
 
