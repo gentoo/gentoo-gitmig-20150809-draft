@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.28 2006/08/11 16:28:21 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.29 2006/08/21 20:30:52 wolf31o2 Exp $
+
+  21 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  udhcp-0.9.9_pre20041216-r3.ebuild:
+  Stable on mips wrt release snapshot. Tested extensively w/ Release
+  Engineering via Kumba.
 
   11 Aug 2006; Thomas Cort <tcort@gentoo.org>
   udhcp-0.9.9_pre20041216-r3.ebuild:
