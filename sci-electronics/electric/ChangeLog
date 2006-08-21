@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.16 2006/08/07 14:58:27 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.17 2006/08/21 04:29:01 tcort Exp $
+
+  21 Aug 2006; Thomas Cort <tcort@gentoo.org> electric-7.00.ebuild:
+  Stable on amd64 wrt Bug #141418.
 
   07 Aug 2006; <plasmaroo@gentoo.org> electric-8.03.ebuild:
   Fix bug #142882.
