@@ -1,0 +1,14 @@
+diff -ru adzap-0.0.1-orig/adzap.c adzap-0.0.1/adzap.c
+--- adzap-0.0.1-orig/adzap.c	2006-08-22 22:03:33.595595085 +0200
++++ adzap-0.0.1/adzap.c	2006-08-22 22:03:41.656353353 +0200
+@@ -7,6 +7,7 @@
+  */
+ 
+ #include <vdr/plugin.h>
++#include <vdr/device.h>
+ #include "config.h"
+ #include "setup.h"
+ #include <unistd.h>
+Nur in adzap-0.0.1: adzap.o.
+Nur in adzap-0.0.1: libvdr-adzap.so.
+Nur in adzap-0.0.1: libvdr-adzap.so.1.4.2.

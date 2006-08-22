@@ -1,0 +1,84 @@
+diff -ru adzap-0.0.1-orig/adzap.c adzap-0.0.1/adzap.c
+--- adzap-0.0.1-orig/adzap.c	2006-08-22 22:09:45.686891566 +0200
++++ adzap-0.0.1/adzap.c	2006-08-22 22:13:43.938166127 +0200
+@@ -91,11 +91,11 @@
+   char cmd[500];
+   if (config.inetAvail==0)
+   {
+-  		FILE *f=fopen("/etc/vdr/adzap.job","w");
++  		FILE *f=fopen("/var/vdr/adzap/adzap.job","w");
+   		fprintf(f,"svdrpsend.pl CHAN \"%s\"",Channel->Name());
+   		fclose(f);
+-  		chmod("etc/vdr/adzap.job",755);
+-  		sprintf(cmd,"at -f /etc/vdr/adzap.job now + %u minutes",config.timeout);
++  		chmod("/var/vdr/adzap/adzap.job",755);
++  		sprintf(cmd,"at -f /var/vdr/adzap/adzap.job now + %u minutes",config.timeout);
+ 		system(cmd);
+   		Skins.Message(mtStatus,tr("Werbezapper wurde aktiviert"));
+   		sleep(3);
+@@ -103,9 +103,9 @@
+   }
+   else
+   {
+-  		sprintf(cmd,"/etc/vdr/adzapcheck.sh \"%s\"",Channel->Name());
++  		sprintf(cmd,"/usr/share/vdr/adzap/adzapcheck.sh \"%s\"",Channel->Name());
+   		system(cmd);
+-  		if (access("/tmp/adzap.run",R_OK)==0)
++  		if (access("/var/vdr/adzap/adzap.run",R_OK)==0)
+ 			Skins.Message(mtStatus,tr("Werbezapper wurde aktiviert"));
+   		else
+ 			Skins.Message(mtStatus,tr("KEINE WERBUNG ERKANNT"));
+diff -ru adzap-0.0.1-orig/scripts/adzapcheck.sh adzap-0.0.1/scripts/adzapcheck.sh
+--- adzap-0.0.1-orig/scripts/adzapcheck.sh	2006-08-22 22:09:45.686891566 +0200
++++ adzap-0.0.1/scripts/adzapcheck.sh	2006-08-22 22:16:43.568267683 +0200
+@@ -1,16 +1,17 @@
+ #!/bin/sh
+ 
+-if [ -a /tmp/adzap.run ]; then
+-  rm /tmp/adzap.run
+-fi  
++if [ -a /var/vdr/adzap/adzap.run ]; then
++  rm /var/vdr/adzap/adzap.run
++fi
++cd /var/vdr/adzap
+ current_channel=$1
+ wget http://www.werbesignal.dyndns.org/Werbesignal_client.php
+ test=`grep "COLOR=lightpink><B>$current_channel<" Werbesignal_client.php`
+ rm Werbesignal_client.php
+ if [ -n "$test" ];  then 
+-    date > /tmp/adzap.run
+-    rm /etc/vdr/adzap.job
+-    echo /etc/vdr/adzaprun.sh \"$current_channel\" > /etc/vdr/adzap.job
+-    chmod +x /etc/vdr/adzap.job
+-    at  -f /etc/vdr/adzap.job now  
++    date > /var/vdr/adzap/adzap.run
++    rm /var/vdr/adzap/adzap.job
++    echo /var/vdr/adzap/adzaprun.sh \"$current_channel\" > /var/vdr/adzap/adzap.job
++    chmod +x /var/vdr/adzap/adzap.job
++    at  -f /var/vdr/adzap/adzap.job now  
+ fi
+diff -ru adzap-0.0.1-orig/scripts/adzaprun.sh adzap-0.0.1/scripts/adzaprun.sh
+--- adzap-0.0.1-orig/scripts/adzaprun.sh	2006-08-22 22:09:45.686891566 +0200
++++ adzap-0.0.1/scripts/adzaprun.sh	2006-08-22 22:15:04.618370593 +0200
+@@ -2,7 +2,8 @@
+ 
+ current_channel=$1
+ dozap=""
+-while [ -z $dozap ] && [ -a /tmp/adzap.run ]
++cd /var/vdr/adzap
++while [ -z $dozap ] && [ -a /var/vdr/adzap/adzap.run ]
+ do
+  
+  wget http://www.werbesignal.dyndns.org/Werbesignal_client.php
+@@ -14,7 +15,7 @@
+  
+ done
+ 
+-if [ -a /tmp/adzap.run ]; then
++if [ -a /var/vdr/adzap/adzap.run ]; then
+   svdrpsend.pl CHAN "$current_channel" 
+-  rm /tmp/adzap.run
+-fi  
+\ Kein Zeilenumbruch am Dateiende.
++  rm /var/vdr/adzap/adzap.run
++fi  
