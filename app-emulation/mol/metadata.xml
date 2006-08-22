@@ -5,5 +5,5 @@
 	<longdescription>
 		mac-on-linux -- Running Mac OS (X) from within Linux
 	</longdescription>
-	<maintainer><email>pylon@gentoo.org</email><name>Lars Weiler</name></maintainer>
+	<maintainer><email>josejx@gentoo.org</email><name>Joseph Jezak</name></maintainer>
 </pkgmetadata>
