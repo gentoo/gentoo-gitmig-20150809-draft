@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.24_p2174.ebuild,v 1.1 2006/04/18 08:41:13 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.24_p2174.ebuild,v 1.2 2006/08/22 21:26:30 chutzpah Exp $
 
 inherit python eutils distutils
 
@@ -14,10 +14,10 @@ IUSE="ldap mysql postgres snmp sqlite snmp xml"
 DEPEND="dev-lang/python
 	dev-python/egenix-mx-base
 	net-print/pkpgcounter
-	ldap?     ( net-nds/openldap dev-python/python-ldap )
-	mysql?    ( dev-db/mysql dev-python/mysql-python )
+	ldap?     ( dev-python/python-ldap )
+	mysql?    ( dev-python/mysql-python )
 	postgres? ( dev-db/postgresql dev-db/pygresql )
-	sqlite?   ( dev-db/sqlite dev-python/pysqlite )
+	sqlite?   ( =dev-python/pysqlite-2* )
 	snmp?     ( net-analyzer/net-snmp =dev-python/pysnmp-3.4.2 )
 	xml?      ( dev-python/jaxml )
 	"
