@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tk-JPEG-Lite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/ChangeLog,v 1.8 2006/08/06 00:43:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-JPEG-Lite/ChangeLog,v 1.9 2006/08/22 15:04:16 yuval Exp $
+
+  22 Aug 2006; Yuval Yaari <yuval@gentoo.org> Tk-JPEG-Lite-2.01403.ebuild:
+  Fixed bug #127730
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Tk-JPEG-Lite-2.01403.ebuild:
