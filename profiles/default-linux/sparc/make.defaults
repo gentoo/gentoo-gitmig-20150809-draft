@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/make.defaults,v 1.4 2006/08/18 17:04:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/make.defaults,v 1.5 2006/08/22 13:24:56 fmccor Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -8,5 +8,5 @@ FEATURES="sandbox sfperms"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="ati dummy fbdev glint mga savage sisusb sunbw2 suncg14 suncg3
+VIDEO_CARDS="ati dummy fbdev glint mga savage sisusb sunbw2 suncg14 suncg3 \
 	suncg6 sunffb sunleo tdfx v4l voodoo"
