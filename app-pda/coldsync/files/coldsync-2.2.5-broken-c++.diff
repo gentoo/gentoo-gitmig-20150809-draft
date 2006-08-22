@@ -1,0 +1,23 @@
+diff -Naur coldsync-2.2.5/src/symboltable.cc coldsync-2.2.5-new/src/symboltable.cc
+--- coldsync-2.2.5/src/symboltable.cc	2001-11-13 07:48:07.000000000 -0800
++++ coldsync-2.2.5-new/src/symboltable.cc	2006-08-14 16:42:10.000000000 -0700
+@@ -12,6 +12,7 @@
+ #include <map>
+ #include <cstdlib>		// For malloc() and friends
+ #include "symboltable.h"
++using namespace std;
+ 
+ static char *make_c_string(const string &s);
+ 
+diff -Naur coldsync-2.2.5/src/symboltable.h coldsync-2.2.5-new/src/symboltable.h
+--- coldsync-2.2.5/src/symboltable.h	2001-10-17 18:39:10.000000000 -0700
++++ coldsync-2.2.5-new/src/symboltable.h	2006-08-14 16:42:10.000000000 -0700
+@@ -26,7 +26,7 @@
+ 			/* Initialize the symbol table based on the
+ 			 * arguments. */
+ #ifdef __cplusplus
+-};
++}
+ #endif	/* __cplusplus */
+ 
+ /* This is for Emacs's benefit:

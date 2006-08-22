@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.7 2005/07/22 17:21:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-2.2.5-r1.ebuild,v 1.8 2006/08/22 10:32:49 liquidx Exp $
+
+inherit eutils
 
 DESCRIPTION="A command-line tool to synchronize PalmOS PDAs with Unix workstations"
 SRC_URI="http://www.coldsync.org/download/${P}.tar.gz"
@@ -11,15 +13,16 @@ LICENSE="Artistic"
 KEYWORDS="~ppc sparc x86"
 IUSE="nls perl"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch ${FILESDIR}/coldsync-2.2.5-gcc3.diff
+	epatch ${FILESDIR}/coldsync-2.2.5-broken-c++.diff
+}
+
 src_compile() {
 	cd ${S}
-	local myconf
-	use nls || myconf="${myconf} --without-i18n"
-	use perl || myconf="${myconf} --without-perl"
-
-	patch -p1 < ${FILESDIR}/coldsync-2.2.5-gcc3.diff
-
-	econf ${myconf} || die "configuring coldsync failed"
+	econf $(use_with nls i18n) $(use_with perl) 
 	make || die "couldn't make coldsync"
 }
 
