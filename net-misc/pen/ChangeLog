@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.6 2006/01/10 21:30:08 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pen/ChangeLog,v 1.7 2006/08/22 12:00:50 voxus Exp $
+
+*pen-0.17.1 (22 Aug 2006)
+
+  22 Aug 2006; Konstantin Arkhipov <voxus@gentoo.org> +pen-0.17.1.ebuild:
+  Version bump, ~amd64 introduced.
 
 *pen-0.17.0 (10 Jan 2006)
 
