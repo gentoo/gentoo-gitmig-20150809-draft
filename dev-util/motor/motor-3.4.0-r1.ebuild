@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/motor-3.4.0-r1.ebuild,v 1.1 2006/08/22 10:14:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/motor-3.4.0-r1.ebuild,v 1.2 2006/08/22 22:25:07 wormo Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://thekonst.net/download/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.2
