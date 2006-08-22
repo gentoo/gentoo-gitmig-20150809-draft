@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20040820.ebuild,v 1.6 2005/03/10 01:41:56 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ircii-20040820.ebuild,v 1.7 2006/08/22 13:02:03 weeve Exp $
 
 IUSE="ipv6"
 
@@ -14,7 +14,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~sparc ~ppc ppc-macos"
+KEYWORDS="amd64 ~ppc ppc-macos sparc x86"
 
 src_compile() {
 	econf $(use_enable ipv6) || die "econf failed"

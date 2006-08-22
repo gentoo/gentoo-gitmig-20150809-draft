@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ircii
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.18 2005/03/10 01:41:56 j4rg0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.19 2006/08/22 13:02:03 weeve Exp $
+
+  22 Aug 2006; Jason Wever <weeve@gentoo.org> ircii-20040820.ebuild:
+  Stable on SPARC.
 
   09 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> ircii-20040820.ebuild:
   Stable ppc-macos
