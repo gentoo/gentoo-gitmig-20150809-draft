@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.34 2006/07/01 17:20:34 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.35 2006/08/22 02:33:37 vapier Exp $
+
+*timezone-data-2006j (22 Aug 2006)
+
+  22 Aug 2006; Mike Frysinger <vapier@gentoo.org>
+  +timezone-data-2006j.ebuild:
+  Version bump #144652 by Rodrigo Severo.
 
   01 Jul 2006; Joel Martin <kanaka@gentoo.org> timezone-data-2006g.ebuild:
   Compile native zic first and use that if we are cross-compiling.
