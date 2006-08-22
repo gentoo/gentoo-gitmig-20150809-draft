@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.21-r1.ebuild,v 1.1 2006/08/19 16:00:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.21-r1.ebuild,v 1.2 2006/08/22 15:22:22 tove Exp $
 
 inherit eutils toolchain-funcs
 
@@ -26,14 +26,16 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-makefile.diff
 
 	# patches from chrony git repo: <http://chrony.sunsite.dk/git>
-	EPATCH_MULTI_MSG="Applying patches from upstream..."
-	EPATCH_EXCLUDE="chrony-1.21-quash_compile_warnings.diff"
-	EPATCH_FORCE="yes"
+	EPATCH_MULTI_MSG="Applying patches from upstream..." \
+	EPATCH_EXCLUDE="chrony-1.21-quash_compile_warnings.diff" \
+	EPATCH_FORCE="yes" \
 	EPATCH_SUFFIX="diff" epatch "${PATCHDIR}"
 
 	# Allow Hz=200 detection (#21058, Alexander Papaspyrou)
 #	epatch "${FILESDIR}"/${PN}-1.20-sys_linux.c-gentoo.diff
 
+	sed -i "s:#if defined(__i386__) || defined(__sh__):& || defined(__x86_64__):" \
+		io_linux.h || die "amd64 fix"
 	sed -i "s:/etc/chrony:/etc/chrony/chrony:g" \
 		chrony*.{1,5,8} faq.txt chrony.texi || die "sed failed"
 }
