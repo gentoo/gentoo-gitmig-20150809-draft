@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.6 2006/07/15 07:19:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.7 2006/08/22 13:18:47 tcort Exp $
+
+  22 Aug 2006; Thomas Cort <tcort@gentoo.org> truecrypt-4.2a.ebuild:
+  Added ~amd64 keyword wrt Bug #135866.
 
   15 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   +files/truecrypt-4.2a_kernel-2.6.18-rc1_fix.patch, truecrypt-4.2a.ebuild:
