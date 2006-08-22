@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.5 2006/08/21 23:48:11 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/pinfo-0.6.9.ebuild,v 1.6 2006/08/22 00:18:26 jer Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="Hypertext info and man viewer based on (n)curses"
-HOMEPAGE="http:/pinfo.alioth.debian.org"
-SRC_URI="https://alioth.debian.org/download.php/1498/${P}.tar.bz2"
+HOMEPAGE="http://pinfo.alioth.debian.org/"
+SRC_URI="http://alioth.debian.org/download.php/1498/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
