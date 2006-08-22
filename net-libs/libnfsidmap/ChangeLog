@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnfsidmap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.1 2006/06/10 19:12:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.2 2006/08/22 02:17:15 vapier Exp $
+
+*libnfsidmap-0.17 (22 Aug 2006)
+
+  22 Aug 2006; Mike Frysinger <vapier@gentoo.org> +libnfsidmap-0.17.ebuild:
+  Version bump #143975 by Erik Logtenberg.
 
 *libnfsidmap-0.16 (10 Jun 2006)
 
