@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.68 2006/02/09 02:57:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.69 2006/08/22 01:57:39 weeve Exp $
+
+  22 Aug 2006; Jason Wever <weeve@gentoo.org> herdstat-1.1.1_p7.ebuild:
+  Stable on SPARC.
 
   09 Feb 2006; Jeroen Roovers <jer@gentoo.org> herdstat-1.1.1_p7.ebuild:
   Stable on hppa (bug (#109002).
