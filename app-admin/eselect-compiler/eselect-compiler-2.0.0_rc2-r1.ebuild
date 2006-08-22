@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc2-r1.ebuild,v 1.3 2006/07/12 06:40:18 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/eselect-compiler-2.0.0_rc2-r1.ebuild,v 1.4 2006/08/22 10:56:27 eradicator Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -15,7 +15,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="hardened"
 
 RDEPEND=">=app-admin/eselect-1.0_rc1
-	!>=app-admin/eselect-1.0.3"
+	!>=app-admin/eselect-1.0.3
+	sys-apps/mktemp"
 
 # We want to verify that compiler profiles exist for our toolchain
 pkg_setup() {

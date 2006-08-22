@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-compiler
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.30 2006/07/30 14:58:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-compiler/ChangeLog,v 1.31 2006/08/22 10:56:27 eradicator Exp $
+
+  22 Aug 2006; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/eselect-compiler-2.0.0_rc1-env-update.patch,
+  -files/eselect-compiler-2.0.0_rc1-inherit.patch,
+  -eselect-compiler-2.0.0_rc1-r6.ebuild, -eselect-compiler-2.0.0_rc2.ebuild,
+  eselect-compiler-2.0.0_rc2-r1.ebuild:
+  Added mktemp to RDEPEND - bug 139629.
 
   30 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   eselect-compiler-2.0.0_rc1-r6.ebuild:
