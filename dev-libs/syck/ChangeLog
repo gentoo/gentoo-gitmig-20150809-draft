@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/syck
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.7 2006/08/20 17:58:09 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.8 2006/08/22 15:12:29 yuval Exp $
+
+*syck-0.55-r1 (22 Aug 2006)
+
+  22 Aug 2006; Yuval Yaari <yuval@gentoo.org> +syck-0.55-r1.ebuild:
+  Revision bump; fixing bug #133929
 
   20 Aug 2006; Yuval Yaari <yuval@gentoo.org> syck-0.55.ebuild:
   Appending -fPIC to all archs, not just amd64 (bug #137512)
