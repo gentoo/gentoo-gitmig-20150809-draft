@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.108 2006/08/16 15:03:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.109 2006/08/22 20:04:39 leonardop Exp $
+
+*atk-1.12.2 (22 Aug 2006)
+
+  22 Aug 2006; Leonardo Boshell <leonardop@gentoo.org> +atk-1.12.2.ebuild:
+  New release.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> atk-1.11.4.ebuild:
   Stable on ppc64
