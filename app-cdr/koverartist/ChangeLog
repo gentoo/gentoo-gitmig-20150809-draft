@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/koverartist
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.10 2006/08/21 16:25:20 mattepiu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.11 2006/08/22 10:20:48 mattepiu Exp $
+
+  22 Aug 2006; <matte@gentoo.org> koverartist-0.4.4.ebuild:
+  fixed keywords
 
 *koverartist-0.4.4 (21 Aug 2006)
 
