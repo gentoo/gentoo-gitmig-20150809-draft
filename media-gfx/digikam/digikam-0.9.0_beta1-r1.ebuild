@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.0_beta1-r1.ebuild,v 1.1 2006/08/22 13:09:32 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.0_beta1-r1.ebuild,v 1.2 2006/08/22 13:57:38 deathwing00 Exp $
 
 inherit kde
 
@@ -56,7 +56,7 @@ SRC_URI="mirror://sourceforge/digikam/${MY_P}.tar.bz2
 		!linguas_en? ( ${SRC_URI} ) )"
 
 pkg_setup(){
-	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
+	slot_rebuild "media-libs/libkipi" && die
 	kde_pkg_setup
 }
 
