@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.23 2006/05/25 00:15:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.24 2006/08/22 11:58:36 weeve Exp $
+
+  22 Aug 2006; Jason Wever <weeve@gentoo.org> quantlib-0.3.10.ebuild:
+  Stable on SPARC.
 
   25 May 2006; Jeroen Roovers <jer@gentoo.org> quantlib-0.3.0.ebuild:
   Removed ~hppa from KEYWORDS as it never seems to have been tested on this
