@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.79 2006/08/22 10:43:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.80 2006/08/22 10:50:23 liquidx Exp $
+
+  22 Aug 2006; Alastair Tse <liquidx@gentoo.org> -bluez-utils-2.25.ebuild:
+  removing older ebuilds
 
   22 Aug 2006; Alastair Tse <liquidx@gentoo.org> -files/2.10-r1/pin,
   -files/2.10-r1/pin-helper.sh, -files/2.15-bluepin.patch,
