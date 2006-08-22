@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-0.1_beta20070803.ebuild,v 1.2 2006/08/22 23:40:55 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-0.1_beta20070822.ebuild,v 1.1 2006/08/22 23:40:55 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_PV="${PV#0.1_beta}"
@@ -32,8 +32,4 @@ src_unpack() {
 src_install() {
 	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog CREDITS NEWS README
-
-	# remove uselessly installed headers so we don't collide with
-	# sys-fs/ntfsprogs anymore
-	rm -rf "${D}"/usr/include
 }
