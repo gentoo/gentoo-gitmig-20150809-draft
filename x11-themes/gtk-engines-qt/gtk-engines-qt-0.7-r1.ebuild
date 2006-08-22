@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7.ebuild,v 1.2 2006/08/22 17:12:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.7-r1.ebuild,v 1.1 2006/08/22 17:12:48 genstef Exp $
 
 inherit kde eutils
 
@@ -24,11 +24,19 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/gtk-engines-qt-0.7-implicit.patch
+	epatch ${FILESDIR}/kcmgtk-write-good-bashrc.diff
 }
 
 src_install() {
 	kde_src_install
 	# remove duplicate .desktop
 	rm ${D}/usr/share/applnk/Settings/LookNFeel/kcmgtk.desktop
-	echo gtk-icon-theme-name="gnome" >> ${D}/usr/share/themes/Qt/gtk-2.0/gtkrc
+	# Add environment variable
+	dodir /etc/X11/xinit/xinitrc.d
+	echo 'export GTK2_RC_FILES="$HOME/.gtkrc-2.0:$HOME/.kde/share/config/gtkrc-2.0:/etc/gtk-2.0/gtkrc"' \
+		>> ${D}/etc/X11/xinit/xinitrc.d/${PN}
+}
+
+pkg_postinst() {
+	ewarn "This crashes gnome, see http://bugs.gentoo.org/105092"
 }
