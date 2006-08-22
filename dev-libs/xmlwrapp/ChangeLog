@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlwrapp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.25 2006/02/09 02:56:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.26 2006/08/22 01:56:42 weeve Exp $
+
+  22 Aug 2006; Jason Wever <weeve@gentoo.org> xmlwrapp-0.5.0-r1.ebuild:
+  Stable on SPARC.
 
   09 Feb 2006; Jeroen Roovers <jer@gentoo.org> xmlwrapp-0.5.0-r1.ebuild:
   Stable on hppa (bug (#109002).
