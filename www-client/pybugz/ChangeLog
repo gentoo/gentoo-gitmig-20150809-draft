@@ -1,6 +1,13 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.9 2006/08/17 23:47:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.10 2006/08/22 11:02:50 liquidx Exp $
+
+*pybugz-0.6.8 (22 Aug 2006)
+
+  22 Aug 2006; Alastair Tse <liquidx@gentoo.org> +pybugz-0.6.8.ebuild:
+  version bump. fixed many bugs (bugz post url omission) and added external
+  editor support, comments from file, always auth option for private bugzillas
+  and quiet option.
 
 *pybugz-0.6.7 (17 Aug 2006)
 
