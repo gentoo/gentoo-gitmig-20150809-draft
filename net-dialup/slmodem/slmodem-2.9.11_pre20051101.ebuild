@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20051101.ebuild,v 1.7 2006/07/19 13:59:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20051101.ebuild,v 1.8 2006/08/22 12:13:54 genstef Exp $
 
 inherit eutils linux-mod multilib
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_pre/-}
 
 pkg_setup() {
-	has_multilib_profile && ABI=x86
+	use amd64 && multilib_toolchain_setup x86
 
 	MODULE_NAMES="ungrab-winmodem(:${WORKDIR}/ungrab-winmodem)"
 	if ! use amd64; then
@@ -44,6 +44,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P%%_*}-modem-makefile.patch"
+	epatch "${FILESDIR}/${P%%_*}-modem-cc-makefile.patch"
 	cd drivers
 	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${S}/drivers:" Makefile
 	convert_to_m Makefile
@@ -59,7 +60,7 @@ src_compile() {
 	fi
 	emake ${MAKE_PARAMS} modem || die "failed to build modem"
 
-	has_multilib_profile && ABI=${DEFAULT_ABI}
+	use amd64 && multilib_toolchain_setup amd64
 	linux-mod_src_compile
 }
 
