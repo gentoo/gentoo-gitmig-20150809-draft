@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.15 2006/08/05 22:54:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.16 2006/08/22 09:57:03 liquidx Exp $
+
+  22 Aug 2006; Alastair Tse <liquidx@gentoo.org> supybot-0.77.2.ebuild,
+  -supybot-0.80.1.ebuild, -supybot-0.83.0_rc3.ebuild:
+  cleanup and fix pysqlite deps for slotted pysqlite-2 (#82511)
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> supybot-0.83.2.ebuild:
   Added ~sparc keyword wrt bug #141096.

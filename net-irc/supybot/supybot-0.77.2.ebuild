@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.77.2.ebuild,v 1.8 2005/05/29 15:43:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.77.2.ebuild,v 1.9 2006/08/22 09:57:03 liquidx Exp $
 
 inherit distutils eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc ppc-macos"
 IUSE="sqlite"
 
 DEPEND=">=dev-lang/python-2.3
-	sqlite? ( >=dev-python/pysqlite-0.4.3 )"
+	sqlite? ( <dev-python/pysqlite-1.99 )"
 
 S=${WORKDIR}/${MY_P}
 
