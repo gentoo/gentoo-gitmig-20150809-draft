@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/synce-gnomevfs-0.9.0.ebuild,v 1.4 2006/06/22 10:33:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-gnomevfs/synce-gnomevfs-0.9.0.ebuild,v 1.5 2006/08/22 09:09:43 liquidx Exp $
+
+inherit eutils
 
 DESCRIPTION="Synchronize Windows CE devices with Linux. GNOME Plugin for CE devices."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -17,6 +19,12 @@ RDEPEND=">=app-pda/synce-libsynce-0.9.0
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PV}-gcc4.patch"
+}
 
 src_compile() {
 	econf || die "econf failed"
