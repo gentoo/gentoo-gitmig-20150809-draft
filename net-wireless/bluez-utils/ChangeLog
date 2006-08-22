@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.78 2006/07/18 21:59:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.79 2006/08/22 10:43:57 liquidx Exp $
+
+  22 Aug 2006; Alastair Tse <liquidx@gentoo.org> -files/2.10-r1/pin,
+  -files/2.10-r1/pin-helper.sh, -files/2.15-bluepin.patch,
+  -files/bluez-utils-2.3-bluepin.patch, -files/2.16/bluetooth.rc,
+  -files/bluez-utils-2.3-bluepin-gtk2.patch,
+  -files/bluez-utils-2.3-rfcomm_fflush.patch,
+  -files/bluez-utils-2.10-handsfree.patch, -files/2.10-r1/bluetooth.rc:
+  cleaning out files/
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   bluez-utils-2.25-r1.ebuild:
