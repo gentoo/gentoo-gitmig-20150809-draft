@@ -1,0 +1,30 @@
+diff -urN ../tmp-orig/motor-3.2.4.1/parser/src/parser.c ./parser/src/parser.c
+--- ../tmp-orig/motor-3.2.4.1/parser/src/parser.c	2001-11-02 08:44:15.000000000 +0100
++++ ./parser/src/parser.c	2004-07-21 13:49:04.909656822 +0200
+@@ -313,7 +313,6 @@
+ 		buf = mmap(0, *size, PROT_READ, MAP_SHARED, f, 0);
+ 		if (buf == MAP_FAILED) buf = NULL;
+ 		break;
+-	    default:
+ 	}
+     }
+     close(f);
+@@ -333,7 +332,6 @@
+ 	    // munmap
+ 	    munmap(text, size);
+ 	    break;
+-	default:
+     }
+ }
+ 
+--- ../tmp-orig/motor-3.2.4.1/src/ui/ncurses/uitagbrowser.cc	2002-12-11 09:03:11.000000000 +0100
++++ ./src/ui/ncurses/uitagbrowser.cc	2004-07-21 14:08:05.463971935 +0200
+@@ -78,7 +78,7 @@
+     cm.setwindow(textwindow(w.x1, w.y1, w.x1+20, 0, uiconf.getcolor(cp_menufr)));
+ 
+     for(motortagbrowser::viewscope scope = motortagbrowser::File;
+-    scope != motortagbrowser::viewscope_size; (int) scope += 1) {
++    scope != motortagbrowser::viewscope_size; scope = (motortagbrowser::viewscope) ( scope + 1 ) ) {
+ 	cm.additem(0, scope, (string) " " + getscopename(scope));
+ 	if(scope == tagbrowser.getscope())
+ 	    cm.setpos(cm.getcount()-1);
