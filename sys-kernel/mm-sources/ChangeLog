@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.295 2006/08/20 15:47:25 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.296 2006/08/22 20:46:24 phreak Exp $
+
+  22 Aug 2006; Christian Heim <phreak@gentoo.org> metadata.xml:
+  Updating metadata.xml. Using proper idention, clarifying the maintainer(s).
 
 *mm-sources-2.6.18_rc4-r2 (20 Aug 2006)
 
