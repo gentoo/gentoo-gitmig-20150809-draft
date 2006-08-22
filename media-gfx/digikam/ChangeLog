@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.55 2006/08/13 16:26:04 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.56 2006/08/22 13:09:32 deathwing00 Exp $
+
+*digikam-0.9.0_beta1-r1 (22 Aug 2006)
+
+  22 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/digikam-0.9.0_beta1-memory-leak-fix.patch,
+  +digikam-0.9.0_beta1-r1.ebuild:
+  Memory leak fix added. Resolves bug #144433. Thanks to Peter Gantner for
+  reporting it.
 
 *digikam-0.9.0_beta1 (13 Aug 2006)
 
