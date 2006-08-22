@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.2.ebuild,v 1.5 2006/08/22 04:10:52 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.2.ebuild,v 1.6 2006/08/22 04:58:11 dertobi123 Exp $
 
 inherit webapp eutils depend.php
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gallery.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}-full.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
 IUSE="dcraw ffmpeg gd imagemagick mysql netpbm postgres unzip zip"
 
 RDEPEND="virtual/httpd-php
