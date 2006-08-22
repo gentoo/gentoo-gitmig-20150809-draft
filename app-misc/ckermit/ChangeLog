@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ckermit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.16 2005/06/27 07:38:39 corsair Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ChangeLog,v 1.17 2006/08/22 19:42:36 cardoe Exp $
+
+  22 Aug 2006; <dougg@gentoo.org> ckermit-8.0.209.ebuild,
+  ckermit-8.0.211.ebuild:
+  Adding net-dialup/lrzsz to RDEPENDs since it's required for kermit's XMODEM,
+  YMODEM and ZMODEM support.
 
   27 Jun 2005; Markus Rothe <corsair@gentoo.org> ckermit-8.0.211.ebuild:
   Stable on ppc64

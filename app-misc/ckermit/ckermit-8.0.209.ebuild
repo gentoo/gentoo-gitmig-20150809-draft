@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.6 2005/01/01 14:56:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.7 2006/08/22 19:42:36 cardoe Exp $
 
 inherit eutils
 
@@ -15,8 +15,11 @@ LICENSE="Kermit"
 IUSE=""
 KEYWORDS="x86"
 
-DEPEND=">=sys-libs/ncurses-5.2
-	net-dialup/xc"
+DEPEND=">=sys-libs/ncurses-5.2"
+
+RDEPEND="${DEPEND}
+	net-dialup/xc
+	net-dialup/lrzsz"
 
 src_unpack() {
 

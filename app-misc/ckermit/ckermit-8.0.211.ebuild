@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.10 2006/07/07 01:52:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.11 2006/08/22 19:42:36 cardoe Exp $
 
 MY_P=cku209
 DESCRIPTION="combined serial and network communication software package"
@@ -14,7 +14,8 @@ IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
 RDEPEND="${DEPEND}
-	net-dialup/xc"
+	net-dialup/xc
+	net-dialup/lrzsz"
 
 S=${WORKDIR}
 
