@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.16 2006/08/15 14:48:54 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.17 2006/08/22 08:19:28 mr_bones_ Exp $
 
 inherit eutils games
 
-DESCRIPTION="Kids card/puzzle game"
+DESCRIPTION="Put the balls in the pockets of the same color by manipulating a maze of tubes"
 HOMEPAGE="http://home-2.consunet.nl/~cb007736/groundhog.html"
 SRC_URI="http://home-2.consunet.nl/~cb007736/${P}.tar.gz"
 
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc README NEWS AUTHORS TODO
 	prepgamesdirs
 }
