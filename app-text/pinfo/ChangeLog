@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.31 2006/08/22 00:18:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.32 2006/08/22 02:54:21 weeve Exp $
+
+  22 Aug 2006; Jason Wever <weeve@gentoo.org> pinfo-0.6.9.ebuild:
+  Stable on SPARC wrt bug #144697.
 
   22 Aug 2006; Jeroen Roovers <jer@gentoo.org> pinfo-0.6.9.ebuild:
   Fixed HOMEPAGE and SRC_URI.
