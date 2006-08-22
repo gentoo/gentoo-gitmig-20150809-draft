@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.23 2006/08/13 14:28:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.24 2006/08/22 02:11:01 weeve Exp $
+
+  22 Aug 2006; Jason Wever <weeve@gentoo.org> dcraw-8.03.ebuild:
+  Stable on SPARC wrt security bug #144379.
 
   13 Aug 2006; <plasmaroo@gentoo.org> dcraw-8.03.ebuild:
   Keyword ~ia64, bug #143776.
