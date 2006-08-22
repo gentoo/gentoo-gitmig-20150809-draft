@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.19.01.ebuild,v 1.14 2006/08/05 04:33:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.19.01.ebuild,v 1.15 2006/08/22 17:45:55 yuval Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ MY_P=HTML-Tree-${MY_PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A library to manage HTML-Tree in PERL"
 SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${MY_P}.tar.gz"
-HOMEPAGE="http://seach.cpan.org/search?module=${MY_P}"
+HOMEPAGE="http://search.cpan.org/dist/${MY_P}/"
 
 SLOT="0"
 LICENSE="Artistic"

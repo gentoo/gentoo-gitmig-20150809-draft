@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Tree
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.36 2006/08/22 17:24:53 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/ChangeLog,v 1.37 2006/08/22 17:45:55 yuval Exp $
+
+  22 Aug 2006; Yuval Yaari <yuval@gentoo.org> HTML-Tree-3.19.01.ebuild,
+  HTML-Tree-3.21.ebuild:
+  Fixing HOMEPAGE which was wrong...
 
 *HTML-Tree-3.21 (22 Aug 2006)
 
