@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/plptools
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/ChangeLog,v 1.13 2005/08/17 12:52:57 greg_g Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/ChangeLog,v 1.14 2006/08/22 10:48:27 liquidx Exp $
+
+  22 Aug 2006; Alastair Tse <liquidx@gentoo.org> plptools-0.13.ebuild:
+  stable bump for x86 (#104746)
 
 *plptools-0.13 (17 Aug 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.13.ebuild,v 1.1 2005/08/17 12:52:57 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.13.ebuild,v 1.2 2006/08/22 10:48:27 liquidx Exp $
 
 inherit kde-functions eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/plptools/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="kde? ( >=kde-base/kdelibs-3.1 )
 	readline? ( sys-libs/readline )"
 
