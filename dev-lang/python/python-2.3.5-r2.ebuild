@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r2.ebuild,v 1.13 2006/07/08 19:13:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5-r2.ebuild,v 1.14 2006/08/22 22:26:50 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -13,13 +13,11 @@ PYVER_MAJOR=$(get_major_version)
 PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
-PATCHTAR="${PN}-${PYVER}-patches-1"
-
 S="${WORKDIR}/Python-${PV}"
 DESCRIPTION="A really great language"
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV%_*}/Python-${PV}.tar.bz2
-	mirror://gentoo/${PATCHTAR}.tar.bz2"
+	mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.3"
@@ -60,29 +58,32 @@ src_unpack() {
 	cd ${S}
 
 	# fix readline detection problems due to missing termcap (#79013)
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.3-readline.patch
+	epatch ${WORKDIR}/${PV}/2.3-readline.patch
 
 	sed -ie 's/OpenBSD\/3.\[01234/OpenBSD\/3.\[012345/' configure || die "OpenBSD sed failed"
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
 	# prepends /usr/lib/portage/pym to sys.path - liquidx (12 Apr 04)
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.3-add_portage_search_path_take_2.patch
+	epatch ${WORKDIR}/${PV}/2.3-add_portage_search_path.patch
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.3-gentoo_py_dontcompile.patch
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.3.2-disable_modules_and_ssl.patch
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.3-mimetypes_apache.patch
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.3-db4.2.patch
+	epatch ${WORKDIR}/${PV}/2.4-gentoo_py_dontcompile.patch
+	epatch ${WORKDIR}/${PV}/2.4-disable_modules_and_ssl.patch
+	epatch ${WORKDIR}/${PV}/2.4-mimetypes_apache.patch
+	epatch ${WORKDIR}/${PV}/2.3-db4.2.patch
 
 	# installs to lib64
-	[ "$(get_libdir)" == "lib64" ] && epatch ${WORKDIR}/${PATCHTAR}/python-2.3.4-lib64.patch
-	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
+	[ "$(get_libdir)" == "lib64" ] && \
+		epatch ${WORKDIR}/${PV}/2.3.4-lib64.patch
+
+	# fix os.utime() on hppa. utimes it not supported but unfortunately 
+	# reported as working - gmsoft (22 May 04)
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 
 	# add support for struct stat st_flags attribute (bug 94637)
-	epatch ${WORKDIR}/${PATCHTAR}/python-2.3.5-st_flags.patch
+	epatch ${WORKDIR}/${PV}/2.3.5-st_flags.patch
 
 	# Fix pcre security bug (bug 104009)
-	epatch ${WORKDIR}/${PATCHTAR}/python-2.3-pcre.patch
+	epatch ${WORKDIR}/${PV}/2.3-pcre.patch
 }
 
 src_configure() {

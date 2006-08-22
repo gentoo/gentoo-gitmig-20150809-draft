@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.3-r1.ebuild,v 1.12 2006/07/20 17:25:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.3-r1.ebuild,v 1.13 2006/08/22 22:26:50 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -14,14 +14,12 @@ PYVER_MAJOR=$(get_major_version)
 PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 
-PATCHTAR="${PN}-${PYVER}-patches-2"
-
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
-	mirror://gentoo/${PATCHTAR}.tar.bz2"
+	mirror://gentoo/python-gentoo-patches-${PV}-r1.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.4"
@@ -59,23 +57,23 @@ RESTRICT="confcache"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# unnecessary termcap dep in readline (#79013)
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.4.2-readline.patch
+	epatch ${WORKDIR}/${PV}/2.4.2-readline.patch
 	# db4.2 support
-	epatch ${FILESDIR}/${P}-db4.patch
+	epatch ${WORKDIR}/${PV}/2.4.3-db4.patch
 
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-gentoo_py_dontcompile.patch
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-disable_modules_and_ssl.patch
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-mimetypes_apache.patch
+	epatch ${WORKDIR}/${PV}/2.4-gentoo_py_dontcompile.patch
+	epatch ${WORKDIR}/${PV}/2.4-disable_modules_and_ssl.patch
+	epatch ${WORKDIR}/${PV}/2.4-mimetypes_apache.patch
 
 	# prepends /usr/lib/portage/pym to sys.path
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-${PYVER}-add_portage_search_path.patch
+	epatch ${WORKDIR}/${PV}/2.4-add_portage_search_path.patch
 
-	epatch ${WORKDIR}/${PATCHTAR}/${PN}-2.4.1-libdir.patch
+	epatch ${WORKDIR}/${PV}/2.4.1-libdir.patch
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \
 		Lib/distutils/sysconfig.py \
@@ -86,18 +84,19 @@ src_unpack() {
 		setup.py || die
 
 	# add support for struct stat st_flags attribute (bug 94637)
-	epatch ${WORKDIR}/${PATCHTAR}/python-2.4.1-st_flags.patch
+	epatch ${WORKDIR}/${PV}/2.4.1-st_flags.patch
 
-	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
+	# fix os.utime() on hppa. utimes it not supported but unfortunately
+	# reported as working - gmsoft (22 May 04)
 	# PLEASE LEAVE THIS FIX FOR NEXT VERSIONS AS IT'S A CRITICAL FIX !!!
 	[ "${ARCH}" = "hppa" ] && sed -e 's/utimes //' -i ${S}/configure
 
 	if tc-is-cross-compiler ; then
-		epatch "${WORKDIR}/${PATCHTAR}"/python-2.4.1-crosscompile.patch
+		epatch ${WORKDIR}/${PV}/2.4.1-crosscompile.patch
 	fi
 
 	# fix gentoo/obsd problems (bug 117261)
-	epatch "${FILESDIR}/python-2.4.3-gentoo_obsd-r1.patch"
+	epatch ${WORKDIR}/${PV}/2.4.3-gentoo_obsd.patch
 }
 
 src_configure() {
@@ -256,7 +255,8 @@ pkg_postinst() {
 
 	echo
 	ewarn
-	ewarn "If you have just upgraded from an older version of python you will need to run:"
+	ewarn "If you have just upgraded from an older version of python you will"
+	ewarn "need to run:"
 	ewarn
 	ewarn "/usr/sbin/python-updater"
 	ewarn
