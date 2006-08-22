@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.24 2006/08/15 10:09:21 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.25 2006/08/22 09:23:37 keri Exp $
+
+  22 Aug 2006; keri <keri@gentoo.org>
+  -files/swi-prolog-packages-test-r1.patch, -swi-prolog-5.6.9.ebuild,
+  -swi-prolog-5.6.10.ebuild, -swi-prolog-5.6.11.ebuild,
+  -swi-prolog-5.6.12.ebuild, -swi-prolog-5.6.13.ebuild,
+  -swi-prolog-5.6.14.ebuild, -swi-prolog-5.6.15.ebuild,
+  -swi-prolog-5.6.16.ebuild:
+  Remove ~arch versions < 5.6.17.
 
   15 Aug 2006; Keri Harris <keri@gentoo.org>
   +files/swi-prolog-packages-sparc-alignment.patch,
