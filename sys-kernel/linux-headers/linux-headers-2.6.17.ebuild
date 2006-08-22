@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.17.ebuild,v 1.4 2006/08/13 19:19:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.17.ebuild,v 1.5 2006/08/22 08:51:52 corsair Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm hppa m68k ia64 ppc ppc64 s390 sh sparc x86"
@@ -11,7 +11,7 @@ PATCHES_V='3'
 
 SRC_URI="${KERNEL_URI} mirror://gentoo/linux-2.6.11-m68k-headers.patch.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-headers/gentoo-headers-${PV}-${PATCHES_V}.tar.bz2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~ppc64 ~x86"
 
 DEPEND="ppc? ( gcc64? ( sys-devel/gcc-powerpc64 ) )
 		sparc? ( gcc64? ( sys-devel/gcc-sparc64 ) )"
