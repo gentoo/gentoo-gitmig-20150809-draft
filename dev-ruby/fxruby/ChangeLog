@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.29 2006/04/13 12:01:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.30 2006/08/23 17:08:21 dberkholz Exp $
+
+  23 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; fxruby-1.2.6.ebuild:
+  This was miskeyworded stable on x86; re-~arch it (Michael Sterrett).
 
   13 Apr 2006; Ferris McCormick <fmccor@gentoo.org> fxruby-1.2.6.ebuild:
   Add ~amd64 keyword.  Builds and runs well enough for testing and for use, but
