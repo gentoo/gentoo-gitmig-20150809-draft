@@ -1,6 +1,13 @@
 # ChangeLog for net-print/pkpgcounter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.4 2006/08/23 20:43:50 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.5 2006/08/23 21:11:46 chutzpah Exp $
+
+*pkpgcounter-1.83 (23 Aug 2006)
+
+  23 Aug 2006; Patrick McLean <chutzpah@gentoo.org> pkpgcounter-1.72.ebuild,
+  pkpgcounter-1.80.ebuild, +pkpgcounter-1.83.ebuild:
+  Version bump (bug #143517). Update HOMEPAGE and SRC_URI to new locations in
+  all versions since the old values are no longer valid.
 
   23 Aug 2006; Patrick McLean <chutzpah@gentoo.org> metadata.xml,
   pkpgcounter-1.72.ebuild, pkpgcounter-1.80.ebuild:
