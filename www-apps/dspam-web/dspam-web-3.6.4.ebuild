@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.6.4.ebuild,v 1.1 2006/02/13 16:02:22 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/dspam-web-3.6.4.ebuild,v 1.2 2006/08/23 03:03:35 weeve Exp $
 
 inherit webapp eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=mail-filter/dspam-${PV}
 		dev-perl/GD-Graph3d
 		dev-perl/GDGraph
 		dev-perl/GDTextUtil"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 # some FHS-like structure
 HOMEDIR="/var/spool/dspam"
