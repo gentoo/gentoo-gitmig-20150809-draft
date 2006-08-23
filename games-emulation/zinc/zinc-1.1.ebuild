@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.2 2006/02/11 04:02:26 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.3 2006/08/23 01:07:04 mr_bones_ Exp $
 
 inherit games
 
@@ -12,16 +12,17 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
+RESTRICT="strip"
+QA_EXECSTACK="${GAMES_PREFIX_OPT/\/}/bin/zinc"
 
-DEPEND="virtual/libc
-	|| ( x11-libs/libXext
+DEPEND="|| ( x11-libs/libXext
 		virtual/x11 )
 	virtual/opengl"
 
 S=${WORKDIR}/zinc
 
 src_install() {
-	exeinto /opt/bin
+	exeinto "${GAMES_PREFIX_OPT}"/bin
 	doexe zinc || die "doexe failed"
 	dolib.so libcontrolznc.so librendererznc.so libsoundznc.so libs11player.so
 	dodoc readme.txt
