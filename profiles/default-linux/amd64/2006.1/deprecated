@@ -1,3 +1,5 @@
+default-linux/amd64/2006.0
+
 This is the Gentoo/AMD64 development profile not intended for end-users.
 
 If you still want to use this: We don't care if it breaks your system,

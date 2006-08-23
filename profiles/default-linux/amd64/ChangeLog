@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.15 2006/08/18 19:02:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.16 2006/08/23 19:00:34 kugelfang Exp $
+
+  23 Aug 2006; Danny van Dyk <kugelfang@gentoo.org> 2006.1/deprecated:
+  Fixed 2006.1/deprecated file (Bug #144888).
 
   18 Aug 2006; Danny van Dyk <kugelfang@gentoo.org> make.defaults:
   Fixed EOLs in make.defaults.
