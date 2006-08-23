@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.349 2006/07/25 10:18:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.350 2006/08/23 16:46:52 carlo Exp $
+
+*kdelibs-3.5.4-r1 (23 Aug 2006)
+
+  23 Aug 2006; Carsten Lohrke <carlo@gentoo.org> +kdelibs-3.5.4-r1.ebuild:
+  Fixed legacyssl patch, thanks to Rick Harris. Fixes from the 3.5 branch for
+  the KDE bugs #90462, #126482, #126593, #132098 among others. Thanks to
+  Martin von Gagern for the libutempter patch.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdelibs-3.3.2-anchor-fix.patch,
