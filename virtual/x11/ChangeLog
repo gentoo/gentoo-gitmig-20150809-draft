@@ -1,6 +1,9 @@
 # ChangeLog for virtual/x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.16 2006/08/22 20:44:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/x11/ChangeLog,v 1.17 2006/08/23 21:25:25 swegener Exp $
+
+  23 Aug 2006; Sven Wegener <swegener@gentoo.org> x11-7.0-r2.ebuild:
+  Virtual packages have no build-time dependencies.
 
   22 Aug 2006; Ferris McCormick <fmccor@gentoo.org> x11-7.0-r2.ebuild:
   Stable on sparc.

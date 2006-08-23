@@ -1,6 +1,9 @@
 # ChangeLog for virtual/glut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glut/ChangeLog,v 1.5 2006/07/17 15:58:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glut/ChangeLog,v 1.6 2006/08/23 21:17:33 swegener Exp $
+
+  23 Aug 2006; Sven Wegener <swegener@gentoo.org> glut-1.0.ebuild:
+  Virtual packages have no build-time dependencies.
 
   17 Jul 2006; Fabian Groffen <grobian@gentoo.org> glut-1.0.ebuild:
   Marked ~ppc-macos (bug #139735)
