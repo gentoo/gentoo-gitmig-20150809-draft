@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.23 2006/08/23 00:11:34 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.24 2006/08/23 00:33:24 malc Exp $
+
+  23 Aug 2006; <malc@gentoo.org> layman-1.0.6.ebuild:
+  Stable on amd64
 
   22 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   layman-1.0.6.ebuild:
