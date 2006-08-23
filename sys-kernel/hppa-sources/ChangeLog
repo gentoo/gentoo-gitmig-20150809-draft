@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.76 2006/08/02 17:48:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.77 2006/08/23 15:43:19 gustavoz Exp $
+
+*hppa-sources-2.6.17.10_p6 (23 Aug 2006)
+
+  23 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  +hppa-sources-2.6.17.10_p6.ebuild:
+  Revbump to 2.6.17.10, fixes CVE-2006-3745 and CVE-2006-4145
 
 *hppa-sources-2.6.17.7_p6 (02 Aug 2006)
 
