@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.9 2006/06/17 01:50:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.10 2006/08/23 03:59:11 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 export CVS_RSH="ssh"
@@ -14,7 +14,7 @@ ECVS_SSH_HOST_KEY="savannah.gnu.org,199.232.41.3 ssh-rsa AAAAB3NzaC1yc2EAAAABIwA
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
-IUSE="X Xaw3d aqua gif gnome gtk jpeg nls png spell tiff xft"
+IUSE="X Xaw3d aqua gif gnome gtk jpeg nls png spell tiff xft toolkit-scroll-bars"
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
@@ -67,7 +67,7 @@ src_compile() {
 
 	if use X; then
 		myconf="${myconf} --with-x"
-		myconf="${myconf} --with-xpm --with-toolkit-scroll-bars"
+		myconf="${myconf} --with-xpm $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_enable xft font-backend)"
 		myconf="${myconf} $(use_with xft freetype)"
 		myconf="${myconf} $(use_with xft)"

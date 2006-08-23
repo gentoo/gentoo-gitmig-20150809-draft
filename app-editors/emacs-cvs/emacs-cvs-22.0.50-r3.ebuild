@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r3.ebuild,v 1.3 2006/08/21 05:22:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.50-r3.ebuild,v 1.4 2006/08/23 03:59:11 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
@@ -9,7 +9,7 @@ ECVS_BRANCH="HEAD"
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
-IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff source gzip-el"
+IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff source gzip-el toolkit-scroll-bars"
 
 S=${WORKDIR}/emacs
 
@@ -60,7 +60,8 @@ src_compile() {
 
 	if use X; then
 		myconf="${myconf} --with-x"
-		myconf="${myconf} --with-xpm --with-toolkit-scroll-bars"
+		myconf="${myconf} --with-xpm"
+		myconf="${myconf} $(use_with toolkit-scroll-bars)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
 		if use gtk; then
