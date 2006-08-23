@@ -1,16 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20060126.ebuild,v 1.3 2006/08/23 07:19:19 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20060817.ebuild,v 1.1 2006/08/23 07:19:19 s4t4n Exp $
 
 inherit linux-mod eutils
 
 
+MY_PV="2.${PV}"
+MY_P="${PN}-${MY_PV}"
 DESCRIPTION="Linux kernel module for (but not limited to) HP Omnibook support"
-HOMEPAGE="http://www.sourceforge.net/projects/omke"
-SRC_URI="mirror://sourceforge/omke/${P}.tar.gz"
+HOMEPAGE="http://www.sourceforge.net/projects/omnibook"
+SRC_URI="mirror://sourceforge/omnibook/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc"
+KEYWORDS="~x86 -ppc"
 IUSE=""
+S=${WORKDIR}/${MY_P}
 
 MODULE_NAMES="omnibook(char:)"
 BUILD_TARGETS=" "
@@ -18,15 +21,6 @@ BUILD_TARGETS=" "
 pkg_setup() {
 	linux-mod_pkg_setup
 	BUILD_PARAMS="KERNEL=${KV_MAJOR}.${KV_MINOR} KSRC=${KV_DIR}"
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/omnibook-fix-obtest-segfault.patch
-	epatch ${FILESDIR}/remove-legacy-isa-fromio.patch
-	convert_to_m Makefile
-	sed -i 's:MODULE_PARM(\([^,]*\), "i");:module_param(\1, int, 0);:' init.c
 }
 
 src_compile() {
