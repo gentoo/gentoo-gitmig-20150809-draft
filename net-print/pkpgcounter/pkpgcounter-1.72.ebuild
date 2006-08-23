@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-1.72.ebuild,v 1.2 2005/11/15 20:39:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-1.72.ebuild,v 1.3 2006/08/23 20:43:50 chutzpah Exp $
 
 inherit distutils
 
@@ -16,3 +16,11 @@ IUSE=""
 
 DEPEND="virtual/python"
 RDEPEND="${DEPEND}"
+
+DOCS="BUGS NEWS README CREDITS PKG-INFO"
+
+src_install() {
+	distutils_src_install
+
+	rm -rf "${D}"/usr/share/doc/pkpgcounter
+}

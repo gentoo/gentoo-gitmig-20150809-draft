@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
+	<email>chutzpah@gentoo.org</email>
+	<name>Patrick McLean</name>
+</maintainer>
+<maintainer>
 	<email>satya@gentoo.org</email>
 	<name>Christian Andreetta</name>
 </maintainer>
