@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/dbus-core-0.92.ebuild,v 1.2 2006/08/21 15:25:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/dbus-core-0.92.ebuild,v 1.3 2006/08/23 14:30:39 steev Exp $
 
 inherit eutils multilib debug autotools
 
@@ -16,7 +16,8 @@ IUSE="doc selinux X"
 
 RDEPEND="X? ( || ( ( x11-libs/libXt x11-libs/libX11 ) virtual/x11 ) )
 	selinux? ( sys-libs/libselinux )
-	>=dev-libs/libxml2-2.6.21"
+	>=dev-libs/libxml2-2.6.21
+	!<sys-apps/dbus-0.91"
 	# expat code now sucks.. libxml2 is the default
 
 DEPEND="${RDEPEND}
