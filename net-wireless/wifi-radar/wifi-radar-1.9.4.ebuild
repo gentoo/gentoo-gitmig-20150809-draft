@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.4.ebuild,v 1.3 2006/02/22 03:28:34 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.4.ebuild,v 1.4 2006/08/23 13:47:22 s4t4n Exp $
 
 inherit eutils
 
@@ -9,12 +9,11 @@ HOMEPAGE="http://www.bitbuilder.com/wifi_radar/"
 SRC_URI="http://www.bitbuilder.com/wifi_radar/bins/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="svg"
 
 RDEPEND=">=dev-python/pygtk-2.6.1
-	>=net-wireless/wireless-tools-27-r1
-	>=app-admin/sudo-1.6.8_p9-r2"
+	>=net-wireless/wireless-tools-27-r1"
 
 src_install ()
 {
