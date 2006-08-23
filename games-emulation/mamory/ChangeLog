@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mamory
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/ChangeLog,v 1.15 2006/07/06 07:54:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/ChangeLog,v 1.16 2006/08/23 18:42:17 mr_bones_ Exp $
+
+*mamory-0.2.21 (23 Aug 2006)
+
+  23 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +mamory-0.2.21.ebuild:
+  version bump
 
   06 Jul 2006; Simon Stelling <blubb@gentoo.org> mamory-0.2.20.ebuild:
   forgot to apply the -fPIC patches from bug 112798; thanks joker

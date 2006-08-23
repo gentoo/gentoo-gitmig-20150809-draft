@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.20.ebuild,v 1.4 2006/08/23 18:42:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mamory/mamory-0.2.21.ebuild,v 1.1 2006/08/23 18:42:17 mr_bones_ Exp $
 
-inherit games autotools
+inherit autotools games
 
 DESCRIPTION="rom management tools and library"
 HOMEPAGE="http://mamory.sourceforge.net/"
@@ -19,15 +19,19 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# Remove hardcoded CFLAGS options
-	sed -i configure.in \
-		-e '/AC_ARG_ENABLE(debug,/ {N;N;N;d}'
+	sed -i \
+		-e '/AC_ARG_ENABLE(debug,/ {N;N;N;d}' \
+		configure.in \
+		|| die "sed failed"
 
 	# Make it possible for eautoreconf to fix fPIC etc.
-	sed -i common/Makefile.am \
-		-e '/libcommon_la_LDFLAGS= -static/d'
+	sed -i \
+		-e '/libcommon_la_LDFLAGS= -static/d' \
+		common/Makefile.am \
+		|| die "sed failed"
 
 	AT_M4DIR="config" eautoreconf || die
 }
@@ -40,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	dohtml DOCS/mamory.html
 	prepgamesdirs
