@@ -4,9 +4,8 @@
 <pkgmetadata>
 	<herd>kernel</herd>
 	<maintainer>
-		<email>kernel@gentoo.org</email>
-		<name>kernel team</name>
-		<description>Actively maintained</description>
+		<email>chainsaw@gentoo.org</email>
+		<name>Tony Vroon</name>
 	</maintainer>
 	<maintainer>
 		<email>phreak@gentoo.org</email>
