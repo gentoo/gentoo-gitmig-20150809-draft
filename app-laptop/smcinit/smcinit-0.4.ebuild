@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.3 2005/01/01 14:48:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/smcinit-0.4.ebuild,v 1.4 2006/08/23 13:30:26 s4t4n Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -13,11 +15,20 @@ SRC_URI="mirror://sourceforge/irda/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
-DEPEND=">=sys-apps/pciutils-2.1.11-r1"
+DEPEND=">=sys-apps/pciutils-2.2.0-r1"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack()
+{
+	unpack ${A}
+	cd ${S}
+
+	#Patch for bug #117368 - compilation issues with new pciutils versions...
+	epatch ${FILESDIR}/${P}-pciutils-2.2.0.patch
+}
 
 src_compile()
 {

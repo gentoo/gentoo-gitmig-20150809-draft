@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/smcinit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.3 2005/01/01 14:48:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/smcinit/ChangeLog,v 1.4 2006/08/23 13:30:26 s4t4n Exp $
+
+  23 Aug 2006; Michele Noberasco <s4t4n@gentoo.org> smcinit-0.4.ebuild:
+  Applied patch to fix long standing bug #117368. Since it the issue is
+  about package compilation, I applied the patch to current version instead
+  of creating a new revision. Hence, the package is back into ~arch.
 
   24 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> smcinit-0.4.ebuild:
   Stable for x86.
