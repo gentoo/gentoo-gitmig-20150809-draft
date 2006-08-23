@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.6.ebuild,v 1.3 2006/06/05 00:13:58 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.6.ebuild,v 1.4 2006/08/23 03:02:01 weeve Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}
 	logrotate? ( app-admin/logrotate )
 	procmail? ( mail-filter/procmail )"
 
-KEYWORDS="~x86 ~ppc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 
 # some FHS-like structure
