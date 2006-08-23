@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r2.ebuild,v 1.3 2006/03/21 20:37:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r2.ebuild,v 1.4 2006/08/23 12:45:51 caleb Exp $
 
 inherit rpm
 
@@ -31,7 +31,7 @@ DEPEND="
 		media-libs/jpeg
 		media-libs/libpng
 		net-print/cups
-		x11-libs/qt
+		=x11-libs/qt-3*
 		sys-libs/lib-compat
 		|| ( (	x11-libs/libX11
 				x11-libs/libXext

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r4.ebuild,v 1.2 2006/05/10 07:36:33 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/nxclient-1.5.0-r4.ebuild,v 1.3 2006/08/23 12:45:51 caleb Exp $
 
 inherit rpm
 
@@ -33,7 +33,7 @@ DEPEND="
 		>=dev-libs/expat-1.95.7
 		>=media-libs/fontconfig-2.2.2
 		>=media-libs/freetype-2.1.9
-		>=x11-libs/qt-3.3.4
+		=x11-libs/qt-3*
 		sys-libs/lib-compat
 	)"
 
