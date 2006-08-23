@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.131 2006/08/23 14:24:26 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.132 2006/08/23 22:30:38 jer Exp $
+
+  23 Aug 2006; Jeroen Roovers <jer@gentoo.org> dbus-0.61-r1.ebuild:
+  Stable for HPPA (bug #137325).
 
   23 Aug 2006; Steev Klimaszewski <steev@gentoo.org> dbus-0.91.ebuild:
   Block versions less than ourself.  So we can up/downgrade properly.
