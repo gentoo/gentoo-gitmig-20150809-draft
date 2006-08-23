@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r1.ebuild,v 1.11 2006/07/09 06:04:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r1.ebuild,v 1.12 2006/08/23 12:39:16 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -301,6 +301,7 @@ ROOTPATH=${QTBASE}/bin
 DYLD_LIBRARY_PATH=${libdirs:1}
 QMAKESPEC=${PLATFORM}
 MANPATH=${QTBASE}/doc/man
+PKG_CONFIG_PATH=${QTBASE}/$(get_libdir)/pkgconfig
 EOF
 	else
 		cat <<EOF > ${T}/45qt3
@@ -309,6 +310,7 @@ ROOTPATH=${QTBASE}/bin
 LDPATH=${libdirs:1}
 QMAKESPEC=${PLATFORM}
 MANPATH=${QTBASE}/doc/man
+PKG_CONFIG_PATH=${QTBASE}/$(get_libdir)/pkgconfig
 EOF
 	fi
 	cat <<EOF > ${T}/50qtdir3

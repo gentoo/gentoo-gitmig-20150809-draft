@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.341 2006/08/19 14:26:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.342 2006/08/23 12:39:16 caleb Exp $
+
+  23 Aug 2006; Caleb Tennis <caleb@gentoo.org> qt-3.3.6-r1.ebuild:
+  Add PKG_CONFIG_PATH to the environment of Qt so the pkgconfig files are
+  properly found, per bug #144140
 
   19 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> qt-4.1.4.ebuild:
   ppc stable, bug #134341
