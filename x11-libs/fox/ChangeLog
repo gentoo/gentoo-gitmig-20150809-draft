@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.53 2006/08/23 00:16:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.54 2006/08/23 00:46:43 dberkholz Exp $
+
+  23 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; fox-1.0.53.ebuild:
+  Same gcc-4 fix as for 1.2
 
 *fox-1.6.14 (23 Aug 2006)
 *fox-1.4.34 (23 Aug 2006)

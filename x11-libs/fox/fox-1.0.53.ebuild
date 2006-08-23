@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.2 2006/01/25 05:08:14 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.3 2006/08/23 00:46:43 dberkholz Exp $
 
-inherit fox
+inherit toolchain-funcs flag-o-matic fox
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -37,3 +37,10 @@ FOXCONF="$(use_enable cups) \
 use opengl \
 	&& FOXCONF="${FOXCONF} --with-opengl=opengl" \
 	|| FOXCONF="${FOXCONF} --without-opengl"
+
+src_compile() {
+	if [[ $(gcc-major-version) -ge 4 ]]; then
+		append-flags -ffriend-injection
+	fi
+	fox_src_compile
+}
