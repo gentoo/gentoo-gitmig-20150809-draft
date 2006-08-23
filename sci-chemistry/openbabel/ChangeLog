@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.7 2006/08/20 23:02:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.8 2006/08/23 09:28:34 blubb Exp $
+
+  23 Aug 2006; <blubb@gentoo.org> openbabel-2.0.2.ebuild:
+  stable on amd64
 
   20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   openbabel-2.0.2.ebuild:
