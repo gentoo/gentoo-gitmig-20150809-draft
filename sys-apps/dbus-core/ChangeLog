@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/dbus
+# ChangeLog for sys-apps/dbus-core
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/ChangeLog,v 1.3 2006/08/23 14:30:39 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/ChangeLog,v 1.4 2006/08/23 21:56:25 swegener Exp $
 
   23 Aug 2006; Steev Klimaszewski <steev@gentoo.org> dbus-core-0.92.ebuild:
   We don't play well with dbus < .91.  So we block on it.
