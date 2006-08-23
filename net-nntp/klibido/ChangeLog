@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/klibido
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.17 2006/05/21 10:29:17 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.18 2006/08/23 19:15:53 swegener Exp $
+
+*klibido-0.2.5 (23 Aug 2006)
+
+  23 Aug 2006; Sven Wegener <swegener@gentoo.org> +klibido-0.2.5.ebuild:
+  Version bump, bug #124987.
 
   21 May 2006; <pauldv@gentoo.org> klibido-0.2.4.1.ebuild:
   Make klibido work with later db versions. Fixes bug #133587. It uses 
