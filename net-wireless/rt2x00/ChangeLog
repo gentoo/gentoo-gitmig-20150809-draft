@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2x00
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.14 2006/08/17 11:55:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2x00/ChangeLog,v 1.15 2006/08/23 20:02:43 uberlord Exp $
+
+  23 Aug 2006; Roy Marples <uberlord@gentoo.org> rt2x00-9999.ebuild:
+  Require ARC4 support, #144895 thanks to Len Meakin.
 
   17 Aug 2006; Roy Marples <uberlord@gentoo.org>
   +files/rt2x00-2.0.0_beta3-compat.patch, rt2x00-2.0.0_beta3.ebuild:
