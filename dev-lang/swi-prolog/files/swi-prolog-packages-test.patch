@@ -217,3 +217,31 @@
  	delete_file(Tmp),
  	Copy == WAtom.
  textbuffer(store-1) :-
+@@ -619,6 +620,9 @@
+ 		 *        TEST MAIN-LOOP	*
+ 		 *******************************/
+ 
++:- dynamic
++	testset/1.
++
+ testset(name).				% XPCE names
+ testset(wname).				% Names holding wide characters
+ testset(wstring).			% Strings holding wide characters
+@@ -626,12 +630,14 @@
+ testset(srcsink).			% Source/Sink operations
+ testset(file).				% file (-name) handling
+ testset(dir).				% directory (-name) handling
+-testset(bom).				% Byte Order Mark hanling
++:- getenv('DISPLAY', _)
++   -> assert(testset(bom)); true.	% Byte Order Mark hanling
+ testset(plterm).			% Prolog terms in XPCE
+ testset(textbuffer).
+ testset(asfile).			% test pce_open and friends
+-testset(selection).			% X11 selection
+-testset(image).				% Simple image manipulation
++:- getenv('DISPLAY', _)
++   -> assert(testset(selection)),	% X11 selection
++      assert(testset(image)); true.	% Simple image manipulation
+ testset(regex).				% Regular expression matches
+ testset(type).				% Check type logic
+ 
