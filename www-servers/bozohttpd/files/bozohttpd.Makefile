@@ -24,6 +24,7 @@ clean:
 	rm -f *~
 
 install::	bozohttpd
+	mkdir -p $(PREFIX)/bin
 	$(INSTALL) -s -m 755 $(OBJ) $(PREFIX)/bin
 	$(INSTALL) -d $(PREFIX)/$(MANDIR)
 	$(INSTALL) -m 644 $(OBJ).8 $(PREFIX)/$(MANDIR)
