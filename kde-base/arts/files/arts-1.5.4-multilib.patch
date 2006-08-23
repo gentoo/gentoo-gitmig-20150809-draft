@@ -1,0 +1,52 @@
+--- artsc/artsdsp.in.orig	2006-08-23 16:30:16.000000000 +0200
++++ artsc/artsdsp.in	2006-08-23 16:50:07.000000000 +0200
+@@ -94,6 +94,9 @@
+ binary=`which $1`
+ machine=`uname -m`
+ 
++prefix=@prefix@
++exec_prefix=@exec_prefix@
++
+ set `file -L $binary`
+ 
+ case $2 in
+@@ -106,10 +109,16 @@
+ 
+ case $3 in
+     32-bit)
+-       arch_libdir=lib
++       artsd=`which artsd`
++       set `file -L $artsd`
++       if test "$3" == "32-bit"; then
++         libdir=${prefix}/lib
++       else
++         libdir=/emul/linux/x86/usr/lib
++       fi
+        ;;
+     64-bit)
+-       arch_libdir=lib64
++        libdir=${prefix}/lib64
+        ;;
+     *)
+        exit 1
+@@ -117,10 +126,6 @@
+ 
+ set $origargs
+ 
+-prefix=@prefix@
+-exec_prefix=@exec_prefix@
+-libdir=${prefix}/${arch_libdir}
+-
+ if test "$single_thread" = 1; then
+   LD_PRELOAD=${libdir}/libartsdsp_st.so.0
+ else
+@@ -129,6 +134,9 @@
+ if test -f ${libdir}/libdl.so.2; then
+   LD_PRELOAD=$LD_PRELOAD:${libdir}/libdl.so.2
+ fi
++if test -f ${libdir}/libaoss.so.0; then
++  LD_PRELOAD=$LD_PRELOAD:${libdir}/libaoss.so.0
++fi
+ export LD_PRELOAD
+ 
+ # invoke the program with the args given
