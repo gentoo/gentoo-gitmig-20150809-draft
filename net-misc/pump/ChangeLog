@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.35 2006/07/13 18:07:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.36 2006/08/23 17:34:18 gustavoz Exp $
+
+  23 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> pump-0.8.24.ebuild:
+  Stable on hppa wrt #134896
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> pump-0.8.24.ebuild:
   Mark 0.8.24 stable on ia64
