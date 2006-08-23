@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.130 2006/08/21 12:07:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.131 2006/08/23 14:24:26 steev Exp $
+
+  23 Aug 2006; Steev Klimaszewski <steev@gentoo.org> dbus-0.91.ebuild:
+  Block versions less than ourself.  So we can up/downgrade properly.
 
   21 Aug 2006; Stefan Schweizer <genstef@gentoo.org> dbus-0.91.ebuild:
   qt3 was missing in IUSE, thanks jakub
