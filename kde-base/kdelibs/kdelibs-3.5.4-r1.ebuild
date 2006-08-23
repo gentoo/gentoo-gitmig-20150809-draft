@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.2 2006/08/23 20:28:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.3 2006/08/23 23:35:06 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -149,22 +149,21 @@ src_install() {
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${KDEDIR}/lib
 	fi
 
-	if ! use arts ; then
-		dodir /etc/env.d
+	dodir /etc/env.d
 
-		# List all the multilib libdirs
-		local libdirs
-		for libdir in $(get_all_libdirs); do
-			libdirs="${libdirs}:${PREFIX}/${libdir}"
-		done
+	# List all the multilib libdirs
+	local libdirs
+	for libdir in $(get_all_libdirs); do
+		libdirs="${libdirs}:${PREFIX}/${libdir}"
+	done
 
-		cat <<EOF > ${D}/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
+	cat <<EOF > ${D}/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
 PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${libdirs:1}
 CONFIG_PROTECT="${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown"
 EOF
-	fi
+
 }
 
 pkg_postinst() {
