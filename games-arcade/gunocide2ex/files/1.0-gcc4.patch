@@ -1,0 +1,33 @@
+diff -ur work-orig/src/cEffects.cpp work/src/cEffects.cpp
+--- work-orig/src/cEffects.cpp	2006-04-26 22:53:06.000000000 -0400
++++ work/src/cEffects.cpp	2006-04-26 22:52:02.000000000 -0400
+@@ -180,7 +180,6 @@
+ 	{
+ 		if(!i->update())
+ 			i=lEffects.erase(i);
+-		if(i==NULL)break;
+ 	}
+ 
+     for(p=lParticles.begin();p!=lParticles.end();++p)
+@@ -190,8 +189,6 @@
+ 		if(!p->active())
+ 		{
+ 			p=lParticles.erase(p);
+-			if(p==NULL)
+-				break;
+ 		}
+ 	}
+ 
+diff -ur work-orig/src/cParticleSys.cpp work/src/cParticleSys.cpp
+--- work-orig/src/cParticleSys.cpp	2006-04-26 22:52:51.000000000 -0400
++++ work/src/cParticleSys.cpp	2006-04-26 22:54:38.000000000 -0400
+@@ -81,9 +81,6 @@
+ 		if(time-p->getstarttime()>p->getlifetime())
+ 		{
+ 			p=lParticles.erase(p);
+-			if(p==NULL)
+-				break;
+-			
+ 		}
+ 	}
+ 

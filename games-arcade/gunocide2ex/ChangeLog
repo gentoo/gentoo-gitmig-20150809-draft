@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gunocide2ex
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.7 2005/05/17 17:38:28 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.8 2006/08/23 23:49:21 wolf31o2 Exp $
+
+  23 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> +files/1.0-gcc4.patch,
+  gunocide2ex-1.0.ebuild:
+  Added gcc4 patch from Mark Loeser <mark@halcy0n.com> and closing bug #131028.
 
   17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   gunocide2ex-1.0.ebuild:

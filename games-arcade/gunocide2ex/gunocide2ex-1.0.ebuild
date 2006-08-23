@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.9 2005/05/17 17:38:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.10 2006/08/23 23:49:21 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -16,8 +16,7 @@ IUSE=""
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"
 
@@ -26,7 +25,8 @@ src_unpack() {
 	sed -i "s:-g:${CFLAGS}:" makefile \
 		|| die "sed makefile failed"
 	mkdir binary
-	epatch ${FILESDIR}/${PV}-gcc3.patch
+	epatch "${FILESDIR}"/${PV}-gcc3.patch
+	epatch "${FILESDIR}"/${PV}-gcc4.patch
 	edos2unix config.cfg
 	sed -i \
 		-e "s:/usr/local/games/gunocide2ex/config\.cfg:${GAMES_SYSCONFDIR}/${PN}.cfg:" \
