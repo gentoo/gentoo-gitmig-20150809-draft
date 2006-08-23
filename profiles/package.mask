@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5771 2006/08/23 07:46:52 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5772 2006/08/23 19:02:46 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -284,10 +284,6 @@ media-sound/trm
 # Luis Medinas <metalgod@gentoo.org> (23 Jul 2006)
 # Marked for removal see bug #132449
 =media-plugins/xmms-xmmsd-0.3
-
-# Markus Dittrich <markusle@gentoo.org> (23 Jul 2006)
-# masked for further testing (see bug #141206)
-=sci-mathematics/pari-2.3.0
 
 # Petteri Räty <betelgeuse@gentoo.org> (22 Jul 2006)
 # Masked for testing
