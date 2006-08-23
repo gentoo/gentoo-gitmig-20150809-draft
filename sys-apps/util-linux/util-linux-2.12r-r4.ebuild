@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r4.ebuild,v 1.6 2006/08/23 00:21:15 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r4.ebuild,v 1.7 2006/08/23 06:16:52 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -178,7 +178,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! use old-crypt ; then
+	if ! use old-crypt && use crypt ; then
 		ewarn "This version of util-linux includes crypto support"
 		ewarn "for loop-aes instead of the old cryptoapi."
 		ewarn "If you need the older support, please re-emerge"
