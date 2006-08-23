@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.6 2006/08/21 16:39:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.7 2006/08/23 19:32:09 jer Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -37,6 +37,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/modutils-2.4.27-gcc.patch
 		epatch "${FILESDIR}"/modutils-2.4.27-flex.patch
 		epatch "${FILESDIR}"/modutils-2.4.27-no-nested-function.patch
+		epatch "${FILESDIR}"/modutils-2.4.27-hppa.patch
 	fi
 
 	# Fixes for new module-init-tools
