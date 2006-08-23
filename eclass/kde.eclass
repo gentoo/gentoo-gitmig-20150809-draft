@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.176 2006/08/21 18:22:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.177 2006/08/23 15:13:41 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -363,14 +363,13 @@ kde_src_install() {
 
 	if [[ -n ${KDEBASE} ]] && [[ "${PN}" != "arts" ]] ; then
 		# work around bug #97196
-		mv ${D}/usr/share/doc/* "${D}/$(kde-config --expandvars --install html)/../"
+		mv ${D}/usr/share/doc/* "${D}/${KDEDIR}/share/doc/"
 	fi
 }
 
 # slot rebuild function, thanks to Carsten Lohrke in bug 98425.
 slot_rebuild() {
 	local VDB_PATH="$(portageq vdb_path)"
-	local KDE_PREFIX="$(kde-config --prefix)"
 	local REBUILD_LIST=""
 	local BROKEN_PKGS=""
 
@@ -395,7 +394,7 @@ slot_rebuild() {
 				eerror "Installation of ${j/${VDB_PATH}\//} is broken."
 				BROKEN_PKGS="${BROKEN_PKGS} ${j/${VDB_PATH}\//}"
 			else
-				if [[ $(cat ${m}  | grep -co "${KDE_PREFIX}") = 0 ]] ; then
+				if [[ $(cat ${m}  | grep -co "${KDEDIR}") = 0 ]] ; then
 					REBUILD_LIST="${REBUILD_LIST} =${j/${VDB_PATH}\//}"
 				fi
 			fi
