@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.1 2006/08/23 09:47:59 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/recursos-2.0.ebuild,v 1.2 2006/08/23 16:14:58 mr_bones_ Exp $
 
 DESCRIPTION="Script to create html and text report about your system."
 HOMEPAGE="http://www.josealberto.org"
 SRC_URI="mirror://gentoo/${P}.tbz2"
 
-LICENSE="GPL2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
@@ -20,10 +20,10 @@ S=${WORKDIR}/r2
 
 src_install() {
 	WWWDIR="/var/www/localhost/htdocs/R2"
-	
+
 	insinto /etc
 	doins recursos2.conf
-	
+
 	dobin R2createrrd.sh R2generarrd.sh R2updaterrd.sh Recursos2.sh
 
 	dodir ${WWWDIR}
@@ -54,4 +54,3 @@ pkg_postinst() {
 	einfo "in html or plain text and mail the file or whatever."
 	echo
 }
-
