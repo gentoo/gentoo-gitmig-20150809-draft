@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.7.0.ebuild,v 1.1 2006/08/22 07:46:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.7.0.ebuild,v 1.2 2006/08/23 07:06:22 mr_bones_ Exp $
 
 inherit games
 
@@ -24,6 +24,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e "s/COLSATSTRIPRIORITY/COLSATSTRIPPRIORITY/" \
+		src/vidsoft.c \
+		|| die "sed failed"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
