@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.1 2006/07/23 11:31:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.2 2006/08/23 19:00:15 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -78,7 +78,8 @@ src_install() {
 
 	dodoc AUTHORS Announce.2.1 CHANGES README TODO
 	if use doc; then
-		dodoc doc/*.pdf || die "Failed to install docs"
+		insinto /usr/share/doc/${PF}
+		doins doc/*.pdf || die "Failed to install pdf docs"
 	fi
 
 	#remove superfluous doc directory
