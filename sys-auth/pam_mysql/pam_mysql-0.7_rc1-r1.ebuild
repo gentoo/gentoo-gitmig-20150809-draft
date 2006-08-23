@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/pam_mysql-0.7_rc1-r1.ebuild,v 1.2 2006/08/10 14:33:44 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/pam_mysql-0.7_rc1-r1.ebuild,v 1.3 2006/08/23 09:55:22 kugelfang Exp $
 
-inherit libtool
+inherit libtool multilib
 
 DESCRIPTION="pam_mysql is a module for pam to authenticate users with mysql"
 HOMEPAGE="http://pam-mysql.sourceforge.net/"

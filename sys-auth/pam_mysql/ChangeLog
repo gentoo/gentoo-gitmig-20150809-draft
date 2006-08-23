@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.10 2006/08/10 14:33:44 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.11 2006/08/23 09:55:22 kugelfang Exp $
+
+  23 Aug 2006; Danny van Dyk <kugelfang@gentoo.org>
+  pam_mysql-0.7_rc1-r1.ebuild:
+  Forgot to add multilib.eclass to the inherit line.
 
   10 Aug 2006; Danny van Dyk <kugelfang@gentoo.org>
   pam_mysql-0.7_rc1-r1.ebuild:
