@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/klearlook
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/klearlook/ChangeLog,v 1.3 2006/06/13 18:22:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/klearlook/ChangeLog,v 1.4 2006/08/23 19:40:25 carlo Exp $
+
+  23 Aug 2006; Carsten Lohrke <carlo@gentoo.org> klearlook-0.9.9.2.ebuild:
+  Missing need-kde() call, bug #143436.
 
   13 Jun 2006; Stefan Schweizer <genstef@gentoo.org> klearlook-0.9.9.2.ebuild:
   Mark it ~x86, bug 120363
