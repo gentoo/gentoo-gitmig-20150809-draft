@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.6 2006/07/06 23:15:23 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r3.ebuild,v 1.7 2006/08/23 17:55:13 zmedico Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/"
@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	python -O -c "import compileall; compileall.compile_dir('${S}/pym')"
+	append-lfs-flags
 
 	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} -o tbz2tool tbz2tool.c

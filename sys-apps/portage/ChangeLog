@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.229 2006/08/21 07:46:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.230 2006/08/23 17:55:13 zmedico Exp $
+
+  23 Aug 2006; Zac Medico <zmedico@gentoo.org> portage-2.0.51.22-r3.ebuild,
+  portage-2.0.54-r2.ebuild, -portage-2.1-r1.ebuild, portage-2.1-r2.ebuild,
+  portage-2.1.1_pre5-r1.ebuild, portage-2.1.1_pre5-r3.ebuild:
+  Add append-lfs-flags to src_compile for bug #144754 and punt old 2.1-r1.
 
 *portage-2.1.1_pre5-r3 (21 Aug 2006)
 

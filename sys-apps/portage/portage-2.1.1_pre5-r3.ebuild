@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1_pre5-r3.ebuild,v 1.1 2006/08/21 07:46:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1_pre5-r3.ebuild,v 1.2 2006/08/23 17:55:13 zmedico Exp $
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
@@ -77,6 +77,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-lfs-flags
+
 	cd "${S}"/src
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o tbz2tool tbz2tool.c || \
 		die "Failed to build tbz2tool"
