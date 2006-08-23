@@ -4,12 +4,8 @@
 <pkgmetadata>
 	<herd>kernel</herd>
 	<maintainer>
-		<email>chainsaw@gentoo.org</email>
-		<name>Tony Vroon</name>
-	</maintainer>
-	<maintainer>
-		<email>phreak@gentoo.org</email>
-		<name>Christian Heim</name>
+		<email>kernel@gentoo.org</email>
+		<name>Gentoo kernel team</name>
 	</maintainer>
 	<longdescription>
 		Vanilla prepatch/rc sources, for people who like to have the latest kernel available
