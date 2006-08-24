@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.17.ebuild,v 1.4 2006/08/21 15:18:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.17.ebuild,v 1.5 2006/08/24 07:49:32 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna athena neXt Xaw3d berkdb"
 
 X_DEPEND="x11-misc/xbitmaps x11-libs/libXt x11-libs/libXmu x11-libs/libXext"
