@@ -1,19 +1,24 @@
 # Copyright 2005-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/static-dev-0.1.ebuild,v 1.7 2006/07/13 01:21:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/static-dev-0.1.ebuild,v 1.8 2006/08/24 02:30:46 vapier Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A skeleton, statically managed /dev"
-HOMEPAGE="http://bugs.gentoo.org/show_bug.cgi?id=107875"
+HOMEPAGE="http://bugs.gentoo.org/107875"
 SRC_URI=""
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
+
+DEPEND=""
 RDEPEND="virtual/baselayout"
 PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
-	if [[ -d /dev/.udev/ || ! -c /dev/.devfs ]]; then
+	if [[ -d ${ROOT}/dev/.udev/ || ! -c ${ROOT}/dev/.devfs ]] ; then
 		echo ""
 		eerror "We have detected that you currently use udev or devfs"
 		eerror "and this ebuild cannot install to the same mount-point."
@@ -27,31 +32,30 @@ pkg_setup() {
 	fi
 }
 
-pkg_postinst() {
-	local x="generic"
-	local makedev
-
-	cd "${ROOT}/dev/" || die "Unable to descend into ${ROOT}/dev/"
-
-	for arch in alpha arm hppa ia64 m68k mips s390 sparc; do
-		use ${arch} && x="${x} generic-${arch}"
-	done
-
-	[[ "${CHOST:0:7}" == "mipsel-" ]] && x="${x} generic-mipsel"
-
-	( use x86 || use amd64 ) && x="${x} generic-i386"
-	( use ppc || use ppc64 ) && x="${x} generic-powerpc"
-
-	[[ -e ${ROOT}/dev/MAKEDEV ]] && makedev="${ROOT}/dev/MAKEDEV" || makedev="/dev/MAKEDEV"
-
-	einfo "Making device nodes for ${x}"
-	sh ${makedev} ${x} || die "No ${makedev}?"
-}
-
-src_compile() {
-	:
-}
-
 src_install() {
-	:
+	dodir /dev
+	cd "${D}"/dev/ || die "Unable to descend into /dev"
+
+	# keep in sync with sys-apps/baselayout
+	local suffix=""
+	case $(tc-arch) in
+		arm*)    suffix=-arm ;;
+		alpha)   suffix=-alpha ;;
+		amd64)   suffix=-i386 ;;
+		hppa)    suffix=-hppa ;;
+		ia64)    suffix=-ia64 ;;
+		m68k)    suffix=-m68k ;;
+		mips*)   suffix=-mips ;;
+		ppc*)    suffix=-powerpc ;;
+		s390*)   suffix=-s390 ;;
+		sh*)     suffix=-sh ;;
+		sparc*)  suffix=-sparc ;;
+		x86)     suffix=-i386 ;;
+	esac
+
+	einfo "Using generic${suffix} to make $(tc-arch) device nodes..."
+
+	export PATH=${ROOT}/dev:/dev:${PATH}
+	MAKEDEV generic${suffix} || die
+	MAKEDEV sg scd rtc hde hdf hdg hdh input audio video || die
 }
