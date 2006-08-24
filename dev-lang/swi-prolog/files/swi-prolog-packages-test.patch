@@ -134,9 +134,9 @@
  
  
  ################################################################
---- pl-5.6.4.orig/packages/xpce/src/test.pl	2005-11-03 04:10:22.000000000 +1300
-+++ pl-5.6.4/packages/xpce/src/test.pl	2006-02-14 00:05:37.000000000 +1300
-@@ -35,6 +35,10 @@
+--- pl-5.6.17.orig/packages/xpce/src/test.pl	2006-03-30 01:42:18.000000000 +1200
++++ pl-5.6.17/packages/xpce/src/test.pl	2006-08-24 19:16:27.000000000 +1200
+@@ -35,11 +35,33 @@
  	?- test.
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
  
@@ -147,7 +147,30 @@
  :- get(@pce, version, V),
     format('XPCE/SWI-Prolog test suite. (XPCE version ~w)~n\
            To run all tests run ?- test.~n~n', [V]).
-@@ -163,12 +167,12 @@
+ 
++:- dynamic
++	default_output_stream/1,
++	display_enabled/0.
+ 
++:- current_input(InputStream),
++   current_output(OutputStream),
++   assert(default_output_stream(OutputStream)),
++   open_null_stream(NullStream),
++   set_prolog_IO(InputStream, NullStream, NullStream),
++   get(@display, visual_type, _),
++   assert(display_enabled).
++
++:- current_input(InputStream),
++   default_output_stream(OutputStream),
++   set_prolog_IO(InputStream, OutputStream, OutputStream),
++   (   display_enabled
++   ->  true
++   ;   format('No X server found. Some tests are disabled.~n~n', [])
++   ).
+ 
+ 		 /*******************************
+ 		 *	      NAMES		*
+@@ -163,12 +185,12 @@
  		 *******************************/
  
  srcsink(contents-1) :-
@@ -163,7 +186,7 @@
  	get(File, contents, String),
  	delete_file(Tmp),
  	get(String, value, Atom),
-@@ -193,7 +197,7 @@
+@@ -193,7 +215,7 @@
  		 *******************************/
  
  foreign(Name) :-
@@ -172,7 +195,7 @@
  
  file(env-1) :-
  	new(F, file('$PCEHOME/Defaults')),
-@@ -202,11 +206,6 @@
+@@ -202,11 +224,6 @@
  	get(F, name, PceName),
  	same_file(PceName, PlName),
  	send(F, same, PlName).
@@ -184,7 +207,7 @@
  file(abs-1) :-
  	new(F, file(foobar)),
  	get(F, absolute_path, Abs),
-@@ -221,13 +220,15 @@
+@@ -221,13 +238,15 @@
  	       ->  send(file(F), exists)
  	       ;   \+ send(file(F), exists)
  	       )).
@@ -201,7 +224,7 @@
  	exists_file(Name),
  	send(F2, exists),
  	get(F2, contents, string('Hello world\n')),
-@@ -312,12 +313,12 @@
+@@ -312,12 +331,12 @@
  	atom_concat(hello, Wide, New).
  textbuffer(file-1) :-
  	new(TB, text_buffer),
@@ -217,31 +240,25 @@
  	delete_file(Tmp),
  	Copy == WAtom.
  textbuffer(store-1) :-
-@@ -619,6 +620,9 @@
- 		 *        TEST MAIN-LOOP	*
- 		 *******************************/
- 
-+:- dynamic
-+	testset/1.
-+
- testset(name).				% XPCE names
- testset(wname).				% Names holding wide characters
- testset(wstring).			% Strings holding wide characters
-@@ -626,12 +630,14 @@
- testset(srcsink).			% Source/Sink operations
- testset(file).				% file (-name) handling
- testset(dir).				% directory (-name) handling
--testset(bom).				% Byte Order Mark hanling
-+:- getenv('DISPLAY', _)
-+   -> assert(testset(bom)); true.	% Byte Order Mark hanling
- testset(plterm).			% Prolog terms in XPCE
- testset(textbuffer).
- testset(asfile).			% test pce_open and friends
--testset(selection).			% X11 selection
--testset(image).				% Simple image manipulation
-+:- getenv('DISPLAY', _)
-+   -> assert(testset(selection)),	% X11 selection
-+      assert(testset(image)); true.	% Simple image manipulation
+@@ -635,6 +654,10 @@
  testset(regex).				% Regular expression matches
  testset(type).				% Check type logic
  
++display_required(bom).
++display_required(selection).
++display_required(image).
++
+ %	testdir(Dir)
+ %	
+ %	Enumerate directories holding tests.
+@@ -683,6 +706,10 @@
+ 	).
+ 
+ runtest(Name) :-
++	display_required(Name),
++	\+display_enabled,
++	format('Disabling test set "~w"~n', [Name]).
++runtest(Name) :-
+ 	format('Running test set "~w" ', [Name]),
+ 	flush,
+ 	functor(Head, Name, 1),
