@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.17 2006/07/01 13:57:12 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.18 2006/08/24 14:30:49 wschlich Exp $
+
+  24 Aug 2006; Wolfram Schlich <wschlich@gentoo.org> -nero-2.0.0.3b.ebuild,
+  -nero-2.0.0.3b-r2.ebuild, -nero-2.0.0.4.ebuild, -nero-2.0.0.5.ebuild,
+  -nero-2.1.0.0.ebuild, nero-2.1.0.1.ebuild:
+  remove old versions, fix (g)libc dep
 
 *nero-2.1.0.1 (01 Jul 2006)
 

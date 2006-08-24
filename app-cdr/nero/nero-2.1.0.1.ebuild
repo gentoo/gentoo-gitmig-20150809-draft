@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.1.0.1.ebuild,v 1.1 2006/07/01 13:57:12 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-2.1.0.1.ebuild,v 1.2 2006/08/24 14:30:49 wschlich Exp $
 
 inherit eutils rpm multilib
 
@@ -37,7 +37,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mp3 ogg shorten sox vorbis"
 DEPEND=""
-RDEPEND="virtual/libc
+RDEPEND="sys-libs/glibc
 	|| ( x11-libs/libX11 virtual/x11 )
 	=x11-libs/gtk+-1.2*
 	amd64? ( >=app-emulation/emul-linux-x86-gtklibs-2.0 )
