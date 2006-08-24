@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.3.ebuild,v 1.1 2006/08/24 11:31:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.3.ebuild,v 1.2 2006/08/24 12:31:24 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils autotools
 
@@ -120,3 +120,4 @@ pkg_postinst() {
 	ewarn "take a capture with tcpdump and analyze running wireshark as a least privileged user;"
 	ewarn "and subscribe to wireshark's announce list to be notified of newly discovered vulnerabilities."
 }
+
