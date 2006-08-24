@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.14.5.ebuild,v 1.6 2006/03/27 15:31:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/c2hs-0.14.5.ebuild,v 1.7 2006/08/24 10:07:16 corsair Exp $
 
 CABAL_FEATURES="bin"
 inherit base eutils haskell-cabal
@@ -11,7 +11,7 @@ SRC_URI="http://www.cse.unsw.edu.au/~chak/haskell/c2hs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=virtual/ghc-6.0"

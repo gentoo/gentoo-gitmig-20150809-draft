@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.16 2006/03/27 15:31:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.17 2006/08/24 10:07:16 corsair Exp $
+
+  24 Aug 2006; Markus Rothe <corsair@gentoo.org> c2hs-0.14.5.ebuild:
+  Stable on ppc64; bug #144678
 
   27 Mar 2006; Duncan Coutts <dcoutts@gentoo.org> c2hs-0.14.5.ebuild:
   Marked ~ia64

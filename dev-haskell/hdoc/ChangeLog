@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdoc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.10 2006/03/01 19:36:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.11 2006/08/24 10:11:59 corsair Exp $
+
+  24 Aug 2006; Markus Rothe <corsair@gentoo.org> hdoc-0.8.3.ebuild:
+  Stable on ppc64; bug #144678
 
   01 Mar 2006; Markus Rothe <corsair@gentoo.org> hdoc-0.8.3.ebuild:
   Added ~ppc64; bug #124469
