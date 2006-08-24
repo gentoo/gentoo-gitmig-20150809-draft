@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060703.ebuild,v 1.1 2006/08/23 13:11:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060703.ebuild,v 1.2 2006/08/24 11:09:51 s4t4n Exp $
 
 inherit eutils
 
@@ -25,8 +25,6 @@ RDEPEND=">=media-libs/freetype-2.1.9-r1
 DEPEND="${RDEPEND}
 	>=dev-util/jam-2.5-r3
 	app-arch/unzip"
-
-inherit eutils
 
 src_unpack()
 {

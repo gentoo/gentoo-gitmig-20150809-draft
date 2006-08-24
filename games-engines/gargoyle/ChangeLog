@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/gargoyle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.3 2006/08/23 13:11:02 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/ChangeLog,v 1.4 2006/08/24 11:09:51 s4t4n Exp $
+
+  24 Aug 2006; Michele Noberasco <s4t4n@gentoo.org> gargoyle-20060703.ebuild:
+  Removed duplicate 'inherit eutils' entry.. Closes bug #144950.
 
 *gargoyle-20060703 (23 Aug 2006)
 
