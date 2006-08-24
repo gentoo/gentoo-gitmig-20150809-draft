@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/recursos
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.3 2006/08/24 10:18:13 bass Exp $
+
+*recursos-2.0 (24 Aug 2006)
+
+  24 Aug 2006; J. Alberto Suárez López <bass@gentoo.org>
+  +recursos-2.0.ebuild:
+  First release
+
