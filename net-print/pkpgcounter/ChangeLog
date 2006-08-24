@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pkpgcounter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.5 2006/08/23 21:11:46 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/ChangeLog,v 1.6 2006/08/24 13:52:11 chutzpah Exp $
+
+  24 Aug 2006; Patrick McLean <chutzpah@gentoo.org> pkpgcounter-1.72.ebuild,
+  pkpgcounter-1.80.ebuild, pkpgcounter-1.83.ebuild:
+  Change the docs cleaning rm to use  rather than the name of the package.
 
 *pkpgcounter-1.83 (23 Aug 2006)
 

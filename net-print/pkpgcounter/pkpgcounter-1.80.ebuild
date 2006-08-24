@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-1.80.ebuild,v 1.4 2006/08/23 21:11:46 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pkpgcounter/pkpgcounter-1.80.ebuild,v 1.5 2006/08/24 13:52:11 chutzpah Exp $
 
 inherit distutils
 
@@ -26,5 +26,5 @@ DOCS="BUGS NEWS README CREDITS PKG-INFO"
 src_install() {
 	distutils_src_install
 
-	rm -rf "${D}"/usr/share/doc/pkpgcounter
+	rm -rf "${D}"/usr/share/doc/${PN}
 }
