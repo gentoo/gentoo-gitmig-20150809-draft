@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5772 2006/08/23 19:02:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5773 2006/08/24 08:59:57 suka Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andreas Proschofsky <suka@gentoo.org> (24 Aug 2006)
+# Mask OpenOffice.org 2.0.4 test releases
+>=app-office/openoffice-2.0.4_rc1
 
 # Markus Dittrich <markusle@gentoo.org> (22 Aug 2006)
 # masked for further testing (see bug #144314)
