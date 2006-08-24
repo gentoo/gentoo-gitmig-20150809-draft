@@ -1,7 +1,0 @@
-# ChangeLog for app-admin/recursos
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/recursos/ChangeLog,v 1.1 2006/08/23 16:14:58 mr_bones_ Exp $
-
-  23 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> recursos-2.0.ebuild:
-  fix up ebuild; create ChangeLog
-
