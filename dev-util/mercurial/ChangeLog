@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.31 2006/08/15 03:28:26 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.32 2006/08/24 01:48:11 aross Exp $
+
+*mercurial-0.9.1-r1 (25 Aug 2006)
+
+  25 Aug 2006; Andrew Ross <aross@gentoo.org> +mercurial-0.9.1-r1.ebuild:
+  Byte-compile the 'hgext' python module, thanks to James Rowe
+  <jnrowe@ukfsn.org> in bug #135488. Don't install macosx and win32-specific
+  files (bug #143755). Install man pages unconditionally, instead of needing
+  USE=doc (bug #143744 and, to a lesser extent, bug #130790).
 
   16 Aug 2006; Andrew Ross <aross@gentoo.org> metadata.xml:
   Add myself as a maintainer.
