@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/gfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.22 2006/07/15 16:39:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/ChangeLog,v 1.23 2006/08/24 18:58:41 xmerlin Exp $
+
+  24 Aug 2006; Christian Zoffoli <xmerlin@gentoo.org> gfs-1.02.00-r1.ebuild:
+  Stable x86.
 
   15 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org> gfs-1.02.00.ebuild,
   gfs-1.02.00-r1.ebuild:
