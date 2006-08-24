@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.22_p1548.ebuild,v 1.3 2006/06/08 10:56:06 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/pykota-1.22_p1548.ebuild,v 1.4 2006/08/24 14:36:03 chutzpah Exp $
 
 #==============================================================================
 inherit python eutils distutils
@@ -23,6 +23,7 @@ KEYWORDS="~x86"
 SLOT="0"
 #--------------------------------------------------------------------------
 #S="${WORKDIR}/${MY_P}"
+DOCS="README MANIFEST.in TODO SECURITY NEWS CREDITS FAQ"
 #==============================================================================
 src_unpack() {
 	unpack ${A}
@@ -35,15 +36,23 @@ src_unpack() {
 }
 #==============================================================================
 src_install() {
-	mkdir -p ${D}/etc/${PN}
+	mkdir -p "${D}"/etc/${PN}
 	python_version
 	distutils_src_install
 	#cups backend ----------------------------------------------
-	mkdir -p ${D}/usr/lib/cups/backend
+	mkdir -p "${D}"/usr/lib/cups/backend
 	dosym /usr/share/pykota/cupspykota /usr/lib/cups/backend/cupspykota
 	#extra docs: inits -----------------------------------------
-	init_dir=/usr/share/doc/${PN}/initscripts
+	init_dir=/usr/share/doc/${P}/initscripts
 	insinto ${init_dir}
-	cp -pPR initscripts/* ${D}/${init_dir}
+	cp -pPR initscripts/* "${D}"/${init_dir}
+
+	for doc in ${DOCS}; do
+		rm -f "${D}"/usr/share/doc/${PN}/${doc}
+	done
+
+	rm -f "${D}"/usr/share/doc/${PN}/{LICENSE,COPYING}
+	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${P}
+	rmdir "${D}"/usr/share/doc/${PN}
 }
 
