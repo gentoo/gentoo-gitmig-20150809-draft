@@ -1,0 +1,26 @@
+diff -urN libggi-2.1.1.orig/display/lcd823/visual.c libggi-2.1.1/display/lcd823/visual.c
+--- libggi-2.1.1.orig/display/lcd823/visual.c	2006-06-03 07:46:42.000000000 +0200
++++ libggi-2.1.1/display/lcd823/visual.c	2006-06-03 07:55:37.000000000 +0200
+@@ -106,7 +106,10 @@
+ 
+ 	GGIDPRINT("display-lcd823: GGIopen start.\n");
+ 
+-	LCD823_PRIV(vis) = priv = malloc(sizeof(ggi_lcd823_priv));
++	
++	LCD823_PRIV(vis) = priv = (ggi_lcd823_priv *)malloc(sizeof(ggi_lcd823_priv));
++	
++
+ 	if (priv == NULL) {
+ 		return GGI_ENOMEM;
+ 	}
+diff -urN libggi-2.1.1.orig/include/ggi/display/lcd823.h libggi-2.1.1/include/ggi/display/lcd823.h
+--- libggi-2.1.1.orig/include/ggi/display/lcd823.h	2006-06-03 07:46:42.000000000 +0200
++++ libggi-2.1.1/include/ggi/display/lcd823.h	2006-06-03 07:54:28.000000000 +0200
+@@ -50,6 +50,6 @@
+ 	long  frame_size;
+ } ggi_lcd823_priv;
+ 
+-#define LCD823_PRIV(vis) ((ggi_lcd823_priv *)LIBGGI_PRIVATE(vis))
++#define LCD823_PRIV(vis) (LIBGGI_PRIVATE(vis))
+ 
+ #endif /* _GGI_DISPLAY_LCD823_H */

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.19 2006/07/09 20:23:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.1.ebuild,v 1.20 2006/08/24 13:13:11 lu_zero Exp $
 
 inherit eutils libtool
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}-gcc4.1.patch"
 	epatch "${FILESDIR}/${P}-glibc24.patch"
 	elibtoolize
 }
