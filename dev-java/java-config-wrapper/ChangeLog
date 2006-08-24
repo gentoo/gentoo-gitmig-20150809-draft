@@ -1,6 +1,21 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.13 2006/08/01 22:56:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.14 2006/08/24 20:37:02 nichoj Exp $
+
+*java-config-wrapper-0.11 (24 Aug 2006)
+
+  24 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
+  -files/java-config-wrapper-0.9-check_env_files.patch,
+  -files/java-config-wrapper-0.9-ignore_nonexistant_envs.patch,
+  -files/java-config-wrapper-0.9-keyword_warning.patch,
+  -files/java-config-wrapper-0.9-qfile.patch,
+  -files/java-config-wrapper-0.9-url.patch,
+  -files/java-config-wrapper-0.9-virtual_check.patch,
+  -files/java-config-wrapper-0.10-check.patch,
+  -files/java-config-wrapper-0.10-fixer.patch,
+  -java-config-wrapper-0.10-r2.ebuild, -java-config-wrapper-0.10-r3.ebuild,
+  +java-config-wrapper-0.11.ebuild:
+  Several fixes and cleanups provided by Caster. Pruned old versions.
 
 *java-config-wrapper-0.10-r3 (01 Aug 2006)
 
