@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-adzap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-adzap/ChangeLog,v 1.1 2006/08/22 20:21:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-adzap/ChangeLog,v 1.2 2006/08/24 17:18:50 zzam Exp $
+
+*vdr-adzap-0.0.2 (24 Aug 2006)
+
+  24 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-adzap-0.0.1-gentoo.diff, -files/vdr-adzap-0.0.1-includes.diff,
+  +files/vdr-adzap-0.0.2-gentoo.diff, +files/confd, -vdr-adzap-0.0.1.ebuild,
+  +vdr-adzap-0.0.2.ebuild:
+  Version bumped.
 
 *vdr-adzap-0.0.1 (22 Aug 2006)
 

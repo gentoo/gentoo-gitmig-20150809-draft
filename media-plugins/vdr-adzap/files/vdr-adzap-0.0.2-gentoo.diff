@@ -1,0 +1,52 @@
+--- adzap-0.0.2/examples/adzapcheck.sh.orig	2006-08-24 18:56:02.000000000 +0200
++++ adzap-0.0.2/examples/adzapcheck.sh	2006-08-24 19:08:49.000000000 +0200
+@@ -10,7 +10,7 @@
+ 
+ PATH=$PREFIX/bin:$PREFIX/sbin:$PATH
+ 
+-rm -f /tmp/adzap.run
++rm -f /var/vdr/adzap/adzap.run
+ 
+ case $1 in
+     "NEUN LIVE Television")
+@@ -50,29 +50,29 @@
+ 	MAP_NAME="$1"
+ 	;;
+     *)
+-	echo "svdrpsend.pl -p ${VDR_PORT:-2001} MESG no support for $1..." | at now
++	( ( echo "svdrpsend.pl -p ${VDR_PORT:-2001} MESG no support for $1..." ) &>/dev/null & )
+ 	exit 1
+ 	;;
+ esac
+ 
+-at now <<EOT
++( (
+ if ping -c 1 werbesignal.dyndns.org ; then
+     cmd(){ lynx -connect-timeout=1 -source werbesignal.dyndns.org/Werbesignal_client.php | grep "COLOR=lightpink><B>$MAP_NAME<"; }
+-    if [ -n "\$(cmd)" ] ; then
+-	date > /tmp/adzap.run
+-	while [ -a /tmp/adzap.run -a -n "\$(cmd)" -a $((TIMEOUT*60+$(date +%s))) -gt \$(date +%s) ] ; do
++    if [ -n "$(cmd)" ] ; then
++	date > /var/vdr/adzap/adzap.run
++	while [ -a /var/vdr/adzap/adzap.run -a -n "$(cmd)" -a $((TIMEOUT*60+$(date +%s))) -gt $(date +%s) ] ; do
+ 	    sleep 1s
+ 	done
+-	if [ -a /tmp/adzap.run ] ; then
++	if [ -a /var/vdr/adzap/adzap.run ] ; then
+ 	    svdrpsend.pl -p ${VDR_PORT:-2001} CHAN "$1"
+-	    rm -f /tmp/adzap.run
++	    rm -f /var/vdr/adzap/adzap.run
+ 	fi
+     fi
+ else
+      svdrpsend.pl -p ${VDR_PORT:-2001} MESG werbesignal.dyndns.org not available...
+-fi \
+->> /dev/null 2>&1
+-EOT
++fi
++) & ) &>/dev/null &
+ 
+ # for {isdn,analog} try 5s or higher...
+-sleep 4s
++#sleep 4s
++

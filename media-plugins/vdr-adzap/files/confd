@@ -1,0 +1,2 @@
+_EXTRAOPTS="-c /usr/share/vdr/adzap/ -j /var/vdr/adzap/"
+
