@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/lhs2tex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.14 2006/08/17 11:50:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lhs2tex/ChangeLog,v 1.15 2006/08/24 18:16:30 fmccor Exp $
+
+  24 Aug 2006; Ferris McCormick <fmccor@gentoo.org> lhs2tex-1.11.ebuild:
+  Stable on sparc --- Bug #138077 --- Now builds and installs with no problems.
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> lhs2tex-1.11.ebuild:
   Stable on ppc64; bug #138077
