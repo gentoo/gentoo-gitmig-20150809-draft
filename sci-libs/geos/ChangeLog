@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.17 2006/07/08 08:34:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.18 2006/08/24 01:21:16 markusle Exp $
+
+  24 Aug 2006; Markus Dittrich <markusle@gentoo.org> geos-2.2.2-r1.ebuild:
+  Added RUBY_OPTIONAL to prevent ruby from being pulled in by
+  the eclass for USE='-ruby'. Thanks to Emiliano Vavassori
+  <syntaxerrormmm@gmail.com> for the fix (see bug #139322).
 
   08 Jul 2006; Markus Rothe <corsair@gentoo.org> geos-2.2.1.ebuild:
   Stable on ppc64

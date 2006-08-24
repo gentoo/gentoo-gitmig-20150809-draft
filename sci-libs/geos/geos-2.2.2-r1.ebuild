@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2-r1.ebuild,v 1.1 2006/07/04 17:00:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2-r1.ebuild,v 1.2 2006/08/24 01:21:16 markusle Exp $
+
+USE_RUBY="ruby18"
+RUBY_OPTIONAL="yes"
 
 inherit eutils distutils autotools kde-functions ruby toolchain-funcs
 
@@ -12,7 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static doc python ruby"
-USE_RUBY="ruby18"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
