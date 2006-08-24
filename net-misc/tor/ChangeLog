@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.62 2006/07/16 17:54:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.63 2006/08/24 00:27:42 humpback Exp $
+
+*tor-0.1.1.23 (24 Aug 2006)
+
+  24 Aug 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/torrc.sample-0.1.1.23.patch, +tor-0.1.1.23.ebuild:
+  Updated version, bump and small cosmetics. Thanks to Olivier Mondolini in
+  bug #144417.
 
   16 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> tor-0.1.1.22.ebuild:
   Add ~x86-fbsd keyword.
