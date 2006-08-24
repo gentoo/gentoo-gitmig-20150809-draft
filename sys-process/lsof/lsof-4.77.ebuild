@@ -1,13 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.77.ebuild,v 1.1 2006/05/13 20:41:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.77.ebuild,v 1.2 2006/08/24 02:49:45 vapier Exp $
 
 inherit eutils flag-o-matic fixheadtails toolchain-funcs
 
 MY_P=${P/-/_}
 DESCRIPTION="Lists open files for running Unix processes"
-HOMEPAGE="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/README"
-SRC_URI="ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.bz2
+HOMEPAGE="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/"
+SRC_URI="ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.bz2
+	ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/${MY_P}.tar.bz2
 	ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
