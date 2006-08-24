@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.23 2006/07/23 23:47:05 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.24 2006/08/24 19:45:00 pva Exp $
+
+*honeyd-1.5b (24 Aug 2006)
+
+  24 Aug 2006; Peter Volkov <pva@gentoo.org> metadata.xml,
+  +honeyd-1.5b.ebuild:
+  Version bump. Security fix for bug #144875. Droped ~sparc and ~ppc keywords
+  as new dependency libdnsres does not have them.
 
   23 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> -honeyd-0.8.ebuild,
   -honeyd-1.0.ebuild:
