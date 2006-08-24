@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.1 2006/07/13 19:28:52 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.2 2006/08/24 18:55:42 xmerlin Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 #IUSE="nogulm"
 IUSE=""
 

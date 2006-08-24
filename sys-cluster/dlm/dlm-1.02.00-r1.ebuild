@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.02.00-r1.ebuild,v 1.1 2006/07/13 18:49:37 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.02.00-r1.ebuild,v 1.2 2006/08/24 18:46:01 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -12,7 +12,7 @@ IUSE=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 x86"
 
 DEPEND=">=sys-cluster/dlm-headers-1.02.00-r1"
 RDEPEND=""

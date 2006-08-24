@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/gfs-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-headers/ChangeLog,v 1.10 2006/07/14 15:26:59 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-headers/ChangeLog,v 1.11 2006/08/24 18:49:04 xmerlin Exp $
+
+  24 Aug 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  gfs-headers-1.02.00-r1.ebuild:
+  Stable x86.
 
   14 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
   gfs-headers-1.02.00-r1.ebuild:
