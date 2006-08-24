@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.7 2004/10/01 23:55:42 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g.ebuild,v 1.8 2006/08/24 01:49:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="sys-cluster/pvm"
 DEPEND="media-libs/libpng
 	sys-libs/zlib
 	svga? ( media-libs/svgalib )
-	X? ( virtual/x11 )"
+	X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 src_unpack() {
 	unpack pvmpov-3.1g2.tgz

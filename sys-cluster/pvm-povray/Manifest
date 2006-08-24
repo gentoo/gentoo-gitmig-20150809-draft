@@ -1,5 +1,21 @@
-MD5 544cbeafe65a122866b59fad09dcba99 ChangeLog 1292
-MD5 f850b9680949db45729bea2724ddaaec files/digest-pvm-povray-3.1g 182
-MD5 f850b9680949db45729bea2724ddaaec files/digest-pvm-povray-3.1g-r1 182
+DIST povuni_d_3.1.tgz 913748
+DIST povuni_s_3.1.tgz 946513
+DIST pvmpov-3.1g2.tgz 41114
+EBUILD pvm-povray-3.1g-r1.ebuild 3496 RMD160 53ce70504dffdfbcf4e2ef2c81afebafd51793ee SHA1 b9b1f24fc2cf18b95f431d274878253556577650 SHA256 fbb74e88b951a8ebdadeb9601945ce5e12b1aa472b9b01d22c4caf48a4fa5877
 MD5 bf782d69fbfc03efa1e5fa9d4a1a7e36 pvm-povray-3.1g-r1.ebuild 3496
-MD5 29e1f3ee49981a970c0623d8ab080ed6 pvm-povray-3.1g.ebuild 3409
+RMD160 53ce70504dffdfbcf4e2ef2c81afebafd51793ee pvm-povray-3.1g-r1.ebuild 3496
+SHA256 fbb74e88b951a8ebdadeb9601945ce5e12b1aa472b9b01d22c4caf48a4fa5877 pvm-povray-3.1g-r1.ebuild 3496
+EBUILD pvm-povray-3.1g.ebuild 3434 RMD160 3caffeabb7823f7e86cfbb2e0f9243f555f357b2 SHA1 e1ef410d6cd29a03040a58aaae42092b5f8bb2f8 SHA256 e1f0978379cfbc81f26f43d196888fec72ac9d2e3c77789ff59a94e5f1df8981
+MD5 0ece6b7e637ce8f1966c82ccc0cd724f pvm-povray-3.1g.ebuild 3434
+RMD160 3caffeabb7823f7e86cfbb2e0f9243f555f357b2 pvm-povray-3.1g.ebuild 3434
+SHA256 e1f0978379cfbc81f26f43d196888fec72ac9d2e3c77789ff59a94e5f1df8981 pvm-povray-3.1g.ebuild 3434
+MISC ChangeLog 1396 RMD160 30aa40cca3d6723e2bc0788afc6d716fb87fed83 SHA1 6309bfafea156508a3f6213c261655d4e1b58ff2 SHA256 c9165497cbfe511d9d5c8c190218f7a33aa0f708a1d41f89a569d494d04f3155
+MD5 9067181064b10896ff59699119dc4c5e ChangeLog 1396
+RMD160 30aa40cca3d6723e2bc0788afc6d716fb87fed83 ChangeLog 1396
+SHA256 c9165497cbfe511d9d5c8c190218f7a33aa0f708a1d41f89a569d494d04f3155 ChangeLog 1396
+MD5 f850b9680949db45729bea2724ddaaec files/digest-pvm-povray-3.1g 182
+RMD160 5eed378941218f1b99961bb3380206363c93782f files/digest-pvm-povray-3.1g 182
+SHA256 b2dd5b73044a5910f8f210fa383d82b02bdc30d1dcc85ee9e942b85ec3e07456 files/digest-pvm-povray-3.1g 182
+MD5 f850b9680949db45729bea2724ddaaec files/digest-pvm-povray-3.1g-r1 182
+RMD160 5eed378941218f1b99961bb3380206363c93782f files/digest-pvm-povray-3.1g-r1 182
+SHA256 b2dd5b73044a5910f8f210fa383d82b02bdc30d1dcc85ee9e942b85ec3e07456 files/digest-pvm-povray-3.1g-r1 182
