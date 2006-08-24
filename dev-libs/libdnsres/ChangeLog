@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdnsres
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.1 2006/03/21 23:49:57 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.2 2006/08/24 19:12:36 pva Exp $
+
+*libdnsres-0.1a-r1 (24 Aug 2006)
+
+  24 Aug 2006; Peter Volkov <pva@gentoo.org> +libdnsres-0.1a-r1.ebuild:
+  Misc ebuild/build process cleanups. Added ~amd64.
 
   21 Mar 2006; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Initial import, needed for new honeyd series
