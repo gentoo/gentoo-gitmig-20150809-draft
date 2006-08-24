@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0.ebuild,v 1.10 2005/09/25 12:33:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wily/wily-1.0.ebuild,v 1.11 2006/08/24 00:20:49 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -15,10 +15,16 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	dev-libs/9libs"
+DEPEND="dev-libs/9libs
+	( || (
+	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libXt-1.0.0
+	>=x11-libs/libICE-1.0.0
+	>=x11-libs/libSM-1.0.0 )
+	virtual/x11 )
+	)"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	export CC="$(tc-getCC)"
