@@ -20,12 +20,5 @@ start() {
 stop() {
 	ebegin "Stopping Wildfire Messenger"
 	start-stop-daemon --pidfile /var/run/jabber/wildfire.pid --stop
-	kill $(< /var/run/jabber/wildfire.pid)
-	sleep 2
-	if ps ax|grep "^ *$(< /var/run/jabber/wildfire.pid)" > /dev/null; then
-		eend 1
-	else
-		rm /var/run/jabber/wildfire.pid
-		eend 0
-	fi
+	eend
 }
