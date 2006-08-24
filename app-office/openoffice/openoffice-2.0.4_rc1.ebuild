@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1.ebuild,v 1.1 2006/08/24 09:21:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1.ebuild,v 1.2 2006/08/24 09:56:00 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -38,7 +38,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="!app-office/openoffice-bin
 	|| ( (
@@ -74,6 +74,7 @@ RDEPEND="!app-office/openoffice-bin
 	java? ( >=virtual/jre-1.4
 		>=dev-java/java-config-2 )
 	>=sys-devel/gcc-3.2.1
+	amd64? ( >=dev-libs/boost-1.33.1 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
@@ -180,6 +181,7 @@ src_unpack() {
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
 	use branding && echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
+	use amd64 && echo "--with-system-boost" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 	echo "`use_with xml system-libxml`" >> ${CONFFILE}
