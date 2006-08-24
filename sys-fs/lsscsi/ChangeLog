@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.16 2006/07/22 15:42:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.17 2006/08/24 23:24:19 kloeri Exp $
+
+  25 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> lsscsi-0.17.ebuild:
+  Stable on x86.
 
   22 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> lsscsi-0.17.ebuild:
   Stable on alpha.
