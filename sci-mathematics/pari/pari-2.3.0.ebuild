@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.2 2006/08/23 19:00:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.3 2006/08/24 22:20:23 herbs Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -30,9 +30,6 @@ src_compile() {
 	elif ! is-flag -O?; then
 		append-flags -O2
 	fi
-
-	#we also need to force -fPIC throughout on amd64
-	if [ "${ARCH}" = "amd64" ] && ! is-flag -fPIC; then append-flags -fPIC; fi
 
 	./Configure \
 		--host=${myhost} \
