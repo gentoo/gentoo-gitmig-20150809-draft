@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1.ebuild,v 1.2 2006/08/24 09:56:00 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1.ebuild,v 1.3 2006/08/24 18:58:20 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -71,8 +71,7 @@ RDEPEND="!app-office/openoffice-bin
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
-	java? ( >=virtual/jre-1.4
-		>=dev-java/java-config-2 )
+	java? ( >=virtual/jre-1.4 )
 	>=sys-devel/gcc-3.2.1
 	amd64? ( >=dev-libs/boost-1.33.1 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
@@ -90,7 +89,6 @@ DEPEND="${RDEPEND}
 		virtual/x11 )
 	net-print/cups
 	>=sys-apps/findutils-4.1.20-r1
-	app-shells/bash
 	dev-perl/Archive-Zip
 	dev-perl/Compress-Zlib
 	dev-util/pkgconfig
@@ -104,7 +102,7 @@ DEPEND="${RDEPEND}
 	app-admin/eselect-oodict
 	java? ( >=virtual/jdk-1.4
 		dev-java/ant-core
-		>=dev-java/java-config-1.2.11-r1 )
+		>=dev-java/java-config-2.0.19-r1 )
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
@@ -157,10 +155,7 @@ pkg_setup() {
 		epause 10
 	fi
 
-	#Detect which look and patchset we are using, amd64 is known not to be working atm, so this is here for testing purposes only
-	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
-
-	use java && java-pkg-opt-2_pkg_setup
+	java-pkg-opt-2_pkg_setup
 
 }
 
@@ -240,7 +235,7 @@ src_compile() {
 	cd ${S}
 	autoconf || die
 	./configure ${MYCONF} \
-		--with-distro="${DISTRO}" \
+		--with-distro="Gentoo" \
 		--with-arch="${ARCH}" \
 		--with-srcdir="${DISTDIR}" \
 		--with-lang="${LINGUAS_OOO}" \
