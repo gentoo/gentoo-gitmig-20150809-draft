@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-ImageAnalysis
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ImageAnalysis/ChangeLog,v 1.7 2006/07/12 07:53:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ImageAnalysis/ChangeLog,v 1.8 2006/08/24 02:05:26 weeve Exp $
+
+  24 Aug 2006; Jason Wever <weeve@gentoo.org>
+  ezc-ImageAnalysis-1.0.1.ebuild:
+  Added ~sparc keyword wrt bug #134717.
 
   12 Jul 2006; Sebastian Bergmann <sebastian@gentoo.org>
   ezc-ImageAnalysis-1.0.1.ebuild:

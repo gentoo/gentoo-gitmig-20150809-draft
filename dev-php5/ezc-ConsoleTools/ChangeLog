@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-ConsoleTools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.8 2006/08/07 07:34:21 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ConsoleTools/ChangeLog,v 1.9 2006/08/24 02:00:01 weeve Exp $
+
+  24 Aug 2006; Jason Wever <weeve@gentoo.org> ezc-ConsoleTools-1.1.1.ebuild:
+  Added ~sparc keyword wrt bug #134717.
 
 *ezc-ConsoleTools-1.1.1 (07 Aug 2006)
 
