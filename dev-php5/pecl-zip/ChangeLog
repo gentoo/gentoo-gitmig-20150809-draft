@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/pecl-zip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.14 2006/08/15 11:43:00 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-zip/ChangeLog,v 1.15 2006/08/24 18:15:56 sebastian Exp $
+
+*pecl-zip-1.7.1 (24 Aug 2006)
+
+  24 Aug 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  +pecl-zip-1.7.1.ebuild:
+  Version bump.
 
   15 Aug 2006; Sebastian Bergmann <sebastian@gentoo.org>
   pecl-zip-1.7.0.ebuild:
