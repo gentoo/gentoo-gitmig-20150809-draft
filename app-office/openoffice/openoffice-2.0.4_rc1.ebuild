@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1.ebuild,v 1.3 2006/08/24 18:58:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1.ebuild,v 1.4 2006/08/25 08:30:30 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -73,7 +73,7 @@ RDEPEND="!app-office/openoffice-bin
 	dev-libs/expat
 	java? ( >=virtual/jre-1.4 )
 	>=sys-devel/gcc-3.2.1
-	amd64? ( >=dev-libs/boost-1.33.1 )
+	amd64? ( >=dev-libs/boost-1.31.0 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
@@ -102,7 +102,7 @@ DEPEND="${RDEPEND}
 	app-admin/eselect-oodict
 	java? ( >=virtual/jdk-1.4
 		dev-java/ant-core
-		>=dev-java/java-config-2.0.19-r1 )
+		${JAVA_PKG_E_DEPEND} )
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
@@ -154,8 +154,6 @@ pkg_setup() {
 		ebeep 5
 		epause 10
 	fi
-
-	java-pkg-opt-2_pkg_setup
 
 }
 
