@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.133 2006/08/18 21:20:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.134 2006/08/25 21:17:57 robbat2 Exp $
+
+  25 Aug 2006; Robin H. Johnson <robbat2@gentoo.org>
+  courier-imap-4.0.4.ebuild, courier-imap-4.0.6.ebuild:
+  Add chown fixup to avoid some user weirdness of perms 600 on a directory.
 
   18 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   courier-imap-4.0.4.ebuild:
