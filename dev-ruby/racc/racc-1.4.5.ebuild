@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.5.ebuild,v 1.2 2006/06/25 09:19:43 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.5.ebuild,v 1.3 2006/08/25 07:13:59 corsair Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.loveruby.net/en/racc.html"
 SRC_URI="http://www.loveruby.net/archive/racc/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ppc64 ~sparc ~x86"
 USE_RUBY="ruby16 ruby18 ruby19"
 IUSE=""
 S="${WORKDIR}/${MY_P}"
