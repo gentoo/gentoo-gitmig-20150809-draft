@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.15.ebuild,v 1.1 2006/08/24 21:11:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.15.ebuild,v 1.2 2006/08/25 20:52:49 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -28,6 +28,16 @@ BLD_DIR="${S}/gentoo-build"
 RPATH="${DESTTREE}/$(get_libdir)/blas"
 FORTRAN="g77 gfortran"
 
+pkg_setup() {
+	fortran_pkg_setup
+	echo
+	ewarn "Please make sure to disable CPU throttling completely"
+	ewarn "during the compile of blas-atlas. Otherwise, all atlas"
+	ewarn "generated timings will be completely random and the"
+	ewarn "performance of the resulting libraries will be degraded"
+	ewarn "considerably."
+	echo
+}
 
 src_unpack() {
 	unpack ${A}
@@ -48,7 +58,8 @@ src_unpack() {
 	cp "${FILESDIR}"/war ${BLD_DIR} && chmod a+x ${BLD_DIR}/war || \
 		die "failed to install war"
 
-	cd ${BLD_DIR} && ../configure || die "configure failed"
+	cd ${BLD_DIR} && ../configure -Si cputhrchk 0 \
+		|| die "configure failed"
 
 	sed -e "s:GENTOO_GCC:$(tc-getCC):" \
 		-e "s:GENTOO_FORTRAN:${FORTRANC}:" \
