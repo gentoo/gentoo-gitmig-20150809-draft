@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-server-console
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.2 2006/08/19 16:54:03 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.3 2006/08/25 20:18:09 ikelos Exp $
+
+  25 Aug 2006; Mike Auty <ikelos@gentoo.org> Manifest:
+  Redigested for vmware-any-any-update104.
 
 *vmware-server-console-1.0.1.29996 (19 Aug 2006)
 
