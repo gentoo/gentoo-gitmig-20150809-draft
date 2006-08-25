@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.14 2006/08/19 14:19:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.3.0.ebuild,v 1.15 2006/08/25 06:57:37 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -37,9 +37,9 @@ src_unpack() {
 		echo "#include_next <regex.h>" > gnulib/lib/regex.h
 	fi
 
-	[[ ${ELIBC} == "NetBSD" ]] && epatch "${FILESDIR}/${P}-nbsd.patch"
+	[[ ${ELIBC} == "NetBSD" ]] && epatch "${FILESDIR}"/${P}-nbsd.patch
 
-	epatch "${FILESDIR}/gnulib-openat-mode_t.patch"
+	epatch "${FILESDIR}"/gnulib-openat-mode_t.patch
 }
 
 src_compile() {
@@ -48,8 +48,11 @@ src_compile() {
 	local myconf
 	use userland_GNU || myconf=" --program-prefix=g"
 
-	[[ ${ELIBC} == "glibc" || ${ELIBC} == "uclibc" ]] && \
+	if ([[ ${ELIBC} == "glibc" ]] && has_version '>=sys-libs/glibc-2.3') \
+	   || [[ ${ELIBC} == "uclibc" ]]
+	then
 		myconf="${myconf} --without-included-regex"
+	fi
 
 	econf $(use_enable nls) ${myconf} || die "configure failed"
 	emake libexecdir=/usr/lib/find AR="$(tc-getAR)" || die "make failed"
