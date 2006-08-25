@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.116 2006/08/25 12:21:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.117 2006/08/25 13:45:53 zzam Exp $
+
+  25 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/mjpegtools-1.8.0-as-needed.patch, mjpegtools-1.8.0-r1.ebuild:
+  Fixed linking with --as-needed, see bug #144656.
 
   25 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/mjpegtools-1.8.0-pkg-config.patch, mjpegtools-1.8.0-r1.ebuild:

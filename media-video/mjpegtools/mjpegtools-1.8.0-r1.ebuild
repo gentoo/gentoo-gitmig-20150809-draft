@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.17 2006/08/25 12:21:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.18 2006/08/25 13:45:53 zzam Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool autotools
 
@@ -45,6 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-parallelmake.patch"
 	epatch "${FILESDIR}/${P}-pkg-config.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 	has_version ">=media-libs/libquicktime-0.9.9" && epatch "${FILESDIR}/${P}-libquicktime.patch"
 
 	# eautoreconf instead of elibtoolize
