@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.103 2006/07/29 18:28:06 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.104 2006/08/25 19:47:02 hanno Exp $
+
+  25 Aug 2006; Hanno Boeck <hanno@gentoo.org> files/lib/libGL.la:
+  Make libGL.la point to /usr/lib to let apps link against currently running
+  libGL.
 
 *mesa-6.5-r4 (29 Jul 2006)
 
