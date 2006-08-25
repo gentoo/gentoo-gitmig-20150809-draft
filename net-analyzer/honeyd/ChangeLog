@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.24 2006/08/24 19:45:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.25 2006/08/25 10:15:24 ticho Exp $
+
+  25 Aug 2006; <ticho@gentoo.org> honeyd-1.5b.ebuild:
+  Stable on x86. Security bug #144875.
 
 *honeyd-1.5b (24 Aug 2006)
 
