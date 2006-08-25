@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/cman-headers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/ChangeLog,v 1.14 2006/08/24 18:40:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-headers/ChangeLog,v 1.15 2006/08/25 07:40:24 corsair Exp $
+
+  25 Aug 2006; Markus Rothe <corsair@gentoo.org>
+  cman-headers-1.02.00-r1.ebuild:
+  Stable on ppc64
 
   24 Aug 2006; Christian Zoffoli <xmerlin@gentoo.org>
   cman-headers-1.02.00-r1.ebuild:
