@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX blackdown-jre-1.3.1 429 RMD160 459fd24d987fa8c12280d7ea58e74250b7e768d0 SHA1 c105b82906a68f2ebe9ac8186dca43e1ee92fea7 SHA256 24d88e47db81e840d4d75ae62a6db595c03821970e0133f8fc84369b6a2bc488
 MD5 3facc5cbb2965471e9b1986926221552 files/blackdown-jre-1.3.1 429
 RMD160 459fd24d987fa8c12280d7ea58e74250b7e768d0 files/blackdown-jre-1.3.1 429
@@ -33,9 +30,9 @@ AUX blackdown-jre-1.4.2.env 693 RMD160 05049dd43caca537afbd07006b82c39a8b60c48e 
 MD5 58c1eefb3cdc2e3397c390aba891527c files/blackdown-jre-1.4.2.env 693
 RMD160 05049dd43caca537afbd07006b82c39a8b60c48e files/blackdown-jre-1.4.2.env 693
 SHA256 caf838faff1b4a4e295865dc3703d0e1ae67706a83a242db2dd178b9eee2e4fd files/blackdown-jre-1.4.2.env 693
-DIST j2re-1.3.1-02c-FCS-linux-ppc.bin 11274226
-DIST j2re-1.4.1-01-linux-i586-gcc2.95.bin 20470579
-DIST j2re-1.4.1-01-linux-i586-gcc3.2.bin 20661166
+DIST j2re-1.3.1-02c-FCS-linux-ppc.bin 11274226 RMD160 1fab7ff8c3b18fbfeb7de31ac658c5450454ddb3 SHA1 186f1138e4cd872bc5e92c63e0c91ec13cbbc329 SHA256 d000f262482cef63b7246cbc2d61edf36b077aa82a45b2febda5fba8ba5928be
+DIST j2re-1.4.1-01-linux-i586-gcc2.95.bin 20470579 RMD160 61468d3f2c806e212b7f95f8d6cfd416b168e5cf SHA1 4496a4c901de8ebcdc8016a467f3d40348f7a98b SHA256 4fe0a3514093d40af834e747188e02f0a8265de4e8c65e3014e1c9c17a877d13
+DIST j2re-1.4.1-01-linux-i586-gcc3.2.bin 20661166 RMD160 71c9397698ccaae0b66b55c4e7ef15a464e6555c SHA1 c4a9197383f42125213fb77247866c432988ea21 SHA256 27f80b660adbfa85296046259305584ae9068cd6a764f14a47eb5f610d997a84
 DIST j2re-1.4.1-01-linux-sparc-gcc3.2.bin 22057279 RMD160 27f058db585657d19dcc19a743a000250b38885d SHA1 231583409e6bdad51290a307e65f8cff5a161e0d SHA256 a20b3be6c92935a848e2c9d4331697f1a29505c6a0b4bce051c1416eb439fd0f
 DIST j2re-1.4.2-03-linux-amd64.bin 13198020 RMD160 7ead3f8084060d689b91a65d2601d047c1ba2fb2 SHA1 f56756f992b2c7497cc3fe77aabcd37a9dc4d204 SHA256 036c8595da3e6157971efe333db7d771bbc8eabae36b691341c2199172aa9439
 DIST j2re-1.4.2-03-linux-i586.bin 13541431 RMD160 82c707956dc65e9640fda97587ac7426e4f7be98 SHA1 30b37bc8dcb5617971d2ae95e2f7227359d39991 SHA256 636c414583f22d7d9f12f56855bfcb84227cec100ed0108a2b8f0e5f6b7025ef
@@ -43,6 +40,10 @@ EBUILD blackdown-jre-1.3.1-r20.ebuild 1610 RMD160 ffc297f284a0e6d14d9edbb7c7a0c6
 MD5 ab3c8ba3fe81b92f75a9fe4ce69a93c8 blackdown-jre-1.3.1-r20.ebuild 1610
 RMD160 ffc297f284a0e6d14d9edbb7c7a0c6211cd015cb blackdown-jre-1.3.1-r20.ebuild 1610
 SHA256 ddca678fbf0ebe5636bc8cd6b1b0888024dbd216dfff59857d9dc108bd85ed1b blackdown-jre-1.3.1-r20.ebuild 1610
+EBUILD blackdown-jre-1.3.1-r21.ebuild 1740 RMD160 78826f5a55e4a819cc9321d714773590e79f2b82 SHA1 28993545dbdd8c4724b178dc6fbe2a565961f25d SHA256 4976006b157d75f2e1df8c6733ab8fc1ff53e15f5e1f82a240b5ea0faff3e4e0
+MD5 ebbab0fc3b8b585314c7632aac1e6494 blackdown-jre-1.3.1-r21.ebuild 1740
+RMD160 78826f5a55e4a819cc9321d714773590e79f2b82 blackdown-jre-1.3.1-r21.ebuild 1740
+SHA256 4976006b157d75f2e1df8c6733ab8fc1ff53e15f5e1f82a240b5ea0faff3e4e0 blackdown-jre-1.3.1-r21.ebuild 1740
 EBUILD blackdown-jre-1.3.1-r9.ebuild 2076 RMD160 2177bb8c434712cc3cd1ad9edaab210542a03bdd SHA1 e253a79a4394746ec42baa04da14faab98e9b8a5 SHA256 a40aa65862458a1e64ea08c9c805c2b23273ff34a993de5fd68de7f0ba00ad56
 MD5 ff353506a910c548b9635488174880b6 blackdown-jre-1.3.1-r9.ebuild 2076
 RMD160 2177bb8c434712cc3cd1ad9edaab210542a03bdd blackdown-jre-1.3.1-r9.ebuild 2076
@@ -55,10 +56,18 @@ EBUILD blackdown-jre-1.4.1-r12.ebuild 2660 RMD160 118eda1a6ff955fafb5dad77e9faa8
 MD5 68fc073e041aa13d8d0ccbd448fb708b blackdown-jre-1.4.1-r12.ebuild 2660
 RMD160 118eda1a6ff955fafb5dad77e9faa8ceb69151cc blackdown-jre-1.4.1-r12.ebuild 2660
 SHA256 974801b214f74bb6163ef692fa1ef6b74c8173e6ac4923449c21f596291540f7 blackdown-jre-1.4.1-r12.ebuild 2660
+EBUILD blackdown-jre-1.4.1-r13.ebuild 2943 RMD160 f8457753f3fde4f6ffb3bfdbd6c021b02b2efc99 SHA1 5c48401030de8b1ede93ecdb8bbe80c45e056e69 SHA256 16cc98defcf4964d88f6e07fda651efc0c04d51ea71e36a07daf9b9e6e967e02
+MD5 e967c63e524325d363a85eb169868042 blackdown-jre-1.4.1-r13.ebuild 2943
+RMD160 f8457753f3fde4f6ffb3bfdbd6c021b02b2efc99 blackdown-jre-1.4.1-r13.ebuild 2943
+SHA256 16cc98defcf4964d88f6e07fda651efc0c04d51ea71e36a07daf9b9e6e967e02 blackdown-jre-1.4.1-r13.ebuild 2943
 EBUILD blackdown-jre-1.4.2.03-r11.ebuild 3490 RMD160 63be5da0feea401356d5e2a4e1da5fbcb3e8f4e0 SHA1 aafdbbc1c3294f6754b00bbe1230172a8df2624c SHA256 c4dec4ad3059d5b03b1e9dce6ec7d30a2250c33d03e9eaacf376df0c5bb1854c
 MD5 ac7b2879409ed7595f9748c6443c1ede blackdown-jre-1.4.2.03-r11.ebuild 3490
 RMD160 63be5da0feea401356d5e2a4e1da5fbcb3e8f4e0 blackdown-jre-1.4.2.03-r11.ebuild 3490
 SHA256 c4dec4ad3059d5b03b1e9dce6ec7d30a2250c33d03e9eaacf376df0c5bb1854c blackdown-jre-1.4.2.03-r11.ebuild 3490
+EBUILD blackdown-jre-1.4.2.03-r12.ebuild 3621 RMD160 6d089c4ce057a120f4d68e43cba1d3f0667bfbed SHA1 6546603a22ea8a7c6ccb35b6c2cf9480dc448801 SHA256 28cd58017deb81df52a6dc718196adfd4b7d0c1d00bdcd2f7ca92bdd66a6f961
+MD5 cfee80f2eb55ef875b9d658f5431d5be blackdown-jre-1.4.2.03-r12.ebuild 3621
+RMD160 6d089c4ce057a120f4d68e43cba1d3f0667bfbed blackdown-jre-1.4.2.03-r12.ebuild 3621
+SHA256 28cd58017deb81df52a6dc718196adfd4b7d0c1d00bdcd2f7ca92bdd66a6f961 blackdown-jre-1.4.2.03-r12.ebuild 3621
 EBUILD blackdown-jre-1.4.2.03-r2.ebuild 4350 RMD160 bd56b42a625c9dbf810f5e2700a30f810318517c SHA1 4bdaf370d953c51da0a987383210c0a99128293a SHA256 6a7fc983232e13e9c4f840f000ced3bd2a13c51e58ef6dd825498811ed6e9145
 MD5 e9466777b8441b4d9c81e293ea4eef91 blackdown-jre-1.4.2.03-r2.ebuild 4350
 RMD160 bd56b42a625c9dbf810f5e2700a30f810318517c blackdown-jre-1.4.2.03-r2.ebuild 4350
@@ -67,39 +76,41 @@ EBUILD blackdown-jre-1.4.2.03.ebuild 3971 RMD160 47fbb87f9deba0f9573c0d8ae73183e
 MD5 40074b507b5abdabb141ba1b4bc280d6 blackdown-jre-1.4.2.03.ebuild 3971
 RMD160 47fbb87f9deba0f9573c0d8ae73183e662ca5de6 blackdown-jre-1.4.2.03.ebuild 3971
 SHA256 5e9ef77ebfe2ca13279ef60a0f7181e07efc2776e3897a8233c0a0099ec169da blackdown-jre-1.4.2.03.ebuild 3971
-MISC ChangeLog 13494 RMD160 199eae975c9b74fa4bb2e13272994b8f555e6f0a SHA1 c234db85ac36578bf2a5a7edcc3602b2d8591f13 SHA256 2f3c87bca54271db619bc248d407a14e52f09f539e3b0b6585ae4609db96124b
-MD5 373fbe163aade1b14fa01f9510c047ec ChangeLog 13494
-RMD160 199eae975c9b74fa4bb2e13272994b8f555e6f0a ChangeLog 13494
-SHA256 2f3c87bca54271db619bc248d407a14e52f09f539e3b0b6585ae4609db96124b ChangeLog 13494
+MISC ChangeLog 13957 RMD160 6004eebbefb34c993fa92ca2e33864d9370cf0ab SHA1 c0a6a6d2c870358ab6b3b5a7f26430193f68619f SHA256 d6d4964f8080d42615cb14c9d99ea3af75589a712c297048feb66d75c7fa3b7b
+MD5 5ca73c0f7b0a60d5d6c49729c141cd26 ChangeLog 13957
+RMD160 6004eebbefb34c993fa92ca2e33864d9370cf0ab ChangeLog 13957
+SHA256 d6d4964f8080d42615cb14c9d99ea3af75589a712c297048feb66d75c7fa3b7b ChangeLog 13957
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
-MD5 44d855f52a687d922d2230b27bccad0f files/digest-blackdown-jre-1.3.1-r20 79
-RMD160 4314234d9dd5204a9b775ae7f774070af89b0a24 files/digest-blackdown-jre-1.3.1-r20 79
-SHA256 e868161a39a98ab80bdf2a017615a645542a684dd0a43e533ea0bdf04bcb6ee5 files/digest-blackdown-jre-1.3.1-r20 79
-MD5 44d855f52a687d922d2230b27bccad0f files/digest-blackdown-jre-1.3.1-r9 79
-RMD160 4314234d9dd5204a9b775ae7f774070af89b0a24 files/digest-blackdown-jre-1.3.1-r9 79
-SHA256 e868161a39a98ab80bdf2a017615a645542a684dd0a43e533ea0bdf04bcb6ee5 files/digest-blackdown-jre-1.3.1-r9 79
-MD5 a63a0f7f95b399e2e8cc5d741efdca46 files/digest-blackdown-jre-1.4.1-r1 460
-RMD160 a6076144bcc8bbb6e339197d7a1a9577a3c154fc files/digest-blackdown-jre-1.4.1-r1 460
-SHA256 9192852803e226a3b8a3acb19ca75928be5700bb6108323fe2291907604a7b7b files/digest-blackdown-jre-1.4.1-r1 460
-MD5 a63a0f7f95b399e2e8cc5d741efdca46 files/digest-blackdown-jre-1.4.1-r12 460
-RMD160 a6076144bcc8bbb6e339197d7a1a9577a3c154fc files/digest-blackdown-jre-1.4.1-r12 460
-SHA256 9192852803e226a3b8a3acb19ca75928be5700bb6108323fe2291907604a7b7b files/digest-blackdown-jre-1.4.1-r12 460
+MD5 c9d5662ac26f73a0e608a1725250bfe8 files/digest-blackdown-jre-1.3.1-r20 283
+RMD160 b97fd672f9b3bd87ee879aaea6e1b64461d45316 files/digest-blackdown-jre-1.3.1-r20 283
+SHA256 8f0d880350114a42775806f535aacd85c0ce6962d75b605209bb475cfe44a387 files/digest-blackdown-jre-1.3.1-r20 283
+MD5 c9d5662ac26f73a0e608a1725250bfe8 files/digest-blackdown-jre-1.3.1-r21 283
+RMD160 b97fd672f9b3bd87ee879aaea6e1b64461d45316 files/digest-blackdown-jre-1.3.1-r21 283
+SHA256 8f0d880350114a42775806f535aacd85c0ce6962d75b605209bb475cfe44a387 files/digest-blackdown-jre-1.3.1-r21 283
+MD5 c9d5662ac26f73a0e608a1725250bfe8 files/digest-blackdown-jre-1.3.1-r9 283
+RMD160 b97fd672f9b3bd87ee879aaea6e1b64461d45316 files/digest-blackdown-jre-1.3.1-r9 283
+SHA256 8f0d880350114a42775806f535aacd85c0ce6962d75b605209bb475cfe44a387 files/digest-blackdown-jre-1.3.1-r9 283
+MD5 e752edb3ace17eb9531767bb45173ac0 files/digest-blackdown-jre-1.4.1-r1 882
+RMD160 ace1505118aba0c37ba66f78230bc86197e07da3 files/digest-blackdown-jre-1.4.1-r1 882
+SHA256 e2da2d3efbfb904df24983f9241e44263fe7bab38bd3388b07869cbfb6f58a00 files/digest-blackdown-jre-1.4.1-r1 882
+MD5 e752edb3ace17eb9531767bb45173ac0 files/digest-blackdown-jre-1.4.1-r12 882
+RMD160 ace1505118aba0c37ba66f78230bc86197e07da3 files/digest-blackdown-jre-1.4.1-r12 882
+SHA256 e2da2d3efbfb904df24983f9241e44263fe7bab38bd3388b07869cbfb6f58a00 files/digest-blackdown-jre-1.4.1-r12 882
+MD5 e752edb3ace17eb9531767bb45173ac0 files/digest-blackdown-jre-1.4.1-r13 882
+RMD160 ace1505118aba0c37ba66f78230bc86197e07da3 files/digest-blackdown-jre-1.4.1-r13 882
+SHA256 e2da2d3efbfb904df24983f9241e44263fe7bab38bd3388b07869cbfb6f58a00 files/digest-blackdown-jre-1.4.1-r13 882
 MD5 a4edfa2e2a6a20f2d7ed848170936fbd files/digest-blackdown-jre-1.4.2.03 545
 RMD160 e1330992f66c365579792dee8b34907c422815dc files/digest-blackdown-jre-1.4.2.03 545
 SHA256 21bf4f2b62747876401ef3bcf50f15d0ba8d371cf9ed04e2528591c934282da8 files/digest-blackdown-jre-1.4.2.03 545
 MD5 a4edfa2e2a6a20f2d7ed848170936fbd files/digest-blackdown-jre-1.4.2.03-r11 545
 RMD160 e1330992f66c365579792dee8b34907c422815dc files/digest-blackdown-jre-1.4.2.03-r11 545
 SHA256 21bf4f2b62747876401ef3bcf50f15d0ba8d371cf9ed04e2528591c934282da8 files/digest-blackdown-jre-1.4.2.03-r11 545
+MD5 a4edfa2e2a6a20f2d7ed848170936fbd files/digest-blackdown-jre-1.4.2.03-r12 545
+RMD160 e1330992f66c365579792dee8b34907c422815dc files/digest-blackdown-jre-1.4.2.03-r12 545
+SHA256 21bf4f2b62747876401ef3bcf50f15d0ba8d371cf9ed04e2528591c934282da8 files/digest-blackdown-jre-1.4.2.03-r12 545
 MD5 a4edfa2e2a6a20f2d7ed848170936fbd files/digest-blackdown-jre-1.4.2.03-r2 545
 RMD160 e1330992f66c365579792dee8b34907c422815dc files/digest-blackdown-jre-1.4.2.03-r2 545
 SHA256 21bf4f2b62747876401ef3bcf50f15d0ba8d371cf9ed04e2528591c934282da8 files/digest-blackdown-jre-1.4.2.03-r2 545
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFErPHpgo/w9rxVVVERAme3AJ4qY+daWcg3x/0MTLjkQFhp6AZMfQCaA9D6
-VS+aqBtNOiTiWSQVnsa3NZ4=
-=tpXv
------END PGP SIGNATURE-----
