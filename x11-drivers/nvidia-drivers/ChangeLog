@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.6 2006/08/25 05:11:45 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.7 2006/08/25 05:45:45 dberkholz Exp $
+
+  25 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
+  Someone forgot to add metadata.
 
 *nvidia-drivers-1.0.8774 (25 Aug 2006)
 
