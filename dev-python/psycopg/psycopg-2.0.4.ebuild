@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.4.ebuild,v 1.2 2006/08/10 21:20:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.4.ebuild,v 1.3 2006/08/25 10:05:30 the_paya Exp $
 
 inherit eutils distutils
 
@@ -14,7 +14,7 @@ DEPEND=">=dev-lang/python-2.4
 	>=dev-db/libpq-7.4"
 
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 LICENSE="GPL-2"
 IUSE="debug"
 
@@ -28,6 +28,8 @@ src_unpack() {
 	if use debug; then
 		epatch ${FILESDIR}/${P}-debug.patch
 	fi
+	# Fixes compilation issue in fbsd.
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 }
 
 src_install() {
