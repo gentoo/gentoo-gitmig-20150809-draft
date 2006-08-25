@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5776 2006/08/25 06:44:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5777 2006/08/25 19:22:17 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -377,10 +377,6 @@ app-text/gpdf
 # Christian Heim <phreak@gentoo.org> (13 Jul 2006)
 # ieee80211-1.1.14 is breaking ABI!
 =net-wireless/ieee80211-1.1.14
-
-# Michael Cummings <mcummings@gentoo.org> (10 Jul 2006)
-# Masking for removal - melted back into perl-core/Test-Simple
-dev-perl/Test-Builder-Tester
 
 # Michael Marineau <marineam@gentoo.org> (09 Jul 2006)
 # Beta, ok for ~arch but the stable version is also ~arch still :-P
