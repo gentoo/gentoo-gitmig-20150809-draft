@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.27 2006/08/21 14:43:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.28 2006/08/25 06:13:38 pva Exp $
+
+*sussen-0.28 (25 Aug 2006)
+*sussen-0.27-r1 (25 Aug 2006)
+*sussen-0.26-r1 (25 Aug 2006)
+*sussen-0.25-r1 (25 Aug 2006)
+
+  25 Aug 2006; Peter Volkov <pva@gentoo.org>
+  +files/sussen-0.25-0.28-interface-failsafe.diff, +sussen-0.25-r1.ebuild,
+  +sussen-0.26-r1.ebuild, +sussen-0.27-r1.ebuild, +sussen-0.28.ebuild:
+  Version bump. Thank upstream dev Loren Bandiera for report. Also fixed crash
+  during scanning on x86 for all affected versions.
 
 *sussen-0.27 (21 Aug 2006)
 
