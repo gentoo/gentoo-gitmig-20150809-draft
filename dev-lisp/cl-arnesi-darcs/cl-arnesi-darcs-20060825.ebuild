@@ -1,5 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-arnesi-darcs/cl-arnesi-darcs-20060825.ebuild,v 1.2 2006/08/25 05:40:19 mkennedy Exp $
 
 EDARCS_REPOSITORY="http://common-lisp.net/project/bese/repos/arnesi_dev/"
 
