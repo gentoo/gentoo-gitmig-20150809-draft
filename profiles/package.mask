@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5774 2006/08/24 18:20:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5775 2006/08/25 05:26:15 mkennedy Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Matthew Kennedy <mkennedy@gentoo.org> (24 Aug 2006)
+# Removing these bese project ebuilds in favour of darcs ebuilds.
+# Upstream does not make releases.
+dev-lisp/arnesi
+dev-lisp/cl-yaclml
+dev-lisp/cl-icu
+dev-lisp/cl-fiveam
+dev-lisp/cl-ucw
 
 # Andreas Proschofsky <suka@gentoo.org> (24 Aug 2006)
 # Mask OpenOffice.org 2.0.4 test releases
