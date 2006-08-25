@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/kpl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kpl/ChangeLog,v 1.5 2006/06/25 19:22:28 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kpl/ChangeLog,v 1.6 2006/08/25 07:33:21 corsair Exp $
+
+  25 Aug 2006; Markus Rothe <corsair@gentoo.org> kpl-3.3.ebuild:
+  Stable on ppc64
 
   09 Apr 2006; Marcus D. Hanwell <cryos@gentoo.org> kpl-3.3.ebuild:
   Stable on amd64.
