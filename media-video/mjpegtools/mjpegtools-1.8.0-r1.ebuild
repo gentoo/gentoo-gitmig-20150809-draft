@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.16 2006/07/30 11:42:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.17 2006/08/25 12:21:43 zzam Exp $
 
-inherit flag-o-matic toolchain-funcs eutils libtool
+inherit flag-o-matic toolchain-funcs eutils libtool autotools
 
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="1"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="gtk dv quicktime sdl X yv12 3dnow mmx sse v4l dga"
+IUSE="gtk dv quicktime sdl X yv12 3dnow mmx sse v4l dga png"
 
 RDEPEND="media-libs/jpeg
 	x86? ( media-libs/libmovtar
@@ -21,6 +21,7 @@ RDEPEND="media-libs/jpeg
 		=dev-libs/glib-1.2* )
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )
+	png? ( media-libs/libpng )
 	sdl? ( >=media-libs/libsdl-1.2.7-r3 )
 	X? ( || ( ( x11-libs/libX11
 				x11-libs/libXt
@@ -43,9 +44,12 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-parallelmake.patch"
+	epatch "${FILESDIR}/${P}-pkg-config.patch"
 	has_version ">=media-libs/libquicktime-0.9.9" && epatch "${FILESDIR}/${P}-libquicktime.patch"
 
-	elibtoolize
+	# eautoreconf instead of elibtoolize
+	# as pkg-config-patch changes configure.in
+	eautoreconf
 }
 
 src_compile() {
@@ -84,6 +88,7 @@ src_compile() {
 		$(use_with X x) \
 		$(use_enable dga xfree-ext) \
 		$(use_with quicktime libquicktime) \
+		$(use_with png libpng) \
 		$(use_with v4l) \
 		$(use_with gtk) \
 		$(use_with sdl) \
