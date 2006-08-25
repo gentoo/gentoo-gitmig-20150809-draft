@@ -1,0 +1,88 @@
+diff -urN premiereepg-0.0.6/premiereepg.c premiereepg/premiereepg.c
+--- premiereepg-0.0.6/premiereepg.c	2006-06-05 18:11:34.000000000 +0200
++++ premiereepg/premiereepg.c	2006-08-08 23:26:16.000000000 +0200
+@@ -73,6 +73,7 @@
+   int OptPat;
+   int OrderInfo;
+   int RatingInfo;
++  int FixEpg;
+ public:
+   cSetupPremiereEpg(void);
+   };
+@@ -84,6 +85,7 @@
+   OptPat=1;
+   OrderInfo=1;
+   RatingInfo=1;
++  FixEpg=0;
+ }
+ 
+ // --- i18n --------------------------------------------------------------------
+@@ -296,6 +298,23 @@
+     "", // TODO
+     "", // TODO
+   },
++  { "Fix EPG data",
++    "EPG Daten korrigieren",
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++    "", // TODO
++  },
+ 
+   { NULL }
+   };
+@@ -325,6 +344,7 @@
+   Add(new cMenuEditStraItem(tr("Tag option events"),&data.OptPat,NUM_PATS,optDisp));
+   Add(new cMenuEditBoolItem(tr("Show order information"),&data.OrderInfo));
+   Add(new cMenuEditBoolItem(tr("Show rating information"),&data.RatingInfo));
++  Add(new cMenuEditBoolItem(tr("Fix EPG data"),&data.FixEpg));
+ }
+ 
+ void cMenuSetupPremiereEpg::Store(void)
+@@ -333,6 +353,7 @@
+   SetupStore("OptionPattern",SetupPE.OptPat);
+   SetupStore("OrderInfo",SetupPE.OrderInfo);
+   SetupStore("RatingInfo",SetupPE.RatingInfo);
++  SetupStore("FixEpg",SetupPE.FixEpg);
+ }
+ 
+ // --- CRC16 -------------------------------------------------------------------
+@@ -575,7 +596,19 @@
+         crc[0]=cit.getContentId();
+         SI::PremiereContentTransmissionDescriptor *pct;
+         for(SI::Loop::Iterator it; (pct=(SI::PremiereContentTransmissionDescriptor *)cit.eventDescriptors.getNext(it,SI::PremiereContentTransmissionDescriptorTag)); ) {
+-          tChannelID channelID(Source(),pct->getOriginalNetworkId(),pct->getTransportStreamId(),pct->getServiceId());
++          int nid=pct->getOriginalNetworkId();
++          int tid=pct->getTransportStreamId();
++          int sid=pct->getServiceId();
++          if(SetupPE.FixEpg) {
++            if(nid==133) {
++	      if     (tid==0x03 && sid==0xf0) { tid=0x02; sid=0xe0; }
++	      else if(tid==0x03 && sid==0xf1) { tid=0x02; sid=0xe1; }
++	      else if(tid==0x03 && sid==0xf5) { tid=0x03; sid=0xdc; }
++	      else if(tid==0x04 && sid==0xd2) { tid=0x11; sid=0xe2; }
++	      else if(tid==0x11 && sid==0xd3) { tid=0x11; sid=0xe3; }
++              }
++            }
++          tChannelID channelID(Source(),nid,tid,sid);
+           cChannel *channel=Channels.GetByChannelID(channelID,true);
+           if(!channel) continue;
+ 
+@@ -742,6 +775,7 @@
+   if      (!strcasecmp(Name, "OptionPattern")) SetupPE.OptPat     = atoi(Value);
+   else if (!strcasecmp(Name, "OrderInfo"))     SetupPE.OrderInfo  = atoi(Value);
+   else if (!strcasecmp(Name, "RatingInfo"))    SetupPE.RatingInfo = atoi(Value);
++  else if (!strcasecmp(Name, "FixEpg"))        SetupPE.FixEpg     = atoi(Value);
+   else return false;
+   return true;
+ }
