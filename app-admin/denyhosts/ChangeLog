@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.13 2006/07/11 15:52:03 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.14 2006/08/25 02:56:10 fuzzyray Exp $
+
+  25 Aug 2006; Paul Varner <fuzzyray@gentoo.org> denyhosts-2.5.ebuild:
+  Stable on x86. Bug #143710
 
 *denyhosts-2.5 (11 Jul 2006)
 
