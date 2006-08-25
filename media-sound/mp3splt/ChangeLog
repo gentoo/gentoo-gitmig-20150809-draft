@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3splt
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.19 2006/05/15 03:19:46 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.20 2006/08/25 19:17:53 wolf31o2 Exp $
+
+  25 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> mp3splt-2.1.ebuild:
+  Stable on amd64/x86 wrt bug #144141.
 
   14 May 2006; Thomas Cort <tcort@gentoo.org> -mp3splt-1.9.ebuild:
   Remove old.
