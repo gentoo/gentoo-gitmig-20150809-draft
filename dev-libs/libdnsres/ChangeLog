@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnsres
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.4 2006/08/25 06:27:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.5 2006/08/25 10:13:53 ticho Exp $
+
+  25 Aug 2006; <ticho@gentoo.org> libdnsres-0.1a-r1.ebuild:
+  Stable on x86. Needed for security bug #144875.
 
   25 Aug 2006; Peter Volkov <pva@gentoo.org> libdnsres-0.1a-r1.ebuild:
   Added -j1 to emake. See Janson Wever report in bug #144875.
