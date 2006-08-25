@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_pre1.ebuild,v 1.1 2006/08/11 19:05:28 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_pre1.ebuild,v 1.2 2006/08/25 19:55:42 deathwing00 Exp $
 
 inherit kde eutils
 
@@ -63,6 +63,11 @@ pkg_setup() {
 		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"hal\" USE flag enabled,"
 		eerror "but sys-apps/dbus is not built with Qt3 support."
 		die "rebuild sys-apps/dbus with the qt3 useflag"
+	fi
+	if use encode && ! built_with_use media-video/transcode dvdread; then
+		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"encode\"	USE flag enabled,"
+		eerror "but media-video/transcode is not built with dvdread support."
+		die "rebuild media-video/transcode with the dvdread useflag"
 	fi
 
 	kde_pkg_setup
