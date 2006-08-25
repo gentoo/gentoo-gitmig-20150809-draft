@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-Unaccent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unaccent/ChangeLog,v 1.12 2006/08/06 00:31:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Unaccent/ChangeLog,v 1.13 2006/08/25 13:25:18 mcummings Exp $
+
+  25 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/text-unaccent_size_t.diff, Text-Unaccent-1.08.ebuild:
+  Patch from novas0x2a - sizeof(size_t) != sizeof(int) after all. Tested on
+  x86, sparc, amd64.
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Text-Unaccent-1.08.ebuild:
