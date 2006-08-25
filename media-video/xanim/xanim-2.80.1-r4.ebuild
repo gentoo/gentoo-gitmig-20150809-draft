@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.33 2006/03/06 12:12:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.34 2006/08/25 06:13:58 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -47,7 +47,7 @@ _XA_EXT_x86=.gz
 
 # This might leave _XA_EXT empty and that's fine, just indicates no
 # particular support for a given arch
-eval _XA_EXT=\${_XA_${ARCH}}
+eval _XA_EXT=\${_XA_EXT_${ARCH}}
 eval _XA_CVID=\${_XA_CVID_${ARCH}}
 eval _XA_CYUV=\${_XA_CYUV_${ARCH}}
 eval _XA_IV32=\${_XA_IV32_${ARCH}}
