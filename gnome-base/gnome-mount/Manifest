@@ -6,6 +6,10 @@ AUX gnome-mount-0.4-hal-mountable.patch 564 RMD160 e4cc5e3901738f0d15e51df260358
 MD5 cbbc2b9e3b351a389b877bbb0423e34b files/gnome-mount-0.4-hal-mountable.patch 564
 RMD160 e4cc5e3901738f0d15e51df2603586dbfa7c69b5 files/gnome-mount-0.4-hal-mountable.patch 564
 SHA256 889921c0867d0855d5b343a7e61b0c4a07202f81ce87cb5320842d68f875bd13 files/gnome-mount-0.4-hal-mountable.patch 564
+AUX gnome-mount-0.4-ntfs3g.patch 765 RMD160 95cfd9ea57cc0b38fab0b2732bfffef61e0a947a SHA1 ef8af3919b4082245ddb60acf9a67cac12a12edb SHA256 b3d74f64f4cae0731e33df00c213750a815a77971cba6aa6795e898682966ca9
+MD5 534285925d6d02bead2c5fdd1bc7ef00 files/gnome-mount-0.4-ntfs3g.patch 765
+RMD160 95cfd9ea57cc0b38fab0b2732bfffef61e0a947a files/gnome-mount-0.4-ntfs3g.patch 765
+SHA256 b3d74f64f4cae0731e33df00c213750a815a77971cba6aa6795e898682966ca9 files/gnome-mount-0.4-ntfs3g.patch 765
 AUX gnome-mount-hal-no-media-fstab.patch 15854 RMD160 53fc945ecca7fb7ba7a3805002e23b4abc160351 SHA1 23259c23fc95fe7c77671b9b69e88dacb2538b7e SHA256 49fe069d1fc5ebe16cb4f6929c457ae459056195f242891e20bb05e3b9fc91f8
 MD5 7a04f8633da7884e72aaf1016bc8ca96 files/gnome-mount-hal-no-media-fstab.patch 15854
 RMD160 53fc945ecca7fb7ba7a3805002e23b4abc160351 files/gnome-mount-hal-no-media-fstab.patch 15854
@@ -23,10 +27,14 @@ EBUILD gnome-mount-0.4-r4.ebuild 952 RMD160 23d8d88f5e84c962ddbdec7679b1cbbbfefa
 MD5 a3335f54b8b62a2f0f1387d7dfe6250a gnome-mount-0.4-r4.ebuild 952
 RMD160 23d8d88f5e84c962ddbdec7679b1cbbbfefa6159 gnome-mount-0.4-r4.ebuild 952
 SHA256 8535d5cbcedfbe0b9b076e3e6f5aa15ad4b1f8323cc29b47090f96ad9da23027 gnome-mount-0.4-r4.ebuild 952
-MISC ChangeLog 2714 RMD160 159fd23fbad39bc1176147f56b41bae4169b895a SHA1 50719770b24e64c9f3e86b20b14d624647d4d63b SHA256 8cc8dbbd68eb3af4e0beea6d927f626579a2beeb755da8b85d5e529aaf47dbb4
-MD5 0ba808dee1865aa8b8426d298b295cb5 ChangeLog 2714
-RMD160 159fd23fbad39bc1176147f56b41bae4169b895a ChangeLog 2714
-SHA256 8cc8dbbd68eb3af4e0beea6d927f626579a2beeb755da8b85d5e529aaf47dbb4 ChangeLog 2714
+EBUILD gnome-mount-0.4-r5.ebuild 1041 RMD160 16f22358fa6aae2b7050b7c8c567214b19577934 SHA1 081b351e79bb6712763c44acd0911726f42d17bf SHA256 0f08cff97b482804079eccd30b70599ae765f20557e696d93c1d738a3af28066
+MD5 399730ebefe53d4a63b14cc418906fe5 gnome-mount-0.4-r5.ebuild 1041
+RMD160 16f22358fa6aae2b7050b7c8c567214b19577934 gnome-mount-0.4-r5.ebuild 1041
+SHA256 0f08cff97b482804079eccd30b70599ae765f20557e696d93c1d738a3af28066 gnome-mount-0.4-r5.ebuild 1041
+MISC ChangeLog 2943 RMD160 63170256bd9ea4dd3d3b8a3ccf150bbc8ccc6355 SHA1 044287cfd90cb48aad129d3ec29c3a2080b2c206 SHA256 ce7761b808a0bb725a08f42b6cc80af72aef5b9e227a6a9ad9c4364fb1836142
+MD5 e94665441b6939d39d760efbc7d0166b ChangeLog 2943
+RMD160 63170256bd9ea4dd3d3b8a3ccf150bbc8ccc6355 ChangeLog 2943
+SHA256 ce7761b808a0bb725a08f42b6cc80af72aef5b9e227a6a9ad9c4364fb1836142 ChangeLog 2943
 MISC metadata.xml 206 RMD160 61d950942f566dfc272d4f115fa2fb390fbbe301 SHA1 3f059bf106cd99ac3eb9aab89e0708f5fa86ddf9 SHA256 91b15066df76a399233847c54c04eca1d95ab2b73fdef41207dfeb17dbb38193
 MD5 8f804bac2d3835f24ed9a73034f969a1 metadata.xml 206
 RMD160 61d950942f566dfc272d4f115fa2fb390fbbe301 metadata.xml 206
@@ -40,3 +48,6 @@ SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/di
 MD5 76c05d7960a8436e6bc7d220bef1f23c files/digest-gnome-mount-0.4-r4 247
 RMD160 38b79354b5e9ed2371393b9c9c45d5e228d2d665 files/digest-gnome-mount-0.4-r4 247
 SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/digest-gnome-mount-0.4-r4 247
+MD5 76c05d7960a8436e6bc7d220bef1f23c files/digest-gnome-mount-0.4-r5 247
+RMD160 38b79354b5e9ed2371393b9c9c45d5e228d2d665 files/digest-gnome-mount-0.4-r5 247
+SHA256 f10621810bfe345f1c0576989c8f938017419cd5cd3c96f320d412831afadde7 files/digest-gnome-mount-0.4-r5 247
