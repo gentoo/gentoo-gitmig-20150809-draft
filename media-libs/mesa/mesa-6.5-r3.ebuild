@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.11 2006/07/19 14:34:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.12 2006/08/25 20:53:37 hanno Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -264,8 +264,8 @@ src_install() {
 	insinto /usr/$(get_libdir)
 	# (#67729) Needs to be lib, not $(get_libdir)
 	doins ${FILESDIR}/lib/libGLU.la
-	insinto /usr/$(get_libdir)/opengl/xorg-x11/lib
-	doins ${FILESDIR}/lib/libGL.la
+	sed -e "s:\${libdir}:$(get_libdir):g" ${FILESDIR}/lib/libGL.la \
+		> ${D}/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.la
 
 	# On *BSD libcs dlopen() and similar functions are present directly in
 	# libc.so and does not require linking to libdl. portability eclass takes
