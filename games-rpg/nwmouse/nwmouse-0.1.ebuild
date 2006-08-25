@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.1 2006/07/26 19:58:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-0.1.ebuild,v 1.2 2006/08/25 09:20:30 mr_bones_ Exp $
 
 inherit games
 
@@ -15,10 +15,8 @@ KEYWORDS="~amd64 ~x86"
 # I've looked at this stuff, and I can't find the problem myself, so I'm just
 # removing the warnings.  If someone feels like finding the patch, that would be
 # great and I'll gladly include it.
-QA_EXECSTACK_amd64="opt/nwn/nwmouse.so"
-QA_EXECSTACK_x86="opt/nwn/nwmouse.so"
-QA_TEXTREL_amd64="opt/nwn/nwmouse.so"
-QA_TEXTREL_x86="opt/nwn/nwmouse.so"
+QA_EXECSTACK="opt/nwn/nwmouse.so"
+QA_TEXTRELS="opt/nwn/nwmouse.so"
 IUSE=""
 RESTRICT="nostrip nomirror"
 
