@@ -1,0 +1,3 @@
+#!/bin/bash
+source /etc/conf.d/x86-chroot
+linux32 chroot ${CHROOT_LOCATION} /bin/bash

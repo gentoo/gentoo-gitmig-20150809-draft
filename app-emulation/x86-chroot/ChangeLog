@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/x86-chroot
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.1 2006/08/25 13:37:46 blubb Exp $
+
+*x86-chroot-2006.0 (25 Aug 2006)
+
+  25 Aug 2006; <blubb@gentoo.org> +files/initd, +files/x86-chroot,
+  +metadata.xml, +x86-chroot-2006.0.ebuild:
+  initial import by me
+
