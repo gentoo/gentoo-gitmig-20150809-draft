@@ -1,0 +1,12 @@
+diff -Naur AudioCompress-1.5.2.orig/Makefile AudioCompress-1.5.2/Makefile
+--- AudioCompress-1.5.2.orig/Makefile	2004-03-29 10:04:30.000000000 -0800
++++ AudioCompress-1.5.2/Makefile	2004-08-02 12:57:48.347510623 -0700
+@@ -22,7 +22,7 @@
+ ### (or don't have the XMMS development headers installed)
+ TARGETS += libcompress.so
+ INSTALL += install-xmms
+-CFLAGS	+= `xmms-config --cflags`
++CFLAGS	+= `xmms-config --cflags` -fPIC
+ LDFLAGS	+= `xmms-config --libs`
+ 
+ ### Comment out these lines if you don't want to include EsounD functionality
