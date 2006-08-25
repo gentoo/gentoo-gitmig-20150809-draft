@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.171-r1.ebuild,v 1.1 2006/05/08 18:46:20 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.171-r1.ebuild,v 1.2 2006/08/25 21:35:47 langthang Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 	dev-perl/Net-SSLeay
 	perl-core/MIME-Base64
 	dev-perl/TermReadKey
-	dev-perl/Digest-HMAC"
+	dev-perl/IO-Socket-SSL"
 
 RESTRICT="test"
 
