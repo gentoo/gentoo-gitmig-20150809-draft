@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.8 2006/08/17 20:09:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.9 2006/08/25 05:25:23 dberkholz Exp $
+
+  25 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/eselect-reference:
+  Add eselect symlink maps, reported by Markus Dittrich.
 
   17 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   cblas-reference-20030223-r2.ebuild:

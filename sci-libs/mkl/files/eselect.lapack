@@ -1,0 +1,3 @@
+lapack/mkl/libmkl_lapack.so /usr/@LIBDIR@/liblapack.so
+lapack/mkl/libmkl_lapack.so /usr/@LIBDIR@/liblapack.so.0
+lapack/mkl/libmkl_lapack.a /usr/@LIBDIR@/liblapack.a
