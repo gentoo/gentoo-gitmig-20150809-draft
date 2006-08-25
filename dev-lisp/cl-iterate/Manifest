@@ -1,18 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7e027b35f1fb5a6d709f5681fed2cdfa ChangeLog 1572
+DIST iterate-1.3.pre1.tar.gz 353016
+DIST iterate-1.4.3.tar.gz 291719 RMD160 bed6b3ee2f0501d882a53b00769186d919f8ce40 SHA1 0f940b2ba13926124c03b95e3f4478366f9ee8c0 SHA256 2a4339b4b8f411186e40757bea6ce6d335817c260ef1dd000cfeab8a008d9fe2
+DIST iterate_1.4.2.tar.gz 337265
+DIST iterate_1.4.tar.gz 339070
+EBUILD cl-iterate-1.3_pre1.ebuild 810 RMD160 5dd95f7bad2830d4985aa00ad9e15dac2c834e5e SHA1 18d9be293bf638ea60c80ec5a1f6d09abe58139d SHA256 8b583c8463192647f7176e3e21cc5cd41d93ae501093facd76c3f7d33b7b1d60
 MD5 d6f477f10f9aaa360f3e8dbfbd298d42 cl-iterate-1.3_pre1.ebuild 810
+RMD160 5dd95f7bad2830d4985aa00ad9e15dac2c834e5e cl-iterate-1.3_pre1.ebuild 810
+SHA256 8b583c8463192647f7176e3e21cc5cd41d93ae501093facd76c3f7d33b7b1d60 cl-iterate-1.3_pre1.ebuild 810
+EBUILD cl-iterate-1.4.2.ebuild 767 RMD160 7cd6a714cd0e5b099ba948b732b10ff884dccb7b SHA1 022f7dfd6c7ac953c8ddd46f06ff47e347ef7328 SHA256 88c29246e79232a6ddd3ec1f819290c5a4ef30e430141dd5f69e61a356f3ee15
 MD5 f60217c21951f2c0be949ec2abcc3bed cl-iterate-1.4.2.ebuild 767
+RMD160 7cd6a714cd0e5b099ba948b732b10ff884dccb7b cl-iterate-1.4.2.ebuild 767
+SHA256 88c29246e79232a6ddd3ec1f819290c5a4ef30e430141dd5f69e61a356f3ee15 cl-iterate-1.4.2.ebuild 767
+EBUILD cl-iterate-1.4.3.ebuild 859 RMD160 4c6ec015f54c54810fa8fde4f0c097e53047acc5 SHA1 596cf33874a9d71e77b241fd5bba74011899eb5f SHA256 d633567e15c831acc591ad78de3b73d73e819747dcdd561f3eda256da7e1b8b0
+MD5 b7f9ee71a77c82e9b221545593cdcd02 cl-iterate-1.4.3.ebuild 859
+RMD160 4c6ec015f54c54810fa8fde4f0c097e53047acc5 cl-iterate-1.4.3.ebuild 859
+SHA256 d633567e15c831acc591ad78de3b73d73e819747dcdd561f3eda256da7e1b8b0 cl-iterate-1.4.3.ebuild 859
+EBUILD cl-iterate-1.4.ebuild 892 RMD160 4b3b167ae00cd9bd1aabb776318aaf353654a918 SHA1 35ecf186479005808fda73b0f1573c9e8a40da16 SHA256 4235c5eac4bcb2f53262ac882abd7d63bc7af4a38e94e8d9eba32a41305a8222
 MD5 69a1d2648c6e5715407da24566e0f952 cl-iterate-1.4.ebuild 892
-MD5 a69220c83c3ee59a8f2e0d8c876dc3d2 files/digest-cl-iterate-1.3_pre1 68
-MD5 da7a791a2f9d23f52b8ec102bb233b8d files/digest-cl-iterate-1.4 63
-MD5 2b08ca36e578ad1a336d89dd73271c61 files/digest-cl-iterate-1.4.2 65
+RMD160 4b3b167ae00cd9bd1aabb776318aaf353654a918 cl-iterate-1.4.ebuild 892
+SHA256 4235c5eac4bcb2f53262ac882abd7d63bc7af4a38e94e8d9eba32a41305a8222 cl-iterate-1.4.ebuild 892
+MISC ChangeLog 1711 RMD160 d65fb4ab72e52e916f248eb5093edcafbe05b61b SHA1 92dd669afbb713913af7b70a9136702ff7267930 SHA256 b7ba02fa1bd2d34067e38e69cb1ae0f11bca095e170d3550d2c1124d5c28ba9e
+MD5 ee5ea9871c8a32e53ebf3f7c0899d516 ChangeLog 1711
+RMD160 d65fb4ab72e52e916f248eb5093edcafbe05b61b ChangeLog 1711
+SHA256 b7ba02fa1bd2d34067e38e69cb1ae0f11bca095e170d3550d2c1124d5c28ba9e ChangeLog 1711
+MISC metadata.xml 164 RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 SHA1 2f781e1fca36d790a027079805d56cf397e6a6f8 SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD2PmhyiNZaEAZA+ARAuTDAJ452Je2Xy0BGfk2tIBKpZ+hwUTvLACgg4Xm
-bedJ1HxaMpv8bKWNMQFjRjA=
-=E2jI
------END PGP SIGNATURE-----
+RMD160 5edb79931b874dc3a72128f0742b9d4c4eb3c8c1 metadata.xml 164
+SHA256 f8efc9385015233c71f279f85bd0a327525b7136cf8714cc04449d8bea4ce22f metadata.xml 164
+MD5 a69220c83c3ee59a8f2e0d8c876dc3d2 files/digest-cl-iterate-1.3_pre1 68
+RMD160 d3a776e0e8ae2860b1753a6f2008c8e0250d51a1 files/digest-cl-iterate-1.3_pre1 68
+SHA256 db28cade6b97f052b7ba3ef2656f2efec7f78f901d8e3c92b8fd0544a17f99fe files/digest-cl-iterate-1.3_pre1 68
+MD5 da7a791a2f9d23f52b8ec102bb233b8d files/digest-cl-iterate-1.4 63
+RMD160 ed487f6fd129c7d6290b99cad11898f8208d92ad files/digest-cl-iterate-1.4 63
+SHA256 601af5e22a018f1b5e4c146517063ec656ccba8febbddd3c80d776f88793b3c1 files/digest-cl-iterate-1.4 63
+MD5 2b08ca36e578ad1a336d89dd73271c61 files/digest-cl-iterate-1.4.2 65
+RMD160 2e7af1750a65fdbb35be6ba6f7f2f8dbb23ac33e files/digest-cl-iterate-1.4.2 65
+SHA256 c51e7b820e44b6d2f56c078f4a36929440dc3bf0ad46750a606f65bc71346f05 files/digest-cl-iterate-1.4.2 65
+MD5 3e91416fb9e65e9a613a94124a2755e9 files/digest-cl-iterate-1.4.3 241
+RMD160 56f68cde48517190071cf884f15b589a768ea25b files/digest-cl-iterate-1.4.3 241
+SHA256 c6a97ad5d843371340c910f4fa57dd7e9a73b54fceef80a36f9d6f5978376fe2 files/digest-cl-iterate-1.4.3 241
