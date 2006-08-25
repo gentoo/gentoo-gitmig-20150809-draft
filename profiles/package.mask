@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5777 2006/08/25 19:22:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5778 2006/08/25 20:10:21 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -176,11 +176,6 @@ sys-cluster/openmosix-3dmon-stats
 # pending removal
 # https://bugs.gentoo.org/show_bug.cgi?id=140498
 media-gfx/xzgv
-
-# Michael Sterrett <mr_bones_@gentoo.org> (06 Aug 2006)
-# Masked for security issues
-# https://bugs.gentoo.org/show_bug.cgi?id=142390
-games-action/bomberclone
 
 # Michael Sterrett <mr_bones_@gentoo.org> (06 Aug 2006)
 # Masked for security issues
