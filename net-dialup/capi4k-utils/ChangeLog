@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.45 2006/06/11 18:11:30 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.46 2006/08/25 12:40:26 sbriesen Exp $
+
+*capi4k-utils-20050718-r2 (25 Aug 2006)
+
+  25 Aug 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capi4k-utils-20050718-pppd244.diff,
+  +capi4k-utils-20050718-r2.ebuild:
+  added ppp-2.4.4 support.
 
   11 Jun 2006; Stefan Briesenick <sbriesen@gentoo.org>
   capi4k-utils-20050718-r1.ebuild:
