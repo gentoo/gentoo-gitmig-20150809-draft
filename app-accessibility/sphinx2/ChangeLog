@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/sphinx2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.12 2006/06/19 04:59:19 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.13 2006/08/25 18:53:43 wolf31o2 Exp $
+
+  25 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> sphinx2-0.6.ebuild:
+  Stable on amd64/x86 wrt bug #142948.
 
 *sphinx2-0.6 (19 Jun 2006)
 
