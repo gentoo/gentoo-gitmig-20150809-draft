@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/libdnsres-0.1a-r1.ebuild,v 1.1 2006/08/24 19:12:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/libdnsres-0.1a-r1.ebuild,v 1.2 2006/08/25 06:27:00 pva Exp $
 
-DESCRIPTION="a non-blocking DNS resolver library"
+DESCRIPTION="A non-blocking DNS resolver library"
 HOMEPAGE="http://www.monkey.org/~provos/libdnsres/"
 SRC_URI="http://www.monkey.org/~provos/${P}.tar.gz"
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die "econf failed"
-	emake || die "make failed"
+	emake -j1 || die "make failed"
 }
 
 src_install() {
