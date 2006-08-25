@@ -1,0 +1,22 @@
+--- gui/segmentcanvas.cpp	2005-02-08 14:56:26.000000000 +0000
++++ gui/segmentcanvas.cpp	2006-08-21 21:29:03.000000000 +0100
+@@ -444,7 +444,7 @@
+     if (e->type() == QEvent::User + 1) {
+ 	QCustomEvent *ev = dynamic_cast<QCustomEvent *>(e);
+ 	if (ev) {
+-	    int token = (int)ev->data();
++	    int token = (int)(long)ev->data();
+ 	    AudioPreviewThread &thread = m_parent.getDocument()->getAudioPreviewThread();
+ 
+ 	    RG_DEBUG << "SegmentAudioPreview::token " << token << ", my token " << m_previewToken <<endl;
+--- gui/mmapper.cpp	2005-02-09 10:44:38.000000000 +0000
++++ gui/mmapper.cpp	2006-08-21 21:28:57.000000000 +0100
+@@ -896,7 +896,7 @@
+ 
+     return QString("%1/segment_%2")
+         .arg(tmpDirs.last())
+-        .arg((unsigned int)segment, 0, 16);
++        .arg((unsigned long)segment, 0, 16);
+ }
+ 
+ QString CompositionMmapper::getSegmentFileName(Segment* s)

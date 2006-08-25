@@ -1,25 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a805eba54b3fee4ef01f4f3eb9da4a16 ChangeLog 1920
-RMD160 ff2d4eae6fec2c125f2f5a54023b6d401bf40586 ChangeLog 1920
-SHA256 77b5eddef0ddcbd5877e1b9628757f597c81d4acc61cecc561154f19084b77eb ChangeLog 1920
-MD5 09f071e00ea2998b841fafd968bb4859 audiocompress-1.5.1.ebuild 1148
-RMD160 1a3f8ac74d932681ae4ced23dce7e54e9f2a90d1 audiocompress-1.5.1.ebuild 1148
-SHA256 cbbecd59e4c8493b8fccddf38b90d1402713f80d3cc2c7ab92fb3bdc7299992f audiocompress-1.5.1.ebuild 1148
+AUX audiocompress-1.5.1-gentoo.patch 983 RMD160 ad46e7b3560d1a1412f895749f4c71d4392e611d SHA1 ed5c165d25b8fac6cbbabc8c355b891d2e99b19e SHA256 c70a81351fd2465d6e8e63fd3ccd7425cc38f221f91ebef6732a6ffe48b9d444
 MD5 f49cd4e9e5f178e7206b47bb03a4a841 files/audiocompress-1.5.1-gentoo.patch 983
 RMD160 ad46e7b3560d1a1412f895749f4c71d4392e611d files/audiocompress-1.5.1-gentoo.patch 983
 SHA256 c70a81351fd2465d6e8e63fd3ccd7425cc38f221f91ebef6732a6ffe48b9d444 files/audiocompress-1.5.1-gentoo.patch 983
-MD5 f47385522df4cea0523c5179f10cad25 files/digest-audiocompress-1.5.1 70
-RMD160 4c45517e317210150c0ed4266e785fb4a59bfe0c files/digest-audiocompress-1.5.1 70
-SHA256 35c4786cc21c77234aa97b7b18aafe73352dcfcf21c1b841c4a791b3de5f5dee files/digest-audiocompress-1.5.1 70
+AUX audiocompress-1.5.2-gentoo.patch 535 RMD160 5e2a2fbfb753420ad21359f1adb94c5ffac375f4 SHA1 0cd720518f28a212f37097123aaea874c32d607d SHA256 527eed1bc33992fa2ad453f501067610a83a0f3d0c31cc5d929b0dd44666ab5c
+MD5 515be6b5ce4d4a874d6dd1b81bbc3d81 files/audiocompress-1.5.2-gentoo.patch 535
+RMD160 5e2a2fbfb753420ad21359f1adb94c5ffac375f4 files/audiocompress-1.5.2-gentoo.patch 535
+SHA256 527eed1bc33992fa2ad453f501067610a83a0f3d0c31cc5d929b0dd44666ab5c files/audiocompress-1.5.2-gentoo.patch 535
+DIST AudioCompress-1.5.1.tar.gz 38657
+DIST AudioCompress-1.5.2.tar.gz 25061 RMD160 e47093f2dbebd197b24d3cb592b9a9865c9c2d5a SHA1 d028f7fb81fecd8275e6a7de9b213c1f14a47b0b SHA256 52928e226968f45dc6f36bedaa34708835a8b0ba653335a3058be71cc8137191
+EBUILD audiocompress-1.5.1.ebuild 1148 RMD160 1a3f8ac74d932681ae4ced23dce7e54e9f2a90d1 SHA1 568b312b606db6717b98eb3d498e948faa9bd195 SHA256 cbbecd59e4c8493b8fccddf38b90d1402713f80d3cc2c7ab92fb3bdc7299992f
+MD5 09f071e00ea2998b841fafd968bb4859 audiocompress-1.5.1.ebuild 1148
+RMD160 1a3f8ac74d932681ae4ced23dce7e54e9f2a90d1 audiocompress-1.5.1.ebuild 1148
+SHA256 cbbecd59e4c8493b8fccddf38b90d1402713f80d3cc2c7ab92fb3bdc7299992f audiocompress-1.5.1.ebuild 1148
+EBUILD audiocompress-1.5.2.ebuild 1147 RMD160 a942b535b466d321c92bd2650a582bb59ba84a48 SHA1 b04e216800515cdbb80943bdf07d274bf39972c0 SHA256 687e33e3f70981ec8cf13bdd81136e0115b1f350176749b5e09b45982612ba77
+MD5 933ff0b8533faaa9731b33fa97b1dc15 audiocompress-1.5.2.ebuild 1147
+RMD160 a942b535b466d321c92bd2650a582bb59ba84a48 audiocompress-1.5.2.ebuild 1147
+SHA256 687e33e3f70981ec8cf13bdd81136e0115b1f350176749b5e09b45982612ba77 audiocompress-1.5.2.ebuild 1147
+MISC ChangeLog 2114 RMD160 7f2e9f1ee54f7ec0b0727e685b27c2c3c0fa562f SHA1 bbbc2bb05955b10564a342400218af5cdde85cbf SHA256 b1c626a06b24185792f4650b5d1b54a9235eef02a6795fe6d2a730bee8f1980e
+MD5 557b0c5ba2cc0f1e2ae11f6ac0257e4e ChangeLog 2114
+RMD160 7f2e9f1ee54f7ec0b0727e685b27c2c3c0fa562f ChangeLog 2114
+SHA256 b1c626a06b24185792f4650b5d1b54a9235eef02a6795fe6d2a730bee8f1980e ChangeLog 2114
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 f47385522df4cea0523c5179f10cad25 files/digest-audiocompress-1.5.1 70
+RMD160 4c45517e317210150c0ed4266e785fb4a59bfe0c files/digest-audiocompress-1.5.1 70
+SHA256 35c4786cc21c77234aa97b7b18aafe73352dcfcf21c1b841c4a791b3de5f5dee files/digest-audiocompress-1.5.1 70
+MD5 bf04017d33085ed91f2a6f350ec3adb9 files/digest-audiocompress-1.5.2 256
+RMD160 5d9d34e8789f4667e38b8efa93c97b8c5c8169aa files/digest-audiocompress-1.5.2 256
+SHA256 d126c4279e96b64ffec3f0e3e9dfead2f1e3dcb6e984dd9b5fb051bc4c61649c files/digest-audiocompress-1.5.2 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFD9EM2AiZjviIA2XgRAm+IAKCBnXlM6ObQ5gACMToag5Dd7cMeSwCeLbNe
-HJcTiD8Hl65ypOuYzdUemLc=
-=nJXu
+iD8DBQFE7zwVwUpWvClEHQoRApuSAJ9ednfpWdG4h/N3f+A3M8/dI2r1vACcCBB2
+1CRj/3ql4PpczhOQl+MZDXM=
+=J0uO
 -----END PGP SIGNATURE-----
