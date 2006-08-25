@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-1.02.00-r1.ebuild,v 1.1 2006/07/14 13:32:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-1.02.00-r1.ebuild,v 1.2 2006/08/25 13:01:51 xmerlin Exp $
 
 inherit linux-mod eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 DEPEND=">=sys-cluster/magma-1.02.00-r1
 	>=sys-cluster/magma-plugins-1.02.00-r1
