@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.4 2006/05/30 19:45:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.5 2006/08/26 21:38:45 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,8 +14,8 @@ SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/${P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="2.2"
-KEYWORDS="x86 ppc sparc alpha"
-IUSE="nls pic build"
+KEYWORDS="alpha ppc sparc x86"
+IUSE="nls"
 RESTRICT="nostrip" # we'll handle stripping ourself #46186
 
 DEPEND="virtual/os-headers
@@ -45,8 +45,8 @@ src_unpack() {
 	unpack ${P}.tar.bz2 ${P}-patches-${PATCHVER}.tar.bz2
 	cd "${S}"
 	unpack ${P}-manpages.tar.bz2 glibc-linuxthreads-${PV}.tar.bz2
-	epatch ${WORKDIR}/patch
-	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
+	epatch "${WORKDIR}"/patch
+	epatch "${FILESDIR}"/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
 }
 
 src_compile() {
@@ -72,12 +72,41 @@ src_compile() {
 	../configure ${myconf} || die "configure failed"
 
 	make PARALLELMFLAGS="${MAKEOPTS}" || die "make failed"
-	src_test
 }
 
 src_test() {
 	unset LD_PRELOAD
 	make check || die "make check failed"
+}
+
+src_strip() {
+	# Now, strip everything but the thread libs #46186, as well as the dynamic
+	# linker, else we cannot set breakpoints in shared libraries due to bugs in
+	# gdb.  Also want to grab stuff in tls subdir.  whee.
+#when new portage supports this ...
+#	env \
+#		-uRESTRICT \
+#		CHOST=${CTARGET} \
+#		STRIP_MASK="/*/{,tls/}{ld-,lib{pthread,thread_db}}*" \
+#		prepallstrip
+	pushd "${D}" > /dev/null
+
+	if ! is_crosscompile ; then
+		mkdir -p "${T}"/strip-backup
+		for x in $(find "${D}" -maxdepth 3 \
+		           '(' -name 'ld-*' -o -name 'libpthread*' -o -name 'libthread_db*' ')' \
+		           -a '(' '!' -name '*.a' ')' -type f -printf '%P ')
+		do
+			mkdir -p "${T}/strip-backup/${x%/*}"
+			cp -a -- "${D}/${x}" "${T}/strip-backup/${x}" || die "backing up ${x}"
+		done
+	fi
+	env -uRESTRICT CHOST=${CTARGET} prepallstrip
+	if ! is_crosscompile ; then
+		cp -a -- "${T}"/strip-backup/* "${D}"/ || die "restoring non-stripped libs"
+	fi
+
+	popd > /dev/null
 }
 
 src_install() {
@@ -87,52 +116,36 @@ src_install() {
 		install_root="${D}" \
 		install -C buildhere \
 		|| die "install failed"
-	# now, strip everything but the thread libs #46186
-	mkdir "${T}"/thread-backup
-	mv "${D}"/lib/lib{pthread,thread_db}* "${T}"/thread-backup/
-	env -uRESTRICT CHOST=${CTARGET} prepallstrip
-	mv "${T}"/thread-backup/* "${D}"/lib/
+	src_strip
 
-	if ! use build ; then
+	echo '#include <linux/personality.h>' > "${D}"/usr/include/sys/personality.h
+
+	make \
+		PARALLELMFLAGS="${MAKEOPTS}" \
+		install_root="${D}" \
+		localedata/install-locales -C buildhere \
+		|| die "install locales failed"
+
+	if ! has noinfo ${FEATURES} ; then
 		make \
 			PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root="${D}" \
-			localedata/install-locales -C buildhere \
-			|| die "install locales failed"
-
-		if ! has noinfo ${FEATURES} ; then
-			make \
-				PARALLELMFLAGS="${MAKEOPTS}" \
-				install_root="${D}" \
-				info -C buildhere \
-				|| die "install info failed"
-		fi
-		if ! has noman ${FEATURES} ; then
-			dodir /usr/share/man/man3
-			doman "${S}"/man/*.3thr
-		fi
-
-		# Install nscd config file
-		insinto /etc
-		doins "${S}"/nscd/nscd.conf
-		doinitd "${FILESDIR}"/nscd
-		doins "${FILESDIR}"/nsswitch.conf
-
-		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
-			NEWS NOTES PROJECTS README*
-	else
-		rm -r "${D}"/usr/share "${D}"/usr/lib/gconv
+			info -C buildhere \
+			|| die "install info failed"
+	fi
+	if ! has noman ${FEATURES} ; then
+		dodir /usr/share/man/man3
+		doman "${S}"/man/*.3thr
 	fi
 
-	if use pic ; then
-		find "${S}"/buildhere -name "soinit.os" -exec cp {} "${D}"/lib/soinit.o \;
-		find "${S}"/buildhere -name "sofini.os" -exec cp {} "${D}"/lib/sofini.o \;
-		find "${S}"/buildhere -name "*_pic.a" -exec cp {} "${D}"/lib \;
-		find "${S}"/buildhere -name "*.map" -exec cp {} "${D}"/lib \;
-		for i in "${D}"/lib/*.map ; do
-			mv "${i}" "${i%.map}"_pic.map
-		done
-	fi
+	# Install nscd config file
+	insinto /etc
+	doins "${S}"/nscd/nscd.conf
+	doinitd "${FILESDIR}"/nscd
+	doins "${FILESDIR}"/nsswitch.conf
+
+	dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
+		NEWS NOTES PROJECTS README*
 
 	# Is this next line actually needed or does the makefile get it right?
 	# It previously has 0755 perms which was killing things.
