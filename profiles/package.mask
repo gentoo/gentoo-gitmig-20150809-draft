@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5778 2006/08/25 20:10:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5779 2006/08/26 04:21:04 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -192,8 +192,8 @@ games-strategy/warzone2100
 media-libs/openvrml
 
 # Alec Warner <antarus@gentoo.org> (03 Aug 2006)
-# sys-fs/dmraid masked for treecleaners for bug(s) 139860,103912, 
-# 134050, 138823 Removal in 30 days
+# sys-fs/dmraid masked for bug(s) 139860,103912, 
+# 134050, 138823 Waiting on new maintainer.
 sys-fs/dmraid
 
 # Alec Warner <antarus@gentoo.org> (01 Aug 2006)
