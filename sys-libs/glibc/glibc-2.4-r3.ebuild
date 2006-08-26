@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.17 2006/08/14 18:00:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.18 2006/08/26 21:37:35 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -38,7 +38,7 @@ PPC_CPU_ADDON_URI="http://penguinppc.org/dev/glibc/${PPC_CPU_ADDON_TARBALL}"
 # LinuxThreads addon
 LT_VER="20060605"
 LT_TARBALL="glibc-linuxthreads-${LT_VER}.tar.bz2"
-LT_URI="ftp://sources.redhat.com/pub/glibc/snapshots/${LT_TARBALL}"
+LT_URI="ftp://sources.redhat.com/pub/glibc/snapshots/${LT_TARBALL} mirror://gentoo/${LT_TARBALL}"
 
 GENTOO_TOOLCHAIN_BASE_URI="mirror://gentoo"
 GENTOO_TOOLCHAIN_DEV_URI="http://dev.gentoo.org/~azarah/glibc/XXX http://dev.gentoo.org/~vapier/dist/XXX"
