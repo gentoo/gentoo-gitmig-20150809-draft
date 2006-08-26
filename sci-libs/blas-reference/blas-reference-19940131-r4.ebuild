@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r4.ebuild,v 1.2 2006/08/17 20:08:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/blas-reference-19940131-r4.ebuild,v 1.3 2006/08/26 22:03:04 dberkholz Exp $
 
 inherit autotools fortran multilib
 
@@ -27,8 +27,7 @@ S="${WORKDIR}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	cp "${FILESDIR}"/Makefile.am .
-	cp "${FILESDIR}"/configure.ac .
+	epatch "${FILESDIR}"/${P}-autotool.patch
 	eautoreconf
 }
 
