@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-cblas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.4 2006/08/05 04:56:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.5 2006/08/26 17:21:40 kugelfang Exp $
+
+  26 Aug 2006; Danny van Dyk <kugelfang@gentoo.org>
+  eselect-cblas-0.1.ebuild:
+  Changed eselect dependency to version >=1.0.5. Keyworded ~amd64.
 
   05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   eselect-cblas-0.1.ebuild:
