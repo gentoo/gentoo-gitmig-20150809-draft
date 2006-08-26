@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.4 2006/03/14 03:27:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.9.ebuild,v 1.5 2006/08/26 09:29:10 liquidx Exp $
 
 inherit distutils eutils elisp-common
 
@@ -91,8 +91,10 @@ src_install() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
+	distutils_pkg_postinst
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	distutils_pkg_postrm
 }
