@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnsres
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.6 2006/08/26 08:07:58 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnsres/ChangeLog,v 1.7 2006/08/26 19:30:21 weeve Exp $
+
+  26 Aug 2006; Jason Wever <weeve@gentoo.org> libdnsres-0.1a-r1.ebuild:
+  Added ~sparc keyword wrt security bug #144875.
 
   26 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libdnsres-0.1a-r1.ebuild:
