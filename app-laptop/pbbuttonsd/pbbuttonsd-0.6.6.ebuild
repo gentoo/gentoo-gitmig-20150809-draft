@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.6.ebuild,v 1.6 2006/04/12 20:12:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.6.6.ebuild,v 1.7 2006/08/26 07:23:19 wormo Exp $
 
 inherit eutils
 
@@ -16,6 +16,11 @@ IUSE="debug"
 DEPEND="virtual/libc
 	>=sys-apps/baselayout-1.8.6.12-r1"
 RDEPEND=""
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-laptopmode-noatime.patch
+}
 
 src_compile() {
 	econf $(use_enable debug) || die "sorry, failed to configure pbbuttonsd"

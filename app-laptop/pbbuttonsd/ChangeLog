@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.51 2006/07/31 20:33:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.52 2006/08/26 07:23:19 wormo Exp $
+
+  26 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/pbbuttonsd-laptopmode-noatime.patch, pbbuttonsd-0.6.6.ebuild,
+  pbbuttonsd-0.7.4.ebuild, pbbuttonsd-0.7.5.ebuild, pbbuttonsd-0.7.6.ebuild,
+  pbbuttonsd-0.7.8.ebuild:
+  Make laptopmode.sh always respect noatime option in fstab... did not revbump 
+  because most users probably won't want to rebuild just for this fix.
+  Thanks to Eugene Surovegin who was observant to notice the bug (Bug #126001)
 
 *pbbuttonsd-0.7.8 (31 Jul 2006)
 

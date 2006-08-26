@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.8.ebuild,v 1.1 2006/07/31 20:33:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/pbbuttonsd-0.7.8.ebuild,v 1.2 2006/08/26 07:23:19 wormo Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,12 @@ DEPEND=">=sys-apps/baselayout-1.8.6.12-r1
 		>=dev-libs/glib-2.6"
 RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0 )
 		 >=dev-libs/glib-2.6"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-laptopmode-noatime.patch
+}
 
 src_compile() {
 	# Fix crash bug on some systems
