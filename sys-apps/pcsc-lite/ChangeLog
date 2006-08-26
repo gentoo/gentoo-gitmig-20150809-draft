@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.23 2006/06/25 03:15:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.24 2006/08/26 05:24:30 vapier Exp $
+
+*pcsc-lite-1.3.2 (26 Aug 2006)
+
+  26 Aug 2006; Mike Frysinger <vapier@gentoo.org> +pcsc-lite-1.3.2.ebuild:
+  Version bump #145108 by Alon Bar-Lev.
 
 *pcsc-lite-1.3.1-r1 (08 Jun 2006)
 
