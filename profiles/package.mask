@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5781 2006/08/26 04:59:02 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5782 2006/08/26 05:38:58 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -329,23 +329,9 @@ media-video/piave
 =media-libs/mlt-20051209
 
 # Alec Warner <antarus@gentoo.org> (16 Jul 2006)
-# app-emulation/pose numerous open bugs, doens't compile
-# Canidate for treecleaners
-app-emulation/pose
-
-# Alec Warner <antarus@gentoo.org> (16 Jul 2006)
-# Treecleaning net-misc/e1000, driver has no maintainer
-# Driver is in-kernel
-net-misc/e1000
-
-# Alec Warner <antarus@gentoo.org> (16 Jul 2006)
-# app-news/rol Dead upstream, broken package bug 120920
-app-news/rol
-
-# Alec Warner <antarus@gentoo.org> (16 Jul 2006)
-# Treecleaners masking net-misc/bidwatcher; buggy as hell 
-# bugs # 94781,107169,140630.
-net-misc/bidwatcher
+# net-news/rol Dead upstream, broken package bug 120920
+# Keeping a bit longer as I had the mask wrong :x
+net-news/rol
 
 # Alastair Tse <liquidx@gentoo.org> (15 Jul 2006)
 # Python 2.1 and 2.2 have reported vunerabilities. Masked pending
