@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r8.ebuild,v 1.10 2006/07/09 14:44:55 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r8.ebuild,v 1.11 2006/08/26 02:59:22 hanno Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -397,7 +397,7 @@ RDEPEND="
 
 PDEPEND="x86? (
 			input_devices_synaptics? ( x11-drivers/synaptics )
-			input_devices_wacom? ( x11-misc/linuxwacom )
+			input_devices_wacom? ( x11-drivers/linuxwacom )
 		)
 		3dfx? ( >=media-libs/glide-v3-3.10 )
 		x11-terms/xterm"

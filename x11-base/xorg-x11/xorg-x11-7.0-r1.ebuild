@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.29 2006/08/18 17:16:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.30 2006/08/26 02:59:22 hanno Exp $
 
 inherit eutils
 
@@ -172,7 +172,7 @@ RDEPEND="${RDEPEND}
 	input_devices_void? ( x11-drivers/xf86-input-void )
 
 	input_devices_synaptics? ( x11-drivers/synaptics )
-	input_devices_wacom? ( x11-misc/linuxwacom )
+	input_devices_wacom? ( x11-drivers/linuxwacom )
 
 	video_cards_apm? ( x11-drivers/xf86-video-apm )
 	video_cards_ark? ( x11-drivers/xf86-video-ark )

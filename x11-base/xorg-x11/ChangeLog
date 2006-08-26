@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.568 2006/08/22 20:31:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.569 2006/08/26 02:59:22 hanno Exp $
+
+  26 Aug 2006; Hanno Boeck <hanno@gentoo.org> xorg-x11-6.8.2-r7.ebuild,
+  xorg-x11-6.8.2-r8.ebuild, xorg-x11-6.9.0-r3.ebuild,
+  xorg-x11-7.0-r1.ebuild:
+  Change linuxwacom-location from x11-misc to x11-drivers.
 
   22 Aug 2006; Ferris McCormick <fmccor@gentoo.org> xorg-x11-7.1.ebuild:
   Stable on sparc (finally).
