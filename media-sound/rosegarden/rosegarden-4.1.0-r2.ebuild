@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r2.ebuild,v 1.1 2006/08/25 17:00:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.1.0-r2.ebuild,v 1.2 2006/08/26 00:30:46 metalgod Exp $
 
 inherit kde eutils flag-o-matic
 
@@ -29,7 +29,7 @@ need-kde 3
 PATCHES="${FILESDIR}/4.1.0-dssi.patch
 	${FILESDIR}/4.1.0-gcc4.diff
 	${FILESDIR}/4.1.0-includehints.patch
-	${FILESDIR}/4.1.0-amd64"
+	${FILESDIR}/4.1.0-amd64.patch"
 
 pkg_setup() {
 	echo
