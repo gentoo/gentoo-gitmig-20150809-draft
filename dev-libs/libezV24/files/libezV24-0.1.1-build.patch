@@ -125,9 +125,9 @@
 -		ln -s $(PREFIX)/lib/$(NAME) $(PREFIX)/lib/$(SONAME);\
 -		ln -s $(PREFIX)/lib/$(SONAME) $(PREFIX)/lib/$(PLAINNAME);\
 -		ldconfig
-+		install -d -m 755 $(DESTDIR)$(PREFIX)/include/
++		install -d -m 755 $(DESTDIR)$(PREFIX)/include/$(SOBASE)
 +		install -d -m 755 $(DESTDIR)$(PREFIX)/lib/
-+		install -m 644 ezV24.h $(DESTDIR)$(PREFIX)/include/
++		install -m 644 ezV24.h $(DESTDIR)$(PREFIX)/include/$(SOBASE)/
 +		install -m 644 $(LIBNAME) $(DESTDIR)$(PREFIX)/lib/$(LIBNAME)
 +		install -m 755 $(NAME) $(DESTDIR)$(PREFIX)/lib/$(NAME)
 +		rm -f $(DESTDIR)$(PREFIX)/lib/$(SONAME) $(DESTDIR)$(PREFIX)/lib/$(PLAINNAME)
