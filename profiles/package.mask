@@ -1,5 +1,6 @@
+
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5780 2006/08/26 04:55:17 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5781 2006/08/26 04:59:02 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -515,7 +516,7 @@ net-wireless/gtkskan
 >=kde-misc/kerry-0.1.90
 
 # Alec Warner <antarus@gentoo.org> (21 Jun 2006)
-# Masked for removal by treecleaners
+# wolf31o2@gentoo.org is fixing bugs
 # bug # 32779, 63710, 94283, 102947, 118942
 net-misc/freenet6
 
