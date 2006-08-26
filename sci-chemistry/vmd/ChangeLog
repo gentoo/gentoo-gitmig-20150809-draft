@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.6 2006/08/13 17:48:01 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.7 2006/08/26 14:56:33 markusle Exp $
+
+*vmd-1.8.5 (26 Aug 2006)
+
+  26 Aug 2006; Markus Dittrich <markusle@gentoo.org>
+  -files/vmd-1.8.3-config-gentoo.patch,
+  +files/vmd-1.8.5-config-gentoo.patch, -vmd-1.8.3.ebuild,
+  +vmd-1.8.5.ebuild:
+  Version bump. Also removed some of the old ebuilds.
 
 *vmd-1.8.4-r1 (13 Aug 2006)
 
