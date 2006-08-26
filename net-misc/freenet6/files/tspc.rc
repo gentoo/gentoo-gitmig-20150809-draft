@@ -1,0 +1,15 @@
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting Freenet6 IPv6 Client"
+	tspc
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Freenet6 IPv6 Client"
+	kill `pidof tspc`
+	eend $?
+}

@@ -1,0 +1,149 @@
+--- freenet6-0.9.6.orig/src/auth.c
++++ freenet6-0.9.6/src/auth.c
+@@ -34,6 +34,7 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <stdarg.h>
++#include <time.h>
+ #include <sys/types.h>
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
+@@ -128,26 +129,26 @@
+    int len;
+ 
+    flags = 0;
+-   *Token=*Value=NULL;
++   *Token=*Value='\0';
+    for(s=e=String+11; *e; e++) {
+-      if(*e== ' ' || *e == '\r' || *e == '\n' || *e==NULL) {
++      if(*e== ' ' || *e == '\r' || *e == '\n' || *e=='\0') {
+         if(s!=e) {
+-           if(*Token && (*Value==NULL)) {
++           if(*Token && (*Value=='\0')) {
+                len = (int)((char *)e-(char *)s);
+                memcpy(Value, s, len);
+-               Value[len] = NULL;
++               Value[len] = '\0';
+            }
+            if(*Token && *Value) {
+               flags += SetCapability(Token,Value); 
+-              *Value = *Token = NULL;
++              *Value = *Token = '\0';
+            }
+          }
+          s = ++e;
+       }
+-      if((*e=='=' || *e== ' ' || *e == '\r' || *e == '\n' || *e==NULL) && (e != s)) {
++      if((*e=='=' || *e== ' ' || *e == '\r' || *e == '\n' || *e=='\0') && (e != s)) {
+          len = (int)((char *)e-(char *)s);
+          memcpy(Token, s, len);
+-         Token[len] = NULL;
++         Token[len] = '\0';
+          s = ++e;
+       }
+    }
+@@ -239,32 +240,32 @@
+    c->algorithm = "";
+    c->charset   = "";
+    c->rspauth   = "";
+-   *Token=*Value=NULL;
++   *Token=*Value='\0';
+    for(s=e=String; ; e++) {
+-      if(*e== ',' || *e == '\r' || *e == '\n' || *e==NULL) {
++      if(*e== ',' || *e == '\r' || *e == '\n' || *e=='\0') {
+         if(s!=e) {
+-           if(*Token && (*Value==NULL)) {
++           if(*Token && (*Value=='\0')) {
+                len = (int)((char *)e-(char *)s);
+                /* Chop the quotes */
+                if((*s == '"') && len) { s++; len--; }
+                if((s[len-1] == '"') && len) len--;
+ 
+                if(len) memcpy(Value, s, len);
+-               Value[len] = NULL;
++               Value[len] = '\0';
+            }
+            if(*Token && *Value) {
+               InsertInChallegeStruct(c, Token,Value); 
+-              *Value = *Token = NULL;
++              *Value = *Token = '\0';
+            }
+          }
+-         if(*e == NULL) break;
++         if(*e == '\0') break;
+          s = ++e;
+       }
+-      if((*e=='=' || *e== ',' || *e == '\r' || *e == '\n' || *e==NULL) && (*Token == NULL) && (e != s)) {
++      if((*e=='=' || *e== ',' || *e == '\r' || *e == '\n' || *e=='\0') && (*Token == '\0') && (e != s)) {
+          len = (int)((char *)e-(char *)s);
+          memcpy(Token, s, len);
+-         Token[len] = NULL;
+-         if(*e == NULL) break;
++         Token[len] = '\0';
++         if(*e == '\0') break;
+          s = ++e;
+       }
+    }
+--- freenet6-0.9.6.orig/src/tspc.c
++++ freenet6-0.9.6/src/tspc.c
+@@ -55,8 +55,8 @@
+ 
+ #define Identification "tspc - Tunnel Server Protocol Client\n"
+ 
+-char *FileName  = "tspc.conf";
+-char *LogFile   = "tspc.log";
++char *FileName  = "/etc/freenet6/tspc.conf";
++char *LogFile   = "/var/log/tspc.log";
+ char *ScriptDir = NULL;
+ char *LogFileName = NULL;
+ tConf Conf;
+@@ -77,10 +77,10 @@
+ */
+ #  define ScriptExtension "bat"
+ #else
+-   char *TspHomeDir  = "/usr/local/etc/tsp";
++   char *TspHomeDir  = "/etc/freenet6";
+    char DirSeparator = '/';
+    int  RootUid = 0;
+-#  define ScriptInterpretor "/bin/sh "
++#  define ScriptInterpretor ""
+ #  define ScriptExtension "sh"
+ #endif
+ 
+@@ -269,10 +269,10 @@
+    if(Value) {
+       for(;*Value; Value++) {
+          if(strchr(AllowedChars, *Value) == NULL)
+-            return NULL;
++            return 0;
+       }
+    } else {
+-      return NULL;
++      return 0;
+    }
+    return 1;
+ }
+@@ -427,15 +427,21 @@
+   if(IsPresent(Conf->dns_server)) {
+      char *Server;
+      char *dns = strdup(Conf->dns_server);
++     int result;
++     struct addrinfo *contact;
+      if (eq(Conf->host_type, "host")) {
+        Display(1,ELError, "VerifyConfig", "DNS delegation is not support for host_type=host");
+        status = 1;
+      }
+      for(Server = strtok(dns, ":");Server; Server = strtok(NULL, ":")) {
+-        if(gethostbyname(Server) == NULL) {
+-           Display(1,ELError, "VerifyConfig", "DNS server name %s is not resolving.", Server);
++	if( result=getaddrinfo(Server, "domain", 0, &contact)) {
++		Display(1,ELError, "VerifyConfig",
++			"DNS server name %s is not resolving.", Server);
+            status = 1;
+         }
++	else {
++		freeaddrinfo(contact);
++	}
+      }
+      free(dns);
+   }
