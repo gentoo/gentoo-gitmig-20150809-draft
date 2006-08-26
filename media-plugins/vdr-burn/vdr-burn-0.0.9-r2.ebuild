@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.9 2006/05/21 12:36:33 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.10 2006/08/26 16:46:04 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://vdr.unetz.com/download/burn/${MY_P}.tgz"
 KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="png"
 
 DEPEND=">=media-video/vdr-1.2.6
 		>=media-libs/imlib2-1.1.2
@@ -24,7 +24,7 @@ RDEPEND=">=media-video/vdrsync-0.1.3_pre1-r5
 		>=media-video/requant-0.0.1
 		>=media-video/transcode-0.6.11
 		>=media-video/dvdauthor-0.6.10
-		>=media-video/mjpegtools-1.6.2
+		>=media-video/mjpegtools-1.8.0-r1
 		>=app-cdr/dvd+rw-tools-5.20"
 
 S="${WORKDIR}/burn-${MY_PV}"
@@ -33,6 +33,16 @@ PATCHES="${FILESDIR}/${P}-gentoo.diff"
 
 VDR_CONFD_FILE="${FILESDIR}/confd-${PV}"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-${PV}.sh"
+
+pkg_setup() {
+
+	if [[ ! -e /usr/bin/png2yuv ]] ; then
+		echo
+		eerror "Please reemerge media-video/mjepgtools with USE=\"png\""
+		echo
+		die "emerge mjepgtools with USE=\"png\""
+	fi
+}
 
 src_unpack(){
 	vdr-plugin_src_unpack

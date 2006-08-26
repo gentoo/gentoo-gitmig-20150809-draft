@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.10 2006/08/15 10:31:49 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.11 2006/08/26 16:46:04 hd_brummy Exp $
+
+  26 Aug 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-burn-0.0.9-r2.ebuild:
+  check for png2yuv added
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
