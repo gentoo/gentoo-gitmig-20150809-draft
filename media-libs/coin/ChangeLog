@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/coin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.16 2006/08/17 07:24:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.17 2006/08/26 07:23:04 mr_bones_ Exp $
+
+  26 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> coin-2.1.0.ebuild,
+  coin-2.4.3.ebuild:
+  modX deps from coin-2.4.5
 
 *coin-2.4.5 (17 Aug 2006)
 

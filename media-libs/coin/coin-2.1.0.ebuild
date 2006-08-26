@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.1.0.ebuild,v 1.8 2006/02/17 13:44:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-2.1.0.ebuild,v 1.9 2006/08/26 07:23:04 mr_bones_ Exp $
 
 MY_P=${P/c/C}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="X"
 
-DEPEND="virtual/x11
+DEPEND="
+	X?      ( || ( ( x11-libs/libXt x11-libs/libXext ) virtual/x11 ) )
 	virtual/opengl"
 
 src_compile() {
