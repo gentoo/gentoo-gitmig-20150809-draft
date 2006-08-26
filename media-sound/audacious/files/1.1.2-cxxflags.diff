@@ -1,0 +1,43 @@
+Index: Plugins/Input/sid/Makefile.in
+===================================================================
+--- Plugins/Input/sid/Makefile.in       (revision 2124)
++++ Plugins/Input/sid/Makefile.in       (working copy)
+@@ -10,7 +10,7 @@ EXTRA_DIST = xmms-sid-logo.xpm
+ 
+ # Generals
+ CFLAGS   += -fPIC -DPIC -D_REENTRANT $(PLUGIN_CFLAGS) $(SIDPLAY1_INCLUDES) $(SIDPLAY2_INCLUDES) $(BUILDERS_INCLUDES) $(GTK_CFLAGS) -I../../../intl -I../../..
+-CXXFLAGS = $(CFLAGS)
++CXXLAGS  += -fPIC -DPIC -D_REENTRANT $(PLUGIN_CFLAGS) $(SIDPLAY1_INCLUDES) $(SIDPLAY2_INCLUDES) $(BUILDERS_INCLUDES) $(GTK_CFLAGS) -I../../../intl -I../../..
+ 
+ # Generated libraries
+ 
+Index: Plugins/Input/modplug/gui/Makefile.in
+===================================================================
+--- Plugins/Input/modplug/gui/Makefile.in       (revision 2124)
++++ Plugins/Input/modplug/gui/Makefile.in       (working copy)
+@@ -1,8 +1,8 @@
+ include ../../../../mk/rules.mk
+ include ../../../../mk/objective.mk
+ 
+-CFLAGS += -fPIC -DPIC $(GTK_CFLAGS) -I../../../../intl -I../../../..
+-CXXFLAGS += $(CFLAGS)
++CFLAGS   += -fPIC -DPIC $(GTK_CFLAGS) -I../../../../intl -I../../../..
++CXXFLAGS += -fPIC -DPIC $(GTK_CFLAGS) -I../../../../intl -I../../../..
+ 
+ OBJECTIVE_LIBS_NOINST = libgui.a
+ SOURCES = main.cpp support.cpp interface.cpp callbacks.cpp
+Index: Plugins/Input/mpg123/Makefile.in
+===================================================================
+--- Plugins/Input/mpg123/Makefile.in    (revision 2124)
++++ Plugins/Input/mpg123/Makefile.in    (working copy)
+@@ -13,8 +13,7 @@ SOURCES = mpg123.c configure.c fileinfo.
+ 
+ OBJECTS = ${SOURCES:.c=.o} tag_c_hacked.o
+ 
+-CFLAGS += -UPSYCHO -fPIC -DPIC $(GTK_CFLAGS) $(TAGLIB_CFLAGS) $(ARCH_DEFINES) -I../../../intl -I../../..
+-
+-CXXFLAGS = $(CFLAGS)
++CFLAGS   += -UPSYCHO -fPIC -DPIC $(GTK_CFLAGS) $(TAGLIB_CFLAGS) $(ARCH_DEFINES) -I../../../intl -I../../..
++CXXFLAGS += -UPSYCHO -fPIC -DPIC $(GTK_CFLAGS) $(TAGLIB_CFLAGS) $(ARCH_DEFINES) -I../../../intl -I../../..
+ 
+ LIBADD = -ltag_c $(GTK_LIBS) $(TAGLIB_LIBS)
