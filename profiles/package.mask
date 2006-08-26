@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5785 2006/08/26 18:58:18 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5786 2006/08/26 22:40:07 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,26 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking net-misc/dhcpv6 for treecleaners and bug(s) # 143189
+# Sept 27th for removal
+net-misc/dhcpv6
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking app-mobilephone/gtkesms for treecleaners and bug(s) # 142991
+# Sept 27th for removal
+app-mobilephone/gtkesms
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking net-ftp/jftpgw for treecleaners and bug(s) # 142753
+# Sept 27th for removal
+net-ftp/jftpgw
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking dev-util/rhide for treecleaners and bug(s) # 120774
+# Sept 27th for removal
+dev-util/rhide
 
 # Alec Warner <antarus@gentoo.org> (27 Aug 2006)
 # Masking dev-libs/libhoard for treecleaners and bug(s) # 99473
