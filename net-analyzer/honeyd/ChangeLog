@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.26 2006/08/26 08:19:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.27 2006/08/26 19:31:09 weeve Exp $
+
+  26 Aug 2006; Jason Wever <weeve@gentoo.org> honeyd-1.5b.ebuild:
+  Added ~sparc keyword wrt security bug #144875.
 
   26 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> honeyd-1.5b.ebuild:
   Added ~ppc, bug #144875
