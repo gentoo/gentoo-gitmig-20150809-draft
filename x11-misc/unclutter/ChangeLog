@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.22 2006/08/01 14:10:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.23 2006/08/26 07:05:14 mr_bones_ Exp $
+
+  26 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -unclutter-8.ebuild:
+  clean out older non-modX ebuild
 
   01 Aug 2006; Jeroen Roovers <jer@gentoo.org> unclutter-8-r1.ebuild:
   Stable on HPPA (bug #140654).
