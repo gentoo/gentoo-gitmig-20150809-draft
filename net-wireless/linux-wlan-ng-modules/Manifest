@@ -1,24 +1,45 @@
-MD5 5d9e2a0997882eacc35bd571a3f346a6 ChangeLog 2286
-RMD160 37fec4b3427d1b5bf53762646f86caf0b6bc9e49 ChangeLog 2286
-SHA256 edee9aaa1794320d1e0f4b16181e9e10bd71bfe36012716a5733d75fcac2aa6f ChangeLog 2286
-MD5 3414fdda8cf331136d23c69378f70a97 files/digest-linux-wlan-ng-modules-0.2.3 72
-RMD160 adffdad2052e56609c23427d899ec1e4fca57e7d files/digest-linux-wlan-ng-modules-0.2.3 72
-SHA256 8ddd342c5146c6a1e38db8c36707a7562dd114a6d246b935278cfeb97a405789 files/digest-linux-wlan-ng-modules-0.2.3 72
-MD5 b0151277be475255f82139fc101eae7f files/digest-linux-wlan-ng-modules-0.2.3-r1 262
-RMD160 6e6a482a8ebdaf4bd7f77040cd3f717c25180b53 files/digest-linux-wlan-ng-modules-0.2.3-r1 262
-SHA256 1755efc1d6124109999f9dda7aa3b4240e849ceaf3116244ff149783f635df09 files/digest-linux-wlan-ng-modules-0.2.3-r1 262
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX linux-wlan-ng-0.2.3-kernel-2.6.16.patch 422 RMD160 3da842a0d1c1fb2aaaa48b824b1256dfba3ef817 SHA1 ee7f24b8e1d910332b7cb43c5b74d8609433d8b0 SHA256 9464dac4c9fd0f5b4403cf60fa86f85fbcd29588f1a1036a8a18ba5e3c41b822
 MD5 a45dd0a7b3a3b710ce5d415e29c4fff6 files/linux-wlan-ng-0.2.3-kernel-2.6.16.patch 422
 RMD160 3da842a0d1c1fb2aaaa48b824b1256dfba3ef817 files/linux-wlan-ng-0.2.3-kernel-2.6.16.patch 422
 SHA256 9464dac4c9fd0f5b4403cf60fa86f85fbcd29588f1a1036a8a18ba5e3c41b822 files/linux-wlan-ng-0.2.3-kernel-2.6.16.patch 422
+AUX linux-wlan-ng-0.2.3-kernel-2.6.17.patch 945 RMD160 f9d4462c722dce65fe897817d9deda6e5a682545 SHA1 3c552d7fb5978683fada49f422136a718e00b54b SHA256 70c882fbfe2c1d71b17c0e033b5d5d2cd2a6d51d857530c39b8e376a2fb56378
+MD5 99729778ba0fb109a15f0081fd8a4d1b files/linux-wlan-ng-0.2.3-kernel-2.6.17.patch 945
+RMD160 f9d4462c722dce65fe897817d9deda6e5a682545 files/linux-wlan-ng-0.2.3-kernel-2.6.17.patch 945
+SHA256 70c882fbfe2c1d71b17c0e033b5d5d2cd2a6d51d857530c39b8e376a2fb56378 files/linux-wlan-ng-0.2.3-kernel-2.6.17.patch 945
+AUX linux-wlan-ng-0.2.3-module_param.patch 657 RMD160 0e21471899880143a13c5bce33e13b0051b005e9 SHA1 d7f56e42568f401e1997e81850b6708788be7ff0 SHA256 4c0edbb9008680c1c1e2972ee4b0bd20245e3664ae48f6cd33d3589351398c81
 MD5 a4b2153476d6759ee96ab8b4ac7df4aa files/linux-wlan-ng-0.2.3-module_param.patch 657
 RMD160 0e21471899880143a13c5bce33e13b0051b005e9 files/linux-wlan-ng-0.2.3-module_param.patch 657
 SHA256 4c0edbb9008680c1c1e2972ee4b0bd20245e3664ae48f6cd33d3589351398c81 files/linux-wlan-ng-0.2.3-module_param.patch 657
-MD5 87d49f47011d487d7000c8bf1fbd8a4b linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
-RMD160 9194643ed5b6288ba8d6b6442b08002c471cee31 linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
-SHA256 039dc5f55c97c6cfcc39e3e7367363226249deae2cca80560f5e8dd29e0a427f linux-wlan-ng-modules-0.2.3-r1.ebuild 2438
+DIST linux-wlan-ng-0.2.3.tar.bz2 454053 RMD160 a39a6f17dd8a745992a557605d3f5734d8b7de95 SHA1 72fdb2d7af8e071db169b56df594d0ce8a91abc8 SHA256 97004d6cefd1b5c5f37efc1603e4103f9a809d79f8cc0faf2397fa882cdd6ee6
+EBUILD linux-wlan-ng-modules-0.2.3-r1.ebuild 2510 RMD160 2fade836ca03776ec9f1077bf9d7a273d41eed32 SHA1 2e7806656302676733584ac7a4264635c9a98b31 SHA256 4a856ece9dee6525b03bfa35164a8af413f87980db627ee95fe3e23d11490ace
+MD5 234543a40bdfb3534d16395403a26126 linux-wlan-ng-modules-0.2.3-r1.ebuild 2510
+RMD160 2fade836ca03776ec9f1077bf9d7a273d41eed32 linux-wlan-ng-modules-0.2.3-r1.ebuild 2510
+SHA256 4a856ece9dee6525b03bfa35164a8af413f87980db627ee95fe3e23d11490ace linux-wlan-ng-modules-0.2.3-r1.ebuild 2510
+EBUILD linux-wlan-ng-modules-0.2.3.ebuild 3046 RMD160 c82309c9e0d001f92bffdb07245c7f75ff8d9a4d SHA1 4933bc4270cd586540f50cbb6893e407c4b898ab SHA256 b7038aee66b9a6b787aa7d6d7b181eb1dd90d2b1e7da520536dbc957072333fe
 MD5 015b374d963ba35da2a7cbc890bc78a6 linux-wlan-ng-modules-0.2.3.ebuild 3046
 RMD160 c82309c9e0d001f92bffdb07245c7f75ff8d9a4d linux-wlan-ng-modules-0.2.3.ebuild 3046
 SHA256 b7038aee66b9a6b787aa7d6d7b181eb1dd90d2b1e7da520536dbc957072333fe linux-wlan-ng-modules-0.2.3.ebuild 3046
+MISC ChangeLog 2525 RMD160 80d22326683eb02415db1c99ad1f16074ed94d36 SHA1 04e736b0270e1598ba31ead240d4373702ec7ad0 SHA256 dd1b55e1f4708c133d67a4a82759535dcda172f70ca08e57ff65c74cef012569
+MD5 73cd1ce61698616dda0f454f37017595 ChangeLog 2525
+RMD160 80d22326683eb02415db1c99ad1f16074ed94d36 ChangeLog 2525
+SHA256 dd1b55e1f4708c133d67a4a82759535dcda172f70ca08e57ff65c74cef012569 ChangeLog 2525
+MISC metadata.xml 571 RMD160 a17abb45825b57ac44fc2c76bbddc05dfc70e6b1 SHA1 bcfab6e5905e962e40e46ce903f1d87fef96c24c SHA256 7c0a45fa8b25ff12fcc72f4a57755393f3c566706ad05cd839d583a541603a2c
 MD5 bd46277fb8c768aa34612bb9cb43fe75 metadata.xml 571
 RMD160 a17abb45825b57ac44fc2c76bbddc05dfc70e6b1 metadata.xml 571
 SHA256 7c0a45fa8b25ff12fcc72f4a57755393f3c566706ad05cd839d583a541603a2c metadata.xml 571
+MD5 b0151277be475255f82139fc101eae7f files/digest-linux-wlan-ng-modules-0.2.3 262
+RMD160 6e6a482a8ebdaf4bd7f77040cd3f717c25180b53 files/digest-linux-wlan-ng-modules-0.2.3 262
+SHA256 1755efc1d6124109999f9dda7aa3b4240e849ceaf3116244ff149783f635df09 files/digest-linux-wlan-ng-modules-0.2.3 262
+MD5 b0151277be475255f82139fc101eae7f files/digest-linux-wlan-ng-modules-0.2.3-r1 262
+RMD160 6e6a482a8ebdaf4bd7f77040cd3f717c25180b53 files/digest-linux-wlan-ng-modules-0.2.3-r1 262
+SHA256 1755efc1d6124109999f9dda7aa3b4240e849ceaf3116244ff149783f635df09 files/digest-linux-wlan-ng-modules-0.2.3-r1 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE7/2OcxLzpIGCsLQRAvtVAJ90M+k3Uv1Wf4Snd+Xu/RXW8Y8A2ACeLfdH
+mS+rlxPsGvRY76Ian/Ku83k=
+=SpAm
+-----END PGP SIGNATURE-----

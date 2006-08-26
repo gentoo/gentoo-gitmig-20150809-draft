@@ -1,0 +1,29 @@
+--- src/p80211/Makefile	(revision 1772)
++++ src/p80211/Makefile	(working copy)
+@@ -74,7 +74,9 @@
+ default:
+ 
+ ifeq ($(KERN_25), y)
+-	$(MAKE) -C $(LINUX_SRC) M='$(PWD)/.. $(PWD)' WLAN_SRC=$(WLAN_SRC) modules
++#	$(MAKE) -C $(LINUX_SRC) M='$(PWD)/.. $(PWD)' WLAN_SRC=$(WLAN_SRC) modules
++	$(MAKE) -C $(LINUX_SRC) M='$(PWD)' WLAN_SRC=$(WLAN_SRC)
++	cp Modules.symvers ../prism2/driver
+ else
+ 	$(MAKE) -C $(LINUX_SRC) SUBDIRS=$(PWD) WLAN_SRC=$(WLAN_SRC) modules
+ endif # KERN_25
+--- src/prism2/driver/Makefile	(revision 1772)
++++ src/prism2/driver/Makefile	(working copy)
+@@ -84,8 +84,11 @@
+ 
+ default:
+ ifeq ($(KERN_25), y)
+-	$(MAKE) -C $(LINUX_SRC) M='$(PWD)/../.. $(PWD)' WLAN_SRC=$(WLAN_SRC) \
+-		modules
++#	$(MAKE) -C $(LINUX_SRC) M='$(PWD)/../.. $(PWD)' WLAN_SRC=$(WLAN_SRC) \
++#		modules
++
++	$(MAKE) -C $(LINUX_SRC) M='$(PWD)' WLAN_SRC=$(WLAN_SRC)
++
+ else # kbuild 2.4
+ 	$(MAKE) -C $(LINUX_SRC) SUBDIRS=$(PWD) WLAN_SRC=$(WLAN_SRC) \
+ 		modules
