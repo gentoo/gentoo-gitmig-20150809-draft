@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkipi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.17 2006/06/04 19:55:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.18 2006/08/26 19:52:39 weeve Exp $
+
+  26 Aug 2006; Jason Wever <weeve@gentoo.org> libkipi-0.1.2.ebuild:
+  Stable on SPARC wrt bug #145102.
 
 *libkipi-0.1.4 (04 Jun 2006)
 
