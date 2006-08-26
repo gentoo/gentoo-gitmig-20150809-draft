@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5784 2006/08/26 06:06:29 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5785 2006/08/26 18:58:18 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,26 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking dev-libs/libhoard for treecleaners and bug(s) # 99473
+# Sept 27th for removal
+dev-libs/libhoard
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking app-misc/emelfm2 for treecleaners and bug(s) # 90476
+# Sept 27th for removal
+app-misc/emelfm2
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking media-radio/xlog for treecleaners and bug(s) # 88580
+# Sept 27th for removal
+media-radio/xlog
+
+# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
+# Masking dev-lang/io-vm for treecleaners and bug(s) # 87785
+# Sept 27th for removal
+dev-lang/io-vm
 
 # Alec Warner <antarus@gentoo.org> (26 Aug 2006)
 # Masking dev-lang/sather for treecleaners and bug(s) # 79391
