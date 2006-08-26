@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5783 2006/08/26 05:51:23 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5784 2006/08/26 06:06:29 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,16 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (26 Aug 2006)
+# Masking dev-lang/sather for treecleaners and bug(s) # 79391
+# Sept 26th for removal
+dev-lang/sather
+
+# Alec Warner <antarus@gentoo.org> (26 Aug 2006)
+# Masking app-text/hspell for treecleaners and bug(s) # 77751
+# Sept 26th for removal
+app-test/hspell
 
 # Alec Warner <antarus@gentoo.org> (26 Aug 2006)
 # Masking app-misc/bbgallery for treecleaners and bug(s) # 51694
