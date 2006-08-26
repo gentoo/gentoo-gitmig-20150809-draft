@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2095 2006/08/24 10:03:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2096 2006/08/26 03:46:53 hanno Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -913,6 +913,7 @@ media-tv/xmltv:za - South Africa tv listing grabber
 media-tv/zapping:vdr - Enable Real Time Encoding support (librte)
 media-tv/zapping:zvbi - Enable VBI Decoding Library
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
+media-video/cinepaint:fltk - Enables Plugins that use fltk gui
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
