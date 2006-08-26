@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/package.mask,v 1.4 2005/11/11 22:35:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/package.mask,v 1.5 2006/08/26 07:24:34 vapier Exp $
 
 >=sys-kernel/linux-headers-2.5
 
@@ -13,3 +13,4 @@ dev-util/gnustep-guile
 dev-util/gnustep-make
 dev-libs/elfutils
 sys-devel/prelink
+>=sys-apps/findutils-4.2
