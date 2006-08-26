@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.32 2006/08/15 11:30:13 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.33 2006/08/26 06:24:11 aross Exp $
+
+*xen-sources-2.6.16.26-r1 (26 Aug 2006)
+
+  26 Aug 2006; <aross@gentoo.org>
+  +files/xen-sources-2.6.16.26-CVE-2006-2935.patch,
+  +xen-sources-2.6.16.26-r1.ebuild:
+  Fix possible buffer overflow (CVE-2006-2935), bug #139321
 
   16 Aug 2006; Andrew Ross <aross@gentoo.org> metadata.xml:
   Add xen herd and remove chrb and agriffis as maintainers.
