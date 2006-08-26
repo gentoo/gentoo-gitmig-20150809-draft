@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.5 2006/07/02 17:05:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.ebuild,v 1.6 2006/08/26 17:13:55 hanno Exp $
 
 inherit gnome2 eutils
 
@@ -59,6 +59,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	epatch ${FILESDIR}/inkscape-gcc42.diff
 
 	autoconf || die
 	libtoolize --copy --force || die
