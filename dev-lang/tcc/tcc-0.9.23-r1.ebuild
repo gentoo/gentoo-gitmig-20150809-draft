@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.23-r1.ebuild,v 1.1 2006/08/24 08:42:33 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.23-r1.ebuild,v 1.2 2006/08/26 18:56:14 truedfx Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ SLOT="0"
 KEYWORDS="-* ~x86"
 
 DEPEND=""
+# Both tendra and tinycc install /usr/bin/tcc
+RDEPEND="!dev-lang/tendra"
 
 # Testsuite is broken, relies on gcc to compile
 # invalid C code that it no longer accepts

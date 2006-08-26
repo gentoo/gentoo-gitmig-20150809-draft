@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.21 2006/08/24 08:42:33 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.22 2006/08/26 18:56:14 truedfx Exp $
+
+  26 Aug 2006; Harald van Dĳk <truedfx@gentoo.org> tcc-0.9.23-r1.ebuild:
+  Block tendra (to avoid a file collision)
 
 *tcc-0.9.23-r1 (24 Aug 2006)
 
