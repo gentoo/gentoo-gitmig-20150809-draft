@@ -1,20 +1,47 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f5403130b70490190b63d1556329f944 ChangeLog 2147
+DIST bookmarksync-0.3.1.tar.gz 12148
+DIST bookmarksync-0.3.2.tar.gz 21425
+DIST bookmarksync-0.3.3.tar.gz 22804
+DIST bookmarksync-0.3.4.tar.gz 14324
+EBUILD bookmarksync-0.3.1.ebuild 539 RMD160 cd0e274b25ff1435748e52785f4ee2a4f99379df SHA1 bd0fbe51372c90096fc427b5e8ff388cff103bfa SHA256 0af02c0dcc367e45d974dc9c47fffbe154d10fa4dd90f83dc5e4eb9e9494108b
 MD5 0f045158ce67a43718abb7ad06ad799e bookmarksync-0.3.1.ebuild 539
+RMD160 cd0e274b25ff1435748e52785f4ee2a4f99379df bookmarksync-0.3.1.ebuild 539
+SHA256 0af02c0dcc367e45d974dc9c47fffbe154d10fa4dd90f83dc5e4eb9e9494108b bookmarksync-0.3.1.ebuild 539
+EBUILD bookmarksync-0.3.2.ebuild 540 RMD160 897e43d1b0495ed46c078dfa71ee2094c8e08cc1 SHA1 fb175ef3694a5a2fe7cfca6daf95fa6dc9a8e5d6 SHA256 e68c55a31f801a7d05653257a279b1e76444260f54f2c0ec346c9cdc66ee8cb3
 MD5 cd56c0fb36e3f4b01e200642936efea2 bookmarksync-0.3.2.ebuild 540
+RMD160 897e43d1b0495ed46c078dfa71ee2094c8e08cc1 bookmarksync-0.3.2.ebuild 540
+SHA256 e68c55a31f801a7d05653257a279b1e76444260f54f2c0ec346c9cdc66ee8cb3 bookmarksync-0.3.2.ebuild 540
+EBUILD bookmarksync-0.3.3.ebuild 822 RMD160 4f277cc7b92a684ab8753bc693340d82b630dbc0 SHA1 2760666feb37f0842570ba9ddfdb26a35c181921 SHA256 bbc6f920b649c66f0bd37042f2bd33bbbb1a433d4c8e6bc0ee5fc978e8bb63fe
 MD5 509dee641f8a08db6da8f68090f95afe bookmarksync-0.3.3.ebuild 822
+RMD160 4f277cc7b92a684ab8753bc693340d82b630dbc0 bookmarksync-0.3.3.ebuild 822
+SHA256 bbc6f920b649c66f0bd37042f2bd33bbbb1a433d4c8e6bc0ee5fc978e8bb63fe bookmarksync-0.3.3.ebuild 822
+EBUILD bookmarksync-0.3.4-r1.ebuild 795 RMD160 ce220cffd1cc504c1fb50370c02e3c41cf0364d7 SHA1 8a7f8175e32b8a9e5c8f9cd66b72c0a09e9b41b2 SHA256 b970fa26e9112d1f83d4162c05864f86e2f8524d4d1c3fa6e4b0f6ecc9eccb21
+MD5 44cc7504d273721ad8b77b3c7a77bc01 bookmarksync-0.3.4-r1.ebuild 795
+RMD160 ce220cffd1cc504c1fb50370c02e3c41cf0364d7 bookmarksync-0.3.4-r1.ebuild 795
+SHA256 b970fa26e9112d1f83d4162c05864f86e2f8524d4d1c3fa6e4b0f6ecc9eccb21 bookmarksync-0.3.4-r1.ebuild 795
+EBUILD bookmarksync-0.3.4.ebuild 826 RMD160 3104675a76e4b9ba3099c5fb2ed941e29199a864 SHA1 426ac13eb93e442d9c2ffd576edbfb5f14517c30 SHA256 b43a39d6bc0751b610baa43745d546f6ee941ceccdca1fbced9f662b1a44c8e2
 MD5 83efdc6848335a491cdb5e48f13ba442 bookmarksync-0.3.4.ebuild 826
-MD5 e9d3e569d5e3b22a0c39b68babd41a6d files/digest-bookmarksync-0.3.1 69
-MD5 9dd32e274bee7628a973c924ca72ec7d files/digest-bookmarksync-0.3.2 69
-MD5 19e3be17cd6a26afe690440c518b0831 files/digest-bookmarksync-0.3.3 69
-MD5 e27922d01ff8a960203609a9f9a730f2 files/digest-bookmarksync-0.3.4 69
+RMD160 3104675a76e4b9ba3099c5fb2ed941e29199a864 bookmarksync-0.3.4.ebuild 826
+SHA256 b43a39d6bc0751b610baa43745d546f6ee941ceccdca1fbced9f662b1a44c8e2 bookmarksync-0.3.4.ebuild 826
+MISC ChangeLog 2300 RMD160 0c03c6846c963f210853b14727df180e2498575c SHA1 40091277a308f9eda796ee5f30d51f9fd87d186f SHA256 41396b183d814bb169be312dfeb0f519b9e18c6a60861a26b412aea80c6f5015
+MD5 3c234c31e0cc4789045546c268db95f8 ChangeLog 2300
+RMD160 0c03c6846c963f210853b14727df180e2498575c ChangeLog 2300
+SHA256 41396b183d814bb169be312dfeb0f519b9e18c6a60861a26b412aea80c6f5015 ChangeLog 2300
+MISC metadata.xml 495 RMD160 1ab8b3e45629994646e6b3864ee1534f3c9fbaa9 SHA1 bab77e1785ff5588e21197a1d913595b7b087248 SHA256 012fa00ae0cd8ec0ac5b68783060f4413253debbbb14dd47aa5a960d340ae791
 MD5 29ca50d5c99cbbe7c57ee1df65e0d3bf metadata.xml 495
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFC0HgMI1lqEGTUzyQRAuDXAKC5LKxm9url3ezgxtOO4aRWOPoZ+QCfecZo
-0AJdNWBg8TmpgPbYEYTebIU=
-=H92N
------END PGP SIGNATURE-----
+RMD160 1ab8b3e45629994646e6b3864ee1534f3c9fbaa9 metadata.xml 495
+SHA256 012fa00ae0cd8ec0ac5b68783060f4413253debbbb14dd47aa5a960d340ae791 metadata.xml 495
+MD5 e9d3e569d5e3b22a0c39b68babd41a6d files/digest-bookmarksync-0.3.1 69
+RMD160 726dd12c3f95205838a2b7456ef7fa9629ff21f7 files/digest-bookmarksync-0.3.1 69
+SHA256 e99c8df06d69ca256f9f5a0f7baeddac821a03e66226d3e6205c55518648317e files/digest-bookmarksync-0.3.1 69
+MD5 9dd32e274bee7628a973c924ca72ec7d files/digest-bookmarksync-0.3.2 69
+RMD160 05de96414b1df735246e7ad6d855a208085ea0da files/digest-bookmarksync-0.3.2 69
+SHA256 5a9bca1e9a175416a8d84a87f932b622329bdd0466fc5c83fdc1d1241880c84d files/digest-bookmarksync-0.3.2 69
+MD5 19e3be17cd6a26afe690440c518b0831 files/digest-bookmarksync-0.3.3 69
+RMD160 ed1fd66b50a7d5c892cd414fd2805c7b09a4bf80 files/digest-bookmarksync-0.3.3 69
+SHA256 5c69abaf31f1f09d23ed8edeee298a118ea3e1404e6b8344d258abbd8e46ca0d files/digest-bookmarksync-0.3.3 69
+MD5 e27922d01ff8a960203609a9f9a730f2 files/digest-bookmarksync-0.3.4 69
+RMD160 a801d9fc6210664548949e2c4d05118f3fcc821e files/digest-bookmarksync-0.3.4 69
+SHA256 8b84c83e21aa748b3022512535eb0ed578df9b8619ebef245d2229cb2e870da7 files/digest-bookmarksync-0.3.4 69
+MD5 e27922d01ff8a960203609a9f9a730f2 files/digest-bookmarksync-0.3.4-r1 69
+RMD160 a801d9fc6210664548949e2c4d05118f3fcc821e files/digest-bookmarksync-0.3.4-r1 69
+SHA256 8b84c83e21aa748b3022512535eb0ed578df9b8619ebef245d2229cb2e870da7 files/digest-bookmarksync-0.3.4-r1 69
