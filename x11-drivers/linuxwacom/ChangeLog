@@ -1,0 +1,194 @@
+# ChangeLog for x11-misc/linuxwacom
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.1 2006/08/26 02:48:41 hanno Exp $
+
+  02 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
+  linuxwacom-0.7.2.ebuild:
+  (#138641) Quote the token for has_version because it contains > (Rodrigo
+  Severo).
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
+  linuxwacom-0.7.2.ebuild:
+  Apparently the boolean logic was broken for detecting 2.6 headers on 2.4
+  kernels. Reported by wa1ter@myrealbox.com.
+
+  01 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.7.2.ebuild:
+  ppc/ppc64 stable.
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
+  linuxwacom-0.7.2.ebuild:
+  Only do 2.4 kernel workaround if people are actually not using a 2.6 kernel.
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild,
+  linuxwacom-0.7.2.ebuild:
+  Work around 2.4 kernels by changing from a dep to checking for 2.4
+  linux-headers and USE=usb.
+
+  30 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.7.2.ebuild:
+  x86 stable (Second attempt).
+
+  30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  linuxwacom-0.7.2.ebuild:
+  Stable on amd64.
+
+  14 Jun 2006; Jon Hood <squinky86@gentoo.org> linuxwacom-0.7.2.ebuild:
+  Add multilib fixings from Malcomb Lashley <malc@gentoo.org>, #132191.
+
+  15 Feb 2006; Markus Rothe <corsair@gentoo.org> linuxwacom-0.7.2.ebuild:
+  Added ~ppc64
+
+  27 Dec 2005; Bryan Stine <battousai@gentoo.org> linuxwacom-0.6.7.ebuild,
+  linuxwacom-0.6.8.ebuild, linuxwacom-0.6.9.ebuild, linuxwacom-0.7.2.ebuild:
+  Add configure option for building without Xorg SDK. Fixes bug 101674, thanks
+  to Andre Kloth.
+
+*linuxwacom-0.7.2 (27 Dec 2005)
+
+  27 Dec 2005; Bryan Stine <battousai@gentoo.org>
+  -files/linuxwacom-0.6.6-nonx86.patch,
+  +files/linuxwacom-0.7.2-modular-x.patch, -linuxwacom-0.6.6.ebuild,
+  linuxwacom-0.6.9.ebuild, +linuxwacom-0.7.2.ebuild:
+  Version bump to 0.7.2, expunge 0.6.6. With 0.7.2 comes modular Xorg support.
+
+  10 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/linuxwacom-0.6.9-dlloader.patch, linuxwacom-0.6.9.ebuild:
+  Upstream included our dlloader patch but did not bump their version, so if
+  youu get a md5 mismatch, delete the tarball in distfiles and try again.
+
+*linuxwacom-0.6.9 (09 Aug 2005)
+
+  09 Aug 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/linuxwacom-0.6.9-dlloader.patch, +linuxwacom-0.6.9.ebuild:
+  Version bump, and handle dlloader properly.  Patch sent upstream.
+
+  26 Jul 2005; David Holm <dholm@gentoo.org> linuxwacom-0.6.8.ebuild:
+  Added to ~ppc.
+
+  22 Jul 2005; Bryan Stine <battousai@gentoo.org>
+  -files/linuxwacom-0.6.4-nonx86.patch, -linuxwacom-0.6.3.ebuild,
+  -linuxwacom-0.6.4.ebuild, linuxwacom-0.6.6.ebuild,
+  linuxwacom-0.6.7.ebuild, linuxwacom-0.6.8.ebuild:
+  Add dlloader USE flag, which installs a DSO linuxwacom Xorg driver.
+  Furthermore, conform to Gentoo xorg migration, /usr/X11R6 -> /usr.
+
+*linuxwacom-0.6.8 (07 Jun 2005)
+
+  07 Jun 2005; Bryan Stine <battousai@gentoo.org> linuxwacom-0.6.7.ebuild,
+  +linuxwacom-0.6.8.ebuild:
+  Version bump to 0.6.8. Marked 0.6.7 x86 stable. Closes bug #94912.
+
+  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update herd to x11-drivers.
+
+  19 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.7.ebuild:
+  Require 2.6 headers if we want to use a USB wacom device.  See bug #80992.
+
+*linuxwacom-0.6.7 (18 Apr 2005)
+
+  18 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +linuxwacom-0.6.7.ebuild:
+  Version bump for working amd64 drivers.
+
+  14 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.6.ebuild:
+  --enable-xserver64 on amd64.
+
+  08 Feb 2005; Bryan Stine <battousai@gentoo.org> -linuxwacom-0.6.2.ebuild,
+  linuxwacom-0.6.4.ebuild, linuxwacom-0.6.6.ebuild:
+  Relibtoolize to fix inconsistency with new libtool 1.5.10. Fixes bug #80856.
+
+  31 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.4.ebuild, linuxwacom-0.6.6.ebuild:
+  Works with /usr/libdir xorg-x11 installs now.
+
+*linuxwacom-0.6.6 (31 Dec 2004)
+
+  31 Dec 2004; Bryan Stine <battousai@gentoo.org>
+  +files/linuxwacom-0.6.6-nonx86.patch, +linuxwacom-0.6.6.ebuild:
+  Version bump to 0.6.6. This one needs ARCH unset before emake for the kernel
+  Makefiles, regardless of whether they get built. Thanks to roger (bug
+  #76253) for the update and error report. This closes aforementioned bug.
+
+  24 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.4.ebuild:
+  Removing ~amd64 because of some problems I'm seeing with my intuos2 and
+  xorg-x11-6.8.0
+
+  18 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/linuxwacom-0.6.4-nonx86.patch, linuxwacom-0.6.4.ebuild:
+  Added to ~amd64.
+
+*linuxwacom-0.6.4 (24 Oct 2004)
+
+  24 Oct 2004; Bryan Stine <battousai@gentoo.org> +linuxwacom-0.6.4.ebuild:
+  Version bump to 0.6.4. Closes bug #67035.
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  Update logic to consider that the sdk USE flag may be set without xfree or
+  xorg-x11 installed.
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  Update dep from temporary hack to virtual/x11.
+
+  28 Jun 2004; Aron Griffis <agriffis@gentoo.org> linuxwacom-0.6.2.ebuild,
+  linuxwacom-0.6.3.ebuild:
+  add sed-4 dep
+
+  23 Jun 2004; Aron Griffis <agriffis@gentoo.org> linuxwacom-0.6.2.ebuild,
+  linuxwacom-0.6.3.ebuild:
+  QA - fix use invocation
+
+  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  xfree -r6 became -r7.
+
+  09 Jun 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.0.ebuild,
+  linuxwacom-0.6.2.ebuild, linuxwacom-0.6.3.ebuild:
+  Added support for USE=sdk flag. When enabled, it will build the X drivers as
+  it normally did before. When disabled, it will build only the userland tools.
+  This makes the package more flexible for those who wish to keep the stock X
+  driver. Thanks to Scott W. Taylor <swtaylor@gentoo.org> for this concept and
+  related code. Furthermore, linuxwacom-0.6.0 has been clean out.
+
+*linuxwacom-0.6.3 (06 Jun 2004)
+
+  06 Jun 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.3.ebuild:
+  Bump to version 0.6.3. Closes #53109, thanks to Lee Trager
+  <nukem@users.xeroprj.org>.
+
+  10 May 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.2.ebuild:
+  Got rid of the ? : DEPEND syntax, it's deprecated. Also added a plus to the
+  !gtk2 DEPEND for gtk+-1.2. Thanks to Mr. Bones for the QA.
+
+  10 May 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.2.ebuild:
+  Patched ebuild. Also, pedantic spacing fixes. Thanks to Torne Wuff for the
+  added functionality.
+
+*linuxwacom-0.6.2 (10 May 2004)
+
+  10 May 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.2.ebuild:
+  Version bump, fixes bug 49862.
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.0.ebuild:
+  Missing space in DEPEND.
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  linuxwacom-0.6.0.ebuild:
+  Add xorg-x11 to possible.
+
+*linuxwacom-0.6.0 (19 Feb 2004)
+
+  19 Feb 2004; Bryan Stine <battousai@gentoo.org>; linuxwacom-0.6.0.ebuild:
+  Initial import. Builds against the SDK, and replaces the driver distributed
+  with xfree.
+
