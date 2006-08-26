@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.21 2006/08/24 20:33:14 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.22 2006/08/26 20:21:39 wormo Exp $
+
+  26 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  alex-2.0.1-r1.ebuild:
+  stable on ppc (Bug #144677)
 
   24 Aug 2006; Ferris McCormick <fmccor@gentoo.org> alex-2.0.1-r1.ebuild:
   Stable on sparc --- Bug #144677 --- seems fine (runs tests).
