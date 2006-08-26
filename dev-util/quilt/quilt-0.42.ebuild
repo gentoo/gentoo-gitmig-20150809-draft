@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42.ebuild,v 1.3 2005/09/22 12:05:16 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.42.ebuild,v 1.4 2006/08/26 07:40:02 wormo Exp $
 
 inherit bash-completion
 
