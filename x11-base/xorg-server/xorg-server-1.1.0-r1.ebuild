@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.15 2006/08/12 23:04:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.16 2006/08/26 02:54:55 hanno Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -225,7 +225,7 @@ PDEPEND="
 				input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.0 )
 
 				input_devices_synaptics? ( x11-drivers/synaptics )
-				input_devices_wacom? ( x11-misc/linuxwacom )
+				input_devices_wacom? ( x11-drivers/linuxwacom )
 			)
 			!minimal? (
 				>=x11-drivers/xf86-input-acecad-1.1.0
@@ -260,18 +260,18 @@ PDEPEND="
 
 				x86? ( >=x11-drivers/xf86-input-vmmouse-12.4.0
 					x11-drivers/synaptics
-					x11-misc/linuxwacom
+					x11-drivers/linuxwacom
 				)
 				x86-fbsd? ( >=x11-drivers/xf86-input-vmmouse-12.4.0 )
 				amd64? ( >=x11-drivers/xf86-input-vmmouse-12.4.0
 					x11-drivers/synaptics
-					x11-misc/linuxwacom
+					x11-drivers/linuxwacom
 				)
 				ppc? ( x11-drivers/synaptics
-					x11-misc/linuxwacom
+					x11-drivers/linuxwacom
 				)
 				ppc64? ( x11-drivers/synaptics
-					x11-misc/linuxwacom
+					x11-drivers/linuxwacom
 				)
 			)
 		)

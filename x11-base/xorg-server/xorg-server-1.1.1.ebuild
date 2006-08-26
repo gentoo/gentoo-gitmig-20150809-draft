@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.11 2006/08/22 18:22:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.12 2006/08/26 02:54:55 hanno Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -213,7 +213,7 @@ PDEPEND="
 		input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.0 )
 
 		input_devices_synaptics? ( x11-drivers/synaptics )
-		input_devices_wacom? ( x11-misc/linuxwacom )
+		input_devices_wacom? ( x11-drivers/linuxwacom )
 
 		video_cards_apm? ( >=x11-drivers/xf86-video-apm-1.1.1 )
 		video_cards_ark? ( >=x11-drivers/xf86-video-ark-0.6.0 )
