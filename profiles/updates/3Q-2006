@@ -1,1 +1,2 @@
 move sys-apps/hwdata sys-apps/hwdata-gentoo
+move x11-misc/linuxwacom x11-drivers/linuxwacom
