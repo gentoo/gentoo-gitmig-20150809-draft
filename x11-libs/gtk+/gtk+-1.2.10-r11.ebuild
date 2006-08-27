@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.25 2006/07/05 05:22:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.26 2006/08/27 20:47:43 compnerd Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils libtool toolchain-funcs
@@ -82,9 +82,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Older versions added /etc/X11/gtk/gtkrc which changed settings for"
-	ewarn "all themes it seems.  Please remove it manually as it will not due"
-	ewarn "to /env protection."
+	if [[ -e /etc/X11/gtk/gtkrc ]] ; then
+		ewarn "Older versions added /etc/X11/gtk/gtkrc which changed settings for"
+		ewarn "all themes it seems.  Please remove it manually as it will not due"
+		ewarn "to /env protection."
+	fi
+
 	echo ""
 	einfo "The old gtkrc is available through the new Gentoo gtk theme."
 }
