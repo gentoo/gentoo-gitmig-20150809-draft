@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.1.ebuild,v 1.1 2006/08/21 08:40:52 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.1.ebuild,v 1.2 2006/08/27 00:17:45 pylon Exp $
 
 inherit eutils gnome2
 
@@ -32,7 +32,10 @@ src_compile() {
 		myconf="${myconf} --with-nls=no"
 	fi
 	use debug && myconf="${myconf} --debug --with-memdebug=yes"
-	econf ${myconf} --docdir=/usr/share/doc || die "econf failed"
+	econf ${myconf} \
+		--docdir=/usr/share/doc \
+		--docsubdir=${PF} \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
