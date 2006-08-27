@@ -1,20 +1,38 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a14806bb4e0ffd505ce855169da9daf1 ChangeLog 3150
-MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r2 68
-MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r3 68
-MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r4 68
+AUX plotutils-2.4.1-gentoo.patch 2619 RMD160 369fe57883906de848cc4dbf3ce87658ec5fa12a SHA1 eaa92cc7a0d83e61b2db4bdcf20dfb6f68a67e7c SHA256 c736cc1e56c2b0e87bd2974288d2da7b1f235ca161a4bf638e7c5fdaae752534
 MD5 37137ec05ee56b449d60098e9dd9c6e9 files/plotutils-2.4.1-gentoo.patch 2619
+RMD160 369fe57883906de848cc4dbf3ce87658ec5fa12a files/plotutils-2.4.1-gentoo.patch 2619
+SHA256 c736cc1e56c2b0e87bd2974288d2da7b1f235ca161a4bf638e7c5fdaae752534 files/plotutils-2.4.1-gentoo.patch 2619
+AUX plotutils-2.4.1-rangecheck.patch 1858 RMD160 bd7e70840a7031fe85419be38d6d77dfde585f1b SHA1 d00a9d7067d3c22ae444213312e8f313923d8801 SHA256 79db278a29e1332bd2c1025d916906766032e30d9cf43a91ff6018a81f9a629c
 MD5 3b5cdbb61e3d7337ad331b2da0e82315 files/plotutils-2.4.1-rangecheck.patch 1858
-MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
-MD5 b95e26242c62b4f987b4603df7371b81 plotutils-2.4.1-r2.ebuild 2610
+RMD160 bd7e70840a7031fe85419be38d6d77dfde585f1b files/plotutils-2.4.1-rangecheck.patch 1858
+SHA256 79db278a29e1332bd2c1025d916906766032e30d9cf43a91ff6018a81f9a629c files/plotutils-2.4.1-rangecheck.patch 1858
+DIST plotutils-2.4.1.tar.gz 3316030
+EBUILD plotutils-2.4.1-r2.ebuild 2672 RMD160 8c60e685830b7a4dbbcfabb8f7664d8ff33b0a08 SHA1 174843ad0688d6551ea70be137ff3bccd92df588 SHA256 df3ba64c1f626944bf7ace899b7fa64dbbd98381cc5a2f05332708df517a5b5f
+MD5 2780f50a45cc91ffcdb4954aab480cf9 plotutils-2.4.1-r2.ebuild 2672
+RMD160 8c60e685830b7a4dbbcfabb8f7664d8ff33b0a08 plotutils-2.4.1-r2.ebuild 2672
+SHA256 df3ba64c1f626944bf7ace899b7fa64dbbd98381cc5a2f05332708df517a5b5f plotutils-2.4.1-r2.ebuild 2672
+EBUILD plotutils-2.4.1-r3.ebuild 2618 RMD160 3c4ad5853610c83bc1f92fd05417fc2b17837ca1 SHA1 65ea1c11603fa23415872f13085564aad4a1b3cd SHA256 5dfd0a74bc6ef5d57b421be519ee02eeee7db68e8a5b78d97925a397b8c2c2b5
 MD5 3dbd9b9fda75cb50f912f5649be545c8 plotutils-2.4.1-r3.ebuild 2618
+RMD160 3c4ad5853610c83bc1f92fd05417fc2b17837ca1 plotutils-2.4.1-r3.ebuild 2618
+SHA256 5dfd0a74bc6ef5d57b421be519ee02eeee7db68e8a5b78d97925a397b8c2c2b5 plotutils-2.4.1-r3.ebuild 2618
+EBUILD plotutils-2.4.1-r4.ebuild 2626 RMD160 a415fdebac59fc69cd036cf24f8f7277a70c1cad SHA1 14d15709f0f9de4e8b95aa50b8d720acf80f0cf6 SHA256 82a8f046dbd87b210290d8d707646efbe108521dda600ab9eb3c48de7d7015a4
 MD5 7a6cf62eaad3168fbf6f504594e0e397 plotutils-2.4.1-r4.ebuild 2626
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
-
-iD8DBQFEda03K3VlI3Kj19sRArB9AKCkM+RC43k1IeEEIDyj4e4J9fGzdgCbB0jd
-cKN2iCx/09o7MEFFQlQykVc=
-=w2Dw
------END PGP SIGNATURE-----
+RMD160 a415fdebac59fc69cd036cf24f8f7277a70c1cad plotutils-2.4.1-r4.ebuild 2626
+SHA256 82a8f046dbd87b210290d8d707646efbe108521dda600ab9eb3c48de7d7015a4 plotutils-2.4.1-r4.ebuild 2626
+MISC ChangeLog 3274 RMD160 5ab90bf64de4f45e64ef6a29132925fa5aaac80c SHA1 30b5dcb975c338eb26cff1b74de63d9f8c048ec5 SHA256 c59ed5f97a2d9fdfe36b9a8258ef6fb4c906611b59410439c6a4c16675d2d737
+MD5 d525d843b67ef3256f48bc6f8e84152b ChangeLog 3274
+RMD160 5ab90bf64de4f45e64ef6a29132925fa5aaac80c ChangeLog 3274
+SHA256 c59ed5f97a2d9fdfe36b9a8258ef6fb4c906611b59410439c6a4c16675d2d737 ChangeLog 3274
+MISC metadata.xml 161 RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 SHA1 209c6a46e4cdd891980115e42ba419e3799f8088 SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76
+MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+RMD160 1e5b1e42553c8869b93c4a5448e9a2a2ed9fe525 metadata.xml 161
+SHA256 7c85e6739a71f5bb23e8de36c88677d772946e61f7285892f7554e37bd2bca76 metadata.xml 161
+MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r2 68
+RMD160 f78fa89af4233fdbc82556cf2ee9655b1100abd2 files/digest-plotutils-2.4.1-r2 68
+SHA256 add07a2da60ecc74a18ba466758325115f8e5afd38a52bea0c21853216ce1cd8 files/digest-plotutils-2.4.1-r2 68
+MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r3 68
+RMD160 f78fa89af4233fdbc82556cf2ee9655b1100abd2 files/digest-plotutils-2.4.1-r3 68
+SHA256 add07a2da60ecc74a18ba466758325115f8e5afd38a52bea0c21853216ce1cd8 files/digest-plotutils-2.4.1-r3 68
+MD5 f41fecf24623ef77206e245d09f7c9da files/digest-plotutils-2.4.1-r4 68
+RMD160 f78fa89af4233fdbc82556cf2ee9655b1100abd2 files/digest-plotutils-2.4.1-r4 68
+SHA256 add07a2da60ecc74a18ba466758325115f8e5afd38a52bea0c21853216ce1cd8 files/digest-plotutils-2.4.1-r4 68
