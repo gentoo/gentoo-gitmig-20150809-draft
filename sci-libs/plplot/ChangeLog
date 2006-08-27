@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.6 2006/06/11 10:42:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.7 2006/08/27 08:18:00 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/plplot-5.3.1-gcc-3.4-fix.patch, -plplot-5.3.1.ebuild:
+  clean out older, non-modX ebuild
 
   11 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> plplot-5.5.2.ebuild:
   Bug #119388, fix plplot for modular-X. This ebuild is a big mess, and
