@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.5.ebuild,v 1.2 2006/06/27 13:28:34 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.9.5.ebuild,v 1.3 2006/08/27 23:44:01 leio Exp $
 
 inherit gnome2 eutils
 
@@ -92,6 +92,12 @@ DOCS="AUTHORS COPYING ChangeLog DOCUMENTERS INSTALL INTERNALS \
 
 export GST_INSPECT=/bin/true
 USE_DESTDIR=1
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}/${P}-dbus-0.90.patch"
 }
 
 src_compile() {
