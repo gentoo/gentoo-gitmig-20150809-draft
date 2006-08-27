@@ -1,0 +1,36 @@
+--- pbbuttonsd-0.7.8.orig/configure.in	2006-07-31 10:08:31.000000000 +0200
++++ pbbuttonsd-0.7.8/configure.in	2006-08-27 21:36:25.000000000 +0200
+@@ -81,9 +81,7 @@
+ pbb_with_ibam=yes
+ AC_ARG_WITH(ibam, [  --with-ibam             enable IBAM support in pbbuttonsd (default=yes)],
+ 	pbb_with_ibam=$withval, )
+-if test "$pbb_with_ibam" == "yes"; then
+-	AC_DEFINE_UNQUOTED(WITH_IBAM, 1, [enable IBAM support])
+-fi
++AM_CONDITIONAL(WITH_IBAM, test "$pbb_with_ibam" = yes)
+ 
+ dnl Conditionals
+ AM_CONDITIONAL(DEBUG, test "$enable_debug" = yes)
+--- pbbuttonsd-0.7.8.orig/src/Makefile.am	2006-07-22 19:25:39.000000000 +0200
++++ pbbuttonsd-0.7.8/src/Makefile.am	2006-08-27 21:40:53.000000000 +0200
+@@ -4,6 +4,10 @@
+ 
+ bin_PROGRAMS = pbbuttonsd
+ 
++if WITH_IBAM
++IBAM = ibam_stub.cpp ibam_stub.h ibam.hpp ibam.inl
++endif
++
+ pbbuttonsd_SOURCES = \
+ 	pbbuttonsd.c \
+ 	init.c init.h systems.h \
+@@ -20,8 +24,7 @@
+ 	module_alsamixer.c module_alsamixer.h \
+ 	module_peep.c module_peep.h \
+ 	tcp.c tcp.h gettext_macros.h pbbinput.h \
+-	debug.h \
+-	ibam_stub.cpp ibam_stub.h ibam.hpp ibam.inl
++	debug.h $(IBAM)
+ 
+ pbbuttonsd_LDADD = -lpbb $(INTLLIBS) $(ALSA_LIBS) @PACKAGE_LIBS@
+ pbbuttonsd_LDFLAGS = -L$(top_srcdir)/libpbbipc
