@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5789 2006/08/27 18:24:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5790 2006/08/27 20:52:37 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1130,10 +1130,6 @@ app-backup/mondo-rescue
 # or aren't ready yet, e.g. Sangoma Wanpipe drivers.
 >=net-misc/wanpipe-2.3.2_p4
 >=net-misc/asterisk-oh323-0.7.3
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (07 Nov 2005)
-# Masking Nini for initial import
-=dev-dotnet/nini-1.0.0
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Previous SCons upgrade broke lots of packages, so latest version is getting some testing first!
