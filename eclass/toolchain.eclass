@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.304 2006/08/27 18:01:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.305 2006/08/27 20:53:11 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1027,8 +1027,10 @@ gcc_src_unpack() {
 
 	${ETYPE}_src_unpack || die "failed to ${ETYPE}_src_unpack"
 
-	# enable protoize / unprotoize
-	sed -i -e '/^LANGUAGES =/s:$: proto:' "${S}"/gcc/Makefile.in
+	if ! is_crosscompile ; then
+		# enable protoize / unprotoize
+		sed -i -e '/^LANGUAGES =/s:$: proto:' "${S}"/gcc/Makefile.in
+	fi
 
 	fix_files=""
 	for x in contrib/test_summary libstdc++-v3/scripts/check_survey.in ; do
@@ -1723,6 +1725,8 @@ gcc-compiler_src_install() {
 			&& rm -r "${D}/${DATAPATH}"/man \
 			|| prepman "${DATAPATH}"
 	fi
+	# prune empty dirs left behind
+	find "${D}" -type d | xargs rmdir >& /dev/null
 
 	# Rather install the script, else portage with changing $FILESDIR
 	# between binary and source package borks things ....
