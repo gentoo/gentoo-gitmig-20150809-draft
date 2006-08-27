@@ -1,5 +1,0 @@
-MD5 d76042cb056a09fc3e544193b478c825 torque-1.2.0p5.tar.gz 2322590
-MD5 d92cc9e8b1d5af38457abc6137bf1b4d torque-1.2.0_p1-respect-destdir.patch.gz 3456
-MD5 a1b825dcf759b97ca78cd5a00d5ecbf0 torque-1.2.0_p1-respect-ldflags.patch.gz 717
-MD5 e55ec294bb0af1fb9b1f7ebe2571f02d torque-1.2.0p5-jobnanny.patch 8853
-MD5 0f24a10ecabc81d458b0ff82c7e36c52 torque-1.2.0p5-jobdepterm2.patch 1421

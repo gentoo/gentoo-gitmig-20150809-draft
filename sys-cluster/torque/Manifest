@@ -1,13 +1,39 @@
-MD5 ff452d888be67ec2bcdcfe034b36b8ee ChangeLog 5069
-MD5 49d4d243a6dd96ba20531b240a7a32b6 files/digest-torque-1.0.1_p6 67
-MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5 379
-MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5-r1 379
-MD5 adbab62f042d0b9846c930da5ca238a3 files/digest-torque-1.2.0_p5-r2 379
+AUX pbs.rc 2138 RMD160 613c0c049393583f9bf6068ddc0b6be7f1cedb21 SHA1 acc6b023100c66d8af66912230b8d77dfc350e95 SHA256 a67daa2540e5b61236854f841859c7335f7d2a4e220da5b06a8ad780fc40cc24
 MD5 aa9daa3694ffc472849365fdda73b0f9 files/pbs.rc 2138
+RMD160 613c0c049393583f9bf6068ddc0b6be7f1cedb21 files/pbs.rc 2138
+SHA256 a67daa2540e5b61236854f841859c7335f7d2a4e220da5b06a8ad780fc40cc24 files/pbs.rc 2138
+AUX torque-1.2.0_p5-destdir-fixes.patch 447 RMD160 806875441422d1ee2f7f5dcbbceab769c291897a SHA1 bd007f7efab68c6700cce2eef4561c9d8ff9cf9e SHA256 063c8b62781e6c7ed9abd11554b1387fc27f697c56dfb51c33289628ac3ee7f8
 MD5 eceaf7e310f5464403b6180dbbf9a892 files/torque-1.2.0_p5-destdir-fixes.patch 447
+RMD160 806875441422d1ee2f7f5dcbbceab769c291897a files/torque-1.2.0_p5-destdir-fixes.patch 447
+SHA256 063c8b62781e6c7ed9abd11554b1387fc27f697c56dfb51c33289628ac3ee7f8 files/torque-1.2.0_p5-destdir-fixes.patch 447
+AUX torque-1.2.0_p5-setuid-safety.patch 823 RMD160 239711cc334f564970ffc7d45ebdcaee4ed06276 SHA1 9c8516c6e5247ed4a3df15b2d272017c0209e856 SHA256 663cf4aeb9cb167b551e89295dab7dff8631ce8535313a8c1b07110e15a680a2
 MD5 271d60925bb60edca8249e8bc0657fa8 files/torque-1.2.0_p5-setuid-safety.patch 823
-MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
-MD5 6f5db7991fecbb7e58833b6e4f8b30ee torque-1.0.1_p6.ebuild 1908
+RMD160 239711cc334f564970ffc7d45ebdcaee4ed06276 files/torque-1.2.0_p5-setuid-safety.patch 823
+SHA256 663cf4aeb9cb167b551e89295dab7dff8631ce8535313a8c1b07110e15a680a2 files/torque-1.2.0_p5-setuid-safety.patch 823
+DIST torque-1.2.0_p1-respect-destdir.patch.gz 3456
+DIST torque-1.2.0_p1-respect-ldflags.patch.gz 717
+DIST torque-1.2.0p5-jobdepterm2.patch 1421
+DIST torque-1.2.0p5-jobnanny.patch 8853
+DIST torque-1.2.0p5.tar.gz 2322590
+EBUILD torque-1.2.0_p5-r1.ebuild 4832 RMD160 be0d66ad4e29e6432122f6600a9f21e67da97268 SHA1 b7f850414bc80ddb2d6a53cd3f038442a03de49d SHA256 c91dd57be9bacea0879a9bd33fb9c02dbe836ac3b73d87444c807d2b695deb7e
 MD5 8190b89a2fc8bb899fc6c42ca2220f15 torque-1.2.0_p5-r1.ebuild 4832
+RMD160 be0d66ad4e29e6432122f6600a9f21e67da97268 torque-1.2.0_p5-r1.ebuild 4832
+SHA256 c91dd57be9bacea0879a9bd33fb9c02dbe836ac3b73d87444c807d2b695deb7e torque-1.2.0_p5-r1.ebuild 4832
+EBUILD torque-1.2.0_p5-r2.ebuild 4885 RMD160 84646b61bf0d1e3ead7f6c0c23018a7ffb9b3d97 SHA1 faec1314cca73063e7ad2936f5d580f144f15f30 SHA256 a2e4fe8eedcaac6033233c091e5c42242863e8a2bf1a18d74d2d83f19587a2e6
 MD5 3d491a9ae775b0476c29ad4c9b6b72e6 torque-1.2.0_p5-r2.ebuild 4885
-MD5 72956cfb24805eaeee0df78dde48b8a3 torque-1.2.0_p5.ebuild 4518
+RMD160 84646b61bf0d1e3ead7f6c0c23018a7ffb9b3d97 torque-1.2.0_p5-r2.ebuild 4885
+SHA256 a2e4fe8eedcaac6033233c091e5c42242863e8a2bf1a18d74d2d83f19587a2e6 torque-1.2.0_p5-r2.ebuild 4885
+MISC ChangeLog 5220 RMD160 7c82d2712c50b31111c59102f5d4eb477fe574c5 SHA1 16d7830a0373042f2c01357d8a200b2e1ddf514f SHA256 099ef8168c0774b74ce3346cec08af6ed48938958a5172753e5b469106ec81e8
+MD5 1a6705ee8eae95a6ca080fce08991425 ChangeLog 5220
+RMD160 7c82d2712c50b31111c59102f5d4eb477fe574c5 ChangeLog 5220
+SHA256 099ef8168c0774b74ce3346cec08af6ed48938958a5172753e5b469106ec81e8 ChangeLog 5220
+MISC metadata.xml 160 RMD160 1233ca29861ca7c47f0b09d1d7a29def80f7df02 SHA1 1bfdc9d282a84c95e2bdcda19ace5b94e2e67349 SHA256 56717bdb03ad5d833acecfbc612a67f569256b328bf610fbc6cc33714186dae9
+MD5 cde8b4e93c9339eb99fe3ad45941c99b metadata.xml 160
+RMD160 1233ca29861ca7c47f0b09d1d7a29def80f7df02 metadata.xml 160
+SHA256 56717bdb03ad5d833acecfbc612a67f569256b328bf610fbc6cc33714186dae9 metadata.xml 160
+MD5 fecc46e66800def43afc2718cfc6f428 files/digest-torque-1.2.0_p5-r1 379
+RMD160 fdc00e8cef83b901fa0459fc7e4b80416d7d57e1 files/digest-torque-1.2.0_p5-r1 379
+SHA256 1bb8088df7029eb098555379c63598ffa0ece034a206bb6601ad163883c24bdf files/digest-torque-1.2.0_p5-r1 379
+MD5 adbab62f042d0b9846c930da5ca238a3 files/digest-torque-1.2.0_p5-r2 379
+RMD160 6af7d90ca6bd7f1d40287a7732ce2f12ced929ea files/digest-torque-1.2.0_p5-r2 379
+SHA256 f723052bf7d9a78b5332d74a5fd9ed07309137bc2aa4f6ff965dd00400b40e7f files/digest-torque-1.2.0_p5-r2 379
