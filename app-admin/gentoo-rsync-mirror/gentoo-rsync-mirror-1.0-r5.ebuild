@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.1 2005/07/28 22:31:42 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.2 2006/08/27 10:14:46 tantive Exp $
 
 DESCRIPTION="Ebuild for setting up a Gentoo rsync mirror"
 HOMEPAGE="http://www.gentoo.org/doc/en/rsync.xml"
@@ -32,8 +32,11 @@ pkg_postinst() {
 	einfo "The rsync-mirror is now installed into /opt/gentoo-rsync"
 	einfo "The local portage copy resides in      /opt/gentoo-rsync/portage"
 	einfo "Please change /opt/gentoo-rsync/rsync-gentoo-portage.sh for"
-	einfo "configuration of your main rsync server and use it so sync."
+	einfo "configuration of your main rsync server and use it to sync."
 	einfo "Change /etc/rsync/rsyncd.motd to display your correct alias."
+	einfo
+	einfo "RSYNC_OPTS="--config=/etc/rsync/rsyncd.conf" needs"
+	einfo "to be set in /etc/conf.d/rsyncd to make allow syncing."
 	einfo
 	einfo "The service can be started using /etc/init.d/rsyncd start"
 	einfo "If you are setting up an official mirror, don't forget to add"

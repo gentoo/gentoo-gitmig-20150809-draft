@@ -1,11 +1,52 @@
-MD5 a41e5a3c12ca49ba8b5f6a4f0418dba2 ChangeLog 3536
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoo-rsync-mirror-1.0-r4 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gentoo-rsync-mirror-1.0-r5 0
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gentoo-mirror.conf 456 RMD160 a4490580cb06616b3157885efaf185ff717e81ab SHA1 8a801ab4c91395322b06967fb5b6d6af2529ffa5 SHA256 8b1bb6f2d49d6eefc2280a926641aeb3f71e58636e061304dacfa502ef5312fa
 MD5 2772b1fe18c7c54ea201fa2a7dd2f19b files/gentoo-mirror.conf 456
+RMD160 a4490580cb06616b3157885efaf185ff717e81ab files/gentoo-mirror.conf 456
+SHA256 8b1bb6f2d49d6eefc2280a926641aeb3f71e58636e061304dacfa502ef5312fa files/gentoo-mirror.conf 456
+AUX rsync-gentoo-portage.sh 332 RMD160 7a1bad70fdab3e42efe60655f75c35bb8b2e8032 SHA1 b1daf28538c19a783e0c4fb19a093081be85f8db SHA256 cbae155745aa8c857985729c2a0d35ed515eb039a90a2a50488997c96158df67
 MD5 d4e3d32881192578375e5be82ce57860 files/rsync-gentoo-portage.sh 332
+RMD160 7a1bad70fdab3e42efe60655f75c35bb8b2e8032 files/rsync-gentoo-portage.sh 332
+SHA256 cbae155745aa8c857985729c2a0d35ed515eb039a90a2a50488997c96158df67 files/rsync-gentoo-portage.sh 332
+AUX rsyncd.conf 735 RMD160 935f203e6434becccddd6558eb188457c3919814 SHA1 ba9bf6e67cc82bedb5f1f163490b67c4f156a22c SHA256 5546947286d1e790955dd362bf0c40faddab4ee44e779cab7a0809cf88fef0ed
 MD5 4047d0e8a4cc37326c8f37d873b7ec09 files/rsyncd.conf 735
+RMD160 935f203e6434becccddd6558eb188457c3919814 files/rsyncd.conf 735
+SHA256 5546947286d1e790955dd362bf0c40faddab4ee44e779cab7a0809cf88fef0ed files/rsyncd.conf 735
+AUX rsyncd.motd 44 RMD160 f4c139fdb199805c17713eac86f31a443d603188 SHA1 dddbef0a6786ca8a2ef2661f4e73f34cc88c1263 SHA256 38c8ed04808ce0f5c0deba00be8f14412de3b76e34ff5c0f5bf01d217f0dbc76
 MD5 508f4e735f2fbacd4a123c002c72e545 files/rsyncd.motd 44
+RMD160 f4c139fdb199805c17713eac86f31a443d603188 files/rsyncd.motd 44
+SHA256 38c8ed04808ce0f5c0deba00be8f14412de3b76e34ff5c0f5bf01d217f0dbc76 files/rsyncd.motd 44
+AUX rsynclogparse-extended.pl 3476 RMD160 afaa54076cc517bb1798c9f77b6d7c96d3abb99e SHA1 faa5ec7019bc4124d2717cfc53b8372f49af6211 SHA256 9b496670cc75f9fdd99c29fd3ff88627a4d145f2cdfdb3457b9524d66a702418
 MD5 866f4631fad8ab795f8420dfb8144ffb files/rsynclogparse-extended.pl 3476
+RMD160 afaa54076cc517bb1798c9f77b6d7c96d3abb99e files/rsynclogparse-extended.pl 3476
+SHA256 9b496670cc75f9fdd99c29fd3ff88627a4d145f2cdfdb3457b9524d66a702418 files/rsynclogparse-extended.pl 3476
+EBUILD gentoo-rsync-mirror-1.0-r4.ebuild 2078 RMD160 7da570ed80800a22a4e3f5c3375cef5d358dadd6 SHA1 92557155e53d86e32f0bb3eef8ccef97ec77d4cc SHA256 bfac0cf008c2f2727bcecb3e90a1f4986d97702c0975e20e82f0c2c1e7beae6a
 MD5 08937a7a02842993fe5e66eece85855b gentoo-rsync-mirror-1.0-r4.ebuild 2078
-MD5 84cc96121196f35feb938e24b4e912b8 gentoo-rsync-mirror-1.0-r5.ebuild 2086
+RMD160 7da570ed80800a22a4e3f5c3375cef5d358dadd6 gentoo-rsync-mirror-1.0-r4.ebuild 2078
+SHA256 bfac0cf008c2f2727bcecb3e90a1f4986d97702c0975e20e82f0c2c1e7beae6a gentoo-rsync-mirror-1.0-r4.ebuild 2078
+EBUILD gentoo-rsync-mirror-1.0-r5.ebuild 2217 RMD160 58315236c851449c0acf91752598cb7adbe29a66 SHA1 688978a10a6f004758d7bc0ed543f816ab28c714 SHA256 13f54ff6b6595c9aaff61023f14d0178cbf532bcdbe488a5a85ede3527aaac7c
+MD5 cba12f68b2530969c9c12320da1aaeaa gentoo-rsync-mirror-1.0-r5.ebuild 2217
+RMD160 58315236c851449c0acf91752598cb7adbe29a66 gentoo-rsync-mirror-1.0-r5.ebuild 2217
+SHA256 13f54ff6b6595c9aaff61023f14d0178cbf532bcdbe488a5a85ede3527aaac7c gentoo-rsync-mirror-1.0-r5.ebuild 2217
+MISC ChangeLog 3670 RMD160 8c7b644cf9ba15520e71dccfeb2fb3d464bf0317 SHA1 6c32a32dd27d4e823da848bd61f8ffc4ef6ddf22 SHA256 23c1af6f14960c6ecee862b6adb72baf4060747c915281b3457023a1bcc78d64
+MD5 396e46eb71079c1d76fe82b448f5f863 ChangeLog 3670
+RMD160 8c7b644cf9ba15520e71dccfeb2fb3d464bf0317 ChangeLog 3670
+SHA256 23c1af6f14960c6ecee862b6adb72baf4060747c915281b3457023a1bcc78d64 ChangeLog 3670
+MISC metadata.xml 291 RMD160 129ae108d95ac001021022657067cce029ab8d95 SHA1 39746640cb9155ed2e991047fdae56cd16ced989 SHA256 c3eb7344dfca678cfee47368651a674e13070f1f62656697ab3168ba04e611c8
 MD5 d2daa22c953834b3854c99417e6f0a19 metadata.xml 291
+RMD160 129ae108d95ac001021022657067cce029ab8d95 metadata.xml 291
+SHA256 c3eb7344dfca678cfee47368651a674e13070f1f62656697ab3168ba04e611c8 metadata.xml 291
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gentoo-rsync-mirror-1.0-r4 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gentoo-rsync-mirror-1.0-r4 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gentoo-rsync-mirror-1.0-r4 1
+MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-gentoo-rsync-mirror-1.0-r5 1
+RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-gentoo-rsync-mirror-1.0-r5 1
+SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-gentoo-rsync-mirror-1.0-r5 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFE8XC/KtJO8LeSoosRAhodAKCJSJhq3oKYvjZhP5ZBKYslfA8ZkQCbBgqI
+kBhwTk048lYherkGASQdL2c=
+=ZYBs
+-----END PGP SIGNATURE-----

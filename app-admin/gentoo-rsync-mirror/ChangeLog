@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.28 2005/12/29 00:11:49 tantive Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.29 2006/08/27 10:14:46 tantive Exp $
+
+  27 Aug 2006; Michael Imhof <tantive@gentoo.org>
+  gentoo-rsync-mirror-1.0-r5.ebuild:
+  Config information updated. Closes #130896.
 
   29 Dec 2005; Michael Imhof <tantive@gentoo.org>
   files/rsync-gentoo-portage.sh:
