@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/gmanedit-0.3.3-r3.ebuild,v 1.7 2005/04/21 18:22:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/gmanedit-0.3.3-r3.ebuild,v 1.8 2006/08/27 16:24:35 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,18 +13,25 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-DEPEND="virtual/x11
-	>=gnome-base/gnome-libs-1.4.1.4"
+DEPEND=">=gnome-base/gnome-libs-1.4.1.4
+	|| (
+	( >=x11-libs/libX11-1.0.0
+	>=x11-libs/libICE-1.0.0
+	>=x11-libs/libXext-1.0.0
+	>=x11-libs/libSM-1.0.0
+	>=x11-libs/gtk+-1.2.10-r11
+	>=x11-libs/libXi-1.0.0 )
+	virtual/x11 )"
 
 S=${WORKDIR}/${P}.orig
 
 src_compile() {
-	epatch ${FILESDIR}/${P}-xterm.patch
+	epatch "${FILESDIR}"/${P}-xterm.patch
 	econf --disable-nls || die "econf failed"
 	make || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog TODO README NEWS
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog TODO README NEWS
 }

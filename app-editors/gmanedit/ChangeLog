@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gmanedit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/ChangeLog,v 1.10 2006/01/21 02:10:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/ChangeLog,v 1.11 2006/08/27 16:24:35 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  gmanedit-0.3.3-r3.ebuild, gmanedit-0.3.3-r4.ebuild:
+  modX deps from gmanedit-0.3.3-r4
 
 *gmanedit-0.3.3-r4 (21 Jan 2006)
 

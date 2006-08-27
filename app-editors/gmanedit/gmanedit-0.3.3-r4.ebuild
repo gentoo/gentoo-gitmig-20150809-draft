@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/gmanedit-0.3.3-r4.ebuild,v 1.1 2006/01/21 02:10:00 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gmanedit/gmanedit-0.3.3-r4.ebuild,v 1.2 2006/08/27 16:24:35 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-#virtual/x11
 DEPEND=">=gnome-base/gnome-libs-1.4.1.4
 	|| (
 	( >=x11-libs/libX11-1.0.0
@@ -24,7 +23,7 @@ DEPEND=">=gnome-base/gnome-libs-1.4.1.4
 	>=x11-libs/libXi-1.0.0 )
 	virtual/x11 )"
 
-S="${WORKDIR}/${P}.orig"
+S=${WORKDIR}/${P}.orig
 
 src_compile() {
 	epatch "${FILESDIR}"/${P}-xterm.patch
