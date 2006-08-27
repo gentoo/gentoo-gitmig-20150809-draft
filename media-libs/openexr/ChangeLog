@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.40 2006/08/21 19:59:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.41 2006/08/27 20:45:21 weeve Exp $
+
+  27 Aug 2006; Jason Wever <weeve@gentoo.org> openexr-1.2.2-r2.ebuild:
+  Stable on SPARC wrt bug #141248.
 
   21 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   openexr-1.2.2-r2.ebuild:
