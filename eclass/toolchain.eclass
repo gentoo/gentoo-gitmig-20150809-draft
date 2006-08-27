@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.303 2006/08/27 17:52:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.304 2006/08/27 18:01:31 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1657,7 +1657,7 @@ gcc-compiler_src_install() {
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
 		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}
+		cd ${D}${BINPATH}
 		[[ -f jar ]] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
