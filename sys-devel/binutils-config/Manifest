@@ -5,10 +5,10 @@ AUX binutils-config-1.8 10258 RMD160 fbad5dc6fd7a86793edcd960e90e8fab20d8de31 SH
 MD5 1ee464741f34882a1c46c188af729bc1 files/binutils-config-1.8 10258
 RMD160 fbad5dc6fd7a86793edcd960e90e8fab20d8de31 files/binutils-config-1.8 10258
 SHA256 4b39cd5ca2fce451a2abd13e03ed516db21981bb82d15fe29f6a0cb415f07a25 files/binutils-config-1.8 10258
-AUX binutils-config-1.9 10917 RMD160 4700a7f28b03b6a60d8e04e3d996ea77eb28b2b4 SHA1 e185b5cc17afea68caefeb2a73887741576579df SHA256 bde6e3157c3c36af9ce7bfb5b6151f2b157faee9a0d0db7c9f90f4034ab78fac
-MD5 39536d99e0937323a178cd30e45dbf5b files/binutils-config-1.9 10917
-RMD160 4700a7f28b03b6a60d8e04e3d996ea77eb28b2b4 files/binutils-config-1.9 10917
-SHA256 bde6e3157c3c36af9ce7bfb5b6151f2b157faee9a0d0db7c9f90f4034ab78fac files/binutils-config-1.9 10917
+AUX binutils-config-1.9 10917 RMD160 66c082deb6046749c1c43fa71051797dd36b15a4 SHA1 4cedde5fd93dc4c2ce99620c4286acc70ba96ff1 SHA256 00c83ca4149027ef0ba3d63dc0fe6e9adf386e5002593950934774997b2fb4ce
+MD5 03d38146492226d497c5d779a51b86cd files/binutils-config-1.9 10917
+RMD160 66c082deb6046749c1c43fa71051797dd36b15a4 files/binutils-config-1.9 10917
+SHA256 00c83ca4149027ef0ba3d63dc0fe6e9adf386e5002593950934774997b2fb4ce files/binutils-config-1.9 10917
 AUX binutils-config.8 2989 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 SHA1 ea27aae69a152491c9e96f756b6265f68aac6849 SHA256 ffc462de3eaa865f77f00e36275a0a9b0b51782d9d4d5fcfad18583a13adf6e5
 MD5 953efbc2a688428dfb75ecfa3c2d3d43 files/binutils-config.8 2989
 RMD160 afb26717c9466456bbbdf6a3d6b93aeb63ff9416 files/binutils-config.8 2989
@@ -38,7 +38,7 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE8d6QamhnQswr0vIRAhKrAJ9DVEr9H5P55dtUd4C81pgzNG5ILgCfZ13S
-IdkK2zpdJY4Huj7WvFwojro=
-=TekR
+iD8DBQFE8hIjamhnQswr0vIRAiuzAKCbAPRKNzqZVuIXOo8iyIzky6KNjQCgn0Eq
+Zx1yaHhvbaAkV0pK8L8GsH8=
+=G3xm
 -----END PGP SIGNATURE-----

@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.2 2006/08/27 18:03:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.3 2006/08/27 21:43:54 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -125,9 +125,9 @@ switch_profile() {
 	fi
 	# When upgrading, we need to clean up ldscripts and libs
 	rm -rf "${dstlib}/ldscripts"
+	mkdir -p "${dstlib}"
 	find "${dstlib}" -xtype l -exec rm {} \;
 	ln -sf "${LIBPATH}/ldscripts" "${dstlib}/ldscripts"
-	mkdir -p "${dstlib}"
 	for x in lib* ; do
 		ln -sf "${LIBPATH}/${x}" "${dstlib}/${x}"
 	done
@@ -331,7 +331,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-V|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.2 2006/08/27 18:03:47 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.3 2006/08/27 21:43:54 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			bver=${cvsver%%,v *}
 			cvsver=${cvsver#* }
