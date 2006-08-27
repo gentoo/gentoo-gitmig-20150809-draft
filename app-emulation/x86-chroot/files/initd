@@ -25,6 +25,7 @@ start() {
 		[[ -f /etc/${conffile} ]] && cp -pf /etc/${conffile} ${CHROOT_LOCATION}/etc >/dev/null &
 	done
 	cp -Ppf /etc/localtime ${CHROOT_LOCATION}/etc >/dev/null &
+	which xhost &>/dev/null && xhost local:localhost &>/dev/null
 	eend $? "An error occured while attempting to copy 32 bits chroot files."
 }
 

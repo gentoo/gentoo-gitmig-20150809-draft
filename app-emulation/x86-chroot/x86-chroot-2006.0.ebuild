@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.0.ebuild,v 1.1 2006/08/25 13:37:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.0.ebuild,v 1.2 2006/08/27 09:16:28 blubb Exp $
 
 inherit linux-info
 
@@ -11,9 +11,10 @@ SRC_URI="http://distfiles.gentoo.org/releases/x86/${PV}/stages/stage3-i686-${PV}
 LICENSE="GPL-2"
 SLOT="${PV}"
 KEYWORDS="-* ~amd64"
-IUSE=""
+IUSE="X"
 
-RDEPEND="sys-apps/setarch"
+RDEPEND="sys-apps/setarch
+	X? ( x11-apps/xhost )"
 
 CONFIG_CHECK="IA32_EMULATION"
 CHROOT_LOCATION=${CHROOT_LOCATION:-/opt/x86-chroot}
@@ -46,9 +47,6 @@ src_compile() {
 	EOF
 	echo "env-update" >> "${WORKDIR}/${CHROOT_LOCATION}/root/.bashrc"
 	echo "CHROOT_LOCATION=${CHROOT_LOCATION}" >	"${WORKDIR}/${CHROOT_LOCATION}/etc/conf.d/${PN}"
-
-	echo "which xhost &>/dev/null && xhost local:localhost" >> \
-		"${WORKDIR}/${CHROOT_LOCATION}/root/.bashrc"
 }
 
 src_install() {
