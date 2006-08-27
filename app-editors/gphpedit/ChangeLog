@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gphpedit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.12 2006/02/24 00:33:33 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.13 2006/08/27 20:01:57 compnerd Exp $
+
+*gphpedit-0.9.91 (27 Aug 2006)
+
+  27 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +files/gphpedit-0.9.91-empty-apply-prefs.patch, +gphpedit-0.9.91.ebuild:
+  Version bump; should fix the crasher in 0.9.80
 
   24 Feb 2006; John N. Laliberte <allanonjl@gentoo.org>
   gphpedit-0.9.80.ebuild:
