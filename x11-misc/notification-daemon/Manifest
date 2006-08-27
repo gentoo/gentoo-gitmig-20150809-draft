@@ -2,6 +2,10 @@ AUX notification-daemon-0.3.5-icon-data.patch 1968 RMD160 c782a6dc51e407b15192d8
 MD5 fad34100a2397e2115ed59b29237d93c files/notification-daemon-0.3.5-icon-data.patch 1968
 RMD160 c782a6dc51e407b15192d80d6a2ce7badd84e76f files/notification-daemon-0.3.5-icon-data.patch 1968
 SHA256 089ffbc7032a8c747ca9b0044bb2359fe3d114eca0fab43f01815ba114e6c9b3 files/notification-daemon-0.3.5-icon-data.patch 1968
+AUX notification-daemon-0.3.5-unrealize-in-destroy.patch 398 RMD160 2721edbc148944188b42ac437a0b60482582ddc1 SHA1 33eb323f08c5afb4fda282228d453a65b180f0f0 SHA256 17090a40d6a4e8dbc5d426c982701e218e1a629e5e3fcc82b28b5d745eab55b3
+MD5 e3cd7b2268b5f4e27e6974ead91381e7 files/notification-daemon-0.3.5-unrealize-in-destroy.patch 398
+RMD160 2721edbc148944188b42ac437a0b60482582ddc1 files/notification-daemon-0.3.5-unrealize-in-destroy.patch 398
+SHA256 17090a40d6a4e8dbc5d426c982701e218e1a629e5e3fcc82b28b5d745eab55b3 files/notification-daemon-0.3.5-unrealize-in-destroy.patch 398
 DIST notification-daemon-0.3.4.tar.gz 381647 RMD160 b0332dd595102037f179d86e43fd1061042a3e3e SHA1 249205579d4efedb301c47ddd9716c67af707fcc SHA256 4da6ff803816bdacfd35f5e734172b79220f229916efc739857cc5baad6feb87
 DIST notification-daemon-0.3.5.tar.gz 383582 RMD160 5251ce4dcc2ae3cc637077ea71eb65a17c9102b4 SHA1 c8aa3b601db6d8b00cd9f4227fff146b8259eb71 SHA256 83a15eb99bb7a895d52e31be1c1548789a8bc29e83d30e758cf034a6627a1184
 EBUILD notification-daemon-0.3.4-r1.ebuild 737 RMD160 b99867315e5796fcdc681a3c163243c7b255f9ef SHA1 3440d2a6fc70562e047443b92ddeedf9ffa09fd9 SHA256 daed17056a0a044a06933e023acf4562b5d44f248fc80fb917b7e1024d130eef
@@ -16,14 +20,18 @@ EBUILD notification-daemon-0.3.5-r1.ebuild 845 RMD160 48ba6b6fa7e0f13b7358f9215a
 MD5 5b80cb88859a913ead8d2b3deab101d6 notification-daemon-0.3.5-r1.ebuild 845
 RMD160 48ba6b6fa7e0f13b7358f9215a416a9e84d8eeec notification-daemon-0.3.5-r1.ebuild 845
 SHA256 7bd40b6c6c5c88539cdaf68ac914f338fff5ca22c0b54a46fd492f48856aa07e notification-daemon-0.3.5-r1.ebuild 845
+EBUILD notification-daemon-0.3.5-r2.ebuild 904 RMD160 e41879d02c88c53e55f707b359ce6bfc2ca6d818 SHA1 d196193e1b66693b5c5f4622102f7de00935c4a4 SHA256 6f2eacb9ebeb7daf468c33d60f22f9eb0b5d5c8d8162a3a6b3b9833624ac9e2e
+MD5 b2fa7724615e337fa8d9d86ed6046c20 notification-daemon-0.3.5-r2.ebuild 904
+RMD160 e41879d02c88c53e55f707b359ce6bfc2ca6d818 notification-daemon-0.3.5-r2.ebuild 904
+SHA256 6f2eacb9ebeb7daf468c33d60f22f9eb0b5d5c8d8162a3a6b3b9833624ac9e2e notification-daemon-0.3.5-r2.ebuild 904
 EBUILD notification-daemon-0.3.5.ebuild 743 RMD160 01cdd3bf7ef5b9bf0b6bca51374634f9684f978a SHA1 c12422b3202ace869a0b39635484987f376fcbb0 SHA256 ada06c24092db2008b4d01378f80b9eb8a30f9a4958043d9e53bdc9ec45ac17f
 MD5 2b9ea7b124f541c7108e8a1e9252210e notification-daemon-0.3.5.ebuild 743
 RMD160 01cdd3bf7ef5b9bf0b6bca51374634f9684f978a notification-daemon-0.3.5.ebuild 743
 SHA256 ada06c24092db2008b4d01378f80b9eb8a30f9a4958043d9e53bdc9ec45ac17f notification-daemon-0.3.5.ebuild 743
-MISC ChangeLog 2194 RMD160 ff05eeac9effe40acab3943b243c77968322a521 SHA1 9d3ee7ba4fc3abdfe22e8ac7d73b6c30b6a8e841 SHA256 ebc2b36a8031b78c38db6b9f155f737ce5fc6452036b086432d713217aa39631
-MD5 c0062dc35c4f54960e6ebd57f01ae5b4 ChangeLog 2194
-RMD160 ff05eeac9effe40acab3943b243c77968322a521 ChangeLog 2194
-SHA256 ebc2b36a8031b78c38db6b9f155f737ce5fc6452036b086432d713217aa39631 ChangeLog 2194
+MISC ChangeLog 2439 RMD160 08b9de5966d439eed1a4185bbef9b328b2357528 SHA1 a2fc0d8731c9c14f02ecfc031e3139900cf51b64 SHA256 ca01df08c0af7415f6246d1846c090f11ec0d153433f11bb669e705a7c8b5eaa
+MD5 82e8c3a999066e5b6671f0c856bbdd5c ChangeLog 2439
+RMD160 08b9de5966d439eed1a4185bbef9b328b2357528 ChangeLog 2439
+SHA256 ca01df08c0af7415f6246d1846c090f11ec0d153433f11bb669e705a7c8b5eaa ChangeLog 2439
 MISC metadata.xml 309 RMD160 41a011e8c4aa3b21a2dd17d07d4169816141fb8a SHA1 49d26a613994ed1e423d9200bf3b66592c0760c5 SHA256 37dfe8555749481a6f02759a7ad6c2961e71283013c9c9be94f57aa6e1358bfb
 MD5 d16211c4cb4eb6ad762a7b3481d04417 metadata.xml 309
 RMD160 41a011e8c4aa3b21a2dd17d07d4169816141fb8a metadata.xml 309
@@ -40,3 +48,6 @@ SHA256 1d2ae8dc681259b79fef9389f33814a4711f8b4645b6500827a724fdb98352a6 files/di
 MD5 77be27dd98520db6b4e619d28ec66f27 files/digest-notification-daemon-0.3.5-r1 277
 RMD160 7545897f58ee23580e5994577d8d228f1303e1a4 files/digest-notification-daemon-0.3.5-r1 277
 SHA256 1d2ae8dc681259b79fef9389f33814a4711f8b4645b6500827a724fdb98352a6 files/digest-notification-daemon-0.3.5-r1 277
+MD5 77be27dd98520db6b4e619d28ec66f27 files/digest-notification-daemon-0.3.5-r2 277
+RMD160 7545897f58ee23580e5994577d8d228f1303e1a4 files/digest-notification-daemon-0.3.5-r2 277
+SHA256 1d2ae8dc681259b79fef9389f33814a4711f8b4645b6500827a724fdb98352a6 files/digest-notification-daemon-0.3.5-r2 277

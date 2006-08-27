@@ -1,0 +1,12 @@
+--- notification-daemon-0.3.5/src/daemon.c	2006/07/25 23:15:28	1.1
++++ notification-daemon-0.3.5/src/daemon.c	2006/07/25 23:17:19
+@@ -658,6 +658,9 @@ _remove_bubble_from_poptart_stack(GtkWin
+ 		priv->poptart_stack = g_slist_remove_link(priv->poptart_stack,
+ 												  remove_link);
+ 	}
++
++	if (GTK_WIDGET_REALIZED (GTK_WIDGET (nw)))
++		gtk_widget_unrealize (GTK_WIDGET (nw));
+ }
+ 
+ static void
