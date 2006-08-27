@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.26 2006/08/20 21:18:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.62.ebuild,v 1.27 2006/08/27 21:20:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -58,7 +58,7 @@ src_install() {
 	doins conf/pwdb.conf
 
 	dodoc CHANGES CREDITS README
-	dohtml -r doc
+	dohtml -r doc/html/*
 	docinto txt
 	dodoc doc/*.txt
 }
