@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cpphs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.12 2006/08/25 15:58:58 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.13 2006/08/27 21:30:12 wormo Exp $
+
+  27 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> cpphs-1.2.ebuild:
+  mark ~ppc (related to Bug #144678, though not specifically requested...)
 
   25 Aug 2006; Ferris McCormick <fmccor@gentoo.org> cpphs-1.2.ebuild:
   Stable on s-arc --- Bug #144678 --- installs and runs all tests.

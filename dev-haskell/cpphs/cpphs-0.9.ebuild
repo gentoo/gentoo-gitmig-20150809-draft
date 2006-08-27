@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/cpphs-0.9.ebuild,v 1.2 2005/10/04 15:16:51 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/cpphs-0.9.ebuild,v 1.3 2006/08/27 21:30:12 wormo Exp $
 
 inherit eutils ghc-package
 
