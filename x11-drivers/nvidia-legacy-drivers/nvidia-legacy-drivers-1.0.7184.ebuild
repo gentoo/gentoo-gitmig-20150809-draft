@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.1 2006/08/25 05:16:00 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.2 2006/08/27 08:25:07 dberkholz Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -26,7 +26,6 @@ RESTRICT="nostrip multilib-pkg-force"
 DEPEND="virtual/linux-sources"
 RDEPEND="virtual/modutils
 	 || ( x11-base/xorg-server virtual/x11 )
-	 !>=x11-base/xorg-server-1.0.99
 	 || ( media-libs/mesa virtual/x11 )
 	 app-admin/eselect-opengl
 	 kernel_linux? ( !media-video/nvidia-kernel )
