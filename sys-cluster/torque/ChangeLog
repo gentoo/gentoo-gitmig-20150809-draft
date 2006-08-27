@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.27 2006/08/27 05:40:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.28 2006/08/27 05:47:05 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  torque-1.2.0_p5-r1.ebuild:
+  modX deps from torque-1.2.0_p5-r2
 
   27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -torque-1.0.1_p6.ebuild, -torque-1.2.0_p5.ebuild:
