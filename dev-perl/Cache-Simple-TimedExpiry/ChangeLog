@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Cache-Simple-TimedExpiry
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Simple-TimedExpiry/ChangeLog,v 1.13 2006/08/21 12:16:23 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Simple-TimedExpiry/ChangeLog,v 1.14 2006/08/27 14:46:48 mcummings Exp $
+
+*Cache-Simple-TimedExpiry-0.26 (27 Aug 2006)
+
+  27 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  +Cache-Simple-TimedExpiry-0.26.ebuild:
+  Version bump
 
 *Cache-Simple-TimedExpiry-0.24 (21 Aug 2006)
 
