@@ -1,0 +1,44 @@
+diff -Naur e-uae-0.8.29-CVS.orig/configure.in e-uae-0.8.29-CVS/configure.in
+--- e-uae-0.8.29-CVS.orig/configure.in	2006-08-12 19:59:38.000000000 +0400
++++ e-uae-0.8.29-CVS/configure.in	2006-08-27 23:09:02.000000000 +0400
+@@ -890,7 +890,19 @@
+   ],
+   AC_MSG_RESULT(yes)
+   X_CFLAGS="$X_CFLAGS -DUSE_XKB"
+-  X_EXTRA_LIBS="$X_EXTRA_LIBS -lxkbfile",
++  X_EXTRA_LIBS="$X_EXTRA_LIBS -lxkbfile"
++  xkb_rules_dir_found="no"
++  for xkb_rules_dir in /usr/share/X11/xkb/rules /usr/lib/X11/xkb/rules /usr/X11R6/lib/X11/xkb/rules
++  do
++	if test -d $xkb_rules_dir ; then
++		X_CFLAGS="$X_CFLAGS -DXKB_PATH=\\\"$xkb_rules_dir/\\\""
++		xkb_rules_dir_found="yes"
++		break
++	fi
++  done
++  if test "x$xkb_rules_dir_found" = "xno" ; then
++  	AC_MSG_ERROR([[Could not find xkb path.]])
++  fi,
+   AC_MSG_RESULT(no)
+   )
+   LIBS=$TMP_SAVE_LIBS
+@@ -933,6 +945,7 @@
+   GFX_CFLAGS="$X_CFLAGS"
+   GFX_CPPFLAGS="-DSHM_SUPPORT_LINKS=$SHM_SUPPORT_LINKS"
+   GFX_LIBS="$X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS"
++
+ fi
+ 
+ 
+diff -Naur e-uae-0.8.29-CVS.orig/src/gfx-x11/x11keys.c e-uae-0.8.29-CVS/src/gfx-x11/x11keys.c
+--- e-uae-0.8.29-CVS.orig/src/gfx-x11/x11keys.c	2006-07-06 08:04:58.000000000 +0400
++++ e-uae-0.8.29-CVS/src/gfx-x11/x11keys.c	2006-08-27 23:07:19.000000000 +0400
+@@ -26,7 +26,7 @@
+ # include <X11/XKBlib.h>
+ # include <X11/extensions/XKBrules.h>
+ 
+-static const char xkb_rules_path[] = "/usr/X11R6/lib/X11/xkb/rules/";
++static const char xkb_rules_path[] = XKB_PATH;
+ 
+ 
+ /*

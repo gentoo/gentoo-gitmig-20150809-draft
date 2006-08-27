@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/e-uae
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.16 2006/08/20 09:18:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/ChangeLog,v 1.17 2006/08/27 19:49:24 pva Exp $
+
+*e-uae-0.8.29_pre20060812 (27 Aug 2006)
+
+  27 Aug 2006; Peter Volkov <pva@gentoo.org>
+  +files/e-uae-xkb-rules-dir-detection.patch,
+  +e-uae-0.8.29_pre20060812.ebuild:
+  Version bump. This is actually 0.8.29-WIP3 with some additional fixes.
 
   20 Aug 2006; Simon Stelling <blubb@gentoo.org> e-uae-0.8.28-r1.ebuild:
   stable on amd64
