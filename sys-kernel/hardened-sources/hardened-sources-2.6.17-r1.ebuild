@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.17-r1.ebuild,v 1.1 2006/08/26 14:55:34 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.6.17-r1.ebuild,v 1.2 2006/08/27 11:49:20 phreak Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base"
 K_GENPATCHES_VER="8"
 
-inherit kernel-2 unipatch-001
+inherit kernel-2
 detect_version
 
 HGPV=${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}-3
