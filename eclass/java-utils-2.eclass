@@ -599,7 +599,7 @@ java-pkg_dowar() {
 		else
 			warpath="${war}"
 		fi
-	
+
 		# Install those files like you mean it
 		INSOPTIONS="-m 0644" \
 			INSDESTTREE=${JAVA_PKG_WARDEST} \
@@ -675,15 +675,17 @@ java-pkg_jar-from() {
 		shift
 	fi
 
-	local target_pkg="${1}" target_jar="${2}" destjar="${3}" 
-	
+	local target_pkg="${1}" target_jar="${2}" destjar="${3}"
+
 	[[ -z ${target_pkg} ]] && die "Must specify a package"
 
 	# default destjar to the target jar
 	[[ -z "${destjar}" ]] && destjar="${target_jar}"
 
-	local classpath="$(java-config --classpath=${target_pkg})"
-	[[ $? != 0 ]] && die "There was a problem getting the classpath for ${target_pkg}"
+	local error_msg="There was a problem getting the classpath for ${target_pkg}."
+	local classpath
+	classpath="$(java-config --classpath=${target_pkg})"
+	[[ $? != 0 ]] && die ${error_msg}
 
 	local jar
 	for jar in ${classpath//:/ }; do
@@ -761,8 +763,9 @@ java-pkg_getjars() {
 	for pkg in ${@//,/ }; do
 	#for pkg in $(echo "$@" | tr ',' ' '); do
 		jars="$(java-config --classpath=${pkg})"
+		[[ -z "${jars}" ]] && die "java-config --classpath=${pkg} failed"
 		debug-print "${pkg}:${jars}"
-		# TODO should we ensure jars exist?
+
 		if [[ -z "${classpath}" ]]; then
 			classpath="${jars}"
 		else
@@ -807,9 +810,11 @@ java-pkg_getjar() {
 	[[ -z ${pkg} ]] && die "Must specify package to get a jar from"
 	[[ -z ${target_jar} ]] && die "Must specify jar to get"
 
-	# TODO check that package is actually installed
-	local classpath=$(java-config --classpath=${pkg})
-	[[ $? != 0 ]] && die "There could not find classpath for ${pkg}. Are you sure its installed?"
+	local error_msg="Could not find classpath for ${pkg}. Are you sure its installed?"
+	local classpath
+	classpath=$(java-config --classpath=${pkg})
+	[[ $? != 0 ]] && die ${error_msg}
+
 	for jar in ${classpath//:/ }; do
 		if [[ ! -f "${jar}" ]] ; then
 			die "Installation problem with jar ${jar} in ${pkg} - is it installed?"
