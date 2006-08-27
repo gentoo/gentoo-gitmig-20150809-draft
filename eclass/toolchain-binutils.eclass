@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.62 2006/07/16 03:05:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.63 2006/08/27 09:15:37 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -45,6 +45,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 		export CTARGET=${CATEGORY/cross-}
 	fi
 fi
+is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
@@ -68,13 +69,17 @@ LICENSE="|| ( GPL-2 LGPL-2 )"
 IUSE="nls multitarget multislot test vanilla"
 if use multislot ; then
 	SLOT="${CTARGET}-${BVER}"
-elif [[ ${CTARGET} != ${CHOST} ]] ; then
+elif is_cross ; then
 	SLOT="${CTARGET}"
 else
 	SLOT="0"
 fi
 
-RDEPEND=">=sys-devel/binutils-config-1.8-r6"
+if is_cross ; then
+	RDEPEND=">=sys-devel/binutils-config-1.9"
+else
+	RDEPEND=">=sys-devel/binutils-config-1.8-r6"
+fi
 DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
@@ -84,11 +89,13 @@ S=${WORKDIR}/binutils
 
 LIBPATH=/usr/$(get_libdir)/binutils/${CTARGET}/${BVER}
 INCPATH=${LIBPATH}/include
-BINPATH=/usr/${CTARGET}/binutils-bin/${BVER}
 DATAPATH=/usr/share/binutils-data/${CTARGET}/${BVER}
 MY_BUILDDIR=${WORKDIR}/build
-
-is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
+if is_cross ; then
+	BINPATH=/usr/${CHOST}/${CTARGET}/binutils-bin/${BVER}
+else
+	BINPATH=/usr/${CTARGET}/binutils-bin/${BVER}
+fi
 
 tc-binutils_unpack() {
 	unpack ${A}
@@ -184,11 +191,6 @@ toolchain-binutils_src_compile() {
 	echo ./configure ${myconf}
 	"${S}"/configure ${myconf} || die "configure failed"
 
-	# binutils' build system is a bit broken with internal
-	# dependencies, so we manually run these first two bfd
-	# targets so that we can than use -j# and have it work
-	emake -j1 configure-bfd || die "make configure-bfd failed"
-	emake -j1 headers -C bfd || die "make headers-bfd failed"
 	emake all || die "emake failed"
 
 	# only build info pages if we user wants them, and if
@@ -249,7 +251,7 @@ toolchain-binutils_src_install() {
 		if [[ -d ${D}/usr/${CHOST}/${CTARGET} ]] ; then
 			mv "${D}"/usr/${CHOST}/${CTARGET}/include "${D}"/${INCPATH}
 			mv "${D}"/usr/${CHOST}/${CTARGET}/lib/* "${D}"/${LIBPATH}/
-			rm -r "${D}"/usr/${CHOST}
+			rm -r "${D}"/usr/${CHOST}/{include,lib}
 		fi
 	else
 		insinto ${INCPATH}
@@ -259,7 +261,6 @@ toolchain-binutils_src_install() {
 		mv "${D}"/${LIBPATH}/lib/* "${D}"/${LIBPATH}/
 		rm -r "${D}"/${LIBPATH}/lib
 	fi
-	dodir /usr/${CTARGET}/{bin,include,lib}
 	prepman ${DATAPATH}
 
 	# Insert elf2flt where appropriate
