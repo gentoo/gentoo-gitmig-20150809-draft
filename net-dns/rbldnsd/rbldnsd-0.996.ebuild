@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996.ebuild,v 1.1 2006/05/07 05:40:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996.ebuild,v 1.2 2006/08/27 22:43:35 weeve Exp $
 
 inherit eutils
 DESCRIPTION="a DNS daemon which is designed to serve DNSBL zones"
@@ -9,7 +9,7 @@ SRC_URI="http://www.corpit.ru/mjt/rbldnsd/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~sparc ~x86"
 IUSE=""
 
 DEPEND=""
