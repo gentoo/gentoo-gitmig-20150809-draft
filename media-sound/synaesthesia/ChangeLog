@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/synaesthesia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/ChangeLog,v 1.13 2006/07/24 00:21:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/ChangeLog,v 1.14 2006/08/27 23:21:24 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/synaesthesia-2.2-gcc3.4.patch, -synaesthesia-2.2.ebuild:
+  clean out old, non-modX ebuild
 
   24 Jul 2006; Andrej Kacian <ticho@gentoo.org> synaesthesia-2.3.ebuild:
   Stable on x86, bug #140623.
