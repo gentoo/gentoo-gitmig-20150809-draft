@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.1 2006/08/27 17:42:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.2 2006/08/27 23:32:56 compnerd Exp $
 
 inherit eutils java-pkg-2
 
@@ -17,7 +17,7 @@ SLOT="3"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="cairo gnome mozilla opengl"
+IUSE="cairo gnome seamonkey opengl"
 COMMON=">=dev-libs/glib-2.6
 		>=x11-libs/gtk+-2.6.8
 		>=dev-libs/atk-1.10.2
@@ -34,7 +34,7 @@ COMMON=">=dev-libs/glib-2.6
 					=gnome-base/gnome-vfs-2*
 					=gnome-base/libgnomeui-2*
 				)
-		mozilla? (
+		seamonkey? (
 					>=www-client/seamonkey-1.0.2
 					>=dev-libs/nspr-4.6.2
 				)
@@ -118,11 +118,13 @@ src_compile() {
 		emake -f make_linux.mak make_gnome || die "Failed to build GNOME VFS support"
 	fi
 
-	if use mozilla ; then
+	if use seamonkey ; then
+		export GECKO_SDK="$(pkg-config seamonkey-xpcom --variable=libdir)"
 		export GECKO_INCLUDES="-I/usr/$(get_libdir)/seamonkey/include/xpcom \
 							   -I/usr/include/nspr \
 							   -I/usr/$(get_libdir)/seamonkey/include/embed_base \
 							   -I/usr/$(get_libdir)/seamonkey/include/string"
+		export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
 
 		einfo "Building the Mozilla component"
 		emake -f make_linux.mak make_mozilla || die "Failed to build Mozilla support"

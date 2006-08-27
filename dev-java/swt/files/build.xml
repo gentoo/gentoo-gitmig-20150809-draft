@@ -11,7 +11,7 @@
       <javac srcdir="${src}" destdir="${build}"/>
    </target>
 
-   <target name="jar" depends="compile">
+   <target name="jar">
       <jar destfile="swt.jar" basedir="${build}"/>
    </target>
 </project>

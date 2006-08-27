@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.39 2006/08/27 17:56:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.40 2006/08/27 23:32:56 compnerd Exp $
+
+  27 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org> files/build.xml,
+  swt-3.2-r1.ebuild:
+  migrate mozilla to seamonkey in useflags, update build.xml
 
   27 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/swt-cairo-0.9.2-amd64.patch, -files/swt-cairo-0.9.2.patch,
