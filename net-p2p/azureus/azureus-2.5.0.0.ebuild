@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.0.ebuild,v 1.1 2006/08/27 09:51:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.0.ebuild,v 1.2 2006/08/27 17:55:55 betelgeuse Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -18,7 +18,7 @@ IUSE="source"
 
 RDEPEND="
 	>=virtual/jre-1.4
-	>=dev-java/swt-3.2
+	>=dev-java/swt-3.2-r1
 	>=dev-java/log4j-1.2.8
 	>=dev-java/commons-cli-1.0
 	>=dev-java/bcprov-1.31
@@ -81,28 +81,28 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "Due to the nature of the portage system, we recommend"
-	einfo "that users check portage for new versions of Azureus"
-	einfo "instead of attempting to use the auto-update feature."
-	einfo "You can disable auto-update in"
-	einfo "Tools->Options...->Interface->Start"
+	elog "Due to the nature of the portage system, we recommend"
+	elog "that users check portage for new versions of Azureus"
+	elog "instead of attempting to use the auto-update feature."
+	elog "You can disable auto-update in"
+	elog "Tools->Options...->Interface->Start"
 	echo
-	einfo "After running azureus for the first time, configuration"
-	einfo "options will be placed in ~/.azureus/gentoo.config"
-	einfo "It is recommended that you modify this file rather than"
-	einfo "the azureus startup script directly."
+	elog "After running azureus for the first time, configuration"
+	elog "options will be placed in ~/.azureus/gentoo.config"
+	elog "It is recommended that you modify this file rather than"
+	elog "the azureus startup script directly."
 	echo
-	einfo "As of this version, the new ui type 'console' is supported,"
-	einfo "and this may be set in ~/.azureus/gentoo.config."
+	elog "As of this version, the new ui type 'console' is supported,"
+	elog "and this may be set in ~/.azureus/gentoo.config."
 	echo
 	ewarn "If you are upgrading, and the menu in azureus has entries like"
 	ewarn "\"!MainWindow.menu.transfers!\" then you have a stray"
 	ewarn "MessageBundle.properties file,"
 	ewarn "and you may safely delete ~/.azureus/MessagesBundle.properties"
 	echo
-	einfo "It's recommended to use Sun's Java version 1.5 or later."
-	einfo "If you're experiencing problems running azureus and you've"
-	einfo "using an older version of Java, try to upgrading to a new version. "
+	elog "It's recommended to use Sun's Java version 1.5 or later."
+	elog "If you're experiencing problems running azureus and you've"
+	elog "using an older version of Java, try to upgrading to a new version. "
 	echo
 	ewarn "Please, do not run azureus as root!"
 	ewarn "Azureus has not been developed for multi-user environments!"
