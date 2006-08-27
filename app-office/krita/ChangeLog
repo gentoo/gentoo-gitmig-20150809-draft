@@ -1,6 +1,11 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.45 2006/08/16 12:41:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.46 2006/08/27 22:53:56 carlo Exp $
+
+*krita-1.5.2-r1 (27 Aug 2006)
+
+  27 Aug 2006; Carsten Lohrke <carlo@gentoo.org> +krita-1.5.2-r1.ebuild:
+  Force OpenGL, bug #130442. Correct dependency, bug #133984.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> krita-1.5.1.ebuild:
   Stable on ppc64
