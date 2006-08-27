@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Time-Local
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.6 2006/04/23 21:33:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.7 2006/08/27 11:59:56 yuval Exp $
+
+*perl-Time-Local-1.13 (27 Aug 2006)
+
+  27 Aug 2006; Yuval Yaari <yuval@gentoo.org> +perl-Time-Local-1.13.ebuild:
+  Bumped Time::Local's virtual (bug #145236)
 
   23 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   perl-Time-Local-1.12.ebuild:
