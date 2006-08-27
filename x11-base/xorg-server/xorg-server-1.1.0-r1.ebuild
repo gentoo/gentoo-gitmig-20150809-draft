@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.17 2006/08/27 08:22:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.0-r1.ebuild,v 1.18 2006/08/27 08:27:05 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -324,7 +324,7 @@ PDEPEND="
 
 				video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
 				video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.27.10 )
-				video_cards_nvidia? ( || ( 
+				video_cards_nvidia? ( || (
 						>=x11-drivers/nvidia-drivers-1.0.8774
 						>=x11-drivers/nvidia-legacy-drivers-1.0.7184
 					)
