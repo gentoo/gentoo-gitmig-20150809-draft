@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.25 2006/08/27 09:51:41 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.26 2006/08/27 09:55:51 betelgeuse Exp $
+
+  27 Aug 2006; Petteri Räty <betelgeuse@gentoo.org>
+  -azureus-2.4.0.2.ebuild, -azureus-2.4.0.2-r1.ebuild:
+  Removed old revisions.
 
 *azureus-2.5.0.0 (27 Aug 2006)
 
