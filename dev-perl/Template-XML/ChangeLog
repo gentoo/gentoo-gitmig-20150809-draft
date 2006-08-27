@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-XML
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.5 2006/08/21 22:47:02 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-XML/ChangeLog,v 1.6 2006/08/27 21:12:39 weeve Exp $
+
+  27 Aug 2006; Jason Wever <weeve@gentoo.org> Template-XML-2.16-r1.ebuild:
+  Added ~sparc keyword wrt bug #144505.
 
   21 Aug 2006; Yuval Yaari <yuval@gentoo.org> -Template-XML-2.16.ebuild:
   Cleanup (Template-XML-2.16 is b0rked anyway, bug #144689)
