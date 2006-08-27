@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.1 2006/08/27 14:38:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.2 2006/08/27 14:39:47 carlo Exp $
 
 DESCRIPTION="Open Fingerprint Architecture"
 HOMEPAGE="http://www.musicdns.org/"
@@ -23,7 +23,7 @@ pkg_setup() {
 }
 
 src_compile() {
- 	econf || die "configure failed"
+	econf || die "configure failed"
 	emake || die "emake failed"
 }
 src_install() {
