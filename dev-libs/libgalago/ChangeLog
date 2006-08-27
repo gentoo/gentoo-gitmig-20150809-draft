@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgalago
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/ChangeLog,v 1.6 2006/08/08 04:08:13 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/ChangeLog,v 1.7 2006/08/27 19:05:58 compnerd Exp $
+
+  27 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  libgalago-0.3.3.ebuild:
+  Add WANT_AUTOMAKE=1.9 to the eautoreconf call as per bug #144942
 
 *libgalago-0.5.0 (08 Aug 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/libgalago-0.3.3.ebuild,v 1.4 2006/04/25 14:50:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgalago/libgalago-0.3.3.ebuild,v 1.5 2006/08/27 19:05:58 compnerd Exp $
 
 inherit eutils autotools
 
@@ -28,7 +28,7 @@ src_unpack() {
 	# Hard enable/disable tests
 	epatch ${FILESDIR}/${PN}-0.3.3-test-option.patch
 
-	eautoreconf
+	WANT_AUTOMAKE=1.9 eautoreconf
 }
 
 src_compile() {
