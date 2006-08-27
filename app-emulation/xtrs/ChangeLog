@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.12 2006/07/24 00:12:05 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.13 2006/08/27 15:07:44 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -xtrs-4.9.ebuild:
+  clean out older, non-modX ebuild
 
   24 Jul 2006; Joshua Jackson <tsunam@gentoo.org> xtrs-4.9-r1.ebuild:
   Stable x86; bug #140685
