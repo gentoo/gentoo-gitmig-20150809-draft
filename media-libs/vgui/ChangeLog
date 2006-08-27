@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vgui
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.6 2006/01/19 08:24:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vgui/ChangeLog,v 1.7 2006/08/27 22:51:44 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -vgui-1.90a.ebuild:
+  clean out old, non-modX ebuild
 
 *vgui-1.90a-r1 (19 Jan 2006)
 
