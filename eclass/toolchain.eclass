@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.302 2006/08/27 17:30:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.303 2006/08/27 17:52:37 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -104,7 +104,11 @@ if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
 	fi
 	LIBEXECPATH=${TOOLCHAIN_LIBEXE:-${PREFIX}/libexec/gcc/${CTARGET}/${GCC_CONFIG_VER}}
 	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
-	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+	if is_crosscompile ; then
+		BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CHOST}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+	else
+		BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+	fi
 	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
 	# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 	# We will handle /usr/include/g++-v3/ with gcc-config ...
