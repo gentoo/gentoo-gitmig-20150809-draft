@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.7 2006/07/24 01:25:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.8 2006/08/27 18:53:22 compnerd Exp $
+
+*gnome-power-manager-2.14.3-r1 (27 Aug 2006)
+
+  27 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +gnome-power-manager-2.14.3-r1.ebuild:
+  Changing libnotify to optional (bug #141645)
 
   24 Jul 2006; Andrej Kacian <ticho@gentoo.org>
   gnome-power-manager-2.14.3.ebuild:
