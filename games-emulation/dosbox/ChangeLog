@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.22 2006/03/31 23:25:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.23 2006/08/27 23:54:07 weeve Exp $
+
+  27 Aug 2006; Jason Wever <weeve@gentoo.org> dosbox-0.65.ebuild:
+  Added ~sparc keyword wrt bug #144304.
 
 *dosbox-0.65 (31 Mar 2006)
 
