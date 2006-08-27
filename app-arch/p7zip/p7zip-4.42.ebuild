@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.42.ebuild,v 1.5 2006/08/02 13:41:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.42.ebuild,v 1.6 2006/08/27 20:13:24 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~ppc-macos ~x86"
 IUSE="static doc"
 
 S=${WORKDIR}/${PN}_${PV}
@@ -28,6 +28,9 @@ src_unpack() {
 	if use amd64; then
 		ewarn "Using suboptimal -fPIC upstream makefile due to amd64 being detected. See #126722"
 		cp -f makefile.linux_amd64 makefile.machine
+	elif use ppc-macos; then
+		# Mac OS X needs this special makefile, because it has a non-GNU linker
+		cp -f makefile.macosx makefile.machine
 	fi
 }
 
