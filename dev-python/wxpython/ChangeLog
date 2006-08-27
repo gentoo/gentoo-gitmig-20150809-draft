@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.40 2006/08/03 06:00:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.41 2006/08/27 17:44:14 leio Exp $
+
+  27 Aug 2006; Mart Raudsepp <leio@gentoo.org> metadata.xml:
+  Change primary herd to wxwindows.
 
   03 Aug 2006; Mart Raudsepp <leio@gentoo.org> wxpython-2.6.3.2.ebuild:
   Change wxGTK depend to avoid dependency problems after a version bump.
