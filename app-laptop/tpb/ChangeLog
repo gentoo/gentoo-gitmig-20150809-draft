@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tpb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.14 2006/01/16 19:43:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.15 2006/08/27 22:29:36 mr_bones_ Exp $
+
+  27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -tpb-0.6.3.ebuild:
+  clean out old, non-modX ebuild
 
   16 Jan 2006; Henrik Brix Andersen <brix@gentoo.org> tpb-0.6.4.ebuild:
   Added modular-x dependencies, thanks to Adrian Frith in bug #119220.
