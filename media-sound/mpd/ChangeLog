@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.75 2006/08/24 23:27:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.76 2006/08/28 16:49:20 ticho Exp $
+
+  28 Aug 2006; Andrej Kacian <ticho@gentoo.org> mpd-0.11.5-r2.ebuild,
+  mpd-0.12.0_rc1.ebuild, mpd-0.12.0_rc2.ebuild, mpd-0.12.0_rc3.ebuild:
+  Block sys-cluster/mpich2, since it also installs /usr/bin/mpd and
+  /etc/mpd.conf. Bug #145367.
 
 *mpd-0.12.0_rc3 (24 Aug 2006)
 

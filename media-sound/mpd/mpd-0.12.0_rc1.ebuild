@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.0_rc1.ebuild,v 1.3 2006/08/18 02:39:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.0_rc1.ebuild,v 1.4 2006/08/28 16:49:20 ticho Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ pulseaudio unicode vorbis"
 
 DEPEND="dev-util/gperf
 	!media-sound/mpd
+	!sys-cluster/mpich2
 	sys-libs/zlib
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	alsa? ( media-sound/alsa-utils )
