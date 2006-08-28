@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/speechd-up
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.10 2006/01/29 23:52:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/ChangeLog,v 1.11 2006/08/28 03:30:49 williamh Exp $
+
+*speechd-up-0.3-r1 (28 Aug 2006)
+
+  28 Aug 2006; William Hubbs <williamh@gentoo.org> +files/speechd-up.confd,
+  files/speechd-up.rc, +speechd-up-0.3-r1.ebuild:
+  Made the nice level at which speechd-up is run configurable.
+  This fixes bug #81930.
 
 *speechd-up-0.3 (29 Jan 2006)
 
