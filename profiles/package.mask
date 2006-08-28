@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5792 2006/08/28 05:52:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5793 2006/08/28 07:27:39 truedfx Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -36,11 +36,6 @@ app-mobilephone/gtkesms
 # Masking net-ftp/jftpgw for treecleaners and bug(s) # 142753
 # Sept 27th for removal
 net-ftp/jftpgw
-
-# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
-# Masking dev-util/rhide for treecleaners and bug(s) # 120774
-# Sept 27th for removal
-dev-util/rhide
 
 # Alec Warner <antarus@gentoo.org> (27 Aug 2006)
 # Masking dev-libs/libhoard for treecleaners and bug(s) # 99473
