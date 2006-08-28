@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.27 2006/08/24 07:26:02 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.28 2006/08/28 10:29:02 keri Exp $
+
+  28 Aug 2006; keri <keri@gentoo.org> files/swi-prolog-packages-test.patch:
+  Handle single-threaded check for X server. Bug #144665.
 
   24 Aug 2006; keri <keri@gentoo.org> files/swi-prolog-packages-test.patch:
   Check for a running X server when running XPCE test-suite. Bug #144665.
