@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.7 2006/08/27 16:09:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.8 2006/08/28 12:58:14 wolf31o2 Exp $
+
+  28 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-modules-1.0.0.8.ebuild:
+  Stable on x86 for vmware-workstation.
 
   27 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-modules-1.0.0.11.ebuild:
