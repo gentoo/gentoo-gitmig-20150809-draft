@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/xnetload
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.13 2006/08/11 20:25:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.14 2006/08/28 23:34:48 mr_bones_ Exp $
+
+  28 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -xnetload-1.11.3.ebuild:
+  clean out old, non-modX ebuild
 
   11 Aug 2006; Markus Rothe <corsair@gentoo.org> xnetload-1.11.3-r1.ebuild:
   Stable on ppc64; bug #140645
