@@ -1,2 +1,6 @@
 MD5 79821dedfcefba9f0e9e873edcb8aaa5 sleuthkit-2.03.tar.gz 935909
+RMD160 1a5dd132aab418cf2ad5dbcd3dc27686eeaed46e sleuthkit-2.03.tar.gz 935909
+SHA256 edd8f1974a9a345affdb9e21927d493bf39d677b494eebe9fe627607e6de49b8 sleuthkit-2.03.tar.gz 935909
 MD5 1f9cf0f89dd72cae8751688ca15580f9 sleuthkit-2.03_dbtool.patch.bz2 8568
+RMD160 3658077a485f64c486d4890228b1c391a14da74f sleuthkit-2.03_dbtool.patch.bz2 8568
+SHA256 e563e8d7209a09f29c7e5d075b05f00a4c9c4ee335ae715f5031e5472280980f sleuthkit-2.03_dbtool.patch.bz2 8568
