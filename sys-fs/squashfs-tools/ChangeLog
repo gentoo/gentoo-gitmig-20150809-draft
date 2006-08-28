@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.37 2006/08/28 16:44:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.38 2006/08/28 18:43:35 wolf31o2 Exp $
+
+*squashfs-tools-3.1 (28 Aug 2006)
+
+  28 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +squashfs-tools-3.1.ebuild:
+  Version bump.  Closing bug #145369.
 
   28 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   squashfs-tools-3.0.ebuild:
