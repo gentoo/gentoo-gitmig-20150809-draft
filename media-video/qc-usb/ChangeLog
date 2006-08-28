@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qc-usb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.16 2006/08/11 08:32:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.17 2006/08/28 17:19:09 liquidx Exp $
+
+  28 Aug 2006; Alastair Tse <liquidx@gentoo.org> files/digest-qc-usb-0.6.3,
+  Manifest:
+  fix digests (#145303)
 
   11 Aug 2006; Alastair Tse <liquidx@gentoo.org>
   +files/qc-usb-0.6.4-koutput.patch, qc-usb-0.6.4.ebuild:
