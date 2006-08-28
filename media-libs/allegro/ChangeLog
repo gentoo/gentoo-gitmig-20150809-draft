@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.57 2006/08/27 19:39:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.58 2006/08/28 02:09:59 metalgod Exp $
+
+  28 Aug 2006; Luis Medinas <metalgod@gentoo.org> allegro-4.2.0-r1.ebuild:
+  Stable on amd64. Bug #145148.
 
   27 Aug 2006; Jason Wever <weeve@gentoo.org> allegro-4.1.14.ebuild:
   Stable on SPARC wrt bug #145148.
