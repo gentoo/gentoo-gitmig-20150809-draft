@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 #Expire old cached objects
-nice -n 15 su -s /bin/sh -c 'polipo -x' polipo
+kill -USR1 $(cat /var/run/polipo.pid)
+sleep 1
+nice -n 15 su -s "/bin/sh" -c "polipo -x" polipo
+kill -USR2 $(cat /var/run/polipo.pid)
