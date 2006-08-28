@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.48 2006/08/06 01:19:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.49 2006/08/28 17:15:54 gustavoz Exp $
+
+  28 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> XML-DT-0.45.ebuild:
+  Stable on hppa
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org> XML-DT-0.20.ebuild,
   XML-DT-0.20-r1.ebuild, XML-DT-0.24.1.ebuild, XML-DT-0.30.ebuild,
