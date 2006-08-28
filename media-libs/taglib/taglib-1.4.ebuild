@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.4.ebuild,v 1.10 2006/05/12 20:42:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.4.ebuild,v 1.11 2006/08/28 00:38:32 kumba Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 DEPEND="sys-libs/zlib"
