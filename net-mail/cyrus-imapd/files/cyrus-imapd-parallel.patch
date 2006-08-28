@@ -1,0 +1,11 @@
+--- imap/Makefile.in.orig	2006-08-28 09:32:33.000000000 -0700
++++ imap/Makefile.in	2006-08-28 09:33:03.000000000 -0700
+@@ -155,6 +155,8 @@
+ 
+ ### Built Source Files
+ 
++version.o: xversion.h
++
+ xversion:
+ 	rm -f version.o
+ 	AWK=$(AWK) $(srcdir)/xversion.sh

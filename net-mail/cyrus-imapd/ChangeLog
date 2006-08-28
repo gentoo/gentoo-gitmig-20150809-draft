@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.86 2006/08/25 20:20:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.87 2006/08/28 17:05:31 langthang Exp $
+
+  28 Aug 2006; Tuấn Văn <langthang@gentoo.org>
+  +files/cyrus-imapd-parallel.patch, cyrus-imapd-2.2.12-r4.ebuild:
+  Fix a parallel make bug.
 
   25 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   cyrus-imapd-2.2.12-r4.ebuild:
