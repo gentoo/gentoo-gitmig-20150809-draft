@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.105 2006/08/25 15:18:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.106 2006/08/28 18:35:04 gustavoz Exp $
+
+*sparc-sources-2.4.33.2-r1 (28 Aug 2006)
+
+  28 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -sparc-sources-2.4.33.2.ebuild, +sparc-sources-2.4.33.2-r1.ebuild:
+  squashfs 3.1 and minor kernel symbol exhaustion fix
 
 *sparc-sources-2.4.33.2 (25 Aug 2006)
 
