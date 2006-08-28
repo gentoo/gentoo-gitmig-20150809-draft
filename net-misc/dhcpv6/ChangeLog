@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcpv6
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.14 2005/05/10 10:22:23 dholm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.15 2006/08/28 07:54:27 vapier Exp $
+
+*dhcpv6-0.10_pre20060828 (28 Aug 2006)
+
+  28 Aug 2006; Mike Frysinger <vapier@gentoo.org> files/dhcp6s.rc,
+  -dhcpv6-0.8.ebuild, +dhcpv6-0.10_pre20060828.ebuild,
+  -dhcpv6-0.85-r1.ebuild:
+  Version bump #64839 by Peter Tiggerdine.
 
   10 May 2005; David Holm <dholm@gentoo.org> dhcpv6-0.85-r1.ebuild:
   Added to ~ppc.

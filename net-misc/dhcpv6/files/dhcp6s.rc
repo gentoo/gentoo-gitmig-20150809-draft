@@ -1,18 +1,16 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/files/dhcp6s.rc,v 1.3 2004/07/14 23:57:15 agriffis Exp $
-
-#configuration is done in /etc/dhcp6s.conf
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/files/dhcp6s.rc,v 1.4 2006/08/28 07:54:27 vapier Exp $
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if [ ! -e /etc/dhcp6s.conf ] ; then
+	if [[ ! -e /etc/dhcp6s.conf ]] ; then
 		eerror "You need an /etc/dhcp6s.conf file to run dhcp6s"
-		eerror "There is a sample conf file in /usr/share/doc/dhcpv6-0.7"
+		eerror "There is a sample conf file in /usr/share/doc/dhcpv6-[PV]"
 		return 1
 	fi
 }
