@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-ISA
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.9 2006/08/20 03:12:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ISA/ChangeLog,v 1.10 2006/08/28 19:20:14 dertobi123 Exp $
+
+  28 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  Class-ISA-0.33.ebuild:
+  Added ~ppc, bug 144481
 
 *Class-ISA-0.33 (20 Aug 2006)
 

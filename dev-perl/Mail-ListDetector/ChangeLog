@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ListDetector
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.1 2006/08/20 03:14:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/ChangeLog,v 1.2 2006/08/28 19:25:27 dertobi123 Exp $
+
+  28 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  Mail-ListDetector-0.34.ebuild:
+  Added ~ppc, bug 144481
 
 *Mail-ListDetector-0.34 (20 Aug 2006)
 
