@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.36 2006/08/28 16:53:43 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.37 2006/08/28 21:03:11 ticho Exp $
+
+  28 Aug 2006; Andrej Kacian <ticho@gentoo.org> files/mpd.rc6:
+  "use esound" in the new initscript. Closes bug #142613, reported by Andrzej
+  <wasowski at data.pl>.
 
   28 Aug 2006; Andrej Kacian <ticho@gentoo.org> -mpd-svn-20060604.ebuild,
   -mpd-svn-20060723.ebuild, mpd-svn-20060810.ebuild,

@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/files/mpd-0.12.rc6,v 1.1 2006/08/10 22:54:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/files/mpd-0.12.rc6,v 1.2 2006/08/28 21:01:38 ticho Exp $
 
 depend() {
 	need localmount
-	use netmount nfsmount
+	use netmount nfsmount esound
 } 
 
 checkconfig() {
