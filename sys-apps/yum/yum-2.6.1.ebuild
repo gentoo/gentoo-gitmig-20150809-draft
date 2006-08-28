@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-2.6.1.ebuild,v 1.1 2006/06/10 07:51:12 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yum/yum-2.6.1.ebuild,v 1.2 2006/08/28 11:05:44 chrb Exp $
 
 inherit python distutils eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 RDEPEND="dev-python/celementtree
-	dev-python/urlgrabber
+	>=dev-python/urlgrabber-2.9.6
 	dev-libs/libxml2
 	>=app-arch/rpm-4.4.1"
 
