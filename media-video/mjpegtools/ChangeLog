@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.117 2006/08/25 13:45:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.118 2006/08/28 21:16:27 zzam Exp $
+
+  28 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  files/mjpegtools-1.8.0-as-needed.patch:
+  Added the make-dependencies which broke parallel building when having the
+  as-needed patch applied. Bug #145265.
 
   25 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/mjpegtools-1.8.0-as-needed.patch, mjpegtools-1.8.0-r1.ebuild:
