@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/xf4vnc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/ChangeLog,v 1.6 2006/07/23 15:24:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/ChangeLog,v 1.7 2006/08/28 17:24:24 mr_bones_ Exp $
+
+  28 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  xf4vnc-4.3.0.103.ebuild, xf4vnc-4.3.0.104.ebuild:
+  modX deps from xf4vnc-4.3.0.999
 
 *xf4vnc-4.3.0.999 (23 Jul 2006)
 
