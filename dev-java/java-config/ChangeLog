@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.106 2006/08/27 19:18:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.107 2006/08/28 13:20:45 nichoj Exp $
+
+*java-config-1.3.3 (28 Aug 2006)
+
+  28 Aug 2006; Joshua Nichols <nichoj@gentoo.org> +java-config-1.3.3.ebuild:
+  Version bump. Addresses a bug where if you set the system vm the first time
+  after migrating, you get 4 or so lines of big red warnings.
 
 *java-config-1.3.2 (27 Aug 2006)
 
