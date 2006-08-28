@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.4.ebuild,v 1.5 2006/08/28 09:45:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/wifi-radar-1.9.6.ebuild,v 1.1 2006/08/28 09:45:43 s4t4n Exp $
 
 inherit eutils
 
 DESCRIPTION="WiFi Radar is a Python/PyGTK2 utility for managing WiFi profiles."
 HOMEPAGE="http://wifi-radar.systemimager.org/"
-SRC_URI="http://wifi-radar.systemimager.org/pub/${P}.tar.gz"
+SRC_URI="http://wifi-radar.systemimager.org/pub/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="svg"
 
 RDEPEND=">=dev-python/pygtk-2.6.1
@@ -20,7 +20,8 @@ src_install ()
 	dosbin wifi-radar
 	dosed "s:/etc/conf.d:/etc:g" /usr/sbin/wifi-radar
 	dobin wifi-radar.sh
-	insinto /etc; doins wifi-radar.conf
+	dodir /etc/wifi-radar
+	insinto /etc/wifi-radar; doins wifi-radar.conf
 	if use svg; then
 		doicon wifi-radar.svg
 		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar.svg Network
@@ -29,7 +30,7 @@ src_install ()
 		make_desktop_entry wifi-radar.sh "WiFi Radar" wifi-radar.png Network
 	fi
 	doman wifi-radar.1 wifi-radar.conf.5
-	dodoc AUTHORS ChangeLog README TODO WHISHLIST
+	dodoc AUTHORS ChangeLog README TODO
 }
 
 pkg_postinst()
