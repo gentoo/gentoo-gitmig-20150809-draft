@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.21-r1.ebuild,v 1.2 2006/08/22 15:22:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.21-r1.ebuild,v 1.3 2006/08/28 21:53:35 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,6 +38,7 @@ src_unpack() {
 		io_linux.h || die "amd64 fix"
 	sed -i "s:/etc/chrony:/etc/chrony/chrony:g" \
 		chrony*.{1,5,8} faq.txt chrony.texi || die "sed failed"
+	epatch "${FILESDIR}"/${P}-hppa.patch
 }
 
 src_compile() {
