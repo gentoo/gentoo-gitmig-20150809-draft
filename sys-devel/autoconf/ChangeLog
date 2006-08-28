@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.77 2006/06/27 00:41:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.78 2006/08/28 07:10:36 vapier Exp $
+
+  28 Aug 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/autoconf-2.60-tests.patch, autoconf-2.60.ebuild:
+  Grab fix from upstream for tests with newer m4 #145279 by Josef Reidinger.
 
 *autoconf-2.60 (27 Jun 2006)
 
