@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.3 2006/08/18 17:04:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.4 2006/08/28 14:44:40 wolf31o2 Exp $
+
+  28 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +2006.1/desktop/make.defaults, +2006.1/desktop/parent,
+  +2006.1/desktop/virtuals, +2006.1/make.defaults, +2006.1/packages,
+  +2006.1/parent, +2006.1/server/make.defaults, +2006.1/server/parent:
+  Initial import of the 2006.1 profile from the release snapshot.
 
   18 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; make.defaults:
   Defaults for video drivers.
