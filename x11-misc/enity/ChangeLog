@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/enity
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/enity/ChangeLog,v 1.1 2006/08/28 06:17:08 vapier Exp $
+
+*enity-* (28 Aug 2006)
+
+  28 Aug 2006; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Morgan ARMAND #144502.
