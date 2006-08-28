@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.73 2006/08/21 00:22:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.74 2006/08/28 16:07:30 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -252,7 +252,7 @@ x-modular_reconf_source() {
 	if [[ "${SNAPSHOT}" = "yes" ]]
 	then
 		# If possible, generate configure if it doesn't exist
-		if [ -f "${S}/configure.ac" ]
+		if [ -f "./configure.ac" ]
 		then
 			eautoreconf
 		fi
