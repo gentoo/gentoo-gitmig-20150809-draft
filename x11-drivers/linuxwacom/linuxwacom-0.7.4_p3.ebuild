@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.1 2006/08/26 03:03:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.2 2006/08/28 17:58:05 hanno Exp $
 
-IUSE="gtk gtk2 tcltk usb"
+IUSE="gtk tcltk usb"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Input driver for Wacom tablets and drawing devices"
 HOMEPAGE="http://linuxwacom.sourceforge.net/"
@@ -17,17 +17,13 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 RDEPEND="|| ( ( x11-proto/inputproto
 		x11-base/xorg-server )
 	      virtual/x11 )
-	gtk? (
-		gtk2? ( >=x11-libs/gtk+-2 )
-		!gtk2? ( =x11-libs/gtk+-1.2* )
-	)
+	gtk? ( >=x11-libs/gtk+-2 )
 	tcltk? ( dev-lang/tcl dev-lang/tk )
 	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	usb? ( >=sys-kernel/linux-headers-2.6 )
-	>=sys-apps/sed-4"
+	usb? ( >=sys-kernel/linux-headers-2.6 )"
 S=${WORKDIR}/${P/_p/-}
 
 
@@ -35,17 +31,18 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/linuxwacom-xorg71.diff
+
+	# Fix multilib-strict error for Tcl/Tk library install
+	sed -i -e "s:WCM_EXECDIR/lib:WCM_EXECDIR/$(get_libdir):" configure.in
+
+	eautoreconf
 }
 
 src_compile() {
 	if use gtk; then
-		if use gtk2; then
-			myconf="${myconf} --with-gtk=2.0"
-		else
-			myconf="${myconf} --with-gtk=1.2"
-		fi
+		myconf="--with-gtk=2.0"
 	else
-		myconf="${myconf} --with-gtk=no"
+		myconf="--with-gtk=no"
 	fi
 
 	econf ${myconf} \
