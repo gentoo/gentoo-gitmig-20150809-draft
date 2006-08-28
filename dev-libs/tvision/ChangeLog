@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/tvision
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.10 2006/07/30 19:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.11 2006/08/28 14:14:01 truedfx Exp $
+
+*tvision-2.1.0_pre1 (28 Aug 2006)
+
+  28 Aug 2006; Harald van Dĳk <truedfx@gentoo.org>
+  +files/tvision-2.1.0_pre1-gcc41.patch, +tvision-2.1.0_pre1.ebuild:
+  Add 2.1.0_pre1 with a gcc41 compatibility patch for #130223
 
   30 Jul 2006; Mike Frysinger <vapier@gentoo.org>
   +files/tvision-2.0.3-gcc4.patch, tvision-2.0.3.ebuild:

@@ -1,0 +1,26 @@
+diff -ur tvision.orig/include/compatlayer.h tvision/include/compatlayer.h
+--- tvision.orig/include/compatlayer.h	2006-08-28 15:21:46.000000000 +0200
++++ tvision/include/compatlayer.h	2006-08-28 15:22:06.000000000 +0200
+@@ -812,10 +812,6 @@
+    #define _GNU_SOURCE
+    #define CLY_getline getline
+   #endif
+-  // Avoid including libintl.h, we have the prototypes
+-  // This is a temporal workaround.
+-  #undef  _LIBINTL_H
+-  #define _LIBINTL_H 1
+  #endif
+ 
+  /* Solaris using gcc but not glibc */
+diff -ur tvision.orig/include/tv/inputln.h tvision/include/tv/inputln.h
+--- tvision.orig/include/tv/inputln.h	2006-08-28 15:21:46.000000000 +0200
++++ tvision/include/tv/inputln.h	2006-08-28 15:23:07.000000000 +0200
+@@ -201,7 +201,7 @@
+      { return name; }
+ 
+ protected:
+- TInputLine::TInputLine(StreamableInit) :
++ TInputLine(StreamableInit) :
+    TInputLineBaseT<char,TDrawBuffer>(streamableInit) {}
+ 
+ public:
