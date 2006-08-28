@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.1 2005/08/29 02:46:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.2 2006/08/28 06:39:48 truedfx Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -39,7 +39,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="X aalib"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	>=dev-libs/libpcre-2.0.6
 	>=app-arch/bzip2-1.0.1
 	>=sys-apps/texinfo-4.1
@@ -49,8 +49,11 @@ DEPEND="virtual/libc
 	>=sys-libs/gpm-1.20.0
 	>=sys-libs/ncurses-5.2
 	aalib? ( media-libs/aalib )
-	X? ( virtual/x11 )
+	X? ( || ( ( x11-libs/libX11
+		x11-libs/libXmu ) virtual/x11 ) )
 	>=sys-apps/sed-4.0.7"
+DEPEND="${RDEPEND}
+	X? ( || ( x11-proto/xproto virtual/x11 ) )"
 
 TV_S="${WORKDIR}/tvision"
 SE_S="${WORKDIR}/setedit"
@@ -102,6 +105,9 @@ src_unpack() {
 	sed -i -e \
 		's:--add-location $(po_list_l):--add-location --from-code=iso-8859-1 $(po_list_l):' \
 		"${SE_S}/internac/gnumake.in"
+
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
