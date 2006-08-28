@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.32 2006/06/05 18:04:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.33 2006/08/28 09:14:45 dberkholz Exp $
+
+*icc-9.1.042 (28 Aug 2006)
+
+  28 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/9.1.042/05icc-ifc, +files/9.1.042/icc, +files/9.1.042/icpc,
+  +icc-9.1.042.ebuild:
+  Bump to latest noncommercial version. Attempt to remove most hardcoded
+  versions from ebuild, although some still exist in filesdir.
 
 *icc-9.0.030 (05 Jun 2006)
 
