@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/ethemes
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.7 2005/03/30 16:46:27 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.8 2006/08/28 06:14:05 vapier Exp $
+
+*ethemes-0.16.8 (28 Aug 2006)
+
+  28 Aug 2006; Mike Frysinger <vapier@gentoo.org> -ethemes-0.16.7.ebuild,
+  +ethemes-0.16.8.ebuild:
+  Version bump #144755 by Jerry McDonald.
 
   30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> ethemes-0.16.7.ebuild:
   Stable on ppc.
