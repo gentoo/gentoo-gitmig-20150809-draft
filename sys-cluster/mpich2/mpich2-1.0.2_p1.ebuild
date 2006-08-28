@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.2_p1.ebuild,v 1.2 2006/05/21 18:54:51 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.2_p1.ebuild,v 1.3 2006/08/28 16:45:22 dberkholz Exp $
 
 inherit eutils
 
@@ -23,7 +23,9 @@ PROVIDE="virtual/mpi"
 DEPEND="virtual/libc
 	sys-devel/libtool"
 RDEPEND="${DEPEND}
-	!virtual/mpi"
+	!virtual/mpi
+	!media-sound/mpd
+	!media-sound/mpd-svn"
 
 pkg_setup() {
 	if [ -n "${MPICH_CONFIGURE_OPTS}" ]; then
