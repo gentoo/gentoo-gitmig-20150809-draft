@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.40 2006/05/18 01:15:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.41 2006/08/28 17:01:14 wolf31o2 Exp $
+
+  28 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> workrave-1.8.3.ebuild:
+  Stable on amd64/x86 wrt bug #141920.
 
 *workrave-1.8.3 (18 May 2006)
 

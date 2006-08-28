@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.3.ebuild,v 1.1 2006/05/18 01:15:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.8.3.ebuild,v 1.2 2006/08/28 17:01:14 wolf31o2 Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="arts dbus distribution gnome kde nls xml"
 
 RDEPEND=">=dev-libs/glib-2
