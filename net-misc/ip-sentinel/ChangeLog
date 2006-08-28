@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ip-sentinel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.4 2006/07/11 17:41:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ChangeLog,v 1.5 2006/08/28 13:17:55 pva Exp $
+
+  28 Aug 2006; Peter Volkov <pva@gentoo.org> files/ip-sentinel.cfg:
+  Fixed small typo.
 
   11 Jul 2006; Peter Volkov <pva@gentoo.org> files/ip-sentinel.init,
   ip-sentinel-0.12.ebuild:
