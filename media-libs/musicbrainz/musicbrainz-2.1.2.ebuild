@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.2.ebuild,v 1.9 2006/08/11 19:57:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.2.ebuild,v 1.10 2006/08/28 02:33:36 kumba Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 
 RDEPEND="dev-libs/expat"
 
