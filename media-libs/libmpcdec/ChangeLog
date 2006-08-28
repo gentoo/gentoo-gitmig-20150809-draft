@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpcdec
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/ChangeLog,v 1.17 2006/03/03 17:45:19 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdec/ChangeLog,v 1.18 2006/08/28 02:01:35 kumba Exp $
+
+  28 Aug 2006; Joshua Kinard <kumba@gentoo.org> libmpcdec-1.2.2.ebuild:
+  Marked stable on mips.
 
   03 Mar 2006; Rene Nussbaumer <killerfox@gentoo.org>
   libmpcdec-1.2.2.ebuild:

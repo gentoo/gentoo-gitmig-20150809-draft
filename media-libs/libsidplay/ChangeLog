@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsidplay
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.28 2006/07/30 22:03:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.29 2006/08/28 02:02:57 kumba Exp $
+
+  28 Aug 2006; Joshua Kinard <kumba@gentoo.org> libsidplay-2.1.1.ebuild:
+  Marked stable on mips.
 
   30 July 2006; Tom Gall <tgall@gentoo.org> libsidplay-1.36.57.ebuild:
   added ~ppc64 to satisfy bmpx dep
