@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/gruff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.4 2006/04/17 23:17:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gruff/ChangeLog,v 1.5 2006/08/28 16:35:16 pclouds Exp $
+
+*gruff-0.1.2 (28 Aug 2006)
+
+  28 Aug 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +gruff-0.1.2.ebuild:
+  Version bump (Hans de Graaff <hans@degraaff.org> #143174)
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> gruff-0.1.1.ebuild:
   x86 stable
