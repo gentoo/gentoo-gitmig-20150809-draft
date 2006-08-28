@@ -1,0 +1,22 @@
+--- src/game/game.h.old	2006-08-27 18:45:27.000000000 +0200
++++ src/game/game.h	2006-08-27 18:45:43.000000000 +0200
+@@ -121,7 +121,7 @@
+ 	int get_video_col_offset();
+ 	SDL_Surface *get_video_overlay(int index);	// returns pointer to video overlay specified, or NULL if index is out of range
+ 	SDL_Surface *get_active_video_overlay();	// returns the current active video overlay (that is currently being drawn)
+-	SDL_Surface *game::get_finished_video_overlay();	// returns the last complete video overlay (that isn't currently being drawn)
++	SDL_Surface *get_finished_video_overlay();	// returns the last complete video overlay (that isn't currently being drawn)
+ 	bool is_overlay_size_dynamic();	// returns m_overlay_size_is_dynamic
+ 
+ 	void enable_cheat();
+--- src/ldp-out/pioneer.h.old	2006-08-27 18:47:55.000000000 +0200
++++ src/ldp-out/pioneer.h	2006-08-27 18:48:12.000000000 +0200
+@@ -45,7 +45,7 @@
+ 	bool pioneer_audio1;
+ 	bool pioneer_audio2;
+ 	bool check_result(Uint32, bool);
+-	bool pioneer::getstring(char *, int, Uint32,bool);
++	bool getstring(char *, int, Uint32,bool);
+ 	void printmodel();
+ };
+ 

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/daphne
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.9 2005/07/10 02:33:40 mr_bones_ Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.10 2006/08/28 01:53:27 tupone Exp $
+
+  28 Aug 2006; <tupone@gentoo.org> +files/daphne-0.99.6-gcc41.patch,
+  daphne-0.99.6-r2.ebuild:
+  Fix compilation on gcc-4.1
 
   10 Jul 2005; Michael Sterrett <mr_bones_@gentoo.org>
   daphne-0.99.6-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.6-r2.ebuild,v 1.9 2005/07/10 02:33:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/daphne-0.99.6-r2.ebuild,v 1.10 2006/08/28 01:53:27 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -26,7 +26,9 @@ src_unpack() {
 
 	replace-cpu-flags i686 pentium3 pentium4 i586 #18807
 
-	cd "${S}/src"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}"-gcc41.patch
+	cd src
 	sed \
 		-e "/^DFLAGS/d" \
 		-e "/-fexpensive-optimizations/d " \
