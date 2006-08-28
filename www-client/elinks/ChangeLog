@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.45 2006/07/16 23:52:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.46 2006/08/28 03:23:45 kumba Exp $
+
+  28 Aug 2006; Joshua Kinard <kumba@gentoo.org> elinks-0.11.1.ebuild:
+  Marked stable on mips.
 
   16 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> elinks-0.11.1.ebuild:
   Add ~x86-fbsd keyword.
