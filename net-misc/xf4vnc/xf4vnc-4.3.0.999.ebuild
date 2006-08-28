@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/xf4vnc-4.3.0.999.ebuild,v 1.1 2006/07/23 15:24:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/xf4vnc-4.3.0.999.ebuild,v 1.2 2006/08/28 17:27:48 mr_bones_ Exp $
 
 DESCRIPTION="VNC (remote desktop viewer) derived from tightvnc but cooler :-)"
 HOMEPAGE="http://xf4vnc.sourceforge.net/"
@@ -15,7 +15,7 @@ RDEPEND="vncviewer? (
 		!net-misc/tightvnc
 		!net-misc/vnc
 	)
-	xvnc? ( 
+	xvnc? (
 		media-libs/freetype
 		media-libs/jpeg
 	)
@@ -44,7 +44,7 @@ src_install() {
 
 	dobin vncevent
 
-	use xvnc && dobin Xvnc 
+	use xvnc && dobin Xvnc
 	if use vncviewer; then
 		dobin vncviewer
 		dolib.so *.so
