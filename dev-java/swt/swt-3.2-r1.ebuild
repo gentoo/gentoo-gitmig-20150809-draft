@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.2 2006/08/27 23:32:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.3 2006/08/28 17:47:47 compnerd Exp $
 
 inherit eutils java-pkg-2
 
@@ -143,9 +143,9 @@ src_compile() {
 	einfo "Building JNI libraries"
 	eant compile || die "Failed to compile JNI interfaces"
 
-	einfo "Creating missing files"
-	cp ${FILESDIR}/SWTMessages.properties ${S}/build/org/eclipse/swt/internal/
-	echo -n "version 3.232" >> ${S}/build/version.txt
+	einfo "Copying missing files"
+	cp ${S}/version.txt ${S}/build/version.txt
+	cp ${S}/src/org/eclipse/swt/internal/SWTMessages.properties ${S}/build/org/eclipse/swt/internal/
 
 	einfo "Packing JNI libraries"
 	eant jar || die "Failed to create JNI jar"

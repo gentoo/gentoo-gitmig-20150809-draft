@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.40 2006/08/27 23:32:56 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.41 2006/08/28 17:47:47 compnerd Exp $
+
+  28 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org> swt-3.2-r1.ebuild:
+  Use distributed version.txt and SWTMessages.properties
 
   27 Aug 2006; Saleem Abdulrasool <compnerd@gentoo.org> files/build.xml,
   swt-3.2-r1.ebuild:
