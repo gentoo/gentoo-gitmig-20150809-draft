@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.41.ebuild,v 1.1 2005/08/27 20:19:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.41.ebuild,v 1.2 2006/08/28 10:50:22 pva Exp $
 
 DESCRIPTION="OO-DBMS with interfaces for C/C++/Java/PHP/Perl"
 HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
@@ -37,6 +37,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "The subsql binary has been renamed to subsql-gdb,"
-	einfo "to avoid a name clash with the FastDB version of subsql"
+	elog "The subsql binary has been renamed to subsql-gdb,"
+	elog "to avoid a name clash with the FastDB version of subsql"
 }
