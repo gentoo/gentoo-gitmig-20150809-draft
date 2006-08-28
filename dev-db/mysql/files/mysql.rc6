@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql.rc6,v 1.3 2006/05/05 19:51:40 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql.rc6,v 1.4 2006/08/28 12:22:21 vivo Exp $
 
 # external binaries used: which, sed, tac
 
@@ -218,7 +218,7 @@ checkconfig() {
 start() {
 	wdebug 4 ">>> start()"
 
-	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
+	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-${SVCNAME/mysql/mysqld}"}
 	# servers are defined in /etc/conf.d/mysql
 	local serverlist=${!mysql_slot_*}
 	# provide default for empty conf.d/mysql
@@ -280,7 +280,7 @@ start() {
 		if [[ ${ssd_thing} -eq 1 ]] ; then
 			tmpnice="${NICE:+"--nicelevel "}${NICE}"
 			start-stop-daemon --quiet ${DEBUG/*/"--verbose"} --start \
-			--background ${tmpnice} \
+			--background ${tmpnice} --pidfile ${pidfile} \
 			--exec ${basedir}/sbin/mysqld${MY_SUFFIX} -- ${mysqld_thing}
 			retstatus=$?
 		else
@@ -318,13 +318,15 @@ start() {
 
 stop() {
 	get_slot_config &> /dev/null
-	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-mysqld"}
+	MYSQL_GLOB_PID_FILE=${MYSQL_GLOB_PID_FILE:-"/var/run/svc-started-${SVCNAME/mysql/mysqld}"}
 	local runwhat pidfile shutdown_elem
 	local PID cnt timeout=${STOPTIMEOUT:-"120"}
 	local retstatus=0
 	local shutdown_list="$(< "${MYSQL_GLOB_PID_FILE}" )"
 
 	ebegin "Stopping ${myservice}"
+	wdebug 5 "MYSQL_GLOB_PID_FILE: ${MYSQL_GLOB_PID_FILE}"
+	wdebug 5 "shutdown_list: ${shutdown_list}"
 	for shutdown_elem in ${shutdown_list} ; do
 		runwhat=${shutdown_elem%%=*}
 		pidfile=${shutdown_elem#*=}
