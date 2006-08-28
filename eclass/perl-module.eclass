@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.100 2006/08/06 03:46:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.101 2006/08/28 20:22:20 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -93,6 +93,7 @@ VENDOR_ARCH=""
 ARCH_LIB=""
 POD_DIR=""
 BUILDER_VER=""
+pm_echovar=""
 
 perl-module_src_prep() {
 
@@ -104,13 +105,13 @@ perl-module_src_prep() {
 
 
 	SRC_PREP="yes"
+	pwd
 	if [ "${PREFER_BUILDPL}" == "yes" ] && ( [ -f Build.PL ] || [ ${PN} == "module-build" ] ); then
 		einfo "Using Module::Build"
-		perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
+		echo "$pm_echovar" | perl Build.PL --installdirs=vendor --destdir=${D} --libdoc= || die "Unable to build! (are you using USE=\"build\"?)"
 	elif [ -f Makefile.PL ] && [ ! ${PN} == "module-build" ]; then
 		einfo "Using ExtUtils::MakeMaker"
-		#perl Makefile.PL ${myconf} \
-		perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
+		echo "$pm_echovar" | perl Makefile.PL ${myconf} INSTALLMAN3DIR='none'\
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D} || die "Unable to build! (are you using USE=\"build\"?)"
 	fi
 	if [ ! -f Build.PL ] && [ ! -f Makefile.PL ]; then
