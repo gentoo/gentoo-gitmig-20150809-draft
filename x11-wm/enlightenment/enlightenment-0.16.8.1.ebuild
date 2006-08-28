@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.1.ebuild,v 1.4 2006/07/15 05:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.1.ebuild,v 1.5 2006/08/28 06:05:01 vapier Exp $
 
 inherit eutils autotools
 
@@ -47,9 +47,8 @@ S=${WORKDIR}/e16-${PV/_pre?}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/e16-${PV}-iconv.patch"
-	eautomake
+	epatch "${FILESDIR}"/e16-${PV}-iconv.patch
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
