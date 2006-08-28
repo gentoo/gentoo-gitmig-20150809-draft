@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.48 2006/08/06 02:35:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.49 2006/08/28 00:30:56 mcummings Exp $
+
+  28 Aug 2006; Michael Cummings <mcummings@gentoo.org>
+  gtk-perl-0.7009-r2.ebuild:
+  Marking stable amd64; Removed the applets use flag and support,
+  gnome-panel-1 is about to be removed, which would break the applet support.
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   gtk-perl-0.7008-r9.ebuild, gtk-perl-0.7008-r10.ebuild,
