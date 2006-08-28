@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.6 2006/06/24 12:06:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.7 2006/08/28 16:55:38 wolf31o2 Exp $
+
+  28 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> epix-1.0.7.ebuild:
+  Stable on amd64/x86 wrt bug #144275.
 
   24 Jun 2006; Markus Dittrich <markusle@gentoo.org> epix-1.0.7.ebuild:
   Force MAKEOPTS="-j1" since the makefile breaks for parallel builds.
