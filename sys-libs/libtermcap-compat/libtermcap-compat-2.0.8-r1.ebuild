@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.12 2005/08/20 04:22:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r1.ebuild,v 1.13 2006/08/29 11:27:28 blubb Exp $
 
-inherit eutils
+inherit eutils multilib toolchain-funcs
 
 PATCHVER=0.1
 
@@ -42,18 +42,20 @@ src_compile() {
 }
 
 src_install () {
-	dodir /lib /include /usr/lib
+	dodir /$(get_libdir) /include /usr/$(get_libdir)
 	make prefix="${D}" OWNER="root:root" install || die
 
 	# Conflicts with ncurses.
 	rm -rf ${D}/include
 
-	cd ${D}/lib; mv libtermcap.a ../usr/lib
+	cd ${D}/$(get_libdir); mv libtermcap.a ../usr/$(get_libdir)
 	# Make sure we link to /lib/libtermcap.so, not /usr/lib/libtermcap.a,
 	# bug #4411.
 	gen_usr_ldscript libtermcap.so
-	dosym libtermcap.so.2 /lib/libtermcap.so
-	dosym libtermcap.so.${PV} /lib/libtermcap.so.2
+	dosym libtermcap.so.2 /$(get_libdir)/libtermcap.so
+	dosym libtermcap.so.${PV} /$(get_libdir)/libtermcap.so.2
+	
+	cd ${D} ; rm ./lib
 
 	insinto /etc
 	doins ${WORKDIR}/termcap

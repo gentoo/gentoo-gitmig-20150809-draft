@@ -1,18 +1,33 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6fdbddb178ac8f4ad820b9b239cc197b libtermcap-compat-2.0.8-r2.ebuild 1409
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e4c495e6effb4372d8b4a1189b7bfd4d libtermcap-compat-2.0.8-r1.ebuild 1570
-MD5 96d21ddd5f180229bfc30eb538c76e5d ChangeLog 3861
-MD5 88a1c08b3377362fbf228dd424880fe9 files/digest-libtermcap-compat-2.0.8-r1 211
-MD5 88a1c08b3377362fbf228dd424880fe9 files/digest-libtermcap-compat-2.0.8-r2 211
-MD5 c5389fda988845f0c56af4ec72c8d524 files/libtermcap-compat_bcopy_fix.patch 314
+AUX libtermcap-compat-2.0.8-fPIC.patch 740 RMD160 dcf27ab016d92c2e0747212635a38666e2da4afb SHA1 2f11f7a24a644913cfa199e4c72e85c6fa209552 SHA256 21cbd987dc29dd24e9130b24f7530ecf4c0a14db854d1fc74bf1422d9b3bf17f
 MD5 f44d7442f29d0a63d10f7633925ccd6e files/libtermcap-compat-2.0.8-fPIC.patch 740
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDBrA0gIKl8Uu19MoRAq8ZAJsEjR9Oh2Ypx55A8a5DhIWrvoeQ4gCcCXYa
-4P349VJbBQJf4j3AkxsVJxg=
-=B6B2
------END PGP SIGNATURE-----
+RMD160 dcf27ab016d92c2e0747212635a38666e2da4afb files/libtermcap-compat-2.0.8-fPIC.patch 740
+SHA256 21cbd987dc29dd24e9130b24f7530ecf4c0a14db854d1fc74bf1422d9b3bf17f files/libtermcap-compat-2.0.8-fPIC.patch 740
+AUX libtermcap-compat_bcopy_fix.patch 314 RMD160 a330b4e90340d62f12ba84fe4873b551198033fd SHA1 1aede7ae2c8e317a969665dce5b2c420e7114f7f SHA256 5be5e13e1c3cf99638d7062b0382e97a8e3c148aa75a3ceb2dc884d55c5ca780
+MD5 c5389fda988845f0c56af4ec72c8d524 files/libtermcap-compat_bcopy_fix.patch 314
+RMD160 a330b4e90340d62f12ba84fe4873b551198033fd files/libtermcap-compat_bcopy_fix.patch 314
+SHA256 5be5e13e1c3cf99638d7062b0382e97a8e3c148aa75a3ceb2dc884d55c5ca780 files/libtermcap-compat_bcopy_fix.patch 314
+DIST libtermcap-compat-2.0.8-gentoo-0.1.tar.bz2 9960 RMD160 e04feac67ee9dc298693962749b4be3690e7a871 SHA1 2b032b8a7d66ec6f618abf1034fce6b05a339bdb SHA256 aba11a32f2b1ae6262928796cc8637f84c8baf0a5e5149853ed3c570e5f79f3d
+DIST termcap-2.0.8.tar.bz2 211523 RMD160 c5f9f99d57d4788429dd94d7ca37968d35210070 SHA1 1b7994563468a838f0befdc1c94993d8e6d134cc SHA256 293fb17823ae10b01902465d9f83625598b784e7bf72dde5425914c1c718f917
+DIST termtypes.tc.gz 228329 RMD160 1dacc8fa5dc1639ddf40dc31dff523653a7fc3f1 SHA1 0398b2aea80d1e0d9dd1b27c978835d1bb3065e9 SHA256 c4fa04257fea6e968d4caa28cc18dbbf9eea4769a463296eaca21ceea757a728
+EBUILD libtermcap-compat-2.0.8-r1.ebuild 1676 RMD160 d70b7ca05e6777fbd8bd9aa161ced7ccfb60a1a1 SHA1 5e2c992271f5c8e192e857ae443dcd1fb3b174e5 SHA256 1af320c22316f8d06b96fccafda83f2359427cfde5f25f948dd519baf2171a48
+MD5 7039c1298ec9cf646c606c660e1f8da0 libtermcap-compat-2.0.8-r1.ebuild 1676
+RMD160 d70b7ca05e6777fbd8bd9aa161ced7ccfb60a1a1 libtermcap-compat-2.0.8-r1.ebuild 1676
+SHA256 1af320c22316f8d06b96fccafda83f2359427cfde5f25f948dd519baf2171a48 libtermcap-compat-2.0.8-r1.ebuild 1676
+EBUILD libtermcap-compat-2.0.8-r2.ebuild 1409 RMD160 9f93e6a7797afbe269203e4b11132ab611bea743 SHA1 f7ca86713ef49b977b5c223fc832c9f3f51a2680 SHA256 42ddd5519757d15bb601fe4ec0f0952d7613a85f344b09777ca997ab4f7927ca
+MD5 6fdbddb178ac8f4ad820b9b239cc197b libtermcap-compat-2.0.8-r2.ebuild 1409
+RMD160 9f93e6a7797afbe269203e4b11132ab611bea743 libtermcap-compat-2.0.8-r2.ebuild 1409
+SHA256 42ddd5519757d15bb601fe4ec0f0952d7613a85f344b09777ca997ab4f7927ca libtermcap-compat-2.0.8-r2.ebuild 1409
+MISC ChangeLog 3978 RMD160 48cc3a7484201e0eb82e111e7908a1e89fa07d8a SHA1 ee4b1b4b06d497b14b4ec705ca0f39110ff4163d SHA256 a40f30427b20e085672c3b97d344fdf4f0296e37543db1f6d9c75402c2c23dfb
+MD5 68573964901e9045735a1f4a4fa8efdf ChangeLog 3978
+RMD160 48cc3a7484201e0eb82e111e7908a1e89fa07d8a ChangeLog 3978
+SHA256 a40f30427b20e085672c3b97d344fdf4f0296e37543db1f6d9c75402c2c23dfb ChangeLog 3978
+MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
+SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata.xml 164
+MD5 f5bc5e61590d7533c34b8f7e021e2516 files/digest-libtermcap-compat-2.0.8-r1 771
+RMD160 003f4b4bad79b05387aa241b8a64ec6f3c26c004 files/digest-libtermcap-compat-2.0.8-r1 771
+SHA256 8df07c775663dda54ea50880a1ef64e8ae11dc96a7c148b1b1bcf09def519aa1 files/digest-libtermcap-compat-2.0.8-r1 771
+MD5 f5bc5e61590d7533c34b8f7e021e2516 files/digest-libtermcap-compat-2.0.8-r2 771
+RMD160 003f4b4bad79b05387aa241b8a64ec6f3c26c004 files/digest-libtermcap-compat-2.0.8-r2 771
+SHA256 8df07c775663dda54ea50880a1ef64e8ae11dc96a7c148b1b1bcf09def519aa1 files/digest-libtermcap-compat-2.0.8-r2 771
