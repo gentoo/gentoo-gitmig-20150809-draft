@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/drift
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.10 2006/08/25 16:29:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/ChangeLog,v 1.11 2006/08/29 20:20:09 wormo Exp $
+
+  29 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  drift-2.1.2.ebuild:
+  stable on ppc (Bug #144678)
 
   25 Aug 2006; Ferris McCormick <fmccor@gentoo.org> drift-2.1.2.ebuild:
   Stable on sparc --- Bug #144678 --- seems fine.
