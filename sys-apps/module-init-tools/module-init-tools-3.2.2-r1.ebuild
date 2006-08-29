@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.10 2006/08/25 22:10:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.11 2006/08/29 16:15:51 josejx Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/linux/kernel/people/rusty/modules/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="no-old-linux"
 # The test code runs `make clean && configure` and screws up src_compile()
 RESTRICT="test"
