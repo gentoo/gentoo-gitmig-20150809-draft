@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_beta3.ebuild,v 1.8 2006/08/29 04:10:25 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0_beta3.ebuild,v 1.9 2006/08/29 12:47:58 blubb Exp $
 
-inherit distutils eutils
+inherit distutils eutils python multilib
 
 MY_PV=${PV/_beta/b}
 S=${WORKDIR}/4Suite-${MY_PV}
@@ -26,7 +26,8 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/1.0_b3-add_root_opt.diff
-	python setup.py config --prefix=/usr --docdir=/usr/share/doc/${P}
+	python_version
+	python setup.py config --prefix=/usr --docdir=/usr/share/doc/${P} --pythonlibbdir=/usr/$(get_libdir)/python${PYVER}/site-packages --libdir=/usr/$(get_libdir)/4Suite
 }
 
 src_install() {
