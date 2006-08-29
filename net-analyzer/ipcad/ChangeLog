@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.21 2006/06/14 13:33:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.22 2006/08/29 13:01:44 pva Exp $
+
+  29 Aug 2006; Peter Volkov <pva@gentoo.org>
+  -files/ipcad-3.7-20060614-cvs.patch, +files/ipcad-3.7-20060828-cvs.patch,
+  ipcad-3.7.ebuild:
+  Fixing Failed Patch issue. How this could happen?
 
   14 Jun 2006; Peter Volkov <pva@gentoo.org>
   +files/ipcad-3.7-20060614-cvs.patch, files/ipcad.conf.d, files/ipcad.init,

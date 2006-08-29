@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.3 2006/06/14 13:33:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.4 2006/08/29 13:01:44 pva Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-20060614-cvs.patch
+	epatch ${FILESDIR}/${P}-20060828-cvs.patch
 }
 
 src_install() {
