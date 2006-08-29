@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5799 2006/08/29 23:04:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5800 2006/08/29 23:31:06 humpback Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -813,10 +813,6 @@ games-roguelike/noegnud-nethack
 # Michael Sterrett <mr_bones_@gentoo.org> (12 Mar 2006)
 # masked due to security issues: bug #125990
 net-libs/enet
-
-# Gustavo Felisberto <humpback@gentoo.org> (12 Mar 2006)
-# Dirty fix that needs testing, see Changelog
-=net-libs/obby-0.3.0-r1
 
 # Petteri Räty <betelgeuse@gentoo.org> (12 Mar 2006)
 # Because of changes in ebay our current versions do not work
