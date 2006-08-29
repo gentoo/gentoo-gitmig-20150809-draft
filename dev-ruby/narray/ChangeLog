@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.20 2006/08/29 01:27:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.21 2006/08/29 17:56:13 kloeri Exp $
+
+  29 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> narray-0.5.9.ebuild:
+  Rekeyword Alpha, bug 145363.
 
   29 Aug 2006; Luis Medinas <metalgod@gentoo.org> narray-0.5.9.ebuild:
   Re-add ~amd64 keyword. Bug #145363.
