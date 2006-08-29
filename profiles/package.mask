@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5795 2006/08/29 02:55:02 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5796 2006/08/29 07:45:41 chtekk Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# Luca Longinotti <chtekk@gentoo.org> (29 Aug 2006)
+# Masking media-libs/ming-0.3.0, breaks PHP compilation and ships its own
+# PHP bindings the wrong way
+=media-libs/ming-0.3.0
 
 # Joshua Jackson <tsunam@gentoo.org> (28 Aug 2006)
 # Masking net-misc/mico as its unmaintained and has an outstanding security bug # # 122141
