@@ -1,0 +1,118 @@
+Index: ChangeLog
+===================================================================
+--- korundum/ChangeLog	(revision 565692)
++++ korundum/ChangeLog	(revision 578517)
+@@ -1,3 +1,8 @@
++2006-08-18  Richard Dale  <rdale@foton.es>
++
++	* Added a KActionPtrList marshaller. Fixes problem reported by
++	  eskatos on the #qtruby irc channel.
++
+ 2006-06-05  Richard Dale  <rdale@foton.es>
+ 
+ 	* The metaObject methods for slots and signals are no longer added when
+Index: rubylib/korundum/Korundum.cpp
+===================================================================
+--- korundum/rubylib/korundum/Korundum.cpp	(revision 565692)
++++ korundum/rubylib/korundum/Korundum.cpp	(revision 578517)
+@@ -661,6 +661,8 @@
+ 	~EmitDCOPSignal() 
+ 	{
+ 		delete[] _stack;
++		delete _stream;
++		delete _data;
+ 	}
+     const MocArgument &arg() { return _args[_cur]; }
+     SmokeType type() { return arg().st; }
+@@ -878,6 +880,9 @@
+ 	~InvokeDCOPSlot() {
+ 		delete[] _stack;
+ 		delete _stream;
++		for(int i=0;i<_items;++i) {
++			free(_sp++);
++		}
+ 	}
+ };
+ 
+Index: rubylib/korundum/kdehandlers.cpp
+===================================================================
+--- korundum/rubylib/korundum/kdehandlers.cpp	(revision 565692)
++++ korundum/rubylib/korundum/kdehandlers.cpp	(revision 578517)
+@@ -642,6 +642,60 @@
+ }
+ #endif
+ 
++void marshall_KActionPtrList(Marshall *m) {
++	switch(m->action()) {
++	case Marshall::FromVALUE: 
++		{
++	    }			
++		break;
++	case Marshall::ToVALUE: 
++		{
++		KActionPtrList *valuelist = (KActionPtrList*)m->item().s_voidp;
++		if (!valuelist) {
++			*(m->var()) = Qnil;
++			break;
++	    }
++
++	    VALUE av = rb_ary_new();
++
++	    int ix = m->smoke()->idClass("KAction");
++	    const char * className = m->smoke()->binding->className(ix);
++
++		for (	KActionPtrList::Iterator it = valuelist->begin();
++				it != valuelist->end();
++				++it ) 
++		{
++			void *p = (*it);
++
++			if (m->item().s_voidp == 0) {
++		    	*(m->var()) = Qnil;
++		    	break;
++			}
++
++			VALUE obj = getPointerObject(p);
++			if (obj == Qnil) {
++				smokeruby_object  * o = ALLOC(smokeruby_object);
++				o->smoke = m->smoke();
++				o->classId = o->smoke->idClass("KAction");
++				o->ptr = p;
++				o->allocated = false;
++				obj = set_obj_info(className, o);
++			}
++			rb_ary_push(av, obj);
++		}
++
++		if (m->cleanup())
++			delete valuelist;
++		else
++			*(m->var()) = av;		
++		}
++		break;
++	default:
++		m->unsupported();
++		break;
++	}
++}
++
+ void marshall_KTraderOfferList(Marshall *m) {
+ 	switch(m->action()) {
+ 	case Marshall::FromVALUE: 
+@@ -1261,6 +1315,7 @@
+ TypeHandler KDE_handlers[] = {
+     { "QCStringList", marshall_QCStringList },
+     { "KCmdLineOptions*", marshall_KCmdLineOptions },
++    { "KActionPtrList", marshall_KActionList },
+     { "QPtrList<KAction>", marshall_KActionList },
+     { "QPtrList<KAction>&", marshall_KActionList },
+     { "KMimeType::List", marshall_KMimeTypeList },
+@@ -1291,6 +1346,8 @@
+     { "QPtrList<KParts::Plugin>", marshall_KPartPluginList },
+     { "QPtrList<KParts::ReadOnlyPart>", marshall_KPartReadOnlyPartList },
+     { "QPtrList<KServiceTypeProfile>&", marshall_KServiceTypeProfileList },
++    { "QValueList<KAction*>", marshall_KActionPtrList },
++    { "KActionPtrList", marshall_KActionPtrList },
+     { "QValueList<KAboutPerson>", marshall_KAboutPersonList },
+     { "QValueList<KAboutTranslator>", marshall_KAboutTranslatorList },
+     { "QValueList<KIO::CopyInfo>&", marshall_KIOCopyInfoList },
