@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.25 2006/07/14 21:07:33 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.26 2006/08/29 19:24:59 chtekk Exp $
 #
 # ########################################################################
 #
@@ -77,6 +77,7 @@ DEPEND="adabas? ( >=dev-db/unixODBC-1.8.13 )
 		nls? ( sys-devel/gettext )
 		oci8-instant-client? ( dev-db/oracle-instantclient-basic )
 		odbc? ( >=dev-db/unixODBC-1.8.13 )
+		pcre? ( dev-libs/libpcre )
 		postgres? ( >=dev-db/libpq-7.1 )
 		qdbm? ( dev-db/qdbm )
 		readline? ( sys-libs/readline )
@@ -89,6 +90,7 @@ DEPEND="adabas? ( >=dev-db/unixODBC-1.8.13 )
 		soap? ( >=dev-libs/libxml2-2.6.8 )
 		solid? ( >=dev-db/unixODBC-1.8.13 )
 		spell? ( >=app-text/aspell-0.50 )
+		sqlite? ( =dev-db/sqlite-2* )
 		ssl? ( >=dev-libs/openssl-0.9.7 )
 		sybase? ( dev-db/freetds )
 		tidy? ( app-text/htmltidy )
@@ -384,7 +386,6 @@ php5_0-sapi_src_compile() {
 	phpconfutils_extension_with		"openssl-dir"	"ssl"			0 "/usr"
 	phpconfutils_extension_with		"ovrimos"		"ovrimos"		1
 	phpconfutils_extension_enable	"pcntl" 		"pcntl" 		1
-	phpconfutils_extension_without	"pcre-regex"	"pcre"			0
 	phpconfutils_extension_with		"pfpro"			"pfpro"			1
 	phpconfutils_extension_with		"pgsql"			"postgres"		1
 	phpconfutils_extension_disable	"posix"			"posix"			0
@@ -486,6 +487,13 @@ php5_0-sapi_src_compile() {
 		phpconfutils_extension_with		"solid"			"solid"			1
 	fi
 
+	# PCRE support
+	if useq pcre || phpconfutils_usecheck pcre ; then
+		phpconfutils_extension_with		"pcre-regex"	"pcre"			0 "/usr"
+	else
+		phpconfutils_extension_without	"pcre-regex"	"pcre"			0
+	fi
+
 	# readline/libedit support
 	# You can use readline or libedit, but you can't use both
 	phpconfutils_extension_with			"readline"		"readline"		0
@@ -502,6 +510,7 @@ php5_0-sapi_src_compile() {
 	if ! useq sqlite && ! phpconfutils_usecheck sqlite ; then
 		phpconfutils_extension_without	"sqlite"		"sqlite"		0
 	else
+		phpconfutils_extension_with		"sqlite"		"sqlite"		0 "/usr"
 		phpconfutils_extension_enable	"sqlite-utf8"	"unicode"		0
 	fi
 
