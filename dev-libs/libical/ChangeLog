@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.24 2006/08/29 18:01:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.25 2006/08/29 20:04:23 corsair Exp $
+
+  29 Aug 2006; Markus Rothe <corsair@gentoo.org> libical-0.26.6.ebuild:
+  Stable on ppc64; bug #145447
 
   29 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libical-0.26.6.ebuild:
