@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/perl-cleaner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.35 2006/08/29 10:04:28 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.36 2006/08/29 15:16:48 gustavoz Exp $
+
+  29 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  perl-cleaner-1.04.3.ebuild:
+  Stable on sparc wrt #145256
 
   29 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org>
   perl-cleaner-1.04.3.ebuild:
