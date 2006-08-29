@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/Mail-ListDetector-0.34.ebuild,v 1.2 2006/08/28 19:25:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ListDetector/Mail-ListDetector-0.34.ebuild,v 1.3 2006/08/29 09:46:56 ferdy Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/M/MS/MSTEVENS/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Mail/${P}.readme"
 
 LICENSE="Artistic"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 SLOT="0"
