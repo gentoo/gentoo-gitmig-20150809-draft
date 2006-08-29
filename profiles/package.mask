@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5797 2006/08/29 13:02:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5798 2006/08/29 23:01:24 humpback Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -591,9 +591,6 @@ games-fps/quake1
 
 # Gustavo Felisberto <humpback@gentoo.org> (12 Jun 2006)
 # release candidate
->=net-libs/net6-1.4.0_rc2
->=net-libs/obby-0.4.0_rc2
->=app-editors/gobby-0.4.0_rc2
 >=net-misc/sobby-0.4.0_rc1
 
 # Joseph Jezak <josejx@gentoo.org> (05 Jun 2006)
