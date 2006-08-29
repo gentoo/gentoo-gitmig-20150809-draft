@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.63 2006/08/24 00:27:42 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.64 2006/08/29 13:36:41 humpback Exp $
+
+*tor-0.1.0.18 (29 Aug 2006)
+
+  29 Aug 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  +tor-0.1.0.18.ebuild:
+  Adding 0.1.0.18 that fixes sec issue in the 0.1.0.* series. The 0.1.1.23 is
+  not affected.
 
 *tor-0.1.1.23 (24 Aug 2006)
 
