@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.23 2006/06/19 17:31:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.24 2006/08/29 15:16:34 seemant Exp $
+
+*libdc1394-2.0.0_rc3 (29 Aug 2006)
+
+  29 Aug 2006; Seemant Kulleen <seemant@gentoo.org>
+  +files/libdc1394-2.0.0_rc3-update-iso_channel.patch,
+  +libdc1394-2.0.0_rc3.ebuild:
+  version bump -- watch for an API change since pre7
 
 *libdc1394-2.0.0_pre7-r1 (19 Jun 2006)
 
