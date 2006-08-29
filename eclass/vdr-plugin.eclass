@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.28 2006/07/19 20:24:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.29 2006/08/29 10:33:19 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -113,12 +113,12 @@ vdr-plugin_pkg_setup() {
 	VDR_RC_DIR="/usr/lib/vdr/rcscript"
 
 	# Pathes to includes
-	VDR_INCLUDE_DIR="/usr/include"
+	VDR_INCLUDE_DIR="/usr/include/vdr"
 	DVB_INCLUDE_DIR="/usr/include"
 
 
-	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/vdr/config.h)
-	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/vdr/config.h)
+	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/config.h)
+	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' ${VDR_INCLUDE_DIR}/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
 
 	einfo "Building ${PF} against vdr-${VDRVERSION}"
@@ -156,10 +156,9 @@ vdr-plugin_src_unpack() {
 				-e "s:^DVBDIR.*$:DVBDIR = ${DVB_INCLUDE_DIR}:" \
 				-e "s:^LIBDIR.*$:LIBDIR = ${S}:" \
 				-e "s:^TMPDIR.*$:TMPDIR = ${T}:" \
-				-e 's:-I$(VDRDIR)/include:-I$(VDRDIR):' \
-				-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
-				-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):' \
-				-e 's:$(VDRDIR)/\([a-z]*\.h\|Make.config\):$(VDRDIR)/vdr/\1:'
+				-e 's:-I$(VDRDIR)/include -I$(DVBDIR)/include:-I$(DVBDIR)/include -I$(VDRDIR)/include:' \
+				-e 's:-I$(VDRDIR)/include:-I'"${VDR_INCLUDE_DIR%vdr}"':' \
+				-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):'
 			eend $?
 
 			ebegin "  Converting to APIVERSION"
@@ -293,7 +292,7 @@ vdr-plugin_src_install() {
 		if which md5sum >/dev/null 2>&1; then
 			cd ${S}
 			(
-				cd ${ROOT}${VDR_INCLUDE_DIR}/vdr
+				cd ${ROOT}${VDR_INCLUDE_DIR}
 				md5sum *.h libsi/*.h|LC_ALL=C sort --key=2
 			) > header-md5-${PN}
 			doins header-md5-${PN}
