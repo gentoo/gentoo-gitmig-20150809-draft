@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot-syncmal
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.3 2005/01/01 15:45:20 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-syncmal/ChangeLog,v 1.4 2006/08/29 04:27:33 chriswhite Exp $
+
+  29 Aug 2006; Chris White <chriswhite@gentoo.org>
+  jpilot-syncmal-0.72.1.ebuild:
+  gtk2 -> gtk
 
   06 Jul 2004; David Holm <dholm@gentoo.org> jpilot-syncmal-0.72.1.ebuild:
   Added to ~ppc.

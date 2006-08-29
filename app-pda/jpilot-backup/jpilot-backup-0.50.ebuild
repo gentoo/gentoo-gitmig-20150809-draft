@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/jpilot-backup-0.50.ebuild,v 1.8 2005/06/21 02:29:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot-backup/jpilot-backup-0.50.ebuild,v 1.9 2006/08/29 04:19:53 chriswhite Exp $
 
 DESCRIPTION="Backup plugin for jpilot"
 SRC_URI="http://jasonday.home.att.net/code/backup/${P}.tar.gz"
@@ -9,17 +9,16 @@ HOMEPAGE="http://jasonday.home.att.net/code/backup/backup.html"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~ppc x86"
-IUSE="gtk2"
+IUSE="gtk"
 
-RDEPEND="gtk2? ( >=x11-libs/gtk+-2 )
-	!gtk2? ( >=x11-libs/gtk+-1.2 )
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	app-pda/jpilot
 	sys-libs/gdbm"
 DEPEND="${RDEPEND}
 	gtk2? ( dev-util/pkgconfig )"
 
 src_compile() {
-	econf $(use_enable gtk2) || die "configure failed"
+	econf $(use_enable gtk gtk2) || die "configure failed"
 	emake -j1 || die "make failed"
 }
 
