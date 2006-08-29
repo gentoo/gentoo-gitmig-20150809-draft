@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.9 2006/08/29 06:09:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2-r1.ebuild,v 1.10 2006/08/29 07:41:59 mr_bones_ Exp $
 
 inherit eutils libtool
 
@@ -34,10 +34,11 @@ DEPEND=">=media-libs/libdvdcss-1.2.2
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/ogle-configure-alsa-fix.patch
-	epatch ${FILESDIR}/ogle-gcc34-fix.patch
-	epatch ${FILESDIR}/ogle-gcc4-fix.patch
+	cd "${S}"
+	epatch \
+		"${FILESDIR}"/ogle-configure-alsa-fix.patch \
+		"${FILESDIR}"/ogle-gcc34-fix.patch \
+		"${FILESDIR}"/ogle-gcc4-fix.patch
 
 	elibtoolize
 }
@@ -62,10 +63,9 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS README
 
-	cd ${D}usr/bin/
+	cd "${D}"usr/bin/
 	mv ./ifo_dump ./ifo_dump_ogle
-
-	dodoc AUTHORS ChangeLog HISTORY NEWS README TODO doc/liba52.txt
 }
