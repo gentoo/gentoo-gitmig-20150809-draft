@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.0-r1.ebuild,v 1.1 2006/08/28 19:59:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-2.0.0-r1.ebuild,v 1.2 2006/08/29 18:04:10 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_source_${PV}.zip
 
 LICENSE="GPL-2 glest-data"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 -ppc ~x86" # ppc: bug #145478
 IUSE="linguas_fr linguas_it linguas_pt_BR linguas_sk"
 
 RDEPEND=">=media-libs/libsdl-1.2.5
