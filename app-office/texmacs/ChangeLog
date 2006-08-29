@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.47 2006/08/06 22:01:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.48 2006/08/29 00:45:11 dang Exp $
+
+  29 Aug 2006; Daniel Gryniewicz <dang@gentoo.org> texmacs-1.0.6-r1.ebuild:
+  Marked stable on amd64 bug #142267
 
   06 Aug 2006; Andrej Kacian <ticho@gentoo.org> texmacs-1.0.6-r1.ebuild:
   Stable on x86, bug #142267, tested by Christian 'Opfer' Faulhammer <gentoo
