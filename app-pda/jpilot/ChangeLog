@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/jpilot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.29 2006/05/30 21:16:45 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/ChangeLog,v 1.30 2006/08/29 03:54:47 chriswhite Exp $
+
+  29 Aug 2006; Chris White <chriswhite@gentoo.org> jpilot-0.99.7-r1.ebuild,
+  jpilot-0.99.8_pre9.ebuild, jpilot-0.99.8.ebuild, jpilot-0.99.8-r1.ebuild:
+  gtk2 -> gtk conversion.
 
 *jpilot-0.99.8-r1 (30 May 2006)
 
