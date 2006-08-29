@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.10 2006/06/12 16:29:39 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.11 2006/08/29 13:52:52 humpback Exp $
+
+*gobby-0.4.0_rc4 (29 Aug 2006)
+
+  29 Aug 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  -gobby-0.4.0_rc2.ebuild, +gobby-0.4.0_rc4.ebuild:
+  Bumped to rc4.
 
 *gobby-0.4.0_rc2 (12 Jun 2006)
 
