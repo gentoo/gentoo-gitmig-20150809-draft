@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.9.ebuild,v 1.1 2005/12/07 16:30:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.9.ebuild,v 1.2 2006/08/29 13:47:06 tupone Exp $
 
-inherit flag-o-matic games
+inherit eutils flag-o-matic games
 
 MY_PN=FlightGear
 MY_P=${MY_PN}-${PV}
@@ -25,8 +25,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	mv ../data ./data
+	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
 src_compile() {
