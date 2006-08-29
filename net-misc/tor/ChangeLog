@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.65 2006/08/29 18:12:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.66 2006/08/29 20:01:39 corsair Exp $
+
+  29 Aug 2006; Markus Rothe <corsair@gentoo.org> tor-0.1.0.18.ebuild,
+  tor-0.1.1.23.ebuild:
+  Stable on ppc64; bug #145458
 
   29 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> tor-0.1.0.18.ebuild,
   tor-0.1.1.23.ebuild:
