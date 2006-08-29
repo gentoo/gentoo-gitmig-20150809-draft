@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.26 2006/07/18 21:54:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.27 2006/08/29 12:50:54 blubb Exp $
+
+  29 Aug 2006; <blubb@gentoo.org> files/libbtctl-0.6.0-libdir.patch:
+  port previous multilib-strict fix to Makefile.am instead of .in; bug 145293
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   libbtctl-0.6.0-r1.ebuild:
