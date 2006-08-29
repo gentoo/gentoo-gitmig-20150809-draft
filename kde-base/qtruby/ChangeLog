@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.42 2006/08/18 15:39:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.43 2006/08/29 20:14:32 caleb Exp $
+
+*qtruby-3.5.4-r1 (29 Aug 2006)
+
+  29 Aug 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/qtruby-3.5.4-more.patch, +qtruby-3.5.4-r1.ebuild:
+  Fix some memory leaks
 
   18 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> qtruby-3.5.2.ebuild,
   qtruby-3.5.3.ebuild, qtruby-3.5.4.ebuild:
