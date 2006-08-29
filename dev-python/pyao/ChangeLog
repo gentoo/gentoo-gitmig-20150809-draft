@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyao
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.10 2006/07/12 15:50:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.11 2006/08/29 04:15:23 metalgod Exp $
+
+  29 Aug 2006; Luis Medinas <metalgod@gentoo.org> pyao-0.82.ebuild:
+  Re add ~amd64 keyword. Bug #141193.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> pyao-0.82.ebuild:
   Mark 0.82 stable on ia64

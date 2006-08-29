@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/pyao-0.82.ebuild,v 1.9 2006/07/12 15:50:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/pyao-0.82.ebuild,v 1.10 2006/08/29 04:15:23 metalgod Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.andrewchatham.com/pyogg/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ia64 ~ppc -sparc x86"
+KEYWORDS="~amd64 ia64 ~ppc -sparc x86"
 IUSE=""
 
 DEPEND="virtual/python
