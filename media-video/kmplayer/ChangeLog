@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.70 2006/08/25 21:13:32 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.71 2006/08/29 11:43:53 deathwing00 Exp $
+
+  29 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/kmplayer-0.9.3_pre2-use32bitbin.diff, kmplayer-0.9.3_pre2.ebuild:
+  Added new patch that allows to use MPLAYER_BIN on amd64 for version
+  0.9.3_pre2. Fixes bug #145344.
 
 *kmplayer-0.9.3_pre2 (25 Aug 2006)
 

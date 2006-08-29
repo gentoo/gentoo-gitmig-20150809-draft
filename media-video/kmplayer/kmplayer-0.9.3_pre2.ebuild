@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3_pre2.ebuild,v 1.1 2006/08/25 21:13:32 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.9.3_pre2.ebuild,v 1.2 2006/08/29 11:43:53 deathwing00 Exp $
 
 inherit kde eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 		epatch "${FILESDIR}/${P}-use32bitbin.diff"
 	fi
 }
+
 
 src_compile(){
 	local myconf="$(use_with gstreamer) $(use_with xine)"
