@@ -1,10 +1,10 @@
 #!/bin/sh
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/files/cgoban2,v 1.3 2004/07/14 22:14:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/files/cgoban2,v 1.4 2006/08/29 05:12:05 mr_bones_ Exp $
 
 which java > /dev/null 2>&1 && \
-	java -jar INSTALL_DIR/cgoban.jar $* && \
+	java -jar INSTALL_DIR/cgoban.jar "${@}" && \
 	exit 0
 
 echo "No \"java\" binary found in your PATH."
