@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.0_rc4.ebuild,v 1.1 2006/08/29 13:52:52 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.1.ebuild,v 1.1 2006/08/29 23:24:43 humpback Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ SRC_URI="http://releases.0x539.de/${PN}/${P/_/}.tar.gz"
 DEPEND=">=dev-cpp/glibmm-2.6
 	>=dev-cpp/gtkmm-2.6
 	>=dev-libs/libsigc++-2.0
-	>=net-libs/obby-0.4.0_rc4
+	>=net-libs/obby-0.4.1
 	>=dev-cpp/libxmlpp-2.6
 	>=x11-libs/gtksourceview-1.2.0"
 
