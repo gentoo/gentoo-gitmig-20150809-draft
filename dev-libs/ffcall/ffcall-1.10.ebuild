@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.10.ebuild,v 1.7 2006/06/19 18:58:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.10.ebuild,v 1.8 2006/08/29 13:19:19 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.santafe.edu/pub/gnu/${P}.tar.gz"
 # under GNU LGPL." -ffcall author
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ppc ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc ~ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
