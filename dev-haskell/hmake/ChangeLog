@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.25 2006/08/25 16:48:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.26 2006/08/29 20:22:25 wormo Exp $
+
+  29 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> hmake-3.11.ebuild:
+  mark ~ppc (related to Bug #144678, though not specifically requested...)
 
   25 Aug 2006; Ferris McCormick <fmccor@gentoo.org> hmake-3.11.ebuild:
   Stable on sparc --- Bug #144678 --- no problems.
