@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.12-r1.ebuild,v 1.2 2006/08/22 17:08:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/irqbalance-0.12-r1.ebuild,v 1.3 2006/08/29 20:13:00 dertobi123 Exp $
 
 DESCRIPTION="Distribute hardware interrupts across processors on a multiprocessor system"
 HOMEPAGE="http://people.redhat.com/arjanv/irqbalance/"
@@ -8,7 +8,7 @@ SRC_URI="http://people.redhat.com/arjanv/irqbalance/${P}.tar.gz"
 
 LICENSE="OSL-1.1"
 SLOT="0"
-KEYWORDS="-amd64 ~ppc ~x86"
+KEYWORDS="-amd64 ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc"
