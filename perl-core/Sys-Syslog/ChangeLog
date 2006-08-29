@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.8 2006/08/12 14:31:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.9 2006/08/29 09:56:26 ferdy Exp $
+
+  29 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org> Sys-Syslog-0.17.ebuild:
+  Add ~alpha keyword as per bug #143138
 
   12 Aug 2006; Markus Rothe <corsair@gentoo.org> Sys-Syslog-0.17.ebuild:
   Added ~ppc64; bug #143138
