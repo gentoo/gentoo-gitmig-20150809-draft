@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/serienbrief
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.1 2006/07/25 09:18:26 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/serienbrief/ChangeLog,v 1.2 2006/08/29 12:51:38 nattfodd Exp $
+
+  29 Aug 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  serienbrief-0.2.ebuild:
+  Added LINGUAS switch for the DE LC_MESSAGES file (thanks to Tobias Leupold
+  on bug #141271).
 
 *serienbrief-0.2 (25 Jul 2006)
 
