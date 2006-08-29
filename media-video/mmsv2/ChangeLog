@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mmsv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.21 2006/08/13 16:00:13 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.22 2006/08/29 20:49:46 arj Exp $
+
+*mmsv2-1.0.8-rc2 (29 Aug 2006)
+
+  29 Aug 2006; Anders Rune Jensen <arj@gentoo.org> +mmsv2-1.0.8-rc2.ebuild:
+  New version. Remove dependecy on alsaplayer and revert to xine since
+  alsaplayer is sceduled for removal :( Fixes #144412
 
   13 Aug 2006; Anders Rune Jensen <arj@gentoo.org> mmsv2-1.0.8-rc1.ebuild:
   Fix #143653
