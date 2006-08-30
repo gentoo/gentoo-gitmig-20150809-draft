@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.21 2006/08/15 18:24:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.22 2006/08/30 19:18:26 carlo Exp $
+
+  30 Aug 2006; Carsten Lohrke <carlo@gentoo.org> +files/knutclient-0.9.diff,
+  knutclient-0.9.ebuild:
+  Fix bug #145307. Thanks to Sunil for the patch.
 
 *knutclient-0.9 (15 Aug 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.9.ebuild,v 1.1 2006/08/15 18:24:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.9.ebuild,v 1.2 2006/08/30 19:18:26 carlo Exp $
 
 inherit kde
 
@@ -17,3 +17,5 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 need-kde 3.5
+
+PATCHES="${FILESDIR}/knutclient-0.9.diff"
