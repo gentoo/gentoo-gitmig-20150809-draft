@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.02.060709.ebuild,v 1.1 2006/08/09 16:22:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-3.02.060709.ebuild,v 1.2 2006/08/30 18:28:20 dberkholz Exp $
 
 # If you want to fix the warnings about friend declaration 'foo' declared as
 # a non-template function, see http://gcc.gnu.org/faq.html#friend.
@@ -18,7 +18,7 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${PN}src"
 
 src_unpack() {
 	DICT_DIR="/usr/share/reduce"
@@ -26,6 +26,7 @@ src_unpack() {
 	DICT_LOC="${DICT_DIR}/${DICT_FILE}"
 
 	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-remove-extra-qualification.patch
 
 	einfo "Fixing location of dictionary"
