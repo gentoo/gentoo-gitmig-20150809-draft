@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qiv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.16 2006/01/19 18:28:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.17 2006/08/30 10:40:05 dertobi123 Exp $
+
+  30 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> qiv-2.0.ebuild:
+  ppc stable, bug #145560
 
   19 Jan 2006; Marcelo Goes <vanquirius@gentoo.org> -qiv-1.7-r3.ebuild,
   qiv-2.0.ebuild:
