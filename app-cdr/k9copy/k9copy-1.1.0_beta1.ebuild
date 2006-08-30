@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.0_beta1.ebuild,v 1.1 2006/07/05 02:40:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-1.1.0_beta1.ebuild,v 1.2 2006/08/30 16:37:23 zzam Exp $
 
 inherit kde
 
@@ -34,7 +34,7 @@ src_install() {
 		"${D}/usr/share/applications/kde"
 
 	# Add Categories to put k9copy in the right menu
-	echo "Categories=Qt;KDE;Application;AudioVideo;" >> \
+	echo -e "\nCategories=Qt;KDE;Application;AudioVideo;" >> \
 		"${D}/usr/share/applications/kde/k9copy.desktop"
 }
 
