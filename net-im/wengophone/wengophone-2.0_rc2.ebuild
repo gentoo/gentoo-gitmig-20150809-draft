@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_rc2.ebuild,v 1.3 2006/08/15 18:59:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wengophone/wengophone-2.0_rc2.ebuild,v 1.4 2006/08/30 21:12:24 genstef Exp $
 
 inherit eutils toolchain-funcs
 
@@ -68,4 +68,8 @@ src_install() {
 	domenu debian/wengophone.desktop
 	doicon debian/wengophone.xpm
 	doman debian/qtwengophone.1
+}
+
+pkg_postinst() {
+	einfo 'execute "qtwengophone" to start wengophone'
 }
