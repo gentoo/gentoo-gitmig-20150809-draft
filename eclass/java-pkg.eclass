@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.40 2006/07/21 15:26:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.41 2006/08/30 00:31:34 nichoj Exp $
 
 inherit multilib
 
@@ -41,14 +41,17 @@ java-pkg_pkg_setup() {
 			if [[ -n ${GENTOO_VM} ]]; then
 				einfo "Using Generation-1 System VM: ${GENTOO_VM}"
 				initialize-java-home
-				eend 0
 			else
+				ewarn "The way Java is handled on Gentoo has drastically changed."
 				eerror "There was a problem determining which VM to use for generation-1"
-				eerror "You may need to set your generation-1 VM again, and run env-update && source/etc/profile"
-				eerror "Also, make sure you have followed the Java Upgrade Guide:"
-				eerror "http://www.gentoo.org/proj/en/java/java-upgrade.xml"
-				eend 1
-				die "Expected VMHANDLE to be defined in the env, but it wasn't"
+				eerror "You should run, and follow the advice of:"
+				eerror "\t/usr/bin/java-check-environment"
+
+				eerror "You will also likely want to follow the Java Upgrade Guide:"
+				eerror "\thttp://www.gentoo.org/proj/en/java/java-upgrade.xml"
+				eerror "If you have problems with the guide, please see:"
+				eerror "\thttp://overlays.gentoo.org/proj/java/wiki/Common_Problems"
+				die "Expected VMHANDLE to be defined in the env"
 			fi
 		fi
 	fi
