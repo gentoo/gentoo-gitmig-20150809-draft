@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.18.ebuild,v 1.4 2006/08/30 04:17:58 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.0.18.ebuild,v 1.5 2006/08/30 08:03:35 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 SLOT="0"
 ## Arch temas please please dont mark this stable untill you really test the
 ## chroot stuff
-KEYWORDS="~amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="static"
 
 DEPEND=">=dev-libs/openssl-0.9.6
