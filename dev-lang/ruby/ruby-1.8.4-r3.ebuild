@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.7 2006/08/07 12:30:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.8 2006/08/30 17:18:57 caleb Exp $
 
 ONIGURUMA="onigd2_5_4"
 
-inherit flag-o-matic alternatives eutils gnuconfig multilib autotools
+inherit flag-o-matic alternatives eutils gnuconfig multilib autotools debug
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
@@ -88,6 +88,7 @@ src_compile() {
 		$(use_enable doc install-doc) \
 		$(use_enable threads pthread) \
 		$(use_enable ipv6 ipv6) \
+		$(use_enable debug debug) \
 		--with-sitedir=/usr/$(get_libdir)/ruby/site_ruby \
 		|| die "econf failed"
 

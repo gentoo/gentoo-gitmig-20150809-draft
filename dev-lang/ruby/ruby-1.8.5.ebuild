@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5.ebuild,v 1.1 2006/08/28 03:22:46 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5.ebuild,v 1.2 2006/08/30 17:18:57 caleb Exp $
 
 ONIGURUMA="onigd2_5_4"
 
@@ -15,7 +15,7 @@ LICENSE="Ruby"
 SLOT="1.8"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh
 ~sparc ~x86"
-IUSE="socks5 tcltk cjk doc threads examples ipv6"
+IUSE="debug socks5 tcltk cjk doc threads examples ipv6"
 RESTRICT="confcache"
 
 RDEPEND="virtual/libc
@@ -86,6 +86,7 @@ src_compile() {
 		$(use_enable doc install-doc) \
 		$(use_enable threads pthread) \
 		$(use_enable ipv6 ipv6) \
+		$(use_enable debug debug) \
 		--with-sitedir=/usr/$(get_libdir)/ruby/site_ruby \
 		|| die "econf failed"
 
