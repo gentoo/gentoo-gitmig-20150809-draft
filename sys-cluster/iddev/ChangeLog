@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/iddev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/ChangeLog,v 1.15 2006/08/24 18:54:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/ChangeLog,v 1.16 2006/08/30 11:07:02 xmerlin Exp $
+
+*iddev-1.03.00 (30 Aug 2006)
+
+  30 Aug 2006; Christian Zoffoli <xmerlin@gentoo.org> +iddev-1.03.00.ebuild:
+  Version bump.
 
   24 Aug 2006; Christian Zoffoli <xmerlin@gentoo.org> iddev-1.02.00.ebuild:
   Stable x86.
