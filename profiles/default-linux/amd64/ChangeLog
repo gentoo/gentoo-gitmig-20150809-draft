@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.16 2006/08/23 19:00:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.17 2006/08/30 19:36:23 wolf31o2 Exp $
+
+  30 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> -2006.1/deprecated:
+  Removing deprecation file for 2006.1 profile.
 
   23 Aug 2006; Danny van Dyk <kugelfang@gentoo.org> 2006.1/deprecated:
   Fixed 2006.1/deprecated file (Bug #144888).
