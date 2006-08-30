@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.5.2-r1.ebuild,v 1.1 2006/08/27 22:53:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.5.2-r1.ebuild,v 1.2 2006/08/30 20:59:19 flameeyes Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -49,8 +49,8 @@ need-kde 3.4
 
 pkg_setup() {
 	# use opengl &&
-		if ! built_with_use kde-base/kdelibs opengl ; then
-			eerror "You need to build kde-base/kdelibs with opengl use flag enabled."
+		if ! built_with_use x11-libs/qt opengl ; then
+			eerror "You need to build x11-libs/qt with opengl use flag enabled."
 			die
 		fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.46 2006/08/27 22:53:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.47 2006/08/30 20:59:19 flameeyes Exp $
+
+  30 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> krita-1.5.2-r1.ebuild:
+  Change the check so that it checks for Qt built with opengl support as
+  kdelibs as no such flag.
 
 *krita-1.5.2-r1 (27 Aug 2006)
 
