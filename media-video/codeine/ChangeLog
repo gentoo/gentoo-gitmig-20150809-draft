@@ -1,6 +1,10 @@
 # ChangeLog for media-video/codeine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/ChangeLog,v 1.13 2006/05/26 21:34:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/ChangeLog,v 1.14 2006/08/30 16:44:14 zzam Exp $
+
+  30 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> codeine-1.0.1.3.ebuild:
+  Added dependency to libXtst or <virtual/x11-7, thanks for reporting to
+  Daniel Mitchell <danmitchell@mail.utexas.edu>, see bug #134590.
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/codeine-1.0.1.3-respect-cc.patch, codeine-1.0.1.3.ebuild:

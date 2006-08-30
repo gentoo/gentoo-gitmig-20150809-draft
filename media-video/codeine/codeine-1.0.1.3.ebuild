@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.1.3.ebuild,v 1.2 2006/05/26 21:34:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.1.3.ebuild,v 1.3 2006/08/30 16:44:14 zzam Exp $
 
 inherit kde multilib versionator toolchain-funcs
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/xine-lib"
+RDEPEND="media-libs/xine-lib
+	|| ( x11-libs/libXtst
+		<virtual/x11-7 )"
 
 DEPEND="${RDEPEND}
 	dev-util/scons"
