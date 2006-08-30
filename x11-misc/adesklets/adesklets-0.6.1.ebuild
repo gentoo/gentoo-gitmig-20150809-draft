@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.6 2006/08/30 08:13:56 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1.ebuild,v 1.7 2006/08/30 08:18:19 s4t4n Exp $
 
 inherit eutils perl-module
 
@@ -17,8 +17,8 @@ RDEPEND="X? ( || ( (
 		x11-libs/libX11
 		x11-apps/xprop
 		x11-libs/libXt )
-	virtual/x11 ) )
-	x11-apps/xwininfo
+	virtual/x11 )
+	>=x11-apps/xwininfo-1.0.2 )
 	>=sys-apps/sed-4.1.4-r1
 	>=sys-apps/coreutils-5.94-r1
 	>=sys-process/procps-3.2.6"
