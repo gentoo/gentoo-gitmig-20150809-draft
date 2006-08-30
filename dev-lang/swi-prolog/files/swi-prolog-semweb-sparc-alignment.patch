@@ -1,0 +1,14 @@
+--- pl-5.6.17.orig/packages/semweb/avl.h	2006-03-07 04:23:47.000000000 +1300
++++ pl-5.6.17/packages/semweb/avl.h	2006-08-15 21:59:09.000000000 +1200
+@@ -58,7 +58,11 @@
+   /* structure for a node in an AVL tree */
+ typedef struct avl_node
+ { struct avl_node  *subtree[2];		/* LEFT and RIGHT subtrees */
++#ifndef __sparc__
+   short       bal;			/* balance factor */
++#else
++  long        bal;			/* balance factor */
++#endif
+   char	      data[1];			/* data on my back */
+ } AVLnode, *AVLtree;
+ 

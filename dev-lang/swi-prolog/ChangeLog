@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.28 2006/08/28 10:29:02 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.29 2006/08/30 10:07:44 keri Exp $
+
+*swi-prolog-5.6.17-r1 (30 Aug 2006)
+
+  30 Aug 2006; keri <keri@gentoo.org> +files/swi-prolog-CFLAGS-r1.patch,
+  +files/swi-prolog-PLBASE-r1.patch, +files/swi-prolog-cppproxy.patch,
+  +files/swi-prolog-db-docs.patch, +files/swi-prolog-db-versioned.patch,
+  +files/swi-prolog-jpl-install.patch, +files/swi-prolog-jpl-ppc.patch,
+  +files/swi-prolog-libtai.patch, +files/swi-prolog-ltx2htm.patch,
+  +files/swi-prolog-portage.patch,
+  +files/swi-prolog-semweb-sparc-alignment.patch,
+  +files/swi-prolog-thread-tests.patch, +files/swi-prolog-xpce-test.patch,
+  +swi-prolog-5.6.17-r1.ebuild:
+  Refactor build process in order to avoid lengthy autoconf runs.
 
   28 Aug 2006; keri <keri@gentoo.org> files/swi-prolog-packages-test.patch:
   Handle single-threaded check for X server. Bug #144665.
