@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.102 2006/08/21 05:05:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.103 2006/08/30 19:26:58 hansmi Exp $
+
+  30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> emacs-21.4-r4.ebuild:
+  Stable on ppc.
 
   21 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org> emacs-21.4-r5.ebuild:
   Add note to pkg_postinst that Emacs needs fonts; Resolves Bug #137598.
