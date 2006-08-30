@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5802 2006/08/30 06:36:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5803 2006/08/30 14:12:11 tchiwam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -840,10 +840,6 @@ net-libs/enet
 # - fix crappy state of runnable only in source tree.
 # - provide log output to /var/log somewhere intelligently
 app-benchmarks/ltp
-
-# Christian Parpart <trapni@gentoo.org> (09 Mar 2006)
-# These are about to be removed
-=www-apps/mediawiki-1.3*
 
 # Matthew Kennedy <mkennedy@gentoo.org> (06 Mar 2006)
 # Masked due to maintainability issues.  See bug 116631.
