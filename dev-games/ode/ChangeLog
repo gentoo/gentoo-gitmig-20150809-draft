@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.29 2006/08/17 19:37:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.30 2006/08/30 19:31:06 hansmi Exp $
+
+  30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> ode-0.6-r1.ebuild:
+  Stable on ppc.
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> ode-0.6-r1.ebuild:
   Stable on ppc64
