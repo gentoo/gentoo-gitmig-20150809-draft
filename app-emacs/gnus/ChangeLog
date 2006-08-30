@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.18 2006/08/22 02:35:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.19 2006/08/30 10:56:01 dertobi123 Exp $
+
+  30 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> gnus-5.10.8.ebuild:
+  ppc stable, bug #144616
 
   22 Aug 2006; Jason Wever <weeve@gentoo.org> gnus-5.10.8.ebuild:
   Stable on SPARC wrt bug #144616.
