@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.15.ebuild,v 1.1 2006/08/30 01:52:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.15.ebuild,v 1.2 2006/08/30 03:57:14 plasmaroo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI1} ${SRC_URI2}
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="virtual/blas
 	app-admin/eselect-lapack"
