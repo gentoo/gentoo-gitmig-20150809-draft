@@ -1,0 +1,125 @@
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gfs/diaper.c cluster-1.03.00/gfs-kernel/src/gfs/diaper.c
+--- cluster-1.03.00.orig/gfs-kernel/src/gfs/diaper.c	2006-06-26 23:53:51.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gfs/diaper.c	2006-08-30 18:18:06.000000000 +0200
+@@ -232,9 +232,9 @@
+ 	struct inode *inode;
+ 	int error;
+ 
+-	mutex_lock(&real->bd_mount_mutex);
++	down(&real->bd_mount_sem);
+ 	sb = sget(&gfs_fs_type, gfs_test_bdev_super, gfs_set_bdev_super, real);
+-	mutex_unlock(&real->bd_mount_mutex);
++	up(&real->bd_mount_sem);
+ 	if (IS_ERR(sb))
+ 		return PTR_ERR(sb);
+ 
+@@ -363,7 +363,7 @@
+ 	if (!diaper)
+ 		goto fail_remove;
+ 
+-	mutex_lock(&diaper->bd_mutex);
++	down(&diaper->bd_sem);
+ 	if (!diaper->bd_openers) {
+ 		diaper->bd_disk = gd;
+ 		diaper->bd_contains = diaper;
+@@ -372,7 +372,7 @@
+ 	} else
+ 		printk("GFS: diaper: reopening\n");
+ 	diaper->bd_openers++;
+-	mutex_unlock(&diaper->bd_mutex);
++	up(&diaper->bd_sem);
+ 
+ 	dh->dh_mempool = mempool_create(512,
+ 					mempool_alloc_slab, mempool_free_slab,
+@@ -395,14 +395,14 @@
+ 	mempool_destroy(dh->dh_mempool);
+ 
+  fail_bdput:
+-	mutex_lock(&diaper->bd_mutex);
++	down(&diaper->bd_sem);
+ 	if (!--diaper->bd_openers) {
+ 		invalidate_bdev(diaper, 1);
+ 		diaper->bd_contains = NULL;
+ 		diaper->bd_disk = NULL;
+ 	} else
+ 		printk("GFS: diaper: not closed\n");
+-	mutex_unlock(&diaper->bd_mutex);
++	up(&diaper->bd_sem);
+ 	bdput(diaper);	
+ 
+  fail_remove:
+@@ -437,14 +437,14 @@
+ 
+ 	mempool_destroy(dh->dh_mempool);
+ 
+-	mutex_lock(&diaper->bd_mutex);
++	down(&diaper->bd_sem);
+ 	if (!--diaper->bd_openers) {
+ 		invalidate_bdev(diaper, 1);
+ 		diaper->bd_contains = NULL;
+ 		diaper->bd_disk = NULL;
+ 	} else
+ 		printk("GFS: diaper: not closed\n");
+-	mutex_unlock(&diaper->bd_mutex);
++	up(&diaper->bd_sem);
+ 
+ 	bdput(diaper);
+ 	del_gendisk(gd);
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gfs/ops_file.c cluster-1.03.00/gfs-kernel/src/gfs/ops_file.c
+--- cluster-1.03.00.orig/gfs-kernel/src/gfs/ops_file.c	2006-06-29 18:50:41.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gfs/ops_file.c	2006-08-30 18:18:06.000000000 +0200
+@@ -1465,13 +1465,12 @@
+ 
+ 	if (sdp->sd_args.ar_localflocks) {
+ 		if (IS_GETLK(cmd)) {
+-			struct file_lock tmp;
+-			int ret;
++			struct file_lock *tmp;
+ 			lock_kernel();
+-			ret = posix_test_lock(file, fl, &tmp);
++			tmp = posix_test_lock(file, fl);
+ 			fl->fl_type = F_UNLCK;
+-			if (ret)
+-				memcpy(fl, &tmp, sizeof(struct file_lock));
++			if (tmp)
++				memcpy(fl, tmp, sizeof(struct file_lock));
+ 			unlock_kernel();
+ 		        return 0;
+ 		} else {
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/gfs/ops_fstype.c cluster-1.03.00/gfs-kernel/src/gfs/ops_fstype.c
+--- cluster-1.03.00.orig/gfs-kernel/src/gfs/ops_fstype.c	2006-06-29 18:50:41.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/gfs/ops_fstype.c	2006-08-30 18:18:06.000000000 +0200
+@@ -697,9 +697,9 @@
+ 		return (struct super_block *)diaper;
+ 	}
+ 
+-	mutex_lock(&diaper->bd_mount_mutex);
++	down(&diaper->bd_mount_sem);
+ 	sb = sget(fs_type, gfs_test_bdev_super, gfs_set_bdev_super, diaper);
+-	mutex_unlock(&diaper->bd_mount_mutex);
++	up(&diaper->bd_mount_sem);
+ 	if (IS_ERR(sb))
+ 		goto out;
+ 
+diff -uNr cluster-1.03.00.orig/gfs-kernel/src/nolock/main.c cluster-1.03.00/gfs-kernel/src/nolock/main.c
+--- cluster-1.03.00.orig/gfs-kernel/src/nolock/main.c	2006-08-16 23:53:20.000000000 +0200
++++ cluster-1.03.00/gfs-kernel/src/nolock/main.c	2006-08-30 18:18:06.000000000 +0200
+@@ -243,14 +243,13 @@
+ 		 struct lm_lockname *name,
+ 		 struct file *file, struct file_lock *fl)
+ {
+-	struct file_lock tmp;
+-	int ret;
++	struct file_lock *tmp;
+ 
+ 	lock_kernel();
+-	ret = posix_test_lock(file, fl, &tmp);
++	tmp = posix_test_lock(file, fl);
+ 	fl->fl_type = F_UNLCK;
+-	if (ret)
+-		memcpy(fl, &tmp, sizeof(struct file_lock));
++	if (tmp)
++		memcpy(fl, tmp, sizeof(struct file_lock));
+ 	unlock_kernel();
+ 
+ 	return 0;
