@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.16 2006/08/30 19:15:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.17 2006/08/30 19:34:11 wolf31o2 Exp $
+
+  30 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -2006.1/server/deprecated:
+  Forgot to remove the server deprecated file.
 
   30 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> -2006.1/deprecated,
   -2006.1/desktop/deprecated, -2006.1/profile.bashrc:
