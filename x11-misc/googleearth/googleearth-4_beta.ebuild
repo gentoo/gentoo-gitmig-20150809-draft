@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.9 2006/07/23 15:12:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.10 2006/08/30 20:45:06 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -42,9 +42,13 @@ S=${WORKDIR}
 src_unpack() {
 	unpack_makeself
 	# make the postinst scripts behave
-	sed -i -e 's:$SETUP_INSTALLPATH/::' -e "s: --user: --system:" \
+	sed -i -e 's:$SETUP_INSTALLPATH/::' \
+		-e "s:^xdg-mime:linux/xdg/xdg-mime:" \
+		-e "s:^xdg-menu:linux/xdg/xdg-menu:" \
+		-e "s: --user: --system:" \
 		-e 's:$SETUP_INSTALLPATH:1:' postinstall.sh
-	sed -i -e "s:/usr:${D}/usr:g" -e "s:^detectDE$::" \
+	sed -i -e "s:/usr:${D}/usr:g" \
+		-e "s:^detectDE$::" \
 		-e 's:-x $x/update-mime:-d nonexis:' \
 		-e 's:-x $x/update-desktop:-d nonexis:' linux/xdg/xdg-m{ime,enu}
 }
