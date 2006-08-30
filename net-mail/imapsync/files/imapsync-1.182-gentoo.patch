@@ -1,0 +1,22 @@
+--- Makefile.orig	2006-01-16 17:14:22.000000000 -0800
++++ Makefile	2006-01-16 17:15:20.000000000 -0800
+@@ -3,6 +3,11 @@
+ 
+ TARGET=imapsync
+ 
++ifdef $(DESTDIR)
++else
++	DESTDIR=/usr/bin/
++endif
++
+ .PHONY: help usage all
+ 
+ help: usage
+@@ -54,6 +59,7 @@
+ .PHONY: install dist
+ 
+ install: testp
++	mkdir -p $(DESTDIR)/usr/bin/
+ 	cp $(TARGET) $(DESTDIR)/usr/bin/$(TARGET)
+ 	chmod 755 $(DESTDIR)/usr/bin/$(TARGET)
+ 
