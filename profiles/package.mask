@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5800 2006/08/29 23:31:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5801 2006/08/30 02:14:55 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# Daniel Drake <dsd@gentoo.org> (29 Aug 2006)
+# pending removal, obsoleted by in-kernel driver (bug #145525)
+# if you have any reason to use this package over the in-kernel version,
+# speak up now!
+net-misc/bcm4400
 
 # Markus Dittrich <markusle@gentoo.org> (29 Aug 2006)
 # masked for further testing (see bug #144314)
