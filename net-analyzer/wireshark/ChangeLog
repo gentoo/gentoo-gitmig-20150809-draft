@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.29 2006/08/29 19:08:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.30 2006/08/30 02:24:49 dragonheart Exp $
+
+  30 Aug 2006; Daniel Black <dragonheart@gentoo.org>
+  wireshark-0.99.3.ebuild:
+  changed description to emerge -s ethereal will find it
 
   29 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
   wireshark-0.99.3.ebuild:

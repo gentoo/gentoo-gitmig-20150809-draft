@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.3.ebuild,v 1.11 2006/08/29 19:08:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.3.ebuild,v 1.12 2006/08/30 02:24:49 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils autotools
 
-DESCRIPTION="A commercial-quality network protocol analyzer"
+DESCRIPTION="A network protocol analyzer formally known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
 #SRC_URI="http://www.wireshark.org/download/src/${MY_P}.tar.bz2"
 SRC_URI="mirror://sourceforge/wireshark/${P}.tar.bz2
