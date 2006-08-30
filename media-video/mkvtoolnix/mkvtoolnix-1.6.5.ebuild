@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.5.ebuild,v 1.4 2006/03/14 21:46:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.6.5.ebuild,v 1.5 2006/08/30 18:21:09 zzam Exp $
 
 inherit eutils wxwidgets flag-o-matic
 
@@ -31,6 +31,9 @@ pkg_setup() {
 		# wxWidgets does not like --as-needed
 		filter-ldflags -Wl,--as-needed --as-needed
 	fi
+
+	# filter out -fforce-addr as it leads to segfaults, see Bug #113396
+	filter-flags -fforce-addr
 }
 
 src_compile() {

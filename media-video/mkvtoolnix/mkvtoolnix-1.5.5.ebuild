@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.5.5.ebuild,v 1.5 2005/12/15 21:59:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.5.5.ebuild,v 1.6 2006/08/30 18:21:09 zzam Exp $
 
-inherit eutils wxwidgets
+inherit eutils wxwidgets flag-o-matic
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -29,6 +29,9 @@ pkg_setup() {
 	if use wxwindows; then
 		need-wxwidgets gtk2 || die "You must compile wxGTK with X useflag."
 	fi
+
+	# filter out -fforce-addr as it leads to segfaults, see Bug #113396
+	filter-flags -fforce-addr
 }
 
 src_compile() {

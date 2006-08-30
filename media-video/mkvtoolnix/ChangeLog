@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.52 2006/03/14 21:46:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.53 2006/08/30 18:21:09 zzam Exp $
+
+  30 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  mkvtoolnix-1.5.5.ebuild, mkvtoolnix-1.6.5.ebuild:
+  Filter out -fforce-addr, see Bug #113396.
 
   14 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   mkvtoolnix-1.6.5.ebuild:
