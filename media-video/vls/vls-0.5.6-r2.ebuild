@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r2.ebuild,v 1.12 2006/05/20 11:12:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vls/vls-0.5.6-r2.ebuild,v 1.13 2006/08/30 13:03:43 zzam Exp $
 
 inherit eutils
 
 IUSE="debug dvd dvb"
 
 DESCRIPTION="The VideoLAN server"
-HOMEPAGE="http://www.videolan.org/vls/"
+HOMEPAGE="http://www.videolan.org/vlc/streaming.html"
 SRC_URI="http://www.videolan.org/pub/videolan/vls/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
