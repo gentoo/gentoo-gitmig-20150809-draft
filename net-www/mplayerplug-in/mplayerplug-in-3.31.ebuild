@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31.ebuild,v 1.2 2006/08/30 02:43:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31.ebuild,v 1.3 2006/08/30 19:54:45 josejx Exp $
 
 inherit eutils multilib nsplugins
 
@@ -49,42 +49,15 @@ src_compile() {
 	fi
 
 	# Media Playback Support (bug #145517)
-	### Divx Enable/Disable
-	if use divx; then
-		myconf="${myconf} --enable-dvx"
-	else
-		myconf="${myconf} --disable-dvx"
-	fi
+	econf \
+		$(myconf) \
+		$(use_enable divx dvx) \
+		$(use_enable gmedia gmp) \
+		$(use_enable real rm) \
+		$(use_enable quicktime qt) \
+		$(use_enable wmp) \
+		|| die "econf failed"
 
-	### Google Media Enable/Disable
-	if use gmedia; then
-		myconf="${myconf} --enable-gmp"
-	else
-		myconf="${myconf} --disable-gmp"
-	fi
-
-	### Real Media Enable/Disable
-	if use real; then
-		myconf="${myconf} --enable-rm"
-	else
-		myconf="${myconf} --disable-rm"
-	fi
-
-	### Quicktime Enable/Disable
-	if use quicktime; then
-		myconf="${myconf} --enable-qt"
-	else
-		myconf="${myconf} --disable-qt"
-	fi
-
-	### Windows Media Enable/Disable
-	if use wmp; then
-		myconf="${myconf} --enable-wmp"
-	else
-		myconf="${myconf} --disable-wmp"
-	fi
-
-	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
