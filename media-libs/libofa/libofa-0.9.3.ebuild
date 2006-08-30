@@ -1,6 +1,8 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.2 2006/08/27 14:39:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/libofa-0.9.3.ebuild,v 1.3 2006/08/30 18:57:50 carlo Exp $
+
+inherit eutils
 
 DESCRIPTION="Open Fingerprint Architecture"
 HOMEPAGE="http://www.musicdns.org/"
@@ -22,8 +24,14 @@ pkg_setup() {
 		die "Correct your C[XX]FLAGS. Using -ffast-math is unsafe and not supported."
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/libofa-0.9.3-gcc-4.patch
+}
+
 src_compile() {
-	econf || die "configure failed"
+ 	econf || die "configure failed"
 	emake || die "emake failed"
 }
 src_install() {
