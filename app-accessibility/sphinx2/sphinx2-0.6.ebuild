@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.6.ebuild,v 1.2 2006/08/25 18:53:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/sphinx2-0.6.ebuild,v 1.3 2006/08/30 12:20:31 dertobi123 Exp $
 
 IUSE="static"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/cmusphinx/${P}.tar.gz"
 
 LICENSE="BSD as-is"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND="virtual/libc"
 
