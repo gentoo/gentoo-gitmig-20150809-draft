@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5801 2006/08/30 02:14:55 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5802 2006/08/30 06:36:17 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -515,6 +515,7 @@ app-admin/eselect-lapack
 =sci-libs/lapack-atlas-3.6.0-r2
 =sci-libs/lapack-atlas-3.7.11-r1
 =sci-libs/mkl-8.0.2.004
+=sci-libs/mkl-8.1.014
 
 # Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
 # Still masked wildfire because needs testing of new Java systemJava 2. If you unmask and have problems building please file a bug to me and add java@gentoo.org to the CC list
