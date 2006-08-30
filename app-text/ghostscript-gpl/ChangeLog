@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.1 2006/06/27 08:13:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.2 2006/08/30 23:56:01 genstef Exp $
+
+  30 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-gpl-8.54.ebuild:
+  add STDDIRS to make targets to fix parallel build issues thanks to Bruno
+  Roggeri <bruno.roggeri@metz.supelec.fr> in bug 142802
 
 *ghostscript-gpl-8.54 (27 Jun 2006)
 
