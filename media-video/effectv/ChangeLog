@@ -1,6 +1,10 @@
 # ChangeLog for media-video/effectv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.2 2006/03/07 16:34:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.3 2006/08/30 15:42:47 zzam Exp $
+
+  30 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/effectv-0.3.10-trunc-name-collision.patch, effectv-0.3.10.ebuild:
+  Added patch against name-collision for function trunc, see bug #140866.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/effectv-0.3.10-makefile.patch, effectv-0.3.10.ebuild:
