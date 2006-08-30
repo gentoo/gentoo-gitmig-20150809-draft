@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.10 2006/03/21 00:49:54 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.11 2006/08/30 16:14:13 spb Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -152,7 +152,7 @@ get_version_component_range() {
 #     20040905    ->  (empty string)
 #     3.0c-r1     ->  0c-r1
 get_after_major_version() {
-	echo $(get_version_component_range 2- "${1:-PV}" )
+	echo $(get_version_component_range 2- "${1:-${PV}}" )
 }
 
 # Replace the $1th separator with $2 in $3 (defaults to $PV if $3 is not
