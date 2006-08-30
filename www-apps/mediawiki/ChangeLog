@@ -1,10 +1,18 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.61 2006/08/30 14:32:50 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.62 2006/08/30 14:52:36 tchiwam Exp $
+
+
+*mediawiki-1.5.8 (30 Aug 2006)
+  30 Aug 2006; Philippe Trottier <tchiwam@gentoo.org>
+  mediawiki-1.5.8.ebuild: 
+  Stable for more than 30 days, also oldest supported version by upstream.
+  Closing bug # 105818.
 
 *mediawiki-1.6.8 (30 Aug 2006)
   30 Aug 2006; Philippe Trottier <tchiwam@gentoo.org>
-  +mediawiki-1.6.8.ebuild: Version bump and bug fix.
+  +mediawiki-1.6.8.ebuild: 
+  Version bump and bug fix.
 
 *mediawiki-1.4.x (30 Aug 2006)
   30 Aug 2006; Philippe Trottier <tchiwam@gentoo.org>
