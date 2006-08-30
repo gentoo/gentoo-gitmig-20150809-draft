@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/gentoo-artwork-livecd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork-livecd/ChangeLog,v 1.1 2006/08/30 16:43:44 wolf31o2 Exp $
+
+*gentoo-artwork-livecd-2006.1 (30 Aug 2006)
+
+  30 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +gentoo-artwork-livecd-2006.1.ebuild:
+  Initial import. Ebuild by me. Artwork by blackace. This is stable on the
+  arches we used it on for 2006.1 and was tested by Release Engineering.
+
