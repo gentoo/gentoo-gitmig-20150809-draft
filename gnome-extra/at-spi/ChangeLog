@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.123 2006/08/29 20:11:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.124 2006/08/30 18:32:57 gustavoz Exp $
+
+  30 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> at-spi-1.7.10.ebuild:
+  Stable on sparc wrt #145428
 
   29 Aug 2006; Markus Rothe <corsair@gentoo.org> at-spi-1.7.10.ebuild:
   Stable on ppc64; bug #145428
