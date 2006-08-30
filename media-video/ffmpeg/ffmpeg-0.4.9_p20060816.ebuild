@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.2 2006/08/17 14:34:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.3 2006/08/30 17:53:19 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -86,7 +86,7 @@ src_unpack() {
 src_compile() {
 	replace-flags -O0 -O2
 
-	local myconf=""
+	local myconf="${EXTRA_ECONF}"
 
 	#disable mmx accelerated code if not requested, or if PIC is required
 	# as the provided asm decidedly is not PIC.
@@ -143,6 +143,8 @@ src_compile() {
 	cd ${S}
 	./configure \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
+		--shlibdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man \
 		--enable-static --enable-shared \
 		"--cc=$(tc-getCC)" \
