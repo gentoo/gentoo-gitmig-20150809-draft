@@ -1,0 +1,11 @@
+--- cluster-1.03.00/cman/qdisk/Makefile.orig	2006-08-30 15:50:39.000000000 +0200
++++ cluster-1.03.00/cman/qdisk/Makefile	2006-08-30 15:50:48.000000000 +0200
+@@ -17,7 +17,7 @@
+ 
+ INCLUDES+=-I. -I../lib
+ CFLAGS +=-I${incdir} -I${top_srcdir}/config \
+-         -Wall -Werror -Wstrict-prototypes -Wshadow -D_GNU_SOURCE -g
++         -Wall -Wstrict-prototypes -Wshadow -D_GNU_SOURCE -g
+ 
+ TARGET=qdiskd mkqdisk
+ 
