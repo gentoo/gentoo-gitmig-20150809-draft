@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.27 2006/08/29 22:34:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5_0-sapi.eclass,v 1.28 2006/08/30 09:04:07 chtekk Exp $
 #
 # ########################################################################
 #
@@ -417,12 +417,12 @@ php5_0-sapi_src_compile() {
 	fi
 
 	# DBA drivers support
-	phpconfutils_extension_with "cdb"		"cdb"		1
-	phpconfutils_extension_with "db4"		"berkdb"	1
-	phpconfutils_extension_with "flatfile"	"flatfile"	1
-	phpconfutils_extension_with "gdbm"		"gdbm"		1
-	phpconfutils_extension_with "inifile"	"inifile"	1
-	phpconfutils_extension_with	"qdbm"		"qdbm"		1
+	phpconfutils_extension_with "cdb"		"cdb"		0
+	phpconfutils_extension_with "db4"		"berkdb"	0
+	phpconfutils_extension_with "flatfile"	"flatfile"	0
+	phpconfutils_extension_with "gdbm"		"gdbm"		0
+	phpconfutils_extension_with "inifile"	"inifile"	0
+	phpconfutils_extension_with	"qdbm"		"qdbm"		0
 
 	# Support for the GD graphics library
 	if useq gd-external || phpconfutils_usecheck gd-external ; then
@@ -544,10 +544,23 @@ php5_0-sapi_src_install() {
 
 	# Install missing header files
 	if useq unicode || phpconfutils_usecheck unicode ; then
+		dodir ${destdir}/include/php/ext/mbstring
+		insinto ${destdir}/include/php/ext/mbstring
+			for x in `ls "${S}/ext/mbstring/"*.h` ; do
+			file=`basename ${x}`
+			doins ext/mbstring/${file}
+		done
+		dodir ${destdir}/include/php/ext/mbstring/oniguruma
+		insinto ${destdir}/include/php/ext/mbstring/oniguruma
+		for x in `ls "${S}/ext/mbstring/oniguruma/"*.h` ; do
+			file=`basename ${x}`
+			doins ext/mbstring/oniguruma/${file}
+		done
 		dodir ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
 		insinto ${destdir}/include/php/ext/mbstring/libmbfl/mbfl
-		for x in mbfilter.h mbfl_consts.h mbfl_encoding.h mbfl_language.h mbfl_string.h mbfl_convert.h mbfl_ident.h mbfl_memory_device.h mbfl_allocators.h mbfl_defs.h mbfl_filter_output.h mbfilter_pass.h mbfilter_wchar.h mbfilter_8bit.h ; do
-			doins ext/mbstring/libmbfl/mbfl/${x}
+		for x in `ls "${S}/ext/mbstring/libmbfl/mbfl/"*.h` ; do
+			file=`basename ${x}`
+			doins ext/mbstring/libmbfl/mbfl/${file}
 		done
 	fi
 

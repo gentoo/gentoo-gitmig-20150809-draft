@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.27 2006/08/29 22:34:50 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php4_4-sapi.eclass,v 1.28 2006/08/30 09:04:07 chtekk Exp $
 #
 # ########################################################################
 #
@@ -412,11 +412,11 @@ php4_4-sapi_src_compile() {
 	fi
 
 	# DBA drivers support
-	phpconfutils_extension_with "cdb"		"cdb"		1
-	phpconfutils_extension_with "db4"		"berkdb"	1
-	phpconfutils_extension_with "flatfile"	"flatfile"	1
-	phpconfutils_extension_with "gdbm"		"gdbm"		1
-	phpconfutils_extension_with "inifile"	"inifile"	1
+	phpconfutils_extension_with "cdb"		"cdb"		0
+	phpconfutils_extension_with "db4"		"berkdb"	0
+	phpconfutils_extension_with "flatfile"	"flatfile"	0
+	phpconfutils_extension_with "gdbm"		"gdbm"		0
+	phpconfutils_extension_with "inifile"	"inifile"	0
 
 	# DBX support
 	phpconfutils_extension_enable	"dbx"	"dbx"		1
@@ -543,6 +543,13 @@ php4_4-sapi_src_install() {
 
 	# Install PHP
 	make INSTALL_ROOT="${D}" install-build install-headers install-programs || die "make install failed"
+
+	# Install missing header files
+	if useq unicode || phpconfutils_usecheck unicode ; then
+		dodir ${destdir}/include/php/ext/mbstring
+		insinto ${destdir}/include/php/ext/mbstring
+		doins ext/mbstring/mbregex/mbregex.h
+	fi
 
 	# Get the extension dir, if not already defined
 	[[ -z "${PHPEXTDIR}" ]] && PHPEXTDIR="`"${D}/${destdir}/bin/php-config" --extension-dir`"
