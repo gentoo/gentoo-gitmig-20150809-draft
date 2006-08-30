@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.16 2006/06/25 10:56:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.17 2006/08/30 14:02:22 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -221,6 +221,36 @@ create_eselect_conf() {
 }
 
 
+
+should_we_eselect_gnat() {
+	# we only want to switch compilers if installing to / or /tmp/stage1root
+	[[ ${ROOT} == "/" ]] || return 1
+
+	# if the current config is invalid, we definitely want a new one
+	# Note: due to bash quirkiness, the following must not be 1 line
+	local curr_config 
+	curr_config=$(eselect --no-color gnat show | grep ${CTARGET} | awk '{ print $1 }') || return 0
+	[[ -z ${curr_config} ]] && return 0
+
+	# extraction of profile prats and all the relevant logic of toolchain.eclass
+	# is contained  here in SLOT and PN vars. The answer basically is, whether
+	# we have the same profile. A new one should not be enacted
+
+	if [[ ${curr_config} == ${CTARGET}-${PN}-${SLOT} ]] ; then
+		return 0
+	else
+		einfo "The current gcc config appears valid, so it will not be"
+		einfo "automatically switched for you.  If you would like to"
+		einfo "switch to the newly installed gcc version, do the"
+		einfo "following:"
+		echo
+		einfo "eselect compiler set <profile>"
+		echo
+		ebeep
+		return 1
+	fi
+}
+
 # active compiler selection, called from pkg_postinst
 do_gnat_config() {
 	eselect gnat set ${CTARGET}-${PN}-${SLOT} &> /dev/null
@@ -276,7 +306,9 @@ gnatbuild_pkg_setup() {
 }
 
 gnatbuild_pkg_postinst() {
-	do_gnat_config
+	if should_we_eselect_gnat; then
+		do_gnat_config
+	fi
 }
 
 # eselect-gnat can be unmerged together with gnat-*, so we better do this before
