@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.31.ebuild,v 1.5 2006/02/24 15:19:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.31.ebuild,v 1.6 2006/08/30 17:53:09 tsunam Exp $
 
 inherit vim-plugin eutils
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	linguas_es? ( ${HOMEPAGE}/cream-spell-dict-${DICT_ES}.zip )
 	linguas_de? ( ${HOMEPAGE}/cream-spell-dict-${DICT_DE}.zip )"
 
-IUSE=""
+IUSE="linguas_en linguas_fr linguas_es linguas_de"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc ~ppc mips ~amd64"

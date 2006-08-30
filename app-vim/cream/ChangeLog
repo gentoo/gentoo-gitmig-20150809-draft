@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/cream
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.29 2006/07/10 14:12:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.30 2006/08/30 17:53:09 tsunam Exp $
+
+  30 Aug 2006; Joshua Jackson <tsunam@gentoo.org> cream-0.31.ebuild,
+  cream-0.32.ebuild, cream-0.34.ebuild:
+  Proxy commit for Mark Loeser to fix Linguas issues with all cream ebuilds
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org> cream-0.34.ebuild:
   Mark 0.34 stable on ia64
