@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.22 2006/08/29 18:42:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.23 2006/08/30 06:43:48 wormo Exp $
+
+  29 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  narray-0.5.9.ebuild:
+  mark ~ppc (Bug #145363)
 
   29 Aug 2006; Bryan Østergaard <kloeri@gentoo.org> narray-0.5.9.ebuild:
   ia64 rekeyword, bug 145363.
