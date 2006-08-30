@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.7.1.ebuild,v 1.9 2006/08/25 07:42:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.7.1.ebuild,v 1.10 2006/08/30 21:42:51 kevquinn Exp $
 
 DESCRIPTION="Program and text file generation"
 HOMEPAGE="http://www.gnu.org/software/autogen/"
@@ -20,7 +20,12 @@ src_unpack() {
 	cd "${S}"
 	# autogen-5.7.1 doesn't build the docs ...
 	# http://sourceforge.net/mailarchive/forum.php?thread_id=7629430&forum_id=7034
-	sed -i -e '/SUBDIRS = /s/ doc\>//' Makefile.in
+	sed -i -e '/SUBDIRS = /s/ doc\>//' Makefile.in ||
+		die "sed Makefile.in failed"
+	# immediate.test does a sed on CFLAGS, that assumes it does not contain
+	# '-gXXX' (e.g. -ggdb2)
+	sed -i -e 's:s/-g//:s/-g\\b//:' autoopts/test/immediate.test ||
+		die "sed immediate.test failed"
 }
 
 src_compile() {

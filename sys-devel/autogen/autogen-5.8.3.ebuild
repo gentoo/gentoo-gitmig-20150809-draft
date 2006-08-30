@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.3.ebuild,v 1.1 2006/08/15 20:57:14 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/autogen-5.8.3.ebuild,v 1.2 2006/08/30 21:42:51 kevquinn Exp $
 
 DESCRIPTION="Program and text file generation"
 HOMEPAGE="http://www.gnu.org/software/autogen/"
@@ -14,6 +14,16 @@ IUSE=""
 # autogen doesn't build with lower versions of guile on ia64
 DEPEND=">=dev-util/guile-1.6.6
 	dev-libs/libxml2"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# immediate.test does a sed on CFLAGS, that assumes it does not contain
+	# '-gXXX' (e.g. -ggdb2)
+	sed -i -e 's:s/-g//:s/-g\\b//:' autoopts/test/immediate.test ||
+		die "sed immediate.test failed"
+
+}
 
 src_compile() {
 	econf || die "econf failed"
