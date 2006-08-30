@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/conf-update
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.4 2006/08/21 16:55:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.5 2006/08/30 08:25:53 blubb Exp $
+
+*conf-update-0.10.0 (30 Aug 2006)
+
+  30 Aug 2006; <blubb@gentoo.org> +conf-update-0.10.0.ebuild:
+  version bump
 
   21 Aug 2006; <blubb@gentoo.org> +metadata.xml, conf-update-0.9.ebuild:
   fix bug 144633 and add the lost metadata.xml
