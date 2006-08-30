@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5b.ebuild,v 1.4 2006/08/26 19:31:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-1.5b.ebuild,v 1.5 2006/08/30 23:04:19 weeve Exp $
 
 DESCRIPTION="Honeyd is a small daemon that creates virtual hosts on a network"
 HOMEPAGE="http://www.honeyd.org/"
@@ -9,7 +9,7 @@ SRC_URI="http://www.citi.umich.edu/u/provos/honeyd/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="doc"
 
 DEPEND="net-libs/libpcap
