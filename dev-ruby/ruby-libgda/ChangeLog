@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-libgda
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ChangeLog,v 1.11 2006/02/04 15:08:04 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libgda/ChangeLog,v 1.12 2006/08/30 11:28:17 pclouds Exp $
+
+*ruby-libgda-0.15.0 (30 Aug 2006)
+
+  30 Aug 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +ruby-libgda-0.15.0.ebuild:
+  Version bump
 
   04 Feb 2006; <solar@gentoo.org> :
   - redigest needed due to bad RMD160. bug #121124
