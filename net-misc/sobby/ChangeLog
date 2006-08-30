@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sobby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.6 2006/06/18 17:16:39 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.7 2006/08/30 00:42:26 humpback Exp $
+
+  30 Aug 2006; Gustavo Felisberto <humpback@gentoo.org>; sobby-0.4.1.ebuild:
+  Hanno detected a missing dep.
 
 *sobby-0.4.0_rc1 (18 Jun 2006)
 
