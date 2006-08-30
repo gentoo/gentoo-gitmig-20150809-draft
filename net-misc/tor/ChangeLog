@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.68 2006/08/30 08:03:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.69 2006/08/30 13:51:18 gustavoz Exp $
+
+  30 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> tor-0.1.0.18.ebuild,
+  tor-0.1.1.23.ebuild:
+  Stable on sparc wrt security #145458
 
   30 Aug 2006; <blubb@gentoo.org> tor-0.1.0.18.ebuild, tor-0.1.1.23.ebuild:
   stable on amd64 wrt bug 145458
