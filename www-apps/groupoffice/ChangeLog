@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/groupoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.13 2006/08/01 15:35:32 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.14 2006/08/30 07:39:14 blubb Exp $
+
+  30 Aug 2006; <blubb@gentoo.org> groupoffice-2.15.ebuild:
+  stable on amd64
 
 *groupoffice-2.15 (01 Aug 2006)
 
