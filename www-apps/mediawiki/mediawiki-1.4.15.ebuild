@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.15.ebuild,v 1.1 2006/03/29 17:15:46 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.15.ebuild,v 1.2 2006/08/30 15:38:14 tchiwam Exp $
 
-inherit webapp
+inherit webapp depend.php
 
 DESCRIPTION="The MediaWiki wiki web application (as used on wikipedia.org)"
 HOMEPAGE="http://www.mediawiki.org"
@@ -22,6 +22,12 @@ RDEPEND="virtual/php
 		 		 virtual/ghostscript
 				 media-gfx/imagemagick )
 		 imagemagick? ( media-gfx/imagemagick )"
+
+pkg_setup() {
+	webapp_pkg_setup
+	require_php_with_use pcre session mysql
+	require_gd
+}
 
 src_compile() {
 	if use math; then
