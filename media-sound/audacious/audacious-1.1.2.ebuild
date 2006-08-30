@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.2.ebuild,v 1.4 2006/08/30 02:29:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.2.ebuild,v 1.5 2006/08/30 15:13:39 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -54,7 +54,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/1.1.1-ffwma-asm.diff
-	epatch ${FILESDIR}/${PV}-cxxflags.diff
 }
 
 src_compile() {
