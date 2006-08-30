@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.15.ebuild,v 1.3 2006/08/29 16:47:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.15.ebuild,v 1.4 2006/08/30 01:32:45 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -37,6 +37,7 @@ pkg_setup() {
 	ewarn "performance of the resulting libraries will be degraded"
 	ewarn "considerably."
 	echo
+	epause 8
 }
 
 src_unpack() {

@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.36 2006/08/29 16:47:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.37 2006/08/30 01:32:45 markusle Exp $
+
+  30 Aug 2006; Markus Dittrich <markusle@gentoo.org>
+  blas-atlas-3.7.15.ebuild:
+  Updated atlas-3.7.15-shared-libs.patch in order for it to also 
+  work with the lapack-atlas ebuild. Also added an epause to make 
+  the CPU throttling warning more prominent.
 
   29 Aug 2006; Tim Yamin <plasmaroo@gentoo.org> blas-atlas-3.7.11-r1.ebuild,
   blas-atlas-3.7.11.ebuild, blas-atlas-3.7.15.ebuild:
