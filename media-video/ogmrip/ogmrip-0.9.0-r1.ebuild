@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.9.0-r1.ebuild,v 1.2 2006/06/02 15:14:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.9.0-r1.ebuild,v 1.3 2006/08/30 16:20:40 zzam Exp $
 
 inherit autotools eutils gnome2
 
@@ -34,27 +34,23 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} $(use_enable gnome gnome-support) $(use_enable debug maintainer-mode) $(use_enable subp enchant-support) $(use_enable hal hal-support)"
 
-DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
+DOCS="AUTHORS ChangeLog README NEWS TODO"
 
 pkg_setup() {
-	if ! which mencoder > /dev/null 2>&1; then
-		eerror "Unable to find mencoder in the PATH. You need mencoder to use OGMRip."
-		eerror "Please, add encode to your USE flags and emerge mplayer again."
-		die "Unable to find mencoder in the PATH. You need mencoder to use OGMRip."
-	fi
-	if ! mencoder -ovc help 2> /dev/null | grep -q "^ *xvid *- .*$"; then
-		echo
-		eerror "Mplayer is not build with XviD support. OGMRip requires XviD support in mplayer."
-		eerror "Please, add xvid to your USE flags and emerge mplayer again."
-		die "Mplayer is not build with XviD support. OGMRip requires XviD support in mplayer."
+	if ! built_with_use -a media-video/mplayer dvd encode xvid; then
+		eerror "Please, check that your USE flags contain 'dvd', 'encode' and"
+		eerror "'xvid' and emerge mplayer again."
+		die "Mplayer is not build with dvd, encoding or xvid support. OGMRip" \
+		"requires dvd, encoding and xvid support in mplayer."
 	fi
 }
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-lang.patch
-	epatch ${FILESDIR}/${P}-gcc4.patch
-	epatch ${FILESDIR}/${P}-mplayercvs.patch
-	epatch ${FILESDIR}/${P}-types.patch
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-lang.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}-mplayercvs.patch"
+	epatch "${FILESDIR}/${P}-types.patch"
 	eautoreconf
 }
