@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31.ebuild,v 1.1 2006/08/29 17:26:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31.ebuild,v 1.2 2006/08/30 02:43:59 josejx Exp $
 
 inherit eutils multilib nsplugins
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 -hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="gtk"
+IUSE="gtk divx gmedia real quicktime wmp"
 
 DEPEND=">=media-video/mplayer-1.0_pre5
 		|| ( www-client/mozilla-firefox
@@ -48,6 +48,42 @@ src_compile() {
 		myconf="${myconf} --enable-x"
 	fi
 
+	# Media Playback Support (bug #145517)
+	### Divx Enable/Disable
+	if use divx; then
+		myconf="${myconf} --enable-dvx"
+	else
+		myconf="${myconf} --disable-dvx"
+	fi
+
+	### Google Media Enable/Disable
+	if use gmedia; then
+		myconf="${myconf} --enable-gmp"
+	else
+		myconf="${myconf} --disable-gmp"
+	fi
+
+	### Real Media Enable/Disable
+	if use real; then
+		myconf="${myconf} --enable-rm"
+	else
+		myconf="${myconf} --disable-rm"
+	fi
+
+	### Quicktime Enable/Disable
+	if use quicktime; then
+		myconf="${myconf} --enable-qt"
+	else
+		myconf="${myconf} --disable-qt"
+	fi
+
+	### Windows Media Enable/Disable
+	if use wmp; then
+		myconf="${myconf} --enable-wmp"
+	else
+		myconf="${myconf} --disable-wmp"
+	fi
+
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
@@ -61,17 +97,19 @@ src_install() {
 	doins mplayerplug-in.xpt || die "xpt failed"
 	inst_plugin /opt/netscape/plugins/mplayerplug-in.xpt
 
-	PLUGINS="gmp rm qt wmp"
+	PLUGINS="gmp rm qt wmp dvx"
 
 	for plugin in ${PLUGINS}; do
-		### Install the plugin
-		exeinto /opt/netscape/plugins
-		doexe "mplayerplug-in-${plugin}.so" || die "plugin ${plugin} failed"
-		inst_plugin "/opt/netscape/plugins/mplayerplug-in-${plugin}.so"
-		### Install the xpt
-		insinto /opt/netscape/plugins
-	    doins "mplayerplug-in-${plugin}.xpt" || die "plugin ${plugin} xpt failed"
-		inst_plugin "/opt/netscape/plugins/mplayerplug-in-${plugin}.xpt"
+		if [ -e "mplayerplug-in-${plugin}.so" ]; then
+			### Install the plugin
+			exeinto /opt/netscape/plugins
+			doexe "mplayerplug-in-${plugin}.so" || die "plugin ${plugin} failed"
+			inst_plugin "/opt/netscape/plugins/mplayerplug-in-${plugin}.so"
+			### Install the xpt
+			insinto /opt/netscape/plugins
+		    doins "mplayerplug-in-${plugin}.xpt" || die "plugin ${plugin} xpt failed"
+			inst_plugin "/opt/netscape/plugins/mplayerplug-in-${plugin}.xpt"
+		fi
 	done
 
 	insinto /etc
