@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.108 2006/08/30 17:06:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.109 2006/08/30 17:07:31 gustavoz Exp $
+
+  30 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> zope-2.7.9.ebuild:
+  Stable on sparc wrt security #141578
 
   30 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> zope-2.8.8.ebuild:
   Stable on sparc wrt security #141578
