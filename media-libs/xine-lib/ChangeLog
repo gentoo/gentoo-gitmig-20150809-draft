@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.391 2006/07/26 22:59:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.392 2006/08/30 23:18:46 flameeyes Exp $
+
+*xine-lib-1.1.3_pre20060831 (30 Aug 2006)
+
+  30 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +xine-lib-1.1.3_pre20060831.ebuild:
+  Add pre-release of xine-lib depending on newer ffmpeg allowing people on
+  non-x86 platforms to play WMV files. Bugs still welcome.
 
   26 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.2-r2.ebuild:
