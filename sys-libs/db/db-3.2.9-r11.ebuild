@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.25 2006/08/31 11:47:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.1 2006/08/31 11:47:00 pva Exp $
 
-inherit gnuconfig libtool eutils db java-pkg
+inherit gnuconfig libtool eutils db java-pkg-opt-2
 
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
 HOMEPAGE="http://www.sleepycat.com/"
@@ -12,7 +12,7 @@ LICENSE="DB"
 SLOT="3"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc java"
 
 RDEPEND="virtual/libc"
@@ -20,20 +20,17 @@ DEPEND="${RDEPEND}
 	=sys-libs/db-1.85*
 	sys-devel/libtool
 	sys-devel/m4
-	java? ( virtual/jdk )"
+	java? ( >=virtual/jdk-1.4 )"
 # We need m4 too else build fails without config.guess
 
 # This doesn't build without exceptions
 export CXXFLAGS="${CXXFLAGS/-fno-exceptions/-fexceptions}"
 
-pkg_setup() {
-	use java && java-pkg_pkg_setup
-}
-
 src_unpack() {
 	unpack ${A}
 
-	use java && export JAVACABS=$(java-config --javac)
+	use java && export JAVACABS=${JAVAC}
+	use java && export JAVACFLAGS=$(java-pkg_javac-args)
 
 	chmod -R ug+w *
 
@@ -91,7 +88,7 @@ src_compile() {
 	# Robin H. Johnson <robbat2@gentoo.org> (18 Oct 2003)
 	# conf_shared="${conf_shared}
 	#	`use_enable tcl tcl`
-	#	`use_with tcl tcl /usr/lib`"
+	#	`use_with tcl tcl /usr/$(get_libdir)`"
 
 	# NOTE: we should not build both shared and static versions
 	#       of the libraries in the same build root!

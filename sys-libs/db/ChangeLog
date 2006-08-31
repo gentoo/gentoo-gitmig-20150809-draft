@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.169 2006/08/17 19:45:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.170 2006/08/31 11:47:00 pva Exp $
+
+*db-3.2.9-r11 (31 Aug 2006)
+
+  31 Aug 2006; Peter Volkov <pva@gentoo.org> db-3.2.9-r10.ebuild,
+  +db-3.2.9-r11.ebuild:
+  Added fix for new java system. Thank Caster and Tichoj for fix and Jan
+  Callewaert for report of the bug #132690.
 
   17 Aug 2006; Jeroen Roovers <jer@gentoo.org> db-4.2.52_p4-r2.ebuild:
   Stable for HPPA (bug #142965). There seems no need for HPPA to wait for Java.
