@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.27-r1.ebuild,v 1.2 2006/08/31 04:12:42 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.3.3-r1.ebuild,v 1.1 2006/08/31 04:12:42 nichoj Exp $
 
 inherit base distutils eutils
 
@@ -9,42 +9,23 @@ HOMEPAGE="http://www.gentoo.org/proj/en/java/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="2"
+SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="virtual/python"
 RDEPEND="virtual/python
 	dev-java/java-config-wrapper"
+PDEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.3* )"
 
 src_install() {
 	distutils_src_install
+	newbin java-config java-config-1
+	doman java-config.1
 
-	insinto /usr/share/java-config-2/config/
-	for i in alpha amd64 hppa ia64 ppc ppc64 sparc x86; do
-		if use ${i}; then
-			newins config/jdk-defaults-${i}.conf jdk-defaults.conf || die "arch	config not found"
-		fi
-	done
-
-	for tool in $(< config/symlink-tools); do
-		dosym /usr/bin/run-java-tool /usr/bin/${tool}
-	done
-
-	# Install profile.d for setting JAVA_HOME
-	dodir /etc/profile.d
-	exeinto /etc/profile.d
-	newexe ${FILESDIR}/${PN}-${SLOT}.profiled ${PN}-${SLOT}.sh || die "newexe failed"
-}
-
-
-pkg_postrm() {
-	python_mod_cleanup /usr/share/java-config-2/pym/java_config
+	doenvd 30java-finalclasspath
 }
 
 pkg_postinst() {
-	python_mod_optimize /usr/share/java-config-2/pym/java_config
-
 	einfo "The way Java is handled on Gentoo has been recently updated."
 	einfo "If you have not done so already, you should follow the"
 	einfo "instructions available at:"

@@ -1,6 +1,23 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.107 2006/08/28 13:20:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.108 2006/08/31 04:12:42 nichoj Exp $
+
+  31 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
+  java-config-1.3.1-r1.ebuild, java-config-1.3.2.ebuild,
+  java-config-1.3.3.ebuild, +java-config-1.3.3-r1.ebuild,
+  java-config-2.0.27.ebuild, java-config-2.0.27-r1.ebuild:
+  Dropped alpha and hppa keywords. Improved post install message.
+  java-config-1.3.3 now post-depends on a 1.4 or 1.3 JDK. This ensures that
+  packages using generation-1 will be able to build properly with minimal
+  amount of interference.
+
+*java-config-1.3.3-r1 (30 Aug 2006)
+
+  30 Aug 2006; Joshua Nichols <nichoj@gentoo.org>
+  +java-config-1.3.3-r1.ebuild, java-config-2.0.27-r1.ebuild:
+  Revision bump to java-config-1.3.3. It now post-depends on a 1.4 or 1.3 JDK
+  for compatibility with the new Java system. Also improved the post install
+  messages of both 1.x and 2.x.
 
 *java-config-1.3.3 (28 Aug 2006)
 
