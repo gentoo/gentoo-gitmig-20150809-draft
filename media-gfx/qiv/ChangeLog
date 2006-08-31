@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/qiv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.18 2006/08/30 18:29:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.19 2006/08/31 11:27:25 blubb Exp $
+
+  31 Aug 2006; <blubb@gentoo.org> qiv-2.0.ebuild:
+  stable on amd64
 
   30 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> qiv-2.0.ebuild:
   Stable on sparc wrt #145560
