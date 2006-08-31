@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.8.ebuild,v 1.3 2006/07/28 20:08:31 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-ttf/sdl-ttf-2.0.8.ebuild,v 1.4 2006/08/31 11:51:16 genstef Exp $
+
+inherit eutils
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that allows you to use TrueType fonts in SDL applications"
@@ -18,12 +20,18 @@ DEPEND="X? ( || ( x11-libs/libXt virtual/x11 ) )
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/sdl-ttf-2.0.8-noftinternals.patch
+}
+
 src_compile() {
-	econf $(use_with X x) || die
+	econf $(use_with X x) || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc CHANGES README
 }
