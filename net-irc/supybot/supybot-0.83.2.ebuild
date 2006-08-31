@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.2.ebuild,v 1.2 2006/08/05 22:54:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.2.ebuild,v 1.3 2006/08/31 22:58:52 tcort Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/supybot/${MY_P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="sqlite"
 
 DEPEND=">=dev-lang/python-2.3

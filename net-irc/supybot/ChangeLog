@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/supybot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.16 2006/08/22 09:57:03 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/ChangeLog,v 1.17 2006/08/31 22:58:52 tcort Exp $
+
+  31 Aug 2006; Thomas Cort <tcort@gentoo.org> supybot-0.83.2.ebuild:
+  Added ~amd64 wrt Bug #145138.
 
   22 Aug 2006; Alastair Tse <liquidx@gentoo.org> supybot-0.77.2.ebuild,
   -supybot-0.80.1.ebuild, -supybot-0.83.0_rc3.ebuild:
