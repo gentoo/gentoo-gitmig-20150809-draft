@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.3 2006/08/05 17:35:45 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.4 2006/08/31 00:08:11 genstef Exp $
 
 inherit eutils subversion versionator
 
@@ -41,10 +41,10 @@ src_compile() {
 		qmake CONFIG+=debug || die "qmake failed"
 	else
 		qmake CONFIG-=debug QMAKE_TARGET=LastFM || die "qmake failed"
-	fi	
-	emake qmake_all || die "emake qmake_all failed"
+	fi
+	emake -j1 qmake_all || die "emake qmake_all failed"
 	epatch ${FILESDIR}/lastfmplayer-amd64.patch
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
