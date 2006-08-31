@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.38 2006/08/31 17:34:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.39 2006/08/31 17:38:17 joshuabaergen Exp $
+
+  31 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  freeglut-2.4.0.ebuild:
+  That warning should go into pkg_setup().
 
   31 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   freeglut-2.4.0.ebuild:

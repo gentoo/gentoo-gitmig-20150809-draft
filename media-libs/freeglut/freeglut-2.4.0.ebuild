@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.17 2006/08/31 17:34:54 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.18 2006/08/31 17:38:16 joshuabaergen Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/opengl
 	!media-libs/glut"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
+pkg_setup() {
 	# bug #134586
 	if [[ ${CFLAGS/march/} = ${CFLAGS} ]]; then
 		ewarn "You do not have 'march' set in your CFLAGS."
@@ -27,7 +27,9 @@ src_unpack() {
 		ewarn "'march' to the appropriate architecture."
 		epause 5
 	fi
+}
 
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 
