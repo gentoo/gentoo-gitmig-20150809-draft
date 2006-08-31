@@ -1,0 +1,51 @@
+--- WWW/Library/Implementation/HTParse.c.old	2006-08-31 22:55:10.031020854 +0200
++++ WWW/Library/Implementation/HTParse.c	2006-08-31 22:56:58.964604699 +0200
+@@ -166,6 +166,16 @@
+ #define LYalloca_free(x)   free(x)
+ #endif
+ 
++static char *strchr_or_end(char *string, int ch)
++{
++    char *result = strchr(string, ch);
++
++    if (result == 0) {
++	result = string + strlen(string);
++    }
++    return result;
++}
++
+ /*	Parse a Name relative to another name.			HTParse()
+ **	--------------------------------------
+ **
+@@ -455,13 +465,24 @@
+ 	    *tail++ = '/';
+ 	    strcpy(tail, related.absolute);
+ 	    if (given.relative) {
+-		p = strchr(tail, '?');	/* Search part? */
+-		if (p == NULL)
+-		    p = (tail + strlen(tail) - 1);
+-		for (; *p != '/'; p--)
+-		    ;				/* last / */
+-		p[1] = '\0';			/* Remove filename */
+-		strcat(p, given.relative); /* Add given one */
++		/* RFC 1808 part 4 step 5 (if URL path is empty) */
++		/* a) if given has params, add/replace that */
++		if (given.relative[0] == ';') {
++		    strcpy(strchr_or_end(tail, ';'), given.relative);
++		}
++		/* b) if given has query, add/replace that */
++		else if (given.relative[0] == '?') {
++		    strcpy(strchr_or_end(tail, '?'), given.relative);
++		}
++		/* otherwise fall through to RFC 1808 part 4 step 6 */
++		else {
++		    p = strchr(tail, '?');	/* Search part? */
++		    if (p == NULL)
++			p = (tail + strlen(tail) - 1);
++		    for (; *p != '/'; p--) ;	/* last / */
++		    p[1] = '\0';	/* Remove filename */
++		    strcat(p, given.relative);	/* Add given one */
++		}
+ 		HTSimplify (result);
+ 	    }
+ 	    CTRACE((tfp, "HTParse: (Related-ABS)\n"));
