@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.38 2006/07/09 05:36:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.39 2006/08/31 08:31:48 flameeyes Exp $
+
+  31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.3.ebuild:
+  Disable x264 support for now, it's not API stable. See bug #145343.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0-r1.ebuild:
   Remove xorg-server fake depend, was an artefact produced by the first dep
