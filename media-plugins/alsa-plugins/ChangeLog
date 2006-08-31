@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.10 2006/08/11 21:50:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.11 2006/08/31 09:16:24 flameeyes Exp $
+
+*alsa-plugins-1.0.12 (31 Aug 2006)
+
+  31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/alsa-plugins-1.0.12-automagic.patch,
+  -alsa-plugins-1.0.12_rc1.ebuild, -alsa-plugins-1.0.12_rc1-r1.ebuild,
+  +alsa-plugins-1.0.12.ebuild:
+  Version bump to latest version, and remove release candidate.
 
   11 Aug 2006; Markus Rothe <corsair@gentoo.org>
   alsa-plugins-1.0.12_rc1-r1.ebuild:
