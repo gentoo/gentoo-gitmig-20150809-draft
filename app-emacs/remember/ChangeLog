@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/remember
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.1 2006/08/31 23:58:43 jmglov Exp $
+
+*remember-1.9 (31 Aug 2006)
+
+  31 Aug 2006; Josh Glover <jmglov@gentoo.org> +files/50remember-gentoo.el,
+  +metadata.xml, +remember-1.9.ebuild:
+  This package was submitted by Evan Monroig in bug #80418
+
