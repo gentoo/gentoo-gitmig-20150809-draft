@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.12.ebuild,v 1.1 2006/08/31 09:11:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.12.ebuild,v 1.2 2006/08/31 19:03:40 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -18,7 +18,7 @@ IUSE="fltk gtk"
 RDEPEND=">=media-libs/alsa-lib-1.0.0
 	virtual/alsa
 	fltk? ( =x11-libs/fltk-1.1* )
-	gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-2* )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
