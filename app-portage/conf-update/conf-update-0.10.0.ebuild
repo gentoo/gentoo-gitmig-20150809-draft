@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.10.0.ebuild,v 1.1 2006/08/30 08:25:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.10.0.ebuild,v 1.2 2006/08/31 20:51:19 blubb Exp $
 
 DESCRIPTION="${PN} is a ncurses-based config management utility"
 HOMEPAGE="http://www.gentoo.org/"
@@ -22,6 +22,7 @@ src_unpack() {
 	cd ${S}
 
 	sed -i -e "s/\$Rev:.*\\$/${PVR}/" conf-update.h
+	sed -i -e "s:-Wno-pointer-sign::g" Makefile
 }
 
 src_install() {
