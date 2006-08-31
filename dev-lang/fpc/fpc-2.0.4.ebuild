@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.1 2006/08/30 18:55:30 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.2 2006/08/31 18:21:38 truedfx Exp $
 
 inherit eutils
 
@@ -47,8 +47,8 @@ src_unpack() {
 set_pp() {
 	case ${ARCH} in
 	x86)	FPC_ARCH="386" ;;
-	ppc)	FPC_ARCH="powerpc" ;;
-	amd64)	FPC_ARCH="x86_64" ;;
+	ppc)	FPC_ARCH="ppc" ;;
+	amd64)	FPC_ARCH="x64" ;;
 	sparc)	FPC_ARCH="sparc" ;;
 	*)	die "This ebuild doesn't support ${ARCH}." ;;
 	esac

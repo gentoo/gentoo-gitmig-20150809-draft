@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.30 2006/08/30 18:55:30 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.31 2006/08/31 18:21:38 truedfx Exp $
+
+  31 Aug 2006; Harald van Dĳk <truedfx@gentoo.org> fpc-2.0.4.ebuild:
+  Fix set_pp for amd64 & ppc
 
 *fpc-2.0.4 (30 Aug 2006)
 
