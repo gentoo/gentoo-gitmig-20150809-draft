@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5805 2006/08/31 09:17:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5806 2006/08/31 14:43:32 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (31 Aug 2006)
+# Still to be tested if it's safe security-wise (and see why we should
+# leave it in tree).
+media-libs/tunepimp
 
 # Diego Pettenò <flameeyes@gentoo.org> (31 Aug 2006)
 # Pre-release for WMV support for non-x86 users to try
@@ -338,12 +343,6 @@ x11-themes/gdeskcal-skins
 # Tuấn Văn <langthang@gentoo.org> (25 Jul 2006)
 # Initial import. Masked for testing
 mail-filter/mimedefang
-
-# Diego Pettenò <flameeyes@gentoo.org> (24 Jul 2006)
-# TunePimp has security problems (#140184) and isn't API stable yet
-# scheduled for removal.
-media-libs/tunepimp
-media-sound/trm
 
 # Luis Medinas <metalgod@gentoo.org> (23 Jul 2006)
 # Marked for removal see bug #132449
