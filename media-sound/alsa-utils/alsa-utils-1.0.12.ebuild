@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.12.ebuild,v 1.1 2006/08/31 09:11:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.12.ebuild,v 1.2 2006/08/31 10:00:25 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -17,7 +17,7 @@ IUSE="nls"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
-	>=media-libs/alsa-lib-1.0.10_rc1"
+	>=media-libs/alsa-lib-1.0.12"
 RDEPEND="${DEPEND}
 	sys-apps/pciutils"
 
@@ -76,7 +76,7 @@ pkg_postinst() {
 	if use sparc; then
 		ewarn "Old versions of alsa-drivers had a broken snd-ioctl32 module"
 		ewarn "which causes sparc64 machines to lockup on such tasks as"
-		ewarn "changing the volume.  Because of this, it is VERY important"
+		ewarn "changing the volume.	 Because of this, it is VERY important"
 		ewarn "that you do not use the snd-ioctl32 modules contained in"
 		ewarn "development-sources or <=gentoo-dev-sources-2.6.7-r14.  Doing so"
 		ewarn "may result in an unbootable system if you start alsasound at boot."
