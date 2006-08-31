@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.394 2006/08/31 19:38:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.395 2006/08/31 22:22:46 flameeyes Exp $
+
+  31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.3_pre20060831.ebuild:
+  Bump patchset, fix building on non-x86, non-amd64 systems, thanks to Alberto
+  Zennaro for reporting.
 
   31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.3_pre20060831.ebuild:
