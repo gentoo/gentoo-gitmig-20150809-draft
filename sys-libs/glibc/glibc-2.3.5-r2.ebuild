@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.30 2006/08/14 16:30:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5-r2.ebuild,v 1.31 2006/08/31 20:28:33 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -520,7 +520,7 @@ toolchain-glibc_pkg_postinst() {
 
 	# Reload init ...
 	if ! is_crosscompile && [ "${ROOT}" = "/" ] ; then
-		/sbin/init U &> /dev/null
+		/sbin/telinit U &> /dev/null
 	fi
 
 	# warn the few multicast-dns-by-default users we've had about the change

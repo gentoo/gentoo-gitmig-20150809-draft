@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.20 2006/04/13 05:45:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.21 2006/08/31 20:28:33 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -766,6 +766,6 @@ pkg_postinst() {
 
 	# Reload init ...
 	if [ "${ROOT}" = "/" ]; then
-		/sbin/init U &> /dev/null
+		/sbin/telinit U &> /dev/null
 	fi
 }

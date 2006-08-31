@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.19 2006/08/30 19:23:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.20 2006/08/31 20:28:33 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -561,7 +561,7 @@ toolchain-glibc_pkg_postinst() {
 
 	if ! is_crosscompile && [[ ${ROOT} == "/" ]] ; then
 		# Reload init ...
-		/sbin/init U &> /dev/null
+		/sbin/telinit U &> /dev/null
 
 		# if the host locales.gen contains no entries, we'll install everything
 		local locale_list="${ROOT}etc/locale.gen"

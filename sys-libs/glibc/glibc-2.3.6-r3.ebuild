@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.21 2006/07/04 21:06:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r3.ebuild,v 1.22 2006/08/31 20:28:33 vapier Exp $
 
 # TODO:
 #  - fix warning from glibc build system:
@@ -576,7 +576,7 @@ toolchain-glibc_pkg_postinst() {
 
 	# Reload init ...
 	if ! is_crosscompile && [ "${ROOT}" = "/" ] ; then
-		/sbin/init U &> /dev/null
+		/sbin/telinit U &> /dev/null
 	fi
 
 	echo
