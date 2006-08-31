@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.27.ebuild,v 1.9 2006/06/18 17:39:28 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.27.ebuild,v 1.10 2006/08/31 21:53:12 chtekk Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
+MYSQL_RERELEASE=""
 # Set the patchset revision to use, must be either empty or a decimal number
 MYSQL_PATCHSET_REV="1"
 
