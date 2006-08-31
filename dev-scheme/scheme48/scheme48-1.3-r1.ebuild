@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.1 2006/03/22 06:04:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/scheme48/scheme48-1.3-r1.ebuild,v 1.2 2006/08/31 03:45:58 mkennedy Exp $
 
 inherit elisp-common multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.s48.org/1.3/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 -amd64"
 IUSE="doc emacs"
 
 DEPEND="virtual/libc"
