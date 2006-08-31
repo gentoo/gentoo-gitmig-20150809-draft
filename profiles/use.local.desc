@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2099 2006/08/30 02:42:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2100 2006/08/31 23:41:08 spb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1505,6 +1505,7 @@ sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
 sys-apps/paludis:pink - Use a less boring colourscheme than the default
+sys-apps/paludis:qa - Enable QA tools.
 sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
 sys-apps/pcmcia-cs:nocardbus - Disable 32bit CardBus support
 sys-apps/pcmcia-cs:pnp - Add support for PNP (Plug-N-Play)

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.60 2006/08/18 15:56:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.61 2006/08/31 23:41:08 spb Exp $
 
 # need stable libtiff (need to stablize media-libs/jbigkit for jbig support)
 jbig
@@ -269,3 +269,6 @@ glitz
 pike
 ocaml
 timidity
+
+# Paludis-0.6.0's QA tools need libpcre++, which hasn't been shown to work yet
+qa
