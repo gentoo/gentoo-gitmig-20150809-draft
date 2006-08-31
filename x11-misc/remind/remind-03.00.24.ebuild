@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.00.24.ebuild,v 1.3 2006/05/23 21:08:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/remind-03.00.24.ebuild,v 1.4 2006/08/31 14:54:40 blubb Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.roaringpenguin.com/penguin/open_source_remind.php"
 SRC_URI="http://www.roaringpenguin.com/penguin/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="X"
 
 RDEPEND="X? ( dev-lang/tk )"
