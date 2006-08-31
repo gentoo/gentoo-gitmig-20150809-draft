@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.12.ebuild,v 1.1 2006/08/31 09:16:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.12.ebuild,v 1.2 2006/08/31 09:21:22 flameeyes Exp $
 
 inherit libtool autotools eutils flag-o-matic
 
@@ -63,15 +63,5 @@ src_install() {
 	dodoc upmix.txt vdownmix.txt README-pcm-oss
 	use jack && dodoc README-jack
 	use libsamplerate && dodoc samplerate.txt
-	use pulseaudio && dodoc README-polyp
-}
-
-pkg_postinst() {
-	if use pulseaudio; then
-		elog "This version of alsa-plugins does not support PulseAudio under this name."
-		elog "as it was developed when it was called PolypAudio."
-		elog "For this reason all the documentation refers to PolypAudio and"
-		elog "the plugin is called polyp."
-		elog "This situation is going to be solved in next release."
-	fi
+	use pulseaudio && dodoc README-pulse
 }
