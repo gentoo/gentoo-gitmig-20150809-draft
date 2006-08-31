@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.32 2006/05/31 20:45:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.33 2006/08/31 21:37:03 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -51,7 +51,7 @@ MY_FIXED_PV="${MY_FIXED_PV/_beta/}"
 MY_FIXED_PV="${MY_FIXED_PV/_rc/}"
 
 # Define correct SRC_URIs
-SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${P/_/-}.tar.gz"
+SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${P/_/-}${MYSQL_RERELEASE}.tar.gz"
 if [[ -n "${MYSQL_PATCHSET_REV}" ]] ; then
 	MYSQL_PATCHSET_FILENAME="${PN}-patchset-${MY_FIXED_PV}-r${MYSQL_PATCHSET_REV}.tar.bz2"
 	# We add the Gentoo mirror here, as we only use primaryuri for the MySQL tarball
@@ -171,7 +171,7 @@ mysql_src_unpack() {
 
 	unpack ${A}
 
-	mv -f "${WORKDIR}/${P/_/-}" "${S}"
+	mv -f "${WORKDIR}/${P/_/-}${MYSQL_RERELEASE}" "${S}"
 	cd "${S}"
 
 	# Apply the patches for this MySQL version
