@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.37 2006/07/29 18:04:10 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.38 2006/08/31 17:34:54 joshuabaergen Exp $
+
+  31 Aug 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  freeglut-2.4.0.ebuild:
+  Add a warning about compiling without 'march' set in the user's CFLAGS.  (Bug
+  #134586)
 
   29 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/freeglut-gcc42.patch, freeglut-2.4.0.ebuild:
