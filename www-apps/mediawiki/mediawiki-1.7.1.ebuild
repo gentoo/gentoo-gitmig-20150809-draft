@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.7.1.ebuild,v 1.1 2006/08/31 07:17:11 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.7.1.ebuild,v 1.2 2006/08/31 14:01:12 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -36,6 +36,13 @@ pkg_setup() {
 	webapp_pkg_setup
 	require_php_with_use pcre session mysql
 	require_gd
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/jobindexlength-mysql4.patch
+	epatch ${FILESDIR}/jobindexlength-mysql5.patch
 }
 
 src_compile() {
