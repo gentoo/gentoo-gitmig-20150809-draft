@@ -1,0 +1,13 @@
+Index: amarok/src/scancontroller.h
+===================================================================
+--- amarok/src/scancontroller.h	(revision 578921)
++++ amarok/src/scancontroller.h	(revision 578922)
+@@ -99,7 +99,7 @@
+         void customEvent( QCustomEvent* );
+ 
+         // Member variables:
+-        static const uint MAX_RESTARTS = 2;
++        static const uint MAX_RESTARTS = 20;
+ 
+         KProcIO* m_scanner;
+         QStringList m_folders;

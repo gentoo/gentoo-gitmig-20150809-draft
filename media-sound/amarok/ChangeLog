@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.158 2006/08/08 15:43:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.159 2006/08/31 09:17:00 flameeyes Exp $
+
+*amarok-1.4.2-r1 (31 Aug 2006)
+
+  31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/amarok-1.4.2-20restarts.patch,
+  +files/amarok-1.4.2-audiocd-freeze.patch,
+  +files/amarok-1.4.2-collection-sqlite.patch,
+  +files/amarok-1.4.2-libmtp.patch, -amarok-1.4.1-r1.ebuild,
+  -amarok-1.4.1-r2.ebuild, -amarok-1.4.2_beta1.ebuild,
+  +amarok-1.4.2-r1.ebuild:
+  Version bump (-r1 as this is not a vanilla version and I want to bump who
+  has already a local 1.4.2 copy for sure). Remove old versions.
 
   08 Aug 2006; Simon Stelling <blubb@gentoo.org> amarok-1.4.0a-r1.ebuild:
   stable on amd64
