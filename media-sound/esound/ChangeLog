@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.77 2006/08/11 20:42:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.78 2006/08/31 18:40:22 flameeyes Exp $
+
+  31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
+  esound-0.2.36-r2.ebuild:
+  Make sure the m4 dir is used when re-autoreconfiguring.
 
   11 Aug 2006; Markus Rothe <corsair@gentoo.org> esound-0.2.36-r2.ebuild:
   Added ~ppc64; bug #141223
