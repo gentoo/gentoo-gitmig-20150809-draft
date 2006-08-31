@@ -1,6 +1,13 @@
 # ChangeLog for net-print/poster
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.8 2006/07/16 16:50:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.9 2006/08/31 01:20:48 genstef Exp $
+
+*poster-20050907 (31 Aug 2006)
+
+  31 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
+  +poster-20050907.ebuild:
+  version bump thanks to Thomas Bettler <bettlertho@sis.unibe.ch> in bug
+  145068 but not using 20060221 because of kde bug #132916
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org> poster-0.1.ebuild:
   ppc stable
