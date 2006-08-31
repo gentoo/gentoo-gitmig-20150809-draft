@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.208 2006/07/19 17:13:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.209 2006/08/31 04:58:44 gregkh Exp $
+
+*udev-098 (31 Aug 2006)
+
+  31 Aug 2006; Greg Kroah-Hartman <gregkh@gentoo.org> +files/udev.rules-098,
+  +files/udev-098-udevtrigger.patch, +files/udev-start-098.sh,
+  +udev-098.ebuild:
+  098 release.  Loads of bugs fixed in the ebuild and surrounding scripts. Rules
+  files also updated to work properly.
 
   19 Jul 2006; Martin Schlemmer <azarah@gentoo.org> udev-096-r1.ebuild:
   Remove redundent 10-udev.hotplug symlink. Noticed by Walt
