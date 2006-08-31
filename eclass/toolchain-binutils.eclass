@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.63 2006/08/27 09:15:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.64 2006/08/31 04:40:41 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets
 # us easily merge multiple versions for multiple targets (if we wish) and
@@ -147,6 +147,9 @@ tc-binutils_apply_patches() {
 }
 
 toolchain-binutils_src_unpack() {
+	is_cross && [[ $(binutils-config -V) != binutils-config-1.9* ]] \
+		&& die "You need to upgrade your >=binutils-config-1.9"
+
 	tc-binutils_unpack
 	tc-binutils_apply_patches
 }
