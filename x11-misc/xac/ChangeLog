@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.1 2006/08/24 23:57:16 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/ChangeLog,v 1.2 2006/08/31 13:03:38 corsair Exp $
+
+  31 Aug 2006; Markus Rothe <corsair@gentoo.org> xac-0.5.ebuild:
+  Added ~ppc64
 
 *xac-0.5 (24 Aug 2006)
 
