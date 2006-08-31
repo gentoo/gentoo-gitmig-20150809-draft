@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssistats
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.8 2005/05/16 00:33:32 swegener Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.9 2006/08/31 02:59:21 metalgod Exp $
+
+  31 Aug 2006; Luis Medinas <metalgod@gentoo.org> irssistats-0.70.ebuild:
+  Added ~amd64 keyword.
 
   16 May 2005; Sven Wegener <swegener@gentoo.org> irssistats-0.70.ebuild:
   Moved to toolchain-funcs.eclass for bug #92745.
