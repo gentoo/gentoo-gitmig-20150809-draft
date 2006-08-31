@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.7.ebuild,v 1.3 2006/06/17 21:32:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.6.7.ebuild,v 1.4 2006/08/31 02:20:58 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://initng.org/"
@@ -32,6 +34,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-inotify-ppc.patch #145595
 	sed -i -e 's:-Werror::' CMakeLists.txt #136992
 }
 

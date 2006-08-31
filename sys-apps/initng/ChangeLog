@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/initng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.38 2006/06/11 19:05:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/ChangeLog,v 1.39 2006/08/31 02:20:58 vapier Exp $
+
+  31 Aug 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/initng-0.6.7-inotify-ppc.patch, initng-0.6.7.ebuild:
+  Fix building on ppc #145594 by jstrommer.
 
 *initng-0.6.7 (11 Jun 2006)
 
