@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libmtp
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.1 2006/08/31 19:29:20 tcort Exp $
+
+*libmtp-0.0.16 (31 Aug 2006)
+
+  31 Aug 2006; Thomas Cort <tcort@gentoo.org> +metadata.xml,
+  +libmtp-0.0.16.ebuild:
+  Initial import of libmtp.
+
