@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050502.ebuild,v 1.5 2006/04/16 20:16:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050502.ebuild,v 1.6 2006/08/31 19:11:11 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -151,9 +151,7 @@ pkg_postinst() {
 		einfo "http://dri.sourceforge.net/cgi-bin/moin.cgi/ATIMach64?value=CategoryHardwareChipset."
 	fi
 
-	einfo "Checking kernel module dependencies"
-	update_modules
-	update_depmod
+	linux-mod_pkg_postinst
 }
 
 # Functions used above are defined below:

@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.35 2006/07/07 02:34:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.36 2006/08/31 19:11:11 battousai Exp $
+
+  31 Aug 2006; Bryan Stine <battousai@gentoo.org> x11-drm-20050502.ebuild,
+  x11-drm-20050807.ebuild, x11-drm-20051028.ebuild, x11-drm-20051223.ebuild,
+  x11-drm-20060608.ebuild:
+  Fix linux-mod usage in pkg_postinst.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update to my new email address.
