@@ -20,8 +20,8 @@ alpha		default-linux/alpha/no-nptl/2.4			stable
 amd64		default-linux/amd64/2006.1			stable
 amd64		default-linux/amd64/2006.1/desktop	stable
 #amd64		default-linux/amd64/2006.1/server	stable
-#amd64		default-linux/amd64/2006.0/no-symlinks	dev
-amd64		default-linux/amd64/2006.1/no-symlinks	dev
+amd64		default-linux/amd64/2006.0/no-symlinks	dev
+#amd64		default-linux/amd64/2006.1/no-symlinks	dev
 #amd64		default-linux/amd64/2006.0/no-multilib	stable
 amd64		default-linux/amd64/2006.1/no-multilib	stable
 
