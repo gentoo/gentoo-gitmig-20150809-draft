@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.6 2006/07/27 03:41:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.5.ebuild,v 1.7 2006/09/01 01:15:56 nichoj Exp $
 
+JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
 
 JDK_RELEASE=$(get_version_component_range 1-3)
