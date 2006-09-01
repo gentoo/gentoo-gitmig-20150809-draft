@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.41 2006/08/30 00:31:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.42 2006/09/01 03:02:14 nichoj Exp $
 
 inherit multilib
 
@@ -42,8 +42,19 @@ java-pkg_pkg_setup() {
 				einfo "Using Generation-1 System VM: ${GENTOO_VM}"
 				initialize-java-home
 			else
-				ewarn "The way Java is handled on Gentoo has drastically changed."
+				echo
 				eerror "There was a problem determining which VM to use for generation-1"
+				eerror "This is because the way Java is handled on Gentoo has drastically changed."
+				if ! has_version "=virtual/jdk-1.4*" || ! has_version "=virtual/jdk-1.3*"; then
+					ewarn "There does not seem to be a 1.4 or 1.3 JDK installed."
+					ewarn "You should probably install =virtual/jdk-1.4* or =virtual/jdk-1.3*"
+					ewarn "It is important to have either a 1.4 or 1.3 JDK installed"
+					ewarn "in order for the old and new Java systems to coexist"
+					ewarn "Details about this can be found at:"
+					ewarn "\thttp://overlays.gentoo.org/proj/java/wiki/Why_We_Need_Java14"
+					echo
+				fi
+
 				eerror "You should run, and follow the advice of:"
 				eerror "\t/usr/bin/java-check-environment"
 
