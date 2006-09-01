@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.6 2006/02/27 11:14:53 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-ugly.eclass,v 1.7 2006/09/01 16:46:28 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -38,7 +38,8 @@ S=${WORKDIR}/${MY_P}
 if [ "${PN}" != "${MY_PN}" ]; then
 RDEPEND="=media-libs/gst-plugins-base-0.10*"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	dev-util/pkgconfig"
 fi
 
 ###
