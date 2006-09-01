@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20060607.ebuild,v 1.2 2006/09/01 11:19:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-20060607.ebuild,v 1.3 2006/09/01 17:47:37 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ SRC_URI="
 	http://foo2zjs.rkkda.com/sihp1020.tar.gz
 	http://foo2zjs.rkkda.com/sihp1018.tar.gz
 	http://foo2zjs.rkkda.com/sihp1005.tar.gz
-	http://foo2zjs.rkkda.com/sihp1000.tar.gz ))))))))))
+	http://foo2zjs.rkkda.com/sihp1000.tar.gz ) ) ) ) ) ) ) ) ) )
 	"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
@@ -72,7 +72,7 @@ src_compile() {
 	sed -i -e "s/.*wget.*//" \
 		-e "s/error \"Couldn't dow.*//" getweb
 	# unpack files
-	use foo2zjs_devices_hp2600n && ./getweb 2600n 
+	use foo2zjs_devices_hp2600n && ./getweb 2600n
 	use foo2zjs_devices_hp1600 && ./getweb 1600
 	use foo2zjs_devices_km2430 && ./getweb 2430
 	use foo2zjs_devices_km2300 && ./getweb 2300
