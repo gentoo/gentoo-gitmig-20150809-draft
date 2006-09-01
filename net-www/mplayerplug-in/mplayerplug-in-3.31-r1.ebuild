@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31.ebuild,v 1.4 2006/09/01 07:13:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.1 2006/09/01 07:13:10 josejx Exp $
 
 inherit eutils multilib nsplugins
 
