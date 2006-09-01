@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.157 2006/09/01 01:02:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.158 2006/09/01 03:25:39 nichoj Exp $
+
+  01 Sep 2006; Joshua Nichols <nichoj@gentoo.org> -sun-jdk-1.5.0.07.ebuild,
+  -sun-jdk-1.5.0.07-r1.ebuild, -sun-jdk-1.5.0.07-r2.ebuild,
+  -sun-jdk-1.5.0.07-r3.ebuild, sun-jdk-1.5.0.08.ebuild:
+  Removed JAVA_VM_NO_GENERATION1, because default behavior now is not to
+  install for generation-1. Pruned old revisions.
 
   01 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
   sun-jdk-1.3.1.17-r10.ebuild, sun-jdk-1.4.2.12-r1.ebuild:
