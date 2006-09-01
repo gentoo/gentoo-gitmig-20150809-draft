@@ -1,6 +1,13 @@
 # ChangeLog for media-video/linux-uvc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.1 2006/07/26 16:55:12 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.2 2006/09/01 09:36:21 genstef Exp $
+
+*linux-uvc-0.0.1_pre51 (01 Sep 2006)
+
+  01 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  -linux-uvc-0.0.1_pre41.ebuild, +linux-uvc-0.0.1_pre51.ebuild:
+  version bump, add isight use flag, thanks to Henk Spaaij <zaai@spaaij.net>
+  and kilian <kilian@jknet.org> in bug 143201
 
   26 Jul 2006; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
   New ebuild thanks to Jürgen Geuter <tante@the-gay-bar.com>, Niv Vaizer
