@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r2.ebuild,v 1.5 2006/08/29 20:05:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r2.ebuild,v 1.6 2006/09/01 18:56:39 genstef Exp $
 
 MY_P=${P/_p/.p}
 S=${WORKDIR}/${MY_P}
@@ -17,9 +17,9 @@ DEPEND="media-libs/alsa-lib
 	>=x11-libs/gtk+-2"
 
 src_compile() {
-	local myconf
-	myconf="--with-gtk-target=-2.0"
-	econf `use_enable nls` ${myconf} || die "./configure failed"
+	econf \
+		$(use_enable nls) \
+		--with-gtk-target=-2.0 || die "./configure failed"
 	emake || die
 }
 
