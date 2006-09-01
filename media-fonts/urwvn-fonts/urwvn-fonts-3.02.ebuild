@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.02.ebuild,v 1.2 2006/07/12 12:37:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urwvn-fonts/urwvn-fonts-3.02.ebuild,v 1.3 2006/09/01 18:19:49 dertobi123 Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="http://vntex.org/urwvn/download/${MY_P}-ttf.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ia64 ppc ~sparc ~x86"
 IUSE=""
 
 S=${WORKDIR}

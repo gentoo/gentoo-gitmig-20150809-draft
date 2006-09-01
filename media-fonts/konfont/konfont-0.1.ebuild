@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/konfont/konfont-0.1.ebuild,v 1.7 2006/07/11 19:35:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/konfont/konfont-0.1.ebuild,v 1.8 2006/09/01 18:10:06 dertobi123 Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/dists/potato/main/source/utils/${MY_P}.tar.gz"
 HOMEPAGE="http://packages.debian.org/stable/utils/konfont"
 LICENSE="as-is"
 SLOT=0
-KEYWORDS="amd64 ~hppa ia64 ~ppc x86"
+KEYWORDS="amd64 ~hppa ia64 ppc x86"
 
 DEPEND="virtual/libc"
 

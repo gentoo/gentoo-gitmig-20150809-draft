@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/cjkuni-fonts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cjkuni-fonts/ChangeLog,v 1.6 2006/07/11 12:46:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cjkuni-fonts/ChangeLog,v 1.7 2006/09/01 18:13:18 dertobi123 Exp $
+
+  01 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  cjkuni-fonts-0.0.20050501.ebuild:
+  ppc stable, bug #145688
 
   11 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   cjkuni-fonts-0.0.20050501.ebuild:
