@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8b.ebuild,v 1.5 2006/08/31 15:10:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8b.ebuild,v 1.6 2006/09/01 07:00:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -146,6 +146,9 @@ src_install() {
 			ln -s ssl-${s} ${d}/openssl-${s}
 		done
 	done
+
+	diropts -m0700
+	dodir /etc/ssl/private
 }
 
 pkg_preinst() {
