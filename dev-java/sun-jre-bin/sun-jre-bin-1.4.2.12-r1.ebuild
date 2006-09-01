@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.12-r1.ebuild,v 1.1 2006/08/25 16:37:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.12-r1.ebuild,v 1.2 2006/09/01 03:09:34 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -42,10 +42,6 @@ lib/ext/localedata.jar lib/plugin.jar javaws/javaws.jar"
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
 DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2re-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
-
-# Don't install env files for generation-1, because generation-1 system vm
-# always needs to be a JDK
-JAVA_VM_NO_GENERATION1="true"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
