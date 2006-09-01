@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2101 2006/08/31 23:51:15 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2102 2006/09/01 09:32:48 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -931,6 +931,7 @@ media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telep
 media-video/gpac:ft - Enable support for the FreeType TrueType font renderer
 media-video/gpac:javascript - Enable support for SpiderMonkey ECMAScript
 media-video/kmplayer:mplayer - Enables video playback by mplayer
+media-video/linux-uvc:isight - Apply patch to work _only_ with the Apple iSight
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/mkvtoolnix:lzo - Enables support for lzo compression
