@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5806 2006/08/31 14:43:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5807 2006/09/01 11:04:56 kevquinn Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -94,11 +94,6 @@ app-test/hspell
 # Masking app-misc/bbgallery for treecleaners and bug(s) # 51694
 # Sept 26th for removal
 app-misc/bbgallery
-
-# Alec Warner <antarus@gentoo.org> (26 Aug 2006)
-# Masking app-text/info2html for treecleaners and bug(s) # 53004
-# Sept 26th for removal
-app-text/info2html
 
 # Matthew Kennedy <mkennedy@gentoo.org> (24 Aug 2006)
 # Removing these bese project ebuilds in favour of darcs ebuilds.
