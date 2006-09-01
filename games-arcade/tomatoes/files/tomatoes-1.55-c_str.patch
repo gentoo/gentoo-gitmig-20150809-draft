@@ -4,18 +4,20 @@
  // makefile.
  char *get_config_location(bool write) {
  #ifdef LINUX
-+	char *config_path;
++	static char *config_path = NULL;
  	// Get the path to the config file
  	string tmp = get_tomatoes_dir() + "config.cfg";
  
-@@ -90,8 +91,9 @@
+@@ -90,8 +91,11 @@
  		}
  		fclose(ftest);
  	}
 -
 -	return (char*)tmp.c_str();
-+	config_path = new char[tmp.length()+1];
-+	strcpy(config_path,tmp.c_str());
++       if (!config_path) {
++		config_path = new char[tmp.length()+1];
++		strcpy(config_path,tmp.c_str());
++	}
 +	return config_path;
  #endif
  
