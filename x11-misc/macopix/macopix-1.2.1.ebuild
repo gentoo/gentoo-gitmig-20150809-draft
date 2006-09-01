@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.5 2006/07/20 00:28:02 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.6 2006/09/01 17:29:07 genstef Exp $
 
 inherit eutils
 
@@ -24,13 +24,10 @@ LICENSE="GPL-2 free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 
-IUSE="gtk2 nls"
+IUSE="nls"
 
-DEPEND="gtk2? ( >=x11-libs/gtk+-2.0.0
-			>=dev-libs/glib-2.0.0	)
-	!gtk2? ( =x11-libs/gtk+-1.2*
-		=dev-libs/glib-1.2*
-		>=media-libs/gdk-pixbuf-0.7 )
+DEPEND=">=x11-libs/gtk+-2.0.0
+	>=dev-libs/glib-2.0.0
 	nls? ( >=sys-devel/gettext-0.10 )
 	media-libs/libpng"
 
@@ -41,7 +38,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with gtk2) \
+	econf --with-gtk2 \
 		$(use_enable nls) || die
 	emake || die "emake failed"
 }
