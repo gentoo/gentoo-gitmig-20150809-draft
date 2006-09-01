@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7-r1.ebuild,v 1.1 2006/08/05 19:15:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7-r1.ebuild,v 1.2 2006/09/01 22:27:59 corsair Exp $
 
 inherit libtool flag-o-matic perl-app
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE="X gs jbig jpeg2k jpeg lcms lzw perl png tiff truetype wmf xml doc"
 
 RDEPEND="app-arch/bzip2
