@@ -1,6 +1,6 @@
 # Copyrigh 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r21.ebuild,v 1.1 2006/08/25 17:48:28 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r21.ebuild,v 1.2 2006/09/01 03:04:23 nichoj Exp $
 
 inherit java-vm-2 toolchain-funcs
 
@@ -16,10 +16,6 @@ IUSE="nsplugin"
 
 DEPEND=">=sys-apps/sed-4
 	>=sys-devel/gcc-3.2"
-
-# Don't install env files for generation-1, because generation-1 system vm
-# always needs to be a JDK
-JAVA_VM_NO_GENERATION1="true"
 
 src_unpack() {
 	for a in ${A}; do
