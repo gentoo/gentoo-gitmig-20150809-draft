@@ -1,0 +1,11 @@
+# ChangeLog for net-voip/cohoba
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/ChangeLog,v 1.1 2006/09/01 12:52:38 genstef Exp $
+
+*cohoba-0.0.2 (01 Sep 2006)
+
+  01 Sep 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +cohoba-0.0.2.ebuild:
+  initial import from voip overlay and before that genstef overlay,
+  contributions thanks to peper and fuoco
+
