@@ -1,0 +1,41 @@
+diff -ur kgtk-0.7.orig/gtk/Makefile.am kgtk-0.7/gtk/Makefile.am
+--- kgtk-0.7.orig/gtk/Makefile.am	2006-09-01 16:38:30.000000000 +0200
++++ kgtk-0.7/gtk/Makefile.am	2006-09-01 16:37:35.000000000 +0200
+@@ -6,7 +6,7 @@
+ 
+ EXTRA_DIST=kgtk-wrapper.sh.in
+ 
+-wrapperdir = /usr/local/bin
++wrapperdir = $(bindir)
+ wrapper_SCRIPTS = kgtk-wrapper.sh
+ 
+ kgtk-wrapper.sh : kgtk-wrapper.sh.in Makefile
+diff -ur kgtk-0.7.orig/qt/Makefile.am kgtk-0.7/qt/Makefile.am
+--- kgtk-0.7.orig/qt/Makefile.am	2006-09-01 16:38:17.000000000 +0200
++++ kgtk-0.7/qt/Makefile.am	2006-09-01 16:38:46.000000000 +0200
+@@ -7,7 +7,7 @@
+ 
+ EXTRA_DIST=kqt-wrapper.sh.in
+ 
+-wrapperdir = /usr/local/bin
++wrapperdir = $(bindir)
+ wrapper_SCRIPTS = kqt-wrapper.sh
+ 
+ kqt-wrapper.sh : kqt-wrapper.sh.in Makefile
+diff -ur kgtk-0.7.orig/README kgtk-0.7/README
+--- kgtk-0.7.orig/README	2006-09-01 16:38:17.000000000 +0200
++++ kgtk-0.7/README	2006-09-01 16:39:26.000000000 +0200
+@@ -13,11 +13,11 @@
+ As an example for running Kino with KDE dialogs:
+ 
+ Either:
+-a. /usr/local/bin/kgtk-wrapper.sh /usr/bin/kino
++a. /usr/bin/kgtk-wrapper.sh /usr/bin/kino
+ 
+ Or:
+ b:
+-  1. ln -s /usr/local/bin/kgtk-wrapper.sh /usr/local/bin/kino
++  1. ln -s /usr/bin/kgtk-wrapper.sh /usr/local/bin/kino
+   2. When starting Kino, call /usr/local/bin/kino instead
+   3. Alter /usr/share/applications/Kino.desktop to call /usr/local/bin/kino
+ 
