@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.4_pre20051223.ebuild,v 1.2 2006/03/12 22:03:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gfax/gfax-0.7.4_pre20051223.ebuild,v 1.3 2006/09/01 09:04:45 genstef Exp $
 
 inherit gnome2 mono eutils
 
@@ -36,6 +36,11 @@ src_unpack() {
 	cd ${S}
 	patch -p1 < ${WORKDIR}/${MY_P}-1.diff
 	epatch debian/patches/*.dpatch
+}
+
+src_compile() {
+	addwrite "${ROOT}/root/.gconf" "${ROOT}/root/.gconfd"
+	gnome2_src_compile
 }
 
 src_install() {
