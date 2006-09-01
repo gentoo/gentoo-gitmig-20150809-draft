@@ -1,6 +1,10 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.48 2006/06/27 09:50:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.49 2006/09/01 21:42:32 kevquinn Exp $
+
+  01 Sep 2006; Kevin F. Quinn <kevquinn@gentoo.org> a2ps-4.13c-r5.ebuild:
+  Remove RESTRICT=test - the "stdarg" patch fixes this and is in from -r3
+  onwards (bug #118655, and fwiw #145897) - see change below on 30 Aug 2005
 
   27 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/a2ps-4.13-fixcachecheck.patch, a2ps-4.13c-r5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.2 2006/06/27 09:50:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r5.ebuild,v 1.3 2006/09/01 21:42:32 kevquinn Exp $
 
 inherit gnuconfig eutils autotools
 
@@ -14,8 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 IUSE="nls tetex cjk vanilla"
-# bug 118655, restrict until a proper fix is found
-RESTRICT="test"
 
 DEPEND=">=sys-devel/automake-1.6
 	>=sys-devel/autoconf-2.57
