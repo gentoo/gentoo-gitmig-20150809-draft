@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.17 2006/08/29 21:49:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.18 2006/09/01 23:57:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -102,10 +102,10 @@ src_unpack() {
 	fi
 	if use sou
 	then
-		unzip -o "${CDROM_ROOT}"/Data_Shared.zip
-		unzip -o "${CDROM_ROOT}"/Language_data.zip
-		unzip -o "${CDROM_ROOT}"/Language_update.zip
-		unzip -o "${CDROM_ROOT}"/Data_Linux.zip
+		unzip -o "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
+		unzip -o "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
+		unzip -o "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
+		unzip -o "${CDROM_ROOT}"/Data_Linux.zip || die "unpacking"
 		rm -f data/patch.bif patch.key
 		touch .metadata/sou || die "touching sou"
 	fi
@@ -117,9 +117,9 @@ src_unpack() {
 			cdrom_load_next_cd
 		fi
 		rm -f data/patch.bif patch.key
-		unzip -o "${CDROM_ROOT}"/Data_Shared.zip
-		unzip -o "${CDROM_ROOT}"/Language_data.zip
-		unzip -o "${CDROM_ROOT}"/Language_update.zip
+		unzip -o "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
+		unzip -o "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
+		unzip -o "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
 		touch .metadata/hou || die "touching hou"
 	fi
 
