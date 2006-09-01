@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r23.ebuild,v 1.3 2006/07/06 11:22:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r23.ebuild,v 1.4 2006/09/01 00:56:52 nichoj Exp $
 
+JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2
 
 S=${WORKDIR}/j2sdk1.3.1

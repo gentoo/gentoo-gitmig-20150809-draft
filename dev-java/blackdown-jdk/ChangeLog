@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.104 2006/08/12 20:45:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.105 2006/09/01 00:56:52 nichoj Exp $
+
+  01 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  blackdown-jdk-1.3.1-r23.ebuild, blackdown-jdk-1.4.1-r12.ebuild,
+  blackdown-jdk-1.4.2.03-r12.ebuild:
+  Added metadata to indicate packages support generation-1.
 
   12 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   blackdown-jdk-1.4.2.03-r2.ebuild:
