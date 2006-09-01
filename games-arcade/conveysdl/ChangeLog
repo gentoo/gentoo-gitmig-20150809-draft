@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/conveysdl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/ChangeLog,v 1.3 2005/08/11 23:55:24 tester Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/ChangeLog,v 1.4 2006/09/01 22:10:03 tupone Exp $
+
+*conveysdl-1.3 (01 Sep 2006)
+
+  01 Sep 2006; <tupone@gentoo.org> +conveysdl-1.3.ebuild:
+  Version bump requested with Bug #128660 by Alexandru Toma
 
   11 Aug 2005; Olivier Crête <tester@gentoo.org> conveysdl-1.ebuild:
   Marked ~amd64, closes bug #102163, thanks to meetra for testing
