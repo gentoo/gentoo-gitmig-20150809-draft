@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>maintainer-needed</herd>
+<maintainer>
+  <email>armin76@gmail.com</email>
+  <name>Raúl Porcel</name>
+</maintainer>
 </pkgmetadata>
