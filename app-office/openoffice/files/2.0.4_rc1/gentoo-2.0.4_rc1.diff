@@ -20,12 +20,23 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
---- distro-configs/Gentoo.conf.in 
-+++ distro-configs/Gentoo.conf.in 
-@@ -9,6 +9,5 @@
- --disable-qadevooo
- --with-dynamic-xinerama
- --without-myspell-dicts
----with-intro-bitmaps=\"${SRCDIR}/openintro_gentoo.bmp\"
- --with-vendor=\"Gentoo Foundation\"
+--- bin/unpack 
++++ bin/unpack 
+@@ -89,7 +89,7 @@
+ # it is necessary in ODK
+ # it can be built even on linux by mingw32, though
+ if test "$USE_PREBUILD_UNOWINREG_DLL" = "YES" ; then
+-    cp -f $TOOLSDIR/src/unowinreg.dll $OOBUILDDIR/external/unowinreg/ || exit 1;
++    cp -f $SRCDIR/unowinreg.dll $OOBUILDDIR/external/unowinreg/ || exit 1;
+ fi
  
+ # copy in misc Mono related dlls if we need to
+@@ -319,7 +319,7 @@
+ cp -af $TOOLSDIR/src/evolocal.odb $OOBUILDDIR/extras/source/database || exit 1;
+ 
+ echo "Installing bibliography overwrides";
+-tar xjf $TOOLSDIR/src/biblio.tar.bz2 -C $OOBUILDDIR/extras/source/database
++tar xjf $SRCDIR/biblio.tar.bz2 -C $OOBUILDDIR/extras/source/database
+ 
+ echo "Copying custom user-dicts into tree"
+ cp -af $TOOLSDIR/src/*.dic $OOBUILDDIR/extras/source/wordbook || exit 1;
