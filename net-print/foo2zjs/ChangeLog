@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.16 2006/06/14 23:14:18 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.17 2006/09/01 11:19:02 genstef Exp $
+
+  01 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  foo2zjs-20060607.ebuild:
+  Add FOO2ZJS_DEVICES variable support thanks to Thomas Kear
+  <thomas.kear@gmail.com> in bug 139987
 
   14 Jun 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/foo2zjs-udevfwld-20060523.diff,
