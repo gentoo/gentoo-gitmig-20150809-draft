@@ -1,18 +1,30 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.8 2006/08/31 01:03:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.9 2006/09/01 03:00:47 nichoj Exp $
+
+# -----------------------------------------------------------------------------
+# @eclass-begin
+# @eclass-shortdesc Java Virtual Machine eclass
+# @eclass-maintainer java@gentoo.org
 #
-# Author: Karl Trygve Kalleberg <karltk@gentoo.org>
+# This eclass provides functionality which assists with installing
+# virtual machines, and ensures that they are recognized by java-config.
+#
+# -----------------------------------------------------------------------------
 
 inherit eutils
 
 DEPEND="
 	=dev-java/java-config-2.0*
-	=dev-java/java-config-1.3*
 	>=sys-apps/portage-2.1"
 RDEPEND="
-	=dev-java/java-config-2.0*
-	=dev-java/java-config-1.3*"
+	=dev-java/java-config-2.0*"
+
+# If the VM supports generation-1, we need to depend on java-config-1
+if [[ ${JAVA_SUPPORTS_GENERATION_1} == 'true' ]]; then
+	DEPEND="${DEPEND} =dev-java/java-config-1.3*"
+	RDEPEND="${DDEPEND} =dev-java/java-config-1.3*"
+fi
 
 export WANT_JAVA_CONFIG=2
 
@@ -33,9 +45,10 @@ java-vm-2_pkg_postinst() {
 		java_set_default_vm_
 	fi
 
-	if [[ ${JAVA_VM_NO_GENERATION1} != "true" ]]; then
+	# support both variables for now
+	if [[ ${JAVA_SUPPORTS_GENERATION_1} == 'true' && ${JAVA_VM_NO_GENERATION1} != 'true' ]]; then
 		local systemvm1="$(java-config-1 -f 2>/dev/null)"
-		# no generation-1 system-vm was yet set
+		# no generation-1 system-vm was previously set
 		if [[ -z "${systemvm1}" ]]; then
 			# if 20java exists, must be using old VM
 			if [[ -f /etc/env.d/20java ]]; then
@@ -61,8 +74,14 @@ java-vm-2_pkg_postinst() {
 		    java-config-1 --set-system-vm=${P} 2>/dev/null
 		fi
 		# else... some other VM is being updated, so we don't have to worry
+	else
+		einfo "JREs and 1.5+ JDKs are not supported for use with generation-1."
+		einfo "This is because generation-1 is only for use for building packages."
+		einfo "Only generation-2 should be used by end-users,"
+		einfo "where all JREs and JDKs will be available"
 	fi
 
+	# Install a default nsplugin if we don't already have one
 	if has nsplugin ${IUSE} && use nsplugin; then
 		if [[ ! -f /usr/lib/nsbrowser/plugins/javaplugin.so ]]; then
 			eselect java-nsplugin set ${VMHANDLE}
@@ -73,17 +92,17 @@ java-vm-2_pkg_postinst() {
 }
 
 java-vm-2_pkg_prerm() {
-	if [[ "$(java-config -f)" == "${VMHANDLE}" ]]; then
-		ewarn "It appears you are removing your default system VM!"
-		ewarn "Please run java-config -L then java-config -S to set a new system VM!"
+	if [[ "$(java-config -f 2>/dev/null)" == "${VMHANDLE}" ]]; then
+		ewarn "It appears you are removing your system-vm!"
+		ewarn "Please run java-config -L to list available VMs,"
+		ewarn "then use java-config -S to set a new system-vm!"
 	fi
 }
 
 java_set_default_vm_() {
 	java-config-2 --set-system-vm="${VMHANDLE}"
 
-	einfo " After installing ${P} this"
-	einfo " was set as the default JVM to run."
+	einfo " ${P} set as the default system-vm."
 }
 
 get_system_arch() {
@@ -107,7 +126,6 @@ set_java_env() {
 	fi
 
 	dodir ${JAVA_VM_CONFIG_DIR}
-	dodir /etc/env.d/java # generation-1 compatibility
 	sed \
 		-e "s/@P@/${P}/g" \
 		-e "s/@PN@/${PN}/g" \
@@ -121,13 +139,18 @@ set_java_env() {
 	echo "VMHANDLE=\"${VMHANDLE}\"" >> ${env_file}
 	
 	# generation-1 compatibility
-	if [[ ${JAVA_VM_NO_GENERATION1} != true ]]; then
+	# respect both variables for now...
+	if [[ ${JAVA_SUPPORTS_GENERATION_1} == 'true' && ${JAVA_VM_NO_GENERATION1} != 'true' ]]; then
+		einfo "Enabling generation-1 compatibility..."
+		dodir /etc/env.d/java # generation-1 compatibility
 		# We need to strip some things out of the new style env,
 		# because these end up going in the env
 		sed -e 's/.*CLASSPATH.*//' \
 			-e 's/.*PROVIDES.*//' \
 			${env_file} \
-			> ${old_env_file} || die "failed to create old-style env file"
+			> ${old_env_file} || die "failed to create generation-1 env file"
+	else
+		ewarn "Disabling generation-1 compatibility..."
 	fi
 
 	[[ -n ${JAVA_PROVIDE} ]] && echo "PROVIDES=\"${JAVA_PROVIDE}\"" >> ${env_file}
@@ -170,3 +193,6 @@ java_mozilla_clean_() {
 	done
 }
 
+# ------------------------------------------------------------------------------
+# @eclass-end
+# ------------------------------------------------------------------------------
