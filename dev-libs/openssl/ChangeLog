@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.174 2006/08/31 15:10:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.175 2006/09/01 21:25:12 weeve Exp $
+
+  01 Sep 2006; Jason Wever <weeve@gentoo.org> openssl-0.9.8b.ebuild:
+  Added ~sparc keyword wrt bug #145605.
 
   31 Aug 2006; <blubb@gentoo.org> openssl-0.9.8b.ebuild:
   marked ~amd64
