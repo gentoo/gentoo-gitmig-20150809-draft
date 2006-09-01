@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.7 2006/08/20 02:07:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.8 2006/09/01 09:11:15 genstef Exp $
+
+  01 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  xdg-utils-1.0_beta3.ebuild:
+  Add x11-apps/xprop RDEPEND thanks to Chris L. Mason <clmason@gmail.com> in
+  bug 144408
 
   20 Aug 2006; Daniel Gryniewicz <dang@gentoo.org>
   xdg-utils-1.0_beta3.ebuild:
