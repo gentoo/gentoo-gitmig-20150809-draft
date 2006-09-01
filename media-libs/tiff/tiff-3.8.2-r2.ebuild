@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r2.ebuild,v 1.2 2006/08/04 03:30:38 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r2.ebuild,v 1.3 2006/09/01 12:49:03 exg Exp $
 
 inherit eutils libtool
 
@@ -27,7 +27,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/${PN}-jbig.patch || die "epatch jbig failed"
 	fi
 	epatch ${FILESDIR}/${P}-goo-sec.patch || die "epatch goo-sec failed"
-	use ppc-macos || elibtoolize
+	elibtoolize
 }
 
 src_compile() {
