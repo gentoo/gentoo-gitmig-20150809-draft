@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.4 2006/04/17 23:38:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.5 2006/09/01 11:12:09 pclouds Exp $
+
+  01 Sep 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  gen-0.29.0.ebuild:
+  Updated homepage url, closing #145796
 
   17 Apr 2006; Caleb Tennis <caleb@gentoo.org> -gen-0.25.0.ebuild:
   remove old versions
