@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.4 2004/07/14 22:26:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo-lib/bigloo-lib-0.17.ebuild,v 1.5 2006/09/01 17:31:28 genstef Exp $
 
 DESCRIPTION="Bigloo support libraries"
 HOMEPAGE="http://bigloo-lib.sourceforge.net/"
@@ -9,14 +9,13 @@ SRC_URI="mirror://sourceforge/bigloo-lib/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
-IUSE="X gd gdbm gtk gtk2 ldap mysql nls postgres"
+IUSE="X gd gdbm gtk ldap mysql nls postgres"
 
 DEPEND=">=dev-scheme/bigloo-2.4
 	X? ( virtual/x11 )
 	gd? ( >=media-libs/gd-1.8.3 )
-	gtk? ( =x11-libs/gtk+-1.2* )
 	nls? ( >=sys-devel/gettext-0.11.1 )
-	gtk2? ( =x11-libs/gtk+-2* )
+	gtk? ( =x11-libs/gtk+-2* )
 	ldap? ( >=net-nds/openldap-2.0.18 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	>=dev-libs/expat-1.95.4
@@ -34,10 +33,6 @@ src_compile() {
 		|| myconf="${myconf} --without-x"
 
 	use gtk \
-		&& myconf="${myconf} --with-gtk" \
-		|| myconf="${myconf} --without-gtk"
-
-	use gtk2 \
 		&& myconf="${myconf} --with-gtk2" \
 		|| myconf="${myconf} --without-gtk2"
 
