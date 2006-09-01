@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>maintainer-needed</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<description>housemate needed it</description>
+		<email>ian@syndicated-productions.com</email>
 	</maintainer>
 	<longdescription>This software discovers, activates, deactivates and displays properties of software RAID sets eg: ATARAID and contained DOS partitions.</longdescription>
 </pkgmetadata>
