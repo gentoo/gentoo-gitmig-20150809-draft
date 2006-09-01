@@ -1,4 +1,4 @@
-F77LIBS="-L/usr/${MY_LIBDIR}/blas/threaded-atlas -lblas"
+F77LIBS="-L/usr/$(get_libdir)/blas/threaded-atlas -lblas"
 
 setup() {
 MY_LIBDIR="$(get_libdir)" 
