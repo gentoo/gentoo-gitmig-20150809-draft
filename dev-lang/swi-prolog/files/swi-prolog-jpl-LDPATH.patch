@@ -1,0 +1,37 @@
+--- pl-5.6.18.orig/packages/jpl/configure	2006-08-09 19:58:24.000000000 +1200
++++ pl-5.6.18/packages/jpl/configure	2006-09-01 19:45:49.000000000 +1200
+@@ -3591,6 +3591,7 @@
+ 
+ for d in $JNI_CLIENT_DIRS; do
+   LDSOFLAGS="$LDSOFLAGS -L$d"
++  JAVALDPATH="$JAVALDPATH:$d"
+ done
+ 
+ if test "$java_abs_paths" = yes; then
+@@ -4225,6 +4226,7 @@
+ s,@LDSOFLAGS@,$LDSOFLAGS,;t t
+ s,@JAVA_HOME@,$JAVA_HOME,;t t
+ s,@JAVALIBS@,$JAVALIBS,;t t
++s,@JAVALDPATH@,$JAVALDPATH,;t t
+ s,@PLLD@,$PLLD,;t t
+ s,@MAKE@,$MAKE,;t t
+ s,@INSTALL_PROGRAM@,$INSTALL_PROGRAM,;t t
+--- pl-5.6.18.orig/packages/jpl/Makefile.in	2006-08-11 19:14:07.000000000 +1200
++++ pl-5.6.18/packages/jpl/Makefile.in	2006-09-01 22:06:13.000000000 +1200
+@@ -34,6 +34,7 @@
+ JAVA_HOME=@JAVA_HOME@
+ JAVAC=@JAVAC@
+ JAVALIBS=@JAVALIBS@
++JAVALDPATH=@JAVALDPATH@
+ 
+ DOCTOTEX=$(PCEHOME)/bin/doc2tex
+ PLTOTEX=$(PCEHOME)/bin/pl2tex
+@@ -68,7 +69,7 @@
+ ################################################################
+ 
+ check::		TestJPL.class
+-		$(PL) -q -f check.pl -g test,halt -t 'halt(1)'
++		LD_LIBRARY_PATH=$(JAVALDPATH) $(PL) -q -f check.pl -g test,halt -t 'halt(1)'
+ 
+ TestJPL.class:	TestJPL.java
+ 		$(JAVAC) -classpath jpl.jar TestJPL.java
