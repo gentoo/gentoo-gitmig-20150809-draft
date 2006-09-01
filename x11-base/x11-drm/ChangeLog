@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.36 2006/08/31 19:11:11 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.37 2006/09/01 02:29:10 battousai Exp $
+
+  01 Sep 2006; Bryan Stine <battousai@gentoo.org> x11-drm-20050807.ebuild,
+  x11-drm-20051028.ebuild, x11-drm-20051223.ebuild, x11-drm-20060608.ebuild:
+  Set valid WANT_AUTOCONF, bug #143429.
 
   31 Aug 2006; Bryan Stine <battousai@gentoo.org> x11-drm-20050502.ebuild,
   x11-drm-20050807.ebuild, x11-drm-20051028.ebuild, x11-drm-20051223.ebuild,

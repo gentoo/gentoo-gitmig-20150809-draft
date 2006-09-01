@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.10 2006/08/31 19:11:11 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.11 2006/09/01 02:29:10 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -96,7 +96,7 @@ src_unpack() {
 	cp ${S}/tests/*.c ${SRC_BUILD}
 
 	cd ${S}
-	WANT_AUTOCONF="2.59" WANT_AUTOMAKE="1.7" autoreconf -v --install
+	WANT_AUTOCONF="2.5" WANT_AUTOMAKE="1.7" autoreconf -v --install
 }
 
 src_compile() {
