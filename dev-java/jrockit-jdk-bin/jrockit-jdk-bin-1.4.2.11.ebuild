@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.11.ebuild,v 1.1 2006/07/13 17:12:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.11.ebuild,v 1.2 2006/09/01 01:44:33 nichoj Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ IUSE=""
 
 # The stripping of symbols seems to mess up the BEA code. Not sure why.
 RESTRICT="nostrip fetch"
-
+JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 versionator
 
 PV_MAJOR="$(get_version_component_range 1-3 ${PV})"

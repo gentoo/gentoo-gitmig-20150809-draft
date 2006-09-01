@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r1.ebuild,v 1.1 2006/08/25 02:58:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r1.ebuild,v 1.2 2006/09/01 01:46:45 nichoj Exp $
 
+JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
 
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"
