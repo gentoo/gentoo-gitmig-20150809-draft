@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.12-r1.ebuild,v 1.1 2006/07/29 19:24:05 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.12-r1.ebuild,v 1.2 2006/09/01 01:02:13 nichoj Exp $
 
+JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils
 
 MY_PV=${PV%.*}_${PV##*.}
