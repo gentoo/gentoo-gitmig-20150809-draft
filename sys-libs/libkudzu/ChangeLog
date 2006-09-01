@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libkudzu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.18 2006/08/30 15:27:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/ChangeLog,v 1.19 2006/09/01 21:03:43 dberkholz Exp $
+
+  01 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Restore ChangeLog entries prior to 9 Feb 2006, when all the old entries were
+  deleted.
 
   30 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   libkudzu-1.1.62-r1.ebuild:
@@ -15,3 +19,63 @@
   Removing sys-apps/hwdata-knoppix (even though it is technically still valid)
   from RDEPEND for bug #122218.
 
+  18 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild:
+  Removed obsolete blocks and added hwdata-gentoo to RDEPEND.
+
+  16 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/typedef_byte.patch, libkudzu-1.1.62-r1.ebuild:
+  Added typedef_byte.patch and closing bug #109516.
+
+  16 Nov 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -libkudzu-1.1.62.ebuild, libkudzu-1.1.62-r1.ebuild:
+  Removed blockers on packages which no longer exist and remove older versions.
+
+  17 Oct 2005; Joseph Jezak <josejx@gentoo.org> libkudzu-1.1.62-r1.ebuild:
+  Marked ppc stable for bug #104149.
+
+  11 Oct 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild:
+  Marked stable on alpha/amd64.
+
+  02 Oct 2005; Aron Griffis <agriffis@gentoo.org> libkudzu-1.1.62-r1.ebuild:
+  Mark 1.1.62-r1 stable on ia64
+
+  30 Sep 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild:
+  Stable on sparc wrt #104149
+
+  24 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62-r1.ebuild:
+  Marking stable on x86 per bug #104149.
+
+  24 Sep 2005; Markus Rothe <corsair@gentoo.org> libkudzu-1.1.62-r1.ebuild:
+  Stable on ppc64
+
+  06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/ppc.patch:
+  Forgot to add the patch... d'oh...
+
+*libkudzu-1.1.62-r1 (06 Sep 2005)
+
+  06 Sep 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +libkudzu-1.1.62-r1.ebuild:
+  Added tiny patch for compiling on ppc and closing bug #100022.
+
+  24 Aug 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62.ebuild:
+  Added libkudzu-knoppix blocker.
+
+  31 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  libkudzu-1.1.62.ebuild:
+  Marking -ppc64 due to bug #100022.
+
+  23 Jul 2005; Lars Weiler <pylon@gentoo.org> libkudzu-1.1.62.ebuild:
+  Masked -ppc due to bug #100022.
+
+*libkudzu-1.1.62 (12 Jul 2005)
+
+  12 Jul 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/sunlance.patch,
+  +metadata.xml, +libkudzu-1.1.62.ebuild:
+  Initial import. Since this ebuild was hacked from the kudzu-knoppix ebuild,
+  and the first step of building kudzu on any platform is to build libkudzu,
+  I'm going ahead with the same KEYWORDS from that ebuild.
