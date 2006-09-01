@@ -1,6 +1,14 @@
 # ChangeLog for app-text/info2html
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.15 2006/09/01 12:45:42 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.16 2006/09/01 14:39:52 kevquinn Exp $
+
+*info2html-2.0 (01 Sep 2006)
+
+  01 Sep 2006; Kevin F. Quinn <kevquinn@gentoo.org>
+  +files/info2html-2.0-xss.patch, +info2html-2.0.ebuild:
+  Bump to new version; although it has gone up a major revision the changes are
+  actually quite small.  Ebuild now cunningly sets up the INFODIR configuration
+  item from the data in profile.env :)
 
   01 Sep 2006; Kevin F. Quinn <kevquinn@gentoo.org> info2html-1.4-r2.ebuild:
   Make perl RDEPEND not DEPEND; ditch dodoc README since it says nothing useful
