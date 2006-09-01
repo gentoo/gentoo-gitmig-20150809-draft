@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.19 2006/08/06 02:55:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.20 2006/09/01 15:11:51 mcummings Exp $
+
+  01 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  net-ssh-perl-1.30.ebuild:
+  Keywording ~amd64
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   net-ssh-perl-1.25.ebuild, net-ssh-perl-1.27.ebuild,
