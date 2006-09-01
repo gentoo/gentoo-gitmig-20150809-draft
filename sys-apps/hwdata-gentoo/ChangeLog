@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hwdata-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.11 2006/06/28 15:21:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/ChangeLog,v 1.12 2006/09/01 23:09:44 wolf31o2 Exp $
+
+  01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/0.3-nv-fbdev.patch, +files/0.3-nv-vesa.patch,
+  hwdata-gentoo-0.3.ebuild:
+  Added patches from the 2006.1 release to replace the nv driver with either
+  vesa or fbdev.
 
   28 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   hwdata-gentoo-0.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.3.ebuild,v 1.2 2006/06/28 15:21:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.3.ebuild,v 1.3 2006/09/01 23:09:44 wolf31o2 Exp $
 
 inherit eutils
 
@@ -23,9 +23,15 @@ src_unpack() {
 	then
 		if use opengl && use binary-drivers
 		then
-			epatch ${FILESDIR}/${PV}-fglrx.patch || die "patching for ATI"
-			epatch ${FILESDIR}/${PV}-nvidia.patch || die "patching for nVidia"
+			epatch "${FILESDIR}"/${PV}-fglrx.patch || die "patching for ATI"
+			epatch "${FILESDIR}"/${PV}-nvidia.patch || die "patching for nVidia"
+		else
+			# On amd64/x86, we choose VESA over fbdev
+			epatch "${FILESDIR}"/${PV}-nv-vesa.patch || die "patching vesa"
 		fi
+	else
+		# The "nv" driver sucks so much, we choose fbdev, instead
+		epatch "${FILESDIR}"/${PV}-nv-fbdev.patch || die "patching fbdev"
 	fi
 }
 
