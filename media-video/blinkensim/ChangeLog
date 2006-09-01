@@ -1,11 +1,15 @@
 # ChangeLog for media-video/blinkensim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.4 2006/05/28 11:37:16 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/blinkensim/ChangeLog,v 1.5 2006/09/01 19:05:40 genstef Exp $
+
+  01 Sep 2006; Stefan Schweizer <genstef@gentoo.org> blinkensim-2.7.ebuild:
+  gtk2 -> gtk, bug 106560, fix chainsaw in changelog, remove redundant
+  src_compile
 
   28 May 2006; Lars Weiler <pylon@gentoo.org> blinkensim-2.7.ebuild:
   Stable on x86.
 
-  18 Dec 2005; <chainsaw@gentoo.org> blinkensim-2.7.ebuild:
+  18 Dec 2005; Tony Vroon <chainsaw@gentoo.org> blinkensim-2.7.ebuild:
   Keyword ~amd64.
 
   18 Dec 2005; Lars Weiler <pylon@gentoo.org> blinkensim-2.7.ebuild:
