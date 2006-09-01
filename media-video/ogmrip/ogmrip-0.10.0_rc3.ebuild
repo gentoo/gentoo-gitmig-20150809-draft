@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0_rc3.ebuild,v 1.1 2006/08/20 20:15:54 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0_rc3.ebuild,v 1.2 2006/09/01 19:00:13 genstef Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-IUSE="aac debug gtk2 hal matroska spell srt theora"
+IUSE="aac debug gtk hal matroska spell srt theora"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND=">=dev-libs/glib-2.6
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	>=media-sound/vorbis-tools-1.0
 	>=media-video/mplayer-1.0_pre4
 	aac? ( >=media-libs/faac-1.24 )
-	gtk2? ( >=x11-libs/gtk+-2.6
+	gtk? ( >=x11-libs/gtk+-2.6
 		>=gnome-base/gconf-2.6
 		>=gnome-base/libglade-2.5 )
 	hal? ( >=sys-apps/hal-0.4.2 )
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} \
 	$(use_enable aac aac-support) \
 	$(use_enable debug maintainer-mode) \
-	$(use_enable gtk2 gtk-support) \
+	$(use_enable gtk gtk-support) \
 	$(use_enable hal hal-support) \
 	$(use_enable matroska matroska-support) \
 	$(use_enable spell enchant-support) \
