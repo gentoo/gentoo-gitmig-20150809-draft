@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.5 2006/08/29 19:25:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.6 2006/09/01 20:26:42 genstef Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
@@ -33,6 +33,18 @@ RDEPEND="sys-libs/zlib
 			x11-libs/libXrender
 			x11-apps/xauth
 			x11-apps/xsetroot
+			media-fonts/font-adobe-100dpi
+			media-fonts/font-adobe-75dpi
+			media-fonts/font-alias
+			media-fonts/font-cursor-misc
+			media-fonts/font-misc-misc
+			)
+			virtual/x11
+		)
+	)
+	!net-misc/tightvnc"
+DEPEND="${RDEPEND}
+	|| ( ( x11-proto/xextproto
 			x11-proto/compositeproto
 			x11-proto/damageproto
 			x11-proto/fixesproto
@@ -47,18 +59,6 @@ RDEPEND="sys-libs/zlib
 			x11-proto/xf86dgaproto
 			x11-proto/xf86miscproto
 			x11-proto/xf86vidmodeproto
-			media-fonts/font-adobe-100dpi
-			media-fonts/font-adobe-75dpi
-			media-fonts/font-alias
-			media-fonts/font-cursor-misc
-			media-fonts/font-misc-misc
-			)
-			virtual/x11
-		)
-	)
-	!net-misc/tightvnc"
-DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto
 		)
 		virtual/x11
 	)"
