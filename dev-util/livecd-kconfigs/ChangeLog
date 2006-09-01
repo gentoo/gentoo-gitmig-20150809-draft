@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/livecd-kconfigs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/ChangeLog,v 1.6 2005/12/20 16:47:16 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/ChangeLog,v 1.7 2006/09/01 23:44:41 wolf31o2 Exp $
+
+*livecd-kconfigs-2006.1 (01 Sep 2006)
+*livecd-kconfigs-2006.0 (01 Sep 2006)
+
+  01 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-kconfigs-2006.0.ebuild, +livecd-kconfigs-2006.1.ebuild:
+  Added ebuilds for the 2006.0 and 2006.1 releases.
 
   20 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-kconfigs-2005.1.ebuild:
