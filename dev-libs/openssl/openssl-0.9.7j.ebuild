@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7j.ebuild,v 1.17 2006/09/01 07:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7j.ebuild,v 1.18 2006/09/02 22:43:01 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -130,8 +130,7 @@ src_install() {
 		AR="$(tc-getAR) r" \
 		RANLIB="$(tc-getRANLIB)" \
 		INSTALL_PREFIX="${D}" MANDIR=/usr/share/man install || die
-	dodoc CHANGES* FAQ NEWS README
-	dodoc doc/*.txt
+	dodoc CHANGES* FAQ NEWS README doc/*.txt
 	dohtml doc/*
 
 	if use emacs ; then
@@ -164,7 +163,7 @@ src_install() {
 	done
 
 	diropts -m0700
-	dodir /etc/ssl/private
+	keepdir /etc/ssl/private
 
 	fperms a+x /usr/$(get_libdir)/pkgconfig #34088
 }

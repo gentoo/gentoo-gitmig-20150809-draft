@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.176 2006/09/02 13:55:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.177 2006/09/02 22:43:01 mr_bones_ Exp $
+
+  02 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  openssl-0.9.7j.ebuild:
+  keepdir instead of dodir for empty directory
 
   02 Sep 2006; <nixnut@gentoo.org> openssl-0.9.8b.ebuild:
   ~ppc added. bug 145605
