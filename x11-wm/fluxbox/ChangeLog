@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.198 2006/08/25 19:44:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.199 2006/09/02 18:33:36 kloeri Exp $
+
+  02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
+  fluxbox-0.9.15.1-r2.ebuild:
+  Stable on ia64.
 
   25 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   fluxbox-0.9.15.1-r2.ebuild:
