@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.27.10-r1.ebuild,v 1.2 2006/08/04 12:23:00 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.27.10-r1.ebuild,v 1.3 2006/09/02 22:13:31 lu_zero Exp $
 
 IUSE="acpi doc opengl"
 
@@ -13,7 +13,7 @@ SRC_URI="x86?	( ${ATI_URL}/ati-driver-installer-${PV}-x86.run )
 		 amd64? ( ${ATI_URL}/64bit/ati-driver-installer-${PV}-x86_64.run )"
 
 LICENSE="ATI"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 
 RDEPEND="|| ( x11-base/xorg-server virtual/x11 )
 	 app-admin/eselect-opengl
