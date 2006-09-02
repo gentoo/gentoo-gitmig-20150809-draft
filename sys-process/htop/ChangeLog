@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.25 2006/08/17 20:03:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.26 2006/09/02 19:29:02 kloeri Exp $
+
+  02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> htop-0.6.2.ebuild:
+  Stable on ia64.
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> htop-0.6.2.ebuild:
   Stable on ppc64
