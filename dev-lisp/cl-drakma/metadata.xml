@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>common-lisp</herd>
-<longdescrition>Drakma is a Common Lisp web client that knows how to handle HTTP/1.1 chunking, persistent connections, SSL, cookies, and other things.</longdescription>
+<longdescription>Drakma is a Common Lisp web client that knows how to
+handle HTTP/1.1 chunking, persistent connections, SSL, cookies, and
+other things.</longdescription>
 </pkgmetadata>
