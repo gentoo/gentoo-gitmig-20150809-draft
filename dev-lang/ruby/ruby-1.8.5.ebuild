@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5.ebuild,v 1.2 2006/08/30 17:18:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5.ebuild,v 1.3 2006/09/02 17:04:02 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_4"
 
@@ -13,8 +13,7 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${P}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh
-~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug socks5 tcltk cjk doc threads examples ipv6"
 RESTRICT="confcache"
 
