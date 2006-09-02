@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.6.ebuild,v 1.3 2006/08/15 04:18:20 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.6.ebuild,v 1.4 2006/09/02 16:15:41 blubb Exp $
 
 inherit eutils java-pkg
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gentoo/seda-${MY_DT}.zip
 LICENSE="GPL-2 BSD"
 SLOT="0"
 
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="kde"
 
 DEPEND="virtual/libc
