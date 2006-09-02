@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.25 2006/06/25 10:47:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.26 2006/09/02 19:51:28 kloeri Exp $
+
+  02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> mod_perl-2.0.2.ebuild:
+  Stable on ia64.
 
   25 Jun 2006; Marcus D. Hanwell <cryos@gentoo.org> mod_perl-2.0.2.ebuild:
   Marked stable on amd64, closes bug 136823.
