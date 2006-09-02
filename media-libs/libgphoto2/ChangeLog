@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.71 2006/07/20 14:00:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.72 2006/09/02 10:39:16 liquidx Exp $
+
+  02 Sep 2006; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.2.1-r1.ebuild:
+  restrict build to -j1 to avoid documentation breakage (#139821)
 
   20 Jul 2006; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.2.1-r1.ebuild:
   Disabling tests due to (#141097)

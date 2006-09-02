@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.4 2006/07/20 14:00:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.2.1-r1.ebuild,v 1.5 2006/09/02 10:39:16 liquidx Exp $
 
 inherit libtool eutils autotools
 
@@ -99,7 +99,8 @@ src_compile() {
 		$(use_enable doc docs) \
 		${myconf} || die "econf failed"
 
-	emake apidocdir=/usr/share/doc/${PF}/api || die "make failed"
+	# documentation breaks with -j1
+	emake -j1 apidocdir=/usr/share/doc/${PF}/api || die "make failed"
 }
 
 src_install() {
