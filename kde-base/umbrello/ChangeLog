@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.47 2006/08/05 00:25:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.48 2006/09/02 16:40:06 flameeyes Exp $
+
+  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> umbrello-3.5.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> umbrello-3.5.4.ebuild:
   Added ~sparc keyword to fix broken dependencies of =kdesdk-meta-3.5.4
