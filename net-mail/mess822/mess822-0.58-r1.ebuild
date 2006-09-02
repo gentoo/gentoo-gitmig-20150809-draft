@@ -1,13 +1,15 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.8 2005/05/01 18:06:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.9 2006/09/02 18:14:34 blubb Exp $
+
+inherit multilib
 
 DESCRIPTION="Collection of utilities for parsing Internet mail messages."
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/mess822.html"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 LICENSE="as-is"
 
@@ -43,5 +45,8 @@ src_install() {
 	# Move the man pages into /usr/share/man
 	mv "${D}/usr/man" "${D}/usr/share/"
 
+	dodir /usr/$(get_libdir)
+	mv "${D}/usr/lib/${PN}.a" "${D}/usr/$(get_libdir)/${PN}.a" 
+	rmdir "${D}/usr/lib"
 	dodoc BLURB CHANGES INSTALL README THANKS TODO VERSION
 }
