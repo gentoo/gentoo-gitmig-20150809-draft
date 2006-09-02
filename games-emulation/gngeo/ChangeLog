@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/gngeo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.14 2006/06/20 20:28:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.15 2006/09/02 06:27:26 mr_bones_ Exp $
+
+*gngeo-0.7 (02 Sep 2006)
+
+  02 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/gngeo-0.6.11-execstacks.patch, +files/gngeo-0.7-execstacks.patch,
+  -gngeo-0.6.11.ebuild, +gngeo-0.7.ebuild:
+  version bump; clean out older ebuild
 
 *gngeo-0.6.12 (20 Jun 2006)
 
