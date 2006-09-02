@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5.ebuild,v 1.3 2006/09/02 17:04:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5.ebuild,v 1.4 2006/09/02 17:30:59 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_4"
 
@@ -29,7 +29,6 @@ RDEPEND="virtual/libc
 	!dev-ruby/rexml"
 
 DEPEND="sys-devel/autoconf
-	sys-apps/findutils
 	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
