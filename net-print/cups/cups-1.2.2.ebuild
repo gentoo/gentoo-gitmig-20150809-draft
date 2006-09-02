@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.6 2006/08/21 07:41:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.2.ebuild,v 1.7 2006/09/02 04:23:56 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -30,6 +30,9 @@ RDEPEND="${DEP}
 	nls? ( virtual/libintl )
 	!virtual/lpr
 	>=app-text/poppler-0.4.3-r1
+	X? ( x86? ( x11-misc/xdg-utils ) )
+	"
+PDEPEND="
 	ppds? ( || (
 		(
 			net-print/foomatic-filters-ppds
@@ -42,7 +45,6 @@ RDEPEND="${DEP}
 		net-print/foo2zjs
 		net-print/cups-pdf
 	) )
-	X? ( x86? ( x11-misc/xdg-utils ) )
 	"
 	# keywording xdg-utils in bug 144345
 PDEPEND="samba? ( >=net-fs/samba-3.0.8 )

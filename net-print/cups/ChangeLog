@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.197 2006/08/21 07:41:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.198 2006/09/02 04:23:56 genstef Exp $
+
+  02 Sep 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.2.ebuild:
+  resolve circular dep by moving the ppds dep to PDEPEND, thanks to Mart
+  Raudsepp <leio@gentoo.org> in bug 145920
 
   21 Aug 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.2.ebuild:
   Change to || dbus depend in order to solve bug 144527
