@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.6_p20060314.ebuild,v 1.1 2006/03/16 13:07:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.6_p20060314.ebuild,v 1.2 2006/09/02 04:36:01 vapier Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Linux boot loader for EFI-based systems such as IA-64"
 HOMEPAGE="http://elilo.sourceforge.net/"
-if [[ $PV == *_p* ]]; then
+if [[ $PV == *_p* ]] ; then
 	MY_P=${PV#*_p}
 	MY_P=${PN}-nightly_${MY_P:0:4}-${MY_P:4:2}-${MY_P:6:2}
 	SRC_URI="http://elilo.sourceforge.net/nightlies/${MY_P}.tgz"
-	S="${WORKDIR}/elilo"
+	S=${WORKDIR}/elilo
 else
 	MY_P=${P}
 	SRC_URI="mirror://sourceforge/elilo/${P}.src.tgz"
@@ -34,7 +34,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	ebegin Applying ../*.diff
 	# Using epatch on this is annoying because it wants to create the elilo-3.6/
@@ -44,10 +44,10 @@ src_unpack() {
 
 	# Add patch for vmm support, from
 	# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=350185
-	epatch ${FILESDIR}/elilo.sh-vmm.patch
+	epatch "${FILESDIR}"/elilo.sh-vmm.patch
 
 	# Don't count files twice when summing bytesneeded
-	epatch ${FILESDIR}/elilo.sh-chkspace.patch
+	epatch "${FILESDIR}"/elilo.sh-chkspace.patch
 
 	# Now Gentooize it
 	sed -i "
@@ -81,8 +81,8 @@ src_install() {
 	dosbin tools/eliloalt || die "eliloalt failed"
 
 	insinto /etc
-	newins ${FILESDIR}/elilo.conf.sample elilo.conf
+	newins "${FILESDIR}"/elilo.conf.sample elilo.conf
 
-	dodoc docs/* ${FILESDIR}/elilo.conf.sample
+	dodoc docs/* "${FILESDIR}"/elilo.conf.sample
 	doman debian/*.[0-9]
 }
