@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0_p20060502.ebuild,v 1.3 2006/08/11 05:25:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.5.0_p20060502.ebuild,v 1.4 2006/09/02 18:28:27 blubb Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://sdcc.sourceforge.net/snapshots/sdcc-src/${PN}-src-${MY_PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc"
 
 DEPEND=">=dev-embedded/gputils-0.13.2
