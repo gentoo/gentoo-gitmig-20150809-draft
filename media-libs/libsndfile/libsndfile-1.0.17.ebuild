@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.1 2006/08/31 14:24:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.2 2006/09/02 10:57:39 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -36,14 +36,10 @@ src_compile() {
 		--disable-dependency-tracking \
 		|| die "econf failed"
 
-	# fix this weird doc installation directory libsndfile decides
-	# to something more standard
-	sed -e "s:^htmldocdir.*:htmldocdir = /usr/share/doc/${PF}/html:" -i ${S}/doc/Makefile
-
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" htmldocdir="/usr/share/doc/${PF}/html" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
 }
