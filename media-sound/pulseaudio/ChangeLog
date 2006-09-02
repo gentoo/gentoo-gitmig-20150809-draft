@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.24 2006/08/31 08:47:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.25 2006/09/02 11:14:42 flameeyes Exp $
+
+  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.5.ebuild:
+  Remove ~x86-fbsd keyword until it builds.
 
 *pulseaudio-0.9.5 (31 Aug 2006)
 
