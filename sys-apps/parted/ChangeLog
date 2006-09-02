@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.98 2006/09/01 21:43:31 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.99 2006/09/02 12:53:16 nixnut Exp $
+
+  02 Sep 2006; <nixnut@gentoo.org> parted-1.7.1-r1.ebuild:
+  Stable on ppc wrt bug #145892
 
   01 Sep 2006; Markus Rothe <corsair@gentoo.org> parted-1.7.1-r1.ebuild:
   Stable on ppc64; bug #145892
