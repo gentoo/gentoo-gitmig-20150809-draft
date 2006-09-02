@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.55 2006/07/17 06:12:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.56 2006/09/02 22:10:05 weeve Exp $
+
+  02 Sep 2006; Jason Wever <weeve@gentoo.org> smartmontools-5.36-r1.ebuild:
+  Stable on SPARC wrt bug #145947.
 
 *smartmontools-5.36-r1 (17 Jul 2006)
 
