@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.21 2006/07/08 10:32:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.22 2006/09/02 14:26:43 calchan Exp $
+
+*pcb-20060822 (02 Sep 2006)
+
+  02 Sep 2006; Denis Dupeyron <calchan@gentoo.org> +pcb-20060822.ebuild:
+  Version bump, thanks to Stefan Salewski (bug #144844).
 
 *pcb-20060422 (08 Jul 2006)
 
