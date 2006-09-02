@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.9 2006/09/01 03:00:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.10 2006/09/02 01:42:57 nichoj Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -160,7 +160,7 @@ set_java_env() {
 
 	# Make the symlink
 	dosym ${java_home} ${JAVA_VM_DIR}/${VMHANDLE} \
-		|| die "Failed to make VM symlink at ${JAVA_VM_DIR}/${VMHANDE}"
+		|| die "Failed to make VM symlink at ${JAVA_VM_DIR}/${VMHANDLE}"
 }
 
 
