@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.01-r1.ebuild,v 1.1 2006/09/02 18:22:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.01-r1.ebuild,v 1.2 2006/09/02 18:45:46 jer Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
@@ -133,11 +133,11 @@ src_install() {
 pkg_postinst() {
 	use gnome && gnome2_pkg_postinst
 
-	einfo "For localized language files take a look at:"
-	einfo "http://www.opera.com/download/languagefiles/index.dml?platform=linux"
-	einfo
-	einfo "To change the spellcheck language edit /opt/opera/share/opera/ini/spellcheck.ini"
-	einfo "and emerge app-text/aspell-language."
+	elog "For localized language files take a look at:"
+	elog "http://www.opera.com/download/languagefiles/index.dml?platform=linux"
+	elog
+	elog "To change the spellcheck language edit /opt/opera/share/opera/ini/spellcheck.ini"
+	elog "and emerge app-text/aspell-language."
 }
 
 

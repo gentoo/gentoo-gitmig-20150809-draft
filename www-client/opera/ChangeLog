@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.59 2006/09/02 18:22:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.60 2006/09/02 18:45:46 jer Exp $
+
+  02 Sep 2006; Jeroen Roovers <jer@gentoo.org> opera-9.01-r1.ebuild:
+  einfo to elog (bug #145953).
 
 *opera-9.01-r1 (02 Sep 2006)
 
