@@ -1,0 +1,11 @@
+--- extconf.rb.old	2006-09-02 09:15:47.000000000 +0700
++++ extconf.rb	2006-09-02 09:15:53.000000000 +0700
+@@ -3,7 +3,7 @@
+ =end
+ 
+ PACKAGE_NAME = "gtkmozembed"
+-PACKAGE_ID = "xulrunner-gtkmozembed"
++PACKAGE_ID = "firefox-gtkmozembed"
+ #PACKAGE_ID = "firefox-gtkmozembed"
+ #PACKAGE_ID = "mozilla-gtkmozembed"
+ 
