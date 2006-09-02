@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/transfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.30 2006/08/05 22:43:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/ChangeLog,v 1.31 2006/09/02 17:03:47 jer Exp $
+
+  02 Sep 2006; Jeroen Roovers <jer@gentoo.org> transfig-3.2.4-r2.ebuild:
+  Stable for HPPA (bug #140903).
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> transfig-3.2.4-r2.ebuild:
   Stable on SPARC wrt bug #140903.
