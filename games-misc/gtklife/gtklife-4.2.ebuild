@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-4.2.ebuild,v 1.1 2005/06/05 05:33:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gtklife/gtklife-4.2.ebuild,v 1.2 2006/09/02 07:47:25 mr_bones_ Exp $
 
 inherit games
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
+		-e '/install/s/-s //' \
 		-e "/install/s:\$\(.*DIR\):\$(DESTDIR)/&:" \
 		-e "/rm/s:\$\(.*DIR\):\$(DESTDIR)/&:" \
 		-e "/cp/s:\$\(.*DIR\):\$(DESTDIR)/&:" Makefile \
