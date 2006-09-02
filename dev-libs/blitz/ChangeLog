@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.21 2005/10/31 09:13:44 pbienst Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.22 2006/09/02 21:20:43 wormo Exp $
+
+  02 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> blitz-0.9.ebuild:
+  stable on ppc (Bug #137372)
 
 *blitz-0.9 (31 Oct 2005)
 
