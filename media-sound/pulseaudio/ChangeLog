@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.25 2006/09/02 11:14:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.26 2006/09/02 11:33:59 flameeyes Exp $
+
+  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pulseaudio-0.9.5-fbsd.patch, pulseaudio-0.9.5.ebuild:
+  Add patch to build on FreeBSD, and re add ~x86-fbsd keyword.
 
   02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.5.ebuild:

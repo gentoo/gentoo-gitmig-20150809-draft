@@ -1,0 +1,44 @@
+Index: src/utils/padsp.c
+===================================================================
+--- src/utils/padsp.c	(revision 1358)
++++ src/utils/padsp.c	(working copy)
+@@ -53,6 +53,11 @@
+ #include <pulsecore/llist.h>
+ #include <pulsecore/gccmacro.h>
+ 
++/* On some systems SIOCINQ isn't defined, but FIONREAD is just an alias */
++#if !defined(SIOCINQ) && defined(FIONREAD)
++# define SIOCINQ FIONREAD
++#endif
++
+ typedef enum {
+     FD_INFO_MIXER,
+     FD_INFO_STREAM,
+Index: src/modules/oss-util.c
+===================================================================
+--- src/modules/oss-util.c	(revision 1358)
++++ src/modules/oss-util.c	(working copy)
+@@ -93,7 +93,11 @@
+     
+     pa_log_debug("capabilities:%s%s%s%s%s%s%s%s%s%s%s%s%s%s",
+                  *pcaps & DSP_CAP_BATCH ? " BATCH" : "",
++#ifdef DSP_CAP_BIND
+                  *pcaps & DSP_CAP_BIND ? " BIND" : "",
++#else
++		 "",
++#endif
+                  *pcaps & DSP_CAP_COPROC ? " COPROC" : "",
+                  *pcaps & DSP_CAP_DUPLEX ? " DUPLEX" : "",
+ #ifdef DSP_CAP_FREERATE                     
+@@ -112,7 +116,11 @@
+ #else
+                  "",
+ #endif
++#ifdef DSP_CAP_MULTI
+                  *pcaps & DSP_CAP_MULTI ? " MULTI" : "",
++#else
++		 "",
++#endif
+ #ifdef DSP_CAP_OUTPUT
+                  *pcaps & DSP_CAP_OUTPUT ? " OUTPUT" : "",
+ #else
