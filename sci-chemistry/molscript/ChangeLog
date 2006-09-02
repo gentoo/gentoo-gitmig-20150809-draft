@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/molscript
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.4 2006/08/05 05:12:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.5 2006/09/02 20:45:28 dberkholz Exp $
+
+  02 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  molscript-2.1.2.ebuild:
+  Keyword ~ppc.
 
   05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer, anyone feel free to work on this, although I'll

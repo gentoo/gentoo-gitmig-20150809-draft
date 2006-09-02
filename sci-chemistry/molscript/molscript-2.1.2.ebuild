@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2.ebuild,v 1.2 2006/07/09 07:12:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2.ebuild,v 1.3 2006/09/02 20:45:28 dberkholz Exp $
 
 inherit toolchain-funcs eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.avatar.se/molscript/"
 SRC_URI="${P}.tar.gz"
 LICENSE="glut molscript"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 RESTRICT="fetch"
 IUSE=""
 DEPEND="media-libs/jpeg
