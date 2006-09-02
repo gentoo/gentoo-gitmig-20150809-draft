@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.1.0.ebuild,v 1.1 2006/05/12 19:59:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ruby-sdl-1.1.0.ebuild,v 1.2 2006/09/02 02:51:22 pclouds Exp $
+
+inherit eutils
 
 MY_P="${P/-/}"
 S="${WORKDIR}/${MY_P}"
@@ -26,6 +28,12 @@ RDEPEND="virtual/ruby
 	mixer? ( >=media-libs/sdl-mixer-1.2.4 )
 	mpeg? ( >=media-libs/smpeg-0.4.4-r1 )"
 #	sge? ( >=media-libs/sge )
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${PN}-1.1.0-sdl-mixer.patch"
+}
 
 src_compile() {
 	ruby extconf.rb || die "extconf.rb failed"

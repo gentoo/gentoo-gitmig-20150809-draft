@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-sdl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.11 2006/07/12 13:56:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.12 2006/09/02 02:51:22 pclouds Exp $
+
+  02 Sep 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +files/ruby-sdl-1.1.0-sdl-mixer.patch, ruby-sdl-1.1.0.ebuild:
+  Fixed #96694
 
   12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org>
   ruby-sdl-1.0.0-r1.ebuild:
