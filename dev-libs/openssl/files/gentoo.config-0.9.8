@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.4 2006/01/29 05:16:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.5 2006/09/02 00:17:58 vapier Exp $
 #
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -64,20 +64,8 @@ case ${system} in
 linux)
 	case ${chost_machine} in
 		alphaev56*)   machine=alpha+bwx-${compiler};;
-		alphaev[67]*) machine=alpha+bwx-${compiler};;
-		alpha*)
-			# this pretty hack is because we have to make sure we
-			# maintain ABI on the system or things like ssh break
-			currmachine=""
-			if [[ ${ROOT} == "/" ]] && [[ -e /usr/lib/libcrypto.so ]] ; then
-				currmachine=$(strings /usr/lib/libcrypto.so | grep ^linux-alpha | sed -e s:linux-::)
-			fi
-			machine=${currmachine:-alpha-${compiler}}
-
-			# NOTE: drop this crap next time SSL changes ABI #'s
-			[[ ${PV:0:5} != "0.9.7" ]] && machine="plzupdatemekthxbye"
-			;;
-
+		alphaev[678]*)machine=alpha+bwx-${compiler};;
+		alpha*)       machine=alpha-${compiler};;
 		arm*b*)       machine="generic32 -DB_ENDIAN";;
 		arm*)         machine="generic32 -DL_ENDIAN";;
 	#	hppa64*)      machine=parisc64;;
