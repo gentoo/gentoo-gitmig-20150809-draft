@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta7.ebuild,v 1.2 2005/05/17 23:05:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta7.ebuild,v 1.3 2006/09/02 08:52:30 mr_bones_ Exp $
 
 inherit games
 
@@ -22,7 +22,7 @@ DEPEND="sys-libs/zlib
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	egamesconf \
+	STRIP=: egamesconf \
 		$(use_enable ssl) \
 		$(use_enable debug core) \
 		$(use_enable ipv6 inet6) \
@@ -31,16 +31,16 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin src/tf
+	dogamesbin src/tf || die "dogamesbin failed"
 	newman src/tf.1.catman tf.1
 	dodoc CHANGES CREDITS README
 
 	insinto "${GAMES_DATADIR}/${PN}-lib"
 	# the application looks for this file here if /changes is called.
 	# see comments on bug #23274
-	doins CHANGES
+	doins CHANGES || die "doins failed"
 	insopts -m0755
-	doins tf-lib/*
+	doins tf-lib/* || die "doins failed"
 	if use doc ; then
 		dohtml -r *.html commands topics
 	fi
