@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.11.ebuild,v 1.4 2006/04/04 09:26:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.11.ebuild,v 1.5 2006/09/02 11:08:30 liquidx Exp $
 
 inherit eutils libtool autotools
 
@@ -17,6 +17,7 @@ RDEPEND=""
 
 DEPEND="sys-devel/libtool
 	doc? ( app-text/openjade
+		app-text/docbook-sgml-utils
 		~app-text/docbook-sgml-dtd-4.2 )"
 
 src_unpack() {
