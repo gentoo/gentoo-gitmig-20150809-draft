@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.45 2006/08/11 10:39:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.46 2006/09/02 19:27:01 spock Exp $
+
+  02 Sep 2006; Michał Januszewski <spock@gentoo.org>
+  hddtemp-0.3_beta15.ebuild:
+  Fix the package's description (bug #145988).
 
   11 Aug 2006; Michał Januszewski <spock@gentoo.org>
   hddtemp-0.3_beta15.ebuild:

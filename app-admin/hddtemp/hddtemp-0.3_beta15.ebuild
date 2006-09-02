@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.7 2006/08/11 10:39:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15.ebuild,v 1.8 2006/09/02 19:27:01 spock Exp $
 
 inherit eutils
 
 MY_P=${P/_beta/-beta}
 
-DESCRIPTION="A simple utility to read the temperature of SMART capable hard drives
-	foobar"
+DESCRIPTION="A simple utility to read the temperature of SMART capable hard drives"
 HOMEPAGE="http://www.guzu.net/linux/hddtemp.php"
 SRC_URI="http://www.guzu.net/files/${MY_P}.tar.bz2"
 
