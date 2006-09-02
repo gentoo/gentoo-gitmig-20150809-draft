@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.64 2006/08/10 20:19:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.65 2006/09/02 21:47:22 kloeri Exp $
+
+  02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> rails-1.1.6.ebuild:
+  Stable on ia64.
 
 *rails-1.1.6 (10 Aug 2006)
 
