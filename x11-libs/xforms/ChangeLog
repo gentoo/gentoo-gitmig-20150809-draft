@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.30 2006/08/26 17:48:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.31 2006/09/02 18:51:39 blubb Exp $
+
+  02 Sep 2006; <blubb@gentoo.org> xforms-1.0.90-r1.ebuild:
+  stable on amd64
 
   26 Aug 2006; <nixnut@gentoo.org> xforms-1.0.90-r1.ebuild:
   Stable on ppc wrt bug #145092
