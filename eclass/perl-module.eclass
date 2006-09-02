@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.101 2006/08/28 20:22:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.102 2006/09/02 00:20:13 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -8,8 +8,9 @@
 # The perl-module eclass is designed to allow easier installation of perl
 # modules, and their incorporation into the Gentoo Linux system.
 
+inherit base
 
-EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm src_compile src_install src_test
+EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm src_compile src_install src_test src_unpack
 
 # 2005.04.28 mcummings
 # Mounting problems with src_test functions has forced me to make the
@@ -94,6 +95,15 @@ ARCH_LIB=""
 POD_DIR=""
 BUILDER_VER=""
 pm_echovar=""
+
+perl-module_src_unpack() {
+	if [[ -n ${PATCHES} ]]; then
+		base_src_unpack unpack
+		base_src_unpack autopatch
+	else
+		base_src_unpack unpack
+	fi
+}
 
 perl-module_src_prep() {
 
