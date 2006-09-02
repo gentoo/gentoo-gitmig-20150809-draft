@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.37.ebuild,v 1.2 2006/07/30 04:35:11 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.37.ebuild,v 1.3 2006/09/02 15:49:47 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -28,7 +28,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc ssl pam lingerd no-suexec static-modules selinux"
 
 DEPEND="dev-lang/perl
-		|| ( sys-libs/gdbm ~sys-libs/db-1.85 )
+		sys-libs/gdbm
 		sys-libs/db
 		>=dev-libs/mm-1.1.3
 		>=dev-libs/expat-1.95.2
