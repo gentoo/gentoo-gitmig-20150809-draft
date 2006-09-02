@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.3 2006/05/25 21:57:33 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.4 2006/09/02 12:27:23 ikelos Exp $
+
+*ophcrack-2.3.1 (02 Sep 2006)
+
+  02 Sep 2006; Mike Auty <ikelos@gentoo.org>
+  +files/ophcrack-2.3.1-linuxtools-install-path.patch,
+  +ophcrack-2.3.1.ebuild:
+  Version bump, fixes bug 145412.
 
   25 May 2006; Danny van Dyk <kugelfang@gentoo.org> ophcrack-2.2.ebuild:
   QA: fixed malformed SRC_URI.

@@ -1,0 +1,32 @@
+diff -uNr ophcrack-2.3.1.orig/Makefile.am ophcrack-2.3.1/Makefile.am
+--- ophcrack-2.3.1.orig/Makefile.am	2005-03-31 15:09:50.000000000 +0100
++++ ophcrack-2.3.1/Makefile.am	2005-11-07 17:24:46.000000000 +0000
+@@ -36,10 +36,10 @@
+ install-exec-local:
+ 	if test -d $(srcdir)/linux_tools; then \
+ 	  if test -f $(srcdir)/linux_tools/bkhive; then \
+-	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/bkhive $(bindir); \
++	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/bkhive $(DESTDIR)$(bindir); \
+ 	  fi ;\
+ 	  if test -f $(srcdir)/linux_tools/samdump2; then \
+-	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/samdump2 $(bindir); \
++	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/samdump2 $(DESTDIR)$(bindir); \
+ 	  fi \
+ 	fi
+ 
+diff -uNr ophcrack-2.3.1.orig/Makefile.in ophcrack-2.3.1/Makefile.in
+--- ophcrack-2.3.1.orig/Makefile.in	2005-03-31 15:10:16.000000000 +0100
++++ ophcrack-2.3.1/Makefile.in	2005-11-07 17:25:09.000000000 +0000
+@@ -383,10 +383,10 @@
+ install-exec-local:
+ 	if test -d $(srcdir)/linux_tools; then \
+ 	  if test -f $(srcdir)/linux_tools/bkhive; then \
+-	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/bkhive $(bindir); \
++	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/bkhive $(DESTDIR)$(bindir); \
+ 	  fi ;\
+ 	  if test -f $(srcdir)/linux_tools/samdump2; then \
+-	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/samdump2 $(bindir); \
++	    $(INSTALL_PROGRAM) $(srcdir)/linux_tools/samdump2 $(DESTDIR)$(bindir); \
+ 	  fi \
+ 	fi
+ 
