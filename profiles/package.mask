@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5811 2006/09/02 09:03:35 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5812 2006/09/02 16:58:07 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -554,11 +554,6 @@ dev-util/confcache
 # Colin Kingsley <tercel@gentoo.org> (24 Jun 2006)
 # Masked for testing
 =dev-python/visual-4*
-
-# Petteri Räty <betelgeuse@gentoo.org> (24 Jun 2006)
-# package.masked pending removal
-# http://bugs.gentoo.org/show_bug.cgi?id=75674
-net-wireless/gtkskan
 
 # Diego Pettenò <flameeyes@gentoo.org> (23 Jun 2006)
 # 0.2 Beta version of Kerry
