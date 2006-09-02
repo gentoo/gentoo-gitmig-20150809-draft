@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.2 2006/08/28 17:58:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.3 2006/09/02 14:46:08 corsair Exp $
+
+  02 Sep 2006; Markus Rothe <corsair@gentoo.org> linuxwacom-0.7.4_p3.ebuild:
+  Stable on ppc64; bug #145891
 
   28 Aug 2006; Hanno Boeck <hanno@gentoo.org> linuxwacom-0.7.4_p3.ebuild:
   Remove gtk1 and fix multilib.

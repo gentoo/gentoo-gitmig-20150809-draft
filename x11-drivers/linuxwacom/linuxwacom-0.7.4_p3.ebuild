@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.2 2006/08/28 17:58:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.7.4_p3.ebuild,v 1.3 2006/09/02 14:46:08 corsair Exp $
 
 IUSE="gtk tcltk usb"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_p/-}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~x86"
 
 RDEPEND="|| ( ( x11-proto/inputproto
 		x11-base/xorg-server )
