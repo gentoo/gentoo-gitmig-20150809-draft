@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.5 2006/09/02 14:08:52 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.6 2006/09/02 16:08:16 genstef Exp $
+
+  02 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  dmraid-1.0.0_rc12.ebuild:
+  remvoe generkenl depend, bug 145973
 
   02 Sep 2006; Alec Warner <antarus@gentoo.org> metadata.xml,
   -dmraid-1.0.0_rc8-r1.ebuild:
