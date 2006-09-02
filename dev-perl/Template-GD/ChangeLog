@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-GD
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.4 2006/08/27 21:11:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-GD/ChangeLog,v 1.5 2006/09/02 14:20:56 nixnut Exp $
+
+  02 Sep 2006; <nixnut@gentoo.org> Template-GD-2.66.ebuild:
+  ~ppc added. bug 144505
 
   27 Aug 2006; Jason Wever <weeve@gentoo.org> Template-GD-2.66.ebuild:
   Added ~sparc keyword wrt bug #144505.

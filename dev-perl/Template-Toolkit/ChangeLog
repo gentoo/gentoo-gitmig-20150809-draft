@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-Toolkit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.26 2006/08/27 21:14:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.27 2006/09/02 14:19:02 nixnut Exp $
+
+  02 Sep 2006; <nixnut@gentoo.org> Template-Toolkit-2.15-r1.ebuild:
+  ~ppc added. bug 144505
 
   27 Aug 2006; Jason Wever <weeve@gentoo.org>
   Template-Toolkit-2.15-r1.ebuild:
