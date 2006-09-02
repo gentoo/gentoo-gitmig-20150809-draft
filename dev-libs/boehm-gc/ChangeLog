@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.53 2006/09/02 14:41:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.54 2006/09/02 17:57:05 blubb Exp $
+
+  02 Sep 2006; <blubb@gentoo.org> boehm-gc-6.7.ebuild:
+  stable on amd64
 
   02 Sep 2006; Markus Rothe <corsair@gentoo.org> boehm-gc-6.7.ebuild:
   Stable on ppc64; bug #145987
