@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/jinit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.12 2006/08/06 09:28:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/jinit/ChangeLog,v 1.13 2006/09/02 22:55:05 weeve Exp $
+
+  02 Sep 2006; Jason Wever <weeve@gentoo.org> jinit-0.1.11.ebuild:
+  Changed stable SPARC keyword back to testing SPARC keyword wrt bug #142335.
 
   06 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> jinit-0.1.11.ebuild:
   move to ~ppc, bug #142335
