@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.8 2006/08/31 11:17:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.9 2006/09/02 10:44:41 deathwing00 Exp $
+
+  02 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kphotoalbum-2.2.ebuild:
+  Now check for sqlite support is done for qt-3 only. Fixes bug #145840.
 
   31 Aug 2006; <blubb@gentoo.org> kphotoalbum-2.2.ebuild:
   stable on amd64
