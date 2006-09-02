@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.7 2006/07/17 14:41:15 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.8 2006/09/02 23:24:42 lu_zero Exp $
+
+  02 Sep 2006; Luca Barbato <lu_zero@gentoo.org>
+  +files/mlt-0.2.2-motion-est-nonx86.patch, mlt-0.2.2.ebuild:
+  Make motion estimation build on non x86 arches
 
   17 Jul 2006; Marc Hildebrand <zypher@gentoo.org> mlt-0.2.2.ebuild
   Some cleanup and fixes. Thanks to Tiziano Müller for all his work on this.
