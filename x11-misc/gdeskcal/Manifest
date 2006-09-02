@@ -1,6 +1,0 @@
-MD5 e8f59207c470d20e26aa017e5b4e318d ChangeLog 1811
-MD5 25dec6cbbd74cd92e98dcd22c280d5b5 files/digest-gdeskcal-0.57.1-r1 67
-MD5 bdfc06cfa0781e3a743bad41d80b788b files/gdeskcal-0.57.1-gnomeui.patch 785
-MD5 60c5a8136428544fc2321955abd9c591 files/gdeskcal-evo2.patch 907
-MD5 1da0f22daac7fbd61460ddc3baf40d7c gdeskcal-0.57.1-r1.ebuild 1630
-MD5 e60ca3d672670524a6881084c5fd2476 metadata.xml 224
