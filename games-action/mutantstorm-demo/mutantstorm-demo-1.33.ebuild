@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.8 2006/07/17 04:39:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/mutantstorm-demo-1.33.ebuild,v 1.9 2006/09/02 10:05:47 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ LICENSE="POMPOM"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
+RESTRICT="strip"
 
 RDEPEND="virtual/opengl
 	amd64? (
@@ -37,17 +38,17 @@ src_unpack() {
 
 src_install() {
 	insinto "${dir}"
-	doins -r menu script styles "${dir}"
+	doins -r menu script styles || die "doins failed"
 
 	exeinto "${dir}"
-	doexe bin/Linux/x86/*
+	doexe bin/Linux/x86/* || die "doexe failed"
 	# Remove libSDL since we use the system version and our version doesn't
 	# have TEXTRELs in it.
 	rm -f "${Ddir}"/libSDL-1.2.so.0.0.5
 	games_make_wrapper mutantstorm-demo ./mutantstormdemo "${dir}" "${dir}"
 
 	insinto "${dir}"
-	doins README.txt buy_me mutant.xpm pompom readme.htm
+	doins README.txt buy_me mutant.xpm pompom readme.htm || die "doins failed"
 
 	prepgamesdirs
 }
