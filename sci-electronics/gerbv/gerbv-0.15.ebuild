@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-0.15.ebuild,v 1.4 2006/01/22 15:51:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-0.15.ebuild,v 1.5 2006/09/02 21:15:53 calchan Exp $
 
 DESCRIPTION="gerbv - The gEDA Gerber Viewer"
 SRC_URI="http://www.geda.seul.org/dist/${P}.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.geda.seul.org"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ppc sparc x86"
+KEYWORDS="alpha sparc"
 
 DEPEND="dev-util/guile
 	=x11-libs/gtk+-1*
