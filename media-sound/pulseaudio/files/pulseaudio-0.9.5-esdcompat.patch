@@ -1,0 +1,18 @@
+Index: pulseaudio-0.9.2/src/daemon/esdcompat.in
+===================================================================
+--- pulseaudio-0.9.2.orig/src/daemon/esdcompat.in
++++ pulseaudio-0.9.2/src/daemon/esdcompat.in
+@@ -28,8 +28,8 @@ fail() {
+ 
+ ARGS=" --log-target=syslog"
+ 
+-for N in $(seq $#) ; do
++while [ "$#" != "0" ]; do
+ 
+     case "$1" in
+         "")
+             ;;
+
+         -v|--version)
+             echo "$VERSION_STRING"
+             exit 0
