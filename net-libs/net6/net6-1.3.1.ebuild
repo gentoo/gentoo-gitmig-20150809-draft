@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.1.ebuild,v 1.1 2006/08/29 22:56:28 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.1.ebuild,v 1.2 2006/09/02 16:05:44 humpback Exp $
 
 DESCRIPTION="Network access framework for IPv4/IPv6 written in c++"
 HOMEPAGE="http://darcs.0x539.de/net6"
@@ -10,7 +10,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 SRC_URI="http://releases.0x539.de/${PN}/${P/_/}.tar.gz"
 
-DEPEND=">=dev-libs/libsigc++-2.0"
+DEPEND=">=dev-libs/libsigc++-2.0
+		>=net-libs/gnutls-1.2.10"
 
 S=${WORKDIR}/${P/_/}
 
