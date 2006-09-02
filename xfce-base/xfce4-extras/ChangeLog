@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.22 2006/04/22 10:38:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.23 2006/09/02 18:18:07 kloeri Exp $
+
+  02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
+  xfce4-extras-4.2.3.2.ebuild:
+  Stable on ia64.
 
   22 Apr 2006; Markus Rothe <corsair@gentoo.org>
   xfce4-extras-4.2.3.2.ebuild:
