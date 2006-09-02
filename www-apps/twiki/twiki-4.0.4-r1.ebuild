@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.4-r1.ebuild,v 1.1 2006/08/01 21:09:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.0.4-r1.ebuild,v 1.2 2006/09/02 12:01:36 rl03 Exp $
 
 inherit webapp eutils
 
@@ -35,6 +35,7 @@ RDEPEND=">=dev-lang/perl-5.8
 		virtual/perl-libnet
 		dev-perl/URI
 		virtual/cron
+		dev-perl/HTML-Parser
 		apache2? ( >=net-www/apache-2.0.54 )
 		!apache2? ( =net-www/apache-1* )"
 

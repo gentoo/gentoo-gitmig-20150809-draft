@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.35 2006/08/01 21:09:25 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.36 2006/09/02 12:01:36 rl03 Exp $
+
+  02 Sep 2006; Renat Lumpau <rl03@gentoo.org> twiki-4.0.4-r1.ebuild:
+  Added HTML-Parser, bug #145732.
 
 *twiki-4.0.4-r1 (01 Aug 2006)
 
