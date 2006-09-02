@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.9 2006/07/06 07:09:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.10 2006/09/02 13:41:26 nixnut Exp $
+
+  02 Sep 2006; <nixnut@gentoo.org> yakuake-2.7.5.ebuild:
+  Stable on ppc wrt bug #145686
 
   06 Jul 2006; Markus Rothe <corsair@gentoo.org> yakuake-2.7.5.ebuild:
   Stable on ppc64
