@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.23 2006/09/01 21:47:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.24 2006/09/02 13:01:52 nixnut Exp $
+
+  02 Sep 2006; <nixnut@gentoo.org> pyparted-1.7.0.ebuild:
+  Stable on ppc wrt bug #145893
 
   01 Sep 2006; Markus Rothe <corsair@gentoo.org> pyparted-1.7.0.ebuild:
   Added ~ppc64; bug #145893
