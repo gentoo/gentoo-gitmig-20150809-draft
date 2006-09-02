@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.53 2006/08/31 07:39:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.54 2006/09/02 12:25:17 flameeyes Exp $
+
+  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> rtorrent-0.6.1.ebuild:
+  Correct dependency on libtorrent version, thanks to jieryn in bug #145837.
 
 *rtorrent-0.6.1 (31 Aug 2006)
 
