@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.3 2006/04/01 23:25:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5.ebuild,v 1.4 2006/09/02 16:13:47 blubb Exp $
 
 inherit kde eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.jalix.org/projects/showimg/download/${MY_PV}/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="exif kipi mysql postgres"
 
 
