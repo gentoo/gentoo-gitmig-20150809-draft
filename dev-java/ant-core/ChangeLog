@@ -1,10 +1,14 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.45 2006/07/30 06:59:21 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.46 2006/09/02 22:56:09 flameeyes Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ant-core-1.6.5-r2.ebuild, ant-core-1.6.5-r13.ebuild:
+  Fix ~x86-fbsd keywording.
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   ant-core-1.6.5-r2.ebuild:
