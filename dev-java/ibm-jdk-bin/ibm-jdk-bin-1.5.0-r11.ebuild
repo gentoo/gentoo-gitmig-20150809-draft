@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0-r11.ebuild,v 1.3 2006/07/06 11:17:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0-r11.ebuild,v 1.4 2006/09/02 20:10:54 betelgeuse Exp $
 
 inherit java-vm-2 eutils
 
@@ -24,6 +24,7 @@ RESTRICT="fetch"
 JAVA_VM_NO_GENERATION1=true
 
 DEPEND="
+		=virtual/libstdc++-3.3
 		X? ( || (
 					(
 						x11-libs/libXt

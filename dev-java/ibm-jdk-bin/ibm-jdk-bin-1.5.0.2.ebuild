@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.2 2006/09/01 03:31:09 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.3 2006/09/02 20:10:54 betelgeuse Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -59,7 +59,8 @@ LICENSE="IBM-J1.5"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 
-DEPEND="
+RDEPEND="
+		=virtual/libstdc++-3.3
 		X? ( || (
 					(
 						x11-libs/libXt
@@ -77,7 +78,7 @@ DEPEND="
 					virtual/x11
 				)
 			)"
-RDEPEND="${DEPEND}"
+DEPEND=""
 
 IUSE="X javacomm nsplugin"
 

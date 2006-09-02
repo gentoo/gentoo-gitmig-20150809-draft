@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.7 2006/07/06 11:17:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.8 2006/09/02 20:10:54 betelgeuse Exp $
 
 inherit java eutils
 
@@ -25,7 +25,7 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~s390 ~x86"
 RESTRICT="fetch"
 IUSE="X javacomm browserplugin mozilla"
 
-DEPEND="sys-libs/glibc
+RDEPEND="sys-libs/glibc
 		X? ( || (
 					(
 						x11-libs/libXt
@@ -43,7 +43,7 @@ DEPEND="sys-libs/glibc
 					virtual/x11
 				)
 			)"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}"
 
 if use x86; then
 	S="${WORKDIR}/ibm-java2-i386-50"
