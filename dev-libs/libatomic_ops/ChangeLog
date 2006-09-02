@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libatomic_ops
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.1 2006/09/02 10:47:12 flameeyes Exp $
+
+*libatomic_ops-1.1 (02 Sep 2006)
+
+  02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +libatomic_ops-1.1.ebuild:
+  Initial import, dependency of the current SVN PulseAudio.
+
