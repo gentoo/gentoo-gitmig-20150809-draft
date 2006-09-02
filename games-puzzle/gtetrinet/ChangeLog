@@ -1,6 +1,13 @@
 # ChangeLog for games-puzzle/gtetrinet
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.12 2005/09/16 01:13:05 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtetrinet/ChangeLog,v 1.13 2006/09/02 23:45:57 mr_bones_ Exp $
+
+*gtetrinet-0.7.10 (02 Sep 2006)
+
+  02 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -gtetrinet-0.7.7.ebuild, -gtetrinet-0.7.9.ebuild,
+  +gtetrinet-0.7.10.ebuild:
+  version bump
 
   16 Sep 2005; Mike Frysinger <vapier@gentoo.org> gtetrinet-0.7.9.ebuild:
   Fix linking against esound libs and clean up build process in general
