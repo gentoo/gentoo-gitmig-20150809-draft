@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.83 2006/08/12 13:36:26 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.84 2006/09/02 15:47:38 ferdy Exp $
+
+  02 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> qdbm-1.8.67.ebuild:
+  Java support is optional so inherit java-pkg-opt-2 instead of java-pkg-2 in
+  order not to break Alpha dependencies.
 
 *qdbm-1.8.67 (12 Aug 2006)
 

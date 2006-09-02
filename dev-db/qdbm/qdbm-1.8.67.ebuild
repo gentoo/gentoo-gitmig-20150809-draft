@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.67.ebuild,v 1.1 2006/08/12 13:36:26 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.67.ebuild,v 1.2 2006/09/02 15:47:38 ferdy Exp $
 
-inherit eutils java-pkg-2 multilib
+inherit eutils java-pkg-opt-2 multilib
 
 IUSE="debug java perl ruby zlib"
 
