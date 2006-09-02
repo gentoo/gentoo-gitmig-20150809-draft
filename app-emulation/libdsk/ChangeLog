@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libdsk
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.14 2006/07/11 12:33:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.15 2006/09/02 16:10:24 blubb Exp $
+
+  02 Sep 2006; <blubb@gentoo.org> libdsk-1.1.5.ebuild:
+  stable on amd64
 
 *libdsk-1.1.10 (11 Jul 2006)
 
