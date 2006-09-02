@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.99.ebuild,v 1.2 2006/02/27 01:09:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.99.ebuild,v 1.3 2006/09/02 22:20:35 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -126,5 +126,5 @@ pkg_postinst() {
 	einfo "The utils included in bitlbee (other than bitlbeed) are now"
 	einfo "located in /usr/share/bitlbee"
 	einfo
-	einfo "NOTE: The IRSSI script are no longer provided by BitlBee."
+	einfo "NOTE: The IRSSI script is no longer provided by BitlBee."
 }
