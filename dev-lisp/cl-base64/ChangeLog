@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-base64
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/ChangeLog,v 1.11 2005/05/24 18:48:32 mkennedy Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/ChangeLog,v 1.12 2006/09/02 17:38:01 mkennedy Exp $
+
+*cl-base64-3.3.2 (02 Sep 2006)
+
+  02 Sep 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +cl-base64-3.3.2.ebuild:
+  New upstream version -- no longer depends on dev-lisp/cl-kmrcl.
 
   24 May 2005; <mkennedy@gentoo.org> cl-base64-3.3.1.ebuild:
   Keywording ~sparc
