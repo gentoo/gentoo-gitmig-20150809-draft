@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.57 2006/08/22 13:57:38 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.58 2006/09/02 11:54:01 deathwing00 Exp $
+
+*digikam-0.9.0_beta1-r2 (02 Sep 2006)
+
+  02 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/digikam-0.9.0_beta1-rate-pictures-fix.diff,
+  +digikam-0.9.0_beta1-r2.ebuild:
+  Added patches that fix rating the pictures using shortcuts. Fixes bug #145762.
 
   22 Aug 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   digikam-0.9.0_beta1.ebuild, digikam-0.9.0_beta1-r1.ebuild:
