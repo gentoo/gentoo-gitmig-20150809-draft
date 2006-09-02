@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.112 2006/08/12 14:55:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.113 2006/09/02 20:55:32 kloeri Exp $
+
+  02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
+  heimdal-0.7.2-r3.ebuild:
+  Stable on ia64.
 
   12 Aug 2006; Rene Nussbaumer <killerfox@gentoo.org>
   heimdal-0.7.2-r3.ebuild:
