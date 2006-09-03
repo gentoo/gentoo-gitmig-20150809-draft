@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.1.ebuild,v 1.2 2006/09/03 08:50:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.1.ebuild,v 1.3 2006/09/03 17:59:02 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs autotools
 
@@ -21,6 +21,7 @@ IUSE="acl nls selinux static"
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
 	nls? ( >=sys-devel/gettext-0.15 )
+	!net-mail/base64
 	>=sys-libs/ncurses-5.3-r5"
 DEPEND="${RDEPEND}
 	=sys-devel/automake-1.8*
@@ -144,6 +145,6 @@ src_install() {
 		done
 	else
 		# For now, drop the man pages, collides with the ones of the system.
-		rm -rf ${D}/usr/share/man
+		rm -rf "${D}"/usr/share/man
 	fi
 }
