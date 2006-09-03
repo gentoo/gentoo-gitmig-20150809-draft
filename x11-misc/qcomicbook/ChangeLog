@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.10 2006/07/01 19:58:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.11 2006/09/03 09:29:47 nelchael Exp $
+
+*qcomicbook-0.3.2 (03 Sep 2006)
+
+  03 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -qcomicbook-0.2.5.ebuild, -qcomicbook-0.2.7.ebuild,
+  +qcomicbook-0.3.2.ebuild:
+  Version bump, see bug #144719.
 
 *qcomicbook-0.2.7 (01 Jul 2006)
 
