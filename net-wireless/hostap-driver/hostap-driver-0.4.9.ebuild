@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.9.ebuild,v 1.3 2006/07/18 12:30:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/hostap-driver-0.4.9.ebuild,v 1.4 2006/09/03 09:03:42 hansmi Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://hostap.epitest.fi"
 SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="pcmcia"
 SLOT="0"
 
