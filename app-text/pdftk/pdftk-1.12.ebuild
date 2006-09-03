@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.9 2006/06/05 22:16:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.12.ebuild,v 1.10 2006/09/03 09:53:10 genstef Exp $
 
 inherit eutils
 
 DESCRIPTION="A tool for manipulating PDF documents"
 HOMEPAGE="http://www.accesspdf.com/pdftk"
-SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz"
+SRC_URI="http://www.pdfhacks.com/pdftk/${P}.tar.gz
+	mirror://debian/pool/main/p/pdftk/pdftk_1.12-11.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ppc"
@@ -29,8 +30,8 @@ src_unpack() {
 	mv ${S}/Makefile.Generic ${T}/Makefile.Generic.orig
 	sed 's:-O2:\$(CFLAGS):g' \
 		< ${T}/Makefile.Generic.orig > ${S}/Makefile.Generic
-	# Fix gcc-4 compilation, bug #126735.
-	epatch "${FILESDIR}/${P}-gcc-4-compilation.patch" || die
+	# Fix gcc-4 compilation, bug #126735 and other fixes from debian
+	epatch "${WORKDIR}/pdftk_1.12-11.diff"
 	use nodrm && epatch "${FILESDIR}"/${P}-user-pw.patch
 }
 
