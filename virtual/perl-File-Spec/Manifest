@@ -5,10 +5,10 @@ EBUILD perl-File-Spec-3.12.ebuild 511 RMD160 7e06e1b76427be0b959564a6fbcd77652d2
 MD5 123183623ffb0820305f3db26f7959ab perl-File-Spec-3.12.ebuild 511
 RMD160 7e06e1b76427be0b959564a6fbcd77652d2d0206 perl-File-Spec-3.12.ebuild 511
 SHA256 d8d1f6bcf92b9493c28e9ad8924a2a6b2c18f6d879f5ea647c9c101a8a7e17a8 perl-File-Spec-3.12.ebuild 511
-EBUILD perl-File-Spec-3.15.ebuild 503 RMD160 253f6a988172d70a3675ef0875d0aa11b75b5fa9 SHA1 9abf19e207e4fa9d307a3bb48f780c95d33811f1 SHA256 a95237bf287ba4384efc74beedeb111ef870b21c141ee3a27a9c21b29cffdcc0
-MD5 10690f9fbc342b34d90dd3a795360170 perl-File-Spec-3.15.ebuild 503
-RMD160 253f6a988172d70a3675ef0875d0aa11b75b5fa9 perl-File-Spec-3.15.ebuild 503
-SHA256 a95237bf287ba4384efc74beedeb111ef870b21c141ee3a27a9c21b29cffdcc0 perl-File-Spec-3.15.ebuild 503
+EBUILD perl-File-Spec-3.15.ebuild 497 RMD160 0d0bdbd82c96cefc8c7787b5687126e14fc7decc SHA1 6eb2bfd4d37f18b3731d6815ced0a99776e26251 SHA256 1c5b753d32709b2b86a51e59711a99a524f10ecbfabb1a8c72beda1c961b9af0
+MD5 b202b6ec23d9b98c1815259491f98ac8 perl-File-Spec-3.15.ebuild 497
+RMD160 0d0bdbd82c96cefc8c7787b5687126e14fc7decc perl-File-Spec-3.15.ebuild 497
+SHA256 1c5b753d32709b2b86a51e59711a99a524f10ecbfabb1a8c72beda1c961b9af0 perl-File-Spec-3.15.ebuild 497
 EBUILD perl-File-Spec-3.18.ebuild 504 RMD160 7ecefc006f1ce0ef445cae046e3ba629a4060f1c SHA1 da6d68493491d40977610ba1b14fecdcaf016846 SHA256 1f08e6f8993e5500975df4aa609aaf787a4064dc595dbf7b72359bad19fcf878
 MD5 623f01d04ab729a435c231b92b4876ec perl-File-Spec-3.18.ebuild 504
 RMD160 7ecefc006f1ce0ef445cae046e3ba629a4060f1c perl-File-Spec-3.18.ebuild 504
@@ -38,9 +38,9 @@ MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-perl-File-Spec-3.19 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-perl-File-Spec-3.19 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-perl-File-Spec-3.19 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE8irItG5z4I8BtQoRAkwbAKCGTQHqdL/+suXwkeqwp6BOdBCSBgCgk9VT
-aey5vuTsA6BCQnincbZXglw=
-=CWQe
+iD8DBQFE+m36amhnQswr0vIRArDtAJ4lfQnQ14VZByu76gJBg6SNoYic1wCbBP02
+nkbBxogOKeBjPvFJrWTlmo0=
+=k0tT
 -----END PGP SIGNATURE-----
