@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.14 2006/08/30 10:41:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.15 2006/09/03 01:01:59 weeve Exp $
+
+  03 Sep 2006; Jason Wever <weeve@gentoo.org> cutils-1.6-r2.ebuild:
+  Stable on SPARC wrt bug #145555.
 
   30 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   cutils-1.6-r2.ebuild:
