@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20050822.ebuild,v 1.12 2006/07/05 05:22:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-20050822.ebuild,v 1.13 2006/09/03 20:41:52 kumba Exp $
 
 DESCRIPTION="HTML documentation for PHP"
 HOMEPAGE="http://www.php.net/download-docs.php"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~stuart/php/${PN}-${PVR}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/html
