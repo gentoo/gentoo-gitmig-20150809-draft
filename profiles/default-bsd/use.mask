@@ -1,11 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.21 2006/07/19 18:21:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.22 2006/09/03 12:16:21 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
 nptl
 alsa
+aoss #146108
 v4l
 v4l2
 fbcon
