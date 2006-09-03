@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5814 2006/09/03 01:56:40 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5815 2006/09/03 07:00:24 betelgeuse Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -329,8 +329,10 @@ mail-filter/mimedefang
 =media-plugins/xmms-xmmsd-0.3
 
 # Petteri Räty <betelgeuse@gentoo.org> (22 Jul 2006)
-# Masked for testing
-=net-wireless/ndiswrapper-1.21
+# Masked for testing. Report to the following url
+# if they work:
+# https://bugs.gentoo.org/show_bug.cgi?id=140646
+>=net-wireless/ndiswrapper-1.21
 
 # Martin Schlemmer <azarah@gentoo.org> (20 Jul 2006)
 # Masked for testing
