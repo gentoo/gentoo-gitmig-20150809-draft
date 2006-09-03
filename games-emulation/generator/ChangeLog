@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.13 2006/04/20 03:45:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.14 2006/09/03 01:31:19 tupone Exp $
+
+*generator-0.35-r2 (03 Sep 2006)
+
+  03 Sep 2006; <tupone@gentoo.org> files/generator-0.35-gcc.patch,
+  -generator-0.35-r1.ebuild, +generator-0.35-r2.ebuild:
+  Previous exec stack fix was discarded by the 2 stages asm build. Fixed.
 
   20 Apr 2006; Mike Frysinger <vapier@gentoo.org>
   +files/generator-0.35-gcc.patch, generator-0.35-r1.ebuild:
@@ -10,7 +16,7 @@
 
   30 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +generator-0.35-r1.ebuild:
-  Added new ebuild for a patched generator. The oroginal ebuild was written by
+  Added new ebuild for a patched generator. The original ebuild was written by
   Machiel Groeneveld <machiel@ideus.nl> and edited by Bernard Cafarelli
   <voyageur@operamail.com>. Closing bug #76072.
 
