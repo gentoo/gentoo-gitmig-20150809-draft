@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.35 2006/08/16 00:55:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.36 2006/09/03 21:10:34 grobian Exp $
+
+*gnustep-base-1.13.0 (03 Sep 2006)
+
+  03 Sep 2006; Fabian Groffen <grobian@gentoo.org> +files/50-gnustep-revdep,
+  -files/base-user-defaults.patch-1.10.0, +files/gnustep.initd,
+  -gnustep-base-1.10.1-r1.ebuild, +gnustep-base-1.13.0.ebuild:
+  Upstream version bump and cleanup.  Thanks to Dmitry S. Kulyabov (bug #145566)
 
   16 Aug 2006; Jason Wever <weeve@gentoo.org> gnustep-base-1.12.0.ebuild:
   Stable on SPARC wrt bug #139385.

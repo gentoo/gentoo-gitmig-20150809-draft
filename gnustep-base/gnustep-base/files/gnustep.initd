@@ -1,0 +1,56 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/files/gnustep.initd,v 1.1 2006/09/03 21:10:34 grobian Exp $
+
+if [ -e /etc/GNUstep/GNUstep.conf ];
+then
+	. /etc/GNUstep/GNUstep.conf
+else
+	GNUSTEP_SYSTEM_ROOT="/usr/GNUstep/System"
+fi
+
+start() {
+	ebegin "Starting GNUstep services"
+
+	# Check for necessary files
+	if [ -d ${GNUSTEP_SYSTEM_ROOT}/Makefiles ];
+	then
+		# Source GNUstep makefile
+		. ${GNUSTEP_SYSTEM_ROOT}/Makefiles/GNUstep.sh
+	else
+		eend 0
+		exit 1
+	fi
+
+	if [ -z "$GNUSTEP_FLATTENED" ];
+	then
+		TDIR=${GNUSTEP_SYSTEM_ROOT}/Tools/${GNUSTEP_HOST_CPU}/${GNUSTEP_HOST_OS}
+	else
+		TDIR=${GNUSTEP_SYSTEM_ROOT}/Tools
+	fi
+
+	# Start services
+	if [ -x ${TDIR}/gdomap ];
+	then
+		ebegin " starting gdomap"
+		${TDIR}/gdomap
+		eend $?
+	fi
+	if [ -x ${TDIR}/$LIBRARY_COMBO/gdnc ];
+	then
+		ebegin " starting gdomap"
+		${TDIR}/$LIBRARY_COMBO/gdnc
+		eend $?
+	fi
+}
+
+stop() {
+	ebegin "Killing GNUstep services"
+
+	# Kill processes
+	killall gdomap
+	killall gdnc
+
+	eend 1
+}
