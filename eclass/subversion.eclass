@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.33 2006/07/22 13:52:38 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.34 2006/09/03 13:01:57 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -138,9 +138,11 @@ function subversion_fetch() {
 	case "${protocol}" in
 		http|https)
 			if built_with_use dev-util/subversion nowebdav; then
+				echo
 				eerror "In order to emerge this package, you need to"
 				eerror "re-emerge subversion with USE=-nowebdav"
-				die "Please run 'USE=-nowebdav emerge subversion'"
+				echo
+				die "${ESVN}: please run 'USE=-nowebdav emerge subversion'"
 			fi
 			;;
 		svn|svn+ssh)
@@ -153,26 +155,15 @@ function subversion_fetch() {
 	if [[ ! -d "${ESVN_STORE_DIR}" ]]; then
 		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
 
-		addwrite /
 		mkdir -p "${ESVN_STORE_DIR}" || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
-		export SANDBOX_WRITE=${SANDBOX_WRITE%%:/}
 	fi
 
 	cd "${ESVN_STORE_DIR}" || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
 
 	# every time
-	addwrite "/etc/subversion"
-	addwrite "${ESVN_STORE_DIR}"
+	addread "/etc/subversion"
 
-	if ! has userpriv ${FEATURES}; then
-		# -userpriv
-		addwrite "/root/.subversion"
-
-	else
-		# +userpriv
-		ESVN_OPTIONS="${ESVN_OPTIONS} --config-dir ${ESVN_STORE_DIR}/.subversion"
-
-	fi
+	ESVN_OPTIONS="${ESVN_OPTIONS} --config-dir ${ESVN_STORE_DIR}/.subversion"
 
 	local wc_path=${ESVN_PROJECT}/${repo_uri##*/}
 
@@ -188,6 +179,12 @@ function subversion_fetch() {
 		${ESVN_FETCH_CMD} ${ESVN_OPTIONS} "${repo_uri}" || die "${ESVN}: can't fetch from ${repo_uri}."
 
 	else
+		subversion_wc_info || die "${ESVN}: unknown problem occurred while accessing working copy."
+
+		if [[ "${ESVN_WC_URL}" != "${ESVN_REPO_URI}" ]]; then
+			die "${ESVN}: ESVN_REPO_URI and working copy's URL are not matched."
+		fi
+
 		# update working copy
 		einfo "subversion update start -->"
 		einfo "     repository: ${repo_uri}"
@@ -272,8 +269,8 @@ function subversion_bootstrap() {
 
 function subversion_src_unpack() {
 
-	subversion_fetch     || die "${ESVN}: unknown problem in subversion_fetch()."
-	subversion_bootstrap || die "${ESVN}: unknown problem in subversion_bootstrap()."
+	subversion_fetch     || die "${ESVN}: unknown problem occurred in subversion_fetch."
+	subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
 
 }
 
