@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.15 2006/08/27 08:27:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.16 2006/09/03 14:48:35 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -271,6 +271,13 @@ LICENSE="${LICENSE} MIT"
 
 pkg_setup() {
 	use minimal || ensure_a_server_is_building
+
+	# Bug #145274 - anything that uses vm86.h is broken on AMD64
+	if use kdrive && use amd64 && use video_cards_vesa; then
+		eerror "kdrive's VESA driver does not build on AMD64 because it uses"
+		eerror "vm86.h.  Please build kdrive without VIDEO_CARDS=\"vesa\"."
+		die "kdrive's VESA driver does not build on AMD64."
+	fi
 
 	# localstatedir is used for the log location; we need to override the default
 	# from ebuild.sh

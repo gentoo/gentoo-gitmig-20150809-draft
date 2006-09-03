@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.161 2006/08/27 08:27:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.162 2006/09/03 14:48:35 joshuabaergen Exp $
+
+  03 Sep 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.1.0-r1.ebuild, xorg-server-1.1.1.ebuild:
+  kdrive's VESA driver does not build on AMD64.  (Bruno Roggeri, bug #145274)
 
   27 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.0-r1.ebuild, xorg-server-1.1.1.ebuild:
