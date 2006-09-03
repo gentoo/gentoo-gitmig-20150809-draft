@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cjkuni-fonts/cjkuni-fonts-0.0.20050501.ebuild,v 1.7 2006/09/01 18:13:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cjkuni-fonts/cjkuni-fonts-0.0.20050501.ebuild,v 1.8 2006/09/03 06:22:50 vapier Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="http://debian.linux.org.tw/pub/3Anoppix/people/arne/uming/ttf-arphic-um
 
 LICENSE="Arphic"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc sparc x86"
+KEYWORDS="~amd64 arm ia64 ppc s390 sh sparc x86"
 
 S=${WORKDIR}
 

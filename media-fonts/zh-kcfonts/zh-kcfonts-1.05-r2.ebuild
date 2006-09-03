@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05-r2.ebuild,v 1.2 2006/07/12 13:52:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/zh-kcfonts-1.05-r2.ebuild,v 1.3 2006/09/03 06:49:25 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://freebsd.sinica.edu.tw/"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm ia64 ~ppc s390 sh ~sparc ~x86"
 IUSE=""
 
 DEPEND="|| ( ( x11-apps/mkfontdir x11-apps/bdftopcf ) virtual/x11 )"

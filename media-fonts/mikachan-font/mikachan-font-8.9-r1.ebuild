@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/mikachan-font-8.9-r1.ebuild,v 1.8 2005/01/27 03:42:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/mikachan-font-8.9-r1.ebuild,v 1.9 2006/09/03 06:41:43 vapier Exp $
 
 inherit font
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://mikachan-font.com/"
 
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 
 S="${WORKDIR}"

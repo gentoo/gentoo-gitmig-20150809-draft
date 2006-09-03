@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/lfpfonts-fix-0.83-r2.ebuild,v 1.3 2006/01/11 16:02:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lfpfonts-fix/lfpfonts-fix-0.83-r2.ebuild,v 1.4 2006/09/03 06:41:02 vapier Exp $
 
 inherit font eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/xfonts/"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="x86 sparc ppc alpha amd64 ia64"
+KEYWORDS="alpha amd64 arm ia64 ppc s390 sh sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}-src

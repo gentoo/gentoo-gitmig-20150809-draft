@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/hunkyfonts-0.3.1.ebuild,v 1.3 2006/09/01 18:08:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/hunkyfonts/hunkyfonts-0.3.1.ebuild,v 1.4 2006/09/03 06:38:40 vapier Exp $
 
 inherit font
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hunkyfonts/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc ~x86"
+KEYWORDS="~amd64 arm ia64 ppc s390 sh ~x86"
 
 FONT_S="${WORKDIR}/${P}/TTF"
 FONT_SUFFIX="ttf"
