@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler-bindings
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.49 2006/08/16 14:56:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-bindings/ChangeLog,v 1.50 2006/09/03 11:08:18 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
+  poppler-bindings-0.5.3.ebuild:
+  Stable on ia64.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org>
   poppler-bindings-0.5.3.ebuild:
