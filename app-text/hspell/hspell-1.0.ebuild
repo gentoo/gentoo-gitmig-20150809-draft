@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/hspell-1.0.ebuild,v 1.1 2006/09/03 07:48:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/hspell-1.0.ebuild,v 1.2 2006/09/03 14:15:43 genstef Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_compile() {
 		--enable-linginfo \
 		--enable-fatverb \
 		|| die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
