@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6.ebuild,v 1.2 2006/05/02 00:14:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/apachetop-0.12.6.ebuild,v 1.3 2006/09/03 19:42:29 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.webta.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~mips ~ppc ~sparc ~x86"
 IUSE="apache2 fam pcre adns"
 
 DEPEND="sys-apps/sed
