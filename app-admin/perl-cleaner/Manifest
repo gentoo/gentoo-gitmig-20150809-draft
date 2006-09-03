@@ -8,10 +8,10 @@ EBUILD perl-cleaner-1.04.1.ebuild 720 RMD160 d76e0b7dd321e4d763809dde4319c754f9e
 MD5 0d136720367cfb34b78bd234bc825faa perl-cleaner-1.04.1.ebuild 720
 RMD160 d76e0b7dd321e4d763809dde4319c754f9e2f736 perl-cleaner-1.04.1.ebuild 720
 SHA256 34980f2d03dfc6e694beca194cf2e8c325405976dd1ac22f4de54a494cbd3aed perl-cleaner-1.04.1.ebuild 720
-EBUILD perl-cleaner-1.04.3.ebuild 723 RMD160 db73fb1236484b18d959db71d45184d24db18475 SHA1 d95fffd86dc410b15e6134b79a4eaeffb72ea1c4 SHA256 e855eebc0b815fe8d0183cbb1e37c843e0dcbf5533b966c68d3de6edff11e2de
-MD5 15b69a3cea8a78f7c874e7b195bc7fb1 perl-cleaner-1.04.3.ebuild 723
-RMD160 db73fb1236484b18d959db71d45184d24db18475 perl-cleaner-1.04.3.ebuild 723
-SHA256 e855eebc0b815fe8d0183cbb1e37c843e0dcbf5533b966c68d3de6edff11e2de perl-cleaner-1.04.3.ebuild 723
+EBUILD perl-cleaner-1.04.3.ebuild 625 RMD160 12cf6404737bf8bbcf2b03b67d6a5670e7598ce6 SHA1 2f131e5dc0d98a0fc85513146802e66fbb3a6109 SHA256 0fd8ae09ecc377444287b73ab9644f56f9c1e087cebcdcf2962aa537cd4224a2
+MD5 fd4533ebbbe73752dc19444dd52f0a3d perl-cleaner-1.04.3.ebuild 625
+RMD160 12cf6404737bf8bbcf2b03b67d6a5670e7598ce6 perl-cleaner-1.04.3.ebuild 625
+SHA256 0fd8ae09ecc377444287b73ab9644f56f9c1e087cebcdcf2962aa537cd4224a2 perl-cleaner-1.04.3.ebuild 625
 EBUILD perl-cleaner-1.04.ebuild 715 RMD160 707ad5de7c5efdf0c2785c426b9cf46079f823d6 SHA1 06ed2703bbdcc1644105636865ee6509d011be07 SHA256 63d7777ccca4cc99645dc7efcd2f441b988ca0f5cedb7f0d4b19a645651aaeff
 MD5 9384d2ed645ffc47bdaff302338dda39 perl-cleaner-1.04.ebuild 715
 RMD160 707ad5de7c5efdf0c2785c426b9cf46079f823d6 perl-cleaner-1.04.ebuild 715
@@ -34,9 +34,9 @@ MD5 3386c79e723cd69a68fca9cdff5b7528 files/digest-perl-cleaner-1.04.3 253
 RMD160 b1dc076f50a72c91cdaa2c5779a2fddc646e6db3 files/digest-perl-cleaner-1.04.3 253
 SHA256 9e26762d285fcd3c68afbbbbec3bbfa8fa764b86ade4df9e12a22e243aaa119a files/digest-perl-cleaner-1.04.3 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE9cqlKRy60XGEcJIRAi0DAJ498haYjneVpNf7ifYbB0gBaQFQjACbBeXH
-FZ43zA5Mi6LL9suTrSbxA5k=
-=ON+G
+iD8DBQFE+mwFamhnQswr0vIRAkA7AKCIT7RllTocLWB1hwr8uaI+3TedmgCfe9O8
+uU2Jidq1xsTRkLmm/uS3Efo=
+=xeSr
 -----END PGP SIGNATURE-----
