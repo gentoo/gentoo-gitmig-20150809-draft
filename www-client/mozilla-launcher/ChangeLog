@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.40 2006/07/07 17:24:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.41 2006/09/03 10:20:34 nelchael Exp $
+
+*mozilla-launcher-1.52-r1 (03 Sep 2006)
+
+  03 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/mozilla-launcher-1.52-aoss.patch, +mozilla-launcher-1.52-r1.ebuild:
+  Added version with optional media-libs/alsa-oss support.
 
   07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   mozilla-launcher-1.52.ebuild:

@@ -1,0 +1,47 @@
+--- -	2006-08-15 16:37:08.286834431 +0200
++++ mozilla-launcher-1.52	2006-08-15 16:37:05.000000000 +0200
+@@ -139,7 +139,7 @@
+     *fox)
+       export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/usr/lib/MozillaFirefox"}
+       remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+-      mozbin=$MOZILLA_FIVE_HOME/firefox-bin
++	  mozbin="/usr/bin/aoss $MOZILLA_FIVE_HOME/firefox-bin"
+       ;;
+ 
+     *mozilla)
+@@ -186,7 +186,7 @@
+     *fox-bin)
+       export MOZILLA_FIVE_HOME=${MOZILLA_LIBDIR:-"/opt/firefox"}
+       remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+-      mozbin=$MOZILLA_FIVE_HOME/firefox-bin
++      mozbin="/usr/bin/aoss $MOZILLA_FIVE_HOME/firefox-bin"
+       ;;
+ 
+     *mozilla-bin)
+@@ -215,7 +215,7 @@
+   esac
+ 
+   # Make sure we got something
+-  if [[ -z $mozbin || ! -f $mozbin ]]; then
++  if [[ -z "$mozbin" ]]; then
+     echo "$0: can't find the browser :-(" >&2
+     return 1
+   fi
+@@ -417,7 +417,7 @@
+   # compreg.dat and/or chrome.rdf will screw things up if it's from an
+   # older version.  http://bugs.gentoo.org/show_bug.cgi?id=63999
+   for f in ~/{.,.mozilla/}${zero%-bin}/*/{compreg.dat,chrome.rdf,XUL.mfasl}; do
+-    if [[ -f ${f} && ${f} -ot ${mozbin} ]]; then
++    if [[ -f ${f} && ${f} -ot "${mozbin}" ]]; then
+       echo "Removing ${f} leftover from older ${zero%-bin}"
+       rm -f "${f}"
+     fi
+@@ -447,7 +447,7 @@
+         MOZ_NO_REMOTE=1 "$mozbin" "$@" &
+         ;;
+       *)
+-        "$mozbin" "$@" &
++        $mozbin "$@" &
+         ;;
+     esac
+   fi
