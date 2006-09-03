@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.01-r1.ebuild,v 1.3 2006/09/03 13:19:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.01-r1.ebuild,v 1.4 2006/09/03 15:06:17 jer Exp $
 
 GCONF_DEBUG="no"
 inherit eutils gnome2
@@ -48,8 +48,7 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 	         !qt-static? ( app-emulation/emul-linux-x86-qtlibs ) )
 	!amd64? ( media-libs/libexif
 	          spell? ( app-text/aspell )
-	          x86? ( !qt-static? ( =x11-libs/qt-3*
-								   virtual/libstdc++ ) )
+	          x86? ( !qt-static? ( =x11-libs/qt-3* ) )
 			  media-libs/jpeg )"
 
 SLOT="0"

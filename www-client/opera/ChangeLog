@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.61 2006/09/03 13:19:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.62 2006/09/03 15:06:17 jer Exp $
+
+  03 Sep 2006; Jeroen Roovers <jer@gentoo.org> opera-9.01-r1.ebuild:
+  Removing libstdc++ dep for x86 again. tx to Flameeyes and b33fc0d3 for their
+  kind advice (bug 139407).
 
   03 Sep 2006; Jeroen Roovers <jer@gentoo.org> opera-9.01-r1.ebuild:
   Let's not mess with amd64.
