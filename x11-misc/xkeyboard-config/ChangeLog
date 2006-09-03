@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.21 2006/08/16 18:06:04 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.22 2006/09/03 14:31:39 joshuabaergen Exp $
+
+*xkeyboard-config-0.8-r1 (03 Sep 2006)
+
+  03 Sep 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/add_missing_lsgt.patch, +xkeyboard-config-0.8-r1.ebuild:
+  Add missing LSGT symbol to evdev symbols.  (Dennis Schridde, Bug #145097)
+  This should fix the availability of <, > and | for users of this symbol list.
 
   16 Aug 2006; Brent Baude <ranger@gentoo.org> xkeyboard-config-0.8.ebuild:
   Keywording ppc64 stable per MrBones request

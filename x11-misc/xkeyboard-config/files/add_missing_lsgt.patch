@@ -1,0 +1,10 @@
+--- keycodes/evdev	2006/02/21 23:55:01	1.1
++++ keycodes/evdev	2006/04/19 23:56:39	1.2
+@@ -346,6 +346,7 @@
+ 	// <META> =   156; // <I1C>
+ 	// <SUPR> =   127; // <U7F>
+ 	// <HYPR> =   128; // <U80>
++	<LSGT> = 94;
+ 
+ 	indicator 1 = "Caps Lock";
+ 	indicator 2 = "Num Lock";
