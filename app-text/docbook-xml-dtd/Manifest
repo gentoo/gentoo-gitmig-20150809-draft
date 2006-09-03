@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST docbkx412.zip 75683 RMD160 89af805434b21f12f7be7ef58cf52edeb458e0c9 SHA1 b9ae7a41056bfaf885581812d60651b7b5531519 SHA256 30f0644064e0ea71751438251940b1431f46acada814a062870f486c772e7772
 DIST docbook-xml-4.2.zip 78428 RMD160 3ba17bf96ab2ab8fe6dc9ff82da8e22aaf9ce5e0 SHA1 5e3a35663cd028c5c5fbb959c3858fec2d7f8b9e SHA256 acc4601e4f97a196076b7e64b368d9248b07c7abf26b34a02cca40eeebe60fa2
-DIST docbook-xml-4.3.zip 83865
+DIST docbook-xml-4.3.zip 83865 RMD160 deeb29ed336bcce6ed199c516f01bb1542ea16ee SHA1 e79a59e9164c1013b8cc9f64f96f909a184ca016 SHA256 23068a94ea6fd484b004c5a73ec36a66aa47ea8f0d6b62cc1695931f5c143464
 DIST docbook-xml-4.4.zip 96107 RMD160 691a9230442be14d019af9d07e94f269824d85cc SHA1 7c4d91c82ad3747e1b5600c91782758e5d91c22b SHA256 02f159eb88c4254d95e831c51c144b1863b216d909b5ff45743a1ce6f5273090
 EBUILD docbook-xml-dtd-4.1.2-r5.ebuild 1004 RMD160 e72bb50933f141557b57f4b62ccba4af952719b4 SHA1 cef6622f84fdbe71d2efdac249891f7d0121e9c1 SHA256 a4edf7ab2e1d5cec830d479b4308a8bb04d69b7042df9d199dd67b21034d96ec
 MD5 e78d929791c2b64e10b1eb7ea80caaaa docbook-xml-dtd-4.1.2-r5.ebuild 1004
@@ -29,18 +26,18 @@ EBUILD docbook-xml-dtd-4.3.ebuild 975 RMD160 ee3b86dbb1105b23847633e7dedff57ef15
 MD5 5def4ee5107481013c6a07f2070aeaf4 docbook-xml-dtd-4.3.ebuild 975
 RMD160 ee3b86dbb1105b23847633e7dedff57ef156a857 docbook-xml-dtd-4.3.ebuild 975
 SHA256 a286aef0b1ba2c74245ac498952a16e9c52ec2f7aecb8544413cf76cb4f92a66 docbook-xml-dtd-4.3.ebuild 975
-EBUILD docbook-xml-dtd-4.4-r1.ebuild 1400 RMD160 9afd2675204c1adf2094aa62afa50988aac45b67 SHA1 7def0f5a20d6dd711380813d9853d0298a331297 SHA256 7470e99434cd07960dab8a874c725d68a186d3ea336397dae86d00d47ec2e8b7
-MD5 c208559d8d2162e7e28600b140e2ec2d docbook-xml-dtd-4.4-r1.ebuild 1400
-RMD160 9afd2675204c1adf2094aa62afa50988aac45b67 docbook-xml-dtd-4.4-r1.ebuild 1400
-SHA256 7470e99434cd07960dab8a874c725d68a186d3ea336397dae86d00d47ec2e8b7 docbook-xml-dtd-4.4-r1.ebuild 1400
+EBUILD docbook-xml-dtd-4.4-r1.ebuild 1397 RMD160 e5c2726d109fe0fec1777f2ed5cba2af90cd35e3 SHA1 516a87fb99c40b2cf353828363a0f392306ab604 SHA256 84ef80df647c9d295bf0e74a41b6afa4f982ccbd7644ee1c6c7ade2f73a0b84c
+MD5 77874802e3004331c0aa7a182bdd0c54 docbook-xml-dtd-4.4-r1.ebuild 1397
+RMD160 e5c2726d109fe0fec1777f2ed5cba2af90cd35e3 docbook-xml-dtd-4.4-r1.ebuild 1397
+SHA256 84ef80df647c9d295bf0e74a41b6afa4f982ccbd7644ee1c6c7ade2f73a0b84c docbook-xml-dtd-4.4-r1.ebuild 1397
 EBUILD docbook-xml-dtd-4.4.ebuild 1025 RMD160 2917cf2bf2fb2b342c56cd95de00053cf86ac35b SHA1 391cf3a122eb129eef973e5540ab506e9c4ccb6a SHA256 966105ef3da09c425d1c903cf44f2f057fc9daeda82be81708b0f6223a262c49
 MD5 54e8a1d2314d78b9e8dedbb8686af83d docbook-xml-dtd-4.4.ebuild 1025
 RMD160 2917cf2bf2fb2b342c56cd95de00053cf86ac35b docbook-xml-dtd-4.4.ebuild 1025
 SHA256 966105ef3da09c425d1c903cf44f2f057fc9daeda82be81708b0f6223a262c49 docbook-xml-dtd-4.4.ebuild 1025
-MISC ChangeLog 7441 RMD160 f5fd6c5911270009dbb600a294ef12aaa2fe4d05 SHA1 82911286f21df77754060a4ed45a9f0a628c9220 SHA256 f1e2f82eda26ad14bc5296ed757e9c4c6a339c3d47999838480adefe6e93e06b
-MD5 3c2ca420498f80a758d8c25dda3400ac ChangeLog 7441
-RMD160 f5fd6c5911270009dbb600a294ef12aaa2fe4d05 ChangeLog 7441
-SHA256 f1e2f82eda26ad14bc5296ed757e9c4c6a339c3d47999838480adefe6e93e06b ChangeLog 7441
+MISC ChangeLog 7544 RMD160 00fbb9848a365c79d396a9e7d155b9bc22f15a14 SHA1 ed8cb53510b8fce4ac51d88b4e05a43e247e0050 SHA256 0156a04ee5ae7b8d2ffcfac2770fe871178a6614363a1fb05372200e81422af7
+MD5 017b22c2f882901f372606a039e9c20d ChangeLog 7544
+RMD160 00fbb9848a365c79d396a9e7d155b9bc22f15a14 ChangeLog 7544
+SHA256 0156a04ee5ae7b8d2ffcfac2770fe871178a6614363a1fb05372200e81422af7 ChangeLog 7544
 MISC metadata.xml 164 RMD160 698422e821458386b8da17baa6014296f8284e0b SHA1 a805613d38e6e3bff93cba3858d6a92cc79fe2f7 SHA256 7bd4d93c657a26aa9af1dea4232520c0d388cc92115dd9ca0eb04259228e044f
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 RMD160 698422e821458386b8da17baa6014296f8284e0b metadata.xml 164
@@ -57,22 +54,15 @@ SHA256 80e0769a4b5e9e94db61afa42ef7a271a1dc0f68387d4c1c1ccdfe0ca5839efa files/di
 MD5 995e8741b5b16b98a2bcd524af3660eb files/digest-docbook-xml-dtd-4.2-r2 235
 RMD160 5758819e595127db920fd5c87f3073c8bf5421a6 files/digest-docbook-xml-dtd-4.2-r2 235
 SHA256 80e0769a4b5e9e94db61afa42ef7a271a1dc0f68387d4c1c1ccdfe0ca5839efa files/digest-docbook-xml-dtd-4.2-r2 235
-MD5 0c4ee65a9b4e3f4aad82e13ac2f82ec9 files/digest-docbook-xml-dtd-4.3 63
-RMD160 4d63a734fa3526092a85f214cc757ffb83980ada files/digest-docbook-xml-dtd-4.3 63
-SHA256 0a5f6fb38bfdf26f2c28c97c5bcba03bf56dbde0f43beeedb1fedc3645dc46e2 files/digest-docbook-xml-dtd-4.3 63
-MD5 0c4ee65a9b4e3f4aad82e13ac2f82ec9 files/digest-docbook-xml-dtd-4.3-r1 63
-RMD160 4d63a734fa3526092a85f214cc757ffb83980ada files/digest-docbook-xml-dtd-4.3-r1 63
-SHA256 0a5f6fb38bfdf26f2c28c97c5bcba03bf56dbde0f43beeedb1fedc3645dc46e2 files/digest-docbook-xml-dtd-4.3-r1 63
+MD5 9cdbe4ef56eb09be570b9ef118e08f27 files/digest-docbook-xml-dtd-4.3 235
+RMD160 d9a51b0fc6f5d3d2d5343aa75c4ee27b3714469f files/digest-docbook-xml-dtd-4.3 235
+SHA256 ec1b6f329b4998dc4cd5943c79ac442b790f8addb465cef8e9d9c44a72de3db6 files/digest-docbook-xml-dtd-4.3 235
+MD5 9cdbe4ef56eb09be570b9ef118e08f27 files/digest-docbook-xml-dtd-4.3-r1 235
+RMD160 d9a51b0fc6f5d3d2d5343aa75c4ee27b3714469f files/digest-docbook-xml-dtd-4.3-r1 235
+SHA256 ec1b6f329b4998dc4cd5943c79ac442b790f8addb465cef8e9d9c44a72de3db6 files/digest-docbook-xml-dtd-4.3-r1 235
 MD5 bbf235bc7b475942f0e5b0e338f7068a files/digest-docbook-xml-dtd-4.4 235
 RMD160 644f3384867bbe7f89f90d4734dc596a4d311528 files/digest-docbook-xml-dtd-4.4 235
 SHA256 f6392051fbf5da799b34d4a940b2ccb635e2313291bccd8a98a2fe797652235b files/digest-docbook-xml-dtd-4.4 235
 MD5 bbf235bc7b475942f0e5b0e338f7068a files/digest-docbook-xml-dtd-4.4-r1 235
 RMD160 644f3384867bbe7f89f90d4734dc596a4d311528 files/digest-docbook-xml-dtd-4.4-r1 235
 SHA256 f6392051fbf5da799b34d4a940b2ccb635e2313291bccd8a98a2fe797652235b files/digest-docbook-xml-dtd-4.4-r1 235
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEdKMQAiZjviIA2XgRAtjTAKCZeWPBVd2jL3SY3FNV4KDcPFHd8wCgxZKr
-bxkLWonZfLPStPcXawmyokc=
-=H7Ar
------END PGP SIGNATURE-----
