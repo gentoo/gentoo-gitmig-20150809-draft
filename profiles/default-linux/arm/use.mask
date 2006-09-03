@@ -4,6 +4,10 @@ mozilla
 
 hardened
 
+# Krzysiek Pawlik <nelchael@gentoo.org>
+# With vapier's permission masking aoss:
+aoss
+
 # Saleem Abdulrasool <compnerd@gentoo.org>
 # With vapier's permission masking this.
 dmi
