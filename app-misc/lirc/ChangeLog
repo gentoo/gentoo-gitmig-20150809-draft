@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.105 2006/08/04 11:10:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.106 2006/09/03 19:48:17 blubb Exp $
+
+  03 Sep 2006; <blubb@gentoo.org> lirc-0.8.0-r5.ebuild:
+  added ~amd64
 
   04 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/lirc-0.8.0-conf-pixelview_bt878.diff, -lirc-0.8.0-r3.ebuild,
