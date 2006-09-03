@@ -1,6 +1,29 @@
-MD5 42adae480059847b0740523486405447 ChangeLog 2400
-RMD160 ca54137a5b72f23b0bd90899cfb32a9b031a59c9 ChangeLog 2400
-SHA256 fc57aafdd1ce6391584d77ab16c0644f9f4aede9d90bfc64f87936cf71ad3c03 ChangeLog 2400
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST lineak_kdeplugins-0.8.3.tar.gz 862043
+DIST lineak_kdeplugins-0.8.4.tar.gz 983550
+DIST lineak_kdeplugins-0.9.0-pre1.tar.gz 983694 RMD160 712243b4f5b887075daf38e9db7788845009edbc SHA256 5b7b1cf608b144ef7263263d8c8d6e8001cd23a844275a53edc8103e295ad20d
+EBUILD lineak-kdeplugins-0.8.3.ebuild 717 RMD160 1dfc4a9d9dad2d3c8213ad74ad46d6fc1c115c77 SHA1 97061542f48eacabc922c36086aab291826f53ee SHA256 89e911d35985acbdcab6c0073229bb392eeb58e8c5b3cb174a2d8f670de7bf0b
+MD5 6cbc87b167cc0714ce16b99a3bfc208c lineak-kdeplugins-0.8.3.ebuild 717
+RMD160 1dfc4a9d9dad2d3c8213ad74ad46d6fc1c115c77 lineak-kdeplugins-0.8.3.ebuild 717
+SHA256 89e911d35985acbdcab6c0073229bb392eeb58e8c5b3cb174a2d8f670de7bf0b lineak-kdeplugins-0.8.3.ebuild 717
+EBUILD lineak-kdeplugins-0.8.4.ebuild 758 RMD160 d433de3f6ec2954cc5abfffe0c47746b5842e8bb SHA1 02401ff1300cfd94ce9027e4a48fbf5bc6a1bee5 SHA256 1c9f6509f96ceb77b4787577b74226afdd912f3125fd1ff45f9c34dbdbf0886d
+MD5 e3e02d96af1d39a87e378101538c7ea5 lineak-kdeplugins-0.8.4.ebuild 758
+RMD160 d433de3f6ec2954cc5abfffe0c47746b5842e8bb lineak-kdeplugins-0.8.4.ebuild 758
+SHA256 1c9f6509f96ceb77b4787577b74226afdd912f3125fd1ff45f9c34dbdbf0886d lineak-kdeplugins-0.8.4.ebuild 758
+EBUILD lineak-kdeplugins-0.9.0_pre1.ebuild 729 RMD160 f64071919adeb2dd2b64afe77139c757f79f736c SHA1 06cb08dd37ee54d30b528c081fd58d47c2088dec SHA256 6db5e7a357014dbd5c65b7c1e856fc80575eae668b4d8a2b24030ef574b4c21d
+MD5 1a9109d4995035ac46d4c3211658bf40 lineak-kdeplugins-0.9.0_pre1.ebuild 729
+RMD160 f64071919adeb2dd2b64afe77139c757f79f736c lineak-kdeplugins-0.9.0_pre1.ebuild 729
+SHA256 6db5e7a357014dbd5c65b7c1e856fc80575eae668b4d8a2b24030ef574b4c21d lineak-kdeplugins-0.9.0_pre1.ebuild 729
+MISC ChangeLog 2523 RMD160 b41679832ae2893762c33ac60e4f1a220fdf1d7b SHA1 dd91ec4b5f906a7bef8d7260064169eec53bd0ee SHA256 7b676cea57ae9f0a13a4f90a375b48cc48528024ce22575552915eda6e76d64f
+MD5 05fd6a223bc3ba0694e3c91c94890b62 ChangeLog 2523
+RMD160 b41679832ae2893762c33ac60e4f1a220fdf1d7b ChangeLog 2523
+SHA256 7b676cea57ae9f0a13a4f90a375b48cc48528024ce22575552915eda6e76d64f ChangeLog 2523
+MISC metadata.xml 270 RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 SHA1 301f7381dcf918a0ebf54528c56a7be2d0eb0ea9 SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16
+MD5 9a7c58529f54db6737913da568c57e4a metadata.xml 270
+RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 metadata.xml 270
+SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16 metadata.xml 270
 MD5 1ee578a6c268965f653080ada78561cc files/digest-lineak-kdeplugins-0.8.3 75
 RMD160 fc577ba203fa9fac5d27c2099595b0fc806e5179 files/digest-lineak-kdeplugins-0.8.3 75
 SHA256 44d393167911a1002c04c5ab1d6b56f731ff5ab4c0a01f1a7f01a5c37efc0bc8 files/digest-lineak-kdeplugins-0.8.3 75
@@ -10,15 +33,10 @@ SHA256 6690cfd0478d07e34a194800992c1f37ff0229b7d8f0345ff9556641c2de3476 files/di
 MD5 1285821c05d2cb1f55f5993c1cf3b1b2 files/digest-lineak-kdeplugins-0.9.0_pre1 286
 RMD160 31204f982bf3f8b15e5dfe78559efda17a7290dc files/digest-lineak-kdeplugins-0.9.0_pre1 286
 SHA256 0d14aef37a8e2ae83af0a8dbb56ad06f47272c41c0b54a2e69fa5257f61dcec3 files/digest-lineak-kdeplugins-0.9.0_pre1 286
-MD5 6cbc87b167cc0714ce16b99a3bfc208c lineak-kdeplugins-0.8.3.ebuild 717
-RMD160 1dfc4a9d9dad2d3c8213ad74ad46d6fc1c115c77 lineak-kdeplugins-0.8.3.ebuild 717
-SHA256 89e911d35985acbdcab6c0073229bb392eeb58e8c5b3cb174a2d8f670de7bf0b lineak-kdeplugins-0.8.3.ebuild 717
-MD5 ca060aa9325d21320ed4e893c2b1b9b3 lineak-kdeplugins-0.8.4.ebuild 758
-RMD160 9684a26678bb6c5112b2d1ab901dc7579f4c9db9 lineak-kdeplugins-0.8.4.ebuild 758
-SHA256 3cae587c8b588b5f1f3b21d56ca6008a27e289ca256b65785c15043862d3b299 lineak-kdeplugins-0.8.4.ebuild 758
-MD5 1a9109d4995035ac46d4c3211658bf40 lineak-kdeplugins-0.9.0_pre1.ebuild 729
-RMD160 f64071919adeb2dd2b64afe77139c757f79f736c lineak-kdeplugins-0.9.0_pre1.ebuild 729
-SHA256 6db5e7a357014dbd5c65b7c1e856fc80575eae668b4d8a2b24030ef574b4c21d lineak-kdeplugins-0.9.0_pre1.ebuild 729
-MD5 9a7c58529f54db6737913da568c57e4a metadata.xml 270
-RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 metadata.xml 270
-SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16 metadata.xml 270
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+ztzgo/w9rxVVVERAoRSAJ4oaerhng8ZrTqFTcWsq+1JUC3YNQCaAvhz
+K6nC43PiNW5vgds5eb8LR2o=
+=KhR+
+-----END PGP SIGNATURE-----
