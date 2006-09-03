@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-winitzki-cyrillic-1.0.0.tar.bz2 41050 RMD160 db7db4daecc610e33300764fdc2b36b0fcf77ad4 SHA256 478a7f6881fce6a335b409e1326449af4162a147d268f1978b8dd81c834beee3
-EBUILD font-winitzki-cyrillic-1.0.0.ebuild 513 RMD160 0fa0fb17b1241507cb80dad538279e24c5f836bd SHA1 95a888bd6b78efc6068cf443763c53136b64062a SHA256 f0abbcf72cfef092e6c4c5af5b87f90bcd10d56a976b568f13d2823153ed3229
-MD5 6aaf6bcbdcd736b2af0bb13b747f419e font-winitzki-cyrillic-1.0.0.ebuild 513
-RMD160 0fa0fb17b1241507cb80dad538279e24c5f836bd font-winitzki-cyrillic-1.0.0.ebuild 513
-SHA256 f0abbcf72cfef092e6c4c5af5b87f90bcd10d56a976b568f13d2823153ed3229 font-winitzki-cyrillic-1.0.0.ebuild 513
+EBUILD font-winitzki-cyrillic-1.0.0.ebuild 512 RMD160 ad76dbefe94b205dfbf81481940ec4c56ff0ada4 SHA1 19d11c4c88deae072c2a5717c13952e49335a5e5 SHA256 4da4cd87fd88b876e125dc97d5dca291cb6ae362259304876c0f7739bf0a7cdc
+MD5 f051dd8f327329cad9aa2f23d3c8e8d4 font-winitzki-cyrillic-1.0.0.ebuild 512
+RMD160 ad76dbefe94b205dfbf81481940ec4c56ff0ada4 font-winitzki-cyrillic-1.0.0.ebuild 512
+SHA256 4da4cd87fd88b876e125dc97d5dca291cb6ae362259304876c0f7739bf0a7cdc font-winitzki-cyrillic-1.0.0.ebuild 512
 MISC ChangeLog 2503 RMD160 d15c1078da7e54275ebfdd83b097bab5f4b09537 SHA1 6c8ed13e0ff3cfa38a7ed7723cfc46c6553c10f5 SHA256 3b21f6b6ed07d6141850f849cccec74b02635614d9a93c2ac5f9480fc1f36e84
 MD5 8602f243c9a34e9133e0c3ca0bb52ef6 ChangeLog 2503
 RMD160 d15c1078da7e54275ebfdd83b097bab5f4b09537 ChangeLog 2503
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 ecb64b2cf303148337dbaa8b519dc35b files/digest-font-winitzki-cyrillic-1.0.0 286
 RMD160 4f1d735f44442d206dd91c7adf13aa7080154eed files/digest-font-winitzki-cyrillic-1.0.0 286
 SHA256 e124c2fe2772601a7a04a54647b2e9cb9aec4601c53536275dac26162af1a9b4 files/digest-font-winitzki-cyrillic-1.0.0 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+ngOamhnQswr0vIRAtVTAJ4llvRJc2htNDTo+8Jftcc+YbbkRwCgjoxM
+VZ2Sp5jX56VCqCbzBH9WFrU=
+=iBlI
+-----END PGP SIGNATURE-----

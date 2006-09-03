@@ -1,8 +1,11 @@
-DIST font-bitstream-speedo-1.0.0.tar.bz2 337770
-EBUILD font-bitstream-speedo-1.0.0.ebuild 491 RMD160 3b2071b2d6bb76b2b339ab0c0c611069564bf161 SHA1 39be09894e42478e963f4f39cf0e8155d033a030 SHA256 b02d296afc7fdb7af41b3e93332648db844cca97bc161bd9a4c183dae749cfb0
-MD5 e43f411a6deac069e560d3465de9838a font-bitstream-speedo-1.0.0.ebuild 491
-RMD160 3b2071b2d6bb76b2b339ab0c0c611069564bf161 font-bitstream-speedo-1.0.0.ebuild 491
-SHA256 b02d296afc7fdb7af41b3e93332648db844cca97bc161bd9a4c183dae749cfb0 font-bitstream-speedo-1.0.0.ebuild 491
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST font-bitstream-speedo-1.0.0.tar.bz2 337770 RMD160 4f27f06394f1ef1c97cdde7657f19a0ca0cdad5f SHA1 a46754330e70097338a858d31e4e8475775777f3 SHA256 80f5ff6deffbb9bdcecc95ca65dc52b90a17d8b84635e9a76d22bcb115323d69
+EBUILD font-bitstream-speedo-1.0.0.ebuild 490 RMD160 975811f19690e123b43469ca95ba7a132e073e76 SHA1 4d1e01e9860529a265c89eaef413392815ff682b SHA256 1df5eb9b0c30ba296e482148baa4e2c1cae3b532091d22ad63f425950f773400
+MD5 a56ad7a993a13fc6639ceef8b3f240b5 font-bitstream-speedo-1.0.0.ebuild 490
+RMD160 975811f19690e123b43469ca95ba7a132e073e76 font-bitstream-speedo-1.0.0.ebuild 490
+SHA256 1df5eb9b0c30ba296e482148baa4e2c1cae3b532091d22ad63f425950f773400 font-bitstream-speedo-1.0.0.ebuild 490
 MISC ChangeLog 2195 RMD160 15a946d7770d5b61de68305b3de689049dfd37d0 SHA1 f21af67826b16310e8aaf6aa0301809ddb171e9b SHA256 4f6674afe923a378e44b5f010a7dc2a12eb14858a81885709953dfc92681498b
 MD5 7e56dea9a7c9b40eb08479da1e0dde53 ChangeLog 2195
 RMD160 15a946d7770d5b61de68305b3de689049dfd37d0 ChangeLog 2195
@@ -11,6 +14,13 @@ MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 f3f1e938e50463b9b9cfbda55ea6d80c files/digest-font-bitstream-speedo-1.0.0 80
-RMD160 3f63260fa4646535544f11aed27ca48ec2c2f8e9 files/digest-font-bitstream-speedo-1.0.0 80
-SHA256 02c4ac1f3d997b4cb007b14b6c685f4eb1aca2619eb6fdfffef3abb6e8938ca6 files/digest-font-bitstream-speedo-1.0.0 80
+MD5 cc5adb46b72c851572838be99aba6242 files/digest-font-bitstream-speedo-1.0.0 286
+RMD160 56a31c53ebe649553c36c830fdfdca96f4f80bce files/digest-font-bitstream-speedo-1.0.0 286
+SHA256 59b07af5ccbb623f229372a559bfbe136e1d7cd137b0341b9e89ccc6e0e51fe1 files/digest-font-bitstream-speedo-1.0.0 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+nbDamhnQswr0vIRAvPbAJ9NRd9LsMq6jp3etg8s6vl+H5U4mACfVHYD
+tWeR63kXEatkiGuCWjzr+ds=
+=a+EH
+-----END PGP SIGNATURE-----

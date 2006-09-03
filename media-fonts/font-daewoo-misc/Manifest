@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-daewoo-misc-1.0.0.tar.bz2 683783
-EBUILD font-daewoo-misc-1.0.0.ebuild 473 RMD160 c4d13caa87c7420e2e9d0661569c4a5871b1d7ce SHA1 9fc8d8554b494eeaf0bccf4369dcd91a3b664a32 SHA256 84e1b7e9d4f08cb4c106ba97b7542770e22af195adbb0bda9f92222cbb09aaa1
-MD5 4631c6aab824d2415b076817e3ba4626 font-daewoo-misc-1.0.0.ebuild 473
-RMD160 c4d13caa87c7420e2e9d0661569c4a5871b1d7ce font-daewoo-misc-1.0.0.ebuild 473
-SHA256 84e1b7e9d4f08cb4c106ba97b7542770e22af195adbb0bda9f92222cbb09aaa1 font-daewoo-misc-1.0.0.ebuild 473
+EBUILD font-daewoo-misc-1.0.0.ebuild 472 RMD160 048a8fe7dbabfe026b6fefb3a61d496ec07c6f24 SHA1 545354e25060905bebf1d080e3ac8f0c52a250a8 SHA256 f24498c84584445b48cd69330226a25445d06b7820e7d1e78d9b6c17f2f2f847
+MD5 a09a5b2220675aca0d94c9780a1581a0 font-daewoo-misc-1.0.0.ebuild 472
+RMD160 048a8fe7dbabfe026b6fefb3a61d496ec07c6f24 font-daewoo-misc-1.0.0.ebuild 472
+SHA256 f24498c84584445b48cd69330226a25445d06b7820e7d1e78d9b6c17f2f2f847 font-daewoo-misc-1.0.0.ebuild 472
 MISC ChangeLog 2100 RMD160 09cbb3bc4570782ab8f374318ca83a53a27f23a7 SHA1 fda3c97678cf7e39ceefaa094d0b7b8f3a05bb4a SHA256 fd77e18addd86fbc132dfa90f46a463382d8813094df4de63751420b90a3c2bc
 MD5 cd714158960ce4752ac4d096d5ddaa6f ChangeLog 2100
 RMD160 09cbb3bc4570782ab8f374318ca83a53a27f23a7 ChangeLog 2100
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 4c09bd9051e2a40e5aba925f50d83b20 files/digest-font-daewoo-misc-1.0.0 75
 RMD160 d1c128c046c92940a843f1de69a974b6e43890b0 files/digest-font-daewoo-misc-1.0.0 75
 SHA256 0e24dcb417c663751c7bbd422b0c3663982a0352ffbc3a9c9844efb6a6e6e62c files/digest-font-daewoo-misc-1.0.0 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+ncFamhnQswr0vIRAkp+AJ93dFI555Y5+hyUpFGbG1oUSjjD/ACdHU5l
+UgJB7mjavuklJQZEiNzH9Qw=
+=DOg2
+-----END PGP SIGNATURE-----

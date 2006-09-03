@@ -1,8 +1,11 @@
-DIST font-bitstream-75dpi-1.0.0.tar.bz2 104154
-EBUILD font-bitstream-75dpi-1.0.0.ebuild 492 RMD160 7e8b05d6cccdde84286d9dd61e2789969860bb49 SHA1 e36f59a90b7f5a21399f14838cc211ae53f7974e SHA256 755777e9e7fb20cac251ceb1fa30a20f5fbbdd74345a9f6e7d89f0117c11b2b3
-MD5 05ec04d6679f9efb330dc58d874ee751 font-bitstream-75dpi-1.0.0.ebuild 492
-RMD160 7e8b05d6cccdde84286d9dd61e2789969860bb49 font-bitstream-75dpi-1.0.0.ebuild 492
-SHA256 755777e9e7fb20cac251ceb1fa30a20f5fbbdd74345a9f6e7d89f0117c11b2b3 font-bitstream-75dpi-1.0.0.ebuild 492
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST font-bitstream-75dpi-1.0.0.tar.bz2 104154 RMD160 b287609219efe086d33293f97f19a57ad9fceeb3 SHA1 f011ab82ddf2952f644cf75993693ecb290e5591 SHA256 485c676fe064c9d0c32f45c617bef7f57839df4b94e3f7aa2bde13bae0178f23
+EBUILD font-bitstream-75dpi-1.0.0.ebuild 491 RMD160 c8ccf01d681fcf44b300b01a5005e21122c25d51 SHA1 9fcbc6a5d2c54d55eaf3db00c1e41cc87e705c7a SHA256 aa6fd10c2f703e5ba8cfc18b0e0e73b098174acc27ce2cf4542ce5e47f6c83b9
+MD5 074c5e6ab8cdafcd82034a2124ad31bb font-bitstream-75dpi-1.0.0.ebuild 491
+RMD160 c8ccf01d681fcf44b300b01a5005e21122c25d51 font-bitstream-75dpi-1.0.0.ebuild 491
+SHA256 aa6fd10c2f703e5ba8cfc18b0e0e73b098174acc27ce2cf4542ce5e47f6c83b9 font-bitstream-75dpi-1.0.0.ebuild 491
 MISC ChangeLog 2077 RMD160 6505b269d0ceaae121b5c6c8824dbc4c9e9dc2c4 SHA1 effabc18e9b5bcff53cfec25d32fee1d21aa6518 SHA256 954045a2c5bce3d4ecdd466445ebd12f787ef37c1978b3ed5aec27733bc9f36d
 MD5 c484d6db7e5936206d38de44bc7a2446 ChangeLog 2077
 RMD160 6505b269d0ceaae121b5c6c8824dbc4c9e9dc2c4 ChangeLog 2077
@@ -11,6 +14,13 @@ MISC metadata.xml 156 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 SHA1 6f78f
 MD5 a37bab73e2f24b213932c30997d3d360 metadata.xml 156
 RMD160 c1274bdccf57603d580de0075ba07a35b7509560 metadata.xml 156
 SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata.xml 156
-MD5 ead8b6535c029fede007fb031f5c272f files/digest-font-bitstream-75dpi-1.0.0 79
-RMD160 2aab01039aac14267c19d0891a96348b1326fd50 files/digest-font-bitstream-75dpi-1.0.0 79
-SHA256 edeab589403ffa8fa8162c06ae9eae884f72cf6cadff1c75d0e3d0e5621fc16d files/digest-font-bitstream-75dpi-1.0.0 79
+MD5 b44492b4695d7f0190605a7331d7c1c1 files/digest-font-bitstream-75dpi-1.0.0 283
+RMD160 05009fcdbcaa5abb636c5270200b17321c3ea192 files/digest-font-bitstream-75dpi-1.0.0 283
+SHA256 7b63f41a68c3623aca32b5e939c446dec751d2a2f57eb064355f64a5de6a6667 files/digest-font-bitstream-75dpi-1.0.0 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+natamhnQswr0vIRAs/CAJ9dApdDXndZ7Sjk862j3AFJ/qk5dQCgrrBk
+fpbH9Jhz7Evv8ZnoddKxJ4U=
+=aII6
+-----END PGP SIGNATURE-----

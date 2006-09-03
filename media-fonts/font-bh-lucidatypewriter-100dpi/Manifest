@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-bh-lucidatypewriter-100dpi-1.0.0.tar.bz2 188706 RMD160 a2be25b1fd8ac6708905d0d898ce1e3990415017 SHA1 0430de2120a46ab58051cc569a739fa4ff0f7235 SHA256 3d1c79e4070529e1f9b75edd8f169e9ae055ac725554dedbb58375dba7b7af94
-EBUILD font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 628 RMD160 518d86a3e98e27242e940b0415d77bd87558771b SHA1 ca96424cf14871c06f796449f03cc8b63b1eed0f SHA256 4e155c9d050dc1d846a317dfa03cb93b8e44b8425a8cdc864e739a54dfc07aac
-MD5 b932258ce92200dfe2dfcbbbae71ab95 font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 628
-RMD160 518d86a3e98e27242e940b0415d77bd87558771b font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 628
-SHA256 4e155c9d050dc1d846a317dfa03cb93b8e44b8425a8cdc864e739a54dfc07aac font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 628
+EBUILD font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 627 RMD160 f12d6de110c5abc1dc51ab11161b7d574619c523 SHA1 f4e22f9c155598b677b69e61559922a898268b53 SHA256 91642b41d491250c37d7fc32d92ece6103073f18bcdeb2a83e5971e406cb2020
+MD5 6fd4ec58cb92d2ec976415abda504323 font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 627
+RMD160 f12d6de110c5abc1dc51ab11161b7d574619c523 font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 627
+SHA256 91642b41d491250c37d7fc32d92ece6103073f18bcdeb2a83e5971e406cb2020 font-bh-lucidatypewriter-100dpi-1.0.0.ebuild 627
 MISC ChangeLog 2785 RMD160 e3d50ae530e50940b7e34abd345bb50878b71ae7 SHA1 291c9d50ee717b6b7d692d32debb4820440a3a49 SHA256 8907bbc0ad5853178bf5a4fca56c860aab947216c2a6d183e70228c6e6aceea4
 MD5 434b42f8138c41a789e2b775e37bb2ea ChangeLog 2785
 RMD160 e3d50ae530e50940b7e34abd345bb50878b71ae7 ChangeLog 2785
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 daf7c3d63ef4e1c2659ceed3f5789178 files/digest-font-bh-lucidatypewriter-100dpi-1.0.0 316
 RMD160 8fcf9506d1bd7aae501c8d8947ef4326ee58db7f files/digest-font-bh-lucidatypewriter-100dpi-1.0.0 316
 SHA256 d309e359e7dc7047bf85a2ec2a83a5ea0a62350e94eb22f4c9ab51ceb4837f33 files/digest-font-bh-lucidatypewriter-100dpi-1.0.0 316
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+nZaamhnQswr0vIRAr9lAKCRJs4FWtHPprG3pAkTbZjbKADkpgCcDv8C
+HpUAzxc7aNp3sMycgdiZa7E=
+=PQVQ
+-----END PGP SIGNATURE-----

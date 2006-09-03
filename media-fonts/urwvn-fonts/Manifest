@@ -1,13 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST urwvn-2.0-type1.tar.bz2 2072337
 DIST urwvn-3.02-ttf.tar.bz2 918379
 EBUILD urwvn-fonts-2.0.ebuild 588 RMD160 4f0b1d2bceaf58b3bdde46bf8c2307a79847e96e SHA1 c845a289388c5f6fb8d1be7a20ed213afd961bde SHA256 c43a24c642c86f490339b4d1fff2d01fa9e4aef10053dd7b732081830653424e
 MD5 f7b8d55d58adebb8484ee47dbdb718ba urwvn-fonts-2.0.ebuild 588
 RMD160 4f0b1d2bceaf58b3bdde46bf8c2307a79847e96e urwvn-fonts-2.0.ebuild 588
 SHA256 c43a24c642c86f490339b4d1fff2d01fa9e4aef10053dd7b732081830653424e urwvn-fonts-2.0.ebuild 588
-EBUILD urwvn-fonts-3.02.ebuild 611 RMD160 0c9be8ee61d7ebc9bedbdef5ac0501ee1e702570 SHA1 04495f4978dd66849f3e1e3a04220dc22d3d83b6 SHA256 8dc74d8bb0ed8754df8a4ecf63ddefce354ab4f07c93a639d0c8d009cb14cc2f
-MD5 b6fbfa7075e98aed0d49f6deed6a8caa urwvn-fonts-3.02.ebuild 611
-RMD160 0c9be8ee61d7ebc9bedbdef5ac0501ee1e702570 urwvn-fonts-3.02.ebuild 611
-SHA256 8dc74d8bb0ed8754df8a4ecf63ddefce354ab4f07c93a639d0c8d009cb14cc2f urwvn-fonts-3.02.ebuild 611
+EBUILD urwvn-fonts-3.02.ebuild 619 RMD160 7f5a6d57cd727690af68a5c789911f4906a49ad6 SHA1 d72daaa18e1950855dd72283458483f358468609 SHA256 44eb8c66d2aae495ca28a43709caa995343d446bb713b65cf5cd3c7c770e0ac2
+MD5 ad25e58deeee1025efe8d21feb3da54d urwvn-fonts-3.02.ebuild 619
+RMD160 7f5a6d57cd727690af68a5c789911f4906a49ad6 urwvn-fonts-3.02.ebuild 619
+SHA256 44eb8c66d2aae495ca28a43709caa995343d446bb713b65cf5cd3c7c770e0ac2 urwvn-fonts-3.02.ebuild 619
 MISC ChangeLog 1536 RMD160 c9bbc2e482d0eefed5e3f0369954703a2b88e478 SHA1 e43ec277195a6da681754628c456bc6f66bc28e2 SHA256 a1ff83b4bf49e7261d2c7763aba11f2278e3aaa9eea52aca798615e201f75ace
 MD5 e6fe2221ab5f8e7c9a151e8ef42948f6 ChangeLog 1536
 RMD160 c9bbc2e482d0eefed5e3f0369954703a2b88e478 ChangeLog 1536
@@ -22,3 +25,10 @@ SHA256 3cf0a8b44c628c20fa053899e283bb894b88731a90fe2af34c784d2999e55c00 files/di
 MD5 f2df0e72bcb898052b2caac2fa50c188 files/digest-urwvn-fonts-3.02 67
 RMD160 d6d255738767463264e95fcd2f41a3c76dde338f files/digest-urwvn-fonts-3.02 67
 SHA256 ed0e7bcc318a8b8a5be854cfea9b92a956fd940831bc0810b69966d08bae2f25 files/digest-urwvn-fonts-3.02 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+nrMamhnQswr0vIRApv+AKCB6HC223iCXGPTTMZuM7BtsFW1cgCgnbv4
+WBrE+iBu35i5j5lIKmH9x+0=
+=yo7z
+-----END PGP SIGNATURE-----

@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-cursor-misc-1.0.0.tar.bz2 42656 RMD160 f42933e4ed9194f6a9c7c1f8bfe793ed7b3341be SHA1 3fe0f1015c15444169d2b28cdb138b2d49481f78 SHA256 955de27117581ba501d7c2abae7f38b0a65662e4ab2e2b54b9eb2dc07aa5f3c5
-EBUILD font-cursor-misc-1.0.0.ebuild 507 RMD160 bdb1ee16e60203bf91ada41c87046d42bbfaa4fa SHA1 7988fc1ad062ee7890a87bef3315db228c47b3f3 SHA256 bd689131cb61f526fce6811359344e7041d47a4529bee943ac91cd0655d9cf0c
-MD5 6d1cc0f5fa61ac4ee93ca5b31850057b font-cursor-misc-1.0.0.ebuild 507
-RMD160 bdb1ee16e60203bf91ada41c87046d42bbfaa4fa font-cursor-misc-1.0.0.ebuild 507
-SHA256 bd689131cb61f526fce6811359344e7041d47a4529bee943ac91cd0655d9cf0c font-cursor-misc-1.0.0.ebuild 507
+EBUILD font-cursor-misc-1.0.0.ebuild 506 RMD160 9fe7acb8af8dd696358765fdda32c70f0c47dd45 SHA1 b7878bd9e942c86b86b175f682ff040c393e9caa SHA256 8b6e2ba0e925b55133848f182a1cb31c0ecd239ecad08ed527da75a74565da56
+MD5 2b1c08699abc0c1307c7862e652f34da font-cursor-misc-1.0.0.ebuild 506
+RMD160 9fe7acb8af8dd696358765fdda32c70f0c47dd45 font-cursor-misc-1.0.0.ebuild 506
+SHA256 8b6e2ba0e925b55133848f182a1cb31c0ecd239ecad08ed527da75a74565da56 font-cursor-misc-1.0.0.ebuild 506
 MISC ChangeLog 3460 RMD160 ce3ad45c9735ca9addc65dbe58305051cead4ed0 SHA1 bf793df2a2eb335670f18ecfd0680ea80f8f2531 SHA256 88065c1a0850f350ba95667dcf08e6b57773aeda57c3b440e58194ea1b6af1a0
 MD5 43c6019659624d1a81bd4dfc105d1e91 ChangeLog 3460
 RMD160 ce3ad45c9735ca9addc65dbe58305051cead4ed0 ChangeLog 3460
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 6c576f906aaad514a2660ced5f5d3a99 files/digest-font-cursor-misc-1.0.0 268
 RMD160 b20653f161e77a5e664a9abbdf2cd6ae629c8956 files/digest-font-cursor-misc-1.0.0 268
 SHA256 c1c31b5766c86836320eabb1e800b7a7423ba742d6f6f6a225e1c154d1a37758 files/digest-font-cursor-misc-1.0.0 268
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+nbxamhnQswr0vIRAmTgAKCiw7GbRnhVZ7vF6TFDSmBtGdo1MQCeOTKu
+ACo7oOyNsQ7kdYHNnbsexiM=
+=P+aD
+-----END PGP SIGNATURE-----

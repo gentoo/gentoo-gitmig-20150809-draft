@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-bh-lucidatypewriter-75dpi-1.0.0.tar.bz2 153177
-EBUILD font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 626 RMD160 0457bf0974bf8d76c5cf9e700f2745f65c074331 SHA1 3a65029cf7474f7cbc403a1f6f13f0265e10f3f3 SHA256 f5045a6bf00194a57af6feaffc8accddc2c80362a4ba3aea0cd57e378a04ccde
-MD5 7888686e49ff5510a561b4e003c90784 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 626
-RMD160 0457bf0974bf8d76c5cf9e700f2745f65c074331 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 626
-SHA256 f5045a6bf00194a57af6feaffc8accddc2c80362a4ba3aea0cd57e378a04ccde font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 626
+EBUILD font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 625 RMD160 92a3d1d3056a6bc72f2c8b9b3414cae953a24ea4 SHA1 33498cef163fb665c0744126e40d2d01404ac18e SHA256 2e7469afd25bf0167f564dac70558e73687c8334371416ea985efb8e49115aeb
+MD5 5939bc40b1879b449160b24830c07cd3 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 625
+RMD160 92a3d1d3056a6bc72f2c8b9b3414cae953a24ea4 font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 625
+SHA256 2e7469afd25bf0167f564dac70558e73687c8334371416ea985efb8e49115aeb font-bh-lucidatypewriter-75dpi-1.0.0.ebuild 625
 MISC ChangeLog 2761 RMD160 ded6d5145b38204702c399edb79fb06424059801 SHA1 fbbb4b7e39dec7ae3fbc33f5c7f39474198398b5 SHA256 6538f30a0c806c6c29fc9d5e13a9efc68998a49f1e50c8221c3e14bb2cb35a11
 MD5 057c7ae4d56466a16fe0a0111bc249e4 ChangeLog 2761
 RMD160 ded6d5145b38204702c399edb79fb06424059801 ChangeLog 2761
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 1266b1e8cc9f3cab042a7f80a53e7d8b files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
 RMD160 fe393b668c2d0fea4e08dfb3b93e14083ca91107 files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
 SHA256 d0d560c75b53a4508850322c4e1ac216debc5ba18a306dab7d9ca4b1ff7a41c6 files/digest-font-bh-lucidatypewriter-75dpi-1.0.0 89
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+nZwamhnQswr0vIRApEiAKCtkGjCZrM8YbxgAZ/84GQTWVnXIQCcDEuY
+LO/x+z+HNx1Hwd7oMrd/uAg=
+=aGtH
+-----END PGP SIGNATURE-----

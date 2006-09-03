@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST parmaite12b.zip 66603
 DIST tcurs100.zip 13296
 DIST tengn19d.zip 120028
 DIST tengq19d.zip 185778
 DIST tengs19d.zip 228717
-EBUILD tengwar-fonts-1.9d.ebuild 840 RMD160 9b500b6a5a8f39ad23e66c525df75e363461a044 SHA1 d538a47f6aebe222c1a31ba70ef711e34e377949 SHA256 4044fb069b3e71cdfa70ea7f0005fdcc5a98da41bb56ca6f10e252a121eea7e4
-MD5 8d6bce2021f315ba719da38ecd7b9faf tengwar-fonts-1.9d.ebuild 840
-RMD160 9b500b6a5a8f39ad23e66c525df75e363461a044 tengwar-fonts-1.9d.ebuild 840
-SHA256 4044fb069b3e71cdfa70ea7f0005fdcc5a98da41bb56ca6f10e252a121eea7e4 tengwar-fonts-1.9d.ebuild 840
+EBUILD tengwar-fonts-1.9d.ebuild 850 RMD160 b1d3bab42df0ac5eaac8a38f235385fcad407cea SHA1 b52304261edada81c3667c138a7ad14c75aa6d4a SHA256 d013755b6e2aba6b53e36c7de4773df125302e724e4ef3d2713702ea6495566a
+MD5 903ba545eeae9e962079c37052a901af tengwar-fonts-1.9d.ebuild 850
+RMD160 b1d3bab42df0ac5eaac8a38f235385fcad407cea tengwar-fonts-1.9d.ebuild 850
+SHA256 d013755b6e2aba6b53e36c7de4773df125302e724e4ef3d2713702ea6495566a tengwar-fonts-1.9d.ebuild 850
 MISC ChangeLog 1476 RMD160 fec955861298e7e75d2ab7dc5df7f4c8fa65aa17 SHA1 ad6bb827b53fe7ac76feeddcb6f482662373d181 SHA256 fb78102d54dccdb09d358899aa60f7d2c0403332ba3065caf3f0db7be3db59a6
 MD5 176f14238212e88c362b5b3ef7d56c02 ChangeLog 1476
 RMD160 fec955861298e7e75d2ab7dc5df7f4c8fa65aa17 ChangeLog 1476
@@ -18,3 +21,10 @@ SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8 metadata
 MD5 e9151029b577a1b07f73f808864df63c files/digest-tengwar-fonts-1.9d 286
 RMD160 7f2c71bf10f85dbc6cbace24682073793ea674b8 files/digest-tengwar-fonts-1.9d 286
 SHA256 3dfa2a87299d348c89c6c0a87dfdddca700a2eb8a7bd88ec6320a9d1c39121dd files/digest-tengwar-fonts-1.9d 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+noVamhnQswr0vIRAtceAJ9fbOU8e4MW8rt9EhE+Zumt6NIuvQCfVORO
+zKpi4fjdOzwUuOKMvrQwYiE=
+=ipEu
+-----END PGP SIGNATURE-----

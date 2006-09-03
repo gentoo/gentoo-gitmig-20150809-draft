@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-misc-cyrillic-1.0.0.tar.bz2 65701
-EBUILD font-misc-cyrillic-1.0.0.ebuild 485 RMD160 e0928d14df0fddcfbaf8691c079a91520feed5bf SHA1 5625c111f602cb1be961a1c5d7b9ab6c2673ef99 SHA256 2ba0221e261e94e38faca5a3c2ab5fbdd6e7d91e2d70bde36fd23f81ac0560d0
-MD5 13ffe16816a04325c531c6de28ca8626 font-misc-cyrillic-1.0.0.ebuild 485
-RMD160 e0928d14df0fddcfbaf8691c079a91520feed5bf font-misc-cyrillic-1.0.0.ebuild 485
-SHA256 2ba0221e261e94e38faca5a3c2ab5fbdd6e7d91e2d70bde36fd23f81ac0560d0 font-misc-cyrillic-1.0.0.ebuild 485
+EBUILD font-misc-cyrillic-1.0.0.ebuild 484 RMD160 23bc6cdcc52bef1af5b1dfd57f261f6c0bfeb27b SHA1 8abf5712c59137ca7c088c03dda9d9273790b67b SHA256 046b97e270042bd03c7cb25e241279f95f2f8b1ef9638b0b837da97565387da5
+MD5 711ab00fa4f45c9446545dcf7e9e6b92 font-misc-cyrillic-1.0.0.ebuild 484
+RMD160 23bc6cdcc52bef1af5b1dfd57f261f6c0bfeb27b font-misc-cyrillic-1.0.0.ebuild 484
+SHA256 046b97e270042bd03c7cb25e241279f95f2f8b1ef9638b0b837da97565387da5 font-misc-cyrillic-1.0.0.ebuild 484
 MISC ChangeLog 2328 RMD160 8c934f785276d017570ea012c956e4831c42cf77 SHA1 264a16d28ec726d21bff415a96fca84c6871294a SHA256 03f04c5ac5eb2642f0f2e4950176ee95018b9a18e65f40e5117f40d11142c907
 MD5 9329c3aa32ecb19b004ceaa75c9ab0c6 ChangeLog 2328
 RMD160 8c934f785276d017570ea012c956e4831c42cf77 ChangeLog 2328
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 6b3b260b22420ff8588fd07823efdfe7 files/digest-font-misc-cyrillic-1.0.0 76
 RMD160 5d98518ecf58103c3788eebb108ec4db1f8da77f files/digest-font-misc-cyrillic-1.0.0 76
 SHA256 dfbf98b6d3e80be62d9cab322e22e3c0e3d4e5c732d3bbcd74e60f203282e36d files/digest-font-misc-cyrillic-1.0.0 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+nd9amhnQswr0vIRAntCAJ97JeHZF3CdkAT3LgVqA2qrZ0YSnQCeJ+LG
+q8CNTN7rW7g5b9i55cOcYq0=
+=2aeX
+-----END PGP SIGNATURE-----

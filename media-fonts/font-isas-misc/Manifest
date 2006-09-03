@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST font-isas-misc-1.0.0.tar.bz2 787400
-EBUILD font-isas-misc-1.0.0.ebuild 515 RMD160 6463c901a971024c334d3b4cc0b56ff008165965 SHA1 5dcdd457d9f0708921ea2ddbdb3fe9e6fbfc19d9 SHA256 4accf2f8aaf2163b6f06eff43a439141db92c6ffe08181ae48d4137e1aaed57d
-MD5 98ed4782aa72238a7f394d52fee3e2f5 font-isas-misc-1.0.0.ebuild 515
-RMD160 6463c901a971024c334d3b4cc0b56ff008165965 font-isas-misc-1.0.0.ebuild 515
-SHA256 4accf2f8aaf2163b6f06eff43a439141db92c6ffe08181ae48d4137e1aaed57d font-isas-misc-1.0.0.ebuild 515
+EBUILD font-isas-misc-1.0.0.ebuild 514 RMD160 eebaedaf1e42d2f6bc1af1c45b8dc9b5a1b11f48 SHA1 61676abd09995af158c28d61b9b8225e957cc034 SHA256 f9fef732fa405a60a0ebe9722adc61c602fc9a3d19f90e20de84304e1cb93396
+MD5 b044925328d7fbbb8ca5c134954cc730 font-isas-misc-1.0.0.ebuild 514
+RMD160 eebaedaf1e42d2f6bc1af1c45b8dc9b5a1b11f48 font-isas-misc-1.0.0.ebuild 514
+SHA256 f9fef732fa405a60a0ebe9722adc61c602fc9a3d19f90e20de84304e1cb93396 font-isas-misc-1.0.0.ebuild 514
 MISC ChangeLog 2062 RMD160 3252c127f2dfae57e067804ea2bd6348727bf6f6 SHA1 ba0d121cbd1d5143032e4e7a62f80484d4f4163f SHA256 a882f2734ab467578c8b9eeb0b9fbf80648f12be225b629025213f92776395dd
 MD5 e89d07842095824c8b80c32faee6432b ChangeLog 2062
 RMD160 3252c127f2dfae57e067804ea2bd6348727bf6f6 ChangeLog 2062
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 2476f9b3c2a22759e1503317437ede5d files/digest-font-isas-misc-1.0.0 73
 RMD160 4a3cb79e3a1285d58ecda28b67915c2f642bb6e0 files/digest-font-isas-misc-1.0.0 73
 SHA256 166897bedf3b984663937bb853c88793e0d1c8f44c87a706bc08cceec43ceb0b files/digest-font-isas-misc-1.0.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+ndCamhnQswr0vIRAuPgAJoDgy039z0XaEJTc++xIFcPCDJhFQCeKP9p
+tB0Ipv5uzKP+EvxO9GLhucM=
+=7vy0
+-----END PGP SIGNATURE-----

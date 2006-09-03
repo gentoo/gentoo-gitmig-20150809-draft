@@ -1,15 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7bb7cd6cd2e98be9c77cfd8301d8cd9f ChangeLog 3172
-MD5 bc332f17fe42333cff7f594e2caec7a3 files/digest-lfpfonts-fix-0.83-r2 74
+AUX lfpfonts-fix-0.83-noglyph.patch 523 RMD160 4c2c7d6669f5c93982309dbdc7616ad07befb707 SHA1 51d07e201138695762d71248689cacab98d08b9c SHA256 a2ee182c6ae0d8735b8d86c9a9d59f9a33766ea573313653198c3653a23293b2
 MD5 a5babd77b96d3d2cf4a45882b1726fe1 files/lfpfonts-fix-0.83-noglyph.patch 523
-MD5 cf75cb2f82d6aaa9e63f27aaeaedb271 lfpfonts-fix-0.83-r2.ebuild 870
+RMD160 4c2c7d6669f5c93982309dbdc7616ad07befb707 files/lfpfonts-fix-0.83-noglyph.patch 523
+SHA256 a2ee182c6ae0d8735b8d86c9a9d59f9a33766ea573313653198c3653a23293b2 files/lfpfonts-fix-0.83-noglyph.patch 523
+DIST lfpfonts-fix-src-0.83.tar.bz2 172461
+EBUILD lfpfonts-fix-0.83-r2.ebuild 880 RMD160 3a5382b5bcb371191ea143041fb870b7e003ad80 SHA1 73ea5321410a2b4f76105af2bac03223c1605b5d SHA256 de8383f512a015a0eecc42a6a82630b2906efebbeb8e7b020ee358da09c6236e
+MD5 15e0a66159ecb725281476d2b666c85f lfpfonts-fix-0.83-r2.ebuild 880
+RMD160 3a5382b5bcb371191ea143041fb870b7e003ad80 lfpfonts-fix-0.83-r2.ebuild 880
+SHA256 de8383f512a015a0eecc42a6a82630b2906efebbeb8e7b020ee358da09c6236e lfpfonts-fix-0.83-r2.ebuild 880
+MISC ChangeLog 3172 RMD160 caafdc254731816250f0decdaf70e27aaf748cae SHA1 894871897ebd00f8a7a6baeddb24dd8df583fc7e SHA256 967eaa1c0a6d1b90a68e785b99ee5c71f123488a0d5d0b68181865a671db647d
+MD5 7bb7cd6cd2e98be9c77cfd8301d8cd9f ChangeLog 3172
+RMD160 caafdc254731816250f0decdaf70e27aaf748cae ChangeLog 3172
+SHA256 967eaa1c0a6d1b90a68e785b99ee5c71f123488a0d5d0b68181865a671db647d ChangeLog 3172
+MISC metadata.xml 158 RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca SHA1 8e4ca6d183e52cdbea8cfba08b7a7910e648fc84 SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+RMD160 e563fdca0707ee5927deab77f2e5ef79816384ca metadata.xml 158
+SHA256 9a8722fb0b5a1992b3942e85f23df4e08f10cabc2d783ca887479abe115b3ea8 metadata.xml 158
+MD5 bc332f17fe42333cff7f594e2caec7a3 files/digest-lfpfonts-fix-0.83-r2 74
+RMD160 0cc3e354ea3629273332d083236f76839c12614f files/digest-lfpfonts-fix-0.83-r2 74
+SHA256 96750d8acbdeadde380cd44aca114bdf1b58376424a322777ee3aae8df801630 files/digest-lfpfonts-fix-0.83-r2 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFDxSwJJrHF4yAQTrARAqviAJ97PT0XFOTX1KdwJG/FMgHidI1kLACgs91+
-eGo11oHg9lZWxCUt47nvGCw=
-=ZfCh
+iD8DBQFE+nklamhnQswr0vIRAhxZAJ0UqSHzm+k9R3YSlvN5phKDtpx/OACeJrVj
+KmkzUUZMwwLn3/Wvx2z4RVA=
+=6O+d
 -----END PGP SIGNATURE-----
