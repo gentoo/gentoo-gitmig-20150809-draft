@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.70 2006/07/10 21:48:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.71 2006/09/03 21:48:55 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> swig-1.3.25.ebuild:
+  Marked stable on mips.
 
   10 Jul 2006; Gustavo Zacarias <gustavoz@gentoo.org> swig-1.3.25.ebuild:
   Stable on sparc wrt #139505
