@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.45 2006/06/26 19:47:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.46 2006/09/03 16:48:02 nelchael Exp $
+
+*scite-1.71 (03 Sep 2006)
+
+  03 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml,
+  -scite-1.66.ebuild, -scite-1.67.ebuild, -scite-1.68.ebuild,
+  -scite-1.69.ebuild, +scite-1.71.ebuild:
+  Version bump, see bug #145494.
 
 *scite-1.70 (26 Jun 2006)
 *scite-1.69 (26 Jun 2006)
