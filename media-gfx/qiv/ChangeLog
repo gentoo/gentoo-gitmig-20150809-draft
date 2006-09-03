@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/qiv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.19 2006/08/31 11:27:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.20 2006/09/03 09:00:54 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> qiv-1.9.ebuild,
+  qiv-2.0.ebuild:
+  Add dropped ~alpha keyword to 2.0 and drop stable keyword from 1.9 (!modular
+  X).
 
   31 Aug 2006; <blubb@gentoo.org> qiv-2.0.ebuild:
   stable on amd64
