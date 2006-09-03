@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.21-r2.ebuild,v 1.1 2006/07/21 13:55:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.21-r2.ebuild,v 1.2 2006/09/03 15:22:03 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -24,9 +24,9 @@ DEPEND=">=virtual/jdk-1.4
 src_compile() {
 	local antflags="dist $(use_doc)"
 	if ! use sparc; then
-		eant -lib $(java-pkg_getjars gnu-crypto,jzlib) ${antflags}
+		eant -Dproject.cp="$(java-pkg_getjars gnu-crypto,jzlib)" ${antflags}
 	else
-		eant -lib $(java-pkg_getjars jzlib) ${antflags}
+		eant -Dproject.cp="$(java-pkg_getjars jzlib)" ${antflags}
 	fi
 }
 

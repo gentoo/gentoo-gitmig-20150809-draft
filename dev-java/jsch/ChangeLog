@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jsch
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.31 2006/07/21 13:55:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.32 2006/09/03 15:22:03 betelgeuse Exp $
+
+  03 Sep 2006; Petteri Räty <betelgeuse@gentoo.org> jsch-0.1.21-r2.ebuild:
+  Fixed to compile with java-strict. Thanks to Caster <caster@matfyz.cz> for
+  the fix. Fixes bug #146065.
 
 *jsch-0.1.21-r2 (21 Jul 2006)
 
