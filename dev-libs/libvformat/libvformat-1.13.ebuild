@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/libvformat-1.13.ebuild,v 1.2 2006/06/02 17:34:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/libvformat-1.13.ebuild,v 1.3 2006/09/03 09:15:12 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/libv/${PN}/${PN}_${PV}.orig.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 S="${WORKDIR}/${P}.orig"
