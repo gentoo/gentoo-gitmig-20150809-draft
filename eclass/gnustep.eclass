@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.34 2006/06/25 14:46:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.35 2006/09/03 18:08:45 grobian Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -11,9 +11,8 @@ DESCRIPTION="EClass designed to facilitate building GNUstep Apps, Frameworks, an
 # ##### All GNUstep applications / libs get these
 # "debug"	- enable code for debugging; also nostrip
 # "profile"	- enable code for profiling; also nostrip
-# "verbose" - enable "normal / noisy" compiling from eclass
 # "doc" - build and install documentation, if available
-IUSE="debug profile verbose doc"
+IUSE="debug profile doc"
 if use debug || use profile; then
 	RESTRICT="nostrip"
 fi

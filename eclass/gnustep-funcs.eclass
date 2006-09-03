@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.11 2006/03/25 16:19:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-funcs.eclass,v 1.12 2006/09/03 18:08:45 grobian Exp $
 
 inherit toolchain-funcs eutils
 
 ###########################################################################
-# IUSE="debug profile verbose"
+# IUSE="debug profile"
 # - These USE variables are utilized here, but set in gnustep.eclass IUSE.
 # - Packages that inherit this gnustep-funcs.eclass file to gain information
 #    and access as to how GNUstep is deployed on the system can safely do so.
@@ -160,15 +160,12 @@ egnustep_user_root_suffix() {
 # Make utilizing GNUstep Makefiles
 egnustep_make() {
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		local gs_make_opts="${1}"
+		local gs_make_opts="${1} messages=yes"
 		if use debug ; then
 			gs_make_opts="${gs_make_opts} debug=yes"
 		fi
 		if use profile; then
 			gs_make_opts="${gs_make_opts} profile=yes"
-		fi
-		if use verbose; then
-			gs_make_opts="${gs_make_opts} messages=yes"
 		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} all || die "package make failed"
 	else
@@ -198,15 +195,12 @@ egnustep_package_config_info() {
 # Make-install utilizing GNUstep Makefiles
 egnustep_install() {
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		local gs_make_opts="${1}"
+		local gs_make_opts="${1} messages=yes"
 		if use debug ; then
 			gs_make_opts="${gs_make_opts} debug=yes"
 		fi
 		if use profile; then
 			gs_make_opts="${gs_make_opts} profile=yes"
-		fi
-		if use verbose; then
-			gs_make_opts="${gs_make_opts} messages=yes"
 		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} install || die "package install failed"
 	else
@@ -221,15 +215,12 @@ egnustep_install() {
 egnustep_doc() {
 	cd ${S}/Documentation
 	if [ -f ./[mM]akefile -o -f ./GNUmakefile ] ; then
-		local gs_make_opts="${1}"
+		local gs_make_opts="${1} messages=yes"
 		if use debug ; then
 			gs_make_opts="${gs_make_opts} debug=yes"
 		fi
 		if use profile; then
 			gs_make_opts="${gs_make_opts} profile=yes"
-		fi
-		if use verbose; then
-			gs_make_opts="${gs_make_opts} messages=yes"
 		fi
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} all || die "doc make failed"
 		eval emake ${__GS_MAKE_EVAL} ${gs_make_opts} install || die "doc install failed"
