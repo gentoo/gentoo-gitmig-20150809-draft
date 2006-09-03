@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-nsf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/ChangeLog,v 1.16 2006/08/19 00:05:02 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/ChangeLog,v 1.17 2006/09/03 23:03:36 tsunam Exp $
+
+  03 Sep 2006; Joshua Jackson <tsunam@gentoo.org> xmms-nsf-0.0.3-r2.ebuild:
+  stable x86; bug #144279
 
   19 Aug 2006; Thomas Cort <tcort@gentoo.org> xmms-nsf-0.0.3-r2.ebuild:
   Stable on amd64 wrt Bug #144279.
