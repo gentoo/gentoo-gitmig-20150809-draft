@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5813 2006/09/03 00:19:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5814 2006/09/03 01:56:40 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -277,11 +277,6 @@ media-gfx/xzgv
 =net-mail/cyrus-imapd-2.2.12-r5
 
 # Alec Warner <antarus@gentoo.org> (03 Aug 2006)
-# media-libs/openvrml masked for treecleaners for bug(s) 137775
-# Removal in 30 days
-media-libs/openvrml
-
-# Alec Warner <antarus@gentoo.org> (03 Aug 2006)
 # sys-fs/dmraid masked for bug(s) 139860,103912, 
 # 134050, 138823 Waiting on new maintainer.
 sys-fs/dmraid
@@ -292,34 +287,9 @@ sys-fs/dmraid
 dev-tex/cweb_latex
 
 # Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# www-client/skipstone masked for Treecleaners for bug(s) 138287
-# Removal in 30 days
-www-client/skipstone
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# app-admin/runset masked for Treecleaners for bug(s) 142454 
-# Removal in 30 days
-app-admin/runset 
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
 # media-gfx/pornview masked for Treecleaners for bug(s) 141588 93500 120376
 # Removal in 30 days
 media-gfx/pornview
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# net-libs/libical-moz masked for Treecleaners for bug(s) 123016 33171
-# Removal in 30 days
-net-libs/libical-moz
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# net-misc/bk2site masked for Treecleaners for bug(s) 67352 
-# Removal in 30 days
-net-misc/bk2site
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# x11-plugins/gkrellm-alltraxclock masked for Treecleaners for bug(s) 62373
-# Removal in 30 days
-x11-plugins/gkrellm-alltraxclock
 
 # Daniel Black <dragonheart@gentoo.org> (01 Aug 2006)
 # API bumps - needs extensive testing against all dependent apps
@@ -1375,10 +1345,6 @@ dev-db/pgcluster
 # Matthew Kennedy <mkennedy@gentoo.org> (10 Feb 2005)
 # Masked while waiting on apache module refresh
 dev-lisp/tbnl
-
-# Tavis Ormandy <taviso@gentoo.org> (09 Feb 2005)
-# Masked pending security audit.
-www-client/prozilla
 
 # Aron Griffis <agriffis@gentoo.org> (07 Feb 2005)
 # Mask offlineimap testing versions
