@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/dirvish
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.4 2005/11/20 03:20:27 ramereth Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.5 2006/09/03 01:15:28 weeve Exp $
+
+  03 Sep 2006; Jason Wever <weeve@gentoo.org> dirvish-1.2.1.ebuild:
+  Added ~sparc keyword wrt bug #145721.
 
   20 Nov 2005; Lance Albertson <ramereth@gentoo.org> dirvish-1.2.ebuild,
   dirvish-1.2.1.ebuild:
