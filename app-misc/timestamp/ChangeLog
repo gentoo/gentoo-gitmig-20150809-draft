@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/timestamp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/timestamp/ChangeLog,v 1.4 2005/09/13 21:12:38 dang Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/timestamp/ChangeLog,v 1.5 2006/09/03 19:56:25 blubb Exp $
+
+  03 Sep 2006; <blubb@gentoo.org> timestamp-1.1.ebuild:
+  stable on amd64
 
   13 Sep 2005; <dang@gentoo.org> timestamp-1.1.ebuild:
   Marked ~amd64

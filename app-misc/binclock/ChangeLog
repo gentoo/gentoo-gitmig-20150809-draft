@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/binclock
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/ChangeLog,v 1.16 2005/09/09 16:48:59 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/binclock/ChangeLog,v 1.17 2006/09/03 19:52:18 blubb Exp $
+
+  03 Sep 2006; <blubb@gentoo.org> binclock-1.5.ebuild:
+  stable on amd64
 
   09 Sep 2005; Aron Griffis <agriffis@gentoo.org> binclock-1.5.ebuild:
   Mark 1.5 stable on alpha
