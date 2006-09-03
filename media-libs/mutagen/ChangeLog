@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.26 2006/08/18 20:53:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.27 2006/09/03 17:03:20 tcort Exp $
+
+  03 Sep 2006; Thomas Cort <tcort@gentoo.org> -mutagen-1.5.ebuild:
+  Remove 1.5 since 1.5.1 is now stable.
 
   18 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   mutagen-1.5.1.ebuild:
