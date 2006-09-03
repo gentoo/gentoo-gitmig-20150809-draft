@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.17 2006/08/19 23:03:33 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.18 2006/09/03 20:21:13 wolf31o2 Exp $
+
+  03 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> pan-0.14.2.ebuild:
+  Added eutils to inherit for bug #139655.
 
 *pan-0.109 (19 Aug 2006)
 
