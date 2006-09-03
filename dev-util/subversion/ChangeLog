@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.229 2006/07/30 19:28:32 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.230 2006/09/03 23:13:38 kumba Exp $
+
+  03 Sep 2006; Joshua Kinard <kumba@gentoo.org> subversion-1.3.2-r3.ebuild:
+  Marked stable on mips.
 
   30 Jul 2006; Daniel Gryniewicz <dang@gentoo.org>
   subversion-1.3.2-r1.ebuild:
