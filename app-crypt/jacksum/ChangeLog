@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.19 2006/08/05 21:45:10 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.20 2006/09/03 12:14:06 betelgeuse Exp $
+
+*jacksum-1.7.0 (03 Sep 2006)
+
+  03 Sep 2006; Petteri Räty <betelgeuse@gentoo.org> +jacksum-1.7.0.ebuild:
+  Version bump. Fixes bugs #143948 and #143872.
 
   05 Aug 2006; Joshua Nichols <nichoj@gentoo.org> jacksum-1.6.0-r1.ebuild:
   Removed deprecated jike USE flag and dependency
