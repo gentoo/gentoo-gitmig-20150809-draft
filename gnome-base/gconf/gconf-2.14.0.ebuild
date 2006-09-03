@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.14.0.ebuild,v 1.9 2006/08/16 15:35:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.14.0.ebuild,v 1.10 2006/09/03 05:54:50 vapier Exp $
 
 inherit gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.10
