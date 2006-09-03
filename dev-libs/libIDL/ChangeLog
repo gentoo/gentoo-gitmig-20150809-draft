@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.55 2006/08/09 22:57:17 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.56 2006/09/03 22:34:31 kumba Exp $
+
+  03 Sep 2006; Joshua Kinard <kumba@gentoo.org> libIDL-0.8.6.ebuild:
+  Marked stable on mips.
 
 *libIDL-0.8.7 (09 Aug 2006)
 
