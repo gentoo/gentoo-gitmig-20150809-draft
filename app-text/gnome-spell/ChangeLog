@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.76 2006/07/12 22:32:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.77 2006/09/03 21:53:21 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> gnome-spell-1.0.5-r2.ebuild,
+  gnome-spell-1.0.6.ebuild, gnome-spell-1.0.7.ebuild,
+  gnome-spell-1.0.7-r1.ebuild:
+  Removing mips keywords as gnome is no longer supported for us.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   gnome-spell-1.0.7-r1.ebuild:

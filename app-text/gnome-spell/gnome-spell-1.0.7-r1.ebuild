@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.8 2006/07/12 22:32:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.7-r1.ebuild,v 1.9 2006/09/03 21:53:21 kumba Exp $
 
 inherit libtool eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="static"
 
 RDEPEND=">=gnome-base/libgnome-1.112.1
