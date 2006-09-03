@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-libs/pdfkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/ChangeLog,v 1.9 2006/01/28 18:10:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pdfkit/ChangeLog,v 1.10 2006/09/03 20:25:17 grobian Exp $
+
+*pdfkit-0.9_pre062906 (03 Sep 2006)
+
+  03 Sep 2006; Fabian Groffen <grobian@gentoo.org> -pdfkit-0.8-r3.ebuild,
+  +pdfkit-0.9_pre062906.ebuild:
+  Version bump and removal of old version (bug #143073)
 
   28 Jan 2006; Simon Stelling <blubb@gentoo.org>
   +files/xpdf-3.00-CESA-2004-007.diff,
