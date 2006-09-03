@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.39 2006/07/23 00:39:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.40 2006/09/03 22:12:31 wltjr Exp $
+
+*servletapi-2.4-r4 (03 Sep 2006)
+
+  03 Sep 2006; <wlt@gentoo.org> +servletapi-2.4-r4.ebuild:
+  Updated to latest Tomcat sources 5.5.17. Stopped using patch temporarily.
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   servletapi-2.3-r3.ebuild, servletapi-2.4-r3.ebuild:
