@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.55 2006/07/25 07:05:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.56 2006/09/03 12:25:48 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> konqueror-3.5.2.ebuild:
+  Stable on ia64.
 
 *konqueror-3.5.4 (25 Jul 2006)
 
