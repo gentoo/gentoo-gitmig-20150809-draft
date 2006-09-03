@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.3.1.ebuild,v 1.5 2006/02/16 16:39:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.3.1.ebuild,v 1.6 2006/09/03 15:53:07 nelchael Exp $
 
-inherit qt3
+inherit qt3 eutils
 
 DESCRIPTION="An interactive generative art application"
 HOMEPAGE="http://www.bottlenose.demon.co.uk/share/evolvotron/index.htm"
@@ -24,6 +24,7 @@ src_unpack() {
 		-e "/^QMAKE_CXXFLAGS_RELEASE += -O3/ s:=.*:= ${CXXFLAGS}:" \
 		-e '/^INSTALLPATH/ s:=.*:= /usr/bin:' ${S}/common.pro \
 		|| die "sed common.pro failed"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_compile() {
