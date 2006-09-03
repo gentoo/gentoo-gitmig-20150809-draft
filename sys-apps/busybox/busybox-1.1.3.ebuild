@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.3.ebuild,v 1.18 2006/09/03 09:01:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.3.ebuild,v 1.19 2006/09/03 17:51:23 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -126,7 +126,7 @@ src_compile() {
 	busybox_set_env
 	use ppc64 && append-flags -mminimal-toc $(test-flags-CC -fno-stack-protector)
 	use ppc && append-flags $(test-flags-CC -fno-stack-protector)
-	emake CROSS="${CROSS}" busybox || die "build failed"
+	emake -j1 CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox_unstripped{,.bak}
 		local failed=0
