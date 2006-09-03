@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.7 2006/07/28 03:49:08 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.44.ebuild,v 1.8 2006/09/03 14:44:18 mattepiu Exp $
 
 inherit eutils perl-module
 
 DESCRIPTION="Set of utilities to manage TV listings stored in the XMLTV format."
 HOMEPAGE="http://membled.com/work/apps/xmltv/"
 SRC_URI="mirror://sourceforge/xmltv//${P}.tar.bz2"
-IUSE=""
+IUSE="be br brnet uk_rt uk_bleb is it na_dd na_icons fi es es_laguiatv ee il re nl nl_wolf huro dk jp de_tvtoday se_swedb fr no pt za tv_pick_cgi tv_check"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
@@ -26,8 +26,6 @@ PREFIX="/usr"
 #
 # enable graphical front-end, Italy grabber
 #  in /etc/portage/package.use : media-tv/xmltv tv_check it
-
-IUSE="be br brnet uk_rt uk_bleb is it na_dd na_icons fi es es_laguiatv ee il re nl nl_wolf huro dk jp de_tvtoday se_swedb fr no pt za tv_pick_cgi tv_check"
 
 RDEPEND=">=dev-perl/libwww-perl-5.65
 	>=dev-perl/XML-Parser-2.34
@@ -60,7 +58,7 @@ DEPEND="${RDEPEND}
 	nl_wolf? ( dev-perl/HTML-Tree )
 	no? ( >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-TableExtract dev-perl/HTML-LinkExtractor )
 	pt? ( dev-perl/HTML-Tree dev-perl/Unicode-UTF8simple )
-	se_swedb? ( dev-perl/HTTP-Cache-Transparent )
+	se_swedb? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy dev-perl/XML-LibXML )
 	uk_bleb? ( dev-perl/Archive-Zip dev-perl/IO-stringy )
 	tv_check? ( dev-perl/perl-tk dev-perl/Tk-TableMatrix )
 	tv_pick_cgi? ( perl-core/CGI )
@@ -144,13 +142,14 @@ src_unpack() {
 
 src_compile() {
 	sed -i "s:\$VERSION = '${PV}':\$VERSION = '${PVR}':" Makefile.PL || die
-	make_config | perl-module_src_compile || die "error compiling"
+	pm_echovar=`make_config`
+	perl-module_src_compile || die "error compiling"
 }
 
 src_install() {
 	# actually make test should be unneede, but if non na grabbers
 	# start to not install remove comment below
-	# make test
+	#make test
 	#make
 	#make DESTDIR=${D} install
 	perl-module_src_install || die "error installing"

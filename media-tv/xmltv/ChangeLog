@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.60 2006/07/28 03:49:08 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.61 2006/09/03 14:44:18 mattepiu Exp $
+
+  03 Sep 2006; Matteo Azzali <mattepiu@gentoo.org> xmltv-0.5.44.ebuild:
+  Added se_swedb dependancies and support for pm_echovar as per bug
+  #146020,thanks to Jonas Jonsson
 
   28 Jul 2006; Joshua Jackson <tsunam@gentoo.org> xmltv-0.5.44.ebuild:
   Stable x86;bug #140447
