@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.3 2006/09/03 19:48:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.4 2006/09/03 20:49:22 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -42,7 +42,10 @@ IUSE_LIRC_DEVICES_DIRECT="
 	tekram_bt829 tira tvbox udp uirt2
 	uirt2_raw"
 
-IUSE_LIRC_DEVICES_SPECIAL="imon_pad2keys serial_igor_cesko xboxusb usbirboy"
+IUSE_LIRC_DEVICES_SPECIAL="
+	imon_pad2keys serial_igor_cesko
+	xboxusb usbirboy inputlirc"
+
 IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 
 
@@ -76,7 +79,8 @@ DEPEND="${RDEPEND}
 
 # adding only run-time depends
 RDEPEND="${RDEPEND}
-	lirc_devices_usbirboy? ( app-misc/usbirboy )"
+	lirc_devices_usbirboy? ( app-misc/usbirboy )
+	lirc_devices_inputlirc? ( app-misc/inputlircd )"
 
 
 
