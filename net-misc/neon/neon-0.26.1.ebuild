@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.12 2006/08/14 18:13:23 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.13 2006/09/03 23:10:32 kumba Exp $
 
 inherit eutils libtool versionator
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.webdav.org/neon/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="expat gnutls nls socks5 ssl static zlib"
 
 DEPEND="expat? ( dev-libs/expat )
