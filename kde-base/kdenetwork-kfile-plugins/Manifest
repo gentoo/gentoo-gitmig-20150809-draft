@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kdenetwork-3.4.0-3.4.1.tar.xdelta 827657
 DIST kdenetwork-3.4.0.tar.bz2 7327047
 DIST kdenetwork-3.4.1-3.4.2.tar.xdelta 342828
@@ -12,10 +9,10 @@ EBUILD kdenetwork-kfile-plugins-3.4.2.ebuild 524 RMD160 8b13ee4496dbf9a8545fe090
 MD5 21ccb47eb1088d7eba69842e9bb1619a kdenetwork-kfile-plugins-3.4.2.ebuild 524
 RMD160 8b13ee4496dbf9a8545fe090be2767ca6d6c0aca kdenetwork-kfile-plugins-3.4.2.ebuild 524
 SHA256 e735847fe00ab1cb82b7d0ca122bc99c7b2b1965406ee2ea6fbdc962cad10f6c kdenetwork-kfile-plugins-3.4.2.ebuild 524
-EBUILD kdenetwork-kfile-plugins-3.5.2.ebuild 530 RMD160 c9307a409f4db55391dd24a61470f82415d43327 SHA1 b7c95b30b7dd897578320b1a5b4c61e211662961 SHA256 eb1a58d11ecdedcc4a1187c141f9fbfd835fd1c70236d21d341f6cdce83b7a94
-MD5 28122c25d9e148ae80e9c936c66beca3 kdenetwork-kfile-plugins-3.5.2.ebuild 530
-RMD160 c9307a409f4db55391dd24a61470f82415d43327 kdenetwork-kfile-plugins-3.5.2.ebuild 530
-SHA256 eb1a58d11ecdedcc4a1187c141f9fbfd835fd1c70236d21d341f6cdce83b7a94 kdenetwork-kfile-plugins-3.5.2.ebuild 530
+EBUILD kdenetwork-kfile-plugins-3.5.2.ebuild 530 RMD160 77e7818c761d11c88d5f4b05c52e783429f9efed SHA1 5ee7582bc8e87ab7a2fe7341c995dfe3445afd40 SHA256 4f1bc1f29b14e77c5c8f0b55ceb2263cf16c324d6d42c8e85c057439ed325a39
+MD5 0ff90a288b097cc1d5aed5f275174023 kdenetwork-kfile-plugins-3.5.2.ebuild 530
+RMD160 77e7818c761d11c88d5f4b05c52e783429f9efed kdenetwork-kfile-plugins-3.5.2.ebuild 530
+SHA256 4f1bc1f29b14e77c5c8f0b55ceb2263cf16c324d6d42c8e85c057439ed325a39 kdenetwork-kfile-plugins-3.5.2.ebuild 530
 EBUILD kdenetwork-kfile-plugins-3.5.3.ebuild 539 RMD160 a1dd59df342c6afbea9021ea7236b08be514571d SHA1 f4bc7d0f7428840c1d855a2723f51c70cb11ddf8 SHA256 bf7b9a07888d2a74c10eeb31f9d5d93f2c61ba1e43c2a274ba80eb702d599636
 MD5 a5fcf6818600721a395c176b1b9f224c kdenetwork-kfile-plugins-3.5.3.ebuild 539
 RMD160 a1dd59df342c6afbea9021ea7236b08be514571d kdenetwork-kfile-plugins-3.5.3.ebuild 539
@@ -24,10 +21,10 @@ EBUILD kdenetwork-kfile-plugins-3.5.4.ebuild 539 RMD160 8e8eef2e049ffacc6debd14a
 MD5 efa1a72f3e9814155d805d76b759db2d kdenetwork-kfile-plugins-3.5.4.ebuild 539
 RMD160 8e8eef2e049ffacc6debd14a499beac01481f6ab kdenetwork-kfile-plugins-3.5.4.ebuild 539
 SHA256 ebf7ff5c87f5eb1c7a7b854091b4686a66ce425beb944838154e0180a7ea900d kdenetwork-kfile-plugins-3.5.4.ebuild 539
-MISC ChangeLog 7144 RMD160 1bbdf6d52a15f9818a01eb022cfc4cb70bb54a6e SHA1 8ef2248f5cf078f81e58b72731855f4303cf1c2c SHA256 3f5399b1c80e4600d0e9db6bdc055c093ba1c2360130267cd9aca17cbfbbda6a
-MD5 cb001a829317e297b02c7212ef1bc276 ChangeLog 7144
-RMD160 1bbdf6d52a15f9818a01eb022cfc4cb70bb54a6e ChangeLog 7144
-SHA256 3f5399b1c80e4600d0e9db6bdc055c093ba1c2360130267cd9aca17cbfbbda6a ChangeLog 7144
+MISC ChangeLog 7254 RMD160 ae72abb597467251e50031e3d19060085e4eb56b SHA1 84831bc74d8afc3c6e9cbd9ede6ffa399df0f21f SHA256 875a46667e262c7ca70a62c7c68b843c62d70fda56f6a673c56a1256e694e84d
+MD5 648a48c40bdb40d648038e6fe834458c ChangeLog 7254
+RMD160 ae72abb597467251e50031e3d19060085e4eb56b ChangeLog 7254
+SHA256 875a46667e262c7ca70a62c7c68b843c62d70fda56f6a673c56a1256e694e84d ChangeLog 7254
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -44,10 +41,3 @@ SHA256 d60a7111a4960cd7c963507edabf8eeaf0381da128f37b23c85ce666b95c8ee1 files/di
 MD5 66114c6f8e470f6b63c1f0937cf6d7c2 files/digest-kdenetwork-kfile-plugins-3.5.4 256
 RMD160 812f5ae0d4dc0a4e4f77fa5009c8053dabda621d files/digest-kdenetwork-kfile-plugins-3.5.4 256
 SHA256 4df2c9071df683779aae6b2cc352d03d6e6bcc041e1b1dbef25ea6005555e335 files/digest-kdenetwork-kfile-plugins-3.5.4 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFExaL3AiZjviIA2XgRAr2pAKC8jdvFVUPcSenaxTgQn2OIXIgFaACfW4hD
-QJQSceruKo0bUz58w7DVJ3I=
-=3aeb
------END PGP SIGNATURE-----
