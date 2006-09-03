@@ -1,6 +1,6 @@
 # ChangeLog for app-misc/inputlircd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.4 2006/09/02 20:35:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.5 2006/09/03 00:36:54 genstef Exp $
 
   02 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   inputlircd-0.0.1_pre11.ebuild:
@@ -14,5 +14,5 @@
 
   27 Jul 2006; Stefan Schweizer <genstef@gentoo.org> +files/inputlircd.conf,
   +files/inputlircd.init, +metadata.xml, +inputlircd-0.0.1_pre11.ebuild:
-  New ebuild thanks to F. Steinel <fsteinel@flonet.net> in bug 131788
+  New ebuild, bug 131788
 
