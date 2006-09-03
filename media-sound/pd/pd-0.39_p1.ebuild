@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.39_p1.ebuild,v 1.3 2006/09/03 21:51:22 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.39_p1.ebuild,v 1.4 2006/09/03 22:03:29 tsunam Exp $
 
 IUSE="alsa debug jack"
 
@@ -22,6 +22,15 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${WORKDIR}/${MY_P}/extra"
+	for dir in bonk~ choice expr~ fiddle~ loop~ lrshift~ pique ; do
+		sed -i -e "/strip.*/d" ${dir}/makefile || die "sed failed for removing
+		prestrip files from extra/${dir}/makefile"
+	done
+}
 
 src_compile() {
 	local myconf
