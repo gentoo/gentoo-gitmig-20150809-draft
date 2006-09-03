@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.61 2006/09/02 19:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.62 2006/09/03 21:14:15 tcort Exp $
+
+  03 Sep 2006; Thomas Cort <tcort@gentoo.org> -musicbrainz-2.1.1.ebuild,
+  -musicbrainz-2.1.1-r1.ebuild, musicbrainz-2.1.2.ebuild:
+  Stable on alpha wrt Bug #141755. Clean up old ebuilds.
 
   02 Sep 2006; Jeroen Roovers <jer@gentoo.org> musicbrainz-2.1.2.ebuild:
   Stable for HPPA (bug #141755).
