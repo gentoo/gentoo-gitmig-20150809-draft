@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.60 2006/09/02 18:45:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.61 2006/09/03 13:19:52 jer Exp $
+
+  03 Sep 2006; Jeroen Roovers <jer@gentoo.org> opera-9.01-r1.ebuild:
+  Let's not mess with amd64.
 
   02 Sep 2006; Jeroen Roovers <jer@gentoo.org> opera-9.01-r1.ebuild:
   einfo to elog (bug #145953).
