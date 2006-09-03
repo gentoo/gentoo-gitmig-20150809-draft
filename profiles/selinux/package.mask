@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.12 2006/08/26 20:28:36 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.13 2006/09/03 08:49:51 vapier Exp $
+
+# Mike Frysinger <vapier@gentoo.org> (3 Sep 2006)
+# Masked until selinux is updated #144509
+=sys-apps/coreutils-6.1
 
 # Chris PeBenito <pebenito@gentoo.org> (1 Sep 2005)
 # Masked until net scripts are fixed
