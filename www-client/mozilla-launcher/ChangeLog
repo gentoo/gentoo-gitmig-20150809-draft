@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.43 2006/09/03 12:20:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.44 2006/09/03 16:19:44 jer Exp $
+
+  03 Sep 2006; Jeroen Roovers <jer@gentoo.org>
+  mozilla-launcher-1.52-r1.ebuild:
+  Marked ~hppa (bug #146108).
 
   03 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   mozilla-launcher-1.52-r1.ebuild:
