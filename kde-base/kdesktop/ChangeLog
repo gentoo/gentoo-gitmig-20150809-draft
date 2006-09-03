@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesktop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.58 2006/07/25 11:29:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesktop/ChangeLog,v 1.59 2006/09/03 14:17:18 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kdesktop-3.5.2.ebuild:
+  Stable on ia64.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kdesktop-3.5.4.ebuild:
   Drop unneeded patch (and fix quoting).

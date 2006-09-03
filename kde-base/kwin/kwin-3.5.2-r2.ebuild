@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.2-r2.ebuild,v 1.11 2006/06/01 07:50:36 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-3.5.2-r2.ebuild,v 1.12 2006/09/03 14:04:43 kloeri Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE window manager"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="xcomposite"
 RDEPEND="xcomposite? ( || ( (
 			x11-libs/libXcomposite
