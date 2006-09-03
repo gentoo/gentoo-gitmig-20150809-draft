@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>no-herd</herd>
-<longdescription>
-Rol is a simple application for reading RSS or RDF feeds such as those produced by many news sites or weblogs. 
-It is not intended to do anything more than display the headlines and allow you to choose which to read in your web browser.
-</longdescription>
-</pkgmetadata>
