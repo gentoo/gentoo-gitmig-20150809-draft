@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.7 2006/08/09 18:18:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.8 2006/09/03 09:01:34 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -63,7 +63,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug static savedconfig netboot floppyboot make-symlinks"
+IUSE="debug static savedconfig netboot make-symlinks"
 RESTRICT="test"
 
 DEPEND=""
@@ -131,8 +131,6 @@ src_unpack() {
 			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
 			networking/udhcp/libbb_udhcp.h \
 			|| die "fixing netboot/udhcpc"
-	elif use floppyboot ; then
-		cp "${FILESDIR}"/config-floppyboot .config
 	fi
 
 	# setup the config file
@@ -169,8 +167,11 @@ src_unpack() {
 
 src_compile() {
 	busybox_set_env
+
+	# work around broken ass powerpc compilers
 	use ppc64 && append-flags -mminimal-toc $(test-flags-CC -fno-stack-protector)
 	use ppc && append-flags $(test-flags-CC -fno-stack-protector)
+
 	emake CROSS="${CROSS}" busybox || die "build failed"
 	if ! use static ; then
 		mv busybox_unstripped{,.bak}
@@ -203,27 +204,12 @@ src_install() {
 		&& dosym busybox /bin/bb \
 		|| dobin bb
 
-	if use make-symlinks ; then
-		if [[ ! ${VERY_BRAVE_OR_VERY_DUMB} == "yes" ]] && [[ ${ROOT} == "/" ]] ; then
-			ewarn "setting USE=make-symlinks and emerging to / is very dangerous."
-			ewarn "it WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
-			ewarn "If you are creating a binary only and not merging this is probably ok."
-			ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is realy what you want."
-			die "silly options will destroy your system"
-		fi
-		make CROSS="${CROSS}" install || die
-		cp -pPR _install/${x}/* "${D}"/ || die "copying links for ${x} failed"
-		cd "${D}"
-		# XXX: should really move this to pkg_preinst() ...
-		local symlink
-		for symlink in {,usr/}{bin,sbin}/* linuxrc ; do
-			[[ -L ${symlink} ]] || continue
-			[[ -e ${ROOT}/${symlink} ]] \
-				&& eerror "Deleting symlink ${symlink} because it exists in ${ROOT}" \
-				&& rm ${symlink}
-		done
-		cd "${S}"
-	fi
+	# bundle up the symlink files for use later
+	make CROSS="${CROSS}" install || die
+	rm _install/bin/busybox
+	tar cf busybox-links.tar -C _install . || die
+	insinto /usr/share/${PN}
+	doins busybox-links.tar || die
 
 	dodoc AUTHORS README TODO
 
@@ -234,9 +220,6 @@ src_install() {
 	dodoc *.pod
 	dohtml *.html *.sgml
 
-	# no man files?
-	# cd ../man && doman *.1
-
 	cd ../examples || die
 	docinto examples
 	dodoc inittab depmod.pl *.conf *.script undeb unrpm
@@ -244,23 +227,28 @@ src_install() {
 	cd bootfloppy || die
 	docinto bootfloppy
 	dodoc * etc/* etc/init.d/* 2>/dev/null
+}
 
-	cd ../../ || die
-	if has buildpkg ${FEATURES} && has keepwork ${FEATURES} ; then
-		cd "${S}"
-		# this should install to the ./_install/ dir by default.
-		# we make a micro pkg of busybox that can be used for
-		# embedded systems -solar
-		if ! use make-symlinks ; then
-			make CROSS="${CROSS}" install || die
-		fi
-		cd ./_install/ \
-			&& tar --no-same-owner -jcvf ${WORKDIR}/${MY_P}-${ARCH}.bz2 . \
-			&& cd ..
+pkg_preinst() {
+	if use make-symlinks && [[ ! ${VERY_BRAVE_OR_VERY_DUMB} == "yes" ]] && [[ ${ROOT} == "/" ]] ; then
+		ewarn "setting USE=make-symlinks and emerging to / is very dangerous."
+		ewarn "it WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
+		ewarn "If you are creating a binary only and not merging this is probably ok."
+		ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is realy what you want."
+		die "silly options will destroy your system"
 	fi
+
+	mv "${D}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
 }
 
 pkg_postinst() {
+	if use make-symlinks ; then
+		cd "${T}" || die
+		mkdir _install
+		tar xf busybox-links.tar -C _install || die
+		cp -vpPR _install/* "${ROOT}"/ || die "copying links for ${x} failed"
+	fi
+
 	if use savedconfig ; then
 		local config_dir="${PORTAGE_CONFIGROOT:-${ROOT}}/etc/portage/savedconfig"
 		einfo "Saving this build config to ${config_dir}/${PF}.config"
@@ -275,6 +263,3 @@ pkg_postinst() {
 	einfo "if you want to add or remove functionality for ${PN}"
 	echo
 }
-
-
-

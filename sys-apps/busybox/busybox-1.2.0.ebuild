@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.0.ebuild,v 1.9 2006/08/09 02:11:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.0.ebuild,v 1.10 2006/09/03 09:01:34 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug static savedconfig netboot floppyboot make-symlinks"
+IUSE="debug static savedconfig netboot make-symlinks"
 RESTRICT="test"
 
 DEPEND=""
@@ -88,8 +88,6 @@ src_unpack() {
 			-e '/DEFAULT_SCRIPT/s:/share/udhcpc/default.script:/lib/udhcpc.script:' \
 			networking/udhcp/libbb_udhcp.h \
 			|| die "fixing netboot/udhcpc"
-	elif use floppyboot ; then
-		cp "${FILESDIR}"/config-floppyboot .config
 	fi
 
 	# setup the config file
