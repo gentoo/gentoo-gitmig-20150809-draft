@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.50 2006/07/25 03:13:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.51 2006/09/03 15:56:49 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> karm-3.5.2.ebuild:
+  Stable on ia64.
 
 *karm-3.5.4 (25 Jul 2006)
 

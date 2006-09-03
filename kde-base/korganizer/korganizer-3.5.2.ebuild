@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.2.ebuild,v 1.8 2006/06/01 09:31:46 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.2.ebuild,v 1.9 2006/09/03 16:03:08 kloeri Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -8,7 +8,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="A Personal Organizer for KDE"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkpimexchange)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)
