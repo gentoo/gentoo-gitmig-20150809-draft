@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/usbirboy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.7 2006/07/23 14:50:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/usbirboy/ChangeLog,v 1.8 2006/09/03 19:46:53 blubb Exp $
+
+  03 Sep 2006; <blubb@gentoo.org> usbirboy-0.2.1-r1.ebuild:
+  added ~amd64
 
   23 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   usbirboy-0.2.1-r1.ebuild:
