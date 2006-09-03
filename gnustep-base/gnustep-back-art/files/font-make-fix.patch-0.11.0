@@ -1,0 +1,12 @@
+diff -ur Fonts/GNUmakefile Fonts/GNUmakefile
+--- Fonts/GNUmakefile	2005-03-12 23:06:51.808553304 -0500
++++ Fonts/GNUmakefile	2005-02-22 22:47:34.000000000 -0500
+@@ -27,7 +27,7 @@
+ include $(GNUSTEP_MAKEFILES)/common.make
+ 
+ #RESOURCE_SET_NAME = back-resources
+-back-resources_RESOURCE_FILES_INSTALL_DIR = Library/Fonts
++back-resources_RESOURCE_FILES_INSTALL_DIR = $(GNUSTEP_INSTALLATION_DIR)/Library/Fonts
+ back-resources_RESOURCE_FILES = $(FONT_INSTALL_FILES)
+ 
+ FONT_INSTALL_FILES = Helvetica.nfont
