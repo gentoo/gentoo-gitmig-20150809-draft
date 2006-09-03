@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/bouml
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.1 2006/09/03 16:01:35 flameeyes Exp $
+
+*bouml-2.16 (03 Sep 2006)
+
+  03 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +bouml-2.16.ebuild:
+  Initial import of BOUML UML toolbox. Thanks to Gabi Shaar, Fabrice Belamy
+  and Baptiste Grenier in bug #112208 for their work and patience.
+
