@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.1-r1.ebuild,v 1.4 2006/08/29 19:56:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.3.1-r1.ebuild,v 1.5 2006/09/03 05:52:11 vapier Exp $
 
 inherit multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~x86"
+KEYWORDS="~amd64 arm ~hppa ~ia64 m68k ppc ppc64 s390 sh ~x86"
 IUSE="static debug"
 
 RDEPEND="!static? ( dev-libs/libusb )"

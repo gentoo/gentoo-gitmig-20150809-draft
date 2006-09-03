@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.7.1-r1.ebuild,v 1.4 2006/09/02 12:53:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.7.1-r1.ebuild,v 1.5 2006/09/03 05:50:56 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ~ia64 ppc ppc64 s390 sh ~sparc x86"
 IUSE="nls static readline debug"
 
 # specific version for gettext needed
@@ -22,9 +22,9 @@ DEPEND=">=sys-fs/e2fsprogs-1.27
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/parted-1.7.0-pyparted.patch
-	epatch ${FILESDIR}/parted-1.7.1-fix-seg.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/parted-1.7.0-pyparted.patch
+	epatch "${FILESDIR}"/parted-1.7.1-fix-seg.patch
 }
 
 src_compile() {
