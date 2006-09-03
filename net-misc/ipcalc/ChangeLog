@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ipcalc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipcalc/ChangeLog,v 1.1 2006/09/03 21:01:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipcalc/ChangeLog,v 1.2 2006/09/03 21:06:53 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> ipcalc-0.40.ebuild:
+  Marked stable on mips.
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
   +ipcalc-0.37.ebuild, +ipcalc-0.38.ebuild, +ipcalc-0.40.ebuild:
