@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.38 2006/07/25 03:47:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.39 2006/09/03 10:47:10 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kcminit-3.5.0.ebuild:
+  Stable on ia64.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kcminit-3.5.3.ebuild:
   Bump to 3.5.4 (pre-release).

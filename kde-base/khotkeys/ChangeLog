@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.49 2006/07/25 10:36:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.50 2006/09/03 10:48:27 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> khotkeys-3.5.1.ebuild:
+  Stable on ia64.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/khotkeys-qt-3.3.5.patch:
