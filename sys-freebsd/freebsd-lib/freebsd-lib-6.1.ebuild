@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.9 2006/07/05 15:18:59 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.10 2006/09/03 11:25:22 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -119,7 +119,7 @@ src_compile() {
 	cd "${WORKDIR}/include"
 	$(freebsd_get_bmake) CC=$(tc-getCC) || die "make include failed"
 
-	use _E_CROSS_HEADERS_ONLY && return 0
+	use crosscompile_opts_headers-only && return 0
 
 	# Don't use ssp until properly fixed
 	append-flags $(test-flags -fno-stack-protector -fno-stack-protector-all)
@@ -180,7 +180,7 @@ src_install() {
 		doins "${S}/msun/src/math.h"
 	fi
 
-	use _E_CROSS_HEADERS_ONLY && return 0
+	use crosscompile_opts_headers-only && return 0
 
 	if [[ ${CTARGET} != ${CHOST} ]]; then
 		local csudir

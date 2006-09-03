@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.25 2006/07/27 01:23:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.26 2006/09/03 11:25:22 flameeyes Exp $
+
+  03 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> freebsd-lib-6.1.ebuild:
+  Update to new use-expand variable, thanks to Danny Van Dyk.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -freebsd-lib-6.0-r3.ebuild:
