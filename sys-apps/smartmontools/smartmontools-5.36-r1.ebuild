@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.36-r1.ebuild,v 1.3 2006/09/03 08:00:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.36-r1.ebuild,v 1.4 2006/09/03 14:49:38 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ppc-macos sparc ~x86"
 IUSE="static"
 
-RDEPEND="virtual/mailx"
+RDEPEND=""
 DEPEND=">=sys-apps/portage-2.0.51"
 
 src_unpack() {
@@ -42,4 +42,9 @@ src_install() {
 
 	newinitd "${FILESDIR}"/smartd.rc smartd
 	newconfd "${FILESDIR}"/smartd.confd smartd
+}
+
+pkg_postinst() {
+	elog "You need the 'mail' command if you configured smartd to send reports"
+	elog "via email, 'emerge virtual/mailx' to get a mailer"
 }
