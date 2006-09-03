@@ -1,0 +1,14 @@
+--- utils/resources.c.orig	2006-08-12 14:39:01.000000000 +0200
++++ utils/resources.c	2006-08-12 14:39:47.000000000 +0200
+@@ -123,9 +123,9 @@
+ get_float_resource (Display *dpy, char *res_name, char *res_class)
+ {
+   double val;
+-  char c, *s = get_string_resource (dpy, res_name, res_class);
++  char *s = get_string_resource (dpy, res_name, res_class);
+   if (! s) return 0.0;
+-  if (1 == sscanf (s, " %lf %c", &val, &c))
++  if (1 == sscanf (s, " %lf", &val))
+     {
+       free (s);
+       return val;
