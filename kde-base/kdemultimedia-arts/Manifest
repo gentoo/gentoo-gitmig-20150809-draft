@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST kdemultimedia-3.4.0-3.4.1.tar.xdelta 277869
 DIST kdemultimedia-3.4.0.tar.bz2 5581865
 DIST kdemultimedia-3.4.1.tar.bz2 5547552 RMD160 d54a6abae1b991b5b5a4ed20b9c4b7adf8812fa5 SHA256 2a908bae45c3c13c49fce271089761f5a5fe14623793245050744918711fe5d5
@@ -11,10 +8,10 @@ EBUILD kdemultimedia-arts-3.4.1.ebuild 602 RMD160 ac2add0401288cab0ebe1b992b05e8
 MD5 e9edd2e217da7f676203fcf1def1cd28 kdemultimedia-arts-3.4.1.ebuild 602
 RMD160 ac2add0401288cab0ebe1b992b05e8e7ddaf115f kdemultimedia-arts-3.4.1.ebuild 602
 SHA256 9b09b53494d1157c94d74eeeabbfb4557a8caf8c966dba10410d54a17238b00b kdemultimedia-arts-3.4.1.ebuild 602
-EBUILD kdemultimedia-arts-3.5.2.ebuild 597 RMD160 5634d571a6b1ebc2d4f889eca1b41dc166bcfdb1 SHA1 e8c8951a2507f6ac04fc4093387ecc7c98e6de4a SHA256 16897a663af2f0f8b81bec91a180d6d6938482d7fb16b6bbf1b7e02f1ef2a8f3
-MD5 12746b1f0a26723b0c125797f5ec0323 kdemultimedia-arts-3.5.2.ebuild 597
-RMD160 5634d571a6b1ebc2d4f889eca1b41dc166bcfdb1 kdemultimedia-arts-3.5.2.ebuild 597
-SHA256 16897a663af2f0f8b81bec91a180d6d6938482d7fb16b6bbf1b7e02f1ef2a8f3 kdemultimedia-arts-3.5.2.ebuild 597
+EBUILD kdemultimedia-arts-3.5.2.ebuild 597 RMD160 eee33520d36ed9da0ab43dae96135278383de8b2 SHA1 f0e2d0adddcee5865fa576d1b718037104eb570e SHA256 ad1b4e4bd2284496db81dd579f29dc63a19ea80042d6cd14ea622399294cbdc5
+MD5 b670aa06de6d8b3247b4a0fe91301d4e kdemultimedia-arts-3.5.2.ebuild 597
+RMD160 eee33520d36ed9da0ab43dae96135278383de8b2 kdemultimedia-arts-3.5.2.ebuild 597
+SHA256 ad1b4e4bd2284496db81dd579f29dc63a19ea80042d6cd14ea622399294cbdc5 kdemultimedia-arts-3.5.2.ebuild 597
 EBUILD kdemultimedia-arts-3.5.3.ebuild 616 RMD160 b4af6f64cc7618c34af0cc2ce504ee4cfa37191f SHA1 d0dbbb2cdef599e17734caabbb23e2ab152f46f0 SHA256 eb42ce280539527c1e10dfcd9476caac6fd1998e79f9150b85d9e99b8fa49b78
 MD5 ce2e18ec1bc90e1c1e671c9ae0c65507 kdemultimedia-arts-3.5.3.ebuild 616
 RMD160 b4af6f64cc7618c34af0cc2ce504ee4cfa37191f kdemultimedia-arts-3.5.3.ebuild 616
@@ -23,10 +20,10 @@ EBUILD kdemultimedia-arts-3.5.4.ebuild 616 RMD160 456628f9d1f5286fa8adc6e592730e
 MD5 36784349d8facce72bd113c326f6d108 kdemultimedia-arts-3.5.4.ebuild 616
 RMD160 456628f9d1f5286fa8adc6e592730e222960da1c kdemultimedia-arts-3.5.4.ebuild 616
 SHA256 9a71a65f815a91d7345dcf981b67119f4cea8ebe88b4df1ddcf464636e299150 kdemultimedia-arts-3.5.4.ebuild 616
-MISC ChangeLog 6232 RMD160 af33206d96abad3510462f13654f0c12ac732014 SHA1 e9e77fb6f91bc7d7e866eae4d357ace71c625078 SHA256 1073475630617b2fd355a2fa8aece844e2e4a7c38929e4145fab88ff4ab07f93
-MD5 74d236306ec19179d3272abbeb93071a ChangeLog 6232
-RMD160 af33206d96abad3510462f13654f0c12ac732014 ChangeLog 6232
-SHA256 1073475630617b2fd355a2fa8aece844e2e4a7c38929e4145fab88ff4ab07f93 ChangeLog 6232
+MISC ChangeLog 6336 RMD160 7bd73fceecd380a6025137619b2ca200bf0beede SHA1 da606994e710f46e6b6026c5f209c81c85b4ce91 SHA256 039850a4cc6fcc6b42566badd304c967b440d1844ac14c68510ab7443f17a237
+MD5 0d604f0a2c4b0b3cae1c207909c031a8 ChangeLog 6336
+RMD160 7bd73fceecd380a6025137619b2ca200bf0beede ChangeLog 6336
+SHA256 039850a4cc6fcc6b42566badd304c967b440d1844ac14c68510ab7443f17a237 ChangeLog 6336
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
@@ -43,10 +40,3 @@ SHA256 40d78b21ca110b497ec4b7377ae5dff2436e974a675297ec5d269b4a747f7920 files/di
 MD5 1f9576dca7cad899cdc4ed331e7dd98b files/digest-kdemultimedia-arts-3.5.4 265
 RMD160 ff95d47813141fe56a50a542737ea01a1ad5d736 files/digest-kdemultimedia-arts-3.5.4 265
 SHA256 fe2c54837176f0f36f4fe7f008c1590521101a0d636e6fe5fed7f09975dcf8e7 files/digest-kdemultimedia-arts-3.5.4 265
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFExaELAiZjviIA2XgRAgJAAKDSpPWcbVAAkRpNjUpxwejApxFO9QCfb/kU
-X5VwxzV+qdILN5HyokWYaj8=
-=w+WT
------END PGP SIGNATURE-----
