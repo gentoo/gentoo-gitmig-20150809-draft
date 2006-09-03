@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/secpolicy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.36 2006/07/25 09:36:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/ChangeLog,v 1.37 2006/09/03 11:44:56 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> secpolicy-3.5.0.ebuild:
+  Stable on ia64.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> secpolicy-3.5.0.ebuild:
   Bump to 3.5.4 (pre-release).

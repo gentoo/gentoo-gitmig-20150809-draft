@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcron
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.45 2006/07/25 03:52:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcron/ChangeLog,v 1.46 2006/09/03 11:46:02 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kcron-3.5.1.ebuild:
+  Stable on ia64.
 
 *kcron-3.5.4 (25 Jul 2006)
 
