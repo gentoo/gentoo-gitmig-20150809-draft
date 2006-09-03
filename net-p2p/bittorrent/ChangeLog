@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.87 2006/08/29 20:10:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.88 2006/09/03 22:47:19 tsunam Exp $
+
+  03 Sep 2006; Joshua Jackson <tsunam@gentoo.org> bittorrent-4.4.0.ebuild:
+  stable x86; bug #145047
 
   29 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   bittorrent-4.4.0.ebuild:
