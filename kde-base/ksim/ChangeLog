@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.55 2006/07/25 17:50:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.56 2006/09/03 17:25:21 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> ksim-3.5.2.ebuild:
+  Stable on ia64.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> ksim-3.5.4.ebuild:
   Restore keywords as reported by Markus Dittrich.

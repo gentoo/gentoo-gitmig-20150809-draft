@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.48 2006/07/25 07:54:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.49 2006/09/03 17:02:46 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kshisen-3.5.2.ebuild:
+  Stable on ia64.
 
 *kshisen-3.5.4 (25 Jul 2006)
 

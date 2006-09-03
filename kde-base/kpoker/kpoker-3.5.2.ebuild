@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpoker/kpoker-3.5.2.ebuild,v 1.8 2006/06/01 08:36:49 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpoker/kpoker-3.5.2.ebuild,v 1.9 2006/09/03 17:10:07 kloeri Exp $
 KMNAME=kdegames
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE poker game"
-KEYWORDS="alpha amd64 ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="

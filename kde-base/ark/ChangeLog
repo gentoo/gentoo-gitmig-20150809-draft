@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.48 2006/08/23 19:46:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.49 2006/09/03 17:16:45 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> ark-3.5.2.ebuild:
+  Stable on ia64.
 
   23 Aug 2006; Carsten Lohrke <carlo@gentoo.org> ark-3.5.4.ebuild:
   Add elog entry, bug #143351.
