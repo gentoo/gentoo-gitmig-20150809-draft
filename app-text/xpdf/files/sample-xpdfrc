@@ -89,3 +89,4 @@
 # clicked.
 
 #urlCommand	"netscape -remote 'openURL(%s)'"
+urlCommand	"firefox %s"
