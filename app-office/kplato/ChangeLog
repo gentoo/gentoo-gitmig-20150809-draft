@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.17 2006/08/16 12:50:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.18 2006/09/03 02:23:44 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kplato-1.5.2.ebuild:
+  Add ~ia64 keyword.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> kplato-1.5.1.ebuild:
   Stable on ppc64

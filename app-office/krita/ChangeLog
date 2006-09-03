@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.47 2006/08/30 20:59:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.48 2006/09/03 02:24:47 kloeri Exp $
+
+  03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> krita-1.5.2-r1.ebuild:
+  Add ~ia64 keyword.
 
   30 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> krita-1.5.2-r1.ebuild:
   Change the check so that it checks for Qt built with opengl support as
