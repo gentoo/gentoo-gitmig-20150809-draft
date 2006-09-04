@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.18 2006/07/27 01:43:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.19 2006/09/04 18:49:15 flameeyes Exp $
+
+*freebsd-sources-6.1-r4 (04 Sep 2006)
+
+  04 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-sources-6.1-devfs-deadlock.patch,
+  +freebsd-sources-6.1-r4.ebuild:
+  Add patch from Alex for sandbox not to deadlock devfs, see bug #146284.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/SA-06-04-ipfw.patch, -files/SA-06-06-kmem60.patch,

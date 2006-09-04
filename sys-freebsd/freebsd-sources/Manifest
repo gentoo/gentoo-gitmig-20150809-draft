@@ -17,6 +17,10 @@ AUX freebsd-sources-6.0-werror.patch 898 RMD160 41a6f582a70018f29c96c08a5853bcbf
 MD5 1c230261604f76eb3766df9769864942 files/freebsd-sources-6.0-werror.patch 898
 RMD160 41a6f582a70018f29c96c08a5853bcbf167157d0 files/freebsd-sources-6.0-werror.patch 898
 SHA256 7fbd139296e98697c94dcc6a4cd4d926b057779cb2415cb62bbb881b8acf26e5 files/freebsd-sources-6.0-werror.patch 898
+AUX freebsd-sources-6.1-devfs-deadlock.patch 4616 RMD160 85ce3ae845c435d5b50a4e820a9e3f9f364f7dde SHA1 99c7a0c61f9dbd31890865b6e86e01a71de67462 SHA256 196652d16339a1fe6c934c889c40eec78ed668c0fc2f253fed819587a7755825
+MD5 0e514494ce056f722aca5e98ff951916 files/freebsd-sources-6.1-devfs-deadlock.patch 4616
+RMD160 85ce3ae845c435d5b50a4e820a9e3f9f364f7dde files/freebsd-sources-6.1-devfs-deadlock.patch 4616
+SHA256 196652d16339a1fe6c934c889c40eec78ed668c0fc2f253fed819587a7755825 files/freebsd-sources-6.1-devfs-deadlock.patch 4616
 AUX freebsd-sources-6.1-gcc41.patch 16013 RMD160 c259aec856d5d4b68682138c7b1112e60b6814fa SHA1 5a0e61de9dde00279d36425cc451a2e0af1b38ae SHA256 d5b702657dae7e30774c4222094166334e5e466ccc5307a92992ed8df29e6b05
 MD5 8effd8101607ae4f84a9621e57f1ae2f files/freebsd-sources-6.1-gcc41.patch 16013
 RMD160 c259aec856d5d4b68682138c7b1112e60b6814fa files/freebsd-sources-6.1-gcc41.patch 16013
@@ -34,10 +38,14 @@ EBUILD freebsd-sources-6.1-r3.ebuild 2419 RMD160 0b883b91a5c9e6c4cd5139fb16982e4
 MD5 242afb82662fb880568a677072a59eb9 freebsd-sources-6.1-r3.ebuild 2419
 RMD160 0b883b91a5c9e6c4cd5139fb16982e4b00696a5b freebsd-sources-6.1-r3.ebuild 2419
 SHA256 bb0fa9e58602f70288ceb22f27f603bfb997686f48ddbc03e821abfa07f36e57 freebsd-sources-6.1-r3.ebuild 2419
-MISC ChangeLog 7274 RMD160 7e353bf7419ceddd77d71d2da166afdcfabf7b90 SHA1 5469a2b19c82e6ba338a2343e1568215e507fc77 SHA256 5379b5c327dc9bd2779d5faaf2883876f964cb11b1ac179c2d7eb22103369cc9
-MD5 c1d694bb2fb436449d8a36a062221524 ChangeLog 7274
-RMD160 7e353bf7419ceddd77d71d2da166afdcfabf7b90 ChangeLog 7274
-SHA256 5379b5c327dc9bd2779d5faaf2883876f964cb11b1ac179c2d7eb22103369cc9 ChangeLog 7274
+EBUILD freebsd-sources-6.1-r4.ebuild 2530 RMD160 bd3ba4af2cef79d5cd089bc0b0b7035267af81e2 SHA1 802dc37b0c3e2d43186702ab90466f1259d11c62 SHA256 de4c5bce9f0ca5fbb6b97b28fae0aa67e440ff03d4c3355ef9976325540c0766
+MD5 6a03faf7ce60f4ad00e01e3372ba65f9 freebsd-sources-6.1-r4.ebuild 2530
+RMD160 bd3ba4af2cef79d5cd089bc0b0b7035267af81e2 freebsd-sources-6.1-r4.ebuild 2530
+SHA256 de4c5bce9f0ca5fbb6b97b28fae0aa67e440ff03d4c3355ef9976325540c0766 freebsd-sources-6.1-r4.ebuild 2530
+MISC ChangeLog 7526 RMD160 9adad6bfa23833b844f1289ad0a4ec717293e51e SHA1 b15c9d73eb04951daea015c9f5519f928ac58252 SHA256 fffd649bcefc4880ce878d54c83204692e64dfd51de78ccb2e4bc63c1dfa3156
+MD5 c6397f64f1cbcbdc615d5ded30495b66 ChangeLog 7526
+RMD160 9adad6bfa23833b844f1289ad0a4ec717293e51e ChangeLog 7526
+SHA256 fffd649bcefc4880ce878d54c83204692e64dfd51de78ccb2e4bc63c1dfa3156 ChangeLog 7526
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -45,10 +53,13 @@ SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7 metadata
 MD5 bfcb2966c1ec6e468c2575c36179479c files/digest-freebsd-sources-6.1-r3 256
 RMD160 e3e91956a4a0e172a5a548c6b069c24f9864b6d9 files/digest-freebsd-sources-6.1-r3 256
 SHA256 a390411c7d0ce30970aac523a261176bf7fcb5235d6f782156ec5d52ddc382a1 files/digest-freebsd-sources-6.1-r3 256
+MD5 bfcb2966c1ec6e468c2575c36179479c files/digest-freebsd-sources-6.1-r4 256
+RMD160 e3e91956a4a0e172a5a548c6b069c24f9864b6d9 files/digest-freebsd-sources-6.1-r4 256
+SHA256 a390411c7d0ce30970aac523a261176bf7fcb5235d6f782156ec5d52ddc382a1 files/digest-freebsd-sources-6.1-r4 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEyBpeAiZjviIA2XgRAj0DAKChJ/PHDQKHTOW05jtQi4Dt2rd5WACggkoJ
-+TvANn3pPEaHDOURLnNFXJM=
-=0H9O
+iD8DBQFE/HUzAiZjviIA2XgRAt7ZAKCU588ES4HwRfrY6jPNGPAZCF+CHQCbB4UB
+WCAO5l5Yccz/QaxREZpc8F8=
+=BFdo
 -----END PGP SIGNATURE-----
