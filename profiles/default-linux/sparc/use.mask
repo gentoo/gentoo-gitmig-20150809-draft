@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.81 2006/08/18 15:56:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.82 2006/09/04 17:22:40 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -183,3 +183,7 @@ mp4
 # Gustavo Zacarias <gustavoz@gentoo.org> - 17 Aug 2006
 # Masking hardened, it isn't really supported, see bugs #144126 #78951
 hardened
+
+# Gustavo Zacarias <gustavoz@gentoo.org> - 04 Sep 2006
+# mzscheme seems somewhat b0rked and we want vim7
+mzscheme
