@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.2 2006/04/11 16:28:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.3 2006/09/04 08:50:50 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X doc"
 
 # We need dejagnu for src_test, but dejagnu needs expect
@@ -25,11 +25,11 @@ S=${WORKDIR}/${NON_MICRO_V}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-5.42.1-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-5.42.1-multilib.patch
 
 	# fix the rpath being set to /var/tmp/portage/...
-	epatch ${FILESDIR}/${PN}-5.39.0-libdir.patch
+	epatch "${FILESDIR}"/${PN}-5.39.0-libdir.patch
 
 	sed -i 's#/usr/local/bin#/usr/bin#' expect.man
 	sed -i 's#/usr/local/bin#/usr/bin#' expectk.man
@@ -79,12 +79,12 @@ src_test() {
 
 src_install() {
 	dodir /usr/$(get_libdir)
-	make install INSTALL_ROOT=${D} || die "make install failed"
+	make install INSTALL_ROOT="${D}" || die "make install failed"
 
 	dodoc ChangeLog FAQ HISTORY NEWS README
 
 	local static_lib="lib${NON_MICRO_V/-/}.a"
-	rm ${D}/usr/$(get_libdir)/${NON_MICRO_V/-/}/${static_lib}
+	rm "${D}"/usr/$(get_libdir)/${NON_MICRO_V/-/}/${static_lib}
 
 	#install examples if 'doc' is set
 	if use doc ; then
