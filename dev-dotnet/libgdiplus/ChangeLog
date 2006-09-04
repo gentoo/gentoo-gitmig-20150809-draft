@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.59 2006/07/12 17:57:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.60 2006/09/04 06:54:26 compnerd Exp $
+
+*libgdiplus-1.1.17 (04 Sep 2006)
+
+  04 Sep 2006; Saleem Abdulrasool <compnerd@gentoo.org>
+  +libgdiplus-1.1.17.ebuild:
+  version bump for mono 1.1.17.1
 
 *libgdiplus-1.1.16.1 (12 Jul 2006)
 
