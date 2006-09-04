@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.17.ebuild,v 1.6 2006/09/04 00:29:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.17.ebuild,v 1.7 2006/09/04 02:02:20 vapier Exp $
 
 ETYPE="headers"
 H_SUPPORTEDARCH="alpha amd64 arm hppa m68k ia64 ppc ppc64 s390 sh sparc x86"
@@ -9,14 +9,15 @@ detect_version
 
 PATCHES_V='3'
 
-SRC_URI="${KERNEL_URI} mirror://gentoo/linux-2.6.11-m68k-headers.patch.bz2
+SRC_URI="${KERNEL_URI} mirror://gentoo/linux-2.6.17-m68k-headers.patch.bz2
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-headers/gentoo-headers-${PV}-${PATCHES_V}.tar.bz2"
-KEYWORDS="-* ~ppc64 ~x86"
+KEYWORDS="-* ~arm ~m68k ~ppc64 ~sh ~x86"
 
 DEPEND="ppc? ( gcc64? ( sys-devel/gcc-powerpc64 ) )
 		sparc? ( gcc64? ( sys-devel/gcc-sparc64 ) )"
 
-UNIPATCH_LIST="${DISTDIR}/gentoo-headers-${PV}-${PATCHES_V}.tar.bz2"
+UNIPATCH_LIST="${DISTDIR}/linux-2.6.17-m68k-headers.patch.bz2
+	${DISTDIR}/gentoo-headers-${PV}-${PATCHES_V}.tar.bz2"
 
 wrap_headers_fix() {
 	for i in $*
@@ -32,11 +33,6 @@ wrap_headers_fix() {
 src_unpack() {
 	ABI=${KERNEL_ABI}
 	kernel-2_src_unpack
-
-	# This should always be used but it has a bunch of hunks which
-	# apply to include/linux/ which i'm unsure of so only use with
-	# m68k for now (dont want to break other arches)
-	[[ $(tc-arch) == "m68k" ]] && epatch "${DISTDIR}"/linux-2.6.11-m68k-headers.patch.bz2
 
 	# Fixes ... all the wrapper magic is to keep sed from dumping
 	# ugly warnings about how it can't work on a directory.
