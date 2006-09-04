@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.101 2006/09/04 15:14:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.102 2006/09/04 15:50:02 cardoe Exp $
+
+  04 Sep 2006; Doug Goldstein <cardoe@gentoo.org>
+  -files/hal-0.4.7-dont_add_device_twice-r1.patch, files/0.5-hald.rc,
+  -files/hal-0.4.7-device_info_leak.patch, -files/hal-0.5.5.1-RBC.patch,
+  -files/hal-0.5.7-drop-privs.patch, -files/hal-0.5.7-unclean-unmount.patch,
+  -hal-0.4.7-r2.ebuild, -hal-0.5.7.ebuild, -hal-0.5.7-r1.ebuild,
+  -hal-0.5.7-r2.ebuild:
+  Fixing HAL initscript. Removing oldness and some cleaning.
 
   04 Sep 2006; Roy Marples <uberlord@gentoo.org> files/0.5-hald.rc,
   files/hald:
