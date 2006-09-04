@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.3 2006/08/30 17:53:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.4 2006/09/04 21:22:15 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/ffmpeg
 
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
 	amr? ( http://www.3gpp.org/ftp/Specs/archive/26_series/26.104/26104-510.zip
-	       http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-510.zip )"
+		   http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-510.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,7 +32,7 @@ DEPEND="imlib? ( media-libs/imlib2 )
 	zlib? ( sys-libs/zlib )
 	dts? ( media-libs/libdts )
 	ieee1394? ( =media-libs/libdc1394-1*
-	            sys-libs/libraw1394 )
+				sys-libs/libraw1394 )
 	test? ( net-misc/wget )
 	x264? ( >=media-libs/x264-svn-20060810 )
 	amr? ( app-arch/unzip )"
@@ -154,7 +154,7 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR=${D} install || die "Install Failed"
+	emake -j1 LDCONFIG=true DESTDIR=${D} install || die "Install Failed"
 
 	use doc && make documentation
 	dodoc ChangeLog README INSTALL

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.12 2006/08/17 06:02:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.13 2006/09/04 21:22:15 flameeyes Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -14,7 +14,7 @@ S_SHARED=${S_BASE}-shared
 
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
 	amr? ( http://www.3gpp.org/ftp/Specs/archive/26_series/26.104/26104-510.zip
-	       http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-510.zip )"
+		   http://www.3gpp.org/ftp/Specs/archive/26_series/26.204/26204-510.zip )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,7 +36,7 @@ DEPEND="imlib? ( media-libs/imlib2 )
 	zlib? ( sys-libs/zlib )
 	dts? ( media-libs/libdts )
 	ieee1394? ( =media-libs/libdc1394-1*
-	            sys-libs/libraw1394 )
+				sys-libs/libraw1394 )
 	test? ( net-misc/wget )
 	x264? ( =media-libs/x264-svn-20060612 )
 	amr? ( app-arch/unzip )"
@@ -193,6 +193,7 @@ src_install() {
 		cd ${d}
 
 		make DESTDIR=${D} \
+			LDCONFIG=true \
 			prefix=${D}/usr \
 			libdir=${D}/usr/$(get_libdir) \
 			mandir=${D}/usr/share/man \
@@ -207,11 +208,11 @@ src_install() {
 	dodoc doc/*
 
 	cd ${S_STATIC}/libavcodec/libpostproc
-	make prefix=${D}/usr libdir=${D}/usr/$(get_libdir) \
+	make LDCONFIG=true prefix=${D}/usr libdir=${D}/usr/$(get_libdir) \
 		install || die "Failed to install libpostproc.a!"
 
 	cd ${S_SHARED}/libavcodec/libpostproc
-	make prefix=${D}/usr libdir=${D}/usr/$(get_libdir) \
+	make LDCONFIG=true prefix=${D}/usr libdir=${D}/usr/$(get_libdir) \
 		SHARED_PP="yes" \
 		install || die "Failed to install libpostproc.so!"
 
