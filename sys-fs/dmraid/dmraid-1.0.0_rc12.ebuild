@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc12.ebuild,v 1.2 2006/09/02 16:08:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc12.ebuild,v 1.3 2006/09/04 15:22:40 genstef Exp $
 
 inherit linux-info flag-o-matic
 
@@ -36,7 +36,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/dmraid-manpage-destdir.patch
+	epatch ${FILESDIR}/dmraid-destdir-fix.patch
 }
 
 src_compile() {
