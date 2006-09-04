@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.174 2006/09/04 01:58:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.175 2006/09/04 03:55:59 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> gimp-2.3.9.ebuild,
+  gimp-2.3.10.ebuild:
+  Add ~mips to KEYWORDS for 2.3.9 and 2.3.10.
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> gimp-2.2.12.ebuild:
   Marked stable on mips.
