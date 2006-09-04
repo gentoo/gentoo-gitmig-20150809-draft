@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.33 2006/08/24 07:57:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.34 2006/09/04 07:13:03 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> libdrm-2.0.2.ebuild:
+  Marked stable on mips.
 
   24 Aug 2006; Markus Rothe <corsair@gentoo.org> libdrm-2.0.2.ebuild:
   Stable on ppc64
