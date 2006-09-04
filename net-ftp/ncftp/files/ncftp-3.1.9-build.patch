@@ -1,0 +1,43 @@
+Fix parallel build bugs
+
+http://bugs.gentoo.org/146214
+
+--- sio/Makefile.in
++++ sio/Makefile.in
+@@ -179,6 +179,7 @@
+ SClose.o: SClose.c $(SYSHDRS_DEP)
+ SConnect.o: SConnect.c $(SYSHDRS_DEP)
+ SConnectByName.o: SConnectByName.c $(SYSHDRS_DEP)
++SError.o: SError.c $(SYSHDRS_DEP)
+ SNew.o: SNew.c $(SYSHDRS_DEP)
+ SRead.o: SRead.c $(SYSHDRS_DEP)
+ SReadline.o: SReadline.c $(SYSHDRS_DEP)
+--- sio/pch.mk.gcc-gch
++++ sio/pch.mk.gcc-gch
+@@ -1,5 +1,6 @@
+ syshdrs.h.gch: syshdrs.h sio.h usio.h
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h -o .tmp.$@
++	mv -f .tmp.$@ $@
+ 
+ PCH=syshdrs.h.gch
+ SYSHDRS_DEP=syshdrs.h.gch
+--- libncftp/Makefile.in
++++ libncftp/Makefile.in
+@@ -353,3 +353,6 @@
+ 
+ u_unmdtm.o: u_unmdtm.c $(SYSHDRS_DEP)
+ u_unmdtm.so: u_unmdtm.c $(SYSHDRS_DEP)
++
++u_feat.o: u_feat.c $(SYSHDRS_DEP)
++u_feat.so: u_feat.c $(SYSHDRS_DEP)
+--- libncftp/pch.mk.gcc-gch
++++ libncftp/pch.mk.gcc-gch
+@@ -1,5 +1,6 @@
+ syshdrs.h.gch: syshdrs.h ncftp.h ncftp_errno.h util.h ftp.h
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h -o .tmp.$@
++	mv -f .tmp.$@ $@
+ 
+ PCH=syshdrs.h.gch
+ SYSHDRS_DEP=syshdrs.h.gch
