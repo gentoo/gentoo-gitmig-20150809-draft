@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.108 2006/08/01 18:42:51 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.109 2006/09/04 01:49:52 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> postfix-2.2.10.ebuild,
+  postfix-2.2.10-r1.ebuild:
+  Marked 2.2.10 stable and 2.2.10-r1 unstable.
 
 *postfix-2.3.2-r1 (01 Aug 2006)
 *postfix-2.3.2 (01 Aug 2006)
