@@ -1,3 +1,4 @@
+default-linux/mips/2006.1/ip28/o32
 If you are using an SGI Indigo2 R10000 system (IP28), use the following profile:
 
 # emerge -n '>=sys-apps/portage-2.0.51'

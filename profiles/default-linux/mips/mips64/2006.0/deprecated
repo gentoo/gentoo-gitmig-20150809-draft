@@ -1,3 +1,4 @@
+default-linux/mips/2006.1/generic-be/o32
 Switch to one of the profiles listed below, depending on your system:
 
 If you are using an SGI Origin 200/2000 system (IP27), use the following profile:
