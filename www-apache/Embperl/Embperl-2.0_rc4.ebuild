@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/Embperl/Embperl-2.0_rc4.ebuild,v 1.2 2006/02/13 15:10:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/Embperl/Embperl-2.0_rc4.ebuild,v 1.3 2006/09/04 15:53:41 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,7 @@ IUSE="session apache2 modperl"
 #xalan session
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 # tests bork at the moment but it seems to run
 #SRC_TEST="do"
 
