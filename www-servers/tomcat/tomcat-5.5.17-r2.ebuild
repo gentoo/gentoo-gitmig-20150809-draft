@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r2.ebuild,v 1.1 2006/09/04 01:18:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r2.ebuild,v 1.2 2006/09/04 16:19:52 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -104,12 +104,12 @@ ant_src_unpack() {
 	fi
 
 	if ! use java5; then
-		mkdir ../common/endorsed && cd ../common/endorsed
+		mkdir ${S}/build/build/common/endorsed && cd ${S}/build/build/common/endorsed
 		java-pkg_jar-from xml-commons-external-1.3 xml-apis.jar
 		java-pkg_jar-from xerces-2 xercesImpl.jar
 	fi
 
-	mkdir ../lib && cd ../lib
+	mkdir ${S}/build/build/lib && cd ${S}/build/buildlib
 	java-pkg_jar-from ant-core
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-dbcp
@@ -117,7 +117,7 @@ ant_src_unpack() {
 	java-pkg_jar-from commons-pool
 	java-pkg_jar-from servletapi-2.4
 
-	mkdir -p ../../server/lib && cd ../../server/lib
+	mkdir -p ${S}/build/build/server/lib && cd ${S}/build/build/server/lib
 	java-pkg_jar-from commons-beanutils-1.7 commons-beanutils.jar
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-fileupload
