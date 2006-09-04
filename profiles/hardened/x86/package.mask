@@ -1,5 +1,6 @@
 x11-drivers/linuxwacom
 app-cdr/bonfire
+app-cdr/brasero
 dev-util/rootstrap
 media-plugins/gst-plugins-v4l2
 net-firewall/ipsec-tools
