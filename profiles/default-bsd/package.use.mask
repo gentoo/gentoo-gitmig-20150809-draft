@@ -1,0 +1,3 @@
+dev-libs/confuse test
+sys-apps/coreutils acl
+sys-apps/help2man nls
