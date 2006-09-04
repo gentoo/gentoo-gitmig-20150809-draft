@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ipcad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.24 2006/09/01 18:06:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.25 2006/09/04 06:02:42 tsunam Exp $
+
+  04 Sep 2006; Joshua Jackson <tsunam@gentoo.org> ipcad-3.7.ebuild:
+  Stable x86; bug #145483
 
   01 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> ipcad-3.7.ebuild:
   ppc stable, bug #145483
