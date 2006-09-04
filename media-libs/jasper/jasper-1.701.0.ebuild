@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.27 2006/08/25 06:17:48 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.701.0.ebuild,v 1.28 2006/09/04 04:12:34 kumba Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ece.uvic.ca/~mdadams/jasper/software/jasper-${PV}.zip"
 
 LICENSE="JasPer"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="opengl jpeg"
 
 RDEPEND="jpeg? ( media-libs/jpeg )
