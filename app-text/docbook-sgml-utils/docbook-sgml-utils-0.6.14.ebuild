@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.25 2006/07/05 06:52:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.14.ebuild,v 1.26 2006/09/04 08:46:16 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://sources.redhat.com/pub/docbook-tools/new-trials/SOURCES/${MY_P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="tetex"
 
 DEPEND=">=dev-lang/perl-5
@@ -54,9 +54,9 @@ src_install() {
 
 	if ! use tetex ; then
 		for i in dvi pdf ps ; do
-			rm ${D}/usr/bin/docbook2$i
-			rm ${D}/usr/share/sgml/docbook/utils-${PV}/backends/$i
-			rm ${D}/usr/share/man/man1/docbook2$i.1
+			rm "${D}"/usr/bin/docbook2$i
+			rm "${D}"/usr/share/sgml/docbook/utils-${PV}/backends/$i
+			rm "${D}"/usr/share/man/man1/docbook2$i.1
 		done
 	fi
 	dodoc AUTHORS ChangeLog NEWS README TODO
