@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.3 2006/08/23 23:35:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.4 2006/09/04 22:00:44 genstef Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -48,7 +48,8 @@ RDEPEND="$(qt_min_version 3.3.3)
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	sys-devel/gettext
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	!<app-text/hspell-1.0"
 
 RDEPEND="${RDEPEND}
 	|| ( ( x11-apps/rgb x11-apps/iceauth ) <virtual/x11-7 )"
@@ -89,10 +90,6 @@ src_unpack() {
 src_compile() {
 	rm -f ${S}/configure
 
-	# hspell is disabled because it requires version 0.9 of hspell that
-	# is not in portage yet; leaving it to autodetection tries to use it
-	# and then fails because of missing required functions
-
 	myconf="--with-distribution=Gentoo
 			$(use_enable fam libfam) $(use_enable kernel_linux dnotify)
 			--with-libart --with-libidn
@@ -100,8 +97,7 @@ src_compile() {
 			$(use_with alsa) $(use_with arts)
 			$(use_with kerberos gssapi) $(use_with tiff)
 			$(use_with jpeg2k jasper) $(use_with openexr)
-			$(use_enable cups) $(use_enable zeroconf dnssd)
-			--without-hspell"
+			$(use_enable cups) $(use_enable zeroconf dnssd)"
 	if use noutempter ; then
 		myconf="${myconf} --without-utempter"
 	else
