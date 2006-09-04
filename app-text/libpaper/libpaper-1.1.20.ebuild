@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.20.ebuild,v 1.1 2006/09/01 14:19:10 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.20.ebuild,v 1.2 2006/09/04 10:27:09 vapier Exp $
 
 inherit eutils libtool
 
@@ -11,22 +11,22 @@ SRC_URI="mirror://debian/pool/main/libp/libpaper/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	ln -s /usr/share/libtool/config.sub
-	ln -s /usr/share/libtool/config.guess
+	cd "${S}"
+	# let portage update these for us
+	touch config.sub config.guess
 
-	epatch "${FILESDIR}/libpaper-1.1.14.8-malloc.patch"
+	epatch "${FILESDIR}"/libpaper-1.1.14.8-malloc.patch
 
 	elibtoolize
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc README ChangeLog
 
