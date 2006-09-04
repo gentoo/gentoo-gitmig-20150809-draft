@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.106 2006/09/04 02:06:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.107 2006/09/04 08:15:57 corsair Exp $
+
+  04 Sep 2006; Markus Rothe <corsair@gentoo.org> libsdl-1.2.11.ebuild:
+  Stable on ppc64; bug #145470
 
   04 Sep 2006; Mike Frysinger <vapier@gentoo.org>
   +files/libsdl-1.2.11-xinerama-head-0.patch, libsdl-1.2.11.ebuild:

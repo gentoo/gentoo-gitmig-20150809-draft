@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-image
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.27 2006/08/15 23:11:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/ChangeLog,v 1.28 2006/09/04 08:17:23 corsair Exp $
+
+  04 Sep 2006; Markus Rothe <corsair@gentoo.org> sdl-image-1.2.5-r1.ebuild:
+  Stable on ppc64; bug #145470
 
 *sdl-image-1.2.5-r1 (15 Aug 2006)
 
