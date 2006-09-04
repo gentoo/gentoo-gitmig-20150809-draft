@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.10 2006/07/09 01:36:38 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.11 2006/09/04 08:43:31 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="X gtk ggi gpm"
 
 RDEPEND="X? ( || ( ( x11-libs/libXpm x11-libs/libX11 ) virtual/x11 ) )
@@ -59,10 +59,10 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 
 	if use X ; then
-		insinto /usr/X11R6/lib/X11/fonts/misc
+		insinto /usr/lib/X11/fonts/misc
 		doins fonts/vga.pcf.gz
 	fi
 
@@ -72,18 +72,4 @@ src_install() {
 	doman docs/twin.1; rm -rf docs/twin.1
 	dodoc docs/*
 
-}
-
-pkg_postinst() {
-	if use X ; then
-		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
-		/usr/X11R6/bin/xset fp rehash
-	fi
-}
-
-pkg_postrm() {
-	if use X ; then
-		/usr/X11R6/bin/mkfontdir /usr/X11R6/lib/X11/fonts/misc
-		/usr/X11R6/bin/xset fp rehash
-	fi
 }
