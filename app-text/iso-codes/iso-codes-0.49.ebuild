@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49.ebuild,v 1.10 2006/02/07 05:11:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49.ebuild,v 1.11 2006/09/04 06:30:11 vapier Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/i/iso-codes/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gettext
