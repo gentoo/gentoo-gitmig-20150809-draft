@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.10.ebuild,v 1.11 2006/07/09 00:52:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.10.ebuild,v 1.12 2006/09/04 10:29:57 vapier Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.bz2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="zlib doc crypt"
 
 RDEPEND=">=dev-libs/libgcrypt-1.2.2
