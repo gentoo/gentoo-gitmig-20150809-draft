@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5819 2006/09/04 18:28:43 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5820 2006/09/04 19:10:34 gurligebis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1371,10 +1371,6 @@ net-im/mercury-bin
 # Uncertain upstream; Needs work for apache-modules eclass; mod_webapp needs to
 # be broken out of it
 dev-lisp/cl-imho
-
-# Sven Wegener <swegener@gentoo.org> (30 Jan 2005)
-# Major changes, needs some more testing
->=net-irc/ultimate-3.0.0_rc2
 
 # <mkennedy@gentoo.org> (Jan 12 2005)
 # no longer needed for the time being; use app-emacs/slime instead
