@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.1-r1.ebuild,v 1.7 2006/08/19 00:31:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.1-r1.ebuild,v 1.8 2006/09/04 06:42:34 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-ffmpeg.html"
 SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 x86"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,6 @@ DEPEND=">=media-libs/gstreamer-0.10.0
 	dev-util/pkgconfig"
 
 src_compile() {
-
 	# Restrictions taken from the mplayer ebuild
 	# See bug #64262 for more info
 	# let's play the filtration game!
@@ -40,14 +39,9 @@ src_compile() {
 
 	econf --disable-ffplay|| die
 	emake || die
-
 }
 
 src_install() {
-
-	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
-
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
-
