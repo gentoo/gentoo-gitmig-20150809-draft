@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.2-r1.ebuild,v 1.8 2006/08/19 00:51:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.4.2-r1.ebuild,v 1.9 2006/09/04 10:31:28 vapier Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 arm hppa ~ia64 ppc ~ppc64 sparc x86"
 
 # pitdfall has not come out with a 0.10 release, should be soon though -AJL
 #IUSE="a52 dbus dvd flac gnome lirc mad mpeg nsplugin nvtv ogg theora vorbis win32codecs xine xv"
