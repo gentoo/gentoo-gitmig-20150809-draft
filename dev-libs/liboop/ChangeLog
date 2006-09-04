@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboop
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.7 2005/04/24 12:44:27 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboop/ChangeLog,v 1.8 2006/09/04 18:28:53 gustavoz Exp $
+
+  04 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> liboop-1.0.ebuild:
+  Stable on sparc
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> liboop-1.0.ebuild:
   Stable on ppc.
