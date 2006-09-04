@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.7.ebuild,v 1.2 2006/07/08 18:40:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.7.ebuild,v 1.3 2006/09/04 09:26:22 blubb Exp $
 
 IUSE="alsa jack sse lash static"
 
@@ -13,7 +13,7 @@ SRC_URI="http://savannah.nongnu.org/download/fluid/${P}${RELEASE_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 
 DEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	media-libs/ladspa-sdk
