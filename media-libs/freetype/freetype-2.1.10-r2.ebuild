@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10-r2.ebuild,v 1.8 2006/07/04 05:24:28 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.10-r2.ebuild,v 1.9 2006/09/04 03:36:00 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig libtool
 
@@ -57,9 +57,13 @@ src_compile() {
 	# Fix missing symbols in fontconfig in some circumstances
 	append-flags -DFT_CONFIG_OPTION_OLD_INTERNALS
 
-	make setup CFG="--host=${CHOST} --prefix=/usr `use_with zlib` --libdir=/usr/$(get_libdir)" unix || die
+	make setup CFG="--host=${CHOST} --prefix=/usr $(use_with zlib) --libdir=/usr/$(get_libdir)" unix || die
 
-	emake || die
+	emake || die "make failed"
+
+	if use doc ; then
+		emake refdoc || die "refdoc failed"
+	fi
 
 }
 
