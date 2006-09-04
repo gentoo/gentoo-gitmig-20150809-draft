@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.10 2006/07/13 15:28:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r11.ebuild,v 1.11 2006/09/04 05:09:28 kumba Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
 IUSE="mmx 3dnow esd nas oss"
 
 RDEPEND="esd? ( media-sound/esound )
