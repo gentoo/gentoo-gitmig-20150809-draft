@@ -1,6 +1,11 @@
 # ChangeLog for games-kids/gcompris
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.25 2006/05/23 17:06:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/ChangeLog,v 1.26 2006/09/04 22:24:23 tupone Exp $
+
+*gcompris-7.4-r1 (04 Sep 2006)
+
+  04 Sep 2006; <tupone@gentoo.org> +gcompris-7.4-r1.ebuild:
+  Enabling python (conditionally). Bug #130675 by Graeme Boyd
 
   23 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gcompris-6.5.3-r1.ebuild:
