@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.48 2006/08/16 19:04:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.49 2006/09/04 04:49:05 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> libmpeg3-1.5.2-r3.ebuild:
+  Marked stable on mips.
 
   16 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libmpeg3-1.5.2-r3.ebuild:
