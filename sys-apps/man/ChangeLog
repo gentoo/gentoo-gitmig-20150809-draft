@@ -1,12 +1,6 @@
 # ChangeLog for sys-apps/man
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.101 2006/09/04 22:48:37 vapier Exp $
-
-*man-1.6d-r1 (04 Sep 2006)
-
-  04 Sep 2006; Mike Frysinger <vapier@gentoo.org>
-  +files/man-1.6d-groff.patch, +man-1.6d-r1.ebuild:
-  Dont force -T anymore when calling groff #146315 by Matthias Schwarzott.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.102 2006/09/04 22:51:28 vapier Exp $
 
   22 Aug 2006; Stephen P. Becker <geoman@gentoo.org> man-1.6d.ebuild:
   stable on mips
