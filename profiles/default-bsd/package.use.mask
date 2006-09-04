@@ -1,4 +1,5 @@
 app-misc/mc pam
+dev-lang/ruby threads
 dev-libs/confuse test
 kde-base/kcontrol ieee1394
 kde-base/kdenetwork-meta wifi
