@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-0.8.11-conffix.patch 845 RMD160 617ccaab015478f6ac6b79f0ef04fb96aefd053b SHA1 5922dc3ed4867c5da0b5a5bc64578f742d85cd82 SHA256 a5276aa1fc567987cdd67b2024e8ee27f3a83d99834a6b9e09647f7aa4f9c870
 MD5 a619f8fe6364e211b5c12d36fa4c60dc files/gst-plugins-0.8.11-conffix.patch 845
 RMD160 617ccaab015478f6ac6b79f0ef04fb96aefd053b files/gst-plugins-0.8.11-conffix.patch 845
@@ -29,10 +32,10 @@ EBUILD gst-plugins-0.8.10.ebuild 2065 RMD160 08ebf0163e5d0a8e2ecc1a6ab47ae851d55
 MD5 f8a26b8a090bc1ba2eb13d9ae2926152 gst-plugins-0.8.10.ebuild 2065
 RMD160 08ebf0163e5d0a8e2ecc1a6ab47ae851d550711e gst-plugins-0.8.10.ebuild 2065
 SHA256 1815b131bf735f6aea2bb7e82909f795df6da2c024468335cfcea3d8b32693b8 gst-plugins-0.8.10.ebuild 2065
-EBUILD gst-plugins-0.8.11.ebuild 2119 RMD160 c430e8f32afca6ea0262c57194cb6bcad71bbf06 SHA1 b5833a951cd429d562862a2573fb1012744ab17a SHA256 a7222cc391c4ba994b46122689bb46f11f273de6bd01dbb8fe4194e58467dfc1
-MD5 bbc6ff4b2312360059be8d2548cebeb7 gst-plugins-0.8.11.ebuild 2119
-RMD160 c430e8f32afca6ea0262c57194cb6bcad71bbf06 gst-plugins-0.8.11.ebuild 2119
-SHA256 a7222cc391c4ba994b46122689bb46f11f273de6bd01dbb8fe4194e58467dfc1 gst-plugins-0.8.11.ebuild 2119
+EBUILD gst-plugins-0.8.11.ebuild 2119 RMD160 2b669a1a5e50eaf61c60d0a4e09cf87f54d24710 SHA1 290faade1732da135a59023b75db6507161139d3 SHA256 95c9607367fe9e4780ee225eee345dc457640358a4d1f623d9c81e575cb6d16b
+MD5 5e46eb6719c3d0b1934d3ce3259f404c gst-plugins-0.8.11.ebuild 2119
+RMD160 2b669a1a5e50eaf61c60d0a4e09cf87f54d24710 gst-plugins-0.8.11.ebuild 2119
+SHA256 95c9607367fe9e4780ee225eee345dc457640358a4d1f623d9c81e575cb6d16b gst-plugins-0.8.11.ebuild 2119
 EBUILD gst-plugins-0.8.12.ebuild 2093 RMD160 089e280d4fc30c7ecdb8fc5adaf32e3c7928ea82 SHA1 fcb68e71ce83ffea598a49edb15422f0a24921ef SHA256 96be2ff39cf17fbdfee7134bf875dd9c2f3630b7b8d94c11e72576475dbc520d
 MD5 231df73ef0f74b6efd6a33a7e4d865ea gst-plugins-0.8.12.ebuild 2093
 RMD160 089e280d4fc30c7ecdb8fc5adaf32e3c7928ea82 gst-plugins-0.8.12.ebuild 2093
@@ -82,3 +85,10 @@ SHA256 54aff3731cda09cf2cbec26dffb49f6e59dc42d64159ae29a6a2767786a5afdb files/di
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-0.8.9-r2 259
 RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-0.8.9-r2 259
 SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-0.8.9-r2 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+8V4amhnQswr0vIRAjcsAJ9Zawfe7AA773xsb1gk6PnSz6NjRgCdEBpR
+GZyU9bOLdQWvSwfo7X+qI8o=
+=/H3Z
+-----END PGP SIGNATURE-----
