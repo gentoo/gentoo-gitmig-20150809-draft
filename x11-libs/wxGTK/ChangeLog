@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.122 2006/08/05 14:10:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.123 2006/09/04 11:39:53 leio Exp $
+
+  04 Sep 2006; Mart Raudsepp <leio@gentoo.org>
+  -files/wxGTK-2.6.1-windowcpp.diff, -wxGTK-2.6.1-r1.ebuild,
+  -wxGTK-2.6.2.ebuild:
+  Clean up unnecessary versions.
 
   05 Aug 2006; Mart Raudsepp <leio@gentoo.org> wxGTK-2.6.3.2.ebuild:
   Depend on the correct sdl package.
