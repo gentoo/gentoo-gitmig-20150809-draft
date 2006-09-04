@@ -1,16 +1,38 @@
-MD5 2432f80bcd1e375563a5fe835cbcbff3 ChangeLog 3946
-MD5 f1f3df84ffcb90188e6f78e6f42ea6f4 files/digest-gnomebaker-0.4.2 68
-MD5 dc88a6c8a1a049ee0aa85387225bdc3d files/digest-gnomebaker-0.5.0 69
-MD5 dc88a6c8a1a049ee0aa85387225bdc3d files/digest-gnomebaker-0.5.0-r1 69
-MD5 50e587616377157670282d461e66e0ee files/digest-gnomebaker-0.5.1 253
-MD5 50e587616377157670282d461e66e0ee files/digest-gnomebaker-0.5.1-r1 253
-MD5 50e587616377157670282d461e66e0ee files/digest-gnomebaker-0.5.1-r2 253
-MD5 d97702da8c806d494cd6a864b6b787b4 files/gnomebaker-0.5.0-64bit.diff 1178
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX gnomebaker-0.5.1-headerfix.patch 362 RMD160 7122e3a5571ec5ae198a9cc7580ae6371e45012b SHA1 593d43cbe96f28c8ea162011256abf7f0e3bb845 SHA256 2ea9014c04dbfcaaae5300358cba07cdf318a41a2eb0ba97095f96997194e00a
 MD5 24a9da81b7fd060b4ee8806869371b64 files/gnomebaker-0.5.1-headerfix.patch 362
+RMD160 7122e3a5571ec5ae198a9cc7580ae6371e45012b files/gnomebaker-0.5.1-headerfix.patch 362
+SHA256 2ea9014c04dbfcaaae5300358cba07cdf318a41a2eb0ba97095f96997194e00a files/gnomebaker-0.5.1-headerfix.patch 362
+DIST gnomebaker-0.4.2.tar.gz 761044
+DIST gnomebaker-0.5.1.tar.bz2 941026 RMD160 f8944a7e7db5d714b7a0492e962baf9bbf726d72 SHA1 7568d9531fc94862cbd73c113368b621e6128d98 SHA256 71a902cf66859a9eaeccedda2f400b978e5ef06911fce43da2ebb4a718e84d0c
+EBUILD gnomebaker-0.4.2.ebuild 1127 RMD160 6aa369ce45cf53897b965b14a341b0d64a8053f9 SHA1 0ed0ab112701de3f762cc741cc4a3156ff911965 SHA256 2d2d662f56a06ddb566fd68e2ee754f2c2603982c7f16f42ada5135cb1cdb071
 MD5 8783486af5773c1b515613e2540410a4 gnomebaker-0.4.2.ebuild 1127
-MD5 7399f6f2f7558346fa6688dc59f989c8 gnomebaker-0.5.0-r1.ebuild 1264
-MD5 a0bdd3231d525d3c160b6f9f787e005f gnomebaker-0.5.0.ebuild 1137
-MD5 b67a43e8fbbcfeb614787aa0b09b0eee gnomebaker-0.5.1-r1.ebuild 1230
+RMD160 6aa369ce45cf53897b965b14a341b0d64a8053f9 gnomebaker-0.4.2.ebuild 1127
+SHA256 2d2d662f56a06ddb566fd68e2ee754f2c2603982c7f16f42ada5135cb1cdb071 gnomebaker-0.4.2.ebuild 1127
+EBUILD gnomebaker-0.5.1-r2.ebuild 1249 RMD160 e67c4aa3db987aa91eca624658300fcbb591754e SHA1 43354ab7795a90e7ce7b64cdac8c835ec10b35c2 SHA256 97af8fee3d99d7f5c8d3e2c789a88921ef9d0d8f46efc084ed1082f62bd21b69
 MD5 679ddb9dc55b92cad828ef547ce0f528 gnomebaker-0.5.1-r2.ebuild 1249
-MD5 86b5ea3ea83e81d8bac7f535e013f0cb gnomebaker-0.5.1.ebuild 1138
+RMD160 e67c4aa3db987aa91eca624658300fcbb591754e gnomebaker-0.5.1-r2.ebuild 1249
+SHA256 97af8fee3d99d7f5c8d3e2c789a88921ef9d0d8f46efc084ed1082f62bd21b69 gnomebaker-0.5.1-r2.ebuild 1249
+MISC ChangeLog 3946 RMD160 3e505d5035cb225f8351af8b0ba888494302b233 SHA1 936dd239ecc6932615304757d2eba2a7e7269077 SHA256 0fca08ee8fcc9cb64ad75b8cb6af1deb92edfb6c524a4cdb2106f04c14d8718c
+MD5 2432f80bcd1e375563a5fe835cbcbff3 ChangeLog 3946
+RMD160 3e505d5035cb225f8351af8b0ba888494302b233 ChangeLog 3946
+SHA256 0fca08ee8fcc9cb64ad75b8cb6af1deb92edfb6c524a4cdb2106f04c14d8718c ChangeLog 3946
+MISC metadata.xml 168 RMD160 0f4531db7705cd8bc36b75d29d850bf7104855ae SHA1 d5eb7a704881bd8a8a83d83679d791b1e17633b4 SHA256 78253ccb8cd8df7179b1776b7e98a02f8df32368476727fef07ad0c9d164e180
 MD5 261972da02920d2246124b6fc395ac37 metadata.xml 168
+RMD160 0f4531db7705cd8bc36b75d29d850bf7104855ae metadata.xml 168
+SHA256 78253ccb8cd8df7179b1776b7e98a02f8df32368476727fef07ad0c9d164e180 metadata.xml 168
+MD5 f1f3df84ffcb90188e6f78e6f42ea6f4 files/digest-gnomebaker-0.4.2 68
+RMD160 1f8c002f2e5def2f66aced4a7b9f9f8409b61634 files/digest-gnomebaker-0.4.2 68
+SHA256 95c1b773195fe39dcd584a5e009dc2914bb39458c3fcb7fd4138b95d4972ec7f files/digest-gnomebaker-0.4.2 68
+MD5 50e587616377157670282d461e66e0ee files/digest-gnomebaker-0.5.1-r2 253
+RMD160 482d7082cb44389f6b7152b5f776700302aac3fa files/digest-gnomebaker-0.5.1-r2 253
+SHA256 622576ecf31465f1d871e631031ebee6b907c98ae9ddfcc2ca130f1e5fa1f49d files/digest-gnomebaker-0.5.1-r2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+48RwUpWvClEHQoRAhP9AJ4pnn4BKDd3A/lKkcpasNXooQplnQCfYj8Z
+51AcrzxrgtvO1A9KL35+WtI=
+=f9i/
+-----END PGP SIGNATURE-----
