@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.9 2006/07/23 14:51:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r1.ebuild,v 1.10 2006/09/04 09:40:44 blubb Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="alsa debug doc X usb hardware-carrier transmitter udev"
-KEYWORDS="~alpha ~amd64 ia64 ppc ppc64 x86"
+KEYWORDS="~alpha amd64 ia64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 
 S=${WORKDIR}/${P/_pre/pre}

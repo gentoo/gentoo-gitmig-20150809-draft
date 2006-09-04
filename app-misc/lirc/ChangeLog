@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.107 2006/09/03 20:49:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.108 2006/09/04 09:40:44 blubb Exp $
+
+  04 Sep 2006; <blubb@gentoo.org> lirc-0.8.0-r1.ebuild:
+  stable on amd64
 
   03 Sep 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0-r5.ebuild:
   Added conditional depend on inputlircd as it now has all necessary keywords.
