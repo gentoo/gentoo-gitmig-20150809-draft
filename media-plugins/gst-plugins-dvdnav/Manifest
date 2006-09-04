@@ -1,6 +1,34 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
+DIST gst-plugins-0.8.12.tar.bz2 2506926
+EBUILD gst-plugins-dvdnav-0.8.11.ebuild 368 RMD160 7b7f1e1f0dfb2b84ff36666e47aa2db968c89b2a SHA1 d395d55c3be799683611e12312d19a1c53cfd8a6 SHA256 62cdf77166c0b4ec4c75366fa68a255d9772c8ae7c75b1f3dd92d618945a6b55
+MD5 f75f66c9839b90cfaa78e6d32a080807 gst-plugins-dvdnav-0.8.11.ebuild 368
+RMD160 7b7f1e1f0dfb2b84ff36666e47aa2db968c89b2a gst-plugins-dvdnav-0.8.11.ebuild 368
+SHA256 62cdf77166c0b4ec4c75366fa68a255d9772c8ae7c75b1f3dd92d618945a6b55 gst-plugins-dvdnav-0.8.11.ebuild 368
+EBUILD gst-plugins-dvdnav-0.8.12.ebuild 375 RMD160 199fb993591da1920a9baf596aed2ad4b04d9dd3 SHA1 b4240bac908290b77691f817cdd5ce20ef8641dd SHA256 71ca469eae29a1b5cc73423c6f8fa371f5d1aded9d813fff31b74d43be3c1648
+MD5 0d3a2d2c5d64390b6eece5cc9726629e gst-plugins-dvdnav-0.8.12.ebuild 375
+RMD160 199fb993591da1920a9baf596aed2ad4b04d9dd3 gst-plugins-dvdnav-0.8.12.ebuild 375
+SHA256 71ca469eae29a1b5cc73423c6f8fa371f5d1aded9d813fff31b74d43be3c1648 gst-plugins-dvdnav-0.8.12.ebuild 375
+MISC ChangeLog 1819 RMD160 36fa864eb3756e1bcea42085b8a448dddd5664a1 SHA1 cdd586394878b98ffde12a55e80c7cedd4c770d9 SHA256 97a67faae4619423af3808e71aaa61c19e985c8a1549df57930d821cdd182713
 MD5 ae8df831c376f6dc6e3d951487083d87 ChangeLog 1819
-MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-dvdnav-0.8.11 262
-MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-dvdnav-0.8.12 72
-MD5 d91a6ad0cb9564007fdd22f37ee08fd6 gst-plugins-dvdnav-0.8.11.ebuild 366
-MD5 755cc20393e5cfaeb8b8e9912ef9edc2 gst-plugins-dvdnav-0.8.12.ebuild 371
+RMD160 36fa864eb3756e1bcea42085b8a448dddd5664a1 ChangeLog 1819
+SHA256 97a67faae4619423af3808e71aaa61c19e985c8a1549df57930d821cdd182713 ChangeLog 1819
+MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
+SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-dvdnav-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-dvdnav-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-dvdnav-0.8.11 262
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-dvdnav-0.8.12 72
+RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-dvdnav-0.8.12 72
+SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-dvdnav-0.8.12 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+8tQamhnQswr0vIRAsOdAJ47nFZ5GPxw/SvFO0I+F54WDgrwBACgvYz1
+Zi6ozLzMpTSBzC6244l28hM=
+=IJkA
+-----END PGP SIGNATURE-----

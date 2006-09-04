@@ -1,38 +1,41 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-gnomevfs-0.10.4-fix.diff 2273 RMD160 803817935d6a1a1007c1d4132fa99761ff975367 SHA1 7e58196c31b06f005b64e27b0c8c049bb0d85c6d SHA256 d0ef0fdbfc46e5849e8330582d6f690fa7cada6b164b6eeb85b8b5642b42af5b
 MD5 cadf70b870dbce1bc2812c599a30d5a6 files/gst-plugins-gnomevfs-0.10.4-fix.diff 2273
 RMD160 803817935d6a1a1007c1d4132fa99761ff975367 files/gst-plugins-gnomevfs-0.10.4-fix.diff 2273
 SHA256 d0ef0fdbfc46e5849e8330582d6f690fa7cada6b164b6eeb85b8b5642b42af5b files/gst-plugins-gnomevfs-0.10.4-fix.diff 2273
-DIST gst-plugins-0.8.10.tar.bz2 2397528
-DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
+DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
 DIST gst-plugins-base-0.10.4.tar.bz2 1097817 RMD160 da837968b10a130dbeaa1953a3ad9f27586ba683 SHA1 1874bfc701f75ff859615c6b6e5b65c50df6f53a SHA256 6c556051191364eacf05dcf01a9f3101240a6b6155e331e4cbcbfca55a91ca42
 DIST gst-plugins-base-0.10.6.tar.bz2 1195072 RMD160 69659a40113b38b7eb1569c1da49ee5c37a5fd24 SHA1 58c1177e530d2ff91ddfa3a9322ab5ba3e0ddbb4 SHA256 0ef1b8cbe6d7e898d0636342479de46a780f720033c1b4f7217c903aac6d80ad
 DIST gst-plugins-base-0.10.7.tar.bz2 1166071 RMD160 67957a8d62fcf2b3170c57ea8bc4b58ce227306b SHA1 832b54fc9f3bc7f4c0a5337363081a25171d2662 SHA256 7be5984162333dae48d8f7e58e6c7f4b43726c78e2ca13aca6618b1342af8d37
 DIST gst-plugins-base-0.10.8.tar.bz2 1234234 RMD160 41f5647fb0be2d0038ca925a0479e5c8ac57ab4a SHA1 b428fe9caa17edd78a87d50931691a6d47c20e72 SHA256 4e7c14f82b23f268ac053ad21a23cc637052eca72b8ea23d02c2e7a90521d74a
-EBUILD gst-plugins-gnomevfs-0.10.4.ebuild 590 RMD160 aeef82bd701ca4ba4efde30a5b84cdaad05f7043 SHA1 bc5eeb6f1438d6cd0f267239b632e0620e73cebc SHA256 d5b23cb236189b0270d8d5c9e1b72beca6b75fce4d37733be0f9c8ca12d15e21
-MD5 8d6e20fe4fd14f92f7f79f9697b22cdd gst-plugins-gnomevfs-0.10.4.ebuild 590
-RMD160 aeef82bd701ca4ba4efde30a5b84cdaad05f7043 gst-plugins-gnomevfs-0.10.4.ebuild 590
-SHA256 d5b23cb236189b0270d8d5c9e1b72beca6b75fce4d37733be0f9c8ca12d15e21 gst-plugins-gnomevfs-0.10.4.ebuild 590
-EBUILD gst-plugins-gnomevfs-0.10.6.ebuild 474 RMD160 ca69ae4adece5aec1937822b0d5e847cda91671f SHA1 4cc4c0415a500a9b7d5c13ad17dfd35a9528c9f5 SHA256 0e60d0181792e6a2db6c6aed8cfa943a779919ef9388680af0781a7b611776e7
-MD5 9f1b3b246c8d90650dca04f6d111afbe gst-plugins-gnomevfs-0.10.6.ebuild 474
-RMD160 ca69ae4adece5aec1937822b0d5e847cda91671f gst-plugins-gnomevfs-0.10.6.ebuild 474
-SHA256 0e60d0181792e6a2db6c6aed8cfa943a779919ef9388680af0781a7b611776e7 gst-plugins-gnomevfs-0.10.6.ebuild 474
-EBUILD gst-plugins-gnomevfs-0.10.7.ebuild 471 RMD160 ea50cdc59d480efde393893b34839a672deae963 SHA1 83517288fd6307b7e897d49ea6cf6ef231428a97 SHA256 9df02391e156843d567be8c7e3b3d65e0f65d1299a3824d6b449d07480aebbd9
-MD5 295d2dbb7b908089ac4849fc8e6b0dc6 gst-plugins-gnomevfs-0.10.7.ebuild 471
-RMD160 ea50cdc59d480efde393893b34839a672deae963 gst-plugins-gnomevfs-0.10.7.ebuild 471
-SHA256 9df02391e156843d567be8c7e3b3d65e0f65d1299a3824d6b449d07480aebbd9 gst-plugins-gnomevfs-0.10.7.ebuild 471
-EBUILD gst-plugins-gnomevfs-0.10.8.ebuild 476 RMD160 01ee8d27120692dc6d2410f8be4ef46bbe9d5d3e SHA1 760cecf2920378c5ddbf5ccec3ea797b470f1300 SHA256 c75b9a5512cc5a97aa59cc37b2749cb02aa0ded69b5016850e64309810c28905
-MD5 4888619dbe9cdb07b314e97b28fbb0d4 gst-plugins-gnomevfs-0.10.8.ebuild 476
-RMD160 01ee8d27120692dc6d2410f8be4ef46bbe9d5d3e gst-plugins-gnomevfs-0.10.8.ebuild 476
-SHA256 c75b9a5512cc5a97aa59cc37b2749cb02aa0ded69b5016850e64309810c28905 gst-plugins-gnomevfs-0.10.8.ebuild 476
+EBUILD gst-plugins-gnomevfs-0.10.4.ebuild 594 RMD160 b59249054773ea651a892f80157506876ab740e5 SHA1 53ab852795844c70ad33bbccef82ebd845aaaf11 SHA256 78c06b0c51a321f46d8435897e82413367fb58ec277ce0c1087feb06dc9fa8ff
+MD5 7d5c0ca614a524eb37463a5d27652c77 gst-plugins-gnomevfs-0.10.4.ebuild 594
+RMD160 b59249054773ea651a892f80157506876ab740e5 gst-plugins-gnomevfs-0.10.4.ebuild 594
+SHA256 78c06b0c51a321f46d8435897e82413367fb58ec277ce0c1087feb06dc9fa8ff gst-plugins-gnomevfs-0.10.4.ebuild 594
+EBUILD gst-plugins-gnomevfs-0.10.6.ebuild 475 RMD160 e6d73ea4d1e9d32f31f6710218ca7fc3c24422b7 SHA1 7afe6b6c16345a65522d4d932c0333690ae4bc78 SHA256 ddedde02cdaba4ac50f3e90267ba949e2a33eed59f806d87446dd75eb9803038
+MD5 7640daeec6dc84125d27db299a1da429 gst-plugins-gnomevfs-0.10.6.ebuild 475
+RMD160 e6d73ea4d1e9d32f31f6710218ca7fc3c24422b7 gst-plugins-gnomevfs-0.10.6.ebuild 475
+SHA256 ddedde02cdaba4ac50f3e90267ba949e2a33eed59f806d87446dd75eb9803038 gst-plugins-gnomevfs-0.10.6.ebuild 475
+EBUILD gst-plugins-gnomevfs-0.10.7.ebuild 475 RMD160 1e8ac897ea2c46020b69c413c009cf4dbec0e3a4 SHA1 2e9d5b33d3388023a822b7557f0de56d78e6749a SHA256 e4527ba8c50b1e27134cc23c2978968753840faf7acaf37a5657e5a661f98248
+MD5 b60b2260699498c9eeb4e25d17f8d799 gst-plugins-gnomevfs-0.10.7.ebuild 475
+RMD160 1e8ac897ea2c46020b69c413c009cf4dbec0e3a4 gst-plugins-gnomevfs-0.10.7.ebuild 475
+SHA256 e4527ba8c50b1e27134cc23c2978968753840faf7acaf37a5657e5a661f98248 gst-plugins-gnomevfs-0.10.7.ebuild 475
+EBUILD gst-plugins-gnomevfs-0.10.8.ebuild 477 RMD160 41ee1c3d5a0234007f237f9369d1ab62415adb37 SHA1 23a1916609b62808dc367abf9b443ee3b39c2c34 SHA256 902cffbe0a21e326c1215e90786369cbcbcdac462dd429f0d63db2677caab6bc
+MD5 f49e0e90acbaee36d7e1628e28d9422e gst-plugins-gnomevfs-0.10.8.ebuild 477
+RMD160 41ee1c3d5a0234007f237f9369d1ab62415adb37 gst-plugins-gnomevfs-0.10.8.ebuild 477
+SHA256 902cffbe0a21e326c1215e90786369cbcbcdac462dd429f0d63db2677caab6bc gst-plugins-gnomevfs-0.10.8.ebuild 477
 EBUILD gst-plugins-gnomevfs-0.8.10.ebuild 404 RMD160 4f8c337fa61752c09b52355c87ff0d2dfac53223 SHA1 5af4d17a0c37036edecbac8911f62532ad693b3e SHA256 21f09882296c142ffc5632ced9c68760bb4a1e4839f8c26cfc8f73678a19f8ee
 MD5 191f201d6d60dfcc27ab2e2130edf8fe gst-plugins-gnomevfs-0.8.10.ebuild 404
 RMD160 4f8c337fa61752c09b52355c87ff0d2dfac53223 gst-plugins-gnomevfs-0.8.10.ebuild 404
 SHA256 21f09882296c142ffc5632ced9c68760bb4a1e4839f8c26cfc8f73678a19f8ee gst-plugins-gnomevfs-0.8.10.ebuild 404
-EBUILD gst-plugins-gnomevfs-0.8.11.ebuild 405 RMD160 b035babfeb8a004e98fafe94ebca3c4860df911f SHA1 0092ff5c6f90ec34d13d2751ce92ed7ebcbb839d SHA256 3bb75f69b066bfd46d3c4fa02904494d5b112db8fab1e49f6b0438e9c5ec9480
-MD5 c030c9196746444d08ad2480b8166e48 gst-plugins-gnomevfs-0.8.11.ebuild 405
-RMD160 b035babfeb8a004e98fafe94ebca3c4860df911f gst-plugins-gnomevfs-0.8.11.ebuild 405
-SHA256 3bb75f69b066bfd46d3c4fa02904494d5b112db8fab1e49f6b0438e9c5ec9480 gst-plugins-gnomevfs-0.8.11.ebuild 405
+EBUILD gst-plugins-gnomevfs-0.8.11.ebuild 405 RMD160 a1b7b5e50c7e7d5a902447c5ee267adb16ed04dd SHA1 62caf3efb3cdf16956160244dc77948b4c8736a3 SHA256 2bd4339959c282b550b1c790ae5addb6ecad1249b2f27b30c52ac4fd2f5a0ebc
+MD5 b9babd82a74937ba7d65b46fbd87a532 gst-plugins-gnomevfs-0.8.11.ebuild 405
+RMD160 a1b7b5e50c7e7d5a902447c5ee267adb16ed04dd gst-plugins-gnomevfs-0.8.11.ebuild 405
+SHA256 2bd4339959c282b550b1c790ae5addb6ecad1249b2f27b30c52ac4fd2f5a0ebc gst-plugins-gnomevfs-0.8.11.ebuild 405
 EBUILD gst-plugins-gnomevfs-0.8.12.ebuild 412 RMD160 49d8bea53b14c3085622a7308dbd31349bd16a5d SHA1 7c194ff91d5f41d9373f00901fb49b4355733a17 SHA256 b4fdd4861a02e0de52a529419c82f60089a8341a34ca9955359eaa9335f11d22
 MD5 3e06dcd0ff4887f5caf761debdb1ce4e gst-plugins-gnomevfs-0.8.12.ebuild 412
 RMD160 49d8bea53b14c3085622a7308dbd31349bd16a5d gst-plugins-gnomevfs-0.8.12.ebuild 412
@@ -57,12 +60,19 @@ SHA256 f0c4ce198bed889fcd66c14e7bce6d8713a797d1f415462c61790d51cecb6678 files/di
 MD5 ac7ae1c61970db2fb01d3071ec606e87 files/digest-gst-plugins-gnomevfs-0.10.8 277
 RMD160 b4c7872d0e2c53f8cf0f0297f62c1347cd3b5b18 files/digest-gst-plugins-gnomevfs-0.10.8 277
 SHA256 818f2b5016a64f1415b9645eb70fb2e24adce4f920e2e81a9b2e4ee02e3f286f files/digest-gst-plugins-gnomevfs-0.10.8 277
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-gnomevfs-0.8.10 72
-RMD160 a62f001176838ce74072f94a1b7db75eccea58db files/digest-gst-plugins-gnomevfs-0.8.10 72
-SHA256 052afe5e12d0c26ff5292ba9fd8e884487c5afcc74c273e263b67df3e2ec5084 files/digest-gst-plugins-gnomevfs-0.8.10 72
+MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-gnomevfs-0.8.10 262
+RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-gnomevfs-0.8.10 262
+SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-gnomevfs-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-gnomevfs-0.8.11 262
 RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-gnomevfs-0.8.11 262
 SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-gnomevfs-0.8.11 262
 MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-gnomevfs-0.8.12 262
 RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-gnomevfs-0.8.12 262
 SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-gnomevfs-0.8.12 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+8szamhnQswr0vIRAoe3AKCgM9ufr2so7ldOVuTWTWGB8VoyZACgn3NU
+Xd2ubGO+2YhiiEx9jecgZTw=
+=TtX0
+-----END PGP SIGNATURE-----

@@ -1,8 +1,42 @@
-MD5 497f473d0a5eaa482c537c79590c55f2 ChangeLog 4586
-MD5 e5a6b80e2dfc0bf36559f4663fb90e25 files/digest-gst-plugins-dvdread-0.8.10 72
-MD5 875cb5640e2bc4b0162c08a6bc0fba6e files/digest-gst-plugins-dvdread-0.8.11 72
-MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-dvdread-0.8.12 72
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
+DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
+DIST gst-plugins-0.8.12.tar.bz2 2506926
+EBUILD gst-plugins-dvdread-0.8.10.ebuild 366 RMD160 efb427367bb47698f2f01ad86ec1bdc088188ffd SHA1 149fb014c5d67b4528f6e41329f3713bbdea7cf8 SHA256 399d2089a38898e6d1ed2389eae172fea081c183bce3f036e7b33cc6a9d8c4b7
 MD5 9dda5b5f81b3ba9591b6adf0c428513e gst-plugins-dvdread-0.8.10.ebuild 366
-MD5 46806c5e930eb31ce6576f989c5f7cc2 gst-plugins-dvdread-0.8.11.ebuild 366
-MD5 f4e0583fc5c539af14ec676a222d59c1 gst-plugins-dvdread-0.8.12.ebuild 373
+RMD160 efb427367bb47698f2f01ad86ec1bdc088188ffd gst-plugins-dvdread-0.8.10.ebuild 366
+SHA256 399d2089a38898e6d1ed2389eae172fea081c183bce3f036e7b33cc6a9d8c4b7 gst-plugins-dvdread-0.8.10.ebuild 366
+EBUILD gst-plugins-dvdread-0.8.11.ebuild 369 RMD160 838d41abfa3039160c8f879a3933aa250f7b8da7 SHA1 74c9b0b341fe71c9dbd023019708bc8de4e15586 SHA256 b7eb1bfae2bb45d6e2eb0ec5849351ff67b4361f41c771c1341fe16aab2745a9
+MD5 2025d2dfaf2d9a85505855bff666f1c3 gst-plugins-dvdread-0.8.11.ebuild 369
+RMD160 838d41abfa3039160c8f879a3933aa250f7b8da7 gst-plugins-dvdread-0.8.11.ebuild 369
+SHA256 b7eb1bfae2bb45d6e2eb0ec5849351ff67b4361f41c771c1341fe16aab2745a9 gst-plugins-dvdread-0.8.11.ebuild 369
+EBUILD gst-plugins-dvdread-0.8.12.ebuild 377 RMD160 423db3874a49e8c714d5f7fdf653c6f4c0c868c1 SHA1 0de477ca6a01a120e1c60d52cd958daee73af2b6 SHA256 b0d67258c929b87d20ab724680d3d3b01ffa23c5607c0992a2fc05229f79a024
+MD5 ed8e31e33ec5c88978ec3af5c599449d gst-plugins-dvdread-0.8.12.ebuild 377
+RMD160 423db3874a49e8c714d5f7fdf653c6f4c0c868c1 gst-plugins-dvdread-0.8.12.ebuild 377
+SHA256 b0d67258c929b87d20ab724680d3d3b01ffa23c5607c0992a2fc05229f79a024 gst-plugins-dvdread-0.8.12.ebuild 377
+MISC ChangeLog 4586 RMD160 370f398322a147f5358e5830a7cb88aa9b477a00 SHA1 211782283d29b7bbe9d1d2afa462777b56aa7d5f SHA256 f073d9aa6372269f8eca160f47013ff953b0bb20a37c248ff5555d341020613a
+MD5 497f473d0a5eaa482c537c79590c55f2 ChangeLog 4586
+RMD160 370f398322a147f5358e5830a7cb88aa9b477a00 ChangeLog 4586
+SHA256 f073d9aa6372269f8eca160f47013ff953b0bb20a37c248ff5555d341020613a ChangeLog 4586
+MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
+SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
+MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-dvdread-0.8.10 262
+RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-dvdread-0.8.10 262
+SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-dvdread-0.8.10 262
+MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-dvdread-0.8.11 262
+RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-dvdread-0.8.11 262
+SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-dvdread-0.8.11 262
+MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-dvdread-0.8.12 72
+RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-dvdread-0.8.12 72
+SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-dvdread-0.8.12 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+8tvamhnQswr0vIRAqfEAJ49Y1c8hz9N0cxMVSFCeoHr+xKCIQCeMGr9
+Tgf5jubFSNJ+pxTWVJhtjWQ=
+=SkIi
+-----END PGP SIGNATURE-----
