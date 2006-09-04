@@ -1,11 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/files/0.5-hald.rc,v 1.5 2006/01/07 05:00:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/files/0.5-hald.rc,v 1.6 2006/09/04 15:14:34 uberlord Exp $
 
 depend() {
 	need dbus
-	after coldplug
+	use logger
+	after coldplug dns nscd
 }
 
 start() {

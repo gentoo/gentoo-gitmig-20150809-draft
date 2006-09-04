@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.100 2006/08/29 04:20:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.101 2006/09/04 15:14:34 uberlord Exp $
+
+  04 Sep 2006; Roy Marples <uberlord@gentoo.org> files/0.5-hald.rc,
+  files/hald:
+  hald init script dependencies updated, #125938.
 
   29 Aug 2006; Joshua Jackson <tsunam@gentoo.org> hal-0.5.7-r3.ebuild:
   stable x86; bug #144344
