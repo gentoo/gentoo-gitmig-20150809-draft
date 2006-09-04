@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.19 2006/08/20 14:14:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.20 2006/09/04 09:19:31 mr_bones_ Exp $
 
 inherit cannadic eutils
 
@@ -16,7 +16,11 @@ KEYWORDS="x86 ppc sparc alpha"
 IUSE="doc"
 
 DEPEND="virtual/libc
-	virtual/x11
+	|| ( ( x11-misc/gccmakedep
+			x11-misc/imake
+		)
+		virtual/x11
+	)
 	>=sys-apps/sed-4
 	doc? ( app-text/ptex )"
 RDEPEND="virtual/libc"
