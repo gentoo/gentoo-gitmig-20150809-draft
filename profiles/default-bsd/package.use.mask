@@ -1,3 +1,4 @@
+app-misc/mc pam
 dev-libs/confuse test
 kde-base/kcontrol ieee1394
 kde-base/kdenetwork-meta wifi
