@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.2.3.ebuild,v 1.1 2006/07/29 05:29:30 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-1.2.3.ebuild,v 1.2 2006/09/04 18:27:42 compnerd Exp $
 
 inherit eutils
 
@@ -26,6 +26,9 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${PN}-1.2.3-new-button.patch
+
+	# Fix up DBUS function call to deprecated function
+	epatch ${FILESDIR}/${PN}-1.2.3-dbus_close.patch
 }
 
 src_install() {
