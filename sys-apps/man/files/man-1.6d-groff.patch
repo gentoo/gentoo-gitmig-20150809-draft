@@ -1,0 +1,28 @@
+Don't force output encoding, let groff do the detectiong
+
+http://bugs.gentoo.org/146315
+
+--- man-1.6d/configure
++++ man-1.6d/configure
+@@ -473,9 +473,9 @@
+   then
+     if test $Fnroff = "missing"
+     then
+-      nroff="nroff -Tlatin1 -mandoc"
++      nroff="nroff -mandoc"
+     else
+-      nroff="$Fnroff -Tlatin1 -mandoc"
++      nroff="$Fnroff -mandoc"
+     fi
+     troff="troff -mandoc"
+     echo "Warning: could not find groff"
+@@ -484,7 +484,7 @@
+     then
+       nroff="$Fgroff -Tlatin1 -mandoc"
+     else
+-      nroff="$Fnroff -Tlatin1 -mandoc"
++      nroff="$Fnroff -mandoc"
+     fi
+     troff="$Fgroff -Tps -mandoc"
+     jnroff="$Fgroff -Tnippon -mandocj"
+
