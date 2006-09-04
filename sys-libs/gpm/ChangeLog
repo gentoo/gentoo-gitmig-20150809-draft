@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.53 2006/07/22 15:46:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.54 2006/09/04 06:21:05 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> ChangeLog:
+  Marked stable on mips.
 
   22 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> gpm-1.20.1-r5.ebuild:
   Stable on alpha.
