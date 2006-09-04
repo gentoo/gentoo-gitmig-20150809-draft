@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.61.26.ebuild,v 1.5 2006/09/01 17:28:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.61.26.ebuild,v 1.6 2006/09/04 06:46:06 tsunam Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ~ppc-macos ppc64 sparc ~x86"
+KEYWORDS="amd64 ~hppa ppc ~ppc-macos ppc64 sparc x86"
 IUSE="vorbis"
 
 DEPEND="media-libs/libmad
