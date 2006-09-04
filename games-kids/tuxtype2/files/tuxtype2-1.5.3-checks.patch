@@ -1,0 +1,18 @@
+--- tuxtype/alphabet.c
++++ tuxtype/alphabet.c
+@@ -120,7 +120,15 @@
+         DEBUGCODE { fprintf( stderr, "black_outline of \"%s\"\n", t ); }
+ 
+ 	tmp = TTF_RenderText_Solid(font, t, black);
++	if (tmp == NULL) {
++		fprintf(stderr, "TTF_RenderText_Solid(%s) failed: %s\n", t, TTF_GetError());
++		exit(1);
++	}
+ 	out = SDL_CreateRGBSurface(SDL_SWSURFACE, (tmp->w)+5, (tmp->h)+5, 32, rmask, gmask, bmask, amask);
++	if (out == NULL) {
++		fprintf(stderr, "SDL_CreateRGBSurface() failed: %s\n", SDL_GetError());
++		exit(1);
++	}
+ 
+ 	dstrect.w = tmp->w;
+ 	dstrect.h = tmp->h;
