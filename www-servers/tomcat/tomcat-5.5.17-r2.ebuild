@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r2.ebuild,v 1.2 2006/09/04 16:19:52 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r2.ebuild,v 1.3 2006/09/04 16:49:36 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -69,7 +69,7 @@ pkg_setup() {
 	fi
 }
 
-ant_src_unpack() {
+src_unpack() {
 	unpack ${A}
 	cd ${S}
 
@@ -109,7 +109,7 @@ ant_src_unpack() {
 		java-pkg_jar-from xerces-2 xercesImpl.jar
 	fi
 
-	mkdir ${S}/build/build/lib && cd ${S}/build/buildlib
+	mkdir ${S}/build/build/common/lib && cd ${S}/build/build/common/lib
 	java-pkg_jar-from ant-core
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-dbcp
