@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.29 2006/07/09 20:27:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.30 2006/09/04 06:39:42 vapier Exp $
 
 inherit eutils flag-o-matic autotools libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://libmpeg2.sourceforge.net/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="sdl X"
 
 DEPEND="sdl? ( media-libs/libsdl )
@@ -26,7 +26,7 @@ DEPEND="sdl? ( media-libs/libsdl )
 		)
 	)"
 
-S="${WORKDIR}/${MY_P/b/}"
+S=${WORKDIR}/${MY_P/b/}
 
 src_unpack() {
 	unpack ${A}
