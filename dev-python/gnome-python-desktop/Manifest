@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gnome-python-desktop-2.14.0.tar.bz2 403302 RMD160 a99c31503eb9b5aefef53b8ab735ddc9c786c202 SHA1 1807b60a8789b3f2c758c6b688250e66b2778674 SHA256 1e617686fc7b84a4b2779cdfe3987a592f40bd24f3f5e252fd559ca41452dde1
-EBUILD gnome-python-desktop-2.14.0.ebuild 1457 RMD160 bccca491cd5ca548251be7237e443aac9b412add SHA1 26d2d8786cd6a82b322a7432e5a44a7be4a47e43 SHA256 b817145c8c876b4eae48870bbfee32b639da9f03ceeb7cab7a9dd74e764cadfb
-MD5 69fa7e9082aced76950f75bb865a1666 gnome-python-desktop-2.14.0.ebuild 1457
-RMD160 bccca491cd5ca548251be7237e443aac9b412add gnome-python-desktop-2.14.0.ebuild 1457
-SHA256 b817145c8c876b4eae48870bbfee32b639da9f03ceeb7cab7a9dd74e764cadfb gnome-python-desktop-2.14.0.ebuild 1457
+EBUILD gnome-python-desktop-2.14.0.ebuild 1452 RMD160 16566c9cfb1e84cd05d20219b1069729bdb50302 SHA1 a4c2cd3e60567d54699f6e4c9620ef9645222d20 SHA256 ab2be8c0168e8c398220305a4e5f9515aceb096069b7c8fcc61849bbd064a4a4
+MD5 de2110e6d1e15c3e9dd0ce0878a14ebd gnome-python-desktop-2.14.0.ebuild 1452
+RMD160 16566c9cfb1e84cd05d20219b1069729bdb50302 gnome-python-desktop-2.14.0.ebuild 1452
+SHA256 ab2be8c0168e8c398220305a4e5f9515aceb096069b7c8fcc61849bbd064a4a4 gnome-python-desktop-2.14.0.ebuild 1452
 MISC ChangeLog 2360 RMD160 c25c925738f9bbac70228fa79c2015d6251853a1 SHA1 b08ee3f159f7cb97432506516e47afff5659ae7b SHA256 019bf88568591f7cd5a20e337dc174d323ea6fc78d3e8f2bf0ed1b55bd67cf39
 MD5 72a2d58906f06aa55f24c13040602f4f ChangeLog 2360
 RMD160 c25c925738f9bbac70228fa79c2015d6251853a1 ChangeLog 2360
@@ -14,3 +17,10 @@ SHA256 d6e10a30ac9423eb5a9ba4e7b2a76322683f40b2fb428d2f310dcdbd1cfde235 metadata
 MD5 9be7efb5fc7bd4e20e6201e38a1b3347 files/digest-gnome-python-desktop-2.14.0 286
 RMD160 7457e0d5425ab3a1d2732e9f7cb2d08f9f1a2778 files/digest-gnome-python-desktop-2.14.0 286
 SHA256 08eec625aa03a8f3457e64050be9a2edfd14f9ccefe82f0c4e25edabac83ce68 files/digest-gnome-python-desktop-2.14.0 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE+8p9amhnQswr0vIRAn6CAKCSXd+7A/swaUQOJ4Q+Fj1QUU57GACfc9E8
+Q/spelr66ONNLgoJgRzPjn4=
+=P+BU
+-----END PGP SIGNATURE-----

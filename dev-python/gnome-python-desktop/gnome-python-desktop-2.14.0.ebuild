@@ -1,16 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.18 2006/08/19 00:54:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/gnome-python-desktop-2.14.0.ebuild,v 1.19 2006/09/04 06:40:22 vapier Exp $
 
 inherit distutils gnome2 python virtualx
 
-DESCRIPTION="provides python interfacing modules for some GNOME desktop
-libraries"
+DESCRIPTION="provides python interfacing modules for some GNOME desktop libraries"
 HOMEPAGE="http://pygtk.org/"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 sparc x86"
 
 RDEPEND="virtual/python
 	>=dev-python/pygtk-2.4.0
@@ -33,7 +32,7 @@ RDEPEND="virtual/python
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
-DOCS="AUTHORS COPYING* ChangeLog INSTALL MAINTAINERS NEWS README"
+DOCS="AUTHORS ChangeLog INSTALL MAINTAINERS NEWS README"
 
 src_test() {
 	Xmake check || die "tests failed"
