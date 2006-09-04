@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/bbdb
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.15 2005/04/21 18:30:18 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.16 2006/09/04 05:19:57 mkennedy Exp $
+
+*bbdb-2.35_pre20040323-r1 (04 Sep 2006)
+
+  04 Sep 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +bbdb-2.35_pre20040323-r1.ebuild:
+  Install TeX assets (allows for bbdb-print functionality); Resolevs Bug #145888.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org>
   bbdb-2.35_pre20040323.ebuild:
