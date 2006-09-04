@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.4.ebuild,v 1.1 2006/05/30 18:44:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.4.ebuild,v 1.2 2006/09/04 12:44:24 malc Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE="ffmpeg mysql postgres v4l"
 DEPEND="virtual/libc
 		sys-libs/zlib
