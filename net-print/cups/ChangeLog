@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.198 2006/09/02 04:23:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.199 2006/09/04 21:20:40 genstef Exp $
+
+*cups-1.2.3 (04 Sep 2006)
+
+  04 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/cupsDirRead-dont-end-on-failed-stat.patch, +cups-1.2.3.ebuild:
+  Add php useflag, bug 144464 thanks to Christian Korff
+  <christian.korff@gmail.com>, version bump thanks to Francisco Javier
+  <ffelix@sshinf.com> in bug 146266, add patch from upstream issue tracker to
+  fix problems with dead links thanks to Ed Catmur
 
   02 Sep 2006; Stefan Schweizer <genstef@gentoo.org> cups-1.2.2.ebuild:
   resolve circular dep by moving the ppds dep to PDEPEND, thanks to Mart
