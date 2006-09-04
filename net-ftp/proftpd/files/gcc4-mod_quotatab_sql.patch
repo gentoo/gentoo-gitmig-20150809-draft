@@ -1,0 +1,12 @@
+--- proftpd-1.2.10/contrib/mod_quotatab_sql.c.orig	2006-09-04 11:21:09.000000000 +0000
++++ proftpd-1.2.10/contrib/mod_quotatab_sql.c	2006-09-04 11:22:27.000000000 +0000
+@@ -684,8 +684,7 @@
+       return NULL;
+     }
+ 
+-    tab->tab_data = pcalloc(tab->tab_pool, sizeof(char));
+-    ((char *) tab->tab_data) = pstrdup(tab->tab_pool, select_query);
++    tab->tab_data = (void *) pstrdup(tab->tab_pool, select_query);
+   }
+ 
+   /* Set all the necessary function pointers. */

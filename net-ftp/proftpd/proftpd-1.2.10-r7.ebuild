@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r7.ebuild,v 1.8 2006/05/27 14:24:49 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r7.ebuild,v 1.9 2006/09/04 23:50:32 humpback Exp $
 
 inherit flag-o-matic eutils
 
@@ -43,6 +43,9 @@ src_unpack() {
 	# Fix ftpshut and SqlShowInfo, bug #100364
 	epatch "${FILESDIR}/proftpd-ftpshut.patch"
 	epatch "${FILESDIR}/proftpd-sqlshowinfo.patch"
+
+	# Fix gcc4 compile error, bug #145940
+	epatch "${FILESDIR}/gcc4-mod_quotatab_sql.patch"
 }
 
 src_compile() {

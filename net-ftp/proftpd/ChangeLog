@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.109 2006/06/24 13:41:04 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.110 2006/09/04 23:50:32 humpback Exp $
+
+  04 Sep 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/gcc4-mod_quotatab_sql.patch, proftpd-1.2.10-r7.ebuild:
+  Added patch to solve issue while building with gcc 4. Close bug #145940.
+  Thanks to everyone in that bug.
 
   24 Jun 2006; Gustavo Felisberto <humpback@gentoo.org>;
   proftpd-1.3.0-r1.ebuild:
