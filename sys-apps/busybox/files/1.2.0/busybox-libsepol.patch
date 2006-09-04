@@ -1,0 +1,13 @@
+Index: Rules.mak
+===================================================================
+--- Rules.mak	(revision 15800)
++++ Rules.mak	(working copy)
+@@ -298,7 +298,7 @@
+ endif
+ 
+ ifeq ($(strip $(CONFIG_SELINUX)),y)
+-    LIBRARIES += -lselinux
++    LIBRARIES += -lselinux -lsepol
+ endif
+ 
+ ifeq ($(strip $(PREFIX)),)

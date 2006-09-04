@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.3.ebuild,v 1.19 2006/09/03 17:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.1.3.ebuild,v 1.20 2006/09/04 20:26:16 pebenito Exp $
 
 inherit eutils flag-o-matic
 
@@ -58,6 +58,8 @@ src_unpack() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/1.1.1/bb.patch
+	# fix SELinux linking:
+	epatch "${FILESDIR}"/1.2.0/busybox-libsepol.patch
 
 	# check for a busybox config before making one of our own.
 	# if one exist lets return and use it.
