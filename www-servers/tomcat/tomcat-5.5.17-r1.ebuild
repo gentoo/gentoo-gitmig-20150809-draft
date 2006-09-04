@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r1.ebuild,v 1.2 2006/09/04 01:18:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r1.ebuild,v 1.3 2006/09/04 06:31:38 mr_bones_ Exp $
 
 inherit eutils java-pkg
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~amd64 ~x86"
 LICENSE="Apache-2.0"
 
-RDEPEND=">=virtual/jdk-1.4*
+RDEPEND=">=virtual/jdk-1.4
 	=dev-java/eclipse-ecj-3.1*
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
