@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsvg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.23 2006/02/20 17:02:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsvg/ChangeLog,v 1.24 2006/09/04 01:09:38 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> libsvg-0.1.4.ebuild:
+  Marked stable on mips.
 
   20 Feb 2006; Markus Rothe <corsair@gentoo.org> libsvg-0.1.4.ebuild:
   Stable on ppc64
