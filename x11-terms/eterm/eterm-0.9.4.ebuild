@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.8 2006/09/04 08:43:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.4.ebuild,v 1.1 2006/09/04 08:43:36 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="escreen etwin mmx unicode"
 
 DEPEND="|| ( ( x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libICE x11-libs/libSM x11-proto/xextproto x11-proto/xproto ) virtual/x11 )
@@ -28,12 +28,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-pixmap-colmod.patch
-	epatch "${FILESDIR}"/${P}-CARD64.patch #76324
-	epatch "${FILESDIR}"/${P}-deadkeys.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch #92485
 	unpack Eterm-bg-${PV}.tar.gz
-	sed -i 's:Tw/Tw_1\.h:Tw/Tw1.h:' src/libscream.c || die
 }
 
 src_compile() {
