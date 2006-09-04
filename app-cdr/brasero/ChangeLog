@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.1 2006/09/04 01:54:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.2 2006/09/04 02:32:54 metalgod Exp $
+
+  04 Sep 2006; Luis Medinas <metalgod@gentoo.org> brasero-0.4.2.ebuild:
+  Added cdrdao dependency thanks to Arif Lukito <maxima.bugs@gmail.com> on bug
+  #145173.
 
 *brasero-0.4.2 (04 Sep 2006)
 

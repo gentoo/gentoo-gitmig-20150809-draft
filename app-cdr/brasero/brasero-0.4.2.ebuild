@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.4.2.ebuild,v 1.1 2006/09/04 01:54:11 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.4.2.ebuild,v 1.2 2006/09/04 02:32:54 metalgod Exp $
 
 inherit gnome2
 
@@ -22,6 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=gnome-extra/nautilus-cd-burner-2.14.2
 	>=dev-libs/libxml2-2.6
 	>=sys-apps/hal-0.5.5
+	app-cdr/cdrdao
 	gdl? ( >=dev-libs/gdl-0.6 )
 	totem? ( >=media-video/totem-1.4.2 )
 	beagle? ( >=app-misc/beagle-0.2.5 )
