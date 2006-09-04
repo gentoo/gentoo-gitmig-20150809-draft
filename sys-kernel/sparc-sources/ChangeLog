@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.106 2006/08/28 18:35:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.107 2006/09/04 18:58:04 gustavoz Exp $
+
+*sparc-sources-2.4.33.3 (04 Sep 2006)
+
+  04 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -sparc-sources-2.4.33.2-r1.ebuild, +sparc-sources-2.4.33.3.ebuild:
+  2.4.33.3 base, fixes CVE-2006-4145 and sun disklabel sector usage count.
+  Rolled back to squashfs3.0 since 3.1 has issues with 2.4
 
 *sparc-sources-2.4.33.2-r1 (28 Aug 2006)
 
