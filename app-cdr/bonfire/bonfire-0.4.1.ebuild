@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/bonfire-0.4.1.ebuild,v 1.2 2006/07/16 15:33:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/bonfire-0.4.1.ebuild,v 1.3 2006/09/04 01:48:52 metalgod Exp $
 
 inherit gnome2
 
@@ -28,6 +28,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	libnotify? ( >=x11-libs/libnotify-0.3 )"
 
 DEPEND="${RDEPEND}
+	!app-cdr/brasero
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
@@ -47,6 +48,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	ewarn "Bonfire changed his name for Brasero"
+	ewarn "To get an early release of this application"
+	ewarn "please emerge app-cdr/brasero instead"
 	einfo
 	einfo "For a best experience you should have a Linux Kernel >= 2.6.13"
 	einfo "to enable system features such as Extended Attributes and inotify."

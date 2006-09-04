@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/bonfire
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/ChangeLog,v 1.3 2006/07/16 15:33:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bonfire/ChangeLog,v 1.4 2006/09/04 01:48:52 metalgod Exp $
+
+  04 Sep 2006; Luis Medinas <metalgod@gentoo.org> -bonfire-0.3.91.ebuild,
+  bonfire-0.4.1.ebuild:
+  Add a blocker for app-cdr/brasero since Bonfire is the old name for this
+  application. Please start using app-cdr/brasero instead.
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   bonfire-0.4.1.ebuild:
