@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/wxperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.10 2006/08/20 13:35:44 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.11 2006/09/04 13:28:40 yuval Exp $
+
+*wxperl-0.57 (04 Sep 2006)
+
+  04 Sep 2006; Yuval Yaari <yuval@gentoo.org> +wxperl-0.57.ebuild:
+  Version bump
 
   20 Aug 2006; Yuval Yaari <yuval@gentoo.org> wxperl-0.56.ebuild:
   Just noticed (and made sure) wxGTK-2.6.2-r1 is sufficient
