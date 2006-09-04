@@ -36,6 +36,7 @@ lirc
 lm_sensors
 netjack
 beagle
+nvtv
 
 # Luca Longinotti <chtekk@gentoo.org>
 # fix dev-lang/php + arm + firebird
