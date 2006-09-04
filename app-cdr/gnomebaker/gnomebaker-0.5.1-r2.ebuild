@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.1-r2.ebuild,v 1.8 2006/06/11 19:01:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/gnomebaker-0.5.1-r2.ebuild,v 1.9 2006/09/04 02:28:30 metalgod Exp $
 
 inherit eutils gnome2
 
@@ -38,9 +38,9 @@ src_unpack() {
 
 src_install() {
 	gnome2_src_install \
-		gnomebakerdocdir=${D}/usr/share/doc/${P} \
-		docdir=${D}/usr/share/gnome/help/${PN}/C \
-		gnomemenudir=${D}/usr/share/applications
+		gnomebakerdocdir=/usr/share/doc/${P} \
+		docdir=/usr/share/gnome/help/${PN}/C \
+		gnomemenudir=/usr/share/applications
 	rm -rf ${D}/usr/share/doc/${P}/*.make ${D}/var
 	use nls || rm -rf ${D}/usr/share/locale
 }
