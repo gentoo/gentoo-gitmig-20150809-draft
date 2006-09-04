@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.42 2006/09/01 03:02:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.43 2006/09/04 00:21:17 nichoj Exp $
 
 inherit multilib
 
@@ -73,12 +73,18 @@ initialize-java-home() {
 		# use java-config-2, with GENTOO_VM set to generation-1 system vm, to
 		# setup JAVA_HOME
 		export JAVA_HOME=$(java-config-2 --jdk-home)
+		export JDK_HOME=$(java-config-2 --jdk-home)
+		# make sure JAVAC and JAVA are set correctly
+		export JAVAC=$(java-config-2 --javac)
+		export JAVA=$(java-config-2 --java)
 	fi
 	# Otherwise, JAVA_HOME should be defined already
 }
 
 # These are pre hooks to make sure JAVA_HOME is set properly.
 # note: don't need pkg_setup, since we define it here
+# FIXME remove these hooks after portage-2.1.1 is stable, as
+# it has proper env saving
 pre_src_unpack() {
 	initialize-java-home
 }
@@ -102,7 +108,6 @@ pre_pkg_preinst() {
 pre_pkg_postinst() {
 	initialize-java-home
 }
-
 
 
 pkglistpath="${T}/java-pkg-list"
