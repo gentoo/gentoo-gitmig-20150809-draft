@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.15 2006/04/09 16:55:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openslp/openslp-1.2.1.ebuild,v 1.16 2006/09/04 10:30:49 vapier Exp $
 
-inherit gnuconfig libtool eutils autotools
+inherit libtool eutils autotools
 
 DESCRIPTION="An open-source implementation of Service Location Protocol"
 HOMEPAGE="http://www.openslp.org/"
@@ -10,38 +10,31 @@ SRC_URI="mirror://sourceforge/openslp/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
+RESTRICT="test"
 
-DEPEND="virtual/libc"
-MAKEOPTS="${MAKEOPTS} -j1"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	# needed at least by alpha and amd64
-	cd ${S}
-	gnuconfig_update
+	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-fbsd.patch"
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 	eautomake
 
 	elibtoolize
 }
 
 src_compile() {
-	econf
-	emake || die "make failed"
+	econf || die
+	emake -j1 || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS FAQ ChangeLog NEWS README* THANKS
-	rm -rf ${D}/usr/doc
+	rm -rf "${D}"/usr/doc
 	dohtml -r .
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/slpd-init slpd
-}
-
-src_test() {
-	return
+	newinitd "${FILESDIR}"/slpd-init slpd
 }
