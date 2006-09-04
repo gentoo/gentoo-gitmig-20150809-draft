@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.9.ebuild,v 1.14 2006/03/21 22:01:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.4.9.ebuild,v 1.15 2006/09/04 08:51:41 vapier Exp $
 
 inherit eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tcl/${PN}${PV}-src.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="threads"
 
 DEPEND=""
