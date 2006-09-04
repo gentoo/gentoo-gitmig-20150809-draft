@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/aastex/aastex-5.2.ebuild,v 1.8 2004/12/28 20:55:56 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/aastex/aastex-5.2.ebuild,v 1.9 2006/09/04 01:22:21 kumba Exp $
 
 inherit latex-package
 
@@ -13,5 +13,5 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha ~mips hppa amd64"
+KEYWORDS="alpha amd64 hppa mips ppc sparc x86"
 
