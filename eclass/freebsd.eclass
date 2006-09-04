@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.8 2006/06/10 16:19:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.9 2006/09/04 17:32:23 flameeyes Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -31,7 +31,9 @@ RESCUE="freebsd-rescue-${PV}"
 # Release version (5.3, 5.4, 6.0, etc)
 RV="$(get_version_component_range 1-2)"
 
-IUSE="profile"
+if [[ ${PN} != "freebsd-share" ]] && [[ ${PN} != freebsd-sources ]]; then
+	IUSE="profile"
+fi
 
 #unalias -a
 alias install-info='/usr/bin/bsdinstall-info'
