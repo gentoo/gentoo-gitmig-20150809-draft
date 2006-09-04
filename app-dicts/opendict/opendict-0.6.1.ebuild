@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.1 2006/04/21 04:25:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.1.ebuild,v 1.2 2006/09/04 04:58:02 tsunam Exp $
 
 inherit eutils python gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://opendict.sourceforge.net/"
 SRC_URI="mirror://sourceforge/opendict/OpenDict-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc x86"
 IUSE=""
 # DEPEND=">=sys-devel/gettext-0.14" # currently no xgettext run
 RDEPEND=">=virtual/python-2.3
