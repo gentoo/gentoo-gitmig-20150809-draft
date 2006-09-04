@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.24 2006/09/03 18:16:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.25 2006/09/04 22:59:37 wormo Exp $
+
+  04 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  lapack-atlas-3.7.11.ebuild:
+  stable on ppc (Bug #141438)
 
   03 Sep 2006; Markus Dittrich <markusle@gentoo.org>
   lapack-atlas-3.7.15.ebuild:
