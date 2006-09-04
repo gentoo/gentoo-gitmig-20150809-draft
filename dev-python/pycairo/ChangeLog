@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.22 2006/08/07 00:17:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.23 2006/09/04 01:12:22 kumba Exp $
+
+  04 Sep 2006; Joshua Kinard <kumba@gentoo.org> pycairo-1.0.2.ebuild:
+  Marked stable on mips.
 
   07 Aug 2006; Alastair Tse <liquidx@gentoo.org> pycairo-1.0.2.ebuild,
   pycairo-1.0.2-r1.ebuild:
