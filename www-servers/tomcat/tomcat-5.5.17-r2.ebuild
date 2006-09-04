@@ -1,47 +1,56 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r1.ebuild,v 1.2 2006/09/04 01:18:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r2.ebuild,v 1.1 2006/09/04 01:18:50 wltjr Exp $
 
-inherit eutils java-pkg
+inherit eutils java-pkg-2 java-ant-2
 
 DESCRIPTION="Apache Servlet-2.4/JSP-2.0 Container"
 
 MY_P="apache-${P}-src"
 SLOT="5.5"
-#SRC_URI="mirror://apache/tomcat-5/v${PV}/src/apache-${P}-src.tar.gz"
 SRC_URI="mirror://apache/${PN}/${PN}-5/v${PV}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~amd64 ~x86"
 LICENSE="Apache-2.0"
 
-RDEPEND=">=virtual/jdk-1.4*
-	=dev-java/eclipse-ecj-3.1*
+RDEPEND="=dev-java/eclipse-ecj-3.1*
 	=dev-java/commons-beanutils-1.7*
 	>=dev-java/commons-collections-3.1
 	>=dev-java/commons-daemon-1.0.1
 	>=dev-java/commons-dbcp-1.2.1
 	>=dev-java/commons-digester-1.7
 	>=dev-java/commons-fileupload-1.0
-	>=dev-java/commons-httpclient-2.0
 	>=dev-java/commons-el-1.0
 	>=dev-java/commons-launcher-0.9
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/commons-modeler-1.1
 	>=dev-java/commons-pool-1.2
-	~dev-java/jaxen-1.0
-	>=dev-java/junit-3.8.1
-	=dev-java/mx4j-3*
 	>=dev-java/log4j-1.2.9
-	>=dev-java/saxpath-1.0
 	~dev-java/servletapi-2.4
-	=dev-java/struts-1.2*
-	=dev-java/gnu-jaf-1*
-	>=dev-java/xerces-2.7.1"
-DEPEND=">=virtual/jdk-1.4
+	java5? ( >=virtual/jre-1.5 )
+	!java5? (
+		=virtual/jre-1.4*
+		>=dev-java/commons-httpclient-2.0
+		=dev-java/gnu-jaf-1*
+		~dev-java/jaxen-1.0
+		>=dev-java/junit-3.8.1
+		=dev-java/mx4j-3*
+		>=dev-java/saxpath-1.0
+		>=dev-java/xerces-2.7.1
+	   	=dev-java/xml-commons-external-1.3*
+	   )"
+DEPEND="java5? ( >=virtual/jdk-1.5 )
+	!java5? ( =virtual/jdk-1.4* )
 	${RDEPEND}
 	sys-apps/sed
 	dev-java/ant"
-IUSE="doc examples source test"
+IUSE="java5 doc examples source test"
+
+if ! use java5; then
+	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4*"
+else
+	JAVA_PKG_NV_DEPEND="=virtual/jdk-1.5*"
+fi
 
 S=${WORKDIR}/${MY_P}
 
@@ -53,9 +62,14 @@ pkg_setup() {
 	# new user for tomcat
 	enewgroup tomcat
 	enewuser tomcat -1 -1 /dev/null tomcat
+
+	if use java5; then
+		JAVA_PKG_WANT_SOURCE="1.5"
+		JAVA_PKG_WANT_TARGET="1.5"
+	fi
 }
 
-src_unpack() {
+ant_src_unpack() {
 	unpack ${A}
 	cd ${S}
 
@@ -68,6 +82,14 @@ src_unpack() {
 	for patch in ${PATCHES}; do
 		epatch "${FILESDIR}/${PV}/${patch}"
 	done
+	if ! use doc; then
+		epatch "${FILESDIR}/${PV}/tomcatbuild-xml-docs.patch"
+	fi
+	if ! use examples; then
+		epatch "${FILESDIR}/${PV}/tomcatbuild-xml-examples.patch"
+		epatch "${FILESDIR}/${PV}/jsr152build-xml-examples.patch"
+		epatch "${FILESDIR}/${PV}/jsr154build-xml-examples.patch"
+	fi
 
 	# avoid packed jars :-)
 	mkdir -p ${S}/build/build/common
@@ -75,13 +97,17 @@ src_unpack() {
 
 	mkdir ./bin && cd ./bin
 	java-pkg_jar-from commons-logging commons-logging-api.jar
-	java-pkg_jar-from mx4j-3.0 mx4j.jar jmx.jar
-	java-pkg_jar-from mx4j-3.0 mx4j-rjmx.jar jmx-remote.jar
 	java-pkg_jar-from commons-daemon
+	if ! use java5; then
+		java-pkg_jar-from mx4j-3.0 mx4j.jar jmx.jar
+		java-pkg_jar-from mx4j-3.0 mx4j-rjmx.jar jmx-remote.jar
+	fi
 
-	mkdir ../common/endorsed && cd ../common/endorsed
-	java-pkg_jar-from xerces-2 xml-apis.jar
-	java-pkg_jar-from xerces-2 xercesImpl.jar
+	if ! use java5; then
+		mkdir ../common/endorsed && cd ../common/endorsed
+		java-pkg_jar-from xml-commons-external-1.3 xml-apis.jar
+		java-pkg_jar-from xerces-2 xercesImpl.jar
+	fi
 
 	mkdir ../lib && cd ../lib
 	java-pkg_jar-from ant-core
@@ -101,13 +127,11 @@ src_unpack() {
 src_compile(){
 	local antflags="-Dbase.path=${T}"
 
-	antflags="${antflags} -Dactivation.jar=$(java-config -p gnu-jaf-1)"
 	antflags="${antflags} -Dcommons-collections.jar=$(java-config -p commons-collections)"
 	antflags="${antflags} -Dcommons-daemon.jar=$(java-config -p commons-daemon)"
 	antflags="${antflags} -Dcommons-digester.jar=$(java-config -p commons-digester)"
 	antflags="${antflags} -Dcommons-dbcp.jar=$(java-config -p commons-dbcp)"
 	antflags="${antflags} -Dcommons-el.jar=$(java-config -p commons-el)"
-	antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
 	antflags="${antflags} -Dcommons-pool.jar=$(java-config -p commons-pool)"
 	antflags="${antflags} -Dcommons-fileupload.jar=$(java-config -p commons-fileupload)"
 	antflags="${antflags} -Dcommons-launcher.jar=$(java-config -p commons-launcher)"
@@ -115,29 +139,31 @@ src_compile(){
 	antflags="${antflags} -Djunit.jar=$(java-config -p junit)"
 	antflags="${antflags} -Djdt.jar=$(java-pkg_getjar eclipse-ecj-3.1 ecj.jar)"
 	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
-	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts-1.2 struts.jar)"
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
-	antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"
-	antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-3.0 mx4j.jar)"
-	antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-3.0 mx4j-rjmx.jar)"
-	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
-	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
-	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
-	antflags="${antflags} -Dstruts.home=/usr/share/struts"
 	antflags="${antflags} -Djasper.home=${S}/jasper"
+	if ! use java5; then
+		antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
+		antflags="${antflags} -Dactivation.jar=$(java-config -p gnu-jaf-1)"
+		antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"
+		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-3.0 mx4j.jar)"
+		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-3.0 mx4j-rjmx.jar)"
+		antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
+		antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
+		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
+	fi
 
-	ant ${antflags} || die "compile failed"
+	eant ${antflags} || die "compile failed"
 
 }
+
 src_install() {
 	cd ${S}/build/build
 
-	# init.d, env.d, conf.d
+	# init.d, conf.d
 	newinitd ${FILESDIR}/${PV}/tomcat.init ${TOMCAT_NAME}
 	newconfd ${FILESDIR}/${PV}/tomcat.conf ${TOMCAT_NAME}
-	newenvd ${FILESDIR}/${PV}/${PN}.env 21${PN}
 
 	# create dir structure
 	diropts -m755 -o tomcat -g tomcat
@@ -150,6 +176,8 @@ src_install() {
 	dodir   ${CATALINA_BASE}
 	keepdir ${CATALINA_BASE}/shared/lib
 	keepdir ${CATALINA_BASE}/shared/classes
+
+	keepdir /usr/share/${TOMCAT_NAME}/${CATALIA_HOME}/common/lib
 
 	dodir   /etc/${TOMCAT_NAME}
 	fperms  750 /etc/${TOMCAT_NAME}
@@ -199,15 +227,19 @@ src_install() {
 	# copy over the directories
 	chown -R tomcat:tomcat webapps/* conf/*
 	cp -pR conf/* ${D}/etc/${TOMCAT_NAME} || die "failed to copy conf"
-	cp -R bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
+	cp -R bin common server ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	keepdir               ${WEBAPPS_DIR}
 	set_webapps_perms     ${D}/${WEBAPPS_DIR}
 
-	# if the useflag is set, copy over the examples
+	# Copy over webapps, some controlled by use flags
+	cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
+	cp -pr webapps/ROOT ${D}${CATALINA_BASE}/webapps
+	if use doc; then
+		cp -pr webapps/tomcat-docs ${D}${CATALINA_BASE}/webapps
+	fi
 	if use examples; then
-		cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
-		cp -pr webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
+		cp -pr webapps/{jsp-examples,servlets-examples,webdav} \
 			${D}${CATALINA_BASE}/webapps
 	fi
 
