@@ -1,6 +1,12 @@
 # ChangeLog for dev-php4/pecl-apc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.11 2006/09/05 04:01:27 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.12 2006/09/05 07:43:11 sebastian Exp $
+
+*pecl-apc-3.0.12_p2 (05 Sep 2006)
+
+  05 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  -pecl-apc-3.0.12.ebuild, +pecl-apc-3.0.12_p2.ebuild:
+  Version bump.
 
 *pecl-apc-3.0.12 (05 Sep 2006)
 
