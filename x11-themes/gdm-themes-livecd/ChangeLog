@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gdm-themes-livecd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes-livecd/ChangeLog,v 1.1 2006/08/30 13:38:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes-livecd/ChangeLog,v 1.2 2006/09/05 14:52:38 gustavoz Exp $
+
+  05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gdm-themes-livecd-2006.1.ebuild:
+  Stable on sparc
 
 *gdm-themes-livecd-2006.1 (30 Aug 2006)
 
