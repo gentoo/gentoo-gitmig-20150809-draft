@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.54 2006/06/12 12:51:27 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.55 2006/09/05 19:08:42 stkn Exp $
+
+*libpri-1.2.3-r1 (06 Sep 2006)
+
+  06 Sep 2006; Stefan Knoblich <stkn@gentoo.org> +libpri-1.2.3-r1.ebuild:
+  Revision bump for bristuff-0.3.0-PRE-1s update.
 
   12 Jun 2006; Rajiv Aaron Manglani <rajiv@gentoo.org>
   -libpri-1.0.9-r1.ebuild, libpri-1.0.9-r2.ebuild:
