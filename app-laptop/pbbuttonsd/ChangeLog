@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/pbbuttonsd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.53 2006/08/27 20:17:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pbbuttonsd/ChangeLog,v 1.54 2006/09/05 22:58:27 lu_zero Exp $
+
+  06 Sep 2006; Luca Barbato <lu_zero@gentoo.org>
+  files/pbbuttonsd-ibam-g++.patch:
+  Update the g++ patch to really build ibam when needed
 
   27 Aug 2006; Luca Barbato <lu_zero@gentoo.org>
   +files/pbbuttonsd-ibam-g++.patch, pbbuttonsd-0.7.8.ebuild:
