@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.125 2006/09/01 18:00:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.126 2006/09/05 02:40:58 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> at-spi-1.6.4.ebuild,
+  at-spi-1.6.6-r1.ebuild, at-spi-1.7.7-r1.ebuild, at-spi-1.7.10.ebuild,
+  at-spi-1.7.11.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   01 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   at-spi-1.7.10.ebuild:
