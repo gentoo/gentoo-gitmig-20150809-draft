@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.74 2006/08/28 16:07:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.75 2006/09/05 23:40:42 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -359,6 +359,10 @@ x-modular_src_install() {
 	if [[ -n "${FONT}" ]]; then
 		remove_font_metadata
 	fi
+
+	if [[ -n "${DRIVER}" ]]; then
+		install_driver_hwdata
+	fi
 }
 
 x-modular_pkg_preinst() {
@@ -435,6 +439,19 @@ remove_font_metadata() {
 			# Delete font metadata files
 			# fonts.scale, fonts.dir, fonts.cache-1
 			rm -f ${D}/usr/share/fonts/${DIR}/fonts.{scale,dir,cache-1}
+		fi
+	done
+}
+
+# Installs device-to-driver mappings for system-config-display
+# and anything else that uses hwdata
+install_driver_hwdata() {
+	insinto /usr/share/hwdata/videoaliases
+	for i in "${FILESDIR}"/*.xinf; do
+		# We need this for the case when none exist,
+		# so *.xinf doesn't expand
+		if [[ -e $i ]]; then
+			doins $i
 		fi
 	done
 }
