@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.9.ebuild,v 1.7 2006/08/05 14:14:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.4.9.ebuild,v 1.8 2006/09/05 15:46:48 uberlord Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils linux-info toolchain-funcs
 
 MY_P=${PN}-${PV/_/-}
 S=${WORKDIR}/${MY_P}
@@ -31,6 +31,12 @@ pkg_setup() {
 		einfo
 		einfo "You have USE=\"qt3 qt4\" selected, defaulting to USE=\"qt4\""
 		einfo
+	fi
+
+	if use kernel_linux ; then
+		CONFIG_CHECK="PACKET"
+		ERROR_NET_RADIO="${P} requires support for Packet Socket (CONFIG_PACKET)."
+		linux-info_pkg_setup
 	fi
 }
 

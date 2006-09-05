@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.2 2006/09/04 13:37:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.3 2006/09/05 15:46:48 uberlord Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils linux-info toolchain-funcs
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -27,6 +27,12 @@ DEPEND="sys-apps/sed
 pkg_setup() {
 	if use qt3 && use qt4; then
 		einfo "You have USE=\"qt3 qt4\" selected, defaulting to USE=\"qt4\""
+	fi
+
+	if use kernel_linux ; then
+		CONFIG_CHECK="PACKET"
+		ERROR_NET_RADIO="${P} requires support for Packet Socket (CONFIG_PACKET)."
+		linux-info_pkg_setup
 	fi
 }
 
