@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.107 2006/08/18 23:18:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.108 2006/09/05 02:08:44 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> libbonobo-2.8.1.ebuild,
+  libbonobo-2.10.0.ebuild, libbonobo-2.10.1.ebuild, libbonobo-2.14.0.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   19 Aug 2006; Bryan Østergaard <kloeri@gentoo.org>
   libbonobo-2.14.0.ebuild:

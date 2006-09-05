@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.10.1-r1.ebuild,v 1.11 2005/10/13 08:55:04 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.10.1-r1.ebuild,v 1.12 2006/09/05 01:58:52 kumba Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc static"
 
 RDEPEND=">=dev-libs/glib-2.0.1
