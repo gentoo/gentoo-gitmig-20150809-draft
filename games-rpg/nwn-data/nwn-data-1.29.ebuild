@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.18 2006/09/01 23:57:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.19 2006/09/05 20:59:26 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -106,7 +106,6 @@ src_unpack() {
 		unzip -o "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
 		unzip -o "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
 		unzip -o "${CDROM_ROOT}"/Data_Linux.zip || die "unpacking"
-		rm -f data/patch.bif patch.key
 		touch .metadata/sou || die "touching sou"
 	fi
 	if use hou
@@ -116,12 +115,13 @@ src_unpack() {
 			rm -f xp1patch.key data/xp1patch.bif override/*
 			cdrom_load_next_cd
 		fi
-		rm -f data/patch.bif patch.key
 		unzip -o "${CDROM_ROOT}"/Data_Shared.zip || die "unpacking"
 		unzip -o "${CDROM_ROOT}"/Language_data.zip || die "unpacking"
 		unzip -o "${CDROM_ROOT}"/Language_update.zip || die "unpacking"
 		touch .metadata/hou || die "touching hou"
 	fi
+	# These files aren't needed and come from the patches (games-rpg/nwn)
+	rm -f data/patch.bif patch.key
 
 	sed -i -e '\:^./nwmain .*:i \
 if [[ -f ./nwmouse.so ]]; then \
@@ -138,8 +138,9 @@ src_install() {
 	# eventually be removed to allow for nwmovies to work.
 	rm -rf "${S}"/movies
 	mkdir -p "${S}"/dmvault "${S}"/hak "${S}"/portraits "${S}"/localvault
-	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dmclient "${S}"/nwmain \
-		"${S}"/nwserver  "${S}"/nwm/* "${S}"/SDL-1.2.5 "${S}"/fixinstall
+	rm -rf "${S}"/dialog.tlk "${S}"/dialog.TLK "${S}"/dialogf.tlk \
+		"${S}"/dmclient "${S}"/nwmain "${S}"/nwserver  "${S}"/nwm/* \
+		"${S}"/SDL-1.2.5 "${S}"/fixinstall
 	mv "${S}"/* "${Ddir}"
 	mv "${S}"/.metadata "${Ddir}"
 	keepdir "${dir}"/servervault
