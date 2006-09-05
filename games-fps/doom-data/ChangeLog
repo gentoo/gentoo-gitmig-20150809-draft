@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom-data
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/ChangeLog,v 1.5 2005/05/14 02:04:34 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/ChangeLog,v 1.6 2006/09/05 19:21:23 tupone Exp $
+
+*doom-data-1-r1 (05 Sep 2006)
+
+  05 Sep 2006; <tupone@gentoo.org> +doom-data-1-r1.ebuild:
+  Not blocking freedoom, make wrapper for doomsday. Bug #127397 by Paul Bredbury
 
   14 May 2005; Aron Griffis <agriffis@gentoo.org> doom-data-1.ebuild:
   stable on amd64
