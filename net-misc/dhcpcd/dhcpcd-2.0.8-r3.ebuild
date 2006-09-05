@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.8-r3.ebuild,v 1.1 2006/08/13 19:37:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-2.0.8-r3.ebuild,v 1.2 2006/09/05 16:13:59 uberlord Exp $
 
-inherit flag-o-matic eutils
+inherit eutils flag-o-matic linux-info
 
 DESCRIPTION="A DHCP client only"
 HOMEPAGE="http://developer.berlios.de/projects/dhcpcd/"
@@ -17,6 +17,12 @@ DEPEND=""
 PROVIDE="virtual/dhcpc"
 
 pkg_setup() {
+	if use kernel_linux ; then
+		CONFIG_CHECK="PACKET"
+		ERROR_PACKET="${P} requires support for Packet Socket (CONFIG_PACKET)."
+		linux-info_pkg_setup
+	fi
+	
 	if use debug ; then
 		ewarn "WARNING: dhcpcd will provide good debugging output with the"
 		ewarn "debug USE flag enabled but will not actually configure the"
