@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.568 2006/09/03 22:53:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.569 2006/09/05 16:56:06 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> ChangeLog:
+  Mark gcc-4.1.1 stable on mips, with -r1 in unstable.
 
 *gcc-4.1.1-r1 (03 Sep 2006)
 
