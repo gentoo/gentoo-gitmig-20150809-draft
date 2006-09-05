@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r10.ebuild,v 1.1 2006/07/03 15:04:43 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r10.ebuild,v 1.2 2006/09/05 02:34:12 kumba Exp $
 
 DESCRIPTION="A filemanager for the Gnome desktop"
 HOMEPAGE="http://www.gnome.org/projects/nautilus/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="ppc sparc x86"
 IUSE="nls"
 
 # =gnome-base/gnome-core-1.4*
