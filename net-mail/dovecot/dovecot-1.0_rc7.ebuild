@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc7.ebuild,v 1.2 2006/08/20 12:28:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.0_rc7.ebuild,v 1.3 2006/09/05 13:18:39 uberlord Exp $
 
 inherit autotools eutils
 
@@ -15,6 +15,9 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE="debug doc ipv6 kerberos ldap mbox mysql pop3d pam postgres ssl vpopmail"
+
+# Developer documentation, controlled by the doc USE flag
+DEVDOCS="auth-protocol index multiaccess securecoding"
 
 DEPEND=">=sys-apps/sed-4
 	kerberos? ( virtual/krb5 )
@@ -58,6 +61,19 @@ src_install () {
 
 	newinitd "${FILESDIR}"/dovecot.init dovecot
 
+	# Documentation
+	rm -rf "${D}"/usr/share/doc/dovecot
+	dodoc AUTHORS NEWS README TODO dovecot-example.conf
+	if use doc ; then
+		dodoc doc/*.txt
+	else
+		local x= n=
+		for x in doc/*.txt ; do
+			n=$(basename "${x}" .txt)
+			[[ " ${DEVDOCS} " != *" ${n} "* ]] && dodoc "${x}"
+		done
+	fi
+
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....
 	local conf="${D}/etc/dovecot/dovecot.conf"
@@ -90,6 +106,7 @@ src_install () {
 		cp doc/dovecot-sql.conf "${D}"/etc/dovecot
 		fperms 600 /etc/dovecot/dovecot-sql.conf
 		sed -i -e '/db sql/,/args/ s|=|= /etc/dovecot-sql.conf|' "${conf}"
+		dodoc doc/dovecot-sql.conf
 	fi
 
 	# Install LDAP configuration
@@ -97,14 +114,9 @@ src_install () {
 		cp doc/dovecot-ldap.conf "${D}"/etc/dovecot
 		fperms 600 /etc/dovecot/dovecot-ldap.conf
 		sed -i -e '/db ldap/,/args/ s|=|= /etc/dovecot-ldap.conf|' "${conf}"
+		dodoc doc/dovecot-ldap.conf
 	fi
 
-	# Documentation
-	rm -rf "${D}"/usr/share/doc/dovecot
-	if use doc ; then
-		dodoc AUTHORS NEWS README TODO dovecot-example.conf
-		dodoc doc/*.txt doc/*.conf doc/*.cnf doc/mkcert.sh
-	fi
 
 	# Create SSL certificates
 	if use ssl ; then
@@ -118,6 +130,7 @@ src_install () {
 				SSLDIR="${D}"/etc/ssl sh mkcert.sh && \
 				popd >/dev/null
 		fi
+		dodoc doc/*.cnf doc/mkcert.sh
 	fi
 
 	dodir /var/run/dovecot
