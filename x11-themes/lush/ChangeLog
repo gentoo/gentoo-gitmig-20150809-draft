@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/lush
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.17 2006/07/31 11:22:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lush/ChangeLog,v 1.18 2006/09/05 21:56:55 gustavoz Exp $
+
+  05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> lush-0.1.0-r2.ebuild:
+  Stable on sparc
 
   31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -lush-0.1.0-r1.ebuild:
   Remove old broken version.
