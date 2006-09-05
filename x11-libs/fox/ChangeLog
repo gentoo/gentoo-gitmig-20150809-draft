@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.54 2006/08/23 00:46:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.55 2006/09/05 08:03:13 mr_bones_ Exp $
+
+  05 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org> -fox-1.0.40.ebuild,
+  -fox-1.0.43.ebuild, -fox-1.2.4.ebuild, -fox-1.2.15.ebuild,
+  -fox-1.4.11.ebuild, -fox-1.4.12.ebuild:
+  thin out unnecessary ebuilds
 
   23 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; fox-1.0.53.ebuild:
   Same gcc-4 fix as for 1.2
