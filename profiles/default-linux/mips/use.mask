@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.62 2006/09/04 01:42:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.63 2006/09/05 03:57:06 kumba Exp $
 
 # Untested on mips, masking for now.  a dep for postfix.
 cdb
@@ -6,8 +6,9 @@ cdb
 # need stable libtiff (need to stablize media-libs/jbigkit for jbig support)
 jbig
 
-# Don't need this either
+# Don't need these either
 gstreamer
+gtkhtml
 
 # We don't use this (yet).  It's a dep for gnome-vfs with four of its own.
 # Excluding it on mips until someone reports a need for it.
