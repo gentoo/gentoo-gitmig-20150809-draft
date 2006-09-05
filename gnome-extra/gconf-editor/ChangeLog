@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.85 2006/08/16 16:02:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.86 2006/09/05 02:58:40 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> gconf-editor-2.10.0.ebuild,
+  gconf-editor-2.12.1.ebuild, gconf-editor-2.14.0.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> gconf-editor-2.14.0.ebuild:
   Stable on ppc64

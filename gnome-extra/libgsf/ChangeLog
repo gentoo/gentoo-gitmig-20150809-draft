@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.77 2006/08/17 12:33:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.78 2006/09/05 03:02:11 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> libgsf-1.10.0.ebuild,
+  libgsf-1.12.0.ebuild, libgsf-1.12.1.ebuild, libgsf-1.14.0.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   17 Aug 2006; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Stable for HPPA (bug #144120).

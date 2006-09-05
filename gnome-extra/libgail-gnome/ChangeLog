@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.72 2006/07/17 16:41:23 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.73 2006/09/05 02:55:17 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> libgail-gnome-1.1.1.ebuild,
+  libgail-gnome-1.1.3.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   17 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
   Marked stable on amd64 for bug #139612

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.12.3.ebuild,v 1.11 2006/07/05 15:21:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.12.3.ebuild,v 1.12 2006/09/05 03:04:18 kumba Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="artworkextra guile howl"
 
 RDEPEND=">=gnome-base/gconf-2

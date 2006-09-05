@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.18 2005/01/08 23:29:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.19 2006/09/05 03:04:18 kumba Exp $
 
 IUSE="nls"
 
@@ -8,7 +8,7 @@ DESCRIPTION="gnome-utils"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="ppc sparc x86"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
