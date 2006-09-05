@@ -1,10 +1,61 @@
-MD5 42a4a1a47edc0f08a42b27726d783383 ChangeLog 1455
-MD5 ae38b27e55ad0f4f32035aec757f889b asterisk-addons-1.2.0.ebuild 3678
-MD5 d5306ddf789661ed4027e1ef649dc2e5 asterisk-addons-1.2.1.ebuild 3686
+AUX asterisk-addons-1.2.0-gentoo-base.diff 1852 RMD160 cf757a2a7e566f814ad288cfb8006381bcc1d1af SHA1 5a0c5537afddab7f4dd5b53ce44d227fbf813c68 SHA256 79fb6cfc9dc6c7f53a6c9ea263b5126d39478890289ca4279a0756c03b69ab25
 MD5 d9614f6289a7b8edda8045241187e138 files/asterisk-addons-1.2.0-gentoo-base.diff 1852
+RMD160 cf757a2a7e566f814ad288cfb8006381bcc1d1af files/asterisk-addons-1.2.0-gentoo-base.diff 1852
+SHA256 79fb6cfc9dc6c7f53a6c9ea263b5126d39478890289ca4279a0756c03b69ab25 files/asterisk-addons-1.2.0-gentoo-base.diff 1852
+AUX asterisk-addons-1.2.0-gentoo-ooh323c.diff 1390 RMD160 1c13720e335637294f4f41fd521e3f8b7af2119a SHA1 b46771d7386948e2c286a5afd3ee0e3da23aad00 SHA256 84de1e59e18bdeadcae6c985dad62ca740efdb8de6a65a75e2dc8123b8e17f5c
 MD5 16c3f02a9df6f089f3845b469a103d78 files/asterisk-addons-1.2.0-gentoo-ooh323c.diff 1390
+RMD160 1c13720e335637294f4f41fd521e3f8b7af2119a files/asterisk-addons-1.2.0-gentoo-ooh323c.diff 1390
+SHA256 84de1e59e18bdeadcae6c985dad62ca740efdb8de6a65a75e2dc8123b8e17f5c files/asterisk-addons-1.2.0-gentoo-ooh323c.diff 1390
+AUX asterisk-addons-1.2.0-gentoo-res_sqlite3.diff 2837 RMD160 45f77592fca9dd8a5ca4e71b8d28f14a829bd446 SHA1 7d1f786ceae95a49c2e71ac44fb8e704c4794140 SHA256 60830a28e71289544f3c84cb902c45004fe9ad09f99f322bc6a956d7ee35af4d
 MD5 3f05f5fea4079bbd2bb14203a31e70b5 files/asterisk-addons-1.2.0-gentoo-res_sqlite3.diff 2837
-MD5 0533ebde8317283b9ab206a1bfb1cd13 files/digest-asterisk-addons-1.2.0 138
-MD5 fc09ce470e402d08079054b6a6459449 files/digest-asterisk-addons-1.2.1 138
+RMD160 45f77592fca9dd8a5ca4e71b8d28f14a829bd446 files/asterisk-addons-1.2.0-gentoo-res_sqlite3.diff 2837
+SHA256 60830a28e71289544f3c84cb902c45004fe9ad09f99f322bc6a956d7ee35af4d files/asterisk-addons-1.2.0-gentoo-res_sqlite3.diff 2837
+AUX asterisk-addons-1.2.2-gentoo-format_mp3.diff 313 RMD160 f07093884500619c6d4c1c8045d5aa547477652f SHA1 aa4fcfc161a13f69fc2976023a5fcfcbf646aac1 SHA256 2924e72033de910d37243ef1bf205bfcbebc5c2ddcd1769c2093c4549ab6dff3
+MD5 b4e8b796594d203c2b3348d5f7b69427 files/asterisk-addons-1.2.2-gentoo-format_mp3.diff 313
+RMD160 f07093884500619c6d4c1c8045d5aa547477652f files/asterisk-addons-1.2.2-gentoo-format_mp3.diff 313
+SHA256 2924e72033de910d37243ef1bf205bfcbebc5c2ddcd1769c2093c4549ab6dff3 files/asterisk-addons-1.2.2-gentoo-format_mp3.diff 313
+AUX asterisk-addons-1.2.2-uclibc.diff 569 RMD160 015f80c0efc2fda1b7b7c324f5c94cc90a00494b SHA1 68c380c38f3e7622bc9120e39afc8e34d4aa3cd2 SHA256 bb0a5f2963b88c654091f0fdd2edd1c5f3d29e5173d2d1d1b457046923386a63
+MD5 3577844d6c39af501eb9a8bd50c641a4 files/asterisk-addons-1.2.2-uclibc.diff 569
+RMD160 015f80c0efc2fda1b7b7c324f5c94cc90a00494b files/asterisk-addons-1.2.2-uclibc.diff 569
+SHA256 bb0a5f2963b88c654091f0fdd2edd1c5f3d29e5173d2d1d1b457046923386a63 files/asterisk-addons-1.2.2-uclibc.diff 569
+AUX asterisk-addons-1.2.3-gentoo-ooh323c.diff 1465 RMD160 b584cb11b208e6a384bdefa47219d0425ded3357 SHA1 3c531e0ffa330e15298249eab7d0319ef0acdcd0 SHA256 2d661f6d051326d9cdb48bb02c08f27de6c0c001cfffae0afeaf5ca5672e2a47
+MD5 45850e45e0acd7e352d4773f1914ee87 files/asterisk-addons-1.2.3-gentoo-ooh323c.diff 1465
+RMD160 b584cb11b208e6a384bdefa47219d0425ded3357 files/asterisk-addons-1.2.3-gentoo-ooh323c.diff 1465
+SHA256 2d661f6d051326d9cdb48bb02c08f27de6c0c001cfffae0afeaf5ca5672e2a47 files/asterisk-addons-1.2.3-gentoo-ooh323c.diff 1465
+AUX sqlite-3.2.1-data-corruption.patch 6529 RMD160 06f79a07f5dfb12967ebc233544b0807ac8114af SHA1 73203e5145119b9ad070596271793ea36e0bd651 SHA256 7b42e48387045ab466a0d7f936099de0d1597b0cf593fb28705a46c1b6e76b81
 MD5 46cefa8dc3aa8a97c973f54cd08f0ace files/sqlite-3.2.1-data-corruption.patch 6529
+RMD160 06f79a07f5dfb12967ebc233544b0807ac8114af files/sqlite-3.2.1-data-corruption.patch 6529
+SHA256 7b42e48387045ab466a0d7f936099de0d1597b0cf593fb28705a46c1b6e76b81 files/sqlite-3.2.1-data-corruption.patch 6529
+DIST asterisk-addons-1.2.0.tar.gz 750149 RMD160 69a2c1fb86f7dc5ccec9246be621f10ab6eb6633 SHA1 7b5c9a5931e94fceac8a07e3a3224ff1b9bcca3a SHA256 aecb1bce5d3d695b475ee3c758308a5d983bbee41edf192f50bd55d6f146a25b
+DIST asterisk-addons-1.2.1.tar.gz 748237 RMD160 1d2512aa87e0a1544dacf4465e1dab8890f8676a SHA1 e8cf2f3c82f9305e62003a4183a28b9c08e8d78a SHA256 4932ed32ed0896eb73c4291bf74d59422d3d6aec44fb289f904ec9620719db07
+DIST asterisk-addons-1.2.4.tar.gz 755656 RMD160 30418aa6e6dbfe26b841e96e352a1acf0049fbca SHA1 62708981225f271a994d4d1f071a2ad64574141f SHA256 e32d11bf19d01ef01d4017f1e98c5701b94683e05ce51f3d45abe24598f692af
+DIST sqlite-3.2.1.tar.gz 1351842 RMD160 3b4cfc1fca27d4df369220d15eb5e28777bd99da SHA1 df9b8a28bb64a29df8b2411b6b8b746b04d742eb SHA256 daba70d5d7666ff8091a7a9322a1a2d88889043d50e136ed7d3e726d751001a7
+EBUILD asterisk-addons-1.2.0.ebuild 3678 RMD160 29ddece0ccedd84da5d160fc964425051076d0ed SHA1 b534db3965800e991d51b7d559ac818c0b3869d2 SHA256 d922a5e172766f153dc695e61576f874eebdf630603291b69498f2556fe54b64
+MD5 ae38b27e55ad0f4f32035aec757f889b asterisk-addons-1.2.0.ebuild 3678
+RMD160 29ddece0ccedd84da5d160fc964425051076d0ed asterisk-addons-1.2.0.ebuild 3678
+SHA256 d922a5e172766f153dc695e61576f874eebdf630603291b69498f2556fe54b64 asterisk-addons-1.2.0.ebuild 3678
+EBUILD asterisk-addons-1.2.1.ebuild 3686 RMD160 50c09ccce11235cb1015fb3ea4c57b181bd1d531 SHA1 ee72146f3e316896a167326e4e9ce406964fa63e SHA256 c3caef4de81df93952c3c6882504828b7eb27ca9ec19fff166583c083ad95cd3
+MD5 d5306ddf789661ed4027e1ef649dc2e5 asterisk-addons-1.2.1.ebuild 3686
+RMD160 50c09ccce11235cb1015fb3ea4c57b181bd1d531 asterisk-addons-1.2.1.ebuild 3686
+SHA256 c3caef4de81df93952c3c6882504828b7eb27ca9ec19fff166583c083ad95cd3 asterisk-addons-1.2.1.ebuild 3686
+EBUILD asterisk-addons-1.2.4.ebuild 4334 RMD160 93bc0c93f174528aa6e39d28f22da164baca96b9 SHA1 a7ba0425353715fba0c4aa3a59b573e69c83f9ce SHA256 451bb8a512fec13c684f97ee553bd0f27ff61e87e22392c34c38b9af93889ea8
+MD5 823d213e9c55130d79bc4d4630d87058 asterisk-addons-1.2.4.ebuild 4334
+RMD160 93bc0c93f174528aa6e39d28f22da164baca96b9 asterisk-addons-1.2.4.ebuild 4334
+SHA256 451bb8a512fec13c684f97ee553bd0f27ff61e87e22392c34c38b9af93889ea8 asterisk-addons-1.2.4.ebuild 4334
+MISC ChangeLog 1743 RMD160 62e25d2b9161788e459e86acc0ec14bb499e9258 SHA1 600b4d713b6b71174c890166f5d69252cb882a5d SHA256 66905747ce841141299d06475090dbe42f24c56ab90a8be04e3497f81bc4a634
+MD5 cbd85175fc344feca953d53c905e0985 ChangeLog 1743
+RMD160 62e25d2b9161788e459e86acc0ec14bb499e9258 ChangeLog 1743
+SHA256 66905747ce841141299d06475090dbe42f24c56ab90a8be04e3497f81bc4a634 ChangeLog 1743
+MISC metadata.xml 248 RMD160 a989fff0cebc82a58a75fb3a2eec8da0712ad57e SHA1 10bea6cd152e9f0ecb627eaacc19980a9d5f5dc4 SHA256 d0e3ab77a8a7b859511b8d5fda83dc018351e6367724b097dcc13c4aa0a3ee6b
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+RMD160 a989fff0cebc82a58a75fb3a2eec8da0712ad57e metadata.xml 248
+SHA256 d0e3ab77a8a7b859511b8d5fda83dc018351e6367724b097dcc13c4aa0a3ee6b metadata.xml 248
+MD5 77abb2eacd1da7f5fd60936abc9414c9 files/digest-asterisk-addons-1.2.0 506
+RMD160 c54d0b2c4b0395c6a9c2017c8943aac51ee17835 files/digest-asterisk-addons-1.2.0 506
+SHA256 2a1526f0a414e4b05b69c871147d64280dacb610585f5e524906dfd6710c9d13 files/digest-asterisk-addons-1.2.0 506
+MD5 1f164d558d175a47c464014585865e81 files/digest-asterisk-addons-1.2.1 506
+RMD160 b2d6345c4d107a9f33ea664ee44bbb40b5300ccb files/digest-asterisk-addons-1.2.1 506
+SHA256 c4abbea04a9adca6071affe9ba7cc835b146942813dc09d644e1acbc7c278c03 files/digest-asterisk-addons-1.2.1 506
+MD5 4366f55c15cd0977255a599b96ebb87b files/digest-asterisk-addons-1.2.4 506
+RMD160 d5fd18ccd92e188fe316a1eb645051144045a02b files/digest-asterisk-addons-1.2.4 506
+SHA256 feaa2746b646c2360505300a19941e2fb5b2c47b6743e3fc5c4afdffd7b2b465 files/digest-asterisk-addons-1.2.4 506

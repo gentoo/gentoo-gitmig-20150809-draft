@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk-addons
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.4 2006/02/28 03:04:12 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.5 2006/09/05 19:34:10 stkn Exp $
+
+*asterisk-addons-1.2.4 (06 Sep 2006)
+
+  06 Sep 2006; Stefan Knoblich <stkn@gentoo.org>
+  +files/asterisk-addons-1.2.2-gentoo-format_mp3.diff,
+  +files/asterisk-addons-1.2.2-uclibc.diff,
+  +files/asterisk-addons-1.2.3-gentoo-ooh323c.diff,
+  +asterisk-addons-1.2.4.ebuild:
+  Version bump.
 
 *asterisk-addons-1.2.1 (28 Feb 2006)
 
