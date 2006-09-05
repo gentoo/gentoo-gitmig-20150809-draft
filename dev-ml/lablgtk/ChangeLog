@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.45 2006/08/30 12:00:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.46 2006/09/05 19:08:10 gustavoz Exp $
+
+  05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> lablgtk-2.6.0.ebuild:
+  Stable on sparc wrt #143311
 
   30 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   lablgtk-2.6.0.ebuild:
