@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.6 2006/09/04 18:06:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.7 2006/09/05 04:35:51 kumba Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ppc-macos ppc64 sh sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~hppa ia64 mips ~ppc ppc-macos ppc64 sh sparc ~x86 ~x86-fbsd"
 # WARNING:
 # if you have the noaudio, novideo, nojoystick, or noflagstrip use flags
 # in USE and something breaks, you pick up the pieces.  Be prepared for
