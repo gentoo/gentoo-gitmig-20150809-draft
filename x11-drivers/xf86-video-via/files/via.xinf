@@ -1,0 +1,27 @@
+# NOTE: This file was last updated June 19, 2006.  It has been synchronized
+# to match the support present and enabled in the upstream X.Org X11R7.1
+# via driver release "xf86-video-via-0.2.1.tar.bz2", and to resolve
+# the following issue:  https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=195806
+
+# NOTE: Comments in via 0.2.1 driver source indicate this device does not
+# exist in the wild, so it has been disabled for now.
+#alias pcivideo:v00001106d00003022sv*sd*bc*sc*i* via
+
+# 1106:3108 - K8M800 (PCI_CHIP_VT3204)
+alias pcivideo:v00001106d00003108sv*sd*bc*sc*i* via
+
+# 1106:3118 - PM800/PM880/CN400 (PCI_CHIP_VT3259)
+alias pcivideo:v00001106d00003118sv*sd*bc*sc*i* via
+
+# 1106:3122 - CLE266 (PCI_CHIP_CLE3122)
+alias pcivideo:v00001106d00003122sv*sd*bc*sc*i* via
+
+# 1106:7205 - KM400/KN400 (PCI_CHIP_VT3205)
+alias pcivideo:v00001106d00007205sv*sd*bc*sc*i* via
+
+# NOTE: This PCI ID is present in the 0.2.1 driver, but not part of the
+# ViaChipset array, so we disable it.  Further investigation yields a commit
+# message:  "Xv VM800 support (Ivor Hewitt). Not enabled yet pending more testing."
+# http://webcvs.freedesktop.org/xorg/driver/xf86-video-via/src/via_id.h?view=markup
+# 1106:3344 - VM800 (PCI_CHIP_VT3314)
+#alias pcivideo:v00001106d00003344sv*sd*bc*sc*i* via

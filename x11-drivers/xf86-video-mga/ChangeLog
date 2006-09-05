@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-mga
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.28 2006/08/10 02:07:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mga/ChangeLog,v 1.29 2006/09/05 23:49:27 dberkholz Exp $
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +files/mga.xinf:
+  Add hwdata files for system-config-display.
 
 *xf86-video-mga-1.4.1-r1 (10 Aug 2006)
 

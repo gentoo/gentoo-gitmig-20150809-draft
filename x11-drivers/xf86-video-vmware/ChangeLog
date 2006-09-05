@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-vmware
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.17 2006/06/30 15:33:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vmware/ChangeLog,v 1.18 2006/09/05 23:55:47 dberkholz Exp $
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +files/vmware.xinf:
+  Add hwdata files for system-config-display.
 
   30 Jun 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xf86-video-vmware-10.12.0.0.ebuild:
