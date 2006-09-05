@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.154 2006/09/05 11:05:40 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.155 2006/09/05 16:47:34 metalgod Exp $
+
+  05 Sep 2006; Luis Medinas <metalgod@gentoo.org> ChangeLog:
+  Add a blocker for app-cdr/cdrkit.
 
 *cdrtools-2.01.01_alpha08 (05 Sep 2006)
 

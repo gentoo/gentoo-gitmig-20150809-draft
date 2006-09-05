@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.10 2006/07/05 02:55:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha07.ebuild,v 1.11 2006/09/05 16:45:43 metalgod Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -14,7 +14,9 @@ KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~ppc-macos ~ppc64 s390 sh sparc x86"
 IUSE="unicode"
 
 DEPEND="virtual/libc
-	!app-cdr/dvdrtools"
+	!app-cdr/dvdrtools
+	!app-cdr/cdrkit"
+
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01.01
