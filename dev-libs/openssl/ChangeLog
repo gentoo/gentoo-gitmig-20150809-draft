@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.179 2006/09/05 04:25:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.180 2006/09/05 15:11:10 vapier Exp $
+
+*openssl-0.9.8c (05 Sep 2006)
+*openssl-0.9.7k (05 Sep 2006)
+
+  05 Sep 2006; Mike Frysinger <vapier@gentoo.org> +openssl-0.9.7k.ebuild,
+  +openssl-0.9.8c.ebuild:
+  Version bump #146375 by Sune Kloppenborg Jeppesen.
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> openssl-0.9.8b.ebuild:
   Added ~mips to KEYWORDS.
