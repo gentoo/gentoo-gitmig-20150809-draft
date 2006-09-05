@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.17 2006/08/30 19:40:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.18 2006/09/05 18:21:09 gustavoz Exp $
+
+  05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> gtkwave-3.0.5.ebuild:
+  Stable on sparc
 
   30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> gtkwave-3.0.5.ebuild:
   Stable on ppc.
