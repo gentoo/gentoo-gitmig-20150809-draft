@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.5-r1.ebuild,v 1.1 2006/04/30 20:12:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/hal-device-manager-0.5-r1.ebuild,v 1.2 2006/09/05 16:36:23 steev Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}
 
 pkg_setup() {
-	if ! built_with_use '>=sys-apps/hal-${PV}-r1' 'python' ; then
+	if ! built_with_use ">=sys-apps/hal-${PV}-r1" 'python' ; then
 		eerror 'Please rebuild hal with the python useflag before installing'
 		eerror 'this package.'
 		echo

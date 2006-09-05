@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/hal-device-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/ChangeLog,v 1.10 2006/04/30 20:12:39 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hal-device-manager/ChangeLog,v 1.11 2006/09/05 16:36:23 steev Exp $
+
+  05 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
+  hal-device-manager-0.5-r1.ebuild:
+  Fix the quoting issue with 0.5-r1.  No revbump because if you have it installed
+  already... then its working.
 
 *hal-device-manager-0.5-r1 (30 Apr 2006)
 
