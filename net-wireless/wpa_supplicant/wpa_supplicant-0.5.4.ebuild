@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.9 2006/09/05 15:46:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.4.ebuild,v 1.10 2006/09/05 16:00:17 uberlord Exp $
 
 inherit eutils linux-info toolchain-funcs
 
@@ -31,7 +31,7 @@ pkg_setup() {
 
 	if use kernel_linux ; then
 		CONFIG_CHECK="PACKET"
-		ERROR_NET_RADIO="${P} requires support for Packet Socket (CONFIG_PACKET)."
+		ERROR_PACKET="${P} requires support for Packet Socket (CONFIG_PACKET)."
 		linux-info_pkg_setup
 	fi
 }
