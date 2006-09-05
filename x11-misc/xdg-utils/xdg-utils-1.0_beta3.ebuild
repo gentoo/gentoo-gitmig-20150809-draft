@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0_beta3.ebuild,v 1.9 2006/09/05 03:29:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.0_beta3.ebuild,v 1.10 2006/09/05 05:31:52 kumba Exp $
 
 MY_P="${P/_}"
 DESCRIPTION="Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability"
@@ -9,7 +9,7 @@ SRC_URI="http://portland.freedesktop.org/download/${MY_P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 RESTRICT="test"
 
