@@ -1,0 +1,45 @@
+Remove some storage classes that only exist as patches to Red Hat pciutils.
+
+-Donnie Berkholz <dberkholz@gentoo.org>
+
+Index: pci.c
+===================================================================
+RCS file: /usr/local/CVS/kudzu/pci.c,v
+retrieving revision 1.141
+retrieving revision 1.140
+diff -u -b -B -r1.141 -r1.140
+--- pci.c	9 Aug 2006 17:47:46 -0000	1.141
++++ pci.c	28 Feb 2006 19:49:56 -0000	1.140
+@@ -142,10 +142,6 @@
+ 	return PCI_CLASS_BRIDGE_CARDBUS;
+      case CLASS_IDE:
+ 	return PCI_CLASS_STORAGE_IDE;
+-     case CLASS_ATA:
+-	return PCI_CLASS_STORAGE_ATA;
+-     case CLASS_SATA:
+-	return PCI_CLASS_STORAGE_SATA;
+      default:
+ 	return 0;
+     }
+@@ -170,10 +166,6 @@
+ 	return CLASS_FLOPPY;
+      case PCI_CLASS_STORAGE_RAID:
+ 	return CLASS_RAID;
+-     case PCI_CLASS_STORAGE_ATA:
+-	return CLASS_ATA;
+-     case PCI_CLASS_STORAGE_SATA:
+-	return CLASS_SATA;
+      case PCI_CLASS_MULTIMEDIA_AUDIO:
+      /* HD Audio */
+      case 0x0403:
+@@ -360,9 +352,7 @@
+ 	(probeClass & CLASS_FIREWIRE) ||
+ 	(probeClass & CLASS_SOCKET) ||
+ 	(probeClass & CLASS_CAPTURE) ||
+-	(probeClass & CLASS_RAID) ||
+-	(probeClass & CLASS_ATA) ||
+-	(probeClass & CLASS_SATA)) {
++	(probeClass & CLASS_RAID)) {
+ 	pacc = pci_alloc();
+ 	if (!pacc) return devlist;
+ 	if (!getAliases(aliases, "pci")) {

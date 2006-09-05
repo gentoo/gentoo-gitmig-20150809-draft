@@ -1,0 +1,13 @@
+# ChangeLog for sys-apps/kudzu
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.22 2006/09/05 21:08:48 dberkholz Exp $
+
+*kudzu-1.2.52 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/1.2.52-remove-pci-device-class.patch,
+  +files/1.2.52-remove-pci-fill-class.patch,
+  +files/1.2.52-remove-sata-ata-storage-classes.patch,
+  +files/sunlance.patch, +metadata.xml, +kudzu-1.2.52.ebuild:
+  Red Hat Hardware detection tools
+

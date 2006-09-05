@@ -1,0 +1,32 @@
+device_class only exists as a patch to Red Hat pciutils. This diff is based on
+reversing r1.108.
+
+-Donnie Berkholz <dberkholz@gentoo.org>
+
+--- pci.c.orig	2006-09-01 14:39:55.000000000 -0700
++++ pci.c	2006-09-01 14:41:28.000000000 -0700
+@@ -297,7 +297,7 @@
+ #endif	
+ 	unsigned int devtype, command;
+ 	
+-	devtype = p->device_class;
++	devtype = config[PCI_CLASS_DEVICE+1] << 8 | config[PCI_CLASS_DEVICE];
+ 	if (p->irq || pciToKudzu(devtype) != CLASS_VIDEO) {
+ 		return 0;
+ 	}
+@@ -420,13 +420,13 @@
+ 		dev->subDeviceId = subdev;
+ 		dev->pciType = bustype;
+ 		asprintf(&t,"v%08Xd%08Xsv%08Xsd%08Xbc%02Xsc%02Xi%02x",p->vendor_id,p->device_id,
+-			 subvend, subdev,(u_int8_t)(p->device_class >> 8),(u_int8_t)(p->device_class),config[PCI_CLASS_PROG]);
++			 subvend, subdev,(u_int8_t)(config[PCI_CLASS_DEVICE+1] << 8),(u_int8_t)(config[PCI_CLASS_DEVICE]),config[PCI_CLASS_PROG]);
+ 		drv = aliasSearch(aliases, "pci", t);
+ 		x_drv = aliasSearch(aliases, "pcivideo", t);
+ 		free(t);
+ 		if (drv)
+ 			dev->driver = strdup(drv);
+-		devtype = p->device_class;
++		devtype = config[PCI_CLASS_DEVICE+1] << 8 | config[PCI_CLASS_DEVICE];
+ 		if (x_drv) {
+ 			dev->classprivate = strdup(x_drv);
+ 		}

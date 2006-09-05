@@ -1,0 +1,21 @@
+Remove a class that only exists as a patch to Red Hat pciutils.
+
+-Donnie Berkholz <dberkholz@gentoo.org>
+
+Index: pci.c
+===================================================================
+RCS file: /usr/local/CVS/kudzu/pci.c,v
+retrieving revision 1.110
+retrieving revision 1.109
+diff -u -b -B -r1.110 -r1.109
+--- pci.c	8 Sep 2004 19:00:57 -0000	1.110
++++ pci.c	3 Sep 2004 21:14:39 -0000	1.109
+@@ -746,7 +748,7 @@
+ 		    subvend = config[PCI_SUBSYSTEM_VENDOR_ID+1] << 8 | config[PCI_SUBSYSTEM_VENDOR_ID];
+ 		    subdev = config[PCI_SUBSYSTEM_ID+1] << 8 | config[PCI_SUBSYSTEM_ID];
+ 		}
+-		pci_fill_info(p, PCI_FILL_IDENT | PCI_FILL_CLASS | PCI_FILL_IRQ | PCI_FILL_BASES | PCI_FILL_ROM_BASE | PCI_FILL_SIZES);
++		pci_fill_info(p, PCI_FILL_IDENT | PCI_FILL_IRQ | PCI_FILL_BASES | PCI_FILL_ROM_BASE | PCI_FILL_SIZES);
+ 		bustype = PCI_NORMAL;
+ 	        for (bridgenum=0; cardbus_bridges[bridgenum]; bridgenum++) {
+ 			if (p->bus == cardbus_bridges[bridgenum])
