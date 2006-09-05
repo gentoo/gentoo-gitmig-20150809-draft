@@ -1,0 +1,164 @@
+Index: authconfig-gtk.py
+===================================================================
+RCS file: /usr/local/CVS/authconfig/authconfig-gtk.py,v
+retrieving revision 1.42
+diff -u -b -B -r1.42 authconfig-gtk.py
+--- authconfig-gtk.py	24 Aug 2006 19:22:17 -0000	1.42
++++ authconfig-gtk.py	5 Sep 2006 07:58:24 -0000
+@@ -387,12 +387,12 @@
+ 		if "--firstboot" in sys.argv:
+ 			for service in firstbootservices:
+ 				if os.access("/etc/init.d/" + service, os.X_OK):
+-					os.system("/etc/init.d/" + service + " condrestart")
++					os.system("/etc/init.d/" + service + " restart")
+ 			if os.access("/etc/init.d/autofs", os.X_OK):
+     				if self.info.enableNIS:
+ 					cond = ""
+ 				else:
+-    					cond = "cond"
++    					cond = ""
+ 				os.system("/etc/init.d/autofs " + cond + "restart")
+ 
+ 	def ldap_cacerts_test(self):
+Index: authinfo.py
+===================================================================
+RCS file: /usr/local/CVS/authconfig/authinfo.py,v
+retrieving revision 1.20
+diff -u -b -B -r1.20 authinfo.py
+--- authinfo.py	24 Aug 2006 19:22:17 -0000	1.20
++++ authinfo.py	5 Sep 2006 07:58:26 -0000
+@@ -61,7 +61,7 @@
+ PATH_ODBCBIND_PID = "/var/run/odbcbind.pid"
+ PATH_WINBIND = "/usr/sbin/winbindd"
+ PATH_WINBIND_PID = "/var/run/winbindd.pid"
+-PATH_YPBIND = "/sbin/ypbind"
++PATH_YPBIND = "/usr/sbin/ypbind"
+ PATH_YPBIND_PID = "/var/run/ypbind.pid"
+ PATH_SEBOOL = "/usr/sbin/setsebool"
+ PATH_SCEVENTD = "/usr/bin/pkcs11_eventmgr"
+@@ -73,14 +73,14 @@
+ PATH_LIBNSS_NIS = LIBDIR + "/libnss_nis.so.2"
+ PATH_LIBNSS_HESIOD = LIBDIR + "/libnss_hesiod.so.2"
+ PATH_LIBNSS_ODBCBIND = LIBDIR + "/libnss_odbcbind.so.2"
+-PATH_LIBNSS_WINBIND = LIBDIR + "/libnss_winbind.so.2"
++PATH_LIBNSS_WINBIND = "/usr" + LIBDIR + "/libnss_winbind.so.2"
+ PATH_LIBNSS_WINS = LIBDIR + "/libnss_wins.so.2"
+ 
+ PATH_PAM_KRB5 = AUTH_MODULE_DIR + "/pam_krb5.so"
+ PATH_PAM_LDAP = AUTH_MODULE_DIR + "/pam_ldap.so"
+ PATH_PAM_SMB = AUTH_MODULE_DIR + "/pam_smb_auth.so"
+-PATH_PAM_WINBIND = AUTH_MODULE_DIR + "/pam_winbind.so"
+-PATH_PAM_PKCS11 = AUTH_MODULE_DIR + "/pam_pkcs11.so"
++PATH_PAM_WINBIND = "/usr" + LIBDIR + "/samba/security" + "/pam_winbind.so"
++PATH_PAM_PKCS11 = "/usr" + AUTH_MODULE_DIR + "/pam_pkcs11.so"
+ 
+ PATH_WINBIND_NET = "/usr/bin/net"
+ 
+@@ -455,11 +455,11 @@
+ def toggleCachingService(enableCaching, nostart):
+ 	if not nostart:
+ 		if enableCaching:
+-			os.system("/sbin/service nscd restart")
++			os.system("/etc/init.d/nscd restart")
+ 		else:
+ 			try:
+ 				os.stat(PATH_NSCD_PID)
+-				os.system("/sbin/service nscd stop")
++				os.system("/etc/init.d/nscd stop")
+ 			except OSError:
+ 				pass
+ 	return True
+@@ -469,24 +469,22 @@
+ 		os.system("/bin/domainname " + nisDomain)
+ 		try:
+ 			os.stat(PATH_PORTMAP)
+-			os.system("/sbin/chkconfig --add portmap")
+-			os.system("/sbin/chkconfig --level 345 portmap on")
++			os.system("/sbin/rc-update add portmap default")
+ 			if not nostart:
+-				os.system("/sbin/service portmap restart")
++				os.system("/etc/init.d/portmap restart")
+ 		except OSError:
+ 			pass
+ 		try:
+ 			os.stat(PATH_YPBIND)
+-			os.system("/sbin/chkconfig --add ypbind")
+-			os.system("/sbin/chkconfig --level 345 ypbind on")
++			os.system("/sbin/rc-update add ypbind default")
+ 			if os.access(PATH_SEBOOL, os.R_OK | os.X_OK):
+ 				os.system(PATH_SEBOOL + " -P allow_ypbind 1")
+ 			if not nostart:
+ 				try:
+ 					os.stat(PATH_YPBIND_PID)
+-					os.system("/sbin/service ypbind restart")
++					os.system("/etc/init.d/ypbind restart")
+ 				except OSError:
+-					os.system("/sbin/service ypbind start")
++					os.system("/etc/init.d/ypbind start")
+ 		except OSError:
+ 			pass
+ 	else:
+@@ -496,10 +494,10 @@
+ 			if not nostart:
+ 				try:
+ 					os.stat(PATH_YPBIND_PID)
+-					os.system("/sbin/service ypbind stop")
++					os.system("/etc/init.d/ypbind stop")
+ 				except OSError:
+ 					pass
+-			os.system("/sbin/chkconfig --level 345 ypbind off")
++			os.system("/sbin/rc-update del ypbind")
+ 			if os.access(PATH_SEBOOL, os.R_OK | os.X_OK):
+ 				os.system(PATH_SEBOOL + " -P allow_ypbind 0")
+ 		except OSError:
+@@ -510,10 +508,9 @@
+ 	if enable:
+ 		try:
+ 			os.stat(path)
+-			os.system("/sbin/chkconfig --add " + name)
+-			os.system("/sbin/chkconfig --level 345 " + name + " on")
++			os.system("/sbin/rc-update add " + name + " default")
+ 			if not nostart:
+-				os.system("/sbin/service " + name +" restart")
++				os.system("/etc/init.d/" + name +" restart")
+ 		except OSError:
+ 			pass
+ 	else:
+@@ -522,11 +519,11 @@
+ 			if not nostart:
+ 				try:
+ 					os.stat(pidfile)
+-					os.system("/sbin/service " + name +" stop")
++					os.system("/etc/init.d/" + name +" stop")
+ 				except OSError:
+ 					pass
+ 			
+-			os.system("/sbin/chkconfig --level 345 " + name + " off")
++			os.system("/sbin/rc-update del " + name)
+ 		except OSError:
+ 			pass
+ 	return True
+@@ -1088,7 +1085,7 @@
+ 
+ 	# Read whether or not caching is enabled.
+ 	def readCache(self):
+-		rv = os.system("/sbin/chkconfig nscd >/dev/null 2>&1")
++		rv = os.system("/bin/rc-status | grep -q nscd")
+ 		self.enableCache = os.WIFEXITED(rv) and os.WEXITSTATUS(rv) == 0
+ 		return True
+ 
+@@ -1485,12 +1482,11 @@
+ 
+ 	def writeCache(self):
+ 		if self.enableCache:
+-			os.system("/sbin/chkconfig --add nscd")
+-			os.system("/sbin/chkconfig --level 345 nscd on")
++			os.system("/sbin/rc-update add nscd default")
+ 		else:
+ 			try:
+ 				os.stat(PATH_NSCD)
+-		    		os.system("/sbin/chkconfig --level 345 nscd off");
++		    		os.system("/sbin/rc-update del nscd");
+ 			except OSError:
+ 				pass
+ 		return True
