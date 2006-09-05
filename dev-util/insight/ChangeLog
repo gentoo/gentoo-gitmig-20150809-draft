@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.27 2006/03/21 22:21:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.28 2006/09/05 19:38:06 tester Exp $
+
+  05 Sep 2006; Olivier Crête <tester@gentoo.org> insight-6.1.ebuild,
+  insight-6.4.ebuild, +insight-6.5.ebuild:
+  Version bump and new homepage
+
+*insight-6.5 (05 Sep 2006)
+
+  05 Sep 2006; Olivier Crête <tester@gentoo.org> insight-6.1.ebuild,
+  insight-6.4.ebuild, +insight-6.5.ebuild:
+  Version bump and new homepage
 
   21 Mar 2006; Aron Griffis <agriffis@gentoo.org> insight-6.1.ebuild,
   insight-6.4.ebuild:
