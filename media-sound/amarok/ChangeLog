@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.161 2006/09/05 18:20:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.162 2006/09/05 22:19:43 flameeyes Exp $
+
+  05 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.3.ebuild:
+  Disable libmtp for now, avoid automagic dependency.
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> amarok-1.4.3.ebuild:
   Rekeyworded ~sparc

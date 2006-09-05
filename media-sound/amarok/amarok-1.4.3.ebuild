@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3.ebuild,v 1.2 2006/09/05 18:20:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3.ebuild,v 1.3 2006/09/05 22:19:43 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
@@ -65,6 +65,7 @@ src_compile() {
 				  $(use_with real helix)
 				  $(use_with njb libnjb)
 				  --without-musicbrainz
+				  --without-libmtp
 				  --with-xine
 				  --without-mas
 				  --without-nmm"
