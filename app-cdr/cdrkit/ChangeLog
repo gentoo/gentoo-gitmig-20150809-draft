@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/cdrkit
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.1 2006/09/05 03:27:08 metalgod Exp $
+
+*cdrkit-1.0_pre3 (05 Sep 2006)
+
+  05 Sep 2006; Luis Medinas <metalgod@gentoo.org> +metadata.xml,
+  +cdrkit-1.0_pre3.ebuild:
+  Initial import of cdrkit the fork of the latest complete free cdrtools sources.
+
