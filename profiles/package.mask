@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5820 2006/09/04 19:10:34 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5821 2006/09/05 03:29:51 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# Luis Medinas <metalgod@gentoo.org> (05 Sep 2006)
+# Mask cdrkit to get some testing first
+# before add a virtual like cdrtools
+app-cdr/cdrkit
 
 # Steve Dibb <beandog@gentoo.org> (04 Sep 2006)
 # lve and klvemkdvd are unmaintained, see bug #145200
