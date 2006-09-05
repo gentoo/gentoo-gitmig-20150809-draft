@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.51-r1.ebuild,v 1.3 2006/08/19 17:19:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/DBI-1.51-r1.ebuild,v 1.4 2006/09/05 05:38:08 kumba Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/T/TI/TIMB/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
