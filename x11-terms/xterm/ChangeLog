@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.157 2006/08/28 00:38:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.158 2006/09/05 17:29:44 seemant Exp $
+
+*xterm-219 (05 Sep 2006)
+
+  05 Sep 2006; Seemant Kulleen <seemant@gentoo.org> -xterm-207-r1.ebuild,
+  -xterm-215-r1.ebuild, -xterm-216.ebuild, +xterm-219.ebuild:
+  version bump to 219, and cruft removal of some of the older versions -- 216,
+  for example, is gone without ever hitting stable. 217 or 218 should be
+  stabled soon
 
 *xterm-218 (28 Aug 2006)
 
