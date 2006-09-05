@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/rhpl
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.1 2006/09/05 20:59:07 dberkholz Exp $
+
+*rhpl-0.188 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/0.188-use-raw-strings-for-gettext.diff, +metadata.xml,
+  +rhpl-0.188.ebuild:
+  Library of python code used by Red Hat Linux programs
+
