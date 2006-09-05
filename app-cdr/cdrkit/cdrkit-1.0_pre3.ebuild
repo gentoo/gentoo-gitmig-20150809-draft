@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.0_pre3.ebuild,v 1.1 2006/09/05 03:27:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.0_pre3.ebuild,v 1.2 2006/09/05 05:35:17 metalgod Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	dev-util/cmake"
+	>=dev-util/cmake-2.4"
 
 S="${WORKDIR}/${MY_P}"
 
