@@ -1,0 +1,84 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.4.ebuild,v 1.1 2006/09/05 21:40:22 jokey Exp $
+
+inherit flag-o-matic eutils
+
+HELP_V="20050315"
+
+DESCRIPTION="Epic4 IRC Client"
+HOMEPAGE="http://epicsol.org/"
+SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
+	ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-${HELP_V}.tar.gz"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc-macos sparc x86"
+IUSE="ipv6 perl ssl"
+
+DEPEND=">=sys-libs/ncurses-5.2
+	perl? ( >=dev-lang/perl-5.6.1 )
+	ssl? ( >=dev-libs/openssl-0.9.5 )"
+
+pkg_setup() {
+	if use perl && built_with_use dev-lang/perl ithreads
+	then
+		error "You need perl compiled with USE=\"-ithreads\" to be able to compile epic4."
+		die "perl with USE=\"-ithreads\" needed"
+	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/epic-defaultserver.patch
+
+	rm -f ${WORKDIR}/help/Makefile
+	find ${WORKDIR}/help -type d -name CVS -print0 | xargs -0 rm -r
+}
+
+src_compile() {
+	replace-flags "-O?" "-O"
+
+	econf \
+		--libexecdir=/usr/lib/misc \
+		$(use_with ipv6) \
+		$(use_with perl) \
+		$(use_with ssl) \
+		|| die "econf failed"
+	emake || die "make failed"
+}
+
+src_install () {
+	einstall \
+		sharedir=${D}/usr/share \
+		libexecdir=${D}/usr/lib/misc || die "einstall failed"
+
+	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
+
+	cd ${S}/doc
+	docinto doc
+	dodoc \
+		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
+		nicknames outputhelp SILLINESS TS4
+
+	insinto /usr/share/epic/help
+	doins -r ${WORKDIR}/help/* || die "doins failed"
+}
+
+pkg_postinst() {
+	einfo "If /usr/share/epic/script/local does not exist, I will now"
+	einfo "create it.  If you do not like the look/feel of this file, or"
+	einfo "if you'd prefer to use your own script, simply remove this"
+	einfo "file.  If you want to prevent this file from being installed"
+	einfo "in the future, simply create an empty file with this name."
+
+	if [ ! -f ${ROOT}/usr/share/epic/script/local ]
+	then
+		cp ${FILESDIR}/local ${ROOT}/usr/share/epic/script/
+	fi
+
+	# Fix for bug 59075
+	chmod 755 ${ROOT}/usr/share/epic/help
+}

@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/epic4
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.55 2005/08/24 23:44:20 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.56 2006/09/05 21:40:22 jokey Exp $
+
+*epic4-2.4 (05 Sep 2006)
+
+  05 Sep 2006; Markus Ullmann <jokey@gentoo.org> +epic4-2.4.ebuild:
+  Version bump wrt bug #144255, thanks to deww for reporting
 
   24 Aug 2005; Aron Griffis <agriffis@gentoo.org> epic4-2.2.ebuild:
   stable on ia64
