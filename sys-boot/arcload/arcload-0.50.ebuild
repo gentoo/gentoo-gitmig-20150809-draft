@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50.ebuild,v 1.2 2006/04/09 19:55:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50.ebuild,v 1.3 2006/09/05 19:13:18 kumba Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.linux-mips.org/wiki/index.php/ARCLoad"
 SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/${PN}-${MY_PV}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE=""
 DEPEND="sys-boot/dvhtool"
 RESTRICT="nostrip"
