@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/autorun-3.17.ebuild,v 1.1 2006/09/02 01:12:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/autorun/autorun-3.17.ebuild,v 1.2 2006/09/05 07:11:02 vapier Exp $
 
 inherit kde-functions eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="app-text/xmlto"
+DEPEND="app-text/xmlto
+	=app-text/docbook-xml-dtd-4.1.2*"
 RDEPEND=""
 
 src_install() {
