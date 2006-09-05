@@ -1,0 +1,18 @@
+--- tls.c.orig	2006-09-05 21:45:09.000000000 +0200
++++ tls.c	2006-09-05 21:45:17.000000000 +0200
+@@ -2,6 +2,7 @@
+ #include "error.h"
+ #include <openssl/ssl.h>
+ #include <openssl/err.h>
++#include <string.h>
+ 
+ int smtps = 0;
+ SSL *ssl = NULL;
+@@ -9,7 +10,6 @@
+ void ssl_free(SSL *myssl) { SSL_shutdown(myssl); SSL_free(myssl); }
+ void ssl_exit(int status) { if (ssl) ssl_free(ssl); _exit(status); }
+ 
+-const char *strerror(int);
+ const char *ssl_error()
+ {
+   int r = ERR_get_error();
