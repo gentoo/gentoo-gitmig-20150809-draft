@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.38 2006/05/24 17:41:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.39 2006/09/05 06:12:10 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> xmlto-0.0.18.ebuild:
+  Marked stable on mips.
 
   24 May 2006; Diego Pettenò <flameeyes@gentoo.org> xmlto-0.0.18.ebuild:
   Add alternative dependency on app-misc/getopt for non-Linux platforms. Add
