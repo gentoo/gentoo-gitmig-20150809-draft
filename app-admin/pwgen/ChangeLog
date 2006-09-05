@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.38 2006/01/03 15:58:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.39 2006/09/05 16:58:01 wolf31o2 Exp $
+
+  05 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/pwgen.rc:
+  Removing the escapes in the init script. Thanks to Tim Yamin
+  <plasmaroo@gentoo.org> for pointing it out.
 
   03 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/pwgen-2.03-addl_pw_chars.patch, -pwgen-2.03-r1.ebuild:
