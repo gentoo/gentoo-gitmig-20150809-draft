@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/XML-Dumper-0.81.ebuild,v 1.7 2006/08/06 01:20:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/XML-Dumper-0.81.ebuild,v 1.8 2006/09/05 13:36:39 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~mikewong/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="hppa ia64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 hppa ia64 ~ppc sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 

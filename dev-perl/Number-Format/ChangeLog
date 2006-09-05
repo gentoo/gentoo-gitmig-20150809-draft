@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Number-Format
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/ChangeLog,v 1.7 2006/08/05 19:38:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/ChangeLog,v 1.8 2006/09/05 13:38:09 mcummings Exp $
+
+  05 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  Number-Format-1.51.ebuild:
+  Keywording ~amd64
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Number-Format-1.45.ebuild, Number-Format-1.51.ebuild:
