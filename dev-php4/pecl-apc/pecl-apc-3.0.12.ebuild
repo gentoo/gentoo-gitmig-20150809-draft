@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.12.ebuild,v 1.1 2006/09/05 04:01:27 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.12.ebuild,v 1.2 2006/09/05 04:07:27 sebastian Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -63,6 +63,7 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "apc.slam_defense" '"0"'
 	php-ext-base-r1_addtoinifiles "apc.file_update_protection" '"2"'
 	php-ext-base-r1_addtoinifiles "apc.stat" '"1"'
+	php-ext-base-r1_addtoinifiles "apc.include_once_override" '"0"'
 
 	dodir "${PHP_EXT_SHARED_DIR}"
 	insinto "${PHP_EXT_SHARED_DIR}"
