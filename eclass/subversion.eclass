@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.34 2006/09/03 13:01:57 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.35 2006/09/05 18:09:57 spb Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -155,6 +155,9 @@ function subversion_fetch() {
 	if [[ ! -d "${ESVN_STORE_DIR}" ]]; then
 		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
 
+		# Fix sandbox violations
+		addwrite ${ESVN_STORE_DIR%/*}
+
 		mkdir -p "${ESVN_STORE_DIR}" || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
 	fi
 
@@ -188,6 +191,9 @@ function subversion_fetch() {
 		# update working copy
 		einfo "subversion update start -->"
 		einfo "     repository: ${repo_uri}"
+
+		# Fix sandbox violations
+		addwrite "${ESVN_STORE_DIR}"
 
 		cd "${wc_path}"
 		${ESVN_UPDATE_CMD} ${ESVN_OPTIONS} || die "${ESVN}: can't update from ${repo_uri}."
