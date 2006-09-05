@@ -1,0 +1,52 @@
+? patch
+Index: system-config-bind-4.0.0/BIND.py
+===================================================================
+RCS file: /usr/local/CVS/system-config-bind/devel/system-config-bind-4.0.0/BIND.py,v
+retrieving revision 1.4
+diff -u -b -B -r1.4 BIND.py
+--- system-config-bind-4.0.0/BIND.py	7 Jun 2006 18:26:02 -0000	1.4
++++ system-config-bind-4.0.0/BIND.py	3 Sep 2006 20:44:42 -0000
+@@ -51,12 +51,12 @@
+         r=commands.getstatusoutput('. /etc/sysconfig/named; echo "$ROOTDIR"')
+         if (r[0] == 0):
+             chroot=r[1]        
+-        if os.access(chroot + '/etc/named.conf',os.F_OK) != 1:
++        if os.access(chroot + '/etc/bind/named.conf',os.F_OK) != 1:
+             if os.access(SCB + '/profiles/default/named.conf',os.F_OK)==1:
+                 debug( 'INIT CONFIG')
+                 self.gui.warning(self.gui.gui,_('Initializing to Defaults:'),_('No BIND configuration was found.\nInstalling the initial default configuration.'))
+                 debug( 'INITIALIZING')
+-                r=commands.getstatusoutput('set -e; /bin/mkdir -p '+chroot+'/{etc,var/{named/{slave,data},tmp,run/named},dev}; if [ ! -e '+chroot+'/dev/random ]; then /bin/mknod '+chroot+'/dev/random c 1 8; fi; if [ ! -e '+chroot+'/dev/null ]; then /bin/mknod '+chroot+'/dev/null c 1 3; fi; if [ ! -e '+chroot+'/dev/zero ]; then /bin/mknod '+chroot+'/dev/zero c 1 5; fi; /bin/cp -fp $SCB/profiles/default/named.conf '+chroot+'/etc; /bin/cp -fp $SCB/profiles/default/named/* '+chroot+'/var/named; /bin/chown -R root:named '+chroot+'/var/named; /bin/chown named:named '+chroot+'/var/{named/{slave,data},run/named};  /bin/chown root:root '+chroot+'/etc/named.conf; echo -ne "key rndckey {\n\talgorithm hmac-md5;\n\tsecret \""`/usr/sbin/dns-keygen`"\";\n};\n">'+chroot+'/etc/rndc.key; /bin/chown root:named '+chroot+'/etc/rndc.key; /bin/chmod 640 '+chroot+'/etc/rndc.key; /bin/chmod 777 '+chroot+'/var/tmp; if [ -e /selinux/enforce ] && [ -x /sbin/restorecon ]; then /sbin/restorecon -R /var/{named,run,tmp}; fi')
++                r=commands.getstatusoutput('set -e; /bin/mkdir -p '+chroot+'/{etc,var/{named/{slave,data},tmp,run/named},dev}; if [ ! -e '+chroot+'/dev/random ]; then /bin/mknod '+chroot+'/dev/random c 1 8; fi; if [ ! -e '+chroot+'/dev/null ]; then /bin/mknod '+chroot+'/dev/null c 1 3; fi; if [ ! -e '+chroot+'/dev/zero ]; then /bin/mknod '+chroot+'/dev/zero c 1 5; fi; /bin/cp -fp $SCB/profiles/default/named.conf '+chroot+'/etc; /bin/cp -fp $SCB/profiles/default/named/* '+chroot+'/var/named; /bin/chown -R root:named '+chroot+'/var/named; /bin/chown named:named '+chroot+'/var/{named/{slave,data},run/named};  /bin/chown root:root '+chroot+'/etc/bind/named.conf; echo -ne "key rndckey {\n\talgorithm hmac-md5;\n\tsecret \""`/usr/sbin/dns-keygen`"\";\n};\n">'+chroot+'/etc/bind/rndc.key; /bin/chown root:named '+chroot+'/etc/bind/rndc.key; /bin/chmod 640 '+chroot+'/etc/bind/rndc.key; /bin/chmod 777 '+chroot+'/var/tmp; if [ -e /selinux/enforce ] && [ -x /sbin/restorecon ]; then /sbin/restorecon -R /var/{named,run,tmp}; fi')
+                 debug(r)
+                 if r[0] != 0 :
+                    self.gui.error(_('Initialization Error:'),_('Configuration could not be initialized from defaults:\n')+r[1],True)
+Index: system-config-bind-4.0.0/NamedConf.py
+===================================================================
+RCS file: /usr/local/CVS/system-config-bind/devel/system-config-bind-4.0.0/NamedConf.py,v
+retrieving revision 1.6
+diff -u -b -B -r1.6 NamedConf.py
+--- system-config-bind-4.0.0/NamedConf.py	20 Dec 2005 00:14:14 -0000	1.6
++++ system-config-bind-4.0.0/NamedConf.py	3 Sep 2006 20:44:43 -0000
+@@ -279,7 +279,7 @@
+            opts+=named_conf
+            self.files.append({'file':named_conf,'tokens':[],'contents':''})
+         else:
+-           self.files.append({'file':self.chroot + '/etc/named.conf','tokens':[],'contents':''})           
++           self.files.append({'file':self.chroot + '/etc/bind/named.conf','tokens':[],'contents':''})           
+         s=commands.getstatusoutput('/usr/sbin/named-checkconf '+opts)
+         if len(s[1]):
+             self.errors.append(s[1])
+Index: system-config-bind-4.0.0/profiles/default/named.conf
+===================================================================
+RCS file: /usr/local/CVS/system-config-bind/devel/system-config-bind-4.0.0/profiles/default/named.conf,v
+retrieving revision 1.1.1.1
+diff -u -b -B -r1.1.1.1 named.conf
+--- system-config-bind-4.0.0/profiles/default/named.conf	28 Apr 2005 17:56:14 -0000	1.1.1.1
++++ system-config-bind-4.0.0/profiles/default/named.conf	3 Sep 2006 20:44:43 -0000
+@@ -58,4 +58,4 @@
+ 	allow-update { none; };
+ };
+ 
+-include "/etc/rndc.key";
++include "/etc/bind/rndc.key";
