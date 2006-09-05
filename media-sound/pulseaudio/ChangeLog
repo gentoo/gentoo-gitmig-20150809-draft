@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.27 2006/09/02 12:20:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.28 2006/09/05 21:21:47 flameeyes Exp $
+
+*pulseaudio-0.9.5-r2 (05 Sep 2006)
+
+  05 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/pulseaudio.init.d-2, -pulseaudio-0.9.5-r1.ebuild,
+  +pulseaudio-0.9.5-r2.ebuild:
+  The services previously in 'use' section are actually needed, make sure that
+  restarting alsasound make pulseaudio restart.
 
 *pulseaudio-0.9.5-r1 (02 Sep 2006)
 
