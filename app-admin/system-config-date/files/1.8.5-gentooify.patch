@@ -1,0 +1,72 @@
+Index: src/dateBackend.py
+===================================================================
+RCS file: /usr/local/CVS/redhat-config-date/src/dateBackend.py,v
+retrieving revision 1.38
+diff -u -b -B -r1.38 dateBackend.py
+--- src/dateBackend.py	6 Mar 2006 15:35:42 -0000	1.38
++++ src/dateBackend.py	4 Sep 2006 17:37:27 -0000
+@@ -309,28 +309,28 @@
+     
+     def startNtpService (self, wait):
+         if self.isNtpRunning() == 1:
+-            fullPath = '/sbin/service ntpd restart > /dev/null'
++            fullPath = '/etc/init.d/ntpd restart > /dev/null'
+         else:
+-            fullPath = '/sbin/service ntpd start > /dev/null'
+-        path = "/sbin/service"
+-        args = [path, "ntpd", "restart"]
++            fullPath = '/etc/init.d/ntpd start > /dev/null'
++        path = "/etc/init.d/ntpd"
++        args = [path, "restart"]
+ 
+         retval = os.system(fullPath)
+         return retval
+         
+     def chkconfigOn(self):
+-        path = ('/sbin/chkconfig --level 35 ntpd on')
++        path = ('/sbin/rc-update add ntpd default')
+         os.system (path)
+         
+     def chkconfigOff(self):
+-        path = ('/sbin/chkconfig --level 35 ntpd off')
++        path = ('/sbin/rc-update del ntpd')
+         os.system (path)
+ 
+     def stopNtpService (self):
+         if self.isNtpRunning() == 1:
+-            path = ('/sbin/service ntpd stop > /dev/null')
++            path = ('/etc/init.d/ntpd stop > /dev/null')
+             os.system (path)
+-            path = ('/sbin/chkconfig --level 35 ntpd off')
++            path = ('/sbin/rc-update del ntpd')
+             os.system (path)
+         
+     def isNtpRunning (self):
+@@ -338,7 +338,7 @@
+             #The file doesn't exist, so return
+             return 0
+ 
+-        command = ('/sbin/service ntpd status > /dev/null')
++        command = ('/etc/init.d/ntpd status > /dev/null')
+ 
+         result = os.system(command)
+ 
+Index: src/date_gui.py
+===================================================================
+RCS file: /usr/local/CVS/redhat-config-date/src/date_gui.py,v
+retrieving revision 1.39
+diff -u -b -B -r1.39 date_gui.py
+--- src/date_gui.py	6 Mar 2006 15:35:42 -0000	1.39
++++ src/date_gui.py	4 Sep 2006 17:37:28 -0000
+@@ -137,9 +137,8 @@
+             self.ntpCheckButton.set_active(True)
+         elif ntpStatus == None:
+             text = (_("The NTP initscript (%s) does not seem to be functioning "
+-                      "properly.  Try running 'rpm -V ntp' to see if the initscript "
+-                      "has been modified.  system-config-date will exit now.")
+-                      % '/etc/rc.d/init.d/ntpd')
++                      "properly. system-config-date will exit now.")
++                      % '/etc/init.d/ntpd')
+             dlg = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR, gtk.BUTTONS_OK, text)
+ 
+             dlg.set_title(_("Error"))
