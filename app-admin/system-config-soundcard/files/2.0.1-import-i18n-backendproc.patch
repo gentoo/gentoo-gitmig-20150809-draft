@@ -1,0 +1,12 @@
+diff -urN system-config-soundcard-2.0.1.orig/src/soundcardBackendProc.py system-config-soundcard-2.0.1/src/soundcardBackendProc.py
+--- system-config-soundcard-2.0.1.orig/src/soundcardBackendProc.py	2006-09-02 15:57:02.000000000 -0700
++++ system-config-soundcard-2.0.1/src/soundcardBackendProc.py	2006-09-02 15:57:33.000000000 -0700
+@@ -23,6 +23,8 @@
+ 
+ import soundcardBackendSoundCard
+ 
++from rhpl.translate import _
++
+ class soundcardBackendProc:
+     def __init__(self):    
+         self.doDebug = True        
