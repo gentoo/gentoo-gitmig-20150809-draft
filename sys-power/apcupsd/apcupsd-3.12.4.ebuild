@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.1 2006/08/27 09:19:49 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.2 2006/09/05 17:56:33 tcort Exp $
 
 inherit eutils webapp
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 LICENSE="GPL-2"
 WEBAPP_MANUAL_SLOT="yes"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="doc snmp usb cgi threads ncurses nls"
 
 DEPEND="doc? ( virtual/tetex
