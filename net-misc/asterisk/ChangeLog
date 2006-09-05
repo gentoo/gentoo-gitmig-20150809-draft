@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.121 2006/06/13 13:33:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.122 2006/09/05 19:26:54 stkn Exp $
+
+*asterisk-1.2.11 (06 Sep 2006)
+
+  06 Sep 2006; Stefan Knoblich <stkn@gentoo.org> +asterisk-1.2.11.ebuild:
+  Version bump, generic jitterbuffer support reenabled, bristuff-0.3.0-PRE-1s.
 
   13 Jun 2006; Stefan Knoblich <stkn@gentoo.org> -asterisk-1.2.7_p1.ebuild,
   -asterisk-1.2.7_p1-r1.ebuild:
