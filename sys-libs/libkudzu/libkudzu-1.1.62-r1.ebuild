@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.13 2006/08/30 15:27:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libkudzu/libkudzu-1.1.62-r1.ebuild,v 1.14 2006/09/05 20:41:37 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,8 @@ KEYWORDS="alpha amd64 ia64 -mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-libs/popt
-	sys-apps/hwdata-gentoo"
+	sys-apps/hwdata-gentoo
+	!sys-apps/kudzu"
 DEPEND="dev-libs/popt
 	sys-apps/pciutils"
 
