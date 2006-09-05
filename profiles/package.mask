@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5822 2006/09/05 18:32:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5823 2006/09/05 20:45:45 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,43 @@
 ##
 ##   End example
 ##
+
+# Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
+# Masked until it gets some testing
+
+## authconfig depends on pam 0.95, do not unmask until it is
+app-admin/authconfig
+## Below here safe to unmask after testing
+app-admin/firstboot
+app-admin/hwbrowser
+app-admin/system-config-bind
+app-admin/system-config-date
+app-admin/system-config-display
+app-admin/system-config-httpd
+app-admin/system-config-keyboard
+# Available languages must be listed in SUPPORTED var in /etc/sysconfig/i18n
+app-admin/system-config-language
+# Seems to require already existing volumes to run
+app-admin/system-config-lvm
+app-admin/system-config-nfs
+app-admin/system-config-printer
+app-admin/system-config-samba
+app-admin/system-config-soundcard
+# Groups not working properly yet
+app-admin/system-config-users
+dev-libs/alchemist
+dev-python/pycups
+dev-python/pygobject
+dev-python/pyxf86config
+dev-python/rhpl
+dev-python/rhpxl
+# for system-config-bind
+net-dns/bind-dns-keygen
+sys-apps/hwdata-redhat
+sys-apps/kudzu
+sys-apps/usermode
+sys-libs/libuser
+sys-libs/system-config-base
 
 # Joseph Jezak <josejx@gentoo.org> (05 Sep 2006)
 # Masked until it gets some testing, some issues were reported
