@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.218 2006/09/04 17:24:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.219 2006/09/05 04:12:04 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org> vim-core-7.0.17.ebuild:
+  Marked stable on mips.
 
   04 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   vim-core-7.0.17.ebuild:
