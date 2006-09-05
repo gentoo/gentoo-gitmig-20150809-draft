@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r4.ebuild,v 1.4 2006/06/16 21:26:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r4.ebuild,v 1.5 2006/09/05 20:52:50 flameeyes Exp $
 
 inherit eutils flag-o-matic linux-info libtool toolchain-funcs
 
@@ -41,16 +41,17 @@ src_unpack() {
 	if use kernel_linux && kernel_is ge 2 6 15; then
 		EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" epatch
 		epatch "${FILESDIR}/${P}-respectflags-sgio.patch"
+		# Fix makefiles for parallel make
+		epatch "${FILESDIR}/${P}-parallel-fpic.patch"
 	else
 		epatch "${FILESDIR}/${P}-respectflags-pio.patch"
 		epatch "${DISTDIR}/${P}-fbsd.patch.bz2"
+		# Fix makefiles for parallel make
+		epatch "${FILESDIR}/${P}-parallel-fpic-fbsd.patch"
 	fi
 
 	# Use directly the same exact patch as flex as it works
 	epatch "${FILESDIR}/flex-configure-LANG.patch"
-
-	# Fix makefiles for parallel make
-	epatch "${FILESDIR}/${P}-parallel-fpic.patch"
 
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
