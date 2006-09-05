@@ -1,0 +1,36 @@
+Index: src/nfsExports.py
+===================================================================
+RCS file: /usr/local/CVS/redhat-config-nfs/src/nfsExports.py,v
+retrieving revision 1.7
+diff -u -b -B -r1.7 nfsExports.py
+--- src/nfsExports.py	21 Mar 2005 16:35:46 -0000	1.7
++++ src/nfsExports.py	4 Sep 2006 17:31:17 -0000
+@@ -517,8 +517,8 @@
+             share.clients.append (client)
+ 
+     def startNfs (self):
+-        os.system('/sbin/service portmap restart > /dev/null')
+-        os.system('/sbin/service nfs start > /dev/null')
++        os.system('/etc/init.d/portmap restart > /dev/null')
++        os.system('/etc/init.d/nfs start > /dev/null')
+ 
+     def exportFs (self):
+         os.system('/usr/sbin/exportfs -r')
+Index: src/nfsServer.py
+===================================================================
+RCS file: /usr/local/CVS/redhat-config-nfs/src/nfsServer.py,v
+retrieving revision 1.1
+diff -u -b -B -r1.1 nfsServer.py
+--- src/nfsServer.py	13 Oct 2005 09:11:33 -0000	1.1
++++ src/nfsServer.py	4 Sep 2006 17:31:17 -0000
+@@ -43,8 +43,8 @@
+         nfsServer.instantiated = False
+ 
+     def startNfs (self):
+-        os.system('/sbin/service portmap restart > /dev/null')
+-        os.system('/sbin/service nfs restart > /dev/null')
++        os.system('/etc/init.d/portmap restart > /dev/null')
++        os.system('/etc/init.d/nfs restart > /dev/null')
+ 
+     def exportFs (self):
+         os.system('/usr/sbin/exportfs -r')
