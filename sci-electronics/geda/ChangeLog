@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.15 2006/07/02 11:35:50 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.16 2006/09/05 06:27:08 wormo Exp $
+
+  04 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  geda-20060123.ebuild:
+  stable on ppc (Bug #142481)
 
   02 Jul 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
   Adjusted metadata, see bug #138062.
