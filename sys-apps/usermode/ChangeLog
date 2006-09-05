@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/usermode
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.1 2006/09/05 20:55:29 dberkholz Exp $
+
+*usermode-1.86 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +usermode-1.86.ebuild:
+  Tools for certain user account management tasks
+
