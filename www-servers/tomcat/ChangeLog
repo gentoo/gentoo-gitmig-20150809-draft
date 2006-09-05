@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.56 2006/09/04 16:49:36 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.57 2006/09/05 21:07:14 wltjr Exp $
+
+*tomcat-5.5.17-r3 (05 Sep 2006)
+
+  05 Sep 2006; <wlt@gentoo.org> +tomcat-5.5.17-r3.ebuild:
+  Added back struts stuff that was lost when applying a 1.5 patch
 
   04 Sep 2006; <wlt@gentoo.org> tomcat-5.5.17-r2.ebuild:
   Take two on ebuild fix
