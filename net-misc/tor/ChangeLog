@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.69 2006/08/30 13:51:18 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.70 2006/09/05 01:02:30 humpback Exp $
+
+  05 Sep 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  -files/torrc.sample-0.1.0.14.patch, -tor-0.1.0.14-r1.ebuild,
+  -tor-0.1.0.16.ebuild, -tor-0.1.0.17.ebuild, -tor-0.1.1.20.ebuild,
+  -tor-0.1.1.22.ebuild:
+  Removed older version that had sec issues.
 
   30 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> tor-0.1.0.18.ebuild,
   tor-0.1.1.23.ebuild:
