@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.14 2006/08/17 21:20:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.15 2006/09/05 13:27:09 gustavoz Exp $
+
+  05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> IPC-Run-0.80.ebuild:
+  Stable on sparc
 
   17 Aug 2006; Michael Cummings <mcummings@gentoo.org> IPC-Run-0.79.ebuild,
   IPC-Run-0.80.ebuild:
