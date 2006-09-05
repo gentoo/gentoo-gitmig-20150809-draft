@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.162 2006/09/03 14:48:35 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.163 2006/09/05 23:17:08 dberkholz Exp $
+
+*xorg-server-1.1.1-r1 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/01-no-move-damage.patch, +files/02-dont-backfill-bg-none.patch,
+  +files/03-tfp-damage.patch, +files/04-mesa-copy-sub-buffer.patch,
+  +files/05-offscreen-pixmaps.patch, +files/06-aiglx-happy-vt-switch.patch,
+  +files/xorg-server-1.1.1-install-libxf86config-headers.patch,
+  +files/1.1.1-fix-xrandr-zoom-keys.patch, +xorg-server-1.1.1-r1.ebuild:
+  Bump. (#145797) Add patches for AIGLX+compiz. (#146197) Fix resolution
+  switching with ctrl-alt-+/-. Install libxf86config + headers for
+  pyxf86config, and extramodes and vesamodes for system-config-display. Do
+  correct bash substitution for nvidia kdrive server. This uses a mesa
+  snapshot in anticipation of the 6.5.1 release. Some changes will need to
+  happen to get it back to using a standard Mesa release tarball.
 
   03 Sep 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.0-r1.ebuild, xorg-server-1.1.1.ebuild:
