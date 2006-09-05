@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/livecd-specs
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-specs/ChangeLog,v 1.5 2005/12/20 16:46:37 wolf31o2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-specs/ChangeLog,v 1.6 2006/09/05 16:01:32 wolf31o2 Exp $
+
+*livecd-specs-2006.1 (05 Sep 2006)
+*livecd-specs-2006.0 (05 Sep 2006)
+
+  05 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +livecd-specs-2006.0.ebuild, +livecd-specs-2006.1.ebuild:
+  Added the 2006.0 and 2006.1 spec files.  This resolves bug #125072.
 
   20 Dec 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-specs-2005.1.ebuild:
