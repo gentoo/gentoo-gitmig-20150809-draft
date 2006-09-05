@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.3.ebuild,v 1.3 2006/09/01 23:09:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-gentoo/hwdata-gentoo-0.3.ebuild,v 1.4 2006/09/05 23:36:01 dberkholz Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="!sys-apps/hwdata
-	!sys-apps/hwdata-knoppix"
+	!sys-apps/hwdata-knoppix
+	!sys-apps/hwdata-redhat"
 
 src_unpack() {
 	unpack ${A}
