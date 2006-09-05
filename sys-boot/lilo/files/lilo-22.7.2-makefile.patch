@@ -1,0 +1,24 @@
+--- Makefile.orig	2006-09-05 12:11:46.000000000 +0100
++++ Makefile	2006-09-05 12:12:11.000000000 +0100
+@@ -77,8 +77,7 @@
+ CFG_DIR=/etc
+ BOOT_DIR=/boot
+ USRSBIN_DIR=/usr/sbin
+-# set the following if you wish LILO.COM to be installed
+-DOS_DIR=/dosC/boot
++
+ #
+ #MAN_DIR=`if [ -z "$(whereis lilo | grep 'lilo.8')" ]; then \
+ #	whereis lilo | sed -e "sX.* /usrX/usrX" -e "sX/man8/lilo.8.*XX" ; \
+@@ -155,10 +154,7 @@
+ #
+ # everything needed to run, just short of installation
+ #
+-all:	lilo bootsect.b diag1.img # OBSOLETE:  $(BOOTS) edit dparam.com activate
+-	if [ -x /usr/bin/bcc -o -x /usr/local/bin/bcc ]; then \
+-		make diagnostic; \
+-		make dosexe; fi
++all: lilo
+ 
+ #
+ # everything above plus the statically linked version
