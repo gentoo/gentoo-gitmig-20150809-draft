@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/authconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/authconfig/ChangeLog,v 1.2 2006/09/05 21:49:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/authconfig/ChangeLog,v 1.3 2006/09/05 21:49:55 dberkholz Exp $
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  authconfig-5.3.5.ebuild:
+  Do that in the right function.
 
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   authconfig-5.3.5.ebuild:
