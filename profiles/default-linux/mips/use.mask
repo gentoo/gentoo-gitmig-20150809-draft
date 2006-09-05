@@ -1,7 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.64 2006/09/05 03:58:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.65 2006/09/05 04:17:00 kumba Exp $
 
-# Untested on mips, masking for now.  a dep for postfix.
+# Untested on mips, masking for now.
 cdb
+nextaw
 
 # Don't need these either
 gstreamer
