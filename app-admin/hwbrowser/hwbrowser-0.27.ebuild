@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hwbrowser/hwbrowser-0.27.ebuild,v 1.1 2006/09/05 21:10:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hwbrowser/hwbrowser-0.27.ebuild,v 1.2 2006/09/05 21:52:24 dberkholz Exp $
 
-inherit rpm
+inherit python rpm
 
 # Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
 # tarball out of it
@@ -31,4 +31,8 @@ src_install() {
 	make_desktop_entry /usr/bin/${PN}
 
 	fperms 644 /etc/pam.d/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 }

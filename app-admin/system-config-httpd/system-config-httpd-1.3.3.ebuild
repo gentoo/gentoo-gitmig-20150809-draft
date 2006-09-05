@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.3.3.ebuild,v 1.1 2006/09/05 21:25:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-httpd/system-config-httpd-1.3.3.ebuild,v 1.2 2006/09/05 21:54:33 dberkholz Exp $
 
-inherit eutils rpm
+inherit python eutils rpm
 
 # Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
 # tarball out of it
@@ -46,4 +46,8 @@ src_install() {
 	make_desktop_entry /usr/bin/${PN}
 
 	fperms 644 /etc/pam.d/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 }

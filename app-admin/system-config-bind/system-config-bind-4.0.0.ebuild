@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-bind/system-config-bind-4.0.0.ebuild,v 1.1 2006/09/05 21:16:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-bind/system-config-bind-4.0.0.ebuild,v 1.2 2006/09/05 21:53:40 dberkholz Exp $
 
-inherit eutils rpm
+inherit python eutils rpm
 
 # Tag for which Fedora Core version it's from
 FCVER="6"
@@ -47,4 +47,8 @@ src_install() {
 	# of /etc/conf.d/named, so this is where arguments to named end up.
 	dodir /etc/sysconfig
 	touch "${D}"/etc/sysconfig/named
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-users
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-users/ChangeLog,v 1.1 2006/09/05 21:39:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-users/ChangeLog,v 1.2 2006/09/05 21:56:50 dberkholz Exp $
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  system-config-users-1.2.46.ebuild:
+  Cleanup compiled python files.
 
 *system-config-users-1.2.46 (05 Sep 2006)
 
