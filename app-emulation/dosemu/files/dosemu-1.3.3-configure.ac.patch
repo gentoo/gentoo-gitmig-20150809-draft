@@ -1,0 +1,87 @@
+--- dosemu-old/configure.ac	2005-12-21 20:47:43.000000000 -0500
++++ dosemu-1.3.3/configure.ac	2006-02-23 15:07:06.000000000 -0500
+@@ -15,7 +15,6 @@
+ AC_CANONICAL_TARGET([])
+ 
+ dnl Checks for programs.
+-OPT=$CFLAGS
+ AC_PROG_CC
+ if test "$host_cpu" = "x86_64" -a -z "$CPPFLAGS"; then
+   # 64bit long mode dosemu is not yet
+@@ -478,19 +477,6 @@
+ INCDIR="-I\${top_builddir}/src/include -I\${top_builddir}/src/plugin/include"
+ AC_SUBST(INCDIR)
+ 
+-CFLAGS="-Wall -Wstrict-prototypes -Wmissing-declarations -Wnested-externs"
+-if test -z "$OPT"; then
+-  if test "$enable_debug" = "yes"; then
+-    CFLAGS="$CFLAGS -g"
+-    AC_DEFINE(_DEBUG)
+-    OPT="-O"
+-  else
+-    OPT="-O2" # BIG NOTE: do _not_ use -O3,
+-              # because in forces _inline_ at places where we don't want it !
+-              # If we want _inline_, well then we 'code' it.
+-    OPT="$OPT -fomit-frame-pointer"  # never omit the frame pointer when debugging!
+-  fi
+-fi
+ if test "$enable_debug" = "yes"; then
+   AC_DEFINE(_DEBUG)
+ fi
+@@ -540,7 +526,6 @@
+     AC_MSG_NOTICE(Compiling with network support...);
+     AC_DEFINE(USING_NET)
+   fi
+- PIPE=-pipe
+ fi
+ 
+ 
+@@ -590,39 +575,6 @@
+   fi
+ 
+ 
+-  # -m486 is usually in the specs for the compiler
+-  # but gcc-3.0 wants -mcpu=i486 instead
+-  # and gcc-3.4 wants -mtune=i486 instead
+-  # let the compiler options be dependent of the _target_
+-  # where dosemu is compiled for, not the host
+-  if test "$target_cpu" = "athlon" -a $GCC_VERSION_CODE -le 2095 ;  then
+-    target_cpu="i686"
+-  fi
+-  if test "$target_cpu" = "x86_64"; then
+-    target_cpu="k8"
+-  fi
+-  if test "$GCC_VERSION_CODE" -ge 3004 ; then
+-     OPT="$OPT -mtune=$target_cpu"
+-  elif test "$GCC_VERSION_CODE" -ge 2095 ; then
+-     OPT="$OPT -mcpu=$target_cpu"
+-  else
+-     case "$target_cpu" in
+-       i486)
+-         OPT="$OPT -m486"
+-         ;;
+-       i386)
+-         OPT="$OPT -m386"
+-         ;;
+-       *)
+-         ;;
+-     esac
+-  fi
+-  if test "$target_cpu" = "athlon"; then
+-     OPT="$OPT -malign-functions=4 -fexpensive-optimizations"
+-  elif test "$target_cpu" = "i486"; then
+-     OPT="$OPT -malign-loops=2 -malign-jumps=2 -malign-functions=2"
+-  fi
+-
+   AC_MSG_CHECKING(for glibc...)
+   set `printf '%b\n' '#include <features.h>\nXXAaZZ __GLIBC__ XXBbZZ __GLIBC_MINOR__'|${CC-cc} -E -|awk '/XXAaZZ/ {print $2 " " $4}'`
+   major=$1; minor=$2
+@@ -643,7 +595,7 @@
+ AC_SUBST(ASM_PEDANTIC)
+ AC_DEFINE(_GNU_SOURCE)
+ 
+-CFLAGS="${CFLAGS} ${OPT} ${PIPE}"
++CFLAGS=${OPT}
+ CPPFLAGS="${CPPFLAGS} -MMD"
+ AC_SUBST(LDFLAGS)
+ AC_SUBST(LIBS)
