@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.59 2006/08/16 18:17:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.60 2006/09/05 03:52:04 kumba Exp $
+
+  05 Sep 2006; Joshua Kinard <kumba@gentoo.org>
+  gnome-backgrounds-2.10.2.ebuild, gnome-backgrounds-2.12.3.1.ebuild,
+  gnome-backgrounds-2.14.2.1.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org>
   gnome-backgrounds-2.14.2.1.ebuild:
