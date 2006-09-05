@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.16 2006/06/02 04:56:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.17 2006/09/05 18:39:56 tupone Exp $
+
+*doomsday-1.9.0_beta4-r1 (05 Sep 2006)
+
+  05 Sep 2006; <tupone@gentoo.org> +doomsday-1.9.0_beta4-r1.ebuild:
+  Make wrappers for the common wads. Bug #127397 by Paul Bredbury
 
   02 Jun 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   doomsday-1.9.0_beta4.ebuild:
