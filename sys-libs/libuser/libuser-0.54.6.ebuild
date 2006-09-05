@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.54.6.ebuild,v 1.1 2006/09/05 20:52:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.54.6.ebuild,v 1.2 2006/09/05 20:53:18 dberkholz Exp $
 
 inherit rpm
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="ldap sasl selinux quota"
+IUSE="ldap sasl selinux quotas"
 RDEPEND="=dev-libs/glib-2*
 	app-text/linuxdoc-tools
 	dev-libs/popt
@@ -31,7 +31,7 @@ src_compile() {
 		$(use_with ldap) \
 		$(use_with sasl) \
 		$(use_with selinux) \
-		$(use_enable quota) \
+		$(use_enable quotas quota) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
