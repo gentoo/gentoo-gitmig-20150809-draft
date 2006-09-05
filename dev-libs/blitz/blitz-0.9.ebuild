@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.2 2006/09/02 21:20:43 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.3 2006/09/05 04:54:57 tsunam Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -12,7 +12,7 @@ DEPEND="virtual/tetex
 IUSE="icc"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
 
 FORTAN="g77"
