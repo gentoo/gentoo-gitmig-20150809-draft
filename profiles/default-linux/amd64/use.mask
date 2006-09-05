@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.37 2006/08/18 15:55:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.38 2006/09/05 19:15:49 tupone Exp $
 
 # SECTION: Unmask
 
@@ -30,6 +30,10 @@
 -video_cards_vmware
 
 # SECTION: Unavailable/Broken
+
+# 2006/09/05 - Tupone Alfredo <tupone@gentoo.org>
+# doomsday ebuild is not available on this architecture
+doomsday
 
 # 2006/06/07 - Danny van Dyk <kugelfang@gentoo.org>
 # Profile cleanup: No info about these

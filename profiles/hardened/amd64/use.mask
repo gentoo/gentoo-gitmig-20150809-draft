@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.14 2006/08/18 15:56:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.15 2006/09/05 19:15:49 tupone Exp $
 
 # 2006/06/13 - Danny van Dyk <kugelfang@gentoo.org>
 # Mask clvm on amd64, as it isn't keyworded at all.
@@ -52,6 +52,10 @@ asm
 kdexdeltas
 
 # WON'T BUILD - SECTION
+
+# 2006/09/05 - Tupone Alfredo <tupone@gentoo.org>
+# doomsday ebuild is not available on this architecture
+doomsday
 
 # 2005/09/19 - Olivier Fisette <ribosome@gentoo.org>
 # cmucl is not available on amd64. Masking to keep "sci-mathematics/maxima"
