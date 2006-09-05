@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.1.ebuild,v 1.1 2006/09/01 13:32:41 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.5.1.ebuild,v 1.2 2006/09/05 17:34:56 seemant Exp $
 
 inherit eutils flag-o-matic versionator autotools
 
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack ./${MY_P}.tar.gz
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-lazyldflags.patch
-	epatch "${FILESDIR}"/${P}-notermcap.patch
+	epatch "${FILESDIR}"/${PN}-notermcap.patch
 	ebegin "Reconfiguring configure scripts (be patient)"
 	cd ${S}/appl/telnet
 	eautoconf --force -I ${S}
