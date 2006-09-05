@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.47 2006/08/29 21:52:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.48 2006/09/05 21:15:20 wolf31o2 Exp $
+
+*nwn-1.68 (05 Sep 2006)
+
+  05 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> +nwn-1.68.ebuild:
+  Version bump to the 1.68 patch and closing bug #145602.
 
   29 Aug 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.67-r1.ebuild:
   Stable on amd64 and x86.
