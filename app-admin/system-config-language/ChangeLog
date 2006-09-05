@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/system-config-language
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-language/ChangeLog,v 1.1 2006/09/05 21:26:47 dberkholz Exp $
+
+*system-config-language-1.1.11 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +system-config-language-1.1.11.ebuild:
+  A graphical interface for modifying the system language
+
