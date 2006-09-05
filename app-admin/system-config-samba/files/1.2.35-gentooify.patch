@@ -1,0 +1,35 @@
+Index: src/sambaBackend.py
+===================================================================
+RCS file: /usr/local/CVS/redhat-config-samba/src/sambaBackend.py,v
+retrieving revision 1.14
+diff -u -b -B -r1.14 sambaBackend.py
+--- src/sambaBackend.py	4 Mar 2004 23:55:01 -0000	1.14
++++ src/sambaBackend.py	4 Sep 2006 17:34:12 -0000
+@@ -31,7 +31,7 @@
+ class SambaBackend:
+ 
+     def isSmbRunning(self):
+-        fd = os.popen('LC_MESSAGES=C /etc/init.d/smb status')
++        fd = os.popen('LC_MESSAGES=C /etc/init.d/samba status')
+         lines = fd.readlines()
+         fd.close()
+ 
+@@ -43,14 +43,14 @@
+                     return 1
+ 
+     def startSamba(self):
+-        path = '/sbin/service'
+-        args = ['/sbin/service', 'smb', 'start']
++        path = '/etc/init.d/samba'
++        args = ['/etc/init.d/samba', 'start']
+ 
+-        fd = os.popen('/sbin/service smb start')
++        fd = os.popen('/etc/init.d/samba start')
+         lines = fd.readlines()
+         fd.close()
+ 
+     def restartSamba(self):
+-        fd = os.popen('/sbin/service smb restart')
++        fd = os.popen('/etc/init.d/samba restart')
+         lines = fd.readlines()
+         fd.close()
