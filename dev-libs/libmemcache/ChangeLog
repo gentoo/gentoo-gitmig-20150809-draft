@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.9 2006/06/23 21:40:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.10 2006/09/05 17:51:39 tcort Exp $
+
+  05 Sep 2006; Thomas Cort <tcort@gentoo.org> libmemcache-1.2.4.ebuild:
+  Added ~alpha keyword.
 
   23 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libmemcache-1.2.4.ebuild:
