@@ -1,0 +1,79 @@
+diff -urN system-config-httpd-1.3.3.orig/src/ApacheBase.py system-config-httpd-1.3.3/src/ApacheBase.py
+--- system-config-httpd-1.3.3.orig/src/ApacheBase.py	2006-09-04 11:57:25.000000000 -0700
++++ system-config-httpd-1.3.3/src/ApacheBase.py	2006-09-04 12:01:10.000000000 -0700
+@@ -4349,7 +4349,7 @@
+ 
+     # Compute md5sum of currently installed httpd.conf
+     try:
+-        rmd5 = hexstr (md5 (open ('/etc/httpd/conf/httpd.conf', 'r').read ()).digest())
++        rmd5 = hexstr (md5 (open ('/etc/apache2/httpd.conf', 'r').read ()).digest())
+     except:
+         rmd5 = ''
+ 
+@@ -4361,14 +4361,14 @@
+     if omd5 != rmd5:
+         if force:
+             try:
+-                os.remove ('/etc/httpd/conf/httpd.conf.bak')
++                os.remove ('/etc/apache2/httpd.conf.bak')
+             except:
+                 pass
+             try:
+-                os.rename ('/etc/httpd/conf/httpd.conf', '/etc/httpd/conf/httpd.conf.bak')
++                os.rename ('/etc/apache2/httpd.conf', '/etc/apache2/httpd.conf.bak')
+             except:
+                 pass
+-            open ('/etc/httpd/conf/httpd.conf', 'w').write (result)
++            open ('/etc/apache2/httpd.conf', 'w').write (result)
+             open ('/usr/share/system-config-httpd/httpd.conf.md5', 'w').write (nmd5)
+             local_box.write (ctx)
+ 	    return 0
+@@ -4377,7 +4377,7 @@
+         else:
+             return -2
+     else:
+-        open ('/etc/httpd/conf/httpd.conf', 'w').write (result)
++        open ('/etc/apache2/httpd.conf', 'w').write (result)
+         open ('/usr/share/system-config-httpd/httpd.conf.md5', 'w').write (nmd5)
+         local_box.write (ctx)
+ 	return 0
+diff -urN system-config-httpd-1.3.3.orig/src/httpd.conf.xsl system-config-httpd-1.3.3/src/httpd.conf.xsl
+--- system-config-httpd-1.3.3.orig/src/httpd.conf.xsl	2006-09-04 11:57:25.000000000 -0700
++++ system-config-httpd-1.3.3/src/httpd.conf.xsl	2006-09-04 12:00:25.000000000 -0700
+@@ -29,8 +29,8 @@
+ # of the server's control files begin with "/" (or "drive:/" for Win32), the
+ # server will use that explicit path.  If the filenames do *not* begin
+ # with "/", the value of ServerRoot is prepended -- so "logs/foo.log"
+-# with ServerRoot set to "/etc/httpd" will be interpreted by the
+-# server as "/etc/httpd/logs/foo.log".
++# with ServerRoot set to "/etc/apache2" will be interpreted by the
++# server as "/etc/apache2/logs/foo.log".
+ #
+ 
+ ### Section 1: Global Environment
+@@ -203,9 +203,14 @@
+ LoadModule cgi_module modules/mod_cgi.so
+ 
+ #
+-# Load config files from the config directory "/etc/httpd/conf.d".
++# Load config files from the config directory "/etc/apache2/modules.d".
+ #
+-Include conf.d/*.conf
++Include modules.d/*.conf
++
++#
++# Load config files from the config directory "/etc/apache2/vhosts.d".
++#
++Include vhosts.d/*.conf
+ 
+ #
+ # ExtendedStatus controls whether Apache will generate "full" status
+@@ -865,7 +870,7 @@
+ # To enable the cache as well, edit and uncomment the following lines:
+ # (no cacheing without CacheRoot)
+ #
+-#CacheRoot "/etc/httpd/proxy"
++#CacheRoot "/etc/apache2/proxy"
+ #CacheSize 5
+ #CacheGcInterval 4
+ #CacheMaxExpire 24
