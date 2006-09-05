@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.17.ebuild,v 1.3 2006/08/28 17:12:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.17.ebuild,v 1.4 2006/09/05 13:09:51 gustavoz Exp $
 
 inherit versionator perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Error/"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-SVG
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.21 2006/08/07 23:04:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/ChangeLog,v 1.22 2006/09/05 13:13:27 gustavoz Exp $
+
+  05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> GD-SVG-0.28.ebuild:
+  Stable on sparc
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org> GD-SVG-0.25.ebuild,
   GD-SVG-0.27.ebuild, GD-SVG-0.28.ebuild:
