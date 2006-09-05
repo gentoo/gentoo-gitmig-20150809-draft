@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-17-r1.ebuild,v 1.1 2006/05/12 20:49:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-17-r1.ebuild,v 1.2 2006/09/05 18:26:10 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="BSD GPL-2"
 
 SLOT="0"
 IUSE="readline debug"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="readline? ( >=sys-libs/readline-5.0 )"
 

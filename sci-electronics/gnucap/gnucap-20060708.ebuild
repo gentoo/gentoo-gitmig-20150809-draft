@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060708.ebuild,v 1.1 2006/07/17 21:50:30 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060708.ebuild,v 1.2 2006/09/05 18:24:16 gustavoz Exp $
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.geda.seul.org/tools/gnucap"
 IUSE="doc examples readline"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="doc? ( app-text/tetex )
 	readline? (
