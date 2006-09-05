@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.9 2006/09/05 05:31:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.10 2006/09/05 11:38:53 flameeyes Exp $
+
+  05 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xdg-utils-1.0_beta3.ebuild:
+  Add ~x86-fbsd keyword as per bug #144345.
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> xdg-utils-1.0_beta3.ebuild:
   Added ~mips to KEYWORDS.
