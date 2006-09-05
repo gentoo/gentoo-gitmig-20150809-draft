@@ -1,0 +1,135 @@
+diff -Naur mol-0.9.71_pre8/CHANGELOG ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/CHANGELOG
+--- mol-0.9.71_pre8/CHANGELOG	2006-01-27 14:10:05.000000000 -0500
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/CHANGELOG	2006-09-05 01:49:27.000000000 -0400
+@@ -1,5 +1,7 @@
+ MOL Changelog
+ 
++mol-0.9.71_pre9 - 2006-09-05 Joseph Jezak <josejx@gentoo.org>
++	* Compile fixes for kernels 2.6.17 and newer
+ mol-0.9.71_pre8 - 2006-01-26 Joseph Jezak <josejx@gentoo.org>
+ 	* Fixed mol kmod naming issue, same as last version's netdev fix
+ 	* Added video resolution settings for new PBs and Apple Cinema Displays 
+diff -Naur mol-0.9.71_pre8/config/Makefile.top ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/config/Makefile.top
+--- mol-0.9.71_pre8/config/Makefile.top	2006-01-27 14:09:29.000000000 -0500
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/config/Makefile.top	2006-09-05 02:42:52.000000000 -0400
+@@ -24,7 +24,6 @@
+ export		ARCH
+ BUILDDIR	:= $(top_srcdir)/obj-$(ARCH)
+ 
+-
+ #################################################################
+ # INSTALL dirs
+ #################################################################
+@@ -56,7 +55,7 @@
+ #################################################################
+ 
+ VERSION		:= 0.9.71
+-EXTRA_VERSION	:= -pre8$(VENDOR)
++EXTRA_VERSION	:= -pre9$(VENDOR)
+ RELEASENAME	:= $(VERSION)$(EXTRA_VERSION)$(VENDOR)
+ 
+ _prefix		= $(DESTDIR)$(prefix)
+diff -Naur mol-0.9.71_pre8/src/drivers/net/if-tap.c ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/drivers/net/if-tap.c
+--- mol-0.9.71_pre8/src/drivers/net/if-tap.c	2005-01-17 18:07:06.000000000 -0500
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/drivers/net/if-tap.c	2006-09-05 00:39:25.000000000 -0400
+@@ -21,6 +21,11 @@
+ #include <linux/netlink.h>
+ #include "enet.h"
+ #include "res_manager.h"
++#include <linux/version.h>
++
++#ifndef NETLINK_GENERIC
++#define NETLINK_GENERIC 16
++#endif
+ 
+ static const char		def_hw_addr[6] = { 0, 0, 0xDE, 0xAD, 0xBE, 0xEF };
+ 
+@@ -61,7 +66,7 @@
+ 	if( check_netdev(is->iface_name) )
+ 		return 1;
+ 
+-	if( (fd=socket(PF_NETLINK, SOCK_RAW, NETLINK_TAPBASE+tapnum)) < 0 ) {
++	if( (fd=socket(PF_NETLINK, SOCK_RAW, NETLINK_GENERIC+tapnum)) < 0 ) {
+ 		perrorm("socket");
+ 		printm("Does the kernel lack netlink support (CONFIG_NETLINK)?\n");
+ 		return 1;
+diff -Naur mol-0.9.71_pre8/src/kmod/Linux/Makefile.26 ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/kmod/Linux/Makefile.26
+--- mol-0.9.71_pre8/src/kmod/Linux/Makefile.26	2005-10-09 21:22:50.000000000 -0400
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/kmod/Linux/Makefile.26	2006-09-05 08:17:40.000000000 -0400
+@@ -25,30 +25,30 @@
+ 
+ $(obj)/_%.o: $(src)/%.S
+ 	@echo "  AS [x]   $@"
+-	@$(RM) $@ $@.s
++	@rm -f $@ $@.s
+ 	@$(CPP) $(MOL_ASMFLAGS) $< | m4 -s > $@.m4
+ 	@ASFILTER="./asfilter" ; test -x $$ASFILTER || ASFILTER="tr ';' '\n'" ; \
+ 	cat $@.m4 | $$ASFILTER > $@.s
+ 	@$(AS) $@.s $(AS_FLAGS) -o $@
+-	@$(RM) $@.s $@.m4
++	@rm -f $@.s $@.m4
+ 
+ 
+ $(src)/asm_offsets.h:	$(src)/archinclude.h $(src)/kernel_vars.h $(src)/mac_registers.h
+ $(src)/asm_offsets.h:	$(src)/asm_offsets.c $(src)/asm_offsets.inc
+-	@$(RM) ${T}/tmp-offsets.c $@ ; cat $^ > ${T}/tmp-offsets.c
++	@rm -f ${T}/tmp-offsets.c $@ ; cat $^ > ${T}/tmp-offsets.c
+ 	@$(CC) $(CPPFLAGS) $(CFLAGS) -I$(src) -Wall -S ${T}/tmp-offsets.c -o ${T}/tmp-offsets.s
+ 	@echo "/* WARNING! Automatically generated from 'shared/asm_offsets.c' - DO NOT EDIT! */" > $@
+ 	@grep '^#' ${T}/tmp-offsets.s >> $@
+-	@$(RM) ${T}/tmp-offsets.*
++	@rm -f ${T}/tmp-offsets.*
+ 
+ 
+ $(src)/_performance.c: $(PERFOBJS)
+-	@$(RM) $@ $@.tmp; echo "/* WARNING! DO NOT EDIT! AUTOMATICALLY GENERATED! */" > $@.tmp
++	@rm -f $@ $@.tmp; echo "/* WARNING! DO NOT EDIT! AUTOMATICALLY GENERATED! */" > $@.tmp
+ 	@echo "#include \"performance.h\"" >> $@.tmp
+ 	@$(NM) $(PERFOBJS) | awk -- '/gPerf__/ { print "unsigned long "$$2";" }' >> $@.tmp
+ 	@echo "perf_info_t g_perf_info_table[] = {" >> $@.tmp
+ 	@$(NM) $(PERFOBJS) | awk -- '/gPerf__/ { print "  { \""$$2"\",&"$$2"}," }' >> $@.tmp
+ 	@echo "  {0,0} };" >> $@.tmp
+ 	@cat $@.tmp | sed s/_gPerf/gPerf/g > $@
+-	@$(RM) $@.tmp
++	@rm -f $@.tmp
+ 
+diff -Naur mol-0.9.71_pre8/src/kmod/Linux/kuname.c ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/kmod/Linux/kuname.c
+--- mol-0.9.71_pre8/src/kmod/Linux/kuname.c	2006-01-27 13:00:11.000000000 -0500
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/kmod/Linux/kuname.c	2006-09-05 02:36:47.000000000 -0400
+@@ -16,6 +16,9 @@
+ 
+ #include <linux/config.h>
+ #include <linux/version.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,18)
++#include <linux/utsrelease.h>
++#endif
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ 
+diff -Naur mol-0.9.71_pre8/src/kmod/Linux/mmu.c ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/kmod/Linux/mmu.c
+--- mol-0.9.71_pre8/src/kmod/Linux/mmu.c	2005-01-17 18:07:06.000000000 -0500
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/kmod/Linux/mmu.c	2006-09-05 02:39:32.000000000 -0400
+@@ -32,6 +32,10 @@
+ int
+ arch_mmu_init( kernel_vars_t *kv )
+ {
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,18)
++	MMU.emulator_context = current->mm->context.id;
++#else
+ 	MMU.emulator_context = current->mm->context;
++#endif
+ 	return 0;
+ }
+diff -Naur mol-0.9.71_pre8/src/netdriver/kuname.c ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/netdriver/kuname.c
+--- mol-0.9.71_pre8/src/netdriver/kuname.c	2006-01-10 00:46:42.000000000 -0500
++++ ../../mol-0.9.71_pre9/work/mol-0.9.71_pre9/src/netdriver/kuname.c	2006-09-05 02:36:54.000000000 -0400
+@@ -16,6 +16,9 @@
+ 
+ #include <linux/config.h>
+ #include <linux/version.h>
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,18)
++#include <linux/utsrelease.h>
++#endif
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ 
