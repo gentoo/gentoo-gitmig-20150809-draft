@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.17.10.ebuild,v 1.1 2006/08/27 23:38:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.17.10.ebuild,v 1.2 2006/09/05 17:16:09 kumba Exp $
 
 
 # INCLUDED:
@@ -41,7 +41,7 @@ inherit kernel eutils versionator
 HOMEPAGE="http://www.linux-mips.org/ http://www.gentoo.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources virtual/alsa"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE="cobalt ip27 ip28 ip30 ip32r10k"
 DEPEND=">=sys-devel/gcc-4.1.1"
 
@@ -51,7 +51,7 @@ USE_RC="no"				# If set to "yes", then attempt to use an RC kernel
 USE_PNT="yes"				# If set to "yes", then attempt to use a point-release (2.6.x.y)
 
 # Machine Support Control Variables
-DO_IP22="no"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
+DO_IP22="yes"				# If "yes", enable IP22 support		(SGI Indy, Indigo2 R4x00)
 DO_IP27="yes"				# 		   IP27 support		(SGI Origin)
 DO_IP28="yes"				# 		   IP28 support		(SGI Indigo2 Impact R10000)
 DO_IP30="yes"				# 		   IP30 support		(SGI Octane)
@@ -59,7 +59,7 @@ DO_IP32="yes"				# 		   IP32 support		(SGI O2, R5000/RM5200 Only)
 DO_CBLT="yes"				# 		   Cobalt Support	(Cobalt Microsystems)
 
 # Machine Stable Version Variables 
-SV_IP22="2.6.15.7-r1"			# If set && DO_IP22 == "no", indicates last "good" IP22 version
+SV_IP22=""				# If set && DO_IP22 == "no", indicates last "good" IP22 version
 SV_IP27=""				# 	    DO_IP27 == "no", 			   IP27
 SV_IP28=""				# 	    DO_IP28 == "no", 			   IP28
 SV_IP30=""				# 	    DO_IP30 == "no", 			   IP30
