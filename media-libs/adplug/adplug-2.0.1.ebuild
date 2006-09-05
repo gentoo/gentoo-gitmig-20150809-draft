@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.0.1.ebuild,v 1.2 2006/08/28 16:31:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.0.1.ebuild,v 1.3 2006/09/05 20:02:49 dertobi123 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="~amd64 ppc sparc ~x86"
 
 DEPEND=">=dev-cpp/libbinio-1.4"
 
