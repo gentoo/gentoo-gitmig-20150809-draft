@@ -1,0 +1,48 @@
+Index: src/mainWindow.py
+===================================================================
+RCS file: /usr/local/CVS/redhat-config-users/src/mainWindow.py,v
+retrieving revision 1.118
+diff -u -b -B -r1.118 mainWindow.py
+--- src/mainWindow.py	13 Jul 2006 17:19:04 -0000	1.118
++++ src/mainWindow.py	4 Sep 2006 06:19:06 -0000
+@@ -26,7 +26,6 @@
+ import sys
+ import time
+ import os
+-import rpm
+ 
+ import libuser
+ 
+@@ -607,9 +606,6 @@
+                     dlg.run ()
+                     dlg.destroy ()
+                     return
+-                ts = rpm.TransactionSet ()
+-                if ts.dbMatch ("basenames", homeDir).count () > 0 or ts.dbMatch ("basenames", os.path.abspath (homeDir)).count () > 0 or ts.dbMatch ("basenames", os.path.realpath (homeDir)).count () > 0:
+-                    errMsgs.append (_("- An installed software package contains this directory."))
+                 if uid < 500 or (user == "nfsnobody" and (long (uid) == 65534L or long (uid) == 4294967294L)):
+                     errMsgs.append (_("- A system user owns this directory and removing it may impair the system's integrity."))
+                 if not os.access(homeDir, os.W_OK):
+@@ -856,21 +852,12 @@
+         self.on_properties_activate()
+ 
+     def isSELinuxInstalled(self):
+-        ts = rpm.TransactionSet()
+-
+-        mi = ts.dbMatch('name', 'policy-sources')
+-        if mi.count() > 0:
+-            return 1
+-        return 0
++        return self.isSELinuxEnabled()
+ 
+     def isSELinuxEnabled(self):
+-        if self.isSELinuxInstalled():
+             if os.system("/usr/bin/selinuxenabled") > 0:
+                 #it's enabled, return 1
+                 return 1
+             else:
+                 #it's installed, but not enabled
+                 return 0
+-        else:
+-            #not installed
+-            return 0
