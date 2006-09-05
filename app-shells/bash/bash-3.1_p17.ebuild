@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.5 2006/08/02 18:22:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.6 2006/09/05 22:40:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="afs nls bashlogger"
+IUSE="afs bashlogger nls vanilla"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
 
@@ -55,28 +55,28 @@ src_unpack() {
 	done
 	cd ../..
 
-	# Fall back to /etc/inputrc
-	epatch "${FILESDIR}"/${PN}-3.0-etc-inputrc.patch
-	# Add more ulimit options (from Fedora)
-	epatch "${FILESDIR}"/${MY_P}-ulimit.patch
-	# Fix a memleak in read_builtin (from Fedora)
-	epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
-	# Don't barf on handled signals in scripts
-	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
-	# Fix -/bin/bash login shell #118257
-	epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch
-	# Fix /dev/fd test with FEATURES=userpriv #131875
-	epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch
-#	# Fix generation of signals list when cross-compiling
-#	epatch "${FILESDIR}"/${PN}-3.0-cross-signals.patch
-	# Log bash commands to syslog #91327
-	if use bashlogger ; then
-		echo
-		ewarn "The logging patch should ONLY be used in restricted (i.e. honeypot) envs."
-		ewarn "This will log ALL output you enter into the shell, you have been warned."
-		ebeep
-		epause
-		epatch "${FILESDIR}"/${PN}-3.1-bash-logger.patch
+	if ! use vanilla ; then
+		# Fall back to /etc/inputrc
+		epatch "${FILESDIR}"/${PN}-3.0-etc-inputrc.patch
+		# Add more ulimit options (from Fedora)
+		epatch "${FILESDIR}"/${MY_P}-ulimit.patch
+		# Fix a memleak in read_builtin (from Fedora)
+		epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
+		# Don't barf on handled signals in scripts
+		epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
+		# Fix -/bin/bash login shell #118257
+		epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch
+		# Fix /dev/fd test with FEATURES=userpriv #131875
+		epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch
+		# Log bash commands to syslog #91327
+		if use bashlogger ; then
+			echo
+			ewarn "The logging patch should ONLY be used in restricted (i.e. honeypot) envs."
+			ewarn "This will log ALL output you enter into the shell, you have been warned."
+			ebeep
+			epause
+			epatch "${FILESDIR}"/${PN}-3.1-bash-logger.patch
+		fi
 	fi
 
 	epatch "${FILESDIR}"/${PN}-3.0-configs.patch
