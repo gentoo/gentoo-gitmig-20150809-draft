@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libuser
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/ChangeLog,v 1.1 2006/09/05 20:52:18 dberkholz Exp $
+
+*libuser-0.54.6 (05 Sep 2006)
+
+  05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +libuser-0.54.6.ebuild:
+  A user and group account administration library
+
