@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.4 2006/09/03 22:14:29 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.5 2006/09/06 02:52:57 josejx Exp $
+
+  06 Sep 2006; Joseph Jezak <josejx@gentoo.org> linuxwacom-0.7.4_p3.ebuild:
+  Marked ppc stable for #145891 and compnerd.
 
   03 Sep 2006; Joshua Jackson <tsunam@gentoo.org>
   linuxwacom-0.7.4_p3.ebuild:
