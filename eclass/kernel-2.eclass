@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.191 2006/09/06 03:10:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.192 2006/09/06 18:14:46 phreak Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -57,7 +57,7 @@
 # UNIPATCH_STRICTORDER	- if this is set places patches into directories of
 #						  order, so they are applied in the order passed
 
-inherit toolchain-funcs versionator multilib
+inherit eutils toolchain-funcs versionator multilib
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 # Added by Daniel Ostrow <dostrow@gentoo.org>
@@ -1027,6 +1027,20 @@ kernel-2_pkg_postinst() {
 }
 
 kernel-2_pkg_setup() {
+	if kernel_is 2 4; then
+		if [ "$( gcc-major-version )" -eq "4" ] ; then
+			echo
+			ewarn "Be warned !! >=sys-devel/gcc-4.0.0 isn't supported with linux-2.4!"
+			ewarn "Either switch to another gcc-version (via gcc-config) or use a"
+			ewarn "newer kernel that supports gcc-4."
+			echo
+			ewarn "Also be aware that bugreports about gcc-4 not working"
+			ewarn "with linux-2.4 based ebuilds will be closed as INVALID!"
+			echo
+			epause 10
+		fi
+	fi
+
 	ABI="${KERNEL_ABI}"
 	[[ ${ETYPE} == headers ]] && setup_headers
 	[[ ${ETYPE} == sources ]] && echo ">>> Preparing to unpack ..."
