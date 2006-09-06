@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.153 2006/08/24 17:50:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.154 2006/09/06 09:04:09 zmedico Exp $
+
+  06 Sep 2006; Zac Medico <zmedico@gentoo.org> wine-0.9.9.ebuild,
+  wine-0.9.10.ebuild, wine-0.9.11.ebuild, wine-0.9.12.ebuild,
+  wine-0.9.13.ebuild, wine-0.9.14.ebuild, wine-0.9.15.ebuild,
+  wine-0.9.16.ebuild, wine-0.9.17.ebuild, wine-0.9.18.ebuild,
+  wine-0.9.19.ebuild:
+  Revert stable keywords for bug #146514.
 
 *wine-0.9.20 (24 Aug 2006)
 
