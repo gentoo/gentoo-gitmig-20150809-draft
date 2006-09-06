@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.13 2005/01/01 14:52:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r4.ebuild,v 1.14 2006/09/06 05:35:20 kumba Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 inherit gnome.org eutils
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/gnome-office/eog.shtml"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="ppc ~sparc x86"
 
 DEPEND=">=gnome-base/gconf-1.0.4-r2
 	>=gnome-base/bonobo-1.0.9-r1
