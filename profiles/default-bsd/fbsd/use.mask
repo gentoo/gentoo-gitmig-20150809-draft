@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.14 2006/07/07 14:30:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.15 2006/09/06 18:37:53 flameeyes Exp $
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -35,3 +35,10 @@ gnome
 
 # LUA requires a complete cleanup before being usable
 lua
+
+# This does not build on FreeBSD, unless anybody wants to fix it, use opie
+skey
+
+# To be tested
+mono
+gstreamer
