@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwordquiz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.49 2006/09/03 14:54:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwordquiz/ChangeLog,v 1.50 2006/09/06 20:12:55 flameeyes Exp $
+
+  06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> kwordquiz-3.5.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kwordquiz-3.5.2.ebuild:
   Stable on ia64.
