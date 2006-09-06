@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.5_rc2.ebuild,v 1.2 2006/09/05 16:08:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.5_rc2.ebuild,v 1.3 2006/09/06 07:35:03 uberlord Exp $
 
-inherit eutils flag-o-matic linux-info multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 MY_PV="${PV//_beta/b}"
 MY_PV="${MY_PV//_rc/rc}"
@@ -22,14 +22,6 @@ DEPEND="selinux? ( sec-policy/selinux-dhcp )
 PROVIDE="virtual/dhcpc"
 
 S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-	if use kernel_linux ; then
-		CONFIG_CHECK="PACKET"
-		ERROR_PACKET="${P} requires support for Packet Socket (CONFIG_PACKET)."
-		linux-info_pkg_setup
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -178,6 +170,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	if use kernel_linux ; then
+		ewarn
+		ewarn "${PN} requires kernel support for Packet Socket (CONFIG_PACKET)."
+		ewarn
+	fi
+
 	use minimal && return
 
 	chown dhcp:dhcp "${ROOT}"/var/{lib,run}/dhcp
