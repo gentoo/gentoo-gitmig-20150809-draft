@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.6 2005/09/26 17:50:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.7 2006/09/06 23:20:25 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/glaunch"
+dir=${GAMES_PREFIX_OPT}/${PN}
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir "/opt/${P}"
-	cp -R ${S}/* "${D}/opt/${P}"  # doinst can't do recursive
+	insinto ${dir}
+	doins -r ${S}/*
 	prepgamesdirs
 }
