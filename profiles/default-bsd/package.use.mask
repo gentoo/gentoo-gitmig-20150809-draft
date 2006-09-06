@@ -1,9 +1,6 @@
 app-misc/mc pam
-dev-lang/ruby threads
-dev-libs/confuse test
 kde-base/kcontrol ieee1394
 kde-base/kdenetwork-meta wifi
 media-video/ffmpeg ieee1394
-net-irc/rbot spell
 sys-apps/coreutils acl
 sys-apps/help2man nls
