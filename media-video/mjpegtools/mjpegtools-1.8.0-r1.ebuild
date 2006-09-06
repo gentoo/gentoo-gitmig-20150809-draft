@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.18 2006/08/25 13:45:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.19 2006/09/06 16:32:23 zzam Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool autotools
 
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
+		mirror://gentoo/${PN}-m4-1.tar.bz2"
 
 LICENSE="as-is"
 SLOT="1"
@@ -39,8 +40,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	sed -i -e '/ARCHFLAGS=/s:=.*:=:' configure
+	cd ${S}
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 	epatch "${FILESDIR}/${P}-parallelmake.patch"
@@ -50,7 +50,12 @@ src_unpack() {
 
 	# eautoreconf instead of elibtoolize
 	# as pkg-config-patch changes configure.in
-	eautoreconf
+	#
+	# use m4-files from additional tarball as mjpegtools the fails if
+	# package providing m4-file is not installed
+	AT_M4DIR=${WORKDIR}/m4 eautoreconf
+
+	sed -i -e '/ARCHFLAGS=/s:=.*:=:' configure
 }
 
 src_compile() {
