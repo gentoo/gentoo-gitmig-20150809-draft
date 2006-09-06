@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/guppi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.23 2006/08/02 16:09:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.24 2006/09/06 05:49:37 tsunam Exp $
+
+  06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> guppi-0.40.3-r3.ebuild:
+  Stable x86; bug #146394
 
   02 Aug 2006; Aron Griffis <agriffis@gentoo.org> guppi-0.40.3-r3.ebuild:
   Fix build with gcc-4 by marking -r3 stable on alpha ia64

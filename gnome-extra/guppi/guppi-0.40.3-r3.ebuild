@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r3.ebuild,v 1.3 2006/08/02 16:09:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.3-r3.ebuild,v 1.4 2006/09/06 05:49:37 tsunam Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 HOMEPAGE="http://www.gnome.org/guppi/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc x86"
 
 
 RDEPEND="=x11-libs/gtk+-1.2*
