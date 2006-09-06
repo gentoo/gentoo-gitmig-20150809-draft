@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.30.ebuild,v 1.11 2006/08/06 10:14:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.30.ebuild,v 1.12 2006/09/06 05:37:56 kumba Exp $
 
 inherit gnome2 eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
