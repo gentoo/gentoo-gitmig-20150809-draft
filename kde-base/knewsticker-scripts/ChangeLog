@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knewsticker-scripts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.47 2006/09/03 12:15:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knewsticker-scripts/ChangeLog,v 1.48 2006/09/06 22:34:19 flameeyes Exp $
+
+  06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  knewsticker-scripts-3.5.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   knewsticker-scripts-3.5.2.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/renamedlg-images
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-images/ChangeLog,v 1.38 2006/09/03 12:16:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-images/ChangeLog,v 1.39 2006/09/06 22:32:00 flameeyes Exp $
+
+  06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  renamedlg-images-3.5.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   renamedlg-images-3.5.1.ebuild:
