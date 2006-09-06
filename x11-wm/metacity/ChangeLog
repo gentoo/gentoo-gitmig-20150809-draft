@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.168 2006/09/02 18:24:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.169 2006/09/06 05:41:40 kumba Exp $
+
+  06 Sep 2006; Joshua Kinard <kumba@gentoo.org> metacity-2.10.3.ebuild,
+  metacity-2.12.3.ebuild, metacity-2.14.5.ebuild:
+  Removing mips keywords as gnome is no longer supported on mips.
 
   02 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metacity-2.14.5.ebuild:
   Stable on ia64.
