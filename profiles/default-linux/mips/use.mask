@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.65 2006/09/05 04:17:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.66 2006/09/06 04:44:46 kumba Exp $
 
 # Untested on mips, masking for now.
 cdb
@@ -7,6 +7,7 @@ nextaw
 # Don't need these either
 gstreamer
 gtkhtml
+gnome
 
 # We don't use this (yet).  It's a dep for gnome-vfs with four of its own.
 # Excluding it on mips until someone reports a need for it.
@@ -271,6 +272,22 @@ glitz
 pike
 ocaml
 timidity
+
+# Mask all non-mips arch keywords
+alpha
+amd64
+arm
+hppa
+ia64
+m68k
+ppc
+ppc64
+ppc-macos
+s390
+sh
+sparc
+x86
+x86-fbsd
 
 # Paludis-0.6.0's QA tools need libpcre++, which hasn't been shown to work yet
 qa
