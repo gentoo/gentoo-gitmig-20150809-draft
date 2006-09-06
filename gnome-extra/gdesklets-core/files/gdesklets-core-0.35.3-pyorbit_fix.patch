@@ -1,0 +1,11 @@
+--- gdesklets-core-0.35.3.orig/gdesklets	2005-05-11 18:47:55.000000000 -0400
++++ gdesklets-core-0.35.3/gdesklets	2006-08-31 22:24:30.000000000 -0400
+@@ -58,7 +58,7 @@
+           _("GTK python bindings (pygtk2) version >= 2.4.0 and "
+             "GTK+ version >= 2.4.0 are required.")
+         ),
+-        ( ("ORBit",), lambda m : m.__version__ == (2, 0, 1),
++        ( ("ORBit",), lambda m : m.__version__ >= (2, 0, 1),
+           _("ORBit python bindings (pyorbit) version == 2.0.1 are required.")
+         ),
+         ( ("bonobo.ui",), lambda m : m,
