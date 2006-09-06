@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20060322.ebuild,v 1.1 2006/09/06 15:22:54 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/tendra-5.0_pre20060322.ebuild,v 1.2 2006/09/06 16:18:31 truedfx Exp $
 
 inherit eutils toolchain-funcs bsdmk
 
@@ -56,11 +56,13 @@ src_compile() {
 		export BIN_${program}="${path} $*"
 	done
 
-	PREFIX=/usr emake || die "compilation failed"
+	PREFIX=/usr MANPATH=/usr/share/man \
+	emake || die "compilation failed"
 }
 
 src_install() {
 	export MAKE
 
-	PREFIX=${D}usr emake install || die "installation failed"
+	PREFIX=${D}usr MANPATH=${D}usr/share/man \
+	emake install || die "installation failed"
 }
