@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.25 2006/09/01 11:16:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.26 2006/09/06 18:36:24 kugelfang Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -15,7 +15,7 @@ USE_EXPAND="FOO2ZJS_DEVICES MISDN_CARDS FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS 
 
 # USE_EXPAND variables whose contents are not shown in package manager
 # output. Changes need discussion on gentoo-dev.
-USE_EXPAND_HIDDEN="USERLAND KERNEL ELIBC"
+USE_EXPAND_HIDDEN="USERLAND KERNEL ELIBC CROSSCOMPILE_OPTS"
 
 CONFIG_PROTECT="/etc"
 CONFIG_PROTECT_MASK="/etc/gconf"
