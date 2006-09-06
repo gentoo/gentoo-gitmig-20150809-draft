@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1-r2.ebuild,v 1.1 2006/07/01 03:19:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnomesu/gnomesu-0.3.1-r2.ebuild,v 1.2 2006/09/06 04:51:40 kumba Exp $
 
 inherit gnome2 eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xsu/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86 ~mips"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
