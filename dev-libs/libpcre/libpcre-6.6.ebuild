@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-6.6.ebuild,v 1.4 2006/06/22 17:11:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-6.6.ebuild,v 1.5 2006/09/06 22:25:24 spb Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -22,6 +22,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/pcre-6.3-uclibc-tuple.patch
 	epatch "${FILESDIR}"/pcre-6.4-link.patch
+
+	# Added for bug #130668 -- fix parallel builds
+	epatch "${FILESDIR}"/pcre-6.6-parallel-build.patch
 
 	# TODO: Fix this.  Use -fPIC just for the shared objects.
 	# position-independent code must used for all shared objects.
