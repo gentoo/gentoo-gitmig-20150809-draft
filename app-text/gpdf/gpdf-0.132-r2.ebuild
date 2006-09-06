@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132-r2.ebuild,v 1.8 2006/04/22 22:13:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-0.132-r2.ebuild,v 1.9 2006/09/06 04:48:03 kumba Exp $
 
 inherit gnome2 flag-o-matic eutils
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc ~hppa amd64 ~ia64 mips"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ppc sparc x86"
 
 RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/gconf-2
