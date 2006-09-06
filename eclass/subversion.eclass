@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.36 2006/09/06 15:15:53 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.37 2006/09/06 15:22:34 joker Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -172,13 +172,13 @@ function subversion_fetch() {
 
 	debug-print "${FUNCNAME}: ESVN_OPTIONS = \"${ESVN_OPTIONS}\""
 
+	# Fix sandbox violations
+	addwrite "${ESVN_STORE_DIR}"
+
 	if [[ ! -d "${wc_path}/.svn" ]]; then
 		# first check out
 		einfo "subversion check out start -->"
 		einfo "     repository: ${repo_uri}"
-
-		# Fix sandbox violations
-		addwrite "${ESVN_STORE_DIR}"
 
 		mkdir -p "${ESVN_PROJECT}"      || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
 		cd "${ESVN_PROJECT}"
