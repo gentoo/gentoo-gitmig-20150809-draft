@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/paragui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.23 2006/03/27 03:38:58 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.24 2006/09/06 20:36:16 wolf31o2 Exp $
+
+  06 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml,
+  paragui-1.1.8.ebuild:
+  Stealing this for games, since we are the only packages that depend on it.
+  Marking stable on ppc/x86 for bug #140707 and bug #133538.
 
   27 Mar 2006; Chris White <chriswhite@gentoo.org> paragui-1.0.4.ebuild,
   paragui-1.1.7.ebuild:
