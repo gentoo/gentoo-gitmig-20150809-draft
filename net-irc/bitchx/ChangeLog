@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/bitchx
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.52 2005/03/22 18:40:30 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.53 2006/09/06 07:03:03 vapier Exp $
+
+*bitchx-1.1-r3 (06 Sep 2006)
+
+  06 Sep 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/1.1/bitchx-1.1-build.patch, files/1.1/bitchx-1.1-gcc34.patch,
+  +files/1.1/bitchx-1.1-gcc41.patch, +files/1.1/bitchx-1.1-headers.patch,
+  +bitchx-1.1-r3.ebuild:
+  Clean up ebuild and compiling with gcc-4.1 #113736; thanks to everyone.
 
   22 Mar 2005; <blubb@gentoo.org> bitchx-1.1-r2.ebuild:
   pseudo-fixing bug #61133 with an ugly hack, prevents bitchx from building with
