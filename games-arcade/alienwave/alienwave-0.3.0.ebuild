@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.5 2005/08/11 23:48:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/alienwave/alienwave-0.3.0.ebuild,v 1.6 2006/09/06 22:33:43 wolf31o2 Exp $
 
 inherit games
 
@@ -15,7 +15,16 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e "s/-O2/${CFLAGS}/" \
+		-e '/strip/d' \
+		Makefile || die "sed failed"
+}
 
 src_install() {
 	dogamesbin alienwave || die "dogamesbin failed"
