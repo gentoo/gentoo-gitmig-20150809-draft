@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.2.ebuild,v 1.18 2006/06/17 05:15:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-1.4.1.2.ebuild,v 1.19 2006/09/06 05:32:23 kumba Exp $
 
 IUSE="nls"
 
 DESCRIPTION="Utilities for the Gnome desktop"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="ppc sparc x86"
 LICENSE="GPL-2"
 RDEPEND=">=gnome-base/gnome-core-1.4.0.4-r1
 	 >=gnome-base/libgtop-1.0.12-r1
