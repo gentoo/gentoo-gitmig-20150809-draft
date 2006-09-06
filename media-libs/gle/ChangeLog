@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.22 2006/07/27 16:18:39 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.23 2006/09/06 20:42:48 flameeyes Exp $
+
+  06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> gle-3.1.0-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *gle-3.1.0-r1 (27 Jul 2006)
 
