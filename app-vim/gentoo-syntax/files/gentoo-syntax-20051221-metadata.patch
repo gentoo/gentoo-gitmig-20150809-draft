@@ -1,0 +1,12 @@
+--- plugin/newmetadata.vim.old	2006-04-10 02:10:19.000000000 +0200
++++ plugin/newmetadata.vim	2006-04-10 23:42:40.000000000 +0200
+@@ -75,8 +75,8 @@
+             if l:name != ""
+                 put ='<name>' . l:name . '</name>'
+             endif
++	    put ='</maintainer>'
+         endif
+-        put ='</maintainer>'
+         put ='<longdescription lang=\"en\">'
+         put ='</longdescription>'
+         put ='</pkgmetadata>'

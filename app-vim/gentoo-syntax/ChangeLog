@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.66 2006/04/07 21:40:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.67 2006/09/06 21:46:45 tupone Exp $
+
+*gentoo-syntax-20051221-r1 (06 Sep 2006)
+
+  06 Sep 2006; <tupone@gentoo.org>
+  +files/gentoo-syntax-20051221-metadata.patch,
+  +gentoo-syntax-20051221-r1.ebuild:
+  Fixing creation of metadata.xml. Bug #129533 by me
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.
