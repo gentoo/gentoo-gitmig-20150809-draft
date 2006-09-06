@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.89 2006/08/16 14:23:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.90 2006/09/06 05:21:33 kumba Exp $
+
+  06 Sep 2006; Joshua Kinard <kumba@gentoo.org>
+  evolution-data-server-1.4.2.1.ebuild, evolution-data-server-1.6.2.ebuild:
+  Removing all mips keywords except from latest stable to fix mips
+  dependencies for eliminating gnome support.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org>
   evolution-data-server-1.6.2.ebuild:
