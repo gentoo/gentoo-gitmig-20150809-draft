@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2110 2006/09/05 20:53:54 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2111 2006/09/06 06:34:27 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -240,7 +240,6 @@ dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering.
 dev-db/mysql:embedded - Build embedded server (libmysqld)
 dev-db/mysql:extraengine - Add support for alternative storage engines.
-dev-db/mysql:geometry - Add support for geometry data.
 dev-db/mysql:latin1 - Use LATIN1 encoding instead of UTF8.
 dev-db/mysql:max-idx-128 - Raise the max index per table limit from 64 to 128
 dev-db/mysql:raid - deprecated option, removed in the 5.0 series
@@ -425,7 +424,6 @@ dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/PDL:badval - Enable badval support in PDL
 dev-perl/RPC-XML:modperl - Enable modperl support
 dev-perl/Template-Toolkit:latex - Enable latex support
-dev-perl/gtk-perl:applet - Enable gnome applet support
 dev-perl/gtk-perl:gnome-print - Enable gnome-print support
 dev-php/PEAR-MDB2:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
 dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
@@ -457,7 +455,6 @@ dev-ruby/og:kirbybase - enable Kirbybase support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-ruby/ruby-sdl:sge   - enable sdl-sge support
-dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-scheme/drscheme:backtrace - support GC backtrace dumps
 dev-scheme/drscheme:cairo - Enable cairo support.
 dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
@@ -670,7 +667,6 @@ mail-filter/dspam:user-homedirs - Build with user homedir support
 mail-filter/dspam:virtual-users  - Build with virtual-users support
 mail-filter/maildrop:authlib - Add courier-authlib suport
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
-mail-filter/spamassassin:dcc - Enable Distributed Checksum Clearinghouse support
 mail-filter/spamassassin:extramodules - Enable extra modules
 mail-filter/spamassassin:pyzor - Enable pyzor support
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -822,7 +818,6 @@ media-sound/banshee:njb - Build with njb audio player support
 media-sound/banshee:real - Build with real/helix player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bmpx:amazon - Enable Amazon album cover fetching
-media-sound/bmpx:irssi - Install irssi script (need dbus and perl)
 media-sound/bmpx:libnotify - Enable libnotify popup balloons
 media-sound/bmpx:musepack - Support for musepack (mpc) files
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
@@ -959,7 +954,6 @@ media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
-media-video/mplayer:edl - Enables usage of Edit Decision Lists
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:lzo - Enables support for lzo compression
@@ -1061,7 +1055,6 @@ net-analyzer/pmacct:64bit - Use 64bit counters instead of 32bit ones
 net-analyzer/rrdtool:rrdcgi - Build rrdcgi support
 net-analyzer/sancp:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
 net-analyzer/scapy:gnuplot - Enable gnuplot support
-net-analyzer/scapy:hostap - Enable hostap driver
 net-analyzer/scapy:pyx - Enable pyx support for psdump/pdfdump commands
 net-analyzer/scapy:visual - Enable visual support for 3d graphs
 net-analyzer/snort:dynamicplugin - Enable ability to dynamically load preprocessors, detection engine, and rules library
@@ -1104,7 +1097,6 @@ net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:datadir - enables tinydns-data to read a directory with multiple data files
 net-dns/djbdns:fwdzone - enables forward zone patch
-net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multidata - enables command line parameters for tinydns-data to specify the data file(s)
 net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
@@ -1295,7 +1287,6 @@ net-misc/bridge-utils:sysfs - Enable use of the sysfs filesystem (Linux-2.6+) vi
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
-net-misc/gnugk:accounting - Enables call logging (accounting)
 net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/hylafax:faxonly - Don't depend on mgetty-fax
 net-misc/hylafax:html - Adds HTML documentation
@@ -1466,7 +1457,6 @@ sci-geosciences/grass:gdal - Enables gdal support (Grass 6 only)
 sci-libs/gdal:fits - Enables support for NASA's cfitsio library
 sci-libs/gdal:geos - Adds support for geometry engine
 sci-libs/gdal:gml - Enables support for xerces-c API
-sci-libs/gdal:grass - Adds support for the grasslib GIS library
 sci-libs/gdal:hdf - Adds support for the Hierarchical Data Format
 sci-libs/gdal:hdf5 - Adds support for the Hierarchical Data Format v 5
 sci-libs/gdal:ogdi - Enables support for the open geographic datastore interface
@@ -1494,7 +1484,6 @@ sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD pack
 sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
-sci-mathematics/scilab:atlas - Add support for the atlas library
 sci-misc/boinc:server - Enable compilation of server
 sci-misc/h5utils:octave - Build Octave plugins
 sci-visualization/gnuplot:xemacs - Add lisp files for emacs
@@ -1502,7 +1491,6 @@ sci-visualization/labplot:cdf - Adds cdf data exchange format support
 sci-visualization/labplot:kexi - Import and export data from/to MySQL, PostgreSQL etc. via Kexi (app-office/kexi).
 sci-visualization/opendx:cdf - Adds cdf data exchange format support
 sci-visualization/opendx:hdf - Adds support for the Hierarchical Data Format
-sys-apps/baselayout-vserver:fakelog - install a fake logger init script
 sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
@@ -1748,7 +1736,6 @@ www-client/seamonkey:moznoirc - Disable building of mozilla's IRC client
 www-client/seamonkey:moznomail - Disable building mozilla's mail client
 www-client/seamonkey:moznoroaming - sroaming extension support
 www-client/w3m:async - Enables asynchronous fetch
-www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
 www-servers/cherokee:scgi - Enables scgi interface
@@ -1761,7 +1748,6 @@ www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 www-servers/shttpd:cgi - Enable CGI script support
 www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
-www-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 www-servers/thttpd:mkconfig - Create phpconfig source tarball (for maintainer use only)
 www-servers/tomcat:java5 - Use Java 1.5 for compilation
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
@@ -1831,7 +1817,6 @@ x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:disableslit - Disable the silt. Works around bug 122380.
 x11-wm/fluxbox:disabletoolbar - Disable the toolbar.
-x11-wm/fluxbox:disablexmb - Disable XMB. Works around bug 65186.
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
 x11-wm/icewm:silverxp - Apply ybuttons.cc.patch necessary for SilverXP theme
