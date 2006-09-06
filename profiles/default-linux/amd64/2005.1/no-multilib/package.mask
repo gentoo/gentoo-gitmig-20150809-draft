@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.20 2006/09/01 13:40:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.21 2006/09/06 22:13:17 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -111,6 +111,7 @@ games-fps/rtcwmp-demo
 games-fps/rtcwsp-demo
 games-fps/soldieroffortune
 games-fps/soldieroffortune-demo
+games-fps/tremulous-bin
 games-fps/ut2003
 games-fps/ut2003-demo
 games-fps/ut2004-demo
