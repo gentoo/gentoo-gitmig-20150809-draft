@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.36 2006/09/05 17:23:35 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.37 2006/09/06 02:54:39 metalgod Exp $
+
+  06 Sep 2006; Luis Medinas <metalgod@gentoo.org> dejavu-2.7.ebuild:
+  Stable on amd64.
 
   05 Sep 2006; Thomas Cort <tcort@gentoo.org> dejavu-2.9.ebuild:
   Added ~alpha wrt Bug #146369.
