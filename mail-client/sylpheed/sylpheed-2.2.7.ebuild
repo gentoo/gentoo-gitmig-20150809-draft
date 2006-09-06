@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.7.ebuild,v 1.2 2006/09/03 12:20:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.2.7.ebuild,v 1.3 2006/09/06 13:11:29 hattya Exp $
 
 inherit autotools eutils
 
@@ -34,7 +34,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-2.*.diff
+
 	eautomake
+	elibtoolize
 
 }
 
