@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.3.ebuild,v 1.2 2006/09/05 06:19:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.3.ebuild,v 1.3 2006/09/06 15:47:10 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -46,9 +46,7 @@ PDEPEND="
 		net-print/foo2zjs
 		net-print/cups-pdf
 	) )
-	"
-	# keywording xdg-utils in bug 144345
-PDEPEND="samba? ( >=net-fs/samba-3.0.8 )
+	samba? ( >=net-fs/samba-3.0.8 )
 	virtual/ghostscript"
 PROVIDE="virtual/lpr"
 
