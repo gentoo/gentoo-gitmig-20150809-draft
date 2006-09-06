@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>sci-biology</herd>
   <maintainer>
-          <email>chrb@gentoo.org</email>
-          <name>Chris Bainbridge</name>
+          <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>Software suite for modelling biological cells.</longdescription>
 </pkgmetadata>
