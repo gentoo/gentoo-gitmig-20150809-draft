@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.190 2006/09/04 00:19:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.191 2006/09/06 03:10:01 lu_zero Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -433,7 +433,7 @@ compile_headers() {
 		if [[ -z ${K_DEFCONFIG} ]]; then
 			case ${CTARGET} in
 				powerpc64*)	K_DEFCONFIG="ppc64_defconfig";;
-				powerpc)	K_DEFCONFIG="pmac32_defconfig";;
+				powerpc*)	K_DEFCONFIG="pmac32_defconfig";;
 				*)			K_DEFCONFIG="defconfig";;
 			esac
 		fi
