@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.11.ebuild,v 1.1 2006/08/27 10:25:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.11.ebuild,v 1.2 2006/09/06 16:26:21 phreak Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -37,12 +37,12 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)/vzctl" install || die "make install failed"
 
-	# the get_libdir breaks stupid src/Makefile (all contained tools)
-	# so we have to create a env.d entry for vzctl's LDPATH
+	# the get_libdir in `make install' breaks src/Makefile's logic (and thus all
+	# contained tools), so we have to create a env.d entry for vzctl's LDPATH.
 	dodir /etc/env.d
 	echo "LDPATH=\"/usr/$(get_libdir)/vzctl\"" > "${D}"/etc/env.d/05vzctl
 
-	# Provide a symlink for vz.conf (part 1 of fixing #138462)
+	# Provide a symlink for vz.conf (fixing #138462)
 	dosym /etc/vz/vz.conf /etc/conf.d/vz
 
 	# Install gentoo specific init script
