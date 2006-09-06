@@ -1,0 +1,2 @@
+# pygtk does not build, has to be checked
+dev-util/git gtk
