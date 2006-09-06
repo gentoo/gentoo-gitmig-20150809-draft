@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.154 2006/09/05 13:06:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.155 2006/09/06 18:31:07 tsunam Exp $
+
+  06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> cyrus-sasl-2.1.22.ebuild:
+  Stable x86; bug #142650
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   cyrus-sasl-2.1.22.ebuild:
