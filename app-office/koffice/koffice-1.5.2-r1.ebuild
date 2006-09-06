@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5.2-r1.ebuild,v 1.2 2006/09/03 02:17:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.5.2-r1.ebuild,v 1.3 2006/09/06 11:38:19 flameeyes Exp $
 
 inherit kde
 
@@ -61,8 +61,8 @@ need-kde 3.4
 
 pkg_setup() {
 	# use opengl &&
-		if ! built_with_use kde-base/kdelibs opengl ; then
-			eerror "You need to build kde-base/kdelibs with opengl use flag enabled."
+		if ! built_with_use =x11-libs/qt-3* opengl ; then
+			eerror "You need to build x11-libs/qt with opengl use flag enabled."
 			die
 		fi
 }
