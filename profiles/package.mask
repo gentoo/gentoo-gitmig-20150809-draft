@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5824 2006/09/05 23:08:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5825 2006/09/06 18:42:31 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Steve Dibb <beandog@gentoo.org> (06 Sep 2006)
+# Masked because of outstanding bugs, version pending removal
+=media-video/ogmrip-0.9.0-r1
 
 # Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
 # Masked until Mesa 6.5.1 is out, it uses a prerelease snapshot now
