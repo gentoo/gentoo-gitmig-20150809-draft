@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-soundcard
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/ChangeLog,v 1.2 2006/09/05 21:56:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/ChangeLog,v 1.3 2006/09/06 06:19:18 dberkholz Exp $
+
+  06 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/2.0.1-gentooify.patch, system-config-soundcard-2.0.1.ebuild:
+  Add gentooify patch to use /etc/modules.d/alsa instead of /etc/modprobe.conf.
 
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   system-config-soundcard-2.0.1.ebuild:

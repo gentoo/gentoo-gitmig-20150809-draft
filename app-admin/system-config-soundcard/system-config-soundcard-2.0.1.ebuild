@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/system-config-soundcard-2.0.1.ebuild,v 1.2 2006/09/05 21:56:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-soundcard/system-config-soundcard-2.0.1.ebuild,v 1.3 2006/09/06 06:19:18 dberkholz Exp $
 
 inherit python eutils rpm
 
@@ -32,7 +32,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	rpm_src_unpack
+	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-import-i18n-backendproc.patch
+	epatch "${FILESDIR}"/${PV}-gentooify.patch
 }
 
 src_install() {
@@ -44,6 +46,11 @@ src_install() {
 	make_desktop_entry /usr/bin/${PN}
 
 	fperms 644 /etc/pam.d/${PN}
+}
+
+pkg_postinst() {
+	elog "Run modules-update after using ${PN}"
+	elog "to ensure its changes take effect."
 }
 
 pkg_postrm() {
