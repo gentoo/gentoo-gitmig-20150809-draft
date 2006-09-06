@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.98 2006/07/08 23:09:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.99 2006/09/06 04:14:57 josejx Exp $
+
+  06 Sep 2006; Joseph Jezak <josejx@gentoo.org> avidemux-2.0.42-r1.ebuild:
+  Marked ppc stable for bug #140715.
 
   08 Jul 2006; Joseph Jezak <josejx@gentoo.org>
   +files/avidemux-altivec.patch, avidemux-2.0.42-r1.ebuild:
