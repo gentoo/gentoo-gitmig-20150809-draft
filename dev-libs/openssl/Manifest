@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gentoo.config-0.9.7g 3356 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 SHA1 9dc82ecc34677b9b9f2758d3c86ae5a8b4d86720 SHA256 1935ea31cf0d4c4a7f5ed0fa4434e9960c7ccef5cb43abcee26cff09472991eb
 MD5 5479124566140e079c2493abe59a1c90 files/gentoo.config-0.9.7g 3356
 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 files/gentoo.config-0.9.7g 3356
 SHA256 1935ea31cf0d4c4a7f5ed0fa4434e9960c7ccef5cb43abcee26cff09472991eb files/gentoo.config-0.9.7g 3356
-AUX gentoo.config-0.9.8 3032 RMD160 b444bd2b39d81c253f412bd13ecac1cc06fcf236 SHA1 2010269dfb732c1edfd365f77f5af648a9a36422 SHA256 bd5391c06d7cf6557a375e63072bdf6a3b49dfa863c5f796616f01565ea76601
-MD5 bf26d24cc47538d6d2199bb3f6685d4b files/gentoo.config-0.9.8 3032
-RMD160 b444bd2b39d81c253f412bd13ecac1cc06fcf236 files/gentoo.config-0.9.8 3032
-SHA256 bd5391c06d7cf6557a375e63072bdf6a3b49dfa863c5f796616f01565ea76601 files/gentoo.config-0.9.8 3032
+AUX gentoo.config-0.9.8 3066 RMD160 e6be2ad78e00607b1b96d55e66e30d038b265da5 SHA1 758e501c98012de20d47379544d5878234b71871 SHA256 1a860381f83c6fa846be01be3ed6e43c9aac1c0e31786a35ceefe0ce8994dc8d
+MD5 dc693bca3252827079890068a6a97db6 files/gentoo.config-0.9.8 3066
+RMD160 e6be2ad78e00607b1b96d55e66e30d038b265da5 files/gentoo.config-0.9.8 3066
+SHA256 1a860381f83c6fa846be01be3ed6e43c9aac1c0e31786a35ceefe0ce8994dc8d files/gentoo.config-0.9.8 3066
 AUX openssl-0.9.7-alpha-default-gcc.patch 533 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd SHA1 f5ee85db45ab80b66225a222c7655b74760b94fe SHA256 814ae7c09359414e7dcd96008c82d868fba0565de2d1b3e6a4275f8cdbeefb5c
 MD5 f8ff492f66404c732e4661cc4443a2e8 files/openssl-0.9.7-alpha-default-gcc.patch 533
 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd files/openssl-0.9.7-alpha-default-gcc.patch 533
@@ -110,3 +113,10 @@ SHA256 22f9cbf40e4a66b32fb3cf0c67cbb72708a7247df3880b01c4f2f74c657d03e1 files/di
 MD5 755405d8390e11885b4d78e28e0888d0 files/digest-openssl-0.9.8c 247
 RMD160 e9a1926d3f6af8db77814134256cc9c87ed9c7cf files/digest-openssl-0.9.8c 247
 SHA256 fdcfdfe6232573573e817138ff76277a9161c65fc21fe52b77dfb9a2a1fc863a files/digest-openssl-0.9.8c 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFE/y/XamhnQswr0vIRAuYkAJ9xUO/0JWYEKlC0ij6xad/aC0armwCgiBt+
+xx96mKahgtzT/8K342YoXHs=
+=neIb
+-----END PGP SIGNATURE-----
