@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.6 2006/07/06 13:01:35 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/filer-0.0.12.ebuild,v 1.7 2006/09/06 14:39:34 mcummings Exp $
+
+inherit eutils
 
 DESCRIPTION="Small file-manager written in perl"
 HOMEPAGE="http://blog.perldude.de/archives/category/programming/filer/"
@@ -29,6 +31,7 @@ DEPEND="sys-apps/findutils"
 src_unpack() {
 	unpack ${A}
 	find ${S} -type d -name .svn | xargs rm -rf
+	cd ${S}; epatch ${FILESDIR}/filer-0.0.12-trash.patch
 }
 
 src_compile() {

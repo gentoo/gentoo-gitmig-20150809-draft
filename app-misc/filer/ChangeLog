@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/filer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.20 2006/07/06 13:01:35 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.21 2006/09/06 14:39:34 mcummings Exp $
+
+  06 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/filer-0.0.12-trash.patch, filer-0.0.12.ebuild:
+  Patch for deleting dirs, worked with Jens (author) on this, closes bug 126514.
 
   06 Jul 2006; Christian Hartmann <ian@gentoo.org> -filer-0.0.6.ebuild,
   -filer-0.0.10.ebuild, filer-0.0.12.ebuild:
