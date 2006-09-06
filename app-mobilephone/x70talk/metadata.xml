@@ -4,7 +4,6 @@
   <herd>mobile-phone</herd>
   <maintainer>
           <email>maintainer-needed@gentoo.org</email>
-          <name>Chris Bainbridge</name>
   </maintainer>
   <longdescription>Communicate and sync with Panasonic X70 mobile phone</longdescription>
 </pkgmetadata>
