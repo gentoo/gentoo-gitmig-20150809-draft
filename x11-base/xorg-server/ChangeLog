@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.163 2006/09/05 23:17:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.164 2006/09/06 16:35:28 dberkholz Exp $
+
+  06 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/xorg-x11-server-1.1.1-mesa-6.5.1.patch:
+  Forgot to cvs add the patch, thanks fmccor.
 
 *xorg-server-1.1.1-r1 (05 Sep 2006)
 
