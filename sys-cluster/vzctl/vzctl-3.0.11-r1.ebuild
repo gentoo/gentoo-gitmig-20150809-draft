@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.11-r1.ebuild,v 1.2 2006/09/06 16:26:21 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/vzctl-3.0.11-r1.ebuild,v 1.3 2006/09/06 16:46:47 hollow Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -9,6 +9,11 @@ HOMEPAGE="http://openvz.org/"
 SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2
 	http://dev.gentoo.org/~phreak/distfiles/${P}-patches-${PR}.tar.bz2
 	http://dev.gentoo.org/~hollow/distfiles/${P}-patches-${PR}.tar.bz2"
+
+# new SRC_URI for next releases
+#SRC_URI="http://download.openvz.org/utils/${PN}/${PV}/src/${P}.tar.bz2
+#	http://dev.gentoo.org/~phreak/distfiles/${PN}-patches-${PVR}.tar.bz2
+#	http://dev.gentoo.org/~hollow/distfiles/${PN}-patches-${PVR}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
