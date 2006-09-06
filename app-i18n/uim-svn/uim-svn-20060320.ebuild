@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.7 2006/07/22 15:18:50 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.8 2006/09/06 12:40:53 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -45,18 +45,6 @@ RDEPEND="!app-i18n/uim
 	libedit? ( dev-libs/libedit )
 	qt3? ( $(qt_min_version 3.3.4) )
 	m17n-lib? ( dev-libs/m17n-lib )"
-
-pkg_setup() {
-
-	subversion_wc_info
-
-	[[ $? -ne 0 ]] && return
-
-	if [[ "${ESVN_WC_URL}" != "${ESVN_REPO_URI}" ]]; then
-		die "Please remove your working copy."
-	fi
-
-}
 
 src_compile() {
 
