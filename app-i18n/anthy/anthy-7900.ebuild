@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7900.ebuild,v 1.1 2006/07/12 12:53:50 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-7900.ebuild,v 1.2 2006/09/06 12:28:51 hattya Exp $
 
-inherit elisp-common eutils
+inherit autotools elisp-common eutils
 
 IUSE="emacs ucs4"
 
@@ -29,6 +29,11 @@ src_unpack() {
 		sed -i /placename/a"read ${cannadicdir}/nichan.ctd" \
 			mkworddic/dict.args.in
 	fi
+
+	epatch "${FILESDIR}"/${P}-asneeded.diff
+
+	eautomake
+	elibtoolize
 
 }
 
