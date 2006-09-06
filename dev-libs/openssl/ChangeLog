@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.186 2006/09/06 03:54:53 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.187 2006/09/06 09:32:56 corsair Exp $
+
+  06 Sep 2006; Markus Rothe <corsair@gentoo.org> openssl-0.9.7k.ebuild,
+  openssl-0.9.8c.ebuild:
+  0.9.8c ~ppc64 again. fails test with gcc-3.4. marked 0.9.7k stable on ppc64
 
   06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> openssl-0.9.7k.ebuild,
   openssl-0.9.8c.ebuild:
