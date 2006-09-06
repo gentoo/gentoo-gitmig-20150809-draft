@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>kernel</herd>
 	<maintainer>
-		<email>chrb@gentoo.org</email>
-		<name>Chris Bainbridge</name>
-	</maintainer>
-	<maintainer>
 		<email>gimli@gentoo.org</email>
 		<name>Edgar Hucek</name>
 	</maintainer>
