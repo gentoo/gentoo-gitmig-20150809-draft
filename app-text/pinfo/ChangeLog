@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.36 2006/08/26 04:48:52 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.37 2006/09/06 21:50:13 christel Exp $
+
+  06 Sep 2006; Christel Dahlskjaer <christel@gentoo.org> pinfo-0.6.9.ebuild:
+  Stable on mips as per bug #144697
 
   25 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   pinfo-0.6.9.ebuild:
