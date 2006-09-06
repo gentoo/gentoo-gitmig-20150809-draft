@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.306 2006/08/31 02:02:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.307 2006/09/06 06:37:19 cardoe Exp $
 
 # Keep them sorted
 
@@ -225,7 +225,6 @@ ncurses - Adds ncurses support (console display library)
 netboot - Enables network booting
 netcdf - Enable NetCDF data format support
 neXt - Enable neXt toolkit
-nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nis - Support for NIS/YP services
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nocd - Tells emerge to install all files required to run the application without a CD mounted
@@ -238,7 +237,6 @@ odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
 ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
-oggvorbis - Adds support for the OggVorbis audio encoding - DEPRECATED useflag 
 openal - Adds support for the Open Audio Library
 opengl - Adds support for OpenGL (3D graphics)
 oracle7 - Adds support for the Oracle 7 Database
@@ -358,5 +356,4 @@ xv - Adds in optional support for the Xvideo extension (an X API for video playb
 xvid - Adds support for xvid.org's open-source mpeg-4 codec
 yahoo - Enable Yahoo Messenger IM protocol support
 yaz - Adds in optional support for the Z39.50 Protocol for Information Retrieval (YAZ)
-zeo - Adds support for Zope Enterprise Objects
 zlib - Adds support for zlib (de)compression
