@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/system-config-display-1.0.44.ebuild,v 1.2 2006/09/05 21:54:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-display/system-config-display-1.0.44.ebuild,v 1.3 2006/09/06 00:00:10 dberkholz Exp $
 
 inherit python rpm
 
@@ -38,6 +38,12 @@ src_install() {
 	make_desktop_entry /usr/bin/${PN}
 
 	fperms 644 /etc/pam.d/${PN}
+}
+
+pkg_postinst() {
+	elog "If you want card autodetection to work optimally, you must reinstall"
+	elog "any video driver packages that did not install a *.xinf file"
+	elog "to /usr/share/hwdata/videoaliases/"
 }
 
 pkg_postrm() {
