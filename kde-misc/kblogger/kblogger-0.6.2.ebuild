@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.6.2.ebuild,v 1.3 2006/08/16 04:03:10 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kblogger/kblogger-0.6.2.ebuild,v 1.4 2006/09/06 17:54:47 flameeyes Exp $
 
 inherit kde
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="kde-base/kicker"
+DEPEND="|| ( kde-base/kicker kde-base/kdebase )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
