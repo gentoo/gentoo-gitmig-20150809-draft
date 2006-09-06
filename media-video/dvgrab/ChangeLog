@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.15 2006/07/06 23:11:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.16 2006/09/06 12:04:18 zzam Exp $
+
+  06 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/dvgrab-1.8-configure.patch, dvgrab-1.8.ebuild:
+  Removing automagic dependency on quicktime and jpeg, see Bug #146243, Thanks
+  to Polarina <gabrielp@simnet.is> for providing first patch.
 
   06 Jul 2006; Jon Hood <squinky86@gentoo.org> dvgrab-1.8.ebuild:
   Stable on amd64, bug #103926.

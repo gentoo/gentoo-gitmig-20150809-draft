@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.8.ebuild,v 1.7 2006/07/06 23:11:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.8.ebuild,v 1.8 2006/09/06 12:04:18 zzam Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Digital Video (DV) grabber for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -17,6 +17,21 @@ DEPEND="sys-libs/libavc1394
 	>=media-libs/libdv-0.102
 	jpeg? ( media-libs/jpeg )
 	quicktime? ( media-libs/libquicktime )"
+RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-configure.patch
+	cd ${S}
+	eautoreconf
+}
+
+src_compile() {
+	econf $(use_with quicktime libquicktime) \
+		$(use_with jpeg libjpeg) \
+		|| die "econf failed"
+	emake || die "emake failed"
+}
 
 src_install () {
 	make DESTDIR=${D} install || die "make install failed"
