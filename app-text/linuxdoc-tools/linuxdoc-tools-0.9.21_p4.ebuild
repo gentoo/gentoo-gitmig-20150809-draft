@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.1 2006/07/01 19:15:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.2 2006/09/06 23:03:42 flameeyes Exp $
 
 # If docs fails to generate with the following type of errors:
 #
@@ -23,7 +23,7 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="KenMacLeod SGMLUG"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="tetex"
 
 DEPEND="app-text/openjade
@@ -49,12 +49,13 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.9.13-letter.patch"
 	epatch "${FILESDIR}/${PN}-0.9.20-lib64.patch"
 	epatch "${FILESDIR}/${PN}-0.9.20-strip.patch"
+	epatch "${FILESDIR}/${PN}-0.9.21-malloc.patch"
 }
 src_compile() {
 	local myconf="--with-installed-iso-entities"
 
 	econf $myconf || die "./configure failed"
-	emake || die "Compilation failed"
+	emake CFLAGS="${CFLAGS}" || die "Compilation failed"
 }
 
 src_install() {
