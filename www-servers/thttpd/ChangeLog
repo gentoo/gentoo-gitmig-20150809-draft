@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.14 2006/07/05 18:15:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.15 2006/09/06 14:31:17 dsd Exp $
+
+*thttpd-2.25b-r5 (06 Sep 2006)
+
+  06 Sep 2006; Daniel Drake <dsd@gentoo.org> files/thttpd-2.25/thttpd.init,
+  -thttpd-2.25b-r4.ebuild, +thttpd-2.25b-r5.ebuild:
+  Fix init script to change into configured directory before starting,
+  reported by Laurence Withers in bug #142047
 
   05 Jul 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/php5.0-stdint.diff,
