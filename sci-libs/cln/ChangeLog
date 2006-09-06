@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.12 2006/04/15 14:57:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.13 2006/09/06 07:29:27 tsunam Exp $
+
+  06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> cln-1.1.10.ebuild:
+  Stable x86; bug #141413
 
 *cln-1.1.11 (15 Apr 2006)
 
