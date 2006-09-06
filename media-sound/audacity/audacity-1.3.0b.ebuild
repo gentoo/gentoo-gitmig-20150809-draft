@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.0b.ebuild,v 1.5 2006/09/04 07:34:08 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.0b.ebuild,v 1.6 2006/09/06 14:33:04 josejx Exp $
 
 inherit wxwidgets eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ppc ppc64 sparc x86"
 RESTRICT="test"
 
 DEPEND=">=x11-libs/wxGTK-2.6
