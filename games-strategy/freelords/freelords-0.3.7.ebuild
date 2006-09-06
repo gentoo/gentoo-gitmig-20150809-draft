@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.7.ebuild,v 1.5 2006/05/28 00:36:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.7.ebuild,v 1.6 2006/09/06 20:36:47 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="Free Warlords clone"
-HOMEPAGE="http://freelords.sourceforge.net/"
+HOMEPAGE="http://www.freelords.org/"
 SRC_URI="mirror://sourceforge/freelords/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="editor nls"
@@ -35,7 +35,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc41.patch
 	sed -i \
 		-e "s:\"freelordsrc\":\"${GAMES_SYSCONFDIR}/freelordsrc\":" \
 		src/main.cpp \
@@ -44,6 +43,8 @@ src_unpack() {
 		-e '/^localedir/ s:$(datadir):/usr/share:' \
 		-e 's:$(prefix)/share/locale:/usr/share/locale:' src/Makefile.in \
 		|| die "sed src/Makefile.in failed"
+	epatch ${FILESDIR}/${P}-gcc41.patch
+	epatch ${FILESDIR}/${P}-freelordsrc.patch
 }
 
 src_compile() {
