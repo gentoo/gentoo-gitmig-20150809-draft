@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.36 2006/09/04 16:41:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.37 2006/09/06 17:02:39 pva Exp $
+
+*etherape-0.9.6-r1 (06 Sep 2006)
+
+  06 Sep 2006; Peter Volkov <pva@gentoo.org>
+  +files/etherape-0.9.6-pause-crash-fix.patch, +etherape-0.9.6-r1.ebuild:
+  Fixed crash during pause->play.
 
 *etherape-0.9.6 (04 Sep 2006)
 
