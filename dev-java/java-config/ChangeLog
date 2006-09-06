@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.111 2006/09/06 03:15:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.112 2006/09/06 13:03:55 nichoj Exp $
+
+*java-config-1.3.5-r1 (06 Sep 2006)
+
+  06 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/java-config-1.3.5-javahomestacktrace.patch,
+  +java-config-1.3.5-r1.ebuild:
+  Fixed a stacktrace that occurs when trying to set the system vm.
 
 *java-config-1.3.5 (06 Sep 2006)
 
