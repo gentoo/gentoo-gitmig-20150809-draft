@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.2 2006/04/21 12:01:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r5.ebuild,v 1.3 2006/09/06 00:28:49 pebenito Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -11,7 +11,7 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 # with Linux-PAM.  I'm not really certain how pervasive the Radius
 # and NIS services of PWDB are at this point.
 
-PATCH_LEVEL="1.4"
+PATCH_LEVEL="1.5"
 BDB_VER="4.3.27"
 BDB_VER2="4.1.25"
 GLIB_VER="2.6.5"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.116 2006/07/07 11:26:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.117 2006/09/06 00:28:48 pebenito Exp $
+
+  06 Sep 2006; Chris PeBenito <pebenito@gentoo.org> pam-0.78-r5.ebuild:
+  Fix gcc 4.1 compile issue with SELinux patch.
 
   07 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.5.0-r1.ebuild:
   Fix dependecies, use econf and emake for berkdb copy, don't use the
