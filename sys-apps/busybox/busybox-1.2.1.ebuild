@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.9 2006/09/04 20:26:16 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.10 2006/09/06 05:14:17 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -212,6 +212,7 @@ src_install() {
 	tar cf busybox-links.tar -C _install . || die
 	insinto /usr/share/${PN}
 	doins busybox-links.tar || die
+	newins .config ${PF}.config || die
 
 	dodoc AUTHORS README TODO
 
@@ -241,6 +242,7 @@ pkg_preinst() {
 	fi
 
 	mv "${D}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
+	mv "${D}"/usr/share/${PN}/${PF}.config "${T}"/ || die
 }
 
 pkg_postinst() {
@@ -256,7 +258,7 @@ pkg_postinst() {
 		einfo "Saving this build config to ${config_dir}/${PF}.config"
 		einfo "Read this ebuild for more info on how to take advantage of this option"
 		mkdir -p "${config_dir}"
-		cp "${S}"/.config "${config_dir}"/${PF}.config
+		cp "${T}"/${PF}.config "${config_dir}"/${PF}.config
 		return 0
 	fi
 	echo
