@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.54 2006/09/04 01:15:16 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.55 2006/09/06 02:52:37 metalgod Exp $
+
+  06 Sep 2006; Luis Medinas <metalgod@gentoo.org> pyrex-0.9.4.1.ebuild:
+  Stable on amd64.
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> pyrex-0.9.4.1.ebuild:
   Marked stable on mips.
