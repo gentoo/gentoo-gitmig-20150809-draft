@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.2 2006/09/05 16:48:41 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.3 2006/09/07 03:11:52 metalgod Exp $
+
+*cdrkit-1.0_pre4 (07 Sep 2006)
+
+  07 Sep 2006; Luis Medinas <metalgod@gentoo.org> +cdrkit-1.0_pre4.ebuild:
+  Version Bump. Added a symlink to cdrecord so it can be used by all frontends
+  and add virtual to cdrtools.
 
   05 Sep 2006; Luis Medinas <metalgod@gentoo.org> ChangeLog:
   add a blocker for app-cdr/cdrtools.
