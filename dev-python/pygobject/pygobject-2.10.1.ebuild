@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.10.1.ebuild,v 1.1 2006/09/05 21:33:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.10.1.ebuild,v 1.2 2006/09/07 03:56:19 dberkholz Exp $
 
 inherit gnome2 python eutils
 
@@ -13,9 +13,11 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.3.5
-	>=dev-libs/glib-2.8"
+	>=dev-libs/glib-2.8
+	!<dev-python/pygtk-2.9"
 
 DEPEND="${RDEPEND}
+	doc? ( dev-libs/libxslt >=app-text/docbook-xsl-stylesheets-1.70.1 )
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README"
