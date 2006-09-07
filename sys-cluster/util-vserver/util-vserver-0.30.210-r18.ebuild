@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r18.ebuild,v 1.1 2006/09/06 19:56:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r18.ebuild,v 1.2 2006/09/07 08:34:50 hollow Exp $
 
 inherit autotools eutils toolchain-funcs bash-completion
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-IUSE=""
+IUSE="legacy"
 
 DEPEND=">=dev-libs/dietlibc-0.28
 	dev-libs/beecrypt
@@ -41,11 +41,21 @@ pkg_setup() {
 	einfo
 	einfo "Using \"${VDIRBASE}\" as vserver base directory"
 	einfo
+
+	myconf="${myconf} --with-vrootdir=${VDIRBASE}"
+
+	# default paths
+	myconf="${myconf} --localstatedir=/var"
+	myconf="${myconf} --with-initrddir=/etc/init.d"
+
+	# needed for older vserver kernels not in portage (default: v13,net)
+	# we provide this just for convenience for people using self-made kernels
+	use legacy && myconf="${myconf} --enable-apis=compat,v11,fscompat,v13,net"
 }
 
 src_unpack() {
-	unpack ${A} || die
-	cd "${S}" || die
+	unpack ${A}
+	cd "${S}"
 
 	cp "${WORKDIR}"/tools/* scripts/ || die "failed to copy gentoo tools"
 	epatch "${WORKDIR}"/patches/*.patch
@@ -55,9 +65,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --localstatedir=/var \
-	      --with-initrddir=/etc/init.d \
-	      --with-vrootdir="${VDIRBASE}" || die "econf failed"
+	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
