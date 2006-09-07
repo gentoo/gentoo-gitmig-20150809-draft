@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.7 2006/06/13 16:04:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.8 2006/09/07 11:39:49 blubb Exp $
+
+  07 Sep 2006; <blubb@gentoo.org> grub-static-0.96-r1.ebuild:
+  stable on amd64
 
 *grub-static-0.96-r1 (13 Jun 2006)
 
