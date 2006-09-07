@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.20 2006/09/05 17:56:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.21 2006/09/07 06:42:51 pva Exp $
+
+*flow-tools-0.68-r3 (07 Sep 2006)
+
+  07 Sep 2006; Peter Volkov <pva@gentoo.org>
+  +files/flow-tools-0.68-fix-a-zillion-warnings-updated.diff, metadata.xml,
+  +flow-tools-0.68-r3.ebuild:
+  Some cleanups: removed 0.67-debug.patch as debug variable is defined
+  globally in this version. Fixed possible problem on amd64 and both this fix
+  and gcc-4.1 fix integrated into
+  flow-tools-0.68-fix-a-zillion-warnings-updated.diff. Updated longdescription
+  in metadata.xml
 
   05 Sep 2006; Peter Volkov <pva@gentoo.org>
   +files/flow-tools-0.68-gcc-4.1-fix.patch, flow-tools-0.68-r2.ebuild:
