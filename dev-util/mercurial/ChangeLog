@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mercurial
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.32 2006/08/24 01:48:11 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mercurial/ChangeLog,v 1.33 2006/09/07 20:14:12 flameeyes Exp $
+
+  07 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mercurial-0.9.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
 *mercurial-0.9.1-r1 (25 Aug 2006)
 
