@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.50 2006/09/03 16:03:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.51 2006/09/07 13:04:05 flameeyes Exp $
+
+  07 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  korganizer-3.5.4.ebuild:
+  Add ~x86-fbsd keyword.
 
   03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   korganizer-3.5.2.ebuild:
