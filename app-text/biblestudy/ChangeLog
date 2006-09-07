@@ -1,6 +1,11 @@
 # ChangeLog for app-text/biblestudy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.6 2006/06/03 05:15:44 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/biblestudy/ChangeLog,v 1.7 2006/09/07 04:09:03 beandog Exp $
+
+  07 Sep 2006; Steve Dibb <beandog@gentoo.org> metadata.xml,
+  biblestudy-1.0.ebuild:
+  Fix dependencies, add message aboug emerging modules.
+  See bug #146628
 
   03 Jun 2006; Alec Warner <antarus@gentoo.org> +metadata.xml,
   biblestudy-1.0.ebuild:
