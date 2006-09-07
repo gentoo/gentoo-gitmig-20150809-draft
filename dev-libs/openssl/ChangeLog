@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.188 2006/09/06 20:37:33 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.189 2006/09/07 02:26:49 kumba Exp $
+
+  07 Sep 2006; Joshua Kinard <kumba@gentoo.org> openssl-0.9.8b.ebuild,
+  openssl-0.9.8c.ebuild:
+  Remask openssl-0.9.8 on mips due to changes upstream which need resolving.
 
   06 Sep 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   openssl-0.9.8c.ebuild:
