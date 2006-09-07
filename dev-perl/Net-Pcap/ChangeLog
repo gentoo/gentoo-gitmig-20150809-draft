@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Pcap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.23 2006/09/07 12:46:01 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.24 2006/09/07 17:44:50 mcummings Exp $
+
+  07 Sep 2006; Michael Cummings <mcummings@gentoo.org> Net-Pcap-0.14.ebuild:
+  Bug 146678, keywording ~amd64 and ~sparc
 
 *Net-Pcap-0.14 (07 Sep 2006)
 
