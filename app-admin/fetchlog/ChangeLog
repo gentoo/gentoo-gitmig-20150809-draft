@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fetchlog
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.8 2005/08/02 18:28:25 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.9 2006/09/07 23:58:01 dang Exp $
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> fetchlog-1.0.ebuild:
+  Marked stable on amd64 for bug #146729
 
   02 Aug 2005; Simon Stelling <blubb@gentoo.org> fetchlog-1.0.ebuild:
   added ~amd64 keyword
