@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/guppi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.24 2006/09/06 05:49:37 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.25 2006/09/07 14:23:32 gustavoz Exp $
+
+  07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  guppi-0.40.3-r3.ebuild:
+  Stable on sparc
 
   06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> guppi-0.40.3-r3.ebuild:
   Stable x86; bug #146394
