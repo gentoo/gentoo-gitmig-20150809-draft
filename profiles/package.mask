@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5837 2006/09/07 16:07:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5838 2006/09/07 16:21:20 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -564,7 +564,7 @@ mail-client/mahogany
 app-text/gpdf
 
 # Christian Heim <phreak@gentoo.org> (13 Jul 2006)
-# ieee80211-1.1.14 is breaking ABI!
+# ieee80211-1.1.14 is breaking ABI and API!
 =net-wireless/ieee80211-1.1.14*
 
 # Michael Marineau <marineam@gentoo.org> (09 Jul 2006)
