@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2116 2006/09/07 22:53:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2117 2006/09/07 23:09:46 tupone Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -498,7 +498,6 @@ games-arcade/bomns:editor - enables building the level editor
 games-arcade/stepmania:force-oss - force using OSS
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
-games-board/scid:snack - Enable sound with snack package
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
 games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
