@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/maxit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.3 2006/07/07 05:34:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/maxit/ChangeLog,v 1.4 2006/09/07 00:51:00 dberkholz Exp $
+
+  07 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; maxit-8.2.ebuild:
+  Keyword ~ppc.
 
   07 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update to my new email address.

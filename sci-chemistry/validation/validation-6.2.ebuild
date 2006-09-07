@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-6.2.ebuild,v 1.3 2006/06/15 02:34:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/validation/validation-6.2.ebuild,v 1.4 2006/09/07 00:50:32 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://sw-tools.pdb.org/apps/VAL/index.html"
 SRC_URI="http://sw-tools.pdb.org/apps/PDB_EXTRACT/${MY_P}.tar.gz"
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 RDEPEND="sci-libs/rcsb-data"
 DEPEND="${RDEPEND}
