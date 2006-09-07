@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/inputlircd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.7 2006/09/07 17:48:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.8 2006/09/07 18:10:41 corsair Exp $
+
+  07 Sep 2006; Markus Rothe <corsair@gentoo.org>
+  inputlircd-0.0.1_pre11.ebuild:
+  Stable on ppc64; bug #146725
 
   07 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
   inputlircd-0.0.1_pre11.ebuild:
