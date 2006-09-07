@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.124 2006/09/04 01:13:47 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.125 2006/09/07 04:17:36 dang Exp $
+
+*pygtk-2.10.1 (07 Sep 2006)
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> +pygtk-2.10.1.ebuild:
+  New version for gnome 2.16
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> pygtk-2.8.6.ebuild:
   Marked stable on mips.
