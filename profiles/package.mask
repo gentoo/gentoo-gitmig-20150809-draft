@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5828 2006/09/07 01:38:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5829 2006/09/07 02:20:39 compnerd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -402,7 +402,7 @@ x11-plugins/gaim-libnotify
 >=sys-apps/galago-daemon-0.5.0
 >=x11-plugins/gaim-galago-0.5.0
 >=dev-dotnet/galago-sharp-0.5.0
-=app-misc/tomboy-0.3.9
+=app-misc/tomboy-0.4.1
 
 # Tim Yamin <plasmaroo@gentoo.org> (07 Aug 2006)
 # Security mask
