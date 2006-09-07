@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/IO-Interface
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.1 2006/09/07 12:44:36 yuval Exp $
+
+*IO-Interface-0.98 (07 Sep 2006)
+
+  07 Sep 2006; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
+  +IO-Interface-0.98.ebuild:
+  Adding IO-Interface to the tree, dependency of dev-perl/Net-Pcap-0.14
+
