@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.118 2006/08/15 14:51:06 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.119 2006/09/07 00:14:01 christel Exp $
+
+  07 Sep 2006; Christel Dahlskjaer <christel@gentoo.org> git-1.4.1.1.ebuild:
+  Added ~mips, as per bug #126850
 
   15 Aug 2006; Fernando J. Pereda <ferdy@gentoo.org> git-1.4.2.ebuild:
   Typo fixed: donsider -> consider
