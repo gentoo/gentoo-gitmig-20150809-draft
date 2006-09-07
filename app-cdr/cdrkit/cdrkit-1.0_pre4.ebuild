@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.0_pre4.ebuild,v 1.2 2006/09/07 12:01:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.0_pre4.ebuild,v 1.3 2006/09/07 18:22:35 plasmaroo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,12 +12,13 @@ SRC_URI="http://debburn.alioth.debian.org/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
 	>=dev-util/cmake-2.4
-	!app-cdr/cdrtools"
+	!app-cdr/cdrtools
+	sys-libs/libcap"
 
 PROVIDE="virtual/cdrtools"
 

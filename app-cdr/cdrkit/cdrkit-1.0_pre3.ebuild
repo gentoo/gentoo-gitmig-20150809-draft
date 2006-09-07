@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.0_pre3.ebuild,v 1.4 2006/09/07 12:01:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/cdrkit-1.0_pre3.ebuild,v 1.5 2006/09/07 18:22:35 plasmaroo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,8 @@ IUSE=""
 
 DEPEND="virtual/libc
 	>=dev-util/cmake-2.4
-	!app-cdr/cdrtools"
+	!app-cdr/cdrtools
+	sys-libs/libcap"
 
 S="${WORKDIR}/${MY_P}"
 
