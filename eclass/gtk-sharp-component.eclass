@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.26 2006/09/07 05:24:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.27 2006/09/07 06:46:57 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -113,6 +113,15 @@ gtk-sharp-component_src_unpack() {
 
 	# Make the components configurable
 	epatch ${WORKDIR}/${MY_P}-configurable.diff
+
+	# XXX: Gross hack to disable the GLADESHARP checks
+	# in the gnome-sharp-2.16.0 release unless you really
+	# need it. Remove this hack once this is moved into the
+	# next iteration of 2.x.0-configurable.diff.gz
+	if [ "${PV}" == "2.16.0" ] && [ "${PN}" != "gconf-sharp" ]
+	then
+		sed -i "s/\(.*GLADESHARP.*\)/# \1/g" configure.in || die
+	fi
 
 	# fixes support with pkgconfig-0.17, bug #92503
 	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' \
