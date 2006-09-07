@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.16.0.ebuild,v 1.1 2006/09/07 04:12:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.16.0.ebuild,v 1.2 2006/09/07 18:12:05 dang Exp $
 
 inherit virtualx gnome2 eutils
 
@@ -72,5 +72,5 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# fix relative include path breaking libIDL (#129366)
-	epatch ${FILESDIR}/${PN}-2.14-idl_include.patch
+	epatch ${FILESDIR}/${PN}-2.16.0-idl_include.patch
 }
