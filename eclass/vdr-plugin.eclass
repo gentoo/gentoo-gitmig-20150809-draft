@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.30 2006/09/07 18:34:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.31 2006/09/07 18:49:44 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -236,7 +236,7 @@ vdr-plugin_src_compile() {
 		compile)
 			cd ${S}
 
-			emake ${VDRPLUGIN_MAKE_TARGET:-all} || die "emake failed"
+			emake ${BUILD_PARAMS} ${VDRPLUGIN_MAKE_TARGET:-all} || die "emake failed"
 			;;
 		esac
 
