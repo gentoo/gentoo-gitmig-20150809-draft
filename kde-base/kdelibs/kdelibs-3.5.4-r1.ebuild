@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.5 2006/09/07 10:21:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.6 2006/09/07 14:51:43 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -96,7 +96,8 @@ src_compile() {
 			$(use_with alsa) $(use_with arts)
 			$(use_with kerberos gssapi) $(use_with tiff)
 			$(use_with jpeg2k jasper) $(use_with openexr)
-			$(use_enable cups) $(use_enable zeroconf dnssd)"
+			$(use_enable cups) $(use_enable zeroconf dnssd)
+			--without-hspell"
 	if use noutempter ; then
 		myconf="${myconf} --without-utempter"
 	else
