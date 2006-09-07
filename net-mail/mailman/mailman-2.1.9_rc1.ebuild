@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9_rc1.ebuild,v 1.1 2006/09/07 15:08:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.9_rc1.ebuild,v 1.2 2006/09/07 16:38:53 dertobi123 Exp $
 
 inherit eutils depend.apache
 IUSE="apache2 postfix sendmail qmail courier exim xmail"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.list.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~sparc ~x86"
 
 DEPEND=">=dev-lang/python-2.3
 	virtual/mta
