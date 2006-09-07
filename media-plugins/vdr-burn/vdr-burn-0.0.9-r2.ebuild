@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.10 2006/08/26 16:46:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.0.9-r2.ebuild,v 1.11 2006/09/07 18:37:05 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://vdr.unetz.com/download/burn/${MY_P}.tgz"
 KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="png"
+IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.6
 		>=media-libs/imlib2-1.1.2
@@ -35,6 +35,7 @@ VDR_CONFD_FILE="${FILESDIR}/confd-${PV}"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-${PV}.sh"
 
 pkg_setup() {
+	vdr-plugin_pkg_setup
 
 	if [[ ! -e /usr/bin/png2yuv ]] ; then
 		echo
