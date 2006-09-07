@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.117.ebuild,v 1.1 2006/09/07 12:08:06 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.117.ebuild,v 1.2 2006/09/07 17:51:15 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
@@ -29,5 +29,3 @@ DEPEND="dev-perl/File-Remove
 		dev-perl/IO-String
 		dev-perl/List-MoreUtils
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
