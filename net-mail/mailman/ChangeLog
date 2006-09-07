@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.80 2006/07/21 17:15:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.81 2006/09/07 15:08:36 hanno Exp $
+
+*mailman-2.1.9_rc1 (07 Sep 2006)
+
+  07 Sep 2006; Hanno Boeck <hanno@gentoo.org> +mailman-2.1.9_rc1.ebuild:
+  Version bump, contains security fixes.
 
   21 Jul 2006; Hanno Boeck <hanno@gentoo.org> mailman-2.1.8_rc1.ebuild:
   Fix GID for qmail (bug #137254).
