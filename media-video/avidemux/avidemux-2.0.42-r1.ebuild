@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42-r1.ebuild,v 1.6 2006/09/06 04:14:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42-r1.ebuild,v 1.7 2006/09/07 04:02:31 tsunam Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="a52 aac alsa altivec arts encode mad nls vorbis sdl truetype xvid xv oss"
 
 RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
