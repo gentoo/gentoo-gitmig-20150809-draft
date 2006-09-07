@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/profiler
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.8 2005/12/03 18:03:49 nichoj Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/ChangeLog,v 1.9 2006/09/07 19:31:31 dang Exp $
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> profiler-1.ebuild:
+  Marked stable on amd64 for bug #146741
 
   03 Dec 2005; Joshua Nichols <nichoj@gentoo.org> profiler-1.ebuild:
   Added ~amd64 keyword.
