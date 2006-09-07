@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.47 2006/07/21 03:22:59 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.48 2006/09/07 11:37:41 phreak Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -552,5 +552,22 @@ check_zlibinflate() {
 
 linux-info_pkg_setup() {
 	get_version || die "Unable to calculate Linux Kernel version"
+
+	if kernel_is 2 4; then
+		if [ "$( gcc-major-version )" -eq "4" ] ; then
+			echo
+			ewarn "Be warned !! >=sys-devel/gcc-4.0.0 isn't supported with"
+			ewarn "linux-2.4 (or modules building against a linux-2.4 kernel)!"
+			echo
+			ewarn "Either switch to another gcc-version (via gcc-config) or use a"
+			ewarn "newer kernel that supports gcc-4."
+			echo
+			ewarn "Also be aware that bugreports about gcc-4 not working"
+			ewarn "with linux-2.4 based ebuilds will be closed as INVALID!"
+			echo
+			epause 10
+		fi
+	fi
+
 	[ -n "${CONFIG_CHECK}" ] && check_extra_config;
 }
