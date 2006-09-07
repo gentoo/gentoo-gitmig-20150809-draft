@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.4 2006/09/04 22:00:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r1.ebuild,v 1.5 2006/09/07 10:21:26 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -48,8 +48,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	sys-devel/gettext
-	dev-util/pkgconfig
-	!<app-text/hspell-1.0"
+	dev-util/pkgconfig"
 
 RDEPEND="${RDEPEND}
 	|| ( ( x11-apps/rgb x11-apps/iceauth ) <virtual/x11-7 )"
