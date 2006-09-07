@@ -1,0 +1,50 @@
+diff --exclude-from=/home/dang/.diffrc -u -ruN dasher-4.1.10.orig/Src/Makefile.am dasher-4.1.10/Src/Makefile.am
+--- dasher-4.1.10.orig/Src/Makefile.am	2006-08-21 17:25:30.000000000 -0400
++++ dasher-4.1.10/Src/Makefile.am	2006-09-04 22:33:46.000000000 -0400
+@@ -24,16 +24,16 @@
+ 	-DPACKAGE_LOCALE_DIR=\"$(datadir)/locale\"
+ 
+ dasher_LDADD = \
+-	$(GTK2BUILD_LIBS) \
+-	-lexpat \
+-	$(POPT_LIBS) \
+-	$(GPELIB) \
+ 	Common/libdashermisc.a \
+ 	Gtk2/libdashergtk.a \
+ 	Gtk2/libdashercontrol.a \
+ 	DasherCore/libdashercore.a \
+ 	DasherCore/LanguageModelling/libdasherlm.a \
+-	DasherCore/Alphabet/libdasheralphabet.a
++	DasherCore/Alphabet/libdasheralphabet.a \
++	$(GTK2BUILD_LIBS) \
++	-lexpat \
++	$(POPT_LIBS) \
++	$(GPELIB)
+ endif
+ 
+ if DOQTE
+diff --exclude-from=/home/dang/.diffrc -u -ruN dasher-4.1.10.orig/Src/Makefile.in dasher-4.1.10/Src/Makefile.in
+--- dasher-4.1.10.orig/Src/Makefile.in	2006-08-21 17:25:30.000000000 -0400
++++ dasher-4.1.10/Src/Makefile.in	2006-09-04 22:41:26.000000000 -0400
+@@ -299,16 +299,16 @@
+ @DOGTK2_TRUE@	-DPACKAGE_LOCALE_DIR=\"$(datadir)/locale\"
+ 
+ @DOGTK2_TRUE@dasher_LDADD = \
+-@DOGTK2_TRUE@	$(GTK2BUILD_LIBS) \
+-@DOGTK2_TRUE@	-lexpat \
+-@DOGTK2_TRUE@	$(POPT_LIBS) \
+-@DOGTK2_TRUE@	$(GPELIB) \
+ @DOGTK2_TRUE@	Common/libdashermisc.a \
+ @DOGTK2_TRUE@	Gtk2/libdashergtk.a \
+ @DOGTK2_TRUE@	Gtk2/libdashercontrol.a \
+ @DOGTK2_TRUE@	DasherCore/libdashercore.a \
+ @DOGTK2_TRUE@	DasherCore/LanguageModelling/libdasherlm.a \
+-@DOGTK2_TRUE@	DasherCore/Alphabet/libdasheralphabet.a
++@DOGTK2_TRUE@	DasherCore/Alphabet/libdasheralphabet.a \
++@DOGTK2_TRUE@	$(GTK2BUILD_LIBS) \
++@DOGTK2_TRUE@	-lexpat \
++@DOGTK2_TRUE@	$(POPT_LIBS) \
++@DOGTK2_TRUE@	$(GPELIB)
+ 
+ @DOQTE_TRUE@QTDIR = /usr/share/qte2
+ all: all-recursive
