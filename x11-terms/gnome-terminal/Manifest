@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-terminal-2-default_shell.patch 490 RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 SHA1 cb9a4b23285cc70eb36a17919463bd3796d7974f SHA256 89248a85b8c921274d336467ba355032d6621fb09efd1a6ab86c64ee90d69c5b
 MD5 1c5aaf13eb2a8bd0b2b03c529d5c8740 files/gnome-terminal-2-default_shell.patch 490
 RMD160 22b0e40dc8a6cae17d391e2e21dc0dda60201d23 files/gnome-terminal-2-default_shell.patch 490
@@ -10,8 +13,13 @@ AUX gnome-terminal-2.13.90-TERM-gnome.patch 413 RMD160 d2dd09acd8ac4b185316a0972
 MD5 f080c35539eaf74022350929111b9596 files/gnome-terminal-2.13.90-TERM-gnome.patch 413
 RMD160 d2dd09acd8ac4b185316a09727cc5e3ebee100c3 files/gnome-terminal-2.13.90-TERM-gnome.patch 413
 SHA256 812ffb7e6966b6ba813223af276c95d3a6efddceddc24b5637b085d4695dcd62 files/gnome-terminal-2.13.90-TERM-gnome.patch 413
+AUX gnome-terminal-2.15-tab-switching-no-resize.patch 1816 RMD160 f1644374f604d1695e0100b202c33ddd4d827337 SHA1 bb203f57dfb0ca17d3288a5ee78131a06957ce3f SHA256 5841d6f19a244ec3cfa0db2705add10e9324b1e5d1b18a8fc87d4b00e29a2422
+MD5 33ed5cb201e9efefb38cd26ce8fe2192 files/gnome-terminal-2.15-tab-switching-no-resize.patch 1816
+RMD160 f1644374f604d1695e0100b202c33ddd4d827337 files/gnome-terminal-2.15-tab-switching-no-resize.patch 1816
+SHA256 5841d6f19a244ec3cfa0db2705add10e9324b1e5d1b18a8fc87d4b00e29a2422 files/gnome-terminal-2.15-tab-switching-no-resize.patch 1816
 DIST gnome-terminal-2.12.0.tar.bz2 1684178 RMD160 97343108571febee95991e76b0e60d4cf2ea60c8 SHA1 5a81e76968962d9e8acd077db8b4d14284f996e2 SHA256 e515509f2d07ab1360723b70345ac18b44c5525abc31cce48f135b43fbb444cc
 DIST gnome-terminal-2.14.2.tar.bz2 1791473 RMD160 cb91ce96bceca12abda7ec50e16b48759c7f38a1 SHA1 a04bd803ced2de80415827318303308531cf6636 SHA256 bd7d500b16ecf1d6189f12ea5d936c218a3e1927ee5ce39119d3aeb8015cca91
+DIST gnome-terminal-2.16.0.tar.bz2 1914710 RMD160 23a65e81c30d124a6dcf35d78f877fed834e8bcd SHA1 7f02b05e30b1869f0415772fc7dd4e67b6cdaf84 SHA256 eda4689ee0a00742a3bb23337ef9f76faaeb5bb19f2f603db820dc8276d0c541
 EBUILD gnome-terminal-2.12.0.ebuild 1205 RMD160 d49b72410c22aac00d2427b223d9881dcbfe35e5 SHA1 4a3e61aab8d0dc1c87672690fccc0efd1de9f3d0 SHA256 7ed2eaaff3f9d0a60bad43dfbec75d47e0eff4c8126dd2c8c5df620111885c5e
 MD5 5a5277eb47aafbd2c746adcaeac80b1f gnome-terminal-2.12.0.ebuild 1205
 RMD160 d49b72410c22aac00d2427b223d9881dcbfe35e5 gnome-terminal-2.12.0.ebuild 1205
@@ -24,6 +32,10 @@ EBUILD gnome-terminal-2.14.2.ebuild 1311 RMD160 628a2e779534b8149581d7ed7351940e
 MD5 37223fe66aebe1c826f5259a5896cead gnome-terminal-2.14.2.ebuild 1311
 RMD160 628a2e779534b8149581d7ed7351940e32639b86 gnome-terminal-2.14.2.ebuild 1311
 SHA256 6899eb3f7c967fe8b9be8bbf7f9d4fd6f88134ce44205a63b29ac886636da9ff gnome-terminal-2.14.2.ebuild 1311
+EBUILD gnome-terminal-2.16.0.ebuild 1691 RMD160 fface975916e917065e809f3211e8552c9a12995 SHA1 9f6280e3cb9939be4cab646c80bf78f13e833bc4 SHA256 5b1b8b85b5bee5a83e6dba58cf0b61ee4a6e7dda560f75397c47cc3b2c47396e
+MD5 eed04695ac9a595cfdd9ab82b66a126a gnome-terminal-2.16.0.ebuild 1691
+RMD160 fface975916e917065e809f3211e8552c9a12995 gnome-terminal-2.16.0.ebuild 1691
+SHA256 5b1b8b85b5bee5a83e6dba58cf0b61ee4a6e7dda560f75397c47cc3b2c47396e gnome-terminal-2.16.0.ebuild 1691
 MISC ChangeLog 15239 RMD160 cba20a445a64a7f3a2c5ab03cfff8a7af2365934 SHA1 8079a48c10c5ac533096322f3161c1e104f304f6 SHA256 fc782b9f24c7ecf24ffd90e8c09f08ac3073fcd2253093225e985475260662f7
 MD5 c2bf4bea535e3d78248a0d0daa9cc757 ChangeLog 15239
 RMD160 cba20a445a64a7f3a2c5ab03cfff8a7af2365934 ChangeLog 15239
@@ -41,3 +53,13 @@ SHA256 0cb7b5b28219d9c55ed688764f709cd6239050019046caf109a1e329c2ca6150 files/di
 MD5 4560424497aec70c5bb6c4168ea77b5f files/digest-gnome-terminal-2.14.2-r1 271
 RMD160 4df02c63f0744530bc2361b721a6a3e3995e5c26 files/digest-gnome-terminal-2.14.2-r1 271
 SHA256 0cb7b5b28219d9c55ed688764f709cd6239050019046caf109a1e329c2ca6150 files/digest-gnome-terminal-2.14.2-r1 271
+MD5 8bf61ef1911384aa163f8357844a85bb files/digest-gnome-terminal-2.16.0 271
+RMD160 bc32c812d1013e0d3e12c5ea51bd36026245547e files/digest-gnome-terminal-2.16.0 271
+SHA256 3f6c817d5805458ef11b3cc1fd088a47ae4131bab93738125ec6bb6d0b257bbb files/digest-gnome-terminal-2.16.0 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFE/5pWomPajV0RnrERAuK9AJ9Vo0nGQ+XZLSZzjP8SGgE29WlkkACdE5V9
+vXkt9xp/I4sF9uWmEnHX/rc=
+=Gser
+-----END PGP SIGNATURE-----
