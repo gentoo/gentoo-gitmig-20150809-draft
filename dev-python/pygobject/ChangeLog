@@ -1,10 +1,15 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.2 2006/09/07 03:57:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.3 2006/09/07 04:36:50 dang Exp $
 
   07 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; pygobject-2.10.1.ebuild:
   Sync with gnome overlay ebuild, add back in blocker on pygtk < 2.9 that I
   wrongly removed.
+
+*pygobject-2.12.1 (07 Sep 2006)
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> +pygobject-2.12.1.ebuild:
+  New version for gnome 2.16
 
 *pygobject-2.10.1 (05 Sep 2006)
 
