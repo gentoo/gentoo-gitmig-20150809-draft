@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r3.ebuild,v 1.1 2006/09/06 21:56:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r3.ebuild,v 1.2 2006/09/07 00:19:51 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -53,6 +53,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-esdcompat.patch"
 	epatch "${FILESDIR}/${P}-fbsd.patch"
+	epatch "${FILESDIR}/${P}-noshm.patch"
 
 	# eautoreconf
 	elibtoolize
