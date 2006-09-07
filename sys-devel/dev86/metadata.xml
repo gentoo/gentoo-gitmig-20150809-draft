@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <!--
+  If anyone from base-system wants to be secondary, by all means just add
+  yourself, and send me (boo) a mail telling me that you've done so.
+  -->
   <maintainer>
-          <email>maintainer-needed@gentoo.org</email>
+    <email>beu@gentoo.org</email>
+    <name>Elfyn McBratney</name>
   </maintainer>
-  <longdescription>Bruce's C compiler - Simple C compiler to generate 8086 code</longdescription>
+  <longdescription>
+    Bruce's C compiler - Simple C compiler to generate 8086 code
+  </longdescription>
 </pkgmetadata>
