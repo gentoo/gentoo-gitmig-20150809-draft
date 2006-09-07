@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4.ebuild,v 1.10 2006/09/02 18:02:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4.ebuild,v 1.11 2006/09/07 16:54:24 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="amd64 hppa ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
 
 DEPEND="|| ( ( x11-libs/libXrandr
@@ -65,14 +65,38 @@ qt_use() {
 }
 
 qt_mkspecs_dir() {
-	# Allows us to define which mkspecs dir we want to use.  Currently we only use
-	# linux-g++ or linux-g++-64, but others could be used for various platforms.
+	# Allows us to define which mkspecs dir we want to use.
+	local spec
 
-	if [[ $(get_libdir) == "lib" ]]; then
-		echo "linux-g++"
+	case ${CHOST} in
+		*-freebsd*|*-dragonfly*)
+			spec="freebsd" ;;
+		*-openbsd*)
+			spec="openbsd" ;;
+		*-netbsd*)
+			spec="netbsd" ;;
+		*-darwin*)
+			spec="darwin" ;;
+		*-linux-*|*-linux)
+			spec="linux" ;;
+		*)
+			die "Unknown CHOST, no platform choosed."
+	esac
+
+	CXX=$(tc-getCXX)
+	if [[ ${CXX/g++/} != ${CXX} ]]; then
+		spec="${spec}-g++"
+	elif [[ ${CXX/icc/} != ${CXX} ]]; then
+		spec="${spec}-icc"
 	else
-		echo "linux-g++-64"
+		die "Unknown compiler ${CXX}."
 	fi
+
+	if [[ $(get_libdir) == "lib64" ]]; then
+		spec="${spec}-64"
+	fi
+
+	echo "${spec}"
 }
 
 src_unpack() {
@@ -168,7 +192,7 @@ src_install() {
 		make INSTALL_ROOT=${D} install_htmldocs || die
 	fi
 
-	# Install the translations.  This may get use flagged later somehow
+	# Install the translations.	 This may get use flagged later somehow
 	make INSTALL_ROOT=${D} install_translations || die
 
 	# The private header files of QTestLib aren't installed, but are needed by the test library.

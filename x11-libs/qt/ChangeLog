@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.344 2006/09/06 12:15:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.345 2006/09/07 16:54:24 flameeyes Exp $
+
+  07 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> qt-4.1.4.ebuild:
+  Add support again for different mkspecs and add ~x86-fbsd keyword to version
+  4.1.4.
 
 *qt-4.2.0_rc1 (06 Sep 2006)
 
