@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.96 2006/09/05 03:12:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.97 2006/09/07 04:16:14 dang Exp $
+
+*zenity-2.16.0 (07 Sep 2006)
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/zenity-2.15.90-libnotify-support.patch, +zenity-2.16.0.ebuild:
+  New version for gnome 2.16
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> zenity-2.10.1.ebuild,
   zenity-2.12.1.ebuild, zenity-2.14.2.ebuild:

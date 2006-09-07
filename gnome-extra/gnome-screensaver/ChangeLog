@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.13 2006/09/03 10:13:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.14 2006/09/07 04:03:01 dang Exp $
+
+*gnome-screensaver-2.16.0 (07 Sep 2006)
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +gnome-screensaver-2.16.0.ebuild:
+  New version for gnome 2.16
 
   03 Sep 2006; Markus Rothe <corsair@gentoo.org>
   gnome-screensaver-2.14.2.ebuild:
