@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/sabayon
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.1 2006/09/07 03:31:40 dang Exp $
+
+*sabayon-2.12.4 (07 Sep 2006)
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/sabayon-2.12.4-multilib.patch, +sabayon-2.12.4.ebuild:
+  New package in 2.16
+
