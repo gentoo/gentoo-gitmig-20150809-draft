@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.11 2006/09/01 02:29:10 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20051223.ebuild,v 1.12 2006/09/07 04:47:34 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -46,7 +46,7 @@ DEPEND=">=sys-devel/automake-1.7
 pkg_setup() {
 	get_version
 
-	if is_kernel 2 6
+	if kernel_is 2 6
 	then
 		if linux_chkconfig_builtin "DRM"
 		then
@@ -59,7 +59,7 @@ pkg_setup() {
 			einfo "work, so you might want to double-check that setting. (CONFIG_AGP)"
 			echo
 		fi
-	elif is_kernel 2 4
+	elif kernel_is 2 4
 	then
 		if ! linux_chkconfig_present "DRM"
 		then
@@ -133,7 +133,7 @@ src_install() {
 	cd ${SRC_BUILD}
 
 	unset ARCH
-	is_kernel 2 6 && DRM_KMOD="drm.${KV_OBJ}"
+	kernel_is 2 6 && DRM_KMOD="drm.${KV_OBJ}"
 	make KV="${KV_FULL}" \
 		LINUXDIR="${KERNEL_DIR}" \
 		DESTDIR="${D}" \
