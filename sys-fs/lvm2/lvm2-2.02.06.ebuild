@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.06.ebuild,v 1.8 2006/09/04 06:03:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.06.ebuild,v 1.9 2006/09/07 16:50:36 rocket Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 hppa mips ppc ppc64 sparc x86"
 IUSE="readline nolvmstatic clvm cman gulm nolvm1 nosnapshots nomirrors selinux"
 
-DEPEND=">=sys-fs/device-mapper-1.02.03
+DEPEND=">=sys-fs/device-mapper-1.02.07
 		clvm? ( >=sys-cluster/dlm-1.01.00
 			cman? ( >=sys-cluster/cman-1.01.00 )
 			gulm? ( >=sys-cluster/gulm-1.00.00 ) )"
