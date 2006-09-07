@@ -1,10 +1,10 @@
 # ChangeLog for dev-perl/IO-Interface
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.2 2006/09/07 17:44:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.3 2006/09/07 17:46:07 mcummings Exp $
 
   07 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   IO-Interface-0.98.ebuild:
-  Bug 146678, keywording ~amd64 and ~sparc
+  Bug 146683, keywording ~amd64 and ~sparc
 
 *IO-Interface-0.98 (07 Sep 2006)
 
