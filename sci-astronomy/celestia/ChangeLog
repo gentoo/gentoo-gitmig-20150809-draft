@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.21 2006/05/07 05:20:13 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.22 2006/09/07 04:06:47 tsunam Exp $
+
+  07 Sep 2006; Joshua Jackson <tsunam@gentoo.org> celestia-1.4.1.ebuild:
+  Stable x86; bug #141404
 
   07 May 2006; Daniel Goller <morfic@gentoo.org> metadata.xml:
   Removing maintainer
