@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.3 2006/09/07 04:36:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.4 2006/09/07 04:42:38 dang Exp $
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  put pygobject in the gnome herd
 
   07 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; pygobject-2.10.1.ebuild:
   Sync with gnome overlay ebuild, add back in blocker on pygtk < 2.9 that I
