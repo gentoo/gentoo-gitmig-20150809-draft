@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/psemu-eternalspu
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-eternalspu/ChangeLog,v 1.3 2004/06/24 22:34:02 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-eternalspu/ChangeLog,v 1.4 2006/09/07 21:08:03 tupone Exp $
+
+*psemu-eternalspu-1.41-r2 (07 Sep 2006)
+
+  07 Sep 2006; <tupone@gentoo.org> -psemu-eternalspu-1.41-r1.ebuild,
+  +psemu-eternalspu-1.41-r2.ebuild:
+  Fix runtime dependency. Bug #132144 by Joao Rodrigues
 
 *psemu-eternalspu-1.41-r1 (14 Aug 2003)
 
