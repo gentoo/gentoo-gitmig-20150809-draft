@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.23 2006/03/30 15:07:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.24 2006/09/07 04:52:18 beandog Exp $
+
+  07 Sep 2006; Steve Dibb <beandog@gentoo.org> +metadata.xml:
+  Add metadata
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> popt-1.7-r1.ebuild:
   Add ~x86-fbsd keyword.
