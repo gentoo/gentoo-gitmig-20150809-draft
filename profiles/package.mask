@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5831 2006/09/07 04:13:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5832 2006/09/07 04:23:13 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -96,6 +96,10 @@
 >=dev-python/pygobject-2.12.1
 >=dev-python/pygtk-2.10.1
 >=x11-libs/libxklavier-3.0
+>=dev-cpp/glibmm-2.9.1
+>=dev-cpp/libxmlpp-2.13.1
+>=www-client/epiphany-extensions-2.16.0
+>=x11-misc/icon-naming-utils-0.8.1
 # End GNOME 2.16 mask
 
 # Alec Warner <antarus@gentoo.org> (06 Sep 2006)
