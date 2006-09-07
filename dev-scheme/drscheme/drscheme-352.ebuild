@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.2 2006/07/29 20:23:06 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.3 2006/09/07 21:34:02 chutzpah Exp $
 
 inherit eutils multilib
 
@@ -50,6 +50,10 @@ src_unpack() {
 }
 
 src_compile() {
+	# needed because drschme uses it's own linker that passes LDFLAGS directly
+	# to the linker, rather than passing it through gcc
+	LDFLAGS="${LDFLAGS//-Wl/}"
+	LDFLAGS="${LDFLAGS//,/ }"
 
 	econf --enable-mred \
 		$(use_enable backtrace) \
