@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.23 2006/08/06 20:05:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.24 2006/09/07 14:29:27 gustavoz Exp $
+
+  07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> ethtool-3.ebuild:
+  Stable on sparc
 
 *ethtool-4 (06 Aug 2006)
 
