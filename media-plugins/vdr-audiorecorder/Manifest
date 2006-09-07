@@ -18,14 +18,19 @@ MD5 50792ba11e26fa61fb6c415feec7dcf3 files/vdr-audiorecorder-0.1.0_pre4-gcc4.dif
 RMD160 54e2953194c8625488b79a374adc8c96877c8dd9 files/vdr-audiorecorder-0.1.0_pre4-gcc4.diff 640
 SHA256 d9c3aa1c32f93d35eccf55ae92ee8825630840eaee73d630853963c9868f144f files/vdr-audiorecorder-0.1.0_pre4-gcc4.diff 640
 DIST vdr-audiorecorder-0.1.0-pre4.tgz 25060 RMD160 cbdc4b0bc5a56b4e59abf05efeaca0b1a8acffc2 SHA1 c4e06754ca4b2170cb3fb3223c30b7d497188e2a SHA256 bffb75d82701cf8c9dffbda5a46761819d51fc8c70ed10f33e93426d25efd8cc
+DIST vdr-audiorecorder-0.1.0-pre6.tgz 73409 RMD160 91d442fe764494f147c96041f669f7ed4271f9cc SHA1 47bd8861787e13c1424374603447cecf54a8d1d4 SHA256 f4f3f413d66facab193b4181fb1c9f0d8b81a4a3bb12fa3eb71d0cf8dd8e4cd7
 EBUILD vdr-audiorecorder-0.1.0_pre4-r1.ebuild 1040 RMD160 8c2e4661366632eec5f3041eb847e3d931313a9b SHA1 1a3718b84d445d7dc0741bda0b85fbc55d8a0d82 SHA256 459f920550a53fbe1ff82783ea48de90543b7876512c8ae045fb67a5adaec6a9
 MD5 aaa03a898801c2aeade0a692aae424e1 vdr-audiorecorder-0.1.0_pre4-r1.ebuild 1040
 RMD160 8c2e4661366632eec5f3041eb847e3d931313a9b vdr-audiorecorder-0.1.0_pre4-r1.ebuild 1040
 SHA256 459f920550a53fbe1ff82783ea48de90543b7876512c8ae045fb67a5adaec6a9 vdr-audiorecorder-0.1.0_pre4-r1.ebuild 1040
-MISC ChangeLog 1171 RMD160 e8fe35be28c1c823f952abd4cb6ab972ad320ff3 SHA1 1091a5e5f6f065bb062d6a2f0f2e9c3b64e65d92 SHA256 4aefc3dc503ea446176aee07ed543157bbed44968fca7789f71eeaa57167c858
-MD5 a7c897e2472ebdcdf24564cb0412e2a9 ChangeLog 1171
-RMD160 e8fe35be28c1c823f952abd4cb6ab972ad320ff3 ChangeLog 1171
-SHA256 4aefc3dc503ea446176aee07ed543157bbed44968fca7789f71eeaa57167c858 ChangeLog 1171
+EBUILD vdr-audiorecorder-0.1.0_pre6.ebuild 962 RMD160 b3d7de153bd9d75138c6677077700f82cdc03f56 SHA1 fd447ac5d014d1b9da2a52624962b17896c2ecd0 SHA256 2d893cfd368b4f4e7e85ab629494613613bdcb3f2fed71c7dc30108aa241034f
+MD5 022b6eab4d20226ee4dd800eef368b8a vdr-audiorecorder-0.1.0_pre6.ebuild 962
+RMD160 b3d7de153bd9d75138c6677077700f82cdc03f56 vdr-audiorecorder-0.1.0_pre6.ebuild 962
+SHA256 2d893cfd368b4f4e7e85ab629494613613bdcb3f2fed71c7dc30108aa241034f vdr-audiorecorder-0.1.0_pre6.ebuild 962
+MISC ChangeLog 1328 RMD160 cbac93d41c92a52f3308408cc73b7704b745adbf SHA1 869c58a780fcd056cf489072454f6602a521d61e SHA256 ccc30b8314f18f0aab0c5336df6e0a43806b3517b018effe61cfa9fffed39830
+MD5 1934089fc1faebcbce789eee2c7cc322 ChangeLog 1328
+RMD160 cbac93d41c92a52f3308408cc73b7704b745adbf ChangeLog 1328
+SHA256 ccc30b8314f18f0aab0c5336df6e0a43806b3517b018effe61cfa9fffed39830 ChangeLog 1328
 MISC metadata.xml 298 RMD160 7e0a2f2a14c259d83aeca27b96f53bde893cc3cf SHA1 909d564739e5ee061ef40e6b09c6a48c6578269f SHA256 50a4a1a273a8415774ef522ac281cd664bd217c04bcbfa16e13b53649b9a9581
 MD5 e0c01eee6ee7e11d5d597aee9f9a2852 metadata.xml 298
 RMD160 7e0a2f2a14c259d83aeca27b96f53bde893cc3cf metadata.xml 298
@@ -33,10 +38,13 @@ SHA256 50a4a1a273a8415774ef522ac281cd664bd217c04bcbfa16e13b53649b9a9581 metadata
 MD5 3ee9466b373d5528a9702eab28806eea files/digest-vdr-audiorecorder-0.1.0_pre4-r1 274
 RMD160 1bcadea4a81fe784f1ce05444d461b75480ece6c files/digest-vdr-audiorecorder-0.1.0_pre4-r1 274
 SHA256 a2e3e69622a92827a2938744bce08ea51845c2ed1a0ee8361a709421dd68a2b1 files/digest-vdr-audiorecorder-0.1.0_pre4-r1 274
+MD5 0926e7ec395d4ce4736d724bb38fd6cc files/digest-vdr-audiorecorder-0.1.0_pre6 274
+RMD160 d8812d08ed712702e88133222d338f2d523fc5fb files/digest-vdr-audiorecorder-0.1.0_pre6 274
+SHA256 a7805bc3ec3333fc2dbb433eaf040be732b78076214903f7fd9ea027c54c041b files/digest-vdr-audiorecorder-0.1.0_pre6 274
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE3PFdt2vP6XvVdOcRArMyAJ0aRr4pSmCyhA53nGUaXKdbovjH5QCggvMQ
-JUVoGCgOIY+XFMJufzOO/5I=
-=BJxX
+iD8DBQFFAHxit2vP6XvVdOcRAu6rAKC3wDf0UPjxXomdHVi+ozHD5kaPQgCfaW0u
+qbJ/JZnD5PKb/YRwR9pH63Y=
+=HCyT
 -----END PGP SIGNATURE-----
