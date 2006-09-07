@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rhpxl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.1 2006/09/05 21:20:35 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpxl/ChangeLog,v 1.2 2006/09/07 05:54:56 dberkholz Exp $
+
+  07 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/0.32-use-radeon-ddc.patch, rhpxl-0.32.ebuild:
+  Force on DDC for radeon driver, so we get valid modes.
 
 *rhpxl-0.32 (05 Sep 2006)
 
