@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.25 2006/04/16 18:29:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.26 2006/09/07 05:24:22 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
 
 inherit eutils mono multilib autotools
-
 
 LICENSE="LGPL-2"
 
@@ -14,12 +13,19 @@ HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 LICENSE="LGPL-2.1"
 RESTRICT="test"
 
+: GTK_SHARP_TARBALL_PREFIX=${GTK_SHARP_TARBALL_PREFIX:="gtk-sharp"}
+
+: GTK_SHARP_REQUIRED_VERSION=${GTK_SHARP_REQUIRED_VERSION:=${PV%.*}}
+
 [ "${PV:0:1}" == "2" ] \
 	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp-2.0/"
 
 # Can be switched to [ "${PV:0:3}" == "2.8" ] when 2.8.0 is out of the tree.
 [ "${PV}" == "2.8.2" ] \
 	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp-2.8/"
+
+[ "${PV%.*}" == "2.10" ] || [ "${PV%.*}" == "2.16" ] && \
+	SOURCE_SERVER="mirror://gnome/sources/${GTK_SHARP_TARBALL_PREFIX}/${PV%.*}/"
 
 [ "${PV}" == "1.0.10" ] \
 	&& SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp/"
@@ -31,7 +37,7 @@ RESTRICT="test"
 # variable declarations
 ###
 
-MY_P=gtk-sharp-${PV}
+MY_P=${GTK_SHARP_TARBALL_PREFIX}-${PV}
 
 # From gtk-sharp-1.0 series
 my_gtk_sharp_components="art gda glade gnome gnomedb gtkhtml rsvg vte"
@@ -63,7 +69,7 @@ SRC_URI="${SOURCE_SERVER}/${MY_P}.tar.gz
 S=${WORKDIR}/${MY_P}
 
 # Make sure we're building with the same version.
-DEPEND="=dev-dotnet/${MY_P}*
+DEPEND="=dev-dotnet/gtk-sharp-${GTK_SHARP_REQUIRED_VERSION}*
 	>=sys-apps/sed-4"
 
 
@@ -115,7 +121,13 @@ gtk-sharp-component_src_unpack() {
 
 	# Use correct libdir in pkgconfig files
 	sed -i -e 's:^libdir.*:libdir=@libdir@:' \
-		${S}/*/{,GConf}/*.pc.in || die
+		${S}/*/*.pc.in || die
+
+	if [ -d "${S}/gconf/GConf" ]
+	then
+		sed -i -e 's:^libdir.*:libdir=@libdir@:' \
+			${S}/gconf/GConf/*.pc.in || die
+	fi
 
 	# disable building of samples (#16015)
 	sed -i -e "s:sample::" ${S}/Makefile.am || die
@@ -161,15 +173,4 @@ gtk-sharp-component_src_install() {
 		DESTDIR=${D} install || die
 }
 
-gtk-sharp-component_pkg_postinst() {
-	if [ "${PV:0:3}" == "2.6" ]; then
-		ewarn "gtk-sharp-2.6.x is completely, and utterly unsupported by upstream."
-		ewarn "If you experience any bugs related to using gtk-sharp-2.6.x, do"
-		ewarn "*not* submit them upstream, ask about them on IRC, or email any"
-		ewarn "mailinglists. If you think you have found a genuine bug or need help,"
-		ewarn "first down grade *all* *-sharp packages to the 2.4.x release and"
-		ewarn "test there."
-	fi
-}
-
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install
