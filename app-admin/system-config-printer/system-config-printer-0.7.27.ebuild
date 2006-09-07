@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-0.7.27.ebuild,v 1.2 2006/09/05 21:55:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-0.7.27.ebuild,v 1.3 2006/09/07 03:58:10 dberkholz Exp $
 
 inherit python rpm
 
@@ -19,7 +19,6 @@ IUSE=""
 RDEPEND="net-print/cups
 	dev-lang/python
 	=dev-python/pygtk-2*
-	=dev-python/pygobject-2*
 	dev-python/pycups
 	sys-apps/usermode
 	dev-python/rhpl
