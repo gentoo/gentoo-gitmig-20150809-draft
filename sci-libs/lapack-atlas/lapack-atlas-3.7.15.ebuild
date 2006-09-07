@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.15.ebuild,v 1.3 2006/09/03 18:16:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.15.ebuild,v 1.4 2006/09/07 15:38:21 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -104,8 +104,8 @@ src_compile() {
 		libs="${LDFLAGS} -lpthread -lg2c"
 	fi
 
-	libtool --mode=link --tag=F77 ${FORTRANC} -o liblapack.la *.lo \
-		-rpath "${RPATH}" -lblas -lcblas -latlas ${libs} \
+	../libtool --mode=link --tag=F77 ${FORTRANC} -lblas -lcblas \
+		-latlas ${libs} -o liblapack.la *.lo -rpath "${RPATH}" \
 		|| die "Failed to create liblapack.la"
 }
 
@@ -113,7 +113,8 @@ src_install () {
 	dodir "${RPATH}"
 
 	cd "${S_LAPACK}"/SRC
-	libtool --mode=install install -s liblapack.la "${D}/${RPATH}" \
+	../libtool --mode=install install -s liblapack.la \
+		"${D}/${RPATH}" \
 		|| die "Failed to install lapack-atlas library"
 
 	eselect lapack add $(get_libdir) ${FILESDIR}/eselect.lapack atlas
