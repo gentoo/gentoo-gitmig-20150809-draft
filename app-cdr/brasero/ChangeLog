@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.3 2006/09/06 18:40:23 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.4 2006/09/07 18:38:03 metalgod Exp $
+
+*brasero-0.4.4 (07 Sep 2006)
+
+  07 Sep 2006; Luis Medinas <metalgod@gentoo.org> +brasero-0.4.4.ebuild:
+  Version Bump of stable release that works with nautilus-burn 2.16.
 
 *brasero-0.4.90 (06 Sep 2006)
 
