@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.83 2006/09/04 06:03:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.84 2006/09/07 13:58:56 rocket Exp $
+
+*lvm2-2.02.09 (07 Sep 2006)
+
+  07 Sep 2006; Eric Edgar <rocket@gentoo.org> +lvm2-2.02.09.ebuild:
+  Add version 2.02.09 to the tree
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> lvm2-2.02.06.ebuild:
   Marked stable on mips.
