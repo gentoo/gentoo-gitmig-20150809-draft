@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.35 2006/09/07 04:36:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.36 2006/09/07 17:19:49 dang Exp $
+
+  07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  epiphany-extensions-2.16.0.ebuild:
+  Fix eip dep. Bug #146718
 
   07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> Manifest:
   Don't commit in the middle of an update...
