@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2119 2006/09/08 17:00:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2120 2006/09/08 17:16:28 matsuu Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -362,7 +362,6 @@ dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/DirectFB:sysfs - Add support for the sysfs filesystem (requires Linux-2.6+)
 dev-libs/DirectFB:v4l2 - Enables video4linux2 support
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
-dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/boost:bcp - Install the bcp tool http://www.boost.org/tools/bcp/bcp.html
 dev-libs/boost:bjam - Install the BoostJam tool http://www.boost.org/tools/build/jam_src/index.html
 dev-libs/boost:pyste - Add support for the pyste frontend
