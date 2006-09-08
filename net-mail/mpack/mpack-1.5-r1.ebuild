@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.5-r1.ebuild,v 1.11 2005/05/22 10:34:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpack/mpack-1.5-r1.ebuild,v 1.12 2006/09/08 22:38:00 dang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/mpack/${P}-src.tar.Z"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="amd64 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
