@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.0.ebuild,v 1.3 2006/09/07 17:19:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.0.ebuild,v 1.4 2006/09/08 21:55:00 dang Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="dbus debug firefox pcre python"
+IUSE="dbus debug pcre python"
 
 RDEPEND=">=www-client/epiphany-2.16
 	>=dev-libs/libxml2-2.6
@@ -18,9 +18,7 @@ RDEPEND=">=www-client/epiphany-2.16
 	>=x11-libs/gtk+-2.8
 	>=gnome-base/libglade-2
 	app-text/opensp
-	sparc? ( >=www-client/mozilla-firefox-1.0.2-r1 )
-	!sparc? ( !firefox? ( www-client/seamonkey ) )
-	firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
+	>=www-client/mozilla-firefox-1.0.2-r1
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
 	dbus? ( >=sys-apps/dbus-0.34 )
 	python? ( >=dev-lang/python-2.3 )"
@@ -32,9 +30,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 pkg_setup() {
-	local extensions="actions certificates error-viewer extensions-manager-ui \
-		gestures livehttpheaders page-info sample sample-mozilla \
-		select-stylesheet sidebar smart-bookmarks tab-groups"
+	local extensions="actions auto-reload auto-scroller certificates
+	error-viewer extensions-manager-ui gestures java-console livehttpheaders
+	page-info permissions push-scroller sample sample-mozilla select-stylesheet
+	sidebar smart-bookmarks tab-groups tab-states"
 
 	if use dbus && ! built_with_use www-client/epiphany dbus; then
 		ewarn
@@ -58,12 +57,6 @@ pkg_setup() {
 		list_exts="${list_exts}${ext}"
 	done
 
-	G2CONF="${G2CONF} --with-extensions=${list_exts}"
-
-	if use firefox || use sparc; then
-		G2CONF="${G2CONF} --with-mozilla=firefox"
-	else
-		G2CONF="${G2CONF} --with-mozilla=seamonkey"
-	fi
+	G2CONF="${G2CONF} --with-extensions=${list_exts} --with-mozilla=firefox"
 }
 
