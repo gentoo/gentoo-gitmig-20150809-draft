@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.12 2005/12/13 00:26:13 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.13 2006/09/08 19:29:57 corsair Exp $
+
+  08 Sep 2006; Markus Rothe <corsair@gentoo.org> libgadu-20050719.ebuild:
+  Added ~ppc64; bug #146851
 
   13 Dec 2005; Luis Medinas <metalgod@gentoo.org> libgadu-20050719.ebuild:
   Stable on amd64.
