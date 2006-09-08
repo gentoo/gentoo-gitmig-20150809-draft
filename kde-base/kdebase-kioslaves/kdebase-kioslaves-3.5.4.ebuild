@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.4.ebuild,v 1.3 2006/08/02 07:42:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-3.5.4.ebuild,v 1.4 2006/09/08 19:26:30 flameeyes Exp $
 
 KMNAME=kdebase
 KMMODULE=kioslave
@@ -14,7 +14,7 @@ IUSE="hal ldap samba openexr"
 DEPEND="ldap? ( net-nds/openldap )
 	samba? ( >=net-fs/samba-3.0.1 )
 	>=dev-libs/cyrus-sasl-2
-	hal? ( >=sys-apps/dbus-0.33
+	hal? ( || ( dev-libs/dbus-qt3-old >=sys-apps/dbus-0.33 )
 		   =sys-apps/hal-0.5*
 		   sys-apps/pmount )
 	openexr? ( media-libs/openexr )"
@@ -25,7 +25,7 @@ PATCHES="${FILESDIR}/${P}-dbuscrash.patch"
 
 pkg_setup() {
 	kde_pkg_setup
-	if use hal && ! built_with_use sys-apps/dbus qt3; then
+	if use hal && has_version '<sys-apps/dbus-0.91' && ! built_with_use sys-apps/dbus qt3; then
 		eerror "To enable HAL support in this package is required to have"
 		eerror "sys-apps/dbus compiled with Qt 3 support."
 		eerror "Please reemerge sys-apps/dbus with USE=\"qt3\"."
