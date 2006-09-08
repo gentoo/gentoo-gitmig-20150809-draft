@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.187.ebuild,v 1.1 2006/09/05 21:07:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-redhat/hwdata-redhat-0.187.ebuild,v 1.2 2006/09/08 19:35:47 corsair Exp $
 
 inherit flag-o-matic rpm
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://fedora.redhat.com/projects/config-tools/"
 SRC_URI="mirror://fedora/development/source/SRPMS/${MY_P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2 MIT"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~ppc64 ~x86"
 IUSE=""
 RDEPEND=">=sys-apps/module-init-tools-3.2
 	!sys-apps/hwdata-gentoo"
