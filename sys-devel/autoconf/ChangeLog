@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.78 2006/08/28 07:10:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.79 2006/09/08 05:02:00 vapier Exp $
+
+  08 Sep 2006; Mike Frysinger <vapier@gentoo.org> autoconf-2.60.ebuild:
+  Dont require help2man #146621 by Emanuel.
 
   28 Aug 2006; Mike Frysinger <vapier@gentoo.org>
   +files/autoconf-2.60-tests.patch, autoconf-2.60.ebuild:

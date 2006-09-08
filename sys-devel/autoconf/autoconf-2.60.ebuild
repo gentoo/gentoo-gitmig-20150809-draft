@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.60.ebuild,v 1.3 2006/08/28 07:10:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.60.ebuild,v 1.4 2006/09/08 05:02:00 vapier Exp $
 
 inherit eutils
 
@@ -29,6 +29,9 @@ src_compile() {
 		&& export EMACS=emacs \
 		|| export EMACS=no
 	econf --program-suffix="-${PV}" || die
+	# econf updates config.{sub,guess} which forces the manpages
+	# to be regenerated which we dont want to do #146621
+	touch man/*.1
 	# From configure output:
 	# Parallel builds via `make -jN' do not work.
 	emake -j1 || die
