@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5840 2006/09/08 02:33:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5841 2006/09/08 10:08:31 chainsaw Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Tony Vroon <chainsaw@gentoo.org> (08 Sep 2006)
+# Newest release is broken, older versions unusable. Candidate for tree removal.
+media-sound/audtty
 
 # Roy Marples <uberlord@gentoo.org> (07 Sep 2006)
 # Mask dhcp alpha version
