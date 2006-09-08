@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.29 2006/08/11 20:42:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.30 2006/09/08 11:59:00 swegener Exp $
+
+  08 Sep 2006; Sven Wegener <swegener@gentoo.org>
+  -files/0.8-keysym-include.patch, -x11vnc-0.8.ebuild:
+  Cleanup.
 
   11 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -x11vnc-0.7.1-r1.ebuild:
