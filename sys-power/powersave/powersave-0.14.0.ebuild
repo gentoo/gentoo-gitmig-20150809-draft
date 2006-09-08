@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.1 2006/09/04 13:06:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.2 2006/09/08 19:01:52 flameeyes Exp $
 
 inherit eutils libtool kde-functions autotools
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 IUSE="pam_console doc"
 
 
-RDEPEND=">=sys-apps/dbus-0.30
+RDEPEND="|| ( dev-libs/dbus-glib >=sys-apps/dbus-0.30 )
 	>=sys-apps/hal-0.5.3
 	>=sys-power/cpufrequtils-001
 	pam_console? ( sys-libs/pam )"
