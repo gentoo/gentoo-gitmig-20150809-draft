@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r2.ebuild,v 1.8 2006/07/05 08:03:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r2.ebuild,v 1.9 2006/09/08 04:37:14 vapier Exp $
 
 inherit eutils flag-o-matic ccc pam
 
@@ -39,6 +39,7 @@ RDEPEND="pam? ( virtual/pam )
 	X? ( || ( x11-apps/xauth virtual/x11 ) )
 	userland_GNU? ( sys-apps/shadow )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	virtual/os-headers
 	sys-devel/autoconf"
 
@@ -83,6 +84,8 @@ src_unpack() {
 
 	sed -i '/LD.*ssh-keysign/s:$: '$(bindnow-flags)':' Makefile.in || die "setuid"
 
+	sed -i "s:-lcrypto:$(pkg-config --libs openssl):" configure{,.ac} || die
+
 	autoconf || die "autoconf failed"
 }
 
@@ -90,15 +93,7 @@ src_compile() {
 	addwrite /dev/ptmx
 	addpredict /etc/skey/skeykeys #skey configure code triggers this
 
-	local myconf
-	# make sure .sbss is large enough
-	use skey && use alpha && append-ldflags -mlarge-data
-	if use ldap ; then
-		filter-flags -funroll-loops
-		myconf="${myconf} --with-ldap"
-	fi
-	use selinux && append-flags -DWITH_SELINUX && append-ldflags -lselinux
-
+	local myconf=""
 	if use static ; then
 		append-ldflags -static
 		use pam && ewarn "Disabling pam support becuse of static flag"
@@ -119,14 +114,15 @@ src_compile() {
 		--with-privsep-path=/var/empty \
 		--with-privsep-user=sshd \
 		--with-md5-passwords \
+		$(use_with ldap) \
 		$(use_with libedit) \
 		$(use_with kerberos kerberos5 /usr) \
 		$(use_with tcpd tcp-wrappers) \
+		$(use_with selinux) \
 		$(use_with skey) \
 		$(use_with smartcard opensc) \
 		${myconf} \
 		|| die "bad configure"
-
 	emake || die "compile problem"
 }
 

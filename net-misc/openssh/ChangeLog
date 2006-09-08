@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.182 2006/07/05 11:09:21 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.183 2006/09/08 04:37:14 vapier Exp $
+
+  08 Sep 2006; Mike Frysinger <vapier@gentoo.org> openssh-4.3_p2-r2.ebuild:
+  Remove ugly flag mangling and fix building with USE=static #146654 by
+  Alexander Skwar.
 
   05 Jul 2006; Andrea Barisani <lcars@gentoo.org> metadata.xml:
   Making my metadata entry a bit more clear.
