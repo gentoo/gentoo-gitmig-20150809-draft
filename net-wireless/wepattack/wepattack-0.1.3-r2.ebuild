@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3-r2.ebuild,v 1.4 2006/02/20 22:48:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wepattack/wepattack-0.1.3-r2.ebuild,v 1.5 2006/09/08 19:08:06 pva Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_P="WepAttack-${PV}"
 DESCRIPTION="WLAN tool for breaking 802.11 WEP keys"
@@ -31,6 +31,9 @@ src_unpack() {
 	sed -i \
 		-e "/^CFLAGS=/s:=:=${CFLAGS} :" \
 		-e 's:-fno-for-scope::g' \
+		-e "/^CC=/s:gcc:$(tc-getCC):" \
+		-e "/^LD=/s:gcc:$(tc-getLD):" \
+		-e 's:log.o\\:log.o \\:' \
 		src/Makefile || die "sed Makefile failed"
 	sed -i \
 		-e "s/wordfile:/-wordlist=/" \
