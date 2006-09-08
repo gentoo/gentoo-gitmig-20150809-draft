@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.16.0.ebuild,v 1.1 2006/09/07 04:15:42 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.16.0.ebuild,v 1.2 2006/09/08 16:58:54 compnerd Exp $
 
 inherit eutils gnome2 autotools
 
@@ -24,7 +24,7 @@ RDEPEND=">=gnome-base/gconf-2
 	>=x11-libs/startup-notification-0.8
 	>=dev-libs/glib-2
 	sys-apps/dbus
-	beagle? ( >=app-misc/beagle )
+	beagle? ( >=app-misc/beagle-0.2.4 )
 	sparc? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	ia64? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 	ppc64? ( www-client/seamonkey )
