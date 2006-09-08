@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-electronics</herd>
-  <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
-  </maintainer>
   <longdescription>
   Balsa is an asynchronous circuit synthesis system developed over a number of
   years at the APT group of the School Of Computer Science, The University of
