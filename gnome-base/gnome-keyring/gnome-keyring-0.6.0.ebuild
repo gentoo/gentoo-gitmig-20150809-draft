@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-0.6.0.ebuild,v 1.1 2006/09/07 03:57:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-0.6.0.ebuild,v 1.2 2006/09/08 17:09:37 mr_bones_ Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		 >=x11-libs/gtk+-2.6"
 
 DEPEND="${RDEPEND}
-		>=sys-devel/gettext
+		sys-devel/gettext
 		>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
