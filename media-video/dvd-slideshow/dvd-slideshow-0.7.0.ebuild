@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.7.0.ebuild,v 1.2 2005/05/27 16:21:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvd-slideshow/dvd-slideshow-0.7.0.ebuild,v 1.3 2006/09/08 18:09:22 sbriesen Exp $
 
 MY_P="${PN}_${PV}"
 
@@ -21,6 +21,7 @@ DEPEND=">=media-video/dvdauthor-0.6.9
 	media-video/transcode
 	media-video/ffmpeg
 	media-sound/lame
+	media-sound/sox
 	media-sound/toolame
 	media-gfx/jhead"
 
