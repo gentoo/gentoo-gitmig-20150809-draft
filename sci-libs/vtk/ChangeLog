@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.22 2006/09/08 12:53:20 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.23 2006/09/08 15:15:13 markusle Exp $
+
+  08 Sep 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/vtk-qt-gentoo.patch, -files/vtk-qt3-qt4-gentoo.patch,
+  vtk-5.0.0.ebuild, vtk-5.0.1.ebuild:
+  Renamed the qt patch in an effort to get rid of the executable
+  permissions. Also cleaned up the ebuilds some.
 
   08 Sep 2006; Markus Dittrich <markusle@gentoo.org>
   files/vtk-qt3-qt4-gentoo.patch, -files/vtk-4.2.6-gcc34.patch,

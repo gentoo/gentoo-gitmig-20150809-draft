@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.8 2006/07/10 12:41:27 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.0.ebuild,v 1.9 2006/09/08 15:15:13 markusle Exp $
 
 # TODO: need to fix Examples/CMakeLists.txt to build other examples
 
@@ -51,7 +51,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/vtk-qt3-qt4-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-qt-gentoo.patch
 }
 
 src_compile() {
