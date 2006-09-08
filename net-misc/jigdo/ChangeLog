@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jigdo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.14 2006/09/07 23:27:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/ChangeLog,v 1.15 2006/09/08 05:19:37 tsunam Exp $
+
+  08 Sep 2006; Joshua Jackson <tsunam@gentoo.org> jigdo-0.7.3.ebuild:
+  Stable x86; bug #146743
 
   07 Sep 2006; Jason Wever <weeve@gentoo.org> jigdo-0.7.3.ebuild:
   Stable on SPARC.
