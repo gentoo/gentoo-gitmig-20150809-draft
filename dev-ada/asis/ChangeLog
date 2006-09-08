@@ -1,6 +1,15 @@
 # ChangeLog for dev-ada/asis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.19 2006/05/13 21:26:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.20 2006/09/08 13:35:24 george Exp $
+
+*asis-3.4.6.2006 (08 Sep 2006)
+
+  08 Sep 2006; George Shapovalov <george@gentoo.org>
+  +asis-3.4.6.2006.ebuild, asis-3.15p.ebuild:
+  added new version to go with gnat-gcc-3.4.6.2006. Installs into gnat's dirs,
+  extending the compiler (as it is supposed). See #111340 for details
+  Removed ppc from KEYWORDS of 3.15p as gnat-3.15p is masked in ppc profile 
+  (and will soon be pulled anyways).
 
   13 May 2006; George Shapovalov <george@gentoo.org> asis-3.15p.ebuild,
   asis-3.44.ebuild:

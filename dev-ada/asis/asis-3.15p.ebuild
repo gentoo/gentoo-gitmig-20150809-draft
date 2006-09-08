@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.16 2006/05/13 21:26:23 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.15p.ebuild,v 1.17 2006/09/08 13:35:24 george Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ DEPEND="=dev-lang/gnat-3.15p*"
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86"
 IUSE=""
 
 src_unpack() {
