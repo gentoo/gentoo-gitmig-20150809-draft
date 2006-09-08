@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.17 2006/08/16 09:42:17 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.18 2006/09/08 19:35:09 zzam Exp $
+
+*vdr-softdevice-0.2.3.20060908 (08 Sep 2006)
+
+  08 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-softdevice-0.2.3.20060908.ebuild:
+  Added new cvs-snapshot. Filter -O2, to get correct colors in OSD.
 
   16 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-softdevice-0.2.3.20060814-r1.ebuild:
