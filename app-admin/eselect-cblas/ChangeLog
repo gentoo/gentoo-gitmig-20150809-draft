@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-cblas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.5 2006/08/26 17:21:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.6 2006/09/08 19:31:38 corsair Exp $
+
+  08 Sep 2006; Markus Rothe <corsair@gentoo.org> eselect-cblas-0.1.ebuild:
+  Added ~ppc64; bug #146851
 
   26 Aug 2006; Danny van Dyk <kugelfang@gentoo.org>
   eselect-cblas-0.1.ebuild:
