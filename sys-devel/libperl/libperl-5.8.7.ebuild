@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.24 2006/01/15 10:23:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.7.ebuild,v 1.25 2006/09/08 10:44:44 mcummings Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -131,10 +131,6 @@ src_unpack() {
 	#
 	cd ${S};
 	use userland_Darwin || epatch ${FILESDIR}/${PN}-create-libperl-soname.patch
-
-	# uclibc support - dragonheart 2004.06.16
-	# Now upstreamed - MPC 2005.06.28
-	#cd ${S}; epatch ${FILESDIR}/${PN}-uclibc.patch
 
 	# Configure makes an unwarranted assumption that /bin/ksh is a
 	# good shell. This patch makes it revert to using /bin/sh unless
