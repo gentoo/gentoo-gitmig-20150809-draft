@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.2006.ebuild,v 1.1 2006/09/08 13:35:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.2006.ebuild,v 1.2 2006/09/08 16:34:51 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -58,6 +58,9 @@ src_unpack() {
 		-e "s:environment settings for gcc:environment for gnatgcc:" \
 		asis/a4g-gnat_int.adb
 	sed -i -e "s:\"gcc#\":\"gnatgcc#\":" gnat/snames.adb
+
+	sed -i -e "s:gcc:gnatgcc:" tools/tool_utils/asis_ul-common.adb
+	sed -i -e "s:\"gcc:\"gnatgcc:" tools/gnatmetric/metrics-compute.adb
 }
 
 
