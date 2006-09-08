@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.6.2.ebuild,v 1.4 2006/09/08 17:27:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/keychain-2.6.2.ebuild,v 1.5 2006/09/08 18:11:32 agriffis Exp $
 
 DESCRIPTION="ssh-agent manager"
 HOMEPAGE="http://www.gentoo.org/proj/en/keychain/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}
 	app-shells/bash
 	|| ( net-misc/openssh net-misc/ssh )"
