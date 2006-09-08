@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/xcut-0.2-r1.ebuild,v 1.2 2006/04/03 04:17:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/xcut-0.2-r1.ebuild,v 1.3 2006/09/08 22:39:43 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ DEPEND="${RDEPEND}
 	|| ( (
 		x11-proto/xproto
 		x11-misc/imake )
-	virtual/x11 )"
+	virtual/x11 )
+	app-text/rman"
 
 src_unpack() {
 	unpack ${A}
