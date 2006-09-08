@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.6 2006/07/27 14:56:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.7 2006/09/08 03:45:08 nichoj Exp $
+
+  08 Sep 2006; Joshua Nichols <nichoj@gentoo.org> jarjar-0.6-r1.ebuild:
+  Fix for java-strict. Was missing implicitly dependend on jar from ant-core.
 
 *jarjar-0.6-r1 (27 Jul 2006)
 

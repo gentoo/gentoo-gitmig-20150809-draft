@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.3 2006/07/22 21:33:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.1.3.ebuild,v 1.4 2006/09/08 03:47:06 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -32,6 +32,7 @@ src_unpack() {
 	java-pkg_jar-from asm-1.5
 	java-pkg_jar-from aspectwerkz-2
 	java-pkg_jar-from jarjar-1
+	java-pkg_jar-from ant-core ant.jar
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.1 2006/07/27 14:56:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.2 2006/09/08 03:45:08 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -33,6 +33,7 @@ src_unpack() {
 	rm -f *.jar
 	java-pkg_jar-from asm-2
 	java-pkg_jar-from gnu-regexp-1
+	java-pkg_jar-from ant-core ant.jar
 }
 
 src_compile() {
