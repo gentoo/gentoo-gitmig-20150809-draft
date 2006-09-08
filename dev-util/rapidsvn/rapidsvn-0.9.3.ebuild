@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.7 2006/08/17 19:46:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.3.ebuild,v 1.8 2006/09/08 04:52:55 nerdboy Exp $
 
 inherit eutils libtool autotools
 
@@ -21,9 +21,11 @@ DEPEND=">=dev-util/subversion-1.3.2-r1
 	    app-text/docbook-xsl-stylesheets )"
 
 src_unpack() {
-	cd ${WORKDIR}
 	unpack ${A}
 	cd ${S}
+	# Apparently we still the --as-needed link patch...
+	epatch ${FILESDIR}/${PN}-svncpp_link.patch || die "epatch failed"
+	elibtoolize
 	eautoreconf
 }
 
@@ -61,8 +63,7 @@ src_compile() {
 	else
 		ewarn "wx-config-2.6 not found. Compiling with default wxGTK."
 	fi
-	libtoolize --copy --force
-	elibtoolize --portage
+
 	econf	--with-svn-lib=/usr/$(get_libdir) \
 		--with-svn-include=/usr/include \
 		--with-neon-config=/usr/bin/neon-config \
