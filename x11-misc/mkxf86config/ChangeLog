@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.29 2006/07/31 11:40:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.30 2006/09/08 20:07:55 wolf31o2 Exp $
+
+  08 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  mkxf86config-0.9.7.ebuild:
+  Stable on alpha/ppc since it is used on the LiveCD images for those
+  architectures and doesn't do anything arch-specific for them.
 
   31 Jul 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   mkxf86config-0.9.7.ebuild:

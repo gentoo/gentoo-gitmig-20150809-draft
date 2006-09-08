@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.7.ebuild,v 1.2 2006/07/31 11:40:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.9.7.ebuild,v 1.3 2006/09/08 20:07:55 wolf31o2 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 mips ~ppc x86"
+KEYWORDS="alpha amd64 mips ppc x86"
 IUSE=""
 
 RDEPEND="!mips? ( sys-apps/hwsetup )"
