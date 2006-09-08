@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/nopaste-1252.ebuild,v 1.8 2006/09/03 14:09:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nopaste/nopaste-1252.ebuild,v 1.9 2006/09/08 18:44:40 agriffis Exp $
 
 DESCRIPTION="command-line interface to rafb.net/paste"
 HOMEPAGE="http://gentoo.org/~agriffis/nopaste/"
@@ -8,7 +8,7 @@ SRC_URI="${HOMEPAGE}/${P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc x86 ~x86-fbsd"
 IUSE="X"
 
 DEPEND=""
