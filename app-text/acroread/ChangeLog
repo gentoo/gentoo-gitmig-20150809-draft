@@ -1,6 +1,10 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.83 2006/07/31 11:38:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.84 2006/09/08 21:57:35 genstef Exp $
+
+  08 Sep 2006; Stefan Schweizer <genstef@gentoo.org> acroread-7.0.8.ebuild:
+  remove unused libstdc++ depend, thanks Peter Hyman <pete4abw@comcast.net> in
+  bug 146821
 
   31 Jul 2006; Simon Stelling <blubb@gentoo.org> acroread-7.0.8.ebuild:
   stable on amd64 wrt bug 136415
