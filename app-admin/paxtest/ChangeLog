@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/paxtest
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.25 2006/07/15 18:31:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.26 2006/09/08 05:51:14 corsair Exp $
+
+  08 Sep 2006; Markus Rothe <corsair@gentoo.org> paxtest-0.9.6.ebuild:
+  Back to ~ppc64
 
   15 Jul 2006; Daniel Gryniewicz <dang@gentoo.org> paxtest-0.9.6.ebuild:
   Marked ~amd64 per bug# 127458
