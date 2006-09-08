@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.86 2006/08/19 22:40:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.87 2006/09/08 05:02:19 tcort Exp $
+
+  08 Sep 2006; Thomas Cort <tcort@gentoo.org> gnucash-2.0.1.ebuild:
+  Added ~alpha keyword wrt Bug #146768.
 
   19 Aug 2006; Jason Wever <weeve@gentoo.org> gnucash-2.0.1.ebuild:
   Added ~sparc keyword.
