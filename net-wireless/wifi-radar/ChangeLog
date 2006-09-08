@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/wifi-radar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.5 2006/08/28 09:45:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.6 2006/09/08 09:26:45 s4t4n Exp $
+
+*wifi-radar-1.9.6-r1 (08 Sep 2006)
+
+  08 Sep 2006; Michele Noberasco <s4t4n@gentoo.org> wifi-radar-1.9.6-r1.ebuild:
+  Revision bump, with fix for icon installation. Closes bug #146757.
+  wifi-radar-1.9.6.ebuild:
+  Wiped out previsious revision.
 
 *wifi-radar-1.9.6 (28 Aug 2006)
 
