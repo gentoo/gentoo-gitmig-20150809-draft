@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.68 2006/08/05 23:25:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.69 2006/09/08 06:26:57 nerdboy Exp $
+
+  08 Sep 2006; Steve Arnold <nerdboy@gentoo.org> hylafax-4.3.0.ebuild:
+  stable bump for bug 146445; re-opening for other arches.
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #136068

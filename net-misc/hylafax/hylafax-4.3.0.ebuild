@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.0.ebuild,v 1.1 2006/07/02 02:45:25 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.3.0.ebuild,v 1.2 2006/09/08 06:26:57 nerdboy Exp $
 
 inherit eutils multilib pam flag-o-matic toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="~x86 ~sparc ~hppa ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~hppa ~alpha amd64 ~ppc"
 
 DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=sys-libs/zlib-1.1.4
@@ -28,12 +28,6 @@ RDEPEND="${DEPEND}
 	net-mail/metamail"
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc /usr/lib/fax"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	#epatch ${FILESDIR}/hylafax-fix-configure-gcc-3-4.patch
-}
 
 src_compile() {
 	if use faxonly; then
