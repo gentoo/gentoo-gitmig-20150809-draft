@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/cvsmenu
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.11 2005/04/24 12:02:01 hansmi Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cvsmenu/ChangeLog,v 1.12 2006/09/08 20:56:29 pioto Exp $
+
+*cvsmenu-1.125 (08 Sep 2006)
+
+  08 Sep 2006; <pioto@gentoo.org> +cvsmenu-1.125.ebuild:
+  Bump to version 1.125, maintained by a new person upstream. Updated HOMEPAGE
+  to reflect. Thanks to Henrique Ferreiro (Bug #131154).
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cvsmenu-1.80.ebuild:
   Stable on ppc.
