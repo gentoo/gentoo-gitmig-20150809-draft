@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kerry
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.8 2006/06/23 16:05:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.9 2006/09/08 13:48:09 flameeyes Exp $
+
+  08 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Move back to kde herd.
 
 *kerry-0.1.90 (23 Jun 2006)
 
