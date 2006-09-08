@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r1.ebuild,v 1.5 2006/08/26 08:23:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.4-r1.ebuild,v 1.6 2006/09/08 11:07:46 blubb Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://humdi.net/vnstat/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 ~x86"
 IUSE=""
 
 RDEPEND="virtual/cron"
