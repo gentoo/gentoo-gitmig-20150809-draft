@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r2.ebuild,v 1.1 2006/09/06 00:54:18 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r2.ebuild,v 1.2 2006/09/08 02:58:31 tester Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app
 
@@ -198,12 +198,6 @@ src_compile() {
 			myconf="${myconf} --x-includes=/usr/include/X11"
 	fi
 
-	if use doc ; then
-		myconf="${myconf} --enable-doxygen"
-	else
-		myconf="${myconf} --disable-doxygen"
-	fi
-
 	econf \
 		$(use_enable nls) \
 		$(use_enable perl) \
@@ -218,6 +212,7 @@ src_compile() {
 		$(use_enable nas) \
 		$(use_enable eds gevolution) \
 		$(use_enable audiofile audio) \
+		$(use_enable doc doxygen) \
 		${myconf} || die "Configuration failed"
 
 	emake -j1 || die "Make failed"
