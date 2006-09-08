@@ -1,6 +1,6 @@
 
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5843 2006/09/08 18:38:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5844 2006/09/08 22:26:22 agriffis Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1514,6 +1514,7 @@ dev-lisp/tbnl
 # Aron Griffis <agriffis@gentoo.org> (07 Feb 2005)
 # Mask offlineimap testing versions
 =net-irc/ctrlproxy-2.7*
+=net-irc/ctrlproxy-3.0*
 
 #Gustavo Felisberto <humpback@gentoo.org> (04 Feb 2005)
 #Masked for user testing
