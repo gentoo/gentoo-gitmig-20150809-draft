@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.1 2006/07/23 09:11:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.3.ebuild,v 1.2 2006/09/08 05:26:02 nichoj Exp $
 
-inherit java-pkg-2 java-ant-2 eutils
+inherit java-pkg-2 eutils
 
 DESCRIPTION="XDoclet is an extended Javadoc Doclet engine."
 HOMEPAGE="http://xdoclet.sf.net/"
@@ -19,7 +19,8 @@ RDEPEND=">=virtual/jre-1.3
 	dev-java/log4j
 	dev-java/mockobjects
 	dev-java/velocity
-	dev-java/xjavadoc"
+	dev-java/xjavadoc
+	dev-java/junit"
 DEPEND=">=virtual/jdk-1.3
 	${RDEPEND}
 	dev-java/ant
@@ -31,6 +32,11 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-interface.patch
 	epatch ${FILESDIR}/${P}-buildfile.patch
+	# Fix javac tasks to have source="1.3" target="1.3"
+	# because using xml-rewrite.py from java-ant-2 breaks the build,
+	# because it doesn't support entities
+	# TODO file upstream. Perhaps cleanup patch to use ant properties.
+	epatch ${FILESDIR}/${P}-fix_javac.patch
 
 	cd ${S}/lib && rm -f *.jar
 	java-pkg_jar-from xjavadoc
@@ -41,11 +47,15 @@ src_unpack() {
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from velocity
+	java-pkg_jar-from ant-core ant.jar
+	java-pkg_jar-from junit
 }
 
+# TODO investigate why compiling needs junit, ie is build not sane enough to
+# devide building of test classes separate from rest of classes?
 src_compile() {
 	local antflags="core modules maven"
-	eant ${antflags} || die "Failed to compile XDoclet core."
+	eant ${antflags}
 }
 
 src_install() {

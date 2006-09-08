@@ -1,0 +1,112 @@
+Only in xdoclet-1.2.3-patched/core: .build.xml.swp
+diff -ru xdoclet-1.2.3/core/build.xml xdoclet-1.2.3-patched/core/build.xml
+--- xdoclet-1.2.3/core/build.xml	2003-10-08 19:41:29.000000000 -0400
++++ xdoclet-1.2.3-patched/core/build.xml	2006-09-08 01:04:25.000000000 -0400
+@@ -118,6 +118,8 @@
+         <javac
+             destdir="${core.classes.dir}"
+             classpathref="core.class.path"
++			target="1.3"
++			source="1.3"
+             debug="${compile.debug}"
+             deprecation="${compile.deprecation}"
+             optimize="${compile.optimize}"
+diff -ru xdoclet-1.2.3/core/test/build.xml xdoclet-1.2.3-patched/core/test/build.xml
+--- xdoclet-1.2.3/core/test/build.xml	2002-09-08 14:07:11.000000000 -0400
++++ xdoclet-1.2.3-patched/core/test/build.xml	2006-09-08 00:43:31.000000000 -0400
+@@ -156,6 +156,8 @@
+ 
+         <javac
+             destdir="${ejb.classes.dir}"
++			target="1.3"
++			source="1.3"
+             debug="on">
+ 
+             <classpath refid="testsuite.class.path" />
+@@ -170,7 +172,11 @@
+     </target>
+ 
+     <target name="unittest-ejb">
+-        <javac destdir="${build.dir}/junit/classes" debug="on">
++        <javac
++			destdir="${build.dir}/junit/classes"
++			target="1.3"
++			source="1.3"
++			debug="on">
+             <classpath refid="testsuite.class.path" />
+             <src path="${java.dir}"/>
+ 
+@@ -208,7 +214,11 @@
+ 
+     <target name="test-xdoclet" depends="prepare">
+ 
+-        <javac destdir="${build.dir}/junit/classes" debug="on">
++        <javac
++			destdir="${build.dir}/junit/classes"
++			target="1.3"
++			source="1.3"
++			debug="on">
+             <classpath refid="testsuite.class.path" />
+             <src path="${java.dir}"/>
+ 
+@@ -316,6 +326,8 @@
+             srcdir="${java.dir};${generated.java.dir}"
+             destdir="${build.dir}/web/WEB-INF/classes"
+             includes="xdoclet/retest/bean/web/*.java"
++			target="1.3"
++			source="1.3"
+             debug="on">
+ 
+             <classpath refid="testsuite.class.path" />
+@@ -325,6 +337,8 @@
+             srcdir="${java.dir};${generated.java.dir}"
+             destdir="${build.dir}/jmx"
+             includes="xdoclet/retest/bean/jmx/*.java"
++			target="1.3"
++			source="1.3"
+             debug="on">
+ 
+             <classpath refid="testsuite.class.path" />
+diff -ru xdoclet-1.2.3/modules/mockobjects/build-orig.xml xdoclet-1.2.3-patched/modules/mockobjects/build-orig.xml
+--- xdoclet-1.2.3/modules/mockobjects/build-orig.xml	2003-02-05 20:46:10.000000000 -0500
++++ xdoclet-1.2.3-patched/modules/mockobjects/build-orig.xml	2006-09-08 00:44:14.000000000 -0400
+@@ -30,7 +30,7 @@
+ 
+   <target name="compile" description="Compile classes">
+     <mkdir dir="target/classes" />
+-    <javac srcdir="src/main;src/test" destdir="target/classes" classpathref="classpath" />
++    <javac srcdir="src/main;src/test" destdir="target/classes" classpathref="classpath" source="1.3" target="1.3"/>
+     <copy todir="target/classes">
+       <fileset dir="src/main">
+         <include name="**/*.j"/>
+@@ -62,4 +62,4 @@
+     <delete dir="src/test" />
+   </target>
+ 
+-</project>
+\ No newline at end of file
++</project>
+diff -ru xdoclet-1.2.3/modules/mockobjects/build.xml xdoclet-1.2.3-patched/modules/mockobjects/build.xml
+--- xdoclet-1.2.3/modules/mockobjects/build.xml	2003-02-05 20:46:10.000000000 -0500
++++ xdoclet-1.2.3-patched/modules/mockobjects/build.xml	2006-09-08 00:43:54.000000000 -0400
+@@ -40,6 +40,8 @@
+     
+     <javac srcdir="${mockobjects.sample.src};${mockobjects.src}"
+            destdir="${mockobjects.sample.classes}"
++		   source="1.3"
++		   target="1.3"
+            classpathref="mockobjects.class.path"/>
+ 
+   </target>
+diff -ru xdoclet-1.2.3/modules/modules-common.ent xdoclet-1.2.3-patched/modules/modules-common.ent
+--- xdoclet-1.2.3/modules/modules-common.ent	2005-04-15 20:02:14.000000000 -0400
++++ xdoclet-1.2.3-patched/modules/modules-common.ent	2006-09-08 00:44:53.000000000 -0400
+@@ -198,6 +198,8 @@
+             debug="${compile.debug}"
+             deprecation="${compile.deprecation}"
+             optimize="${compile.optimize}"
++			source="1.3"
++			target="1.3"
+         >
+             <src path="${module.src.dir}"/>
+         </javac>
