@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.210 2006/09/06 22:42:31 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.211 2006/09/08 00:41:49 gregkh Exp $
+
+*udev-100 (08 Sep 2006)
+
+  08 Sep 2006; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-100.ebuild:
+  100 release (fixes some disk persistent name issues.)
 
 *udev-099 (06 Sep 2006)
 
