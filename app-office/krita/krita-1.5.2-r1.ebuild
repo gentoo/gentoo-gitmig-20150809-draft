@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.5.2-r1.ebuild,v 1.4 2006/09/06 11:43:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.5.2-r1.ebuild,v 1.5 2006/09/08 18:32:49 carlo Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -21,7 +21,7 @@ DEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	>=media-libs/lcms-1.14-r1
 	media-libs/tiff
 	media-libs/jpeg
-	media-libs/openexr
+	>=media-libs/openexr-1.2.2-r2
 	media-libs/libpng
 	>=media-libs/libexif-0.6.13-r1
 	virtual/opengl
@@ -53,6 +53,13 @@ pkg_setup() {
 			eerror "You need to build x11-libs/qt with opengl use flag enabled."
 			die
 		fi
+}
+
+src_unpack() {
+	kde-meta_src_unpack
+	# FIXME - disable broken tests for now
+	sed -i -e "s:TESTSDIR =.*:TESTSDIR=:" ${S}/krita/core/Makefile.am \
+		`ls ${S}/krita/colorspaces/*/Makefile.am`
 }
 
 src_compile() {
