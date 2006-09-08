@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.6 2006/09/04 20:01:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.7 2006/09/08 20:12:35 tcort Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://opengl.geek.nz/ftgl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/freetype-2.0.9
