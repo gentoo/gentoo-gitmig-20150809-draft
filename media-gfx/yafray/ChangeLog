@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/yafray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.32 2006/07/20 18:25:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/ChangeLog,v 1.33 2006/09/08 19:57:12 tcort Exp $
+
+  08 Sep 2006; Thomas Cort <tcort@gentoo.org> yafray-0.0.9.ebuild:
+  Added ~alpha keyword wrt Bug #96565. Added a '\' at the end of line 41 to
+  fix a 'Trailing whitespace Syntax Error'.
 
   20 Jul 2006; Luca Barbato <lu_zero@gentoo.org>
   files/yafray-0.0.9-libdir.patch:
