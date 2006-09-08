@@ -51,14 +51,14 @@ EBUILD vdr-skinsoppalusikka-1.0.0.ebuild 779 RMD160 b100c34f1b8bf44a761243ab0df1
 MD5 4881ba416cc3ec29975eebbac28ac6e9 vdr-skinsoppalusikka-1.0.0.ebuild 779
 RMD160 b100c34f1b8bf44a761243ab0df1a65ef94491ed vdr-skinsoppalusikka-1.0.0.ebuild 779
 SHA256 d9f57cbe9e9fdedf23ec9eca5b7f4bb9f7ea798e76657657aff0b4bbf1f24999 vdr-skinsoppalusikka-1.0.0.ebuild 779
-EBUILD vdr-skinsoppalusikka-1.0.1.ebuild 917 RMD160 7565fbf667fd8936be86e5620f9c3a0a52d72f26 SHA1 f51ecc57d0891b010b81d5a449d4d1f43b0451ac SHA256 c2da145a024bb00d5f8806825d50e37e43348195964dd357d1dbb4523e4d7db3
-MD5 ecb327dc998f52efe6dfc2a274c4c496 vdr-skinsoppalusikka-1.0.1.ebuild 917
-RMD160 7565fbf667fd8936be86e5620f9c3a0a52d72f26 vdr-skinsoppalusikka-1.0.1.ebuild 917
-SHA256 c2da145a024bb00d5f8806825d50e37e43348195964dd357d1dbb4523e4d7db3 vdr-skinsoppalusikka-1.0.1.ebuild 917
-MISC ChangeLog 3909 RMD160 f5476f1923a991a85ae1279d79763da8bb70f171 SHA1 52d4455a012c6dd5ffda0a6f5e3de36ffd6d3b1b SHA256 5cd3e867fe528a9c9125440d3975a63ecf3acb73ba7beca4628f437a97c8a3d8
-MD5 c0b8460200c5ed82e3766abce76b07ba ChangeLog 3909
-RMD160 f5476f1923a991a85ae1279d79763da8bb70f171 ChangeLog 3909
-SHA256 5cd3e867fe528a9c9125440d3975a63ecf3acb73ba7beca4628f437a97c8a3d8 ChangeLog 3909
+EBUILD vdr-skinsoppalusikka-1.0.1.ebuild 911 RMD160 0bbe5d148b475027fd6b96c91707ad6e3bf0f322 SHA1 d31bc3c24cab21229fb70da9ddf845e249a7a08c SHA256 5aadf8ade26e62ef087430f591c003f28010197e869cb3a062a0c713e4f36d18
+MD5 5a3a7a3d7201543f0a2225562cb8d428 vdr-skinsoppalusikka-1.0.1.ebuild 911
+RMD160 0bbe5d148b475027fd6b96c91707ad6e3bf0f322 vdr-skinsoppalusikka-1.0.1.ebuild 911
+SHA256 5aadf8ade26e62ef087430f591c003f28010197e869cb3a062a0c713e4f36d18 vdr-skinsoppalusikka-1.0.1.ebuild 911
+MISC ChangeLog 4012 RMD160 3d57f8eeba77dbed047cbdf734f0bdddae5552fe SHA1 cfc46689c26ee70f317511b493016720cb1ac0ed SHA256 329e2dd2c45c4c5b321f6bb4726c54c5e91edb5bef930912fc90867c2df93146
+MD5 176d2f938df20bc72762ab0142fe0faa ChangeLog 4012
+RMD160 3d57f8eeba77dbed047cbdf734f0bdddae5552fe ChangeLog 4012
+SHA256 329e2dd2c45c4c5b321f6bb4726c54c5e91edb5bef930912fc90867c2df93146 ChangeLog 4012
 MISC metadata.xml 385 RMD160 5402b50a5d2d42b59c9dddde0c7e9bbb1de0995e SHA1 8035b846ec5ffc6a75e2d7fbbed2cac3e9cf0814 SHA256 d33711c20cf70540856eef5e8811923f2455861c84a525ca9b0830117dcfde94
 MD5 be4d1c50caf6cd019eb8e782b73e0e06 metadata.xml 385
 RMD160 5402b50a5d2d42b59c9dddde0c7e9bbb1de0995e metadata.xml 385
@@ -82,10 +82,9 @@ MD5 19c5839f7f463469f3765f56b59495d5 files/digest-vdr-skinsoppalusikka-1.0.1 268
 RMD160 94a26e90992d354a2de9f2be25569188d99ed8e3 files/digest-vdr-skinsoppalusikka-1.0.1 268
 SHA256 35d7bafc6f8ffc571e511f2e08e09a7e3e92fefed5abe14ef479d9f8f38ac3cf files/digest-vdr-skinsoppalusikka-1.0.1 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-Comment: no further Information
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEwUmwdn07HTTCgIoRAkfcAJ4oqvjrxsjxWWBk7ljKuf36jezEUQCdEun8
-/vExQFsvSsjY3znK274kiHw=
-=GZMk
+iD8DBQFFAT63t2vP6XvVdOcRAna5AKDmCdcK0ZbN699vD7H6SiBl6RenJACgn48R
+3PVqo7SFv+Q2chHxEcS5Qp0=
+=4ix7
 -----END PGP SIGNATURE-----
