@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.3_p20041113.ebuild,v 1.5 2005/07/18 22:07:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.3_p20041113.ebuild,v 1.6 2006/09/08 02:45:32 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -29,6 +29,9 @@ src_unpack() {
 
 src_compile() {
 	cd weka
+	# Runs out of memory of on amd64 with blackdown-jdk
+	# so up the max size of the memory allocation pool
+	use amd64 && export ANT_OPTS="-Xmx128m"
 
 	# all attempts to build it with jikes failed
 	local antflags="exejar srcjar remotejar"

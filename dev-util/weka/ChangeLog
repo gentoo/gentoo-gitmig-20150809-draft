@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.14 2006/02/19 00:02:15 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.15 2006/09/08 02:45:32 nichoj Exp $
+
+  08 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  weka-3.4.3_p20041113.ebuild:
+  Increase memory allocation pool when on amd64, due to OutOfMemoryErrors
+  encountered.
 
   19 Feb 2006; Petteri Räty <betelgeuse@gentoo.org> weka-3.4.6.ebuild:
   Removed dependency on virtual/x11 to make weka work with modular X.
