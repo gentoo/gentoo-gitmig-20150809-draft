@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.8 2006/03/05 13:40:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817.ebuild,v 1.9 2006/09/08 04:57:34 vapier Exp $
 
 fromcvs=0
 ECVS_MODULE="duke3d"
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="hppa ppc x86"
-IUSE="hardened perl opengl"
+IUSE="pic perl opengl"
 
 RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
@@ -28,7 +28,7 @@ RDEPEND="media-libs/libsdl
 	perl? ( dev-lang/perl )
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
-	!hardened? ( x86? ( dev-lang/nasm ) )"
+	!pic? ( x86? ( dev-lang/nasm ) )"
 
 S="${WORKDIR}/${ECVS_MODULE}"
 
@@ -68,7 +68,7 @@ src_unpack() {
 		-e "/^use_physfs := / s:=.*:= false:" \
 		Makefile \
 		|| die "sed duke3d Makefile failed"
-	if ! use hardened && use x86 ; then
+	if ! use pic && use x86 ; then
 		sed -i \
 			-e 's:^#USE_ASM:USE_ASM:' buildengine/Makefile \
 			|| die "sed failed"
