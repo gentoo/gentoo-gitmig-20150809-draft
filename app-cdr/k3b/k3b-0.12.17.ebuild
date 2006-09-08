@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.1 2006/08/23 16:30:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.2 2006/09/08 21:04:23 flameeyes Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa css dvdr encode ffmpeg flac hal kde mp3 musepack musicbrainz sndfile vcd vorbis"
 
 DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
-	hal? ( sys-apps/dbus sys-apps/hal )
+	hal? ( || ( dev-libs/dbus-qt3-old sys-apps/dbus )
+		sys-apps/hal )
 	media-libs/libsamplerate
 	media-libs/taglib
 	>=media-sound/cdparanoia-3.9.8
@@ -54,7 +55,7 @@ for X in ${LANGS}; do
 done
 
 pkg_setup() {
-	if use hal && ! built_with_use sys-apps/dbus qt3; then
+	if use hal && has_version '<sys-apps/dbus-0.91' && ! built_with_use sys-apps/dbus qt3; then
 		eerror "You are trying to compile ${CATEGORY}/${PF} with the \"hal\" USE flag enabled,"
 		eerror "but sys-apps/dbus is not built with Qt3 support."
 		die "rebuild sys-apps/dbus with the qt3 useflag"
