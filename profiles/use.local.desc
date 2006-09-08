@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2117 2006/09/07 23:09:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2118 2006/09/08 06:32:06 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1086,6 +1086,7 @@ net-dialup/ppp:atm - Enables support for PPP over ATM (PPPoA)
 net-dialup/ppp:dhcp - Enables the DHCP plugin
 net-dialup/ppp:eap-tls - Enables support for Extensible Authentication Protocol and Transport Level Security (EAP-TLS)
 net-dialup/ppp:mppe-mppc - Enables support for MPPE-MPPC
+net-dialup/pptpd:gre-extreme-debug - Log all GRE accepted packages when in debug mode (required if you want upstream support)
 net-dns/avahi:bookmarks - Install the avahi-bookmarks application (requires dev-python/twisted)
 net-dns/avahi:howl-compat - Enable compat libraries for howl
 net-dns/avahi:mdnsresponder-compat - Enable compat libraries for mDNSResponder
