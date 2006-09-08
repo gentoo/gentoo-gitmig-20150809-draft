@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.17 2006/08/30 14:02:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.18 2006/09/08 13:28:17 george Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -36,6 +36,9 @@ GNATMAJOR=$(get_version_component_range 1)
 GNATMINOR=$(get_version_component_range 2)
 GNATBRANCH=$(get_version_component_range 1-2)
 GNATRELEASE=$(get_version_component_range 1-3)
+# this one is for the gnat-gpl which is versioned by gcc backend and ACT version
+# number added on top
+ACT_Ver=$(get_version_component_range 4)
 
 # GCCVER and SLOT logic
 #
@@ -51,7 +54,10 @@ PN_GnatPro="gnat-pro"
 # GCCVER can be set in the ebuild, but then care will have to be taken
 # to set it before inheriting, which is easy to forget
 # so set it here for what we can..
-if  [[ ${PN} == "${PN_GnatGCC}" ]] || [[ ${PN} == "${PN_GnatGpl}" ]] ; then
+if  [[ ${PN} == "${PN_GnatGCC}" ]] || \
+	[[ ${PN} == "${PN_GnatGpl}" ]] || \
+	[[ ${PN} == "asis" ]]; 
+then
 	GCCVER="${GNATRELEASE}"
 elif [[ ${PN} == "${PN_GnatPro}" ]] ; then
 # Ada Core provided stuff is really conservative and changes backends rarely
@@ -85,6 +91,12 @@ is_crosscompile() {
 # profiles, so mostly watch out for the right SLOT used in the bootstrap.
 BOOT_TARGET=${CTARGET}
 BOOT_SLOT=${SLOT}
+# optional packages
+if [[ ${PN} == "${PN_GnatGpl}" ]] ; then
+	ASIS_SRC="${WORKDIR}/asis-${ACT_Ver}-src"
+else
+	ASIS_SRC="none"
+fi
 
 # set our install locations
 PREFIX=${GNATBUILD_PREFIX:-/usr} # not sure we need this hook, but may be..
@@ -420,7 +432,7 @@ gnatbuild_src_compile() {
 		return $?
 	fi
 
-	if [ "all" == "$1" ]
+	if [[ "all" == "$1" ]]
 	then # specialcasing "all" to avoid scanning sources unnecessarily
 		gnatbuild_src_compile configure make-tools \
 			bootstrap gnatlib_and_tools gnatlib-shared
@@ -428,7 +440,7 @@ gnatbuild_src_compile() {
 	else
 		# Set some paths to our bootstrap compiler.
 		export PATH="${GNATBOOT}/bin:${PATH}"
-		if [ "${PN_GnatPro}-3.15p" == "${P}" ]; then
+		if [[ "${PN_GnatPro}-3.15p" == "${P}" ]]; then
 			GNATLIB="${GNATBOOT}/lib/gcc-lib/${BOOT_TARGET}/${BOOT_SLOT}"
 		else
 			# !ATTN! the *installed* compilers have ${PN} as part of their
@@ -450,10 +462,6 @@ gnatbuild_src_compile() {
 
 		export ADA_OBJECTS_PATH="${GNATLIB}/adalib"
 		export ADA_INCLUDE_PATH="${GNATLIB}/adainclude"
-
-#		if [ "2.8.1" == ${GCCVER} ]; then
-#			export BINUTILS_ROOT="${GNATBOOT}"
-#		fi
 
 #		einfo "CC=${CC},
 #			ADA_INCLUDE_PATH=${ADA_INCLUDE_PATH},
@@ -548,6 +556,7 @@ gnatbuild_src_compile() {
 				emake -j1 -C gcc gnatlib-shared LIBRARY_VERSION="${GCCBRANCH}" || \
 					die "gnatlib-shared failed"
 			;;
+
 		esac
 		shift
 		done # while
