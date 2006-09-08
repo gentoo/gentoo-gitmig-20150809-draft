@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.16 2006/03/07 14:57:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.17 2006/09/08 04:54:41 tsunam Exp $
+
+  08 Sep 2006; Joshua Jackson <tsunam@gentoo.org> mcdp-0.4a.ebuild:
+  Stable x86; bug #145885
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/mcdp-0.4a-makefile.patch, mcdp-0.4a.ebuild:
