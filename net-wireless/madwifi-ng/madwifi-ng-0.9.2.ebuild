@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.ebuild,v 1.3 2006/09/04 22:12:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.2.ebuild,v 1.4 2006/09/08 16:05:25 steev Exp $
 
 inherit linux-mod
 
@@ -75,7 +75,7 @@ src_unpack() {
 
 src_compile() {
 	epatch ${FILESDIR}/madwifi-ng-uudecode-gcda-fix.patch
-	epatch ${FILESDIR}/madwifi-association-fix.patch
+#	epatch ${FILESDIR}/madwifi-association-fix.patch
 
 	# assists in debugging
 	emake KERNELPATH=${KV_OUT_DIR} info || die "emake info failed"
