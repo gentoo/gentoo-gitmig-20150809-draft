@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.0_rc3.ebuild,v 1.2 2006/08/28 16:49:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.0_rc3.ebuild,v 1.3 2006/09/09 15:45:45 ticho Exp $
 
 inherit eutils
 
@@ -126,7 +126,7 @@ pkg_postinst() {
 	upgrade_warning
 	elog "If you are upgrading from 0.11.x, check the configuration file carefully,"
 	elog "the format has changed. See the example config file installed as"
-	elog "/usr/share/doc/mpd-0.12.0_rc1/mpdconf.example.gz, and mpd.conf manual page."
+	elog "/usr/share/doc/${PF}/mpdconf.example.gz, and mpd.conf manual page."
 	elog ""
 	elog "Please make sure that MPD's pid_file is set to /var/run/mpd/mpd.pid."
 }
