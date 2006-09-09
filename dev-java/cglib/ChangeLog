@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.16 2006/09/09 07:39:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.17 2006/09/09 07:41:11 betelgeuse Exp $
+
+  09 Sep 2006; Petteri Räty <betelgeuse@gentoo.org> -cglib-2.0.2.ebuild:
+  Removed an old version.
 
   09 Sep 2006; Petteri Räty <betelgeuse@gentoo.org> cglib-2.0.2-r1.ebuild,
   cglib-2.0.2-r2.ebuild:
