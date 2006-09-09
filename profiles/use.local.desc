@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2124 2006/09/09 14:33:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2125 2006/09/09 14:52:29 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -574,7 +574,6 @@ gnustep-base/gnustep-make:layout-osx-like - Layout GNUstep FHS like OSX's (viola
 gnustep-base/gnustep-make:non-flattened - do not flatten launch and library paths for GNUstep packages allowing executable within a .app to be launched based on processor type
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard.
 kde-base/juk:akode - Support for the aKode audio-decoding frame-work.
-kde-base/juk:musicbrainz - Support for MusicBrainz audio lookups (musicbrainz.org).
 kde-base/kaddressbook:gnokii - Address synchronization with mobile phones via Gnokii.
 kde-base/kbugbuster:kcal - Support for kcal (calendar) format.
 kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice.
@@ -597,7 +596,6 @@ kde-base/kdelibs:noutempter - Don't write login records. Don't use this flag, un
 kde-base/kdelibs:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdelibs:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work.
-kde-base/kdemultimedia:musicbrainz - Support for MusicBrainz audio lookups (musicbrainz.org).
 kde-base/kdenetwork:rdesktop - support for the remote desktop protocol.
 kde-base/kdenetwork:sametime - Support for the Sametime protocol for instant messaging.
 kde-base/kdepim:gnokii - Address synchronization with mobile phones via Gnokii.
@@ -614,7 +612,6 @@ kde-base/krdc:rdesktop - Support for the remote desktop protocol.
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kwin:xcomposite - Support for Xorg composite extension.
-kde-misc/kxdocker:net - Enable network support
 kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information about compact discs.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
@@ -764,16 +761,12 @@ media-libs/sdl-sound:physfs - Enable physfs support
 media-libs/sge:image - enable sdl-image support
 media-libs/speex:vorbis-psy - Enable Vorbis-style psychoacoustics
 media-libs/svgalib:no-helper - Do not build the helper kernel module
-media-libs/tunepimp:taglib - Enable TagLib backend support
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/x264-svn:mp4 - Enables mp4 encoding support
 media-libs/xine-lib:asf - Support for ASF demuxer (required for win32codecs)
-media-libs/xine-lib:cle266 - Suport for the via XvMC libs
 media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
-media-libs/xine-lib:i8x0 - Support the i8x0 XvMC libs
 media-libs/xine-lib:modplug - Build with modplug support
-media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
 media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
@@ -795,7 +788,6 @@ media-sound/alsa-tools:fltk - Enable FLTK support
 media-sound/amarok:exscalibar - Enable moodbar/exscalibar support
 media-sound/amarok:ifp - Enable support for iRiver devices access through libifp
 media-sound/amarok:ipod - Enable support for iPod devices access through libgpod
-media-sound/amarok:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/amarok:njb - Enable support for NJB (Creative) devices access throguh libnjb
 media-sound/amarok:noamazon - Disable support for downloading covers from amazon.com
 media-sound/amarok:real - Build with real/helix player support
@@ -806,8 +798,6 @@ media-sound/audacious:musepack - Build with musepack support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
-media-sound/audacity:libsamplerate - Build with libsamplerate support
-media-sound/audacity:soundtouch - compile with support for soundtouch
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
@@ -825,7 +815,6 @@ media-sound/gpodder:ipod - Build with ipod support
 media-sound/jack-audio-connection-kit:coreaudio - Build the CoreAudio driver on Mac OS X systems
 media-sound/jack-audio-connection-kit:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-audio-connection-kit:netjack - Build with support for Realtime Audio Transport over generic IP
-media-sound/kid3:musicbrainz - Enable support for MusicBrainz audio lookups (musicbrainz.org)
 media-sound/lastfm-ripper:amazon - Enable advanced tagging using amazon webservices
 media-sound/lastfm-ripper:tagwriting - Enable MP3 tagging
 media-sound/lilypond:vim - Enable installation of lilypond vim plugins
@@ -882,7 +871,6 @@ media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xdtv:aqua_theme - Enable graphic theme Aqua-style
 media-tv/xdtv:carbone_theme - Adds the Carbone pixmaps theme for the GUI
-media-tv/xdtv:x264 - Enables h264 encoding using x264 (FFmpeg code)
 media-tv/xdtv:zvbi - Enable VBI Decoding Library for Zapping
 media-tv/xmltv:be - Belgium and Luxemburg tv listing grabber
 media-tv/xmltv:br - Brazil tv listing grabber
@@ -915,13 +903,11 @@ media-tv/xmltv:za - South Africa tv listing grabber
 media-tv/zapping:vdr - Enable Real Time Encoding support (librte)
 media-tv/zapping:zvbi - Enable VBI Decoding Library
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
-media-video/cinepaint:fltk - Enables Plugins that use fltk gui
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
 media-video/dvdrip:subtitles - Enables support for subtitle ripping
 media-video/dxr3player:dxr3 - Support for DXR3 mpeg accelleration cards
-media-video/fenice:srvdir - Enables support for /srv directory
 media-video/ffmpeg:amr - Enables Adaptive Multi-Rate Audio support
 media-video/ffmpeg:network - Enables network streaming support
 media-video/ffmpeg:x264 - Enables h264 encoding using x264
@@ -935,7 +921,6 @@ media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/mmsv2:dxr3 - Support for DXR3 mpeg accelleration cards
-media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:id3 - Support ID3 in the player
 media-video/mpeg4ip:lame - Support LAME mp3 encoding in the server/mp4live
@@ -966,7 +951,6 @@ media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/nvidia-glx:dlloader - Enable dynamic module loader instead of ELF loader.  Installs nvidia_drv.so instead of nvidia_drv.o.
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/ogmrip:subp - Subtitle ripping preliminary support
-media-video/oxine:mjpeg - Enables mjpegtools support
 media-video/oxine:polling - Enables support to automatically check the drive for a new disc
 media-video/totem:nvtv - Support for nvtv to use tv in on nvidia cards
 media-video/transcode:extrafilters - Install some filters only if we ask for them
@@ -974,7 +958,6 @@ media-video/transcode:fame - Enables libfame support
 media-video/transcode:lzo - Enables LZO compression support
 media-video/transcode:mjpeg - Enables mjpegtools support
 media-video/transcode:network - Enables network streaming support
-media-video/transcode:pvm - Enables private virtual machine support
 media-video/transcode:v4l2 - Enable video4linux2 support
 media-video/vdr:aio - Use "all in one" patch (or its successor "liemikuutio") with much additional features
 media-video/vdr:bigpatch - Enables almost all additional features flying around on the net (including aio)
@@ -997,7 +980,6 @@ media-video/vdr:yaepg - Enables support for the plugin vdr-yaepg.
 media-video/vlc:avahi - Support for avahi mdns daemon.
 media-video/vlc:cdda - Enables libcdda cd audio playback support.
 media-video/vlc:cddb - Access cddb servers to retrieve and submit information about compact disks.
-media-video/vlc:cdio - Enables libcdio support for cd interaction.
 media-video/vlc:corba - Enables corba interface support.
 media-video/vlc:daap - Enables DAAP shares services discovery support.
 media-video/vlc:httpd - Enables a web based interface for vlc.
@@ -1005,7 +987,6 @@ media-video/vlc:live - Enables LIVE.com support.
 media-video/vlc:mod - Enables Mod demux support.
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance.
 media-video/vlc:rtsp - Enables real audio and RTSP modules.
-media-video/vlc:screen - Enables screen capture support.
 media-video/vlc:shout - Enables libshout output.
 media-video/vlc:skins - Enables support for the skins2 interface.
 media-video/vlc:stream - Enables vlc to stream video.
@@ -1591,7 +1572,6 @@ sys-freebsd/freebsd-usbin:atm - Enable Asynchronous Transfer Mode protocol suppo
 sys-freebsd/freebsd-usbin:ipfilter - Enable ipfilter firewall support
 sys-freebsd/freebsd-usbin:ipsec - Enable IP Sec support
 sys-freebsd/freebsd-usbin:isdn - Enable ISDN support
-sys-freebsd/freebsd-usbin:lpr - Build LPr/LPd support
 sys-freebsd/freebsd-usbin:nat - Enable Network Address Translation support
 sys-freebsd/freebsd-usbin:netgraph - Enable netgraph support (TODO improve description)
 sys-freebsd/freebsd-usbin:suid - Enable setuid root programs
