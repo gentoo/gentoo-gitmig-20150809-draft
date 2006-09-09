@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.3.ebuild,v 1.1 2006/09/05 21:27:08 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.3.ebuild,v 1.2 2006/09/09 08:09:06 hanno Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -70,4 +70,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	# Don't remove COPYING, see bug #137286
+	dodoc Bugs ChangeLog COPYING NEWS THANKS
 }
