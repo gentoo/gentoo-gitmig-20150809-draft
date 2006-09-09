@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/bouml-2.16.ebuild,v 1.1 2006/09/03 16:01:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/bouml-2.16.ebuild,v 1.2 2006/09/09 19:24:40 ticho Exp $
 
 inherit qt3 toolchain-funcs multilib eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://bouml.free.fr/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="$(qt_min_version 3)"
