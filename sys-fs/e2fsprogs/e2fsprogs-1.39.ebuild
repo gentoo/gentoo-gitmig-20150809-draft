@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39.ebuild,v 1.1 2006/08/01 04:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.39.ebuild,v 1.2 2006/09/09 10:28:27 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -42,6 +42,7 @@ src_unpack() {
 	chmod u+w po/*.po # Userpriv fix #27348
 	# Clean up makefile to suck less
 	epatch "${FILESDIR}"/e2fsprogs-1.39-makefile.patch
+	epatch "${FILESDIR}"/e2fsprogs-1.39-parse-types.patch #146903
 
 	# Fixes libintl handling on non-glibc #122368
 	epatch "${FILESDIR}"/${PN}-1.39-libintl.patch
