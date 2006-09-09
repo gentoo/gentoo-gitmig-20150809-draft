@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20060831.ebuild,v 1.6 2006/09/05 22:21:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20060831.ebuild,v 1.7 2006/09/09 00:39:35 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -30,7 +30,7 @@ IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via video_cards_i810"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts asf
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts
 debug modplug ${IUSE_VIDEO_CARDS}"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -213,9 +213,9 @@ src_compile() {
 		$(use_enable esd) \
 		$(use_enable vcd) --without-internal-vcdlibs \
 		\
-		$(use_enable asf) \
 		$(use_enable win32codecs w32dll) \
 		$(use_enable modplug) \
+		--enable-asf \
 		--with-external-ffmpeg \
 		--without-pulseaudio \
 		--disable-optimizations \
