@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.3 2006/08/21 18:11:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/v4l-dvb-hg/v4l-dvb-hg-0.1-r2.ebuild,v 1.4 2006/09/09 19:45:47 zzam Exp $
 
 
 : ${EHG_REPO_URI:=http://linuxtv.org/hg/v4l-dvb}
@@ -83,7 +83,7 @@ src_unpack() {
 	sed -e 's#/lib/modules/$(KERNELRELEASE)/kernel/drivers/media#$(DESTDIR)/$(DEST)#' \
 		-e '/-install::/s:rminstall::' \
 		-i Makefile
-	sed -e '/depmod/d' -i Makefile*
+	sed -e '/depmod/d' -i Makefile* scripts/make_makefile.pl
 }
 
 src_install() {
