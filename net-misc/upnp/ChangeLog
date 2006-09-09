@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/upnp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.18 2006/09/09 18:20:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.19 2006/09/09 20:33:45 ticho Exp $
+
+  09 Sep 2006; <ticho@gentoo.org> upnp-1.3.1.ebuild:
+  Stable on x86, bug #146607.
 
   09 Sep 2006; <nixnut@gentoo.org> upnp-1.3.1.ebuild:
   Stable on ppc wrt bug 146607
