@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/getdelta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.8 2006/08/18 21:01:51 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/ChangeLog,v 1.9 2006/09/09 13:58:18 genstef Exp $
+
+*getdelta-0.7.4 (09 Sep 2006)
+
+  09 Sep 2006; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  -getdelta-0.7.2.ebuild, +getdelta-0.7.4.ebuild:
+  version bump fixing userfetch thanks to Andy <andyreif@studcs.uni-sb.de> in
+  bug 145285
 
 *getdelta-0.7.2 (18 Aug 2006)
 
