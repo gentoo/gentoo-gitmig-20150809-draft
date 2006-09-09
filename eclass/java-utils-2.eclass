@@ -524,8 +524,8 @@ java-pkg_dosrc() {
 # @param $2 - options, as follows:
 #  --main the.main.class.too.start
 #  --jar /the/jar/too/launch.jar
-#  --java_args 'Extra arguments to pass too jave'
-#  --pkg_args 'extra arguments too pass too the package'
+#  --java_args 'Extra arguments to pass to java'
+#  --pkg_args 'Extra arguments too pass to the package'
 #  --pwd
 #  -into
 #  -pre
@@ -542,14 +542,15 @@ java-pkg_dolauncher() {
 	local name="${1}"
 	# TODO rename to launcher
 	local target="${T}/${name}"
+	local var_tmp="${T}/launcher_variables_tmp"
 	local target_dir pre
 	shift
 
-	echo "#!/bin/bash" > "${target}"
+	# Process the other the rest of the arguments
 	while [[ -n "${1}" && -n "${2}" ]]; do
 		local var=${1} value=${2}
 		if [[ "${var:0:2}" == "--" ]]; then
-			echo "gjl_${var:2}=\"${value}\"" >> "${target}"
+			echo "gjl_${var:2}=\"${value}\"" >> "${var_tmp}"
 		elif [[ "${var}" == "-into" ]]; then
 			target_dir="${value}"
 		elif [[ "${var}" == "-pre" ]]; then
@@ -557,8 +558,12 @@ java-pkg_dolauncher() {
 		fi
 		shift 2
 	done
-	echo "gjl_package=${JAVA_PKG_NAME}" >> "${target}"
+
+	# Write the actual script
+	echo "#!/bin/bash" > "${target}"
 	[[ -n "${pre}" ]] && [[ -f "${pre}" ]] && cat "${pre}" >> "${target}"
+	echo "gjl_package=${JAVA_PKG_NAME}" >> "${target}"
+	cat "${var_tmp}" >> "${target}"
 	echo "source /usr/share/java-config-2/launcher/launcher.bash" >> "${target}"
 
 	if [[ -n "${target_dir}" ]]; then
