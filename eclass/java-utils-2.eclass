@@ -13,12 +13,12 @@
 # @eclass-shortdesc Java Utility eclass
 # @eclass-maintainer java@gentoo.org
 #
-# This eclass provides functionality which is used by 
+# This eclass provides functionality which is used by
 # java-pkg.eclass and java-pkg-opt.eclass as well as from ebuilds.
 #
-# @warning 
+# @warning
 #   You probably don't want to inherit this directly from an ebuild. Instead,
-#   you should inherit java-ant for Ant-based Java packages, java-pkg for other 
+#   you should inherit java-ant for Ant-based Java packages, java-pkg for other
 #   Java packages, or java-pkg-opt for packages that have optional Java support.
 #
 # -----------------------------------------------------------------------------
@@ -42,7 +42,7 @@ JAVA_PKG_PORTAGE_DEP=">=sys-apps/portage-2.1_pre1"
 # @variable-internal JAVA_PKG_E_DEPEND
 #
 # This is a convience variable to be used from the other java eclasses. This is
-# the version of java-config we want to use. We also need a recent version 
+# the version of java-config we want to use. We also need a recent version
 # portage, that includes phase hooks.
 # -----------------------------------------------------------------------------
 JAVA_PKG_E_DEPEND=">=dev-java/java-config-2.0.19-r1 ${JAVA_PKG_PORTAGE_DEP}"
@@ -102,7 +102,7 @@ JAVA_PKG_ALLOW_VM_CHANGE=${JAVA_PKG_ALLOW_VM_CHANGE:="yes"}
 # -----------------------------------------------------------------------------
 # @variable-internal JAVA_PKG_COMPILER_DIR
 # @default /usr/share/java-config-2/compiler
-# 
+#
 # Directory where compiler settings are saved, without trailing slash.
 # Probably shouldn't touch this variable.
 # -----------------------------------------------------------------------------
@@ -122,7 +122,7 @@ JAVA_PKG_COMPILERS_CONF=${JAVA_PKG_COMPILERS_CONF:="/etc/java-config-2/build/com
 # @variable-external JAVA_PKG_FORCE_COMPILER
 #
 # Explicitly set a list of compilers to use. This is normally read from
-# JAVA_PKG_COMPILERS_CONF. 
+# JAVA_PKG_COMPILERS_CONF.
 #
 # @note This should only be used internally or for testing.
 # @example Use jikes and javac, in that order
@@ -152,7 +152,7 @@ JAVA_PKG_QA_VIOLATIONS=0
 # Installs any number of jars.
 # Jar's will be installed into /usr/share/${PN}(-${SLOT})/lib/ by default.
 # You can use java-pkg_jarinto to change this path.
-# You should never install a jar with a package version in the filename. 
+# You should never install a jar with a package version in the filename.
 # Instead, use java-pkg_newjar defined below.
 #
 # @example
@@ -224,7 +224,7 @@ java-pkg_dojar() {
 #      don't exist yet
 #    * all `if ...` inside for will fail - the file '/opt/my-java/lib/*.jar'
 #      doesn't exist
-#   
+#
 #   you have to use it as:
 #
 #   java-pkg_regjar ${D}/opt/my-java/lib/*.jar
@@ -307,7 +307,7 @@ java-pkg_addcp() {
 
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_doso
-# 
+#
 # Installs any number of JNI libraries
 # They will be installed into /usr/lib by default, but java-pkg_sointo
 # can be used change this path
@@ -372,7 +372,7 @@ java-pkg_regso() {
 	[[ ${#} -lt 1 ]] &&  "at least one argument needed"
 
 	java-pkg_init_paths_
-	
+
 	local lib target_dir
 	for lib in "$@" ; do
 		# Check the absolute path of the lib
@@ -460,7 +460,7 @@ java-pkg_dojavadoc() {
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_dosrc
 #
-# Installs a zip containing the source for a package, so it can used in 
+# Installs a zip containing the source for a package, so it can used in
 # from IDEs like eclipse and netbeans.
 #
 # Ebuild needs to DEPEND on app-arch/zip to use this.
@@ -471,7 +471,7 @@ java-pkg_dojavadoc() {
 #	java-pkg_dosrc src/*
 #
 # ------------------------------------------------------------------------------
-# TODO change so it the arguments it takes are the base directories containing 
+# TODO change so it the arguments it takes are the base directories containing
 # 	source -nichoj
 # TODO should we be able to handle multiple calls to dosrc? -nichoj
 # TODO maybe we can take an existing zip/jar? -nichoj
@@ -479,14 +479,14 @@ java-pkg_dojavadoc() {
 java-pkg_dosrc() {
 	debug-print-function ${FUNCNAME} $*
 
-	[ ${#} -lt 1 ] && die "At least one argument needed" 
+	[ ${#} -lt 1 ] && die "At least one argument needed"
 	if ! hasq source ${IUSE}; then
 		echo "Java QA Notice: ${FUNCNAME} called without source in IUSE"
 	fi
 
 	java-pkg_check-phase install
 
-	[[ ${#} -lt 1 ]] && die "At least one argument needed" 
+	[[ ${#} -lt 1 ]] && die "At least one argument needed"
 
 	java-pkg_init_paths_
 
@@ -548,7 +548,7 @@ java-pkg_dolauncher() {
 	echo "#!/bin/bash" > "${target}"
 	while [[ -n "${1}" && -n "${2}" ]]; do
 		local var=${1} value=${2}
-		if [[ "${var:0:2}" == "--" ]]; then 
+		if [[ "${var:0:2}" == "--" ]]; then
 			echo "gjl_${var:2}=\"${value}\"" >> "${target}"
 		elif [[ "${var}" == "-into" ]]; then
 			target_dir="${value}"
@@ -560,7 +560,7 @@ java-pkg_dolauncher() {
 	echo "gjl_package=${JAVA_PKG_NAME}" >> "${target}"
 	[[ -n "${pre}" ]] && [[ -f "${pre}" ]] && cat "${pre}" >> "${target}"
 	echo "source /usr/share/java-config-2/launcher/launcher.bash" >> "${target}"
-	
+
 	if [[ -n "${target_dir}" ]]; then
 		DESTTREE="${target_dir}" dobin "${target}"
 		local ret=$?
@@ -736,12 +736,12 @@ java-pkg_jarfrom() {
 # line, unless "--build-only" is passed as the very first argument, for jars
 # that have to be present only at build time and are not needed on runtime
 # (junit testing etc).
-# 
-# Example: Get the classpath for xerces-2, 
+#
+# Example: Get the classpath for xerces-2,
 #	java-pkg_getjars xerces-2 xalan
 # Example Return:
 #	/usr/share/xerces-2/lib/xml-apis.jar:/usr/share/xerces-2/lib/xmlParserAPIs.jar:/usr/share/xalan/lib/xalan.jar
-# 
+#
 # @param $1 - (optional) "--build-only" makes the jar(s) not added into
 #	package.env DEPEND line.
 # @param $@ - list of packages to get jars from
@@ -790,7 +790,7 @@ java-pkg_getjars() {
 #	java-pkg_getjar xerces-2 xml-apis.jar
 # @example-return
 #	/usr/share/xerces-2/lib/xml-apis.jar
-# 
+#
 # @param $1 - (optional) "--build-only" makes the jar not added into
 #	package.env DEPEND line.
 # @param $1 - package to use
@@ -827,7 +827,7 @@ java-pkg_getjar() {
 			return 0
 		fi
 	done
-	
+
 	die "Could not find ${target_jar} in ${pkg}"
 	return 1
 }
@@ -851,7 +851,7 @@ java-pkg_getjar() {
 #		# format: path=jarinfo
 #		local path=${line%%=*}
 #		local jarinfo=${line##*=}
-#	
+#
 #		# format: jar@package
 #		local jar=${jarinfo%%@*}.jar
 #		local package=${jarinfo##*@}
@@ -874,7 +874,7 @@ java-pkg_getjar() {
 
 # ------------------------------------------------------------------------------
 # @section-begin helper
-# @section-summary Helper functions 
+# @section-summary Helper functions
 #
 # Various other functions to use from an ebuild
 # ------------------------------------------------------------------------------
@@ -890,7 +890,7 @@ java-pkg_getjar() {
 #	jdbc-rowset
 #	jms
 #
-# @param $1 - Optionally indicate that the dependencies are controlled by 
+# @param $1 - Optionally indicate that the dependencies are controlled by
 #				a use flag by specifying '--use' Requires $2.
 # @param $2 - USE flag which will enable the dependencies.
 # @param $@ - virtual packages to add depenedencies for
@@ -994,7 +994,7 @@ java-pkg_ensure-vm-version-sufficient() {
 
 # ------------------------------------------------------------------------------
 # @internal-function java-pkg_is-vm-version-sufficient
-# 
+#
 # @return zero - VM is sufficient
 # @return non-zero - VM is not sufficient
 # ------------------------------------------------------------------------------
@@ -1024,8 +1024,8 @@ java-pkg_ensure-vm-version-eq() {
 }
 
 # ------------------------------------------------------------------------------
-# @internal-function java-pkg_is-vm-version-eq 
-# 
+# @internal-function java-pkg_is-vm-version-eq
+#
 # @param $@ - VM version to compare current VM to
 # @return zero - VM versions are equal
 # @return non-zero - VM version are not equal
@@ -1065,7 +1065,7 @@ java-pkg_is-vm-version-eq() {
 # ------------------------------------------------------------------------------
 java-pkg_ensure-vm-version-ge() {
 	debug-print-function ${FUNCNAME} $*
-	
+
 	if ! java-pkg_is-vm-version-ge "$@" ; then
 		debug-print "vm is not suffient"
 		eerror "This package requires a Java VM version >= $@"
@@ -1075,8 +1075,8 @@ java-pkg_ensure-vm-version-ge() {
 }
 
 # ------------------------------------------------------------------------------
-# @internal-function java-pkg_is-vm-version-ge 
-# 
+# @internal-function java-pkg_is-vm-version-ge
+#
 # @param $@ - VM version to compare current VM to
 # @return zero - current VM version is greater than checked version
 # @return non-zero - current VM version is not greater than checked version
@@ -1115,7 +1115,7 @@ java-pkg_current-vm-matches() {
 
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_get-source
-# 
+#
 # Determines what source version should be used, for passing to -source.
 # Unless you want to break things you probably shouldn't set _WANT_SOURCE
 #
@@ -1130,7 +1130,7 @@ java-pkg_get-source() {
 #
 # Determines what target version should be used, for passing to -target.
 # If you don't care about lower versions, you can set _WANT_TARGET to the
-# version of your JDK. 
+# version of your JDK.
 # Remember doing this will mostly like cause things to break.
 # Doesn't allow it to be lower then the one in depend.
 # Doesn't allow it to be higher then the active vm.
@@ -1138,7 +1138,7 @@ java-pkg_get-source() {
 # @return string - Either the lowest possible target, or JAVA_PKG_WANT_TARGET
 # ------------------------------------------------------------------------------
 java-pkg_get-target() {
-	local min=$(depend-java-query --get-lowest "${DEPEND} ${RDEPEND}")	
+	local min=$(depend-java-query --get-lowest "${DEPEND} ${RDEPEND}")
 	if [[ -n "${JAVA_PKG_WANT_TARGET}" ]]; then
 		local max="$(java-config --select-vm "${GENTOO_VM}" -g PROVIDES_VERSION)"
 		if version_is_at_least "${min}" "${JAVA_PKG_WANT_TARGET}" && version_is_at_least "${JAVA_PKG_WANT_TARGET}" "${max}"; then
@@ -1175,7 +1175,7 @@ java-pkg_get-javac() {
 			export JAVAC=${old_javac}
 
 			[[ -z ${compiler_executable} ]] && die "JAVAC is empty or undefined in ${compiler_env}"
-	
+
 			# check that it's executable
 			if [[ ! -x ${compiler_executable} ]]; then
 				eerror "Could not find ${compiler_executable}!"
@@ -1190,7 +1190,7 @@ java-pkg_get-javac() {
 }
 
 # ------------------------------------------------------------------------------
-# @ebuild-function java-pkg_javac-args 
+# @ebuild-function java-pkg_javac-args
 #
 # If an ebuild uses javac directly, instead of using ejavac, it should call this
 # to know what -source/-target to use.
@@ -1203,7 +1203,7 @@ java-pkg_javac-args() {
 	local want_source="$(java-pkg_get-source)"
 	local want_target="$(java-pkg_get-target)"
 
-	local source_str="-source ${want_source}" 
+	local source_str="-source ${want_source}"
 	local target_str="-target ${want_target}"
 
 	debug-print "want source: ${want_source}"
@@ -1305,11 +1305,11 @@ eant() {
 		einfo "Disabling system classpath for ant"
 		antflags="${antflags} -Dbuild.sysclasspath=ignore"
 	fi
-	
+
 	if [[ -n ${JAVA_PKG_DEBUG} ]]; then
 		antflags="${antflags} -debug"
 	fi
-	
+
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ant ${antflags} "${@}"
 	ant ${antflags} "${@}" || die "eant failed"
 
@@ -1318,7 +1318,7 @@ eant() {
 # ------------------------------------------------------------------------------
 # @ebuild-function ejavac
 #
-# Javac wrapper function. Will use the appropriate compiler, based on 
+# Javac wrapper function. Will use the appropriate compiler, based on
 # /etc/java-config/compilers.conf
 #
 # @param $@ - Arguments to be passed to the compiler
@@ -1336,7 +1336,7 @@ ejavac() {
 
 # ------------------------------------------------------------------------------
 # @ebuild-function java-pkg_filter-compiler
-# 
+#
 # Used to prevent the use of some compilers. Should be used in src_compile.
 # Basically, it just appends onto JAVA_PKG_FILTER_COMPILER
 #
@@ -1364,7 +1364,7 @@ java-pkg_force-compiler() {
 #
 # Helper function for getting ant to build javadocs. If the user has USE=doc,
 # then 'javadoc' or the argument are returned. Otherwise, there is no return.
-# 
+#
 # The output of this should be passed to ant.
 #
 # Example: build javadocs by calling 'javadoc' target
@@ -1382,10 +1382,10 @@ use_doc() {
 # ------------------------------------------------------------------------------
 # @section-end build
 # ------------------------------------------------------------------------------
-	
+
 # ------------------------------------------------------------------------------
 # @section-begin internal
-# @section-summary Internal functions 
+# @section-summary Internal functions
 #
 # Do __NOT__ use any of these from an ebuild! These are only to be used from
 # within the java eclasses.
@@ -1393,7 +1393,7 @@ use_doc() {
 
 # -----------------------------------------------------------------------------
 # @function-internal java-pkg_init
-# 
+#
 # The purpose of this function, as the name might imply, is to initialize the
 # Java environment. It ensures that that there aren't any environment variables
 # that'll muss things up. It initializes some variables, which are used
@@ -1415,21 +1415,21 @@ java-pkg_init() {
 	# Do some QA checks
 	java-pkg_check-jikes
 
-	# When users have crazy classpaths some packages can fail to compile. 
+	# When users have crazy classpaths some packages can fail to compile.
 	# and everything should work with empty CLASSPATH.
 	# This also helps prevent unexpected dependencies on random things
 	# from the CLASSPATH.
-	unset CLASSPATH 
+	unset CLASSPATH
 }
 
 # ------------------------------------------------------------------------------
 # @function-internal java-pkg-init-compiler_
 #
 # This function attempts to figure out what compiler should be used. It does
-# this by reading the file at JAVA_PKG_COMPILERS_CONF, and checking the 
+# this by reading the file at JAVA_PKG_COMPILERS_CONF, and checking the
 # COMPILERS variable defined there.
 # This can be overridden by a list in JAVA_PKG_FORCE_COMPILER
-# 
+#
 # It will go through the list of compilers, and verify that it supports the
 # target and source that are needed. If it is not suitable, then the next
 # compiler is checked. When JAVA_PKG_FORCE_COMPILER is defined, this checking
@@ -1461,7 +1461,7 @@ java-pkg_init-compiler_() {
 	else
 		compilers=${JAVA_PKG_FORCE_COMPILER}
 	fi
-	
+
 	debug-print "Read \"${compilers}\" from ${JAVA_PKG_COMPILERS_CONF}"
 
 	# Figure out if we should announce what compiler we're using
@@ -1474,14 +1474,14 @@ java-pkg_init-compiler_() {
 			export GENTOO_COMPILER="javac"
 			break
 		fi
-	
+
 		if has ${compiler} ${JAVA_PKG_FILTER_COMPILER}; then
 			if [[ -z ${JAVA_PKG_FORCE_COMPILER} ]]; then
 				einfo "Filtering ${compiler}"
 				continue
 			fi
 		fi
-		
+
 		# for non-javac, we need to make sure it supports the right target and
 		# source
 		local compiler_env="${JAVA_PKG_COMPILER_DIR}/${compiler}"
@@ -1587,7 +1587,7 @@ java-pkg_do_write_() {
 			[[ -f "${JAVA_PKG_DEPEND}" ]] && echo "DEPEND=\"$(cat ${JAVA_PKG_DEPEND} | uniq | tr '\n' ':')\""
 			echo "VM=\"$(echo ${RDEPEND} ${DEPEND} | sed -e 's/ /\n/g' | sed -n -e '/virtual\/\(jre\|jdk\)/ { p;q }')\"" # TODO cleanup !
 		) > "${JAVA_PKG_ENV}"
-		
+
 		# register target/source
 		local target="$(java-pkg_get-target)"
 		local source="$(java-pkg_get-source)"
@@ -1664,7 +1664,7 @@ java-pkg_append_() {
 
 # ------------------------------------------------------------------------------
 # @internal-function java-pkg_expand_dir_
-# 
+#
 # Gets the full path of the file/directory's parent.
 # @param $1 - file/directory to find parent directory for
 # @return - path to $1's parent directory
@@ -1766,7 +1766,7 @@ java-pkg_get-vm-version() {
 # ------------------------------------------------------------------------------
 # @internal-function java-pkg_switch-vm
 #
-# Switch VM if we're allowed to (controlled by JAVA_PKG_ALLOW_VM_CHANGE), and 
+# Switch VM if we're allowed to (controlled by JAVA_PKG_ALLOW_VM_CHANGE), and
 # verify that the current VM is sufficient.
 # Setup the environment for the VM being used.
 # ------------------------------------------------------------------------------
@@ -1789,12 +1789,12 @@ java-pkg_switch-vm() {
 			java-pkg_ensure-vm-version-sufficient
 		fi
 		debug-print "Using: $(java-config -f)"
-		
+
 		java-pkg_setup-vm
 
 		export JAVA=$(java-config --java)
 		export JAVAC=$(java-config --javac)
-		export JAVACFLAGS="$(java-pkg_javac-args)" 
+		export JAVACFLAGS="$(java-pkg_javac-args)"
 		[[ -n ${JAVACFLAGS_EXTRA} ]] && export JAVACFLAGS="${JAVACFLAGS_EXTRA} ${JAVACFLAGS}"
 
 		export JAVA_HOME="$(java-config -g JAVA_HOME)"
@@ -1802,7 +1802,7 @@ java-pkg_switch-vm() {
 
 		#TODO If you know a better solution let us know.
 		java-pkg_append_ LD_LIBRARY_PATH "$(java-config -g LDPATH)"
-	
+
 		local tann="${T}/announced-vm"
 		if [[ -n "${JAVA_PKG_DEBUG}" ]] || [[ ! -f "${tann}" ]] ; then
 			# Add a check for setup/preinst phase... to avoid duplicate outputs
@@ -1856,7 +1856,7 @@ java-pkg_jar-list() {
 java-pkg_verify-classes() {
 	ebegin "Verifying java class versions"
 	#$(find ${D} -type f -name '*.jar' -o -name '*.class')
-	class-version-verify.py -t $(java-pkg_get-target) -r ${D} 
+	class-version-verify.py -t $(java-pkg_get-target) -r ${D}
 	result=$?
 	eend ${result}
 	if [[ ${result} == 0 ]]; then
