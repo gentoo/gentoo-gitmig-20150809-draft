@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-attributes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.4 2006/08/08 19:48:13 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-attributes/ChangeLog,v 1.5 2006/09/09 17:39:31 nichoj Exp $
+
+  09 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  commons-attributes-2.1-r1.ebuild:
+  Added gjdoc dependency, so we can build with java-strict, due to use of
+  com.sun.javadoc.*.
 
   08 Aug 2006; Petteri Räty <betelgeuse@gentoo.org>
   commons-attributes-2.1-r1.ebuild:
