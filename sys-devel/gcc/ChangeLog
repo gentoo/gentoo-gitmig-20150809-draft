@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.571 2006/09/06 00:37:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.572 2006/09/09 02:48:34 vapier Exp $
+
+  09 Sep 2006; Mike Frysinger <vapier@gentoo.org> gcc-3.4.6-r1.ebuild,
+  gcc-3.4.6-r2.ebuild:
+  Do not force libstdc++-v3 anymore #84961.
 
   06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> gcc-4.1.1-r1.ebuild:
   Re-add the ~x86-fbsd keyword, it was protoize once again.

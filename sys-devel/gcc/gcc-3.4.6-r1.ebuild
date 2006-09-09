@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r1.ebuild,v 1.14 2006/08/14 16:32:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r1.ebuild,v 1.15 2006/09/09 02:48:34 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.2"
@@ -74,8 +74,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-1.875
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )
-	x86? ( !nocxx? ( !elibc_uclibc? ( !build? ( || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* ) ) ) ) )"
+PDEPEND="|| ( sys-devel/gcc-config app-admin/eselect-compiler )"
 
 src_unpack() {
 	gcc_src_unpack
