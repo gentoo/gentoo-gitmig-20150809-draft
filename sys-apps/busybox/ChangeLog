@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.105 2006/09/04 20:26:16 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.106 2006/09/09 06:05:40 vapier Exp $
+
+  09 Sep 2006; Mike Frysinger <vapier@gentoo.org> files/1.2.0/bb.patch,
+  busybox-1.2.1.ebuild:
+  If /proc is unmounted and /bin/busybox is dynamic, make sure we can still
+  recover from broken libs via /bin/busybox.static.
 
   04 Sep 2006; Chris PeBenito <pebenito@gentoo.org>
   +files/1.1.1/busybox-libsepol.patch, +files/1.2.0/busybox-libsepol.patch,

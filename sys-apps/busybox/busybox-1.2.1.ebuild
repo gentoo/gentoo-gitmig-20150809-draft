@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.10 2006/09/06 05:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.2.1.ebuild,v 1.11 2006/09/09 06:05:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -205,6 +205,7 @@ src_install() {
 	use static \
 		&& dosym busybox /bin/bb \
 		|| dobin bb
+	dosym bb /bin/busybox.static
 
 	# bundle up the symlink files for use later
 	make CROSS="${CROSS}" install || die
