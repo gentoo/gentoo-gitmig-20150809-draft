@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre3.ebuild,v 1.4 2006/09/09 21:15:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre4.ebuild,v 1.1 2006/09/09 21:15:07 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.glaserei-franz.de/VDR/Moronimo2/downloads/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="vorbis oss imagemagick"
 
 DEPEND=">=media-video/vdr-1.2.6
@@ -33,6 +33,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-gcc4.diff
+	epatch ${FILESDIR}/${P}-span.diff
 
 	use !vorbis && sed -i "s:#WITHOUT_LIBVORBISFILE:WITHOUT_LIBVORBISFILE:" Makefile
 	use oss && sed -i "s:#WITH_OSS_OUTPUT:WITH_OSS_OUTPUT:" Makefile
@@ -50,6 +51,7 @@ src_install() {
 
 	insinto /usr/share/vdr/mp3ng
 	doins ${WORKDIR}/${PN}-pictures-0.0.1/*.jpg
+	doins ${S}/images/mp3MKIV-spectrum-analyzer-bg.png
 
 	newbin examples/mount.sh.example mount-mp3ng.sh
 
