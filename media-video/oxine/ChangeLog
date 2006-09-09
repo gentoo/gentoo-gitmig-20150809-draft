@@ -1,6 +1,9 @@
 # ChangeLog for media-video/oxine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.13 2006/08/13 21:33:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/ChangeLog,v 1.14 2006/09/09 00:49:13 tcort Exp $
+
+  09 Sep 2006; Thomas Cort <tcort@gentoo.org> oxine-0.5.ebuild:
+  Stable on amd64 wrt Bug #145578.
 
 *oxine-0.5 (13 Aug 2006)
 
