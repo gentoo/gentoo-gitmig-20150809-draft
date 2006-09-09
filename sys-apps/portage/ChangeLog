@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.240 2006/09/08 21:23:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.241 2006/09/09 18:48:18 zmedico Exp $
+
+  09 Sep 2006; Zac Medico <zmedico@gentoo.org> portage-2.1.1.ebuild:
+  Added references to bugs related to --newuse changes as suggested by
+  Bo Ørsted Andresen <bo.andresen@zlin.dk> in bug #146881.
 
   08 Sep 2006; Fabian Groffen <grobian@gentoo.org> portage-2.1.1.ebuild:
   Marked ppc-macos stable (bug #146881)
@@ -11,7 +15,8 @@
   2.1.1 final release.  Please note that emerge --newuse is now sensitive to
   changes in IUSE.  Immediately after upgrade from 2.1, users may notice a
   significantly larger number of packages pulled in by --newuse, but that
-  behavior is normal.
+  behavior is normal. For additional information regarding this change, please
+  see bugs #116955, #144333, #144661, and #146060.
 
 *portage-2.1.1_rc1-r7 (07 Sep 2006)
 

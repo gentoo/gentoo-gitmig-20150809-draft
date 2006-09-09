@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1.ebuild,v 1.2 2006/09/08 21:23:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1.ebuild,v 1.3 2006/09/09 18:48:18 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -199,6 +199,8 @@ pkg_postinst() {
 	ewarn "In portage-2.1.1, emerge --newuse is now sensitive to changes in IUSE."
 	ewarn "Immediately after upgrade from 2.1, users may notice a significantly larger"
 	ewarn "number of packages pulled in by --newuse, but that behavior is normal."
+	ewarn "For additional information regarding this change, please see bugs #116955,"
+	ewarn "#144333, #144661, and #146060."
 	echo
 	elog "See NEWS and RELEASE-NOTES for further changes."
 	echo
