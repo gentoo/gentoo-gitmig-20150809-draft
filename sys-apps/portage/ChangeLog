@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.241 2006/09/09 18:48:18 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.242 2006/09/09 20:22:16 ticho Exp $
+
+  09 Sep 2006; <ticho@gentoo.org> portage-2.1.1.ebuild:
+  Stable on x86, bug #146881.
 
   09 Sep 2006; Zac Medico <zmedico@gentoo.org> portage-2.1.1.ebuild:
   Added references to bugs related to --newuse changes as suggested by
