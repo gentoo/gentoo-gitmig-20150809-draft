@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r1.ebuild,v 1.12 2006/08/17 18:50:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r1.ebuild,v 1.13 2006/09/09 05:18:32 matsuu Exp $
 
 inherit gnome2
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 	# make docs honor DESTDIR
 	epatch "${FILESDIR}/${P}-docs-destdir.patch"
-	
+
 	# prevent gtk-fixxref from running (will cause sandbox violation)
 	cd ${S}/gtk-doc
 	sed -e 's:gtkdoc-fixxref:#gtkdoc-fixxref:' -i Makefile.in
