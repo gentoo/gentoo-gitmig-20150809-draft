@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.0.ebuild,v 1.11 2006/09/09 21:59:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/resolvconf-gentoo-1.0.ebuild,v 1.12 2006/09/09 22:36:33 uberlord Exp $
+
+inherit eutils
 
 DESCRIPTION="A framework for managing DNS information"
 HOMEPAGE="http://www.gentoo.org"
@@ -21,6 +23,14 @@ pkg_setup() {
 		eerror "(baselayout-1.12.0_pre17 and later versions do)"
 		die "function uniqify does not exist"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# run-parts is Linux only, so replace with a bash loop
+	epatch "${FILESDIR}/${P}-run-parts.patch"
 }
 
 src_install() {
