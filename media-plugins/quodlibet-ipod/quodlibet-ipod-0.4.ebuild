@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/quodlibet-ipod-0.4.ebuild,v 1.1 2006/09/09 12:48:35 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-ipod/quodlibet-ipod-0.4.ebuild,v 1.2 2006/09/09 12:57:11 tcort Exp $
 
 inherit python eutils
 
@@ -28,7 +28,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack "${A}"
-	epatch "${FILESDIR}"/ipod-detect.patch
+	epatch "${FILESDIR}"/${PV}-ipod-detect.patch
 }
 
 src_install() {
