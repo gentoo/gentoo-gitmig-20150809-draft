@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.07.ebuild,v 1.1 2006/07/22 16:05:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/pympd-0.07.ebuild,v 1.2 2006/09/09 18:55:40 nixnut Exp $
 
 inherit toolchain-funcs python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/pympd"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE=""
 
