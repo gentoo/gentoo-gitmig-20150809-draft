@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jaxb-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaxb-bin/ChangeLog,v 1.1 2006/07/06 17:54:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jaxb-bin/ChangeLog,v 1.2 2006/09/09 12:15:20 nelchael Exp $
+
+*sun-jaxb-bin-2.0-r1 (09 Sep 2006)
+
+  09 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +sun-jaxb-bin-2.0-r1.ebuild:
+  Revision bump: add symlink to xjc ant task to ant-core.
 
 *sun-jaxb-bin-2.0 (06 Jul 2006)
 
