@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-wsdp.eclass,v 1.2 2006/07/07 09:20:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-wsdp.eclass,v 1.3 2006/09/09 20:32:30 nelchael Exp $
 
 #
 # Original Author: Krzysiek Pawlik <nelchael@gentoo.org>
@@ -73,7 +73,8 @@ java-wsdp_src_unpack() {
 	# Now the Sun's installer is run to get the files:
 	ebegin "Installing using Sun's installer, please wait"
 	cd "${T}/unpacked/"
-	java JWSDP -silent -P installLocation="${WORKDIR}/base" || die "java failed"
+	mkdir -p "${T}/fakehome" || die "mkdir failed"
+	java -Duser.home="${T}/fakehome" JWSDP -silent -P installLocation="${WORKDIR}/base" || die "java failed"
 	eend 0
 
 	# A little cleanup (remove unneeded files like uninstaller, images for it,
