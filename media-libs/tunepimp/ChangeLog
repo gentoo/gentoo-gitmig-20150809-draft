@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.37 2006/08/31 14:40:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.38 2006/09/09 22:06:30 carlo Exp $
+
+*tunepimp-0.5.1 (09 Sep 2006)
+
+  09 Sep 2006; Carsten Lohrke <carlo@gentoo.org> +tunepimp-0.5.1.ebuild:
+  Version bump.
 
   31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/tunepimp-0.3.0-as-needed.diff, -files/tunepimp-0.3.0-gcc41.patch,
