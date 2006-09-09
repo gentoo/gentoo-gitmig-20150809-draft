@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/linux-device-drivers-3.ebuild,v 1.3 2005/04/23 18:58:28 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/linux-device-drivers-3.ebuild,v 1.4 2006/09/09 05:29:56 vapier Exp $
 
-DESCRIPTION="howto write linux device drivers (updated for Linux 2.4)"
+DESCRIPTION="howto write linux device drivers (updated for Linux 2.6)"
 HOMEPAGE="http://www.oreilly.com/catalog/linuxdrive3/ http://lwn.net/Kernel/LDD3/"
 SRC_URI="http://lwn.net/images/pdf/LDD3/ldd3_pdf.tar.bz2
 	mirror://gentoo/LDD3-examples.tar.gz"

@@ -1,5 +1,32 @@
-MD5 df9a6a351a8efa347c38d64cdc41c968 ChangeLog 838
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST LDD3-examples.tar.gz 77780 RMD160 ef8da7d35c534f4d0e4efe0c0c5f31f32dc858eb SHA1 bdf47b8d2684d308ee7f9aebd38ea5dd4e695df5 SHA256 4455710e180f194105bbeab3e40e4933c37718df95792171de22b9b996f7307c
+DIST ldd2-samples-1.0.1.tar.gz 123791
+DIST ldd3_pdf.tar.bz2 11553208
+DIST ldd_book_pdf.zip 6971754
+EBUILD linux-device-drivers-2.ebuild 791 RMD160 d16615b36d14d986c48152cdf6189e0fb5305426 SHA1 fd271d912b17518889fdaae7ecdd02c2c8aebe4a SHA256 c4d3a01917a37d64e0922520447ac91057ce1f99adffe95ccea3496210a5fd64
 MD5 e6a00941ce739ca690319884e101766d linux-device-drivers-2.ebuild 791
-MD5 2b5e3b8922fb25e6c9f26d3f45d44952 linux-device-drivers-3.ebuild 926
+RMD160 d16615b36d14d986c48152cdf6189e0fb5305426 linux-device-drivers-2.ebuild 791
+SHA256 c4d3a01917a37d64e0922520447ac91057ce1f99adffe95ccea3496210a5fd64 linux-device-drivers-2.ebuild 791
+EBUILD linux-device-drivers-3.ebuild 927 RMD160 4500dd1052539dc980f47e0171b41709ca522327 SHA1 353221cd6e137c752fd25824aa076324336cbe3b SHA256 fcd1c834dbf87eb002ba9906cebe32b82a5e4f0812d808bb9d7e7e9ecb3fee28
+MD5 73d20ae4c0b74e858a2e8110573fab55 linux-device-drivers-3.ebuild 927
+RMD160 4500dd1052539dc980f47e0171b41709ca522327 linux-device-drivers-3.ebuild 927
+SHA256 fcd1c834dbf87eb002ba9906cebe32b82a5e4f0812d808bb9d7e7e9ecb3fee28 linux-device-drivers-3.ebuild 927
+MISC ChangeLog 838 RMD160 2c6c1c019375ac45ae74db91cb51865e6f98621a SHA1 88c8fd19854d3f205014db356f602545b0cd911d SHA256 6d9b3c8d47d95b92433d3ff04c203d2d0d10b660613c46247617e292ac6d6624
+MD5 df9a6a351a8efa347c38d64cdc41c968 ChangeLog 838
+RMD160 2c6c1c019375ac45ae74db91cb51865e6f98621a ChangeLog 838
+SHA256 6d9b3c8d47d95b92433d3ff04c203d2d0d10b660613c46247617e292ac6d6624 ChangeLog 838
 MD5 298d4407a68e507c31c215e03b9b5af3 files/digest-linux-device-drivers-2 132
-MD5 11d163f07169be6fe48ffe7ee80523ff files/digest-linux-device-drivers-3 127
+RMD160 46625d9b1bd89dcd98a484eb6710ca990ac0bd0d files/digest-linux-device-drivers-2 132
+SHA256 81adc32f997f9bae76ddd2ec5166cf5b7d870536290853fdc6298a7347bb9136 files/digest-linux-device-drivers-2 132
+MD5 5e962562684080e373bca901b65096bc files/digest-linux-device-drivers-3 301
+RMD160 d11cfa90a07d13f2ea4c1e1da0347130f670bec2 files/digest-linux-device-drivers-3 301
+SHA256 17a513b53fb24782fc74d1442c3b2183e084df53e44633626f3b7540267809ca files/digest-linux-device-drivers-3 301
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFAlFlamhnQswr0vIRAtw5AJ9cwbh4jxqJxNKpZgUKum/b+17chwCdGzjP
+5grNosSRp4r1bqRTiegmnno=
+=RM+d
+-----END PGP SIGNATURE-----
