@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.ebuild,v 1.1 2006/09/09 21:27:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.ebuild,v 1.2 2006/09/09 21:49:09 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -51,32 +51,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-}
-
-src_unpack_() {
-	unpack ${A}
-
-	cd ${S}
-	for fn in tools/adabrowse/get_gcc.adb tools/adabrowse/ad-setup.ads \
-		asis/a4g-gnat_int.ads
-	do
-		sed -i -e "s:\"gcc\":\"gnatgcc\":" ${fn}
-	done
-	for fn in gnat/gnat-*/snames.adb; do
-		sed -i -e "s:\"gcc#\":\"gnatgcc#\":" ${fn}
-	done
-	sed -i -e "s:environment settings for gcc:environment for gnatgcc:" \
-		asis/a4g-gnat_int.adb
-
-	# copy the needed gnat sources instead of provided with the package
-	# ATTN! hardcoded dir version below! (but this comes with the package
-	# anyway, so it seems the easiest)
-	cp gnat/gnat-3.4.4/* gnat/
-	sed -i -e "s:3.4.4 20041123 (prerelease):3.4.6:" gnat/version.c
-	# remove style checks and warnings, no use here and conflicts with installed
-	# gnat style
-	sed -i -e "s:, \"-gnatwcdfijklmopruvz\",::" \
-		-e "s:\"-gnaty4abcefhiklnoprstM200\"::" asis.gpr
 }
 
 
