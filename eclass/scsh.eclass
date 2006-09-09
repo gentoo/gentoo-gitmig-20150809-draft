@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.6 2006/01/05 17:51:33 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scsh.eclass,v 1.7 2006/09/09 15:17:01 christel Exp $
 #
 
 inherit eutils
@@ -8,8 +8,6 @@ inherit eutils
 LICENSE="as-is BSD"
 SLOT="0"
 IUSE="scsh"
-DEPEND="$DEPEND
-	app-shells/scsh"
 
 scsh_scsh_path() {
 	echo /usr/$(get_libdir)/scsh
