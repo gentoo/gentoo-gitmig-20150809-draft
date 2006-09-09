@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.2_rc3.ebuild,v 1.1 2006/09/09 11:52:11 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.4.2_rc3.ebuild,v 1.2 2006/09/09 20:18:50 stefaan Exp $
 
 inherit eutils linux-mod versionator toolchain-funcs
 
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --with-linux-kernel-headers=${KV_DIR} || die "Failed: econf"
+	ARCH="$(tc-arch-kernel)" econf --with-linux-kernel-headers=${KV_DIR} || die "Failed: econf"
 
 	ARCH="$(tc-arch-kernel)" make only_libafs || die "Failed: make"
 }
