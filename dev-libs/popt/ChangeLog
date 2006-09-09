@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.24 2006/09/07 04:52:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.25 2006/09/09 18:20:24 sanchan Exp $
+
+*popt-1.10.4 (09 Sep 2006)
+
+  09 Sep 2006; Sandro Bonazzola <sanchan@gentoo.org> metadata.xml,
+  +popt-1.10.4.ebuild:
+  Version bump, intially only for ~amd64. Partially resolve bug# 121862. 
+  Taking over maintainership of the package.
 
   07 Sep 2006; Steve Dibb <beandog@gentoo.org> +metadata.xml:
   Add metadata
