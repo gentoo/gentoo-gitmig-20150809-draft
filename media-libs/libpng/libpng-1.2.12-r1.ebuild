@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.12-r1.ebuild,v 1.9 2006/08/30 14:02:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.12-r1.ebuild,v 1.10 2006/09/09 10:09:46 vapier Exp $
 
 inherit eutils autotools multilib
 
@@ -13,6 +13,7 @@ LICENSE="as-is"
 SLOT="1.2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="doc"
+RESTRICT="mirror" #146921
 
 DEPEND="sys-libs/zlib"
 
