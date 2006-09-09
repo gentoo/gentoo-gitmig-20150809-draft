@@ -4,6 +4,8 @@
 <herd>mozilla</herd>
 <maintainer>
 <email>nakano@gentoo.org</email>
-<name>Masatomo Nakano</name>
+</maintainer>
+<maintainer>
+<email>matsuu@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
