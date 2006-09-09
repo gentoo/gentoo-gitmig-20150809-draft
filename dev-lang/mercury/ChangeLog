@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.37 2006/08/14 07:51:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.38 2006/09/09 06:28:04 keri Exp $
+
+*mercury-0.13.0_beta20060907 (09 Sep 2006)
+
+  09 Sep 2006; keri <keri@gentoo.org>
+  files/mercury-0.13.0_beta-portage.patch,
+  -mercury-0.13.0_beta20060811.ebuild, +mercury-0.13.0_beta20060907.ebuild:
+  New development snapshot.
 
   14 Aug 2006; Keri Harris <keri@gentoo.org>
   files/mercury-0.12.2-tests.patch, mercury-0.12.2-r3.ebuild:

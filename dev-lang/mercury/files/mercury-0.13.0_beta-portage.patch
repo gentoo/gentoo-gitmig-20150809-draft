@@ -76,15 +76,6 @@
  .PHONY: install_config
 --- mercury-compiler-0.13.0-beta-2006-08-11.orig/configure	2006-08-11 22:37:07.000000000 +1200
 +++ mercury-compiler-0.13.0-beta-2006-08-11/configure	2006-08-12 16:14:59.000000000 +1200
-@@ -9048,7 +9048,7 @@
- # Check whether --enable-debug-grades or --disable-debug-grades was given.
- if test "${enable_debug_grades+set}" = set; then
-   enableval="$enable_debug_grades"
--  enable_debug_grades="enableval"
-+  enable_debug_grades="$enableval"
- else
-   enable_debug_grades=yes
- fi;
 @@ -9148,7 +9148,6 @@
  	enable_mm_grades=no
  	enable_dmm_grades=no
