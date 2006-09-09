@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.27 2006/07/27 23:26:31 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.28 2006/09/09 20:20:41 dberkholz Exp $
+
+*newt-0.52.2 (09 Sep 2006)
+
+  09 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/newt-0.52.2-cbtpos.patch, +files/newt-0.52.2-colors.patch,
+  +files/newt-0.52.2-cursor.patch, +files/newt-0.52.2-dwchar.patch,
+  +files/newt-0.52.2-focus.patch, +files/newt-0.52.2-notcl.patch,
+  +files/newt-0.52.2-pgupdown-crash.patch,
+  +files/newt-0.52.2-pyexample.patch, +files/newt-0.52.2-screensize.patch,
+  +files/newt-0.52.2-scrollbars.patch, +newt-0.52.2.ebuild:
+  Bump. A cleaner build system allows some cleaning of the ebuild. Also add
+  patches from Red Hat to fix various bugs that didn't merit a version bump.
+  New USE=tcl.
 
   28 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
   newt-0.50.35-r2.ebuild, newt-0.50.35-r3.ebuild, newt-0.50.35-r4.ebuild,
