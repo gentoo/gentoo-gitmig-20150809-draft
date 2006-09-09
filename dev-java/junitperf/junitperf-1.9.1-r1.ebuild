@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.2 2006/08/07 19:08:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.3 2006/09/09 07:27:38 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,19 +10,24 @@ HOMEPAGE="http://www.clarkware.com/software/JUnitPerf.html"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc junit source"
-DEPEND=">=virtual/jdk-1.3
-	app-arch/unzip
-	dev-java/ant-core
-	junit? ( dev-java/ant-tasks )
-	source? ( app-arch/zip )"
+IUSE="doc test source"
 
 RDEPEND=">=virtual/jre-1.3
 	dev-java/junit"
 
+DEPEND=">=virtual/jdk-1.3
+	${RDEPEND}
+	app-arch/unzip
+	dev-java/ant-core
+	test? ( dev-java/ant-tasks )
+	source? ( app-arch/zip )"
+
+
 src_unpack () {
 	unpack ${A}
-	rm ${S}/lib/*.jar
+	rm "${S}"/lib/*.jar
+	cd "${S}"/lib
+	java-pkg_jar-from junit
 }
 
 src_compile() {
@@ -30,7 +35,7 @@ src_compile() {
 }
 
 src_test() {
-	eant test
+	eant -lib $(java-pkg_getjar ant-tasks ant-junit.jar) test
 }
 
 src_install() {

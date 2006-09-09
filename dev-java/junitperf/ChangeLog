@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/junitperf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.8 2006/08/07 19:08:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/ChangeLog,v 1.9 2006/09/09 07:27:38 betelgeuse Exp $
+
+  09 Sep 2006; Petteri Räty <betelgeuse@gentoo.org>
+  junitperf-1.9.1-r1.ebuild:
+  Fixed to work with JAVA_PKG_STRICT and changed src_test dependencies to use
+  the test use flag instead of junit.
 
   07 Aug 2006; Joshua Nichols <nichoj@gentoo.org> junitperf-1.9.1-r1.ebuild:
   Removed jikes in DEPEND, bug #143102.
