@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r1.ebuild,v 1.4 2006/02/09 03:06:23 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-2.0.2-r1.ebuild,v 1.5 2006/09/09 07:39:04 betelgeuse Exp $
 
 inherit eutils java-pkg
 
@@ -13,7 +13,7 @@ KEYWORDS="amd64 ~ppc x86"
 RDEPEND=">=virtual/jre-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )
-	=dev-java/asm-1.4*
+	=dev-java/asm-1.4.3*
 	=dev-java/aspectwerkz-2*"
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}

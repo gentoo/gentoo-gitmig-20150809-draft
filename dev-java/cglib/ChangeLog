@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.15 2006/09/08 03:47:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.16 2006/09/09 07:39:04 betelgeuse Exp $
+
+  09 Sep 2006; Petteri Räty <betelgeuse@gentoo.org> cglib-2.0.2-r1.ebuild,
+  cglib-2.0.2-r2.ebuild:
+  Fixed dependencies to not match two different slots of dev-java/asm.
 
   08 Sep 2006; Joshua Nichols <nichoj@gentoo.org> cglib-2.1.3.ebuild:
   Fix for java-strict. Was missing implicitly dependend on jar from ant-core.
