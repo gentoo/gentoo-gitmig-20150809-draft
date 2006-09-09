@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.39.ebuild,v 1.2 2006/08/13 00:27:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/com_err/com_err-1.39.ebuild,v 1.3 2006/09/09 10:28:05 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.39-makefile.patch
+	epatch "${FILESDIR}"/${PN}-1.39-parse-types.patch
 }
 
 src_compile() {

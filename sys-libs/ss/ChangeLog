@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ss
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ChangeLog,v 1.22 2006/08/01 04:44:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ss/ChangeLog,v 1.23 2006/09/09 10:27:29 vapier Exp $
+
+  09 Sep 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/ss-1.39-parse-types.patch, ss-1.39.ebuild:
+  Cleanup ugly build code #146903 by throw_away_2002.
 
 *ss-1.39 (01 Aug 2006)
 
