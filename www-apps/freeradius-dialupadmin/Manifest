@@ -1,19 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e9b8c2b2176f9f564058d9d6f75a46fd ChangeLog 1313
-MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-dialupadmin-1.70-r1 69
-MD5 0936eb82363dd9098d21fc7787f8e4cc files/digest-freeradius-dialupadmin-1.70.2 69
-MD5 80e8e3fb8529fed61541dcfeaec0123a files/freeradius-dialupadmin-1.70-sqldebug.patch 370
+AUX freeradius-dialupadmin-1.70.2-sqldebug.patch 370 RMD160 1d9836e60039d19632e46b0541427d91542adea0 SHA1 cb8c44090bdac45123df60cd99aaff635bab7d0d SHA256 ee25d726bddaa4b29d8146a5d1574e0253a4dbb1786fcfaa4903e9bb8735f844
 MD5 80e8e3fb8529fed61541dcfeaec0123a files/freeradius-dialupadmin-1.70.2-sqldebug.patch 370
+RMD160 1d9836e60039d19632e46b0541427d91542adea0 files/freeradius-dialupadmin-1.70.2-sqldebug.patch 370
+SHA256 ee25d726bddaa4b29d8146a5d1574e0253a4dbb1786fcfaa4903e9bb8735f844 files/freeradius-dialupadmin-1.70.2-sqldebug.patch 370
+AUX freeradius-dialupadmin-1.70.3-sqldebug.patch 370 RMD160 1d9836e60039d19632e46b0541427d91542adea0 SHA1 cb8c44090bdac45123df60cd99aaff635bab7d0d SHA256 ee25d726bddaa4b29d8146a5d1574e0253a4dbb1786fcfaa4903e9bb8735f844
+MD5 80e8e3fb8529fed61541dcfeaec0123a files/freeradius-dialupadmin-1.70.3-sqldebug.patch 370
+RMD160 1d9836e60039d19632e46b0541427d91542adea0 files/freeradius-dialupadmin-1.70.3-sqldebug.patch 370
+SHA256 ee25d726bddaa4b29d8146a5d1574e0253a4dbb1786fcfaa4903e9bb8735f844 files/freeradius-dialupadmin-1.70.3-sqldebug.patch 370
+AUX setrootpath 184 RMD160 b27154b77812ab08ab73500f65c8153964cd9746 SHA1 21785bf2122c80be1a28a2ce34e33c8cb823bf4b SHA256 99166514edcb5c5308a87b4eba5f659d18e30a247ac69e48f24ad94025423031
 MD5 efcbf471e41edf8ce54ab910ad44945d files/setrootpath 184
-MD5 4f8a6a76fbb8578d3a99f52a37c5d0a0 freeradius-dialupadmin-1.70-r1.ebuild 1920
+RMD160 b27154b77812ab08ab73500f65c8153964cd9746 files/setrootpath 184
+SHA256 99166514edcb5c5308a87b4eba5f659d18e30a247ac69e48f24ad94025423031 files/setrootpath 184
+DIST freeradius-1.1.1.tar.gz 2358196 RMD160 f9947c299ec2a7d0189d0718edf10c8dc5783119 SHA1 efc52b20fa88148b8ebf58fa0ae5c36df204b703 SHA256 413bf3181b35dc547c0bf8718603e5d706706d7da3618f5925566265c4d58388
+DIST freeradius-1.1.3.tar.gz 3068204 RMD160 4ba264d2ed85e5300d48017d1e343b1db35fce90 SHA1 efd1d7d0f9bed69ec7c5e5a6a35477cb0b05bfb9 SHA256 f615f67fb807494892015e671593801fe3ac30c04740cd1dc8d2f18fc218da35
+EBUILD freeradius-dialupadmin-1.70.2.ebuild 1944 RMD160 dec1039330dd3e5e29803849ffbba3700ea1a2c2 SHA1 6251fe2006655af55968f3e66fa334906feeef43 SHA256 b315ba7186d7cc0bccec2112b6ec6d4db1864743c768c34d4fe6edc9e3466aec
 MD5 5b8c2439b1a6382962acc6eede325a30 freeradius-dialupadmin-1.70.2.ebuild 1944
+RMD160 dec1039330dd3e5e29803849ffbba3700ea1a2c2 freeradius-dialupadmin-1.70.2.ebuild 1944
+SHA256 b315ba7186d7cc0bccec2112b6ec6d4db1864743c768c34d4fe6edc9e3466aec freeradius-dialupadmin-1.70.2.ebuild 1944
+EBUILD freeradius-dialupadmin-1.70.3.ebuild 1987 RMD160 72bb5bce55f60a4448eda7008f353875e7fadc21 SHA1 8dbde2857ba143c758378d26da5251f46fbec7b8 SHA256 653854ee3a3b465e91382998fda47426c4b496407f9d80e2d2fa8468a0cd88c8
+MD5 c20694f25648204ff259ac6a56732a48 freeradius-dialupadmin-1.70.3.ebuild 1987
+RMD160 72bb5bce55f60a4448eda7008f353875e7fadc21 freeradius-dialupadmin-1.70.3.ebuild 1987
+SHA256 653854ee3a3b465e91382998fda47426c4b496407f9d80e2d2fa8468a0cd88c8 freeradius-dialupadmin-1.70.3.ebuild 1987
+MISC ChangeLog 1614 RMD160 bb03aeb4e5c3d579e4d8173881c455fb212327ca SHA1 9fd6a17ad88d4be596a13d929edea5c0d6bb0433 SHA256 651e70f5088ce77b5f80b6d39c381fae32503e9208fa6d6797595413480dd5a5
+MD5 14d97fa7c89fff19f02d2fd8f766d3f2 ChangeLog 1614
+RMD160 bb03aeb4e5c3d579e4d8173881c455fb212327ca ChangeLog 1614
+SHA256 651e70f5088ce77b5f80b6d39c381fae32503e9208fa6d6797595413480dd5a5 ChangeLog 1614
+MISC metadata.xml 525 RMD160 080584311e2131f337726be131b4f9bfdaf4bc97 SHA1 fa1cfa933f6d17a21b0cb6e17e8e8ee5134e38dc SHA256 9d463524b4e9f87124fc33e6fdea17152c8c5b054f9f1562212822d0839fd8ef
 MD5 c4dcaab5383cc9eb6c10a80049cb3f65 metadata.xml 525
+RMD160 080584311e2131f337726be131b4f9bfdaf4bc97 metadata.xml 525
+SHA256 9d463524b4e9f87124fc33e6fdea17152c8c5b054f9f1562212822d0839fd8ef metadata.xml 525
+MD5 78ba22a9dfb7ab2532fe1f9271ce0e1c files/digest-freeradius-dialupadmin-1.70.2 253
+RMD160 d3086e496d5fa6a0be623a239bc32dd8e18e7ca7 files/digest-freeradius-dialupadmin-1.70.2 253
+SHA256 e18fa7565a9735a1bc342deb1825bb0876285d955ea0ba2252209ca04f837782 files/digest-freeradius-dialupadmin-1.70.2 253
+MD5 51c1a43e2ddb45d5b0709b0d2dcdb3ee files/digest-freeradius-dialupadmin-1.70.3 253
+RMD160 4562c10776eeed3a5a89d26db33f977c61b420b4 files/digest-freeradius-dialupadmin-1.70.3 253
+SHA256 f2c8dde98762ea60836e714eaf453c239dd1a9e21d96432f5412d2845809a08c files/digest-freeradius-dialupadmin-1.70.3 253
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEZZYEjG8pv1lIUX4RAkb9AKCjvIPqUrxMi/8zZPQfdo5AA1W93ACgulv+
-/d3atqT4i05Ma3Ez6eUanmc=
-=6Har
+iD8DBQFFAykC3sf9c6kjmR8RAgeHAJ9bei0h2Ts+xqsGINwOd4kpKjCs+ACgjKOZ
+vek1mDLxjnMTKqZcmldcgQ4=
+=QEqH
 -----END PGP SIGNATURE-----
