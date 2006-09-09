@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.2_p1.ebuild,v 1.1 2006/07/25 02:01:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.2.2_p1.ebuild,v 1.2 2006/09/09 23:40:24 vapier Exp $
 
 inherit eutils
 
@@ -23,8 +23,10 @@ RDEPEND=">=dev-libs/zziplib-0.13.36
 	openexr? ( >=media-libs/openexr-1.2 )
 	gtk? ( >=dev-cpp/gtkmm-2.4 >=dev-cpp/libglademm-2.4 )
 	virtual/opengl
+	x11-libs/libXaw x11-libs/libXrandr x11-libs/libXt x11-libs/libX11
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
+	x11-proto/xf86vidmodeproto
 	dev-util/pkgconfig
 	sys-devel/flex
 	cg? ( >=media-gfx/nvidia-cg-toolkit-1.2 )"
