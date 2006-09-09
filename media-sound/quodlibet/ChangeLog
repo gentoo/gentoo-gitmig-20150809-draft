@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.40 2006/08/31 15:35:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.41 2006/09/09 00:26:51 tcort Exp $
+
+  09 Sep 2006; Thomas Cort <tcort@gentoo.org> quodlibet-0.23.1.ebuild:
+  Make the gst-plugins-gconf dep optional (with USE='gnome') to solve Bug
+  #146728. Add logic to guess and set the default pipeline when USE='-gnome'.
+  Use sed to fix multilib-strict instead of using the patch. Update the elog
+  messages.
 
 *quodlibet-0.23.1 (31 Aug 2006)
 
