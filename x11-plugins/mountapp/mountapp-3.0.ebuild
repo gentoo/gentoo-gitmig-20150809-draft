@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/mountapp-3.0.ebuild,v 1.9 2005/05/10 14:27:33 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/mountapp-3.0.ebuild,v 1.10 2006/09/09 12:30:24 tcort Exp $
 
 DESCRIPTION="mount filesystems via an easy-to-use windowmaker applet"
 HOMEPAGE="http://mountapp.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="http://mountapp.sourceforge.net/mountapp-3.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 
 IUSE=""
 
