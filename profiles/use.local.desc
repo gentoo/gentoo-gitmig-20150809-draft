@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2125 2006/09/09 14:52:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2126 2006/09/09 18:21:25 phreak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1362,8 +1362,6 @@ net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-wireless/bluez-utils:udev - Enable udev rules file installation
 net-wireless/hostapd:logwatch - Install support files for logwatch
 net-wireless/hostapd:madwifi - Add support for madwifi (Atheros chipset)
-net-wireless/ipw2200:radiotap - Use radiotap headers in monitor mode
-net-wireless/ipw3945:radiotap - Use radiotap headers in monitor mode
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/linux-wlan-ng-modules:pci - Enable the Prism2.5 native PCI (_pci) driver
 net-wireless/linux-wlan-ng-modules:plx - Enable the Prism2 PLX9052 based PCI (_plx) adapter driver
@@ -1473,7 +1471,6 @@ sys-apps/hal:dmi - Adds support for DMI (Desktop Management Interface)
 sys-apps/hal:pam_console - Adds support for pam console from PAM
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/iproute2:atm - Add support for ATM qdisc manager
-sys-apps/lm_sensors:rrdtool - Builds sensord (Needs RRDTool).
 sys-apps/lm_sensors:sensord - Enable sensord
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
@@ -1606,7 +1603,6 @@ sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer
 sys-kernel/mips-sources:ip32r10k - Enables experimental support for IP32 R10K kernels (SGI O2, 'Moosehead')
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/suspend2-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
-sys-kernel/vserver-sources:ngnet - Adds experimental NGNET patches by Herbert Poetzl (http://vserver.13thfloor.at/Experimental/NGNET/)
 sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:glibc-compat20 - Enable the glibc-compat addon.
 sys-libs/glibc:glibc-omitfp - Configure glibc with --enable-omitfp which lets the build system determine when it is safe to use -fomit-frame-pointer
