@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.2 2006/07/27 01:36:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.3 2006/09/09 16:30:55 flameeyes Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -57,6 +57,10 @@ src_unpack() {
 src_install() {
 	freebsd_src_install
 	keepdir /var/log
+
+	# Allow users to use ping and other commands
+	dodir /bin
+	mv "${D}/sbin/ping" "${D}/bin/" || die "mv failed"
 
 	newinitd "${FILESDIR}/ipfw.initd" ipfw
 	newinitd "${FILESDIR}/sysctl.initd" sysctl
