@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2121 2006/09/09 13:06:21 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2122 2006/09/09 13:38:39 xmerlin Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1545,7 +1545,6 @@ sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/heartbeat:management - Adds support for management GUI.
 sys-cluster/lam-mpi:pbs - Add support for PBS scheduling stuff
-sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
 sys-cluster/mpich2:cxx - Add cxx headers
 sys-cluster/mpich2:fast - Fast mode
 sys-cluster/mpich2:mpe - Add mpe support
