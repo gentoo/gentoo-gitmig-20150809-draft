@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/otrs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.20 2006/07/13 00:47:46 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.21 2006/09/09 13:00:40 tcort Exp $
+
+  09 Sep 2006; Thomas Cort <tcort@gentoo.org> otrs-2.0.4.ebuild:
+  Added ~amd64 wrt Bug #134899.
 
   13 Jul 2006; Renat Lumpau <rl03@gentoo.org> otrs-2.0.4.ebuild:
   Clarified w-c instructions
