@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.17 2006/09/05 18:29:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.18 2006/09/09 17:54:12 calchan Exp $
+
+*geda-20060824 (09 Sep 2006)
+
+  09 Sep 2006; Denis Dupeyron <calchan@gentoo.org> +geda-20060824.ebuild:
+  Version bump, see bug #145162.
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> geda-20060123.ebuild:
   Stable on sparc wrt #142481
