@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5846 2006/09/09 12:57:07 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5847 2006/09/09 15:45:37 pioto Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Mike Kelly <pioto@gentoo.org> (09 Sep 2006)
+# The 2.x branch changes how it interacts with vim and other plugins. Masking
+# this for now until I'm sure all current plugins work with it.
+>=app-vim/genutils-2
 
 # Stefaan De Roeck <stefaan@gentoo.org> (09 Sep 2006)
 # 1.5.x is a development branch, people should test 1.4.x by default
