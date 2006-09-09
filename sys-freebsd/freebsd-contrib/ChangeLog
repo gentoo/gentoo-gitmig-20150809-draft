@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-contrib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.8 2006/07/27 01:22:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/ChangeLog,v 1.9 2006/09/09 16:25:52 flameeyes Exp $
+
+  09 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-contrib-6.1.ebuild:
+  Move sort in /bin so that it won't hinder booting without /usr partition.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -freebsd-contrib-6.0.ebuild:

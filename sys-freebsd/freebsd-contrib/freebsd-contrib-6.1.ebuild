@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-6.1.ebuild,v 1.1 2006/05/09 07:34:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-6.1.ebuild,v 1.2 2006/09/09 16:25:52 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -43,3 +43,10 @@ REMOVE_SUBDIRS="lib/libg2c lib/libgcc lib/libgcc_r lib/libgcov lib/libiberty
 
 PATCHES="${FILESDIR}/${PN}-5.3-lib_csu-makefile.patch"
 
+src_install() {
+	freebsd_src_install
+
+	# Move these to /bin for boot access
+	dodir /bin
+	mv "${D}/usr/bin/sort" "${D}/bin/" || die "mv failed"
+}
