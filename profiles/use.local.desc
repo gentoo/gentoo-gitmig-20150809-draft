@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2127 2006/09/09 18:27:37 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2128 2006/09/09 21:02:43 kloeri Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -624,7 +624,6 @@ mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
-mail-client/mozilla-thunderbird:mozsvg -  Enable SVG support in mozilla, firefox, and thunderbird
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:gpgme - Enable support for gpgme
 mail-client/mutt:nntp - Adds support for nntp via patch
@@ -1688,7 +1687,6 @@ www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla-firefox:mozsvg - Enable SVG support in mozilla and firefox
-www-client/mozilla-firefox:mozxmlterm - Enable mozilla's XML-based command-line terminal
 www-client/mozilla-launcher:aoss - Add support for media-libs/alsa-oss - playing sounds from browser via OSS emulation
 www-client/mozilla:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla:mozdevelop - Enable features for web developers (e.g. Venkman)
@@ -1697,7 +1695,6 @@ www-client/mozilla:moznoirc - Disable building of mozilla's IRC client
 www-client/mozilla:moznomail - Disable building mozilla's mail client
 www-client/mozilla:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 www-client/mozilla:mozsvg - Enable SVG support in mozilla and firefox
-www-client/mozilla:mozxmlterm - Enable mozilla's XML-based command-line terminal
 www-client/netscape:moznomail - Do not install Netscape Mail
 www-client/opera:qt-static - Installs binaries statically linked to Qt
 www-client/seamonkey:mozcalendar - Enable mozilla calendar extension
