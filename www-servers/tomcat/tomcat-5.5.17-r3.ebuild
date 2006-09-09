@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r3.ebuild,v 1.1 2006/09/05 21:07:14 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r3.ebuild,v 1.2 2006/09/09 14:33:24 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -28,6 +28,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	>=dev-java/log4j-1.2.9
 	~dev-java/servletapi-2.4
 	=dev-java/struts-1.2*
+	dev-java/sun-javamail-bin
 	java5? ( >=virtual/jre-1.5 )
 	!java5? (
 		=virtual/jre-1.4*
@@ -144,6 +145,7 @@ src_compile(){
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
+	antflags="${antflags} -Dmail.jar=$(java-pkg_getjar sun-javamail-bin mail.jar)"
 	antflags="${antflags} -Dstruts.home=/usr/share/struts"
 	antflags="${antflags} -Djasper.home=${S}/jasper"
 	if ! use java5; then
