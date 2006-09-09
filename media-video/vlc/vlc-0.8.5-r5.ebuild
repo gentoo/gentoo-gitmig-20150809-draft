@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r5.ebuild,v 1.3 2006/07/31 23:51:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r5.ebuild,v 1.4 2006/09/09 01:10:56 flameeyes Exp $
 
 inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2 nsplugins
 
@@ -8,7 +8,7 @@ RESTRICT="confcache"
 
 MY_P="${P/_beta/-test}"
 
-PATCHLEVEL="26"
+PATCHLEVEL="27"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 
