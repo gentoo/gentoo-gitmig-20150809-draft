@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ctypes-0.9.9.6.ebuild,v 1.1 2006/06/25 13:10:48 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ctypes-0.9.9.6.ebuild,v 1.2 2006/09/09 09:59:06 kloeri Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://starship.python.net/crew/theller/ctypes/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ~sparc x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.3.3"
 
