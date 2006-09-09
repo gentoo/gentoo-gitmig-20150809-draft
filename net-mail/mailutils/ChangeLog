@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.24 2006/04/27 22:00:22 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.25 2006/09/09 22:32:24 ticho Exp $
+
+  09 Sep 2006; <ticho@gentoo.org> mailutils-0.6-r3.ebuild:
+  Stable on x86, bug #141396.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-mailutils-0.6-r2, Manifest:
