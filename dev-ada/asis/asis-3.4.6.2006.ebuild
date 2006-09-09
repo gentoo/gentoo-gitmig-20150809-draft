@@ -1,25 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.2006.ebuild,v 1.2 2006/09/08 16:34:51 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/asis-3.4.6.2006.ebuild,v 1.3 2006/09/09 21:46:08 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
 ACT_Ver=$(get_version_component_range 4)
 Gnat_Name="gnat-gpl"
 
-S="${WORKDIR}/asis-${ACT_Ver}-src"
 DESCRIPTION="The Ada Semantic Interface Specification (semantic analysis and tools tied to compiler)"
-SRC_URI="http://dev.gentoo.org/~george/src/asis-gpl-${ACT_Ver}-src.tgz"
-
+SRC_URI="http://dev.gentoo.org/~george/src/asis-gpl-${ACT_Ver}.tar.bz2"
 HOMEPAGE="https://libre2.adacore.com/"
-
 LICENSE="GPL-2"
 
-IUSE="doc"
-RDEPEND="=dev-lang/gnat-gpl-${PV}*"
-DEPEND="${RDEPEND}
-	doc? ( virtual/tetex
-	app-text/texi2html )"
+KEYWORDS="~amd64 ~x86"
 
 # saving slot as defined in gnatbuild.eclass
 eSLOT=${SLOT}
@@ -28,8 +21,14 @@ eSLOT=${SLOT}
 # eSLOT depends only on PV, so it is really static
 SLOT="ACT-${eSLOT}"
 
-KEYWORDS="~amd64 ~x86"
-#IUSE="doc"
+
+IUSE="doc"
+RDEPEND="=dev-lang/gnat-gpl-${PV}*"
+DEPEND="${RDEPEND}
+	doc? ( virtual/tetex
+	app-text/texi2html )"
+
+S="${WORKDIR}/asis-${ACT_Ver}"
 
 # it may be even better to force plain -O2 -pipe -ftracer here
 replace-flags -O3 -O2
@@ -51,16 +50,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	sed -i -e "s:\"gcc\":\"gnatgcc\":" asis/a4g-contt.adb
-	sed -i -e "s:\"gcc\":\"gnatgcc\":" \
-		-e "s:environment settings for gcc:environment for gnatgcc:" \
-		asis/a4g-gnat_int.adb
-	sed -i -e "s:\"gcc#\":\"gnatgcc#\":" gnat/snames.adb
-
-	sed -i -e "s:gcc:gnatgcc:" tools/tool_utils/asis_ul-common.adb
-	sed -i -e "s:\"gcc:\"gnatgcc:" tools/gnatmetric/metrics-compute.adb
 }
 
 
@@ -98,14 +87,11 @@ src_install () {
 	chmod 0755 obj/libasis-${ACT_Ver}.so
 	cp obj/libasis-${ACT_Ver}.so ${D}${LIBPATH}/adalib
 	insinto ${LIBPATH}/adalib
-	doins obj/*.ali
-	chmod 0644 lib/libasis.a
-	newins lib/libasis.a libasis-${ACT_Ver}.a
+	doins obj/*.ali lib/libasis.a
 	# make appropriate symlinks
-	cd ${D}${LIBPATH}/adalib
+	pushd ${D}${LIBPATH}/adalib
 	ln -s libasis-${ACT_Ver}.so libasis.so
-	ln -s libasis-${ACT_Ver}.a libasis.a
-	cd ${S}
+	popd
 	# sources
 	insinto ${LIBPATH}/adainclude
 	doins gnat/*.ad[sb]

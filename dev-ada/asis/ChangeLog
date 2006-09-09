@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/asis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.22 2006/09/09 21:27:48 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.23 2006/09/09 21:46:08 george Exp $
+
+  09 Sep 2006; George Shapovalov <george@gentoo.org> asis-3.4.6.2006.ebuild:
+  repackaged the sources for 3.4.6.2006 and simplified the ebuild
 
 *asis-3.4.6 (09 Sep 2006)
 
