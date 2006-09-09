@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.1-r1.ebuild,v 1.5 2006/09/09 08:42:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.3.ebuild,v 1.1 2006/09/09 08:42:14 mrness Exp $
 
-inherit eutils flag-o-matic libtool multilib
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="highly configurable free RADIUS server"
 SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug edirectory frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
@@ -38,7 +38,7 @@ pkg_setup() {
 
 	#TODO: Remove this function 6 months after all <1.1.1-r1 versions 
 	#      has been removed from the tree.
-	if cd "${ROOT}/usr/$(get_libdir)" ; then
+	if cd "${ROOT}/usr/lib" ; then
 		einfo "Cleaning up lefovers from previous versions..."
 
 		local la_prefix file
@@ -60,11 +60,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/${P}-whole-archive-gentoo.patch"
-	epatch "${FILESDIR}/${P}-libradius_install.patch"
 	epatch "${FILESDIR}/${P}-versionless-la-files.patch"
-
-	elibtoolize
+	epatch "${FILESDIR}/${P}-nostrip.patch"
 }
 
 src_compile() {
@@ -105,7 +102,7 @@ src_compile() {
 	fi
 
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
-		--mandir=/usr/share/man --libdir=/usr/$(get_libdir)\
+		--mandir=/usr/share/man --libdir=/usr/$(get_libdir) \
 		--with-large-files --disable-ltdl-install --with-pic \
 		${myconf} || die "configure failed"
 
@@ -129,16 +126,13 @@ src_install() {
 	    /etc/raddb/radiusd.conf
 	chown -R root:radiusd "${D}"/etc/raddb/*
 
-	[ -z "${PR}" ] || mv "${D}/usr/share/doc/${P}" "${D}/usr/share/doc/${PF}"
+	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${PF}"
 	gzip -f -9 "${D}/usr/share/doc/${PF}"/{rfc/*.txt,*}
 	dodoc CREDITS
-	#Copy SQL schemas to doc dir
-	docinto sql.schemas
-	dodoc src/modules/rlm_sql/drivers/rlm_sql_*/*.sql
 
 	rm "${D}/usr/sbin/rc.radiusd"
 
-	newinitd "${FILESDIR}/radwatch.init" radiusd
+	newinitd "${FILESDIR}/radius.init" radiusd
 	newconfd "${FILESDIR}/radius.conf" radiusd
 }
 
@@ -163,4 +157,6 @@ pkg_postrm() {
 
 		ebeep
 	fi
+	ewarn "Auth-Type := Sql is no longer valid in /etc/raddb/users file!"
+	ewarn "You should replace it with Auth-Type := Local."
 }
