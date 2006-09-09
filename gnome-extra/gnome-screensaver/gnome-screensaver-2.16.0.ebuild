@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.0.ebuild,v 1.1 2006/09/07 04:03:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.0.ebuild,v 1.2 2006/09/09 18:41:20 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -30,7 +30,7 @@ RDEPEND=">=sys-apps/dbus-0.35.2
 					x11-proto/xextproto
 					x11-proto/randrproto
 					x11-proto/scrnsaverproto
-					gl?	( virtual/gl )
+					opengl?	( virtual/gl )
 					xinerama?	(
 									x11-libs/libXinerama
 									x11-proto/xineramaproto
