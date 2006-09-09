@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.1.ebuild,v 1.7 2006/09/08 21:05:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.1.ebuild,v 1.8 2006/09/09 20:56:01 seemant Exp $
 
 inherit eutils gnome2
 
@@ -81,6 +81,13 @@ src_compile() {
 	cd "${WORKDIR}/gnucash-docs-${DOC_VER}"
 	econf || die "doc econf failed"
 	emake || die "doc emake failed"
+}
+
+src_test() {
+	einfo "Skipping tests because one of the upstream tests is broken"
+	einfo "Please reference: https://bugs.gentoo.org/show_bug.cgi?id=146769#c1"
+	einfo "We have a filed a bug upstream.  When that is resolved,"
+	einfo "We will re-enable the tests."
 }
 
 # See http://bugs.gentoo.org/show_bug.cgi?id=132862 regarding gconf schema install
