@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.41 2006/09/03 22:25:44 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.42 2006/09/09 21:29:43 wltjr Exp $
+
+  09 Sep 2006; <wlt@gentoo.org> metadata.xml:
+  Updated metadata to reflect new package maintainer, me ;)
 
 *servletapi-2.4-r4 (03 Sep 2006)
 
