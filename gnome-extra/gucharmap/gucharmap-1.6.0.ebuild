@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.6.0.ebuild,v 1.8 2006/09/05 03:08:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.6.0.ebuild,v 1.9 2006/09/09 21:11:18 leio Exp $
 
 inherit gnome2
 
@@ -15,7 +15,6 @@ IUSE="cjk gnome"
 RDEPEND=">=dev-libs/glib-2.3
 	>=x11-libs/pango-1.2.1
 	>=x11-libs/gtk+-2.6
-	!gnome? ( dev-libs/popt )
 	gnome? (
 		>=gnome-base/libgnome-2.2
 		>=gnome-base/libgnomeui-2.2 )
