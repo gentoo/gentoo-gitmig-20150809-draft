@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.5 2006/05/22 18:13:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.6 2006/09/09 17:08:08 nixnut Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://demos.linuxgamepublishing.com/majesty/majesty_demo.run"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 RDEPEND="sys-libs/glibc
