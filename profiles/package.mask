@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5847 2006/09/09 15:45:37 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5848 2006/09/09 19:19:22 christel Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Christel Dahlskjaer <christel@gentoo.org> (09 Sep 2006)
+# Serious QA issues; see bug #98524
+www-apps/drupal
 
 # Mike Kelly <pioto@gentoo.org> (09 Sep 2006)
 # The 2.x branch changes how it interacts with vim and other plugins. Masking
