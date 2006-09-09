@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r2.ebuild,v 1.2 2006/08/07 00:11:55 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxme/jaxme-0.3.1-r2.ebuild,v 1.3 2006/09/09 06:49:40 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -52,6 +52,10 @@ src_unpack() {
 	java-pkg_jarfrom xmldb xmldb-api.jar xmldb-api-20021118.jar
 	java-pkg_jarfrom xmldb xmldb-api-sdk.jar xmldb-api-sdk-20021118.jar
 
+	# Bad build system, should be fixed to use properties
+	java-pkg_jarfrom ant-core ant.jar ant-1.5.4.jar
+	java-pkg_jarfrom ant-core ant.jar ant.jar
+
 	# Special case: jaxme uses build<foo>.xml files, so rewriting them by hand
 	# is better:
 	cd ${S}
@@ -61,10 +65,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} -Dbuild.apidocs=dist/doc/api javadoc"
-
-	eant ${antflags} || die "Compilation failed"
+	eant $(use_doc -Dbuild.apidocs=dist/doc/api javadoc) jar
 }
 
 src_install() {
