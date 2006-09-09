@@ -1,0 +1,33 @@
+diff -Nru slmodem-2.9.11-20051101.orig/modem/Makefile slmodem-2.9.11-20051101/modem/Makefile
+--- slmodem-2.9.11-20051101.orig/modem/Makefile	2005-11-01 17:33:34.000000000 +0200
++++ slmodem-2.9.11-20051101/modem/Makefile	2006-09-09 18:04:39.680862000 +0300
+@@ -13,10 +13,10 @@
+ #
+ ###########################################################################
+ 
+-CC:= gcc
++CC?= gcc
+ RM:= rm -f
+ 
+-CFLAGS+= -Wall -g -O -I. -DCONFIG_DEBUG_MODEM
++CFLAGS+= -Wall -finline -I. -DCONFIG_DEBUG_MODEM
+ 
+ 
+ modem-objs:= \
+@@ -33,13 +33,13 @@
+ 
+ #SUPPORT_ALSA:=1
+ ifdef SUPPORT_ALSA
+-slmodemd: -lasound
++
+ CFLAGS+= -DSUPPORT_ALSA=1
+-LFLAGS+= -lasound
++LDLIBS+= -lasound
+ endif
+ 
+ slmodemd modem_test:
+-	$(CC) $(LFLAGS) -o $@ $^
++	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ clean:
+ 	$(RM) slmodemd modem_test modem_main.o modem_cmdline.o modem_test.o $(modem-objs) $(dp-objs) $(sysdep-objs)
