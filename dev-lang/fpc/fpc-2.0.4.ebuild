@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.2 2006/08/31 18:21:38 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.0.4.ebuild,v 1.3 2006/09/09 13:42:10 truedfx Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
 	x86? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.i386-linux.tar )
 	sparc? ( mirror://sourceforge/freepascal/fpc-2.0.0.sparc-linux.tar )
 	ppc? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.powerpc-linux.tar )
-	amd64? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.x86_64-linux.tar )"
+	amd64? ( mirror://sourceforge/freepascal/fpc-${PV_BIN}.x86_64-linux.tar )
+	doc? ( mirror://gentoo/fpcdocs-${PV}.tar.bz2 )"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-FPC"
@@ -21,10 +22,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc source"
 
 DEPEND="!dev-lang/fpc-bin
-	!dev-lang/fpc-source
-	doc? ( virtual/tetex )"
-RDEPEND="!dev-lang/fpc-bin
 	!dev-lang/fpc-source"
+#	doc? ( virtual/tetex )
 
 src_unpack() {
 	case ${ARCH} in
@@ -84,10 +83,11 @@ src_compile() {
 
 	emake -j1 PP="${pp}" rtl packages_base_all fcl fv packages_extra_all utils || die "make failed"
 
-	if use doc ; then
-		cd "${S}"/../fpcdocs
-		emake -j1 pdf || die "make pdf failed!"
-	fi
+	# Use pregenerated docs to avoid sandbox violations (#146804)
+	#if use doc ; then
+	#	cd "${S}"/../fpcdocs
+	#	emake -j1 pdf || die "make pdf failed!"
+	#fi
 }
 
 src_install() {
@@ -116,8 +116,9 @@ src_install() {
 	fi
 
 	if ! has nodoc ${FEATURES} && use doc ; then
-		cd "${S}"/../fpcdocs
-		emake -j1 "$@" pdfinstall || die "make pdfinstall failed"
+		dodoc "${WORKDIR}"/${P}/*.pdf
+		#cd "${S}"/../fpcdocs
+		#emake -j1 "$@" pdfinstall || die "make pdfinstall failed"
 	fi
 
 	if use source ; then
