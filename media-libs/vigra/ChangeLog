@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.4 2005/03/10 19:26:50 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.5 2006/09/10 00:29:45 ticho Exp $
+
+  10 Sep 2006; <ticho@gentoo.org> vigra-1.3.2.ebuild:
+  Stable on x86, bug #139607.
 
 *vigra-1.3.2 (10 Mar 2005)
 
