@@ -1,6 +1,25 @@
-MD5 dcc5e3fdd9535b2deb7a4b5e770bdf29 pcmcia-cs-modules-3.2.8.ebuild 2912
-MD5 e950da8acb6c874ac1f248b25cf7b87c ChangeLog 672
-MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+AUX pcmcia-cs-3.2.8-modules-only.patch 1165 RMD160 ce5e2c86f16d865a0e5120d0f5caa45856e67b5b SHA1 901062e9cbf54e1cbea28df198e23a9c08db6937 SHA256 b5d8b0a028a52cd7de16e1e9774e81cf085b3e87d4c79d11ec1caab9f692cb91
 MD5 6e7a371dbbc428966bcfda0029a7b6ef files/pcmcia-cs-3.2.8-modules-only.patch 1165
-MD5 29a2be33a201c160660048fb2f119915 files/digest-pcmcia-cs-modules-3.2.8 131
+RMD160 ce5e2c86f16d865a0e5120d0f5caa45856e67b5b files/pcmcia-cs-3.2.8-modules-only.patch 1165
+SHA256 b5d8b0a028a52cd7de16e1e9774e81cf085b3e87d4c79d11ec1caab9f692cb91 files/pcmcia-cs-3.2.8-modules-only.patch 1165
+AUX pcmcia-cs-3.2.8-orinoco-gcc34.patch 753 RMD160 2400723969783b81194c41114a80ea721bbd44c5 SHA1 0da2ddcdcc625898715d07deb1f7d208062e0214 SHA256 1b1dfc14d4da45f6dc4a4522857ab575718d32142aca9936011d9d31a0ed7409
 MD5 791ff98a3aedc7a9c1c179156ed8fc7c files/pcmcia-cs-3.2.8-orinoco-gcc34.patch 753
+RMD160 2400723969783b81194c41114a80ea721bbd44c5 files/pcmcia-cs-3.2.8-orinoco-gcc34.patch 753
+SHA256 1b1dfc14d4da45f6dc4a4522857ab575718d32142aca9936011d9d31a0ed7409 files/pcmcia-cs-3.2.8-orinoco-gcc34.patch 753
+DIST monitor-0.13e.patch 22530
+DIST pcmcia-cs-3.2.8.tar.gz 1271846
+EBUILD pcmcia-cs-modules-3.2.8.ebuild 2912 RMD160 2983baebe229d57e5dce57431ef8fc1a46fe2aaa SHA1 25c4c7c6d51a25532b3187115f33f13429ff9893 SHA256 45a675bb7309e8731d79840afa371590610a6a95f3c69fb9045ca472ebd85d74
+MD5 dcc5e3fdd9535b2deb7a4b5e770bdf29 pcmcia-cs-modules-3.2.8.ebuild 2912
+RMD160 2983baebe229d57e5dce57431ef8fc1a46fe2aaa pcmcia-cs-modules-3.2.8.ebuild 2912
+SHA256 45a675bb7309e8731d79840afa371590610a6a95f3c69fb9045ca472ebd85d74 pcmcia-cs-modules-3.2.8.ebuild 2912
+MISC ChangeLog 775 RMD160 0a644829259572473736273e7afb3dd10249223c SHA1 858ffe9f7c99298db500b30b24357d875914957b SHA256 b0106ea80c6d242f7243bcffc99047345a4ca9c9af87d3d509b6cde07fb36749
+MD5 2ad9a45f65f66f27e18f5b9ba81a1c6c ChangeLog 775
+RMD160 0a644829259572473736273e7afb3dd10249223c ChangeLog 775
+SHA256 b0106ea80c6d242f7243bcffc99047345a4ca9c9af87d3d509b6cde07fb36749 ChangeLog 775
+MISC metadata.xml 159 RMD160 54af1e9a61e5ed1b49b2bbbf3ef2278999c66b13 SHA1 bce3da4745192397c9a08bdbcf7e4914eac9b77b SHA256 ed3a0d440cfa5672284f4172ebde0ea6506c1a38e9a3ed9f14f3d2c093aac42f
+MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
+RMD160 54af1e9a61e5ed1b49b2bbbf3ef2278999c66b13 metadata.xml 159
+SHA256 ed3a0d440cfa5672284f4172ebde0ea6506c1a38e9a3ed9f14f3d2c093aac42f metadata.xml 159
+MD5 29a2be33a201c160660048fb2f119915 files/digest-pcmcia-cs-modules-3.2.8 131
+RMD160 0d523d46e6cd64660fc667f578a0e6893b1d886b files/digest-pcmcia-cs-modules-3.2.8 131
+SHA256 10a1f99fdf0aab08a8e8ca39af7c6c166aeb439f847ff1bcce40ad1870d0ef3f files/digest-pcmcia-cs-modules-3.2.8 131
