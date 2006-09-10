@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-trigger-launcher-4.2.1.tar.gz 345483
 DIST xfce4-trigger-launcher-4.2.2.tar.gz 352792
 DIST xfce4-trigger-launcher-4.2.3.tar.gz 371223 RMD160 cf906e166df7428b0e9218063fdfba553a7babe2 SHA1 8b68183fde3e88131563fbfdedf2d804ffcfb546 SHA256 8ddb31039d3c44e04272f1d42c863d80f3bfdfcc6b39a6752c47ce65c69dd164
@@ -37,3 +40,10 @@ SHA256 fae338e7165dc35398a370fdb0f8b3d0a8ffb16942280c537e92d97dc24aa599 files/di
 MD5 449d054145a8d0af69de73a41708823d files/digest-xfce4-trigger-launcher-4.2.3 286
 RMD160 79836409a48219a861342ae37df74178e9933fee files/digest-xfce4-trigger-launcher-4.2.3 286
 SHA256 6e0639dc927ef0204029716007a20bd1f65a7400e35fa312763201ed7eff4642 files/digest-xfce4-trigger-launcher-4.2.3 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HCamhnQswr0vIRAkT7AKCiXM/DO59AqMxEowwZwU0KyBbXggCglIrH
+TG2JyBmbaEldCSOliUtkXGo=
+=9ez0
+-----END PGP SIGNATURE-----

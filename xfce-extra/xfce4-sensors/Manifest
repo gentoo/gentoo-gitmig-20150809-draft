@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-sensors-plugin-0.3.0.tar.gz 312026
 DIST xfce4-sensors-plugin-0.5.1.tar.gz 335277
 DIST xfce4-sensors-plugin-0.6.1.tar.gz 330581
@@ -45,3 +48,10 @@ SHA256 aa406878994d736781e726b78b0c444b35567e5f83340d43dab71d5bee1e6b15 files/di
 MD5 fe3e55fc1d30745d3ca0c78415fe826e files/digest-xfce4-sensors-0.7.0 280
 RMD160 74827c8276cfae2eb1a3331e414a403b65cb9658 files/digest-xfce4-sensors-0.7.0 280
 SHA256 95f3f922f54054bd75af11209b5a35a2da7086f563efa5f06cbcef88957c0ce7 files/digest-xfce4-sensors-0.7.0 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HFamhnQswr0vIRAlu7AJ9JEdbatcQRI3qPcX3RsMk/3GRTMgCfTgg2
+I7JWsnUPyyQGrGG9XfB8unk=
+=N8OB
+-----END PGP SIGNATURE-----

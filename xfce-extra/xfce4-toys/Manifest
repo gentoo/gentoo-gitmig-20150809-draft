@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-toys-4.2.1.tar.gz 403562
 DIST xfce4-toys-4.2.2.tar.gz 412857
 DIST xfce4-toys-4.2.3.tar.gz 431027 RMD160 e33092afd5ce813679d44cbc103b247e1ee28271 SHA1 bbc6069d2a3762e23d48ef8617c9dafa355b7f7a SHA256 0bf83d45546902dcd421bf865da177b1bbd00a48d892b5467419c27820ec1bad
@@ -37,3 +40,10 @@ SHA256 d045c47b10ec68fd54438593db4465e1feadcac299141fa6e09103d0963001a7 files/di
 MD5 9be84891b8af534a6ca35680f1e0180d files/digest-xfce4-toys-4.2.3 250
 RMD160 8d418f9b2a16802f13f4a2bb45b4d22846a995ea files/digest-xfce4-toys-4.2.3 250
 SHA256 34aff450486829fb7f51425d668f1ec1166a38c1b8f440cf4bdaf08199cc8acf files/digest-xfce4-toys-4.2.3 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HBamhnQswr0vIRAl+qAJ4uWQc2cFkxFWK+uKebP3fzGGE7JACgofFt
+b4rzpDrq+P8g1xmnDuVtfgs=
+=P04o
+-----END PGP SIGNATURE-----

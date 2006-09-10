@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-diskperf-plugin-1.5.tar.gz 226767 RMD160 2eeb070aeb2be2b53ff57e86f684c9d430d637ab SHA1 1c1f2bea61d48c5a5ac25dd072d5734af0491854 SHA256 a7bcb1d4de8d1e22fee0e5115bff5f10b7ee522a9b98e99950894519db9b2bb6
 EBUILD xfce4-diskperf-1.5-r1.ebuild 378 RMD160 d4c24f948daeae8a8d4a2ab3725294ed2b503f4c SHA1 704ea7a06496ddfc967a1797f333f411430985c9 SHA256 5446a9982750e5f579e2256dbbf5a29352f36eb4a1eded2ca77f1e20526b5661
 MD5 64bdee177ba3cf6490223f9eaa45f024 xfce4-diskperf-1.5-r1.ebuild 378
@@ -21,3 +24,10 @@ SHA256 fab2390d96ef43ea3c96032bde6e0527ef78de946408d74531b2b3a378dbec42 files/di
 MD5 9e5f06605c7fc064e2796571da8bdf87 files/digest-xfce4-diskperf-1.5-r2 277
 RMD160 cc228dcb575e12679b4a2bff6697bd25e6adeaa9 files/digest-xfce4-diskperf-1.5-r2 277
 SHA256 fab2390d96ef43ea3c96032bde6e0527ef78de946408d74531b2b3a378dbec42 files/digest-xfce4-diskperf-1.5-r2 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HEamhnQswr0vIRAtXbAJ4h07bIqEcqr9uyqRO0YA2Gyw5iXgCfTlz+
+f7mU2h8V4VjLSd00tMt2sKw=
+=U0os
+-----END PGP SIGNATURE-----

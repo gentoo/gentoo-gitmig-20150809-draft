@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ac_adapter.patch 844 RMD160 f45412afe6fd641f6ca0ed2c4ea8e16e19a62652 SHA1 0868dd50e9738f4a0ca906de7c86f4795a20c1c5 SHA256 c95c971fdef386dd71efad82963a2dab74fb9295d6bc323565488c16c5301b9d
 MD5 7e83c3e57eb87b819dec88cdfeb289df files/ac_adapter.patch 844
 RMD160 f45412afe6fd641f6ca0ed2c4ea8e16e19a62652 files/ac_adapter.patch 844
@@ -40,3 +43,10 @@ SHA256 0c7e1b4ff261588c586e56316f9ebd579d627d56dd2e13256b5949c093fe8a3e files/di
 MD5 d387d3afd6b224e639838e4880947dea files/digest-xfce4-battery-0.3.0-r2 280
 RMD160 b6be9ba99cb4d9898f30eadd70bfd9d3dbaf335d files/digest-xfce4-battery-0.3.0-r2 280
 SHA256 0c7e1b4ff261588c586e56316f9ebd579d627d56dd2e13256b5949c093fe8a3e files/digest-xfce4-battery-0.3.0-r2 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HDamhnQswr0vIRAs3VAJ94kRMVh9FdnGI3Lic9yxLroCuI6gCfe9Lh
+MAfwoa7bbPN0K4VqQnFnZ5Y=
+=dQLu
+-----END PGP SIGNATURE-----

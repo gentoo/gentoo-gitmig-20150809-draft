@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-megahertz-plugin-0.1.tar.gz 298588 RMD160 167bbad0718daaae7a7e41cc67b46e04adaa25a8 SHA1 34ce6791176488cd71e6de861574c99b686a58bc SHA256 ff7bbb3fe66f9a0df8e6aab87b6165d911132589d437538baecc0bf42b0cd548
 EBUILD xfce4-megahertz-0.1-r1.ebuild 385 RMD160 8a332fc04a47af4eb5148919b954bfef22008a18 SHA1 a72bc99f97e8fb4f7551d233416780cee1d07c1e SHA256 9ae85f39a58fb0f84c073d95302b9099491b9fa598d938be5772bcf016f1cd07
 MD5 4a1939682614ea49bf7f7aa919a53dae xfce4-megahertz-0.1-r1.ebuild 385
@@ -21,3 +24,10 @@ SHA256 d07dbb1013e85a5f4af4311eda4e4fcd24ef4ab6a33ff30db9c5353aed11bb9e files/di
 MD5 aaf0147ad9734e6fa60c22c023449a45 files/digest-xfce4-megahertz-0.1-r1 280
 RMD160 6d22a550cbd59ff340d30280520dd6f00a3283aa files/digest-xfce4-megahertz-0.1-r1 280
 SHA256 d07dbb1013e85a5f4af4311eda4e4fcd24ef4ab6a33ff30db9c5353aed11bb9e files/digest-xfce4-megahertz-0.1-r1 280
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HEamhnQswr0vIRAmlvAJ4sYSc/9jUfSv8u4wkpDtc+iA4ocwCgiE2G
+aLKy9Ff+xzSJ28gZKUsHLvI=
+=4DEk
+-----END PGP SIGNATURE-----

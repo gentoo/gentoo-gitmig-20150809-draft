@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-systray-4.2.1.tar.gz 312823
 DIST xfce4-systray-4.2.2.tar.gz 312188
 DIST xfce4-systray-4.2.3.tar.gz 320138 RMD160 8726092716ddf76d2e79c107ca13f4e9aeafb90c SHA1 497fb0c2610951338d7d1a9d28ac7ca6eb6a82c2 SHA256 7ac887e9348e535d4d4c3d4f5edcc90e51f309afdab3d697995d1d17e737fd76
@@ -37,3 +40,10 @@ SHA256 9d2bdf0732313afafffcdff0a41438023f5db079176cc29808b9ed380d266bcc files/di
 MD5 ce66a270b20faea6f7e5a23ae14917b3 files/digest-xfce4-systray-4.2.3 259
 RMD160 481a1d7837e2ee511ebb70ca20e3054c2841c86c files/digest-xfce4-systray-4.2.3 259
 SHA256 8de59cd16316e7b3b8f12890565b50b2c8afd7be9687269beb146997155d7b02 files/digest-xfce4-systray-4.2.3 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HAamhnQswr0vIRAgsyAJ443Fp7nEnlklz3rAD90FoPHq50RACgtpsu
+cV8m65KFLOS8E+6Cf1RQQmU=
+=Qrxq
+-----END PGP SIGNATURE-----

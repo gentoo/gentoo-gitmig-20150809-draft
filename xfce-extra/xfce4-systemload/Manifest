@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-systemload-plugin-0.3.4.tar.gz 219362
 DIST xfce4-systemload-plugin-0.3.6.tar.gz 229985 RMD160 a7b3f28326262eeb5aa66d5cd966474ac0a4554b SHA1 ed477e9c8499b8e34031658237586a83bc12cef4 SHA256 59371452c6bd974b9a459cfedeb58aed9f06123ce3de4e80312006b2bee3b30a
 EBUILD xfce4-systemload-0.3.4-r1.ebuild 385 RMD160 7029e09274b3f2cc5d6beb3b5d27235c665cbb05 SHA1 348a131cc7c45774fe705f6d0b861983f4de527b SHA256 653d5adf2eedfa4a36eca57d476dcf8fde0b71f8f9ff6b59667ced5f2da420ed
@@ -29,3 +32,10 @@ SHA256 2e7d46975a9f7e0ea04842d48d2d76f5b115139966cb9a23379b271faa246115 files/di
 MD5 434a5f9a625ba8819f89d390ce508938 files/digest-xfce4-systemload-0.3.6-r1 289
 RMD160 f0c0c44978348bab7d4701deebe09fa044ab42bb files/digest-xfce4-systemload-0.3.6-r1 289
 SHA256 2e7d46975a9f7e0ea04842d48d2d76f5b115139966cb9a23379b271faa246115 files/digest-xfce4-systemload-0.3.6-r1 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HDamhnQswr0vIRAgjuAJ4mHN0lZnkKstPAM69u6XpVE54UkACfefAt
+ak1zixVASNRYyxmy//OEO6I=
+=n75E
+-----END PGP SIGNATURE-----

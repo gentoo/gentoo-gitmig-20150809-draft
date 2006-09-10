@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST Terminal-0.2.2.tar.bz2 748212
 DIST Terminal-0.2.4.tar.bz2 1008348 RMD160 1c01548ab4e208c9dd423155cf43fd42acb47a1c SHA1 8787f574469ec47cba9786d64fa5803fd28dd3b3 SHA256 211919ed901670e11c1d7c8c82309b15d28b5da8e73cc722f8d03bd4bedf14ef
 DIST Terminal-0.2.4pre1.tar.bz2 852936
@@ -53,3 +56,10 @@ SHA256 c0daf0ae3e65513857fabd365490d1eeafe983cbaa1757b2cf99fc9f4b05c2e8 files/di
 MD5 2674746bab9c4f759985114410c61f7c files/digest-terminal-0.2.5.4_beta2 271
 RMD160 920531bee4078d553b8e2eb57d61c38ee06ff3c6 files/digest-terminal-0.2.5.4_beta2 271
 SHA256 8639d8397a892a108a43d5cee9fb028bcd1f58465f7239a3da2568b87c374fea files/digest-terminal-0.2.5.4_beta2 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HEamhnQswr0vIRAo4YAJ9tTbAsE88pt8+Nlxv6Tn4ingYd5ACdFtC2
+Hpb0uYdt3ezlV/jgwDvrGbw=
+=wcgJ
+-----END PGP SIGNATURE-----

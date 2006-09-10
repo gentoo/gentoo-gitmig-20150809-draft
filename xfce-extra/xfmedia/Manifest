@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfmedia-dbus-0.6-support.patch 513 RMD160 2defa7019f9d8f70531c6480ab26dca23d7f4a48 SHA1 7e068b6714bcbf58e4d9ac2610bb27fc448bccce SHA256 2dff284c6a36523150169c0eaa7661aa54288ed76e991dbd7be6f468e9528d31
 MD5 8f2aa12eea584de65d8ed28179e56b51 files/xfmedia-dbus-0.6-support.patch 513
 RMD160 2defa7019f9d8f70531c6480ab26dca23d7f4a48 files/xfmedia-dbus-0.6-support.patch 513
@@ -25,3 +28,10 @@ SHA256 3af7eff5afd74dee7b922b3da9b19258bd40ec8e0133be3c17e626233b346f99 files/di
 MD5 c10c977de190963fcedee17f2f18226b files/digest-xfmedia-0.9.1-r2 244
 RMD160 9e1d6110901510d521e1a29a3b61b79836a4458c files/digest-xfmedia-0.9.1-r2 244
 SHA256 3af7eff5afd74dee7b922b3da9b19258bd40ec8e0133be3c17e626233b346f99 files/digest-xfmedia-0.9.1-r2 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA5HFamhnQswr0vIRAmYgAJ0Sbh6HcHmVilLY7LMKwnC0jQv0NACfcg3u
+X+4g50PQH083sBhBJQKEm74=
+=ivS7
+-----END PGP SIGNATURE-----
