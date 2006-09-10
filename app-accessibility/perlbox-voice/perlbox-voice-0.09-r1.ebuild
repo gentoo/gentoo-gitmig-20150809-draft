@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.1 2006/03/26 13:14:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/perlbox-voice-0.09-r1.ebuild,v 1.2 2006/09/10 15:53:30 mcummings Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/perlbox/${P}.noarch.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="dev-lang/perl
 	dev-perl/perl-tk
