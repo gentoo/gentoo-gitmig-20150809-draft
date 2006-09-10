@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfs.conf.d 577 RMD160 8456dd8edbc6f96788155172cf98f28c2d423d8c SHA1 f0caa87674b257803cacbf0b4734c695d4a019e5 SHA256 1fd57f91542bad494d0e4959b23397969603ba590d7ebe37bdadfa53b2a4dce2
 MD5 5949a7b4d745a863c2cdedb8ab25d6bb files/xfs.conf.d 577
 RMD160 8456dd8edbc6f96788155172cf98f28c2d423d8c files/xfs.conf.d 577
@@ -26,3 +29,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 8dcc6e96c8714e793afd60f4dbd13777 files/digest-xfs-1.0.2 232
 RMD160 f7a944d9b70323163a36e91a00f30a6b6b0ae83f files/digest-xfs-1.0.2 232
 SHA256 6e8affffabdaf9a4c3f73a1494f766f580613573a0712900d83cec010163ceb1 files/digest-xfs-1.0.2 232
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9WnamhnQswr0vIRAq5cAJ4gp+yMXkHAgKvfDfBB+FQNi+hLKgCdGYbp
+Pbule2IX8+iP+tm8UR8Phjk=
+=F6rl
+-----END PGP SIGNATURE-----
