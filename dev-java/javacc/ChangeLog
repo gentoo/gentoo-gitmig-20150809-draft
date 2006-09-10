@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/javacc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.18 2006/08/02 20:42:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.19 2006/09/10 14:48:34 caster Exp $
+
+*javacc-4.0-r3 (10 Sep 2006)
+
+  10 Sep 2006; Vlastimil Babka <caster@gentoo.org> -files/javacc-4.0,
+  -files/javacc.sh-4.0, -files/jjdoc-4.0, -files/jjtree-4.0,
+  -javacc-4.0-r2.ebuild, +javacc-4.0-r3.ebuild:
+  Ebuild cleanup, use dolauncher to create executables to get rid of launchers
+  in FILESDIR.
 
 *javacc-4.0-r2 (02 Aug 2006)
 
