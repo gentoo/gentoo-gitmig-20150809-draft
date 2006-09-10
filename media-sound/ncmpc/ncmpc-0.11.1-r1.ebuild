@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r1.ebuild,v 1.7 2006/03/08 17:50:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.11.1-r1.ebuild,v 1.8 2006/09/10 18:02:33 the_paya Exp $
 
 DESCRIPTION="A ncurses client for the Music Player Daemon (MPD)"
 HOMEPAGE="http://www.musicpd.org/?page=ncmpc"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 IUSE="clock-screen mouse search-screen key-screen raw-mode nls debug"
 
 SLOT="0"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
 
 RDEPEND="sys-libs/ncurses
 	dev-libs/popt
