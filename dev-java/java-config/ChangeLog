@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.112 2006/09/06 13:03:55 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.113 2006/09/10 01:56:03 nichoj Exp $
+
+*java-config-2.0.28 (10 Sep 2006)
+
+  10 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/java-config-2.0.28-classpath.patch, +java-config-2.0.28.ebuild:
+  Version bump. Fixes bug #146870 and bug #140926.
 
 *java-config-1.3.5-r1 (06 Sep 2006)
 
