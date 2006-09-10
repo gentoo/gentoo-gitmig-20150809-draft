@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanlogd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.17 2006/06/05 17:31:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.18 2006/09/10 08:46:51 ticho Exp $
+
+  10 Sep 2006; <ticho@gentoo.org> scanlogd-2.2.6-r1.ebuild:
+  Stable on x86, bug #147026.
 
   05 Jun 2006; Peter Volkov <pva@gentoo.org> scanlogd-2.2.6-r1.ebuild:
   Fixed missed IUSE variable.
