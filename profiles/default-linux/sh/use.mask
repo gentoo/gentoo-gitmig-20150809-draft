@@ -32,6 +32,7 @@ firebird
 qdbm
 fftw
 netjack
+mzscheme
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle

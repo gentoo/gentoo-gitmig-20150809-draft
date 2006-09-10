@@ -37,6 +37,7 @@ lm_sensors
 netjack
 beagle
 nvtv
+mzscheme
 
 # Luca Longinotti <chtekk@gentoo.org>
 # fix dev-lang/php + arm + firebird
