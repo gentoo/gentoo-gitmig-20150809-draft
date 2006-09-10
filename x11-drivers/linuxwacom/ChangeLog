@@ -1,6 +1,6 @@
-# ChangeLog for x11-misc/linuxwacom
+# ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.7 2006/09/06 18:19:25 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.8 2006/09/10 23:01:33 swegener Exp $
 
   06 Sep 2006; Saleem Abdulrasool <compnerd@gentoo.org>
   -files/linuxwacom-0.7.2-modular-x.patch, -linuxwacom-0.7.2.ebuild:
