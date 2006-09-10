@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.31 2006/09/07 18:49:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.32 2006/09/10 10:29:21 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -187,6 +187,7 @@ vdr-plugin_src_unpack() {
 				-e '/^STRIP =/d' \
 				-e '/@.*\$(STRIP)/d'
 			eend $?
+			PLUGIN_MAKEFILE_PATCHED=1
 			;;
 		add_local_patch)
 			cd ${S}
@@ -205,6 +206,7 @@ vdr-plugin_src_unpack() {
 }
 
 vdr-plugin_copy_source_tree() {
+	pushd . >/dev/null
 	cp -r ${S} ${T}/source-tree
 	cd ${T}/source-tree
 	mv Makefile.orig Makefile
@@ -213,6 +215,7 @@ vdr-plugin_copy_source_tree() {
 		-e 's:^CXXFLAGS:#CXXFLAGS:' \
 		-e 's:-I$(DVBDIR)/include:-I$(DVBDIR):' \
 		-e 's:-I$(VDRDIR) -I$(DVBDIR):-I$(DVBDIR) -I$(VDRDIR):'
+	popd >/dev/null
 }
 
 vdr-plugin_install_source_tree() {
@@ -234,6 +237,14 @@ vdr-plugin_src_compile() {
 			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_copy_source_tree
 			;;
 		compile)
+			if [[ -z ${PLUGIN_MAKEFILE_PATCHED} ]]; then
+				eerror "Wrong use of vdr-plugin.eclass."
+				eerror "An ebuild for a vdr-plugin will not work without"
+				eerror "calling vdr-plugin_src_unpack to patch the Makefile."
+				echo
+				eerror "Please report this at bugs.gentoo.org."
+				die "vdr-plugin_src_unpack not called!"
+			fi
 			cd ${S}
 
 			emake ${BUILD_PARAMS} ${VDRPLUGIN_MAKE_TARGET:-all} || die "emake failed"
