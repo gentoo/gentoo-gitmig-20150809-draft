@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/portage-mod_jabber
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-mod_jabber/ChangeLog,v 1.1 2006/09/10 12:39:50 hanno Exp $
+
+*portage-mod_jabber-0.0.2 (10 Sep 2006)
+
+  10 Sep 2006; Hanno Boeck <hanno@gentoo.org>
+  +portage-mod_jabber-0.0.2.ebuild:
+  Initial commit, submitted by user Lars Strojny.
+
