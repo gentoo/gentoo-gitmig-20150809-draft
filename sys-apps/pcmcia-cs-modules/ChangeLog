@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs-modules
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/ChangeLog,v 1.3 2005/05/27 19:21:07 brix Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/ChangeLog,v 1.4 2006/09/10 12:04:10 kloeri Exp $
+
+  10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove brix from metadata.xml.
 
   27 May 2005; <brix@gentoo.org> pcmcia-cs-modules-3.2.8.ebuild:
   Stable on x86.

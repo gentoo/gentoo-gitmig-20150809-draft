@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmciautils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.25 2006/06/01 11:52:41 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmciautils/ChangeLog,v 1.26 2006/09/10 12:05:59 kloeri Exp $
+
+  10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove brix from metadata.xml.
 
 *pcmciautils-014 (01 Jun 2006)
 
