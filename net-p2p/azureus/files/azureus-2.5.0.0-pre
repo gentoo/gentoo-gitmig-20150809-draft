@@ -61,5 +61,6 @@ fi
 if [[ -z "${UI}" ]]; then
 	echo '$UI not set adding UI="swt" to your ' ${gentoocfg}
 	echo 'UI="swt"' >> ${gentoocfg}
+	UI="swt"
 fi
 
