@@ -22,10 +22,10 @@ EBUILD icon-naming-utils-0.7.2.ebuild 689 RMD160 28561244630c970a1f08facd04bb786
 MD5 fbe5a08936399438da3db05ceda69f48 icon-naming-utils-0.7.2.ebuild 689
 RMD160 28561244630c970a1f08facd04bb786a1426d109 icon-naming-utils-0.7.2.ebuild 689
 SHA256 674bf20352505b1de0f8cf2eb726fddcc3d6b2bd1a1d23421018a68094b3988a icon-naming-utils-0.7.2.ebuild 689
-EBUILD icon-naming-utils-0.8.1.ebuild 766 RMD160 4f22f7861f44f759786d09c97f66ee8a06bc5ef6 SHA1 65a64088684d1964cdb6deeba0d987c3582e69b0 SHA256 faeec1be1d3e02c44c4ba2f7966ee74c60760f53992484dbcf5d66157ae03870
-MD5 7757bd20ad3844ab2df1823ccb414b55 icon-naming-utils-0.8.1.ebuild 766
-RMD160 4f22f7861f44f759786d09c97f66ee8a06bc5ef6 icon-naming-utils-0.8.1.ebuild 766
-SHA256 faeec1be1d3e02c44c4ba2f7966ee74c60760f53992484dbcf5d66157ae03870 icon-naming-utils-0.8.1.ebuild 766
+EBUILD icon-naming-utils-0.8.1.ebuild 766 RMD160 324c402a2750a51ce27df1cda02a45e01639719c SHA1 00e5511a1c00c7c5a50eda41c0dd88fea8c23108 SHA256 1a3398a9a88a81d3d77cc6c52bdf09e1137bd50a5d9710eec97cd2eaefed2a31
+MD5 53e8fafb4ee681cff0f640035d44c798 icon-naming-utils-0.8.1.ebuild 766
+RMD160 324c402a2750a51ce27df1cda02a45e01639719c icon-naming-utils-0.8.1.ebuild 766
+SHA256 1a3398a9a88a81d3d77cc6c52bdf09e1137bd50a5d9710eec97cd2eaefed2a31 icon-naming-utils-0.8.1.ebuild 766
 MISC ChangeLog 3635 RMD160 0789accd3d4c194231801b167f37a587f212dd02 SHA1 33b20af7b4e9179dc3ce4a3feaa812921c8a4a2e SHA256 940a5867463d26c7a32a05eb9b2e2b1e203c3a2741b6da0fbc033c47ad4b4c84
 MD5 96903090746a8729303d9a58944960a7 ChangeLog 3635
 RMD160 0789accd3d4c194231801b167f37a587f212dd02 ChangeLog 3635
@@ -50,9 +50,9 @@ MD5 4a1ac2327277d3bb50bcf7988cce6615 files/digest-icon-naming-utils-0.8.1 268
 RMD160 ce2415246266e9e1d65b2f10bca39884a8a842bd files/digest-icon-naming-utils-0.8.1 268
 SHA256 b1ec653fe72ccb84a52e253b7f5de48952f82467a73d1c89077a80e74f1b5099 files/digest-icon-naming-utils-0.8.1 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE/5+SomPajV0RnrERAoXqAJ4/7KdaLhrqzNBN00DsIRTyga4dOACfZaDr
-8YuPs74S+FNeGwMvJ4nWnbw=
-=nFMV
+iD8DBQFFA1ZsamhnQswr0vIRAi/KAJ9+WcfWb3fgkvISEOWZ/beu2HqoJQCgmhAS
+nQYLOvwvIpkXcPLY7fJIgSg=
+=dP1u
 -----END PGP SIGNATURE-----
