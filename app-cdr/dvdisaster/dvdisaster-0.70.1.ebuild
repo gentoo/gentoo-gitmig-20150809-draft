@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.1.ebuild,v 1.2 2006/08/27 00:17:45 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.70.1.ebuild,v 1.3 2006/09/10 21:14:27 pylon Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dvdisaster.berlios.de/"
 SRC_URI="http://download.berlios.de/dvdisaster/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 SLOT="0"
 IUSE_LINGUAS="linguas_cs linguas_de linguas_it linguas_sv"
 IUSE="${IUSE_LINGUAS} gnome nls"
