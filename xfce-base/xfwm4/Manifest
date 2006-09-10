@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX x-modular-composite-version.patch 575 RMD160 bff756116f314f102d082b5b6d8ee6f4ece63ba1 SHA1 bf23d85662fab0487a3a29b4020cf0e3dcf1d52c SHA256 52178173a91c32d60b71a68141c9238499253c1086c350cb64c14b15b68ccf48
 MD5 de9e7cce72361127a24dc569bc41da0d files/x-modular-composite-version.patch 575
 RMD160 bff756116f314f102d082b5b6d8ee6f4ece63ba1 files/x-modular-composite-version.patch 575
@@ -57,3 +60,10 @@ SHA256 99affa4e333f55a8bb56522faf734210958a6db3a43be8aa0a7f5f110ba95b65 files/di
 MD5 ff136f93a3c5e568203c018ec7cb767b files/digest-xfwm4-4.3.90.2 250
 RMD160 df668a57270348f465184b477908124f7cd350dc files/digest-xfwm4-4.3.90.2 250
 SHA256 a54b0038b5838e3d5ee532990630f4d1287f9e7a98e07d27cf383f38cbcfbfe8 files/digest-xfwm4-4.3.90.2 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA493amhnQswr0vIRArEKAKC2wHXn0Spvvd7acMYcI3cnW/gkvACffij0
+myi4FfSbFaEGiM9BAIhdcbA=
+=pRpM
+-----END PGP SIGNATURE-----

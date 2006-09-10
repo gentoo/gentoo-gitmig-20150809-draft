@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xfce4-panel-4.3.90.2-asneeded.patch 618 RMD160 6b93b5b31a66276fc37c286a459c41e4542c7c8e SHA1 f9f9dd0497443560ee5d685e6826b26191a0d7be SHA256 b34b417a5e737ba479dcfedcce5fef29859a86da958916ff4c3b295e1e5d5a75
 MD5 dae0b4aba9b25fa8b034b8456ddce3b5 files/xfce4-panel-4.3.90.2-asneeded.patch 618
 RMD160 6b93b5b31a66276fc37c286a459c41e4542c7c8e files/xfce4-panel-4.3.90.2-asneeded.patch 618
@@ -57,3 +60,10 @@ SHA256 5e604a489c2fe3da057cf94b929aa6c1daf7c8d9a4c3e17b0dab9ab0451ad03d files/di
 MD5 4f1626fcbea63eebaefddb7007d12227 files/digest-xfce4-panel-4.3.90.2 265
 RMD160 cb87cbcc1e54878fdd197336a81e44aca2deb1e0 files/digest-xfce4-panel-4.3.90.2 265
 SHA256 ff6492e436f13541e5244ad0cd24c9993348a6050d65f2e3248dcea29f5d2ca9 files/digest-xfce4-panel-4.3.90.2 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA494amhnQswr0vIRAnV3AJ0b3yG8soadg1eUVneV2bKmPNfJDACfZtVx
+3k9dFqZduNu1ZVtRAbbFoj0=
+=BeS2
+-----END PGP SIGNATURE-----

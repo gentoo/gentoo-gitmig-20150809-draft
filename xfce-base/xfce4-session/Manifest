@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xfce4-session-4.2.1.tar.gz 1316467
 DIST xfce4-session-4.2.2.tar.gz 1499674
 DIST xfce4-session-4.2.3.tar.gz 1629362 RMD160 e2fa608f13cfa79bfc9db2e2091100f5c145d2c7 SHA1 99e93dcfc3e1eaa403b55b46ec87d7abdc74c949 SHA256 cbf5f6b8d68c0d29f503b805a2143d73b6192f96ce3d667c38521db16f09ca8b
@@ -53,3 +56,10 @@ SHA256 0fd8fe3eb441076ce939c4473f99a6e1830c7a234b251fa10341e3b03721cc1c files/di
 MD5 907c139f6a5616b4adba360e57372ba1 files/digest-xfce4-session-4.3.90.2 274
 RMD160 2a4be74e5483f833a9dd0bbeac032513d840c33b files/digest-xfce4-session-4.3.90.2 274
 SHA256 e4cb75ed08fa149bff7e92577b92220d1d0adb2b8ca7e7ce8a27826b9a8e42e1 files/digest-xfce4-session-4.3.90.2 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA492amhnQswr0vIRAj0QAKCdHsjGwBEjTNjrrKRZ89BynrCgkACgmL3a
+5w3OWVG7BqrsWrs5x5NWwA8=
+=BXe2
+-----END PGP SIGNATURE-----

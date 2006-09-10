@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD xfce4-extras-4.2.1.ebuild 842 RMD160 bf2183ba9ee3c9ddd3440c8ed2e26c40d240f27a SHA1 94d51fcf993ab07b709562fecf63db272146c8c6 SHA256 4ec124dee822d940e63532a80f8304aa7e7933a3bca0420238ee0082aabe6271
 MD5 4b6d6b311d6e959600383389c9de0dcc xfce4-extras-4.2.1.ebuild 842
 RMD160 bf2183ba9ee3c9ddd3440c8ed2e26c40d240f27a xfce4-extras-4.2.1.ebuild 842
@@ -34,3 +37,10 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-xfce4-extras-4.2.3.2 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-xfce4-extras-4.2.3.2 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-xfce4-extras-4.2.3.2 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA493amhnQswr0vIRAi+AAJ9RPABGoUFVjcNb8urkIH3kqpdXBgCgtIXE
+r0GVlvwXC9RxOrCWgWzucK4=
+=5umy
+-----END PGP SIGNATURE-----
