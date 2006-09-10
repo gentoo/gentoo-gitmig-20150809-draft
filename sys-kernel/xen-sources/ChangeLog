@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/xen-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.33 2006/08/26 06:24:11 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.34 2006/09/10 11:36:22 aross Exp $
+
+*xen-sources-2.6.16.28 (10 Sep 2006)
+
+  10 Sep 2006; <aross@gentoo.org>
+  +files/xen-sources-2.6.16.28-CVE-2006-3468.patch,
+  +xen-sources-2.6.16.28.ebuild:
+  Version bump to fix bugs #143538 (CVE-2006-4145), #139641 (CVE-2006-2936), and
+  #141503 (CVE-2006-3468).
 
 *xen-sources-2.6.16.26-r1 (26 Aug 2006)
 
