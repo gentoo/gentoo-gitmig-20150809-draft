@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xpp2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.8 2006/08/05 17:27:29 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/ChangeLog,v 1.9 2006/09/10 23:22:30 caster Exp $
+
+  10 Sep 2006; Vlastimil Babka <caster@gentoo.org> xpp2-2.1.10-r1.ebuild:
+  Fixed building with JAVA_PKG_STRICT, added xerces to RDEPEND.
 
 *xpp2-2.1.10-r1 (05 Aug 2006)
 
