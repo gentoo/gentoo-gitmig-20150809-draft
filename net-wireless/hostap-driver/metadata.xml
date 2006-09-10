@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>mobile</herd>
-  <maintainer>
-    <email>brix@gentoo.org</email>
-    <name>Henrik Brix Andersen</name>
-  </maintainer>
   <longdescription>This is a Linux driver for wireless LAN cards based on
   Intersil's Prism2/2.5/3 chipset. The driver supports a so called Host AP mode,
   i.e., it takes care of IEEE 802.11 management functions in the host computer

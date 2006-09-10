@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>mobile</herd>
-  <maintainer>
-    <email>brix@gentoo.org</email>
-    <name>Henrik Brix Andersen</name>
-  </maintainer>
   <longdescription>Utility programs for hostap-driver</longdescription>
 </pkgmetadata>

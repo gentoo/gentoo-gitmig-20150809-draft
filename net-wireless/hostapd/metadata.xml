@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>mobile</herd>
-  <maintainer>
-    <email>brix@gentoo.org</email>
-    <name>Henrik Brix Andersen</name>
-  </maintainer>
   <longdescription>User space daemon for the hostap-driver.
   Extended IEEE 802.11 management, IEEE 802.1X Authenticator,
   RADIUS Authentication client, RADIUS Accounting client</longdescription>

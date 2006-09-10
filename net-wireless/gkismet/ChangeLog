@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gkismet
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.10 2005/10/18 12:49:41 metalgod Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gkismet/ChangeLog,v 1.11 2006/09/10 11:53:53 kloeri Exp $
+
+  10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove brix from metadata.xml.
 
   18 Oct 2005; Luis Medinas <metalgod@gentoo.org> gkismet-0.0.10.ebuild:
   Added ~amd64 keyword. Bug #108370.
