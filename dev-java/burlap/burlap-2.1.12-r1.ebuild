@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-2.1.12-r1.ebuild,v 1.1 2006/07/04 19:33:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-2.1.12-r1.ebuild,v 1.2 2006/09/10 06:42:19 nichoj Exp $
 
 inherit java-pkg-2
 
@@ -32,7 +32,8 @@ src_unpack() {
 }
 
 src_compile() {
-	eant -Dproject.name=${PN} jar $(use_doc) -lib $(java-pkg_getjar servletapi-2.3 servlet.jar)
+	eant -Dproject.name=${PN} jar $(use_doc) \
+		-Dclasspath=$(java-pkg_getjar servletapi-2.3 servlet.jar)
 }
 
 src_install() {
