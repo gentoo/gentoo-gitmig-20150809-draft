@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060824.ebuild,v 1.2 2006/08/28 16:53:43 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20060824.ebuild,v 1.3 2006/09/10 17:17:30 the_paya Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://musicpd.org/uploads/files/mpd-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="aac alsa ao audiofile flac icecast ipv6 mp3 mikmod mp3 musepack oss
 pulseaudio unicode vorbis"
 
