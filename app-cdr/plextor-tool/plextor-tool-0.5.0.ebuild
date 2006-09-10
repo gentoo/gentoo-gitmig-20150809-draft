@@ -1,33 +1,30 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.1 2005/12/24 05:24:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.2 2006/09/10 08:11:53 vapier Exp $
 
 DESCRIPTION="Tool to change the parameters of a Plextor CD-ROM drive"
-HOMEPAGE="http://das.ist.org/~georg/"
-SRC_URI="http://das.ist.org/~georg/files/${P}.src.tar.bz2"
+HOMEPAGE="http://plextor-tool.sourceforge.net/"
+SRC_URI="mirror://sourceforge/plextor-tool/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="static gnome"
 
-RDEPEND="virtual/libc
-	gnome? ( gnome-base/gnome-panel )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="gnome? ( gnome-base/gnome-panel )"
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 	sed -i \
 		-e "/^CFLAGS=/s:$: ${CFLAGS}:" \
 		Makefile || die "sed Makefile failed"
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 	local targets="plextor-tool"
 	use static && targets="${targets} pt-static"
 	use gnome && targets="${targets} plextor-tool-applet"
