@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gdancer-0.4.5.tar.gz 222705
 DIST gdancer-0.4.6.tar.gz 474962 RMD160 14b70152710c0946e005723248c503866fd511d8 SHA1 52afc67bc449e343db79175e18291c6e3c8f1083 SHA256 be7ce14816d91c60e4c30f8452da69cb6d8d811fcf3ce021eb2b4ed1e878c49f
 EBUILD xmms-gdancer-0.4.5.ebuild 715 RMD160 94a1e0cb9abd881b81cbbb0f69824b0b3c980229 SHA1 b67dfb4c05e36d5f11b567b3cff13a40dad74cb5 SHA256 d2a999db99943f8cfaf258de9206d7bb64a1a81e709c5a4b79e5cb1f0f098345
@@ -22,3 +25,10 @@ SHA256 f0a074db819111790de6a60329ff26df8bda981ebf8cdaa600f0de83622b580d files/di
 MD5 80f5913ff9d682d1ec232c6eeab4c49f files/digest-xmms-gdancer-0.4.6 241
 RMD160 3abaf9857c9afdf10fc13e95584eebe29ca587c5 files/digest-xmms-gdancer-0.4.6 241
 SHA256 ed88f36283bee76bab268d4f2b51c0731e2aaba0fe0e96b44bf1601ccdaa0cee files/digest-xmms-gdancer-0.4.6 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89vamhnQswr0vIRAucgAJ9N4bggsJyU20hxh5Tr8ntXdyJ/kwCgr7R8
+qBnMQf9lvWHghHKIU9xXVzw=
+=bgFy
+-----END PGP SIGNATURE-----

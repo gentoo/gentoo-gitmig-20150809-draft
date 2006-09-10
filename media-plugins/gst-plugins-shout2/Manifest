@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-shout2-0.8.8-name.patch 3906 RMD160 3c1606802e2ff5d4c3848ef280f57c2f368c931d SHA1 b21bd7fc1a27e34cacdaa54b92ddaaa61f47a17c SHA256 27589c096a4a13172904ed67576088ed2acb627d0c9e3db577f2e41d44c2e8af
 MD5 812cd03e2b249b82a81cca7abf90ed53 files/gst-plugins-shout2-0.8.8-name.patch 3906
 RMD160 3c1606802e2ff5d4c3848ef280f57c2f368c931d files/gst-plugins-shout2-0.8.8-name.patch 3906
@@ -81,3 +84,10 @@ SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/di
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-shout2-0.8.9 259
 RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-shout2-0.8.9 259
 SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-shout2-0.8.9 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89vamhnQswr0vIRAkeaAJ9tXM2YK1cqGYXdqhSIBLtGjBegNACdExhE
+QBDwJjGYEJ16HE4VKOAt8r8=
+=UxG7
+-----END PGP SIGNATURE-----

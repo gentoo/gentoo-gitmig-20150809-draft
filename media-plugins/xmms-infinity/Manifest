@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST infinity-0.2.tar.gz 132094
 DIST infinity-plugin-0.5.8.tar.bz2 287830 RMD160 b467377636f8544076e32a4e1df518bdfad3c964 SHA1 72253f46e86eace899d484e9d5af781bc9443bda SHA256 bd833c8dcd50da225d445a7c0778c2cd85ea244f006a256dd9af564e3aa89409
 DIST xmms-infinity-0.6.2.tar.bz2 277527 RMD160 566156ef0be6162bdf2a499591d6b03ab19a8ee9 SHA256 c9bcc6a4774d2944606ad3307bec77e447135ac4f2e35bfd1af0440bf6deeecf
@@ -30,3 +33,10 @@ SHA256 eeaf32740903544481d18295ecc9eca62300878188186c70807b8d12aa1aac31 files/di
 MD5 8c5876cf442b0854565d8cdefd4b5121 files/digest-xmms-infinity-0.6.2 262
 RMD160 f576680ea3b6df39c173aaf3ed5590ce0a29682e files/digest-xmms-infinity-0.6.2 262
 SHA256 c7309aeda0e151d03e6955c6b3bab67adea65819d4ef32693aa833db844800c5 files/digest-xmms-infinity-0.6.2 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89xamhnQswr0vIRAmfcAJ9d1JCyThoJb/daCvjRLyk+Fb8L7gCcC+i0
+z3pYnL83tp/2BfXlkSfbdl0=
+=JW1l
+-----END PGP SIGNATURE-----

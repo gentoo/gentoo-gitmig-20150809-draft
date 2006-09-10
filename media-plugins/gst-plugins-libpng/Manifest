@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gst-plugins-libpng-0.8.8-colorspace.patch 592 RMD160 ad9e33b3c17d3f482016347915dd0ace4a7a547c SHA1 4b1f4e32281d4f2000426fe09967b3caa1cdffae SHA256 c59e0dedd60e8f752c7c1611db10e8806d24adcfd77fc0f2f460a0f92eb9e580
 MD5 f82346e916492119a7dc784aefc418a6 files/gst-plugins-libpng-0.8.8-colorspace.patch 592
 RMD160 ad9e33b3c17d3f482016347915dd0ace4a7a547c files/gst-plugins-libpng-0.8.8-colorspace.patch 592
@@ -89,3 +92,10 @@ SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/di
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-libpng-0.8.9 259
 RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-libpng-0.8.9 259
 SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-libpng-0.8.9 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89vamhnQswr0vIRAuljAKCAzFlmTiKLLWqYrT3ZccctPoF7VACfeHS1
+4aY+IzqVDJ9OGHaYOaBRSLQ=
+=4JAU
+-----END PGP SIGNATURE-----

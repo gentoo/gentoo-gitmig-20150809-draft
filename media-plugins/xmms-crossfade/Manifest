@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX xmms-crossfade-0.3.9-gcc4.patch 399 RMD160 226e2da415fa5d00288c6d60b70485b9ab756c85 SHA1 edc520751031f1c2330c3455ceebb8afb5a4a9d5 SHA256 f051e6be436a79351d2610c4158f60069a3ec1d62eb1fea760d270202311c0b2
 MD5 26c20becb985cd35bef2b67d66ed2616 files/xmms-crossfade-0.3.9-gcc4.patch 399
 RMD160 226e2da415fa5d00288c6d60b70485b9ab756c85 files/xmms-crossfade-0.3.9-gcc4.patch 399
@@ -50,3 +53,10 @@ SHA256 53be62df3e86384a616362f2816e5ec756af5ecf5429909e7cbe449ade15b9df files/di
 MD5 b5ac8cd6544accf5318c6f8743c3f6cb files/digest-xmms-crossfade-0.3.9 262
 RMD160 266138c6ee2c7bcdfb482beab6ffd5cf73b0a1bd files/digest-xmms-crossfade-0.3.9 262
 SHA256 6586fc0f804b6417c5687ff85873e1422a1c33a4d39a49d8587ff6f65b6946c2 files/digest-xmms-crossfade-0.3.9 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89wamhnQswr0vIRAq8AAJ9Cv1p0EEyiCfM4gpXi55Do3ul8lwCcDVIr
+g4MQGbz5kwzT7o6/Y8VJmgs=
+=BNMM
+-----END PGP SIGNATURE-----

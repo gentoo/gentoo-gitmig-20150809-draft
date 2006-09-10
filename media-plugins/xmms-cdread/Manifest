@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX endian.patch 962 RMD160 a0bb57a07bae3683de8506c7547573167d2b2c82 SHA1 2b1823bfaa25b51a262aad9a98fd3c9cfb9e029d SHA256 4b2ea8027048a572078266de0dfead28cd6e3df971ab312013fafdd41fc2df64
 MD5 ec795dadb3aa7147e8cb97de01fc67b1 files/endian.patch 962
 RMD160 a0bb57a07bae3683de8506c7547573167d2b2c82 files/endian.patch 962
@@ -22,3 +25,10 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 1201fa3186b0eeb5b5d0c6ba6ff84aca files/digest-xmms-cdread-0.14a-r2 253
 RMD160 1f258ecb5c12afc695d43702cd887bac0a1db746 files/digest-xmms-cdread-0.14a-r2 253
 SHA256 33dee55394130a0fbbe359466d0f1f2bd6a18a8b6638898010c7e69908b4ef2a files/digest-xmms-cdread-0.14a-r2 253
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89tamhnQswr0vIRAv07AJ9U8fVcY35CP/psgPQDGC+ot+VdHACgnWQh
+LnlqVlQ+sil1HMHESs7qDEY=
+=B7Rd
+-----END PGP SIGNATURE-----

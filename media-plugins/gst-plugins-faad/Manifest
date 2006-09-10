@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
 DIST gst-plugins-0.8.12.tar.bz2 2506926
@@ -46,3 +49,10 @@ SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/di
 MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-faad-0.8.12 72
 RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-faad-0.8.12 72
 SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-faad-0.8.12 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA89xamhnQswr0vIRApOzAKCFBx2XvcWJlmr0H2NCHsSAgttsMwCbBCVt
+izhmAulBNUXWxKJzy7JJ1FY=
+=ozxU
+-----END PGP SIGNATURE-----
