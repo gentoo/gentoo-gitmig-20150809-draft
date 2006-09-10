@@ -1,6 +1,6 @@
-# ChangeLog for dev-ruby/ruby-poppler
+# ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.1 2006/09/02 01:41:12 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.2 2006/09/10 22:59:27 swegener Exp $
 
 *ruby-vte-0.15.0 (02 Sep 2006)
 
