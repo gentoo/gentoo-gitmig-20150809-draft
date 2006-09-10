@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.7.1-r1.ebuild,v 1.1 2006/07/23 22:45:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.7.1-r1.ebuild,v 1.2 2006/09/10 14:30:47 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/xml/${PN}-j/${MY_PN}-src.${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 IUSE="doc examples source"
 
 RDEPEND=">=virtual/jre-1.4
@@ -43,9 +43,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="jars"
-	use doc && antflags="${antflags} javadocs"
-	eant ${antflags} || die "Compile failed."
+	eant jar $(use_doc javadocs)
 }
 
 src_install() {
