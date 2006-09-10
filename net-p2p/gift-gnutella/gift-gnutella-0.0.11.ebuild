@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.11.ebuild,v 1.1 2006/08/30 01:33:02 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-gnutella/gift-gnutella-0.0.11.ebuild,v 1.2 2006/09/10 16:41:01 the_paya Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gift.sf.net/"
 SRC_URI="mirror://sourceforge/gift/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
 DEPEND="virtual/libc
 	dev-util/pkgconfig
