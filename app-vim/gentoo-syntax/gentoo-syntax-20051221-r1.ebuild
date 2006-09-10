@@ -1,23 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20051221-r1.ebuild,v 1.1 2006/09/06 21:46:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20051221-r1.ebuild,v 1.2 2006/09/10 07:25:53 vapier Exp $
 
 inherit eutils vim-plugin
 
-DESCRIPTION="vim plugin: Gentoo Ebuild, Eclass, GLEP, ChangeLog and Portage
-Files syntax highlighting, filetype and indent settings"
+DESCRIPTION="vim plugin: Gentoo Ebuild, Eclass, GLEP, ChangeLog and Portage Files syntax highlighting, filetype and indent settings"
 HOMEPAGE="http://www.gentoo.org/"
-LICENSE="vim"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sparc x86 ~x86-fbsd"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
+LICENSE="vim"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ignore-glep31"
+
 VIM_PLUGIN_HELPFILES="gentoo-syntax"
 VIM_PLUGIN_MESSAGES="filetype"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-metadata.patch
 	if use ignore-glep31 ; then
@@ -47,4 +47,3 @@ pkg_postinst() {
 	echo
 	epause 5
 }
-
