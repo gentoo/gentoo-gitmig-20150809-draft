@@ -1,11 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.59 2006/09/09 21:20:21 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.60 2006/09/10 23:28:58 wltjr Exp $
 
 *tomcat-5.5.17-r4 (09 Sep 2006)
 *tomcat-5.0.28-r13 (09 Sep 2006)
 
-  09 Sep 2006; <wlt@gentoo.org> files/5.0.28/tomcat.conf,
+  09 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> files/5.0.28/tomcat.conf,
   files/5.0.28/tomcat.init, +tomcat-5.0.28-r13.ebuild,
   -tomcat-5.5.17-r1.ebuild, -tomcat-5.5.17-r2.ebuild,
   +tomcat-5.5.17-r4.ebuild:
@@ -18,22 +18,22 @@
 
 *tomcat-5.5.17-r3 (05 Sep 2006)
 
-  05 Sep 2006; <wlt@gentoo.org> +tomcat-5.5.17-r3.ebuild:
+  05 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> +tomcat-5.5.17-r3.ebuild:
   Added back struts stuff that was lost when applying a 1.5 patch
 
-  04 Sep 2006; <wlt@gentoo.org> tomcat-5.5.17-r2.ebuild:
+  04 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> tomcat-5.5.17-r2.ebuild:
   Take two on ebuild fix
 
-  04 Sep 2006; <wlt@gentoo.org> ChangeLog:
+  04 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
   Manifest did not get committed
 
-  04 Sep 2006; <wlt@gentoo.org> tomcat-5.5.17-r2.ebuild:
+  04 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> tomcat-5.5.17-r2.ebuild:
   Fixed problem with newest Tomcat ebuild. When java5 USE flag was in use it
   would mess up creation of directories. One of which contains many symlinks
   needed during compile. No revision buump, since it's fixing a broken
   revision bump previously committed.
 
-  04 Sep 2006; <wlt@gentoo.org> metadata.xml:
+  04 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml:
   Updated metadata.xml to reflect new maintainer, me :)
 
 *tomcat-5.5.17-r1 (07 Jul 2006)
