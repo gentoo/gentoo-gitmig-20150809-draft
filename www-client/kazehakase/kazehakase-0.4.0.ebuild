@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.4.0.ebuild,v 1.1 2006/09/09 04:34:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.4.0.ebuild,v 1.2 2006/09/10 01:54:12 matsuu Exp $
 
 IUSE="firefox hyperestraier migemo mozilla ruby ssl thumbnail"
 
@@ -21,7 +21,7 @@ DEPEND="|| ( firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 		>=net-libs/xulrunner-1.8 )
 	>=x11-libs/gtk+-2.6
 	ssl? ( >=net-libs/gnutls-1.2.0 )
-	ruby? ( dev-ruby/ruby-gettext )"
+	ruby? ( dev-ruby/ruby-gtk2 dev-ruby/ruby-gettext )"
 
 RDEPEND="${DEPEND}
 	hyperestraier? ( >=app-text/hyperestraier-1.2 )
@@ -43,9 +43,8 @@ src_compile(){
 		myconf="${myconf} --without-search-engine"
 	fi
 
-	myconf="${myconf} `use_with ruby`"
-	myconf="${myconf} `use_with ruby rgettext`"
 	myconf="${myconf} `use_enable migemo`"
+	use ruby || myconf="${myconf} --with-ruby=no --with-rgettext=no"
 	use ssl || myconf="${myconf} --disable-ssl"
 
 	econf ${myconf} || die
