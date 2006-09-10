@@ -13,10 +13,10 @@ EBUILD xfce4-trigger-launcher-4.2.2.ebuild 420 RMD160 4acfd1a3bbf01f032ff47f46d2
 MD5 b9a14f530e8a86648778c6256de805a8 xfce4-trigger-launcher-4.2.2.ebuild 420
 RMD160 4acfd1a3bbf01f032ff47f46d2471d850034e49c xfce4-trigger-launcher-4.2.2.ebuild 420
 SHA256 fd12925a613f50c8a165df1e90c8f294fa4628e1899ab577395dc57eab2cbc35 xfce4-trigger-launcher-4.2.2.ebuild 420
-EBUILD xfce4-trigger-launcher-4.2.3.ebuild 439 RMD160 582ab3ffdbe805527653d5785c82a3a648b92c3f SHA1 47a72d868e5155ac9bff43db95c444acd86368eb SHA256 1a09dbc8acac790185bf0ce271bf754ddc5f180a96f388bb90519d16462a9a6f
-MD5 3edfd726a883cfcd815165cfbdb95f32 xfce4-trigger-launcher-4.2.3.ebuild 439
-RMD160 582ab3ffdbe805527653d5785c82a3a648b92c3f xfce4-trigger-launcher-4.2.3.ebuild 439
-SHA256 1a09dbc8acac790185bf0ce271bf754ddc5f180a96f388bb90519d16462a9a6f xfce4-trigger-launcher-4.2.3.ebuild 439
+EBUILD xfce4-trigger-launcher-4.2.3.ebuild 437 RMD160 9b23de7690856800c2feb287c4c7baea7941c545 SHA1 2c84cb69f1cc480995e4f50a2b1e1db506cad332 SHA256 8da29694103159913ccdb70abfafb704373c69819f018401ddd8d82eeea1fc3e
+MD5 51dec11abdbec674b345f9b2577d2881 xfce4-trigger-launcher-4.2.3.ebuild 437
+RMD160 9b23de7690856800c2feb287c4c7baea7941c545 xfce4-trigger-launcher-4.2.3.ebuild 437
+SHA256 8da29694103159913ccdb70abfafb704373c69819f018401ddd8d82eeea1fc3e xfce4-trigger-launcher-4.2.3.ebuild 437
 MISC ChangeLog 8772 RMD160 a933af7b6334cdcbbdd5724a870de2a56c78cc36 SHA1 9bd80aa83c0af21b86c5564887a82e0b8a79db9a SHA256 21b73e57897805ad4dcb3eedca431a557176ae649a027d51dbe160d18e10c6e3
 MD5 500bbdb2fb4df3c6657f10e1a7dcfb7b ChangeLog 8772
 RMD160 a933af7b6334cdcbbdd5724a870de2a56c78cc36 ChangeLog 8772

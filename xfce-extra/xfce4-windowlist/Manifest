@@ -1,16 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 bdbb832b44beb77c60a8cc44ff63199d ChangeLog 1123
-MD5 30e3f50c03d9f992cf3fbf75a1e3636d xfce4-windowlist-0.1.0-r2.ebuild 420
+DIST xfce4-windowlist-plugin-0.1.0.tar.gz 301770
+EBUILD xfce4-windowlist-0.1.0-r1.ebuild 419 RMD160 212f789ae993155d8dd61f5870e7ad9e0ea63bed SHA1 e64bf2bbe5dad6b3699d77d05e9c1d7971203fd4 SHA256 f9b5d8bf8c2b1f53c67212e0e47aa142968bc3ecf36d84f207d680935aea4a07
 MD5 89d63771bef698cd4a29ad59fcf59df0 xfce4-windowlist-0.1.0-r1.ebuild 419
+RMD160 212f789ae993155d8dd61f5870e7ad9e0ea63bed xfce4-windowlist-0.1.0-r1.ebuild 419
+SHA256 f9b5d8bf8c2b1f53c67212e0e47aa142968bc3ecf36d84f207d680935aea4a07 xfce4-windowlist-0.1.0-r1.ebuild 419
+EBUILD xfce4-windowlist-0.1.0-r2.ebuild 420 RMD160 182e4da62ffdc4d181dc5cf88af77ace25e33959 SHA1 3b9d861fec424cf4009a11a82fd7049facd19105 SHA256 00a36e5f54eed0ec684fd61b288beadcfbb603e5f2b8ceac0f098043c4ee287b
+MD5 30e3f50c03d9f992cf3fbf75a1e3636d xfce4-windowlist-0.1.0-r2.ebuild 420
+RMD160 182e4da62ffdc4d181dc5cf88af77ace25e33959 xfce4-windowlist-0.1.0-r2.ebuild 420
+SHA256 00a36e5f54eed0ec684fd61b288beadcfbb603e5f2b8ceac0f098043c4ee287b xfce4-windowlist-0.1.0-r2.ebuild 420
+MISC ChangeLog 1123 RMD160 7d2973dc0812f68a6af27b7d4eea730388667098 SHA1 1c9445fa982f2ea66ee08a0acd744cb1a2d36d0d SHA256 6ce15684c7463ef5c2c12867c476765ee4a32c3f541aaa24d4059074015769e6
+MD5 bdbb832b44beb77c60a8cc44ff63199d ChangeLog 1123
+RMD160 7d2973dc0812f68a6af27b7d4eea730388667098 ChangeLog 1123
+SHA256 6ce15684c7463ef5c2c12867c476765ee4a32c3f541aaa24d4059074015769e6 ChangeLog 1123
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 ede2fb1d0a92f8c2aa944bb0134a181a files/digest-xfce4-windowlist-0.1.0-r1 81
+RMD160 dbcd0f6819462231af0df74b0f2978d1f870fd04 files/digest-xfce4-windowlist-0.1.0-r1 81
+SHA256 26cc196396cd658c8e5706f5d75a845daf5a92422cd0d26683f8ee604d18faca files/digest-xfce4-windowlist-0.1.0-r1 81
 MD5 ede2fb1d0a92f8c2aa944bb0134a181a files/digest-xfce4-windowlist-0.1.0-r2 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVRXeJrHF4yAQTrARAqBrAJ0RJ5gmVp/d4TjRj59av3Zqca9cxgCguA7f
-HvL8vKFrO7CMj0J6mHgRn9k=
-=190K
------END PGP SIGNATURE-----
+RMD160 dbcd0f6819462231af0df74b0f2978d1f870fd04 files/digest-xfce4-windowlist-0.1.0-r2 81
+SHA256 26cc196396cd658c8e5706f5d75a845daf5a92422cd0d26683f8ee604d18faca files/digest-xfce4-windowlist-0.1.0-r2 81

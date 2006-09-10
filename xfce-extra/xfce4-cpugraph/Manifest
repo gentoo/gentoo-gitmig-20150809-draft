@@ -1,28 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 16bc7834cf1005c5f14d2d8dee01bcb5 ChangeLog 1082
-RMD160 3c97f34b44557f7ffa4c0f2f452b1d0a0a7d34a1 ChangeLog 1082
-SHA256 9d913d6c79c7c4fedba8a182ebb25c644ef90cb52cda9d2fbe3e3d1d9b6fc135 ChangeLog 1082
-MD5 9b6fb4bdabdf4cfa391fe2f12e90af09 files/digest-xfce4-cpugraph-0.2.2-r1 79
-RMD160 94e04fe4e024962e45d9507c21ac65e69be0ed97 files/digest-xfce4-cpugraph-0.2.2-r1 79
-SHA256 ba83240e4b39cba48c100a801456ef5ade13bcefd04bde9540b9f3de22cd1eb4 files/digest-xfce4-cpugraph-0.2.2-r1 79
-MD5 9b6fb4bdabdf4cfa391fe2f12e90af09 files/digest-xfce4-cpugraph-0.2.2-r2 79
-RMD160 94e04fe4e024962e45d9507c21ac65e69be0ed97 files/digest-xfce4-cpugraph-0.2.2-r2 79
-SHA256 ba83240e4b39cba48c100a801456ef5ade13bcefd04bde9540b9f3de22cd1eb4 files/digest-xfce4-cpugraph-0.2.2-r2 79
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
-SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
+DIST xfce4-cpugraph-plugin-0.2.2.tar.gz 210953 RMD160 c1af61ae6961b4cbdd16dad925bf805440c24aa5 SHA1 64914e2d766ba093b6158d45ab37c0021057121b SHA256 0ae06f7510d1eead31dcbdbd79865dafbab68eb828fb9c910788bdc2cf0a207e
+EBUILD xfce4-cpugraph-0.2.2-r1.ebuild 422 RMD160 21177791c315cd0586d2674c14093d6e92735fbd SHA1 02007f23c660be663670d3d6889fda72ead24d31 SHA256 55b3e4a0bb68a25a560a4a32c5185951eb87bf4c18dd87515c19a04f4dd287a7
 MD5 b7799cad73910a55174497b2f4f07b2a xfce4-cpugraph-0.2.2-r1.ebuild 422
 RMD160 21177791c315cd0586d2674c14093d6e92735fbd xfce4-cpugraph-0.2.2-r1.ebuild 422
 SHA256 55b3e4a0bb68a25a560a4a32c5185951eb87bf4c18dd87515c19a04f4dd287a7 xfce4-cpugraph-0.2.2-r1.ebuild 422
+EBUILD xfce4-cpugraph-0.2.2-r2.ebuild 416 RMD160 da2f26409521b1232198e93b2ff45331c4ced083 SHA1 d81b85d49ef7accf8244c8eb8baa66c827abdb8b SHA256 711487a3ed28e4b27f1afacd2b55666f04989bf9d5314ed4cf3350b0dc71d0a7
 MD5 1c0c7cace6daa578dee827f9e7a46532 xfce4-cpugraph-0.2.2-r2.ebuild 416
 RMD160 da2f26409521b1232198e93b2ff45331c4ced083 xfce4-cpugraph-0.2.2-r2.ebuild 416
 SHA256 711487a3ed28e4b27f1afacd2b55666f04989bf9d5314ed4cf3350b0dc71d0a7 xfce4-cpugraph-0.2.2-r2.ebuild 416
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6rfFJrHF4yAQTrARApwVAJ94nNsSntlKI3XMpDXP4CezuqWDFwCfYwoP
-dbajmghGPx01gBbbsnOJE/w=
-=5hyk
------END PGP SIGNATURE-----
+MISC ChangeLog 1082 RMD160 3c97f34b44557f7ffa4c0f2f452b1d0a0a7d34a1 SHA1 efcee58289ae8a8c21a5597ac0b5e2767332d4f4 SHA256 9d913d6c79c7c4fedba8a182ebb25c644ef90cb52cda9d2fbe3e3d1d9b6fc135
+MD5 16bc7834cf1005c5f14d2d8dee01bcb5 ChangeLog 1082
+RMD160 3c97f34b44557f7ffa4c0f2f452b1d0a0a7d34a1 ChangeLog 1082
+SHA256 9d913d6c79c7c4fedba8a182ebb25c644ef90cb52cda9d2fbe3e3d1d9b6fc135 ChangeLog 1082
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
+MD5 f35bce96e6510e5752e8afb1d3b5a293 files/digest-xfce4-cpugraph-0.2.2-r1 283
+RMD160 3a6b9c27a2c5e16454e55469291e07b96bac14e7 files/digest-xfce4-cpugraph-0.2.2-r1 283
+SHA256 64f6afb30f3dc4670349fdfcbc5a9045b902bdf7b769ccb3050cde82f0455e86 files/digest-xfce4-cpugraph-0.2.2-r1 283
+MD5 f35bce96e6510e5752e8afb1d3b5a293 files/digest-xfce4-cpugraph-0.2.2-r2 283
+RMD160 3a6b9c27a2c5e16454e55469291e07b96bac14e7 files/digest-xfce4-cpugraph-0.2.2-r2 283
+SHA256 64f6afb30f3dc4670349fdfcbc5a9045b902bdf7b769ccb3050cde82f0455e86 files/digest-xfce4-cpugraph-0.2.2-r2 283

@@ -1,6 +1,23 @@
-MD5 976d2235d521f58b205dae4f98121716 xfce4-bglist-editor-4.2.0.ebuild 438
+DIST xfce4-bglist-editor-4.2.0.tar.gz 343211
+EBUILD xfce4-bglist-editor-4.2.0-r1.ebuild 521 RMD160 38728f42a57f358a662ad5d314991e83915cdcc2 SHA1 b1886d759ed97b4e943eb3ff67eaea87a171686b SHA256 cc902a26d9878bbef02e9cb4dc4644f03dbef15db47fa19e4a4895f014eb6dfb
 MD5 50fa6c6059f12d5a29baa165ed2c3c4c xfce4-bglist-editor-4.2.0-r1.ebuild 521
+RMD160 38728f42a57f358a662ad5d314991e83915cdcc2 xfce4-bglist-editor-4.2.0-r1.ebuild 521
+SHA256 cc902a26d9878bbef02e9cb4dc4644f03dbef15db47fa19e4a4895f014eb6dfb xfce4-bglist-editor-4.2.0-r1.ebuild 521
+EBUILD xfce4-bglist-editor-4.2.0.ebuild 438 RMD160 83da4d6027333a169f0a13e7fd9d0b42e81401fa SHA1 a47bdc340dbde84251c900a1b3fbf0a0c9f93cf8 SHA256 769905faf1b55342d92dce98a906da43a3890639e48ab8b9f48420b257b5fe08
+MD5 976d2235d521f58b205dae4f98121716 xfce4-bglist-editor-4.2.0.ebuild 438
+RMD160 83da4d6027333a169f0a13e7fd9d0b42e81401fa xfce4-bglist-editor-4.2.0.ebuild 438
+SHA256 769905faf1b55342d92dce98a906da43a3890639e48ab8b9f48420b257b5fe08 xfce4-bglist-editor-4.2.0.ebuild 438
+MISC ChangeLog 571 RMD160 0a18b930a79c60c36bb2549c41d174409eae9f83 SHA1 005264ad53576dd35e922b936564d9eaa0afac23 SHA256 d0e4b9edfccfb4d7ca104ee22dc813912933ae715cc69ec75edd36adaa5b9196
 MD5 ccb6f6d4a2c5c0da165ea916f0b7aab0 ChangeLog 571
+RMD160 0a18b930a79c60c36bb2549c41d174409eae9f83 ChangeLog 571
+SHA256 d0e4b9edfccfb4d7ca104ee22dc813912933ae715cc69ec75edd36adaa5b9196 ChangeLog 571
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 c3b66c0c64a28e2462ea042d4bac7d95 files/digest-xfce4-bglist-editor-4.2.0-r1 77
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 c3b66c0c64a28e2462ea042d4bac7d95 files/digest-xfce4-bglist-editor-4.2.0 77
+RMD160 b7af757671071fb6f0e3c2c7f0f04db8d99fef0f files/digest-xfce4-bglist-editor-4.2.0 77
+SHA256 2b762012ecc90ac0dba7d2a59ef4b42784613e3a09bade430a0810688cf033e7 files/digest-xfce4-bglist-editor-4.2.0 77
+MD5 c3b66c0c64a28e2462ea042d4bac7d95 files/digest-xfce4-bglist-editor-4.2.0-r1 77
+RMD160 b7af757671071fb6f0e3c2c7f0f04db8d99fef0f files/digest-xfce4-bglist-editor-4.2.0-r1 77
+SHA256 2b762012ecc90ac0dba7d2a59ef4b42784613e3a09bade430a0810688cf033e7 files/digest-xfce4-bglist-editor-4.2.0-r1 77

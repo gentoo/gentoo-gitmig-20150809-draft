@@ -1,5 +1,5 @@
 DIST Terminal-0.2.2.tar.bz2 748212
-DIST Terminal-0.2.4.tar.bz2 1008348
+DIST Terminal-0.2.4.tar.bz2 1008348 RMD160 1c01548ab4e208c9dd423155cf43fd42acb47a1c SHA1 8787f574469ec47cba9786d64fa5803fd28dd3b3 SHA256 211919ed901670e11c1d7c8c82309b15d28b5da8e73cc722f8d03bd4bedf14ef
 DIST Terminal-0.2.4pre1.tar.bz2 852936
 DIST Terminal-0.2.5.1beta1.tar.bz2 1516280 RMD160 0828a49b5201381242b07e2baf121d284d3fd7a1 SHA256 9eff0b56f2033bc80bdd2e914f67ef405f59827ea55983a9f045c3ac25a6c59b
 DIST Terminal-0.2.5.4beta2.tar.bz2 1543237 RMD160 3d8b4fd7030e89695cfc9fa4228858654d9d1ffe SHA1 7bb42c4bae997539fd33c0ad19f653914f92d86d SHA256 7c4e793729246bf0cca340cef123eb8307808899f4b7cefe053e563663f0386a
@@ -38,12 +38,12 @@ SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata
 MD5 d70719558b669d516582f062bf02d7c9 files/digest-terminal-0.2.2-r1 67
 RMD160 1b7b0a8c4d327ff65e55d8f0c8e2bb06e2f94698 files/digest-terminal-0.2.2-r1 67
 SHA256 197ce690cce048cc921e819484a92578c369fdfc00fb5a72e25d879439e6e484 files/digest-terminal-0.2.2-r1 67
-MD5 7ef99426867dafad5a6020ba78dfa5c2 files/digest-terminal-0.2.4 68
-RMD160 78faebfff2089e8d39f82b0268e5422d59388aef files/digest-terminal-0.2.4 68
-SHA256 8308c169bc93c421ed14bcd60ca2f2ff5161b09642791e50e867daa8dc7996e0 files/digest-terminal-0.2.4 68
-MD5 7ef99426867dafad5a6020ba78dfa5c2 files/digest-terminal-0.2.4-r1 68
-RMD160 78faebfff2089e8d39f82b0268e5422d59388aef files/digest-terminal-0.2.4-r1 68
-SHA256 8308c169bc93c421ed14bcd60ca2f2ff5161b09642791e50e867daa8dc7996e0 files/digest-terminal-0.2.4-r1 68
+MD5 29a9d960f31ad519c377b7de7270939f files/digest-terminal-0.2.4 250
+RMD160 32dddb1d096a3f0b2059abaa698fc8b02234f0e1 files/digest-terminal-0.2.4 250
+SHA256 cbfbb3a45196c62e73df7749bc02b260fdd06d2d0db3c998ecf1b063f064e3d3 files/digest-terminal-0.2.4 250
+MD5 29a9d960f31ad519c377b7de7270939f files/digest-terminal-0.2.4-r1 250
+RMD160 32dddb1d096a3f0b2059abaa698fc8b02234f0e1 files/digest-terminal-0.2.4-r1 250
+SHA256 cbfbb3a45196c62e73df7749bc02b260fdd06d2d0db3c998ecf1b063f064e3d3 files/digest-terminal-0.2.4-r1 250
 MD5 ffe4301116b9b2a849aeb52d1e74fd0f files/digest-terminal-0.2.4_pre1 71
 RMD160 2ea9fdda0a0edcdf38a790ad94a2c1ae28f074d9 files/digest-terminal-0.2.4_pre1 71
 SHA256 2da3beb3c8797c78750fd2d976f618c6439ae49012df0ba5a594ad4a71490ab3 files/digest-terminal-0.2.4_pre1 71

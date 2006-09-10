@@ -1,21 +1,42 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0fced766f6059422ee6ef0b868484c74 xfce4-notes-0.10.0.ebuild 377
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 8032df3bec249cf0042aca3f2c6eb790 ChangeLog 1685
-MD5 9278d13a9225aa157f615695ee8ae7e0 xfce4-notes-0.10.0-r1.ebuild 466
-MD5 cd15f6abd7facb85375a0b3111c12a19 xfce4-notes-0.9.7-r1.ebuild 384
-MD5 046dadc9c89e2656858ddcc9b9839d37 xfce4-notes-0.10.0-r2.ebuild 472
-MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r1 77
+AUX notes_applet.c.patch 285 RMD160 ccdc6f6fa9fabb306b599bfa3e123a2f96093ff3 SHA1 702ddbd7a1d418a6ed5943e2fd735e1823906401 SHA256 97128cc77617c8e1fc1a493faaa1ecdf12796f3bb73c1f4ca53bd78652571dee
 MD5 26718c962f6a184d14efff98f76c2bd7 files/notes_applet.c.patch 285
-MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r2 77
+RMD160 ccdc6f6fa9fabb306b599bfa3e123a2f96093ff3 files/notes_applet.c.patch 285
+SHA256 97128cc77617c8e1fc1a493faaa1ecdf12796f3bb73c1f4ca53bd78652571dee files/notes_applet.c.patch 285
+DIST xfce4-notes-plugin-0.10.0.tar.gz 327653
+DIST xfce4-notes-plugin-0.9.7.tar.gz 326290
+EBUILD xfce4-notes-0.10.0-r1.ebuild 466 RMD160 5af395917a78054437b31c0709588b3b15c9158f SHA1 2a4daf96b8f67409568f35e057d12759b4fd17e3 SHA256 5f36a76c31426c823be7f6d929bc7b141d2ed683ee522d93129cb2aaf0c707b9
+MD5 9278d13a9225aa157f615695ee8ae7e0 xfce4-notes-0.10.0-r1.ebuild 466
+RMD160 5af395917a78054437b31c0709588b3b15c9158f xfce4-notes-0.10.0-r1.ebuild 466
+SHA256 5f36a76c31426c823be7f6d929bc7b141d2ed683ee522d93129cb2aaf0c707b9 xfce4-notes-0.10.0-r1.ebuild 466
+EBUILD xfce4-notes-0.10.0-r2.ebuild 472 RMD160 0f3be545c6d7597c0ddcd83170dac36bbbb7dc6f SHA1 589f6f52c2f47c9f6ae2ea2cd0e181a6ff7689ee SHA256 5b12d5ffc1dce23fd4d4ef802e79ba6f895f0f7497642552150173880c9d8f78
+MD5 046dadc9c89e2656858ddcc9b9839d37 xfce4-notes-0.10.0-r2.ebuild 472
+RMD160 0f3be545c6d7597c0ddcd83170dac36bbbb7dc6f xfce4-notes-0.10.0-r2.ebuild 472
+SHA256 5b12d5ffc1dce23fd4d4ef802e79ba6f895f0f7497642552150173880c9d8f78 xfce4-notes-0.10.0-r2.ebuild 472
+EBUILD xfce4-notes-0.10.0.ebuild 377 RMD160 c04b27836ed296356bdf3c4f5baf049d6ccd625a SHA1 ea03838a2ded0a53f76608aabc856b1ff98856ae SHA256 a00644628bfcaa2cbadaa9174efc3463f733b8d468376cf39ced791f289effac
+MD5 0fced766f6059422ee6ef0b868484c74 xfce4-notes-0.10.0.ebuild 377
+RMD160 c04b27836ed296356bdf3c4f5baf049d6ccd625a xfce4-notes-0.10.0.ebuild 377
+SHA256 a00644628bfcaa2cbadaa9174efc3463f733b8d468376cf39ced791f289effac xfce4-notes-0.10.0.ebuild 377
+EBUILD xfce4-notes-0.9.7-r1.ebuild 384 RMD160 6f462f41466dba55416e7cf9583ade2dc01d22b1 SHA1 58cdc9fceff2621cb6b7e9cbd5a0784d7d4e64d2 SHA256 4ba4a4892fbbbf26d0d78ef85e2c42e9cd02a1fff04777dde30cb1e20ad0f370
+MD5 cd15f6abd7facb85375a0b3111c12a19 xfce4-notes-0.9.7-r1.ebuild 384
+RMD160 6f462f41466dba55416e7cf9583ade2dc01d22b1 xfce4-notes-0.9.7-r1.ebuild 384
+SHA256 4ba4a4892fbbbf26d0d78ef85e2c42e9cd02a1fff04777dde30cb1e20ad0f370 xfce4-notes-0.9.7-r1.ebuild 384
+MISC ChangeLog 1685 RMD160 18d72e3ad5a526db3f7eb5943cc9193c0af65c73 SHA1 07457c45dd0e537a0a172f89568f1021d3b4e35a SHA256 be59c7d0820b04df164aa18e207f757cfe014c0dd4ca5d877a70d4b3461ec4bc
+MD5 8032df3bec249cf0042aca3f2c6eb790 ChangeLog 1685
+RMD160 18d72e3ad5a526db3f7eb5943cc9193c0af65c73 ChangeLog 1685
+SHA256 be59c7d0820b04df164aa18e207f757cfe014c0dd4ca5d877a70d4b3461ec4bc ChangeLog 1685
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0 77
+RMD160 45277e1edaced6d2f75ed58265e0272eb5cdfdb8 files/digest-xfce4-notes-0.10.0 77
+SHA256 9643e2d1f10dea6bda839a6aaeb209e86789fc58b418c2071906d1cd6e3b4fbc files/digest-xfce4-notes-0.10.0 77
+MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r1 77
+RMD160 45277e1edaced6d2f75ed58265e0272eb5cdfdb8 files/digest-xfce4-notes-0.10.0-r1 77
+SHA256 9643e2d1f10dea6bda839a6aaeb209e86789fc58b418c2071906d1cd6e3b4fbc files/digest-xfce4-notes-0.10.0-r1 77
+MD5 ac9ea5633311f8effbd11a24724d9cb4 files/digest-xfce4-notes-0.10.0-r2 77
+RMD160 45277e1edaced6d2f75ed58265e0272eb5cdfdb8 files/digest-xfce4-notes-0.10.0-r2 77
+SHA256 9643e2d1f10dea6bda839a6aaeb209e86789fc58b418c2071906d1cd6e3b4fbc files/digest-xfce4-notes-0.10.0-r2 77
 MD5 6b41a6e0f0f511c726ef91eb894a79cd files/digest-xfce4-notes-0.9.7-r1 76
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDVRNxJrHF4yAQTrARAiWeAJ46BHCJefYgaSTSmhpDO/zpd1rEuQCdFLh+
-E9uXYfVpA3zms8veHbrpucU=
-=wTNn
------END PGP SIGNATURE-----
+RMD160 72095c434bc77c6cf7bb78ac1f867879a90b81cf files/digest-xfce4-notes-0.9.7-r1 76
+SHA256 fbfd36ae2aa9dfc1c4ef6a0c9e18dd133dd74c20bf6cfe709576b71759024a7e files/digest-xfce4-notes-0.9.7-r1 76

@@ -1,6 +1,23 @@
+DIST xfce4-showdesktop-plugin-0.4.0.tar.gz 319275
+EBUILD xfce4-showdesktop-0.4.0-r1.ebuild 427 RMD160 ab51040af218439d50ac56de0af8370437c48f73 SHA1 0a0ffe1418c0dd61bcc90969df117010f7d63d55 SHA256 d175f264b61b4b685bac3f64b67a5e61d19f0d23e91dd3d190d9c1c617fa635f
 MD5 eba778e5c19a91b4682617ac0aef3888 xfce4-showdesktop-0.4.0-r1.ebuild 427
+RMD160 ab51040af218439d50ac56de0af8370437c48f73 xfce4-showdesktop-0.4.0-r1.ebuild 427
+SHA256 d175f264b61b4b685bac3f64b67a5e61d19f0d23e91dd3d190d9c1c617fa635f xfce4-showdesktop-0.4.0-r1.ebuild 427
+EBUILD xfce4-showdesktop-0.4.0-r2.ebuild 420 RMD160 9e94e928d5237b9c493b9d217c4d6f5487916e2e SHA1 f3ada4a229cf2cf933d1cdfa9c4bb7d9164a8a66 SHA256 fb14a5732cc38577538d1ae8502886d09205dcf9155fc574ebab21bbd83a87ae
 MD5 c5790e6fc19ba2d0299db8b6487e8430 xfce4-showdesktop-0.4.0-r2.ebuild 420
+RMD160 9e94e928d5237b9c493b9d217c4d6f5487916e2e xfce4-showdesktop-0.4.0-r2.ebuild 420
+SHA256 fb14a5732cc38577538d1ae8502886d09205dcf9155fc574ebab21bbd83a87ae xfce4-showdesktop-0.4.0-r2.ebuild 420
+MISC ChangeLog 2827 RMD160 1fb2f8ed8f998bb40e364abe8df6b1ccfe7dfb44 SHA1 c110be5d1fc601962bee6c73b9983785b4d1064b SHA256 8f43a8ee92381d6d4b95b2f1bf797ffecfd0a3a2616bbe6525cc212afc34800f
 MD5 40085a59c47065e7acfa5cc3e0af044c ChangeLog 2827
+RMD160 1fb2f8ed8f998bb40e364abe8df6b1ccfe7dfb44 ChangeLog 2827
+SHA256 8f43a8ee92381d6d4b95b2f1bf797ffecfd0a3a2616bbe6525cc212afc34800f ChangeLog 2827
+MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae91f2588bdae8667d37a98fb3090d539eeca1 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
+SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
 MD5 357a04cf01b83e869c015c8be2e161ca files/digest-xfce4-showdesktop-0.4.0-r1 82
+RMD160 f94effd22310a96f172c02527bc252fde83bb5c9 files/digest-xfce4-showdesktop-0.4.0-r1 82
+SHA256 5b2c269aac75dbe62da97eeb62bb00585444d7d136ddc6241612962c957cdc8c files/digest-xfce4-showdesktop-0.4.0-r1 82
 MD5 357a04cf01b83e869c015c8be2e161ca files/digest-xfce4-showdesktop-0.4.0-r2 82
+RMD160 f94effd22310a96f172c02527bc252fde83bb5c9 files/digest-xfce4-showdesktop-0.4.0-r2 82
+SHA256 5b2c269aac75dbe62da97eeb62bb00585444d7d136ddc6241612962c957cdc8c files/digest-xfce4-showdesktop-0.4.0-r2 82
