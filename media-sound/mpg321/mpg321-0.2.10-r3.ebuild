@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r3.ebuild,v 1.1 2005/08/29 09:48:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r3.ebuild,v 1.2 2006/09/10 18:09:41 the_paya Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="media-libs/libmad
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 -mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 -mips ~ppc ~ppc-macos ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 PROVIDE="virtual/mpg123"
 
