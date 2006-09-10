@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/urlgfe-1.0.ebuild,v 1.2 2006/08/02 22:32:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/urlgfe-1.0.ebuild,v 1.3 2006/09/10 17:18:18 swegener Exp $
 
 inherit eutils autotools
 
@@ -27,7 +27,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/1.0-as-needed.patch
 
-	eautoreconf
+	autopoint -f
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
