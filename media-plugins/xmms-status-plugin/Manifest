@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX README.Gentoo 496 RMD160 c604e9f3331f3d4370a405dbb7f10f36f71de024 SHA1 b66ed3a07b130d266c77d03de84a52f775d698d4 SHA256 bf252c5b84b3c28b2ed7e7b47befe4b52f09926adf254a24552b3c53d73a9599
 MD5 082c6bbe174adab5eb4abfd74bf3e27d files/README.Gentoo 496
 RMD160 c604e9f3331f3d4370a405dbb7f10f36f71de024 files/README.Gentoo 496
@@ -28,10 +25,3 @@ SHA256 20cafbe9402fa19ebd4374a62f2ffa7ed36a06a72a12efd7942de29ea90d5c1f files/di
 MD5 63a80da40a1e22895c0b0267012d10fe files/digest-xmms-status-plugin-1.0-r1 74
 RMD160 e4d3063fcf9849cc4339474ece8577c324007f17 files/digest-xmms-status-plugin-1.0-r1 74
 SHA256 20cafbe9402fa19ebd4374a62f2ffa7ed36a06a72a12efd7942de29ea90d5c1f files/digest-xmms-status-plugin-1.0-r1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFA0hU10xuJSrg3/sRAgllAJ0ePs5I4aZD05BSqxxF6gLdpoXyQQCfY58D
-Ts2bSp6zR6wYRjGDDYLfKhs=
-=hMWb
------END PGP SIGNATURE-----

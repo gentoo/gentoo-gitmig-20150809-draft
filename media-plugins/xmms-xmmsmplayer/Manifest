@@ -1,20 +1,38 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89bb1f8bdc30c1df887cc114551675e5 ChangeLog 2000
-MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5 67
-MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5-r1 67
-MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5-r2 67
+AUX exts-filter.patch 7597 RMD160 b9f27225b50f758cde0d9f44772518baf56191a4 SHA1 6cdbbc1aaf263a603c5f6222fa3da9f9e2ab1319 SHA256 8ec232f36e09d88d7cd9072881f554b9a0844d8447e02364275f6a1b09cd66c3
 MD5 4e43eabdfe813855a2c9b5d4e182c65b files/exts-filter.patch 7597
+RMD160 b9f27225b50f758cde0d9f44772518baf56191a4 files/exts-filter.patch 7597
+SHA256 8ec232f36e09d88d7cd9072881f554b9a0844d8447e02364275f6a1b09cd66c3 files/exts-filter.patch 7597
+AUX xmms-xmmsmplayer-0.5-sigsegvfix.patch 589 RMD160 fdc456e873d851d7acc701a2e033a241ae1f9f2a SHA1 f8d916999c539ab3444649103e4bb5d4d173a064 SHA256 733fcec082c9b4e25cf097f7fcc71cb17405da9d4fc20b71eb4a1acd20a23d92
 MD5 45a9a154b726f1f74deb37c8c36fbe4f files/xmms-xmmsmplayer-0.5-sigsegvfix.patch 589
-MD5 223dfdc3e10800dbb22bad28c928b52a metadata.xml 177
+RMD160 fdc456e873d851d7acc701a2e033a241ae1f9f2a files/xmms-xmmsmplayer-0.5-sigsegvfix.patch 589
+SHA256 733fcec082c9b4e25cf097f7fcc71cb17405da9d4fc20b71eb4a1acd20a23d92 files/xmms-xmmsmplayer-0.5-sigsegvfix.patch 589
+DIST xmmsmplayer-0.5.tar.gz 230696
+EBUILD xmms-xmmsmplayer-0.5-r1.ebuild 931 RMD160 7d10e05acfb30fdc7dc9d7fd02ea82cbc8d623c6 SHA1 8f19d189719418cb084cd24eb8e7950639a59350 SHA256 025b84d51f21792b05a9590cdb8082872e0922f4467af05f9a7395a21f8a9328
 MD5 784a27d1e1a1c9d81b28c14e95ec8359 xmms-xmmsmplayer-0.5-r1.ebuild 931
+RMD160 7d10e05acfb30fdc7dc9d7fd02ea82cbc8d623c6 xmms-xmmsmplayer-0.5-r1.ebuild 931
+SHA256 025b84d51f21792b05a9590cdb8082872e0922f4467af05f9a7395a21f8a9328 xmms-xmmsmplayer-0.5-r1.ebuild 931
+EBUILD xmms-xmmsmplayer-0.5-r2.ebuild 972 RMD160 85663f241fe520b1324d2c9cc411a57816192ab0 SHA1 404e4775269db73af31d7b73d79523513c3e7110 SHA256 0f7ae233509a2ae0cc521f03abd7f6941145faab4bbd71420651a12a55a28f28
 MD5 b5f641ab80d0ef30e612943432ff6c58 xmms-xmmsmplayer-0.5-r2.ebuild 972
+RMD160 85663f241fe520b1324d2c9cc411a57816192ab0 xmms-xmmsmplayer-0.5-r2.ebuild 972
+SHA256 0f7ae233509a2ae0cc521f03abd7f6941145faab4bbd71420651a12a55a28f28 xmms-xmmsmplayer-0.5-r2.ebuild 972
+EBUILD xmms-xmmsmplayer-0.5.ebuild 910 RMD160 52cc9b49cd80e1a14d26715ec7b726c1855d4a70 SHA1 b10d2984aad8b75994521d26f9fca914072d5ec3 SHA256 1b2a95b462490b61afdab43f8d76ff9b197dca1f0a0578c80f5c3f4aa75e8044
 MD5 53d848d791bab4a28da28266cf8c189d xmms-xmmsmplayer-0.5.ebuild 910
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDxbBUwUpWvClEHQoRAowEAJ9c7FKsfrwS517ZHhBldA2e5LtMKQCfekJy
-HtYXDn0Bo1HMMitckLEIhtQ=
-=Als9
------END PGP SIGNATURE-----
+RMD160 52cc9b49cd80e1a14d26715ec7b726c1855d4a70 xmms-xmmsmplayer-0.5.ebuild 910
+SHA256 1b2a95b462490b61afdab43f8d76ff9b197dca1f0a0578c80f5c3f4aa75e8044 xmms-xmmsmplayer-0.5.ebuild 910
+MISC ChangeLog 2000 RMD160 06f12e76d97b38e29c72802482b61d98ec5de9d3 SHA1 52874a547c6dd5a40f26ba516688d1b838d9926a SHA256 dbfc09f6de530cb447d103d0cfe244fab278d890c3370917ce974187e97c52d2
+MD5 89bb1f8bdc30c1df887cc114551675e5 ChangeLog 2000
+RMD160 06f12e76d97b38e29c72802482b61d98ec5de9d3 ChangeLog 2000
+SHA256 dbfc09f6de530cb447d103d0cfe244fab278d890c3370917ce974187e97c52d2 ChangeLog 2000
+MISC metadata.xml 177 RMD160 198b70627ff2497bddd0a381069abafea8b14ae5 SHA1 dc1cf9e47733b7b16cc1bf5eca6e7b4292891846 SHA256 fbe4df42485e5215a09c2a0b7ff74408d90276993544a49df84dbe759343abc9
+MD5 223dfdc3e10800dbb22bad28c928b52a metadata.xml 177
+RMD160 198b70627ff2497bddd0a381069abafea8b14ae5 metadata.xml 177
+SHA256 fbe4df42485e5215a09c2a0b7ff74408d90276993544a49df84dbe759343abc9 metadata.xml 177
+MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5 67
+RMD160 d38a6869d45562325a1d90f767f7e51282e881ee files/digest-xmms-xmmsmplayer-0.5 67
+SHA256 b674038731241bea410964e4563806cde3feaaf4a11297a01c442500fd828c51 files/digest-xmms-xmmsmplayer-0.5 67
+MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5-r1 67
+RMD160 d38a6869d45562325a1d90f767f7e51282e881ee files/digest-xmms-xmmsmplayer-0.5-r1 67
+SHA256 b674038731241bea410964e4563806cde3feaaf4a11297a01c442500fd828c51 files/digest-xmms-xmmsmplayer-0.5-r1 67
+MD5 1b7ac53d1d91e6e03452da584d63d8c3 files/digest-xmms-xmmsmplayer-0.5-r2 67
+RMD160 d38a6869d45562325a1d90f767f7e51282e881ee files/digest-xmms-xmmsmplayer-0.5-r2 67
+SHA256 b674038731241bea410964e4563806cde3feaaf4a11297a01c442500fd828c51 files/digest-xmms-xmmsmplayer-0.5-r2 67

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX xmms-crossfade-0.3.9-gcc4.patch 399 RMD160 226e2da415fa5d00288c6d60b70485b9ab756c85 SHA1 edc520751031f1c2330c3455ceebb8afb5a4a9d5 SHA256 f051e6be436a79351d2610c4158f60069a3ec1d62eb1fea760d270202311c0b2
 MD5 26c20becb985cd35bef2b67d66ed2616 files/xmms-crossfade-0.3.9-gcc4.patch 399
 RMD160 226e2da415fa5d00288c6d60b70485b9ab756c85 files/xmms-crossfade-0.3.9-gcc4.patch 399
@@ -8,8 +5,8 @@ SHA256 f051e6be436a79351d2610c4158f60069a3ec1d62eb1fea760d270202311c0b2 files/xm
 DIST xmms-crossfade-0.3.10.tar.gz 476290 RMD160 8d4d06d16224f21ad0602dd617695cb20a6e2c4e SHA1 6f74334e962020a7819abcefcbb6273bc59a8e08 SHA256 47bf100674a179799e80030bf0da68bce1b10b5427a62e0a9de108d40bac2aaf
 DIST xmms-crossfade-0.3.11.tar.gz 494334 RMD160 a42b319fc8cdfb8cce4d011c5d3818efd8b34bd7 SHA1 e9f2f92a30910afe08570e6af69ed14ed24b1ac5 SHA256 2229fc32e96293e213d8a5d60a7f95225dfc25cec4be8a4a9702cac5defcb33b
 DIST xmms-crossfade-0.3.4.tar.gz 293320
-DIST xmms-crossfade-0.3.8.tar.gz 435761
-DIST xmms-crossfade-0.3.9.tar.gz 475648
+DIST xmms-crossfade-0.3.8.tar.gz 435761 RMD160 c94ed855a1195fdd58b677ceed36885a84cb778b SHA1 3eab992bdeafd0edc1edfc17c7f943e7ced62bf8 SHA256 ffc1126315ef1de53b8a846432ccc7bea69209b48a8925cbe8ce9d4d3a0d6b75
+DIST xmms-crossfade-0.3.9.tar.gz 475648 RMD160 579a576b9e8d35c96c3048ebec469caaf556959d SHA1 43d6b975f321d8c8350f5baa47024b6c116e4ee1 SHA256 53d014c9fa9f32685e806c0a7a1b71556ad06a79b0d2ca4757328d19b510ae82
 EBUILD xmms-crossfade-0.3.10.ebuild 974 RMD160 ad0b6ea8ca565ddf0d58bf322754991afde8d7a9 SHA1 a929c6b13edc886ceb7b1207bd9c918fb3c890a2 SHA256 2bbbccda4931f9aa03e34e2069ca54fe3baa89f4d9e6d2cc431b47404478002c
 MD5 9787b7c5ca08a9daa74acff727073eb6 xmms-crossfade-0.3.10.ebuild 974
 RMD160 ad0b6ea8ca565ddf0d58bf322754991afde8d7a9 xmms-crossfade-0.3.10.ebuild 974
@@ -47,16 +44,9 @@ SHA256 819ad223d1173885295830a53740aff63d88a59b31ca413bb068eb3d1aba1483 files/di
 MD5 fca01d6a0ca85be3532efac855b1869f files/digest-xmms-crossfade-0.3.4 72
 RMD160 dcea1310deb6262bb40b306af1a8f3d48c2e677c files/digest-xmms-crossfade-0.3.4 72
 SHA256 e0e5b9ee3bb5aca27ab905e79dcdba7f2736f6922c51b162aa7e536aaca0734c files/digest-xmms-crossfade-0.3.4 72
-MD5 9bd20128f860dc9821976ce49fd6f70f files/digest-xmms-crossfade-0.3.8 72
-RMD160 78d0875c328af682e1b986c3af4294dbef0187c8 files/digest-xmms-crossfade-0.3.8 72
-SHA256 6945552129f5cfe9c1fa0de55192b429b51304ff5fcbc8c5db37f6e4d1b13161 files/digest-xmms-crossfade-0.3.8 72
-MD5 6c1f6389e8095123f12c43f6fc47cd13 files/digest-xmms-crossfade-0.3.9 72
-RMD160 72aa0ff9b85f37732216d77816358d6721f57f7d files/digest-xmms-crossfade-0.3.9 72
-SHA256 1b2b22c03f00a657516f40b7d26025bf97019318fe4c282bfa77493be9376220 files/digest-xmms-crossfade-0.3.9 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFFAC7fKRy60XGEcJIRAmq8AKCaioqFuAv4AUUqFhjvefFfC0MEKwCgqP/Y
-E8OesYUOZDattwYFjWQr4gY=
-=4ITi
------END PGP SIGNATURE-----
+MD5 50ec4dcc7b8361ea466919ea7d20ed87 files/digest-xmms-crossfade-0.3.8 262
+RMD160 f7c57249329162eff2e019c038e7e09ed30b5ba5 files/digest-xmms-crossfade-0.3.8 262
+SHA256 53be62df3e86384a616362f2816e5ec756af5ecf5429909e7cbe449ade15b9df files/digest-xmms-crossfade-0.3.8 262
+MD5 b5ac8cd6544accf5318c6f8743c3f6cb files/digest-xmms-crossfade-0.3.9 262
+RMD160 266138c6ee2c7bcdfb482beab6ffd5cf73b0a1bd files/digest-xmms-crossfade-0.3.9 262
+SHA256 6586fc0f804b6417c5687ff85873e1422a1c33a4d39a49d8587ff6f65b6946c2 files/digest-xmms-crossfade-0.3.9 262

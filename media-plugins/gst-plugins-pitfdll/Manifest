@@ -1,8 +1,31 @@
-MD5 bb8e18e8af9b5efd4fb3144be85e7f03 gst-plugins-pitfdll-0.8.1-r1.ebuild 1263
-MD5 34b506d22ebe8f8a4a1074e005bbfc71 ChangeLog 1074
-MD5 23ac81da1f6fba48d169912bc57418e7 gst-plugins-pitfdll-0.8.1.ebuild 1179
-MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
-MD5 3b8072e2fbbb243bd725b463bf15b558 files/gst-plugins-pitfdll-0.8.1-mutex.patch 1230
-MD5 496cd856ca2d5ecbcffef0e5853816fa files/digest-gst-plugins-pitfdll-0.8.1-r1 66
+AUX gst-plugins-pitfdll-0.8.1-gcc4.patch 700 RMD160 68871d9781bd4d258070daf7feadeafafeceebaa SHA1 0a5edaabcb992341e80484e695831ca220aacf14 SHA256 5b1c8aea213dadf2dcaac1aa019b5fb03510ca8824d925a9101627689f9a6afd
 MD5 5547c9157c976e1b9abf122228455385 files/gst-plugins-pitfdll-0.8.1-gcc4.patch 700
+RMD160 68871d9781bd4d258070daf7feadeafafeceebaa files/gst-plugins-pitfdll-0.8.1-gcc4.patch 700
+SHA256 5b1c8aea213dadf2dcaac1aa019b5fb03510ca8824d925a9101627689f9a6afd files/gst-plugins-pitfdll-0.8.1-gcc4.patch 700
+AUX gst-plugins-pitfdll-0.8.1-mutex.patch 1230 RMD160 710ad94e1efdb0d6adb56d05d955e2225db658a6 SHA1 70b21e5199296cede8a59a5d6b36f8c718d7a5a6 SHA256 ca3f14675bbac36bb5b85ae5e84c0ba3889c4f73cbff570bae57cf799662e570
+MD5 3b8072e2fbbb243bd725b463bf15b558 files/gst-plugins-pitfdll-0.8.1-mutex.patch 1230
+RMD160 710ad94e1efdb0d6adb56d05d955e2225db658a6 files/gst-plugins-pitfdll-0.8.1-mutex.patch 1230
+SHA256 ca3f14675bbac36bb5b85ae5e84c0ba3889c4f73cbff570bae57cf799662e570 files/gst-plugins-pitfdll-0.8.1-mutex.patch 1230
+DIST pitfdll-0.8.1.tar.bz2 427624
+EBUILD gst-plugins-pitfdll-0.8.1-r1.ebuild 1263 RMD160 4dc248018cafcf565800343325bc892002b6d9ad SHA1 d961ea85a32ea02c7a250adbe9e3082e538874a6 SHA256 6b52d26f2d03b36bf8d02e65ba3995c6cddff681b0aa08c0f0be26b8ef1d4492
+MD5 bb8e18e8af9b5efd4fb3144be85e7f03 gst-plugins-pitfdll-0.8.1-r1.ebuild 1263
+RMD160 4dc248018cafcf565800343325bc892002b6d9ad gst-plugins-pitfdll-0.8.1-r1.ebuild 1263
+SHA256 6b52d26f2d03b36bf8d02e65ba3995c6cddff681b0aa08c0f0be26b8ef1d4492 gst-plugins-pitfdll-0.8.1-r1.ebuild 1263
+EBUILD gst-plugins-pitfdll-0.8.1.ebuild 1179 RMD160 f84f1d8dd6bad13ff34234ab785feecff82d8ece SHA1 87a77be52b0276ed14df7a0bc4db64e82b9da021 SHA256 c66edfca87d7cc46e07210a322ed7fb0993385b8a30dbb807c20410d08daa1e5
+MD5 23ac81da1f6fba48d169912bc57418e7 gst-plugins-pitfdll-0.8.1.ebuild 1179
+RMD160 f84f1d8dd6bad13ff34234ab785feecff82d8ece gst-plugins-pitfdll-0.8.1.ebuild 1179
+SHA256 c66edfca87d7cc46e07210a322ed7fb0993385b8a30dbb807c20410d08daa1e5 gst-plugins-pitfdll-0.8.1.ebuild 1179
+MISC ChangeLog 1074 RMD160 fb0ff08bd630689a4fcc31dee0d4024867b71e62 SHA1 77fbd9a7029017fc2fc0b7839d1fe79e31975ff7 SHA256 39e679c14d6a12f05e8816c9839da5ee872e0973266fc230cdbc3101fbb52568
+MD5 34b506d22ebe8f8a4a1074e005bbfc71 ChangeLog 1074
+RMD160 fb0ff08bd630689a4fcc31dee0d4024867b71e62 ChangeLog 1074
+SHA256 39e679c14d6a12f05e8816c9839da5ee872e0973266fc230cdbc3101fbb52568 ChangeLog 1074
+MISC metadata.xml 162 RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 SHA1 f46f8ccd62374b17183b5aca523c4dcf60d718f9 SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1
+MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
+RMD160 c6078d82a9ff46dbb283bc14ade9d117144cca67 metadata.xml 162
+SHA256 3ac891ee23de8c6e2bef32e0c7aa3e6607e808de76ed723fbe7a1fb92f6093f1 metadata.xml 162
 MD5 496cd856ca2d5ecbcffef0e5853816fa files/digest-gst-plugins-pitfdll-0.8.1 66
+RMD160 1d0d5083507a7abcc341cd01a9ce8de6f39b50c7 files/digest-gst-plugins-pitfdll-0.8.1 66
+SHA256 e256c05d1b8f96e35ed03e5813576d80b4725a7e8673b86bee06523b43d6be98 files/digest-gst-plugins-pitfdll-0.8.1 66
+MD5 496cd856ca2d5ecbcffef0e5853816fa files/digest-gst-plugins-pitfdll-0.8.1-r1 66
+RMD160 1d0d5083507a7abcc341cd01a9ce8de6f39b50c7 files/digest-gst-plugins-pitfdll-0.8.1-r1 66
+SHA256 e256c05d1b8f96e35ed03e5813576d80b4725a7e8673b86bee06523b43d6be98 files/digest-gst-plugins-pitfdll-0.8.1-r1 66

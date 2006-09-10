@@ -1,22 +1,47 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7b0668657a0854e2ef2e7f033df516ec xmms-musepack-1.1.2.ebuild 717
-MD5 594f2638ad9133ddbfddd446b6116a0e xmms-musepack-1.00.ebuild 1593
-MD5 d829882c166c6b63c468539da04a9b4f xmms-musepack-1.1-r1.ebuild 765
-MD5 f058e68b730d165a804dcfca8d1edc03 ChangeLog 6422
-MD5 3dcba4286b7f876b76583eb396cae3e4 xmms-musepack-1.1.ebuild 663
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4e97b5144a2c0a49cb7e1ef0ef9e33c3 files/digest-xmms-musepack-1.00 70
-MD5 0278897d38e13c0ab23fb09ac67f4270 files/xmms-musepack-1.1-glib.patch 1379
-MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1 70
-MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1-r1 70
-MD5 b1b6b0f98a41c785c87182d4565122d7 files/digest-xmms-musepack-1.1.2 72
+AUX xmms-musepack-1.00-bad-makefile.patch 1796 RMD160 ae408a9eeaaeb36f7f4585598541c39edbdf8cda SHA1 453a25fcfda240d3766ef0a662fca50e07b140ee SHA256 fdd12f37c19c359a12aa30654ca29b4df74012a4d230d46954e6281c0ecd295e
 MD5 9fd390603c336d139e7a8a2ec1ffb183 files/xmms-musepack-1.00-bad-makefile.patch 1796
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDef7qKRy60XGEcJIRAoIMAJoDd8f3jiCTbcJtfXoaVWeV2QsVTACfdwjK
-vTTDveTEPVUrd9jiIIK5Hcs=
-=Gszd
------END PGP SIGNATURE-----
+RMD160 ae408a9eeaaeb36f7f4585598541c39edbdf8cda files/xmms-musepack-1.00-bad-makefile.patch 1796
+SHA256 fdd12f37c19c359a12aa30654ca29b4df74012a4d230d46954e6281c0ecd295e files/xmms-musepack-1.00-bad-makefile.patch 1796
+AUX xmms-musepack-1.1-glib.patch 1379 RMD160 b0cac1ae254051c0667e11d53e7de00fb2819b4c SHA1 7f4ebdae3281f06127d93e17edcb8be3094037bd SHA256 5998ded8a943547cf6948bc32b0591ac17943d2b148c8d8b1843f6a8dc0e6000
+MD5 0278897d38e13c0ab23fb09ac67f4270 files/xmms-musepack-1.1-glib.patch 1379
+RMD160 b0cac1ae254051c0667e11d53e7de00fb2819b4c files/xmms-musepack-1.1-glib.patch 1379
+SHA256 5998ded8a943547cf6948bc32b0591ac17943d2b148c8d8b1843f6a8dc0e6000 files/xmms-musepack-1.1-glib.patch 1379
+DIST xmms-musepack-1.00.tar.gz 126468
+DIST xmms-musepack-1.1.2.tar.bz2 217741
+DIST xmms-musepack-1.1.tar.bz2 207369
+EBUILD xmms-musepack-1.00.ebuild 1593 RMD160 6cd86fa7441eb3558eee32bfcdddf9b9880b8636 SHA1 ec487208b3248096ec639b4972808e9e5f2c7ac2 SHA256 a2231691182bb2c667b9b38072b3d165c13abc5a0c97b49dabaa7fd8a1c39264
+MD5 594f2638ad9133ddbfddd446b6116a0e xmms-musepack-1.00.ebuild 1593
+RMD160 6cd86fa7441eb3558eee32bfcdddf9b9880b8636 xmms-musepack-1.00.ebuild 1593
+SHA256 a2231691182bb2c667b9b38072b3d165c13abc5a0c97b49dabaa7fd8a1c39264 xmms-musepack-1.00.ebuild 1593
+EBUILD xmms-musepack-1.1-r1.ebuild 765 RMD160 5b17d18a91e750cb3453cfb6f3c7de46ffa1db62 SHA1 780ae15d490a8519d85bef6ef026a66a800ef4e7 SHA256 cc4eeae0885f15709a0e7712d5d4c1f0a2b189ddb0d9288a8bb4e36a3146a6a8
+MD5 d829882c166c6b63c468539da04a9b4f xmms-musepack-1.1-r1.ebuild 765
+RMD160 5b17d18a91e750cb3453cfb6f3c7de46ffa1db62 xmms-musepack-1.1-r1.ebuild 765
+SHA256 cc4eeae0885f15709a0e7712d5d4c1f0a2b189ddb0d9288a8bb4e36a3146a6a8 xmms-musepack-1.1-r1.ebuild 765
+EBUILD xmms-musepack-1.1.2.ebuild 717 RMD160 662cb4005407bfc38cb3e1809dfaacb6cc88d794 SHA1 23798fef72264dc0984d13b48ab429e24ab7a6ae SHA256 9cc26f6f0bb0b922b16b72b9bdb07912dad1e6f5027e2a9f5fd498279afc910c
+MD5 7b0668657a0854e2ef2e7f033df516ec xmms-musepack-1.1.2.ebuild 717
+RMD160 662cb4005407bfc38cb3e1809dfaacb6cc88d794 xmms-musepack-1.1.2.ebuild 717
+SHA256 9cc26f6f0bb0b922b16b72b9bdb07912dad1e6f5027e2a9f5fd498279afc910c xmms-musepack-1.1.2.ebuild 717
+EBUILD xmms-musepack-1.1.ebuild 663 RMD160 46f49e1fa7f1f99eff4265be6133b6cb71168d16 SHA1 d8a007055c5d1f368d15753019702ec9f6e4fa25 SHA256 0a80a5371c318f369de268b4f8be58c3cc3ba276d6b8c4fdcca1fb8fbcce10e0
+MD5 3dcba4286b7f876b76583eb396cae3e4 xmms-musepack-1.1.ebuild 663
+RMD160 46f49e1fa7f1f99eff4265be6133b6cb71168d16 xmms-musepack-1.1.ebuild 663
+SHA256 0a80a5371c318f369de268b4f8be58c3cc3ba276d6b8c4fdcca1fb8fbcce10e0 xmms-musepack-1.1.ebuild 663
+MISC ChangeLog 6422 RMD160 4db9b15999f93425742b25a30a0d0c9ab9ec1c83 SHA1 5949a9f8e74f18ec8752e20f0a1285e7f8cf3f2c SHA256 24dbc52d491a7ba6f720d315b74e384547254643bc34f292108c1ab2c50bd6b0
+MD5 f058e68b730d165a804dcfca8d1edc03 ChangeLog 6422
+RMD160 4db9b15999f93425742b25a30a0d0c9ab9ec1c83 ChangeLog 6422
+SHA256 24dbc52d491a7ba6f720d315b74e384547254643bc34f292108c1ab2c50bd6b0 ChangeLog 6422
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 4e97b5144a2c0a49cb7e1ef0ef9e33c3 files/digest-xmms-musepack-1.00 70
+RMD160 81bee286a5023e040794fb3b3325e90e9a88a322 files/digest-xmms-musepack-1.00 70
+SHA256 d06dfd1b80e922b3d93f00731be6fca5ccc2a741e3b58cec5f7f4ca231f68819 files/digest-xmms-musepack-1.00 70
+MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1 70
+RMD160 30a98dbd69045251e9226275ac28a33d625ca091 files/digest-xmms-musepack-1.1 70
+SHA256 6c94fe981df816999e532a1350e0022138350703ee418bf354e4d741f88a9932 files/digest-xmms-musepack-1.1 70
+MD5 15869ff792a8fcc6f89e2968d7049ab3 files/digest-xmms-musepack-1.1-r1 70
+RMD160 30a98dbd69045251e9226275ac28a33d625ca091 files/digest-xmms-musepack-1.1-r1 70
+SHA256 6c94fe981df816999e532a1350e0022138350703ee418bf354e4d741f88a9932 files/digest-xmms-musepack-1.1-r1 70
+MD5 b1b6b0f98a41c785c87182d4565122d7 files/digest-xmms-musepack-1.1.2 72
+RMD160 072a7cdb37f4dbcb5c39c14f26736511174f32ab files/digest-xmms-musepack-1.1.2 72
+SHA256 ab8b7c1b1d1bfc783c6a148e23bc9b7409520c1c0be86c408c8ba15173ae3e62 files/digest-xmms-musepack-1.1.2 72

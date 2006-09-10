@@ -1,20 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7bd462dbef8154c7aaade1e8dc1d5cff ChangeLog 3535
-MD5 f3f9865258d1a7ab26719dc5e241b524 files/digest-xmms-scrobbler-0.3.6 73
-MD5 c790015adb5c08af62d5e99d64a34da4 files/digest-xmms-scrobbler-0.3.7 73
-MD5 f1fada66ccc897082f19b62f1c8af09b files/digest-xmms-scrobbler-0.3.8.1 75
+AUX scrobbler.c.patch 421 RMD160 f8fe04448deeb01d19cdf3d13832f688b2f0a5bc SHA1 750d647ee4525fa6c2b3c8c59e4458184d741130 SHA256 4343093a704f94514de53578076b206c55847537ec764dde9d6ae10d9db7fe3b
 MD5 a06ccc8cb0399bb9cbaf1e5d276a1d47 files/scrobbler.c.patch 421
+RMD160 f8fe04448deeb01d19cdf3d13832f688b2f0a5bc files/scrobbler.c.patch 421
+SHA256 4343093a704f94514de53578076b206c55847537ec764dde9d6ae10d9db7fe3b files/scrobbler.c.patch 421
+AUX xmms_scrobbler.c.patch 241 RMD160 8364c7b84d999bf209af6eb0fa3802a8e523954d SHA1 e8ac4923a996e31ca7a9025c6ecd9a98829be7e3 SHA256 1167bbb17b153c17b47755eb2475ba8d3c60cdc011b8061c21532e47f1d6ecbe
 MD5 97ef549ab2ba1767497788587237f301 files/xmms_scrobbler.c.patch 241
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 8364c7b84d999bf209af6eb0fa3802a8e523954d files/xmms_scrobbler.c.patch 241
+SHA256 1167bbb17b153c17b47755eb2475ba8d3c60cdc011b8061c21532e47f1d6ecbe files/xmms_scrobbler.c.patch 241
+DIST xmms-scrobbler-0.3.6.tar.bz2 338393
+DIST xmms-scrobbler-0.3.7.tar.bz2 253583
+DIST xmms-scrobbler-0.3.8.1.tar.bz2 257740
+EBUILD xmms-scrobbler-0.3.6.ebuild 648 RMD160 e0f58b6025d39f768428fd4fb13c26d9bc4e826e SHA1 c4189a74189a8a4bb1a1eea449881ddaab2d44ef SHA256 6c0971e787636496d737a37fb2c7646e746e208ef9363024a3f2466227a9903f
 MD5 cc67a5ece36049d5f53ffa29f05b1845 xmms-scrobbler-0.3.6.ebuild 648
+RMD160 e0f58b6025d39f768428fd4fb13c26d9bc4e826e xmms-scrobbler-0.3.6.ebuild 648
+SHA256 6c0971e787636496d737a37fb2c7646e746e208ef9363024a3f2466227a9903f xmms-scrobbler-0.3.6.ebuild 648
+EBUILD xmms-scrobbler-0.3.7.ebuild 645 RMD160 0dc6634ad677a2dd47056a2899109311afdf8357 SHA1 b5210955ae344a190b0444cc295ba1dd3430a296 SHA256 26c514901f694f3dd979aa093244361be4b1836bc1d682e2fe370b6ae4195dcb
 MD5 2bea1aff1c8983876c6c507a4f02a29c xmms-scrobbler-0.3.7.ebuild 645
+RMD160 0dc6634ad677a2dd47056a2899109311afdf8357 xmms-scrobbler-0.3.7.ebuild 645
+SHA256 26c514901f694f3dd979aa093244361be4b1836bc1d682e2fe370b6ae4195dcb xmms-scrobbler-0.3.7.ebuild 645
+EBUILD xmms-scrobbler-0.3.8.1.ebuild 791 RMD160 960f7d36e9350cc1afec06af9305b3a38f6e34c0 SHA1 2d2132a3bb30cbaf1cb902e81fff4fdcbbca9b56 SHA256 0d54d7891c05c2db1de379e986c439ab0985ad3ca101f6db9ebf2b701c30e7a2
 MD5 69fe570b734f6caccbf286a3271f7ea6 xmms-scrobbler-0.3.8.1.ebuild 791
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDXBF5wUpWvClEHQoRAnAuAJ0Xo6fa/Un65LWR0pp1kUfqOSarwACeNM2E
-zmHa+gLM+dl9SzQZdJpL1tk=
-=RmBp
------END PGP SIGNATURE-----
+RMD160 960f7d36e9350cc1afec06af9305b3a38f6e34c0 xmms-scrobbler-0.3.8.1.ebuild 791
+SHA256 0d54d7891c05c2db1de379e986c439ab0985ad3ca101f6db9ebf2b701c30e7a2 xmms-scrobbler-0.3.8.1.ebuild 791
+MISC ChangeLog 3535 RMD160 be767e8bd4530b420261f15f245a4c74b1bdf8d9 SHA1 32684ab3c0190a52c191fd38fd2111562b756d4b SHA256 3273260c9924afbe729b63cd6141afdae33786a84ea1daa3c84a554cdf3561d7
+MD5 7bd462dbef8154c7aaade1e8dc1d5cff ChangeLog 3535
+RMD160 be767e8bd4530b420261f15f245a4c74b1bdf8d9 ChangeLog 3535
+SHA256 3273260c9924afbe729b63cd6141afdae33786a84ea1daa3c84a554cdf3561d7 ChangeLog 3535
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 f3f9865258d1a7ab26719dc5e241b524 files/digest-xmms-scrobbler-0.3.6 73
+RMD160 8499010bd63d87b38156c3d0937c1b42821086fa files/digest-xmms-scrobbler-0.3.6 73
+SHA256 34f105ab12a70eff57d07061841dbc836f0948d2956e0a5b4856be3dc2ab5fc8 files/digest-xmms-scrobbler-0.3.6 73
+MD5 c790015adb5c08af62d5e99d64a34da4 files/digest-xmms-scrobbler-0.3.7 73
+RMD160 f824f38200b5eea8d96678e94ddf8f7c143b3ca3 files/digest-xmms-scrobbler-0.3.7 73
+SHA256 fb9c09042877ae1642e67b041a1563714c4deda3af3cd22f77062a96436faee4 files/digest-xmms-scrobbler-0.3.7 73
+MD5 f1fada66ccc897082f19b62f1c8af09b files/digest-xmms-scrobbler-0.3.8.1 75
+RMD160 0d502714740ddea6914cad8fafbf5858e8aaf86c files/digest-xmms-scrobbler-0.3.8.1 75
+SHA256 5db02ab4a6f628584b89283a9ef21f32b6362926f5397bb4a784cbbe79125833 files/digest-xmms-scrobbler-0.3.8.1 75

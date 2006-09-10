@@ -1,8 +1,31 @@
-MD5 aea7bc51c5ce28debf77be8df579316c ChangeLog 1384
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 636d73592daeae3ce14298eaa4010269 xmms-mp3cue-0.94.ebuild 860
-MD5 f0c42594b1b23f4261ae60350b89a50b xmms-mp3cue-0.94-r1.ebuild 908
-MD5 da4013df13aba0eb6fcf0610a6686418 files/digest-xmms-mp3cue-0.94 67
-MD5 a999c9cc61b7b3870eeb0563c19777b3 files/xmms-mp3cue-0.94-import-cue-bug.patch 305
-MD5 da4013df13aba0eb6fcf0610a6686418 files/digest-xmms-mp3cue-0.94-r1 67
+AUX xmms-mp3cue-0.94-fPIC.patch 462 RMD160 8aea8d0c231ff9cf8853506e37e343b551296ff1 SHA1 787f4b6058fd76af5ece3f2465c5e55e0573b20f SHA256 ed6a748cb3bbc11d5e2620c68f64e9aa608b6f805c9862cc4d03f2f391e4db31
 MD5 cdcf0e69281ca5be702d2dd9f4279019 files/xmms-mp3cue-0.94-fPIC.patch 462
+RMD160 8aea8d0c231ff9cf8853506e37e343b551296ff1 files/xmms-mp3cue-0.94-fPIC.patch 462
+SHA256 ed6a748cb3bbc11d5e2620c68f64e9aa608b6f805c9862cc4d03f2f391e4db31 files/xmms-mp3cue-0.94-fPIC.patch 462
+AUX xmms-mp3cue-0.94-import-cue-bug.patch 305 RMD160 629cfe386f27bb8076ea2a732c0cad9c0ff54e38 SHA1 6c983b9cfbe78c66d99ba06d466a8df520fc16bb SHA256 b1c48a0708508d928395588785d4398fdb4f1298b5b45768a21dfdb90fa5ae14
+MD5 a999c9cc61b7b3870eeb0563c19777b3 files/xmms-mp3cue-0.94-import-cue-bug.patch 305
+RMD160 629cfe386f27bb8076ea2a732c0cad9c0ff54e38 files/xmms-mp3cue-0.94-import-cue-bug.patch 305
+SHA256 b1c48a0708508d928395588785d4398fdb4f1298b5b45768a21dfdb90fa5ae14 files/xmms-mp3cue-0.94-import-cue-bug.patch 305
+DIST XMMS-mp3cue-0.94.tar.gz 38962
+EBUILD xmms-mp3cue-0.94-r1.ebuild 908 RMD160 db8e537daed3111fbab4a4afda73ff97aee85977 SHA1 651027cb4e785d705743a35e3c0c0bacdd6ec4fa SHA256 f92a14084ad0ae2bd902c629f29f565dc8b56b035e2de67562465588f2da0c26
+MD5 f0c42594b1b23f4261ae60350b89a50b xmms-mp3cue-0.94-r1.ebuild 908
+RMD160 db8e537daed3111fbab4a4afda73ff97aee85977 xmms-mp3cue-0.94-r1.ebuild 908
+SHA256 f92a14084ad0ae2bd902c629f29f565dc8b56b035e2de67562465588f2da0c26 xmms-mp3cue-0.94-r1.ebuild 908
+EBUILD xmms-mp3cue-0.94.ebuild 860 RMD160 0c91031d5c5d39bdae4c9c2a5cdacfb7a8408295 SHA1 4718c2ce5afa6f7bdf44f8d7dc5a4d51f56d685e SHA256 6fed9bc38d4e469ff894b3845e4b59098ba3d994412231bcc7dc6beed825b778
+MD5 636d73592daeae3ce14298eaa4010269 xmms-mp3cue-0.94.ebuild 860
+RMD160 0c91031d5c5d39bdae4c9c2a5cdacfb7a8408295 xmms-mp3cue-0.94.ebuild 860
+SHA256 6fed9bc38d4e469ff894b3845e4b59098ba3d994412231bcc7dc6beed825b778 xmms-mp3cue-0.94.ebuild 860
+MISC ChangeLog 1384 RMD160 e155135cc1fe22fb6ba84c6b439317b7cfc06274 SHA1 b5f8e224fcb81f77e7c55cde9dcd7c5137c0b17a SHA256 a02a60ce3eb680d415377e2ed9eb4db2753356a407eca6b0c50c4ebb1632cc40
+MD5 aea7bc51c5ce28debf77be8df579316c ChangeLog 1384
+RMD160 e155135cc1fe22fb6ba84c6b439317b7cfc06274 ChangeLog 1384
+SHA256 a02a60ce3eb680d415377e2ed9eb4db2753356a407eca6b0c50c4ebb1632cc40 ChangeLog 1384
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 da4013df13aba0eb6fcf0610a6686418 files/digest-xmms-mp3cue-0.94 67
+RMD160 6621387f3d8855c5add54af060ba51fc9e2728c4 files/digest-xmms-mp3cue-0.94 67
+SHA256 8a07a8c6378fc9d9ae4b334b4acce716c5b43f90d40d03801df502c932882099 files/digest-xmms-mp3cue-0.94 67
+MD5 da4013df13aba0eb6fcf0610a6686418 files/digest-xmms-mp3cue-0.94-r1 67
+RMD160 6621387f3d8855c5add54af060ba51fc9e2728c4 files/digest-xmms-mp3cue-0.94-r1 67
+SHA256 8a07a8c6378fc9d9ae4b334b4acce716c5b43f90d40d03801df502c932882099 files/digest-xmms-mp3cue-0.94-r1 67

@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX xmms-goom-gcc-3.3.patch 5611 RMD160 6b7523ba4ee1d8c830da5363524432f8dbc3a263 SHA1 6a5f688e5930f5f8077c5ec16d6ab71699cf9409 SHA256 83b70dabc2aebdff734a3a6f71c8ea02d00ca4566980c8bb5ff39083f26fa057
 MD5 c799d0f5d602fcc614edff965046b897 files/xmms-goom-gcc-3.3.patch 5611
 RMD160 6b7523ba4ee1d8c830da5363524432f8dbc3a263 files/xmms-goom-gcc-3.3.patch 5611
@@ -21,10 +18,3 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 23112301f0d0c959766d6edb50e64b0b files/digest-xmms-goom-2004.0 66
 RMD160 91bcc0c423d9dfaf7d8adfae40b3b4282ae2c4c5 files/digest-xmms-goom-2004.0 66
 SHA256 dc4d029ff839a0bd517d28dca3e1b426385d775bfad6510c462d4ed40c98619d files/digest-xmms-goom-2004.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEqIBHwUpWvClEHQoRAgsCAJ9eYIzSU4tsF4rdGTiZKL1Cm2fotwCdG/ib
-fKNQiV6UiXSV9vn4J+DqGA4=
-=joZ9
------END PGP SIGNATURE-----

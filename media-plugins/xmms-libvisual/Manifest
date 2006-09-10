@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST libvisual-xmms-0.2.0.tar.gz 379314
 EBUILD xmms-libvisual-0.2.0.ebuild 914 RMD160 0897fdbd03e801df91c2ca72cc30201d70319113 SHA1 3a73ec07fc1babefd625c30543a1138be8d2ec2d SHA256 48294c608685dc9b991e83a6cfa964a3829cde5052c5621678c539985c846dcd
 MD5 acf2dab863b1c1801495d050f397b0c6 xmms-libvisual-0.2.0.ebuild 914
@@ -17,10 +14,3 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 8174f632d21390bd90e56658b5f7c3a8 files/digest-xmms-libvisual-0.2.0 72
 RMD160 f6cc532f12130b8e967e35d3bc5ab3e79c6e765a files/digest-xmms-libvisual-0.2.0 72
 SHA256 c0326865e3439a01e654455a46d6c0d82213cb09cfdcd595d0b733e22d019f32 files/digest-xmms-libvisual-0.2.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEecpQAiZjviIA2XgRAgQhAJ9OG4qKFV6x3uB3R90HF/1wTwvDXQCgieYK
-Kl0ivC4H9Ygidik1WSTe8gI=
-=0OTy
------END PGP SIGNATURE-----

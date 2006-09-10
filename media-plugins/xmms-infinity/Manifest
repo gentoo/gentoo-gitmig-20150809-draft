@@ -1,34 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5853ad9dd443193f29ca0569cc419aa1 ChangeLog 1735
-RMD160 d7fd3d8b7f9a5202fba4880d4949fb0939c27d01 ChangeLog 1735
-SHA256 59365d8c6fbe7e74f1fc4701c94d56dcf8f1d49e5ef57fe235d1d2a94747c61e ChangeLog 1735
-MD5 1686a447a6ea8ebf5d764aa3ed053b78 files/digest-xmms-infinity-0.2 64
-RMD160 2b87efa1520d077fe48c36c0b0a574decfbac29c files/digest-xmms-infinity-0.2 64
-SHA256 b728b9a712ea908eb03fe323f0c67e6c2b16638d69d7ee1a0aa097ef25bdbe5b files/digest-xmms-infinity-0.2 64
-MD5 d31671953abd672c6d7f6aa03e4567fb files/digest-xmms-infinity-0.5.8 74
-RMD160 748e9aeafb8b2c5174912868792fb29190fe9f75 files/digest-xmms-infinity-0.5.8 74
-SHA256 87d8c78bb15a6868e9dccc35cb36b084afe5c2886ea8855fbd12e9b220498e5f files/digest-xmms-infinity-0.5.8 74
-MD5 8c5876cf442b0854565d8cdefd4b5121 files/digest-xmms-infinity-0.6.2 262
-RMD160 f576680ea3b6df39c173aaf3ed5590ce0a29682e files/digest-xmms-infinity-0.6.2 262
-SHA256 c7309aeda0e151d03e6955c6b3bab67adea65819d4ef32693aa833db844800c5 files/digest-xmms-infinity-0.6.2 262
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
-SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+DIST infinity-0.2.tar.gz 132094
+DIST infinity-plugin-0.5.8.tar.bz2 287830 RMD160 b467377636f8544076e32a4e1df518bdfad3c964 SHA1 72253f46e86eace899d484e9d5af781bc9443bda SHA256 bd833c8dcd50da225d445a7c0778c2cd85ea244f006a256dd9af564e3aa89409
+DIST xmms-infinity-0.6.2.tar.bz2 277527 RMD160 566156ef0be6162bdf2a499591d6b03ab19a8ee9 SHA256 c9bcc6a4774d2944606ad3307bec77e447135ac4f2e35bfd1af0440bf6deeecf
+EBUILD xmms-infinity-0.2.ebuild 819 RMD160 1470b7163bed26964d1fea28caa90be2d11557c8 SHA1 cd8715e98cdf5d2fad03d9027bf7c859527f7327 SHA256 150dc5afac5c84b5b9d9fa16c27c8328d1745da46565d1516f89b9030ca23335
 MD5 0c96eeafb11704181fc49281ce14cee2 xmms-infinity-0.2.ebuild 819
 RMD160 1470b7163bed26964d1fea28caa90be2d11557c8 xmms-infinity-0.2.ebuild 819
 SHA256 150dc5afac5c84b5b9d9fa16c27c8328d1745da46565d1516f89b9030ca23335 xmms-infinity-0.2.ebuild 819
+EBUILD xmms-infinity-0.5.8.ebuild 742 RMD160 c6a23bd3625d0868ebf3bbfbd70bac10d70b838b SHA1 26934f336278ec71d0d9635f375dbbe4a308d875 SHA256 2d50ad0f6e1dc9c794134812d9c9c99e2d6caa99db73eae12328a7672c3b3f19
 MD5 6d267e5c0f6930c52d67c256061974b3 xmms-infinity-0.5.8.ebuild 742
 RMD160 c6a23bd3625d0868ebf3bbfbd70bac10d70b838b xmms-infinity-0.5.8.ebuild 742
 SHA256 2d50ad0f6e1dc9c794134812d9c9c99e2d6caa99db73eae12328a7672c3b3f19 xmms-infinity-0.5.8.ebuild 742
+EBUILD xmms-infinity-0.6.2.ebuild 670 RMD160 3a29456c9d0403def17c6d860f4457edb8295971 SHA1 329c6624fffe2650ce466b90d3dfff6e88fda312 SHA256 f0f956503be73b54bcfb8d775d7e9dc2f3d457acd7f66c9b3fae2e93e0d89a4d
 MD5 adaf892df125a8bc82f0cbe31ea31193 xmms-infinity-0.6.2.ebuild 670
 RMD160 3a29456c9d0403def17c6d860f4457edb8295971 xmms-infinity-0.6.2.ebuild 670
 SHA256 f0f956503be73b54bcfb8d775d7e9dc2f3d457acd7f66c9b3fae2e93e0d89a4d xmms-infinity-0.6.2.ebuild 670
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.1 (GNU/Linux)
-
-iD8DBQFD+lvnwUpWvClEHQoRAmwvAJ9NvLQ8FoGTqmR8FLyp6734rs9frACeIVlt
-Dw+GC5erFC+nobnAi8D0Ds8=
-=ZpwM
------END PGP SIGNATURE-----
+MISC ChangeLog 1735 RMD160 d7fd3d8b7f9a5202fba4880d4949fb0939c27d01 SHA1 f39e5a4a5356b16fb0e43debfbc15c94ae994379 SHA256 59365d8c6fbe7e74f1fc4701c94d56dcf8f1d49e5ef57fe235d1d2a94747c61e
+MD5 5853ad9dd443193f29ca0569cc419aa1 ChangeLog 1735
+RMD160 d7fd3d8b7f9a5202fba4880d4949fb0939c27d01 ChangeLog 1735
+SHA256 59365d8c6fbe7e74f1fc4701c94d56dcf8f1d49e5ef57fe235d1d2a94747c61e ChangeLog 1735
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 1686a447a6ea8ebf5d764aa3ed053b78 files/digest-xmms-infinity-0.2 64
+RMD160 2b87efa1520d077fe48c36c0b0a574decfbac29c files/digest-xmms-infinity-0.2 64
+SHA256 b728b9a712ea908eb03fe323f0c67e6c2b16638d69d7ee1a0aa097ef25bdbe5b files/digest-xmms-infinity-0.2 64
+MD5 ba7f14fca85b07e3e57b4ee842b4ba12 files/digest-xmms-infinity-0.5.8 268
+RMD160 12638c60fe61ecf1a51cf452f32f4bfb5af8a47c files/digest-xmms-infinity-0.5.8 268
+SHA256 eeaf32740903544481d18295ecc9eca62300878188186c70807b8d12aa1aac31 files/digest-xmms-infinity-0.5.8 268
+MD5 8c5876cf442b0854565d8cdefd4b5121 files/digest-xmms-infinity-0.6.2 262
+RMD160 f576680ea3b6df39c173aaf3ed5590ce0a29682e files/digest-xmms-infinity-0.6.2 262
+SHA256 c7309aeda0e151d03e6955c6b3bab67adea65819d4ef32693aa833db844800c5 files/digest-xmms-infinity-0.6.2 262

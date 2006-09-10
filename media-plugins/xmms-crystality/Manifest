@@ -1,16 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 be1dcf2a8019d9c3db1b14a3a9d21df6 ChangeLog 1399
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 0a79800c930d7451893c43ae357cc1a0 xmms-crystality-0.92.ebuild 1028
-MD5 defb2590e99c2f2eb7604180fb52e379 files/digest-xmms-crystality-0.92 73
-MD5 b160c8a029fa126ecb79661a6dbf1dbc files/xmms-crystality-0.92-gcc3.patch 2548
+AUX xmms-crystality-0.92-PIC.patch 1380 RMD160 f1d20c7743e5b77ad5b7496418d21100d82243e4 SHA1 fc6246aa9975418b20726507b4c2ed5ebe5bce94 SHA256 e049f99520f43b13a72b2a3202e2cf866b82fe0987a45b2405abcfdb6d3f9b44
 MD5 efba8448e71a2ebc3d6659c52e26d24a files/xmms-crystality-0.92-PIC.patch 1380
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkzaHArHZZzCEUG0RAmusAJwPb7iQ7rd3u11iEctAsWWI4EOTcwCeIzMD
-C8wSGB7s7e6y+0SaMhHB1L4=
-=cZEY
------END PGP SIGNATURE-----
+RMD160 f1d20c7743e5b77ad5b7496418d21100d82243e4 files/xmms-crystality-0.92-PIC.patch 1380
+SHA256 e049f99520f43b13a72b2a3202e2cf866b82fe0987a45b2405abcfdb6d3f9b44 files/xmms-crystality-0.92-PIC.patch 1380
+AUX xmms-crystality-0.92-gcc3.patch 2548 RMD160 546bcf0b725dab1f099c3c1cbaf3fc0eeaf6a7d6 SHA1 94cc1f48cbfbdfe9807a3b47c171bcc32c15e738 SHA256 505fc0db9133c0db5cf5d5369bbc3dd9a431fcfad9e092a6f690d7b3c6f4b016
+MD5 b160c8a029fa126ecb79661a6dbf1dbc files/xmms-crystality-0.92-gcc3.patch 2548
+RMD160 546bcf0b725dab1f099c3c1cbaf3fc0eeaf6a7d6 files/xmms-crystality-0.92-gcc3.patch 2548
+SHA256 505fc0db9133c0db5cf5d5369bbc3dd9a431fcfad9e092a6f690d7b3c6f4b016 files/xmms-crystality-0.92-gcc3.patch 2548
+DIST crystality-plugin-0.92.tar.gz 32765
+EBUILD xmms-crystality-0.92.ebuild 1028 RMD160 9247f0a617a45c9036d4907b44c606e26844a868 SHA1 a8b80602905427e131cee0b5de91cc922ce4a691 SHA256 03e47bc5777613e9250a4ebe8d294e3b8dcc08743a5fbfbe0e53294f4b0d4060
+MD5 0a79800c930d7451893c43ae357cc1a0 xmms-crystality-0.92.ebuild 1028
+RMD160 9247f0a617a45c9036d4907b44c606e26844a868 xmms-crystality-0.92.ebuild 1028
+SHA256 03e47bc5777613e9250a4ebe8d294e3b8dcc08743a5fbfbe0e53294f4b0d4060 xmms-crystality-0.92.ebuild 1028
+MISC ChangeLog 1399 RMD160 c9c803c69f4447230e294bc11320cb7d8bbf8b34 SHA1 cb10abc72c0ed61e68aa7b7879fe1188ec1deb76 SHA256 9a4f6b8760f03380833f166b4fd0eb504df35f9bbc5d8958da94ab76e70198ac
+MD5 be1dcf2a8019d9c3db1b14a3a9d21df6 ChangeLog 1399
+RMD160 c9c803c69f4447230e294bc11320cb7d8bbf8b34 ChangeLog 1399
+SHA256 9a4f6b8760f03380833f166b4fd0eb504df35f9bbc5d8958da94ab76e70198ac ChangeLog 1399
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 defb2590e99c2f2eb7604180fb52e379 files/digest-xmms-crystality-0.92 73
+RMD160 4719ac9b05a470e0d6be4d3feef570e076d60d61 files/digest-xmms-crystality-0.92 73
+SHA256 0e4216f456b265c1affedcef645496ebc0bc5b5028131982dd83c6a908880b6f files/digest-xmms-crystality-0.92 73

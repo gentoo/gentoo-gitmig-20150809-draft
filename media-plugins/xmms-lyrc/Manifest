@@ -1,18 +1,31 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c1bb807f2ca431dbe2eff0d32547a72 ChangeLog 937
-MD5 b9f8c4077dd01a35cb47847628da3e83 files/digest-xmms-lyrc-0.3 59
-MD5 b9f8c4077dd01a35cb47847628da3e83 files/digest-xmms-lyrc-0.3-r1 59
+AUX xmms-lyrc-0.3-makefile.patch 1637 RMD160 8ed53c395d2da81b88d211e465964d1db60f41f6 SHA1 71fd197b6c15507b26c51d89104574e783a29f7c SHA256 d4555a701002e62fdf1b784d2faa3bf640b4c00ee1b18a85704d5e3307b349dc
 MD5 8961cf39823cf3024e8fb70cc0e33594 files/xmms-lyrc-0.3-makefile.patch 1637
+RMD160 8ed53c395d2da81b88d211e465964d1db60f41f6 files/xmms-lyrc-0.3-makefile.patch 1637
+SHA256 d4555a701002e62fdf1b784d2faa3bf640b4c00ee1b18a85704d5e3307b349dc files/xmms-lyrc-0.3-makefile.patch 1637
+AUX xmms-lyrc-0.3-xml-fix.patch 1179 RMD160 6b424cbd5dfe786a7cfe42b6fdfcbf97f5f883d9 SHA1 967c387f6848af790795741fcd933d258e1a9fa9 SHA256 88c6ba14084c2ea5389e6d2c8e0fc69d7af8396eebea86abaedbd3a9ac3ef1e8
 MD5 43ce6fb6f2b8689f366ec09ca62343a8 files/xmms-lyrc-0.3-xml-fix.patch 1179
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6b424cbd5dfe786a7cfe42b6fdfcbf97f5f883d9 files/xmms-lyrc-0.3-xml-fix.patch 1179
+SHA256 88c6ba14084c2ea5389e6d2c8e0fc69d7af8396eebea86abaedbd3a9ac3ef1e8 files/xmms-lyrc-0.3-xml-fix.patch 1179
+DIST lyrc-0.3.tar.gz 38053
+EBUILD xmms-lyrc-0.3-r1.ebuild 841 RMD160 8d7d102744f123de311d40077782a5024ea9f0cc SHA1 d22a5516042fb70319c9ce48a4cd3d960125eef0 SHA256 dd9810a0fcdb7a36d6ca8fb0e57b2502ff65460b5d2d320ea7209b2f3f2cf715
 MD5 ba126a73e209feaf0637388ca0363f30 xmms-lyrc-0.3-r1.ebuild 841
+RMD160 8d7d102744f123de311d40077782a5024ea9f0cc xmms-lyrc-0.3-r1.ebuild 841
+SHA256 dd9810a0fcdb7a36d6ca8fb0e57b2502ff65460b5d2d320ea7209b2f3f2cf715 xmms-lyrc-0.3-r1.ebuild 841
+EBUILD xmms-lyrc-0.3.ebuild 798 RMD160 2bddde487c8aa69d076ad2eba33b4965324d85f1 SHA1 b22089025264af139ea19ffbc6f88ed6ca051393 SHA256 fbc245c7023ae1d240a74e038d21f07cf6f01194ff98fded8a00a686812acc8e
 MD5 d50d671a1e83fbe58ff0e35049acae2d xmms-lyrc-0.3.ebuild 798
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDZVQ5wUpWvClEHQoRAgmbAJ9VzGKoE3db1TalYDBQbVO85Cs53QCfS2mI
-RXltmmq1plY47HdsEizfegc=
-=lU9R
------END PGP SIGNATURE-----
+RMD160 2bddde487c8aa69d076ad2eba33b4965324d85f1 xmms-lyrc-0.3.ebuild 798
+SHA256 fbc245c7023ae1d240a74e038d21f07cf6f01194ff98fded8a00a686812acc8e xmms-lyrc-0.3.ebuild 798
+MISC ChangeLog 937 RMD160 fc051e52df93983bb0b712512d34adf604d980bd SHA1 1d9bb612d6d84258774169007a65270f19ec2259 SHA256 9f8bda0e9bedfc94ce1aa06fe1c0c0dad57d5ad06b653c05f12a87fe2302fc68
+MD5 5c1bb807f2ca431dbe2eff0d32547a72 ChangeLog 937
+RMD160 fc051e52df93983bb0b712512d34adf604d980bd ChangeLog 937
+SHA256 9f8bda0e9bedfc94ce1aa06fe1c0c0dad57d5ad06b653c05f12a87fe2302fc68 ChangeLog 937
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 b9f8c4077dd01a35cb47847628da3e83 files/digest-xmms-lyrc-0.3 59
+RMD160 f8d35ed81a22d88288adf6b14aa89e53f0fcfb54 files/digest-xmms-lyrc-0.3 59
+SHA256 32c6b17a78c61004c6691e6332ea7e598a164a2a491769b18f3100b9895030ba files/digest-xmms-lyrc-0.3 59
+MD5 b9f8c4077dd01a35cb47847628da3e83 files/digest-xmms-lyrc-0.3-r1 59
+RMD160 f8d35ed81a22d88288adf6b14aa89e53f0fcfb54 files/digest-xmms-lyrc-0.3-r1 59
+SHA256 32c6b17a78c61004c6691e6332ea7e598a164a2a491769b18f3100b9895030ba files/digest-xmms-lyrc-0.3-r1 59

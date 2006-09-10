@@ -1,6 +1,24 @@
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 d8dfa88f79a5633ed61437751a50129b ChangeLog 1717
-MD5 ee8dbf8be9ab8a5f11e1a9db32a3e9c0 xmms-synaesthesia-0.0.3_rc3-r1.ebuild 850
-MD5 859fafdcac4022b35eca555e692a64d1 files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218
+AUX xmms-synaesthesia-0.0.3_rc3-amd64.patch 4703 RMD160 6d99431090c1c5ff3d6e46806f54a6c92ca93c8b SHA1 1c1e7350fd388a7e334e5fa0f2cb3b971e8ee5c8 SHA256 e3fa126818b77d9b1b7c95ba86b56dcd49aad8f37fdc5d5322f6929299eae40a
 MD5 3981baf76e4c63e1a2120828475f757d files/xmms-synaesthesia-0.0.3_rc3-amd64.patch 4703
+RMD160 6d99431090c1c5ff3d6e46806f54a6c92ca93c8b files/xmms-synaesthesia-0.0.3_rc3-amd64.patch 4703
+SHA256 e3fa126818b77d9b1b7c95ba86b56dcd49aad8f37fdc5d5322f6929299eae40a files/xmms-synaesthesia-0.0.3_rc3-amd64.patch 4703
+AUX xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218 RMD160 022f8a5f7d4d3dffe1639eb299cdb29d6a702e8a SHA1 9ec79a85cfbdd5c5df238e18907b189702d3a193 SHA256 8a4c32f363e163adb845e1285f0e9532a07203cc5e93d622fe1a19c21acb6857
+MD5 859fafdcac4022b35eca555e692a64d1 files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218
+RMD160 022f8a5f7d4d3dffe1639eb299cdb29d6a702e8a files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218
+SHA256 8a4c32f363e163adb845e1285f0e9532a07203cc5e93d622fe1a19c21acb6857 files/xmms-synaesthesia-0.0.3_rc3-gcc34.patch 4218
+DIST synaesthesia-xmms-0.0.3-rc3.tar.gz 152116
+EBUILD xmms-synaesthesia-0.0.3_rc3-r1.ebuild 850 RMD160 6d13d7266d34a5e09042296b2389a6caac1c1d4b SHA1 cd82fe0e3675c111f0c9bae418986e9912a1a42d SHA256 a4fb68262eef376d0df35b6983c0899df2fae727544aaa6b03269c0b2e01d91e
+MD5 ee8dbf8be9ab8a5f11e1a9db32a3e9c0 xmms-synaesthesia-0.0.3_rc3-r1.ebuild 850
+RMD160 6d13d7266d34a5e09042296b2389a6caac1c1d4b xmms-synaesthesia-0.0.3_rc3-r1.ebuild 850
+SHA256 a4fb68262eef376d0df35b6983c0899df2fae727544aaa6b03269c0b2e01d91e xmms-synaesthesia-0.0.3_rc3-r1.ebuild 850
+MISC ChangeLog 1717 RMD160 706717e3a5670a054e293f1333a7f4efbc0e192d SHA1 4bcb63ceb3d3b3bd6677dedaf255828e8891b062 SHA256 b74d9a3ad04b52873dc2ca8a1bba204e230cd9d7b03ba62c1f7bd313f3c16610
+MD5 d8dfa88f79a5633ed61437751a50129b ChangeLog 1717
+RMD160 706717e3a5670a054e293f1333a7f4efbc0e192d ChangeLog 1717
+SHA256 b74d9a3ad04b52873dc2ca8a1bba204e230cd9d7b03ba62c1f7bd313f3c16610 ChangeLog 1717
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
+SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
 MD5 7ba67c996535a47c1b9e0136f01a631f files/digest-xmms-synaesthesia-0.0.3_rc3-r1 79
+RMD160 6c8bc5e1f2629ccb11b94c88b130584c4d7e1415 files/digest-xmms-synaesthesia-0.0.3_rc3-r1 79
+SHA256 6bb851acf63a46027428ebe7840cea8e5831d3b96b3ddc9b49d181d9b606c391 files/digest-xmms-synaesthesia-0.0.3_rc3-r1 79

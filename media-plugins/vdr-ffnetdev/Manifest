@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX confd 878 RMD160 29fb905cfbae93ff1f1f9482f28ac143e2c2795b SHA1 894717b8696d27d9e3a1d85c06045fdcf6ba541f SHA256 3aa1783f7da29598a9ce227ce23762a48b159325c9a6565daafb1735de7d2d1d
 MD5 e6e465b4bb0965b1aac11a0a4593f159 files/confd 878
 RMD160 29fb905cfbae93ff1f1f9482f28ac143e2c2795b files/confd 878
@@ -37,10 +34,3 @@ SHA256 9f8423394dcceb3e83e22d7ee5cfe0b983fa3ce50fa3713d9f34fb02cb528c48 files/di
 MD5 ab9ffdebbbee935befd1e314001ae333 files/digest-vdr-ffnetdev-0.1.0 70
 RMD160 daa726ddaa9662697465e4e2a1192cc8533ff2ef files/digest-vdr-ffnetdev-0.1.0 70
 SHA256 7ef8fcf8e9c332268717f1106534879bef73709001a1097cc951b3095ac2839e files/digest-vdr-ffnetdev-0.1.0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5rc1 (GNU/Linux)
-
-iD8DBQFE0P3It2vP6XvVdOcRAjnHAJ96mGL142eIeTxfXymStTonmHNolwCgiUME
-QergZJaIrnRZ/7evbX/z9Is=
-=r0fe
------END PGP SIGNATURE-----

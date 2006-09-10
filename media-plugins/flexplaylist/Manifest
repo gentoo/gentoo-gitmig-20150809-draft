@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST flexplaylist-0.4.8.tar.bz2 412340
 EBUILD flexplaylist-0.4.8.ebuild 749 RMD160 4937d22b4b813402c2e324c714350cdadae9f025 SHA1 f46f1ce626e12d45ade85a94841d7c698577aa13 SHA256 4f8218c5b8b96a52fb5fb216b1d0240facd6a28b80cb1e78b45e1613c16ce82e
 MD5 fbca8732a2f56a2c85cd258ae18e9a50 flexplaylist-0.4.8.ebuild 749
@@ -17,10 +14,3 @@ SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata
 MD5 9e83688cc383c6535cd66e57fc02b1d0 files/digest-flexplaylist-0.4.8 71
 RMD160 6a85bcd3d4a6a661b85fb5c6bf738526cfa3f110 files/digest-flexplaylist-0.4.8 71
 SHA256 9bb322022d36ea1f65107747bd94dc54d7123e655612ddffa78fe68e30e70b70 files/digest-flexplaylist-0.4.8 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
-
-iD8DBQFEfXnvAiZjviIA2XgRAt9oAKDaHKhm5XsA7XTAuYP8mL1tvJFvPACgjKne
-ZZCtJFtYhdKgeB9yRWLvHLM=
-=ollb
------END PGP SIGNATURE-----
