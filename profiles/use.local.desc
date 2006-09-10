@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2131 2006/09/10 05:27:13 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2132 2006/09/10 10:48:02 caster Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -305,7 +305,6 @@ dev-java/hibernate:proxool - Enable Proxool support
 dev-java/hibernate:swarmcache - Enable SwarmCache support
 dev-java/ibm-jdk-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/ibm-jdk-bin:javacomm - Enable Java Communications API support
-dev-java/ibm-jre-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/jdbc-mysql:c3p0 - Enable c3p0 support
 dev-java/jdbc-mysql:log4j - Enable log4 support
 dev-java/jldap:dsml - Build DSMLv2 Connection Support
@@ -324,7 +323,6 @@ dev-java/sun-jdk:browserplugin - Install netscape-compatible plugin (DEPRECATED,
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/sun-jre-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/swt:cairo - Enable Cairo rendering backend
-dev-java/velocity:j2ee - Add j2ee support
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
 dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
