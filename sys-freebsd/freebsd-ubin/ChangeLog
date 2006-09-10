@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.14 2006/07/27 01:30:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.15 2006/09/10 14:59:34 flameeyes Exp $
+
+  10 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-6.1.ebuild:
+  Move awk and sed in /bin to be available during boot process.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -freebsd-ubin-6.0-r1.ebuild:
