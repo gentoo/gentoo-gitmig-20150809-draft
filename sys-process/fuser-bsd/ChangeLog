@@ -1,0 +1,10 @@
+# ChangeLog for sys-process/fuser-bsd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.1 2006/09/10 12:45:32 flameeyes Exp $
+
+*fuser-bsd-1142334561 (10 Sep 2006)
+
+  10 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +fuser-bsd-1142334561.ebuild:
+  Initial import, fuser(1) utility for FreeBSD, needed for newer baselayout.
+
