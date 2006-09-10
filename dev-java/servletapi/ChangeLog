@@ -1,17 +1,17 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.43 2006/09/10 23:15:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.44 2006/09/10 23:28:03 wltjr Exp $
 
   10 Sep 2006; Joshua Nichols <nichoj@gentoo.org> servletapi-2.3-r3.ebuild,
   servletapi-2.4-r4.ebuild:
   Added ~ia64 keywords.
 
-  09 Sep 2006; <wlt@gentoo.org> metadata.xml:
+  09 Sep 2006; William L. Thomson Jr.<wltjr@gentoo.org> metadata.xml:
   Updated metadata to reflect new package maintainer, me ;)
 
 *servletapi-2.4-r4 (03 Sep 2006)
 
-  03 Sep 2006; William L. Thomson Jr.<wlt@gentoo.org> +servletapi-2.4-r4.ebuild:
+  03 Sep 2006; William L. Thomson Jr.<wltjr@gentoo.org> +servletapi-2.4-r4.ebuild:
   Updated to latest Tomcat sources 5.5.17. Stopped using patch temporarily.
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
