@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>maintainer-needed</herd>
+<herd>no-herd</herd>
+<maintainer>
+  <email>vapier@gentoo.org</email>
+  <description>proxy maintainer for peeps</description>
+</maintainer>
 <maintainer>
   <email>armin76@gmail.com</email>
   <name>Raúl Porcel</name>

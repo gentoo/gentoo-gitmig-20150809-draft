@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.7 2006/09/01 20:39:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.8 2006/09/10 08:22:26 vapier Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
@@ -16,16 +16,13 @@ SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~mips ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ppc ppc64 ~sparc ~x86"
 IUSE="server"
 
 RDEPEND="sys-libs/zlib
 	media-libs/freetype
-	|| ( ( x11-libs/libSM
-			x11-libs/libXtst
-		)
-		virtual/x11
-	)
+	x11-libs/libSM
+	x11-libs/libXtst
 	server? (
 		x11-libs/libXi
 		x11-libs/libXfont
@@ -39,82 +36,76 @@ RDEPEND="sys-libs/zlib
 		media-fonts/font-alias
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
-		!amd64? ( >=x11-base/xorg-server-1.1 )
+		>=x11-base/xorg-server-1.1
 	)
 	!net-misc/tightvnc"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto
-		server?	( x11-proto/compositeproto
-			x11-proto/damageproto
-			x11-proto/fixesproto
-			x11-proto/fontsproto
-			x11-proto/randrproto
-			x11-proto/resourceproto
-			x11-proto/scrnsaverproto
-			x11-proto/trapproto
-			x11-proto/videoproto
-			x11-proto/xineramaproto
-			x11-proto/xf86bigfontproto
-			x11-proto/xf86dgaproto
-			x11-proto/xf86miscproto
-			x11-proto/xf86vidmodeproto )
-		)
-		virtual/x11
+	x11-proto/xextproto
+	server?	(
+		x11-proto/compositeproto
+		x11-proto/damageproto
+		x11-proto/fixesproto
+		x11-proto/fontsproto
+		x11-proto/randrproto
+		x11-proto/resourceproto
+		x11-proto/scrnsaverproto
+		x11-proto/trapproto
+		x11-proto/videoproto
+		x11-proto/xineramaproto
+		x11-proto/xf86bigfontproto
+		x11-proto/xf86dgaproto
+		x11-proto/xf86miscproto
+		x11-proto/xf86vidmodeproto
 	)"
 
-S="${WORKDIR}/${MY_P}"
-
-pkg_setup() {
-	use server && has_version '<x11-base/xorg-server-1.1' \
-		&& die "you need at least version 1.1 of xorg-server, see bug 145756"
-}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 
 	# patches from Fedora
-	epatch ${WORKDIR}/${P}/vnc-viewer-reparent.patch
-	epatch ${WORKDIR}/${P}/vnc-newfbsize.patch
+	epatch "${WORKDIR}"/${P}/vnc-viewer-reparent.patch
+	epatch "${WORKDIR}"/${P}/vnc-newfbsize.patch
 
-	if use server; then
-		mv ${WORKDIR}/xorg-server-${XSERVER_VERSION} unix/
+	if use server ; then
+		mv "${WORKDIR}"/xorg-server-${XSERVER_VERSION} unix/
 
 		# patches from Fedora
-		epatch ${WORKDIR}/${P}/vnc-cookie.patch
-		epatch ${WORKDIR}/${P}/vnc-gcc4.patch
-		epatch ${WORKDIR}/${P}/vnc-use-fb.patch
-		epatch ${WORKDIR}/${P}/vnc-xclients.patch
-		epatch ${WORKDIR}/${P}/vnc-idle.patch
-		epatch ${WORKDIR}/${P}/vnc-via.patch
-		epatch ${WORKDIR}/${P}/vnc-build.patch
-		epatch ${WORKDIR}/${P}/vnc-fPIC.patch
-		epatch ${WORKDIR}/${P}/vnc-restart.patch
-		epatch ${WORKDIR}/${P}/vnc-vncpasswd.patch
-		epatch ${WORKDIR}/${P}/vnc-def.patch
-		epatch ${WORKDIR}/${P}/vnc-modular-xorg.patch
-		epatch ${WORKDIR}/${P}/vnc-nohttpd.patch
+		epatch "${WORKDIR}"/${P}/vnc-cookie.patch
+		epatch "${WORKDIR}"/${P}/vnc-gcc4.patch
+		epatch "${WORKDIR}"/${P}/vnc-use-fb.patch
+		epatch "${WORKDIR}"/${P}/vnc-xclients.patch
+		epatch "${WORKDIR}"/${P}/vnc-idle.patch
+		epatch "${WORKDIR}"/${P}/vnc-via.patch
+		epatch "${WORKDIR}"/${P}/vnc-build.patch
+		epatch "${WORKDIR}"/${P}/vnc-fPIC.patch
+		epatch "${WORKDIR}"/${P}/vnc-restart.patch
+		epatch "${WORKDIR}"/${P}/vnc-vncpasswd.patch
+		epatch "${WORKDIR}"/${P}/vnc-def.patch
+		epatch "${WORKDIR}"/${P}/vnc-modular-xorg.patch
+		epatch "${WORKDIR}"/${P}/vnc-nohttpd.patch
 
 		cd unix/xorg-server-*
-		epatch ${WORKDIR}/${P}/vnc-fontpath.patch
-		epatch ${WORKDIR}/${P}/vnc-s390.patch
+		epatch "${WORKDIR}"/${P}/vnc-fontpath.patch
+		epatch "${WORKDIR}"/${P}/vnc-s390.patch
 
 		cd ../../
 
-		epatch ${WORKDIR}/${P}/vnc-64bit.patch
-		epatch ${WORKDIR}/${P}/vnc-select.patch
-		epatch ${WORKDIR}/${P}/vnc-opengl.patch
+		epatch "${WORKDIR}"/${P}/vnc-64bit.patch
+		epatch "${WORKDIR}"/${P}/vnc-select.patch
+		epatch "${WORKDIR}"/${P}/vnc-opengl.patch
 
-		cp -a ${S}/unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
-			${S}/unix/xc/programs/Xserver/Xvnc.man \
-			${S}/unix/xc/programs/Xserver/vnc/*.{h,cc} \
-			${S}/unix/xorg-server-*/hw/vnc
-		cp -a ${S}/unix/xorg-server-*/{cfb/cfb.h,hw/vnc}
-		cp -a ${S}/unix/xorg-server-*/{fb/fb.h,hw/vnc}
-		cp -a ${S}/unix/xorg-server-*/{fb/fbrop.h,hw/vnc}
+		cp -a "${S}"/unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
+			"${S}"/unix/xc/programs/Xserver/Xvnc.man \
+			"${S}"/unix/xc/programs/Xserver/vnc/*.{h,cc} \
+			"${S}"/unix/xorg-server-*/hw/vnc
+		cp -a "${S}"/unix/xorg-server-*/{cfb/cfb.h,hw/vnc}
+		cp -a "${S}"/unix/xorg-server-*/{fb/fb.h,hw/vnc}
+		cp -a "${S}"/unix/xorg-server-*/{fb/fbrop.h,hw/vnc}
 		sed -i -e 's,xor,c_xor,' -e 's,and,c_and,' \
-			${S}/unix/xorg-server*/hw/vnc/{cfb,fb,fbrop}.h
+			"${S}"/unix/xorg-server*/hw/vnc/{cfb,fb,fbrop}.h
 	fi
 }
 
@@ -153,18 +144,16 @@ src_install() {
 	use server && dodir /usr/$(get_libdir)/modules/extensions
 
 	cd unix
-	./vncinstall ${D}/usr/bin ${D}/usr/share/man ${D}/usr/$(get_libdir)/modules/extensions || die
+	./vncinstall "${D}"/usr/bin "${D}"/usr/share/man "${D}"/usr/$(get_libdir)/modules/extensions || die
 	cd ..
 	dodoc README
 
-	use server || (
-		rm ${D}/usr/bin/vncserver
-		rm ${D}/usr/bin/x0vncserver
-		rm ${D}/usr/share/man/man1/vnc{passwd,config,server}.1
-		rm ${D}/usr/share/man/man1/x0vncserver.1
-		rm ${D}/usr/bin/vncpasswd
-		rm ${D}/usr/bin/vncconfig
-	)
-
-	ewarn "Note that the free VNC release is not designed for use on untrusted networks"
+	if ! use server ; then
+		rm "${D}"/usr/bin/vncserver
+		rm "${D}"/usr/bin/x0vncserver
+		rm "${D}"/usr/share/man/man1/vnc{passwd,config,server}.1
+		rm "${D}"/usr/share/man/man1/x0vncserver.1
+		rm "${D}"/usr/bin/vncpasswd
+		rm "${D}"/usr/bin/vncconfig
+	fi
 }

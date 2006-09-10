@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vnc
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.53 2006/09/01 20:39:06 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.54 2006/09/10 08:22:26 vapier Exp $
+
+  10 Sep 2006; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  vnc-4.1.2.ebuild:
+  Clean up ebuild #146666 and move back to ~amd64 #145756.
 
   01 Sep 2006; Stefan Schweizer <genstef@gentoo.org> vnc-4.1.2.ebuild:
   Make ebuild die when \<x11-base/xorg-server-1.1 is used, bug 145756
