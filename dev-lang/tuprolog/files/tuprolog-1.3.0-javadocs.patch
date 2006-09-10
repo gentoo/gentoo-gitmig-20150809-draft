@@ -1,0 +1,111 @@
+diff -ur tuprolog-1.3.0.orig/src/alice/tuprolog/lib/JavaLibrary.java tuprolog-1.3.0/src/alice/tuprolog/lib/JavaLibrary.java
+--- tuprolog-1.3.0.orig/src/alice/tuprolog/lib/JavaLibrary.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/tuprolog/lib/JavaLibrary.java	2006-02-05 13:54:20.000000000 +1300
+@@ -1210,7 +1210,7 @@
+ 
+     /**
+      * Generates a fresh numeric identifier
+-     * @return
++     * @return fresh numeric identifier
+      */
+     protected Struct generateFreshId() {
+     		return new Struct("$obj_" + id++);        
+diff -ur tuprolog-1.3.0.orig/src/alice/tuprolog/Prolog.java tuprolog-1.3.0/src/alice/tuprolog/Prolog.java
+--- tuprolog-1.3.0.orig/src/alice/tuprolog/Prolog.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/tuprolog/Prolog.java	2006-02-05 13:34:04.000000000 +1300
+@@ -1337,7 +1337,7 @@
+      * This involves identifying structs representing builtin
+      * predicates and functors, and setting up related structures and links
+      *
+-     * @parm term the term to be identified
++     * @param term the term to be identified
+      */
+     protected void identify(Term term, boolean forceArgumentIdentification) {
+         //System.out.println("IDENTIFYING "+term);
+diff -ur tuprolog-1.3.0.orig/src/alice/util/jedit/InputHandler.java tuprolog-1.3.0/src/alice/util/jedit/InputHandler.java
+--- tuprolog-1.3.0.orig/src/alice/util/jedit/InputHandler.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/util/jedit/InputHandler.java	2006-02-05 13:51:12.000000000 +1300
+@@ -24,7 +24,7 @@
+  *
+  * @author Slava Pestov
+  * @version $Id: tuprolog-1.3.0-javadocs.patch,v 1.1 2006/09/10 02:33:03 keri Exp $
+- * @see org.gjt.sp.jedit.textarea.DefaultInputHandler
++ * @see alice.util.jedit.DefaultInputHandler
+  */
+ public abstract class InputHandler extends KeyAdapter
+ {
+@@ -187,7 +187,7 @@
+ 	/**
+ 	 * Grabs the next key typed event and invokes the specified
+ 	 * action with the key as a the action command.
+-	 * @param action The action
++	 * @param listener The action
+ 	 */
+ 	public void grabNextKeyStroke(ActionListener listener)
+ 	{
+diff -ur tuprolog-1.3.0.orig/src/alice/util/jedit/JEditTextArea.java tuprolog-1.3.0/src/alice/util/jedit/JEditTextArea.java
+--- tuprolog-1.3.0.orig/src/alice/util/jedit/JEditTextArea.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/util/jedit/JEditTextArea.java	2006-02-05 13:43:25.000000000 +1300
+@@ -1389,7 +1389,7 @@
+ 
+ 	/**
+ 	 * Sets if the selection should be rectangular.
+-	 * @param overwrite True if the selection should be rectangular,
++	 * @param rectSelect True if the selection should be rectangular,
+ 	 * false otherwise.
+ 	 */
+ 	public final void setSelectionRectangular(boolean rectSelect)
+diff -ur tuprolog-1.3.0.orig/src/alice/util/jedit/KeywordMap.java tuprolog-1.3.0/src/alice/util/jedit/KeywordMap.java
+--- tuprolog-1.3.0.orig/src/alice/util/jedit/KeywordMap.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/util/jedit/KeywordMap.java	2006-02-05 13:39:39.000000000 +1300
+@@ -75,7 +75,7 @@
+ 	/**
+ 	 * Adds a key-value mapping.
+ 	 * @param keyword The key
+-	 * @Param id The value
++	 * @param id The value
+ 	 */
+ 	public void add(String keyword, byte id)
+ 	{
+diff -ur tuprolog-1.3.0.orig/src/alice/util/jedit/TextAreaPainter.java tuprolog-1.3.0/src/alice/util/jedit/TextAreaPainter.java
+--- tuprolog-1.3.0.orig/src/alice/util/jedit/TextAreaPainter.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/util/jedit/TextAreaPainter.java	2006-02-05 13:50:49.000000000 +1300
+@@ -75,7 +75,7 @@
+ 	/**
+ 	 * Returns the syntax styles used to paint colorized text. Entry <i>n</i>
+ 	 * will be used to paint tokens with id = <i>n</i>.
+-	 * @see org.gjt.sp.jedit.syntax.Token
++	 * @see alice.util.jedit.Token
+ 	 */
+ 	public final SyntaxStyle[] getStyles()
+ 	{
+@@ -86,7 +86,7 @@
+ 	 * Sets the syntax styles used to paint colorized text. Entry <i>n</i>
+ 	 * will be used to paint tokens with id = <i>n</i>.
+ 	 * @param styles The syntax styles
+-	 * @see org.gjt.sp.jedit.syntax.Token
++	 * @see alice.util.jedit.Token
+ 	 */
+ 	public final void setStyles(SyntaxStyle[] styles)
+ 	{
+@@ -356,7 +356,7 @@
+ 
+ 	/**
+ 	 * Repaints the text.
+-	 * @param g The graphics context
++	 * @param gfx The graphics context
+ 	 */
+ 	public void paint(Graphics gfx)
+ 	{
+diff -ur tuprolog-1.3.0.orig/src/alice/util/jedit/TokenMarker.java tuprolog-1.3.0/src/alice/util/jedit/TokenMarker.java
+--- tuprolog-1.3.0.orig/src/alice/util/jedit/TokenMarker.java	2006-02-05 13:30:36.000000000 +1300
++++ tuprolog-1.3.0/src/alice/util/jedit/TokenMarker.java	2006-02-05 13:48:41.000000000 +1300
+@@ -24,7 +24,7 @@
+  * @author Slava Pestov
+  * @version $Id: tuprolog-1.3.0-javadocs.patch,v 1.1 2006/09/10 02:33:03 keri Exp $
+  *
+- * @see org.gjt.sp.jedit.syntax.Token
++ * @see alice.util.jedit.Token
+  */
+ public abstract class TokenMarker
+ {
