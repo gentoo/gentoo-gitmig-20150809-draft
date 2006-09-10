@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libzvt-2.0.1-gentoo.diff 689 RMD160 03671882a0470f1a3e1c4cd2f057b40a1c31b05b SHA1 2eb14f419edf97a49d6488e93338e9b58b4725ac SHA256 f2fcf3227b53ed9dc5642103accec690e7d4e08431b4a0d3f2e7b7ca44d3eaa8
 MD5 e6d5d4cb4b88822dc078b4081252e9ec files/libzvt-2.0.1-gentoo.diff 689
 RMD160 03671882a0470f1a3e1c4cd2f057b40a1c31b05b files/libzvt-2.0.1-gentoo.diff 689
@@ -18,3 +21,10 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 d3a410a2de14a3bbfd4656d8cd9c4e2d files/digest-libzvt-2.0.1-r2 241
 RMD160 bd92faf371c267cf93183f18d7afec9814b20af9 files/digest-libzvt-2.0.1-r2 241
 SHA256 03db21b56ea7d7200f3aca32b6ff72284556dc1a35b36af8ebce3c5bc66b2742 files/digest-libzvt-2.0.1-r2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9bgamhnQswr0vIRAs39AKC2WriM95JAp2qozVqkjK4OSIOyrwCgtkvr
+ubaLb5i2nVEDeiD1LYlOQRo=
+=nY/o
+-----END PGP SIGNATURE-----

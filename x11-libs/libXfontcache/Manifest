@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX fix_shadow_manpages.patch 572 RMD160 505a9c4178e7feda97c4d52d8dbbdb3d8fb83510 SHA1 f28c8e012fae37fd61602f8f24898b9793f1c5f6 SHA256 b372c2afb884784a443c5f7201aac1d3e06e8057943fe38c63d9bd0949635864
 MD5 a60f2eda770d155b36e44c97b8a59cf9 files/fix_shadow_manpages.patch 572
 RMD160 505a9c4178e7feda97c4d52d8dbbdb3d8fb83510 files/fix_shadow_manpages.patch 572
@@ -18,3 +21,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 c156983c8f0ecc65bd4f8a904d30b324 files/digest-libXfontcache-1.0.2 262
 RMD160 353ec6883a92c84ef182b440e14f996425c70b7d files/digest-libXfontcache-1.0.2 262
 SHA256 9107ae07a9cb97e033ca6ea14a45251f2b46482b867283d5d01381e10b06d24a files/digest-libXfontcache-1.0.2 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9beamhnQswr0vIRAoL+AJ0emkZ5YU3rebzw2ofo5+BKvb1mTACeNgTK
+4WEP++pB3M80lsoItTByC2Q=
+=JmyE
+-----END PGP SIGNATURE-----

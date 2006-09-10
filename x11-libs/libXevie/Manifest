@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX fix_shadow_manpages.patch 569 RMD160 72ba679fafd03304876c356893a3e34bbbcd402d SHA1 c493b2a7c8748fc109c7f6872c9856be38373591 SHA256 90423c19273a28b6fc01c323c5c91ca9e110e89211257f24b8f5a20d79dda38e
 MD5 8793a6b95aa23754e0dca0c67b86e9d8 files/fix_shadow_manpages.patch 569
 RMD160 72ba679fafd03304876c356893a3e34bbbcd402d files/fix_shadow_manpages.patch 569
@@ -18,3 +21,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 ddd0e6cf1e7ce1ebd2d41695a9dce874 files/digest-libXevie-1.0.1 247
 RMD160 e96a3c0d56a3f5676378949f7cf4ce8e62612a4c files/digest-libXevie-1.0.1 247
 SHA256 91029d0bdcd5f104615d8cc6d0dedac143e1ffbbbf3b9bf2a9579c50fee37041 files/digest-libXevie-1.0.1 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9bdamhnQswr0vIRAsCtAJsH0h9QNaq8jLOum+8Lh/ITObpqTQCeNJup
+zhWsFpG6t1r4rbQHi5IdRRM=
+=Sp3c
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST libXScrnSaver-1.1.0.tar.bz2 226956 RMD160 b38fd20a08d1b0d55baafae8cd44cb747872c230 SHA1 aef3cdcf5e7afb324c8f533c1a7eb1adb07d123f SHA256 7c1eea430f25e391b49a3b81dba47fef2800ccc728c3b8b0e78cf342c4e8c835
 EBUILD libXScrnSaver-1.1.0.ebuild 553 RMD160 e5cb7d6141cc376bbc2dd694f4cfa659c0ce34bc SHA1 bf63eb378591d762f7536bc5036ba7da22836b0f SHA256 3dbcfb0385897b29854836f66c1d42542debb5db8d6d9c1b4425a5161eaa8392
 MD5 1f0ce4ccd52de2b2e43e6abf7b403a7e libXScrnSaver-1.1.0.ebuild 553
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 f2f83f534479e2ecd93bf5cee7e7a0ab files/digest-libXScrnSaver-1.1.0 262
 RMD160 36143464a108f4c05f23ceebdc161d1abddfb794 files/digest-libXScrnSaver-1.1.0 262
 SHA256 7cb5c1765cfd96272fd6718dff455c6030d20fd5a9ecba466a3cfad023253d90 files/digest-libXScrnSaver-1.1.0 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9bdamhnQswr0vIRAuEiAKCnQngP1CwKWrAMkn9WlCkjieQZ+ACeJbad
+VDn+3qTD4hGpwHJZqXkrWmI=
+=wQ88
+-----END PGP SIGNATURE-----

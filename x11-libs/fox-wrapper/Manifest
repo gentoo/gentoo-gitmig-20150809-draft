@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX fox-wrapper-1.sh 2022 RMD160 db8485dd1cc598821db1da405c2d3edcb51d5512 SHA1 1ca9352092c7917c37ce56fe8eecb60d4219ccec SHA256 9061c867577e98b6d19c49f3002f4178df5009f1492db3d7f85eaa0d8ee463eb
 MD5 bda17181fe6497f64ccd32cc142d08e8 files/fox-wrapper-1.sh 2022
 RMD160 db8485dd1cc598821db1da405c2d3edcb51d5512 files/fox-wrapper-1.sh 2022
@@ -13,3 +16,10 @@ SHA256 1ea65c680833bedba5163e70dec5781a6a3671564c652dfdcdba0942c17810fa ChangeLo
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-fox-wrapper-1 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-fox-wrapper-1 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-fox-wrapper-1 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9beamhnQswr0vIRAv/SAKChUxxgoODY/kgPEJ3ybnjTsMcfLwCfQ3/J
+fRIboyeTm7WsvV1DkeOJx9Q=
+=KS1D
+-----END PGP SIGNATURE-----

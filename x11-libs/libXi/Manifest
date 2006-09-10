@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX fix_shadow_manpages.patch 3751 RMD160 84d36fe0d749efe56f9eaf6da7ffd054609afb29 SHA1 e111339bd8f5aa5b42521947c7c9c70ae9b252d0 SHA256 93d516a32e39cf19088668b610cd3346069f1b86d4ebb6950fb94d4d5eae7418
 MD5 a02c539f25bad42159c70d35be2637c5 files/fix_shadow_manpages.patch 3751
 RMD160 84d36fe0d749efe56f9eaf6da7ffd054609afb29 files/fix_shadow_manpages.patch 3751
@@ -18,3 +21,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 1752c814b94f155cc9dc2f45f018702d files/digest-libXi-1.0.1 238
 RMD160 cfbfc1151d8f872461dff87fd7dbe0b79b7d0d20 files/digest-libXi-1.0.1 238
 SHA256 255b558c971cc9e308198ee3608ad5c0d39d7fb7d871eab7f1b5a153f9ab4601 files/digest-libXi-1.0.1 238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9bdamhnQswr0vIRAgiqAKCsl9cyQ/mDhZwU30qKl6HGlAEAngCeJsrL
+wgi9k6mzqFh+JaabDMfOAys=
+=RptJ
+-----END PGP SIGNATURE-----

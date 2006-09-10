@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libsvg-cairo-stdarg_h.patch 352 RMD160 bb566758cee699d9670fbf6e67dffd8eb9d2d9a5 SHA1 81d1ed3eb9fcfd6d8e1fe82b0e2fd18b8dd9ad67 SHA256 e8bae1c962af7abb09b5867fb37295bb3c4da4d03e8b6e645f7e987df85125c3
 MD5 50f230b9997ff42cc37394c4649262d9 files/libsvg-cairo-stdarg_h.patch 352
 RMD160 bb566758cee699d9670fbf6e67dffd8eb9d2d9a5 files/libsvg-cairo-stdarg_h.patch 352
@@ -34,3 +37,10 @@ SHA256 8ff1bb7762c0230acc42622f7ed3f193e882c8c37d5d360a4a722876fa44e032 files/di
 MD5 1b280df7e82f19e26e76ff3f3320c1ee files/digest-libsvg-cairo-0.1.6 256
 RMD160 512a89e7e2bec31c6111e34290d2a28d121446f6 files/digest-libsvg-cairo-0.1.6 256
 SHA256 a9de0ddf777fe63aca9e671a19b38f3cc04e1d20af169f97e3c46295928637c9 files/digest-libsvg-cairo-0.1.6 256
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9bcamhnQswr0vIRAugCAKCSvVjOvmW6/FHtASRe2n4w4GP/oACfcYxz
+W3vf27359LFF6JxRZDAqi5U=
+=yECu
+-----END PGP SIGNATURE-----

@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX Mwm.defaults 536 RMD160 99fc40c2e923b53a14b2911c37064f2c9cd3f63b SHA1 ddbe7ab7af3a8caf6ccb9d6ab2c721ce5940edd1 SHA256 5373d8c7bd5460ce83bda99f08725fe9154cd4b5ca2b0698e5a0fda10e50f250
 MD5 aaf04376f7011a2f68b7961100f611fb files/Mwm.defaults 536
 RMD160 99fc40c2e923b53a14b2911c37064f2c9cd3f63b files/Mwm.defaults 536
@@ -44,3 +47,10 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-motif-config-0.9 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-motif-config-0.9 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-motif-config-0.9 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFA9bhamhnQswr0vIRApx3AJ9AF1t5/Wc+1d4NFFcBVZjEZWcG7ACfd5K0
+tLDUY7QwAKFkggFmwP0Ypcs=
+=3B1o
+-----END PGP SIGNATURE-----
