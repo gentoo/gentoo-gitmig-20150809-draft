@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5852 2006/09/10 18:05:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5853 2006/09/10 21:10:09 sanchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,8 +26,8 @@
 =sci-libs/blas-atlas-3.7.17
 =sci-libs/lapack-atlas-3.7.17
 
-# Diego Pettenò <flameeyes@gentoo.org> (10 Sep 2006)
-# Broken on multilib amd64, only place where it's keyworded
+# Sandro Bonazzola <sanchan@gentoo.org> (10 Sep 2006)
+# Masked for testing.
 =dev-libs/popt-1.10*
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (09 Sep 2006)
