@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.10 2006/06/01 20:09:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.11 2006/09/10 22:01:38 tupone Exp $
+
+  10 Sep 2006; <tupone@gentoo.org> +files/stepmania-3.9-sdl.patch,
+  stepmania-3.9.ebuild:
+  Fixing stepmania SDL error. Bug #135440 by Damien THEBAULT
 
   01 Jun 2006; <Tupone@gentoo.org> +files/stepmania-3.9-vorbis.patch,
   stepmania-3.9.ebuild:

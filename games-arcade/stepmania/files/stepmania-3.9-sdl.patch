@@ -1,0 +1,29 @@
+--- src/arch/InputHandler/InputHandler_SDL.cpp.old	2006-09-10 23:31:24.000000000 +0200
++++ src/arch/InputHandler/InputHandler_SDL.cpp	2006-09-10 23:32:09.000000000 +0200
+@@ -123,7 +123,7 @@
+ 	SDL_KEYDOWN, SDL_KEYUP, SDL_JOYBUTTONDOWN, SDL_JOYBUTTONUP,
+ 	SDL_JOYAXISMOTION, SDL_JOYHATMOTION, -1
+ };
+-static int SDL_EventMask;
++static int SDLEventMask;
+ 
+ InputHandler_SDL::InputHandler_SDL()
+ {
+@@ -173,7 +173,7 @@
+ 	for(i = 0; Handled_SDL_Events[i] != -1; ++i)
+ 	{
+ 		mySDL_EventState(Handled_SDL_Events[i], SDL_ENABLE);
+-		SDL_EventMask |= SDL_EVENTMASK(Handled_SDL_Events[i]);
++		SDLEventMask |= SDL_EVENTMASK(Handled_SDL_Events[i]);
+ 	}
+ }
+ 
+@@ -192,7 +192,7 @@
+ void InputHandler_SDL::Update(float fDeltaTime)
+ {
+ 	SDL_Event event;
+-	while(SDL_GetEvent(event, SDL_EventMask))
++	while(SDL_GetEvent(event, SDLEventMask))
+ 	{
+ 		switch(event.type)
+ 		{
