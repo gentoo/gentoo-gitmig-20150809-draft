@@ -4,9 +4,4 @@
 <maintainer>
 	<email>allanonjl@gentoo.org</email>
 </maintainer>
-<maintainer>
-	<email>brix@gentoo.org</email>
-	<name>Henrik Brix Andersen</name>
-	<description>Maintainer of the live CVS gimp-9999.ebuild</description>
-</maintainer>
 </pkgmetadata>
