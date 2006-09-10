@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/lprof
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/ChangeLog,v 1.9 2006/08/12 19:57:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/lprof/ChangeLog,v 1.10 2006/09/10 00:30:30 ticho Exp $
+
+  10 Sep 2006; <ticho@gentoo.org> lprof-1.11.3.1.ebuild:
+  Stable on x86, bug #139607.
 
 *lprof-1.11.4.1 (12 Aug 2006)
 
