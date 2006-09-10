@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2135 2006/09/10 15:35:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2136 2006/09/10 15:50:16 nattfodd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -410,8 +410,6 @@ dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/lablgtk:gnomecanvas - Enable libgnomecanvas bindings compilation.
-dev-ml/ocamlsdl:noimage - Disable sdl-image support
-dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
 dev-perl/Eidetic:auth - Enables Apache-AuthTicket based cookie authentication
 dev-perl/HTML-Mason:modperl - Enable modperl support
 dev-perl/PDL:badval - Enable badval support in PDL
