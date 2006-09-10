@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-mysql
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-mysql/ChangeLog,v 1.3 2005/08/17 12:51:53 vivo Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-mysql/ChangeLog,v 1.4 2006/09/10 15:34:44 nattfodd Exp $
+
+  10 Sep 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  -ocaml-mysql-1.0.3.ebuild:
+  Removed vulnerable 1.0.3 (bug #140545).
 
   17 Aug 2005; Francesco Riosa <vivo@gentoo.org>
   +files/ocaml-mysql-1.0.3-shtool-r1.patch, ocaml-mysql-1.0.3-r1.ebuild:
