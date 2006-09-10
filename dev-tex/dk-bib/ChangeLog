@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dk-bib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dk-bib/ChangeLog,v 1.10 2006/05/28 12:21:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dk-bib/ChangeLog,v 1.11 2006/09/10 11:56:12 kloeri Exp $
+
+  10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove brix from metadata.xml.
 
 *dk-bib-20060521 (28 May 2006)
 

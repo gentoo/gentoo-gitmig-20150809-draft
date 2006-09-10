@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>text-markup</herd>
 <maintainer>
-  <email>brix@gentoo.org</email>
-  <name>Henrik Brix Andersen</name>
-</maintainer>
-<maintainer>
   <email>text-markup@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
