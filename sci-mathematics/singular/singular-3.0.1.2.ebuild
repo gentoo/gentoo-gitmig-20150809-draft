@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.6 2006/09/06 06:44:19 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.7 2006/09/10 06:05:37 wormo Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://www.mathematik.uni-kl.de/pub/Math/Singular/src/$MY_PV_MAJOR/${MY_
 
 LICENSE="singular"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE="doc emacs"
 
 DEPEND=">=dev-lang/perl-5.6
