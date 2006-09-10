@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.81 2006/09/10 20:37:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.82 2006/09/10 21:10:29 tcort Exp $
+
+  10 Sep 2006; Thomas Cort <tcort@gentoo.org> ntp-4.2.2_p3.ebuild:
+  Stable on alpha wrt Bug #146912.
 
   10 Sep 2006; Brent Baude <ranger@gentoo.org> ntp-4.2.2_p3.ebuild:
   Marking net-misc/ntp-4.2.2_p3 ppc64 for bug 146912
