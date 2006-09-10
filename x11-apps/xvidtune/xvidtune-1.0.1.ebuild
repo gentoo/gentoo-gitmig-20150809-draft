@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/xvidtune-1.0.1.ebuild,v 1.4 2006/07/01 21:39:10 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/xvidtune-1.0.1.ebuild,v 1.5 2006/09/10 09:06:04 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,8 +8,10 @@
 inherit x-modular
 
 DESCRIPTION="X.Org xvidtune application"
-KEYWORDS="alpha amd64 arm mips ppc ppc64 ~s390 sh sparc x86"
+
+KEYWORDS="alpha amd64 arm mips ppc ppc64 s390 sh sparc x86"
 IUSE="xprint"
+
 RDEPEND="x11-libs/libXxf86vm
 	x11-libs/libXaw"
 DEPEND="${RDEPEND}"
