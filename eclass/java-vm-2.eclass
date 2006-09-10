@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.10 2006/09/02 01:42:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.11 2006/09/10 20:59:11 betelgeuse Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -23,7 +23,7 @@ RDEPEND="
 # If the VM supports generation-1, we need to depend on java-config-1
 if [[ ${JAVA_SUPPORTS_GENERATION_1} == 'true' ]]; then
 	DEPEND="${DEPEND} =dev-java/java-config-1.3*"
-	RDEPEND="${DDEPEND} =dev-java/java-config-1.3*"
+	RDEPEND="${RDEPEND} =dev-java/java-config-1.3*"
 fi
 
 export WANT_JAVA_CONFIG=2
