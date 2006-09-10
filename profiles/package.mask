@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5849 2006/09/09 21:08:02 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5850 2006/09/10 13:55:24 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (10 Sep 2006)
+# Broken on multilib amd64, only place where it's keyworded
+=dev-libs/popt-1.10*
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (09 Sep 2006)
 # Broken, doesn't work and dead upstream. Pending removal.
