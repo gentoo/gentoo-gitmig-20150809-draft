@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.29 2006/08/06 03:33:16 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.30 2006/09/10 14:28:33 caster Exp $
+
+*fop-0.20.5-r7 (10 Sep 2006)
+
+  10 Sep 2006; Vlastimil Babka <caster@gentoo.org>
+  +files/0.20.5-no-autodetection.patch, +fop-0.20.5-r7.ebuild:
+  Remove automagical detection of jai and jimi support that fails with
+  JAVA_PKG_STRICT wrt bug #145568.
 
   06 Aug 2006; Joshua Nichols <nichoj@gentoo.org> fop-0.20.5-r6.ebuild:
   Added missing dependency jar that was brought in by /usr/bin/ant, in order
