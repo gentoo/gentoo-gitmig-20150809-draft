@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.110 2006/07/31 02:29:31 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.111 2006/09/10 00:10:19 kloeri Exp $
+
+  10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kdewebdev-3.5.2.ebuild:
+  Stable on ia64.
 
   30 Jul 2006; <psi29a@gentoo.org> kdewebdev-3.5.2.ebuild:
   stable on mips
