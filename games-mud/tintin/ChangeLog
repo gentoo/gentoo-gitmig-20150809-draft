@@ -1,6 +1,12 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.36 2006/08/03 01:12:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.37 2006/09/10 22:50:47 mr_bones_ Exp $
+
+*tintin-1.96.2 (10 Sep 2006)
+
+  10 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +tintin-1.96.2.ebuild:
+  version bump
 
 *tintin-1.96.1 (03 Aug 2006)
 
