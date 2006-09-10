@@ -2,7 +2,7 @@ AUX libzvt-2.0.1-gentoo.diff 689 RMD160 03671882a0470f1a3e1c4cd2f057b40a1c31b05b
 MD5 e6d5d4cb4b88822dc078b4081252e9ec files/libzvt-2.0.1-gentoo.diff 689
 RMD160 03671882a0470f1a3e1c4cd2f057b40a1c31b05b files/libzvt-2.0.1-gentoo.diff 689
 SHA256 f2fcf3227b53ed9dc5642103accec690e7d4e08431b4a0d3f2e7b7ca44d3eaa8 files/libzvt-2.0.1-gentoo.diff 689
-DIST libzvt-2.0.1.tar.bz2 250649
+DIST libzvt-2.0.1.tar.bz2 250649 RMD160 7e13db566a23a90efc90cac3ced53d48c425789d SHA1 0531918eb1b88f386d65737b782b05332be24494 SHA256 d6998ed07c853e0d84835a020e11f232a9063d3a885c5cbf9c24c1df527b0253
 EBUILD libzvt-2.0.1-r2.ebuild 745 RMD160 5baf2d14a388963074957e74a9b062fe8abd8ab5 SHA1 7ef5286b47da4f25a84a515d294f1fa5a870f286 SHA256 90104c11fb1e03ddb8378dc9335f160a607fd26ff05214da4b849c010fb16630
 MD5 54ac6af5181a4d828482e7db7dd59285 libzvt-2.0.1-r2.ebuild 745
 RMD160 5baf2d14a388963074957e74a9b062fe8abd8ab5 libzvt-2.0.1-r2.ebuild 745
@@ -15,6 +15,6 @@ MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 c447acdeafe5afe1c8c51337db30ddf9 files/digest-libzvt-2.0.1-r2 65
-RMD160 c30eb79e922ebcc53bf63091f02addaf66be1fb9 files/digest-libzvt-2.0.1-r2 65
-SHA256 d58bcaa23570da4fdf3c97ee3c885041ffa69d3c8eda7d5fea23f99cf997509f files/digest-libzvt-2.0.1-r2 65
+MD5 d3a410a2de14a3bbfd4656d8cd9c4e2d files/digest-libzvt-2.0.1-r2 241
+RMD160 bd92faf371c267cf93183f18d7afec9814b20af9 files/digest-libzvt-2.0.1-r2 241
+SHA256 03db21b56ea7d7200f3aca32b6ff72284556dc1a35b36af8ebce3c5bc66b2742 files/digest-libzvt-2.0.1-r2 241

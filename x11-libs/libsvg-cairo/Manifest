@@ -2,13 +2,13 @@ AUX libsvg-cairo-stdarg_h.patch 352 RMD160 bb566758cee699d9670fbf6e67dffd8eb9d2d
 MD5 50f230b9997ff42cc37394c4649262d9 files/libsvg-cairo-stdarg_h.patch 352
 RMD160 bb566758cee699d9670fbf6e67dffd8eb9d2d9a5 files/libsvg-cairo-stdarg_h.patch 352
 SHA256 e8bae1c962af7abb09b5867fb37295bb3c4da4d03e8b6e645f7e987df85125c3 files/libsvg-cairo-stdarg_h.patch 352
-DIST libsvg-cairo-0.1.4.tar.gz 302412
-DIST libsvg-cairo-0.1.5.tar.gz 317013
+DIST libsvg-cairo-0.1.4.tar.gz 302412 RMD160 05629a5b6af15777762566a1d4e164b7f4856f53 SHA1 efe9bcbbe01ff2a5a0af081a4db2e995f985ed54 SHA256 f8f7c7dae9c27acf35345686b22e0786391b84d5e7013c7fc7152139de8cddeb
+DIST libsvg-cairo-0.1.5.tar.gz 317013 RMD160 8e713bce3f2e522650e3791afefbcc658535b6af SHA1 7a13126151161bf54a438ba4d66286b52ccdcec1 SHA256 091f50b57dcd5e755be71ca8932892abccbbf8ae59c7131d5f06108033fec921
 DIST libsvg-cairo-0.1.6.tar.gz 325427 RMD160 387476cf23cbe62e11587435ee5e4679da3e5d78 SHA1 c7bf131b59e8c00a80ce07c6f2f90f25a7c61f81 SHA256 a380be6a78ec2938100ce904363815a94068fca372c666b8cc82aa8711a0215c
-EBUILD libsvg-cairo-0.1.4.ebuild 632 RMD160 0fbcb21e2bf25519c14d2bd257a0f262a1f5f678 SHA1 1d47d4b44c9c702ed743826ad950b103fab90aba SHA256 5e28285c87c47d935af145b9a41bfc672262dfcfd3235f7e77c9416a58a0aba3
-MD5 0f8643b6988d365904140a0262145cbb libsvg-cairo-0.1.4.ebuild 632
-RMD160 0fbcb21e2bf25519c14d2bd257a0f262a1f5f678 libsvg-cairo-0.1.4.ebuild 632
-SHA256 5e28285c87c47d935af145b9a41bfc672262dfcfd3235f7e77c9416a58a0aba3 libsvg-cairo-0.1.4.ebuild 632
+EBUILD libsvg-cairo-0.1.4.ebuild 631 RMD160 c05d41b57dbe657fbcf7fef0e46c3613dfe2f4bf SHA1 7e2e9dd522f011ac8969cefbb85b3dd20ea6ac07 SHA256 0272dc9d824a708676acac3b5f849700fcb2e58770f6cd2d7e4aeb9d32e4becf
+MD5 0f0a367e6c41ca22236f50924c4e7cd1 libsvg-cairo-0.1.4.ebuild 631
+RMD160 c05d41b57dbe657fbcf7fef0e46c3613dfe2f4bf libsvg-cairo-0.1.4.ebuild 631
+SHA256 0272dc9d824a708676acac3b5f849700fcb2e58770f6cd2d7e4aeb9d32e4becf libsvg-cairo-0.1.4.ebuild 631
 EBUILD libsvg-cairo-0.1.5.ebuild 545 RMD160 ff4c90f13bfdff982f6749dee2c172ff234dffaf SHA1 1d0a0c0c7fb8b7a0310efce720ce9b799efecc1e SHA256 002ee403b8d4071dd0d4ce85631c9b6915b4e1890ff65c642ce4e9e8bdb58224
 MD5 60365af1819c223e699c336eec829f94 libsvg-cairo-0.1.5.ebuild 545
 RMD160 ff4c90f13bfdff982f6749dee2c172ff234dffaf libsvg-cairo-0.1.5.ebuild 545
@@ -25,12 +25,12 @@ MISC metadata.xml 337 RMD160 fbccbeb7a9d0ef5f654423923865d9e09410f52f SHA1 e854a
 MD5 65d1d5c2aa536148fb35cee02b3a8428 metadata.xml 337
 RMD160 fbccbeb7a9d0ef5f654423923865d9e09410f52f metadata.xml 337
 SHA256 644e8ac7aaaabcee4b671da385a8bf93f187131a143a097a7d61be997bb91d6b metadata.xml 337
-MD5 3e7e9d7a6e3e4afe23bfd9723509c591 files/digest-libsvg-cairo-0.1.4 70
-RMD160 d1a3e413332b61b8a1456facc2723cdd26153787 files/digest-libsvg-cairo-0.1.4 70
-SHA256 c2ec89d40f0c8f7b9c2da89649a1854f102dfabbb1f1c47d3dc9075eb44638f1 files/digest-libsvg-cairo-0.1.4 70
-MD5 1dbb228ceae58584108ac2b30c407c11 files/digest-libsvg-cairo-0.1.5 70
-RMD160 b82f47b34f01dbdd4995c210fd6c440c81a32c0a files/digest-libsvg-cairo-0.1.5 70
-SHA256 a2ff9b2ea8943714080aa1b1835153e84a8069d1f3fa255bf460e5807152371a files/digest-libsvg-cairo-0.1.5 70
+MD5 d00904214fb4319c1e86d20a0d20385d files/digest-libsvg-cairo-0.1.4 256
+RMD160 5ed871901ddd22d7ec9615ab2c453cff3a60db8a files/digest-libsvg-cairo-0.1.4 256
+SHA256 07c92e0b9efcb88887be31ea0592e540ce38c6ddfb93bc4a643a7699d1a2f8a3 files/digest-libsvg-cairo-0.1.4 256
+MD5 1e3c3e5bcd0ec246a958351354e480ef files/digest-libsvg-cairo-0.1.5 256
+RMD160 0ce9af17c1fbd3d926bc59eba1514349b9f17c8e files/digest-libsvg-cairo-0.1.5 256
+SHA256 8ff1bb7762c0230acc42622f7ed3f193e882c8c37d5d360a4a722876fa44e032 files/digest-libsvg-cairo-0.1.5 256
 MD5 1b280df7e82f19e26e76ff3f3320c1ee files/digest-libsvg-cairo-0.1.6 256
 RMD160 512a89e7e2bec31c6111e34290d2a28d121446f6 files/digest-libsvg-cairo-0.1.6 256
 SHA256 a9de0ddf777fe63aca9e671a19b38f3cc04e1d20af169f97e3c46295928637c9 files/digest-libsvg-cairo-0.1.6 256
