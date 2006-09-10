@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.5.ebuild,v 1.2 2006/09/09 00:49:13 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.5.ebuild,v 1.3 2006/09/10 16:50:34 ticho Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="OSD frontend for xine"
 HOMEPAGE="http://oxine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/oxine/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE="X curl debug dvb jpeg joystick nls png polling lirc v4l"
 
