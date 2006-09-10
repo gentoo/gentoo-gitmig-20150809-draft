@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.3 2006/03/13 23:26:56 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.9_pre20060124.ebuild,v 1.4 2006/09/10 15:35:40 sbriesen Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -29,6 +29,7 @@ DEPEND="virtual/linux-sources
 	sys-libs/ncurses
 	sys-libs/gdbm
 	dev-lang/tcl
+	app-text/rman
 	eurofile? ( net-ftp/ftpbase )
 	ipppd? ( mschap? ( dev-libs/openssl ) )
 	ipppd? ( activefilter? ( >=virtual/libpcap-0.9.3 ) )

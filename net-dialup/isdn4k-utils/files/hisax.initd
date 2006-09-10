@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/hisax.initd,v 1.4 2006/02/04 21:14:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/hisax.initd,v 1.5 2006/09/10 15:35:40 sbriesen Exp $
 
 depend() {
         use isapnp pcmcia
@@ -229,6 +229,7 @@ start() {
 
 stop() {
 	ebegin "Unloading HiSax driver"
-	/sbin/modprobe -sqr hisax_fcpcipnp && /sbin/modprobe -sqr hisax
+	/sbin/modprobe -sqr hisax_fcpcipnp
+	/sbin/modprobe -sqr hisax
 	eend $?
 }
