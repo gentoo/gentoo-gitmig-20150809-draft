@@ -1,9 +1,38 @@
-MD5 ccb14ef33dd24b7e69dcab6afea1a4e2 ocaml-mysql-1.0.3-r1.ebuild 898
-MD5 53f858c3c552a4aaaab3c9a82ab1031b ocaml-mysql-1.0.3.ebuild 849
-MD5 4622e8046668fccf3a67f5c35c9a1ef1 ChangeLog 865
-MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
-MD5 d136e53521c22eb8b9f2987dfd19163d files/ocaml-mysql-1.0.3-shtool.patch 744
-MD5 17d44e73eabd032735c409db133e8f19 files/ocaml-mysql-1.0.3-shtool-r1.patch 608
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX ocaml-mysql-1.0.3-head.patch 1635 RMD160 2170d145833669fa344285ee26cea5857ba9015c SHA1 5872bbfc312eec1d668b6cdd284efb950afc874e SHA256 e0352eff5ff3e81858c0163eac18afe8f8d7f5811e51a47b0d6a1d497eea58a3
 MD5 000615b1a5a0999a580efdd6dadad829 files/ocaml-mysql-1.0.3-head.patch 1635
-MD5 d6862e23b576fefef089e739a132cd16 files/digest-ocaml-mysql-1.0.3 69
+RMD160 2170d145833669fa344285ee26cea5857ba9015c files/ocaml-mysql-1.0.3-head.patch 1635
+SHA256 e0352eff5ff3e81858c0163eac18afe8f8d7f5811e51a47b0d6a1d497eea58a3 files/ocaml-mysql-1.0.3-head.patch 1635
+AUX ocaml-mysql-1.0.3-shtool-r1.patch 608 RMD160 6b3785b01bdb23e9cb37c55d1c736c84944af5b5 SHA1 04caa34c34c4a833faa761f3801a53a424b1fef1 SHA256 566d149a809af207b710966eba4aaf3c354d4c68c4a78ec83409482e8c4ed9d3
+MD5 17d44e73eabd032735c409db133e8f19 files/ocaml-mysql-1.0.3-shtool-r1.patch 608
+RMD160 6b3785b01bdb23e9cb37c55d1c736c84944af5b5 files/ocaml-mysql-1.0.3-shtool-r1.patch 608
+SHA256 566d149a809af207b710966eba4aaf3c354d4c68c4a78ec83409482e8c4ed9d3 files/ocaml-mysql-1.0.3-shtool-r1.patch 608
+AUX ocaml-mysql-1.0.3-shtool.patch 744 RMD160 acbf08fa35e2018189a2a9a659f4eb071e6f2ff5 SHA1 a54c5a9900fbef7d437893f596f82f4655d71a82 SHA256 6757ad386f37f508112cec2a2434d6452fc0c3c22132c03af3fb955df61f6989
+MD5 d136e53521c22eb8b9f2987dfd19163d files/ocaml-mysql-1.0.3-shtool.patch 744
+RMD160 acbf08fa35e2018189a2a9a659f4eb071e6f2ff5 files/ocaml-mysql-1.0.3-shtool.patch 744
+SHA256 6757ad386f37f508112cec2a2434d6452fc0c3c22132c03af3fb955df61f6989 files/ocaml-mysql-1.0.3-shtool.patch 744
+DIST ocaml-mysql-1.0.3.tar.gz 111574
+EBUILD ocaml-mysql-1.0.3-r1.ebuild 898 RMD160 c72d9a04d9ee04b5a0d70ff8088d894724ca8452 SHA1 85facf156994b76d04cd8b2058e4b8d8ce50627f SHA256 4e7dae8a124bedb629ea6ac1fca40d4e03600defcc791de3b6dcbe5f1df8bc62
+MD5 ccb14ef33dd24b7e69dcab6afea1a4e2 ocaml-mysql-1.0.3-r1.ebuild 898
+RMD160 c72d9a04d9ee04b5a0d70ff8088d894724ca8452 ocaml-mysql-1.0.3-r1.ebuild 898
+SHA256 4e7dae8a124bedb629ea6ac1fca40d4e03600defcc791de3b6dcbe5f1df8bc62 ocaml-mysql-1.0.3-r1.ebuild 898
+MISC ChangeLog 995 RMD160 fedfd79b92db0e7f29a574e3149c1b6b49e977a1 SHA1 c16c47b40f71a7df1d7ef6f9500224b6ca3e8aa2 SHA256 26cf89bc8b53ea58f92df4749fd96e6f60fa8f276ffec3af6a82798e8baa66de
+MD5 5e7f93640d662235c1e479225259c749 ChangeLog 995
+RMD160 fedfd79b92db0e7f29a574e3149c1b6b49e977a1 ChangeLog 995
+SHA256 26cf89bc8b53ea58f92df4749fd96e6f60fa8f276ffec3af6a82798e8baa66de ChangeLog 995
+MISC metadata.xml 157 RMD160 30153301a2a5cca5547a6e47941aae2895837613 SHA1 66e87d50f913856e703f3ee29841b03332af40db SHA256 d14b8b08774f2a40f42d70ff40b1b4f1c4725e7095d702143a32909553eac799
+MD5 648a541494aceee26dbcfd76164f37ea metadata.xml 157
+RMD160 30153301a2a5cca5547a6e47941aae2895837613 metadata.xml 157
+SHA256 d14b8b08774f2a40f42d70ff40b1b4f1c4725e7095d702143a32909553eac799 metadata.xml 157
 MD5 d6862e23b576fefef089e739a132cd16 files/digest-ocaml-mysql-1.0.3-r1 69
+RMD160 84bf6cf6b41e86c6d236469e1e1146a2cc59a3d3 files/digest-ocaml-mysql-1.0.3-r1 69
+SHA256 920b4fffa8efd45cf3e91d9d2ca84cfb2c303ff712d5a0a0e17ef3f6417f1590 files/digest-ocaml-mysql-1.0.3-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFBDEnwx9vvAARv2sRApVpAJ4odHh2VGDrbYTqECQ0QZK6q65OTQCgxrEQ
+8TgTKLbj7BDXCXKMbQra+5s=
+=0/3W
+-----END PGP SIGNATURE-----
