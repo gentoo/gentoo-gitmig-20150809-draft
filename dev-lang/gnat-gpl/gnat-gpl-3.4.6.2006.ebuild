@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006.ebuild,v 1.1 2006/09/08 13:18:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006.ebuild,v 1.2 2006/09/10 16:15:55 george Exp $
 
 inherit gnatbuild
 
@@ -10,8 +10,8 @@ LICENSE="GPL-2"
 
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCCVER}/gcc-core-${GCCVER}.tar.bz2
 	http://www.adaic.org/standards/05rm/RM-05-Html.zip
-	http://dev.gentoo.org/~george/src/${P}-src.tar.bz2
-	http://dev.gentoo.org/~george/src/${PN}-gcc-${PV}.diff.bz2
+	http://dev.gentoo.org/~george/src/${PN}-3.4.6.1-src.tar.bz2
+	http://dev.gentoo.org/~george/src/${PN}-gcc-3.4.6.1.diff.bz2
 	x86?   ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-i386.tar.bz2 )
 	amd64? ( http://dev.gentoo.org/~george/src/gnatboot-${BOOT_SLOT}-amd64-r2.tar.bz2 )"
 # ${BOOT_SLOT} and ${GCCVER} are defined in gnatbuild.eclass and depend 
