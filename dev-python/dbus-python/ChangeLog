@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/dbus
+# ChangeLog for dev-python/dbus-python
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.1 2006/08/19 00:18:56 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.2 2006/09/10 22:58:36 swegener Exp $
 
 *dbus-python-0.71 (19 Aug 2006)
 
