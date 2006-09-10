@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.25 2006/09/09 18:20:24 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.26 2006/09/10 20:43:04 sanchan Exp $
+
+*popt-1.10.4-r1 (10 Sep 2006)
+
+  10 Sep 2006; Sandro Bonazzola <sanchan@gentoo.org>
+  +files/popt-1.10.4-lib64.patch, -popt-1.10.4.ebuild,
+  +popt-1.10.4-r1.ebuild:
+  ebuild bump fixing bug #146988, bug #147066, bug #147044. Many thanks to
+  Patrick McLean for the patches and Diego Pettenò for the package masking.
 
 *popt-1.10.4 (09 Sep 2006)
 
