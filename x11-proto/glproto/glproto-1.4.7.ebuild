@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.7.ebuild,v 1.8 2006/07/19 14:25:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.7.ebuild,v 1.9 2006/09/10 08:50:20 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -10,7 +10,9 @@ inherit x-modular
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="X.Org GL protocol headers"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~s390 sh sparc x86 ~x86-fbsd"
+
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+
 RDEPEND=""
 DEPEND="${RDEPEND}
 	app-admin/eselect-opengl"
@@ -42,9 +44,9 @@ dynamic_libgl_install() {
 }
 
 switch_opengl_implem() {
-		# Switch to the xorg implementation.
-		# Use new opengl-update that will not reset user selected
-		# OpenGL interface ...
-		echo
-		eselect opengl set --use-old ${OPENGL_DIR}
+	# Switch to the xorg implementation.
+	# Use new opengl-update that will not reset user selected
+	# OpenGL interface ...
+	echo
+	eselect opengl set --use-old ${OPENGL_DIR}
 }
