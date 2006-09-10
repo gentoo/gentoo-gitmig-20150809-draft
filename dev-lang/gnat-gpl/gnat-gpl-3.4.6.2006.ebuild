@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006.ebuild,v 1.2 2006/09/10 16:15:55 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gpl/gnat-gpl-3.4.6.2006.ebuild,v 1.3 2006/09/10 21:12:15 george Exp $
 
 inherit gnatbuild
 
@@ -29,7 +29,7 @@ src_unpack() {
 	# prep gcc sources for Ada
 	mv "${GNATSOURCE}/src/ada" "${S}/gcc"
 	cd "${S}"
-	epatch ${WORKDIR}/${PN}-gcc-${PV}.diff
+	epatch ${WORKDIR}/${PN}-gcc-3.4.6.1.diff
 
 	gnatbuild_src_unpack common_prep
 
