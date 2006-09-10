@@ -1,17 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.8 2006/09/10 08:22:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.9 2006/09/10 08:47:09 vapier Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
 XSERVER_VERSION="1.1.1"
+PATCH_VER=1
 
 MY_P="vnc-4_1_2-unixsrc"
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.realvnc.com/"
 SRC_URI="http://ltsp.mirrors.tds.net/pub/ltsp/tarballs/${MY_P}.tar.gz
 	http://ftp.plusline.de/FreeBSD/distfiles/xc/${MY_P}.tar.gz
-	http://www.gentooexperimental.org/~genstef/dist/${P}-patches.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
 	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
 
 LICENSE="GPL-2"
@@ -62,41 +63,16 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-
-	# patches from Fedora
-	epatch "${WORKDIR}"/${P}/vnc-viewer-reparent.patch
-	epatch "${WORKDIR}"/${P}/vnc-newfbsize.patch
 
 	if use server ; then
 		mv "${WORKDIR}"/xorg-server-${XSERVER_VERSION} unix/
+	else
+		rm -f "${WORKDIR}"/patch/*vnc-server*
+	fi
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 
-		# patches from Fedora
-		epatch "${WORKDIR}"/${P}/vnc-cookie.patch
-		epatch "${WORKDIR}"/${P}/vnc-gcc4.patch
-		epatch "${WORKDIR}"/${P}/vnc-use-fb.patch
-		epatch "${WORKDIR}"/${P}/vnc-xclients.patch
-		epatch "${WORKDIR}"/${P}/vnc-idle.patch
-		epatch "${WORKDIR}"/${P}/vnc-via.patch
-		epatch "${WORKDIR}"/${P}/vnc-build.patch
-		epatch "${WORKDIR}"/${P}/vnc-fPIC.patch
-		epatch "${WORKDIR}"/${P}/vnc-restart.patch
-		epatch "${WORKDIR}"/${P}/vnc-vncpasswd.patch
-		epatch "${WORKDIR}"/${P}/vnc-def.patch
-		epatch "${WORKDIR}"/${P}/vnc-modular-xorg.patch
-		epatch "${WORKDIR}"/${P}/vnc-nohttpd.patch
-
-		cd unix/xorg-server-*
-		epatch "${WORKDIR}"/${P}/vnc-fontpath.patch
-		epatch "${WORKDIR}"/${P}/vnc-s390.patch
-
-		cd ../../
-
-		epatch "${WORKDIR}"/${P}/vnc-64bit.patch
-		epatch "${WORKDIR}"/${P}/vnc-select.patch
-		epatch "${WORKDIR}"/${P}/vnc-opengl.patch
-
+	if use server ; then
 		cp -a "${S}"/unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
 			"${S}"/unix/xc/programs/Xserver/Xvnc.man \
 			"${S}"/unix/xc/programs/Xserver/vnc/*.{h,cc} \
