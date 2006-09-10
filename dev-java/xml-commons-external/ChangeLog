@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/xml-commons-external
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.9 2006/07/23 00:44:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons-external/ChangeLog,v 1.10 2006/09/10 02:40:52 nichoj Exp $
+
+  10 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  xml-commons-external-1.3.02-r1.ebuild:
+  Keyworded ~ia64
+
+  10 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  xml-commons-external-1.3.02-r1.ebuild:
+  Keyworded ~ia64
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   xml-commons-external-1.3.02-r1.ebuild:
