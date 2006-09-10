@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20051101-r1.ebuild,v 1.1 2006/09/09 15:27:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20051101-r1.ebuild,v 1.2 2006/09/10 09:55:23 mrness Exp $
 
 inherit eutils linux-mod multilib
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/${P%%_*}-makefile.patch"
-	epatch "${FILESDIR}/${P%%_*}-devfs.patch"
+	epatch "${FILESDIR}/${P%%_*}-kernel-2.6.18.patch"
 	cd drivers
 	sed -i "s:SUBDIRS=\$(shell pwd):SUBDIRS=${S}/drivers:" Makefile
 	convert_to_m Makefile
