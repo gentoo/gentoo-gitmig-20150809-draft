@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.1 2006/09/08 06:13:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.2 2006/09/10 04:45:44 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -118,32 +118,33 @@ src_install() {
 setup_boot_dir() {
 	local dir="${1}"
 
-	[[ ! -e "${dir}" ]] && die "${dir} does not exist!"
-
-	[[ ! -e "${dir}/grub" ]] && mkdir "${dir}/grub"
+	[[ ! -e ${dir} ]] && die "${dir} does not exist!"
+	[[ ! -e ${dir}/grub ]] && mkdir "${dir}/grub"
 
 	# change menu.lst to grub.conf
-	if [[ ! -e "${dir}/grub/grub.conf" && -e "${dir}/grub/menu.lst" ]] ; then
-		mv -f "${dir}/grub/menu.lst ${dir}/grub/grub.conf"
+	if [[ ! -e ${dir}/grub/grub.conf ]] && [[ -e ${dir}/grub/menu.lst ]] ; then
+		mv -f "${dir}"/grub/menu.lst "${dir}"/grub/grub.conf
 		ewarn
 		ewarn "*** IMPORTANT NOTE: menu.lst has been renamed to grub.conf"
 		ewarn
 	fi
 
-	if [[ ! -e "${dir}"/grub/menu.lst ]]; then
+	if [[ ! -e ${dir}/grub/menu.lst ]]; then
 	einfo "Linking from new grub.conf name to menu.lst"
-		ln -snf grub.conf "${dir}/grub/menu.lst"
+		ln -snf grub.conf "${dir}"/grub/menu.lst
 	fi
 
-	[[ -e "${dir}"/grub/stage2 ]] && mv "${dir}"/grub/stage2{,.old}
+	[[ -e ${dir}/grub/stage2 ]] && mv "${dir}"/grub/stage2{,.old}
 
 	einfo "Copying files from /lib/grub and /usr/lib/grub to "${dir}""
 	for x in /lib*/grub/*/* /usr/lib*/grub/*/* ; do
 		[[ -f ${x} ]] && cp -p ${x} "${dir}"/grub/
 	done
 
-	if [[ -e "${dir}"/grub/grub.conf ]] ; then
-		egrep -v '^[[:space:]]*(#|$|default|fallback|splashimage|timeout|title)' "${dir}"/grub/grub.conf | \
+	if [[ -e ${dir}/grub/grub.conf ]] ; then
+		egrep \
+			-v '^[[:space:]]*(#|$|default|fallback|initrd|password|splashimage|timeout|title)' \
+			"${dir}"/grub/grub.conf | \
 		/sbin/grub --batch \
 			--device-map="${dir}"/grub/device.map \
 			> /dev/null
