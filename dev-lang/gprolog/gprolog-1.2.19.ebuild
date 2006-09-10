@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.19.ebuild,v 1.5 2006/04/30 04:50:22 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.2.19.ebuild,v 1.6 2006/09/10 03:23:43 keri Exp $
 
 inherit autotools eutils flag-o-matic
 
-IUSE="doc"
+IUSE="doc examples"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 DESCRIPTION="GNU Prolog is a native Prolog compiler with constraint solving over finite domains (FD)"
 HOMEPAGE="http://pauillac.inria.fr/~diaz/gnu-prolog/"
@@ -61,11 +61,12 @@ src_install() {
 	make install-system || die "make install-system failed"
 
 	if use doc; then
-		make install-doc || die "make install-doc failed"
 		make install-html || die "make install-html failed"
+	fi
+	if use examples; then
 		make install-examples || die "make install-examples failed"
 	fi
 
 	cd ${S}/..
-	dodoc ChangeLog INSTALL NEWS PROBLEMS README VERSION
+	dodoc ChangeLog NEWS PROBLEMS README VERSION
 }
