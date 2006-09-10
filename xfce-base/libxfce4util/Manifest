@@ -1,5 +1,5 @@
-DIST libxfce4util-4.2.1.tar.gz 447569
-DIST libxfce4util-4.2.2.tar.gz 458244
+DIST libxfce4util-4.2.1.tar.gz 447569 RMD160 5416db77377e4a4c7764b704e0ba4f52195db41f SHA1 895963bd507a4accf40a2127b9e3f9442953a3a7 SHA256 bb7019ba921ade566fb0e11869208c3ce42f98dbc6599456e0d8129c28b6906e
+DIST libxfce4util-4.2.2.tar.gz 458244 RMD160 0c8f09ced7470c0ce0d85ad5a60c5385111548e0 SHA1 49d945fb79870159deea73c98cc6e34f537cd2ab SHA256 8efb3416a37654050089234115fe7db9268c8da0ee0369ff3f5330cef3f15a66
 DIST libxfce4util-4.2.3.2.tar.gz 469106 RMD160 911f30b2bc7ea03fca324a1b3a88cf68da062acd SHA1 b214a3fe7c2f65fd95874202fee59dae942fb60f SHA256 344e0dec9183fbc90f38ed887f0ce4fab82d50c3076ae92bd27086f3fa6d7170
 DIST libxfce4util-4.3.90.1.tar.bz2 286786 RMD160 204df4d2b13ab1ea5779f7ecd2b48a5bae5136ea SHA256 c101a962621e87d6e27761a56f1e2ef023fe0c52b88ffcb5f2a8756b0ff892fb
 DIST libxfce4util-4.3.90.2.tar.bz2 308007 RMD160 a0e41a25cf46dbb2258203aeef3d68e881b8aa1c SHA1 8fe32d2f1d2ab6b75a00ed8c2a111ada34214481 SHA256 d5e2bc207703831f2db4cd9f9d960474826188ced9c3fb8befc670ad19253527
@@ -15,10 +15,10 @@ EBUILD libxfce4util-4.2.2.ebuild 447 RMD160 9516ebdbc28c82e7b116e773831a6f214663
 MD5 3c7e9e0b1bda5eedf402463fbcdc0aee libxfce4util-4.2.2.ebuild 447
 RMD160 9516ebdbc28c82e7b116e773831a6f214663deeb libxfce4util-4.2.2.ebuild 447
 SHA256 2744f9a0047071b32a43108e37c0e32f3b17116ed47d6a2d0c9b6254560e4d98 libxfce4util-4.2.2.ebuild 447
-EBUILD libxfce4util-4.2.3.2.ebuild 468 RMD160 0a37647f451926279ee45cb585c08838543ba611 SHA1 615f5d034b1ce50a5c43ebb5b68713774d8d8a9a SHA256 cb20f39eaf89d738ccf52128110defe191b2c04f3e1b4492349b25cd40eba1ea
-MD5 f66f6232263064f139623120a1d4420a libxfce4util-4.2.3.2.ebuild 468
-RMD160 0a37647f451926279ee45cb585c08838543ba611 libxfce4util-4.2.3.2.ebuild 468
-SHA256 cb20f39eaf89d738ccf52128110defe191b2c04f3e1b4492349b25cd40eba1ea libxfce4util-4.2.3.2.ebuild 468
+EBUILD libxfce4util-4.2.3.2.ebuild 466 RMD160 e9ac4842a90aea0a9d9c394b05a3b48d855176a0 SHA1 2a8cf70bf0dcd9bee53e93d619449a4a6477f468 SHA256 773c4ec4df736f529d48ab8cd77062f4fb7e5dd4f239137add1164316b85d97a
+MD5 33b5baed507e5cf47c05d4a0e596ff1f libxfce4util-4.2.3.2.ebuild 466
+RMD160 e9ac4842a90aea0a9d9c394b05a3b48d855176a0 libxfce4util-4.2.3.2.ebuild 466
+SHA256 773c4ec4df736f529d48ab8cd77062f4fb7e5dd4f239137add1164316b85d97a libxfce4util-4.2.3.2.ebuild 466
 EBUILD libxfce4util-4.3.90.1.ebuild 520 RMD160 b59885a2d27b5b591e40fff74a706dbdd0b13e94 SHA1 2bf04336ca04cf8fdddb013e7147bb7378030ebb SHA256 50fcce036bff3a6a0843a0501dc2bbda11883abf1203b50ccaa8b021023bde39
 MD5 3399f0a81ffc423e05cc86742d9c54c2 libxfce4util-4.3.90.1.ebuild 520
 RMD160 b59885a2d27b5b591e40fff74a706dbdd0b13e94 libxfce4util-4.3.90.1.ebuild 520
@@ -35,15 +35,15 @@ MISC metadata.xml 157 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 SHA1 7eae9
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 RMD160 d7470fe88d1b96f3a7f1ef26fb7dc646b4a1b907 metadata.xml 157
 SHA256 44350daa7594842894d676413708d8ea77ccb0017bed24711af5b256281f5e61 metadata.xml 157
-MD5 7a2ecefbbf17776cce73f7c0c1edeb02 files/digest-libxfce4util-4.2.1 70
-RMD160 d1a84239def1e0abd30d0ad2a00bb5e4cc1ce504 files/digest-libxfce4util-4.2.1 70
-SHA256 2257b35a874b426b43e95cb111da6017fdd565bf5b1db47f721f3d9d66760b59 files/digest-libxfce4util-4.2.1 70
-MD5 e6bb8f4efa04dca3652c70612e73c1fe files/digest-libxfce4util-4.2.2 70
-RMD160 e230f35e64526ee94b3fd6bc31795b0834a79c67 files/digest-libxfce4util-4.2.2 70
-SHA256 97adf03eaafe7b106c168de371c58f49a120f84b4081dfdc6c085e93912e5a6e files/digest-libxfce4util-4.2.2 70
-MD5 e6bb8f4efa04dca3652c70612e73c1fe files/digest-libxfce4util-4.2.2-r1 70
-RMD160 e230f35e64526ee94b3fd6bc31795b0834a79c67 files/digest-libxfce4util-4.2.2-r1 70
-SHA256 97adf03eaafe7b106c168de371c58f49a120f84b4081dfdc6c085e93912e5a6e files/digest-libxfce4util-4.2.2-r1 70
+MD5 ee6f9aeac4c68a0f045494d5afb84ad5 files/digest-libxfce4util-4.2.1 256
+RMD160 d754497ae74c761dbdafe7c676b6413c834209f9 files/digest-libxfce4util-4.2.1 256
+SHA256 982468bca77f00e1b9c7254ef9429b664a6b6bf7f3e4e3e6b1c8df3c18d03afb files/digest-libxfce4util-4.2.1 256
+MD5 aa7e5c6288e1af2bfa4d8fe82f01831d files/digest-libxfce4util-4.2.2 256
+RMD160 d5350fd4e9fa639a6e32296bc6c89e78be92fa67 files/digest-libxfce4util-4.2.2 256
+SHA256 11ae9e15e6538ec7e6638edabb4bb997696b9b1d6396cd7c8d4361db4e317a43 files/digest-libxfce4util-4.2.2 256
+MD5 aa7e5c6288e1af2bfa4d8fe82f01831d files/digest-libxfce4util-4.2.2-r1 256
+RMD160 d5350fd4e9fa639a6e32296bc6c89e78be92fa67 files/digest-libxfce4util-4.2.2-r1 256
+SHA256 11ae9e15e6538ec7e6638edabb4bb997696b9b1d6396cd7c8d4361db4e317a43 files/digest-libxfce4util-4.2.2-r1 256
 MD5 d01ba8422656e713adde0e1a379ccc91 files/digest-libxfce4util-4.2.3.2 262
 RMD160 56dbd4007ff6866867b6bd628db43dc9c143f127 files/digest-libxfce4util-4.2.3.2 262
 SHA256 95abf484a57759bb8b62c53b49a33764432ca3f8ce4df0de5a1fbf438c5952db files/digest-libxfce4util-4.2.3.2 262
