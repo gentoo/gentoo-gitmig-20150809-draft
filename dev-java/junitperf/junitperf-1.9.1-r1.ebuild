@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.3 2006/09/09 07:27:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junitperf/junitperf-1.9.1-r1.ebuild,v 1.4 2006/09/10 21:57:15 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_test() {
-	eant -lib $(java-pkg_getjar ant-tasks ant-junit.jar) test
+	eant test
 }
 
 src_install() {
