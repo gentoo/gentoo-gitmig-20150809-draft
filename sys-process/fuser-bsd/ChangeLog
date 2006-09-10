@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/fuser-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.1 2006/09/10 12:45:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.2 2006/09/10 19:15:17 uberlord Exp $
+
+  10 Sep 2006; Roy Marples <uberlord@gentoo.org> +files/fuser-return.patch,
+  fuser-bsd-1142334561.ebuild:
+  Ensure that fuser returns non zero if no files are found
 
 *fuser-bsd-1142334561 (10 Sep 2006)
 
