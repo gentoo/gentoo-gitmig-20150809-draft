@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.0.ebuild,v 1.1 2006/09/07 04:02:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.0.ebuild,v 1.2 2006/09/11 14:42:20 leio Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -16,7 +16,7 @@ IUSE="doc libnotify"
 
 RDEPEND=">=dev-libs/glib-2.6.0
 		 >=x11-libs/gtk+-2.6.0
-		 >=gnome-base/libgnome-2.10.0
+		 >=gnome-base/libgnome-2.14.0
 		 >=gnome-base/libgnomeui-2.10.0
 		 >=sys-apps/dbus-0.61
 		 >=sys-apps/hal-0.5.7-r1
