@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/blas-atlas
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.43 2006/09/08 04:07:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/ChangeLog,v 1.44 2006/09/11 20:54:00 markusle Exp $
+
+*blas-atlas-3.7.17 (10 Sep 2006)
+
+  10 Sep 2006; Markus Dittrich <markusle@gentoo.org>
+  -blas-atlas-3.7.15.ebuild, +blas-atlas-3.7.17.ebuild:
+  Bumped to new development snapshot and removed old version
+  (see bug #144314).
 
   08 Sep 2006; Joshua Jackson <tsunam@gentoo.org> blas-atlas-3.7.11.ebuild:
   stable x86; bug #141432
