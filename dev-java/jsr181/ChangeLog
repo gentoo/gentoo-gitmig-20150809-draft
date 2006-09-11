@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jsr181
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.1 2006/09/11 11:43:53 nelchael Exp $
+
+*jsr181-0.7 (11 Sep 2006)
+
+  11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml,
+  +metadata.xml, +jsr181-0.7.ebuild:
+  Initial version.
+
