@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Size
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.6 2006/08/05 02:51:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size/ChangeLog,v 1.7 2006/09/11 21:33:37 mcummings Exp $
+
+  11 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  +files/Devel-Size-test-fix.patch, Devel-Size-0.64.ebuild:
+  Patch for tests, affects only tests on amd64
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Devel-Size-0.64.ebuild:
