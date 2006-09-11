@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.25.1.ebuild,v 1.4 2006/05/22 05:00:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.25.1.ebuild,v 1.5 2006/09/11 03:33:48 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 i830 mach64 matrox neomagic nsc nvidia radeon savage sis315 tdfx unichrome"
-IUSE_INPUT_DEVICES="dbox2remote elo-input gunze h3600_ts joystick keyboard dreamboxremote linuxinput lirc mutouch none permount ps2mouse serialmouse sonypijofdial wm97xx"
+IUSE_INPUT_DEVICES="dbox2remote elo-input gunze h3600_ts joystick keyboard dreamboxremote linuxinput lirc mutouch none permount ps2mouse serialmouse sonypijogdial wm97xx"
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
 HOMEPAGE="http://www.directfb.org/"
