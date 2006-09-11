@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/kahakai
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.24 2006/05/22 02:42:53 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/ChangeLog,v 1.25 2006/09/11 11:22:57 nixphoeni Exp $
+
+  11 Sep 2006; Joe Sapp <nixphoeni@gentoo.org> kahakai-0.6.1.ebuild,
+  kahakai-0.6.2.ebuild, kahakai-0.6.2_p20040306.ebuild:
+  Removed monolithic X support
 
   19 May 2006; Joe Sapp <nixphoeni@gentoo.org> kahakai-0.6.1.ebuild,
   kahakai-0.6.2.ebuild, kahakai-0.6.2_p20040306.ebuild:

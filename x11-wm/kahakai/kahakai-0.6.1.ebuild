@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.1.ebuild,v 1.9 2006/05/22 02:42:53 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.6.1.ebuild,v 1.10 2006/09/11 11:22:57 nixphoeni Exp $
 
 IUSE="truetype xinerama"
 
@@ -12,13 +12,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc -alpha ~sparc"
 
-RDEPEND="|| ( ( x11-libs/libX11
+RDEPEND="( x11-libs/libX11
 		x11-libs/libXrandr
 		x11-libs/libXrender
 		x11-proto/xextproto
 		xinerama? ( x11-libs/libXinerama )
-		)
-		virtual/x11
 	)
 	truetype? ( || ( x11-libs/libXft virtual/xft x11-base/xorg-x11 ) )
 	=dev-lang/swig-1.3.21
