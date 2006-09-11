@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.1 2006/08/09 17:04:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.2 2006/09/11 07:02:45 mr_bones_ Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DESCRIPTION="Fly a plane around bomb/shoot the enemy.  Port of Planegame from Amiga."
 HOMEPAGE="http://www.fishies.org.uk/apricots.html"
@@ -34,7 +34,11 @@ src_unpack() {
 		-e "s:apricots.cfg:${GAMES_SYSCONFDIR}/${PN}/apricots.cfg:" \
 		README apricots.html \
 		|| die "sed failed"
-	eautoconf
+	sed -i \
+		-e 's/-Wmissing-prototypes//' \
+		acinclude.m4 \
+		|| die "sed failed"
+	eautoreconf
 }
 
 src_install() {
