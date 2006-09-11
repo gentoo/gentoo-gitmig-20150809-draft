@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.70 2006/09/05 01:02:30 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.71 2006/09/11 10:59:31 humpback Exp $
+
+  11 Sep 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  tor-0.1.0.18.ebuild:
+  Changed einfo about configuration of chroot. Removes tor from bug #140371
 
   05 Sep 2006; Gustavo Felisberto <humpback@gentoo.org>;
   -files/torrc.sample-0.1.0.14.patch, -tor-0.1.0.14-r1.ebuild,
