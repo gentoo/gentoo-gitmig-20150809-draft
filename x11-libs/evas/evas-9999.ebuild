@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.16 2006/08/20 06:44:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.17 2006/09/11 03:45:25 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -13,7 +13,7 @@ RDEPEND="X? ( || ( x11-libs/libXrender virtual/x11 ) )
 	>=media-libs/imlib2-1.2.0
 	>=dev-libs/eet-0.9.9
 	>=dev-db/edb-1.0.5
-	cairo? ( >=x11-libs/cairo-0.2.0 )
+	cairo? ( >=x11-libs/cairo-1.2 )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
