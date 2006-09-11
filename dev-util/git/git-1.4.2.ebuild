@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.5 2006/08/15 14:51:06 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.ebuild,v 1.6 2006/09/11 08:09:32 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -106,6 +106,9 @@ src_install() {
 		use doc && dodoc contrib/gitview/gitview.txt
 	fi
 
+	insinto /etc/xinet.d
+	newins "${FILESDIR}"/git-daemon.xinetd git-daemon
+
 	newinitd "${FILESDIR}"/git-daemon.initd git-daemon
 	newconfd "${FILESDIR}"/git-daemon.confd git-daemon
 }
@@ -122,22 +125,22 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	einfo
 	einfo "If you want to import arch repositories into git, consider using the"
-	einfo "git-archimport command. You should install dev-util/tla before"
+	einfo "git-archimport command. You should install dev-util/tla before."
 	einfo
 	einfo "If you want to import cvs repositories into git, consider using the"
-	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1 before"
+	einfo "git-cvsimport command. You should install >=dev-util/cvsps-2.1 before."
 	einfo
 	einfo "If you want to import svn repositories into git, consider using the"
-	einfo "git-svnimport command. You should install dev-util/subversion before"
+	einfo "git-svnimport command. You should install dev-util/subversion before."
 	einfo
 	einfo "If you want to manage subversion repositories using git, consider"
-	einfo "using git-svn. You should install dev-util/subversion and dev-perl/libwww-perl"
+	einfo "using git-svn. You should install dev-util/subversion and dev-perl/libwww-perl."
 	einfo
 	einfo "If you want to import a quilt series into git, consider using the"
-	einfo "git-quiltimport command. You should install dev-util/quilt before"
+	einfo "git-quiltimport command. You should install dev-util/quilt before."
 	einfo
 	einfo "If you want to use the included CVS server you will need to install"
-	einfo "dev-perl/DBI and dev-perl/DBD-SQLite"
+	einfo "dev-perl/DBI and dev-perl/DBD-SQLite."
 	einfo
 }
 
