@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.83 2006/09/11 03:01:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.84 2006/09/11 06:43:31 vapier Exp $
+
+  11 Sep 2006; Mike Frysinger <vapier@gentoo.org> ntp-4.2.2_p3.ebuild:
+  Always block openntpd as trying to make these guys coexist is a pita #147080
+  by Jan Kundrát.
 
   11 Sep 2006; Jason Wever <weeve@gentoo.org> ntp-4.2.2_p3.ebuild:
   Stable on SPARC wrt bug #146912.
