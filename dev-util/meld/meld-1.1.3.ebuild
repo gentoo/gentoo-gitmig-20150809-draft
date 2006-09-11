@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.3.ebuild,v 1.8 2006/07/16 09:39:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.3.ebuild,v 1.9 2006/09/11 16:59:53 agriffis Exp $
 
 inherit python gnome2 eutils
 
@@ -42,6 +42,9 @@ src_unpack() {
 
 	# fix the prefix so its not in */local/*
 	sed -i -e 's:/usr/local:/usr:' INSTALL
+
+	# don't run scrollkeeper (with the wrong path), leave that to gnome2.eclass #145833
+	sed -i -e '/scrollkeeper-update/s/\t/&#/' help/*/GNUmakefile
 }
 
 src_compile() {
