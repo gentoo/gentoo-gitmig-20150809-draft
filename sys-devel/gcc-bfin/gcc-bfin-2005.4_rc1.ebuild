@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-bfin/gcc-bfin-2005.4_rc1.ebuild,v 1.2 2006/04/11 00:18:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-bfin/gcc-bfin-2005.4_rc1.ebuild,v 1.3 2006/09/11 05:33:19 vapier Exp $
 
 [[ ${CTARGET} != bfin* && ${CATEGORY} == "sys-devel" ]] && export CTARGET="bfin-elf"
 GCC_A_FAKEIT=${A}
-export USE="nocxx -fortran -gcj -objc -multilib"
+TOOLCHAIN_ALLOWED_LANGS="c"
 
 ETYPE="gcc-compiler"
 
