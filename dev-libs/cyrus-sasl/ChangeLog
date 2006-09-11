@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.155 2006/09/06 18:31:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.156 2006/09/11 16:03:37 langthang Exp $
+
+  11 Sep 2006; Tuấn Văn <langthang@gentoo.org> -cyrus-sasl-2.1.20.ebuild:
+  security cleanup, bug #140514.
 
   06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> cyrus-sasl-2.1.22.ebuild:
   Stable x86; bug #142650
