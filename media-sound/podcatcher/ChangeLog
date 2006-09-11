@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/podcatcher
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podcatcher/ChangeLog,v 1.1 2006/09/11 05:20:07 metalgod Exp $
+
+*podcatcher-1.3.7 (11 Sep 2006)
+
+  11 Sep 2006; Luis Medinas <metalgod@gentoo.org> +podcatcher-1.3.7.ebuild:
+  Initial import. Thanks to Aggelos Orfanakos <agorf@void.gr> on bug #143726.
+
