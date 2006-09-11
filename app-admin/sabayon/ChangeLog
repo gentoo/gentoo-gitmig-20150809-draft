@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sabayon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.1 2006/09/07 03:31:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.2 2006/09/11 11:33:35 dberkholz Exp $
+
+  11 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  sabayon-2.12.4.ebuild:
+  Keyword ~ppc.
 
 *sabayon-2.12.4 (07 Sep 2006)
 
