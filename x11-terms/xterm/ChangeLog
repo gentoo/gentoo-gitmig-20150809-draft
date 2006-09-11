@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.159 2006/09/11 03:12:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.160 2006/09/11 08:14:37 exg Exp $
+
+  11 Sep 2006; Emanuele Giaquinta <exg@gentoo.org> -xterm-219.ebuild:
+  Cleanup.
 
 *xterm-220 (11 Sep 2006)
 
