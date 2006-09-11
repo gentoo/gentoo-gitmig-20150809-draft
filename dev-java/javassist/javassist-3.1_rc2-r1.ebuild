@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-3.1_rc2-r1.ebuild,v 1.1 2006/08/05 17:14:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javassist/javassist-3.1_rc2-r1.ebuild,v 1.2 2006/09/11 16:03:19 nelchael Exp $
 
-inherit java-pkg-2 java-ant-2
+inherit java-pkg-2 java-ant-2 eutils
 
 MY_PV=${PV/_rc/RC}
 MY_P="${PN}-${MY_PV}"
@@ -22,13 +22,31 @@ DEPEND=">=virtual/jdk-1.4
 		source? ( app-arch/zip )"
 S="${WORKDIR}/${MY_P}"
 
+src_unpack() {
+
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-classpath.patch"
+
+}
+
 src_compile() {
+
+	mkdir "${S}/lib"
+	cd "${S}/lib"
+	ln -s "${JAVA_HOME}/lib/tools.jar"
+	
+	cd "${S}"
 	eant clean jar $(use_doc javadocs)
+
 }
 
 src_install() {
+
 	java-pkg_dojar ${PN}.jar
 	java-pkg_dohtml Readme.html
+
 	use doc && java-pkg_dojavadoc html
 	use source && java-pkg_dosrc src/main/javassist
+
 }

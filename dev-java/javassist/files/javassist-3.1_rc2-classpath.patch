@@ -1,0 +1,13 @@
+diff -Nru javassist-3.1RC2.vanilla/build.xml javassist-3.1RC2/build.xml
+--- javassist-3.1RC2.vanilla/build.xml	2006-09-11 17:53:58.000000000 +0200
++++ javassist-3.1RC2/build.xml	2006-09-11 17:54:29.000000000 +0200
+@@ -19,6 +19,9 @@
+   <!-- Build classpath -->
+   <path id="classpath">
+     <pathelement location="${build.classes.dir}"/>
++    <fileset dir="lib">
++      <include name="**/*.jar"/>
++    </fileset>
+   </path>
+ 
+   <property name="build.classpath" refid="classpath"/>
