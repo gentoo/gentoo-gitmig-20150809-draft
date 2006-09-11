@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5858 2006/09/11 20:32:27 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5859 2006/09/11 22:44:52 tupone Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -237,10 +237,12 @@ media-video/klvemkdvd
 # Clanlib-0.6 is not maintained upstream and has become unmanagable.
 # Version 0.6 of clanlib is masked for removal along with the
 # packages that require it.
-=dev-games/clanlib-0.6*
+# Tupone Alfredo <tupone@gentoo.org> (11 Sep 2006)
+# unmasking clanlib and pingus waiting for a fix on amd64
+#=dev-games/clanlib-0.6*
 games-sports/trophy
 games-action/clanbomber
-games-puzzle/pingus
+#games-puzzle/pingus
 
 # Diego Pettenò <flameeyes@gentoo.org> (03 Sep 2006)
 # Release Candidate version
