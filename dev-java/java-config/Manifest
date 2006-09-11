@@ -10,6 +10,10 @@ AUX java-config-1.3.5-javahomestacktrace.patch 465 RMD160 2e03cb746f0562ab7d8ed3
 MD5 8eef5fd7ef4dc501db35f9f82e8cb87f files/java-config-1.3.5-javahomestacktrace.patch 465
 RMD160 2e03cb746f0562ab7d8ed3ac7bcfa3386998ba1f files/java-config-1.3.5-javahomestacktrace.patch 465
 SHA256 0c0326e1455a53799826e9ad12fce49bcddb79059336a425fa1dd0ac3cdb8d25 files/java-config-1.3.5-javahomestacktrace.patch 465
+AUX java-config-1.3.6-jh.patch 1258 RMD160 25a826996f7ee790b1cc74f30eae48c1c6433635 SHA1 d6b2fe6f26e5cf5120f9d25def70db572c2cc83e SHA256 7976d6f6a32e5a291049aacab1540a710415f3f8a629c2a0d3a8ffd7237c8bd9
+MD5 5c7a18568d0b9b96b11571d2d6fe897b files/java-config-1.3.6-jh.patch 1258
+RMD160 25a826996f7ee790b1cc74f30eae48c1c6433635 files/java-config-1.3.6-jh.patch 1258
+SHA256 7976d6f6a32e5a291049aacab1540a710415f3f8a629c2a0d3a8ffd7237c8bd9 files/java-config-1.3.6-jh.patch 1258
 AUX java-config-2.0.28-classpath.patch 404 RMD160 09fa1c46f6e8a6320b54b4cb4fe83de1acbf83db SHA1 ef8ff9408c1692a949f1ff6a78e15096c75ba590 SHA256 d9fa3eda2ae229ab4b341cf9079f69e02273b93afefaebef043467028899043a
 MD5 e1e66dae84768db510ecd84d976d507c files/java-config-2.0.28-classpath.patch 404
 RMD160 09fa1c46f6e8a6320b54b4cb4fe83de1acbf83db files/java-config-2.0.28-classpath.patch 404
@@ -25,6 +29,10 @@ EBUILD java-config-1.2.11-r1.ebuild 874 RMD160 caf41840d1b96596b88464edf9e476e8d
 MD5 7e9562363f495fbef6591ad21366d0a4 java-config-1.2.11-r1.ebuild 874
 RMD160 caf41840d1b96596b88464edf9e476e8debe621d java-config-1.2.11-r1.ebuild 874
 SHA256 abf7e6e4ebc06bcd838ab4e9466d7c8e076d6f808242203693c46cdddb9c081f java-config-1.2.11-r1.ebuild 874
+EBUILD java-config-1.3.6-r1.ebuild 1280 RMD160 74fd22decba44fc879de4221d9ccc3bffcd644a4 SHA1 87dcbefbfbc8db7bc7c5feec026e565d8fba8cb9 SHA256 57b6542f805a7d43d0ba778c78bd6700258f2ded1cedd6a0aa9398bd6c6a8b40
+MD5 87e1457757dba16a2fd73957868db7c7 java-config-1.3.6-r1.ebuild 1280
+RMD160 74fd22decba44fc879de4221d9ccc3bffcd644a4 java-config-1.3.6-r1.ebuild 1280
+SHA256 57b6542f805a7d43d0ba778c78bd6700258f2ded1cedd6a0aa9398bd6c6a8b40 java-config-1.3.6-r1.ebuild 1280
 EBUILD java-config-1.3.6.ebuild 1240 RMD160 544199c3e82630cd274cc1b762cc7813eae02d9f SHA1 e09fc81304822976678ba24e409e4ddf1fb66b01 SHA256 174bbf5b2333f0ce448c3fa0977499a2c241ff4404821cc51c4263d36fb2a10b
 MD5 8961d4a2e7dd6ed31bf629662c06266f java-config-1.3.6.ebuild 1240
 RMD160 544199c3e82630cd274cc1b762cc7813eae02d9f java-config-1.3.6.ebuild 1240
@@ -33,10 +41,10 @@ EBUILD java-config-2.0.28.ebuild 1840 RMD160 c7c41626e1a671d1f4ff23e98581913edd4
 MD5 86eeb96f62322a4fb3000fac053afeb0 java-config-2.0.28.ebuild 1840
 RMD160 c7c41626e1a671d1f4ff23e98581913edd4f61bd java-config-2.0.28.ebuild 1840
 SHA256 3ade897f5e1b6acd3da12e18b57820bbe2a862178206e89b30fa39e55b6c2193 java-config-2.0.28.ebuild 1840
-MISC ChangeLog 21536 RMD160 0141733a350dfd02e9ce3bb9759e4021c55b8850 SHA1 f3910404ac0b8f54427ba2a79de03ee6c8d7bfb0 SHA256 35dbe9e73ff50a9b26db092eddb9bd973cfb7cde7e6e6e0aefc89f917e73591d
-MD5 e7f3ed5ae20505330b96bd6405cced83 ChangeLog 21536
-RMD160 0141733a350dfd02e9ce3bb9759e4021c55b8850 ChangeLog 21536
-SHA256 35dbe9e73ff50a9b26db092eddb9bd973cfb7cde7e6e6e0aefc89f917e73591d ChangeLog 21536
+MISC ChangeLog 21724 RMD160 8203552d67b3a1bbc2b207fb2cb84b18e02bcc39 SHA1 72a68eedd8bc8ad7b90cf7dbbcae59b4d560059c SHA256 80b015bb36447a45b20bdc0d0246cff73c835da6559664edef33c95828c64d68
+MD5 a0277aed4adfe8d6e53ebdbfa6e8c5b6 ChangeLog 21724
+RMD160 8203552d67b3a1bbc2b207fb2cb84b18e02bcc39 ChangeLog 21724
+SHA256 80b015bb36447a45b20bdc0d0246cff73c835da6559664edef33c95828c64d68 ChangeLog 21724
 MISC metadata.xml 486 RMD160 158f1d9652c83644739d40c8014d65d487dca4e6 SHA1 1561f2727694d8312adbda18294f690116ab3c84 SHA256 5d3e4a1780efad67e6265b82a4397a2b4fe26c2c0785ee65a3390dd8218c82ce
 MD5 ff83dbd41edf207798f367c723ab813f metadata.xml 486
 RMD160 158f1d9652c83644739d40c8014d65d487dca4e6 metadata.xml 486
@@ -47,6 +55,9 @@ SHA256 da2af16dd2d187eb5301706d751663c290362f05f8a84eed14ecf5c21284c7da files/di
 MD5 c515cf6f045943536bafeba7348a1d4f files/digest-java-config-1.3.6 253
 RMD160 d4ab71584a1b8b32e0ea1b0cbe6d4ecf9922d109 files/digest-java-config-1.3.6 253
 SHA256 56c9aed6d69ae85a5d4b5d8e8b80762508a6cb56cc5d911514c6ffbf3aff9ebf files/digest-java-config-1.3.6 253
+MD5 c515cf6f045943536bafeba7348a1d4f files/digest-java-config-1.3.6-r1 253
+RMD160 d4ab71584a1b8b32e0ea1b0cbe6d4ecf9922d109 files/digest-java-config-1.3.6-r1 253
+SHA256 56c9aed6d69ae85a5d4b5d8e8b80762508a6cb56cc5d911514c6ffbf3aff9ebf files/digest-java-config-1.3.6-r1 253
 MD5 e4981e02dc72b62c4080705a2bf29e32 files/digest-java-config-2.0.28 256
 RMD160 f4fd8ddccf2bb0bb9fa78ba83d00fb5161f7f20e files/digest-java-config-2.0.28 256
 SHA256 b0517f135e0e7be9a5ca6267cceb0d793fd9a569e844cae30b52f8e84b8e802e files/digest-java-config-2.0.28 256
