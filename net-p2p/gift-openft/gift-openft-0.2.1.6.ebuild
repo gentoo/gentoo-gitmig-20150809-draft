@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.6.ebuild,v 1.7 2006/09/10 16:43:49 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.6.ebuild,v 1.8 2006/09/11 20:54:55 tcort Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gift/${P}.tar.bz2"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ppc sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~ppc sparc x86 ~x86-fbsd"
 
 DEPEND="virtual/libc
 	dev-util/pkgconfig
