@@ -16,23 +16,23 @@ inherit java-utils-2
 DEPEND=">=dev-java/javatoolkit-0.1.5 ${JAVA_PKG_PORTAGE_DEP}"
 
 # ------------------------------------------------------------------------------
-# @global JAVA_ANT_BSFIX
+# @global JAVA_PKG_BSFIX
 #
 # Should we attempt to 'fix' ant build files to include the source/target
 # attributes when calling javac?
 #
 # default: on
 # ------------------------------------------------------------------------------
-JAVA_ANT_BSFIX=${JAVA_PKG_BSFIX:="on"}
+JAVA_PKG_BSFIX=${JAVA_PKG_BSFIX:-"on"}
 
 # ------------------------------------------------------------------------------
-# @global JAVA_ANT_BSFIX_ALL
+# @global JAVA_PKG_BSFIX_ALL
 #
 # If we're fixing build files, should we try to fix all the ones we can find?
 #
 # default: yes
 # ------------------------------------------------------------------------------
-JAVA_ANT_BSFIX_ALL=${JAVA_PKG_BSFIX_ALL:="yes"}
+JAVA_PKG_BSFIX_ALL=${JAVA_PKG_BSFIX_ALL:-"yes"}
 
 # ------------------------------------------------------------------------------
 # @global JAVA_PKG_BSFIX_NAME
@@ -41,25 +41,25 @@ JAVA_ANT_BSFIX_ALL=${JAVA_PKG_BSFIX_ALL:="yes"}
 #
 # default: build.xml
 # ------------------------------------------------------------------------------
-JAVA_PKG_BSFIX_NAME=${JAVA_PKG_BSFIX_NAME:="build.xml"}
+JAVA_PKG_BSFIX_NAME=${JAVA_PKG_BSFIX_NAME:-"build.xml"}
 
 # ------------------------------------------------------------------------------
-# @global JAVA_ANT_BSFIX_TARGETS_TAGS
+# @global JAVA_PKG_BSFIX_TARGETS_TAGS
 #
 # Targets to fix the 'source' attribute in
 #
 # default: javac xjavac javac.preset
 # ------------------------------------------------------------------------------
-JAVA_ANT_BSFIX_TARGET_TAGS=${JAVA_PKG_BSFIX_TARGET_TAGS:="javac xjavac javac.preset"}
+JAVA_PKG_BSFIX_TARGET_TAGS=${JAVA_PKG_BSFIX_TARGET_TAGS:-"javac xjavac javac.preset"}
 
 # ------------------------------------------------------------------------------
-# @global JAVA_ANT_BSFIX_SOURCE_TAGS
+# @global JAVA_PKG_BSFIX_SOURCE_TAGS
 #
 # Targets to fix the 'target' attribute in
 #
 # default: javacdoc javac xjavac javac.preset
 # ------------------------------------------------------------------------------
-JAVA_ANT_BSFIX_SOURCE_TAGS=${JAVA_PKG_BSFIX_SOURCE_TAGS:="javadoc javac xjavac javac.preset"}
+JAVA_PKG_BSFIX_SOURCE_TAGS=${JAVA_PKG_BSFIX_SOURCE_TAGS:-"javadoc javac xjavac javac.preset"}
 
 # ------------------------------------------------------------------------------
 # @public java-ant_src_unpack
@@ -106,12 +106,10 @@ java-ant_bsfix() {
 
 	cd "${S}"
 
-	local find_args="-type f"
-	if [[ "${JAVA_PKG_BSFIX_ALL}" == "yes" ]]; then
-		find_args="${find_args} -name ${JAVA_PKG_BSFIX_NAME// / -o -name }"
-	else
-		find_args="${find_args} -maxdepth 1 -name ${JAVA_PKG_BSFIX_NAME// / -o -name } "
-	fi
+	local find_args=""
+	[[ "${JAVA_PKG_BSFIX_ALL}" == "yes" ]] || find_args="-maxdepth 1"
+	
+	find_args="${find_args} -type f -name ${JAVA_PKG_BSFIX_NAME// / -o -name } "
 
 	local i=0
 	local -a bsfix_these
