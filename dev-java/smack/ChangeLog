@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/smack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/smack/ChangeLog,v 1.1 2006/08/22 17:21:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/smack/ChangeLog,v 1.2 2006/09/11 17:53:54 nelchael Exp $
+
+  11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> smack-2.2.1.ebuild:
+  Added ~ppc.
 
 *smack-2.2.1 (22 Aug 2006)
 
