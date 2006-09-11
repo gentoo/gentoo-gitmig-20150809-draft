@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2137 2006/09/10 17:23:32 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2138 2006/09/11 02:16:07 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -45,10 +45,6 @@ app-backup/kdar:dar32 - Support libdar32.so to use.
 app-backup/kdar:dar64 - Support libdar64.so to use.
 app-backup/rdiff-backup:xattr - if you want extended attributes enabled
 app-benchmarks/bootchart:acct - Enable process accounting
-app-cdr/bonfire:beagle - Enable Beagle support for searches.
-app-cdr/bonfire:gdl - Enable gld support for customisable GUI.
-app-cdr/bonfire:libnotify - Enable libinotify support for system notifications.
-app-cdr/bonfire:totem - Enable support for Totem playlists.
 app-cdr/brasero:beagle - Enable Beagle support for searches.
 app-cdr/brasero:gdl - Enable gld support for customisable GUI.
 app-cdr/brasero:libnotify - Enable libinotify support for system notifications.
@@ -155,9 +151,6 @@ app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
 app-misc/beagle:ole - Enable ole support
-app-misc/beagle:spreadsheet - Enable indexing of spreadsheet files via gnumeric
-app-misc/beagle:webservices - Enable the Beagle WebServices interface
-app-misc/beagle:wv - Enable indexing of MS Word documents (.doc)
 app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:streamzap - add the streamzap driver to lirc
@@ -787,7 +780,6 @@ media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
-media-sound/banshee:real - Build with real/helix player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bmpx:libnotify - Enable libnotify popup balloons
 media-sound/bmpx:musepack - Support for musepack (mpc) files
@@ -834,7 +826,6 @@ media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), 
 media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/rhythmbox:avahi - support for avahi mdns daemon
 media-sound/rhythmbox:daap - support for daap
-media-sound/rhythmbox:gstreamer010 - support for gstreamer-0.10
 media-sound/rhythmbox:ipod - support for ipod devices via libgpod
 media-sound/rhythmbox:libnotify - support for libnotify
 media-sound/rhythmbox:musicbrainz - support for muzicbrains
