@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.115 2006/07/30 22:37:14 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.116 2006/09/11 09:47:22 voxus Exp $
+
+*bind-9.3.2-r4 (11 Sep 2006)
+*bind-9.2.6-r4 (11 Sep 2006)
+
+  11 Sep 2006; Konstantin Arkhipov <voxus@gentoo.org> +bind-9.3.2-r4.ebuild,
+  +bind-9.2.6-r4.ebuild:
+  Bump, bug #146486.
 
 *bind-9.3.2-r3 (31 Jul 2006)
 *bind-9.2.6-r3 (31 Jul 2006)
