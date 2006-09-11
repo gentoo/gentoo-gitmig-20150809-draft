@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libqalculate
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.16 2006/06/26 20:01:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/ChangeLog,v 1.17 2006/09/11 02:18:36 tsunam Exp $
+
+  11 Sep 2006; Joshua Jackson <tsunam@gentoo.org> libqalculate-0.9.4.ebuild:
+  Stable x86; bug #146202
 
   26 Jun 2006; Olivier Fisette <ribosome@gentoo.org>
   libqalculate-0.9.4.ebuild:
