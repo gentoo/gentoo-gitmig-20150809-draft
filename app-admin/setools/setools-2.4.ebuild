@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.1 2006/05/09 03:57:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.2 2006/09/11 23:48:19 pebenito Exp $
 
 inherit eutils
 
@@ -37,6 +37,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/apol_tcl_fc.c.diff
+
 	# enable debug if requested
 	useq debug && sed -i -e '/^DEBUG/s/0/1/' ${S}/Makefile
 
@@ -47,6 +49,10 @@ src_unpack() {
 			-e '/^SE_CMDS/s/findcon//' \
 			-e '/^SE_CMDS/s/searchcon//' \
 			-e '/^SE_CMDS/s/indexcon//' ${S}/secmds/Makefile
+
+		# sechecker won't compile w/o libselinux
+		sed -i -e '/^all-nogui/s/sechecker//' ${S}/Makefile
+		sed -i -r -e '/^install-sechecker/!s/install-sechecker//' ${S}/Makefile
 	fi
 }
 
