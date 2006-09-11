@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.197 2006/09/05 05:11:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.198 2006/09/11 12:22:39 jokey Exp $
+
+  11 Sep 2006; Markus Ullmann <jokey@gentoo.org> openldap-2.1.30-r7.ebuild,
+  openldap-2.2.28-r4.ebuild, openldap-2.3.21.ebuild,
+  openldap-2.3.21-r1.ebuild, openldap-2.3.23.ebuild,
+  openldap-2.3.24-r1.ebuild, openldap-2.3.24-r2.ebuild:
+  Fixing built_with_use checks for non-existant IUSE ( bug #147134 ) and merge
+  failure with minimal useflag on first installation ( bug #143473 )
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> openldap-2.3.24-r1.ebuild:
   Marked stable on mips.
