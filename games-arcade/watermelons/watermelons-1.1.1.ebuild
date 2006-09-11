@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.2 2006/04/18 17:42:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/watermelons/watermelons-1.1.1.ebuild,v 1.3 2006/09/11 17:19:07 dang Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4
