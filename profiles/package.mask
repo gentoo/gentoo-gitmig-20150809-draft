@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5853 2006/09/10 21:10:09 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5854 2006/09/11 16:14:23 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -152,6 +152,7 @@ media-sound/audtty
 >=dev-python/pygtk-2.10.1
 >=x11-libs/libxklavier-3.0
 >=dev-cpp/glibmm-2.9.1
+>=dev-cpp/gconfmm-2.16.0
 >=dev-cpp/libxmlpp-2.13.1
 >=www-client/epiphany-extensions-2.16.0
 >=x11-misc/icon-naming-utils-0.8.1
