@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/x-unikey
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/ChangeLog,v 1.13 2006/05/06 12:37:24 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/ChangeLog,v 1.14 2006/09/11 18:16:48 pclouds Exp $
+
+  11 Sep 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  files/digest-x-unikey-1.0.2, files/digest-x-unikey-1.0.4, Manifest:
+  Fixed digest conflicts, #147171
 
 *x-unikey-1.0.4 (06 May 2006)
 
