@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.88 2006/09/04 08:52:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.89 2006/09/11 08:08:54 ferdy Exp $
+
+*mutt-1.5.13-r1 (11 Sep 2006)
+
+  11 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  +files/mutt-1.5.13-sasl.patch, +mutt-1.5.13-r1.ebuild:
+  Add a patch to fix mutt with dev-libs/cyrus-sasl-2.1.22. Fixes bug #146696.
+  Thanks to Sebastian <sebastian_ml@gmx.net>
 
   04 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> -mutt-1.5.11.ebuild:
   Remove mutt-1.5.11 wrt bug #140514
