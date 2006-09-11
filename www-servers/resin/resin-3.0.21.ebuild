@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.21.ebuild,v 1.1 2006/08/14 21:19:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.21.ebuild,v 1.2 2006/09/11 20:46:10 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.caucho.com"
 SRC_URI="http://www.caucho.com/download/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc"
+IUSE="doc source"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
@@ -104,6 +104,11 @@ src_install() {
 	dosym /var/lib/resin/webapps ${RESIN_HOME}/webapps
 
 	dosym /etc/resin/resin.conf /etc/resin/resin.xml
+
+	use source && {
+		einfo "Zipping source..."
+		java-pkg_dosrc ${S}/modules/*/src/* 2> /dev/null
+	}
 
 	einfo "Removing unneeded files..."
 	rm -f ${D}/${RESIN_HOME}/bin/*.in
