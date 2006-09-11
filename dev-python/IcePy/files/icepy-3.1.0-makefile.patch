@@ -1,0 +1,66 @@
+--- config/Make.rules.orig	2006-09-11 07:47:26.000000000 -0400
++++ config/Make.rules	2006-09-11 08:05:29.000000000 -0400
+@@ -16,13 +16,13 @@
+ # if it does not exist.
+ #
+ 
+-prefix			= /opt/IcePy-$(VERSION)
++prefix			= $(DESTDIR)/usr
+ 
+ #
+ # When creating an executable, shall we add install_libdir to the
+ # runpath embedded in this executable?
+ #
+-ADD_LIBDIR_TO_RPATH     ?= yes
++#ADD_LIBDIR_TO_RPATH     ?= yes
+ 
+ 
+ #
+@@ -106,7 +106,7 @@
+ ifeq ($(shell test -d $(top_srcdir)/slice && echo 0),0)
+     slicedir		= $(top_srcdir)/slice
+ else
+-    slicedir		= $(ICE_HOME)/slice
++    slicedir		= $(prefix)/share/icepy-3.1.0/slice
+ endif
+ 
+ ifeq ($(LP64),yes)
+@@ -116,11 +116,11 @@
+ #
+     install_libdir	= $(prefix)/python
+ else
+-    install_libdir	= $(prefix)/python
++    install_libdir	= $(prefix)/lib/$(PYTHON_VERSION)/site-packages
+ endif
+ 
+-install_slicedir	= $(prefix)/slice
+-install_pythondir	= $(prefix)/python
++install_slicedir	= $(prefix)/share/icepy-3.1.0/slice
++install_pythondir	= $(prefix)/lib/$(PYTHON_VERSION)
+ 
+ INSTALL			= cp -fp
+ INSTALL_PROGRAM		= ${INSTALL}
+--- config/Make.rules.orig	2006-09-11 08:15:10.000000000 -0400
++++ config/Make.rules	2006-09-11 08:15:18.000000000 -0400
+@@ -195,7 +195,7 @@
+ endif
+ 
+ ifeq ($(mkdir),)
+-    mkdir		= mkdir $(1) ; \
++    mkdir		= mkdir -p $(1) ; \
+ 			  chmod a+rx $(1)
+ endif
+ 
+--- Makefile.orig	2006-09-11 08:21:20.000000000 -0400
++++ Makefile	2006-09-11 08:21:44.000000000 -0400
+@@ -69,8 +69,8 @@
+ 	fi
+ 
+ install::
+-	$(call installdata,ICE_LICENSE,$(prefix))
+-	$(call installdata,LICENSE,$(prefix))
++	$(call installdata,ICE_LICENSE,$(install_slicedir))
++	$(call installdata,LICENSE,$(install_slicedir))
+ 
+ test::
+ 	@python $(top_srcdir)/allTests.py
