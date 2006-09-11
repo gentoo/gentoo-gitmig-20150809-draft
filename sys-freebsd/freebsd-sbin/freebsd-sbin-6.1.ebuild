@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.3 2006/09/09 16:30:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.4 2006/09/11 22:08:20 flameeyes Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -44,7 +44,8 @@ pkg_setup() {
 REMOVE_SUBDIRS="dhclient pfctl pflogd"
 
 PATCHES="${FILESDIR}/${PN}-setXid.patch
-	${FILESDIR}/${PN}-zlib.patch"
+	${FILESDIR}/${PN}-zlib.patch
+	${FILESDIR}/${P}-pr102701.patch"
 
 src_unpack() {
 	freebsd_src_unpack
