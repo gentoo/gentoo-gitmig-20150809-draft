@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.29.ebuild,v 1.1 2006/09/10 09:09:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.29.ebuild,v 1.2 2006/09/11 09:21:27 pva Exp $
 
 inherit eutils gnome2 mono
 
@@ -56,7 +56,7 @@ src_compile () {
 		$(use_enable dbus) \
 		$(use_enable gnome) || die "./configure failed."
 
-	emake || die "Compilation failed"
+	emake -j1 || die "Compilation failed"
 }
 
 src_install () {

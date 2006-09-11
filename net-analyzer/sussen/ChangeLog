@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.30 2006/09/10 09:09:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.31 2006/09/11 09:21:27 pva Exp $
+
+  11 Sep 2006; Peter Volkov <pva@gentoo.org> sussen-0.29.ebuild:
+  Added -j1 to emake and thus fixed bug #147103 reported by Graham Murray:
+  building of documentation does not like parallel make.
 
 *sussen-0.29 (10 Sep 2006)
 
