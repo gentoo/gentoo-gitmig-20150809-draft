@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.4.4.ebuild,v 1.1 2006/09/07 18:38:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-0.4.4.ebuild,v 1.2 2006/09/11 02:48:30 metalgod Exp $
 
 inherit gnome2
 
@@ -29,7 +29,6 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	libnotify? ( >=x11-libs/libnotify-0.3 )"
 
 DEPEND="${RDEPEND}
-	!app-cdr/bonfire
 	dev-util/pkgconfig
 	sys-devel/gettext
 	dev-util/intltool"
