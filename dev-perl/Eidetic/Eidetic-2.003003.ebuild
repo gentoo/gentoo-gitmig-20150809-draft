@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.6 2006/07/04 07:51:11 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/Eidetic-2.003003.ebuild,v 1.7 2006/09/11 21:37:38 mcummings Exp $
 
 inherit perl-module webapp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://eidetic.sourceforge.net/"
 SRC_URI="mirror://sourceforge/eidetic/${P}.tar.gz"
 
 LICENSE="Artistic"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="mysql auth"
 
 DEPEND="dev-lang/perl

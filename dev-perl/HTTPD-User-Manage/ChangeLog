@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTPD-User-Manage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTPD-User-Manage/ChangeLog,v 1.8 2006/08/05 04:38:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTPD-User-Manage/ChangeLog,v 1.9 2006/09/11 21:42:47 mcummings Exp $
+
+  11 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  HTTPD-User-Manage-1.63.ebuild:
+  Keywording ~amd64
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   HTTPD-User-Manage-1.61.ebuild, HTTPD-User-Manage-1.63.ebuild:
