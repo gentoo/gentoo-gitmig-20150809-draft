@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.113 2006/09/10 01:56:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.114 2006/09/11 04:21:30 nichoj Exp $
+
+*java-config-1.3.6 (11 Sep 2006)
+
+  11 Sep 2006; Joshua Nichols <nichoj@gentoo.org> +java-config-1.3.6.ebuild:
+  Version bump. Includes a better fix for the stack trace that would occur
+  when setting system vm. Also fixes a bad regular expression, which affected
+  -g.
 
 *java-config-2.0.28 (10 Sep 2006)
 
