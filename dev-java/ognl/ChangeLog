@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ognl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.5 2006/03/19 22:41:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.6 2006/09/11 16:39:50 nelchael Exp $
+
+*ognl-2.6.9 (11 Sep 2006)
+
+  11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> -ognl-2.6.7.ebuild,
+  +ognl-2.6.9.ebuild:
+  Version bump, uses new Java build system.
 
   19 Mar 2006; Petteri Räty <betelgeuse@gentoo.org> ognl-2.6.7.ebuild:
   added app-arch/unzip to DEPEND
