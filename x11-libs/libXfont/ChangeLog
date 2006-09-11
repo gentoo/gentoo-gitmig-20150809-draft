@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.48 2006/08/23 12:59:29 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.49 2006/09/11 09:51:16 dberkholz Exp $
+
+*libXfont-1.2.0-r2 (11 Sep 2006)
+
+  11 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +libXfont-1.2.0-r2.ebuild:
+  Use the freetype interpreter for Type 1 fonts, as pretty much everyone else
+  in the world does.
 
   23 Aug 2006; Rene Nussbaumer <killerfox@gentoo.org>
   libXfont-1.2.0-r1.ebuild:
