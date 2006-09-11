@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.2 2006/09/11 16:59:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.1.4.ebuild,v 1.3 2006/09/11 17:24:53 agriffis Exp $
 
 inherit python gnome2 eutils
 
@@ -36,6 +36,9 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# Fix build with gettext-0.15, patch by Ed Catmur #143120
+	epatch ${FILESDIR}/fix-po.patch
 
 	# Fix the .desktop icon name
 	sed -i -e "s:Icon=meld:Icon=/usr/share/pixmaps/meld.png:" ./meld.desktop.in
