@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/majesty-demo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/ChangeLog,v 1.7 2006/09/09 20:14:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/ChangeLog,v 1.8 2006/09/11 16:46:14 dang Exp $
+
+  11 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  majesty-demo-1.0.0.ebuild:
+  Marked stable on amd64 for bug #146886
 
   09 Sep 2006; <ticho@gentoo.org> majesty-demo-1.0.0.ebuild:
   Stable on x86, bug #146886.
