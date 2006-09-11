@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.12.0.ebuild,v 1.1 2006/09/11 15:35:59 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.12.0.ebuild,v 1.2 2006/09/11 16:19:49 allanonjl Exp $
 
 inherit gnome2
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 	if ! use examples; then
 		# don't waste time building the examples
-		sed -i 's/^\(SUBDIRS =.*\)examples docs\(.*\)$/\1\2/' Makefile.in || \
+		sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
 			die "sed Makefile.in failed"
 	fi
 
