@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.82 2006/09/10 21:10:29 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.83 2006/09/11 03:01:56 weeve Exp $
+
+  11 Sep 2006; Jason Wever <weeve@gentoo.org> ntp-4.2.2_p3.ebuild:
+  Stable on SPARC wrt bug #146912.
 
   10 Sep 2006; Thomas Cort <tcort@gentoo.org> ntp-4.2.2_p3.ebuild:
   Stable on alpha wrt Bug #146912.
