@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r1.ebuild,v 1.2 2006/09/10 21:52:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r1.ebuild,v 1.3 2006/09/11 18:38:51 sanchan Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic autotools
 
 DESCRIPTION="Parse Options - Command line parser"
 HOMEPAGE="http://www.rpm.org/"
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-lib64.patch
+	eautoreconf
 }
 
 src_compile() {

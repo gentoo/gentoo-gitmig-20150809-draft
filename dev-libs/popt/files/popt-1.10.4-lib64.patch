@@ -7,7 +7,7 @@
 -case "${target_cpu}" in
 -x86_64*|powerpc64*|ppc64*|sparc64*|s390x*)        MARK64=64 ;;
 -esac
-+if ! echo "${libdir}" | grep -q '64$' ; then
++if ! echo "${libdir}" | ${EGREP} -q '64$' ; then
 +	case "${target_cpu}" in
 +	x86_64*|powerpc64*|ppc64*|sparc64*|s390x*) MARK64=64 ;;
 +	esac
