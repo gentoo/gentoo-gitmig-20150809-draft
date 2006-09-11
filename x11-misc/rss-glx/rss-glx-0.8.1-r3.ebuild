@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r3.ebuild,v 1.1 2006/09/03 10:54:32 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r3.ebuild,v 1.2 2006/09/11 12:18:27 nelchael Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,14 +27,14 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use kde && use xscreensaver ; then
-		if ! built_with_use kde-base/kdeartwork-kscreensaver xscreensaver && \
-		   ! built_with_use kde-base/kdeartwork xscreensaver ; then
-			eerror "rss-glx wont work nicely with kde unless you emerge"
-			eerror "kde-base/kdeartwork or kde-base/kdeartwork-kscreensaver"
-			eerror "with USE=xscreensaver."
-			eerror "See http://bugs.gentoo.org/show_bug.cgi?id=88212"
-			die "Please re-emerge your KDE with USE=xscreensaver"
-		fi
+		for pkg in kde-base/kdeartwork-kscreensaver kde-base/kdeartwork ; do
+			if has_version ${pkg} && ! built_with_use ${pkg} xscreensaver ; then
+				eerror "rss-glx wont work nicely with kde unless you"
+				eerror "emerge ${pkg} with USE=xscreensaver."
+				eerror "See http://bugs.gentoo.org/show_bug.cgi?id=88212"
+				die "Please re-emerge ${pkg} with USE=xscreensaver"
+			fi
+		done
 	fi
 }
 
