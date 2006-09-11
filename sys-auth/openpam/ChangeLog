@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.2 2006/04/18 16:14:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.3 2006/09/11 23:01:16 flameeyes Exp $
+
+  11 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  openpam-20050616.ebuild:
+  Don't use -Werror while building, thanks TrevorT for noticing.
 
 *openpam-20050616 (18 Apr 2006)
 
