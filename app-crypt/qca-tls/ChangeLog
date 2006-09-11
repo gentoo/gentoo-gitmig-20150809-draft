@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-tls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.39 2006/09/10 00:14:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/ChangeLog,v 1.40 2006/09/11 05:42:58 wormo Exp $
+
+  10 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  qca-tls-1.0-r3.ebuild:
+  stable on ppc (Bug #146522)
 
   10 Sep 2006; <ticho@gentoo.org> qca-tls-1.0-r3.ebuild:
   Stable on x86, bug #146522.
