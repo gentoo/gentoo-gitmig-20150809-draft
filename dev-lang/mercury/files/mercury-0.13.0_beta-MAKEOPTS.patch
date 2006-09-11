@@ -1,0 +1,11 @@
+--- mercury-compiler-0.13.0-beta-2006-09-07.orig/Makefile	2005-08-22 15:38:34.000000000 +1200
++++ mercury-compiler-0.13.0-beta-2006-09-07/Makefile	2006-09-11 21:20:49.000000000 +1200
+@@ -15,7 +15,7 @@
+ #
+ #-----------------------------------------------------------------------------#
+ 
+-
++PARALLEL=	$(MAKEOPTS)
+ SHELL=		/bin/sh
+ MMAKE=		MMAKE_DIR=`pwd`/scripts scripts/mmake 
+ MMAKE_SUBDIR=	MMAKE_DIR=`pwd`/../scripts ../scripts/mmake $(PARALLEL)

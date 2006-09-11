@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060907.ebuild,v 1.1 2006/09/09 06:28:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0_beta20060907.ebuild,v 1.2 2006/09/11 09:51:58 keri Exp $
 
 inherit eutils versionator
 
@@ -33,6 +33,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-portage.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-MAKEOPTS.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-bootstrap.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-LIBDIR.patch
 	epatch "${FILESDIR}"/${P/${BETA_V}/beta}-libgrades.patch

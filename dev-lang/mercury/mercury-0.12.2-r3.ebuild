@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.2 2006/08/14 07:51:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.3 2006/09/11 09:51:58 keri Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-portage-r3.patch
 	epatch "${FILESDIR}"/${P}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P}-MAKEOPTS.patch
 	epatch "${FILESDIR}"/${P}-bootstrap.patch
 	epatch "${FILESDIR}"/${P}-LIBDIR.patch
 	epatch "${FILESDIR}"/${P}-libgrades.patch
