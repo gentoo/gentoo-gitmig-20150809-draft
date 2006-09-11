@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-blas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.7 2006/09/11 14:47:44 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.8 2006/09/11 15:07:27 fmccor Exp $
+
+  11 Sep 2006; Ferris McCormick <fmccor@gentoo.org> eselect-blas-0.1.ebuild:
+  Add ~sparc keyword, Bug #147159 --- tests fine.
 
   11 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org>
   eselect-blas-0.1.ebuild:
