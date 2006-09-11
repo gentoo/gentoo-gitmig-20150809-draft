@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r4.ebuild,v 1.1 2006/09/11 12:13:07 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta10-r4.ebuild,v 1.2 2006/09/11 22:11:06 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -34,7 +34,7 @@ src_unpack() {
 	java-pkg_jar-from saxpath
 	java-pkg_jar-from xerces-2
 
-	if has_version dev-java/jaxen; then
+	if has_version '=dev-java/jaxen-1.1*'; then
 		java-pkg_jar-from jaxen-1.1
 	fi
 }
@@ -54,7 +54,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! has_version dev-java/jaxen; then
+	if ! has_version '=dev-java/jaxen-1.1*'; then
 		einfo ""
 		einfo "If you want jaxen support for jdom then"
 		einfo "please emerge =dev-java/jaxen-1.1* first and"
