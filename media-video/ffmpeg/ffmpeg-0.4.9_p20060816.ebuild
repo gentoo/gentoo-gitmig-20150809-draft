@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.4 2006/09/04 21:22:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.5 2006/09/11 17:55:23 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -150,13 +150,14 @@ src_compile() {
 		"--cc=$(tc-getCC)" \
 		${myconf} || die "configure failed"
 
+	emake depend || die "depend failed"
 	emake || die "make failed"
 }
 
 src_install() {
 	emake -j1 LDCONFIG=true DESTDIR=${D} install || die "Install Failed"
 
-	use doc && make documentation
+	use doc && emake -j1 documentation
 	dodoc ChangeLog README INSTALL
 	dodoc doc/*
 }
