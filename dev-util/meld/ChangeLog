@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.43 2006/09/11 17:24:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.44 2006/09/11 20:37:09 allanonjl Exp $
+
+  11 Sep 2006; John N. Laliberte <allanonjl@gentoo.org> Manifest:
+  fix manifest
 
   11 Sep 2006; Aron Griffis <agriffis@gentoo.org>
   -files/meld-1.0.0-frpo.patch, +files/fix-po.patch, meld-1.1.4.ebuild:
