@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.18 2006/09/09 17:28:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.19 2006/09/11 00:42:14 tsunam Exp $
+
+  11 Sep 2006; Joshua Jackson <tsunam@gentoo.org> gnucap-20060708.ebuild:
+  Stable x86; bug #146894
 
   09 Sep 2006; <nixnut@gentoo.org> gnucap-20060708.ebuild:
   Stable on ppc wrt bug 146894
