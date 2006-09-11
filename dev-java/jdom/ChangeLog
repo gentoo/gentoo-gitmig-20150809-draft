@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.32 2006/04/27 15:22:40 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.33 2006/09/11 12:13:07 nelchael Exp $
+
+*jdom-1.0-r1 (11 Sep 2006)
+*jdom-1.0_beta10-r4 (11 Sep 2006)
+*jdom-1.0_beta9-r2 (11 Sep 2006)
+*jdom-1.0_beta6-r1 (11 Sep 2006)
+
+  11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +jdom-1.0_beta6-r1.ebuild, +jdom-1.0_beta9-r2.ebuild,
+  +jdom-1.0_beta10-r4.ebuild, +jdom-1.0-r1.ebuild:
+  Migrated to new Java build system.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-jdom-1.0_beta6, files/digest-jdom-1.0_beta9-r1,
