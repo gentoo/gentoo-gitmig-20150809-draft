@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/moosic
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.13 2004/09/14 16:41:54 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.14 2006/09/11 03:55:45 metalgod Exp $
+
+*moosic-1.5.2 (11 Sep 2006)
+
+  11 Sep 2006; Luis Medinas <metalgod@gentoo.org> +moosic-1.5.2.ebuild:
+  Version Bump my Dominik Stadler <centic@gentoo.org> closes bug #131865.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> moosic-1.5.0.ebuild:
   Stable amd64, sparc.
