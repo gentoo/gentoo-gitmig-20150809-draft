@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/picoxine
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/ChangeLog,v 1.5 2006/09/12 11:35:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picoxine/ChangeLog,v 1.6 2006/09/12 14:01:47 flameeyes Exp $
+
+  12 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -picoxine-0.0.5.1.ebuild, picoxine-0.0.7.ebuild:
+  Fix homepage, thanks to Bruno Roggeri in bug #147310. Remove old version.
 
 *picoxine-0.0.7 (12 Sep 2006)
 
