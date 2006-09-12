@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.10 2006/09/11 22:38:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r3.ebuild,v 1.11 2006/09/12 22:33:43 tupone Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clanlib.org/download/legacy/ClanLib-${PV}-1.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0.6"
-KEYWORDS="-amd64 x86" #not big endian safe #82779
+KEYWORDS="amd64 x86" #not big endian safe #82779
 IUSE="arts oss esd alsa png opengl truetype X vorbis mikmod jpeg directfb joystick"
 
 DEPEND=">=media-libs/hermes-1.3.2
@@ -47,6 +47,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-freetype.patch
 	epatch "${FILESDIR}"/${P}-gcc41.patch
 	epatch "${FILESDIR}"/${P}-uclibc.patch
+	epatch "${FILESDIR}"/${P}-64bit.patch
 	sed -i 's:@comp_mode@::' Setup/Unix/clanlib-config.in
 }
 
