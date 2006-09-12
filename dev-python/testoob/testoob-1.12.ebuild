@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.11.ebuild,v 1.4 2006/09/12 09:04:20 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.12.ebuild,v 1.1 2006/09/12 09:04:20 lucass Exp $
 
 inherit distutils eutils
 
