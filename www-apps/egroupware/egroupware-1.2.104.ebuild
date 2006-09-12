@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.104.ebuild,v 1.1 2006/08/01 22:56:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.2.104.ebuild,v 1.2 2006/09/12 04:00:48 rl03 Exp $
 
 inherit webapp depend.php
 
@@ -44,8 +44,8 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	# remove CVS directories
-	find . -type d -name 'CVS' -print | xargs rm -rf
+	# remove SVN directories
+	find . -type d -name '.svn' -print | xargs rm -rf
 
 	if use jpgraph; then
 		einfo "Fixing jpgraph location"
