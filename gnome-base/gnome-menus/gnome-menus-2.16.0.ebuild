@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.0.ebuild,v 1.1 2006/09/07 04:00:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.16.0.ebuild,v 1.2 2006/09/12 15:14:49 dang Exp $
 
 inherit eutils gnome2
 
@@ -28,5 +28,5 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Add a couple of important LegacyDir entries. See bug #97839.
-	epatch ${FILESDIR}/${PN}-2.10.2-legacy_dirs.patch
+	epatch "${FILESDIR}/${PN}-2.10.2-legacy_dirs.patch"
 }
