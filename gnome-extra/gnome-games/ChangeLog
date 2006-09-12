@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.167 2006/09/08 01:19:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.168 2006/09/12 15:11:53 dang Exp $
+
+  12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-games-2.16.0.ebuild:
+  Re-add missing autotools usage
 
 *gnome-games-2.16.0 (08 Sep 2006)
 
