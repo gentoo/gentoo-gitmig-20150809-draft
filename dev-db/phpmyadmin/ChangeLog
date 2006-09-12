@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.199 2006/08/22 18:57:31 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.200 2006/09/12 03:57:41 rl03 Exp $
+
+  12 Sep 2006; Renat Lumpau <rl03@gentoo.org>
+  files/postinstall-en-2.8.0.txt:
+  Fix instructions per bug #146567.
 
 *phpmyadmin-2.8.2.4 (22 Aug 2006)
 
