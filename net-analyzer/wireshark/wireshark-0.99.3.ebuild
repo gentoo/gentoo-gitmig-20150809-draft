@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.3.ebuild,v 1.12 2006/08/30 02:24:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-0.99.3.ebuild,v 1.13 2006/09/12 19:41:44 jokey Exp $
 
 inherit libtool flag-o-matic eutils autotools
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	# bug 119208
-	if built_with_use dev-lang/perl minimal ; then
+	if has_version "<=dev-lang/perl-5.8.8_rc1" && built_with_use dev-lang/perl minimal ; then
 		ewarn "wireshark will not build if dev-lang/perl is compiled with"
 		ewarn "USE=minimal. Rebuild dev-lang/perl with USE=-minimal and try again."
 		ebeep 5
