@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-0.9.8.ebuild,v 1.1 2006/09/12 08:22:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-0.9.8.ebuild,v 1.2 2006/09/12 17:00:02 mr_bones_ Exp $
 
 inherit distutils games
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
-IUSE=""
+IUSE="nls"
 
 DEPEND="dev-python/pygtkglext
 	dev-python/imaging"
@@ -30,6 +30,9 @@ src_unpack() {
 
 src_install() {
 	distutils_src_install
+	if use nls ; then
+		emake DESTDIR="${D}" install || die "emake install failed"
+	fi
 	dogamesbin "build/scripts-2.4/glchess" || die "installing the binary failed"
 	rm -rf ${D}usr/bin
 	rm -rf "${D}"usr/bin "${D}"usr/share/doc/${PF}/{MANIFEST.in,PKG-INFO}.gz
