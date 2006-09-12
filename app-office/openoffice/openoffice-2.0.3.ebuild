@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.10 2006/07/28 21:54:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.11 2006/09/12 07:22:09 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -104,6 +104,9 @@ DEPEND="${RDEPEND}
 	xml? ( >=dev-libs/libxml2-2.0 )"
 
 PROVIDE="virtual/ooo"
+
+# FIXME executable stacks should be addressed upstream!
+QA_EXECSTACK_x86="usr/lib/openoffice/program/libgcc3_uno.so"
 
 pkg_setup() {
 

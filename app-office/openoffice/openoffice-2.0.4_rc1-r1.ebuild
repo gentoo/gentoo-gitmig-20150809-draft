@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.1 2006/09/01 07:10:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.2 2006/09/12 07:22:09 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
-IUSE="binfilter branding cairo eds firefox gnome gstreamer gtk java kde ldap mono odk pam xml"
+IUSE="binfilter branding cairo eds firefox gnome gstreamer gtk kde ldap mono odk pam xml"
 
 MY_PV="${PV}"
 PATCHLEVEL="OOD680"
@@ -71,7 +71,7 @@ RDEPEND="!app-office/openoffice-bin
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
-	java? ( >=virtual/jre-1.4 )
+	java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* )  )
 	>=sys-devel/gcc-3.2.1
 	amd64? ( >=dev-libs/boost-1.31.0 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
@@ -100,9 +100,8 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
 	>=app-admin/eselect-oodict-20060706
-	java? ( >=virtual/jdk-1.4
-		dev-java/ant-core
-		${JAVA_PKG_E_DEPEND} )
+	java? ( || ( =virtual/jre-1.4* =virtual/jdk-1.5* )
+		dev-java/ant-core )
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
@@ -110,6 +109,9 @@ DEPEND="${RDEPEND}
 	xml? ( >=dev-libs/libxml2-2.0 )"
 
 PROVIDE="virtual/ooo"
+
+# FIXME executable stacks should be addressed upstream!
+QA_EXECSTACK_x86="usr/lib/openoffice/program/libgcc3_uno.so"
 
 pkg_setup() {
 
@@ -148,11 +150,6 @@ pkg_setup() {
 		ewarn " java in your USE-flags. Also the xml use-flag is disabled with "
 		ewarn " -java to prevent build breakage. "
 		ewarn
-	elif use sparc; then
-		ewarn " Java support on sparc is very flaky, we don't recommend "
-		ewarn " building openoffice this way."
-		ebeep 5
-		epause 10
 	fi
 
 }
