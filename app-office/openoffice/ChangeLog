@@ -1,6 +1,22 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.248 2006/09/12 11:29:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.249 2006/09/12 14:52:48 suka Exp $
+
+  12 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.4_rc1-r1.ebuild:
+  New use-flags and dependencies, mostly to reduce the number of internally
+  built libraries:
+  
+  *) We depend on boost and icu now (both were built internaly before). This
+  should reduce build time a bit.
+  
+  *) Make cups optional
+  
+  *) Add dbus and webdav-use-flags, the second one adds a dep on neon (which
+  was also built internaly until now)
+  
+  *) Break when people have -ffast-math in their CFLAGS, this causes all sorts
+  of trouble, for more information see bug #139412
 
   12 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4_rc1-r1.ebuild:

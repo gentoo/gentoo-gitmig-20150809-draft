@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.4 2006/09/12 11:29:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.5 2006/09/12 14:52:48 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
-IUSE="binfilter branding cairo eds firefox gnome gstreamer gtk kde ldap mono odk pam"
+IUSE="binfilter branding cairo cups dbus eds firefox gnome gstreamer gtk kde ldap mono odk pam webdav"
 
 MY_PV="${PV}"
 PATCHLEVEL="OOD680"
@@ -45,6 +45,7 @@ RDEPEND="!app-office/openoffice-bin
 	x11-libs/libXinerama
 	virtual/libc
 	>=dev-lang/perl-5.0
+	dbus? ( >=sys-apps/dbus-0.60 )
 	gnome? ( >=x11-libs/gtk+-2.4
 		>=gnome-base/gnome-vfs-2.6
 		>=gnome-base/gconf-2.0 )
@@ -58,10 +59,11 @@ RDEPEND="!app-office/openoffice-bin
 	firefox? ( >=www-client/mozilla-firefox-1.5-r9
 		>=dev-libs/nspr-4.6.2
 		>=dev-libs/nss-3.11-r1 )
+	webdav? ( >=net-misc/neon-0.24.7 )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.2.0
-	net-print/cups
+	cups? ( net-print/cups )
 	media-libs/libpng
 	sys-devel/flex
 	sys-devel/bison
@@ -70,7 +72,8 @@ RDEPEND="!app-office/openoffice-bin
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
 	java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* )  )
-	amd64? ( >=dev-libs/boost-1.31.0 )
+	>=dev-libs/boost-1.33.1
+	>=dev-libs/icu-3.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
@@ -144,6 +147,15 @@ pkg_setup() {
 		ewarn
 	fi
 
+	if is-flagq -ffast-math ; then
+		eerror " You are using -ffast-math, which is known to cause problems. "
+		eerror " Please remove it from your CFLAGS, using this globally causes "
+		eerror " all sorts of problems. "
+		eerror " After that you will also have to - at least - rebuild python otherwise "
+		eerror " the openoffice build will break. "
+		die
+	fi
+
 }
 
 src_unpack() {
@@ -176,9 +188,15 @@ src_unpack() {
 	echo "`use_enable gnome lockdown`" >> ${CONFFILE}
 	echo "`use_enable gnome atkbridge`" >> ${CONFFILE}
 	echo "`use_enable gstreamer`" >> ${CONFFILE}
+	echo "`use_enable dbus`" >> ${CONFFILE}
+	echo "`use_enable webdav neon`" >> ${CONFFILE}
+	echo "`use_with webdav system-neon`" >> ${CONFFILE}
 
 	echo "`use_enable odk`" >> ${CONFFILE}
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
+
+	echo "--with-system-boost" >> ${CONFFILE}
+	echo "--with-system-icu" >> ${CONFFILE}
 
 }
 

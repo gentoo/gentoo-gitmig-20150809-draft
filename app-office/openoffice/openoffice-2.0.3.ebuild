@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.11 2006/09/12 07:22:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.12 2006/09/12 14:52:48 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -156,6 +156,15 @@ pkg_setup() {
 	use amd64 && export DISTRO="Gentoo64" || export DISTRO="Gentoo"
 
 	use java && java-pkg_pkg_setup
+
+	if is-flagq -ffast-math ; then
+		eerror " You are using -ffast-math, which is known to cause problems. "
+		eerror " Please remove it from your CFLAGS, using this globally causes "
+		eerror " all sorts of problems. "
+		eerror " After that you will also have to - at least - rebuild python otherwise "
+		eerror " the openoffice build will break. "
+		die
+	fi
 
 }
 
