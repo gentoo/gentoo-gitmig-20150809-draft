@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.2 2006/09/08 18:36:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.3 2006/09/12 20:59:52 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -291,13 +291,6 @@ pkg_setup() {
 		die "kdrive's VESA driver does not build on AMD64."
 	fi
 
-	# localstatedir is used for the log location; we need to override the default
-	# from ebuild.sh
-	# sysconfdir is used for the xorg.conf location; same applies
-
-	# --enable-xorg needed because darwin defaults off
-	# --enable-install-setuid needed because sparcs default off
-
 	# SDL only available in kdrive build
 	if use kdrive && use sdl; then
 		conf_opts="${conf_opts} --enable-xsdl"
@@ -311,6 +304,10 @@ pkg_setup() {
 		conf_opts="${conf_opts} --with-mesa-source=${WORKDIR}/Mesa"
 	fi
 
+	# localstatedir is used for the log location; we need to override the default
+	# from ebuild.sh
+	# sysconfdir is used for the xorg.conf location; same applies
+	# --enable-install-setuid needed because sparcs default off
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
 		$(use_enable dmx)
