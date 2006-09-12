@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5865 2006/09/12 02:49:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5866 2006/09/12 04:31:49 ribosome Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Olivier Fisette <ribosome@gentoo.org> (11 Sep 2006)
+# A number of issues remain with PHYLIP programs and
+# at least a few others (emma, for instance). Masking
+# until those bugs are fixed.
+sci-biology/emboss-kaptain
 
 # Doug Goldstein <cardoe@gentoo.org> (11 Sep 2006)
 # development & testing.
