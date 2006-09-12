@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/diablo-jre-bin-1.5.0.07.00.ebuild,v 1.1 2006/07/21 00:25:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jre-bin/diablo-jre-bin-1.5.0.07.00.ebuild,v 1.2 2006/09/12 22:35:56 flameeyes Exp $
 
 inherit java-vm-2 eutils versionator
 
@@ -12,7 +12,7 @@ MY_PVA=$(replace_version_separator 4 '-b' ${MY_PV})
 SRC_URI="diablo-latte-freebsd6-i386-${MY_PVA}.tar.bz2"
 
 LICENSE="sun-bcla-java-vm"
-SLOT="0"
+SLOT="1.5"
 KEYWORDS="-* ~x86-fbsd"
 RESTRICT="fetch stricter"
 IUSE="X nsplugin"
