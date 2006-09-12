@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.259 2006/09/05 15:41:12 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.260 2006/09/12 18:02:03 dang Exp $
+
+  12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> gtk+-2.10.3.ebuild:
+  Remove monolithic X deps
 
 *gtk+-2.10.3 (05 Sep 2006)
 
