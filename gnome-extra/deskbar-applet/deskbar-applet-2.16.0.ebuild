@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.16.0.ebuild,v 1.1 2006/09/07 03:46:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.16.0.ebuild,v 1.2 2006/09/12 14:38:28 dang Exp $
 
 inherit gnome2 eutils autotools python
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/python-2.4
 		 >=gnome-base/gnome-desktop-2.10
 		 >=sys-apps/dbus-0.60
 		 >=dev-python/gnome-python-desktop-2.14.0
-		 >=dev-python/gnome-python-extras-2.12
+		 >=dev-python/gnome-python-extras-2.14
 		 >=gnome-base/gconf-2
 		 dev-python/elementtree
 		 eds? ( >=gnome-extra/evolution-data-server-1.7.92 )"
