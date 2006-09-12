@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.18 2006/06/30 14:10:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/confuse/confuse-2.5.ebuild,v 1.19 2006/09/12 18:43:01 gustavoz Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/confuse/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ~ppc-macos ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ppc ~ppc-macos ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc debug nls test"
 
 DEPEND="sys-devel/libtool
