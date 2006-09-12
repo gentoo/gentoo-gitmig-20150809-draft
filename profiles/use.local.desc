@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2144 2006/09/12 18:45:14 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2145 2006/09/12 20:29:48 dberkholz Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1700,6 +1700,7 @@ x11-base/xorg-x11:bitmap-fonts - Builds the crappy 100 DPI and 75 DPI fonts
 x11-base/xorg-x11:dlloader - Enable dynamic module loader instead of ELF loader
 x11-base/xorg-x11:dmx - Build Distributed Multiheaded X
 x11-base/xorg-x11:font-server - Build XFS, the X Font Server
+x11-base/xorg-x11:GAPING_SECURITY_HOLE - Set this to install X.Org 6.x versions with known security holes
 x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 and savage
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
