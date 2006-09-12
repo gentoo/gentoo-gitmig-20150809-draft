@@ -564,6 +564,7 @@ java-pkg_dolauncher() {
 	[[ -n "${pre}" ]] && [[ -f "${pre}" ]] && cat "${pre}" >> "${target}"
 	echo "gjl_package=${JAVA_PKG_NAME}" >> "${target}"
 	cat "${var_tmp}" >> "${target}"
+	rm -f "${var_tmp}"
 	echo "source /usr/share/java-config-2/launcher/launcher.bash" >> "${target}"
 
 	if [[ -n "${target_dir}" ]]; then
