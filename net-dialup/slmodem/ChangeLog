@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.69 2006/09/10 09:55:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.70 2006/09/12 09:38:02 mrness Exp $
+
+  12 Sep 2006; Alin Nastac <mrness@gentoo.org>
+  slmodem-2.9.11_pre20051101-r1.ebuild:
+  Deactivate exec stack QA warning for slmodem_test and slmodemd (#123733).
 
   10 Sep 2006; Alin Nastac <mrness@gentoo.org>
   -files/slmodem-2.9.11-devfs.patch,
