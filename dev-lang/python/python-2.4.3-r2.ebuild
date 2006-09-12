@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.3-r2.ebuild,v 1.1 2006/08/26 10:11:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.3-r2.ebuild,v 1.2 2006/09/12 21:10:32 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -232,8 +232,8 @@ src_install() {
 
 pkg_postrm() {
 	python_makesym
-	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"	
-	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"	
+	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"
+	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/bin/python-config" \
 								"python-config-[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/share/man/man1/python.1.gz" \
@@ -249,8 +249,8 @@ pkg_postinst() {
 	myroot=$(echo $ROOT | sed 's:/$::')
 
 	python_makesym
-	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"	
-	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"	
+	alternatives_auto_makesym "/usr/bin/idle" "idle[0-9].[0-9]"
+	alternatives_auto_makesym "/usr/bin/pydoc" "pydoc[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/bin/python-config" \
 								"python-config-[0-9].[0-9]"
 	alternatives_auto_makesym "/usr/share/man/man1/python.1.gz" \
