@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.2 2006/09/11 23:48:19 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.3 2006/09/12 23:50:11 pebenito Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.tresys.com/files/setools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="amd64 ppc x86"
 IUSE="X debug selinux"
 
 #S="${WORKDIR}/${PN}"
