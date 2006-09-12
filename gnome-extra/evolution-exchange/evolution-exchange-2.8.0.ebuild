@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.8.0.ebuild,v 1.1 2006/09/07 04:09:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.8.0.ebuild,v 1.2 2006/09/12 14:49:14 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -41,11 +41,3 @@ pkg_setup() {
 
 	G2CONF="${G2CONF} $(use_with static static-ldap) --with-openldap"
 }
-
-#src_unpack() {
-#	gnome2_src_unpack
-#
-#	epatch ${FILESDIR}/${P}-api-fix.patch
-#
-#	eautoreconf || die "autoreconf failed"
-#}
