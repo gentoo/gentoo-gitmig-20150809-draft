@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.0.ebuild,v 1.2 2006/09/12 15:11:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.16.0.ebuild,v 1.3 2006/09/12 21:42:48 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -52,7 +52,7 @@ src_unpack() {
 	# Implement --enable-guile switch
 	epatch ${FILESDIR}/${PN}-2.13.1-guile_switch.patch
 
-	eautoreconf
+	AT_M4DIR="./m4" eautoreconf
 }
 
 src_install() {
