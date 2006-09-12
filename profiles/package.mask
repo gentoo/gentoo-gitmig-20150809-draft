@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5868 2006/09/12 15:35:40 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5869 2006/09/12 22:28:54 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (12 Sep 2006)
+# These are being removed in favor of the x11-drivers/nvidia-drivers and
+# x11-drivers/nvidia-legacy-drivers.  There should be no reason why you are
+# still using these drivers.  Everyone should migrate to the new driver set.
+# This is masked for removal and will be removed on Septermber 29th.
+media-video/nvidia-glx
+media-video/nvidia-kernel
 
 # Olivier Fisette <ribosome@gentoo.org> (11 Sep 2006)
 # A number of issues remain with PHYLIP programs and
