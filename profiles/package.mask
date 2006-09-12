@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5867 2006/09/12 05:50:47 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5868 2006/09/12 15:35:40 allanonjl Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -178,6 +178,7 @@ dev-cpp/cairomm
 >=dev-cpp/libgnomecanvasmm-2.16.0
 >=dev-cpp/libgnomemm-2.16.0
 >=dev-cpp/libgnomeuimm-2.16.0
+>=dev-cpp/libglademm-2.6.3
 >=dev-cpp/libxmlpp-2.13.1
 >=www-client/epiphany-extensions-2.16.0
 >=x11-misc/icon-naming-utils-0.8.1
