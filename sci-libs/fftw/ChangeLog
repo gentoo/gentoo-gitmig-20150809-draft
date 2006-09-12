@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.38 2006/07/17 02:49:10 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.39 2006/09/12 20:48:12 dberkholz Exp $
+
+  12 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; fftw-2.1.5-r1.ebuild:
+  (#147275) Move some function calls out of global scope.
 
   16 Jul 2006; <psi29a@gentoo.org> fftw-3.0.1-r2.ebuild:
   stable on mips
