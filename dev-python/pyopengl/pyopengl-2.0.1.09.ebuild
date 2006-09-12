@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.11 2006/07/28 19:03:46 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.1.09.ebuild,v 1.12 2006/09/12 14:18:01 marienz Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -29,7 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"/setup
 
-	if built_with_use dev-lang/python tcltk; then
+	if built_with_use dev-lang/python tk; then
 		tkv=$(grep TK_VER /usr/include/tk.h | sed 's/^.*"\(.*\)".*/\1/')
 		TKLIBRARY="'\/usr\/$(get_libdir)\/tk${tkv}'"
 		tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.13 2006/07/05 05:25:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.14 2006/09/12 14:18:01 marienz Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch ${FILESDIR}/config.diff
 	epatch ${FILESDIR}/${P}-fix_togl.patch
 
-	if built_with_use dev-lang/python tcltk; then
+	if built_with_use dev-lang/python tk; then
 		tkv=$(grep TK_VER /usr/include/tk.h | sed 's/^.*"\(.*\)".*/\1/')
 		TKLIBRARY="'\/usr\/$(get_libdir)\/tk${tkv}'"
 		tclv=$(grep TCL_VER /usr/include/tcl.h | sed 's/^.*"\(.*\)".*/\1/')
