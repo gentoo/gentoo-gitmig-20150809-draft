@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.0.ebuild,v 1.1 2006/09/12 00:40:41 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.0.ebuild,v 1.2 2006/09/12 00:48:11 allanonjl Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -12,7 +12,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="accessibility cdr dvdr hal"
+IUSE="accessibility cdr dvdr hal mono"
 
 S=${WORKDIR}
 
@@ -138,6 +138,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/gnome-vfs-monikers-2.15.3
 	>=x11-misc/alacarte-0.10
 	>=gnome-extra/gnome-power-manager-2.16.0
+
+	mono? ( >=app-misc/tomboy-0.4.0 )
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.1.3
