@@ -1,0 +1,86 @@
+diff -ur pl-5.6.18.orig/packages/Makefile.in pl-5.6.18/packages/Makefile.in
+--- pl-5.6.18.orig/packages/Makefile.in	2006-08-30 20:35:12.000000000 +1200
++++ pl-5.6.18/packages/Makefile.in	2006-09-01 20:21:48.000000000 +1200
+@@ -30,7 +30,7 @@
+ bindir=@bindir@
+ PL=@PL@@RT@
+ PLVERSION=@PLVERSION@
+-PLBASE=$(prefix)/lib/@PL@-$(PLVERSION)
++PLBASE=@libdir@/@PL@-$(PLVERSION)
+ PKGDOC=$(PLBASE)/doc/packages
+ PLLIBS=@LIBS@
+ PLARCH=@ARCH@
+diff -ur pl-5.6.18.orig/packages/ltx2htm/Makefile.in pl-5.6.18/packages/ltx2htm/Makefile.in
+--- pl-5.6.18.orig/packages/ltx2htm/Makefile.in	2006-08-25 21:19:59.000000000 +1200
++++ pl-5.6.18/packages/ltx2htm/Makefile.in	2006-09-01 20:22:55.000000000 +1200
+@@ -33,7 +33,7 @@
+ INSTALL_DATA=@INSTALL_DATA@
+ 
+ # Don't change, this is also in latex2html.in!
+-LIBDIR=$(prefix)/lib/latex2html
++LIBDIR=@libdir@/latex2html
+ 
+ OBJ=	tex.o psfile.o
+ LIB=	latex2html.pl latex.cmd pl.pl pl.cmd xpce.pl xpce.cmd \
+diff -ur pl-5.6.18.orig/src/Makefile.in pl-5.6.18/src/Makefile.in
+--- pl-5.6.18.orig/src/Makefile.in	2006-08-25 20:33:32.000000000 +1200
++++ pl-5.6.18/src/Makefile.in	2006-09-01 20:15:51.000000000 +1200
+@@ -36,6 +36,7 @@
+ srcdir=@srcdir@
+ @VPATH@ @srcdir@
+ bindir=@bindir@
++libdir=@libdir@
+ mandir=@mandir@
+ mansec=1
+ lmansec=3
+@@ -46,7 +47,7 @@
+ PLVERSION=@PLVERSION@
+ PL=@PL@@RT@
+ PLV=@PL@@RT@-@PLVERSION@
+-PLBASE=$(prefix)/lib/@PL@@RT@-@PLVERSION@
++PLBASE=$(libdir)/@PL@@RT@-@PLVERSION@
+ BOOTFILE=@BOOTFILE@
+ 
+ CC=@CC@
+@@ -360,7 +361,7 @@
+ 		$(INSTALL_DATA) libplimp.a $(DESTDIR)$(PLBASE)/lib/$(ARCH)
+ 
+ idirs::
+-		if [ ! -d $(DESTDIR)$(prefix)/lib  ]; then $(MKDIR) $(DESTDIR)$(prefix)/lib; fi
++		if [ ! -d $(DESTDIR)$(libdir)  ]; then $(MKDIR) $(DESTDIR)$(libdir); fi
+ 		if [ ! -d $(DESTDIR)$(PLBASE) ]; then $(MKDIR) $(DESTDIR)$(PLBASE); fi
+ 		for d in $(installdirs); do \
+ 			if [ ! -d $(DESTDIR)$(PLBASE)/$$d ]; then \
+@@ -430,7 +431,7 @@
+ # runtime-only environment installation
+ #
+ 
+-RTHOME=		$(DESTDIR)$(prefix)/lib/$(PLV)
++RTHOME=		$(DESTDIR)$(libdir)/$(PLV)
+ RTDIRS=		$(RTHOME) $(RTHOME)/bin $(RTHOME)/lib $(RTHOME)/lib/$(ARCH) \
+ 		$(RTHOME)/man $(RTHOME)/bin/$(ARCH) $(RTHOME)/include
+ 
+diff -ur pl-5.6.18.orig/src/configure pl-5.6.18/src/configure
+--- pl-5.6.18.orig/src/configure	2006-08-07 20:21:19.000000000 +1200
++++ pl-5.6.18/src/configure	2006-09-01 20:20:23.000000000 +1200
+@@ -2546,7 +2546,7 @@
+ 
+ 
+ test "x$prefix" = xNONE && prefix=$ac_default_prefix
+-PLBASE=$prefix/lib/$PL-$PLVERSION
++PLBASE=$libdir/$PL-$PLVERSION
+ 
+ 
+ for ac_prog in gmake make
+diff -ur pl-5.6.18.orig/src/rc/Makefile.in pl-5.6.18/src/rc/Makefile.in
+--- pl-5.6.18.orig/src/rc/Makefile.in	2006-07-11 20:22:28.000000000 +1200
++++ pl-5.6.18/src/rc/Makefile.in	2006-09-01 20:11:08.000000000 +1200
+@@ -14,7 +14,7 @@
+ srcdir=@srcdir@
+ @VPATH@ @srcdir@
+ bindir=$(exec_prefix)/bin
+-PLBASE=$(prefix)/lib/@PL@-$(PLVERSION)
++PLBASE=@libdir@/@PL@-$(PLVERSION)
+ man_prefix=$(prefix)/man
+ mansec=1
+ lmansec=3
