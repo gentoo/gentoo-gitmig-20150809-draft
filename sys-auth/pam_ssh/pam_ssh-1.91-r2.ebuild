@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.91-r2.ebuild,v 1.1 2006/04/21 11:41:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.91-r2.ebuild,v 1.2 2006/09/12 00:00:08 flameeyes Exp $
 
 inherit pam eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-debian.patch" #105546
 	epatch "${FILESDIR}/${P}-syslog.patch" # glibc-2.4
+	epatch "${FILESDIR}/${P}-openssl-0.9.8.patch"
 }
 
 src_compile() {
