@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.16.0.ebuild,v 1.1 2006/09/07 04:04:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.16.0.ebuild,v 1.2 2006/09/12 13:59:26 allanonjl Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="static"
+IUSE=""
 
 RDEPEND="virtual/xft
 	>=x11-libs/gtk+-2.10
@@ -29,11 +29,6 @@ DEPEND="${RDEPEND}
 # gnome-core overwrite /usr/bin/gnome-terminal
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
-
-
-pkg_setup() {
-	G2CONF="$(use_enable static)"
-}
 
 src_unpack() {
 	gnome2_src_unpack
