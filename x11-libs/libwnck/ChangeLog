@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.137 2006/09/07 04:10:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.138 2006/09/12 15:43:08 dang Exp $
+
+  12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> libwnck-2.16.0.ebuild:
+  Remove monolithic X deps
 
 *libwnck-2.16.0 (07 Sep 2006)
 
