@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ssh
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.4 2006/09/12 00:00:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.5 2006/09/12 09:07:35 ticho Exp $
+
+  12 Sep 2006; <ticho@gentoo.org> pam_ssh-1.91-r2.ebuild:
+  Stable on x86, bug 146271.
 
   11 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/pam_ssh-1.91-openssl-0.9.8.patch, -files/1.9-standard-prompt.patch,
