@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.49 2006/09/11 09:51:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.50 2006/09/12 20:17:20 dberkholz Exp $
+
+*libXfont-1.2.2 (12 Sep 2006)
+
+  12 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +libXfont-1.2.2.ebuild:
+  (#145513) Security bump. Local root vulnerability in parsing CID fonts.
+  Straight to stable on alpha/amd64/hppa/ppc/ppc64/sparc/x86 because they
+  pre-tested on the bug.
 
 *libXfont-1.2.0-r2 (11 Sep 2006)
 
