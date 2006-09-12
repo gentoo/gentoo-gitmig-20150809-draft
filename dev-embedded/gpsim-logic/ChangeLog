@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim-logic
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/ChangeLog,v 1.6 2005/08/24 13:57:16 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/ChangeLog,v 1.7 2006/09/12 18:49:30 corsair Exp $
+
+  12 Sep 2006; Markus Rothe <corsair@gentoo.org> gpsim-logic-0.0.2.ebuild:
+  Added ~ppc64
 
   24 Aug 2005; Diego Pettenò <flameeyes@gentoo.org>
   gpsim-logic-0.0.2.ebuild:

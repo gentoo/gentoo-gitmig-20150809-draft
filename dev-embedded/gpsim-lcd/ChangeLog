@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim-lcd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.13 2006/08/14 10:06:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.14 2006/09/12 18:46:51 corsair Exp $
+
+  12 Sep 2006; Markus Rothe <corsair@gentoo.org> gpsim-lcd-0.2.5.ebuild:
+  Added ~ppc64
 
   14 Aug 2006; Daniel Black <dragonheart@gentoo.org> gpsim-lcd-0.2.1.ebuild,
   gpsim-lcd-0.2.5.ebuild:
