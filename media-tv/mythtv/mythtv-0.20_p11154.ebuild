@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11154.ebuild,v 1.1 2006/09/12 02:44:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11154.ebuild,v 1.2 2006/09/12 05:20:10 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -123,9 +123,7 @@ src_compile() {
 		$(use_enable joystick joystick-menu)
 		$(use_enable dbox2)
 		$(use_enable dvb)
-		$(use_enable dvb dvb-eit)
 		--dvb-path=/usr/include
-		$(use_enable dvd)
 		$(use_enable opengl opengl-vsync)
 		$(use_enable ieee1394 firewire)
 		--enable-xrandr
