@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+extra
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.12 2006/04/01 20:01:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+extra/ChangeLog,v 1.13 2006/09/12 18:32:53 corsair Exp $
+
+  12 Sep 2006; Markus Rothe <corsair@gentoo.org> gtk+extra-2.1.1.ebuild:
+  Added ~ppc64
 
   01 Apr 2006; Aron Griffis <agriffis@gentoo.org> gtk+extra-2.1.1.ebuild:
   Mark 2.1.1 ~ia64
