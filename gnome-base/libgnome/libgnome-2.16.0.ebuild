@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.16.0.ebuild,v 1.1 2006/09/07 03:42:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.16.0.ebuild,v 1.2 2006/09/12 14:29:47 dang Exp $
 
 inherit eutils gnome2
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF}--disable-schemas-install $(use_enable static) $(use_enable esd)"
+	G2CONF="${G2CONF} --disable-schemas-install $(use_enable static) $(use_enable esd)"
 }
 
 src_unpack() {
