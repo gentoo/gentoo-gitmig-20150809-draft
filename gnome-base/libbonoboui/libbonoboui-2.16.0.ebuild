@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.16.0.ebuild,v 1.1 2006/09/07 03:41:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.16.0.ebuild,v 1.2 2006/09/12 02:14:43 dang Exp $
 
 inherit eutils virtualx gnome2
 
@@ -29,6 +29,12 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_compile() {
+	addpredict "/root/.gnome2_private"
+
+	gnome2_src_compile
+}
 
 src_test() {
 	Xmake check || die
