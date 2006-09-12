@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.306 2006/09/05 22:45:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.307 2006/09/12 21:23:04 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -885,10 +885,11 @@ gcc-compiler_pkg_postinst() {
 		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/lib/rcscripts/awk/ || die "installing fixlafiles.awk"
 		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/sbin/ || die "installing fix_libtool_files.sh"
 
-		# These don't seem to exist when using the -K option and a hardened compiler and probably other cases also.
+		# Since these aren't critical files and portage sucks with
+		# handling of binpkgs, don't require these to be found
 		for x in "${ROOT}/${DATAPATH}"/c{89,99} ; do
 			if [[ -e ${x} ]]; then
-				cp ${x} "${ROOT}"/usr/sbin/ || die "installing c89/c99"
+				cp ${x} "${ROOT}"/usr/bin/ || die "installing c89/c99"
 			fi
 		done
 	fi
