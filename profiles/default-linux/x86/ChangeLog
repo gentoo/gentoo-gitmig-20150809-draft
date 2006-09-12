@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.18 2006/09/12 14:02:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.19 2006/09/12 14:09:11 wolf31o2 Exp $
+
+  12 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> +2005.1/deprecated:
+  Added deprecation notice to the 2005.1 profile.
 
   12 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> 2006.0/make.defaults,
   2006.1/desktop/make.defaults, no-nptl/make.defaults:
