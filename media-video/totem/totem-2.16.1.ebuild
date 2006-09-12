@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.1.ebuild,v 1.2 2006/09/12 01:09:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.1.ebuild,v 1.3 2006/09/12 16:01:51 dang Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -25,17 +25,12 @@ RDEPEND=">=dev-libs/glib-2.8.0
 	>=gnome-base/gnome-desktop-2.2
 	app-text/iso-codes
 	>=gnome-base/gconf-2
-	|| (
-			(
-				x11-libs/libXtst
-				x11-libs/libX11
-				x11-libs/libXxf86vm
-				x11-libs/libXext
-				x11-libs/libXrandr
-				x11-libs/libXrender
-			)
-			virtual/x11
-		)
+	x11-libs/libXtst
+	x11-libs/libX11
+	x11-libs/libXxf86vm
+	x11-libs/libXext
+	x11-libs/libXrandr
+	x11-libs/libXrender
 	dbus? ( >=sys-apps/dbus-0.35 )
 	hal? ( =sys-apps/hal-0.5* )
 	gnome? ( >=gnome-base/nautilus-2.10 )

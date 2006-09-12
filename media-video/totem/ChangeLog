@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.129 2006/09/12 01:09:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.130 2006/09/12 16:01:51 dang Exp $
+
+  12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> totem-2.16.1.ebuild:
+  Remove monolithic X deps
 
   12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> totem-2.16.1.ebuild:
   Fix hardcoded mozilla path
