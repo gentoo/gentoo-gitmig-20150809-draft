@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.36 2006/09/12 01:37:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.37 2006/09/12 14:09:07 dang Exp $
+
+  12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  desktop-file-utils-0.11.ebuild:
+  Doesn't need popt anymore
 
 *desktop-file-utils-0.11 (12 Sep 2006)
 
