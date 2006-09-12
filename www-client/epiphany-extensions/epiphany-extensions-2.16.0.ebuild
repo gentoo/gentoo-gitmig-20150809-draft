@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.0.ebuild,v 1.4 2006/09/08 21:55:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.16.0.ebuild,v 1.5 2006/09/12 18:38:44 dang Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="dbus debug pcre python"
+IUSE="debug pcre python"
 
 RDEPEND=">=www-client/epiphany-2.16
 	>=dev-libs/libxml2-2.6
@@ -20,7 +20,7 @@ RDEPEND=">=www-client/epiphany-2.16
 	app-text/opensp
 	>=www-client/mozilla-firefox-1.0.2-r1
 	pcre? ( >=dev-libs/libpcre-3.9-r2 )
-	dbus? ( >=sys-apps/dbus-0.34 )
+	>=sys-apps/dbus-0.34
 	python? ( >=dev-lang/python-2.3 )"
 
 DEPEND="${RDEPEND}
@@ -32,19 +32,8 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 pkg_setup() {
 	local extensions="actions auto-reload auto-scroller certificates
 	error-viewer extensions-manager-ui gestures java-console livehttpheaders
-	page-info permissions push-scroller sample sample-mozilla select-stylesheet
-	sidebar smart-bookmarks tab-groups tab-states"
-
-	if use dbus && ! built_with_use www-client/epiphany dbus; then
-		ewarn
-		ewarn "To enable the extensions using dbus you neet to emerge"
-		ewarn "www-client/epiphany with the 'dbus' USE flag enabled as well."
-		ewarn
-		ewarn "Skipping for now."
-		ewarn
-	else
-		use dbus && extensions="${extensions} rss"
-	fi
+	page-info permissions push-scroller rss sample sample-mozilla
+	select-stylesheet sidebar smart-bookmarks tab-groups tab-states"
 
 	use pcre && extensions="${extensions} greasemonkey adblock"
 
