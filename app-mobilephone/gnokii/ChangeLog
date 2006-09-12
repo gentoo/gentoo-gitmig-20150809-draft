@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.40 2006/06/10 09:26:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.41 2006/09/12 07:52:14 s4t4n Exp $
+
+*gnokii-0.6.14 (11 Sep 2006)
+
+  11 Sep 2006; Michele Noberasco <s4t4n@gentoo.org> +gnokii-0.6.14.ebuild:
+  Version bump (#144463).
 
   10 Jun 2006; Michael Hanselmann <hansmi@gentoo.org> gnokii-0.6.12.ebuild:
   Stable on ppc.
