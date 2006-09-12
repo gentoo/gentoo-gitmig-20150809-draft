@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.1.0_pre1.ebuild,v 1.1 2006/08/28 14:14:01 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/tvision-2.1.0_pre1.ebuild,v 1.2 2006/09/12 13:15:52 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Text User Interface that implements the well known CUA widgets"
 HOMEPAGE="http://tvision.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tvision/rhtvision_${PV/_pre/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/${PN}
@@ -30,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	einstall libdir="\$(prefix)/$(get_libdir)"|| die
 	dosym rhtvision /usr/include/tvision
 	dodoc readme.txt THANKS TODO
 	dohtml -r www-site
