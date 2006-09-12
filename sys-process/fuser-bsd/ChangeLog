@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/fuser-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.2 2006/09/10 19:15:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.3 2006/09/12 21:04:43 uberlord Exp $
+
+  12 Sep 2006; Roy Marples <uberlord@gentoo.org> -files/fuser-return.patch,
+  fuser-bsd-1142334561.ebuild:
+  Pull the return value patch as it goes againsta POSIX standard.
+  Just as easy to check stdout, which is what we shall do!
 
   10 Sep 2006; Roy Marples <uberlord@gentoo.org> +files/fuser-return.patch,
   fuser-bsd-1142334561.ebuild:

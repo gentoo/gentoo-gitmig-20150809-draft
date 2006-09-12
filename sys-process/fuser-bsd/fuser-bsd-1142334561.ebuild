@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/fuser-bsd-1142334561.ebuild,v 1.2 2006/09/10 19:15:17 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/fuser-bsd-1142334561.ebuild,v 1.3 2006/09/12 21:04:43 uberlord Exp $
 
 inherit base bsdmk eutils
 
@@ -19,13 +19,6 @@ DEPEND=""
 RDEPEND="!sys-process/psmisc"
 
 S="${WORKDIR}/${PN/-bsd/}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/fuser-return.patch"
-}
 
 src_install() {
 	into /
