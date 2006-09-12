@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0-r3.ebuild,v 1.3 2006/08/26 02:59:22 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.9.0-r3.ebuild,v 1.4 2006/09/12 20:41:08 dberkholz Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -33,7 +33,8 @@ RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx bitmap-fonts cjk debug doc font-server insecure-drivers ipv6 minimal
-	nls nocxx opengl pam sdk static truetype-fonts type1-fonts uclibc xprint xv"
+	nls nocxx opengl pam sdk static truetype-fonts type1-fonts uclibc xprint xv
+	GAPING_SECURITY_HOLE"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.1"
@@ -405,6 +406,13 @@ pkg_setup() {
 	FILES_DIR="${WORKDIR}/files"
 	PATCHDIR="${WORKDIR}/patch"
 	EXCLUDED="${PATCHDIR}/excluded"
+
+	if ! use GAPING_SECURITY_HOLE; then
+		local msg="Set USE=GAPING_SECURITY_HOLE to install."
+		eerror "$msg"
+		eerror "This package is subject to at least one local root vulnerability."
+		die "$msg"
+	fi
 
 	# Set up CFLAG-related things
 	cflag_setup

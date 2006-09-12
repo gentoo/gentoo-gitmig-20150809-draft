@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.570 2006/09/12 18:41:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.571 2006/09/12 20:41:08 dberkholz Exp $
+
+  12 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-x11-6.8.2-r8.ebuild, xorg-x11-6.9.0-r3.ebuild:
+  USE=GAPING_SECURITY_HOLE to install unsupported, vulnerable monolith versions.
 
   12 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> xorg-x11-7.1.ebuild:
   Stable on hppa
