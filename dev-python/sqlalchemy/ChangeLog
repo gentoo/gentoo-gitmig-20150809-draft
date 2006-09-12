@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.1 2006/09/02 11:42:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.2 2006/09/12 20:48:10 marienz Exp $
+
+  12 Sep 2006; Marien Zwart <marienz@gentoo.org> sqlalchemy-0.2.7.ebuild:
+  Add mssql to IUSE and fix dependencies for <dev-python/psycopg-2. Closes bug
+  #146248, thanks to Jakub Moc for reporting.
 
 *sqlalchemy-0.2.7 (02 Sep 2006)
 
