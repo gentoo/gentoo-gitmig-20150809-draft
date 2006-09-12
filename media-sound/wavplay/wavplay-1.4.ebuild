@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/wavplay-1.4.ebuild,v 1.14 2006/06/21 22:46:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/wavplay-1.4.ebuild,v 1.15 2006/09/12 15:17:35 tcort Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,7 @@ src_compile() {
 
 src_install () {
 	dodir /usr/bin
-	emake INSTDIR="${D}usr/bin" install_no_x || die
+	emake INSTDIR="${D}/usr/bin" install_no_x || die
 	# the motif frontend crashes and there are nicer player
 	# for X anyway
 	# no suid root install for old packages which use strcpy
