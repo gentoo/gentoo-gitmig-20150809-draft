@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.1.ebuild,v 1.1 2006/09/07 04:17:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.1.ebuild,v 1.2 2006/09/12 16:14:32 dang Exp $
 
 inherit gnome.org python flag-o-matic
 
@@ -39,8 +39,8 @@ src_unpack() {
 	fi
 
 	# disable pyc compiling
-	mv ${S}/py-compile ${S}/py-compile.orig
-	ln -s /bin/true ${S}/py-compile
+	mv "${S}"/py-compile "${S}"/py-compile.orig
+	ln -s /bin/true "${S}"/py-compile
 }
 
 src_compile() {
@@ -57,7 +57,7 @@ src_install() {
 	cp -r examples ${D}/usr/share/doc/${PF}/
 
 	if use doc; then
-		cd ${S}/../
+		cd "${S}"/../
 		dodir /usr/share/gtk-doc/html
 		cp -pPR pygtk2reference	${D}/usr/share/gtk-doc/html/
 	fi

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.125 2006/09/07 04:17:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.126 2006/09/12 16:14:32 dang Exp $
+
+  12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> pygtk-2.10.1.ebuild:
+  Fix unqouted paths
 
 *pygtk-2.10.1 (07 Sep 2006)
 
