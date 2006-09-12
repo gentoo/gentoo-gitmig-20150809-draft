@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.6 2006/08/12 22:58:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/captive-1.1.7-r1.ebuild,v 1.7 2006/09/12 20:11:06 genstef Exp $
 
 inherit eutils
 
@@ -49,6 +49,7 @@ src_unpack() {
 	if has_version '>=sys-fs/fuse-2.6.0_pre3'; then
 		epatch ${FILESDIR}/captive-fuse-2.6.0_pre3.patch
 	fi
+	epatch ${FILESDIR}/captive-popt.diff
 }
 
 src_compile() {

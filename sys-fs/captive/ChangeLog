@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/captive
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.17 2006/08/12 22:58:10 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/captive/ChangeLog,v 1.18 2006/09/12 20:11:06 genstef Exp $
+
+  12 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/captive-popt.diff, captive-1.1.7-r1.ebuild:
+  fix popt linking thanks to David Li <matrixhax0r@gmail.com> in bug 147332
 
   12 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/captive-fuse-2.6.0_pre3.patch, captive-1.1.7-r1.ebuild:
