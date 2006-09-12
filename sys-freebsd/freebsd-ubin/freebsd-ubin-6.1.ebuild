@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.4 2006/09/11 22:36:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.5 2006/09/12 22:22:02 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -67,7 +67,8 @@ REMOVE_SUBDIRS="bzip2 bzip2recover tar
 	less lessecho lesskey
 	dig nslookup nsupdate host
 	rsh rlogin rusers rwho ruptime
-	compile_et lex vi smbutil file vacation nc ftp telnet"
+	compile_et lex vi smbutil file vacation nc ftp telnet
+	c99 c89"
 
 src_unpack() {
 	freebsd_src_unpack

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.16 2006/09/11 22:36:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.17 2006/09/12 22:22:02 flameeyes Exp $
+
+  12 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-ubin-6.1.ebuild:
+  Don't build and install c99 and c89, leave them to GCC.
 
   11 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-ubin-6.1.ebuild:
