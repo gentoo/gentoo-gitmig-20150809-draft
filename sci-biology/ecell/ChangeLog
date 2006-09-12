@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/ecell
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ChangeLog,v 1.5 2005/01/02 21:19:04 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ChangeLog,v 1.6 2006/09/12 05:15:11 ribosome Exp $
+
+  12 Sep 2006; Olivier Fisette <ribosome@gentoo.org> -ecell-3.1.102.ebuild,
+  ecell-3.1.102-r1.ebuild:
+  Pruned old ebuild. Made documentation building tools compile-time
+  dependencies (see bug #142731).
 
 *ecell-3.1.102-r1 (02 Jan 2005)
 

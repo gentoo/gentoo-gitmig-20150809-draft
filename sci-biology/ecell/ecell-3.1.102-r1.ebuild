@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ecell-3.1.102-r1.ebuild,v 1.2 2005/01/02 21:19:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ecell-3.1.102-r1.ebuild,v 1.3 2006/09/12 05:15:11 ribosome Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc gnome"
 
-DEPEND="dev-libs/boost
+RDEPEND="dev-libs/boost
 	dev-lang/python
 	dev-python/numeric
 	sci-libs/gsl
@@ -21,7 +21,9 @@ DEPEND="dev-libs/boost
 		>=dev-python/pygtk-2
 		dev-python/gnome-python
 		x11-libs/gtk+extra
-		dev-python/python-gtkextra )
+		dev-python/python-gtkextra )"
+
+DEPEND="${RDEPEND}
 	doc? ( media-gfx/graphviz
 		app-doc/doxygen
 		app-text/docbook-sgml-utils )"
