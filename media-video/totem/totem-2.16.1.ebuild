@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.1.ebuild,v 1.1 2006/09/12 00:07:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.1.ebuild,v 1.2 2006/09/12 01:09:01 dang Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -123,6 +123,12 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
+
+	# Fix hardcoded plugindir
+	sed -i -e \
+		's|mozilla|nsbrowser|' \
+		${S}/browser-plugin/Makefile.in \
+		${S}/browser-plugin/idl/Makefile.in
 
 	# fixes for ff compiles.
 	if use nsplugin && ( use firefox || use sparc ); then
