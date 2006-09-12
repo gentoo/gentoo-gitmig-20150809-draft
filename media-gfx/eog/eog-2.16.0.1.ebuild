@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.16.0.1.ebuild,v 1.2 2006/09/09 20:47:13 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.16.0.1.ebuild,v 1.3 2006/09/12 18:25:38 allanonjl Exp $
 
 inherit eutils gnome2 autotools
 
@@ -22,6 +22,7 @@ RDEPEND=">=gnome-base/gnome-vfs-2.5.91
 	>=gnome-base/gnome-desktop-2.10
 	>=gnome-base/libgnomeprintui-2.2
 	>=gnome-base/libgnomeprint-2.2
+	>=gnome-base/gnome-common-2.12.0
 	jpeg? (
 		>=media-libs/libexif-0.6.12
 		media-libs/jpeg )

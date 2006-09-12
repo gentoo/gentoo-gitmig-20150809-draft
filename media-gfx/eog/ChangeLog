@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.142 2006/09/09 20:47:12 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.143 2006/09/12 18:25:38 allanonjl Exp $
+
+  12 Sep 2006; John N. Laliberte <allanonjl@gentoo.org> eog-2.16.0.1.ebuild:
+  re-add gnome-common dep, #147347
 
   09 Sep 2006; Mart Raudsepp <leio@gentoo.org> eog-2.16.0.1.ebuild:
   Remove unnecessary dev-libs/popt dependency.
