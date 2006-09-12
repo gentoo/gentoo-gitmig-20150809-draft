@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.232 2006/09/12 16:38:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.233 2006/09/12 19:58:38 kloeri Exp $
+
+  12 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
+  subversion-1.4.0.ebuild:
+  Revert ia64 keyword back to ~ia64, bug 147268.
 
   12 Sep 2006; Joshua Kinard <kumba@gentoo.org> subversion-1.4.0.ebuild:
   Placed 1.4.0 into mips unstable.  Bug #147268.
