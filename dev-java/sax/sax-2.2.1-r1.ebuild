@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1-r1.ebuild,v 1.1 2006/07/29 17:21:33 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sax/sax-2.2.1-r1.ebuild,v 1.2 2006/09/12 18:00:53 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sax/sax2r3.zip"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc source"
 DEPEND=">=virtual/jdk-1.3
 		app-arch/unzip
 		dev-java/ant"
@@ -36,4 +36,5 @@ src_install() {
 	dodoc ChangeLog CHANGES README
 
 	use doc && java-pkg_dohtml -r docs/javadoc/*
+	use source && java-pkg_dosrc ${S}/src/*
 }
