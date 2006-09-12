@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0.ebuild,v 1.1 2006/09/07 03:39:26 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0.ebuild,v 1.2 2006/09/12 14:24:13 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -37,7 +37,7 @@ RDEPEND=">=gnome-base/gconf-2
 				>=sys-apps/dbus-0.32
 			)
 	avahi? ( >=net-dns/avahi-0.6 )"
-DEPEND="${COMMON}
+DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
