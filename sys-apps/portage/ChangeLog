@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.245 2006/09/11 16:40:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.246 2006/09/12 14:59:28 gustavoz Exp $
+
+  12 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> portage-2.1.1.ebuild:
+  Stable on hppa and sparc wrt #146881
 
   11 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> portage-2.1.1.ebuild:
   Marked stable on amd64 for bug #146881
