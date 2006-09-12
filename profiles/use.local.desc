@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2142 2006/09/12 01:19:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2143 2006/09/12 14:39:13 suka Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -187,6 +187,7 @@ app-office/openoffice:binfilter - Enable support for legacy StarOffice 5.x and e
 app-office/openoffice:branding - Enable Gentoo branded splash screen
 app-office/openoffice:cairo - Enable cairo support
 app-office/openoffice:odk - Build the Office Development Kit
+app-office/openoffice:webdav - Enable webdav support
 app-office/scribus:cairo - Enable cairo support.
 app-office/tpp:figlet - Installs app-misc/figlet to support the --huge command
 app-pda/multisync:gnokii - Address synchronization with mobile phones via Gnokii.
