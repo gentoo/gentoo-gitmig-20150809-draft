@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.2 2006/09/12 07:22:09 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.3 2006/09/12 11:13:36 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -100,7 +100,7 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
 	>=app-admin/eselect-oodict-20060706
-	java? ( || ( =virtual/jre-1.4* =virtual/jdk-1.5* )
+	java? ( || ( =virtual/jre-1.4* =virtual/jre-1.5* )
 		dev-java/ant-core )
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
