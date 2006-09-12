@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.0.ebuild,v 1.1 2006/09/07 03:49:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.0.ebuild,v 1.2 2006/09/12 14:45:59 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -181,22 +181,6 @@ src_compile() {
 		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \
 			--without-nss-libs --without-nss-includes"
 	fi
-#	if use ssl ; then
-#		NSS_LIB=/usr/$(get_libdir)/nss
-#		NSS_INC=/usr/include/nss
-#		NSPR_LIB=/usr/$(get_libdir)/nspr
-#		NSPR_INC=/usr/include/nspr
-#
-#		G2CONF="${G2CONF} \
-#			--with-nspr-includes=${NSPR_INC} \
-#			--with-nspr-libs=${NSPR_LIB}     \
-#			--with-nss-includes=${NSS_INC}   \
-#			--with-nss-libs=${NSS_LIB}"
-#	else
-#		G2CONF="${G2CONF} --without-nspr-libs --without-nspr-includes \
-#			--without-nss-libs --without-nss-includes"
-#	fi
-
 
 	# problems with -O3 on gcc-3.3.1
 	replace-flags -O3 -O2
