@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.21 2006/09/11 23:41:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.22 2006/09/12 11:17:16 flameeyes Exp $
+
+  12 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/digest-ruby-gettext-1.8.0, Manifest:
+  Update digest.
 
 *ruby-gettext-1.8.0 (11 Sep 2006)
 
