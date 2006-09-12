@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.3 2006/09/12 11:13:36 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.4 2006/09/12 11:29:42 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
-IUSE="binfilter branding cairo eds firefox gnome gstreamer gtk kde ldap mono odk pam xml"
+IUSE="binfilter branding cairo eds firefox gnome gstreamer gtk kde ldap mono odk pam"
 
 MY_PV="${PV}"
 PATCHLEVEL="OOD680"
@@ -41,11 +41,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="!app-office/openoffice-bin
-	|| ( (
-			x11-libs/libXaw
-			x11-libs/libXinerama
-		)
-		virtual/x11 )
+	x11-libs/libXaw
+	x11-libs/libXinerama
 	virtual/libc
 	>=dev-lang/perl-5.0
 	gnome? ( >=x11-libs/gtk+-2.4
@@ -64,6 +61,7 @@ RDEPEND="!app-office/openoffice-bin
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.2.0
+	net-print/cups
 	media-libs/libpng
 	sys-devel/flex
 	sys-devel/bison
@@ -72,23 +70,19 @@ RDEPEND="!app-office/openoffice-bin
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
 	java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* )  )
-	>=sys-devel/gcc-3.2.1
 	amd64? ( >=dev-libs/boost-1.31.0 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-libs/libXrender
-			x11-proto/printproto
-			x11-proto/xextproto
-			x11-proto/xproto
-			x11-proto/xineramaproto
-		)
-		virtual/x11 )
-	net-print/cups
+	x11-libs/libXrender
+	x11-proto/printproto
+	x11-proto/xextproto
+	x11-proto/xproto
+	x11-proto/xineramaproto
 	>=sys-apps/findutils-4.1.20-r1
+	>=sys-devel/gcc-3.2.1
 	dev-perl/Archive-Zip
 	dev-perl/Compress-Zlib
 	dev-util/pkgconfig
@@ -102,11 +96,10 @@ DEPEND="${RDEPEND}
 	>=app-admin/eselect-oodict-20060706
 	java? ( || ( =virtual/jre-1.4* =virtual/jre-1.5* )
 		dev-java/ant-core )
-	!java? ( dev-libs/libxslt
-		>=dev-libs/libxml2-2.0 )
+	!java? ( dev-libs/libxslt )
 	ldap? ( net-nds/openldap )
 	mono? ( >=dev-lang/mono-1.1.6 )
-	xml? ( >=dev-libs/libxml2-2.0 )"
+	>=dev-libs/libxml2-2.0"
 
 PROVIDE="virtual/ooo"
 
@@ -147,8 +140,7 @@ pkg_setup() {
 		ewarn " You are building with java-support disabled, this results in some "
 		ewarn " of the OpenOffice.org functionality (i.e. help) being disabled. "
 		ewarn " If something you need does not work for you, rebuild with "
-		ewarn " java in your USE-flags. Also the xml use-flag is disabled with "
-		ewarn " -java to prevent build breakage. "
+		ewarn " java in your USE-flags. "
 		ewarn
 	fi
 
@@ -211,10 +203,7 @@ src_compile() {
 	filter-flags "-ftracer"
 	filter-flags "-ffast-math"
 	filter-flags "-fforce-addr"
-	replace-flags "-O3" "-O2"
-	replace-flags "-Os" "-O2"
-	replace-flags "-O1" "-O2"
-	replace-flags "-O0" "-O2"
+	replace-flags "-O?" "-O2"
 
 	use ppc && append-flags "-D_STLP_STRICT_ANSI"
 
