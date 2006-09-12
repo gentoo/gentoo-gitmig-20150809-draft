@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.149 2006/05/28 04:27:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.150 2006/09/12 18:43:27 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -48,15 +48,8 @@ else
 	IUSE="selinux nls acl"
 fi
 
-if version_is_at_least "6.3.086" ; then
-	DEPEND="${DEPEND} nls? ( virtual/libintl )"
-	RDEPEND="${RDEPEND} nls? ( virtual/libintl )"
-	:
-elif version_is_at_least "6.3.075" ; then
-	IUSE="${IUSE} termcap-compat"
-else
-	IUSE="${IUSE} ncurses"
-fi
+DEPEND="${DEPEND} nls? ( virtual/libintl )"
+RDEPEND="${RDEPEND} nls? ( virtual/libintl )"
 
 if [[ "${MY_PN}" == "vim-core" ]] ; then
 	IUSE="${IUSE} livecd"
@@ -140,27 +133,11 @@ LICENSE="vim"
 DEPEND="${DEPEND}
 	>=sys-apps/sed-4
 	sys-devel/autoconf
-	dev-util/ctags"
-RDEPEND="${RDEPEND} dev-util/ctags"
-
-if version_is_at_least "6.3.086" ; then
-	DEPEND="${DEPEND} >=sys-libs/ncurses-5.2-r2"
-	RDEPEND="${RDEPEND} >=sys-libs/ncurses-5.2-r2"
-elif version_is_at_least "6.3.075" ; then
-	DEPEND="${DEPEND}
-		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
-		termcap-compat?   ( sys-libs/libtermcap-compat )"
-	RDEPEND="${RDEPEND}
-		!termcap-compat?  ( >=sys-libs/ncurses-5.2-r2 )
-		termcap-compat?   ( sys-libs/libtermcap-compat )"
-else
-	DEPEND="${DEPEND}
-		ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
-		!ncurses? ( sys-libs/libtermcap-compat )"
-	RDEPEND="${RDEPEND}
-		ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
-		!ncurses? ( sys-libs/libtermcap-compat )"
-fi
+	dev-util/ctags
+	>=sys-libs/ncurses-5.2-r2"
+RDEPEND="${RDEPEND}
+	dev-util/ctags
+	>=sys-libs/ncurses-5.2-r2"
 
 apply_vim_patches() {
 	local p
@@ -469,17 +446,7 @@ vim_src_compile() {
 
 	# Note: If USE=gpm, then ncurses will still be required. See bug #93970
 	# for the reasons behind the USE flag change.
-	if version_is_at_least "6.3.086" ; then
-		myconf="${myconf} --with-tlib=ncurses"
-	elif version_is_at_least "6.3.075" ; then
-		use termcap-compat \
-			&& myconf="${myconf} --with-tlib=termcap" \
-			|| myconf="${myconf} --with-tlib=ncurses"
-	else
-		use ncurses \
-			&& myconf="${myconf} --with-tlib=ncurses" \
-			|| myconf="${myconf} --with-tlib=termcap"
-	fi
+	myconf="${myconf} --with-tlib=ncurses"
 
 	if version_is_at_least "6.4_beta" ; then
 		myconf="${myconf} --disable-selinux"
