@@ -1,6 +1,6 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.116 2006/08/09 21:53:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.117 2006/09/13 18:18:07 tove Exp $
 
   09 Aug 2006; Daniel Black <dragonheart@gentoo.org>
   -files/lftp-3.5.2-gnutls-segv.patch,
@@ -37,8 +37,8 @@
   +files/lftp-3.5.2-noautoflags.patch, +files/lftp-3.5.2-socklib.patch,
   lftp-3.5.2.ebuild:
   added patch from upstream. Moved ebuild to use modules mode. Fixed bug
-  #142435 that resulted in automatically stripped executables thanks to JosÃ©
-  ValentÃ­n GutiÃ©rrez Boquete. Fixed compile problem with USE=socks5 thanks 
+  #142435 that resulted in automatically stripped executables thanks to José
+  Valentín Gutiérrez Boquete. Fixed compile problem with USE=socks5 thanks 
   to me.
 
 *lftp-3.5.2 (31 Jul 2006)
@@ -211,7 +211,7 @@
   version bump to 3.1.0 as per bug #83682. x86 keyword for lftp-3.0.13. Bug
   thanks to Jeffrey Litvin <litvin.j@neu.edu>
 
-  22 Jan 2005; Bryan ÃÂstergaard <kloeri@gentoo.org> lftp-3.0.12-r1.ebuild:
+  22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.12-r1.ebuild:
   Stable on alpha, bug 78620.
 
   27 Dec 2004; Guy Martin <gmsoft@gentoo.org> lftp-3.0.12-r1.ebuild:
@@ -233,7 +233,7 @@
   19 Dec 2004; Daniel Black <dragonheart@gentoo.org> +lftp-3.0.12-r1.ebuild,
   +files/lftp-3.0.12.patch, -lftp-3.0.12.ebuild:
   Patch added to prevent segfault. Thanks to Jeffrey Litvin <litvin.j@neu.edu>
-  for the patch reference and Thomas JÃÂ¤ger <tjjr@tj.no> for Bug #74815
+  for the patch reference and Thomas Jäger <tjjr@tj.no> for Bug #74815
 
 *lftp-3.0.12 (07 Dec 2004)
 
@@ -242,7 +242,7 @@
   version bump as per bug #73582 by rockoo. Removed one old version. added ppc
   keyword to 3.0.9
 
-  01 Nov 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> lftp-3.0.9.ebuild:
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.9.ebuild:
   Stable on alpha.
 
   29 Oct 2004; Jason Wever <weeve@gentoo.org> lftp-3.0.9.ebuild:
@@ -298,7 +298,7 @@
   Memory leak fixed - thanks to Luke Macken in bug #61335. OSX fix thanks to
   Miguel Sousa Filipe in bug #61349
 
-  22 Aug 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> lftp-3.0.6.ebuild:
+  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.6.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> lftp-3.0.7.ebuild:
@@ -332,7 +332,7 @@
   Version bump thanks to #gentoo.pl Team - sekretarz <sekretarz@dukato.net> in
   bug #53720
 
-  05 Jun 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> lftp-3.0.3.ebuild:
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> lftp-3.0.3.ebuild:
   Stable on alpha.
 
 *lftp-3.0.5 (04 Jun 2004)
