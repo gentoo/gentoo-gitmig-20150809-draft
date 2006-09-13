@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.39 2006/08/17 19:43:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.40 2006/09/13 18:10:43 tove Exp $
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org>
   mysql-python-1.2.0-r1.ebuild:
@@ -64,7 +64,7 @@
   mysql-python-1.2.0.ebuild:
   Stable on sparc
 
-  07 May 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  07 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   mysql-python-1.2.0.ebuild:
   Stable on x86, fixes bug 90074.
 
@@ -105,7 +105,7 @@
 
 *mysql-python-1.1.7 (05 Dec 2004)
 
-  05 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  05 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   +mysql-python-1.1.7.ebuild:
   Version bump, bug 71965.
 
@@ -120,11 +120,11 @@
 
 *mysql-python-1.0.0 (12 Jun 2004)
 
-  12 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
   +mysql-python-1.0.0.ebuild:
   Bump version, bug #53381.
 
-  04 May 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org>
   mysql-python-0.9.2-r1.ebuild, mysql-python-0.9.2.ebuild:
   Add missing IUSE.
 
