@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.33.ebuild,v 1.2 2006/09/13 04:39:52 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.33.ebuild,v 1.3 2006/09/13 07:16:52 avenj Exp $
 
 inherit eutils toolchain-funcs
 
@@ -46,7 +46,7 @@ src_install() {
 	newins dnsmasq.conf.example dnsmasq.conf
 
 	if use resolvconf ; then
-		insinto /etc/resolvconf/update.d
-		newins ${FILESDIR}/resolvconf.dnsmasq dnsmasq
+		exeinto /etc/resolvconf/update.d
+		newexe ${FILESDIR}/resolvconf.dnsmasq dnsmasq
 	fi
 }
