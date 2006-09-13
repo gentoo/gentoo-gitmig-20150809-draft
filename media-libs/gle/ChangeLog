@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/gle
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.23 2006/09/06 20:42:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/ChangeLog,v 1.24 2006/09/13 17:52:19 tove Exp $
 
   06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> gle-3.1.0-r1.ebuild:
   Add ~x86-fbsd keyword.
@@ -27,15 +27,15 @@
 
 *gle-3.0.1-r3 (23 Jun 2006)
 
-  23 Jun 2006; Petteri RÃ¤ty <betelgeuse@gentoo.org> +gle-3.0.1-r3.ebuild:
+  23 Jun 2006; Petteri Räty <betelgeuse@gentoo.org> +gle-3.0.1-r3.ebuild:
   Added a doc use flag for the html documentation that was previously always
   installed.
 
-  18 May 2006; Harald van DÄ³k <truedfx@gentoo.org>
+  18 May 2006; Harald van Dĳk <truedfx@gentoo.org>
   +files/configure-LANG.patch, gle-3.0.1-r2.ebuild:
   Fix compilation with et_EE locale (#133625)
 
-  18 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org> gle-3.0.1-r2.ebuild:
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> gle-3.0.1-r2.ebuild:
   Replace malloc.h inclusions with stdlib.h inclusions to build on FreeBSD and
   OSX. Bug #130340.
 
