@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r2.ebuild,v 1.8 2006/05/24 21:05:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r2.ebuild,v 1.9 2006/09/13 22:30:15 nichoj Exp $
 
 inherit java-utils gnuconfig java-pkg mono distutils multilib
 
@@ -14,14 +14,11 @@ KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc debug examples mono nocxx nojava python script source"
 
 RDEPEND=">=virtual/jdk-1.2
-		 dev-java/java-config
-		 mono? ( dev-lang/mono dev-util/pkgconfig )
-		 python? ( dev-lang/python )"
+		mono? ( dev-lang/mono )
+		python? ( dev-lang/python )"
 DEPEND="${RDEPEND}
 		script? ( !dev-util/pccts )
-		>=sys-apps/sed-4
-		  sys-apps/findutils
-		 source? ( app-arch/zip )"
+		source? ( app-arch/zip )"
 
 src_compile() {
 	gnuconfig_update
@@ -41,11 +38,11 @@ src_compile() {
 	fi
 
 	econf $(use_enable python) \
-		  $(use_enable mono csharp) \
-		  $(use_enable debug) \
-		  $(use_enable examples) \
-		  ${myconf} \
-		  --enable-verbose || die "configure failed"
+		$(use_enable mono csharp) \
+		$(use_enable debug) \
+		$(use_enable examples) \
+		${myconf} \
+		--enable-verbose || die "configure failed"
 
 	emake || die "compile failed"
 

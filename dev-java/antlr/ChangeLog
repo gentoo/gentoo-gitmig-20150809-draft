@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.42 2006/07/23 16:11:32 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.43 2006/09/13 22:30:15 nichoj Exp $
+
+  13 Sep 2006; Joshua Nichols <nichoj@gentoo.org> antlr-2.7.5-r2.ebuild,
+  antlr-2.7.5-r3.ebuild:
+  Many cleanups.
 
   23 Jul 2006; Joshua Nichols <jnichols@gentoo.org> antlr-2.7.5-r3.ebuild:
   Removed findutils dep as per bug #141423
