@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.109 2006/08/19 15:44:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.110 2006/09/13 22:24:14 agriffis Exp $
+
+  13 Sep 2006; Aron Griffis <agriffis@gentoo.org> bash-3.1_p17.ebuild:
+  Mark 3.1_p17 stable on ia64
 
   19 Aug 2006; Fabian Groffen <grobian@gentoo.org> bash-3.1_p16.ebuild:
   Marked ppc-macos stable for progressive users (bug #129885)
