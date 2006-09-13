@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.5 2006/08/02 09:34:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.15.ebuild,v 1.6 2006/09/13 02:09:37 vapier Exp $
 
 inherit flag-o-matic eutils multilib toolchain-funcs mono libtool elisp-common
 
@@ -55,9 +55,9 @@ src_compile() {
 	else
 		myconf="${myconf} --with-included-gettext --enable-nls"
 	fi
-	use emacs || export EMACS=no #93823
 	use nocxx && export CXX=$(tc-getCC)
 	econf \
+		$(use_with emacs) \
 		--disable-java \
 		${myconf} \
 		|| die
