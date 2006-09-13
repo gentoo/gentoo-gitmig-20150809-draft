@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_beta15.ebuild,v 1.1 2006/09/12 23:50:11 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_beta15.ebuild,v 1.2 2006/09/13 06:45:29 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -93,6 +93,7 @@ src_install() {
 	if ! use minimal ; then
 		cd easy-rsa/2.0
 		make install "DESTDIR=${D}/usr/share/${PN}/easy-rsa"
+		cd ../..
 
 		exeinto "/usr/$(get_libdir)/${PN}"
 		doexe plugin/*/*.so
