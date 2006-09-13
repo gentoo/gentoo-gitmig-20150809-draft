@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.61 2006/09/10 14:30:47 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.62 2006/09/13 06:38:15 nichoj Exp $
+
+  13 Sep 2006; <nichoj@gentoo.org> xerces-2.7.1-r1.ebuild:
+  Restored lost ~ppc64 keyword.
 
   10 Sep 2006; Joshua Nichols <nichoj@gentoo.org> xerces-2.7.1-r1.ebuild:
   Keyworded ~ia64
