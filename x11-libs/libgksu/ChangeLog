@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.8 2006/05/13 04:22:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.9 2006/09/13 21:32:28 dang Exp $
+
+  13 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Take maintainership from dragonheart with his blessing
 
   13 May 2006; Daniel Black <dragonheart@gentoo.org> libgksu-1.9.2.ebuild:
   added doc USE flag as per bug #133153 thanks to Renato Crisostomo. Added
