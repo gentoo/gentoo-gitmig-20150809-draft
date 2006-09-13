@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.3 2006/08/20 23:16:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.4 2006/09/13 22:35:39 agriffis Exp $
+
+  13 Sep 2006; Aron Griffis <agriffis@gentoo.org> xsel-0.9.6.ebuild:
+  Mark 0.9.6 ~ia64
 
   20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; xsel-0.9.6.ebuild:
   Stable on x86/ppc.
