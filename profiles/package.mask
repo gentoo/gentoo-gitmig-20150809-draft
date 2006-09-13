@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5878 2006/09/13 19:16:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5879 2006/09/13 22:38:44 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1578,10 +1578,6 @@ app-portage/abeni
 # Masked until arrival of userland tools. At least.
 >=sys-kernel/openmosix-sources-2.5
 
-# Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
-# 2.21 introduces more severe bugs than it fixes. See bug 87091.
-=net-dns/dnsmasq-2.21
-
 # Masatomo Nakano <nakano@gentoo.org> (27 Feb 2005)
 # Tihs package is conflict with postgresql at the moment
 # and waiting on implementing virtual/postgresql.
@@ -1638,12 +1634,6 @@ kde-base/dcopjava
 # bincima-1.3* are beta versions for testing purposes,
 # probably very unstable.
 =net-mail/bincimap-1.3*
-
-# <ciaranm@gentoo.org> (28 Nov 2004)
-# vim7 is still under heavy development. Spell files need vim7.
-=app-editors/vim-core-7.0_alpha*
-=app-editors/vim-7.0_alpha*
-=app-editors/gvim-7.0_alpha*
 
 # Robert Coie <rac@gentoo.org> (28 Sep 2004)
 # FEATURES=maketest is still dodgy, and even when I got the whole
