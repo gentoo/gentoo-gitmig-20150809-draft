@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.15 2006/09/12 13:22:59 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.16 2006/09/13 21:19:42 pioto Exp $
+
+  13 Sep 2006; Mike Kelly <pioto@pioto.org> paludis-0.6.0.ebuild,
+  paludis-0.6.1.ebuild, paludis-0.6.2.ebuild:
+  Remove a --disable-qa argument to econf, since we're using $(use_enable qa)
+  now...
 
 *paludis-0.6.2 (12 Sep 2006)
 

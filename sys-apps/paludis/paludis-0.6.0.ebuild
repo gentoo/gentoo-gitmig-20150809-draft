@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.6.0.ebuild,v 1.2 2006/09/02 01:43:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.6.0.ebuild,v 1.3 2006/09/13 21:19:42 pioto Exp $
 
 DESCRIPTION="paludis, the other package mangler"
 HOMEPAGE="http://paludis.berlios.de/"
@@ -34,7 +34,7 @@ RDEPEND="
 PROVIDE="virtual/portage"
 
 src_compile() {
-	econf --disable-qa \
+	econf \
 		$(use_enable doc doxygen ) \
 		$(use_enable !mips sandbox ) \
 		$(use_enable pink) \
