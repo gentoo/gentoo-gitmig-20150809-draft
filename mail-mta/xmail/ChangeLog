@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/xmail
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.19 2006/04/27 22:29:39 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/xmail/ChangeLog,v 1.20 2006/09/13 15:24:31 ticho Exp $
+
+  13 Sep 2006; <ticho@gentoo.org> -xmail-1.16-r1.ebuild, -xmail-1.20.ebuild,
+  -xmail-1.21.ebuild:
+  Security-wise cleanup. See bug #140514.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-xmail-1.16-r1,
   files/digest-xmail-1.20, files/digest-xmail-1.21, files/digest-xmail-1.22,
