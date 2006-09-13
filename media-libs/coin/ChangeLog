@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/coin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.17 2006/08/26 07:23:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.18 2006/09/13 01:10:40 ticho Exp $
+
+  13 Sep 2006; <ticho@gentoo.org> coin-2.4.5.ebuild:
+  Stable on x86, bug #144222.
 
   26 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> coin-2.1.0.ebuild,
   coin-2.4.3.ebuild:
