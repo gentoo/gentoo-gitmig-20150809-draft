@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.1 2006/07/15 17:13:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.2 2006/09/13 02:08:41 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -9,7 +9,7 @@ MY_PV="${PV%_*}"
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://www.mythtv.org/mc/${PN}-${MY_PV}.tar.bz2
+SRC_URI="http://ftp-osl.osuosl.org/pub/mythtv/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~cardoe/files/${PN}-${MY_PV}-rev${PATCHREV}.patch.bz2"
 
 LICENSE="GPL-2"
@@ -85,14 +85,6 @@ pkg_setup() {
 		echo
 		ewarn "You enabled the 'xvmc' USE flag, you must have a GeForce 4 or"
 		ewarn "greater to use this. Otherwise, you'll have crashes with MythTV"
-		echo
-	fi
-
-	if built_with_use dev-db/mysql utf8; then
-		echo
-		ewarn "Your MySQL installation on this machine most likely won't work"
-		ewarn "because you compiled it with USE=utf8. Either use another mysql"
-		ewarn "server (on another machine) or recompile MySQL without utf8."
 		echo
 	fi
 
