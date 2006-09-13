@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tvision
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.12 2006/09/12 13:15:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tvision/ChangeLog,v 1.13 2006/09/13 04:34:06 tsunam Exp $
+
+  13 Sep 2006; Joshua Jackson <tsunam@gentoo.org> tvision-2.1.0_pre1.ebuild:
+  Stable x86; bug #146225
 
   12 Sep 2006; <blubb@gentoo.org> tvision-2.1.0_pre1.ebuild:
   make libdir aware and mark stable on amd64
