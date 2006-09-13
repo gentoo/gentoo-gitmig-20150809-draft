@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.85 2006/08/02 05:40:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.86 2006/09/13 20:05:01 agriffis Exp $
+
+  13 Sep 2006; Aron Griffis <agriffis@gentoo.org>
+  gst-plugins-alsa-0.10.4.ebuild:
+  Mark 0.10.4 stable on ia64. #139612
 
   03 Aug 2006; Joshua Kinard <kumba@gentoo.org>
   gst-plugins-alsa-0.8.8.ebuild, gst-plugins-alsa-0.8.9.ebuild,
