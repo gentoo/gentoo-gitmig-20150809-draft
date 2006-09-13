@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ieee80211
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.38 2006/09/06 17:48:05 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ChangeLog,v 1.39 2006/09/13 12:32:02 phreak Exp $
+
+*ieee80211-1.2.15 (13 Sep 2006)
+
+  13 Sep 2006; Christian Heim <phreak@gentoo.org> +ieee80211-1.2.15.ebuild:
+  Version bump. Fixes #147319 (thanks David Li for reporting).
 
 *ieee80211-1.1.14-r1 (06 Sep 2006)
 

@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.69 2006/07/13 18:08:28 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.70 2006/09/13 12:33:35 phreak Exp $
+
+*ipw2200-1.2.0 (13 Sep 2006)
+
+  13 Sep 2006; Christian Heim <phreak@gentoo.org>
+  +files/ipw2200-1.2.0-modverdir.patch, +ipw2200-1.2.0.ebuild:
+  Version bump. Fixes #147319 (thanks David Li for reporting).
 
 *ipw2200-1.1.3 (13 Jul 2006)
 
