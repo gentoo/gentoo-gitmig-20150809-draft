@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6.ebuild,v 1.13 2006/07/28 15:14:07 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6.ebuild,v 1.14 2006/09/13 15:26:24 agriffis Exp $
 
 inherit eutils libtool
 
@@ -133,16 +133,7 @@ src_compile() {
 		--with-libtool \
 		${myconf} || die "econf failed"
 
-	# idea from dev-libs/cyrus-sasl
-	if has distcc ${FEATURES}; then
-		einfo "You have \"distcc\" enabled"
-		einfo "build with MAKEOPTS=\"-j1\""
-		MAKEOPTS="-j1"
-	else
-		einfo "build with MAKEOPTS=${MAKEOPTS}"
-	fi
-
-	emake ${MAKEOPTS} || die "failed to compile bind"
+	emake -j1 || die "failed to compile bind"
 
 	if use idn; then
 		cd ${S}/contrib/idn/idnkit-1.0-src

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r4.ebuild,v 1.7 2006/09/12 16:10:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r4.ebuild,v 1.8 2006/09/13 15:26:24 agriffis Exp $
 
 inherit eutils libtool autotools
 
@@ -116,17 +116,7 @@ src_compile() {
 		`use_enable ipv6` \
 		${myconf} || die "econf failed"
 
-	# idea from dev-libs/cyrus-sasl
-	if has distcc ${FEATURES}; then
-		einfo "You have \"distcc\" enabled"
-		einfo "build with MAKEOPTS=\"-j1\""
-		jobs="-j1"
-	else
-		einfo "build with MAKEOPTS=${MAKEOPTS}"
-		jobs=""
-	fi
-
-	emake ${jobs} || die "failed to compile bind"
+	emake -j1 || die "failed to compile bind"
 
 	use idn && {
 		cd ${S}/contrib/idn/idnkit-1.0-src
