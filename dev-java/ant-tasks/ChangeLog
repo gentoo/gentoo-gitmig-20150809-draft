@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.31 2006/09/13 09:24:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.32 2006/09/13 22:08:35 nichoj Exp $
+
+  13 Sep 2006; Joshua Nichols <nichoj@gentoo.org> ant-tasks-1.6.2-r9.ebuild,
+  ant-tasks-1.6.2-r10.ebuild, ant-tasks-1.6.5.ebuild,
+  ant-tasks-1.6.5-r2.ebuild:
+  Removed redundant src_unpack. Removed block on nonexistant package,
+  ant-optional.
 
   13 Sep 2006; Vlastimil Babka <caster@gentoo.org>
   ant-tasks-1.6.5-r2.ebuild:
