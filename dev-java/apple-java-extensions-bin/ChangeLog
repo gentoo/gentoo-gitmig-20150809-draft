@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/apple-java-extensions-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.7 2006/08/03 10:30:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/apple-java-extensions-bin/ChangeLog,v 1.8 2006/09/13 22:41:15 nichoj Exp $
+
+  13 Sep 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml,
+  apple-java-extensions-bin-1.2.ebuild,
+  apple-java-extensions-bin-1.2-r1.ebuild:
+  Cleaned up description, moved long version to metadta.xml
 
 *apple-java-extensions-bin-1.2-r1 (03 Aug 2006)
 
