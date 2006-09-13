@@ -1766,7 +1766,7 @@ java-pkg_get-vm-vendor() {
 java-pkg_get-vm-version() {
 	debug-print-function ${FUNCNAME} $*
 
-	java-pkg_get-current-vm | sed -e "s/.*-\([0-9.]\+\).*/\1/"
+	java-config -g PROVIDES_VERSION
 }
 
 # ------------------------------------------------------------------------------
