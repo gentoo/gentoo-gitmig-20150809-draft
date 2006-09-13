@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.6 2006/09/13 17:41:31 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.7 2006/09/13 21:15:56 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -33,12 +33,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-remove-bootclasspath.patch
 
 	echo -e "base.dir=..\n" \
-		 "build.dir = \${base.dir}/build\n" \
-		 "build.classes=\${build.dir}/standard/standard/classes\n" \
-		 "dist.dir = \${base.dir}/dist\n" \
-		 "servlet24.jar=$(java-pkg_getjar servletapi-2.4 servlet-api.jar)\n" \
-		 "jsp20.jar=$(java-pkg_getjar servletapi-2.4 jsp-api.jar)\n" \
-		 > build.properties
+		"build.dir = \${base.dir}/build\n" \
+		"build.classes=\${build.dir}/standard/standard/classes\n" \
+		"dist.dir = \${base.dir}/dist\n" \
+		"servlet24.jar=$(java-pkg_getjar servletapi-2.4 servlet-api.jar)\n" \
+		"jsp20.jar=$(java-pkg_getjar servletapi-2.4 jsp-api.jar)\n" \
+		> build.properties
 }
 
 src_compile() {
