@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5875 2006/09/13 15:51:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5876 2006/09/13 18:36:23 sanchan Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -66,10 +66,6 @@ sci-biology/emboss-kaptain
 # masked new snapshot for further testing (see bug #144314)
 =sci-libs/blas-atlas-3.7.17
 =sci-libs/lapack-atlas-3.7.17
-
-# Sandro Bonazzola <sanchan@gentoo.org> (10 Sep 2006)
-# Masked for testing.
-=dev-libs/popt-1.10*
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (09 Sep 2006)
 # Broken, doesn't work and dead upstream. Pending removal.
