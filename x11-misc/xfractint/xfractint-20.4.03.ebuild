@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.4.03.ebuild,v 1.2 2006/01/29 22:37:37 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.4.03.ebuild,v 1.3 2006/09/13 13:36:39 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,6 +37,7 @@ src_install() {
 	make DESTDIR="${D}"	install || die
 
 	chmod 0644 -R ${D}usr/share/xfractint/*
+	chmod a+X -R ${D}usr/share/xfractint/*
 
 	insinto /etc/env.d
 	newins ${FILESDIR}/xfractint.envd 60xfractint
@@ -47,4 +48,8 @@ pkg_postinst() {
 	einfo "XFractInt requires the FRACTDIR variable to be set in order to start."
 	einfo "Please re-login or \`source /etc/profile\` to have this variable set automatically."
 	einfo
+
+	# Fix directory permissions as they might be broken because
+	# of an earlier installation.
+	chmod a+X -R ${ROOT}/usr/share/xfractint/*
 }

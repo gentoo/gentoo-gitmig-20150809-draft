@@ -1,6 +1,6 @@
 diff -Naurp xfractint-20.04p03-orig/Makefile xfractint-20.04p03/Makefile
---- xfractint-20.04p03-orig/Makefile	2006-01-29 23:08:39.000000000 +0100
-+++ xfractint-20.04p03/Makefile	2006-01-29 23:28:09.000000000 +0100
+--- xfractint-20.04p03-orig/Makefile	2006-09-12 23:05:54.000000000 +0200
++++ xfractint-20.04p03/Makefile	2006-09-12 23:06:38.000000000 +0200
 @@ -2,11 +2,11 @@ SHELL=/bin/sh
  
  # SRCDIR should be a path to the directory that will hold fractint.hlp
@@ -35,9 +35,12 @@ diff -Naurp xfractint-20.04p03-orig/Makefile xfractint-20.04p03/Makefile
  #CFLAGS = -I. $(DEFINES) -g -DBIG_ANSI_C -DLINUX -Os -fno-builtin
  
  endif
-@@ -257,18 +257,20 @@ clean:
+@@ -255,20 +255,22 @@ clean:
+ 	cd unix ; ${MAKE} clean
+ 
  install: xfractint fractint.hlp
- 	strip xfractint
+-	strip xfractint
++#	strip xfractint
  # only next 4 lines might need su
 +	if [ ! -d $(BINDIR) ]; then mkdir -p $(BINDIR) ; fi
  	cp xfractint $(BINDIR)/xfractint;
