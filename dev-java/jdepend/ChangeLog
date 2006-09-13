@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.32 2006/09/03 09:11:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.33 2006/09/13 23:58:41 nichoj Exp $
+
+  13 Sep 2006; <nichoj@gentoo.org> jdepend-2.9-r2.ebuild:
+  Added ~ppc64
 
   03 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> jdepend-2.9-r2.ebuild:
   Added to ~ppc.
