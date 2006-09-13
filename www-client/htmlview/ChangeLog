@@ -1,6 +1,9 @@
 # ChangeLog for www-client/htmlview
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.6 2006/08/20 23:17:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/ChangeLog,v 1.7 2006/09/13 22:36:56 agriffis Exp $
+
+  13 Sep 2006; Aron Griffis <agriffis@gentoo.org> htmlview-3.0.0-r1.ebuild:
+  Mark 3.0.0-r1 ~ia64
 
   20 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   htmlview-3.0.0-r1.ebuild:
