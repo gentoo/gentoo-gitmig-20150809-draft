@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11154.ebuild,v 1.4 2006/09/13 02:41:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11154.ebuild,v 1.5 2006/09/13 03:35:21 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -116,7 +116,7 @@ src_compile() {
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && ! use video_cards_via && myconf="${myconf} --enable-xvmc"
-	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
+	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro --enable-xvmc-vld"
 	myconf="${myconf}
 		--disable-audio-arts
 		$(use_enable lirc)
