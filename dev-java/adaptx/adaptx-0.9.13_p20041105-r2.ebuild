@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r2.ebuild,v 1.2 2006/08/06 04:14:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r2.ebuild,v 1.3 2006/09/13 21:40:52 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -8,7 +8,7 @@ MY_PN=${PV%%_p*}
 MY_SNAPSHOT=${PV##*_p}
 DESCRIPTION="Adaptx is an XSLT processor and XPath engine"
 HOMEPAGE="http://project.exolab.org/cgi-bin/viewcvs.cgi/adaptx/?cvsroot=adaptx"
-SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${PN}-${MY_SNAPSHOT}.gentoo.tar.bz2"
+SRC_URI="mirror://gentoo/${PN}-${MY_SNAPSHOT}.gentoo.tar.bz2"
 LICENSE="Exolab"
 RDEPEND="=virtual/jre-1.4*
 	=dev-java/rhino-1.5*
