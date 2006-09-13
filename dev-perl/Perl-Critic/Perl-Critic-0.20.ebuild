@@ -1,11 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.20.ebuild,v 1.1 2006/09/13 20:35:56 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.20.ebuild,v 1.2 2006/09/13 20:41:00 yuval Exp $
 
 inherit perl-module
 
 MY_PV=${PV/%0/}
 MY_P="${PN}-${MY_PV}"
+
+S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Critique Perl source code for best-practices"
 HOMEPAGE="http://search.cpan.org/search?query=${PN}"
