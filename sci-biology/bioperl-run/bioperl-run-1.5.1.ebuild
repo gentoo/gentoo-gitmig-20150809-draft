@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.5.1.ebuild,v 1.1 2006/09/13 01:43:55 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.5.1.ebuild,v 1.2 2006/09/13 01:48:57 ribosome Exp $
 
 inherit perl-app eutils
 
@@ -11,14 +11,15 @@ SRC_URI="http://www.bioperl.org/ftp/DIST/${P}.tar.gz"
 
 LICENSE="Artistic GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="
 	dev-perl/Algorithm-Diff
 	virtual/perl-File-Temp
 	dev-perl/IO-String
-	dev-perl/XML-Parser"
+	dev-perl/XML-Parser
+	sci-biology/bioperl"
 
 DEPEND=""
 
