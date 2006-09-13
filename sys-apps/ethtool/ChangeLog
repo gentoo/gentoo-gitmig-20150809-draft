@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.32 2006/09/12 18:55:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.33 2006/09/13 14:22:00 agriffis Exp $
+
+  13 Sep 2006; Aron Griffis <agriffis@gentoo.org> ethtool-4.ebuild:
+  Mark 4 stable on ia64. #146793
 
   12 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> ethtool-4.ebuild:
   Stable on hppa wrt #146793
