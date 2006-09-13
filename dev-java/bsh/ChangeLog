@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bsh
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.31 2006/08/06 17:43:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsh/ChangeLog,v 1.32 2006/09/13 06:23:49 nichoj Exp $
+
+  13 Sep 2006; <nichoj@gentoo.org> bsh-2.0_beta4-r1.ebuild:
+  Restored ~ppc64 keyword.
 
   06 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   bsh-2.0_beta4-r1.ebuild:
