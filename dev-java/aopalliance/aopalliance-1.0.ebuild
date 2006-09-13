@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/aopalliance-1.0.ebuild,v 1.2 2006/05/14 07:26:57 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aopalliance/aopalliance-1.0.ebuild,v 1.3 2006/09/13 22:31:58 nichoj Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="Aspect-Oriented Programming (AOP) Alliance classes"
 SRC_URI="mirror://gentoo/${P}-gentoo.tar.bz2"
 #SRC_URI="mirror://gentoo/${P}.tar.bz2"
 # Tarball creation:
-# cvs -d:pserver:anonymous@aopalliance.cvs.sourceforge.net:/cvsroot/aopalliance login 
+# cvs -d:pserver:anonymous@aopalliance.cvs.sourceforge.net:/cvsroot/aopalliance login
 # cvs -z3 -d:pserver:anonymous@aopalliance.cvs.sourceforge.net:/cvsroot/aopalliance export -r interception_1_0 aopalliance
 # tar cjvf aopalliance-1.0-gentoo.tar.bz2 aopalliance
 HOMEPAGE="http://aopalliance.sourceforge.net/"
