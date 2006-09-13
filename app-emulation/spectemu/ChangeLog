@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.20 2006/08/20 19:46:24 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.21 2006/09/13 17:55:47 tove Exp $
 
   20 Aug 2006; <malc@gentoo.org> spectemu-0.99.3.ebuild:
   Stable on amd64
@@ -16,7 +16,7 @@
   spectemu-0.99.3.ebuild:
   ppc stable, bug #140680
 
-  17 Jul 2006; Harald van DÄ³k <truedfx@gentoo.org>
+  17 Jul 2006; Harald van Dĳk <truedfx@gentoo.org>
   +files/spectemu-0.99.3-qa.patch, spectemu-0.99.3.ebuild:
   QA fixes (#140680)
 
