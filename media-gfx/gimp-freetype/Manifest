@@ -1,8 +1,26 @@
-MD5 bb24c46850aac88a5cb5936cd1bd0bb2 ChangeLog 3104
-MD5 d231ccb326ac2e7f1e63b0b3a5288efb files/digest-gimp-freetype-0.2-r3 69
-MD5 37f8eb7c89a60bf1b7d125d972a925a9 files/digest-gimp-freetype-0.5 69
-MD5 c20cacdb70c1cc6a938fbbf561c5e427 files/digest-gimp-freetype-0.6 69
-MD5 db72cf08c6fe4302a99f2114d79eef81 gimp-freetype-0.2-r3.ebuild 898
-MD5 0b8c3b2a5f2796f88078cfbdcde4ea0e gimp-freetype-0.5.ebuild 802
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gimp-freetype-0.6.tar.gz 211601
+EBUILD gimp-freetype-0.6.ebuild 711 RMD160 f831bb010f4abb873de542baddb7ad137b3faf35 SHA1 45e14e1f1f1c23654c6a6997c2e9335b4f2d6a7b SHA256 b7882631f95909f6d14bf657830357dd8ab2afcc08284366988c81ee39071648
 MD5 8f31ce647092279596788c1752b59edf gimp-freetype-0.6.ebuild 711
+RMD160 f831bb010f4abb873de542baddb7ad137b3faf35 gimp-freetype-0.6.ebuild 711
+SHA256 b7882631f95909f6d14bf657830357dd8ab2afcc08284366988c81ee39071648 gimp-freetype-0.6.ebuild 711
+MISC ChangeLog 3104 RMD160 0ab89afc804873ec2b755e376a23e45861aec4d6 SHA1 6ada9ba5fba5e55ca1296f1344c228073a02741e SHA256 431c6c6afc86fd8f188a0a891ad4bd0b396fc385d2cb3823769c18d1740f1158
+MD5 bb24c46850aac88a5cb5936cd1bd0bb2 ChangeLog 3104
+RMD160 0ab89afc804873ec2b755e376a23e45861aec4d6 ChangeLog 3104
+SHA256 431c6c6afc86fd8f188a0a891ad4bd0b396fc385d2cb3823769c18d1740f1158 ChangeLog 3104
+MISC metadata.xml 631 RMD160 c0fb811c1fb6cf49f2725128d4f0ee1fdbe4321c SHA1 3fa537294b10221f63f5f3644c6cf3f83750589d SHA256 e0a4d6371c3946bc80d26550cb671bb0be10f483cb2f14b3b208ca7307a9bb5a
 MD5 4b36c6fccca2978cab3373ab53fd7c3f metadata.xml 631
+RMD160 c0fb811c1fb6cf49f2725128d4f0ee1fdbe4321c metadata.xml 631
+SHA256 e0a4d6371c3946bc80d26550cb671bb0be10f483cb2f14b3b208ca7307a9bb5a metadata.xml 631
+MD5 c20cacdb70c1cc6a938fbbf561c5e427 files/digest-gimp-freetype-0.6 69
+RMD160 46eac29792ace63d3063348b07ca1bfa88cd202b files/digest-gimp-freetype-0.6 69
+SHA256 1892271b6089ea638b0f1d0cb2c937f822fc48c31ecdcc2f6021bacc9ed2858d files/digest-gimp-freetype-0.6 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFCEjDr2QksT29OyARAiTVAJ9Bqu12iNFwktWMh3FCA14ScYLOQgCfQX08
+4Md+OlAhD4zp51+SbMHS7BU=
+=at8O
+-----END PGP SIGNATURE-----
