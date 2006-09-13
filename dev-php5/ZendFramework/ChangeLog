@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ZendFramework
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.9 2006/07/12 07:53:57 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ChangeLog,v 1.10 2006/09/13 19:08:35 sebastian Exp $
+
+  13 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  ZendFramework-0.1.5.ebuild:
+  Use new license.
 
   12 Jul 2006; Sebastian Bergmann <sebastian@gentoo.org>
   ZendFramework-0.1.5.ebuild:
