@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-0.9.13-r1.ebuild,v 1.2 2006/07/22 21:25:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-0.9.13-r1.ebuild,v 1.3 2006/09/13 22:11:26 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
 	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.4
 	~dev-java/servletapi-2.3"

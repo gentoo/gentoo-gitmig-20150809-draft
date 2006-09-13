@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/antenna
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.2 2006/07/22 21:25:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.3 2006/09/13 22:11:26 nichoj Exp $
+
+  13 Sep 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml,
+  antenna-0.9.13-r1.ebuild:
+  Adding missing dependency on app-arch/unzip. Whitespace fix.
 
   22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   antenna-0.9.13-r1.ebuild:
