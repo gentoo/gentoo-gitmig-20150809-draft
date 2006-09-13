@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.5_rc2.ebuild,v 1.3 2006/09/06 07:35:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.5_rc2.ebuild,v 1.4 2006/09/13 09:21:30 uberlord Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -74,6 +74,9 @@ src_unpack() {
 	sed -i -e 's,/etc/dhclient-exit-hooks,/etc/dhcp/dhclient-exit-hooks,g' \
 		-e 's,/etc/dhclient-enter-hooks,/etc/dhcp/dhclient-enter-hooks,g' \
 		client/scripts/* || die
+
+	# Quiet the freebsd logger a little
+	sed -i -e '/LOGGER=/ s/-s -p user.notice //g' client/scripts/freebsd || die
 
 	# Remove these options from the sample config
 	sed -i -e "/\(script\|host-name\|domain-name\) / d" \

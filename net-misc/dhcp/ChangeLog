@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.117 2006/09/08 07:20:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.118 2006/09/13 09:21:30 uberlord Exp $
+
+  13 Sep 2006; Roy Marples <uberlord@gentoo.org> dhcp-3.0.4-r2.ebuild,
+  dhcp-3.0.5_rc2.ebuild, dhcp-3.1.0_alpha1.ebuild:
+  Quiet the freebsd logger a little
 
   08 Sep 2006; Roy Marples <uberlord@gentoo.org> files/dhcrelay.conf:
   dhcrelay should be configured for all interfaces used for listening and
