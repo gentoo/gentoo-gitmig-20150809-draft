@@ -1,6 +1,6 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.110 2006/09/13 04:20:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.111 2006/09/13 04:33:01 cardoe Exp $
 
   13 Sep 2006; Doug Goldstein <cardoe@gentoo.org> mythtv-0.19_p10505.ebuild:
   Stable on amd64 & ppc. (my arches)
@@ -15,7 +15,7 @@
   mythtv-0.19_p9163-r1.ebuild, mythtv-0.19_p10505.ebuild,
   mythtv-0.20_p11154.ebuild:
   Update to new OSL download links. Remove utf8 USE flag check on mysql.
-  Fixed typos.
+  Fixed typos. Change to x11-drivers/nvidia-drivers to be default
 
 *mythtv-0.20_p11154 (12 Sep 2006)
 
