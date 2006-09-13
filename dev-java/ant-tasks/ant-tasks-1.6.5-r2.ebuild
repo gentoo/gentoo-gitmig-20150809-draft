@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.2 2006/07/22 23:09:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.5-r2.ebuild,v 1.3 2006/09/13 09:24:12 caster Exp $
 
 inherit java-pkg-2 eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~ppc64 ~sparc"
 IUSE="javamail noantlr nobcel nobeanutils nobsh nobsf nocommonsnet nocommonslogging nojdepend nojsch nojython nolog4j nooro noregexp norhino noxalan noxerces"
 
 RDEPEND=">=virtual/jre-1.4
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/jre-1.4
 	!dev-java/ant-optional
 	>=dev-java/junit-3.8
 	!nolog4j? ( >=dev-java/log4j-1.2.8 )
-	!noxerces? ( >=dev-java/xerces-2.6.2-r1 )
+	!noxerces? ( >=dev-java/xerces-2.7.1 )
 	!noxalan? ( >=dev-java/xalan-2.5.2 )
 	!nobsh? ( >=dev-java/bsh-1.2-r7 )
 	!nobsf? ( >=dev-java/bsf-2.3.0-r2 )
@@ -66,11 +66,13 @@ src_compile() {
 	use noregexp || p="${p},jakarta-regexp-1.3"
 	use norhino || p="${p},rhino-1.5"
 	use noxalan || p="${p},xalan"
-	use noxerces || p="${p},xerces-2"
+	use noxerces || p="${p},xml-commons-external-1.3,xerces-2"
 
 	use javamail && p="${p},sun-javamail-bin,sun-jaf-bin"
 
-	CLASSPATH="${JAVA_HOME}/lib/tools.jar:.:$(java-pkg_getjars ant-core,${p})" java org.apache.tools.ant.launch.Launcher  -Dant.install=${ANT_HOME}
+	CLASSPATH="${JAVA_HOME}/lib/tools.jar:.:$(java-pkg_getjars ant-core,${p})" \
+		java org.apache.tools.ant.launch.Launcher  -Dant.install=${ANT_HOME} \
+		|| die "Build failed."
 }
 
 src_install() {
