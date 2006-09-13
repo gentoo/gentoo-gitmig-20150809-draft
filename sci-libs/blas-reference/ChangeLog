@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.19 2006/09/11 15:04:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.20 2006/09/13 18:08:34 kugelfang Exp $
+
+  13 Sep 2006; Danny van Dyk <kugelfang@gentoo.org>
+  -blas-reference-19940131.ebuild, blas-reference-19940131-r3.ebuild,
+  blas-reference-19940131-r4.ebuild:
+  Marked -r3 stable on amd64,ia64. Keyworded -r3 ~ia64. Removed -r0 and -r2.
 
   11 Sep 2006; Ferris McCormick <fmccor@gentoo.org>
   blas-reference-19940131-r4.ebuild:
