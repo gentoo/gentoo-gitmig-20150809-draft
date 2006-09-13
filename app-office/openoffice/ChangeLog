@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.249 2006/09/12 14:52:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.250 2006/09/13 18:37:04 suka Exp $
+
+  13 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.4_rc1-r1.ebuild:
+  Forgot to not depend anymore on the xml-use-flag, see bug #147480. Fixed.
 
   12 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4_rc1-r1.ebuild:

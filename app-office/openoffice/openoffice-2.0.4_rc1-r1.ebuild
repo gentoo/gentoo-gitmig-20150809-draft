@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.5 2006/09/12 14:52:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.6 2006/09/13 18:37:04 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -175,7 +175,6 @@ src_unpack() {
 	use amd64 && echo "--with-system-boost" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
-	echo "`use_with xml system-libxml`" >> ${CONFFILE}
 
 	echo "`use_enable firefox mozilla`" >> ${CONFFILE}
 	echo "`use_with firefox system-mozilla`" >> ${CONFFILE}
@@ -197,6 +196,7 @@ src_unpack() {
 
 	echo "--with-system-boost" >> ${CONFFILE}
 	echo "--with-system-icu" >> ${CONFFILE}
+	echo "--with-system-libxml" >> ${CONFFILE}
 
 }
 
