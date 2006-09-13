@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.30 2006/09/04 06:39:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.31 2006/09/13 16:17:27 zzam Exp $
 
 inherit eutils flag-o-matic autotools libtool
 
@@ -42,6 +42,10 @@ src_unpack() {
 		-e '/-mcpu/d' \
 		configure.in \
 		|| die "sed configure failed"
+
+	# Fix problem that the test for external symbols
+	# uses nm which also displays hidden symbols. Bug #130831
+	epatch "${FILESDIR}/${P}-use-readelf-for-test.patch"
 
 	eautoreconf
 	elibtoolize

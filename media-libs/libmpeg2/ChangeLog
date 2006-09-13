@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.47 2006/07/09 20:27:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.48 2006/09/13 16:17:27 zzam Exp $
+
+  13 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/libmpeg2-0.4.0b-use-readelf-for-test.patch, libmpeg2-0.4.0b.ebuild:
+  Added patch by kevquinn to make test succeed on hardened, Bug #130831.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> libmpeg2-0.4.0b.ebuild:
   Pinpoint virtual/x11 version to less than 7.
