@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.5 2006/04/03 23:16:09 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.6 2006/09/13 17:41:31 nichoj Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 DESCRIPTION="An implementation of the JSP Standard Tag Library (JSTL)"
 HOMEPAGE="http://jakarta.apache.org/taglibs/doc/standard-doc/intro.html"
@@ -26,6 +26,11 @@ S=${WORKDIR}/jakarta-taglibs-standard-${PV}-src/standard
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# Remove unnecessary bootclasspath from javac calls.
+	# This allows compilation with  non-Sun JDKs
+	# See bug #134206
+	# TODO file upstream
+	epatch ${FILESDIR}/${P}-remove-bootclasspath.patch
 
 	echo -e "base.dir=..\n" \
 		 "build.dir = \${base.dir}/build\n" \
