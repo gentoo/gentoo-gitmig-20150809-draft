@@ -1,0 +1,11 @@
+--- Sources/Display/Display/Generic/blit_transparent.cpp.old	2006-09-14 00:48:06.000000000 +0200
++++ Sources/Display/Display/Generic/blit_transparent.cpp	2006-09-14 00:49:16.000000000 +0200
+@@ -278,6 +278,8 @@
+ 	unsigned int dest_pitch = target->get_pitch();
+ 
+ 	unsigned char *dest = (unsigned char *) target->get_data();
++	if (y == 0)
++		y = 1;
+ 	dest += x*sizeof(T) + (y-1)*dest_pitch;
+ 
+ //	T *dd;
