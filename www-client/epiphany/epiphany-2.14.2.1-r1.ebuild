@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.2.1-r1.ebuild,v 1.7 2006/08/16 01:40:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.2.1-r1.ebuild,v 1.8 2006/09/13 21:35:22 agriffis Exp $
 
 inherit eutils gnome2 multilib autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="doc firefox python"
 
 # Note that there is no libgnomeprint dep, while it is 
