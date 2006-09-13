@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.1.ebuild,v 1.1 2006/07/24 21:10:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.1.ebuild,v 1.2 2006/09/13 17:52:15 agriffis Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -34,8 +34,16 @@ src_unpack() {
 		epatch "${FILESDIR}"/glib-2.6.3-testglib-ssp.patch
 	fi
 
-	epatch ${FILESDIR}/${PN}-2.8.3-macos.patch
+	if use ia64; then
+		# Only apply for < 4.1
+		local major=$(gcc-major-version)
+		local minor=$(gcc-minor-version)
+		if (( major < 4 || ( major == 4 && minor == 0 ) )); then
+			epatch "${FILESDIR}/glib-2.10.3-ia64-atomic-ops.patch"
+		fi
+	fi
 
+	epatch ${FILESDIR}/${PN}-2.8.3-macos.patch
 }
 
 src_compile() {
