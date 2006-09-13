@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.196 2006/09/12 16:17:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.197 2006/09/13 20:42:03 agriffis Exp $
+
+  13 Sep 2006; Aron Griffis <agriffis@gentoo.org>
+  control-center-2.14.2.ebuild:
+  Mark 2.14.2 stable on ia64. #139612
 
   12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
   control-center-2.16.0.ebuild:
