@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/resolvconf-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.13 2006/09/09 22:36:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.14 2006/09/13 00:02:12 uberlord Exp $
+
+*resolvconf-gentoo-1.1 (13 Sep 2006)
+
+  13 Sep 2006; Roy Marples <uberlord@gentoo.org>
+  -files/resolvconf-gentoo-1.0-run-parts.patch,
+  resolvconf-gentoo-1.0.ebuild, +resolvconf-gentoo-1.1.ebuild:
+  New version actually works with FreeBSD and GNU sed.
 
   09 Sep 2006; Roy Marples <uberlord@gentoo.org>
   +files/resolvconf-gentoo-1.0-run-parts.patch,
