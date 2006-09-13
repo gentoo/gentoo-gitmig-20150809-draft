@@ -1,10 +1,17 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.46 2006/09/02 22:56:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.47 2006/09/13 09:28:31 caster Exp $
 
 # Ant-core blocks lower/older versions of ant-tasks, 
 # since it will not run when there is a version mismatch betwean the 2 packages
 # Please unemerge ant-tasks when updating ant-core.
+
+*ant-core-1.6.5-r14 (13 Sep 2006)
+
+  13 Sep 2006; Vlastimil Babka <caster@gentoo.org> files/1.6.5-ant,
+  -ant-core-1.6.5-r13.ebuild, +ant-core-1.6.5-r14.ebuild:
+  Added xml-commons-external-1.3 into CLASSPATH in ant's startup script to fix
+  bug #82561. Also fixes javadoc path wrt bug #112106.
 
   02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   ant-core-1.6.5-r2.ebuild, ant-core-1.6.5-r13.ebuild:
