@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.9 2006/03/25 23:49:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.10 2006/09/13 00:13:07 robbat2 Exp $
+
+*tw_cli-9.3.0.4 (13 Sep 2006)
+
+  13 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.3.0.3.ebuild,
+  +tw_cli-9.3.0.4.ebuild:
+  Upstream broke the download URLs in a site re-arrange, fix em. Also version
+  bump.
 
 *tw_cli-9.3.0.3 (24 Mar 2006)
 
