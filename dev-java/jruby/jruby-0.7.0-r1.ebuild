@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.7.0-r1.ebuild,v 1.3 2005/07/16 14:28:28 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-0.7.0-r1.ebuild,v 1.4 2006/09/13 06:17:01 wormo Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Java based ruby interpreter implementation"
 HOMEPAGE="http://jruby.sourceforge.net/"
 SRC_URI="mirror://sourceforge/jruby/${PN}-src-${PV}.tar.gz"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="doc examples jikes junit source"
