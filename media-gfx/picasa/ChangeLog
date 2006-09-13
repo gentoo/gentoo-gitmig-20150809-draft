@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/picasa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.5 2006/06/15 02:02:40 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/ChangeLog,v 1.6 2006/09/13 00:16:40 genstef Exp $
+
+  13 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/picasa-unicode.patch, picasa-2.2.2820.5.ebuild:
+  Add patch to fix unicode problems thanks to Guillaume Ramelet
+  <guillaume.ramelet@gmail.com> in bug 147094
 
   15 Jun 2006; Scott Stoddard <deltacow@gentoo.org>
   picasa-2.2.2820.5.ebuild:

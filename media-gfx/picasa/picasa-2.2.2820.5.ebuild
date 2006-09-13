@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.5 2006/06/15 02:02:40 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/picasa/picasa-2.2.2820.5.ebuild,v 1.6 2006/09/13 00:16:40 genstef Exp $
 
 inherit eutils versionator
 
@@ -41,15 +41,16 @@ RDEPEND="dev-libs/atk
 S=${WORKDIR}
 
 src_unpack() {
-	MY_FILE=${DISTDIR}/${MY_P}.i386.bin
-	MY_OFFSET=`head -n 375 ${MY_FILE} | wc -c | tr -d " "`
-	dd if=${MY_FILE} bs=${MY_OFFSET} skip=1 | tar xfz -
+	unpack_makeself
 
 	sed -i -e "s:28.20:28.3205:" \
 		'wine/drive_c/Program Files/Picasa2/update/LifeScapeUpdater/currentversion.ini'
 	sed -i -e "s:;;HKLM,Soft:HKLM,Soft:" -e \
 		's:"DisableMediaDetector",0x10003,0x00000001:"DisableMediaDetector",0x10003,0x00000000:' \
 		wine/drive_c/windows/inf/picasa.inf
+
+	# Display unicode filenames correctly by not unsetting locale, bug #147094
+	epatch ${FILESDIR}/picasa-unicode.patch
 }
 
 src_install() {
