@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.18 2006/09/12 22:37:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.19 2006/09/13 04:19:09 flameeyes Exp $
+
+  13 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freebsd-ubin-6.1-rpcgen-gcc41.patch, freebsd-ubin-6.1.ebuild:
+  Add patch to let rpcgen generate GCC 4.1-compatible code.
 
   12 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-ubin-6.1.ebuild:
