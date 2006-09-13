@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11154.ebuild,v 1.3 2006/09/13 02:08:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11154.ebuild,v 1.4 2006/09/13 02:41:11 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -64,10 +64,10 @@ MYTHTV_GROUPS="video,audio,tty"
 pkg_setup() {
 
 	local rip=0
-	if ! built_with_use =x11-libs/qt-3* mysql opengl ; then
+	if ! built_with_use -a =x11-libs/qt-3* mysql opengl ; then
 		echo
 		eerror "MythTV requires Qt to be built with mysql and opengl use flags enabled."
-		eerror "Please re-emerge =x11-libs/qt-3, after having the use flags set."
+		eerror "Please re-emerge =x11-libs/qt-3*, after having the use flags set."
 		echo
 		rip=1
 	fi
@@ -215,15 +215,6 @@ src_install() {
 		newconfd ${FILESDIR}/mythbackend-0.18.2.conf mythbackend
 	fi
 
-	if ! use backendonly; then
-		dobin ${FILESDIR}/runmythfe
-
-		ewarn "Want MythFrontend to always? Add the following to your"
-		ewarn "myth user. i.e. My user is mythtv"
-		echo "crontab -e -u mythtv"
-		echo "* * * * * /usr/bin/runmythfe &"
-		ewarn "And you're all set."
-	fi
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
 
@@ -242,11 +233,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	einfo "Want MythFrontend to alway run? Run the following:"
-	echo " #crontab -e -u mythtv"
-	einfo "And add the following:"
-	echo "* * * * * /usr/bin/runmythfe &"
-	echo
+	if ! use backendonly; then
+		echo
+		einfo "Want mythfrontend to start automatically? Run the following:"
+		echo "crontab -e -u mythtv"
+		einfo "Add add the following:"
+		echo "* * * * * /usr/bin/runmythfe &"
+	fi
 	echo
 	einfo "To always have MythBackend running and available run the following:"
 	echo "rc-update add mythbackend default"
