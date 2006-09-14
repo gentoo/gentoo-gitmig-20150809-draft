@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.6-r1.ebuild,v 1.2 2006/07/15 00:42:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.6-r1.ebuild,v 1.3 2006/09/14 16:51:27 matsuu Exp $
 
 inherit eutils
 
@@ -144,8 +144,4 @@ pkg_config() {
 		/bin/install -c -d ${myhome}/dev
 		/bin/mknod -m 777 ${myhome}/dev/null c 1 3
 	fi
-
-	einfo "if you experience a warning with winscp regarding groups, please install"
-	einfo "the provided hacked out fake groups program into your chroot, like so:"
-	einfo "cp groups ${myhome}/bin/groups"
 }
