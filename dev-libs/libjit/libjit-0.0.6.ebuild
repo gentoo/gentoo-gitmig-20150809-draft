@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/libjit-0.0.6.ebuild,v 1.2 2006/09/09 01:26:26 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libjit/libjit-0.0.6.ebuild,v 1.3 2006/09/14 14:47:03 wolf31o2 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.southern-storm.com.au/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="doc examples interpreter long-double new-reg-alloc"
 
 DEPEND="doc? ( app-text/texi2html )"
