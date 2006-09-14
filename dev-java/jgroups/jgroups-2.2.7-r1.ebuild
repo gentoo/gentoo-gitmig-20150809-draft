@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r1.ebuild,v 1.5 2006/01/08 09:08:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r1.ebuild,v 1.6 2006/09/14 19:50:08 nichoj Exp $
 
 inherit java-pkg
 
@@ -26,10 +26,6 @@ DEPEND=">=virtual/jdk-1.4
 IUSE="doc junit jikes"
 
 S=${WORKDIR}/JGroups-${PV}.src
-
-pkg_setup() {
-	use junit && ewarn "WARNING: Running unit tests can take a long time."
-}
 
 src_unpack() {
 	unpack ${A}
