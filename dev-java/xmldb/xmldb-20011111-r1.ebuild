@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.2 2006/08/05 19:00:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmldb/xmldb-20011111-r1.ebuild,v 1.3 2006/09/14 04:17:10 nichoj Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xmldb-org/${MY_P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc source"
 
 # TODO please make compiling the junit tests optional
