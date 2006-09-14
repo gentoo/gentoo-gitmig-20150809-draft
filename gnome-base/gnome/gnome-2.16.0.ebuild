@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.0.ebuild,v 1.2 2006/09/12 00:48:11 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.0.ebuild,v 1.3 2006/09/14 14:48:40 dang Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -12,7 +12,7 @@ SLOT="2.0"
 # double check none of the deps are still masked !
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="accessibility cdr dvdr hal mono"
+IUSE="accessibility cdr cups dvdr hal mono"
 
 S=${WORKDIR}
 
@@ -149,7 +149,8 @@ RDEPEND="!gnome-base/gnome-core
 		>=app-accessibility/gnome-mag-0.13.1
 		>=app-accessibility/gnome-speech-0.4.4
 		>=app-accessibility/gok-1.2.0
-		>=app-accessibility/gnopernicus-1.0.4 )"
+		>=app-accessibility/gnopernicus-1.0.4 )
+	cups? ( >=net-print/gnome-cups-manager-0.31-r1 )"
 
 # Development tools
 #   scrollkeeper
