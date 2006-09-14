@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/trnascan-se-1.23-r1.ebuild,v 1.2 2006/01/21 18:36:49 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/trnascan-se-1.23-r1.ebuild,v 1.3 2006/09/14 00:29:21 ribosome Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="tRNA detection in large-scale genome sequences"
-HOMEPAGE="http://selab.wustl.edu/cgi-bin/selab.pl?mode=software%22#trnascan"
+HOMEPAGE="http://selab.janelia.org/software#trnascanse"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 

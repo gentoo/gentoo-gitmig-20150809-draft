@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-20040713.ebuild,v 1.2 2006/01/21 18:11:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-20040713.ebuild,v 1.3 2006/09/14 00:27:26 ribosome Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="Generates 2D displays of RNA/DNA secondary structures with tertiary interactions"
-HOMEPAGE="http://beta-ndb.rutgers.edu/services/download/index.html#rnaview"
+HOMEPAGE="http://ndbserver.rutgers.edu/services/download/index.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="public-domain"
 
