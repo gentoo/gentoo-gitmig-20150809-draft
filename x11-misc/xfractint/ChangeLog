@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.37 2006/09/13 13:36:39 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.38 2006/09/14 20:35:20 gustavoz Exp $
+
+  14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  xfractint-20.4.03.ebuild:
+  Stable on sparc wrt #147539
 
   13 Sep 2006; Michał Januszewski <spock@gentoo.org>
   files/xfractint-20.4.03-makefile.patch, xfractint-20.4.03.ebuild:
