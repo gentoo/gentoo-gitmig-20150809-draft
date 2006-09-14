@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.7 2006/09/13 04:19:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.8 2006/09/14 02:49:07 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -84,7 +84,7 @@ src_install() {
 	freebsd_src_install
 
 	dodir /bin
-	for bin in awk sed mkfifo uname; do
+	for bin in awk sed mkfifo uname true false; do
 		mv "${D}/usr/bin/${bin}" "${D}/bin/" || die "mv ${bin} failed"
 		dosym /bin/${bin} /usr/bin/${bin} || die "dosym ${bin} failed"
 	done
