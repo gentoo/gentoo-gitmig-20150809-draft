@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.249 2006/09/11 03:28:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.250 2006/09/14 06:58:01 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1602,7 +1602,17 @@ built_with_use() {
 	[[ ! -e ${USEFILE} ]] && die "Unable to determine what USE flags $PKG was built with"
 
 	local IUSE_BUILT=$(<${IUSEFILE})
-	has $1 ${IUSE_BUILT} || die "$PKG does not actually support the $1 USE flag!"
+	# Don't check USE_EXPAND #147237
+	local expand
+	for expand in $(echo ${USE_EXPAND} | tr '[:upper:]' '[:lower:]') ; do
+		if [[ $1 == ${expand}_* ]] ; then
+			expand=""
+			break
+		fi
+	done
+	if [[ -z ${expand} ]] ; then
+		has $1 ${IUSE_BUILT} || die "$PKG does not actually support the $1 USE flag!"
+	fi
 
 	local USE_BUILT=$(<${USEFILE})
 	while [[ $# -gt 0 ]] ; do
