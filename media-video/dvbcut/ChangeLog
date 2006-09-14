@@ -1,0 +1,11 @@
+# ChangeLog for media-video/dvbcut
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.1 2006/09/14 08:54:16 zzam Exp $
+
+*dvbcut-0.5.3 (14 Sep 2006)
+
+  14 Sep 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
+  +dvbcut-0.5.3.ebuild:
+  Initial import of ebuild, thanks to Karsten Kretschmer
+  <kkretsch@onlinehome.de>, Bug #146650.
+
