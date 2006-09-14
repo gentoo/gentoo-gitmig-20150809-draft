@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.10 2006/08/06 04:22:48 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.11 2006/09/14 19:32:14 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -37,8 +37,10 @@ DEPEND=">=virtual/jdk-1.3
 S=${WORKDIR}/${P}-src
 
 pkg_setup() {
+	java-pkg_pkg_setup
+
 	# add a user for cjdbc
-	enewgroup cjdbc 
+	enewgroup cjdbc
 	enewuser cjdbc -1 /bin/sh /dev/null cjdbc
 }
 
