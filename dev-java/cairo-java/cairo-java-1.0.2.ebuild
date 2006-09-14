@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/cairo-java-1.0.2.ebuild,v 1.3 2006/01/11 01:43:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cairo-java/cairo-java-1.0.2.ebuild,v 1.4 2006/09/14 19:39:34 nichoj Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -19,19 +19,18 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc gcj source"
 
 DEPS=">=x11-libs/cairo-1.0.0-r2
-	  >=dev-java/glib-java-0.2.2
-	  >=media-libs/fontconfig-2.3.1
-	  >=dev-libs/glib-2.6.0
-	    dev-util/pkgconfig"
+	>=dev-java/glib-java-0.2.2
+	>=media-libs/fontconfig-2.3.1
+	>=dev-libs/glib-2.6.0"
 
 DEPEND=">=virtual/jdk-1.4
-		>=sys-apps/sed-4
 		source? ( app-arch/zip )
 		${DEPS}"
 RDEPEND=">=virtual/jre-1.4
-		 ${DEPS}"
+		${DEPS}"
 
 pkg_setup() {
+	java-pkg_pkg_setup
 	if use gcj ; then
 		if ! built_with_use sys-devel/gcc gcj ; then
 			ewarn
@@ -46,9 +45,9 @@ pkg_setup() {
 src_compile() {
 	# JARDIR is a hack for java-config
 	econf $(use_with gcj gcj-compile) \
-		  $(use_with doc javadocs) \
-		  --with-jardir=/usr/share/${PN}-${SLOT}/lib \
-		  || die "configure failed"
+			$(use_with doc javadocs) \
+			--with-jardir=/usr/share/${PN}-${SLOT}/lib \
+			|| die "configure failed"
 
 	emake || die "compile failed"
 
