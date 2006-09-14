@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.250 2006/09/13 18:37:04 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.251 2006/09/14 08:34:59 suka Exp $
+
+  14 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
+  files/2.0.4_rc1/gentoo-2.0.4_rc1.diff, openoffice-2.0.4_rc1-r1.ebuild:
+  Use xsltproc during the build even when java is available, this should
+  shorten the build time quite a bit. Also if you want to try to build OOo
+  with more than one process you'll now have to specify WANT_MP="true", the
+  old variable WANT_DISTCC was just misleading.
 
   13 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4_rc1-r1.ebuild:

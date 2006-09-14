@@ -40,3 +40,35 @@
  
  echo "Copying custom user-dicts into tree"
  cp -af $TOOLSDIR/src/*.dic $OOBUILDDIR/extras/source/wordbook || exit 1;
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -1014,8 +1014,6 @@
+ jni-throw-exception.diff, i#65977
+ # system db check
+ system-db-check.diff, i#65979
+-# Gentoo's portaudio ...
+-system-portaudio-use-lpthread.diff
+ # use IBM j9vm over IBM classic JVM
+ ibm-j9vm.diff
+ 
+@@ -1031,7 +1029,10 @@
+ gentoo-gcc-naming-and-versioning.diff, hmth
+ # build with -fomit-frame-pointer
+ #omit-fp-workaround.diff, i#50625, hmth
+-
++# use libxslt from system for xmlhelp / disable sablot
++xmlhelp-use-libxslt-from-system.diff, i#30380, rengelha
++# Gentoo's portaudio ...
++system-portaudio-use-lpthread.diff, hmth
+ 
+ [ DebianBaseOnly ]
+ SectionOwner => rengelha
+@@ -1494,8 +1495,6 @@
+ [ GentooExperimental ]
+ SectionOwner => hmth
+ 
+-# use libxslt from system for xmlhelp / disable sablot
+-xmlhelp-use-libxslt-from-system.diff, i#30380
+ # Gnu JRE paths.
+ gentooexperimental-gnujre.diff
+ 

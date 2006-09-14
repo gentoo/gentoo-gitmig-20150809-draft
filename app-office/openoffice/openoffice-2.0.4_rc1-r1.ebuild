@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.6 2006/09/13 18:37:04 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.7 2006/09/14 08:34:59 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -99,7 +99,7 @@ DEPEND="${RDEPEND}
 	>=app-admin/eselect-oodict-20060706
 	java? ( || ( =virtual/jre-1.4* =virtual/jre-1.5* )
 		dev-java/ant-core )
-	!java? ( dev-libs/libxslt )
+	dev-libs/libxslt
 	ldap? ( net-nds/openldap )
 	mono? ( >=dev-lang/mono-1.1.6 )
 	>=dev-libs/libxml2-2.0"
@@ -197,6 +197,8 @@ src_unpack() {
 	echo "--with-system-boost" >> ${CONFFILE}
 	echo "--with-system-icu" >> ${CONFFILE}
 	echo "--with-system-libxml" >> ${CONFFILE}
+	echo "--with-system-libxslt" >> ${CONFFILE}
+	echo "--enable-xsltproc" >> ${CONFFILE}
 
 }
 
@@ -209,7 +211,7 @@ src_compile() {
 
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break
 	export JOBS="1"
-	if [ "${WANT_DISTCC}" == "true" ]; then
+	if [ "${WANT_MP}" == "true" ]; then
 		export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
 	fi
 
@@ -219,7 +221,6 @@ src_compile() {
 	filter-flags "-fno-default-inline"
 	filter-flags "-fstack-protector"
 	filter-flags "-ftracer"
-	filter-flags "-ffast-math"
 	filter-flags "-fforce-addr"
 	replace-flags "-O?" "-O2"
 
