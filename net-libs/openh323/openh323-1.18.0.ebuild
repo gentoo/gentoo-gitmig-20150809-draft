@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.2 2006/09/14 01:21:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.3 2006/09/14 06:04:35 genstef Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.voxgratia.org/releases/${PN}-v${PV//./_}-src-tar.gz"
 IUSE="debug ssl novideo noaudio"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86 ~hppa"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~hppa"
 
 DEPEND=">=sys-apps/sed-4
 	=dev-libs/pwlib-1.10*
