@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.8_rc1-r2.ebuild,v 1.10 2006/04/24 02:24:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-0.8_rc1-r2.ebuild,v 1.11 2006/09/14 00:38:14 flameeyes Exp $
 
-inherit versionator
+inherit versionator autotools
 
 MY_P="${PN}-$(replace_version_separator 2 '-')"
 S="${WORKDIR}/${MY_P}"
@@ -17,6 +17,14 @@ IUSE=""
 
 DEPEND=">=dev-libs/libpcre-3.4"
 PROVIDE="virtual/logger"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+	eautoreconf
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
