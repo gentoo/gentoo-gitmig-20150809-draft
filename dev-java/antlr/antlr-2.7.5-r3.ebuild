@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r3.ebuild,v 1.3 2006/09/13 22:30:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r3.ebuild,v 1.4 2006/09/14 00:36:52 nichoj Exp $
 
 inherit gnuconfig java-pkg-2 mono distutils multilib
 
@@ -23,6 +23,9 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	gnuconfig_update
+	# don't ask why, but this is needed for stuff to get built properly
+	# across the various JDKs
+	JAVACFLAGS="+ ${JAVACFLAGS}"
 
 	econf $(use_enable !nojava java) \
 		$(use_enable python) \
