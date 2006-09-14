@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.19.ebuild,v 1.3 2006/09/14 05:42:15 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.20.ebuild,v 1.1 2006/09/14 05:42:15 cardoe Exp $
 
-inherit mythtv-plugins
+inherit  mythtv-plugins
 
 DESCRIPTION="Phone and video calls with SIP."
 IUSE="festival"
@@ -12,8 +12,3 @@ RDEPEND="festival? ( app-accessibility/festival )"
 DEPEND="${RDEPEND}"
 
 MTVCONF=$(use_enable festival)
-
-src_unpack() {
-	mythtv-plugins_src_unpack
-	epatch "${FILESDIR}"/${P}-gcc41.patch
-}
