@@ -1,10 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.12.1.ebuild,v 1.5 2005/12/30 02:52:06 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.12.1.ebuild,v 1.6 2006/09/14 20:02:20 nichoj Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
-
 inherit java-pkg eutils gnome.org
 
 DESCRIPTION="Java bindings for Glade"
@@ -19,18 +18,16 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc gcj"
 
 DEPS=">=gnome-base/gconf-2.12.0
-	  >=dev-java/glib-java-0.2.1
-	  >=dev-java/libgtk-java-2.8.1
-	  >=dev-java/libgnome-java-2.8.0
-		dev-util/pkgconfig"
-
+	>=dev-java/glib-java-0.2.1
+	>=dev-java/libgtk-java-2.8.1
+	>=dev-java/libgnome-java-2.8.0"
 DEPEND=">=virtual/jdk-1.4
-		>=sys-apps/sed-4
-		${DEPS}"
+	${DEPS}"
 RDEPEND=">=virtual/jre-1.4
-		 ${DEPS}"
+	${DEPS}"
 
 pkg_setup() {
+	java-pkg_pkg_setup
 	if use gcj ; then
 		if ! built_with_use sys-devel/gcc gcj ; then
 			ewarn
@@ -45,9 +42,9 @@ pkg_setup() {
 src_compile() {
 	# JARDIR is a hack for java-config
 	econf $(use_with gcj gcj-compile) \
-		  $(use_with doc javadocs) \
-		  --with-jardir=/usr/share/${PN}-${SLOT}/lib \
-		  || die "configure failed"
+		$(use_with doc javadocs) \
+		--with-jardir=/usr/share/${PN}-${SLOT}/lib \
+		|| die "configure failed"
 
 	emake || die "compile failed"
 

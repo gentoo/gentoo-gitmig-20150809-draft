@@ -1,16 +1,16 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.8.3.1.ebuild,v 1.5 2005/07/19 11:58:20 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/libgconf-java-2.8.3.1.ebuild,v 1.6 2006/09/14 20:02:20 nichoj Exp $
 
 #
-# WARNING: Because java-gnome is a set of bindings to native GNOME libraries, 
-# it has, like any GNOME project, a massive autoconf setup, and unlike many 
+# WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
+# it has, like any GNOME project, a massive autoconf setup, and unlike many
 # other java libraries, it has its own [necessary] `make install` step.
 # As a result, this ebuild is VERY sensitive to the internal layout of the
 # upstream project. Because these issues are currently evolving upstream,
 # simply version bumping this ebuild is not likely to work but FAILURES WILL
 # BE VERY SUBTLE IF IT DOES NOT WORK.
-# 
+#
 
 inherit eutils gnome.org
 
@@ -71,7 +71,7 @@ src_install() {
 	# the upstream install scatters things around a bit. The following cleans
 	# that up to make it policy compliant.
 
-	# I originally tried java-pkg_dojar here, but it has a few glitches 
+	# I originally tried java-pkg_dojar here, but it has a few glitches
 	# like not copying symlinks as symlinks which makes a mess.
 
 	dodir /usr/share/${PN}-${SLOT}/lib
@@ -82,7 +82,7 @@ src_install() {
 	cd ${S}/src/java
 	zip -r ${D}/usr/share/${PN}-${SLOT}/src/libgconf-java-${PV}.src.zip *
 
-	# again, with dojar misbehaving, better do to this manually for the 
+	# again, with dojar misbehaving, better do to this manually for the
 	# time being. Yes, this is bad hard coding, but what in this ebuild isn't?
 
 	echo "DESCRIPTION=${DESCRIPTION}" \
