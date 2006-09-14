@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/pysqlite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.62 2006/08/17 19:44:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/ChangeLog,v 1.63 2006/09/14 15:01:05 tove Exp $
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> pysqlite-2.3.1.ebuild:
   Stable on ppc64
@@ -55,7 +55,7 @@
   10 Mar 2006; Aron Griffis <agriffis@gentoo.org> pysqlite-2.0.7.ebuild:
   Mark 2.0.7 ~ia64
 
-  19 Feb 2006; Bryan Ãstergaard <kloeri@gentoo.org pysqlite-2.0.7.ebuild:
+  19 Feb 2006; Bryan Østergaard <kloeri@gentoo.org pysqlite-2.0.7.ebuild:
   Add ~alpha keyword, bug 121880.
 
   18 Feb 2006; Doug Goldstein <cardoe@gentoo.org> pysqlite-2.0.7.ebuild:
@@ -127,7 +127,7 @@
   16 Jul 2005; Joseph Jezak <josejx@gentoo.org> pysqlite-2.0.2.ebuild:
   Marked ~ppc for bug #98814.
 
-  02 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> pysqlite-2.0.2.ebuild:
+  02 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> pysqlite-2.0.2.ebuild:
   Add ~alpha keyword.
 
   27 May 2005; Jason Wever <weeve@gentoo.org> pysqlite-1.0.1.ebuild:
@@ -163,7 +163,7 @@
   10 Oct 2004; Anders Rune Jensen <arj@gentoo.org> pysqlite-1.0.ebuild:
   New version, minor changes.
 
-  10 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> pysqlite-0.5.1.ebuild:
+  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.1.ebuild:
   Stable on alpha.
 
   03 Oct 2004; Anders Rune Jensen <arj@gentoo.org> pysqlite-0.5.1.ebuild:
@@ -192,10 +192,10 @@
   06 Jul 2004; Anders Rune Jensen <arj@gentoo.org> pysqlite-0.5.0.ebuild:
   Mark as stable
 
-  02 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
+  02 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
   Stable on alpha.
 
-  20 Apr 2004; Bryan Ãstergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
+  20 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
   Added ~alpha to keywords.
 
   26 Feb 2004; Sven Blumenstein <bazik@gentoo.org> pysqlite-0.4.3.ebuild:
@@ -203,7 +203,7 @@
 
 *pysqlite-0.5.0 (30 Jan 2004)
 
-  30 Jan 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
+  30 Jan 2004; Bryan Østergaard <kloeri@gentoo.org> pysqlite-0.5.0.ebuild:
   New version
 
 *pysqlite-0.4.3 (26 Jun 2003)
