@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.16.0.ebuild,v 1.3 2006/09/08 20:52:14 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.16.0.ebuild,v 1.4 2006/09/14 18:12:41 dang Exp $
 
-inherit eutils gnome2 autotools
+inherit gnome2
 
 DESCRIPTION="Help browser for GNOME"
 HOMEPAGE="http://www.gnome.org/"
