@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.55 2006/09/05 19:08:42 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.56 2006/09/14 18:06:46 gustavoz Exp $
+
+  14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  libpri-1.2.3-r1.ebuild:
+  Stable on sparc wrt security #144941
 
 *libpri-1.2.3-r1 (06 Sep 2006)
 
