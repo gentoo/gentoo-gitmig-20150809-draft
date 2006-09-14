@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.28-r1.ebuild,v 1.1 2006/09/12 14:17:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.28-r1.ebuild,v 1.2 2006/09/14 18:32:13 nichoj Exp $
 
 inherit base distutils eutils
 
@@ -13,8 +13,8 @@ SLOT="2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="virtual/python"
-RDEPEND="virtual/python
+DEPEND=">=dev-lang/python-2.4"
+RDEPEND=">=dev-lang/python-2.4
 	dev-java/java-config-wrapper"
 
 PATCHES="${FILESDIR}/${P}-classpath.patch"

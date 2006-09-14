@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.118 2006/09/14 01:32:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.119 2006/09/14 18:32:13 nichoj Exp $
+
+  14 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  java-config-2.0.28-r1.ebuild:
+  Changed dependency on virtual/python to >=dev-lang/python, as per bug #147594.
 
   14 Sep 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml:
   Tweaked metadata.xml
