@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.54.ebuild,v 1.3 2006/09/02 16:23:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.54.ebuild,v 1.4 2006/09/14 23:05:47 genstef Exp $
 
 inherit autotools elisp-common eutils versionator
 
@@ -120,7 +120,7 @@ src_compile() {
 		$(use_with jpeg2k jasper) \
 		--with-ijs \
 		--with-jbig2dec || die "econf failed"
-	emake STDDIRS so all || die "emake failed"
+	emake STDDIRS || die "emake failed"
 
 	cd ijs
 	econf || die "ijs econf failed"

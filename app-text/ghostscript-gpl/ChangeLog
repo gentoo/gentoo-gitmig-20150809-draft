@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.3 2006/09/02 16:23:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.4 2006/09/14 23:05:47 genstef Exp $
+
+  14 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  ghostscript-gpl-8.54.ebuild:
+  properly fix bug 142802 thanks to Nick Cunningham <nick@burstfire.net> and
+  pylon in bug 145985
 
   02 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   ghostscript-gpl-8.54.ebuild:
