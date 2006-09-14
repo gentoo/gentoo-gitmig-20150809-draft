@@ -30,11 +30,19 @@ do
   dir=`dirname $dep`
   pkg=`basename $dir`
   category=`cat $dir/CATEGORY`
+  slot=`cat $dir/SLOT`
 
   toclean="=$category/$pkg $toclean"
   tocleanstr="\"$category/$pkg\" $tocleanstr"
-  tobuild=">=$category/$pkg $tobuild"
-  tobuildstr="\">=$category/$pkg\" $tobuildstr"
+
+  if [ $slot -eq 0 ]
+  then
+	tobuild=">=$category/$pkg $tobuild"
+	tobuildstr="\">=$category/$pkg\" $tobuildstr"
+  else
+  	tobuild="=$category/$pkg $tobuild"
+	tobuildstr="\"=$category/$pkg\" $tobuildstr"
+  fi
 done
 
 echo Cleaning $tocleanstr
