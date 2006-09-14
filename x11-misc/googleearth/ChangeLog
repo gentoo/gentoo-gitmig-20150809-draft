@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.14 2006/08/30 20:45:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.15 2006/09/14 09:27:44 genstef Exp $
+
+  14 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  googleearth-4_beta.ebuild:
+  depend on <x11-drivers/ati-drivers-8.28.8 for amd64 because it breaks on
+  runtime, thanks to Thomas Skyt <thomas@sofagang.dk> and Ulf
+  <fly-a-lot@web.de> in bug 147309
 
   30 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
   googleearth-4_beta.ebuild:

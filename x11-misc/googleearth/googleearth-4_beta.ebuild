@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.10 2006/08/30 20:45:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-4_beta.ebuild,v 1.11 2006/09/14 09:27:44 genstef Exp $
 
 inherit eutils fdo-mime
 
@@ -34,7 +34,7 @@ RDEPEND="x86? (
 		>=media-video/nvidia-glx-1.0.6629-r3
 		x11-drivers/nvidia-drivers
 		x11-drivers/nvidia-legacy-drivers
-		>=x11-drivers/ati-drivers-8.8.25-r1 ) )
+		<x11-drivers/ati-drivers-8.28.8 ) )
 	media-fonts/ttf-bitstream-vera"
 
 S=${WORKDIR}
