@@ -1,10 +1,13 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.12 2006/07/20 23:45:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.13 2006/09/14 00:16:37 nichoj Exp $
+
+  14 Sep 2006; Joshua Nichols <nichoj@gentoo.org> javacup-0.10k-r1.ebuild:
+  Added ~ia64
 
 *javacup-0.10k-r1 (20 Jul 2006)
 
-  20 Jul 2006; Joshua Nichols <jnichols@gentoo.org>
+  20 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +javacup-0.10k-r1.ebuild:
   Revision bump to use new Java system.
 
