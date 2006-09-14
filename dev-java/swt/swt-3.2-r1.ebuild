@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.3 2006/08/28 17:47:47 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.4 2006/09/14 18:17:56 nichoj Exp $
 
 inherit eutils java-pkg-2
 
@@ -10,8 +10,8 @@ MY_VERSION="3.2"
 DESCRIPTION="GTK based SWT Library"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_VERSION}-gtk-linux-x86.zip )
-		 amd64? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_VERSION}-gtk-linux-x86_64.zip )
-		 ppc? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_VERSION}-gtk-linux-ppc.zip )"
+		amd64? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_VERSION}-gtk-linux-x86_64.zip )
+		ppc? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_VERSION}-gtk-linux-ppc.zip )"
 
 SLOT="3"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
@@ -42,13 +42,12 @@ COMMON=">=dev-libs/glib-2.6
 					virtual/opengl
 					virtual/glu
 				)"
-DEPEND="=virtual/jdk-1.4*
+DEPEND=">=virtual/jdk-1.5
 		${COMMON}
-		>=dev-util/pkgconfig-0.9
-		  dev-java/ant-core
-		  app-arch/unzip"
-RDEPEND="=virtual/jre-1.4*
-		 ${COMMON}"
+		dev-java/ant-core
+		app-arch/unzip"
+RDEPEND=">=virtual/jre-1.5
+		${COMMON}"
 
 S="${WORKDIR}"
 
@@ -121,9 +120,9 @@ src_compile() {
 	if use seamonkey ; then
 		export GECKO_SDK="$(pkg-config seamonkey-xpcom --variable=libdir)"
 		export GECKO_INCLUDES="-I/usr/$(get_libdir)/seamonkey/include/xpcom \
-							   -I/usr/include/nspr \
-							   -I/usr/$(get_libdir)/seamonkey/include/embed_base \
-							   -I/usr/$(get_libdir)/seamonkey/include/string"
+								-I/usr/include/nspr \
+								-I/usr/$(get_libdir)/seamonkey/include/embed_base \
+								-I/usr/$(get_libdir)/seamonkey/include/string"
 		export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
 
 		einfo "Building the Mozilla component"
