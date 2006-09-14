@@ -1,19 +1,18 @@
 # ChangeLog for app-portage/portage-manpages
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-manpages/ChangeLog,v 1.7 2006/03/30 14:26:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-manpages/ChangeLog,v 1.8 2006/09/14 02:40:47 vapier Exp $
 
-  30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
-  portage-manpages-1.2.ebuild:
-  Add ~x86-fbsd keyword.
+*portage-manpages-20060913 (14 Sep 2006)
+
+  14 Sep 2006; Mike Frysinger <vapier@gentoo.org>
+  +portage-manpages-20060913.ebuild:
+  Version bump.
 
 *portage-manpages-1.2 (31 Dec 2005)
 
   31 Dec 2005; Mike Frysinger <vapier@gentoo.org>
   +portage-manpages-1.2.ebuild:
   Version bump.
-
-  23 Jul 2005; <gongloo@gentoo.org> portage-manpages-1.1.ebuild:
-  Keyworded ~ppc-macos.
 
 *portage-manpages-1.1 (01 Jan 2005)
 
