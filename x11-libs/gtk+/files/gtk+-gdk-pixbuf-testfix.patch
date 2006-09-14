@@ -1,0 +1,9 @@
+--- gtk+-2.8.10/gdk-pixbuf/abicheck.sh	2005-08-07 09:47:25.000000000 -0400
++++ gtk+-2.8.10.new/gdk-pixbuf/abicheck.sh	2006-01-12 18:56:04.000000000 -0500
+@@ -1,5 +1,5 @@
+ #! /bin/sh
+ 
+ cpp -DINCLUDE_VARIABLES -P -DALL_FILES ${srcdir:-.}/gdk-pixbuf.symbols | sed -e '/^$/d' -e 's/ G_GNUC.*$//' -e 's/ PRIVATE$//' | sort > expected-abi
+-nm -D .libs/libgdk_pixbuf-2.0.so | grep " [BDTR] " | cut -d ' ' -f 3 | sort > actual-abi
++nm -D .libs/libgdk_pixbuf-2.0.so | grep " [GBDTR] " | cut -d ' ' -f 3 | sort > actual-abi
+ diff -u expected-abi actual-abi && rm expected-abi actual-abi
