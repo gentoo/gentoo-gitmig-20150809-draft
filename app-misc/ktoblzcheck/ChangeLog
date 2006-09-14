@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.37 2006/09/09 18:29:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.38 2006/09/14 00:39:02 kugelfang Exp $
+
+  14 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> ktoblzcheck-1.10.ebuild:
+  Marked stable on amd64 wrt bug #146142.
 
   09 Sep 2006; <nixnut@gentoo.org> ktoblzcheck-1.10.ebuild:
   Stable on ppc wrt bug 146142
