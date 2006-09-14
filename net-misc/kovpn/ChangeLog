@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/kovpn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/ChangeLog,v 1.4 2006/07/02 21:43:06 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kovpn/ChangeLog,v 1.5 2006/09/14 09:45:14 ian Exp $
+
+*kovpn-0.3_pre6-r1 (14 Sep 2006)
+
+  14 Sep 2006; Christian Hartmann <ian@gentoo.org>
+  +files/traywindow_x86_64.patch, +kovpn-0.3_pre6-r1.ebuild:
+  Fixed bug #139327; commit approved by tantive
 
 *kovpn-0.3_pre6 (02 Jul 2006)
 
