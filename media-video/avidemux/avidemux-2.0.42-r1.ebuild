@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42-r1.ebuild,v 1.7 2006/09/07 04:02:31 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.42-r1.ebuild,v 1.8 2006/09/14 09:59:51 zzam Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -71,6 +71,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/avidemux-extra-qualification.diff
 	epatch "${FILESDIR}"/avidemux-altivec.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	cp ${WORKDIR}/${PV}/m4/* ${S}/m4 || die "cp m4 failed"
 
