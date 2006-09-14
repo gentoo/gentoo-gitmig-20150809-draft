@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.13 2006/05/31 18:55:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.14 2006/09/14 07:20:20 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -22,9 +22,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	[ $(gcc-major-version) == 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
-	epatch "${FILESDIR}/libpng-1.2.5.patch" \
-		"${FILESDIR}/${P}"-gcc41.patch
+	[ $(gcc-major-version) -ge 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
+	epatch "${FILESDIR}/libpng-1.2.5.patch"
 	use amd64 && epatch "${FILESDIR}/${P}-amd64.patch"
 	sed -i \
 		-e 's:-pedantic::' config/vars.mk \

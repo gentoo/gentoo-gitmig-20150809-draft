@@ -1,21 +1,32 @@
-diff -urN quadra-1.1.8/skelton/include/array.h quadra-1.1.8-kacsa/skelton/include/array.h
---- quadra-1.1.8/skelton/include/array.h	Sat Mar 10 17:17:54 2001
-+++ quadra-1.1.8-kacsa/skelton/include/array.h	Fri May 17 17:12:12 2002
-@@ -37,7 +37,7 @@
+--- quadra-1.1.8-orig/skelton/include/array.h	2006-05-21 16:35:30.000000000 -0400
++++ quadra-1.1.8/skelton/include/array.h	2006-05-21 16:53:06.000000000 -0400
+@@ -21,6 +21,7 @@
+ #ifndef _HEADER_ARRAY
+ #define _HEADER_ARRAY
+ #include <vector>
++#include <algorithm>
+ 
+ #ifndef max
+ #define max(a,b) (((a) > (b)) ? (a) : (b))
+@@ -37,7 +38,9 @@
  		v.push_back(t);
  	}
  	void add_before(const T& t, int i) {
 -		v.insert(&v[i], t);
-+		v.insert(v.begin() + i, t);
++		typename std::vector<T>::iterator iter = v.begin();
++		std::advance(iter, i);
++		v.insert(iter, t);
  	}
  	bool remove_item(const T& t) {
  		for(int i=0; i<size(); i++)
-@@ -51,7 +51,7 @@
+@@ -51,7 +54,9 @@
  		v.pop_back();
  	}
  	void remove(int i) {
 -		v.erase(&v[i]);
-+		v.erase(v.begin() + i);
++		typename std::vector<T>::iterator iter = v.begin();
++		std::advance(iter, i);
++		v.erase(iter);
  	}
  	int size() const {
  		return v.size();
@@ -51,6 +62,14 @@ diff -urN quadra-1.1.8/source/net_stuff.cpp quadra-1.1.8-kacsa/source/net_stuff.
 diff -urN quadra-1.1.8/source/quadra.cpp quadra-1.1.8-kacsa/source/quadra.cpp
 --- quadra-1.1.8/source/quadra.cpp	Fri Oct 19 23:19:31 2001
 +++ quadra-1.1.8-kacsa/source/quadra.cpp	Fri May 17 17:17:02 2002
+@@ -25,6 +25,7 @@
+ #include <sys/types.h>
+ #endif
+ #include <stdlib.h>
++#include <exception>
+ #include "packet.h"
+ #include "types.h"
+ #include "net.h"
 @@ -2387,7 +2387,7 @@
  				try {
  					overmind.step();
