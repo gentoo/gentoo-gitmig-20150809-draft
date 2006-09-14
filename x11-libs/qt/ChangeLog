@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.346 2006/09/14 14:07:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.347 2006/09/14 14:10:17 caleb Exp $
+
+  14 Sep 2006; Caleb Tennis <caleb@gentoo.org>
+  -files/qt-4.1.3-mysql4-support.diff, -qt-4.1.2.ebuild, -qt-4.1.3.ebuild:
+  Remove stale ebuilds
 
   14 Sep 2006; Caleb Tennis <caleb@gentoo.org> qt-4.1.4.ebuild,
   qt-4.2.0_rc1.ebuild:
