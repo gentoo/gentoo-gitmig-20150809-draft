@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.20 2006/08/31 20:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.21 2006/09/14 07:04:44 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -67,7 +67,7 @@ is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
 }
 just_headers() {
-	is_crosscompile && has _E_CROSS_HEADERS_ONLY ${USE}
+	is_crosscompile && use crosscompile_opts_headers-only
 }
 
 GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
