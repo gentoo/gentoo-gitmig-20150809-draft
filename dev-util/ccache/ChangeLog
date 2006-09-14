@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.46 2006/09/13 13:14:23 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.47 2006/09/14 00:13:56 lisa Exp $
+
+*ccache-2.4-r5 (14 Sep 2006)
+
+  14 Sep 2006; Lisa Seelye <lisa@gentoo.org> -ccache-2.4-r4.ebuild,
+  +ccache-2.4-r5.ebuild:
+  move the removal of stale links check to pkg_setup due to a portage bug. it
+  should be in pkg_preinst. also fix a symlink issue where it was linking to
+  the name of the compilier and not ccache. oops
 
 *ccache-2.4-r4 (13 Sep 2006)
 
