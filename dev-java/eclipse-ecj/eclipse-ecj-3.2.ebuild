@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.2.ebuild,v 1.1 2006/08/10 00:54:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.2.ebuild,v 1.2 2006/09/14 03:25:54 nichoj Exp $
 
 inherit eutils java-pkg-2
 
 DESCRIPTION="Eclipse Compiler for Java"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http://dev.gentoo.org/~nichoj/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="EPL-1.0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="3.2"
 
 IUSE="doc"
@@ -39,7 +39,7 @@ src_compile() {
 	# which if successful sets this property, then checks if it was set and fails if not
 	java-pkg_current-vm-matches kaffe && ant_flags="-Dbuild.compiler=org.eclipse.jdt.core.JDTCompilerAdapter"
 
-	# recompile with ecj.jar made in first step, to get dist/ecj.jar 
+	# recompile with ecj.jar made in first step, to get dist/ecj.jar
 	ant ${ant_flags} -lib ecj.jar -f compilejdtcore.xml compile $(use_doc) || die "Failed to rebuild with ecj"
 }
 
