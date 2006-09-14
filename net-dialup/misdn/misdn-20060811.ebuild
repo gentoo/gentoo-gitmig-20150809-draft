@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-20060811.ebuild,v 1.1 2006/08/11 21:25:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/misdn-20060811.ebuild,v 1.2 2006/09/14 22:48:27 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -69,7 +69,7 @@ src_install() {
 	doins "${WORKDIR}/${MY_P}/include/linux/"*.h
 
 	dodir /etc/udev/rules.d
-	echo 'KERNEL=="obj-*", NAME="mISDN", GROUP="dialout"' \
+	echo 'KERNEL=="obj-*", NAME="mISDN", GROUP="dialout", MODE="0660"' \
 		> "${D}/etc/udev/rules.d/53-${PN}.rules"
 
 	insinto /etc/modules.d

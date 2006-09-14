@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.11 2006/08/11 21:25:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.12 2006/09/14 22:48:27 genstef Exp $
+
+  14 Sep 2006; Stefan Schweizer <genstef@gentoo.org> misdn-20060811.ebuild:
+  MODE="0660" is needed for udev, thanks sbriesen
 
 *misdn-20060811 (11 Aug 2006)
 
