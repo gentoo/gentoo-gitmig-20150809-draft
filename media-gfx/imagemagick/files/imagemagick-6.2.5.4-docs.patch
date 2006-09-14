@@ -11,7 +11,8 @@ Better control what doc files we install and where
 +else
 +MagickDocumentSubdir="${PF}"
 +fi
- MagickDocumentPath="${DATA_DIR}/doc/${MagickDocumentSubdir}"
+-MagickDocumentPath="${DATA_DIR}/doc/${MagickDocumentSubdir}"
++MagickDocumentPath="${DATA_DIR}/doc/${MagickDocumentSubdir}/html"
  MagickDocumentPathDefine="${MagickDocumentPath}/"
  if test "$native_win32_build" = 'yes'
 --- Makefile.in
