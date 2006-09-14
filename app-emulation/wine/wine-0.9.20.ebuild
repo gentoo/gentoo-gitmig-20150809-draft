@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.20.ebuild,v 1.1 2006/08/24 17:50:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-0.9.20.ebuild,v 1.2 2006/09/14 00:55:04 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -20,9 +20,12 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	dbus? ( sys-apps/dbus )
 	hal? ( sys-apps/hal )
-	X? ( || ( ( x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu
-				x11-libs/libXxf86dga x11-libs/libXxf86vm x11-apps/xmessage )
-		virtual/x11 )
+	X? (
+		x11-libs/libXrandr
+		x11-libs/libXi
+		x11-libs/libXmu
+		x11-libs/libXxf86vm
+		x11-apps/xmessage
 	)
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
@@ -44,13 +47,10 @@ RDEPEND=">=media-libs/freetype-2.0.0
 		>=sys-kernel/linux-headers-2.6
 	)"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/inputproto
-				x11-proto/xextproto
-				x11-proto/xf86dgaproto
-				x11-proto/xf86vidmodeproto
-			)
-			virtual/x11
-		)
+	X? (
+		x11-proto/inputproto
+		x11-proto/xextproto
+		x11-proto/xf86vidmodeproto
 	)
 	sys-devel/bison
 	sys-devel/flex"
