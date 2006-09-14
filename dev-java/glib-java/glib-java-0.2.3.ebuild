@@ -1,10 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/glib-java-0.2.3.ebuild,v 1.2 2006/03/04 22:24:15 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glib-java/glib-java-0.2.3.ebuild,v 1.3 2006/09/14 19:45:23 nichoj Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
-
 inherit java-pkg eutils gnome.org
 
 DESCRIPTION="Java bindings for glib"
@@ -18,15 +17,12 @@ SLOT="0.2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc gcj source"
 
-DEPS=">=dev-libs/glib-2.8.1
-		dev-util/pkgconfig"
-
+DEPS=">=dev-libs/glib-2.8.1"
 DEPEND=">=virtual/jdk-1.4
-		>=sys-apps/sed-4
 		source? ( app-arch/zip )
 		${DEPS}"
 RDEPEND=">=virtual/jre-1.4
-		 ${DEPS}"
+		${DEPS}"
 
 pkg_setup() {
 	if use gcj ; then
@@ -56,9 +52,9 @@ src_unpack() {
 src_compile() {
 	# JARDIR is a hack for java-config
 	econf $(use_with gcj gcj-compile) \
-		  $(use_with doc javadocs) \
-		  --with-jardir=/usr/share/${PN}-${SLOT}/lib \
-		  || die "configure failed"
+		$(use_with doc javadocs) \
+		--with-jardir=/usr/share/${PN}-${SLOT}/lib \
+		|| die "configure failed"
 
 	emake || die "compile failed"
 
