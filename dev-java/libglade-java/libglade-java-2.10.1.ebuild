@@ -1,20 +1,20 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.10.1.ebuild,v 1.3 2005/07/19 11:59:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.10.1.ebuild,v 1.4 2006/09/14 20:15:46 nichoj Exp $
 
 #
-# WARNING: Because java-gnome is a set of bindings to native GNOME libraries, 
-# it has, like any GNOME project, a massive autoconf setup, and unlike many 
+# WARNING: Because java-gnome is a set of bindings to native GNOME libraries,
+# it has, like any GNOME project, a massive autoconf setup, and unlike many
 # other java libraries, it has its own [necessary] `make install` step.
 # As a result, this ebuild is VERY sensitive to the internal layout of the
 # upstream project. Because these issues are currently evolving upstream,
 # simply version bumping this ebuild is not likely to work but FAILURES WILL
 # BE VERY SUBTLE IF IT DOES NOT WORK.
-# 
+#
 
 inherit eutils gnome.org
 
-DESCRIPTION="Java bindings for [Lib]Glade (allows GNOME/GTK applications writen in Java to be generate their user interface based on Glade description files)"
+DESCRIPTION="Java bindings for [Lib]Glade"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
 RDEPEND=">=gnome-base/libglade-2.5.1
 	gnome? ( >=gnome-base/libgnomeui-2.10.0 )
@@ -59,7 +59,7 @@ src_compile() {
 	cd ${S}
 
 	#
-	# Ordinarily, moving things around post `make install` would do 
+	# Ordinarily, moving things around post `make install` would do
 	# the trick, but there are paths hard coded in .pc files and in the
 	# `make install` step itself that need to be influenced.
 	#
@@ -83,7 +83,7 @@ src_install() {
 	cd ${S}/src/java
 	find . -name '*.java' | xargs zip ${D}/usr/share/${PN}-${SLOT}/src/libglade-java-${PV}.src.zip
 
-	# with dojar misbehaving, better do to this manually for the 
+	# with dojar misbehaving, better do to this manually for the
 	# time being. Yes, this is bad hard coding, but what in this ebuild isn't?
 
 	echo "DESCRIPTION=${DESCRIPTION}" \

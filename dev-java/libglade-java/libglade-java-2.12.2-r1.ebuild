@@ -1,10 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.12.2-r1.ebuild,v 1.4 2006/07/17 19:13:01 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/libglade-java-2.12.2-r1.ebuild,v 1.5 2006/09/14 20:15:46 nichoj Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
-
 inherit java-pkg eutils gnome.org
 
 DESCRIPTION="Java bindings for Glade"
@@ -19,19 +18,18 @@ KEYWORDS="amd64 ppc x86"
 IUSE="doc gcj gnome source"
 
 DEPS=">=gnome-base/libglade-2.5.1
-	  >=dev-java/glib-java-0.2.3
-	  >=dev-java/libgnome-java-2.8.0
-	  gnome? ( >=gnome-base/libgnomeui-2.12.0 >=gnome-base/libgnomecanvas-2.12.0 )
-		dev-util/pkgconfig"
+	>=dev-java/glib-java-0.2.3
+	>=dev-java/libgnome-java-2.8.0
+	gnome? ( >=gnome-base/libgnomeui-2.12.0 >=gnome-base/libgnomecanvas-2.12.0 )"
 
 DEPEND=">=virtual/jdk-1.4
-		>=sys-apps/sed-4
-		${DEPS}"
+	${DEPS}"
 RDEPEND=">=virtual/jre-1.4
-		 ${DEPS}"
+	${DEPS}"
 JARNAME="glade${SLOT}.jar"
 
 pkg_setup() {
+	java-pkg_pkg_setup
 	if use gcj ; then
 		if ! built_with_use sys-devel/gcc gcj ; then
 			ewarn
