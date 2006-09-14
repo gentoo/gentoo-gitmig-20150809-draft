@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627.ebuild,v 1.6 2006/03/11 19:59:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20050627.ebuild,v 1.7 2006/09/14 03:47:28 nichoj Exp $
 
 inherit java-pkg eutils
 
-DESCRIPTION="The Sun Multi-Schema XML Validator (MSV) is a Java technology tool to validate XML documents against several kinds of XML schemata."
+DESCRIPTION="Multi-Schema XML Validator, a Java tool for validating XML documents"
 HOMEPAGE="http://www.sun.com/software/xml/developers/multischema/ https://msv.dev.java.net/"
 SRC_URI="mirror://gentoo/${PN}.${PV}.zip"
 
