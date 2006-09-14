@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.7 2006/09/13 21:15:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.8 2006/09/14 03:06:39 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/taglibs/standard/source/jakarta-taglibs-standar
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc jikes examples source"
 
 RDEPEND=">=virtual/jre-1.4.2
