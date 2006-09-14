@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.6 2005/10/24 21:48:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.9.ebuild,v 1.7 2006/09/14 23:38:42 matsuu Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="The Snack Sound Toolkit (Tcl)"
 HOMEPAGE="http://www.speech.kth.se/snack/"
@@ -22,7 +22,7 @@ DEPEND=">dev-lang/tcl-8.4.3
 S="${WORKDIR}/${PN}${PV}"
 
 src_compile() {
-	local myconf=""
+	local myconf="--libdir=/usr/$(get_libdir) --includedir=/usr/include"
 
 	use alsa && myconf="${myconf} --enable-alsa"
 	use threads && myconf="${myconf} --enable-threads"

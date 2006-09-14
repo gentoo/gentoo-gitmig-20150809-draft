@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.17 2006/03/03 16:38:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.18 2006/09/14 23:38:42 matsuu Exp $
+
+  14 Sep 2006; MATSUU Takuto <matsuu@gentoo.org> snack-2.2.9.ebuild,
+  snack-2.2.10.ebuild:
+  Fixed installing to wrong path, bug 109933.
 
 *snack-2.2.10 (03 Mar 2006)
 
