@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/upnp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.19 2006/09/09 20:33:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/ChangeLog,v 1.20 2006/09/14 20:50:30 gustavoz Exp $
+
+  14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/libupnp-1.2.1a-fbsd.patch, -files/libupnp-1.2.1a-gcc4.patch,
+  -files/libupnp-1.2.1a-respectflags.patch, -files/msmessenger.patch,
+  -upnp-1.0.4.ebuild, -upnp-1.0.4-r1.ebuild, -upnp-1.2.1a.ebuild,
+  upnp-1.3.1.ebuild:
+  Stable on sparc wrt #146607 & cleanup
 
   09 Sep 2006; <ticho@gentoo.org> upnp-1.3.1.ebuild:
   Stable on x86, bug #146607.
