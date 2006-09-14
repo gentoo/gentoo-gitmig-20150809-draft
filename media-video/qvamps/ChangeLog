@@ -1,6 +1,13 @@
 # ChangeLog for media-video/qvamps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.4 2006/04/02 22:09:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qvamps/ChangeLog,v 1.5 2006/09/14 22:24:12 sbriesen Exp $
+
+*qvamps-0.98 (14 Sep 2006)
+
+  14 Sep 2006; Stefan Briesenick <sbriesen@gentoo.org> -qvamps-0.21.ebuild,
+  +qvamps-0.98.ebuild:
+  removing old version, bump to new release, fixing -fPIC issue (see bug
+  #142549).
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/qvamps-0.96-dvdread.patch, qvamps-0.96.ebuild:
