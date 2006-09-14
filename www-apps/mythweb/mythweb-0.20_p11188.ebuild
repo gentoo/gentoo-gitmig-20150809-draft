@@ -1,16 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19_p10505.ebuild,v 1.2 2006/09/14 21:16:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20_p11188.ebuild,v 1.1 2006/09/14 21:16:37 cardoe Exp $
 
 inherit webapp depend.php
 
-PATCHREV="${PV#*_p}"
+# Release version
 MY_PV="${PV%_*}"
+
+# SVN revision number to increment from the released version
+if [ "x${MY_PV}" != "x${PV}" ]; then
+	PATCHREV="${PV##*_p}"
+fi
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://ftp.osuosl.org/pub/mythtv/mythplugins-${MY_PV}.tar.bz2
-	http://dev.gentoo.org/~cardoe/files/mythplugins-${MY_PV}-rev${PATCHREV}.patch.bz2"
+SRC_URI="http://ftp.osuosl.org/pub/mythtv/mythplugins-${MY_PV}.tar.bz2"
+if [ -n "${PATCHREV}" ] ; then
+	SRC_URI="${SRC_URI} http://dev.gentoo.org/~cardoe/files/mythtv/mythplugins-${MY_PV}_svn${PATCHREV}.patch.bz2"
+fi
 IUSE=""
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -29,11 +36,12 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	#Fixes of the bugs found in the 0.19 release
-	cd ..
-	epatch "${WORKDIR}"/mythplugins-${MY_PV}-rev${PATCHREV}.patch
+	if [ -n "$PATCHREV" ]; then
+		epatch ${WORKDIR}/mythplugins-${MY_PV}_svn${PATCHREV}.patch
+	fi
+
 }
 
 src_install() {
@@ -47,7 +55,7 @@ src_install() {
 
 	webapp_serverowned ${MY_HTDOCSDIR}/data
 
-	webapp_configfile ${MY_HTDOCSDIR}/config/conf.php
+	webapp_configfile ${MY_HTDOCSDIR}/.htaccess
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 
 	webapp_src_install
