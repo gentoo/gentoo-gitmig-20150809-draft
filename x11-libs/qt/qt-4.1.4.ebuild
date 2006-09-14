@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4.ebuild,v 1.11 2006/09/07 16:54:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4.ebuild,v 1.12 2006/09/14 14:07:54 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -16,17 +16,14 @@ SLOT="4"
 KEYWORDS="amd64 hppa ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="accessibility cups debug doc examples firebird gif jpeg mng mysql nas nis odbc opengl png postgres sqlite xinerama zlib"
 
-DEPEND="|| ( ( x11-libs/libXrandr
-			x11-libs/libXcursor
-			x11-libs/libXi
-			x11-libs/libXfont
-			x11-libs/libSM
-			x11-proto/xextproto
-			x11-proto/inputproto
-			xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
-		)
-		<virtual/x11-7
-	)
+DEPEND="x11-libs/libXrandr
+	x11-libs/libXcursor
+	x11-libs/libXi
+	x11-libs/libXfont
+	x11-libs/libSM
+	x11-proto/xextproto
+	x11-proto/inputproto
+	xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
 	virtual/xft
 	>=media-libs/freetype-2
 	png? ( media-libs/libpng )

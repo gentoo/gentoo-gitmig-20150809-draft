@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_rc1.ebuild,v 1.1 2006/09/06 12:15:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0_rc1.ebuild,v 1.2 2006/09/14 14:07:54 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -19,17 +19,14 @@ IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysq
 
 # need glib and dbus
 
-DEPEND="|| ( ( x11-libs/libXrandr
-			x11-libs/libXcursor
-			x11-libs/libXi
-			x11-libs/libXfont
-			x11-libs/libSM
-			x11-proto/xextproto
-			x11-proto/inputproto
-			xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
-		)
-		<virtual/x11-7
-	)
+DEPEND="x11-libs/libXrandr
+	x11-libs/libXcursor
+	x11-libs/libXi
+	x11-libs/libXfont
+	x11-libs/libSM
+	x11-proto/xextproto
+	x11-proto/inputproto
+	xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
 	virtual/xft
 	>=media-libs/freetype-2
 	dbus? ( >=sys-apps/dbus-0.62 )
