@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.3 2006/09/14 00:51:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.4 2006/09/14 07:13:58 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -9,7 +9,7 @@ MY_PV="${PV%_*}"
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://ftp-osl.osuosl.org/pub/mythtv/${PN}-${MY_PV}.tar.bz2
+SRC_URI="http://ftp.osuosl.org/pub/mythtv/${PN}-${MY_PV}.tar.bz2
 	http://dev.gentoo.org/~cardoe/files/mythtv/${PN}-${MY_PV}_svn${PATCHREV}.patch.bz2"
 
 LICENSE="GPL-2"
