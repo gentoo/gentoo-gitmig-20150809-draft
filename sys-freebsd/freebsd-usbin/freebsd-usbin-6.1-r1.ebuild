@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.1-r1.ebuild,v 1.1 2006/06/01 11:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.1-r1.ebuild,v 1.2 2006/09/14 17:03:27 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -81,6 +81,7 @@ REMOVE_SUBDIRS="
 
 src_unpack() {
 	freebsd_src_unpack
+
 	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 	ln -s "/usr/include" "${WORKDIR}/include"
 }
@@ -97,7 +98,7 @@ src_install() {
 	# in the wrong place, just put it in the doc directory.
 	mkinstall DOCDIR=/usr/share/doc/${PF} || die "Install failed"
 
-	for util in nfs nfsmount rpcbind syslogd moused powerd; do
+	for util in nfs nfsmount rpcbind syslogd moused powerd syscons; do
 		newinitd ${FILESDIR}/${util}.initd ${util}
 		[[ -e ${FILESDIR}/${util}.confd ]] && \
 			newconfd ${FILESDIR}/${util}.confd ${util}

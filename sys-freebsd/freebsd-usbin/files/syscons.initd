@@ -1,0 +1,62 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/files/syscons.initd,v 1.1 2006/09/14 17:03:27 flameeyes Exp $
+
+start() {
+	ebegin "Configuring system console"
+	
+	# XXX: This should handle serial consoles.
+	
+	# Set the keymap.
+	if [ -n "${KEYMAP}" ]; then
+		einfo "Setting keymap to ${KEYMAP}"
+		kbdcontrol -l ${KEYMAP}
+	fi
+	
+	if [ -n "${KEYRATE}" ]; then
+		einfo "Setting keyrate to ${KEYRATE}"
+		kbdcontrol -r ${KEYRATE}
+	fi
+
+	if [ -n "${KEYCHANGE}" ]; then
+		einfo "Changing function keys..."
+		while read $a $b; do
+			kbdcontrol -f "$a" "$b"
+		done <<< ${KEYCHANGE}
+	fi
+	
+	if [ -n "${CURSOR}" ]; then
+		einfo "Setting cursor"
+		vidcontrol -c ${CURSOR}
+	fi
+
+	einfo "Setting custom fonts..."
+	# Nothing to see here, move along...
+	for v in FONT8x{16,14,8}; do
+		if [ -n "${!v}" ]; then
+			vidcontrol -f ${v##FONT} ${!v}
+		fi
+	done
+
+	if [ -n "${BLANKTIME}" ]; then
+		einfo "Setting blanktime"
+		vidcontrol -t ${BLANKTIME}
+	fi
+
+	if [ -n "${SAVER}" ]; then
+		for i in `kldstat | awk '$5 ~ "^splash_.*$" { print $5 }'`; do
+			kldunload ${i}
+		done
+		kldstat -v | grep -q _saver || kldload ${SAVER}_saver
+	fi
+
+	if [ -n "${KBDFLAGS}" ]; then
+		einfo "Setting keyboard flags for all screens"
+		for ttyv in /dev/ttyv*; do    
+			kbdcontrol ${KBDFLAGS} <${ttyv} &>${ttyv}
+		done
+	fi
+
+	eend
+}

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.14 2006/07/27 01:31:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.15 2006/09/14 17:03:27 flameeyes Exp $
+
+  14 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +files/syscons.confd,
+  +files/syscons.initd, freebsd-usbin-6.1-r1.ebuild:
+  Move syscons script and configuration out of baselayout and in here.
 
   27 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -freebsd-usbin-6.0-r3.ebuild:
