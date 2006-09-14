@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.17 2006/09/14 07:03:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.18 2006/09/14 07:15:41 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -53,27 +53,13 @@ fi
 
 S=${WORKDIR}/${MY_P}
 
-alt_kprefix() {
+alt_build_kprefix() {
 	if [[ ${CBUILD} == ${CHOST} && ${CTARGET} == ${CHOST} ]] \
 	   || [[ -n ${UCLIBC_AND_GLIBC} ]]
 	then
 		echo /usr
 	else
-		echo /usr/${CTARGET}
-	fi
-}
-alt_prefix() {
-	if [[ ${CTARGET} == ${CHOST} ]] ; then
-		echo /usr
-	else
-		echo /usr/${CTARGET}
-	fi
-}
-alt_rprefix() {
-	if [[ ${CTARGET} == ${CHOST} ]] ; then
-		echo /
-	else
-		echo /usr/${CTARGET}/
+		echo /usr/${CTARGET}/usr
 	fi
 }
 just_headers() {
@@ -269,10 +255,10 @@ src_unpack() {
 
 	# we are building against system installed kernel headers
 	sed -i \
-		-e "s:KERNEL_SOURCE.*:KERNEL_SOURCE=\"$(alt_kprefix)\":" \
-		-e "s:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX=\"$(alt_rprefix)$(get_libdir)\":" \
-		-e "s:DEVEL_PREFIX=.*:DEVEL_PREFIX=\"$(alt_prefix)\":" \
-		-e "s:RUNTIME_PREFIX=.*:RUNTIME_PREFIX=\"$(alt_rprefix)\":" \
+		-e "/^KERNEL_SOURCE/s:=.*:=\"$(alt_build_kprefix)\":" \
+		-e "/^SHARED_LIB_LOADER_PREFIX/s:=.*:=\"/$(get_libdir)\":" \
+		-e "/^DEVEL_PREFIX/s:=.*:=\"/usr\":" \
+		-e "/^RUNTIME_PREFIX/s:=.*:=\"/\":" \
 		.config
 
 	yes "" 2> /dev/null | make -s oldconfig > /dev/null || die "could not make oldconfig"
@@ -352,23 +338,25 @@ src_test() {
 }
 
 src_install() {
+	local sysroot=${D}
+	[[ ${CHOST} != ${CTARGET} ]] && sysroot="${sysroot}/usr/${CTARGET}"
+
 	local target="install"
 	just_headers && target="install_dev"
-	make PREFIX="${D}" ${target} || die "install failed"
+	make PREFIX="${sysroot}" ${target} || die "install failed"
 
 	# remove files coming from kernel-headers
-	rm -rf "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
+	rm -rf "${D}"${sysroot}/usr/include/{asm,linux,asm-generic}
 
 	# clean up misc cruft
-	find "${D}"$(alt_prefix)/include -type d '(' -name CVS -o -name .svn ')' -print0 | xargs -0 rm -r
-	find "${D}"$(alt_prefix)/include -type f -name .cvsignore -print0 | xargs -0 rm -f
+	find "${D}"${sysroot}/usr/include -type d '(' -name CVS -o -name .svn ')' -print0 | xargs -0 rm -r
+	find "${D}"${sysroot}/usr/include -type f -name .cvsignore -print0 | xargs -0 rm -f
 
 	# Make sure we install the sys-include symlink so that when 
 	# we build a 2nd stage cross-compiler, gcc finds the target 
 	# system headers correctly.  See gcc/doc/gccinstall.info
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		dosym include $(alt_prefix)/sys-include
-		dosym . $(alt_prefix)/usr
+		dosym usr/include /usr/${CTARGET}/sys-include
 		return 0
 	fi
 
@@ -397,6 +385,6 @@ pkg_postinst() {
 		# update cache before reloading init
 		/sbin/ldconfig
 		# reload init ...
-		[[ -x /sbin/init ]] && /sbin/init U &> /dev/null
+		[[ -x /sbin/telinit ]] && /sbin/telinit U &> /dev/null
 	fi
 }

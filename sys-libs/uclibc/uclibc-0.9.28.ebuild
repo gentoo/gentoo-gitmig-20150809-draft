@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.23 2006/09/14 07:03:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.ebuild,v 1.24 2006/09/14 07:15:41 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -437,6 +437,6 @@ pkg_postinst() {
 		# update cache before reloading init
 		/sbin/ldconfig
 		# reload init ...
-		[[ -x /sbin/init ]] && /sbin/init U &> /dev/null
+		[[ -x /sbin/telinit ]] && /sbin/telinit U &> /dev/null
 	fi
 }
