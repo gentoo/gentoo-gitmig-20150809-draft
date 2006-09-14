@@ -1,0 +1,40 @@
+# ChangeLog for net-voip/openmcu
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.1 2006/09/14 01:03:20 genstef Exp $
+
+*openmcu-2.2.0 (14 Sep 2006)
+
+  14 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/openmcu-2.2.0-gentoo.diff, +files/openmcu.confd,
+  +files/openmcu.ini, +files/openmcu.rc6, +metadata.xml,
+  +openmcu-2.2.0.ebuild:
+  moved from net-im, version bump
+
+  28 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
+  -files/openmcu-1.1.7-include.diff, -files/openmcu-1.1.7-log-config.diff,
+  -openmcu-1.1.7.ebuild:
+  Removed old version.
+
+*openmcu-2.1.0 (28 Aug 2005)
+
+  28 Aug 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/openmcu-2.1.0-gentoo.diff, files/openmcu.confd, +files/openmcu.ini,
+  files/openmcu.rc6, +openmcu-2.1.0.ebuild:
+  New version, changed openmcu init script to use a non-root user.
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> openmcu-1.1.7.ebuild:
+  Switch to use epause and ebeep, bug #62950
+
+  24 Oct 2003; <stkn@gentoo.org> metadata.xml, openmcu-1.1.7.ebuild,
+  files/openmcu-1.1.7-include.diff, files/openmcu-1.1.7-log-config.diff,
+  files/openmcu.confd, files/openmcu.rc6:
+  ebuild completely rewritten (fixes bug #31384), new maintainer
+
+  17 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org> openmcu-1.1.7.ebuild:
+  tidy
+
+*openmcu-1.1.7 (12 Sep 2003)
+
+  12 Sep 2003; Michael Imhof <tantive@gentoo.org> :
+  Initial release.
+
