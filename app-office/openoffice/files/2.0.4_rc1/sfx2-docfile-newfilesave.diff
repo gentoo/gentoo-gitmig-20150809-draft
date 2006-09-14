@@ -1,0 +1,13 @@
+--- sfx2/source/doc/docfile.cxx	2006-09-02 00:25:16.000000000 +0800
++++ sfx2/source/doc/docfile.cxx	2006-09-04 17:16:59.000000000 +0800
+@@ -2274,7 +2274,9 @@ void SfxMedium::GetMedium_Impl()
+         }
+ 
+         //TODO/MBA: ErrorHandling - how to transport error from MediaDescriptor
+-        if ( !GetError() && !pImp->xStream.is() && !pImp->xInputStream.is() )
++        //When you create a new file, it will cause the file set Error. but it is correct. 
++        //And the pURLObj will mark the file is new one or opened -- base on gdb.
++        if ( !GetError() && !pImp->xStream.is() && !pImp->xInputStream.is() && pURLObj)
+             SetError( ERRCODE_IO_ACCESSDENIED );
+ 
+ 		if ( !GetError() )

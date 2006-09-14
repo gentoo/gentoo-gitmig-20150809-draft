@@ -42,16 +42,34 @@
  cp -af $TOOLSDIR/src/*.dic $OOBUILDDIR/extras/source/wordbook || exit 1;
 --- patches/src680/apply 
 +++ patches/src680/apply 
-@@ -1014,8 +1014,6 @@
+@@ -150,6 +150,9 @@
+ 
+ # add SPARC platform to automation
+ automation-sparc-platform.diff, i#66140, rengelha
++
++#Fix new file save error in ood-m1 and ood-m2
++sfx2-docfile-newfilesave.diff, i#69232 jianhua
+ 
+ # [ LinuxOnly ]
+ 
+@@ -1008,16 +1011,10 @@
+ 
+ # system STLport
+ dont-copy-and-install-stlport.diff, i#63732, rengelha
+-# support server-only versions of 64bit JDKs
+-64bit-jdk-server-paths.diff, i#65974
+ # throw also Java exception on JNI error
  jni-throw-exception.diff, i#65977
  # system db check
  system-db-check.diff, i#65979
 -# Gentoo's portaudio ...
 -system-portaudio-use-lpthread.diff
- # use IBM j9vm over IBM classic JVM
- ibm-j9vm.diff
+-# use IBM j9vm over IBM classic JVM
+-ibm-j9vm.diff
  
-@@ -1031,7 +1029,10 @@
+ [ GentooOnly ]
+ SectionOwner => aprosky
+@@ -1031,7 +1028,14 @@
  gentoo-gcc-naming-and-versioning.diff, hmth
  # build with -fomit-frame-pointer
  #omit-fp-workaround.diff, i#50625, hmth
@@ -60,10 +78,14 @@
 +xmlhelp-use-libxslt-from-system.diff, i#30380, rengelha
 +# Gentoo's portaudio ...
 +system-portaudio-use-lpthread.diff, hmth
++# support server-only versions of 64bit JDKs
++64bit-jdk-server-paths.diff, i#65974, hmth
++# use IBM j9vm over IBM classic JVM
++ibm-j9vm.diff, hmth
  
  [ DebianBaseOnly ]
  SectionOwner => rengelha
-@@ -1494,8 +1495,6 @@
+@@ -1494,8 +1498,6 @@
  [ GentooExperimental ]
  SectionOwner => hmth
  
