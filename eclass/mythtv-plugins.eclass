@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.15 2006/09/14 07:10:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.16 2006/09/14 20:33:11 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -69,7 +69,7 @@ mythtv-plugins_src_unpack() {
 	{} \;
 	
 		if [ -n "$PATCHREV" ]; then
-			patch -p0 < ${WORKDIR}/mythplugins-${MY_PV}_svn${PATCHREV}.patch
+			epatch ${WORKDIR}/mythplugins-${MY_PV}_svn${PATCHREV}.patch
 		fi
 }
 
