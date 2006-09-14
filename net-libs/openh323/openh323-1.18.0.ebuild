@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.1 2006/09/14 01:12:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.18.0.ebuild,v 1.2 2006/09/14 01:21:48 genstef Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -60,6 +60,9 @@ src_install() {
 		use debug && ln -s ${D}/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_r/_n} \
 			|| ln -s ${D}/usr/lib/libh323_linux_x86_*.so.*.*.* ${i/_n/_r}
 	done
+
+	# set notrace corerctly
+	use debug || dosed "s:^\(NOTRACE.*\):\1 1:" /usr/share/openh323/openh323u.mak
 
 	# mod to keep gnugk happy
 	insinto /usr/share/openh323/src
