@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-base.eclass,v 1.4 2006/09/01 16:46:28 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-base.eclass,v 1.5 2006/09/14 21:16:37 zaheerm Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -65,7 +65,7 @@ gst-plugins-base_src_configure() {
 	done
 
 	cd ${S}
-	econf ${@} ${gst_conf} || die "./configure failure"
+	econf ${@} --with-package-name="Gentoo GStreamer Ebuild" --with-package-origin="http://www.gentoo.org" ${gst_conf} || die "./configure failure"
 
 }
 
