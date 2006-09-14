@@ -1,0 +1,18 @@
+diff -urN liferea-1.0.22-orig/src/liferea-add-feed liferea-1.0.22/src/liferea-add-feed
+--- liferea-1.0.22-orig/src/liferea-add-feed	2006-05-28 21:01:42.000000000 -0400
++++ liferea-1.0.22/src/liferea-add-feed	2006-09-13 23:57:12.000000000 -0400
+@@ -21,11 +21,9 @@
+ 	exit 1
+ fi
+ 
+-if pgrep liferea >/dev/null 2>&1; then
+-	if ! pgrep liferea-bin >/dev/null 2>&1; then
+-		echo "Liferea is not running! You need to start it first."
+-		exit 1
+-	fi
++if ! pgrep liferea >/dev/null 2>&1; then
++	echo "Liferea is not running! You need to start it first."
++	exit 1
+ fi
+ 
+ dbus-send --session --dest=org.gnome.feed.Reader /org/gnome/feed/Reader org.gnome.feed.Reader.Subscribe string:$URL
