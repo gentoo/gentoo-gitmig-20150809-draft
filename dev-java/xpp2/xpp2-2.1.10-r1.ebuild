@@ -1,18 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.2 2006/09/10 23:22:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp2/xpp2-2.1.10-r1.ebuild,v 1.3 2006/09/14 03:53:52 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
 MY_PN="PullParser"
 MY_P="${MY_PN}${PV}"
-DESCRIPTION="Xml Pull Parser - a streaming pull XML parser used to process quickly and efficiently all input elements (for example in SOAP processors)"
+DESCRIPTION="A streaming pull XML parser used to quickly process input elements"
 HOMEPAGE="http://www.extreme.indiana.edu/xgws/xsoap/xpp/mxp1/index.html"
 SRC_URI="http://www.extreme.indiana.edu/xgws/xsoap/xpp/download/${MY_PN}2/${MY_P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc source"
 S="${WORKDIR}/${MY_P}"
 
