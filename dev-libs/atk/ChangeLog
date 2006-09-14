@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.115 2006/09/07 15:05:10 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.116 2006/09/14 01:17:28 agriffis Exp $
+
+  14 Sep 2006; Aron Griffis <agriffis@gentoo.org> atk-1.12.1.ebuild:
+  Mark 1.12.1 stable on ia64. #139612
 
   07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> Manifest:
   Fix digests
