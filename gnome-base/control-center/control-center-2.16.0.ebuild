@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.0.ebuild,v 1.3 2006/09/12 16:17:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.16.0.ebuild,v 1.4 2006/09/15 18:07:12 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -66,7 +66,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} --disable-schemas-install \
 		--disable-scrollkeeper  \
 		--enable-vfs-methods    \
- 		--enable-gstreamer=0.10 \
+		--enable-gstreamer=0.10 \
 		$(use_enable alsa)      \
 		$(use_enable eds aboutme)"
 }
