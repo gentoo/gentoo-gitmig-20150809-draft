@@ -6,7 +6,7 @@
 # script starts up a Onslaught Server.
 # Goto http://www.unrealadmin.org to learn how to edit your options
 
-UCCDIR="/opt/ut2004-ded/System"
+UCCDIR="GAMES_PREFIX_OPT/ut2004-ded/System"
 OPTIONS="server ONS-Torlan?game=Onslaught.ONSOnslaughtGame ini=Default.ini log=server.log -nohomedir"
 
 ### Do not edit below here or the world will explode ###

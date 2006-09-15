@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.5 2006/03/31 21:49:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.ebuild,v 1.6 2006/09/15 19:44:31 wolf31o2 Exp $
 
 inherit games
 
@@ -52,10 +52,12 @@ src_install() {
 	rm -f ${Ddir}/System/*.dll || die "removing windows dlls"
 	rm -f ${Ddir}/System/*.exe || die "removing windows exes"
 
-	prepgamesdirs
-
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ut2004-ded.rc ut2004-ded
+	dosed ":GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
+		/etc/init.d/ut2004-ded || die "sed"
+
+	prepgamesdirs
 }
 
 pkg_postinst() {
@@ -65,7 +67,7 @@ pkg_postinst() {
 	ewarn "You should take the time to edit the default server INI."
 	ewarn "Consult the INI Reference at http://unrealadmin.org/"
 	ewarn "for assistance in adjusting the following file:"
-	ewarn "      /opt/ut2004-ded/System/Default.ini"
+	ewarn "  ${GAMES_PREFIX_OPT}/ut2004-ded/System/Default.ini"
 	echo
 	ewarn "NOTE: To have your server authenticate properly to the"
 	ewarn "      central server, you MUST visit the following site"
