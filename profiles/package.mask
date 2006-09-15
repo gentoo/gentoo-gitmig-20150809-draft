@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5889 2006/09/15 18:25:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5890 2006/09/15 23:12:08 dang Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -172,7 +172,6 @@ media-sound/audtty
 >=dev-dotnet/gconf-sharp-2.16.0
 >=dev-dotnet/rsvg-sharp-2.16.0
 >=dev-dotnet/vte-sharp-2.16.0
-
 # Daniel Gryniewicz <dang@gentoo.org> (06 Sep 2006)
 # GNOME 2.16 mask for testing
 >=gnome-base/gnome-2.16.0
@@ -261,6 +260,14 @@ dev-cpp/cairomm
 >=dev-cpp/libxmlpp-2.13.1
 >=www-client/epiphany-extensions-2.16.0
 >=x11-misc/icon-naming-utils-0.8.1
+>=x11-themes/gtk-engines-2.7
+# Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
+# New Galago Release
+>=dev-libs/libgalago-0.5.0
+>=sys-apps/galago-daemon-0.5.0
+>=x11-plugins/gaim-galago-0.5.0
+>=dev-dotnet/galago-sharp-0.5.0
+=app-misc/tomboy-0.4.1
 # End GNOME 2.16 mask
 
 # Alec Warner <antarus@gentoo.org> (06 Sep 2006)
@@ -550,14 +557,6 @@ mail-filter/libspf
 # Luis Medinas <metalgod@gentoo.org> (08 Aug 2006)
 # Mask gaim-libnotify because it only works with gaim-2.0.0
 x11-plugins/gaim-libnotify
-
-# Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
-# New Galago Release
->=dev-libs/libgalago-0.5.0
->=sys-apps/galago-daemon-0.5.0
->=x11-plugins/gaim-galago-0.5.0
->=dev-dotnet/galago-sharp-0.5.0
-=app-misc/tomboy-0.4.1
 
 # Tim Yamin <plasmaroo@gentoo.org> (07 Aug 2006)
 # Security mask
@@ -1084,11 +1083,6 @@ net-libs/enet
 # Because of changes in ebay our current versions do not work
 # See bug #125813 for details.
 <=app-misc/jbidwatcher-0.9.9
-
-# John N. Laliberte <allanonjl@gentoo.org> (12 Mar 2006)
-# remember, they are using the 2.6 series for 2.14
-# so don't put this in the tree until 2.16.
->=x11-themes/gtk-engines-2.7
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Mar 2006)
 # Work-in-progress to clean this up
