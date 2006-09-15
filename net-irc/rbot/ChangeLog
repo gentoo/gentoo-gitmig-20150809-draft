@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.15 2006/07/31 23:16:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.16 2006/09/15 10:14:17 flameeyes Exp $
+
+*rbot-0.9.10 (15 Sep 2006)
+
+  15 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> -rbot-0.9.9.ebuild,
+  -rbot-0.9.10_pre20060801.ebuild, +rbot-0.9.10.ebuild:
+  Version bump.
 
 *rbot-0.9.10_pre20060801 (31 Jul 2006)
 
