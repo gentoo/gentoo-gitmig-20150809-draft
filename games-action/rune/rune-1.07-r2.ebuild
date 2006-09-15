@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.2 2006/05/24 20:54:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.3 2006/09/15 20:48:47 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,17 +11,14 @@ SRC_URI="mirror://gentoo/rune-all-0.2.tar.bz2
 
 LICENSE="LOKI-EULA"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
 		dev-util/xdelta
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 )
+		x11-libs/libX11
+		x11-libs/libXext
 		>=media-libs/libsdl-1.2.9-r1 )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
