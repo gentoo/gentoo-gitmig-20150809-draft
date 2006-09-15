@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.39 2006/09/14 20:59:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.40 2006/09/15 19:58:37 grobian Exp $
+
+  15 Sep 2006; Fabian Groffen <grobian@gentoo.org> libdvdread-0.9.6.ebuild:
+  Marked ppc-macos stable (bug #147456)
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libdvdread-0.9.6.ebuild:
