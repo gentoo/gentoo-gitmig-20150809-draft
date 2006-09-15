@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r1.ebuild,v 1.4 2006/09/15 13:13:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r1.ebuild,v 1.5 2006/09/15 21:48:38 nichoj Exp $
 
 inherit java eutils versionator rpm
 
@@ -48,7 +48,7 @@ SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* amd64 ppc ~ppc64 ~x86"
+KEYWORDS="-* amd64 ppc ppc64 ~x86"
 IUSE="X doc javacomm nsplugin"
 
 RDEPEND=" !ppc64? ( !amd64? ( sys-libs/lib-compat ) )
@@ -71,14 +71,15 @@ PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 RESTRICT="fetch"
 
+QA_TEXTRELS_amd64="opt/${P}/jre/bin/libj9jit22.so
+	opt/${P}/jre/bin/libjclscar_22.so"
+QA_TEXTRELS_ppc64="opt/${P}/jre/bin/classic/libjvm.so"
+QA_TEXTRELS_ppc="opt/${P}/jre/bin/libjitc.so
+	opt/${P}/jre/bin/libjaas.so"
 QA_TEXTRELS_x86="opt/${P}/jre/bin/lib*.so
 	opt/${P}/jre/bin/javaplugin.so
 	opt/${P}/jre/bin/classic/libjvm.so
 	opt/${P}/jre/bin/classic/libcore.so"
-QA_TEXTRELS_amd64="opt/${P}/jre/bin/libj9jit22.so
-	opt/${P}/jre/bin/libjclscar_22.so"
-QA_TEXTRELS_ppc="opt/${P}/jre/bin/libjitc.so
-	opt/${P}/jre/bin/libjaas.so"
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
@@ -100,7 +101,7 @@ src_compile() { true; }
 
 src_install() {
 	# The javaws execution script is 777 why?
-	chmod 0755 ${S}/jre/javaws/javaws
+	[[ -f ${S}/jre/javaws/javaws ]] && chmod 0755 ${S}/jre/javaws/javaws
 
 	# Copy all the files to the designated directory
 	mkdir -p ${D}opt/${P}
