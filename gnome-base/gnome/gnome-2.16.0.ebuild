@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.0.ebuild,v 1.3 2006/09/14 14:48:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.16.0.ebuild,v 1.4 2006/09/15 16:01:39 dang Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -32,7 +32,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/libart_lgpl-2.3.17
 
 	>=dev-libs/libIDL-0.8.7
-	>=gnome-base/orbit-2.14.3
+	>=gnome-base/orbit-2.14.2
 
 	>=x11-libs/libwnck-2.16.0
 	>=x11-wm/metacity-2.16.0
