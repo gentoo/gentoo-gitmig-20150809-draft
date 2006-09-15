@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.54 2006/08/07 18:08:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.55 2006/09/15 06:43:46 ian Exp $
+
+*DBD-mysql-3.0007 (15 Sep 2006)
+
+  15 Sep 2006; Christian Hartmann <ian@gentoo.org> +DBD-mysql-3.0007.ebuild:
+  Version bump; bug #147613
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   DBD-mysql-3.0004.ebuild:
