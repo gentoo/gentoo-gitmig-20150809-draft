@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.4-r1.ebuild,v 1.1 2006/08/13 21:43:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.4-r1.ebuild,v 1.2 2006/09/15 06:56:56 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -35,6 +35,8 @@ NUT_PRIVATE_FILES="/etc/nut/{upsd.conf,upsd.users,upsmon.conf}"
 pkg_setup() {
 	enewgroup nut 84
 	enewuser nut 84 -1 /var/state/nut nut,tty
+	# try to add nut to the tty group for old cases where it already existed
+	gpasswd -a nut tty
 	warningmsg
 }
 
