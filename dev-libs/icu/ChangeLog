@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.38 2006/09/13 20:30:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.39 2006/09/15 20:18:33 dang Exp $
+
+  15 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> icu-3.4.1.ebuild:
+  Marked ~amd64 For bug #111545
 
   13 Sep 2006; Luca Barbato <lu_zero@gentoo.org> icu-3.4.1.ebuild:
   Marked ~ppc
