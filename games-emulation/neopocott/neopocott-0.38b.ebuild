@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/neopocott/neopocott-0.38b.ebuild,v 1.5 2004/07/01 11:15:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/neopocott/neopocott-0.38b.ebuild,v 1.6 2006/09/15 19:47:24 wolf31o2 Exp $
 
 inherit games
 
@@ -21,8 +21,10 @@ RDEPEND="media-libs/libsdl
 S=${WORKDIR}
 
 src_install() {
-	exeinto /opt/bin
+	local dir=${GAMES_PREFIX_OPT}/${PN}
+	exeinto "${dir}"
 	doexe neopocott || die "doexe failed"
 	dodoc doc/*
+	games_make_wrapper neopocott ./neopocott "${dir}" "${dir}"
 	prepgamesdirs
 }
