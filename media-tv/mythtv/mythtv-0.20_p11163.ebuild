@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.4 2006/09/14 07:13:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.5 2006/09/15 00:43:54 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -102,7 +102,7 @@ src_unpack() {
 	cd ${S}
 
 	#Fixes of the bugs found in the 0.19 release
-	epatch "${WORKDIR}"/${PN}-${MY_PV}-rev${PATCHREV}.patch
+	epatch "${WORKDIR}"/${PN}-${MY_PV}_svn${PATCHREV}.patch
 
 	# Support installing in libdir != lib
 	#epatch "${FILESDIR}/mythtv-0.19-libdir.patch"
