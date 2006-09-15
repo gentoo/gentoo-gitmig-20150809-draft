@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.135 2006/09/05 03:30:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.136 2006/09/15 06:22:18 robbat2 Exp $
+
+  15 Sep 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/courier-imap-4.0.6-db4-bdbobj_configure.in.patch,
+  +files/courier-imap-4.0.6-db4-configure.in.patch,
+  courier-imap-4.0.6.ebuild:
+  Fix bug #134943 - compile failure with newer versions of berkdb.
 
   05 Sep 2006; Joshua Kinard <kumba@gentoo.org> courier-imap-4.0.4.ebuild:
   Marked stable on mips.

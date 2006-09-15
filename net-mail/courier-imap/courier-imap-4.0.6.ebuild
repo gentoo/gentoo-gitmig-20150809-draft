@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6.ebuild,v 1.2 2006/08/25 21:17:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6.ebuild,v 1.3 2006/09/15 06:22:18 robbat2 Exp $
 
 inherit eutils gnuconfig
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -71,8 +71,8 @@ src_unpack() {
 	# These patches should fix problem detecting Berkeley DB.
 	# We now can compile with db4 support.
 	if use berkdb; then
-		epatch ${FILESDIR}/${PN}-4.0.1-db4-bdbobj_configure.in.patch
-		epatch ${FILESDIR}/${PN}-4.0.1-db4-configure.in.patch
+		epatch ${FILESDIR}/${PN}-4.0.6-db4-bdbobj_configure.in.patch
+		epatch ${FILESDIR}/${PN}-4.0.6-db4-configure.in.patch
 	fi
 
 	export WANT_AUTOCONF="2.5"
