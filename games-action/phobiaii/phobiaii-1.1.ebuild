@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.10 2006/09/15 19:26:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.11 2006/09/15 19:52:50 wolf31o2 Exp $
 
 inherit games
 
@@ -31,7 +31,7 @@ src_install() {
 	dodir "${GAMES_PREFIX_OPT}"/${PN}
 	mv * "${D}/${GAMES_PREFIX_OPT}"/${PN}/
 
-	dosed ":GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
+	dosed "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
 		${GAMES_BINDIR}/phobiaII || die "sed"
 
 

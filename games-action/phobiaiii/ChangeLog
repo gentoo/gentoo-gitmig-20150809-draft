@@ -1,6 +1,10 @@
 # ChangeLog for games-action/phobiaiii
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/ChangeLog,v 1.7 2006/09/15 19:25:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/ChangeLog,v 1.8 2006/09/15 19:52:05 wolf31o2 Exp $
+
+  15 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  phobiaiii-1.0-r2.ebuild:
+  I forgot the s in my sed.  Bad me.
 
   15 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/phobiaIII,
   phobiaiii-1.0-r2.ebuild:
