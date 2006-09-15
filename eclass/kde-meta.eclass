@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.79 2006/06/27 13:28:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.80 2006/09/15 18:22:25 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -29,6 +29,7 @@ if [[ "${KMNAME}" = "koffice" ]]; then
 		1.5_beta1)	TARBALLDIRVER="1.4.90"; TARBALLVER="1.4.90" ;;
 		1.5_beta2)	TARBALLDIRVER="1.4.95"; TARBALLVER="1.4.95" ;;
 		1.5_rc1)	TARBALLDIRVER="1.5.0-rc1"; TARBALLVER="1.5.0-rc1" ;;
+		1.6_beta1)	TARBALLDIRVER="1.5.91"; TARBALLVER="1.5.91" ;;
 	esac
 fi
 
@@ -110,6 +111,9 @@ elif [[ "$KMNAME" == "koffice" ]]; then
 			SRC_PATH="mirror://kde/stable/koffice-1.4/src/koffice-$PV.tar.bz2"
 			;;
 		1.5_beta2)
+			SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/koffice-${TARBALLVER}.tar.bz2"
+			;;
+		1.6_beta1)
 			SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/koffice-${TARBALLVER}.tar.bz2"
 			;;
 		*)
