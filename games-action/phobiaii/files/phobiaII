@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /opt/phobiaii
+cd GAMES_PREFIX_OPT/phobiaii
 exec ./linuxphobia "$@"
