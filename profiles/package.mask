@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5888 2006/09/15 00:03:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5889 2006/09/15 18:25:40 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,25 @@
 ##
 ##   End example
 ##
+
+# Carsten Lohrke <arlo@gentoo.org> (14 Sep 2006)
+# Koffice 1.6 pre-release ebuilds
+>=app-office/karbon-1.6_beta1
+>=app-office/kchart-1.6_beta1
+>=app-office/kexi-1.6_beta1
+>=app-office/kformula-1.6_beta1
+>=app-office/kivio-1.6_beta1
+>=app-office/koffice-data-1.6_beta1
+>=app-office/koffice-1.6_beta1
+>=app-office/koffice-libs-1.6_beta1
+>=app-office/koffice-meta-1.6_beta1
+>=app-office/koshell-1.6_beta1
+>=app-office/kplato-1.6_beta1
+>=app-office/kpresenter-1.6_beta1
+>=app-office/krita-1.6_beta1
+>=app-office/kspread-1.6_beta1
+>=app-office/kugar-1.6_beta1
+>=app-office/kword-1.6_beta1
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2006)
 # All versions in portage need <net-misc/upnp-1.1 which was removed
