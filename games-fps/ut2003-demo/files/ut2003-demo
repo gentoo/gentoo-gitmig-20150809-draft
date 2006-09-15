@@ -2,7 +2,7 @@
 # Written by phoen][x <phoenix@gentoo.org>, Sep/19/2002
 # Modifications, enhancements or bugs? Mail me.
 
-INSTALL="/opt/ut2003-demo"
+INSTALL="GAMES_PREFIX_OPT//ut2003-demo"
 
 case ${1} in
     "--results")

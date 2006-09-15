@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.17 2006/04/14 12:00:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.18 2006/09/15 20:26:41 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -18,7 +18,7 @@ RESTRICT="strip"
 
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/opengl
-	=virtual/libstdc++-3.3
+	~virtual/libstdc++-3.3
 	x86? (
 		|| (
 			(
@@ -31,55 +31,56 @@ RDEPEND="virtual/opengl
 S="${WORKDIR}"
 
 GAMES_CHECK_LICENSE="yes"
-dir="${GAMES_PREFIX_OPT}/${PN}"
-Ddir="${D}/${dir}"
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 src_unpack() {
-	unpack_makeself ${DISTDIR}/ut2003demo-lnx-${PV}.sh.bin \
+	unpack_makeself "${DISTDIR}"/ut2003demo-lnx-${PV}.sh.bin \
 		|| die "unpacking demo"
-	unzip "${DISTDIR}/UT2003CrashFix.zip" \
+	unzip "${DISTDIR}"/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
-	tar -zxf setupstuff.tar.gz || die
+	unpack setupstuff.tar.gz || die
 }
 
 src_install() {
-	local f
-
 	einfo "This will take a while ... go get a pizza or something"
-
 	dodir "${dir}"
 
 	tar -jxvf ut2003lnx_demo.tar.bz2 -C "${Ddir}" || die
-	tar -jxvf "${DISTDIR}/${PN}-misc.tar.bz2" -C "${Ddir}" || die
+	tar -jxvf "${DISTDIR}"/${PN}-misc.tar.bz2 -C "${Ddir}" || die
 
 	# fix the benchmark configurations to use SDL rather than the Windows driver
+	local f
 	for f in MaxDetail.ini MinDetail.ini ; do
 		sed -i \
 			-e 's/RenderDevice=D3DDrv.D3DRenderDevice/\;RenderDevice=D3DDrv.D3DRenderDevice/' \
 			-e 's/ViewportManager=WinDrv.WindowsClient/\;ViewportManager=WinDrv.WindowsClient/' \
 			-e 's/\;RenderDevice=OpenGLDrv.OpenGLRenderDevice/RenderDevice=OpenGLDrv.OpenGLRenderDevice/' \
 			-e 's/\;ViewportManager=SDLDrv.SDLClient/ViewportManager=SDLDrv.SDLClient/' \
-			"${Ddir}/Benchmark/Stuff/${f}" \
+			"${Ddir}"/Benchmark/Stuff/${f} \
 			|| die "sed ${dir}/Benchmark/Stuff/${f} failed"
 	done
 
 	# have the benchmarks run the nifty wrapper script rather than ../System/ut2003-bin directly
-	for f in "${Ddir}/Benchmark/"*-*.sh ; do
+	for f in "${Ddir}"/Benchmark/*-*.sh ; do
 		sed -i \
 			-e 's:\.\./System/ut2003-bin:../ut2003_demo:' "${f}" \
 			|| die "sed ${f} failed"
 	done
 
 	# Wrapper and benchmark-scripts
-	dogamesbin "${FILESDIR}/ut2003-demo" || die "dogamesbin failed"
-	exeinto "${dir}/Benchmark"
+	dogamesbin "${FILESDIR}"/ut2003-demo || die "dogamesbin failed"
+	exeinto "${dir}"/Benchmark
 	doexe "${FILESDIR}/"{benchmark,results.sh} || die "doexe failed"
+	dosed "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
+		"${GAMES_BINDIR}"/benchmark "${dir}"/Benchmark/benchmark \
+		|| die "sed"
 
 	# Here we apply DrSiN's crash patch
-	cp "${S}/CrashFix/System/crashfix.u" "${Ddir}/System" \
+	cp "${S}"/CrashFix/System/crashfix.u "${Ddir}"/System \
 		|| die "CrashFix failed"
 
-ed "${Ddir}/System/Default.ini" >/dev/null 2>&1 <<EOT
+ed "${Ddir}"/System/Default.ini >/dev/null 2>&1 <<EOT
 $
 ?Engine.GameInfo?
 a

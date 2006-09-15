@@ -5,7 +5,7 @@
 
 # Tweaks by Daniel Robbins <drobbins@gentoo.org> 25 Feb 2003
 
-STUFF=/opt/ut2003-demo/Benchmark/Stuff
+STUFF=GAMES_PREFIX_OPT/ut2003-demo/Benchmark/Stuff
 MYPATH=${HOME}/.ut2003/Benchmark
 TEMPLOG=${MYPATH}/benchmark.log
 LOG=${MYPATH}/bench.log
@@ -18,8 +18,8 @@ touch ${TEMPLOG} ${LOG}
 date > $LOG
 
 echo ">> Starting benchmark"
-cd /opt/ut2003-demo/System
-for BENCH in /opt/ut2003-demo/Benchmark/*-*.sh
+cd GAMES_PREFIX_OPT//ut2003-demo/System
+for BENCH in GAMES_PREFIX_OPT//ut2003-demo/Benchmark/*-*.sh
 do
 	echo "Running ${BENCH} with MinDetail" 
 	${BENCH} -ini=${STUFF}/MinDetail.ini -userini=${STUFF}/MinDetailUser.ini &> /dev/null
@@ -33,5 +33,5 @@ do
 done
 
 echo ">> Benchmark complete"
-/opt/ut2003-demo/Benchmark/results.sh
+GAMES_PREFIX_OPT/ut2003-demo/Benchmark/results.sh
 echo ">> Use 'ut2003-demo --results' to show these results again (without benchmarking)"
