@@ -1,6 +1,13 @@
 # ChangeLog for media-video/effectv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.3 2006/08/30 15:42:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/effectv/ChangeLog,v 1.4 2006/09/15 20:34:08 zzam Exp $
+
+*effectv-0.3.11 (15 Sep 2006)
+
+  15 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/effectv-0.3.11-timedist.patch, +effectv-0.3.11.ebuild:
+  Version bumped, thanks to Francisco Javier <ffelix@sshinf.com> for
+  reporting, Bug #146749.
 
   30 Aug 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/effectv-0.3.10-trunc-name-collision.patch, effectv-0.3.10.ebuild:
