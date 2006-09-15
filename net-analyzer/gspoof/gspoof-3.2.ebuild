@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/gspoof-3.2.ebuild,v 1.7 2005/12/25 00:31:42 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/gspoof-3.2.ebuild,v 1.8 2006/09/15 15:27:37 spock Exp $
+
+inherit eutils
 
 DESCRIPTION="A simple GTK/command line TCP/IP packet generator"
 HOMEPAGE="http://gspoof.sourceforge.net/"
@@ -15,9 +17,10 @@ DEPEND="=x11-libs/gtk+-2*
 	=dev-libs/glib-2*
 	>=net-libs/libnet-1.1.1"
 
-src_compile() {
-	econf || die
-	emake || die
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/gspoof-def-values.patch
 }
 
 src_install() {

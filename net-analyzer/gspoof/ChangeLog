@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/gspoof
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.7 2005/12/25 00:31:42 spock Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gspoof/ChangeLog,v 1.8 2006/09/15 15:27:37 spock Exp $
+
+  15 Sep 2006; Michał Januszewski <spock@gentoo.org>
+  +files/gspoof-def-values.patch, gspoof-3.2.ebuild:
+  Fixed bug #143906.
 
   25 Dec 2005; Michał Januszewski <spock@gentoo.org> gspoof-3.2.ebuild:
   Added missing call to econf (bug #109549).
