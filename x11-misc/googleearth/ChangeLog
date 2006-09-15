@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.15 2006/09/14 09:27:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.16 2006/09/15 14:16:47 genstef Exp $
+
+  15 Sep 2006; Stefan Schweizer <genstef@gentoo.org> ChangeLog:
+  digest fix
 
   14 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
   googleearth-4_beta.ebuild:
