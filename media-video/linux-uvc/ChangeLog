@@ -1,6 +1,10 @@
 # ChangeLog for media-video/linux-uvc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.2 2006/09/01 09:36:21 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/ChangeLog,v 1.3 2006/09/15 13:56:40 genstef Exp $
+
+  15 Sep 2006; Stefan Schweizer <genstef@gentoo.org> +files/uvc-2.6.18.diff,
+  linux-uvc-0.0.1_pre51.ebuild:
+  add 2.6.18 patch by me
 
 *linux-uvc-0.0.1_pre51 (01 Sep 2006)
 
