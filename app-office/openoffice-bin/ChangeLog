@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.141 2006/09/10 18:33:24 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.142 2006/09/15 20:08:43 suka Exp $
+
+*openoffice-bin-2.0.4_rc2 (15 Sep 2006)
+
+  15 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.4_rc1/50-openoffice-bin, +files/2.0.4_rc2/50-openoffice-bin,
+  -files/2.0.4_rc1/ooo-wrapper2, +files/2.0.4_rc2/ooo-wrapper2,
+  -openoffice-bin-2.0.4_rc1.ebuild, +openoffice-bin-2.0.4_rc2.ebuild:
+  Bump to 2.0.4_rc2, also add kde-use-flag and remove modular X-suport
 
 *openoffice-bin-2.0.4_rc1 (10 Sep 2006)
 
