@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsmi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.3 2005/12/12 09:04:09 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsmi/ChangeLog,v 1.4 2006/09/15 06:26:43 robbat2 Exp $
+
+*libsmi-0.4.5 (15 Sep 2006)
+
+  15 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> libsmi-0.4.2.ebuild,
+  +libsmi-0.4.5.ebuild:
+  Bug #146776 - version bump. Also add ~amd64 keyword.
 
   12 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml:
   Add metadata.
