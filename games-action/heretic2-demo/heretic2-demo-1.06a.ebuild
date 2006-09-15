@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.5 2006/09/06 07:08:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.6 2006/09/15 20:57:21 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -18,13 +18,10 @@ QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/heretic2-demo/ref_glx.so"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="x86? (
-	|| (
-		(
-			x11-libs/libX11
-			x11-libs/libXext
-			x11-libs/libXau
-			x11-libs/libXdmcp )
-		virtual/x11 ) )
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXau
+	x11-libs/libXdmcp )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-compat )"
