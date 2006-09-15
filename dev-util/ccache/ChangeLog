@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.47 2006/09/14 00:13:56 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.48 2006/09/15 09:33:18 lisa Exp $
+
+*ccache-2.4-r6 (15 Sep 2006)
+
+  15 Sep 2006; Lisa Seelye <lisa@gentoo.org> +ccache-2.4-r6.ebuild:
+  okay, apparently -r5 wasnt binary friendly. bug 145167 comment
 
 *ccache-2.4-r5 (14 Sep 2006)
 
