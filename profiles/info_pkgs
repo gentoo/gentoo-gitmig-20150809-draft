@@ -14,3 +14,4 @@ dev-util/ccache
 dev-python/pycrypto
 sys-devel/gcc-config
 app-admin/eselect-compiler
+dev-java/java-config
