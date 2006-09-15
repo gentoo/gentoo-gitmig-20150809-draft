@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r3.ebuild,v 1.1 2006/09/14 06:02:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r3.ebuild,v 1.2 2006/09/15 13:13:18 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -25,6 +25,9 @@ elif use ppc64 ; then
 	JDK_DIST="IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm"
 	JAVACOMM_DIST="IBMJava2-JAVACOMM-${RPM_PV}.ppc64.rpm"
 	S="${WORKDIR}/opt/IBMJava2-ppc64-142"
+elif use s390 ; then
+	JDK_DIST="IBMJava2-142-z31-SDK-${RPM_PV}.s390.rpm"
+	S="${WORKDIR}/opt/IBMJava2-s390-142"
 fi
 
 DESCRIPTION="IBM Java Development Kit"
@@ -33,15 +36,16 @@ DOWNLOADPAGE="${HOMEPAGE}linux/download.html"
 # bug #125178
 ALT_DOWNLOADPAGE="${HOMEPAGE}linux/older_download.html"
 SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
-		 amd64? ( IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm )
-		 ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
-		 ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm )
-		 javacomm? (
-		 			x86? ( IBMJava2-JAVACOMM-${RPM_PV}.i386.rpm )
+		amd64? ( IBMJava2-AMD64-142-SDK-${RPM_PV}.x86_64.rpm )
+		ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
+		ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm )
+		s390? ( IBMJava2-142-z31-SDK-${RPM_PV}.s390.rpm )
+		javacomm? (
+					x86? ( IBMJava2-JAVACOMM-${RPM_PV}.i386.rpm )
 					amd64? ( IBMJava2-JAVACOMM-AMD64-${RPM_PV}.x86_64.rpm )
 					ppc? ( IBMJava2-142-ppc32-SDK-${RPM_PV}.ppc.rpm )
 					ppc64? ( IBMJava2-142-ppc64-SDK-${RPM_PV}.ppc64.rpm )
-		 		   )"
+				  )"
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
