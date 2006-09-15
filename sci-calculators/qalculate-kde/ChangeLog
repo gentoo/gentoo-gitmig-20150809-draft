@@ -1,6 +1,14 @@
 # ChangeLog for sci-calculators/qalculate-kde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.13 2006/06/18 14:07:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/qalculate-kde/ChangeLog,v 1.14 2006/09/15 16:19:35 tsunam Exp $
+
+  15 Sep 2006; Joshua Jackson <tsunam@gentoo.org>
+  qalculate-kde-0.9.4.ebuild:
+  x86 stable; bug #146202
+
+  15 Sep 2006; Joshua Jackson <tsunam@gentoo.org>
+  qalculate-kde-0.9.4.ebuild:
+  x86 stable; bug #146202
 
 *qalculate-kde-0.9.4 (18 Jun 2006)
 
