@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-220.ebuild,v 1.2 2006/09/15 01:48:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-220.ebuild,v 1.3 2006/09/15 01:50:35 vapier Exp $
 
 inherit flag-o-matic
 
@@ -38,7 +38,7 @@ pkg_setup() {
 
 src_compile() {
 	filter-flags "-fstack-protector"
-	replace-flags "-Os" "-O2"
+	replace-flags "-Os" "-O2" # work around gcc-4.1.1-r[01] bugs
 
 	local myconf=""
 
