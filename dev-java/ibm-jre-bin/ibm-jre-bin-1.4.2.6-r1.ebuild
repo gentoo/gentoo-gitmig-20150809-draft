@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r1.ebuild,v 1.4 2006/09/15 04:48:27 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r1.ebuild,v 1.5 2006/09/15 22:04:42 nichoj Exp $
 
 inherit java eutils versionator rpm
 
@@ -34,7 +34,7 @@ SRC_URI="x86? ( IBMJava2-142-ia32-JRE-${RPM_PV}.i386.rpm )
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"
-KEYWORDS="-* amd64 ppc ~ppc64 ~x86"
+KEYWORDS="-* amd64 ppc ppc64 ~x86"
 IUSE="X nsplugin"
 
 RDEPEND="!ppc64? ( !amd64? ( sys-libs/lib-compat ) )
@@ -57,12 +57,13 @@ RESTRICT="fetch"
 
 QA_TEXTRELS_amd64="opt/${P}/bin/libj9jit22.so
 	opt/${P}/bin/libjclscar_22.so"
+QA_TEXTRELS_ppc="opt/${P}/bin/libjitc.so
+        opt/${P}/bin/libjaas.so"
+QA_TEXTRELS_ppc64="opt/${P}/bin/classic/libjvm.so"
 QA_TEXTRELS_x86="opt/${P}/bin/lib*.so
 	opt/${P}/bin/javaplugin.so
 	opt/${P}/bin/classic/libjvm.so
 	opt/${P}/bin/classic/libcore.so"
-QA_TEXTRELS_ppc="opt/${P}/bin/libjitc.so
-        opt/${P}/bin/libjaas.so"
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
