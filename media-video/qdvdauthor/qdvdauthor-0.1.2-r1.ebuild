@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.1.2-r1.ebuild,v 1.1 2006/09/15 13:42:16 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.1.2-r1.ebuild,v 1.2 2006/09/15 14:04:27 sbriesen Exp $
 
 inherit eutils qt3
 
@@ -21,7 +21,8 @@ DEPEND=">=media-video/dvdauthor-0.6.11
 	!xine? ( !mplayer? ( >=media-libs/xine-lib-1.1.0 ) )
 	media-sound/sox
 	media-sound/lame
-	media-libs/libogg
+	media-sound/toolame
+	media-libs/netpbm
 	$(qt_min_version 3.2)"
 
 # TODO:
