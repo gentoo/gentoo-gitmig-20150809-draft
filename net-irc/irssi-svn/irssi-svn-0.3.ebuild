@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.17 2006/08/01 20:16:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.18 2006/09/15 21:15:29 swegener Exp $
 
 inherit subversion perl-app flag-o-matic
 
-ESVN_REPO_URI="http://svn.irssi.org/repos/irssi/trunk/"
+ESVN_REPO_URI="http://svn.irssi.org/repos/irssi/trunk"
 ESVN_PROJECT="irssi"
 ESVN_BOOTSTRAP="NOCONFIGURE=1 ./autogen.sh"
 
