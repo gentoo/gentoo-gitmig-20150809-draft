@@ -1,6 +1,15 @@
 # ChangeLog for app-mobilephone/bitpim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.13 2006/06/02 20:19:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/ChangeLog,v 1.14 2006/09/15 15:51:44 mrness Exp $
+
+*bitpim-0.9.07 (15 Sep 2006)
+
+  15 Sep 2006; Alin Nastac <mrness@gentoo.org>
+  -files/bitpim-0.8.12-gentoo.patch, -files/bitpim-0.8.13-gentoo.patch,
+  +files/bitpim-0.9.07-gentoo.patch, -bitpim-0.8.08.ebuild,
+  -bitpim-0.8.13.ebuild, +bitpim-0.9.07.ebuild:
+  Remove obsolete versions, including the latest stable on x86 (#135321).
+  Version bump, which appears to also solve 'crash on exit' bug (#130914).
 
 *bitpim-0.9.00 (02 Jun 2006)
 
