@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0-r1.ebuild,v 1.7 2006/09/09 19:53:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0-r1.ebuild,v 1.8 2006/09/15 23:23:36 weeve Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.proftpd.org/
 SLOT="0"
 LICENSE="GPL-2"
 #removed mips due to dep issue with clamav
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	clamav? ( app-antivirus/clamav )
