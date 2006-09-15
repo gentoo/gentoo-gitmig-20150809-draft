@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.11 2006/08/22 19:42:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211.ebuild,v 1.12 2006/09/15 03:27:50 tsunam Exp $
 
 MY_P=cku209
 DESCRIPTION="combined serial and network communication software package"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.kermit-project.org/"
 
 LICENSE="Kermit"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
