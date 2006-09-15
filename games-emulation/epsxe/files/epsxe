@@ -1,7 +1,7 @@
 #!/bin/sh
 
-PSEMUDIR=/usr/games/lib/psemu
-EPSXEDIR=/opt/epsxe
+PSEMUDIR=GAMES_LIBDIR/psemu
+EPSXEDIR=GAMES_PREFIX_OPT/epsxe
 
 mkdir -p ~/.epsxe
 cd ~/.epsxe
