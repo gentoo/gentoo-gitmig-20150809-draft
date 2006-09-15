@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.40.ebuild,v 1.1 2006/06/27 17:46:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.40.ebuild,v 1.2 2006/09/15 20:33:06 wolf31o2 Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ LICENSE="as-is"
 SLOT="0"
 IUSE="dedicated"
 RESTRICT="strip"
-QA_TEXTRELS="opt/legends/libSDL-1.3.so.0"
+QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/legends/libSDL-1.3.so.0"
 
 DEPEND=""
 RDEPEND=">=media-libs/libsdl-1.2
