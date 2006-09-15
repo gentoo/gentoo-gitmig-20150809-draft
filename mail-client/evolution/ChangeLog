@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.139 2006/09/14 00:41:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.140 2006/09/15 19:07:34 dang Exp $
+
+  15 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  -files/evolution-2.8.0-uri.patch, +files/evolution-2.8.0-uri.patch.gz,
+  evolution-2.8.0.ebuild:
+  Make repoman happy; remove hppa and ia64 until libnotify can be keyworded
 
   14 Sep 2006; Aron Griffis <agriffis@gentoo.org> evolution-2.6.2-r1.ebuild:
   Mark 2.6.2-r1 stable on ia64. #139612

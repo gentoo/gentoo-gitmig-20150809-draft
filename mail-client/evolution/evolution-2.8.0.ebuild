@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.0.ebuild,v 1.2 2006/09/12 14:45:59 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.0.ebuild,v 1.3 2006/09/15 19:07:34 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bogofilter crypt dbus debug doc gstreamer hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
 
 # Pango dependency required to avoid font rendering problems
@@ -106,7 +106,7 @@ pkg_setup() {
 		bbdb subject-thread save-calendar select-one-source copy-tool \
 		mail-to-task mark-calendar-offline mailing-list-actions \
 		new-mail-notify default-mailer import-ics-attachments"
-	
+
 	# For dev releases, add experimental plugins
 	plugins="${plugins} backup-restore folder-unsubscribe mail-to-meeting \
 		prefer-plain save-attachments"
@@ -148,7 +148,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3.7-configure_plugins.patch
 
 	# Move evo to URI-based saving
-	epatch ${FILESDIR}/${PN}-2.8.0-uri.patch
+	epatch ${FILESDIR}/${PN}-2.8.0-uri.patch.gz
 
 	# Fix 64-bit warnings
 	epatch ${FILESDIR}/${PN}-2.8.0-64-bit.patch
