@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5887 2006/09/14 20:21:32 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5888 2006/09/15 00:03:48 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2006)
+# All versions in portage need <net-misc/upnp-1.1 which was removed
+net-misc/linux-igd
 
 # Joshua Jackson <tsunam@gentoo.org> (14 Sep 2006)
 # Masking Rufus as upstream is dead and there are better alternatives in the tree, pending removal in october.
