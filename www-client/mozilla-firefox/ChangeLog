@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.179 2006/09/02 23:55:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.180 2006/09/15 15:58:55 tcort Exp $
+
+  15 Sep 2006; Thomas Cort <tcort@gentoo.org>
+  mozilla-firefox-1.0.7-r4.ebuild:
+  Drop alpha keyword wrt security Bug #135254.
 
   03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.5.0.5.ebuild:
