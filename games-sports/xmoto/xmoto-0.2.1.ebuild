@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.1.ebuild,v 1.1 2006/09/15 10:52:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.2.1.ebuild,v 1.2 2006/09/15 23:41:23 genstef Exp $
 
 inherit eutils games
 
@@ -23,6 +23,11 @@ DEPEND="media-libs/jpeg
 	dev-lang/lua
 	dev-games/ode
 	virtual/opengl"
+
+src_compile() {
+	egamesconf || die "egamesconf failed"
+	emake -j1 || die "emake failed"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
