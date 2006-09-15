@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.15.ebuild,v 1.9 2006/09/05 05:42:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/File-Spec-3.15.ebuild,v 1.10 2006/09/15 21:05:23 mcummings Exp $
+
+inherit perl-module
 
 MY_P="PathTools-${PV}"
 S=${WORKDIR}/${MY_P}
 
 myconf='INSTALLDIRS=vendor'
-inherit perl-module
 
 DESCRIPTION="Handling files and directories portably"
 HOMEPAGE="http://www.cpan.org/modules/by-authors/id/K/KW/KWILLIAMS/${P}.readme"
