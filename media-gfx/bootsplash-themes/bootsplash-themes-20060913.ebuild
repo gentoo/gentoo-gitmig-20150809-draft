@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.1 2006/09/13 16:06:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.2 2006/09/15 09:31:11 spock Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -165,7 +165,6 @@ SRC_URI="${THEME_URI}/Theme-73labAllstar.tar.bz2
 	${THEME_URI}/Theme-SwirlPool.tar.bz2
 	${THEME_URI}/Theme-ThinkLinux.tar.bz2
 	${THEME_URI}/Theme-TuxInfo-Conectiva.tar.bz2
-	${THEME_URI}/Theme-TuxInfo-Connectiva.tar.bz2
 	${THEME_URI}/Theme-TuxInfo-Debian.tar.bz2
 	${THEME_URI}/Theme-TuxInfo-Mandrake.tar.bz2
 	${THEME_URI}/Theme-TuxInfo-RedHat.tar.bz2
