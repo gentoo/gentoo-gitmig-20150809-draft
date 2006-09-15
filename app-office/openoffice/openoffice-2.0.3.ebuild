@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.12 2006/09/12 14:52:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.13 2006/09/15 11:21:47 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -218,6 +218,7 @@ src_compile() {
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-fno-default-inline"
 	filter-flags "-fstack-protector"
+	filter-flags "-fstack-protector-all"
 	filter-flags "-ftracer"
 	filter-flags "-ffast-math"
 	filter-flags "-fforce-addr"
