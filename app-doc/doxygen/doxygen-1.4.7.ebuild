@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.12 2006/09/14 00:30:53 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.4.7.ebuild,v 1.13 2006/09/15 02:36:00 nerdboy Exp $
 
-inherit eutils toolchain-funcs qt3
+inherit eutils flag-o-matic toolchain-funcs qt3
 
 DESCRIPTION="documentation system for C++, C, Java, Objective-C, Python, IDL, and other languages"
 HOMEPAGE="http://www.doxygen.org/"
@@ -35,6 +35,17 @@ src_unpack() {
 	# Consolidate patches, apply FreeBSD configure patch, codepage patch,
 	# qtools stuff, and patches for bugs 129142, 121770, and 129560.
 	epatch ${FILESDIR}/${PV}
+
+	if is-flagq "-O3" ; then
+	    echo
+	    ewarn "Compiling with -O3 is known to produce incorrectly"
+	    ewarn "optimized code which breaks doxygen."
+	    echo
+	    epause 6
+	    einfo "Continuing with -O2 instead ..."
+	    echo
+	    replace-flags "-O3" "-O2"
+	fi
 }
 
 src_compile() {
