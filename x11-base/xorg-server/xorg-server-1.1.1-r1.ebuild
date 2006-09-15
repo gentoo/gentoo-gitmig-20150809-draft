@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.3 2006/09/12 20:59:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.4 2006/09/15 21:15:10 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -22,7 +22,8 @@ PATCHES="${FILESDIR}/01-no-move-damage.patch
 	${FILESDIR}/06-aiglx-happy-vt-switch.patch
 	${FILESDIR}/xorg-x11-server-1.1.1-mesa-6.5.1.patch
 	${FILESDIR}/${P}-install-libxf86config-headers.patch
-	${FILESDIR}/${PV}-fix-xrandr-zoom-keys.patch"
+	${FILESDIR}/${PV}-fix-xrandr-zoom-keys.patch
+	${FILESDIR}/${PV}-sparc64-ati-lockups.patch"
 
 
 SRC_URI="${SRC_URI}
@@ -347,14 +348,6 @@ src_unpack() {
 	x-modular_dri_check
 	x-modular_unpack_source
 	x-modular_patch_source
-
-	# https://bugs.freedesktop.org/show_bug.cgi?id=3914
-	# Addition of Altix support breaks 64-bit BARs,
-	# which causes sparc64 lockups with ATI video
-	# The sparc team will maintain and forward-port this patch.
-	if use sparc && use video_cards_mach64; then
-		epatch "${FILESDIR}"/${PV}-remove-altix.patch
-	fi
 
 	# Set up kdrive servers to build
 	if use kdrive; then

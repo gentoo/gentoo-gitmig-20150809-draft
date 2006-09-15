@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.19 2006/09/12 20:59:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1.ebuild,v 1.20 2006/09/15 21:15:10 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -13,6 +13,8 @@ MESA_PN="Mesa"
 MESA_PV="6.5"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
+
+PATCHES="${FILESDIR}/${PV}-sparc64-ati-lockups.patch"
 
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2
@@ -335,14 +337,6 @@ src_unpack() {
 	x-modular_dri_check
 	x-modular_unpack_source
 	x-modular_patch_source
-
-	# https://bugs.freedesktop.org/show_bug.cgi?id=3914
-	# Addition of Altix support breaks 64-bit BARs,
-	# which causes sparc64 lockups with ATI video
-	# The sparc team will maintain and forward-port this patch.
-	if use sparc && use video_cards_mach64; then
-		epatch "${FILESDIR}"/${PV}-remove-altix.patch
-	fi
 
 	# Set up kdrive servers to build
 	if use kdrive; then
