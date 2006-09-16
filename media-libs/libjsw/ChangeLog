@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjsw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.11 2006/05/29 18:01:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.12 2006/09/16 17:01:12 corsair Exp $
+
+  16 Sep 2006; Markus Rothe <corsair@gentoo.org> libjsw-1.5.6.ebuild:
+  Added ~ppc64
 
 *libjsw-1.5.6 (29 May 2006)
 
