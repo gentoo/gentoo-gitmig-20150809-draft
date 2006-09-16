@@ -2,9 +2,9 @@ AUX libdbi-drivers-0.8.1-oci8.diff 695 RMD160 5431c6888dc5b703d91343f4f3d3be6f4e
 MD5 b368097be1155b7acff37e5d6e3aaada files/libdbi-drivers-0.8.1-oci8.diff 695
 RMD160 5431c6888dc5b703d91343f4f3d3be6f4e6e1c9d files/libdbi-drivers-0.8.1-oci8.diff 695
 SHA256 23a2c8819f9f80548f2c933278c844d03dec35e8500883f25ab4b7d5f4b7c523 files/libdbi-drivers-0.8.1-oci8.diff 695
-DIST libdbi-drivers-0.7.1.tar.gz 488642
-DIST libdbi-drivers-0.8.0.tar.gz 1115598
-DIST libdbi-drivers-0.8.1.tar.gz 1147446 RMD160 280c5ea3a8a2b7029865d4fc48064620d9db2e38 SHA256 1b45bb53693feccdcc7fe7d32d37474e3ae15e8013553cc7051faa101f445bcd
+DIST libdbi-drivers-0.7.1.tar.gz 488642 RMD160 f32f61ac8f4ad425e939a77379922b36a43f3370 SHA1 a109ad975099c66ae520969b7278af5b92550aae SHA256 5ae76aff042249750437ab7e490ae7d9e19a10f0005cd9bb525106365998aca8
+DIST libdbi-drivers-0.8.0.tar.gz 1115598 RMD160 bd3e2eff1626c013781aaa3fca7b7770cd4fd227 SHA1 21aaeec91833588ef12f87e6d82cad18941de419 SHA256 038f84f10bfa19a42eb87672822c402c75e77e13e37cb40c7be62a73dbf0c078
+DIST libdbi-drivers-0.8.1.tar.gz 1147446 RMD160 280c5ea3a8a2b7029865d4fc48064620d9db2e38 SHA1 82c00d3f4d86a88d57cc1b58163182c5db09d990 SHA256 1b45bb53693feccdcc7fe7d32d37474e3ae15e8013553cc7051faa101f445bcd
 EBUILD libdbi-drivers-0.7.1-r1.ebuild 1549 RMD160 64f1c0f9dcb7c560f47bccebb897af321b1a182b SHA1 5769e02869ad622ad586f03c3ad5697e369d32ee SHA256 a7058df121009c0484f03782d198f0cf5d556fcf1187c4258fb35ca3a0ae1884
 MD5 7ffa70e3aefea52959ddb80e7e54fe4c libdbi-drivers-0.7.1-r1.ebuild 1549
 RMD160 64f1c0f9dcb7c560f47bccebb897af321b1a182b libdbi-drivers-0.7.1-r1.ebuild 1549
@@ -17,31 +17,31 @@ EBUILD libdbi-drivers-0.8.0.ebuild 1809 RMD160 6b45a6eabf8656773ea9e954ce365e429
 MD5 48d7a74d5a9f54231af65d746f39cf32 libdbi-drivers-0.8.0.ebuild 1809
 RMD160 6b45a6eabf8656773ea9e954ce365e4295d03e19 libdbi-drivers-0.8.0.ebuild 1809
 SHA256 b2000e6a21ae7da6a36a72ccf227681d7c4d22e4a8f59afe9922528f6b3e34a9 libdbi-drivers-0.8.0.ebuild 1809
-EBUILD libdbi-drivers-0.8.1-r1.ebuild 1935 RMD160 c974d6e793cec79df24a40df1b9b2a8f98ea58ee SHA1 f8c86f4ce305ef91fa4eea2bb52568a50e0cc600 SHA256 364f93bb72cb4cb3a45a20944588c49f3c57bb9787683b53df25ebabc0c52c36
-MD5 fc86d45e6685811511358512959d29fd libdbi-drivers-0.8.1-r1.ebuild 1935
-RMD160 c974d6e793cec79df24a40df1b9b2a8f98ea58ee libdbi-drivers-0.8.1-r1.ebuild 1935
-SHA256 364f93bb72cb4cb3a45a20944588c49f3c57bb9787683b53df25ebabc0c52c36 libdbi-drivers-0.8.1-r1.ebuild 1935
+EBUILD libdbi-drivers-0.8.1-r1.ebuild 1951 RMD160 9245b27b9b1c1b0c99fd76bde9dd2d1f43940a63 SHA1 bdbf24bdc01aa42c6f1fae38c8daeb4474292917 SHA256 112eb393456e868697749e18801998a4233bf32ae2eb16ee2c34a37daa458f50
+MD5 e1bd6a71dfd6cb2110880c6fc2245bf7 libdbi-drivers-0.8.1-r1.ebuild 1951
+RMD160 9245b27b9b1c1b0c99fd76bde9dd2d1f43940a63 libdbi-drivers-0.8.1-r1.ebuild 1951
+SHA256 112eb393456e868697749e18801998a4233bf32ae2eb16ee2c34a37daa458f50 libdbi-drivers-0.8.1-r1.ebuild 1951
 EBUILD libdbi-drivers-0.8.1.ebuild 1809 RMD160 c2d8aebf5e441ac645cd48c56ac97de911460cc5 SHA1 d29f1c1cdec82b16b7562a1c6b1e10616fde5ad7 SHA256 b6c04afcd508793b321f56ddfd59441afd667f5533c95e0853feecbfcbaebb6f
 MD5 a136a4ed0120eecf08612217d12ad9c9 libdbi-drivers-0.8.1.ebuild 1809
 RMD160 c2d8aebf5e441ac645cd48c56ac97de911460cc5 libdbi-drivers-0.8.1.ebuild 1809
 SHA256 b6c04afcd508793b321f56ddfd59441afd667f5533c95e0853feecbfcbaebb6f libdbi-drivers-0.8.1.ebuild 1809
-MISC ChangeLog 2535 RMD160 b98e145e2ee68ba6264b2f8b2242cbfd2b7c738f SHA1 e0ac91ea13294c142581d525833c59039f3470ca SHA256 468452cefd6baab80f7e630d71d30a08bdce40868d4b8be01e14224ac7d21e4f
-MD5 2f83069d8f0d7ebaa353ab83dd58c774 ChangeLog 2535
-RMD160 b98e145e2ee68ba6264b2f8b2242cbfd2b7c738f ChangeLog 2535
-SHA256 468452cefd6baab80f7e630d71d30a08bdce40868d4b8be01e14224ac7d21e4f ChangeLog 2535
+MISC ChangeLog 2654 RMD160 21b48ee23b3ec5ad22d39dbd8e90aecbd769ae7d SHA1 b6079bd4aea472b4d15fec2d3f5728c8d5e77e71 SHA256 6ec7d754b3613314d22a4cfdc459122fc877a550ba4d8121cca73842d161d0f5
+MD5 e6349a1db883d47eb088182406df8e6c ChangeLog 2654
+RMD160 21b48ee23b3ec5ad22d39dbd8e90aecbd769ae7d ChangeLog 2654
+SHA256 6ec7d754b3613314d22a4cfdc459122fc877a550ba4d8121cca73842d161d0f5 ChangeLog 2654
 MISC metadata.xml 223 RMD160 ffa99612cf27469c417944deed0e0c9155e64331 SHA1 607c637402dd253406aa6ee684471a702c5d1a99 SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 RMD160 ffa99612cf27469c417944deed0e0c9155e64331 metadata.xml 223
 SHA256 d6bb9ba68629616062b4433ab3b8fb01dfcafae5bb47804d9e06cdd6c66daa44 metadata.xml 223
-MD5 773b07f27a69df8943d40fea56b1c36e files/digest-libdbi-drivers-0.7.1 72
-RMD160 8611269dab8089c3040574df871dda639f1a1570 files/digest-libdbi-drivers-0.7.1 72
-SHA256 cf242d3c3a7b32ccb3c5096627a411a668c52fe681d9458dc95a1eb410d53b20 files/digest-libdbi-drivers-0.7.1 72
-MD5 773b07f27a69df8943d40fea56b1c36e files/digest-libdbi-drivers-0.7.1-r1 72
-RMD160 8611269dab8089c3040574df871dda639f1a1570 files/digest-libdbi-drivers-0.7.1-r1 72
-SHA256 cf242d3c3a7b32ccb3c5096627a411a668c52fe681d9458dc95a1eb410d53b20 files/digest-libdbi-drivers-0.7.1-r1 72
-MD5 67784c601bf41d91bd5a3eab6746cd11 files/digest-libdbi-drivers-0.8.0 73
-RMD160 63aafce953536991cd2a76f2f59897fc293d2948 files/digest-libdbi-drivers-0.8.0 73
-SHA256 04bb8442dc0c31a7b7ce3a140a92391f810c7dd3cc7ac2790f29731ef6e29623 files/digest-libdbi-drivers-0.8.0 73
+MD5 b59f595b5ebacdf54e9a35cd6d8d9921 files/digest-libdbi-drivers-0.7.1 262
+RMD160 d6229d00fe63afbcaeee622caa12bc33aff25027 files/digest-libdbi-drivers-0.7.1 262
+SHA256 35595e76260c75cc9b3162768bc828c78c44d5394c6f6bb78ebc0937d958b2db files/digest-libdbi-drivers-0.7.1 262
+MD5 b59f595b5ebacdf54e9a35cd6d8d9921 files/digest-libdbi-drivers-0.7.1-r1 262
+RMD160 d6229d00fe63afbcaeee622caa12bc33aff25027 files/digest-libdbi-drivers-0.7.1-r1 262
+SHA256 35595e76260c75cc9b3162768bc828c78c44d5394c6f6bb78ebc0937d958b2db files/digest-libdbi-drivers-0.7.1-r1 262
+MD5 68ab4f7bf7219c2d0343703ddf6f7901 files/digest-libdbi-drivers-0.8.0 265
+RMD160 faae759df5c1412af03093a6c68ef6fa9db98cd1 files/digest-libdbi-drivers-0.8.0 265
+SHA256 3a0d34e57c61aa21e849c8d37cac10d383ee0349e080edfc2bf75d0d41dd303a files/digest-libdbi-drivers-0.8.0 265
 MD5 5276e1f443163a798a93ab46b113b30e files/digest-libdbi-drivers-0.8.1 265
 RMD160 fa1003851702876e101a4a6630729353623f7515 files/digest-libdbi-drivers-0.8.1 265
 SHA256 66077515bfe11edb2a0161ba4f213b0cf20dde885d7124364d3bcdce6456e737 files/digest-libdbi-drivers-0.8.1 265
