@@ -1,6 +1,11 @@
 # ChangeLog for games-server/crossfire-server
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.9 2006/04/16 22:55:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.10 2006/09/16 23:05:37 tupone Exp $
+
+*crossfire-server-1.9.1 (16 Sep 2006)
+
+  16 Sep 2006; <tupone@gentoo.org> +crossfire-server-1.9.1.ebuild:
+  Version bumped. Bug #139574 by Eddward
 
   16 Apr 2006; Michael Hanselmann <hansmi@gentoo.org>
   crossfire-server-1.9.0.ebuild:
