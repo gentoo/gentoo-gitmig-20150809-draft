@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.4 2006/09/15 21:15:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.5 2006/09/16 08:51:20 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -10,9 +10,9 @@ inherit x-modular multilib
 OPENGL_DIR="xorg-x11"
 
 MESA_PN="Mesa"
-MESA_PV="20060831"
+MESA_PV="6.5.1"
 MESA_P="${MESA_PN}-${MESA_PV}"
-MESA_SRC_P="${MESA_PN}-${MESA_PV}"
+MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
 
 PATCHES="${FILESDIR}/01-no-move-damage.patch
 	${FILESDIR}/02-dont-backfill-bg-none.patch
@@ -302,7 +302,7 @@ pkg_setup() {
 	# Only Xorg and Xgl support this, and we won't build Xgl
 	# until it merges to trunk
 	if use xorg; then
-		conf_opts="${conf_opts} --with-mesa-source=${WORKDIR}/Mesa"
+		conf_opts="${conf_opts} --with-mesa-source=${WORKDIR}/${MESA_P}"
 	fi
 
 	# localstatedir is used for the log location; we need to override the default
