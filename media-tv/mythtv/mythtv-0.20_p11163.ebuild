@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.6 2006/09/16 06:03:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.7 2006/09/16 17:17:04 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -106,7 +106,7 @@ src_unpack() {
 
 	# As needed fix since they don't know how to write qmake let alone a real
 	# make system
-	#epatch "${FILESDIR}"/${PN}-${MY_PV}-as-needed.patch
+	epatch "${FILESDIR}"/${PN}-${MY_PV}-as-needed.patch
 }
 
 src_compile() {
@@ -152,10 +152,6 @@ src_compile() {
 	strip-flags
 	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
 	filter-flags "-O" "-O?"
-
-	#Not only do they use qmake and a horribly hacked manually written script..
-	#they can't write qmake files
-	filter-ldflags -Wl,--as-needed --as-needed
 
 	if [[ -n "${MARCH}" ]]; then
 		myconf="${myconf} --arch=${MARCH}"
