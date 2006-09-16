@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rcs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.27 2006/08/07 17:23:59 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/ChangeLog,v 1.28 2006/09/16 14:30:46 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> rcs-5.7-r3.ebuild:
+  ppc stable
 
   07 Aug 2006; <yvasilev@gentoo.org> rcs-5.7-r3.ebuild:
   Added ~arm keyword.
