@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX evolution-data-server-1.2.0-gentoo_etc_services.patch 815 RMD160 d48ad5a34bfdf9f814b9ae22ba188f2f0c7f0304 SHA1 9248c74b334534f74e027fc119509673bff4542f SHA256 a64e0e4d74ac91f69c4b7a011b6325e27af6fa28a58e20f48ff09ec2a1538c5a
 MD5 ab9f8a22a7b870a6e1e2edc463949c82 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
 RMD160 d48ad5a34bfdf9f814b9ae22ba188f2f0c7f0304 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
@@ -41,14 +44,14 @@ EBUILD evolution-data-server-1.6.2.ebuild 2709 RMD160 4eb33d11c762b2278b0b4140be
 MD5 5b45ad03cf79b9c483384b9ff5100e16 evolution-data-server-1.6.2.ebuild 2709
 RMD160 4eb33d11c762b2278b0b4140be22326426a7e75c evolution-data-server-1.6.2.ebuild 2709
 SHA256 d7e07d4a8428fee81104c34b5f17f948c0453578902b3b2d614a7aafd8068c59 evolution-data-server-1.6.2.ebuild 2709
-EBUILD evolution-data-server-1.8.0.ebuild 4352 RMD160 b6caaecf954609d82e0e2727e9e1f55f7e8148cf SHA1 e493316485467fb9b49b99c55f44926a99838379 SHA256 30bb84cefa8fbd853d5bc3489f8d40d8fc05480e12407b57c7e6efba62d7afa3
-MD5 82f5e703ceb4244ea7c549f9f76fc10d evolution-data-server-1.8.0.ebuild 4352
-RMD160 b6caaecf954609d82e0e2727e9e1f55f7e8148cf evolution-data-server-1.8.0.ebuild 4352
-SHA256 30bb84cefa8fbd853d5bc3489f8d40d8fc05480e12407b57c7e6efba62d7afa3 evolution-data-server-1.8.0.ebuild 4352
-MISC ChangeLog 13818 RMD160 39d6ff6382794cc5f9a915794d3d4800de623bbb SHA1 93802f6d41ef80a5b8cc3af84d46c427c8f8e743 SHA256 819119f2401504bda7c1209216edae43a5df94f2a0ac0992e4cda555e704281a
-MD5 6969fcfdd22fd68e4527991ed9d0e10d ChangeLog 13818
-RMD160 39d6ff6382794cc5f9a915794d3d4800de623bbb ChangeLog 13818
-SHA256 819119f2401504bda7c1209216edae43a5df94f2a0ac0992e4cda555e704281a ChangeLog 13818
+EBUILD evolution-data-server-1.8.0.ebuild 4414 RMD160 bd0b9f3494e89a3769152c744f5c39619ef9ab90 SHA1 6766b5d80c71110014103ace20a5d4b6f1410e42 SHA256 618a4a4d567c81b63cfee68fe58f7bd619fd004af40d074e788c448c7ee45cfe
+MD5 c9d00a9bf1118f26e49fbf10120f846e evolution-data-server-1.8.0.ebuild 4414
+RMD160 bd0b9f3494e89a3769152c744f5c39619ef9ab90 evolution-data-server-1.8.0.ebuild 4414
+SHA256 618a4a4d567c81b63cfee68fe58f7bd619fd004af40d074e788c448c7ee45cfe evolution-data-server-1.8.0.ebuild 4414
+MISC ChangeLog 13961 RMD160 6e6814d2ff7ac020baad29ed3d950e1cd87a156f SHA1 a13ef0c48e7aa986e0065feaa4a787a36748f447 SHA256 aa46cb41d689b4565b84d94fbf973c5b9d1a84e8d616b6f6802519782614e592
+MD5 ad3ab9978ee026ab42c4af5bbc60e41b ChangeLog 13961
+RMD160 6e6814d2ff7ac020baad29ed3d950e1cd87a156f ChangeLog 13961
+SHA256 aa46cb41d689b4565b84d94fbf973c5b9d1a84e8d616b6f6802519782614e592 ChangeLog 13961
 MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
@@ -62,3 +65,10 @@ SHA256 c474de3fb11f9641e62deea95bc409b7d208389cf6deca8c15c08a39a0c70d14 files/di
 MD5 ae816dc415e100ef5da974621ea282ee files/digest-evolution-data-server-1.8.0 289
 RMD160 16a873c1256466acf809683cac20cdcdf4bc15a5 files/digest-evolution-data-server-1.8.0 289
 SHA256 3f923d6473286f86bb0167079bed3c2f06f89c072d90d368c14a2e366574f0e2 files/digest-evolution-data-server-1.8.0 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFFDH0romPajV0RnrERAtevAJ9nb6vpwKRYK0Egimi+SjKXUTy2TgCdGuYm
+lh0cN51M+1JVUVpN+hUfghY=
+=oy3U
+-----END PGP SIGNATURE-----
