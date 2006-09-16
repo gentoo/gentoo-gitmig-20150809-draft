@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19.ebuild,v 1.6 2006/09/16 02:06:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19.ebuild,v 1.7 2006/09/16 06:05:08 cardoe Exp $
 
 inherit webapp depend.php
 
@@ -19,7 +19,7 @@ pkg_setup() {
 	webapp_pkg_setup
 
 	if has_version 'dev-lang/php' ; then
-		require_php_with_use session mysql
+		require_php_with_use session mysql pcre
 	fi
 }
 
