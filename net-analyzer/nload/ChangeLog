@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nload
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.18 2005/05/31 23:21:14 cryos Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.19 2006/09/16 13:39:10 phreak Exp $
+
+*nload-0.6.0-r1 (16 Sep 2006)
+
+  16 Sep 2006; Christian Heim <phreak@gentoo.org>
+  +files/nload-0.6.0-prevent-stripping.patch, +nload-0.6.0-r1.ebuild:
+  Revision bump to prevent net-analyzer/nload from installing a prestripped
+  binary (removing -s from LDFLAGS in configure.in). This fixes #143857
+  (commiting on behalf of Daniel Black).
 
   31 May 2005; Marcus D. Hanwell <marcus@gentoo.org> nload-0.6.0.ebuild:
   Stable on amd64.
