@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.109 2006/09/16 19:28:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.110 2006/09/16 19:39:14 dberkholz Exp $
+
+  16 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5.1.ebuild:
+  Add pkgconfig to DEPEND.
 
   16 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5.1.ebuild:
   Get rid of arch-specific defaults, since they're in profiles now.
