@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19_p10505.ebuild,v 1.2 2006/09/14 21:16:37 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.19_p10505.ebuild,v 1.3 2006/09/16 02:06:50 cardoe Exp $
 
 inherit webapp depend.php
 
@@ -48,6 +48,7 @@ src_install() {
 	webapp_serverowned ${MY_HTDOCSDIR}/data
 
 	webapp_configfile ${MY_HTDOCSDIR}/config/conf.php
+	webapp_configfile ${MY_HTDOCSDIR}/.htaccess
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 
 	webapp_src_install
