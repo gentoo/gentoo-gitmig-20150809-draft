@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.26 2006/09/15 22:45:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.27 2006/09/16 10:22:14 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> tomboy-0.4.1.ebuild:
+  re-added ~ppc, bug #147751
 
   15 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> tomboy-0.4.1.ebuild:
   Remove ppc until galago-sharp is keyworded
