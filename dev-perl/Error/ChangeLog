@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.30 2006/09/05 13:09:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.31 2006/09/16 20:54:48 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> Error-0.17.ebuild:
+  ppc stable
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> Error-0.17.ebuild:
   Stable on sparc
