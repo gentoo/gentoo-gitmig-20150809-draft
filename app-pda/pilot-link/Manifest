@@ -1,49 +1,51 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2d2422aa2b571d9efbeac58a3fd7fe53 ChangeLog 6982
-RMD160 0bea51841959f05826fae56491b78fc030257257 ChangeLog 6982
-SHA256 20c5964ce94911051dda0d8c78fb9081c56beb277ca36b7b5ee0d7654535706c ChangeLog 6982
-MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8 70
-RMD160 3e2b267a1954f3dfb64a9b90b6f4dca3d53f3686 files/digest-pilot-link-0.11.8 70
-SHA256 b78832069494015b873b22bbc31a49b1ff92768c8e257a68af139a6153039a76 files/digest-pilot-link-0.11.8 70
-MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8-r1 70
-RMD160 3e2b267a1954f3dfb64a9b90b6f4dca3d53f3686 files/digest-pilot-link-0.11.8-r1 70
-SHA256 b78832069494015b873b22bbc31a49b1ff92768c8e257a68af139a6153039a76 files/digest-pilot-link-0.11.8-r1 70
+AUX pilot-link-0.11.8-java_compile_amd64.patch 579 RMD160 7dba17a59a303154acbd640e78f9028b54de0507 SHA1 6903a1624d566733c7336735b3ddbc92c8610e6f SHA256 e2e6ce08665b39c4f945eae58c2554ad9f2bdbf13c8f19cc3cbf01f8f319bf07
 MD5 bf74434daf1ebd09156aad1d90c93675 files/pilot-link-0.11.8-java_compile_amd64.patch 579
 RMD160 7dba17a59a303154acbd640e78f9028b54de0507 files/pilot-link-0.11.8-java_compile_amd64.patch 579
 SHA256 e2e6ce08665b39c4f945eae58c2554ad9f2bdbf13c8f19cc3cbf01f8f319bf07 files/pilot-link-0.11.8-java_compile_amd64.patch 579
+AUX pilot-link-0.11.8-java_fPIC_fix.patch 580 RMD160 e6baf868f3474ee35f9de7f655c337d881e025e5 SHA1 85884951133dc58baccb3a9c0bb3e33f12b5ea73 SHA256 b6ebf250b977fa0dc33ed7c72bf9f0624a36b388cd0078159ff6c88f62c7df45
 MD5 a90104dea453f1eed8b69ed821118caa files/pilot-link-0.11.8-java_fPIC_fix.patch 580
 RMD160 e6baf868f3474ee35f9de7f655c337d881e025e5 files/pilot-link-0.11.8-java_fPIC_fix.patch 580
 SHA256 b6ebf250b977fa0dc33ed7c72bf9f0624a36b388cd0078159ff6c88f62c7df45 files/pilot-link-0.11.8-java_fPIC_fix.patch 580
+AUX pilot-link-0.11.8-java_install_all.patch 562 RMD160 e9d7db2998f14a02ba95df1807ca43a25561492b SHA1 402be9f0e0956e6e51f42d1306bdde51e5084cb5 SHA256 c2b8dd22d337ce0411103101deccabd1d4421ae239234bd8aa410a97cf6d5a1a
 MD5 90560348093b5a7b47849896f35b4d54 files/pilot-link-0.11.8-java_install_all.patch 562
 RMD160 e9d7db2998f14a02ba95df1807ca43a25561492b files/pilot-link-0.11.8-java_install_all.patch 562
 SHA256 c2b8dd22d337ce0411103101deccabd1d4421ae239234bd8aa410a97cf6d5a1a files/pilot-link-0.11.8-java_install_all.patch 562
+AUX pilot-link-0.11.8-java_install_amd64.patch 390 RMD160 81ce9ff10740eeb3805ae0c6ef2f6d0d36c5cd9e SHA1 ff023b2cdd0eec19e0167486d1abd28b9679d572 SHA256 674165c22743a66378d75b6aedff427851259578ade68aa52ddc9e834cb8b840
 MD5 a664432d4308170abcc8201e3a1500bf files/pilot-link-0.11.8-java_install_amd64.patch 390
 RMD160 81ce9ff10740eeb3805ae0c6ef2f6d0d36c5cd9e files/pilot-link-0.11.8-java_install_amd64.patch 390
 SHA256 674165c22743a66378d75b6aedff427851259578ade68aa52ddc9e834cb8b840 files/pilot-link-0.11.8-java_install_amd64.patch 390
+AUX pilot-link-0.11.8-java_install_ppc.patch 560 RMD160 4861489cc16ccaa87fed571d89c1cf83b45b93c8 SHA1 e9f5a0391b7e0754f99318ecfd1c1477eb030264 SHA256 dd0f40f0e13cf86290e44d8891103d2d55eef04f3eeb9ac0edbd5ad9afeb76da
 MD5 73901859bb01a4c7aa0dbddf1d6e898a files/pilot-link-0.11.8-java_install_ppc.patch 560
 RMD160 4861489cc16ccaa87fed571d89c1cf83b45b93c8 files/pilot-link-0.11.8-java_install_ppc.patch 560
 SHA256 dd0f40f0e13cf86290e44d8891103d2d55eef04f3eeb9ac0edbd5ad9afeb76da files/pilot-link-0.11.8-java_install_ppc.patch 560
+AUX pilot-link-0.11.8-m4.patch 123 RMD160 7f7eead683cc8366139fedab512511b29c3a156a SHA1 5f1b708d9171ff3b4bcf35142a5b7dc9ac9f685c SHA256 cb23fecc34774bf84859658e93e248e15737783963c9f10f1b2a155b6079876f
 MD5 93ddce2c38bb25e99877e9f08414d740 files/pilot-link-0.11.8-m4.patch 123
 RMD160 7f7eead683cc8366139fedab512511b29c3a156a files/pilot-link-0.11.8-m4.patch 123
 SHA256 cb23fecc34774bf84859658e93e248e15737783963c9f10f1b2a155b6079876f files/pilot-link-0.11.8-m4.patch 123
+AUX pilot-link-0.11.8-netsync.patch 4371 RMD160 b5dc7a9fbce293551d0dd264b80ff98bade3dc5f SHA1 644a82de9a7bf899b7a46cc361de11b7c429c122 SHA256 5d64928b175e73c964b142c7a574d0e173633bb785f85b1468a83bf35d83ff5e
 MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
 RMD160 b5dc7a9fbce293551d0dd264b80ff98bade3dc5f files/pilot-link-0.11.8-netsync.patch 4371
 SHA256 5d64928b175e73c964b142c7a574d0e173633bb785f85b1468a83bf35d83ff5e files/pilot-link-0.11.8-netsync.patch 4371
-MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
-RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
-SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
-MD5 e245ab18311fb65ed6ed97c771bac0fb pilot-link-0.11.8-r1.ebuild 2235
-RMD160 f4cd90c2650b13a4d30e911805d18ce441a8baa9 pilot-link-0.11.8-r1.ebuild 2235
-SHA256 8b1a26daeb322f9b547177f5ad6ec6ff3d76eaea7a0db37bb448f652a44cafa3 pilot-link-0.11.8-r1.ebuild 2235
+DIST pilot-link-0.11.8.tar.bz2 649034 RMD160 c51c069810edff6c2e38e4c81f2daa959c902ad4 SHA1 645d4bc49dd4dc4793d13b6e04dd61f24c2bf717 SHA256 952a97df5d13d926f0d5ce487e15268b1400fa0e7c43ea9303fba92818cce1cb
+EBUILD pilot-link-0.11.8-r1.ebuild 2236 RMD160 ec11e066057a62ba0ad3e2d80ee6bbc18339f6c4 SHA1 6751ead5c99d82d2270ab6ea34a57053c3d3ab5a SHA256 7c2fd05cf2c8fba26cc4468fc7d670b11c7a7b0be9a4143fc2ccdcbeb8f6d68a
+MD5 de92fc08d15d64cb88542ca62bdbeaa0 pilot-link-0.11.8-r1.ebuild 2236
+RMD160 ec11e066057a62ba0ad3e2d80ee6bbc18339f6c4 pilot-link-0.11.8-r1.ebuild 2236
+SHA256 7c2fd05cf2c8fba26cc4468fc7d670b11c7a7b0be9a4143fc2ccdcbeb8f6d68a pilot-link-0.11.8-r1.ebuild 2236
+EBUILD pilot-link-0.11.8.ebuild 1879 RMD160 a710414ec65220293ca6ab9cd867e5cecbfcf166 SHA1 78cc9919ac78c8d9ab40f7e331e1eef955ffb40e SHA256 b7eaf2142d3db654a7898ac8fe71431ee650f7a4355b1293653ee3cb42407ba3
 MD5 9b169021a24b8ab07a468ec34532b55c pilot-link-0.11.8.ebuild 1879
 RMD160 a710414ec65220293ca6ab9cd867e5cecbfcf166 pilot-link-0.11.8.ebuild 1879
 SHA256 b7eaf2142d3db654a7898ac8fe71431ee650f7a4355b1293653ee3cb42407ba3 pilot-link-0.11.8.ebuild 1879
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFD6CCMJrHF4yAQTrARAqqcAJ9snrqgeNmKD88eY99+4Worn6VhlQCfQapr
-yowk/wZ+x/pBuvxJ4bPc7Rk=
-=zk5J
------END PGP SIGNATURE-----
+MISC ChangeLog 7085 RMD160 414b9349df3b0175c75d6fbfa36d0001365145f5 SHA1 9e454d679c48c3927a23de0fccde82fb4d366029 SHA256 fd7fed1b08dee7bf6ef8ba0de2d961891235898ac1c1999a36847b18366d183e
+MD5 578587132d2eb64e141c6cc6bace173b ChangeLog 7085
+RMD160 414b9349df3b0175c75d6fbfa36d0001365145f5 ChangeLog 7085
+SHA256 fd7fed1b08dee7bf6ef8ba0de2d961891235898ac1c1999a36847b18366d183e ChangeLog 7085
+MISC metadata.xml 156 RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe SHA1 5b9cb277159d763c133920e483df8d3d587cf7e2 SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb
+MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+RMD160 6a6d0f6bfe83e3a54c2d72444564ed6ab19857fe metadata.xml 156
+SHA256 7f72b73f6e0d6e26603d85e52cca524711faddf6b516640104c3b82aab4754fb metadata.xml 156
+MD5 f0b71efcfee6b2f485c997bb221df48c files/digest-pilot-link-0.11.8 256
+RMD160 38347f53c10bc8ae368fa3753865131a970b248b files/digest-pilot-link-0.11.8 256
+SHA256 b39f04cd4a26d67ed6c734711294ddea154d39f4c7a2c61827c7fa54f12d7e49 files/digest-pilot-link-0.11.8 256
+MD5 f0b71efcfee6b2f485c997bb221df48c files/digest-pilot-link-0.11.8-r1 256
+RMD160 38347f53c10bc8ae368fa3753865131a970b248b files/digest-pilot-link-0.11.8-r1 256
+SHA256 b39f04cd4a26d67ed6c734711294ddea154d39f4c7a2c61827c7fa54f12d7e49 files/digest-pilot-link-0.11.8-r1 256
