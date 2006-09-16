@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060708.ebuild,v 1.4 2006/09/11 00:42:14 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060708.ebuild,v 1.5 2006/09/16 14:22:51 calchan Exp $
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6}"
 
@@ -14,9 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc ~sparc x86"
 
 DEPEND="doc? ( app-text/tetex )
-	readline? (
-		sys-libs/readline
-		sys-libs/libtermcap-compat )"
+	readline? ( sys-libs/readline )"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
