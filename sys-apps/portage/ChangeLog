@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.247 2006/09/13 07:44:36 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.248 2006/09/16 03:23:47 zmedico Exp $
+
+*portage-2.1.2_pre1 (16 Sep 2006)
+
+  16 Sep 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.2_pre1.ebuild:
+  2.1.2_pre1 release. This fixes bugs #14321, #80846, #146879, #147010,
+  #147427, and #147428.
 
   13 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   portage-2.1.1.ebuild:
@@ -36,49 +42,6 @@
   significantly larger number of packages pulled in by --newuse, but that
   behavior is normal. For additional information regarding this change, please
   see bugs #116955, #144333, #144661, and #146060.
-
-*portage-2.1.1_rc1-r7 (07 Sep 2006)
-
-  07 Sep 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1-r7.ebuild:
-  2.1.1_rc1-r7 revbump for bugs #144011 and #146564.
-
-*portage-2.1.1_rc1-r6 (06 Sep 2006)
-
-  06 Sep 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1-r6.ebuild:
-  2.1.1_rc1-r6 revbump for bugs #101240, #146412, and #146508.
-
-*portage-2.1.1_rc1-r5 (06 Sep 2006)
-
-  06 Sep 2006; Zac Medico <zmedico@gentoo.org> -portage-2.1.1_rc1-r4.ebuild,
-  +portage-2.1.1_rc1-r5.ebuild, +files/2.1.1_rc1-r5-repoman.patch:
-  2.1.1_rc1-r5 regression fix revbump for a problem with repoman checking
-  keywords incorrectly.  2.1.1_rc1-r4 may allow DEPEND.bad to slip through!
-
-*portage-2.1.1_rc1-r4 (05 Sep 2006)
-
-  05 Sep 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1-r4.ebuild:
-  2.1.1_rc1-r4 revbump for bug #146289 and other small fixes, including support
-  for package.use.mask in repoman.
-
-*portage-2.1.1_rc1-r3 (03 Sep 2006)
-
-  03 Sep 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1-r3.ebuild:
-  2.1.1_rc1-r3 revbump for bug #146060 and other small fixes.
-
-*portage-2.1.1_rc1-r2 (30 Aug 2006)
-
-  30 Aug 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1-r2.ebuild:
-  2.1.1_rc1-r2 revbump for bug #143881 and other small fixes.
-
-*portage-2.1.1_rc1-r1 (27 Aug 2006)
-
-  27 Aug 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1-r1.ebuild:
-  2.1.1_rc1-r1 revbump for bug #144661.
-
-*portage-2.1.1_rc1 (26 Aug 2006)
-
-  26 Aug 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.1_rc1.ebuild:
-  2.1.1_rc1 release candidate.  This fixes bugs #144661 and #144928.
 
   23 Aug 2006; Zac Medico <zmedico@gentoo.org> portage-2.0.51.22-r3.ebuild,
   portage-2.0.54-r2.ebuild, -portage-2.1-r1.ebuild, portage-2.1-r2.ebuild,
