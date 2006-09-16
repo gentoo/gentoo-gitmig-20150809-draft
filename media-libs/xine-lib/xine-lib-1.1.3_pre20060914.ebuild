@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20060914.ebuild,v 1.1 2006/09/14 18:57:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20060914.ebuild,v 1.2 2006/09/16 12:22:33 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -113,7 +113,7 @@ src_compile() {
 	use hppa && unset CFLAGS
 
 	econf \
-		$(use_enable gnome) \
+		$(use_enable gnome gnomevfs) \
 		$(use_enable nls) \
 		$(use_enable ipv6) \
 		$(use_enable samba) \
