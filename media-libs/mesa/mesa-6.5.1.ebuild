@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1.ebuild,v 1.3 2006/09/16 19:27:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1.ebuild,v 1.4 2006/09/16 19:28:47 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -149,34 +149,6 @@ src_unpack() {
 	fi
 	if use video_cards_via; then
 		add_drivers unichrome
-	fi
-
-	# Defaults based on X.Org 6.9, with some changes
-	if [[ ! -n "${VIDEO_CARDS}" ]]; then
-		if use alpha; then
-			add_drivers mga tdfx r128 r200 r300 radeon
-		elif use amd64; then
-			add_drivers i915 i965 mga r128 r200 r300 radeon tdfx
-		elif use arm; then
-			add_drivers mga r128 r200 r300 radeon
-		elif use hppa; then
-			# no accelerated 3D on hppa
-			true
-		elif use ia64; then
-			add_drivers mach64 mga r128 r200 r300 radeon tdfx unichrome
-		elif use mips; then
-			# no accelerated 3D on mips
-			true
-		elif use ppc; then
-			add_drivers mach64 mga r128 r200 r300 radeon tdfx
-		elif use ppc64; then
-			add_drivers mga r128 r200 r300 radeon
-		elif use sparc; then
-			add_drivers ffb mach64
-		elif use x86; then
-			add_drivers i810 i915 i965 mach64 mga r128 r200 r300 radeon s3v \
-				savage sis tdfx trident unichrome
-		fi
 	fi
 
 	# Set drivers to everything on which we ran add_drivers()
