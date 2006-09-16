@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/apbs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.7 2006/07/07 05:28:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/ChangeLog,v 1.8 2006/09/16 21:11:10 dberkholz Exp $
+
+  16 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; apbs-0.4.0.ebuild:
+  Keyword ~ppc.
 
   07 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>; ChangeLog:
   Update to my new email address.
