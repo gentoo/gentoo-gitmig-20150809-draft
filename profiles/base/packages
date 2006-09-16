@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.38 2006/02/24 05:19:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.39 2006/09/16 21:27:16 vapier Exp $
 
 # Gentoo Base Profile
 
@@ -52,9 +52,7 @@
 *sys-apps/texinfo
 *sys-apps/which
 *sys-devel/autoconf
-*sys-devel/autoconf-wrapper
 *sys-devel/automake
-*sys-devel/automake-wrapper
 *sys-devel/binutils
 *sys-devel/bison
 *sys-devel/flex
