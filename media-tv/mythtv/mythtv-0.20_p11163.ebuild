@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.5 2006/09/15 00:43:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.6 2006/09/16 06:03:13 cardoe Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -101,11 +101,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	#Fixes of the bugs found in the 0.19 release
+	#Fixes of the bugs found in the release
 	epatch "${WORKDIR}"/${PN}-${MY_PV}_svn${PATCHREV}.patch
 
-	# Support installing in libdir != lib
-	#epatch "${FILESDIR}/mythtv-0.19-libdir.patch"
+	# As needed fix since they don't know how to write qmake let alone a real
+	# make system
+	#epatch "${FILESDIR}"/${PN}-${MY_PV}-as-needed.patch
 }
 
 src_compile() {
@@ -151,6 +152,10 @@ src_compile() {
 	strip-flags
 	filter-flags "-march=*" "-mtune=*" "-mcpu=*"
 	filter-flags "-O" "-O?"
+
+	#Not only do they use qmake and a horribly hacked manually written script..
+	#they can't write qmake files
+	filter-ldflags -Wl,--as-needed --as-needed
 
 	if [[ -n "${MARCH}" ]]; then
 		myconf="${myconf} --arch=${MARCH}"
@@ -229,7 +234,7 @@ src_install() {
 
 pkg_preinst() {
 	enewuser mythtv -1 "-1" -1 ${MYTHTV_GROUPS} || die "Problem adding mythtv user"
-	usermod -G ${MYTHTV_GROUPS} mythtv
+	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
 pkg_postinst() {
