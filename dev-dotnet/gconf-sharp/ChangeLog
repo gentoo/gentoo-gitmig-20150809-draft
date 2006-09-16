@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gconf-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.43 2006/09/07 05:29:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gconf-sharp/ChangeLog,v 1.44 2006/09/16 15:09:28 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gconf-sharp-2.8.2.ebuild:
+  ppc stable
 
 *gconf-sharp-2.16.0 (07 Sep 2006)
 
