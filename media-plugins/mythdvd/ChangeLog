@@ -1,10 +1,11 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.32 2006/09/16 01:58:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.33 2006/09/16 02:03:23 cardoe Exp $
 
   16 Sep 2006; Doug Goldstein <cardoe@gentoo.org> +files/mtd.init,
   mythdvd-0.19.ebuild, mythdvd-0.20.ebuild:
-  Added initscript for Myth Transcode Daemon (mtd)
+  Added initscript for Myth Transcode Daemon (mtd) credit to
+  Kevin Worth <kworth@gmail.com> @ bug #142598
 
 *mythdvd-0.20 (14 Sep 2006)
 

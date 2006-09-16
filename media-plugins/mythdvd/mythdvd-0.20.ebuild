@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.ebuild,v 1.2 2006/09/16 01:58:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.ebuild,v 1.3 2006/09/16 02:01:27 cardoe Exp $
 
 inherit mythtv-plugins
 
@@ -25,4 +25,6 @@ pkg_postinst() {
 	echo
 	einfo "To have Myth Transcode Daemon (mtd) start on boot do the following"
 	einfo "rc-update add mtd default"
+	einfo "Make sure you run 'mtd -n' to setup mtd first"
+	echo
 }
