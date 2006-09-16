@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.12 2006/01/22 15:24:18 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/clara-20031214.ebuild,v 1.13 2006/09/16 16:57:40 spock Exp $
 
 DESCRIPTION="An OCR (Optical Character Recognition) program"
 SRC_URI="http://www.geocities.com/claraocr/clara-20031214.tar.gz"
@@ -22,7 +22,7 @@ src_install() {
 	dobin clara selthresh
 	doman doc/clara*.1 selthresh.1
 
-	dodoc ANNOUNCE CHANGELOG COPYING doc/FAQ
+	dodoc ANNOUNCE CHANGELOG doc/FAQ
 	insinto /usr/share/doc/${P}
 	doins imre.pbm
 
