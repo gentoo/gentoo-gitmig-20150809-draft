@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.3.ebuild,v 1.1 2006/09/16 08:22:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.11.3.ebuild,v 1.2 2006/09/16 20:48:36 genstef Exp $
 
 inherit eutils
 
-NSPR_VER="4.6.2"
+NSPR_VER="4.6.3"
 RTM_NAME="NSS_${PV//./_}_RTM"
 DESCRIPTION="Mozilla's Netscape Security Services Library that implements PKI support"
 HOMEPAGE="http://www.mozilla.org/projects/security/pki/nss/"
