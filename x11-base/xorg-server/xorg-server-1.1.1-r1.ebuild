@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.5 2006/09/16 08:51:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.6 2006/09/16 14:35:50 hanno Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -27,8 +27,8 @@ PATCHES="${FILESDIR}/01-no-move-damage.patch
 
 
 SRC_URI="${SRC_URI}
-	http://www.schokokeks.org/~hanno/snapshots/${MESA_SRC_P}.tar.bz2
-	http://xorg.freedesktop.org/snapshots/individual/xserver/${P}.tar.bz2"
+	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2
+	http://xorg.freedesktop.org/releases/individual/xserver/${P}.tar.bz2"
 DESCRIPTION="X.Org X servers"
 # It's suid and has lazy bindings, so FEATURES="stricter" doesn't work
 RESTRICT="stricter"
