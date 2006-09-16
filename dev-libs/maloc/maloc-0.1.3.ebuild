@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.1.3.ebuild,v 1.1 2006/03/08 16:21:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/maloc/maloc-0.1.3.ebuild,v 1.2 2006/09/16 21:10:48 dberkholz Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI=" http://cam.ucsd.edu/~mholst/codes/${PN}/${PN}-${MY_PV}.tar.gz"
 
 SLOT="0"
 IUSE="mpi"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="sys-libs/readline
 		mpi? ( virtual/mpi )"
