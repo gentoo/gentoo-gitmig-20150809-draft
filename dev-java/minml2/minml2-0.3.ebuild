@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/minml2/minml2-0.3.ebuild,v 1.3 2005/07/15 20:46:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/minml2/minml2-0.3.ebuild,v 1.4 2006/09/16 10:21:15 dertobi123 Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.wilson.co.uk/xml/MinML2-${PV}.zip"
 HOMEPAGE="http://wilson.co.uk/xml/minml.htm"
 LICENSE="BSD"
 SLOT="0.3"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )
