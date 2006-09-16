@@ -1,0 +1,57 @@
+diff -ur mercury-extras-0.13.0.orig/graphics/mercury_opengl/Mmakefile mercury-extras-0.13.0/graphics/mercury_opengl/Mmakefile
+--- mercury-extras-0.13.0.orig/graphics/mercury_opengl/Mmakefile	2006-03-30 14:52:44.000000000 +1200
++++ mercury-extras-0.13.0/graphics/mercury_opengl/Mmakefile	2006-09-17 09:11:53.000000000 +1200
+@@ -11,7 +11,7 @@
+ 
+ # Specify what libraries we need to link against for OpenGL on this system.
+ # (The following works on Debian with mesa as the OpenGL implementation).
+-GL_LIBS = -lGL -lGLU -L/usr/X11R6/lib -lX11 -lXi -lXt -lICE -lXext -lSM
++GL_LIBS = -lGL -lGLU
+ 
+ # Don't issue a warning because mercury_opengl doesn't export anything.
+ MCFLAGS-mercury_opengl = --no-warn-nothing-exported
+diff -ur mercury-extras-0.13.0.orig/graphics/mercury_opengl/Mmakefile.mtogl mercury-extras-0.13.0/graphics/mercury_opengl/Mmakefile.mtogl
+--- mercury-extras-0.13.0.orig/graphics/mercury_opengl/Mmakefile.mtogl	2004-12-01 14:45:30.000000000 +1300
++++ mercury-extras-0.13.0/graphics/mercury_opengl/Mmakefile.mtogl	2006-09-17 09:13:55.000000000 +1200
+@@ -11,29 +11,30 @@
+ MLOBJS-mtogl = togl.o 
+ 
+ # Specify the location of the `mercury_tcltk' package.
+-MERCURY_TCLTK_DIR 	= ../mercury_tcltk
++#MERCURY_TCLTK_DIR 	= ../mercury_tcltk
+ 
+ # Specify the version of Tcl/Tk.
+-TCLTK_VERSION = 8.0
++TCLTK_VERSION = 8.4
+ 
+ # Specify what libraries we need to link against for Tcl/Tk on this system.
+-TCLTK_LIBS = -ltcl$(TCLTK_VERSION) -ltk$(TCLTK_VERSION) -ldl
++TCLTK_LIBS = -ltcl -ltk -ldl
++GL_LIBS = -lGL -lGLU -lX11 -lXmu
+ 
+ # Tell mmake to use the `mercury_tcltk' library.
+-VPATH 		= $(MERCURY_TCLTK_DIR):$(MMAKE_VPATH)
+-MCFLAGS 	= -I$(MERCURY_TCLTK_DIR) $(EXTRA_MCFLAGS)
+-MLFLAGS 	= -R$(MERCURY_TCLTK_DIR) $(EXTRA_MLFLAGS) \
+-          	  -L$(MERCURY_TCLTK_DIR) 
+-MLLIBS 		= $(TCLTK_LIBS) $(EXTRA_MLLIBS)
+-C2INITARGS 	= $(MERCURY_TCLTK_DIR)/mercury_tcltk.init 
++#VPATH 		= $(MERCURY_TCLTK_DIR):$(MMAKE_VPATH)
++#MCFLAGS 	= -I$(MERCURY_TCLTK_DIR) $(EXTRA_MCFLAGS)
++#MLFLAGS 	= -R$(MERCURY_TCLTK_DIR) $(EXTRA_MLFLAGS) \
++#          	  -L$(MERCURY_TCLTK_DIR) 
++MLLIBS 		= $(TCLTK_LIBS) $(GL_LIBS) $(EXTRA_MLLIBS)
++#C2INITARGS 	= $(MERCURY_TCLTK_DIR)/mercury_tcltk.init 
+ 
+ # We may need to tell mmake where tcl.h and tk.h are.
+ # If we are using Tcl/Tk version 8.0 on Debian the include directory
+ # we need is `/usr/include/tcl8.0/generic'.
+-CFLAGS = -I/usr/include/tcl$(TCLTK_VERSION)
++#CFLAGS = -I/usr/include/tcl$(TCLTK_VERSION)
+ 
+ # We need to also access mtcltk.mh
+-MGNUCFLAGS	= -I$(MERCURY_TCLTK_DIR)
++MGNUCFLAGS	= -I/usr/lib/tk$(TCLTK_VERSION)/include/generic
+ 
+ depend: mtogl.depend
+ 
