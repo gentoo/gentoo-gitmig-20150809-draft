@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.0.ebuild,v 1.3 2006/09/15 19:07:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.8.0.ebuild,v 1.4 2006/09/16 19:28:47 dang Exp $
 
 inherit eutils flag-o-matic alternatives gnome2 autotools
 
@@ -12,7 +12,8 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bogofilter crypt dbus debug doc gstreamer hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
+# gstreamer for audio-inline, when it uses 0.10
+IUSE="bogofilter crypt dbus debug doc hal ipv6 kerberos krb4 ldap mono nntp pda profile spell ssl"
 
 # Pango dependency required to avoid font rendering problems
 # evolution-data-server dep is 1.5 because in the e-utils directories,
@@ -49,13 +50,13 @@ RDEPEND=">=x11-themes/gnome-icon-theme-1.2
 	ldap? ( >=net-nds/openldap-2 )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )
-	gstreamer? (
-		>=media-libs/gstreamer-0.10
-		>=media-libs/gst-plugins-base-0.10 )
 	dbus? ( sys-apps/dbus )
 	mono? ( >=dev-lang/mono-1 )
 	bogofilter? ( mail-filter/bogofilter )
 	!bogofilter? ( mail-filter/spamassassin )"
+#	gstreamer? (
+#		>=media-libs/gstreamer-0.10
+#		>=media-libs/gst-plugins-base-0.10 )
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
