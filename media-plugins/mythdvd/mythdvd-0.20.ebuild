@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.ebuild,v 1.1 2006/09/14 06:02:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.ebuild,v 1.2 2006/09/16 01:58:34 cardoe Exp $
 
 inherit mythtv-plugins
 
@@ -14,3 +14,15 @@ RDEPEND="~media-plugins/mythvideo-${PV}
 	|| ( media-video/mplayer media-video/xine-ui media-video/ogle )"
 
 MTVCONF="--enable-vcd $(use_enable transcode)"
+
+src_install() {
+	mythtv-plugins_src_install
+
+	newinitd "${FILESDIR}"/mtd.init mtd
+}
+
+pkg_postinst() {
+	echo
+	einfo "To have Myth Transcode Daemon (mtd) start on boot do the following"
+	einfo "rc-update add mtd default"
+}
