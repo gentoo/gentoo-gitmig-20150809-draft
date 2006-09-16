@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0.ebuild,v 1.9 2006/04/28 13:54:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ipadic/ipadic-2.7.0.ebuild,v 1.10 2006/09/16 13:41:20 dertobi123 Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://chasen.aist-nara.ac.jp/chasen/distribution.html.en"
 SRC_URI="http://chasen.aist-nara.ac.jp/stable/ipadic/${P}.tar.gz"
 
 LICENSE="ipadic"
-KEYWORDS="~x86 ~amd64 ~ppc sparc ppc64"
+KEYWORDS="~amd64 ppc ppc64 sparc ~x86"
 SLOT="0"
 
 DEPEND=">=app-text/chasen-2.3.1"
