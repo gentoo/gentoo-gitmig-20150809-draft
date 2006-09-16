@@ -1,6 +1,21 @@
 # ChangeLog for app-admin/whowatch
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.11 2005/01/01 11:35:57 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.12 2006/09/16 15:46:45 phreak Exp $
+
+*whowatch-1.5.2-r1 (16 Sep 2006)
+
+  16 Sep 2006; Christian Heim <phreak@gentoo.org>
+  +files/whowatch-1.5.2-Makefile.in.patch, +files/whowatch-1.5.2-gcc4.patch,
+  metadata.xml, +whowatch-1.5.2-r1.ebuild:
+  Revision bump, fixing compilation with gcc-4 (#146138, thanks to Janne
+  Pikkarainen for the inital patch), fixing usage with gcc-3.4 (#102339,
+  WORKSFORME with gcc-3.4.6). Also updating the ChangeLog (ChrisWhite didn't
+  on 2005/11/06). Taking maintainership of the package.
+
+  30 Nov 2005; Chris White <chriswhite@gentoo.org> whowatch-1.5.2.ebuild:
+  Updating the ebuild, removing lots of invalid stuff, adding HOMEPAGE,
+  KEYWORDS, LICENSE, SLOT, IUSE. Modify src_compile to use econf and emake;
+  src_install is now using einstall.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> whowatch-1.5.2.ebuild:
   Add die following econf for bug 48950
@@ -11,18 +26,17 @@
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> whowatch-1.5.2.ebuild:
   inherit eutils for epatch
 
-  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> whowatch-1.5.2.ebuild :
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> whowatch-1.5.2.ebuild:
   AMD64 keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*whowatch-1.5.2 (1 Feb 2002)
-  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> whowatch-1.5.2.ebuild : 
 
+*whowatch-1.5.2 (1 Feb 2002)
+
+  30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> whowatch-1.5.2.ebuild:
   Added ppc to KEYWORDS.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
