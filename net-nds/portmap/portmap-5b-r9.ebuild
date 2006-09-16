@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.14 2005/08/23 13:21:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.15 2006/09/16 21:11:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux tcpd"
 
-DEPEND="virtual/libc
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )
+RDEPEND="selinux? ( sec-policy/selinux-portmap )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )"
+DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51"
-RDEPEND="selinux? ( sec-policy/selinux-portmap )"
 
 pkg_setup() {
 	enewgroup rpc 111
