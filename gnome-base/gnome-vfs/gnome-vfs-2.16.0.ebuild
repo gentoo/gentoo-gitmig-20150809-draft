@@ -1,16 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0.ebuild,v 1.3 2006/09/15 19:18:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0.ebuild,v 1.4 2006/09/16 21:08:42 vapier Exp $
 
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Gnome Virtual Filesystem"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2 LGPL-2"
 
+LICENSE="GPL-2 LGPL-2"
 SLOT="2"
-#KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh sparc x86"
+KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sh sparc x86"
 IUSE="avahi doc gnutls hal ipv6 samba ssl"
 
 RDEPEND=">=gnome-base/gconf-2
@@ -76,10 +75,10 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Allow the Trash on afs filesystems (#106118)
-	epatch ${FILESDIR}/${PN}-2.12.0-afs.patch
+	epatch "${FILESDIR}"/${PN}-2.12.0-afs.patch
 
 	# Fix compiling with headers missing
-	epatch ${FILESDIR}/${PN}-2.15.2-headers-define.patch
+	epatch "${FILESDIR}"/${PN}-2.15.2-headers-define.patch
 
 	# For gtk-doc macro failure when it's not installed
 	cp aclocal.m4 old_macros.m4
