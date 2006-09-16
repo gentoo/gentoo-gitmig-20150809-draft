@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/w_scan
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.1 2006/09/16 16:22:30 zzam Exp $
+
+*w_scan-20060903 (16 Sep 2006)
+
+  16 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/w_scan-20060903-paths.patch, +w_scan-20060903.ebuild:
+  Initial import of ebuild, provided by E. Scaglione <erm67@yahoo.it>, see Bug
+  #146987.
+
