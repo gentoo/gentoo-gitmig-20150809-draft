@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.16 2006/04/24 17:27:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.17 2006/09/16 14:22:02 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> tre-0.7.2.ebuild:
+  ppc stable
 
 *tre-0.7.3 (24 Apr 2006)
 
