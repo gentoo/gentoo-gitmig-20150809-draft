@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/bashburn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.17 2006/05/07 03:10:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/ChangeLog,v 1.18 2006/09/16 13:00:49 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  bashburn-1.5.2.ebuild:
+  ppc stable
 
   07 May 2006; Jason Wever <weeve@gentoo.org> bashburn-1.4.ebuild:
   Stable on SPARC.
