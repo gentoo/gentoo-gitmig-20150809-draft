@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.11 2006/09/16 15:31:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.12 2006/09/16 21:07:59 vapier Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -14,13 +14,11 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 # Removed 'static' USE flag because it is broken upstream, Bug #94137
-IUSE="berkdb crypt gdbm ldap mysql postgres kerberos ssl java pam
-		authdaemond sample urandom srp ntlm_unsupported_patch"
+IUSE="berkdb crypt gdbm ldap mysql postgres kerberos ssl java pam authdaemond sample urandom srp ntlm_unsupported_patch"
 
-RDEPEND="virtual/libc
-	berkdb? ( >=sys-libs/db-3.2 )
+RDEPEND="berkdb? ( >=sys-libs/db-3.2 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
@@ -36,7 +34,6 @@ RDEPEND="virtual/libc
 	)
 	java? ( =virtual/jdk-1.4* )
 	ntlm_unsupported_patch? ( >=net-fs/samba-3.0.9 )"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	>=sys-devel/autoconf-2.58
