@@ -1,0 +1,230 @@
+diff -uNr raidutils-0.0.6/include/device.hh raidutils-0.0.6.new/include/device.hh
+--- raidutils-0.0.6/include/device.hh	2005-01-24 10:41:03.000000000 +0100
++++ raidutils-0.0.6.new/include/device.hh	2006-09-16 14:17:05.000000000 +0200
+@@ -29,7 +29,7 @@
+ // Data unique to every engine device
+ #undef PACK
+ #if (defined(__GNUC__))
+-# define PACK __attribute__ ((packed))
++#define PACK
+ #else
+ #define PACK
+ #endif
+diff -uNr raidutils-0.0.6/include/get_info.h raidutils-0.0.6.new/include/get_info.h
+--- raidutils-0.0.6/include/get_info.h	2005-01-24 10:41:03.000000000 +0100
++++ raidutils-0.0.6.new/include/get_info.h	2006-09-16 14:17:43.000000000 +0200
+@@ -366,7 +366,7 @@
+ 
+ #undef PACK
+ #if (defined(__GNUC__))
+-# define PACK __attribute__ ((packed))
++#define PACK
+ #else
+ #define PACK
+ #endif
+diff -uNr raidutils-0.0.6/include/hba.hh raidutils-0.0.6.new/include/hba.hh
+--- raidutils-0.0.6/include/hba.hh	2005-01-24 10:41:03.000000000 +0100
++++ raidutils-0.0.6.new/include/hba.hh	2006-09-16 14:18:39.000000000 +0200
+@@ -29,7 +29,7 @@
+ // Data unique to every engine HBA
+ #undef PACK
+ #if (defined(__GNUC__))
+-# define PACK __attribute__ ((packed))
++#define PACK
+ #else
+ #define PACK
+ #endif
+diff -uNr raidutils-0.0.6/include/mgr.hh raidutils-0.0.6.new/include/mgr.hh
+--- raidutils-0.0.6/include/mgr.hh	2005-01-24 10:41:03.000000000 +0100
++++ raidutils-0.0.6.new/include/mgr.hh	2006-09-16 14:18:17.000000000 +0200
+@@ -29,7 +29,7 @@
+ // Data unique to every engine manager
+ #undef PACK
+ #if (defined(__GNUC__))
+-# define PACK __attribute__ ((packed))
++#define PACK
+ #else
+ #define PACK
+ #endif
+diff -uNr raidutils-0.0.6/raideng/connect.hpp raidutils-0.0.6.new/raideng/connect.hpp
+--- raidutils-0.0.6/raideng/connect.hpp	2005-01-24 10:41:05.000000000 +0100
++++ raidutils-0.0.6.new/raideng/connect.hpp	2006-09-16 14:40:05.000000000 +0200
+@@ -189,7 +189,7 @@
+ 
+ // Constructor/Destructor.............................
+ 
+-			dptSCSIcon_C::dptSCSIcon_C();
++			dptSCSIcon_C();
+ 
+ // Message Handlers...................................
+ 
+diff -uNr raidutils-0.0.6/raideng/raid.h raidutils-0.0.6.new/raideng/raid.h
+--- raidutils-0.0.6/raideng/raid.h	2005-01-24 10:41:04.000000000 +0100
++++ raidutils-0.0.6.new/raideng/raid.h	2006-09-16 14:40:37.000000000 +0200
+@@ -271,7 +271,7 @@
+ 
+ // Constructor/Destructor.............................
+ 
+-			raidDef_S::raidDef_S();
++			raidDef_S();
+ 
+ };
+ #endif  // c++
+diff -uNr raidutils-0.0.6/raidutil/alarm.hpp raidutils-0.0.6.new/raidutil/alarm.hpp
+--- raidutils-0.0.6/raidutil/alarm.hpp	2005-01-24 10:41:07.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/alarm.hpp	2006-09-16 14:29:40.000000000 +0200
+@@ -58,7 +58,7 @@
+ class AlarmStatus:public Command
+ 	{
+ 	public:
+-		AlarmStatus::AlarmStatus( int hba, AlarmCommand cmd );							
++		AlarmStatus( int hba, AlarmCommand cmd );							
+ 		AlarmStatus( const AlarmStatus &new_AlarmStatus );
+ 		virtual	~AlarmStatus();
+ 		AlarmStatus	&operator = ( AlarmStatus &right );
+diff -uNr raidutils-0.0.6/raidutil/eventlog.hpp raidutils-0.0.6.new/raidutil/eventlog.hpp
+--- raidutils-0.0.6/raidutil/eventlog.hpp	2005-01-24 10:41:07.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/eventlog.hpp	2006-09-16 14:30:34.000000000 +0200
+@@ -77,7 +77,7 @@
+ 	{
+ 
+ 	public:
+-		EventLog::EventLog(SCSI_Addr_List *deviceList, 
++		EventLog(SCSI_Addr_List *deviceList, 
+             EventLogOptions cmd);
+ 		EventLog(const EventLog &new_EventLog);
+ 		virtual	~EventLog();
+diff -uNr raidutils-0.0.6/raidutil/expand.hpp raidutils-0.0.6.new/raidutil/expand.hpp
+--- raidutils-0.0.6/raidutil/expand.hpp	2005-01-24 10:41:07.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/expand.hpp	2006-09-16 14:31:11.000000000 +0200
+@@ -55,7 +55,7 @@
+ class Expand:public Command
+ {
+    public:
+-      Expand::Expand (SCSI_Address raid, SCSI_Addr_List *list);
++      Expand (SCSI_Address raid, SCSI_Addr_List *list);
+ 		Expand (const Expand &new_Expand);
+ 		virtual ~Expand();
+ 		Expand &operator = (Expand &right);
+diff -uNr raidutils-0.0.6/raidutil/forcest.hpp raidutils-0.0.6.new/raidutil/forcest.hpp
+--- raidutils-0.0.6/raidutil/forcest.hpp	2005-01-24 10:41:07.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/forcest.hpp	2006-09-16 14:31:54.000000000 +0200
+@@ -65,7 +65,7 @@
+ class ForceState:public Command
+ 	{
+ 	public:
+-		ForceState::ForceState(SCSI_Addr_List *deviceList, ForceStateOptions cmd);
++		ForceState(SCSI_Addr_List *deviceList, ForceStateOptions cmd);
+ 		ForceState(const ForceState &new_ForceState);
+ 		virtual	~ForceState();
+ 
+diff -uNr raidutils-0.0.6/raidutil/namarray.hpp raidutils-0.0.6.new/raidutil/namarray.hpp
+--- raidutils-0.0.6/raidutil/namarray.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/namarray.hpp	2006-09-16 14:32:35.000000000 +0200
+@@ -58,7 +58,7 @@
+ {
+ 
+ 	public:
+-		NameArray::NameArray(SCSI_Address arrayToName, char *arrayName);
++		NameArray(SCSI_Address arrayToName, char *arrayName);
+ 		NameArray(const NameArray &new_NameArray);
+ 		virtual	~NameArray();
+ 
+diff -uNr raidutils-0.0.6/raidutil/rmwflash.hpp raidutils-0.0.6.new/raidutil/rmwflash.hpp
+--- raidutils-0.0.6/raidutil/rmwflash.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/rmwflash.hpp	2006-09-16 14:38:09.000000000 +0200
+@@ -59,7 +59,7 @@
+ {
+ 
+         public:
+-                RMWFlash::RMWFlash(int hbaNo, char *Data, int Region, unsigned long Offset, unsigned Size);
++                RMWFlash(int hbaNo, char *Data, int Region, unsigned long Offset, unsigned Size);
+                 RMWFlash(const RMWFlash &new_RMWFlash);
+                 virtual ~RMWFlash();
+ 
+diff -uNr raidutils-0.0.6/raidutil/segment.hpp raidutils-0.0.6.new/raidutil/segment.hpp
+--- raidutils-0.0.6/raidutil/segment.hpp	2005-01-24 10:41:07.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/segment.hpp	2006-09-16 14:39:12.000000000 +0200
+@@ -51,7 +51,7 @@
+ {
+ 
+ 	public:
+-		arraySegment::arraySegment(SCSI_Address raidToSeg, uLONG segSize[8], uLONG segOffset[8], bool showSeg);
++		arraySegment(SCSI_Address raidToSeg, uLONG segSize[8], uLONG segOffset[8], bool showSeg);
+ 		arraySegment(const arraySegment &new_arraySegment);
+ 		virtual	~arraySegment();
+ 
+diff -uNr raidutils-0.0.6/raidutil/setcache.hpp raidutils-0.0.6.new/raidutil/setcache.hpp
+--- raidutils-0.0.6/raidutil/setcache.hpp	2005-01-24 10:41:07.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/setcache.hpp	2006-09-16 14:35:41.000000000 +0200
+@@ -55,7 +55,7 @@
+ class SetCache:public Command
+ 	{
+ 	public:
+-		SetCache::SetCache(
++		SetCache(
+ 				SCSI_Addr_List	*addresses,		// a list of addresses
+ 				int				on,				// Whether to enable or disable
+ 				int				rw				// Read or write cacheing.
+diff -uNr raidutils-0.0.6/raidutil/setrate.hpp raidutils-0.0.6.new/raidutil/setrate.hpp
+--- raidutils-0.0.6/raidutil/setrate.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/setrate.hpp	2006-09-16 14:33:22.000000000 +0200
+@@ -59,8 +59,8 @@
+ 	public:
+ 
+ 		// Set the (global) rebuild rate
+-        SetRate::SetRate(int rate, SCSI_Addr_List *objs);
+-        SetRate::SetRate(const SetRate &right);
++        SetRate(int rate, SCSI_Addr_List *objs);
++        SetRate(const SetRate &right);
+ 		virtual	~SetRate();
+ 
+ 		Dpt_Error execute(String_List **output);
+diff -uNr raidutils-0.0.6/raidutil/setscfg.hpp raidutils-0.0.6.new/raidutil/setscfg.hpp
+--- raidutils-0.0.6/raidutil/setscfg.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/setscfg.hpp	2006-09-16 14:38:38.000000000 +0200
+@@ -59,7 +59,7 @@
+ {
+ 
+ 	public:
+-		setscfg::setscfg();
++		setscfg();
+ 		virtual	~setscfg();
+ 
+ 		Dpt_Error execute(String_List **output);
+diff -uNr raidutils-0.0.6/raidutil/taskctrl.hpp raidutils-0.0.6.new/raidutil/taskctrl.hpp
+--- raidutils-0.0.6/raidutil/taskctrl.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/taskctrl.hpp	2006-09-16 14:36:42.000000000 +0200
+@@ -59,7 +59,7 @@
+ class TaskControl:public Command
+ 	{
+ 	public:
+-		TaskControl::TaskControl(SCSI_Addr_List *deviceList, TaskCommandOptions cmd);
++		TaskControl(SCSI_Addr_List *deviceList, TaskCommandOptions cmd);
+ 		TaskControl(const TaskControl &new_TaskControl);
+ 		virtual	~TaskControl();
+ 
+diff -uNr raidutils-0.0.6/raidutil/uartdmp.hpp raidutils-0.0.6.new/raidutil/uartdmp.hpp
+--- raidutils-0.0.6/raidutil/uartdmp.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/uartdmp.hpp	2006-09-16 14:37:39.000000000 +0200
+@@ -59,7 +59,7 @@
+ {
+ 
+ 	public:
+-		UartDmp::UartDmp(int hbaNo, char *fileName);
++		UartDmp(int hbaNo, char *fileName);
+ 		UartDmp(const UartDmp &new_UartDmp);
+ 		virtual	~UartDmp();
+ 
+diff -uNr raidutils-0.0.6/raidutil/zap.hpp raidutils-0.0.6.new/raidutil/zap.hpp
+--- raidutils-0.0.6/raidutil/zap.hpp	2005-01-24 10:41:06.000000000 +0100
++++ raidutils-0.0.6.new/raidutil/zap.hpp	2006-09-16 14:34:52.000000000 +0200
+@@ -55,7 +55,7 @@
+ class Zap:public Command
+ 	{
+ 	public:
+-		Zap::Zap(
++		Zap(
+ 				SCSI_Addr_List	*addresses,  // a list of addresses
+             int resync = 0            // (send reset to hba or not)
+       );								         // to delete raid tables on

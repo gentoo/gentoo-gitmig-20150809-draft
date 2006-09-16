@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/raidutils
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.6 2005/06/01 08:49:59 xmerlin Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.7 2006/09/16 12:03:20 xmerlin Exp $
+
+  16 Sep 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/raidutils-0.0.6-gcc41x-compilefix.patch, raidutils-0.0.6.ebuild:
+  Fixed bug #146105.
 
   01 Jun 2005; Christian Zoffoli <xmerlin@gentoo.org> raidutils-0.0.5.ebuild,
   raidutils-0.0.6.ebuild:
