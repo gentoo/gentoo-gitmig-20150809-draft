@@ -1,5 +1,5 @@
---- mpdconf.example	2006-09-15 03:39:30.000000000 +0200
-+++ mpdconf.example.gentoo	2006-09-16 19:57:42.000000000 +0200
+--- doc/mpdconf.example	2006-09-15 03:39:30.000000000 +0200
++++ doc/mpdconf.example.gentoo	2006-09-16 19:57:42.000000000 +0200
 @@ -1,12 +1,12 @@
 -# An example configuration file for MPD
 +# A default Gentoo configuration file for MPD
