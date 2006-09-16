@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/conf-update
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.7 2006/09/07 11:56:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.8 2006/09/16 10:52:02 blubb Exp $
+
+*conf-update-0.12.0 (16 Sep 2006)
+
+  16 Sep 2006; <blubb@gentoo.org> +conf-update-0.12.0.ebuild:
+  version bump
 
 *conf-update-0.11.0 (07 Sep 2006)
 
