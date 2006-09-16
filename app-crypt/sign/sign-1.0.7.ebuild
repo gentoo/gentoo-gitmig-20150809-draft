@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/sign-1.0.7.ebuild,v 1.6 2005/09/20 19:15:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/sign-1.0.7.ebuild,v 1.7 2006/09/16 17:26:31 swegener Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="File signing and signature verification utility"
 HOMEPAGE="http://swapped.cc/sign/"
@@ -13,6 +13,14 @@ KEYWORDS="ppc ~ppc-macos x86"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	has_version ">=dev-libs/openssl-0.9.8" && epatch "${FILESDIR}"/${PV}-openssl-0.9.8.patch
+	epatch "${FILESDIR}"/${PV}-as-needed.patch
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"
