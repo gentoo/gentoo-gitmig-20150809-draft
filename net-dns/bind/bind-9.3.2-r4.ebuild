@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r4.ebuild,v 1.10 2006/09/14 17:33:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r4.ebuild,v 1.11 2006/09/16 21:06:53 vapier Exp $
 
 inherit eutils libtool autotools
 
@@ -10,14 +10,13 @@ MY_PV="${PV}-P1"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
 	dlz? ( http://dev.gentoo.org/~voxus/bind/ctrix_dlz_${DLZ_VERSION}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
@@ -28,7 +27,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	use threads && {
@@ -45,14 +44,16 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} && cd ${S}
+	unpack ${A}
+	cd "${S}"
 
 	# Adjusting PATHs in manpages
-	for i in `echo bin/{named/named.8,check/named-checkconf.8,rndc/rndc.8}`; do
-		sed -i -e 's:/etc/named.conf:/etc/bind/named.conf:g' \
-		       -e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
-		       -e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
-		       ${i}
+	for i in bin/{named/named.8,check/named-checkconf.8,rndc/rndc.8} ; do
+		sed -i \
+			-e 's:/etc/named.conf:/etc/bind/named.conf:g' \
+			-e 's:/etc/rndc.conf:/etc/bind/rndc.conf:g' \
+			-e 's:/etc/rndc.key:/etc/bind/rndc.key:g' \
+			"${i}"
 	done
 
 	use dlz && {
