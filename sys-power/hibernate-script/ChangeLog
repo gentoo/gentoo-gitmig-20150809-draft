@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.31 2006/07/22 00:33:48 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.32 2006/09/16 13:55:26 phreak Exp $
+
+*hibernate-script-1.93-r5 (16 Sep 2006)
+
+  16 Sep 2006; Christian Heim <phreak@gentoo.org>
+  +hibernate-script-1.93-r5.ebuild:
+  Revision bump, including new patch tarball. Fixing my bad patch
+  implementation and using bash conform function syntax (i855resolution vs.
+  855resolution). Thanks to Alexander Skwar in #146170.
 
 *hibernate-script-1.93-r4 (22 Jul 2006)
 
