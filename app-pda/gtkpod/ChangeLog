@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.45 2006/07/08 02:56:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.46 2006/09/16 14:16:25 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gtkpod-0.99.4.ebuild:
+  ppc stable
 
   08 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org> gtkpod-0.94.0.ebuild:
   remove optional dep that is no longer in portage
