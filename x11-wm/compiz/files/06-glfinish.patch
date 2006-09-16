@@ -1,0 +1,23 @@
+Add glFinish() after drawing a frame to work-around throttling problems.
+
+From: Kristian Høgsberg <krh@redhat.com>
+
+
+---
+
+ src/display.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/display.c b/src/display.c
+index 7cf12e1..c44b2a2 100644
+--- a/src/display.c
++++ b/src/display.c
+@@ -2079,6 +2079,8 @@ eventLoop (void)
+ 
+ 		    (*s->donePaintScreen) (s);
+ 
++		    glFinish ();
++
+ 		    /* remove destroyed windows */
+ 		    while (s->pendingDestroys)
+ 		    {

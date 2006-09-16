@@ -1,0 +1,12 @@
+# ChangeLog for x11-wm/compiz
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.1 2006/09/16 14:21:20 hanno Exp $
+
+*compiz-0.0.13_pre20060916 (16 Sep 2006)
+
+  16 Sep 2006; Hanno Boeck <hanno@gentoo.org>
+  +files/03-composite-cube-logo.patch, +files/04-fbconfig-depth-fix.patch,
+  +files/06-glfinish.patch, +files/07-cow.patch, +files/compiz-aiglx,
+  +compiz-0.0.13_pre20060916.ebuild:
+  Initial commit of compiz.
+

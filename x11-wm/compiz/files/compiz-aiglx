@@ -1,0 +1,5 @@
+# Start window decorator
+gnome-window-decorator --replace &
+
+# Start compiz
+LIBGL_ALWAYS_INDIRECT=1 compiz --replace --indirect-rendering --strict-binding gconf move resize minimize place decoration wobbly cube rotate scale switcher zoom fade screenshot water dbus
