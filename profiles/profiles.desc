@@ -68,7 +68,7 @@ ppc-macos	default-darwin/macos/10.4			dev
 s390		default-linux/s390/2006.0			stable
 
 # SuperH Profiles
-sh		default-linux/sh				dev
+sh		default-linux/sh/2006.1				stable
 
 # SPARC Profiles
 #sparc		default-linux/sparc/sparc32/2006.0/2.4		dev
