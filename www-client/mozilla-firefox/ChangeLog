@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.181 2006/09/15 16:03:59 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.182 2006/09/16 04:19:38 redhatter Exp $
+
+*mozilla-firefox-1.5.0.7 (16 Sep 2006)
+
+  16 Sep 2006; Stuart Longland <redhatter@gentoo.org>
+  +mozilla-firefox-1.5.0.7.ebuild:
+  New Firefox release 1.5.0.7: fixes several security vunurabilities listed at
+  <http://tinyurl.com/fn9ox>
 
   15 Sep 2006; Thomas Cort <tcort@gentoo.org>
   mozilla-firefox-2.0_beta2.ebuild:
