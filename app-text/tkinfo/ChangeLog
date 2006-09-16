@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tkinfo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/ChangeLog,v 1.15 2006/03/09 22:16:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/ChangeLog,v 1.16 2006/09/16 14:36:30 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> tkinfo-2.8.ebuild:
+  ppc stable
 
   09 Mar 2006; Aron Griffis <agriffis@gentoo.org> tkinfo-2.8.ebuild:
   Mark 2.8 stable on ia64
