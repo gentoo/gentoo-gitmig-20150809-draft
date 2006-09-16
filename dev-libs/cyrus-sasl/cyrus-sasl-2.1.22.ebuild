@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.10 2006/09/06 18:31:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.11 2006/09/16 15:31:12 dertobi123 Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 mips ~ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 # Removed 'static' USE flag because it is broken upstream, Bug #94137
 IUSE="berkdb crypt gdbm ldap mysql postgres kerberos ssl java pam
 		authdaemond sample urandom srp ntlm_unsupported_patch"

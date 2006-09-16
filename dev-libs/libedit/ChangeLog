@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.16 2006/02/20 16:38:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.17 2006/09/16 15:35:48 dertobi123 Exp $
+
+  16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libedit-20050930.ebuild:
+  ppc stable
 
   20 Feb 2006; Markus Rothe <corsair@gentoo.org> libedit-20050930.ebuild:
   Stable on ppc64
