@@ -25,10 +25,10 @@ EBUILD autoconf-wrapper-3-r1.ebuild 815 RMD160 32e487693e182a1871bf0035a4d1298f9
 MD5 740f55bd9ef30e2958b762e60d3ef0e7 autoconf-wrapper-3-r1.ebuild 815
 RMD160 32e487693e182a1871bf0035a4d1298f9934986b autoconf-wrapper-3-r1.ebuild 815
 SHA256 cd39f71e75cb869756921beabf3e4be39b50be0b6c6269c2041f3c76477abc4c autoconf-wrapper-3-r1.ebuild 815
-EBUILD autoconf-wrapper-3.2-r2.ebuild 898 RMD160 9c90f83d3ce6cedfccf6327e5b213769685b92ee SHA1 ed0fff0f7328525e3801e42bbdba1d8d87a61ffd SHA256 6626e7e0fdbbf2b257941703417544e29d9ed3c199caccb31ac5690785252ebc
-MD5 c79a2205c56d39f58849fd8eb7228056 autoconf-wrapper-3.2-r2.ebuild 898
-RMD160 9c90f83d3ce6cedfccf6327e5b213769685b92ee autoconf-wrapper-3.2-r2.ebuild 898
-SHA256 6626e7e0fdbbf2b257941703417544e29d9ed3c199caccb31ac5690785252ebc autoconf-wrapper-3.2-r2.ebuild 898
+EBUILD autoconf-wrapper-3.2-r2.ebuild 884 RMD160 74c66e8006977e6169906e2a87ab321940c2ca16 SHA1 dbb0c90423b388ffb84a3ebd64c26b6cafa7cf07 SHA256 542af1566b6bfdc6f324a8e3ecc429bcf11059d0cba737b08ada1f5a9a1479dd
+MD5 ee65590357ba701ea1c38d19a189f2f9 autoconf-wrapper-3.2-r2.ebuild 884
+RMD160 74c66e8006977e6169906e2a87ab321940c2ca16 autoconf-wrapper-3.2-r2.ebuild 884
+SHA256 542af1566b6bfdc6f324a8e3ecc429bcf11059d0cba737b08ada1f5a9a1479dd autoconf-wrapper-3.2-r2.ebuild 884
 EBUILD autoconf-wrapper-3.2.ebuild 819 RMD160 e8aba42fb806ea064717645d9ec125ebecc143fb SHA1 d8ed702dcde9b5c90e7aa8e925db8029f3f9914c SHA256 026b835f27fca3edbd4d20ad743511d0f7616f30635bff356ee4ae0b8ca1cca4
 MD5 697678fd3e1561287ff8fa9be2b2fe7f autoconf-wrapper-3.2.ebuild 819
 RMD160 e8aba42fb806ea064717645d9ec125ebecc143fb autoconf-wrapper-3.2.ebuild 819
@@ -61,9 +61,9 @@ MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-autoconf-wrapper-3.2-r2 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-autoconf-wrapper-3.2-r2 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-autoconf-wrapper-3.2-r2 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE9ADPViELBEf1JB0RAvBPAJ9Mo40CHWRxEYKqU3ctwiFHOoKraQCghRg/
-M1ldeI+nelq87p0d7Hrp7fY=
-=3X6t
+iD8DBQFFDGpuamhnQswr0vIRAmP9AKCNJehqPJxruPcdUfcvoZMUxtpQlQCeIV6F
+LvtqKMO92qwkSv+Uh5BSVXA=
+=lTGL
 -----END PGP SIGNATURE-----
