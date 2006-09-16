@@ -1,16 +1,3 @@
---- mercury-compiler-0.13.0.orig/Makefile	2005-08-22 15:38:34.000000000 +1200
-+++ mercury-compiler-0.13.0/Makefile	2006-09-16 22:10:24.000000000 +1200
-@@ -28,6 +28,10 @@
- all:
- 	$(MMAKE) MMAKEFLAGS=$(PARALLEL) all
- 
-+.PHONY: libgrades
-+libgrades:
-+	$(MMAKE) MMAKEFLAGS=$(PARALLEL) libgrades
-+
- .PHONY: libmmc
- libmmc:
- 	$(MMAKE) MMAKEFLAGS=$(PARALLEL) libmmc
 --- mercury-compiler-0.13.0.orig/Mmakefile	2005-08-12 03:56:57.000000000 +1200
 +++ mercury-compiler-0.13.0/Mmakefile	2006-09-16 11:58:30.000000000 +1200
 @@ -281,6 +281,54 @@
