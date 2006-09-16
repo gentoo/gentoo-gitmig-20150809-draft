@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/fblogo-0.5.2.ebuild,v 1.5 2005/07/22 18:23:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/fblogo-0.5.2.ebuild,v 1.6 2006/09/16 16:53:51 spock Exp $
 
 IUSE=""
 
@@ -33,5 +33,5 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die
-	dodoc README CHANGES COPYING
+	dodoc README CHANGES
 }
