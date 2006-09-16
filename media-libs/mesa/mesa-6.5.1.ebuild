@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1.ebuild,v 1.2 2006/09/16 19:12:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1.ebuild,v 1.3 2006/09/16 19:27:48 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -115,7 +115,7 @@ src_unpack() {
 
 	# Configurable DRI drivers
 	if use video_cards_i810; then
-		add_drivers i810 i915
+		add_drivers i810 i915 i965
 	fi
 	if use video_cards_mach64; then
 		add_drivers mach64
@@ -156,7 +156,7 @@ src_unpack() {
 		if use alpha; then
 			add_drivers mga tdfx r128 r200 r300 radeon
 		elif use amd64; then
-			add_drivers i915 mga r128 r200 r300 radeon tdfx
+			add_drivers i915 i965 mga r128 r200 r300 radeon tdfx
 		elif use arm; then
 			add_drivers mga r128 r200 r300 radeon
 		elif use hppa; then
@@ -174,8 +174,8 @@ src_unpack() {
 		elif use sparc; then
 			add_drivers ffb mach64
 		elif use x86; then
-			add_drivers i810 i915 mach64 mga r128 r200 r300 radeon s3v savage \
-				sis tdfx trident unichrome
+			add_drivers i810 i915 i965 mach64 mga r128 r200 r300 radeon s3v \
+				savage sis tdfx trident unichrome
 		fi
 	fi
 
