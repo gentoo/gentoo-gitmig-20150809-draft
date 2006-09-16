@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.191 2006/09/15 01:28:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.192 2006/09/16 21:41:17 vapier Exp $
+
+*openssl-0.9.8c-r1 (16 Sep 2006)
+
+  16 Sep 2006; Mike Frysinger <vapier@gentoo.org> -openssl-0.9.8c.ebuild,
+  +openssl-0.9.8c-r1.ebuild:
+  Remove USE=sse2 for now as it breaks ABI #147758 by    Andrew Stimpson.
 
   15 Sep 2006; Mike Frysinger <vapier@gentoo.org> files/gentoo.config-0.9.8,
   openssl-0.9.8c.ebuild:
