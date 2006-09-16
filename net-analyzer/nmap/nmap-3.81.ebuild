@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.81.ebuild,v 1.12 2005/09/17 08:26:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.81.ebuild,v 1.13 2006/09/16 17:03:03 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -28,6 +28,6 @@ src_compile() {
 
 src_install() {
 	einstall -j1 nmapdatadir=${D}/usr/share/nmap install || die
-	dodoc CHANGELOG HACKING INSTALL docs/README docs/*.txt
+	dodoc CHANGELOG HACKING docs/README docs/*.txt
 	dohtml docs/*.html
 }

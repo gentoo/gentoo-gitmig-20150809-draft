@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.126 2006/09/14 22:12:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.127 2006/09/16 17:03:03 spock Exp $
+
+  16 Sep 2006; Michał Januszewski <spock@gentoo.org> nmap-3.81.ebuild,
+  nmap-4.01.ebuild, -nmap-4.03.ebuild, nmap-4.10.ebuild, nmap-4.11.ebuild:
+  Removed an old ebuild. Don't put INSTALL into /usr/share/doc.
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> nmap-4.11.ebuild:
   Stable on sparc
