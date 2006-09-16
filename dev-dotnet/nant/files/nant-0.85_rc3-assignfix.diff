@@ -1,0 +1,11 @@
+--- nant-0.85-nightly-2005-12-13-old/src/NAnt.Core/Tasks/StyleTask.cs	2005-06-07 21:05:32.000000000 +0200
++++ nant-0.85-nightly-2005-12-13/src/NAnt.Core/Tasks/StyleTask.cs	2006-09-15 02:20:04.000000000 +0200
+@@ -270,7 +270,7 @@
+                     request.Proxy = Proxy.GetWebProxy();
+                 }
+ 
+-                HttpWebResponse response = response = (HttpWebResponse) request.GetResponse();
++                HttpWebResponse response = (HttpWebResponse) request.GetResponse();
+                 if (response.StatusCode != HttpStatusCode.OK) {
+                     throw new BuildException(string.Format(CultureInfo.InvariantCulture, 
+                         ResourceUtils.GetString("NA1149"), XsltFile), 

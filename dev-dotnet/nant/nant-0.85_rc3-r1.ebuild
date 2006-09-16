@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85_rc3-r1.ebuild,v 1.1 2006/01/19 17:15:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85_rc3-r1.ebuild,v 1.2 2006/09/16 18:11:55 latexer Exp $
 
 inherit mono eutils
 
@@ -22,6 +22,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-assignfix.diff
 
 	# Fix a problem with duplicate building caused by the doc= target
 	for file in $(find ${S}/src -name '*.build')
