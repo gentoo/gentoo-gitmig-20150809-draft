@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX automake-1.4-ansi2knr-stdlib.patch 249 RMD160 f17983551ea326df6dc03f8389c02df3670eb475 SHA1 f6f23af88bde758dcc6893c01c98adb502a4c1e1 SHA256 8a29de01493b888f392388a0cffc0e4e2c0f4d81bc2ff34a4b65d27fab804210
 MD5 b04899a3860b0623bd45c705258ceabd files/automake-1.4-ansi2knr-stdlib.patch 249
 RMD160 f17983551ea326df6dc03f8389c02df3670eb475 files/automake-1.4-ansi2knr-stdlib.patch 249
@@ -76,10 +79,6 @@ EBUILD automake-1.8.5-r3.ebuild 1516 RMD160 77fc18848d39449e02399d3d9decacc0801a
 MD5 0a666cf7d6ade3e91ae396e4466f4bb7 automake-1.8.5-r3.ebuild 1516
 RMD160 77fc18848d39449e02399d3d9decacc0801a91f9 automake-1.8.5-r3.ebuild 1516
 SHA256 5d00acdc91aed300f616ea776e41d0fc0f2174475f7b5013c7bcc014b015ff02 automake-1.8.5-r3.ebuild 1516
-EBUILD automake-1.9.6-r1.ebuild 1570 RMD160 e44646fe76bb3a649d650839fb9ce15d0fe35635 SHA1 cefa23adcda4193c9583ba1e3efc8a1b5360f255 SHA256 dd9036f2ca4183b878a700fabac37f891519c932ca052409d0d31388d866ea51
-MD5 4c1c851b62ab7495d6595ee24a0760ac automake-1.9.6-r1.ebuild 1570
-RMD160 e44646fe76bb3a649d650839fb9ce15d0fe35635 automake-1.9.6-r1.ebuild 1570
-SHA256 dd9036f2ca4183b878a700fabac37f891519c932ca052409d0d31388d866ea51 automake-1.9.6-r1.ebuild 1570
 EBUILD automake-1.9.6-r2.ebuild 1634 RMD160 bc154e222f20eae9b985d6fb14e5dbf489753d7d SHA1 230495724b3d5e9c34fb2508cdceb55f035a657d SHA256 76cbb98774cc7b324b0d0853f8a128b410f742590500e44041466ab21bc53224
 MD5 e770efa0b80a4a7a95be0c35d1ea25f3 automake-1.9.6-r2.ebuild 1634
 RMD160 bc154e222f20eae9b985d6fb14e5dbf489753d7d automake-1.9.6-r2.ebuild 1634
@@ -107,9 +106,13 @@ SHA256 c523b24dcd2c1f70678fd6e73a68da1d53efd96bd64350d1c693f929799f1c15 files/di
 MD5 d087b5cb0276acbe01eab80a2cbbdeba files/digest-automake-1.8.5-r3 247
 RMD160 320241ea0150d84bba116a9cc547fc024848b48b files/digest-automake-1.8.5-r3 247
 SHA256 eb63f2735ea5d0089eea235eb9a796cffccf3d31fd27ee62a5c0846d26ccb378 files/digest-automake-1.8.5-r3 247
-MD5 5412d32f0701bf03d3e1163b357ba622 files/digest-automake-1.9.6-r1 247
-RMD160 45e4e1eca50ab3121e9925c1135fea9c1cf06052 files/digest-automake-1.9.6-r1 247
-SHA256 f525c02c9dfbac954de241d9fcdb48591042c8455d993d8bcc3d04559ed2d374 files/digest-automake-1.9.6-r1 247
 MD5 5412d32f0701bf03d3e1163b357ba622 files/digest-automake-1.9.6-r2 247
 RMD160 45e4e1eca50ab3121e9925c1135fea9c1cf06052 files/digest-automake-1.9.6-r2 247
 SHA256 f525c02c9dfbac954de241d9fcdb48591042c8455d993d8bcc3d04559ed2d374 files/digest-automake-1.9.6-r2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFDGwfamhnQswr0vIRAgYGAKCoN6hX88xW4IPHAUxWEKh3gGJcKQCeIrcB
+PED4SKxflJIVT7iyKUdtWg4=
+=Uyzl
+-----END PGP SIGNATURE-----

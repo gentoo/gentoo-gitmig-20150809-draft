@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.60.ebuild,v 1.4 2006/09/08 05:02:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.60.ebuild,v 1.5 2006/09/16 21:25:21 vapier Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE="emacs"
 DEPEND=">=sys-apps/texinfo-4.3
 	>=sys-devel/m4-1.4.6
 	dev-lang/perl"
-PDEPEND=">=sys-devel/autoconf-wrapper-3.2-r1"
+RDEPEND="${DEPEND}
+	>=sys-devel/autoconf-wrapper-3.2-r1"
 
 src_unpack() {
 	unpack ${A}
