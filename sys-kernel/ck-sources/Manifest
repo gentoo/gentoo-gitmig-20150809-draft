@@ -25,16 +25,16 @@ MISC metadata.xml 398 RMD160 c4e39d0cbbdaf6a210768258ce9e8fa0c72c432f SHA1 3f4b5
 MD5 1b10a9a67827b6ee95b84675895e45a8 metadata.xml 398
 RMD160 c4e39d0cbbdaf6a210768258ce9e8fa0c72c432f metadata.xml 398
 SHA256 739b87bb4e66e7895c6665b3cf42081cbceb15bfc7cf15ff2b40451c7944cf19 metadata.xml 398
-MD5 58f1725250d2c6a80148fad163b19589 files/digest-ck-sources-2.6.16_p12-r2 938
-RMD160 65cca9e9bdfc42253ed74df6158308dfeeb558a6 files/digest-ck-sources-2.6.16_p12-r2 938
-SHA256 6f368b3368e924834edb2846b78f2e4e3c196e658f4f16f427b5d2a4452c506f files/digest-ck-sources-2.6.16_p12-r2 938
+MD5 02838fa39660274e5b7b54cca19e92a7 files/digest-ck-sources-2.6.16_p12-r2 1015
+RMD160 b81196b8967d18ade4fadd47402155d54206ed97 files/digest-ck-sources-2.6.16_p12-r2 1015
+SHA256 82066b1a88466f747befe6e5852f6119359e0ee874da68a38b475c4ab1efd5ca files/digest-ck-sources-2.6.16_p12-r2 1015
 MD5 ba46542ebe301555cf2af554ceac7998 files/digest-ck-sources-2.6.17_p1-r3 1000
 RMD160 6d316602be4fcce5f42265d768aae99143ea4d2f files/digest-ck-sources-2.6.17_p1-r3 1000
 SHA256 01ba3f98a9d6906e9ae4079076a085fb90e2a34b64ba7f8023f9d3ce161c6784 files/digest-ck-sources-2.6.17_p1-r3 1000
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE8OvpiP+LossGzjARAh1nAKDSPo8bRmKyfoG5Zl7Vu/JeRvT3AACfXlMQ
-+yrbB4dHNiE+BuxyY8oQUDM=
-=mPNv
+iD8DBQFFC0HRI1lqEGTUzyQRAmGcAKCLKlkcMxN0UBmqeapAooVPWZiB4gCdGI0Z
+oQ+IjAsIrWh/555/khx16o4=
+=csia
 -----END PGP SIGNATURE-----
