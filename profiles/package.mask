@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5895 2006/09/16 19:57:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5896 2006/09/16 20:53:27 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -25,10 +25,6 @@
 # Serious memory leaks
 =net-libs/libtorrent-0.10.2
 =net-p2p/rtorrent-0.6.2
-
-# Doug Goldstein <cardoe@gentoo.org> (16 Sep 2006)
-# Fix for sr driver devices. I don't have one so need someone to test
-=sys-apps/hal-0.5.7.1-r1
 
 # Elfyn McBratney <beu@gentoo.org> (16 Sep 2006)
 # Long-awaited update for AxKit; requires testing, and may steal your
