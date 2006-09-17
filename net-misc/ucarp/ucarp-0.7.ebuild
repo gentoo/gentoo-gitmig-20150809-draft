@@ -1,8 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-0.7.ebuild,v 1.6 2005/03/01 12:43:02 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-0.7.ebuild,v 1.7 2006/09/17 22:26:28 xmerlin Exp $
 
-DESCRIPTION="Userspace CARP implementation allows hosts to share ip address."
+
+DESCRIPTION="Portable userland implementation of Common Address Redundancy Protocol (CARP)."
 
 HOMEPAGE="http://www.ucarp.org/"
 SRC_URI="http://www.pureftpd.org/ucarp/${P}.tar.bz2"

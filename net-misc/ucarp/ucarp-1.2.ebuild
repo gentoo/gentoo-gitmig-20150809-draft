@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.2.ebuild,v 1.1 2006/03/13 02:08:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ucarp/ucarp-1.2.ebuild,v 1.2 2006/09/17 22:26:28 xmerlin Exp $
 
 inherit eutils
 
-DESCRIPTION="UCARP allows a couple of hosts to share common virtual IP addresses in order to provide automatic failover. It is a portable userland implementation of the secure and patent-free Common Address Redundancy Protocol (CARP, OpenBSD's alternative to the VRRP).
-Strong points of the CARP protocol are : very low overhead, cryptographically signed messages, interoperability between different operating systems and no need for any dedicated extra network link between redundant hosts.
-"
+DESCRIPTION="Portable userland implementation of Common Address Redundancy Protocol (CARP)."
 HOMEPAGE="http://www.ucarp.org"
 LICENSE="GPL-2"
 DEPEND="virtual/libpcap"
