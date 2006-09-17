@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.3 2006/07/31 20:03:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.4 2006/09/17 13:12:15 mrness Exp $
+
+  17 Sep 2006; Alin Nastac <mrness@gentoo.org> apsw-3.3.5.1.ebuild:
+  Stable on x86.
 
   31 Jul 2006; Tom Gall <tgall@gentoo.org> apsw-3.3.5.1.ebuild:
   added ~ppc64

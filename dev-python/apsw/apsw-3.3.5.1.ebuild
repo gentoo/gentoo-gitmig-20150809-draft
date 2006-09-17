@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.3.5.1.ebuild,v 1.3 2006/07/31 20:03:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/apsw-3.3.5.1.ebuild,v 1.4 2006/09/17 13:12:15 mrness Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/bitpim/${PN}-${MY_ORIG_PV}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc64 x86"
 IUSE=""
 
 RDEPEND="dev-lang/python
