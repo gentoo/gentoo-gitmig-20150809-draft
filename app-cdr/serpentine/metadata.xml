@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-<email>metalgod@gentoo.org</email>
-<name>Luis Medinas</name>
-</maintainer>
 <longdescription lang="en">
 Serpentine is an application for writing CD-Audio discs. It aims for simplicity,
 usability and compability.
