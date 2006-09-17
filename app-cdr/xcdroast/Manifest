@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX 64bit_gsize.patch 471 RMD160 629cc85cf526801a077cc73ff6b597799418869c SHA1 fefe0b3b18e4df6e947fec7d5ba8c8e802970965 SHA256 71a46d1afb8ed22c1a5d49c4ad655bc273136cfad3d67624ea940a860d610e6e
 MD5 121eabf95d22bf4f85b5c0426bf133a5 files/64bit_gsize.patch 471
 RMD160 629cc85cf526801a077cc73ff6b597799418869c files/64bit_gsize.patch 471
@@ -30,10 +27,3 @@ SHA256 4e1e94075219a6cc8cde9d7249eeacbb64f0ec101401aa58aec45e5ad901f2ed metadata
 MD5 c74d0c61a25d9eefcba4401b5ffdfa0d files/digest-xcdroast-0.98_alpha15-r3 159
 RMD160 e95fcb841df8f9f4a447fbdd5e4828a393058eea files/digest-xcdroast-0.98_alpha15-r3 159
 SHA256 bd7ffc1e9f8d2dabba18cd6c66a281a226ddc1ace079876cae0cdab731583434 files/digest-xcdroast-0.98_alpha15-r3 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEr6hCwUpWvClEHQoRArKMAJsHUWaXk2+Ph7qHQqQH19gK6IilfwCfaGP2
-GJwIw09tuiXuspYZR3eKmwU=
-=c6wx
------END PGP SIGNATURE-----

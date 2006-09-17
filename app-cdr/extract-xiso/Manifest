@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST extract-xiso_v2.5_src.tgz 207052
 EBUILD extract-xiso-2.5.ebuild 763 RMD160 6d5aba6c07a63757886cdd0885f9ec77fb8e7077 SHA1 9f2584964e1fffc761a376b05689c4249fa90e0f SHA256 8c88c743115391f50a51650d2c42ca7ed02cfe7625757e96d2fa26827c24cc99
 MD5 723f1b4a7e6f7c2268ac4baf8b8aa2dd extract-xiso-2.5.ebuild 763
@@ -17,10 +14,3 @@ SHA256 8049cf70f5720671540885d0f906b3c3b44c89c5fc3ced5626607af4077a2a30 metadata
 MD5 d009c658b4c439a395272ff5cb45048b files/digest-extract-xiso-2.5 70
 RMD160 92d11aec91eb073b026e9265d175a370ad42785d files/digest-extract-xiso-2.5 70
 SHA256 a52299a8bf7d9b12a8d4aca9a2ec1c90dd6aaff709596784b057770270ff47e0 files/digest-extract-xiso-2.5 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFE/4+3amhnQswr0vIRAlDBAJ0Qx+wlp4M2Wim1gUtkcyN57dzKGgCbBs28
-ymyMjGHURXhwxgxYE17H7b4=
-=j1CM
------END PGP SIGNATURE-----

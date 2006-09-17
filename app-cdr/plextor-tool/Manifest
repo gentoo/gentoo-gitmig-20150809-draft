@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST plextor-tool-0.5.0.src.tar.bz2 51594
 EBUILD plextor-tool-0.5.0.ebuild 1145 RMD160 31de1580a40aacbeed9b206b09bae6702b760285 SHA1 ed9c815decc095b7037117b21a194fb836fab003 SHA256 ab3eb2ae7bc0b6e190083875294130abde6fb7502f88292948d52db72d695808
 MD5 07e146b8e9dd53461fb1bf93eda58ce2 plextor-tool-0.5.0.ebuild 1145
@@ -17,10 +14,3 @@ SHA256 481cdeb1b70302552e308421f8d7702c29a56af4bc52b4ef5446033475aedc85 metadata
 MD5 314eb67b0d18075f122152b83e947bec files/digest-plextor-tool-0.5.0 74
 RMD160 4a4ac9f2d5e32bb26631e941042c53616394dc4b files/digest-plextor-tool-0.5.0 74
 SHA256 e54f080e8b16bf4923f08fcbf56f3245a61ef00fa4865fbeff1967b5f454a686 files/digest-plextor-tool-0.5.0 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFA8jbamhnQswr0vIRAoeWAJ4rd6W254MMMPa3ElPRUwyQSqdnXACfQkan
-zZULDRGCGTCp1c45Drp6nzs=
-=E+U0
------END PGP SIGNATURE-----

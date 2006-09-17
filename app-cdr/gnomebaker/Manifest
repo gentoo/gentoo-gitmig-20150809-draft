@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gnomebaker-0.5.1-headerfix.patch 362 RMD160 7122e3a5571ec5ae198a9cc7580ae6371e45012b SHA1 593d43cbe96f28c8ea162011256abf7f0e3bb845 SHA256 2ea9014c04dbfcaaae5300358cba07cdf318a41a2eb0ba97095f96997194e00a
 MD5 24a9da81b7fd060b4ee8806869371b64 files/gnomebaker-0.5.1-headerfix.patch 362
 RMD160 7122e3a5571ec5ae198a9cc7580ae6371e45012b files/gnomebaker-0.5.1-headerfix.patch 362
@@ -37,10 +34,3 @@ SHA256 622576ecf31465f1d871e631031ebee6b907c98ae9ddfcc2ca130f1e5fa1f49d files/di
 MD5 64af6f3252cf2ffdbe43698f1babaf4f files/digest-gnomebaker-0.6.0 253
 RMD160 37abc7a105bdcc236ba0b18d0afde82c2ebf0224 files/digest-gnomebaker-0.6.0 253
 SHA256 6dd8762c9f302b1e503538cfe69f94d1c6ca970c329b46fe0f58432839d55c35 files/digest-gnomebaker-0.6.0 253
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFDLiHwUpWvClEHQoRAqFiAJ4wrAJM+IcM1j+OXU+iEqQm3EFW/gCeK2F5
-x8oU0GSSUAhmOlq4lpQh99c=
-=S+he
------END PGP SIGNATURE-----
