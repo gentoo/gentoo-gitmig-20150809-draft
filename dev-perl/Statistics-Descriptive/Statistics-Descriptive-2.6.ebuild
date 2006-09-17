@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/Statistics-Descriptive-2.6.ebuild,v 1.7 2006/08/05 20:40:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/Statistics-Descriptive-2.6.ebuild,v 1.8 2006/09/17 00:08:41 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/search?module=Statistics::Descriptive"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="ia64 ~ppc sparc x86"
+KEYWORDS="~amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"
