@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/perl-info
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.1 2006/09/17 11:59:52 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/perl-info/ChangeLog,v 1.2 2006/09/17 14:23:10 tcort Exp $
+
+  17 Sep 2006; Thomas Cort <tcort@gentoo.org> perl-info-0.11.ebuild:
+  Added ~alpha keyword.
 
 *perl-info-0.11 (17 Sep 2006)
 
