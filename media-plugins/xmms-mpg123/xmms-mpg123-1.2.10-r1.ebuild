@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/xmms-mpg123-1.2.10-r1.ebuild,v 1.14 2006/02/19 07:45:00 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mpg123/xmms-mpg123-1.2.10-r1.ebuild,v 1.15 2006/09/17 07:58:49 vapier Exp $
 
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="ipv6 ssl mmx 3dnow"
 
 DEPEND=">=media-sound/xmms-1.2.10-r12
