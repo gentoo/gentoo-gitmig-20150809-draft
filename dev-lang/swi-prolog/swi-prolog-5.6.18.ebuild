@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.18.ebuild,v 1.1 2006/09/01 10:20:47 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.18.ebuild,v 1.2 2006/09/17 02:53:22 keri Exp $
 
 inherit eutils
 
@@ -21,16 +21,15 @@ DEPEND="!dev-lang/swi-prolog-lite
 	gmp? ( dev-libs/gmp )
 	ssl? ( dev-libs/openssl )
 	java? ( >=virtual/jdk-1.4 )
-	X? ( media-libs/jpeg
-		|| ( (
-			x11-libs/libX11
-			x11-libs/libXft
-			x11-libs/libXpm
-			x11-libs/libXt
-			x11-libs/libICE
-			x11-libs/libSM
-			x11-proto/xproto )
-		virtual/x11 ) )"
+	X? (
+		media-libs/jpeg
+		x11-libs/libX11
+		x11-libs/libXft
+		x11-libs/libXpm
+		x11-libs/libXt
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-proto/xproto )"
 
 S="${WORKDIR}/pl-${PV}"
 
