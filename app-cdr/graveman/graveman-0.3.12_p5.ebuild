@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5.ebuild,v 1.6 2006/08/18 13:14:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/graveman-0.3.12_p5.ebuild,v 1.7 2006/09/17 03:38:53 pylon Exp $
 
 inherit gnome2 eutils
 
@@ -24,7 +24,7 @@ DEPEND=">=x11-libs/gtk+-2.4
 	vorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )"
 RDEPEND="${DEPEND}
-	>=app-cdr/cdrtools-2.0
+	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.9
 	media-libs/libmng
 	dvdr? ( >=app-cdr/dvd+rw-tools-5.20 )

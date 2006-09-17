@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.5.2.ebuild,v 1.5 2006/09/16 13:00:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.5.2.ebuild,v 1.6 2006/09/17 03:38:53 pylon Exp $
 
 
 MY_P=${P//b/B}
@@ -16,7 +16,7 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 DEPEND="virtual/libc
-	>=app-cdr/cdrtools-2.01_alpha25
+	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.7
 	virtual/mpg123
 	media-sound/lame

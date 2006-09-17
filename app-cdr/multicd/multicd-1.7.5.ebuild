@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/multicd-1.7.5.ebuild,v 1.1 2005/12/29 03:40:09 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/multicd-1.7.5.ebuild,v 1.2 2006/09/17 03:38:53 pylon Exp $
 
 DESCRIPTION="Tool for making direct copies of your files to multiple cd's"
 HOMEPAGE="http://danborn.net/multicd/"
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.8.6
-	>=app-cdr/cdrtools-2.01"
+	virtual/cdrtools"
 
 src_install() {
 	exeinto "/opt/${PN}"

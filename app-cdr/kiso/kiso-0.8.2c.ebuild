@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.2c.ebuild,v 1.4 2005/10/24 17:56:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.2c.ebuild,v 1.5 2006/09/17 03:38:53 pylon Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/libcdio-0.73"
 RDEPEND="${DEPEND}
-	app-cdr/cdrtools
+	virtual/cdrtools
 	app-admin/sudo"
 
 need-kde 3.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.2.ebuild,v 1.12 2006/01/15 02:59:22 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.2.2.ebuild,v 1.13 2006/09/17 03:38:54 pylon Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
@@ -13,7 +13,7 @@ IUSE="gnome"
 
 #todo: add blade encoder
 DEPEND="media-sound/madplay
-	app-cdr/cdrtools
+	virtual/cdrtools
 	app-cdr/cdrdao
 	media-sound/cdparanoia
 	media-sound/lame

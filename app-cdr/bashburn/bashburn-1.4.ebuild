@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.4.ebuild,v 1.10 2006/05/07 03:10:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-1.4.ebuild,v 1.11 2006/09/17 03:38:53 pylon Exp $
 
 
 MY_P=${P//b/B}
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=app-cdr/cdrtools-2.01_alpha25
+	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.7
 	virtual/mpg123
 	media-sound/lame

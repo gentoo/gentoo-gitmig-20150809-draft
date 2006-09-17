@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.3.ebuild,v 1.5 2006/03/31 21:45:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.8.3.ebuild,v 1.6 2006/09/17 03:38:53 pylon Exp $
 
 inherit kde
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-libs/libcdio-0.73"
 RDEPEND="${DEPEND}
-	app-cdr/cdrtools
+	virtual/cdrtools
 	app-admin/sudo"
 
 PATCHES="${FILESDIR}/${P}-libcdio-077.patch"

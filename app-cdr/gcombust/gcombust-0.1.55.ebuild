@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55.ebuild,v 1.10 2005/04/21 17:55:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/gcombust-0.1.55.ebuild,v 1.11 2006/09/17 03:38:53 pylon Exp $
 
 inherit gnuconfig
 
@@ -16,7 +16,7 @@ IUSE="nls"
 DEPEND="=x11-libs/gtk+-1.2*
 	nls? ( sys-devel/gettext )"
 RDEPEND="${DEPEND}
-	app-cdr/cdrtools"
+	virtual/cdrtools"
 
 src_unpack() {
 	if [ "${A}" != "" ]; then
