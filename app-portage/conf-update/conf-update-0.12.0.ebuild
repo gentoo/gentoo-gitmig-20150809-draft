@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.12.0.ebuild,v 1.1 2006/09/16 10:52:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.12.0.ebuild,v 1.2 2006/09/17 12:22:27 blubb Exp $
 
 inherit toolchain-funcs
 
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC=$(tc-gcc) || die 'emake failed'
+	emake CC=$(tc-getCC) || die 'emake failed'
 }
 
 src_install() {
@@ -52,7 +52,7 @@ src_install() {
 pkg_postinst() {
 	if has_version '<app-portage/conf-update-0.12.0' ; then
 		ewarn "Note that the format for /etc/conf-update.conf changed in this"
-		ewarn "version. You should merge the update of that file and then re-"
-		ewarn "start conf-update to be on the save side."
+		ewarn "version. You should merge the update of that file with e.g."
+		ewarn "etc-update."
 	fi
 }
