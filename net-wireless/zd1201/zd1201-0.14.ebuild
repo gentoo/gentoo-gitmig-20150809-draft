@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201/zd1201-0.14.ebuild,v 1.1 2005/04/16 12:02:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201/zd1201-0.14.ebuild,v 1.2 2006/09/17 18:32:32 jhuebel Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/linux-lc100020/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 RDEPEND="=net-wireless/zd1201-firmware-${FW_VERSION}

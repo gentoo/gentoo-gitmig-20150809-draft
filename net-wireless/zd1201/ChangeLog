@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/zd1201
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201/ChangeLog,v 1.1 2005/04/16 12:02:34 genstef Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201/ChangeLog,v 1.2 2006/09/17 18:32:32 jhuebel Exp $
+
+  17 Sep 2006; Jason Huebel <jhuebel@gentoo.org> zd1201-0.14.ebuild:
+  ~amd64, bug #104709
 
 *zd1201-0.14 (16 Apr 2005)
 
