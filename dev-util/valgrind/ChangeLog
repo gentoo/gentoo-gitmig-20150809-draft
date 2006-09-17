@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.65 2006/08/25 21:13:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.66 2006/09/17 16:49:18 griffon26 Exp $
+
+*valgrind-3.2.1 (17 Sep 2006)
+
+  17 Sep 2006; Maurice van der Pot <griffon26@gentoo.org>
+  +files/valgrind-3.2.1-only64bit.patch,
+  +files/valgrind-3.2.1-pkg-config.patch, +valgrind-3.2.1.ebuild:
+  Bumped version and added patch to correct pkg-config output, fixing 
+  bug #147904 reported by Priit Laes <amd@store20.com>. 
+  This is also the first valgrind ebuild marked ~ppc64.
 
   25 Aug 2006; <blubb@gentoo.org> valgrind-3.2.0.ebuild:
   stable on amd64
