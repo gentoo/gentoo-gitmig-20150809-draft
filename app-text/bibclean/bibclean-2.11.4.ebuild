@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibclean/bibclean-2.11.4.ebuild,v 1.1 2005/05/29 19:57:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibclean/bibclean-2.11.4.ebuild,v 1.2 2006/09/17 16:14:47 jhuebel Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.math.utah.edu/pub/bibclean/"
 
 # http://packages.debian.org/changelogs/pool/main/b/bibclean/bibclean_2.11.4-5/bibclean.copyright
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 SLOT="0"
