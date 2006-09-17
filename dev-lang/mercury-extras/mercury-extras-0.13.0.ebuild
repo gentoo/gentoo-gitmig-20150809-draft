@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0.ebuild,v 1.1 2006/09/16 21:25:49 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0.ebuild,v 1.2 2006/09/17 02:35:24 keri Exp $
 
 inherit eutils
 
@@ -48,7 +48,8 @@ src_unpack() {
 	if built_with_use dev-lang/mercury minimal; then
 		sed -i -e "s:references::" Mmakefile
 	else
-		sed -i -e "s:xml:trailed_update xml:" Mmakefile
+		sed -i	-e "s:cgi:cgi clpr:" \
+			-e "s:xml:trailed_update xml:" Mmakefile
 	fi
 
 	use glut && sed -i -e "s: lex : graphics/mercury_glut lex :" Mmakefile

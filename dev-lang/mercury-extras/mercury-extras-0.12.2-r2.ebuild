@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.1 2006/09/09 22:12:57 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.2 2006/09/17 02:35:24 keri Exp $
 
 inherit eutils
 
@@ -12,18 +12,18 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 
-IUSE="doc glut iodbc opengl ncurses tcltk xml"
+IUSE="doc glut iodbc opengl ncurses tcl tk xml"
 
 DEPEND="~dev-lang/mercury-0.12.2
 	glut? ( virtual/glut )
 	iodbc? ( dev-db/libiodbc )
 	ncurses? ( sys-libs/ncurses )
 	opengl? ( virtual/opengl )
-	tcltk? ( =dev-lang/tk-8.4*
-		|| ( (
+	tcl? ( tk? (
+			=dev-lang/tcl-8.4*
+			=dev-lang/tk-8.4*
 			x11-libs/libX11
-			x11-libs/libXmu )
-		virtual/x11 ) )"
+			x11-libs/libXmu ) )"
 
 src_unpack() {
 	unpack ${A}
@@ -46,12 +46,13 @@ src_unpack() {
 	if built_with_use dev-lang/mercury minimal; then
 		sed -i -e "s:references::" Mmakefile
 	else
-		sed -i -e "s:xml:trailed_update xml:" Mmakefile
+		sed -i	-e "s:cgi:cgi clpr:" \
+			-e "s:xml:trailed_update xml:" Mmakefile
 	fi
 
 	use iodbc && sed -i -e "s:moose:moose odbc:" Mmakefile
 	use glut && sed -i -e "s: lex : graphics/mercury_glut lex :" Mmakefile
-	use tcltk && sed -i -e "s: lex : graphics/mercury_tcltk lex :" Mmakefile
+	use tcl && use tk && sed -i -e "s: lex : graphics/mercury_tcltk lex :" Mmakefile
 	use opengl && sed -i -e "s: lex : graphics/mercury_opengl lex :" Mmakefile
 	! use ncurses && sed -i -e "s:curs curses::" Mmakefile
 	! use xml && sed -i -e "s:xml::" Mmakefile
@@ -61,7 +62,7 @@ src_compile() {
 	mmake depend || die "mmake depend failed"
 	mmake || die "mmake failed"
 
-	if use opengl && use tcltk ; then
+	if use opengl && use tcl && use tk ; then
 		cd "${S}"/graphics/mercury_opengl
 		cp ../mercury_tcltk/mtcltk.m ./
 		mmake -f Mmakefile.mtogl depend || die "mmake depend mtogl failed"
@@ -73,7 +74,7 @@ src_install() {
 	cd "${S}"
 	mmake INSTALL_PREFIX="${D}"/usr install || die "mmake install failed"
 
-	if use opengl && use tcltk ; then
+	if use opengl && use tcl && use tk ; then
 		cd "${S}"/graphics/mercury_opengl
 		mv Mmakefile Mmakefile.opengl
 		mv Mmakefile.mtogl Mmakefile
