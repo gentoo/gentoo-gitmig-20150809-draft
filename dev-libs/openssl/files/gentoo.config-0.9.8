@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.9 2006/09/15 01:28:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.10 2006/09/17 06:35:06 vapier Exp $
 #
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -19,6 +19,7 @@ if [[ $1 == "test" ]] ; then
 		"alphaev56-unknown-linux-gnu  |linux-alpha+bwx-gcc" \
 		"i686-pc-linux-gnu            |linux-elf" \
 		"whatever-gentoo-freebsdX.Y   |BSD-generic32" \
+		"i686-gentoo-freebsdX.Y       |BSD-x86-elf" \
 		"sparc64-alpha-freebsdX.Y     |BSD-sparc64" \
 		"ia64-gentoo-freebsd5.99234   |BSD-ia64" \
 		"x86_64-gentoo-freebsdX.Y     |BSD-x86_64" \
@@ -92,7 +93,7 @@ linux)
 BSD)
 	case ${chost_machine} in
 		alpha*)       machine=generic64;;
-		i[6-9]86*)    machine=x86;;
+		i[6-9]86*)    machine=x86-elf;;
 		ia64*)        machine=ia64;;
 		sparc64*)     machine=sparc64;;
 		x86_64*)      machine=x86_64;;
