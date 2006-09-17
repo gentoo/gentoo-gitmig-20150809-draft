@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.4.ebuild,v 1.1 2006/08/09 13:50:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/kdesdk-3.5.4.ebuild,v 1.2 2006/09/17 20:58:54 carlo Exp $
 
 inherit db-use kde-dist
 
@@ -25,7 +25,7 @@ src_compile() {
 	local myconf="$(use_with subversion)"
 
 	if use berkdb; then
-                myconf="${myconf} --with-berkeley-db --with-db-lib="$(db_libname)"
+		myconf="${myconf} --with-berkeley-db --with-db-lib="$(db_libname)"
 			--with-extra-includes=${ROOT}$(db_includedir)"
 	else
 		myconf="${myconf} --without-berkeley-db"
