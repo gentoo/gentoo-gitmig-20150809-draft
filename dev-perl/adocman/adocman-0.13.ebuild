@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/adocman-0.13.ebuild,v 1.6 2006/08/06 02:04:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/adocman-0.13.ebuild,v 1.7 2006/09/17 01:24:16 mcummings Exp $
 
 DESCRIPTION="Automation tool for Sourceforge.net DocManager handling"
 HOMEPAGE="http://sitedocs.sourceforge.net/projects/adocman/adocman.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/sitedocs/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~ia64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
