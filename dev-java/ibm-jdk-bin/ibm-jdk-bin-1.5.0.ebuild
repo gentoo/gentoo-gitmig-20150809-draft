@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.8 2006/09/02 20:10:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.9 2006/09/17 11:01:58 betelgeuse Exp $
 
 inherit java eutils
 
@@ -23,9 +23,9 @@ LICENSE="IBM-J1.5"
 SLOT="1.5"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~s390 ~x86"
 RESTRICT="fetch"
-IUSE="X javacomm browserplugin mozilla"
+IUSE="X alsa javacomm browserplugin mozilla"
 
-RDEPEND="sys-libs/glibc
+RDEPEND="
 		X? ( || (
 					(
 						x11-libs/libXt
@@ -33,17 +33,19 @@ RDEPEND="sys-libs/glibc
 						x11-libs/libXtst
 						x11-libs/libXp
 						x11-libs/libXext
-						x11-libs/libSM
-						x11-libs/libICE
-						x11-libs/libXau
-						x11-libs/libXdmcp
 						x11-libs/libXi
 						x11-libs/libXmu
+						x11-libs/libXft
 					)
 					virtual/x11
 				)
-			)"
-DEPEND="${DEPEND}"
+			)
+		alsa? ( media-libs/alsa-lib )
+		nsplugin? (
+			x86? ( =x11-libs/gtk+-2* )
+			ppc? ( =x11-libs/gtk+-1* )
+		)"
+DEPEND=""
 
 if use x86; then
 	S="${WORKDIR}/ibm-java2-i386-50"
@@ -93,6 +95,8 @@ src_install() {
 		fi
 		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
 	fi
+
+	use !alsa && rm "${D}/opt/${P}/jre/bin/libjsoundalsa.so"
 
 	dohtml -a html,htm,HTML -r docs
 	dodoc ${S}/COPYRIGHT

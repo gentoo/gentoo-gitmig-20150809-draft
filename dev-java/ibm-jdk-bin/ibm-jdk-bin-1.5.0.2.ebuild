@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.3 2006/09/02 20:10:54 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.4 2006/09/17 11:01:58 betelgeuse Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -68,19 +68,21 @@ RDEPEND="
 						x11-libs/libXtst
 						x11-libs/libXp
 						x11-libs/libXext
-						x11-libs/libSM
-						x11-libs/libICE
-						x11-libs/libXau
-						x11-libs/libXdmcp
 						x11-libs/libXi
 						x11-libs/libXmu
+						x11-libs/libXft
 					)
 					virtual/x11
 				)
-			)"
+			)
+		alsa? ( media-libs/alsa-lib )
+		nsplugin? (
+			x86? ( =x11-libs/gtk+-2* )
+			ppc? ( =x11-libs/gtk+-1* )
+		)"
 DEPEND=""
 
-IUSE="X javacomm nsplugin"
+IUSE="X alsa javacomm nsplugin"
 
 
 pkg_nofetch() {
@@ -117,15 +119,33 @@ src_install() {
 	#	doins ${FILESDIR}/cpuinfo
 	#fi
 
-	if use nsplugin  && ! use amd64 && ! use ppc64; then
-		local plugin
-		if use x86; then
-			plugin="libjavaplugin_ojigtk2.so"
-		elif use ppc; then
-			plugin="libjavaplugin_oji.so"
-		fi
-		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
+
+	local x86plugin=libjavaplugin_ojigtk2.so
+	local ppcplugin=libjavaplugin_oji.so
+
+	local plugin
+	if use x86; then
+		plugin=${x86plugin}
+		rm "${D}/opt/${P}/jre/bin/${ppcplugin}" || \
+			eerror "Failed to delete gtk1 javaplugin."
+
+	elif use ppc; then
+		plugin=${ppcplugin}
+		rm "${D}/opt/${P}/jre/bin/${x86plugin}" || \
+			eerror "Failed to delete gtk2 javaplugin."
+
 	fi
+
+	plugin=/opt/${P}/jre/bin/${plugin}
+
+	if use nsplugin  && ! use amd64 && ! use ppc64; then
+		install_mozilla_plugin ${plugin}
+	elif use x86 || use ppc; then
+		rm "${D}/${plugin}" || \
+			eerror "Failed to delete ${D}/plugin"
+	fi
+
+	use !alsa && rm "${D}/opt/${P}/jre/bin/libjsoundalsa.so"
 
 	dohtml -a html,htm,HTML -r docs
 	dodoc ${S}/COPYRIGHT

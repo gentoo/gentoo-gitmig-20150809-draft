@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r3.ebuild,v 1.2 2006/09/15 13:13:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r3.ebuild,v 1.3 2006/09/17 11:01:58 betelgeuse Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -50,25 +50,27 @@ SRC_URI="x86? ( IBMJava2-142-ia32-SDK-${RPM_PV}.i386.rpm )
 LICENSE="IBM-J1.4"
 SLOT="1.4"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
-IUSE="X doc javacomm nsplugin"
+IUSE="X alsa doc javacomm nsplugin"
 
-RDEPEND=" !ppc64? ( !amd64? ( sys-libs/lib-compat ) )
-	virtual/libstdc++
-	X? (
-		x11-libs/libXt
-		x11-libs/libX11
-		x11-libs/libXtst
-		x11-libs/libXp
-		x11-libs/libXext
-		x11-libs/libSM
-		x11-libs/libICE
-		x11-libs/libXau
-		x11-libs/libXdmcp
-		x11-libs/libXi
-		x11-libs/libXmu
-	)"
-DEPEND=""
-PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+RDEPEND="
+		ppc? ( sys-libs/lib-compat )
+		alsa? ( media-libs/alsa-lib )
+		X? ( || (
+					(
+						x11-libs/libXt
+						x11-libs/libX11
+						x11-libs/libXtst
+						x11-libs/libXp
+						x11-libs/libXext
+						x11-libs/libXi
+						x11-libs/libXmu
+					)
+					virtual/x11
+				)
+			)
+		x86? ( nsplugin? ( =x11-libs/gtk+-1* =dev-libs/glib-1* ) )
+		doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+
 
 RESTRICT="fetch"
 
@@ -114,7 +116,7 @@ src_install() {
 		doins ${FILESDIR}/cpuinfo
 	fi
 
-	if use nsplugin && ! use ppc && ! use amd64 && ! use ppc64; then
+	if use x86 && use nsplugin; then
 		local plugin="libjavaplugin_oji.so"
 
 		if has_version '>=sys-devel/gcc-3' ; then
@@ -122,6 +124,13 @@ src_install() {
 		fi
 
 		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
+	elif use x86; then
+		rm ${D}/opt/${P}/jre/bin/libjavaplugin*.so
+	fi
+
+	if ! use alsa; then
+		rm ${D}/opt/${P}/jre/bin/libjsoundalsa.so \
+			|| eerror "${D}/opt/${P}/jre/bin/libjsoundalsa.so not found"
 	fi
 
 	dohtml -a html,htm,HTML -r docs

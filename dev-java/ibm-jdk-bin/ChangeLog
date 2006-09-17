@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.75 2006/09/17 00:36:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.76 2006/09/17 11:01:58 betelgeuse Exp $
+
+  17 Sep 2006; Petteri Räty <betelgeuse@gentoo.org>
+  ibm-jdk-bin-1.4.2.04.ebuild, ibm-jdk-bin-1.4.2.6-r1.ebuild,
+  ibm-jdk-bin-1.4.2.6-r3.ebuild, ibm-jdk-bin-1.5.0.ebuild,
+  ibm-jdk-bin-1.5.0.2.ebuild:
+  Fixed dependencies by adding the deps needed by nsplugin and added the alsa
+  use flag. Now removes the plugin and alsa shared libraries if the use flags
+  are not set. Fixes bug #147610 and bug #118685.
 
   17 Sep 2006; Vlastimil Babka <caster@gentoo.org> -files/ibm-jdk-bin-1.4.2,
   -files/ibm-jdk-bin-1.4.2.03, -ibm-jdk-bin-1.4.2.03.ebuild,

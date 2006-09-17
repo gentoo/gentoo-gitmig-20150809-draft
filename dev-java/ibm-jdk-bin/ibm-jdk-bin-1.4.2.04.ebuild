@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.5 2006/07/06 11:17:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.6 2006/09/17 11:01:58 betelgeuse Exp $
 
 inherit java eutils
 
@@ -51,9 +51,10 @@ SRC_URI="x86? ( IBMJava2-SDK-142-SR4.tgz )
 LICENSE="IBM-J1.4"
 SLOT="1.4"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~s390 ~x86"
-IUSE="X doc javacomm nsplugin"
+IUSE="X alsa doc javacomm nsplugin"
 
-DEPEND="sys-libs/glibc
+RDEPEND="sys-libs/glibc
+		alsa? ( media-libs/alsa-lib )
 		X? ( || (
 					(
 						x11-libs/libXt
@@ -61,20 +62,15 @@ DEPEND="sys-libs/glibc
 						x11-libs/libXtst
 						x11-libs/libXp
 						x11-libs/libXext
-						x11-libs/libSM
-						x11-libs/libICE
-						x11-libs/libXau
-						x11-libs/libXdmcp
 						x11-libs/libXi
 						x11-libs/libXmu
 					)
 					virtual/x11
 				)
-			)"
-RDEPEND="${DEPEND}
-		 ppc? ( sys-libs/lib-compat )
-		 x86? ( sys-libs/lib-compat )"
-PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
+			)
+		x86? ( nsplugin? ( =x11-libs/gtk+-1* =dev-libs/glib-1* ) )
+		ppc? ( sys-libs/lib-compat )
+		doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
 RESTRICT="fetch"
 
@@ -130,7 +126,7 @@ src_install() {
 		doins ${FILESDIR}/cpuinfo
 	fi
 
-	if use nsplugin && ! use ppc && ! use amd64 && ! use ppc64; then
+	if use x86 && use nsplugin; then
 		local plugin="libjavaplugin_oji.so"
 
 		if has_version '>=sys-devel/gcc-3' ; then
@@ -138,6 +134,13 @@ src_install() {
 		fi
 
 		install_mozilla_plugin /opt/${P}/jre/bin/${plugin}
+	elif use x86; then
+		rm ${D}/opt/${P}/jre/bin/libjavaplugin*.so
+	fi
+
+	if ! use alsa; then
+		rm ${D}/opt/${P}/jre/bin/libjsoundalsa.so \
+			|| eerror "${D}/opt/${P}/jre/bin/libjsoundalsa.so not found"
 	fi
 
 	dohtml -a html,htm,HTML -r docs
