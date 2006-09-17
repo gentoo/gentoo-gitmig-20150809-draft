@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/set-scalar
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.21 2006/09/16 21:59:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.22 2006/09/17 01:49:16 mcummings Exp $
+
+  17 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  set-scalar-1.20.ebuild:
+  Keywording ~amd64
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   set-scalar-1.20.ebuild:
