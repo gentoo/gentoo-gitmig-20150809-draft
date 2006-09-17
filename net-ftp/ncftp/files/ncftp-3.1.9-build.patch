@@ -16,8 +16,8 @@ http://bugs.gentoo.org/146214
 +++ sio/pch.mk.gcc-gch
 @@ -1,5 +1,6 @@
  syshdrs.h.gch: syshdrs.h sio.h usio.h
--	$(CCDV)$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h
-+	$(CCDV)$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h -o .tmp.$@
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h -o .tmp.$@
 +	mv -f .tmp.$@ $@
  
  PCH=syshdrs.h.gch
@@ -35,8 +35,8 @@ http://bugs.gentoo.org/146214
 +++ libncftp/pch.mk.gcc-gch
 @@ -1,5 +1,6 @@
  syshdrs.h.gch: syshdrs.h ncftp.h ncftp_errno.h util.h ftp.h
--	$(CCDV)$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h
-+	$(CCDV)$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h -o .tmp.$@
+-	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h
++	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) syshdrs.h -o .tmp.$@
 +	mv -f .tmp.$@ $@
  
  PCH=syshdrs.h.gch
