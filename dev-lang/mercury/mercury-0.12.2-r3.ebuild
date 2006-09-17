@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.3 2006/09/11 09:51:58 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.4 2006/09/17 10:26:16 keri Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-bootstrap.patch
 	epatch "${FILESDIR}"/${P}-LIBDIR.patch
 	epatch "${FILESDIR}"/${P}-libgrades.patch
+	epatch "${FILESDIR}"/${P}-deep_profiler.patch
 	epatch "${FILESDIR}"/${P}-docs.patch
 
 	cd "${TESTDIR}"
@@ -41,7 +42,11 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="--disable-dotnet-grades \
+	myconf="--disable-gcc-back-end \
+		--enable-aditi-back-end \
+		--enable-deep-profiler \
+		--disable-dotnet-grades \
+		--disable-java-grades \
 		$(use_enable debug debug-grades) \
 		$(use_enable threads par-grades) \
 		$(use_enable !minimal most-grades) \
@@ -61,6 +66,9 @@ src_compile() {
 		${myconf} \
 		BOOTSTRAP_STAGE="2" \
 		|| die "econf stage 2 failed"
+	emake \
+		MERCURY_COMPILER="${S}"/mercury_compile \
+		depend || die "emake stage 2 depend failed"
 	emake \
 		MERCURY_COMPILER="${S}"/mercury_compile \
 		|| die "emake stage 2 failed"
