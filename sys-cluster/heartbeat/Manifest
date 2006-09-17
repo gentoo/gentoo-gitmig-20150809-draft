@@ -1,6 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+AUX heartbeat-2.0.7-update-resources-failcount.patch 6648 RMD160 71e59accbad7883af4dae8d129ff15cdb59105fc SHA1 cc644a7d69c3d999bc440083723951cce1011b67 SHA256 0a08f4e45037724a3cc0877a16452d351535cee2d43dcb4a4bbd47c6c9ab7f3f
+MD5 d79f60a454bf23d2160a9deb419cf7b8 files/heartbeat-2.0.7-update-resources-failcount.patch 6648
+RMD160 71e59accbad7883af4dae8d129ff15cdb59105fc files/heartbeat-2.0.7-update-resources-failcount.patch 6648
+SHA256 0a08f4e45037724a3cc0877a16452d351535cee2d43dcb4a4bbd47c6c9ab7f3f files/heartbeat-2.0.7-update-resources-failcount.patch 6648
 AUX heartbeat-init 1616 RMD160 2a76f26e572b0b466fa860f8eab0fad5fcb6e29f SHA1 9c20eff23ee59434b1d9f222adb587c1bc7a7e26 SHA256 98e34d2e9d6fde5e8dedb1b4d934fa39b502f2d4e603e9faa7a86b66cd0e0437
 MD5 74949e88062a20f9c6c20dd01c20533b files/heartbeat-init 1616
 RMD160 2a76f26e572b0b466fa860f8eab0fad5fcb6e29f files/heartbeat-init 1616
@@ -11,14 +15,18 @@ EBUILD heartbeat-1.2.5.ebuild 1986 RMD160 b25871073d61edada88a167eaf37a4de2b552d
 MD5 f58c89bbad4b79cf45813b8425371891 heartbeat-1.2.5.ebuild 1986
 RMD160 b25871073d61edada88a167eaf37a4de2b552d6a heartbeat-1.2.5.ebuild 1986
 SHA256 66e711596a2b2dad696930abe7ccde73340e6742a09499a65795236fa1e425c0 heartbeat-1.2.5.ebuild 1986
-EBUILD heartbeat-2.0.7-r1.ebuild 3081 RMD160 f37fb7fe0ec3f3756d5c1b91c8d4a8f53659c510 SHA1 46aa5cb0c99d152c2948402c28231a5fb4ac8880 SHA256 20c61c7ab58e280bccb43b38ae431c3f46fcec85ca979cfe5a9c83d5f61b7d28
-MD5 2b6beb88a677967937913d0f90eb9e74 heartbeat-2.0.7-r1.ebuild 3081
-RMD160 f37fb7fe0ec3f3756d5c1b91c8d4a8f53659c510 heartbeat-2.0.7-r1.ebuild 3081
-SHA256 20c61c7ab58e280bccb43b38ae431c3f46fcec85ca979cfe5a9c83d5f61b7d28 heartbeat-2.0.7-r1.ebuild 3081
-MISC ChangeLog 9437 RMD160 986b84ce54968d901052b28d4ce0fd8153870b2f SHA1 3d98c996ca2f16e6de8a0b55abc44c9642f4308c SHA256 d3d80b55ae9ea88d0bcffdfa6771cbbee707a74e17278a8d008007cf2f71afbb
-MD5 607b972fcc2f07e5e10ccf40ee4a5b07 ChangeLog 9437
-RMD160 986b84ce54968d901052b28d4ce0fd8153870b2f ChangeLog 9437
-SHA256 d3d80b55ae9ea88d0bcffdfa6771cbbee707a74e17278a8d008007cf2f71afbb ChangeLog 9437
+EBUILD heartbeat-2.0.7-r1.ebuild 2974 RMD160 fd1d23ef5ffd94be642569fb8daaaa8b327ab2c6 SHA1 fb459abad2b5d90abf25462d5b59484f3570ba5b SHA256 b15613b71a255ca99355549332fefb53faac9ade794de2e4fb15d31ece6bcb13
+MD5 ad8ef101825b35126e9f8db18c85d747 heartbeat-2.0.7-r1.ebuild 2974
+RMD160 fd1d23ef5ffd94be642569fb8daaaa8b327ab2c6 heartbeat-2.0.7-r1.ebuild 2974
+SHA256 b15613b71a255ca99355549332fefb53faac9ade794de2e4fb15d31ece6bcb13 heartbeat-2.0.7-r1.ebuild 2974
+EBUILD heartbeat-2.0.7-r2.ebuild 3080 RMD160 3d80126a25239a5b9a30adf6a6aa860ac6b35ab1 SHA1 ac6868329e4d9319a280c215eb1b465f7e4326fd SHA256 bb04177af240f6ba68fe9adc02e702ed94c2e40c4c66198b28c3708f2c17acb3
+MD5 a240e0dddeb18deccf74143ddbb0e0c7 heartbeat-2.0.7-r2.ebuild 3080
+RMD160 3d80126a25239a5b9a30adf6a6aa860ac6b35ab1 heartbeat-2.0.7-r2.ebuild 3080
+SHA256 bb04177af240f6ba68fe9adc02e702ed94c2e40c4c66198b28c3708f2c17acb3 heartbeat-2.0.7-r2.ebuild 3080
+MISC ChangeLog 9713 RMD160 050a9c0f4f77151c93e2d56efe8e7d18b8a3fe2b SHA1 09e61f2b01a168b8f2aa271a168f34d9af8a6320 SHA256 b08395bbdcf00b445799706b535c54a5e0bf743f7da07af7b9cf36327a037a3d
+MD5 c588f39cab3e47c2cd385e72eecc497c ChangeLog 9713
+RMD160 050a9c0f4f77151c93e2d56efe8e7d18b8a3fe2b ChangeLog 9713
+SHA256 b08395bbdcf00b445799706b535c54a5e0bf743f7da07af7b9cf36327a037a3d ChangeLog 9713
 MISC metadata.xml 339 RMD160 503ff4e79821bcf9851a8a6f8df0d43b3be8aa99 SHA1 7af6b38347db8330de0f27dbe2677156b524ebf9 SHA256 bb453c6b308cf1dfcbd818320ea43b654620a2b28dc24296c35367d803062635
 MD5 469a4f6cad0c54b4faed31a2852af816 metadata.xml 339
 RMD160 503ff4e79821bcf9851a8a6f8df0d43b3be8aa99 metadata.xml 339
@@ -29,10 +37,13 @@ SHA256 931bb676e4aaa9426fadcc6cea6f67a3ea9f0d9d2737abb80e89eceb9bacca04 files/di
 MD5 730e170420e55cc6abbb746fb0f0ae14 files/digest-heartbeat-2.0.7-r1 250
 RMD160 c33c56e13bd882781b92ac96f8a8d4fff191208e files/digest-heartbeat-2.0.7-r1 250
 SHA256 4e28f3c92fda41c864ef7aaa4d6b540a751f22135d21ae4be00a89cf5c57425d files/digest-heartbeat-2.0.7-r1 250
+MD5 730e170420e55cc6abbb746fb0f0ae14 files/digest-heartbeat-2.0.7-r2 250
+RMD160 c33c56e13bd882781b92ac96f8a8d4fff191208e files/digest-heartbeat-2.0.7-r2 250
+SHA256 4e28f3c92fda41c864ef7aaa4d6b540a751f22135d21ae4be00a89cf5c57425d files/digest-heartbeat-2.0.7-r2 250
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
-iD8DBQFFDd3QgMUyd/cdjWsRAhj4AJwIfrfxubF8r4BiT0ZQ+aRpW+/yNgCeO8L+
-HqsAloIZ2FciSBd/3amtK/E=
-=6jKf
+iD8DBQFFDeAFgMUyd/cdjWsRAg0+AJ4t6rywwlqpOPDDpQl1pOzsbIr6CgCbBmbU
+Uoz0RPPESTOPBzExwQr6pm4=
+=R+GV
 -----END PGP SIGNATURE-----
