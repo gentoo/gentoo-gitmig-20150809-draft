@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.21 2006/09/06 22:13:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.1/no-multilib/package.mask,v 1.22 2006/09/17 18:13:55 joker Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -65,6 +65,7 @@ games-emulation/nestra
 games-emulation/snes9express
 games-emulation/snes9x
 games-emulation/zsnes
+games-emulation/mupen64
 games-fps/americas-army
 games-fps/doom3-cdoom
 games-fps/doom3-chextrek
