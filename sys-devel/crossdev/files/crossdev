@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.73 2006/09/07 17:03:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.74 2006/09/17 07:04:53 vapier Exp $
 
 cd /
 
@@ -116,6 +116,12 @@ parse_target() {
 		cris*)
 		      TARCH=${HARCH};
 		      LPKG="uclibc";;
+
+		mingw*)
+		      TARCH=${HARCH}; CPOST="";
+		      WITH_DEF_HEADERS="yes";
+		      KCAT="dev-util"; KPKG="w32api";
+		      LCAT="dev-util"; LPKG="mingw-runtime";;
 
 		msp430)
 		      TARCH=${HARCH}; CPOST="";
