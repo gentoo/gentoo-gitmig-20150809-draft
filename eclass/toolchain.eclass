@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.307 2006/09/12 21:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.308 2006/09/17 07:54:16 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -138,22 +138,26 @@ else
 	IUSE="multislot test"
 
 	if [[ ${PN} != "kgcc64" ]] ; then
-		IUSE="${IUSE} altivec bootstrap build doc fortran gcj gtk hardened multilib nls nocxx objc vanilla"
+		IUSE="${IUSE} altivec build fortran nls nocxx"
 		[[ -n ${PIE_VER}    ]] && IUSE="${IUSE} nopie"
 		[[ -n ${PP_VER}     ]] && IUSE="${IUSE} nossp"
 		[[ -n ${HTB_VER}    ]] && IUSE="${IUSE} boundschecking"
 
-		# gcc-{nios2,bfin} don't accept these
-		if [[ ${PN} == "gcc" ]] ; then
-			IUSE="${IUSE} ip28 ip32r10k n32 n64"
-		fi
+		if version_is_at_least 3 ; then
+			IUSE="${IUSE} bootstrap doc gcj gtk hardened multilib objc vanilla"
 
-		# these are features introduced in 4.0
-		if tc_version_is_at_least "4.0" ; then
-			IUSE="${IUSE} objc-gc mudflap"
+			# gcc-{nios2,bfin} don't accept these
+			if [[ ${PN} == "gcc" ]] ; then
+				IUSE="${IUSE} ip28 ip32r10k n32 n64"
+			fi
 
-			if tc_version_is_at_least "4.1" ; then
-				IUSE="${IUSE} objc++"
+			# these are features introduced in 4.0
+			if tc_version_is_at_least "4.0" ; then
+				IUSE="${IUSE} objc-gc mudflap"
+
+				if tc_version_is_at_least "4.1" ; then
+					IUSE="${IUSE} objc++"
+				fi
 			fi
 		fi
 	fi
