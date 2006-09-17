@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 EBUILD hal-device-manager-0.4.5.ebuild 827 RMD160 c335fb1b6da142edaaf7347f188a1cda4483ab2c SHA1 118e0e4aebbf3f173be105abfc04bbf3194720cc SHA256 72fa49a426284d3eb41c0f39ad5dc749b1a940c848bebffd07265b04d4bea8a6
 MD5 eb9fc0f14948ace4d2a7ca05b08bedd9 hal-device-manager-0.4.5.ebuild 827
 RMD160 c335fb1b6da142edaaf7347f188a1cda4483ab2c hal-device-manager-0.4.5.ebuild 827
 SHA256 72fa49a426284d3eb41c0f39ad5dc749b1a940c848bebffd07265b04d4bea8a6 hal-device-manager-0.4.5.ebuild 827
-EBUILD hal-device-manager-0.5-r1.ebuild 1072 RMD160 a7319520eeebaabbc82ac544fe0424f21442e279 SHA1 9699fe9e8bcc03ccb3431cd349a8d3e905679337 SHA256 20cd8ebb26e19939fb3fcdd2e1844683f3224f1d8412fa2825fed881c1a492d6
-MD5 2519d44f92d381e5d9887f5070bf1344 hal-device-manager-0.5-r1.ebuild 1072
-RMD160 a7319520eeebaabbc82ac544fe0424f21442e279 hal-device-manager-0.5-r1.ebuild 1072
-SHA256 20cd8ebb26e19939fb3fcdd2e1844683f3224f1d8412fa2825fed881c1a492d6 hal-device-manager-0.5-r1.ebuild 1072
+EBUILD hal-device-manager-0.5-r1.ebuild 1093 RMD160 7e8364f7ab690b44a9a1446957d1b0ff25ba3a76 SHA1 163699701593780522afef7ebc3cbbf3b25b7fb9 SHA256 cf0a791a601a2c9abfe70eccec5731d4df2f248054a7a28cc796c302a0dbed29
+MD5 358a68bfee60ecdd013b04c138d86705 hal-device-manager-0.5-r1.ebuild 1093
+RMD160 7e8364f7ab690b44a9a1446957d1b0ff25ba3a76 hal-device-manager-0.5-r1.ebuild 1093
+SHA256 cf0a791a601a2c9abfe70eccec5731d4df2f248054a7a28cc796c302a0dbed29 hal-device-manager-0.5-r1.ebuild 1093
 EBUILD hal-device-manager-0.5.ebuild 832 RMD160 84587e02e3cbe57aaad3db3904c043e73954eeb3 SHA1 f884103970f9ac090d7c90a3a0bf449ecbdcfed2 SHA256 83870b8d8719fe55b1354381591d98980d1d0d9911cb489cf0f5ae3ab80a5f26
 MD5 246871c9a0187b84622e0a7de1ab19e3 hal-device-manager-0.5.ebuild 832
 RMD160 84587e02e3cbe57aaad3db3904c043e73954eeb3 hal-device-manager-0.5.ebuild 832
@@ -27,3 +30,10 @@ SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-hal-device-manager-0.5-r1 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-hal-device-manager-0.5-r1 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-hal-device-manager-0.5-r1 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFDcawoeSe8B0zEfwRAozVAKCJ8tR6tZjkqwU5P51mZd2fVlu7YwCfbz+W
+62K/aM8wDQsQi957heSKqvk=
+=OyFZ
+-----END PGP SIGNATURE-----
