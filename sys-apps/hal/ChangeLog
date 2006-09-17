@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.103 2006/09/16 17:40:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.104 2006/09/17 12:35:48 steev Exp $
+
+  17 Sep 2006; Steev Klimaszewski <steev@gentoo.org> hal-0.5.7.1-r1.ebuild:
+  Added split dependency on either dbus-glib *or* dbus, that way, those people
+  who have unmasked dbus-glib it will depend on that first, and if not, fall
+  back on dbus monolithic.
 
 *hal-0.5.7.1-r1 (16 Sep 2006)
 
