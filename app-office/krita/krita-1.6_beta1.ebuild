@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6_beta1.ebuild,v 1.1 2006/09/15 18:52:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6_beta1.ebuild,v 1.2 2006/09/17 21:27:39 carlo Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	>=media-gfx/imagemagick-6.2.5.5
-	>=media-libs/lcms-1.14-r1
+	>=media-libs/lcms-1.15
 	media-libs/tiff
 	media-libs/jpeg
 	>=media-libs/openexr-1.2.2-r2
