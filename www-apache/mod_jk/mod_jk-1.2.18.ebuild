@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.18.ebuild,v 1.1 2006/09/17 01:24:35 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.18.ebuild,v 1.2 2006/09/17 05:24:44 mr_bones_ Exp $
 
 inherit apache-module java-pkg-opt-2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="apache2 java"
 
-DEPEND="java? >=virtual/jdk-1.4"
+DEPEND="java? ( >=virtual/jdk-1.4 )"
 S="${WORKDIR}/${MY_P}/native"
 
 APACHE1_MOD_FILE="${S}/apache-1.3/mod_jk.so"
