@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/inline-files
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/inline-files/ChangeLog,v 1.8 2006/08/06 02:42:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/inline-files/ChangeLog,v 1.9 2006/09/17 01:37:15 mcummings Exp $
+
+  17 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  inline-files-0.62.ebuild:
+  Keywording ~amd64
 
   06 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   inline-files-0.62.ebuild:
