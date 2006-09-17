@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.77 2006/09/17 11:05:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.78 2006/09/17 19:24:36 betelgeuse Exp $
+
+  17 Sep 2006; Petteri Räty <betelgeuse@gentoo.org>
+  ibm-jdk-bin-1.5.0.2.ebuild:
+  It seems that the gtk2 version of javaplugin also needs gtk1. Now depends on
+  both.
 
   17 Sep 2006; Petteri Räty <betelgeuse@gentoo.org>
   ibm-jdk-bin-1.5.0.ebuild:

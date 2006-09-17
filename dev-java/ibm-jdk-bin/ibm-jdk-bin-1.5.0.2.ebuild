@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.4 2006/09/17 11:01:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.5 2006/09/17 19:24:36 betelgeuse Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -77,7 +77,7 @@ RDEPEND="
 			)
 		alsa? ( media-libs/alsa-lib )
 		nsplugin? (
-			x86? ( =x11-libs/gtk+-2* )
+			x86? ( =x11-libs/gtk+-2* =x11-libs/gtk+-1* )
 			ppc? ( =x11-libs/gtk+-1* )
 		)"
 DEPEND=""
@@ -122,18 +122,15 @@ src_install() {
 
 	local x86plugin=libjavaplugin_ojigtk2.so
 	local ppcplugin=libjavaplugin_oji.so
+	local jrebindest = "${D}/opt/${P}/jre/bin/"
 
 	local plugin
 	if use x86; then
 		plugin=${x86plugin}
-		rm "${D}/opt/${P}/jre/bin/${ppcplugin}" || \
-			eerror "Failed to delete gtk1 javaplugin."
-
 	elif use ppc; then
 		plugin=${ppcplugin}
-		rm "${D}/opt/${P}/jre/bin/${x86plugin}" || \
+		rm "${jrebindest}/${x86plugin}" "${jrebindest}/libjavaplugin_nscpgtk2.so" || \
 			eerror "Failed to delete gtk2 javaplugin."
-
 	fi
 
 	plugin=/opt/${P}/jre/bin/${plugin}
@@ -141,8 +138,8 @@ src_install() {
 	if use nsplugin  && ! use amd64 && ! use ppc64; then
 		install_mozilla_plugin ${plugin}
 	elif use x86 || use ppc; then
-		rm "${D}/${plugin}" || \
-			eerror "Failed to delete ${D}/plugin"
+		rm "${D}/opt/${P}/jre/bin/*javaplugin*.so" || \
+			eerror "Failed to delete javaplugin shared libraries"
 	fi
 
 	use !alsa && rm "${D}/opt/${P}/jre/bin/libjsoundalsa.so"
