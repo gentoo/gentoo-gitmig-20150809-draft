@@ -1,7 +1,0 @@
-MD5 42982a39911787996b7419ef50248861 ChangeLog 4848
-MD5 7f6a05fb24ee63c794eafb5f4f58fa54 files/digest-superkaramba-0.36 70
-MD5 77d25e4808a26e7e82f801f629e77156 files/digest-superkaramba-0.37_rc2 74
-MD5 dfffd46934fc1bbec91ae05eb8ec535b files/karamba-env 60
-MD5 02039d51ca4a42817775fd436dfaa956 metadata.xml 157
-MD5 5271d368d8837fb7197c9061a070daae superkaramba-0.36.ebuild 954
-MD5 8432f273fa56ce27889045aeaa111e19 superkaramba-0.37_rc2.ebuild 947
