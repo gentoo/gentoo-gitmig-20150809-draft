@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.31 2006/09/17 19:36:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.32 2006/09/17 19:39:47 flameeyes Exp $
+
+  17 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/pulseaudio.init.d-2:
+  Pass the pidfile to start-stop-daemon when stopping pulseaudio.
 
   17 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.5-r3.ebuild:
