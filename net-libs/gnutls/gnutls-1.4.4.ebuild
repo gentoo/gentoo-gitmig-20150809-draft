@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4.ebuild,v 1.2 2006/09/17 13:45:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4.ebuild,v 1.3 2006/09/17 21:27:34 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -26,7 +26,10 @@ RDEPEND=">=dev-libs/libgcrypt-1.2.2
 # without it
 DEPEND="${RDEPEND}
 	sys-devel/libtool
-	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc )
+	>=sys-devel/autoconf-2.60"
+# Temporarily added sys-devel/autoconf-2.60 dependency as per bug #147970 until
+# a better solution can be found
 
 src_unpack() {
 	unpack ${A}
