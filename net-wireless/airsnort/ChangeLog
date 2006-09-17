@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.21 2006/09/13 01:03:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.22 2006/09/17 12:06:21 nixnut Exp $
+
+  17 Sep 2006; <nixnut@gentoo.org> airsnort-0.2.7e.ebuild:
+  Added ~ppc wrt bug 134383
 
   13 Sep 2006; <ticho@gentoo.org> airsnort-0.2.7e.ebuild:
   Stable on x86, bug 134383.
