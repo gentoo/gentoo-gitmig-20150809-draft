@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.29 2006/09/14 07:04:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.30 2006/09/17 02:14:38 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="-* alpha amd64 arm hppa ~ia64 mips ppc ppc64 ~s390 sh sparc x86"
+KEYWORDS="-* alpha amd64 arm hppa ia64 mips ppc ppc64 ~s390 sh sparc x86"
 
 BRANCH_UPDATE=""
 
@@ -996,7 +996,7 @@ fi
 RESTRICT="nostrip multilib-pkg-force"
 
 # We need a new-enough binutils for as-needed
-DEPEND=">=sys-devel/gcc-3.4
+DEPEND="!ia64? ( >=sys-devel/gcc-3.4 )
 	nptl? ( >=sys-kernel/linux-headers-${NPTL_KERNEL_VERSION} )
 	>=sys-devel/binutils-2.15.94
 	|| ( app-admin/eselect-compiler >=sys-devel/gcc-config-1.3.12 )
