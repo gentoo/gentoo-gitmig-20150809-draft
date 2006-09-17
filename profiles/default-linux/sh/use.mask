@@ -41,6 +41,3 @@ oci8
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      
 dri
-
-# need to test xmms-mpg123 first
-mp3
