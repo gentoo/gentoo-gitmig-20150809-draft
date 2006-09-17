@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.13 2006/06/18 10:04:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.14 2006/09/17 07:36:01 grobian Exp $
 
 inherit eutils
 
@@ -82,7 +82,7 @@ bare minimum (a customised prompt).
 If you rely on the customisations provided by previous ebuilds, you will
 have to copy over the relevant (now commented out) parts to your own
 ~/.tcshrc.  Please check all tcsh-* files in
-/usr/share/tcsh-6.14-r2/example and include their behaviour in your own
+/usr/share/doc/${P}/examples/ and include their behaviour in your own
 configuration files.
 The tcsh-complete file is not any longer sourced by the default system
 scripts.
