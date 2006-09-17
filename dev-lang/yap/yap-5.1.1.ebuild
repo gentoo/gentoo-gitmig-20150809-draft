@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.1 2006/04/24 08:13:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yap/yap-5.1.1.ebuild,v 1.2 2006/09/17 02:02:00 keri Exp $
 
 inherit autotools eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="Artistic LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="debug doc gmp java mpi mysql odbc readline static tcltk threads"
+IUSE="debug doc gmp java mpi mysql odbc readline static tk threads"
 
 DEPEND="gmp? ( dev-libs/gmp )
 	java? ( virtual/jdk )
@@ -23,7 +23,7 @@ DEPEND="gmp? ( dev-libs/gmp )
 	readline? ( sys-libs/readline )"
 
 RDEPEND="${DEPEND}
-	tcltk? ( dev-lang/tk )"
+	tk? ( dev-lang/tk )"
 
 S="${WORKDIR}"/${MY_P}
 
@@ -70,7 +70,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed."
 
-	if use tcltk ; then
+	if use tk ; then
 		exeinto /usr/bin
 		doexe misc/tkyap
 	fi
