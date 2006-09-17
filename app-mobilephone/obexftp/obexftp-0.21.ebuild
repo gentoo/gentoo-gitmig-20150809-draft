@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.2 2006/06/03 17:19:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.3 2006/09/17 13:58:58 mrness Exp $
 
 inherit eutils perl-module flag-o-matic autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://triq.net/obex"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="bluetooth debug perl python swig tcltk"
 
 DEPEND=">=dev-libs/openobex-1.1
