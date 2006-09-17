@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.76 2006/09/17 11:01:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.77 2006/09/17 11:05:31 betelgeuse Exp $
+
+  17 Sep 2006; Petteri Räty <betelgeuse@gentoo.org>
+  ibm-jdk-bin-1.5.0.ebuild:
+  Removed other keywords than ~s390 from 1.5.0 because generation 2 eclasses
+  should be used with 1.5 jdks.
 
   17 Sep 2006; Petteri Räty <betelgeuse@gentoo.org>
   ibm-jdk-bin-1.4.2.04.ebuild, ibm-jdk-bin-1.4.2.6-r1.ebuild,

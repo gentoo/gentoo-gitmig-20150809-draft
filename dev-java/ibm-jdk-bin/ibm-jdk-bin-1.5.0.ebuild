@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.9 2006/09/17 11:01:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.10 2006/09/17 11:05:31 betelgeuse Exp $
 
 inherit java eutils
 
@@ -21,7 +21,7 @@ SRC_URI="x86? ( ibm-java2-sdk-50-linux-i386.tgz )
 
 LICENSE="IBM-J1.5"
 SLOT="1.5"
-KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~s390 ~x86"
+KEYWORDS="-* ~s390"
 RESTRICT="fetch"
 IUSE="X alsa javacomm browserplugin mozilla"
 
