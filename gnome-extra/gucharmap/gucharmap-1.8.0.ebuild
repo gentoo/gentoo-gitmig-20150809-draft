@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.8.0.ebuild,v 1.2 2006/09/09 21:11:18 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.8.0.ebuild,v 1.3 2006/09/17 23:20:43 leio Exp $
 
 inherit gnome2
 
@@ -16,15 +16,15 @@ RDEPEND=">=dev-libs/glib-2.3
 	>=x11-libs/pango-1.2.1
 	>=x11-libs/gtk+-2.6
 	gnome?	(
-				>=gnome-base/libgnome-2.2
-				>=gnome-base/libgnomeui-2.2
+				>=gnome-base/libgnome-2.13.7
+				>=gnome-base/libgnomeui-2.13.2
 			)
 	!<gnome-extra/gnome-utils-2.3"
 
 DEPEND="${RDEPEND}
 	  app-text/scrollkeeper
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.29
+	>=dev-util/intltool-0.35
 	>=app-text/gnome-doc-utils-0.3.2"
 
 DOCS="ChangeLog NEWS README TODO"
