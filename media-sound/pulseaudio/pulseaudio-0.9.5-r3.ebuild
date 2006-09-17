@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r3.ebuild,v 1.2 2006/09/07 00:19:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r3.ebuild,v 1.3 2006/09/17 19:36:45 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -96,6 +96,7 @@ src_install() {
 	if ! use hal; then
 		sed -i -e '/module-hal-detect/s:^:#: ; /module-detect/s:^#::' "${D}/etc/pulse/default.pa"
 	fi
+	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${D}/etc/pulse/default.pa"
 
 	dohtml -r doc
 	dodoc README
