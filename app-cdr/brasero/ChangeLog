@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.4 2006/09/07 18:38:03 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.5 2006/09/17 02:27:47 metalgod Exp $
+
+  17 Sep 2006; Luis Medinas <metalgod@gentoo.org> brasero-0.4.2.ebuild,
+  brasero-0.4.4.ebuild, brasero-0.4.90.ebuild:
+  Added vitual/cdrtools as dependency.
 
 *brasero-0.4.4 (07 Sep 2006)
 
