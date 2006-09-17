@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4.ebuild,v 1.1 2006/09/16 01:41:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4.ebuild,v 1.2 2006/09/17 13:45:34 dragonheart Exp $
 
-inherit eutils gnuconfig libtool
+inherit eutils autotools
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -28,6 +28,13 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	doc? ( dev-util/gtk-doc )"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-selflink.patch
+	AT_M4DIR="${S}/m4 ${S}/gl/m4" _elibtoolize --copy --force
+	eautoconf -I m4 -I gl/m4
+}
 
 src_compile() {
 	local myconf=""

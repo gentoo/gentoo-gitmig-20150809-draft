@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.101 2006/09/16 01:41:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.102 2006/09/17 13:45:34 dragonheart Exp $
+
+  17 Sep 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/gnutls-1.4.4-selflink.patch, gnutls-1.4.4.ebuild:
+  partial fix for selflinking - bug #147800 thanks Carsten Lohrke
 
 *gnutls-1.4.4 (16 Sep 2006)
 
