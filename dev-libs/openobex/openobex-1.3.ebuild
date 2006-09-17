@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.3.ebuild,v 1.1 2006/08/20 06:54:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.3.ebuild,v 1.2 2006/09/17 13:05:24 mrness Exp $
 
 inherit autotools eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/openobex/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 IUSE="bluetooth debug irda syslog usb"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="usb? ( dev-libs/libusb )"
 
