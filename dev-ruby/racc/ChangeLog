@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.30 2006/09/07 16:14:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.31 2006/09/17 18:59:34 dertobi123 Exp $
+
+  17 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> racc-1.4.5.ebuild:
+  ppc stable
 
   07 Sep 2006; Ferris McCormick <fmccor@gentoo.org> racc-1.4.5.ebuild:
   Stable on sparc.  Builds, installs, and works as expected (calc.y test).
