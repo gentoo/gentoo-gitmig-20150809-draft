@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.8 2006/07/23 09:31:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.9 2006/09/17 01:24:35 wltjr Exp $
+
+*mod_jk-1.2.18 (17 Sep 2006)
+
+  17 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml,
+  +mod_jk-1.2.18.ebuild:
+  Updated mod_jk to latest releases. Introduced java use flag to control if
+  jni stuff should be built and also installed. Removed ~ppc keyword due to
+  lack of hardware to test on.
 
 *mod_jk-1.2.15 (23 Jul 2006)
 
