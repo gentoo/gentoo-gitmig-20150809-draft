@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r1.ebuild,v 1.6 2006/09/15 22:27:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r1.ebuild,v 1.7 2006/09/17 11:24:35 betelgeuse Exp $
 
 inherit java eutils versionator rpm
 
@@ -58,7 +58,7 @@ RESTRICT="fetch"
 QA_TEXTRELS_amd64="opt/${P}/bin/libj9jit22.so
 	opt/${P}/bin/libjclscar_22.so"
 QA_TEXTRELS_ppc="opt/${P}/bin/libjitc.so
-        opt/${P}/bin/libjaas.so"
+		opt/${P}/bin/libjaas.so"
 QA_TEXTRELS_ppc64="opt/${P}/bin/classic/libjvm.so"
 QA_TEXTRELS_x86="opt/${P}/bin/lib*.so
 	opt/${P}/bin/javaplugin.so
