@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ne
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.25 2006/03/05 13:03:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.26 2006/09/17 15:18:46 tcort Exp $
+
+  17 Sep 2006; Thomas Cort <tcort@gentoo.org> ne-1.42.ebuild:
+  Stable on amd64 wrt Bug #147936.
 
 *ne-1.42 (05 Mar 2006)
 
