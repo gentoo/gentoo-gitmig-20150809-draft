@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX kdeartwork-3.4-configure.patch 7591 RMD160 2f8aa66c4827a360e232d68e9ca09d00abaf9876 SHA1 0f41925d4ae66c35470aaa979a5a734d906692b9 SHA256 a09b4fbd282331a7eb93079da82b3831eb4e43e1139f10b9d8b08417793840ee
 MD5 a51b6bfc735f8cec40cd4481a289309d files/kdeartwork-3.4-configure.patch 7591
 RMD160 2f8aa66c4827a360e232d68e9ca09d00abaf9876 files/kdeartwork-3.4-configure.patch 7591
@@ -17,14 +14,9 @@ AUX kdeartwork-3.4.3-kfiresaver.patch 765 RMD160 4714a4259007fed4f8bdce73fd3abbf
 MD5 789091c90eea0d565e886b92589f1119 files/kdeartwork-3.4.3-kfiresaver.patch 765
 RMD160 4714a4259007fed4f8bdce73fd3abbf276fb6987 files/kdeartwork-3.4.3-kfiresaver.patch 765
 SHA256 89ab1c526c3606c19e3333234014a6e425fbfc38d1f62f248266bdb8a5a9023c files/kdeartwork-3.4.3-kfiresaver.patch 765
-DIST kdeartwork-3.4.3.tar.bz2 18022458 RMD160 d83c67eed8190c46b57682f5f8a96e083616fea9 SHA256 a7ce528fee0863bb39912af0467a1d7c463fba36f9dede8f2a2c1c8676b32172
 DIST kdeartwork-3.5.2.tar.bz2 16620565 RMD160 55c68134beb452c6316211f7a4fe1c0c4404a154 SHA1 12128d459cf26312769a66d3ec1935dd2cebc17d SHA256 c1df39d5eba36e5071e47c3534c3117abd91d0c9ae2b798a457fd29257218a31
 DIST kdeartwork-3.5.3.tar.bz2 16599096 RMD160 1dad7543b60acf98f143364e1910c3c49a66f607 SHA1 5eb0aa93b9be182721918d1f81d8ebe41cc857bb SHA256 92d78c09e960f99a6c0f6b026470e096b88357fd7c5646494f3beced6ac22d53
 DIST kdeartwork-3.5.4.tar.bz2 16575390 RMD160 b733f99b0d2451b819c1a796f19a5c79d01fe66d SHA1 31459b1bed7f43b81566a09240a4066b2c2b96c2 SHA256 b4c9347fc515d9ff9d15465a8c5d2c8535181d7e47d2b5713010517bffba826d
-EBUILD kdeartwork-kscreensaver-3.4.3.ebuild 940 RMD160 a7acc64a65bf5d44e17431a70cb683c896a4adf3 SHA1 161d8f0845cdb362137b264458b4e50d66f70d0e SHA256 39e6bd3cdb7858647b4a847c5cf0fdd6543faf157c46f62ac303d7a2a24fb3dd
-MD5 965436459bf1c523fccb306a77eef933 kdeartwork-kscreensaver-3.4.3.ebuild 940
-RMD160 a7acc64a65bf5d44e17431a70cb683c896a4adf3 kdeartwork-kscreensaver-3.4.3.ebuild 940
-SHA256 39e6bd3cdb7858647b4a847c5cf0fdd6543faf157c46f62ac303d7a2a24fb3dd kdeartwork-kscreensaver-3.4.3.ebuild 940
 EBUILD kdeartwork-kscreensaver-3.5.2.ebuild 781 RMD160 0c0f561e8e5172b0fa8587d8bcea08d3221edc6c SHA1 d428dc0a584be93057a065691999b6b49c572c9f SHA256 b33d2a4d50bb7c5ef8bf48072b0bc6f21aa4c96b5b0b1905a0ad50907bce2302
 MD5 6085069fbbcfefd39284b451b0667a77 kdeartwork-kscreensaver-3.5.2.ebuild 781
 RMD160 0c0f561e8e5172b0fa8587d8bcea08d3221edc6c kdeartwork-kscreensaver-3.5.2.ebuild 781
@@ -37,17 +29,14 @@ EBUILD kdeartwork-kscreensaver-3.5.4.ebuild 801 RMD160 c0e4959cd111196b454a954d4
 MD5 9e48da5ff89056e02504f5dda7049358 kdeartwork-kscreensaver-3.5.4.ebuild 801
 RMD160 c0e4959cd111196b454a954d48a9df1bdfa04de3 kdeartwork-kscreensaver-3.5.4.ebuild 801
 SHA256 c55bad0e5cb720a209f9784cb0b0f91be884997a64d4993c724c7c190f28caec kdeartwork-kscreensaver-3.5.4.ebuild 801
-MISC ChangeLog 8430 RMD160 201a2c6c4f1ae019f28f5f2d37bff0834fb00f3b SHA1 ef978617908c1012193a545b0603a272282bc7d7 SHA256 4a81a46bd58ac5c5f6bccb0b014aafb5b4eab1134df0f23d94ad4bc38b4eeef9
-MD5 70495a4bcc77e0844bd118b984115c0f ChangeLog 8430
-RMD160 201a2c6c4f1ae019f28f5f2d37bff0834fb00f3b ChangeLog 8430
-SHA256 4a81a46bd58ac5c5f6bccb0b014aafb5b4eab1134df0f23d94ad4bc38b4eeef9 ChangeLog 8430
+MISC ChangeLog 8533 RMD160 2b47a6970caae299322bac0b699632c7fff86094 SHA1 506f3822a224dcdea61bf44161bcb24e461f964a SHA256 b0bfbc30f042021d6ae63b7005be3bd027c83fccb456bdae3e98a07dfe4946b5
+MD5 5c011d7952d7beb82131fa8ddfd74eac ChangeLog 8533
+RMD160 2b47a6970caae299322bac0b699632c7fff86094 ChangeLog 8533
+SHA256 b0bfbc30f042021d6ae63b7005be3bd027c83fccb456bdae3e98a07dfe4946b5 ChangeLog 8533
 MISC metadata.xml 156 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 SHA1 b64f7c0b4e5db816d82ad19848f72118af129d35 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 RMD160 ecce3b981f150c45ae1e84e2d208e678d6124259 metadata.xml 156
 SHA256 2f4da28506b9d4185f320f67a6191d30c7a921217ed4447ed46ea0bc4aefc79a metadata.xml 156
-MD5 da602d961a0b503c562f05868fba32fb files/digest-kdeartwork-kscreensaver-3.4.3 259
-RMD160 d06abdb953981b17ede0b38b32a5de16884d583e files/digest-kdeartwork-kscreensaver-3.4.3 259
-SHA256 50f91495fd2af5b19534a266d15c6216dcbda1919f55143d88345a954682ec49 files/digest-kdeartwork-kscreensaver-3.4.3 259
 MD5 a703f4c18266818b6057e09748eba62d files/digest-kdeartwork-kscreensaver-3.5.2 259
 RMD160 f78abaabc7634910f3df6f87ffd89baf5fb1840b files/digest-kdeartwork-kscreensaver-3.5.2 259
 SHA256 d29a0491904a0dd51e3fbb6f84794819177db93160bdea3043b5175331cd244c files/digest-kdeartwork-kscreensaver-3.5.2 259
@@ -57,10 +46,3 @@ SHA256 20beedeb46ef552f7d76938ce400b1f09acf7fd9a711734effbdb79e92e333c2 files/di
 MD5 9d7fa4dde4497e2da826dff4e9f39892 files/digest-kdeartwork-kscreensaver-3.5.4 259
 RMD160 07e58aecc87cb2a1649bff87a5ec259c91719d03 files/digest-kdeartwork-kscreensaver-3.5.4 259
 SHA256 0eed7df655d7aef2b78c54684f11675ee49421ab29108a26cf5609d6cd3c188f files/digest-kdeartwork-kscreensaver-3.5.4 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFE/wFvAiZjviIA2XgRAlCRAKCBTz45pc/rr0ic3pQ1/t5WDXxzqACgpymc
-ONUB2r7XIJi9e/FmaF86YXI=
-=E+//
------END PGP SIGNATURE-----
