@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.308 2006/09/17 07:54:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.309 2006/09/17 07:56:06 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1903,7 +1903,7 @@ do_gcc_stub() {
 	local v stub_patch=""
 	for v in ${GCC_RELEASE_VER} ${GCC_BRANCH_VER} ; do
 		stub_patch=${GCC_FILESDIR}/stubs/gcc-${v}-$1-stub.patch
-		if [[ -e ${stub_patch} ]] ; then
+		if [[ -e ${stub_patch} ]] && ! use vanilla ; then
 			EPATCH_SINGLE_MSG="Applying stub patch for $1 ..." \
 			epatch "${stub_patch}"
 			return 0
