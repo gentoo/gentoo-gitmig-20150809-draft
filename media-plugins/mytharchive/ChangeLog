@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythcontrols
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.2 2006/09/14 14:14:10 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/ChangeLog,v 1.3 2006/09/17 23:57:16 cardoe Exp $
+
+  17 Sep 2006; Doug Goldstein <cardoe@gentoo.org> mytharchive-0.20.ebuild:
+  switch to virtual/cdrtools per bug #147880
 
   14 Sep 2006; <doug@gentoo.org> mytharchive-0.20.ebuild:
   Fixed dependancies
