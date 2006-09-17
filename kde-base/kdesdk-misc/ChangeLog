@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.30 2006/08/05 00:15:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.31 2006/09/17 22:53:09 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdesdk-misc-3.4.1.ebuild:
+  Drop KDE 3.4.
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> kdesdk-misc-3.5.0.ebuild:
   Stable on SPARC.

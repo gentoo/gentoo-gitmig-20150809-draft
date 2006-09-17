@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.38 2006/09/03 14:21:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.39 2006/09/17 22:53:02 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kstart-3.4.1.ebuild:
+  Drop KDE 3.4.
 
   03 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> kstart-3.5.0.ebuild:
   Stable on ia64.

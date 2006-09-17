@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.115 2006/09/10 00:18:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.116 2006/09/17 22:53:08 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  -kdeaccessibility-3.4.3-r1.ebuild:
+  Drop KDE 3.4.
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   kdeaccessibility-3.5.2.ebuild:

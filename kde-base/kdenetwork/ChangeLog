@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.216 2006/09/10 00:18:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.217 2006/09/17 22:53:11 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdenetwork-3.4.3.ebuild:
+  Drop KDE 3.4.
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   kdenetwork-3.5.2.ebuild:

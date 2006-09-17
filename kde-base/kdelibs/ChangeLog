@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.357 2006/09/09 22:00:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.358 2006/09/17 22:53:11 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdelibs-3.4.3-r1.ebuild:
+  Drop KDE 3.4.
 
   09 Sep 2006; Carsten Lohrke <carlo@gentoo.org> kdelibs-3.5.4-r1.ebuild:
   Do not depend on virtual/utempter, as only libutempter is supported, #143395.

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.38 2006/08/05 00:18:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.39 2006/09/17 22:53:02 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kuiviewer-3.4.3.ebuild:
+  Drop KDE 3.4.
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> kuiviewer-3.5.1.ebuild:
   Stable on SPARC.

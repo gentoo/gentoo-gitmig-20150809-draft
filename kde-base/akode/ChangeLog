@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.32 2006/05/29 12:40:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akode/ChangeLog,v 1.33 2006/09/17 22:53:03 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  -files/kdemultimedia-3.4.1-akode-hang.patch, -akode-3.4.3.ebuild:
+  Drop KDE 3.4.
 
   29 May 2006; Diego Pettenò <flameeyes@gentoo.org> -akode-3.4.1.ebuild,
   -akode-3.4.1-r1.ebuild, -akode-3.4.2.ebuild:

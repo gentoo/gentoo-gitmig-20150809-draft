@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.266 2006/09/10 00:09:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.267 2006/09/17 22:53:12 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  -kdegraphics-3.4.3-r4.ebuild:
+  Drop KDE 3.4.
 
   10 Sep 2006; Bryan Østergaard <kloeri@gentoo.org>
   kdegraphics-3.5.2.ebuild:

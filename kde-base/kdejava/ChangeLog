@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.39 2006/07/25 10:16:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.40 2006/09/17 22:53:01 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdejava-3.4.3.ebuild,
+  -kdejava-3.4.3-r1.ebuild:
+  Drop KDE 3.4.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdejava-3.3.1-classpath.diff, -kdejava-3.3.1.ebuild:

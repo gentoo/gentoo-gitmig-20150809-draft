@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.58 2006/09/07 00:56:51 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.59 2006/09/17 22:53:07 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  -klaptopdaemon-3.4.3-r1.ebuild:
+  Drop KDE 3.4.
 
 *klaptopdaemon-3.5.4-r1 (07 Sep 2006)
 

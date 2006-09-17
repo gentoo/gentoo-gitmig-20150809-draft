@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror-akregator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.49 2006/09/06 22:38:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror-akregator/ChangeLog,v 1.50 2006/09/17 22:52:58 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  -konqueror-akregator-3.4.3.ebuild:
+  Drop KDE 3.4.
 
   06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   konqueror-akregator-3.5.4.ebuild:

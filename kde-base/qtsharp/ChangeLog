@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtsharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.18 2006/07/25 10:46:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtsharp/ChangeLog,v 1.19 2006/09/17 22:53:07 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -qtsharp-3.4.1.ebuild:
+  Drop KDE 3.4.
 
   25 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> -qtsharp-3.3.1.ebuild:
   Drop 3.3 versions.

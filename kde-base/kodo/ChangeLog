@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kodo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kodo/ChangeLog,v 1.51 2006/09/06 21:55:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kodo/ChangeLog,v 1.52 2006/09/17 22:53:07 carlo Exp $
+
+  17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kodo-3.4.3.ebuild:
+  Drop KDE 3.4.
 
   06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> kodo-3.5.4.ebuild:
   Add ~x86-fbsd keyword.
