@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.3-r1.ebuild,v 1.2 2006/03/16 13:51:28 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.3-r1.ebuild,v 1.3 2006/09/18 17:02:33 steev Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="readline X motif"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~x86-fbsd"
 
 DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
@@ -29,6 +29,8 @@ DEPEND="dev-db/freetds
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${WORKDIR}/${P}-autotools.patch
+	# Patch knicked from ports so that we don't pass -ldb when in a BSD
+	epatch ${FILESDIR}/${PN}-2.1.3-fbsd-configure.patch
 }
 
 src_compile() {
