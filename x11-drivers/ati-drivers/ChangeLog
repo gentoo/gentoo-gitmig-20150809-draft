@@ -1,6 +1,30 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.48 2006/08/31 17:52:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.49 2006/09/18 00:22:34 lu_zero Exp $
+
+  18 Sep 2006; Luca Barbato <lu_zero@gentoo.org>
+  -files/fglrx-2.6.12-inter_module_get.patch,
+  -files/fglrx-2.6.12-pci_name.patch, -files/fglrx-2.6.14-access_ok.patch,
+  -files/fglrx-2.6.14-compat_ioctl.patch,
+  -files/ati-drivers-8.22.5-intermodule.patch,
+  -files/ati-drivers-8.23.7-gcc41.patch,
+  -files/ati-drivers-8.23.7-noiommu.patch, -files/ioctl32.patch,
+  -files/fglrx-8.14.13-alt-2.6.12-agp.patch, -files/p1.patch,
+  -files/8.8.25-smp.patch, -files/8.8.25-via-amd64.patch,
+  -files/ati-drivers-8.20.8-linux-2.6.15.patch,
+  -files/ati-drivers-8.21.7-linux-2.6.15.patch,
+  -ati-drivers-8.14.13-r2.ebuild, -ati-drivers-8.14.13-r3.ebuild,
+  -ati-drivers-8.14.13-r4.ebuild, -ati-drivers-8.14.13-r5.ebuild,
+  -ati-drivers-8.16.20.ebuild, -ati-drivers-8.16.20-r1.ebuild,
+  -ati-drivers-8.18.6.ebuild, -ati-drivers-8.18.6-r1.ebuild,
+  -ati-drivers-8.18.8.ebuild, -ati-drivers-8.18.8-r1.ebuild,
+  -ati-drivers-8.18.8-r2.ebuild, -ati-drivers-8.19.10.ebuild,
+  -ati-drivers-8.20.8.ebuild, -ati-drivers-8.21.7.ebuild,
+  -ati-drivers-8.21.7-r1.ebuild, -ati-drivers-8.22.5.ebuild,
+  -ati-drivers-8.23.7.ebuild, -ati-drivers-8.24.8.ebuild,
+  -ati-drivers-8.25.18.ebuild, -ati-drivers-8.26.18.ebuild,
+  -ati-drivers-8.26.18-r1.ebuild, -ati-drivers-8.27.10.ebuild:
+  Cleanup
 
 *ati-drivers-8.28.8 (31 Aug 2006)
 
