@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.307 2006/09/06 06:37:19 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.308 2006/09/18 21:51:41 carlo Exp $
 
 # Keep them sorted
 
@@ -163,7 +163,7 @@ jpeg - Adds JPEG image support
 jpeg2k - Support for JPEG 2000, a wavelet-based image compression format.
 junit - Adds junit awareness -- useful for developers.
 kde - Adds support for kde-base/kde (K Desktop Enviroment)
-kdeenablefinal - Makes kde ebuilds use the enable-final flag, yielding big compilation speedups at the cost of very heavy mem usage
+kdeenablefinal - EXPERIMENTAL: KDE ebuilds will use the enable-final flag, yielding big compilation speedups at the cost of heavy mem usage.
 kdehiddenvisibility - Makes KDE symbols hidden by default, requires GCC 4.1 (experimental)
 kdexdeltas - Makes kde ebuilds download binary diffs rather than entire new tarballs for every new release
 kerberos - Adds kerberos support
