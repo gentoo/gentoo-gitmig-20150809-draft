@@ -5,10 +5,10 @@ AUX gentoo.config-0.9.7g 3356 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 SH
 MD5 5479124566140e079c2493abe59a1c90 files/gentoo.config-0.9.7g 3356
 RMD160 8e83cecd44f2dc6b0863bf10b920cae2490250d7 files/gentoo.config-0.9.7g 3356
 SHA256 1935ea31cf0d4c4a7f5ed0fa4434e9960c7ccef5cb43abcee26cff09472991eb files/gentoo.config-0.9.7g 3356
-AUX gentoo.config-0.9.8 3098 RMD160 7d3fdcef817cffc73c5f94ee2547bcb2703a3f9b SHA1 2c5dcd1edcfca994527510dd91412f0b45a4466c SHA256 6336190e11ce59c69c3d287e34afe4b87c96761b6e8b302f5e1bc6be70df96a4
-MD5 091da0ee783b17d2a6361a01615b4ac3 files/gentoo.config-0.9.8 3098
-RMD160 7d3fdcef817cffc73c5f94ee2547bcb2703a3f9b files/gentoo.config-0.9.8 3098
-SHA256 6336190e11ce59c69c3d287e34afe4b87c96761b6e8b302f5e1bc6be70df96a4 files/gentoo.config-0.9.8 3098
+AUX gentoo.config-0.9.8 3134 RMD160 a6d4f443a248b838a409aa6d56d09cf19f442fb3 SHA1 c37750ef7a3a311b1bc7e49fa593d391d9316070 SHA256 3bbc3d1a03fd372d6a2f79713ce229d739ab4b74d3d3b8f181e03144b36e1d9c
+MD5 b889a9ac188c45615d8261df32882da2 files/gentoo.config-0.9.8 3134
+RMD160 a6d4f443a248b838a409aa6d56d09cf19f442fb3 files/gentoo.config-0.9.8 3134
+SHA256 3bbc3d1a03fd372d6a2f79713ce229d739ab4b74d3d3b8f181e03144b36e1d9c files/gentoo.config-0.9.8 3134
 AUX openssl-0.9.7-alpha-default-gcc.patch 533 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd SHA1 f5ee85db45ab80b66225a222c7655b74760b94fe SHA256 814ae7c09359414e7dcd96008c82d868fba0565de2d1b3e6a4275f8cdbeefb5c
 MD5 f8ff492f66404c732e4661cc4443a2e8 files/openssl-0.9.7-alpha-default-gcc.patch 533
 RMD160 ea2d91421aa4d3f463034b40c2c81c195a71c0dd files/openssl-0.9.7-alpha-default-gcc.patch 533
@@ -116,7 +116,7 @@ SHA256 fdcfdfe6232573573e817138ff76277a9161c65fc21fe52b77dfb9a2a1fc863a files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFDmmKamhnQswr0vIRAkN1AJ9Sji58SoB9H2qm3JKvqV1vzciBtwCghXqE
-kEnooylA+/zVclKyQv9JKM8=
-=yrdb
+iD8DBQFFDmtzamhnQswr0vIRAkKhAJ0cpcCEjfRy8gMPCrwdYcIv8VGXNACePu0I
+tRzpo5G0/Jc0cmvCsGC1lsM=
+=GYyd
 -----END PGP SIGNATURE-----
