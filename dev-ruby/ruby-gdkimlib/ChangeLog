@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gdkimlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ChangeLog,v 1.21 2006/06/22 22:32:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkimlib/ChangeLog,v 1.22 2006/09/18 01:23:29 pclouds Exp $
+
+  18 Sep 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  files/digest-ruby-gdkimlib-0.30, Manifest:
+  Redigest ruby-gnome-all-0.30.tar.gz, #147173
 
   22 Jun 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   ruby-gdkimlib-0.34.ebuild:
