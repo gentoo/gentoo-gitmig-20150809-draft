@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.52 2006/09/17 22:53:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.53 2006/09/18 15:19:21 carlo Exp $
+
+*korganizer-3.5.4-r1 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  +korganizer-3.5.4-r1.ebuild:
+  Fix a crash condition, timezone detection, minor issues.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -korganizer-3.4.3.ebuild:
   Drop KDE 3.4.
