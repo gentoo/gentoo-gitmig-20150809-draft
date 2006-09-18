@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.5/mozilla-firefox-1.5-history.patch 2376 RMD160 2e6a58c257c5a1455c9440b5d1f3829a2149c970 SHA1 78d283d2b5e7df0cbc8ace1f881aadc8d5ec4f51 SHA256 bad2ff1c2534fb55851fb43bbb1a123511e828eca52e88589f8fbdad42e6a6ef
 MD5 328c58524dbe1f58eea781194cc7de94 files/1.5/mozilla-firefox-1.5-history.patch 2376
 RMD160 2e6a58c257c5a1455c9440b5d1f3829a2149c970 files/1.5/mozilla-firefox-1.5-history.patch 2376
@@ -260,10 +263,10 @@ EBUILD mozilla-firefox-1.5.0.6.ebuild 9198 RMD160 9c704e4e8066d9a05c745d02455dee
 MD5 9d1018ea15cb0376f0b2e04eed1e60a6 mozilla-firefox-1.5.0.6.ebuild 9198
 RMD160 9c704e4e8066d9a05c745d02455dee42a0a95e6d mozilla-firefox-1.5.0.6.ebuild 9198
 SHA256 6bcacedd7d3939f094426c39641291cebb1d114ec4b9fd8923842601ac84f43d mozilla-firefox-1.5.0.6.ebuild 9198
-EBUILD mozilla-firefox-1.5.0.7.ebuild 9536 RMD160 fde7f0b641a67d0a89a88a83c7611429e622617a SHA1 dc56d7e63165f16af4cdb9e1624aefe892e7e64a SHA256 818871108ada7e36f13fa17efd0985c60cef52dd7694d26176e5e90ea9c23694
-MD5 c24cfa792c3aa7fbd4c95bb7ecf4433c mozilla-firefox-1.5.0.7.ebuild 9536
-RMD160 fde7f0b641a67d0a89a88a83c7611429e622617a mozilla-firefox-1.5.0.7.ebuild 9536
-SHA256 818871108ada7e36f13fa17efd0985c60cef52dd7694d26176e5e90ea9c23694 mozilla-firefox-1.5.0.7.ebuild 9536
+EBUILD mozilla-firefox-1.5.0.7.ebuild 9536 RMD160 4f53db05bd927341691dbbcd90a46720f646c3c6 SHA1 fc9b7f16b174755a3b189fbbdbeaec4473ab8f65 SHA256 5d5cf9466cb81c13786782a115605b1329a4e9e90d83b280d4146681c05cf939
+MD5 fe2a79f519f3f9b44377367b49de06a0 mozilla-firefox-1.5.0.7.ebuild 9536
+RMD160 4f53db05bd927341691dbbcd90a46720f646c3c6 mozilla-firefox-1.5.0.7.ebuild 9536
+SHA256 5d5cf9466cb81c13786782a115605b1329a4e9e90d83b280d4146681c05cf939 mozilla-firefox-1.5.0.7.ebuild 9536
 EBUILD mozilla-firefox-2.0_beta1.ebuild 7524 RMD160 a9b4b9063de741945fd987975f8d97dfd540d6e0 SHA1 23f8e7f32a4e496938c44511362fc7aa7731f02b SHA256 829370979552762531b1bd8df5080c6f8fa8c856561e0cb199a21907a5735dfe
 MD5 5c86d433aa4e97b406c80e52b334b4b3 mozilla-firefox-2.0_beta1.ebuild 7524
 RMD160 a9b4b9063de741945fd987975f8d97dfd540d6e0 mozilla-firefox-2.0_beta1.ebuild 7524
@@ -301,3 +304,10 @@ SHA256 1c29587cea51a4c75200f5a40e42b4dddb9eef735440e19f90499703656d31a2 files/di
 MD5 1c17d38d7ad393d4b5e1bd96518f487c files/digest-mozilla-firefox-2.0_beta2 11498
 RMD160 8d02f1d840d99de1e7ac900cd872c2e940805700 files/digest-mozilla-firefox-2.0_beta2 11498
 SHA256 aa9d1d6195ff197816756e4441b9489ab1c20dbe4fa983351136046a96ad8df0 files/digest-mozilla-firefox-2.0_beta2 11498
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFDlNZamhnQswr0vIRAjGGAJ4lnCrbMcI+AxbrzH2r4ja4vYS04wCfdo1V
+UybTWbxn732QsPf2yTsTTPY=
+=8YR+
+-----END PGP SIGNATURE-----
