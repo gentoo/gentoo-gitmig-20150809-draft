@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.56 2006/09/17 22:53:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.57 2006/09/18 00:54:44 carlo Exp $
+
+*konsole-3.5.4-r1 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org> +konsole-3.5.4-r1.ebuild:
+  Make bold fonts work again.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -konsole-3.4.3.ebuild:
   Drop KDE 3.4.
