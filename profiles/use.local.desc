@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2158 2006/09/18 21:18:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2159 2006/09/18 23:10:25 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -109,9 +109,6 @@ app-emulation/mol:vnc - Includes vnc support
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
 app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the x86 cpu
-app-emulation/qemu:kqemu - Enables the kernel module acceleration on the x86 cpu
-app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
-app-emulation/qemu:softmmu - Support for softmmu targets
 app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
@@ -606,7 +603,6 @@ mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/evolution:widescreen - Enable widescreen support
 mail-client/mail-notification:evolution - Provide an Evolution plugin
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
-mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
 mail-client/mail-notification:pop - Enable support for pop
 mail-client/mail-notification:sylpheed - Enable support for MH mailboxes used by sylpheed
 mail-client/mozilla-thunderbird:mozcalendar - Enable build in calendar (also firefox, thunderbird)
@@ -672,7 +668,6 @@ mail-mta/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before o
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
 media-fonts/intlfonts:bdf - Installs BDF fonts in addition to PCF
 media-gfx/blender:blender-game - Adds game engine support to blender
-media-gfx/blender:fmod - Adds mod support to blender
 media-gfx/blender:openexr - Adds support for openexr
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
 media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
@@ -695,7 +690,6 @@ media-gfx/inkscape:inkjar - enables inkjar support
 media-gfx/inkscape:plugin - enables extra plugins
 media-gfx/iscan:gimp - Build a plugin for the GIMP
 media-gfx/iscan:udev - Install as an udev helper instead of a hotplug helper
-media-gfx/k3d:ngui - build NGUI user-interface plug-in
 media-gfx/k3d:openexr - build OpenEXR plug-ins
 media-gfx/k3d:plib - build plib-based import/export library
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
@@ -732,7 +726,6 @@ media-libs/libsdl:nojoystick - Allow users to disable joystick support completel
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
 media-libs/libvorbis:aotuv - Allow users to enable aoTuV encoder enhancements
 media-libs/mlt:lame - Support LAME mp3 encoding
-media-libs/openexr:fltk - Builds the openexr viewer application.
 media-libs/panda3d:fmod - Enables support for using mod files for audio support
 media-libs/panda3d:nspr - Enables support for the Netscape Portable Runtime, used in network interface functionality (ie. multiplayer online game networking).
 media-libs/ploticus:cpulimit - Limit cpu usage when generating graphics
@@ -849,8 +842,6 @@ media-tv/mythtv:backendonly - Builds only the backend component rather then the 
 media-tv/mythtv:dbox2 - Enable support for Nokia DBOX2 DVB boxes
 media-tv/mythtv:frontendonly - Only builds the Frontend component rather then the whole suite
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
-media-tv/mythtv:nvidia - Enable XvMC support for nvidia (depreciated in new ebuild)
-media-tv/mythtv:unichrome - Enable XvMC support for unichrome chips (depreciated in new ebuild)
 media-tv/mythtv:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-tv/tvbrowser:themes - Install extra theme packs
 media-tv/xawtv:xext - Enable use of XFree extentions (DGA,VidMode,DPMS)
@@ -1258,7 +1249,6 @@ net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/linphone:ilbc - Build ILBC codec plugin
 net-misc/ltsp:floppyd - Enable local floppy access on LTSP terminals via mtools
 net-misc/ntp:logrotate - Install support files for logrotate
-net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/nx-x11-bin:rdesktop - Add support for connecting to Windows Terminal Server
@@ -1332,7 +1322,6 @@ net-p2p/amule:stats - enable statistic reporting
 net-p2p/ed2k_hash:fltk - Adds support for fltk GUI
 net-p2p/mldonkey:batch - enable internaly ocaml build
 net-p2p/mldonkey:guionly - enable client build only
-net-p2p/mldonkey:oldgtk - enable old gtk user interface
 net-print/foo2zjs:udev - Enable udev rules file installation
 net-print/omni:epson - include the epson drivers
 net-print/pkpgcounter:psyco - psyco python accelerator
@@ -1624,17 +1613,12 @@ www-apache/mod_suphp:mode-force - Run scripts with UID/GID specified in Apache c
 www-apache/mod_suphp:mode-owner - Run scripts with owner UID/GID
 www-apache/mod_suphp:mode-paranoid - Run scripts with owner UID/GID but also check if they match the UID/GID specified in the Apache configuration
 www-apps/bugzilla:extras - optional Perl modules
-www-apps/dspam-web:cyrus - Build delivery options for cyrus-imapd
-www-apps/dspam-web:exim - Build with delivery options for exim
 www-apps/dspam-web:large-domain - Builds for large domain rather than for domain scale
 www-apps/dspam-web:logrotate - Build logrotate support for dspam
-www-apps/dspam-web:maildrop - Build with delivery options for maildrop
 www-apps/dspam-web:neural - Build neural support for dspam
-www-apps/dspam-web:procmail - Build procmail filter support
 www-apps/dspam-web:virtual-users  - Build with virtual-users support
 www-apps/egroupware:jpgraph - Add jpgraph support
 www-apps/gallery:dcraw - Add dcraw support
-www-apps/gallery:graphicsmagick - Add graphicsmagick support
 www-apps/gallery:netpbm - Add NetPBM support
 www-apps/gallery:unzip - Add unzip support for the archive upload module
 www-apps/gallery:zip - Add zip support for the zip download module
@@ -1699,7 +1683,6 @@ www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 www-servers/shttpd:cgi - Enable CGI script support
 www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
-www-servers/thttpd:mkconfig - Create phpconfig source tarball (for maintainer use only)
 www-servers/tomcat:java5 - Use Java 1.5 for compilation
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
@@ -1723,7 +1706,6 @@ x11-drivers/synaptics:dlloader - Installs dynamically linked synaptics Xorg driv
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
 x11-libs/fltk:noxft - Disables fltk; use for non-english characters
-x11-libs/goffice:cairo - Enable cairo support
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/libmatchbox:pango - Enable pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management.
