@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.14 2006/06/28 02:49:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.15 2006/09/18 16:32:54 vapier Exp $
 
 inherit eutils pam
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="pam"
 
 DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
@@ -18,7 +18,7 @@ DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 	!<net-ftp/pure-ftpd-1.0.20-r2
 	!<net-ftp/vsftpd-2.0.3-r1"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 check_collision() {
 	[[ ! -e "$1" ]] && return 0
@@ -62,7 +62,7 @@ src_install() {
 	# The ftpusers file is a list of people who are NOT allowed
 	# to use the ftp service.
 	insinto /etc
-	doins "${FILESDIR}/ftpusers"
+	doins "${FILESDIR}/ftpusers" || die
 
 	# Ideally we would create the home directory here with a dodir.
 	# But we cannot until bug #9849 is solved - so we kludge in pkg_postinst()
@@ -82,8 +82,8 @@ pkg_postinst() {
 	# Install manually using install -d until bug #9849 is solved.
 	# This means that the home directory will not be removed when we uninstall
 	# if it's empty.
-	local homedir="$(egethome ftp)"
-	if [[ ! -d "${homedir}" ]]; then
+	local homedir=$(egethome ftp)
+	if [[ ! -d ${homedir} ]]; then
 		einfo "Creating home directory for ftp user"
 		einfo "   ${homedir}"
 		install -d "${homedir}" \
