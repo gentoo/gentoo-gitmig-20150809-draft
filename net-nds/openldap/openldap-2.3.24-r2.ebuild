@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.24-r2.ebuild,v 1.3 2006/09/11 12:22:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.3.24-r2.ebuild,v 1.4 2006/09/18 13:42:22 strerror Exp $
 
 inherit autotools eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -421,8 +421,7 @@ src_install() {
 			newexe statslog ldapstatslog || \
 			die "failed to install ldapstatslog script"
 		fi
-		if [ -e
-			${S}/contrib/slapi-plugins/addrdnvalues/libaddrdnvalues-plugin.so ];
+		if [ -e ${S}/contrib/slapi-plugins/addrdnvalues/libaddrdnvalues-plugin.so ];
 		then
 			cd ${S}/contrib/slapi-plugins/addrdnvalues
 			newdoc README README.contrib.addrdnvalues
