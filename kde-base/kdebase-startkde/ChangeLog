@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.62 2006/09/17 22:53:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.63 2006/09/18 01:14:23 carlo Exp $
+
+*kdebase-startkde-3.5.4-r1 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  +kdebase-startkde-3.5.4-r1.ebuild:
+  Do not call artsshell, when it isn't installed.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
   -kdebase-startkde-3.4.3.ebuild:
