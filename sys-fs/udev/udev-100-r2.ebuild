@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-100-r2.ebuild,v 1.1 2006/09/12 05:47:32 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-100-r2.ebuild,v 1.2 2006/09/18 18:23:37 herbs Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -96,7 +96,7 @@ src_install() {
 	dosbin udev			|| die "Required binary not installed properly"
 
 	# Helpers
-	exeinto /$(get_libdir)/udev
+	exeinto /lib/udev
 	doexe extras/run_directory/udev_run_devd	|| die "Required helper not installed properly"
 	doexe extras/run_directory/udev_run_hotplugd	|| die "Required helper not installed properly"
 	doexe extras/ata_id/ata_id		|| die "Required helper not installed properly"
@@ -110,7 +110,7 @@ src_install() {
 	doexe extras/rule_generator/write_cd_rules	|| die "Required helper not installed properly"
 	doexe extras/rule_generator/write_net_rules	|| die "Required helper not installed properly"
 	doexe extras/rule_generator/rule_generator.functions	|| die "Required helper not installed properly"
-	keepdir /$(get_libdir)/udev/state
+	keepdir /lib/udev/state
 
 	# vol_id library (needed by mount and HAL)
 	dolib extras/volume_id/lib/*.a extras/volume_id/lib/*.so*
@@ -188,9 +188,9 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ -d ${ROOT}/$(get_libdir)/udev-state ]] ; then
-		mv -f "${ROOT}"/$(get_libdir)/udev-state/* "${D}"/$(get_libdir)/udev/state/
-		rm -r "${ROOT}"/$(get_libdir)/udev-state
+	if [[ -d ${ROOT}/lib/udev-state ]] ; then
+		mv -f "${ROOT}"/lib/udev-state/* "${D}"/lib/udev/state/
+		rm -r "${ROOT}"/lib/udev-state
 	fi
 
 	if [ -f "${ROOT}/etc/udev/udev.config" -a \
