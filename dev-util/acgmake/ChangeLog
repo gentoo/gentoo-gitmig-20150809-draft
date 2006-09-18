@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/acgmake
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/acgmake/ChangeLog,v 1.1 2006/09/18 20:08:42 dsd Exp $
+
+*acgmake-1.2 (18 Sep 2006)
+
+  18 Sep 2006; Daniel Drake <dsd@gentoo.org> +metadata.xml,
+  +acgmake-1.2.ebuild:
+  Initial import. ebuild by Seemant Kulleen
+
