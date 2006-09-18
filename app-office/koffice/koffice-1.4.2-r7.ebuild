@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2-r7.ebuild,v 1.3 2006/01/12 13:34:57 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.4.2-r7.ebuild,v 1.4 2006/09/18 16:00:45 carlo Exp $
 
 inherit kde
 
@@ -25,7 +25,7 @@ RDEPEND=">=media-gfx/imagemagick-5.5.2
 	postgres? ( dev-libs/libpqxx )
 	dev-lang/python
 	>=media-libs/lcms-1.12
-	javascript? ( kde-base/kjsembed )
+	!ia64? ( !alpha? ( !sparc? ( javascript? ( kde-base/kjsembed ) ) ) )
 	>=app-text/libwpd-0.8.2"
 
 DEPEND="${RDEPEND}
