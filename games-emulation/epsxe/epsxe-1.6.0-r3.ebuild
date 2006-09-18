@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/epsxe-1.6.0-r3.ebuild,v 1.7 2006/09/15 20:02:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/epsxe/epsxe-1.6.0-r3.ebuild,v 1.8 2006/09/18 00:11:09 mr_bones_ Exp $
 
 inherit games
 
@@ -20,21 +20,23 @@ RDEPEND=">=dev-libs/glib-1.2
 	=sys-libs/ncurses-5*
 	=sys-libs/zlib-1*
 	net-misc/wget
+	x11-misc/imake
 	games-emulation/psemu-peopsspu
 	|| (
 		opengl? ( games-emulation/psemu-gpupetemesagl )
 		games-emulation/psemu-peopssoftgpu
 	)"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dogamesbin ${FILESDIR}/epsxe
-	dosed \
+	dogamesbin "${FILESDIR}"/epsxe
+	sed -i \
 		-e "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
 		-e "s:GAMES_LIBDIR:${GAMES_LIBDIR}:" \
-		${GAMES_BINDIR}/epsxe || die "sed"
+		"${D}${GAMES_BINDIR}/epsxe" \
+		|| die "sed failed"
 	exeinto "${dir}"
 	insinto "${dir}"
 	doexe epsxe || die "doexe failed"
