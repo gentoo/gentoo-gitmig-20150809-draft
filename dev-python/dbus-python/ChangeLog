@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.2 2006/09/10 22:58:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.3 2006/09/18 17:51:30 steev Exp $
+
+  18 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
+  dbus-python-0.71.ebuild:
+  Add ~x86-fbsd keyword.  This does require using dbus from the
+  portage-alt-overlay.
 
 *dbus-python-0.71 (19 Aug 2006)
 
