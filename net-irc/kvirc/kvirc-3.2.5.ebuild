@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.4.ebuild,v 1.2 2006/09/18 21:35:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.5.ebuild,v 1.1 2006/09/18 21:35:18 jokey Exp $
 
 inherit eutils kde-functions
 

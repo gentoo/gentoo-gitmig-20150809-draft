@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.37 2006/07/29 19:01:31 dercorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.38 2006/09/18 21:35:18 jokey Exp $
+
+*kvirc-3.2.5 (18 Sep 2006)
+
+  18 Sep 2006; Markus Ullmann <jokey@gentoo.org>
+  -files/kvirc-3.2.4-kdedir-fix.patch, kvirc-3.2.4.ebuild,
+  +kvirc-3.2.5.ebuild:
+  Version bump to 3.2.5
 
 *kvirc-3.2.4 (29 Jul 2006)
 
