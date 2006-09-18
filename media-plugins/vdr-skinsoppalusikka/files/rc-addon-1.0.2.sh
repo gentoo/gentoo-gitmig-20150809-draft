@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/files/rc-addon-1.0.1.sh,v 1.2 2006/09/18 20:12:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/files/rc-addon-1.0.2.sh,v 1.1 2006/09/18 20:12:38 hd_brummy Exp $
 #
 # rc-addon plugin-startup-skript for vdr-skinsoppalusikka
 #
@@ -10,7 +10,7 @@ plugin_pre_vdr_start() {
 	if [[ -z ${PLUGINS/dxr3/} ]] ; then
 		: ${SKINSOPPALUSIKKA_LOGOS_DIR:=/usr/share/vdr/skinsoppalusikka/logos-dxr3}
 	else
-		: ${SKINSOPPALUSIKKA_LOGOS_DIR:=/usr/share/vdr/skinsoppalusikka/logos}
+		: ${SKINSOPPALUSIKKA_LOGOS_DIR:=/usr/share/vdr/channel-logos}
 	fi
   
 	add_plugin_param "-l ${SKINSOPPALUSIKKA_LOGOS_DIR}"
