@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.42 2006/09/17 22:53:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.43 2006/09/18 00:50:38 carlo Exp $
+
+*ksmserver-3.5.4-r1 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org> +ksmserver-3.5.4-r1.ebuild:
+  Increase session timeout on shutdown.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -ksmserver-3.4.1.ebuild:
   Drop KDE 3.4.
