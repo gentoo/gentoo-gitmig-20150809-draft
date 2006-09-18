@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2154 2006/09/17 05:23:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2155 2006/09/18 13:30:55 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -148,6 +148,10 @@ app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
 app-misc/beagle:ole - Enable ole support
 app-misc/booh:transcode - Use transcode to extract video thumbnails
+app-misc/lcdproc:nfs - Adds support for NFS file system
+app-misc/lcdproc:graphlcd - Enable support for the GraphLCD library
+app-misc/lcdproc:irman - Enable support for IRMan
+app-misc/lcdproc:ula200 - Enable support for ULA200 USB devices
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/lirc:transmitter - add transmitter support to some lirc-drivers (e.g. serial)
