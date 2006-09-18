@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bouml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.2 2006/09/09 19:24:40 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.3 2006/09/18 11:27:27 flameeyes Exp $
+
+*bouml-2.17 (18 Sep 2006)
+
+  18 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +bouml-2.17.ebuild:
+  Version bump.
 
   09 Sep 2006; <ticho@gentoo.org> bouml-2.16.ebuild:
   Added ~x86 keyword. Closes bug #146827, reported by Sami Näätänen <sn.ml
