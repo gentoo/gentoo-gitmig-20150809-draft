@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.28 2006/03/20 21:12:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.29 2006/09/18 14:13:39 wolf31o2 Exp $
+
+  18 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> -pxes-0.6-r4.ebuild,
+  -pxes-0.7.ebuild, -pxes-0.8.ebuild, -pxes-0.9-r1.ebuild, pxes-1.0.ebuild:
+  Change to using virtual/cdrtools for bug #147880, cleaning up older ebuilds,
+  and adding dependency for virtual/cdrtools if USE=dvdr, also.
 
   20 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> -pxes-0.9.ebuild,
   pxes-0.9-r1.ebuild, pxes-1.0.ebuild:

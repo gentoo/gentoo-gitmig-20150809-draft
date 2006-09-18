@@ -1,17 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-1.0.ebuild,v 1.5 2006/03/20 21:12:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-1.0.ebuild,v 1.6 2006/09/18 14:13:39 wolf31o2 Exp $
 
 inherit eutils perl-app
 
-IUSE="cdr"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
 HOMEPAGE="http://pxes.sourceforge.net"
 SRC_URI="mirror://sourceforge/pxes/${PN}-base-i586-${PV}-6.tar.gz
 	mirror://sourceforge/pxes/pxesconfig-${PV}-7.tar.gz"
 
 KEYWORDS="amd64 x86"
-
+IUSE="cdr dvdr"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND=">=dev-lang/perl-5.8.0-r12"
@@ -20,7 +19,8 @@ RDEPEND="${DEPEND}
 	dev-perl/gtk-perl
 	>=dev-perl/glade-perl-0.61
 	sys-fs/squashfs-tools
-	cdr? ( app-cdr/cdrtools )"
+	cdr? ( virtual/cdrtools )
+	dvdr? ( virtual/cdrtools )"
 
 dir=/opt/${P}
 Ddir=${D}/${dir}
