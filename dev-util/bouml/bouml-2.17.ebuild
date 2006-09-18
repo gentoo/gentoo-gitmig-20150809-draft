@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/bouml-2.17.ebuild,v 1.1 2006/09/18 11:27:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/bouml-2.17.ebuild,v 1.2 2006/09/18 19:58:26 flameeyes Exp $
 
 inherit qt3 toolchain-funcs multilib eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://bouml.free.fr/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="$(qt_min_version 3)"
@@ -23,6 +23,8 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	sed -i -e '/^MAKE/d' "${S}/Makefile"
+
+	find "${S}" -name '*.pro' -print0 | xargs -0 sed -i -e '/CONFIG/s:qt:qt thread:g'
 }
 
 src_compile() {
@@ -35,8 +37,8 @@ src_compile() {
 		emake \
 			CC="$(tc-getCC) ${CFLAGS}" \
 			CXX="$(tc-getCXX) ${CXXFLAGS}" \
-			LINK="$(tc-getCXX)" \
-			LFLAGS="${LDFLAGS}" || die "emake failed"
+			LINK="$(tc-getCXX) ${LDFLAGS}" \
+			|| die "emake failed"
 		popd
 	done
 }
