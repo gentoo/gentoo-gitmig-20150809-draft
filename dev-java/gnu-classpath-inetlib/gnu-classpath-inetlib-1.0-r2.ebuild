@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.1 2006/09/18 01:44:13 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.2 2006/09/18 01:55:38 nichoj Exp $
 
-inherit java-pkg
+inherit java-pkg-2
 
 MY_PN="inetlib"
 MY_P="${MY_PN}-${PV}"

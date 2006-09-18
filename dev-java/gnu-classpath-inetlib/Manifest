@@ -4,10 +4,10 @@ EBUILD gnu-classpath-inetlib-1.0-r1.ebuild 1639 RMD160 367c95f54506f08b4063ff9ea
 MD5 c969ae28cf043c7f99fe3f546fef9fbd gnu-classpath-inetlib-1.0-r1.ebuild 1639
 RMD160 367c95f54506f08b4063ff9ea5fdadb4e49fa522 gnu-classpath-inetlib-1.0-r1.ebuild 1639
 SHA256 06ccd3aff1ba1584ff6f451b3ff59f4617a09bdd91bc41f57f7c8fb459d46927 gnu-classpath-inetlib-1.0-r1.ebuild 1639
-EBUILD gnu-classpath-inetlib-1.0-r2.ebuild 1651 RMD160 f6ea4416355b78608d006300d6bb7bc2de5d77d1 SHA1 cf121d77746be1ddbd32d817c902cce3e2899868 SHA256 f221109a8911a95d482fe87af399c03b90f1c4bfa4f697b406ddc760f756feb9
-MD5 210f6dad7f393ab0c5afc4ca3c68778c gnu-classpath-inetlib-1.0-r2.ebuild 1651
-RMD160 f6ea4416355b78608d006300d6bb7bc2de5d77d1 gnu-classpath-inetlib-1.0-r2.ebuild 1651
-SHA256 f221109a8911a95d482fe87af399c03b90f1c4bfa4f697b406ddc760f756feb9 gnu-classpath-inetlib-1.0-r2.ebuild 1651
+EBUILD gnu-classpath-inetlib-1.0-r2.ebuild 1653 RMD160 eb727654863b487708594d1c951136bb76664efd SHA1 38d70f1c24dcc29eb5fb597a9d828c0de0f4f22a SHA256 49ce217ccd66601260c92529a5b4449c9999905a28035962dceb980eb67be3a9
+MD5 17acf685fddcebb073c390be42257043 gnu-classpath-inetlib-1.0-r2.ebuild 1653
+RMD160 eb727654863b487708594d1c951136bb76664efd gnu-classpath-inetlib-1.0-r2.ebuild 1653
+SHA256 49ce217ccd66601260c92529a5b4449c9999905a28035962dceb980eb67be3a9 gnu-classpath-inetlib-1.0-r2.ebuild 1653
 EBUILD gnu-classpath-inetlib-1.1-r1.ebuild 1278 RMD160 df35adeba7403973021ba6607e3133e5c0f1de8c SHA1 348f47f54280bd5099222df5d5e0295c0c636a4a SHA256 02b0f6ddafa23658b53aca97d1586f60ac6c9bf5057795394562b7ab9098e110
 MD5 d391dba35f7f6f70683b40b62d0cee05 gnu-classpath-inetlib-1.1-r1.ebuild 1278
 RMD160 df35adeba7403973021ba6607e3133e5c0f1de8c gnu-classpath-inetlib-1.1-r1.ebuild 1278
