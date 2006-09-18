@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.10 2006/09/17 06:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.11 2006/09/18 09:39:54 vapier Exp $
 #
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -72,7 +72,7 @@ linux)
 		arm*)         machine="generic32 -DL_ENDIAN";;
 	#	hppa64*)      machine=parisc64;;
 		hppa*)        machine=parisc;;
-		i[0-9]86*)    machine=elf;;
+		i[0-9]86*)    machine=generic32;;
 		ia64*)        machine=ia64;;
 		m68*)         machine="generic32 -DB_ENDIAN";;
 		mips*el*)     machine="generic32 -DL_ENDIAN";;

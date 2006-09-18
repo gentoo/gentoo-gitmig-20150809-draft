@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8c-r1.ebuild,v 1.1 2006/09/16 21:41:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8c-r1.ebuild,v 1.2 2006/09/18 09:39:54 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -74,7 +74,8 @@ src_compile() {
 		confopts="enable-idea enable-rc5 enable-mdc2 enable-ec"
 	fi
 	use zlib && confopts="${confopts} zlib-dynamic"
-	#use sse2 || confopts="${confopts} no-sse2"
+	#use sse2 ||
+	confopts="${confopts} no-sse2"
 
 	local sslout=$(./gentoo.config)
 	einfo "Use configuration ${sslout:-(openssl knows best)}"
