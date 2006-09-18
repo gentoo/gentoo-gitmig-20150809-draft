@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.75 2006/09/17 14:41:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.76 2006/09/18 15:53:16 foser Exp $
+
+*fontconfig-2.3.2-r2 (18 Sep 2006)
+
+  18 Sep 2006; Marinus Schraal <foser@gentoo.org> fontconfig-2.3.2-r2.ebuild,
+  fontconfig-2.3.2-noftinternals.patch :
+  Don't break on freetype 2.2 (#140359)
 
 *fontconfig-2.4.1 (17 Sep 2006)
 
