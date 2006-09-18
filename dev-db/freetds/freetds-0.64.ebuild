@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.64.ebuild,v 1.1 2006/07/23 19:29:27 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/freetds-0.64.ebuild,v 1.2 2006/09/18 15:55:35 steev Exp $
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 DESCRIPTION="Tabular Datastream Library."
 HOMEPAGE="http://www.freetds.org/"
 SRC_URI="http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/${P}.tar.gz"
