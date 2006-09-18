@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.6 2006/09/10 17:59:56 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20060608.ebuild,v 1.7 2006/09/18 17:45:28 josejx Exp $
 
 inherit eutils x11 linux-mod
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ~alpha ~ia64 ~ppc ~amd64"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc x86"
 
 DEPEND=">=sys-devel/automake-1.7
 	>=sys-devel/autoconf-2.59
