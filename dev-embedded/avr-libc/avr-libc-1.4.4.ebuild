@@ -1,20 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.4.ebuild,v 1.4 2006/07/04 17:03:09 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.4.ebuild,v 1.5 2006/09/18 08:11:13 vapier Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="C library for Atmel AVR microcontrollers"
 HOMEPAGE="http://www.nongnu.org/avr-libc/"
 SRC_URI="http://savannah.nongnu.org/download/avr-libc/${P}.tar.bz2
-		http://savannah.nongnu.org/download/avr-libc/${PN}-manpages-${PV}.tar.bz2
-		doc? ( http://savannah.nongnu.org/download/avr-libc/${PN}-user-manual-${PV}.tar.bz2 )"
+	http://savannah.nongnu.org/download/avr-libc/${PN}-manpages-${PV}.tar.bz2
+	doc? ( http://savannah.nongnu.org/download/avr-libc/${PN}-user-manual-${PV}.tar.bz2 )"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 x86"
-
 IUSE="doc nls"
+
 DEPEND=">=sys-devel/crossdev-0.9.1"
 [[ ${CATEGORY/cross-} != ${CATEGORY} ]] \
 	&& RDEPEND="!dev-embedded/avr-libc" \
@@ -45,7 +45,10 @@ src_compile() {
 	mkdir obj-avr
 	cd "${S}"/obj-avr
 
-	ECONF_SOURCE="${S}" CHOST="avr" CTARGET="avr" econf \
+	ECONF_SOURCE="${S}" \
+	CHOST="avr" \
+	CTARGET="avr" \
+	econf \
 		$(use_enable nls) \
 		|| die "econf failed"
 
