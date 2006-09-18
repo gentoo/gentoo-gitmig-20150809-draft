@@ -1,7 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86-uclibc/virtuals,v 1.2 2005/10/04 15:41:59 spb Exp $
-
-virtual/bootloader	sys-boot/grub
-virtual/libc		sys-libs/uclibc
-virtual/linux-sources	sys-kernel/hardened-sources

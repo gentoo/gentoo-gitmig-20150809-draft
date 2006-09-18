@@ -1,7 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/hardened/make.defaults,v 1.3 2005/04/18 19:46:38 solar Exp $
-
-USE="dlloader hardened pic"
-STAGE1_USE="hardened pic"
-GRP_STAGE23_USE="hardened pic"

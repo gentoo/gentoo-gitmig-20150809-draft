@@ -1,8 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/use.mask,v 1.8 2006/07/19 18:21:49 vapier Exp $
-
--win32codecs
-
--nvidia
--real

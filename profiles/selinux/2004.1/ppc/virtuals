@@ -1,6 +1,0 @@
-# Copyright 1999-2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/virtuals,v 1.7 2005/10/04 15:41:59 spb Exp $
-
-virtual/bootloader	sys-boot/yaboot
-virtual/linux-sources	sys-kernel/vanilla-sources
