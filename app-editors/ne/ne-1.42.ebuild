@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.42.ebuild,v 1.3 2006/09/17 16:31:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.42.ebuild,v 1.4 2006/09/18 00:19:27 ranger Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc-macos ~ppc64 ~x86"
+KEYWORDS="amd64 ppc ~ppc-macos ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2"
