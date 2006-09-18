@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.42.ebuild,v 1.5 2006/09/18 16:58:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.42.ebuild,v 1.6 2006/09/18 21:26:10 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -18,6 +18,11 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 PROVIDE="virtual/editor"
+
+src_unpack() {
+	unpack ${A}
+	sed -i s/-O3// "${S}"/src/makefile
+}
 
 src_compile() {
 	emake -j1 -C src ne OPTS="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"
