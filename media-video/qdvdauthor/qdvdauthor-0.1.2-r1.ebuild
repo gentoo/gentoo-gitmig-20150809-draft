@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.1.2-r1.ebuild,v 1.2 2006/09/15 14:04:27 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-0.1.2-r1.ebuild,v 1.3 2006/09/18 21:15:11 sbriesen Exp $
 
-inherit eutils qt3
+inherit eutils flag-o-matic qt3
 
 DESCRIPTION="'Q' DVD-Author is a GUI frontend for dvdauthor written in Qt"
 HOMEPAGE="http://qdvdauthor.sourceforge.net/"
@@ -32,6 +32,9 @@ DEPEND=">=media-video/dvdauthor-0.6.11
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# do not over-optimize (see #147250)
+	replace-flags -O? -O2
 
 	# set our C(XX)FLAGS
 	for PRO in qdvdauthor/*.pro qdvdauthor/*/*.pro; do
