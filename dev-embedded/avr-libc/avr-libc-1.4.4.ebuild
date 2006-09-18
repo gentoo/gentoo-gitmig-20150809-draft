@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.4.ebuild,v 1.5 2006/09/18 08:11:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.4.4.ebuild,v 1.6 2006/09/18 08:21:05 vapier Exp $
+
+CHOST="avr"
+CTARGET="avr"
 
 inherit flag-o-matic
 
@@ -23,7 +26,7 @@ DEPEND=">=sys-devel/crossdev-0.9.1"
 pkg_setup() {
 	# check for avr-gcc, bug #134738
 	ebegin "Checking for avr-gcc"
-	if command -v avr-gcc > /dev/null 2>&1; then
+	if type -p avr-gcc > /dev/null ; then
 		eend 0
 	else
 		eend 1
@@ -37,8 +40,6 @@ pkg_setup() {
 }
 
 src_compile() {
-	export AS=avr-as AR=avr-ar RANLIB=avr-ranlib CC=avr-gcc ABI=retarded
-
 	strip-flags
 	strip-unsupported-flags
 
@@ -46,8 +47,6 @@ src_compile() {
 	cd "${S}"/obj-avr
 
 	ECONF_SOURCE="${S}" \
-	CHOST="avr" \
-	CTARGET="avr" \
 	econf \
 		$(use_enable nls) \
 		|| die "econf failed"
