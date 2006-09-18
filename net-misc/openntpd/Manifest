@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 3.6.1_p1-ntpd.8.patch 664 RMD160 98de0f67ddbbee68b73326c5abc81f18588652b9 SHA1 e22bbf43812760e4ba1fb5c044f1a390148826ce SHA256 8fdfc228c1d3955cbb7451ac3edb7978eafb7f08a6dcc1fd6887d25c69c0c3ee
 MD5 71e8d0be6ce1e3324576b9ddce02c74e files/3.6.1_p1-ntpd.8.patch 664
 RMD160 98de0f67ddbbee68b73326c5abc81f18588652b9 files/3.6.1_p1-ntpd.8.patch 664
@@ -6,10 +9,10 @@ AUX 3.6.1_p1-pollerr.patch 1218 RMD160 08ac74e0b22ae1174fdd8030c52c9ec20bf4b23c 
 MD5 8ff46ca71725c4c9ccbdaed5ecbd8ea3 files/3.6.1_p1-pollerr.patch 1218
 RMD160 08ac74e0b22ae1174fdd8030c52c9ec20bf4b23c files/3.6.1_p1-pollerr.patch 1218
 SHA256 0c4daaeb700665a8ee7479145e5812ac4d0c7dd440a7a7c493d5473d1f9ae191 files/3.6.1_p1-pollerr.patch 1218
-AUX openntpd.conf.d 257 RMD160 4c38cd2071729c2a28cc8232b532cb7f8c20026b SHA1 75b2b96bbba5fde7444de7262250e2579b94e2fd SHA256 c461d78609c57306cc6e25dc5dfb1e245e9d403f669416e48544aaedd056830d
-MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
-RMD160 4c38cd2071729c2a28cc8232b532cb7f8c20026b files/openntpd.conf.d 257
-SHA256 c461d78609c57306cc6e25dc5dfb1e245e9d403f669416e48544aaedd056830d files/openntpd.conf.d 257
+AUX openntpd.conf.d 181 RMD160 0cacb7e31ec0c04c99e9ba01dd82d0ec26b56b8f SHA1 dbf1ed92e8606bd95e579f77235f4d8b249a7081 SHA256 a1cb9dc8fbbaf6f439d6547bce9d59e86e7e13855b037d33bad1f789fb7050f3
+MD5 e3eee9eb2ea092dfdf9d887cd6df5795 files/openntpd.conf.d 181
+RMD160 0cacb7e31ec0c04c99e9ba01dd82d0ec26b56b8f files/openntpd.conf.d 181
+SHA256 a1cb9dc8fbbaf6f439d6547bce9d59e86e7e13855b037d33bad1f789fb7050f3 files/openntpd.conf.d 181
 AUX openntpd.rc 918 RMD160 de933d6a855d3772c9420d24d4a95f79b54d02c2 SHA1 9a681a971839dcd503a0f82a7fb2ac1bd220de72 SHA256 4b0fe843b56ee1eb9d62344d6d951bee1a42c9ec871863f50eb859a69b5c507d
 MD5 31c9feba04713eebbe16cd1979fca83d files/openntpd.rc 918
 RMD160 de933d6a855d3772c9420d24d4a95f79b54d02c2 files/openntpd.rc 918
@@ -46,3 +49,10 @@ SHA256 581f4588e719f1cac98f775bc39b9d88d3cceab2548a412d65321a9055a49f8c files/di
 MD5 dd4ff15ab44746657cf96ce93731444a files/digest-openntpd-3.9_p1 244
 RMD160 5e1b202b3dd29bf7b4bbbd1360ef53d8e708447d files/digest-openntpd-3.9_p1 244
 SHA256 526cc23ea22b696d49f30d7381c12c5c635d1b5646c80237a81cccae72d59a1e files/digest-openntpd-3.9_p1 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFDsw6amhnQswr0vIRArN4AKC+b4JN4Iex4eIXfp2mpGSdHO4CTwCeNHvx
+hy1okVX//DyNtfpIcMG2+mM=
+=8DsX
+-----END PGP SIGNATURE-----

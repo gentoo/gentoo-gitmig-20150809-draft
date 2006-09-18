@@ -1,7 +1,7 @@
-# Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/files/openntpd.conf.d,v 1.2 2004/11/22 15:27:51 vapier Exp $
+# /etc/conf.d/ntpd: config file for openntpd's ntpd
 
 NTPD_HOME=/var/empty
 
+# See ntpd(8) man page ... some popular options:
+#  -s   Set the time immediately at startup
 NTPD_OPTS=""
