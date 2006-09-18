@@ -4,3 +4,4 @@ dev-libs/confuse test
 dev-util/git gtk
 net-irc/rbot spell
 x11-misc/xscreensaver new-login
+app-text/crm114 mew mimencode test
