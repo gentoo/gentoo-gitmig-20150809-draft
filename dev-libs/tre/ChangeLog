@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/tre
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.17 2006/09/16 14:22:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tre/ChangeLog,v 1.18 2006/09/18 18:05:50 steev Exp $
+
+*tre-0.7.4 (18 Sep 2006)
+
+  18 Sep 2006; Steev Klimaszewski <steev@gentoo.org> +tre-0.7.4.ebuild:
+  Version bump, and add ~x86-fbsd keyword.  Kloeri said I could.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> tre-0.7.2.ebuild:
   ppc stable
