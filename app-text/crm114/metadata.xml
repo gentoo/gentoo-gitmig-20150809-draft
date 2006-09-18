@@ -3,9 +3,9 @@
 <pkgmetadata>
 <herd>shell-tools</herd>
 <maintainer>
-  <email>seemant@gentoo.org</email>
-  <name>Seemant Kulleen</name>
-  <description>Temporary Maintainer</description>
+  <email>steev@gentoo.org</email>
+  <name>Steev Klimaszewski</name>
+  <description>Maintainer</description>
 </maintainer>
 <maintainer>
   <email>pacopablo@pacopablo.com</email>
