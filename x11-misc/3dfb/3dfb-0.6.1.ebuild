@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/3dfb-0.6.1.ebuild,v 1.5 2005/10/06 21:53:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3dfb/3dfb-0.6.1.ebuild,v 1.6 2006/09/18 21:37:47 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="3D File Browser"
 HOMEPAGE="http://sourceforge.net/projects/dz3d/"
@@ -16,6 +18,13 @@ RDEPEND=">=dev-libs/glib-2
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/0.6.1-gcc41.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
