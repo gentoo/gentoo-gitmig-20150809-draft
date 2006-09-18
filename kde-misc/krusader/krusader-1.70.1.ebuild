@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.6 2006/08/01 09:07:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.7 2006/09/18 16:08:26 carlo Exp $
 
 inherit kde
 
@@ -19,7 +19,7 @@ IUSE="javascript kde"
 
 DEPEND="kde? ( || ( ( kde-base/libkonq kde-base/kdebase-kioslaves )
 			kde-base/kdebase ) )
-	javascript? ( kde-base/kjsembed )"
+	!sparc? ( javascript? ( kde-base/kjsembed ) )"
 need-kde 3.4
 
 pkg_postinst() {
