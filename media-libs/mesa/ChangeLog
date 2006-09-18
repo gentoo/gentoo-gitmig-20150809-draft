@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.111 2006/09/17 07:49:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.112 2006/09/18 05:39:16 dberkholz Exp $
+
+  18 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5.1.ebuild:
+  Add in a sed of libdir in libGL.la from 6.5-r4 to avoid breaking things in a
+  big way.
 
   17 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.5.1.ebuild:
   (#147872) Require libdrm 2.0.2. At least the r200 driver needs it, maybe more.
