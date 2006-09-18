@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.10 2006/09/12 21:02:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.11 2006/09/18 16:06:06 mr_bones_ Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -76,9 +76,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/libsdl-1.2.10-libcaca.patch #40224
-	epatch "${FILESDIR}"/libsdl-1.2.10-sdl-config.patch
-	epatch "${FILESDIR}"/libsdl-1.2.11-xinerama-head-0.patch #145917
+	epatch "${FILESDIR}"/${P}-libcaca.patch #40224
+	epatch "${FILESDIR}"/${P}-sdl-config.patch
+	epatch "${FILESDIR}"/${P}-xinerama-head-0.patch #145917
 
 	# add yasm-compatible defines to nasm code (hopefully we
 	# can get this killed soonish)
@@ -90,6 +90,13 @@ src_unpack() {
 		%endif
 		EOF
 	done
+
+	# yasm does not understand -i
+	# bug #147201
+	sed -i \
+		-e 's:NASMFLAGS -i/:NASMFLAGS -I/:' \
+		configure.in \
+		|| die "sed failed"
 
 	./autogen.sh || die "autogen failed"
 	elibtoolize
