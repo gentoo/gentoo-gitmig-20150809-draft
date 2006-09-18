@@ -1,6 +1,13 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.24 2006/09/16 14:22:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.25 2006/09/18 18:23:30 steev Exp $
+
+*crm114-20060704a (18 Sep 2006)
+
+  18 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
+  +crm114-20060704a.ebuild:
+  Version bump, seemant said I could.  Also add ~x86-fbsd keyword, and closes bug
+  #146762, Thanks to Wolfram Schlich <wschlich@gentoo.org> for reporting.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   crm114-20041231.ebuild:
