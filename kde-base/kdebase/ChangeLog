@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.308 2006/09/17 22:52:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.309 2006/09/18 01:36:10 carlo Exp $
+
+*kdebase-3.5.4-r1 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org> +kdebase-3.5.4-r1.ebuild:
+  Disable broken tests. Fix several crash conditions and some mem leaks.
+  Increase session timeout on shutdown. Make bold fonts work again within
+  Konsole. Do not call artsshell, when it isn't installed. Fix bug #146648.
+  Several Kicker patches from the 3.5 branch. This fixes the KDE bugs #59630,
+  #78660, #106648, #122425, #123869, #124116, 128552, #130100, #131770,
+  #132639, #133665 among others.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdebase-3.4.3-r1.ebuild,
   -kdebase-3.4.3-r2.ebuild:
