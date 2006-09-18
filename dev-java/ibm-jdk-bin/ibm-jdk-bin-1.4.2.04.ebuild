@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.6 2006/09/17 11:01:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.04.ebuild,v 1.7 2006/09/18 18:45:15 caster Exp $
 
 inherit java eutils
 
@@ -36,17 +36,16 @@ HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
 # bug #125178
 ALT_HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/linux/older_download.html"
 SRC_URI="x86? ( IBMJava2-SDK-142-SR4.tgz )
-		 amd64? ( IBMJava2-SDK-AMD64-142.x86_64-SR4.tgz )
-		 ppc? ( IBMJava2-SDK-142.ppc-SR4.tgz )
-		 ppc64? ( IBMJava2-SDK-142.ppc64-SR4.tgz )
-		 s390? ( IBMJava2-SDK-142.s390.tgz )
-		 javacomm? (
-		 			x86? ( IBMJava2-JAVACOMM-142-SR4.tgz )
-					amd64? ( IBMJava2-JAVACOMM-AMD64-142.x86_64-SR4.tgz )
-					ppc? ( IBMJava2-JAVACOMM-142.ppc-SR4.tgz )
-					ppc64? ( IBMJava2-JAVACOMM-142.ppc64-SR4.tgz )
-		 		   )"
-#					s390? ( IBMJava2-JAVACOMM-142.s390-SR4.tgz )
+		amd64? ( IBMJava2-SDK-AMD64-142.x86_64-SR4.tgz )
+		ppc? ( IBMJava2-SDK-142.ppc-SR4.tgz )
+		ppc64? ( IBMJava2-SDK-142.ppc64-SR4.tgz )
+		s390? ( IBMJava2-SDK-142.s390.tgz )
+		javacomm? (
+			x86? ( IBMJava2-JAVACOMM-142-SR4.tgz )
+			amd64? ( IBMJava2-JAVACOMM-AMD64-142.x86_64-SR4.tgz )
+			ppc? ( IBMJava2-JAVACOMM-142.ppc-SR4.tgz )
+			ppc64? ( IBMJava2-JAVACOMM-142.ppc64-SR4.tgz )
+		)"
 
 LICENSE="IBM-J1.4"
 SLOT="1.4"

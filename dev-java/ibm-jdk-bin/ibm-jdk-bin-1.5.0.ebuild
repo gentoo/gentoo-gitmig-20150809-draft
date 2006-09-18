@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.10 2006/09/17 11:05:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.ebuild,v 1.11 2006/09/18 18:45:15 caster Exp $
 
 inherit java eutils
 
@@ -16,14 +16,13 @@ SRC_URI="x86? ( ibm-java2-sdk-50-linux-i386.tgz )
 		amd64? ( ibm-java2-javacomm-50-linux-x86_64.tgz )
 		ppc? ( ibm-java2-javacomm-50-linux-ppc.tgz )
 		ppc64? ( ibm-java2-javacomm-50-linux-ppc64.tgz )
-		)"
-#		s390? ( ibm-java2-javacomm-50-linux-s390.tgz )
+	)"
 
 LICENSE="IBM-J1.5"
 SLOT="1.5"
 KEYWORDS="-* ~s390"
 RESTRICT="fetch"
-IUSE="X alsa javacomm browserplugin mozilla"
+IUSE="X alsa javacomm nsplugin"
 
 RDEPEND="
 		X? ( || (
@@ -86,7 +85,7 @@ src_install() {
 	#	doins ${FILESDIR}/cpuinfo
 	#fi
 
-	if ( use browserplugin || use mozilla ) && ! use amd64 && ! use ppc64; then
+	if use nsplugin && ! use amd64 && ! use ppc64; then
 		local plugin
 		if use x86; then
 			plugin="libjavaplugin_ojigtk2.so"
@@ -114,10 +113,4 @@ pkg_postinst() {
 		ewarn "Some parts of IBM JDK require XFree86 to be installed."
 		ewarn "Be careful which Java libraries you attempt to use."
 	fi
-	if ! use browserplugin && use mozilla; then
-		ewarn
-		ewarn "The 'mozilla' useflag to enable the java browser plugin for applets"
-		ewarn "has been renamed to 'browserplugin' please update your USE"
-	fi
-
 }
