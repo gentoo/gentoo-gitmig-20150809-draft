@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.221 2006/09/17 22:53:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.222 2006/09/18 15:22:56 carlo Exp $
+
+*kdepim-3.5.4-r2 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org> +kdepim-3.5.4-r2.ebuild:
+  Several KMail crash fixes from the KDE 3.5 branch, including the one for bug
+  #147986. Fix a crash condition, timezone detection and minor issues within
+  KOrganizer. Readd Qt designer fix, this time as sed statement.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdepim-3.4.3.ebuild:
   Drop KDE 3.4.
