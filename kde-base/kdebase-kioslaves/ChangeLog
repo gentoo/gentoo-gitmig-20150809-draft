@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.65 2006/09/17 22:53:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.66 2006/09/18 01:22:53 carlo Exp $
+
+*kdebase-kioslaves-3.5.4-r1 (18 Sep 2006)
+
+  18 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
+  +kdebase-kioslaves-3.5.4-r1.ebuild:
+  Disable broken tests. Fix KDE bug #106648 and a few minor issues. Fix bug
+  #146648.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
   -kdebase-kioslaves-3.4.3.ebuild:
