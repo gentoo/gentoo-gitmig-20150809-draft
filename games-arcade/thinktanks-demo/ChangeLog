@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/thinktanks-demo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.3 2006/06/10 15:55:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.4 2006/09/19 18:58:30 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  thinktanks-demo-1.1.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   thinktanks-demo-1.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.3 2006/07/29 08:03:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/marbleblastgold-demo/marbleblastgold-demo-1.4.1.ebuild,v 1.4 2006/09/19 18:57:20 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://ggdev-1.homelan.com/marbleblastgold/MarbleBlastGoldDemo-${PV}.sh.
 LICENSE="MARBLEBLAST"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="sys-libs/glibc"

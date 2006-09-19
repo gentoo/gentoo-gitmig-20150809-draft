@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/tuxracer-demo-1.1.ebuild,v 1.8 2006/01/29 00:00:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer-demo/tuxracer-demo-1.1.ebuild,v 1.9 2006/09/19 18:59:20 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,7 +11,7 @@ SRC_URI="tuxracer-demo-${PV}-linux-i386.sh"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* x86"
-RESTRICT="fetch"
+RESTRICT="fetch strip"
 IUSE=""
 
 DEPEND="virtual/opengl
