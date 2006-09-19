@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.13 2006/08/12 14:20:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.14 2006/09/19 09:14:58 strerror Exp $
+
+*fail2ban-0.7.2 (19 Sep 2006)
+
+  19 Sep 2006; Benjamin Smee <strerror@gentoo.org> +fail2ban-0.7.2.ebuild:
+  Version bump. Thanks to Cyril Jaquier
 
   12 Aug 2006; Markus Rothe <corsair@gentoo.org> fail2ban-0.6.1-r1.ebuild:
   Added ~ppc64; bug #142828
