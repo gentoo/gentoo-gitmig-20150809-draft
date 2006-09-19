@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.4 2006/05/24 15:37:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.5 2006/09/19 19:51:22 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,6 +12,7 @@ SRC_URI="ftp://ggdev-1.homelan.com/bcs/bcsdemo_v${PV/./_}.sh.bin
 LICENSE="BCS"
 SLOT="0"
 KEYWORDS="-* x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="sys-libs/glibc

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.88.6.3.ebuild,v 1.1 2006/05/25 01:59:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.88.6.3.ebuild,v 1.2 2006/09/19 19:52:10 wolf31o2 Exp $
 
 inherit games
 
@@ -14,6 +14,7 @@ SRC_URI="http://64.simutrans.com/simulinux-88-06-3.zip
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
+RESTRICT="strip"
 IUSE=""
 
 DEPEND="app-arch/unzip"

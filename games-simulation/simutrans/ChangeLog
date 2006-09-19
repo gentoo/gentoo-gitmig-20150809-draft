@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/simutrans
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.16 2006/05/25 01:59:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/ChangeLog,v 1.17 2006/09/19 19:52:10 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  simutrans-0.84.16.4.ebuild, simutrans-0.88.6.3.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
 *simutrans-0.88.6.3 (25 May 2006)
 
