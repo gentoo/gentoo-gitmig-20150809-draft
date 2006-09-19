@@ -1,0 +1,4 @@
+# Mask gcc-4.x and glibc-2.4 until they are ready
+>=sys-devel/gcc-4.0.0
+>=sys-libs/glibc-2.4
+>=sys-kernel/linux-headers-2.6.17
