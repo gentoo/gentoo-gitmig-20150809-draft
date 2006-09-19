@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 2.6.11-ppc64-32ul-spinlock.patch 510 RMD160 1a8a5a7c96049c7cac243022143fd7f20d678495 SHA1 06821a65583ad90711368c957c6522a27865febd SHA256 ffb32af7a072d8e6c87b73eb525744da2442d472ca0f26af4e3f4468074453e3
 MD5 e32b5df37d1bd1fde32f19276f8bc5e2 files/2.6.11-ppc64-32ul-spinlock.patch 510
 RMD160 1a8a5a7c96049c7cac243022143fd7f20d678495 files/2.6.11-ppc64-32ul-spinlock.patch 510
@@ -93,10 +96,10 @@ EBUILD linux-headers-2.6.16.ebuild 1464 RMD160 088fb3e602694a15b4e94f6b308cfe384
 MD5 f71bb64f581d23c7e800fafb273a326e linux-headers-2.6.16.ebuild 1464
 RMD160 088fb3e602694a15b4e94f6b308cfe3845e7256f linux-headers-2.6.16.ebuild 1464
 SHA256 c353635dab250e748037081ef4808d1fc725c74710e40be080b3ea4541dc8602 linux-headers-2.6.16.ebuild 1464
-EBUILD linux-headers-2.6.17-r1.ebuild 1240 RMD160 9384673550617c5ac52f5f0f7046ca7edcb49c96 SHA1 0154ea115c27a32425673e256ce5d8a54e984b3e SHA256 be4451a77b78d115db8cfb5cfdbf8b91cb730613cef157554019022a64131a3a
-MD5 723edf6e6fdc049fb0e18381ee08b0a2 linux-headers-2.6.17-r1.ebuild 1240
-RMD160 9384673550617c5ac52f5f0f7046ca7edcb49c96 linux-headers-2.6.17-r1.ebuild 1240
-SHA256 be4451a77b78d115db8cfb5cfdbf8b91cb730613cef157554019022a64131a3a linux-headers-2.6.17-r1.ebuild 1240
+EBUILD linux-headers-2.6.17-r1.ebuild 1263 RMD160 c098bf5e4009a8cf0931f18b825a3620bdb752d7 SHA1 f196de6a237e14e05dda2eeeae5456195b6c640e SHA256 ed35afc99cbeee045cfd1efcd298241542d46489c86779c94adf3a30f0658d28
+MD5 5dc1c6a005baba20006a673b9cef7860 linux-headers-2.6.17-r1.ebuild 1263
+RMD160 c098bf5e4009a8cf0931f18b825a3620bdb752d7 linux-headers-2.6.17-r1.ebuild 1263
+SHA256 ed35afc99cbeee045cfd1efcd298241542d46489c86779c94adf3a30f0658d28 linux-headers-2.6.17-r1.ebuild 1263
 EBUILD linux-headers-2.6.17.ebuild 1254 RMD160 92eaef5e14b043d15b85516fb5f949a9cd6cb101 SHA1 ec1f1c7ff6bacf3ded48af4dcfc3b3c45b3b98c2 SHA256 e62d7251b24f079c55b57a906dbfffebafa299b0b00e8fa6b54d603e2d2024d9
 MD5 e355896206b0161ed689909195689b2e linux-headers-2.6.17.ebuild 1254
 RMD160 92eaef5e14b043d15b85516fb5f949a9cd6cb101 linux-headers-2.6.17.ebuild 1254
@@ -152,3 +155,10 @@ SHA256 dec9eef2a2919882c8f511f4a6c65fca65f36ed83b51bf05172bcb72dd4ed6fa files/di
 MD5 74e4ec85fb16587c38c2fdbe54231e5e files/digest-linux-headers-2.6.8.1-r4 804
 RMD160 9c508c51fbd2128c59d43e481f4807a70d5fc408 files/digest-linux-headers-2.6.8.1-r4 804
 SHA256 825299e026cccf262682b6311a9bb9897b10eff11aecae00a5ce6ea88bb8849a files/digest-linux-headers-2.6.8.1-r4 804
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFD4hwamhnQswr0vIRAkdnAJ4jq1sWw3SjzrewBrudsJuQWNVw5wCfXC/L
+R5glZCSHaeCWaFLLWemfxlg=
+=M/xj
+-----END PGP SIGNATURE-----
