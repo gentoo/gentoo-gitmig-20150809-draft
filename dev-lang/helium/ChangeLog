@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/helium
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.15 2005/07/24 22:41:49 dcoutts Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/ChangeLog,v 1.16 2006/09/19 23:41:57 dcoutts Exp $
+
+  19 Sep 2006; Duncan Coutts <dcoutts@gentoo.org> helium-1.1.ebuild,
+  helium-1.2-r1.ebuild:
+  Block on ghc-6.4 rather than forcing a downgrade.
 
   24 Jul 2005; <duncan@gentoo.org> helium-1.1.ebuild, helium-1.2-r1.ebuild:
   Change the ghc dependency to a form that portage can cope with better.
