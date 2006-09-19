@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/jdbc-jaybird
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.1 2006/09/19 03:20:26 wltjr Exp $
+
+  19 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
+  ChangeLog Initial ebuilds for Jaybird JDBC driver for Firebird SQL databases
+  which will replace the existing jdbc(2-3)-firebird ebuilds.
+
