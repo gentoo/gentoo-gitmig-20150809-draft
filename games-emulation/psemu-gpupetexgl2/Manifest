@@ -1,6 +1,36 @@
-MD5 a54a05201b0910748c2c08ab150b08f7 ChangeLog 817
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST gpupetexgl205-r2.tar.gz 181381
+DIST gpupetexgl206.tar.gz 187626
+DIST pete_ogl2_shader_scale2x.zip 3072
+DIST pete_ogl2_shader_simpleblur.zip 1032
+EBUILD psemu-gpupetexgl2-2.0.5-r2.ebuild 1104 RMD160 b816df73a92c47ed50f741e27611fb72fe288b9d SHA1 06d6f594811ba353fc842a8fbafdf15e08af27ff SHA256 57400f66d501657b7d4dfb5e581f26f2e4d6e0b0bec45149d5e4b9779a07b0a3
+MD5 464fd06928e9cd7d8e14eceb246fcf5a psemu-gpupetexgl2-2.0.5-r2.ebuild 1104
+RMD160 b816df73a92c47ed50f741e27611fb72fe288b9d psemu-gpupetexgl2-2.0.5-r2.ebuild 1104
+SHA256 57400f66d501657b7d4dfb5e581f26f2e4d6e0b0bec45149d5e4b9779a07b0a3 psemu-gpupetexgl2-2.0.5-r2.ebuild 1104
+EBUILD psemu-gpupetexgl2-2.0.6.ebuild 1047 RMD160 e3e692c41c8617826ba246f1d12b93150a969a6d SHA1 a47ce175908e6875f77017231c24da6ab0c549f3 SHA256 2e394425daca9f209066df812098b28e41167f8ba4ccce93aa8273e95897884d
+MD5 efcf1e050519bad47b6765e8e08e889f psemu-gpupetexgl2-2.0.6.ebuild 1047
+RMD160 e3e692c41c8617826ba246f1d12b93150a969a6d psemu-gpupetexgl2-2.0.6.ebuild 1047
+SHA256 2e394425daca9f209066df812098b28e41167f8ba4ccce93aa8273e95897884d psemu-gpupetexgl2-2.0.6.ebuild 1047
+MISC ChangeLog 984 RMD160 60fe650cb154077c76808617bed37e5872e69c44 SHA1 b4ef4b0b0783f91419221e44b93662bf0aea789c SHA256 d22da4a82a01268f8d5f4715be3547c76ebedb7cfc624061320785456dda0c33
+MD5 1ebcfb14c43a706463d7a8282d518158 ChangeLog 984
+RMD160 60fe650cb154077c76808617bed37e5872e69c44 ChangeLog 984
+SHA256 d22da4a82a01268f8d5f4715be3547c76ebedb7cfc624061320785456dda0c33 ChangeLog 984
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3b0dd39a49336abc92a04b5266bf1be2 psemu-gpupetexgl2-2.0.5-r2.ebuild 1088
-MD5 008de2089b57e90e835bf54db5ff4fdf psemu-gpupetexgl2-2.0.6.ebuild 1031
-MD5 dcae2ca24764feb3dad82b0c8a04a63a files/digest-psemu-gpupetexgl2-2.0.6 210
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 69a07a880a5feaf74d068eef433ca1f4 files/digest-psemu-gpupetexgl2-2.0.5-r2 213
+RMD160 7863e6e8d12ca55e4c110747f4cfbdc1e5686b36 files/digest-psemu-gpupetexgl2-2.0.5-r2 213
+SHA256 a2c38d191e7e3223a2743eeea63d1e198cc057989a8b7022da3eb72bff0b3db5 files/digest-psemu-gpupetexgl2-2.0.5-r2 213
+MD5 dcae2ca24764feb3dad82b0c8a04a63a files/digest-psemu-gpupetexgl2-2.0.6 210
+RMD160 2f404c161c1de82939b81064f0ee4b4ff37bfb53 files/digest-psemu-gpupetexgl2-2.0.6 210
+SHA256 f53338adbdfade8626883787ad54e540027e858649c9199327b1a2a403ff8360 files/digest-psemu-gpupetexgl2-2.0.6 210
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFEEHrkT4lNIS36YERAjqvAJoD+IAavVukpR+1aRdXBu8r4OMWYACgsv3T
+a+Uo3d33JFmFgmbMtXwTFJE=
+=5Zni
+-----END PGP SIGNATURE-----
