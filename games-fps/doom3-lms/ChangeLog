@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-lms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.5 2006/03/31 20:48:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.6 2006/09/19 15:41:51 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> -doom3-lms-2.0.ebuild,
+  doom3-lms-3.ebuild:
+  Stable on amd64/x86 and cleaning up older versions.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org> doom3-lms-3.ebuild:
   Changed nomirror to mirror and nostrip to strip.

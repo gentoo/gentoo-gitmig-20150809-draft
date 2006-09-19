@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/doom3-lms-3.ebuild,v 1.2 2006/03/31 20:48:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/doom3-lms-3.ebuild,v 1.3 2006/09/19 15:41:51 wolf31o2 Exp $
 
 inherit games
 
@@ -9,10 +9,9 @@ DESCRIPTION="Add co-op support and/or play against swarms of unending monsters"
 HOMEPAGE="http://lms.d3files.com/"
 SRC_URI="mirror://filefront/Doom_III/Hosted_Mods/Final_Releases/lms_${PV}_multiplatform.zip"
 
-# See /opt/doom3/lms3/docs/license.txt
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
 
