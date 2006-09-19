@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.28 2006/09/18 17:21:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.29 2006/09/19 13:13:15 gustavoz Exp $
+
+  19 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> nvi-1.81.5-r3.ebuild:
+  Stable on sparc wrt #147844
 
   18 Sep 2006; <ticho@gentoo.org> nvi-1.81.5-r3.ebuild:
   Stable on x86, bug #147844.
