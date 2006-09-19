@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/vendetta-online-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.4 2006/03/31 21:33:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-online-bin/ChangeLog,v 1.5 2006/09/19 19:49:32 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  vendetta-online-bin-1.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   vendetta-online-bin-1.ebuild:
