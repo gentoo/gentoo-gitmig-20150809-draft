@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/barbarian-bin
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.4 2005/10/21 11:14:41 blubb Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.5 2006/09/19 18:48:56 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  barbarian-bin-1.01.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
   21 Oct 2005; Simon Stelling <blubb@gentoo.org> barbarian-bin-1.01.ebuild:
   fix dependencies for amd64 and mark stable

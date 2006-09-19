@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.8 2006/04/13 19:55:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.9 2006/09/19 18:51:02 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://demos.garagegames.com/gish/gishdemo-${PV}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="media-libs/libsdl
