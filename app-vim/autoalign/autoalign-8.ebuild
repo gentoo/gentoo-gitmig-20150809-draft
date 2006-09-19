@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-8.ebuild,v 1.1 2006/02/11 03:08:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-8.ebuild,v 1.2 2006/09/19 13:42:04 pioto Exp $
 
 inherit vim-plugin
 
@@ -11,7 +11,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=app-vim/align-30
-	>=app-vim/cecutil-4"
+	>=app-vim/cecutil-4
+	!>=app-editors/vim-core-7"
 
 VIM_PLUGIN_HELPFILES="autoalign"
 VIM_PLUGIN_MESSAGES="filetype"
