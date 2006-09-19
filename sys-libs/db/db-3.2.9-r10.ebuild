@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.25 2006/08/31 11:47:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.26 2006/09/19 17:07:57 caster Exp $
 
 inherit gnuconfig libtool eutils db java-pkg
 
@@ -32,8 +32,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
-	use java && export JAVACABS=$(java-config --javac)
 
 	chmod -R ug+w *
 
@@ -71,6 +69,8 @@ src_compile() {
 	local conf=
 	local conf_shared=
 	local conf_static=
+
+	use java && export JAVACABS="${JAVAC}"
 
 	conf="${conf}
 		--host=${CHOST} \
