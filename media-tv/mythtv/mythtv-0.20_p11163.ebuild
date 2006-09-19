@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.7 2006/09/16 17:17:04 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11163.ebuild,v 1.8 2006/09/19 04:17:12 beandog Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec backendonly debug dbox2 dvb dvd frontendonly ieee1394 jack joystick lcd lirc mmx vorbis opengl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec backendonly crciprec debug dbox2 dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -39,9 +39,11 @@ RDEPEND=">=media-libs/freetype-2.0
 	$(qt_min_version 3.3)
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
+	dts? ( media-libs/libdts )
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
+	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
@@ -82,7 +84,7 @@ pkg_setup() {
 	if use xvmc && ! ( use video_cards_i810 || use video_cards_nvidia || use video_cards_via ); then
 		echo
 		eerror "You enabled the XvMC USE flag but did not configure VIDEO_CARDS with either"
-		eerror "a Nvidia, i810, or VIA video card."
+		eerror "an nVidia, Intel i810, or VIA video card."
 		echo
 		rip=1
 	fi
@@ -115,14 +117,20 @@ src_compile() {
 		--libdir-name=$(get_libdir)"
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use jack || myconf="${myconf} --disable-audio-jack"
+	use dts || myconf="${myconf} --disable-dts"
+	use ivtv || myconf="${myconf} --disable-ivtv"
+	use freebox || myconf="${myconf} --disable-freebox"
+	use dbox2 || myconf="${myconf} --disable-dbox2"
+	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
+	use crciprec || myconf="${myconf} --disable-crciprec"
 	use altivec || myconf="${myconf} --disable-altivec"
 	use xvmc && myconf="${myconf} --enable-xvmc"
 	use xvmc && use video_cards_via && myconf="${myconf} --enable-xvmc-pro"
+	use perl && myconf="${myconf} --with-bindings=perl"
 	myconf="${myconf}
 		--disable-audio-arts
 		$(use_enable lirc)
 		$(use_enable joystick joystick-menu)
-		$(use_enable dbox2)
 		$(use_enable dvb)
 		--dvb-path=/usr/include
 		$(use_enable opengl opengl-vsync)
@@ -201,7 +209,7 @@ src_compile() {
 src_install() {
 
 	einstall INSTALL_ROOT="${D}" || die "install failed"
-	for doc in AUTHORS COPYING FAQ UPGRADING ChangeLog README; do
+	for doc in AUTHORS FAQ UPGRADING ChangeLog README; do
 		test -e "${doc}" && dodoc ${doc}
 	done
 
