@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r4.ebuild,v 1.1 2006/09/19 16:01:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r4.ebuild,v 1.2 2006/09/19 16:24:23 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -94,12 +94,15 @@ pkg_nofetch() {
 src_compile() { true; }
 
 src_install() {
-	# The javaws execution script is 777 why?
-	chmod 0755 ${S}/jre/javaws/javaws
+	# javaws is on x86 only
+	if use x86; then
+		# The javaws execution script is 777 why?
+		chmod 0755 ${S}/jre/javaws/javaws
 
-	# bug #147259
-	dosym ../jre/javaws/javaws /opt/${P}/bin/javaws
-	dosym ../javaws/javaws /opt/${P}/jre/bin/javaws
+		# bug #147259
+		dosym ../jre/javaws/javaws /opt/${P}/bin/javaws
+		dosym ../javaws/javaws /opt/${P}/jre/bin/javaws
+	fi
 
 	# Copy all the files to the designated directory
 	mkdir -p ${D}opt/${P}
