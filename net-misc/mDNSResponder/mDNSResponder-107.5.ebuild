@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.5.ebuild,v 1.3 2006/04/13 13:18:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/mDNSResponder-107.5.ebuild,v 1.4 2006/09/19 17:47:27 flameeyes Exp $
 
 inherit eutils multilib base toolchain-funcs flag-o-matic
 
@@ -30,7 +30,7 @@ mdnsmake() {
 	einfo "Running emake " os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
 		STRIP="true" LOCALBASE="/usr" "$@"
-	emake os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
+	emake -j1 os="${os}" CC="$(tc-getCC)" LD="$(tc-getCC) -shared" \
 		${jdk} ${debug} OPT_CFLAGS="${CFLAGS}" LIBFLAGS="${LDFLAGS}" \
 		STRIP="true" LOCALBASE="/usr" "$@"
 }
@@ -65,7 +65,7 @@ src_install() {
 		objdir=debug
 	fi
 
-	make LOCALBASE="/usr" DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
+	emake -j1 LOCALBASE="/usr" DESTDIR="${D}" os=${os} ${debug} install || die "install failed"
 
 	dosbin ${S}/mDNSPosix/build/${objdir}/dnsextd
 	dosbin ${S}/mDNSPosix/build/${objdir}/mDNSResponderPosix
