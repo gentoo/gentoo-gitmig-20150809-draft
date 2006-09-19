@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6-r4.ebuild,v 1.7 2006/09/14 17:33:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.6-r4.ebuild,v 1.8 2006/09/19 19:52:52 voxus Exp $
 
 inherit eutils libtool autotools
 
@@ -90,7 +90,7 @@ src_unpack() {
 	sed -e "s:nsupdate ::g" -i ${S}/bin/Makefile.in
 
 	cd ${S}
-	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf || die "eautoreconf failed"
 }
 
 src_compile() {
