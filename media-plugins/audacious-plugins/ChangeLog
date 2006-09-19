@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.1 2006/09/18 21:18:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.2 2006/09/19 20:45:30 flameeyes Exp $
+
+*audacious-plugins-1.2.0-r1 (19 Sep 2006)
+
+  19 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  audacious-plugins-1.2.0.ebuild, +audacious-plugins-1.2.0-r1.ebuild:
+  Add new revision with pulseaudio useflag, disable pulseaudio from previous
+  ebuild.
 
 *audacious-plugins-1.2.0 (18 Sep 2006)
 
