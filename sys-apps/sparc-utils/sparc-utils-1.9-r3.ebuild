@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r3.ebuild,v 1.2 2006/04/11 23:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r3.ebuild,v 1.3 2006/09/19 02:00:32 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,6 +19,14 @@ RDEPEND="sys-apps/setarch"
 
 S=${WORKDIR}/${P}.orig
 
+# NOTE: If a system has >=sys-kernel/linux-headers-2.6.0, don't build audioctl
+#       as the SPARC sound drivers have been replaced by their ALSA equivalents
+
+pkg_setup() {
+	has_version '>=sys-kernel/linux-headers-2.6.0' && \
+		einfo "Linux 2.6 kernel headers detected, not building audioctl"
+}
+
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${PN}_${PV}-2.diff
@@ -28,7 +36,8 @@ src_compile() {
 	emake -C elftoaout-2.3 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 	emake -C src piggyback piggyback64 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 	emake -C prtconf-1.3 CC="$(tc-getCC)" all || die
-	emake -C audioctl-1.3 CC="$(tc-getCC)" || die
+	has_version '>=sys-kernel/linux-headers-2.6.0'  || \
+		emake -C audioctl-1.3 CC="$(tc-getCC)" || die
 }
 
 src_install() {
@@ -44,12 +53,13 @@ src_install() {
 	dosbin prtconf-1.3/prtconf || die
 	dosbin prtconf-1.3/eeprom || die
 
-	dobin audioctl-1.3/audioctl || die
+	if ! has_version '>=sys-kernel/linux-headers-2.6.0'; then
+		dobin audioctl-1.3/audioctl || die
+		newinitd "${FILESDIR}"/audioctl.init audioctl || die
+		newconfd debian/audioctl.def audioctl || die
+		doman audioctl-1.3/audioctl.1
+	fi
 
-	newinitd "${FILESDIR}"/audioctl.init audioctl || die
-	newconfd debian/audioctl.def audioctl || die
-
-	doman audioctl-1.3/audioctl.1
 	doman elftoaout-2.3/elftoaout.1
 	doman prtconf-1.3/prtconf.8
 	doman prtconf-1.3/eeprom.8
