@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2-r1.ebuild,v 1.9 2006/09/09 09:40:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.2-r1.ebuild,v 1.10 2006/09/19 13:05:31 caleb Exp $
 
 inherit eutils kde-functions multilib
 
@@ -101,7 +101,7 @@ src_compile() {
 	# Create the various plug-ins
 
 	# First, the Qt plug-in
-	if use qt3
+	if use qt3 || use kde
 	then
 		set-qtdir 3
 		set-kdedir 3
@@ -166,7 +166,7 @@ src_install() {
 	dodoc ChangeLog INSTALL README* doc/*
 
 	# Install the plug-ins
-	if use qt3
+	if use qt3 || use kde
 	then
 		cd ${S}/plugins/qt-gui
 		make DESTDIR=${D} install || die
