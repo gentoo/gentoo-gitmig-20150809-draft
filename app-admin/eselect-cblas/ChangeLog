@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-cblas
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.8 2006/09/11 15:08:31 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-cblas/ChangeLog,v 1.9 2006/09/19 18:48:11 kugelfang Exp $
+
+  19 Sep 2006; Danny van Dyk <kugelfang@gentoo.org>
+  eselect-cblas-0.1.ebuild:
+  Marked ~ia64.
 
   11 Sep 2006; Ferris McCormick <fmccor@gentoo.org>
   eselect-cblas-0.1.ebuild:
