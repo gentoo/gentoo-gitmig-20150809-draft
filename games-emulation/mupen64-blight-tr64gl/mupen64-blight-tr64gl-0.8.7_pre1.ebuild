@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/mupen64-blight-tr64gl-0.8.7_pre1.ebuild,v 1.3 2005/01/31 07:33:55 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/mupen64-blight-tr64gl-0.8.7_pre1.ebuild,v 1.4 2006/09/19 19:08:04 wolf31o2 Exp $
 
 inherit games
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.so.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="media-libs/libsdl"

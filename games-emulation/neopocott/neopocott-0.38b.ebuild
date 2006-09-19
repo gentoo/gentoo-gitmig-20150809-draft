@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/neopocott/neopocott-0.38b.ebuild,v 1.6 2006/09/15 19:47:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/neopocott/neopocott-0.38b.ebuild,v 1.7 2006/09/19 19:11:16 wolf31o2 Exp $
 
 inherit games
 
@@ -12,6 +12,7 @@ SRC_URI="http://sdlemu.ngemu.com/releases/NeoPocott-SDL-${PV}${MY_RLS}.i386.linu
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="media-libs/libsdl

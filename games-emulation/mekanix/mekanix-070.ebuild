@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/mekanix-070.ebuild,v 1.3 2006/02/11 19:47:35 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mekanix/mekanix-070.ebuild,v 1.4 2006/09/19 19:05:43 wolf31o2 Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.smspower.org/meka/releases/${PN}${PV}.tgz"
 LICENSE="mekanix"
 SLOT="0"
 KEYWORDS="x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="media-libs/libpng

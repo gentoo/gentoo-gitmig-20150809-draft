@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/boycott-advance-sdl-0.2.8.ebuild,v 1.3 2006/02/04 00:13:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/boycott-advance-sdl-0.2.8.ebuild,v 1.4 2006/09/19 19:00:34 wolf31o2 Exp $
 
 inherit games
 
@@ -12,6 +12,7 @@ SRC_URI="http://sdlemu.ngemu.com/releases/BoyCottAdvance-SDL-${PV}${MY_RLS}.i386
 KEYWORDS="-* x86"
 LICENSE="as-is"
 SLOT="0"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="virtual/opengl

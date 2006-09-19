@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mupen64-blight-tr64gl
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/ChangeLog,v 1.6 2005/01/31 07:33:55 morfic Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-tr64gl/ChangeLog,v 1.7 2006/09/19 19:08:04 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  mupen64-blight-tr64gl-0.7.4_pre1.ebuild,
+  mupen64-blight-tr64gl-0.8.7_pre1.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
   31 Jan 2005; Daniel Goller <morfic@gentoo.org>
   mupen64-blight-tr64gl-0.8.7_pre1.ebuild:

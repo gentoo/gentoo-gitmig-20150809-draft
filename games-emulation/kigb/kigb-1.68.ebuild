@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-1.68.ebuild,v 1.2 2006/02/08 16:53:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-1.68.ebuild,v 1.3 2006/09/19 19:03:31 wolf31o2 Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
+RESTRICT="strip"
 IUSE=""
 
 RDEPEND="|| ( x11-libs/libXext
