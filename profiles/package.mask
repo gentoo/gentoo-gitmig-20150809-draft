@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5907 2006/09/19 16:42:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5908 2006/09/19 16:47:10 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -529,13 +529,6 @@ app-pda/rapip
 # Unmaintained upstream, problems with recent Emacs.
 app-emacs/w3
 app-emacs/weather
-
-# Michael Sterrett <mr_bones_@gentoo.org> (19 Aug 2006)
-# dev-games/guichan is only used by games-rpg/tmw and that
-# wants ~dev-games/guichan-0.4.0.  Masking 0.5 then to
-# avoid version ping-ponging.
->=dev-games/guichan-0.5.0
->=games-rpg/tmw-0.0.21
 
 # Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
 # Development versions of FWbuilder.
