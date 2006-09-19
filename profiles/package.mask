@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5913 2006/09/19 19:16:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5914 2006/09/19 20:26:58 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -418,7 +418,7 @@ media-video/klvemkdvd
 =media-sound/alsa-utils-1.0.13_rc*
 =media-libs/alsa-lib-1.0.13_rc*
 =media-sound/alsa-tools-1.0.13_rc*
-=media-sound/alsa-plugins-1.0.13_rc*
+=media-plugins/alsa-plugins-1.0.13_rc*
 =media-sound/alsa-firmware-1.0.13_rc*
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (02 Sep 2006)
