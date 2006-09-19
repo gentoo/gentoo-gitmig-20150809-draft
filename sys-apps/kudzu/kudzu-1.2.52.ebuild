@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.52.ebuild,v 1.1 2006/09/05 21:08:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.52.ebuild,v 1.2 2006/09/19 02:28:46 dberkholz Exp $
 
-inherit eutils rpm multilib
+inherit eutils python rpm multilib
 
 # Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
 # tarball out of it
@@ -53,4 +53,8 @@ src_install() {
 	rm -rf \
 		"${D}"/etc/rc.d \
 		|| die "removing rc.d files failed"
+}
+
+pkg_postrm() {
+	python_mod_cleanup
 }
