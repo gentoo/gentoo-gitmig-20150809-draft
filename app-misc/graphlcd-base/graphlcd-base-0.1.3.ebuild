@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.3.ebuild,v 1.2 2006/02/28 00:26:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.3.ebuild,v 1.3 2006/09/19 08:09:25 corsair Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Graphical LCD Driver"
 HOMEPAGE="http://www.powarman.de"
 SRC_URI="http://download.berlios.de/graphlcd/${P}.tgz"
 
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~amd64 ~ppc64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="truetype"
