@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.103 2006/09/17 21:27:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.104 2006/09/19 20:30:16 dragonheart Exp $
+
+*gnutls-1.4.4-r1 (19 Sep 2006)
+
+  19 Sep 2006; Daniel Black <dragonheart@gentoo.org>
+  files/gnutls-1.4.4-selflink.patch, -gnutls-1.4.4.ebuild,
+  +gnutls-1.4.4-r1.ebuild:
+  fixed selflink patch thanks to Alon Bar-Lev in bug #147800
 
   17 Sep 2006; Daniel Black <dragonheart@gentoo.org> gnutls-1.4.4.ebuild:
   Temporarily added sys-devel/autoconf-2.60 dependency as per bug #147970
