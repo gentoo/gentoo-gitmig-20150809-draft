@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.5.0.ebuild,v 1.1 2006/08/20 05:11:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/guichan/guichan-0.5.0.ebuild,v 1.2 2006/09/19 16:46:26 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -19,24 +19,17 @@ DEPEND="opengl? ( virtual/opengl )
 
 S=${WORKDIR}/${P}-src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	#epatch "${FILESDIR}/${P}"-gentoo.patch
-	#eautoreconf
-}
-
 src_compile() {
 	econf \
 		$(use_enable allegro) \
 		$(use_enable sdl) \
 		$(use_enable sdl sdlimage) \
 		$(use_enable opengl) \
-		|| die "Configuration failed"
-	emake || die "Build failed"
+		|| die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "Installation failed"
+	emake DESTDIR="${D}" install  || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
