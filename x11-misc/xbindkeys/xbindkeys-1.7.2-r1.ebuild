@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.7.2-r1.ebuild,v 1.6 2006/06/11 10:24:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/xbindkeys-1.7.2-r1.ebuild,v 1.7 2006/09/19 01:53:33 cardoe Exp $
 
-IUSE="guile tcltk"
+IUSE="guile tk"
 
 DESCRIPTION="Tool for launching commands on keystrokes"
 SRC_URI="http://hocwp.free.fr/xbindkeys/${P}.tar.gz"
@@ -13,14 +13,14 @@ SLOT="0"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	guile? ( dev-util/guile )
-	tcltk? ( dev-lang/tk )"
+	tk? ( dev-lang/tk )"
 
 DEPEND="${RDEPEND}
 	|| ( x11-proto/xproto virtual/x11 )"
 
 src_compile() {
 	local myconf
-	use tcltk || myconf="${myconf} --disable-tk"
+	use tk || myconf="${myconf} --disable-tk"
 	use guile || myconf="${myconf} --disable-guile"
 	econf ${myconf} || die
 	emake DESTDIR=${D} || die
