@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.9 2006/09/19 17:19:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.10 2006/09/19 22:22:54 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> -files/xboard.png,
+  xboard-4.2.7.ebuild:
+  Change to use files from the mirrors instead of FILESDIR.
 
   19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> +files/xboard.png,
   xboard-4.2.7.ebuild:

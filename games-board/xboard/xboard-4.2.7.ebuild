@@ -1,12 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.12 2006/09/19 17:19:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.13 2006/09/19 22:22:54 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
 HOMEPAGE="http://www.tim-mann.org/xboard.html"
-SRC_URI="mirror://gnu/xboard/${P}.tar.gz"
+SRC_URI="mirror://gnu/xboard/${P}.tar.gz
+	mirror://gentoo/${PN}.png
+	http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -35,7 +37,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc FAQ READ_ME ToDo ChangeLog*
 	dohtml FAQ.html
-	doicon ${FILESDIR}/xboard.png
+	doicon ${DISTDIR}/xboard.png
 	make_desktop_entry ${PN} "Xboard (Chess)"
 	prepgamesdirs
 }
