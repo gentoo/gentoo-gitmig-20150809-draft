@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/libmms-0.3.ebuild,v 1.1 2006/08/26 02:26:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/libmms-0.3.ebuild,v 1.2 2006/09/19 03:06:19 dang Exp $
 
 DESCRIPTION="Common library for accessing Microsoft Media Server (MMS) media streaming protocol"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2"
