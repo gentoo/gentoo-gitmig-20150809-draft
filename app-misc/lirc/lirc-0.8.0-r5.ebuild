@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.7 2006/09/12 09:18:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.8 2006/09/19 15:00:46 zzam Exp $
 
+WANT_AUTOMAKE=1.5
+WANT_AUTOCONF=2.5
 inherit eutils linux-mod flag-o-matic autotools
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
@@ -72,9 +74,7 @@ done
 
 # adding only compile-time depends
 DEPEND="${RDEPEND}
-	virtual/linux-sources
-	sys-devel/autoconf
-	sys-devel/libtool"
+	virtual/linux-sources"
 
 
 # adding only run-time depends
@@ -222,7 +222,6 @@ pkg_setup() {
 	einfo "lirc-configure-opts: ${MY_OPTS}"
 	einfo "Setting default lirc-device to ${LIRC_DRIVER_DEVICE}"
 
-	export WANT_AUTOCONF=2.5
 	filter-flags -Wl,-O1
 }
 

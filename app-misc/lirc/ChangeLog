@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.113 2006/09/15 08:08:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.114 2006/09/19 15:00:46 zzam Exp $
+
+  19 Sep 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0-r1.ebuild,
+  lirc-0.8.0-r5.ebuild:
+  Now depend on the correct autotools versions, as no longer all versions are
+  automagically pulled in by system.
 
   15 Sep 2006; Matthias Schwarzott <zzam@gentoo.org> -lirc-0.8.0.ebuild:
   Removed older revision.
