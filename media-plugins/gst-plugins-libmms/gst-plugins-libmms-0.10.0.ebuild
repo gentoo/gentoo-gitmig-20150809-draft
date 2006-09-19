@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/gst-plugins-libmms-0.10.0.ebuild,v 1.2 2006/04/04 15:04:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/gst-plugins-libmms-0.10.0.ebuild,v 1.3 2006/09/19 03:07:39 dang Exp $
 
 inherit gst-plugins-bad
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.0
 	 >=media-libs/libmms-0.2"
