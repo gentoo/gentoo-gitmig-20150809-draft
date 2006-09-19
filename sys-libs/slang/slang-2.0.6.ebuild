@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.0.6.ebuild,v 1.3 2006/08/09 12:40:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-2.0.6.ebuild,v 1.4 2006/09/19 22:48:21 liquidx Exp $
 
 inherit eutils
 
@@ -36,10 +36,10 @@ src_compile() {
 	econf \
 		$(use_with pcre) \
 		$(use_with png) || die "econf failed"
-	emake THIS_LIB="slang-2" all || die "make all failed"
-	emake THIS_LIB="slang-2" elf || die "make elf failed"
+	emake -j1 THIS_LIB="slang-2" all || die "make all failed"
+	emake -j1 THIS_LIB="slang-2" elf || die "make elf failed"
 	cd slsh
-	emake THIS_LIB="slang-2" slsh || die "make slsh failed"
+	emake -j1 THIS_LIB="slang-2" slsh || die "make slsh failed"
 }
 
 src_install() {
