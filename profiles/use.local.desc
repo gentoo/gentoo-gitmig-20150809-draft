@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2162 2006/09/19 13:55:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2163 2006/09/19 20:35:51 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -745,6 +745,7 @@ media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
 media-plugins/alsa-plugins:pulseaudio - Enable support for PulseAudio output plugin
+media-plugins/audacious-plugins:pulseaudio - Enable support for PulseAudio output plugin
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library 
 media-plugins/gst-plugins-farsight:jingle - Enables voice calls for jabber
