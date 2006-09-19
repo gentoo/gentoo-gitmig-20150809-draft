@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.2 2006/09/07 15:55:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.3 2006/09/19 13:57:50 lu_zero Exp $
 
 inherit eutils multilib nsplugins
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 -hppa ~ia64 ~ppc ~sparc ~x86"
-IUSE="gtk divx gmedia real quicktime wmp"
+IUSE="gtk divx gmedia realmedia quicktime wmp"
 
 DEPEND=">=media-video/mplayer-1.0_pre5
 		|| ( www-client/mozilla-firefox
@@ -54,7 +54,7 @@ src_compile() {
 		${myconf} \
 		$(use_enable divx dvx) \
 		$(use_enable gmedia gmp) \
-		$(use_enable real rm) \
+		$(use_enable realmedia rm) \
 		$(use_enable quicktime qt) \
 		$(use_enable wmp) \
 		|| die "econf failed"
