@@ -3,7 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>humpback@gentoo.org</email>
+  <email>mrness@gentoo.org</email>
+  <name>Alin Nastac</name>
 </maintainer>
 <longdescription> SendEmail is a lightweight, completly command line based, 
 SMTP email agent. If you have the need to send email from a command prompt 
