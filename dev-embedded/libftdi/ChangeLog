@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.5 2006/05/06 12:40:40 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.6 2006/09/19 08:10:40 corsair Exp $
+
+  19 Sep 2006; Markus Rothe <corsair@gentoo.org> libftdi-0.7.ebuild:
+  Added ~ppc64; bug #148072
 
 *libftdi-0.7 (06 May 2006)
 
