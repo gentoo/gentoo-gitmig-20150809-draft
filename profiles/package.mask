@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5905 2006/09/19 13:19:02 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5906 2006/09/19 14:11:25 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -641,11 +641,6 @@ media-gfx/xzgv
 # sys-fs/dmraid masked for bug(s) 139860,103912, 
 # 134050, 138823 Waiting on new maintainer.
 sys-fs/dmraid
-
-# Alec Warner <antarus@gentoo.org> (01 Aug 2006)
-# media-gfx/pornview masked for Treecleaners for bug(s) 141588 93500 120376
-# Removal in 30 days
-media-gfx/pornview
 
 # Daniel Black <dragonheart@gentoo.org> (01 Aug 2006)
 # API bumps - needs extensive testing against all dependent apps
