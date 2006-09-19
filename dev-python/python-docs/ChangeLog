@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.83 2006/07/20 17:25:19 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.84 2006/09/19 19:22:09 liquidx Exp $
+
+*python-docs-2.5 (19 Sep 2006)
+
+  19 Sep 2006; Alastair Tse <liquidx@gentoo.org> -python-docs-2.2.2.ebuild,
+  -python-docs-2.3.3.ebuild, -python-docs-2.3.3-r1.ebuild,
+  -python-docs-2.3.4_rc1.ebuild, -python-docs-2.3.4.ebuild,
+  -python-docs-2.4.ebuild, -python-docs-2.4.1.ebuild,
+  -python-docs-2.4.2.ebuild, +python-docs-2.5.ebuild:
+  python 2.5 released, add accompanying docs
 
   20 Jul 2006; Simon Stelling <blubb@gentoo.org> python-docs-2.4.3.ebuild:
   stable on amd64
