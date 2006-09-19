@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5901 2006/09/19 04:42:02 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5902 2006/09/19 05:00:41 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (19 Sep 2006)
+# masked x11-themes/zinf-themes for treecleaners, bug(s) 148154
+# Removal Oct 19th
+x11-themes/zinf-themes
 
 # Alec Warner <antarus@gentoo.org> (19 Sep 2006)
 # masked media-gfx/xwgui2 for treecleaners, bug(s) 147488 
