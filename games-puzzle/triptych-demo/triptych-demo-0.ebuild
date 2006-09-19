@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.7 2006/02/17 22:31:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/triptych-demo/triptych-demo-0.ebuild,v 1.8 2006/09/19 19:50:25 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,9 +11,10 @@ SRC_URI="http://www.chroniclogic.com/demo/triptych.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
+RESTRICT="strip"
 IUSE=""
 
-DEPEND="|| ( x11-libs/libXext virtual/x11 )
+DEPEND="x11-libs/libXext
 	media-libs/libsdl
 	virtual/opengl"
 
