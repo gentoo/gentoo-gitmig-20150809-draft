@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.33 2006/07/21 17:55:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.34 2006/09/19 11:49:50 caleb Exp $
+
+*qwt-5.0.0_rc0 (19 Sep 2006)
+
+  19 Sep 2006; Caleb Tennis <caleb@gentoo.org> +qwt-5.0.0_rc0.ebuild:
+  bump to new rc
 
   21 Jul 2006; Caleb Tennis <caleb@gentoo.org>
   +files/qwt-20060130-buildfix.patch, qwt-5_pre20060130.ebuild:
