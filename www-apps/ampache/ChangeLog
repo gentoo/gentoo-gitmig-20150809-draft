@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.12 2006/07/10 00:48:52 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.13 2006/09/19 00:47:09 dang Exp $
+
+  19 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> ampache-3.3.1.7.ebuild:
+  Marked ~amd64 bug #147406
 
 *ampache-3.3.2_beta3 (10 Jul 2006)
 
