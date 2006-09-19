@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/guppi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.26 2006/09/17 13:32:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.27 2006/09/19 03:01:41 dang Exp $
+
+  19 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> guppi-0.40.3-r3.ebuild:
+  Marked stable on amd64 bug #146394
 
   17 Sep 2006; <nixnut@gentoo.org> guppi-0.40.3-r3.ebuild:
   Stable on ppc wrt bug 146394
