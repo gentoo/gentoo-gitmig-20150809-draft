@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc6-r2.ebuild,v 1.1 2006/05/26 15:23:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc6-r2.ebuild,v 1.2 2006/09/19 13:42:16 dberkholz Exp $
 
 inherit distutils eutils multilib
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/python
 	dev-lang/tk
 	media-libs/libpng
 	sys-libs/zlib
-	virtual/glut"
+	media-libs/glut"
 S="${WORKDIR}/${MY_S_P}"
 
 src_unpack() {
