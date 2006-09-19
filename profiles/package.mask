@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5904 2006/09/19 06:12:21 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5905 2006/09/19 13:19:02 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,8 +23,13 @@
 
 # Alec Warner <antarus@gentoo.org> (19 Sep 2006)
 # masked media-libs/libirman for treecleaners, bug(s) 89663
-# Removal Oct 19th
+# masked dev-python/irman-python due to it's dep on
+# libirman; Both set for removal Oct 19th.
+# lcdproc also deps on libirman
 media-libs/libirman
+dev-python/irman-python
+app-misc/lcdproc
+
 
 # Alec Warner <antarus@gentoo.org> (19 Sep 2006)
 # masked app-misc/lhinv for treecleaners, bug(s) 83959

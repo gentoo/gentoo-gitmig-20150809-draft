@@ -74,3 +74,6 @@ elibc_OpenBSD
 elibc_Darwin
 elibc_DragonFly
 kernel_FreeBSD
+
+# libirman is masked; so this must be masked as well.
+lirc_devices_irman
