@@ -1,5 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20060903.ebuild,v 1.2 2006/09/19 11:03:27 zzam Exp $
 
 inherit eutils
 
