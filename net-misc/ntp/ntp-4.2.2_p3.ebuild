@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.2_p3.ebuild,v 1.11 2006/09/18 22:36:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.2_p3.ebuild,v 1.12 2006/09/19 00:14:55 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,7 +23,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	selinux? ( sec-policy/selinux-ntp )"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51"
-PDEPEND="!openntpd? ( net-misc/openntpd )"
+PDEPEND="openntpd? ( net-misc/openntpd )"
 
 S=${WORKDIR}/${MY_P}
 
