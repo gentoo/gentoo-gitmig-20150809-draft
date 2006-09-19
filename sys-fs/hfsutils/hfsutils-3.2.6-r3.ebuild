@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r3.ebuild,v 1.8 2005/02/05 21:20:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6-r3.ebuild,v 1.9 2006/09/19 02:11:06 cardoe Exp $
 
 inherit eutils
 
@@ -11,11 +11,12 @@ SRC_URI="ftp://ftp.mars.org/pub/hfs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc ~sparc ppc64"
-IUSE="tcltk"
+IUSE="tcl tk"
 
 DEPEND="virtual/libc
-	tcltk? ( dev-lang/tcl dev-lang/tk )"
-RDEPEND=""
+	tcl? ( dev-lang/tcl )
+	tk? ( dev-lang/tk )"
+RDEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +26,8 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use tcltk && myconf="--with-tcl --with-tk"
+	use tcl && myconf="--with-tcl"
+	use tk && myconf="--with-tk"
 
 	econf ${myconf} || die
 	emake PREFIX=/usr MANDIR=/usr/share/man || die
