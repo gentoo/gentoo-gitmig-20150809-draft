@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.3 2006/09/06 05:23:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.4 2006/09/19 21:19:49 dragonheart Exp $
+
+*pam_pkcs11-0.5.3-r2 (19 Sep 2006)
+
+  19 Sep 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/pam_pkcs11-0.5.3-daemon-init.patch, +pam_pkcs11-0.5.3-r2.ebuild:
+  fixes numberous PKCS#11 stand violations as per bug #122357. Thanks Alon
+  Bar-Lev for the patches.
 
 *pam_pkcs11-0.5.3-r1 (06 Sep 2006)
 
