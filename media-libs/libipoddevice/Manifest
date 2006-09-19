@@ -1,34 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d940b683103720bda48b1dc637d8c202 ChangeLog 959
-RMD160 f83f18824004f7b76daa4366edf1a7dd3e4e5fa1 ChangeLog 959
-SHA256 01a03b09e3d6f8ca2dea9d8d37a0b985cd43e21d07943726b7113219d7d7182c ChangeLog 959
-MD5 625237e0f86264727eeb4d96cb0d31aa files/digest-libipoddevice-0.4.0 71
-RMD160 3bab9d413880771dc9e15a5d0f64d82ab6548954 files/digest-libipoddevice-0.4.0 71
-SHA256 e90a91b244dfc82ca2f746d242070db672eac2b3618e672fb7cca695afb746d9 files/digest-libipoddevice-0.4.0 71
-MD5 4dfb7fa1a79959c1d6a933d53dfef78b files/digest-libipoddevice-0.4.1 259
-RMD160 89f5dd2d4f76550d564b86dfc7226cf73cf62d90 files/digest-libipoddevice-0.4.1 259
-SHA256 b15e607e59ce618fc6d2235e1c008e32fe0311fc747ef6014753d7a0c44e47bc files/digest-libipoddevice-0.4.1 259
-MD5 1dafc7299560ea60ef066d164d8981cd files/digest-libipoddevice-0.4.5 259
-RMD160 a179750ce840488d1730a42cfcfb7cd68ba1ce97 files/digest-libipoddevice-0.4.5 259
-SHA256 2b977a6409c2420dc26099a4abe19eacb75af818bebce8e33562c832fb065932 files/digest-libipoddevice-0.4.5 259
-MD5 6744dc264c5e1f4cfc7364b226e157c3 libipoddevice-0.4.0.ebuild 1169
-RMD160 31ab328924c81b1e338740728fe7bda744595190 libipoddevice-0.4.0.ebuild 1169
-SHA256 4f7df1fc64935e606e9ca7c252e7cca12d8b2490f96ba367f7cdbb42b4f8aaa2 libipoddevice-0.4.0.ebuild 1169
-MD5 a72df5a2ef51a050102ece8c47abf17c libipoddevice-0.4.1.ebuild 1179
-RMD160 7016e731761db5f08bf841417b51bf56cc7db217 libipoddevice-0.4.1.ebuild 1179
-SHA256 7b95a07fcda15933a4d53a0dfdd31c60e6b6438df31862574d2025165c0e5aeb libipoddevice-0.4.1.ebuild 1179
+DIST libipoddevice-0.4.5.tar.gz 343309 RMD160 547752ca3559caea3497378eeb25f8787120c592 SHA1 0c23cf26acedf819437052d18e1aa29596df64b1 SHA256 08765a01a2170f6550aa455b8c3a080da69d68ce5e8ba439ddd43503a5347ad3
+EBUILD libipoddevice-0.4.5.ebuild 1178 RMD160 29139556d41e92c14a3e78beca85f35336e96c8a SHA1 4abf787293c05d589a8aba927ad5385bbd271430 SHA256 b9d6172a0374f08a97dc5359a054e3ed0f80376f256fe5ee798fafad83476745
 MD5 03e7b11b8fb650bee10d18cbf4301126 libipoddevice-0.4.5.ebuild 1178
 RMD160 29139556d41e92c14a3e78beca85f35336e96c8a libipoddevice-0.4.5.ebuild 1178
 SHA256 b9d6172a0374f08a97dc5359a054e3ed0f80376f256fe5ee798fafad83476745 libipoddevice-0.4.5.ebuild 1178
+MISC ChangeLog 959 RMD160 f83f18824004f7b76daa4366edf1a7dd3e4e5fa1 SHA1 ed1292eda0ff9d293347d05a286c11ca0f98bd08 SHA256 01a03b09e3d6f8ca2dea9d8d37a0b985cd43e21d07943726b7113219d7d7182c
+MD5 d940b683103720bda48b1dc637d8c202 ChangeLog 959
+RMD160 f83f18824004f7b76daa4366edf1a7dd3e4e5fa1 ChangeLog 959
+SHA256 01a03b09e3d6f8ca2dea9d8d37a0b985cd43e21d07943726b7113219d7d7182c ChangeLog 959
+MISC metadata.xml 294 RMD160 a0ecd559d8ebff0b2e91aac31e12dd1fb9074c7e SHA1 a82bcefd597a8ca762a169dd8b2895d1347dcdfb SHA256 50e382a1cdc9b8d5bd7a6e62bae3e8b57cf36e157f70d0136b57d50edf2e8041
 MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
 RMD160 a0ecd559d8ebff0b2e91aac31e12dd1fb9074c7e metadata.xml 294
 SHA256 50e382a1cdc9b8d5bd7a6e62bae3e8b57cf36e157f70d0136b57d50edf2e8041 metadata.xml 294
+MD5 1dafc7299560ea60ef066d164d8981cd files/digest-libipoddevice-0.4.5 259
+RMD160 a179750ce840488d1730a42cfcfb7cd68ba1ce97 files/digest-libipoddevice-0.4.5 259
+SHA256 2b977a6409c2420dc26099a4abe19eacb75af818bebce8e33562c832fb065932 files/digest-libipoddevice-0.4.5 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFESmGBwUpWvClEHQoRArVsAKCKgafMLt1Qzotj1cQIrMC+rc5RqACfSufZ
-HPeIgXxs+DlftZthELSe9wg=
-=SzPd
+iD8DBQFFEFwewUpWvClEHQoRAlRjAJ4u6sgcO/JMoZQBafnqE/4RQ/FcdwCeIZk4
+aS+lCubCPnWjjaiUg5nRQuk=
+=2cCp
 -----END PGP SIGNATURE-----
