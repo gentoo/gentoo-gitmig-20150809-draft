@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/glxquake-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/ChangeLog,v 1.5 2006/09/10 11:27:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/glxquake-bin/ChangeLog,v 1.6 2006/09/19 19:27:48 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  glxquake-bin-0-r1.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
   10 Sep 2006; <tupone@gentoo.org> files/digest-glxquake-bin-0-r1, Manifest:
   Updating non versioned tar.gz. Bug #130342 by Raymond Lewis Rebbeck
