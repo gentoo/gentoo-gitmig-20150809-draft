@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.16.0.1.ebuild,v 1.4 2006/09/15 20:47:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.16.0.1.ebuild,v 1.5 2006/09/19 03:38:53 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acpi apm doc gstreamer hal ipv6"
+IUSE="acpi apm doc gstreamer ipv6"
 
 RDEPEND=">=x11-libs/gtk+-2.6
 		>=dev-libs/glib-2.6
@@ -27,7 +27,7 @@ RDEPEND=">=x11-libs/gtk+-2.6
 		>=app-admin/system-tools-backends-1.1.3
 		>=gnome-base/gnome-desktop-2.11.1
 		>=x11-libs/libnotify-0.3.2
-		hal? ( >=sys-apps/hal-0.5.3 )
+		>=sys-apps/hal-0.5.3
 		>=sys-apps/dbus-0.34
 		>=dev-python/pygtk-2.6
 		>=dev-python/gnome-python-2.10
@@ -58,8 +58,8 @@ DOCS="AUTHORS ChangeLog NEWS README"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 pkg_setup() {
-	G2CONF="--disable-scrollkeeper --enable-flags \
-		$(use_enable ipv6) $(use_with hal)"
+	G2CONF="--disable-scrollkeeper --enable-flags --with-hal \
+		$(use_enable ipv6)"
 
 	if use gstreamer; then
 		G2CONF="${G2CONF} --with-gstreamer=0.10"
@@ -69,7 +69,7 @@ pkg_setup() {
 		G2CONF="${G2CONF} --disable-battstat"
 	fi
 
-	if use ppc && ! use apm && ! use hal; then
+	if use ppc && ! use apm; then
 		G2CONF="${G2CONF} --disable-battstat"
 	fi
 	G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
