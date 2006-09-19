@@ -13,6 +13,10 @@ AUX svgalib-1.9.23-gentoo.patch 2994 RMD160 01ec997cfb8f63656207d45f0a6d7bc97e64
 MD5 690144017f69486a911d88c0932a7d45 files/svgalib-1.9.23-gentoo.patch 2994
 RMD160 01ec997cfb8f63656207d45f0a6d7bc97e64cbb6 files/svgalib-1.9.23-gentoo.patch 2994
 SHA256 9bce706a598aaf53588b39ea2fa399416ae8390cd2f4cae62dab12b4701fdda8 files/svgalib-1.9.23-gentoo.patch 2994
+AUX svgalib-1.9.24-all_devices.patch 386 RMD160 6750760283139e8cb247e6e1908a1d4582c272f6 SHA1 f2b0d506b56952a069b0f6cf5998f394306c6f89 SHA256 62fc518361db69912ad21e24231d328060d4cec510f112f2e140841c70a00e5b
+MD5 019300d0c270a3ee49fee6ab848b3a8f files/svgalib-1.9.24-all_devices.patch 386
+RMD160 6750760283139e8cb247e6e1908a1d4582c272f6 files/svgalib-1.9.24-all_devices.patch 386
+SHA256 62fc518361db69912ad21e24231d328060d4cec510f112f2e140841c70a00e5b files/svgalib-1.9.24-all_devices.patch 386
 AUX svgalib-1.9.24-linux2.6.patch 4553 RMD160 16b3470b24595e781530cb0cafe0fc9f71511e90 SHA1 68a84e75301a24350ca504066bf2167f8b01cf49 SHA256 b17f37e1d5292dbe78d7c69d56931d7a496574de4e6cde8b4c7e8eca018678fd
 MD5 5bb3810d9312da4bfdebd50a07038b10 files/svgalib-1.9.24-linux2.6.patch 4553
 RMD160 16b3470b24595e781530cb0cafe0fc9f71511e90 files/svgalib-1.9.24-linux2.6.patch 4553
@@ -64,7 +68,7 @@ SHA256 ddcc343b075e1ebcbceb0952eaa273fb40fd3a0bc00bb00b7d64e1c500a6cac4 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFDl1LamhnQswr0vIRAtvOAKCybTlCalRrosso1Ne/6stkTTm8SwCeLIKG
-Hzr91B8F6czn2L3rk/H7tk4=
-=yuZH
+iD8DBQFFEDbdamhnQswr0vIRAos8AJ0QUS8SqnjqAlkov1bpTj/nVGnOuACguxsh
+umUBce0PoQgEZRk5UcU/Iv8=
+=mAo4
 -----END PGP SIGNATURE-----
