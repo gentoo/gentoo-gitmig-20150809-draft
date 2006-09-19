@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2159 2006/09/18 23:10:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2160 2006/09/19 01:07:44 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -572,7 +572,6 @@ kde-base/kdebase:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig.
 kde-base/kdegraphics-kfile-plugins:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdegraphics-meta:povray - Install KPovModeler, which needs POV-Ray.
-kde-base/kdegraphics:nodrm - Disable DRM support in KPDF.
 kde-base/kdegraphics:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
 kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it.
@@ -591,7 +590,6 @@ kde-base/kicker:xcomposite - Support for the Xorg composite extension.
 kde-base/kig:kig-scripting - Support Python scripting.
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
 kde-base/kopete:sametime - Support for the Sametime protocol for instant messaging.
-kde-base/kpdf:nodrm - Disable DRM support in KPDF.
 kde-base/krdc:rdesktop - Support for the remote desktop protocol.
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
@@ -1071,7 +1069,6 @@ net-fs/samba:async - Enables asynchronous input/output
 net-fs/samba:automount - Enables automount support
 net-fs/samba:ldapsam - Enables samba 2.2 ldap support (default passwd backend: ldapsam_compat)
 net-fs/samba:libclamav - Enables clamav libraries, without needing to use the daemon
-net-fs/samba:msdfs - Enables support for msDFS (Distributed File System)
 net-fs/samba:oav - Enables support for anti-virus from the openantivirus.org project
 net-fs/samba:quotas - Enables support for user quotas
 net-fs/samba:swat - Enables support for swat configuration gui
@@ -1225,9 +1222,7 @@ net-misc/asterisk:genericjb - Enable experimental generic jitter buffer
 net-misc/asterisk:h323 - Build the H.323 channel driver bundled with Asterisk
 net-misc/asterisk:lowmem - Build Asterisk for environments with low amounts of memory (embedded devices)
 net-misc/asterisk:mysqlfriends - Enable MySQL friends support in chan_sip
-net-misc/asterisk:nopri - Disable pri support
 net-misc/asterisk:nosamples - Don't install sample sound and configuration files
-net-misc/asterisk:nozaptel - Disable zaptel support
 net-misc/asterisk:osp - Enable support for the Open Settlement Protocol
 net-misc/asterisk:pri - Enables pri support (>=asterisk-1.0.1)
 net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
@@ -1268,7 +1263,6 @@ net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
 net-misc/partysip:syslog - Enable syslog support
-net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
 net-misc/quagga:bgpclassless - Enable classless prefixes for BGP 
 net-misc/quagga:fix-connected-rt - Remove interface connected routes from kernel table on link loss so that no packets get routed to downed interface
 net-misc/quagga:multipath - Enable multipath routes support for any number of routes
@@ -1701,7 +1695,6 @@ x11-base/xorg-x11:insecure-drivers - Builds insecure DRI stuff for via, mach64 a
 x11-base/xorg-x11:sdk - Builds the software development kit
 x11-base/xorg-x11:truetype-fonts - Build TrueType fonts
 x11-base/xorg-x11:type1-fonts - Build Type1 fonts
-x11-drivers/ati-drivers:dlloader - Experimental relink to support dlloader
 x11-drivers/synaptics:dlloader - Installs dynamically linked synaptics Xorg driver
 x11-libs/cairo:glitz - Build with glitz support
 x11-libs/evas:cairo - Build the cairo graphical engine
