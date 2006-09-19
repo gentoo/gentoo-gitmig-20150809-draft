@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.11 2006/05/21 18:42:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7.ebuild,v 1.12 2006/09/19 17:19:37 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -14,18 +14,16 @@ KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="games-board/gnuchess
-	|| (
-		( x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXt
-		x11-libs/libXmu
-		x11-libs/libXext
-		x11-libs/libICE
-		x11-libs/libXpm
-		x11-libs/libXaw )
-		virtual/x11 )"
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXt
+	x11-libs/libXmu
+	x11-libs/libXext
+	x11-libs/libICE
+	x11-libs/libXpm
+	x11-libs/libXaw"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xproto ) virtual/x11 )"
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
@@ -37,5 +35,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc FAQ READ_ME ToDo ChangeLog*
 	dohtml FAQ.html
+	doicon ${FILESDIR}/xboard.png
+	make_desktop_entry ${PN} "Xboard (Chess)"
 	prepgamesdirs
 }

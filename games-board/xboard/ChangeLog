@@ -1,6 +1,11 @@
 # ChangeLog for games-board/xboard
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.8 2006/05/21 18:42:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.9 2006/09/19 17:19:37 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> +files/xboard.png,
+  xboard-4.2.7.ebuild:
+  Added icon and desktop entry, as well as removing virtual/x11 from
+  dependencies. Closing bug #101856.
 
   21 May 2006; Markus Rothe <corsair@gentoo.org> xboard-4.2.7.ebuild:
   Stable on ppc64
