@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mlt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.9 2006/09/08 19:26:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/ChangeLog,v 1.10 2006/09/19 23:31:19 lu_zero Exp $
+
+  19 Sep 2006; Luca Barbato <lu_zero@gentoo.org> mlt-0.2.2.ebuild:
+  Jack module requires ladspa-sdk, see bug #147498
 
   08 Sep 2006; Markus Rothe <corsair@gentoo.org> mlt-0.2.2.ebuild,
   mlt-20051209.ebuild:

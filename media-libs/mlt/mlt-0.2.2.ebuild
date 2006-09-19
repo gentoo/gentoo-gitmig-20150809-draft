@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.2.ebuild,v 1.4 2006/09/08 19:26:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.2.2.ebuild,v 1.5 2006/09/19 23:31:19 lu_zero Exp $
 
 inherit eutils
 
@@ -23,7 +23,8 @@ DEPEND="media-video/ffmpeg
 		  >=media-libs/sdl-image-1.2.4 )
 	>=media-libs/libsamplerate-0.1.2
 	jack?	( media-sound/jack-audio-connection-kit
-		  >=dev-libs/libxml2-2.5 )
+			  media-libs/ladspa-sdk
+			  >=dev-libs/libxml2-2.5 )
 	gtk?	( >=x11-libs/gtk+-2.0
 		  x11-libs/pango )
 	sox? 	( media-sound/sox )
