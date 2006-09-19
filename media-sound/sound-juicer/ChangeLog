@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.88 2006/09/08 03:21:10 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.89 2006/09/19 20:08:34 agriffis Exp $
+
+  19 Sep 2006; Aron Griffis <agriffis@gentoo.org>
+  sound-juicer-2.14.4.ebuild:
+  Mark 2.14.4 stable on ia64. #139612
 
   08 Sep 2006; Thomas Cort <tcort@gentoo.org> sound-juicer-2.14.4.ebuild:
   Added ~alpha keyword wrt Bug #131746.
