@@ -77,3 +77,6 @@ kernel_FreeBSD
 
 # libirman is masked; so this must be masked as well.
 lirc_devices_irman
+
+# Also mask irman for libirman
+irman
