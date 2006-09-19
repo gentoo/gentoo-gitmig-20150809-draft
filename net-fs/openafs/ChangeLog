@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.74 2006/09/09 14:35:25 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.75 2006/09/19 13:55:39 stefaan Exp $
+
+  19 Sep 2006; Stefaan De Roeck <stefaan@gentoo.org>
+  openafs-1.4.2_rc3.ebuild:
+  enable support for nested pts groups, fixing bug #145339
 
 *openafs-1.5.8 (09 Sep 2006)
 

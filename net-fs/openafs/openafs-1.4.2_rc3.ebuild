@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.2_rc3.ebuild,v 1.1 2006/09/09 11:53:10 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.4.2_rc3.ebuild,v 1.2 2006/09/19 13:55:39 stefaan Exp $
 
 inherit flag-o-matic eutils toolchain-funcs versionator
 
@@ -51,6 +51,7 @@ src_compile() {
 		$(use_enable pam) \
 		$(use_enable debug) \
 		--enable-largefile-fileserver \
+		--enable-supergroups \
 		${myconf} || die econf
 
 	emake -j1 all_nolibafs || die "Build failed"
