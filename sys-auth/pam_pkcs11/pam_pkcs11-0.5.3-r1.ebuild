@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.5.3-r1.ebuild,v 1.1 2006/09/06 05:23:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/pam_pkcs11-0.5.3-r1.ebuild,v 1.2 2006/09/19 21:30:58 dragonheart Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="curl ldap pcsc-lite"
 
-DEPEND=">=dev-libs/opensc-0.10
+DEPEND="
 	sys-libs/pam
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
