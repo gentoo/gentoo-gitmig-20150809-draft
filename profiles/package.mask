@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5906 2006/09/19 14:11:25 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5907 2006/09/19 16:42:18 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -535,6 +535,7 @@ app-emacs/weather
 # wants ~dev-games/guichan-0.4.0.  Masking 0.5 then to
 # avoid version ping-ponging.
 >=dev-games/guichan-0.5.0
+>=games-rpg/tmw-0.0.21
 
 # Carsten Lohrke <carlo@gentoo.org> (19 Aug 2006)
 # Development versions of FWbuilder.
