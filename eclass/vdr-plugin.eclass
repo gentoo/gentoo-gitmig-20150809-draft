@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.32 2006/09/10 10:29:21 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.33 2006/09/19 19:31:33 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -187,7 +187,10 @@ vdr-plugin_src_unpack() {
 				-e '/^STRIP =/d' \
 				-e '/@.*\$(STRIP)/d'
 			eend $?
-			PLUGIN_MAKEFILE_PATCHED=1
+
+			# Use a file instead of an variable as single-stepping via ebuild
+			# destroys environment.
+			touch ${WORKDIR}/.vdr-plugin_makefile_patched
 			;;
 		add_local_patch)
 			cd ${S}
@@ -237,7 +240,7 @@ vdr-plugin_src_compile() {
 			[[ -n "${VDRSOURCE_DIR}" ]] && vdr-plugin_copy_source_tree
 			;;
 		compile)
-			if [[ -z ${PLUGIN_MAKEFILE_PATCHED} ]]; then
+			if [[ ! -f ${WORKDIR}/.vdr-plugin_makefile_patched ]]; then
 				eerror "Wrong use of vdr-plugin.eclass."
 				eerror "An ebuild for a vdr-plugin will not work without"
 				eerror "calling vdr-plugin_src_unpack to patch the Makefile."
