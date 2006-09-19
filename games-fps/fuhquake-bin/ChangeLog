@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/fuhquake-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.2 2006/02/13 22:16:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/fuhquake-bin/ChangeLog,v 1.3 2006/09/19 19:22:39 wolf31o2 Exp $
+
+  19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  fuhquake-bin-0.31.ebuild:
+  Adding strip to RESTRICT for bug #137819.
 
   13 Feb 2006; <Tupone@gentoo.org> fuhquake-bin-0.31.ebuild:
   Respect use flags Bug 106706 (thanks to Adrian Fruehwirth)

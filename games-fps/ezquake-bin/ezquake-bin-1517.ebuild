@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.2 2006/09/15 20:40:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ezquake-bin/ezquake-bin-1517.ebuild,v 1.3 2006/09/19 19:19:52 wolf31o2 Exp $
 
 inherit games
 
@@ -11,6 +11,8 @@ SRC_URI="http://wit.edu.pl/~rzadzinp/ezquake/releases/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
+RESTRICT="strip"
+IUSE="opengl svga cdinstall"
 
 QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.x11
@@ -18,8 +20,6 @@ QA_EXECSTACK_x86="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 QA_EXECSTACK_amd64="${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake-gl.glx
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.x11
 	${GAMES_PREFIX_OPT:1}/ezquake-bin/ezquake.svga"
-
-IUSE="opengl svga cdinstall"
 
 RDEPEND=">=dev-libs/expat-2.0
 	!svga? (
