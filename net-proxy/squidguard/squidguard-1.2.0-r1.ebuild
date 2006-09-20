@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.6 2006/09/17 18:10:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.7 2006/09/20 13:10:46 mrness Exp $
 
 inherit eutils autotools
 
@@ -61,10 +61,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To use squidGuard, you should add the following line to your"
-	einfo "/etc/squid/squid.conf:"
-	einfo ""
-	einfo "\tredirect_program /usr/bin/squidGuard"
+	einfo "To enable squidGuard, add the following lines to /etc/squid/squid.conf:"
+	einfo " - for squid ver 2.5"
+	einfo "    ${HILITE}redirect_program /usr/bin/squidGuard${NORMAL}"
+	einfo "    ${HILITE}redirect_children 10${NORMAL}"
+	einfo " - for squid ver 2.6"
+	einfo "    ${HILITE}url_rewrite_program /usr/bin/squidGuard${NORMAL}"
+	einfo "    ${HILITE}url_rewrite_children 10${NORMAL}"
 	einfo ""
 	einfo "Remember to edit /etc/squidGuard/squidGuard.conf first!"
 	einfo "Examples can be found in /etc/squidGuard/sample/"
