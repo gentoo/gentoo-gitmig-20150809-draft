@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/adzapper-20060909.ebuild,v 1.1 2006/09/20 08:34:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/adzapper/adzapper-20060909.ebuild,v 1.2 2006/09/20 13:04:20 mrness Exp $
 
 MY_P=${P/zapper/zap}
 
@@ -51,9 +51,9 @@ src_install() {
 pkg_postinst() {
 	einfo "To enable adzapper, add the following lines to /etc/squid/squid.conf:"
 	einfo " - for squid ver 2.5"
-	einfo "    redirect_program /etc/adzapper/wrapzap"
-	einfo "    redirect_children 10"
+	einfo "    ${HILITE}redirect_program /etc/adzapper/wrapzap${NORMAL}"
+	einfo "    ${HILITE}redirect_children 10${NORMAL}"
 	einfo " - for squid ver 2.6"
-	einfo "    url_rewrite_program /etc/adzapper/wrapzap"
-	einfo "    url_rewrite_children 10"
+	einfo "    ${HILITE}url_rewrite_program /etc/adzapper/wrapzap${NORMAL}"
+	einfo "    ${HILITE}url_rewrite_children 10${NORMAL}"
 }
