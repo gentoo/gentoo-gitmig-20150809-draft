@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.30 2006/09/18 14:55:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.31 2006/09/20 12:10:50 corsair Exp $
+
+  20 Sep 2006; Markus Rothe <corsair@gentoo.org> lcdproc-0.5.0.ebuild:
+  Added ~ppc64; bug #148072
 
 *lcdproc-0.5.0 (18 Sep 2006)
 
