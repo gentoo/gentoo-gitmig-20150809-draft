@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.23 2006/09/16 06:05:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.24 2006/09/20 03:45:13 cardoe Exp $
+
+  20 Sep 2006; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.20_p11188.ebuild:
+  Change around for new eclass
 
   16 Sep 2006; Doug Goldstein <cardoe@gentoo.org>
   +files/postinstall-en-0.20.txt, mythweb-0.19.ebuild,
