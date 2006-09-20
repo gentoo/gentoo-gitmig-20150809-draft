@@ -1,6 +1,15 @@
 # ChangeLog for games-puzzle/fish-fillets
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.20 2006/09/20 07:37:57 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.21 2006/09/20 23:06:58 vapier Exp $
+
+  20 Sep 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/fish-fillets-0.7.3-check-for-X.patch,
+  +files/fish-fillets-0.7.3-custom-datadir.patch,
+  -files/fish-fillets-0.7.3-gcc4.patch,
+  +files/fish-fillets-0.7.3-no-local-paths.patch,
+  +files/fish-fillets-0.7.3-use-lua-pkg-config.patch,
+  fish-fillets-0.7.3.ebuild:
+  Some more build fixes.
 
   20 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/fish-fillets-0.7.3-gcc4.patch, fish-fillets-0.7.3.ebuild:
