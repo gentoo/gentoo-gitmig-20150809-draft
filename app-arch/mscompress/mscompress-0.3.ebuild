@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.9 2005/11/29 02:58:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3.ebuild,v 1.10 2006/09/20 19:52:09 ticho Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.penguin.cz/~mhi/ftp/mscompress/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos x86"
 IUSE=""
 
 DEPEND=""
