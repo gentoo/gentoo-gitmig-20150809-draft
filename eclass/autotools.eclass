@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.41 2006/09/20 15:10:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.42 2006/09/20 18:55:44 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -18,7 +18,7 @@ _autoconf_atom="sys-devel/autoconf"
 if [[ -n ${WANT_AUTOCONF} ]]; then
 	case ${WANT_AUTOCONF} in
 		2.1) _autoconf_atom="=sys-devel/autoconf-${WANT_AUTOCONF}*" ;;
-		2.5) _autoconf_atom=">=sys-devel/autoconf-2.5" ;;
+		2.5) _autoconf_atom=">=sys-devel/autoconf-2.50" ;;
 	esac
 fi
 DEPEND="${_automake_atom}
