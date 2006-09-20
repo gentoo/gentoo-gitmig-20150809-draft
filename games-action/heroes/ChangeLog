@@ -1,6 +1,9 @@
 # ChangeLog for games-action/heroes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.12 2006/04/02 13:10:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.13 2006/09/20 12:26:36 kugelfang Exp $
+
+  20 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> heroes-0.21-r1.ebuild:
+  Marked stable on amd64 wrt bug #148335.
 
   02 Apr 2006; <Tupone@gentoo.org> +files/heroes-0.21-gcc4.patch,
   heroes-0.21-r1.ebuild:
