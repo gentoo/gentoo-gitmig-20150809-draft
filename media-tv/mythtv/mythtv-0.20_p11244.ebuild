@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11244.ebuild,v 1.2 2006/09/20 03:46:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11244.ebuild,v 1.3 2006/09/20 13:02:51 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
@@ -23,8 +23,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	xvmc? (
 		x11-libs/libXvMC
 		video_cards_nvidia? ( || ( x11-drivers/nvidia-drivers
-								 x11-drivers/nvidia-legacy-drivers
-								 media-video/nvidia-glx ) )
+								 x11-drivers/nvidia-legacy-drivers ) )
 		video_cards_via? ( x11-drivers/xf86-video-via )
 		video_cards_i810? ( x11-drivers/xf86-video-i810 )
 	)
