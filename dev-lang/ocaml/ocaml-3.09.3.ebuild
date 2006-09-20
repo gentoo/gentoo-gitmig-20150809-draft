@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3.ebuild,v 1.1 2006/09/16 19:37:13 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3.ebuild,v 1.2 2006/09/20 11:57:34 nattfodd Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -31,6 +31,9 @@ src_compile() {
 
 	local myconf
 	use tcltk || myconf="-no-tk"
+
+	# Fix for kernel_arch != system_ach (bug #135641)
+	myconf=${myconf} "-host ${CHOST}"
 
 	# Fix for bug #46703
 	export LC_ALL=C
