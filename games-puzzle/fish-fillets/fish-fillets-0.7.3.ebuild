@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.7.3.ebuild,v 1.2 2006/08/15 14:59:16 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.7.3.ebuild,v 1.3 2006/09/20 07:37:57 mr_bones_ Exp $
 
-inherit eutils games
+inherit autotools eutils games
 
 DATA_PV="0.7.1"
 DESCRIPTION="Underwater puzzle game - find a safe way out"
@@ -23,6 +23,13 @@ DEPEND=">=media-libs/libsdl-1.2
 
 S=${WORKDIR}/fillets-ng-${PV}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+	eautoreconf
+}
+
 src_compile() {
 	CPPFLAGS="-DSYSTEM_DATA_DIR=\"\\\"${GAMES_DATADIR}/${PN}\\\"\"" \
 	egamesconf \
@@ -31,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	dodir "${GAMES_DATADIR}/${PN}"
 	cd ../fillets-ng-data-${DATA_PV}
