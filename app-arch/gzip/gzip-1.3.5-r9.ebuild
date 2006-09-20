@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r9.ebuild,v 1.4 2006/09/20 17:58:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r9.ebuild,v 1.5 2006/09/20 23:09:40 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ PROVIDE="virtual/gzip"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/CVE-2006-4334-8.diff
+	epatch "${FILESDIR}"/${P}-CVE-2006-4334-8.patch
 	epatch "${FILESDIR}"/${P}-debian.patch
 	epatch "${FILESDIR}"/${P}-znew-tempfile-2.patch
 	epatch "${FILESDIR}"/${P}-gunzip-dir.patch
