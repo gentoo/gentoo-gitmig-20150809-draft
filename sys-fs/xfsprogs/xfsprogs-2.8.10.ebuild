@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.10.ebuild,v 1.2 2006/08/20 21:24:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.10.ebuild,v 1.3 2006/09/20 23:52:30 vapier Exp $
 
 inherit flag-o-matic eutils autotools toolchain-funcs
 
@@ -37,7 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-	replace-flags -O[2-9] -O1
 	export OPTIMIZER=${CFLAGS}
 	export DEBUG=-DNDEBUG
 
