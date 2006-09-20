@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/mpqc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.13 2006/08/17 20:00:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.14 2006/09/20 01:15:51 markusle Exp $
+
+  19 Sep 2006; Markus Dittrich <markusle@gentoo.org> mpqc-2.3.1.ebuild,
+  mpqc-2.3.1-r1.ebuild:
+  Replaced tcltk with tk useflag. Thanks to je_fro <je_fro@yahoo.com>
+  for his patch. This fixes bug #148213.
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> mpqc-2.3.1-r1.ebuild:
   Stable on ppc64

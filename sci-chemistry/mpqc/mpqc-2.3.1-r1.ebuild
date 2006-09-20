@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.3 2006/08/17 20:00:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r1.ebuild,v 1.4 2006/09/20 01:15:51 markusle Exp $
 
 inherit fortran
 
@@ -12,11 +12,11 @@ LICENSE="GPL-2"
 SLOT="0"
 # Should work on x86, amd64 and ppc, at least
 KEYWORDS="~amd64 ppc ppc64 x86"
-IUSE="doc threads tcltk"
+IUSE="doc threads tk"
 
 RDEPEND="virtual/blas
 	virtual/lapack
-	tcltk? ( dev-lang/tk )"
+	tk? ( dev-lang/tk )"
 DEPEND="${RDEPEND}
 	sys-devel/flex
 	dev-lang/perl
@@ -29,7 +29,7 @@ src_unpack() {
 	cd "${S}"
 
 	# do not install tkmolrender if not requested
-	if ! use tcltk; then
+	if ! use tk; then
 		sed -e "s:.*/bin/molrender/tkmolrender.*::" \
 			-e "s:.*\$(INSTALLBINOPT) tkmolrender.*::" \
 			-e "s:/bin/rm -f tkmolrender::" \
@@ -40,8 +40,6 @@ src_unpack() {
 
 
 src_compile() {
-#	CFLAGS_SAVE=${CFLAGS}; CXXFLAGS_SAVE=${CXXFLAGS}
-
 	# Only shared will work on ppc64 - bug #62124
 	# But we always want shared libraries
 	econf \
