@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.10 2006/09/16 18:21:24 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc1-r1.ebuild,v 1.11 2006/09/20 14:51:30 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
 
@@ -155,6 +155,8 @@ pkg_setup() {
 		eerror " the openoffice build will break. "
 		die
 	fi
+
+	java-pkg-opt-2_pkg_setup
 
 }
 
