@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.14.0.ebuild,v 1.1 2006/03/06 17:21:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.14.0.ebuild,v 1.2 2006/09/20 17:25:11 pythonhead Exp $
 
 inherit distutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	# the permissions for this file are 400 in the tarball for no
 	# obvious reason
 	chmod 444 test/data/noendingnewline.py || die "chmod failed"
+	epatch "${FILESDIR}/${PN}-setup.py.patch"
 }
 
 src_install() {
