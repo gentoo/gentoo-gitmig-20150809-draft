@@ -5,5 +5,5 @@
 <maintainer>
   <email>vapier@gentoo.org</email>
 </maintainer>
-<longdescription>A perl script designed for minitoring disk usage. Similar to du</longdescription>
+<longdescription>A perl script designed for monitoring disk usage. Similar to du</longdescription>
 </pkgmetadata>
