@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.9.ebuild,v 1.7 2005/11/11 11:39:06 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather+/wmweather+-2.9.ebuild,v 1.8 2006/09/20 16:48:30 blubb Exp $
 
 IUSE=""
 DESCRIPTION="A dockapp for displaying data collected from METAR, AVN, ETA, and MRF forecasts"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/wmweatherplus/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~mips ~sparc ppc ppc64"
+KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86"
 
 DEPEND="x11-wm/windowmaker
 	dev-libs/libpcre
