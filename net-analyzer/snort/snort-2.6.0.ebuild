@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.0.ebuild,v 1.1 2006/07/08 01:40:13 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.0.ebuild,v 1.2 2006/09/20 10:11:38 stefaan Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.snort.org/dl/current/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
 IUSE="ssl postgres mysql flexresp selinux snortsam odbc prelude inline sguil dynamicplugin timestats perfprofiling linux-smp-stats"
 
 DEPEND="virtual/libc
