@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.33 2006/09/19 19:31:33 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.34 2006/09/20 08:23:41 zzam Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -138,6 +138,9 @@ vdr-plugin_src_unpack() {
 	while [ "$1" ]; do
 
 		case "$1" in
+		all_but_unpack)
+			vdr-plugin_src_unpack add_local_patch patchmakefile
+			;;
 		unpack)
 			base_src_unpack
 			;;
