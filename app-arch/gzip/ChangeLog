@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/gzip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.59 2006/09/20 15:06:42 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.60 2006/09/20 15:13:41 dertobi123 Exp $
+
+  20 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
+  ppc stable, bug #145511
 
 *gzip-1.3.5-r9 (20 Sep 2006)
 
