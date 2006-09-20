@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.17 2006/09/19 23:16:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.18 2006/09/20 03:43:24 cardoe Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -11,7 +11,6 @@ inherit mythtv multilib qt3 versionator
 # Extra configure options to pass to econf
 MTVCONF=${MTVCONF:=""}
 
-LICENSE="GPL-2"
 SLOT="0"
 IUSE="${IUSE} debug mmx"
 
