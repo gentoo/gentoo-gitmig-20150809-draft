@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.49 2006/09/20 07:17:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.50 2006/09/20 16:39:46 blubb Exp $
+
+  20 Sep 2006; <blubb@gentoo.org> nspr-4.6.3.ebuild:
+  stable on amd64 wrt bug 148284
 
   20 Sep 2006; Markus Rothe <corsair@gentoo.org> nspr-4.6.3.ebuild:
   Stable on ppc64; bug #148284
