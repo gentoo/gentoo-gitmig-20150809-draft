@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.25 2006/08/27 15:09:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.26 2006/09/20 15:50:52 pioto Exp $
+
+*elvis-2.2.0-r2 (20 Sep 2006)
+
+  20 Sep 2006; Mike Kelly <pioto@gentoo.org>  elvis-2.2.0-r2.ebuild:
+  Adding support for eselect vi. Currently package.masked. See bug #147857
 
   27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org> -elvis-2.2.0.ebuild:
   clean out older, non-modX ebuild
