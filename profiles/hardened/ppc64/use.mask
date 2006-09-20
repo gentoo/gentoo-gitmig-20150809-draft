@@ -122,3 +122,7 @@ interbase
 mbrola
 multilib
 
+# 20 Sep 2006 Doug Goldstein <cardoe@gentoo.org>
+# Someone tagged MythTV as ~ppc64 but media-tv/ivtv does not
+# work on ppc64 so I'm masking it's USE flag.
+ivtv
