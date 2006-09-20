@@ -52,7 +52,7 @@ java-pkg-2_pkg_setup() {
 # portage.
 # ------------------------------------------------------------------------------
 
-pre_pkg-2_setup() {
+pre_pkg_setup() {
 	java-pkg-2_pkg_setup
 }
 
