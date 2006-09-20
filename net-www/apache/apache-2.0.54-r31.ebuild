@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.21 2006/07/21 03:36:06 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r31.ebuild,v 1.22 2006/09/20 05:11:34 vericgar Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
 LICENSE="Apache-2.0"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="apache2 debug doc ldap mpm-leader mpm-peruser mpm-prefork mpm-threadpool mpm-worker no-suexec ssl static-modules threads selinux"
+IUSE="apache2 debug doc ldap mpm-leader mpm-peruser mpm-prefork mpm-threadpool mpm-worker ssl static-modules threads selinux"
 
 RDEPEND="dev-lang/perl
 	|| ( ~dev-libs/apr-0.9.12 ~dev-libs/apr-0.9.7 ~dev-libs/apr-0.9.6 )
@@ -127,9 +127,12 @@ src_compile() {
 	# and the glibc (pthread) source
 	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> ${S}/config.cache
 
-	if useq no-suexec; then
-		myconf="${myconf} --disable-suexec"
-	else
+# no more USE=no-suexec because of bug 148082
+# see the 2.2 ebuilds for how this can be done cleanly with a working system
+# "out of the box"
+#	if useq no-suexec; then
+#		myconf="${myconf} --disable-suexec"
+#	else
 		myconf="${myconf}
 				--with-suexec-safepath="/usr/local/bin:/usr/bin:/bin" \
 				--with-suexec-logfile=/var/log/apache2/suexec_log \
@@ -141,7 +144,7 @@ src_compile() {
 				--with-suexec-gidmin=100 \
 				--with-suexec-umask=077 \
 				--enable-suexec=shared"
-	fi
+#	fi
 
 	# common confopts
 	myconf="${myconf} \
@@ -190,10 +193,10 @@ src_install () {
 	dodoc ABOUT_APACHE CHANGES INSTALL LAYOUT LICENSE README* ${GENTOO_PATCHDIR}/docs/robots.txt
 
 	# protect the suexec binary
-	if ! useq no-suexec; then
+#	if ! useq no-suexec; then
 		fowners root:apache /usr/sbin/suexec
 		fperms 4710 /usr/sbin/suexec
-	fi
+#	fi
 
 	# apxs needs this to pickup the right lib for install
 	dosym /usr/$(get_libdir) /usr/$(get_libdir)/apache2/lib
@@ -247,7 +250,8 @@ src_install () {
 	mv -v usr/sbin/list_hooks.pl usr/sbin/list_hooks2.pl
 	mv -v usr/sbin/logresolve.pl usr/sbin/logresolve2.pl
 	useq ssl && mv -v usr/sbin/ab-ssl usr/sbin/ab2-ssl
-	useq no-suexec || mv -v usr/sbin/suexec usr/sbin/suexec2
+#	useq no-suexec || 
+	mv -v usr/sbin/suexec usr/sbin/suexec2
 
 	# do the man pages
 	for i in htdigest.1 htpasswd.1 dbmmanage.1; do
@@ -256,7 +260,9 @@ src_install () {
 	for i in ab.8 apxs.8 logresolve.8 rotatelogs.8; do
 		mv -v usr/share/man/man8/${i} usr/share/man/man8/${i/./2.}
 	done
-	useq no-suexec || mv -v usr/share/man/man8/suexec.8 usr/share/man/man8/suexec2.8
+	#useq no-suexec || 
+	mv -v usr/share/man/man8/suexec.8 usr/share/man/man8/suexec2.8
+
 	mv -v usr/share/man/man8/apachectl.8 usr/share/man/man8/apache2ctl.8
 	mv -v usr/share/man/man8/httpd.8 usr/share/man/man8/apache2.8
 

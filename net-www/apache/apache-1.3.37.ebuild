@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.37.ebuild,v 1.3 2006/09/02 15:49:47 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.37.ebuild,v 1.4 2006/09/20 05:11:35 vericgar Exp $
 
 inherit eutils fixheadtails multilib
 
@@ -25,7 +25,7 @@ SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc ssl pam lingerd no-suexec static-modules selinux"
+IUSE="doc ssl pam lingerd static-modules selinux"
 
 DEPEND="dev-lang/perl
 		sys-libs/gdbm
@@ -114,7 +114,10 @@ src_compile() {
 
 	select_modules_config || die "determining modules"
 
-	if ! useq no-suexec; then
+# no more USE=no-suexec because of bug 148082
+# see the 2.2 ebuilds for how this can be done cleanly with a working system
+# "out of the box"
+#	if ! useq no-suexec; then
 		myconf="${myconf}
 				--enable-suexec
 				--suexec-uidmin=1000 \
@@ -124,7 +127,7 @@ src_compile() {
 				--suexec-docroot=/var/www \
 				--suexec-safepath="/usr/local/bin:/usr/bin:/bin" \
 				--suexec-logfile=/var/log/apache/suexec_log"
-	fi
+#	fi
 
 	if useq ssl; then
 		myconf="${myconf} --enable-rule=EAPI"
@@ -162,10 +165,10 @@ src_install() {
 	dodoc ABOUT_APACHE Announcement INSTALL LICENSE README* ${GENTOO_PATCHDIR}/docs/robots.txt
 
 	# protect the suexec binary
-	if ! useq no-suexec; then
+#	if ! useq no-suexec; then
 		fowners root:apache /usr/sbin/suexec
 		fperms 4710 /usr/sbin/suexec
-	fi
+#	fi
 
 	# apxs needs this to pickup the right lib for install
 	dosym /usr/$(get_libdir) /usr/$(get_libdir)/apache/lib

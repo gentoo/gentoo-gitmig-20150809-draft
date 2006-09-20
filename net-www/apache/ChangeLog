@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.498 2006/09/10 17:35:00 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.499 2006/09/20 05:11:34 vericgar Exp $
+
+  20 Sep 2006; Michael Stewart <vericgar@gentoo.org>
+  apache-1.3.34-r10.ebuild, apache-1.3.34-r11.ebuild,
+  apache-1.3.34-r14.ebuild, apache-1.3.37.ebuild, apache-2.0.54-r31.ebuild,
+  apache-2.0.58.ebuild, apache-2.0.58-r2.ebuild, apache-2.0.59.ebuild:
+  Remove no-suexec USE-flag from 1.3 and 2.0 as it's broken and requires
+  modification to configuration to get it working. Fixes bug 148082.
 
   10 Sep 2006; Javier Villavicencio <the_paya@gentoo.org>
   apache-2.2.3.ebuild:
