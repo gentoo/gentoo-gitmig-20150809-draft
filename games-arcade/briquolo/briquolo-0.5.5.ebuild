@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.5.ebuild,v 1.1 2006/01/31 04:25:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.5.ebuild,v 1.2 2006/09/20 16:45:38 blubb Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://briquolo.free.fr/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="nls"
 
 DEPEND="virtual/opengl

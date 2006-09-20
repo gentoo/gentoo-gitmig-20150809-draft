@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/circuslinux
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.12 2006/04/21 20:43:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/circuslinux/ChangeLog,v 1.13 2006/09/20 16:43:55 blubb Exp $
+
+  20 Sep 2006; <blubb@gentoo.org> circuslinux-1.0.3.ebuild:
+  stable on amd64
 
   21 Apr 2006; Michael Sterrett <mr_bones_@gentoo.org>
   circuslinux-1.0.3.ebuild:
