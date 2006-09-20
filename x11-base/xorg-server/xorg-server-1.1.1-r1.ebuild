@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.6 2006/09/16 14:35:50 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.7 2006/09/20 17:24:28 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -183,7 +183,7 @@ DEPEND="${RDEPEND}
 	x11-proto/inputproto
 	x11-proto/bigreqsproto
 	x11-proto/xcmiscproto
-	>=x11-proto/glproto-1.4.6
+	>=x11-proto/glproto-1.4.8
 	dmx? ( x11-proto/dmxproto )
 	dri? ( x11-proto/xf86driproto
 		>=x11-libs/libdrm-2 )
