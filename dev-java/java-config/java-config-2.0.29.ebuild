@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.29.ebuild,v 1.2 2006/09/20 04:25:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.29.ebuild,v 1.3 2006/09/20 13:19:02 caster Exp $
 
 inherit base distutils eutils
 
@@ -13,9 +13,8 @@ SLOT="2"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-# 2.4 needed to fix bug #147594, offending code fixed in trunk, so next bump can drop this
-DEPEND=">=dev-lang/python-2.4"
-RDEPEND=">=dev-lang/python-2.4
+DEPEND="dev-lang/python"
+RDEPEND="${DEPEND}
 	dev-java/java-config-wrapper"
 
 src_install() {
