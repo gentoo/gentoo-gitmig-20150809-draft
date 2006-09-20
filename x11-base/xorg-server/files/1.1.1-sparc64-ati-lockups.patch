@@ -8,7 +8,7 @@ index a3c07f3..a97e6f0 100644
  /* pciAddrHostToBus */	pciAddrNOOP,
 +/* linuxTransAddrBusToHost is busted on sparc64 but the PCI rework tree
 + * makes it all moot, so we kludge it for now */
-+#if defined(__sparc64__)
++#if defined(__sparc__)
 +/* pciAddrBusToHost */  pciAddrNOOP,
 +#else
  /* pciAddrBusToHost */	linuxTransAddrBusToHost,

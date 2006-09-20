@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.171 2006/09/20 17:24:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.172 2006/09/20 22:10:31 dberkholz Exp $
+
+  20 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  files/1.1.1-sparc64-ati-lockups.patch:
+  Base ifdef on __sparc__ rather than __sparc64__. The issue happens on 64-bit
+  kernel/32-bit userland, so sparc64 isn't defined when building the userland.
 
   20 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.1-r1.ebuild:
