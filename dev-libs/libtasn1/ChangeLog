@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.37 2006/08/03 13:52:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.38 2006/09/20 21:58:22 ticho Exp $
+
+  20 Sep 2006; <ticho@gentoo.org> libtasn1-0.3.5.ebuild:
+  Stable on x86. Security bug #147682.
 
 *libtasn1-0.3.5 (03 Aug 2006)
 
