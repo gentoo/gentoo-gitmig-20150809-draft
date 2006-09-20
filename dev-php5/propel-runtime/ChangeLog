@@ -1,6 +1,13 @@
 # ChangeLog for dev-php5/propel-runtime
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-runtime/ChangeLog,v 1.3 2006/09/19 17:35:17 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/propel-runtime/ChangeLog,v 1.4 2006/09/20 11:01:41 sebastian Exp $
+
+*propel-runtime-1.2.0 (20 Sep 2006)
+
+  20 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  -propel-runtime-1.1.1.ebuild, -propel-runtime-1.2.0_rc2.ebuild,
+  +propel-runtime-1.2.0.ebuild:
+  Version bump.
 
 *propel-runtime-1.2.0_rc2 (19 Sep 2006)
 
