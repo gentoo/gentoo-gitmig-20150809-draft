@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/jboss
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/ChangeLog,v 1.13 2005/08/26 13:38:06 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/ChangeLog,v 1.14 2006/09/20 11:29:31 caster Exp $
+
+  20 Sep 2006; Vlastimil Babka <caster@gentoo.org> jboss-3.2.3.ebuild,
+  jboss-3.2.5.ebuild:
+  Add java-pkg to inherit to make it compatible with generation-2 wrt bug
+  #148167.
 
   26 Aug 2005; Diego Pettenò <flameeyes@gentoo.org> jboss-3.2.5.ebuild:
   Fix cp -a usage for Gentoo/FreeBSD.
