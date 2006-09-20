@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/squirm-1.23.ebuild,v 1.3 2006/03/06 21:55:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/squirm-1.23.ebuild,v 1.4 2006/09/20 13:18:08 mrness Exp $
 
 DESCRIPTION="A redirector for Squid"
 HOMEPAGE="http://squirm.foote.com.au"
@@ -29,7 +29,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To enable squirm add the following lines to squid.conf:"
-	einfo "redirect_program /usr/squirm/bin/squirm"
-	einfo "redirect_children 10"
+	einfo "To enable squirm, add the following lines to /etc/squid/squid.conf:"
+	einfo " - for squid ver 2.5"
+	einfo "    ${HILITE}redirect_program /usr/squirm/bin/squirm${NORMAL}"
+	einfo "    ${HILITE}redirect_children 10${NORMAL}"
+	einfo " - for squid ver 2.6"
+	einfo "    ${HILITE}url_rewrite_program /usr/squirm/bin/squirm${NORMAL}"
+	einfo "    ${HILITE}url_rewrite_children 10${NORMAL}"
 }
