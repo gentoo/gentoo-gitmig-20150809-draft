@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r2.ebuild,v 1.1 2006/09/19 22:27:36 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.4-r2.ebuild,v 1.2 2006/09/20 06:23:29 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl noutempter openexr spell ssl tiff
-zeroconf kernel_linux fam"
+zeroconf kernel_linux fam lua"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -42,7 +42,8 @@ RDEPEND="$(qt_min_version 3.3.3)
 	fam? ( virtual/fam )
 	virtual/ghostscript
 	!noutempter? ( sys-libs/libutempter )
-	!kde-base/kde-env"
+	!kde-base/kde-env
+	lua? ( dev-lang/lua )"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
@@ -73,7 +74,7 @@ src_unpack() {
 	kde_src_unpack
 	if use legacyssl ; then
 		# This patch won't be included upstream, see bug #128922
-		epatch ${WORKDIR}/patches/kdelibs_3.5.4-kssl-3des.patch || die "Patch did not apply."
+		epatch "${WORKDIR}/patches/kdelibs_3.5.4-kssl-3des.patch" || die "Patch did not apply."
 	fi
 
 	if use cups && has_version '>=net-print/cups-1.2_pre'; then
@@ -86,19 +87,21 @@ src_unpack() {
 		epatch "${WORKDIR}/kdeprint-3.5.2-cups-1.2-patches/"
 	fi
 
+	epatch "${FILESDIR}/${PN}-3.5-lua.patch"
+
 	# TODO - fix broken tests
-	sed -i -e "s:client tests:client:" ${S}/dcop/Makefile.am
-	sed -i -e "s:SUBDIRS = . ui tests:SUBDIRS = . ui:" ${S}/kspell2/Makefile.am
+	sed -i -e "s:client tests:client:" "${S}/dcop/Makefile.am"
+	sed -i -e "s:SUBDIRS = . ui tests:SUBDIRS = . ui:" "${S}/kspell2/Makefile.am"
 
 	# TODO - kspell2 Xspell plugins are automagically detected.
-	#        As nothing uses kspell2, don't install them.
-	sed -i -e "s:plugins::" ${S}/kspell2/Makefile.am || die "sed failed"
+	#		 As nothing uses kspell2, don't install them.
+	sed -i -e "s:plugins::" "${S}/kspell2/Makefile.am" || die "sed failed"
 }
 
 src_compile() {
 	rm -f ${S}/configure
 
-	myconf="--with-distribution=Gentoo
+	myconf="--with-distribution=Gentoo --disable-fast-malloc
 			$(use_enable fam libfam) $(use_enable kernel_linux dnotify)
 			--with-libart --with-libidn
 			$(use_with acl) $(use_with ssl)
@@ -106,25 +109,12 @@ src_compile() {
 			$(use_with kerberos gssapi) $(use_with tiff)
 			$(use_with jpeg2k jasper) $(use_with openexr)
 			$(use_enable cups) $(use_enable zeroconf dnssd)
-			--without-hspell
-			--without-aspell"
-	if use noutempter ; then
-		myconf="${myconf} --without-utempter"
-	else
-		myconf="${myconf} --with-utempter"
-	fi
-
-	if use spell && has_version app-text/aspell; then
-		myconf="${myconf} --with-aspell"
-	else
-		myconf="${myconf} --without-aspell"
-	fi
+			$(use_with !noutempter utempter) $(use_with lua)
+			--without-hspell --without-aspell"
 
 	if has_version x11-apps/rgb; then
 		myconf="${myconf} --with-rgbfile=/usr/share/X11/rgb.txt"
 	fi
-
-	myconf="${myconf} --disable-fast-malloc"
 
 	# fix bug 58179, bug 85593
 	# kdelibs-3.4.0 needed -fno-gcse; 3.4.1 needs -mminimal-toc; this needs a
@@ -163,7 +153,7 @@ src_install() {
 		libdirs="${libdirs}:${PREFIX}/${libdir}"
 	done
 
-	cat <<EOF > ${D}/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
+	cat <<EOF > "${D}"/etc/env.d/45kdepaths-${SLOT} # number goes down with version upgrade
 PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${libdirs:1}
