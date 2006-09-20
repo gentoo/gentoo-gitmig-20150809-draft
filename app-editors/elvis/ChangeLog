@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.26 2006/09/20 15:50:52 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.27 2006/09/20 18:43:58 pioto Exp $
+
+  20 Sep 2006; Mike Kelly <pioto@pioto.org> elvis-2.2.0-r2.ebuild:
+  Forgot a DEPEND on eselect-vi
 
 *elvis-2.2.0-r2 (20 Sep 2006)
 

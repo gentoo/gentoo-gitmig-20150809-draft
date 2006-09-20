@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.5-r1.ebuild,v 1.1 2006/09/20 16:05:30 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.5-r1.ebuild,v 1.2 2006/09/20 18:46:10 pioto Exp $
 
 inherit eutils
 
@@ -16,7 +16,8 @@ IUSE="perl"
 RDEPEND=">=sys-libs/ncurses-5.2
 	perl? ( dev-lang/perl )"
 DEPEND="${RDEPEND}
-	sys-devel/flex"
+	sys-devel/flex
+	app-admin/eselect-vi"
 PROVIDE="virtual/editor"
 
 src_unpack() {
