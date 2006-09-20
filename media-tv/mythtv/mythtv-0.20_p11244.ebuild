@@ -1,12 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11244.ebuild,v 1.1 2006/09/20 03:34:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11244.ebuild,v 1.2 2006/09/20 03:46:33 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
 DESCRIPTION="Homebrew PVR project"
-
-LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
