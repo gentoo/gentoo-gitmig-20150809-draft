@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.209 2006/09/19 19:20:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.210 2006/09/20 00:21:07 liquidx Exp $
+
+*python-2.5-r1 (19 Sep 2006)
+
+  19 Sep 2006; Alastair Tse <liquidx@gentoo.org> python-2.5.ebuild
+  +python-2.5-r1.ebuild:
+  Fixed patches that still contain the zlib mistake from the 2.4
+  patchset. Disabled etree tests.
 
 *python-2.5 (19 Sep 2006)
 
