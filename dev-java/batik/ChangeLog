@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.32 2006/01/23 09:12:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.33 2006/09/20 22:23:38 caster Exp $
+
+*batik-1.6-r1 (20 Sep 2006)
+*batik-1.5.1-r5 (20 Sep 2006)
+*batik-1.5-r1 (20 Sep 2006)
+
+  20 Sep 2006; Vlastimil Babka <caster@gentoo.org> +batik-1.5-r1.ebuild,
+  +batik-1.5.1-r5.ebuild, +batik-1.6-r1.ebuild:
+  Revision bumps to use new generation-2 java eclasses. Fixes bug #146326 and
+  also #116976.
 
   23 Jan 2006; Petteri Räty <betelgeuse@gentoo.org> +batik-1.5.ebuild:
   Added batik-1.5 back because it is needed by dev-java/fop.
