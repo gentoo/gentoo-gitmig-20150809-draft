@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gnusim8085
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.8 2006/09/18 22:12:33 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.9 2006/09/20 16:24:35 calchan Exp $
+
+  20 Sep 2006; Denis Dupeyron <calchan@gentoo.org> gnusim8085-1.2.90.ebuild:
+  Fixed doc installation.
 
 *gnusim8085-1.2.90 (18 Sep 2006)
 
