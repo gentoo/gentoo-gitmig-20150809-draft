@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.0.ebuild,v 1.1 2006/09/19 21:38:26 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.0.ebuild,v 1.2 2006/09/20 01:17:17 metalgod Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -103,6 +103,7 @@ pkg_postinst() {
 	einfo "If you have a audio player supported by libnjb please"
 	einfo "rebuild this package with USE=njb"
 	einfo
-	einfo "Banshee is build only with gstreamer 0.10.x support."
+	einfo "If you want to improve your experience with Banshee"
+	einfo "we recommend to emerge media-plugins/banshee-official-plugins"
 	einfo
 }
