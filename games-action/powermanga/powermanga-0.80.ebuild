@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.80.ebuild,v 1.2 2006/04/13 19:49:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.80.ebuild,v 1.3 2006/09/20 16:44:40 blubb Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://linux.tlk.fr/games/Powermanga/download/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-0.11.0
