@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.42 2006/09/20 18:55:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.43 2006/09/20 19:10:36 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -151,6 +151,11 @@ eautomake() {
 	local extra_opts
 
 	[[ -f Makefile.am ]] || return 0
+
+	if [[ -n ${WANT_AUTOMAKE} ]]; then
+		export WANT_AUTOMAKE # let the automake wrapper pick it up
+		einfo "Required automake ${WANT_AUTOMAKE}. Using $(automake --version | head -n 1)."
+	fi
 
 	if [[ -z ${FROM_EAUTORECONF} && -f Makefile.in ]]; then
 		local used_automake
