@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>caleb@gentoo.org</email>
+  <name>Caleb Tennis</name>
+</maintainer>
+<longdescription>Hamachi is an encrypted tunneling service that allows pseudo networks to be joined together.
+</longdescription>
+</pkgmetadata>

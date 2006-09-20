@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/hamachi
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.1 2006/09/20 12:02:02 caleb Exp $
+
+*hamachi-0.9.9.9_p20-r2 (20 Sep 2006)
+
+  20 Sep 2006; Caleb Tennis <caleb@gentoo.org> +files/hamachi.confd,
+  +files/hamachi.initd, +files/tuncfg.confd, +files/tuncfg.initd,
+  +metadata.xml, +hamachi-0.9.9.9_p20-r2.ebuild:
+  Initial import, from bug #105386
+
