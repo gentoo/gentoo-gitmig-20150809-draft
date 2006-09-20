@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.2 2006/09/18 01:55:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.3 2006/09/20 11:07:38 caster Exp $
 
 inherit java-pkg-2
 
@@ -26,7 +26,9 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-jdk15.patch"
 
 	mkdir ext && cd ext
 	java-pkg_jar-from jessie
