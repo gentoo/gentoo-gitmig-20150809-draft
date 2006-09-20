@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.150 2006/09/12 18:43:27 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.151 2006/09/20 14:59:41 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -122,6 +122,11 @@ if [[ $(get_major_version ) -ge 7 ]] ; then
 			!<app-vim/autoalign-11
 			!app-vim/supertab"
 	fi
+fi
+
+# eselect-vi support
+if version_is_at_least 7.0.109 ; then
+	DEPEND="${DEPEND} app-admin/eselect-vi"
 fi
 
 HOMEPAGE="http://www.vim.org/"
@@ -603,7 +608,14 @@ vim_src_install() {
 # but they might be good for gvim as well (see bug 45828)
 update_vim_symlinks() {
 	local f syms
-	syms="vi vimdiff rvim ex view rview"
+	if ! version_is_at_least 7.0.109 ; then
+		syms="vi vimdiff rvim ex view rview"
+	else
+		# Use eselect vi instead.
+		syms="vimdiff rvim ex view rview"
+		einfo "Calling eselect vi update..."
+		eselect vi update
+	fi
 
 	# Make or remove convenience symlink, vim -> gvim
 	if [[ -f ${ROOT}/usr/bin/gvim ]]; then
