@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.24 2006/06/07 15:14:00 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.25 2006/09/20 16:05:30 pioto Exp $
+
+*vile-9.5-r1 (20 Sep 2006)
+
+  20 Sep 2006; Mike Kelly <pioto@pioto.org> +vile-9.5-r1.ebuild:
+  Adding support for eselect vi. Currently package.masked. See bug #147857
 
   07 Jun 2006; Patrick McLean <chutzpah@gentoo.org>
   +files/vile-9.5-define-LEAD-before-use.patch, vile-9.5.ebuild:
