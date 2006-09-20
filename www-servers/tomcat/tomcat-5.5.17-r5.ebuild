@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r3.ebuild,v 1.2 2006/09/09 14:33:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r5.ebuild,v 1.1 2006/09/20 14:34:07 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -159,7 +159,7 @@ src_compile(){
 		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
 	fi
 
-	eant ${antflags} || die "compile failed"
+	eant ${antflags}
 
 }
 
