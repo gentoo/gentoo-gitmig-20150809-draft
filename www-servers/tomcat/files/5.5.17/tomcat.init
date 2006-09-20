@@ -1,10 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.4 2006/09/20 14:34:07 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.5 2006/09/20 17:53:27 wltjr Exp $
 
 init_env_vars() {
 	# Set some sane defaults
+	if [ -z "${CATALINA_TMPDIR}" ] ; then
+		CATALINA_TMPDIR="${CATALINA_BASE}"/temp
+	fi
 	JPDA_TRANSPORT=${JPDA_TRANSPORT:="dt_socket"}
 	JPDA_ADDRESS=${JPDA_ADDRESS:="8000"}
 	JPDA_OPTS=${JPDA_OPTS="-Xdebug -Xrunjdwp:transport=${JPDA_TRANSPORT},address=${JPDA_ADDRESS},server=y,suspend=n"}

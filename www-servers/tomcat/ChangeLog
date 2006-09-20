@@ -1,13 +1,20 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.61 2006/09/20 14:34:06 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.62 2006/09/20 17:53:27 wltjr Exp $
+
+*tomcat-5.5.17-r6 (20 Sep 2006)
+
+  20 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  files/5.5.17/tomcat.init, -tomcat-5.5.17-r4.ebuild,
+  -tomcat-5.5.17-r5.ebuild, +tomcat-5.5.17-r6.ebuild:
+  Fixed init script to set ${CATALINA_TMPDIR} per bug #148387
 
 *tomcat-5.5.17-r5 (20 Sep 2006)
 
   20 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   files/5.5.17/tomcat.init, -tomcat-5.5.17-r3.ebuild,
   +tomcat-5.5.17-r5.ebuild:
-  Fixed init script to respect  per bug # 148331. Removed older ebuild
+  Fixed init script to respect ${CATALINA_BASE} per bug # 148331. Removed older ebuild
 
 *tomcat-5.5.17-r4 (09 Sep 2006)
 *tomcat-5.0.28-r13 (09 Sep 2006)
