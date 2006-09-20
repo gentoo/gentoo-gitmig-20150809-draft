@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2.ebuild,v 1.1 2006/01/26 05:05:38 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.7.2.ebuild,v 1.2 2006/09/20 13:02:45 williamh Exp $
+
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Daemon that provides access to the Linux/Unix console for a blind person"
 HOMEPAGE="http://mielke.cc/brltty/"
@@ -17,6 +19,13 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
 
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}"/${PN}-3.7.2-nostrip.patch
+}
+
 src_compile() {
 	econf `use_enable gpm` \
 		`use_with X x` \
@@ -28,6 +37,11 @@ src_compile() {
 
 src_install() {
 	make INSTALL_ROOT=${D} install || die
+	TMPDIR=../../Programs scanelf -RBXr ${D} -o /dev/null
+	libdir="$(get_libdir)"
+	mkdir -p ${D}/usr/${libdir}/
+	mv ${D}/${libdir}/*.a ${D}/usr/${libdir}/
+	gen_usr_ldscript libbrlapi.so
 	cd Documents
 	rm *.made
 	dodoc ChangeLog README* Manual.* TODO brltty.conf
