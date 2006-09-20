@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/paros-3.2.12.ebuild,v 1.2 2006/09/20 12:44:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/paros-3.2.13.ebuild,v 1.1 2006/09/20 12:44:50 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip
@@ -23,7 +23,7 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/without_embed.patch"
+	epatch "${FILESDIR}/${P}-without_embed.patch"
 }
 
 src_compile() {
