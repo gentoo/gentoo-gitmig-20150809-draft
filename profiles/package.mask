@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5920 2006/09/20 20:24:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5921 2006/09/20 21:07:59 wltjr Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -801,11 +801,6 @@ net-wireless/aircrack
 # Saleem Abdulrasool <compnerd@gentoo.org> (4 Jul 2006)
 # Initial import mask
 >=gnome-extra/gsynaptics-0.9.7
-
-# Joshua Nichols <nichoj@gentoo.org> (28 Jun 2002)
-# Upstream discourages the use of 5.0.x, in favor of 5.5.x,
-# except in the cases where applications explicitly need 5.0.x
-<www-servers/tomcat-5.5
 
 # Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
 # Still masked wildfire because needs testing of new Java systemJava 2. If you unmask and have problems building please file a bug to me and add java@gentoo.org to the CC list
