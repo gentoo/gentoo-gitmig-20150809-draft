@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6.ebuild,v 1.1 2006/09/20 11:59:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9.6.ebuild,v 1.2 2006/09/20 12:05:37 mrness Exp $
 
 inherit eutils
 
@@ -37,8 +37,8 @@ src_install() {
 	insinto /usr/lib/ntlmaps
 	doins lib/* || die "failed to install python modules"
 	# doc -------------------------------------------------------------------
-	dodoc *.txt doc/*.txt
-	dohtml doc/*
+	dodoc doc/*.txt
+	dohtml doc/*.{gif,htm}
 	# conf ------------------------------------------------------------------
 	insopts -m0640 -g ntlmaps
 	insinto /etc/ntlmaps
