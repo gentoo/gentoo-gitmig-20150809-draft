@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.19 2006/02/28 00:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.20 2006/09/20 23:10:35 vapier Exp $
 
 opts="reload"
 
@@ -11,6 +11,8 @@ depend() {
 }
 
 SSHD_CONFDIR=${SSHD_CONFDIR:-/etc/ssh}
+SSHD_PIDFILE=${SSHD_PIDFILE:-/var/run/${SVCNAME}.pid}
+SSHD_BINARY=${SSHD_BINARY:-/usr/sbin/sshd}
 
 checkconfig() {
 	if [[ ! -d /var/empty ]] ; then
@@ -19,13 +21,13 @@ checkconfig() {
 
 	if [[ ! -e ${SSHD_CONFDIR}/sshd_config ]] ; then
 		eerror "You need an ${SSHD_CONFDIR}/sshd_config file to run sshd"
-		eerror "There is a sample file in  /usr/share/doc/openssh"
+		eerror "There is a sample file in /usr/share/doc/openssh"
 		return 1
 	fi
 
 	gen_keys || return 1
 
-	/usr/sbin/sshd -t ${myopts} || return 1
+	${SSHD_BINARY} -t ${myopts} || return 1
 }
 
 gen_keys() {
@@ -46,24 +48,26 @@ gen_keys() {
 
 start() {
 	local myopts=""
-	[[ ${SVCNAME} != "sshd" ]] && myopts="${myopts} -o PidFile=/var/run/${SVCNAME}.pid"
-	[[ ${SSHD_CONFDIR} != "/etc/ssh" ]] && myopts="${myopts} -f ${SSHD_CONFDIR}/sshd_config"
+	[[ ${SSHD_PIDFILE} != "/var/run/sshd.pid" ]] \
+		&& myopts="${myopts} -o PidFile=${SSHD_PIDFILE}"
+	[[ ${SSHD_CONFDIR} != "/etc/ssh" ]] \
+		&& myopts="${myopts} -f ${SSHD_CONFDIR}/sshd_config"
 
 	checkconfig || return 1
 	ebegin "Starting ${SVCNAME}"
-	/usr/sbin/sshd ${myopts} ${SSHD_OPTS}
+	${SSHD_BINARY} ${myopts} ${SSHD_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --stop --quiet --pidfile /var/run/${SVCNAME}.pid
+	start-stop-daemon --stop --quiet --pidfile ${SSHD_PIDFILE}
 	eend $?
 }
 
 reload() {
 	ebegin "Reloading ${SVCNAME}"
-	start-stop-daemon --stop --quiet --pidfile /var/run/${SVCNAME}.pid \
+	start-stop-daemon --stop --quiet --pidfile ${SSHD_PIDFILE} \
 		--signal HUP
 	eend $?
 }
