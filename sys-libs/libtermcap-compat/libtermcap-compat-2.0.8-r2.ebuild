@@ -1,16 +1,15 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.1 2005/08/20 04:22:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.2 2006/09/20 23:13:45 vapier Exp $
+
+# we only want this for binary-only packages, so we will only be installing
+# the lib used at runtime; no headers and no files to link against
 
 inherit eutils multilib
 
 PATCHVER=0.1
 
-MY_PN="${PN/lib/}"
-MY_PN="${MY_PN/-compat/}"
-MY_P="${MY_PN}-${PV}"
-S="${WORKDIR}/${MY_P}"
-PATCHDIR="${WORKDIR}/patch"
+MY_P="termcap-${PV}"
 DESCRIPTION="Compatibility package for old termcap-based programs"
 HOMEPAGE="http://www.catb.org/~esr/terminfo/"
 SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
@@ -24,37 +23,41 @@ IUSE=""
 
 DEPEND=""
 
+S=${WORKDIR}/${MY_P}
+
 src_unpack() {
 	unpack ${A}
 
-	cd ${WORKDIR}
-	mv termtypes.tc termcap
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/tc.file
+	cd "${WORKDIR}"
+	mv termtypes.tc termcap || die
+	EPATCH_SOURCE="${WORKDIR}/patch"
+	EPATCH_SUFFIX="patch"
+	epatch "${EPATCH_SOURCE}"/tc.file
 
-	cd ${S}; epatch ${FILESDIR}/${PN}_bcopy_fix.patch
-	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
-
-	epatch ${FILESDIR}/${P}-fPIC.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}_bcopy_fix.patch
+	epatch "${EPATCH_SOURCE}"
+	epatch "${FILESDIR}"/${P}-fPIC.patch
 }
 
 src_compile() {
 	emake prefix="/" CFLAGS="${CFLAGS} -I." || die
 }
 
-src_install () {
+src_install() {
 	dodir /lib /include
-	make prefix="${D}" OWNER="root:root" install || die
-
-	# Conflicts with ncurses.
-	rm -r "${D}"/include
-
-	cd "${D}"/lib
-	rm -f libtermcap.{a,so}
-	dosym libtermcap.so.${PV} /lib/libtermcap.so.2
+	emake prefix="${D}" OWNER="root:root" install || die
+	dodoc ChangeLog README
 
 	insinto /etc
-	doins ${WORKDIR}/termcap
+	doins "${WORKDIR}"/termcap
 
-	cd ${S}
-	dodoc ChangeLog README
+	# now punt everything used for compiling
+	cd "${D}"
+	rm -r include || die
+
+	mv lib $(get_libdir) || die
+	dosym libtermcap.so.${PV} /$(get_libdir)/libtermcap.so.2
+	cd $(get_libdir)
+	rm -f libtermcap.{a,so}
 }

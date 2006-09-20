@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libtermcap-compat-2.0.8-fPIC.patch 740 RMD160 dcf27ab016d92c2e0747212635a38666e2da4afb SHA1 2f11f7a24a644913cfa199e4c72e85c6fa209552 SHA256 21cbd987dc29dd24e9130b24f7530ecf4c0a14db854d1fc74bf1422d9b3bf17f
 MD5 f44d7442f29d0a63d10f7633925ccd6e files/libtermcap-compat-2.0.8-fPIC.patch 740
 RMD160 dcf27ab016d92c2e0747212635a38666e2da4afb files/libtermcap-compat-2.0.8-fPIC.patch 740
@@ -13,10 +16,10 @@ EBUILD libtermcap-compat-2.0.8-r1.ebuild 1676 RMD160 d70b7ca05e6777fbd8bd9aa161c
 MD5 7039c1298ec9cf646c606c660e1f8da0 libtermcap-compat-2.0.8-r1.ebuild 1676
 RMD160 d70b7ca05e6777fbd8bd9aa161ced7ccfb60a1a1 libtermcap-compat-2.0.8-r1.ebuild 1676
 SHA256 1af320c22316f8d06b96fccafda83f2359427cfde5f25f948dd519baf2171a48 libtermcap-compat-2.0.8-r1.ebuild 1676
-EBUILD libtermcap-compat-2.0.8-r2.ebuild 1409 RMD160 9f93e6a7797afbe269203e4b11132ab611bea743 SHA1 f7ca86713ef49b977b5c223fc832c9f3f51a2680 SHA256 42ddd5519757d15bb601fe4ec0f0952d7613a85f344b09777ca997ab4f7927ca
-MD5 6fdbddb178ac8f4ad820b9b239cc197b libtermcap-compat-2.0.8-r2.ebuild 1409
-RMD160 9f93e6a7797afbe269203e4b11132ab611bea743 libtermcap-compat-2.0.8-r2.ebuild 1409
-SHA256 42ddd5519757d15bb601fe4ec0f0952d7613a85f344b09777ca997ab4f7927ca libtermcap-compat-2.0.8-r2.ebuild 1409
+EBUILD libtermcap-compat-2.0.8-r2.ebuild 1579 RMD160 9d5decf7132ccab92786df014e39ae712d79dfcb SHA1 295cf76d2e83fe3bcf5f5af68cba3c096694c5fc SHA256 8fade7ebc39142cae9f08c88a7e6b38bffbe604af454c4089224e929c22134b3
+MD5 2911d1fc830fcb2ce84210d4987ce641 libtermcap-compat-2.0.8-r2.ebuild 1579
+RMD160 9d5decf7132ccab92786df014e39ae712d79dfcb libtermcap-compat-2.0.8-r2.ebuild 1579
+SHA256 8fade7ebc39142cae9f08c88a7e6b38bffbe604af454c4089224e929c22134b3 libtermcap-compat-2.0.8-r2.ebuild 1579
 MISC ChangeLog 3978 RMD160 48cc3a7484201e0eb82e111e7908a1e89fa07d8a SHA1 ee4b1b4b06d497b14b4ec705ca0f39110ff4163d SHA256 a40f30427b20e085672c3b97d344fdf4f0296e37543db1f6d9c75402c2c23dfb
 MD5 68573964901e9045735a1f4a4fa8efdf ChangeLog 3978
 RMD160 48cc3a7484201e0eb82e111e7908a1e89fa07d8a ChangeLog 3978
@@ -31,3 +34,10 @@ SHA256 8df07c775663dda54ea50880a1ef64e8ae11dc96a7c148b1b1bcf09def519aa1 files/di
 MD5 f5bc5e61590d7533c34b8f7e021e2516 files/digest-libtermcap-compat-2.0.8-r2 771
 RMD160 003f4b4bad79b05387aa241b8a64ec6f3c26c004 files/digest-libtermcap-compat-2.0.8-r2 771
 SHA256 8df07c775663dda54ea50880a1ef64e8ae11dc96a7c148b1b1bcf09def519aa1 files/digest-libtermcap-compat-2.0.8-r2 771
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFEctVamhnQswr0vIRAimCAKCxucgYJEEmpJD3/PgkXIcXKClhwwCcDbo9
+0nRwrBPheAh7x8pvDrzQd1c=
+=5qL+
+-----END PGP SIGNATURE-----
