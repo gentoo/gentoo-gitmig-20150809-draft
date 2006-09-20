@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.80 2006/07/16 10:34:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.81 2006/09/20 21:46:00 marienz Exp $
+
+*twisted-2.4.0-r1 (20 Sep 2006)
+
+  20 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-2.4.0-python-2.5-compat.patch,
+  +files/twisted-2.4.0-remove-newjelly.patch,
+  +files/twisted-2.4.0-trial-attempted-fix.patch,
+  +files/twisted-2.4.0-trial-python-2.5-compat.patch,
+  +files/twisted-2.4.0-unjellyable.patch, +twisted-2.4.0-r1.ebuild:
+  Add a couple of patches from upstream to work with python 2.5. Does not
+  quite pass its tests, that needs a fix in zopeinterface.
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   twisted-2.4.0.ebuild:
