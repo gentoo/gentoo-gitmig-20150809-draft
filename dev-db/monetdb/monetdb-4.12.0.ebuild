@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.12.0.ebuild,v 1.1 2006/06/23 19:40:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/monetdb/monetdb-4.12.0.ebuild,v 1.2 2006/09/20 08:17:11 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -68,21 +68,19 @@ src_compile() {
 	# The tar has capitals, the ebuild doesn't...
 	cd "${WORKDIR}/MonetDB-${PV_M}"
 
-	local myconf=""
+	# setting these respects the user's CFLAGS and disables -Werror etc.
+	local myconf="--disable-optimize --disable-debug"
+	sed -i \
+		-e 's|CFLAGS="\$CFLAGS \\\$(X_CFLAGS)"||' \
+		configure || die "failed fixing configure"
 
 	# Gentoo's amd64 doesn't allow 32-bits monetdb to compile, hence we switch
 	# to 64-bits Mserver here.  Note that this also gives 64-bits OIDs.
 	use amd64 && myconf="${myconf} --enable-bits=64"
 
-	if use debug;
-	then
-		myconf="${myconf} --disable-optimize --enable-assert --enable-debug"
-	else
-		myconf="${myconf} --enable-optimize --disable-assert --disable-debug"
-	fi
-
 	myconf="${myconf} $(use_with java)"
 	myconf="${myconf} $(use_with readline)"
+	myconf="${myconf} $(use_enable debug assert)"
 
 	econf ${myconf} || die "econf monetdb failed"
 
