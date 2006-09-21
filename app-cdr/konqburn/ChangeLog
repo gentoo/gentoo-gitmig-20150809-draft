@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/konqburn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.9 2006/08/11 17:55:20 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.10 2006/09/21 19:28:03 deathwing00 Exp $
+
+  21 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  -konqburn-0.6.2.ebuild, -konqburn-0.7.ebuild:
+  Clean-up as requested by bug #148464.
 
 *konqburn-1.0 (11 Aug 2006)
 
