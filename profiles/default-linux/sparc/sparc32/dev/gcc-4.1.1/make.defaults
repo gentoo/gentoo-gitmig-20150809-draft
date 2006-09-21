@@ -1,25 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/gcc-4.1.1/make.defaults,v 1.1 2006/09/19 02:12:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/gcc-4.1.1/make.defaults,v 1.2 2006/09/21 02:21:22 weeve Exp $
 
-# 32bit kernel, 32bit userland
-CHOST="sparc-unknown-linux-gnu"
-PROFILE_ARCH="sparc"
+# USE settings
+USE="apache2 berkdb bitmap-fonts crypt cups dlloader fortran fbcon foomaticdb gdbm gif gstreamer gtk gtk2 imlib jpeg libwww motif ncurses nls oss pam perl png python readline spell ssl tcpd truetype truetype-fonts type1-fonts udev X xml zlib"
 
-# Just sparc32 binutils for linux-headers
-CTARGETS_BINUTILS="sparc-unknown-linux-gnu"
-
-# Multilib stuff
-MULTILIB_ABIS="sparc32"
-DEFAULT_ABI="sparc32"
-ABI=${DEFAULT_ABI}
-CFLAGS_sparc32="-m32"
-LDFLAGS_sparc32="-m elf32_sparc"
-CHOST_sparc32="sparc-unknown-linux-gnu"
-CTARGET_sparc32="sparc-unknown-linux-gnu"
-CDEFINE_sparc32="!__arch64__"
-LIBDIR_sparc32="lib"
-
-# Compiler flags
-CFLAGS="-O2 -pipe"
-CXXFLAGS=${CFLAGS}
+# Just the barebones until bug #120088 is properly fixed <gustavoz>
+USE="${USE} dba gd"

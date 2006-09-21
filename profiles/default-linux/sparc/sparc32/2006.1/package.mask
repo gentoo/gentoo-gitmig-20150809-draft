@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/package.mask,v 1.2 2006/05/08 14:15:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/package.mask,v 1.3 2006/09/21 02:21:22 weeve Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Totally untested on sparc32
@@ -187,3 +187,7 @@ dev-php5/php-java-bridge
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # To avoid odd toolchain mixups
 <dev-libs/libffi-3.4.3
+# Mask gcc-4.x and glibc-2.4 until they are ready
+>=sys-devel/gcc-4.0.0
+>=sys-libs/glibc-2.4
+>=sys-kernel/linux-headers-2.6.17
