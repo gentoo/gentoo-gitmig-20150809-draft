@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/xbatt-1.2.1.ebuild,v 1.7 2006/01/21 16:27:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/xbatt-1.2.1.ebuild,v 1.8 2006/09/21 11:47:02 nelchael Exp $
 
 DESCRIPTION="Notebook battery indicator for X"
 HOMEPAGE="http://www.clave.gr.jp/~eto/xbatt/"
@@ -21,7 +21,9 @@ RDEPEND="|| ( (
 		x11-libs/libXpm )
 	virtual/x11 )"
 DEPEND="${RDEPEND}
-	|| ( x11-proto/xextproto virtual/x11 )"
+	|| ( ( x11-proto/xextproto
+			x11-misc/imake )
+		virtual/x11 )"
 
 src_compile() {
 	xmkmf || die
