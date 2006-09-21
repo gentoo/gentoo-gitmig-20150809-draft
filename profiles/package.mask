@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5921 2006/09/20 21:07:59 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5922 2006/09/21 03:12:10 nixphoeni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Joe Sapp <nixphoeni@gentoo.org> (20 Sep 2006)
+# Upstream is dead and it fails to build with the version of
+# x11-libs/cairo in the tree.  Masked pending someone fixing
+# the upstream package - see bug 127241.
+# Pending for removal on 20 Oct 2006.
+x11-wm/waimea
+x11-misc/wampager
 
 # Alin Nastac <mrness@gentoo.org> (20 Sep 2006)
 # Masked due to its proven inability to work with squid-2.6.
@@ -1017,12 +1025,6 @@ dev-python/PyQt4
 # Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
 # Couple of issues with this version, waiting for the next release.
 ~kde-misc/kdiff3-0.9.89
-
-# Joe Sapp <nixphoeni@gentoo.org> (07 Apr 2006)
-# Upstream is dead and it fails to build with the version of
-# x11-libs/cairo in the tree.  Masked pending me fixing (or
-# removing) it - see bug 127241.
-#x11-wm/waimea
 
 # Keri Harris <keri@gentoo.org> (08 Apr 2006)
 # Development release, requires careful testing.
