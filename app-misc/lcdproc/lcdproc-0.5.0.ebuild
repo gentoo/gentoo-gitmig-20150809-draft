@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.0.ebuild,v 1.2 2006/09/20 12:10:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.0.ebuild,v 1.3 2006/09/21 03:11:29 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -18,17 +18,17 @@ IUSE="doc debug ldap nfs samba usb
 
 DEPEND="sys-apps/sed
 	>=sys-kernel/linux-headers-2.6.11
-	doc?      ( >=app-text/docbook-sgml-utils )
+	doc?      ( app-text/docbook-sgml-utils )
 	ldap?     ( net-nds/openldap )
 	usb?      ( dev-libs/libusb )
 
-	graphlcd? ( >=app-misc/graphlcd-base )
+	graphlcd? ( app-misc/graphlcd-base )
 	irman?    ( media-libs/libirman )
 	lirc?     ( app-misc/lirc )
-	ncurses?  ( >=sys-libs/ncurses )
-	svga?     ( >=media-libs/svgalib )
+	ncurses?  ( sys-libs/ncurses )
+	svga?     ( media-libs/svgalib )
 	ula200?   ( dev-embedded/libftdi dev-libs/libusb )
-	xosd?     ( >=x11-libs/xosd ) "
+	xosd?     ( x11-libs/xosd ) "
 
 USE_DRIVERS="curses glcdlib irman lirc svga ula200 xosd"
 EXTRA_DRIVERS="bayrad CFontz CFontz633 CFontzPacket CwLnx \
