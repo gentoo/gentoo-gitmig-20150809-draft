@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.4 2006/01/21 16:55:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.48.ebuild,v 1.5 2006/09/21 12:14:51 nelchael Exp $
+
+inherit eutils
 
 DESCRIPTION="front end to xdu for viewing disk usage graphically under X11"
 SRC_URI="http://xdiskusage.sourceforge.net/${P}.tgz"
@@ -13,6 +15,13 @@ IUSE=""
 
 DEPEND="x11-libs/fltk
 	virtual/glut"
+
+src_unpack() {
+
+	unpack ${A}
+	epatch "${FILESDIR}/${P}-amd64.patch"
+
+}
 
 src_compile() {
 	econf || die "configure failed"
