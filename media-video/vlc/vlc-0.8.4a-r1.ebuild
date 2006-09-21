@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.16 2006/07/31 23:51:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.4a-r1.ebuild,v 1.17 2006/09/21 18:17:14 flameeyes Exp $
+
+WANT_AUTOMAKE=1.8
 
 inherit eutils wxwidgets multilib autotools toolchain-funcs gnome2
 
