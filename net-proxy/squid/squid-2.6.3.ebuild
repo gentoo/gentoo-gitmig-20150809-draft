@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.3.ebuild,v 1.1 2006/08/19 08:02:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.3.ebuild,v 1.2 2006/09/21 05:34:40 mrness Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="pam ldap sasl nis ssl snmp selinux logrotate \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux \
@@ -39,7 +39,15 @@ pkg_setup() {
 	enewgroup squid 31
 	enewuser squid 31 -1 /var/cache/squid squid
 
-	use zero-penalty-hit && ewarn "zero-penalty-hit patch has been removed because the homepage has vanished."
+	if use zero-penalty-hit ; then
+		eerror "zero-penalty-hit patch has been removed because:"
+		eerror "    a) Is incompatible with this version of squid"
+		eerror "    b) The homepage has vanished"
+		eerror "Disable zero-penalty-hit USE flag and run"
+		eerror "    emerge --resume"
+		die "Invalid USE flag detected"
+	fi
+
 	use underscores && ewarn "underscores USE flag has no effect (the option is available through allow_underscore configuration directive)."
 	use customlog && ewarn "customlog USE flag has no effect (the correspondent patch has been included in the main version)."
 	use follow-xff && ewarn "follow-xff USE flag has no effect (the correspondent patch has been included in the main version)."
