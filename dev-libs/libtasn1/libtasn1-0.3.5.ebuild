@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.3.5.ebuild,v 1.3 2006/09/21 10:26:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.3.5.ebuild,v 1.4 2006/09/21 11:24:27 dragonheart Exp $
 
 inherit libtool
 
@@ -29,4 +29,12 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog NEWS README THANKS
 	use doc && dodoc doc/asn1.ps
+}
+
+pkg_postinst() {
+	if [[ -e "${ROOT}"/usr/$(get_libdir)/libtasn1.so.2 ]] ; then
+		ewarn "You must re-compile all packages that are linked against"
+		ewarn "Libtasn1-0.2.* by using revdep-rebuild from gentoolkit:"
+		ewarn "# revdep-rebuild --library libtasn1.so.2"
+	fi
 }
