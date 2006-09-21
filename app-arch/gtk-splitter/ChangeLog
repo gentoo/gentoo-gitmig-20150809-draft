@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/gtk-splitter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.8 2006/09/20 19:56:08 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gtk-splitter/ChangeLog,v 1.9 2006/09/21 19:14:51 dertobi123 Exp $
+
+  21 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  gtk-splitter-2.2.ebuild:
+  ppc stable, bug #148319
 
   20 Sep 2006; <ticho@gentoo.org> gtk-splitter-2.2.ebuild:
   Stable on x86, bug #148319.
