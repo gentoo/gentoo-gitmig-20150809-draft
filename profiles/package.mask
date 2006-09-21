@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5924 2006/09/21 16:37:43 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5925 2006/09/21 16:39:16 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -545,11 +545,6 @@ app-emacs/weather
 # Development versions of FWbuilder.
 >=net-libs/libfwbuilder-2.1.5
 >=net-firewall/fwbuilder-2.1.5
-
-# Christian Heim <phreak@gentoo.org> (19 Aug 2006)
-# www-misc/squidalyser masked by treecleaners for bug(s) 107960,
-# 107961, 143620. Removal in 30 days (thats 16 Sept 2006)
-www-misc/squidalyser
 
 # Stefan Schweizer <genstef@gentoo.org> (19 Aug 2006)
 # No new upstream release for a long time, unexplained
