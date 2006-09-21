@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.121 2006/09/20 13:19:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.122 2006/09/21 20:49:25 nichoj Exp $
+
+*java-config-1.3.7 (21 Sep 2006)
+
+  21 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  -java-config-1.3.6-r1.ebuild, +java-config-1.3.7.ebuild:
+  Version bump. Improved interface/usability to be more consistent with
+  java-config-2 (visual appearance of -L, what you can use to set vm). Removed
+  --help info for things we don't support. Added better messages
+  (--list-available-vms says they are available for generation-1, setting the
+  vm says what vm was set and that it is for generation-1
 
   20 Sep 2006; Vlastimil Babka <caster@gentoo.org>
   java-config-2.0.29.ebuild:
