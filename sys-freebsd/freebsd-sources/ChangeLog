@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.21 2006/09/21 21:04:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.22 2006/09/21 21:09:38 flameeyes Exp $
+
+  21 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sources-6.2_beta1.ebuild:
+  This time is the right one.
 
   21 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-sources-6.2_beta1.ebuild:
