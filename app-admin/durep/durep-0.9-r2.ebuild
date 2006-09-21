@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/durep-0.9-r2.ebuild,v 1.2 2006/09/20 22:10:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/durep/durep-0.9-r2.ebuild,v 1.3 2006/09/21 19:24:01 dertobi123 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hibernaculum.net/download/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl
