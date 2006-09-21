@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.38 2006/09/21 11:16:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.39 2006/09/21 16:53:53 gustavoz Exp $
+
+  21 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> raptor-1.4.9.ebuild:
+  Stable on sparc wrt #148455
 
   21 Sep 2006; <ticho@gentoo.org> raptor-1.4.9.ebuild:
   Stable on x86, bug #148455.
