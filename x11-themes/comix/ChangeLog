@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/comix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.18 2006/09/20 22:44:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.19 2006/09/21 03:17:47 weeve Exp $
+
+  21 Sep 2006; Jason Wever <weeve@gentoo.org> comix-1.3.8.ebuild:
+  Stable on SPARC wrt bug #135659.
 
   20 Sep 2006; <ticho@gentoo.org> comix-1.3.8.ebuild:
   Stable on x86, bug #135659.
