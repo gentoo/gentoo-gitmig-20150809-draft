@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/ksmoothdock
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.17 2006/09/15 18:55:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksmoothdock/ChangeLog,v 1.18 2006/09/21 23:33:22 troll Exp $
+
+*ksmoothdock-4.2 (22 Sep 2006)
+
+  22 Sep 2006; Przemysław Maciąg <troll@gentoo.org>
+  -files/ksmoothdock-3.5.1-configure-arts.patch, +ksmoothdock-4.1.ebuild:
+  Version bump. Fixes bug #148525
+  Clean up old patch, for non-existing in portage version
 
 *ksmoothdock-4.1 (15 Sep 2006)
 
