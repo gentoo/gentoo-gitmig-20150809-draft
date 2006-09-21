@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/ghamachi
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.1 2006/09/21 14:35:21 caleb Exp $
+
+*ghamachi-0.7.3 (20 Sep 2006)
+
+  20 Sep 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +ghamachi-0.7.3.ebuild:
+  Initial import, from bug #105386
+
