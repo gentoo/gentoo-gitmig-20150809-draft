@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.179 2006/09/21 22:23:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.180 2006/09/21 23:32:44 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -357,7 +357,8 @@ kde_src_install() {
 
 	if [[ -n ${KDEBASE} ]] && [[ "${PN}" != "arts" ]] ; then
 		# work around bug #97196
-		mv ${D}/usr/share/doc/* "${D}/${KDEDIR}/share/doc/"
+		dodir ${KDEDIR}/share/doc/
+		mv ${D}/usr/share/doc/${PF} "${D}/${KDEDIR}/share/doc/"
 	fi
 }
 
