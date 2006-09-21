@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.41 2006/09/21 19:55:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.42 2006/09/21 19:58:52 dertobi123 Exp $
+
+  21 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libtasn1-0.3.5.ebuild:
+  hppa stable, bug #147682
 
   21 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libtasn1-0.3.5.ebuild:

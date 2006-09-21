@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.3.5.ebuild,v 1.5 2006/09/21 19:55:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.3.5.ebuild,v 1.6 2006/09/21 19:58:52 dertobi123 Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://josefsson.org/gnutls/releases/libtasn1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND=">=dev-lang/perl-5.6
