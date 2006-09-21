@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/dbext-3.50.ebuild,v 1.1 2006/09/21 13:32:17 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/dbext-3.50.ebuild,v 1.2 2006/09/21 13:34:10 pioto Exp $
 
 inherit vim-plugin eutils
 
 DESCRIPTION="vim plugin: easy access to databases"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=356"
 LICENSE="as-is"
-KEYWORDS="alpha ia64 mips ~ppc sparc x86"
+KEYWORDS="~alpha ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=app-vim/multvals-3.6.1
