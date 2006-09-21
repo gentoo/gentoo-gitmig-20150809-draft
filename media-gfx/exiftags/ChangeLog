@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/exiftags
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.12 2006/09/19 20:07:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiftags/ChangeLog,v 1.13 2006/09/21 01:07:54 chutzpah Exp $
+
+  21 Sep 2006; Patrick McLean <chutzpah@gentoo.org> exiftags-1.00.ebuild:
+  Stable on amd64 (bug #147500).
 
   19 Sep 2006; Alastair Tse <liquidx@gentoo.org> exiftags-1.00.ebuild:
   stable for x86
