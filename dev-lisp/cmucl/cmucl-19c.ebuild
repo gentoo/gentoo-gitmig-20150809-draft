@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19c.ebuild,v 1.3 2006/04/06 20:05:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-19c.ebuild,v 1.4 2006/09/21 15:55:14 ticho Exp $
 
 inherit common-lisp-common-2 eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${MY_PV}.orig.tar.
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc lesstif nosource"
 
 DEPEND=">=dev-lisp/common-lisp-controller-4

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.21 2006/08/10 01:58:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.22 2006/09/21 15:55:13 ticho Exp $
+
+  21 Sep 2006; <ticho@gentoo.org> cmucl-19c.ebuild:
+  Stable on x86, bug #146102.
 
   10 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org>
   files/18e/site-init.lisp.in, files/19a/site-init.lisp.in,
