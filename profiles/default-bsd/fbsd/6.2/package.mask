@@ -1,0 +1,10 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.1 2006/09/21 20:53:56 flameeyes Exp $
+
+# Diego Pettenò <flameeyes@gentoo.org>
+# Mask pam modules from old and new FreeBSD versions
+<sys-freebsd/freebsd-pam-modules-6.2_alpha
+>sys-freebsd/freebsd-pam-modules-6.2.99
+<sys-freebsd/freebsd-rescue-6.2_alpha
+>sys-freebsd/freebsd-rescue-6.2.99
