@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.1 2006/06/17 10:07:38 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.14.ebuild,v 1.2 2006/09/21 02:52:17 weeve Exp $
 
 inherit php-lib-r1
 
@@ -8,7 +8,7 @@ DESCRIPTION="A template engine for PHP."
 HOMEPAGE="http://smarty.php.net/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( dev-php/smarty-docs )"
