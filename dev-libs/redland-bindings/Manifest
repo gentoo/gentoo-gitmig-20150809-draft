@@ -1,19 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0766bf195f5918cf2db4b3e9091c54c7 ChangeLog 1081
-MD5 ff12bfa45c5ee427fd06133e9afc81aa files/digest-redland-bindings-1.0.0.2 76
-MD5 d71dd83d67b824a928cd5e58e11d30c0 files/digest-redland-bindings-1.0.2.1 76
+AUX redland-bindings-1.0.0.2-DESTDIR.patch 421 RMD160 d131fcf9f5689a8622fa13596205318da16b227a SHA1 e063bf52bb3523f4cf1630fd8366687caa0384db SHA256 970346f0da066da80eb5e9e4ed260edae56f03078c941a405493dec9af8ca7f7
 MD5 0d01eb61aef3335fea495f4a8e23cb79 files/redland-bindings-1.0.0.2-DESTDIR.patch 421
+RMD160 d131fcf9f5689a8622fa13596205318da16b227a files/redland-bindings-1.0.0.2-DESTDIR.patch 421
+SHA256 970346f0da066da80eb5e9e4ed260edae56f03078c941a405493dec9af8ca7f7 files/redland-bindings-1.0.0.2-DESTDIR.patch 421
+AUX redland-bindings-1.0.0.2-configure.patch 287 RMD160 287ffb8bf03a74df3183fc0ff2bcfa9c14d93a54 SHA1 2e3060598b252c2df806b89362d45382ce86a71e SHA256 ed46830923adf8afd88ed4b3d479bd055a6497434647086e5b35ad886db15b41
 MD5 5e3b83c344a49513d7ab4194d905ccbd files/redland-bindings-1.0.0.2-configure.patch 287
+RMD160 287ffb8bf03a74df3183fc0ff2bcfa9c14d93a54 files/redland-bindings-1.0.0.2-configure.patch 287
+SHA256 ed46830923adf8afd88ed4b3d479bd055a6497434647086e5b35ad886db15b41 files/redland-bindings-1.0.0.2-configure.patch 287
+AUX redland-bindings-1.0.0.2-swig-update.patch 308 RMD160 ab83c39f6338f837245187f087fe73cb2ecab795 SHA1 4939f17c45ed415738d0a6303ab910416a48fca6 SHA256 4dea3bb134e5570a898bc3019b4f8127cbdcce73ea440af3e50044f490107c8a
 MD5 d5fa7c77bc2bf04a37cf23b801926245 files/redland-bindings-1.0.0.2-swig-update.patch 308
-MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+RMD160 ab83c39f6338f837245187f087fe73cb2ecab795 files/redland-bindings-1.0.0.2-swig-update.patch 308
+SHA256 4dea3bb134e5570a898bc3019b4f8127cbdcce73ea440af3e50044f490107c8a files/redland-bindings-1.0.0.2-swig-update.patch 308
+DIST redland-bindings-1.0.0.2.tar.gz 678637 RMD160 26560f564d9316944789e5c439360261bb57efdc SHA1 461f8f9aa1016e1a3343e5f45267a99ff4dd6b7d SHA256 3f5a7387016c7eb652a31979ef307408bb3d691c22c21ecdc1edaccaf0c1b26d
+DIST redland-bindings-1.0.2.1.tar.gz 755619 RMD160 64e6982a03246b7588ad7b102bb6da9abb1e47ff SHA1 928feaa1dd21ba5d8bca583ce0cb98630d45fe20 SHA256 1cbaf1ebae6980f4e8b77568bbf10ec73db3983d5147722d956ab15f6a1aedd3
+EBUILD redland-bindings-1.0.0.2.ebuild 1402 RMD160 72e47247eb3debcfb2ab726462ce06a6220a3c4a SHA1 c35c6ed86f11b4236969744a9c0a8d56b9cc7236 SHA256 afd1643f321ae03cfbf4368a1183d2cddf9dd265abc334ef7745e87626ca2036
 MD5 5da7b430ac5c74c7873d0e858717f179 redland-bindings-1.0.0.2.ebuild 1402
-MD5 1d6335d3c317c49e639a0e7e8becf618 redland-bindings-1.0.2.1.ebuild 1432
+RMD160 72e47247eb3debcfb2ab726462ce06a6220a3c4a redland-bindings-1.0.0.2.ebuild 1402
+SHA256 afd1643f321ae03cfbf4368a1183d2cddf9dd265abc334ef7745e87626ca2036 redland-bindings-1.0.0.2.ebuild 1402
+EBUILD redland-bindings-1.0.2.1.ebuild 1432 RMD160 b90cce9f88d3d24b69c22ab7b36b3b759bc5c919 SHA1 b56909d6d144ec39915de461607390d2bca6fa1d SHA256 665a302111c2f2c002e31484878720739eef8b4f9e39f90a42056d4c1078be39
+MD5 3a53729c851629191f655bea81729979 redland-bindings-1.0.2.1.ebuild 1432
+RMD160 b90cce9f88d3d24b69c22ab7b36b3b759bc5c919 redland-bindings-1.0.2.1.ebuild 1432
+SHA256 665a302111c2f2c002e31484878720739eef8b4f9e39f90a42056d4c1078be39 redland-bindings-1.0.2.1.ebuild 1432
+MISC ChangeLog 1081 RMD160 09df5987924797d1f3b156100eb554d5e240fa46 SHA1 e52c0d55cbe8601cb73065db475105e9580b5e94 SHA256 7c1cf56f669eebdd39ea9a2b8024e53a76d0e7a7dc125327767c851e19360b63
+MD5 0766bf195f5918cf2db4b3e9091c54c7 ChangeLog 1081
+RMD160 09df5987924797d1f3b156100eb554d5e240fa46 ChangeLog 1081
+SHA256 7c1cf56f669eebdd39ea9a2b8024e53a76d0e7a7dc125327767c851e19360b63 ChangeLog 1081
+MISC metadata.xml 221 RMD160 2699c0059639536eb7befa077a27e437569a26ba SHA1 4bef3741184af2e2d984fec094cd0ab39ae2e624 SHA256 1d72b91d3ef79fdff0049c23a645d8595a5fb72ea7e5d5b6fa43cfc18e9a4627
+MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
+RMD160 2699c0059639536eb7befa077a27e437569a26ba metadata.xml 221
+SHA256 1d72b91d3ef79fdff0049c23a645d8595a5fb72ea7e5d5b6fa43cfc18e9a4627 metadata.xml 221
+MD5 46e385b52c422ad08bc28af9a7ab04e7 files/digest-redland-bindings-1.0.0.2 274
+RMD160 d4689f17c1ba5d41b1103739a1cddf9521d6e379 files/digest-redland-bindings-1.0.0.2 274
+SHA256 75e69cf85987d1f4318ac8162a2df9c2d31f9f7d0195d10eef55ac136818ca85 files/digest-redland-bindings-1.0.0.2 274
+MD5 ff39c87a0f39a28055af857b33d5f1f9 files/digest-redland-bindings-1.0.2.1 274
+RMD160 06d9aaa7c5855483ad15b017e37306c0d714802e files/digest-redland-bindings-1.0.2.1 274
+SHA256 89fb4609ed987dbb1a2e192dc602a257baae6b24ebed4133f2dacee716a2d3b4 files/digest-redland-bindings-1.0.2.1 274
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFD1scp2+ySkm8kpY0RAnkkAJ96JitCLsnsgOna/pkjjF3UIT9SQwCgsJEB
-EgCxUjnvk0YVFrMbRtcWfx4=
-=oW9k
+iD8DBQFFEiaqamhnQswr0vIRAsEwAJ9B7ITvvFvZDBP6VYLpOAii41YVRACfcxIj
+zN9YdJagECGwDYOrDp4CdsI=
+=P8hz
 -----END PGP SIGNATURE-----
