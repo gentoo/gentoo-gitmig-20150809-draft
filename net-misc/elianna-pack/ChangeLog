@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/elianna-pack
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/ChangeLog,v 1.1 2006/09/21 17:58:32 gustavoz Exp $
+
+*elianna-pack-1.0 (21 Sep 2006)
+
+  21 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  +elianna-pack-1.0.ebuild:
+  Initial import of es_AR asterisk voice prompts
+
