@@ -1,14 +1,3 @@
-diff -Nru diald-1.0.orig/diald.h diald-1.0/diald.h
---- diald-1.0.orig/diald.h	2001-06-16 19:01:25.000000000 +0300
-+++ diald-1.0/diald.h	2005-09-19 23:40:47.840664536 +0300
-@@ -11,6 +11,7 @@
- #include <stdio.h>
- #include <stdlib.h>
- #include <stddef.h>
-+#  include <time.h>
- #if HAVE_UNISTD_H
- #  include <unistd.h>
- #endif
 diff -Nru diald-1.0.orig/Makefile.in diald-1.0/Makefile.in
 --- diald-1.0.orig/Makefile.in	2001-06-16 14:16:04.000000000 +0300
 +++ diald-1.0/Makefile.in	2005-09-19 23:40:47.855662256 +0300

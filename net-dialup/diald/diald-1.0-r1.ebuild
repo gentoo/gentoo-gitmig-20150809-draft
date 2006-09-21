@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.10 2006/03/12 10:05:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.11 2006/09/21 13:17:42 mrness Exp $
 
 # You need SLIP in your kernel to run diald.
 
@@ -22,7 +22,7 @@ RDEPEND="net-dialup/ppp"
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}/${P}-c-files.patch"
+	epatch "${FILESDIR}/${P}-posix.patch"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
