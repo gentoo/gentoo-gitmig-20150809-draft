@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/sync2cd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/ChangeLog,v 1.10 2006/06/27 15:26:08 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/sync2cd/ChangeLog,v 1.11 2006/09/21 22:24:06 blubb Exp $
+
+  21 Sep 2006; <blubb@gentoo.org> sync2cd-1.1.ebuild:
+  added ~amd64
 
 *sync2cd-1.1 (27 Jun 2006)
 
