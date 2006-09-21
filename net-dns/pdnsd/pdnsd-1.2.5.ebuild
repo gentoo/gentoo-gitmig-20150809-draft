@@ -1,27 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.4-r3.ebuild,v 1.2 2006/09/21 08:07:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.5.ebuild,v 1.1 2006/09/21 08:07:00 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="Proxy DNS server with permanent caching"
-HOMEPAGE="http://www.phys.uu.nl/%7Erombouts/pdnsd.html http://www.phys.uu.nl/~rombouts/pdnsd.html"
-SRC_URI="http://www.phys.uu.nl/%7Erombouts/pdnsd/releases/${P}-par.tar.gz"
+HOMEPAGE="http://www.phys.uu.nl/~rombouts/pdnsd.html"
+SRC_URI="http://www.phys.uu.nl/~rombouts/pdnsd/releases/${P}-par.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~s390 ~sparc x86"
-IUSE="ipv6 debug isdn nptl"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+IUSE="ipv6 debug isdn nptl underscores"
 
 pkg_setup() {
 	enewgroup pdnsd
 	enewuser pdnsd -1 -1 /var/lib/pdnsd pdnsd
-}
-
-src_unpack() {
-	unpack ${A}
-
-	epatch "${FILESDIR}/${P}-dbg_file.patch"
 }
 
 src_compile() {
@@ -40,7 +34,9 @@ src_compile() {
 		--with-cachedir=/var/cache/pdnsd \
 		--infodir=/usr/share/info --mandir=/usr/share/man \
 		--with-default-id=pdnsd \
-		`use_enable ipv6` `use_enable isdn` \
+		$(use_enable ipv6) \
+		$(use_enable isdn) \
+		$(use_enable underscores) \
 		${myconf} \
 		|| die "bad configure"
 
