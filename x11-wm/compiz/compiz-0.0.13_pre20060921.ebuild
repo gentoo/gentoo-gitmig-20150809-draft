@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.0.13_pre20060921.ebuild,v 1.1 2006/09/21 13:53:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.0.13_pre20060921.ebuild,v 1.2 2006/09/21 14:22:13 hanno Exp $
 
 inherit eutils autotools
 
@@ -25,7 +25,7 @@ DEPEND=">=media-libs/mesa-6.5.1-r1
 	x11-libs/libXcomposite
 	media-libs/libpng
 	x11-libs/libwnck
-	gnome-base/libgnome
+	gnome-base/control-center
 	svg? ( gnome-base/librsvg )
 	dbus? ( sys-apps/dbus )"
 
