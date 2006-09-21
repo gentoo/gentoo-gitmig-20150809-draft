@@ -1,0 +1,43 @@
+Index: PerlMagick/Makefile.am
+===================================================================
+--- PerlMagick/Makefile.am	(Revision 4660)
++++ PerlMagick/Makefile.am	(Arbeitskopie)
+@@ -45,11 +45,10 @@
+ 	cd $(PERLMAGICK) && @PERL@ Makefile.PL $(PERL_MAKE_OPTIONS)
+ 
+ install-exec-perl: $(PERLMAKEFILE)
+-	( cd $(PERLMAGICK) && $(MAKE) CC='@CC@' && \
+-	$(MAKE) CC='@CC@' install && \
+-	$(MAKE) clean && rm -f  Makefile.old )
++	cd $(PERLMAGICK) && $(MAKE) CC='@CC@' install
+ 
+-all-perl:
++all-perl: $(PERLMAKEFILE)
++	cd $(PERLMAGICK) && $(MAKE) CC='@CC@'
+ 
+ uninstall-exec-perl: $(PERLMAKEFILE)
+ 	echo "Uninstall not supported for PerlMagick"
+Index: PerlMagick/Makefile.PL.in
+===================================================================
+--- PerlMagick/Makefile.PL.in	(Revision 4660)
++++ PerlMagick/Makefile.PL.in	(Arbeitskopie)
+@@ -53,16 +53,16 @@
+    'CCFLAGS'     => "$Config{'ccflags'} @CFLAGS@",
+ 
+    # Linker flags for building an executable
+-   'LDFLAGS'    =>  "-L../magick/.libs -L@MAGICKLIBDIR@ $Config{'ldflags'}",
++   'LDFLAGS'    =>  "-L../magick/.libs -lMagick $Config{'ldflags'}",
+ 
+    # Linker flags for building a dynamically loadable module
+-   'LDDLFLAGS'  => "-L../magick/.libs -L@MAGICKLIBDIR@ $Config{'lddlflags'}",
++   'LDDLFLAGS'  => "-L../magick/.libs -lMagick $Config{'lddlflags'}",
+ 
+    # Install PerlMagick binary into ImageMagick bin directory
+    'INSTALLBIN'	=> '@BIN_DIR@',
+ 
+    # Library specification
+-   'LIBS'	=> ['-lMagick @MAGICK_DEP_LIBS@'],
++   'LIBS'	=> [ '-L@MAGICKLIBDIR@ @LDFLAGS@ @MAGICK_DEP_LIBS@' ],
+ 
+    # Perl binary name (if a Perl binary is built)
+    'MAP_TARGET'	=> 'PerlMagick',
