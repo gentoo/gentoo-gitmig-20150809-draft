@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.20 2006/08/12 01:07:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.21 2006/09/21 02:28:14 chutzpah Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ lirc live livecd lzo mad matrox mmx mmxext musepack nas nvidia unicode vorbis
 opengl openal oss png real rtc samba sdl speex sse sse2 svga tga theora
 truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
 
-BLUV=1.5
+BLUV=1.6
 SVGV=1.9.17
 
 # Handle PREversions as well
