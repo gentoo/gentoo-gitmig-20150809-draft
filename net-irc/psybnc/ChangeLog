@@ -1,8 +1,12 @@
 # ChangeLog for net-irc/psybnc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.1 2006/08/28 14:09:41 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.2 2006/09/21 15:19:43 gurligebis Exp $
 
 *psybnc-2.3.2.7 (28 Aug 2006)
+
+  21 Sep 2006; Bjarke Istrup Pedersen <gurligebis@gentoo.org>:
+    Added ~amd64 keyword.
+
 
   28 Aug 2006; Bjarke Istrup Pedersen <gurligebis@gentoo.org>:
   Initial import.  Based on ebuild by Lorenzo Grandi <popposoft@gmail.com>.
