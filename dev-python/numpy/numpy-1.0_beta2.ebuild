@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0_beta2.ebuild,v 1.1 2006/08/16 10:44:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.0_beta2.ebuild,v 1.2 2006/09/21 14:26:49 dberkholz Exp $
 
 inherit distutils
 
@@ -27,6 +27,10 @@ src_unpack() {
 	sed -i \
 		-e "s:f77blas:blas:g" \
 		numpy/distutils/system_info.py
+
+	# -Wl,-O1 breaks the compilation
+	filter-ldflags -O1
+	filter-ldflags -Wl,-O1
 
 	if use lapack; then
 		echo "[atlas]"  > site.cfg
