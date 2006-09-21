@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.90 2006/09/14 00:29:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.91 2006/09/21 21:04:53 chrb Exp $
+
+*graphviz-2.8-r1 (21 Sep 2006)
+
+  21 Sep 2006; Chris Bainbridge <chrb@gentoo.org> +graphviz-2.8-r1.ebuild:
+  Fix #134834
 
   14 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> graphviz-2.8.ebuild:
   Marked stable on amd64.
