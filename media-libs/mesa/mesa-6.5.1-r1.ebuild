@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r1.ebuild,v 1.1 2006/09/18 05:42:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r1.ebuild,v 1.2 2006/09/21 19:30:46 the_paya Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -76,8 +76,12 @@ pkg_setup() {
 
 	append-flags -fno-strict-aliasing
 
-	if [[ ${KERNEL} == "FreeBSD" ]]; then
-		CONFIG="freebsd"
+	if use x86-fbsd; then
+		CONFIG="freebsd-dri-x86"
+	elif use amd64-fbsd; then
+		CONFIG="freebsd-dri-amd64"
+	elif use kernel_FreeBSD; then
+		CONFIG="freebsd-dri"
 	elif use x86; then
 		CONFIG="linux-dri-x86"
 	elif use amd64; then
@@ -93,7 +97,11 @@ src_unpack() {
 	HOSTCONF="${S}/configs/${CONFIG}"
 
 	unpack ${A}
+	# Fixes for bug #146892
+	epatch "${FILESDIR}"/6.5.1-freebsd-dri.patch
 	cd ${S}
+	# FreeBSD 6.* doesn't have posix_memalign().
+	[[ ${CHOST} == *-freebsd6.* ]] && sed -i -e "s/-DHAVE_POSIX_MEMALIGN//" configs/freebsd{,-dri}
 
 	# Don't compile debug code with USE=-debug - bug #125004
 	if ! use debug; then
