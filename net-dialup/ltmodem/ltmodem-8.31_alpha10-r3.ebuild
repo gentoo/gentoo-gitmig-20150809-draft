@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.1 2006/09/09 11:00:31 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.31_alpha10-r3.ebuild,v 1.2 2006/09/21 19:07:35 mrness Exp $
 
 inherit linux-mod eutils
 
@@ -48,7 +48,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/ltmodem-2.6-alk-8-module_param.patch"
+	epatch "${FILESDIR}/${PN}-${MY_ALK_VER}-kernel-changes.patch"
 	convert_to_m "${S}/Makefile"
 }
 
