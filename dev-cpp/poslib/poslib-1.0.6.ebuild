@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.6.ebuild,v 1.3 2006/02/20 07:30:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.6.ebuild,v 1.4 2006/09/21 01:11:13 matsuu Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="A library for creating C++ programs using the Domain Name System"
-HOMEPAGE="http://www.posadis.org/projects/poslib.php"
+HOMEPAGE="http://www.posadis.org/poslib"
 SRC_URI="mirror://sourceforge/posadis/${P}.tar.gz"
 
 LICENSE="GPL-2"
