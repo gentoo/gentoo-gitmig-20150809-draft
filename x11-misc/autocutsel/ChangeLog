@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/autocutsel
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.16 2006/01/15 16:18:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/autocutsel/ChangeLog,v 1.17 2006/09/21 11:49:30 nelchael Exp $
+
+*autocutsel-0.8.1 (21 Sep 2006)
+
+  21 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +autocutsel-0.8.1.ebuild:
+  Version bump, see bug #148307.
 
   15 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -autocutsel-0.6.2.ebuild, autocutsel-0.8.0.ebuild:
