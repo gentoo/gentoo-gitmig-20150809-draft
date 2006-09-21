@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.8.ebuild,v 1.2 2006/05/14 07:44:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.8.ebuild,v 1.3 2006/09/21 12:38:09 mrness Exp $
+
+inherit eutils
 
 DESCRIPTION="An authentication and accounting server for terminal servers that speak the RADIUS protocol."
 SRC_URI="ftp://ftp.radius.cistron.nl/pub/radius/radiusd-cistron-${PV}.tar.gz"
@@ -19,6 +21,7 @@ S="${WORKDIR}/radiusd-cistron-${PV}/src"
 src_unpack() {
 	unpack ${A}
 
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 	cd "${S}"
 	sed -i -e "s:/usr/local:/usr:g" \
 		-e "s:-Wall -g:${CFLAGS}:g" Makefile
