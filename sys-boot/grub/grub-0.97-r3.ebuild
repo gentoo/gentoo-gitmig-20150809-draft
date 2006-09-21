@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.2 2006/09/10 04:45:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r3.ebuild,v 1.3 2006/09/21 14:28:53 vapier Exp $
 
-inherit mount-boot eutils flag-o-matic toolchain-funcs
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="1.9"
+inherit mount-boot eutils flag-o-matic toolchain-funcs autotools
 
 PATCHVER="1.3"
 DESCRIPTION="GNU GRUB Legacy boot loader"
@@ -17,10 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static netboot custom-cflags"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r5"
-DEPEND="${RDEPEND}
-	>=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.5"
+DEPEND=">=sys-libs/ncurses-5.2-r5"
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
@@ -33,11 +32,7 @@ src_unpack() {
 	if [[ -n ${PATCHVER} ]] ; then
 		EPATCH_SUFFIX="patch"
 		epatch "${WORKDIR}"/patch
-
-		# a bunch of patches apply to raw autotool files
-		autoconf || die "autoconf failed"
-		aclocal || die "aclocal failed"
-		automake || die "automake failed"
+		eautoreconf
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.8 2006/08/30 05:14:08 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r2.ebuild,v 1.9 2006/09/21 14:28:53 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -19,7 +19,7 @@ IUSE="static netboot custom-cflags"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r5"
 DEPEND="${RDEPEND}
-	>=sys-devel/automake-1.7
+	=sys-devel/automake-1.9*
 	>=sys-devel/autoconf-2.5"
 PROVIDE="virtual/bootloader"
 
