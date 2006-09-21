@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta1.ebuild,v 1.1 2006/09/21 21:00:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta1.ebuild,v 1.2 2006/09/21 21:04:49 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -39,6 +39,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.0-werror.patch"
 	epatch "${FILESDIR}/${PN}-6.1-gcc41.patch"
 	epatch "${FILESDIR}/${PN}-6.1-intrcnt.patch"
+
+	# This is to be able to use sandbox safely, see bug #146284
+	epatch "${FILESDIR}/${PN}-6.2-devfs-deadlock.patch"
 
 	# Disable SSP for the kernel
 	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \
