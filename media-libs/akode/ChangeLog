@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.18 2006/09/21 13:58:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.19 2006/09/21 19:31:01 dertobi123 Exp $
+
+  21 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> akode-2.0.1.ebuild:
+  hppa stable, bug #148120
 
   21 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> akode-2.0.1.ebuild:
   Stable on sparc wrt #148120
