@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.2.ebuild,v 1.5 2006/01/21 12:15:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.2.ebuild,v 1.6 2006/09/21 11:57:58 nelchael Exp $
 
 inherit gnome2 debug
 
@@ -24,7 +24,17 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig"
 
+src_unpack() {
+
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+
+}
+
 src_install() {
+
 	# stupid sandboxing
 	einstall || die "einstall failed"
+
 }
