@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/posadis
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.13 2004/12/31 13:49:41 matsuu Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/ChangeLog,v 1.14 2006/09/21 00:16:43 matsuu Exp $
+
+  21 Sep 2006; MATSUU Takuto <matsuu@gentoo.org> posadis-0.60.6.ebuild:
+  Fixed HOMEPAGE
 
 *posadis-0.60.6 (31 Dec 2004)
 
