@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.178 2006/09/18 16:19:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.179 2006/09/21 22:23:44 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -8,7 +8,9 @@
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit
 # straight from here.
 
-inherit base eutils kde-functions flag-o-matic libtool
+WANT_AUTOMAKE="1.9"
+
+inherit base eutils kde-functions flag-o-matic libtool autotools
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
 IUSE="debug xinerama"
@@ -32,9 +34,7 @@ if [[ -n ${USE_KEG_PACKAGING} && -n "${LANGS}${LANGS_DOC}" ]]; then
 	done
 fi
 
-DEPEND=">=sys-devel/automake-1.7.0
-	sys-devel/autoconf
-	sys-devel/make
+DEPEND="sys-devel/make
 	dev-util/pkgconfig
 	dev-lang/perl
 	|| ( x11-proto/xf86vidmodeproto <virtual/x11-7 )
@@ -223,12 +223,8 @@ kde_src_compile() {
 						admin/cvs.sh
 				fi
 
-				# For some reasons, autoconf 2.60 throws up lots of warnings when using
-				# older versions of automake, so force automake 1.9 when using that
-				if [[ $(autoconf --version) == autoconf*2.60* ]]; then
-					einfo "Forcing automake 1.9 when using autoconf 2.60"
-					export WANT_AUTOMAKE="1.9"
-				fi
+				einfo "Forcing automake ${WANT_AUTOMAKE} (hopefully)"
+				export WANT_AUTOMAKE
 
 				# rebuild configure script, etc
 				# This can happen with e.g. a cvs snapshot
