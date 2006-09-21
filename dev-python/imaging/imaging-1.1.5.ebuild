@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.11 2006/06/27 22:50:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.5.ebuild,v 1.12 2006/09/21 12:57:52 cardoe Exp $
 
 inherit distutils eutils multilib
 
@@ -14,13 +14,13 @@ SRC_URI="http://www.effbot.org/downloads/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
-IUSE="X tcltk scanner doc"
+IUSE="X tk scanner doc"
 
 DEPEND="virtual/python
 	>=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
 	>=media-libs/freetype-2.1.5
-	tcltk? ( dev-lang/tk )
+	tk? ( dev-lang/tk )
 	scanner? ( media-gfx/sane-backends )
 	X? ( media-gfx/xv )"
 
