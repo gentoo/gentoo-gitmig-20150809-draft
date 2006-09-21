@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/gst-plugins-pango-0.10.10.ebuild,v 1.1 2006/09/15 08:56:08 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/gst-plugins-pango-0.10.10.ebuild,v 1.2 2006/09/21 12:59:01 zaheerm Exp $
 
 inherit gst-plugins-base
 
