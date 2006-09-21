@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.30 2006/07/20 03:15:53 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.31 2006/09/21 15:12:55 ticho Exp $
+
+  21 Sep 2006; <ticho@gentoo.org> mbrola-3.0.1h-r4.ebuild:
+  Stable on x86, bug #146897.
 
   19 Jul 2006; <psi29a@gentoo.org> mbrola-3.0.1h-r3.ebuild,
   mbrola-3.0.1h-r4.ebuild:
