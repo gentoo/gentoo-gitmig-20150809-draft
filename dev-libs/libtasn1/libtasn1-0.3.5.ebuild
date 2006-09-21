@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.3.5.ebuild,v 1.6 2006/09/21 19:58:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-0.3.5.ebuild,v 1.7 2006/09/21 20:53:48 dragonheart Exp $
 
-inherit libtool
+inherit libtool multilib
 
 DESCRIPTION="provides ASN.1 structures parsing capabilities for use with GNUTLS"
 HOMEPAGE="http://www.gnutls.org/"
