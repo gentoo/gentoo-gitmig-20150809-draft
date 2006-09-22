@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.2 2006/09/06 23:03:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/linuxdoc-tools/linuxdoc-tools-0.9.21_p4.ebuild,v 1.3 2006/09/22 05:36:01 dberkholz Exp $
 
 # If docs fails to generate with the following type of errors:
 #
@@ -23,7 +23,7 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${MY_PV}.tar.gz"
 
 LICENSE="KenMacLeod SGMLUG"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="tetex"
 
 DEPEND="app-text/openjade
