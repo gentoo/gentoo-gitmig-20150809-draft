@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.1.ebuild,v 1.1 2006/09/13 19:39:26 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.4.2.1.ebuild,v 1.2 2006/09/22 22:17:40 ferdy Exp $
 
 inherit python toolchain-funcs eutils elisp-common
 
@@ -106,7 +106,7 @@ src_install() {
 		use doc && dodoc contrib/gitview/gitview.txt
 	fi
 
-	insinto /etc/xinet.d
+	insinto /etc/xinetd.d
 	newins "${FILESDIR}"/git-daemon.xinetd git-daemon
 
 	newinitd "${FILESDIR}"/git-daemon.initd git-daemon
