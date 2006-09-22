@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.4 2006/09/21 19:38:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r4.ebuild,v 1.5 2006/09/22 12:31:56 blubb Exp $
 
-inherit versionator kde-functions eutils
+inherit versionator kde-functions eutils multilib
 
 CVS_VERSION="${PV/*_pre/}"
 
@@ -121,6 +121,6 @@ src_install() {
 	einstall || die "Multisync install failed!"
 	for plugin_dir in ${PLUGINS}; do
 		cd "${S}/plugins/${plugin_dir}"
-		make install DESTDIR="${D}" || die "${plugin_dir} make install failed!"
+		make install DESTDIR="${D}" libdir="\$(prefix)/$(get_libdir)/${PN}" || die "${plugin_dir} make install failed!"
 	done
 }
