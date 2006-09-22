@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23.ebuild,v 1.5 2006/04/02 22:11:52 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.23.ebuild,v 1.6 2006/09/22 17:45:32 mrness Exp $
 
 inherit gnome2 eutils
 
@@ -24,7 +24,7 @@ DEPEND="sys-devel/gettext
 	${RDEPEND}"
 
 USE_DESTDIR="1"
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+DOCS="ChangeLog"
 
 src_install() {
 	gnome2_src_install top_builddir="${S}"
