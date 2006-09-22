@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.22 2006/09/21 15:04:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.23 2006/09/22 16:07:39 mr_bones_ Exp $
+
+  22 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org> -gnus-5.10.3.ebuild,
+  -gnus-5.10.6.ebuild:
+  clean out old, non-modX ebuilds
 
   21 Sep 2006; Chris White <chriswhite@gentoo.org> gnus-5.10.8.ebuild:
   Marked amd64 stable for bug #144616.
