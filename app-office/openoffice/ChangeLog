@@ -1,6 +1,15 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.255 2006/09/20 14:51:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.256 2006/09/22 16:39:32 suka Exp $
+
+*openoffice-2.0.4_rc2 (22 Sep 2006)
+
+  22 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.4_rc1/gentoo-2.0.4_rc1.diff,
+  +files/2.0.4_rc2/gentoo-2.0.4_rc2.diff,
+  -files/2.0.4_rc1/sfx2-docfile-newfilesave.diff,
+  -openoffice-2.0.4_rc1-r1.ebuild, +openoffice-2.0.4_rc2.ebuild:
+  Bump to 2.0.4_rc2, also add sound use-flag enable it if you need it ;)
 
   20 Sep 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4_rc1-r1.ebuild:
