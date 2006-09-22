@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5929 2006/09/22 03:57:34 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5930 2006/09/22 04:00:32 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -372,7 +372,6 @@ app-admin/authconfig
 app-admin/firstboot
 app-admin/system-config-bind
 app-admin/system-config-httpd
-app-admin/system-config-keyboard
 # Available languages must be listed in SUPPORTED var in /etc/sysconfig/i18n
 app-admin/system-config-language
 # Seems to require already existing volumes to run
