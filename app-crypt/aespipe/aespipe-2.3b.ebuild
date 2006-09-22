@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/aespipe-2.3b.ebuild,v 1.7 2006/09/22 19:06:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/aespipe-2.3b.ebuild,v 1.8 2006/09/22 19:23:16 ticho Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://loop-aes.sourceforge.net/aespipe/${PN}-v${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc-macos sparc ~x86"
+KEYWORDS="amd64 ppc ppc-macos sparc x86"
 IUSE="static"
 DEPEND=""
 

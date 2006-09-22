@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aespipe
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.15 2006/09/22 19:06:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aespipe/ChangeLog,v 1.16 2006/09/22 19:23:16 ticho Exp $
+
+  22 Sep 2006; <ticho@gentoo.org> aespipe-2.3b.ebuild:
+  Stable on x86, bug #145410.
 
   22 Sep 2006; <blubb@gentoo.org> aespipe-2.3b.ebuild:
   stable on amd64
