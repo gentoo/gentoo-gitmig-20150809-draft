@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.41 2006/09/22 15:55:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.42 2006/09/22 17:11:28 chtekk Exp $
+
+  22 Sep 2006; Luca Longinotti <chtekk@gentoo.org> icu-3.2.ebuild,
+  icu-3.4.1.ebuild:
+  Fix again parallel build failure, seems it doesn't work with high values,
+  sorry!
 
   22 Sep 2006; Markus Rothe <corsair@gentoo.org> icu-3.4.1.ebuild:
   Added ~ppc64; bug #148659
