@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.10 2006/09/21 02:28:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8-r1.ebuild,v 1.11 2006/09/22 01:10:25 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,6 +12,13 @@ libcaca lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode
 vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
 theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid
 xvmc"
+
+LANGS="bg cs de da el en es fr hu ja ko mk nl no pl pt_BR ro ru sk tr uk zh_CN
+zh_TW"
+
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 BLUV=1.6
 SVGV=1.9.17
@@ -45,7 +52,7 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	cdparanoia? ( media-sound/cdparanoia )
-	dga? ( || ( x11-libs/libXxf86dga virtual/x11 ) )
+	dga? ( x11-libs/libXxf86dga )
 	directfb? ( dev-libs/DirectFB )
 	dts? ( media-libs/libdts )
 	dvb? ( media-tv/linuxtv-dvb-headers )
@@ -173,72 +180,10 @@ src_unpack() {
 
 }
 
-linguas_warn() {
-	ewarn "Language ${LANG[0]} or ${LANG_CC} not avaliable"
-	ewarn "Language set to English"
-	ewarn "If this is a mistake, please set the"
-	ewarn "First LINGUAS language to one of the following"
-	ewarn
-	ewarn "bg - Bulgarian"
-	ewarn "cs - Czech"
-	ewarn "de - German"
-	ewarn "dk - Danish"
-	ewarn "el - Greek"
-	ewarn "en - English"
-	ewarn "es - Spanish"
-	ewarn "fr - French"
-	ewarn "hu - Hungarian"
-	ewarn "ja - Japanese"
-	ewarn "ko - Korean"
-	ewarn "mk - FYRO Macedonian"
-	ewarn "nl - Dutch"
-	ewarn "no - Norwegian"
-	ewarn "pl - Polish"
-	ewarn "pt_BR - Portuguese - Brazil"
-	ewarn "ro - Romanian"
-	ewarn "ru - Russian"
-	ewarn "sk - Slovak"
-	ewarn "tr - Turkish"
-	ewarn "uk - Ukranian"
-	ewarn "zh_CN - Chinese - China"
-	ewarn "zh_TW - Chinese - Taiwan"
-	export LINGUAS="en ${LINGUAS}"
-}
-
 src_compile() {
 
 	# have fun with LINGUAS variable
-	if [[ -n $LINGUAS ]]
-	then
-		# LINGUAS has stuff in it, start the logic
-		LANG=( $LINGUAS )
-		if [ -e ${S}/help/help_mp-${LANG[0]}.h ]
-		then
-			einfo "Setting MPlayer messages to language: ${LANG[0]}"
-		else
-			LANG_CC=${LANG[0]}
-			if [ ${#LANG_CC} -ge 2 ]
-			then
-				LANG_CC=${LANG_CC:0:2}
-				if [ -e ${S}/help/help_mp-${LANG_CC}.h ]
-				then
-					einfo "Setting MPlayer messages to language ${LANG_CC}"
-					export LINGUAS="${LANG_CC} ${LINGUAS}"
-				else
-					linguas_warn
-				fi
-			else
-				linguas_warn
-			fi
-		fi
-	else
-		# sending blank LINGUAS, make it default to en
-		einfo "No LINGUAS given, defaulting to English"
-		export LINGUAS="en ${LINGUAS}"
-	fi
-
-
-
+	[[ -n $LINGUAS ]] && LINGUAS=${LINGUAS//da/dk}
 
 	local myconf="--disable-external-faad --disable-tv-bsdbt848"
 	myconf="${myconf} --disable-external-vidix"
