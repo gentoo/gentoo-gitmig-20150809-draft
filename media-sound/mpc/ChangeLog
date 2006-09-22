@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.36 2006/09/17 20:01:41 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.37 2006/09/22 18:39:59 ticho Exp $
+
+*mpc-0.12.0 (22 Sep 2006)
+
+  22 Sep 2006; <ticho@gentoo.org> -mpc-0.12.0_rc1.ebuild,
+  -mpc-0.12.0_rc2.ebuild, +mpc-0.12.0.ebuild:
+  Version bump. Removed ebuilds for release candidates.
 
 *mpc-0.12.0_rc2 (17 Sep 2006)
 
