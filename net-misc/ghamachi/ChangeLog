@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ghamachi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.1 2006/09/21 14:35:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ghamachi/ChangeLog,v 1.2 2006/09/22 12:19:51 caleb Exp $
+
+  22 Sep 2006; Caleb Tennis <caleb@gentoo.org> ghamachi-0.7.3.ebuild:
+  Change ebuild to just build gtk2 package, and get rid of gtk2 use flag
 
 *ghamachi-0.7.3 (20 Sep 2006)
 
