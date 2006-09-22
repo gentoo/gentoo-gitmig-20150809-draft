@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/p3scan
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.9 2006/02/25 17:03:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.10 2006/09/22 12:28:16 ticho Exp $
+
+*p3scan-2.3.1-r1 (22 Sep 2006)
+
+  22 Sep 2006; <ticho@gentoo.org> -p3scan-2.1.ebuild, -p3scan-2.2.1.ebuild,
+  -p3scan-2.3.0.ebuild, +p3scan-2.3.1-r1.ebuild:
+  Install an example scanner script, as suggested by Pinky <master_up at
+  post.cz> in bug #147695. Do not depend on ripmime, since p3scan brings its
+  own, which it links statically. Remove obsolete ebuilds.
 
   25 Feb 2006; Andrej Kacian <ticho@gentoo.org> p3scan-2.3.1.ebuild:
   Stable on x86.
