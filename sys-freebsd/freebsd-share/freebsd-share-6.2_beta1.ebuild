@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2_beta1.ebuild,v 1.1 2006/09/21 21:00:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-6.2_beta1.ebuild,v 1.2 2006/09/22 06:34:41 flameeyes Exp $
 
 inherit bsdmk freebsd
 
@@ -46,10 +46,6 @@ src_unpack() {
 	sed -i -e 's:make.conf.5::' "${S}/man/man5/Makefile"
 	# Don't install the arch-specific directories in subdirectories
 	sed -i -e '/MANSUBDIR/d' "${S}"/man/man4/man4.{alpha,i386,sparc64}/Makefile
-
-	cd "${S}/mklocale"
-	# See http://opal.com/freebsd/unicode.html
-	epatch "${FILESDIR}/${P}-utf8.patch"
 
 	# Remove them so that they can't be included by error
 	rm -rf "${S}"/mk/*.mk
