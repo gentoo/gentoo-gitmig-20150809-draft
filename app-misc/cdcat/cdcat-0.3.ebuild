@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.12 2006/01/23 10:56:02 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdcat/cdcat-0.3.ebuild,v 1.13 2006/09/22 13:30:21 centic Exp $
 
 DESCRIPTION="simple yet effective CD indexing program"
 # original src went away: SRC_URI="http://littledragon.home.ro/unix/${P}.tar.gz"
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc amd64"
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/grep-2.4.2
 	>=sys-apps/findutils-4.1
-	>=app-cdr/cdrtools-1.11
+	virtual/cdrtools
 	!app-backup/cdbkup"
 
 src_unpack() {
