@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rackview
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.10 2006/02/11 21:01:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.11 2006/09/22 19:21:53 mcummings Exp $
+
+  22 Sep 2006; Michael Cummings <mcummings@gentoo.org> rackview-0.09.ebuild:
+  Bug 119648, yuval had the fix, enjoy; keyworded ~amd64
 
   11 Feb 2006; Michael Cummings <mcummings@gentoo.org> rackview-0.09.ebuild:
   Virtuals for some perl-core deps
