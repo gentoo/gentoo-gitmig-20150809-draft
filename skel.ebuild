@@ -90,14 +90,15 @@ IUSE="gnome X"
 # a dependency.
 DEPEND=""
 
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-#RDEPEND=""
+# Run-time dependencies. Must be defined to whatever this depends on to run. 
+# The below is valid if the same run-time depends are required to compile.
+RDEPEND="${DEPEND}"
 
 # Source directory; the dir where the sources can be found (automatically
 # unpacked) inside ${WORKDIR}.  The default value for S is ${WORKDIR}/${P}
 # If you don't need to change it, leave the S= line out of the ebuild
 # to keep it tidy.
-S=${WORKDIR}/${P}
+#S="${WORKDIR}/${P}"
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
