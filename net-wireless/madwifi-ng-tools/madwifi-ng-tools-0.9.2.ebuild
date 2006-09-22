@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.2.ebuild,v 1.3 2006/09/17 14:13:49 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.2.ebuild,v 1.4 2006/09/22 20:16:31 dsd Exp $
 
 inherit toolchain-funcs
 
 MY_P=${PN/-ng-tools/}-${PV}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P}/tools
 
 DESCRIPTION="Next Generation tools for configuration of Atheros based IEEE 802.11a/b/g wireless LAN cards"
 HOMEPAGE="http://www.madwifi.org/"
@@ -35,16 +35,16 @@ einfo "PV=$PV"
 		-e "s:CC =.*:CC = $(tc-getCC):" \
 		-e "s:CFLAGS=:CFLAGS+=:" \
 		-e "s:LDFLAGS=:LDFLAGS+=:" \
-		${S}/tools/Makefile || die
+		${S}/Makefile || die
 }
 
 src_compile() {
-	emake tools || die "emake tools failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" BINDIR=/usr/bin MANDIR=/usr/share/man STRIP=echo \
-		install-tools || die "make install-tools failed"
+	emake DESTDIR="${D}" BINDIR=/usr/bin MANDIR=/usr/share/man STRIP=echo \
+		install || die "emake install failed"
 
 	dodir /sbin
 	mv "${D}"/usr/bin/wlanconfig "${D}"/sbin
