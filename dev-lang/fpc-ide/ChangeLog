@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc-ide
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.7 2006/08/30 18:56:08 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.8 2006/09/22 08:26:20 truedfx Exp $
+
+  22 Sep 2006; Harald van Dĳk <truedfx@gentoo.org> fpc-ide-2.0.4.ebuild:
+  Correct fpc-ide-2.0.4's DESCRIPTION (#148609)
 
 *fpc-ide-2.0.4 (30 Aug 2006)
 
