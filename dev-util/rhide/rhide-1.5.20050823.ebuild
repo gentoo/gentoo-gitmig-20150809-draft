@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.2 2006/08/28 06:39:48 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.20050823.ebuild,v 1.3 2006/09/22 06:30:34 tsunam Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -36,7 +36,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 IUSE="X aalib"
 
 RDEPEND="virtual/libc
