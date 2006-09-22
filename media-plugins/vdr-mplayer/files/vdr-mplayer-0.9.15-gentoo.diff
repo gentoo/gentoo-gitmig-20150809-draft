@@ -1,0 +1,36 @@
+fix some path for gentoo install
+
+Joerg Bornkessel <hd_brummy@gentoo.org>
+diff -Naur mp3-0.9.15.orig/Makefile mp3-0.9.15/Makefile
+--- mp3-0.9.15.orig/Makefile	2006-09-22 20:02:06.484888703 +0200
++++ mp3-0.9.15/Makefile	2006-09-22 20:03:09.732841453 +0200
+@@ -24,14 +24,14 @@
+ # in the VDR directory an set them there.
+ 
+ ### uncomment one of these lines, if you don't want one of the plugins
+-#WITHOUT_MP3=1
++WITHOUT_MP3=1
+ #WITHOUT_MPLAYER=1
+ 
+ ### uncomment the following line, if you don't have libsndfile installed
+-#WITHOUT_LIBSNDFILE=1
++WITHOUT_LIBSNDFILE=1
+ 
+ ### uncomment the following line, if you don't have libvorbisfile installed
+-#WITHOUT_LIBVORBISFILE=1
++WITHOUT_LIBVORBISFILE=1
+ 
+ ### uncomment the following line, if you want OSS sound output
+ #WITH_OSS_OUTPUT=1
+diff -Naur mp3-0.9.15.orig/mplayer.c mp3-0.9.15/mplayer.c
+--- mp3-0.9.15.orig/mplayer.c	2006-09-22 20:02:06.504889953 +0200
++++ mp3-0.9.15/mplayer.c	2006-09-22 20:06:46.998419703 +0200
+@@ -814,7 +814,7 @@
+ {
+   if(!CheckVDRVersion(1,1,16,"mplayer")) return false;
+   i18n_name=Name();
+-  MPlaySources.Load(AddDirectory(ConfigDirectory(sourcesSub),"mplayersources.conf"));
++  MPlaySources.Load(AddDirectory(ConfigDirectory(sourcesSub),"mplayer/mplayersources.conf"));
+   if(MPlaySources.Count()<1) {
+     esyslog("ERROR: you must have defined at least one source in mplayersources.conf");
+     fprintf(stderr,"No source(s) defined in mplayersources.conf\n");

@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-mplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.7 2006/09/08 09:12:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.8 2006/09/22 22:33:13 hd_brummy Exp $
+
+*vdr-mplayer-0.9.15 (22 Sep 2006)
+
+  22 Sep 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-mplayer-0.9.15-gentoo.diff,
+  +files/vdr-mplayer-0.9.15-slave-mode-default.diff,
+  +vdr-mplayer-0.9.15.ebuild:
+  version bump
 
   08 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-mplayer-0.9.14-r2.ebuild:
