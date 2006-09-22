@@ -27,20 +27,26 @@ function loadsalsa {
 }
 
 function loadsmodule {
-	modprobe ${MODULE};
-    
-	if [ "$?" -gt 0 ]
-	then
+	modprobe ${MODULE}
+
+	if [ "$?" -gt 0 ]; then
 		eerror "Missing ${MODULE}. Please set up /etc/conf.d/slmodem"
 		return 1;
-    	fi
+	fi
 
 	if [ -z "${MDEV}" ]; then MDEV="/dev/${MODULE}0"; fi
-	if [ ! -c "${MDEV}" ]; then mknod ${MDEV} c 242 0; fi
+	if [ ! -c "${MDEV}" ]; then
+		case ${MODULE} in
+			slamr)
+				mknod ${MDEV} c 242 0
+				;;
+			slusb)
+				mknod ${MDEV} c 243 0
+				;;
+		esac
+	fi
 
-	if [ ! -c /dev/ppp ]; then mknod /dev/ppp c 108 0; fi
-
-    	ebegin "Starting slmodemd for ${DEV}"
+	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
 		-- -country=${COUNTRY} -g=${GROUP} ${MDEV}
@@ -50,6 +56,7 @@ function loadsmodule {
 start() {
 
 	checkconfig || return 1
+	if [ ! -c /dev/ppp ]; then mknod /dev/ppp c 108 0; fi
 
 	# either if we use alsa or not, the only thing we need is 
 	# ttySL0, which is created by slmodemd when started (points to a pts)
@@ -74,8 +81,7 @@ stop() {
 	[ -e /var/run/slmodemd.pid ] && rm /var/run/slmodemd.pid
 	unlink ${LN_DEV} 2> /dev/null
 	eend ${result}
-	if [ ! "${MODULE}" == "alsa" ];
-	then
+	if [ ! "${MODULE}" == "alsa" ];	then
 		ebegin "Waiting for ${MODULE} modem driver unload"
 		if [ "$RC_NOCOLOR" != "yes" ]; then
 			echo -e "\e[A\e[44G   "
