@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.9 2006/09/13 21:48:38 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.10 2006/09/22 22:36:10 ikelos Exp $
+
+  22 Sep 2006; Mike Auty <ikelos@gentoo.org>
+  files/patches/000_all_makefile-include-directory.patch:
+  Updated patch fixing bug #148613, thanks to Alon Bar-Lev.
 
   13 Sep 2006; Mike Auty <ikelos@gentoo.org>
   +files/1.0.0.15-gcc4-ignore-pedantic-errors.patch,
