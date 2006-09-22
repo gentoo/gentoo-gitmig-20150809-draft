@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
 <maintainer>
-  <email>humpback@gentoo.org</email>
+	<email>chtekk@gentoo.org</email>
 </maintainer>
 <longdescription>Free (BSD), secure, production-quality and standard-conformant FTP server based upon Troll-FTPd. It doesn't provide useless bells and whistles, but focuses on efficiency and ease of use.</longdescription>
 </pkgmetadata>
