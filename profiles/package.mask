@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5926 2006/09/21 19:40:28 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5927 2006/09/22 02:56:58 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -373,7 +373,6 @@ app-admin/firstboot
 app-admin/hwbrowser
 app-admin/system-config-bind
 app-admin/system-config-date
-app-admin/system-config-display
 app-admin/system-config-httpd
 app-admin/system-config-keyboard
 # Available languages must be listed in SUPPORTED var in /etc/sysconfig/i18n
@@ -389,16 +388,8 @@ app-admin/system-config-users
 dev-libs/alchemist
 dev-python/pycups
 <=dev-python/pygobject-2.12
-dev-python/pyxf86config
-dev-python/rhpl
-dev-python/rhpxl
 # for system-config-bind
 net-dns/bind-dns-keygen
-sys-apps/hwdata-redhat
-sys-apps/kudzu
-sys-apps/usermode
-sys-libs/libuser
-sys-libs/system-config-base
 
 # Joseph Jezak <josejx@gentoo.org> (05 Sep 2006)
 # Masked until it gets some testing, some issues were reported
