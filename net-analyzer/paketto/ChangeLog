@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/paketto
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.11 2006/07/27 02:12:18 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/paketto/ChangeLog,v 1.12 2006/09/22 19:08:35 blubb Exp $
+
+  22 Sep 2006; <blubb@gentoo.org> paketto-1.10-r1.ebuild:
+  marked ~amd64
 
   27 Jul 2006; Marcelo Goes <vanquirius@gentoo.org> +files/1.10-gcc4.patch,
   paketto-1.10-r1.ebuild:
