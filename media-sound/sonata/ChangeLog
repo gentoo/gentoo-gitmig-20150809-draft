@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/sonata
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.1 2006/09/22 11:40:03 ticho Exp $
+
+*sonata-0.6 (22 Sep 2006)
+
+  22 Sep 2006; <ticho@gentoo.org> +metadata.xml, +sonata-0.6.ebuild:
+  Initial import. Closes bug #148590. reported by Fabio Bonfante <blue_fox81
+  at yahoo.it>.
+
