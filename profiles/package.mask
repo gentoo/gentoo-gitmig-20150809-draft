@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5937 2006/09/22 14:02:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5938 2006/09/22 16:32:15 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -374,6 +374,7 @@ net-im/universalkopete
 app-admin/authconfig
 ## Below here safe to unmask after testing
 app-admin/firstboot
+app-admin/system-config-keyboard
 app-admin/system-config-bind
 app-admin/system-config-httpd
 # Available languages must be listed in SUPPORTED var in /etc/sysconfig/i18n
