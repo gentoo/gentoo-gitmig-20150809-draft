@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.3 2005/03/02 15:24:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.4 2006/09/22 05:29:57 matsuu Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
 MY_P="${P/_p/-}"
 DESCRIPTION="Protection against buffer overflow vulnerabilities"
-HOMEPAGE="http://www.research.avayalabs.com/project/libsafe/index.html"
+HOMEPAGE="http://www.research.avayalabs.com/gcm/usa/en-us/initiatives/all/nsr.htm&Filter=ProjectTitle:Libsafe&Wrapper=LabsProjectDetails&View=LabsProjectDetails"
 SRC_URI="http://www.research.avayalabs.com/project/libsafe/src/${MY_P}.tgz"
 
 LICENSE="LGPL-2.1"
