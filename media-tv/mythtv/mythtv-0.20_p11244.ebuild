@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11244.ebuild,v 1.3 2006/09/20 13:02:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11244.ebuild,v 1.4 2006/09/22 15:00:26 beandog Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
@@ -10,7 +10,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE_VIDEO_CARDS="video_cards_i810 video_cards_nvidia video_cards_via"
 
-IUSE="alsa altivec backendonly crciprec debug dbox2 dts dvb dvd freebox frontendonly hdhomerun ieee1394 ivtv jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
+IUSE="alsa altivec backendonly crciprec debug dbox2 dts dvb dvd freebox frontendonly hdhomerun ieee1394 jack joystick lcd lirc mmx vorbis opengl perl xvmc ${IUSE_VIDEO_CARDS}"
 
 RDEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -34,7 +34,6 @@ RDEPEND=">=media-libs/freetype-2.0
 	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdts )
 	dvb? ( media-libs/libdvb media-tv/linuxtv-dvb-headers )
-	ivtv? ( media-tv/ivtv )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
@@ -113,7 +112,6 @@ src_compile() {
 	use alsa || myconf="${myconf} --disable-audio-alsa"
 	use jack || myconf="${myconf} --disable-audio-jack"
 	use dts || myconf="${myconf} --disable-dts"
-	use ivtv || myconf="${myconf} --disable-ivtv"
 	use freebox || myconf="${myconf} --disable-freebox"
 	use dbox2 || myconf="${myconf} --disable-dbox2"
 	use hdhomerun || myconf="${myconf} --disable-hdhomerun"
