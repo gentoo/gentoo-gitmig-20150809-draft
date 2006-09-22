@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.29.ebuild,v 1.3 2006/09/20 13:19:02 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.0.29.ebuild,v 1.4 2006/09/22 17:16:48 caster Exp $
 
 inherit base distutils eutils
 
@@ -45,14 +45,14 @@ pkg_postrm() {
 pkg_postinst() {
 	python_mod_optimize /usr/share/java-config-2/pym/java_config
 
-	einfo "The way Java is handled on Gentoo has been recently updated."
-	einfo "If you have not done so already, you should follow the"
-	einfo "instructions available at:"
-	einfo "\thttp://www.gentoo.org/proj/en/java/java-upgrade.xml"
-	echo
-	einfo "While we moving towards the new Java system, we require"
-	einfo "a 1.3 or 1.4 JDK to be installed to ensure backwards compatibility"
-	einfo "with the old system."
-	einfo "For more details about this, please see:"
-	einfo "\thttps://overlays.gentoo.org/proj/java/wiki/Why_We_Need_Java14"
+	elog "The way Java is handled on Gentoo has been recently updated."
+	elog "If you have not done so already, you should follow the"
+	elog "instructions available at:"
+	elog "\thttp://www.gentoo.org/proj/en/java/java-upgrade.xml"
+	elog
+	elog "While we moving towards the new Java system, we only allow"
+	elog "1.3 or 1.4 JDKs to be used with java-config-1 to ensure"
+	elog "backwards compatibility with the old system."
+	elog "For more details about this, please see:"
+	elog "\thttps://overlays.gentoo.org/proj/java/wiki/Why_We_Need_Java14"
 }
