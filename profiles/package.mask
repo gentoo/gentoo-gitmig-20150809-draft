@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5930 2006/09/22 04:00:32 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5931 2006/09/22 04:04:43 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -376,7 +376,6 @@ app-admin/system-config-httpd
 app-admin/system-config-language
 # Seems to require already existing volumes to run
 app-admin/system-config-lvm
-app-admin/system-config-nfs
 app-admin/system-config-printer
 app-admin/system-config-samba
 app-admin/system-config-soundcard
