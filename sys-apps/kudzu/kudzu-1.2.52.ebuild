@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.52.ebuild,v 1.2 2006/09/19 02:28:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.2.52.ebuild,v 1.3 2006/09/22 05:37:39 dberkholz Exp $
 
 inherit eutils python rpm multilib
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://fedora.redhat.com/projects/additional-projects/kudzu/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 -mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/popt
