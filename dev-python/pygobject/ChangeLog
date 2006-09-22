@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.4 2006/09/07 04:42:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.5 2006/09/22 04:53:44 dberkholz Exp $
+
+  22 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml,
+  -pygobject-2.10.1.ebuild:
+  Remove 'my' version, and turn over completely to gnome.
 
   07 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   put pygobject in the gnome herd
