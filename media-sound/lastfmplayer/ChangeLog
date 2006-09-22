@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.8 2006/08/31 00:08:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.9 2006/09/22 21:50:39 genstef Exp $
+
+  22 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  lastfmplayer-1.0.0.1_p2113.ebuild:
+  Ebuild info fixes and changes thanks to Alexander Skwar
+  <askwar@digitalprojects.com> and David Li <matrixhax0r@gmail.com> in bug
+  148574
 
   31 Aug 2006; Stefan Schweizer <genstef@gentoo.org>
   lastfmplayer-1.0.0.1_p2113.ebuild:

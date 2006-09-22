@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.4 2006/08/31 00:08:11 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.5 2006/09/22 21:50:39 genstef Exp $
 
 inherit eutils subversion versionator
 
-DESCRIPTION="The Last.fm player allows you to listen to their internet radio which is tailored to your music profile"
+DESCRIPTION="The player allows you to listen to last.fm radio streams"
 HOMEPAGE="http://www.last.fm/help/player"
 SRC_URI=""
 ESVN_REPO_URI="svn://svn.audioscrobbler.net/LastFM_client/trunk"
@@ -15,24 +15,26 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug"
 
-DEPEND="=x11-libs/qt-4*"
+MY_QT_DEP="=x11-libs/qt-4*"
+DEPEND="${MY_QT_DEP}"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	if ! built_with_use x11-libs/qt gif png ; then
-		eerror "It appears that qt was compiled without the gif or png USE flag"
-		eerror
-		eerror "In order to work, you need to enable these USE flag(s)"
-		eerror "To do this, run the following in a command window:"
-		eerror "echo \"x11-libs/qt gif png\" >> /etc/portage/package.use"
-		eerror "and recompile qt using \"emerge -avN1 qt\""
+	local qt_version=$(best_version ${MY_QT_DEP})
 
+	if ! built_with_use ${MY_QT_DEP} gif png ; then
+		eerror "It is nessary to compile ${qt_version} with gif and png USE flag" 
+		eerror
+		eerror "To do this, run the following:"
+		eerror "echo \"${MY_QT_DEP} gif png\" >> /etc/portage/package.use"
+		eerror "and reemerge by running  \"emerge -av1 ${MY_QT_DEP}\""
 		die "no gif or png support in qt"
 	fi
 
-	if use debug && ! built_with_use x11-libs/qt debug ; then
-		eerror "In order to use debug, you need to compile Qt 4"
+	if use debug && ! built_with_use ${MY_QT_DEP} debug ; then
+		eerror "In order to use debug, you need to compile ${qt_version}"
 		eerror "with debug USE flag."
+		die "no debug support in qt"
 	fi
 }
 
@@ -95,16 +97,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "In order to use the Last.fm player with your mozilla based browser,"
-	einfo "You must follow these steps:"
-	einfo " 1. Go to \"about:config\" using the location bar"
-	einfo " 2. Right-click on the page.  Select \"New\" and then \"String\""
-	einfo " 3. Type in the name field: \"network.protocol-handler.app.lastfm\""
-	einfo " 4. Type in the value field: \"/usr/bin/lastfm\""
+	einfo "To use the Last.fm player with a mozilla based browser:"
+	einfo " 1. Go to about:config in the browser"
+	einfo " 2. Right-click on the page"
+	einfo " 3. Select New and then String"
+	einfo " 4. For the name: network.protocol-handler.app.lastfm"
+	einfo " 5. For the value: /usr/bin/lastfm"
 	einfo
-	einfo "If you experiance awkward fonts or widgets, you may consider"
-	einfo "running \"qtconfig\" and change the settings"
-	einfo
-	einfo "To configure a browser you need to add something like"
-	einfo "\"Browser=/usr/bin/firefox\" under [general] in ~/.config/last.fm/player.ini"
+	einfo "If you experiance awkward fonts or widgets, try running qtconfig."
 }
