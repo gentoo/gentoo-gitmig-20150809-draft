@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.133 2006/09/21 23:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.134 2006/09/22 00:26:46 cardoe Exp $
+
+  22 Sep 2006; Doug Goldstein <cardoe@gentoo.org>
+  -files/dbus-0.23.2-python_api.patch, -files/dbus-0.23.2-version_fix.patch,
+  -files/dbus-0.23-dbus_session_connect.patch,
+  -files/dbus-0.23-fd_set.patch, -files/dbus-0.23-pyexecdir.patch,
+  -files/dbus-0.23-qt.patch, -files/dbus-dnotify_configure-01.diff,
+  -files/dbus-dnotify_watchdirs-01.diff, -files/dbus,
+  -dbus-0.23.4-r1.ebuild:
+  Removed the old dbus-0.23 series\!
 
 *dbus-0.62-r1 (21 Sep 2006)
 
