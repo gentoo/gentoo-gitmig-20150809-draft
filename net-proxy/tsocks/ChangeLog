@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/tsocks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.10 2006/09/20 18:18:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.11 2006/09/22 12:25:03 mrness Exp $
+
+*tsocks-1.8_beta5-r2 (22 Sep 2006)
+
+  22 Sep 2006; Alin Nastac <mrness@gentoo.org>
+  +files/tsocks-1.8_beta5-gentoo.patch, +tsocks-1.8_beta5-r2.ebuild:
+  Rename saveme and validateconf executables. Add tordns patch & local USE
+  flag (#148550).
 
   20 Sep 2006; Alin Nastac <mrness@gentoo.org> tsocks-1.8_beta5-r1.ebuild:
   Stable on x86.
