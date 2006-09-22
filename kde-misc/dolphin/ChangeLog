@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/dolphin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.1 2006/09/22 05:21:33 flameeyes Exp $
+
+*dolphin-0.6.2 (22 Sep 2006)
+
+  22 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +dolphin-0.6.2.ebuild:
+  Initial import, ebuild almost entirely based on the work of Konrad
+  Zapalowicz and Tiziano Müller on bug #141799 and Sunrise.
+
