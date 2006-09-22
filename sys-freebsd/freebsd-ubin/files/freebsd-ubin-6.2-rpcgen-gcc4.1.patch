@@ -1,0 +1,131 @@
+Index: fbsd-6.2/usr.bin/rpcgen/rpc_hout.c
+===================================================================
+--- fbsd-6.2.orig/usr.bin/rpcgen/rpc_hout.c
++++ fbsd-6.2/usr.bin/rpcgen/rpc_hout.c
+@@ -50,7 +50,7 @@ void storexdrfuncdecl( char *, int );
+ static void pconstdef( definition * );
+ static void pstructdef( definition * );
+ static void puniondef( definition * );
+-static void pprogramdef( definition *, int );
++static void pprogramdef( definition *, int, int );
+ static void pstructdef( definition * );
+ static void penumdef( definition * );
+ static void ptypedef( definition * );
+@@ -64,7 +64,7 @@ void pdeclaration( char *, declaration *
+  * Print the C-version of an xdr definition
+  */
+ void
+-print_datadef(definition *def, int headeronly)
++print_datadef(definition *def, int headeronly, int nomain)
+ {
+ 
+ 	if (def->def_kind == DEF_PROGRAM)  /* handle data only */
+@@ -87,7 +87,7 @@ print_datadef(definition *def, int heade
+ 		ptypedef(def);
+ 		break;
+ 	case DEF_PROGRAM:
+-		pprogramdef(def, headeronly);
++		pprogramdef(def, headeronly, nomain);
+ 		break;
+ 	case DEF_CONST:
+ 		pconstdef(def);
+@@ -103,12 +103,12 @@ print_datadef(definition *def, int heade
+ 
+ 
+ void
+-print_funcdef(definition *def, int headeronly)
++print_funcdef(definition *def, int headeronly, int nomain)
+ {
+ 	switch (def->def_kind) {
+ 	case DEF_PROGRAM:
+ 		f_print(fout, "\n");
+-		pprogramdef(def, headeronly);
++		pprogramdef(def, headeronly, nomain);
+ 		break;
+ 	default:
+ 		break;
+@@ -313,7 +313,7 @@ pdispatch(char * name, char *vers, int m
+ }
+ 
+ static void
+-pprogramdef(definition *def, int headeronly)
++pprogramdef(definition *def, int headeronly, int nomain)
+ {
+ 	version_list *vers;
+ 	proc_list *proc;
+@@ -341,7 +341,7 @@ pprogramdef(definition *def, int headero
+ 
+ 		if(!Cflag){
+ 			ext = "extern  ";
+-			if (headeronly) {
++			if (headeronly && nomain) {
+ 				f_print(fout, "%s", ext);
+ 				pdispatch(def->def_name, vers->vers_num, 2);
+ 			}
+@@ -372,7 +372,7 @@ pprogramdef(definition *def, int headero
+ 					ext = "extern  ";
+ 				}
+ 
+-				if (headeronly) {
++				if (headeronly && nomain) {
+ 					f_print(fout, "%s", ext);
+ 					pdispatch(def->def_name, vers->vers_num,
+ 					    i);
+Index: fbsd-6.2/usr.bin/rpcgen/rpc_main.c
+===================================================================
+--- fbsd-6.2.orig/usr.bin/rpcgen/rpc_main.c
++++ fbsd-6.2/usr.bin/rpcgen/rpc_main.c
+@@ -61,7 +61,7 @@ extern int write_sample_clnt( definition
+ extern void write_sample_clnt_main( void );
+ extern void add_sample_msg( void );
+ static void c_output( char *, char *, int, char * );
+-static void h_output( char *, char *, int, char *, int );
++static void h_output( char *, char *, int, char *, int, int );
+ static void l_output( char *, char *, int, char * );
+ static void t_output( char *, char *, int, char * );
+ static void clnt_output( char *, char *, int, char * );
+@@ -173,7 +173,7 @@ main(argc, argv)
+ 		c_output(cmd.infile, "-DRPC_XDR", DONT_EXTEND, cmd.outfile);
+ 	} else if (cmd.hflag) {
+ 		h_output(cmd.infile, "-DRPC_HDR", DONT_EXTEND, cmd.outfile,
+-		    cmd.hflag);
++			cmd.hflag, cmd.nflag);
+ 	} else if (cmd.lflag) {
+ 		l_output(cmd.infile, "-DRPC_CLNT", DONT_EXTEND, cmd.outfile);
+ 	} else if (cmd.sflag || cmd.mflag || (cmd.nflag)) {
+@@ -193,7 +193,7 @@ main(argc, argv)
+ 		/* the rescans are required, since cpp may effect input */
+ 		c_output(cmd.infile, "-DRPC_XDR", EXTEND, "_xdr.c");
+ 		reinitialize();
+-		h_output(cmd.infile, "-DRPC_HDR", EXTEND, ".h", cmd.hflag);
++		h_output(cmd.infile, "-DRPC_HDR", EXTEND, ".h", cmd.hflag, cmd.nflag);
+ 		reinitialize();
+ 		l_output(cmd.infile, "-DRPC_CLNT", EXTEND, "_clnt.c");
+ 		reinitialize();
+@@ -515,7 +515,7 @@ char *generate_guard(pathname)
+ 
+ 
+ static void
+-h_output(char *infile, char *define, int extend, char *outfile, int headeronly)
++h_output(char *infile, char *define, int extend, char *outfile, int headeronly, int nomain)
+ {
+ 	definition *def;
+ 	char *outfilename;
+@@ -555,7 +555,7 @@ h_output(char *infile, char *define, int
+ 
+ 	/* print data definitions */
+ 	while ( (def = get_definition()) ) {
+-		print_datadef(def, headeronly);
++		print_datadef(def, headeronly, nomain);
+ 	}
+ 
+ 	/*
+@@ -564,7 +564,7 @@ h_output(char *infile, char *define, int
+ 	 *  arguments for functions
+ 	 */
+ 	for (l = defined; l != NULL; l = l->next) {
+-		print_funcdef(l->val, headeronly);
++		print_funcdef(l->val, headeronly, nomain);
+ 	}
+ 	/* Now  print all xdr func declarations */
+ 	if (xdrfunc_head != NULL){
