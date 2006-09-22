@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.9 2006/09/17 01:24:35 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.10 2006/09/22 17:45:26 wltjr Exp $
+
+  22 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  mod_jk-1.2.18-r1.ebuild:
+  Updated ebuild to not use 1.6 jdks due to compilation issues
 
 *mod_jk-1.2.18 (17 Sep 2006)
 
