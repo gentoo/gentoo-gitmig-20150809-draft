@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.1 2006/09/21 23:23:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.2 2006/09/22 00:12:55 cardoe Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils mono python multilib debug qt3 autotools
@@ -101,7 +101,7 @@ src_compile() {
 }
 
 src_test() {
-	DBUS_VERBOSE=1 make check
+	DBUS_VERBOSE=1 make check || die "make check failed"
 }
 
 src_install() {
