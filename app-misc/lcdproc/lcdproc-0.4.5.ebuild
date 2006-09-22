@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.5.ebuild,v 1.11 2006/07/08 08:06:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.5.ebuild,v 1.12 2006/09/22 14:12:58 jokey Exp $
 
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
 HOMEPAGE="http://lcdproc.org/"
@@ -92,6 +92,6 @@ src_install() {
 	doins scripts/lcdproc.conf
 
 	exeinto /etc/init.d
-	doexe ${FILESDIR}/LCDd
+	newexe ${FILESDIR}/${PV}-LCDd LCDd
 	doexe ${FILESDIR}/lcdproc
 }

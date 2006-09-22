@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/files/0.4.5-LCDd,v 1.1 2006/09/22 14:12:58 jokey Exp $
+
+depend() {
+	use net
+}
+
+start() {
+	ebegin "Starting LCDd"
+	start-stop-daemon --start --quiet -m --pidfile /var/run/LCDd.pid \
+		--background --exec /usr/sbin/LCDd -- -s -f -c /etc/LCDd.conf
+	sleep 1
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping LCDd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/LCDd.pid
+	eend $?
+}
