@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.171 2006/09/19 17:07:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.172 2006/09/22 18:51:16 corsair Exp $
+
+  22 Sep 2006; Markus Rothe <corsair@gentoo.org> db-4.3.27.ebuild,
+  db-4.3.29.ebuild, db-4.3.29-r2.ebuild, db-4.4.20_p2.ebuild:
+  Added ~ppc64
 
   19 Sep 2006; Vlastimil Babka <caster@gentoo.org> db-3.2.9-r10.ebuild:
   Move JAVACABS export to src_compile() to make it actually work.
