@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.54.6.ebuild,v 1.2 2006/09/05 20:53:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libuser/libuser-0.54.6.ebuild,v 1.3 2006/09/22 05:36:22 dberkholz Exp $
 
-inherit rpm
+inherit eutils rpm
 
 # Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
 # tarball out of it
@@ -25,6 +25,12 @@ RDEPEND="=dev-libs/glib-2*
 	ldap? ( net-nds/openldap )
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${RDEPEND}"
+
+src_unpack() {
+	rpm_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-raise-minimum-ids-to-1000.patch
+}
 
 src_compile() {
 	econf \
