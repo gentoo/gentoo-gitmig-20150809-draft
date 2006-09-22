@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r4.ebuild,v 1.12 2006/09/19 19:52:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.2-r4.ebuild,v 1.13 2006/09/22 18:47:39 the_paya Exp $
 
 inherit eutils libtool autotools
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
