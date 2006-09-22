@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r4.ebuild,v 1.6 2006/09/22 22:00:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r4.ebuild,v 1.7 2006/09/22 22:11:05 ticho Exp $
 
 inherit eutils flag-o-matic linux-info libtool toolchain-funcs
 
@@ -56,6 +56,7 @@ src_unpack() {
 	# Let portage handle the stripping of binaries
 	sed -i -e "/strip cdparanoia/d" Makefile.in
 
+	# Fix Makefiles for parallel building. Bug #136128.
 	sed -i \
 		-e "s/^lib:	$/lib:	\$(OFILES)/" \
 		-e "s/^slib:	$/slib:	\$(OFILES)/" \
