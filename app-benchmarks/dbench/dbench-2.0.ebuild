@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-2.0.ebuild,v 1.17 2006/06/29 19:45:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-2.0.ebuild,v 1.18 2006/09/22 18:31:08 corsair Exp $
 
 DESCRIPTION="Popular filesystem benchmark"
 SRC_URI="ftp://samba.org/pub/tridge/dbench/${P}.tar.gz"
 HOMEPAGE="ftp://samba.org/pub/tridge/dbench/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
 IUSE=""
 DEPEND="sys-apps/sed"
 
