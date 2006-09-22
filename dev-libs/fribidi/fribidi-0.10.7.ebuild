@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.7.ebuild,v 1.2 2006/04/09 16:55:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.7.ebuild,v 1.3 2006/09/22 06:03:55 matsuu Exp $
 
 DESCRIPTION="A free implementation of the unicode bidirectional algorithm"
 HOMEPAGE="http://fribidi.org/"
@@ -16,10 +16,9 @@ DEPEND="virtual/libc"
 src_compile() {
 	econf || die
 	emake || die "emake failed"
-	make test || die "make test failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README ChangeLog THANKS TODO
 }
