@@ -11,8 +11,9 @@
 		</description>
 	</maintainer>
 	<maintainer>
-		<email>seemant@gentoo.org</email>
-		<name>Seemant Kulleen</name>
-		<description>Seemant is the proxy in question above.</description>
+		<email>steev@gentoo.org</email>
+		<name>Steev Klimaszewski</name>
+		<description>Steev is the proxy maintainer now, and does use it for
+			work, but isn't extremely familiar just yet.</description>
 	</maintainer>
 </pkgmetadata>

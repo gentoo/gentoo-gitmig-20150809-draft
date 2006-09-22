@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqsh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.18 2006/09/18 17:02:33 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.19 2006/09/22 14:47:30 steev Exp $
+
+  22 Sep 2006; Steev Klimaszewski <steev@gentoo.org> metadata.xml:
+  Take over maintainership from Seemant.
 
   18 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
   +files/sqsh-2.1.3-fbsd-configure.patch, sqsh-2.1.3-r1.ebuild:
