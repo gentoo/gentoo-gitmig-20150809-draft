@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/netlogo-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/ChangeLog,v 1.3 2006/04/29 00:27:19 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/netlogo-bin/ChangeLog,v 1.4 2006/09/22 19:19:18 ticho Exp $
+
+  22 Sep 2006; <ticho@gentoo.org> netlogo-bin-3.0.2.ebuild:
+  Stable on x86, bug #148601.
 
   29 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fix SHA256 digests.
