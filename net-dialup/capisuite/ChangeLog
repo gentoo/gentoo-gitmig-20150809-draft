@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capisuite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.28 2006/09/22 13:41:51 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capisuite/ChangeLog,v 1.29 2006/09/22 13:51:45 sbriesen Exp $
+
+*capisuite-0.4.5-r4 (22 Sep 2006)
+
+  22 Sep 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capisuite-0.4.5-syntax.patch, +capisuite-0.4.5-r4.ebuild:
+  fixed deprecation syntax errors in incoming.py and as a precaution also
+  idle.py, solving bug #130234 and #147854.
 
   22 Sep 2006; Stefan Briesenick <sbriesen@gentoo.org>
   -files/capisuite-0.4.5-capiv3.patch, -files/capisuite-0.4.5-gentoo.patch,
