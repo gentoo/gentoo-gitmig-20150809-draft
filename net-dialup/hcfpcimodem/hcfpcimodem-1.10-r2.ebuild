@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.10-r2.ebuild,v 1.2 2006/05/14 08:16:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfpcimodem/hcfpcimodem-1.10-r2.ebuild,v 1.3 2006/09/22 19:16:26 mrness Exp $
 
 inherit eutils linux-info
 
@@ -21,6 +21,8 @@ DEPEND="dev-lang/perl
 	app-arch/cpio"
 
 S="${WORKDIR}/${P}full"
+
+QA_EXECSTACK="usr/lib/hcfpcimodem/modules/imported/hcfblam-i386.O usr/lib/hcfpcimodem/modules/imported/hcfengine-i386.O"
 
 pkg_setup() {
 	linux-info_pkg_setup

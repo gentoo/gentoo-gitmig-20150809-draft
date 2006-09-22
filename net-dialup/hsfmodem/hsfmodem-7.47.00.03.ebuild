@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.47.00.03.ebuild,v 1.1 2006/09/08 12:11:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.47.00.03.ebuild,v 1.2 2006/09/22 19:11:28 mrness Exp $
 
 inherit eutils linux-info
 
@@ -30,6 +30,12 @@ pkg_setup() {
 	elif useq amd64; then
 		MY_ARCH_S="${S}/${P}x86_64full"
 	fi
+
+	local f
+	QA_EXECSTACK=""
+	for f in pcibasic2 mc97ich mc97via mc97ali mc97ati mc97sis usbcd2 soar hda engine ; do
+		QA_EXECSTACK="${QA_EXECSTACK} usr/lib/hsfmodem/modules/imported/hsf${f}-i386.O"
+	done
 }
 
 src_unpack() {
