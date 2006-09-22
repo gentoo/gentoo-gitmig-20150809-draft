@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.200 2006/09/22 13:47:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.201 2006/09/22 13:51:19 mcummings Exp $
+
+  22 Sep 2006; Michael Cummings <mcummings@gentoo.org>
+  imagemagick-6.2.9.5-r1.ebuild:
+  Fixlocalpod addition
 
   22 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   files/imagemagick-perl.patch:
