@@ -8,7 +8,7 @@ diff -Nru rp-l2tp-0.4.orig/Makefile.in rp-l2tp-0.4/Makefile.in
 -	$(install) -m 755 -s l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)
 -	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp
 -	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/l2tp/l2tp.conf.example
-+	$(install) -m 755 -s l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)/rp-l2tpd
++	$(install) -m 755 l2tpd $(RPM_INSTALL_ROOT)$(DESTDIR)$(sbindir)/rp-l2tpd
 +	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/rp-l2tp
 +	$(install) -m 644 l2tp.conf $(RPM_INSTALL_ROOT)$(DESTDIR)/etc/rp-l2tp/rp-l2tpd.conf.example
  	-mkdir -p $(RPM_INSTALL_ROOT)$(DESTDIR)$(mandir)/man8
@@ -31,7 +31,7 @@ diff -Nru rp-l2tp-0.4.orig/handlers/Makefile.in rp-l2tp-0.4/handlers/Makefile.in
 -	$(install) -m 755 -s l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)
 -	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(prefix)/lib/l2tp/plugins
 +	-mkdir -p $(RPM_INSTALL_ROOT)$(prefix)/lib/rp-l2tpd/plugins
-+	$(install) -m 755 -s l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)/rp-l2tpd-control
++	$(install) -m 755 l2tp-control $(RPM_INSTALL_ROOT)$(sbindir)/rp-l2tpd-control
 +	$(install) -m 755 $(HANDLERS) $(RPM_INSTALL_ROOT)$(prefix)/lib/rp-l2tpd/plugins
  distclean: clean
 diff -Nru rp-l2tp-0.4.orig/handlers/cmd-control.c rp-l2tp-0.4/handlers/cmd-control.c
@@ -83,7 +83,7 @@ diff -Nru rp-l2tp-0.4.orig/man/l2tp.conf.5 rp-l2tp-0.4/man/l2tp.conf.5
 --- rp-l2tp-0.4.orig/man/l2tp.conf.5	2004-07-01 17:58:56.000000000 +0300
 +++ rp-l2tp-0.4/man/l2tp.conf.5	2004-11-24 23:47:07.911169976 +0200
 @@ -1,13 +1,13 @@
- .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.2 2004/11/24 21:52:37 mrness Exp $ 
+ .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.3 2006/09/23 15:04:50 mrness Exp $ 
  .\" LIC: GPL
 -.TH L2TP.CONF 5 "11 March 2002"
 +.TH RP-L2TPD.CONF 5 "11 March 2002"
@@ -116,7 +116,7 @@ diff -Nru rp-l2tp-0.4.orig/man/l2tpd.8 rp-l2tp-0.4/man/l2tpd.8
 --- rp-l2tp-0.4.orig/man/l2tpd.8	2002-09-30 22:45:00.000000000 +0300
 +++ rp-l2tp-0.4/man/l2tpd.8	2004-11-24 23:44:47.989441312 +0200
 @@ -1,14 +1,14 @@
- .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.2 2004/11/24 21:52:37 mrness Exp $ 
+ .\" $Id: rp-l2tp-0.4-gentoo.diff,v 1.3 2006/09/23 15:04:50 mrness Exp $ 
  .\" LIC: GPL
 -.TH L2TPD 8 "11 March 2002"
 +.TH RP-L2TPD 8 "11 March 2002"
