@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2-r1.ebuild,v 1.13 2006/09/18 15:56:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2-r1.ebuild,v 1.14 2006/09/23 19:21:14 seemant Exp $
 
 inherit eutils libtool autotools
 
@@ -27,6 +27,7 @@ src_unpack() {
 	# add docbook switch so we can disable it
 	epatch "${FILESDIR}"/${P}-docbook.patch
 
+	export WANT_AUTOMAKE=1.9
 	eautoreconf
 
 	# elibtoolize
