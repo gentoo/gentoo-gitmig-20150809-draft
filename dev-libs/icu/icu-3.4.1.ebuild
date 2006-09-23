@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-3.4.1.ebuild,v 1.6 2006/09/22 17:11:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-3.4.1.ebuild,v 1.7 2006/09/23 10:25:01 nixnut Exp $
 
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 
 DESCRIPTION="IBM Internationalization Components for Unicode."
 SRC_URI="ftp://ftp.software.ibm.com/software/globalization/icu/${PV}/${P}.tgz"
