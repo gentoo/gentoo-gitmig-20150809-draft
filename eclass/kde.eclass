@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.180 2006/09/21 23:32:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.181 2006/09/23 21:20:35 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -215,20 +215,32 @@ kde_src_compile() {
 				debug-print-section configure
 				debug-print "$FUNCNAME::configure: myconf=$myconf"
 
-				# This is needed to fix building with autoconf 2.60.
-				# Many thanks to who preferred such a stupid check rather
-				# than a working arithmetic comparison.
-				if [[ -f admin/cvs.sh ]]; then
-					sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
-						admin/cvs.sh
-				fi
-
-				einfo "Forcing automake ${WANT_AUTOMAKE} (hopefully)"
 				export WANT_AUTOMAKE
 
 				# rebuild configure script, etc
 				# This can happen with e.g. a cvs snapshot
 				if [ ! -f "./configure" ] || [ -n "$UNSERMAKE" ]; then
+					# This is needed to fix building with autoconf 2.60.
+					# Many thanks to who preferred such a stupid check rather
+					# than a working arithmetic comparison.
+					if [[ -f admin/cvs.sh ]]; then
+						sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
+							admin/cvs.sh
+					fi
+
+					# Replace the detection script with a dummy, let our wrappers do the work
+					if [[ -f admin/detect-autoconf.sh ]]; then
+						cat - > admin/detect-autoconf.sh <<EOF
+#!/bin/sh
+export AUTOCONF="autoconf"
+export AUTOHEADER="autoheader"
+export AUTOM4TE="autom4te"
+export AUTOMAKE="automake"
+export ACLOCAL="aclocal"
+export WHICH="which"
+EOF
+					fi
+
 					for x in Makefile.cvs admin/Makefile.common; do
 						if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
 					done
