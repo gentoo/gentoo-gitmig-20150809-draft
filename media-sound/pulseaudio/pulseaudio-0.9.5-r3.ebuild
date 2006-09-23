@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r3.ebuild,v 1.4 2006/09/21 22:47:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.5-r3.ebuild,v 1.5 2006/09/23 20:28:55 flameeyes Exp $
 
 inherit eutils libtool # autotools
 
@@ -28,7 +28,8 @@ RDEPEND="X? ( || ( x11-libs/libX11 <virtual/x11-7 ) )
 	tcpd? ( sys-apps/tcp-wrappers )
 	lirc? ( app-misc/lirc )
 	hal? ( >=sys-apps/hal-0.5.7 )
-	app-admin/eselect-esd"
+	app-admin/eselect-esd
+	sys-devel/libtool" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
