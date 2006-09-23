@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.14 2006/09/06 05:29:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2.2-r1.ebuild,v 1.15 2006/09/23 02:31:53 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs fixheadtails
 
@@ -55,6 +55,12 @@ src_unpack() {
 	# Abort if we fail to run modprobe, bug #68689
 	epatch "${FILESDIR}"/${PN}-3.2_pre7-abort-on-modprobe-failure.patch
 
+	# make sure we link dynamically with zlib; our zlib.so is in /lib vs
+	# /usr/lib so it's safe to link with.  fixes ugly textrels as well.
+	sed -i \
+		-e 's:-Wl,-Bstatic -lz -Wl,-Bdynamic:-lz:' \
+		configure || die
+
 	# make sure we don't try to regen the manpages
 	touch *.5
 }
@@ -84,10 +90,7 @@ src_compile() {
 		--prefix=/ \
 		--enable-zlib \
 		|| die "econf failed"
-
-	# Our zlib.so is in /lib vs /usr/lib so it's safe to link with.
-	# this also fixes text relocations that were showing up in this pkg
-	emake LDADD="-lz" || die "emake module-init-tools failed"
+	emake || die "emake module-init-tools failed"
 }
 
 modutils_src_install() {
@@ -139,8 +142,7 @@ src_install() {
 
 	# Install compat symlink
 	dosym ../bin/lsmod /sbin/lsmod
-	#use no-old-linux || 
-	dosym ../sbin/insmod.old /bin/lsmod.old
+	use no-old-linux || dosym ../sbin/insmod.old /bin/lsmod.old
 	# Install the modules.conf2modprobe.conf tool, so we can update
 	# modprobe.conf.
 	into /

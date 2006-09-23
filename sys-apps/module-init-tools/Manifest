@@ -54,10 +54,10 @@ EBUILD module-init-tools-3.2.1.ebuild 5842 RMD160 2115b4b158fc8318d85fc57fb02cb9
 MD5 04cb46bf9258589c5a6bb1fd3ecf6148 module-init-tools-3.2.1.ebuild 5842
 RMD160 2115b4b158fc8318d85fc57fb02cb98311dd332a module-init-tools-3.2.1.ebuild 5842
 SHA256 621d61ba90aa8ec76e6f5fcc0b811f99ded40610dc262b0a809621bb7b9e637f module-init-tools-3.2.1.ebuild 5842
-EBUILD module-init-tools-3.2.2-r1.ebuild 4851 RMD160 113e96741f1f695031a845bed1bbcbab8792ee68 SHA1 b8e34e6100f4510cf607a3110b52d3795430b366 SHA256 1cd855a5ac6cc2d4ec9abcd9f2234dba5d1f0fc7f5752a2a995e3c0322a54ede
-MD5 988bd6d049ae389355b92be03fe1e538 module-init-tools-3.2.2-r1.ebuild 4851
-RMD160 113e96741f1f695031a845bed1bbcbab8792ee68 module-init-tools-3.2.2-r1.ebuild 4851
-SHA256 1cd855a5ac6cc2d4ec9abcd9f2234dba5d1f0fc7f5752a2a995e3c0322a54ede module-init-tools-3.2.2-r1.ebuild 4851
+EBUILD module-init-tools-3.2.2-r1.ebuild 4917 RMD160 8de44e49fbe02908f6efe97d229165f9778c019d SHA1 12d9e3df07579ae8c4ebd4cc35af745370ba1a08 SHA256 b3239d8af2bcab5094923b371a81ce03fb1370c33d16381a162a77965613ffd2
+MD5 14a2c31d96b1511cc96b25fcc7b49da8 module-init-tools-3.2.2-r1.ebuild 4917
+RMD160 8de44e49fbe02908f6efe97d229165f9778c019d module-init-tools-3.2.2-r1.ebuild 4917
+SHA256 b3239d8af2bcab5094923b371a81ce03fb1370c33d16381a162a77965613ffd2 module-init-tools-3.2.2-r1.ebuild 4917
 EBUILD module-init-tools-3.2.2.ebuild 5857 RMD160 7ecebf600be7bd1a8bfe520a8e80b1c8da4c123e SHA1 32585575b84f26d46c6e368296db932f869323bd SHA256 587011fe780ee072d874d994ca18cf0fb533f7beda43484f40cae6253a94594a
 MD5 21fcd7585ea3b45797f42d3f39a588f7 module-init-tools-3.2.2.ebuild 5857
 RMD160 7ecebf600be7bd1a8bfe520a8e80b1c8da4c123e module-init-tools-3.2.2.ebuild 5857
@@ -88,7 +88,7 @@ SHA256 a0137b244c6cab76e8a2cb31e651484992231b823af1d8d4fc2e1a5db10fe5f6 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE/ly9amhnQswr0vIRAsgDAJ9O4RJMe+hl4Uel1/1Agbn9nr6FhQCaAraB
-EDbwixjzDJhqTmsdpZ3oyG4=
-=JgWy
+iD8DBQFFFJypamhnQswr0vIRAufjAKC0d7+r7XTOLp4CHCTAPT2zA2E1LQCghUzu
+8oeNb7qA1paJQGC26tcll98=
+=NbFm
 -----END PGP SIGNATURE-----
