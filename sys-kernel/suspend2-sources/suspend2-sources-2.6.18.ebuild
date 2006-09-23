@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.18.ebuild,v 1.1 2006/09/20 19:47:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/suspend2-sources/suspend2-sources-2.6.18.ebuild,v 1.2 2006/09/23 17:24:12 phreak Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
 K_GENPATCHES_VER="1"
-SUSPEND2_VERSION="1"
+SUSPEND2_VERSION="2"
 
 inherit eutils kernel-2
 detect_version
