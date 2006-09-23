@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.9.ebuild,v 1.1 2006/09/22 23:00:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-1.6.9.ebuild,v 1.2 2006/09/23 07:55:40 genstef Exp $
 
 inherit eutils
 
@@ -87,16 +87,16 @@ src_install() {
 		echo "hpaio" > dll.conf
 		doins dll.conf
 
-		dodir /usr/lib/sane
-		dosym /usr/lib/libsane-hpaio.la /usr/lib/sane/libsane-hpaio.la
-		dosym /usr/lib/libsane-hpaio.so /usr/lib/sane/libsane-hpaio.so
-		dosym /usr/lib/libsane-hpaio.so.1 /usr/lib/sane/libsane-hpaio.so.1
-		dosym /usr/lib/libsane-hpaio.so.1.0.0 /usr/lib/sane/libsane-hpaio.so.1.0.0
+		dodir /usr/$(get_libdir)/sane
+		dosym /usr/$(get_libdir)/libsane-hpaio.la /usr/$(get_libdir)/sane/libsane-hpaio.la
+		dosym /usr/$(get_libdir)/libsane-hpaio.so /usr/$(get_libdir)/sane/libsane-hpaio.so
+		dosym /usr/$(get_libdir)/libsane-hpaio.so.1 /usr/$(get_libdir)/sane/libsane-hpaio.so.1
+		dosym /usr/$(get_libdir)/libsane-hpaio.so.1.0.0 /usr/$(get_libdir)/sane/libsane-hpaio.so.1.0.0
 	else
-		rm -f "${D}"/usr/lib/libsane-hpaio.la
-		rm -f "${D}"/usr/lib/libsane-hpaio.so
-		rm -f "${D}"/usr/lib/libsane-hpaio.so.1
-		rm -f "${D}"/usr/lib/libsane-hpaio.so.1.0.0
+		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.la
+		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so
+		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so.1
+		rm -f "${D}"/usr/$(get_libdir)/libsane-hpaio.so.1.0.0
 	fi
 
 	# bug 106035
