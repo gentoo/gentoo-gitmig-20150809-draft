@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.2 2006/08/26 21:14:33 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.3 2006/09/23 19:01:35 flameeyes Exp $
+
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
 
 inherit libtool flag-o-matic eutils multilib autotools
 
@@ -43,8 +46,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	X? ( || ( (
 			x11-libs/libXaw
 			x11-libs/libXv )
-		<virtual/x11-7 ) )
-"
+		<virtual/x11-7 ) )"
 
 DEPEND="${RDEPEND}
 	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )
@@ -58,11 +60,11 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	sed -i -e "s:\$(datadir)/doc/transcode:\$(datadir)/doc/${PF}:" \
-		${S}/Makefile.am ${S}/docs/Makefile.am ${S}/docs/html/Makefile.am \
-		${S}/docs/release-notes/Makefile.am
+		"${S}"/Makefile.am "${S}"/docs/Makefile.am "${S}"/docs/html/Makefile.am \
+		"${S}"/docs/release-notes/Makefile.am
 
 	epatch "${FILESDIR}/${P}-bigdir.patch"
 	epatch "${FILESDIR}/${P}-lzo2.patch"
@@ -128,12 +130,12 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	#do not install the filters that make dvdrip hang unless we ask for them
 	if ! use extrafilters ; then
-	rm ${D}/usr/$(get_libdir)/transcode/filter_logo.*
-	rm ${D}/usr/$(get_libdir)/transcode/filter_compare.*
+	rm "${D}"/usr/$(get_libdir)/transcode/filter_logo.*
+	rm "${D}"/usr/$(get_libdir)/transcode/filter_compare.*
 	fi
 
 	dodoc AUTHORS ChangeLog README TODO
