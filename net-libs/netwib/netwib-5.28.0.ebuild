@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.28.0.ebuild,v 1.6 2006/02/20 20:30:59 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.28.0.ebuild,v 1.7 2006/09/23 22:53:16 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -36,9 +36,15 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README.TXT doc/*.txt
+	dodoc README.TXT
+	if use doc;
+	then
+		mv "${WORKDIR}"/${P}-doc_html "${D}"/usr/share/doc/${PF}/html
+	else
+		dodoc doc/{changelog.txt,credits.txt,integration.txt} \
+			doc/{problemreport.txt,problemusageunix.txt,todo.txt}
+	fi
 	cd src
-	emake install DESTDIR=${D} || die
-	dodir ${D}/usr/share
-	mv ${D}/usr/man ${D}/usr/share
+	make install DESTDIR="${D}" || die
+	#rm -rf ${D}/var
 }
