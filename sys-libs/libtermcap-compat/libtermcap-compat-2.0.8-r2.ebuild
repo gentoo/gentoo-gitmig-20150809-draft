@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.3 2006/09/21 03:10:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.4 2006/09/23 09:40:00 vapier Exp $
 
 # we only want this for binary-only packages, so we will only be installing
 # the lib used at runtime; no headers and no files to link against
@@ -56,7 +56,9 @@ src_install() {
 	cd "${D}"
 	rm -r include || die
 
-	mv lib $(get_libdir) || die
+	if [[ $(get_libdir) != "lib" ]] ; then
+		mv lib $(get_libdir) || die
+	fi
 	dosym libtermcap.so.${PV} /$(get_libdir)/libtermcap.so.2
 	cd $(get_libdir)
 	rm -f libtermcap.{a,so}
