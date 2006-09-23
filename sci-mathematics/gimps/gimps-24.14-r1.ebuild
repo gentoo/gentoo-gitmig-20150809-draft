@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14-r1.ebuild,v 1.1 2005/11/06 13:38:48 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/gimps-24.14-r1.ebuild,v 1.2 2006/09/23 21:45:49 spock Exp $
 
 IUSE=""
 DESCRIPTION="GIMPS - The Great Internet Mersenne Prime Search"
@@ -10,8 +10,7 @@ SRC_URI="ftp://mersenne.org/gimps/sprime${PV/./}.tar.gz"
 # We have to use the statically linked version since the dynamically
 # linked one requires gcc >= 3.4.4 (stdlibc++.so.6 dependency).
 
-DEPEND=">=sys-apps/baselayout-1.8.0
-	>=sys-libs/glibc-2.1"
+DEPEND=">=sys-libs/glibc-2.1"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="-* ~amd64 ~x86"
