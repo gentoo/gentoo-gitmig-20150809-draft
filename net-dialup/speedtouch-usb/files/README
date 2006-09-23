@@ -27,11 +27,11 @@ Add the following lines from the appropriate section below to
 a) PPPoATM configuration:
 
 config_ppp0=( ppp )  # Runs /lib/rcscripts/net/pppd.sh
-link_ppp0='/dev/null'  # Not required by PPPoA links, but must be specified
 # The 2 numbers represent the VPI & VCI of your ISP, and they are separated
 # by a dot. Choose here, or ask your ISP:
 #   http://www.linux-usb.org/SpeedTouch/faq/index.html#q12
-plugins_ppp0=( 'pppoa 0.38' ) 
+link_ppp0='0.38'
+plugins_ppp0=( 'pppoa' ) 
 # 'man pppd' shows other options. Compression is disabled because it is
 # rarely taken advantage of, and may interfere with the connection.
 # Add option 'usepeerdns' to populate /etc/resolv.conf
