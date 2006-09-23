@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.rc6,v 1.9 2004/07/14 23:42:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.rc6,v 1.10 2006/09/23 18:17:38 chtekk Exp $
 
 depend() {
 	need net
@@ -9,8 +9,8 @@ depend() {
 
 checkconfig() {
 	if [ ! -e /etc/proftpd/proftpd.conf ] ; then
-		eerror "You need an /etc/proftpd/proftpd.conf file first"
-		eerror "There is a sample file in /etc/proftpd"
+		eerror "You need an /etc/proftpd/proftpd.conf file first!"
+		eerror "There is a sample file in /etc/proftpd."
 		return 1
 	fi
 }
@@ -18,7 +18,7 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting proftpd"
-	start-stop-daemon --start --quiet --exec /usr/sbin/proftpd -- /var/run/proftpd.pid
+	start-stop-daemon --start --quiet --make-pidfile --pidfile /var/run/proftpd.pid --exec /usr/sbin/proftpd
 	eend $?
 }
 
