@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.2 2006/09/08 03:45:08 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.6-r1.ebuild,v 1.3 2006/09/23 02:05:33 nichoj Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -12,7 +12,7 @@ SLOT="1"
 KEYWORDS="~x86 ~amd64"
 IUSE="doc source"
 COMMON_DEP="
-	=dev-java/asm-2*
+	=dev-java/asm-2.0*
 	=dev-java/gnu-regexp-1*"
 RDEPEND=">=virtual/jre-1.3
 	${COMMON_DEP}"
