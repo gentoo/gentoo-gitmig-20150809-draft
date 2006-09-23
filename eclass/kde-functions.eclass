@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.142 2006/07/03 13:05:21 kevquinn Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.143 2006/09/23 00:23:15 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -393,6 +393,8 @@ need-automake() {
 
 	debug-print-function $FUNCNAME $*
 
+	echo "Please don't use need-automake function anymore, see bug #148719."
+
 	unset WANT_AUTOMAKE
 
 	case $1 in
@@ -408,6 +410,8 @@ need-automake() {
 need-autoconf() {
 
 	debug-print-function $FUNCNAME $*
+
+	echo "Please don't use need-autoconf function anymore, see bug #148719."
 
 	unset WANT_AUTOCONF
 	case $1 in
@@ -675,26 +679,6 @@ need-kde() {
 	# determine install locations
 	set-kdedir ${KDEVER}
 
-	# ask for autotools
-	case "${KDEVER}" in
-		3.1.[234])	# Newer 3.1.x versions are built with automake 1.7, and have errors when using 1.6
-			need-automake 1.7
-			need-autoconf 2.5
-			;;
-		3.1*)	# actually, newer 3.0.x stuff uses this too, but i want to make a clean switch
-			need-automake 1.6
-			need-autoconf 2.5
-			;;
-		3*)	# a generic call for need-kde 3 - automake 1.7 works most often
-			need-autoconf 2.5
-			need-automake 1.7
-			;;
-		5*)
-			need-autoconf 2.5
-			need-automake 1.7
-			;;
-	esac
-
 	if [ "${RDEPEND-unset}" != "unset" ] ; then
 		x_DEPEND="${RDEPEND}"
 	else
@@ -840,15 +824,15 @@ need-qt() {
 	fi
 
 	case ${QTVER} in
-	    2*)
+		2*)
 			DEPEND="${DEPEND} =x11-libs/${QT}-2.3*"
 			RDEPEND="${x_DEPEND} =x11-libs/${QT}-2.3*"
 			;;
-	    3*)
+		3*)
 			DEPEND="${DEPEND} $(qt_min_version ${QTVER})"
 			RDEPEND="${x_DEPEND} $(qt_min_version ${QTVER})"
 			;;
-	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
+		*)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
 }
