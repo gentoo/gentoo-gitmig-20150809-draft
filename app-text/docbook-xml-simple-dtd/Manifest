@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX docbook-xml-simple-dtd-1.0.cat 428 RMD160 09495bf821ea9abb39aaf28196f796a4b1ba0c4f SHA1 aa314f589658f55cbb97237e4115cfdb284220ff SHA256 7f6a4bfb164fc411830885594266972618f4539712bab9d0704a931615ca883a
 MD5 71e2e7d1416c9151041c5edbe57ad13f files/docbook-xml-simple-dtd-1.0.cat 428
 RMD160 09495bf821ea9abb39aaf28196f796a4b1ba0c4f files/docbook-xml-simple-dtd-1.0.cat 428
@@ -8,22 +11,22 @@ RMD160 15e8c95f2240b4563cd0a70fced0d0634eed2ce1 files/docbook-xml-simple-dtd-4.1
 SHA256 30bbe27691f329f9825936fe75243457084262901ebf0eb696f84a7fc9d3aad4 files/docbook-xml-simple-dtd-4.1.2.4.catalog 1728
 DIST docbook-simple-1.0.zip 31173 RMD160 69eb251783596d7222baab90c3fe08316823aadc SHA1 595c4824b40aced89359e5a77ed4887903566585 SHA256 412665bd9958a39044d4ab5432c3c786f7f5db51a59905290e4d099983d714ba
 DIST sdb4124.zip 35199 RMD160 32bcdf4d38401f7fdf62aaea587699c03d25ea70 SHA1 3debe639734cfce4cd345ace2b7cdb2bb8eb9b42 SHA256 14aea7b901dd07f7725273fe96456599e226792dc2a02556bef6ab970a57bb56
-EBUILD docbook-xml-simple-dtd-1.0-r1.ebuild 935 RMD160 8b39b2b31b141b85cc04eed0c17b02b7122363d8 SHA1 6fa3ed5f1fb05f9d72e9963274422eb0cc56cf1e SHA256 899eb53021845d9059788b2a6002a518733c1ae489343da80a045927884e75d8
-MD5 7a0e689e8009706c411f22d5ea2d83ab docbook-xml-simple-dtd-1.0-r1.ebuild 935
-RMD160 8b39b2b31b141b85cc04eed0c17b02b7122363d8 docbook-xml-simple-dtd-1.0-r1.ebuild 935
-SHA256 899eb53021845d9059788b2a6002a518733c1ae489343da80a045927884e75d8 docbook-xml-simple-dtd-1.0-r1.ebuild 935
-EBUILD docbook-xml-simple-dtd-1.0.ebuild 1397 RMD160 2671ef6bfe8638207861966e90657502bc185a5b SHA1 d9fa5e20cd74f48a0c3f527fe97b0c4303128baa SHA256 d002ae479cbeca19f505bf5ba2ef40c6dd9ca7d1deeaea6d858b08e62b8c587e
-MD5 58747cb5e4b78fc752ccd9a323f26be4 docbook-xml-simple-dtd-1.0.ebuild 1397
-RMD160 2671ef6bfe8638207861966e90657502bc185a5b docbook-xml-simple-dtd-1.0.ebuild 1397
-SHA256 d002ae479cbeca19f505bf5ba2ef40c6dd9ca7d1deeaea6d858b08e62b8c587e docbook-xml-simple-dtd-1.0.ebuild 1397
-EBUILD docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 986 RMD160 8de1e9f1091a671ad2c288633f7524b3dbe71cc2 SHA1 910e1410209a3808e0c3db5487a143858856a204 SHA256 24ab9cac120f25d7eccd599fec0c50fa938ebb2882e1e626e6754cb249cca6f7
-MD5 078c0f28e8ecf4504d5a3fcada7d7b7d docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 986
-RMD160 8de1e9f1091a671ad2c288633f7524b3dbe71cc2 docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 986
-SHA256 24ab9cac120f25d7eccd599fec0c50fa938ebb2882e1e626e6754cb249cca6f7 docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 986
-EBUILD docbook-xml-simple-dtd-4.1.2.4.ebuild 866 RMD160 0779892e53a74c31664d2ecd9d83675dc30cc7b7 SHA1 87521bdabb4a502b4d8a71ee1b5bafc936842c44 SHA256 99188fb5caaca68cd3d564ca942650708aab1661dd32bc46a2230abb65bb5805
-MD5 016f75323bd093fa71b43deda0bc7297 docbook-xml-simple-dtd-4.1.2.4.ebuild 866
-RMD160 0779892e53a74c31664d2ecd9d83675dc30cc7b7 docbook-xml-simple-dtd-4.1.2.4.ebuild 866
-SHA256 99188fb5caaca68cd3d564ca942650708aab1661dd32bc46a2230abb65bb5805 docbook-xml-simple-dtd-4.1.2.4.ebuild 866
+EBUILD docbook-xml-simple-dtd-1.0-r1.ebuild 936 RMD160 6129152b5df9fdbbb95d6751d55154147887d63e SHA1 c354c7858970ec10a4d303d946b775ca12762bb9 SHA256 36634f48afe3b408d55fc9a6df9acdb8880fae04fe91ac837def949eab9c2505
+MD5 5e7d01a22dc999bfbeebb690842f73b5 docbook-xml-simple-dtd-1.0-r1.ebuild 936
+RMD160 6129152b5df9fdbbb95d6751d55154147887d63e docbook-xml-simple-dtd-1.0-r1.ebuild 936
+SHA256 36634f48afe3b408d55fc9a6df9acdb8880fae04fe91ac837def949eab9c2505 docbook-xml-simple-dtd-1.0-r1.ebuild 936
+EBUILD docbook-xml-simple-dtd-1.0.ebuild 1402 RMD160 c96e91a1217ce99754d265fcb1f810b4da0270ca SHA1 0b6d59649dc11b83c8ace381b85bff9475d350df SHA256 d885cb9c07c1f4c66d4ee448ed4dbeb9064addb18d56c3719666b90c7a5354ab
+MD5 9862e70a41dfd9456910c7cda23613bc docbook-xml-simple-dtd-1.0.ebuild 1402
+RMD160 c96e91a1217ce99754d265fcb1f810b4da0270ca docbook-xml-simple-dtd-1.0.ebuild 1402
+SHA256 d885cb9c07c1f4c66d4ee448ed4dbeb9064addb18d56c3719666b90c7a5354ab docbook-xml-simple-dtd-1.0.ebuild 1402
+EBUILD docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 988 RMD160 95713e77ce1a6c169cb5d0c2cc576dbff66b8e31 SHA1 c2e73254ee8b979516067aeb90d7a42aa5220ed0 SHA256 85c6dad7b81778cd821d2c4e3497b01355a81f7b459ded73efcb06b299e31307
+MD5 902028c2d03f82d70e0002dcdc5842ca docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 988
+RMD160 95713e77ce1a6c169cb5d0c2cc576dbff66b8e31 docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 988
+SHA256 85c6dad7b81778cd821d2c4e3497b01355a81f7b459ded73efcb06b299e31307 docbook-xml-simple-dtd-4.1.2.4-r2.ebuild 988
+EBUILD docbook-xml-simple-dtd-4.1.2.4.ebuild 871 RMD160 3a31b77aeee0a34294098c3e01fc32f85f296da2 SHA1 1abf02ca250024ff777b9c4f9917fc6894d999c1 SHA256 85857b4c45277ca63adca12437ce47c0fdbdcdc12cb1eb1b78c467a0673c9774
+MD5 ff7e022646fb6bf6e36cf1d3e68429a1 docbook-xml-simple-dtd-4.1.2.4.ebuild 871
+RMD160 3a31b77aeee0a34294098c3e01fc32f85f296da2 docbook-xml-simple-dtd-4.1.2.4.ebuild 871
+SHA256 85857b4c45277ca63adca12437ce47c0fdbdcdc12cb1eb1b78c467a0673c9774 docbook-xml-simple-dtd-4.1.2.4.ebuild 871
 MISC ChangeLog 4954 RMD160 c19f4a6de7d549a9340ccaabf68ae67e5bcc7a56 SHA1 148a79eff159652b165ebeb498df4fc59ee7baa3 SHA256 48744ddcc7ff7b8a9676f95ab68df95d569bf4ea3e39e2911b8c54529a856320
 MD5 5cc8a2d5bb1ab9984262597e9900f4fc ChangeLog 4954
 RMD160 c19f4a6de7d549a9340ccaabf68ae67e5bcc7a56 ChangeLog 4954
@@ -44,3 +47,10 @@ SHA256 50fd099cb99e945798534c90119f4d8407f044598bd558aa426874e907142a56 files/di
 MD5 22a64f665409ffe8caee0c1f92d6c9da files/digest-docbook-xml-simple-dtd-4.1.2.4-r2 211
 RMD160 a0b2ebd7c76bcbe53d837abe06f2defcbb9ecdca files/digest-docbook-xml-simple-dtd-4.1.2.4-r2 211
 SHA256 50fd099cb99e945798534c90119f4d8407f044598bd558aa426874e907142a56 files/digest-docbook-xml-simple-dtd-4.1.2.4-r2 211
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFFOjsamhnQswr0vIRAr9XAJ4mv1Fr+a6YXjH3Ml72ojDYf2HYZwCgpGfN
+S5RrRitJBnCTLTMcUKUCqPQ=
+=ya5m
+-----END PGP SIGNATURE-----
