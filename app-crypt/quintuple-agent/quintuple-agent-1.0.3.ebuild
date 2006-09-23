@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.13 2006/09/23 01:50:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/quintuple-agent/quintuple-agent-1.0.3.ebuild,v 1.14 2006/09/23 09:24:08 dragonheart Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	LDFLAGS='-Wl,-z,now' econf `use_enable nls` || die
+	econf $(use_enable nls) || die
 	emake || die
 }
 
