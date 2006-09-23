@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.6.0-r1.ebuild,v 1.4 2006/07/18 21:54:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.6.0-r1.ebuild,v 1.5 2006/09/23 14:33:44 liquidx Exp $
 
-inherit gnome2 mono multilib eutils autotools
+inherit gnome2 eutils autotools multilib mono
 
 DESCRIPTION="A GObject wrapper for Bluetooth functionality"
 HOMEPAGE="http://usefulinc.com/software/gnome-bluetooth/"
@@ -41,6 +41,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-libdir.patch"
 	epatch "${FILESDIR}/${P}-aclocal_openobex.patch"
 
+	sed -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):" -i src/Makefile.am
 	eautoreconf
 }
 
