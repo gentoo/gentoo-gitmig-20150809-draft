@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.5 2006/09/02 18:41:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.6 2006/09/23 01:14:36 flameeyes Exp $
+
+*tork-0.08 (23 Sep 2006)
+
+  23 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tork-0.08-crash.patch, +files/tork-0.08-geoip.patch,
+  +tork-0.08.ebuild:
+  Version bump, update patch to use external GeoIP, add patch to avoid
+  crashing, make sure the desktop file contains the correct directory.
 
 *tork-0.07 (02 Sep 2006)
 

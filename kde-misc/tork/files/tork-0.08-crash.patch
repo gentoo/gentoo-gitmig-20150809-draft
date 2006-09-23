@@ -1,0 +1,15 @@
+Index: tork-0.08/src/torservers.ui.h
+===================================================================
+--- tork-0.08.orig/src/torservers.ui.h
++++ tork-0.08/src/torservers.ui.h
+@@ -48,6 +48,10 @@ void TorServers::init()
+ 
+         int cc = (*it).section("-",0,0).toInt();
+         QString nick = (*it).section("-",1);
++        
++        if ( cc >= sizeof(GeoIP_country_name)/sizeof(GeoIP_country_name[0]) )
++           continue;
++        
+         tm = new QListViewItem(ExcludeNodes,GeoIP_country_name[cc],nick);
+         tm->setPixmap(1,QPixmap(SmallIcon("tork_" + QString(GeoIP_country_code[cc]).lower())));
+         if ((TorkConfig::excludeNodes().contains(nick)) ||
