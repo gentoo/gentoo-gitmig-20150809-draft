@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.46 2006/09/17 22:53:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.47 2006/09/23 20:06:35 flameeyes Exp $
+
+  23 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> cervisia-3.5.2.ebuild,
+  cervisia-3.5.3.ebuild, cervisia-3.5.4.ebuild:
+  It's a good idea not to mix depend and rdepend.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -cervisia-3.4.3.ebuild:
   Drop KDE 3.4.
