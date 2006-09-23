@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.27 2006/09/18 11:49:36 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.28 2006/09/23 08:01:01 wrobel Exp $
+
+*layman-1.0.8 (23 Sep 2006)
+
+  23 Sep 2006; <wrobel@gentoo.org> -layman-1.0.7.ebuild,
+  +layman-1.0.8.ebuild:
+  Added cvs support to layman. Update to 1.0.8
 
   18 Sep 2006; Ferris McCormick <fmccor@gentoo.org> layman-1.0.6.ebuild,
   layman-1.0.7.ebuild:
