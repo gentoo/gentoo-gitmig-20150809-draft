@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.77 2006/06/07 23:51:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.78 2006/09/23 10:50:36 vapier Exp $
+
+*pax-utils-0.1.14 (23 Sep 2006)
+
+  23 Sep 2006; Mike Frysinger <vapier@gentoo.org> +pax-utils-0.1.14.ebuild:
+  Add support for NetBSD, add --user/--group options to pspax, and fix QA
+  envvar handling of .o objects.
 
   07 Jun 2006; Jeroen Roovers <jer@gentoo.org> pax-utils-0.1.13.ebuild:
   Stable on hppa (bug #135427).
