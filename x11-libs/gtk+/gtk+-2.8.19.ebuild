@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.19.ebuild,v 1.12 2006/09/13 15:11:05 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.8.19.ebuild,v 1.13 2006/09/23 15:40:54 corsair Exp $
 
 inherit gnome.org flag-o-matic eutils debug autotools virtualx
 
@@ -84,11 +84,11 @@ src_unpack() {
 		epatch "${FILESDIR}"/${PN}-2.8.0-multilib.patch
 	fi
 
-	use ppc64 && append-flags -mminimal-toc
-
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
 	strip-flags
+
+	use ppc64 && append-flags -mminimal-toc
 
 	# remember, eautoreconf applies elibtoolize.
 	# if you remove this, you should manually run elibtoolize
