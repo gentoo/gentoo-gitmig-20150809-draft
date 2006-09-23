@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.34 2005/11/03 21:55:37 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.35 2006/09/23 22:31:59 dragonheart Exp $
+
+  23 Sep 2006; Daniel Black <dragonheart@gentoo.org> siege-2.61-r1.ebuild:
+  fixed automake dependency as per bug #148797 thanks Patrick Lauer
 
 *siege-2.64-r1 (03 Nov 2005)
 *siege-2.61-r1 (03 Nov 2005)

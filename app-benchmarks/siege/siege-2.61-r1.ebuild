@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61-r1.ebuild,v 1.1 2005/11/03 21:55:37 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.61-r1.ebuild,v 1.2 2006/09/23 22:31:59 dragonheart Exp $
 
-inherit eutils bash-completion
+inherit eutils bash-completion autotools
 
 DESCRIPTION="A HTTP regression testing and benchmarking utility"
 HOMEPAGE="http://www.joedog.org/siege/"
@@ -19,13 +19,13 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.60-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}/"${PN}-2.60-gentoo.diff
+	export WANT_AUTOMAKE="1.5"
+	eautoreconf || die "autoreconf failed"
 }
 
 src_compile() {
-	einfo "Running autoreconf"
-	autoreconf || die "autoreconf failed"
 	econf $(use_with ssl) || die "econf failed"
 	emake || die "emake failed"
 }
@@ -37,12 +37,12 @@ src_install() {
 	# interpreted by bash sending the contents to stderr
 	# instead of ${HOME}/.siegerc
 	sed -i -e 's|\${}|\\${}|' -e 's|\$(HOME)|\\$(HOME)|' \
-		${D}/usr/bin/siege.config
+		"${D}"/usr/bin/siege.config
 
 	dodoc AUTHORS ChangeLog INSTALL MACHINES README KNOWNBUGS \
 		siegerc-example urls.txt || die "dodoc failed"
 	use ssl && dodoc README.https
-	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
+	dobashcompletion "${FILESDIR}"/${PN}.bash-completion ${PN}
 }
 
 pkg_postinst() {
