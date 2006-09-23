@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.5.2.ebuild,v 1.9 2006/09/03 10:21:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.5.2.ebuild,v 1.10 2006/09/23 20:22:15 flameeyes Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -14,7 +14,7 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)
 	media-sound/cdparanoia"
 
 # External encoders used - no optional compile-time support
-RDEPEND="$DEPEND
+RDEPEND="${RDEPEND}
 	$(deprange $PV $MAXKDEVER kde-base/kdemultimedia-kioslaves)
 	encode? ( vorbis? ( media-sound/vorbis-tools )
 	          flac? ( media-libs/flac )
