@@ -1,18 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.10.ebuild,v 1.2 2006/09/23 01:43:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.10-r1.ebuild,v 1.1 2006/09/23 01:43:53 flameeyes Exp $
 
-inherit ruby
+inherit ruby gems
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://www.linuxbrit.co.uk/rbot/"
 
-if [[ ${PV} != *_pre* ]]; then
-	SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.tgz"
-else
-	SRC_URI="mirror://gentoo/${P}.tgz"
-	S="${WORKDIR}/${PN}-${PV%%_*}"
-fi
+SRC_URI="http://www.linuxbrit.co.uk/downloads/${P}.gem"
 
 LICENSE="as-is"
 SLOT="0"
@@ -22,11 +17,6 @@ IUSE="spell"
 RDEPEND=">=virtual/ruby-1.8
 	dev-ruby/ruby-bdb"
 DEPEND="${RDEPEND}"
-
-src_install() {
-	ruby_src_install
-	sed -i -e "s:${D}:/:" "${D}"/usr/lib/ruby/site_ruby/*/rbot/pkgconfig.rb
-}
 
 pkg_postinst() {
 	einfo
