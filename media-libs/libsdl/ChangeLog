@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.113 2006/09/18 21:34:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.114 2006/09/23 12:27:12 vapier Exp $
+
+  23 Sep 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/libsdl-1.2.11-no-inline-BlitRGBtoRGBPixelAlphaMMX3DNOW.patch,
+  libsdl-1.2.11.ebuild:
+  Add fix for #148186.
 
   18 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> libsdl-1.2.11.ebuild:
   Stable on amd64 wrt bug #145470.

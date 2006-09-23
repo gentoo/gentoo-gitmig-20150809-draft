@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.12 2006/09/18 21:34:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.13 2006/09/23 12:27:12 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -24,17 +24,15 @@ RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	arts? ( kde-base/arts )
 	nas? (
 		media-libs/nas
-		|| ( (
-			x11-libs/libXt
-			x11-libs/libXext
-			x11-libs/libX11 )
-		virtual/x11 ) )
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libX11
+	)
 	X? (
-		|| ( (
-			x11-libs/libXt
-			x11-libs/libXext
-			x11-libs/libX11 )
-		virtual/x11 ) )
+		x11-libs/libXt
+		x11-libs/libXext
+		x11-libs/libX11
+	)
 	directfb? ( >=dev-libs/DirectFB-0.9.19 )
 	ggi? ( >=media-libs/libggi-2.0_beta3 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
@@ -43,15 +41,13 @@ RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
 	nas? (
-		|| ( (
-			x11-proto/xextproto
-			x11-proto/xproto )
-		virtual/x11 ) )
+		x11-proto/xextproto
+		x11-proto/xproto
+	)
 	X? (
-		|| ( (
-			x11-proto/xextproto
-			x11-proto/xproto )
-		virtual/x11 ) )
+		x11-proto/xextproto
+		x11-proto/xproto
+	)
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/SDL-${PV}
@@ -79,6 +75,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libcaca.patch #40224
 	epatch "${FILESDIR}"/${P}-sdl-config.patch
 	epatch "${FILESDIR}"/${P}-xinerama-head-0.patch #145917
+	epatch "${FILESDIR}"/${P}-no-inline-BlitRGBtoRGBPixelAlphaMMX3DNOW.patch #148186
 
 	# add yasm-compatible defines to nasm code (hopefully we
 	# can get this killed soonish)
