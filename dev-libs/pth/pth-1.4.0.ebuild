@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.0.ebuild,v 1.26 2006/07/23 02:35:52 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.0.ebuild,v 1.27 2006/09/23 00:57:44 dragonheart Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="GNU Portable Threads"
 HOMEPAGE="http://www.gnu.org/software/pth/"
@@ -18,6 +18,7 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	use ppc-macos && darwintoolize
+	epatch "${FILESDIR}/${P}-sigstack.patch"
 	#fix warnings
 	sed -i "s:pow10:math_pow10:g" "${S}"/pth_string.c
 	sed -i "s:round:math_round:g" "${S}"/pth_string.c
