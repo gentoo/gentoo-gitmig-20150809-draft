@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.54.ebuild,v 1.5 2006/09/22 23:13:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.54.ebuild,v 1.6 2006/09/23 02:37:18 vapier Exp $
 
 WANT_AUTOMAKE=1.6
 inherit autotools elisp-common eutils versionator flag-o-matic
@@ -114,16 +114,15 @@ src_unpack() {
 	sed -i -e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
 		src/Makefile.in src/*.mak || die "sed failed"
-	
-	# -O0 broken, bug 148285
-	replace-flags -O0 -O2
 }
 
 src_compile() {
-	econf $(use_with X x) \
+	econf \
+		$(use_with X x) \
 		$(use_with jpeg2k jasper) \
 		--with-ijs \
-		--with-jbig2dec || die "econf failed"
+		--with-jbig2dec \
+		|| die "econf failed"
 	emake STDDIRS || die "emake failed"
 
 	cd ijs
