@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4-r1.ebuild,v 1.7 2006/09/23 00:01:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.4.4-r1.ebuild,v 1.8 2006/09/23 22:20:27 dragonheart Exp $
 
 inherit eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://josefsson.org/gnutls/releases/${P}.tar.bz2"
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ~ppc-macos ppc64 ~s390 ~sh ~sparc x86"
-IUSE="zlib doc"
+IUSE="zlib doc nls"
 
 RDEPEND=">=dev-libs/libgcrypt-1.2.2
 	>=app-crypt/opencdk-0.5.5
@@ -21,12 +21,13 @@ RDEPEND=">=dev-libs/libgcrypt-1.2.2
 	>=dev-libs/lzo-2
 	dev-libs/libgpg-error
 	>=dev-libs/libtasn1-0.3.4
-	sys-devel/gettext"
-#>=sys-devel/gettext-0.14.5" autoconf indicates this version but it works
-# without it
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
-	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc )
+	nls? ( sys-devel/gettext )"
+#>=sys-devel/gettext-0.14.5" autoconf indicates this version but it works
+# without it
 
 src_unpack() {
 	unpack ${A}
@@ -41,6 +42,7 @@ src_compile() {
 
 	econf  \
 		$(use_with zlib) \
+		$(use_enable nls) \
 		--without-included-minilzo \
 		--without-included-opencdk \
 		$(use_enable doc gtk-doc) \
