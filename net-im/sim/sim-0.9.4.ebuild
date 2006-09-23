@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.ebuild,v 1.3 2006/08/29 19:45:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.ebuild,v 1.4 2006/09/23 06:17:14 pva Exp $
 
 inherit kde-functions eutils debug flag-o-matic
 
@@ -58,9 +58,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	need-autoconf 2.5
-	need-automake 1.7
 
 	if use kde ; then
 	set-kdedir 3
