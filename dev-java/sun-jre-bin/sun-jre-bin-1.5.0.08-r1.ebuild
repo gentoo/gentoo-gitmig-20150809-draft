@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.08-r1.ebuild,v 1.2 2006/09/01 03:09:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.08-r1.ebuild,v 1.3 2006/09/23 01:09:07 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -22,8 +22,7 @@ SRC_URI="x86? ( http://download.java.net/dlj/binaries/${X86_AT} )
 SLOT="1.5"
 LICENSE="dlj-1.1"
 KEYWORDS="~amd64 ~x86 -*"
-# Restrict stricter because of textrels
-RESTRICT="nostrip stricter"
+RESTRICT="nostrip"
 IUSE="X alsa nsplugin"
 
 JAVA_VM_NO_GENERATION1=true
@@ -50,6 +49,9 @@ PACKED_JARS="lib/rt.jar lib/jsse.jar lib/charsets.jar lib/ext/localedata.jar lib
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
+
+QA_TEXTRELS_x86="opt/${P}/lib/i386/motif21/libmawt.so
+	opt/${P}/lib/i386/libdeploy.so"
 
 src_unpack() {
 	if [ ! -r ${DISTDIR}/${At} ]; then
