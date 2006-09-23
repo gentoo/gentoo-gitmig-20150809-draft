@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.23 2006/09/03 12:23:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/use.mask,v 1.24 2006/09/23 13:32:43 flameeyes Exp $
 
 # Linux-dependant flags
 selinux
@@ -29,6 +29,7 @@ dxr3
 nvidia
 win32codecs
 xvmc
+xfs
 
 # This usually refers just to linux-dvb
 dvb
