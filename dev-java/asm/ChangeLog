@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.25 2006/07/22 21:26:56 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.26 2006/09/23 04:48:38 nichoj Exp $
+
+*asm-2.2.3 (23 Sep 2006)
+
+  23 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/asm-2.2.3-build.xml.patch, +asm-2.2.3.ebuild:
+  Version bump. Ebuild contributed by Miroslav Sulc
+  <miroslav.sulc@startnet.cz>, bug #144859.
 
   22 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> asm-1.4.1-r1.ebuild,
   asm-1.4.3-r3.ebuild, asm-1.5.2-r2.ebuild, asm-2.0-r1.ebuild:
