@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.5 2006/03/16 20:08:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qlcr/qlcr-0.4.1.ebuild,v 1.6 2006/09/23 14:41:00 mrness Exp $
 
 inherit eutils kde-functions
 
@@ -32,7 +32,8 @@ src_install() {
 	doicon qlcr.png
 
 	dodoc README TODO FAQ CHANGELOG
-	doman qlcr.1.gz
+	gunzip qlcr.1.gz
+	doman qlcr.1
 }
 
 pkg_postinst() {
