@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.1-r2.ebuild,v 1.3 2006/09/23 16:25:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ueagle-atm/ueagle-atm-1.2.ebuild,v 1.1 2006/09/23 16:25:11 mrness Exp $
 
 inherit eutils linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://eagle-usb.org/ueagle-atm/non-free/ueagle-data-src-${PV}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=net-dialup/ppp-2.4.3-r14
@@ -25,14 +25,6 @@ pkg_setup() {
 		eerror "The kernel-space driver exists only in kernels >= 2.6.16."
 		eerror "Please emerge net-dialup/eagle-usb instead or upgrade the kernel."
 		die "Unsupported kernel version"
-	fi
-
-	if ! has_version '>=sys-apps/baselayout-1.12.0' ; then
-		ewarn "The best way of using this driver is through the PPP net module of the"
-		ewarn "   >=sys-apps/baselayout-1.12.0"
-		ewarn "which is also the only documented mode of using ${PN} driver."
-		ewarn "Please install baselayout-1.12.0 or else you will be on your own!"
-		ebeep
 	fi
 }
 
