@@ -1,25 +1,6 @@
---- /tmp/xcsubs.c	Fri Sep  6 10:53:42 2002
-+++ xcsubs.c	Fri Sep  6 14:39:52 2002
-@@ -23,7 +23,7 @@
- 	 *tgetstr(), *tgoto();
- int	LI,	/* One less than screen length in termcap entry */
- 	CO;	/* Screen width */
--speed_t ospeed; /* Used by termcap lib */
-+//speed_t ospeed; /* Used by termcap lib */
- static char tc[LG_BUFF];	/* termcap buffer */
- static char tbuf[LG_BUFF], *CD, *CF, *CL, *CM, *CN, *AE, *SE, *SO, *ME;
- char *CE, PC; /* used by termcap -- padding character */
-@@ -410,7 +410,7 @@
- {
- 	struct stat statbuf;
- 
--	if (stat(pathname,&statbuf) || (statbuf.st_mode & S_IFMT) != S_IFREG)
-+	if (stat(pathname,&statbuf) || (statbuf.st_mode & __S_IFMT) != __S_IFREG)
- 		return NIL(FILE);
- 	return fopen(pathname, "r");
- }
---- /tmp/Makefile	Fri Sep  6 10:35:18 2002
-+++ Makefile	Fri Sep  6 14:44:56 2002
+diff -Nru xc-4.3.2.orig/Makefile xc-4.3.2/Makefile
+--- xc-4.3.2.orig/Makefile	2006-09-23 19:41:03.000000000 +0300
++++ xc-4.3.2/Makefile	2006-09-23 19:41:29.560470750 +0300
 @@ -5,6 +5,8 @@
  
  SHELL	= /bin/sh
@@ -53,10 +34,39 @@
 -	$(INSTALL) $(binown) -m 755 -s ./bin/crc $(bindir) 
 -	$(INSTALL) $(manown) -m 644 xc.1 $(mandir)
 -	$(INSTALL) $(manown) -m 644 crc.1 $(mandir)
-+	$(INSTALL) $(binown) -m 755 -s ./bin/xc $(DESTDIR)$(bindir) 
-+	$(INSTALL) $(binown) -m 755 -s ./bin/crc $(DESTDIR)$(bindir) 
++	$(INSTALL) $(binown) -m 755 ./bin/xc $(DESTDIR)$(bindir) 
++	$(INSTALL) $(binown) -m 755 ./bin/crc $(DESTDIR)$(bindir) 
 +	$(INSTALL) $(manown) -m 644 xc.1 $(DESTDIR)$(mandir)/man1
 +	$(INSTALL) $(manown) -m 644 crc.1 $(DESTDIR)$(mandir)/man1
  	@echo " "
  	@echo " "
  	@echo "You will want to manually install 'phonelist' and"
+@@ -113,7 +115,6 @@
+ bin: xc crc
+ 	cp  ./xc ./bin
+ 	cp  ./crc ./bin
+-	strip ./bin/xc ./bin/crc
+ 
+ #########################################
+ ##  mostly unused stuff below here ... ##
+diff -Nru xc-4.3.2.orig/xcsubs.c xc-4.3.2/xcsubs.c
+--- xc-4.3.2.orig/xcsubs.c	2006-09-23 19:41:03.000000000 +0300
++++ xc-4.3.2/xcsubs.c	2006-09-23 19:41:19.711855250 +0300
+@@ -23,7 +23,7 @@
+ 	 *tgetstr(), *tgoto();
+ int	LI,	/* One less than screen length in termcap entry */
+ 	CO;	/* Screen width */
+-speed_t ospeed; /* Used by termcap lib */
++//speed_t ospeed; /* Used by termcap lib */
+ static char tc[LG_BUFF];	/* termcap buffer */
+ static char tbuf[LG_BUFF], *CD, *CF, *CL, *CM, *CN, *AE, *SE, *SO, *ME;
+ char *CE, PC; /* used by termcap -- padding character */
+@@ -410,7 +410,7 @@
+ {
+ 	struct stat statbuf;
+ 
+-	if (stat(pathname,&statbuf) || (statbuf.st_mode & S_IFMT) != S_IFREG)
++	if (stat(pathname,&statbuf) || (statbuf.st_mode & __S_IFMT) != __S_IFREG)
+ 		return NIL(FILE);
+ 	return fopen(pathname, "r");
+ }
