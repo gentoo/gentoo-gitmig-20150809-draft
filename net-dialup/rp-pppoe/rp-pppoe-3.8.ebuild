@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.9 2006/09/22 13:12:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.8.ebuild,v 1.10 2006/09/23 15:19:26 mrness Exp $
 
 inherit eutils flag-o-matic
 
@@ -39,6 +39,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-username-charset.patch" #82410
 	epatch "${FILESDIR}/${P}-plugin-options.patch"
+	epatch "${FILESDIR}/${P}-no-strip.patch"
 
 	#Avoid "setXid, dynamically linked and using lazy bindings" QA notice
 	sed -i -e 's:\(@CC@\) \(-o pppoe-wrapper wrapper.o\):\1 '$(bindnow-flags)' \2:' "${S}/gui/Makefile.in"
