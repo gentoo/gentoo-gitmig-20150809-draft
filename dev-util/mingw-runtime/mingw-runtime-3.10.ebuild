@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.1 2006/09/17 07:03:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.2 2006/09/23 11:18:55 vapier Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -26,6 +26,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-*"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND=""
 
@@ -65,6 +66,7 @@ src_install() {
 		doins -r include/* || die
 	else
 		emake install DESTDIR="${D}" || die
+		env -uRESTRICT CHOST=${CTARGET} prepallstrip
 		rm -rf "${D}"/usr/${CTARGET}/doc
 		dodoc CONTRIBUTORS ChangeLog README TODO readme.txt
 	fi
