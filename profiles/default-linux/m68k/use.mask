@@ -50,3 +50,6 @@ qt3
 qt4
 mono
 python
+cairo
+svg
+X
