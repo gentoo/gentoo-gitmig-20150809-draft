@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.5 2006/03/11 17:38:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.6 2006/09/23 05:14:22 kloeri Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/jakarta-${P}
 SLOT="${PV/.*/}"
 SRC_URI="http://archive.apache.org/dist/tomcat/tomcat-${SLOT}/archive/v${PV}/bin/${JT_P}"
 HOMEPAGE="http://tomcat.apache.org/"
-KEYWORDS="x86 ppc ~sparc ~alpha ~amd64 ~ppc64"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
 LICENSE="Apache-2.0"
 DEPEND="sys-apps/sed"
 RDEPEND=">=virtual/jdk-1.3
