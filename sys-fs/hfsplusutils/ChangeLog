@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/hfsplusutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.6 2005/12/08 22:29:56 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.7 2006/09/23 22:15:17 josejx Exp $
+
+  23 Sep 2006; Joseph Jezak <josejx@gentoo.org>
+  hfsplusutils-1.0.4-r1.ebuild:
+  Fixed automake deps for bug #148510.
 
   08 Dec 2005; Michael Hanselmann <hansmi@gentoo.org>
   -hfsplusutils-1.0.4.ebuild, hfsplusutils-1.0.4-r1.ebuild:

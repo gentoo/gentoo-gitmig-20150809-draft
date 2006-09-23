@@ -1,8 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.10 2005/12/08 22:29:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.11 2006/09/23 22:15:17 josejx Exp $
 
-inherit eutils libtool
+WANT_AUTOMAKE=1.6
+inherit autotools eutils libtool
 
 MY_P="hfsplus_${PV}"
 DESCRIPTION="HFS+ Filesystem Access Utilities (a PPC filesystem)"
@@ -14,9 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc ppc64"
 IUSE=""
 
-DEPEND="sys-devel/autoconf
-	sys-devel/automake
-	app-arch/bzip2"
+DEPEND="app-arch/bzip2"
 RDEPEND="virtual/libc"
 
 S=${WORKDIR}/hfsplus-${PV}
