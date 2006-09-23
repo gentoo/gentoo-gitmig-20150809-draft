@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r4.ebuild,v 1.1 2006/09/22 22:34:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.3_p2-r4.ebuild,v 1.2 2006/09/23 02:27:41 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -81,7 +81,7 @@ src_unpack() {
 		if use ldap ; then
 			use sftplogging \
 				&& ewarn "Sorry, sftplogging and ldap don't get along, disabling ldap" \
-				|| epatch "${DISTDIR}"/${LDAP_PATCH}
+				|| epatch "${DISTDIR}"/${LDAP_PATCH} "${FILESDIR}"/${P}-ldap-updates.patch
 		fi
 	elif [[ -n ${SECURID_PATCH} ]] && use smartcard || use ldap ; then
 		ewarn "Sorry, x509 and smartcard/ldap don't get along"
