@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060830.ebuild,v 1.2 2006/09/16 14:22:51 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060830.ebuild,v 1.3 2006/09/23 12:38:26 calchan Exp $
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6}"
 
@@ -8,26 +8,17 @@ DESCRIPTION="GNUCap is the GNU Circuit Analysis Package"
 SRC_URI="http://geda.seul.org/dist/gnucap-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.geda.seul.org/tools/gnucap"
 
-IUSE="doc examples readline"
+IUSE="doc examples"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="doc? ( app-text/tetex )
-	readline? ( sys-libs/readline )"
+DEPEND="doc? ( app-text/tetex )"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
 	unpack ${A} || die "Failed to unpack!"
 	cd ${S}
-
-	# Don't let gnucap decide whether to use readline
-	if ! use readline ; then
-		sed -i \
-			-e 's:LIBS="-lreadline $LIBS":LIBS="$LIBS":' \
-			-e 's:#define HAVE_LIBREADLINE 1:#define HAVE_LIBREADLINE 0:' \
-			configure || die "sed failed"
-	fi
 
 	# No need to install COPYING and INSTALL
 	sed -i \
@@ -46,11 +37,6 @@ src_unpack() {
 			-e 's:SUBDIRS = doc examples:SUBDIRS = doc:' \
 			Makefile.in || die "sed failed"
 	fi
-}
-
-src_compile() {
-	econf || die "Configuration failed"
-	emake || die "Compilation failed"
 }
 
 src_install () {
