@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc3-postgresql
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.11 2006/07/01 15:31:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.12 2006/09/23 12:19:46 nelchael Exp $
+
+*jdbc3-postgresql-7.3-r1 (23 Sep 2006)
+
+  23 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +jdbc3-postgresql-7.3-r1.ebuild:
+  Migrated to new Java build system.
 
   01 Jul 2006; Joshua Nichols <nichoj@gentoo.org>
   +jdbc3-postgresql-8.1_p404-r1.ebuild:
