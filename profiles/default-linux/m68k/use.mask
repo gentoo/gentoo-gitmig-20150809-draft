@@ -53,3 +53,6 @@ python
 cairo
 svg
 X
+crypt
+mysql
+samba
