@@ -29,3 +29,14 @@
  			exit ( 0 );
  		}
  		
+--- src/capifwd.c.orig	2006-09-23 10:39:30.000000000 +0300
++++ src/capifwd.c	2006-09-23 10:41:32.836443500 +0300
+@@ -13,7 +13,7 @@
+ 		ssize_t n = recv(fd, buf, left, 0);
+ 		if (n <= 0)
+ 			return n;
+-		(char*)buf += n;
++		buf = (char*)buf + n;
+ 		left -= n;
+ 	}
+ 	return size;
