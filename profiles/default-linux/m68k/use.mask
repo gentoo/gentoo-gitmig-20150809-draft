@@ -46,3 +46,7 @@ slang
 X
 diet
 gtk
+qt3
+qt4
+mono
+python
