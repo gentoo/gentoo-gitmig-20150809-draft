@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.8 2006/07/06 10:42:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.10.ebuild,v 1.9 2006/09/23 01:28:27 nichoj Exp $
 
 inherit java eutils
 
@@ -14,7 +14,7 @@ SRC_URI=${At}
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm-1.4.2"
 KEYWORDS="-* x86"
-RESTRICT="fetch stricter"
+RESTRICT="fetch"
 IUSE="X alsa browserplugin nsplugin mozilla"
 
 DEPEND="sys-apps/sed"
@@ -40,6 +40,11 @@ lib/ext/localedata.jar lib/plugin.jar javaws/javaws.jar"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
+
+QA_TEXTRELS_x86="opt/${P}/lib/i386/libawt.so
+	opt/${P}/plugin/i386/ns4/libjavaplugin.so
+	opt/${P}/plugin/i386/ns610/libjavaplugin_oji.so
+	opt/${P}/plugin/i386/ns610-gcc32/libjavaplugin_oji.so"
 
 DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=j2re-${MY_PV}-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
