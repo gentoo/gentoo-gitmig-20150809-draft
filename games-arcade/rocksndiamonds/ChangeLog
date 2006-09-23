@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/rocksndiamonds
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.22 2006/09/23 07:46:20 mr_bones_ Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.23 2006/09/23 11:41:17 vapier Exp $
+
+  23 Sep 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/rocksndiamonds-3.2.2-parallel-build.patch,
+  rocksndiamonds-3.2.2.ebuild:
+  Fix parallel build #126080 by Stefaan De Roeck.
 
   23 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org>
   rocksndiamonds-3.2.2.ebuild:
