@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.7.ebuild,v 1.2 2006/09/21 14:46:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.5.0.7.ebuild,v 1.3 2006/09/23 02:14:20 redhatter Exp $
 
 unset ALLOWED_FLAGS	 # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools
+inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib autotools mozextension
 
 LANGS="bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN he hu it ja ko lt mk nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN"
 SHORTLANGS="es-ES ga-IE nb-NO sv-SE"
@@ -34,7 +34,7 @@ RDEPEND=">=www-client/mozilla-launcher-1.39
 	>=dev-libs/nspr-4.6.1
 	~sys-devel/autoconf-2.13"
 
-PDEPEND="crypt? ( x11-plugins/enigmail ) "
+PDEPEND="crypt? ( x11-plugins/enigmail )"
 
 S=${WORKDIR}/mozilla
 
@@ -72,14 +72,14 @@ linguas() {
 }
 
 src_unpack() {
-	unpack ${A}
-	cd ${S} || die "cd failed"
+	unpack thunderbird-${PV}-source.tar.bz2 ${P}-patches-${PVER}.tar.bz2
 
 	linguas
 	for X in ${linguas}; do
 		[[ ${X} != en ]] && xpi_unpack thunderbird-${X}-${PV}.xpi
 	done
 
+	cd ${S} || die "cd failed"
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
@@ -184,8 +184,8 @@ src_install() {
 	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
 		ebegin "Setting default locale to ${LANG}"
 		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
-			${D}${MOZILLA_FIVE_HOME}/defaults/pref/thunderbird.js \
-			${D}${MOZILLA_FIVE_HOME}/defaults/pref/thunderbird-l10n.js
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
+			${D}${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js
 		eend $? || die "sed failed to change locale"
 	fi
 

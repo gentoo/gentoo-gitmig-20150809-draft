@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.131 2006/09/21 14:46:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.132 2006/09/23 02:14:20 redhatter Exp $
+
+  23 Sep 2006; Stuart Longland <redhatter@gentoo.org>
+  mozilla-thunderbird-1.5.0.7.ebuild:
+  Tweak to language pack installation logic.  Fixes bug #147829.
+  Thanks to Fabrice Delliaux for the ebuild update.
 
   21 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   mozilla-thunderbird-1.5.0.7.ebuild:
