@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX horde-passwd-3.0-no-clear-password.patch 424 RMD160 973599225a10dedb55b331bfcd55874aa5d1a90f SHA1 59b7a4a5de40381310352dc9d037a7ad5f70e5d5 SHA256 6e2c0664f029aae9688e84313b56eddc766dcc2d3ba138082dec618eb1dc5593
 MD5 a663a0df1829b79b8197da762868127a files/horde-passwd-3.0-no-clear-password.patch 424
 RMD160 973599225a10dedb55b331bfcd55874aa5d1a90f files/horde-passwd-3.0-no-clear-password.patch 424
@@ -18,3 +21,10 @@ SHA256 01e5d4865c945ab738843aa8a375994b3ccb11827863a27332c225ada8e391b3 metadata
 MD5 f0fd6f5f988561a18084e85b719d87a9 files/digest-horde-passwd-3.0 241
 RMD160 269cb61ea7036690ccee59acd57ab11c027f6a0c files/digest-horde-passwd-3.0 241
 SHA256 c63577410d16a03a37b7deddb8abb6b68a21c3b93e2b5e400360eb4ed6c95186 files/digest-horde-passwd-3.0 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFFSuCamhnQswr0vIRAtZDAKCuClQZ9INll/QGIxrEjlH2Z2bn7QCfe7sg
+E0FG5vPSgFYwGnE2wJGeV+k=
+=FjUh
+-----END PGP SIGNATURE-----
