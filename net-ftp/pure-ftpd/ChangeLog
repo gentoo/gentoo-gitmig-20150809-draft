@@ -1,6 +1,16 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.56 2006/09/22 11:18:42 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.57 2006/09/23 23:12:14 chtekk Exp $
+
+*pure-ftpd-1.0.21-r1 (23 Sep 2006)
+
+  23 Sep 2006; Luca Longinotti <chtekk@gentoo.org>
+  -files/pure-ftpd-1.0.20-pam.patch, files/pure-ftpd.conf_d,
+  +files/pure-ftpd.rc6, -files/pure-ftpd.rc6-r1, files/pure-ftpd.xinetd,
+  pure-ftpd-1.0.20-r1.ebuild, -pure-ftpd-1.0.20-r2.ebuild,
+  -pure-ftpd-1.0.21.ebuild, +pure-ftpd-1.0.21-r1.ebuild:
+  General ebuild cleanup. Fix bugs #41097, #90528, #109647, #115799, #117936,
+  #122671 and #130690.
 
   22 Sep 2006; Luca Longinotti <chtekk@gentoo.org> metadata.xml:
   Set myself as maintainer.

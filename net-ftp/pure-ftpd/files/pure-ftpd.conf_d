@@ -5,17 +5,17 @@
 #IS_CONFIGURED="yes"
 
 ## FTP Server,Port (separated by comma) ##
-## If you prefer host names over IP addresses, it's your choice :
+## If you prefer host names over IP addresses, it's your choice:
 ## SERVER="-S ftp.rtchat.com,21"
 ## IPv6 addresses are supported.
 ## !!! WARNING !!!
-## Using an invalid IP will result in server not starting and reporting
-## a good start. Work is being done to solve that in:
-## http://bugs.gentoo.org/show_bug.cgi?id=75861
-#SERVER="-S 192.168.0.1,21"
+## Using an invalid IP will result in the server not starting,
+## but reporting a correct start!
+## SERVER="-S 192.168.0.1,21"
+## By default binds to all available IPs.
 SERVER="-S 21"
 
-## Number of simultaneous connections in total, and per ip ##
+## Number of simultaneous connections in total, and per IP ##
 MAX_CONN="-c 30"
 MAX_CONN_IP="-C 10"
 
@@ -28,23 +28,35 @@ DISK_FULL="-k 90%"
 ## If your FTP server is behind a NAT box, uncomment this ##
 #USE_NAT="-N"
 
-## Authentication (others are 'pam', ...)##
-## Further infos in the README file.
+## Authentication mechanisms (others are 'pam', ...) ##
+## Further infos can be found in the README file.
 AUTH="-l unix"
 
-## Change the maximum idle time. (in minutes. default 15)
+## Change the maximum idle time (in minutes) ##
+## If this variable is not defined, it will default to 15 minutes.
 #TIMEOUT="-I <timeout>'"
 
-## Use that facility for syslog logging. It defaults to 'ftp'
-## Logging can be disabled with '-f none' .
-#LOG="-f facility"
+## Facility used for syslog logging ##
+## If this variable is not defined, it will default to the 'ftp' facility.
+## Logging can be disabled with '-f none'.
+#LOG="-f <facility>"
+
+## Charset conversion support *experimental* ##
+## Only works if USE "charconv" is enabled (only Pure-FTPd >=1.0.21).
+## Set the charset of the filesystem.
+# CHARCONV="--fscharset <charset>"
 
 ## Misc. Others ##
-MISC_OTHER="-A -x -j -R -B"
+MISC_OTHER="-A -x -j -R -B -Z"
+
+## If you want to process each file uploaded through Pure-FTPd, enter the name
+## of the script that should process the files below.
+## man pure-uploadscript to learn more about how to write this script.
+# UPLOADSCRIPT="/path/to/uploadscript"
 
 #
 # Use these inside $MISC_OTHER
-# More can be found on "http://pureftpd.sourceforge.net/README"
+# More can be found on "http://download.pureftpd.org/pub/pure-ftpd/doc/README"
 #
 # -A [ chroot() everyone, but root ]
 # -e [ Only allow anonymous users ]
