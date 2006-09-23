@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX 2.2.1-no-clear-password.patch 496 RMD160 50df01000269e36b4f2339c115d71afef299b1a7 SHA1 01a338876b361dd84b58f6694ce5c80250333a0a SHA256 e1ee41a8fc6bb4f194736a303d6083dde18c9cf980ccaca48b910be1ebb8fb3b
-MD5 90a30b8eff0510043a20370d85462e3d files/2.2.1-no-clear-password.patch 496
-RMD160 50df01000269e36b4f2339c115d71afef299b1a7 files/2.2.1-no-clear-password.patch 496
-SHA256 e1ee41a8fc6bb4f194736a303d6083dde18c9cf980ccaca48b910be1ebb8fb3b files/2.2.1-no-clear-password.patch 496
 AUX horde-passwd-3.0-no-clear-password.patch 424 RMD160 973599225a10dedb55b331bfcd55874aa5d1a90f SHA1 59b7a4a5de40381310352dc9d037a7ad5f70e5d5 SHA256 6e2c0664f029aae9688e84313b56eddc766dcc2d3ba138082dec618eb1dc5593
 MD5 a663a0df1829b79b8197da762868127a files/horde-passwd-3.0-no-clear-password.patch 424
 RMD160 973599225a10dedb55b331bfcd55874aa5d1a90f files/horde-passwd-3.0-no-clear-password.patch 424
 SHA256 6e2c0664f029aae9688e84313b56eddc766dcc2d3ba138082dec618eb1dc5593 files/horde-passwd-3.0-no-clear-password.patch 424
-DIST passwd-2.2.2.tar.gz 235545 RMD160 159d0e86369b05d3f61b1d90d9080650a8de3ef9 SHA1 53e18778ce530ad884222d491e0d683ae94d3e29 SHA256 39d820aad0c66db706fe57abadc001f4da4c77488a8ecbd1598a334f16b49852
 DIST passwd-h3-3.0.tar.gz 966096 RMD160 a95c0924ae3128ca3de04f7167e143a7d0418a5a SHA256 7fcebd31d4159b9619b26b81962e07c166990e9deba305b69f3cfc3fe5993c89
-EBUILD horde-passwd-2.2.2.ebuild 546 RMD160 d91a220e06d4819983814ab9d4ce67e420ce25f5 SHA1 8c79ba22f73c2da1866dc0a9a9b167a519864c5a SHA256 3bef118aa1c6a2c6c0c8ecb5f4fa3562af0866e023ddf0a43ee33d2cca72736d
-MD5 13a1020cf3bd92179d5ed3f108169933 horde-passwd-2.2.2.ebuild 546
-RMD160 d91a220e06d4819983814ab9d4ce67e420ce25f5 horde-passwd-2.2.2.ebuild 546
-SHA256 3bef118aa1c6a2c6c0c8ecb5f4fa3562af0866e023ddf0a43ee33d2cca72736d horde-passwd-2.2.2.ebuild 546
 EBUILD horde-passwd-3.0.ebuild 585 RMD160 dfb57c00e612071bf22cfdf1ae7cac128b3ee33f SHA1 7beaa085124a99dc306adedbc6a04399891a54d4 SHA256 f54cae01b0636d44902dff17bf31657a2e28e779efda8fb8e1c13cf29894a9d1
 MD5 e2579e06dc09d1ad7d9cb3a5f1cbda8f horde-passwd-3.0.ebuild 585
 RMD160 dfb57c00e612071bf22cfdf1ae7cac128b3ee33f horde-passwd-3.0.ebuild 585
@@ -27,16 +15,6 @@ MISC metadata.xml 687 RMD160 fd255d13e258027b3c62054e2ec6909c4d379660 SHA1 310b1
 MD5 536fc68713fc6d618f6ac8c02145bddb metadata.xml 687
 RMD160 fd255d13e258027b3c62054e2ec6909c4d379660 metadata.xml 687
 SHA256 01e5d4865c945ab738843aa8a375994b3ccb11827863a27332c225ada8e391b3 metadata.xml 687
-MD5 d8b8497ae017af5cf3702bffef7eccf2 files/digest-horde-passwd-2.2.2 238
-RMD160 e498313e74935054701abf0f12a3f8d2e79dae30 files/digest-horde-passwd-2.2.2 238
-SHA256 3fbba844292177194de20955cfe9ebfed254dee840dcdbec8be04eac0e75758f files/digest-horde-passwd-2.2.2 238
 MD5 f0fd6f5f988561a18084e85b719d87a9 files/digest-horde-passwd-3.0 241
 RMD160 269cb61ea7036690ccee59acd57ab11c027f6a0c files/digest-horde-passwd-3.0 241
 SHA256 c63577410d16a03a37b7deddb8abb6b68a21c3b93e2b5e400360eb4ed6c95186 files/digest-horde-passwd-3.0 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFE1PXNamhnQswr0vIRAmXJAJwOaQ3BBnjKsJANFLq5lYMvGyzT/wCgqRCr
-tZGRCcQujxEBTDi/TL2uW2o=
-=ljRq
------END PGP SIGNATURE-----
