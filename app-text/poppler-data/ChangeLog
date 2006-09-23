@@ -1,0 +1,11 @@
+# ChangeLog for app-text/poppler-data
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.1 2006/09/23 09:00:59 genstef Exp $
+
+*poppler-data-0.1 (23 Sep 2006)
+
+  23 Sep 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +poppler-data-0.1.ebuild:
+  New ebuild poppler-data for poppler, all poppler keywords because nothing is
+  to be compiled here.
+
