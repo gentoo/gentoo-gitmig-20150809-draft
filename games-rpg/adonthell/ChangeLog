@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/adonthell
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.10 2006/04/03 18:59:18 tupone Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.11 2006/09/23 12:18:53 vapier Exp $
+
+  23 Sep 2006; Mike Frysinger <vapier@gentoo.org> adonthell-0.3.4a.ebuild:
+  Cleanup autotools #148762 by David Philippi.
 
   03 Apr 2006; <Tupone@gentoo.org> +files/adonthell-0.3.4a-gcc-41.patch,
   adonthell-0.3.4a.ebuild:

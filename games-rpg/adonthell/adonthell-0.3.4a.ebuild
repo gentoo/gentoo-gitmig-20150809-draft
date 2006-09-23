@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.5 2006/04/03 18:59:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.6 2006/09/23 12:18:53 vapier Exp $
 
-inherit eutils games
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit autotools eutils games
 
 DESCRIPTION="roleplaying game engine"
 HOMEPAGE="http://adonthell.linuxgames.com/"
@@ -22,21 +24,19 @@ RDEPEND="dev-lang/python
 DEPEND="${RDEPEND}
 	doc? (
 		media-gfx/graphviz
-		app-doc/doxygen )
-	sys-devel/autoconf"
+		app-doc/doxygen
+	)"
 
 S=${WORKDIR}/${PN}-${PV/a/}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-configure.in.patch \
-		"${FILESDIR}/${P}"-gcc-41.patch
+	epatch \
+		"${FILESDIR}"/${PV}-configure.in.patch \
+		"${FILESDIR}"/${P}-gcc-41.patch
 	rm -f ac{local,include}.m4
-	aclocal && \
-	libtoolize -c -f && \
-	autoconf && \
-	automake -a -c || die "autotools failed"
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_compile() {
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	keepdir "${GAMES_DATADIR}/${PN}/games"
 	dodoc AUTHORS ChangeLog FULLSCREEN.howto NEWBIE NEWS README
 	prepgamesdirs
