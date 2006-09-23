@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kisdndial/kisdndial-0.1.6.ebuild,v 1.1 2004/11/21 09:08:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kisdndial/kisdndial-0.1.6.ebuild,v 1.2 2006/09/23 09:07:18 mrness Exp $
 
-inherit kde
+inherit kde flag-o-matic
 
 DESCRIPTION="KDE Kicker Applet to establish ISDN dial-up connections and to show the status"
 HOMEPAGE="http://www.kisdndial.de/"
@@ -26,6 +26,13 @@ src_unpack() {
 			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
 		done
 	fi
+}
+
+src_compile() {
+	#The only way to avoid QA text relocation warning
+	#is by appending -fPIC to CFLAGS
+	append-flags -fPIC
+	kde_src_compile
 }
 
 src_install() {
