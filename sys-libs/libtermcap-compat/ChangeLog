@@ -1,9 +1,9 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.30 2006/09/21 03:10:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.31 2006/09/23 09:42:59 vapier Exp $
 
   21 Sep 2006; Mike Frysinger <vapier@gentoo.org>
-  libtermcap-compat-2.0.8-r2.ebuild:
+  libtermcap-compat-2.0.8-r1.ebuild, libtermcap-compat-2.0.8-r2.ebuild:
   Punt arm/ia64/mips/ppc64/s390 KEYWORDS as no package uses libtermcap-compat
   and has support in those arches (and we want to kill this package, not
   extend it).
