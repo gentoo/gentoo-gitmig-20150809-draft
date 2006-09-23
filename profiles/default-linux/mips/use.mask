@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.66 2006/09/06 04:44:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.67 2006/09/23 06:36:26 dragonheart Exp $
 
 # Untested on mips, masking for now.
 cdb
@@ -291,3 +291,7 @@ x86-fbsd
 
 # Paludis-0.6.0's QA tools need libpcre++, which hasn't been shown to work yet
 qa
+
+# disable until tested
+# bug 148402
+pcsc-lite
