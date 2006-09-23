@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.12 2006/09/23 13:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r3.ebuild,v 1.1 2006/09/23 13:29:32 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
 
 inherit eutils pam flag-o-matic autotools
-IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib"
+IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib xfs"
 
 DESCRIPTION="Kernel level implementation of the AppleTalk Protocol Suite"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -14,7 +14,7 @@ HOMEPAGE="http://netatalk.sourceforge.net"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="amd64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND=">=sys-libs/db-4.2.52
 	cracklib? ( sys-libs/cracklib )
@@ -25,6 +25,9 @@ RDEPEND=">=sys-libs/db-4.2.52
 	cups? ( net-print/cups )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )"
+DEPEND="${RDEPEND}
+	xfs? ( sys-fs/xfsprogs
+		<sys-kernel/linux-headers-2.6.16 )"
 
 src_unpack() {
 	unpack ${A}
@@ -61,7 +64,7 @@ src_compile() {
 		$(use_enable slp srvloc) \
 		$(use_with cracklib) \
 		$(use_with elibc_glibc shadow) \
-		--without-xfs \
+		$(use_with xfs) \
 		--disable-afs \
 		--enable-fhs \
 		--with-bdb=/usr \
