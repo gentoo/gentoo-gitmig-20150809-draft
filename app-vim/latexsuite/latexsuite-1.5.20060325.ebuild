@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5.20060325.ebuild,v 1.1 2006/09/09 14:58:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5.20060325.ebuild,v 1.2 2006/09/23 10:51:33 corsair Exp $
 
 inherit vim-plugin versionator
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: a comprehensive set of tools to view, edit and compile 
 HOMEPAGE="http://vim-latex.sourceforge.net/"
 
 LICENSE="vim"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # See bug #112326 for why we have this nasty hack
