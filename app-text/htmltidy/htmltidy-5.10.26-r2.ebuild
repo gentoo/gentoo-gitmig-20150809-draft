@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-4.8.6.ebuild,v 1.20 2006/09/23 17:41:07 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-5.10.26-r2.ebuild,v 1.1 2006/09/23 17:41:07 nattfodd Exp $
 
 WANT_AUTOMAKE=1.5
 WANT_AUTOCONF=2.5
@@ -16,13 +16,14 @@ S=${WORKDIR}/tidy
 
 DESCRIPTION="Tidy the layout and correct errors in HTML and XML documents"
 HOMEPAGE="http://tidy.sourceforge.net/"
-SRC_URI="http://tidy.sourceforge.net/src/old/${MY_P}.tgz
-	http://tidy.sourceforge.net/docs/tidy_docs_040810.tgz
+SRC_URI="http://tidy.sourceforge.net/src/${MY_P}.tgz
+	http://tidy.sourceforge.net/docs/tidy_docs_051020.tgz
+	mirror://gentoo/${P}-doc.tar.bz2
 	xml? ( http://www.cise.ufl.edu/~ppadala/tidy/html2db.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc-macos ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc xml"
 
 DEPEND="virtual/libc"
@@ -37,16 +38,14 @@ src_unpack() {
 	/bin/sh ./build/gnuauto/setup.sh > /dev/null
 
 	# Stop tidy from appending -O2 to our CFLAGS
-	sed -e "/save_cflags/s/\ \-O2//" configure.in > ${T}/configure.in &&
-	mv ${T}/configure.in configure.in || die "sed configure.in failed"
+	epatch ${FILESDIR}/htmltidy-5.10.26-strip-O2-flag.patch || die
 
 	if use xml ; then
 		# Apply the docbook patch to tidy sources
-		epatch ${FILESDIR}/04-${PN}-docbook.patch
+		epatch ${FILESDIR}/05-${PN}-docbook.patch || die
 
 		# And the null -> NULL patch to html2db sources
-		cd ${WORKDIR}
-		epatch ${FILESDIR}/03-html2db-null.patch
+		EPATCH_OPTS="-d ${WORKDIR}" epatch ${FILESDIR}/03-html2db-null.patch || die
 
 		# Point to the tidy source in the html2db Makefile
 		sed -e "/TIDYDIR\=/s:\.\.:${S}:" \
@@ -75,11 +74,19 @@ src_install() {
 	# It seems the manual page installation in the Makefile's
 	# is commented out, so we need to install manually 
 	# for the moment. Please check this on updates.
-	mv man_page.txt tidy.1
-	doman tidy.1
+	# mv man_page.txt tidy.1
+	# doman tidy.1
+	#
+	# Update:
+	# Now the man page is provided as an xsl file, which
+	# we can't use until htmltidy is merged.
+	# I have generated the man page and quickref which is on
+	# the mirrors. (bug #132429)
+	doman "${WORKDIR}/${P}-doc/tidy.1"
 
 	# Install basic html documentation
-	dohtml *.html *.gif *.css
+	dohtml *.html *.css *.gif "${WORKDIR}/${P}-doc/quickref.html"
+
 	# If use 'doc' is set, then we also want to install the
 	# api documentation
 	use doc && dohtml -r api
