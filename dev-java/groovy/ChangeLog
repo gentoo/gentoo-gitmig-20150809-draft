@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/groovy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.14 2006/08/26 14:52:56 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.15 2006/09/23 05:07:46 nichoj Exp $
+
+*groovy-1.0.06 (23 Sep 2006)
+
+  23 Sep 2006; Joshua Nichols <nichoj@gentoo.org> +files/build.xml-1.0.06,
+  +files/groovy-1.0.06-compiler-exit-code.patch, +groovy-1.0.06.ebuild:
+  Version bump. Initial work contributed by Jakob Truelsen
+  <antialize@gmail.com>, bug #145186.
 
 *groovy-1.0_beta4-r2 (26 Aug 2006)
 
