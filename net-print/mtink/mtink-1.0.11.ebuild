@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.3 2006/02/07 21:59:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.11.ebuild,v 1.4 2006/09/23 09:28:42 genstef Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ DEPEND="X? (
 	dev-libs/libusb"
 
 src_compile() {
+	sed -i -e 's:DBG =.*:DBG =:' Makefile
 	local mytargets
 	mytargets="ttink detect/askPrinter mtinkd"
 	if use X;
