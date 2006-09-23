@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.2.2.ebuild,v 1.1 2006/09/23 05:12:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.2.2.ebuild,v 1.2 2006/09/23 07:46:20 mr_bones_ Exp $
 
 inherit flag-o-matic eutils games
 
 DESCRIPTION="A Boulderdash clone"
 HOMEPAGE="http://www.artsoft.org/rocksndiamonds/"
 SRC_URI="http://www.artsoft.org/RELEASES/unix/rocksndiamonds/${P}.tar.gz
+	http://www.artsoft.org/RELEASES/rocksndiamonds/levels/Contributions-1.2.0.zip
 	http://www.artsoft.org/RELEASES/rocksndiamonds/levels/BD2K3-1.0.0.zip
 	http://www.artsoft.org/RELEASES/rocksndiamonds/levels/Boulder_Dash_Dream-1.0.0.zip
 	http://www.artsoft.org/RELEASES/rocksndiamonds/levels/rnd-contrib-1.0.0.tar.gz
@@ -51,6 +52,7 @@ src_unpack() {
 		BD2K3-1.0.0.zip \
 		rnd-contrib-1.0.0.tar.gz \
 		Snake_Bite-1.0.0.zip \
+		Contributions-1.2.0.zip \
 		Boulder_Dash_Dream-1.0.0.zip \
 		Sokoban-1.0.0.zip
 }
