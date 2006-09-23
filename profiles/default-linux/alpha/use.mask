@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.48 2006/08/31 23:41:08 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.49 2006/09/23 02:15:27 dragonheart Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -151,3 +151,7 @@ bmpx
 
 # Paludis-0.6's QA tools need pcre++ which doesn't yet work
 qa
+
+# disable until tested
+# # bug 148402
+pcsc-lite
