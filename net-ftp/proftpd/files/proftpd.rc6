@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.rc6,v 1.10 2006/09/23 18:17:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.rc6,v 1.11 2006/09/23 19:07:05 chtekk Exp $
 
 depend() {
 	need net
+	use dns
 }
 
 checkconfig() {

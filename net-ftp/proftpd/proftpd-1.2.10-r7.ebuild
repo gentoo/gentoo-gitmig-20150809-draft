@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r7.ebuild,v 1.11 2006/09/23 18:17:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10-r7.ebuild,v 1.12 2006/09/23 19:07:05 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -9,8 +9,6 @@ KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="authfile hardened ipv6 ldap mysql ncurses noauthunix pam postgres selinux sendfile shaper softquota ssl tcpd xinetd"
 
 SHAPER_VER="0.5.5"
-
-S="${WORKDIR}/${P}"
 
 DESCRIPTION="An advanced and very configurable FTP server."
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P}.tar.bz2

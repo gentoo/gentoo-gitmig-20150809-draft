@@ -1,6 +1,16 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.121 2006/09/23 18:17:38 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.122 2006/09/23 19:07:05 chtekk Exp $
+
+*proftpd-1.3.0-r2 (23 Sep 2006)
+
+  23 Sep 2006; Luca Longinotti <chtekk@gentoo.org>
+  +files/proftpd-1.3.0-mod_ctrls_sighup.patch, files/proftpd.rc6,
+  proftpd-1.2.10-r7.ebuild, proftpd-1.3.0-r1.ebuild,
+  +proftpd-1.3.0-r2.ebuild:
+  Fix redundant S definition. Update mod_clamav version, bug #141270. Fix PAM
+  linking, bug #101672. Update init-script to use dns, bug #147350. Fix
+  failure after SIGHUP, bug #147654.
 
   23 Sep 2006; Luca Longinotti <chtekk@gentoo.org>
   -files/openssl-0.9.8.patch, -files/proftpd-1.2.9-makefile.patch,

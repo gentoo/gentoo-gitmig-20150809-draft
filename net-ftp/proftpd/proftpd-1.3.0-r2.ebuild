@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0-r1.ebuild,v 1.11 2006/09/23 19:07:05 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.0-r2.ebuild,v 1.1 2006/09/23 19:07:05 chtekk Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
@@ -13,7 +13,7 @@ VROOT_VER="0.7.1"
 
 DESCRIPTION="An advanced and very configurable FTP server."
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P}.tar.bz2
-		clamav? ( http://www.uglyboxindustries.com/mod_clamav.c http://www.uglyboxindustries.com/mod_clamav.html )
+		clamav? ( http://www.uglyboxindustries.com/mod_clamav_new.c http://www.uglyboxindustries.com/mod_clamav_new.html )
 		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-${SHAPER_VER}.tar.gz )
 		vroot? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-vroot-${VROOT_VER}.tar.gz )"
 HOMEPAGE="http://www.proftpd.org/
@@ -54,6 +54,9 @@ src_unpack() {
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
 
+	# Fix bug #147654, patch by upstream
+	epatch "${FILESDIR}/${P}-mod_ctrls_sighup.patch"
+
 	epatch "${FILESDIR}/${P}-mod_sql_mysql.patch"
 
 	if use shaper ; then
@@ -62,8 +65,8 @@ src_unpack() {
 	fi
 
 	if use clamav ; then
-		cp -f "${DISTDIR}/mod_clamav.c" contrib/
-		cp -f "${DISTDIR}/mod_clamav.html" doc/
+		cp -f "${DISTDIR}/mod_clamav_new.c" contrib/mod_clamav.c
+		cp -f "${DISTDIR}/mod_clamav_new.html" doc/mod_clamav.html
 	fi
 
 	if use vroot ; then
@@ -88,6 +91,9 @@ src_compile() {
 	use ssl && modules="${modules}:mod_tls"
 	use tcpd && modules="${modules}:mod_wrap"
 	use vroot && modules="${modules}:mod_vroot"
+
+	# pam needs to be explicitely disabled
+	use pam || myconf="${myconf} --enable-auth-pam=no"
 
 	if use ldap ; then
 		modules="${modules}:mod_ldap"
@@ -196,4 +202,10 @@ pkg_postinst() {
 	ewarn "With the introduction of net-ftp/ftpbase the ftp user is now ftp."
 	ewarn "Remember to change that in the configuration file."
 	einfo
+	if use clamav ; then
+		ewarn "mod_clamav was updated to a new version, which uses Clamd"
+		ewarn "only for virus scanning, so you'll have to set Clamd up"
+		ewarn "and start it, also re-check the mod_clamav docs."
+		einfo
+	fi
 }
