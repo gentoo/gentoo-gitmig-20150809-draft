@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.56 2006/09/01 01:46:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.57 2006/09/23 05:41:27 nichoj Exp $
+
+*kaffe-1.1.7-r3 (23 Sep 2006)
+
+  23 Sep 2006; Joshua Nichols <nichoj@gentoo.org> -kaffe-1.1.4.ebuild,
+  -kaffe-1.1.4-r1.ebuild, -kaffe-1.1.7_rc1.ebuild, -kaffe-1.1.7.ebuild,
+  -kaffe-1.1.7-r1.ebuild, +kaffe-1.1.7-r3.ebuild:
+  Pruned old revisions. Added a fix for bug #148004.
+
+*kaffe-1.1.7-r2 (19 Sep 2006)
+
+  19 Sep 2006;  <>  kaffe-1.1.7-r2.ebuild files/digest-kaffe-1.1.7-r2
+  # INSERT ENTRY HERE
 
   01 Sep 2006; Joshua Nichols <nichoj@gentoo.org> kaffe-1.1.7-r1.ebuild:
   Added metadata to indicate packages support generation-1.
