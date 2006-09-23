@@ -1,20 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.4 2006/09/23 09:40:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/libtermcap-compat-2.0.8-r2.ebuild,v 1.5 2006/09/23 09:53:21 vapier Exp $
 
 # we only want this for binary-only packages, so we will only be installing
 # the lib used at runtime; no headers and no files to link against
 
 inherit eutils multilib
 
-PATCHVER=0.1
+PATCHVER=1
 
 MY_P="termcap-${PV}"
 DESCRIPTION="Compatibility package for old termcap-based programs"
 HOMEPAGE="http://www.catb.org/~esr/terminfo/"
 SRC_URI="http://www.catb.org/~esr/terminfo/termtypes.tc.gz
 	mirror://gentoo/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${MY_P}-patches-${PATCHVER}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
@@ -28,16 +28,15 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 
-	cd "${WORKDIR}"
-	mv termtypes.tc termcap || die
 	EPATCH_SOURCE="${WORKDIR}/patch"
 	EPATCH_SUFFIX="patch"
+
+	cd "${WORKDIR}"
+	mv termtypes.tc termcap || die
 	epatch "${EPATCH_SOURCE}"/tc.file
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}_bcopy_fix.patch
 	epatch "${EPATCH_SOURCE}"
-	epatch "${FILESDIR}"/${P}-fPIC.patch
 }
 
 src_compile() {

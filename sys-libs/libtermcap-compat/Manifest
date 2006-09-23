@@ -10,16 +10,17 @@ MD5 c5389fda988845f0c56af4ec72c8d524 files/libtermcap-compat_bcopy_fix.patch 314
 RMD160 a330b4e90340d62f12ba84fe4873b551198033fd files/libtermcap-compat_bcopy_fix.patch 314
 SHA256 5be5e13e1c3cf99638d7062b0382e97a8e3c148aa75a3ceb2dc884d55c5ca780 files/libtermcap-compat_bcopy_fix.patch 314
 DIST libtermcap-compat-2.0.8-gentoo-0.1.tar.bz2 9960 RMD160 e04feac67ee9dc298693962749b4be3690e7a871 SHA1 2b032b8a7d66ec6f618abf1034fce6b05a339bdb SHA256 aba11a32f2b1ae6262928796cc8637f84c8baf0a5e5149853ed3c570e5f79f3d
+DIST termcap-2.0.8-patches-1.tar.bz2 10573 RMD160 bd266e0d1aaf8a687205374f0b8873375283271e SHA1 760caea77a4f31f5d22fe228f566d67eb499cdb2 SHA256 0f77dc3ac217f8800e0f70f5c47e93b8bd253f20bb53552356bcdb690a21cef9
 DIST termcap-2.0.8.tar.bz2 211523 RMD160 c5f9f99d57d4788429dd94d7ca37968d35210070 SHA1 1b7994563468a838f0befdc1c94993d8e6d134cc SHA256 293fb17823ae10b01902465d9f83625598b784e7bf72dde5425914c1c718f917
 DIST termtypes.tc.gz 228329 RMD160 1dacc8fa5dc1639ddf40dc31dff523653a7fc3f1 SHA1 0398b2aea80d1e0d9dd1b27c978835d1bb3065e9 SHA256 c4fa04257fea6e968d4caa28cc18dbbf9eea4769a463296eaca21ceea757a728
 EBUILD libtermcap-compat-2.0.8-r1.ebuild 1639 RMD160 4779508dad57639ea774a212a0c31971d05a2b3c SHA1 338c1bc82e3ce6bd1dd2e09b274aaec268bfa896 SHA256 b64508f908ff316fec04e27c6338a9bb21731a00e5dbf7f58a0eece3bfcfd927
 MD5 f3f560ce97deb478632ccac5b34b88aa libtermcap-compat-2.0.8-r1.ebuild 1639
 RMD160 4779508dad57639ea774a212a0c31971d05a2b3c libtermcap-compat-2.0.8-r1.ebuild 1639
 SHA256 b64508f908ff316fec04e27c6338a9bb21731a00e5dbf7f58a0eece3bfcfd927 libtermcap-compat-2.0.8-r1.ebuild 1639
-EBUILD libtermcap-compat-2.0.8-r2.ebuild 1594 RMD160 e147287c63845270301faa494976b085d2978bb0 SHA1 bcf21ad35cb9b7a940c51dfb49b23cefb1f06d1d SHA256 096694840dc64fa14dd8aceefc9fcb179bb7b031d7ebfdfd4ff6763979410db8
-MD5 5a1d60d6cc12dc4bb56812b39a696a19 libtermcap-compat-2.0.8-r2.ebuild 1594
-RMD160 e147287c63845270301faa494976b085d2978bb0 libtermcap-compat-2.0.8-r2.ebuild 1594
-SHA256 096694840dc64fa14dd8aceefc9fcb179bb7b031d7ebfdfd4ff6763979410db8 libtermcap-compat-2.0.8-r2.ebuild 1594
+EBUILD libtermcap-compat-2.0.8-r2.ebuild 1515 RMD160 0ce14089a871c3275052ccffd895ec1ba81ffd10 SHA1 fdb0b5dc454b3e833696d655765c17897421659e SHA256 3342cfeaaf606e5d76c8f476679ed4b439ffec2f984d8d975957f010dc78b017
+MD5 c070809cde4c86c67687b65edd15c717 libtermcap-compat-2.0.8-r2.ebuild 1515
+RMD160 0ce14089a871c3275052ccffd895ec1ba81ffd10 libtermcap-compat-2.0.8-r2.ebuild 1515
+SHA256 3342cfeaaf606e5d76c8f476679ed4b439ffec2f984d8d975957f010dc78b017 libtermcap-compat-2.0.8-r2.ebuild 1515
 MISC ChangeLog 4267 RMD160 298091dfcfb83555be13488b59b89e0bdac0157e SHA1 bfd3331ca1b4ad40b3e1fcc3c978727e994dd413 SHA256 a738c5f27007eb75551b11c59113817677159e830422df1a4371d65b34464734
 MD5 fb4ac98f3a644426350f224a8b2c549d ChangeLog 4267
 RMD160 298091dfcfb83555be13488b59b89e0bdac0157e ChangeLog 4267
@@ -31,13 +32,13 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 MD5 f5bc5e61590d7533c34b8f7e021e2516 files/digest-libtermcap-compat-2.0.8-r1 771
 RMD160 003f4b4bad79b05387aa241b8a64ec6f3c26c004 files/digest-libtermcap-compat-2.0.8-r1 771
 SHA256 8df07c775663dda54ea50880a1ef64e8ae11dc96a7c148b1b1bcf09def519aa1 files/digest-libtermcap-compat-2.0.8-r1 771
-MD5 f5bc5e61590d7533c34b8f7e021e2516 files/digest-libtermcap-compat-2.0.8-r2 771
-RMD160 003f4b4bad79b05387aa241b8a64ec6f3c26c004 files/digest-libtermcap-compat-2.0.8-r2 771
-SHA256 8df07c775663dda54ea50880a1ef64e8ae11dc96a7c148b1b1bcf09def519aa1 files/digest-libtermcap-compat-2.0.8-r2 771
+MD5 c4ea6213120aa17b6788caeffcddbc4d files/digest-libtermcap-compat-2.0.8-r2 741
+RMD160 7059dfbe36e948e358b96d6b134a5d982834faa4 files/digest-libtermcap-compat-2.0.8-r2 741
+SHA256 5d4a8c1ac1895e560467c9de7f6c2052c9946caddddfb1087cb09e7cb73d3ec4 files/digest-libtermcap-compat-2.0.8-r2 741
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFFQGpamhnQswr0vIRAqyQAJ4ynl/I0lhO4kv9WleK9YIjGrCEMwCeOlY3
-7Fb3puM9MnpsPbPyWHN/4oM=
-=ZikH
+iD8DBQFFFQQZamhnQswr0vIRAtzeAKCw75ZV2WGFUoE7m6i6EIQU/8PhnQCbBBtN
+yF0xnqOq5CJnpOIG0u7HreM=
+=dq6J
 -----END PGP SIGNATURE-----
