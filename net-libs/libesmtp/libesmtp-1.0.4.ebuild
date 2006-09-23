@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.3 2006/03/18 12:09:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.4.ebuild,v 1.4 2006/09/23 20:37:44 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -9,9 +9,10 @@ SRC_URI="http://www.stafford.uklinux.net/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.stafford.uklinux.net/libesmtp/"
 LICENSE="LGPL-2.1 GPL-2"
 
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
 DEPEND=">=sys-devel/libtool-1.4.1
-	>=sys-apps/sed-4
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+		>=sys-apps/sed-4
+		${RDEPEND}"
 
 IUSE="ssl debug"
 SLOT="0"
