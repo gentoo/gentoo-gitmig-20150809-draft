@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.18 2005/08/14 13:39:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.14-r1.ebuild,v 1.19 2006/09/23 22:23:30 dragonheart Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications."
 HOMEPAGE="http://www.gnupg.org/gpgme.html"
@@ -19,7 +19,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 	sys-devel/libtool
 	sys-devel/gcc
 	sys-devel/autoconf
-	sys-devel/automake
+	=sys-devel/automake-1.6*
 	>=sys-apps/sed-4
 	>=app-crypt/gnupg-1.2.0"
 
@@ -31,8 +31,8 @@ RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/gpgme3.m4.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/gpgme3.m4.patch
 	find . -name Makefile -o -name Makefile.in -exec rm {} \;
 	rm doc/gpgme.info-?
 
@@ -62,6 +62,8 @@ src_unpack() {
 	mv gpgme/gpgme{,3}-config.in
 	mv gpgme/gpgme{,3}.m4
 	# mv gpgme/gpgme{,3}.h
+	export WANT_AUTOMAKE="1.6"
+	eautoreconf
 }
 
 
@@ -71,15 +73,11 @@ src_compile() {
 	use doc \
 		&& myconf="${myconf} --enable-maintainer-mode"
 
-	if [ -x ${ROOT}usr/bin/gpg2 ]; then
+	if [ -x "${ROOT}"usr/bin/gpg2 ]; then
 		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg2"
 	else
 		myconf="${myconf} --with-gpg=${ROOT}usr/bin/gpg"
 	fi
-
-	autoconf || die "autoconf failed"
-	aclocal || die "Aclocal failed"
-	automake || die "automake failed"
 
 	# For gnugpg-1.9+
 	# 		$(use_with smime gpgsm /usr/bin/gpgsm) 
@@ -95,6 +93,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README README-alpha THANKS TODO VERSION
 }
