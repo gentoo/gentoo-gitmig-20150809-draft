@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1-r6.ebuild,v 1.1 2006/08/08 23:47:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/mac-fdisk-0.1-r6.ebuild,v 1.2 2006/09/23 22:30:41 josejx Exp $
 
 inherit eutils
 
@@ -23,11 +23,11 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/mac-fdisk_${PV}-${DEBRV}.diff.gz
 
-	# XXX: this needs to be fixed to not have this 'use ppc64'
-	use ppc64 && epatch ${FILESDIR}/mac-fdisk-0.1-r3-ppc64.patch
-
 	epatch "${FILESDIR}"/largerthan2gb.patch
 	epatch "${FILESDIR}"/${P}-headers.patch
+
+	### Patch for bug #142737
+	epatch ${FILESDIR}/mac-fdisk-0.1-r6-ppc64.patch
 }
 
 src_install() {
