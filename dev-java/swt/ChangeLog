@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.42 2006/09/14 18:17:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.43 2006/09/23 04:27:50 nichoj Exp $
+
+  23 Sep 2006; Joshua Nichols <nichoj@gentoo.org> swt-3.2-r1.ebuild:
+  Lowered dependency down to >=jdk-1.4. Added java-ant-2 to ensure class
+  version compatibility.
 
   14 Sep 2006; Joshua Nichols <nichoj@gentoo.org> swt-3.2-r1.ebuild:
   Removed forced dependency on 1.4. Cleaned up whitespace.

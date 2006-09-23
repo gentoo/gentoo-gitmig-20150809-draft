@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.4 2006/09/14 18:17:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r1.ebuild,v 1.5 2006/09/23 04:27:50 nichoj Exp $
 
-inherit eutils java-pkg-2
+inherit eutils java-pkg-2 java-ant-2
 
 MY_DMF="R-3.2-200606291905"
 MY_VERSION="3.2"
@@ -42,11 +42,11 @@ COMMON=">=dev-libs/glib-2.6
 					virtual/opengl
 					virtual/glu
 				)"
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.4
 		${COMMON}
 		dev-java/ant-core
 		app-arch/unzip"
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.4
 		${COMMON}"
 
 S="${WORKDIR}"
