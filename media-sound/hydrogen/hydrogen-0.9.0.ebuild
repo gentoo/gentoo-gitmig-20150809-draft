@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.12 2006/05/07 02:54:50 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.13 2006/09/23 00:27:10 flameeyes Exp $
 
 inherit eutils kde-functions
 
@@ -29,11 +29,10 @@ src_unpack() {
 
 
 src_compile() {
-	need-autoconf 2.5
 	econf $(use_enable jack jack-support) \
-	      $(use_enable alsa alsa-seq) \
-	      $(use_enable ladspa lrdf-support) \
-	      || die "Failed configuring hydrogen!"
+		  $(use_enable alsa alsa-seq) \
+		  $(use_enable ladspa lrdf-support) \
+		  || die "Failed configuring hydrogen!"
 	emake || die "Failed making hydrogen!"
 }
 

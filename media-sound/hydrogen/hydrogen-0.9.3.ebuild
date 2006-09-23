@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.9 2006/05/17 15:22:37 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.10 2006/09/23 00:27:10 flameeyes Exp $
 
 inherit eutils kde-functions autotools
 
@@ -46,8 +46,6 @@ src_unpack() {
 }
 
 src_compile() {
-	need-autoconf 2.5
-
 	export PORTAUDIOPATH="${ROOT}usr"
 	# PortMidi not yet in the repository
 	# export PORTMIDIPATH="${ROOT}usr"
