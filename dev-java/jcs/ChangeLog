@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jcs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.4 2006/09/10 15:19:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.5 2006/09/24 09:54:52 nelchael Exp $
+
+  24 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/build-1.2.6.5.xml, files/build-1.2.7.8.xml, -jcs-1.2.6.5-r1.ebuild,
+  jcs-1.2.7.8.ebuild:
+  Ebuild cleanup, removed old version, added "admin" USE flag for JCS Admin.
 
   10 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> jcs-1.2.7.8.ebuild:
   Added ~ppc.
