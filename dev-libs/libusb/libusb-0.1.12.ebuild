@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12.ebuild,v 1.3 2006/09/23 14:43:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12.ebuild,v 1.4 2006/09/24 09:03:37 vapier Exp $
 
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 inherit eutils libtool autotools
 
 DESCRIPTION="Userspace access to USB devices"
@@ -16,17 +18,15 @@ RESTRICT="test"
 
 RDEPEND=""
 DEPEND="doc? ( app-text/openjade
-		app-text/docbook-dsssl-stylesheets
-		app-text/docbook-sgml-utils
-		~app-text/docbook-sgml-dtd-4.2 )"
+	app-text/docbook-dsssl-stylesheets
+	app-text/docbook-sgml-utils
+	~app-text/docbook-sgml-dtd-4.2 )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e 's:-Werror::' Makefile.am
 	epatch "${FILESDIR}"/${PV}-fbsd.patch
-	WANT_AUTOMAKE="1.9" \
-	WANT_AUTOCONF="2.5" \
 	eautoreconf
 	elibtoolize
 }
