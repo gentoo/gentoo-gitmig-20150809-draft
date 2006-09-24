@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.4-r1.ebuild,v 1.1 2006/09/18 15:19:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.4-r1.ebuild,v 1.2 2006/09/24 20:01:11 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -21,6 +21,7 @@ $(deprange $PV $MAXKDEVER kde-base/ktnef)
 $(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
 $(deprange $PV $MAXKDEVER kde-base/kontact)
 $(deprange $PV $MAXKDEVER kde-base/libkholidays)"
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="
 	libkdepim libkdepim

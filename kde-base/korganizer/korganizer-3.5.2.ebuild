@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.2.ebuild,v 1.9 2006/09/03 16:03:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.2.ebuild,v 1.10 2006/09/24 20:01:11 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -18,6 +18,7 @@ $(deprange $PV $MAXKDEVER kde-base/ktnef)
 $(deprange $PV $MAXKDEVER kde-base/kdepim-kresources)
 $(deprange $PV $MAXKDEVER kde-base/kontact)
 $(deprange 3.5.1 $MAXKDEVER kde-base/libkholidays)"
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="
 	libkdepim libkdepim
@@ -55,6 +56,6 @@ KMEXTRA="
 #	cd ${S}/kalarmd && make alarmdaemoniface_stub.h
 #	# generate "alarmguiiface_stub.h"
 #	cd ${S}/kalarmd && make alarmguiiface_stub.h
-#	
+#
 #	kde-meta_src_compile make
 #}
