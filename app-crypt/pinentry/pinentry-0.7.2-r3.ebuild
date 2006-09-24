@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.12 2006/09/16 13:30:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2-r3.ebuild,v 1.13 2006/09/24 19:01:36 swegener Exp $
 
 inherit flag-o-matic qt3 multilib eutils autotools
 
@@ -24,6 +24,8 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PV}-libcap.patch
+	epatch "${FILESDIR}"/${PV}-info.patch
+
 	AT_M4DIR="m4" eautoreconf
 }
 
