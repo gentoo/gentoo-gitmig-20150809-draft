@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.50 2006/09/17 08:47:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.51 2006/09/24 11:34:58 blubb Exp $
+
+  24 Sep 2006; <blubb@gentoo.org> rep-gtk-0.18-r3.ebuild:
+  stable on amd64
 
   17 Sep 2006; <nixnut@gentoo.org> rep-gtk-0.18-r3.ebuild:
   Stable on ppc wrt bug 146557
