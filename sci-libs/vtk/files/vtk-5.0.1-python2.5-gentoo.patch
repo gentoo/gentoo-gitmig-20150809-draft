@@ -1,0 +1,12 @@
+diff -Naur VTK/Common/vtkPythonUtil.cxx VTK-new/Common/vtkPythonUtil.cxx
+--- VTK/Common/vtkPythonUtil.cxx	2005-08-04 12:19:14.000000000 -0400
++++ VTK-new/Common/vtkPythonUtil.cxx	2006-09-23 11:16:06.000000000 -0400
+@@ -768,7 +768,7 @@
+     }
+   if (strcmp(name, "__doc__") == 0)
+     {
+-    char *doc = t->tp_doc;
++    const char *doc = t->tp_doc;
+     if (doc != NULL)
+       {
+       return PyString_FromString(doc);

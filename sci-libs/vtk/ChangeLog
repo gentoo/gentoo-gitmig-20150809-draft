@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.23 2006/09/08 15:15:13 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.24 2006/09/24 16:47:49 markusle Exp $
+
+  23 Sep 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/vtk-5.0.1-python2.5-gentoo.patch, vtk-5.0.1.ebuild:
+  Added patch to fix compile problems with python-2.5 
+  (see bug #148727).
 
   08 Sep 2006; Markus Dittrich <markusle@gentoo.org>
   +files/vtk-qt-gentoo.patch, -files/vtk-qt3-qt4-gentoo.patch,
