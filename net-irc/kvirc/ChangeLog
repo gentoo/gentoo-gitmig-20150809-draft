@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.38 2006/09/18 21:35:18 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.39 2006/09/24 19:52:23 jokey Exp $
+
+  24 Sep 2006; <jokey@gentoo.org> kvirc-3.2.0.ebuild, kvirc-3.2.3.ebuild,
+  kvirc-3.2.4.ebuild, kvirc-3.2.5.ebuild, kvirc-9999.ebuild:
+  Changing need-auto. tags to WANT_AUTO tags per bug #148719
 
 *kvirc-3.2.5 (18 Sep 2006)
 

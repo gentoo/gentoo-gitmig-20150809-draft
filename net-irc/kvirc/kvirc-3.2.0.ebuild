@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.10 2006/02/09 02:17:28 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.2.0.ebuild,v 1.11 2006/09/24 19:52:23 jokey Exp $
 
-inherit eutils kde-functions
+inherit autotools eutils kde-functions
 
 DESCRIPTION="An advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
@@ -57,8 +57,8 @@ src_compile() {
 
 	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
-	need-autoconf 2.5
-	need-automake 1.5
+	WANT_AUTOCONF="2.5"
+	WANT_AUTOMAKE="1.5"
 
 	econf ${myconf} || die "failed to configure"
 	emake -j1 || die "failed to make"

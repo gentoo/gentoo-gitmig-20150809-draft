@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.3 2006/06/07 07:58:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.4 2006/09/24 19:52:23 jokey Exp $
 
-inherit eutils kde-functions cvs autotools
+inherit autotools eutils kde-functions cvs
 
 DESCRIPTION="An advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
 
 LICENSE="kvirc"
 SLOT="3"
-KEYWORDS="-*"
+KEYWORDS="~x86"
 IUSE="debug esd ipv6 kde oss ssl"
 
 RDEPEND="esd? ( media-sound/esound )
@@ -54,8 +54,8 @@ src_compile() {
 
 	[ "${ARCH}" == "x86" ] && myconf="${myconf} --with-ix86-asm"
 
-	need-autoconf 2.5
-	need-automake 1.5
+	WANT_AUTOCONF="2.5"
+	WANT_AUTOMAKE="1.5"
 
 	econf ${myconf} || die "failed to configure"
 	emake -j1 || die "failed to make"
