@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.30 2006/09/17 02:14:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r4.ebuild,v 1.31 2006/09/24 09:56:59 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1036,6 +1036,11 @@ pkg_setup() {
 	if use nptlonly && ! use nptl ; then
 		eerror "If you want nptlonly, add nptl to your USE too ;p"
 		die "nptlonly without nptl"
+	fi
+
+	if [[ -e /proc/xen ]] && ! is-flag -mno-tls-direct-seg-refs ; then
+		ewarn "You are using Xen but don't have -mno-tls-direct-seg-refs in your CFLAGS."
+		ewarn "This will result in a 50% performance penalty, which is probably not what you want."
 	fi
 
 	if ! type -p scanelf > /dev/null ; then
