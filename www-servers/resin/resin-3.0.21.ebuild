@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.21.ebuild,v 1.2 2006/09/11 20:46:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.21.ebuild,v 1.3 2006/09/24 19:28:08 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -17,8 +17,8 @@ RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/iso-relax-20050331"
 DEPEND="${RDEPEND}
 	dev-java/aopalliance
-	>=dev-java/sun-javamail-bin-1.4
-	>=dev-java/sun-jaf-bin-1.1
+	>=dev-java/sun-javamail-1.4
+	>=dev-java/sun-jaf-1.1
 	dev-java/ant-core
 	dev-libs/openssl"
 
@@ -56,8 +56,8 @@ src_compile() {
 
 	mkdir ${S}/lib
 	cd ${S}/lib
-	java-pkg_jar-from sun-jaf-bin
-	java-pkg_jar-from sun-javamail-bin
+	java-pkg_jar-from sun-jaf
+	java-pkg_jar-from sun-javamail
 	java-pkg_jar-from iso-relax
 	java-pkg_jar-from aopalliance-1
 	ln -s $(java-config --jdk-home)/lib/tools.jar
