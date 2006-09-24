@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.7.ebuild,v 1.2 2006/09/24 09:40:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.7.ebuild,v 1.3 2006/09/24 10:32:39 blubb Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://podgorny.cz/uptimed/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 src_unpack() {
