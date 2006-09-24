@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/sms
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sms/ChangeLog,v 1.3 2006/04/13 20:03:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/sms/ChangeLog,v 1.4 2006/09/24 11:16:40 mrness Exp $
+
+  24 Sep 2006; Alin Nastac <mrness@gentoo.org> +files/sms-2.0.3-gcc41.patch,
+  sms-2.0.3.ebuild:
+  Fix broken compilation on gcc-4.1.
 
   13 Apr 2006; Alin Nastac <mrness@gentoo.org> sms-2.0.3.ebuild:
   Simplify dependencies.
