@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.12.ebuild,v 1.5 2006/09/20 19:04:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.12.ebuild,v 1.6 2006/09/24 19:12:39 swegener Exp $
 
 inherit eutils qt3 qt4 mono python
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	>=dev-libs/glib-2
 	gdbm? ( sys-libs/gdbm )
 	qt3? ( $(qt_min_version 3.3) )
-	qt4? ( $(qt_min_version 4) )
+	qt4? ( $(qt4_min_version 4) )
 	gtk? (
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
