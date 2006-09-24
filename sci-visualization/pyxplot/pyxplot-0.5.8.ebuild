@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.5.8.ebuild,v 1.1 2006/09/24 02:06:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/pyxplot/pyxplot-0.5.8.ebuild,v 1.2 2006/09/24 02:13:44 dberkholz Exp $
 
 inherit eutils python
 
@@ -26,6 +26,7 @@ src_unpack() {
 	sed -i \
 		-e "s:^\(USRDIR=\).*:\1/usr:g" \
 		-e 's:^\(MANDIR=\).*:\1${USRDIR}/share/man/man1:g' \
+		-e "s:^\(DOCDIR=\).*:\1\${USRDIR}/share/doc/${PF}:g" \
 		"${S}"/Makefile.skel
 	epatch "${FILESDIR}"/${PV}-dont-build-pyx.patch
 	# Depends on dont-build-pyx.patch
@@ -48,6 +49,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc README AUTHORS ChangeLog
 }
 
 pkg_postinst() {
