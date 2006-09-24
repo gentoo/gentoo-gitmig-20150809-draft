@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.203 2006/09/14 11:40:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.204 2006/09/24 06:04:06 genstef Exp $
+
+*cups-1.2.4 (24 Sep 2006)
+
+  24 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/cupsDirRead-dont-end-on-failed-stat.patch, -cups-1.2.3.ebuild,
+  +cups-1.2.4.ebuild:
+  version bump
 
   14 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
   -files/cups-1.1.22-xpdf2-underflow.patch, -files/cups.pam,
