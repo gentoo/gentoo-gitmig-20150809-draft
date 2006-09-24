@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/activeheart-kwin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.9 2006/07/23 16:37:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart-kwin/ChangeLog,v 1.10 2006/09/24 21:02:16 flameeyes Exp $
+
+  24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  activeheart-kwin-1.1.ebuild:
+  Add missing dependency in kwin (or kdebase).
 
   23 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   activeheart-kwin-1.1.ebuild:
