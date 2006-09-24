@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.34 2006/09/24 15:12:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.35 2006/09/24 19:46:38 seemant Exp $
+
+  24 Sep 2006; Seemant Kulleen <seemant@gentoo.org> cabextract-1.1.ebuild:
+  export WANT_AUTOMAKE to latest -- thanks FlameEyes
 
   24 Sep 2006; Seemant Kulleen <seemant@gentoo.org> cabextract-1.1.ebuild:
   Explicitly require automake-1.9.  See bug #148821
