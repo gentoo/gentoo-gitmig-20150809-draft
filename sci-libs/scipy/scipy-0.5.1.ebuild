@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.1.ebuild,v 1.1 2006/09/24 07:29:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.5.1.ebuild,v 1.2 2006/09/24 07:38:30 dberkholz Exp $
 
-inherit distutils flag-o-matic fortran
+inherit distutils fortran
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DESCRIPTION="Open source scientific tools for Python"
@@ -13,14 +13,11 @@ SLOT="0"
 IUSE="fftw"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-# did not use virtual/blas and virtual/lapack
-# because doc says scipy needs to compile all libraries with the same compiler
+# doc says scipy needs to compile all libraries with the same compiler
 RDEPEND=">=dev-lang/python-2.3.3
 	>=dev-python/numpy-1.0_beta1
-	sci-libs/blas-atlas
-	sci-libs/blas-config
-	sci-libs/lapack-config
-	sci-libs/lapack-atlas
+	virtual/blas
+	virtual/lapack
 	fftw? ( =sci-libs/fftw-2.1* )"
 
 DEPEND="${RDEPEND}"
@@ -30,42 +27,6 @@ DEPEND="${RDEPEND}"
 # f2py seems to be in numpy.
 
 FORTRAN="g77 gfortran"
-
-pkg_setup() {
-	fortran_pkg_setup
-
-	einfo "Checking active BLAS implementations for ATLAS."
-	blas-config -p
-	if ! blas-config -p | grep "F77 BLAS:" | grep -q -i atlas; then
-		eerror "Your F77 BLAS profile is not set to the ATLAS implementation,"
-		eerror "which is required by ${PN} to compile and run properly."
-		eerror "Use: 'blas-config -f ATLAS' to activate ATLAS."
-		echo
-		bad_profile=1
-	fi
-	if ! blas-config -p | grep "C BLAS:" | grep -q -i atlas; then
-		eerror "Your C BLAS profile is not set to the ATLAS implementation,"
-		eerror "Which is required by ${PN} to compile and run properly."
-		eerror "Use: 'blas-config -c ATLAS' to activate ATLAS."
-		echo
-		bad_profile=1
-	fi
-	einfo "Checking active LAPACK implementation for ATLAS."
-	lapack-config -p
-	if ! lapack-config -p | grep "F77 LAPACK:" | grep -q -i atlas; then
-		eerror "Your F77 LAPACK profile is not set to the ATLAS implementation,"
-		eerror "which is required by ${PN} to compile and run properly."
-		eerror "Use: 'lapack-config ATLAS' to activate ATLAS."
-		bad_profile=1
-	fi
-	if ! [ -z ${bad_profile} ]; then
-		die "Active BLAS/LAPACK implementations are not ATLAS."
-	fi
-
-	# -Wl,-O1 breaks the compilation
-	filter-ldflags -O1
-	filter-ldflags -Wl,-O1
-}
 
 src_unpack() {
 	unpack ${A}

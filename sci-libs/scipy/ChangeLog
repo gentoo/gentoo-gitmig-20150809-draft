@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.12 2006/09/24 07:31:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.13 2006/09/24 07:38:30 dberkholz Exp $
+
+  24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; scipy-0.5.1.ebuild:
+  Drop pkg_setup() and use default fortran one. This gets rid of the forced
+  ATLAS use and blas/lapack-config checks added in #129524. It seems to work
+  OK with other implems as long as you're consistent about it, and it breaks
+  in an annoying way with newer eselect modules (see #136023 e.g.). Also this
+  drops the LDFLAGS stuff that was wrongly added, a better fix is already in
+  here.
 
   24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; scipy-0.4.8.ebuild,
   scipy-0.4.8-r1.ebuild, scipy-0.4.9.ebuild:
