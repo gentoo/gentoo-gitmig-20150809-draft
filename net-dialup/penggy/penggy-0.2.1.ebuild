@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.9 2006/05/14 12:10:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/penggy/penggy-0.2.1.ebuild,v 1.10 2006/09/24 07:55:51 mrness Exp $
+
+inherit eutils autotools
 
 DESCRIPTION="Provide access to Internet using the AOL/Compuserve network."
 HOMEPAGE="None available"
@@ -12,6 +14,14 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-util/guile-1.4.0"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+	eautoconf
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
