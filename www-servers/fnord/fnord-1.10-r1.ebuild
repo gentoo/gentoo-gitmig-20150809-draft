@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.2 2006/07/02 23:07:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r1.ebuild,v 1.3 2006/09/24 22:25:32 hansmi Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fefe.de/fnord/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ppc ~sparc ~x86"
+KEYWORDS="hppa ppc sparc x86"
 IUSE="auth"
 
 DEPEND=""
