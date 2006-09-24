@@ -1,3 +1,10 @@
+Fix from upstream cvs:
+
+2004-12-12  Dan Dennedy <dan@dennedy.org>
+
+	* *_x86_64.S: apply patch from Dean Kolosiek to fix linker
+	  compatibility.
+
 --- libdv-0.104/libdv/encode_x86_64.S
 +++ libdv-0.104/libdv/encode_x86_64.S
 @@ -47,7 +47,8 @@

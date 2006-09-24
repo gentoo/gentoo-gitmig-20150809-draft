@@ -1,3 +1,7 @@
+Ripped from Fedora
+
+http://bugs.gentoo.org/122704
+
 --- libdv-0.103/libdv/mmx.h.mmx	2006-02-13 16:43:45.000000000 -0500
 +++ libdv-0.103/libdv/mmx.h	2006-02-13 16:43:57.000000000 -0500
 @@ -353,16 +353,16 @@
