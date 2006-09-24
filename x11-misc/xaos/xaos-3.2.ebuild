@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.1 2006/04/10 11:54:21 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.2.ebuild,v 1.2 2006/09/24 10:30:56 blubb Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/xaos/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 
 RDEPEND="X? (
 			 || (
