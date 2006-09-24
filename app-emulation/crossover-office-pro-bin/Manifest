@@ -5,26 +5,26 @@ DIST install-crossover-pro-4.2.sh 12890481 RMD160 ab4b84b697dfcfd4f06c0ec72cbc25
 DIST install-crossover-pro-5.0.0.sh 15957213 RMD160 fa0f2763296e65189c77ede3288c5b8596159fe5 SHA1 9209544366669f8e45e082c09be7fabb1d7c7d65 SHA256 aa4575bf989eee9ecb3fa4f150913cb46c8bf7e32322f8c874310fff82ffb72c
 DIST install-crossover-pro-5.0.1.sh 16177282 RMD160 58e784bfa5a8ac59070538e047f52fff5e0c01aa SHA1 edc48d9b8298d5c7a3d66c659de5f78d21007283 SHA256 b92683c0e20008a67f2b79ea83bae01141cce22966ebbf291058eecdf941ddd6
 DIST install-crossover-pro-5.0.3.sh 17299111 RMD160 6edac83dec4e27f8c7ddc7c779f8c7b30e2001a4 SHA1 5b301dedab8ea5b11dcf26e6c8ee90dd82179100 SHA256 d171b87cb5c1aaa775e8abbb303fa7acc572f1b0911bbd89d1852e823fc9f133
-EBUILD crossover-office-pro-bin-4.2.ebuild 1331 RMD160 4bee2084c0f25463f59dc29c5916acc46ba35664 SHA1 28022a9881540bf2496e100c802e8fd680ebb8b4 SHA256 79abef87d1cd934c3e890ca2e284b49f308bdbfbaee9c5fdf3e6e54e37445085
-MD5 5e79233ab90391950d02aa04ec446bbe crossover-office-pro-bin-4.2.ebuild 1331
-RMD160 4bee2084c0f25463f59dc29c5916acc46ba35664 crossover-office-pro-bin-4.2.ebuild 1331
-SHA256 79abef87d1cd934c3e890ca2e284b49f308bdbfbaee9c5fdf3e6e54e37445085 crossover-office-pro-bin-4.2.ebuild 1331
-EBUILD crossover-office-pro-bin-5.0.0.ebuild 1216 RMD160 ba398b1ac4c88098f60d1f00deee16063f0ef5ea SHA1 d32182ab826620d2f2eae0d073aa8aae30e4402f SHA256 b4838b0463974ac61756565cb39fd7464d730847ae27a114545ded3568c67f25
-MD5 8b8342a711b8cb3d425ef00a1e7ae2a6 crossover-office-pro-bin-5.0.0.ebuild 1216
-RMD160 ba398b1ac4c88098f60d1f00deee16063f0ef5ea crossover-office-pro-bin-5.0.0.ebuild 1216
-SHA256 b4838b0463974ac61756565cb39fd7464d730847ae27a114545ded3568c67f25 crossover-office-pro-bin-5.0.0.ebuild 1216
-EBUILD crossover-office-pro-bin-5.0.1.ebuild 1216 RMD160 ec192684ee99d516d5084fb4b7dcb231fb0c2e6c SHA1 259be2dd922acc9689733b316f09e4d2ea85cdfb SHA256 1e6ae93df700a15a7ff1a20d9de1c0d4d2442021e5ba6c0eaffaa970fab74a85
-MD5 3319d153048d0c5f581ae7a39e0f15f9 crossover-office-pro-bin-5.0.1.ebuild 1216
-RMD160 ec192684ee99d516d5084fb4b7dcb231fb0c2e6c crossover-office-pro-bin-5.0.1.ebuild 1216
-SHA256 1e6ae93df700a15a7ff1a20d9de1c0d4d2442021e5ba6c0eaffaa970fab74a85 crossover-office-pro-bin-5.0.1.ebuild 1216
-EBUILD crossover-office-pro-bin-5.0.3.ebuild 1216 RMD160 6de5b944b7b0cd5168c7bda9353a72fb74670755 SHA1 db3483575b060131d86b83b948e902cf38781ba0 SHA256 dfbe8d218ba1beadc035ff550e1fdece870a293b99d32a1c56da44ec152bdf42
-MD5 3fec09162461a153d4999f72e1953b6d crossover-office-pro-bin-5.0.3.ebuild 1216
-RMD160 6de5b944b7b0cd5168c7bda9353a72fb74670755 crossover-office-pro-bin-5.0.3.ebuild 1216
-SHA256 dfbe8d218ba1beadc035ff550e1fdece870a293b99d32a1c56da44ec152bdf42 crossover-office-pro-bin-5.0.3.ebuild 1216
-MISC ChangeLog 1205 RMD160 98959668a1b037d07f1fde98134e24fb655b692f SHA1 a9e5664b691ad4d9a902fbe2b76ca76adb213015 SHA256 486668cd82c253ae960ff959e983d6c8aab497dafff44b53ff2bd8ec255b66c4
-MD5 283082568209952a8d777cb43eb96a70 ChangeLog 1205
-RMD160 98959668a1b037d07f1fde98134e24fb655b692f ChangeLog 1205
-SHA256 486668cd82c253ae960ff959e983d6c8aab497dafff44b53ff2bd8ec255b66c4 ChangeLog 1205
+EBUILD crossover-office-pro-bin-4.2.ebuild 1334 RMD160 6fff5cb4aded71fcffecf540079151ea38d8226b SHA1 4d2d96194abfa12c2d59692a33647d0e4e1875c2 SHA256 4ea7714fe96dbf72111a4c492612e741484c2df46ce9f946424a072aae81b820
+MD5 f0c8416f5a3c61d3ad086544666e2c34 crossover-office-pro-bin-4.2.ebuild 1334
+RMD160 6fff5cb4aded71fcffecf540079151ea38d8226b crossover-office-pro-bin-4.2.ebuild 1334
+SHA256 4ea7714fe96dbf72111a4c492612e741484c2df46ce9f946424a072aae81b820 crossover-office-pro-bin-4.2.ebuild 1334
+EBUILD crossover-office-pro-bin-5.0.0.ebuild 1219 RMD160 e4f1937a4e8b6fbedc82f474c74f2af87ec56240 SHA1 4eb284db6080eb38effbcb6fcc40c02c5d006bde SHA256 d40a378262675e1767c5b2e0f9ae936f56f55d41250b973678e439969e2b2da5
+MD5 48addf6fa85c89ec632ae1f8effc2449 crossover-office-pro-bin-5.0.0.ebuild 1219
+RMD160 e4f1937a4e8b6fbedc82f474c74f2af87ec56240 crossover-office-pro-bin-5.0.0.ebuild 1219
+SHA256 d40a378262675e1767c5b2e0f9ae936f56f55d41250b973678e439969e2b2da5 crossover-office-pro-bin-5.0.0.ebuild 1219
+EBUILD crossover-office-pro-bin-5.0.1.ebuild 1219 RMD160 a58f5b426f9535c81adc615716fb2f67b104be37 SHA1 fc9df843bad4168c493ebba22bddebbee44bb52d SHA256 d45a4f6cbf5ea16b0dd1026b134f8077f5c985b36ff7e83b1f6e159dc310703c
+MD5 caefdb307ab951098cf3cd1215de1231 crossover-office-pro-bin-5.0.1.ebuild 1219
+RMD160 a58f5b426f9535c81adc615716fb2f67b104be37 crossover-office-pro-bin-5.0.1.ebuild 1219
+SHA256 d45a4f6cbf5ea16b0dd1026b134f8077f5c985b36ff7e83b1f6e159dc310703c crossover-office-pro-bin-5.0.1.ebuild 1219
+EBUILD crossover-office-pro-bin-5.0.3.ebuild 1219 RMD160 788bd0a3873dcf2d6bd4f3a7f368e852a220f12f SHA1 f17912ec7e4c9bcd6bbb9564c3a568f85affe1bb SHA256 8a5f30e16d272e5cdbb671c4cb2b9aca67058131ac9e72262e267f56d90952b9
+MD5 367fc4ba826ec9acfba423833e70d091 crossover-office-pro-bin-5.0.3.ebuild 1219
+RMD160 788bd0a3873dcf2d6bd4f3a7f368e852a220f12f crossover-office-pro-bin-5.0.3.ebuild 1219
+SHA256 8a5f30e16d272e5cdbb671c4cb2b9aca67058131ac9e72262e267f56d90952b9 crossover-office-pro-bin-5.0.3.ebuild 1219
+MISC ChangeLog 1529 RMD160 910b3b76154460a3200657d718ce6a097ebdde7a SHA1 ac34961166869de7653151cf0704b1efc94264ec SHA256 29f852e5c1ea225a79b24266c0ce0c0b99a9866c034dd65c6753d01c52172d51
+MD5 797d895c0e0031ea9579cd25960625b6 ChangeLog 1529
+RMD160 910b3b76154460a3200657d718ce6a097ebdde7a ChangeLog 1529
+SHA256 29f852e5c1ea225a79b24266c0ce0c0b99a9866c034dd65c6753d01c52172d51 ChangeLog 1529
 MISC metadata.xml 157 RMD160 b892a0c64131e9d8668b2aac5920c256bf64b0b1 SHA1 64f437370b4a6e795b5eb37d4f5a4c45d9159551 SHA256 4bc5b7df954a173f1b0a30195797200b7a638f25f3442f2a97ce9a6f0cd7ccdc
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
 RMD160 b892a0c64131e9d8668b2aac5920c256bf64b0b1 metadata.xml 157
@@ -42,9 +42,9 @@ MD5 5e23b663b453db542e2389ff35ef9fba files/digest-crossover-office-pro-bin-5.0.3
 RMD160 04ffa34c5c81a360d93dcb41930294839df830fb files/digest-crossover-office-pro-bin-5.0.3 277
 SHA256 0a849aa04318299b5ec7278ff540ddb23541fd690b93c7c3bf4bd4e8b48ecddc files/digest-crossover-office-pro-bin-5.0.3 277
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE2qjEamhnQswr0vIRAs2NAJ9Bv8JbwzGbsRAChy5cfnWLmqGm4wCggJ3i
-CmzQMScTcGr2CXOpo4Vfvfk=
-=oozs
+iD8DBQFFFloUamhnQswr0vIRAm3NAKCLpdIsz6cwMwJpGd3/SxD3UNE+BQCeNCR+
+CozTWrnU1WjZGH1bo1/RJyA=
+=uf2N
 -----END PGP SIGNATURE-----
