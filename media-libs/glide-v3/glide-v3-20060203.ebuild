@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.5 2006/08/13 17:49:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-20060203.ebuild,v 1.6 2006/09/24 08:34:13 dberkholz Exp $
 
 inherit multilib eutils
 
@@ -19,10 +19,10 @@ SLOT="0"
 KEYWORDS="-sparc x86"
 IUSE="voodoo5 voodoo3 voodoo2 voodoo1"
 
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
+RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
-	|| ( x11-libs/libXt virtual/x11 )"
+	x11-libs/libXt"
 
 src_compile() {
 	local compilefor glide_flags
