@@ -1,6 +1,14 @@
 # ChangeLog for net-im/mcabber
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/ChangeLog,v 1.4 2006/08/11 23:10:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/ChangeLog,v 1.5 2006/09/24 23:24:09 troll Exp $
+
+*mcabber-0.8.2 (25 Sep 2006)
+
+  25 Sep 2006; Przemysław Maciąg <troll@gentoo.org> +mcabber-0.8.2.ebuild:
+  Version bump. Closing bug #144261. Ebuild updated and improved.
+  Dependency correction. Closing bug #145201. Thx to Philip White
+  <pmw+gentoo@qnan.org>.
+  New maintainer in metadata
 
   11 Aug 2006; Jason Wever <weeve@gentoo.org> mcabber-0.7.8.ebuild:
   Added ~sparc keyword as it mysteriously went missing in this version.

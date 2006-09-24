@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>net-im</herd>
 <maintainer>
-  <email>net-im@gentoo.org</email>
+  <email>troll@gentoo.org</email>
 </maintainer>
 <longdescription>Very interesting console client for the Jabber protocol.</longdescription>
 </pkgmetadata>
