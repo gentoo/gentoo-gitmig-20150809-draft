@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.13 2006/02/15 23:57:50 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ssldump-0.9.ebuild,v 1.14 2006/09/24 07:40:00 pva Exp $
 
 inherit gnuconfig eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}"-libpcap-header.patch
 	epatch "${FILESDIR}/${P}"-configure-dylib.patch
+	epatch "${FILESDIR}/${P}"-openssl-0.9.8.compile-fix.patch
 }
 
 src_compile() {
