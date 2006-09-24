@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.11.ebuild,v 1.6 2006/07/03 01:28:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.11.ebuild,v 1.7 2006/09/24 17:32:12 flameeyes Exp $
+
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
 
 inherit libtool autotools eutils
 
