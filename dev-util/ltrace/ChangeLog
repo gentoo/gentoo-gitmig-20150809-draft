@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ltrace
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.24 2005/09/11 02:09:48 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.25 2006/09/24 09:06:03 dragonheart Exp $
+
+*ltrace-0.4 (24 Sep 2006)
+
+  24 Sep 2006; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  +ltrace-0.4.ebuild:
+  version bump as per bug #125538 thanks Nuno Lopes
 
   10 Sep 2005; Aron Griffis <agriffis@gentoo.org> ltrace-0.3.36.ebuild:
   Mark 0.3.36 stable on alpha
