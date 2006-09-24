@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.13 2006/09/10 17:35:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.14 2006/09/24 10:59:26 mrness Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -108,6 +108,7 @@ te_IN - Telugu locale for India
 tg - Tajik locale
 th - Thai locale
 ti_ER - Tigrinya locale for Eritrea
+tl - Tagalog locale
 tn - Tswana locale
 tr - Turkish locale
 ts - Tsonga locale
