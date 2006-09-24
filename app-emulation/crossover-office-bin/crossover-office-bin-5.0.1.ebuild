@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-5.0.1.ebuild,v 1.3 2006/06/05 16:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-5.0.1.ebuild,v 1.4 2006/09/24 10:11:33 vapier Exp $
 
 inherit eutils
 
@@ -10,15 +10,18 @@ SRC_URI="install-crossover-standard-${PV}.sh"
 
 LICENSE="CROSSOVER"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="nas"
 RESTRICT="fetch nostrip"
 
 RDEPEND="sys-libs/glibc
-	|| (
-		( x11-libs/libXrandr x11-libs/libXi x11-libs/libXmu x11-libs/libXmu x11-libs/libXxf86dga x11-libs/libXxf86vm )
-		virtual/x11
-	)
+	x11-libs/libXrandr
+	x11-libs/libXi
+	x11-libs/libXmu
+	x11-libs/libXmu
+	x11-libs/libXxf86dga
+	x11-libs/libXxf86vm
+	dev-util/desktop-file-utils
 	nas? ( media-libs/nas )
 	amd64? ( app-emulation/emul-linux-x86-xlibs )"
 
