@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ksvg-3.5.3.ebuild,v 1.1 2006/06/01 20:05:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ksvg-3.5.3.ebuild,v 1.2 2006/09/24 20:30:50 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -16,3 +16,5 @@ DEPEND=">=media-libs/freetype-2
 	media-libs/libart_lgpl
 	media-libs/lcms
 	dev-libs/fribidi"
+RDEPEND="${DEPEND}"
+

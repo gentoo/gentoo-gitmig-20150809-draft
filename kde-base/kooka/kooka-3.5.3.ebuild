@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.3.ebuild,v 1.2 2006/06/22 12:55:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kooka/kooka-3.5.3.ebuild,v 1.3 2006/09/24 20:26:14 flameeyes Exp $
 
 KMNAME=kdegraphics
 MAXKDEVER=$PV
@@ -12,7 +12,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkscan)
 	media-libs/tiff"
-
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="libkscan libkscan"
 KMEXTRACTONLY="libkscan"
