@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.61 2006/09/24 07:20:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.62 2006/09/24 12:23:22 vapier Exp $
 #
 # Author: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -275,9 +275,8 @@ _tc_gen_usr_ldscript() {
 	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
 
 	for lib in "$@" ; do
-		if [[ ${USERLAND} == "Darwin" ]];
-		then
-			ewarn "Not creating fake dynamic library for $lib on Darwin,"
+		if [[ ${USERLAND} == "Darwin" ]] ; then
+			ewarn "Not creating fake dynamic library for $lib on Darwin;"
 			ewarn "making a symlink instead."
 			dosym "/${libdir}/${lib}" "/usr/${libdir}/${lib}"
 		else
