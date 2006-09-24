@@ -1,6 +1,6 @@
 # ChangeLog for app-arch/par2cmdline
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.14 2006/09/24 19:30:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.15 2006/09/24 19:33:50 swegener Exp $
 
 *par2cmdline-0.4-r2 (24 Sep 2006)
 
@@ -8,7 +8,8 @@
   +files/par2cmdline-0.4-letype.patch, +files/par2cmdline-0.4-offset.patch,
   files/par2cmdline-0.4-wildcard-fix.patch, +par2cmdline-0.4-r2.ebuild:
   Revision bump, include an update wildcard fix, a fix from debian and a fix
-  from fedora, bugs #129093, #144410 and #137092.
+  from fedora, bugs #129093, #144410 and #137092. Thanks to Michael Evans,
+  Dominik and Simon Siemonsma.
 
   22 Aug 2005; Sven Wegener <swegener@gentoo.org> par2cmdline-0.4-r1.ebuild:
   Replace hardlinks with symlinks.
