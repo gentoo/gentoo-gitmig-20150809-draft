@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.10.ebuild,v 1.2 2006/09/24 20:59:17 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-0.10-r1.ebuild,v 1.1 2006/09/24 20:59:17 marienz Exp $
 
 inherit distutils bash-completion elisp-common eutils
 
@@ -31,6 +31,10 @@ src_unpack() {
 
 	# Install the manpage in /usr/share/man instead of /usr/man
 	epatch "${FILESDIR}/${P}-fix-manpage-location.patch"
+
+	# Mostly work with python 2.5 (some tar export related things are
+	# still broken, but will be fixed in bzr 0.11).
+	epatch "${FILESDIR}/${P}-python-2.5-compat.patch"
 }
 
 src_compile() {

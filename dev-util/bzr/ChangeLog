@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/bzr
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.19 2006/09/04 15:47:01 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.20 2006/09/24 20:59:17 marienz Exp $
+
+*bzr-0.10-r1 (24 Sep 2006)
+
+  24 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/bzr-0.10-python-2.5-compat.patch, -bzr-0.6.2.ebuild,
+  -bzr-0.7.ebuild, -bzr-0.8.ebuild, -bzr-0.8.2.ebuild, -bzr-0.8.2-r1.ebuild,
+  bzr-0.9.ebuild, bzr-0.10.ebuild, +bzr-0.10-r1.ebuild:
+  Clean up old versions. Fix dependency bug spotted by Flameeyes. Bump to
+  0.10-r1 with a patch to mostly work with python 2.5.
 
 *bzr-0.10 (04 Sep 2006)
 
