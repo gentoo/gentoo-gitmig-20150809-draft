@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.9 2006/08/10 20:14:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.10 2006/09/24 19:50:01 swegener Exp $
+
+*nzbget-0.2.3-r1 (24 Sep 2006)
+
+  24 Sep 2006; Sven Wegener <swegener@gentoo.org>
+  +files/0.2.3-double-free.patch, +nzbget-0.2.3-r1.ebuild:
+  Revision bump to pull in a patch from upstream that fixes a double free, bug
+  #142740.
 
   10 Aug 2006; Sven Wegener <swegener@gentoo.org> nzbget-0.2.2.ebuild,
   nzbget-0.2.3.ebuild:
