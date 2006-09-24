@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.7 2006/09/05 19:38:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.4.ebuild,v 1.8 2006/09/24 04:52:58 weeve Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ RDEPEND="sys-libs/ncurses
 	|| ( x11-libs/libX11 virtual/x11 )"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
 SRC_URI="ftp://sources.redhat.com/pub/${PN}/releases/${P}.tar.bz2"
 
 INSIGHTDIR="/opt/insight"
