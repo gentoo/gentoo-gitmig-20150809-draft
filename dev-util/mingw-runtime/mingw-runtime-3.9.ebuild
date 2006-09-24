@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.9.ebuild,v 1.2 2006/09/23 11:18:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.9.ebuild,v 1.3 2006/09/24 14:11:15 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -10,7 +10,7 @@ if [[ ${CTARGET} == ${CHOST} ]] ; then
 	fi
 fi
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Free Win32 runtime and import library definitions"
 HOMEPAGE="http://www.mingw.org/"
