@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.2 2006/08/21 03:00:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.14.2-r1.ebuild,v 1.3 2006/09/24 21:23:50 seemant Exp $
 
+WANT_AUTOMAKE=1.8
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Applets for the GNOME Desktop and Panel"
@@ -67,6 +68,18 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/cpufreq/src
+	epatch ${FILESDIR}/${PN}-2.14.0-prefs_startup-r1.patch
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2.14.2-cpufreq-selector-lazy-binding.patch
+
+	eautomake
+}
+
 src_install() {
 	gnome2_src_install
 
@@ -82,16 +95,4 @@ src_install() {
 		done
 
 	done
-}
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}/cpufreq/src
-	epatch ${FILESDIR}/${PN}-2.14.0-prefs_startup-r1.patch
-
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-2.14.2-cpufreq-selector-lazy-binding.patch
-
-	eautomake
 }
