@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.74 2006/09/17 07:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.75 2006/09/24 21:14:21 vapier Exp $
 
 cd /
 
@@ -185,6 +185,7 @@ parse_target() {
 			Special Targets:
 			   - avr      http://www.nongnu.org/avr-libc/
 			   - bfin     http://blackfin.uclinux.org/
+			   - mingw32  http://www.mingw.org/
 			   - msp430   http://mspgcc.sourceforge.net/
 			   - nios2    http://www.altera.com/products/ip/processors/nios2/ni2-index.html
 			   - ee / iop / dvp (ps2) [Playstation 2 targets]
