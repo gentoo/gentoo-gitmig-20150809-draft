@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/lineak-kdeplugins-0.8.4.ebuild,v 1.3 2006/09/09 00:59:53 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/lineak-kdeplugins-0.8.4.ebuild,v 1.4 2006/09/24 09:23:32 hansmi Exp $
 
 inherit kde multilib
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/lineak/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="=x11-misc/lineakd-${PV}*"
 DEPEND="${RDEPEND}"
