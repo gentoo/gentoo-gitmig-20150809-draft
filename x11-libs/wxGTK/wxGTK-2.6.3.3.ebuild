@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.1 2006/09/24 12:11:02 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.3.3.ebuild,v 1.2 2006/09/24 12:19:30 leio Exp $
 
 inherit debug eutils multilib toolchain-funcs gnuconfig versionator flag-o-matic
 
@@ -29,7 +29,7 @@ RDEPEND="X? ( opengl? ( virtual/opengl )
 		media-libs/tiff
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
-		gnome? ( >=gnome-base/libgnomeui-2.8 ) )
+		gnome? ( >=gnome-base/libgnomeprintui-2.8 ) )
 	odbc? ( dev-db/unixODBC )
 	x86? ( sdl? ( >=media-libs/libsdl-1.2 ) )
 	amd64? ( sdl? ( >=media-libs/libsdl-1.2 ) )
