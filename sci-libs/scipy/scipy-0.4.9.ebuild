@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.9.ebuild,v 1.2 2006/09/24 01:07:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.9.ebuild,v 1.3 2006/09/24 01:10:06 dberkholz Exp $
 
-inherit distutils flag-o-matic fortran
+inherit distutils fortran
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DESCRIPTION="Open source scientific tools for Python"
@@ -115,6 +115,11 @@ src_compile() {
 			die "${msg}"
 			;;
 	esac
+
+	# http://projects.scipy.org/scipy/numpy/ticket/182
+	# Can't set LDFLAGS
+	unset LDFLAGS
+
 	distutils_src_compile \
 		config_fc \
 		--fcompiler=${SCIPY_FC} \
