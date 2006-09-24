@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.12.ebuild,v 1.1 2006/08/31 09:15:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.12.ebuild,v 1.2 2006/09/24 17:37:32 flameeyes Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit eutils autotools libtool
 
