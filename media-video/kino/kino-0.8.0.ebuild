@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.8.0.ebuild,v 1.2 2006/05/07 07:29:11 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.8.0.ebuild,v 1.3 2006/09/24 12:27:41 calchan Exp $
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,7 @@ DEPEND=">=x11-libs/gtk+-2.6.0
 	media-libs/libsamplerate
 	media-video/mjpegtools
 	media-sound/rawrec
+	=dev-libs/lzo-1*
 	ffmpeg? ( media-video/ffmpeg )
 	quicktime? ( || ( >=media-libs/libquicktime-0.9.5 media-video/cinelerra-cvs ) )
 	dvdr? ( media-video/dvdauthor )"
