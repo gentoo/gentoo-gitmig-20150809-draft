@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.1 2006/09/23 16:20:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit2/e16menuedit2-0.0.3.ebuild,v 1.2 2006/09/24 21:15:29 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=x11-wm/enlightenment-0.16
-	>=x11-libs/gtk+-2*"
+	=x11-libs/gtk+-2*"
 
 src_unpack() {
 	gnome2_src_unpack
