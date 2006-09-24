@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.77 2006/09/24 17:23:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.78 2006/09/24 17:47:20 grobian Exp $
+
+  24 Sep 2006; Fabian Groffen <grobian@gentoo.org> faad2-2.0-r3.ebuild,
+  faad2-2.0-r7.ebuild:
+  Dropped ppc-macos keyword, due to autotools requirements
 
   24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> faad2-2.0-r11.ebuild,
   faad2-2.0-r12.ebuild, faad2-2.0-r13.ebuild:
