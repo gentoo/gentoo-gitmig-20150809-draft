@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.42 2006/09/20 22:16:54 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.43 2006/09/24 08:59:46 hansmi Exp $
+
+  24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> openobex-1.3.ebuild:
+  Stable on ppc.
 
   20 Sep 2006; Christian Hartmann <ian@gentoo.org> Manifest:
   Fixing broken digest
