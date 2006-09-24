@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r1.ebuild,v 1.2 2006/05/06 00:44:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r1.ebuild,v 1.3 2006/09/24 17:10:37 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils autotools libtool
 
@@ -29,10 +32,10 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--enable-accuracy"
-	# --enable-speed         optimize for speed over accuracy
-	# --enable-accuracy      optimize for accuracy over speed
-	# --enable-experimental  enable code using the EXPERIMENTAL
-	#                        preprocessor define
+	# --enable-speed		 optimize for speed over accuracy
+	# --enable-accuracy		 optimize for accuracy over speed
+	# --enable-experimental	 enable code using the EXPERIMENTAL
+	#						 preprocessor define
 
 	# Fix for b0rked sound on sparc64 (maybe also sparc32?)
 	# default/approx is also possible, uses less cpu but sounds worse
