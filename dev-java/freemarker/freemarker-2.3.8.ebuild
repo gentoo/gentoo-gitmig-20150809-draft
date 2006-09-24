@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.8.ebuild,v 1.2 2006/09/10 15:20:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/freemarker/freemarker-2.3.8.ebuild,v 1.3 2006/09/24 01:57:11 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -23,28 +23,20 @@ RDEPEND=">=virtual/jre-1.4
 GETJARS_ARG="servletapi-2.3,jaxen-1.1"
 
 src_unpack() {
-
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-
 }
 
 src_compile() {
-
-	local antflags="jar -Djavacc.home=/usr/share/javacc/lib -lib $(java-pkg_getjars ${GETJARS_ARG})"
-	use doc && antflags="${antflags} javadoc"
-
-	eant clean ${antflags} || die "Compilation failed"
-
+	local antflags="-Djavacc.home=/usr/share/javacc/lib -lib $(java-pkg_getjars ${GETJARS_ARG})"
+	eant clean jar $(use_doc) ${antflags}
 }
 
 src_install() {
-
 	java-pkg_dojar lib/${PN}.jar
 	dodoc README.txt
 
 	use doc && java-pkg_dohtml -r build/api
-	use source && java-pkg_dosrc src
-
+	use source && java-pkg_dosrc src/*
 }
