@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.78 2006/09/24 17:47:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.79 2006/09/24 22:02:57 kloeri Exp $
+
+  24 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> faad2-2.0-r11.ebuild:
+  Stable on ia64.
 
   24 Sep 2006; Fabian Groffen <grobian@gentoo.org> faad2-2.0-r3.ebuild,
   faad2-2.0-r7.ebuild:
