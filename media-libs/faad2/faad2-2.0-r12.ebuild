@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r12.ebuild,v 1.3 2006/06/11 10:27:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r12.ebuild,v 1.4 2006/09/24 17:23:01 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils libtool flag-o-matic autotools
 
