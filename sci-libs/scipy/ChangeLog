@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.11 2006/09/24 07:29:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.12 2006/09/24 07:31:47 dberkholz Exp $
+
+  24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; scipy-0.4.8.ebuild,
+  scipy-0.4.8-r1.ebuild, scipy-0.4.9.ebuild:
+  (#144744) Block out >=numpy-1_beta and newer.
 
 *scipy-0.5.1 (24 Sep 2006)
 
