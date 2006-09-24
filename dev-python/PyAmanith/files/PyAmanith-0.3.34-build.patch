@@ -38,7 +38,7 @@
 -                        library_dirs = lib,
 -                        libraries = libs,
 -                        extra_compile_args = cc_args)
-+                        swig_opts = swig_args, extra_compile_args = swig_args)
++                        swig_opts = swig_args, extra_compile_args = swig_args, libraries = libs)
                          
  setup(name = 'PyAmanith',
        version = '0.3.34',
