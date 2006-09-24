@@ -1,0 +1,10 @@
+# ChangeLog for app-text/antixls
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/antixls/ChangeLog,v 1.1 2006/09/24 09:42:32 pclouds Exp $
+
+*antixls-0.2b (24 Sep 2006)
+
+  24 Sep 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org> +metadata.xml,
+  +antixls-0.2b.ebuild:
+  Initial ebuild. A great companion to antiword :)
+
