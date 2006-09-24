@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.151 2006/09/20 14:59:41 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.152 2006/09/24 20:04:15 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -126,7 +126,7 @@ fi
 
 # eselect-vi support
 if version_is_at_least 7.0.109 ; then
-	DEPEND="${DEPEND} app-admin/eselect-vi"
+	DEPEND="${DEPEND} >=app-admin/eselect-vi-1.1"
 fi
 
 HOMEPAGE="http://www.vim.org/"
@@ -601,6 +601,14 @@ vim_src_install() {
 			dobashcompletion ${FILESDIR}/${MY_PN}-completion ${MY_PN}
 		fi
 	fi
+
+	if version_is_at_least 7.0.109 ; then
+		# We shouldn't be installing the ex or view man page symlinks, as they
+		# are managed by eselect-vi
+		rm -f "${D}"/usr/share/man/man1/{ex,view}.1.gz
+		# Same for these /usr/bin symlinks
+		rm -f "${D}"/usr/bin/{ex,view}
+	fi
 }
 
 # Make convenience symlinks, hopefully without stepping on toes.  Some
@@ -612,7 +620,7 @@ update_vim_symlinks() {
 		syms="vi vimdiff rvim ex view rview"
 	else
 		# Use eselect vi instead.
-		syms="vimdiff rvim ex view rview"
+		syms="vimdiff rvim rview"
 		einfo "Calling eselect vi update..."
 		eselect vi update
 	fi
