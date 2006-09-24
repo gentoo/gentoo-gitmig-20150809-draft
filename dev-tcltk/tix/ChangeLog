@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/tix
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.15 2005/03/09 17:58:43 luckyduck Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.16 2006/09/24 06:27:35 matsuu Exp $
+
+*tix-8.4.0 (24 Sep 2006)
+
+  24 Sep 2006; MATSUU Takuto <matsuu@gentoo.org> -tix-8.2.0.ebuild,
+  -tix-8.2.0-r2.ebuild, +tix-8.4.0.ebuild:
+  Version bumped. #107911.
+  Removed old versions.
 
   09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> tix-8.2.0-r2.ebuild:
   added ~amd64 KEYWORD, fixes #82914
