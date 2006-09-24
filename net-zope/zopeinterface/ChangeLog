@@ -1,6 +1,14 @@
 # ChangeLog for net-zope/zopeinterface
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.21 2006/05/29 17:48:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.22 2006/09/24 19:54:26 marienz Exp $
+
+*zopeinterface-3.0.1-r1 (24 Sep 2006)
+
+  24 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/zopeinterface-3.0.1-with-rename.patch, metadata.xml,
+  +zopeinterface-3.0.1-r1.ebuild:
+  Silence deprecation warnings with python 2.5, add python herd to
+  metadata.xml (bug #148421).
 
   29 May 2006; Simon Stelling <blubb@gentoo.org> zopeinterface-3.0.1.ebuild:
   stable on amd64
