@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.4 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.5 2006/09/24 17:04:11 genstef Exp $
 
 # fox eclass
 #
@@ -66,7 +66,15 @@ if [ "${PN}" != reswrap ] ; then
 	RESWRAP_DEP="dev-util/reswrap"
 fi
 
-DEPEND="${DOXYGEN_DEP}
+# These versions are not compatible with new fox layout
+# and will cause collissions - we need to block them
+INCOMPAT_DEP="!<x11-libs/fox-1.0.53
+	!=x11-libs/fox-1.2.4
+	!~x11-libs/fox-1.2.6
+	!=x11-libs/fox-1.4.11"
+
+DEPEND="${INCOMPAT_DEP}
+	${DOXYGEN_DEP}
 	${RESWRAP_DEP}
 	=sys-devel/automake-1.4*
 	>=sys-apps/sed-4"
