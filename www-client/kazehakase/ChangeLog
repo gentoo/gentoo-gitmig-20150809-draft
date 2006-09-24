@@ -1,6 +1,9 @@
 # ChangeLog for www-client/kazehakase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.31 2006/09/24 09:35:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/ChangeLog,v 1.32 2006/09/24 23:59:08 weeve Exp $
+
+  24 Sep 2006; Jason Wever <weeve@gentoo.org> kazehakase-0.3.9.ebuild:
+  Added ~sparc keyword wrt bug #146902.
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org>
   kazehakase-0.3.9.ebuild:
