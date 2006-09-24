@@ -67,11 +67,12 @@ Index: sys/boot/i386/boot2/Makefile
 ===================================================================
 --- sys/boot/i386/boot2/Makefile.orig
 +++ sys/boot/i386/boot2/Makefile
-@@ -24,7 +24,6 @@ CFLAGS=	-Os \
+@@ -24,7 +24,7 @@ CFLAGS=	-Os \
  	-fno-guess-branch-probability \
  	-fomit-frame-pointer \
  	-fno-unit-at-a-time \
 -	-mno-align-long-strings \
++	-march=i386 \
  	-mrtd \
  	-mno-mmx -mno-3dnow -mno-sse -mno-sse2 \
  	-D${BOOT2_UFS} \
