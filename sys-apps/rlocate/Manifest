@@ -13,10 +13,10 @@ AUX rlocate-0.5.2-no-devfs.patch 795 RMD160 58e9285c6e11e33ebe04a2f0c0c3552306c4
 MD5 e8dd8ee22c3a27a82f8456d73b8a9ae2 files/rlocate-0.5.2-no-devfs.patch 795
 RMD160 58e9285c6e11e33ebe04a2f0c0c3552306c46e8c files/rlocate-0.5.2-no-devfs.patch 795
 SHA256 e6227def39789adc29f1bce456fb9421314f52e540e64031e252bb949628b3f8 files/rlocate-0.5.2-no-devfs.patch 795
-AUX rlocate-0.5.2-utsversion.patch 273 RMD160 5d6ea65cbce752c776882f873dca65f10d4d5d7e SHA1 351847bf708c4c77a2e7ef4a8e4763b29eb62217 SHA256 96b1a54252158744eef9f7d9652d6df95932a68b079e925abbd4ef0448ad6e73
-MD5 1d809e086572f961ffe863740fe3fcb6 files/rlocate-0.5.2-utsversion.patch 273
-RMD160 5d6ea65cbce752c776882f873dca65f10d4d5d7e files/rlocate-0.5.2-utsversion.patch 273
-SHA256 96b1a54252158744eef9f7d9652d6df95932a68b079e925abbd4ef0448ad6e73 files/rlocate-0.5.2-utsversion.patch 273
+AUX rlocate-0.5.2-utsversion.patch 273 RMD160 40483aad73583dae411efa6c8077f65f32503bb1 SHA1 0604d605ad8c52ff15ac6362456d4b9786e17c92 SHA256 70242d545d400edee173889374afba41064f374f347c1d7776b58c50c7365bcc
+MD5 c70b55e3daec2280bdd6bbbe1afe3d1a files/rlocate-0.5.2-utsversion.patch 273
+RMD160 40483aad73583dae411efa6c8077f65f32503bb1 files/rlocate-0.5.2-utsversion.patch 273
+SHA256 70242d545d400edee173889374afba41064f374f347c1d7776b58c50c7365bcc files/rlocate-0.5.2-utsversion.patch 273
 AUX rlocated.rc 637 RMD160 a25cb6288920b48f9ed44e248d0fec1355f92f1b SHA1 99ca412694c4d2193d4fe4ffd523fa1187fad581 SHA256 a8e0055c83c60b4997949ea171c0dd4837673ed4c1b24d3d031c951b24b104a1
 MD5 0ae00f05e8f65deeb6c646f082ff87b2 files/rlocated.rc 637
 RMD160 a25cb6288920b48f9ed44e248d0fec1355f92f1b files/rlocated.rc 637
@@ -48,7 +48,7 @@ SHA256 f68185f57e866348e9f9b4aa9654cc6f6a964cbdeefa40bee56a2ecfdb4fae3c files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFFRR/amhnQswr0vIRAu3eAJ9Ge5u75QWzWULnMiKtkHJ94C47sACfT3Ts
-DDkVSRNfGWdpV7KLOjONw9M=
-=L53z
+iD4DBQFFFgA6amhnQswr0vIRAq0UAJd/jg/k+P96XXR46jPAmXih1/iAAJ91uf++
+5mOABSzMED++INE4BjHzoQ==
+=UhJX
 -----END PGP SIGNATURE-----
