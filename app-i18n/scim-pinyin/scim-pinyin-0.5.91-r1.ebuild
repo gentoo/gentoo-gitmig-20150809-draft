@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91-r1.ebuild,v 1.2 2006/07/04 18:49:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/scim-pinyin-0.5.91-r1.ebuild,v 1.3 2006/09/24 18:05:04 flameeyes Exp $
+
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 
 inherit kde-functions eutils autotools
 
