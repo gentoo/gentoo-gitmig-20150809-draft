@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.5 2006/08/28 16:45:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3-r1.ebuild,v 1.6 2006/09/24 18:15:25 dberkholz Exp $
 
-inherit fortran distutils eutils autotools kde-functions toolchain-funcs
+inherit fortran distutils eutils autotools toolchain-funcs
 
 DESCRIPTION="MPICH2 - A portable MPI implementation"
 HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich2"
@@ -57,7 +57,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	need-autoconf 2.5
 	ebegin "Reconfiguring"
 	    find . -name configure -print | xargs rm
 	    ./maint/updatefiles
@@ -103,9 +102,14 @@ src_compile() {
 	    myconf="${myconf} --with-thread-package=none"
 	fi
 
-	./configure --prefix=/usr --exec-prefix=/usr \
-		--enable-sharedlibs=gcc --enable-nmpi-as-mpi \
-		--enable-error-checking=runtime --enable-timing=runtime \
+	WANT_AUTOCONF="2.5" \
+		./configure \
+		--prefix=/usr \
+		--exec-prefix=/usr \
+		--enable-sharedlibs=gcc \
+		--enable-nmpi-as-mpi \
+		--enable-error-checking=runtime \
+		--enable-timing=runtime \
 		${myconf} \
 		$(use_enable cxx) \
 		$(use_enable mpe) \

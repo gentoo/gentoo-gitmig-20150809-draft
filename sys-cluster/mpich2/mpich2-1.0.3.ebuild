@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.7 2006/08/28 16:45:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.3.ebuild,v 1.8 2006/09/24 18:15:25 dberkholz Exp $
 
-inherit eutils autotools kde-functions
+inherit eutils autotools
 
 DESCRIPTION="MPICH2 - A portable MPI implementation"
 HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich2"
@@ -35,7 +35,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	need-autoconf 2.5
 	ebegin "Reconfiguring"
 	    ./maint/updatefiles
 	eend "Reconfigure failed"
@@ -70,8 +69,13 @@ src_compile() {
 	    myconf="${myconf} --with-thread-package=none"
 	fi
 
-	./configure --prefix=/usr --enable-sharedlibs=gcc \
-		${myconf} --enable-rlog=no --enable-slog2=no \
+	WANT_AUTOCONF="2.5" \
+		./configure \
+		--prefix=/usr \
+		--enable-sharedlibs=gcc \
+		${myconf} \
+		--enable-rlog=no \
+		--enable-slog2=no \
 		$(use_enable cxx) \
 		$(use_enable mpe) \
 		$(use_enable threads) \
