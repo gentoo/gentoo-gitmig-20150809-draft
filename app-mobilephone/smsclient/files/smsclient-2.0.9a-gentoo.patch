@@ -103,8 +103,8 @@ diff -Nur smsclient-2.0.9a.orig/src/client/Makefile smsclient-2.0.9a/src/client/
 -	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_client $(BINDIR)
 -	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_address $(BINDIR)
 +	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -d $(DESTDIR)/$(BINDIR)
-+	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_client $(DESTDIR)/$(BINDIR)
-+	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 -s ../../bin/sms_address $(DESTDIR)/$(BINDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 ../../bin/sms_client $(DESTDIR)/$(BINDIR)
++	$(INSTALL) -o $(SMSUSER) -g $(SMSGROUP) -m 755 ../../bin/sms_address $(DESTDIR)/$(BINDIR)
  
  uninstall:
  	$(RM) $(BINDIR)/sms_client
