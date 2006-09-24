@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/inputlircd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.9 2006/09/12 09:17:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/inputlircd/ChangeLog,v 1.10 2006/09/24 09:20:31 hansmi Exp $
+
+  24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org>
+  inputlircd-0.0.1_pre11.ebuild:
+  Stable on ppc.
 
   12 Sep 2006; <blubb@gentoo.org> inputlircd-0.0.1_pre11.ebuild:
   stable on amd64
