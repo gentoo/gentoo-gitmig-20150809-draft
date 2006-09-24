@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r7.ebuild,v 1.1 2006/06/18 13:23:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r7.ebuild,v 1.2 2006/09/24 17:19:16 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit libtool eutils flag-o-matic autotools
 
