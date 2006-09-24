@@ -41,3 +41,6 @@ oci8
 # 2006/03/07 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures lacking direct rendering      
 dri
+
+# Only works on x86/amd64/ia64
+video_cards_vesa
