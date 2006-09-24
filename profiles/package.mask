@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5943 2006/09/24 19:25:01 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5944 2006/09/24 19:49:10 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Ullmann <jokey@gentoo.org> (24.09.2006)
+# masking kvirc cvs ebuild
+=net-irc/kvirc-9999
 
 # Christian Heim <phreak@gentoo.org> (24 Sep 2006)
 # masked app-crypt/hashsum for treecleaners, bug(s) 148530
