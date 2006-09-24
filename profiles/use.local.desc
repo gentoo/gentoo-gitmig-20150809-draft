@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2178 2006/09/24 00:51:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2179 2006/09/24 00:54:39 chtekk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1102,7 +1102,7 @@ net-ftp/proftpd:opensslcrypt - Enable support for openssly crypto
 net-ftp/pure-ftpd:charconv - Enables charset conversion
 net-ftp/pure-ftpd:noiplog - Disables logging of IP addresses
 net-ftp/pure-ftpd:paranoidmsg - Display paranoid messages instead of normal ones
-net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risc)
+net-ftp/pure-ftpd:vchroot - Enable support for virtual chroot (possible security risk)
 net-ftp/vsftpd:logrotate - Use logrotate for rotating logs
 net-im/bitlbee:aimextras - Enables extra AIM patches not supported by upstream
 net-im/bitlbee:flood - Enable flood protection support
@@ -1164,7 +1164,7 @@ net-im/kopete:winpopup - Builds WinPopUp protocol handler
 net-im/kopete:xscreensaver - Enables support for XScreenSaver extension
 net-im/naim:screen - Enable screen support
 net-im/psi:extras - Enables extra non official patches
-net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risc
+net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risk
 net-im/psi:xscreensaver - Enables detection of xscreensaver
 net-im/tmsnc:talkfilters - Enables Talkfilters support on tmsnc
 net-im/twinkle:ilbc - Enables use of ilbc (RFC3951) audio encoding
