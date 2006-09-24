@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.123 2006/09/04 11:39:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.124 2006/09/24 12:11:02 leio Exp $
+
+*wxGTK-2.6.3.3 (24 Sep 2006)
+
+  24 Sep 2006; Mart Raudsepp <leio@gentoo.org>
+  +files/wxGTK-2.6.3.3-dialog_focus.patch,
+  +files/wxGTK-2.6.3.3-slider_linesize.patch,
+  +files/wxGTK-2.6.3.3-wxrc_build_fix.patch, +wxGTK-2.6.3.3.ebuild:
+  Migrate away from wxlib.eclass. Fix depends. Allow parallel building. Grab
+  some relatively important patches from upstream. Ensure the wxrc tool is
+  built and installed. Restore ABI compatibility with latest stable version
+  (2.6.2-r1). Install HTML documentation with USE=doc properly again. Closes
+  bugs #147394 and #123786.
 
   04 Sep 2006; Mart Raudsepp <leio@gentoo.org>
   -files/wxGTK-2.6.1-windowcpp.diff, -wxGTK-2.6.1-r1.ebuild,
