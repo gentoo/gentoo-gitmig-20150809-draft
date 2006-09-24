@@ -1,0 +1,25 @@
+2006-01-15  Dan Dennedy <dan@dennedy.org>
+
+	* playdv.c: bugfix segfault on exit due to dv_display_exit()
+	  being called twice: once in main() and second in atexit
+	  handler created by dv_display. Thanks for hint provided
+	  by Jean-Francois Panisset.
+
+Index: playdv/playdv.c
+===================================================================
+RCS file: /cvsroot/libdv/libdv/playdv/playdv.c,v
+retrieving revision 1.14
+retrieving revision 1.15
+diff -u -p -r1.14 -r1.15
+--- playdv/playdv.c	23 Nov 2003 22:59:08 -0000	1.14
++++ playdv/playdv.c	15 Jan 2006 21:23:15 -0000	1.15
+@@ -511,9 +511,6 @@ restart:
+   if(!dv_player->arg_disable_video) {
+     dv_display_exit(dv_player->display);
+   } /* if */
+-  if(!dv_player->arg_disable_audio) {
+-    dv_oss_close(dv_player->oss);
+-  } /* if  */
+   dv_decoder_free(dv_player->decoder);
+   free(dv_player);
+   exit(0);
