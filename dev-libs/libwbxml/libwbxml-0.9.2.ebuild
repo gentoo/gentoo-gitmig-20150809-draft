@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2.ebuild,v 1.3 2006/09/21 19:38:13 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/libwbxml-0.9.2.ebuild,v 1.4 2006/09/24 09:43:25 blubb Exp $
 
 inherit eutils
 
@@ -38,10 +38,7 @@ src_unpack()
 	epatch ${FILESDIR}/${MY_P}.make_install.patch
 
 	# Add support for our own CFLAGS
-	sed -i -e "s:-O3\\\:${CFLAGS}:"   src/Makefile.am
-	sed -i -e "s:	 -g::"            src/Makefile.am
-	sed -i -e "s:-O3\\\:${CFLAGS}:" tools/Makefile.am
-	sed -i -e "s:	 -g::"          tools/Makefile.am
+	sed -i -e "s:	 -g::" -e "s:-O3\\\:${CFLAGS}:" {src,tools}/Makefile.am
 
 	chmod 755 bootstrap
 }
