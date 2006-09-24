@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/atlantik
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantik/ChangeLog,v 1.51 2006/09/17 22:53:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantik/ChangeLog,v 1.52 2006/09/24 20:53:57 flameeyes Exp $
+
+  24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> atlantik-3.5.2.ebuild,
+  atlantik-3.5.3.ebuild, atlantik-3.5.4.ebuild:
+  Fix DEPEND/RDEPEND.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -atlantik-3.4.3.ebuild:
   Drop KDE 3.4.
