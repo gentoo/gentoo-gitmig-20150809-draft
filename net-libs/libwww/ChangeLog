@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.58 2006/09/24 00:40:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.59 2006/09/24 10:16:51 blubb Exp $
+
+  24 Sep 2006; <blubb@gentoo.org> libwww-5.4.0-r6.ebuild:
+  stable on amd64
 
   24 Sep 2006; Joseph Jezak <josejx@gentoo.org> libwww-5.4.0-r6.ebuild:
   Marked ppc stable for bug #56328.
