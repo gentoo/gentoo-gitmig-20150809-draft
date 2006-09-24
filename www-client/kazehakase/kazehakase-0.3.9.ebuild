@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.3.9.ebuild,v 1.3 2006/09/10 09:13:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.3.9.ebuild,v 1.4 2006/09/24 09:35:03 hansmi Exp $
 
 IUSE="firefox hyperestraier migemo mozilla ruby ssl thumbnail"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/21181/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 LICENSE="GPL-2"
 
 DEPEND="|| ( firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
