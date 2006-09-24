@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r3.ebuild,v 1.4 2006/09/14 00:36:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.5-r3.ebuild,v 1.5 2006/09/24 18:01:38 nichoj Exp $
 
 inherit gnuconfig java-pkg-2 mono distutils multilib
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="doc debug examples mono nocxx nojava python script source"
 
 # TODO do we actually need jdk at runtime?
-RDEPEND=">=virtual/jdk-1.2
+RDEPEND=">=virtual/jdk-1.3
 	mono? ( dev-lang/mono )
 	python? ( dev-lang/python )"
 DEPEND="${RDEPEND}
