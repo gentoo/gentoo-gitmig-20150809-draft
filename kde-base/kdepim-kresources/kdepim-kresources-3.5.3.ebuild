@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.3.ebuild,v 1.1 2006/06/01 18:00:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.3.ebuild,v 1.2 2006/09/24 20:19:44 flameeyes Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -18,6 +18,8 @@ $(deprange $PV $MAXKDEVER kde-base/kaddressbook)
 $(deprange 3.5.2 $MAXKDEVER kde-base/kode)
 	dev-libs/libical
 	>=app-crypt/gpgme-1.0.2"
+RDEPEND="${DEPEND}"
+
 KMCOPYLIB="
 	libkcal libkcal
 	libkpimexchange libkpimexchange
