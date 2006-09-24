@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.31 2006/09/21 15:37:57 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.32 2006/09/24 08:55:02 hansmi Exp $
+
+  24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> nvi-1.81.5-r3.ebuild:
+  Stable on ppc.
 
   21 Sep 2006; Harald van Dĳk <truedfx@gentoo.org>
   files/nvi-1.81.5-build.patch:
