@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.8.ebuild,v 1.4 2006/09/21 18:49:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-0.9.8.ebuild,v 1.5 2006/09/24 01:03:17 dberkholz Exp $
 
-inherit distutils flag-o-matic
+inherit distutils
 
 DESCRIPTION="Multi-dimensional array object and processing for Python."
 SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz"
@@ -25,10 +25,6 @@ src_unpack() {
 		-e "s:f77blas:blas:g" \
 		numpy/distutils/system_info.py
 
-	# -Wl,-O1 breaks the compilation
-	filter-ldflags -O1
-	filter-ldflags -Wl,-O1
-
 	if use lapack; then
 		echo "[atlas]"  > site.cfg
 		echo "include_dirs = /usr/include/atlas" >> site.cfg
@@ -42,6 +38,14 @@ src_unpack() {
 	else
 		export ATLAS=None
 	fi
+}
+
+src_compile() {
+	# http://projects.scipy.org/scipy/numpy/ticket/182
+	# Can't set LDFLAGS
+	unset LDFLAGS
+
+	distutils_src_compile
 }
 
 # The test only works after install
