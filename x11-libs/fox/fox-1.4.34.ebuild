@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.34.ebuild,v 1.1 2006/08/23 00:16:45 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.4.34.ebuild,v 1.2 2006/09/24 08:27:27 dberkholz Exp $
 
 inherit fox
 
@@ -9,11 +9,8 @@ SLOT="1.4"
 KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~ppc ~ppc64 ~sparc"
 IUSE="bzip2 cups jpeg opengl png threads tiff truetype zlib"
 
-RDEPEND="|| ( ( x11-libs/libXrandr
-			x11-libs/libXcursor
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXrandr
+	x11-libs/libXcursor
 	x11-libs/fox-wrapper
 	bzip2? ( >=app-arch/bzip2-1.0.2 )
 	cups? ( net-print/cups )
@@ -25,11 +22,8 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 		virtual/xft )
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto
-			x11-libs/libXt
-		)
-		virtual/x11
-	)"
+	x11-proto/xextproto
+	x11-libs/libXt"
 
 FOXCONF="$(use_enable bzip2 bz2lib) \
 	$(use_enable cups) \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.3 2006/08/23 00:46:43 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.0.53.ebuild,v 1.4 2006/09/24 08:27:27 dberkholz Exp $
 
 inherit toolchain-funcs flag-o-matic fox
 
@@ -9,11 +9,8 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~alpha ~hppa ~ia64 ~ppc ~ppc64 ~sparc"
 IUSE="cups jpeg opengl png tiff zlib"
 
-RDEPEND="|| ( ( x11-libs/libXrandr
-			x11-libs/libXcursor
-		)
-		virtual/x11
-	)
+RDEPEND="x11-libs/libXrandr
+	x11-libs/libXcursor
 	cups? ( net-print/cups )
 	jpeg? ( >=media-libs/jpeg-6b )
 	opengl? ( virtual/opengl virtual/glu )
@@ -21,11 +18,8 @@ RDEPEND="|| ( ( x11-libs/libXrandr
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )"
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xextproto
-			x11-libs/libXt
-		)
-		virtual/x11
-	)"
+	x11-proto/xextproto
+	x11-libs/libXt"
 
 FOXCONF="$(use_enable cups) \
 	$(use_enable jpeg) \

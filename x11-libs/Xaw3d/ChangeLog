@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/Xaw3d
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.23 2006/05/03 20:18:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/ChangeLog,v 1.24 2006/09/24 08:23:18 dberkholz Exp $
+
+  24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; Xaw3d-1.5-r1.ebuild:
+  Remove virtual/x11 option from modular X deps.
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> Xaw3d-1.5-r1.ebuild:
   Add ~x86-fbsd keyword.
