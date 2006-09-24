@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r2.ebuild,v 1.4 2006/09/23 16:09:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r2.ebuild,v 1.5 2006/09/24 07:41:10 mrness Exp $
 
 inherit eutils linux-info
 
@@ -29,14 +29,6 @@ pkg_setup() {
 		eerror "The kernel-space driver exists only in kernels >= 2.6.10."
 		eerror "Please emerge net-dialup/speedtouch instead or upgrade the kernel."
 		die "Unsupported kernel version"
-	fi
-
-	if ! has_version '>=sys-apps/baselayout-1.12.0' ; then
-		ewarn "The best way of using this driver is through the PPP net module of the"
-		ewarn "   >=sys-apps/baselayout-1.12.0"
-		ewarn "which is also the only documented mode of using ${PN} driver."
-		ewarn "Please install baselayout-1.12.0 or else you will be on your own!"
-		ebeep
 	fi
 }
 
