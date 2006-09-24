@@ -1,9 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tipptrainer/tipptrainer-0.6.0.ebuild,v 1.3 2005/03/03 17:46:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tipptrainer/tipptrainer-0.6.0.ebuild,v 1.4 2006/09/24 13:43:32 leio Exp $
 
 DESCRIPTION="A touch typing trainer (German/English)"
-HOMEPAGE="http://www.pingos.org/tipptrainer/index.php"
+HOMEPAGE="http://tipptrainer.pingos.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
