@@ -84,3 +84,31 @@
  
  OBJS =	jcc.$(O) parsers.$(O) filters.$(O) loaders.$(O) bind.$(O) conn.$(O) \
  	encode.$(O) ssplit.$(O) socks4.$(O) acl.$(O) gnu_regex.$(O) win32.$(O)
+--- ijb20/jcc.h
++++ ijb20/jcc.h
+@@ -39,6 +39,12 @@
+ extern char *from;
+ extern char *suppress_message; /* anw */
+ 
++struct list {
++	char *str;
++	struct list *last;
++	struct list *next;
++};
++
+ extern struct list       wafer_list[];
+ extern struct list        xtra_list[];
+ extern struct list       trust_info[];
+@@ -90,12 +96,6 @@
+ 	int   ssl;
+ };
+ 
+-struct list {
+-	char *str;
+-	struct list *last;
+-	struct list *next;
+-};
+-
+ int add_to_iob();
+ 
+ #define IOB_PEEK(CSP) ((CSP->iob->cur > CSP->iob->eod) ? (CSP->iob->eod - CSP->iob->cur) : 0)
