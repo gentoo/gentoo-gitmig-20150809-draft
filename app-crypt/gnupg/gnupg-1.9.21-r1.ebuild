@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21-r1.ebuild,v 1.1 2006/09/23 06:53:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21-r1.ebuild,v 1.2 2006/09/24 09:55:36 dragonheart Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -15,11 +15,8 @@ IUSE="X gpg2-experimental ldap nls openct pcsc-lite smartcard selinux"
 #IUSE+=caps
 
 COMMON_DEPEND="
-	dev-lang/perl
-	sys-libs/zlib
 	virtual/libc
 	>=dev-libs/pth-1.3.7
-	smartcard? ( >=dev-libs/opensc-0.8.0 )
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.15
 	>=dev-libs/libgpg-error-1.0
