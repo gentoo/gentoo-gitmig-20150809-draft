@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.9.ebuild,v 1.1 2006/06/14 01:09:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.4.9.ebuild,v 1.2 2006/09/24 01:07:04 dberkholz Exp $
 
 inherit distutils flag-o-matic fortran
 
@@ -34,17 +34,6 @@ FORTRAN="g77 gfortran"
 pkg_setup() {
 	fortran_pkg_setup
 
-	if built_with_use sci-libs/lapack-atlas ifc; then
-		echo
-		ewarn  "${PN} needs consistency among Fortran compilers."
-		eerror "lapack-atlas was compiled with IFC, whereas"
-		eerror "blas-atlas and scipy use the GNU compiler."
-		eerror "please re-emerge lapack-atlas with 'USE=\"-ifc\"'."
-		echo
-		die "Inconsistent Fortran compilers"
-	fi
-
-	echo
 	einfo "Checking active BLAS implementations for ATLAS."
 	blas-config -p
 	if ! blas-config -p | grep "F77 BLAS:" | grep -q -i atlas; then
