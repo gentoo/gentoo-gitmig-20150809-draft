@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.18 2006/08/24 01:21:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.19 2006/09/24 10:48:51 chtekk Exp $
+
+  24 Sep 2006; Luca Longinotti <chtekk@gentoo.org> geos-2.2.2.ebuild,
+  geos-2.2.2-r1.ebuild:
+  Remove need-autoconf usage, now done with WANT_AUTOCONF & autotools eclass,
+  fixes bug #148719.
 
   24 Aug 2006; Markus Dittrich <markusle@gentoo.org> geos-2.2.2-r1.ebuild:
   Added RUBY_OPTIONAL to prevent ruby from being pulled in by

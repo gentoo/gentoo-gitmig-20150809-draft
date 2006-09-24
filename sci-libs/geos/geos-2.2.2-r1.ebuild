@@ -1,11 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2-r1.ebuild,v 1.2 2006/08/24 01:21:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2-r1.ebuild,v 1.3 2006/09/24 10:48:51 chtekk Exp $
 
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
+WANT_AUTOCONF="2.5"
 
-inherit eutils distutils autotools kde-functions ruby toolchain-funcs
+inherit eutils distutils autotools ruby toolchain-funcs
 
 DESCRIPTION="Geometry Engine - Open Source"
 HOMEPAGE="http://geos.refractions.net"
@@ -27,7 +28,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	need-autoconf 2.5
 	elibtoolize
 	epatch ${FILESDIR}/${P}-swig.patch
 

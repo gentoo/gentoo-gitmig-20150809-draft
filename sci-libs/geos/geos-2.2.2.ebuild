@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2.ebuild,v 1.3 2006/07/04 00:40:09 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.2.ebuild,v 1.4 2006/09/24 10:48:51 chtekk Exp $
 
-inherit eutils distutils autotools kde-functions
+WANT_AUTOCONF="2.5"
+
+inherit eutils distutils autotools
 
 DESCRIPTION="Geometry Engine - Open Source"
 HOMEPAGE="http://geos.refractions.net"
@@ -22,7 +24,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	need-autoconf 2.5
 	elibtoolize
 	use python && epatch ${FILESDIR}/${P}-swig.patch
 }
