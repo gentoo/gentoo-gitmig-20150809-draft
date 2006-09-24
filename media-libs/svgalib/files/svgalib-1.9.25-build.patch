@@ -1,0 +1,18 @@
+--- Makefile.cfg
++++ Makefile.cfg
+@@ -313,14 +313,13 @@
+ WARN     = -Wall -Wstrict-prototypes
+ INCLUDES = -I$(srcdir)/include -I.
+ CFLAGS   = $(WARN) $(DLLFLAGS) $(INCLUDES) $(OPTIMIZE) $(DEFINES) 
+-LDFLAGS   = -s
+ 
+ # additional flags for shared lib.
+ DLLFLAGS = -fPIC -DPIC
+ 
+ # Utilites used.
+ AR	  = ar
+-INSTALL_PROGRAM	= install -sm755
++INSTALL_PROGRAM	= install -m755
+ INSTALL_SCRIPT	= install -m755
+ INSTALL_SHLIB	= install -m755
+ INSTALL_DATA	= install -m644
