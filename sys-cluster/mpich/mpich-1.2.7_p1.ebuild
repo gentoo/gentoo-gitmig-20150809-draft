@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.7 2006/09/25 04:05:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.8 2006/09/25 04:27:29 dberkholz Exp $
 
-inherit eutils
+inherit autotools eutils
 
 # Set the MPICH_CONFIGURE_OPTS environment variable to change the signal
 # mpich listens on or any other custom options (#38207).
@@ -47,9 +47,16 @@ src_unpack() {
 
 	# Fix broken romio
 	epatch ${FILESDIR}/${PV}-fix-romio-sandbox-breakage.patch
-	cd ${S}/romio
+	pushd ${S}/romio
 	rm configure
-	autoreconf --install --verbose
+	eautoreconf
+	popd
+
+	epatch ${FILESDIR}/${PV}-allow-fhs-afs.patch
+	pushd ${S}/mpid/server
+	rm configure
+	eautoreconf
+	popd
 }
 
 src_compile() {
