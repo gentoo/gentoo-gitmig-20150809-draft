@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.6 2006/09/25 02:40:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.7 2006/09/25 15:55:13 weeve Exp $
+
+  25 Sep 2006; Jason Wever <weeve@gentoo.org> sparc32/2006.0/2.4/use.mask,
+  sparc32/2006.1/2.4/use.mask, sparc64/2006.0/2.4/use.mask,
+  sparc64/2006.1/2.4/use.mask:
+  Mask aoss use flag in SPARC 2.4 profiles.
 
   25 Sep 2006; Jason Wever <weeve@gentoo.org> use.mask:
   Unmasked pcsc-lite again.

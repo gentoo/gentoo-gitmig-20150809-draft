@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/2.4/use.mask,v 1.2 2006/03/04 21:33:03 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.0/2.4/use.mask,v 1.3 2006/09/25 15:55:13 weeve Exp $
 
 # Java and java-related stuff
 freetts
@@ -14,3 +14,4 @@ udev
 # Mask alsa related stuffs
 alsa
 jack
+aoss
