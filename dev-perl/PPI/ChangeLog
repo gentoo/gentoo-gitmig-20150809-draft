@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PPI
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.11 2006/09/07 17:51:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.12 2006/09/25 21:18:28 mcummings Exp $
+
+*PPI-1.118 (25 Sep 2006)
+
+  25 Sep 2006; Michael Cummings <mcummings@gentoo.org> +PPI-1.118.ebuild:
+  Version bump
 
   07 Sep 2006; Michael Cummings <mcummings@gentoo.org> PPI-1.117.ebuild:
   Bug 146678, keywording ~sparc and ~amd64
