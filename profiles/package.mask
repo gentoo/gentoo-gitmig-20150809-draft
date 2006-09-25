@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5945 2006/09/25 10:56:09 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5946 2006/09/25 14:03:18 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (25 Sep 2006)
+# Masking this version of the drivers since it is BETA. This driver version
+# adds GLX_EXT_texture_from_pixmap, so it works with AIGLX.  You will need to
+# add AddARGBGLXVisuals to the driver options.  If this causes a lockup for
+# you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
+# to the unmasked drivers.
+~x11-drivers/nvidia-drivers-1.0.9625
 
 # Markus Ullmann <jokey@gentoo.org> (24.09.2006)
 # masking kvirc cvs ebuild
