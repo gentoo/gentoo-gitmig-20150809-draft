@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.1.0.ebuild,v 1.1 2006/09/25 11:35:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/libiec61883-1.1.0.ebuild,v 1.2 2006/09/25 18:30:54 calchan Exp $
 
 inherit autotools eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="examples"
 
-DEPEND=">=sys-libs/libraw1394-1.2.0"
+DEPEND=">=sys-libs/libraw1394-1.2.1"
 
 src_unpack() {
 	unpack ${A}
