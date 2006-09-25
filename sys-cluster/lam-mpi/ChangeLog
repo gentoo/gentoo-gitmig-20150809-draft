@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.45 2006/09/25 08:24:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.46 2006/09/25 08:25:59 dberkholz Exp $
+
+  25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  lam-mpi-7.1.1-r3.ebuild, lam-mpi-7.1.2.ebuild:
+  Look in /usr/$(get_libdir)/pbs/lib instead of /usr/lib/pbs.
 
   25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; lam-mpi-7.1.2.ebuild:
   (#119480) Add USE=xmpi to build support for the external XMPI GUI utility.

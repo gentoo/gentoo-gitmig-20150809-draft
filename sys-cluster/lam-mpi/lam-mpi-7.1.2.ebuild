@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.2 2006/09/25 08:24:22 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.3 2006/09/25 08:25:59 dberkholz Exp $
 
-inherit autotools eutils fortran flag-o-matic portability
+inherit autotools eutils fortran flag-o-matic multilib portability
 
 # LAM is a PITA with PBS. If it's detected, there is NO way to turn it off!
 # Likewise for the other SSI boot modules (globus/slurm/tm are affected)
@@ -58,7 +58,7 @@ src_compile() {
 		myconf="${myconf} --with-rsh=rsh"
 	fi
 
-	use pbs && append-ldflags -L/usr/lib/pbs
+	use pbs && append-ldflags -L/usr/$(get_libdir)/pbs/lib
 
 	if use fortran; then
 		fortran_pkg_setup
