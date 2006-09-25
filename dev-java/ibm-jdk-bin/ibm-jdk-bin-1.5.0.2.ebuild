@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.6 2006/09/18 16:46:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.7 2006/09/25 18:10:13 sanchan Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -84,6 +84,29 @@ DEPEND=""
 
 IUSE="X alsa javacomm nsplugin"
 
+QA_EXECSTACK_amd64="opt/${P}/jre/bin/libjclscar_23.so
+	opt/${P}/jre/bin/libj9vrb23.so
+	opt/${P}/jre/bin/libj9vm23.so
+	opt/${P}/jre/bin/libj9trc23.so
+	opt/${P}/jre/bin/libj9thr23.so
+	opt/${P}/jre/bin/libj9shr23.so
+	opt/${P}/jre/bin/libj9prt23.so
+	opt/${P}/jre/bin/libj9jvmti23.so
+	opt/${P}/jre/bin/libj9jpi23.so
+	opt/${P}/jre/bin/libj9jit23.so
+	opt/${P}/jre/bin/libj9jextract.so
+	opt/${P}/jre/bin/libj9hookable23.so
+	opt/${P}/jre/bin/libj9gc23.so
+	opt/${P}/jre/bin/libj9dyn23.so
+	opt/${P}/jre/bin/libj9dmp23.so
+	opt/${P}/jre/bin/libj9dbg23.so
+	opt/${P}/jre/bin/libj9bcv23.so
+	opt/${P}/jre/bin/libiverel23.so
+	opt/${P}/jre/bin/classic/libjvm.so
+	opt/${P}/jre/bin/j9vm/libjvm.so"
+
+QA_TEXTRELS_amd64="opt/${P}/jre/bin/libjclscar_23.so
+	opt/${P}/jre/bin/libj9jit23.so"
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
