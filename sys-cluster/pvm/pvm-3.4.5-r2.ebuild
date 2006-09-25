@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.7 2006/07/16 21:32:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.8 2006/09/25 03:32:06 dberkholz Exp $
 
-inherit eutils
+inherit eutils multilib
 
 MY_P="${P/-}"
 DESCRIPTION="PVM: Parallel Virtual Machine"
@@ -66,9 +66,17 @@ src_install() {
 	dodir /usr/share/pvm3
 	cp -r * ${D}/usr/share/pvm3
 	dodir /usr/bin
-	ln -s /usr/share/pvm3/lib/LINUX/pvm ${D}/usr/bin/pvm
-	ln -s /usr/share/pvm3/lib/LINUX/pvm3d ${D}/usr/bin/pvm3d
-	ln -s /usr/share/pvm3/lib/LINUX/pvmgs ${D}/usr/bin/pvmgs
+
+	# (#132711) Symlink to the right spot on multilib systems
+	local linuxdir
+	if [[ $(get_libdir) = lib64 ]]; then
+		linuxdir="LINUX64"
+	else
+		linuxdir="LINUX"
+	fi
+	ln -s /usr/share/pvm3/lib/${linuxdir}/pvm ${D}/usr/bin/pvm
+	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmd3 ${D}/usr/bin/pvmd3
+	ln -s /usr/share/pvm3/lib/${linuxdir}/pvmgs ${D}/usr/bin/pvmgs
 
 
 	#environment variables:
