@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.2 2005/07/09 19:00:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.3 2006/09/25 22:35:31 nerdboy Exp $
 
 inherit eutils linux-info
 
@@ -10,14 +10,20 @@ SRC_URI="http://stolk.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="mpeg"
 
 DEPEND=" >=x11-libs/fltk-1.1.0_rc6
 	mpeg? ( >=media-libs/libfame-0.9.1 )
 	sys-libs/zlib
 	virtual/libc
-	virtual/x11"
+	|| ( ( x11-libs/libXdmcp
+	    x11-libs/libXau
+	    x11-libs/libXrender
+	    x11-libs/libX11
+	    x11-libs/libXext
+	    x11-libs/libXft )
+	    virtual/x11 )"
 
 CONFIG_CHECK="USB_SN9C102"
 ERROR_USB_SN9C102="Please make sure Device Drivers -> USB Support -> SN9C10x \

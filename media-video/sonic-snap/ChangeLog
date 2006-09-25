@@ -1,6 +1,9 @@
 # ChangeLog for media-video/sonic-snap
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.1 2005/05/15 00:17:51 nerdboy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.2 2006/09/25 22:35:31 nerdboy Exp $
+
+  25 Sep 2006; Steve Arnold <nerdboy@gentoo.org> sonic-snap-1.5.ebuild:
+  stable bump for x86 and amd64, and modular X fix (bug #147801)
 
 *sonic-snap-1.5 (15 May 2005)
 
