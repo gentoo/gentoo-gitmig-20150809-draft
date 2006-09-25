@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.54 2006/09/25 14:12:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.55 2006/09/25 17:39:53 nixnut Exp $
+
+  25 Sep 2006; <nixnut@gentoo.org> bison-2.2.ebuild:
+  Stable on ppc wrt bug 149049
 
   25 Sep 2006; Markus Rothe <corsair@gentoo.org> bison-2.2.ebuild:
   Stable on ppc64; bug #149048
