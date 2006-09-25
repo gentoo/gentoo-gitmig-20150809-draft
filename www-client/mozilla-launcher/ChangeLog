@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.44 2006/09/03 16:19:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.45 2006/09/25 02:51:09 weeve Exp $
+
+  25 Sep 2006; Jason Wever <weeve@gentoo.org>
+  mozilla-launcher-1.52-r1.ebuild:
+  Added ~sparc keyword wrt bug #146108.
 
   03 Sep 2006; Jeroen Roovers <jer@gentoo.org>
   mozilla-launcher-1.52-r1.ebuild:
