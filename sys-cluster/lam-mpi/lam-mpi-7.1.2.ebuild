@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.1 2006/07/20 06:19:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.2 2006/09/25 08:24:22 dberkholz Exp $
 
 inherit autotools eutils fortran flag-o-matic portability
 
 # LAM is a PITA with PBS. If it's detected, there is NO way to turn it off!
 # Likewise for the other SSI boot modules (globus/slurm/tm are affected)
-IUSE="crypt pbs fortran"
+IUSE="crypt pbs fortran xmpi"
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -70,6 +70,7 @@ src_compile() {
 	fi
 
 	econf \
+		$(use_with xmpi trillium) \
 		--sysconfdir=/etc/lam-mpi \
 		--enable-shared \
 		--with-threads=posix \

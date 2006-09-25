@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.44 2006/07/31 04:50:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.45 2006/09/25 08:24:22 dberkholz Exp $
+
+  25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; lam-mpi-7.1.2.ebuild:
+  (#119480) Add USE=xmpi to build support for the external XMPI GUI utility.
 
   31 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/7.1.2-lam_prog_f77.m4.patch:
