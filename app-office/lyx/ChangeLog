@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.87 2006/09/14 15:03:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.88 2006/09/25 08:31:32 corsair Exp $
+
+  25 Sep 2006; Markus Rothe <corsair@gentoo.org> lyx-1.4.2.ebuild:
+  Added ~ppc64; bug #149013
 
 *lyx-1.4.2 (17 Aug 2006)
 
