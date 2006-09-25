@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.18 2006/07/16 10:33:57 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.19 2006/09/25 20:00:07 the_paya Exp $
+
+  25 Sep 2006; Javier Villavicencio <the_paya@gentoo.org>
+  pyopenssl-0.6-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   16 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   pyopenssl-0.6.ebuild:
