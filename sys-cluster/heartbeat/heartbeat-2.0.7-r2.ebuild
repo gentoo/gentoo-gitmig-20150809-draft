@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.7-r2.ebuild,v 1.1 2006/09/17 22:48:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.7-r2.ebuild,v 1.2 2006/09/25 23:57:35 xmerlin Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linux-ha.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 -mips ~ppc -s390 ~x86"
+KEYWORDS="~amd64 -mips ~ppc -s390 x86"
 IUSE="ldirectord doc snmp management"
 
 DEPEND="
