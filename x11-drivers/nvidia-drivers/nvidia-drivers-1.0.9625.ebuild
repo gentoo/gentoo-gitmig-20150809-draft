@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762-r1.ebuild,v 1.4 2006/09/25 14:09:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9625.ebuild,v 1.1 2006/09/25 14:09:57 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -19,14 +19,13 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* amd64 x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE="dlloader"
 RESTRICT="nostrip multilib-pkg-force"
 
 DEPEND="kernel_linux? ( virtual/linux-sources )"
 RDEPEND="kernel_linux? ( virtual/modutils )
 	 || ( x11-base/xorg-server virtual/x11 )
-	 !>=x11-base/xorg-server-1.0.99
 	 || ( media-libs/mesa virtual/x11 )
 	 app-admin/eselect-opengl
 	 kernel_linux? ( !media-video/nvidia-kernel )
@@ -117,8 +116,8 @@ src_unpack() {
 	epatch ${FILESDIR}/NVIDIA_glx-glheader.patch
 
 	if ! use x86-fbsd; then
-		# Zander kernel patch
-		epatch ${NV_PATCH_PREFIX}-U062606.diff
+		# Zander kernel patches
+		# None yet.
 
 		# Quiet down warnings the user do not need to see
 		sed -i \
