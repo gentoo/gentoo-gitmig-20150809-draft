@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/partgui-0.2.3-r2.ebuild,v 1.9 2005/09/07 03:40:42 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/partgui/partgui-0.2.3-r2.ebuild,v 1.10 2006/09/25 09:25:39 phosphan Exp $
 
 inherit qt3
 
@@ -12,13 +12,18 @@ SLOT="0"
 
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
-DEPEND="$(qt_min_version 3.1)
+
+RDEPEND="$(qt_min_version 3.1)
 	dev-libs/newt
 	>=sys-apps/parted-1.6.5
 	>=sys-fs/xfsprogs-2.3.9
 	sys-libs/slang
-	>=sys-fs/e2fsprogs-1.33
-	>=sys-apps/sed-4"
+	>=sys-fs/e2fsprogs-1.33"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	x11-libs/libX11
+	x11-libs/libXt"
 
 src_compile() {
 	# fix the sandbox errors "can't writ to .kde or .qt" problems.
