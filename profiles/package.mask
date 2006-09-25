@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5946 2006/09/25 14:03:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5947 2006/09/25 14:42:10 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Patrick McLean <chutzpah@gentoo.org> (25 Sep 2006)
+# This depends on dev-cpp/cairomm which is in the Gnome 2.16 mask, so masking
+# until Gnome 2.16 is unmasked
+=media-sound/bmpx-0.30*
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (25 Sep 2006)
 # Masking this version of the drivers since it is BETA. This driver version
