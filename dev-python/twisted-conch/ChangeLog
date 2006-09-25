@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.19 2006/08/01 15:16:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.20 2006/09/25 11:28:26 marienz Exp $
+
+*twisted-conch-0.7.0-r1 (25 Sep 2006)
+
+  25 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/twisted-conch-0.7.0-python-2.5-compat.patch,
+  +twisted-conch-0.7.0-r1.ebuild:
+  Revision bump with patch to work with python 2.5.
 
   01 Aug 2006; Simon Stelling <blubb@gentoo.org> twisted-conch-0.7.0.ebuild:
   stable on amd64
