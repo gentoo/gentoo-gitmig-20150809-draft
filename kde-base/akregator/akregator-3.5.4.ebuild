@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.4.ebuild,v 1.4 2006/09/07 13:02:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.4.ebuild,v 1.5 2006/09/25 22:55:22 deathwing00 Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -13,6 +13,8 @@ IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/kontact)
 !net-www/akregator"
+
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="libkdepim libkdepim
 libkpinterfaces kontact/interfaces"
