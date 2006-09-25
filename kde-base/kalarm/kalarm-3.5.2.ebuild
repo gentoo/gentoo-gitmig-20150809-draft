@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-3.5.2.ebuild,v 1.9 2006/09/03 16:11:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-3.5.2.ebuild,v 1.10 2006/09/25 23:20:12 deathwing00 Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -15,6 +15,8 @@ $(deprange 3.5.0 $MAXKDEVER kde-base/libkdenetwork)
 $(deprange 3.5.0 $MAXKDEVER kde-base/libkmime)
 $(deprange $PV $MAXKDEVER kde-base/libkpimidentities)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)"
+
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="
 	libkcal libkcal
