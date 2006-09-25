@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.1 2006/09/24 06:34:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.2 2006/09/25 12:18:48 lu_zero Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -14,7 +14,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 LICENSE="CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc-macos ppc64 s390 sparc x86 ~x86-fbsd"
-IUSE="cairo tcltk X static minimal guile java lua perl php python ruby ocaml"
+IUSE="cairo tcltk X static guile java lua perl php python ruby ocaml"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2
@@ -24,8 +24,8 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	media-libs/fontconfig
 	dev-libs/expat
 	sys-libs/zlib
-	tcltk? ( >=dev-lang/tk-8.3 >=dev-lang/tcl-8.3 )
 	cairo? ( >=x11-libs/libsvg-cairo-0.1.3 )
+	tcltk? ( >=dev-lang/tk-8.3 >=dev-lang/tcl-8.3 )
 	guile? ( dev-util/guile )
 	java? ( virtual/jdk )
 	perl? ( dev-lang/perl )
@@ -42,7 +42,16 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	!minimal? ( dev-lang/swig )"
+	tcltk? ( dev-lang/swig )
+	guile? ( dev-lang/swig )
+	java? ( dev-lang/swig )
+	perl? ( dev-lang/swig )
+	ocaml? ( dev-lang/swig )
+	lua? ( dev-lang/swig )
+	php? ( dev-lang/swig )
+	python? ( dev-lang/swig )
+	ruby? ( dev-lang/swig )
+	"
 
 src_unpack() {
 	unpack ${A}
@@ -55,7 +64,6 @@ src_unpack() {
 
 src_compile() {
 	local my_conf
-	use minimal && my_conf="${my_conf} --disable-swig"
 	econf ${my_conf}  \
 		--disable-dependency-tracking \
 		$(use_enable static) \
