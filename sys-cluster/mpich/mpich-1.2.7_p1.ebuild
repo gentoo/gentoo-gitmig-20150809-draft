@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.5 2006/07/16 21:26:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.6 2006/09/25 03:33:44 dberkholz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ inherit eutils
 MY_P="${PN}-${PV/_}"
 
 DESCRIPTION="MPICH - A portable MPI implementation"
-HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich"
+HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich1"
 SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${MY_P}.tar.gz"
 
 LICENSE="as-is"

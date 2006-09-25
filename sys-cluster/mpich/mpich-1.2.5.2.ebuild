@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.11 2006/07/16 21:26:31 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.12 2006/09/25 03:33:44 dberkholz Exp $
 
 # Set the MPICH_CONFIGURE_OPTS environment variable to change the signal
 # mpich listens on or any other custom options (#38207).
@@ -8,7 +8,7 @@
 # For example: MPICH_CONFIGURE_OPTS="--with-device=ch_p4:-listener_sig=SIGBUS"
 
 DESCRIPTION="MPICH - A portable MPI implementation"
-HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich"
+HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich1"
 SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${P}.tar.gz"
 
 LICENSE="as-is"
