@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kate-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.52 2006/09/17 22:53:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.53 2006/09/25 23:35:36 deathwing00 Exp $
+
+  25 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kate-plugins-3.5.2.ebuild, kate-plugins-3.5.3.ebuild,
+  kate-plugins-3.5.4.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kate-plugins-3.4.3.ebuild:
   Drop KDE 3.4.

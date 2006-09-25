@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.53 2006/09/17 22:53:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.54 2006/09/25 23:32:59 deathwing00 Exp $
+
+  25 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org> karm-3.5.2.ebuild,
+  karm-3.5.3.ebuild, karm-3.5.4.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -karm-3.4.3.ebuild:
   Drop KDE 3.4.
