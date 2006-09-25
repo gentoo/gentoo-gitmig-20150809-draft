@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2.ebuild,v 1.1 2006/09/25 05:11:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2.ebuild,v 1.2 2006/09/25 21:22:16 dberkholz Exp $
 
 
 inherit autotools flag-o-matic eutils
@@ -21,7 +21,7 @@ PROVIDE="virtual/pbs"
 DEPEND_COMMON="virtual/libc
 	sys-libs/ncurses
 	sys-libs/readline
-	tk? ( dev-tcltk/tclx )
+	tk? ( dev-lang/tk )
 	!virtual/pbs"
 
 DEPEND="${DEPEND_COMMON}

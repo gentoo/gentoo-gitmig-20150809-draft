@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.29 2006/09/25 05:11:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.30 2006/09/25 21:22:16 dberkholz Exp $
+
+  25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; torque-2.1.2.ebuild:
+  (#115189) Change tclx dep to tk, tclx isn't actually required (Ian
+  Stakenvicius).
 
 *torque-2.1.2 (25 Sep 2006)
 
