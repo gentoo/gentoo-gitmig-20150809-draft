@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r4.ebuild,v 1.2 2006/09/19 16:24:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r4.ebuild,v 1.3 2006/09/25 21:01:54 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator rpm
@@ -70,6 +70,11 @@ RDEPEND="
 
 RESTRICT="fetch"
 
+QA_TEXTRELS_amd64="opt/${P}/jre/bin/libj9jit22.so
+	opt/${P}/jre/bin/libjclscar_22.so"
+QA_TEXTRELS_ppc64="opt/${P}/jre/bin/classic/libjvm.so"
+QA_TEXTRELS_ppc="opt/${P}/jre/bin/libjitc.so
+	opt/${P}/jre/bin/libjaas.so"
 QA_TEXTRELS_x86="opt/${P}/jre/bin/lib*.so
 	opt/${P}/jre/bin/javaplugin.so
 	opt/${P}/jre/bin/classic/libjvm.so
