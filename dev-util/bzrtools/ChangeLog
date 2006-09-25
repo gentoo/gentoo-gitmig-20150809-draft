@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bzrtools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.9 2006/09/25 09:27:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzrtools/ChangeLog,v 1.10 2006/09/25 16:03:23 marienz Exp $
+
+*bzrtools-0.11.0 (25 Sep 2006)
+
+  25 Sep 2006; Marien Zwart <marienz@gentoo.org> +bzrtools-0.11.0.ebuild:
+  Version bump (in package.mask because of bzr release candidate dependency).
 
   25 Sep 2006; Marien Zwart <marienz@gentoo.org>
   -files/bzrtools-0.8-optional-pybaz.patch, -bzrtools-0.6.1.ebuild,
