@@ -1,1 +1,1 @@
--sys-devel/gcc hardened
+sys-devel/gcc -hardened
