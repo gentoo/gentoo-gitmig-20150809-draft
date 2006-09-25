@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r3.ebuild,v 1.5 2006/09/25 03:05:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r3.ebuild,v 1.6 2006/09/25 17:25:32 dberkholz Exp $
 
 inherit eutils
 
@@ -45,13 +45,17 @@ src_unpack() {
 	epatch ${FILESDIR}/openpbs-gcc32.patch
 	# this thing doesn't use make install, but rather it's own install script
 	# fix it here so the install dirs are set to the ${D} directory
-	cd buildutils
+	pushd buildutils
 	mv pbs_mkdirs.in pbs_mkdirs.in-orig
 	sed -e "s|prefix=@prefix@|prefix=\${D}@prefix@| ; \
 			s|PBS_SERVER_HOME=@PBS_SERVER_HOME@|PBS_SERVER_HOME=\${D}@PBS_SERVER_HOME@| ; \
 			s|PBS_DEFAULT_FILE=@PBS_DEFAULT_FILE@|PBS_DEFAULT_FILE=\${D}@PBS_DEFAULT_FILE@| ; \
 			s|PBS_ENVIRON=@PBS_ENVIRON@|PBS_ENVIRON=\${D}@PBS_ENVIRON@|" \
 			pbs_mkdirs.in-orig > pbs_mkdirs.in
+	popd
+
+	# Patch from SuSE srpm, found on rpmfind.net
+	epatch ${FILESDIR}/${PV}-gcc4.patch
 }
 
 src_compile() {
