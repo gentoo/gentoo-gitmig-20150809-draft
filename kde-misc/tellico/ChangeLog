@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.45 2006/09/24 20:05:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.46 2006/09/25 12:25:44 deathwing00 Exp $
+
+*tellico-1.2.3 (25 Sep 2006)
+
+  25 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +tellico-1.2.3.ebuild:
+  Version bump. Dependency of libxml2 increased by upstream to 2.6.
 
   24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> tellico-1.1.6.ebuild,
   tellico-1.2.ebuild, tellico-1.2.2.ebuild:
