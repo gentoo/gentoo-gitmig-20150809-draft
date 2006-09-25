@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762-r1.ebuild,v 1.4 2006/09/25 14:09:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762-r1.ebuild,v 1.5 2006/09/25 14:12:17 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -133,7 +133,7 @@ src_unpack() {
 		cd ${S}; convert_to_m Makefile.kbuild
 
 		# Patch the Makefile to not warn about nvidia-installer
-		epatch ${FILESDIR}/NVIDIA_glx-makefile.patch
+#		epatch ${FILESDIR}/NVIDIA_glx-makefile.patch
 	fi
 }
 
