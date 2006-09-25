@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/bookview-3.2.1.ebuild,v 1.5 2005/07/08 16:02:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/bookview/bookview-3.2.1.ebuild,v 1.6 2006/09/25 16:27:30 matsuu Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
 RDEPEND=">=dev-lang/tk-8.3"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
