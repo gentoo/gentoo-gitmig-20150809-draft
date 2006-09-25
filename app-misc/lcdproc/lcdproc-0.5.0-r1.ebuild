@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.0-r1.ebuild,v 1.1 2006/09/22 14:12:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.0-r1.ebuild,v 1.2 2006/09/25 16:36:46 jokey Exp $
 
 inherit flag-o-matic
 
@@ -29,6 +29,7 @@ DEPEND="sys-apps/sed
 	svga?     ( media-libs/svgalib )
 	ula200?   ( dev-embedded/libftdi dev-libs/libusb )
 	xosd?     ( x11-libs/xosd ) "
+RDEPEND=${DEPEND}
 
 USE_DRIVERS="curses glcdlib irman lirc svga ula200 xosd"
 EXTRA_DRIVERS="bayrad CFontz CFontz633 CFontzPacket CwLnx \
@@ -93,8 +94,7 @@ pkg_setup() {
 	use xosd     && LCDPROC_DRIVERS="${LCDPROC_DRIVERS} xosd"
 
 	for driver in ${ALL_DRIVERS}; do
-		has ${driver} ${LCDPROC_DRIVERS} \
-		&& einfo $driver ;
+		has ${driver} ${LCDPROC_DRIVERS} && einfo $driver
 	done
 	echo
 
@@ -149,20 +149,19 @@ src_install() {
 	dobin clients/lcdproc/lcdproc clients/lcdexec/lcdexec
 
 	insinto /usr/share/lcdproc/drivers
-		doins server/drivers/*.so
+	doins server/drivers/*.so
 
 	insinto /usr/share/lcdproc/clients
-		doins clients/examples/*.pl
-		doins clients/metar/lcdmetar.pl
-		doins clients/headlines/lcdheadlines
+	doins clients/examples/*.pl
+	doins clients/metar/lcdmetar.pl
+	doins clients/headlines/lcdheadlines
 
 	insinto /etc
-		doins LCDd.conf
-		doins scripts/lcdproc.conf
+	doins LCDd.conf
+	doins scripts/lcdproc.conf
 
-	exeinto /etc/init.d
-		newexe ${FILESDIR}/${PV}-LCDd LCDd
-		doexe ${FILESDIR}/lcdproc
+	newinitd "${FILESDIR}/${PV}-LCDd" LCDd
+	newinitd "${FILESDIR}/lcdproc" lcdproc
 
 	doman docs/*.1 docs/*.8
 	dodoc README CREDITS ChangeLog INSTALL
@@ -172,5 +171,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}/lcdproc-user
 		doins docs/lcdproc-user/*.html
 	fi
-
 }

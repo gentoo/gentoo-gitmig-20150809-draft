@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.5.ebuild,v 1.12 2006/09/22 14:12:58 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.5.ebuild,v 1.13 2006/09/25 16:36:46 jokey Exp $
 
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
 HOMEPAGE="http://lcdproc.org/"
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+
 IUSE="doc ncurses samba svga"
 
 DEPEND=">=sys-apps/baselayout-1.6.4
@@ -16,9 +17,11 @@ DEPEND=">=sys-apps/baselayout-1.6.4
 	doc? ( >=app-text/docbook-sgml-utils-0.6.11-r2 )
 	ncurses? ( >=sys-libs/ncurses-5.3 )
 	svga? ( >=media-libs/svgalib-1.4.3 )"
+RDEPEND=${DEPEND}
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
 	sed -i "889s:-O3:${CFLAGS}:" configure
 }
@@ -91,7 +94,6 @@ src_install() {
 	doins LCDd.conf
 	doins scripts/lcdproc.conf
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PV}-LCDd LCDd
-	doexe ${FILESDIR}/lcdproc
+	newinitd "${FILESDIR}/${PV}-LCDd" LCDd
+	newinitd "${FILESDIR}/lcdproc" lcdproc
 }
