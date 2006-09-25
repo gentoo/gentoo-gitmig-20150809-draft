@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/smb4k
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.41 2006/08/12 21:48:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/ChangeLog,v 1.42 2006/09/25 22:55:00 troll Exp $
+
+*smb4k-0.7.3 (26 Sep 2006)
+
+  26 Sep 2006; Przemysław Maciąg <troll@gentoo.org> +smb4k-0.7.3.ebuild:
+  Version bump. Ebuild cleanup.
 
 *smb4k-0.7.2 (12 Aug 2006)
 
@@ -80,7 +85,7 @@
 
 *smb4k-0.6.3 (01 Sep 2005)
 
-  01 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> +smb4k-0.6.3.ebuild:
+  01 Sep 2005; Diego PettenĂ˛ <flameeyes@gentoo.org> +smb4k-0.6.3.ebuild:
   Updated to last upstream version.
 
 *smb4k-0.6.1 (07 Aug 2005)
