@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX cracklib.magic 360 RMD160 05397b39d061badb67e5e36ceb826f00d86d12df SHA1 c4b2b3034acf5b35b60a8de27c7ac33f54c6b4ea SHA256 ce9de85e27f60a8905bcdfd3554df17ec49c9cd2d23342c6f45af9fb0e266965
 MD5 f0f2d2181cac822f0c4d4675fb1ff38c files/cracklib.magic 360
 RMD160 05397b39d061badb67e5e36ceb826f00d86d12df files/cracklib.magic 360
@@ -30,3 +33,10 @@ SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92 metadata
 MD5 ddbf41fdb2b8c638f96c372a752f212f files/digest-file-4.17-r1 229
 RMD160 3f1a53e0b9c1473833a06ca9a70d9ed103be2520 files/digest-file-4.17-r1 229
 SHA256 64609bf94d40e04a7181bdd7546d098db2cdacd0e2a392964ea8190cfb9a09e0 files/digest-file-4.17-r1 229
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFF9hFamhnQswr0vIRAu2uAJ4pdqhEHhG9h1waxyIChtQMCH+meQCfVyk+
+JbcG/UL87DXk7dzMa2wwQxE=
+=DQaU
+-----END PGP SIGNATURE-----
