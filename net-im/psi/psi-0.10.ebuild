@@ -1,22 +1,22 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.11 2006/06/26 11:16:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.10.ebuild,v 1.12 2006/09/25 21:30:55 troll Exp $
 
 inherit eutils qt3
 
-# usefull for test/rc releases
-MY_PV="${PV/_rc/-test}"
-MY_P="${PN}-${MY_PV}"
-
-HTTPMIRR="http://vivid.dat.pl/psi"
 IUSE="ssl crypt xscreensaver extras xmms insecure-patches"
-QV="2.0"
+LANGS="ar bg ca cs da de el eo es et fi fr it hu mk nl pl pt pt_BR ru se sk sl
+sr sr sw_TZ vi zh"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 DESCRIPTION="QT 3.x Jabber Client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
 # translations from http://tanoshi.net/language.html
 # polish translation contains special texts for patches from extras-version
-SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
+HTTPMIRR="http://vivid.dat.pl/psi"
+SRC_URI="mirror://sourceforge/psi/${P}.tar.bz2
 		extras? ( ${HTTPMIRR}/gentoo-psi-0.10.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-0.9.3.tar.bz2 )
 		linguas_bg? ( ${HTTPMIRR}/psi_bg-0.10-a.tar.bz2 )
@@ -24,7 +24,6 @@ SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 		linguas_cs? ( ${HTTPMIRR}/psi_cs-0.9.3-a.tar.bz2 )
 		linguas_da? ( ${HTTPMIRR}/psi_da-0.9.3.tar.bz2 )
 		linguas_de? ( ${HTTPMIRR}/psi_de-0.9.3-c.tar.bz2 )
-		linguas_ee? ( ${HTTPMIRR}/psi_ee-0.9.3_rc1.tar.bz2 )
 		linguas_el? ( ${HTTPMIRR}/psi_el-0.9.3-a.tar.bz2 )
 		linguas_eo? ( ${HTTPMIRR}/psi_eo-0.10-a.tar.bz2 )
 		linguas_es? ( ${HTTPMIRR}/psi_es-0.10-a.tar.bz2 )
@@ -32,7 +31,6 @@ SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 		linguas_fi? ( ${HTTPMIRR}/psi_fi-0.9.3.tar.bz2 )
 		linguas_fr? ( ${HTTPMIRR}/psi_fr-0.9.3-a.tar.bz2 )
 		linguas_it? ( ${HTTPMIRR}/psi_it-0.9.3.tar.bz2 )
-		linguas_jp? ( ${HTTPMIRR}/psi_jp-0.9.3.tar.bz2 )
 		linguas_hu? ( ${HTTPMIRR}/psi_hu-0.10-a.tar.bz2 )
 		linguas_mk? ( ${HTTPMIRR}/psi_mk-0.10-a.tar.bz2 )
 		linguas_nl? ( ${HTTPMIRR}/psi_nl-0.10-a.tar.bz2 )
@@ -45,16 +43,13 @@ SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 		linguas_sl? ( ${HTTPMIRR}/psi_sl-0.10-a.tar.bz2 )
 		linguas_sr? ( ${HTTPMIRR}/psi_sr-0.9.3.tar.bz2 )
 		linguas_sv? ( ${HTTPMIRR}/psi_sv-0.9.3.tar.bz2 )
-		linguas_sw? ( ${HTTPMIRR}/psi_sw-0.9.3.tar.bz2 )
+		linguas_sw_TZ? ( ${HTTPMIRR}/psi_sw-0.9.3.tar.bz2 )
 		linguas_vi? ( ${HTTPMIRR}/psi_vi-0.10-a.tar.bz2 )
 		linguas_zh? ( ${HTTPMIRR}/psi_zh-0.9.3-a.tar.bz2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
-
-#After final relase we do not need this
-S="${WORKDIR}/${MY_P}"
 
 DEPEND=">=app-crypt/qca-1.0-r2
 	$(qt_min_version 3.3)
