@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.2-r1.ebuild,v 1.11 2006/04/30 21:08:53 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.2-r1.ebuild,v 1.12 2006/09/25 03:17:55 nixphoeni Exp $
 
-inherit gnome2 eutils multilib
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
+inherit gnome2 eutils autotools multilib
 
 MY_PN="gDesklets"
 MY_P="${MY_PN}-${PV/_/}"
