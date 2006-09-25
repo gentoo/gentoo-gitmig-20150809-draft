@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.1.ebuild,v 1.3 2005/03/02 23:38:26 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-1.1.ebuild,v 1.4 2006/09/25 17:13:17 dang Exp $
 
 inherit eutils
 
@@ -18,13 +18,14 @@ IUSE=""
 RDEPEND=">=dev-python/pygtk-2.0.0
 	>=gnome-base/gconf-2.2.0
 	>=dev-python/gnome-python-2
+	dev-python/gnome-python-extras
 	amd64? ( >=dev-python/gnome-python-2.6.1 )"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS TODO"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}; epatch ${FILESDIR}/${PN}-1.0-destdir.patch
+	cd ${S}; epatch ${FILESDIR}/${PN}-1.1-destdir.patch
 }
 
 src_compile() {
