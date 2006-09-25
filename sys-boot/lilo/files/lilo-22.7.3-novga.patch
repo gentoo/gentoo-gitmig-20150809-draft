@@ -1,0 +1,25 @@
+diff -uNr lilo-22.7.2.ORIG/first.S lilo-22.7.2/first.S
+--- lilo-22.7.2.ORIG/first.S	2006-07-12 14:14:16.000000000 +0100
++++ lilo-22.7.2/first.S	2006-07-12 14:14:34.000000000 +0100
+@@ -531,7 +531,8 @@
+ ; display - write byte in AL to console
+ ;	preserves all register contents
+ ; 
+-display: pusha		! make sure no register is changed
++display: ret
++	pusha		! make sure no register is changed
+ 	mov	bx,#7		!  BH=0, BL=07
+ 	mov	ah,#14
+ 	int	0x10
+diff -uNr lilo-22.7.2.ORIG/second.S lilo-22.7.2/second.S
+--- lilo-22.7.2.ORIG/second.S	2006-07-12 14:14:16.000000000 +0100
++++ lilo-22.7.2/second.S	2006-07-12 14:14:34.000000000 +0100
+@@ -2342,7 +2342,7 @@
+ ;;;	xor	bh,bh		; display on screen
+ 	mov	bx,#7		; set color for TEXT interface
+ 	mov	ah,#14
+-	int	0x10
++;;	int	0x10
+ dispret:
+ 	pop	bx		; restore BX
+ 	ret

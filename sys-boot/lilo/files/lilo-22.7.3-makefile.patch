@@ -1,0 +1,46 @@
+diff -uNr lilo-22.7.3.ORIG/Makefile lilo-22.7.3/Makefile
+--- lilo-22.7.3.ORIG/Makefile	2006-09-25 14:04:00.000000000 +0100
++++ lilo-22.7.3/Makefile	2006-09-25 14:04:47.000000000 +0100
+@@ -68,16 +68,7 @@
+    -DPASS160 -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL \
+    -DMDPRAID
+ 
+-# set the following if you wish LILO.COM to be installed
+-DOS_DIR=/dosC/boot
+-#
+-#MAN_DIR=`if [ -z "$(whereis lilo | grep 'lilo.8')" ]; then \
+-#	whereis lilo | sed -e "sX.* /usrX/usrX" -e "sX/man8/lilo.8.*XX" ; \
+-#	elif [ -f /usr/bin/manpath ]; then \
+-#  manpath | sed "s/:.*//"; else echo /usr/man; fi`
+-#
+-MAN_DIR=`if [ -f /usr/bin/manpath ]; then \
+-	manpath | sed "s/:.*//"; else echo /usr/man; fi`
++MAN_DIR=/usr/share/man
+ 
+ # set the compiler optimization level
+ 
+@@ -419,12 +410,12 @@
+ #  normal install, but doesn't make the diagnostic binaries
+ #
+ install:  all
+-	if [ ! -d $$ROOT$(SBIN_DIR) ]; then mkdir $$ROOT$(SBIN_DIR); fi
+-	if [ ! -d $$ROOT$(CFG_DIR) ]; then mkdir $$ROOT$(CFG_DIR); fi
+-	if [ ! -d $$ROOT$(BOOT_DIR) ]; then mkdir $$ROOT$(BOOT_DIR); fi
++	if [ ! -d $$ROOT$(SBIN_DIR) ]; then mkdir -p $$ROOT$(SBIN_DIR); fi
++	if [ ! -d $$ROOT$(CFG_DIR) ]; then mkdir -p $$ROOT$(CFG_DIR); fi
++	if [ ! -d $$ROOT$(BOOT_DIR) ]; then mkdir -p $$ROOT$(BOOT_DIR); fi
+ 	if [ ! -d $$ROOT$(USRSBIN_DIR) ]; then \
+ 	  mkdir -p $$ROOT$(USRSBIN_DIR); fi
+-	if [ ! -d $$ROOT$(MAN_DIR) ]; then mkdir $$ROOT$(MAN_DIR); fi  
++	if [ ! -d $$ROOT$(MAN_DIR) ]; then mkdir -p $$ROOT$(MAN_DIR); fi  
+ 	if [ ! -d $$ROOT$(MAN_DIR)/man5 ]; then \
+ 	  mkdir $$ROOT$(MAN_DIR)/man5; fi  
+ 	if [ ! -d $$ROOT$(MAN_DIR)/man8 ]; then \
+@@ -457,7 +448,6 @@
+ 	  rm -f $$ROOT$(BOOT_DIR)/boot.b; fi
+ 	cp mkrescue $$ROOT$(SBIN_DIR)
+ 	cp lilo $$ROOT$(SBIN_DIR)
+-	strip $$ROOT$(SBIN_DIR)/lilo
+ 	cp keytab-lilo.pl $$ROOT$(USRSBIN_DIR)
+ 	cp manPages/lilo.8 $$ROOT$(MAN_DIR)/man8
+ 	cp manPages/mkrescue.8 $$ROOT$(MAN_DIR)/man8
