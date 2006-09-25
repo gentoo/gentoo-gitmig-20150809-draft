@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.3 2006/09/24 10:25:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r4.ebuild,v 1.4 2006/09/25 19:22:01 nixnut Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://cvs.nvu.com/download/${P}-sources.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE=""
 DEPEND="|| ( x11-proto/printproto virtual/x11 )
 	sys-apps/gawk
