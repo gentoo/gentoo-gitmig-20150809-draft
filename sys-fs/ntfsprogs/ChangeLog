@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.39 2006/08/02 14:03:48 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.40 2006/09/25 17:06:14 nixnut Exp $
+
+  25 Sep 2006; <nixnut@gentoo.org> ntfsprogs-1.13.1.ebuild:
+  Stable on ppc wrt bug 149059
 
   02 Aug 2006; Patrick McLean <chutzpah@gentoo.org> ntfsprogs-1.13.0.ebuild,
   ntfsprogs-1.13.1.ebuild:
