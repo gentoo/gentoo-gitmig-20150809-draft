@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>video</herd>
 <maintainer>
-	<email>chriswhite@gentoo.org</email>
-	<name>Chris White</name>
+  <email>calchan@gentoo.org</email>
+  <name>Denis Dupeyron</name>
 </maintainer>
 <longdescription lang="en">
 This library provides third generation media reception and transmission for DV,

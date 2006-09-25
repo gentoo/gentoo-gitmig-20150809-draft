@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libiec61883
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.12 2006/09/25 11:35:37 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiec61883/ChangeLog,v 1.13 2006/09/25 16:57:46 calchan Exp $
+
+  25 Sep 2006; Denis Dupeyron <calchan@gentoo.org> metadata.xml:
+  Assigned myself as maintainer in metadata after a discussion with Chris White.
 
 *libiec61883-1.1.0 (25 Sep 2006)
 
