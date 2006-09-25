@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.4.0.ebuild,v 1.9 2006/09/03 22:47:19 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.4.0.ebuild,v 1.10 2006/09/25 13:07:50 corsair Exp $
 
 inherit distutils fdo-mime eutils
 
@@ -61,10 +61,10 @@ src_install() {
 	fi
 
 	insinto /etc/conf.d
-	newins ${FILESDIR}//bttrack.conf bttrack
+	newins ${FILESDIR}/bttrack.conf bttrack
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/bttrack.rc-4.1 bttrack
+	newexe ${FILESDIR}/bttrack.rc bttrack
 }
 
 pkg_postinst() {
