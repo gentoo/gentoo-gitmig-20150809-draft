@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/buildbot
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.1 2006/09/25 17:42:37 marienz Exp $
+
+*buildbot-0.7.4 (25 Sep 2006)
+
+  25 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/buildbot-0.7.4-svn-1.4.patch, +files/buildbot.initd,
+  +files/buildmaster.confd, +files/buildslave.confd, +metadata.xml,
+  +buildbot-0.7.4.ebuild:
+  -m New package, ebuild based on one by Michael Schmid <meheschmid@gmx.ch>.
+  Closes bug #133004.
+
