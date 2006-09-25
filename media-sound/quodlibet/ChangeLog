@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.41 2006/09/09 00:26:51 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.42 2006/09/25 02:05:35 tcort Exp $
+
+*quodlibet-0.23.1-r1 (25 Sep 2006)
+
+  25 Sep 2006; Thomas Cort <tcort@gentoo.org>
+  +files/quodlibet-0.23.1-python25.patch, +quodlibet-0.23.1-r1.ebuild:
+  Added python-2.5 compatibility patch from upstream revision 3817 wrt Bug
+  #148495.
 
   09 Sep 2006; Thomas Cort <tcort@gentoo.org> quodlibet-0.23.1.ebuild:
   Make the gst-plugins-gconf dep optional (with USE='gnome') to solve Bug
