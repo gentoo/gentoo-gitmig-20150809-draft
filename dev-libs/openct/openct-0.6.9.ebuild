@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.9.ebuild,v 1.1 2006/09/22 11:20:19 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.9.ebuild,v 1.2 2006/09/25 13:42:08 kaiowas Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.opensc-project.org/files/openct/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="usb"
+IUSE="usb udev"
 
 RDEPEND="usb? (	>=dev-libs/libusb-0.1.7 >=sys-apps/hotplug-20030805-r1 )"
 
@@ -39,16 +39,15 @@ src_install() {
 		newexe etc/openct_usb openct || die
 	fi
 
-	if [ -e ${ROOT}etc/udev/rules.d ]; then
+	if use udev ; then
+
 		insinto /etc/udev/rules.d/
 		newins etc/openct.udev 70-openct.rules || die
-	fi
 
-	if [ -e ${ROOT}etc/udev/scripts ]; then
 		exeinto /etc/udev/scripts/
-		newexe etc/openct_pcmcia || die
-		newexe etc/openct_serial || die
-		newexe etc/openct_usb || die
+		newexe etc/openct_pcmcia openct_pcmcia || die
+		newexe etc/openct_serial openct_serial || die
+		newexe etc/openct_usb openct_usb || die
 	fi
 
 	newinitd "${FILESDIR}"/openct.rc openct
@@ -60,8 +59,8 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [[ -e ${ROOT}/usr/lib/libopenct.so.0 ]] ; then
-		cp "${ROOT}"/usr/lib/libopenct.so.0 "${IMAGE}"/usr/lib/
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libopenct.so.0 ]] ; then
+		cp "${ROOT}"/usr/$(get_libdir)/libopenct.so.0 "${IMAGE}"/usr/lib/
 	fi
 }
 
@@ -77,7 +76,7 @@ pkg_postinst() {
 	einfo "You need to be a member of the (newly created) group openct to"
 	einfo "access smart card readers connected to this system. Set users'"
 	einfo "groups with usermod -G.  root always has access."
-	if [[ -e ${ROOT}/usr/lib/libopenct.so.0 ]] ; then
+	if [[ -e ${ROOT}/usr/$(get_libdir)/libopenct.so.0 ]] ; then
 		echo
 		ewarn "Please run: revdep-rebuild --library libopenct.so.0"
 		echo
