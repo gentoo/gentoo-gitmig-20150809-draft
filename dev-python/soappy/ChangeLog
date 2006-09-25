@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.13 2006/09/25 13:34:23 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.14 2006/09/25 19:39:29 marienz Exp $
+
+  25 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  -files/soappy-0.11.6-future-imports.patch,
+  +files/soappy-0.11.6-python-2.5-compat.patch, soappy-0.11.6-r1.ebuild:
+  Rename patch and disable keyword substitution.
 
 *soappy-0.11.6-r1 (25 Sep 2006)
 
