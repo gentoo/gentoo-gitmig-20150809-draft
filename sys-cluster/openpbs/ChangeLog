@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openpbs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog,v 1.26 2006/09/21 10:46:25 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/ChangeLog,v 1.27 2006/09/25 03:05:07 dberkholz Exp $
+
+  25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  openpbs-2.3.16-r3.ebuild:
+  (#125414) Missing build-time dep on sys-apps/ed.
 
   21 Sep 2006; <ticho@gentoo.org> openpbs-2.3.16-r3.ebuild:
   Stable on x86, bug #144921.
