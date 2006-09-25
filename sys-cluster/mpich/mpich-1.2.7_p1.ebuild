@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.6 2006/09/25 03:33:44 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.7_p1.ebuild,v 1.7 2006/09/25 04:05:52 dberkholz Exp $
 
 inherit eutils
 
@@ -100,7 +100,7 @@ src_install() {
 	# rm -rf ${D}/usr/local
 	rm -f ${D}/usr/man/mandesc
 
-	mv ${D}/usr/share/{machines*,jumpshot-3,Makefile.sample,upshot} ${D}/usr/share/${PN}
+	mv ${D}/usr/share/{machines*,Makefile.sample} ${D}/usr/share/${PN}
 
 	dodoc COPYRIGHT README
 	use doc && \
@@ -135,9 +135,7 @@ src_install() {
 		| xargs sed -i -e "s:datadir=.*:datadir=/usr/share/mpich:g"
 
 	# those are dangling symlinks
-	rm -f \
-		${D}/usr/share/mpich/examples1/mpirun \
-		${D}/usr/share/mpich/examples2/mpirun
+	rm -f ${D}/usr/share/mpich/examples2/mpirun
 
 	mv ${D}/usr/man ${D}/usr/share/man
 
