@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.1 2006/07/14 10:41:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/sun-j2me-bin-2.2-r3.ebuild,v 1.2 2006/09/25 11:45:49 nelchael Exp $
 
 inherit java-pkg-2
 
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc examples"
 RESTRICT="fetch"
-DEPEND=">=dev-java/sun-jaf-bin-1.0
-		>=dev-java/sun-javamail-bin-1.3
+DEPEND="dev-java/sun-jaf
+		dev-java/sun-javamail
 		dev-java/xsdlib"
 RDEPEND="${DEPEND}
 		>=virtual/jdk-1.4.2"
@@ -84,8 +84,8 @@ src_install() {
 	use doc && java-pkg_dohtml -r docs/*
 
 	cd ${D}/${DIR}/bin
-	java-pkg_jar-from sun-jaf-bin activation.jar
-	java-pkg_jar-from sun-javamail-bin mail.jar
+	java-pkg_jar-from sun-jaf activation.jar
+	java-pkg_jar-from sun-javamail mail.jar
 	java-pkg_jar-from xsdlib xsdlib.jar
 
 	einfo "Registering jar files"
