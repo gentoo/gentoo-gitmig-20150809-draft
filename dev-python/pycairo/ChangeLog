@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.24 2006/09/08 01:37:55 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.25 2006/09/25 16:13:39 marienz Exp $
+
+*pycairo-1.2.2 (25 Sep 2006)
+
+  25 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pycairo-1.2.2-no-automagic-deps.patch, +pycairo-1.2.2.ebuild:
+  Version bump with an updated ebuild by Martin von Gagern
+  <Martin.vGagern@gmx.net> from bug #145399.
 
   06 Sep 2006; Javier Villavicencio <the_paya@gentoo.org>
   pycairo-1.2.0.ebuild:
