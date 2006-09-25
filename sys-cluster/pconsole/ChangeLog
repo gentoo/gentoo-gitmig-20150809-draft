@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/pconsole
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.5 2004/11/04 11:25:02 voxus Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pconsole/ChangeLog,v 1.6 2006/09/25 08:03:42 dberkholz Exp $
+
+*pconsole-1.0-r2 (25 Sep 2006)
+
+  25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +pconsole-1.0-r2.ebuild:
+  (#116277) Get $D out of the installed pconsole.sh. Also respect CFLAGS, and
+  clean up the ebuild.
 
 *pconsole-1.0-r1 (04 Nov 2004)
 
