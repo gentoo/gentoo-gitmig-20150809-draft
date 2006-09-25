@@ -1,6 +1,23 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.41 2006/09/05 11:26:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.42 2006/09/25 14:30:56 chainsaw Exp $
+
+*lilo-22.7-r1 (25 Sep 2006)
+
+  25 Sep 2006; Tony Vroon <chainsaw@gentoo.org>
+  +files/lilo-22.7-install-nostrip.patch, +files/lilo-22.7-manpath.patch,
+  +lilo-22.7-r1.ebuild, -lilo-22.7.2-r1.ebuild:
+  Feed back patches to 22.7 branch as 22.7.1 and up
+  do not always work correctly on LVM2 systems. Also
+  use the new dolilo 0.4 here.
+  Remove obsolete 22.7.2 branch ebuild.
+
+*lilo-22.7.3 (25 Sep 2006)
+
+  25 Sep 2006; Tony Vroon <chainsaw@gentoo.org>
+  +files/lilo-22.7.3-correct-usage-info.patch, +files/lilo-22.7.3-makefile.patch,
+  +files/lilo-22.7.3-novga.patch, +lilo-22.7.3.ebuild:
+  Version bump. Remove devmap from USE & DEPEND as the patch is accepted upstream.
 
 *lilo-22.7.2-r2 (05 Sep 2006)
 
