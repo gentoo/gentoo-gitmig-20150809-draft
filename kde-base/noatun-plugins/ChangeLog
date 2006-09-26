@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/noatun-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.51 2006/09/17 22:53:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.52 2006/09/26 22:08:27 deathwing00 Exp $
+
+  26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  noatun-plugins-3.5.2.ebuild, noatun-plugins-3.5.3.ebuild,
+  noatun-plugins-3.5.4.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
   -noatun-plugins-3.4.3.ebuild:

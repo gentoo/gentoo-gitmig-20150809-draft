@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.3.ebuild,v 1.3 2006/06/14 22:29:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.3.ebuild,v 1.4 2006/09/26 22:08:27 deathwing00 Exp $
 KMNAME=kdeaddons
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -14,6 +14,7 @@ DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/noatun)
 	arts? ( $(deprange $PV $MAXKDEVER kde-base/arts) )
 	sdl? ( >=media-libs/libsdl-1.2 )
 	berkdb? ( =sys-libs/db-4* )"
+
 RDEPEND="${DEPEND}"
 
 src_compile() {
