@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klatin/klatin-3.5.3.ebuild,v 1.1 2006/06/01 18:47:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klatin/klatin-3.5.3.ebuild,v 1.2 2006/09/26 19:08:10 deathwing00 Exp $
 KMNAME=kdeedu
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -10,9 +10,9 @@ DESCRIPTION="KDE: KLatin - a program to help revise Latin"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="
-$(deprange 3.5.2 $MAXKDEVER kde-base/libkdeedu)"
+DEPEND="$(deprange 3.5.2 $MAXKDEVER kde-base/libkdeedu)"
 
+RDEPEND="${DEPEND}"
 
 KMEXTRACTONLY="libkdeedu/kdeeducore"
 KMCOPYLIB="libkdeeducore libkdeedu/kdeeducore"
