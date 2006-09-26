@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g-r1.ebuild,v 1.2 2006/01/18 07:28:55 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm-povray/pvm-povray-3.1g-r1.ebuild,v 1.3 2006/09/26 05:28:28 dberkholz Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://pvmpov.sourceforge.net/"
 
 SLOT="0"
 LICENSE="povlegal-3.1g"
-KEYWORDS="~x86 sparc"
+KEYWORDS="sparc x86"
 IUSE="X svga"
 
 RDEPEND="sys-cluster/pvm"
