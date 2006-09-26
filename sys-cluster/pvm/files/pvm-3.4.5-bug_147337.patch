@@ -1,0 +1,11 @@
+--- pvm3.4.5/src/pvmlog.c.bug_147337	2004-05-26 11:56:36.000000000 -0400
++++ pvm3.4.5/src/pvmlog.c	2005-02-25 13:54:05.842252000 -0500
+@@ -488,7 +488,7 @@
+ 	pvmlogprintf("em=0x%lx\n", (long) em);
+ 
+ 	for (i=0; i < 10 ; i++ )
+-		pvmlogprintf("[%x/%c]", em[i]);
++		pvmlogprintf("[%x/%c]", em[i], em[i]);
+ 	pvmlogprintf("\n");
+ 
+ 	pvmlogprintf("%s: %s\n", s, em);

@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/pvm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.32 2006/09/25 03:32:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.33 2006/09/26 05:11:58 dberkholz Exp $
+
+  26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/pvm-3.4.5-bug_147337.patch, pvm-3.4.5-r2.ebuild:
+  Fix a printf formatting bug, from Fedora.
 
   25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; pvm-3.4.5-r2.ebuild:
   (#132711) Symlink binaries to LINUX64 directory on 64-bit systems (Bryan

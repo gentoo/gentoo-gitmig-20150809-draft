@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.8 2006/09/25 03:32:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/pvm-3.4.5-r2.ebuild,v 1.9 2006/09/26 05:11:58 dberkholz Exp $
 
 inherit eutils multilib
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-extra-arches.patch || die
 	epatch ${FILESDIR}/${P}-x86_64-segfault.patch || die
 	epatch ${FILESDIR}/${P}-gcc-4.1.patch || die
+	epatch ${FILESDIR}/${P}-bug_147337.patch || die
 
 # setup def files for other archs
 	cp conf/LINUX64.def conf/LINUXPPC64.def
