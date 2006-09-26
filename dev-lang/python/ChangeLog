@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.210 2006/09/20 00:21:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.211 2006/09/26 00:13:26 marienz Exp $
+
+*python-2.4.3-r4 (26 Sep 2006)
+*python-2.3.5-r3 (26 Sep 2006)
+
+  26 Sep 2006; Marien Zwart <marienz@gentoo.org> +python-2.3.5-r3.ebuild,
+  +python-2.4.3-r4.ebuild:
+  Revision bumps for bug #149065.
 
 *python-2.5-r1 (19 Sep 2006)
 
