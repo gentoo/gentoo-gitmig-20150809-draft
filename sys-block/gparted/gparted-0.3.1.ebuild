@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.1.ebuild,v 1.1 2006/09/15 20:10:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.3.1.ebuild,v 1.2 2006/09/26 13:28:06 blubb Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome Partition Editor"
 HOMEPAGE="http://gparted.sourceforge.net/"
@@ -27,3 +27,8 @@ RDEPEND=">=sys-apps/parted-1.7.1
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.12
 		>=dev-util/intltool-0.29"
+
+src_unpack() {
+	gnome2_src_unpack
+	epatch "${FILESDIR}"/${P}-llabs.patch
+}
