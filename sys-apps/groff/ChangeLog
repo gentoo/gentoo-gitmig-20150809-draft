@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.72 2006/09/14 21:19:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.73 2006/09/26 21:13:40 gustavoz Exp $
+
+  26 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  groff-1.19.2-r1.ebuild:
+  Stable on hppa wrt #146509
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   groff-1.19.2-r1.ebuild:
