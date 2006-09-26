@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r13.ebuild,v 1.3 2006/07/01 17:51:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.210-r13.ebuild,v 1.4 2006/09/26 09:39:35 phreak Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -21,7 +21,8 @@ DEPEND=">=dev-libs/dietlibc-0.28
 	net-firewall/iptables
 	net-misc/vconfig
 	sys-apps/iproute2
-	sys-process/procps"
+	sys-process/procps
+	=sys-devel/automake-1.9*"
 
 RDEPEND="sys-apps/iproute2
 	net-misc/vconfig
