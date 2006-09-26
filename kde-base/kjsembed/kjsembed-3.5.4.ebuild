@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/kjsembed-3.5.4.ebuild,v 1.2 2006/09/06 22:40:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/kjsembed-3.5.4.ebuild,v 1.3 2006/09/26 18:47:51 deathwing00 Exp $
 
 KMNAME=kdebindings
 KM_MAKEFILESREV=1
@@ -15,6 +15,8 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="$(deprange-dual $PV $MAXKDEVER kde-base/kwin)"
 OLDDEPEND="~kde-base/kwin-$PV"
+
+RDEPEND="${DEPEND}"
 
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
