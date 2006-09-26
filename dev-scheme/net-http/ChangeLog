@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/net-http
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/ChangeLog,v 1.2 2006/08/05 04:58:18 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/net-http/ChangeLog,v 1.3 2006/09/26 07:56:38 dberkholz Exp $
+
+  26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  net-http-0.3.1.ebuild:
+  Stable on x86/ppc.
 
   05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update my email address: spyderous -> dberkholz.
