@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.5 2006/09/20 17:53:27 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/5.5.17/tomcat.init,v 1.6 2006/09/26 19:48:17 wltjr Exp $
 
 init_env_vars() {
 	# Set some sane defaults
@@ -15,7 +15,7 @@ init_env_vars() {
 	# Activate Logging
 	if [[ -r "${CATALINA_HOME}"/bin/tomcat-juli.jar ]]; then
 		JAVA_OPTS="${JAVA_OPTS} -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager \
-			-Djava.util.logging.config.file=${CATALINA_BASE}/logging.properties"
+			-Djava.util.logging.config.file=${CATALINA_BASE}/conf/logging.properties"
 	fi
 
 	# Populate the classpath
@@ -59,7 +59,7 @@ start()	{
 		start-helper ${JAVA_HOME}/bin/jdb \
 			-sourcepath ${CATALINA_HOME}/../../jakarta-tomcat-catalina/catalina/src/share \
 			-Djava.security.manager \
-			-Djava.security.policy=${CATALINA_BASE}/catalina.policy
+			-Djava.security.policy=${CATALINA_BASE}/conf/catalina.policy
 	elif [[ "${TOMCAT_START}" == "jpda start" ]] ; then
 		start-helper ${JAVA_HOME}/bin/java ${JPDA_OPTS}
 	elif [[ "${TOMCAT_START}" == "start" ]] ; then
@@ -67,7 +67,7 @@ start()	{
 	elif [[ "${TOMCAT_START}" == "start -security" ]] ; then
 		start-helper ${JAVA_HOME}/bin/java \
 			-Djava.security.manager \
-			-Djava.security.policy=${CATALINA_BASE}/catalina.policy
+			-Djava.security.policy=${CATALINA_BASE}/conf/catalina.policy
 	else
 		eerror "Invalid TOMCAT_START variable value, or one is not set"
 		eerror "Please see /etc/conf.d/tomcat-5.5 for more information"
