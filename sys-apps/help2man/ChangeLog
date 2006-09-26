@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.27 2006/09/26 04:03:04 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.28 2006/09/26 18:32:56 gustavoz Exp $
+
+  26 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  help2man-1.36.4.ebuild:
+  Stable on hppa wrt #149054
 
   26 Sep 2006; Joshua Jackson <tsunam@gentoo.org> help2man-1.36.4.ebuild:
   Stable x86; bug #149054
