@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/kfind-3.5.2.ebuild,v 1.11 2006/09/03 12:25:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/kfind-3.5.2.ebuild,v 1.12 2006/09/26 18:29:11 deathwing00 Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -13,5 +13,6 @@ IUSE=""
 
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkonq)"
 
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="libkonq libkonq"

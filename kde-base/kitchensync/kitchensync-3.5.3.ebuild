@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.3.ebuild,v 1.1 2006/06/01 18:41:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/kitchensync-3.5.3.ebuild,v 1.2 2006/09/26 18:42:15 deathwing00 Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -12,6 +12,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 DEPEND="$(deprange $PV $MAXKDEVER kde-base/kontact)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)"
+
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="
 	libkcal libkcal
