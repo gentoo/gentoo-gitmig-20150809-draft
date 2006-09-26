@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.95_beta.ebuild,v 1.6 2006/09/20 12:22:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.95_beta.ebuild,v 1.7 2006/09/26 02:18:25 weeve Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,7 @@ SRC_URI="${SITE}/${MY_P}.tar.gz
 		${SITE}/festvox_us3.tar.gz )"
 LICENSE="FESTIVAL BSD as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc ~x86"
 IUSE="asterisk esd linguas_es mbrola X"
 
 RDEPEND="sys-libs/ncurses
