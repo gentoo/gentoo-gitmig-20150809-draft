@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2-r1.ebuild,v 1.1 2006/09/26 05:10:51 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2-r1.ebuild,v 1.2 2006/09/26 21:16:11 dberkholz Exp $
 
 
 inherit autotools flag-o-matic eutils
@@ -103,6 +103,10 @@ pbs_createspool() {
 			install -d -m${m} "${root}${d}"
 		else
 			chmod ${m} "${root}${d}"
+		fi
+		# (#149226) If we're running in src_*, then keepdir
+		if [[ ${root} = ${D} ]]; then
+			keepdir ${d}
 		fi
 	done
 }
