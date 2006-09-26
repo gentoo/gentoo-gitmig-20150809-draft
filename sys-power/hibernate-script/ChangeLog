@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.33 2006/09/17 05:44:10 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.34 2006/09/26 18:53:26 phreak Exp $
+
+  26 Sep 2006; Christian Heim <phreak@gentoo.org>
+  hibernate-script-1.93-r6.ebuild:
+  Silent bump to hibernate-script-1.93-patches-0.5 to fix #146352 (thanks
+  Alexander Skwar <askwar at digitalprojects.com> for reporting and testing).
 
 *hibernate-script-1.93-r6 (17 Sep 2006)
 
