@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup-luks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.41 2006/09/18 09:48:53 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup-luks/ChangeLog,v 1.42 2006/09/26 20:06:14 gustavoz Exp $
+
+  26 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  cryptsetup-luks-1.0.3-r2.ebuild:
+  Stable on hppa
 
   18 Sep 2006; Benjamin Smee <strerror@gentoo.org>
   cryptsetup-luks-1.0.3-r2.ebuild:
