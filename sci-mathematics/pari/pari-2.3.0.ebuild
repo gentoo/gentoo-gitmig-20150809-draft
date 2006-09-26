@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.3 2006/08/24 22:20:23 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.3.0.ebuild,v 1.4 2006/09/26 15:18:10 markusle Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -11,11 +11,20 @@ SRC_URI="http://pari.math.u-bordeaux.fr/pub/pari/unix/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="doc emacs"
+IUSE="doc emacs X"
 
 DEPEND="doc? ( virtual/tetex )
 		sys-libs/readline
-		|| ( x11-libs/libX11 virtual/x11 )"
+		X? ( || ( x11-libs/libX11 virtual/x11 ) )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# disable default building of docs during install
+	sed -e "s:install-doc install-examples:install-examples:" \
+		-i config/Makefile.SH || die "Failed to fix makefile"
+}
 
 src_compile() {
 	# Special handling for sparc
@@ -67,7 +76,9 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
+	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || \
+		die "Install failed"
+
 	if use emacs; then
 		insinto /usr/share/emacs/site-lisp
 		doins emacs/pari.el
@@ -75,6 +86,8 @@ src_install() {
 
 	dodoc AUTHORS Announce.2.1 CHANGES README TODO
 	if use doc; then
+		make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install-doc \
+			|| die "Failed to install docs"
 		insinto /usr/share/doc/${PF}
 		doins doc/*.pdf || die "Failed to install pdf docs"
 	fi

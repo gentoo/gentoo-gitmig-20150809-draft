@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.39 2006/08/24 22:20:23 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.40 2006/09/26 15:18:10 markusle Exp $
+
+  26 Sep 2006; Markus Dittrich <markusle@gentoo.org> pari-2.3.0.ebuild:
+  Added X useflag since X is optional for building pari-2.3.0
+  (see bug 141231). Also fixed up the install process such that 
+  latex is only used and needed for USE="doc".
 
   24 Aug 2006; Herbie Hopkins <herbs@gentoo.org> pari-2.3.0.ebuild:
   Removing fPIC workaround as the cause of this was resolved, see bug #114722.
