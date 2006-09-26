@@ -1,10 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734 RMD160 904d195cafa4334f9d8116a3d13eff4181e06d3b SHA1 0101a446e217a95f621e634544b19490fa01c072 SHA256 893180ba84ef69381d270286f042852a200c35b7792f55fe23920a0bcb1d8fb9
 MD5 82d14deda5805e21a60de03e0a69659c files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
 RMD160 904d195cafa4334f9d8116a3d13eff4181e06d3b files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
 SHA256 893180ba84ef69381d270286f042852a200c35b7792f55fe23920a0bcb1d8fb9 files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
+AUX net-snmp-5.2.1-fix-64bit-interface-counters.diff 1195 RMD160 c11898fcfe7964f2263c64a164b5010741be3e8b SHA1 670a0d4c5de33d79fc026cb4190f8c7f55ac9d10 SHA256 0304fe236b335eab2a42c9009e66310c03c82b9ead9886d6f558fc245f83581c
+MD5 bce531dc2d093d0659e02707c28a7b95 files/net-snmp-5.2.1-fix-64bit-interface-counters.diff 1195
+RMD160 c11898fcfe7964f2263c64a164b5010741be3e8b files/net-snmp-5.2.1-fix-64bit-interface-counters.diff 1195
+SHA256 0304fe236b335eab2a42c9009e66310c03c82b9ead9886d6f558fc245f83581c files/net-snmp-5.2.1-fix-64bit-interface-counters.diff 1195
 AUX net-snmp-5.2.1-fix-insecure-fixproc.diff 1639 RMD160 05b1099c32c2091e9606f167288a21503510cc20 SHA1 278b48283e536bc76935865ec227c402019e7df6 SHA256 100f18794f11c0d0fe43e9f50cec755158906268b4c2b560f45f8d7ff797422e
 MD5 a63107c1d81a8aeb10e84be0658e2794 files/net-snmp-5.2.1-fix-insecure-fixproc.diff 1639
 RMD160 05b1099c32c2091e9606f167288a21503510cc20 files/net-snmp-5.2.1-fix-insecure-fixproc.diff 1639
@@ -33,13 +34,13 @@ AUX snmptrapd.conf 635 RMD160 aba7b7196835bd359174156a527e13188f76e248 SHA1 0d29
 MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
 RMD160 aba7b7196835bd359174156a527e13188f76e248 files/snmptrapd.conf 635
 SHA256 902d73cb44446df060bf20e0c8ef0f8815d5b846f96d93894913d3309a3841b3 files/snmptrapd.conf 635
-DIST net-snmp-5.2.1.2.tar.gz 3869893
+DIST net-snmp-5.2.1.2.tar.gz 3869893 RMD160 30abfbde24caa7d04990bd111822b98b012f4a0c SHA1 e93a76e081df0bfb5aa126dbad5f182176f9579e SHA256 770c56d059e52ee164cfa0d914618a982e40674a269ce28daddc580c4b67fe60
 DIST net-snmp-5.2.2.tar.gz 3919826 RMD160 54c0bcc34ca6462aaab9ba69b06955dd7c11670f SHA1 2c45d24c5784b8b469e9ba3fde9eeeeabbcb7ab0 SHA256 ed5cc617e4cfe38af64a3ded8542c4e61d045dbeec00d5b93a31afc3337135fd
 DIST net-snmp-5.3.0.1.tar.gz 4183370
-EBUILD net-snmp-5.2.1.2-r1.ebuild 5091 RMD160 f16dbbee4a8df3335c9b44b5c20a6d241c717e43 SHA1 0598ae87694795c1b4fec4847e37dff44b342318 SHA256 782c84363e0035fcecdc534daaf475d57d13afe6a49c420cd31de3a2584d1ddf
-MD5 80cb809de03b99eab3c98bd4f37aacbe net-snmp-5.2.1.2-r1.ebuild 5091
-RMD160 f16dbbee4a8df3335c9b44b5c20a6d241c717e43 net-snmp-5.2.1.2-r1.ebuild 5091
-SHA256 782c84363e0035fcecdc534daaf475d57d13afe6a49c420cd31de3a2584d1ddf net-snmp-5.2.1.2-r1.ebuild 5091
+EBUILD net-snmp-5.2.1.2-r1.ebuild 5234 RMD160 5c43b15e234cd469a792ec3eeb445635931b038e SHA1 02dc4b293b9192e5a23e5c68030656d466d42a51 SHA256 1dbc840be6083391f8ba6b106ee826b5e99c4e76ed3747b21ce1a55bd41a2391
+MD5 5f6da3f097d0faaad9e0e7d41c1447bd net-snmp-5.2.1.2-r1.ebuild 5234
+RMD160 5c43b15e234cd469a792ec3eeb445635931b038e net-snmp-5.2.1.2-r1.ebuild 5234
+SHA256 1dbc840be6083391f8ba6b106ee826b5e99c4e76ed3747b21ce1a55bd41a2391 net-snmp-5.2.1.2-r1.ebuild 5234
 EBUILD net-snmp-5.2.2-r3.ebuild 5392 RMD160 9337808ed3b461ecccde0b49bec54895af967534 SHA1 a14ea9033d98bdd57bf4660e1a4599f3feda506e SHA256 cafdcd78a24107cd47aec7db8f290b4edd9e35c59f620a70d6d7b8968ac2d216
 MD5 c911908ccabc37b092ba628918044013 net-snmp-5.2.2-r3.ebuild 5392
 RMD160 9337808ed3b461ecccde0b49bec54895af967534 net-snmp-5.2.2-r3.ebuild 5392
@@ -56,19 +57,12 @@ MISC metadata.xml 160 RMD160 2738573ec519cbef4b293bc132f7dd9d02291137 SHA1 29b8b
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 RMD160 2738573ec519cbef4b293bc132f7dd9d02291137 metadata.xml 160
 SHA256 39e232fc7ec88ca0b077cb3950cb39d15cd990842b88d5bfe14f02f34d72f37b metadata.xml 160
-MD5 cfce6770c86e3e3bc76800c6bd6ee8c6 files/digest-net-snmp-5.2.1.2-r1 69
-RMD160 a076b089f94dca1bf3f17319b202b88694fe8777 files/digest-net-snmp-5.2.1.2-r1 69
-SHA256 a4fcd91f71f244fcad7a5ce569b39756e2e7df65431699ca267f612f33bbc861 files/digest-net-snmp-5.2.1.2-r1 69
+MD5 4282fe5dc17c4ae32ce06f2af3e12a36 files/digest-net-snmp-5.2.1.2-r1 253
+RMD160 c9135b6c6b561c0776d20ae70f7413428f1a95f4 files/digest-net-snmp-5.2.1.2-r1 253
+SHA256 6482f91a0e470d99ea91c3ceb723e6ee3c82320eb96071116cdf57b021186b1f files/digest-net-snmp-5.2.1.2-r1 253
 MD5 31a617d8717329eaab7e2e4e998da3ad files/digest-net-snmp-5.2.2-r3 247
 RMD160 84d045de83961306e7908bfdff02665fe6ebb9c0 files/digest-net-snmp-5.2.2-r3 247
 SHA256 8082447b2cf48c79d578b97f7a2773a06fa5e0810dc6329849e5030090508647 files/digest-net-snmp-5.2.2-r3 247
 MD5 d3cebd37f9a75b0968bd7a60fb68e7eb files/digest-net-snmp-5.3.0.1 69
 RMD160 3af61ce289bac38d223f56234ebf8be9e0bceb22 files/digest-net-snmp-5.3.0.1 69
 SHA256 3f8af1549b44c40f31793214b995359339a3e34263c436ccbc60aaaff3b73141 files/digest-net-snmp-5.3.0.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFEqvdz974XjDVpbkRAg+mAKCCZV25ppzbI4I2J26AecZGLechHQCgvHZL
-/d7MX9alGOFUYmsAmfYx7/k=
-=U8ww
------END PGP SIGNATURE-----
