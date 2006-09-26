@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.93-r6.ebuild,v 1.2 2006/09/26 18:53:26 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.93-r6.ebuild,v 1.3 2006/09/26 19:31:45 phreak Exp $
 
 inherit eutils
 
@@ -54,20 +54,20 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "You should run the following command to invalidate"
-	einfo "suspend images on a clean boot."
-	einfo
-	einfo "  # rc-update add hibernate-cleanup boot"
-	einfo
-	einfo "See /usr/share/doc/${PF}/README.gz for further details."
-	einfo
-	einfo "Please note that you will need to manually emerge any utilities"
-	einfo "(radeontool, vbetool, ...) enabled in the configuration files,"
-	einfo "should you wish to use them."
-	einfo
-	einfo "Starting with hibernate-script-1.90 the configuration files have"
-	einfo "been reordered and split into method specific files. Make sure you"
-	einfo "update your /etc/hibernate/ configuration files accordingly."
-	einfo
+	elog
+	elog "You should run the following command to invalidate"
+	elog "suspend images on a clean boot."
+	elog
+	elog "  # rc-update add hibernate-cleanup boot"
+	elog
+	elog "See /usr/share/doc/${PF}/README.gz for further details."
+	elog
+	elog "Please note that you will need to manually emerge any utilities"
+	elog "(radeontool, vbetool, ...) enabled in the configuration files,"
+	elog "should you wish to use them."
+	elog
+	elog "Starting with hibernate-script-1.90 the configuration files have"
+	elog "been reordered and split into method specific files. Make sure you"
+	elog "update your /etc/hibernate/ configuration files accordingly."
+	elog
 }
