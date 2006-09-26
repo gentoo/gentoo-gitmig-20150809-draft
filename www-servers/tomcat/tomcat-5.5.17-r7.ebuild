@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r7.ebuild,v 1.2 2006/09/26 20:16:19 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r7.ebuild,v 1.3 2006/09/26 21:19:41 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -33,7 +33,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	!java5? (
 		=virtual/jre-1.4*
 		>=dev-java/commons-httpclient-2.0
-		=dev-java/sun-jaf-1*
+		=dev-java/sun-jaf
 		~dev-java/jaxen-1.0
 		>=dev-java/junit-3.8.1
 		=dev-java/mx4j-3*
@@ -150,7 +150,7 @@ src_compile(){
 	antflags="${antflags} -Djasper.home=${S}/jasper"
 	if ! use java5; then
 		antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
-		antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf-1)"
+		antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf)"
 		antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"
 		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-3.0 mx4j.jar)"
 		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-3.0 mx4j-rjmx.jar)"
