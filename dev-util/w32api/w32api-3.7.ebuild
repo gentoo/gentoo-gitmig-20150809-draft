@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.7.ebuild,v 1.3 2006/09/24 14:10:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.7.ebuild,v 1.4 2006/09/26 06:18:02 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -42,7 +42,7 @@ src_unpack() {
 src_compile() {
 	just_headers && return 0
 
-	strip-unsupported-flags
+	CHOST=${CTARGET} strip-unsupported-flags
 	econf \
 		--host=${CTARGET} \
 		--prefix=/usr/${CTARGET}/usr \

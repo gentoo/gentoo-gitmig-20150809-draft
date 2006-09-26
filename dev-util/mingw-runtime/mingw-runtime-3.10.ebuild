@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.3 2006/09/24 14:11:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.4 2006/09/26 06:18:05 vapier Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -52,7 +52,7 @@ src_unpack() {
 src_compile() {
 	just_headers && return 0
 
-	strip-unsupported-flags
+	CHOST=${CTARGET} strip-unsupported-flags
 	econf \
 		--host=${CTARGET} \
 		--prefix=/usr/${CTARGET} \
