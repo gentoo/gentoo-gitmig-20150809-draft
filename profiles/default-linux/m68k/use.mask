@@ -43,7 +43,6 @@ tk
 tcltk
 ldap
 slang
-X
 diet
 gtk
 qt3
@@ -57,3 +56,4 @@ crypt
 mysql
 samba
 dbus
+xpm
