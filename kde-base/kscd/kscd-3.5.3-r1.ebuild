@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.3-r1.ebuild,v 1.1 2006/06/15 00:18:31 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/kscd-3.5.3-r1.ebuild,v 1.2 2006/09/26 20:34:45 deathwing00 Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=$PV
@@ -15,6 +15,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="$(deprange 3.5.2 $MAXKDEVER kde-base/libkcddb)"
+
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="libkcddb libkcddb"
 KMEXTRACTONLY="

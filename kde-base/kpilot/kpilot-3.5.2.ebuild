@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.5.2.ebuild,v 1.5 2006/05/30 05:09:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpilot/kpilot-3.5.2.ebuild,v 1.6 2006/09/26 20:16:30 deathwing00 Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -15,6 +15,8 @@ DEPEND="app-pda/pilot-link
 $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/kontact)"
+
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="
 	libkcal libkcal
