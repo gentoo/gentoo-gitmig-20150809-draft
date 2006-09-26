@@ -1,11 +1,11 @@
 # ChangeLog for net-dialup/bewan-adsl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.11 2006/09/26 21:17:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.12 2006/09/26 21:36:18 mrness Exp $
 
   26 Sep 2006; Alin Nastac <mrness@gentoo.org>
-  +files/bewan-adsl-0.9.3-kernel-2.6.16.patch,
+  +files/bewan-adsl-0.9.3-kernel-2.6.17.patch,
   +files/bewan-adsl-0.9.3-no-strip.patch, bewan-adsl-0.9.3-r1.ebuild:
-  Adapt kernel modules to the changes occured in 2.6.16 (#149143). Avoid
+  Adapt kernel modules to the changes occured in 2.6.17 (#149143). Avoid
   pre-stripped binaries QA warning.
 
   15 Aug 2006; Alin Nastac <mrness@gentoo.org> bewan-adsl-0.9.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r1.ebuild,v 1.4 2006/09/26 21:17:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r1.ebuild,v 1.5 2006/09/26 21:36:18 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -39,7 +39,7 @@ src_unpack() {
 	# Upstream consider actual version to be thread safe
 	epatch "${FILESDIR}/${P}-smp.patch"
 
-	epatch "${FILESDIR}/${P}-kernel-2.6.16.patch"
+	epatch "${FILESDIR}/${P}-kernel-2.6.17.patch"
 	epatch "${FILESDIR}/${P}-no-strip.patch"
 
 	# Declare desired COPTIONS in the Makefile for the PCI module
