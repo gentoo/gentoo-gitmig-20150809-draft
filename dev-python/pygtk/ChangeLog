@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.128 2006/09/15 22:16:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.129 2006/09/26 20:04:36 the_paya Exp $
+
+  26 Sep 2006; Javier Villavicencio <the_paya@gentoo.org>
+  pygtk-2.8.6.ebuild:
+  Add ~x86-fbsd keyword.
 
   15 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> pygtk-2.10.1.ebuild:
   Remove arm and sh until they've keyworded pygobject
