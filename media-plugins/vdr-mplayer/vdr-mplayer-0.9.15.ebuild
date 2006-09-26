@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.9.15.ebuild,v 1.1 2006/09/22 22:33:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.9.15.ebuild,v 1.2 2006/09/26 21:40:05 hd_brummy Exp $
 
 inherit vdr-plugin eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.2.6"
+DEPEND=">=media-video/vdr-1.4.2"
 
 RDEPEND="${DEPEND}
 		>=media-video/mplayer-0.90_rc4
