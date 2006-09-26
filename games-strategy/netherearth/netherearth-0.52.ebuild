@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.3 2006/06/27 20:48:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netherearth/netherearth-0.52.ebuild,v 1.4 2006/09/26 16:51:23 nyhm Exp $
 
 inherit eutils games
 
@@ -35,10 +35,12 @@ src_unpack() {
 	cp "${FILESDIR}/Makefile" . || die "Makefile copying failed"
 
 	# Fix compilation errors/warnings
-	epatch "${FILESDIR}/${P}-linux.patch" || die "epatch failed"
+	epatch "${FILESDIR}/${P}-linux.patch"
+
+	epatch "${FILESDIR}/${P}-freeglut.patch"
 
 	# Modify dirs and some fopen() permissions
-	epatch "${FILESDIR}/${P}-gentoo-paths.patch" || die "epatch failed"
+	epatch "${FILESDIR}/${P}-gentoo-paths.patch"
 	sed -i \
 		-e "s:models:${DATA_DIR}/models:" \
 		-e "s:textures:${DATA_DIR}/textures:" \
