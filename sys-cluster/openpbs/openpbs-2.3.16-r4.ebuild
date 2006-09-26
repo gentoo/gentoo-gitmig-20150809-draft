@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r4.ebuild,v 1.1 2006/09/26 04:25:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r4.ebuild,v 1.2 2006/09/26 07:21:13 dberkholz Exp $
 
 inherit eutils multilib
 
@@ -57,6 +57,9 @@ src_unpack() {
 
 	# Patch from SuSE srpm, found on rpmfind.net
 	epatch ${FILESDIR}/${PV}-gcc4.patch
+
+	# (#119479) lam-mpi shared lib links against libpbs.a so it needs -fPIC
+	epatch ${FILESDIR}/${PV}-build-fpic-static-libpbs.patch
 }
 
 src_compile() {
