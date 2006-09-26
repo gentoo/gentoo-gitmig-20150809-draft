@@ -1,6 +1,17 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.16 2006/09/20 05:09:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.17 2006/09/26 14:43:09 markusle Exp $
+
+*gamess-20060222.5 (26 Sep 2006)
+
+  26 Sep 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/gamess-20060222.5.gentoo.patch, -files/comp-gentoo.patch,
+  -files/compall-gentoo.patch, -files/compddi-gentoo.patch,
+  -files/lked-gentoo.patch, -files/runall-gentoo.1.patch,
+  -files/rungms-gentoo.1.patch, -gamess-05272005.5.ebuild,
+  +gamess-20060222.5.ebuild:
+  Version bump (see bug #149118). Also removed one old ebuild and 
+  its accompanying files.
 
   20 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   (#148281) Change herd to sci-chemistry from sci.
