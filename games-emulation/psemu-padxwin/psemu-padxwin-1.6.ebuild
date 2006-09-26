@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/psemu-padxwin-1.6.ebuild,v 1.6 2005/09/26 17:54:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/psemu-padxwin-1.6.ebuild,v 1.7 2006/09/26 18:23:37 nyhm Exp $
 
 inherit eutils games
 
@@ -10,16 +10,17 @@ SRC_URI="http://linuzappz.pcsx.net/downloads/padXwin-${PV}.tgz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/gtk+-1*"
+DEPEND="=x11-libs/gtk+-1.2*"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${PV}-makefile-cflags.patch"
+	sed -i '/strip/d' src/Makefile || die "sed failed"
 }
 
 src_compile() {
@@ -31,8 +32,8 @@ src_install() {
 	dodoc ReadMe.txt
 	cd src
 	exeinto "${GAMES_LIBDIR}/psemu/plugins"
-	doexe libpadXwin-*
+	doexe libpadXwin-* || die "doexe failed"
 	exeinto "${GAMES_LIBDIR}/psemu/cfg"
-	doexe cfgPadXwin
+	doexe cfgPadXwin || die "doexe failed"
 	prepgamesdirs
 }
