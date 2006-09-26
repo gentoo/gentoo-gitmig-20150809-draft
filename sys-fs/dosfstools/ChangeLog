@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.28 2006/09/25 14:25:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.29 2006/09/26 03:50:34 tsunam Exp $
+
+  26 Sep 2006; Joshua Jackson <tsunam@gentoo.org> dosfstools-2.11-r1.ebuild:
+  Stable x86; bug #149058
 
   25 Sep 2006; Markus Rothe <corsair@gentoo.org> dosfstools-2.11-r1.ebuild:
   Stable on ppc64; bug #149058
