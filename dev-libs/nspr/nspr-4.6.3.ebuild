@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.3.ebuild,v 1.8 2006/09/21 19:20:03 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.6.3.ebuild,v 1.9 2006/09/26 11:29:29 flameeyes Exp $
 
 inherit eutils gnuconfig
 
@@ -23,6 +23,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.6.1-config-1.patch
 	epatch "${FILESDIR}"/${PN}-4.6.1-lang.patch
 	epatch "${FILESDIR}"/${PN}-4.6.1-prtime.patch
+	epatch "${FILESDIR}"/${PN}-4.6.3-fbsd62.patch
 	gnuconfig_update
 }
 
@@ -79,15 +80,15 @@ src_install () {
 	#and link them back :)
 	cd ${D}/usr/$(get_libdir)/nspr
 	for file in *.so; do
-	    mv ${file} ${file}.${MINOR_VERSION}
-	    ln -s ${file}.${MINOR_VERSION} ${file}
+		mv ${file} ${file}.${MINOR_VERSION}
+		ln -s ${file}.${MINOR_VERSION} ${file}
 	done
 	# cope with libraries being in /usr/lib/nspr
 	dodir /etc/env.d
 	echo "LDPATH=/usr/$(get_libdir)/nspr" > ${D}/etc/env.d/08nspr
 
 	# install nspr-config
-	insinto  /usr/bin
+	insinto	 /usr/bin
 	doins ${S}/build/config/nspr-config
 	chmod a+x ${D}/usr/bin/nspr-config
 
