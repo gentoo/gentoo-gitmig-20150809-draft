@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/files/flexlm-init,v 1.3 2005/08/11 08:42:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/files/flexlm-init,v 1.4 2006/09/26 04:10:49 eradicator Exp $
 
 depend() {
 	need net
@@ -15,6 +15,6 @@ start() {
 
 stop() {
 	ebegin "Stopping lmgrd"
-	killall -HUP lmgrd &>/dev/null
-	eend
+	/opt/flexlm/bin/lmdown -q -all -force -c "${LMLICENSE}" >& /dev/null
+	eend $?
 }

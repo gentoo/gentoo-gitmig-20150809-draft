@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.10 2006/02/24 20:16:08 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.11 2006/09/26 04:10:48 eradicator Exp $
+
+  26 Sep 2006; Jeremy Huddleston <eradicator@gentoo.org> files/flexlm-init:
+  Use lmdown rather than killing processes.
 
   24 Feb 2006; <chrb@gentoo.org> -flexlm-9.2.1.ebuild:
   removing old ebuild to fix enduser.pdf digest collision, bug #123920.
