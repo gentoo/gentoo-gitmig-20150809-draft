@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.52 2006/09/25 17:58:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.53 2006/09/26 04:24:26 tsunam Exp $
+
+  26 Sep 2006; Joshua Jackson <tsunam@gentoo.org> make-3.81.ebuild:
+  Stable x86; bug #149052
 
   25 Sep 2006; <nixnut@gentoo.org> make-3.81.ebuild:
   Stable on ppc wrt bug 149052
