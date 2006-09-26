@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.76 2006/09/26 03:58:02 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.77 2006/09/26 11:50:48 blubb Exp $
+
+  26 Sep 2006; Simon Stelling <blubb@gentoo.org> sed-4.1.5.ebuild:
+  stable on amd64
 
   26 Sep 2006; Joshua Jackson <tsunam@gentoo.org> sed-4.1.5.ebuild:
   Stable x86; bug #149056
