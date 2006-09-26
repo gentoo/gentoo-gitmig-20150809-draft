@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.46 2006/09/25 08:25:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.47 2006/09/26 06:24:46 dberkholz Exp $
+
+  26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/7.1.2-liblam-use-extra-libs.patch, lam-mpi-7.1.2.ebuild:
+  Fix for -Wl,--as-needed.
 
   25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   lam-mpi-7.1.1-r3.ebuild, lam-mpi-7.1.2.ebuild:

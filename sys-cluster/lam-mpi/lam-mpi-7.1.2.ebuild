@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.3 2006/09/25 08:25:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.2.ebuild,v 1.4 2006/09/26 06:24:46 dberkholz Exp $
 
 inherit autotools eutils fortran flag-o-matic multilib portability
 
@@ -41,6 +41,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-lam_prog_f77.m4.patch
+	epatch "${FILESDIR}"/${PV}-liblam-use-extra-libs.patch
 	eautoreconf
 }
 
