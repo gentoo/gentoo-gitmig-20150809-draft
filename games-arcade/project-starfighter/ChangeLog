@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/project-starfighter
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.10 2006/09/20 16:48:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/ChangeLog,v 1.11 2006/09/26 15:10:11 wolf31o2 Exp $
+
+  26 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  project-starfighter-1.1.ebuild:
+  Added built_with_use to check that sdl-image was built with USE=gif for bug
+  #148558.
 
   20 Sep 2006; <blubb@gentoo.org> project-starfighter-1.1.ebuild:
   stable on amd64

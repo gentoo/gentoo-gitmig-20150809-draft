@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.13 2006/09/20 16:48:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/project-starfighter/project-starfighter-1.1.ebuild,v 1.14 2006/09/26 15:10:11 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,6 +20,14 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-mixer"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	games_pkg_setup
+	if ! built_with_use media-libs/sdl-image gif
+	then
+		die "You need to build media-libs/sdl-image with USE=gif!"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
