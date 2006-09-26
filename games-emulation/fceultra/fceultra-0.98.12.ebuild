@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.98.12.ebuild,v 1.5 2006/08/17 17:49:17 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.98.12.ebuild,v 1.6 2006/09/26 20:56:48 nyhm Exp $
 
 inherit eutils games
 
@@ -22,6 +22,12 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gcc-3.2.2"
 
 S=${WORKDIR}/fceu
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-mkdir.patch
+}
 
 src_compile() {
 	egamesconf \
