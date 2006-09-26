@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.6.ebuild,v 1.10 2006/05/28 09:20:02 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.6.ebuild,v 1.11 2006/09/26 17:32:18 grobian Exp $
 
 inherit eutils
 
@@ -33,7 +33,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-no-undefined.patch || die "epatch failed"
 	epatch ${FILESDIR}/${P}-macos.patch || die "epatch failed"
 }
 

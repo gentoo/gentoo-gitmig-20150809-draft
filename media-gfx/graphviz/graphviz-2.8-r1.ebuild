@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r1.ebuild,v 1.2 2006/09/23 07:54:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r1.ebuild,v 1.3 2006/09/26 17:32:18 grobian Exp $
 
 inherit eutils libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
 
 LICENSE="CPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="cairo tcltk X static minimal"
 
 RDEPEND=">=sys-libs/zlib-1.1.3
