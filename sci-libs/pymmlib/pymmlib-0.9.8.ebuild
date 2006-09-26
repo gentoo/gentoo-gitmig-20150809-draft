@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.3 2006/06/14 03:02:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/pymmlib-0.9.8.ebuild,v 1.4 2006/09/26 07:54:00 dberkholz Exp $
 
 inherit multilib python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pymmlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pymmlib/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE=""
 RDEPEND="virtual/glut
 	dev-python/pygtkglext

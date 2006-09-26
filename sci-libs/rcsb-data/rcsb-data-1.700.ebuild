@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/rcsb-data-1.700.ebuild,v 1.2 2006/04/26 03:52:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/rcsb-data/rcsb-data-1.700.ebuild,v 1.3 2006/09/26 07:59:17 dberkholz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sw-tools.pdb.org/apps/PDB_EXTRACT/index.html"
 SRC_URI="http://sw-tools.pdb.org/apps/PDB_EXTRACT/${MY_P}.tar.gz"
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coot-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.4 2006/09/26 07:49:02 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/ChangeLog,v 1.5 2006/09/26 07:57:12 dberkholz Exp $
+
+  26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; coot-data-1.ebuild:
+  Stable on x86/ppc.
 
   26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Change herd to sci-chemistry from sci.
