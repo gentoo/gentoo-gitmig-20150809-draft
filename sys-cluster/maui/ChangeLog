@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/maui
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.4 2006/09/25 05:56:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.5 2006/09/26 04:33:09 dberkholz Exp $
+
+*maui-3.2.6_p16 (26 Sep 2006)
+
+  26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/3.2.6_p16-autoconf-2.60-compat.patch,
+  +files/3.2.6_p16-link-pbs-after-moab.patch,
+  +files/3.2.6_p16-set-pbs-cflags-ldflags.patch, +maui-3.2.6_p16.ebuild:
+  Bump. Works with PBS installed to /usr/libdir/pbs/lib, so blocks on older
+  openpbs. May not work on torque 1.x either.
 
   25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   maui-3.2.6_p13-r1.ebuild:
