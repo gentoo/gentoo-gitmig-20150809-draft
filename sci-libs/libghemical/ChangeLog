@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libghemical
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.9 2006/07/09 07:06:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libghemical/ChangeLog,v 1.10 2006/09/26 07:49:19 dberkholz Exp $
+
+  26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Change herd to sci-chemistry from sci.
 
   09 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   libghemical-2.00.ebuild:
