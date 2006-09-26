@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.49 2006/09/17 22:53:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.50 2006/09/26 20:40:18 deathwing00 Exp $
+
+  26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kscreensaver-3.5.1.ebuild, kscreensaver-3.5.3.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kscreensaver-3.4.3.ebuild:
   Drop KDE 3.4.
