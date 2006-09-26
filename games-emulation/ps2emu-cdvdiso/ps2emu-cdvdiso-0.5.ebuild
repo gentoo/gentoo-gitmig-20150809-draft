@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.5.ebuild,v 1.3 2006/05/03 05:51:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.5.ebuild,v 1.4 2006/09/26 18:50:15 nyhm Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="=x11-libs/gtk+-1*"
+RDEPEND="=x11-libs/gtk+-1.2*"
 DEPEND="${RDEPEND}
 	app-arch/unrar"
 
@@ -22,7 +22,10 @@ S=${WORKDIR}/CDVDiso${PV//.}
 src_unpack() {
 	unrar x -idq "${DISTDIR}"/${A} || die
 	cd "${S}"
-	sed -i 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' src/Linux/Makefile || die
+	sed -i \
+		-e 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' \
+		-e '/strip/d' \
+		src/Linux/Makefile || die
 	epatch "${FILESDIR}/${P}"-gcc41.patch
 }
 
