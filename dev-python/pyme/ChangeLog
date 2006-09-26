@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.14 2006/04/27 19:12:32 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.15 2006/09/26 12:52:51 marienz Exp $
+
+*pyme-0.7.0-r1 (26 Sep 2006)
+
+  26 Sep 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pyme-0.7.0-swig-compatibility.patch, +pyme-0.7.0-r1.ebuild:
+  Make pyme build with recent versions of swig. Closes bug #144020, thanks to
+  genone for reporting.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-pyme-0.5.1,
   files/digest-pyme-0.6.0, files/digest-pyme-0.7.0, Manifest:
