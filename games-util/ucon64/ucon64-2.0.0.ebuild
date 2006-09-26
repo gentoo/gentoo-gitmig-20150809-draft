@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.1 2005/08/23 17:15:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.2 2006/09/26 18:55:58 nyhm Exp $
 
 DESCRIPTION="The backup tool and wonderful emulator's Swiss Army knife program"
 HOMEPAGE="http://ucon64.sourceforge.net/"
@@ -14,6 +14,15 @@ IUSE=""
 DEPEND="sys-libs/zlib"
 
 S=${WORKDIR}/${P}-src
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e "/^CFLAGS/s/-O3/${CFLAGS}/" \
+		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
+		src/{,libdiscmage/}Makefile.in || die "sed failed"
+}
 
 src_compile() {
 	local myconf
