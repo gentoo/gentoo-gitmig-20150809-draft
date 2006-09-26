@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdenetwork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.41 2006/09/17 22:53:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.42 2006/09/26 21:47:02 deathwing00 Exp $
+
+  26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  libkdenetwork-3.5.0.ebuild, libkdenetwork-3.5.3.ebuild,
+  libkdenetwork-3.5.4.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
   -libkdenetwork-3.4.1.ebuild:
