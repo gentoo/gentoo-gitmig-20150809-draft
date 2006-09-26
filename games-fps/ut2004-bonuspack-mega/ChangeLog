@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-bonuspack-mega
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.6 2006/04/11 11:48:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-mega/ChangeLog,v 1.7 2006/09/26 14:56:28 wolf31o2 Exp $
+
+  26 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-bonuspack-mega-1-r1.ebuild:
+  Remove dependency on ut2004 since this causes circular dependencies. Closing
+  bug #149024.
 
   11 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-bonuspack-mega-1-r1.ebuild:

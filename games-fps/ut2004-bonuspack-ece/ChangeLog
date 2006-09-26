@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-bonuspack-ece
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ChangeLog,v 1.11 2006/04/14 11:29:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ChangeLog,v 1.12 2006/09/26 14:57:28 wolf31o2 Exp $
+
+  26 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-bonuspack-ece-1-r2.ebuild:
+  Remove dependency on ut2004 since this causes circular dependencies. Closing
+  bug #149024.
 
   14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-bonuspack-ece-1-r2.ebuild:

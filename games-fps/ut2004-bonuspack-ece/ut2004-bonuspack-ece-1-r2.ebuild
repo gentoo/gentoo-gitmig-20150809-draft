@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r2.ebuild,v 1.3 2006/04/14 11:29:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r2.ebuild,v 1.4 2006/09/26 14:57:28 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -20,8 +20,7 @@ RESTRICT="mirror strip"
 IUSE=""
 
 # Override games-ut2k4mod eclass
-RDEPEND=">=games-fps/ut2004-3369-r1
-	>=games-fps/ut2004-data-3186-r3"
+RDEPEND="games-fps/ut2004-data"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/UT2004MegaPack
