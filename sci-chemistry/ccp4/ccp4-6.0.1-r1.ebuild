@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.1 2006/08/07 03:42:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.1-r1.ebuild,v 1.2 2006/09/26 08:01:27 dberkholz Exp $
 
 inherit fortran eutils gnuconfig toolchain-funcs
 
@@ -45,7 +45,7 @@ for i in $(seq $PATCH_TOT); do
 done
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE="X"
 # app-office/sc overlaps sc binary and man page
 # We can't rename ours since the automated ccp4i interface expects it there,
