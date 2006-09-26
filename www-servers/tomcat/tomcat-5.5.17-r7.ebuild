@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r7.ebuild,v 1.1 2006/09/26 19:48:17 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r7.ebuild,v 1.2 2006/09/26 20:16:19 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -145,12 +145,12 @@ src_compile(){
 	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
-	antflags="${antflags} -Dmail.jar=$(java-pkg_getjar sun-javamail-bin mail.jar)"
+	antflags="${antflags} -Dmail.jar=$(java-pkg_getjar sun-javamail mail.jar)"
 	antflags="${antflags} -Dstruts.home=/usr/share/struts"
 	antflags="${antflags} -Djasper.home=${S}/jasper"
 	if ! use java5; then
 		antflags="${antflags} -Dcommons-httpclient.jar=$(java-config -p commons-httpclient)"
-		antflags="${antflags} -Dactivation.jar=$(java-config -p gnu-jaf-1)"
+		antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf-1)"
 		antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"
 		antflags="${antflags} -Djmx.jar=$(java-pkg_getjar mx4j-3.0 mx4j.jar)"
 		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-3.0 mx4j-rjmx.jar)"
