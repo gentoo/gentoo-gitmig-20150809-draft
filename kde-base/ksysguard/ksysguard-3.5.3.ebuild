@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-3.5.3.ebuild,v 1.2 2006/06/02 00:44:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-3.5.3.ebuild,v 1.3 2006/09/26 21:23:44 deathwing00 Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -12,6 +12,8 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="lm_sensors zeroconf"
 DEPEND="lm_sensors? ( sys-apps/lm_sensors )
 	zeroconf? ( net-misc/mDNSResponder )"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf="$(use_with lm_sensors sensors)
