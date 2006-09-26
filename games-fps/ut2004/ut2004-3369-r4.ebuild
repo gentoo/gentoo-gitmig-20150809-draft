@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.9 2006/09/06 22:37:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369-r4.ebuild,v 1.10 2006/09/26 14:50:43 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -29,13 +29,10 @@ RDEPEND=">=games-fps/ut2004-data-3186-r2
 	opengl? (
 		virtual/opengl )
 	=virtual/libstdc++-3.3
-	|| (
-		(
-			x11-libs/libXext
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp )
-		virtual/x11 )"
+	x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp"
 	# If you wish to use your system libSDL/openal, then you will need to remove
 	# the comments from the following two lines, along with the quotes above and
 	# this comment text.
