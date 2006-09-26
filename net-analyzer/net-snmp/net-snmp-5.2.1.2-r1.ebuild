@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2-r1.ebuild,v 1.5 2006/02/04 18:10:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.2-r1.ebuild,v 1.6 2006/09/26 22:19:58 squash Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -67,6 +67,10 @@ src_unpack() {
 	# fix path in fixproc
 	sed -i -e 's|\(database_file =.*\)/local\(.*\)$|\1\2|' local/fixproc || \
 		die "sed fixproc failed"
+	# fix 64 bit interface counters on sparc64, bug 147609
+	if use sparc; then
+		epatch ${FILESDIR}/${PN}-5.2.1-fix-64bit-interface-counters.diff
+	fi
 
 	ht_fix_all
 }
