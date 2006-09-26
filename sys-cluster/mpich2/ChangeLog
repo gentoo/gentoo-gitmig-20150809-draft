@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.13 2006/09/24 18:15:25 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.14 2006/09/26 01:16:29 weeve Exp $
+
+  26 Sep 2006; Jason Wever <weeve@gentoo.org> mpich2-1.0.3.ebuild:
+  Stable on SPARC wrt bug #133999.
 
   24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; mpich2-1.0.3.ebuild,
   mpich2-1.0.3-r1.ebuild:
