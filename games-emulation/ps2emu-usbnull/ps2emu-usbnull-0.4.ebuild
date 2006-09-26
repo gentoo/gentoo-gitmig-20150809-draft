@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-usbnull/ps2emu-usbnull-0.4.ebuild,v 1.2 2005/08/07 07:36:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-usbnull/ps2emu-usbnull-0.4.ebuild,v 1.3 2006/09/26 18:43:45 nyhm Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND="=x11-libs/gtk+-1*"
+RDEPEND="=x11-libs/gtk+-1.2*"
 DEPEND="${RDEPEND}
 	app-arch/unrar"
 
@@ -22,7 +22,10 @@ S=${WORKDIR}/USBnull${PV//.}
 src_unpack() {
 	unrar x -idq "${DISTDIR}"/${A} || die
 	cd "${S}"
-	sed -i 's:-O3 -fomit-frame-pointer:$(OPTFLAGS):' Linux/Makefile || die
+	sed -i \
+		-e 's:-O3 -fomit-frame-pointer:$(OPTFLAGS):' \
+		-e '/strip/d' \
+		Linux/Makefile || die
 }
 
 src_compile() {
