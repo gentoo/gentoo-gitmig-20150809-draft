@@ -1,0 +1,44 @@
+http://bugs.gentoo.org/131483
+http://oss.sgi.com/bugzilla/show_bug.cgi?id=707
+
+===========================================================================
+Index: xfsprogs/configure.in
+===========================================================================
+
+--- a/xfsprogs/configure.in	2006-09-26 11:14:51.000000000 +1000
++++ b/xfsprogs/configure.in	2006-09-26 11:14:51.000000000 +1000
+@@ -57,6 +57,7 @@ AC_HAVE_GETMNTINFO
+ 
+ AC_TYPE_PSINT
+ AC_TYPE_PSUNSIGNED
++AC_CHECK_TYPES(__u32,,,[#include <asm/types.h>])
+ AC_SIZEOF_POINTERS_AND_LONG
+ AC_MANUAL_FORMAT
+ 
+
+===========================================================================
+Index: xfsprogs/include/platform_defs.h.in
+===========================================================================
+
+--- a/xfsprogs/include/platform_defs.h.in	2006-09-26 11:14:52.000000000 +1000
++++ b/xfsprogs/include/platform_defs.h.in	2006-09-26 11:14:52.000000000 +1000
+@@ -31,6 +31,10 @@
+ #include <unistd.h>
+ #include <sys/types.h>
+ 
++#undef HAVE___U32
++#ifdef HAVE___U32
++#include <asm/types.h>
++#else
+ typedef unsigned char		__u8;
+ typedef signed char		__s8;
+ typedef unsigned short		__u16;
+@@ -39,6 +43,7 @@ typedef unsigned int		__u32;
+ typedef signed int		__s32;
+ typedef unsigned long long int	__u64;
+ typedef signed long long int	__s64;
++#endif
+ 
+ typedef __u16			__be16;
+ typedef __u32			__be32;
+

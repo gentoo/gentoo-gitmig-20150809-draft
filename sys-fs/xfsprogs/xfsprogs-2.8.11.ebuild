@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.11.ebuild,v 1.1 2006/09/26 16:52:33 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.8.11.ebuild,v 1.2 2006/09/27 06:36:18 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit flag-o-matic eutils autotools toolchain-funcs
 
 MY_P="${PN}_${PV}-1"
@@ -21,6 +23,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-kern-types.patch #131483
 	epatch "${FILESDIR}"/${PN}-2.7.11-no-compress-docs.patch #129486
 	# Inject our own CFLAGS / docpath
 	sed -i \
