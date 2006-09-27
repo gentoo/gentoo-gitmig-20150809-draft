@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r7.ebuild,v 1.3 2006/09/26 21:19:41 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.17-r7.ebuild,v 1.4 2006/09/27 16:54:26 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -33,7 +33,7 @@ RDEPEND="=dev-java/eclipse-ecj-3.1*
 	!java5? (
 		=virtual/jre-1.4*
 		>=dev-java/commons-httpclient-2.0
-		=dev-java/sun-jaf
+		dev-java/sun-jaf
 		~dev-java/jaxen-1.0
 		>=dev-java/junit-3.8.1
 		=dev-java/mx4j-3*
@@ -156,7 +156,7 @@ src_compile(){
 		antflags="${antflags} -Djmx-remote.jar=$(java-pkg_getjar mx4j-3.0 mx4j-rjmx.jar)"
 		antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 		antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
-		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
+		antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xml-commons-external-1.3 xml-apis.jar)"
 	fi
 
 	eant ${antflags}

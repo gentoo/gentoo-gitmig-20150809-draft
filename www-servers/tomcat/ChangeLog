@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.67 2006/09/26 21:19:41 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.68 2006/09/27 16:54:26 wltjr Exp $
+
+  27 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-5.5.17-r7.ebuild:
+  Corrected invalid atom =dev-java/sun-jaf per bug # 149317. Also corrected
+  the package xml-apis.jar comes from. Was changed to xml-commons-external-1.3
+  but was mistakenly changed back when updating the ebuild for java5 use flag
+  and 1.5 jdks
 
   26 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-5.5.17-r7.ebuild:
