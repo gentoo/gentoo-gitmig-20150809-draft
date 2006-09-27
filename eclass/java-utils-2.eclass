@@ -1162,7 +1162,7 @@ java-pkg_get-target() {
 java-pkg_get-javac() {
 	debug-print-function ${FUNCNAME} $*
 
-	java-pkg_init-compiler_
+
 	local compiler="${GENTOO_COMPILER}"
 
 	local compiler_executable
@@ -1180,16 +1180,19 @@ java-pkg_get-javac() {
 			compiler_executable="$(source ${compiler_env} 1>/dev/null 2>&1; echo ${JAVAC})"
 			export JAVAC=${old_javac}
 
-			[[ -z ${compiler_executable} ]] && die "JAVAC is empty or undefined in ${compiler_env}"
+			if [[ -z ${compiler_executable} ]]; then
+				echo "JAVAC is empty or undefined in ${compiler_env}"
+				return 1
+			fi
 
 			# check that it's executable
 			if [[ ! -x ${compiler_executable} ]]; then
-				eerror "Could not find ${compiler_executable}!"
-				die "${compiler_executable} doesn't exist, or isn't executable"
+				echo "${compiler_executable} doesn't exist, or isn't executable"
+				return 1
 			fi
 		else
-			eerror "Could not find environment file for ${compiler}"
-			die "Could not find ${compiler_env}"
+			echo "Could not find environment file for ${compiler}"
+			return 1
 		fi
 	fi
 	echo ${compiler_executable}
@@ -1216,8 +1219,9 @@ java-pkg_javac-args() {
 	debug-print "want target: ${want_target}"
 
 	if [[ -z "${want_source}" || -z "${want_target}" ]]; then
-		debug-print "could not find valid -source/-target values"
-		die "Could not find valid -source/-target values"
+		debug-print "could not find valid -source/-target values for javac"
+		echo "Could not find valid -source/-target values for javac"
+		return 1
 	else
 		if java-pkg_is-vm-version-ge "1.4"; then
 			echo "${source_str} ${target_str}"
@@ -1332,12 +1336,24 @@ eant() {
 ejavac() {
 	debug-print-function ${FUNCNAME} $*
 
-	# FIXME using get-javac ends up printing stuff with einfo
-#	local compiler_executable=$(java-pkg_get-javac)
-	local compiler_executable="javac"
+	java-pkg_init-compiler_
 
-	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ${compiler_executable} $(java-pkg_javac-args) "${@}"
-	${compiler_executable} $(java-pkg_javac-args) "${@}" || die "ejavac failed"
+	local compiler_executable
+	compiler_executable=$(java-pkg_get-javac)
+	if [[ ${?} != 0 ]]; then
+		eerror "There was a problem determining compiler: ${compiler_executable}"
+		die "get-javac failed"
+	fi
+
+	local javac_args
+	javac_args="$(java-pkg_javac-args)"
+	if [[ ${?} != 0 ]]; then
+		eerror "There was a problem determining JAVACFLAGS: ${javac_args}"
+		die "java-pkg_javac-args failed"
+	fi
+
+	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ${compiler_executable} ${javac_args} "${@}"
+	${compiler_executable} ${javac_args} "${@}" || die "ejavac failed"
 }
 
 # ------------------------------------------------------------------------------
@@ -1786,9 +1802,16 @@ java-pkg_switch-vm() {
 		elif [[ "${JAVA_PKG_ALLOW_VM_CHANGE}" == "yes" ]]; then
 			debug-print "depend-java-query:  NV_DEPEND:	${JAVA_PKG_NV_DEPEND:-${DEPEND}} VNEED: ${JAVA_PKG_VNEED}"
 			if [[ -n ${JAVA_PKG_VNEED} ]]; then
-				export GENTOO_VM="$(depend-java-query --need-virtual "${JAVA_PKG_VNEED}" --get-vm "${JAVA_PKG_NV_DEPEND:-${DEPEND}}")"
+				GENTOO_VM="$(depend-java-query --need-virtual "${JAVA_PKG_VNEED}" --get-vm "${JAVA_PKG_NV_DEPEND:-${DEPEND}}")"
 			else
-				export GENTOO_VM="$(depend-java-query --get-vm "${JAVA_PKG_NV_DEPEND:-${DEPEND}}")"
+				GENTOO_VM="$(depend-java-query --get-vm "${JAVA_PKG_NV_DEPEND:-${DEPEND}}")"
+			fi
+			if [[ -z "${GENTOO_VM}" || "${GENTOO_VM}" == "None" ]]; then
+				eerror "Unable to determine VM for building from dependencies."
+				echo "NV_DEPEND: ${JAVA_PKG_NV_DEPEND:-${DEPEND}}"
+				echo "VNEED: ${JAVA_PKG_VNEED}"
+			else
+				export GENTOO_VM
 			fi
 		# otherwise just make sure the current VM is sufficient
 		else
@@ -1800,8 +1823,13 @@ java-pkg_switch-vm() {
 
 		export JAVA=$(java-config --java)
 		export JAVAC=$(java-config --javac)
-		export JAVACFLAGS="$(java-pkg_javac-args)"
-		[[ -n ${JAVACFLAGS_EXTRA} ]] && export JAVACFLAGS="${JAVACFLAGS_EXTRA} ${JAVACFLAGS}"
+		JAVACFLAGS="$(java-pkg_javac-args)"
+		if [[ ${?} != 0 ]]; then
+			eerror "There was a problem determining JAVACFLAGS: ${JAVACFLAGS}"
+			die "java-pkg_javac-args failed"
+		fi
+		[[ -n ${JAVACFLAGS_EXTRA} ]] && JAVACFLAGS="${JAVACFLAGS_EXTRA} ${JAVACFLAGS}"
+		export JAVACFLAGS
 
 		export JAVA_HOME="$(java-config -g JAVA_HOME)"
 		export JDK_HOME=${JAVA_HOME}
