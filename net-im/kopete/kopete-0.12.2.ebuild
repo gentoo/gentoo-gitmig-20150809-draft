@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.2.ebuild,v 1.1 2006/08/31 10:07:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.2.ebuild,v 1.2 2006/09/27 09:57:53 flameeyes Exp $
 
 inherit kde eutils
 
@@ -46,7 +46,8 @@ RDEPEND="${BOTH_DEPEND}
 	ssl? ( app-crypt/qca-tls )
 	!kde-base/kopete
 	!kde-base/kdenetwork
-	latex? ( virtual/tetex )
+	latex? ( virtual/tetex
+		media-gfx/imagemagick )
 	crypt? ( app-crypt/gnupg )"
 #	gnomemeeting is deprecated and ekiga is not yet ~ppc64
 #	only needed for calling
