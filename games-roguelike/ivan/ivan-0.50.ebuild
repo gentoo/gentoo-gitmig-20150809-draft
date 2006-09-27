@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.5 2006/07/18 08:32:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.6 2006/09/27 14:13:59 nyhm Exp $
 
-inherit flag-o-matic games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="Rogue-like game with SDL graphics"
 HOMEPAGE="http://ivan.sourceforge.net/"
