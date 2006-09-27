@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.13 2006/09/27 15:59:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.14 2006/09/27 16:30:34 nyhm Exp $
 
 inherit eutils games
 
@@ -18,10 +18,10 @@ DEPEND=">=dev-python/pygame-1.5.6
 	media-libs/libsdl"
 
 pkg_setup() {
-	games_pkg_setup
 	if ! built_with_use media-libs/sdl-mixer mikmod ; then
 		die "You need to build media-libs/sdl-mixer with USE=mikmod"
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
