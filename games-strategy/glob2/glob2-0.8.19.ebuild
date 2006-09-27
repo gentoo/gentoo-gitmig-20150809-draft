@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.19.ebuild,v 1.2 2006/05/28 10:13:20 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.19.ebuild,v 1.3 2006/09/27 14:23:47 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Real Time Strategy (RTS) game involving a brave army of globs"
 HOMEPAGE="http://globulation2.org/"

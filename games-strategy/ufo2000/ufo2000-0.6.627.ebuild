@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.7 2006/05/31 22:00:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.8 2006/09/27 14:25:32 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Free multiplayer remake of X-COM (UFO: Enemy Unknown)"
 HOMEPAGE="http://ufo2000.sourceforge.net/"
