@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r4.ebuild,v 1.8 2006/09/15 23:12:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r4.ebuild,v 1.9 2006/09/27 18:31:37 wolf31o2 Exp $
 
 # Alter ebuild so that the metadata cache is invalidated.
 
@@ -28,13 +28,10 @@ RDEPEND="sys-libs/glibc
 	amd64? (
 		app-emulation/emul-linux-x86-gtklibs )
 	x86? (
-		|| (
-			(
-				x11-libs/libXrandr
-				x11-libs/libXcursor
-				x11-libs/libXinerama
-				x11-libs/libXi )
-			virtual/x11 )
+		x11-libs/libXrandr
+		x11-libs/libXcursor
+		x11-libs/libXinerama
+		x11-libs/libXi
 		virtual/xft )
 	!app-emulation/vmware-player
 	!app-emulation/vmware-server
