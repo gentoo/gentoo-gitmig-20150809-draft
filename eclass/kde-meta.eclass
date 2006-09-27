@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.80 2006/09/15 18:22:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.81 2006/09/27 23:10:10 carlo Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -18,18 +18,14 @@ fi
 # The following code should set TARBALLVER (the version in the tarball's name)
 # and TARBALLDIRVER (the version of the toplevel directory inside the tarball).
 case "$PV" in
-	3.5_alpha1)		TARBALLDIRVER="3.4.90"; TARBALLVER="3.4.90" ;;
-	3.5_beta1)		TARBALLDIRVER="3.4.91"; TARBALLVER="3.4.91" ;;
 	3.5.0_beta2)		TARBALLDIRVER="3.4.92"; TARBALLVER="3.4.92" ;;
 	3.5.0_rc1)		TARBALLDIRVER="3.5.0"; TARBALLVER="3.5.0_rc1" ;;
 	*)				TARBALLDIRVER="$PV"; TARBALLVER="$PV" ;;
 esac
 if [[ "${KMNAME}" = "koffice" ]]; then
 	case "$PV" in
-		1.5_beta1)	TARBALLDIRVER="1.4.90"; TARBALLVER="1.4.90" ;;
-		1.5_beta2)	TARBALLDIRVER="1.4.95"; TARBALLVER="1.4.95" ;;
-		1.5_rc1)	TARBALLDIRVER="1.5.0-rc1"; TARBALLVER="1.5.0-rc1" ;;
 		1.6_beta1)	TARBALLDIRVER="1.5.91"; TARBALLVER="1.5.91" ;;
+		1.6_rc1)	TARBALLDIRVER="1.5.92"; TARBALLVER="1.5.92" ;;
 	esac
 fi
 
@@ -51,8 +47,6 @@ if [[ "$KDEBASE" = "true" ]]; then
 	case "$PV" in
 		3.5.0_*)	SRC_PATH="mirror://kde/unstable/${PV/.0_/-}/src/$TARBALL" ;;
 		3.5_*)		SRC_PATH="mirror://kde/unstable/${PV/_/-}/src/$TARBALL" ;;
-		3.4.0_*)	SRC_PATH="mirror://kde/unstable/$TARBALLVER/src/$TARBALL" ;;
-		3.4.0)		SRC_PATH="mirror://kde/stable/3.4/src/$TARBALL" ;;
 		3.5.0)		SRC_PATH="mirror://kde/stable/3.5/src/$TARBALL" ;;
 		3*)		SRC_PATH="mirror://kde/stable/$TARBALLVER/src/$TARBALL" ;;
 		*)		die "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
@@ -65,26 +59,6 @@ if [[ "$KDEBASE" = "true" ]]; then
 	# unset, making src_unpack extract directly from the tarball in distfiles
 	# Does anyone really want to make this code generic based on $TARBALLVER above?
 	case "$PV" in
-		3.4.0_beta1)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta"
-				;;
-		3.4.0_beta2)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta"
-				;;
-		3.4.0_rc1)	XDELTA_BASE="mirror://kde/unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
-				XDELTA_DELTA="mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta mirror://kde/unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta mirror://kde/unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
-				;;
-		3.4.0)		;;	# xdeltas break off at first stable version, since most people
-					# don't have prerelease tarballs handy
-		3.4.1)		XDELTA_BASE="mirror://kde/stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
-				XDELTA_DELTA="mirror://kde/stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta"
-				;;
-		3.4.2)		XDELTA_BASE="mirror://kde/stable/3.4/src/$KMNAME-3.4.0.tar.bz2"
-				XDELTA_DELTA="mirror://kde/stable/3.4.1/src/$KMNAME-3.4.0-3.4.1.tar.xdelta mirror://kde/stable/3.4.2/src/$KMNAME-3.4.1-3.4.2.tar.xdelta"
-				;;
-		3.5.0_beta2)	XDELTA_BASE="mirror://kde/unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
-				XDELTA_DELTA="mirror://kde/unstable/3.4.92/src/$KMNAME-3.4.91-3.4.92.tar.xdelta"
-				;;
 		3.5.0_rc1)	XDELTA_BASE="mirror://kde/unstable/3.4.91/src/$KMNAME-3.4.91.tar.bz2"
 				XDELTA_DELTA="mirror://kde/unstable/3.4.92/src/$KMNAME-3.4.91-3.4.92.tar.xdelta mirror://gentoo/$KMNAME-3.4.92-3.5.0_rc1.tar.xdelta"
 				;;
@@ -103,15 +77,6 @@ elif [[ "$KMNAME" == "koffice" ]]; then
 			SRC_PATH="mirror://kde/stable/koffice-$PV/src/koffice-$PV.tar.bz2"
 			XDELTA_BASE="mirror://kde/stable/koffice-1.3.4/src/koffice-1.3.4.tar.bz2"
 			XDELTA_DELTA="mirror://kde/stable/koffice-1.3.5/src/koffice-1.3.4-1.3.5.tar.xdelta"
-			;;
-		1.4.0_rc1)
-			SRC_PATH="mirror://kde/unstable/koffice-1.4-rc1/src/koffice-1.3.98.tar.bz2"
-			;;
-		1.4.0)
-			SRC_PATH="mirror://kde/stable/koffice-1.4/src/koffice-$PV.tar.bz2"
-			;;
-		1.5_beta2)
-			SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/koffice-${TARBALLVER}.tar.bz2"
 			;;
 		1.6_beta1)
 			SRC_PATH="mirror://kde/unstable/koffice-${PV/_/-}/koffice-${TARBALLVER}.tar.bz2"
