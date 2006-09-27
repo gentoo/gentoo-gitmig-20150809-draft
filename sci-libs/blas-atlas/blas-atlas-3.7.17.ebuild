@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.17.ebuild,v 1.1 2006/09/11 20:54:00 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.17.ebuild,v 1.2 2006/09/27 19:14:49 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -8,7 +8,7 @@ DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
 MY_PN=${PN/blas-/}
 SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
-		mirror://gentoo/${MY_PN}-3.7.15-shared-libs.patch.bz2"
+		mirror://gentoo/${MY_PN}-${PV}-shared-libs.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -37,14 +37,21 @@ pkg_setup() {
 	ewarn "performance of the resulting libraries will be degraded"
 	ewarn "considerably."
 	echo
-	epause 8
+	ewarn "Also, if you experience failing SANITY tests during"
+	ewarn "atlas' compile please try passing -mfpmath=387; this"
+	ewarn "option might also result in much better performance"
+	ewarn "than using then sse instruction set depending on your"
+	ewarn "CPU."
+	echo
+	epause 10
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${DISTDIR}"/${MY_PN}-3.7.15-shared-libs.patch.bz2
+	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.patch.bz2
+	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 
 	# make sure shared libs link against proper libraries
 	if [[ ${FORTRANC} == "gfortran" ]]; then
