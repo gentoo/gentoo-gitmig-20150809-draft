@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.7 2006/06/25 00:12:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.8 2006/09/27 14:06:44 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A Doom level (wad) editor"
 HOMEPAGE="http://www.teaser.fr/~amajorel/yadex/"
