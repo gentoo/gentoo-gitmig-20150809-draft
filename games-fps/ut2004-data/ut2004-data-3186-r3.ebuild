@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.7 2006/05/24 15:12:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.8 2006/09/27 22:26:34 wolf31o2 Exp $
 
 inherit games games-ut2k4mod
 
@@ -15,6 +15,7 @@ RESTRICT="strip"
 IUSE=""
 
 DEPEND="games-util/uz2unpack"
+PDEPEND="games-fps/ut2004"
 
 S=${WORKDIR}
 
