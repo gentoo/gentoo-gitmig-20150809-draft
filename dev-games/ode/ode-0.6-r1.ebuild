@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.6-r1.ebuild,v 1.3 2006/08/30 19:31:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.6-r1.ebuild,v 1.4 2006/09/27 09:20:52 nyhm Exp $
 
 inherit eutils autotools
 
@@ -25,7 +25,8 @@ RDEPEND="examples? (
 		)
 	)"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}

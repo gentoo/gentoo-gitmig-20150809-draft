@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.30 2006/08/30 19:31:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.31 2006/09/27 09:20:52 nyhm Exp $
+
+  27 Sep 2006; Tristan Heaven <nyhm@gentoo.org> ode-0.6.ebuild,
+  ode-0.6-r1.ebuild:
+  Add app-arch/unzip to DEPEND, bug #148227
 
   30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> ode-0.6-r1.ebuild:
   Stable on ppc.
