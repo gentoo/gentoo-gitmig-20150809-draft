@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.56 2006/09/26 17:02:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.57 2006/09/27 16:25:16 ferdy Exp $
+
+  27 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> nspr-4.6.3.ebuild:
+  Stable on alpha wrt bug #148284
 
   26 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/nspr-4.6.3-fbsd62.patch:
