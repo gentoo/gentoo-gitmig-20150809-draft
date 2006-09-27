@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.48 2006/09/05 21:15:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.49 2006/09/27 21:01:22 wolf31o2 Exp $
+
+  27 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-1.67.ebuild,
+  nwn-1.67-r1.ebuild, nwn-1.68.ebuild:
+  Change the instructions at the end of the ebuild from einfo to elog.
 
 *nwn-1.68 (05 Sep 2006)
 

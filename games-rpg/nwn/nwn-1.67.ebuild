@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.67.ebuild,v 1.2 2006/06/20 15:19:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.67.ebuild,v 1.3 2006/09/27 21:01:22 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -47,11 +47,8 @@ RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	x86? (
 		=virtual/libstdc++-3.3
-		|| (
-			(
-				x11-libs/libXext
-				x11-libs/libX11 )
-			virtual/x11 ) )
+		x11-libs/libXext
+		x11-libs/libX11 )
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat
@@ -68,7 +65,7 @@ pkg_setup() {
 #		disk2.zip \
 #		disk3.zip \
 #		disk4.zip
-#	einfo "To download nwgerman129.tar.gz you need a gamespy account"
+#	elog "To download nwgerman129.tar.gz you need a gamespy account"
 	games_pkg_setup
 }
 
@@ -106,34 +103,34 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if ! use nowin ; then
-		einfo "The NWN linux client is now installed."
-		einfo "Proceed with the following steps in order to get it working:"
-		einfo "1) Copy the following directories/files from your installed and"
-		einfo "   patched (${PV}) Neverwinter Nights to ${GAMES_PREFIX_OPT}/nwn:"
-		einfo "    ambient/"
-		einfo "    data/ (all files except for patch.bif)"
-		einfo "    dmvault/"
-		einfo "    hak/"
-		einfo "    localvault/"
-		einfo "    modules/"
-		einfo "    music/"
-		einfo "    override/"
-		einfo "    portraits/"
-		einfo "    saves/"
-		einfo "    servervault/"
-		einfo "    texturepacks/"
-		einfo "    chitin.key"
-		einfo "2) Chown and chmod the files with the following commands"
-		einfo "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${GAMES_PREFIX_OPT}/nwn"
-		einfo "    chmod -R g+rwX ${GAMES_PREFIX_OPT}/nwn"
-		einfo "3) Run ${GAMES_PREFIX_OPT}/nwn/fixinstall as root"
-		einfo "4) Make sure that you are in group ${GAMES_GROUP}"
-		einfo "5) Use ${GAMES_PREFIX_OPT}/nwn/nwn to run the game"
+		elog "The NWN linux client is now installed."
+		elog "Proceed with the following steps in order to get it working:"
+		elog "1) Copy the following directories/files from your installed and"
+		elog "   patched (${PV}) Neverwinter Nights to ${GAMES_PREFIX_OPT}/nwn:"
+		elog "    ambient/"
+		elog "    data/ (all files except for patch.bif)"
+		elog "    dmvault/"
+		elog "    hak/"
+		elog "    localvault/"
+		elog "    modules/"
+		elog "    music/"
+		elog "    override/"
+		elog "    portraits/"
+		elog "    saves/"
+		elog "    servervault/"
+		elog "    texturepacks/"
+		elog "    chitin.key"
+		elog "2) Chown and chmod the files with the following commands"
+		elog "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${GAMES_PREFIX_OPT}/nwn"
+		elog "    chmod -R g+rwX ${GAMES_PREFIX_OPT}/nwn"
+		elog "3) Run ${GAMES_PREFIX_OPT}/nwn/fixinstall as root"
+		elog "4) Make sure that you are in group ${GAMES_GROUP}"
+		elog "5) Use ${GAMES_PREFIX_OPT}/nwn/nwn to run the game"
 		echo
-		einfo "Or try emerging with USE=nowin"
+		elog "Or try emerging with USE=nowin"
 	else
-		einfo "The NWN linux client is now installed."
-		einfo "Proceed with the following step in order to get it working:"
-		einfo "Run ${GAMES_PREFIX_OPT}/nwn/fixinstall as root"
+		elog "The NWN linux client is now installed."
+		elog "Proceed with the following step in order to get it working:"
+		elog "Run ${GAMES_PREFIX_OPT}/nwn/fixinstall as root"
 	fi
 }

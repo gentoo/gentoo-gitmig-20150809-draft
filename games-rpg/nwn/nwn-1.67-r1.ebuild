@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.67-r1.ebuild,v 1.4 2006/09/27 18:32:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.67-r1.ebuild,v 1.5 2006/09/27 21:01:22 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -53,11 +53,8 @@ RDEPEND="games-rpg/nwn-data
 	>=media-libs/libsdl-1.2.5
 	x86? (
 		=virtual/libstdc++-3.3
-		|| (
-			(
-				x11-libs/libXext
-				x11-libs/libX11 )
-			virtual/x11 ) )
+		x11-libs/libXext
+		x11-libs/libX11 )
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat
@@ -75,9 +72,9 @@ die_from_busted_nwn-data() {
 	ewarn "You must emerge games-rpg/nwn-data with USE=$use.  You can fix this"
 	ewarn "by doing the following:"
 	echo
-	einfo "mkdir -p /etc/portage"
-	einfo "echo 'games-rpg/nwn-data $use' >> /etc/portage/package.use"
-	einfo "emerge --oneshot games-rpg/nwn-data"
+	elog "mkdir -p /etc/portage"
+	elog "echo 'games-rpg/nwn-data $use' >> /etc/portage/package.use"
+	elog "emerge --oneshot games-rpg/nwn-data"
 	die "nwn-data requires USE=$use"
 }
 
@@ -85,7 +82,7 @@ pkg_setup() {
 	declare -a LANGarray=($LINGUAS)
 	if [ "${#LANGarray[*]}" == "0" ]
 	then
-		einfo "Setting default language to English."
+		elog "Setting default language to English."
 	fi
 	if use sou
 	then
@@ -115,7 +112,6 @@ pkg_setup() {
 		built_with_use games-rpg/nwn-data linguas_de || \
 			die_from_busted_nwn-data linguas_de
 	fi
-	games_pkg_setup
 }
 
 src_unpack() {
@@ -154,7 +150,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "The NWN linux client is now installed."
-	einfo "Proceed with the following step in order to get it working:"
-	einfo "Run ${dir}/fixinstall as root"
+	elog "The NWN linux client is now installed."
+	elog "Proceed with the following step in order to get it working:"
+	elog "Run ${dir}/fixinstall as root"
 }
