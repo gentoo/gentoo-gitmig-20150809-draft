@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.29 2006/09/26 23:49:28 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.30 2006/09/27 00:08:45 marienz Exp $
+
+  27 Sep 2006; Marien Zwart <marienz@gentoo.org> ChangeLog:
+  Add missing IUSE (recommit because I forgot repoman).
 
 *logilab-common-0.19.2 (26 Sep 2006)
 
