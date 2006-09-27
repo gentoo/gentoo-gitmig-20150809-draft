@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jakarta-jstl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.7 2006/09/18 01:25:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.8 2006/09/27 04:14:05 nichoj Exp $
+
+  27 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  jakarta-jstl-1.1.2-r1.ebuild:
+  Added missing xalan dep. Force either 1.4 or 1.5, as it fails to compile
+  with 1.6 because of changes in the JDBC API. Reported in bug #148410.
 
 *jakarta-jstl-1.1.2-r1 (18 Sep 2006)
 

@@ -1,26 +1,31 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.1 2006/09/18 01:25:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.2 2006/09/27 04:14:05 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
+MY_PN="jakarta-taglibs-standard"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="An implementation of the JSP Standard Tag Library (JSTL)"
 HOMEPAGE="http://jakarta.apache.org/taglibs/doc/standard-doc/intro.html"
-SRC_URI="mirror://apache/jakarta/taglibs/standard/source/jakarta-taglibs-standard-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/taglibs/standard/source/${MY_P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples source"
 
+COMMON_DEP="~dev-java/servletapi-2.4
+	dev-java/xalan"
 RDEPEND=">=virtual/jre-1.4.2
-	=dev-java/servletapi-2.4*"
-DEPEND=">=virtual/jdk-1.4.2
-	${RDEPEND}
+	${COMMON_DEP}"
+# FIXME breaks due to new JDBC API in 1.6
+DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
+	${COMMON_DEP}
 	dev-java/ant-core
 	source? ( app-arch/zip )"
 
-S=${WORKDIR}/jakarta-taglibs-standard-${PV}-src/standard
+S="${WORKDIR}/${MY_P}-src/standard"
 
 src_unpack() {
 	unpack ${A}
@@ -37,6 +42,7 @@ src_unpack() {
 		"dist.dir = \${base.dir}/dist\n" \
 		"servlet24.jar=$(java-pkg_getjar servletapi-2.4 servlet-api.jar)\n" \
 		"jsp20.jar=$(java-pkg_getjar servletapi-2.4 jsp-api.jar)\n" \
+		"xalan.jar=$(java-pkg_getjar xalan xalan.jar)" \
 		> build.properties
 }
 
