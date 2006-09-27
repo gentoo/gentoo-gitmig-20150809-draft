@@ -1707,7 +1707,7 @@ java-pkg_setup-vm() {
 	debug-print-function ${FUNCNAME} $*
 
 	local vendor="$(java-pkg_get-vm-vendor)"
-	if [[ "${vendor}" == "sun" ]] && java-pkg_is-vm-version-ge 1 5; then
+	if [[ "${vendor}" == "sun" ]] && java-pkg_is-vm-version-ge "1.5" ; then
 		addpredict "/dev/random"
 	elif [[ "${vendor}" == "ibm" ]]; then
 		addpredict "/proc/self/maps"
