@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.37 2006/05/22 19:53:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.38 2006/09/27 20:58:10 wolf31o2 Exp $
+
+  27 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.60b.ebuild:
+  Change the instructions at the end of the ebuild from einfo to elog.
 
   22 May 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   enemy-territory-2.60b.ebuild:

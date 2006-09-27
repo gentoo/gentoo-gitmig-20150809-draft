@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.4 2006/05/22 19:53:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.5 2006/09/27 20:58:10 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -79,25 +79,26 @@ pkg_postinst() {
 	ewarn "other when running as a client."
 	ewarn "For more information, see bug #82149."
 	echo
-	einfo "To play the game run:"
-	einfo " et"
+	elog "To play the game run:"
+	elog " et"
 	echo
 	if use dedicated; then
-		einfo "To start a dedicated server run:"
-		einfo " /etc/init.d/et-ded start"
+		elog "To start a dedicated server run:"
+		elog " /etc/init.d/et-ded start"
 		echo
-		einfo "To run the dedicated server at boot, type:"
-		einfo " rc-update add et-ded default"
+		elog "To run the dedicated server at boot, type:"
+		elog " rc-update add et-ded default"
 		echo
-		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account"
+		elog "The dedicated server is started under the ${GAMES_USER_DED} user account."
 		echo
 		ewarn "Store your configurations under ${dir}/etwolf-homedir or they"
 		ewarn "will be erased on the next upgrade."
-		einfo "See bug #132795 for more info."
+		ewarn "See bug #132795 for more info."
+		echo
 	fi
 	if use amd64; then
-		einfo "If you are running an amd64 system and using ALSA, you must have"
-		einfo "ALSA 32-bit emulation enabled in your kernel for this to function properly."
+		elog "If you are running an amd64 system and using ALSA, you must have"
+		elog "ALSA 32-bit emulation enabled in your kernel for this to function properly."
 		echo
 	fi
 }
