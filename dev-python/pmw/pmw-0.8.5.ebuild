@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-0.8.5.ebuild,v 1.17 2004/06/25 01:36:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-0.8.5.ebuild,v 1.18 2006/09/27 17:23:17 marienz Exp $
 
 DESCRIPTION="A toolkit for building high-level compound widgets in Python using the Tkinter module."
 HOMEPAGE="http://pmw.sourceforge.net/"
@@ -16,10 +16,7 @@ SRC_URI="mirror://sourceforge/pmw/Pmw.${PV}.tar.gz"
 S="${WORKDIR}"/Pmw
 
 src_compile() {
-	if ! python -c "import Tkinter" >/dev/null 2>&1
-	then
-		die "You need to recompile Python with Tkinter support"
-	fi
+	distutils_python_tkinter
 	python -c 'import compileall; compileall.compile_dir(".",force=1)'
 }
 

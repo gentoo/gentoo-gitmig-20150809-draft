@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pmw
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.20 2005/10/02 14:14:11 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.21 2006/09/27 17:23:17 marienz Exp $
+
+  27 Sep 2006; Marien Zwart <marienz@gentoo.org> pmw-0.8.5.ebuild,
+  pmw-1.1.ebuild, pmw-1.2.ebuild:
+  Clean up error message on missing Tkinter. Closes bug #149324, thanks to
+  Gerolf Ziegenhain <derverstand@web.de> for reporting.
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> pmw-1.2.ebuild:
   Mark 1.2 stable on ia64

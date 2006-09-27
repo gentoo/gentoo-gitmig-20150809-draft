@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.13 2005/10/02 14:14:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.2.ebuild,v 1.14 2006/09/27 17:23:17 marienz Exp $
 
 inherit distutils python
 
@@ -18,12 +18,7 @@ S="${WORKDIR}/Pmw"
 
 pkg_setup() {
 	# check for Tkinter support in python
-	if ! python_mod_exists Tkinter; then
-		eerror "This package requires Tkinter support in Python. You'll need"
-		eerror "to recompile Python with:"
-		eerror "USE=\"tcltk\" emerge python"
-		die "Tkinter support missing"
-	fi
+	distutils_python_tkinter
 }
 
 src_compile() {
