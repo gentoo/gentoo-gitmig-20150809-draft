@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.19 2006/09/05 20:59:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-data/nwn-data-1.29.ebuild,v 1.20 2006/09/27 20:25:56 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -179,44 +179,44 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	if ! use nowin ; then
-		einfo "The NWN linux client data is now installed."
-		einfo "Proceed with the following steps in order to get it working:"
-		einfo "1) Copy the following directories/files from your installed and"
-		einfo "   patched (1.66) Neverwinter Nights to ${dir}:"
-		einfo "    ambient/"
-		einfo "    data/"
-		einfo "    dmvault/"
-		einfo "    hak/"
-		einfo "    localvault/"
-		einfo "    modules/"
-		einfo "    music/"
-		einfo "    portraits/"
-		einfo "    saves/"
-		einfo "    servervault/"
-		einfo "    texturepacks/"
-		einfo "    chitin.key"
-		einfo "2) Remove some files to make way for the patch"
-		einfo "    rm ${dir}/music/mus_dd_{kingmaker,shadowgua,witchwake}.bmu"
-		einfo "    rm ${dir}/override/iit_medkit_001.tga"
-		einfo "    rm ${dir}/data/patch.bif"
+		elog "The NWN linux client data is now installed."
+		elog "Proceed with the following steps in order to get it working:"
+		elog "1) Copy the following directories/files from your installed and"
+		elog "   patched (1.66) Neverwinter Nights to ${dir}:"
+		elog "    ambient/"
+		elog "    data/"
+		elog "    dmvault/"
+		elog "    hak/"
+		elog "    localvault/"
+		elog "    modules/"
+		elog "    music/"
+		elog "    portraits/"
+		elog "    saves/"
+		elog "    servervault/"
+		elog "    texturepacks/"
+		elog "    chitin.key"
+		elog "2) Remove some files to make way for the patch"
+		elog "    rm ${dir}/music/mus_dd_{kingmaker,shadowgua,witchwake}.bmu"
+		elog "    rm ${dir}/override/iit_medkit_001.tga"
+		elog "    rm ${dir}/data/patch.bif"
 		if use sou
 		then
-			einfo "    rm ${dir}/xp1patch.key ${dir}/data/xp1patch.bif"
+			elog "    rm ${dir}/xp1patch.key ${dir}/data/xp1patch.bif"
 		fi
 		if use hou
 		then
-			einfo "    rm ${dir}/xp2patch.key ${dir}/data/xp2patch.bif"
+			elog "    rm ${dir}/xp2patch.key ${dir}/data/xp2patch.bif"
 		fi
-		einfo "3) Chown and chmod the files with the following commands"
-		einfo "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${dir}"
-		einfo "    chmod -R g+rwX ${dir}"
-		echo
-		einfo "Or try emerging with USE=nowin"
+		elog "3) Chown and chmod the files with the following commands"
+		elog "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${dir}"
+		elog "    chmod -R g+rwX ${dir}"
+		elog
+		elog "Or try emerging with USE=nowin"
 	else
 		einfo "The NWN linux client data is now installed."
 	fi
 	echo
-	einfo "This is only the data portion, you will also need games-rpg/nwn to"
-	einfo "play Neverwinter Nights."
+	elog "This is only the data portion, you will also need games-rpg/nwn to"
+	elog "play Neverwinter Nights."
 	echo
 }
