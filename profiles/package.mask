@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5954 2006/09/27 16:57:54 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5955 2006/09/27 19:21:33 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -490,13 +490,6 @@ net-misc/mico
 # Masking app-mobilephone/gtkesms for treecleaners and bug(s) # 142991
 # Sept 27th for removal
 app-mobilephone/gtkesms
-
-# Alec Warner <antarus@gentoo.org> (26 Aug 2006)
-# Masking app-text/hspell for treecleaners and bug(s) # 77751
-# Added geresh as it depends on hspell. Danny van Dyk <kugelfang@gentoo.org>
-# Sept 26th for removal
-app-text/hspell
-app-editors/geresh
 
 # Matthew Kennedy <mkennedy@gentoo.org> (24 Aug 2006)
 # Removing these bese project ebuilds in favour of darcs ebuilds.
