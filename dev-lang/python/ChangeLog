@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.219 2006/09/27 19:14:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.220 2006/09/27 21:56:26 kloeri Exp $
+
+  27 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5-r3.ebuild,
+  python-2.4.3-r4.ebuild:
+  Stable on ia64.
 
   27 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5-r3.ebuild,
   python-2.4.3-r4.ebuild:
