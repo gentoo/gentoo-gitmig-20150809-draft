@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.37 2006/09/06 15:22:34 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.38 2006/09/27 16:20:20 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -124,7 +124,7 @@ function subversion_fetch() {
 	local repo_uri=${1:-${ESVN_REPO_URI}}
 
 	if [[ -z "${repo_uri}" ]]; then
-		die "${ESVN}: ESVN_REPO_URI is empty."
+		die "${ESVN}: ESVN_REPO_URI (or specified URI) is empty."
 	fi
 
 	# delete trailing slash
@@ -152,28 +152,24 @@ function subversion_fetch() {
 			;;
 	esac
 
+	# every time
+	addread "/etc/subversion"
+	addwrite "${ESVN_STORE_DIR}"
+
 	if [[ ! -d "${ESVN_STORE_DIR}" ]]; then
 		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
-
-		# Fix sandbox violations
-		addwrite ${ESVN_STORE_DIR%/*}
 
 		mkdir -p "${ESVN_STORE_DIR}" || die "${ESVN}: can't mkdir ${ESVN_STORE_DIR}."
 	fi
 
 	cd "${ESVN_STORE_DIR}" || die "${ESVN}: can't chdir to ${ESVN_STORE_DIR}"
 
-	# every time
-	addread "/etc/subversion"
-
-	ESVN_OPTIONS="${ESVN_OPTIONS} --config-dir ${ESVN_STORE_DIR}/.subversion"
 
 	local wc_path=${ESVN_PROJECT}/${repo_uri##*/}
+	local options="${ESVN_OPTIONS} --config-dir ${ESVN_STORE_DIR}/.subversion"
 
 	debug-print "${FUNCNAME}: ESVN_OPTIONS = \"${ESVN_OPTIONS}\""
-
-	# Fix sandbox violations
-	addwrite "${ESVN_STORE_DIR}"
+	debug-print "${FUNCNAME}: options = \"${options}\""
 
 	if [[ ! -d "${wc_path}/.svn" ]]; then
 		# first check out
@@ -182,13 +178,13 @@ function subversion_fetch() {
 
 		mkdir -p "${ESVN_PROJECT}"      || die "${ESVN}: can't mkdir ${ESVN_PROJECT}."
 		cd "${ESVN_PROJECT}"
-		${ESVN_FETCH_CMD} ${ESVN_OPTIONS} "${repo_uri}" || die "${ESVN}: can't fetch from ${repo_uri}."
+		${ESVN_FETCH_CMD} ${options} "${repo_uri}" || die "${ESVN}: can't fetch from ${repo_uri}."
 
 	else
 		subversion_wc_info || die "${ESVN}: unknown problem occurred while accessing working copy."
 
-		if [[ "${ESVN_WC_URL}" != "${ESVN_REPO_URI}" ]]; then
-			die "${ESVN}: ESVN_REPO_URI and working copy's URL are not matched."
+		if [[ "${ESVN_WC_URL}" != "${repo_uri}" ]]; then
+			die "${ESVN}: ESVN_REPO_URI (or specified URI) and working copy's URL are not matched."
 		fi
 
 		# update working copy
@@ -196,7 +192,7 @@ function subversion_fetch() {
 		einfo "     repository: ${repo_uri}"
 
 		cd "${wc_path}"
-		${ESVN_UPDATE_CMD} ${ESVN_OPTIONS} || die "${ESVN}: can't update from ${repo_uri}."
+		${ESVN_UPDATE_CMD} ${options} || die "${ESVN}: can't update from ${repo_uri}."
 
 	fi
 
@@ -301,7 +297,7 @@ function subversion_wc_info() {
 	local k=
 
 	for k in url revision; do
-		export ESVN_WC_$(echo "${k}" | tr [a-z] [A-Z])=$(env LANG=C svn info "${wc_path}" | grep -i "^${k}" | cut -d" " -f2)
+		export ESVN_WC_$(echo "${k}" | tr [a-z] [A-Z])=$(env LC_ALL=C svn info "${wc_path}" | grep -i "^${k}" | cut -d" " -f2)
 	done
 
 }
