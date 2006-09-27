@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/tuxtype2-1.5.3.ebuild,v 1.5 2006/09/04 03:10:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype2/tuxtype2-1.5.3.ebuild,v 1.6 2006/09/27 14:04:57 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Typing tutorial with lots of eye-candy"
 HOMEPAGE="http://www.geekcomix.com/dm/tuxtype/"
