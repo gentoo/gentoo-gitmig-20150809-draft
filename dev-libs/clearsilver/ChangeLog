@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/clearsilver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.24 2006/06/26 03:19:13 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.25 2006/09/27 22:10:30 dju Exp $
+
+*clearsilver-0.10.3 (27 Sep 2006)
+
+  27 Sep 2006; Julien Allanos <dju@gentoo.org>
+  +files/0.10.3-PyObject_DEL.patch, +files/0.10.3-missing-csr.patch,
+  +files/0.10.3-static.cgi.patch, +clearsilver-0.10.3.ebuild:
+  Version bump to 0.10.3. Fixed bugs #144580, #146026 and #148863.
 
   26 Jun 2006; Javier Villavicencio <the_paya@gentoo.org>
   clearsilver-0.10.2.ebuild:
@@ -103,4 +110,3 @@
   25 Apr 2004; Stuart Herbert <stuart@gentoo.org> clearsilver-0.9.7.ebuild,
   metadata.xml:
   Initial import; thanks to dju` <dju@elegiac.net> for the ebuild; see bug #48818
-
