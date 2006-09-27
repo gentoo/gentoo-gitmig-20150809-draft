@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.72 2006/09/27 22:31:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.73 2006/09/27 22:47:25 nelchael Exp $
+
+  27 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  jabberd-1.4.4-r3.ebuild:
+  Add block against net-im/aim-transport.
 
 *jabberd-1.4.4-r3 (27 Sep 2006)
 

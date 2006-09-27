@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.1 2006/09/27 22:31:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.2 2006/09/27 22:47:25 nelchael Exp $
 
 inherit eutils
 
@@ -20,6 +20,7 @@ DEPEND=">=net-im/jabber-base-0.01
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
 	ssl? ( >=dev-libs/openssl-0.9.6i )
+	!net-im/aim-transport
 	!=net-im/jabberd-2*"
 
 # Block against jabberd-2* is needed - both packages install the same files - collisions!
