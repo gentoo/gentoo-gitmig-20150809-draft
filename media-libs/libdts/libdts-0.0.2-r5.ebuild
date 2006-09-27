@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r5.ebuild,v 1.7 2006/08/15 04:00:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r5.ebuild,v 1.8 2006/09/27 08:41:47 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils toolchain-funcs autotools
 
