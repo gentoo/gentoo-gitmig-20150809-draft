@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.71 2006/09/20 09:43:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.72 2006/09/27 22:31:36 nelchael Exp $
+
+*jabberd-1.4.4-r3 (27 Sep 2006)
+
+  27 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/jabberd-1.4.4-openssl-0.9.8.patch, +files/jabberd-1.4.4.init,
+  +jabberd-1.4.4-r3.ebuild:
+  Add testing version of jabberd-1.4.4.
 
   20 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> metadata.xml:
   Changed maintainer.
