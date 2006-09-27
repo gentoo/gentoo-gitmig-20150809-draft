@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.79.ebuild,v 1.5 2006/04/13 19:49:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/powermanga/powermanga-0.79.ebuild,v 1.6 2006/09/27 18:24:43 nyhm Exp $
 
 inherit games
 
@@ -18,12 +18,12 @@ DEPEND="virtual/libc
 	media-libs/sdl-mixer"
 
 pkg_setup() {
-	games_pkg_setup
 	if ! built_with_use media-libs/sdl-mixer mikmod
 	then
 		eerror "${PN} needs sdl-mixer compiled with mikmod use-flag enabled!"
 		die "sdl-mixer without mikmod detected"
 	fi
+	games_pkg_setup
 }
 
 src_compile() {
