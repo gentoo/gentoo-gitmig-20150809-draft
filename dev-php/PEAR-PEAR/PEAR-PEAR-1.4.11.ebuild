@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.1 2006/08/16 10:57:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.2 2006/09/27 12:47:49 sebastian Exp $
 
 inherit depend.php
 
@@ -123,8 +123,8 @@ pkg_postinst() {
 		ewarn "from /usr/lib/php to /usr/share/php."
 	fi
 
-	# Update PEAR channels as needed, add new ones to the list if needed
-	pearchans="pear.php.net pecl.php.net components.ez.no pear.phpdb.org pear.phing.info pear.symfony-project.com pear.phpunit.de"
+	# Update PEAR/PECL channels as needed, add new ones to the list if needed
+	pearchans="pear.php.net pecl.php.net components.ez.no pear.phpdb.org pear.phing.info pear.symfony-project.com pear.phpunit.de pear.php-baustelle.de"
 
 	for chan in ${pearchans} ; do
 		pear channel-discover ${chan}
