@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.1.ebuild,v 1.1 2006/09/26 05:23:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.94.1.ebuild,v 1.2 2006/09/27 15:39:16 cardoe Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 WANT_AUTOCONF=2.1
 inherit flag-o-matic toolchain-funcs eutils nsplugins mozcoreconf mozextension makeedit multilib autotools
 
-LANGS="de el es-AR es-ES nb-NO sv-SE zh-CN"
-SHORTLANGS="es-ES nb-NO sv-SE"
+LANGS="de el es-AR es-ES nb-NO pt-BR sv-SE zh-CN"
+SHORTLANGS="ca-AD cs-CZ es-ES fi-FI fr-FR hu-HU it-IT ja-JP ko-KR nb-NO nl-NL pl-PL pt-PT ru-RU sk-SK sl-SI sv-SE"
 
 EMVER=${PV}
 TBVER="1.5.0.7"
@@ -108,8 +108,7 @@ src_unpack() {
 	# Fix installation of enigmail.js
 	epatch ${FILESDIR}/70_enigmail-fix.patch
 
-	WANT_AUTOCONF="2.1" \
-		eautoreconf || die "failed running autoreconf"
+	eautoreconf || die "failed running autoreconf"
 }
 
 src_compile() {
