@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.217 2006/09/27 03:55:59 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.218 2006/09/27 17:17:02 ferdy Exp $
+
+  27 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> ruby-1.8.5.ebuild:
+  Stable on alpha wrt bug #145524
 
   27 Sep 2006; Joshua Jackson <tsunam@gentoo.org> ruby-1.8.5.ebuild:
   Stable x86; bug #142038
