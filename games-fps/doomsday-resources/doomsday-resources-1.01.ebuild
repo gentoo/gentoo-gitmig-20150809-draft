@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01.ebuild,v 1.1 2006/05/31 23:53:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday-resources/doomsday-resources-1.01.ebuild,v 1.2 2006/09/27 09:27:23 nyhm Exp $
 
 inherit eutils games
 
@@ -13,7 +13,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="games-fps/doomsday"
+DEPEND="games-fps/doomsday
+	app-arch/unzip"
 
 S=${WORKDIR}
 
