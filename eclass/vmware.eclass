@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.6 2006/08/29 22:00:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.7 2006/09/27 12:59:56 wolf31o2 Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -276,12 +276,6 @@ vmware_src_install() {
 			"${config_dir}"/init.d/${product}
 		[ "${shortname}" == "server" ] && dosed "s:%SHORTNAME%:wgs:" \
 			"${config_dir}"/init.d/${product}
-
-		# Then we "fix" it.
-		dosed -e 's/mknod -m 600/mknod -m 660/' \
-			-e '/c 119 "$vHubNr"/ a\
-			chown root:'${VMWARE_GROUP}' /dev/vmnet*\
-			' "${config_dir}"/init.d/${product} || die
 	fi
 
 	# Finally, we run the "questions"
