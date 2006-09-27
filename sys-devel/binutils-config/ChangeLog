@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.28 2006/09/26 22:25:52 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.29 2006/09/27 18:41:24 ferdy Exp $
+
+  27 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  binutils-config-1.9-r2.ebuild:
+  Stable on alpha as per bug #149050
 
   26 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   binutils-config-1.9-r2.ebuild:
