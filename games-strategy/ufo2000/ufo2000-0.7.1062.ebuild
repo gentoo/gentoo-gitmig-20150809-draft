@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.1 2006/08/15 07:30:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.2 2006/09/27 09:37:32 nyhm Exp $
 
 inherit flag-o-matic games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="-* ppc x86"
 IUSE="vorbis"
 
-DEPEND="dev-libs/expat
+RDEPEND="dev-libs/expat
 	>=dev-games/hawknl-1.66
 	>=media-libs/allegro-4.2.0
 	>=media-libs/freetype-2
@@ -22,6 +22,8 @@ DEPEND="dev-libs/expat
 		~media-libs/dumb-0.9.2
 		media-libs/libogg
 		media-libs/libvorbis )"
+DEPEND="${RDEPEND}
+	vorbis? ( app-arch/unzip )"
 
 src_unpack() {
 	unpack ${P}-src.tar.bz2
