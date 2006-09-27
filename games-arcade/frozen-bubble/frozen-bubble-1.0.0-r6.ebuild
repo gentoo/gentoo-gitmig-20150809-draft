@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.5 2006/08/04 05:32:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r6.ebuild,v 1.6 2006/09/27 03:26:01 vapier Exp $
 
-inherit eutils perl-module games
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+inherit autotools eutils perl-module games
 
 NET_CLIENT_P=frozen-bubble-client-0.0.3
 NET_SERVER_P=frozen-bubble-server-0.0.3
@@ -14,7 +16,7 @@ SRC_URI="http://guillaume.cottenceau.free.fr/fb/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.1
@@ -55,15 +57,7 @@ src_unpack() {
 
 	# server addon
 	cd "${WORKDIR}"/${NET_SERVER_P}
-	sed -i \
-		-e '/^dnl AM_CONFIG_HEADER/s:dnl ::' configure.in \
-		|| die "sed failed"
-	libtoolize -c -f || die "libtoolize failed"
-	env \
-		WANT_AUTOMAKE=1.4 \
-		WANT_AUTOCONF=2.5 \
-		./bootstrap.sh || die "bootstrap failed"
-	echo '#include "config.h"' >> fb_serv.h
+	eautoreconf
 
 	# client addon
 	cd "${WORKDIR}"/${NET_CLIENT_P}
