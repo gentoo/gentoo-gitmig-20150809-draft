@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.67-r1.ebuild,v 1.3 2006/08/29 21:52:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.67-r1.ebuild,v 1.4 2006/09/27 18:32:06 nyhm Exp $
 
 inherit eutils games
 
@@ -82,7 +82,6 @@ die_from_busted_nwn-data() {
 }
 
 pkg_setup() {
-	games_pkg_setup
 	declare -a LANGarray=($LINGUAS)
 	if [ "${#LANGarray[*]}" == "0" ]
 	then
@@ -116,6 +115,7 @@ pkg_setup() {
 		built_with_use games-rpg/nwn-data linguas_de || \
 			die_from_busted_nwn-data linguas_de
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
