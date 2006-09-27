@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r1.ebuild,v 1.7 2006/09/17 11:01:58 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.6-r1.ebuild,v 1.8 2006/09/27 04:29:07 nichoj Exp $
 
 inherit java eutils versionator rpm
 
@@ -52,8 +52,7 @@ KEYWORDS="-* amd64 ppc ppc64 x86"
 IUSE="X alsa doc javacomm nsplugin"
 
 RDEPEND="
-		ppc? ( sys-libs/lib-compat )
-		s390? ( virtual/libstdc++ )
+		=virtual/libstdc++-3.3
 		alsa? ( media-libs/alsa-lib )
 		X? ( || (
 					(
