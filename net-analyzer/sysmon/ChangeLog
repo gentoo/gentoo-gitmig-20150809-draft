@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sysmon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sysmon/ChangeLog,v 1.3 2006/05/20 19:39:05 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sysmon/ChangeLog,v 1.4 2006/09/27 19:07:53 jhuebel Exp $
+
+*sysmon-0.93_pre2 (27 Sep 2006)
+
+  27 Sep 2006; Jason Huebel <jhuebel@gentoo.org> +sysmon-0.93_pre2.ebuild:
+  version bump, 0.93-pre2
 
   20 May 2006; Jason Huebel <jhuebel@gentoo.org> -sysmon-0.92.2.ebuild,
   sysmon-0.92.2-r1.ebuild:
