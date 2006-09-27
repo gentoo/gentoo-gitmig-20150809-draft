@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.15 2006/09/18 16:32:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.00.ebuild,v 1.16 2006/09/27 10:13:58 uberlord Exp $
 
 inherit eutils pam
 
@@ -21,9 +21,9 @@ DEPEND="pam? ( || ( virtual/pam sys-libs/pam ) )
 S=${WORKDIR}
 
 check_collision() {
-	[[ ! -e "$1" ]] && return 0
+	[[ ! -e $1 ]] && return 0
 
-	[[ $( head -n 1 "$1" ) == "$( head -n 1 "$2" )" ]] && return 0
+	[[ $(head -n 1 "$1") == $(head -n 1 "$2") ]] && return 0
 
 	eerror "   $1 exists and was not provided by ${P}"
 	return 1
@@ -33,10 +33,10 @@ pkg_setup() {
 	ebegin "Checking for possible file collisions..."
 
 	local collide=false
-	check_collision /etc/ftpusers "${FILESDIR}/ftpusers" || collide=true
+	check_collision "${ROOT}etc/ftpusers" "${FILESDIR}/ftpusers" || collide=true
 
 	if use pam ; then
-		check_collision /etc/pam.d/ftp "${FILESDIR}/ftp-pamd" || collide=true
+		check_collision "${ROOT}etc/pam.d/ftp" "${FILESDIR}/ftp-pamd" || collide=true
 	fi
 
 	if ${collide} ; then
@@ -46,16 +46,26 @@ pkg_setup() {
 		echo
 		ewarn "If you edited them, remember to backup and when restoring make"
 		ewarn " sure the first line in each file is:"
-		einfo "$( head -n 1 "${FILESDIR}/ftpusers" )"
+		einfo "$(head -n 1 "${FILESDIR}/ftpusers")"
 		eend 1
 		die "Can't be installed, files will collide"
 	fi
 
 	eend 0
 
+	# Check if home exists
+	local exists=false
+	[[ -d "${ROOT}home/ftp" ]] && exists=true
+
 	# Add our default ftp user
 	enewgroup ftp 21
 	enewuser ftp 21 -1 /home/ftp ftp
+
+	# If home did not exist and does now then we created it in the enewuser
+	# command. Now we have to change it's permissions to something sane.
+	if [[ ${exists} == "false" && -d "${ROOT}home/ftp" ]] ; then
+		chown root:ftp "${ROOT}"home/ftp
+	fi
 }
 
 src_install() {
@@ -73,20 +83,5 @@ src_install() {
 		else
 			newpamd "${FILESDIR}/ftp-pamd-include" ftp
 		fi
-	fi
-}
-
-pkg_postinst() {
-	# Create our home directory if it doesn't exist and give a warning if we
-	# cannot.
-	# Install manually using install -d until bug #9849 is solved.
-	# This means that the home directory will not be removed when we uninstall
-	# if it's empty.
-	local homedir=$(egethome ftp)
-	if [[ ! -d ${homedir} ]]; then
-		einfo "Creating home directory for ftp user"
-		einfo "   ${homedir}"
-		install -d "${homedir}" \
-	    	|| ewarn "  can't create ${homedir}"
 	fi
 }
