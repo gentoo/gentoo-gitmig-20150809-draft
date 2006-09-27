@@ -1,6 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.1.ebuild,v 1.10 2005/01/01 15:28:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.3.1.ebuild,v 1.11 2006/09/27 09:21:51 caster Exp $
+
+WANT_AUTOMAKE=1.5
+
+inherit autotools
 
 DESCRIPTION="Standard informational utilities and process-handling tools"
 HOMEPAGE="http://unixcode.org/uptimed/"
