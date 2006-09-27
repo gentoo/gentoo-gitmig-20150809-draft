@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/pycadia-0.5.1.ebuild,v 1.9 2006/04/13 20:13:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/pycadia-0.5.1.ebuild,v 1.10 2006/09/27 18:29:06 nyhm Exp $
 
 inherit games
 
@@ -19,7 +19,6 @@ DEPEND=">=dev-python/pygame-1.5.5
 S=${WORKDIR}/${PN}
 
 pkg_setup() {
-	games_pkg_setup
 	# bug #101464
 	if has_version '<dev-python/pygtk-2.8.0-r2' ; then
 		if ! built_with_use dev-python/pygtk gnome ; then
@@ -27,6 +26,7 @@ pkg_setup() {
 			die "Please emerge dev-python/pygtk with USE=gnome"
 		fi
 	fi
+	games_pkg_setup
 }
 
 src_unpack() {
