@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.7.ebuild,v 1.4 2006/09/26 06:18:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/w32api/w32api-3.7.ebuild,v 1.5 2006/09/28 08:13:10 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -20,6 +20,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND=""
 
