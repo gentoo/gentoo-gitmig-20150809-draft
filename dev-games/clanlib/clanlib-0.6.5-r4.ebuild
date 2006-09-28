@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r4.ebuild,v 1.1 2006/09/13 23:04:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5-r4.ebuild,v 1.2 2006/09/28 16:55:37 nyhm Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="multi-platform game development library"
 HOMEPAGE="http://www.clanlib.org/"
