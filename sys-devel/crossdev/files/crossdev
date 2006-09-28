@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.75 2006/09/24 21:14:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.76 2006/09/28 13:59:38 vapier Exp $
 
 cd /
 
@@ -579,6 +579,8 @@ doemerge() {
 EOPTS_DEF="${UOPTS} --nodeps --oneshot"
 EOPTS_UP="${EOPTS_DEF} -u"
 EOPTS=${EOPTS_UP}
+# keep things like --ask from screwing us up
+export EMERGE_DEFAULT_OPTS=""
 
 # make sure multilib crap doesn't screw us over
 export ABI=${ABI:-pos} LIBDIR_pos="lib" CFLAGS_pos="" LDFLAGS_pos=""
