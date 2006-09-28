@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.0.ebuild,v 1.1 2006/09/07 04:13:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.16.0.ebuild,v 1.2 2006/09/28 09:40:41 leio Exp $
 
 inherit gnome2 eutils
 
@@ -33,7 +33,7 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
-	>=dev-util/intltool-0.28
+	>=dev-util/intltool-0.35
 	>=app-text/scrollkeeper-0.3.5
 	>=dev-util/pkgconfig-0.9"
 
@@ -43,6 +43,6 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 export GST_INSPECT=/bin/true
 
 pkg_setup() {
-	G2CONF="${G2CONF}--disable-scrollkeeper"
+	G2CONF="${G2CONF} --disable-scrollkeeper"
 }
 
