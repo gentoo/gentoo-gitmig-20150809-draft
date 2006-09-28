@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6.ebuild,v 1.3 2006/09/15 06:22:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.6.ebuild,v 1.4 2006/09/28 20:10:58 robbat2 Exp $
 
 inherit eutils gnuconfig
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
@@ -129,13 +129,13 @@ src_compile() {
 	# set ENABLE_UNICODE=iso-8859-1,utf-8,iso-8859-10
 	# to include only specified translation table.
 	if use nls && [[ -z "$ENABLE_UNICODE" ]]; then
-		einfo "ENABLE_UNICODE is not set build with all availbale charater sets"
+		einfo "ENABLE_UNICODE is not set, building with all available character sets"
 		myconf="${myconf} --enable-unicode"
 	elif use nls; then
-		einfo "ENABLE_UNICODE is set build with unicode=$ENABLE_UNICODE"
+		einfo "ENABLE_UNICODE is set, building with unicode=$ENABLE_UNICODE"
 		myconf="${myconf} --enable-unicode=$ENABLE_UNICODE"
 	else
-		einfo "disable unicode support"
+		einfo "disabling unicode support"
 		myconf="${myconf} --disable-unicode"
 	fi
 
