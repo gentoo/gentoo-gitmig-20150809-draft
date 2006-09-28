@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.35 2006/09/28 03:13:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.36 2006/09/28 05:48:05 dberkholz Exp $
+
+*torque-2.1.2-r2 (28 Sep 2006)
+
+  28 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/2.1.2-skip-dotnames.patch, torque-2.1.2-r1.ebuild,
+  +torque-2.1.2-r2.ebuild:
+  (#149327) Don't treat .keep files from keepdir() as queue files. Also, pass
+  scp rather than crypt as the actual configure argument.
 
   28 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   torque-1.2.0_p5-r1.ebuild, torque-1.2.0_p5-r2.ebuild,
