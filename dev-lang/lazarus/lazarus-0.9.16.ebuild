@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.16.ebuild,v 1.1 2006/09/22 14:56:35 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.16.ebuild,v 1.2 2006/09/28 20:37:39 gustavoz Exp $
 
 inherit eutils
 
@@ -18,6 +18,14 @@ DEPEND="~dev-lang/fpc-2.0.4
 	>=media-libs/gdk-pixbuf-0.22.0-r3"
 
 S=${WORKDIR}/lazarus
+
+pkg_setup() {
+	if ! built_with_use "dev-lang/fpc" source; then
+	    eerror "You need to build dev-lang/fpc with the 'source' USE flag"
+	    eerror "in order for lazarus to work properly."
+	    die "lazarus needs fpc built with the 'source' USE to work."
+	fi
+}
 
 src_compile() {
 	emake -j1 || die "make failed!"
@@ -44,11 +52,4 @@ src_install() {
 	dosym ../lazarus/images/mainicon.xpm /usr/share/pixmaps/lazarus.xpm
 
 	make_desktop_entry startlazarus "Lazarus IDE" "lazarus.xpm" || die "Failed making desktop entry!"
-}
-
-pkg_postinst() {
-	if ! built_with_use "dev-lang/fpc" source; then
-		ewarn "You need to rebuild dev-lang/fpc with the 'source'"
-		ewarn "USE flag in order for full functionality in lazarus."
-	fi
 }
