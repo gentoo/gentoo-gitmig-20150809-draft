@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.11 2006/02/10 19:39:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.12 2006/09/28 12:45:03 nyhm Exp $
 
 inherit games
 
@@ -15,18 +15,12 @@ IUSE="X fbcon sdl svga"
 
 RDEPEND="sdl? ( media-libs/libsdl )
 	     !X? ( !svga? ( !fbcon? ( media-libs/libsdl ) ) )
-		 X? (
-		 	|| (
-				x11-libs/libXext
-				virtual/x11 ) )"
+		 X? ( x11-libs/libXext )
+		 fbcon? ( sys-apps/fbset )"
 DEPEND="${RDEPEND}
 	svga? ( media-libs/svgalib )
-	X? (
-		|| (
-			(
-				x11-proto/xextproto
-		      	x11-proto/xproto )
-			virtual/x11 ) )"
+	X? ( x11-proto/xextproto
+		x11-proto/xproto )"
 
 src_compile() {
 	local myconf

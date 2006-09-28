@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/gnuboy
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/ChangeLog,v 1.9 2006/02/10 19:39:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/ChangeLog,v 1.10 2006/09/28 12:45:03 nyhm Exp $
+
+  28 Sep 2006; Tristan Heaven <nyhm@gentoo.org> gnuboy-1.0.3.ebuild:
+  Add missing RDEPEND on sys-apps/fbset, bug #99983
 
   10 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> gnuboy-1.0.3.ebuild:
   Added modular X dependencies and closing bug #121527.
