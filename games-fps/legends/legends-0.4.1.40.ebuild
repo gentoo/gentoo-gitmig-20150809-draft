@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.40.ebuild,v 1.2 2006/09/15 20:33:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/legends/legends-0.4.1.40.ebuild,v 1.3 2006/09/28 21:14:18 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_P=${PN}_linux_${PV}
 DESCRIPTION="A fast-paced first-person-perspective online multiplayer game similar to Tribes"
