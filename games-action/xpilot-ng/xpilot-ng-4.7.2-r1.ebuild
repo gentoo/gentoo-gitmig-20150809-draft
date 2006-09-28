@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.2 2006/05/06 07:26:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.3 2006/09/28 17:07:16 nyhm Exp $
 
-inherit python eutils games
+inherit python eutils multilib games
 
 DESCRIPTION="Improvement of the multiplayer space game XPilot"
 HOMEPAGE="http://xpilot.sourceforge.net/"
@@ -13,12 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="openal sdl"
 
-RDEPEND="|| (
-	(
-		x11-libs/libX11
-		x11-libs/libICE
-		x11-libs/libSM )
-	virtual/x11 )
+RDEPEND="x11-libs/libX11
+	x11-libs/libICE
+	x11-libs/libSM
 	>=dev-libs/expat-1.1
 	>=sys-libs/zlib-1.1.3
 	openal? ( media-libs/openal )
@@ -29,12 +26,8 @@ RDEPEND="|| (
 		>=media-libs/sdl-image-1.0
 		>=media-libs/sdl-ttf-2.0 )"
 DEPEND="${RDEPEND}
-	|| (
-		(
-			x11-proto/xextproto
-			x11-proto/xproto
-			x11-libs/libXt )
-		virtual/x11 )"
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
@@ -43,7 +36,8 @@ src_unpack() {
 
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}:" \
-		contrib/xpngcc/config.py
+		contrib/xpngcc/config.py \
+		|| die "sed failed"
 }
 
 src_compile() {
@@ -61,14 +55,14 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
 	python_version
-	insinto ${GAMES_DATADIR}/${PN}/xpngcc
+	insinto "${GAMES_DATADIR}"/${PN}/xpngcc
 	doins contrib/xpngcc/*.py contrib/xpngcc/*.png
-	exeinto ${GAMES_DATADIR}/${PN}/xpngcc
+	exeinto "${GAMES_DATADIR}"/${PN}/xpngcc
 	doexe contrib/xpngcc/xpngcc.py
 	dodir /usr/$(get_libdir)/python${PYVER}/site-packages
-	dosym ${GAMES_DATADIR}/${PN}/xpngcc /usr/$(get_libdir)/python${PYVER}/site-packages/xpngcc
-	dosym ${GAMES_DATADIR}/${PN}/xpngcc/xpngcc.py ${GAMES_BINDIR}/xpilot-ng
-	doicon ${FILESDIR}/${PN}.png
+	dosym "${GAMES_DATADIR}"/${PN}/xpngcc /usr/$(get_libdir)/python${PYVER}/site-packages/xpngcc
+	dosym "${GAMES_DATADIR}"/${PN}/xpngcc/xpngcc.py "${GAMES_BINDIR}"/xpilot-ng
+	doicon "${FILESDIR}"/${PN}.png
 	make_desktop_entry ${PN} "XPilot NG" ${PN}.png
 	prepgamesdirs
 }
