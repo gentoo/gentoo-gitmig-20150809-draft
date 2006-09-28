@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.2.3.ebuild,v 1.1 2006/09/23 04:48:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.2.3.ebuild,v 1.2 2006/09/28 02:08:26 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 SLOT="2.2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc source"
-DEPEND=">=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.5
 	dev-java/ant-core
 	dev-java/ant-owanttask
 	source? ( app-arch/zip )"
