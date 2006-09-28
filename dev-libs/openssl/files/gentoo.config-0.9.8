@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.13 2006/09/18 10:17:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.8,v 1.14 2006/09/28 14:00:32 vapier Exp $
 #
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -23,7 +23,7 @@ if [[ $1 == "test" ]] ; then
 		"sparc64-alpha-freebsdX.Y     |BSD-sparc64" \
 		"ia64-gentoo-freebsd5.99234   |BSD-ia64" \
 		"x86_64-gentoo-freebsdX.Y     |BSD-x86_64" \
-		"hppa64-aldsF-linux-gnu5.3    |linux-parisc" \
+		"hppa64-aldsF-linux-gnu5.3    |linux-generic32 -DB_ENDIAN" \
 		"powerpc-gentOO-linux-uclibc  |linux-ppc" \
 		"powerpc64-unk-linux-gnu      |linux-ppc64" \
 	;do
@@ -71,7 +71,7 @@ linux)
 		arm*b*)       machine="generic32 -DB_ENDIAN";;
 		arm*)         machine="generic32 -DL_ENDIAN";;
 	#	hppa64*)      machine=parisc64;;
-		hppa*)        machine=parisc;;
+		hppa*)        machine="generic32 -DB_ENDIAN";;
 		i[0-9]86*)    machine=elf;;
 		ia64*)        machine=ia64;;
 		m68*)         machine="generic32 -DB_ENDIAN";;
