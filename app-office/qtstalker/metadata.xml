@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>desktop-misc</herd>
+  <maintainer>
+    <email>troll@gentoo.org</email>
+    <name>Przemysław Maciąg</name>
+  </maintainer>
+  <longdescription>
+          Qtstalker is a basic end of day Technical Analysis package with many
+          features. It compares with similar commercial products like Metastock,
+          Superchartz, Tradestation (...maybe one day) etc. If you are familiar
+          with those, then you should be able to muddle along with Qtstalker.
+
+          The project has kept to a lean and simple design philosophy in order
+          to maximize speed, portability and resource usage.
+  </longdescription>
+</pkgmetadata>
