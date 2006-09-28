@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.8 2006/03/31 02:39:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-ut2k4mod.eclass,v 1.9 2006/09/28 21:32:12 wolf31o2 Exp $
 
 inherit games
 
@@ -12,13 +12,12 @@ DESCRIPTION="UT2004 - ${MOD_DESC}"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
 IUSE=""
-RESTRICT="nomirror fetch"
 
 DEPEND="app-arch/tar
 	app-arch/bzip2"
 
-RDEPEND="virtual/libc
-	>=games-fps/ut2004-3339"
+RDEPEND="sys-libs/glibc"
+PDEPEND=">=games-fps/ut2004-3339"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/ut2004
@@ -53,9 +52,22 @@ games-ut2k4mod_src_unpack() {
 	[ -z "${MOD_TBZ2}" ] && die "what are we supposed to unpack ?"
 	[ -z "${MOD_NAME}" ] && die "what is the name of this ut2k4mod ?"
 
-	for makeself in ${A}
+	for src_uri in ${A}
 	do
-		unpack_makeself ${makeself}
+		URI_SUFFIX="${src_uri##*.}"
+		case ${URI_SUFFIX##*.} in
+			run|bin)
+				# We have a Makeself archive, use unpack_makeself
+				unpack_makeself ${src_uri}
+				# Since this is a Makeself archive, it has a lot of useless
+				# files (for us), so we delete them.
+				rm -rf setup.data setup.sh uninstall
+				;;
+			bz2|gz|Z|z|ZIP|zip)
+				# We have a normal tarball/zip file, use unpack
+				unpack ${src_uri}
+				;;
+		esac
 	done
 
 	mkdir ${S}/unpack
