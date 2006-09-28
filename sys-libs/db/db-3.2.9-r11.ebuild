@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.1 2006/08/31 11:47:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.2 2006/09/28 20:21:02 robbat2 Exp $
 
 inherit gnuconfig libtool eutils db java-pkg-opt-2
 
@@ -161,3 +161,8 @@ pkg_postrm () {
 	db_fix_so
 }
 
+src_test() {
+	if has test $FEATURES; then
+		eerror "We'd love to be able to test, but the testsuite is broken in the 3.2.9 series"
+	fi
+}
