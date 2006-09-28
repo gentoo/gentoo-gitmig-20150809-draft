@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r5.ebuild,v 1.1 2006/09/27 18:31:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r5.ebuild,v 1.2 2006/09/28 13:29:51 wolf31o2 Exp $
 
 # Alter ebuild so that the metadata cache is invalidated.
 
@@ -84,6 +84,6 @@ src_install() {
 	vmware_src_install
 
 	doicon lib/share/pixmaps/vmware-player.png
-	make_desktop_entry vmware "VMWare Workstation" ${PN}.png System
-	make_desktop_entry vmplayer "VMWare Player" vmware-player.png System
+	make_desktop_entry vmware "VMware Workstation" ${PN}.png System
+	make_desktop_entry vmplayer "VMware Player" vmware-player.png System
 }
