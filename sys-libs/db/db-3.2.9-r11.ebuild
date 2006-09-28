@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.2 2006/09/28 20:21:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.3 2006/09/28 20:49:16 robbat2 Exp $
 
 inherit gnuconfig libtool eutils db java-pkg-opt-2
 
@@ -96,6 +96,7 @@ src_compile() {
 	einfo "Configuring ${P} (static)..."
 	mkdir -p ${S}/build-static
 	cd ${S}/build-static
+	strip=/bin/true \
 	../dist/configure ${conf} ${conf_static} \
 		--libdir=/usr/$(get_libdir) \
 		--enable-static || die
@@ -103,6 +104,7 @@ src_compile() {
 	einfo "Configuring ${P} (shared)..."
 	mkdir -p ${S}/build-shared
 	cd ${S}/build-shared
+	strip=/bin/true \
 	../dist/configure ${conf} ${conf_shared} \
 		--libdir=/usr/$(get_libdir) \
 		--enable-shared || die
@@ -111,10 +113,10 @@ src_compile() {
 	MAKEOPTS="${MAKEOPTS} -j1"
 	einfo "Building ${P} (static)..."
 	cd ${S}/build-static
-	emake || die "Static build failed"
+	emake strip=/bin/true || die "Static build failed"
 	einfo "Building ${P} (shared)..."
 	cd ${S}/build-shared
-	emake || die "Shared build failed"
+	emake strip=/bin/true || die "Shared build failed"
 }
 
 src_install () {
@@ -123,6 +125,7 @@ src_install () {
 		libcxx=libcxx_3.2.a \
 		prefix=${D}/usr \
 		libdir=${D}/usr/$(get_libdir) \
+		strip=/bin/true \
 		install || die
 
 	cd ${S}/build-static

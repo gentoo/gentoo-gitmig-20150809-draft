@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.173 2006/09/28 20:21:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.174 2006/09/28 20:49:16 robbat2 Exp $
+
+  28 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> db-3.2.9-r11.ebuild:
+  QA fix, fix upstream stripping, bug #149448.
 
   28 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> db-3.2.9-r11.ebuild:
   Bug #149446 - testsuite is broken by upstream in the 3.2.9 release, so do
