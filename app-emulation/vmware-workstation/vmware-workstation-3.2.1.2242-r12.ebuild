@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r12.ebuild,v 1.2 2006/09/28 13:29:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r12.ebuild,v 1.3 2006/09/28 16:32:10 wolf31o2 Exp $
 
 # Alter ebuild so that the metadata cache is invalidated.
 
@@ -21,7 +21,9 @@ LICENSE="vmware"
 SLOT="0"
 KEYWORDS="-* ~x86"
 IUSE=""
-RESTRICT="strip"
+# Even with all of the QA_* variables below, we still need this because there is
+# no QA variable for setXid lazy bindings.  Sorry, guys.
+RESTRICT="stricter strip"
 
 # vmware-workstation should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
@@ -45,7 +47,7 @@ RUN_UPDATE="no"
 dir=/opt/vmware/workstation
 Ddir=${D}/${dir}
 
-QA_TEXTREL_x86="${dir:1}/lib/lib/libgdk-x11-2.0.so.0/libgdk-x11-2.0.so.0"
+QA_TEXTRELS_x86="${dir:1}/lib/lib/libgdk-x11-2.0.so.0/libgdk-x11-2.0.so.0"
 QA_EXECSTACK_x86="${dir:1}/bin/vmnet-bridge
 	${dir:1}/bin/vmnet-dhcpd
 	${dir:1}/bin/vmnet-natd
