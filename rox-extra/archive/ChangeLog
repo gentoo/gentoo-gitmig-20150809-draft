@@ -1,6 +1,13 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.5 2006/05/24 17:49:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.6 2006/09/28 20:34:30 lack Exp $
+
+*archive-2.1 (28 Sep 2006)
+
+  28 Sep 2006; Jim Ramsay <lack@gentoo.org> metadata.xml,
+  -archive-1.9.4.ebuild, -archive-2.0.ebuild, +archive-2.1.ebuild:
+  Version bump to 2.1 (Imported from breakmygentoo.net, big thanks to Peter
+  Hyman)
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.
