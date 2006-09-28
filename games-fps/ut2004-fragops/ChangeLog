@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-fragops
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.4 2006/04/20 15:44:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.5 2006/09/28 18:59:18 wolf31o2 Exp $
+
+  28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-fragops-2.16.ebuild:
+  Change to use the new liflg thirdpartymirror.
 
   20 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-fragops-2.16.ebuild:
