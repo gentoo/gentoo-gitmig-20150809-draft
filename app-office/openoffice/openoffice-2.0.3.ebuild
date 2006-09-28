@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.13 2006/09/15 11:21:47 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.14 2006/09/28 16:47:49 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
 
@@ -54,7 +54,9 @@ RDEPEND="!app-office/openoffice-bin
 		>=x11-libs/gtk+-2.8 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	kde? ( >=kde-base/kdelibs-3.2 )
-	firefox? ( >=www-client/mozilla-firefox-1.5-r9 )
+	firefox? ( >=www-client/mozilla-firefox-1.5-r9
+		>=dev-libs/nspr-4.6.2
+		>=dev-libs/nss-3.11-r1 )
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.10-r2
 	>=media-libs/fontconfig-2.2.0
@@ -177,7 +179,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#We redirect SRCDIR so we have to copy this over
-	cp -fR ${S}/src/* ${PORTAGE_TMPDIR}/portage/${P}/distdir/ || die
+	cp -fR "${S}"/src/* "${DISTDIR}" || die
 
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
