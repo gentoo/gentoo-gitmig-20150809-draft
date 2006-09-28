@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.15 2006/09/27 13:28:24 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.16 2006/09/28 13:54:10 wolf31o2 Exp $
+
+  28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  dokuwiki-20060309e.ebuild:
+  Stable on x86 wrt bug #149266.
 
 *dokuwiki-20060309e (27 Sep 2006)
 
