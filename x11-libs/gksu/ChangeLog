@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.19 2006/09/13 21:34:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.20 2006/09/28 19:09:09 dang Exp $
+
+  28 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> -gksu-1.3.4.ebuild,
+  -gksu-1.3.7.ebuild:
+  Remove unused versions
 
   13 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
   Take maintainership from dragonheart with his blessing
