@@ -1,16 +1,25 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a53dfd2fbd5ebe6c8e14176cc0cd871 bf1942-desertcombat-0.7_beta1.ebuild 905
-MD5 05cb6c0420b61e0e5763e2dbcb44db57 ChangeLog 888
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+DIST desertcombat_0.5l-beta_full_install.tar.bz2 35978221
+DIST desertcombat_0.6_server_patch.tar.bz2 12620264
+DIST desertcombat_0.7n-beta_full_install.run 43576985
+EBUILD bf1942-desertcombat-0.6.ebuild 1111 RMD160 5849d5752357ad94285bfe8b51e5423346e46332 SHA1 8aeb657194c146bea25b9fb80a239cd3ccb19ba6 SHA256 27f66e9935f6fdf1926e3e16abc393989146f08fcf1cde83494c3324d6feb93e
 MD5 d4ca17b1cdb4501c13a7b9f0c8b12f8a bf1942-desertcombat-0.6.ebuild 1111
-MD5 52268ff9ce6cf75b2464ad2c837b050f files/digest-bf1942-desertcombat-0.7_beta1 86
+RMD160 5849d5752357ad94285bfe8b51e5423346e46332 bf1942-desertcombat-0.6.ebuild 1111
+SHA256 27f66e9935f6fdf1926e3e16abc393989146f08fcf1cde83494c3324d6feb93e bf1942-desertcombat-0.6.ebuild 1111
+EBUILD bf1942-desertcombat-0.7_beta1.ebuild 908 RMD160 b02ee1bb01d1f2e3f349f31568ffa27ae016e449 SHA1 1f9f4c328085227c7493e81d5214bb5872725108 SHA256 a03fb64e82995b1fa906a8251068f5174af458a3002c1b819beaf5989148796a
+MD5 684f7961623a08de4f918dd254041775 bf1942-desertcombat-0.7_beta1.ebuild 908
+RMD160 b02ee1bb01d1f2e3f349f31568ffa27ae016e449 bf1942-desertcombat-0.7_beta1.ebuild 908
+SHA256 a03fb64e82995b1fa906a8251068f5174af458a3002c1b819beaf5989148796a bf1942-desertcombat-0.7_beta1.ebuild 908
+MISC ChangeLog 888 RMD160 146de4c7bb0df9fd2146e690dbd01aab69cb510f SHA1 6ded7fb733f08a06d7d8efe40ebc9f4fe6a6f3e6 SHA256 265cb53618f7609fd0eed8cbfa8758c0d44d2c8034092d308af10348f460ceb6
+MD5 05cb6c0420b61e0e5763e2dbcb44db57 ChangeLog 888
+RMD160 146de4c7bb0df9fd2146e690dbd01aab69cb510f ChangeLog 888
+SHA256 265cb53618f7609fd0eed8cbfa8758c0d44d2c8034092d308af10348f460ceb6 ChangeLog 888
+MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be5251fa1dacef5c41b74761bb1c8c54fb633b9e SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
+SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
 MD5 548dbb584e7dd3b9a8fb40a0e8c83aeb files/digest-bf1942-desertcombat-0.6 174
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe6K1I1lqEGTUzyQRAi3qAJ9RCEmX1iPB7arEQ7eXuogiCJkGBgCgqgJ4
-fdjJaBb9AyiuJtlmh0grx/Q=
-=ZpEA
------END PGP SIGNATURE-----
+RMD160 18e051cad667527e5cfc85d3e890c4701078deee files/digest-bf1942-desertcombat-0.6 174
+SHA256 1da2d2986277141798bf4906d6db535e99f55b465bac9d50bd0d510e919f0f58 files/digest-bf1942-desertcombat-0.6 174
+MD5 52268ff9ce6cf75b2464ad2c837b050f files/digest-bf1942-desertcombat-0.7_beta1 86
+RMD160 6c0b3642f726d91c20af44ec6d3ca58ef82c7cf7 files/digest-bf1942-desertcombat-0.7_beta1 86
+SHA256 6fc2953bc4030089b2b4bae7c735dc88a6e7892b41da9dd834d31808a94c52ba files/digest-bf1942-desertcombat-0.7_beta1 86
