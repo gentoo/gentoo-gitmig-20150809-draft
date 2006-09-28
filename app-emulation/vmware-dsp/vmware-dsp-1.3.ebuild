@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.1 2006/09/28 14:12:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-dsp/vmware-dsp-1.3.ebuild,v 1.2 2006/09/28 14:25:04 wolf31o2 Exp $
 
 inherit eutils multilib
 
@@ -78,13 +78,13 @@ src_install() {
 	if use arts
 	then
 		dobin vmwarearts || die
-		make_desktop_entry vmware "VMware Workstation (aRts)" \
+		make_desktop_entry vmwarearts "VMware Workstation (aRts)" \
 			vmware-workstation.png System
 	fi
 	if use esd
 	then
 		dobin vmwareesd || die
-		make_desktop_entry vmware "VMware Workstation (ESD)" \
+		make_desktop_entry vmwareesd "VMware Workstation (ESD)" \
 			vmware-workstation.png System
 	fi
 }
