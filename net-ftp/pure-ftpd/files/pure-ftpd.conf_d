@@ -46,13 +46,13 @@ AUTH="-l unix"
 ## Set the charset of the filesystem.
 # CHARCONV="--fscharset <charset>"
 
-## Misc. Others ##
-MISC_OTHER="-A -x -j -R -B -Z"
-
 ## If you want to process each file uploaded through Pure-FTPd, enter the name
 ## of the script that should process the files below.
 ## man pure-uploadscript to learn more about how to write this script.
 # UPLOADSCRIPT="/path/to/uploadscript"
+
+## Misc. Others ##
+MISC_OTHER="-A -x -j -R -Z"
 
 #
 # Use these inside $MISC_OTHER
