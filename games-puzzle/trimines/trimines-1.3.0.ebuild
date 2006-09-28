@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/trimines-1.3.0.ebuild,v 1.1 2006/05/18 03:56:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/trimines/trimines-1.3.0.ebuild,v 1.2 2006/09/28 21:27:49 nyhm Exp $
 
-inherit toolchain-funcs games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A mine sweeper game that uses triangles instead of squares"
 HOMEPAGE="http://www.freewebs.com/trimines/"
