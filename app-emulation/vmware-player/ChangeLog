@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.21 2006/09/27 18:24:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.22 2006/09/28 18:25:52 wolf31o2 Exp $
+
+*vmware-player-1.0.2.29634 (28 Sep 2006)
+
+  28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/1.0.2.29634/000_all_initd-location.patch,
+  +files/1.0.2.29634/001_all_fix-permissions.patch,
+  +files/1.0.2.29634/002_all_pagebreak-detection-fix.patch,
+  +files/1.0.2.29634/004_all_do-not-build-modules.patch,
+  +files/1.0.2.29634/007_all_use-modprobe-over-insmod.patch,
+  +files/1.0.2.29634/009_all_init.d-modules-warning.patch,
+  +vmware-player-1.0.2.29634.ebuild:
+  Version bump to 1.0.2, which I am leaving masked for the time being because
+  I hate the idea of forcing more than 100MB on people that they don't need. I
+  will unmask this once I come up with a better solution.
 
 *vmware-player-1.0.1.19317-r5 (27 Sep 2006)
 
