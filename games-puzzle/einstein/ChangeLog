@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/einstein
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.2 2006/03/22 02:18:14 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/einstein/ChangeLog,v 1.3 2006/09/28 10:21:59 nyhm Exp $
+
+  28 Sep 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/einstein-2.0-64bit.patch, einstein-2.0.ebuild:
+  Add patch from Thomas Cort to fix 64 bit compile errors, bug #143841
 
   22 Mar 2006; Scott Stoddard <deltacow@gentoo.org> einstein-2.0.ebuild:
   ~amd64 added wrt bug #126858
