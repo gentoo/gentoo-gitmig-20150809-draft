@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r3.ebuild,v 1.2 2006/07/06 15:28:24 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1-r3.ebuild,v 1.3 2006/09/28 02:54:14 nichoj Exp $
 
-inherit eutils java-utils
+inherit eutils java-pkg java-utils
 
 # karltk: Portage 2.0.51_pre13 needs this
 MY_A="eclipse-sourceBuild-srcIncluded-3.0.1.zip"
