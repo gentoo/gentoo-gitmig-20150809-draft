@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.3 2006/09/28 05:28:05 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.4 2006/09/28 16:28:28 sebastian Exp $
 
 inherit depend.php
 
@@ -9,7 +9,7 @@ CONSOLE_GETOPT="1.2"
 PEAR="1.4.11"
 XML_RPC="1.5.0"
 
-[ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR="/tmp/pear/cache"
+[ -z "${PEAR_CACHEDIR}" ] && PEAR_CACHEDIR="/var/cache/pear"
 
 DESCRIPTION="PEAR Base System (PEAR, Archive_Tar, Console_Getopt, XML_RPC)."
 HOMEPAGE="http://pear.php.net/"
@@ -107,7 +107,8 @@ src_install() {
 
 	insinto /etc
 	doins "${FILESDIR}/pear.conf"
-	sed -e "s|s:SUBSTLEN:\"SUBSTITUTEME\"|s:${#PHPCLI}:\"${PHPCLI}\"|g" -i "${D}/etc/pear.conf"
+	sed -e "s|s:PHPCLILEN:\"PHPCLI\"|s:${#PHPCLI}:\"${PHPCLI}\"|g" -i "${D}/etc/pear.conf"
+	sed -e "s|s:CACHEDIRLEN:\"CACHEDIR\"|s:${#PEAR_CACHEDIR}:\"${PEAR_CACHEDIR}\"|g" -i "${D}/etc/pear.conf"
 
 	keepdir "${PEAR_CACHEDIR}"
 	fperms 755 "${PEAR_CACHEDIR}"
