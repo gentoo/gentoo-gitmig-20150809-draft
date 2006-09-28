@@ -1,0 +1,95 @@
+diff -Naur psi-0.10-orig/src/groupchatdlg.cpp psi-0.10/src/groupchatdlg.cpp
+--- psi-0.10-orig/src/groupchatdlg.cpp	2006-09-28 22:54:44.000000000 +0000
++++ psi-0.10/src/groupchatdlg.cpp	2006-09-28 22:53:27.000000000 +0000
+@@ -2521,32 +2523,6 @@
+ #endif
+ }
+ 
+-#ifdef Q_WS_WIN
+-void GCMainDlg::doFlash(bool yes)
+-{
+-	if(yes) {
+-		if(d->flashTimer)
+-			return;
+-		d->flashTimer = new QTimer(this);
+-		connect(d->flashTimer, SIGNAL(timeout()), SLOT(flashAnimate()));
+-		d->flashCount = 0;
+-		flashAnimate(); // kick the first one immediately
+-		d->flashTimer->start(500);
+-	}
+-	else {
+-		if(d->flashTimer) {
+-			delete d->flashTimer;
+-			d->flashTimer = 0;
+-			FlashWindow(winId(), false);
+-		}
+-	}
+-}
+-#else
+-void GCMainDlg::doFlash(bool)
+-{
+-}
+-#endif
+-
+ void GCMainDlg::flashAnimate()
+ {
+ #ifdef Q_WS_WIN
+@@ -2897,3 +2873,58 @@
+ }
+ 
+ #include "groupchatdlg.moc"
++
++#if defined( Q_WS_WIN )
++void GCMainDlg::doFlash(bool yes)
++{
++	if(yes) {
++		if(d->flashTimer)
++			return;
++		d->flashTimer = new QTimer(this);
++		connect(d->flashTimer, SIGNAL(timeout()), SLOT(flashAnimate()));
++		d->flashCount = 0;
++		flashAnimate(); // kick the first one immediately
++		d->flashTimer->start(500);
++	}
++	else {
++		if(d->flashTimer) {
++			delete d->flashTimer;
++			d->flashTimer = 0;
++			FlashWindow(winId(), false);
++		}
++	}
++}
++#elif defined( Q_WS_X11 )
++#include<X11/Xutil.h>
++void GCMainDlg::doFlash(bool yes)
++{
++	Display *xdisplay = qt_xdisplay();
++	Window rootwin = qt_xrootwin(), winId = this->winId();
++
++	static Atom demandsAttention = XInternAtom(xdisplay, "_NET_WM_STATE_DEMANDS_ATTENTION", true);
++	static Atom wmState = XInternAtom(xdisplay, "_NET_WM_STATE", true);
++
++	XEvent e;
++	e.xclient.type = ClientMessage;
++	e.xclient.message_type = wmState;
++	e.xclient.display = xdisplay;
++	e.xclient.window = winId;
++	e.xclient.format = 32;
++	e.xclient.data.l[1] = demandsAttention;
++	e.xclient.data.l[2] = 0l;
++	e.xclient.data.l[3] = 0l;
++	e.xclient.data.l[4] = 0l;
++
++	if (yes) {
++		e.xclient.data.l[0] = 1;
++	}
++	else {
++		e.xclient.data.l[0] = 0;
++	}
++	XSendEvent(xdisplay, rootwin, False, (SubstructureRedirectMask | SubstructureNotifyMask), &e);
++}
++#else
++void GCMainDlg::doFlash(bool)
++{
++}
++#endif
