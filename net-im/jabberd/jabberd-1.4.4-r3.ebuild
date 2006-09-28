@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.3 2006/09/28 10:01:29 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.4 2006/09/28 11:05:10 nelchael Exp $
 
 inherit eutils
 
@@ -43,8 +43,16 @@ src_unpack() {
 
 	unpack "${A}"
 
+	cd "${S}"
+
 	# Resolves bug #147342
 	epatch "${FILESDIR}/${P}-openssl-0.9.8.patch"
+
+	# Various fixes from upstream:
+	epatch "${FILESDIR}/${P}-str.c-rev1103.patch"
+	epatch "${FILESDIR}/${P}-xdb_file.c-rev1107.patch"
+	epatch "${FILESDIR}/${P}-xdb_sql.c-rev1211.patch"
+	epatch "${FILESDIR}/${P}-genhash.c-rev1253.patch"
 
 }
 
@@ -54,7 +62,7 @@ src_compile() {
 
 	# Broken configure script - can't use "use_enable"
 	local myconf=
-	use debug && myconf="${myconf} --enable-debug"
+	use debug && myconf="${myconf} --enable-debug --enable-pool-debug"
 	use ipv6  && myconf="${myconf} --enable-ipv6"
 	use ssl   && myconf="${myconf} --enable-ssl"
 
