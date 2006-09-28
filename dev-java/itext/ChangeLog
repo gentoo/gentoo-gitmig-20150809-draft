@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/itext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.13 2006/09/07 00:30:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.14 2006/09/28 00:36:59 wltjr Exp $
+
+*itext-1.4.5 (28 Sep 2006)
+
+  28 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> metadata.xml,
+  +itext-1.4.5.ebuild:
+  Updated itext to latest version dropped ~ppc keyword due to lack of hardware
+  to test on. Took over package maintenance.
 
 *itext-1.3.6-r1 (07 Sep 2006)
 
