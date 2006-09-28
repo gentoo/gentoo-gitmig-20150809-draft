@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kadslwatch
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/ChangeLog,v 1.6 2005/09/22 14:14:26 greg_g Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/ChangeLog,v 1.7 2006/09/28 11:32:23 deathwing00 Exp $
+
+  28 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kadslwatch-01.00.06.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   22 Sep 2005; Gregorio Guidi <greg_g@gentoo.org>
   kadslwatch-01.00.06.ebuild:
