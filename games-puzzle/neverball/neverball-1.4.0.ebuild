@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.3 2006/06/03 04:13:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.4.0.ebuild,v 1.4 2006/09/28 21:26:24 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Clone of Super Monkey Ball using SDL/OpenGL"
 HOMEPAGE="http://icculus.org/neverball/"
