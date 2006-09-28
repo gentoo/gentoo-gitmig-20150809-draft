@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.5-r1.ebuild,v 1.1 2006/09/27 14:09:00 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.5-r1.ebuild,v 1.2 2006/09/28 12:52:33 kanaka Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -253,8 +253,8 @@ src_install() {
 		ksym $(get_abi_LIBDIR ${DEFAULT_ABI}) /usr/local/lib
 	fi
 
-	kdir /$(get_libdir)/dev-state
-	kdir /$(get_libdir)/udev-state
+	kdir /lib/dev-state
+	kdir /lib/udev-state
 
 	# FHS compatibility symlinks stuff
 	ksym /var/tmp /usr/tmp

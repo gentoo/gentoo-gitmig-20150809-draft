@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.348 2006/09/28 09:36:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.349 2006/09/28 12:52:33 kanaka Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  28 Sep 2006; Joel Martin <kanaka@gentoo.org> baselayout-1.12.5-r1.ebuild:
+  This is related to #145287 but does not resolve it. Using get_libdir is
+  wrong for udev-state and dev-state directories. Later in the ebuild we use
+  /lib/udev-state and non-ABI stuff should go in /lib not get_libdir.
 
 *baselayout-1.12.5-r2 (28 Sep 2006)
 
