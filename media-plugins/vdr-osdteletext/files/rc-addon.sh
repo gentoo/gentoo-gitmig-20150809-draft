@@ -1,9 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/files/rc-addon.sh,v 1.1 2006/03/21 00:21:43 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/files/rc-addon.sh,v 1.2 2006/09/28 11:27:38 hd_brummy Exp $
 #
 # rc-addon-script for plugin osdteletext
 #
 # Joerg Bornkessel <hd_brummy@gentoo.org>
 # Matthias Schwarzott <zzam@gentoo.org>
+
+source /etc/conf.d/vdr.osdteletext
 
 : ${OSDTELETEXT_TMPFS:=yes}
 : ${OSDTELETEXT_SIZE:=20}
@@ -15,20 +17,20 @@ plugin_pre_vdr_start() {
 	
 	if [[ ${OSDTELETEXT_TMPFS} == yes ]]; then
 		## test on mountet TMPS
-		if /bin/mount | grep -q ${OSDTELETEXT_DIR} ; then
+		if /bin/mount | /bin/grep -q ${OSDTELETEXT_DIR} ; then
 			:
 		else
 			einfo_level2 mounting videotext dir ${OSDTELETEXT_DIR}
-			mount -t tmpfs -o size=${OSDTELETEXT_SIZE}m,uid=vdr tmpfs ${OSDTELETEXT_DIR}
+			/bin/mount -t tmpfs -o size=${OSDTELETEXT_SIZE}m,uid=vdr,gid=vdr tmpfs ${OSDTELETEXT_DIR}
 		fi
 	fi
 }
 
 plugin_post_vdr_stop() {
 	if [[ ${OSDTELETEXT_TMPFS} == yes ]]; then
-		if /bin/mount | grep -q ${OSDTELETEXT_DIR} ; then
+		if /bin/mount | /bin/grep -q ${OSDTELETEXT_DIR} ; then
 			einfo_level2 unmounting videotext dir ${OSDTELETEXT_DIR}
-			umount ${OSDTELETEXT_DIR}
+			/bin/umount ${OSDTELETEXT_DIR}
 		fi
 	fi
 }
