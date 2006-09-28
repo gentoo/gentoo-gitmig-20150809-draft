@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta.ebuild,v 1.4 2006/03/31 20:41:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.5_beta.ebuild,v 1.5 2006/09/28 21:03:45 nyhm Exp $
 
-inherit versionator games
+inherit eutils versionator games
 
 # Changes "0.5_beta" to "beta_0.5"
 MY_PV=$(get_version_component_range 3-3)$(get_version_component_range 1-2)

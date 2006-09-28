@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.4.1-r1.ebuild,v 1.1 2006/09/05 19:29:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/freedoom/freedoom-0.4.1-r1.ebuild,v 1.2 2006/09/28 21:12:50 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Freedoom - Open Source Doom resources"
 HOMEPAGE="http://freedoom.sourceforge.net/"
