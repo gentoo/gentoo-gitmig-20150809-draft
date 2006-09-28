@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.23 2006/09/19 19:15:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.24 2006/09/28 09:24:26 leio Exp $
+
+  28 Sep 2006; Mart Raudsepp <leio@gentoo.org> deskbar-applet-2.16.0.ebuild:
+  Remove unnecessary elementtree dep.
 
   19 Sep 2006; Aron Griffis <agriffis@gentoo.org>
   deskbar-applet-2.14.2.ebuild:
