@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX gdk-pixbuf-0.22.0-bmp_reject_corrupt.patch 1157 RMD160 cbae52afefb9cebfb0fe262c7b1dd1300794a358 SHA1 a4ef059db072707c261275ff2e86ca9a3f30d8ab SHA256 d3196c1666f560997bc5cd5be4787156c64f92dc0fd8dada8ad3c16793b90970
 MD5 d1fb93f1ae994875158a7e0c108c36f8 files/gdk-pixbuf-0.22.0-bmp_reject_corrupt.patch 1157
 RMD160 cbae52afefb9cebfb0fe262c7b1dd1300794a358 files/gdk-pixbuf-0.22.0-bmp_reject_corrupt.patch 1157
@@ -18,10 +15,6 @@ MD5 3edfa9fe9382fd8206d6238ec121a5af files/gdk-pixbuf-0.22.0-m4.patch 276
 RMD160 35bf793c8eb8f3555505c7abf42822bc165da06f files/gdk-pixbuf-0.22.0-m4.patch 276
 SHA256 4a62476624319a09c000d01d45689167ea5cf1665e4c7e988032ffff11920132 files/gdk-pixbuf-0.22.0-m4.patch 276
 DIST gdk-pixbuf-0.22.0.tar.bz2 398208 RMD160 0e56a0f883fd8e3fb4d49b9a38f984b95cd96ece SHA1 495324afb5abebc14567ffd5a6cd72333bcc7f5b SHA256 411f2a1c27c3afadc5d034f2213d9f6c3a37f564eb5989cf6e8a53729280ae22
-EBUILD gdk-pixbuf-0.22.0-r3.ebuild 1681 RMD160 eeef10e7cc04dbd68ec94c8bc81ac7fbc72f9189 SHA1 c960b9c95a68d270e542e5412ef4d82a233e38e5 SHA256 2007736ff190bc30e0771748b9c13ce8ca112cd97c5f13017f34e7b7f099c6c9
-MD5 7d70a5ea1ed8b8341a6d3fc6928d1ddc gdk-pixbuf-0.22.0-r3.ebuild 1681
-RMD160 eeef10e7cc04dbd68ec94c8bc81ac7fbc72f9189 gdk-pixbuf-0.22.0-r3.ebuild 1681
-SHA256 2007736ff190bc30e0771748b9c13ce8ca112cd97c5f13017f34e7b7f099c6c9 gdk-pixbuf-0.22.0-r3.ebuild 1681
 EBUILD gdk-pixbuf-0.22.0-r5.ebuild 1710 RMD160 51113310efa42220614b1dbebb917eb81084b4ad SHA1 041d9eebc50d77723fb0139b0d0e6e533ea36729 SHA256 d28471263429ae1502502c50589b18716c1ea0b4e4c7ad2123d2ff7ad10e880b
 MD5 fce63aa057ab57e079dbfde39ab33989 gdk-pixbuf-0.22.0-r5.ebuild 1710
 RMD160 51113310efa42220614b1dbebb917eb81084b4ad gdk-pixbuf-0.22.0-r5.ebuild 1710
@@ -34,16 +27,6 @@ MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 79304c539cdf535d0d9d22f692be926d files/digest-gdk-pixbuf-0.22.0-r3 256
-RMD160 e47e65fca37659885f77eeac116c0bdc113aacab files/digest-gdk-pixbuf-0.22.0-r3 256
-SHA256 e0d89abd734807451c72124bb2435f6dbf9517fd37714e49b6bd88691ee53a2a files/digest-gdk-pixbuf-0.22.0-r3 256
 MD5 79304c539cdf535d0d9d22f692be926d files/digest-gdk-pixbuf-0.22.0-r5 256
 RMD160 e47e65fca37659885f77eeac116c0bdc113aacab files/digest-gdk-pixbuf-0.22.0-r5 256
 SHA256 e0d89abd734807451c72124bb2435f6dbf9517fd37714e49b6bd88691ee53a2a files/digest-gdk-pixbuf-0.22.0-r5 256
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEq0+famhnQswr0vIRAty3AJwOEpxxJfhAapv9yMAm4ARaYJHJ4gCcDV3A
-7OjWmVZEBbLGrmUyMgFvZXI=
-=aqyK
------END PGP SIGNATURE-----
