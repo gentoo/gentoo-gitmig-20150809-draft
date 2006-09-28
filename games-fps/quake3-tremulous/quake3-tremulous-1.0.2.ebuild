@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-tremulous/quake3-tremulous-1.0.2.ebuild,v 1.3 2005/10/30 04:22:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-tremulous/quake3-tremulous-1.0.2.ebuild,v 1.4 2006/09/28 21:19:23 nyhm Exp $
 
 MOD_DESC="modification blending a team based FPS with elements of an RTS"
 MOD_NAME="tremulous"
-inherit games games-q3mod
+inherit eutils games games-q3mod
 
 HOMEPAGE="http://tremulous.net"
 SRC_URI="mirror://sourceforge/tremulous/tremulous-q3-${PV}-installer.x86.run"
