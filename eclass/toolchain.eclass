@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.309 2006/09/17 07:56:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.310 2006/09/28 11:36:37 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -399,7 +399,7 @@ hardened_gcc_is_stable() {
 	if [[ $1 == "pie" ]] ; then
 		# HARDENED_* variables are deprecated and here for compatibility
 		local tocheck="${HARDENED_PIE_WORKS} ${HARDENED_GCC_WORKS}"
-		if is_uclibc ; then
+		if [[ ${CTARGET} == *-uclibc* ]] ; then
 			tocheck="${tocheck} ${PIE_UCLIBC_STABLE}"
 		else
 			tocheck="${tocheck} ${PIE_GLIBC_STABLE}"
@@ -407,7 +407,7 @@ hardened_gcc_is_stable() {
 	elif [[ $1 == "ssp" ]] ; then
 		# ditto
 		local tocheck="${HARDENED_SSP_WORKS} ${HARDENED_GCC_WORKS}"
-		if is_uclibc ; then
+		if [[ ${CTARGET} == *-uclibc* ]] ; then
 			tocheck="${tocheck} ${SSP_UCLIBC_STABLE}"
 		else
 			tocheck="${tocheck} ${SSP_STABLE}"
@@ -427,7 +427,7 @@ hardened_gcc_check_unsupported() {
 	# this shouldn't cause problems... however, allowing this logic to work
 	# even with the variables unset will break older ebuilds that dont use them.
 	if [[ $1 == "pie" ]] ; then
-		if is_uclibc ; then
+		if [[ ${CTARGET} == *-uclibc* ]] ; then
 			[[ -z ${PIE_UCLIBC_UNSUPPORTED} ]] && return 0
 			tocheck="${tocheck} ${PIE_UCLIBC_UNSUPPORTED}"
 		else
@@ -435,7 +435,7 @@ hardened_gcc_check_unsupported() {
 			tocheck="${tocheck} ${PIE_GLIBC_UNSUPPORTED}"
 		fi
 	elif [[ $1 == "ssp" ]] ; then
-		if is_uclibc ; then
+		if [[ ${CTARGET} == *-uclibc* ]] ; then
 			[[ -z ${SSP_UCLIBC_UNSUPPORTED} ]] && return 0
 			tocheck="${tocheck} ${SSP_UCLIBC_UNSUPPORTED}"
 		else
@@ -1007,7 +1007,7 @@ do_gcc_rename_java_bins() {
 gcc_src_unpack() {
 	local release_version="Gentoo ${GCC_PVR}"
 
-	[[ -z ${UCLIBC_VER} ]] && is_uclibc && die "Sorry, this version does not support uClibc"
+	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && die "Sorry, this version does not support uClibc"
 
 	gcc_quick_unpack
 	exclude_gcc_patches
@@ -1265,7 +1265,7 @@ gcc_do_configure() {
 			*-freebsd*) needed_libc=freebsd-lib;;
 			*-gnu*)     needed_libc=glibc;;
 			*-klibc)    needed_libc=klibc;;
-			*-uclibc)   needed_libc=uclibc;;
+			*-uclibc*)  needed_libc=uclibc;;
 			avr)        confgcc="${confgcc} --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
@@ -1293,7 +1293,7 @@ gcc_do_configure() {
 	# --enable-sjlj-exceptions : currently the unwind stuff seems to work
 	# for statically linked apps but not dynamic
 	# so use setjmp/longjmp exceptions by default
-	if is_uclibc ; then
+	if [[ ${CTARGET} == *-uclibc* ]] ; then
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace"
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && \
 			confgcc="${confgcc} --enable-sjlj-exceptions"
@@ -2300,11 +2300,6 @@ is_multilib() {
 			has_multilib_profile || use multilib ;;
 		*)	false ;;
 	esac
-}
-
-is_uclibc() {
-	[[ ${GCCMAJOR} -lt 3 ]] && return 1
-	[[ ${CTARGET} == *-uclibc ]]
 }
 
 is_cxx() {
