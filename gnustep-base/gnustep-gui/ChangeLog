@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.41 2006/08/30 07:56:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.42 2006/09/28 04:46:13 tsunam Exp $
+
+  28 Sep 2006; Joshua Jackson <tsunam@gentoo.org> gnustep-gui-0.10.3.ebuild:
+  Stable x86; bug #139385
 
   30 Aug 2006; <blubb@gentoo.org> gnustep-gui-0.10.3.ebuild:
   stable on amd64
