@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.69 2006/09/28 16:36:00 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.70 2006/09/28 18:28:50 wltjr Exp $
+
+  28 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> Manifest:
+  Redigested, ew
 
 *tomcat-5.5.20 (28 Sep 2006)
 
