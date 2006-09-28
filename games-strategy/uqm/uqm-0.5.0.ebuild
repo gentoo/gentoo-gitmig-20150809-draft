@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.5.0.ebuild,v 1.1 2006/02/07 03:43:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.5.0.ebuild,v 1.2 2006/09/28 21:36:52 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="The Ur-Quan Masters: Port of Star Control 2"
 HOMEPAGE="http://sc2.sourceforge.net/"
