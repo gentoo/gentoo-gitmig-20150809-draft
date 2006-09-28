@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0.ebuild,v 1.6 2006/09/02 23:53:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/lugaru-demo-1.0.ebuild,v 1.7 2006/09/28 14:46:26 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="3D arcade with unique fighting system and antropomorphic characters"
 HOMEPAGE="http://wolfire.com/lugaru.html"
@@ -24,27 +24,26 @@ RDEPEND="sys-libs/glibc
 		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-xlibs )
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 )
+		x11-libs/libX11
+		x11-libs/libXext
 		=virtual/libstdc++-3.3 )"
 
 S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	unpack_makeself lugaru-linux-x86-${PV}.run
-	tar xpf lugaru-linux-x86.tar || die "executables unpacking failed"
-	tar xpf lugaru-data.tar || die "data unpacking failed"
+	unpack_makeself *.run
+	unpack ./*.tar
+
+	# Duplicate file and can't be handled by portage, bug #14983
+	rm -f "Data/Textures/Quit.png "
 }
 
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/lugaru
 
 	insinto "${dir}"
-	doins -r Data Readme README.linux Screenshots Troubleshooting || die "doins"
+	doins -r Data Readme README.linux Troubleshooting || die "doins"
 
 	exeinto "${dir}"
 	doexe lugaru-bin *.so *.so.0 || die "doexe"
