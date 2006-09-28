@@ -1,0 +1,5 @@
+# Start window decorator
+gtk-window-decorator --replace &
+
+# Start compiz
+LD_LIBRARY_PATH="/usr/lib/opengl/xorg-x11" compiz --replace gconf move resize minimize place decoration wobbly fade cube rotate scale switcher zoom screenshot water dbus

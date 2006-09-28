@@ -1,5 +1,5 @@
 # Start window decorator
-gnome-window-decorator --replace &
+gtk-window-decorator --replace &
 
 # Start compiz
-LIBGL_ALWAYS_INDIRECT=1 compiz --replace --use-cow --indirect-rendering --strict-binding gconf move resize minimize place decoration wobbly cube rotate scale switcher zoom fade screenshot water dbus
+LIBGL_ALWAYS_INDIRECT=1 compiz --replace --use-cow --indirect-rendering --strict-binding gconf move resize minimize place decoration wobbly fade cube rotate scale switcher zoom screenshot water dbus

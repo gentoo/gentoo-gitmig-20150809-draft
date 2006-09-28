@@ -1,0 +1,5 @@
+# Start window decorator
+gtk-window-decorator --replace &
+
+# Start compiz
+__GL_YIELD="NOTHING" compiz --replace --use-cow gconf move resize minimize place decoration wobbly fade cube rotate scale switcher zoom screenshot water dbus
