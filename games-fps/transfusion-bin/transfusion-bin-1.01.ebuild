@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.12 2006/03/31 21:20:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/transfusion-bin/transfusion-bin-1.01.ebuild,v 1.13 2006/09/28 21:20:31 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 MY_PN=${PN/-bin/}
 DESCRIPTION="Blood remake"
