@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-forms
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.7 2006/08/02 21:12:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.8 2006/09/28 03:10:52 nichoj Exp $
+
+  28 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
+  jgoodies-forms-1.0.7.ebuild:
+  Fixed USE=source. Other cleanups.
 
 *jgoodies-forms-1.0.7 (02 Aug 2006)
 

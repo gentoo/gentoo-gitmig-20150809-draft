@@ -1,13 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.1 2006/08/02 21:12:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/jgoodies-forms-1.0.7.ebuild,v 1.2 2006/09/28 03:10:52 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
-MY_V=${PV//./_}
+MY_PN="forms"
+MY_PV=${PV//./_}
+MY_P="${MY_PN}-${MY_PV}"
 DESCRIPTION="JGoodies Forms Library"
 HOMEPAGE="http://www.jgoodies.com/"
-SRC_URI="http://www.jgoodies.com/download/libraries/forms-${MY_V}.zip"
+SRC_URI="http://www.jgoodies.com/download/libraries/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
@@ -20,7 +22,7 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
-S="${WORKDIR}/forms-${PV}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_unpack() {
 	unpack ${A} || die "Unpack failed"
@@ -37,17 +39,14 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="jar"
-	use doc && antflags="${antflags} javadoc"
-	eant ${antflags} || die "Compile failed"
+	eant jar $(use_doc)
 }
 
 src_install() {
-	cd "${S}"
-	java-pkg_dojar build/forms.jar
+	java-pkg_dojar build/${MY_PN}.jar
 
 	dodoc RELEASE-NOTES.txt README.html
 
 	use doc && java-pkg_dohtml -r build/doc
-	use source && java-pkg_dosrc ${S}/com
+	use source && java-pkg_dosrc src/{core,extras}/com
 }
