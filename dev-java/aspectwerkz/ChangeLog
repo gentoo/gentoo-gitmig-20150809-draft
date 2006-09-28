@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.8 2006/08/05 16:56:06 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.9 2006/09/28 14:01:54 caster Exp $
+
+  28 Sep 2006; Vlastimil Babka <caster@gentoo.org>
+  aspectwerkz-2.0_rc2-r2.ebuild:
+  Added missing junit dependency, discovered through JAVA_PKG_STRICT.
 
 *aspectwerkz-2.0_rc2-r2 (05 Aug 2006)
 
