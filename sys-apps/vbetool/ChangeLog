@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/vbetool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.6 2006/05/18 18:39:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.7 2006/09/28 19:56:59 robbat2 Exp $
+
+*vbetool-0.7 (28 Sep 2006)
+
+  28 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> +vbetool-0.7.ebuild:
+  Version bump, bug #148959.
 
 *vbetool-0.5-r1 (18 May 2006)
 
