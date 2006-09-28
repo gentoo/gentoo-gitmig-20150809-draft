@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0.ebuild,v 1.1 2006/06/06 21:22:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0.ebuild,v 1.2 2006/09/28 10:04:11 nyhm Exp $
 
 inherit eutils games
 
@@ -23,7 +23,7 @@ DEPEND="
 	    	  =x11-libs/gtkglext-1* )"
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
@@ -37,8 +37,8 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} localstatedir=${D}/var/games/gwp install || die "Error: install failed"
-	dodoc AUTHORS COPYING ChangeLog README TODO
+	make DESTDIR="${D}" localstatedir="${D}"/var/games/gwp install || die "Error: install failed"
+	dodoc AUTHORS ChangeLog README TODO
 	doicon ${PN}.png
 	make_desktop_entry gwp "Gnome WarPad"
 	prepgamesdirs
