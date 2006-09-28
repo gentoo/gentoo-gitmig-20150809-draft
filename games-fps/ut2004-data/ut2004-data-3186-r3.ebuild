@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.8 2006/09/27 22:26:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.9 2006/09/28 21:23:28 nyhm Exp $
 
-inherit games games-ut2k4mod
+inherit eutils games games-ut2k4mod
 
 DESCRIPTION="Unreal Tournament 2004 - This is the data portion of UT2004"
 HOMEPAGE="http://www.unrealtournament2004.com/"
