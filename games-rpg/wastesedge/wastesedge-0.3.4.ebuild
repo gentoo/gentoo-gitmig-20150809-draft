@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.4 2006/07/03 19:54:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.5 2006/09/28 12:21:05 nyhm Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="vorbis doc nls"
-RESTRICT="nouserpriv"
+RESTRICT="userpriv"
 
 RDEPEND=">=dev-lang/python-2.0
 	>=games-rpg/adonthell-0.3.3"
