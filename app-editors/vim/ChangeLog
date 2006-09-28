@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.239 2006/09/21 00:19:21 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.240 2006/09/28 22:20:35 gustavoz Exp $
+
+  28 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> vim-7.0.17.ebuild:
+  Stable on hppa
 
   20 Sep 2006; Mike Kelly <pioto@pioto.org> vim-7.0.109.ebuild:
   Remove block against app-editors/nvi
