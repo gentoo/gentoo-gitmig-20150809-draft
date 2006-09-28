@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p5-r2.ebuild,v 1.2 2006/01/18 07:51:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-1.2.0_p5-r2.ebuild,v 1.3 2006/09/28 03:13:23 dberkholz Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,7 +16,7 @@ LICENSE="openpbs"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="doc tcltk X scp"
+IUSE="doc tcltk X crypt"
 PROVIDE="virtual/pbs"
 
 # ed is used by makedepend-sh
@@ -69,7 +69,7 @@ src_compile() {
 		--enable-clients \
 		--enable-shared \
 		--enable-depend-cache \
-		$(use_with scp) \
+		$(use_with crypt scp) \
 		$(use_enable tcltk tcl-qstat) \
 		--set-server-home=${PBS_SERVER_HOME} \
 		--set-environ=/etc/pbs_environment || die "./configure failed"

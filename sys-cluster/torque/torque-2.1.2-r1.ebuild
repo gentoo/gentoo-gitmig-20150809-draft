@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2-r1.ebuild,v 1.3 2006/09/26 21:35:46 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2-r1.ebuild,v 1.4 2006/09/28 03:13:23 dberkholz Exp $
 
 
 inherit autotools flag-o-matic eutils
@@ -14,7 +14,7 @@ LICENSE="openpbs"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="tk scp server"
+IUSE="tk crypt server"
 PROVIDE="virtual/pbs"
 
 # ed is used by makedepend-sh
@@ -28,8 +28,8 @@ DEPEND="${DEPEND_COMMON}
 	sys-apps/ed"
 
 RDEPEND="${DEPEND_COMMON}
-	scp? ( net-misc/openssh )
-	!scp? ( net-misc/netkit-rsh )"
+	crypt? ( net-misc/openssh )
+	!crypt? ( net-misc/netkit-rsh )"
 
 PDEPEND=">=sys-cluster/openpbs-common-1.1.1"
 
@@ -58,8 +58,8 @@ src_compile() {
 		myconf="--disable-server --with-default-server=$(hostname)"
 	fi
 
-	if use scp; then
-		myconf="${myconf} --with-rcp=scp"
+	if use crypt; then
+		myconf="${myconf} --with-rcp=crypt"
 	else
 		myconf="${myconf} --with-rcp=mom_rcp"
 	fi
