@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liblzw
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/ChangeLog,v 1.1 2005/11/26 11:15:23 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblzw/ChangeLog,v 1.2 2006/09/28 10:49:57 vapier Exp $
+
+*liblzw-0.1.1 (28 Sep 2006)
+
+  28 Sep 2006; Mike Frysinger <vapier@gentoo.org> +liblzw-0.1.1.ebuild:
+  Version bump for #141728.
 
 *liblzw-0.1 (26 Nov 2005)
 
