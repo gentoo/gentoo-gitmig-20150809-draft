@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.1 2006/09/22 11:40:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.2 2006/09/28 09:21:22 ticho Exp $
+
+*sonata-0.7.1 (28 Sep 2006)
+
+  28 Sep 2006; <ticho@gentoo.org> +sonata-0.7.1.ebuild:
+  Version bump. Bug #149350, reported by Fabio Bonfante <blue_fox81 at yahoo.it>.
 
 *sonata-0.6 (22 Sep 2006)
 
