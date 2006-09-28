@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbeam/kbeam-0.61-r1.ebuild,v 1.2 2006/06/14 14:28:37 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbeam/kbeam-0.61-r1.ebuild,v 1.3 2006/09/28 17:45:13 deathwing00 Exp $
 
 inherit kde autotools
 
@@ -15,6 +15,8 @@ IUSE=""
 SLOT="0"
 
 DEPEND=">=dev-libs/openobex-1.1"
+
+RDEPEND="${DEPEND}"
 
 PATCHES="${FILESDIR}/${P}-aclocal_openobex.patch"
 
