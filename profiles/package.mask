@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5959 2006/09/27 23:12:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5960 2006/09/28 16:38:04 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (28 Sep 2006)
+# These are masked because they require us to download VMware Server thanks to
+# the split vmware-modules ebulds.  Once I have worked out a better solution, I
+# will unmask these.
+>=app-emulation/vmware-workstation-5.5.2
+>=app-emulation/vmware-player-1.0.2
 
 # Krzysiek Pawlik <nelchael@gentoo.org) (28 Sep 2006)
 # Needs testing
