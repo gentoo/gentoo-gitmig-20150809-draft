@@ -1,0 +1,24 @@
+--- metabar/src/metabar.desktop.orig	2005-04-06 15:49:04.000000000 +0000
++++ metabar/src/metabar.desktop	2005-04-06 15:49:58.000000000 +0000
+@@ -9,6 +9,7 @@
+ Comment[fr]=Un module externe pour le panneau de navigation de Konqueror nommé Metabar
+ Comment[it]=Un plugin per la navigazione in konqueror chiamato Metabar
+ Comment[nl]=Een konqueror navigatiepaneel-plugin met de naam Metabar
++Comment[pl]=Panel nawigacyjny dla Konquerora nazwany Metabar
+ Comment[pt]=Um 'plugin' do painel de navegação do konqueror chamado Metabar
+ Comment[pt_BR]=Um plugin de painel de navegação do konqueror chamado Metabar
+ Comment[ru]=Модуль панели навигации konqueror Metabar
+--- metabar/src/metabar_add.desktop.orig	2005-04-06 15:49:11.000000000 +0000
++++ metabar/src/metabar_add.desktop	2005-04-06 15:50:31.000000000 +0000
+@@ -1,9 +1,11 @@
+ [Desktop Entry]
+ Comment=A konqueror navigation panel plugin called Metabar
++Comment[pl]=Panel nawigacyjny dla Konquerora nazwany Metabar
+ Encoding=UTF-8
+ Icon=metabar
+ Name=Metabar
+ Name[de]=Metabar
++Name[pl]=Metabar
+ Open=false
+ Type=Link
+ URL=

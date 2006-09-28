@@ -1,0 +1,11 @@
+--- src/metabarwidget.cpp.orig	2006-09-27 20:54:15.000000000 -0400
++++ src/metabarwidget.cpp	2006-09-27 20:54:38.000000000 -0400
+@@ -369,7 +369,7 @@
+       
+         DOM::DOMString innerHTML;
+         innerHTML += QString("<ul style=\"width: %1px; height: %1px\">").arg(image.width(), image.height());
+-        innerHTML += "<object class=\preview\" type=\"";
++        innerHTML += "<object class=\"preview\" type=\"";
+         innerHTML += item->mimetype();
+         innerHTML += "\" data=\"";
+         innerHTML += item->url().url();

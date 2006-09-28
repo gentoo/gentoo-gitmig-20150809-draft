@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.8.ebuild,v 1.3 2006/02/21 18:25:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.8.ebuild,v 1.4 2006/09/28 17:19:35 troll Exp $
 
 inherit kde
 
@@ -19,6 +19,14 @@ DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.3 )
 need-kde 3.3
 
 S="${WORKDIR}/${PN}"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fix-esc-bug.patch
+	epatch ${FILESDIR}/${PN}-desktop_file.patch
+}
 
 pkg_postinst()
 {
