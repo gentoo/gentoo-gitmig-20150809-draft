@@ -1,6 +1,20 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.136 2006/09/28 16:32:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.137 2006/09/28 18:22:20 wolf31o2 Exp $
+
+*vmware-workstation-5.5.2.29772 (28 Sep 2006)
+
+  28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/5.5.2.29772/000_all_initd-location.patch,
+  +files/5.5.2.29772/001_all_fix-permissions.patch,
+  +files/5.5.2.29772/002_all_pagebreak-detection-fix.patch,
+  +files/5.5.2.29772/004_all_do-not-build-modules.patch,
+  +files/5.5.2.29772/007_all_use-modprobe-over-insmod.patch,
+  +files/5.5.2.29772/009_all_init.d-modules-warning.patch,
+  +vmware-workstation-5.5.2.29772.ebuild:
+  Version bump to 5.5.2, which I am leaving masked for the time being because
+  I hate the idea of forcing more than 100MB on people that they don't need. I
+  will unmask this once I come up with a better solution.
 
   28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r11.ebuild,
