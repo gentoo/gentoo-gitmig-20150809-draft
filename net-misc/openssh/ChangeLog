@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.199 2006/09/27 15:52:34 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.200 2006/09/28 09:44:12 vapier Exp $
 
   27 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org>
   openssh-4.3_p2-r5.ebuild:
@@ -22,6 +22,12 @@
 
   25 Sep 2006; Paul Varner <fuzzyray@gentoo.org> openssh-4.3_p2-r5.ebuild:
   Stable on x86. Bug #148228
+
+*openssh-4.3_p2-r5 (25 Sep 2006)
+
+  25 Sep 2006; Tavis Ormandy <taviso@gentoo.org> +openssh-4.3_p2-r5.ebuild,
+  +files/openssh-4.3_p2-identical-simple-dos-2.patch:
+  Tweak DOS patch #148228.
 
   23 Sep 2006; Mike Frysinger <vapier@gentoo.org>
   +files/openssh-4.3_p2-opensc-libs.patch, openssh-4.3_p2-r4.ebuild:
