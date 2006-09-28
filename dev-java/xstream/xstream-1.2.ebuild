@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.1 2006/09/23 04:41:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.2.ebuild,v 1.2 2006/09/28 21:33:28 caster Exp $
 
 inherit java-pkg-2
 
@@ -23,6 +23,7 @@ COMMON_DEPS="
 	dev-java/joda-time
 	dev-java/xom
 	>=dev-java/xpp3-1.1.3.4
+	=dev-java/xml-commons-external-1.3*
 "
 DEPEND="java5? ( >=virtual/jdk-1.5 )
 	!java5? ( =virtual/jdk-1.4* )
@@ -40,6 +41,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	rm *.jar
+	java-pkg_jar-from xml-commons-external-1.3
 	java-pkg_jar-from jsr173
 	java-pkg_jar-from cglib-2.1
 	java-pkg_jar-from commons-lang-2.1
