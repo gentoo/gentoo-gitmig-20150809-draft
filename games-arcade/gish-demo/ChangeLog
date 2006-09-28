@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/gish-demo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.8 2006/09/19 18:51:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.9 2006/09/28 13:17:24 wolf31o2 Exp $
+
+  28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  gish-demo-1.0.0.ebuild:
+  Added multilib to inherit since we use a function from it, rather than
+  allowing implicit inheritance from eutils.
 
   19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gish-demo-1.0.0.ebuild:

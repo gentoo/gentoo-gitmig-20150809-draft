@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.9 2006/09/19 18:51:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.10 2006/09/28 13:17:24 wolf31o2 Exp $
 
-inherit eutils games
+inherit eutils multilib games
 
 DESCRIPTION="play as an amorphous ball of tar that rolls and squishes around"
 HOMEPAGE="http://www.chroniclogic.com/gish.htm"
