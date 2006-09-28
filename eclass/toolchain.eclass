@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.310 2006/09/28 11:36:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.311 2006/09/28 11:54:41 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1297,7 +1297,7 @@ gcc_do_configure() {
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace"
 		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && \
 			confgcc="${confgcc} --enable-sjlj-exceptions"
-	else
+	elif [[ ${CTARGET} == *-gnu* ]] ; then
 		confgcc="${confgcc} --enable-__cxa_atexit"
 	fi
 	[[ ${CTARGET} == *-gnu* ]] && confgcc="${confgcc} --enable-clocale=gnu"
