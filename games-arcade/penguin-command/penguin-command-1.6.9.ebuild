@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.9.ebuild,v 1.2 2005/05/02 14:25:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.9.ebuild,v 1.3 2006/09/28 20:55:11 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="A clone of the classic Missile Command Game"
 HOMEPAGE="http://www.linux-games.com/penguin-command/"
