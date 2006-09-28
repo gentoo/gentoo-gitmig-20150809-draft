@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.199 2006/09/28 18:31:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.200 2006/09/28 21:58:38 gustavoz Exp $
+
+  28 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> openssl-0.9.7l.ebuild,
+  openssl-0.9.8d.ebuild:
+  Stable on hppa wrt security #145510
 
   28 Sep 2006; Jason Wever <weeve@gentoo.org> openssl-0.9.7l.ebuild,
   openssl-0.9.8d.ebuild:
