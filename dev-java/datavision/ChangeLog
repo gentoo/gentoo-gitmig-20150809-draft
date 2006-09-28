@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/datavision
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.10 2006/09/13 07:36:56 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/ChangeLog,v 1.11 2006/09/28 02:28:12 nichoj Exp $
+
+  28 Sep 2006; Joshua Nichols <nichoj@gentoo.org> datavision-0.8.2.ebuild:
+  Marked ~amd64 for bug #146146.
 
   13 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   datavision-0.8.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.10 2006/09/13 07:36:56 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision/datavision-0.8.2.ebuild,v 1.11 2006/09/28 02:28:12 nichoj Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://datavision.sourceforge.net/"
 IUSE="doc jikes junit mysql postgres"
 SLOT="0.8"
 LICENSE="Apache-1.1"
-KEYWORDS="~ppc ~x86" #karltk: missing some deps for ~amd64
+KEYWORDS="~amd64 ~ppc ~x86"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/itext-1.02b
 	>=dev-java/jruby-0.7.0
