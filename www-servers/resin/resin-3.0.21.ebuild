@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.21.ebuild,v 1.3 2006/09/24 19:28:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.21.ebuild,v 1.4 2006/09/28 22:35:28 nelchael Exp $
 
 inherit java-pkg-2 java-ant-2 eutils flag-o-matic
 
@@ -13,7 +13,7 @@ IUSE="doc source"
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-RDEPEND=">=virtual/jdk-1.5
+RDEPEND="=virtual/jdk-1.5*
 	>=dev-java/iso-relax-20050331"
 DEPEND="${RDEPEND}
 	dev-java/aopalliance

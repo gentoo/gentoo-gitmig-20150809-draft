@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.18 2006/09/24 19:28:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.19 2006/09/28 22:35:28 nelchael Exp $
+
+  28 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  files/3.0.21/resin.conf, files/3.0.21/resin.init, resin-3.0.21.ebuild:
+  Fix bug #149447 and bug #149451.
 
   24 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.0.21.ebuild:
   Update DEPEND to use new sun-jaf and sun-javamail.
