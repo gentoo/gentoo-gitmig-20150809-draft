@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ut2004-alienswarm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-alienswarm/ChangeLog,v 1.5 2006/01/05 02:55:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-alienswarm/ChangeLog,v 1.6 2006/09/28 21:52:32 wolf31o2 Exp $
+
+*ut2004-alienswarm-1.31 (28 Sep 2006)
+
+  28 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -ut2004-alienswarm-1.2.ebuild, +ut2004-alienswarm-1.31.ebuild:
+  Version bump from 1.3 to 1.31 and closing bug #142121.
 
   05 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-alienswarm-1.3.ebuild:
