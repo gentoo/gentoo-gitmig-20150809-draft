@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.3 2006/07/07 21:31:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.4 2006/09/28 10:01:09 nyhm Exp $
 
 inherit games
 
@@ -21,8 +21,8 @@ DEPEND="~dev-games/libggz-0.0.13
 	>=media-libs/sdl-ttf-1.2.0"
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS QuickStart.GGZ README*
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README*
 	prepgamesdirs
 }
 
