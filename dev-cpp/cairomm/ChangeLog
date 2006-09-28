@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.2 2006/09/15 20:24:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.3 2006/09/28 19:39:41 gustavoz Exp $
+
+  28 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> cairomm-1.2.2.ebuild:
+  Keyworded ~sparc
 
   15 Sep 2006; <dang@gentoo.org> cairomm-1.2.2.ebuild:
   Marked ~amd64
