@@ -1,6 +1,21 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.68 2006/09/27 16:54:26 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.69 2006/09/28 16:36:00 wltjr Exp $
+
+*tomcat-5.5.20 (28 Sep 2006)
+
+  28 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/5.5.20/catalinabuild-xml.patch,
+  +files/5.5.20/jasperbuild-xml.patch,
+  +files/5.5.20/jsr152build-xml-examples.patch,
+  +files/5.5.20/jsr154build-xml-examples.patch,
+  +files/5.5.20/mainbuild-xml.patch, +files/5.5.20/tomcat.conf,
+  +files/5.5.20/tomcat.env, +files/5.5.20/tomcat.init,
+  +files/5.5.20/tomcatbuild-xml.patch,
+  +files/5.5.20/tomcatbuild-xml-docs.patch,
+  +files/5.5.20/tomcatbuild-xml-examples.patch, +tomcat-5.5.20.ebuild:
+  New 0 day ebuild for Tomcat 5.5.20. Introduce admin use flag that will
+  control the struts dep and if the admin webapp will be present.
 
   27 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   tomcat-5.5.17-r7.ebuild:
