@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.08.ebuild,v 1.3 2006/09/01 03:25:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0.08.ebuild,v 1.4 2006/09/28 02:23:38 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -27,8 +27,7 @@ IUSE="X alsa doc examples jce nsplugin"
 
 QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/motif21/libmawt.so opt/${P}/jre/lib/i386/libdeploy.so"
 
-DEPEND=">=dev-java/java-config-1.2
-	sys-apps/sed
+DEPEND="
 	doc? ( =dev-java/java-sdk-docs-1.5.0* )
 	jce? ( =dev-java/sun-jce-bin-1.5.0* )"
 
