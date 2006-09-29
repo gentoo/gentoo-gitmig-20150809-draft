@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/pymad-0.4.1.ebuild,v 1.8 2005/04/24 13:08:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/pymad-0.4.1.ebuild,v 1.9 2006/09/29 00:03:12 wormo Exp $
 
 inherit distutils
 
