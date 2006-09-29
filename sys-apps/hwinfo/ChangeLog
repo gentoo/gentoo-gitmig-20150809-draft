@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.3 2006/07/22 04:31:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.4 2006/09/29 02:16:18 robbat2 Exp $
+
+  29 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> hwinfo-13.0.ebuild:
+  Update deps for latest version, bug #143088.
 
 *hwinfo-13.0 (22 Jul 2006)
 

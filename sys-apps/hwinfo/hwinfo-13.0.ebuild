@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.0.ebuild,v 1.1 2006/07/22 04:31:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.0.ebuild,v 1.2 2006/09/29 02:16:18 robbat2 Exp $
 
 inherit eutils
 
@@ -12,11 +12,14 @@ SRC_URI="${DEBIAN_BASE_URI}/${PN}_${PV}.orig.tar.gz
 		 ${DEBIAN_BASE_URI}/${PN}_${PV}-${DEBIAN_PV}.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
-DEPEND="sys-fs/sysfsutils
+RDEPEND="sys-fs/sysfsutils
 		sys-apps/hal
 		sys-apps/dbus"
+# this package won't work on *BSD
+DEPEND="${RDEPEND}
+		>=sys-kernel/linux-headers-2.6.17"
 
 src_unpack (){
 	unpack ${PN}_${PV}.orig.tar.gz
