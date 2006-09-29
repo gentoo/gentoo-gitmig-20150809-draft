@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/katalog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.5 2006/09/29 12:52:46 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.6 2006/09/29 13:01:18 deathwing00 Exp $
+
+  29 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  katalog-0.4_pre1.ebuild:
+  Added pkg_postinst warning.
 
 *katalog-0.4_pre1 (29 Sep 2006)
 

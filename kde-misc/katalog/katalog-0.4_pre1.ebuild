@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4_pre1.ebuild,v 1.1 2006/09/29 12:52:46 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/katalog-0.4_pre1.ebuild,v 1.2 2006/09/29 13:01:18 deathwing00 Exp $
 
 inherit kde
 
@@ -31,6 +31,13 @@ src_compile() {
 src_install() {
 	scons install DESTDIR="${D}"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README
+}
+
+pkg_postinst() {
+	ewarn ""
+	ewarn "WARNING: This package is only for testing purposes as it is known"
+	ewarn "         to be broken. Use at your own discretion."
+	ewarn ""
 }
 
 need-kde 3.4
