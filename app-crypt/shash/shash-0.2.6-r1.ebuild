@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6-r1.ebuild,v 1.15 2006/05/21 09:27:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6-r1.ebuild,v 1.16 2006/09/29 15:26:50 dsd Exp $
 
 inherit bash-completion eutils
 
@@ -14,6 +14,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc-macos ppc64 s390 sh sparc
 IUSE="static"
 
 DEPEND=">=app-crypt/mhash-0.8.18-r1"
+# the following is required because bash-completion.eclass overwrites
+# default RDEPEND, and this package depends on mhash at runtime
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
