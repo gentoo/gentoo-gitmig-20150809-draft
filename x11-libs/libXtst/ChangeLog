@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.25 2006/07/19 12:36:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.26 2006/09/29 18:15:58 dberkholz Exp $
+
+  29 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; libXtst-1.0.1.ebuild:
+  Move recordproto to runtime deps because it is required to compile against
+  this library (Daniel Drake).
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> libXtst-1.0.1.ebuild:
   Stable on hppa.
