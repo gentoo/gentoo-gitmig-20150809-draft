@@ -1,13 +1,15 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/files/rc-addon-1.0.2.sh,v 1.1 2006/09/18 20:12:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/files/rc-addon-1.0.2.sh,v 1.2 2006/09/29 21:51:58 hd_brummy Exp $
 #
 # rc-addon plugin-startup-skript for vdr-skinsoppalusikka
 #
 # This sript is called by gentoo-vdr-scripts on start of VDR
 
-# Check on dxr-3 and set default logo DIR
+# Check if dxr3 plugin in /etc/conf.d/vdr Plugins=""
+# and set default logo DIR
+
 plugin_pre_vdr_start() {
 
-	if [[ -z ${PLUGINS/dxr3/} ]] ; then
+	if [[ ${PLUGINS} != ${PLUGINS/dxr3/} ]] ; then
 		: ${SKINSOPPALUSIKKA_LOGOS_DIR:=/usr/share/vdr/skinsoppalusikka/logos-dxr3}
 	else
 		: ${SKINSOPPALUSIKKA_LOGOS_DIR:=/usr/share/vdr/channel-logos}

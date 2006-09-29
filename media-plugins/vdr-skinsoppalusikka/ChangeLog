@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-skinsoppalusikka
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/ChangeLog,v 1.20 2006/09/18 20:12:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/ChangeLog,v 1.21 2006/09/29 21:51:58 hd_brummy Exp $
+
+  29 Sep 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  files/rc-addon-1.0.1.sh, files/rc-addon-1.0.2.sh:
+  fix test in rc scripts; thanks to Ville Aakko on closed bug #149559
 
 *vdr-skinsoppalusikka-1.0.2 (18 Sep 2006)
 
