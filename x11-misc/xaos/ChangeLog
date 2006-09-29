@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xaos
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.23 2006/09/29 03:18:20 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/ChangeLog,v 1.24 2006/09/29 23:59:58 ticho Exp $
+
+  29 Sep 2006; <ticho@gentoo.org> xaos-3.2.ebuild:
+  Stable on x86, bug #146009.
 
   28 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> xaos-3.2.ebuild:
   stable on ppc (Bug #146009)
