@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.22 2006/09/28 19:54:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.23 2006/09/29 14:45:54 dang Exp $
+
+*gksu-2.0.0 (29 Sep 2006)
+
+  29 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> gksu-1.9.1.ebuild,
+  +gksu-2.0.0.ebuild:
+  2.0.0 is out. New feature is the nautilus extension (Open as administrator).
+  Also, upstream moved the download location for 1.9.1, fix that
 
   28 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> gksu-1.9.1.ebuild:
   Stable on sparc wrt #149444
