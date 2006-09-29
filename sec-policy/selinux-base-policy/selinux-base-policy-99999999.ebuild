@@ -1,17 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-99999999.ebuild,v 1.3 2006/02/24 03:12:31 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-99999999.ebuild,v 1.4 2006/09/29 02:39:05 pebenito Exp $
 
 POLICY_TYPES="strict targeted"
 OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y"
 
 IUSE=""
 
-ECVS_SERVER="cvs.sf.net:/cvsroot/serefpolicy"
-ECVS_MODULE="refpolicy"
-ECVS_USER="anonymous"
-
-inherit eutils cvs
+inherit eutils subversion
 
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
@@ -28,8 +24,13 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/
 
+ESVN_REPO_URI="http://oss.tresys.com/repos/refpolicy/trunk"
+ESVN_PROJECT="refpolicy"
+
 src_unpack() {
-	cvs_src_unpack
+	subversion_src_unpack
+	mkdir ${S}/refpolicy
+	mv ${S}/* ${S}/refpolicy
 
 	for i in ${POLICY_TYPES}; do
 		mkdir -p ${S}/${i}/policy
@@ -66,6 +67,8 @@ src_install() {
 			|| die "${i} headers install failed."
 
 		echo "run_init_t" > ${D}/etc/selinux/${i}/contexts/run_init_type
+
+		echo "textrel_shlib_t" >> ${D}/etc/selinux/${i}/contexts/customizable_types
 
 		# libsemanage won't make this on its own
 		keepdir /etc/selinux/${i}/policy
