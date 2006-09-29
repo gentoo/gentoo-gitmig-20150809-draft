@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.22 2006/09/25 07:17:39 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.23 2006/09/29 15:43:03 spb Exp $
+
+  29 Sep 2006; Stephen Bennett <spb@gentoo.org> no-nptl/2.4/package.mask:
+  Masking >=sys-kernel/linux-headers since packages requires 2.4
 
   25 Sep 2006; Christian Heim <phreak@gentoo.org>
   vserver/no-nptl, vserver/no-nptl/make.defaults,
