@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.17 2006/05/21 03:10:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.18 2006/09/29 21:44:38 sbriesen Exp $
+
+  29 Sep 2006; Stefan Briesenick <sbriesen@gentoo.org> -files/capi4hylafax,
+  -capi4hylafax-01.02.03.ebuild, -capi4hylafax-01.02.03.11.ebuild,
+  -capi4hylafax-01.02.03.13.ebuild:
+  removed old versions.
 
   21 May 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   Adding Japanese translation for metadata.xml. Thanks to Yoshino-san in bug
