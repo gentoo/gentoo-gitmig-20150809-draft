@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/gnu-regexp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.13 2005/09/03 15:39:00 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.14 2006/09/29 23:24:26 caster Exp $
+
+*gnu-regexp-1.1.4-r2 (29 Sep 2006)
+
+  29 Sep 2006; Vlastimil Babka <caster@gentoo.org>
+  +gnu-regexp-1.1.4-r2.ebuild:
+  Revision bump to use gen-2 java system. Added doc and source USE flags.
 
   03 Sep 2005; Michael Hanselmann <hansmi@gentoo.org>
   gnu-regexp-1.1.4-r1.ebuild:
