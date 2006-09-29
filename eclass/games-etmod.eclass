@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.10 2006/03/24 00:59:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-etmod.eclass,v 1.11 2006/09/29 14:34:19 wolf31o2 Exp $
 
 inherit games
 
@@ -33,15 +33,15 @@ games-etmod_src_install() {
 
 	if [ -d ${MOD_NAME} ] ; then
 		dodir ${bdir}
-		mv ${MOD_NAME} ${D}/${bdir}/
+		cp -PR ${MOD_NAME} ${D}/${bdir}/
 	fi
 	if [ -d etmain ] ; then
 		dodir ${bdir}
-		mv etmain ${D}/${bdir}/
+		cp -PR etmain ${D}/${bdir}/
 	fi
 	if [ ! -z "`ls ${S}/* 2> /dev/null`" ] ; then
 		dodir ${mdir}
-		mv ${S}/* ${D}/${mdir}/
+		cp -PR ${S}/* ${D}/${mdir}/
 	fi
 
 	if use dedicated; then
