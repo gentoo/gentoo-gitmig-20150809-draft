@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-jaf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.8 2006/05/01 11:58:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.9 2006/09/29 09:47:36 caster Exp $
+
+*gnu-jaf-1.0-r2 (29 Sep 2006)
+
+  29 Sep 2006; Vlastimil Babka <caster@gentoo.org> +gnu-jaf-1.0-r2.ebuild:
+  Revbump to use generation-2 java eclasses.
 
   01 May 2006; Markus Rothe <corsair@gentoo.org> gnu-jaf-1.0-r1.ebuild:
   Stable on ppc64
