@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.10 2006/09/28 13:17:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.11 2006/09/29 22:02:26 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -20,8 +20,7 @@ RDEPEND="media-libs/libsdl
 	media-libs/libvorbis
 	amd64? (
 		>=app-emulation/emul-linux-x86-xlibs-2.1
-		>=app-emulation/emul-linux-x86-sdl-2.1
-	)"
+		>=app-emulation/emul-linux-x86-sdl-2.1 )"
 
 S=${WORKDIR}/gishdemo
 
