@@ -1,0 +1,13 @@
+Index: OpenAL-Sample/src/backends/alc_backend_alsa.c
+===================================================================
+--- OpenAL-Sample/src/backends/alc_backend_alsa.c	(revision 1262)
++++ OpenAL-Sample/src/backends/alc_backend_alsa.c	(working copy)
+@@ -228,7 +228,7 @@
+   alsaFormat = convertFormatALToALSA (*format);
+   numChannels = (unsigned int) _alGetChannelsFromFormat (*format);
+   ad->frameSizeInBytes =
+-    (unsigned int) snd_pcm_format_size (alsaFormat, numChannels);
++    (unsigned int) psnd_pcm_format_size (alsaFormat, numChannels);
+   bufferSizeInFrames = *bufferSizeInBytes / ad->frameSizeInBytes;
+   rate = (unsigned int) *speed;
+ 
