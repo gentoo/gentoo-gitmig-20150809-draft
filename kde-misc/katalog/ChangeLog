@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/katalog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.4 2006/03/12 22:21:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/katalog/ChangeLog,v 1.5 2006/09/29 12:52:46 deathwing00 Exp $
+
+*katalog-0.4_pre1 (29 Sep 2006)
+
+  29 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  katalog-0.3.ebuild, +katalog-0.4_pre1.ebuild:
+  Added preview of version 0.4. Added only for testing purposes.
 
   12 Mar 2006; Jason Wever <weeve@gentoo.org> katalog-0.3.ebuild:
   Stable on SPARC.
