@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0-r1.ebuild,v 1.1 2006/09/18 02:05:48 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/gnu-javamail-1.0-r1.ebuild,v 1.2 2006/09/29 21:54:32 caster Exp $
 
 inherit java-pkg-2
 
@@ -13,10 +13,10 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
-RDEPEND=">=virtual/jre-1.3
+RDEPEND=">=virtual/jre-1.4
 	=dev-java/gnu-jaf-1*
 	=dev-java/gnu-classpath-inetlib-1.0*"
-DEPEND=">=virtual/jdk-1.3
+DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
@@ -38,7 +38,7 @@ src_compile() {
 		--enable-maildir \
 		|| die "failed to configure"
 
-	emake || die "failed to compile"
+	emake JAVACFLAGS="${JAVACFLAGS}" || die "failed to compile"
 
 	if use doc; then
 		emake javadoc || die "failed to generate javadoc"
