@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-HTTP_Download
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Download/ChangeLog,v 1.1 2006/09/29 06:19:08 sebastian Exp $
+
+*PEAR-HTTP_Download-1.1.1 (29 Sep 2006)
+
+  29 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-HTTP_Download-1.1.1.ebuild:
+  Initial ebuild, closes bug #146998.
+

@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-HTML_BBCodeParser
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_BBCodeParser/ChangeLog,v 1.1 2006/09/29 06:16:03 sebastian Exp $
+
+*PEAR-HTML_BBCodeParser-1.1 (29 Sep 2006)
+
+  29 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PEAR-HTML_BBCodeParser-1.1.ebuild:
+  Initial ebuild, closes bug #145830.
+
