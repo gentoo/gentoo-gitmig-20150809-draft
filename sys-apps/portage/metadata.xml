@@ -3,4 +3,5 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer><email>zmedico@gentoo.org</email></maintainer>
+<maintainer><email>dev-portage@gentoo.org</email></maintainer>
 </pkgmetadata>
