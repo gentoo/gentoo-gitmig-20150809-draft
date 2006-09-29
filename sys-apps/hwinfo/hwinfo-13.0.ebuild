@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.0.ebuild,v 1.2 2006/09/29 02:16:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-13.0.ebuild,v 1.3 2006/09/29 22:40:15 robbat2 Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64"
 IUSE=""
-RDEPEND="sys-fs/sysfsutils
+RDEPEND=">=sys-fs/sysfsutils-2
 		sys-apps/hal
 		sys-apps/dbus"
 # this package won't work on *BSD
@@ -29,7 +29,7 @@ src_unpack (){
 	for p in ${S}/debian/patches/*; do
 		EPATCH_OPTS="-p1 -d ${S}" epatch ${p}
 	done
-	#EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${P}-makefile-fixes.patch
+	EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${P}-makefile-fixes.patch
 	#sed -i -e "s,^LIBS[ \t]*= -lhd,LIBS = -lhd -lsysfs," ${S}/Makefile
 	#sed -i -e "s,^LIBDIR[ \t]*= /usr/lib$,LIBDIR = /usr/$(get_libdir)," ${S}/Makefile
 	echo 'libs: $(LIBHD) $(LIBHD_SO)' >>${S}/Makefile
