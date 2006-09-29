@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.11 2006/05/20 17:29:16 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.12 2006/09/29 21:59:00 wolf31o2 Exp $
 
 inherit flag-o-matic gnuconfig eutils multilib games
 
@@ -16,12 +16,8 @@ IUSE="X"
 DEPEND="virtual/opengl
 	virtual/glu
 	X? (
-		|| (
-			( x11-libs/libXt
-			media-libs/mesa )
-			virtual/x11
-		)
-	)
+		x11-libs/libXt
+		media-libs/mesa )
 	>=dev-lang/tcl-8.4
 	media-libs/libsdl
 	media-libs/sdl-mixer
@@ -30,15 +26,12 @@ DEPEND="virtual/opengl
 	sys-libs/zlib"
 
 RDEPEND="${DEPEND}
-	|| (
-		( x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXi
-		x11-libs/libXmu )
-		virtual/x11
-	)"
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXi
+	x11-libs/libXmu"
 
 src_unpack() {
 	unpack ${A}
