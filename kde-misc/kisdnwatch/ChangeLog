@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kisdnwatch
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.6 2005/09/22 14:15:23 greg_g Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kisdnwatch/ChangeLog,v 1.7 2006/09/29 13:24:20 deathwing00 Exp $
+
+  29 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kisdnwatch-01.00.10.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   22 Sep 2005; Gregorio Guidi <greg_g@gentoo.org>
   kisdnwatch-01.00.10.ebuild:
