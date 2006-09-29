@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.0.2.ebuild,v 1.2 2005/03/16 10:51:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.0.2.ebuild,v 1.3 2006/09/29 19:19:03 wormo Exp $
 
 inherit eutils flag-o-matic
 
