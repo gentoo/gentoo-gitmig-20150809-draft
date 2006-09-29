@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2190 2006/09/29 18:09:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2191 2006/09/29 23:50:26 hansmi Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1068,6 +1068,7 @@ net-dns/bind:dlz - enables dynamic loaded zones, 3rd party extension
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
 net-dns/djbdns:cnamefix - changes the CNAME behavior of dnscache
 net-dns/djbdns:datadir - enables tinydns-data to read a directory with multiple data files
+net-dns/djbdns:fwdonly - enable JBP's dnscache-strict-forwardonly patch
 net-dns/djbdns:fwdzone - enables forward zone patch
 net-dns/djbdns:multidata - enables command line parameters for tinydns-data to specify the data file(s)
 net-dns/djbdns:multipleip - enables multi-IP patch
