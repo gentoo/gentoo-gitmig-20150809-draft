@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.23 2006/09/24 09:56:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.24 2006/09/29 21:40:41 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -50,7 +50,9 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="nls build nptl nptlonly hardened multilib selinux glibc-omitfp profile"
+# note that nptl/nptlonly/glibc-compat20 are for upgrade checks only.
+# we dont generally support these things in this version.
+IUSE="nls build nptl nptlonly hardened multilib selinux glibc-omitfp profile glibc-compat20"
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -731,11 +733,11 @@ check_kheader_version() {
 
 	[[ -z $1 ]] && return 1
 
-	if [ -f "${header}" ] ; then
-		local version="`grep 'LINUX_VERSION_CODE' ${header} | \
-			sed -e 's:^.*LINUX_VERSION_CODE[[:space:]]*::'`"
+	if [[ -f ${header} ]] ; then
+		local version=$(grep 'LINUX_VERSION_CODE' ${header} | \
+			sed -e 's:^.*LINUX_VERSION_CODE[[:space:]]*::')
 
-		if [ "${version}" -ge "$1" ] ; then
+		if [[ ${version} -ge "$1" ]] ; then
 			return 0
 		fi
 	fi
@@ -788,7 +790,7 @@ want_nptl() {
 		hppa|m68k) return 1;;
 		sparc)
 			# >= v9 is needed for nptl.
-			[[ "${PROFILE_ARCH}" == "sparc" ]] && return 1
+			[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
 		;;
 	esac
 
@@ -871,7 +873,7 @@ glibc_do_configure() {
 
 	[[ ${CTARGET} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
 
-	if [ "$1" == "linuxthreads" ] ; then
+	if [[ $1 == "linuxthreads" ]] ; then
 		if want_tls ; then
 			myconf="${myconf} --with-tls"
 
@@ -887,7 +889,7 @@ glibc_do_configure() {
 		myconf="${myconf} --disable-sanity-checks"
 		myconf="${myconf} --enable-add-ons=ports,linuxthreads${ADDONS}"
 		myconf="${myconf} --enable-kernel=${LT_KERNEL_VERSION}"
-	elif [ "$1" == "nptl" ] ; then
+	elif [[ $1 == "nptl" ]] ; then
 		myconf="${myconf} --with-tls --with-__thread"
 		myconf="${myconf} --enable-add-ons=ports,nptl${ADDONS}"
 		myconf="${myconf} --enable-kernel=${NPTL_KERNEL_VERSION}"
@@ -1073,6 +1075,12 @@ pkg_setup() {
 		fi
 	fi
 
+	if use glibc-compat20 ; then
+		eerror "This version no longer provides compatibility with old broken"
+		eerror "applications.  If you need this support, call your vendor"
+		eerror "and tell them to release an update that isn't broken."
+		die "non-TLS symbol errno@glibc_2.0 not supported"
+	fi
 	if want_linuxthreads ; then
 		ewarn "glibc-2.4 is nptl-only!"
 		[[ ${CTARGET} == i386-* ]] && eerror "NPTL requires a CHOST of i486 or better"
