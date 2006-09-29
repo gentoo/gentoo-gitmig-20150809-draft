@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.3 2006/09/20 11:07:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/gnu-classpath-inetlib-1.0-r2.ebuild,v 1.4 2006/09/29 21:45:25 caster Exp $
 
 inherit java-pkg-2
 
@@ -48,7 +48,7 @@ src_compile() {
 		--with-javax-security-auth-callback-jar=${S}/ext \
 		--with-javax-security-sasl-jar=${S}/ext \
 		|| die "econf failed"
-	emake || die "emake failed"
+	emake JAVACFLAGS="${JAVACFLAGS}" || die "emake failed"
 	if use doc ; then
 		emake javadoc || die "emake javadoc failed"
 	fi

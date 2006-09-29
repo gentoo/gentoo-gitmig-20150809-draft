@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.17 2006/09/20 11:07:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.18 2006/09/29 21:45:25 caster Exp $
+
+  29 Sep 2006; Vlastimil Babka <caster@gentoo.org>
+  gnu-classpath-inetlib-1.0-r2.ebuild, gnu-classpath-inetlib-1.1-r2.ebuild:
+  Ensure building with correct bytecode.
 
   20 Sep 2006; Vlastimil Babka <caster@gentoo.org>
   +files/gnu-classpath-inetlib-1.0-jdk15.patch,
