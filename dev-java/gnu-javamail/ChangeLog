@@ -1,19 +1,16 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.16 2006/09/29 21:54:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.17 2006/09/29 22:13:51 caster Exp $
 
   29 Sep 2006; Vlastimil Babka <caster@gentoo.org>
   gnu-javamail-1.0-r1.ebuild:
   Ensure building with correct bytecode
 
+*gnu-javamail-1.0-r1 (18 Sep 2006)
+
   18 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
   +gnu-javamail-1.0-r1.ebuild:
   Revision bump to support the new Java system.
-
-*gnu-javamail-1.0-r1 (17 Sep 2006)
-
-  17 Sep 2006;  <>  gnu-javamail-1.0-r1.ebuild files/digest-gnu-javamail-1.0-r1
-  # INSERT ENTRY HERE
 
   30 Nov 2005; <nichoj@gentoo.org> gnu-javamail-1.0.ebuild:
   Added ~amd64 keyword (bug #105607). Disabled jikes support (bug #89711).
