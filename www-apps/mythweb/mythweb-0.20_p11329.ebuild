@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20_p11329.ebuild,v 1.2 2006/09/29 14:47:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.20_p11329.ebuild,v 1.3 2006/09/29 18:31:59 cardoe Exp $
 
 inherit mythtv webapp depend.php
 
@@ -24,9 +24,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-
+	cd "${S}/.."
 	mythtv-fixes_patch
+	cd "${S}"
 }
 
 src_install() {
