@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.2.ebuild,v 1.1 2006/09/28 01:05:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.2.ebuild,v 1.2 2006/09/29 17:03:32 wormo Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://prdownload.berlios.de/supertuxkart/SuperTuxKart-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~ppc x86"
 IUSE=""
 
 DEPEND=">=media-libs/plib-1.8.0
