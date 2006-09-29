@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.2 2006/09/24 14:01:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.3 2006/09/29 23:27:10 ticho Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="build no-helper"
 
 DEPEND=""
