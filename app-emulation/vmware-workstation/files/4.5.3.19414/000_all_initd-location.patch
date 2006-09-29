@@ -1,0 +1,47 @@
+--- vmware-distrib/bin/vmware-config.pl.ori	2006-09-29 09:14:36.000000000 -0400
++++ vmware-distrib/bin/vmware-config.pl	2006-09-29 09:20:06.000000000 -0400
+@@ -3738,7 +3738,7 @@
+       internal_sed($mouse_file . $cBackupExtension,
+                    $mouse_file, 0, \%p);
+       if (!$gOption{'skipstopstart'}) {
+-        system(shell_string(db_get_answer('INITSCRIPTSDIR') . '/gpm')
++        system(shell_string('/etc/init.d/gpm')
+                . ' restart');
+       }
+     }
+@@ -5425,7 +5425,7 @@
+ 
+ # Restart the inetd service
+ sub restart_inetd {
+-  my $inetd_restart = db_get_answer('INITSCRIPTSDIR') . '/inetd';
++  my $inetd_restart = '/etc/init.d/inetd';
+   if (-e $inetd_restart) {
+     if (!system(shell_string($inetd_restart) . ' restart')) {
+       return;
+@@ -5532,7 +5532,7 @@
+ 
+ #Restart xinetd
+ sub restart_xinetd {
+-  my $xinetd_restart = db_get_answer('INITSCRIPTSDIR') . '/xinetd';
++  my $xinetd_restart = '/etc/init.d/xinetd';
+   if (-e $xinetd_restart) {
+     if (!system(shell_string($xinetd_restart) . ' restart')) {
+       return;
+@@ -7383,7 +7383,7 @@
+           . 'a /proc/vmware directory.' . "\n\n");
+   }
+   if (!$gOption{'skipstopstart'} &&
+-      system(shell_string(db_get_answer('INITSCRIPTSDIR') . '/vmware')
++      system(shell_string('/etc/init.d/vmware')
+              . ' stop')) {
+     error('Unable to stop services for ' . vmware_product_name() . "\n\n");
+   }
+@@ -7473,7 +7473,7 @@
+   db_save();
+   # Then start VMware's services
+   if (!$gOption{'skipstopstart'}) {
+-    system(shell_string(db_get_answer('INITSCRIPTSDIR') . '/vmware') . ' start');
++    system(shell_string('/etc/init.d/vmware') . ' start');
+     print "\n";
+   }
+ 

@@ -1,0 +1,28 @@
+--- vmware-distrib/bin/vmware-config.pl.ori	2006-09-29 09:33:55.000000000 -0400
++++ vmware-distrib/bin/vmware-config.pl	2006-09-29 09:38:07.000000000 -0400
+@@ -5980,9 +5980,9 @@
+   # Get this set up even if the user doesn't want networking.  The
+   # reason is that samba may turn on networking and it needs this
+   # module to use networking.
+-  if (configure_module('vmnet') eq 'no') {
+-    module_error();
+-  }
++#  if (configure_module('vmnet') eq 'no') {
++#    module_error();
++#  }
+ 
+   # Fix for bug 15842.  Always regenerate the network settings because an
+   # upgrade leaves us in an inconsistent state.  The database will have
+@@ -7410,9 +7410,9 @@
+   }
+   if (vmware_product() eq 'server') {
+     configure_vmkernel();
+-  } else {
+-    configure_mon();
+-    configure_pp();
++#  } else {
++#    configure_mon();
++#    configure_pp();
+   }
+   configure_net();
+   # Create the directory for the UNIX domain sockets
