@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.67 2006/09/29 17:02:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.68 2006/09/29 17:05:29 wolf31o2 Exp $
+
+  29 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/0.0.8/003_all_mmx.patch:
+  Added patch for MMX and closing bug #145245.
 
 *openal-0.0.8-r1 (29 Sep 2006)
 
