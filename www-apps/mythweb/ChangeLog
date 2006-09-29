@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.26 2006/09/29 14:26:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.27 2006/09/29 14:47:33 cardoe Exp $
+
+  29 Sep 2006; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.20_p11329.ebuild:
+  Fixed streaming depends since they switched to a perl script to stream
 
 *mythweb-0.20_p11329 (29 Sep 2006)
 
