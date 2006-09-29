@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/gcc.4.1.1/packages,v 1.2 2006/09/21 02:21:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/dev/gcc.4.1.1/packages,v 1.3 2006/09/29 16:37:50 weeve Exp $
 
 # We really want 3.4.x for this profile
 *>=sys-devel/gcc-3.4.5
@@ -10,8 +10,8 @@
 *>=sys-libs/glibc-2.3.6-r3
 
 # Since we're running a sparc64 kernel w/ 32bit (v9) userland,
-# we need gcc-sparc64 for kernels.
-*>=sys-devel/gcc-sparc64-3.4.6
+# we need kgcc64 for kernels.
+*>=sys-devel/kgcc64-3.4.6
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Earlier versions aren't patched to work with 2.6 headers
