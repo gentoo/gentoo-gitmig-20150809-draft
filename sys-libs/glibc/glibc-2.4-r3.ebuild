@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.24 2006/09/29 21:40:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r3.ebuild,v 1.25 2006/09/29 23:08:20 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -871,7 +871,7 @@ glibc_do_configure() {
 
 	use glibc-omitfp && myconf="${myconf} --enable-omitfp"
 
-	[[ ${CTARGET} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
+	[[ ${CTARGET//_/-} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
 
 	if [[ $1 == "linuxthreads" ]] ; then
 		if want_tls ; then
