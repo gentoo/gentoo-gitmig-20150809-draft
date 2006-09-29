@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bmpx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.45 2006/09/25 21:06:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bmpx/ChangeLog,v 1.46 2006/09/29 16:19:43 chutzpah Exp $
+
+  29 Sep 2006; Patrick McLean <chutzpah@gentoo.org> -bmpx-0.30.1.ebuild,
+  bmpx-0.30.3.ebuild:
+  Change neon dependency to neon >= 0.25.5 (bug #149484). Clean up old versions.
 
 *bmpx-0.30.3 (25 Sep 2006)
 
