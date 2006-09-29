@@ -1,0 +1,16 @@
+--- ctrl_iface_dbus.h.orig	2006-09-29 09:41:07 +0100
++++ ctrl_iface_dbus.h	2006-09-29 09:44:23 +0100
+@@ -17,6 +17,13 @@
+ 
+ #ifdef CONFIG_CTRL_IFACE_DBUS
+ 
++/* If we don't have SIGPOLL, so use SIGIO instead */
++#ifndef SIGPOLL
++#ifdef SIGIO
++#define SIGPOLL SIGIO
++#endif
++#endif
++
+ #include <dbus/dbus.h>
+ 
+ #define WPAS_DBUS_OBJECT_PATH_MAX 150
