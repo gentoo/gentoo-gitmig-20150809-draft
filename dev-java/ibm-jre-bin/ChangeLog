@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.46 2006/09/19 16:29:05 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.47 2006/09/29 08:28:48 caster Exp $
+
+*ibm-jre-bin-1.4.2.6-r5 (29 Sep 2006)
+
+  29 Sep 2006; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jre-bin-1.4.2.6-r4.ebuild, +ibm-jre-bin-1.4.2.6-r5.ebuild:
+  Revbump to ensure nobody has world-writable javaws. Synced with ibm-jdk-bin
+  (added alsa USE flag and dependencies).
 
 *ibm-jre-bin-1.4.2.6-r4 (19 Sep 2006)
 
