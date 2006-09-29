@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2003-demo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.23 2006/09/15 20:26:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ChangeLog,v 1.24 2006/09/29 20:27:19 wolf31o2 Exp $
+
+  29 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-demo-2206-r3.ebuild:
+  Made a few modifications to the ebuild to make the install a bit cleaner, as
+  well as fixing bug #148958.
 
   15 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> files/benchmark,
   files/ut2003-demo, ut2003-demo-2206-r3.ebuild:

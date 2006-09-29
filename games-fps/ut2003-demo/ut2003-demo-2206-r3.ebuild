@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.18 2006/09/15 20:26:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.19 2006/09/29 20:27:19 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,11 +20,8 @@ DEPEND="app-arch/unzip"
 RDEPEND="virtual/opengl
 	~virtual/libstdc++-3.3
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 ) )
+		x11-libs/libX11
+		x11-libs/libXext )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs )"
 
@@ -39,19 +36,28 @@ src_unpack() {
 		|| die "unpacking demo"
 	unzip "${DISTDIR}"/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
-	unpack setupstuff.tar.gz || die
+	cd "${S}"
+	unpack ./setupstuff.tar.gz || die
+	unpack ./ut2003lnx_demo.tar.bz2 || die
+	unpack ${PN}-misc.tar.bz2 || die
 }
 
 src_install() {
 	einfo "This will take a while ... go get a pizza or something"
 	dodir "${dir}"
 
-	tar -jxvf ut2003lnx_demo.tar.bz2 -C "${Ddir}" || die
-	tar -jxvf "${DISTDIR}"/${PN}-misc.tar.bz2 -C "${Ddir}" || die
+	local i
+	for i in Animations Benchmark Help KarmaData Maps Music Sounds \
+	StaticMeshes System Textures Web extras
+	do
+		dodir "${dir}"/${i}
+		cp -pPR "${S}"/${i}/* "${Ddir}"/${i}
+	done
 
-	# fix the benchmark configurations to use SDL rather than the Windows driver
+	# Fix the benchmark configurations to use SDL rather than the Windows driver
 	local f
-	for f in MaxDetail.ini MinDetail.ini ; do
+	for f in MaxDetail.ini MinDetail.ini
+	do
 		sed -i \
 			-e 's/RenderDevice=D3DDrv.D3DRenderDevice/\;RenderDevice=D3DDrv.D3DRenderDevice/' \
 			-e 's/ViewportManager=WinDrv.WindowsClient/\;ViewportManager=WinDrv.WindowsClient/' \
@@ -61,7 +67,8 @@ src_install() {
 			|| die "sed ${dir}/Benchmark/Stuff/${f} failed"
 	done
 
-	# have the benchmarks run the nifty wrapper script rather than ../System/ut2003-bin directly
+	# Have the benchmarks run the nifty wrapper script rather than
+	# ../System/ut2003-bin directly
 	for f in "${Ddir}"/Benchmark/*-*.sh ; do
 		sed -i \
 			-e 's:\.\./System/ut2003-bin:../ut2003_demo:' "${f}" \
@@ -73,8 +80,8 @@ src_install() {
 	exeinto "${dir}"/Benchmark
 	doexe "${FILESDIR}/"{benchmark,results.sh} || die "doexe failed"
 	dosed "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
-		"${GAMES_BINDIR}"/benchmark "${dir}"/Benchmark/benchmark \
-		|| die "sed"
+		"${GAMES_BINDIR}"/${PN} "${dir}"/Benchmark/benchmark \
+		|| die "sed GAMES_PREFIX_OPT"
 
 	# Here we apply DrSiN's crash patch
 	cp "${S}"/CrashFix/System/crashfix.u "${Ddir}"/System \
@@ -90,6 +97,10 @@ w
 q
 EOT
 
+	exeinto "${dir}"
+	insinto "${dir}"
+	doins DemoLicense.int README.linux
+	doexe ucc ut2003_demo
 	newicon Unreal.xpm ut2003-demo.xpm
 	make_desktop_entry ut2003-demo "Unreal Tournament 2003 (Demo)" ${PN}.xpm
 
@@ -98,18 +109,19 @@ EOT
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "To play the demo run:"
-	einfo " ut2003-demo"
+	elog "You can run benchmarks by typing 'ut2003-demo --bench' (MinDetail seems"
+	elog "to not be working for some unknown reason :/)"
 	echo
-	einfo "You can run benchmarks by typing 'ut2003-demo --bench' (MinDetail seems"
-	einfo "to not be working for some unknown reason :/)"
-	echo
-	einfo "Read ${dir}/README.linux for instructions on how to run a"
-	einfo "dedicated server."
+	elog "Read ${dir}/README.linux for instructions on how to run a"
+	elog "dedicated server."
 	echo
 	ewarn "If you are not installing for the first time and you plan on running"
 	ewarn "a server, you will probably need to edit your"
 	ewarn "~/.ut2003demo/System/UT2003.ini file and add a line that says"
 	ewarn "AccessControlClass=crashfix.iaccesscontrolini to your"
 	ewarn "[Engine.GameInfo] section to close a security issue."
+	echo
+	elog "To play the demo run:"
+	elog " ut2003-demo"
+	echo
 }
