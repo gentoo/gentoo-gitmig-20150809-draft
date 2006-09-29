@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apd/pecl-apd-0.9.2.ebuild,v 1.4 2006/01/09 16:39:58 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apd/pecl-apd-0.9.2.ebuild,v 1.5 2006/09/29 06:22:16 sebastian Exp $
 
 PHP_EXT_NAME="apd"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="yes"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 DESCRIPTION="A full-featured engine-level profiler/debugger."
 LICENSE="PHP"
 SLOT="0"
