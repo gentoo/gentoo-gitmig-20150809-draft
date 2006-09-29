@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.43 2006/09/04 00:21:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.44 2006/09/29 03:40:18 nichoj Exp $
 
 inherit multilib
 
@@ -11,19 +11,6 @@ EXPORT_FUNCTIONS pkg_setup
 
 # First we make sure java-config-1 will be used
 export WANT_JAVA_CONFIG="1"
-
-# VMHANDLE is the variable in an env file that identifies how java-config-2
-# knows a VM. With each VM, we have a 'compatible' env file installed to
-# /etc/env.d/java, so java-config-1 can work.
-#
-# When java-config-1 -S is used, the env file for the selected VM gets copied
-# from /etc/env.d/java/ to /etc/env.d/20java. By this, VMHANDLE in the
-# environment points to the generation-1 system VM.
-#
-# java-config-2 and /usr/bin/java and company respect GENTOO_VM to indicate
-# what VM to use. So, here we set GENTOO_VM to be VMHANDLE, and thus to the
-# generation-1 system VM.
-export GENTOO_VM=${VMHANDLE}
 
 # During pkg_setup, we need to do a few extra things to ensure things work in a
 # mixed generation-1/generation-2 environment
@@ -38,9 +25,9 @@ java-pkg_pkg_setup() {
 		# there isn't a Java use flag (means its a pure Java pckage)
 		# or if there is a Java use flag and it is enabled
 		if ! hasq java ${IUSE} || use java; then
+			initialize-java-environment
 			if [[ -n ${GENTOO_VM} ]]; then
 				einfo "Using Generation-1 System VM: ${GENTOO_VM}"
-				initialize-java-home
 			else
 				echo
 				eerror "There was a problem determining which VM to use for generation-1"
@@ -68,8 +55,16 @@ java-pkg_pkg_setup() {
 	fi
 }
 
-initialize-java-home() {
+initialize-java-environment() {
 	if has_version "=dev-java/java-config-2*"; then
+		# VMHANDLE is the variable in an env file that identifies how java-config-2
+		# knows a VM. With each VM, we have a 'compatible' env file installed to
+		# /etc/env.d/java, so java-config-1 can work.
+		#
+		# So, here we set GENTOO_VM to be VMHANDLE, and thus to the
+		# generation-1 system VM.
+		export GENTOO_VM=$(java-config-1 -g VMHANDLE)
+
 		# use java-config-2, with GENTOO_VM set to generation-1 system vm, to
 		# setup JAVA_HOME
 		export JAVA_HOME=$(java-config-2 --jdk-home)
@@ -86,27 +81,27 @@ initialize-java-home() {
 # FIXME remove these hooks after portage-2.1.1 is stable, as
 # it has proper env saving
 pre_src_unpack() {
-	initialize-java-home
+	initialize-java-environment
 }
 
 pre_src_compile() {
-	initialize-java-home
+	initialize-java-environment
 }
 
 pre_src_install() {
-	initialize-java-home
+	initialize-java-environment
 }
 
 pre_src_test() {
-	initialize-java-home
+	initialize-java-environment
 }
 
 pre_pkg_preinst() {
-	initialize-java-home
+	initialize-java-environment
 }
 
 pre_pkg_postinst() {
-	initialize-java-home
+	initialize-java-environment
 }
 
 
