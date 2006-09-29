@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.11 2006/09/10 20:59:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.12 2006/09/29 16:51:01 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -84,8 +84,12 @@ java-vm-2_pkg_postinst() {
 	# Install a default nsplugin if we don't already have one
 	if has nsplugin ${IUSE} && use nsplugin; then
 		if [[ ! -f /usr/lib/nsbrowser/plugins/javaplugin.so ]]; then
+			einfo "You have no system nsplugin set, setting it to ${VMHANDLE}."
 			eselect java-nsplugin set ${VMHANDLE}
+		else
+			einfo "System nsplugin is already set, not changing it."
 		fi
+		einfo "You can change nsplugin with eselect java-nsplugin."
 	fi
 
 	java_mozilla_clean_
