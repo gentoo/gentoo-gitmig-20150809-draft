@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4.ebuild,v 1.12 2006/09/14 14:07:54 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.1.4.ebuild,v 1.13 2006/09/29 11:33:59 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -101,6 +101,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/qt4-parisc-linux.diff
+	epatch ${FILESDIR}/qt-4.1.4-sparc.patch
 
 	sed -i -e 's:read acceptance:acceptance=yes:' configure
 

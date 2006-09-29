@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.350 2006/09/22 17:42:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.351 2006/09/29 11:33:59 caleb Exp $
+
+  29 Sep 2006; Caleb Tennis <caleb@gentoo.org> +files/qt-4.1.4-sparc.patch,
+  qt-4.1.4.ebuild:
+  Add a patch which detects Sparc for Linux, from bug #134341
 
 *qt-4.0.1 (22 Sep 2006)
 
