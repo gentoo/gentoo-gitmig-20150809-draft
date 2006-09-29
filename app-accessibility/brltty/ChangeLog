@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.46 2006/09/25 23:50:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.47 2006/09/29 02:25:27 wormo Exp $
+
+  28 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  brltty-3.7.2.ebuild:
+  stable on ppc (Bug #142935)
 
   25 Sep 2006; Jason Wever <weeve@gentoo.org> brltty-3.7.2.ebuild:
   Stable on SPARC wrt bug #142935.
