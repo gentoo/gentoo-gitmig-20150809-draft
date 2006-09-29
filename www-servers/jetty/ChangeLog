@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/jetty
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/ChangeLog,v 1.4 2005/09/02 11:28:04 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jetty/ChangeLog,v 1.5 2006/09/29 19:41:09 malc Exp $
+
+  29 Sep 2006; <malc@gentoo.org> jetty-4.2.19.ebuild:
+  ~amd64, thanks to sanchan and angelos for testing - bug #146487
 
   02 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> jetty-4.2.19.ebuild:
   Don't use -d option in cp.
