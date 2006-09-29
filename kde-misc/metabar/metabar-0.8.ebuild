@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.8.ebuild,v 1.4 2006/09/28 17:19:35 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/metabar-0.8.ebuild,v 1.5 2006/09/29 13:46:17 deathwing00 Exp $
 
 inherit kde
 
@@ -15,6 +15,8 @@ IUSE=""
 
 DEPEND="|| ( kde-base/konqueror >=kde-base/kdebase-3.3 )
 	!>=kde-base/konq-plugins-3.5.0"
+
+RDEPEND="${DEPEND}"
 
 need-kde 3.3
 

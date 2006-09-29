@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/kload-0.9.4.ebuild,v 1.2 2005/09/03 22:00:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/kload-0.9.4.ebuild,v 1.3 2006/09/29 13:29:24 deathwing00 Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="minimal"
 
 DEPEND="!minimal? ( >=kde-base/kdelibs-3 )"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local TARGET="\$(SERVER)"

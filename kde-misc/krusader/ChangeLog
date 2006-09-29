@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.50 2006/09/18 16:08:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.51 2006/09/29 13:36:56 deathwing00 Exp $
+
+  29 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  krusader-1.70.1.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   18 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -krusader-1.70.0.ebuild,
   -krusader-1.70.0-r1.ebuild, krusader-1.70.1.ebuild:

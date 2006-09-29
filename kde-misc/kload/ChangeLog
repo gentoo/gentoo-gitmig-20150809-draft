@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kload
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.3 2005/09/03 22:00:59 lu_zero Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.4 2006/09/29 13:29:24 deathwing00 Exp $
+
+  29 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kload-0.9.4.ebuild:
+  Fixed DEPEND/RDEPEND.
 
   03 Sep 2005; Luca Barbato <lu_zero@gentoo.org> kload-0.9.4.ebuild:
   Marked ~ppc
