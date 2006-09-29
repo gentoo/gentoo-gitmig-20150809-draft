@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.32 2006/09/29 18:24:20 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.33 2006/09/29 20:54:30 wormo Exp $
+
+  29 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  libtermcap-compat-2.0.8-r2.ebuild:
+  oops... un-stable until mail-client/hap-3.7-r1 is stable
 
   29 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   libtermcap-compat-2.0.8-r2.ebuild:
