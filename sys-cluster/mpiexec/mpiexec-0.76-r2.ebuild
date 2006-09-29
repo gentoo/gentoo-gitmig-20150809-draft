@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.76-r2.ebuild,v 1.1 2005/07/06 00:03:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpiexec/mpiexec-0.76-r2.ebuild,v 1.2 2006/09/29 16:41:33 dberkholz Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ src_compile() {
 	myconf="`use_enable sharedmem p4-shmem`"
 
 	# mpich-p4 is the best default
-	append-ldflags -L/usr/$(get_libdir)/pbs
+	append-ldflags -L/usr/$(get_libdir)/pbs/lib
 	./configure --mandir=/usr/share/man/man1/ \
 		--prefix=/usr \
 		--with-pbs=/usr \
