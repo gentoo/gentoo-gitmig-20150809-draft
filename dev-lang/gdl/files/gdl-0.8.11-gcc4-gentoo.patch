@@ -1,0 +1,36 @@
+--- gdl-0.8.11/src/specializations.hpp	2005-10-17 04:22:04.000000000 -0400
++++ gdl-0.8.11-new/src/specializations.hpp	2006-09-28 22:04:04.000000000 -0400
+@@ -106,10 +106,10 @@
+ template<> 
+ Data_<SpDPtr>* Data_<SpDPtr>::XorOp( BaseGDL* r);
+ template<> 
+-Data_<SpDByte>* Data_<SpDPtr>::EqOp( BaseGDL* r);
+-template<> 
+-Data_<SpDByte>* Data_<SpDPtr>::NeOp( BaseGDL* r);
+-template<> 
++//Data_<SpDByte>* Data_<SpDPtr>::EqOp( BaseGDL* r);
++//template<> 
++//Data_<SpDByte>* Data_<SpDPtr>::NeOp( BaseGDL* r);
++//template<> 
+ Data_<SpDByte>* Data_<SpDPtr>::LeOp( BaseGDL* r);
+ template<> 
+ Data_<SpDByte>* Data_<SpDComplex>::LeOp( BaseGDL* r);
+@@ -237,9 +237,16 @@
+ Data_<SpDByte>* Data_<SpDComplexDbl>::LogNeg();
+ 
+ // datatypes.cpp
++template<>
++Data_<SpDString>::Data_(const dimension& dim_, BaseGDL::InitType iT);
++template<>
++Data_<SpDPtr>::Data_(const dimension& dim_, BaseGDL::InitType iT);
++template<>
++Data_<SpDObj>::Data_(const dimension& dim_, BaseGDL::InitType iT);
++
+ template<>  const SizeT Data_<SpDString>::NBytes() const;
+-template<>  const SizeT Data_<SpDObj>::NBytes() const;
+-template<>  const SizeT Data_<SpDPtr>::NBytes() const;
++//template<>  const SizeT Data_<SpDObj>::NBytes() const;
++//template<>  const SizeT Data_<SpDPtr>::NBytes() const;
+ template<>  const SizeT Data_<SpDComplex>::ToTransfer() const;
+ template<>  const SizeT Data_<SpDComplexDbl>::ToTransfer() const;
+ template<> 

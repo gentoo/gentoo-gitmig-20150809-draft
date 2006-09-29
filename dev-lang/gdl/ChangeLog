@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gdl
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.1 2005/12/21 15:32:03 markusle Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.2 2006/09/29 02:51:07 markusle Exp $
+
+  29 Sep 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/gdl-0.8.11-gcc4-gentoo.patch, gdl-0.8.11.ebuild:
+  Added patch to fix compile problems with gcc4.x. This fixes
+  bug #149299.
 
 *gdl-0.8.11 (21 Dec 2005)
 

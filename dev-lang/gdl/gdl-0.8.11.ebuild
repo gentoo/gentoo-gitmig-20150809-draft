@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.8.11.ebuild,v 1.1 2005/12/21 15:32:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.8.11.ebuild,v 1.2 2006/09/29 02:51:07 markusle Exp $
 
 inherit eutils
 
@@ -25,6 +25,13 @@ DEPEND=">=sys-libs/readline-4.3
 			dev-python/numarray
 			dev-python/matplotlib )
 	fftw? ( sci-libs/fftw )"
+
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4-gentoo.patch
+}
 
 src_compile() {
 	econf \
