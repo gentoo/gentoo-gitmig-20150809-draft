@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/guilib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.13 2006/05/03 20:39:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/ChangeLog,v 1.14 2006/09/29 17:51:36 hd_brummy Exp $
+
+  29 Sep 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/guilib-1.1.0-gcc-4.1.x-fix.diff, guilib-1.1.0.ebuild,
+  guilib-1.1.0-r1.ebuild:
+  fix compile problems on gcc-4.1, thanks to Robert Dulat on closed bug #149535
 
   03 May 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Update metadata to list media-video@gentoo.org as maintainer.
