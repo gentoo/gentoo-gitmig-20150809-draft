@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/netqmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.19 2006/09/10 06:05:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/ChangeLog,v 1.20 2006/09/29 23:14:45 tcort Exp $
+
+  29 Sep 2006; Thomas Cort <tcort@gentoo.org> netqmail-1.05-r4.ebuild:
+  Added ~alpha keyword wrt Bug #145528.
 
   10 Sep 2006; Michael Hanselmann <hansmi@gentoo.org>
   netqmail-1.05-r4.ebuild:
