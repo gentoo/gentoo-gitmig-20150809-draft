@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.6.7.ebuild,v 1.2 2005/07/21 17:13:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/aldo-0.6.7.ebuild,v 1.3 2006/09/29 20:51:35 wormo Exp $
 
 DESCRIPTION="a morse tutor"
 HOMEPAGE="http://savannah.nongnu.org/projects/aldo"
@@ -12,9 +12,11 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	sys-libs/libtermcap-compat"
+	sys-libs/ncurses"
 
 src_compile() {
+	# Fix Makefile to use ncurses instead of termcap (bug #103105)
+	sed -i -e 's~termcap~ncurses~' Makefile
 	make libs || die
 	make aldo || die
 }
