@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.5.0.ebuild,v 1.1 2006/09/28 08:29:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.5.0.ebuild,v 1.2 2006/09/29 03:26:42 mr_bones_ Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ IUSE="client-only mysql minimal"
 
 DEPEND="!client-only? (
 			>=dev-python/paramiko-1.6.2
-			mysql? >=dev-python/mysql-python-1.2.0
+			mysql? ( >=dev-python/mysql-python-1.2.0 )
 		)"
 RDEPEND="${DEPEND}
 		net-misc/openssh"
