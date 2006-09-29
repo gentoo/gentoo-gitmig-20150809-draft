@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/Params-Util-0.11.ebuild,v 1.10 2006/09/16 21:19:12 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/Params-Util-0.11.ebuild,v 1.11 2006/09/29 17:45:37 yuval Exp $
 
 inherit perl-module
 
-DESCRIPTION="Utility funcions to aid in parameter checking"
+DESCRIPTION="Utility functions to aid in parameter checking"
 HOMEPAGE="http://search.cpan.org/search?module=Param-Util"
 SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
