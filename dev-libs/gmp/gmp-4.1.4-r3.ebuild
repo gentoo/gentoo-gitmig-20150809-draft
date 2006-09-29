@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r3.ebuild,v 1.13 2006/06/20 21:25:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r3.ebuild,v 1.14 2006/09/29 21:31:38 vapier Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -31,9 +31,6 @@ src_unpack () {
 }
 
 src_compile() {
-	filter-flags -ffast-math
-
-
 	# GMP beleives hppa2.0 is 64bit
 	if [[ ${CHOST} == hppa2.0-* ]] ; then
 		is_hppa_2_0=1

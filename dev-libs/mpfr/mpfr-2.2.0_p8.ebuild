@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.14 2006/05/06 06:51:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-2.2.0_p8.ebuild,v 1.15 2006/09/29 21:29:26 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,9 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# tests fail on amd64 with -ffast-math, maybe other arches too
-	use amd64 && filter-flags -ffast-math
-
 	econf \
 		--enable-shared \
 		--enable-static \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r1.ebuild,v 1.8 2006/07/28 13:59:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4-r1.ebuild,v 1.9 2006/09/29 21:31:38 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -42,8 +42,6 @@ src_unpack () {
 }
 
 src_compile() {
-	filter-flags -ffast-math
-
 	local myconf=""
 	use sparc || myconf="--enable-mpfr"
 
