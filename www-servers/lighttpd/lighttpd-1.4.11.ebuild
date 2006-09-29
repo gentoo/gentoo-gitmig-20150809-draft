@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.10 2006/09/05 17:54:01 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.11.ebuild,v 1.11 2006/09/29 21:18:20 bangert Exp $
 
 inherit eutils autotools depend.php
 
@@ -143,6 +143,7 @@ src_install() {
 
 	# init script stuff
 	newinitd ${FILESDIR}/lighttpd.initd lighttpd || die
+	newconfd ${FILESDIR}/lighttpd.confd lighttpd || die
 	use fam && has_version app-admin/fam && \
 		sed -i 's/after famd/need famd/g' "${D}"/etc/init.d/lighttpd
 
