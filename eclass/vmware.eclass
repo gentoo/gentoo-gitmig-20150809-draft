@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.8 2006/09/27 18:19:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.9 2006/09/29 15:13:08 wolf31o2 Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -190,7 +190,7 @@ vmware_src_install() {
 	cd "${S}"
 
 	# We remove the shipped libssl for bug #148682
-	rm -rf "${S}"/lib/lib/libssl-0.9.*
+	rm -rf "${S}"/lib/lib/libssl.so.0.9.*
 
 	# We loop through our directories and copy everything to our system.
 	for x in bin lib sbin
