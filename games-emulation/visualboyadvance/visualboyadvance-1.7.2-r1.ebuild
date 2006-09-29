@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.7 2006/07/06 08:02:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.8 2006/09/29 15:10:37 wolf31o2 Exp $
 
 inherit eutils games flag-o-matic
 
@@ -37,8 +37,8 @@ src_compile() {
 	# -O3 causes GCC to behave badly and hog memory, bug #64670.
 	replace-flags -O3 -O2
 
+	# Removed --enable-c-core as it *should* determine this based on arch
 	egamesconf \
-		--enable-c-core \
 		$(use_with mmx) \
 		$(use_enable gtk gtk 2.4) \
 		|| die
