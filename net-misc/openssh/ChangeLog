@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.201 2006/09/28 11:36:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.202 2006/09/29 17:17:46 lcars Exp $
+
+*openssh-4.4_p1-r1 (29 Sep 2006)
+
+  29 Sep 2006; Andrea Barisani <lcars@gentoo.org> +openssh-4.4_p1-r1.ebuild:
+  Revision bump for new ldap patch.
 
 *openssh-4.4_p1 (28 Sep 2006)
 
