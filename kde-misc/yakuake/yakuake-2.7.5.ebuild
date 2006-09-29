@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.7.5.ebuild,v 1.6 2006/09/02 13:41:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.7.5.ebuild,v 1.7 2006/09/29 13:51:51 deathwing00 Exp $
 
 inherit kde
 
@@ -16,5 +16,7 @@ IUSE=""
 
 DEPEND="|| ( kde-base/konsole
 	kde-base/kdebase )"
+
+RDEPEND="${DEPEND}"
 
 need-kde 3.3
