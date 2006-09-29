@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.6.5.ebuild,v 1.1 2006/09/29 15:31:12 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.6.5.ebuild,v 1.2 2006/09/29 15:35:49 nyhm Exp $
 
 inherit games
 
@@ -42,7 +42,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog TODO NEWS
+	dodoc AUTHORS ChangeLog TODO
 	dohtml Documentation/*
 	prepgamesdirs
 }
