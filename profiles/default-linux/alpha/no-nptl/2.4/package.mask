@@ -1,6 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.4 2006/09/15 22:14:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/no-nptl/2.4/package.mask,v 1.5 2006/09/29 20:45:22 wolf31o2 Exp $
+
+# Andrej Kacian <ticho@gentoo.org>
+# Depends on >=2.6.11 headers
+>=app-misc/lcdproc-0.5.0
 
 # Luis Medinas <metalgod@gentoo.org>
 # Mask because it needs hal
@@ -137,3 +141,7 @@ x11-drivers/xf86-input-evdev
 >=dev-cpp/libxmlpp-2.13.1
 >=www-client/epiphany-extensions-2.16.0
 >=x11-misc/icon-naming-utils-0.8.1
+
+# Stephen Bennett <spb@gentoo.org>
+# Mask 2.[56] linux-headers for fairly obvious reasons
+>=sys-kernel/linux-headers-2.5
