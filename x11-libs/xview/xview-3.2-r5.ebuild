@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r5.ebuild,v 1.3 2006/08/01 15:16:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xview/xview-3.2-r5.ebuild,v 1.4 2006/09/29 14:05:02 ribosome Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ RDEPEND="|| ( ( x11-libs/libXpm
 DEPEND="${RDEPEND}
 	|| ( ( app-text/rman
 			x11-misc/gccmakedep
+			x11-misc/imake
 		)
 		virtual/x11
 	)"
