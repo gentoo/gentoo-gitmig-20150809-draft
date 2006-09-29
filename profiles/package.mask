@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5963 2006/09/29 16:29:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5964 2006/09/29 17:31:45 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Sebastian Bergmann <sebastian@gentoo.org> (29 Sep 2006)
+# Bug 149534
+dev-php5/pecl-filter
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (29 Sep 2006)
 # Preview version: Needs to be tested, has known crashes.
