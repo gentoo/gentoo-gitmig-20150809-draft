@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event-ExecFlow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/ChangeLog,v 1.14 2006/09/28 01:00:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-ExecFlow/ChangeLog,v 1.15 2006/09/30 11:25:58 nixnut Exp $
+
+  30 Sep 2006; <nixnut@gentoo.org> Event-ExecFlow-0.62.ebuild:
+  Stable on ppc wrt bug 149348
 
   28 Sep 2006; Brent Baude <ranger@gentoo.org> Event-ExecFlow-0.62.ebuild:
   Marking Event-ExecFlow-0.62 ppc64 stable for bug 149348
