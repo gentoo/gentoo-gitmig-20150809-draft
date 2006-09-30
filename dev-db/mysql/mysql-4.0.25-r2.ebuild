@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.28 2006/05/05 19:51:39 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.25-r2.ebuild,v 1.29 2006/09/30 15:24:32 chtekk Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -137,11 +137,9 @@ src_unpack() {
 		# WARNING, plain autoconf breaks it!
 		#autoconf
 		# must use this instead
-		WANT_AUTOCONF=2.59 autoreconf --force
+		WANT_AUTOCONF=2.5 autoreconf --force
 		# Fix the evil "libtool.m4 and ltmain.sh have a version mismatch!"
 		libtoolize --copy --force
-		# Saving this for a rainy day, in case we need it again
-		#WANT_AUTOMAKE=1.7 automake
 		gnuconfig_update
 	done
 
