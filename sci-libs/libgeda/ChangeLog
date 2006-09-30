@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.17 2006/09/24 18:21:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.18 2006/09/30 11:51:11 calchan Exp $
+
+*libgeda-20060906 (30 Sep 2006)
+
+  30 Sep 2006; Denis Dupeyron <calchan@gentoo.org> +libgeda-20060906.ebuild:
+  Version bump, thanks to Stefan Salewski (see bug #149550).
 
   24 Sep 2006; Denis Dupeyron <calchan@gentoo.org> -libgeda-20050820.ebuild:
   Removed old ebuild.
