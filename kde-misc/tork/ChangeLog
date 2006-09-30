@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.6 2006/09/23 01:14:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.7 2006/09/30 12:04:11 flameeyes Exp $
+
+  30 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/tork-0.07-geoip.patch, -files/tork-0.07-qt335.patch,
+  -tork-0.04.ebuild, -tork-0.05.ebuild, -tork-0.06.ebuild,
+  -tork-0.07.ebuild:
+  Remove old versions.
 
 *tork-0.08 (23 Sep 2006)
 
