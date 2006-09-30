@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.86 2006/09/30 13:15:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.87 2006/09/30 13:27:46 hattya Exp $
+
+*qdbm-1.8.70-r2 (30 Sep 2006)
+
+  30 Sep 2006; Akinori Hattori <hattya@gentoo.org> -qdbm-1.8.70.ebuild,
+  +qdbm-1.8.70-r2.ebuild:
+  rename from qdbm-1.8.70.ebuild. this uses generation-2 for building java
+  binding.
 
 *qdbm-1.8.70-r1 (30 Sep 2006)
 
