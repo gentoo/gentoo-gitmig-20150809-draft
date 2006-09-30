@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r2.ebuild,v 1.1 2005/10/14 00:36:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r2.ebuild,v 1.2 2006/09/30 19:04:08 vapier Exp $
 
 inherit eutils
 
@@ -23,15 +23,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-gcc3.patch
-	epatch "${FILESDIR}"/${PV}-no-divx.patch
 	rm capture/divx.c   # the divx.so needs to be ported to newer avifile
 	epatch "${FILESDIR}"/${PV}-linux-2.6.patch
 	epatch "${FILESDIR}"/${P}-tsc.patch #109161
 	epatch "${FILESDIR}"/${P}-prototypes.patch
-	sed -i \
-		-e "s: -g: ${CFLAGS} `avifile-config --cflags`:" \
-		-e 's:-Wstrict-prototypes::' \
-		Makefile
+	epatch "${FILESDIR}"/${P}-build.patch
 	sed -i "/#include/s:avifile/::" capture/divx2.cpp
 
 	# Don't you love hardcoded vars?

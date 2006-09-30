@@ -19,3 +19,14 @@
  void SDL_v4l_Reorder_cleanup (void);
  int SDL_v4l_Reorder     (const SDL_v4l_image *SRC, SDL_v4l_image *DST,int off_x,int off_y,int typ,int radius,double effekt);
  #ifdef __cplusplus
+--- SDL_v4l_filters.c
++++ SDL_v4l_filters.c
+@@ -340,7 +340,7 @@
+   SDL_v4l_Reorder_cleanup			();
+ }}}
+ 
+-void LineRGB (SDL_v4l_image *image, unsigned int X1, unsigned int Y1, unsigned int x2, unsigned int y2, unsigned char r, unsigned char g, unsigned char b ) {{{
++void LineRGB (SDL_v4l_image *image, int X1, int Y1, int x2, int y2, unsigned char r, unsigned char g, unsigned char b ) {{{
+ 	int diry = image->w;
+ 	int xinc = 1;
+ 	int yinc = 1;

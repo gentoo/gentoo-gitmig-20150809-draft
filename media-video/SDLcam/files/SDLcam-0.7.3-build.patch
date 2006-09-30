@@ -1,0 +1,60 @@
+--- Makefile
++++ Makefile
+@@ -1,13 +1,14 @@
+ CC = gcc
+-CPP = g++
+-LD = $(CPP)
+-LDFLAGS = `sdl-config --libs` `xml2-config --libs` -lSDL_image -lSDL_ttf -lm -lxml2 -rdynamic -ljpeg -ldl
++CXX = g++
++LD = $(CC)
++LDFLAGS += $(shell sdl-config --libs) $(shell xml2-config --libs) -lSDL_image -lSDL_ttf -lm -lxml2 -ljpeg -ldl -lpng
+ PROG = SDLcam
+ 
+-FEATURES = -DMMX -DTIMER
++CPPFLAGS = -DMMX -DTIMER -DPROG_VERSION=\"0.7.3\"
+ 
+-MMXFLAGS =     -Wshadow -Wall -Wstrict-prototypes `sdl-config --cflags` `xml2-config --cflags` -DPROG_VERSION=\"0.7.3\" $(FEATURES)
+-CFLAGS = $(MMXFLAGS) -g
++MMXFLAGS =     -Wshadow -Wall $(shell sdl-config --cflags) $(shell xml2-config --cflags)
++CFLAGS += $(MMXFLAGS) $(CPPFLAGS) -Wstrict-prototypes
++CXXFLAGS += $(MMXFLAGS) $(CPPFLAGS)
+ 
+ 
+ OBJS = main.o init.o SDL_v4l.o SDL_v4l_filters.o webcam.o interface.o configuration.o config_file.o SDL_v4l_filters_thomas.o dump_thomas.o capture.o ftp-upload.o logo.o parser.o misc.o xml_theme.o dyn_misc.o
+@@ -31,28 +32,28 @@
+ 	./install
+ 
+ %.o: %.cpp
+-	$(CC) $(CFLAGS) -c $<
++	$(CXX) $(CXXFLAGS) -c $<
+ 
+ %.o: %.c
+-	$(CPP) $(CFLAGS) -c $<
++	$(CC) $(CFLAGS) -c $<
+ 
+ sources/%.so: sources/%.cpp
+-	$(CPP) $(FEATURES) -g -fPIC -shared -o $@ $?
++	$(CXX) $(CXXFLAGS) -fPIC -shared -o $@ $? $(LDFLAGS)
+ 
+ sources/jpeg.so: sources/jpeg.cpp
+-	$(CPP) $(FEATURES) -g -fPIC -shared -o $@ $? -ljpeg
++	$(CXX) $(CXXFLAGS) -fPIC -shared -o $@ $? -ljpeg $(LDFLAGS)
+ 
+ filter/%.so: filter/%.c
+-	$(CC) $(FEATURES) -g -fPIC -shared -o $@ $?
++	$(CC) $(CFLAGS) -fPIC -shared -o $@ $? $(LDFLAGS)
+ 
+ capture/mpeg.so: capture/mpeg.c
+-	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -lfame
++	$(CC) $(CFLAGS) -fPIC -shared -o $@ $? -lfame $(LDFLAGS)
+ 
+ capture/divx.so: capture/divx.c
+-	- $(CC) $(FEATURES) -g -fPIC -shared -o $@ $? -ldivxencore
++	$(CC) $(CFLAGS) -fPIC -shared -o $@ $? -ldivxencore $(LDFLAGS)
+ 
+ capture/divx2.so: capture/divx2.cpp
+-	- $(CPP) $(FEATURES) -g -fPIC -shared -o $@ $?
++	$(CXX) $(CXXFLAGS) -fPIC -shared -o $@ $? $(LDFLAGS)
+ 
+ SDLcam: $(OBJS)
+ 	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) 
