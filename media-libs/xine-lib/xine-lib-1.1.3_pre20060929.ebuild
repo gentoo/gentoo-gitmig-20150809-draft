@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20060929.ebuild,v 1.1 2006/09/29 04:43:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.3_pre20060929.ebuild,v 1.2 2006/09/30 08:12:00 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -162,7 +162,6 @@ src_compile() {
 		$(use_enable mmap) \
 		--enable-asf \
 		--with-external-ffmpeg \
-		--without-pulseaudio \
 		--disable-optimizations \
 		${myconf} \
 		--with-xv-path=/usr/$(get_libdir) \
