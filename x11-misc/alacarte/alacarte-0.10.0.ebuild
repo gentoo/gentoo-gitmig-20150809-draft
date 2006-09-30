@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.10.0.ebuild,v 1.3 2006/09/21 14:37:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.10.0.ebuild,v 1.4 2006/09/30 21:55:26 dang Exp $
 
 inherit gnome2 python
 
@@ -12,7 +12,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 SLOT=0
 
-RDEPEND=">=virtual/python-2.4
+RDEPEND=">=dev-lang/python-2.4
 		 >=dev-python/pygtk-2.4
 		 >=gnome-base/gnome-menus-2.15"
 DEPEND="${RDEPEND}
