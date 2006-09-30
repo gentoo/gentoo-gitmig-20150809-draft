@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/doxygen-syntax-1.12.ebuild,v 1.6 2005/12/21 14:30:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/doxygen-syntax/doxygen-syntax-1.12.ebuild,v 1.7 2006/09/30 18:52:53 vapier Exp $
 
 inherit vim-plugin
 
 DESCRIPTION="vim plugin: syntax higlighting for doxygen"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=5"
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 mips ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 mips ~ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="doxygen.vim"
