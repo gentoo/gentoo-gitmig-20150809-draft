@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.32 2006/09/29 23:50:30 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.33 2006/09/30 12:57:58 nixnut Exp $
+
+  30 Sep 2006; <nixnut@gentoo.org> insight-6.4.ebuild:
+  Stable on ppc wrt bug 148837
 
   29 Sep 2006; <ticho@gentoo.org> insight-6.5.ebuild:
   Stable on x86, bug #148837.
