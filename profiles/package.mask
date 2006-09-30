@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5967 2006/09/30 12:20:04 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5968 2006/09/30 12:32:20 bangert Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Thilo Bangert <bangert@gentoo.org> (30 Sep 2006)
+# packages have been absorbed by lighttpd - pending removal (30 Oct), bug 149599
+net-www/spawn-fcgi
+dev-libs/localizer
 
 # Christian Heim <phreak@gentoo.org> (30 Sep 2006)
 # masking net-mail/quotient for treecleaners, bug(s) 149420
