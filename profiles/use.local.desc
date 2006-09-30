@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2191 2006/09/29 23:50:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2192 2006/09/30 20:04:00 dev-zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1240,6 +1240,9 @@ net-mail/uw-imap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vimap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/aria2:ares - Enables support for asynchronous DNS using the c-ares library
+net-misc/aria2:bittorrent - Enables support for the bittorrent protocol
+net-misc/aria2:metalink - Enables support for metalink
 net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
 net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/asterisk:bri - Enable ISDN BRI support (bristuff)
