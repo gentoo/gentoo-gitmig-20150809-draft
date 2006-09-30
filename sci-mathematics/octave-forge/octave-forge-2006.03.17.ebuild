@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17.ebuild,v 1.3 2006/06/11 19:08:59 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2006.03.17.ebuild,v 1.4 2006/09/30 23:59:43 wormo Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://octave.sourceforge.net/"
 SRC_URI="mirror://sourceforge/octave/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~amd64"
 SLOT="0"
 IUSE="ginac qhull X"
 
