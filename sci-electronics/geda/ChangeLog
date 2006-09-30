@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/geda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.20 2006/09/24 18:18:44 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.21 2006/09/30 11:57:41 calchan Exp $
+
+*geda-20060906 (30 Sep 2006)
+
+  30 Sep 2006; Denis Dupeyron <calchan@gentoo.org> +geda-20060906.ebuild:
+  Version bump, thanks to Stefan Salewski (see bug #149550).
 
   24 Sep 2006; Denis Dupeyron <calchan@gentoo.org> -geda-20050820.ebuild:
   Removed old ebuild.
