@@ -1,16 +1,15 @@
 --- gznbd/Makefile
 +++ gznbd/Makefile
-@@ -1,2 +1,8 @@
+@@ -1,2 +1,7 @@
 -gznbd: gznbd.c
 -	gcc -s -Wall -O2 -DTRACE gznbd.c -o gznbd -lz
 +CC ?= gcc
 +CFLAGS ?= -s -O2
 +CFLAGS += -Wall -DTRACE
-+LDFLAGS += -lz
++LDLIBS += -lz
 +
 +all: gznbd
 +gznbd: gznbd.c
-+	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
 --- gznbd/gznbd.c
 +++ gznbd/gznbd.c
 @@ -49,8 +49,8 @@
