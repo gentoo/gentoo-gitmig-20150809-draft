@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.24 2006/09/30 03:25:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.25 2006/09/30 03:57:32 weeve Exp $
+
+  30 Sep 2006; Jason Wever <weeve@gentoo.org> bioperl-1.5.1.ebuild,
+  bioperl-1.5.1-r1.ebuild:
+  Added ~sparc keyword wrt bug #149577.
 
   30 Sep 2006; Olivier Fisette <ribosome@gentoo.org>
   bioperl-1.5.1-r1.ebuild:
