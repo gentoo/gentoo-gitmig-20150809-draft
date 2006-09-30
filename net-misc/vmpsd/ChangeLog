@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vmpsd
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/ChangeLog,v 1.1 2004/12/08 00:38:58 robbat2 Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vmpsd/ChangeLog,v 1.2 2006/09/30 17:25:04 robbat2 Exp $
+
+*vmpsd-1.3-r1 (30 Sep 2006)
+
+  30 Sep 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/vmpsd-1.3-snmp-support.patch, +vmpsd-1.3-r1.ebuild:
+  Bug #148575, add working SNMP support. Also fix a bug that broke this
+  package on ppc.
 
 *vmpsd-1.3 (07 Dec 2004)
 
