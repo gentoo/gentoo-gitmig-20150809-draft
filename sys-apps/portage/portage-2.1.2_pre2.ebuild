@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2_pre2.ebuild,v 1.1 2006/09/29 23:46:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2_pre2.ebuild,v 1.2 2006/09/30 18:14:25 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -196,7 +196,7 @@ pkg_postinst() {
 		[ -e "${x}" ] && mv -f "${x}" "${ROOT}etc/make.globals"
 	done
 
-	ewarn "In portage-2.1.2, installation actions do no necessarily pull in build time"
+	ewarn "In portage-2.1.2, installation actions do not necessarily pull in build time"
 	ewarn "dependencies that are not strictly required.  This behavior is adjustable"
 	ewarn "via the new --with-bdeps option that is documented in the emerge(1) man page."
 	ewarn "For more information regarding this change, please refer to bug #148870."
