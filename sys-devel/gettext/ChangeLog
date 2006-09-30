@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.126 2006/09/30 00:06:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.127 2006/09/30 17:40:17 grobian Exp $
+
+  30 Sep 2006; Fabian Groffen <grobian@gentoo.org> gettext-0.15.ebuild:
+  Backport fix from prefix. On Darwin don't do library moving, it breaks the
+  system.
 
   30 Sep 2006; <ticho@gentoo.org> gettext-0.15.ebuild:
   Stable on x86, bug #148798.
