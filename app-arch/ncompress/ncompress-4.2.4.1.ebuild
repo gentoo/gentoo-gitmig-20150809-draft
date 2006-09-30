@@ -1,24 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4.1.ebuild,v 1.6 2006/09/30 18:46:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ncompress-4.2.4.1.ebuild,v 1.7 2006/09/30 21:32:51 vapier Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Another uncompressor for compatibility"
 HOMEPAGE="http://ncompress.sourceforge.net/"
-SRC_URI="mirror://sourceforge/ncompress/${P}.tar.gz
-	http://ftp.debian.org/debian/pool/main/n/ncompress/ncompress_4.2.4-15.diff.gz"
+SRC_URI="mirror://sourceforge/ncompress/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~x86"
 IUSE=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${DISTDIR}"/ncompress_4.2.4-15.diff.gz
-}
 
 src_compile() {
 	sed \
