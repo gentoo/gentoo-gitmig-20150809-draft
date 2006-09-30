@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.202 2006/09/30 18:32:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.203 2006/09/30 22:04:32 ferdy Exp $
+
+  30 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> openssl-0.9.7l.ebuild,
+  openssl-0.9.8d.ebuild:
+  Stable on alpha as per security bug #145510
 
   30 Sep 2006; Mike Frysinger <vapier@gentoo.org> openssl-0.9.7l.ebuild,
   openssl-0.9.8d.ebuild:
