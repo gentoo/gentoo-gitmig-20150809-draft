@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/qdbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.85 2006/09/03 11:45:09 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.86 2006/09/30 13:15:47 hattya Exp $
+
+*qdbm-1.8.70-r1 (30 Sep 2006)
+
+  30 Sep 2006; Akinori Hattori <hattya@gentoo.org> +qdbm-1.8.70-r1.ebuild:
+  switch to generation-1 for building java binding. reference bug #149578.
 
 *qdbm-1.8.70 (03 Sep 2006)
 
