@@ -1,6 +1,13 @@
 # ChangeLog for app-text/hyperestraier
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.27 2006/09/30 14:43:44 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/ChangeLog,v 1.28 2006/09/30 14:46:49 hattya Exp $
+
+*hyperestraier-1.4.0-r2 (30 Sep 2006)
+
+  30 Sep 2006; Akinori Hattori <hattya@gentoo.org>
+  -hyperestraier-1.4.0.ebuild, +hyperestraier-1.4.0-r2.ebuild:
+  rename from hyperestraier-1.4.0.ebuild. this uses generation-2 for building
+  java binding.
 
 *hyperestraier-1.4.0-r1 (30 Sep 2006)
 
