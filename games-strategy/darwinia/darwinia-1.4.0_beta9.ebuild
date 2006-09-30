@@ -1,0 +1,66 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.1 2006/09/30 19:37:12 vapier Exp $
+
+inherit eutils games
+
+MY_PV=${PV/_beta/b}
+DESCRIPTION="the hyped indie game of the year. By the Uplink creators."
+HOMEPAGE="http://www.darwinia.co.uk/support/linux.html"
+SRC_URI="http://www.introversion.co.uk/darwinia/downloads/${PN}-full-${MY_PV}.sh"
+
+LICENSE="Introversion"
+SLOT="0"
+KEYWORDS="-* ~amd64 ~x86"
+IUSE="cdinstall"
+RESTRICT="strip"
+
+RDEPEND="sys-libs/glibc
+	virtual/opengl
+	amd64? ( app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-compat )"
+
+S=${WORKDIR}
+
+GAMES_CHECK_LICENSE="yes"
+dir=${GAMES_PREFIX_OPT}/${PN}
+
+pkg_setup() {
+	games_pkg_setup
+	use cdinstall && cdrom_get_cds gamefiles/main.dat
+}
+
+src_unpack() {
+	unpack_makeself
+}
+
+src_install() {
+	insinto "${dir}"/lib
+	exeinto "${dir}"/lib
+	doins lib/{language,patch}.dat
+	doexe lib/lib{SDL-1.2,ogg,vorbis}.so.0 lib/lib{gcc_s.so.1,vorbisfile.so.3} \
+		lib/darwinia.bin.x86 lib/open-www.sh || die "copying libs/executables"
+
+	exeinto "${dir}"
+	doexe bin/Linux/x86/darwinia || die "couldn't do exe"
+
+	if use cdinstall ; then
+		doins "${CDROM_ROOT}"/gamefiles/{main,sounds}.dat \
+			|| die "couldn't copy data files"
+	fi
+
+	dodoc README || die "no reading"
+	newicon darwinian.png darwinia.png
+
+	games_make_wrapper darwinia ./darwinia "${dir}" "${dir}"
+	make_desktop_entry darwinia "Darwinia" darwinia.png
+	prepgamesdirs
+}
+
+pkg_postinst() {
+	if ! use cdinstall; then
+		ewarn "To play the game, you need to copy main.dat and sounds.dat"
+		ewarn "from gamefiles/ on the game CD to ${dir}/lib/."
+	fi
+	games_pkg_postinst
+}
