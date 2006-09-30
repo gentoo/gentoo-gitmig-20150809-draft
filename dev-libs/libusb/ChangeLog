@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.55 2006/09/29 04:40:29 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.56 2006/09/30 20:04:43 dang Exp $
+
+  30 Sep 2006; Daniel Gryniewicz <dang@gentoo.org> libusb-0.1.12.ebuild:
+  Marked stable on amd64
 
   28 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   libusb-0.1.12.ebuild:
