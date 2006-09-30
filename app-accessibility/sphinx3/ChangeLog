@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/sphinx3
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.1 2006/07/04 04:33:50 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.2 2006/09/30 19:09:59 williamh Exp $
+
+*sphinx3-0.6.3 (30 Sep 2006)
+
+  30 Sep 2006; William Hubbs <williamh@gentoo.org> +sphinx3-0.6.3.ebuild:
+  version bump, also closes #145667.
 
 *sphinx3-0.6 (04 Jul 2006)
 
