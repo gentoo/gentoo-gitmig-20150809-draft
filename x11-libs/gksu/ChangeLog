@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.23 2006/09/29 14:45:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.24 2006/09/30 11:52:43 nixnut Exp $
+
+  30 Sep 2006; <nixnut@gentoo.org> gksu-1.9.1.ebuild:
+  Stable on ppc wrt bug 149444
 
 *gksu-2.0.0 (29 Sep 2006)
 
