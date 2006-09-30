@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21-r1.ebuild,v 1.2 2006/09/24 09:55:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.21-r1.ebuild,v 1.3 2006/09/30 21:04:59 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="1.9"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X gpg2-experimental ldap nls openct pcsc-lite smartcard selinux"
-#IUSE+=caps
 
 COMMON_DEPEND="
 	virtual/libc
@@ -26,7 +25,6 @@ COMMON_DEPEND="
 	ldap? ( net-nds/openldap )"
 # Needs sh and arm to be keyworded on pinentry
 #	X? ( app-crypt/pinentry )
-#	caps? ( sys-libs/libcap )"
 
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
@@ -68,10 +66,8 @@ src_compile() {
 		myconf="${myconf} --disable-photo-viewers"
 	fi
 
-	#use caps || append-ldflags $(bindnow-flags)
 	append-ldflags $(bindnow-flags)
 
-	#$(use_with caps capabilities) \
 	econf \
 		--enable-agent \
 		--enable-symcryptrun \
@@ -90,18 +86,12 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc ChangeLog NEWS README THANKS TODO VERSION
 
-	#if ! use caps; then
-		use gpg2-experimental && fperms u+s,go-r /usr/bin/gpg2
-		fperms u+s,go-r /usr/bin/gpg-agent
-	#fi
+	# neither of these should really be needed, please check
+	use gpg2-experimental && fperms u+s,go-r /usr/bin/gpg2
+	fperms u+s,go-r /usr/bin/gpg-agent
 }
 
 pkg_postinst() {
-	#if ! use caps; then
-	#	einfo "gpg is installed suid root to make use of protected memory space"
-	#	einfo "This is needed in order to have a secure place to store your"
-	#	einfo "passphrases, etc. at runtime but may make some sysadmins nervous."
-	#fi
 	einfo
 	einfo "See http://www.gentoo.org/doc/en/gnupg-user.xml for documentation on gnupg"
 	einfo

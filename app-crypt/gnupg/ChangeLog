@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.228 2006/09/24 09:55:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.229 2006/09/30 21:04:59 robbat2 Exp $
+
+*gnupg-1.4.5-r1 (30 Sep 2006)
+
+  30 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> +gnupg-1.4.5-r1.ebuild,
+  gnupg-1.9.21-r1.ebuild:
+  Resolve bug #113474 - new 1.4.5-r1 bump no longers pulls in linux-info and
+  thus linux-sources. Also clean up misleading caps comments in 1.9.21-r1.
 
   24 Sep 2006; Daniel Black <dragonheart@gentoo.org> gnupg-1.9.21-r1.ebuild:
   more improvements as per bug #147361 thanks to Alon
