@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kivio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.45 2006/09/28 13:26:37 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.46 2006/09/30 12:21:40 carlo Exp $
+
+  30 Sep 2006; Carsten Lohrke <carlo@gentoo.org> files/digest-kivio-1.5.2,
+  Manifest:
+  Re-digest, bug #149605.
 
 *kivio-1.6_rc1 (28 Sep 2006)
 
