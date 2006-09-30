@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/io_lib-1.8.12b-r1.ebuild,v 1.2 2006/09/30 03:29:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/io_lib-1.8.12b-r1.ebuild,v 1.3 2006/09/30 03:49:25 weeve Exp $
 
 DESCRIPTION="A general purpose trace and experiment file reading/writing interface"
 HOMEPAGE="http://staden.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/staden/${P}.tar.bz2"
 LICENSE="staden"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${PN}-1.8.12"
