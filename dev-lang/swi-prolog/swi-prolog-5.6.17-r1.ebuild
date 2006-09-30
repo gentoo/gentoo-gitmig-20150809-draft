@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.2 2006/09/17 02:53:22 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.3 2006/09/30 21:34:08 keri Exp $
 
 inherit autotools eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 	sed -i -e "s/man boot library/boot library/" src/Makefile.in
 	epatch "${FILESDIR}"/${PN}-portage.patch
 	epatch "${FILESDIR}"/${PN}-CFLAGS-r1.patch
+	epatch "${FILESDIR}"/${PN}-parallel-build.patch
 	epatch "${FILESDIR}"/${PN}-PLBASE-r1.patch
 	epatch "${FILESDIR}"/${PN}-test_date.patch
 	epatch "${FILESDIR}"/${PN}-cppproxy.patch
@@ -73,7 +74,7 @@ src_compile() {
 		$(use_enable !static shared) \
 		--disable-custom-flags \
 		|| die "econf failed"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 
 	if ! use minimal ; then
 		einfo "Building SWI-Prolog additional packages"
@@ -110,7 +111,7 @@ src_compile() {
 			$(use_with X xpce) \
 			|| die "packages econf failed"
 
-		emake -j1 || die "packages emake failed"
+		emake || die "packages emake failed"
 	fi
 }
 
