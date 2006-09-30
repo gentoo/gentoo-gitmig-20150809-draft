@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/axis
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.6 2006/01/19 03:49:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.7 2006/09/30 12:17:23 caster Exp $
+
+  30 Sep 2006; Vlastimil Babka <caster@gentoo.org> axis-1.2_rc2.ebuild:
+  Fixed castor dependency to pull right slot.
 
   19 Jan 2006; Joshua Nichols <nichoj@gentoo.org> axis-1.2_rc2.ebuild:
   Disabled jikes, because it makes the build fail.
