@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.6 2006/09/29 09:15:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.7 2006/09/30 18:22:35 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -45,6 +45,9 @@ src_unpack() {
 
 	# If we don't have SIGPOLL (like FreeBSD), use SIGIO instead
 	epatch "${FILESDIR}/${P}-sigpoll.patch"
+
+	# Change the default driver to wext for Linux systems.
+	epatch "${FILESDIR}/${P}-default_driver.patch"
 
 	# net/bpf.h needed for net-libs/libpcap on Gentoo FreeBSD
 	sed -i \
