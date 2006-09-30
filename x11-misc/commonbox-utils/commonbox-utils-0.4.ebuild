@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/commonbox-utils-0.4.ebuild,v 1.14 2005/02/06 18:47:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/commonbox-utils/commonbox-utils-0.4.ebuild,v 1.15 2006/09/30 01:34:56 robbat2 Exp $
 
 DESCRIPTION="Common utilities for fluxbox, blackbox, and openbox"
 HOMEPAGE="http://mkeadle.org/"
@@ -12,7 +12,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa ~amd64 mips ia64 ppc64 ~ppc-macos"
 
 DEPEND="media-gfx/xv"
-RDEPEND="virtual/x11"
+RDEPEND="${DEPEND}
+		|| ( x11-wm/fluxbox x11-wm/blackbox x11-wm/openbox )"
 
 src_compile() {
 	./compile.sh
