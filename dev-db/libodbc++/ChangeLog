@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/libodbc++
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.9 2006/06/24 05:09:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.10 2006/09/30 18:14:31 robbat2 Exp $
+
+*libodbc++-0.2.3-r2 (30 Sep 2006)
+
+  30 Sep 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/libodbc++-0.2.3-typecast.patch, +libodbc++-0.2.3-r2.ebuild:
+  Bug #103105 - migrate away from libtermcap-compat. Bug #149533 - compile fix
+  for newer GCC.
 
   24 Jun 2006; Doug Goldstein <cardoe@gentoo.org> libodbc++-0.2.3.ebuild,
   libodbc++-0.2.3-r1.ebuild:
