@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.91.ebuild,v 1.1 2006/07/03 19:40:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.91.ebuild,v 1.2 2006/09/30 17:18:58 grobian Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gnu.org/gnu/tar/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls static build bzip2"
 
 RDEPEND="app-arch/gzip
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-darwin.patch
 	cd "${S}"
 	if ! use userland_GNU ; then
 		sed -i \

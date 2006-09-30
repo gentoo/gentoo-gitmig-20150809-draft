@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.64 2006/07/03 19:40:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.65 2006/09/30 17:18:58 grobian Exp $
+
+  30 Sep 2006; Fabian Groffen <grobian@gentoo.org>
+  +files/tar-1.15.91-darwin.patch, tar-1.15.91.ebuild:
+  Marked ~ppc-macos, added darwin patch.  Backport from prefix.
 
 *tar-1.15.91 (03 Jul 2006)
 
