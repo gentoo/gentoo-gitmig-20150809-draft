@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/kpowersave
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.7 2006/09/08 19:07:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/kpowersave/ChangeLog,v 1.8 2006/09/30 17:01:31 genstef Exp $
+
+  30 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  -kpowersave-0.6.1.ebuild, kpowersave-0.6.2.ebuild:
+  correct depends thanks to Juergen Nagel <juergen@nagel.homeip.net> and
+  flameeyes in bug 149572
 
   08 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   kpowersave-0.6.2.ebuild:
