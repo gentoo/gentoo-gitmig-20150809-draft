@@ -5,10 +5,10 @@ EBUILD perl-locale-maketext-1.09.ebuild 521 RMD160 a1bbb7e0876c8d7f4b41fa58547bb
 MD5 41f5bf1420423281232a6173b878aa1f perl-locale-maketext-1.09.ebuild 521
 RMD160 a1bbb7e0876c8d7f4b41fa58547bb1727e2984fb perl-locale-maketext-1.09.ebuild 521
 SHA256 0dce1943c70054cb984c5eb549e9c21db9fd7b5dfedfd6aa8946432589abb39f perl-locale-maketext-1.09.ebuild 521
-EBUILD perl-locale-maketext-1.10.ebuild 500 RMD160 27b77b45cb33707efad9943deea93668da1015f8 SHA1 a90880863274bfaec5157f6c3e06758334b7c990 SHA256 5caa4adae9b4fd0c1ff52258775cc114992b73c4c466ae64925117312e28abcc
-MD5 e4235282161f01bfbb1500b162657e0a perl-locale-maketext-1.10.ebuild 500
-RMD160 27b77b45cb33707efad9943deea93668da1015f8 perl-locale-maketext-1.10.ebuild 500
-SHA256 5caa4adae9b4fd0c1ff52258775cc114992b73c4c466ae64925117312e28abcc perl-locale-maketext-1.10.ebuild 500
+EBUILD perl-locale-maketext-1.10.ebuild 498 RMD160 c5dc3b58a17b5cb7870fc8da769cc5fedea04acd SHA1 b00b20abd40fbbb9a27a0abc3aec485c62807127 SHA256 318b690852ddf83dc1d0146d579e561fc2f68a201170c8601af90736615d81ec
+MD5 3290814da8d7f79c6080a78385ba6bbe perl-locale-maketext-1.10.ebuild 498
+RMD160 c5dc3b58a17b5cb7870fc8da769cc5fedea04acd perl-locale-maketext-1.10.ebuild 498
+SHA256 318b690852ddf83dc1d0146d579e561fc2f68a201170c8601af90736615d81ec perl-locale-maketext-1.10.ebuild 498
 MISC ChangeLog 725 RMD160 724e8a71500dd4fade46598a46a7310a1616e191 SHA1 5205970d3fc578a8de404cb95ec6ed7f68fe6a77 SHA256 99113e4b5350664a59ddfe870ae27f430862f961483ca6387a9c23e03450b582
 MD5 c824dd8f9986424b55f24411084a0e44 ChangeLog 725
 RMD160 724e8a71500dd4fade46598a46a7310a1616e191 ChangeLog 725
@@ -24,9 +24,9 @@ MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-perl-locale-maketext-1.10 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-perl-locale-maketext-1.10 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-perl-locale-maketext-1.10 1
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFE8iuHtG5z4I8BtQoRAoLfAJ95mdd3JCyyjos99aRVsgz9Jo0cwgCfcioM
-kteULc16eMbeSRPrMsJMHek=
-=UCbK
+iD8DBQFFHr5aamhnQswr0vIRAgfAAKC6Kd0+eYXmCvrpytqZWwB+AuTB9gCgusbt
+KXu/DgE+D+dYMK+yIHNHXGE=
+=aqPi
 -----END PGP SIGNATURE-----
