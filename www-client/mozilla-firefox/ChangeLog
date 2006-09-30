@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.188 2006/09/28 02:15:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.189 2006/09/30 19:29:05 genstef Exp $
+
+*mozilla-firefox-2.0_rc1 (30 Sep 2006)
+
+  30 Sep 2006; Stefan Schweizer <genstef@gentoo.org>
+  +mozilla-firefox-2.0_rc1.ebuild:
+  version bump, bug 149265, update patches thanks to Walter Meinl
+  <wuno@lsvw.de> in bug 149265
 
   28 Sep 2006; Jason Wever <weeve@gentoo.org>
   mozilla-firefox-2.0_beta2.ebuild:
