@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11281.ebuild,v 1.2 2006/09/26 03:46:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11281.ebuild,v 1.3 2006/09/30 12:49:42 beandog Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
@@ -238,15 +238,15 @@ pkg_postinst() {
 	if ! use backendonly; then
 		echo
 		einfo "Want mythfrontend to start automatically? Run the following:"
-		echo "crontab -e -u mythtv"
+		einfo "crontab -e -u mythtv"
 		einfo "Add add the following:"
-		echo "* * * * * /usr/bin/runmythfe &"
+		einfo "* * * * * /usr/bin/runmythfe &"
 	fi
 	echo
 	einfo "To always have MythBackend running and available run the following:"
-	echo "rc-update add mythbackend default"
+	einfo "rc-update add mythbackend default"
 	echo
 	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
-	echo "chown -R mythtv /path/to/store"
+	ewarn "chown -R mythtv /path/to/store"
 }
 

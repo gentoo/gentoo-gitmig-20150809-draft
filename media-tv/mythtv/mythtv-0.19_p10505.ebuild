@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.7 2006/09/14 22:06:47 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.8 2006/09/30 12:49:42 beandog Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -238,8 +238,8 @@ src_install() {
 
 		ewarn "Want MythFrontend to always? Add the following to your"
 		ewarn "myth user. i.e. My user is mythtv"
-		echo "crontab -e -u mythtv"
-		echo "* * * * * /usr/bin/runmythfe &"
+		ewarn "crontab -e -u mythtv"
+		ewarn "* * * * * /usr/bin/runmythfe &"
 		ewarn "And you're all set."
 	fi
 	dodoc keys.txt docs/*.{txt,pdf}
@@ -261,15 +261,15 @@ pkg_preinst() {
 
 pkg_postinst() {
 	einfo "Want MythFrontend to alway run? Run the following:"
-	echo " #crontab -e -u mythtv"
+	einfo " #crontab -e -u mythtv"
 	einfo "And add the following:"
-	echo "* * * * * /usr/bin/runmythfe &"
+	einfo "* * * * * /usr/bin/runmythfe &"
 	echo
 	echo
 	einfo "To always have MythBackend running and available run the following:"
-	echo "rc-update add mythbackend default"
+	einfo "rc-update add mythbackend default"
 	echo
 	ewarn "Your recordings folder must be owned by the user 'mythtv' now"
-	echo "chown -R mythtv /path/to/store"
+	ewarn "chown -R mythtv /path/to/store"
 }
 

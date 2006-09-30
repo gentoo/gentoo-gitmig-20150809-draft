@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.119 2006/09/25 19:56:47 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.120 2006/09/30 12:49:42 beandog Exp $
+
+  30 Sep 2006; Steve Dibb <beandog@gentoo.org> mythtv-0.19_p10505.ebuild,
+  mythtv-0.20_p11244.ebuild, mythtv-0.20_p11281.ebuild:
+  Fix warnings, wrt bug 149329
 
 *mythtv-0.20_p11281 (25 Sep 2006)
 
