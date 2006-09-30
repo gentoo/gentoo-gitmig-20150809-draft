@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.22 2006/08/01 00:14:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.23 2006/09/30 21:25:15 dev-zero Exp $
+
+  30 Sep 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Version bump.
 
   01 Aug 2006; Luca Longinotti <chtekk@gentoo.org> metadata.xml,
   postgis-0.7.5-r2.ebuild, -postgis-1.0.0_p20050512.ebuild,
