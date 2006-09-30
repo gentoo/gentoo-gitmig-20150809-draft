@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.1 2006/09/24 07:26:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.2 2006/09/30 05:33:32 matsuu Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -58,6 +58,14 @@ pkg_setup() {
 }
 
 src_compile() {
+	local myconf
+
+	if use gtk && (use anthy || use canna); then
+		myconf="${myconf} --enable-dict"
+	else
+		myconf="${myconf} --disable-dict"
+	fi
+
 	econf $(use_with X x) \
 		$(use_with anthy) \
 		$(use_with canna) \
@@ -65,12 +73,12 @@ src_compile() {
 		$(use_enable emacs) \
 		$(use_with gnome panel) \
 		$(use_with gtk gtk2) \
-		$(use_enable gtk dict) \
 		$(use_with libedit) \
 		$(use_with m17n-lib m17nlib) \
 		$(use_enable nls) \
 		$(use_with qt3 qt) \
-		$(use_with qt3 qt-immodule) || die "econf failed"
+		$(use_with qt3 qt-immodule) \
+		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
@@ -83,9 +91,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
 	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo."
-	einfo "To use uim-prime you should emerge app-i18n/prime."
 	einfo
 
 	ewarn
