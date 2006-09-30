@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.29 2006/07/19 09:22:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.30 2006/09/30 19:08:54 dberkholz Exp $
+
+  30 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; libXaw-1.0.2.ebuild:
+  (#149614) Add xextproto to build-time deps.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> libXaw-1.0.2.ebuild:
   Stable on hppa.
