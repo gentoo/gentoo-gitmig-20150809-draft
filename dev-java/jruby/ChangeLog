@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.7 2006/09/13 06:17:01 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.8 2006/09/30 02:25:15 nichoj Exp $
+
+*jruby-0.9.0 (30 Sep 2006)
+
+  30 Sep 2006; Joshua Nichols <nichoj@gentoo.org> metadata.xml,
+  +jruby-0.9.0.ebuild:
+  Version bump. Contributed by Sean McEligot <sean.mceligot@gmail.com>, bug
+  #145748.
 
   12 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   jruby-0.7.0-r1.ebuild:
