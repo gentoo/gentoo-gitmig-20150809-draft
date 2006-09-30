@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jvyaml
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvyaml/ChangeLog,v 1.1 2006/09/30 02:20:41 nichoj Exp $
+
+*jvyaml-0.1 (30 Sep 2006)
+
+  30 Sep 2006; Joshua Nichols <nichoj@gentoo.org> +metadata.xml,
+  +jvyaml-0.1.ebuild:
+  Initial commit. Ebuild contributed by Sean McEligot
+  <sean.mceligot@gmail.com>, for bug #145748.
+
