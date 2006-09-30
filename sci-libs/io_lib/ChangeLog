@@ -1,6 +1,17 @@
 # ChangeLog for sci-libs/io_lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.5 2006/09/12 05:00:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.6 2006/09/30 02:41:07 ribosome Exp $
+
+*io_lib-1.9.0-r1 (30 Sep 2006)
+*io_lib-1.8.12b-r1 (30 Sep 2006)
+
+  30 Sep 2006; Olivier Fisette <ribosome@gentoo.org>
+  +io_lib-1.8.12b-r1.ebuild, -io_lib-1.9.0.ebuild, +io_lib-1.9.0-r1.ebuild:
+  Added missing header files for compatibility with BioPerl's Staden
+  extensions. Backporting fix to 1.8 branch since BioPerl development has not
+  caught up with newer io_lib versions. Thanks to Martin Mokrejs
+  <mmokrejs@ribosome.natur.cuni.cz> for his work (fixes bug #145562, see also
+  bug #120446).
 
 *io_lib-1.9.0 (12 Sep 2006)
 
