@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.2.7.ebuild,v 1.2 2005/09/11 13:40:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.2.7.ebuild,v 1.3 2006/09/30 16:08:59 djay Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,12 +16,14 @@ SLOT="0"
 
 KEYWORDS="~x86"
 
-IUSE="usb debug"
+IUSE="usb debug doc"
 
-DEPEND="dev-libs/expat
-	virtual/tetex
+RDEPEND="dev-libs/expat
 	usb? ( dev-libs/libusb )
 	debug? ( dev-util/efence )"
+
+DEPEND="${RDEPEND}
+	doc? ( virtual/tetex )"
 
 src_compile() {
 	local serror
@@ -40,8 +42,10 @@ src_compile() {
 
 	emake CC="$(tc-getCC)" || die "emake failed, see messages above"
 
-	cd "${S}"/doc/
-	make || die "Documentation generation failed"
+	if use doc; then
+		cd "${S}"/doc/
+		make || die "Documentation generation failed"
+	fi
 }
 
 src_install() {
@@ -62,8 +66,10 @@ src_install() {
 	    doins ${i}/* || die "Unable to install samples from ${i} directory"
 	done
 
-	cd "${S}"/doc/
-	docinto manual
-	dodoc doc.dvi babelfront2.eps || \
-		die "Unable to install gpsbabel documentation"
+	if use doc; then
+		cd "${S}"/doc/
+		docinto manual
+		dodoc doc.dvi babelfront2.eps || \
+			die "Unable to install gpsbabel documentation"
+	fi
 }
