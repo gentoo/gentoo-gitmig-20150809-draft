@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.3 2006/09/30 21:34:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.4 2006/09/30 22:00:40 keri Exp $
 
 inherit autotools eutils
 
@@ -134,6 +134,7 @@ src_test() {
 	make check || die "make check failed. See above for details."
 
 	if ! use minimal ; then
+		addpredict /
 		cd "${S}/packages"
 		make check || die "make check failed. See above for details."
 	fi
