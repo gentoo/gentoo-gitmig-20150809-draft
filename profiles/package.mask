@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5965 2006/09/29 18:54:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5966 2006/09/30 10:35:25 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -29,6 +29,7 @@ games-arcade/tuxracer-demo
 # Sebastian Bergmann <sebastian@gentoo.org> (29 Sep 2006)
 # Bug 149534
 dev-php5/pecl-filter
+dev-php5/ezc-UserInput
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (29 Sep 2006)
 # Preview version: Needs to be tested, has known crashes.
