@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5969 2006/09/30 17:12:03 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5970 2006/09/30 20:36:02 williamh Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -298,10 +298,6 @@ www-apps/drupal
 # 1.5.x is a development branch, people should test 1.4.x by default
 =net-fs/openafs-1.5*
 =net-fs/openafs-kernel-1.5*
-
-# Mike Frysinger <vapier@gentoo.org> (08 Sep 2006)
-# Overwrites glibc libraries #145667
-app-accessibilty/sphinx3
 
 # Matthias Schwarzott <zzam@gentoo.org> (08 Sep 2006)
 # Newest release crashes hard X11 some times.
