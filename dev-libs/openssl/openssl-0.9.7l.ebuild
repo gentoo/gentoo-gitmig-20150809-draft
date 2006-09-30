@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.6 2006/09/28 22:08:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.7 2006/09/30 18:32:02 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,6 +16,7 @@ IUSE="emacs test bindist zlib"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
+	x11-misc/makedepend
 	sys-apps/diffutils
 	>=dev-lang/perl-5
 	test? ( sys-devel/bc )"
