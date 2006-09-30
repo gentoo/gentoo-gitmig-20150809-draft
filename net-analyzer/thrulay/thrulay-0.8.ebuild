@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/thrulay-0.8.ebuild,v 1.1 2005/12/12 08:03:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/thrulay-0.8.ebuild,v 1.2 2006/09/30 01:30:48 robbat2 Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.gz
 		mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND=""
 
