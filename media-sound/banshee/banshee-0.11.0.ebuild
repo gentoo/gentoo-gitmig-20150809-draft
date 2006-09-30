@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.0.ebuild,v 1.2 2006/09/20 01:17:17 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-0.11.0.ebuild,v 1.3 2006/09/30 20:13:43 metalgod Exp $
 
 inherit autotools eutils gnome2 mono
 
@@ -46,7 +46,8 @@ RDEPEND=">=dev-lang/mono-1.1.13
 	>=sys-apps/hal-0.5.2
 	>=sys-apps/dbus-0.60
 	>=dev-db/sqlite-3
-	>=gnome-extra/nautilus-cd-burner-2.12"
+	>=gnome-extra/nautilus-cd-burner-2.12
+	>=x11-libs/libnotify-0.4.0"
 
 USE_DESTDIR=1
 DOCS="ChangeLog HACKING NEWS README"
