@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.13 2006/09/06 07:29:27 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.14 2006/09/30 23:55:56 wormo Exp $
+
+  30 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> cln-1.1.10.ebuild:
+  stable on ppc (needed for Bug #141446)
 
   06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> cln-1.1.10.ebuild:
   Stable x86; bug #141413
