@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.6 2006/09/29 05:53:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.4.11.ebuild,v 1.7 2006/09/30 10:22:04 sebastian Exp $
 
 inherit depend.php
 
@@ -123,6 +123,8 @@ pkg_postinst() {
 		ewarn "The location of the local PEAR repository has been changed"
 		ewarn "from /usr/lib/php to /usr/share/php."
 	fi
+
+	pear clear-cache
 
 	# Update PEAR/PECL channels as needed, add new ones to the list if needed
 	pearchans="pear.php.net pecl.php.net components.ez.no pear.phpdb.org pear.phing.info pear.symfony-project.com pear.phpunit.de pear.php-baustelle.de"

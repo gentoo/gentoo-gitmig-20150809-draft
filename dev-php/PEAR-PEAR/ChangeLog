@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.78 2006/09/29 05:53:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.79 2006/09/30 10:22:04 sebastian Exp $
+
+  30 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-PEAR-1.4.11.ebuild:
+  Call 'pear clear-cache' for bug #142601.
 
   29 Sep 2006; Markus Rothe <corsair@gentoo.org> PEAR-PEAR-1.4.11.ebuild:
   Stable on ppc64; bug #149306
