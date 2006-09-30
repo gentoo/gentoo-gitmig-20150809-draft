@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cpp</herd>
+<maintainer>
+  <email>dev-zero@gentoo.org</email>
+  <name>Tiziano Müller</name>
+</maintainer>
 <longdescription>
 Boost is a free peer-reviewed portable C++ source libraries.
 </longdescription>
