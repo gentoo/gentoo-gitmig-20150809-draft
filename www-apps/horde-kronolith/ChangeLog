@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-kronolith
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.24 2006/09/26 19:39:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.25 2006/09/30 09:21:52 ticho Exp $
+
+  30 Sep 2006; <ticho@gentoo.org> horde-kronolith-2.1.2.ebuild:
+  Stable on x86, bug #148768.
 
   26 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   horde-kronolith-2.1.2.ebuild:
