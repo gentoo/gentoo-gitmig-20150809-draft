@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/altermime
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.7 2005/06/04 09:29:36 tove Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.8 2006/09/30 01:31:17 robbat2 Exp $
+
+  30 Sep 2006; Robin H. Johnson <robbat2@gentoo.org> altermime-0.3.6.ebuild:
+  Add ~amd64 so I can use it.
 
 *altermime-0.3.6 (04 Jun 2005)
 
