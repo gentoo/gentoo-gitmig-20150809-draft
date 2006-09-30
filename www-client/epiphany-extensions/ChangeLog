@@ -1,6 +1,11 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.38 2006/09/12 18:38:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.39 2006/09/30 21:43:13 dang Exp $
+
+  30 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
+  -files/epiphany-extensions-2.14.0.1-adblock.patch,
+  -epiphany-extensions-2.14.1.ebuild, epiphany-extensions-2.14.1-r1.ebuild:
+  Remove epiphany dbus check; it doesn't have the flag any more.  Bug #148633
 
   12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
   epiphany-extensions-2.16.0.ebuild:

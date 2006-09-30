@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.14.1-r1.ebuild,v 1.7 2006/09/03 08:03:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.14.1-r1.ebuild,v 1.8 2006/09/30 21:43:13 dang Exp $
 
 inherit eutils gnome2
 
@@ -37,16 +37,7 @@ pkg_setup() {
 		push-scroller sample sample-mozilla select-stylesheet sidebar smart-bookmarks \
 		tab-groups tab-states tabsmenu"
 
-	if use dbus && ! built_with_use www-client/epiphany dbus; then
-		ewarn
-		ewarn "To enable the extensions using dbus you neet to emerge"
-		ewarn "www-client/epiphany with the 'dbus' USE flag enabled as well."
-		ewarn
-		ewarn "Skipping for now."
-		ewarn
-	else
-		use dbus && extensions="${extensions} rss"
-	fi
+	use dbus && extensions="${extensions} rss"
 
 	use pcre && extensions="${extensions} greasemonkey adblock"
 
