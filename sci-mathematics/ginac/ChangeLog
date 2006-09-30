@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.9 2006/09/07 05:03:56 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.10 2006/09/30 23:57:20 wormo Exp $
+
+  30 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  ginac-1.3.4.ebuild:
+  stable on ppc (needed for Bug #141446)
 
   07 Sep 2006; Joshua Jackson <tsunam@gentoo.org> ginac-1.3.4.ebuild:
   Stable x86; bug #141414

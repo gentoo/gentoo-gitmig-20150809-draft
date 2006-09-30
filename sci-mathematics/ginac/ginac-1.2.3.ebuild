@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.2.3.ebuild,v 1.2 2004/12/28 20:06:32 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.2.3.ebuild,v 1.3 2006/09/30 23:57:20 wormo Exp $
 
 IUSE=""
 
