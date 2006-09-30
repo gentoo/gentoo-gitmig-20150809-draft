@@ -1,10 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.4_p1-r1.ebuild,v 1.1 2006/09/29 17:17:46 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.4_p1-r1.ebuild,v 1.2 2006/09/30 13:08:09 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
-inherit eutils flag-o-matic ccc pam multilib autotools
+# Please leave pam at end, so that dopamd and newpamd from eutils eclass are not used
+inherit eutils flag-o-matic ccc multilib autotools pam
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -52,11 +53,11 @@ pkg_setup() {
 	# this sucks, but i'd rather have people unable to `emerge -u openssh`
 	# than not be able to log in to their server any more
 	local fail=""
-	[[ -z ${X509_PATCH}    ]] && use X509      && fail="${fail} X509"
+	[[ -z ${X509_PATCH}	   ]] && use X509	   && fail="${fail} X509"
 	[[ -z ${SECURID_PATCH} ]] && use smartcard && fail="${fail} smartcard"
 	if [[ -n ${fail} ]] ; then
 		eerror "Sorry, but this version does not yet support features"
-		eerror "that you requested:  ${fail}"
+		eerror "that you requested:	 ${fail}"
 		eerror "Please mask ${P} for now and check back later:"
 		eerror " # echo '=${CATEGORY}/${P}' >> /etc/portage/package.mask"
 		die "booooo"
@@ -83,7 +84,7 @@ src_unpack() {
 			use ldap && epatch "${FILESDIR}"/openssh-4.0_p1-smartcard-ldap-happy.patch
 		fi
 		if use ldap ; then
-		    epatch "${DISTDIR}"/${LDAP_PATCH}
+			epatch "${DISTDIR}"/${LDAP_PATCH}
 		fi
 	elif [[ -n ${SECURID_PATCH} ]] && use smartcard || use ldap ; then
 		ewarn "Sorry, X509 and smartcard/ldap don't get along, disabling smartcard/ldap"
