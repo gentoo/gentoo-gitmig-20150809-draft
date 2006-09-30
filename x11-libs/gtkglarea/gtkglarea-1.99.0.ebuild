@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.31 2006/09/08 01:35:52 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.32 2006/09/30 21:28:37 dang Exp $
 
 inherit gnome2 multilib
 
@@ -17,7 +17,8 @@ RDEPEND="virtual/libc
 	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	=sys-devel/automake-1.6*"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README* docs/*.txt"
 
