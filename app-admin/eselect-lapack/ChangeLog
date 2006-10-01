@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-lapack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.8 2006/09/19 18:51:25 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lapack/ChangeLog,v 1.9 2006/10/01 17:32:35 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Remove myself as maintainer so it goes to all of the sci team.
 
   19 Sep 2006; Danny van Dyk <kugelfang@gentoo.org>
   eselect-lapack-0.1.ebuild:
