@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.7 2006/09/13 02:37:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.8 2006/10/01 20:49:57 sbriesen Exp $
+
+  01 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  -files/ziproxy-2.0.confd, -files/ziproxy-2.0.initd, -ziproxy-2.0.0.ebuild:
+  removed old version.
 
   13 Sep 2006; Jason Wever <weeve@gentoo.org> ziproxy-2.1.1.ebuild:
   Added ~sparc keyword wrt bug #139149.
