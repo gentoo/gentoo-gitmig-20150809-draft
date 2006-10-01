@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.290 2006/08/16 04:14:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.291 2006/10/01 14:55:42 jer Exp $
+
+  01 Oct 2006; Jeroen Roovers <jer@gentoo.org> postgresql-7.3.15-r1.ebuild:
+  Stable for HPPA (bug #135187).
 
   16 Aug 2006; Joshua Jackson <tsunam@gentoo.org>
   postgresql-7.3.15-r1.ebuild:

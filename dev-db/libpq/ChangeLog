@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.71 2006/08/16 04:12:37 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.72 2006/10/01 14:54:48 jer Exp $
+
+  01 Oct 2006; Jeroen Roovers <jer@gentoo.org> libpq-7.3.15.ebuild:
+  Stable for HPPA (bug #135187).
 
   16 Aug 2006; Joshua Jackson <tsunam@gentoo.org> libpq-7.3.15.ebuild:
   Stable x86; bug #135187
