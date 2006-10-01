@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.404 2006/09/30 08:12:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.405 2006/10/01 17:17:55 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.1.2-r2.ebuild, xine-lib-1.1.3_pre20060914.ebuild,
+  xine-lib-1.1.3_pre20060929.ebuild:
+  Remove build-time dependency on xextproto.
 
   30 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.1.3_pre20060929.ebuild:
