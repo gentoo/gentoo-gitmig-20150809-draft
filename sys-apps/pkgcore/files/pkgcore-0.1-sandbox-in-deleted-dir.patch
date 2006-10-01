@@ -1,0 +1,163 @@
+# Bazaar revision bundle v0.8
+#
+# message:
+#   test for sandbox + nonexistant cwd.
+#   
+# committer: Brian Harring <ferringb@gentoo.org>
+# date: Sat 2006-09-30 17:38:28.315999985 -0700
+
+=== modified file pkgcore/ebuild/processor.py // last-changed:ferringb@gentoo.o
+... rg-20061001002928-e3ad5eb445bb7f3a
+--- pkgcore/ebuild/processor.py
++++ pkgcore/ebuild/processor.py
+@@ -206,6 +206,9 @@
+         else:
+             spawn_func = pkgcore.spawn.spawn
+ 
++        # force to a neutral dir so that sandbox/fakeroot won't explode if
++        # ran from a nonexistant dir
++        spawn_opts["chdir"] = "/tmp"
+         # little trick. we force the pipes to be high up fd wise so
+         # nobody stupidly hits 'em.
+         max_fd = min(pkgcore.spawn.max_fd_limit, 1024)
+
+=== modified file pkgcore/spawn.py // last-changed:ferringb@gentoo.org-20061001
+... 002928-e3ad5eb445bb7f3a
+--- pkgcore/spawn.py
++++ pkgcore/spawn.py
+@@ -130,7 +130,7 @@
+ 
+ def spawn(mycommand, env=None, opt_name=None, fd_pipes=None, returnpid=False,
+           uid=None, gid=None, groups=None, umask=None, logfile=None,
+-          path_lookup=True):
++          chdir=None, path_lookup=True):
+ 
+     """wrapper around execve
+ 
+@@ -195,7 +195,7 @@
+         # pylint: disable-msg=W0703
+         try:
+             _exec(binary, mycommand, opt_name, fd_pipes, env, gid, groups,
+-                  uid, umask)
++                  uid, umask, chdir)
+         except Exception, e:
+             # We need to catch _any_ exception so that it doesn't
+             # propogate out of this function and cause exiting
+@@ -249,7 +249,8 @@
+     # Everything succeeded
+     return 0
+ 
+-def _exec(binary, mycommand, opt_name, fd_pipes, env, gid, groups, uid, umask):
++def _exec(binary, mycommand, opt_name, fd_pipes, env, gid, groups, uid, umask,
++    chdir):
+     """internal function to handle exec'ing the child process.
+ 
+     If it succeeds this function does not return. It might raise an
+@@ -286,6 +287,9 @@
+             except OSError:
+                 pass
+ 
++    if chdir is not None:
++        os.chdir(chdir)
++
+     # Set requested process permissions.
+     if gid:
+         os.setgid(gid)
+
+=== modified file pkgcore/test/test_spawn.py
+--- pkgcore/test/test_spawn.py
++++ pkgcore/test/test_spawn.py
+@@ -76,6 +76,33 @@
+                     fp, spawn_type=spawn.spawn_sandbox)[1][0].split(":")])
+         os.unlink(fp)
+ 
++
++    @capability_based(spawn.sandbox_capable, "sandbox binary wasn't found")
++    def test_sandbox_empty_dir(self):
++        """
++        sandbox gets pissy if it's ran from a nonexistant dir
++        
++        this verifies our fix works.
++        """
++        fp = self.generate_script(
++            "pkgcore-spawn-sandbox.sh", "echo $LD_PRELOAD")
++        dpath = os.path.join(self.dir, "dar")
++        os.mkdir(dpath)
++        try:
++            cwd = os.getcwd()
++        except OSError:
++            cwd = None
++        try:
++            os.chdir(dpath)
++            os.rmdir(dpath)
++            self.assertIn("libsandbox.so", [os.path.basename(x.strip()) for x in
++                spawn.spawn_get_output(
++                fp, spawn_type=spawn.spawn_sandbox, chdir='/')[1][0].split(":")])
++            os.unlink(fp)
++        finally:
++            if cwd is not None:
++                os.chdir(cwd)
++
+     @capability_based(spawn.fakeroot_capable, "fakeroot binary wasn't found")
+     def test_fakeroot(self):
+         try:
+
+# revision id: ferringb@gentoo.org-20061001003828-74aa66b080d128bf
+# sha1: 79dcf8b726e7596560bb1f1d1dd5b5489baacb65
+# inventory sha1: 2035b787956ee5082dd5ed878ec7db4f490b7278
+# parent ids:
+#   ferringb@gentoo.org-20061001002928-e3ad5eb445bb7f3a
+# base id: ferringb@gentoo.org-20060930215710-1f00848a64fa7930
+# properties:
+#   branch-nick: integration
+
+# message:
+#   add chdir resetting option for spawn, use it for sandbox (sandbox sucks) when ran from a non existant dir
+#   
+# committer: Brian Harring <ferringb@gentoo.org>
+# date: Sat 2006-09-30 17:29:28.269999981 -0700
+
+=== modified file pkgcore/ebuild/processor.py // encoding:base64
+LS0tIHBrZ2NvcmUvZWJ1aWxkL3Byb2Nlc3Nvci5weQorKysgcGtnY29yZS9lYnVpbGQvcHJvY2Vz
+c29yLnB5CkBAIC0yMDYsNiArMjA2LDkgQEAKICAgICAgICAgZWxzZToKICAgICAgICAgICAgIHNw
+YXduX2Z1bmMgPSBwa2djb3JlLnNwYXduLnNwYXduCiAKKyAgICAgICAgIyBmb3JjZSB0byBhIG5l
+dXRyYWwgZGlyIHNvIHRoYXQgc2FuZGJveC9mYWtlcm9vdCB3b24ndCBleHBsb2RlIGlmCisgICAg
+ICAgICMgcmFuIGZyb20gYSBub25leGlzdGFudCBkaXIKKyAgICAgICAgc3Bhd25fb3B0c1siY2hk
+aXIiXSA9ICIvdG1wIgogICAgICAgICAjIGxpdHRsZSB0cmljay4gd2UgZm9yY2UgdGhlIHBpcGVz
+IHRvIGJlIGhpZ2ggdXAgZmQgd2lzZSBzbwogICAgICAgICAjIG5vYm9keSBzdHVwaWRseSBoaXRz
+ICdlbS4KICAgICAgICAgbWF4X2ZkID0gbWluKHBrZ2NvcmUuc3Bhd24ubWF4X2ZkX2xpbWl0LCAx
+MDI0KQoK
+
+=== modified file pkgcore/spawn.py // encoding:base64
+LS0tIHBrZ2NvcmUvc3Bhd24ucHkKKysrIHBrZ2NvcmUvc3Bhd24ucHkKQEAgLTEzMCw3ICsxMzAs
+NyBAQAogCiBkZWYgc3Bhd24obXljb21tYW5kLCBlbnY9Tm9uZSwgb3B0X25hbWU9Tm9uZSwgZmRf
+cGlwZXM9Tm9uZSwgcmV0dXJucGlkPUZhbHNlLAogICAgICAgICAgIHVpZD1Ob25lLCBnaWQ9Tm9u
+ZSwgZ3JvdXBzPU5vbmUsIHVtYXNrPU5vbmUsIGxvZ2ZpbGU9Tm9uZSwKLSAgICAgICAgICBwYXRo
+X2xvb2t1cD1UcnVlKToKKyAgICAgICAgICBjaGRpcj1Ob25lLCBwYXRoX2xvb2t1cD1UcnVlKToK
+IAogICAgICIiIndyYXBwZXIgYXJvdW5kIGV4ZWN2ZQogCkBAIC0xOTUsNyArMTk1LDcgQEAKICAg
+ICAgICAgIyBweWxpbnQ6IGRpc2FibGUtbXNnPVcwNzAzCiAgICAgICAgIHRyeToKICAgICAgICAg
+ICAgIF9leGVjKGJpbmFyeSwgbXljb21tYW5kLCBvcHRfbmFtZSwgZmRfcGlwZXMsIGVudiwgZ2lk
+LCBncm91cHMsCi0gICAgICAgICAgICAgICAgICB1aWQsIHVtYXNrKQorICAgICAgICAgICAgICAg
+ICAgdWlkLCB1bWFzaywgY2hkaXIpCiAgICAgICAgIGV4Y2VwdCBFeGNlcHRpb24sIGU6CiAgICAg
+ICAgICAgICAjIFdlIG5lZWQgdG8gY2F0Y2ggX2FueV8gZXhjZXB0aW9uIHNvIHRoYXQgaXQgZG9l
+c24ndAogICAgICAgICAgICAgIyBwcm9wb2dhdGUgb3V0IG9mIHRoaXMgZnVuY3Rpb24gYW5kIGNh
+dXNlIGV4aXRpbmcKQEAgLTI0OSw3ICsyNDksOCBAQAogICAgICMgRXZlcnl0aGluZyBzdWNjZWVk
+ZWQKICAgICByZXR1cm4gMAogCi1kZWYgX2V4ZWMoYmluYXJ5LCBteWNvbW1hbmQsIG9wdF9uYW1l
+LCBmZF9waXBlcywgZW52LCBnaWQsIGdyb3VwcywgdWlkLCB1bWFzayk6CitkZWYgX2V4ZWMoYmlu
+YXJ5LCBteWNvbW1hbmQsIG9wdF9uYW1lLCBmZF9waXBlcywgZW52LCBnaWQsIGdyb3VwcywgdWlk
+LCB1bWFzaywKKyAgICBjaGRpcik6CiAgICAgIiIiaW50ZXJuYWwgZnVuY3Rpb24gdG8gaGFuZGxl
+IGV4ZWMnaW5nIHRoZSBjaGlsZCBwcm9jZXNzLgogCiAgICAgSWYgaXQgc3VjY2VlZHMgdGhpcyBm
+dW5jdGlvbiBkb2VzIG5vdCByZXR1cm4uIEl0IG1pZ2h0IHJhaXNlIGFuCkBAIC0yODYsNiArMjg3
+LDkgQEAKICAgICAgICAgICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgICAgICAgICAgIHBhc3MK
+IAorICAgIGlmIGNoZGlyIGlzIG5vdCBOb25lOgorICAgICAgICBvcy5jaGRpcihjaGRpcikKKwog
+ICAgICMgU2V0IHJlcXVlc3RlZCBwcm9jZXNzIHBlcm1pc3Npb25zLgogICAgIGlmIGdpZDoKICAg
+ICAgICAgb3Muc2V0Z2lkKGdpZCkKCg==
+
+# revision id: ferringb@gentoo.org-20061001002928-e3ad5eb445bb7f3a
+# sha1: b4ccfdb63ee142de540dd13229b45f005e66fe1a
+# inventory sha1: 75babaf4b20292a23aed08646032d6d20e8d5e8b
+# parent ids:
+#   ferringb@gentoo.org-20060930215710-1f00848a64fa7930
+# properties:
+#   branch-nick: integration
+
