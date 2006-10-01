@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.222 2006/09/23 12:09:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.223 2006/10/01 00:46:56 dang Exp $
+
+  01 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> -gnome-vfs-2.16.0.ebuild,
+  gnome-vfs-2.16.0-r1.ebuild:
+  gnome-vfs needs dbus.  Bug #148997
 
   23 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   gnome-vfs-2.14.2-r1.ebuild:
