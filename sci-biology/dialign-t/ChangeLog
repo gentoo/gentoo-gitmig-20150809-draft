@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/dialign-t
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/ChangeLog,v 1.3 2006/07/09 07:17:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dialign-t/ChangeLog,v 1.4 2006/10/01 17:38:18 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Remove myself as maintainer so it goes to all of the sci-biology team.
 
   09 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   dialign-t-0.2.1.ebuild:
