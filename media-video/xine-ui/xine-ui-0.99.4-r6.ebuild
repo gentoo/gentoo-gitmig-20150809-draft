@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r6.ebuild,v 1.5 2006/09/24 17:45:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.4-r6.ebuild,v 1.6 2006/10/01 18:01:20 flameeyes Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -41,10 +41,7 @@ RDEPEND="media-libs/libpng
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	X? ( || ( (
-			x11-libs/libX11
 			x11-libs/libXt
-			x11-proto/xextproto
-			x11-proto/xproto
 			x11-proto/xf86vidmodeproto
 			x11-proto/xineramaproto
 		) <virtual/x11-7 ) )"
