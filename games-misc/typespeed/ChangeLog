@@ -1,6 +1,15 @@
 # ChangeLog for games-misc/typespeed
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.10 2006/07/10 05:30:51 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/ChangeLog,v 1.11 2006/10/01 23:58:57 nyhm Exp $
+
+*typespeed-0.5.3 (01 Oct 2006)
+
+  01 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  -files/typespeed-0.5.0-statedir-fix.patch,
+  -files/typespeed-0.5.0-time.patch, -files/01_all_statedir-fix.patch,
+  -typespeed-0.4.4-r1.ebuild, -typespeed-0.5.0.ebuild,
+  +typespeed-0.5.3.ebuild:
+  Version bump
 
   10 Jul 2006; Thomas Cort <tcort@gentoo.org> typespeed-0.5.1.ebuild:
   Stable on alpha.
