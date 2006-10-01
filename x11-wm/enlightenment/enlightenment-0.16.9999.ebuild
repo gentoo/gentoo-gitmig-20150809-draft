@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.20 2006/05/11 03:19:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.9999.ebuild,v 1.21 2006/10/01 22:41:20 vapier Exp $
 
 #ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 ECVS_SERVER="anoncvs.enlightenment.org:/var/cvs/e"
@@ -18,26 +18,32 @@ IUSE="esd nls xinerama xrandr doc"
 RDEPEND="esd? ( >=media-sound/esound-0.2.19 )
 	=media-libs/freetype-2*
 	media-libs/imlib2
-	|| ( (
-		x11-libs/libSM
-		x11-libs/libICE
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXfixes
-		x11-libs/libXxf86vm
-		xrandr? ( x11-libs/libXrandr )
-		x11-libs/libXrender
-		x11-misc/xbitmaps
-		x11-proto/xextproto
-		x11-proto/xf86vidmodeproto
-		xinerama? ( x11-libs/libXinerama x11-proto/xineramaproto )
-		x11-proto/xproto
-		) virtual/x11 )"
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXfixes
+	x11-libs/libXdamage
+	x11-libs/libXxf86vm
+	xrandr? ( x11-libs/libXrandr )
+	x11-libs/libXrender
+	x11-misc/xbitmaps
+	xinerama? ( x11-libs/libXinerama )
+	nls? ( virtual/libintl )
+	virtual/libiconv"
 DEPEND="${RDEPEND}
+	x11-proto/xextproto
+	x11-proto/xf86vidmodeproto
+	xinerama? ( x11-proto/xineramaproto )
+	x11-proto/xproto
 	nls? ( sys-devel/gettext )"
 PDEPEND="doc? ( app-doc/edox-data )"
 
 S=${WORKDIR}/e16/e
+
+pkg_setup() {
+	built_with_use media-libs/imlib2 X || die "emerge imlib2 with USE=X"
+}
 
 src_unpack() {
 	cvs_src_unpack
