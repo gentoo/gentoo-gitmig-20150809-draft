@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.79 2006/09/18 15:17:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.80 2006/10/01 10:50:29 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kmail-3.5.4-r2.ebuild:
+  Fix missing dependency on libkpgp.
 
 *kmail-3.5.4-r2 (18 Sep 2006)
 
