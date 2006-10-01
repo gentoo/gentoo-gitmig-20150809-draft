@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.10 2006/10/01 17:43:40 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.11 2006/10/01 17:44:35 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Reorder herds so sci is first, since that's who has been maintaining it
+  lately and the category it's in now.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Remove myself as maintainer so it goes to all of the sci/graphics teams.
