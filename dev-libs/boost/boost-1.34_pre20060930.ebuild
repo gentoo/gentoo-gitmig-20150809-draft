@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20060930.ebuild,v 1.1 2006/09/30 23:15:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.34_pre20060930.ebuild,v 1.2 2006/10/01 23:00:09 dev-zero Exp $
 
 inherit python distutils multilib eutils versionator
 
@@ -14,8 +14,9 @@ SLOT="1"
 KEYWORDS="~x86"
 IUSE="bcp bjam debug doc icu pyste static threads threadsonly"
 
-DEPEND="icu? ( dev-libs/icu )"
+DEPEND="icu? ( >=dev-libs/icu-3.2 )"
 RDEPEND="${DEPEND}
+		!dev-util/boost-jam
 		pyste? ( dev-cpp/gccxml dev-python/elementtree )"
 
 S=${WORKDIR}/${MY_P}
@@ -25,15 +26,17 @@ S=${WORKDIR}/${MY_P}
 # - Check whether the threading-patch for alpha is still needed
 # - Check the LICENSE, upstream updated a lot and changed licenses
 # - possibility to add a separate boost-build package and depend on it
-# - possibility to split out boost.python
 # - gccxml which is needed by pyste is broken with gcc-4.1.1, bug #147976
-# - This version doesn't block boost-jam anymore as preparation for it's removal
+#   Testing gccxml-snapshot with this version of boost/pyste
+# - Remove boost-jam and remove the blocker
+# - Find a better way to do set the options than in pkg_setup (check whether they are really needed for installation)
+# - Eventually split-out boost.python and spirit (second one has it's own release-cycle)
 
 pkg_setup() {
 	BOOSTJAM="${S}/tools/jam/src/bin.*/bjam"
 
-	# Just make sure that we only get the '-j [0-9]+' part from MAKEOPTS
-	NUMJOBS=$(echo ${MAKEOPTS} | sed -e 's/.*\(\-j[ 0-9]\+\) .*/\1/')
+	# FIXME: Until we have a better way to do that
+	NUMJOBS=$(sed -e 's/.*\(\-j[ 0-9]\+\) .*/\1/' <<< ${MAKEOPTS})
 
 	python_version
 
@@ -209,4 +212,20 @@ src_install () {
 		cd "${S}"/tools/jam/src/bin.*/
 		dobin bjam || die "bjam install failed"
 	fi
+}
+
+src_test() {
+	cd "${S}/tools/regression"
+
+	sed -i \
+		-e "s#^\(boost_root\)=.*#\1=\"${S}\"#" \
+		-e "s#^\(bjam\)=.*#\1=\"$(ls ${BOOSTJAM})\"#" \
+		-e 's#tools/build/jam_src#tools/jam/src#' \
+		-e 's#--comment "$comment_path" ##' \
+		run_tests.sh || die "sed'ing run_tests.sh failed"
+	chmod +x run_tests.sh
+	./run_tests.sh || die "regression tests failed"
+
+	elog "Please check the files in "${S}/status" for results and/or more information."
+	elog "If it failed, you might want to attach the regression.log to the bug."
 }

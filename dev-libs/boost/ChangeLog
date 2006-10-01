@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.90 2006/09/30 23:15:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.91 2006/10/01 23:00:09 dev-zero Exp $
+
+  01 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Adding src_test to boost-1.34 for regression tests. Minor cleanups.
 
   30 Sep 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Snapshot for 1.34 added for testing
