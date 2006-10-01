@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.2 2006/10/01 10:10:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.3 2006/10/01 12:37:40 genstef Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -57,6 +57,9 @@ src_unpack() {
 		unpack acro5-cmaps-2001.tar.gz
 	fi
 	cd ${S}
+
+	# http://cups.org/espgs/str.php?L2000
+	epatch ${FILESDIR}/ghostscript-esp-8.15.1-fPIC.patch
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
