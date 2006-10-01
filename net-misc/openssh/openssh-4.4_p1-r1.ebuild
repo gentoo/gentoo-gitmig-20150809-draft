@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.4_p1-r1.ebuild,v 1.2 2006/09/30 13:08:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.4_p1-r1.ebuild,v 1.3 2006/10/01 19:46:02 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -58,8 +58,8 @@ pkg_setup() {
 	if [[ -n ${fail} ]] ; then
 		eerror "Sorry, but this version does not yet support features"
 		eerror "that you requested:	 ${fail}"
-		eerror "Please mask ${P} for now and check back later:"
-		eerror " # echo '=${CATEGORY}/${P}' >> /etc/portage/package.mask"
+		eerror "Please mask ${PF} for now and check back later:"
+		eerror " # echo '=${CATEGORY}/${PF}' >> /etc/portage/package.mask"
 		die "booooo"
 	fi
 }
