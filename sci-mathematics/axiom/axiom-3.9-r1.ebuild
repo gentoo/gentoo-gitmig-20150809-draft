@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.3 2006/08/25 11:12:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/axiom-3.9-r1.ebuild,v 1.4 2006/10/01 13:00:20 plasmaroo Exp $
 
 inherit eutils
 
@@ -56,6 +56,10 @@ src_compile() {
 	#	(plasmaroo; 20050116)
 	sed -e 's/struct termio ptermio;/struct termios ptermio;/' -i src/clef/edible.c.pamphlet
 	mkdir src/graph/viewports
+
+	# Fix include paths for libXpm
+	# (Bug #143738)
+	sed -i -e '/^XLIB=/s:/X11R6::g' Makefile.pamphlet || die "Failed to fix XLIB in Makefile.pamphlet"
 
 	# Let the fun begin...
 	./configure

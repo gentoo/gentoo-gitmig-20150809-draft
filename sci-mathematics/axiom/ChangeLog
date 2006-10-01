@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/axiom
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.11 2006/08/25 11:12:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/axiom/ChangeLog,v 1.12 2006/10/01 13:00:20 plasmaroo Exp $
+
+  01 Oct 2006; Tim Yamin <plasmaroo@gentoo.org> axiom-3.9-r1.ebuild:
+  Fix bug #143738; patch by Johannes Weiner.
 
   25 Aug 2006; Luis Medinas <metalgod@gentoo.org> axiom-3.9-r1.ebuild:
   Added ~amd64 keyword.
