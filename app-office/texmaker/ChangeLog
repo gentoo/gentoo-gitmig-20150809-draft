@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.21 2006/09/07 16:56:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.22 2006/10/01 13:19:28 nattfodd Exp $
+
+  01 Oct 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  texmaker-1.11-r1.ebuild, texmaker-1.30.ebuild:
+  Corrected DEPEND/RDEPEND mix, thanks to Flameeyes for report and patch.
 
   07 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> texmaker-1.30.ebuild:
   Add ~x86-fbsd keyword.
