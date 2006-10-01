@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.5 2006/10/01 20:28:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.6 2006/10/01 20:47:40 robbat2 Exp $
+
+*freeipmi-0.2.3 (01 Oct 2006)
+
+  01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> +freeipmi-0.2.3.ebuild:
+  Bug #145702, version bump, looking very promising now.
 
   01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> freeipmi-0.1.3.ebuild:
   Fix file collision, bug #149357.
