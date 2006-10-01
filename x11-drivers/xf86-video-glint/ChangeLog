@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-glint
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/ChangeLog,v 1.22 2006/09/05 23:47:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-glint/ChangeLog,v 1.23 2006/10/01 21:58:11 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xf86-video-glint-1.0.1.3.ebuild, xf86-video-glint-1.1.1.ebuild:
+  (#149779) Add glproto to DEPEND on USE=dri.
 
   05 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; +files/glint.xinf:
   Add hwdata files for system-config-display.
