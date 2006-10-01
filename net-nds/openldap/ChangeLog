@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.201 2006/09/27 03:47:53 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.202 2006/10/01 00:43:58 robbat2 Exp $
+
+*openldap-2.3.27-r1 (01 Oct 2006)
+
+  01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +openldap-2.3.27-r1.ebuild:
+  Bug #147189 - fix dependancies for USE=minimal. Bug #136786 - tidy use
+  USE=minimal build.
 
   19 Sep 2006; Joshua Jackson <tsunam@gentoo.org> openldap-2.3.27.ebuild:
   Stable x86; bug #144862
