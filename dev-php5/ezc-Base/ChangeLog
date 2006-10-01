@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Base
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.9 2006/08/28 09:08:06 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Base/ChangeLog,v 1.10 2006/10/01 18:13:36 gmsoft Exp $
+
+  01 Oct 2006; Guy Martin <gmsoft@gentoo.org> ezc-Base-1.1.1.ebuild:
+  Added ~hppa to KEYWORDS.
 
 *ezc-Base-1.1.1 (28 Aug 2006)
 
