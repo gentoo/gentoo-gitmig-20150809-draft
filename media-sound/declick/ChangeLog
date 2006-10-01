@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/declick
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/declick/ChangeLog,v 1.1 2006/02/04 22:49:07 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/declick/ChangeLog,v 1.2 2006/10/01 20:22:52 sbriesen Exp $
+
+  01 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org> declick-0.6.5.ebuild:
+  added LDFLAGS
 
 *declick-0.6.5 (04 Feb 2006)
 
