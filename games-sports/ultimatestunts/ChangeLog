@@ -1,6 +1,14 @@
 # ChangeLog for games-sports/ultimatestunts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.6 2006/05/12 18:18:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/ultimatestunts/ChangeLog,v 1.7 2006/10/01 19:42:03 nyhm Exp $
+
+*ultimatestunts-0.6.2 (01 Oct 2006)
+
+  01 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/ultimatestunts-0.6.2-freealut.patch,
+  +files/ultimatestunts-0.6.2-gcc41.patch,
+  +files/ultimatestunts-0.6.2-paths.patch, +ultimatestunts-0.6.2.ebuild:
+  Version bump
 
 *ultimatestunts-0.6.1-r1 (12 May 2006)
 
