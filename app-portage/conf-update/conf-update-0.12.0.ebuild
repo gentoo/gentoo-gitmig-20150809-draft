@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.12.0.ebuild,v 1.2 2006/09/17 12:22:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-0.12.0.ebuild,v 1.3 2006/10/01 14:33:11 kugelfang Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~blubb/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="colordiff"
 
 RDEPEND=">=dev-libs/glib-2.6

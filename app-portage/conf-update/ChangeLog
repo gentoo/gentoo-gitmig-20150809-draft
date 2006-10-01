@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/conf-update
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.10 2006/09/17 12:22:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/ChangeLog,v 1.11 2006/10/01 14:33:11 kugelfang Exp $
+
+  01 Oct 2006; Danny van Dyk <kugelfang@gentoo.org>
+  conf-update-0.12.0.ebuild:
+  Marked ~ppc.
 
   17 Sep 2006; <blubb@gentoo.org> conf-update-0.12.0.ebuild:
   fix bug 147912
