@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/klaptopdaemon-3.5.4.ebuild,v 1.1 2006/07/25 06:25:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/klaptopdaemon-3.5.4.ebuild,v 1.2 2006/10/01 17:24:05 flameeyes Exp $
 
 KMNAME=kdeutils
 MAXKDEVER=$PV
@@ -16,7 +16,6 @@ RDEPEND="|| ( x11-libs/libXtst <virtual/x11-7 )"
 DEPEND="${RDEPEND}
 	|| ( (
 			x11-libs/libX11
-			x11-proto/xextproto
 			x11-proto/xproto
 		) <virtual/x11-7 )
 	virtual/os-headers"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.2.ebuild,v 1.13 2006/09/03 16:29:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.2.ebuild,v 1.14 2006/10/01 17:25:29 flameeyes Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -37,7 +37,6 @@ DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
 	|| ( (
 			x11-proto/videoproto
-			x11-proto/xextproto
 			x11-proto/xproto
 			kernel_linux? ( x11-libs/libXv )
 			x11-proto/scrnsaverproto

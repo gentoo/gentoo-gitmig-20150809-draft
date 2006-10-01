@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/mpeglib-3.5.1.ebuild,v 1.12 2006/07/25 09:22:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/mpeglib-3.5.1.ebuild,v 1.13 2006/10/01 17:27:31 flameeyes Exp $
 
 KMNAME=kdemultimedia
 MAXKDEVER=3.5.4
@@ -23,7 +23,6 @@ DEPEND="${RDEPEND}
 			x11-proto/xf86dgaproto
 			x11-proto/xf86vidmodeproto
 			x11-proto/videoproto
-			x11-proto/xextproto
 		) <virtual/x11-7 )"
 
 src_compile() {

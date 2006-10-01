@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.3.ebuild,v 1.3 2006/07/09 19:57:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.3.ebuild,v 1.4 2006/10/01 17:22:41 flameeyes Exp $
 
 inherit kde-dist eutils
 
@@ -24,7 +24,6 @@ RDEPEND="${BOTH_DEPEND}
 DEPEND="${BOTH_DEPEND}
 	|| ( (
 			x11-libs/libX11
-			x11-proto/xextproto
 			x11-proto/xproto
 		) <virtual/x11-7 )
 	virtual/os-headers"
@@ -40,7 +39,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf="$(use_with snmp) $(use_with pbbuttonsd powerbook)
-	              $(use_with xmms)"
+				  $(use_with xmms)"
 
 	use crypt || export DO_NOT_COMPILE="${DO_NOT_COMPILE} kgpg"
 

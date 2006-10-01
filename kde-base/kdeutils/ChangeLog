@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.177 2006/09/17 22:53:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.178 2006/10/01 17:22:41 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kdeutils-3.5.2.ebuild,
+  kdeutils-3.5.3.ebuild, kdeutils-3.5.4.ebuild, kdeutils-3.5.4-r1.ebuild:
+  Remove build-time dependency on xextproto.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdeutils-3.4.3-r1.ebuild:
   Drop KDE 3.4.

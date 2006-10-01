@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.76 2006/09/17 22:53:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.77 2006/10/01 17:25:29 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.5.2.ebuild,
+  kopete-3.5.3-r4.ebuild, kopete-3.5.4.ebuild:
+  Remove build-time dependency on xextproto.
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kopete-3.4.3.ebuild:
   Drop KDE 3.4.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3-r4.ebuild,v 1.1 2006/07/31 18:55:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.5.3-r4.ebuild,v 1.2 2006/10/01 17:19:52 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -40,7 +40,6 @@ DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
 	|| ( (
 			x11-proto/videoproto
-			x11-proto/xextproto
 			x11-proto/xproto
 			kernel_linux? ( x11-libs/libXv )
 			x11-proto/scrnsaverproto
