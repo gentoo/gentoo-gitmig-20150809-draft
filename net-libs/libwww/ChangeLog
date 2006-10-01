@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.61 2006/09/29 23:24:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.62 2006/10/01 13:48:24 gmsoft Exp $
+
+  01 Oct 2006; Guy Martin <gmsoft@gentoo.org> libwww-5.4.0-r6.ebuild:
+  Stable on hppa.
 
   29 Sep 2006; <ticho@gentoo.org> libwww-5.4.0-r6.ebuild:
   Stable on x86, bug #56328.
