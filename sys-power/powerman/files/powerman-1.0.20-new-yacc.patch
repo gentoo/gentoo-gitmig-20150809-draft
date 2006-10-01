@@ -1,0 +1,23 @@
+diff -Nuar powerman-1.0.20.orig/src/parse.y powerman-1.0.20/src/parse.y
+--- powerman-1.0.20.orig/src/parse.y	2004-02-19 15:01:26.000000000 -0800
++++ powerman-1.0.20/src/parse.y	2006-10-01 14:09:23.992747728 -0700
+@@ -754,6 +754,7 @@
+         case EPL_NONODES:
+             _errormsg("more plugs than nodes");
+         default:
++	    break;
+     }
+ 
+     if (!conf_addnodes(nodestr))
+diff -Nuar powerman-1.0.20.orig/src/Makefile powerman-1.0.20/src/Makefile
+--- powerman-1.0.20.orig/src/Makefile	2006-10-01 14:27:37.716476000 -0700
++++ powerman-1.0.20/src/Makefile	2006-10-01 14:28:09.056712008 -0700
+@@ -51,8 +51,6 @@
+ # Fix for annoying "yyval used uninitialized" warning
+ parse_tab.c parse_tab.h: parse.y
+ 	$(YACC) -d -oparse_tab.c parse.y
+-	sed s/YYSTYPE\ yyval/YYSTYPE\ yyval\ =\ NULL/ parse_tab.c >foo.c
+-	mv foo.c parse_tab.c
+ 
+ parse_tab.o: parse_tab.c parse_tab.h powerman.h
+ 	$(CC) $(CFLAGS) -c -o parse_tab.o parse_tab.c

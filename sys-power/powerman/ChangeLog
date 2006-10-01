@@ -1,0 +1,11 @@
+# ChangeLog for sys-power/powerman
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.1 2006/10/01 21:42:34 robbat2 Exp $
+
+*powerman-1.0.20 (01 Oct 2006)
+
+  01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +files/powerman-1.0.20-new-yacc.patch, +metadata.xml,
+  +powerman-1.0.20.ebuild:
+  New package. Initial ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
