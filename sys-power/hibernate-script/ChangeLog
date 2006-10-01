@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/hibernate-script
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.35 2006/09/26 19:31:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/ChangeLog,v 1.36 2006/10/01 16:03:14 phreak Exp $
+
+  01 Oct 2006; Christian Heim <phreak@gentoo.org>
+  hibernate-script-1.93-r6.ebuild:
+  Updated patch-tarball, including a definite fix/workaround for #146352
+  (hibernate is looking for app-shells/dash, that doesn't understand '[[' and
+  arithmetics - thanks to Bernard Blackham and Alexander Skwar for helping
+  out).
 
   26 Sep 2006; Christian Heim <phreak@gentoo.org>
   hibernate-script-1.93-r6.ebuild:
