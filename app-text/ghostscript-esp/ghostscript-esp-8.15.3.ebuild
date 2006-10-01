@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.1 2006/09/29 20:55:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.2 2006/10/01 10:10:22 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit autotools elisp-common eutils versionator
 

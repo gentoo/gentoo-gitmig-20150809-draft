@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.35 2006/09/29 20:55:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.36 2006/10/01 10:10:22 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  ghostscript-esp-8.15.1_p20060430.ebuild,
+  ghostscript-esp-8.15.2_p20060520.ebuild, ghostscript-esp-8.15.3.ebuild:
+  Force latest versions of autotools.
 
 *ghostscript-esp-8.15.3 (29 Sep 2006)
 
