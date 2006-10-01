@@ -1,0 +1,21 @@
+--- SConstruct.orig	2006-10-01 13:36:15.000000000 +0200
++++ SConstruct	2006-10-01 13:37:02.000000000 +0200
+@@ -21,15 +21,16 @@
+     GD_LIBS=['Magick','Magick++','Wand']
+     PYTHON_INCLUDE='/usr/include/python2.4'
+     BOOST_PYTHON_LIB=['libboost_python-gcc']
+-    CPP_FLAGS=['-DBOOST_PYTHON_STATIC_LIB','-O2']
++    CPP_FLAGS=['-DBOOST_PYTHON_STATIC_LIB']
+ 
+ #   setup the environment
+ env=Environment(
+     LIBPATH=['./',BOOSTLIBPATH, IM_LIB_PATH],
+     CPPPATH=[BOOST, PYTHON_INCLUDE] + IM_INCLUDE_PATH,
+-    RPATH=['./',BOOSTLIBPATH],
++    RPATH=[BOOSTLIBPATH],
+     CPPFLAGS=CPP_FLAGS
+ )
++env.SConsignFile()
+ 
+ def fix_includes(target,source,env):
+     for t in target:
