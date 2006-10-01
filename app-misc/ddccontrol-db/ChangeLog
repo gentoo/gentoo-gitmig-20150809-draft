@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ddccontrol-db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ChangeLog,v 1.7 2006/06/06 17:04:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ChangeLog,v 1.8 2006/10/01 20:12:48 robbat2 Exp $
+
+*ddccontrol-db-20060730 (01 Oct 2006)
+
+  01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org>
+  +ddccontrol-db-20060730.ebuild:
+  Version bump, bug #149760
 
   06 Jun 2006; Simon Stelling <blubb@gentoo.org>
   ddccontrol-db-20060308.ebuild:
