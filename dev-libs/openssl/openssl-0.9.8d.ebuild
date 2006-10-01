@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.9 2006/09/30 22:04:32 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.10 2006/10/01 20:16:17 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -97,7 +97,10 @@ src_compile() {
 		-e 's:-mcpu=[-a-z0-9]* ::g' \
 		-e 's:-m[a-z0-9]* ::g' \
 	)
-	sed -i -e "/^CFLAG/s:=.*:=${CFLAG} ${CFLAGS}:" Makefile || die
+	sed -i \
+		-e "/^CFLAG/s:=.*:=${CFLAG} ${CFLAGS}:" \
+		-e "/^SHARED_LDFLAGS/s:$: ${LDFLAGS}:" \
+		Makefile || die
 
 	# depend is needed to use $confopts
 	# rehash is needed to prep the certs/ dir
@@ -118,7 +121,7 @@ src_test() {
 }
 
 src_install() {
-	make INSTALL_PREFIX="${D}" install || die
+	emake INSTALL_PREFIX="${D}" install || die
 	dodoc CHANGES* FAQ NEWS README doc/*.txt
 	dohtml doc/*
 
