@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.112 2006/09/30 21:19:17 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.113 2006/10/01 07:17:34 corsair Exp $
+
+  01 Oct 2006; Markus Rothe <corsair@gentoo.org> iptables-1.3.5-r4.ebuild:
+  Stable on ppc64; bug #149643
 
   30 Sep 2006; <nixnut@gentoo.org> iptables-1.3.5-r4.ebuild:
   Stable on ppc wrt bug 149643
