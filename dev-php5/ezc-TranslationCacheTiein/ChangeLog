@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-TranslationCacheTiein
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TranslationCacheTiein/ChangeLog,v 1.6 2006/08/24 02:11:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-TranslationCacheTiein/ChangeLog,v 1.7 2006/10/01 20:10:15 gmsoft Exp $
+
+  01 Oct 2006; Guy Martin <gmsoft@gentoo.org>
+  ezc-TranslationCacheTiein-1.1.ebuild:
+  Added ~hppa to KEYWORDS.
 
   24 Aug 2006; Jason Wever <weeve@gentoo.org>
   ezc-TranslationCacheTiein-1.1.ebuild:
