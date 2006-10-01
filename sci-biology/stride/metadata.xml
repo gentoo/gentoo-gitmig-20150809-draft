@@ -5,5 +5,5 @@
 		<email>markusle@gentoo.org</email>
 		<name>Markus Dittrich</name>
 	</maintainer>
-	<herd>sci</herd>
+	<herd>sci-biology</herd>
 </pkgmetadata>
