@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sdo/pecl-sdo-1.0.4.ebuild,v 1.3 2006/09/30 16:59:29 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-sdo/pecl-sdo-1.0.4.ebuild,v 1.4 2006/10/01 16:43:39 chtekk Exp $
 
 PHP_EXT_NAME="sdo"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-pecl-r1
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 DESCRIPTION="Service Data Objects (SDOs) for PHP."
 LICENSE="Apache-2.0"
 SLOT="0"
