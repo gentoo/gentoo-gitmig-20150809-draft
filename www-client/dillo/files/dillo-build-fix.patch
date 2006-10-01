@@ -1,0 +1,23 @@
+--- m4/gettext.m4.old	2006-10-01 22:57:42.650976377 +0200
++++ m4/gettext.m4	2006-10-01 23:00:44.691609818 +0200
+@@ -567,20 +567,6 @@
+ ])
+ 
+ 
+-AC_DEFUN([AM_MKINSTALLDIRS],
+-[
+-  dnl If the AC_CONFIG_AUX_DIR macro for autoconf is used we possibly
+-  dnl find the mkinstalldirs script in another subdir but $(top_srcdir).
+-  dnl Try to locate is.
+-  MKINSTALLDIRS=
+-  if test -n "$ac_aux_dir"; then
+-    MKINSTALLDIRS="$ac_aux_dir/mkinstalldirs"
+-  fi
+-  if test -z "$MKINSTALLDIRS"; then
+-    MKINSTALLDIRS="\$(top_srcdir)/mkinstalldirs"
+-  fi
+-  AC_SUBST(MKINSTALLDIRS)
+-])
+ 
+ 
+ dnl Usage: AM_GNU_GETTEXT_VERSION([gettext-version])

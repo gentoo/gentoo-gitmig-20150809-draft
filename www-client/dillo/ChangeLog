@@ -1,6 +1,12 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.46 2006/09/10 23:08:04 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.47 2006/10/01 21:24:07 exg Exp $
+
+  01 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
+  +files/dillo-build-fix.patch,
+  -files/dillo-format-string-vulnerability.diff, dillo-0.8.5-r1.ebuild,
+  dillo-0.8.6.ebuild:
+  Add patch to fix bug #146416, thanks to ed@catmur.co.uk.
 
 *dillo-0.8.6 (10 Sep 2006)
 
