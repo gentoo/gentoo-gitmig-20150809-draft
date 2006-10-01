@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.8 2006/09/30 22:04:32 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7l.ebuild,v 1.9 2006/10/01 20:15:23 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -122,7 +122,8 @@ src_test() {
 }
 
 src_install() {
-	make 	CC="$(tc-getCC)" MAKEDEPPROG="$(tc-getCC)" \
+	emake \
+		CC="$(tc-getCC)" MAKEDEPPROG="$(tc-getCC)" \
 		AR="$(tc-getAR) r" \
 		RANLIB="$(tc-getRANLIB)" \
 		INSTALL_PREFIX="${D}" MANDIR=/usr/share/man install || die
