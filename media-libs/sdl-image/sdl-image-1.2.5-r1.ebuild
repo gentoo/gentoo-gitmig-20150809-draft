@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5-r1.ebuild,v 1.8 2006/09/18 21:35:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5-r1.ebuild,v 1.9 2006/10/01 17:51:36 dertobi123 Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_image/release/${MY_P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 mips ppc ppc-macos ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 mips ppc ppc-macos ppc64 sparc x86 ~x86-fbsd"
 IUSE="gif jpeg tiff png"
 
 DEPEND="sys-libs/zlib

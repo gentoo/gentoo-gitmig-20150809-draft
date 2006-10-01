@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.115 2006/09/27 23:24:55 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.116 2006/10/01 17:51:11 dertobi123 Exp $
+
+  01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libsdl-1.2.11.ebuild:
+  hppa stable, bug #145470
 
   27 Sep 2006; Hanno Boeck <hanno@gentoo.org>
   +files/libsdl-1.2.11-libcaca-new-api.patch, libsdl-1.2.11.ebuild:
