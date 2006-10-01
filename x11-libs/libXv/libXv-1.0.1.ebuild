@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/libXv-1.0.1.ebuild,v 1.14 2006/09/10 09:11:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXv/libXv-1.0.1.ebuild,v 1.15 2006/10/01 17:02:16 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -15,5 +15,4 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-proto/videoproto
 	x11-proto/xproto"
-DEPEND="${RDEPEND}
-	x11-proto/xextproto"
+DEPEND="${RDEPEND}"

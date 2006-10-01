@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.26 2006/09/29 04:56:37 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.27 2006/10/01 17:02:48 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; libXvMC-1.0.2.ebuild,
+  libXvMC-1.0.3.ebuild:
+  libXext has a runtime dep on xextproto now, so we don't need to depend on it
+  here.
 
 *libXvMC-1.0.3 (29 Sep 2006)
 

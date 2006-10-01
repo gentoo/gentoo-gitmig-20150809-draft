@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.26 2006/09/29 18:15:58 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.27 2006/10/01 17:01:45 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; libXtst-1.0.1.ebuild:
+  libXext has a runtime dep on xextproto now, so we don't need to depend on it
+  here.
 
   29 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; libXtst-1.0.1.ebuild:
   Move recordproto to runtime deps because it is required to compile against

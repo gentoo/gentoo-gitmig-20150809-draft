@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.3 2006/09/24 08:20:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r14.ebuild,v 1.4 2006/10/01 17:08:10 dberkholz Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -25,7 +25,6 @@ RDEPEND="virtual/libc
 	>=x11-libs/motif-config-0.9"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
-	x11-proto/xextproto
 	x11-misc/xbitmaps"
 
 SLOT="2.1"

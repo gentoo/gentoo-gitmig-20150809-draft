@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r3.ebuild,v 1.15 2006/09/24 08:20:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r3.ebuild,v 1.16 2006/10/01 17:08:10 dberkholz Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -26,7 +26,6 @@ DEPEND="virtual/libc
 	sys-devel/autoconf
 	!virtual/motif"
 RDEPEND="virtual/libc
-	x11-proto/xextproto
 	x11-misc/xbitmaps
 	!virtual/motif"
 PROVIDE="virtual/motif"

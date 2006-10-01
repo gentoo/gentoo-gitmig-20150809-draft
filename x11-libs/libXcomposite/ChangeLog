@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.27 2006/07/19 15:17:25 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.28 2006/10/01 16:59:29 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  libXcomposite-0.3.ebuild:
+  libXext has a runtime dep on xextproto now, so we don't need to depend on it
+  here.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> libXcomposite-0.3.ebuild:
   Stable on hppa.
