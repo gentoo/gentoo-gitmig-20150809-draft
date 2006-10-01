@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.4.ebuild,v 1.2 2006/09/07 13:23:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/certmanager-3.5.4.ebuild,v 1.3 2006/10/01 10:47:39 flameeyes Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -11,8 +11,7 @@ DESCRIPTION="KDE certificate manager gui."
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkpgp)
-	$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
+DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
 	>=app-crypt/gpgme-1.1.2-r1
 	<app-crypt/gnupg-1.9"
 	# We use GnuPG 1.4.x for OpenPGP and 1.9 (via gpgme) for s/mime as upstream advises.
