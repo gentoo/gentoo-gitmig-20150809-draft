@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.15 2006/07/31 23:37:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.16 2006/10/01 17:35:37 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> rsibreak-0.7.0.ebuild:
+  Remove build-time dependency on xextproto.
 
   31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/rsibreak-0.6.0-parallel.patch, -rsibreak-0.6.0.ebuild:
