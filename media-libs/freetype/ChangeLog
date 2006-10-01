@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.91 2006/09/04 03:39:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.92 2006/10/01 13:43:20 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> freetype-2.2.1.ebuild:
+  Export GNUMAKE variable to let it build when make is not GNU make.
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org> freetype-2.1.10-r2.ebuild:
   Marked stable on mips.

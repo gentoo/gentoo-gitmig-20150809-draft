@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.2.1.ebuild,v 1.3 2006/09/04 03:33:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.2.1.ebuild,v 1.4 2006/10/01 13:43:20 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="zlib bindist doc"
 
 # The RDEPEND below makes sure that if there is a version of moz/ff/tb
 # installed, then it will have the freetype-2.1.8+ binary compatibility patch.
-# Otherwise updating freetype will cause moz/ff/tb crashes.  #59849
+# Otherwise updating freetype will cause moz/ff/tb crashes.	 #59849
 # 20 Nov 2004 agriffis
 DEPEND="zlib? ( sys-libs/zlib )"
 
@@ -42,6 +42,7 @@ src_compile() {
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=118021
 	append-flags "-fno-strict-aliasing"
 
+	type -p gmake &> /dev/null && export GNUMAKE=gmake
 	econf $(use_with zlib) || die
 
 	emake || die
