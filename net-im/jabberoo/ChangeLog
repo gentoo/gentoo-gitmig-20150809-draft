@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberoo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberoo/ChangeLog,v 1.4 2004/06/24 22:54:15 agriffis Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberoo/ChangeLog,v 1.5 2006/10/01 19:38:02 tester Exp $
+
+  01 Oct 2006; Olivier Crête <tester@gentoo.org> jabberoo-1.9.3.ebuild,
+  jabberoo-1.9.4.ebuild:
+  Make it depend exclusively on libsigc++-1.2*
 
   21 Jun 2004; Gustavo Felisberto <humpback@gentoo.org>;
   jabberoo-1.9.3.ebuild:

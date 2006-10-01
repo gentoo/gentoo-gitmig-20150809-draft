@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberoo/jabberoo-1.9.4.ebuild,v 1.3 2004/06/24 22:54:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberoo/jabberoo-1.9.4.ebuild,v 1.4 2006/10/01 19:38:02 tester Exp $
 
 
 DESCRIPTION="Jabberoo is a C++ interface to the Jabber protocol."
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="debug"
 
 DEPEND="sys-libs/glibc
-	>=dev-libs/libsigc++-1.2"
+	=dev-libs/libsigc++-1.2*"
 
 src_compile() {
 	local myconf
