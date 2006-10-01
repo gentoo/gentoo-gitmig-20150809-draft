@@ -1,6 +1,12 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.84 2006/09/08 21:57:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.85 2006/10/01 21:33:01 genstef Exp $
+
+  01 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/acroread-langpack.patch, -acroread-7.0.5-r2.ebuild,
+  -acroread-7.0.5-r3.ebuild, acroread-7.0.8.ebuild:
+  All languages are available now, thanks to Giacomo Perale
+  <ghepeu@virgilio.it> in bug 149592
 
   08 Sep 2006; Stefan Schweizer <genstef@gentoo.org> acroread-7.0.8.ebuild:
   remove unused libstdc++ depend, thanks Peter Hyman <pete4abw@comcast.net> in

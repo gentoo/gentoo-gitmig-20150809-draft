@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.8.ebuild,v 1.6 2006/09/08 21:57:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.8.ebuild,v 1.7 2006/10/01 21:33:01 genstef Exp $
 
 inherit eutils nsplugins
 
@@ -10,12 +10,10 @@ IUSE="cups ldap nsplugin nls"
 
 SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/7x/${PV}"
 SRC_FOOT="-${PV}-1.i386.tar.gz"
-LINS=("de"  "fr"  "ja"  "ko" "zh_CN" "zh_TW")
-SRCS=("deu" "fra" "jpn" "kor" "chs" "cht")
-#LINS=("de" "fr" "sv" "es" "pt" "no" "it" "fi" "nl" "da" "ja" "ko" "zh_CN"
-#	"zh_TW")
-#SRCS=("deu" "fra" "sve" "esp" "ptb" "nor" "ita" "suo" "nld" "dan" "jpn" "kor"
-#	"chs" "cht")
+LINS=("de" "fr" "sv" "es" "pt" "no" "it" "fi" "nl" "da" "ja" "ko" "zh_CN"
+	"zh_TW")
+SRCS=("deu" "fra" "sve" "esp" "ptb" "nor" "ita" "suo" "nld" "dan" "jpn" "kor"
+	"chs" "cht")
 
 SRC_URI="nls? ( "
 for ((i=0;i<${#LINS[@]};i++)) do
