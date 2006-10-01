@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.30 2006/08/26 02:59:22 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.0-r1.ebuild,v 1.31 2006/10/01 05:23:20 dberkholz Exp $
 
 inherit eutils
 
@@ -134,11 +134,6 @@ RDEPEND="${RDEPEND}
 # Documentation
 RDEPEND="${RDEPEND}
 	>=app-doc/xorg-docs-1.0.1"
-
-# We require a brand-new portage for the drivers section to work as expected,
-# rather than pulling in absolutely nothing if VIDEO_CARDS is unset or ""
-RDEPEND="${RDEPEND}
-	>=sys-apps/portage-2.1_pre4"
 
 # Drivers
 RDEPEND="${RDEPEND}

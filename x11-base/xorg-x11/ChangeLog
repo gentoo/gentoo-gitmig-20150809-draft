@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.573 2006/09/12 20:47:40 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.574 2006/10/01 05:23:20 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-x11-7.0-r1.ebuild, xorg-x11-7.1.ebuild:
+  Since portage 2.1 has been stable for a while, stop depending on it because
+  it breaks diskless X terminals and such.
 
   12 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-x11-6.8.2-r8.ebuild, xorg-x11-6.9.0-r3.ebuild:
