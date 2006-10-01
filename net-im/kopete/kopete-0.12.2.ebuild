@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.2.ebuild,v 1.2 2006/09/27 09:57:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/kopete-0.12.2.ebuild,v 1.3 2006/10/01 18:10:23 flameeyes Exp $
 
 inherit kde eutils
 
@@ -57,8 +57,6 @@ DEPEND="${BOTH_DEPEND}
 	kernel_linux? ( virtual/os-headers )
 	|| ( (
 			x11-proto/videoproto
-			x11-proto/xextproto
-			x11-proto/xproto
 			kernel_linux? ( x11-libs/libXv )
 			xscreensaver? ( x11-proto/scrnsaverproto )
 		) <virtual/x11-7 )"
