@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.27 2006/08/30 19:25:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.28 2006/10/01 17:47:19 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kasumi-0.8.ebuild,
+  kasumi-0.10.ebuild, kasumi-1.0.1.ebuild, kasumi-2.0.1.ebuild:
+  Add missing pkgconfig dependencies as per bug #149748, thanks to Patrick
+  Lauer for reporting. Also fix quoting.
 
   30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> kasumi-2.0.1.ebuild:
   Stable on ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-2.0.1.ebuild,v 1.3 2006/08/30 19:25:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-2.0.1.ebuild,v 1.4 2006/10/01 17:47:19 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -24,6 +24,7 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	app-i18n/anthy"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

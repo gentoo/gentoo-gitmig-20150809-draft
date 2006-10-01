@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.10.ebuild,v 1.7 2006/03/09 19:31:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/kasumi-0.10.ebuild,v 1.8 2006/10/01 17:47:19 flameeyes Exp $
 
 inherit eutils
 
@@ -22,11 +22,12 @@ RDEPEND=">=x11-libs/gtk+-2.2
 	nls? ( virtual/libintl )"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
@@ -37,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc README ChangeLog AUTHORS
 }
