@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta1.ebuild,v 1.2 2006/09/22 07:20:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta1.ebuild,v 1.3 2006/10/01 20:14:01 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -66,7 +66,8 @@ pkg_setup() {
 
 PATCHES="${FILESDIR}/${PN}-6.0-fixmakefiles.patch
 	${FILESDIR}/${PN}-6.1-nowrap.patch
-	${FILESDIR}/${PN}-6.1-gcc41.patch"
+	${FILESDIR}/${PN}-6.1-gcc41.patch
+	${FILESDIR}/${PN}-adduser.patch"
 
 REMOVE_SUBDIRS="
 	named named-checkzone named-checkconf rndc rndc-confgen

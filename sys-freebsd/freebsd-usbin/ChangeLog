@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.17 2006/09/22 07:20:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.18 2006/10/01 20:14:01 the_paya Exp $
+
+  01 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  +files/freebsd-usbin-adduser.patch, freebsd-usbin-6.1-r1.ebuild,
+  freebsd-usbin-6.2_beta1.ebuild:
+  Added patch to fix adduser paths, by Chris White in bug #149763.
 
   22 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-usbin-6.2_beta1.ebuild:
