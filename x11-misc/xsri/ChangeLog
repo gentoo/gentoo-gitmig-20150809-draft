@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsri
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.5 2006/09/11 06:57:14 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.6 2006/10/01 15:34:55 tester Exp $
+
+  01 Oct 2006; Olivier Crête <tester@gentoo.org> xsri-2.1.0-r1.ebuild:
+  Mark ~amd64, fix bug #149002
 
   11 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; xsri-2.1.0-r1.ebuild:
   Keyword ~ppc.
