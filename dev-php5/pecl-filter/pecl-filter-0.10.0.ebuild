@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/pecl-filter-0.10.0.ebuild,v 1.1 2006/09/30 17:10:39 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/pecl-filter-0.10.0.ebuild,v 1.2 2006/10/01 14:16:54 chtekk Exp $
 
 PHP_EXT_ZENDEXT="no"
-PHP_EXT_PECL_PKG="filter"
 PHP_EXT_NAME="filter"
 PHP_EXT_INI="yes"
 
-inherit php-ext-pecl-r1 confutils
+inherit php-ext-pecl-r1
 
 DESCRIPTION="Extension for safely dealing with input parameters."
 SLOT="0"

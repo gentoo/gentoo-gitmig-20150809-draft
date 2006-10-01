@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-filter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/ChangeLog,v 1.6 2006/09/30 17:10:39 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/ChangeLog,v 1.7 2006/10/01 14:16:54 chtekk Exp $
+
+  01 Oct 2006; Luca Longinotti <chtekk@gentoo.org>
+  pecl-filter-0.10.0.ebuild:
+  No need to inherit confutils here, and state the ext name two times (if it's
+  the same, one time is enough).
 
 *pecl-filter-0.10.0 (30 Sep 2006)
 
