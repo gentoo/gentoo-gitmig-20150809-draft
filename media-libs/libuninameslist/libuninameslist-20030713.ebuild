@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/libuninameslist-20030713.ebuild,v 1.10 2006/09/17 07:11:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/libuninameslist-20030713.ebuild,v 1.11 2006/10/01 18:01:24 dertobi123 Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ~ppc-macos ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc-macos ~ppc64 sparc x86"
 DEPEND="virtual/libc"
 IUSE=""
 
