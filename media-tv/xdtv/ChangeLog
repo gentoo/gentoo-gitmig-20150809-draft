@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.39 2006/08/31 08:31:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.40 2006/10/01 17:43:14 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.2.0-r1.ebuild,
+  xdtv-2.3.3.ebuild:
+  Remove build-time dependency on xproto and/or xextproto.
 
   31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> xdtv-2.3.3.ebuild:
   Disable x264 support for now, it's not API stable. See bug #145343.

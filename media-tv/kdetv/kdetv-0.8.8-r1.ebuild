@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.10 2006/09/26 05:20:56 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.11 2006/10/01 17:40:51 flameeyes Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -34,11 +34,7 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 		) <virtual/x11-7 )"
 
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/videoproto
-		x11-proto/xproto
-		x11-proto/xextproto
-		) <virtual/x11-7 )
+	|| ( x11-proto/videoproto <virtual/x11-7 )
 	virtual/os-headers"
 
 need-kde 3.2
@@ -49,7 +45,7 @@ PATCHES="${FILESDIR}/${P}-xinerama.patch
 src_compile() {
 	local myconf="$(use_enable arts) $(use_enable lirc kdetv-lirc)
 		$(use_with zvbi) $(use_with opengl gl)"
-	#Filtering the below on x86 for bug #145754	
+	#Filtering the below on x86 for bug #145754
 	if [ "$ARCH" == "x86" ]; then
 		filter-flags -fforce-addr
 	fi

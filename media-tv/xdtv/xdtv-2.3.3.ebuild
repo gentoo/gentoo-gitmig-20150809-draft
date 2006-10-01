@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.3 2006/08/31 08:31:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.4 2006/10/01 17:43:14 flameeyes Exp $
 
 inherit font multilib autotools flag-o-matic
 
@@ -60,8 +60,6 @@ DEPEND="${RDEPEND}
 	dvb? ( media-tv/linuxtv-dvb-headers )
 	nls? ( sys-devel/gettext )
 	|| ( ( x11-proto/videoproto
-			x11-proto/xproto
-			x11-proto/xextproto
 			x11-apps/bdftopcf
 			x11-apps/mkfontdir
 			x11-apps/mkfontscale

@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.47 2006/08/16 21:12:34 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.48 2006/10/01 17:42:03 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> xawtv-3.95-r1.ebuild:
+  Remove build-time dependency on xproto and/or xextproto.
 
   16 Aug 2006; Joshua Jackson <tsunam@gentoo.org> xawtv-3.95-r1.ebuild:
   Stable x86; for bug #138606
