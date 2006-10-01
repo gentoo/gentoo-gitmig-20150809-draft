@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.5 2006/09/19 21:30:58 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.6 2006/10/01 15:24:06 gmsoft Exp $
+
+  01 Oct 2006; Guy Martin <gmsoft@gentoo.org> pam_pkcs11-0.5.3-r2.ebuild:
+  Added ~hppa to KEYWORDS.
 
   19 Sep 2006; Daniel Black <dragonheart@gentoo.org>
   pam_pkcs11-0.5.3.ebuild, pam_pkcs11-0.5.3-r1.ebuild,
