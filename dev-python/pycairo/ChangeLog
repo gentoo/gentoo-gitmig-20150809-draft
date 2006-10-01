@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.25 2006/09/25 16:13:39 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.26 2006/10/01 17:10:56 marienz Exp $
+
+  01 Oct 2006; Marien Zwart <marienz@gentoo.org> pycairo-1.0.2.ebuild,
+  pycairo-1.0.2-r1.ebuild, pycairo-1.2.0.ebuild, pycairo-1.2.2.ebuild:
+  Add pkgconfig to DEPEND. Closes bug #149730, thanks to bonsaikitten for
+  reporting.
 
 *pycairo-1.2.2 (25 Sep 2006)
 

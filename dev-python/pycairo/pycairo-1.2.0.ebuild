@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.0.ebuild,v 1.3 2006/09/08 01:37:55 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.2.0.ebuild,v 1.4 2006/10/01 17:10:56 marienz Exp $
 
 inherit eutils autotools
 
@@ -13,10 +13,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="numeric svg"
 
-DEPEND=">=dev-lang/python-2.3
+RDEPEND=">=dev-lang/python-2.3
 	>=x11-libs/cairo-1.2.0
 	svg? ( >=x11-libs/libsvg-cairo-0.1.6 )
 	numeric? ( dev-python/numeric )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
