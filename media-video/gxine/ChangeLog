@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.75 2006/09/21 03:05:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.76 2006/10/01 17:44:23 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> gxine-0.5.7.ebuild:
+  Remove build-time dependency on xproto and/or xextproto.
 
   21 Sep 2006; Patrick McLean <chutzpah@gentoo.org> gxine-0.5.7.ebuild:
   Stable on amd64 (bug #148401).
