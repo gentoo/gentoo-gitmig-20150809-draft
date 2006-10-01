@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/ezc-Execution
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Execution/ChangeLog,v 1.7 2006/08/28 09:11:35 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-Execution/ChangeLog,v 1.8 2006/10/01 18:19:18 gmsoft Exp $
+
+  01 Oct 2006; Guy Martin <gmsoft@gentoo.org> ezc-Execution-1.0.1.ebuild:
+  Added ~hppa to KEYWORDS.
 
 *ezc-Execution-1.0.1 (28 Aug 2006)
 
