@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.10 2006/10/01 20:16:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.11 2006/10/01 21:03:21 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,6 @@ IUSE="bindist emacs sse2 test zlib"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	x11-misc/makedepend
 	sys-apps/diffutils
 	>=dev-lang/perl-5
 	test? ( sys-devel/bc )"
@@ -34,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.8-make-engines-dir.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8-toolchain.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8b-doc-updates.patch
+	epatch "${FILESDIR}"/${PN}-0.9.8-makedepend.patch #149583
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.8 gentoo.config || die "cp cross-compile failed"
@@ -99,7 +99,7 @@ src_compile() {
 	)
 	sed -i \
 		-e "/^CFLAG/s:=.*:=${CFLAG} ${CFLAGS}:" \
-		-e "/^SHARED_LDFLAGS/s:$: ${LDFLAGS}:" \
+		-e "/^SHARED_LDFLAGS=/s:$: ${LDFLAGS}:" \
 		Makefile || die
 
 	# depend is needed to use $confopts

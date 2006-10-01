@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.204 2006/10/01 20:16:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.205 2006/10/01 21:03:21 vapier Exp $
+
+  01 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-0.9.8-makedepend.patch, openssl-0.9.7l.ebuild,
+  openssl-0.9.8d.ebuild:
+  Fix up depend system to use gcc to generate deps #149583.
 
   01 Oct 2006; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8d.ebuild:
   Respect LDFLAGS #149676 by Donnie Berkholz.
@@ -8,10 +13,6 @@
   30 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> openssl-0.9.7l.ebuild,
   openssl-0.9.8d.ebuild:
   Stable on alpha as per security bug #145510
-
-  30 Sep 2006; Mike Frysinger <vapier@gentoo.org> openssl-0.9.7l.ebuild,
-  openssl-0.9.8d.ebuild:
-  Pull in x11-misc/makedepend #149583.
 
   28 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   openssl-0.9.7l.ebuild, openssl-0.9.8d.ebuild:
