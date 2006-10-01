@@ -1,6 +1,11 @@
 # ChangeLog for games-mud/tf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.16 2006/09/02 08:52:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.17 2006/10/01 23:49:32 mr_bones_ Exp $
+
+  01 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/tf-40-gcc4.patch, files/tf-40-gentoo.diff, tf-40-r2.ebuild:
+  fix compile with gcc4 (bug #149079) with patch from Alexander Graf; avoid
+  prestripped binaries; tidy
 
   02 Sep 2006; Michael Sterrett <mr_bones_@gentoo.org> tf-50_beta7.ebuild:
   avoid prestripped binaries; touchups (patch from Tristan Heaven bug #137835)

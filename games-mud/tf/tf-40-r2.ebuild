@@ -1,11 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.8 2004/06/24 23:01:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-40-r2.ebuild,v 1.9 2006/10/01 23:49:32 mr_bones_ Exp $
 
 inherit eutils
 
 MY_P=${P}s1
-S="${WORKDIR}/${MY_P}"
 DESCRIPTION="A small full-featured MUD client"
 HOMEPAGE="http://tf.tcp.com/~hawkeye/tf/"
 SRC_URI="mirror://tinyfugue/${MY_P}.tar.gz
@@ -13,16 +12,21 @@ SRC_URI="mirror://tinyfugue/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS=" ~amd64 ~sparc x86"
 IUSE="doc"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
+S=${WORKDIR}/${MY_P}
+
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}-gentoo.diff"
+	cd "${S}"
+	epatch \
+		"${FILESDIR}/${P}-gentoo.diff" \
+		"${FILESDIR}/${P}-gcc4.patch"
 }
+
 src_compile() {
 	echo 'y' | ./unixmake config || die
 	./unixmake all || die
