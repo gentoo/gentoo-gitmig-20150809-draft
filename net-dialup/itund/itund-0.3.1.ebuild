@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/itund-0.3.1.ebuild,v 1.2 2006/05/28 22:57:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/itund-0.3.1.ebuild,v 1.3 2006/10/01 20:44:01 sbriesen Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="ItunD (ISDN tunnel Daemon) provides a network tunnel over ISDN lines using CAPI"
-HOMEPAGE="http://sourceforge.net/projects/itund/"
-SRC_URI="mirror://sourceforge/itund/${P}.tgz"
+HOMEPAGE="http://www.melware.org/ISDN_Tunnel_Daemon"
+SRC_URI="ftp://ftp.melware.net/itund/${P}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/itund
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/ChangeLog,v 1.5 2006/05/28 22:57:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/itund/ChangeLog,v 1.6 2006/10/01 20:44:01 sbriesen Exp $
+
+  01 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  -files/itund-0.3-capiv3.patch, -itund-0.3.ebuild, itund-0.3.1.ebuild:
+  removed old version, changed $HOMEPAGE/$SRC_URI.
 
   28 May 2006; Stefan Briesenick <sbriesen@gentoo.org> itund-0.3.1.ebuild:
   stable on amd64 and x86.
