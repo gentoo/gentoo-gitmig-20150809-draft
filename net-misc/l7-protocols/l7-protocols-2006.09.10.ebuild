@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2006.09.10.ebuild,v 1.2 2006/10/01 07:13:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2006.09.10.ebuild,v 1.3 2006/10/01 23:00:19 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -17,9 +17,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 S=${WORKDIR}/${MY_P}
-
-RDEPEND="net-misc/l7-filter"
-
 
 src_compile() {
 	sed -i -e "s/gcc.*-O2/$(tc-getCC) ${CFLAGS}/g" testing/Makefile
