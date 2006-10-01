@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.1 2006/09/30 22:25:48 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.2 2006/10/01 00:14:21 marienz Exp $
+
+*pkgcore-checks-0.1-r1 (01 Oct 2006)
+
+  01 Oct 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pkgcore-checks-0.1-missing-glsa-dir.patch,
+  +pkgcore-checks-0.1-r1.ebuild:
+  Fix a traceback for missing glsa dir.
 
 *pkgcore-checks-0.1 (30 Sep 2006)
 
