@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassuan
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.30 2006/07/23 02:42:09 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.31 2006/10/01 20:21:17 grobian Exp $
+
+  01 Oct 2006; Fabian Groffen <grobian@gentoo.org> libassuan-0.6.10.ebuild:
+  Marked ~ppc-macos
 
   22 Jul 2006; <psi29a@gentoo.org> libassuan-0.6.10.ebuild:
   stable on mips
