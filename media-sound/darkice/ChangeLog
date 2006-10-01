@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.26 2006/04/07 17:32:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.27 2006/10/01 19:15:38 dertobi123 Exp $
+
+  01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> darkice-0.15.ebuild:
+  hppa stable, bug #122729
 
   07 Apr 2006; Tobias Scherbaum <dertobi123@gentoo.org> darkice-0.15.ebuild:
   ppc stable, bug #122729
