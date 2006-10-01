@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/goosh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/goosh/ChangeLog,v 1.3 2006/09/26 07:55:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/goosh/ChangeLog,v 1.4 2006/10/01 17:33:40 dberkholz Exp $
+
+  01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
+  Remove myself as maintainer so it goes to all of the sci team.
 
   26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; goosh-1.3.ebuild:
   Stable on x86/ppc.
