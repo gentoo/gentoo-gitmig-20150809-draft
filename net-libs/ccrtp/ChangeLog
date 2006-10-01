@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ccrtp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.7 2006/07/11 14:23:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.8 2006/10/01 23:36:21 dragonheart Exp $
+
+*ccrtp-1.5.0 (01 Oct 2006)
+
+  01 Oct 2006; Daniel Black <dragonheart@gentoo.org> +ccrtp-1.5.0.ebuild:
+  version bump as requested by genstef
 
 *ccrtp-1.4.1 (11 Jul 2006)
 
