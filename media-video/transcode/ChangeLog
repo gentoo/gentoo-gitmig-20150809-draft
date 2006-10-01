@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.152 2006/09/23 19:01:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.153 2006/10/01 17:53:20 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-1.0.2-r2.ebuild, transcode-1.0.2-r3.ebuild:
+  Remove build-time dependency on xproto and/or xextproto.
 
   23 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   transcode-1.0.2-r2.ebuild, transcode-1.0.2-r3.ebuild:

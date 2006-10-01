@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.60 2006/09/13 12:44:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.61 2006/10/01 17:49:34 flameeyes Exp $
+
+  01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kaffeine-0.8.2-r1.ebuild:
+  Remove build-time dependency on xproto and/or xextproto.
 
 *kaffeine-0.8.2-r1 (13 Sep 2006)
 

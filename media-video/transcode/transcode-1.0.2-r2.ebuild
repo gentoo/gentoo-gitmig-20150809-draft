@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.15 2006/09/23 19:01:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r2.ebuild,v 1.16 2006/10/01 17:53:20 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -50,8 +50,7 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 		<virtual/x11-7 ) )"
 
 DEPEND="${RDEPEND}
-	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )
-	X? ( || ( x11-proto/xextproto <virtual/x11-7 ) )"
+	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
 
 pkg_setup() {
 	if use X && has_version '<x11-base/xorg-x11-7.0' && ! built_with_use x11-base/xorg-x11 xv; then

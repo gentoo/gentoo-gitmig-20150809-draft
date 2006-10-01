@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.2-r1.ebuild,v 1.1 2006/09/13 12:44:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.2-r1.ebuild,v 1.2 2006/10/01 17:49:34 flameeyes Exp $
 
 inherit eutils kde
 
@@ -28,11 +28,7 @@ RDEPEND="|| ( x11-base/xorg-server
 		) <virtual/x11-7 )"
 
 DEPEND="${RDEPEND}
-	|| ( (
-			x11-proto/xproto
-			x11-proto/xextproto
-			xinerama? ( x11-proto/xineramaproto )
-		) <virtual/x11-7 )
+	xinerama? ( || ( x11-proto/xineramaproto <virtual/x11-7 ) )
 	dvb? ( media-tv/linuxtv-dvb-headers )
 	dev-util/pkgconfig"
 
