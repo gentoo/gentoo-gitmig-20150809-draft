@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/freeipmi
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.4 2005/05/24 14:24:28 slarti Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.5 2006/10/01 20:28:34 robbat2 Exp $
+
+  01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> freeipmi-0.1.3.ebuild:
+  Fix file collision, bug #149357.
 
   24 May 2005; Tom Martin <slarti@gentoo.org> freeipmi-0.1.3.ebuild:
   Marked ~amd64 for tigger^.

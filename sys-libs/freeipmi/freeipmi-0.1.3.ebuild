@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.6 2005/07/09 20:27:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.7 2006/10/01 20:28:34 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -22,6 +22,11 @@ src_unpack() {
 	unpack ${A}
 	sed 's,auth_type_t,output_type_t,' -i.orig \
 		"${S}/ipmipower/src/ipmipower_output.c"
+	# avoid conflict with lm_sensors
+	sed -i.orig \
+		-e '/dist_man_MANS/s,sensors.1,sensors-fish.1,' \
+		${S}/fish/Makefile.in
+		mv ${S}/fish/sensors.1 ${S}/fish/sensors-fish.1
 }
 
 src_compile() {
