@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.11-r1.ebuild,v 1.10 2006/10/01 13:50:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-2.11-r1.ebuild,v 1.11 2006/10/02 23:58:47 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ppc64 s390 sh ~sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=""

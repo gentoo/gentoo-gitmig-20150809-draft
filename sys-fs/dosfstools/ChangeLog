@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.32 2006/10/01 13:50:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.33 2006/10/02 23:58:47 weeve Exp $
+
+  02 Oct 2006; Jason Wever <weeve@gentoo.org> dosfstools-2.11-r1.ebuild:
+  Stable on SPARC wrt bug #149058.
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   dosfstools-2.11-r1.ebuild:
