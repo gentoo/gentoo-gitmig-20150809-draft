@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5977 2006/10/02 01:12:18 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5978 2006/10/02 11:16:05 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -69,10 +69,6 @@ games-arcade/tuxracer-demo
 # will unmask these.
 >=app-emulation/vmware-workstation-5.5.2
 >=app-emulation/vmware-player-1.0.2
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (28 Sep 2006)
-# Needs testing
-=net-im/jabberd-1.4.4-r3
 
 # Patrick McLean <chutzpah@gentoo.org> (25 Sep 2006)
 # This depends on dev-cpp/cairomm which is in the Gnome 2.16 mask, so masking
