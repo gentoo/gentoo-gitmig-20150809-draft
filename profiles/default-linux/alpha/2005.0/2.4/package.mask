@@ -1,2 +1,0 @@
-# Uses 2.6 structures
-x11-drivers/xf86-input-evdev

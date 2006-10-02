@@ -1,5 +1,0 @@
-# Masked for Bug #136866 ; sys-block/unieject:pmount doesn't work with 2.4
-pmount
-
-# Masked since it requires 2.6 structures
-input_devices_evdev
