@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.29 2006/08/05 23:28:00 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.30 2006/10/02 17:07:44 wolf31o2 Exp $
+
+*icaclient-9.0-r1 (02 Oct 2006)
+
+  02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -icaclient-6.30-r1.ebuild, -icaclient-7.0.ebuild,
+  -icaclient-8.0-r3.ebuild, +icaclient-9.0-r1.ebuild:
+  Modified to use rpm.eclass and rpm2targz. Removing older ebuilds, since only
+  the 9.0 client is recommended. Closing bug #106483.
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #136186
