@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.72 2006/09/24 09:04:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.73 2006/10/02 08:19:53 flameeyes Exp $
+
+*xvid-1.1.0-r2 (02 Oct 2006)
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xvid-1.1.0-3dnow-2.patch, +xvid-1.1.0-r2.ebuild:
+  Add a different patch for the 3dNow problem, so that it's used only when
+  really present. Should fix both em64t and true amd64 boxes. See bug #129022.
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> xvid-1.1.0-r1.ebuild:
   Stable on ppc.
