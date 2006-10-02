@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r1.ebuild,v 1.1 2006/10/02 19:21:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gwp/gwp-0.4.0-r1.ebuild,v 1.2 2006/10/02 19:48:00 nyhm Exp $
 
 inherit eutils gnome2
 
@@ -27,6 +27,11 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+	sed -i \
+		-e '/ -O1/d' \
+		-e '/ -g$/d' \
+		src/Makefile.in \
+		|| die "sed failed"
 }
 
 src_compile() {
