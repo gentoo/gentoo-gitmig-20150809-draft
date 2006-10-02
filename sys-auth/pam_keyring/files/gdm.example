@@ -1,0 +1,14 @@
+#%PAM-1.0
+auth       optional		pam_env.so
+auth       optional             pam_keyring.so try_first_pass
+# Uncomment if you want pam_ssh to work too
+# You obviously have to have the same password for both
+#auth       sufficient           pam_ssh.so try_first_pass
+auth       include		system-auth
+auth       required		pam_nologin.so
+account    include		system-auth
+password   include		system-auth
+session    include		system-auth
+session    optional             pam_keyring.so
+# Uncomment this one to for pam_ssh
+#session    optional             pam_ssh.so
