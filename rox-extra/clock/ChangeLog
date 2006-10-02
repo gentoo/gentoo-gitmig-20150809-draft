@@ -1,6 +1,13 @@
 # ChangeLog for rox-extra/clock
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.4 2006/05/24 17:50:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.5 2006/10/02 13:45:06 lack Exp $
+
+*clock-2.1.7 (29 Sep 2006)
+
+  29 Sep 2006; <lack@gentoo.org> metadata.xml, -clock-2.1.5.ebuild,
+  -clock-2.1.6.ebuild, +clock-2.1.7.ebuild:
+  Version bump to 2.1.7 (Imported from breakmygentoo.net, big thanks to Peter
+  Hyman)
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.
