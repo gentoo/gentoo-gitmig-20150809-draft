@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.132 2006/10/01 17:08:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.133 2006/10/02 04:21:28 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  openmotif-2.2.3-r9.ebuild:
+  Add missing autotools versions specification, thanks to Patrick Laurer for
+  reporting in bug #149744.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   openmotif-2.1.30-r14.ebuild, openmotif-2.2.3-r3.ebuild,

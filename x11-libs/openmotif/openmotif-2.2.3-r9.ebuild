@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.11 2006/10/01 17:08:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r9.ebuild,v 1.12 2006/10/02 04:21:28 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.6"
 
 inherit eutils libtool flag-o-matic multilib autotools
 
@@ -58,8 +61,7 @@ src_unpack() {
 	sed -i -e 's:AC_DEFINE(\([^)]*\)):AC_DEFINE(\1, [], [\1]):g' \
 		"${S}/configure.in" "${S}/acinclude.m4"
 
-	# automake 1.4 is giving problems.
-	WANT_AUTOMAKE="1.6" eautoreconf
+	eautoreconf
 }
 
 
