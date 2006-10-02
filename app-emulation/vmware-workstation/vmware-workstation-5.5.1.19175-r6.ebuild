@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.2.29772.ebuild,v 1.2 2006/10/02 16:05:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.5.1.19175-r6.ebuild,v 1.1 2006/10/02 16:05:57 wolf31o2 Exp $
 
 # Alter ebuild so that the metadata cache is invalidated.
 
 inherit vmware eutils
 
-MY_P="VMware-workstation-5.5.2-29772"
+MY_P="VMware-workstation-5.5.1-19175"
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -39,9 +39,9 @@ RDEPEND="sys-libs/glibc
 		virtual/xft )
 	!app-emulation/vmware-player
 	!app-emulation/vmware-server
-	~app-emulation/vmware-modules-1.0.0.15
-	!<app-emulation/vmware-modules-1.0.0.15
-	!>=app-emulation/vmware-modules-1.0.0.16
+	~app-emulation/vmware-modules-1.0.0.13
+	!<app-emulation/vmware-modules-1.0.0.13
+	!>=app-emulation/vmware-modules-1.0.0.14
 	>=dev-lang/perl-5
 	sys-apps/pciutils"
 
@@ -88,6 +88,6 @@ src_install() {
 	vmware_src_install
 
 	doicon lib/share/pixmaps/vmware-player.png
-	make_desktop_entry vmware "VMWare Workstation" ${PN}.png System
-	make_desktop_entry vmplayer "VMWare Player" vmware-player.png System
+	make_desktop_entry vmware "VMware Workstation" ${PN}.png System
+	make_desktop_entry vmplayer "VMware Player" vmware-player.png System
 }
