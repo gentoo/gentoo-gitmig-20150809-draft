@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2194 2006/09/30 22:31:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2195 2006/10/02 00:07:42 dragonheart Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1179,6 +1179,7 @@ net-im/psi:insecure-patches - Enables extra non official patches that may pose a
 net-im/psi:xscreensaver - Enables detection of xscreensaver
 net-im/tmsnc:talkfilters - Enables Talkfilters support on tmsnc
 net-im/twinkle:ilbc - Enables use of ilbc (RFC3951) audio encoding
+net-im/twinkle:zrtp - Enables use of secure rtp using the zrtp extension of GNU RTP stack developed by Phil Zimmermen
 net-irc/atheme:largenet - Enable support/tweaks for large networks
 net-irc/bitchx:cdrom - Enables CD-ROM support
 net-irc/charybdis:smallnet - Enables support for smaller IRC networks
