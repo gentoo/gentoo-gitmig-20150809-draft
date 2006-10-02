@@ -1,0 +1,14 @@
+http://bugzilla.gnome.org/show_bug.cgi?id=358931
+
+diff -Nru gtk+-2.10.5.orig/gtk/Makefile.am gtk+-2.10.5/gtk/Makefile.am
+--- gtk+-2.10.5.orig/gtk/Makefile.am	2006-10-02 06:06:53.000000000 +0200
++++ gtk+-2.10.5/gtk/Makefile.am	2006-10-02 09:54:53.000000000 +0200
+@@ -1104,7 +1104,7 @@
+ 	   && $(LN_S) gtk-goto-first-ltr.png gtk-goto-last-rtl.png		\
+ 	   && $(RM) gtk-media-forward-rtl.png 					\
+ 	   && $(LN_S) gtk-media-rewind-ltr.png gtk-media-forward-rtl.png	\
+-	   && $(RM) gtk-mdedia-next-rtl.png					\
++	   && $(RM) gtk-media-next-rtl.png					\
+ 	   && $(LN_S) gtk-media-previous-ltr.png gtk-media-next-rtl.png		\
+ 	   && $(RM) gtk-media-previous-rtl.png 					\
+ 	   && $(LN_S) gtk-media-next-ltr.png gtk-media-previous-rtl.png		\
