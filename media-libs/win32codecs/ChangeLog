@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.37 2006/07/28 06:20:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.38 2006/10/02 07:51:23 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  win32codecs-20060611.ebuild:
+  Mask the win32codecs directories from revdep-rebuild. Bug #139166.
 
   28 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -win32codecs-20050412.ebuild:
