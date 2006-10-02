@@ -31,3 +31,12 @@
  		cd ../pl/src; \
  		CANONICAL_PATHS=$(PCEHOME); export CANONICAL_PATHS; \
  		$(MAKE) soall
+@@ -298,7 +298,7 @@
+ # Building the directories
+ ################################################################
+ 
+-prepare:	directories names version h/interface.h
++prepare:	directories names h/interface.h
+ 
+ directories:	h $(MODULES) $(VWS)
+ 
