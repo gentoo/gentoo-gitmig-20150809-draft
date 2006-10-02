@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.5-r14.ebuild,v 1.1 2006/09/13 09:28:31 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.5-r14.ebuild,v 1.2 2006/10/02 21:26:17 caster Exp $
 
 inherit java-pkg-2 eutils toolchain-funcs java-ant-2
 
@@ -17,7 +17,8 @@ IUSE="doc source"
 
 DEPEND="${RDEPEND}
 	source? ( app-arch/zip )
-	>=virtual/jdk-1.4"
+	>=virtual/jdk-1.4
+	!<dev-java/ant-tasks-${PV}"
 RDEPEND=">=virtual/jdk-1.4
 	>=dev-java/java-config-1.2"
 
