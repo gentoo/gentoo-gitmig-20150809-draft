@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.47 2006/09/04 05:29:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.48 2006/10/02 08:06:17 flameeyes Exp $
+
+*libtheora-1.0_alpha7 (02 Oct 2006)
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +libtheora-1.0_alpha7.ebuild:
+  Version bump, hoping it works.
 
   04 Sep 2006; Joshua Kinard <kumba@gentoo.org>
   libtheora-1.0_alpha6-r1.ebuild:
