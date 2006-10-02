@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/package.mask,v 1.6 2006/10/02 19:59:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/package.mask,v 1.7 2006/10/02 20:00:52 wolf31o2 Exp $
 
 >=sys-kernel/linux-headers-2.5
 
@@ -23,3 +23,9 @@ sys-devel/prelink
 >=app-arch/rar-3.2.0
 >=dev-util/ddd-3.3.6
 
+# Needs gcc-3
+>app-arch/rpm-4.1
+>games-emulation/fceultra-0.90
+
+# Needs >=readline-4.2
+>=media-sound/cdcd-0.6.4

@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/packages,v 1.16 2006/10/02 19:59:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/packages,v 1.17 2006/10/02 20:00:52 wolf31o2 Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -54,9 +54,3 @@
 >=net-dialup/ppp-2.4.1-r6
 =sci-mathematics/octave-2.0*
 
-# Needs gcc-3
-<=app-arch/rpm-4.1
-<=games-emulation/fceultra-0.90
-
-# Needs >=readline-4.2
-<media-sound/cdcd-0.6.4
