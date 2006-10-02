@@ -58,3 +58,8 @@ mbrola
 
 # Appears to be x86 only, feel free to remove if you disagree
 nvtv
+
+# new keyword zrtp related to
+# net-libs/libzrtpcpp package
+# masked pending testing - bug #149793
+zrtp

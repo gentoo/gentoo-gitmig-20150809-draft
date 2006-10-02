@@ -61,3 +61,9 @@ xvmc
 -pbbuttonsd
 -ppcsha1
 -x264
+
+
+# new keyword zrtp related to
+# net-libs/libzrtpcpp package
+# masked pending testing - bug #149793
+zrtp
