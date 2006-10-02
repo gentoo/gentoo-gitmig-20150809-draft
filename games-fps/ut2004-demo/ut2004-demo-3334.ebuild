@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.13 2006/09/19 19:48:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.14 2006/10/02 15:31:42 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,11 +20,8 @@ DEPEND=""
 RDEPEND="virtual/opengl
 	=virtual/libstdc++-3.3
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 ) )
+		x11-libs/libX11
+		x11-libs/libXext )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs )"
 
@@ -64,26 +61,26 @@ src_install() {
 
 	dodir
 	games_make_wrapper ut2004-demo ./ut2004-demo "${dir}" "${dir}"
-	make_desktop_entry ut2004-demo "UT2004 (Demo)" ut2004-demo.xpm
+	make_desktop_entry ut2004-demo "Unreal Tournament 2004 (Demo)" ut2004-demo.xpm
 
 	prepgamesdirs
 }
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo
-	einfo "For Text To Speech:"
-	einfo "   1) emerge festival speechd"
-	einfo "   2) Edit your ~/.ut2004demo/System/UT2004.ini file."
-	einfo "      In the [SDLDrv.SDLClient] section, add:"
-	einfo "         TextToSpeechFile=/dev/speech"
-	einfo "   3) Start speechd."
-	einfo "   4) Start the game.  Be sure to go into the Audio"
-	einfo "      options and enable Text To Speech."
-	einfo
-	einfo "To test, pull down the console (~) and type:"
-	einfo "   TTS this is a test."
-	einfo
-	einfo "You should hear something that sounds like 'This is a test.'"
-	einfo
+	echo
+	elog "For Text To Speech:"
+	elog "   1) emerge festival speechd"
+	elog "   2) Edit your ~/.ut2004demo/System/UT2004.ini file."
+	elog "      In the [SDLDrv.SDLClient] section, add:"
+	elog "         TextToSpeechFile=/dev/speech"
+	elog "   3) Start speechd."
+	elog "   4) Start the game.  Be sure to go into the Audio"
+	elog "      options and enable Text To Speech."
+	echo
+	elog "To test, pull down the console (~) and type:"
+	elog "   TTS this is a test."
+	echo
+	elog "You should hear something that sounds like 'This is a test.'"
+	echo
 }

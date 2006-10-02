@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-demo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.39 2006/09/19 19:48:43 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ChangeLog,v 1.40 2006/10/02 15:31:42 wolf31o2 Exp $
+
+  02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2004-demo-3334.ebuild:
+  Some minor code cleanups and changing the text on the desktop icon.
 
   19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2004-demo-3334.ebuild:
