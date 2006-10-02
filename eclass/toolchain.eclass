@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.312 2006/09/29 23:12:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.313 2006/10/02 21:20:58 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1266,6 +1266,7 @@ gcc_do_configure() {
 			*-gnu*)     needed_libc=glibc;;
 			*-klibc)    needed_libc=klibc;;
 			*-uclibc*)  needed_libc=uclibc;;
+			mingw*)     needed_libc=mingw-runtime;;
 			avr)        confgcc="${confgcc} --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
@@ -1281,7 +1282,7 @@ gcc_do_configure() {
 		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
 			confgcc="${confgcc} --disable-bootstrap"
 		fi
-	else
+	elif [[ ${CTARGET} != mingw* ]] ; then
 		confgcc="${confgcc} --enable-shared --enable-threads=posix"
 
 		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
