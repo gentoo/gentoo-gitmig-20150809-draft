@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5975 2006/10/01 15:10:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5976 2006/10/02 00:45:39 dragonheart Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <dragonheart@gentoo.org> (02 Oct 2006)
+# new version - segv for me. hoping genstef will test a bit more.
+>=net-im/twinkle-0.9
 
 # Christian Heim <phreak@gentoo.org> (01 Oct 2006)
 # masking media-radio/ax25-tools for treecleaners, bug(s) 97275
