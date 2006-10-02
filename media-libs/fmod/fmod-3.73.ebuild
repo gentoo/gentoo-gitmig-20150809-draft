@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.7 2006/03/06 14:25:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.8 2006/10/02 07:38:14 flameeyes Exp $
 
 IUSE=""
 
@@ -17,6 +17,8 @@ KEYWORDS="-* x86"
 DEPEND=""
 RDEPEND="${DEPEND}
 	amd64? ( app-emulation/emul-linux-x86-baselibs )"
+
+RESTRICT="strip"
 
 src_install() {
 	dolib api/libfmod-${PV}.so
