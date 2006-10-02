@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musicman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.15 2006/05/30 01:37:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.16 2006/10/02 05:56:23 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> musicman-0.15.ebuild:
+  Update admindir to allow building without arts. Thanks to Matthias
+  Schwarzott (zzam) for reporting in bug #144136.
 
   30 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   musicman-0.11-r1.ebuild, musicman-0.14.ebuild, musicman-0.15.ebuild:
