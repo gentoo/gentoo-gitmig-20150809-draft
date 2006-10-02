@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.3.9.ebuild,v 1.5 2006/09/24 23:59:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.3.9.ebuild,v 1.6 2006/10/02 16:26:54 matsuu Exp $
 
-IUSE="firefox hyperestraier migemo mozilla ruby ssl thumbnail"
+IUSE="hyperestraier migemo ruby ssl thumbnail"
 
 DESCRIPTION="a browser with gecko engine like Epiphany or Galeon."
 SRC_URI="mirror://sourceforge.jp/${PN}/21181/${P}.tar.gz"
@@ -12,10 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 LICENSE="GPL-2"
 
-DEPEND="|| ( firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
-		mozilla? ( >=www-client/mozilla-1.7 )
-		>=www-client/mozilla-firefox-1.0.2-r1
-		>=www-client/mozilla-1.7
+DEPEND="|| ( >=www-client/mozilla-firefox-1.0.2-r1
 		>=www-client/seamonkey-1.0
 		>=mail-client/mozilla-thunderbird-0.8
 		>=net-libs/xulrunner-1.8 )
@@ -30,12 +27,6 @@ RDEPEND="${DEPEND}
 
 src_compile(){
 	local myconf
-
-	if use firefox; then
-		myconf="${myconf} --with-gecko-engine=firefox"
-	elif use mozilla; then
-		myconf="${myconf} --with-gecko-engine=mozilla"
-	fi
 
 	if use hyperestraier; then
 		myconf="${myconf} --with-search-engine=hyperestraier"
