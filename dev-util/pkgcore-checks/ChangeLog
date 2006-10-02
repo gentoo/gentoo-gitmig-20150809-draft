@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.2 2006/10/01 00:14:21 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.3 2006/10/02 21:35:32 mcummings Exp $
+
+  02 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  pkgcore-checks-0.1-r1.ebuild:
+  Keywording ~amd64
 
 *pkgcore-checks-0.1-r1 (01 Oct 2006)
 
