@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.30 2006/09/03 22:03:29 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.31 2006/10/02 07:02:04 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> -pd-0.37.4.ebuild,
+  pd-0.39_p1.ebuild:
+  Install man pages in the right directory. Thanks to James for reporting in
+  bug #115155.
 
   03 Sep 2006; Joshua Jackson <tsunam@gentoo.org> pd-0.39_p1.ebuild:
   Also adding a patch from Jakub to fix prestriped files

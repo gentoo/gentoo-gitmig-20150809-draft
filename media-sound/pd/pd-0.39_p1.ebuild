@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.39_p1.ebuild,v 1.4 2006/09/03 22:03:29 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.39_p1.ebuild,v 1.5 2006/10/02 07:02:04 flameeyes Exp $
 
 IUSE="alsa debug jack"
 
@@ -49,7 +49,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	make DESTDIR="${D}" MANINSTDIR="/usr/share/man" install || die "install failed"
 
 	# tb: install private headers ... several external developers use them
 	insinto /usr/include
