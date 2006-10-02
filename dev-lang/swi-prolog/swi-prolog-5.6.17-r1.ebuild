@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.4 2006/09/30 22:00:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.17-r1.ebuild,v 1.5 2006/10/02 17:01:04 keri Exp $
 
 inherit autotools eutils
 
@@ -46,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-cppproxy.patch
 	epatch "${FILESDIR}"/${PN}-db-versioned.patch
 	epatch "${FILESDIR}"/${PN}-db-docs.patch
+	epatch "${FILESDIR}"/${PN}-gmp-sparc-alignment.patch
 	epatch "${FILESDIR}"/${PN}-jpl-ppc.patch
 	epatch "${FILESDIR}"/${PN}-jpl-install.patch
 	epatch "${FILESDIR}"/${PN}-libtai.patch
