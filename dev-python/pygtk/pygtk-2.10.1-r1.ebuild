@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.1-r1.ebuild,v 1.1 2006/09/30 21:23:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.10.1-r1.ebuild,v 1.2 2006/10/02 23:49:40 dang Exp $
 
 inherit gnome.org python flag-o-matic eutils
 
@@ -11,7 +11,9 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+#KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+# Apparently breaks things.  bug #148247
+KEYWORDS="-*"
 IUSE="opengl doc"
 
 RDEPEND=">=dev-lang/python-2.3.5
