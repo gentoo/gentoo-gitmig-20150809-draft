@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.82 2006/10/02 06:43:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.83 2006/10/02 18:09:48 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Move maintainership over to new alsa herd.
 
   02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/alsa-oss-1.0.12-hardened.patch, alsa-oss-1.0.12.ebuild:
