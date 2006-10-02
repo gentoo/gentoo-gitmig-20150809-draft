@@ -1,0 +1,18 @@
+diff -ur RoxISO.orig/AppRun RoxISO/AppRun
+--- RoxISO.orig/AppRun	2005-05-08 10:22:26.000000000 -0600
++++ RoxISO/AppRun	2006-04-26 20:47:46.000000000 -0600
+@@ -10,8 +10,10 @@
+ from rox.options import Option
+ 
+ appname='RoxISO'
++sitename='kymatica.bitminds.net'
+ 
+-rox.setup_app_options(appname)
++rox.choices.migrate(appname, sitename)
++rox.setup_app_options(appname, site=sitename)
+ import mkimage
+ import burner
+ 
+Only in RoxISO: burner.pyc
+Only in RoxISO: findrox.pyc
+Only in RoxISO: mkimage.pyc
