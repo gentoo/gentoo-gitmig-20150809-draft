@@ -1,10 +1,13 @@
 # ChangeLog for games-sports/foobillard
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.11 2006/10/01 22:24:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.12 2006/10/02 03:53:34 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> foobillard-3.0a.ebuild:
+  Add ~x86-fbsd keyword.
 
   01 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/foobillard-3.0a-fbsd.patch, foobillard-3.0a.ebuild:
-  fixup nvidia detection and add fbsd support - patch from Diego PettenÃ (bug
+  fixup nvidia detection and add fbsd support - patch from Diego Pettenò (bug
   #149718)
 
   29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
