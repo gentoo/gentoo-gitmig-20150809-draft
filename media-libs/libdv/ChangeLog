@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.57 2006/10/01 15:34:58 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.58 2006/10/02 16:42:57 dang Exp $
+
+  02 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> libdv-0.104-r2.ebuild:
+  Marked stable on amd64 for bug #118073
 
   01 Oct 2006; Guy Martin <gmsoft@gentoo.org> libdv-0.104-r2.ebuild:
   Stable on hppa.
