@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.4.0.ebuild,v 1.3 2006/10/02 10:32:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.4.1.ebuild,v 1.1 2006/10/02 10:32:14 matsuu Exp $
 
 IUSE="firefox hyperestraier migemo mozilla ruby ssl thumbnail"
 
 DESCRIPTION="a browser with gecko engine like Epiphany or Galeon."
-SRC_URI="mirror://sourceforge.jp/${PN}/21535/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/21997/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
@@ -26,7 +26,8 @@ DEPEND="|| ( firefox? ( >=www-client/mozilla-firefox-1.0.2-r1 )
 RDEPEND="${DEPEND}
 	hyperestraier? ( >=app-text/hyperestraier-1.2 )
 	migemo? ( || ( app-text/migemo app-text/cmigemo ) )
-	thumbnail? ( virtual/ghostscript )"
+	thumbnail? ( || ( virtual/ghostscript
+		>=www-client/mozilla-firefox-2.0_beta1 ) )"
 
 src_compile(){
 	local myconf
@@ -43,7 +44,7 @@ src_compile(){
 		myconf="${myconf} --without-search-engine"
 	fi
 
-	myconf="${myconf} `use_enable migemo`"
+	myconf="${myconf} $(use_enable migemo)"
 	use ruby || myconf="${myconf} --with-ruby=no --with-rgettext=no"
 	use ssl || myconf="${myconf} --disable-ssl"
 
