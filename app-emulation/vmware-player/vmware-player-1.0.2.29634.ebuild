@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.1 2006/09/28 18:25:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-1.0.2.29634.ebuild,v 1.2 2006/10/02 15:54:00 wolf31o2 Exp $
 
 inherit eutils vmware
 
@@ -12,7 +12,9 @@ SRC_URI="http://download3.vmware.com/software/vmplayer/${MY_P}.tar.gz
 	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
 	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
 	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz"
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+	http://dev.gentoo.org/~wolf31o2/sources/dump/vmware-libssl.so.0.9.7l.tar.bz2
+	mirror://gentoo/vmware-libssl.so.0.9.7l.tar.bz2"
 
 LICENSE="vmware"
 IUSE=""
