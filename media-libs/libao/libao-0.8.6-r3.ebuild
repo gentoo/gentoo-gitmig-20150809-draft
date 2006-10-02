@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r3.ebuild,v 1.2 2006/10/02 15:53:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/libao-0.8.6-r3.ebuild,v 1.3 2006/10/02 18:55:34 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -51,7 +51,7 @@ src_compile() {
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install || die
 
 	rm -rf "${D}/usr/share/doc"
 	dodoc AUTHORS CHANGES README TODO
