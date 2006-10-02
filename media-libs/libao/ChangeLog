@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.57 2006/09/28 12:35:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.58 2006/10/02 04:05:52 flameeyes Exp $
+
+*libao-0.8.6-r3 (02 Oct 2006)
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +libao-0.8.6-r3.ebuild:
+  Add new revision, with a patch to fix buffer_time parameter on alsa09
+  driver, thanks to Heikki Orsila in bug #119967, with a doc useflag to
+  install the API documentation, thanks to Nguyen Thai Ngoc Duy (pclouds) in
+  bug #138560, and a pulseaudio useflag to bring in the libao-pulse plugin.
 
   28 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-absorb into sound herd entirely, as Spider is being away for a while now.
