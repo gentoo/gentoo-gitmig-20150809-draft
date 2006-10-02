@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.313 2006/10/02 21:20:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.314 2006/10/02 22:35:50 vapier Exp $
 
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1282,7 +1282,7 @@ gcc_do_configure() {
 		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
 			confgcc="${confgcc} --disable-bootstrap"
 		fi
-	elif [[ ${CTARGET} != mingw* ]] ; then
+	elif [[ ${CHOST} != mingw* ]] ; then
 		confgcc="${confgcc} --enable-shared --enable-threads=posix"
 
 		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
@@ -1615,7 +1615,11 @@ gcc-compiler_src_install() {
 	gcc_movelibs
 
 	# Basic sanity check
-	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
+	if ! is_crosscompile ; then
+		local EXEEXT
+		eval $(grep ^EXEEXT= "${WORKDIR}"/build/gcc/config.log)
+		[[ -r ${D}${BINPATH}/gcc${EXEEXT} ]] || die "gcc not found in ${D}"
+	fi
 
 	dodir /etc/env.d/gcc
 	create_gcc_env_entry
