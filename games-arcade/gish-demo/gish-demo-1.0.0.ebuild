@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.11 2006/09/29 22:02:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.12 2006/10/02 08:01:14 mr_bones_ Exp $
 
 inherit eutils multilib games
 
@@ -11,11 +11,13 @@ SRC_URI="ftp://demos.garagegames.com/gish/gishdemo-${PV}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* ~amd64 x86"
-RESTRICT="strip"
 IUSE=""
+RESTRICT="strip"
+QA_EXECSTACK="${GAMES_PREFIX_OPT:1}/gish-demo/gish"
 
 RDEPEND="media-libs/libsdl
 	media-libs/openal
+	media-libs/freealut
 	virtual/opengl
 	media-libs/libvorbis
 	amd64? (
@@ -30,19 +32,26 @@ pkg_setup() {
 	has_multilib_profile && ABI="x86"
 }
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	find . -type f -print0 | xargs -0 chmod a-x
+	chmod a+x gish
+}
+
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir} ${GAMES_BINDIR}
+	dodir "${dir}" "${GAMES_BINDIR}"
 
 	cp -pPR * "${D}"/${dir}/
-	games_make_wrapper gish ./gish-wrapper ${dir}
+	games_make_wrapper gish ./gish-wrapper "${dir}"
 
 	# looks like when they built the game they accidently
 	# linked it against openssl ... lets fake it
-	dosym /$(get_libdir)/libc.so.6 ${dir}/libssl.so.4
-	dosym /$(get_libdir)/libc.so.6 ${dir}/libcrypto.so.4
-	exeinto ${dir}
-	doexe ${FILESDIR}/gish-wrapper
+	dosym /$(get_libdir)/libc.so.6 "${dir}"/libssl.so.4
+	dosym /$(get_libdir)/libc.so.6 "${dir}"/libcrypto.so.4
+	exeinto "${dir}"
+	doexe "${FILESDIR}"/gish-wrapper
 
 	prepgamesdirs
 }

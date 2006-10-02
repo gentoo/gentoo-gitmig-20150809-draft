@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gish-demo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.10 2006/09/29 22:02:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/ChangeLog,v 1.11 2006/10/02 08:01:14 mr_bones_ Exp $
+
+  02 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org> files/gish-wrapper,
+  gish-demo-1.0.0.ebuild:
+  add freealut dep; fix wrapper (bug #149589)
 
   29 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   gish-demo-1.0.0.ebuild:
