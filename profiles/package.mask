@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5980 2006/10/02 14:55:23 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5981 2006/10/02 16:04:47 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Chris Gianelloni <wolf31o2@gentoo.org> (02 Oct 2006)
+# Masked pending removal on Oct 27.
+~app-emulation/vmware-workstation-3.2.1.2242
 
 # Roy Marples <uberlord@gentoo.org> (02 Oct 2006)
 # masked for testing due to major ebuild and installation changes
