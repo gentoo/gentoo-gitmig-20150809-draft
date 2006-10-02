@@ -1,0 +1,11 @@
+--- pl-5.6.20.orig/packages/xpce/src/Makefile.in	2006-09-11 00:25:06.000000000 +1200
++++ pl-5.6.20/packages/xpce/src/Makefile.in	2006-09-24 21:51:35.000000000 +1200
+@@ -298,7 +298,7 @@
+ # Building the directories
+ ################################################################
+ 
+-prepare:	directories names version h/interface.h
++prepare:	directories names h/interface.h
+ 
+ directories:	h $(MODULES) $(VWS)
+ 
