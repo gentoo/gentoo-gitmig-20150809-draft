@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.7.ebuild,v 1.11 2006/08/04 22:44:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.7.ebuild,v 1.12 2006/10/02 13:44:26 ian Exp $
 
-inherit perl-module
+inherit eutils perl-module
 
 DESCRIPTION="Perl module implementing CORBA 2.0 via ORBit"
 SRC_URI="mirror://cpan/authors/id/H/HR/HROGERS/${P}.tar.gz"
@@ -18,8 +18,13 @@ DEPEND=">=dev-perl/Error-0.13
 	dev-lang/perl"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}"/gcc-411.patch
+}
 
+src_compile() {
 	perl-module_src_prep makemake
 
 	cp Makefile Makefile.orig

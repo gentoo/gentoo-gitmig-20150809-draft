@@ -1,0 +1,11 @@
+diff -urN ../tmp-orig/libcorba-orbit-perl-0.4.7/idl.c ./idl.c
+--- ../tmp-orig/libcorba-orbit-perl-0.4.7/idl.c	2002-05-14 06:38:33.000000000 +0000
++++ ./idl.c	2005-09-16 10:13:44.000000000 +0000
+@@ -13,7 +13,7 @@
+ static gboolean tree_pre_func  (IDL_tree_func_data *tfd, gpointer user_data);
+ static gboolean tree_post_func (IDL_tree_func_data *tfd, gpointer user_data);
+ 
+-CORBA_TypeCode get_typecode (IDL_tree tree);
++static CORBA_TypeCode get_typecode (IDL_tree tree);
+ 
+ #define duplicate_typecode(a) (CORBA_TypeCode)CORBA_Object_duplicate ((CORBA_Object)a, NULL)

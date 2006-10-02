@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CORBA-ORBit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.18 2006/08/04 22:44:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/ChangeLog,v 1.19 2006/10/02 13:44:26 ian Exp $
+
+  02 Oct 2006; Christian Hartmann <ian@gentoo.org> +files/gcc-411.patch,
+  -CORBA-ORBit-0.4.3-r4.ebuild, CORBA-ORBit-0.4.7.ebuild:
+  Fix for gcc-4.1.1; closes bug #149800
 
   04 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   CORBA-ORBit-0.4.3-r4.ebuild, CORBA-ORBit-0.4.7.ebuild:
