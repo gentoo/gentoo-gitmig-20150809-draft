@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.152 2006/09/24 20:04:15 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.153 2006/10/02 23:02:11 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -564,7 +564,14 @@ vim_src_install() {
 			dosym gvim /usr/bin/rgvim
 			dosym gvim /usr/bin/rgview
 		fi
-		insinto /etc/vim
+
+	if version_is_at_least 7.0.109 ; then
+		dosym vim.1.gz /usr/man/man1/gvim.1.gz
+		dosym vim.1.gz /usr/man/man1/gview.1.gz
+		dosym vimdiff.1.gz /usr/man/man1/gvimdiff.1.gz
+	fi
+
+	insinto /etc/vim
 		newins ${FILESDIR}/gvimrc${GVIMRC_FILE_SUFFIX} gvimrc
 
 		# as of 6.3-r1, we install a desktop entry. bug #44633, and bug #68622
