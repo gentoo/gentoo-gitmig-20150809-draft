@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ezc-ImageConversion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ImageConversion/ChangeLog,v 1.10 2006/08/28 09:11:58 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ezc-ImageConversion/ChangeLog,v 1.11 2006/10/02 07:35:38 gmsoft Exp $
+
+  02 Oct 2006; Guy Martin <gmsoft@gentoo.org>
+  ezc-ImageConversion-1.1.1.ebuild:
+  Added ~hppa to KEYWORDS.
 
 *ezc-ImageConversion-1.1.1 (28 Aug 2006)
 
