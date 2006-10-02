@@ -1,0 +1,24 @@
+Index: bpmdj-2.7/cluster-dialog.ui
+===================================================================
+--- bpmdj-2.7.orig/cluster-dialog.ui
++++ bpmdj-2.7/cluster-dialog.ui
+@@ -130,7 +130,4 @@
+     </connection>
+ </connections>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>metricwidget.h</includehint>
+-</includehints>
+ </UI>
+Index: bpmdj-2.7/preferences.ui
+===================================================================
+--- bpmdj-2.7.orig/preferences.ui
++++ bpmdj-2.7/preferences.ui
+@@ -1414,7 +1414,4 @@
+     <slot>modifydColorCol()</slot>
+ </slots>
+ <layoutdefaults spacing="6" margin="11"/>
+-<includehints>
+-    <includehint>metricwidget.h</includehint>
+-</includehints>
+ </UI>
