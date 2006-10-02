@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.1.2.ebuild,v 1.1 2006/09/29 04:52:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.1.2.ebuild,v 1.2 2006/10/02 05:53:47 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -27,4 +27,11 @@ pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then
 		die "Build x11-base/xorg-server with USE=dri."
 	fi
+}
+
+pkg_postinst() {
+	x-modular_pkg_postinst
+	# (#149567)
+	elog "Direct rendering with kernels <=2.6.18 requires that you use"
+	elog "x11-drm 20060608 or newer rather than the DRM in the kernel."
 }
