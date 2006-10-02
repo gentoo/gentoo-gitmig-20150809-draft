@@ -1,9 +1,6 @@
 # ChangeLog for dev-php5/pecl-filter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/ChangeLog,v 1.9 2006/10/01 21:11:16 gmsoft Exp $
-
-  01 Oct 2006; Guy Martin <gmsoft@gentoo.org> ChangeLog:
-  ~hppa pecl-filter-0.10.0.ebuild
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-filter/ChangeLog,v 1.10 2006/10/02 07:26:43 gmsoft Exp $
 
   01 Oct 2006; Guy Martin <gmsoft@gentoo.org> ChangeLog:
   Added ~hppa to KEYWORDS.
