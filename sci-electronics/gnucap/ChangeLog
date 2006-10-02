@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnucap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.25 2006/09/27 10:08:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.26 2006/10/02 14:04:55 gustavoz Exp $
+
+  02 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnucap-20060708.ebuild:
+  Stable on sparc
 
 *gnucap-0.35 (27 Sep 2006)
 
