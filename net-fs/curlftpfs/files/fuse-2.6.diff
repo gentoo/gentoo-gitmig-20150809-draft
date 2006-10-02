@@ -1,0 +1,11 @@
+--- ftpfs-ls.c	2006/05/20 18:09:42	1.6
++++ ftpfs-ls.c	2006/09/29 18:37:56	1.7
+@@ -6,7 +6,7 @@
+     See the file COPYING.
+ */
+ 
+-#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE 600
+ #include <time.h>
+ #include <string.h>
+ #include <sys/types.h>
