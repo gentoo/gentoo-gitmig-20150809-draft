@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/vserver/no-nptl/packages,v 1.1 2006/09/25 07:17:39 phreak Exp $
-
-<sys-libs/glibc-2.4
