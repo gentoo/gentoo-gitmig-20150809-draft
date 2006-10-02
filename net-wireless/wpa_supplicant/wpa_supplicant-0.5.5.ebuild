@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.7 2006/09/30 18:22:35 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.8 2006/10/02 15:39:18 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -157,6 +157,8 @@ src_install() {
 
 	exeinto /etc/wpa_supplicant/
 	newexe "${FILESDIR}"/wpa_cli.sh wpa_cli.sh
+	insinto /etc/wpa_supplicant/
+	newins "${FILESDIR}"/wpa_supplicant.conf wpa_supplicant.conf
 
 	if use qt4 ; then
 		into /usr
@@ -171,18 +173,18 @@ src_install() {
 	fi
 
 	dodoc ChangeLog COPYING eap_testing.txt README todo.txt
-	newdoc wpa_supplicant.conf wpa_supplicant.conf.example
+	newdoc wpa_supplicant.conf wpa_supplicant.conf
 
 	doman doc/docbook/*.8
 	doman doc/docbook/*.5
 }
 
 pkg_postinst() {
-	einfo "To use ${MY_P} you must create the configuration file"
+	einfo "A default configuration file has been installed to"
 	einfo "/etc/wpa_supplicant/wpa_supplicant.conf"
 	einfo
 	einfo "An example configuration file is available as"
-	einfo "/usr/share/doc/${PF}/wpa_supplicant.conf.example.gz"
+	einfo "/usr/share/doc/${PF}/wpa_supplicant.conf.gz"
 
 	if use madwifi; then
 		einfo
