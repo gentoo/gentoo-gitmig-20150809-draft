@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5981 2006/10/02 16:04:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5982 2006/10/02 19:21:24 chutzpah Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -81,7 +81,7 @@ games-arcade/tuxracer-demo
 # Patrick McLean <chutzpah@gentoo.org> (25 Sep 2006)
 # This depends on dev-cpp/cairomm which is in the Gnome 2.16 mask, so masking
 # until Gnome 2.16 is unmasked
-=media-sound/bmpx-0.30*
+=media-sound/bmpx-0.3*
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (25 Sep 2006)
 # Masking this version of the drivers since it is BETA. This driver version
