@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.0.1_pre51.ebuild,v 1.2 2006/09/15 13:56:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.0.1_pre51.ebuild,v 1.3 2006/10/02 10:47:35 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-libs/libusb-0.1.12"
 
 MODULE_NAMES="uvcvideo(usb/media)"
 BUILD_TARGETS="uvcvideo"
-#CONFIG_CHECK="VIDEO_DEV"
+CONFIG_CHECK="VIDEO_DEV"
 
 pkg_setup() {
 	linux-mod_pkg_setup
