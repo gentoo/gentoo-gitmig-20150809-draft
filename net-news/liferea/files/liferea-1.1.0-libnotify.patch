@@ -1,0 +1,14 @@
+Index: src/notification/Makefile.am
+===================================================================
+--- src/notification/Makefile.am	(révision 2353)
++++ src/notification/Makefile.am	(copie de travail)
+@@ -27,8 +27,7 @@
+ liblinotiflibnotify_la_CFLAGS = $(PACKAGE_CFLAGS) $(LIBNOTIFY_CFLAGS)
+ liblinotiflibnotify_la_SOURCES = notif_libnotify.c notif_libnotify.h notif_plugin.h 
+ 
+-pkglib_LTLIBRARIES =	liblinotifpopup.la \
+-			liblinotiflibnotify.la
++pkglib_LTLIBRARIES =	liblinotiflibnotify.la
+ else
+ pkglib_LTLIBRARIES =	liblinotifpopup.la
+ endif
