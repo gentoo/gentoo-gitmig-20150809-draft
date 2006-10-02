@@ -26,8 +26,9 @@ start() {
 	fi
 	if [ ! -n "$NOMON" ]; then
 		ebegin "Starting i8kmon"
-		start-stop-daemon --start --quiet --pidfile /var/run/i8kmon.pid \
-			--make-pidfile --exec /usr/bin/i8kmon --background \
+		start-stop-daemon --start -b --quiet  \
+			--exec /usr/bin/i8kmon --background \
+			--name "tclsh /usr/bin/i8kmon" \
 			-- -d ${NOAUTO:+-na} ${TIMEOUT:+-t $TIMEOUT}
 		eend $?
 	fi
@@ -41,7 +42,7 @@ stop() {
 	fi
 	if [ ! -n "$NOMON" ]; then
 		ebegin "Stopping i8kmon"
-		start-stop-daemon --stop --quiet --pidfile /var/run/i8kmon.pid
+		start-stop-daemon --stop --quiet --name "tclsh /usr/bin/i8kmon"
 		eend $?
 	fi
 }
