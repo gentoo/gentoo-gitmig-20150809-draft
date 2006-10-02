@@ -1,6 +1,9 @@
 # ChangeLog for app-text/convmv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.19 2006/09/16 14:17:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.20 2006/10/02 22:36:05 robbat2 Exp $
+
+  02 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> convmv-1.10.ebuild:
+  Redigest for weird CVS failure.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org> convmv-1.09.ebuild:
   ppc stable
