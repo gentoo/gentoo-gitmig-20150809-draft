@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/jaaa-0.1.2-r1.ebuild,v 1.6 2005/10/08 04:50:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/jaaa-0.1.2-r1.ebuild,v 1.7 2006/10/02 06:35:57 flameeyes Exp $
 
 inherit eutils
 
@@ -23,9 +23,11 @@ DEPEND="media-sound/jack-audio-connection-kit
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	# fix 32bit datatypes for amd64
-	epatch ${FILESDIR}/${P}-amd64.patch
+	epatch "${FILESDIR}/${P}-amd64.patch"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {

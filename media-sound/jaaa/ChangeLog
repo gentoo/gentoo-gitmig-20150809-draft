@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jaaa
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.9 2005/10/08 04:50:32 matsuu Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.10 2006/10/02 06:35:57 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/jaaa-0.1.2-gcc41.patch, -jaaa-0.1.1.ebuild, -jaaa-0.1.2.ebuild,
+  jaaa-0.1.2-r1.ebuild:
+  Add patch to build with GCC 4.1, thanks to Cubittus in bug #134425. Remove
+  old versions.
 
   08 Oct 2005; MATSUU Takuto <matsuu@gentoo.org> jaaa-0.1.1.ebuild,
   jaaa-0.1.2.ebuild, jaaa-0.1.2-r1.ebuild:
