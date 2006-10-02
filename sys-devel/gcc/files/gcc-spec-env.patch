@@ -6,10 +6,11 @@
 
 --- gcc-4/gcc/gcc.c
 +++ gcc-4/gcc/gcc.c
-@@ -6482,6 +6482,30 @@
+@@ -6482,6 +6482,32 @@
  
    /* Process any user specified specs in the order given on the command
       line.  */
++#if !(defined (__MSDOS__) || defined (OS2) || defined (VMS) || defined (WIN32))
 +  /* Add specs listed in GCC_SPECS.  Note; in the process of separating
 +   * each spec listed, the string is overwritten at token boundaries
 +   * (':') with '\0', an effect of strtok_r().
@@ -34,6 +35,7 @@
 +          user_specs_tail = user;
 +        }
 +    }
++#endif
    for (uptr = user_specs_head; uptr; uptr = uptr->next)
      {
        char *filename = find_a_file (&startfile_prefixes, uptr->filename,
