@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.46 2006/09/23 19:43:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.47 2006/10/02 22:52:08 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -112,6 +112,7 @@ eaclocal() {
 		done
 	fi
 
+	autotools_set_versions
 	[[ ! -f aclocal.m4 || -n $(grep -e 'generated.*by aclocal' aclocal.m4) ]] && \
 		autotools_run_tool aclocal "$@" ${aclocal_opts}
 }
@@ -137,6 +138,7 @@ _elibtoolize() {
 eautoheader() {
 	# Check if we should run autoheader
 	[[ -n $(autotools_check_macro "AC_CONFIG_HEADERS") ]] || return 0
+	autotools_set_versions
 	autotools_run_tool autoheader "$@"
 }
 
@@ -148,6 +150,7 @@ eautoconf() {
 		die "No configure.{ac,in} present!"
 	fi
 
+	autotools_set_versions
 	autotools_run_tool autoconf "$@"
 }
 
@@ -156,11 +159,7 @@ eautomake() {
 
 	[[ -f Makefile.am ]] || return 0
 
-	if [[ -n ${WANT_AUTOMAKE} ]]; then
-		export WANT_AUTOMAKE # let the automake wrapper pick it up
-		einfo "Required automake ${WANT_AUTOMAKE}. Using $(automake --version | head -n 1)."
-	fi
-
+	autotools_set_versions
 	if [[ -z ${FROM_EAUTORECONF} && -f Makefile.in ]]; then
 		local used_automake
 		local installed_automake
@@ -185,7 +184,25 @@ eautomake() {
 	autotools_run_tool automake --add-missing --copy ${extra_opts} "$@"
 }
 
+autotools_set_versions() {
+	[[ -n ${autotools_version_sets} ]] && return 0
 
+	if [[ -n ${WANT_AUTOCONF} ]]; then
+		export WANT_AUTOCONF
+		einfo "Requested autoconf ${WANT_AUTOCONF}"
+		einfo "Using $(autoconf --version 2>/dev/null | head -n 1)"
+		einfo "Using $(autoheader --version 2>/dev/null | head -n 1)"
+	fi
+
+	if [[ -n ${WANT_AUTOMAKE} ]]; then
+		export WANT_AUTOMAKE
+		einfo "Requested automake ${WANT_AUTOMAKE}"
+		einfo "Using $(automake --version 2>/dev/null | head -n 1)"
+		einfo "Using $(aclocal --version 2>/dev/null | head -n 1)"
+	fi
+
+	autotools_version_sets="yes"
+}
 
 # Internal function to run an autotools' tool
 autotools_run_tool() {
