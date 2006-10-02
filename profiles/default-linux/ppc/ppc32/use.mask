@@ -15,9 +15,6 @@ fusion
 # User Mode Linux isn't supported on ppc yet
 uml
 
-# GIT's ppc sha1 implementation
--ppcsha1
-
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
 video_cards_apm
