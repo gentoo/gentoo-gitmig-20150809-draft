@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.4 2006/09/26 06:18:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.5 2006/10/02 20:47:52 vapier Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -30,6 +30,9 @@ RESTRICT="strip"
 
 DEPEND=""
 
+is_crosscompile() {
+	[[ ${CHOST} != ${CTARGET} ]]
+}
 just_headers() {
 	use crosscompile_opts_headers-only && [[ ${CHOST} != ${CTARGET} ]]
 }
@@ -53,10 +56,7 @@ src_compile() {
 	just_headers && return 0
 
 	CHOST=${CTARGET} strip-unsupported-flags
-	econf \
-		--host=${CTARGET} \
-		--prefix=/usr/${CTARGET} \
-		|| die
+	econf --host=${CTARGET} || die
 	emake || die
 }
 
@@ -65,10 +65,14 @@ src_install() {
 		insinto /usr/${CTARGET}/usr/include
 		doins -r include/* || die
 	else
-		emake install DESTDIR="${D}" || die
+		local insdir
+		is_crosscompile \
+			&& insdir=${D}/usr/${CTARGET} \
+			|| insdir=${D}
+		emake install DESTDIR="${insdir}" || die
 		env -uRESTRICT CHOST=${CTARGET} prepallstrip
-		rm -rf "${D}"/usr/${CTARGET}/doc
+		rm -rf "${insdir}"/usr/doc
 		dodoc CONTRIBUTORS ChangeLog README TODO readme.txt
 	fi
-	dosym usr/include /usr/${CTARGET}/sys-include
+	is_crosscompile && dosym usr/include /usr/${CTARGET}/sys-include
 }
