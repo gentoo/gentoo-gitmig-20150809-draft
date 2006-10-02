@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-server-console
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.7 2006/10/02 23:03:26 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/ChangeLog,v 1.8 2006/10/02 23:31:44 ikelos Exp $
+
+  02 Oct 2006; Mike Auty <ikelos@gentoo.org>
+  vmware-server-console-1.0.1.29996-r2.ebuild:
+  Fix because of the unusual unpack method for vmware-server-console.
 
 *vmware-server-console-1.0.1.29996-r2 (02 Oct 2006)
 

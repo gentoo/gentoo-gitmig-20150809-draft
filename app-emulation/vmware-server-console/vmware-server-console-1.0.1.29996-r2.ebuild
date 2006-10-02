@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.1.29996-r2.ebuild,v 1.1 2006/10/02 23:03:26 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.1.29996-r2.ebuild,v 1.2 2006/10/02 23:31:44 ikelos Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -10,6 +10,7 @@ inherit eutils versionator vmware
 
 MY_PN=${PN/vm/VM}
 MY_PV=$(replace_version_separator 3 '-')
+MY_P="${MY_PN}-${MY_PV}"
 FN="VMware-server-linux-client-${MY_PV}"
 S="${WORKDIR}/${PN}-distrib"
 
@@ -63,8 +64,9 @@ ANY_ANY=""
 src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
-	unpack ./${MY_PN}-${MY_PV}.tar.gz
+	unpack ./${MY_P}.tar.gz
 	cd ${S}
+	unpack vmware-libssl.so.0.9.7l.tar.bz2
 }
 
 src_install() {
