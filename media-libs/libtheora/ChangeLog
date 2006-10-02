@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.48 2006/10/02 08:06:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.49 2006/10/02 09:36:45 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libtheora-1.0_alpha7.ebuild:
+  ekeyword failure.
 
 *libtheora-1.0_alpha7 (02 Oct 2006)
 
