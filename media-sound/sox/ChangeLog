@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/sox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.60 2006/09/03 17:48:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.61 2006/10/02 15:15:56 genstef Exp $
+
+*sox-12.18.2 (02 Oct 2006)
+
+  02 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/sox-12.17.6-destdir.patch, -files/sox-12.17.7-destdir.patch,
+  -files/sox-12.17.7-largefile.patch, +files/sox-12.18.2-destdir.patch,
+  -files/sox-install.patch, -files/sox-soundcard.patch,
+  -files/sox-wav-segfault.patch, -files/sox-wave-overflow.patch,
+  -sox-12.17.5-r1.ebuild, -sox-12.17.6.ebuild, -sox-12.17.6-r1.ebuild,
+  -sox-12.17.7-r1.ebuild, -sox-12.17.7-r2.ebuild, +sox-12.18.2.ebuild:
+  version bump thanks to Jonathan Geisler <jgeisler@css.tayloru.edu> in bug
+  137502, remove old
 
   03 Sep 2006; Jeroen Roovers <jer@gentoo.org> sox-12.17.9.ebuild:
   Install play man page (bug #144267).

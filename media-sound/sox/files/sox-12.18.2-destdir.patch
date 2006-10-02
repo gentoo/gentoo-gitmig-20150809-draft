@@ -1,0 +1,114 @@
+diff -Naupr sox-12.18.2.orig/Makefile.in sox-12.18.2/Makefile.in
+--- sox-12.18.2.orig/Makefile.in	2006-10-02 16:57:37.000000000 +0200
++++ sox-12.18.2/Makefile.in	2006-10-02 17:00:54.000000000 +0200
+@@ -33,22 +33,22 @@ PLAY_INSTALL_1  = install-play
+ 
+ install: $(PLAY_INSTALL_$(PLAY_SUPPORT))
+ 	cd src && $(MAKE) $@
+-	$(srcdir)/mkinstalldirs $(mandir)/man1
+-	$(INSTALL) -c -m 644 $(srcdir)/sox.1 $(mandir)/man1
+-	if [ -f $(mandir)/man1/soxmix.1 ] ; then $(RM) $(mandir)/man1/soxmix.1; fi
+-	cd $(mandir)/man1 && $(LN_S) sox.1 soxmix.1
+-	$(INSTALL) -c -m 644 $(srcdir)/soxexam.1 $(mandir)/man1
++	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
++	$(INSTALL) -c -m 644 $(srcdir)/sox.1 $(DESTDIR)$(mandir)/man1
++	if [ -f $(DESTDIR)$(mandir)/man1/soxmix.1 ] ; then $(RM) $(DESTDIR)$(mandir)/man1/soxmix.1; fi
++	cd $(DESTDIR)$(mandir)/man1 && $(LN_S) sox.1 soxmix.1
++	$(INSTALL) -c -m 644 $(srcdir)/soxexam.1 $(DESTDIR)$(mandir)/man1
+ 
+ install-play:
+-	if [ -f $(mandir)/man1/rec.1 ]; then $(RM) $(mandir)/man1/rec.1; fi
+-	$(srcdir)/mkinstalldirs $(mandir)/man1
+-	$(INSTALL) -m 644 $(srcdir)/play.1 $(mandir)/man1
+-	cd $(mandir)/man1 && $(LN_S) play.1 rec.1
++	if [ -f $(DESTDIR)$(mandir)/man1/rec.1 ]; then $(RM) $(DESTDIR)$(mandir)/man1/rec.1; fi
++	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
++	$(INSTALL) -m 644 $(srcdir)/play.1 $(DESTDIR)$(mandir)/man1
++	cd $(DESTDIR)$(mandir)/man1 && $(LN_S) play.1 rec.1
+ 
+ install-lib:
+ 	cd src && $(MAKE) $@
+-	$(srcdir)/mkinstalldirs $(mandir)/man3
+-	$(INSTALL) -m 644 $(srcdir)/libst.3 $(mandir)/man3
++	$(srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man3
++	$(INSTALL) -m 644 $(srcdir)/libst.3 $(DESTDIR)$(mandir)/man3
+ 
+ 
+ PLAY_UNINSTALL_0    =
+@@ -56,9 +56,9 @@ PLAY_UNINSTALL_1    = uninstall-play
+ 
+ uninstall: $(PLAY_UNINSTALL_$(PLAY_SUPPORT))
+ 	cd src && $(MAKE) $@
+-	$(RM) $(mandir)/man1/sox.1
+-	$(RM) $(mandir)/man1/soxmix.1
+-	$(RM) $(mandir)/man1/soxexam.1
++	$(RM) $(DESTDIR)$(mandir)/man1/sox.1
++	$(RM) $(DESTDIR)$(mandir)/man1/soxmix.1
++	$(RM) $(DESTDIR)$(mandir)/man1/soxexam.1
+ 
+ uninstall-play:
+ 	$(RM) $(mandir)/man1/play.1 $(mandir)/man1/rec.1
+diff -Naupr sox-12.18.2.orig/src/libgsm/Makefile.in sox-12.18.2/src/libgsm/Makefile.in
+--- sox-12.18.2.orig/src/libgsm/Makefile.in	2006-10-02 16:57:37.000000000 +0200
++++ sox-12.18.2/src/libgsm/Makefile.in	2006-10-02 16:58:43.000000000 +0200
+@@ -77,12 +77,12 @@ libgsm.a: $(LIBOBJS)
+ 	$(RANLIB) libgsm.a
+ 
+ install-lib: libgsm.a
+-	$(top_srcdir)/mkinstalldirs $(libdir)
+-	$(top_srcdir)/mkinstalldirs $(mandir)/man3
+-	$(INSTALL) -c -m 644 libgsm.a $(libdir)
+-	$(RANLIB) $(libdir)/libgsm.a
+-	$(INSTALL) -c -m 644 gsm.3 $(mandir)/man3
+-	$(INSTALL) -c -m 644 gsm_option.3 $(mandir)/man3
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(libdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man3
++	$(INSTALL) -c -m 644 libgsm.a $(DESTDIR)$(libdir)
++	$(RANLIB) $(DESTDIR)$(libdir)/libgsm.a
++	$(INSTALL) -c -m 644 gsm.3 $(DESTDIR)$(mandir)/man3
++	$(INSTALL) -c -m 644 gsm_option.3 $(DESTDIR)$(mandir)/man3
+ 
+ uninstall-lib:
+ 	$(RM) $(libdir)/libgsm.a
+diff -Naupr sox-12.18.2.orig/src/Makefile.in sox-12.18.2/src/Makefile.in
+--- sox-12.18.2.orig/src/Makefile.in	2006-10-02 16:57:37.000000000 +0200
++++ sox-12.18.2/src/Makefile.in	2006-10-02 16:58:43.000000000 +0200
+@@ -107,24 +107,24 @@ PLAY_INSTALL_0    =
+ PLAY_INSTALL_1    = install-play
+ 
+ install: sox soxmix $(PLAY_INSTALL_$(PLAY_SUPPORT))
+-	$(top_srcdir)/mkinstalldirs $(bindir)
+-	$(INSTALL) -c -m 755 sox $(bindir)
+-	$(INSTALL) -c -m 755 soxmix $(bindir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
++	$(INSTALL) -c -m 755 sox $(DESTDIR)$(bindir)
++	$(INSTALL) -c -m 755 soxmix $(DESTDIR)$(bindir)
+ 
+ install-play:
+-	if [ -f $(bindir)/rec ] ; then $(RM) $(bindir)/rec; fi
+-	$(top_srcdir)/mkinstalldirs $(bindir)
+-	$(INSTALL) -c -m 755 play $(bindir)
+-	cd $(bindir) && $(LN_S) play rec
++	if [ -f $(DESTDIR)$(bindir)/rec ] ; then $(RM) $(DESTDIR)$(bindir)/rec; fi
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(bindir)
++	$(INSTALL) -c -m 755 play $(DESTDIR)$(bindir)
++	cd $(DESTDIR)$(bindir) && $(LN_S) play rec
+ 
+ install-lib: libst.a
+-	$(top_srcdir)/mkinstalldirs $(libdir)
+-	$(top_srcdir)/mkinstalldirs $(includedir)
+-	$(INSTALL) -c -m 755 libst-config $(bindir)
+-	$(INSTALL) -c -m 644 libst.a $(libdir)
+-	$(RANLIB) $(libdir)/libst.a
+-	$(INSTALL) -c -m 644 $(srcdir)/st.h $(includedir)
+-	$(INSTALL) -c -m 644 ststdint.h $(includedir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(libdir)
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(includedir)
++	$(INSTALL) -c -m 755 libst-config $(DESTDIR)$(bindir)
++	$(INSTALL) -c -m 644 libst.a $(DESTDIR)$(libdir)
++	$(RANLIB) $(DESTDIR)$(libdir)/libst.a
++	$(INSTALL) -c -m 644 $(srcdir)/st.h $(DESTDIR)$(includedir)
++	$(INSTALL) -c -m 644 ststdint.h $(DESTDIR)$(includedir)
+ 
+ PLAY_UNINSTALL_0    =
+ PLAY_UNINSTALL_1    = uninstall-play
