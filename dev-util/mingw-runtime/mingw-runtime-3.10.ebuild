@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.5 2006/10/02 20:47:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.10.ebuild,v 1.6 2006/10/02 21:20:43 vapier Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -74,5 +74,5 @@ src_install() {
 		rm -rf "${insdir}"/usr/doc
 		dodoc CONTRIBUTORS ChangeLog README TODO readme.txt
 	fi
-	is_crosscompile && dosym usr/include /usr/${CTARGET}/sys-include
+	is_crosscompile && dosym usr mingw
 }
