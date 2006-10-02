@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.138 2006/09/29 13:43:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.139 2006/10/02 15:56:20 wolf31o2 Exp $
+
+  02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-3.2.1.2242-r11.ebuild,
+  vmware-workstation-3.2.1.2242-r12.ebuild:
+  Marking 3.2.1.2242-r12 stable on x86 because it gives identical output to -r11.
 
   29 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/4.5.3.19414/000_all_initd-location.patch,
