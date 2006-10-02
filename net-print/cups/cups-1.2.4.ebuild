@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.4.ebuild,v 1.1 2006/09/24 06:04:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.4.ebuild,v 1.2 2006/10/02 19:01:29 genstef Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -166,7 +166,7 @@ pkg_postinst() {
 	done;
 	if ! ${good_gs}; then
 		ewarn
-		ewarn "You need to emerge ghostscript with the cups-USEflag turned on"
+		ewarn "You need to emerge ghostscript with the \"cups\" USE flag turned on"
 	fi
 	if has_version =net-print/cups-1.1*; then
 		ewarn
