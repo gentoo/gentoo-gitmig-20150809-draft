@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.2 2006/03/21 11:31:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/gnubiff/gnubiff-2.1.9.ebuild,v 1.3 2006/10/02 21:19:29 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
-IUSE="gnome password"
+IUSE="gnome nls password"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2.3
