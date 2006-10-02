@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.8.ebuild,v 1.1 2006/09/22 13:35:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.8.ebuild,v 1.2 2006/10/02 07:31:40 flameeyes Exp $
 
 inherit nsplugins eutils rpm
 
@@ -28,6 +28,11 @@ RDEPEND="!amd64? (
 		)"
 DEPEND="${RDEPEND}"
 RESTRICT="nostrip nomirror"
+
+QA_TEXTRELS=""
+for f in codecs/{raac,cvt1,colorcvt,drv2,drvc}.so plugins/{theorarend,vorbisrend,swfrender,vidsite,oggfformat}.so ; do
+	QA_TEXTRELS="${QA_TEXTRELS} opt/RealPlayer/${f}"
+done
 
 S=${WORKDIR}/usr/local/${MY_PN}
 
