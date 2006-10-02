@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/libao-pulse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libao-pulse/ChangeLog,v 1.3 2006/10/02 03:54:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libao-pulse/ChangeLog,v 1.4 2006/10/02 15:50:32 corsair Exp $
+
+  02 Oct 2006; Markus Rothe <corsair@gentoo.org> libao-pulse-0.9.3.ebuild:
+  Added ~ppc64; bug #149806
 
   02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   libao-pulse-0.9.3.ebuild:
