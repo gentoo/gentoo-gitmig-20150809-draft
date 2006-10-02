@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.163 2006/10/02 11:43:51 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.164 2006/10/02 12:13:02 fmccor Exp $
+
+  02 Oct 2006; Ferris McCormick <fmccor@gentoo.org> xterm-218.ebuild:
+  Stable on sparc --- Bug #149835.
 
   02 Oct 2006; Stephen P. Becker <geoman@gentoo.org> xterm-218.ebuild:
   stable on mips, bug 149835
