@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.25 2006/10/02 19:46:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.26 2006/10/02 19:59:00 wolf31o2 Exp $
+
+  02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> gcc2/package.mask,
+  gcc2/packages:
+  Moved the few things that were setting maximum versions from packages to
+  package.mask per bug #149508.
 
   02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   no-nptl/2.4/package.mask, -no-nptl/2.4/packages, -no-nptl/packages:

@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/packages,v 1.15 2006/04/22 05:55:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/packages,v 1.16 2006/10/02 19:59:00 wolf31o2 Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -11,25 +11,14 @@
 # You can also add files to the base system itself if you prefix them with a
 # *
 
-
 ~sys-devel/gcc-2.95.3
 ~sys-libs/glibc-2.2.5
-
-# 2.6 headers are too much of a pain to use with glibc-2 / gcc-2 #94544
-<sys-kernel/linux-headers-2.5
-
-# sash - static shell for system recovery
 
 >=sys-apps/texinfo-4.2-r1
 
 #these ones have the new rc6 style init scripts
 >=sys-libs/gpm-1.19.3-r5
 >=sys-apps/isapnptools-1.23-r6
-
-#does not build with gcc-2.x
-<media-video/transcode-0.6.12
-<app-arch/rar-3.2.0
-<dev-util/ddd-3.3.6
 
 >=sys-apps/xinetd-2.3.3-r6
 >=net-fs/samba-2.2.2-r6
