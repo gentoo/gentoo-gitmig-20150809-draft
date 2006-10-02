@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.39 2006/10/01 12:50:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.40 2006/10/02 17:58:42 dang Exp $
+
+  02 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> libraw1394-1.2.1.ebuild:
+  Marked stable on amd64 for bug #149421
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libraw1394-1.2.1.ebuild:
