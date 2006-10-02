@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.349 2006/09/28 12:52:33 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.350 2006/10/02 15:13:36 uberlord Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-1.13.0_alpha1 (02 Oct 2006)
+
+  02 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.13.0_alpha1.ebuild:
+  First alpha cut from the 1.13 branch with BSD and VServer support.
+  svcdir is now forced - you cannot change it's location.
+  If you downgrade back to 1.12 you'll have to copy /lib/rcscripts/init.d
+  to your svcdir (/var/lib/init.d by default) and run depscan.sh -u
 
   28 Sep 2006; Joel Martin <kanaka@gentoo.org> baselayout-1.12.5-r1.ebuild:
   This is related to #145287 but does not resolve it. Using get_libdir is
