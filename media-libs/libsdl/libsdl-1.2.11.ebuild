@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.16 2006/10/02 13:56:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.17 2006/10/02 14:39:23 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -91,7 +91,7 @@ src_unpack() {
 	# yasm does not understand -i
 	# bug #147201
 	sed -i \
-		-e 's:NASMFLAGS -i/:NASMFLAGS -I/:' \
+		-e 's:NASMFLAGS -i:NASMFLAGS -I:' \
 		configure.in \
 		|| die "sed failed"
 
