@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.5 2006/03/07 14:48:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/freewheeling-0.5_pre4.ebuild,v 1.6 2006/10/02 06:31:22 flameeyes Exp $
+
+inherit eutils
 
 IUSE="fluidsynth"
 MY_P="fweelin-${PV/_/}"
@@ -25,6 +27,13 @@ DEPEND="media-sound/jack-audio-connection-kit
 	>=media-libs/sdl-ttf-2.0.0"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
 
 src_install() {
 	einstall || die

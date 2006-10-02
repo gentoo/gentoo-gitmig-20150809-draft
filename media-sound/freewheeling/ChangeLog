@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freewheeling
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/ChangeLog,v 1.5 2006/03/07 14:48:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freewheeling/ChangeLog,v 1.6 2006/10/02 06:31:22 flameeyes Exp $
+
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/freewheeling-0.5_pre4-gcc41.patch, freewheeling-0.5_pre4.ebuild:
+  Add patch to build with GCC 4.1, thanks to David Cunningham in bug #140288.
 
   07 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   freewheeling-0.5_pre4.ebuild:
