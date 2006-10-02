@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.24 2006/09/29 15:43:03 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.25 2006/10/02 19:46:24 wolf31o2 Exp $
 
 # Andrej Kacian <ticho@gentoo.org>
 # Depends on >=2.6.11 headers
@@ -142,6 +142,32 @@ x11-drivers/xf86-input-evdev
 >=www-client/epiphany-extensions-2.16.0
 >=x11-misc/icon-naming-utils-0.8.1
 
-# Stephen Bennett <spb@gentoo.org>
-# Mask 2.[56] linux-headers for fairly obvious reasons
+# Chris Gianelloni <wolf31o2@gentoo.org>
+# Since this is a 2.4-only profile, we cannot have any 2.6-based headers/kernels
+>=sys-kernel/ck-sources-2.5
+>=sys-kernel/gentoo-sources-2.5
+>=sys-kernel/git-sources-2.5
+>=sys-kernel/hardened-sources-2.5
+>=sys-kernel/hppa-sources-2.5
 >=sys-kernel/linux-headers-2.5
+>=sys-kernel/mips-headers-2.5
+>=sys-kernel/mips-sources-2.5
+>=sys-kernel/mm-sources-2.5
+>=sys-kernel/openblocks-sources-2.5
+>=sys-kernel/openmosix-sources-2.5
+>=sys-kernel/openvz-sources-2.5
+>=sys-kernel/rsbac-sources-2.5
+>=sys-kernel/sh-sources-2.5
+>=sys-kernel/sparc-sources-2.5
+>=sys-kernel/suspend2-sources-2.5
+>=sys-kernel/systrace-sources-2.5
+>=sys-kernel/usermode-sources-2.5
+>=sys-kernel/vanilla-sources-2.5
+>=sys-kernel/vserver-sources-2.5
+>=sys-kernel/xbox-sources-2.5
+>=sys-kernel/xen-sources-2.5
+>=virtual/linux-sources-2.5
+
+# Chris Gianelloni <wolf31o2@gentoo.org>
+# We also don't allow virtual/pcmcia greater than 2.4.*
+>=virtual/pcmcia-2.5

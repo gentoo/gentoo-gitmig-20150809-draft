@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.8 2006/10/02 19:34:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.9 2006/10/02 19:47:07 wolf31o2 Exp $
+
+  02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  no-nptl/2.4/package.mask, -no-nptl/2.4/packages, -no-nptl/packages:
+  Move masking to package.mask and remove redundant entries from packages.
 
   02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> +2005.0/deprecated:
   Removed 2005.1/2.4 profile and deprecated 2005.1 profile.

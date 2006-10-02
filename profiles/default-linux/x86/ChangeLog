@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.24 2006/09/29 20:40:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.25 2006/10/02 19:46:24 wolf31o2 Exp $
+
+  02 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  no-nptl/2.4/package.mask, -no-nptl/2.4/packages, -no-nptl/packages:
+  Move masking to package.mask and remove redundant entries from packages.
 
   29 Sep 2006; Stephen Bennett <spb@gentoo.org> no-nptl/2.4/package.mask:
   Masking >=sys-kernel/linux-headers since packages requires 2.4
