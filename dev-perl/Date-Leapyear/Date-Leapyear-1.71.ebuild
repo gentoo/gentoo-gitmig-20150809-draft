@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/Date-Leapyear-1.71.ebuild,v 1.18 2006/08/05 02:44:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/Date-Leapyear-1.71.ebuild,v 1.19 2006/10/03 10:18:34 ian Exp $
 
 inherit perl-module
 
@@ -12,10 +12,9 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
+SRC_TEST="do"
 
 DEPEND="virtual/perl-Test-Simple
 	virtual/perl-Test-Harness
 	dev-lang/perl"
 RDEPEND="${DEPEND}"
-
-
