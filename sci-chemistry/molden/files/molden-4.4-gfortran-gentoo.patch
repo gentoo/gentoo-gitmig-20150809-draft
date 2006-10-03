@@ -1,0 +1,12 @@
+diff -Naur molden4.4-old/molden.f molden4.4/molden.f
+--- molden4.4-old/molden.f	2006-07-10 07:46:06.000000000 -0400
++++ molden4.4/molden.f	2006-10-02 21:05:15.000000000 -0400
+@@ -255,7 +255,7 @@
+       common /vrmlhl/ spcdfil
+       common /pmflvl/ ipmfm,ipmfh,pmflev(mxpmfl),levcol(mxpmfl)
+       common /comsrf/ vo(3), rt(3),v1t(3),v2t(3),v3t(3)
+-      external iargc
++c      external iargc
+       dimension fcnt(mxcntr)
+       character title*80, keywrd*160, keyhlp*80, keyori*160
+       character tmpstr*80,movfil*80,vrmlfil*80,povfil*80,oglfil*80
