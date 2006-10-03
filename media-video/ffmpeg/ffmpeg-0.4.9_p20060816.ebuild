@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.5 2006/09/11 17:55:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060816.ebuild,v 1.6 2006/10/03 13:03:15 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -19,10 +19,9 @@ KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
 	test theora threads truetype v4l x264 xvid dts network zlib sdl"
 
-DEPEND="imlib? ( media-libs/imlib2 )
+RDEPEND="imlib? ( media-libs/imlib2 )
 	truetype? ( >=media-libs/freetype-2 )
 	sdl? ( >=media-libs/libsdl-1.2.10 )
-	doc? ( app-text/texi2html )
 	encode? ( media-sound/lame )
 	ogg? ( media-libs/libogg )
 	vorbis? ( media-libs/libvorbis )
@@ -33,8 +32,11 @@ DEPEND="imlib? ( media-libs/imlib2 )
 	dts? ( media-libs/libdts )
 	ieee1394? ( =media-libs/libdc1394-1*
 				sys-libs/libraw1394 )
+	x264? ( >=media-libs/x264-svn-20060810 )"
+
+DEPEND="${RDEPEND}
+	doc? ( app-text/texi2html )
 	test? ( net-misc/wget )
-	x264? ( >=media-libs/x264-svn-20060810 )
 	amr? ( app-arch/unzip )"
 
 src_unpack() {
@@ -150,7 +152,7 @@ src_compile() {
 		"--cc=$(tc-getCC)" \
 		${myconf} || die "configure failed"
 
-	emake depend || die "depend failed"
+	emake -j1 depend || die "depend failed"
 	emake || die "make failed"
 }
 

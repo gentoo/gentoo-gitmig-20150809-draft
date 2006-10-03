@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.20 2006/09/08 20:25:58 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20060530.ebuild,v 1.21 2006/10/03 13:03:15 lu_zero Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -22,10 +22,9 @@ KEYWORDS="-* alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd" #~alpha ~arm ~hppa 
 IUSE="aac altivec amr debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss
 	test theora threads truetype v4l x264 xvid dts network zlib sdl"
 
-DEPEND="imlib? ( media-libs/imlib2 )
+RDEPEND="imlib? ( media-libs/imlib2 )
 	truetype? ( >=media-libs/freetype-2 )
 	sdl? ( >=media-libs/libsdl-1.2.1 )
-	doc? ( app-text/texi2html )
 	encode? ( media-sound/lame )
 	ogg? ( media-libs/libogg )
 	vorbis? ( media-libs/libvorbis )
@@ -37,8 +36,11 @@ DEPEND="imlib? ( media-libs/imlib2 )
 	dts? ( media-libs/libdts )
 	ieee1394? ( =media-libs/libdc1394-1*
 				sys-libs/libraw1394 )
+	x264? ( =media-libs/x264-svn-20060612 )"
+
+DEPEND="${RDEPEND}
 	test? ( net-misc/wget )
-	x264? ( =media-libs/x264-svn-20060612 )
+	doc? ( app-text/texi2html )
 	amr? ( app-arch/unzip )"
 
 src_unpack() {
