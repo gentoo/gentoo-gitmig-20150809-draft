@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.64 2006/10/03 09:14:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.65 2006/10/03 18:59:33 corsair Exp $
+
+  03 Oct 2006; Markus Rothe <corsair@gentoo.org> libebml-0.7.7.ebuild:
+  Stable on ppc64; bug #149908
 
   03 Oct 2006; Simon Stelling <blubb@gentoo.org> libebml-0.7.7.ebuild:
   stable on amd64
