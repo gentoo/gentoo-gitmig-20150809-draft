@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.168 2006/10/03 09:16:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.169 2006/10/03 21:44:33 jer Exp $
+
+  03 Oct 2006; Jeroen Roovers <jer@gentoo.org> xterm-218.ebuild:
+  Stable for HPPA (bug #149835).
 
   03 Oct 2006; Simon Stelling <blubb@gentoo.org> xterm-218.ebuild:
   stable on amd64
