@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.6.8.ebuild,v 1.1 2006/08/30 14:32:50 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.6.8.ebuild,v 1.2 2006/10/03 09:56:37 tchiwam Exp $
 
 inherit webapp depend.php
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mediawiki.org"
 SRC_URI="mirror://sourceforge/wikipedia/${P/.0_/}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="imagemagick math"
 
 S="${WORKDIR}/${P/.0_/}"
