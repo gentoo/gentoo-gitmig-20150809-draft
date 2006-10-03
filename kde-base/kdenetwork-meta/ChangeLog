@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.56 2006/10/03 10:10:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.57 2006/10/03 10:12:59 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdenetwork-meta-3.5.5.ebuild:
+  Fix minimum version.
 
 *kdenetwork-meta-3.5.5 (03 Oct 2006)
 

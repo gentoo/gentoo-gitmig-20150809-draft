@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.5.ebuild,v 1.1 2006/10/03 10:13:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.5.ebuild,v 1.2 2006/10/03 10:14:25 flameeyes Exp $
 
 KMNAME=kdepim
 KMMODULE=kioslaves
@@ -13,7 +13,7 @@ DESCRIPTION="kioslaves from kdepim package"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="sasl"
 DEPEND="sasl? ( >=dev-libs/cyrus-sasl-2 )
-	$(deprange 3.5.4 $MAXKDEVER kde-base/libkmime)"
+	$(deprange 3.5.3 $MAXKDEVER kde-base/libkmime)"
 
 KMCOPYLIB="libkmime libkmime/"
 KMEXTRACTONLY="libkmime/"
