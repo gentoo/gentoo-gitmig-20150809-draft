@@ -1,0 +1,10 @@
+# ChangeLog for rox-base/systemtrayn
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/systemtrayn/ChangeLog,v 1.1 2006/10/03 13:48:43 lack Exp $
+
+*systemtrayn-0.3.1 (03 Oct 2006)
+
+  03 Oct 2006; <lack@gentoo.org> +metadata.xml, +systemtrayn-0.3.1.ebuild:
+  New system tray manager for rox-desktop, replaces rox-base/systemtray.
+  Imported from breakmygentoo.net, big thanks to Peter Hyman.
+
