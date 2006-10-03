@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/gkrellmwireless-2.0.3.ebuild,v 1.7 2005/04/27 18:01:31 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/gkrellmwireless-2.0.3.ebuild,v 1.8 2006/10/03 08:39:06 blubb Exp $
 
 inherit multilib
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gkrellm.luon.net/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 DEPEND="=app-admin/gkrellm-2*"
 

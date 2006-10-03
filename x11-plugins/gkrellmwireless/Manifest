@@ -1,7 +1,28 @@
-MD5 b5f86799cdcaca53bbaf34f723be8ce7 gkrellmwireless-2.0.2.ebuild 682
+DIST gkrellmwireless-0.2.2.tar.gz 7971
+DIST gkrellmwireless-2.0.2.tar.gz 8187
+DIST gkrellmwireless-2.0.3.tar.gz 9557
+EBUILD gkrellmwireless-0.2.2.ebuild 703 RMD160 b82f0cf65b948ab307a7bc20a5ac162a0071255c SHA1 3c86955d8d936d34b74da8f643bf5eeb3683d4fa SHA256 2cf8d98eaf1080212536ee51b2e57a4d2742bc55cf7da722a25482a10ad8c5ad
 MD5 acb44e3ec80a5c934906f9b6c360fd16 gkrellmwireless-0.2.2.ebuild 703
-MD5 a53b439a70e5f2a197ed0c7e662bf8db ChangeLog 3082
-MD5 0c5e33c8b3a5c35d192152a32a6007f6 gkrellmwireless-2.0.3.ebuild 718
+RMD160 b82f0cf65b948ab307a7bc20a5ac162a0071255c gkrellmwireless-0.2.2.ebuild 703
+SHA256 2cf8d98eaf1080212536ee51b2e57a4d2742bc55cf7da722a25482a10ad8c5ad gkrellmwireless-0.2.2.ebuild 703
+EBUILD gkrellmwireless-2.0.2.ebuild 682 RMD160 a699fb97fc1a33bf9b18eeb945818722024f2d5f SHA1 069ff834d8ddb84a5ec496171c4c1e5c4f3090a8 SHA256 3672da8b5eb7828289e6c91ba2e2861bd5241b52424741b2ecf73247a876086f
+MD5 b5f86799cdcaca53bbaf34f723be8ce7 gkrellmwireless-2.0.2.ebuild 682
+RMD160 a699fb97fc1a33bf9b18eeb945818722024f2d5f gkrellmwireless-2.0.2.ebuild 682
+SHA256 3672da8b5eb7828289e6c91ba2e2861bd5241b52424741b2ecf73247a876086f gkrellmwireless-2.0.2.ebuild 682
+EBUILD gkrellmwireless-2.0.3.ebuild 717 RMD160 4efa49e5187070661da7b3920647b1cdbfdf58ba SHA1 11f89222a7d946fc93ad805b9b4e1efe73c25459 SHA256 96c3886edcb9953d2a5dbcc535cec4e6af1a0ab111107aee015859ae56340c2b
+MD5 5f6704c199b8fc432eec707835ae205c gkrellmwireless-2.0.3.ebuild 717
+RMD160 4efa49e5187070661da7b3920647b1cdbfdf58ba gkrellmwireless-2.0.3.ebuild 717
+SHA256 96c3886edcb9953d2a5dbcc535cec4e6af1a0ab111107aee015859ae56340c2b gkrellmwireless-2.0.3.ebuild 717
+MISC ChangeLog 3183 RMD160 36b71149a4f5ddba262046603a44b348f641a8ce SHA1 726f5c6828b855917cd622716baf460ad25ebe09 SHA256 9581cade0fcac19dbdb33256b551e0943f4e999a697532c1ae160ab995320c12
+MD5 c188a2a3adadd69a0aad1cd2b0151e73 ChangeLog 3183
+RMD160 36b71149a4f5ddba262046603a44b348f641a8ce ChangeLog 3183
+SHA256 9581cade0fcac19dbdb33256b551e0943f4e999a697532c1ae160ab995320c12 ChangeLog 3183
 MD5 e84b1204cacc43c4e51aeb705b81602f files/digest-gkrellmwireless-0.2.2 71
+RMD160 46ed0f4d2bb3c02995ffd63c756c7783370a23d9 files/digest-gkrellmwireless-0.2.2 71
+SHA256 7e95135b5d9e74a78c7b9e9d1c60d2929c3661c4096dec949f3908e90e6314ca files/digest-gkrellmwireless-0.2.2 71
 MD5 300c3609b079066884f9f19ad56bb580 files/digest-gkrellmwireless-2.0.2 71
+RMD160 6194d050fe2f86b479bf83cf124fda011a2f9155 files/digest-gkrellmwireless-2.0.2 71
+SHA256 203faf98e2ac6d148e0428e8cbf9b8477c3e1950222e99b1a1cbc1c5f1707136 files/digest-gkrellmwireless-2.0.2 71
 MD5 f151e44fd464be109f592f28637a7ad3 files/digest-gkrellmwireless-2.0.3 71
+RMD160 1daa51afdad16e58ae573e293978dc625c82a917 files/digest-gkrellmwireless-2.0.3 71
+SHA256 e7f66c1af48d1f76a5f6d352ac0116e8a9dc31c7ba47e46d9b9d04eb82a9488b files/digest-gkrellmwireless-2.0.3 71
