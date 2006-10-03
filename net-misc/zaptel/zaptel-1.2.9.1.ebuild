@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.9.1.ebuild,v 1.1 2006/10/03 01:35:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.9.1.ebuild,v 1.2 2006/10/03 13:26:54 gustavoz Exp $
 
 inherit toolchain-funcs eutils linux-mod
 
@@ -156,6 +156,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/zaptel-1.2.9.1-gcc411_is_a_retard-kbuild.patch
+	epatch ${FILESDIR}/zaptel-1.2.9.1-ar.patch
 
 	use ukcid && \
 		epatch ${FILESDIR}/${PN}-1.2.0-ukcid.patch
