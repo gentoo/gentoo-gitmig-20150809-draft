@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX cvs-1.12.12-block-requests.patch 4006 RMD160 47be05434e53c25fc6dd1fa6848d25d155dc307a SHA1 a4e77d76457a3047c19945d53f3b2aca572d1da4 SHA256 70bbf745815d1e01582329160a10f5cdd9c11051e4e62d331686dd5124e01294
 MD5 ff9b7f29f0615cb168c1ce387fdc5809 files/cvs-1.12.12-block-requests.patch 4006
 RMD160 47be05434e53c25fc6dd1fa6848d25d155dc307a files/cvs-1.12.12-block-requests.patch 4006
@@ -111,3 +114,10 @@ SHA256 688739cfb729212f81a739675ceb1be468c3a19ed19ce6b1c1d20d59f9e47872 files/di
 MD5 3a6f27aa076ef6598b6e12fcbaca3a9c files/digest-cvs-1.12.13-r1 1012
 RMD160 978bfb729ec4a8bff0ac851393d2b0d5b161ec8d files/digest-cvs-1.12.13-r1 1012
 SHA256 1e99eefe36659d1e6a9f690003de8ecafd0d9d057e814acf48e57b80cdc999a5 files/digest-cvs-1.12.13-r1 1012
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFIlgEI1lqEGTUzyQRAs4nAJ9zDDdOIiayrmezwNzfI92X75A7ywCgiUO5
+a+86MNd9+uEHqLnlbZpg5GA=
+=ZW4O
+-----END PGP SIGNATURE-----
