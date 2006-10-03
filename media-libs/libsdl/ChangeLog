@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.116 2006/10/01 17:51:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.117 2006/10/03 20:07:39 kloeri Exp $
+
+  03 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> libsdl-1.2.11.ebuild:
+  Stable on Alpha.
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libsdl-1.2.11.ebuild:
