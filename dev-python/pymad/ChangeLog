@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymad
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.16 2006/09/29 00:03:12 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymad/ChangeLog,v 1.17 2006/10/03 13:30:29 gustavoz Exp $
+
+  03 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> pymad-0.5.4.ebuild:
+  Stable on sparc
 
   28 Sep 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   pymad-0.5.4.ebuild:
