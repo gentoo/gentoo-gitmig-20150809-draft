@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.124 2006/10/03 01:47:42 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.125 2006/10/03 18:54:40 gustavoz Exp $
+
+  03 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  asterisk-1.2.12.1.ebuild:
+  Stable on sparc wrt #144941
 
 *asterisk-1.2.12.1 (03 Oct 2006)
 
