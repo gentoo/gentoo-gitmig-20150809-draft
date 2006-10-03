@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.7 2006/09/08 20:12:35 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.8 2006/10/03 17:51:13 dsd Exp $
 
-inherit eutils flag-o-matic libtool
+WANT_AUTOMAKE=1.4
+WANT_AUTOCONF=latest
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="library to use arbitrary fonts in OpenGL applications"
 HOMEPAGE="http://homepages.paradise.net.nz/henryj/code/#FTGL"
@@ -16,6 +18,7 @@ IUSE=""
 DEPEND=">=media-libs/freetype-2.0.9
 	virtual/opengl
 	virtual/glut"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/FTGL/unix
 
@@ -38,7 +41,8 @@ src_unpack() {
 		-e "s:    \\$:\t\\$:g" ${S}/src/Makefile \
 		|| die "sed failed"
 
-	elibtoolize
+	cd ${S}
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
