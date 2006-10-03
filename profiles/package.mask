@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5986 2006/10/03 08:18:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5987 2006/10/03 09:55:05 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,20 @@
 ##
 ##   End example
 ##
+
+# Andrej Kacian <ticho@gentoo.org> (3 Oct 2006)
+# Temporarily masked, until all plugins are bumped.
+=mail-client/sylpheed-claws-2.5.2
+=mail-client/sylpheed-claws-acpi-notifier-1.0.3
+=mail-client/sylpheed-claws-att-remover-1.0.3
+=mail-client/sylpheed-claws-cachesaver-0.10.2
+=mail-client/sylpheed-claws-etpan-privacy-0.15.3
+=mail-client/sylpheed-claws-fetchinfo-0.4.16
+=mail-client/sylpheed-claws-gtkhtml-0.11
+=mail-client/sylpheed-claws-maildir-0.24.2
+=mail-client/sylpheed-claws-mailmbox-1.12.2
+=mail-client/sylpheed-claws-rssyl-0.6.1
+=mail-client/sylpheed-claws-vcalendar-1.89.1
 
 # Diego Pettenò <flameeyes@gentoo.org> (3 Oct 2006)
 # Pre-release of KDE 3.5.5
