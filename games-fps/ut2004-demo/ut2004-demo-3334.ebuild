@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.14 2006/10/02 15:31:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3334.ebuild,v 1.15 2006/10/03 20:23:45 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_P="ut2004-lnx-demo${PV}.run"
-DESCRIPTION="Unreal Tournament 2004 Demo"
+DESCRIPTION="Demo for the critically-acclaimed first-person shooter"
 HOMEPAGE="http://www.unrealtournament.com/"
 
 SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}"
