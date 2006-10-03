@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.29 2006/09/12 13:33:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.30 2006/10/03 19:52:50 markusle Exp $
+
+  03 Oct 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/atlas-asm-gentoo.patch, lapack-atlas-3.7.17.ebuild:
+  Replaced the faulty "ASM VOLATILE" patch with a proper fix to
+  the offending clobbered bx registers in camm_dpa.h (see
+  bug #128178). Thanks to Fabio Rossi <rossi.f@inwind.it> for his 
+  patch. 
 
 *lapack-atlas-3.7.17 (12 Sep 2006)
 

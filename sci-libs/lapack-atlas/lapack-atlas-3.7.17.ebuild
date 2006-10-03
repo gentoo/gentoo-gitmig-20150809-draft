@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.17.ebuild,v 1.1 2006/09/12 13:33:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/lapack-atlas-3.7.17.ebuild,v 1.2 2006/10/03 19:52:50 markusle Exp $
 
 inherit eutils flag-o-matic toolchain-funcs fortran
 
@@ -12,7 +12,7 @@ SRC_URI1="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2"
 SRC_URI2="http://www.netlib.org/lapack/lapack.tgz"
 SRC_URI="${SRC_URI1} ${SRC_URI2}
 	mirror://gentoo/lapack-20020531-20021004.patch.bz2
-	mirror://gentoo/${MY_PN}-3.7.15-shared-libs.patch.bz2"
+	mirror://gentoo/${MY_PN}-${PV}-shared-libs.patch.bz2"
 
 SLOT="0"
 IUSE="doc"
@@ -50,7 +50,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${WORKDIR}"
 
-	epatch "${DISTDIR}"/${MY_PN}-3.7.15-shared-libs.patch.bz2
+	epatch "${DISTDIR}"/${MY_PN}-${PV}-shared-libs.patch.bz2
+	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 	epatch "${DISTDIR}"/lapack-20020531-20021004.patch.bz2
 	epatch "${FILESDIR}"/lapack-reference-3.0-autotool.patch
 
