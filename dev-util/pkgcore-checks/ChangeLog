@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pkgcore-checks
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.3 2006/10/02 21:35:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/ChangeLog,v 1.4 2006/10/03 10:25:31 marienz Exp $
+
+  03 Oct 2006; Marien Zwart <marienz@gentoo.org>
+  pkgcore-checks-0.1-r1.ebuild:
+  Make dep less strict to prevent an up/downgrade cycle.
 
   02 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   pkgcore-checks-0.1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.1-r1.ebuild,v 1.2 2006/10/02 21:35:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.1-r1.ebuild,v 1.3 2006/10/03 10:25:31 marienz Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="~sys-apps/pkgcore-${PV}
+RDEPEND="=sys-apps/pkgcore-0.1*
 	>=dev-lang/python-2.4"
 DEPEND=">=dev-lang/python-2.4"
 
