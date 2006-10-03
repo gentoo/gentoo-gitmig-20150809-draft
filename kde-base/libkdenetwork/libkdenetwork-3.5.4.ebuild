@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/libkdenetwork-3.5.4.ebuild,v 1.3 2006/09/26 21:47:02 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/libkdenetwork-3.5.4.ebuild,v 1.4 2006/10/03 12:54:01 flameeyes Exp $
 
 KMNAME=kdepim
-MAXKDEVER=$PV
+MAXKDEVER=3.5.5
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 

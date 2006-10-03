@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.59 2006/09/17 22:53:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.60 2006/10/03 10:00:09 flameeyes Exp $
+
+*kdegraphics-meta-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kdegraphics-meta-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org>
   -kdegraphics-meta-3.4.3.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.60 2006/09/18 00:58:28 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.61 2006/10/03 10:49:09 flameeyes Exp $
+
+*kicker-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kicker-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
 *kicker-3.5.4-r1 (18 Sep 2006)
 

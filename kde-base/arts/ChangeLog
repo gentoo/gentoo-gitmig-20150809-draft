@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/arts
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.234 2006/09/17 22:53:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.235 2006/10/03 08:46:09 flameeyes Exp $
+
+*arts-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +arts-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -arts-3.4.3.ebuild,
   -arts-3.4.3-r1.ebuild:

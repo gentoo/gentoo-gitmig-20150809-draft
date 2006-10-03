@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.64 2006/09/17 22:53:06 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.65 2006/10/03 09:03:32 flameeyes Exp $
+
+*juk-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +juk-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -juk-3.4.3.ebuild:
   Drop KDE 3.4.

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.54 2006/09/17 22:53:00 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.55 2006/10/03 09:08:44 flameeyes Exp $
+
+*kalzium-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kalzium-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kalzium-3.4.3.ebuild:
   Drop KDE 3.4.

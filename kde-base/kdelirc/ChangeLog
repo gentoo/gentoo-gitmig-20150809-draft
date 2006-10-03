@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.44 2006/09/23 20:08:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.45 2006/10/03 10:03:17 flameeyes Exp $
+
+*kdelirc-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kdelirc-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   23 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> kdelirc-3.5.2.ebuild,
   kdelirc-3.5.3.ebuild, kdelirc-3.5.4.ebuild:

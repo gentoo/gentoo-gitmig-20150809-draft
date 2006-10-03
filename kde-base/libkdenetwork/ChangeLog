@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdenetwork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.42 2006/09/26 21:47:02 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/ChangeLog,v 1.43 2006/10/03 12:54:01 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libkdenetwork-3.5.4.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   libkdenetwork-3.5.0.ebuild, libkdenetwork-3.5.3.ebuild,

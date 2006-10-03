@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/secpolicy-3.5.0.ebuild,v 1.18 2006/09/03 11:44:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/secpolicy/secpolicy-3.5.0.ebuild,v 1.19 2006/10/03 13:19:30 flameeyes Exp $
 KMNAME=kdeadmin
-MAXKDEVER=3.5.4
+MAXKDEVER=3.5.5
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

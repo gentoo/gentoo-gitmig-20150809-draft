@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.57 2006/09/25 23:10:12 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.58 2006/10/03 09:05:17 flameeyes Exp $
+
+*kaddressbook-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +kaddressbook-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   25 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   kaddressbook-3.5.2-r1.ebuild, kaddressbook-3.5.3.ebuild,

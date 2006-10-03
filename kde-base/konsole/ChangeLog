@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.57 2006/09/18 00:54:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.58 2006/10/03 11:34:11 flameeyes Exp $
+
+*konsole-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +konsole-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
 *konsole-3.5.4-r1 (18 Sep 2006)
 

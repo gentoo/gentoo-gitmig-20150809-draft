@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/xparts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.18 2006/09/17 22:53:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/ChangeLog,v 1.19 2006/10/03 13:23:06 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> xparts-3.5.0.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -xparts-3.4.1.ebuild:
   Drop KDE 3.4.

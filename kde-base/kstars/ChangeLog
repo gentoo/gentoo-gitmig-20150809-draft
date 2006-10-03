@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.55 2006/09/26 21:18:03 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.56 2006/10/03 12:18:34 flameeyes Exp $
+
+*kstars-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kstars-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   kstars-3.5.2.ebuild, kstars-3.5.3.ebuild, kstars-3.5.4.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/kdeartwork-sounds-3.5.0.ebuild,v 1.18 2006/09/06 17:18:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-sounds/kdeartwork-sounds-3.5.0.ebuild,v 1.19 2006/10/03 09:47:55 flameeyes Exp $
 
 KMMODULE=sounds
 KMNAME=kdeartwork
-MAXKDEVER=3.5.4
+MAXKDEVER=3.5.5
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 

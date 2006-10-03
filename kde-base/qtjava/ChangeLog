@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtjava
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.37 2006/09/17 22:52:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtjava/ChangeLog,v 1.38 2006/10/03 13:14:23 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> qtjava-3.5.2.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -qtjava-3.4.3.ebuild,
   -qtjava-3.4.3-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mpeglib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.41 2006/10/01 17:27:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mpeglib/ChangeLog,v 1.42 2006/10/03 13:09:01 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> mpeglib-3.5.1.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> mpeglib-3.5.1.ebuild:
   Remove build-time dependency on xextproto.

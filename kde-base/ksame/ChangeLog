@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksame
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.51 2006/09/26 20:29:47 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.52 2006/10/03 12:01:42 flameeyes Exp $
+
+*ksame-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +ksame-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   ksame-3.5.2.ebuild, ksame-3.5.3.ebuild, ksame-3.5.4.ebuild:

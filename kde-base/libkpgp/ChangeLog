@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkpgp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.41 2006/09/17 22:53:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpgp/ChangeLog,v 1.42 2006/10/03 12:58:57 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libkpgp-3.5.4.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -libkpgp-3.4.1.ebuild:
   Drop KDE 3.4.

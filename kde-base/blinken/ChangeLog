@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.26 2006/09/06 20:14:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.27 2006/10/03 08:53:11 flameeyes Exp $
+
+*blinken-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +blinken-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   06 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> blinken-3.5.4.ebuild:
   Add ~x86-fbsd keyword.

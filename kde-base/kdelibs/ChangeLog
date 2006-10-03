@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.362 2006/09/20 06:23:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.363 2006/10/03 10:02:27 flameeyes Exp $
+
+*kdelibs-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kdelibs-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   20 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kdelibs-3.5-lua.patch, kdelibs-3.5.4-r2.ebuild:

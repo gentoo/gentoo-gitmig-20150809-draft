@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.54 2006/09/24 20:01:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.55 2006/10/03 11:40:44 flameeyes Exp $
+
+*korganizer-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +korganizer-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   24 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   korganizer-3.5.2.ebuild, korganizer-3.5.3.ebuild, korganizer-3.5.4.ebuild,

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.55 2006/09/23 20:16:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.56 2006/10/03 13:17:00 flameeyes Exp $
+
+*quanta-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +quanta-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   23 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> quanta-3.5.2.ebuild,
   quanta-3.5.3.ebuild, quanta-3.5.4.ebuild:

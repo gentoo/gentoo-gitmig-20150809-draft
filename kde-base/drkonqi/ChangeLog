@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.55 2006/09/17 22:53:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.56 2006/10/03 09:00:21 flameeyes Exp $
+
+*drkonqi-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +drkonqi-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -drkonqi-3.4.3.ebuild:
   Drop KDE 3.4.

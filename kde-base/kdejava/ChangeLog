@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.40 2006/09/17 22:53:01 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.41 2006/10/03 10:00:59 flameeyes Exp $
+
+*kdejava-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kdejava-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   17 Sep 2006; Carsten Lohrke <carlo@gentoo.org> -kdejava-3.4.3.ebuild,
   -kdejava-3.4.3-r1.ebuild:

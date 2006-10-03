@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.54 2006/09/26 21:28:47 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.55 2006/10/03 12:30:01 flameeyes Exp $
+
+*ktouch-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +ktouch-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release).
 
   26 Sep 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   ktouch-3.5.2.ebuild, ktouch-3.5.3.ebuild, ktouch-3.5.4.ebuild:
