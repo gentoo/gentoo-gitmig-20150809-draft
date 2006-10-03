@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3.ebuild,v 1.1 2006/10/03 18:29:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3.ebuild,v 1.2 2006/10/03 19:03:12 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -17,7 +17,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2"
 LICENSE="PAM"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nls"
+IUSE="nls berkdb"
 
 RDEPEND="nls? ( virtual/libintl )
 	>=sys-libs/cracklib-2.8.3
@@ -35,6 +35,9 @@ PROVIDE="virtual/pam"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${MY_P}-berkdb.patch"
+	AT_M4DIR="m4" eautoreconf
 
 	elibtoolize
 }
@@ -55,6 +58,7 @@ src_compile() {
 
 	econf \
 		$(use_enable nls) \
+		$(use_enable berkdb) \
 		--enable-securedir=/$(get_libdir)/security \
 		--enable-isadir=/$(get_libdir)/security \
 		--disable-dependency-tracking \

@@ -1,0 +1,25 @@
+Index: Linux-PAM-0.99.6.3/configure.in
+===================================================================
+--- Linux-PAM-0.99.6.3.orig/configure.in
++++ Linux-PAM-0.99.6.3/configure.in
+@@ -329,6 +329,11 @@ AC_SEARCH_LIBS([crypt],[xcrypt crypt], L
+ LIBS=$BACKUP_LIBS
+ AC_SUBST(LIBCRYPT)
+ 
++AC_ARG_ENABLE([berkdb],
++	AC_HELP_STRING([--disable-berkdb],[do not use Berkeley DB]),
++	WITH_BERKDB=$enableval, WITH_BERKDB=yes)
++
++if test "x$WITH_BERKDB" = "xyes"; then
+ dnl check for libdb or libndbm as fallback. Some libndbm compat
+ dnl libraries are unuseable, so try libdb first.
+ AC_CHECK_LIB([db], [db_create], LIBDB="-ldb", LIBDB="")
+@@ -344,6 +349,8 @@ else
+     AC_CHECK_HEADERS(db.h)
+ fi
+ AC_SUBST(LIBDB)
++fi
++
+ AM_CONDITIONAL([HAVE_LIBDB], [test ! -z "$LIBDB"])
+ 
+ AC_CHECK_LIB([nsl],[yp_get_default_domain], LIBNSL="-lnsl", LIBNSL="")

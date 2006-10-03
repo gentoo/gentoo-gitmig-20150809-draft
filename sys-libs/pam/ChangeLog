@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.118 2006/10/03 18:29:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.119 2006/10/03 19:03:12 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-0.99.6.3-berkdb.patch, pam-0.99.6.3.ebuild:
+  Add a patch to disable berkdb support on request, and add berkdb useflag.
 
 *pam-0.99.6.3 (03 Oct 2006)
 
