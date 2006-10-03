@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.19 2006/09/29 20:27:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.20 2006/10/03 20:20:25 wolf31o2 Exp $
 
 inherit eutils games
 
-DESCRIPTION="Unreal Tournament 2003 Demo"
+DESCRIPTION="Demo for the sequel to the 1999 Game of the Year multi-player first-person shooter"
 HOMEPAGE="http://www.ut2003.com/"
 SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin
 	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip
