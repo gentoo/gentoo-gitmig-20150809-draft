@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5991 2006/10/03 14:32:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5992 2006/10/03 15:05:26 liquidx Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -450,6 +450,10 @@ net-proxy/squidclam
 >=dev-dotnet/ipod-sharp-0.6.2
 >=media-libs/libipoddevice-0.5.0
 media-plugins/banshee-official-plugins
+
+# Alastair Tse <liquidx@gentoo.org> (19 Sep 2006)
+# Not interested in maintaining this any more.
+net-im/ohphone
 
 # Alastair Tse <liquidx@gentoo.org> (19 Sep 2006)
 # You must run python-updater for this, masking until we 
