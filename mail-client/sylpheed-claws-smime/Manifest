@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST sylpheed-claws-extra-plugins-2.5.2.tar.bz2 3991186 RMD160 8e59b11fdcf6dbee11ca2c28d7616593d420333a SHA1 467071349377b11ccdc2e3d758e29d7e5c7e1b04 SHA256 2ac9469dfb914ab20fd73b75388db6e3e0a305883c789e34a5c9458feb838349
+EBUILD sylpheed-claws-smime-0.5.5.ebuild 902 RMD160 f1ab75f546e8146fdc6fcb5122796359bc9ad704 SHA1 9533824037ef57e7db9ca403c8feee3c7f4db052 SHA256 fbfefe324049741e6623a7bc063e5e5ca156b8e7f8be1d2da84ad524efb9b4c8
+MD5 1815714d6547be800ae103a69553eada sylpheed-claws-smime-0.5.5.ebuild 902
+RMD160 f1ab75f546e8146fdc6fcb5122796359bc9ad704 sylpheed-claws-smime-0.5.5.ebuild 902
+SHA256 fbfefe324049741e6623a7bc063e5e5ca156b8e7f8be1d2da84ad524efb9b4c8 sylpheed-claws-smime-0.5.5.ebuild 902
+MISC ChangeLog 385 RMD160 572adc704f69dfa5b3ac780759db8bc79affe41d SHA1 459b054ef8a57114ea11094e86dbd6dad1dc1c6f SHA256 354d00ce18aff55c5b15363d029187c7e5d6cd412482ced152c4978c0af27a4c
+MD5 bcdbf14de9d9e1d05ccf059dbb96d7ee ChangeLog 385
+RMD160 572adc704f69dfa5b3ac780759db8bc79affe41d ChangeLog 385
+SHA256 354d00ce18aff55c5b15363d029187c7e5d6cd412482ced152c4978c0af27a4c ChangeLog 385
+MISC metadata.xml 391 RMD160 7f1b73e31de26da92db3fc9e95b44005f1e5b69a SHA1 f2d029af653c83f84257a6aaf7378cddd469924d SHA256 02c2038414db2029d5e7aeb3e4c3b9ff43e14ec4e272bf253ea52e0fad3c7173
+MD5 d75cde2c7b7dc207563660cf2b595eee metadata.xml 391
+RMD160 7f1b73e31de26da92db3fc9e95b44005f1e5b69a metadata.xml 391
+SHA256 02c2038414db2029d5e7aeb3e4c3b9ff43e14ec4e272bf253ea52e0fad3c7173 metadata.xml 391
+MD5 7e925b8918ec759b988e3fea6ef3cbc2 files/digest-sylpheed-claws-smime-0.5.5 310
+RMD160 06b04d1c3864a0f83909f8fc823a6fcb17795a03 files/digest-sylpheed-claws-smime-0.5.5 310
+SHA256 df10007efdcea53dda92bab1f09fcc3820834993a2fd1678ef6041032a3d8522 files/digest-sylpheed-claws-smime-0.5.5 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFIovk10xuJSrg3/sRAnwqAJ9eIGS7HiqPNfgOlxsUi+n73fRd5wCfQAhB
+Ax0vyIuzdcPkQPofDdh2tSs=
+=9qgh
+-----END PGP SIGNATURE-----
