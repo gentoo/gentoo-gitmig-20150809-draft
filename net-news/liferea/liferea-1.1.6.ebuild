@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.1.6.ebuild,v 1.1 2006/10/02 16:09:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.1.6.ebuild,v 1.2 2006/10/03 13:25:10 dang Exp $
 
 inherit gnome2 flag-o-matic eutils autotools
 
@@ -17,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 	>=dev-libs/libxml2-2.5.10
 	|| (
 		firefox? ( www-client/mozilla-firefox )
-		sealonkey? ( www-client/seamonkey )
+		seamonkey? ( www-client/seamonkey )
 		=gnome-extra/gtkhtml-2*
 	)
 	gtkhtml? ( =gnome-extra/gtkhtml-2* )

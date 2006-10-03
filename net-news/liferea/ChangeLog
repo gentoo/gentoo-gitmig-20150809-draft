@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.55 2006/10/02 16:09:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.56 2006/10/03 13:25:10 dang Exp $
+
+  03 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> liferea-1.1.6.ebuild:
+  fix seamonkey typo
 
 *liferea-1.1.6 (02 Oct 2006)
 
