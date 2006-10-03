@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.30 2006/05/20 06:52:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.31 2006/10/03 14:33:55 dsd Exp $
 
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
 inherit autotools eutils
 
 MESA_VER="5.0"
@@ -25,12 +27,23 @@ S="${WORKDIR}/Mesa-${MESA_VER}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Remove ancient libtool shipped in tarball
+	rm m4/libtool.m4
+
+	# Remove acinclude.m4 because we regenerate this into aclocal.m4 during
+	# eautoreconf
+	rm acinclude.m4
+
+	epatch "${FILESDIR}/${P}-new-autotools.patch"
 	epatch "${FILESDIR}/${P}-fix-GLU-linking.patch"
-	eautoreconf
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
-	econf || die
+	# --without-glut flag actually refers to whether mesa would build with or
+	# without *external* glut, in this case we want the internal one
+	econf --without-glut || die
 	cd "${S}"/src-glut
 	emake || die "emake failed"
 }
