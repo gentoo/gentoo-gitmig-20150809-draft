@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.3 2006/02/02 01:45:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.4 2006/10/03 15:38:37 genstef Exp $
+
+  03 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -osptoolkit-3.3.1.ebuild, osptoolkit-3.3.4.ebuild:
+  Fix get_libdir, bug 141779
 
 *osptoolkit-3.3.4 (02 Feb 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/osptoolkit-3.3.4.ebuild,v 1.1 2006/02/02 01:45:17 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/osptoolkit-3.3.4.ebuild,v 1.2 2006/10/03 15:38:37 genstef Exp $
 
 DESCRIPTION="OSP (Open Settlement Protocol) library"
 HOMEPAGE="http://www.transnexus.com/"
@@ -39,10 +39,10 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/include /usr/$(get_libdir)
+	dodir /usr/include /usr/lib
 
 	cd ${S}/src
-	make INSTALL_PATH=${D}/usr LIBDIR=$(get_libdir) \
+	make INSTALL_PATH=${D}/usr LIBDIR=lib \
 		install || die "make install failed"
 
 	sed -i  -e "s:^\(OPENSSL_CONF\).*:\1=/etc/ssl/openssl.cnf:" \
