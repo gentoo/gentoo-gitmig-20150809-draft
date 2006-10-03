@@ -1,6 +1,11 @@
 # ChangeLog for rox-base/oroborox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.4 2006/05/23 20:33:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.5 2006/10/03 18:57:17 lack Exp $
+
+*oroborox-0.9.8 (03 Oct 2006)
+
+  03 Oct 2006; <lack@gentoo.org> metadata.xml, +oroborox-0.9.8.ebuild:
+  Version bump to 0.9.8 (Bug #133624), and accepting maintainer role.
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata, bug 131936.
