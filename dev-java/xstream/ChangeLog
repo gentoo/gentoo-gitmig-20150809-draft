@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xstream
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.2 2006/09/28 21:33:28 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.3 2006/10/03 10:32:27 caster Exp $
+
+  03 Oct 2006; Vlastimil Babka <caster@gentoo.org> xstream-1.2.ebuild:
+  Fixed javadoc target name and raised version of joda-time dependency to
+  >=1.2. Thanks to <bme@visi.com> in bug #149917 for reporting.
 
   28 Sep 2006; Vlastimil Babka <caster@gentoo.org> xstream-1.2.ebuild:
   Added missing xml-commons-external dependency.
