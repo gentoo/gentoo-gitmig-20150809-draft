@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.3.0.37.ebuild,v 1.2 2006/10/03 00:12:52 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.3.0.50.ebuild,v 1.1 2006/10/03 00:12:52 humpback Exp $
 
 inherit eutils qt3
 
@@ -25,6 +25,7 @@ DEPEND="
 		>=app-emulation/emul-linux-x86-soundlibs-2.4
 		!static? ( >=app-emulation/emul-linux-x86-qtlibs-1.1 ) )
 	x86? ( >=sys-libs/glibc-2.3.2
+		>=media-libs/alsa-lib-1.0.11
 		!static? ( $(qt_min_version 3.2) ) )"
 RDEPEND="${DEPEND}
 	>=sys-apps/dbus-0.23.4"
