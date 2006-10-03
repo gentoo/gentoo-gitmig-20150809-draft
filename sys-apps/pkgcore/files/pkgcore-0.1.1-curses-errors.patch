@@ -1,0 +1,32 @@
+# Bazaar revision bundle v0.8
+#
+# message:
+#   Deal with curses errors.
+# committer: Marien Zwart <marienz@gentoo.org>
+# date: Tue 2006-10-03 16:05:21.687999964 +0200
+
+=== modified file pkgcore/util/formatters.py
+--- pkgcore/util/formatters.py
++++ pkgcore/util/formatters.py
+@@ -339,5 +339,10 @@
+         # We do this instead of stream.isatty() because TerminfoFormatter
+         # needs an fd to pass to curses, not just a filelike talking to a tty.
+         if os.isatty(fd):
+-            return TerminfoFormatter(stream)
++            try:
++                return TerminfoFormatter(stream)
++            except curses.error:
++                # This happens if TERM is unset and possibly in more cases.
++                # Just fall back to the PlainTextFormatter.
++                pass
+     return PlainTextFormatter(stream)
+
+# revision id: marienz@gentoo.org-20061003140521-5ef755d3e51739cc
+# sha1: dc65ddb0fab2447a68349918e3f32e21caf4413e
+# inventory sha1: c2e8143bb9428dcd311d1e7e2faf2264955028d2
+# parent ids:
+#   ferringb@gentoo.org-20061003053615-60886f02617f4593
+# base id: ferringb@gentoo.org-20061003053615-60886f02617f4593
+# properties:
+#   branch-nick: trac
+

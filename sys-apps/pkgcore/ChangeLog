@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.4 2006/10/03 01:11:27 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.5 2006/10/03 14:28:52 marienz Exp $
+
+*pkgcore-0.1.1-r1 (03 Oct 2006)
+
+  03 Oct 2006; Marien Zwart <marienz@gentoo.org>
+  +files/pkgcore-0.1.1-curses-errors.patch,
+  +files/pkgcore-0.1.1-filter-env-cflags.patch, +pkgcore-0.1.1-r1.ebuild:
+  Make filter-env building not use the python CFLAGS, deal with curses errors.
 
 *pkgcore-0.1.1 (03 Oct 2006)
 
