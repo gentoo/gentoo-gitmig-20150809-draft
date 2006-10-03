@@ -1,6 +1,18 @@
 # ChangeLog for rox-base/volume
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.4 2006/05/23 20:17:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.5 2006/10/03 13:20:27 lack Exp $
+
+  03 Oct 2006; <lack@gentoo.org> +files/volume-009-no_channels.patch,
+  metadata.xml, -volume-007.ebuild, +volume-009.ebuild:
+  Added patch for soundcards which only display a small number of available
+  channels.  (Patch sent upstream)
+
+*volume-009 (01 Oct 2006)
+
+  01 Oct 2006; <lack@gentoo.org> metadata.xml, -volume-007.ebuild,
+  +volume-009.ebuild:
+  Version bump to 009 (imported from breakmygentoo.net, big thanks to Peter
+  Hyman)
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata, bug 131936.
