@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.27 2006/10/02 18:02:36 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.28 2006/10/03 03:56:48 tsunam Exp $
+
+  03 Oct 2006; Joshua Jackson <tsunam@gentoo.org> ncompress-4.2.4.1.ebuild:
+  Stable x86; bug #141728
 
   02 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> ncompress-4.2.4.1.ebuild:
   Marked stable on amd64 for bug #141728
