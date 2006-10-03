@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.131 2006/09/19 19:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.132 2006/10/03 23:00:57 agriffis Exp $
+
+  03 Oct 2006; Aron Griffis <agriffis@gentoo.org> totem-2.16.1.ebuild:
+  Mark 2.16.1 ~ia64
 
   19 Sep 2006; Aron Griffis <agriffis@gentoo.org> totem-1.4.2-r1.ebuild:
   Mark 1.4.2-r1 stable on ia64. #139612
