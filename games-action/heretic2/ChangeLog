@@ -1,0 +1,10 @@
+# ChangeLog for games-action/heretic2
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.1 2006/10/03 22:32:24 nyhm Exp $
+
+*heretic2-1.06c (03 Oct 2006)
+
+  03 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +metadata.xml,
+  +heretic2-1.06c.ebuild:
+  Initial commit. Modified ebuild from bug #136869 by Anton Romanov.
+
