@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.46 2006/09/18 07:19:40 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.47 2006/10/03 07:30:40 keri Exp $
+
+  03 Oct 2006; keri <keri@gentoo.org> mercury-0.12.2-r3.ebuild:
+  Add ~amd64 keyword.
 
   18 Sep 2006; keri <keri@gentoo.org> mercury-0.12.2-r3.ebuild:
   Disable deepprof libgrades.
