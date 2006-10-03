@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.4 2006/09/28 11:05:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.5 2006/10/03 12:44:28 nelchael Exp $
 
 inherit eutils
 
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-xdb_file.c-rev1107.patch"
 	epatch "${FILESDIR}/${P}-xdb_sql.c-rev1211.patch"
 	epatch "${FILESDIR}/${P}-genhash.c-rev1253.patch"
+	epatch "${FILESDIR}/${P}-crypt.patch"
 
 }
 
