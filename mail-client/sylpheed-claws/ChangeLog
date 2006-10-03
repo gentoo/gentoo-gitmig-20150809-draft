@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.107 2006/08/30 19:35:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.108 2006/10/03 10:31:57 ticho Exp $
+
+*sylpheed-claws-2.5.2 (03 Oct 2006)
+
+  03 Oct 2006; <ticho@gentoo.org> +sylpheed-claws-2.5.2.ebuild:
+  Version bump. Bug #149136, reported by <timbrain at post.cz>.
 
   30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org>
   sylpheed-claws-2.4.0.ebuild:
