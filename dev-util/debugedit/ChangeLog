@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debugedit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.9 2006/09/25 18:20:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.10 2006/10/03 21:40:38 wolf31o2 Exp $
+
+  03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  debugedit-4.4.6.ebuild:
+  Stable on x86 wrt bug #148993.
 
   25 Sep 2006; <nixnut@gentoo.org> debugedit-4.4.6.ebuild:
   Stable on ppc wrt bug 148993
