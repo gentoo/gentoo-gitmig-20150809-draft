@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5993 2006/10/03 15:10:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5994 2006/10/03 15:41:18 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -41,7 +41,7 @@
 =mail-client/sylpheed-claws-rssyl-0.6.1
 =mail-client/sylpheed-claws-vcalendar-1.89.1
 =mail-client/sylpheed-claws-newmail-0.0.7
-=mail-client/sylpheed-claws-notification-0.9.5
+=mail-client/sylpheed-claws-notification-0.5
 =mail-client/sylpheed-claws-smime-0.5.5
 
 # Diego Pettenò <flameeyes@gentoo.org> (3 Oct 2006)
