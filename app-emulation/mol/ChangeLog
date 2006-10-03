@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.63 2006/09/05 18:46:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.64 2006/10/03 04:08:36 josejx Exp $
+
+*mol-0.9.71 (03 Oct 2006)
+
+  03 Oct 2006; Joseph Jezak <josejx@gentoo.org>
+  +files/mol-0.9.71-pciproxy-dump.patch,
+  -files/mol-0.9.71_pre9-pciproxy-dump.patch, -mol-0.9.71_pre8.ebuild,
+  -mol-0.9.71_pre9.ebuild, +mol-0.9.71.ebuild:
+  Removed _pre9 and _pre8, added 0.9.71.
 
 *mol-0.9.71_pre8-r1 (05 Sep 2006)
 
