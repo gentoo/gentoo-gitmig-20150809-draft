@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/mikachan-font-ttc
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttc/ChangeLog,v 1.1 2006/10/03 09:33:42 flameeyes Exp $
+
+*mikachan-font-ttc-9.1 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +mikachan-font-ttc-9.1.ebuild:
+  Initial import, mikachan font in TrueType Collection format. See bug #148097
+  for information.
+
