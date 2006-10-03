@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.123 2006/09/14 19:08:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.124 2006/10/03 01:47:42 genstef Exp $
+
+*asterisk-1.2.12.1 (03 Oct 2006)
+
+  03 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -asterisk-1.0.7-r4.ebuild, -asterisk-1.0.8-r3.ebuild,
+  -asterisk-1.0.9-r4.ebuild, -asterisk-1.0.10-r2.ebuild,
+  -asterisk-1.2.9_p1.ebuild, +asterisk-1.2.12.1.ebuild:
+  version bump from overlay
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   asterisk-1.2.11.ebuild:
