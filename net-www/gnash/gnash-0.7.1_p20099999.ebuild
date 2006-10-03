@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20099999.ebuild,v 1.1 2006/09/01 12:29:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20099999.ebuild,v 1.2 2006/10/03 14:53:13 genstef Exp $
 
 inherit nsplugins kde-functions autotools cvs
 
@@ -95,6 +95,8 @@ src_compile() {
 		$(use_enable nptl pthreads) \
 		$(use_enable xml) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
+		--without-gcc-arch \
+		--enable-visibility \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
