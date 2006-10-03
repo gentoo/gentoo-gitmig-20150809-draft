@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/mikachan-font-otf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.1 2006/10/03 09:39:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.2 2006/10/03 09:40:32 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml:
+  Add metadata I forgot.
 
 *mikachan-font-otf-9.1 (03 Oct 2006)
 
