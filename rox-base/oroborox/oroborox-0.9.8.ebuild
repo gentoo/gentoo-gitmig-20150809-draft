@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8.ebuild,v 1.1 2006/10/03 18:57:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8.ebuild,v 1.2 2006/10/03 19:05:46 lack Exp $
 
 inherit rox
 
@@ -21,6 +21,7 @@ IUSE="xinerama" #startup-notification
 
 DEPEND="
 	>=media-libs/freetype-2.0
+	virtual/xft
 	|| ( (
 		x11-proto/xproto
 		x11-proto/xextproto
@@ -30,7 +31,6 @@ DEPEND="
 		x11-libs/libXrender
 		x11-libs/libXcomposite
 		x11-libs/libXdamage
-		x11-libs/libXft
 		xinerama? ( x11-proto/xineramaproto )
 		startup-notification? ( x11-libs/startup-notification )
 	)
@@ -40,6 +40,7 @@ DEPEND="
 
 RDEPEND="
 	>=media-libs/freetype-2.0
+	virtual/xft
 	|| ( (
 		x11-libs/libX11
 		x11-libs/libXext
