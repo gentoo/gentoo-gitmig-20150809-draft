@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.2 2006/10/01 21:52:51 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/gksu-2.0.0.ebuild,v 1.3 2006/10/03 23:17:47 agriffis Exp $
 
 inherit gnome2 fixheadtails
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nongnu.org/gksu/"
 SRC_URI="http://people.debian.org/~kov/gksu/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc gnome"
 
 RDEPEND=">=x11-libs/libgksu-2
