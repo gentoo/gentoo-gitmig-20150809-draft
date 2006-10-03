@@ -1,6 +1,10 @@
 # ChangeLog for dev-php4/pecl-apc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.15 2006/09/30 13:34:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/ChangeLog,v 1.16 2006/10/03 21:57:15 wolf31o2 Exp $
+
+  03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  pecl-apc-3.0.12_p2.ebuild:
+  Stable on amd64/x86 wrt bug #149436.
 
   30 Sep 2006; <nixnut@gentoo.org> pecl-apc-3.0.12_p2.ebuild:
   Stable on ppc wrt bug 149436
