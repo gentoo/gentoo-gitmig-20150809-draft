@@ -1,0 +1,10 @@
+# ChangeLog for mail-client/sylpheed-claws-notification
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-notification/ChangeLog,v 1.1 2006/10/03 15:41:46 ticho Exp $
+
+*sylpheed-claws-notification-0.5 (03 Oct 2006)
+
+  03 Oct 2006; <ticho@gentoo.org> +metadata.xml,
+  +sylpheed-claws-notification-0.5.ebuild:
+  Initial import.
+
