@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.18 2006/09/21 15:51:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.19 2006/10/03 09:12:33 keri Exp $
+
+  03 Oct 2006; keri <keri@gentoo.org> qu-prolog-7.2-r1.ebuild,
+  qu-prolog-7.4.ebuild:
+  Add ~sparc keyword.
 
   21 Sep 2006; <nixnut@gentoo.org> qu-prolog-7.2-r1.ebuild:
   Stable on ppc wrt bug 142960
