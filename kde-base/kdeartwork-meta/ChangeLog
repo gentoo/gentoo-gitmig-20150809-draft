@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.54 2006/10/03 09:47:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.55 2006/10/03 10:01:07 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdeartwork-meta-3.5.5.ebuild:
+  Fix minimum version.
 
 *kdeartwork-meta-3.5.5 (03 Oct 2006)
 

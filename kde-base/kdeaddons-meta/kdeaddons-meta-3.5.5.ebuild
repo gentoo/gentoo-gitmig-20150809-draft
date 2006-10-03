@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.5.5.ebuild,v 1.1 2006/10/03 09:39:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.5.5.ebuild,v 1.2 2006/10/03 09:58:03 flameeyes Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -19,7 +19,7 @@ $(deprange $PV $MAXKDEVER kde-base/ksig)
 $(deprange $PV $MAXKDEVER kde-base/kaddressbook-plugins)
 $(deprange $PV $MAXKDEVER kde-base/kate-plugins)
 $(deprange $PV $MAXKDEVER kde-base/kicker-applets)
-$(deprange 3.5.4 $MAXKDEVER kde-base/kdeaddons-kfile-plugins)
+$(deprange 3.5.0 $MAXKDEVER kde-base/kdeaddons-kfile-plugins)
 $(deprange $PV $MAXKDEVER kde-base/konq-plugins)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-akregator)
 $(deprange 3.5.4 $MAXKDEVER kde-base/kdeaddons-docs-konq-plugins)

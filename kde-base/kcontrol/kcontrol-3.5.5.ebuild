@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.5.ebuild,v 1.1 2006/10/03 09:32:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.5.ebuild,v 1.2 2006/10/03 09:56:11 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -24,7 +24,7 @@ DEPEND=">=media-libs/freetype-2
 
 RDEPEND="${DEPEND}
 	sys-apps/usbutils
-$(deprange 3.5.4 $MAXKDEVER kde-base/kcminit)
+$(deprange 3.5.3 $MAXKDEVER kde-base/kcminit)
 $(deprange $PV $MAXKDEVER kde-base/kdebase-data)
 $(deprange $PV $MAXKDEVER kde-base/kdesu)
 $(deprange $PV $MAXKDEVER kde-base/khelpcenter)
