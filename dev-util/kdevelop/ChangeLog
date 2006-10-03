@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.128 2006/07/31 20:44:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.129 2006/10/03 14:36:07 flameeyes Exp $
+
+*kdevelop-3.3.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kdevelop-3.3.5.ebuild:
+  Bump to 3.3.5 (pre-release).
 
   31 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/kdevelop-3.1.0-bdb-mutex.patch,
