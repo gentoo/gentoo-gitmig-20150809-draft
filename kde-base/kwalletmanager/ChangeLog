@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwalletmanager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.52 2006/10/03 12:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletmanager/ChangeLog,v 1.53 2006/10/03 14:43:41 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kwalletmanager-3.5.5.ebuild:
+  Remove unneeded patch.
 
 *kwalletmanager-3.5.5 (03 Oct 2006)
 

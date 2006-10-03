@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.5.ebuild,v 1.1 2006/10/03 11:30:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.5.ebuild,v 1.2 2006/10/03 14:42:30 flameeyes Exp $
 
 KMNAME=kdebase
 # Note: we need >=kdelibs-3.3.2-r1, but we don't want 3.3.3!
@@ -23,9 +23,3 @@ java? ( >=virtual/jre-1.4 )"
 
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY=kdesktop/KDesktopIface.h
-
-src_unpack() {
-	kde-meta_src_unpack
-	epatch "${FILESDIR}/${P}-clear-history.patch"
-}
-
