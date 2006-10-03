@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-3.5.5.ebuild,v 1.1 2006/10/03 13:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-3.5.5.ebuild,v 1.2 2006/10/03 18:38:29 flameeyes Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt"
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND=" >=virtual/ruby-1.8
 $(deprange 3.5.2 $MAXKDEVER kde-base/smoke)"
 
-PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/qtruby-3.5.4-more.patch"
+PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 # Because this installs into /usr/lib/ruby/..., it doesn't have SLOT=X.Y like the rest of KDE,
 # and it installs into /usr entirely.

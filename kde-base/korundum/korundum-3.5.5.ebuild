@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.5.ebuild,v 1.1 2006/10/03 11:42:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.5.ebuild,v 1.2 2006/10/03 18:40:11 flameeyes Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
@@ -21,7 +21,7 @@ $(deprange $PV $MAXKDEVER kde-base/qtruby)
 $(deprange 3.5.2 $MAXKDEVER kde-base/smoke)"
 RDEPEND="${DEPEND}"
 
-PATCHES="$FILESDIR/no-gtk-glib-check.diff $FILESDIR/qtruby-3.5.4-more.patch $FILESDIR/korundum-3.5.4-more.patch"
+PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 # Because this installs into /usr/lib/ruby/..., it doesn't have SLOT=X.Y like the rest of KDE,
 # and it installs into /usr entirely.

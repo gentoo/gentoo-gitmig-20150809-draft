@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.46 2006/10/03 13:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.47 2006/10/03 18:38:29 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> qtruby-3.5.5.ebuild:
+  Remove unneeded patch.
 
 *qtruby-3.5.5 (03 Oct 2006)
 
