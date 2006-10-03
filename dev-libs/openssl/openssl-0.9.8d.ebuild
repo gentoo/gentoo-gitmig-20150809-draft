@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.11 2006/10/01 21:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.12 2006/10/03 05:00:22 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -121,7 +121,7 @@ src_test() {
 }
 
 src_install() {
-	emake INSTALL_PREFIX="${D}" install || die
+	emake -j1 INSTALL_PREFIX="${D}" install || die
 	dodoc CHANGES* FAQ NEWS README doc/*.txt
 	dohtml doc/*
 
