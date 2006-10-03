@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.44 2006/10/03 08:47:32 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.45 2006/10/03 20:37:55 ian Exp $
+
+  03 Oct 2006; Christian Hartmann <ian@gentoo.org> XML-Simple-2.15.ebuild:
+  Fixed bug #149948
 
 *XML-Simple-2.15 (03 Oct 2006)
 
