@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.9.ebuild,v 1.6 2006/10/02 21:20:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.9.ebuild,v 1.7 2006/10/03 15:48:33 vapier Exp $
 
 export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
@@ -72,5 +72,5 @@ src_install() {
 		rm -rf "${insdir}"/usr/doc
 		dodoc CONTRIBUTORS ChangeLog README TODO readme.txt
 	fi
-	is_crosscompile && dosym usr mingw
+	is_crosscompile && dosym usr /usr/${CTARGET}/mingw
 }
