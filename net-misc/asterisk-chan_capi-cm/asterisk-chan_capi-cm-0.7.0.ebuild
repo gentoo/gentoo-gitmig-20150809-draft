@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.7.0.ebuild,v 1.1 2006/09/17 22:02:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/asterisk-chan_capi-cm-0.7.0.ebuild,v 1.2 2006/10/03 10:57:17 genstef Exp $
 
 IUSE=""
 
@@ -27,9 +27,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}/chan_capi-0.6.3-gentoo.diff"
-
-	use elibc_uclibc && \
-		epatch "${FILESDIR}/chan_capi-0.6.4-uclibc.diff"
+	epatch "${FILESDIR}/chan_capi-0.7.0-uclibc.diff"
 }
 
 src_compile() {

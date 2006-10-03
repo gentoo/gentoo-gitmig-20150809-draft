@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk-chan_capi-cm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/ChangeLog,v 1.18 2006/09/17 22:02:41 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_capi-cm/ChangeLog,v 1.19 2006/10/03 10:57:17 genstef Exp $
+
+  03 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/chan_capi-cm-0.6.0-asterisk-1.2.diff,
+  -files/chan_capi-0.6.0-gentoo.diff,
+  -files/chan_capi-cm-0.6.1-asterisk-1.2.diff,
+  -files/chan_capi-0.6.1-gentoo.diff, -files/chan_capi-0.6.4-uclibc.diff,
+  +files/chan_capi-0.7.0-uclibc.diff, -asterisk-chan_capi-cm-0.5.3.ebuild,
+  -asterisk-chan_capi-cm-0.6.0.ebuild, -asterisk-chan_capi-cm-0.6.1.ebuild,
+  -asterisk-chan_capi-cm-0.6.4.ebuild, -asterisk-chan_capi-cm-0.6.5.ebuild,
+  asterisk-chan_capi-cm-0.7.0.ebuild:
+  Fix uclibc patch and make it unconditional thanks to Natanael Copa
+  <natanael.copa@gmail.com> in bug 148620
 
 *asterisk-chan_capi-cm-0.7.0 (17 Sep 2006)
 
