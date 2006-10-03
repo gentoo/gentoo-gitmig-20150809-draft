@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5.ebuild,v 1.1 2006/10/03 10:02:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5.ebuild,v 1.2 2006/10/03 23:09:07 carlo Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -54,6 +54,9 @@ RDEPEND="${RDEPEND}
 	spell? ( || (  ( app-text/aspell app-dicts/aspell-en )
 			  app-text/ispell ) )"
 
+# Testing code is rather broken and merely for developer purposes, so disable it.
+RESTRICT="test"
+
 pkg_setup() {
 	if use legacyssl ; then
 		echo ""
@@ -76,10 +79,6 @@ src_unpack() {
 		# This patch won't be included upstream, see bug #128922
 		epatch "${WORKDIR}/patches/kdelibs_3.5.4-kssl-3des.patch" || die "Patch did not apply."
 	fi
-
-	# TODO - fix broken tests
-	sed -i -e "s:client tests:client:" "${S}/dcop/Makefile.am"
-	sed -i -e "s:SUBDIRS = . ui tests:SUBDIRS = . ui:" "${S}/kspell2/Makefile.am"
 
 	# TODO - kspell2 Xspell plugins are automagically detected.
 	#		 As nothing uses kspell2, don't install them.
