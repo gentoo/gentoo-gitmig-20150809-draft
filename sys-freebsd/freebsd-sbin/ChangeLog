@@ -1,6 +1,16 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.17 2006/09/22 05:57:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.18 2006/10/03 13:38:06 uberlord Exp $
+
+  03 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  -files/freebsd-sbin-6.1-devd-conf.patch, +files/devd.conf,
+  +files/devd.initd, +files/devd_queue, files/sysctl.initd,
+  freebsd-sbin-6.1.ebuild, freebsd-sbin-6.2_beta1.ebuild:
+  Tart up init scripts.
+  Install a Gentooified devd.cond and devd_queue
+
+  03 Oct 2006; Roy Marples <uberlord@gentoo.org> files/sysctl.initd:
+  Updated sysctl init script a little.
 
   22 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-sbin-6.2_beta1.ebuild:

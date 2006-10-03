@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.4 2006/09/11 22:08:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.1.ebuild,v 1.5 2006/10/03 13:38:06 uberlord Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
@@ -50,9 +50,6 @@ PATCHES="${FILESDIR}/${PN}-setXid.patch
 src_unpack() {
 	freebsd_src_unpack
 	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
-
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}/${PN}-6.1-devd-conf.patch"
 }
 
 src_install() {
@@ -63,13 +60,23 @@ src_install() {
 	dodir /bin
 	mv "${D}/sbin/ping" "${D}/bin/" || die "mv failed"
 
+	newinitd "${FILESDIR}/devd.initd" devd
 	newinitd "${FILESDIR}/ipfw.initd" ipfw
 	newinitd "${FILESDIR}/sysctl.initd" sysctl
 
+	# Gentoo devd.conf
+	# devd_queue is a filter so that only the last event is applied to an
+	# init script
+	insinto /etc
+	newins "${FILESDIR}/devd.conf" devd.conf
+	exeinto /etc
+	newexe "${FILESDIR}/devd_queue" devd_queue
+
+	# Do we need pccard.conf if we have devd?
+	# Maybe ship our own sysctl.conf so things like radvd work out of the box.
 	cd "${WORKDIR}/etc/"
 	insinto /etc
-	doins devd.conf pccard_ether defaults/pccard.conf minfree rc.firewall \
-		sysctl.conf
+	doins defaults/pccard.conf minfree sysctl.conf
 
 	# Install a crontab for adjkerntz
 	insinto /etc/cron.d
