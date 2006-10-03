@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>X11-drivers</herd>
-<maintainer>
-  <email>X11-drivers@gentoo.org</email>
-</maintainer>
-<longdescription>Linux kernel module for then NVIDIA X11 driver</longdescription>
-</pkgmetadata>
