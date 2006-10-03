@@ -1,6 +1,13 @@
 # ChangeLog for rox-extra/fetch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.8 2006/05/24 17:52:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.9 2006/10/03 13:40:02 lack Exp $
+
+*fetch-0.3.1 (03 Oct 2006)
+
+  03 Oct 2006; <lack@gentoo.org> -fetch-0.0.3.ebuild, -fetch-0.1.1.ebuild,
+  -fetch-0.1.2.ebuild, +fetch-0.3.1.ebuild:
+  Version bump to 0.31 (Imported from breakmygentoo.net, thanks to Peter
+  Hyman), also accepting maintainer role.
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.
