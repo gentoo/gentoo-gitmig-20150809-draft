@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.7.ebuild,v 1.7 2006/09/22 22:00:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.5.0.7.ebuild,v 1.8 2006/10/03 02:11:44 kumba Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/source/firefox-${PV}-source.tar.bz2
 	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
-KEYWORDS="-* amd64 arm hppa ~ia64 ~mips ppc sparc x86 ~x86-fbsd"
+KEYWORDS="-* amd64 arm hppa ~ia64 mips ppc sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 IUSE="java mozdevelop"
