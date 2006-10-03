@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.9 2006/06/15 12:18:36 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.1-r3.ebuild,v 1.10 2006/10/03 23:15:54 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -225,15 +225,15 @@ src_compile() {
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
 
-	GHC_CFLAGS="" ghc_setup_wrapper $(ghc-version) > "${TMP}/ghc.sh"
-	chmod +x "${TMP}/ghc.sh"
+	GHC_CFLAGS="" ghc_setup_wrapper $(ghc-version) > "${T}/ghc.sh"
+	chmod +x "${T}/ghc.sh"
 
 	# we've patched some configure.ac files do allow us to enable/disable the
 	# X11 and HGL packages, so we need to autoreconf.
 	eautoreconf
 
 	econf \
-		--with-ghc="${TMP}/ghc.sh" \
+		--with-ghc="${T}/ghc.sh" \
 		$(use_enable opengl opengl) \
 		$(use_enable opengl glut) \
 		$(use openal && use opengl \

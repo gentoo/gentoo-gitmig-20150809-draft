@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.14 2006/08/28 17:03:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.15 2006/10/03 23:15:54 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -231,15 +231,15 @@ src_compile() {
 		echo "SplitObjs=NO" >> mk/build.mk
 	fi
 
-	GHC_CFLAGS="" ghc_setup_wrapper $(ghc-version) > "${TMP}/ghc.sh"
-	chmod +x "${TMP}/ghc.sh"
+	GHC_CFLAGS="" ghc_setup_wrapper $(ghc-version) > "${T}/ghc.sh"
+	chmod +x "${T}/ghc.sh"
 
 	# We've patched some configure.ac files to fix the OpenAL/ALUT bindings.
 	# So we need to autoreconf.
 	eautoreconf
 
 	econf \
-		--with-ghc="${TMP}/ghc.sh" \
+		--with-ghc="${T}/ghc.sh" \
 		$(use_enable opengl opengl) \
 		$(use_enable opengl glut) \
 		$(use openal && use opengl \
@@ -303,7 +303,7 @@ pkg_postinst () {
 src_test() {
 	if use test; then
 		local summary
-		summary="${TMP}/testsuite-summary.txt"
+		summary="${T}/testsuite-summary.txt"
 
 		make -C "${S}/testsuite/" boot || die "Preparing the testsuite failed"
 		make -C "${S}/testsuite/tests/ghc-regress" \

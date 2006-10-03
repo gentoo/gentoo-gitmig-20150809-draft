@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.112 2006/08/28 17:03:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.113 2006/10/03 23:15:54 dcoutts Exp $
+
+  03 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> ghc-6.4.1-r3.ebuild,
+  ghc-6.4.2.ebuild:
+  Use ${T} rather than ${TMP}
 
   28 Aug 2006; Jeroen Roovers <jer@gentoo.org> ghc-6.4.2.ebuild:
   Stable for HPPA (bug #140369).
