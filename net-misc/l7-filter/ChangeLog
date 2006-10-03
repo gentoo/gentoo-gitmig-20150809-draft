@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.32 2006/10/01 07:12:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.33 2006/10/03 21:13:04 wolf31o2 Exp $
+
+  03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> l7-filter-2.3.ebuild:
+  Stable on x86 wrt bug #141688.
 
   01 Oct 2006; Markus Rothe <corsair@gentoo.org> l7-filter-2.3.ebuild:
   Stable on ppc64
