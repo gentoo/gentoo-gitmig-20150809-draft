@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.6 2006/09/15 20:57:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.7 2006/10/03 20:35:04 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -49,7 +49,7 @@ src_install() {
 	# Change to safe default of 800x600 and option of normal opengl driver
 	sed -i "${demo}"/base/default.cfg \
 		-e "s:fullscreen \"1\":fullscreen \"1\"\nset vid_mode \"4\":" \
-		-e "s:libGL:${ROOT}usr/$(get_libdir)/libGL:" \
+		-e "s:libGL:/usr/$(get_libdir)/libGL:" \
 		|| die "sed failed"
 
 	insinto "${dir}"
