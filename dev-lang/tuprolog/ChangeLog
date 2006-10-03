@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.1 2006/09/10 02:33:03 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.2 2006/10/03 16:31:30 keri Exp $
+
+  03 Oct 2006; keri <keri@gentoo.org> tuprolog-1.3.0.ebuild:
+  License update. Thanks to Giulio Piancastelli.
 
 *tuprolog-1.3.0 (10 Sep 2006)
 
