@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.15 2006/10/03 23:15:54 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.2.ebuild,v 1.16 2006/10/03 23:42:18 dcoutts Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -161,6 +161,7 @@ src_unpack() {
 	cd ${S}
 	epatch "${WORKDIR}/${P}-alut.patch"
 	epatch "${FILESDIR}/${P}-sparc32plus.patch"
+	epatch "${FILESDIR}/${P}-sparcmangler.patch"
 
 	# Modify the ghc driver script to use GHC_CFLAGS
 	echo "SCRIPT_SUBST_VARS += GHC_CFLAGS" >> "${S}/ghc/driver/ghc/Makefile"
