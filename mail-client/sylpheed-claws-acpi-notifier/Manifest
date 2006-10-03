@@ -3,6 +3,7 @@ Hash: SHA1
 
 DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
 DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+DIST sylpheed-claws-extra-plugins-2.5.2.tar.bz2 3991186 RMD160 8e59b11fdcf6dbee11ca2c28d7616593d420333a SHA1 467071349377b11ccdc2e3d758e29d7e5c7e1b04 SHA256 2ac9469dfb914ab20fd73b75388db6e3e0a305883c789e34a5c9458feb838349
 EBUILD sylpheed-claws-acpi-notifier-0.8.ebuild 1464 RMD160 97c07cf0990433651028c1266fe8c8a20895eeb2 SHA1 89b2295fd63b4967ad478762e55dd50ca36d1dba SHA256 aad451f73c6130881f3e8d09e1be64235ea8a651a772b9b6a3e98b75cc6632a4
 MD5 29dd55adf7aa210d4992191e208173fd sylpheed-claws-acpi-notifier-0.8.ebuild 1464
 RMD160 97c07cf0990433651028c1266fe8c8a20895eeb2 sylpheed-claws-acpi-notifier-0.8.ebuild 1464
@@ -11,10 +12,14 @@ EBUILD sylpheed-claws-acpi-notifier-1.0.2.ebuild 1242 RMD160 90d5ffa20a0f19c97b6
 MD5 306ae5966e39626f78b05cdf5e68d5cd sylpheed-claws-acpi-notifier-1.0.2.ebuild 1242
 RMD160 90d5ffa20a0f19c97b6d7f2f86886a628329b4a6 sylpheed-claws-acpi-notifier-1.0.2.ebuild 1242
 SHA256 8387992cf5eb6b37d331693b416dd8ec32e0c04f8a115596d1e570fde03af0e6 sylpheed-claws-acpi-notifier-1.0.2.ebuild 1242
-MISC ChangeLog 1214 RMD160 3d7bde73af479f80f8ca62d61fa6ca9e09a03948 SHA1 9568ef930c3cb95e7e7cf1c08cf52cb89cc12117 SHA256 9cbf8dc8a9796817eafe2dea6f2692690f6fe7aeac0463f0693bd164e43e5d8b
-MD5 7f27138f712d201e51878013f007cf92 ChangeLog 1214
-RMD160 3d7bde73af479f80f8ca62d61fa6ca9e09a03948 ChangeLog 1214
-SHA256 9cbf8dc8a9796817eafe2dea6f2692690f6fe7aeac0463f0693bd164e43e5d8b ChangeLog 1214
+EBUILD sylpheed-claws-acpi-notifier-1.0.3.ebuild 1241 RMD160 cf033e82346c9e08c9c30ef4874ab2b8ca383fae SHA1 d4d64f644c68f5f8ec5f184a96840b2152b2b19c SHA256 e1dc04dab74ff9274e10af18555e95c21eb0c41e5098a88d0e97595a6770df2f
+MD5 21a7f7686d35280b993e7152a5490631 sylpheed-claws-acpi-notifier-1.0.3.ebuild 1241
+RMD160 cf033e82346c9e08c9c30ef4874ab2b8ca383fae sylpheed-claws-acpi-notifier-1.0.3.ebuild 1241
+SHA256 e1dc04dab74ff9274e10af18555e95c21eb0c41e5098a88d0e97595a6770df2f sylpheed-claws-acpi-notifier-1.0.3.ebuild 1241
+MISC ChangeLog 1361 RMD160 9230288f80d74f954aaed5623007001db63b5e28 SHA1 940bee07f5cdd326f894ddf527ed483631a73f95 SHA256 051d0434b6e8a0a4ec7c987757c1eca1f7786c1e9a891ceb189ae0e8cda9a435
+MD5 0642caf7aa3b19c49113bf96ae27597d ChangeLog 1361
+RMD160 9230288f80d74f954aaed5623007001db63b5e28 ChangeLog 1361
+SHA256 051d0434b6e8a0a4ec7c987757c1eca1f7786c1e9a891ceb189ae0e8cda9a435 ChangeLog 1361
 MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
@@ -25,10 +30,13 @@ SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/di
 MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-acpi-notifier-1.0.2 310
 RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-acpi-notifier-1.0.2 310
 SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-acpi-notifier-1.0.2 310
+MD5 7e925b8918ec759b988e3fea6ef3cbc2 files/digest-sylpheed-claws-acpi-notifier-1.0.3 310
+RMD160 06b04d1c3864a0f83909f8fc823a6fcb17795a03 files/digest-sylpheed-claws-acpi-notifier-1.0.3 310
+SHA256 df10007efdcea53dda92bab1f09fcc3820834993a2fd1678ef6041032a3d8522 files/digest-sylpheed-claws-acpi-notifier-1.0.3 310
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFErZrs6J2i8a8J4okRAsZlAJ47UwyhNeWMmSfVvufoE+tcQpOtEQCgqxbh
-FFLSfOKUdwwSjKn/5ejrPts=
-=/IEi
+iD8DBQFFInLF10xuJSrg3/sRAt0SAJ9FnZ4roFi4V4VrZALnTYJSuSl25wCfcxhQ
+hc2HG/4wUvar6gKpohvKjXU=
+=DDKC
 -----END PGP SIGNATURE-----

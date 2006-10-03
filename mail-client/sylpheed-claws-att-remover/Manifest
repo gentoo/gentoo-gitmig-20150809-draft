@@ -3,6 +3,7 @@ Hash: SHA1
 
 DIST sylpheed-claws-extra-plugins-2.0.0.tar.bz2 2935762 RMD160 09ba59e1da4eacf0a50c2271cbadd0b44212285f SHA1 68c96367942b0dab14a62e8fe3f0fdb2dc4cdd32 SHA256 88b01ccdece05adf3b1046c3ddcbd20ca3455d20e97f59bf1ea8d3fcbe1baf29
 DIST sylpheed-claws-extra-plugins-2.3.0.tar.bz2 3901667 RMD160 64f026271d993de2c5895c251abf18c529b0244d SHA1 3bcee7f99ad5addd2aeea2bac4e8d63e8eff136f SHA256 45e30623f3908577518a474a2f308453654d1f6422a2f15ff27ec4fb934aa438
+DIST sylpheed-claws-extra-plugins-2.5.2.tar.bz2 3991186 RMD160 8e59b11fdcf6dbee11ca2c28d7616593d420333a SHA1 467071349377b11ccdc2e3d758e29d7e5c7e1b04 SHA256 2ac9469dfb914ab20fd73b75388db6e3e0a305883c789e34a5c9458feb838349
 EBUILD sylpheed-claws-att-remover-0.4.ebuild 916 RMD160 ce8873dd7a00d3844b782530760bf3476a5c461d SHA1 121436a0bb14830817e99f183830c19ee0560146 SHA256 08e01a40560fef18c3d9f97d907de1c792693d2f2eebe355e49fa0a786877ca4
 MD5 083db8d4765f5754bc58aeceb8d1b1b4 sylpheed-claws-att-remover-0.4.ebuild 916
 RMD160 ce8873dd7a00d3844b782530760bf3476a5c461d sylpheed-claws-att-remover-0.4.ebuild 916
@@ -11,10 +12,14 @@ EBUILD sylpheed-claws-att-remover-1.0.2.ebuild 917 RMD160 30daae312b6fafcadce514
 MD5 3b3c999b0da8cdf7b01a1bd465cf7f75 sylpheed-claws-att-remover-1.0.2.ebuild 917
 RMD160 30daae312b6fafcadce5143edb8e4861679e977f sylpheed-claws-att-remover-1.0.2.ebuild 917
 SHA256 bc77d8a928fee123951de46d15bee34f033f35a38fe339ab9c8af69c558ce589 sylpheed-claws-att-remover-1.0.2.ebuild 917
-MISC ChangeLog 1130 RMD160 3478b53249fd4e8dbfb75c038475395e1b5a05fa SHA1 5ed02b11bbff1d73f4f1db8613a06611fe82ad33 SHA256 823485ecb68dad58175a07664a9a38fd8433857c7eb8a83c634180b6bf52b325
-MD5 6520c46650d28f502cfbc66d002f969c ChangeLog 1130
-RMD160 3478b53249fd4e8dbfb75c038475395e1b5a05fa ChangeLog 1130
-SHA256 823485ecb68dad58175a07664a9a38fd8433857c7eb8a83c634180b6bf52b325 ChangeLog 1130
+EBUILD sylpheed-claws-att-remover-1.0.3.ebuild 916 RMD160 a3c939cee061883b2d4c547722444838cb18fa99 SHA1 41c86dd5b72aff84c790e4ea63af9398a39e9ea2 SHA256 0f584306e514c1d2490901d06c7e8a2ca403ad034024099e577050f2ab8d5a0d
+MD5 858b402cdc0b277a79909c8754e46dcb sylpheed-claws-att-remover-1.0.3.ebuild 916
+RMD160 a3c939cee061883b2d4c547722444838cb18fa99 sylpheed-claws-att-remover-1.0.3.ebuild 916
+SHA256 0f584306e514c1d2490901d06c7e8a2ca403ad034024099e577050f2ab8d5a0d sylpheed-claws-att-remover-1.0.3.ebuild 916
+MISC ChangeLog 1271 RMD160 a1dc4a99c5b90c951d3950a1cdb6c9f6538751d8 SHA1 020c60ec82cdd6def57a42e40505599dde072fc5 SHA256 8e93a391ec883e559f4382ea7f9eca1d0d06089d3dbbaf3e0274d1ddc6c4128e
+MD5 be199022fe7ca1d0846c3c46c4dc2699 ChangeLog 1271
+RMD160 a1dc4a99c5b90c951d3950a1cdb6c9f6538751d8 ChangeLog 1271
+SHA256 8e93a391ec883e559f4382ea7f9eca1d0d06089d3dbbaf3e0274d1ddc6c4128e ChangeLog 1271
 MISC metadata.xml 392 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 SHA1 8fb3309b9af5ec084343baccfcdb7a391785bcc3 SHA256 d0c029748d4142e716bbd1302d1fc545a0af318b7fc43e05d824ffed89db45d3
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 RMD160 52dc9c58806f6bf4d486497819e818938e1a00e8 metadata.xml 392
@@ -25,10 +30,13 @@ SHA256 214952915317c37536022945343194450b266aa8b27e84202cd8ca399cd2c6c9 files/di
 MD5 1501d40d43dfd903395e7b22ed0e67b2 files/digest-sylpheed-claws-att-remover-1.0.2 310
 RMD160 20b0fdb7e91f86506806175b41bc16e93f8757a1 files/digest-sylpheed-claws-att-remover-1.0.2 310
 SHA256 2affdaf11cde193787ad60825dadfdc3a54087bdd5f0b0c8ced4cd4510ff06fc files/digest-sylpheed-claws-att-remover-1.0.2 310
+MD5 7e925b8918ec759b988e3fea6ef3cbc2 files/digest-sylpheed-claws-att-remover-1.0.3 310
+RMD160 06b04d1c3864a0f83909f8fc823a6fcb17795a03 files/digest-sylpheed-claws-att-remover-1.0.3 310
+SHA256 df10007efdcea53dda92bab1f09fcc3820834993a2fd1678ef6041032a3d8522 files/digest-sylpheed-claws-att-remover-1.0.3 310
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.3 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEnfwF6J2i8a8J4okRAiLbAJ9Upwp5BFvxjvofae0aQ8iChZrQAQCgjdca
-o2YSUeGc+6DZShoARxbwMy8=
-=/cEM
+iD8DBQFFInPe10xuJSrg3/sRAmZqAJ4+UllRD/KC67IUQMJ867PxJOKu3wCfV8ce
+4EN0fVTFxms4R77xUdA03+w=
+=WyqI
 -----END PGP SIGNATURE-----
