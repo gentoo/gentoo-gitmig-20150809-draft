@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX boa-constructor 386 RMD160 d7b8662daff00fcebf0a76879f464e56795a21e8 SHA1 53e7f2d49248850b79b94f06699a775f96cdfabc SHA256 75029bfd7361a1014a98dc3f3d0121875db6217bcfaf1f894ea89c5e58114ffc
 MD5 343cbbdca5ed6c641e11244a33a7d1bd files/boa-constructor 386
 RMD160 d7b8662daff00fcebf0a76879f464e56795a21e8 files/boa-constructor 386
@@ -6,24 +9,9 @@ AUX boa-constructor-0.4.0_alpha-wxversion.patch 398 RMD160 26487556eee3def109d69
 MD5 b53a3eba84bbccde612d3454f3211adc files/boa-constructor-0.4.0_alpha-wxversion.patch 398
 RMD160 26487556eee3def109d69c6e7eb23ef9070bed5e files/boa-constructor-0.4.0_alpha-wxversion.patch 398
 SHA256 a6bd4a2126998119918a12f04f24b2fc2a727d07cc49838d00040ca668748751 files/boa-constructor-0.4.0_alpha-wxversion.patch 398
-DIST boa-constructor-0.1.0-alpha.src.zip 2338496
-DIST boa-constructor-0.2.3.src.zip 2464276
-DIST boa-constructor-0.2.8_pre20040620.tar.bz2 2170269
 DIST boa-constructor-0.3.0.src.zip 2642933
 DIST boa-constructor-0.3.1.zip 2642998
 DIST boa-constructor-0.4.0.src.zip 3559429 RMD160 bc76396d5c2a83a3f113ff11276f0fa8a80c52d9 SHA1 f57c3ed46f6da7afbcaa3628ddfac9f672f67144 SHA256 fd1d817ed3882f3a75cc29fbc9cfb7f4e70f7644d7c571f058da41e928799e5e
-EBUILD boa-constructor-0.1.0_alpha.ebuild 1228 RMD160 77e5d7e96bb36a4c6b539764e2b5ae11dbb95574 SHA1 555cc562430cadac0e50c7b93b19d0b8cf43423b SHA256 c3f427a5fe06f33767f8797240905b4e1222f9bed56ee4ed792dd1ac88d63975
-MD5 5a9d4c8fd9890de134744117069cb9a6 boa-constructor-0.1.0_alpha.ebuild 1228
-RMD160 77e5d7e96bb36a4c6b539764e2b5ae11dbb95574 boa-constructor-0.1.0_alpha.ebuild 1228
-SHA256 c3f427a5fe06f33767f8797240905b4e1222f9bed56ee4ed792dd1ac88d63975 boa-constructor-0.1.0_alpha.ebuild 1228
-EBUILD boa-constructor-0.2.3_alpha.ebuild 1208 RMD160 e829a14415d8e42e37d2d128a0b4f5b4b5ae8519 SHA1 b3b356d8c188aebf012da9b5dac89cc6b8a70f4a SHA256 b19b5ce8f5f0b4b8383ac809879d6d2ecb1bf7ed36043b22c0e560f85d32dae0
-MD5 e459554f1e32edb2a3e246f24ba2d578 boa-constructor-0.2.3_alpha.ebuild 1208
-RMD160 e829a14415d8e42e37d2d128a0b4f5b4b5ae8519 boa-constructor-0.2.3_alpha.ebuild 1208
-SHA256 b19b5ce8f5f0b4b8383ac809879d6d2ecb1bf7ed36043b22c0e560f85d32dae0 boa-constructor-0.2.3_alpha.ebuild 1208
-EBUILD boa-constructor-0.2.8_pre20040620.ebuild 1160 RMD160 c31625828ed9cc9f577959ccb3f77ab6d939264a SHA1 8c6c3c8794012657ca26617276c174afbbfa0f02 SHA256 16a4421e1f09252652a97ea48116c23b29b3b9fb8067d96bc7d6b800f4b43a06
-MD5 91fcf1a589ec678b8142d7518af9294a boa-constructor-0.2.8_pre20040620.ebuild 1160
-RMD160 c31625828ed9cc9f577959ccb3f77ab6d939264a boa-constructor-0.2.8_pre20040620.ebuild 1160
-SHA256 16a4421e1f09252652a97ea48116c23b29b3b9fb8067d96bc7d6b800f4b43a06 boa-constructor-0.2.8_pre20040620.ebuild 1160
 EBUILD boa-constructor-0.3.0_alpha.ebuild 1189 RMD160 43e553b6cbedb0fe6b182acecf46f91b563e49da SHA1 dc1f14e19ddf72f9e6a98379708c54a34614fe93 SHA256 902e140486630d415127935eef7864d4b174b4443f6644b3e240c166cf4e09a0
 MD5 ba0c44f0f37467c94726eae1fd0ec420 boa-constructor-0.3.0_alpha.ebuild 1189
 RMD160 43e553b6cbedb0fe6b182acecf46f91b563e49da boa-constructor-0.3.0_alpha.ebuild 1189
@@ -36,23 +24,14 @@ EBUILD boa-constructor-0.4.0_alpha.ebuild 1271 RMD160 d1f79b421254cd5e5eff0cbf6b
 MD5 c3b4f337aeae8c89ccca55102da4d56e boa-constructor-0.4.0_alpha.ebuild 1271
 RMD160 d1f79b421254cd5e5eff0cbf6b3d9d32df40a1a3 boa-constructor-0.4.0_alpha.ebuild 1271
 SHA256 1465776f4dfff237949e2d8fb9503da59d5866ecea16627a57ebbf9610607889 boa-constructor-0.4.0_alpha.ebuild 1271
-MISC ChangeLog 2812 RMD160 3861bc8a9d30132ed69f7589058cf37c8bb81eea SHA1 cabd981d69aed610f404918b2e4b0c06f95a4d81 SHA256 2a5350455a2ee67087379d8276c06ee8ba48a333cedfcdd9df053f3fb582386a
-MD5 2f7da20131ea120d688b2cae32d76422 ChangeLog 2812
-RMD160 3861bc8a9d30132ed69f7589058cf37c8bb81eea ChangeLog 2812
-SHA256 2a5350455a2ee67087379d8276c06ee8ba48a333cedfcdd9df053f3fb582386a ChangeLog 2812
+MISC ChangeLog 2999 RMD160 e7362fa1f085997f5e8ff38c9b0fdb2c7d7f2c8f SHA1 ac9afbbd212d36172656c4dc622b4e9eedc96f68 SHA256 4b196151372974ba36ab4a6e2582b5494a4ffa6e0991da710b60680adede2694
+MD5 91ac02d6d269024d9cf73ce50f9f0125 ChangeLog 2999
+RMD160 e7362fa1f085997f5e8ff38c9b0fdb2c7d7f2c8f ChangeLog 2999
+SHA256 4b196151372974ba36ab4a6e2582b5494a4ffa6e0991da710b60680adede2694 ChangeLog 2999
 MISC metadata.xml 270 RMD160 4c99e3e5fd912332fbb9f258342a041da76100b3 SHA1 bc88c79712329449317309220db2b69e81d168d8 SHA256 e0e3f95520e8f3ac114892eb4c6374a795840fa2c13713fe963a4456451057a7
 MD5 7e8237fba7a4dfcc01d7501289d125ed metadata.xml 270
 RMD160 4c99e3e5fd912332fbb9f258342a041da76100b3 metadata.xml 270
 SHA256 e0e3f95520e8f3ac114892eb4c6374a795840fa2c13713fe963a4456451057a7 metadata.xml 270
-MD5 9c8b887e6848c9222fad7eb5c252f5db files/digest-boa-constructor-0.1.0_alpha 81
-RMD160 86c4d8971f7355ae4da43dd1cbdd638a47253b96 files/digest-boa-constructor-0.1.0_alpha 81
-SHA256 866a96cb70e5f391ad01af1de4968f5eec787969d2599158ab516d7e5459fa28 files/digest-boa-constructor-0.1.0_alpha 81
-MD5 e12855e2a10fb73665d3c7c2c11d66fa files/digest-boa-constructor-0.2.3_alpha 75
-RMD160 6802fa13f88049ee597b97467e8ee1a62feda320 files/digest-boa-constructor-0.2.3_alpha 75
-SHA256 c0710fd3d0a11f1e56f761664128ec79caf7947ff9c909b054223d50301cbf33 files/digest-boa-constructor-0.2.3_alpha 75
-MD5 9ce8d0c471cb4659d5b5a0efea54f69e files/digest-boa-constructor-0.2.8_pre20040620 87
-RMD160 a1043f92176ba42440e38fa458521a48d20f92db files/digest-boa-constructor-0.2.8_pre20040620 87
-SHA256 1b4be968799121151214d357b3c58330636d47cfc19b256fca4d3e6f43443f59 files/digest-boa-constructor-0.2.8_pre20040620 87
 MD5 b923e7ad0c6fede07186966b20b7e428 files/digest-boa-constructor-0.3.0_alpha 75
 RMD160 356de7c9a6e959487e4c0e3e55793d75868d41c1 files/digest-boa-constructor-0.3.0_alpha 75
 SHA256 3eea7dbcc96997616e11f07b944a7f379d11b42a6a6b979d457e20befea7f0df files/digest-boa-constructor-0.3.0_alpha 75
@@ -62,3 +41,10 @@ SHA256 7e84fb58c777036f4c3fc549c95aa071311d0b1761070917f3614a17b654ed52 files/di
 MD5 48e7a9387fc8362dacd93c8f48d52a3d files/digest-boa-constructor-0.4.0_alpha 271
 RMD160 362cf2b1892aaca2de0bc9f5a9fb5d0c03763db5 files/digest-boa-constructor-0.4.0_alpha 271
 SHA256 64ff7bf3b78630e12720822a2a2bd1d36d3fd16c18c0adaee35b17c8d64aa766 files/digest-boa-constructor-0.4.0_alpha 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFIr50keYb6olFHJcRAhbEAJ4kfUA4ZtJu+UYc5e2pdIf1+NoAnwCeMjg7
+Yv3hLMMycb1lPgv23FXPDjw=
+=F4/h
+-----END PGP SIGNATURE-----
