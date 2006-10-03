@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.5 2006/05/23 22:04:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.6 2006/10/03 15:28:14 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -8,22 +8,22 @@
 # quake3-VER           -> normal quake release
 
 if [[ ${PV} == 9999* ]] ; then
-	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999.}"
+	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
-	inherit subversion toolchain-funcs eutils games
+	inherit subversion flag-o-matic toolchain-funcs eutils games
 
 	SRC_URI=""
 	S=${WORKDIR}/trunk
 elif [[ ${PV} == *_alpha* ]] ; then
-	inherit toolchain-funcs eutils games
+	inherit flag-o-matic toolchain-funcs eutils games
 
-	MY_PV=${PV/_alpha*}
-	SNAP=${PV/*_alpha}
+	MY_PV=${PV/_alpha*/}
+	SNAP=${PV/*_alpha/}
 	MY_P=${PN}-${MY_PV}_SVN${SNAP}M
 	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 	S=${WORKDIR}/${MY_P}
 else
-	inherit toolchain-funcs eutils games
+	inherit flag-o-matic toolchain-funcs eutils games
 
 	SRC_URI="http://icculus.org/quake3/${P}.tar.bz2"
 fi
@@ -36,27 +36,18 @@ SLOT="0"
 KEYWORDS="-*"
 IUSE="dedicated opengl teamarena"
 
-RDEPEND="opengl? (
-	virtual/opengl
+UIRDEPEND="virtual/opengl
 	media-libs/openal
-	|| (
-		(
-			x11-libs/libXext
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp )
-		virtual/x11 )
-	media-libs/libsdl )
+	x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	media-libs/libsdl"
+
+RDEPEND="opengl? (
+	${UIRDEPEND} )
 	!dedicated? (
-		virtual/opengl
-		|| (
-			(
-				x11-libs/libXext
-				x11-libs/libX11
-				x11-libs/libXau
-				x11-libs/libXdmcp )
-			virtual/x11 )
-		media-libs/libsdl )
+		${UIRDEPEND} )
 	games-fps/quake3-data
 	teamarena? ( games-fps/quake3-teamarena )"
 
@@ -65,10 +56,12 @@ src_unpack() {
 		subversion_src_unpack
 	else
 		unpack ${A}
+		cd "${S}"
 	fi
 }
 
 src_compile() {
+	filter-flag -mfpmath=sse
 	buildit() { use $1 && echo 1 || echo 0 ; }
 	emake \
 		BUILD_SERVER=$(buildit dedicated) \
@@ -87,14 +80,16 @@ src_install() {
 	cd code/unix
 	dodoc README.*
 
-	doicon quake3.xpm
-	make_desktop_entry quake3 "Quake III Arena" quake3.xpm
+	if use opengl ; then
+		doicon quake3.png
+		make_desktop_entry quake3 "Quake III Arena"
+	fi
 
 	cd ../../build/release*
 	local old_x x
-	for old_x in ioquake3* ; do
+	for old_x in ioq* ; do
 		x=${old_x%.*}
-		newgamesbin ${old_x} ${x} || die "dobin ${x}"
+		newgamesbin ${old_x} ${x} || die "newgamesbin ${x}"
 		dosym ${x} "${GAMES_BINDIR}"/${x/io}
 	done
 	exeinto "${GAMES_LIBDIR}"/${PN}/baseq3

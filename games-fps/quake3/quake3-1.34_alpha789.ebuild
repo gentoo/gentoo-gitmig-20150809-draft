@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_alpha789.ebuild,v 1.1 2006/05/26 01:00:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.34_alpha789.ebuild,v 1.2 2006/10/03 15:28:14 wolf31o2 Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
@@ -10,12 +10,12 @@
 if [[ ${PV} == 9999* ]] ; then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
-	inherit subversion toolchain-funcs eutils games
+	inherit subversion flag-o-matic toolchain-funcs eutils games
 
 	SRC_URI=""
 	S=${WORKDIR}/trunk
 elif [[ ${PV} == *_alpha* ]] ; then
-	inherit toolchain-funcs eutils games
+	inherit flag-o-matic toolchain-funcs eutils games
 
 	MY_PV=${PV/_alpha*/}
 	SNAP=${PV/*_alpha/}
@@ -23,7 +23,7 @@ elif [[ ${PV} == *_alpha* ]] ; then
 	SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 	S=${WORKDIR}/${MY_P}
 else
-	inherit toolchain-funcs eutils games
+	inherit flag-o-matic toolchain-funcs eutils games
 
 	SRC_URI="http://icculus.org/quake3/${P}.tar.bz2"
 fi
@@ -36,27 +36,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="dedicated opengl teamarena"
 
-RDEPEND="opengl? (
-	virtual/opengl
+UIRDEPEND="virtual/opengl
 	media-libs/openal
-	|| (
-		(
-			x11-libs/libXext
-			x11-libs/libX11
-			x11-libs/libXau
-			x11-libs/libXdmcp )
-		virtual/x11 )
-	media-libs/libsdl )
+	x11-libs/libXext
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	media-libs/libsdl"
+
+RDEPEND="opengl? (
+	${UIRDEPEND} )
 	!dedicated? (
-		virtual/opengl
-		|| (
-			(
-				x11-libs/libXext
-				x11-libs/libX11
-				x11-libs/libXau
-				x11-libs/libXdmcp )
-			virtual/x11 )
-		media-libs/libsdl )
+		${UIRDEPEND} )
 	games-fps/quake3-data
 	teamarena? ( games-fps/quake3-teamarena )"
 
@@ -70,6 +61,7 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flag -mfpmath=sse
 	buildit() { use $1 && echo 1 || echo 0 ; }
 	emake \
 		BUILD_SERVER=$(buildit dedicated) \
