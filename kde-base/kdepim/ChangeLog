@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.222 2006/09/18 15:22:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.223 2006/10/03 14:27:55 flameeyes Exp $
+
+*kdepim-3.5.5 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +kdepim-3.5.5.ebuild:
+  Bump to 3.5.5 (pre-release)
 
 *kdepim-3.5.4-r2 (18 Sep 2006)
 
