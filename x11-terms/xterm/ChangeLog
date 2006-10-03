@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.166 2006/10/03 04:10:41 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.167 2006/10/03 09:06:57 nixnut Exp $
+
+  03 Oct 2006; <nixnut@gentoo.org> xterm-218.ebuild:
+  Stable on ppc wrt bug 149835
 
   03 Oct 2006; Joshua Jackson <tsunam@gentoo.org> xterm-218.ebuild:
   Stable x86; bug #149835
