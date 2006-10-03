@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5996 2006/10/03 19:29:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5997 2006/10/03 21:31:37 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,15 @@
 ##
 ##   End example
 ##
+
+# Robin H. Johnson <robbat2@gentoo.org> (3 Oct 2006)
+# Bug 144560
+# Upstream discontinued perfctr last year, in favour of perfmon:
+# http://www.kernel.org/pub/linux/kernel/people/akpm/patches/2.6/2.6.13/2.6.13-mm3/announce.txt
+# http://sourceforge.net/mailarchive/forum.php?thread_id=8102899&forum_id=2237
+# It was only available in mm kernels, up to 2.6.13-mm2.
+# Scheduled for removal on 2006/11/03
+sys-apps/perfctr
 
 # Andrej Kacian <ticho@gentoo.org> (3 Oct 2006)
 # As mpd-0.12 is out, there's no need to keep SVN snapshots around anymore.
