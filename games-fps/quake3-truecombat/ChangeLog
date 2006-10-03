@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-truecombat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.12 2006/03/31 21:08:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-truecombat/ChangeLog,v 1.13 2006/10/03 16:46:55 wolf31o2 Exp $
+
+  03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-truecombat-1.2.ebuild:
+  Updated with the latest ebuild from Paul Bredbury <brebs@sent.com> and
+  closing bug #146150.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-truecombat-1.2.ebuild:
