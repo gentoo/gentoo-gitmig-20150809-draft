@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.117 2006/09/06 00:28:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.118 2006/10/03 18:29:44 flameeyes Exp $
+
+*pam-0.99.6.3 (03 Oct 2006)
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +pam-0.99.6.3.ebuild:
+  Update to a recent version, by reverting the change in 0.99.5.0-r1 (fedora
+  patches, selinux useflag, berkdb, dependencies check). Berkeley DB support
+  should be moved out of this ebuild, and disabled here; selinux useflag has
+  to be added back by selinux team; the dependencies check should be outside
+  the scope of this single ebuild.
 
   06 Sep 2006; Chris PeBenito <pebenito@gentoo.org> pam-0.78-r5.ebuild:
   Fix gcc 4.1 compile issue with SELinux patch.
