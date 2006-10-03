@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.12 2006/10/03 13:10:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.13 2006/10/03 13:19:10 wolf31o2 Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -152,8 +152,10 @@ vmware_src_unpack() {
 			done
 		fi
 		# Unpack our new libs.
-		unpack vmware-libssl.so.0.9.7l.tar.bz2
-		unpack vmware-libcrypto.so.0.9.7l.tar.bz2
+		[ -d "${DISTDIR}"/vmware-libssl.so.0.9.7l.tar.bz2 ] && \
+			unpack vmware-libssl.so.0.9.7l.tar.bz2
+		[ -d "${DISTDIR}"/vmware-libcrypto.so.0.9.7l.tar.bz2 ] && \
+			unpack vmware-libcrypto.so.0.9.7l.tar.bz2
 	fi
 }
 
