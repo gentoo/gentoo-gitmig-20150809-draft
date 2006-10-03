@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5995 2006/10/03 16:13:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5996 2006/10/03 19:29:23 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Andrej Kacian <ticho@gentoo.org> (3 Oct 2006)
+# As mpd-0.12 is out, there's no need to keep SVN snapshots around anymore.
+# Package will be removed in a month.
+media-sound/mpd-svn
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (3 Oct 2006)
 # Masked for testing
