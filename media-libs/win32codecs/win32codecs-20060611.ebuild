@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20060611.ebuild,v 1.3 2006/10/02 07:51:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20060611.ebuild,v 1.4 2006/10/03 07:32:54 flameeyes Exp $
 
 inherit multilib
 
@@ -58,6 +58,6 @@ src_install() {
 
 	dodir /etc/revdep-rebuild
 	cat - > "${D}/etc/revdep-rebuild/50win32codecs" <<EOF
-SEARCH_DIRS_MASK="/usr/lib/real /usr/lib/win32"
+SEARCH_DIRS_MASK="/usr/$(get_libdir)/real /usr/$(get_libdir)/win32"
 EOF
 }

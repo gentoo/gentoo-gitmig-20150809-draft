@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.38 2006/10/02 07:51:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.39 2006/10/03 07:32:54 flameeyes Exp $
+
+  03 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  win32codecs-20060611.ebuild:
+  Use get_libdir to get the path to mask from revdep-rebuild.
 
   02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   win32codecs-20060611.ebuild:
