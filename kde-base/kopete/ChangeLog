@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.78 2006/10/03 11:39:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.79 2006/10/04 20:27:57 flameeyes Exp $
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.5.5.ebuild:
+  Remove unneeded patches.
 
 *kopete-3.5.5 (03 Oct 2006)
 
