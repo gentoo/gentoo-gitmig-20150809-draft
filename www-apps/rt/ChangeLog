@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.41 2006/08/28 00:42:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.42 2006/10/04 04:19:37 rl03 Exp $
+
+  04 Oct 2006; Renat Lumpau <rl03@gentoo.org> rt-3.6.1.ebuild:
+  Fix bug #147721.
 
 *rt-3.6.1 (28 Aug 2006)
 
