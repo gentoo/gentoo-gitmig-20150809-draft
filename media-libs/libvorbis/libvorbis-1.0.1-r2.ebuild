@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.17 2005/07/16 18:48:38 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.18 2006/10/04 17:40:32 grobian Exp $
 
 inherit libtool flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vorbis.com/files/${PV}/unix/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libogg-1.0"
@@ -26,13 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	# Fixes some strange sed-, libtool- and ranlib-errors on
-	# Mac OS X
-	if use ppc-macos; then
-		glibtoolize
-	else
-		elibtoolize
-	fi
+	elibtoolize
 
 	# Cannot compile with sse2 support it would seem #36104
 	use x86 && [ $(gcc-major-version) -eq 3 ] && append-flags -mno-sse2
@@ -60,19 +54,13 @@ src_compile() {
 	append-ldflags -fPIC
 
 	econf || die
-	use ppc-macos && cd ${S} && sed -i -e 's/examples//' Makefile
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	if use ppc-macos; then
-		dosym /usr/lib/libvorbisfile.3.1.0.dylib /usr/lib/libvorbisfile.0.dylib
-		dosym /usr/lib/libvorbisenc.2.0.0.dylib /usr/lib/libvorbisenc.0.dylib
-	else
-		dosym /usr/lib/libvorbisfile.so.3.1.0 /usr/lib/libvorbisfile.so.0
-		dosym /usr/lib/libvorbisenc.so.2.0.0 /usr/lib/libvorbisenc.so.0
-	fi
+	dosym /usr/lib/libvorbisfile.so.3.1.0 /usr/lib/libvorbisfile.so.0
+	dosym /usr/lib/libvorbisenc.so.2.0.0 /usr/lib/libvorbisenc.so.0
 
 	rm -rf ${D}/usr/share/doc
 	dodoc AUTHORS README todo.txt

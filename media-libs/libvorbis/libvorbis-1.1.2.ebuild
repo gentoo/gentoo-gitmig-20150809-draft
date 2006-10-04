@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.2.ebuild,v 1.4 2006/04/05 18:59:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.2.ebuild,v 1.5 2006/10/04 17:40:32 grobian Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aotuv"
 
 RDEPEND=">=media-libs/libogg-1.0"
@@ -59,7 +59,6 @@ src_compile() {
 	use hppa && replace-flags -march=2.0 -march=1.0
 
 	econf || die
-	use ppc-macos && cd ${S} && sed -i -e 's/examples//' Makefile
 	emake || die
 }
 
