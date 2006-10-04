@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mikachan-font-ttf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/ChangeLog,v 1.2 2006/10/03 18:51:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/ChangeLog,v 1.3 2006/10/04 16:15:31 wolf31o2 Exp $
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  mikachan-font-ttf-8.9-r1.ebuild:
+  Added ~amd64/~x86 for bug #149931.
 
   03 Oct 2006; Markus Rothe <corsair@gentoo.org>
   mikachan-font-ttf-8.9-r1.ebuild:
