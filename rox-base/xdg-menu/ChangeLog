@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/xdg-menu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.4 2006/06/11 12:54:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/xdg-menu/ChangeLog,v 1.5 2006/10/04 14:41:23 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml,
+  xdg-menu-1.2.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
 *xdg-menu-1.2 (11 Jun 2006)
 
