@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabberd-2.0.11.init,v 1.1 2006/10/04 20:48:58 nelchael Exp $
+
+depend() {
+	need net
+	use mysql postgresql slapd
+	provide jabber-server
+}
+
+start() {
+	ebegin "Starting Jabber Server"
+	start-stop-daemon --start -c jabber:jabber \
+		-b --make-pidfile --pidfile /var/run/jabber/jabberd.pid \
+		-q -x /usr/bin/jabberd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Jabber Server"
+	start-stop-daemon --stop -q --pidfile /var/run/jabber/jabberd.pid
+	eend $?
+}

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>net-im</herd>
   <maintainer>
     <email>nelchael@gentoo.org</email>
-    <description>net-im/jabberd-1* only</description>
   </maintainer>
+  <herd>net-im</herd>
   <longdescription>
     This is the original implementation of jabberd server.
     This serves as the basis for running a jabber server in Gentoo.
