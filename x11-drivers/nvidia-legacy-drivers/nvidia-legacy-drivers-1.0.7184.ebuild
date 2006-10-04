@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.2 2006/08/27 08:25:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.3 2006/10/04 14:52:39 blubb Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -19,7 +19,7 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE="dlloader"
 RESTRICT="nostrip multilib-pkg-force"
 
