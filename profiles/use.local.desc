@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2205 2006/10/04 20:31:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2206 2006/10/04 20:45:21 nelchael Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1145,6 +1145,7 @@ net-im/gajim:libnotify - Enable libnotify popup balloons
 net-im/gajim:srv -  SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/gossip:libnotify - Enable libnotify popup balloons
+net-im/jabberd:pipe - Enable pipe auth
 net-im/kadu:amarok - Enables amarok support in kadu
 net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:extraicons - Enables extra icon sets
