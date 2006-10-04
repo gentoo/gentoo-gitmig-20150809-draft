@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.1 2006/10/04 20:48:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.2 2006/10/04 21:27:45 nelchael Exp $
 
-inherit autotools versionator
+inherit autotools eutils versionator
 
 MY_PV=$(replace_version_separator 2 s)
 
@@ -13,45 +13,26 @@ SRC_URI="http://jabberstudio.2nw.net/${PN}2/${PN}-${MY_PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="berkdb debug ipv6 ldap mysql pam pipe postgres ssl"
+IUSE="debug ipv6 ldap mysql pam pipe postgres sqlite ssl"
 
-DEPEND="!=net-im/jabberd-2.0.11
+DEPEND=">=net-im/jabber-base-0.01
 	dev-libs/openssl
 	net-dns/libidn
 	ldap? ( net-nds/openldap )
-	berkdb? ( >=sys-libs/db-4.1.25 )
-	!mysql? (
-		!postgres? ( >=sys-libs/db-4.1.25 )
-	)
+	>=sys-libs/db-4.1.25
 	mysql? ( dev-db/mysql )
-	postgres? ( dev-db/postgresql )"
-RDEPEND="${DEPEND}
-	dev-lang/perl"
+	postgres? ( dev-db/postgresql )
+	sqlite? ( =dev-db/sqlite-3* )
+	!=net-im/jabberd-2.0.11"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
-
-pkg_setup() {
-
-	if ! use postgres && ! use mysql && ! use berkdb; then
-		ewarn
-		ewarn "For this version of jabberd you should have"
-		ewarn "at least one of 'mysql', 'postgres' and/or 'berkdb'"
-		ewarn "in the USE variable."
-		ewarn
-		ewarn "Compiling with default berkdb support."
-		ewarn
-		ebeep
-	fi
-
-}
 
 src_unpack() {
 
 	unpack ${A}
 	cd "${S}"
 
-	# Remove substituting $sysconfdir with $sysconfdir/jabberd
-	sed -i -e '762s,^,dnl ,' configure.in
+	epatch "${FILESDIR}/${P}-configure.in.patch"
 
 }
 
@@ -59,22 +40,21 @@ src_compile() {
 
 	eautoreconf
 
-	local dbengine=
-	if ! use postgres && ! use mysql && ! use berkdb; then
-		dbengine="--enable-db"
-	else
-		dbengine="$(use_enable mysql) $(use_enable postgres pgsql) $(use_enable berkdb db)"
-	fi
+	local localconf=
+	use debug && localconf="${localconf} --enable-debug --enable-nad-debug --enable-pool-debug"
 
 	econf \
 		--localstatedir=/var \
 		--sysconfdir=/etc/jabber \
-		${dbengine} \
-		$(use_enable pipe) \
-		$(use_enable pam) \
-		$(use_enable ldap) \
+		--enable-db
+		${localconf} \
 		$(use_enable ipv6) \
-		$(use_enable debug) \
+		$(use_enable ldap) \
+		$(use_enable mysql) \
+		$(use_enable pam) \
+		$(use_enable pipe) \
+		$(use_enable postgres pgsql) \
+		$(use_enable sqlite) \
 		|| die "econf failed"
 	emake || die "make failed"
 

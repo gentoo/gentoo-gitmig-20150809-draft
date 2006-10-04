@@ -1,0 +1,13 @@
+diff -Nru jabberd-2.0s11.vanilla/configure.in jabberd-2.0s11/configure.in
+--- jabberd-2.0s11.vanilla/configure.in	2006-10-04 23:14:07.000000000 +0200
++++ jabberd-2.0s11/configure.in	2006-10-04 23:19:58.000000000 +0200
+@@ -758,9 +758,6 @@
+ dnl finishing up
+ dnl
+ 
+-dnl put our config in its own subdir
+-sysconfdir="$sysconfdir/jabberd"
+-
+ dnl done!
+ AC_OUTPUT(Makefile \
+           etc/Makefile \
