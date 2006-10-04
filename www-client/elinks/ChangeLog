@@ -1,6 +1,11 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.46 2006/08/28 03:23:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.47 2006/10/04 21:23:56 spock Exp $
+
+  04 Oct 2006; Michał Januszewski <spock@gentoo.org>
+  elinks-0.10.5-r1.ebuild, elinks-0.10.6.ebuild, elinks-0.11.0.ebuild,
+  elinks-0.11.1.ebuild:
+  Remove unused 'gnutls' USE flag (bug #150083).
 
   28 Aug 2006; Joshua Kinard <kumba@gentoo.org> elinks-0.11.1.ebuild:
   Marked stable on mips.

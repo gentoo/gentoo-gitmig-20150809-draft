@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.0.ebuild,v 1.5 2006/04/22 14:37:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.0.ebuild,v 1.6 2006/10/04 21:23:56 spock Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="bittorrent bzip2 debug finger ftp gnutls gopher gpm guile idn ipv6 \
+IUSE="bittorrent bzip2 debug finger ftp gopher gpm guile idn ipv6 \
 	  javascript lua nls nntp perl ruby samba ssl unicode X zlib"
 RESTRICT="test"
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.8 2006/04/22 14:37:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.5-r1.ebuild,v 1.9 2006/10/04 21:23:56 spock Exp $
 
 inherit eutils
 
-IUSE="gpm zlib bzip2 ssl X lua guile perl ruby gnutls idn javascript ipv6 \
+IUSE="gpm zlib bzip2 ssl X lua guile perl ruby idn javascript ipv6 \
 samba ftp gopher nntp finger debug nls"
 
 MY_P=${P/_/}
