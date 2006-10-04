@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/roxiso
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/ChangeLog,v 1.3 2006/10/02 13:32:20 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxiso/ChangeLog,v 1.4 2006/10/04 16:08:50 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> roxiso-050508-r1.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
 *roxiso-050508-r1 (02 Oct 2006)
 
