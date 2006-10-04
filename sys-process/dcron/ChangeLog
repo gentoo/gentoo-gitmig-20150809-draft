@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/dcron
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.2 2005/09/06 04:43:32 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.3 2006/10/04 21:33:51 vapier Exp $
+
+*dcron-3.2 (04 Oct 2006)
+
+  04 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/dcron-3.2-pidfile.patch, +dcron-3.2.ebuild:
+  Version bump.
 
   06 Sep 2005; Mike Frysinger <vapier@gentoo.org>
   +files/dcron-2.9-EDITOR.patch, files/dcron-2.9-pidfile.patch,
