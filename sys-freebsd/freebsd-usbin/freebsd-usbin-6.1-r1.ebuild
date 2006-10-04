@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.1-r1.ebuild,v 1.3 2006/10/01 20:14:01 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.1-r1.ebuild,v 1.4 2006/10/04 19:55:56 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -9,7 +9,7 @@ SLOT="0"
 KEYWORDS="~x86-fbsd"
 
 IUSE="atm bluetooth tcpd ssl usb ipv6 acpi ipfilter isdn pam ssl radius
-	netgraph minimal ipsec nis pam suid nat radius"
+	 minimal ipsec nis pam suid nat radius"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
