@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.19 2006/08/02 19:52:04 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.20 2006/10/04 17:45:35 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 # Maintained by: Haskell herd <haskell@gentoo.org>
@@ -63,7 +63,7 @@ ghc-bestcabalversion() {
 	if ghc-cabal; then
 		# We ask portage, not ghc, so that we only pick up
 		# portage-installed cabal versions.
-		cabalpackage="$(best_version cabal)"
+		cabalpackage="$(best_version dev-haskell/cabal)"
 		cabalversion="${cabalpackage#dev-haskell/cabal-}"
 		cabalversion="${cabalversion%-r*}"
 		cabalversion="${cabalversion%_pre*}"
