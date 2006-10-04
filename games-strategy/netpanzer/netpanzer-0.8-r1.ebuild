@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8-r1.ebuild,v 1.2 2005/12/22 19:18:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8-r1.ebuild,v 1.3 2006/10/04 00:05:46 nyhm Exp $
 
 inherit eutils games
 
@@ -26,8 +26,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-#	epatch "${FILESDIR}"/${P}-min-size-check.patch
-#	epatch "${FILESDIR}"/${P}-robust.patch
+	epatch \
+		"${FILESDIR}"/${P}-min-size-check.patch \
+		"${FILESDIR}"/${P}-robust.patch \
+		"${FILESDIR}"/${P}-gcc41.patch
 }
 
 src_compile() {
@@ -63,6 +65,7 @@ src_install() {
 			"${D}${GAMES_BINDIR}/netpanzer-ded" \
 			|| die "sed failed"
 	fi
-	make_desktop_entry netpanzer NetPanzer netpanzer.png
+	rm -rf "${D}/${GAMES_DATADIR}"/{applications,pixmaps}
+	make_desktop_entry ${PN} NetPanzer
 	prepgamesdirs
 }

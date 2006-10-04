@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/netpanzer
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.20 2005/12/22 19:18:32 gustavoz Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.21 2006/10/04 00:05:46 nyhm Exp $
+
+  04 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/netpanzer-0.8-gcc41.patch, netpanzer-0.8-r1.ebuild:
+  Add patch for gcc-4.1, bug #131296
 
   22 Dec 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   netpanzer-0.8-r1.ebuild:
