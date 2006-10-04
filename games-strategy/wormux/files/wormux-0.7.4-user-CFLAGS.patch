@@ -1,0 +1,13 @@
+--- configure
++++ configure
+@@ -6766,9 +6766,7 @@
+         GCC_FLAGS="$GCC_FLAGS -Wno-unused-parameter"
+ 
+     if test "${debug}" = "yes"; then
+-        GCC_FLAGS="$GCC_FLAGS -O0 -g -DDEBUG -Werror"
+-    else
+-        GCC_FLAGS="$GCC_FLAGS -O2"
++        GCC_FLAGS="$GCC_FLAGS -DDEBUG"
+     fi
+ 
+     CFLAGS="$CFLAGS $GCC_FLAGS"
