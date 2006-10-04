@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8-r1.ebuild,v 1.3 2006/10/04 00:05:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/netpanzer-0.8-r1.ebuild,v 1.4 2006/10/04 01:22:30 nyhm Exp $
 
 inherit eutils games
 
@@ -66,6 +66,7 @@ src_install() {
 			|| die "sed failed"
 	fi
 	rm -rf "${D}/${GAMES_DATADIR}"/{applications,pixmaps}
+	doicon "${S}"/${PN}.png
 	make_desktop_entry ${PN} NetPanzer
 	prepgamesdirs
 }
