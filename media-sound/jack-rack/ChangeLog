@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.19 2006/06/03 20:48:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.20 2006/10/04 15:49:59 wolf31o2 Exp $
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  jack-rack-1.4.4.ebuild:
+  Stable on amd64/x86 wrt bug #147772.
 
   03 Jun 2006; Andrej Kacian <ticho@gentoo.org> jack-rack-1.4.4.ebuild:
   Use xml USE flag instead of xml2. Bug #116346.
