@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.4.ebuild,v 1.2 2006/10/04 12:21:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/wxglade/wxglade-0.4.ebuild,v 1.3 2006/10/04 15:58:03 wolf31o2 Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://wxglade.sourceforge.net/"
 SRC_URI="mirror://sourceforge/wxglade/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 S="${WORKDIR}/${MY_P}"
 DEPEND=">=dev-lang/python-2.2
