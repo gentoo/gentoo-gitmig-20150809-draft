@@ -1,6 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/picky/picky-0.4.5.ebuild,v 1.3 2005/10/28 20:14:55 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/picky/picky-0.4.5.ebuild,v 1.4 2006/10/04 15:31:05 lack Exp $
+
+ROX_LIB_VER=1.9.11
+inherit rox
 
 DESCRIPTION="Picky - an image viewer/slideshow app for the ROX Desktop"
 
@@ -20,8 +23,6 @@ IUSE=""
 
 DEPEND=">=dev-python/pygtk-2.0.0"
 
-ROX_LIB_VER=1.9.11
-
 APPNAME=${MY_PN}
 
 src_unpack() {
@@ -29,5 +30,3 @@ src_unpack() {
 	cd ${S}/${APPNAME}
 	unpack ${A}
 }
-
-inherit rox
