@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/neXtaw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.30 2006/10/01 15:05:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/neXtaw/ChangeLog,v 1.31 2006/10/04 09:33:16 flameeyes Exp $
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  neXtaw-0.15.1-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   01 Oct 2006; Guy Martin <gmsoft@gentoo.org> neXtaw-0.15.1-r1.ebuild:
   Stable on hppa.
