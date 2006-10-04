@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.16 2006/02/02 01:40:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.17 2006/10/04 14:14:35 vapier Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs linux-info
 
 #extensions versions
 
@@ -20,7 +20,7 @@ DEPEND="virtual/os-headers
 RDEPEND=""
 
 pkg_setup() {
-	if use extensions; then
+	if use extensions ; then
 		einfo "WARNING: 3rd party extensions has been enabled."
 		einfo "This means that iptables will use your currently installed"
 		einfo "kernel in /usr/src/linux as headers for iptables."
@@ -28,23 +28,25 @@ pkg_setup() {
 		einfo "You may have to patch your kernel to allow iptables to build."
 		einfo "Please check http://cvs.iptables.org/patch-o-matic-ng/updates/ for patches"
 		einfo "for your kernel."
+		linux-info_pkg_setup
 	fi
 }
 
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch
-	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch
-	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch
-	epatch ${FILESDIR}/${PV}-files/round-robin.patch
-	epatch ${FILESDIR}/${PV}-files/CAN-2004-0986.patch ; # security bug 70240
+	epatch "${FILESDIR}"/${PV}-files/grsecurity-1.2.8-iptables.patch
+	epatch "${FILESDIR}"/${PV}-files/install_ipv6_apps.patch
+	epatch "${FILESDIR}"/${PV}-files/install_all_dev_files.patch
+	epatch "${FILESDIR}"/${PV}-files/round-robin.patch
+	epatch "${FILESDIR}"/${PV}-files/CAN-2004-0986.patch ; # security bug 70240
 	sed -i "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" extensions/Makefile
 
 	if use extensions; then
-		epatch ${FILESDIR}/${PV}-files/iptables-1.2.9-imq1.diff
-		epatch ${FILESDIR}/${PV}-files/iptables-layer7-0.9.0.patch
+		epatch "${FILESDIR}"/${PV}-files/iptables-1.2.9-imq1.diff
+		epatch "${FILESDIR}"/${PV}-files/iptables-layer7-0.9.0.patch
 
 		chmod +x extensions/.IMQ-test*
 		chmod +x extensions/.childlevel-test*
@@ -72,14 +74,6 @@ src_compile() {
 	use static && myconf="${myconf} NO_SHARED_LIBS=0"
 
 	if use extensions; then
-		# Only check_KV if /usr/src/linux exists
-		if [ -L ${ROOT}/usr/src/linux -o -d ${ROOT}/usr/src/linux ]; then
-			check_KV
-		else
-			ewarn "You don't have kernel sources available at /usr/src/linux."
-			ewarn "Iptables will be built against linux-headers."
-		fi
-
 		make COPT_FLAGS="${CFLAGS}" ${myconf} \
 			PREFIX= \
 			LIBDIR=/lib \
@@ -141,17 +135,13 @@ src_install() {
 
 	dodoc COPYING
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}-1.2.9-r1.init iptables
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}-1.2.9-r1.confd iptables
+	newinitd "${FILESDIR}"/${PN}-1.2.9-r1.init iptables
+	newconfd "${FILESDIR}"/${PN}-1.2.9-r1.confd iptables
 
 	if use ipv6; then
 		dodir /var/lib/ip6tables ; keepdir /var/lib/ip6tables
-		exeinto /etc/init.d
-		newexe ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.init ip6tables
-		insinto /etc/conf.d
-		newins ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.confd ip6tables
+		newinitd "${FILESDIR}"/${PN/iptables/ip6tables}-1.2.9-r1.init ip6tables
+		newconfd "${FILESDIR}"/${PN/iptables/ip6tables}-1.2.9-r1.confd ip6tables
 	fi
 }
 
