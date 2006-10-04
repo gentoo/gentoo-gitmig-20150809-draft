@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6007 2006/10/04 18:56:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6008 2006/10/04 19:24:23 lack Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1078,10 +1078,6 @@ app-cdr/simplecdrx
 # Use app-cdr/cdrtools for DVD burning (yes, it can do it now).
 app-cdr/cdrecord-prodvd
 app-cdr/dvdrtools
-
-# Lars Weiler <pylon@gentoo.org> (08 Jul 2006)
-# Unmaintained in portage and missing dependency
-rox-extra/roxiso
 
 # Marcelo Goes <vanquirius@gentoo.org> (07 Jul 2006)
 # Masked for testing
