@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.5 2006/10/03 12:44:28 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.6 2006/10/04 17:51:46 nelchael Exp $
 
 inherit eutils
 
@@ -25,11 +25,6 @@ DEPEND=">=net-im/jabber-base-0.01
 	!=net-im/jabberd-2*"
 
 pkg_setup() {
-
-	if use postgres && use mysql; then
-		eerror "Please select mysql or postgres"
-		die "Please select mysql or postgres"
-	fi
 
 	if use ipv6; then
 		ewarn "Without full ipv6 support, jabberd will show the error:"
