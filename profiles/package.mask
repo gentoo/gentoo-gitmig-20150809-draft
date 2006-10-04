@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6003 2006/10/04 15:25:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6004 2006/10/04 16:51:05 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -349,7 +349,8 @@ games-fps/quake3-truecombat
 # Christian Heim <phreak@gentoo.org> (01 Oct 2006)
 # masking media-radio/ax25-tools for treecleaners, bug(s) 97275
 # Pending removal Oct 29th
-media-radio/ax25-tools
+# Still used by media-radio/xastir so commented for now.
+#media-radio/ax25-tools
 
 # Christian Heim <phreak@gentoo.org> (01 Oct 2006)
 # masking x11-libs/buffy for treecleaners, bug(s) 103143
