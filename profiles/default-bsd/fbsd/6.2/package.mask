@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.1 2006/09/21 20:53:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.2 2006/10/04 10:52:56 flameeyes Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Mask pam modules from old and new FreeBSD versions
@@ -8,3 +8,9 @@
 >sys-freebsd/freebsd-pam-modules-6.2.99
 <sys-freebsd/freebsd-rescue-6.2_alpha
 >sys-freebsd/freebsd-rescue-6.2.99
+
+# Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
+# We want this unmasked as is the only baselayout usable here
+->=sys-apps/baselayout-1.13.0_alpha1
+# And this masked as we cannot use this anymore
+sys-freebsd/freebsd-baselayout
