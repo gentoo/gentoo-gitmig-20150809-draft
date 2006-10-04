@@ -1,10 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2.ebuild,v 1.1 2006/10/04 19:03:54 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2.ebuild,v 1.2 2006/10/04 20:55:38 nelchael Exp $
 
 inherit eutils
-
-IUSE="debug png jpeg session truetype menubar"
 
 DESCRIPTION="Multi-tabbed rxvt clone with XFT, transparent background and CJK support"
 HOMEPAGE="http://materm.sourceforge.net/"
@@ -14,6 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~x86"
 
+IUSE="debug png jpeg session truetype menubar xpm"
+
 RDEPEND="png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( virtual/xft
@@ -22,7 +22,7 @@ RDEPEND="png? ( media-libs/libpng )
 	|| ( (
 			x11-libs/libX11
 			x11-libs/libXt
-			x11-libs/libXpm
+			xpm? ( x11-libs/libXpm )
 			x11-libs/libXrender )
 		virtual/x11 )"
 
@@ -69,8 +69,9 @@ src_compile() {
 	econf \
 		--enable-everything \
 		$(use_enable debug) \
-		$(use_enable png) \
 		$(use_enable jpeg) \
+		$(use_enable png) \
+		$(use_enable xpm) \
 		$(use_enable session sessionmgr) \
 		$(use_enable truetype xft) \
 		$(use_enable menubar) \
