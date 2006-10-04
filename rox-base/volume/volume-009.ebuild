@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/volume-009.ebuild,v 1.1 2006/10/03 13:20:27 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/volume-009.ebuild,v 1.2 2006/10/04 14:36:19 lack Exp $
 
+ROX_VER=2.1.0
+ROX_LIB_VER=2.0.0
 inherit rox eutils
 
 MY_PN="Volume"
@@ -16,8 +18,6 @@ IUSE=""
 
 RDEPEND=">=dev-python/pyalsaaudio-0.2"
 
-ROX_VER=2.1.0
-ROX_LIB_VER=2.0.0
 APPNAME=${MY_PN}
 S=${WORKDIR}
 

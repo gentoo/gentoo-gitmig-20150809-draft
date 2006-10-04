@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/volume
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.5 2006/10/03 13:20:27 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/volume/ChangeLog,v 1.6 2006/10/04 14:36:19 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> volume-009.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
   03 Oct 2006; <lack@gentoo.org> +files/volume-009-no_channels.patch,
   metadata.xml, -volume-007.ebuild, +volume-009.ebuild:
