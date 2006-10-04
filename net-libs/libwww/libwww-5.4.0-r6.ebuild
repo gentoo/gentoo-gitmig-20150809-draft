@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r6.ebuild,v 1.7 2006/10/01 13:48:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r6.ebuild,v 1.8 2006/10/04 12:53:29 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils multilib autotools
 
@@ -21,7 +24,6 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 
 DEPEND="${RDEPEND}
 	!dev-libs/9libs
-	>=sys-devel/autoconf-2.13
 	dev-lang/perl"
 
 S=${WORKDIR}/${MY_P}

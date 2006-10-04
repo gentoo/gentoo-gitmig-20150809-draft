@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r4.ebuild,v 1.15 2006/03/20 02:58:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r4.ebuild,v 1.16 2006/10/04 12:53:29 flameeyes Exp $
 
-inherit eutils multilib
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils multilib autotools
 
 MY_P=w3c-${P}
 DESCRIPTION="A general-purpose client side WEB API"
@@ -42,17 +45,7 @@ src_unpack() {
 	# Fix multiple problems, potentially exploitable (bug #109040)
 	epatch "${FILESDIR}"/${P}-htbound.patch
 
-	export WANT_AUTOMAKE=1.4
-	aclocal || die "aclocal failed"
-
-	if use ppc-macos;
-	then
-		glibtoolize -c -f || die "glibtoolize failed"
-	else
-		libtoolize -c -f || die "libtoolize failed"
-	fi
-
-	autoconf || die "autoconf failed"
+	eautoreconf
 }
 
 src_compile() {

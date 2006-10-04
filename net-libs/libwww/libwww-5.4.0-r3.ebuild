@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.3 2005/09/30 22:47:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.4 2006/10/04 12:53:29 flameeyes Exp $
 
-inherit eutils multilib
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils multilib autotools
 
 MY_P=w3c-${P}
 DESCRIPTION="A general-purpose client side WEB API"
@@ -37,14 +40,7 @@ src_unpack() {
 	# http://www.mysql.gr.jp/mysqlml/mysql/msg/8118
 	epatch "${FILESDIR}"/${P}-mysql-4.1.patch
 
-	if use ppc-macos ; then
-		glibtoolize -c -f || die "libtoolize failed"
-	else
-		libtoolize -c -f || die "libtoolize failed"
-	fi
-
-	aclocal || die "aclocal failed"
-	autoconf || die "autoconf failed"
+	eautoreconf
 }
 
 src_compile() {

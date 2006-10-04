@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.62 2006/10/01 13:48:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.63 2006/10/04 12:53:29 flameeyes Exp $
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libwww-5.4.0-r3.ebuild,
+  libwww-5.4.0-r4.ebuild, libwww-5.4.0-r5.ebuild, libwww-5.4.0-r6.ebuild:
+  Always use autotools eclass, and force latest autoconf/automake versions,
+  closing bug #148199.
 
   01 Oct 2006; Guy Martin <gmsoft@gentoo.org> libwww-5.4.0-r6.ebuild:
   Stable on hppa.
