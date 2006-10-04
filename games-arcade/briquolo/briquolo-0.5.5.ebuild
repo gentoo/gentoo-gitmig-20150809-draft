@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.5.ebuild,v 1.2 2006/09/20 16:45:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.5.ebuild,v 1.3 2006/10/04 15:26:24 nyhm Exp $
 
 inherit eutils games
 
@@ -27,7 +27,11 @@ src_unpack() {
 	sed -i \
 		-e '/^SUBDIRS/s/desktop//' \
 		Makefile.in \
-		|| die "sed failed"
+		|| die "sed Makefile.in failed"
+	sed -i \
+		-e "/CXXFLAGS/s/-O3/${CXXFLAGS}/" \
+		configure \
+		|| die "sed configure failed"
 }
 
 src_compile() {
