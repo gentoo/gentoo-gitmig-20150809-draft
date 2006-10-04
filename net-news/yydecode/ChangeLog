@@ -1,6 +1,9 @@
 # ChangeLog for net-news/yydecode
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.9 2004/12/29 20:23:00 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.10 2006/10/04 12:32:49 blubb Exp $
+
+  04 Oct 2006; Simon Stelling <blubb@gentoo.org> yydecode-0.2.10.ebuild:
+  stable on amd64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
