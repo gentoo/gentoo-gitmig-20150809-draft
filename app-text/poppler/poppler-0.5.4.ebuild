@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.4.ebuild,v 1.1 2006/09/23 09:20:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.4.ebuild,v 1.2 2006/10/04 19:18:49 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://poppler.freedesktop.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="cjk jpeg"
+IUSE="cjk jpeg zlib"
 
 RDEPEND=">=media-libs/freetype-2.1.8
 	media-libs/fontconfig
@@ -39,9 +39,8 @@ src_compile() {
 		--disable-cairo-output \
 		--enable-xpdf-headers \
 		$(use_enable jpeg libjpeg) \
+		$(use_enable zlib) \
 		|| die "configuration failed"
-		# $(use_enable zlib) breaks, see
-		# https://bugs.freedesktop.org/show_bug.cgi?id=3948
 	emake || die "compilation failed"
 }
 
