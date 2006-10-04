@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1d.ebuild,v 1.3 2006/09/15 04:59:46 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.1d.ebuild,v 1.4 2006/10/04 15:51:53 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://sourceforge/loop-aes/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="keyscrub"
+IUSE="keyscrub padlock"
 KEYWORDS="~amd64 ~hppa ~ppc x86"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 CONFIG_CHECK="!BLK_DEV_LOOP"
 MODULE_NAMES="loop(block:)"
@@ -41,6 +41,7 @@ pkg_setup() {
 
 	BUILD_PARAMS="LINUX_SOURCE=${KV_DIR} MODINST=n RUNDM=n"
 	use keyscrub && BUILD_PARAMS="${BUILD_PARAMS} KEYSCRUB=y"
+	use padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
 }
 
 src_unpack () {

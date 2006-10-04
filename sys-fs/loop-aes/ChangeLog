@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.12 2006/09/15 04:59:46 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.13 2006/10/04 15:51:53 genstef Exp $
+
+  04 Oct 2006; Stefan Schweizer <genstef@gentoo.org> loop-aes-3.1d.ebuild:
+  padlock useflag thanks to Robert Kerr <LittleThor@xsw.terminator.net> and
+  Alon Bar-Lev <alon.barlev@gmail.com> in bug 148784
 
   15 Sep 2006; Joshua Jackson <tsunam@gentoo.org> loop-aes-3.1d.ebuild:
   Stable x86; bug #145283
