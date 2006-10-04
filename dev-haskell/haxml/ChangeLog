@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.15 2006/08/28 05:14:16 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.16 2006/10/04 05:29:27 tsunam Exp $
+
+  04 Oct 2006; Joshua Jackson <tsunam@gentoo.org> haxml-1.13-r1.ebuild:
+  Stable x86; bug #144678
 
   27 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   haxml-1.13-r1.ebuild:
