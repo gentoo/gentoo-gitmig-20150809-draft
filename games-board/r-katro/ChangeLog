@@ -1,6 +1,9 @@
 # ChangeLog for games-board/r-katro
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/ChangeLog,v 1.5 2005/07/07 04:36:26 caleb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/ChangeLog,v 1.6 2006/10/04 16:24:33 nyhm Exp $
+
+  04 Oct 2006; Tristan Heaven <nyhm@gentoo.org> r-katro-0.7.0.ebuild:
+  Fix nls support
 
   07 Jul 2005; Caleb Tennis <caleb@gentoo.org> r-katro-0.7.0.ebuild:
   Fix qt dep

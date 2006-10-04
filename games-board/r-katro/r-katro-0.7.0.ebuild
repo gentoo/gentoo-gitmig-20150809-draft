@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.7 2006/04/23 06:38:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.8 2006/10/04 16:24:33 nyhm Exp $
 
 inherit games
 
@@ -13,8 +13,19 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="nls"
 
-DEPEND="=x11-libs/qt-3*
-	virtual/glut"
+RDEPEND="=x11-libs/qt-3*
+	virtual/glut
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i 's:$(localedir):/usr/share/locale:' \
+		$(find . -name 'Makefile.in*') \
+		|| die "sed failed"
+}
 
 src_compile() {
 	egamesconf $(use_enable nls) || die
@@ -23,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README TODO
 	prepgamesdirs
 }
