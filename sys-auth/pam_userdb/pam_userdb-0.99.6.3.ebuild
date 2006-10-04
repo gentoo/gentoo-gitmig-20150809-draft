@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.2 2006/10/04 08:34:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.3 2006/10/04 10:41:02 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -30,7 +30,7 @@ RDEPEND="nls? ( virtual/libintl )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
-	berkdb? ( >=sys-libs/db-${BDB_VER} )"
+	>=sys-libs/db-${BDB_VER}"
 
 S="${WORKDIR}/${MY_P}"
 

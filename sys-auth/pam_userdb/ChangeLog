@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_userdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.2 2006/10/04 08:34:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.3 2006/10/04 10:41:02 flameeyes Exp $
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  pam_userdb-0.99.6.3.ebuild:
+  Remove berkdb conditional on the bdb runtime dependency. Thanks Jakub Moc
+  for reporting.
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/Linux-PAM-0.99.6.3-berkdbpam.patch, pam_userdb-0.99.6.3.ebuild:
