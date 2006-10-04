@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.43 2006/09/14 12:45:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.44 2006/10/04 12:15:02 wolf31o2 Exp $
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.6.03.0190-r1.ebuild,
+  cisco-vpnclient-3des-4.7.00.0640.ebuild,
+  cisco-vpnclient-3des-4.8.00.0490.ebuild:
+  We were installing too much to the modules directories. Thanks to Michael
+  Sterret <Mr_Bones_@gentoo.org> for pointing it out.
 
   14 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   cisco-vpnclient-3des-4.0.1a-r1.ebuild,

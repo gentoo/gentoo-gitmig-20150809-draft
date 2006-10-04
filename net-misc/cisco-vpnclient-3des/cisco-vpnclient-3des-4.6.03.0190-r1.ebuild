@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190-r1.ebuild,v 1.11 2006/09/14 12:45:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.03.0190-r1.ebuild,v 1.12 2006/10/04 12:15:02 wolf31o2 Exp $
 
 inherit eutils linux-mod
 
@@ -68,7 +68,11 @@ src_install() {
 	dosym /opt/cisco-vpnclient/bin/vpnclient /usr/bin/vpnclient
 
 	insinto /lib/modules/${KV}/CiscoVPN
-	doins cisco_ipsec*
+	if kernel_is 2 6; then
+		doins cisco_ipsec.ko
+	else
+		doins cisco_ipsec
+	fi
 
 	insinto ${VPNDIR}
 	doins vpnclient.ini
