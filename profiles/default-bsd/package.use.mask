@@ -1,4 +1,5 @@
 app-misc/mc pam
+dev-util/catalyst cdr
 kde-base/kcontrol ieee1394
 kde-base/kdenetwork-meta wifi
 media-video/ffmpeg ieee1394
