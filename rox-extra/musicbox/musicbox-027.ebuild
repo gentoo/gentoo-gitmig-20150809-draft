@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/musicbox-027.ebuild,v 1.1 2006/10/03 17:40:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/musicbox-027.ebuild,v 1.2 2006/10/04 16:14:51 lack Exp $
 
+ROX_LIB_VER=2.0.0
 inherit rox eutils
 
 DESCRIPTION="MusicBox - an MP3/OGG Player for the ROX Desktop"
@@ -33,7 +34,6 @@ RDEPEND="
 	vorbis? ( >=dev-python/pyvorbis-1.1 )
 	flac? (	>=media-libs/flac-1.1.2 )"
 
-ROX_LIB_VER=2.0.0
 APPNAME=MusicBox
 S=${WORKDIR}
 
