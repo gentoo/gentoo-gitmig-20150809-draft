@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.63 2006/10/04 12:53:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.64 2006/10/04 12:59:02 flameeyes Exp $
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libwww-5.4.0-r3.ebuild,
+  libwww-5.4.0-r4.ebuild, libwww-5.4.0-r5.ebuild, libwww-5.4.0-r6.ebuild:
+  Actually, automake 1.9 seems to work only on some systems for this, use 1.4
+  for safety.
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libwww-5.4.0-r3.ebuild,
   libwww-5.4.0-r4.ebuild, libwww-5.4.0-r5.ebuild, libwww-5.4.0-r6.ebuild:

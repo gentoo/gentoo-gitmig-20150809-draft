@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r6.ebuild,v 1.8 2006/10/04 12:53:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r6.ebuild,v 1.9 2006/10/04 12:59:02 flameeyes Exp $
 
-WANT_AUTOMAKE="latest"
+WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="latest"
 
 inherit eutils multilib autotools
