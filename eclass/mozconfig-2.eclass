@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.11 2006/01/01 01:14:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-2.eclass,v 1.12 2006/10/04 13:58:58 cardoe Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -15,7 +15,6 @@ RDEPEND="|| ( ( x11-libs/libXrender
 		virtual/x11
 	)
 	>=media-libs/jpeg-6b
-	>=media-libs/libmng-1.0.0
 	>=media-libs/libpng-1.2.1
 	dev-libs/expat
 	app-arch/zip
@@ -29,6 +28,9 @@ RDEPEND="|| ( ( x11-libs/libXrender
 		 >=gnome-base/libgnomeui-2.2.0 )
 	 !<x11-base/xorg-x11-6.7.0-r2
 	>=x11-libs/cairo-1.0.0"
+	#According to bugs #18573, #204520, and couple of others in Mozilla's
+	#bugzilla. libmng and mng support has been removed in 2003.
+
 
 DEPEND="${RDEPEND}
 	xinerama? ( || ( x11-proto/xineramaproto virtual/x11 ) )
