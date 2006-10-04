@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.19 2006/09/30 00:03:05 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.20 2006/10/04 00:23:04 sbriesen Exp $
+
+*capi4hylafax-01.03.00.99.300.3-r1 (04 Oct 2006)
+
+  04 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/capi4hylafax-01.03.00.99.300.3-recvdev.diff,
+  +capi4hylafax-01.03.00.99.300.3-r1.ebuild:
+  fixed 64-Bit issue in recvdev.cpp, see bug #145982.
 
 *capi4hylafax-01.03.00.99.300.3 (30 Sep 2006)
 
