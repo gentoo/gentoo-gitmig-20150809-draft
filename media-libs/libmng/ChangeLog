@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.38 2006/10/04 01:42:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.39 2006/10/04 05:17:45 cardoe Exp $
+
+*libmng-1.0.9-r1 (04 Oct 2006)
+
+  04 Oct 2006; Doug Goldstein <cardoe@gentoo.org> +libmng-1.0.9-r1.ebuild:
+  Changing my stance on the jpeg support issue. Reverting back to requiring
+  jpeg since it's 'optional' only for Mozilla support according to docs. It
+  also changes API and ABI which requires recompiling anything linking to
+  this. It does not provide a full MNG build and will not even render many
+  types of valid MNG files without this. jpeg is a small library. The benefits
+  of keeping this outweight the benefits of removing it.
 
   04 Oct 2006; Doug Goldstein <cardoe@gentoo.org> libmng-1.0.8-r2.ebuild,
   libmng-1.0.9.ebuild:
