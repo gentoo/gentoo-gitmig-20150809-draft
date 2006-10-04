@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/lletters
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.15 2005/10/22 06:27:01 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/lletters/ChangeLog,v 1.16 2006/10/04 18:35:18 nyhm Exp $
+
+  04 Oct 2006; Tristan Heaven <nyhm@gentoo.org> lletters-0.1.95-r1.ebuild:
+  Fix nls support
 
   22 Oct 2005; Mike Frysinger <vapier@gentoo.org>
   +files/lletters-0.1.95-build.patch, lletters-0.1.95-r1.ebuild:
