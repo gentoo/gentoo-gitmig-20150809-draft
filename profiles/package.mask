@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6004 2006/10/04 16:51:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6005 2006/10/04 18:04:12 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Krzysiek Pawlik <nelchael@gentoo.org> (4 Oct 2006)
+# Masked new version - needs testing!
+=net-im/jabberd-2.0.11-r1
 
 # Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
 # Masked pending deletion in 30 days
