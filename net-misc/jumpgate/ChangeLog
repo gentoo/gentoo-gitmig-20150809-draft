@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/jumpgate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.4 2004/06/24 23:51:05 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/ChangeLog,v 1.5 2006/10/04 08:45:23 avenj Exp $
+
+  04 Oct 2006; Jon Portnoy <avenj@gentoo.org> :
+  Patch to compile cleanly with gcc4, courtesy of Aggelos Orfanakos,
+  bug #146290.
 
 *jumpgate-0.7 (10 Dec 2003)
 

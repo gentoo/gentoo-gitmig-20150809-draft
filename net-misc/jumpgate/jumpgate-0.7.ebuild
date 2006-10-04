@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/jumpgate-0.7.ebuild,v 1.6 2004/07/15 02:54:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jumpgate/jumpgate-0.7.ebuild,v 1.7 2006/10/04 08:45:23 avenj Exp $
+
+inherit eutils
 
 DESCRIPTION="An advanced TCP connection forwarder."
 HOMEPAGE="http://jumpgate.sourceforge.net"
@@ -12,6 +14,16 @@ KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND=""
 RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	if [ "$(gcc-major-version)" == "4" ] ; then
+		sed -i -e '/^AC_CHECK_TYPE/d' configure.in
+		autoconf || die "autoconf failed"
+	fi
+}
 
 src_install() {
 	make install install_prefix=${D} || die
