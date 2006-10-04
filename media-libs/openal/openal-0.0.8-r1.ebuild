@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r1.ebuild,v 1.1 2006/09/29 17:02:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r1.ebuild,v 1.2 2006/10/04 12:19:41 wolf31o2 Exp $
 
 inherit eutils
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	EPATCH_SUFFIX="patch"
 	epatch ${FILESDIR}/${PV} || die
 }
 
