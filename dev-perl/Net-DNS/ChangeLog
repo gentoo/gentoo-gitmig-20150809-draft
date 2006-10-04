@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Net-DNS
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.92 2006/09/22 07:26:00 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.93 2006/10/04 13:57:34 yuval Exp $
+
+  04 Oct 2006; Yuval Yaari <yuval@gentoo.org> Net-DNS-0.48.ebuild,
+  Net-DNS-0.49.ebuild, Net-DNS-0.53.ebuild, Net-DNS-0.53-r1.ebuild,
+  Net-DNS-0.55.ebuild, Net-DNS-0.57.ebuild, Net-DNS-0.58.ebuild,
+  Net-DNS-0.59.ebuild:
+  -m Fixing bug #120204 -- turns out echo-ing n didn't disable the online
+  tests...
 
 *Net-DNS-0.59 (22 Sep 2006)
 
