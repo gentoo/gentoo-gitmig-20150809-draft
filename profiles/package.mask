@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5997 2006/10/03 21:31:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.5998 2006/10/04 07:28:29 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1265,8 +1265,9 @@ www-client/amaya
 net-analyzer/tcpick
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Apr 2006)
-# Missing pam_console module, berkdb module requiring some work.
+# Missing pam_console module, userdb module requiring some work.
 =sys-libs/pam-0.99*
+sys-auth/pam_userdb
 
 # Benedikt Böhm <hollow@gentoo> (20 Apr 2006)
 # Upstream dead; obsoleted by sys-apps/lomoco
