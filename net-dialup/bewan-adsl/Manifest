@@ -5,10 +5,10 @@ AUX bewan-adsl-0.9.3-kernel-2.6.17.patch 6724 RMD160 b12dbd75b9d63ed5d832556ef50
 MD5 19e0cf58e90462b780609be1b3c4e97a files/bewan-adsl-0.9.3-kernel-2.6.17.patch 6724
 RMD160 b12dbd75b9d63ed5d832556ef50a768f9368ad06 files/bewan-adsl-0.9.3-kernel-2.6.17.patch 6724
 SHA256 51c4bbd9d97507e3601d94d0dd14e23f261b11b9f9a67c3c62ba9db0a55dc65b files/bewan-adsl-0.9.3-kernel-2.6.17.patch 6724
-AUX bewan-adsl-0.9.3-kernel-2.6.18.patch 12851 RMD160 966e75e71a1d98d7cc7147df401d1cab09dcb3a1 SHA1 8e88e0b392898866619bb60d5e6c7eb33bf4bef3 SHA256 d1e7413d3a32f651222e9e06a1f877ad0731fd0bcded54e753a4dfc1792452e1
-MD5 a03d0497677db693cbbc719198f69b49 files/bewan-adsl-0.9.3-kernel-2.6.18.patch 12851
-RMD160 966e75e71a1d98d7cc7147df401d1cab09dcb3a1 files/bewan-adsl-0.9.3-kernel-2.6.18.patch 12851
-SHA256 d1e7413d3a32f651222e9e06a1f877ad0731fd0bcded54e753a4dfc1792452e1 files/bewan-adsl-0.9.3-kernel-2.6.18.patch 12851
+AUX bewan-adsl-0.9.3-kernel-2.6.18.patch 13211 RMD160 c22929ea9f8ec4e74b91f2cbe77743b9be2da859 SHA1 318738f2f938cbea7ee35d911dd7da19c244d4be SHA256 1615291f5e6540310910bbc88c75b6025bf4cb0cd66719e086e3789730816fcc
+MD5 fcf8551d977b35493917d1e4a55c23e4 files/bewan-adsl-0.9.3-kernel-2.6.18.patch 13211
+RMD160 c22929ea9f8ec4e74b91f2cbe77743b9be2da859 files/bewan-adsl-0.9.3-kernel-2.6.18.patch 13211
+SHA256 1615291f5e6540310910bbc88c75b6025bf4cb0cd66719e086e3789730816fcc files/bewan-adsl-0.9.3-kernel-2.6.18.patch 13211
 AUX bewan-adsl-0.9.3-no-strip.patch 868 RMD160 48e38949f3eab501f29dc71cb264cc5c2ebc010d SHA1 4887471a6b8e2be5e321a1d9efda7935a58a1cec SHA256 bb172cb26af3b98bc7c6f1535d3af1dad5d93f3833bc457843a9e0c99f1644a0
 MD5 0ed7d2c36f8eb0bdfafe2bd5c6264c29 files/bewan-adsl-0.9.3-no-strip.patch 868
 RMD160 48e38949f3eab501f29dc71cb264cc5c2ebc010d files/bewan-adsl-0.9.3-no-strip.patch 868
@@ -43,7 +43,7 @@ SHA256 4a7fb1dc4bbe1b7d9e132ea075423130865afe729f9f0370646a534af81ed500 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFJA5h3sf9c6kjmR8RAsYpAKCmsCV+K/m+x7Wm0R9Ykb9yuJwxJQCdHg3V
-wJcH9QnxeQ3IGFsDTt2OACY=
-=g8aM
+iD8DBQFFJDT+3sf9c6kjmR8RAvTAAKCsbYz9xYvjYH111pQTm/v5hGY2TgCfTIpM
+fRhdUPo48Xz0xzhJ8AZTj5Q=
+=YL1N
 -----END PGP SIGNATURE-----

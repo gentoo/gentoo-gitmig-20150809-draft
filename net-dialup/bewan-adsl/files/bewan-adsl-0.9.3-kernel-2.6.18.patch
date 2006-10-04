@@ -1,6 +1,6 @@
 diff -Nru unicorn.orig/amu/amas.c unicorn/amu/amas.c
---- unicorn.orig/amu/amas.c	2003-09-26 14:19:08.000000000 +0300
-+++ unicorn/amu/amas.c	2006-10-04 22:33:55.686438500 +0300
+--- unicorn.orig/amu/amas.c	2006-10-05 01:21:33.937563500 +0300
++++ unicorn/amu/amas.c	2006-10-05 01:21:19.608668000 +0300
 @@ -23,9 +23,10 @@
  // ADSL Modem Software calls this function to report any state changes
  void AMSW_ANT_reportModemStateChange(AMSW_ModemState p_ModemState)
@@ -14,8 +14,8 @@ diff -Nru unicorn.orig/amu/amas.c unicorn/amu/amas.c
  	{
  	case C_AMSW_IDLE             : s = "IDLE";             break; 
 diff -Nru unicorn.orig/amu/amu.c unicorn/amu/amu.c
---- unicorn.orig/amu/amu.c	2006-10-04 22:33:24.112465250 +0300
-+++ unicorn/amu/amu.c	2006-10-04 22:35:11.731191000 +0300
+--- unicorn.orig/amu/amu.c	2006-10-05 01:21:33.937563500 +0300
++++ unicorn/amu/amu.c	2006-10-05 01:21:19.608668000 +0300
 @@ -77,8 +77,14 @@
  extern unsigned long Vendor_Id_code_Globspan;
  unsigned long Vendor_Id_code_Globspan=0;
@@ -117,8 +117,8 @@ diff -Nru unicorn.orig/amu/amu.c unicorn/amu/amu.c
  				g_FAR_LOS++;
  			}
 diff -Nru unicorn.orig/amu/bsp.h unicorn/amu/bsp.h
---- unicorn.orig/amu/bsp.h	2006-10-04 22:33:24.112465250 +0300
-+++ unicorn/amu/bsp.h	2006-10-04 22:32:34.029335250 +0300
+--- unicorn.orig/amu/bsp.h	2006-10-05 01:21:33.937563500 +0300
++++ unicorn/amu/bsp.h	2006-10-05 01:21:19.608668000 +0300
 @@ -18,7 +18,9 @@
  #define DMT_IN_PIN0_MASK		0x0001	// GP_IN0  bit 0
  #define DMT_IN_PIN1_MASK		0x0002	// GP_IN1  bit 1
@@ -139,8 +139,8 @@ diff -Nru unicorn.orig/amu/bsp.h unicorn/amu/bsp.h
  
  #endif
 diff -Nru unicorn.orig/amu/bsp_pci.c unicorn/amu/bsp_pci.c
---- unicorn.orig/amu/bsp_pci.c	2006-10-04 22:33:24.112465250 +0300
-+++ unicorn/amu/bsp_pci.c	2006-10-04 22:32:34.029335250 +0300
+--- unicorn.orig/amu/bsp_pci.c	2006-10-05 01:21:33.937563500 +0300
++++ unicorn/amu/bsp_pci.c	2006-10-05 01:21:19.608668000 +0300
 @@ -98,10 +98,18 @@
  	return 0;
  }
@@ -162,9 +162,21 @@ diff -Nru unicorn.orig/amu/bsp_pci.c unicorn/amu/bsp_pci.c
 +#ifdef __cplusplus
 +}
 +#endif
+diff -Nru unicorn.orig/msw/linrapi.c unicorn/msw/linrapi.c
+--- unicorn.orig/msw/linrapi.c	2006-10-05 01:21:19.000000000 +0300
++++ unicorn/msw/linrapi.c	2006-10-05 01:21:59.555164500 +0300
+@@ -201,7 +201,7 @@
+ 	WARN("__cxa_pure_virtual called\n");
+ }
+ 
+-#if __GNUC__ >= 3
++#if __GNUC__ >= 3 && defined(__cplusplus)
+ extern void
+  __builtin_delete(void *ptr)
+ {
 diff -Nru unicorn.orig/msw/msw.c unicorn/msw/msw.c
---- unicorn.orig/msw/msw.c	2006-10-04 22:33:24.112465250 +0300
-+++ unicorn/msw/msw.c	2006-10-04 22:32:34.029335250 +0300
+--- unicorn.orig/msw/msw.c	2006-10-05 01:21:33.941563750 +0300
++++ unicorn/msw/msw.c	2006-10-05 01:21:19.608668000 +0300
 @@ -6,7 +6,7 @@
  // Copyright STMicroelectronics 2000
  // Copyright F.H.L.P. 2000
@@ -195,8 +207,8 @@ diff -Nru unicorn.orig/msw/msw.c unicorn/msw/msw.c
                                  // Abort everything on surprise removal
                                  if (GlobalRemove) return;
 diff -Nru unicorn.orig/unicorn_atm/unicorn_atmdrv.c unicorn/unicorn_atm/unicorn_atmdrv.c
---- unicorn.orig/unicorn_atm/unicorn_atmdrv.c	2006-10-04 22:33:24.112465250 +0300
-+++ unicorn/unicorn_atm/unicorn_atmdrv.c	2006-10-04 22:32:34.029335250 +0300
+--- unicorn.orig/unicorn_atm/unicorn_atmdrv.c	2006-10-05 01:21:33.941563750 +0300
++++ unicorn/unicorn_atm/unicorn_atmdrv.c	2006-10-05 01:21:19.612668250 +0300
 @@ -101,7 +101,7 @@
  struct unicorn_atmdrv *unicorn_atmdrv = NULL;
  
@@ -220,8 +232,8 @@ diff -Nru unicorn.orig/unicorn_atm/unicorn_atmdrv.c unicorn/unicorn_atm/unicorn_
  #endif
  
 diff -Nru unicorn.orig/unicorn_eth/unicorn_ethdrv.c unicorn/unicorn_eth/unicorn_ethdrv.c
---- unicorn.orig/unicorn_eth/unicorn_ethdrv.c	2006-10-04 22:33:24.116465500 +0300
-+++ unicorn/unicorn_eth/unicorn_ethdrv.c	2006-10-04 22:32:34.029335250 +0300
+--- unicorn.orig/unicorn_eth/unicorn_ethdrv.c	2006-10-05 01:21:33.941563750 +0300
++++ unicorn/unicorn_eth/unicorn_ethdrv.c	2006-10-05 01:21:19.612668250 +0300
 @@ -140,12 +140,12 @@
  struct unicorn_ethdrv *unicorn_ethdrv = NULL;
  
@@ -263,8 +275,8 @@ diff -Nru unicorn.orig/unicorn_eth/unicorn_ethdrv.c unicorn/unicorn_eth/unicorn_
  #endif
  
 diff -Nru unicorn.orig/unicorn_pci/unicorn_pcidrv.c unicorn/unicorn_pci/unicorn_pcidrv.c
---- unicorn.orig/unicorn_pci/unicorn_pcidrv.c	2006-10-04 22:33:24.116465500 +0300
-+++ unicorn/unicorn_pci/unicorn_pcidrv.c	2006-10-04 22:32:34.033335500 +0300
+--- unicorn.orig/unicorn_pci/unicorn_pcidrv.c	2006-10-05 01:21:33.945564000 +0300
++++ unicorn/unicorn_pci/unicorn_pcidrv.c	2006-10-05 01:21:19.612668250 +0300
 @@ -2157,38 +2157,25 @@
  }
  
@@ -323,8 +335,8 @@ diff -Nru unicorn.orig/unicorn_pci/unicorn_pcidrv.c unicorn/unicorn_pci/unicorn_
  
  static int __init
 diff -Nru unicorn.orig/unicorn_usb/unicorn_usbdrv.c unicorn/unicorn_usb/unicorn_usbdrv.c
---- unicorn.orig/unicorn_usb/unicorn_usbdrv.c	2006-10-04 22:33:24.120465750 +0300
-+++ unicorn/unicorn_usb/unicorn_usbdrv.c	2006-10-04 22:32:34.033335500 +0300
+--- unicorn.orig/unicorn_usb/unicorn_usbdrv.c	2006-10-05 01:21:33.945564000 +0300
++++ unicorn/unicorn_usb/unicorn_usbdrv.c	2006-10-05 01:21:19.616668500 +0300
 @@ -2289,39 +2289,32 @@
  };
  
