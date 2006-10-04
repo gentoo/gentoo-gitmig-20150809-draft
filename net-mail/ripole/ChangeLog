@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/ripole
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.3 2005/09/26 08:36:44 ticho Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.4 2006/10/04 10:13:37 vivo Exp $
+
+*ripole-0.2.0 (04 Oct 2006)
+
+  04 Oct 2006; Francesco Riosa <vivo@gentoo.org> +ripole-0.2.0.ebuild:
+  Version bump and ~amd64 keyword
 
   26 Sep 2005; Andrej Kacian <ticho@gentoo.org> ripole-0.1.4.ebuild:
   Stable on x86.
