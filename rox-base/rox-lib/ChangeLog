@@ -1,6 +1,14 @@
 # ChangeLog for rox-base/rox-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.6 2006/06/08 07:28:56 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/ChangeLog,v 1.7 2006/10/04 19:21:16 lack Exp $
+
+*rox-lib-2.0.3-r1 (04 Oct 2006)
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml,
+  -rox-lib-1.9.16.ebuild, -rox-lib-2.0.2.ebuild, +rox-lib-2.0.3-r1.ebuild:
+  Updated rox-lib to depend on new minimum python requirement, and upon other
+  latest stable dependencies, cleared out old versions that aren't used any
+  more.
 
 *rox-lib-2.0.3 (08 Jun 2006)
 
