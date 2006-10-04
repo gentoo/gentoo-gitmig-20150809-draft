@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_userdb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.1 2006/10/04 07:29:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.2 2006/10/04 08:34:40 flameeyes Exp $
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/Linux-PAM-0.99.6.3-berkdbpam.patch, pam_userdb-0.99.6.3.ebuild:
+  Re-add support for building berkdb statically.
 
 *pam_userdb-0.99.6.3 (04 Oct 2006)
 

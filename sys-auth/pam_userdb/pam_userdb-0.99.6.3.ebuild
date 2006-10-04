@@ -1,15 +1,24 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.1 2006/10/04 07:29:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.2 2006/10/04 08:34:40 flameeyes Exp $
 
-inherit libtool multilib eutils pam
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit libtool multilib eutils pam autotools toolchain-funcs flag-o-matic
+
+# BDB is internalized to get a non-threaded lib for pam_userdb.so to
+# be built with.  The runtime-only dependency on BDB suggests the user
+# will use the system-installed db_load to create pam_userdb databases.
+BDB_VER="4.3.29"
 
 MY_P="Linux-PAM-${PV}"
 
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Linux-PAM pam_userdb (Berkeley DB) module"
 
-SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2"
+SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/${MY_P}.tar.bz2
+	http://downloads.sleepycat.com/db-${BDB_VER}.tar.gz"
 
 LICENSE="PAM"
 SLOT="0"
@@ -20,6 +29,8 @@ RDEPEND="nls? ( virtual/libintl )
 	>=sys-libs/pam-0.99.6.3-r1"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+RDEPEND="${RDEPEND}
+	berkdb? ( >=sys-libs/db-${BDB_VER} )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -28,6 +39,9 @@ RESTRICT="confcache"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${MY_P}-berkdbpam.patch"
+	AT_M4DIR="m4" eautoreconf
 
 	elibtoolize
 }
@@ -46,6 +60,48 @@ src_compile() {
 		myconf="${myconf} --disable-pie"
 	fi
 
+	local BDB_DIR="${WORKDIR}/db-${BDB_VER}"
+
+	# BDB is internalized to get a non-threaded lib for pam_userdb.so to
+	# be built with.  To demand-load a shared library which uses threads
+	# into an application which doesn't is a Very Bad Idea!
+	einfo "Building Berkley DB ${BDB_VER}..."
+	cd "${BDB_DIR}/build_unix" || die
+
+	CFLAGS="${CFLAGS} -fPIC" \
+		ECONF_SOURCE="../dist" \
+		econf \
+		--disable-compat185 \
+		--disable-cxx \
+		--disable-diagnostic \
+		--disable-dump185 \
+		--disable-java \
+		--disable-rpc \
+		--disable-tcl \
+		--disable-shared \
+		--disable-o_direct \
+		--with-pic \
+		--with-uniquename="_pam" \
+		--with-mutex="UNIX/fcntl" \
+		--prefix="${S}/modules/pam_userdb" \
+		--includedir="${S}/modules/pam_userdb" \
+		--libdir="${S}/modules/pam_userdb" || die "Bad BDB ./configure"
+
+	# XXX: hack out O_DIRECT support in db4 for now.
+	#	   (Done above now with --disable-o_direct now)
+
+	emake CC="$(tc-getCC)" || die "BDB build failed"
+	emake install || die
+
+	# We link against libdb_pam (*-dbpam.patch), else stupid libtool goes
+	# and relinks it during install to libdb in /usr/lib
+	cp -f "${S}"/modules/pam_userdb/libdb{,_pam}.a
+
+	# Make sure out static libs are used
+	append-flags -I "{S}/modules/pam_userdb"
+	append-ldflags -L "${S}/modules/pam_userdb"
+
+	cd "${S}"
 	econf \
 		$(use_enable nls) \
 		--enable-berkdb \

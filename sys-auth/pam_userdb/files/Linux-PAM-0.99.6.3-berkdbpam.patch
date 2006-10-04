@@ -1,0 +1,14 @@
+--- Linux-PAM-0.99.5.0/configure.in	2006-07-01 16:21:41.000000000 +0200
++++ Linux-PAM-0.99.5.0.az/configure.in	2006-07-01 16:22:03.000000000 +0200
+@@ -331,9 +331,9 @@
+ 
+ dnl check for libdb or libndbm as fallback. Some libndbm compat
+ dnl libraries are unuseable, so try libdb first.
+-AC_CHECK_LIB([db], [db_create], LIBDB="-ldb", LIBDB="")
++AC_CHECK_LIB([db_pam], [db_create_pam], LIBDB="-ldb_pam", LIBDB="")
+ if test -z "$LIBDB" ; then
+-    AC_CHECK_LIB([db], [dbm_store], LIBDB="-ldb", LIBDB="")
++    AC_CHECK_LIB([db_pam], [dbm_store_pam], LIBDB="-ldb_pam", LIBDB="")
+ fi
+ if test -z "$LIBDB" ; then
+     AC_CHECK_LIB([ndbm],[dbm_store], LIBDB="-lndbm", LIBDB="")
