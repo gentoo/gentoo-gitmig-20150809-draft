@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2201 2006/10/03 10:31:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2202 2006/10/04 10:30:57 jokey Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1340,7 +1340,8 @@ net-misc/zaptel:ukcid - Enable UK callerid support
 net-misc/zaptel:watchdog - Enable the watchdog to monitor unresponsive and misbehaving interfaces
 net-misc/zaptel:zapnet - Enable SyncPPP, CiscoHDLC and Frame-Relay support
 net-misc/zaptel:zapras - Enable PPP support for Remote-Access-Service
-net-nds/openldap:overlays - Enable OpenLDAP overlays support
+net-nds/openldap:overlays - Enable contributed OpenLDAP overlays
+net-nds/openldap:smbkrb5passwd - Enable overlay for syncing ldap, unix and lanman passwords
 net-nntp/inn:innkeywords - Enable automatic keyword generation support
 net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
