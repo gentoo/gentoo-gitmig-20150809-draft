@@ -1,14 +1,7 @@
 # ChangeLog for dev-php4/syck-php-bindings
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/syck-php-bindings/ChangeLog,v 1.1 2006/10/04 14:19:14 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/syck-php-bindings/ChangeLog,v 1.2 2006/10/04 14:20:23 yuval Exp $
 
   04 Oct 2006; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
   +syck-php-bindings-0.55.ebuild:
   Adding syck-php-bindings to the tree, for bug #145085
-
-*syck-php-bindings-0.55 (04 Oct 2006)
-
-  04 Oct 2006; Yuval Yaari <yuval@gentoo.org> +metadata.xml,
-  +syck-php-bindings-0.55.ebuild:
-  test
-
