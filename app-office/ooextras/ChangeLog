@@ -1,6 +1,12 @@
 # ChangeLog for app-office/ooextras
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.6 2005/04/24 11:27:57 hansmi Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.7 2006/10/04 18:30:18 suka Exp $
+
+*ooextras-20060909 (04 Oct 2006)
+
+  04 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
+  +ooextras-20060909.ebuild:
+  Version bump, see bug #149846
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   ooextras-20050216.ebuild:
