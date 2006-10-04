@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/davfs2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.29 2006/09/22 19:48:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/ChangeLog,v 1.30 2006/10/04 15:42:39 genstef Exp $
+
+*davfs2-1.1.1 (04 Oct 2006)
+
+  04 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -files/davfs2-cvs1.0.2-badpointer.patch, -davfs2-1.0.2_p20060820.ebuild,
+  -davfs2-1.0.2_p20060820-r1.ebuild, +davfs2-1.1.1.ebuild:
+  Version bump thanks to Toralf Förster <toralf.foerster@gmx.de>
 
 *davfs2-1.0.2_p20060820-r1 (22 Sep 2006)
 
