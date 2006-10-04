@@ -1,0 +1,11 @@
+--- timer.c
++++ timer.c
+@@ -63,7 +63,7 @@
+ 
+   camera->on_timer = 1;
+   
+-  if(strnlen(gtk_entry_get_text(GTK_ENTRY(camera->timer_struct.commandentry))) != 0){
++  if(strlen(gtk_entry_get_text(GTK_ENTRY(camera->timer_struct.commandentry))) != 0){
+     strcpy(camera->timer_struct.command, gtk_entry_get_text(GTK_ENTRY(camera->timer_struct.commandentry)));
+     camera->timer_struct.iscommand = 1;
+   }

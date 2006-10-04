@@ -1,0 +1,41 @@
+--- Makefile
++++ Makefile
+@@ -1,13 +1,14 @@
+ #
+-CC = gcc
++CC ?= gcc
+ LD = $(CC)
+ 
+-LDFLAGS = `gtk-config --libs gthread` -ljpeg -lpthread -lpng
++LDLIBS := $(shell gtk-config --libs gthread) -ljpeg -lpthread $(shell libpng-config --libs)
+ 
+ PROG = gqcam
+ VERSION = 0.9
+ 
+-CFLAGS = `gtk-config --cflags` -DVERSION=\"$(VERSION)\"
++GTK_CFLAGS := $(shell gtk-config --cflags)
++CPPFLAGS += $(GTK_CFLAGS) -D_GNU_SOURCE -DVERSION=\"$(VERSION)\"
+ INCLUDES = 
+ OBJS = 
+ 
+@@ -40,20 +41,11 @@
+ 	cp README ../$(PROG)-$(VERSION)/
+ 	cp README.threads ../$(PROG)-$(VERSION)/
+ gqcam: gqcam.o frontend.o color.o greyscale.o save.o timer.o filters.o preferences.o
+-	$(LD) $(LDFLAGS) gqcam.o frontend.o save.o color.o greyscale.o timer.o filters.o preferences.o -o gqcam 
+ greyscale.o: greyscale.c gqcam.h frontend.h greyscale.h
+-	$(CC) $(CFLAGS) -c greyscale.c
+ color.o: color.c gqcam.h frontend.h color.h
+-	$(CC) $(CFLAGS) -c color.c
+ preferences.o: preferences.c preferences.h gqcam.h
+-	$(CC) $(CFLAGS) -c preferences.c
+ frontend.o: frontend.c frontend.h gqcam.h
+-	$(CC) $(CFLAGS) -c frontend.c
+ timer.o: timer.c timer.h gqcam.h
+-	$(CC) $(CFLAGS) -c timer.c
+ save.o: save.c save.h gqcam.h
+-	$(CC) $(CFLAGS) -c save.c
+ filters.o: filters.c filters.h gqcam.h
+-	$(CC) $(CFLAGS) -c filters.c
+ gqcam.o: gqcam.c gqcam.h
+-	$(CC) $(CFLAGS) -c gqcam.c
