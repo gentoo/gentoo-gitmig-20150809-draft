@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.3 2006/06/20 19:55:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.4.ebuild,v 1.4 2006/10/04 05:09:23 tsunam Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/ser/${PV}/src/${P}_src.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~sparc ~x86"
+KEYWORDS="~ppc ~sparc x86"
 
 RDEPEND="
 	mysql? ( >=dev-db/mysql-3.23.52 )
