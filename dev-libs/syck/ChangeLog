@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/syck
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.9 2006/09/06 09:34:12 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.10 2006/10/04 15:10:07 yuval Exp $
+
+*syck-0.55-r3 (04 Oct 2006)
+
+  04 Oct 2006; Yuval Yaari <yuval@gentoo.org> +syck-0.55-r3.ebuild:
+  Bug #145085 - revision-bump to add PDEPEND for dev-php[45]/syck-php-bindings
 
 *syck-0.55-r2 (06 Sep 2006)
 
