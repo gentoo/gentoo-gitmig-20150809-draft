@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gtans/gtans-1.2.ebuild,v 1.9 2006/10/04 17:53:19 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gtans/gtans-1.2.ebuild,v 1.10 2006/10/04 18:06:54 nyhm Exp $
 
 inherit toolchain-funcs games
 
@@ -31,11 +31,14 @@ src_unpack() {
 		-e "/^EXECDIR/s:=.*:=${GAMES_BINDIR}/:" \
 		makefile || die "sed failed"
 
+	sed -i 's:/man/:/share/man/:' misc/Makefile \
+		|| die "sed misc/Makefile failed"
+
 	if ! use nls ; then
 		sed -i \
 			-e '/DTGTXT/d' \
 			-e '/cd po/d' \
-			makefile || die "sed failed"
+			makefile || die "sed nls failed"
 	fi
 }
 
