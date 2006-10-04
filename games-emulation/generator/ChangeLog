@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/generator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.14 2006/09/03 01:31:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.15 2006/10/04 22:37:17 wolf31o2 Exp $
+
+*generator-0.35-r3 (04 Oct 2006)
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/generator-0.35-execstacks.patch, +generator-0.35-r3.ebuild:
+  Revision bump to include the newer version of the patch as well as to remove
+  the executable stacks. Closing bug #129616.
 
 *generator-0.35-r2 (03 Sep 2006)
 

@@ -1,0 +1,13 @@
+--- raze/Makefile.in.old	2006-09-03 03:17:39.000000000 +0200
++++ raze/Makefile.in	2006-09-03 03:16:36.000000000 +0200
+@@ -343,6 +343,10 @@
+ raze:	raze.o
+ raze.o:	raze.asm raze.reg
+ 	nasm -e raze.asm -o raze2.asm
++	echo "%ifidn __OUTPUT_FORMAT__,elf" >> raze2.asm
++	echo "section .note.GNU-stack noalloc noexec nowrite progbits" \
++		>> raze2.asm
++	echo "%endif" >> raze2.asm
+ 	nasm -f @ASMOUTPUT@ raze2.asm -o raze.o -praze.reg
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
