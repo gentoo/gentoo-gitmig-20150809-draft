@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.11 2006/05/27 11:17:52 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.12 2006/10/04 22:40:45 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/libpng-1.2.3
 S="${WORKDIR}/${MY_P}"
 
 pkg_nofetch() {
-	einfo "Due to a Ceast and Desist given by Blizzard,"
+	einfo "Due to a Cease and Desist given by Blizzard,"
 	einfo "you must obtain the sources for this game yourself."
 	einfo "For more information, please visit: ${HOMEPAGE}"
 	einfo "Also, you'll have to place the files ${A}"
@@ -67,7 +67,7 @@ src_install() {
 	local fcmpver="$(best_version games-strategy/freecraft-fcmp)"
 	if [ ! -z "${fcmpver}" ] ; then
 		cd "${D}/${GAMES_DATADIR}/${PN}/data/ccl"
-		for f in $(grep ${GAMES_DATADIR}/${PN}/data/ccl/ /var/db/pkg/${fcmpver}/CONTENTS) ; do
+		for f in $(grep ${GAMES_DATADIR}/${PN}/data/ccl/ ${ROOT}/var/db/pkg/${fcmpver}/CONTENTS) ; do
 			[ -d "${f}" ] && continue
 			[ -e "${f}" -a -e "${D}/${f}" ] && rm "${D}/${f}"
 		done
