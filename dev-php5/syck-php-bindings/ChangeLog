@@ -1,0 +1,7 @@
+# ChangeLog for dev-php5/syck-php-bindings
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/syck-php-bindings/ChangeLog,v 1.2 2006/10/04 14:21:34 yuval Exp $
+
+  04 Oct 2006; Yuval Yaari <yuval@gentoo.org> ChangeLog:
+  Adding syck-php-bindings to the tree, for bug #145085
+
