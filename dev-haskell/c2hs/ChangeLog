@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.18 2006/08/24 14:30:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.19 2006/10/04 05:19:21 tsunam Exp $
+
+  04 Oct 2006; Joshua Jackson <tsunam@gentoo.org> c2hs-0.14.5.ebuild:
+  Stable x86;bug #144678
 
   24 Aug 2006; Ferris McCormick <fmccor@gentoo.org> c2hs-0.14.5.ebuild:
   Stable on sparc --- Bug #144678 --- Builds and installs; the structs example
