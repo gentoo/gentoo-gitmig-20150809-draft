@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6010 2006/10/04 22:09:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6011 2006/10/04 22:14:20 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Steve Dibb <beandog@gentoo.org> (4 Oct 2006)
+# masking media-video/jahshaka for treecleaners, bug(s) 150116
+# Pending removal Nov 4th
+media-video/jahshaka
 
 # Alin Nastac <mrness@gentoo.org> (5 Oct 2006)
 # Masked until bug 149792 is solved
@@ -1959,10 +1964,6 @@ kde-base/dcopjava
 # depend on ApacheHandler2.
 =www-apache/mod_perl-1.99.16
 #www-apache/libapreq2
-
-# <chriswhite@gentoo.org> (25 Aug 2004)
-# alpha version, seems ok to ~arch, but just to be safe..
-media-video/jahshaka
 
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
