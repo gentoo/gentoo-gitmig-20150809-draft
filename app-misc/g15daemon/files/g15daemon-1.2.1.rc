@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/files/g15daemon-1.2.1.rc,v 1.1 2006/10/04 18:50:38 jokey Exp $
+
+# Init script for g15daemon
+
+depend() {
+	after hotplug
+	after usb
+}
+
+start() {
+	ebegin "Starting g15daemon"
+	start-stop-daemon --start --background --pidfile /var/run/g15daemon.pid --exec /usr/sbin/g15daemon \
+		|| ( eerror "Failed to start g15daemon." && return 1 )
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping g15daemon"
+	start-stop-daemon --stop --quiet --pidfile /var/run/g15daemon.pid
+	eend $?
+}
