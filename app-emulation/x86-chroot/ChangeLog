@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/x86-chroot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.3 2006/09/05 22:10:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/ChangeLog,v 1.4 2006/10/04 08:57:08 blubb Exp $
+
+  04 Oct 2006; Simon Stelling <blubb@gentoo.org> x86-chroot-2006.1.ebuild:
+  tweak make.conf for bug 150022
 
 *x86-chroot-2006.1 (05 Sep 2006)
 

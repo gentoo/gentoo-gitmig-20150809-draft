@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.1 2006/09/05 22:10:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x86-chroot/x86-chroot-2006.1.ebuild,v 1.2 2006/10/04 08:57:08 blubb Exp $
 
 inherit linux-info
 
@@ -41,7 +41,7 @@ src_unpack() {
 
 src_compile() {
 	cat <<- EOF > "${WORKDIR}/${CHROOT_LOCATION}/etc/make.conf"
-		CFLAGS="-O2 -march=athlon-xp -msse2 -pipe -fomit-frame-pointer"
+		CFLAGS="-O2 -march=i686 -msse2 -pipe"
 		CHOST="i686-pc-linux-gnu"
 		CXXFLAGS="\${CFLAGS}"
 	EOF
