@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.8 2006/10/04 16:24:33 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/r-katro/r-katro-0.7.0.ebuild,v 1.9 2006/10/04 17:10:47 nyhm Exp $
 
-inherit games
+inherit qt3 games
 
 DESCRIPTION="3D puzzle game"
 HOMEPAGE="http://f.rodrigo.free.fr/games/r-katro/r-katro.php"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="nls"
 
-RDEPEND="=x11-libs/qt-3*
+RDEPEND="$(qt_min_version 3.3)
 	virtual/glut
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
