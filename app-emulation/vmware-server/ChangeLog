@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.10 2006/10/03 17:52:56 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/ChangeLog,v 1.11 2006/10/04 17:40:05 ikelos Exp $
+
+*vmware-server-1.0.1.29996-r4 (04 Oct 2006)
+
+  04 Oct 2006; Mike Auty <ikelos@gentoo.org>
+  -vmware-server-1.0.1.29996-r3.ebuild,
+  +vmware-server-1.0.1.29996-r4.ebuild:
+  Final bump for openssl issues (hopefully).
 
 *vmware-server-1.0.1.29996-r3 (03 Oct 2006)
 
