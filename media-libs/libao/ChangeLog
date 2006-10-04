@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.60 2006/10/02 18:55:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.61 2006/10/04 16:57:51 grobian Exp $
+
+  04 Oct 2006; Fabian Groffen <grobian@gentoo.org>
+  -files/libao-0.8.5-ppc-macos.patch, -files/libao-0.8.6-ppc-macos.patch,
+  libao-0.8.5.ebuild, libao-0.8.6-r1.ebuild, libao-0.8.6-r2.ebuild:
+  Dropped ~ppc-macos, see you in prefix.
 
   02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libao-0.8.6-r3.ebuild:
   Install is not parallel make.
