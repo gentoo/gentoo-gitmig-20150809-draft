@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.6 2006/09/28 20:34:30 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.7 2006/10/04 14:46:28 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> archive-2.1.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
 *archive-2.1 (28 Sep 2006)
 
