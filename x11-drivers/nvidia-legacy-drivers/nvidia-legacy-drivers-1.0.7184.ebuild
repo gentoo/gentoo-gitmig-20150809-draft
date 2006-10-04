@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.3 2006/10/04 14:52:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.4 2006/10/04 20:46:57 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -34,7 +34,6 @@ RDEPEND="virtual/modutils
 	 !x11-drivers/nvidia-drivers
 	 !media-video/nvidia-glx"
 
-PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
 
 if use x86; then

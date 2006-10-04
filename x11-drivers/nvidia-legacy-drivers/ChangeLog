@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-legacy-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.8 2006/10/04 14:52:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.9 2006/10/04 20:46:57 wolf31o2 Exp $
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -nvidia-legacy-drivers-1.0.7182.ebuild,
+  nvidia-legacy-drivers-1.0.7184.ebuild:
+  Removed PROVIDE=virtual/opengl since opengl is a new-style virtual.
 
   04 Oct 2006; Simon Stelling <blubb@gentoo.org>
   nvidia-legacy-drivers-1.0.7184.ebuild:
