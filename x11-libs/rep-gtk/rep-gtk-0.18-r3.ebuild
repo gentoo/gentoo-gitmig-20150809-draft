@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.5 2006/09/24 11:34:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r3.ebuild,v 1.6 2006/10/04 15:47:16 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/rep-gtk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="gtk-2.0"
-KEYWORDS="~alpha amd64 ~ia64 ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ppc sparc x86"
 IUSE="gnome"
 
 DEPEND=">=dev-libs/librep-0.13
