@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mscompress
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/ChangeLog,v 1.8 2006/09/20 19:54:43 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/ChangeLog,v 1.9 2006/10/04 12:40:37 blubb Exp $
+
+  04 Oct 2006; Simon Stelling <blubb@gentoo.org> mscompress-0.3.ebuild:
+  marking -amd64 as it doesn't work on amd64; bug 148320
 
   20 Sep 2006; <ticho@gentoo.org> mscompress-0.3.ebuild:
   Stable on x86, bug #148320.
