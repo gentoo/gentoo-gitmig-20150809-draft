@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.6 2006/08/29 16:47:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.7.11-r1.ebuild,v 1.7 2006/10/04 14:52:26 markusle Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -35,10 +35,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-allow-any-gcc-version.patch
 	epatch "${DISTDIR}"/atlas3.6.0-shared-libs.3.patch.bz2
 	epatch "${FILESDIR}"/${PV}-ppc-configure.patch
-	sed -i \
-		-e "s:ASM:ASM VOLATILE:" \
-		include/contrib/camm_dpa.h \
-		|| die "sed failed to fix clobbering"
+	epatch "${FILESDIR}"/${MY_PN}-asm-gentoo.patch
 
 	sed -i \
 		-e "s:\(\t./xconfig\):\1 -m $(tc-getCC) -c $(tc-getCC) -f ${FORTRANC}:g" \
