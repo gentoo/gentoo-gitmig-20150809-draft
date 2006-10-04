@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/muttng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.22 2006/07/28 09:29:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/ChangeLog,v 1.23 2006/10/04 20:36:16 grobian Exp $
+
+  04 Oct 2006; Fabian Groffen <grobian@gentoo.org> -muttng-20060329.ebuild,
+  -muttng-20060415.ebuild, -muttng-20060619.ebuild,
+  muttng-20060619-r1.ebuild:
+  Drop old, add message to use mutt instead.  Dropped ppc-macos keyword.
 
   28 Jul 2006; Fabian Groffen <grobian@gentoo.org> muttng-20060329.ebuild,
   muttng-20060415.ebuild, muttng-20060619.ebuild, muttng-20060619-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060619-r1.ebuild,v 1.2 2006/07/28 09:29:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/muttng/muttng-20060619-r1.ebuild,v 1.3 2006/10/04 20:36:16 grobian Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://nion.modprobe.de/mutt-ng/snapshots/${P}.tar.gz"
 IUSE="berkdb buffysize cjk crypt debug gdbm gnutls gpgme idn imap mbox nls nntp pop qdbm sasl slang smime smtp ssl doc"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.2
 	idn?     ( net-dns/libidn )
@@ -41,8 +41,6 @@ RDEPEND="nls? ( sys-devel/gettext )
 	)"
 DEPEND="${RDEPEND}
 	net-mail/mailbase"
-#	sys-devel/automake
-#	>=sys-devel/autoconf-2.5
 
 src_unpack() {
 	unpack ${A}                     || die "unpack failed"
@@ -54,12 +52,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}"-imap-browse.patch
 
 	use doc || epatch "${FILESDIR}/${PN}"-20060309-nodoc.patch
-
-#	aclocal -I m4					|| die "aclocal failed"
-#	autoheader						|| die "autoheader failed"
-#	emake -C m4 -f Makefile.am.in	|| die "emake in m4 failed"
-#	automake --foreign				|| die "automake failed"
-#	WANT_AUTOCONF=2.5 autoconf		|| die "autoconf failed"
 }
 
 src_compile() {
@@ -154,7 +146,9 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "NOTE: muttng is still under heavy development"
-	einfo "If you find a bug please report at http://bugs.gentoo.org"
+	einfo "NOTE: muttng is not under development any more, and suffers"
+	einfo "      from serious stability problems.  It lacks behind with"
+	einfo "      respect to mutt, which it is based on."
+	einfo "Please consider switching to mail-client/mutt instead."
 	echo
 }
