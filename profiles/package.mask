@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6006 2006/10/04 18:33:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6007 2006/10/04 18:56:56 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Ullmann <jokey@gentoo.org> (4 Oct 2006)
+# Needs testing according to upstream
+app-misc/g15composer
 
 # Krzysiek Pawlik <nelchael@gentoo.org> (4 Oct 2006)
 # Masked new version - needs testing!
