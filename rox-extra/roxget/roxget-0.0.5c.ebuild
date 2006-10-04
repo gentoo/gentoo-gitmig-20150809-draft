@@ -1,6 +1,9 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.4 2005/08/15 00:31:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/roxget-0.0.5c.ebuild,v 1.5 2006/10/04 16:03:54 lack Exp $
+
+ROX_LIB_VER=1.9.16
+inherit rox
 
 DESCRIPTION="ROXget - Download Handler for the ROX Desktop"
 
@@ -22,8 +25,6 @@ IUSE=""
 
 DEPEND="dev-python/urlgrabber"
 
-ROX_LIB_VER=1.9.16
-
 APPNAME=${MY_PN}
 
 S=${WORKDIR}/${MY_PN}-${MY_PV}
@@ -35,4 +36,3 @@ src_unpack() {
 	mv * ${APPNAME}/
 }
 
-inherit rox
