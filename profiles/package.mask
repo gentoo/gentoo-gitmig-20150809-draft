@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6009 2006/10/04 22:07:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6010 2006/10/04 22:09:26 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Alin Nastac <mrness@gentoo.org> (5 Oct 2006)
 # Masked until bug 149792 is solved
-=net-dialup/bewan-adsl-0.9.3-r1
+=net-dialup/bewan-adsl-0.9.3-r2
 
 # Markus Ullmann <jokey@gentoo.org> (4 Oct 2006)
 # Needs testing according to upstream
