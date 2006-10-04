@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.4 2006/10/01 17:53:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.5 2006/10/04 12:14:47 blubb Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -76,6 +76,10 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
+	
+	#145849
+	use amd64 && filter-flags -fweb
+
 	if use ppc || use ppc64 ; then
 		append-flags -U__ALTIVEC__
 	fi
