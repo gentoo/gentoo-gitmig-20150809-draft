@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.12 2006/09/25 14:31:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.13 2006/10/04 20:30:14 wolf31o2 Exp $
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-drivers-1.0.8178.ebuild:
+  Stable on amd64/x86 for bug #143814.
 
   25 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/1.0.9625/NVIDIA-1.0.9625-i2c.diff, nvidia-drivers-1.0.9625.ebuild:
@@ -25,11 +29,11 @@
   27 Aug 2006; Hanno Boeck <hanno@gentoo.org> files/libGL.la-r2:
   Fix libdir in libGL.la (bug #140982).
 
-  27 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  27 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>
   nvidia-drivers-1.0.8774.ebuild:
   Remove blocker on xorg-server 1.1.
 
-  25 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml:
+  25 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org> +metadata.xml:
   Someone forgot to add metadata.
 
 *nvidia-drivers-1.0.8774 (25 Aug 2006)
