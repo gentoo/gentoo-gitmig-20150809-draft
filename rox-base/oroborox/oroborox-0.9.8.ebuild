@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8.ebuild,v 1.2 2006/10/03 19:05:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.8.ebuild,v 1.3 2006/10/04 14:09:53 lack Exp $
 
+ROX_LIB_VER=1.9.14
 inherit rox
 
 MY_PN="OroboROX"
@@ -32,11 +33,11 @@ DEPEND="
 		x11-libs/libXcomposite
 		x11-libs/libXdamage
 		xinerama? ( x11-proto/xineramaproto )
-		startup-notification? ( x11-libs/startup-notification )
 	)
 		virtual/x11
 	)
 	"
+	#startup-notification? ( x11-libs/startup-notification )
 
 RDEPEND="
 	>=media-libs/freetype-2.0
@@ -49,14 +50,13 @@ RDEPEND="
 		x11-libs/libXrender
 		x11-libs/libXxf86vm
 		xinerama? ( x11-libs/libXinerama )
-		startup-notification? ( x11-libs/startup-notification )
 	)
 		virtual/x11
 	)
 	"
+	#startup-notification? ( x11-libs/startup-notification )
 
 S=${WORKDIR}
-ROX_LIB_VER=1.9.14
 SET_PERM=TRUE
 
 APPNAME=${MY_PN}
