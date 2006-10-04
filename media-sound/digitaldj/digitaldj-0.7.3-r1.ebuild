@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3-r1.ebuild,v 1.7 2005/09/14 07:19:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3-r1.ebuild,v 1.8 2006/10/04 19:53:42 flameeyes Exp $
 
 DESCRIPTION="A SQL-based mp3-player frontend designed to work with Grip"
 HOMEPAGE="http://www.nostatic.org/ddj/"
@@ -29,7 +29,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To create the DDJ database run"
-	einfo "	ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo " emerge --config =${CATEGORY}/${PF}"
 }
 
 pkg_config() {
