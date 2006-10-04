@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.57 2006/09/12 04:00:48 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.58 2006/10/04 10:52:04 stuart Exp $
+
+*egroupware-1.2.105 (04 Oct 2006)
+
+  04 Oct 2006; Stuart Herbert <stuart@gentoo.org>
+  +egroupware-1.2.105.ebuild:
+  Version bump; includes security fixes for anyone using register_globals.
 
   12 Sep 2006; Renat Lumpau <rl03@gentoo.org> egroupware-1.2.104.ebuild:
   Remove .svn dirs per bug #146818.
