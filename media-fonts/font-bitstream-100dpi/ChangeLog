@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/font-bitstream-100dpi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-100dpi/ChangeLog,v 1.17 2006/09/07 20:59:43 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bitstream-100dpi/ChangeLog,v 1.18 2006/10/04 15:23:27 blubb Exp $
+
+  04 Oct 2006; Simon Stelling <blubb@gentoo.org>
+  font-bitstream-100dpi-1.0.0.ebuild:
+  stable on amd64
 
   07 Sep 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   files/digest-font-bitstream-100dpi-1.0.0, Manifest:
