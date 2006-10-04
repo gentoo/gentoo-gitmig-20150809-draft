@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.7 2006/08/02 19:49:03 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.8 2006/10/04 17:49:20 kosmikus Exp $
 #
 # Original authors: Andres Loeh <kosmikus@gentoo.org>
 #                   Duncan Coutts <dcoutts@gentoo.org>
@@ -36,6 +36,9 @@
 #
 # Conforming Cabal packages don't require any function definitions
 # in the ebuild.
+#
+# Special flags to Cabal Configure can now be set by using
+# CABAL_CONFIGURE_FLAGS
 
 inherit ghc-package
 
@@ -136,6 +139,7 @@ cabal-configure() {
 		--with-compiler="$(ghc-getghc)" \
 		--with-hc-pkg="$(ghc-getghcpkg)" \
 		${cabalconf} \
+		${CABAL_CONFIGURE_FLAGS} \
 		"$@" || die "setup configure failed"
 }
 
@@ -217,7 +221,7 @@ cabal_src_install() {
 	cabal-pkg
 
 	if [[ -n "${CABAL_USE_HADDOCK}" ]] && use doc; then
-		dohtml dist/doc/html/*
+		dohtml -r dist/doc/html/*
 	fi
 }
 haskell-cabal_src_install() {
