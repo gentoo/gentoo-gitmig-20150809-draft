@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.3 2006/10/04 08:40:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.4 2006/10/04 08:44:54 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -38,6 +38,11 @@ PROVIDE="virtual/pam"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	for readme in modules/pam_*/README; do
+		cp -f "${readme}" doc/txts/README.$(dirname "${readme}" | \
+			sed -e 's|^modules/||')
+	done
 
 	epatch "${FILESDIR}/${MY_P}-berkdb.patch"
 	AT_M4DIR="m4" eautoreconf
@@ -88,6 +93,7 @@ src_install() {
 	rm -f "${D}/$(get_libdir)/security/"*.la
 
 	dodoc CHANGELOG ChangeLog README AUTHORS Copyright
+	docinto modules ; dodoc doc/txts/README.*
 
 	for x in "${FILESDIR}/pam.d-0.99/"*; do
 		[[ -f "${x}" ]] && dopamd "${x}"
