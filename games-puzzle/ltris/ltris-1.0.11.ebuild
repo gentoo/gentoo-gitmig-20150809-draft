@@ -1,8 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.11.ebuild,v 1.5 2005/12/10 12:37:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ltris-1.0.11.ebuild,v 1.6 2006/10/04 00:42:01 nyhm Exp $
 
-inherit eutils games
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit autotools eutils games
 
 DESCRIPTION="very polished Tetris clone"
 HOMEPAGE="http://lgames.sourceforge.net/"
@@ -13,11 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="nls"
 
-RDEPEND=">=media-libs/libsdl-1.1.5
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
-	nls? ( sys-devel/gettext )"
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/autoconf )"
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack "${A}"
@@ -31,7 +33,7 @@ src_unpack() {
 			-e '/^localedir/s:$datadir:/usr/share:' \
 			configure.in \
 			|| die "sed failed"
-		aclocal && automake -a -c && autoconf || die "autotools failed"
+		AT_M4DIR=m4 eautoreconf
 	fi
 }
 
@@ -44,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	newicon icons/ltris48.xpm ${PN}.xpm
 	make_desktop_entry ltris LTris ${PN}.xpm
