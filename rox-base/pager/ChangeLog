@@ -1,6 +1,13 @@
 # ChangeLog for rox-base/pager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.4 2006/05/23 20:24:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.5 2006/10/04 14:18:13 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml,
+  pager-1.0.1.ebuild:
+  Adding myself as maintainer
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> pager-1.0.1.ebuild:
+  Fixed order of version variables for 'inherit rox'
 
   23 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata, bug 131936.
