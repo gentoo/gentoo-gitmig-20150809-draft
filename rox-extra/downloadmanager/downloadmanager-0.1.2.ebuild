@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/downloadmanager-0.1.2.ebuild,v 1.1 2006/10/02 16:54:48 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/downloadmanager/downloadmanager-0.1.2.ebuild,v 1.2 2006/10/04 15:04:26 lack Exp $
 
+ROX_LIB_VER=2.0.0
 inherit rox
 
 MY_PN="DownloadManager"
@@ -16,8 +17,6 @@ IUSE=""
 
 DEPEND=">=rox-extra/fetch-0.1.0
 	>=sys-apps/dbus-0.22"
-ROX_LIB_VER=2.0.0
 
 APPNAME=${MY_PN}
 S=${WORKDIR}
-

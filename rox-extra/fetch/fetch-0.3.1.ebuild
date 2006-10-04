@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.3.1.ebuild,v 1.1 2006/10/03 13:40:02 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/fetch-0.3.1.ebuild,v 1.2 2006/10/04 15:09:01 lack Exp $
 
+ROX_VER=2.1.2
+ROX_LIB_VER=2.0.2
 inherit rox eutils
 
 MY_PN="Fetch"
@@ -13,9 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-
-ROX_VER=2.1.2
-ROX_LIB_VER=2.0.2
 
 APPNAME=Fetch
 S=${WORKDIR}

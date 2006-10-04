@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/fetch
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.10 2006/10/03 13:42:02 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/fetch/ChangeLog,v 1.11 2006/10/04 15:09:01 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> fetch-0.3.1.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
 *fetch-0.3.1 (03 Oct 2006)
 

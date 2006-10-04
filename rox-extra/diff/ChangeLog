@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/diff
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/diff/ChangeLog,v 1.4 2006/10/02 13:53:01 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/diff/ChangeLog,v 1.5 2006/10/04 15:01:52 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> diff-2.1.4.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
 *diff-2.1.4 (02 Oct 2006)
 

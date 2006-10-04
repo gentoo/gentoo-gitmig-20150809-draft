@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/memo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.4 2006/05/24 17:53:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.5 2006/10/04 15:14:10 lack Exp $
+
+  04 Oct 2006; Jim Ramsay <lack@gentoo.org> memo-1.9.5.ebuild:
+  Fixed version variable ordering for 'inherit rox'
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.
