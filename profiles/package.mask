@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6000 2006/10/04 12:50:54 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6001 2006/10/04 13:17:01 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -34,12 +34,6 @@ sys-apps/perfctr
 # As mpd-0.12 is out, there's no need to keep SVN snapshots around anymore.
 # Package will be removed in a month.
 media-sound/mpd-svn
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (3 Oct 2006)
-# Masked for testing
-=app-emulation/vmware-player-1.0.1.19317-r7
-=app-emulation/vmware-workstation-4.5.3.19414-r7
-=app-emulation/vmware-workstation-5.5.1.19175-r7
 
 # Diego Pettenò <flameeyes@gentoo.org> (3 Oct 2006)
 # Pre-release of KDE 3.5.5
