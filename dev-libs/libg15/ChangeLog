@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libg15
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.1 2006/10/04 18:09:05 jokey Exp $
+
+*libg15-1.0 (04 Oct 2006)
+
+  04 Oct 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +libg15-1.0.ebuild:
+  Needed dep for upcoming lcdproc-0.5.1, thanks to Alessio Cassibba ( related
+  bug #148766 and bug #148769 )
+
