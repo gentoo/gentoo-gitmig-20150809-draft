@@ -1,0 +1,10 @@
+# ChangeLog for sys-auth/pam_userdb
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/ChangeLog,v 1.1 2006/10/04 07:29:41 flameeyes Exp $
+
+*pam_userdb-0.99.6.3 (04 Oct 2006)
+
+  04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +pam_userdb-0.99.6.3.ebuild:
+  Initial import, pam_userdb support moved out of sys-libs/pam ebuild.
+
