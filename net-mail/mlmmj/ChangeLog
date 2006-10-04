@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mlmmj
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.14 2006/08/05 12:19:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.15 2006/10/04 12:29:14 blubb Exp $
+
+  04 Oct 2006; Simon Stelling <blubb@gentoo.org> mlmmj-1.2.11-r1.ebuild:
+  stable on amd64
 
   05 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
   ppc stable, bug #141252
