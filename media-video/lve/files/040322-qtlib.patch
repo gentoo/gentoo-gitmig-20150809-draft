@@ -1,8 +1,0 @@
---- lve/qdir/Makefile	2004-04-05 15:39:26.000000000 +0000
-+++ lve/qdir/Makefile_new	2004-04-08 12:41:51.932323960 +0000
-@@ -1,5 +1,5 @@
--QT_DIR     = /usr/lib/qt3
-+QT_DIR     = /usr/qt/3
- QT_LIB     = -L$(QT_DIR)/lib -lqt-mt
- QT_INCLUDE = -I$(QT_DIR)/include
- #
