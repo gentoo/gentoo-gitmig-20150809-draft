@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.4 2006/07/07 22:51:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.5 2006/10/04 21:13:11 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -31,6 +31,7 @@ DEPEND="virtual/libc
 		>=x11-libs/gtk+-2
 		|| ( ( 	x11-base/xorg-server
 				x11-libs/libXt
+				x11-libs/libXv
 				x11-proto/xf86driproto
 				x11-misc/imake
 				x11-misc/gccmakedep )

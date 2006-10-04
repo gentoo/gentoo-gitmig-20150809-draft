@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.25 2006/07/07 22:51:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.26 2006/10/04 21:13:11 wolf31o2 Exp $
+
+  04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-settings-1.0.20051122-r3.ebuild,
+  nvidia-settings-1.0.20060516-r1.ebuild:
+  Added x11-libs/libXv to DEPEND for bug #141064.
 
   07 Jul 2006; Martin Schlemmer <azarah@gentoo.org>
   nvidia-settings-1.0.20051122-r3.ebuild:
