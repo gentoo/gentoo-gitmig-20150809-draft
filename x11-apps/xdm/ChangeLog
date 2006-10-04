@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.57 2006/07/26 01:58:04 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.58 2006/10/04 02:05:33 dberkholz Exp $
+
+*xdm-1.1.0 (04 Oct 2006)
+
+  04 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; +xdm-1.1.0.ebuild:
+  Minor feature release -- adds use of Xft for drawing greeter dialog text,
+  and overhaul of PAM code to allow complete PAM conversation.
 
   26 Jul 2006; Joshua Baergen <joshuabaergen@gentoo.org> xdm-1.0.5.ebuild:
   Add missing libXinerama dependency.  (bug #138719, far jump)
