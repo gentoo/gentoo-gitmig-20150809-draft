@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.9.ebuild,v 1.2 2006/04/14 11:33:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.9.ebuild,v 1.3 2006/10/04 01:25:13 cardoe Exp $
 
 inherit autotools
 
@@ -21,6 +21,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	#Fixes issue with compiling without JPEG support
+	epatch "${FILESDIR}"/${P}-jpeg-compile.patch
 	ln -s makefiles/configure.in .
 	ln -s makefiles/Makefile.am .
 
