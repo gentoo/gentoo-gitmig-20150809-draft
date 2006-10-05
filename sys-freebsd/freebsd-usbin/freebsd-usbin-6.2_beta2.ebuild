@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta2.ebuild,v 1.2 2006/10/05 11:15:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta2.ebuild,v 1.3 2006/10/05 22:14:27 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -9,7 +9,7 @@ SLOT="0"
 KEYWORDS="~x86-fbsd"
 
 IUSE="atm bluetooth tcpd ssl usb ipv6 acpi ipfilter isdn pam ssl radius
-	 minimal ipsec nis pam suid nat radius"
+	 minimal ipsec nis pam suid nat radius build"
 
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
@@ -17,7 +17,9 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 		mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${SBIN}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2
-		nis? ( mirror://gentoo/${LIBEXEC}.tar.bz2 )"
+		nis? ( mirror://gentoo/${LIBEXEC}.tar.bz2 )
+		build? ( mirror://gentoo/${SYS}.tar.bz2
+			mirror://gentoo/${INCLUDE}.tar.bz2 )"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
@@ -26,7 +28,7 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	net-libs/libpcap"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-sources-${RV}*
+	!build? ( =sys-freebsd/freebsd-sources-${RV}* )
 	sys-apps/texinfo
 	sys-devel/flex"
 
@@ -82,8 +84,10 @@ REMOVE_SUBDIRS="
 src_unpack() {
 	freebsd_src_unpack
 
-	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
-	ln -s "/usr/include" "${WORKDIR}/include"
+	if ! use build; then
+		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+		ln -s "/usr/include" "${WORKDIR}/include"
+	fi
 }
 
 src_compile() {
