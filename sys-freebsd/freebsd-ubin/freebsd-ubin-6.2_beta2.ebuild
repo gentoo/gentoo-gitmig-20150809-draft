@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_beta2.ebuild,v 1.1 2006/10/05 09:16:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_beta2.ebuild,v 1.2 2006/10/05 21:06:47 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -8,14 +8,15 @@ DESCRIPTION="FreeBSD's base system source for /usr/bin"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
 
-IUSE="atm bluetooth ssl usb nls ipv6 kerberos nis"
+IUSE="atm bluetooth ssl usb nls ipv6 kerberos nis build"
 
 SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 		mirror://gentoo/${CONTRIB}.tar.bz2
 		mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2
 		mirror://gentoo/${BIN}.tar.bz2
-		mirror://gentoo/${INCLUDE}.tar.bz2"
+		mirror://gentoo/${INCLUDE}.tar.bz2
+		build? ( mirror://gentoo/${SYS}.tar.bz2 )"
 
 RDEPEND="sys-freebsd/freebsd-lib
 	ssl? ( dev-libs/openssl )
@@ -26,7 +27,7 @@ RDEPEND="sys-freebsd/freebsd-lib
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	=sys-freebsd/freebsd-sources-${RV}*
+	!build? ( =sys-freebsd/freebsd-sources-${RV}* )
 	=sys-freebsd/freebsd-mk-defs-${RV}*"
 
 RDEPEND="${RDEPEND}
@@ -75,7 +76,7 @@ REMOVE_SUBDIRS="bzip2 bzip2recover tar
 src_unpack() {
 	freebsd_src_unpack
 
-	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
+	use build || ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 
 	# Rename manpage for renamed cmp
 	mv ${S}/cmp/cmp.1 ${S}/cmp/bsdcmp.1
