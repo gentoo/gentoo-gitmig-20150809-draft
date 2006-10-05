@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.11 2006/07/07 18:40:56 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.12 2006/10/05 11:53:08 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_P="armyops${PV}-linux.run"
-DESCRIPTION="America's Army: Special Forces - military simulations by the U.S. Army to provide civilians with insights on soldiering"
+DESCRIPTION="military simulations by the U.S. Army to provide civilians with insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
 SRC_URI="http://treefort.icculus.org/armyops/${MY_P}
 	http://0day.icculus.org/armyops/${MY_P}
@@ -30,16 +30,13 @@ RDEPEND="sys-libs/glibc
 			app-emulation/emul-linux-x86-xlibs
 			|| (
 				>=app-emulation/emul-linux-x86-xlibs-7.0
-				|| ( >=media-video/nvidia-glx-1.0.6629-r3
+				|| (
 					 x11-drivers/nvidia-drivers
 					 x11-drivers/nvidia-legacy-drivers )
 				>=x11-drivers/ati-drivers-8.8.25-r1 ) )
 		x86? (
-			|| (
-				(
-					x11-libs/libXext
-					x11-libs/libX11 )
-				virtual/x11 ) ) )
+			x11-libs/libXext
+			x11-libs/libX11 ) )
 	amd64? (
 			app-emulation/emul-linux-x86-compat )
 	x86? ( =virtual/libstdc++-3.3 )
