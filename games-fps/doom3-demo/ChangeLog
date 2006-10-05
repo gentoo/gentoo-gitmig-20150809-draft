@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-demo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.23 2006/07/07 19:20:10 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.24 2006/10/05 12:06:30 wolf31o2 Exp $
+
+  05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  doom3-demo-1.1.1286.ebuild:
+  Removed references to nvidia-glx, since it is no longer in the tree.
 
   07 Jul 2006; Kristopher Kersey <augustus@gentoo.org>
   doom3-demo-1.1.1286.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.19 2006/09/28 21:16:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-demo/quake3-demo-1.11.ebuild,v 1.20 2006/10/05 12:08:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,7 +25,6 @@ UIDEPEND="virtual/opengl
 		app-emulation/emul-linux-x86-xlibs
 		|| (
 			>=app-emulation/emul-linux-x86-xlibs-7.0
-			>=media-video/nvidia-glx-1.0.6629-r3
 			x11-drivers/nvidia-drivers
 			x11-drivers/nvidia-legacy-drivers
 			>=x11-drivers/ati-drivers-8.8.25-r1 ) )"
