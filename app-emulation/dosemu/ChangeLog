@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.35 2006/09/09 08:09:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.36 2006/10/05 04:59:03 tsunam Exp $
+
+  05 Oct 2006; Joshua Jackson <tsunam@gentoo.org> dosemu-1.3.3.ebuild:
+  Stable x86; bug #145823
 
   09 Sep 2006; Hanno Boeck <hanno@gentoo.org> dosemu-1.3.3.ebuild:
   Add some dodoc.

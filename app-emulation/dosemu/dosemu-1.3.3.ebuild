@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.3.ebuild,v 1.2 2006/09/09 08:09:06 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.3.3.ebuild,v 1.3 2006/10/05 04:59:03 tsunam Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dosemu/${P_FD}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="X svga gpm debug"
 
 RDEPEND="X? (
