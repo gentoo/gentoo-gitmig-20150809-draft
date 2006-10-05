@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dczip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.8 2006/02/18 23:58:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dczip/ChangeLog,v 1.9 2006/10/05 14:24:56 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> dczip-2.05.ebuild:
+  Dropping sparc keywords, see #96229
 
   18 Feb 2006; Petteri Räty <betelgeuse@gentoo.org> dczip-2.05.ebuild:
   Removed virtual/x11 and virtual/jdk from DEPEND.
