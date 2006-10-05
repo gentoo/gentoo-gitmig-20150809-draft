@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.6.1.ebuild,v 1.4 2006/07/10 22:33:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.6.1.ebuild,v 1.5 2006/10/05 01:38:53 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -19,7 +19,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	x11-proto/xf86miscproto
 	x11-proto/xproto
-	dri? ( x11-proto/xf86driproto
+	dri? ( x11-proto/glproto
+			x11-proto/xf86driproto
 			>=x11-libs/libdrm-2 )"
 
 CONFIGURE_OPTIONS="$(use_enable dri)"
