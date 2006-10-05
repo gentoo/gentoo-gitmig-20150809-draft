@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.64 2006/10/04 12:59:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.65 2006/10/05 17:30:15 grobian Exp $
+
+  05 Oct 2006; Fabian Groffen <grobian@gentoo.org>
+  -files/libwww-5.4.0-automake-macos.patch, libwww-5.4.0-r3.ebuild,
+  libwww-5.4.0-r4.ebuild, libwww-5.4.0-r5.ebuild, libwww-5.4.0-r6.ebuild:
+  Dropped ppc-macos keyword, see you in prefix.
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libwww-5.4.0-r3.ebuild,
   libwww-5.4.0-r4.ebuild, libwww-5.4.0-r5.ebuild, libwww-5.4.0-r6.ebuild:

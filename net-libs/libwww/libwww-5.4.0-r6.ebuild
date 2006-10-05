@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r6.ebuild,v 1.9 2006/10/04 12:59:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r6.ebuild,v 1.10 2006/10/05 17:30:15 grobian Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="latest"
@@ -47,8 +47,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-asneeded.patch"
 	# Drop Externls rebuild after automake
 	epatch "${FILESDIR}/${P}-noexport.patch"
-	# Mac OS X has no automake 1.4, only 1.6.3
-	epatch "${FILESDIR}/${P}-automake-macos.patch"
 	# Respect users LDFLAGS, bug #126863.
 	epatch "${FILESDIR}/${P}-respectflags.patch"
 

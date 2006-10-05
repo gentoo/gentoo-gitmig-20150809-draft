@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.5 2006/10/04 12:59:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r3.ebuild,v 1.6 2006/10/05 17:30:15 grobian Exp $
 
 WANT_AUTOMAKE="1.4"
 WANT_AUTOCONF="latest"
@@ -15,7 +15,7 @@ SRC_URI="http://www.w3.org/Library/Distribution/${MY_P}.tgz
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="ssl mysql"
 
 RDEPEND="dev-lang/perl
@@ -60,7 +60,6 @@ src_compile() {
 		${myconf} || die
 
 	emake check-am || die
-	use ppc-macos && echo "#undef HAVE_APPKIT_APPKIT_H" >> wwwconf.h
 	emake || die
 }
 
