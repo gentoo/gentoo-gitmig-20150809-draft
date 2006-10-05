@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/roxcd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.4 2006/05/24 17:55:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxcd/ChangeLog,v 1.5 2006/10/05 18:15:46 lack Exp $
+
+  05 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Accepting maintainer role
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.
