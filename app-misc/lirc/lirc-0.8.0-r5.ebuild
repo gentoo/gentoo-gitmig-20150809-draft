@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.9 2006/09/24 09:21:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.0-r5.ebuild,v 1.10 2006/10/05 12:02:09 zzam Exp $
 
 WANT_AUTOMAKE=1.5
 WANT_AUTOCONF=2.5
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.lirc.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="alsa debug doc X usb hardware-carrier transmitter udev"
+IUSE="debug doc X hardware-carrier transmitter udev"
 KEYWORDS="amd64 ppc ppc64 x86"
 SRC_URI="mirror://sourceforge/lirc/${P/_pre/pre}.tar.bz2"
 

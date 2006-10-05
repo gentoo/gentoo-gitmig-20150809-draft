@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.115 2006/09/24 09:21:13 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.116 2006/10/05 12:02:09 zzam Exp $
+
+  05 Oct 2006; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.0-r1.ebuild,
+  lirc-0.8.0-r5.ebuild:
+  Removed unused use-flags alsa and usb, due to Bug #150083.
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> lirc-0.8.0-r5.ebuild:
   Stable on ppc.
