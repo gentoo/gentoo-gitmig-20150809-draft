@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.5.ebuild,v 1.1 2006/01/31 06:11:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.5.ebuild,v 1.2 2006/10/05 17:19:05 nyhm Exp $
 
 inherit eutils games
 
@@ -15,7 +15,8 @@ IUSE="nls"
 
 RDEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-image-1.2
-	>=media-libs/sdl-mixer-1.2"
+	>=media-libs/sdl-mixer-1.2
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 

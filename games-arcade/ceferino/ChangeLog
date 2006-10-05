@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ceferino
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.8 2006/01/31 06:11:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.9 2006/10/05 17:19:05 nyhm Exp $
+
+  05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> ceferino-0.97.5.ebuild:
+  Fix gettext dependency
 
 *ceferino-0.97.5 (31 Jan 2006)
 
