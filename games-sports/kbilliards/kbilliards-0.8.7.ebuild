@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/kbilliards/kbilliards-0.8.7.ebuild,v 1.1 2006/06/27 20:43:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/kbilliards/kbilliards-0.8.7.ebuild,v 1.2 2006/10/05 09:27:52 blubb Exp $
 
 ARTS_REQUIRED=yes
 inherit kde
@@ -11,7 +11,7 @@ SRC_URI="http://www.hostnotfound.it/kbilliards/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 need-kde 3
