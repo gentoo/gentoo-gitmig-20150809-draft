@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/c2hs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.19 2006/10/04 05:19:21 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/c2hs/ChangeLog,v 1.20 2006/10/05 03:09:33 cparrott Exp $
+
+  05 Oct 2006; Chris Parrott <cparrott@gentoo.org> c2hs-0.14.5.ebuild:
+  marked stable for amd64 (bug 144678)
 
   04 Oct 2006; Joshua Jackson <tsunam@gentoo.org> c2hs-0.14.5.ebuild:
   Stable x86;bug #144678
