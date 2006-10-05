@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r2.ebuild,v 1.3 2006/10/03 13:38:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r2.ebuild,v 1.4 2006/10/05 20:49:08 nyhm Exp $
 
 inherit eutils games
 
@@ -21,9 +21,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc sparc x86"
 IUSE="alsa auth dedicated esd gtk nls readline sdl Xaw3d"
 
-RDEPEND="sys-libs/zlib
-	readline? ( sys-libs/readline )
+RDEPEND="readline? ( sys-libs/readline )
 	!dedicated? (
+		nls? ( virtual/libintl )
 		gtk? ( >=x11-libs/gtk+-2.0.0 )
 		!gtk? (
 			Xaw3d? ( x11-libs/Xaw3d )

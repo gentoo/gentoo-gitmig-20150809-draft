@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r1.ebuild,v 1.2 2006/08/28 00:43:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.0.8-r1.ebuild,v 1.3 2006/10/05 20:49:08 nyhm Exp $
 
 inherit eutils games
 
@@ -21,11 +21,10 @@ SLOT="0"
 KEYWORDS="alpha amd64 mips ppc sparc x86"
 IUSE="alsa dedicated esd gtk nls readline sdl Xaw3d"
 
-RDEPEND="sys-libs/zlib
-	readline? ( sys-libs/readline )
+RDEPEND="readline? ( sys-libs/readline )
 	!dedicated? (
+		nls? ( virtual/libintl )
 		gtk? (
-			>=dev-util/pkgconfig-0.9
 			>=x11-libs/gtk+-2.0.0
 			>=dev-libs/glib-2.0.0
 			>=dev-libs/atk-1.0.3
@@ -35,18 +34,15 @@ RDEPEND="sys-libs/zlib
 			Xaw3d? (
 				x11-libs/Xaw3d )
 			!Xaw3d? (
-				|| (
-					x11-libs/libXaw
-					virtual/x11 ) )
-			|| ( (
-					x11-libs/libX11
-					x11-libs/libICE
-					x11-libs/libSM
-					x11-libs/libXt
-					x11-libs/libXext
-					x11-libs/libXmu
-					x11-libs/libXpm )
-				virtual/x11 ) )
+				x11-libs/libXaw )
+			x11-libs/libX11
+			x11-libs/libICE
+			x11-libs/libSM
+			x11-libs/libXt
+			x11-libs/libXext
+			x11-libs/libXmu
+			x11-libs/libXpm
+		)
 		alsa? (
 			>=media-libs/alsa-lib-1.0
 			>=media-libs/audiofile-0.2
@@ -59,8 +55,8 @@ RDEPEND="sys-libs/zlib
 	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
-	|| ( (  x11-proto/xextproto )
-		virtual/x11 )"
+	!dedicated? ( gtk? ( >=dev-util/pkgconfig-0.9 ) )
+	x11-proto/xextproto"
 
 S=${WORKDIR}/${MY_P}
 
