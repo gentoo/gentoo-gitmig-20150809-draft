@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.251 2006/09/14 07:01:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.252 2006/10/05 00:12:07 nyhm Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -819,7 +819,7 @@ make_desktop_entry() {
 					action)     type=ActionGame;;
 					arcade)     type=ArcadeGame;;
 					board)      type=BoardGame;;
-					kid)        type=KidsGame;;
+					kids)       type=KidsGame;;
 					emulation)  type=Emulator;;
 					puzzle)     type=LogicGame;;
 					rpg)        type=RolePlaying;;
