@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.1 2006/10/05 09:09:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.2 2006/10/05 20:57:29 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD's base system libraries"
 SLOT="6.0"
 KEYWORDS="~x86-fbsd"
 
-IUSE="atm bluetooth ssl ipv6 kerberos nis gpib"
+IUSE="atm bluetooth ssl ipv6 kerberos nis gpib build"
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
@@ -21,6 +21,8 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${INCLUDE}.tar.bz2
 		nis? ( mirror://gentoo/${USBIN}.tar.bz2 )
 		!kernel_FreeBSD? (
+			mirror://gentoo/${SYS}.tar.bz2 )
+		build? (
 			mirror://gentoo/${SYS}.tar.bz2 )"
 
 if [[ ${CATEGORY/cross-} == ${CATEGORY} ]]; then
@@ -103,6 +105,10 @@ REMOVE_SUBDIRS="libncurses libform libmenu libpanel \
 src_unpack() {
 	freebsd_src_unpack
 
+	sed -i -e 's:-o/dev/stdout:-t:' ${S}/libc/net/Makefile.inc
+
+	use build && return 0
+
 	if [[ ${CTARGET} == ${CHOST} ]]; then
 		ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 	else
@@ -112,8 +118,6 @@ src_unpack() {
 
 	[[ -n $(install --version 2> /dev/null | grep GNU) ]] && \
 		sed -i -e 's:${INSTALL} -C:${INSTALL}:' "${WORKDIR}/include/Makefile"
-
-	sed -i -e 's:-o/dev/stdout:-t:' ${S}/libc/net/Makefile.inc
 
 	# Let arch-specific includes to be found
 	local machine
