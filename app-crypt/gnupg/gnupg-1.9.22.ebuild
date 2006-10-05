@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.22.ebuild,v 1.2 2006/10/05 04:00:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.22.ebuild,v 1.3 2006/10/05 04:29:49 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -18,7 +18,7 @@ COMMON_DEPEND="
 	>=dev-libs/pth-1.3.7
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.15
-	>=dev-libs/libgpg-error-1.0
+	>=dev-libs/libgpg-error-1.3
 	>=dev-libs/libassuan-0.9.2
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
 	openct? ( >=dev-libs/openct-0.5.0 )

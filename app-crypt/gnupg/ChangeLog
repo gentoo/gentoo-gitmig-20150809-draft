@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.232 2006/10/05 04:00:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.233 2006/10/05 04:29:49 robbat2 Exp $
+
+*gnupg-1.4.5-r2 (05 Oct 2006)
+
+  05 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> +gnupg-1.4.5-r2.ebuild,
+  gnupg-1.9.22.ebuild:
+  Bug #148907 - USE=bindist support for gnupg-1.4, and also update
+  libgpg-error requirement for gnupg-1.9.
 
   05 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> gnupg-1.9.22.ebuild:
   Forgot to make new html optional via USE=doc.
