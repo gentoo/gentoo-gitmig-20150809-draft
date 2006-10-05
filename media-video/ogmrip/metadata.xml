@@ -3,6 +3,13 @@
 <pkgmetadata>
 <herd>video</herd>
 <maintainer>
-<email>media-video@gentoo.org</email>
+<email>beandog@gentoo.org</email>
+<name>Steve Dibb</name>
 </maintainer>
+<maintainer>
+<email>billl@users.sf.net</email>
+<name>Olivier Rolland</name>
+</maintainer>
+<longdescription lang="en">
+</longdescription>
 </pkgmetadata>
