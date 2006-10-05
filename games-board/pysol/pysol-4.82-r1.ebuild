@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.9 2006/08/28 00:25:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82-r1.ebuild,v 1.10 2006/10/05 13:24:18 nyhm Exp $
 
 inherit eutils python games
 
@@ -40,7 +40,8 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r data/* || die "data failed"
 
-	make_desktop_entry pysol PySol "${GAMES_DATADIR}"/${PN}/pysol.xpm
+	doicon data/pysol.xpm
+	make_desktop_entry pysol PySol pysol.xpm 'Game;CardGame'
 
 	doman pysol.6
 	dodoc NEWS README
