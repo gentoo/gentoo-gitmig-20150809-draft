@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.58 2006/07/31 01:30:13 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.59 2006/10/05 06:47:07 pebenito Exp $
+
+*policycoreutils-1.30.30 (05 Oct 2006)
+
+  05 Oct 2006; Chris PeBenito <pebenito@gentoo.org>
+  +files/policycoreutils-1.32-quietlp.diff, +policycoreutils-1.30.30.ebuild:
+  Add SVN snapshot and updated extras in preparation for reference policy.
 
   31 Jul 2006; Chris PeBenito <pebenito@gentoo.org>
   policycoreutils-1.30-r1.ebuild:
