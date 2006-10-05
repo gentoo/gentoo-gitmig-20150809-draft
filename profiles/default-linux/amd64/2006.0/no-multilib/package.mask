@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.29 2006/09/28 14:07:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.30 2006/10/05 20:51:11 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -131,6 +131,8 @@ games-strategy/coldwar-demo
 games-strategy/darwinia
 games-strategy/darwinia-demo
 games-strategy/dominions2
+games-strategy/heroes3
+games-strategy/heroes3-demo
 games-strategy/majesty-demo
 games-strategy/x2-demo
 mail-client/ciphire-mail
