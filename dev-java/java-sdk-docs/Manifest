@@ -1,9 +1,44 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 79298dbd29e0ad42d0d19130ff1f0cc0 ChangeLog 5550
-RMD160 0edcfa6ab8785b75b1a245039b42f8a827157419 ChangeLog 5550
-SHA256 c77807e49fe41cb5eee96e46f29708331d0792dab22ac7dca441efd8ca5a2d5c ChangeLog 5550
+DIST j2sdk-1_3_1-doc.zip 22577838
+DIST j2sdk-1_4_1-doc.zip 32765641
+DIST j2sdk-1_4_2-doc.zip 34397778
+DIST jdk-1_2_2_006-doc.tar.gz 10832069
+DIST jdk-1_5_0-doc-r1.zip 46191338
+DIST jdk-1_5_0-doc.zip 45635523
+EBUILD java-sdk-docs-1.2.2.006.ebuild 963 RMD160 086349c1a0cd1eeeff93c24ba73eb608321b7997 SHA1 507d6f643c1f23beb64060476b1a6d5f98a9738b SHA256 8269f701c6d2bc7ca1b03d6fd8e7e072e5b7a72aedfb15ac7d88c74e60beff59
+MD5 618c9d9a726fb108e5ccdb00a218918e java-sdk-docs-1.2.2.006.ebuild 963
+RMD160 086349c1a0cd1eeeff93c24ba73eb608321b7997 java-sdk-docs-1.2.2.006.ebuild 963
+SHA256 8269f701c6d2bc7ca1b03d6fd8e7e072e5b7a72aedfb15ac7d88c74e60beff59 java-sdk-docs-1.2.2.006.ebuild 963
+EBUILD java-sdk-docs-1.3.1.ebuild 834 RMD160 fb9ca4836602ba69ab8024a0818da722a77cdc27 SHA1 236dbf71a88207086b440ae3a58e811e761a1b18 SHA256 3eb399b911b364f0b66f3385866b158fabe2e68289b899e933f84bc87b3707e0
+MD5 f0a52ed45aaafd43473dcf18da92ab15 java-sdk-docs-1.3.1.ebuild 834
+RMD160 fb9ca4836602ba69ab8024a0818da722a77cdc27 java-sdk-docs-1.3.1.ebuild 834
+SHA256 3eb399b911b364f0b66f3385866b158fabe2e68289b899e933f84bc87b3707e0 java-sdk-docs-1.3.1.ebuild 834
+EBUILD java-sdk-docs-1.4.1.ebuild 873 RMD160 9fb7556543b160e80b09a66b0b0f7e1fedbd4a29 SHA1 b8dd5ac53345df9aefd60dd692d9667408ab1725 SHA256 d611866e873ee546bfa82bf6fd86f580ec13bb507a47353b8691846320b1bd67
+MD5 652692342b8613df6665065c0b20408f java-sdk-docs-1.4.1.ebuild 873
+RMD160 9fb7556543b160e80b09a66b0b0f7e1fedbd4a29 java-sdk-docs-1.4.1.ebuild 873
+SHA256 d611866e873ee546bfa82bf6fd86f580ec13bb507a47353b8691846320b1bd67 java-sdk-docs-1.4.1.ebuild 873
+EBUILD java-sdk-docs-1.4.2.ebuild 874 RMD160 ebb875d253c06273ed9c5f13ddeeba2924c9f718 SHA1 4d87b490f030927d4e569d2b5d7b24e7590a103b SHA256 f8eace8a030babce05491c8708f8151c8f0908d98b274a4bc5fe193a5a0522ec
+MD5 e65ffe845ead32c6c468ec63b0677eda java-sdk-docs-1.4.2.ebuild 874
+RMD160 ebb875d253c06273ed9c5f13ddeeba2924c9f718 java-sdk-docs-1.4.2.ebuild 874
+SHA256 f8eace8a030babce05491c8708f8151c8f0908d98b274a4bc5fe193a5a0522ec java-sdk-docs-1.4.2.ebuild 874
+EBUILD java-sdk-docs-1.5.0-r1.ebuild 1505 RMD160 8cc56c274a473d7424d5ae7cebe16c8ce9827b43 SHA1 052d24f7ca8f8cad203a109188159a9a4bc5b27d SHA256 6534bf45aa4f23bf4aa11edf83703ccc3baae1daf83593d50d7fcbf8d1add08a
+MD5 21a2b61bab0c865fca433bac43ecddf3 java-sdk-docs-1.5.0-r1.ebuild 1505
+RMD160 8cc56c274a473d7424d5ae7cebe16c8ce9827b43 java-sdk-docs-1.5.0-r1.ebuild 1505
+SHA256 6534bf45aa4f23bf4aa11edf83703ccc3baae1daf83593d50d7fcbf8d1add08a java-sdk-docs-1.5.0-r1.ebuild 1505
+EBUILD java-sdk-docs-1.5.0.ebuild 945 RMD160 cb50f752239fc799270056f0557e32e977bf24f4 SHA1 8b3b528309777a01817211442aac3171bb8bfa34 SHA256 261067f47c7aadd321b81d8b679c51ae9143db1fd5409b05de2bc19620fc3d6f
+MD5 515e86a56b0f9b5cb2cf04015a42d699 java-sdk-docs-1.5.0.ebuild 945
+RMD160 cb50f752239fc799270056f0557e32e977bf24f4 java-sdk-docs-1.5.0.ebuild 945
+SHA256 261067f47c7aadd321b81d8b679c51ae9143db1fd5409b05de2bc19620fc3d6f java-sdk-docs-1.5.0.ebuild 945
+MISC ChangeLog 5729 RMD160 8571c9c07ad51feeb2d80fab725164d793981793 SHA1 bc90b6f8a02b318cf67e189818bf1bf96da2b5a0 SHA256 77175e465166f88e05c5a515c4d8eddcb5947b1001f8ba53a5b8b441f3b2734c
+MD5 da0806b033fcb3a3586f4004455a2078 ChangeLog 5729
+RMD160 8571c9c07ad51feeb2d80fab725164d793981793 ChangeLog 5729
+SHA256 77175e465166f88e05c5a515c4d8eddcb5947b1001f8ba53a5b8b441f3b2734c ChangeLog 5729
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
 MD5 d6dd3e737a5469ac2717553c95bfc023 files/digest-java-sdk-docs-1.2.2.006 71
 RMD160 48948c091731505a551ac9ac6139fbea889c2f69 files/digest-java-sdk-docs-1.2.2.006 71
 SHA256 cf576ad45867388c41eeeb28f30a250c84fad7bbb31a40ac460fbfaa9128328b files/digest-java-sdk-docs-1.2.2.006 71
@@ -22,31 +57,10 @@ SHA256 114e783e085520f110942c7f2856763f9b5041bce7ffeec94317d21af1ae2822 files/di
 MD5 6c5dc0a4eede533588eb57fb391fb3fe files/digest-java-sdk-docs-1.5.0-r1 67
 RMD160 69aef9f95a8562f3d0866e56c2ed5051d4eb06ba files/digest-java-sdk-docs-1.5.0-r1 67
 SHA256 b7ca3108a4ee593d7c5edde3aeb020468e0395ee2334e586159010bf8348e872 files/digest-java-sdk-docs-1.5.0-r1 67
-MD5 618c9d9a726fb108e5ccdb00a218918e java-sdk-docs-1.2.2.006.ebuild 963
-RMD160 086349c1a0cd1eeeff93c24ba73eb608321b7997 java-sdk-docs-1.2.2.006.ebuild 963
-SHA256 8269f701c6d2bc7ca1b03d6fd8e7e072e5b7a72aedfb15ac7d88c74e60beff59 java-sdk-docs-1.2.2.006.ebuild 963
-MD5 fe71f8d6074876e259b4adafd91172fb java-sdk-docs-1.3.1.ebuild 840
-RMD160 f58092af065cff9de43adfce25937e87f606367c java-sdk-docs-1.3.1.ebuild 840
-SHA256 1001a90227ef4dfec11cd379b0b871f7e69ad1f58d3fb440de32c3c1c2bab04c java-sdk-docs-1.3.1.ebuild 840
-MD5 08191c83cc1cfd86c702e61c9ed66443 java-sdk-docs-1.4.1.ebuild 875
-RMD160 aaf60e9321082c4d031c10932c482dd1edd43dfb java-sdk-docs-1.4.1.ebuild 875
-SHA256 5ecafcc4dd551aa67907404dda957e7398decef51fa39f1aa4c1c473d698fd3a java-sdk-docs-1.4.1.ebuild 875
-MD5 3c6361e52884fa19d51143f0d446d8fe java-sdk-docs-1.4.2.ebuild 878
-RMD160 ca78d54ed7af6e4601513f7554fce189767bbf15 java-sdk-docs-1.4.2.ebuild 878
-SHA256 955a7e80d9fc16c3fae634ccb8f5c84a7ca738ac275ce1afcfae0b326afebb0d java-sdk-docs-1.4.2.ebuild 878
-MD5 21a2b61bab0c865fca433bac43ecddf3 java-sdk-docs-1.5.0-r1.ebuild 1505
-RMD160 8cc56c274a473d7424d5ae7cebe16c8ce9827b43 java-sdk-docs-1.5.0-r1.ebuild 1505
-SHA256 6534bf45aa4f23bf4aa11edf83703ccc3baae1daf83593d50d7fcbf8d1add08a java-sdk-docs-1.5.0-r1.ebuild 1505
-MD5 515e86a56b0f9b5cb2cf04015a42d699 java-sdk-docs-1.5.0.ebuild 945
-RMD160 cb50f752239fc799270056f0557e32e977bf24f4 java-sdk-docs-1.5.0.ebuild 945
-SHA256 261067f47c7aadd321b81d8b679c51ae9143db1fd5409b05de2bc19620fc3d6f java-sdk-docs-1.5.0.ebuild 945
-MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
-SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEQe7i2+ySkm8kpY0RAsL5AJ9A2UnwUagGEw1WHDX9CqEVnGAjugCeNNJQ
-zMG6nUFxW8Aui+mv/mPNmjU=
-=NiUg
+iD8DBQFFJT8jKRy60XGEcJIRAi25AJ921IB6EooPzm2ps3v04Bcqz7IGdACfYGW0
+77mxeKDIZ66Jof/LxZ5mlyw=
+=Pud1
 -----END PGP SIGNATURE-----

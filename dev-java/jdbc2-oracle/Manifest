@@ -1,18 +1,54 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e562cb1d01f244bbd6f2fba4d6030ab1 jdbc2-oracle-9.2.0.4.ebuild 2342
-MD5 e18b2debd3b128ce81fc7112e0f379c8 jdbc2-oracle-9.2.0.3.ebuild 2341
-MD5 c86024b7eae6e4f4c07c1031f3287e23 jdbc2-oracle-9.2.0.5.ebuild 2337
-MD5 be958f5884e926c9442bc2385c2ddf66 ChangeLog 2168
+DIST jdbc2-oracle-9.2.0.3-classes12.zip 1213897
+DIST jdbc2-oracle-9.2.0.3-classes12_g.zip 1451562
+DIST jdbc2-oracle-9.2.0.3-javadoc.tar 3619840
+DIST jdbc2-oracle-9.2.0.3-nls_charset12.zip 1813731
+DIST jdbc2-oracle-9.2.0.3-ocrs12.zip 36764
+DIST jdbc2-oracle-9.2.0.4-classes12.zip 1219950
+DIST jdbc2-oracle-9.2.0.4-classes12_g.zip 1458646
+DIST jdbc2-oracle-9.2.0.4-javadoc.tar 3582473
+DIST jdbc2-oracle-9.2.0.4-nls_charset12.zip 1876386
+DIST jdbc2-oracle-9.2.0.4-ocrs12.zip 36764
+DIST jdbc2-oracle-9.2.0.5-classes12.zip 1232604
+DIST jdbc2-oracle-9.2.0.5-classes12_g.zip 1472511
+DIST jdbc2-oracle-9.2.0.5-javadoc.tar 3619840
+DIST jdbc2-oracle-9.2.0.5-nls_charset12.zip 1876916
+DIST jdbc2-oracle-9.2.0.5-ocrs12.zip 37194
+EBUILD jdbc2-oracle-9.2.0.3.ebuild 2339 RMD160 9998c5eae029ee009d8d162e64dbd2fb6edb6ef5 SHA1 653065c67f424cd962e1570f228fce60f0003c18 SHA256 64873d71d2fa22f5050b1657406a9bf14a85ae29c04a4c775b69c18c6d762a1a
+MD5 76571a1ff556fe5534b10531ab1d2fd4 jdbc2-oracle-9.2.0.3.ebuild 2339
+RMD160 9998c5eae029ee009d8d162e64dbd2fb6edb6ef5 jdbc2-oracle-9.2.0.3.ebuild 2339
+SHA256 64873d71d2fa22f5050b1657406a9bf14a85ae29c04a4c775b69c18c6d762a1a jdbc2-oracle-9.2.0.3.ebuild 2339
+EBUILD jdbc2-oracle-9.2.0.4.ebuild 2339 RMD160 ca23f95c04dcc832da30ff5ad1b6e1d9b7094693 SHA1 c0a91fedddc89f46f65ee56714e8a8db242853dc SHA256 1bc73489b89f147507f0fccc0e799670a36791b4b2865d33acde9c30b6e1e110
+MD5 83857a942dc0641e13b9a95c6c4d37aa jdbc2-oracle-9.2.0.4.ebuild 2339
+RMD160 ca23f95c04dcc832da30ff5ad1b6e1d9b7094693 jdbc2-oracle-9.2.0.4.ebuild 2339
+SHA256 1bc73489b89f147507f0fccc0e799670a36791b4b2865d33acde9c30b6e1e110 jdbc2-oracle-9.2.0.4.ebuild 2339
+EBUILD jdbc2-oracle-9.2.0.5.ebuild 2334 RMD160 3ec1abcd881a7a8881176f621a9ab35cd2ea91f6 SHA1 07706749b64f061a1a264cf9f9a5b743d7814fbf SHA256 0b78254ac02b0646f82e33faaa48aab882e4de042dfa1c78d3ff8dd712820f64
+MD5 71451cc1dd8c0e4e0594a2b984572783 jdbc2-oracle-9.2.0.5.ebuild 2334
+RMD160 3ec1abcd881a7a8881176f621a9ab35cd2ea91f6 jdbc2-oracle-9.2.0.5.ebuild 2334
+SHA256 0b78254ac02b0646f82e33faaa48aab882e4de042dfa1c78d3ff8dd712820f64 jdbc2-oracle-9.2.0.5.ebuild 2334
+MISC ChangeLog 2355 RMD160 fc9d40ff20c66e4d654d63526bcd655f5ddd40d9 SHA1 82fa12a40c4b2e0b5679282af12cb6f5a75ef548 SHA256 92b659df417e17f30d29008a6caa8fdd6f1e86b2491b2ca551d4f7cf22f6e003
+MD5 986d0ea4e49fe7c96878bc9328abd1b1 ChangeLog 2355
+RMD160 fc9d40ff20c66e4d654d63526bcd655f5ddd40d9 ChangeLog 2355
+SHA256 92b659df417e17f30d29008a6caa8fdd6f1e86b2491b2ca551d4f7cf22f6e003 ChangeLog 2355
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
 MD5 ea87361be97921bff4ae13c53947f7a0 files/digest-jdbc2-oracle-9.2.0.3 399
+RMD160 7cf2c65e147e2771884ed2b6902943738b674624 files/digest-jdbc2-oracle-9.2.0.3 399
+SHA256 ca75588809cb2f0cb6ab42887e40cbde0e275f201773a8b4b73ec7cdf225bb51 files/digest-jdbc2-oracle-9.2.0.3 399
 MD5 739d7ad1bd62e47a215a8d5c147690a5 files/digest-jdbc2-oracle-9.2.0.4 399
+RMD160 a80c7e2565978693fa4d1b8cfe15610b5b67f1fb files/digest-jdbc2-oracle-9.2.0.4 399
+SHA256 73fb7f016d96a24cb938fe4adbc89acb241a77717318c195be259ca622367a39 files/digest-jdbc2-oracle-9.2.0.4 399
 MD5 0e4eaddaeb6f3930e55e769121787398 files/digest-jdbc2-oracle-9.2.0.5 399
+RMD160 cc94f5e7be838eccd1ec4cfa2dda6f158caf7fc1 files/digest-jdbc2-oracle-9.2.0.5 399
+SHA256 7e048f76c039e2d1fa872d2e852a691475cc251eb5fdc33842c31b14b89f1081 files/digest-jdbc2-oracle-9.2.0.5 399
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC28x2/rLF9B432nYRAsadAJ9Y9t5VO/MDHqrgF6F9qQlfkIaT8wCfZb8Q
-DZx/9eAKejkZ+B00/n3hxNo=
-=viDg
+iD8DBQFFJUAgKRy60XGEcJIRAukaAJ0ZYYWpFPxBChVAr19ryMFp8/ToGwCghF9G
+Dz7FJvxe/+HyjoQ2o323/q8=
+=DLSF
 -----END PGP SIGNATURE-----

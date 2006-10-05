@@ -1,16 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb00ed0bc28f6ad56e2ffbf0870f9db2 ChangeLog 788
-MD5 65355e69fa5bd7c91d6e79f143885bc0 files/digest-jdbc2-firebird-1.5.3 74
-MD5 65355e69fa5bd7c91d6e79f143885bc0 files/digest-jdbc2-firebird-1.5.3-r1 74
-MD5 65537737a4f82925fdc9d0800aad923a jdbc2-firebird-1.5.3-r1.ebuild 717
-MD5 3b77e29d6badf0a34a00da74e015bf28 jdbc2-firebird-1.5.3.ebuild 703
+DIST FirebirdSQL-1.5.3JDK_1.3.zip 2715139
+EBUILD jdbc2-firebird-1.5.3-r1.ebuild 712 RMD160 9e57a7425b59be5421bf76f6ef78518f6c76e61d SHA1 43a5f1ab0453b84d300019043403792cf68a6fde SHA256 fcec17e43be4fb6188c09cb8721c4714a9a05da044e718f252d0e50edf5bffb9
+MD5 1f71e4095264ecbd463fa312831c6c38 jdbc2-firebird-1.5.3-r1.ebuild 712
+RMD160 9e57a7425b59be5421bf76f6ef78518f6c76e61d jdbc2-firebird-1.5.3-r1.ebuild 712
+SHA256 fcec17e43be4fb6188c09cb8721c4714a9a05da044e718f252d0e50edf5bffb9 jdbc2-firebird-1.5.3-r1.ebuild 712
+EBUILD jdbc2-firebird-1.5.3.ebuild 700 RMD160 807fd58e912614eebe144008e332b89d2d87d2bf SHA1 52eeb61bf9e700ad9384cb7f1a49ca9978450136 SHA256 80370eac0c66065db34d50379b277257c54fe5a1c8dfc78662540a3b9c19a1c0
+MD5 759221f77bcdc4937e1e9f025fc8fd71 jdbc2-firebird-1.5.3.ebuild 700
+RMD160 807fd58e912614eebe144008e332b89d2d87d2bf jdbc2-firebird-1.5.3.ebuild 700
+SHA256 80370eac0c66065db34d50379b277257c54fe5a1c8dfc78662540a3b9c19a1c0 jdbc2-firebird-1.5.3.ebuild 700
+MISC ChangeLog 946 RMD160 4fabb0382f5cf93813c2b3d13cb3465facea415e SHA1 dd6fb43528cd3d665a2b4c1aec9d823dfc3d8a99 SHA256 9e318ca3f9505e5cb19602e37212f1f907549e3bf257d57c66c40f14e4dff44e
+MD5 f6f5cd7cb3da512508cd88d3aebb12a8 ChangeLog 946
+RMD160 4fabb0382f5cf93813c2b3d13cb3465facea415e ChangeLog 946
+SHA256 9e318ca3f9505e5cb19602e37212f1f907549e3bf257d57c66c40f14e4dff44e ChangeLog 946
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
+MD5 65355e69fa5bd7c91d6e79f143885bc0 files/digest-jdbc2-firebird-1.5.3 74
+RMD160 990679f3bd227c9ab2b8e3704e4fab35c88d292e files/digest-jdbc2-firebird-1.5.3 74
+SHA256 0cfd41a92daaf1a33a1da797d75dabb71d5339a0d44fab48c1b952e8c025f9ce files/digest-jdbc2-firebird-1.5.3 74
+MD5 65355e69fa5bd7c91d6e79f143885bc0 files/digest-jdbc2-firebird-1.5.3-r1 74
+RMD160 990679f3bd227c9ab2b8e3704e4fab35c88d292e files/digest-jdbc2-firebird-1.5.3-r1 74
+SHA256 0cfd41a92daaf1a33a1da797d75dabb71d5339a0d44fab48c1b952e8c025f9ce files/digest-jdbc2-firebird-1.5.3-r1 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFDnlxUndWRXhKOboURAhdlAJwL/gfgquA6WTmW8R8qr2nVA/p+mACg0fSP
-gfTADpxwaR/avC/bFhDDrlM=
-=/jXG
+iD8DBQFFJT/nKRy60XGEcJIRAkURAJ9YVedKWDx6WLvpv2h+dATY5wOvpACfTsSz
+HbS1LAgZW1Y7qmyWvMu7TOc=
+=t6cb
 -----END PGP SIGNATURE-----
