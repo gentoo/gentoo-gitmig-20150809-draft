@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-baselayout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.16 2006/09/21 20:51:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-baselayout/ChangeLog,v 1.17 2006/10/05 09:06:45 flameeyes Exp $
+
+  05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Version 6.2_beta2.
 
   21 Sep 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Add 6.2_beta1 ebuilds.
