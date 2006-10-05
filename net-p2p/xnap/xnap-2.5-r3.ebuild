@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xnap/xnap-2.5-r3.ebuild,v 1.3 2004/09/11 17:06:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xnap/xnap-2.5-r3.ebuild,v 1.4 2006/10/05 14:48:12 gustavoz Exp $
 
 DESCRIPTION="A P2P framework and client"
 HOMEPAGE="http://xnap.sf.net"
 SRC_URI="mirror://sourceforge/xnap/${P}r3.jar"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE=""
 RDEPEND=">=virtual/jre-1.3"
 
