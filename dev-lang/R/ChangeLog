@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.77 2006/08/07 12:51:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.78 2006/10/05 00:41:21 kugelfang Exp $
+
+*R-2.4.0 (05 Oct 2006)
+
+  05 Oct 2006; Danny van Dyk <kugelfang@gentoo.org> +R-2.4.0.ebuild:
+  Added 2.4.0 release.
 
   07 Aug 2006; Ferris McCormick <fmccor@gentoo.org> R-2.2.1.ebuild:
   Stable on sparc --- Bug #135318 --- has been running fine since last January.
