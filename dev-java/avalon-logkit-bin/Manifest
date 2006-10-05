@@ -1,14 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ac2f43551558ef55517667de587b3ecc avalon-logkit-bin-1.2.2.ebuild 765
-MD5 eaa5e80090c395eb3d83026d7a7f6d43 ChangeLog 1723
+DIST logkit-1.2.2.tar.gz 419582
+EBUILD avalon-logkit-bin-1.2.2.ebuild 763 RMD160 d2fe50b17b8d17ddd820528cfc50b37f5650bc63 SHA1 1581b2632f433fb6bfb1b83451aff16bb92c9814 SHA256 ac8b0e575bc36f4b9ea6efcffd9706a4fecbfa8455070cba159cd62bc1508359
+MD5 053610b978fba8c5bfe9dc751411be32 avalon-logkit-bin-1.2.2.ebuild 763
+RMD160 d2fe50b17b8d17ddd820528cfc50b37f5650bc63 avalon-logkit-bin-1.2.2.ebuild 763
+SHA256 ac8b0e575bc36f4b9ea6efcffd9706a4fecbfa8455070cba159cd62bc1508359 avalon-logkit-bin-1.2.2.ebuild 763
+MISC ChangeLog 1851 RMD160 5ab92df9ace0f3a7b621fb65a36dae5bea0a98d6 SHA1 8cd48443df992f5dff43e74b8885c4ea4dd213a7 SHA256 766a38a4fd9158d6e64c933d3edca62aa0876724b915a0bf4472afe5f5d1342b
+MD5 a6fcd5d7dbe192555b88f796c2d3364a ChangeLog 1851
+RMD160 5ab92df9ace0f3a7b621fb65a36dae5bea0a98d6 ChangeLog 1851
+SHA256 766a38a4fd9158d6e64c933d3edca62aa0876724b915a0bf4472afe5f5d1342b ChangeLog 1851
+MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
+SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9 metadata.xml 157
 MD5 f91f5dde7fd989c6aa2d4fdf8ca3062a files/digest-avalon-logkit-bin-1.2.2 64
+RMD160 e1b20a8ccf4c1c72dd5a7699ee1f2d24d8b13a2f files/digest-avalon-logkit-bin-1.2.2 64
+SHA256 bc00bab596060da32bab416ec1c8ed3b2b5c01cd36e943ec44cf3db06ee007fc files/digest-avalon-logkit-bin-1.2.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFC16CI/rLF9B432nYRAuQWAJoDJ/JyATtJG++V3QQN5jv7cb9BAwCdHBMb
-H0PyPEgul2vg8TKSijQSSTo=
-=2sM3
+iD8DBQFFJR/hKRy60XGEcJIRAjXQAKCBvJ7Rel/Z/kGsMsFXqLismlvNiwCcC2Eg
+Er2zBkW9TI6j9ZwzIvnhzJg=
+=yQQh
 -----END PGP SIGNATURE-----

@@ -6,18 +6,18 @@ MD5 18c8ff24139983c581fa7dbb1d6983fa files/commons-discovery-0.2-gentoo.diff 229
 RMD160 db91f803ffbb596edb0eb3a3f7bd303298af2316 files/commons-discovery-0.2-gentoo.diff 2296
 SHA256 63785107586dc354890cd97470911bb9324477715dcdce551e0acc2aa7028e58 files/commons-discovery-0.2-gentoo.diff 2296
 DIST commons-discovery-0.2-src.tar.gz 72783 RMD160 521a0439dd8f92d44dcf434abc0e3b6681c38048 SHA1 6fad15f3bc9f55175bb1319edf90533684250d14 SHA256 4c3d87c991ae2079a71b428077b1276de4fc68d7b5dd2bc2f6e084b3f286f22a
-EBUILD commons-discovery-0.2-r2.ebuild 1494 RMD160 f3bab5a570822b8e4ba7801ee60d6a7437ad34ab SHA1 5a58c0552784195d0eb52b4ad503eb8932b8c1d2 SHA256 6324c52cc9ca02a0343f8cbc37cce08c209dc5c088a1b4cc895829a324a19cde
-MD5 09e1ff98da16ae54b6373a3650d5ece0 commons-discovery-0.2-r2.ebuild 1494
-RMD160 f3bab5a570822b8e4ba7801ee60d6a7437ad34ab commons-discovery-0.2-r2.ebuild 1494
-SHA256 6324c52cc9ca02a0343f8cbc37cce08c209dc5c088a1b4cc895829a324a19cde commons-discovery-0.2-r2.ebuild 1494
-EBUILD commons-discovery-0.2-r3.ebuild 1409 RMD160 1a18c24b33b536678945bf1cbe96a036ebeb91fa SHA1 13705d834b2055656ced87136336f79eefd24317 SHA256 5af70f8d3f3ff57e3e5ef38e6de01a45fc427c47c945df780ad005e9547cb903
-MD5 b19561427602022ef6a63a03222c9897 commons-discovery-0.2-r3.ebuild 1409
-RMD160 1a18c24b33b536678945bf1cbe96a036ebeb91fa commons-discovery-0.2-r3.ebuild 1409
-SHA256 5af70f8d3f3ff57e3e5ef38e6de01a45fc427c47c945df780ad005e9547cb903 commons-discovery-0.2-r3.ebuild 1409
-MISC ChangeLog 2404 RMD160 b4ed47cbbc4c62ddb5155b0ae490468f13f5a09d SHA1 206ac07f0b929ce361e8cd76d649dd7cb120b709 SHA256 41402397894ef0f6e5ad22b862d34a5aa792405e70396754db00dd7638a6b17a
-MD5 a49ca71ac0f4f2ca9a180a12d26f34ab ChangeLog 2404
-RMD160 b4ed47cbbc4c62ddb5155b0ae490468f13f5a09d ChangeLog 2404
-SHA256 41402397894ef0f6e5ad22b862d34a5aa792405e70396754db00dd7638a6b17a ChangeLog 2404
+EBUILD commons-discovery-0.2-r2.ebuild 1485 RMD160 52136aacf828ebd3d2ea550b42a79851ac685bdf SHA1 8d1ca8304c6ca75cb50b1bdd5f386495ec48fb27 SHA256 6c8cfbbdd8371b04ba40b6edaddc6904b97b143a53fbe9a87810c51d6fcb9bab
+MD5 7cd73399e22918ebe8a9d1705e3a989b commons-discovery-0.2-r2.ebuild 1485
+RMD160 52136aacf828ebd3d2ea550b42a79851ac685bdf commons-discovery-0.2-r2.ebuild 1485
+SHA256 6c8cfbbdd8371b04ba40b6edaddc6904b97b143a53fbe9a87810c51d6fcb9bab commons-discovery-0.2-r2.ebuild 1485
+EBUILD commons-discovery-0.2-r3.ebuild 1402 RMD160 3bdfa91140ac1b6a3a6b0a2311e2ab505a26f553 SHA1 b4879e2dfac87bb6855b1262cc786ee8e740cea4 SHA256 e53b2999dffcffb0b31f5347ac8ab7b355864e2304619b4e6425058446cd54e4
+MD5 a33f1d1e8669856f01829016cad6d9fe commons-discovery-0.2-r3.ebuild 1402
+RMD160 3bdfa91140ac1b6a3a6b0a2311e2ab505a26f553 commons-discovery-0.2-r3.ebuild 1402
+SHA256 e53b2999dffcffb0b31f5347ac8ab7b355864e2304619b4e6425058446cd54e4 commons-discovery-0.2-r3.ebuild 1402
+MISC ChangeLog 2565 RMD160 fc9250dcfaf84f0e0feb2d380aeacb4906a8aed0 SHA1 d2c13accea570fa8d95f3fde2caaa6588df24f94 SHA256 ee7fb97c8c92fc945583cccd9565c1c7f6e2f77da49e06382380c4adcbab800b
+MD5 5feb86f9a2a991aa41e704b53707d419 ChangeLog 2565
+RMD160 fc9250dcfaf84f0e0feb2d380aeacb4906a8aed0 ChangeLog 2565
+SHA256 ee7fb97c8c92fc945583cccd9565c1c7f6e2f77da49e06382380c4adcbab800b ChangeLog 2565
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
@@ -29,9 +29,9 @@ MD5 21791a839076b34fa6b2109d5b796cfd files/digest-commons-discovery-0.2-r3 274
 RMD160 26da92a2e8db5a0fe0068e3c4d2085aacf1c456a files/digest-commons-discovery-0.2-r3 274
 SHA256 7384263519a45bae509e8ffb52da92a27603b82a5c074032d5471dd7b064ad43 files/digest-commons-discovery-0.2-r3 274
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEwqmngo/w9rxVVVERAjRWAJ94R1PDotC5jAxdW6FhrxFfJpOxiwCeP581
-7hPxyPAAcmRzrKnIjTLYqyA=
-=OsbC
+iD8DBQFFJSOUKRy60XGEcJIRAlnvAKChYQNtfDum4sHzU6WOZrN/fyE1fgCfcTVj
+CQ3zHiBfX0H/b4cQbgayqYg=
+=7DD2
 -----END PGP SIGNATURE-----
