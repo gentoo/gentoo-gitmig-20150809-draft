@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.2.6.ebuild,v 1.2 2006/08/01 20:33:47 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.2.6.ebuild,v 1.3 2006/10/05 17:34:45 iluxa Exp $
 
 inherit autotools
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.sptk.net"
 
 SLOT="3"
 LICENSE="|| ( FLTK GPL-2 )"
-KEYWORDS="~x86 ~sparc ~mips ~amd64 ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc mips ~amd64 ~ppc alpha"
 
 DEPEND="fltk? ( x11-libs/fltk )
 	odbc? ( >=dev-db/unixODBC-2.2.6 )
