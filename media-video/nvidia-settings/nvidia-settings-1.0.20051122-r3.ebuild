@@ -1,14 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.5 2006/10/04 21:13:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-1.0.20051122-r3.ebuild,v 1.6 2006/10/05 21:45:04 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs multilib
 
-NVIDIA_VERSION="1.0.6629"
 # The following were added to work with the new nvidia-drivers and
-# nvidia-legacy-drivers ebuilds.  This will be cleaned up once we remove
-# nvidia-kernel and nvidia-glx from portage.
-NVIDIA_NEW_VERSION="1.0.8762"
+# nvidia-legacy-drivers ebuilds.
+NVIDIA_NEW_VERSION="1.0.8178"
 NVIDIA_LEGACY_VERSION="1.0.7182"
 S="${WORKDIR}/${PN}-1.0"
 DESCRIPTION="NVIDIA Linux X11 Settings Utility"
@@ -37,7 +35,7 @@ DEPEND="virtual/libc
 				x11-misc/gccmakedep )
 			virtual/x11
 		)"
-RDEPEND="|| ( >=media-video/nvidia-glx-${NVIDIA_VERSION}
+RDEPEND="|| (
 			>=x11-drivers/nvidia-drivers-${NVIDIA_NEW_VERSION}
 			>=x11-drivers/nvidia-legacy-drivers-${NVIDIA_LEGACY_VERSION} )
 		>=x11-libs/gtk+-2
