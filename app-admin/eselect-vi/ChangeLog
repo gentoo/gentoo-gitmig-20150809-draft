@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-vi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.4 2006/10/02 22:47:41 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-vi/ChangeLog,v 1.5 2006/10/05 16:55:11 pioto Exp $
+
+  05 Oct 2006; Mike Kelly <pioto@pioto.org> metadata.xml,
+  -eselect-vi-1.0.ebuild, -eselect-vi-1.1.ebuild:
+  Drop old ebuilds. Add vim herd to metadata.xml
 
 *eselect-vi-1.1.1 (02 Oct 2006)
 
