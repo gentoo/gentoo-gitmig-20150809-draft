@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.26 2006/10/04 17:37:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.27 2006/10/05 06:34:06 flameeyes Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="\"M\"peg \"A\"udio \"D\"ecoder library"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -22,11 +22,13 @@ src_unpack() {
 }
 
 src_compile() {
+	use ppc && append-flags -fno-strict-aliasing
+
 	local myconf="--enable-accuracy"
-	# --enable-speed         optimize for speed over accuracy
-	# --enable-accuracy      optimize for accuracy over speed
-	# --enable-experimental  enable code using the EXPERIMENTAL
-	#                        preprocessor define
+	# --enable-speed		 optimize for speed over accuracy
+	# --enable-accuracy		 optimize for accuracy over speed
+	# --enable-experimental	 enable code using the EXPERIMENTAL
+	#						 preprocessor define
 
 	# Fix for b0rked sound on sparc64 (maybe also sparc32?)
 	# default/approx is also possible, uses less cpu but sounds worse

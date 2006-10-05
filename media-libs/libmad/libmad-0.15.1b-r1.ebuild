@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r1.ebuild,v 1.4 2006/10/04 17:37:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b-r1.ebuild,v 1.5 2006/10/05 06:34:06 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 
-inherit eutils autotools libtool
+inherit eutils autotools libtool flag-o-matic
 
 DESCRIPTION="\"M\"peg \"A\"udio \"D\"ecoder library"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -31,6 +31,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use ppc && append-flags -fno-strict-aliasing
+
 	local myconf="--enable-accuracy"
 	# --enable-speed		 optimize for speed over accuracy
 	# --enable-accuracy		 optimize for accuracy over speed
