@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.157 2006/09/23 14:59:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.158 2006/10/05 07:28:21 mrness Exp $
+
+*ppp-2.4.4-r2 (05 Oct 2006)
+
+  05 Oct 2006; Alin Nastac <mrness@gentoo.org> +ppp-2.4.4-r2.ebuild:
+  Set the gateway in the default route, just as ppp-2.4.3 used to set (the
+  default gateway is needed by openswan's %defaultroute).
 
   23 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ppp-2.4.3-r16.ebuild:
