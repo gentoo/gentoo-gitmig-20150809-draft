@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha7.ebuild,v 1.4 2006/10/04 12:06:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.0_alpha7.ebuild,v 1.5 2006/10/05 15:05:26 exg Exp $
 
-inherit flag-o-matic libtool autotools
+inherit flag-o-matic libtool
 
 DESCRIPTION="The Theora Video Compression Codec"
 HOMEPAGE="http://www.theora.org/"
@@ -23,7 +23,7 @@ S=${WORKDIR}/${P/_}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e 's:SUBDIRS = .*:SUBDIRS = lib include doc:' Makefile.am
+	sed -i -e 's:SUBDIRS = .*:SUBDIRS = lib include doc:' Makefile.in
 
 	elibtoolize
 

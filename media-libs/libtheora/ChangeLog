@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libtheora
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.51 2006/10/04 12:06:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/ChangeLog,v 1.52 2006/10/05 15:05:26 exg Exp $
+
+  05 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
+  libtheora-1.0_alpha7.ebuild:
+  Mangle Makefile.in, not Makefile.am.
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   libtheora-1.0_alpha7.ebuild:
