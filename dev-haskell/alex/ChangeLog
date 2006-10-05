@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.22 2006/08/26 20:21:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.23 2006/10/05 03:47:46 cparrott Exp $
+
+  05 Oct 2006; Chris Parrott <cparrott@gentoo.org> alex-2.0.1-r1.ebuild:
+  marked stable for amd64 (bug 144677)
 
   26 Aug 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   alex-2.0.1-r1.ebuild:
