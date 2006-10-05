@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.6.ebuild,v 1.2 2006/01/08 20:02:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.6.ebuild,v 1.3 2006/10/05 20:58:22 nyhm Exp $
 
 inherit eutils games
 
@@ -19,7 +19,8 @@ RDEPEND="dev-libs/expat
 	>=media-libs/freetype-2
 	>=media-libs/paragui-1.1.8
 	!=media-libs/paragui-1.0*
-	=dev-libs/libsigc++-1.2*"
+	=dev-libs/libsigc++-1.2*
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
