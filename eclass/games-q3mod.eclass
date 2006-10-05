@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.34 2006/05/24 14:17:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.35 2006/10/05 18:54:37 wolf31o2 Exp $
 
 inherit games
 
@@ -139,6 +139,6 @@ cat << EOF > "${T}"/q3${MOD_NAME}-ded.conf.d
 $(<"${PORTDIR}"/header.txt)
 
 # Any extra options you want to pass to the dedicated server
-${MOD_NAME}_OPTS="+set vm_game 0 +set sv_pure 1 +set bot_enable 0 +set com_hunkmegs 24 +set net_port 27960"
+${MOD_NAME}_OPTS="+set vm_game 0 +set sv_pure 1 +set bot_enable 0 +set com_hunkmegs 64 +set net_port 27960"
 EOF
 }
