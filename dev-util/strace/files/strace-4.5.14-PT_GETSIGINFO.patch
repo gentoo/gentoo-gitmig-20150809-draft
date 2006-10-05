@@ -1,0 +1,18 @@
+strace assumes that if PT_GETSIGINFO is defined, you're building for ia64 as
+this was the only architecture that exported PT_GETSIGINFO via glibc userspace
+headers.  with newer glibc's, support for PT_GETSIGINFO has been added to all
+linux architectures so we can no longer assume PT_GETSIGINFO == ia64.
+
+http://bugs.gentoo.org/149945
+
+--- strace.c
++++ strace.c
+@@ -2251,7 +2251,7 @@
+ 			if (!cflag
+ 			    && (qual_flags[WSTOPSIG(status)] & QUAL_SIGNAL)) {
+ 				unsigned long addr = 0, pc = 0;
+-#ifdef PT_GETSIGINFO
++#ifdef PT_CR_IPSR
+ #				define PSR_RI	41
+ 				struct siginfo si;
+ 				unsigned long psr;

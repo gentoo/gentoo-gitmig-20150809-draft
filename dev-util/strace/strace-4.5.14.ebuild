@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.14.ebuild,v 1.11 2006/07/12 20:06:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.5.14.ebuild,v 1.12 2006/10/05 02:05:21 vapier Exp $
 
-inherit flag-o-matic
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit flag-o-matic autotools
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 HOMEPAGE="http://sourceforge.net/projects/strace/"
@@ -21,6 +23,8 @@ src_unpack() {
 
 	[[ ${CHOST} == *-freebsd* ]] && epatch "${FILESDIR}"/${PN}-4.5.12-fbsd.patch
 
+	epatch "${FILESDIR}"/${P}-PT_GETSIGINFO.patch #149945
+
 	# Fix SuperH support
 	epatch "${FILESDIR}"/strace-dont-use-REG_SYSCALL-for-sh.patch
 	epatch "${FILESDIR}"/${PN}-4.5.12-superh-update.patch
@@ -36,15 +40,10 @@ src_unpack() {
 	# (08 Feb 2005 agriffis)
 	epatch "${FILESDIR}"/strace-4.5.8-ia64.patch
 
-	aclocal && autoheader && autoconf && automake || die "autotools failed"
+	eautoreconf
 }
 
 src_compile() {
-	# This is ugly but linux26-headers-2.6.8.1-r2 (and other versions) has some
-	# issues with definition of s64 and friends.  This seems to solve
-	# compilation in this case (08 Feb 2005 agriffis)
-	use ia64 && append-flags -D_ASM_IA64_PAL_H
-
 	# Compile fails with -O3 on sparc but works on x86
 	use sparc && replace-flags -O3 -O2
 	filter-lfs-flags
