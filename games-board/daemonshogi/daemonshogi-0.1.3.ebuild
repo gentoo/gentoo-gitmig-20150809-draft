@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/daemonshogi/daemonshogi-0.1.3.ebuild,v 1.8 2006/10/03 05:20:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/daemonshogi/daemonshogi-0.1.3.ebuild,v 1.9 2006/10/05 17:24:04 nyhm Exp $
 
 AT_M4DIR=macros
 WANT_AUTOMAKE=latest
@@ -15,7 +15,9 @@ KEYWORDS="~amd64 ppc sparc x86"
 SLOT="0"
 IUSE="nls"
 
-DEPEND="gnome-base/gnome-libs
+RDEPEND="gnome-base/gnome-libs
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.38 )"
 
 src_unpack() {

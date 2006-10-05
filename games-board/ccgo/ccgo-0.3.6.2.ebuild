@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ccgo-0.3.6.2.ebuild,v 1.3 2006/03/30 18:56:47 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ccgo/ccgo-0.3.6.2.ebuild,v 1.4 2006/10/05 17:20:54 nyhm Exp $
 
 inherit games
 
@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="nls"
 
-DEPEND=">=dev-cpp/gtkmm-2.4
+RDEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/gconfmm-2.6
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
