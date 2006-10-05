@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.17 2006/07/27 23:41:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.18 2006/10/05 03:02:26 josejx Exp $
 
-inherit gnuconfig eutils flag-o-matic
+WANT_AUTOMAKE="1.8"
+
+inherit gnuconfig eutils flag-o-matic autotools
 
 DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
 HOMEPAGE="http://www.partimage.org/"
@@ -12,8 +14,6 @@ SLOT="0"
 KEYWORDS="ppc -ppc64 ~sparc x86"
 IUSE="ssl nologin nls"
 
-DEPEND="${RDEPEND} sys-devel/autoconf"
-
 RDEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/newt-0.51.6
@@ -21,6 +21,7 @@ RDEPEND="virtual/libc
 	=sys-libs/slang-1*
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
+DEPEND="${RDEPEND}"
 
 PARTIMAG_GROUP_GID=91
 PARTIMAG_USER_UID=91

@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.22 2006/07/27 23:41:04 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.23 2006/10/05 03:02:26 josejx Exp $
+
+  05 Oct 2006; Joseph Jezak <josejx@gentoo.org> partimage-0.6.4-r3.ebuild,
+  partimage-0.6.4-r4.ebuild:
+  Added fixes for automake, fixes bug #149862.
 
   28 Jul 2006; Christian Zoffoli <xmerlin@gentoo.org>
   partimage-0.6.4-r3.ebuild, partimage-0.6.4-r4.ebuild:
