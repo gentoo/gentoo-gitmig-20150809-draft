@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.4_p20060918.ebuild,v 1.1 2006/09/22 03:46:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.4_p20060918.ebuild,v 1.2 2006/10/05 15:01:12 beandog Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ RDEPEND="dev-perl/DBI
 	>=media-video/transcode-0.6.14
 	media-libs/id3lib
 	media-video/mplayer
-	media-tv/mythtv"
+	=media-tv/mythtv-0.20*"
 
 pkg_setup() {
 	if ! built_with_use media-video/transcode mjpeg ; then
