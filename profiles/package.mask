@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6014 2006/10/05 11:47:20 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6015 2006/10/05 14:06:33 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -784,10 +784,6 @@ net-im/universalkopete
 # Mask Brasero development releases until 0.5.0
 # stable is out
 >=app-cdr/brasero-0.4.90
-
-# Steve Dibb <beandog@gentoo.org> (06 Sep 2006)
-# Masked because of outstanding bugs, version pending removal
-=media-video/ogmrip-0.9.0-r1
 
 # Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
 # Masked until it gets some testing
