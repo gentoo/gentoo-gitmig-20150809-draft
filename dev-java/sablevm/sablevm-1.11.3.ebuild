@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.11.3.ebuild,v 1.7 2005/10/28 16:57:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablevm/sablevm-1.11.3.ebuild,v 1.8 2006/10/05 18:15:15 gustavoz Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ SRC_URI="http://sablevm.org/download/release/${PV}/sablevm-${PV}.tar.gz
 	http://sablevm.org/download/release/${PV}/sablevm-classpath-${PV}.tar.gz"
 LICENSE="LGPL-2.1 GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk debug"
 DEPEND=">=dev-libs/libffi-1.20
 	>=dev-libs/popt-1.7

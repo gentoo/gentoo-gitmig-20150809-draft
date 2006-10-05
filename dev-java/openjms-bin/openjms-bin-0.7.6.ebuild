@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/openjms-bin-0.7.6.ebuild,v 1.12 2005/07/15 18:44:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/openjms-bin-0.7.6.ebuild,v 1.13 2006/10/05 18:09:31 gustavoz Exp $
 
 DESCRIPTION="Open Java Messaging System"
 HOMEPAGE="http://openjms.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN/-bin/}/${P/-bin/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc64 sparc ppc"
+KEYWORDS="x86 amd64 ppc64 ppc"
 IUSE="doc"
 
 DEPEND=""

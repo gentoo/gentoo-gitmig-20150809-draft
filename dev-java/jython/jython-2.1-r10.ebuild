@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r10.ebuild,v 1.1 2006/09/12 08:05:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r10.ebuild,v 1.2 2006/10/05 18:00:32 gustavoz Exp $
 
 inherit base java-pkg-2
 
@@ -11,7 +11,7 @@ MY_PV="21"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="JPython"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="readline source doc"
 # servlet
 

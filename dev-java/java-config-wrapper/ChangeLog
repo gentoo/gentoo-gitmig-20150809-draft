@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.15 2006/09/11 05:24:58 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.16 2006/10/05 18:20:08 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  java-config-wrapper-0.12.ebuild:
+  Dropping sparc keywords, see #96229
 
 *java-config-wrapper-0.12 (11 Sep 2006)
 

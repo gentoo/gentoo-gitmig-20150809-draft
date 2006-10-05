@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.40 2006/07/21 02:13:40 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.41 2006/10/05 18:05:36 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> log4j-1.2.9.ebuild,
+  log4j-1.2.11.ebuild, log4j-1.2.12.ebuild, log4j-1.2.13.ebuild,
+  log4j-1.2.13-r1.ebuild:
+  Dropping sparc keywords, see #96229
 
 *log4j-1.2.13-r1 (21 Jul 2006)
 

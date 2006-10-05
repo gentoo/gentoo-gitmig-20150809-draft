@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/rhino
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.40 2006/10/04 03:31:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.41 2006/10/05 18:13:53 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> rhino-1.5.5-r1.ebuild,
+  rhino-1.5.5-r2.ebuild, rhino-1.5.5-r3.ebuild, rhino-1.5.5-r4.ebuild,
+  rhino-1.6.1-r1.ebuild, rhino-1.6.1-r2.ebuild, rhino-1.6.1-r3.ebuild:
+  Dropping sparc keywords, see #96229
 
 *rhino-1.5.5-r4 (04 Oct 2006)
 

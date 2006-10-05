@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.14 2005/11/18 06:46:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.9.ebuild,v 1.15 2006/10/05 18:05:36 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://apache/logging/log4j/${PV}/logging-${P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc64 sparc ppc"
+KEYWORDS="x86 amd64 ppc64 ppc"
 IUSE="doc javamail jikes jms jmx source"
 
 RDEPEND=">=virtual/jre-1.4

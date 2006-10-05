@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r1.ebuild,v 1.4 2005/07/12 23:19:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ldapsdk-4.1.7-r1.ebuild,v 1.5 2006/10/05 18:03:26 gustavoz Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mozilla.org/directory/${PN}_java_20020819.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="4.1"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="x86 amd64"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.4

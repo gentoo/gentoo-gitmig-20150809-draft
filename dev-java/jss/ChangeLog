@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.9 2006/10/05 17:53:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.10 2006/10/05 18:21:17 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> jss-3.4.ebuild:
+  Dropping sparc keywords, see #96229
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> jss-3.4-r1.ebuild:
   Dropping sparc keywords, see #96229

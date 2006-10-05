@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qat
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.10 2005/05/16 22:26:23 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.11 2006/10/05 18:11:29 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> qat-2.7.1-r1.ebuild:
+  Dropping sparc keywords, see #96229
 
   16 May 2005; Jan Brinkmann <luckyduck@gentoo.org> qat-2.7.1-r1.ebuild:
   stable on amd64, ppc and x86. introduced support for the examples and for
