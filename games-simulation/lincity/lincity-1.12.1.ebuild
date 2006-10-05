@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.1.ebuild,v 1.5 2006/02/22 21:59:02 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.12.1.ebuild,v 1.6 2006/10/05 18:39:07 nyhm Exp $
 
 inherit games
 
@@ -14,8 +14,7 @@ KEYWORDS="amd64 ppc ~ppc-macos ~sparc x86"
 IUSE="nls svga X"
 
 # dep fix (bug #82318)
-DEPEND="
-	nls? ( sys-devel/gettext )
+RDEPEND="nls? ( virtual/libintl )
 	svga? ( media-libs/svgalib )
 	X? (
 			|| (
@@ -35,6 +34,8 @@ DEPEND="
 				virtual/x11
 			)
 		)"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 	local myconf=
