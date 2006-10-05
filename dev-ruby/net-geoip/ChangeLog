@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-geoip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.7 2006/09/22 19:00:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.8 2006/10/05 00:04:35 ticho Exp $
+
+  04 Oct 2006; Andrej Kacian <ticho@gentoo.org> net-geoip-0.06-r1.ebuild:
+  Stable on x86, bug #145663.
 
   22 Sep 2006; <blubb@gentoo.org> net-geoip-0.06-r1.ebuild:
   stable on amd64
