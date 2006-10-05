@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/pager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.5 2006/10/04 14:18:13 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/pager/ChangeLog,v 1.6 2006/10/05 17:22:23 lack Exp $
+
+  05 Oct 2006; Jim Ramsay <lack@gentoo.org> pager-1.0.1.ebuild:
+  Added 'autoconf' after patching configure.in, otherwise the configure step
+  may fail
 
   04 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml,
   pager-1.0.1.ebuild:
