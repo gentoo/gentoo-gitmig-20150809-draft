@@ -89,9 +89,9 @@ s390		default-linux/s390/2006.0			stable
 sh		default-linux/sh/2006.1				stable
 
 # SPARC Profiles
-#sparc		default-linux/sparc/sparc32/2006.0/2.4		dev
-sparc		default-linux/sparc/sparc64/2006.0/2.4		stable
-#sparc		default-linux/sparc/sparc64/2006.1	stable
+#sparc		default-linux/sparc/sparc32/2006.1/2.4		dev
+sparc		default-linux/sparc/sparc64/2006.1/2.4		stable
+sparc		default-linux/sparc/sparc64/2006.1	stable
 
 # x86 Profiles
 #x86		default-linux/x86/2005.0			stable
