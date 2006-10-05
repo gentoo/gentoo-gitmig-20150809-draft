@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.4-r1.ebuild,v 1.3 2006/01/07 18:09:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-1.0.4-r1.ebuild,v 1.4 2006/10/05 21:02:56 nyhm Exp $
 
 inherit eutils
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
@@ -12,12 +12,13 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc x86"
 IUSE="nls geoip bzip2"
 
-DEPEND="=x11-libs/gtk+-2*
-	nls? ( sys-devel/gettext )
+RDEPEND="=x11-libs/gtk+-2*
+	>=games-util/qstat-2.8
+	nls? ( virtual/libintl )
 	geoip? ( dev-libs/geoip )
 	bzip2? ( app-arch/bzip2 )"
-RDEPEND="${DEPEND}
-	>=games-util/qstat-2.8"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
