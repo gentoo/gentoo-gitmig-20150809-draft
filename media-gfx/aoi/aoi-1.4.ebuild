@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.4.ebuild,v 1.10 2005/09/15 20:11:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.4.ebuild,v 1.11 2006/10/05 14:45:49 gustavoz Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ DESCRIPTION="A free, open-source 3D modelling and rendering studio."
 SRC_URI="mirror://sourceforge/${PN}/${At}
 	doc? ( http://aoi.sourceforge.net/docs/downloads/manual.zip )"
 HOMEPAGE="http://aoi.sourceforge.net/index"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND="app-arch/unzip"
