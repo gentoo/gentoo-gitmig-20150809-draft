@@ -1,0 +1,58 @@
+diff -Nur bioapi-1.2.2-orig/addins/dl/mds/dal_classes.h bioapi-1.2.2/addins/dl/mds/dal_classes.h
+--- bioapi-1.2.2-orig/addins/dl/mds/dal_classes.h	2005-06-10 02:35:44.000000000 +0200
++++ bioapi-1.2.2/addins/dl/mds/dal_classes.h	2006-06-29 18:15:29.669647000 +0200
+@@ -455,9 +455,9 @@
+ 		DAL_DATABASE_INFO_REF_PTR &prefDatabase,
+         PORT_MUTEX_HANDLE &Mutex);
+ 
+-	CSSM_RETURN DAL_DATABASE_INFO_LIST::GetDBNamesAndParameters(
+-				CSSM_DL_DB_HANDLE DLDBHandle,
+-				DAL_DB_OPEN_PARAM_PTR pParam);
++	CSSM_RETURN GetDBNamesAndParameters(
++		CSSM_DL_DB_HANDLE DLDBHandle,
++	DAL_DB_OPEN_PARAM_PTR pParam);
+ };
+ 
+ #endif
+diff -Nur bioapi-1.2.2-orig/apps/Cmds/CdsaRec.cpp bioapi-1.2.2/apps/Cmds/CdsaRec.cpp
+--- bioapi-1.2.2-orig/apps/Cmds/CdsaRec.cpp	2005-06-08 02:51:04.000000000 +0200
++++ bioapi-1.2.2/apps/Cmds/CdsaRec.cpp	2006-06-29 18:14:14.889647000 +0200
+@@ -10,7 +10,7 @@
+ #endif
+ //////////////////////////////////////////////////////////////////////
+ 
+-void QCdsaRecType< CCssmRecInfoType >::SpecifyAttributes()
++template <> void QCdsaRecType< CCssmRecInfoType >::SpecifyAttributes()
+ {
+   m_outputAttributeData[CCssmRecInfoType::IDX_MODULEID].Info     = s_BioApiAttrInfo_ModuleId;
+   m_outputAttributeData[CCssmRecInfoType::IDX_MODULENAME].Info	 = s_BioApiAttrInfo_ModuleName;
+@@ -20,7 +20,7 @@
+   m_outputAttributeData[CCssmRecInfoType::IDX_DESC].Info         = s_BioApiAttrInfo_Description;
+ }
+ 
+-void QCdsaRecType< CEmmRecInfoType >::SpecifyAttributes()
++template <> void QCdsaRecType< CEmmRecInfoType >::SpecifyAttributes()
+ {
+   m_outputAttributeData[CEmmRecInfoType::IDX_MODULEID].Info	= s_BioApiAttrInfo_ModuleId;
+   m_outputAttributeData[CEmmRecInfoType::IDX_DEVICEID].Info	= s_BioApiAttrInfo_DeviceId;
+@@ -47,7 +47,7 @@
+ 
+ 
+ 
+-void QCdsaRecType< CBioAPI_DeviceInfoType >::SpecifyAttributes()
++template <> void QCdsaRecType< CBioAPI_DeviceInfoType >::SpecifyAttributes()
+ {
+   m_outputAttributeData[CBioAPI_DeviceInfoType::IDX_MODULE_ID].Info		= s_BioApiAttrInfo_ModuleId;
+   m_outputAttributeData[CBioAPI_DeviceInfoType::IDX_DEVICE_ID].Info		= s_BioApiAttrInfo_DeviceId;
+diff -Nur bioapi-1.2.2-orig/apps/Cmds/QDirectory.h bioapi-1.2.2/apps/Cmds/QDirectory.h
+--- bioapi-1.2.2-orig/apps/Cmds/QDirectory.h	2005-06-13 08:22:00.000000000 +0200
++++ bioapi-1.2.2/apps/Cmds/QDirectory.h	2006-06-29 18:14:14.889647000 +0200
+@@ -16,7 +16,7 @@
+ public:
+ 
+   QString m_strDirName;
+-  QMDS *m_pMds;
++  class QMDS *m_pMds;
+   MDS_DB_HANDLE m_hDb;
+   
+   CSSM_RETURN Open( QMDS *pMds, const char *szDirName );

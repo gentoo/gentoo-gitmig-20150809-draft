@@ -1,0 +1,2 @@
+#Permissions for the Biometrics 
+SUBSYSTEM=="usb_device", MODE="0660", GROUP="usb"
