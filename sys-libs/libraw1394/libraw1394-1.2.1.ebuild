@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-1.2.1.ebuild,v 1.7 2006/10/03 21:58:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-1.2.1.ebuild,v 1.8 2006/10/05 18:41:16 gustavoz Exp $
 
 DESCRIPTION="library that provides direct access to the IEEE 1394 bus"
 HOMEPAGE="http://www.linux1394.org/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/libraw1394/${P}.tar.gz
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND=""
