@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.9 2006/02/20 21:46:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.10 2006/10/05 16:03:02 bangert Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	>=dev-libs/bglibs-1.006"
 RDEPEND="
 	${DEPEND}
-	net-mail/cvm-vmailmgr
+	net-libs/cvm
 	virtual/qmail
 "
 
