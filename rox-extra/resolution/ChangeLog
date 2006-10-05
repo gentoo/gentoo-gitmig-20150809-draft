@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/resolution
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.2 2006/05/24 17:54:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.3 2006/10/05 03:13:54 lack Exp $
+
+  05 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Updated copyright and accepted maintainer role.
 
   24 May 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove svyatogor from metadata.xml, bug 131936.

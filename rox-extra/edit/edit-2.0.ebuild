@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/edit-2.0.ebuild,v 1.2 2005/10/03 22:17:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/edit/edit-2.0.ebuild,v 1.3 2006/10/05 03:11:17 lack Exp $
 
 DESCRIPTION="Edit is a simple text editor for ROX Desktop"
 HOMEPAGE="http://rox.sourceforge.net/"
