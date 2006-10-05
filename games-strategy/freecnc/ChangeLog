@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/freecnc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.7 2006/05/27 00:18:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.8 2006/10/05 18:18:12 wolf31o2 Exp $
+
+  05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/freecnc-0.2.0-endian.patch, -files/0.2.0-gentoo-paths.patch,
+  -files/0.2.0-makefile-cflags.patch, -freecnc-0.2.0.ebuild,
+  freecnc-0.2.1.31072003.ebuild:
+  Stable on x86 wrt bug #147783 and removing 0.2.0 ebuilds/patches.
 
   27 May 2006; <Tupone@gentoo.org> +files/freecnc-0.2.1.31072003-gcc4.patch,
   freecnc-0.2.1.31072003.ebuild:
