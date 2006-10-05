@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-alienswarm/ut2004-alienswarm-1.31.ebuild,v 1.1 2006/09/28 21:52:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-alienswarm/ut2004-alienswarm-1.31.ebuild,v 1.2 2006/10/05 21:50:22 wolf31o2 Exp $
 
 AS_V="1.3"
 
@@ -24,6 +24,8 @@ SRC_URI="mirror://liflg/alien.swarm_${AS_V}-english.run
 LICENSE="freedist"
 RESTRICT="mirror strip"
 IUSE=""
+
+DEPEND="app-arch/unzip"
 
 src_install() {
 	games-ut2k4mod_src_install
