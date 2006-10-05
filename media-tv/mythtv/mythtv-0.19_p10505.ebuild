@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.8 2006/09/30 12:49:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.19_p10505.ebuild,v 1.9 2006/10/05 21:42:31 wolf31o2 Exp $
 
 inherit flag-o-matic multilib eutils debug qt3
 
@@ -33,8 +33,7 @@ RDEPEND=">=media-libs/freetype-2.0
 	xvmc? (
 		|| ( x11-libs/libXvMC virtual/x11 )
 		video_cards_nvidia? ( || ( x11-drivers/nvidia-drivers
-								 x11-drivers/nvidia-legacy-drivers
-								 media-video/nvidia-glx ) )
+								 x11-drivers/nvidia-legacy-drivers ) )
 		video_cards_via? ( || ( x11-drivers/xf86-video-via virtual/x11 ) )
 		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 virtual/x11 ) )
 	)
