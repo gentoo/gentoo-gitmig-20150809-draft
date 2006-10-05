@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.4 2006/08/09 16:47:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.5 2006/10/05 11:24:45 nyhm Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
@@ -21,14 +21,6 @@ DEPEND="media-libs/openal
 	media-libs/libsdl"
 
 S=${WORKDIR}/${ECVS_MODULE}
-
-pkg_setup() {
-	games_pkg_setup
-	if has_version 'media-video/nvidia-glx' && has_version '<media-video/nvidia-glx-1.0.5328' ; then
-		ewarn "Your version of OpenGL may not allow this package to compile."
-		ewarn "You need either X11 OpenGL or nvidia-glx at least version 1.0.5328."
-	fi
-}
 
 src_unpack() {
 #	if [ "${ECVS_SERVER}" == "offline" ] ; then
