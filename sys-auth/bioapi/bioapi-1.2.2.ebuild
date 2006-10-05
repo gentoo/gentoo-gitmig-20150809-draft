@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.2.ebuild,v 1.1 2006/10/05 13:39:49 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.2.ebuild,v 1.2 2006/10/05 13:48:22 wolf31o2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,11 +11,9 @@ LICENSE="bioapi"
 
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="qt"
+IUSE="qt3"
 
-#DEPEND=""
-RDEPEND="${DEPEND}
-		qt? ( >=x11-libs/qt-3 )"
+RDEPEND="qt3? ( =x11-libs/qt-3* )"
 
 src_compile() {
 	VERGCC=$(gcc-version)
@@ -31,7 +29,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man"
 
-	if use qt; then
+	if use qt3; then
 		myconf="${myconf} --with-Qt-dir=/usr/qt/3"
 	else
 		myconf="${myconf} --without-Qt-dir"
@@ -71,8 +69,8 @@ pkg_postinst() {
 	/opt/bioapi/bin/mod_install -fi /usr/lib/libbioapi100.so || die " mds bioapi100 failed"
 	/opt/bioapi/bin/mod_install -fi /usr/lib/libbioapi_dummy100.so || die " mds bioapi_dummy100 failed"
 	/opt/bioapi/bin/mod_install -fi /usr/lib/libpwbsp.so || die " mds pwbsp failed"
-	
-	if use qt; then
+
+	if use qt3; then
 	    /opt/bioapi/bin/mod_install -fi /usr/lib/libqtpwbsp.so || die " mds qtpwbsp failed"
 	fi
 
@@ -87,8 +85,8 @@ pkg_prerm() {
 	/opt/bioapi/bin/mod_install -fu libbioapi100.so
 	/opt/bioapi/bin/mod_install -fu libbioapi_dummy100.so
 	/opt/bioapi/bin/mod_install -fu libpwbsp.so
-	
-	if use qt; then
+
+	if use qt3; then
 	    /opt/bioapi/bin/mod_install -fu libqtpwbsp.so
 	fi
 
