@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/openjnlp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.11 2006/08/01 01:51:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/openjnlp/ChangeLog,v 1.12 2006/10/05 14:34:02 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> openjnlp-0.7.1.ebuild:
+  Dropping sparc keywords, see #96229
 
 *openjnlp-0.7.1-r2 (01 Aug 2006)
 

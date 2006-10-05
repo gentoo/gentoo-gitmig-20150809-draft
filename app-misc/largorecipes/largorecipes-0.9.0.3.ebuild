@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/largorecipes/largorecipes-0.9.0.3.ebuild,v 1.10 2005/01/01 15:10:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/largorecipes/largorecipes-0.9.0.3.ebuild,v 1.11 2006/10/05 14:32:54 gustavoz Exp $
 
 # Based on an original ebuild by Per Wigren <wigren@home.se>
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://largorecipes.sourceforge.net/"
 IUSE=""
 DEPEND=">=virtual/jre-1.4"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 ppc"
 
 LICENSE="GPL-2"
 
