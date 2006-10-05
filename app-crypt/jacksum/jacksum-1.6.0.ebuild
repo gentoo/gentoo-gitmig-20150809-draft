@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.6.0.ebuild,v 1.4 2005/11/16 15:55:31 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/jacksum-1.6.0.ebuild,v 1.5 2006/10/05 14:24:01 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jonelo.de/java/jacksum/"
 SRC_URI="mirror://sourceforge/jacksum/${P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.3.1
 	dev-java/ant-core

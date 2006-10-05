@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/jacksum
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.21 2006/09/03 12:18:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.22 2006/10/05 14:24:01 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> jacksum-1.5.1.ebuild,
+  jacksum-1.6.0.ebuild, jacksum-1.6.0-r1.ebuild, jacksum-1.7.0.ebuild:
+  Dropping sparc keywords, see #96229
 
   03 Sep 2006; Petteri Räty <betelgeuse@gentoo.org> -jacksum-1.4.0.ebuild,
   -jacksum-1.5.0.ebuild:
