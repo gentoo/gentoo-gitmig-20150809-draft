@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.92.ebuild,v 1.2 2006/03/30 17:50:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-0.92.ebuild,v 1.3 2006/10/05 18:11:51 nyhm Exp $
 
 inherit eutils games
 
@@ -13,12 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="nls"
 
-DEPEND="sys-libs/zlib
-	media-libs/sdl-ttf
+RDEPEND="media-libs/sdl-ttf
 	>=media-libs/libsdl-1.2.0
 	>=media-libs/sdl-mixer-1.2.4
 	>=media-libs/sdl-image-1.2.0
 	>=dev-lang/lua-4.0
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/skoosh-2.5.0.ebuild,v 1.5 2005/10/31 08:30:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/skoosh/skoosh-2.5.0.ebuild,v 1.6 2006/10/05 18:18:07 nyhm Exp $
 
 inherit gnome2
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="nls"
 
-DEPEND=">=gnome-base/gconf-2
-	>=gnome-base/libgnomeui-2"
-
-RDEPEND="${DEPEND}
+RDEPEND=">=gnome-base/gconf-2
+	>=gnome-base/libgnomeui-2
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
