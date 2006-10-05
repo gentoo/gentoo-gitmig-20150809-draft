@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.7.ebuild,v 1.5 2005/09/09 13:14:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.7.ebuild,v 1.6 2006/10/05 06:57:20 flameeyes Exp $
+
+inherit multilib
 
 DESCRIPTION="Alsa Modular Software Synthesizer"
 HOMEPAGE="http://alsamodular.sourceforge.net"
@@ -23,15 +25,8 @@ DEPEND="${RDEPEND}
 SRC_URI="mirror://sourceforge/alsamodular/${P}.tar.bz2"
 RESTRICT="nomirror"
 
-src_unpack() {
-	unpack ${A} || die
-	cd ${S}
-
-	sed -i "s%QT_BASE_DIR=/usr/lib/qt3%QT_BASE_DIR=${QTDIR}%" Makefile || die "Makefile update failed."
-}
-
 src_compile() {
-	make || die "Make failed."
+	emake QT_BASE_DIR="${QTDIR}" QT_LIB_DIR="${QTDIR}/$(get_libdir)" || die "Make failed."
 }
 
 src_install() {
