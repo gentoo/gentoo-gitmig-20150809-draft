@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/jarwizard-2.34.ebuild,v 1.5 2005/07/16 18:57:09 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jarwizard/jarwizard-2.34.ebuild,v 1.6 2006/10/05 14:43:03 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/jarwizard/${PN}_${PV/./}_src.zip"
 HOMEPAGE="http://www.geocities.com/chir_geo/jarc/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~alpha ~ppc"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.3
 		app-arch/unzip
