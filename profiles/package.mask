@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6015 2006/10/05 14:06:33 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6016 2006/10/05 15:04:59 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -546,11 +546,6 @@ x11-misc/smeg
 # Alexandre Buisse <nattfodd@gentoo.org> (16 Sep 2006)
 # Too buggy
 media-gfx/alg
-
-# Diego Pettenò <flameeyes@gentoo.org> (16 Sep 2006)
-# Serious memory leaks
-=net-libs/libtorrent-0.10.2
-=net-p2p/rtorrent-0.6.2
 
 # Elfyn McBratney <beu@gentoo.org> (16 Sep 2006)
 # Long-awaited update for AxKit; requires testing, and may steal your
