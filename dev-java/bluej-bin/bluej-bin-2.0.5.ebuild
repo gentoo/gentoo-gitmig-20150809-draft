@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/bluej-bin-2.0.5.ebuild,v 1.1 2005/09/19 20:49:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej-bin/bluej-bin-2.0.5.ebuild,v 1.2 2006/10/05 15:12:35 gustavoz Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.bluej.org"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4

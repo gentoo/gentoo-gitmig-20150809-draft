@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2-r3.ebuild,v 1.1 2006/07/22 22:41:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/commons-discovery-0.2-r3.ebuild,v 1.2 2006/10/05 15:23:52 gustavoz Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/discovery/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="source junit doc"
 
 RDEPEND=">=virtual/jre-1.4

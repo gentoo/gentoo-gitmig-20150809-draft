@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.15 2005/10/15 11:42:40 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.16 2006/10/05 15:30:20 gustavoz Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )
 	jikes? ( dev-java/jikes )"
 
-KEYWORDS="amd64 ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc64 x86"
 IUSE="doc jikes source"
 
 S=${WORKDIR}/${P}-src

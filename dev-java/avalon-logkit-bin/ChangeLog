@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit-bin
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/ChangeLog,v 1.7 2005/01/26 21:06:29 corsair Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit-bin/ChangeLog,v 1.8 2006/10/05 15:08:06 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  avalon-logkit-bin-1.2.2.ebuild:
+  Dropping sparc keywords, see #96229
 
   26 Jan 2005; Markus Rothe <corsair@gentoo.org>
   avalon-logkit-bin-1.2.2.ebuild:

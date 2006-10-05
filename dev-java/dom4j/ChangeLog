@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.31 2006/09/14 04:42:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.32 2006/10/05 15:37:30 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> dom4j-1.4-r1.ebuild,
+  dom4j-1.5.ebuild:
+  Dropping sparc keywords, see #96229
 
 *dom4j-1.6.1-r2 (14 Sep 2006)
 

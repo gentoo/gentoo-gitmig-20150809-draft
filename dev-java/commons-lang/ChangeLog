@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-lang
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.29 2006/07/19 21:43:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/ChangeLog,v 1.30 2006/10/05 15:27:43 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  commons-lang-2.0-r1.ebuild, commons-lang-2.0-r2.ebuild,
+  commons-lang-2.1.ebuild, commons-lang-2.1-r1.ebuild:
+  Dropping sparc keywords, see #96229
 
 *commons-lang-2.1-r1 (19 Jul 2006)
 *commons-lang-2.0-r2 (19 Jul 2006)

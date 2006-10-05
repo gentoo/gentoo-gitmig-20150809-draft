@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.13 2006/09/13 21:40:52 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/adaptx/adaptx-0.9.13_p20041105-r1.ebuild,v 1.14 2006/10/05 15:03:14 gustavoz Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.4
 	${RDEPEND}"
 SLOT="0.9"
-KEYWORDS="amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE="doc"
 
 S=${WORKDIR}/adaptx-20041105

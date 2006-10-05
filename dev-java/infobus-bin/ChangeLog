@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/infobus-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.6 2006/02/17 02:55:21 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.7 2006/10/05 15:46:42 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  infobus-bin-1.2.ebuild:
+  Dropping sparc keywords, see #96229
 
   17 Feb 2006; Joshua Nichols <nichoj@gentoo.org> infobus-bin-1.2.ebuild:
   Fixed build errors, but making src_compile empty. This is a binary package, so

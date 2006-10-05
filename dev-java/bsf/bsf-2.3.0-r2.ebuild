@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.17 2005/07/09 15:59:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.18 2006/10/05 15:13:27 gustavoz Exp $
 
 inherit java-pkg eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jakarta.apache.org/bsf/"
 SRC_URI="http://cvs.apache.org/dist/jakarta/bsf/v${PV}rc1/src/${PN}-src-${PV}.tar.gz mirror://gentoo/bsf-rhino-1.5.patch.bz2"
 LICENSE="Apache-1.1"
 SLOT="2.3"
-KEYWORDS="x86 ppc sparc amd64 ppc64"
+KEYWORDS="x86 ppc amd64 ppc64"
 IUSE="doc jikes jython rhino source"
 
 RDEPEND=">=virtual/jre-1.4

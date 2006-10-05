@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r1.ebuild,v 1.1 2005/10/15 13:16:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r1.ebuild,v 1.2 2006/10/05 15:48:22 gustavoz Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://java.sun.com/products/jms/"
 SRC_URI="${At}"
 LICENSE="sun-bcla-jms"
 SLOT=0
-KEYWORDS="x86 amd64 ppc64 sparc ppc"
+KEYWORDS="x86 amd64 ppc64 ppc"
 IUSE="jikes doc"
 RDEPEND=">=virtual/jre-1.3"
 DEPEND="app-arch/unzip

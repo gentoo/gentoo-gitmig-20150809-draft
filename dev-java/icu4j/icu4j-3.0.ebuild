@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.0.ebuild,v 1.7 2005/07/09 16:02:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/icu4j-3.0.ebuild,v 1.8 2006/10/05 15:45:52 gustavoz Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://www-126.ibm.com/pub/icu4j/${PV}/${PN}src_${MY_PV}.jar
 		doc? ( ftp://www-126.ibm.com/pub/icu4j/${PV}/${PN}docs_${MY_PV}.jar )"
 LICENSE="icu"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc jikes source"
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core

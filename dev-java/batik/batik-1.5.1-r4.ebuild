@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.9 2005/12/11 19:02:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.10 2006/10/05 15:09:37 gustavoz Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/xml/batik/${PN}-src-${PV}.zip"
 
 LICENSE="Apache-1.1"
 SLOT="1.5.1"
-KEYWORDS="x86 sparc ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.3

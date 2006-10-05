@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4-r1.ebuild,v 1.10 2005/12/25 13:10:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.4-r1.ebuild,v 1.11 2006/10/05 15:29:27 gustavoz Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/logging/source/${P}-src.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc64 sparc ppc"
+KEYWORDS="x86 amd64 ppc64 ppc"
 IUSE="avalon doc jikes source"
 
 RDEPEND=">=virtual/jre-1.3

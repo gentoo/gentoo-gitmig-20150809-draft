@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.3.ebuild,v 1.8 2006/02/09 02:02:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.3.ebuild,v 1.9 2006/10/05 15:45:02 gustavoz Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/classpathx/jaxp/"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/classpathx/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/jre-1.3

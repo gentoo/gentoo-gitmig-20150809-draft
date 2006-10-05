@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.2.5.ebuild,v 1.3 2005/09/16 18:59:56 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlc/xmlc-2.2.5.ebuild,v 1.4 2006/10/05 15:53:30 gustavoz Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="doc jikes"
 
 S="${WORKDIR}/${PN}-src-${PV}/"

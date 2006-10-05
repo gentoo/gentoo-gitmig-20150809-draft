@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-discovery
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.15 2006/07/22 22:41:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-discovery/ChangeLog,v 1.16 2006/10/05 15:23:52 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  commons-discovery-0.2-r2.ebuild, commons-discovery-0.2-r3.ebuild:
+  Dropping sparc keywords, see #96229
 
 *commons-discovery-0.2-r3 (22 Jul 2006)
 
