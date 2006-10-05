@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6011 2006/10/04 22:14:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6012 2006/10/05 02:21:34 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Michael Sterrett <mr_bones_@gentoo.org> (05 Oct 2006)
+# Masked pending removal on Oct 30. No longer developed upstream
+# and doesn't build.  Will be eventually replaced by qmc2.
+games-emulation/qmamecat
 
 # Steve Dibb <beandog@gentoo.org> (4 Oct 2006)
 # masking media-video/jahshaka for treecleaners, bug(s) 150116
