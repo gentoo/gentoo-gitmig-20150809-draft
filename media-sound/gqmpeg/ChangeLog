@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gqmpeg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.17 2006/02/15 13:21:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.18 2006/10/05 08:38:31 flameeyes Exp $
+
+  05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> gqmpeg-0.91.1.ebuild:
+  Allow mpg321 as alternative to mpg123. Thanks to James Rowe in bug #138416.
 
   15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> gqmpeg-0.17.0.ebuild,
   gqmpeg-0.19.0.ebuild, gqmpeg-0.20.0.ebuild, gqmpeg-0.91.1.ebuild:
