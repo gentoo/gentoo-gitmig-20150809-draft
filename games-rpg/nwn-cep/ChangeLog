@@ -1,6 +1,11 @@
 # ChangeLog for games-rpg/nwn-cep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.4 2006/07/25 19:36:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.5 2006/10/05 17:52:07 wolf31o2 Exp $
+
+*nwn-cep-1.68 (05 Oct 2006)
+
+  05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> +nwn-cep-1.68.ebuild:
+  Version bump to 1.68 and closing bug #147017.
 
 *nwn-cep-1.53-r1 (25 Jul 2006)
 *nwn-cep-1.53 (25 Jul 2006)
