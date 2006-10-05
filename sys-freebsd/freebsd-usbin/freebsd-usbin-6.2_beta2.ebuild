@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta2.ebuild,v 1.1 2006/10/05 09:17:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta2.ebuild,v 1.2 2006/10/05 11:15:18 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -84,6 +84,13 @@ src_unpack() {
 
 	ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
 	ln -s "/usr/include" "${WORKDIR}/include"
+}
+
+src_compile() {
+	strip-flags
+	append-flags -I "${WORKDIR}/sys"
+
+	NOFLAGSTRIP="yes" freebsd_src_compile
 }
 
 src_install() {
