@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.28 2006/05/30 01:34:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.29 2006/10/05 08:39:58 flameeyes Exp $
+
+  05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> yammi-1.2.ebuild:
+  Remove configure to force autotools regeneration. Closes bug #141061.
 
   30 May 2006; Diego Pettenò <flameeyes@gentoo.org> yammi-1.2.ebuild:
   Make sure aRTs is required.

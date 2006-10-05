@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.7 2006/05/30 01:34:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.8 2006/10/05 08:39:58 flameeyes Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde
@@ -33,6 +33,7 @@ RDEPEND="${DEPEND}
 need-kde 3
 
 src_compile() {
+	rm -f "${S}/configure"
 	myconf="$(use_enable xmms)"
 
 	kde_src_compile
@@ -45,9 +46,9 @@ pkg_postinst() {
 	einfo "following packages to make the correspondent plugin"
 	einfo "available:"
 	einfo
-	einfo "app-cdr/cdlabelgen:  create CD labels"
-	einfo "app-cdr/k3b:         burn CDs with K3b"
+	einfo "app-cdr/cdlabelgen:	create CD labels"
+	einfo "app-cdr/k3b:			burn CDs with K3b"
 	einfo "media-libs/tunepimp or media-sound/trm:"
-	einfo "                     lookup tracks on www.musicbrainz.org"
+	einfo "						lookup tracks on www.musicbrainz.org"
 	echo
 }
