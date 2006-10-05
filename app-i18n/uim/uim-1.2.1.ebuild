@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.2 2006/09/30 05:33:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.3 2006/10/05 15:58:36 matsuu Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -64,6 +64,10 @@ src_compile() {
 		myconf="${myconf} --enable-dict"
 	else
 		myconf="${myconf} --disable-dict"
+	fi
+
+	if use qt3 ; then
+		append-flags -DQT_THREAD_SUPPORT
 	fi
 
 	econf $(use_with X x) \
