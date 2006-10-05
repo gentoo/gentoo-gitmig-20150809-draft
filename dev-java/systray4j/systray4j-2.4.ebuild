@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.13 2006/01/02 00:13:41 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.14 2006/10/05 17:06:15 gustavoz Exp $
 
 inherit kde java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/systray/${P}-kde3-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc amd64 ppc ppc64"
+KEYWORDS="x86 amd64 ppc ppc64"
 # disable jikes support until bug #89711
 IUSE=""
 

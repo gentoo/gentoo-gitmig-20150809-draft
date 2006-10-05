@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r2.ebuild,v 1.10 2006/01/21 23:45:10 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r2.ebuild,v 1.11 2006/10/05 17:04:15 gustavoz Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://apache/xml/xalan-j/source/${MY_P}-src.tar.gz
 		doc? ( mirror://gentoo/${P}-docs.tar.bz2 )"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="doc jikes source"
 RDEPEND="=virtual/jdk-1.4*
 	dev-java/javacup

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.8 2005/10/07 20:49:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.9 2006/10/05 17:48:40 gustavoz Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://joust.kano.net/joscar"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~sparc amd64"
+KEYWORDS="x86 amd64"
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.4

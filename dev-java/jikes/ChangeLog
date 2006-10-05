@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.44 2006/09/02 16:00:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.45 2006/10/05 17:41:29 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> jikes-1.22-r1.ebuild,
+  jikes-1.22-r13.ebuild:
+  Dropping sparc keywords, see #96229
 
   02 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org> jikes-1.22-r13.ebuild:
   Alpha doesn't support java-config-2.

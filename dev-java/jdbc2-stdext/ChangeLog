@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc2-stdext
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/ChangeLog,v 1.11 2006/08/21 20:27:21 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-stdext/ChangeLog,v 1.12 2006/10/05 17:28:44 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  jdbc2-stdext-2.0-r1.ebuild, jdbc2-stdext-2.0-r2.ebuild:
+  Dropping sparc keywords, see #96229
 
 *jdbc2-stdext-2.0-r2 (21 Aug 2006)
 

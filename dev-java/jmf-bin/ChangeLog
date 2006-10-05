@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jmf-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.5 2006/01/03 14:01:14 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.6 2006/10/05 17:47:43 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  jmf-bin-2.1.1e-r1.ebuild:
+  Dropping sparc keywords, see #96229
 
   03 Jan 2006; Joshua Nichols <nichoj@gentoo.org> jmf-bin-2.1.1e-r1.ebuild:
   Fixed installation location of jmf.properties. Contributed by

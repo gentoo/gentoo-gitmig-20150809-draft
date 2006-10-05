@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/jdbc2-firebird-1.5.3-r1.ebuild,v 1.1 2005/12/13 05:24:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-firebird/jdbc2-firebird-1.5.3-r1.ebuild,v 1.2 2006/10/05 17:24:43 gustavoz Exp $
 
 inherit java-pkg
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.firebird.sourceforge.net"
 SRC_URI="mirror://sourceforge/firebird/${MY_P}.zip"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jre-1.3"

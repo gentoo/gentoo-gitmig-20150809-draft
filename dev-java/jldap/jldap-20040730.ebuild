@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.7 2005/12/08 13:07:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jldap/jldap-20040730.ebuild,v 1.8 2006/10/05 17:42:37 gustavoz Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/jldap-Sep_ndk_2003-gentoo.tar.bz2"
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4

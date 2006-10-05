@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r2.ebuild,v 1.1 2006/07/23 22:45:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.3.0-r2.ebuild,v 1.2 2006/10/05 17:03:13 gustavoz Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://xml.apache.org/dist/xerces-j/Xerces-J-src.${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2.3"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc examples source"
 
 RDEPEND=">=virtual/jre-1.3

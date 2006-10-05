@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.15 2005/11/29 18:32:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-commons/xml-commons-1.0_beta2.ebuild,v 1.16 2006/10/05 17:00:40 gustavoz Exp $
 
 inherit eutils java-pkg
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://apache/xml/commons/${MY_P}.tar.gz"
 # See ${S}/java/external for the license files
 LICENSE="Apache-1.1 public-domain W3C-document W3C"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc64 ppc sparc"
+KEYWORDS="x86 amd64 ppc64 ppc"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4

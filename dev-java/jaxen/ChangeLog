@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.26 2006/07/30 14:12:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.27 2006/10/05 17:23:40 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> jaxen-1.0.ebuild,
+  jaxen-1.0-r1.ebuild, jaxen-1.1_beta2-r1.ebuild, jaxen-1.1_beta6.ebuild,
+  jaxen-1.1_beta7.ebuild, jaxen-1.1_beta7-r2.ebuild:
+  Dropping sparc keywords, see #96229
 
   30 Jul 2006; Joshua Nichols <nichoj@gentoo.org> jaxen-1.0-r1.ebuild:
   Fixed jre atom

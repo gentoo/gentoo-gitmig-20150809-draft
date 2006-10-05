@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.12 2005/09/10 17:39:10 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.18.ebuild,v 1.13 2006/10/05 17:51:48 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://www.jcraft.com/jsch/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 LICENSE="jcraft"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc ppc64"
+KEYWORDS="x86 amd64 ppc ppc64"
 IUSE="doc jikes source examples"
 
 RDEPEND=">=virtual/jdk-1.4
 	>=dev-java/jzlib-1.0.3
-	!sparc? ( dev-java/gnu-crypto )"
+	dev-java/gnu-crypto"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.6
 	app-arch/unzip
@@ -26,11 +26,7 @@ src_compile() {
 	local antflags="dist"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	if ! use sparc; then
-		ant -lib $(java-pkg_getjars gnu-crypto,jzlib) ${antflags} || die "compilation failed"
-	else
-		ant -lib $(java-pkg_getjars jzlib) ${antflags} || die "compilation failed"
-	fi
+	ant -lib $(java-pkg_getjars gnu-crypto,jzlib) ${antflags} || die "compilation failed"
 }
 
 src_install() {

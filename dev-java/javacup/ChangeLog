@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.13 2006/09/14 00:16:37 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.14 2006/10/05 17:22:17 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> javacup-0.10k.ebuild,
+  javacup-0.10k-r1.ebuild:
+  Dropping sparc keywords, see #96229
 
   14 Sep 2006; Joshua Nichols <nichoj@gentoo.org> javacup-0.10k-r1.ebuild:
   Added ~ia64

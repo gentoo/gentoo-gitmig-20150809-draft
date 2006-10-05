@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-8.1_p404-r1.ebuild,v 1.1 2006/07/01 15:31:11 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/jdbc3-postgresql-8.1_p404-r1.ebuild,v 1.2 2006/10/05 17:33:14 gustavoz Exp $
 
 inherit java-ant-2 java-pkg-2
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://jdbc.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc examples source"
 
 DEPEND=">=virtual/jdk-1.4

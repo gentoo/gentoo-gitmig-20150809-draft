@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.54 2006/09/14 00:29:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.55 2006/10/05 17:04:14 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> xalan-2.6.0-r2.ebuild,
+  xalan-2.6.0-r3.ebuild:
+  Dropping sparc keywords, see #96229
 
   14 Sep 2006; <nichoj@gentoo.org> xalan-2.7.0-r2.ebuild:
   Added ~ppc64
