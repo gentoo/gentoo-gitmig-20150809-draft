@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.8.ebuild,v 1.1 2006/06/11 14:02:36 dragonheart Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-clib/rox-clib-2.1.8.ebuild,v 1.2 2006/10/05 17:29:49 lack Exp $
 
 MY_PN="ROX-CLib"
 DESCRIPTION="A library for ROX applications written in C."
