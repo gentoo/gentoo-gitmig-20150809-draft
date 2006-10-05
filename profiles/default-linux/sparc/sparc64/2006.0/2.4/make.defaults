@@ -1,9 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/make.defaults,v 1.5 2006/10/04 20:58:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/make.defaults,v 1.6 2006/10/05 21:22:41 gustavoz Exp $
 
 # USE settings
 USE="apache2 arts berkdb bitmap-fonts crypt cups dlloader eds encode esd fortran fbcon foomaticdb gdbm gcc64 gif gstreamer gtk gtk2 gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls ogg oss opengl pam perl png python qt3 readline sdl spell ssl tcpd truetype truetype-fonts type1-fonts vorbis X xv xml xmms zlib"
-
-# Just the barebones until bug #120088 is properly fixed <gustavoz>
-USE="${USE} dba gd" 
