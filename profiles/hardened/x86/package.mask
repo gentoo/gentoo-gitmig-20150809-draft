@@ -57,7 +57,6 @@ x11-drivers/xf86-input-evdev
 >=gnome-base/libbonobo-2.16.0
 >=gnome-base/libbonoboui-2.16.0
 >=gnome-base/libgnome-2.16.0
->=gnome-base/libgnomeui-2.15.1
 >=x11-libs/pango-1.14.3
 >=x11-misc/alacarte-0.10.0
 >=gnome-extra/bug-buddy-2.16.0
