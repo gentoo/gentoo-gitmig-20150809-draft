@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.2 2006/10/04 21:27:45 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.3 2006/10/05 10:24:53 nelchael Exp $
 
 inherit autotools eutils versionator
 
@@ -46,7 +46,7 @@ src_compile() {
 	econf \
 		--localstatedir=/var \
 		--sysconfdir=/etc/jabber \
-		--enable-db
+		--enable-db \
 		${localconf} \
 		$(use_enable ipv6) \
 		$(use_enable ldap) \
