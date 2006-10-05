@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12.ebuild,v 1.1 2005/12/31 21:01:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12.ebuild,v 1.2 2006/10/05 18:44:23 nyhm Exp $
 
 inherit games
 
@@ -13,17 +13,19 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls ncurses gtk gnome esd sdl"
 
-DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )
+RDEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )
 	esd? ( media-sound/esound )
 	gtk? (
 		=x11-libs/gtk+-2*
 		dev-libs/glib
 	)
-	nls? ( sys-devel/gettext )
+	nls? ( virtual/libintl )
 	sdl? (
 		media-libs/libsdl
 		media-libs/sdl-mixer
 	)"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
