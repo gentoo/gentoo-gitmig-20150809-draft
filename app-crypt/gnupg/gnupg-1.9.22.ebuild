@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.22.ebuild,v 1.1 2006/10/05 03:58:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.22.ebuild,v 1.2 2006/10/05 04:00:30 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnupg/alpha/gnupg/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="1.9"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="X gpg2-experimental ldap nls openct pcsc-lite smartcard selinux"
+IUSE="X gpg2-experimental doc ldap nls openct pcsc-lite smartcard selinux"
 
 COMMON_DEPEND="
 	virtual/libc
@@ -27,7 +27,8 @@ COMMON_DEPEND="
 #	X? ( app-crypt/pinentry )
 
 DEPEND="${COMMON_DEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	doc? ( sys-apps/texinfo )"
 
 RDEPEND="${COMMON_DEPEND}
 	!app-crypt/gpg-agent
@@ -80,8 +81,10 @@ src_compile() {
 		${myconf} \
 		|| die
 	emake || die
-	cd doc
-	emake html || die
+	if use doc; then
+		cd doc
+		emake html || die
+	fi
 }
 
 src_install() {
@@ -91,7 +94,8 @@ src_install() {
 	# neither of these should really be needed, please check
 	use gpg2-experimental && fperms u+s,go-r /usr/bin/gpg2
 	fperms u+s,go-r /usr/bin/gpg-agent
-	dohtml doc/gnupg.html/* doc/*jpg doc/*png
+
+	use doc && dohtml doc/gnupg.html/* doc/*jpg doc/*png
 }
 
 pkg_postinst() {
