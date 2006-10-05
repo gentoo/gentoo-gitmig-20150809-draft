@@ -1,6 +1,13 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.39 2006/09/30 21:43:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.40 2006/10/05 20:48:03 dang Exp $
+
+*epiphany-extensions-2.16.0-r1 (05 Oct 2006)
+
+  05 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/epiphany-extensions-2.16.0-sessionsaver-v4.patch.gz,
+  +epiphany-extensions-2.16.0-r1.ebuild:
+  Add a sessionsaver extension
 
   30 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
   -files/epiphany-extensions-2.14.0.1-adblock.patch,
