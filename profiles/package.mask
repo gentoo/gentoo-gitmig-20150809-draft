@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6013 2006/10/05 08:22:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6014 2006/10/05 11:47:20 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (5 Oct 2006)
+# masking sys-apps/sal-client for treecleaners, bug(s) 67364
+# Pending removal Nov 5th. Please use sys-process/audit instead!
+sys-apps/sal-client
 
 # Michael Sterrett <mr_bones_@gentoo.org> (05 Oct 2006)
 # Masked pending removal on Oct 30. No longer developed upstream
