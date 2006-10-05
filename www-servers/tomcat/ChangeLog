@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.70 2006/09/28 18:28:50 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.71 2006/10/05 14:52:30 gustavoz Exp $
+
+  05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  tomcat-5.0.27-r6.ebuild:
+  Dropping sparc keywords, see #96229
 
   28 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> Manifest:
   Redigested, ew
