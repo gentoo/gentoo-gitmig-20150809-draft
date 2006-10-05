@@ -1,7 +1,5 @@
 dev-lang/ruby threads
 dev-libs/confuse test
-# pygtk does not build, has to be checked
-dev-util/git gtk
 net-dns/avahi python
 net-irc/rbot spell
 x11-misc/xscreensaver new-login
