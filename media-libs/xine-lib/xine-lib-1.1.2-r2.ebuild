@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.16 2006/10/01 17:17:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.17 2006/10/05 21:41:09 wolf31o2 Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -42,7 +42,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	xvmc? (
 		|| ( x11-libs/libXvMC <virtual/x11-7 )
 		video_cards_nvidia? ( || ( x11-drivers/nvidia-drivers
-			x11-drivers/nvidia-legacy-drivers media-video/nvidia-glx ) )
+			x11-drivers/nvidia-legacy-drivers ) )
 		video_cards_via? ( || ( x11-drivers/xf86-video-via <virtual/x11-7 ) )
 		video_cards_i810? ( || ( x11-drivers/xf86-video-i810 <virtual/x11-7 ) )
 	)
