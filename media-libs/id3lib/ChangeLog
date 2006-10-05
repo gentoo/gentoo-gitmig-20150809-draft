@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.45 2006/09/30 08:20:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.46 2006/10/05 08:06:51 flameeyes Exp $
+
+*id3lib-3.8.3-r5 (05 Oct 2006)
+
+  05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/id3lib-3.8.3-unicode16.patch, +id3lib-3.8.3-r5.ebuild:
+  Add patch to fix unicode16 writing. Thanks for the users in bug #130922.
 
   30 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   -id3lib-3.8.3-r3.ebuild, id3lib-3.8.3-r4.ebuild:
