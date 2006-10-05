@@ -1,5 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/package.mask,v 1.1 2006/03/20 03:49:51 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/package.mask,v 1.2 2006/10/05 06:16:34 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (19 Mar 2006)
 # Requires a new profile
 >=sec-policy/selinux-base-policy-20060101
+>=sys-libs/libsepol-1.12.28
+>=sys-libs/libselinux-1.30.29
+>=sys-libs/libsemanage-1.6.17
+>=sys-apps/policycoreutils-1.30.30
+>=sys-apps/checkpolicy-1.30.12
