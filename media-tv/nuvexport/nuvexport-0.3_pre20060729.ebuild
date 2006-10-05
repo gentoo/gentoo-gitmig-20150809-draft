@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.3_pre20060729.ebuild,v 1.3 2006/09/22 03:46:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.3_pre20060729.ebuild,v 1.4 2006/10/05 14:56:12 beandog Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ pkg_setup() {
 		die "transcode needs mjpeg support"
 	fi
 
-	if ! built_with_use media-video/ffmpeg acc encode threads xvid ; then
+	if ! built_with_use media-video/ffmpeg aac encode threads xvid ; then
 		eerror "media-video/ffmpeg is missing necessary support. Please add"
 		eerror "'aac encode threads xvid' to your USE flags, and re-emerge"
 		eerror "media-video/ffmpeg."
