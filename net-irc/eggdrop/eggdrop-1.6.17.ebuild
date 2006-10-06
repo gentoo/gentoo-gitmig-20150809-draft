@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17.ebuild,v 1.12 2005/04/03 20:58:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.17.ebuild,v 1.13 2006/10/06 17:07:51 swegener Exp $
 
 inherit eutils
 
@@ -35,6 +35,7 @@ src_compile() {
 
 	use mysql    || ( echo mysql ; echo mystats ) >>disabled_modules
 	use postgres || echo pgstats >>disabled_modules
+	use static   && ( echo rijndael ; echo twofish ) >>disabled_modules
 
 	econf $(use_with ssl) || die "./configure failed"
 
