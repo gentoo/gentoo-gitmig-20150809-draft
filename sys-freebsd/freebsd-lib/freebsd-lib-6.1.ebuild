@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.12 2006/10/06 12:21:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.13 2006/10/06 16:47:11 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -31,7 +31,8 @@ if [[ ${CATEGORY/cross-} == ${CATEGORY} ]]; then
 		!sys-freebsd/freebsd-headers"
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
-		=sys-freebsd/freebsd-sources-${RV}*"
+		=sys-freebsd/freebsd-sources-${RV}*
+		app-arch/bzip2"
 
 	PROVIDE="virtual/libc
 		virtual/os-headers"
