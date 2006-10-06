@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6018 2006/10/06 00:49:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6019 2006/10/06 11:11:03 exg Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1628,11 +1628,6 @@ sys-apps/gli
 # avifile isn't mantained anymore and doesn't build with the
 # current ffmpeg, removing it and packages alike
 media-gfx/zphoto
-
-# Ryan Phillips <rphillips@gentoo.org> (12 Dec 2005)
-# Luabind doesn't compile with the latest stable boost, and no updates
-# for awhile.
-dev-libs/luabind
 
 # Francesco Riosa <vivo@gentoo.org> (07 Dec 2005)
 >=dev-db/mysql-5.1
