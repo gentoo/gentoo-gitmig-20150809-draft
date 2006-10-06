@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.39 2006/09/12 20:48:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.40 2006/10/06 21:59:56 dberkholz Exp $
+
+  06 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; fftw-2.1.5-r1.ebuild:
+  Revert accidental commit; not yet ready to allow virtual/mpi, amd64 doesn't
+  have mpich stable.
 
   12 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; fftw-2.1.5-r1.ebuild:
   (#147275) Move some function calls out of global scope.
