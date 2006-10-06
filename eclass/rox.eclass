@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.12 2006/06/11 23:17:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.13 2006/10/06 22:07:02 lack Exp $
 
 # ROX eclass Version 2
 
@@ -8,15 +8,17 @@
 # Alexander Simonov (devil@gentoo.org.ua) to ease installation of ROX desktop
 # applications. Enhancements and python additions by Peter Hyman.
 
-# APPNAME - the actual name of the application as the app folder is named
+# These variables are used in the GLOBAL scope to decide on DEPENDs, so they
+# must be set BEFORE you 'inherit rox':
+#
 # ROX_VER - the minimum version of rox filer required. Default is 2.1.0
 # ROX_LIB_VER - version of rox-lib required if any
 # ROX_CLIB_VER - version of rox-clib required if any
-# SET_PERM - specifies if permisions for arch specific files need to  be set
-#    *** not needed anymore ***
-#    note: user no longer has to set SET_PERM in ebuild files since the eclass
-#    will now detect when it has to chmod on-the-fly
-#    *** new ***
+#
+# These variables are only used in local scopes, and so may be set anywhere in
+# the ebuild:
+#
+# APPNAME - the actual name of the application as the app folder is named
 # KEEP_SRC - this flag, if set, will not remove the source directory
 #    but will do a make clean in it. This is useful if users wish to
 #    preserve the source code for anything
@@ -26,29 +28,45 @@
 # need python to byte compile modules, if any
 inherit python
 
-if [ -z "${ROX_VER}" ]; then
+if [[ -z "${ROX_VER}" ]]; then
 	ROX_VER="2.1.0"
 fi
 
 DEPEND="${DEPEND}
 		>=rox-base/rox-${ROX_VER}"
 
-if [ -n "${ROX_LIB_VER}" ]; then
+if [[ -n "${ROX_LIB_VER}" ]]; then
 	DEPEND="${DEPEND}
 			  >=rox-base/rox-lib-${ROX_LIB_VER}"
 fi
 
-if [ -n "${ROX_CLIB_VER}" ]; then
+if [[ -n "${ROX_CLIB_VER}" ]]; then
 	DEPEND="${DEPEND}
 			  >=rox-base/rox-clib-${ROX_CLIB_VER}"
 fi
 
+RDEPEND="${DEPEND}"
 
 rox_src_compile() {
 	cd "${APPNAME}"
 	#Some packages need to be compiled.
-	chmod 755 ./AppRun
+	chmod 755 AppRun
 	if [ -d src/ ]; then
+		# Bug 150303: Compile with Rox-Clib will fail if the user has 0install
+		# installed on their system somewhere, so remove the check for it in the
+		# configure script
+		if [ -f src/configure.in ]; then
+			cd src
+			sed -i.bak -e 's/ROX_CLIB_0LAUNCH/ROX_CLIB/' configure.in
+			autoconf
+			cd ..
+		fi
+
+		# Most rox self-compiles have a 'read' call to wait for the user to
+		# press return if the compile fails.
+		# Find and remove this:
+		sed -i.bak -e 's/\<read\>/#read/' AppRun
+
 		./AppRun --compile || die "Failed to compile the package"
 		if [ -n "${KEEP_SRC}" ]; then
 			cd src
@@ -59,6 +77,9 @@ rox_src_compile() {
 		fi
 		# set permissions flag here!
 		SET_PERM=true
+
+		# Restore the original AppRun
+		mv AppRun.bak AppRun
 	fi
 }
 
