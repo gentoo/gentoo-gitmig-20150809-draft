@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.3 2006/09/26 17:32:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.8-r2.ebuild,v 1.4 2006/10/06 18:47:53 vapier Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -34,10 +34,7 @@ RDEPEND=">=sys-libs/zlib-1.1.3
 	php? ( dev-lang/php )
 	python? ( dev-lang/python )
 	ruby? ( dev-lang/ruby )
-	X? ( || (
-	    ( x11-libs/libXaw x11-libs/libXpm )
-	virtual/x11 )
-	)
+	X? ( x11-libs/libXaw x11-libs/libXpm )
 	sys-devel/libtool"
 
 DEPEND="${RDEPEND}
@@ -50,15 +47,13 @@ DEPEND="${RDEPEND}
 	lua? ( dev-lang/swig )
 	php? ( dev-lang/swig )
 	python? ( dev-lang/swig )
-	ruby? ( dev-lang/swig )
-	"
+	ruby? ( dev-lang/swig )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-notcl.patch || die "epatch failed"
-
-	elibtoolize
+	epatch "${FILESDIR}"/${P}-notcl.patch
+	sed -i 's:LC_COLLATE=C:LC_ALL=C:g' lib/common/Makefile.* #134834
 	eautoreconf
 }
 
@@ -78,9 +73,9 @@ src_compile() {
 		$(use_enable python) \
 		$(use_enable ruby) \
 		--disable-{sharp,io} \
-		$(use_with X x) || die "Configure Failed!"
-
-	LC_ALL=C emake || die "Compile Failed!"
+		$(use_with X x) \
+		|| die "Configure Failed!"
+	emake || die "Compile Failed!"
 }
 
 src_install() {
@@ -93,8 +88,8 @@ src_install() {
 		pkgconfigdir=/usr/$(get_libdir)/pkgconfig \
 		install || die "Install Failed!"
 	if use minimal ; then
-	    rm -rf "${D}"usr/share/doc/${PF}/{pdf,html}
-	    rm -rf "${D}"usr/$(get_libdir)/${PN}/{tcl,lua,perl,python,ruby}
+	    rm -rf "${D}"/usr/share/doc/${PF}/{pdf,html}
+	    rm -rf "${D}"/usr/$(get_libdir)/${PN}/{tcl,lua,perl,python,ruby}
 	fi
 	dodoc AUTHORS ChangeLog NEWS README
 }
