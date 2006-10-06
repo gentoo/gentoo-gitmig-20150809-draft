@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2210 2006/10/06 02:20:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2211 2006/10/06 17:35:35 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -62,8 +62,8 @@ app-crypt/ccid:chipcard2 - Enable libchipcard support
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
 app-crypt/gnupg:gpg2-experimental - Install experimental development version of gnupg
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
-app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gnupg:openct - build using dev-libs/openct compatibility
+app-crypt/gnupg:pcsc-lite - build with pcsc-lite
 app-crypt/gringotts:suid - Install the binary suid, acknowledging the usual risks
 app-crypt/johntheripper:ntlm - enables john to crack Windows NT/2000 MD4 (case-sensitive) password hashes
 app-crypt/ophcrack:ophsmall - Makes use of smaller cracking tables
@@ -150,9 +150,9 @@ app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
 app-misc/beagle:ole - Enable ole support
 app-misc/booh:transcode - Use transcode to extract video thumbnails
-app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:graphlcd - Enable support for the GraphLCD library
 app-misc/lcdproc:irman - Enable support for IRMan
+app-misc/lcdproc:nfs - Adds support for NFS file system
 app-misc/lcdproc:ula200 - Enable support for ULA200 USB devices
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:streamzap - add the streamzap driver to lirc
@@ -223,13 +223,13 @@ app-text/poppler-bindings:cairo - Enable the cairo backend for poppler
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
 app-text/sword:lucene - Enable lucene support for faster searching
-app-text/webgen:textile - Textile support
 app-text/webgen:markdown - Markdown support
+app-text/webgen:textile - Textile support
 app-text/webgen:thumbnail - Thumbnail creation support using rmagick
 app-text/xpdf:nodrm - Disable the drm feature decoder.
 app-vim/gentoo-syntax:ignore-glep31 - Remove GLEP 31 (UTF-8 file encodings) settings
-dev-cpp/sptk:fltk - Enable FLTK support
 dev-cpp/sptk:excel - Enable Excel support
+dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/mysql:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql:cluster - Add support for NDB clustering.
 dev-db/mysql:embedded - Build embedded server (libmysqld)
@@ -379,8 +379,8 @@ dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/openct:udev - enable udev rules file installation
 dev-libs/openobex:irda - enable IrDA support
 dev-libs/openobex:syslog - enable syslog support
-dev-libs/opensc:pcsc-lite - build with pcsc-lite
 dev-libs/opensc:openct - build using dev-libs/openct compatibility
+dev-libs/opensc:pcsc-lite - build with pcsc-lite
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:ide - enable the qsa ide
 dev-libs/wx-xmingw:gdb - Enable gdb debugging
@@ -417,12 +417,12 @@ dev-perl/RPC-XML:modperl - Enable modperl support
 dev-perl/Template-Toolkit:latex - Enable latex support
 dev-perl/gtk-perl:gnome-print - Enable gnome-print support
 dev-php/PEAR-MDB2:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
-dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php4/eaccelerator:contentcache - Enable content caching.
-dev-php5/eaccelerator:contentcache - Enable content caching.
 dev-php4/eaccelerator:disassembler - Enable the eA disassembler.
-dev-php5/eaccelerator:disassembler - Enable the eA disassembler.
 dev-php4/eaccelerator:inode - Enable inode-based caching.
+dev-php4/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
+dev-php5/eaccelerator:contentcache - Enable content caching.
+dev-php5/eaccelerator:disassembler - Enable the eA disassembler.
 dev-php5/eaccelerator:inode - Enable inode-based caching.
 dev-php5/pecl-imagick:graphicsmagick - Use graphicsmagick instead of imagemagick
 dev-php5/pecl-pdo-oci:oci8-instant-client - Use dev-db/oracle-instantclient-basic as Oracle provider instead of requiring a full Oracle server install
@@ -458,8 +458,8 @@ dev-util/buildbot:web - Add a web interface ("waterfall" page).
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Don't install dpkg (useful for building a non-debian system)
-dev-util/eclipse-sdk:cairo - adds cairo support
 dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
+dev-util/eclipse-sdk:cairo - adds cairo support
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
 dev-util/eclipse-sdk:no-seamonkey - Don't use seamonkey for embedded browser support
@@ -506,10 +506,6 @@ games-fps/darkplaces:textures - Install and setup the updated textures
 games-fps/doom3:roe - Adds support for the Resurrection of Evil expansion
 games-fps/doom-data:doomsday - Add wrapper to run it within doomsday
 games-fps/freedoom:doomsday - Add wrapper to run it within doomsday
-games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure for use
-games-fps/qudos:mods - Build support for the quake2 mission packs
-games-fps/qudos:qmax - Build the pretty version (quake max)
-games-fps/qudos:textures - Install the enchanced textures (quake2-textures)
 games-fps/quake2-icculus:demo - Install the demo files (quake2-demodata) and configure for use
 games-fps/quake2-icculus:noqmax - Do not build the pretty version (quake max)
 games-fps/quake2-icculus:qmax - Build the pretty version (quake max)
@@ -517,6 +513,10 @@ games-fps/quake2-icculus:rogue - Build support for the 'Ground Zero' Mission Pac
 games-fps/quake2-icculus:xatrix - Build support for the 'The Reckoning' Mission Pack (xatrix)
 games-fps/quake3-bin:teamarena - Adds support for Team Arena expansion pack
 games-fps/quake3:teamarena - Adds support for Team Arena expansion pack
+games-fps/qudos:demo - Install the demo files (quake2-demodata) and configure for use
+games-fps/qudos:mods - Build support for the quake2 mission packs
+games-fps/qudos:qmax - Build the pretty version (quake max)
+games-fps/qudos:textures - Install the enchanced textures (quake2-textures)
 games-fps/unreal-tournament-goty:S3TC - Add the extra fancy textures to UT ... only works on certain cards (nvidia/ati/s3)
 games-mud/mmucl:mccp - adds support for the Mud Client Compression Protocol
 games-roguelike/scourge:editor - Install Scourge Data Editor (scourge-tools)
@@ -547,8 +547,8 @@ games-strategy/wesnoth:tools - Enable compilation of translation tools
 gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
 gnome-base/gnome-vfs:avahi - Support for avahi mdns daemon.
 gnome-base/nautilus:beagle - Enable support for beagle searching
-gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/evolution-data-server:keyring - Use gnome-keyring for password storage
+gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/gnome-games:avahi - Support for avahi mdns daemon.
 gnome-extra/gnome-power-manager:libnotify - Enable libnotify support
@@ -637,8 +637,8 @@ mail-client/pine:largeterminal - Add support for large terminals by doubling the
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 mail-client/squirrelmail:filter - Enable amavisd-new filtering
 mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning of email attachments
-mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-client/sylpheed-claws:bogofilter - Build bogofilter plugin
+mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
 mail-client/sylpheed-claws:spamassassin - Build spamassassin plugin
 mail-filter/ask:procmail - Adds support for procmail
 mail-filter/bogofilter:gsl - Use the GNU scientific library for calculations
@@ -687,8 +687,8 @@ media-gfx/blender:openexr - Adds support for openexr
 media-gfx/comix:rar - Pulls app-arch/unrar for rar file support
 media-gfx/digikam:nfs - Create sqlite db within ~/.kde, instead in the albums base directory.
 media-gfx/gimageview:mplayer - Enable mplayer support
-media-gfx/gimp:print - Enable print plug-in
 media-gfx/gimp:gimpprint - Enable gimp-print printing support
+media-gfx/gimp:print - Enable print plug-in
 media-gfx/gimp:smp - Enable support for multiprocessors
 media-gfx/graphicsmagick:depth16 - use 16-bit color depth as default
 media-gfx/graphicsmagick:depth32 - use 32-bit color depth as default
@@ -763,7 +763,12 @@ media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
 media-plugins/alsa-plugins:pulseaudio - Enable support for PulseAudio output plugin
+media-plugins/audacious-plugins:modplug - Build with modplug support
+media-plugins/audacious-plugins:musepack - Build with musepack support
 media-plugins/audacious-plugins:pulseaudio - Enable support for PulseAudio output plugin
+media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
+media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
+media-plugins/audacious-plugins:wma - Build with WMA (Windows Media Audio) support
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
 media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library 
 media-plugins/gst-plugins-farsight:jingle - Enables voice calls for jabber
@@ -791,19 +796,14 @@ media-sound/audacious:musepack - Build with musepack support
 media-sound/audacious:sid - Build with SID (Commodore 64 Audio) support
 media-sound/audacious:timidity - Build with Timidity++ (MIDI sequencer) support
 media-sound/audacious:wma - Build with WMA (Windows Media Audio) support
-media-plugins/audacious-plugins:modplug - Build with modplug support
-media-plugins/audacious-plugins:musepack - Build with musepack support
-media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) support
-media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
-media-plugins/audacious-plugins:wma - Build with WMA (Windows Media Audio) support
 media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:ipod - Build with ipod support
 media-sound/banshee:njb - Build with njb audio player support
 media-sound/beep-media-player:old-eq - Use old-style XMMS equalizer (not recommended)
 media-sound/bmpx:gaim - Enable support for sending songs over gaim
 media-sound/bmpx:libnotify - Enable libnotify popup balloons
-media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
 media-sound/bmpx:musepack - Support for musepack (mpc) files
+media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
 media-sound/bmpx:raptor - Enable usage of raptor for rlq container plugin
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
 media-sound/bmpx:stream - Build with support for streaming audio
@@ -929,10 +929,10 @@ media-video/mpeg4ip:v4l2 - Enable video4linux2 support for mp4live
 media-video/mpeg4ip:x264 - Enable x264 codec for mp4live (using x264-svn)
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:amr - Enables Adaptive Multi-Rate Audio support
-media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
 media-video/mplayer:custom-cflags - Enables custom cflags (not supported)
+media-video/mplayer:enca - Enables support for charset discovery and conversion
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:lzo - Enables support for lzo compression
@@ -1104,14 +1104,13 @@ net-fs/shfs:amd - Enable automounter support
 net-ftp/proftpd:authfile - Enable support for auth-file module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
-net-ftp/proftpd:sendfile - Enable support for sendfile()
 net-ftp/proftpd:rewrite - Enable support for rewrite module
-net-ftp/proftpd:sitemisc - Enable support for sitemisc module
-net-ftp/proftpd:shaper - Enable support for the mod_shaper
-net-ftp/proftpd:softquota - Enable support for the mod_quotatab
-net-ftp/proftpd:sendfile - Enable support for sendfile()
-net-ftp/proftpd:vroot - Enable support for virtual root module
 net-ftp/proftpd:opensslcrypt - Enable support for openssly crypto
+net-ftp/proftpd:sendfile - Enable support for sendfile()
+net-ftp/proftpd:shaper - Enable support for the mod_shaper
+net-ftp/proftpd:sitemisc - Enable support for sitemisc module
+net-ftp/proftpd:softquota - Enable support for the mod_quotatab
+net-ftp/proftpd:vroot - Enable support for virtual root module
 net-ftp/pure-ftpd:charconv - Enables charset conversion
 net-ftp/pure-ftpd:noiplog - Disables logging of IP addresses
 net-ftp/pure-ftpd:paranoidmsg - Display paranoid messages instead of normal ones
@@ -1406,8 +1405,8 @@ net-www/mod_auth_ldap:disk-cache - Enables support for disk cache.
 net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
 net-www/mod_ftpd:dbi - Enables support for libDBI
 net-www/mod_log_sql:dbi - Enables support for libDBI
-net-www/mplayerplug-in:gecko-sdk - Forces use of Gecko-SDK instead of firefox/mozilla
 net-www/mplayerplug-in:divx - Divx Playback Support
+net-www/mplayerplug-in:gecko-sdk - Forces use of Gecko-SDK instead of firefox/mozilla
 net-www/mplayerplug-in:gmedia - Google Media Playback Support
 net-www/mplayerplug-in:realmedia - Real Media Playback Support
 net-www/mplayerplug-in:wmp - Windows Media Playback Support
@@ -1580,8 +1579,8 @@ sys-freebsd/freebsd-usbin:nat - Enable Network Address Translation support
 sys-freebsd/freebsd-usbin:suid - Enable setuid root programs
 sys-fs/clvm:nocman - Allow users to build clvm without cman support and with gulm support
 sys-fs/cryptsetup-luks:dynamic - Build cryptsetup-luks dynamically
-sys-fs/loop-aes:padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
 sys-fs/loop-aes:keyscrub - Protects the encryption key in memory but takes more cpu resources
+sys-fs/loop-aes:padlock - Use VIA padlock instructions, detected at run time, code still works on non-padlock processors
 sys-fs/lvm2:clvm - Allow users to build clustered lvm2
 sys-fs/lvm2:cman - Cman support for clustered lvm
 sys-fs/lvm2:gulm - Gulm support for clustered lvm
@@ -1744,9 +1743,9 @@ x11-libs/fltk:noxft - Disables fltk; use for non-english characters
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/libmatchbox:pango - Enable pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management.
+x11-libs/qt:glib - Enable glib eventloop support
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
-x11-libs/qt:glib - Enable glib eventloop support
 x11-libs/qt:pch - Enable precompiled header support (gcc >3.4, faster compilation times)
 x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gtk2unicode
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
@@ -1766,8 +1765,8 @@ x11-terms/aterm:background - Enable background image support via libAfterImage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
-x11-terms/mlterm:uim - Enable uim support
 x11-terms/mlterm:scim - Enable scim support
+x11-terms/mlterm:uim - Enable uim support
 x11-terms/mrxvt:menubar - Enable mrxvt menubar
 x11-terms/rxvt-unicode:iso14755 - Enable ISO-14755 support
 x11-terms/rxvt-unicode:tabs - Install the experimental urxvt-tabbed client
@@ -1776,10 +1775,10 @@ x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/xterm:paste64 - Enable support for bracketed paste mode
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built.
-x11-themes/redhat-artwork:gdm - Install Bluecurve GDM theme
-x11-themes/redhat-artwork:kdm - Install Bluecurve KDM theme
 x11-themes/redhat-artwork:cursors - Install Bluecurve cursors
+x11-themes/redhat-artwork:gdm - Install Bluecurve GDM theme
 x11-themes/redhat-artwork:icons - Install Bluecurve icons
+x11-themes/redhat-artwork:kdm - Install Bluecurve KDM theme
 x11-themes/redhat-artwork:nautilus - Install Bluecurve Nautilus icons
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:disableslit - Disable the silt. Works around bug 122380.
