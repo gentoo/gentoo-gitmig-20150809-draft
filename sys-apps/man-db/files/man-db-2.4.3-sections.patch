@@ -1,0 +1,8 @@
+--- src/man_db.conf.in
++++ src/man_db.conf.in
+@@ -109,4 +109,4 @@
+ # is that you only need to explicitly list extensions if you want to force a
+ # particular order. Sections with extensions should usually be adjacent to
+ # their main section (e.g. "1 1mh 8 ...").
+-SECTION		1 n l 8 3 2 5 4 9 6 7
++SECTION		1 1p n l 8 3 3p 2 5 4 9 6 7 0p 1x 2x 3x 4x 5x 6x 7x 8x
