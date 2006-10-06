@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4-r1.ebuild,v 1.1 2006/09/12 12:48:10 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/wmmixer-2.0_beta4-r1.ebuild,v 1.2 2006/10/06 08:37:58 s4t4n Exp $
 
 inherit eutils
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="x86 ~sparc ~mips"
 
 S="${WORKDIR}/${PN}-2.0b4"
 
