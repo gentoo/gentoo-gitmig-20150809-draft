@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.6 2006/09/19 19:53:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/racer-bin-0.5.0-r1.ebuild,v 1.7 2006/10/06 13:00:25 nyhm Exp $
 
 inherit games
 
@@ -14,47 +14,44 @@ SLOT="0"
 KEYWORDS="-* x86"
 RESTRICT="strip"
 IUSE=""
+QA_TEXTRELS=${GAMES_PREFIX_OPT:1}/${PN}/data/plugins/motion/move.so
 
-RDEPEND="virtual/opengl
+DEPEND="media-libs/fmod"
+RDEPEND="${DEPEND}
+	virtual/opengl
+	virtual/glu
 	media-libs/libsdl
-	sys-libs/lib-compat
-	>=media-libs/fmod-3.61"
+	sys-libs/lib-compat"
 
-S="${WORKDIR}/racer${PV}"
+S=${WORKDIR}/racer${PV}
 
-src_compile() {
-	einfo "Binary package. Nothing to compile"
-}
-
-src_install( ) {
+src_install() {
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 	local f
-	dodir ${dir} || die "dodir failed"
 
 	dodoc *.txt || die "dodoc failed"
 	rm -f *.txt
-	cp -R ${S}/* "${D}/${dir}/" || die "cp failed"
 
-	sed -e "s:GENTOO_DIR:${dir}:" "${FILESDIR}/racer-skel" > racer-skel \
-		|| die "sed failed"
+	# Enable sound
+	sed -i '222 s/0/1/' racer.ini || die "sed failed"
 
-	for f in carlab gplex modeler pacejka racer tracked
-	do
-		newgamesbin racer-skel ${f} || \
-			die "newgamesbin ${f} failed"
-		dosed "s:GENTOO_BIN:${f}:" ${GAMES_BINDIR}/${f} || \
-			die "dosed ${f} failed"
+	insinto "${dir}"
+	doins -r * || die "doins failed"
+
+	for f in bin/* ; do
+		games_make_wrapper ${f#*/} ${f} "${dir}" "${dir}"/bin
+		fperms 770 "${dir}"/${f} || die "fperms ${f} failed"
 	done
 
-	local libfmod=`find /usr/lib/ -name 'libfmod-*so' -maxdepth 1 -type f -printf '%f'`
-	dosym /usr/lib/${libfmod} ${dir}/bin/libfmod-3.61.so
-	dosym /usr/lib/${libfmod} ${dir}/bin/libfmod-3.5.so
+	local libfmod=$(find /usr/lib -maxdepth 1 -name 'libfmod-*so' -type f)
+	dosym ${libfmod} "${dir}"/bin/libfmod-3.61.so
+	dosym ${libfmod} "${dir}"/bin/libfmod-3.5.so
 
 	# Fix up some permissions for bug 31694
-	for f in racer.ini data/drivers/default/driver.ini data/tracks/carlswood_nt/bestlaps.ini
+	for f in racer.ini data/drivers/default/driver.ini \
+		data/tracks/carlswood_nt/bestlaps.ini
 	do
-		fperms 664 ${dir}/${f} || \
-			die "fperms ${f} failed"
+		fperms 660 "${dir}"/${f} || die "fperms ${f} failed"
 	done
 
 	prepgamesdirs

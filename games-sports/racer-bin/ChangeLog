@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/racer-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/ChangeLog,v 1.5 2006/09/19 19:53:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/racer-bin/ChangeLog,v 1.6 2006/10/06 13:00:25 nyhm Exp $
+
+  06 Oct 2006; Tristan Heaven <nyhm@gentoo.org> -files/racer-skel,
+  racer-bin-0.5.0-r1.ebuild:
+  Enable sound by default
 
   19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   racer-bin-0.5.0-r1.ebuild:
