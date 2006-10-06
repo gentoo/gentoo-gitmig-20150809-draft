@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.2 2006/10/06 16:15:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.3 2006/10/06 17:20:57 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -65,7 +65,8 @@ GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 
 # Don't set this to :-, - allows BRANCH_UPDATE=""
 BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
-GLIBC_PORTS_VER="20060925"
+GLIBC_PORTS_VER=${GLIBC_RELEASE_VER}
+#GLIBC_PORTS_VER="20060925"
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
 NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
