@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kbfx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.5 2006/07/14 20:50:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/ChangeLog,v 1.6 2006/10/06 18:48:19 deathwing00 Exp $
+
+  06 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kbfx-0.4.9.1.ebuild:
+  Forcing automake 1.6 and autoconf 2.1. Fixes bug #149899. Thanks to Ghislain
+  Bourgeois. Thanks to Flameeyes for the admin trick.
 
   14 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> kbfx-0.4.9.1.ebuild:
   Leave to the eclass handling of admin dir (bug #140406). Fix quoting.
