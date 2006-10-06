@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.122 2006/10/06 03:00:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.123 2006/10/06 14:55:04 beandog Exp $
+
+  05 Oct 2006; Steve Dibb <beandog@gentoo.org> mythtv-0.20_p11444.ebuild:
+  Add ivtv USE flag
 
 *mythtv-0.20_p11444 (06 Oct 2006)
 
