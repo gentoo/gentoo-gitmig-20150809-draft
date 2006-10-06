@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.2 2006/07/22 22:02:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1-r3.ebuild,v 1.3 2006/10/06 01:19:36 gustavoz Exp $
 
 inherit java-pkg-2 eutils versionator java-ant-2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~ppc64 ~ppc"
 IUSE="doc source"
 
 RDEPEND=">=virtual/jre-1.4
