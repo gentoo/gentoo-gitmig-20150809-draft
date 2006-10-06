@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.14 2006/07/19 18:21:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.15 2006/10/06 21:50:05 wolf31o2 Exp $
 
 # USE flags only valid on Mac OS X
 aqua
@@ -8,7 +8,7 @@ coreaudio
 
 emul-linux-x86
 
-# nvidia-glx is masked, this has to be too
+# nvidia-drivers/nvidia-legacy-drivers are masked, this has to be too
 video_cards_nvidia
 
 kqemu

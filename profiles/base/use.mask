@@ -29,7 +29,7 @@ n64
 # sparc arch specific USE flags
 vis
 
-# nVidia XvMC requires nvidia-glx
+# nVidia XvMC requires nvidia-drivers/nvidia-legacy-drivers
 nvidia
 
 # dev-db/oracle-instantclient-basic is only available on x86
