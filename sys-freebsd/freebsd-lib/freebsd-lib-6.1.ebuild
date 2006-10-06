@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.11 2006/10/05 20:57:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.12 2006/10/06 12:21:16 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -80,7 +80,7 @@ PATCHES="${FILESDIR}/${PN}-bsdxml.patch
 	${FILESDIR}/${PN}-6.0-flex-2.5.31.patch
 	${FILESDIR}/${PN}-6.0-binutils-asm.patch
 	${FILESDIR}/${PN}-6.0-ssp.patch
-	${FILESDIR}/${P}-csu-amd64.patch"
+	${FILESDIR}/${P}-csu.patch"
 
 # Here we disable and remove source which we don't need or want
 # In order:
