@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r4.ebuild,v 1.2 2006/10/04 14:12:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r4.ebuild,v 1.3 2006/10/06 16:15:28 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -498,7 +498,7 @@ toolchain-glibc_src_install() {
 		[[ -z ${x} ]] && continue
 		striptest=$(LC_ALL="C" file -L ${x} 2>/dev/null)
 		[[ -z ${striptest} ]] && continue
-		[[ ${striptest} != *"statically linked"* ]] && continue
+		[[ ${striptest} == *"statically linked"* ]] && continue
 		"${D}"/$(get_libdir)/ld-*.so \
 			--library-path "${D}"/$(get_libdir) \
 			${x} > /dev/null \
