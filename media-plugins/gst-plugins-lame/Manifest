@@ -1,16 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST gst-plugins-0.8.10.tar.bz2 2397528 RMD160 fb59c37aef76b9cc065530fc4a7e7fe43168e619 SHA1 99e5746d4f013fc00cd29a59f9aab773db08ab1c SHA256 c5c8359f6ff8bc594cdadbb38863a8180c52de1edce74ad2fd698b9d4c6fef7c
 DIST gst-plugins-0.8.11.tar.bz2 2439654 RMD160 833aec123a52cd0f36ec883c349cc8d69090d749 SHA1 4a9be6b62dd0e8a73616e8e93f7a3ace8aec8c59 SHA256 0e48eef1d3bfa2263c1047f9f84622a4e16e33d963252cb8153ff1b340c4ba90
-DIST gst-plugins-0.8.12.tar.bz2 2506926
+DIST gst-plugins-0.8.12.tar.bz2 2506926 RMD160 cc0bbf3d790cb5791ce982fe6493bf2d8496a507 SHA1 3b65fe96aa849c463f5f968830ad76143c4b9952 SHA256 8728da4f71bc87e10fb064d28154220d66a3d8332482fd2c8a7ed47c5f0a03ba
 DIST gst-plugins-0.8.8.tar.bz2 2214274 RMD160 e141c576b668109d41f32541a96da5c79016e55c SHA1 5ba9908c3a09c1b7554ed0194a85ba63c2cc1ced SHA256 5ac9540297fe94f07bb24e2a26290ecf04385adee4419af631ac694295ee9717
 DIST gst-plugins-0.8.9.tar.bz2 2356958 RMD160 294b1873c8d54ac225bf94a2e5ba872f089fd605 SHA1 f73dd3b96e1e5c7e90fdb1bf2c72de8c8d035bb1 SHA256 713e971762fe8b8ee3f2b097693a6b7bc6b85ef2167223b7e21cbeaa8c66035c
 DIST gst-plugins-ugly-0.10.3.tar.bz2 605833 RMD160 0ea0d039cf87ecf662655521b9dbca8c2a388412 SHA1 98c69c4feeee975fdbe829cf6534d6c12b960182 SHA256 0cd916b3f0c8867cea77243d20d8d56ed45b7ef5ec5c5dd1603860ece8e88a10
+DIST gst-plugins-ugly-0.10.4.tar.bz2 720893 RMD160 0651853d7d36bda9d267ca3cecfb6cead95a3e6e SHA1 e31b671dcfab7842a1b546decc7c7a3fcc76790c SHA256 4871c52b2421b582330a0f9dc6a42da3b706140c346aa0cd690eb40758afe152
 EBUILD gst-plugins-lame-0.10.3.ebuild 449 RMD160 a4f1c3246e0a2aefbb345ec6914cb7ca7e7ed84b SHA1 ca032db0a91f1155e3e64f90f753de836bec585a SHA256 3f1297a6f78d40150fe90793d393e8af31b64cbb8cfa49d3d709001076393cad
 MD5 e88d9b8938e820f583840acb2c53f746 gst-plugins-lame-0.10.3.ebuild 449
 RMD160 a4f1c3246e0a2aefbb345ec6914cb7ca7e7ed84b gst-plugins-lame-0.10.3.ebuild 449
 SHA256 3f1297a6f78d40150fe90793d393e8af31b64cbb8cfa49d3d709001076393cad gst-plugins-lame-0.10.3.ebuild 449
+EBUILD gst-plugins-lame-0.10.4.ebuild 448 RMD160 ae9971d86d25d1e91df53e347e78e0654766e9b2 SHA1 cbe8a67b172d7f50b1d465f2bf31869014fab611 SHA256 2e6ac87a647c5c571054523132ba33d355bbbd04e3f86e467aaf8d89c8f4ebed
+MD5 c5f59bfb568dc6d164ec517fe08eac3f gst-plugins-lame-0.10.4.ebuild 448
+RMD160 ae9971d86d25d1e91df53e347e78e0654766e9b2 gst-plugins-lame-0.10.4.ebuild 448
+SHA256 2e6ac87a647c5c571054523132ba33d355bbbd04e3f86e467aaf8d89c8f4ebed gst-plugins-lame-0.10.4.ebuild 448
 EBUILD gst-plugins-lame-0.8.10.ebuild 345 RMD160 6cf22cb815bd94945d1985c3512c1a18cc25916e SHA1 30f8c5e45acca588f5c03a2e3c88f7d0f65cca15 SHA256 101a4b6aeba93da4f23825cfc7a0e8fc974497bf3184db78e7c47bd87e6841ce
 MD5 10fb259a80be09862e2fcb8997a056be gst-plugins-lame-0.8.10.ebuild 345
 RMD160 6cf22cb815bd94945d1985c3512c1a18cc25916e gst-plugins-lame-0.8.10.ebuild 345
@@ -42,25 +44,21 @@ SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5 metadata
 MD5 aafca0fb1c0ae9a28120aabbd603e074 files/digest-gst-plugins-lame-0.10.3 274
 RMD160 f3de4473328be1cfadb3c15a781fca5cf2c16d4a files/digest-gst-plugins-lame-0.10.3 274
 SHA256 cfe9c819ee2ccf7ad84b195685cb2976e912906830bd24d488b21b4ef690f472 files/digest-gst-plugins-lame-0.10.3 274
+MD5 d935d4ce6cfdd13f1bbf5250ffd100b4 files/digest-gst-plugins-lame-0.10.4 274
+RMD160 dec1a476aa0df1f41f29c4641bfa7299cc9fb777 files/digest-gst-plugins-lame-0.10.4 274
+SHA256 7f432695e33fb8a908b0a2494e7b00fca2c66085160d120f8617cf8c31210151 files/digest-gst-plugins-lame-0.10.4 274
 MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-lame-0.8.10 262
 RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-lame-0.8.10 262
 SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-lame-0.8.10 262
 MD5 ff49930a5f9eee079e5742770cb1dd5f files/digest-gst-plugins-lame-0.8.11 262
 RMD160 6251f14b7d62b5fe20ad7404a30ecde333cee9c0 files/digest-gst-plugins-lame-0.8.11 262
 SHA256 e7d86d74a24b6133cfb03dded7830cdf6a1cc67109d1c87047ff45f816763f5c files/digest-gst-plugins-lame-0.8.11 262
-MD5 41e1516e08a583a2f80f46dad873900c files/digest-gst-plugins-lame-0.8.12 72
-RMD160 8b2eba97f297dd77e2f30774b899c300bf6836d6 files/digest-gst-plugins-lame-0.8.12 72
-SHA256 13553c6cc65d4b9da823594715049ea6a89679f80d0f7e62aacef4bffef57cbf files/digest-gst-plugins-lame-0.8.12 72
+MD5 0af04efffa5bac9074fe049aa3512fe1 files/digest-gst-plugins-lame-0.8.12 262
+RMD160 2131a3433f3081297079de64ac7f2335c1f82036 files/digest-gst-plugins-lame-0.8.12 262
+SHA256 bac5ba90fbb314a2f7ea2a53506021944ec1b8707b20d47545a23a6fd5f4cefd files/digest-gst-plugins-lame-0.8.12 262
 MD5 d42b5b8a0a5175c24b9f8c7d4e0377ca files/digest-gst-plugins-lame-0.8.8 259
 RMD160 1cd0dce90b9f48f20a5148c14fdc5db42aa79496 files/digest-gst-plugins-lame-0.8.8 259
 SHA256 c01a4735d25772dd72951e305eb31200b883b20ad3993cf453e8d9e73c6207de files/digest-gst-plugins-lame-0.8.8 259
 MD5 b040ebb3cb8e5116893f8166bd8c8bcb files/digest-gst-plugins-lame-0.8.9 259
 RMD160 0498e9b7c85e28f0a0f740355b037b27ecdd4969 files/digest-gst-plugins-lame-0.8.9 259
 SHA256 e542b7466fb2485c94556f3570067f75055906e3a02650a77037290a1c774141 files/digest-gst-plugins-lame-0.8.9 259
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFA89uamhnQswr0vIRAgS9AKCRrD71kfpJQI6EIaBHqK/KTOCpKACeLglq
-KksTi6m84ph057+1KAfd4zY=
-=Ipp1
------END PGP SIGNATURE-----
