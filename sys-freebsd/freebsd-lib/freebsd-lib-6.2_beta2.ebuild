@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.4 2006/10/06 16:47:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.5 2006/10/06 17:14:03 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD's base system libraries"
 SLOT="6.0"
 KEYWORDS="~x86-fbsd"
 
-IUSE="atm bluetooth ssl ipv6 kerberos nis gpib build"
+IUSE="atm bluetooth ssl ipv6 kerberos nis gpib build bootstrap"
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
@@ -32,7 +32,7 @@ if [[ ${CATEGORY/cross-} == ${CATEGORY} ]]; then
 	DEPEND="${RDEPEND}
 		>=sys-devel/flex-2.5.31-r2
 		=sys-freebsd/freebsd-sources-${RV}*
-		app-arch/bzip2"
+		!bootstrap? ( app-arch/bzip2 )"
 
 	PROVIDE="virtual/libc
 		virtual/os-headers"
@@ -124,6 +124,8 @@ src_unpack() {
 	local machine
 	machine=$(tc-arch-kernel ${CTARGET})
 	ln -s "${WORKDIR}/sys/${machine}/include" "${WORKDIR}/include/machine"
+
+	use bootstrap && dummy_mk libstand
 }
 
 src_compile() {
