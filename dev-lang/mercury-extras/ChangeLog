@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.40 2006/10/05 09:06:10 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.41 2006/10/06 06:55:46 nixnut Exp $
+
+  05 Oct 2006; <nixnut@gentoo.org> mercury-extras-0.12.2-r2.ebuild:
+  Stable on ppc wrt bug 149924
 
   05 Oct 2006; keri <keri@gentoo.org> mercury-extras-0.12.2-r2.ebuild,
   mercury-extras-0.13.0.ebuild:
