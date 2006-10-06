@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.6 2006/08/04 15:09:42 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.0.2.ebuild,v 1.7 2006/10/06 23:20:25 aross Exp $
 
 inherit mount-boot flag-o-matic
 
@@ -24,6 +24,19 @@ DEPEND="sys-devel/dev86"
 RDEPEND=""
 
 RESTRICT="test"
+
+pkg_setup() {
+	if [[ -z ${XEN_TARGET_ARCH} ]]; then
+		if use x86; then
+			export XEN_TARGET_ARCH="x86_32"
+		elif use amd64; then
+			export XEN_TARGET_ARCH="x86_64"
+		else
+			die "Unsupported architecture!"
+		fi
+	fi
+}
+
 
 src_unpack() {
 	unpack ${A}
