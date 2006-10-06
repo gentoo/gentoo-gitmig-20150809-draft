@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.13-r1.ebuild,v 1.1 2006/07/20 10:35:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.13-r1.ebuild,v 1.2 2006/10/06 15:04:40 dang Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Gnome Palm Pilot and Palm OS Device Syncing Library"
 HOMEPAGE="http://live.gnome.org/GnomePilot"
@@ -32,7 +32,9 @@ DOCS="AUTHORS COPYING* ChangeLog README NEWS"
 SCROLLKEEPER_UPDATE="0"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	gnome2_omf_fix
+	gnome2_src_unpack
+
+	epatch "${FILESDIR}/${P}-as-needed.patch"
+
+	eautoreconf
 }

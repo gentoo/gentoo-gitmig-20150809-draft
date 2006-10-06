@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.26 2006/07/20 10:35:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.27 2006/10/06 15:04:40 dang Exp $
+
+  06 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
+  +files/gnome-pilot-2.0.13-as-needed.patch, gnome-pilot-2.0.13-r1.ebuild:
+  Make it build with --as-needed. bug #149675
 
 *gnome-pilot-2.0.13-r1 (20 Jul 2006)
 
