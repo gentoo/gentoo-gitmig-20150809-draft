@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.8 2006/07/09 13:37:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.9 2006/10/06 21:48:58 wolf31o2 Exp $
 
 # This file is additional masking for the hardened profile
 
@@ -20,12 +20,10 @@
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
 
-# These two package do more harm than good w/ hardened.
+# These packages do more harm than good w/ hardened.
 # users must now the opensource xorg nv driver with nvidia cards.
 # By placing Driver "nv" in xorg.conf
 # 2006-06-29 solar
-media-video/nvidia-kernel
-media-video/nvidia-glx
 x11-drivers/nvidia-drivers
 x11-drivers/nvidia-legacy-drivers
 media-video/nvidia-settings
