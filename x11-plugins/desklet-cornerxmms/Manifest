@@ -1,12 +1,26 @@
-MD5 28cd267ac750ae7061aab636f5a91949 ChangeLog 594
-RMD160 218403b652117af7723d8a527e9a56e04dcfc2b7 ChangeLog 594
-SHA256 e7aefb3064c7c80de0b48d032371db7b9d66a49a4f92eebdb590c93de01377f0 ChangeLog 594
-MD5 36d71f75541bb351b545b6d5dbe89541 desklet-cornerxmms-0.1.0.ebuild 702
-RMD160 f334e10efe86f2fd72e1177b7216c8c9f3d7230c desklet-cornerxmms-0.1.0.ebuild 702
-SHA256 5f77a5371e6d86f742b2bd7ab4205f664ca40a6359fc2927088ec64d7f56d26e desklet-cornerxmms-0.1.0.ebuild 702
-MD5 9cd8c0557acbcb7d797df5f686b49382 files/digest-desklet-cornerxmms-0.1.0 67
-RMD160 82c47b294ddd7738e2387f99b65c90d2a5c3b13d files/digest-desklet-cornerxmms-0.1.0 67
-SHA256 c0e989f714ab0fa801e22c8ddb020dedbd10d84b0ffdf80b4b69d37392858a51 files/digest-desklet-cornerxmms-0.1.0 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST CornerXMMS-0.1.0.tar.gz 91828
+EBUILD desklet-cornerxmms-0.1.0.ebuild 705 RMD160 1840ece037572ca30dc659cd81821178f60269da SHA1 c8a1e2c46ec79d1be85d6b6a8ffad1b58031d62d SHA256 dc8e544f5e0baf9ce95ab9f0cd893ab2d2734dc0410b277838fa837e235d3910
+MD5 9fa080845016bd29f0b7dd949613fff6 desklet-cornerxmms-0.1.0.ebuild 705
+RMD160 1840ece037572ca30dc659cd81821178f60269da desklet-cornerxmms-0.1.0.ebuild 705
+SHA256 dc8e544f5e0baf9ce95ab9f0cd893ab2d2734dc0410b277838fa837e235d3910 desklet-cornerxmms-0.1.0.ebuild 705
+MISC ChangeLog 689 RMD160 ecef62b466311ec899f085fee4b4b9edb607e449 SHA1 40ac0206741501e9d4a9de7f54d16735b2d547cd SHA256 65c14d812ac9d970d2bdbf07abb400b2cf9a45b8661e64d49eefdc67ccaae7e1
+MD5 9676dd358bf0475539802dfaca0e2634 ChangeLog 689
+RMD160 ecef62b466311ec899f085fee4b4b9edb607e449 ChangeLog 689
+SHA256 65c14d812ac9d970d2bdbf07abb400b2cf9a45b8661e64d49eefdc67ccaae7e1 ChangeLog 689
+MISC metadata.xml 162 RMD160 f0200a20b38bb00e3d7282928d8cd4a7f4ffe993 SHA1 72886a8316d003293955d4d014a55e402d5e8b53 SHA256 d26ee944c21492768d05c515a2a4c3e1e9e35938bef05a84578d01b1e99ecf2a
 MD5 6bdff92f19f48041cb28629b5174dae1 metadata.xml 162
 RMD160 f0200a20b38bb00e3d7282928d8cd4a7f4ffe993 metadata.xml 162
 SHA256 d26ee944c21492768d05c515a2a4c3e1e9e35938bef05a84578d01b1e99ecf2a metadata.xml 162
+MD5 9cd8c0557acbcb7d797df5f686b49382 files/digest-desklet-cornerxmms-0.1.0 67
+RMD160 82c47b294ddd7738e2387f99b65c90d2a5c3b13d files/digest-desklet-cornerxmms-0.1.0 67
+SHA256 c0e989f714ab0fa801e22c8ddb020dedbd10d84b0ffdf80b4b69d37392858a51 files/digest-desklet-cornerxmms-0.1.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFJlLdwLwTda5NScMRAhMpAJ4m1kAFxEC2LdngjzqVen79s/tqVQCcDnfj
+Pa+BJDKNOfJuDi41jsYx/Mg=
+=H2Aw
+-----END PGP SIGNATURE-----
