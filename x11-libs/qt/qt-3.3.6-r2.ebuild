@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r2.ebuild,v 1.2 2006/09/22 17:42:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r2.ebuild,v 1.3 2006/10/06 12:58:19 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -33,7 +33,7 @@ DEPEND="|| ( ( x11-libs/libXcursor
 	virtual/xft
 	media-libs/libpng
 	media-libs/jpeg
-	media-libs/libmng
+	>=media-libs/libmng-1.0.9
 	>=media-libs/freetype-2
 	sys-libs/zlib
 	nas? ( >=media-libs/nas-1.5 )
