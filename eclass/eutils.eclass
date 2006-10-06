@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.252 2006/10/05 00:12:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.253 2006/10/06 07:00:14 flameeyes Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -503,8 +503,13 @@ enewuser() {
 		done
 
 		if [[ ${shell} == "/dev/null" ]] ; then
-			eerror "Unable to identify the shell to use"
-			die "Unable to identify the shell to use"
+			eerror "Unable to identify the shell to use, proceeding with userland default."
+			case ${USERLAND} in
+				GNU) shell="/bin/false" ;;
+				BSD) shell="/sbin/nologin" ;;
+				Darwin) shell="/usr/sbin/nologin" ;;
+				*) die "Unable to identify the default shell for userland ${USERLAND}"
+			esac
 		fi
 
 		eshell=${shell}
