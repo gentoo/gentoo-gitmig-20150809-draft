@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/magickthumbnail
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/magickthumbnail/ChangeLog,v 1.1 2006/10/06 13:33:33 lack Exp $
+
+*magickthumbnail-0.5.1 (06 Oct 2006)
+
+  06 Oct 2006; Jim Ramsay <lack@gentoo.org>
+  +files/magickthumbnail-0.5.1-config_location.patch, +metadata.xml,
+  +magickthumbnail-0.5.1.ebuild:
+  New package: MagickThumbnail-0.5.1 (Bug #111296)
+
