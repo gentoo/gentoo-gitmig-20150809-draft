@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/konqburn-1.0.ebuild,v 1.2 2006/09/26 11:59:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/konqburn-1.0.ebuild,v 1.3 2006/10/06 11:00:58 nixnut Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/konqburn/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ppc ~sparc ~x86"
 IUSE="dvdr"
 
 DEPEND="|| ( kde-base/konqueror kde-base/kdebase )

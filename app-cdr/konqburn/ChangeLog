@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/konqburn
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.11 2006/09/26 11:59:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/konqburn/ChangeLog,v 1.12 2006/10/06 11:00:58 nixnut Exp $
+
+  06 Oct 2006; <nixnut@gentoo.org> konqburn-1.0.ebuild:
+  Stable on ppc wrt bug 148567
 
   26 Sep 2006; Simon Stelling <blubb@gentoo.org> konqburn-1.0.ebuild:
   stable on amd64
