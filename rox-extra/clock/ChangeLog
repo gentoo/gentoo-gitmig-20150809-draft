@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/clock
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.6 2006/10/04 14:49:28 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.7 2006/10/06 21:45:47 lack Exp $
+
+  06 Oct 2006; Jim Ramsay <lack@gentoo.org> clock-2.1.7.ebuild:
+  Updated to properly require rox-clib-2.1.8
 
   04 Oct 2006; Jim Ramsay <lack@gentoo.org> clock-2.1.7.ebuild:
   Fixed version variable ordering for 'inherit rox'
