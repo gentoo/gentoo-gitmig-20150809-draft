@@ -1,0 +1,74 @@
+diff -Nru gnome-phone-manager-0.8.orig/configure.in gnome-phone-manager-0.8/configure.in
+--- gnome-phone-manager-0.8.orig/configure.in	2006-09-18 18:38:31.000000000 +0300
++++ gnome-phone-manager-0.8/configure.in	2006-10-07 01:30:46.662942500 +0300
+@@ -59,6 +59,11 @@
+ AC_CHECK_TYPES([EContactPhotoType], , , [#include <libebook/e-contact.h>])
+ CPPFLAGS="$saved_CPPFLAGS"
+ 
++# --as-needed cannot work with this because pkg-config --libs gnome-bluetooth
++# returns "-lgnomebt -lbtctl"; gnomebt library has all the symbols this package needs
++# but as UNDEF! The following line solve the problem.
++PHONEMGR_LIBS="-lbtctl ${PHONEMGR_LIBS}"
++
+ AC_SUBST(PHONEMGR_CFLAGS)
+ AC_SUBST(PHONEMGR_LIBS)
+ 
+diff -Nru gnome-phone-manager-0.8.orig/libegg/libegg/iconlist/Makefile.am gnome-phone-manager-0.8/libegg/libegg/iconlist/Makefile.am
+--- gnome-phone-manager-0.8.orig/libegg/libegg/iconlist/Makefile.am	2006-10-07 01:28:52.000000000 +0300
++++ gnome-phone-manager-0.8/libegg/libegg/iconlist/Makefile.am	2006-10-07 01:30:46.634940750 +0300
+@@ -11,8 +11,8 @@
+ noinst_LTLIBRARIES = libeggiconlist.la
+ 
+ libeggiconlist_la_LIBADD = \
+-	$(EGG_LIBS) \
+-	$(top_builddir)/libegg/util/libeggutil.la
++	$(top_builddir)/libegg/util/libeggutil.la \
++	$(EGG_LIBS)
+ 
+ libeggiconlist_la_SOURCES = \
+   eggiconlist.c
+diff -Nru gnome-phone-manager-0.8.orig/libegg/libegg/tray/Makefile.am gnome-phone-manager-0.8/libegg/libegg/tray/Makefile.am
+--- gnome-phone-manager-0.8.orig/libegg/libegg/tray/Makefile.am	2006-10-07 01:28:52.000000000 +0300
++++ gnome-phone-manager-0.8/libegg/libegg/tray/Makefile.am	2006-10-07 01:30:46.634940750 +0300
+@@ -11,8 +11,8 @@
+ noinst_LTLIBRARIES = libeggtray.la
+ 
+ libeggtray_la_LIBADD = \
+-	$(EGG_TRAY_LIBS) \
+-	$(top_builddir)/libegg/util/libeggutil.la
++	$(top_builddir)/libegg/util/libeggutil.la \
++	$(EGG_TRAY_LIBS)
+ 
+ libeggtray_la_SOURCES = \
+   eggtrayicon.c		\
+diff -Nru gnome-phone-manager-0.8.orig/libgsm/Makefile.am gnome-phone-manager-0.8/libgsm/Makefile.am
+--- gnome-phone-manager-0.8.orig/libgsm/Makefile.am	2006-10-07 01:28:52.000000000 +0300
++++ gnome-phone-manager-0.8/libgsm/Makefile.am	2006-10-07 01:30:46.634940750 +0300
+@@ -17,10 +17,10 @@
+ 	phonemgr-marshal.c phonemgr-marshal.h
+ 
+ glibgsmtest_SOURCES = glibgsmtest.c
+-glibgsmtest_LDADD = $(LIBGSM_LIBS) libgsmwrap.la
++glibgsmtest_LDADD = libgsmwrap.la $(LIBGSM_LIBS)
+ 
+ gnokii_identify_SOURCES = gnokii-identify.c
+-gnokii_identify_LDADD = $(LIBGSM_LIBS) libgsmwrap.la
++gnokii_identify_LDADD = libgsmwrap.la $(LIBGSM_LIBS)
+ 
+ phones_DATA = phones.xml
+ phonesdir = $(datadir)/$(PACKAGE)
+diff -Nru gnome-phone-manager-0.8.orig/src/Makefile.am gnome-phone-manager-0.8/src/Makefile.am
+--- gnome-phone-manager-0.8.orig/src/Makefile.am	2006-10-07 01:28:52.000000000 +0300
++++ gnome-phone-manager-0.8/src/Makefile.am	2006-10-07 01:30:46.662942500 +0300
+@@ -22,9 +22,9 @@
+ 	$(CLA_FILES)
+ 
+ gnome_phone_manager_LDADD = \
+-	$(PHONEMGR_LIBS) \
+ 	../libegg/libegg/tray/libeggtray.la \
+-	../libgsm/libgsmwrap.la
++	../libgsm/libgsmwrap.la \
++	$(PHONEMGR_LIBS)
+ 
+ EXTRA_DIST = gnome-phone-manager.desktop.in
+ 

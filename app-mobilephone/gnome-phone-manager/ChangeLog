@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.11 2006/06/25 06:22:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.12 2006/10/06 22:44:39 mrness Exp $
+
+*gnome-phone-manager-0.8 (06 Oct 2006)
+
+  06 Oct 2006; Alin Nastac <mrness@gentoo.org>
+  +files/gnome-phone-manager-0.8-as-needed.patch,
+  +files/gnome-phone-manager-0.8-pixmaps.patch,
+  -gnome-phone-manager-0.6.ebuild, +gnome-phone-manager-0.8.ebuild:
+  Remove obsolete version. Version bump (#150307).
 
   25 Jun 2006; Alin Nastac <mrness@gentoo.org>
   gnome-phone-manager-0.7.ebuild:
