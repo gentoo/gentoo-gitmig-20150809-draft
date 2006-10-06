@@ -89,10 +89,12 @@ diff -urN CBLAS.orig/Makefile.am CBLAS/Makefile.am
 diff -urN CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 --- CBLAS.orig/src/Makefile.am	1969-12-31 16:00:00.000000000 -0800
 +++ CBLAS/src/Makefile.am	2006-05-16 23:05:41.000000000 -0700
-@@ -0,0 +1,238 @@
+@@ -0,0 +1,240 @@
 +lib_LTLIBRARIES = libcblas.la
 +
 +AM_CFLAGS = -DADD_
++
++HEADERS = cblas.h
 +
 +ERRHAND_SOURCES = \
 +	cblas_globals.c \

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.7 2006/09/12 20:48:12 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.8 2006/10/06 21:56:48 dberkholz Exp $
 
 inherit flag-o-matic multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="C subroutine library for computing the Discrete Fourier Transform (
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
 HOMEPAGE="http://www.fftw.org"
 
-DEPEND="mpi? ( >=sys-cluster/lam-mpi-6.5.6 )"
+DEPEND="mpi? ( virtual/mpi )"
 SLOT="2.1"
 LICENSE="GPL-2"
 
