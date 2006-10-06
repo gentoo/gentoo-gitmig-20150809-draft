@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/bsdtar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.36 2006/10/06 12:57:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/ChangeLog,v 1.37 2006/10/06 14:04:00 flameeyes Exp $
+
+*bsdtar-1.3.1-r1 (06 Oct 2006)
+
+  06 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libarchive-1.3.1-static.patch, +bsdtar-1.3.1-r1.ebuild:
+  Make sure that build/static useflags are correctly respected (as this
+  package is used in Gentoo/FreeBSD stage1).
 
   06 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> bsdtar-1.3.1.ebuild:
   Fix dependencies.
