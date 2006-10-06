@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.16.0.1.ebuild,v 1.6 2006/10/03 21:39:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.16.0.1.ebuild,v 1.7 2006/10/06 17:39:39 dang Exp $
 
 inherit eutils gnome2 autotools
 
@@ -80,13 +80,9 @@ src_install() {
 
 	APPLETS="accessx-status battstat charpick cpufreq drivemount geyes \
 			 gkb-new gswitchit gweather invest-applet mini-commander \
-			 mixer modemlights multiload null_applet trashapplet"
+			 mixer modemlights multiload null_applet stickynotes trashapplet"
 
-	if use stickynotes ; then
-		APPLETS="${APPLETS} stickynotes"
-	fi
-
-	for applet in $(APPLETS) ; do
+	for applet in ${APPLETS} ; do
 		docinto ${applet}
 
 		for d in AUTHORS ChangeLog NEWS README README.themes TODO ; do
