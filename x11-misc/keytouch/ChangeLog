@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/keytouch
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.1 2006/10/06 13:19:11 nyhm Exp $
+
+*keytouch-2.2.2 (06 Oct 2006)
+
+  06 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +files/keytouch,
+  +metadata.xml, +keytouch-2.2.2.ebuild:
+  Initial commit
+
