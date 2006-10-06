@@ -1,9 +1,9 @@
 # ChangeLog for x11-plugins/desklet-cornerxmms
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/ChangeLog,v 1.12 2006/10/06 12:59:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/ChangeLog,v 1.13 2006/10/06 18:34:14 nixnut Exp $
 
   06 Oct 2006; <nixnut@gentoo.org> desklet-cornerxmms-0.1.0.ebuild:
-  Added ~ppc wrt bug 139179
+  Added ~ppc wrt bug 103966
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-cornerxmms-0.1.0.ebuild:
