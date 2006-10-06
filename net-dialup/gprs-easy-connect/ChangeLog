@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/gprs-easy-connect
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gprs-easy-connect/ChangeLog,v 1.1 2006/10/06 22:15:33 mrness Exp $
+
+*gprs-easy-connect-3.0.0 (06 Oct 2006)
+
+  06 Oct 2006; Alin Nastac <mrness@gentoo.org> +files/gprsec.desktop,
+  +metadata.xml, +gprs-easy-connect-3.0.0.ebuild:
+  Initial import from bug 107055.
+
