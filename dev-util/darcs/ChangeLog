@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.58 2006/08/12 16:48:12 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.59 2006/10/06 18:11:37 araujo Exp $
+
+*darcs-1.0.8-r1 (06 Oct 2006)
+
+  06 Oct 2006; Luis F. Araujo <araujo@gentoo.org> +darcs-1.0.8-r1.ebuild:
+  Fixing bug #148038
 
 *darcs-1.0.8 (12 Aug 2006)
 
