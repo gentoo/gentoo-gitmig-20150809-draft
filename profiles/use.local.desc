@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2211 2006/10/06 17:35:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2212 2006/10/06 21:51:42 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -946,7 +946,6 @@ media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/mplayer:x264 - Enables h264 encoding using x264
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
-media-video/nvidia-glx:dlloader - Enable dynamic module loader instead of ELF loader.  Installs nvidia_drv.so instead of nvidia_drv.o.
 media-video/ogmrip:srt - Support for SRT subtitle format
 media-video/ogmrip:subp - Subtitle ripping preliminary support
 media-video/oxine:polling - Enables support to automatically check the drive for a new disc
