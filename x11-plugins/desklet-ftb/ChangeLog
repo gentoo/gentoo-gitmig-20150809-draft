@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-ftb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.9 2006/07/10 01:57:55 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ftb/ChangeLog,v 1.10 2006/10/06 13:10:15 nixnut Exp $
+
+  06 Oct 2006; <nixnut@gentoo.org> desklet-ftb-0.3.2.ebuild:
+  Stable on ppc wrt bug 139179
 
   10 Jul 2006; Thomas Cort <tcort@gentoo.org> desklet-ftb-0.3.2.ebuild:
   Stable on alpha wrt Bug #103966.
