@@ -2,10 +2,10 @@
 Hash: SHA1
 
 DIST sylpheed-claws-extra-plugins-2.5.2.tar.bz2 3991186 RMD160 8e59b11fdcf6dbee11ca2c28d7616593d420333a SHA1 467071349377b11ccdc2e3d758e29d7e5c7e1b04 SHA256 2ac9469dfb914ab20fd73b75388db6e3e0a305883c789e34a5c9458feb838349
-EBUILD sylpheed-claws-smime-0.5.5.ebuild 902 RMD160 f1ab75f546e8146fdc6fcb5122796359bc9ad704 SHA1 9533824037ef57e7db9ca403c8feee3c7f4db052 SHA256 fbfefe324049741e6623a7bc063e5e5ca156b8e7f8be1d2da84ad524efb9b4c8
-MD5 1815714d6547be800ae103a69553eada sylpheed-claws-smime-0.5.5.ebuild 902
-RMD160 f1ab75f546e8146fdc6fcb5122796359bc9ad704 sylpheed-claws-smime-0.5.5.ebuild 902
-SHA256 fbfefe324049741e6623a7bc063e5e5ca156b8e7f8be1d2da84ad524efb9b4c8 sylpheed-claws-smime-0.5.5.ebuild 902
+EBUILD sylpheed-claws-smime-0.5.5.ebuild 896 RMD160 2d9e099967f7dd0ff97a6beb97efd4d972bdba10 SHA1 4932e0dbe552d83a18aae38610df054c1117da54 SHA256 1c7c3d10b02eb51e9b4fcb5d8c2f33aee9a775ad91f5d19092e984786b1c30b7
+MD5 e7f18e84ab976802bc5c337ec144448f sylpheed-claws-smime-0.5.5.ebuild 896
+RMD160 2d9e099967f7dd0ff97a6beb97efd4d972bdba10 sylpheed-claws-smime-0.5.5.ebuild 896
+SHA256 1c7c3d10b02eb51e9b4fcb5d8c2f33aee9a775ad91f5d19092e984786b1c30b7 sylpheed-claws-smime-0.5.5.ebuild 896
 MISC ChangeLog 385 RMD160 572adc704f69dfa5b3ac780759db8bc79affe41d SHA1 459b054ef8a57114ea11094e86dbd6dad1dc1c6f SHA256 354d00ce18aff55c5b15363d029187c7e5d6cd412482ced152c4978c0af27a4c
 MD5 bcdbf14de9d9e1d05ccf059dbb96d7ee ChangeLog 385
 RMD160 572adc704f69dfa5b3ac780759db8bc79affe41d ChangeLog 385
@@ -20,7 +20,7 @@ SHA256 df10007efdcea53dda92bab1f09fcc3820834993a2fd1678ef6041032a3d8522 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFIovk10xuJSrg3/sRAnwqAJ9eIGS7HiqPNfgOlxsUi+n73fRd5wCfQAhB
-Ax0vyIuzdcPkQPofDdh2tSs=
-=9qgh
+iD8DBQFFJj3+I1lqEGTUzyQRAgeiAKC9sVjnAg3vXyiOReLBBDm6jX9KWACgpkYC
+EKjGmpySvlt0V2GsZrfcLVY=
+=Xti3
 -----END PGP SIGNATURE-----
