@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.16 2006/08/08 03:51:08 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.17 2006/10/06 05:17:03 pclouds Exp $
+
+*ruby-dbi-0.1.1 (06 Oct 2006)
+
+  06 Oct 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +files/ruby-dbi-0.1.1-destdir-gentoo.diff, -ruby-dbi-0.0.21.ebuild,
+  -ruby-dbi-0.0.21-r1.ebuild, +ruby-dbi-0.1.1.ebuild:
+  Version bump by Richard Brown <mynamewasgone@gmail.com>, #150146. Removed
+  old ebuilds
 
   08 Aug 2006; Luis Medinas <metalgod@gentoo.org> ruby-dbi-0.0.21-r2.ebuild:
   Added ~amd64 keyword.
