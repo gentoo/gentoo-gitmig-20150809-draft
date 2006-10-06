@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6_rc1.ebuild,v 1.1 2006/09/27 23:48:34 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.6_rc1.ebuild,v 1.2 2006/10/06 13:21:25 deathwing00 Exp $
 
 inherit kde
 
@@ -21,7 +21,7 @@ need-kde 3.5
 LANGS="ca cs cy da de el en_GB es et eu fi fr hu it ja ms nb nl pl pt pt_BR ru sk sl sr sr@Latn sv uk zh_CN zh_TW"
 
 for X in ${LANGS}; do
-	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/unstable/koffice-${RV/_/-}/src/koffice-l10n/koffice-l10n-${X}-${RV/_/-}.tar.bz2 )"
+	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/unstable/koffice-${PV/_/-}/src/koffice-l10n/koffice-l10n-${X}-${RV/_/-}.tar.bz2 )"
 	IUSE="${IUSE} linguas_${X}"
 done
 

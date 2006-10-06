@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.71 2006/10/05 16:08:44 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.72 2006/10/06 13:21:25 deathwing00 Exp $
+
+  06 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  koffice-i18n-1.6_rc1.ebuild:
+  Corrected mirror path. Fixes bug 150025. Thanks to Hanno Boeck for reporting
+  it.
 
   05 Oct 2006; Joseph Jezak <josejx@gentoo.org> koffice-i18n-1.5.2.ebuild:
   Marked ppc stable for bug #146409.
