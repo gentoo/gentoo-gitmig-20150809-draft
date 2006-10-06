@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandy/desklet-sidecandy-0.10.ebuild,v 1.6 2006/05/27 17:28:38 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sidecandy/desklet-sidecandy-0.10.ebuild,v 1.7 2006/10/06 14:47:13 nixnut Exp $
 
 inherit gdesklets
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
 
 RDEPEND=">=gnome-extra/gdesklets-core-0.34.3"
 
