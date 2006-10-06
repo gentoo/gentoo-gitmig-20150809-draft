@@ -1,11 +1,6 @@
-AUX thoggen-0.3-new-dbus-hal.patch 13464 RMD160 823be193ea58678b0dce1e70a2f0c6fcbb3f05d9 SHA1 59bc8df80faa84528cfb094eff6dff9d9a5595b2 SHA256 1e80b866bf75b83b0e92953ee0f8d676e0988795a2dfcab4076588c81f94bbe4
-MD5 214c2419992cfee26543fedc1e4711ea files/thoggen-0.3-new-dbus-hal.patch 13464
-RMD160 823be193ea58678b0dce1e70a2f0c6fcbb3f05d9 files/thoggen-0.3-new-dbus-hal.patch 13464
-SHA256 1e80b866bf75b83b0e92953ee0f8d676e0988795a2dfcab4076588c81f94bbe4 files/thoggen-0.3-new-dbus-hal.patch 13464
-AUX thoggen-0.4.1-libdvdread.diff 327 RMD160 3bdb60ef5ff5e2f4630e2d08dfec36e7d58341bf SHA1 81401742c0a2a16ee6c1f9c1db612071c1ffd493 SHA256 7e58076c27b2bbb5d45931fdc7d158c3fa8c7f2685ea443c8df82dba96871900
-MD5 fe6082938dc6286a6db60274772321fe files/thoggen-0.4.1-libdvdread.diff 327
-RMD160 3bdb60ef5ff5e2f4630e2d08dfec36e7d58341bf files/thoggen-0.4.1-libdvdread.diff 327
-SHA256 7e58076c27b2bbb5d45931fdc7d158c3fa8c7f2685ea443c8df82dba96871900 files/thoggen-0.4.1-libdvdread.diff 327
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST thoggen-0.4.2.tar.gz 775405 RMD160 bc0980882e3989f1af31e0ca3d49bdcfbec2a9fb SHA256 b58808d6281d85e477dac7d27dd5e57bd1392196be5bb6664e607b511349f359
 EBUILD thoggen-0.4.2.ebuild 1228 RMD160 a66c52331c56decbc7efba1fb2cf09f34dcbff34 SHA1 cd993b2d1bad39b56a304578350e229680f14cf9 SHA256 d78b914159b7b6182915c8b5cf96d34ee65fb964b8c53abdcffb145865f4f356
 MD5 09531175ba3fc32e7ddb686dcaa92f0e thoggen-0.4.2.ebuild 1228
@@ -22,3 +17,10 @@ SHA256 c76952c442b16a3d2efe40e95e84f1110ec9b13775882012b30a25ca3b063ada metadata
 MD5 b8a78a2310e332dc39a7a1880f517e3a files/digest-thoggen-0.4.2 241
 RMD160 a76ea99fa0f8519440a63c69f8bb357390d90257 files/digest-thoggen-0.4.2 241
 SHA256 3395d544992208b3dba9ff383b459893e304d70527d16917b2e7b5ed897621e4 files/digest-thoggen-0.4.2 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFJtWLr2QksT29OyARAn8zAKCiz+R0zMfxDtNI/3HUizmr42CH9ACfY18q
+nx3tvHybIS5a/4QbLCd8O58=
+=qyyn
+-----END PGP SIGNATURE-----
