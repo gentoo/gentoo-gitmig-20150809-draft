@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.74 2006/10/06 07:35:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.75 2006/10/06 18:39:26 gustavoz Exp $
+
+  06 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> kile-1.9.2.ebuild:
+  Stable on sparc wrt #148500
 
   06 Oct 2006; <nixnut@gentoo.org> kile-1.9.2.ebuild:
   Stable on ppc wrt bug 148500
