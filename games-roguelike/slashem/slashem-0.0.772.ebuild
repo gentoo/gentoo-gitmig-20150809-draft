@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.1 2006/10/05 16:09:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.772.ebuild,v 1.2 2006/10/06 16:28:25 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -56,10 +56,6 @@ src_unpack() {
 	cd "${S}"
 	EPATCH_SUFFIX="patch"
 	epatch ${FILESDIR}/${SE_VER}
-	sed -i \
-		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" \
-		include/unixconf.h \
-		|| die "sed include/unixconf.h failed"
 
 	# This copies the /sys/unix Makefile.*s to their correct places for
 	# seding and compiling.
