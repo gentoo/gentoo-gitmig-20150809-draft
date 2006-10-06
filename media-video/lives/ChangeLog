@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lives
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.17 2006/06/04 21:32:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.18 2006/10/06 22:36:43 lu_zero Exp $
+
+*lives-0.9.7 (06 Oct 2006)
+
+  06 Oct 2006; Luca Barbato <lu_zero@gentoo.org> +lives-0.9.7.ebuild:
+  New version
 
   04 Jun 2006; Mark Loeser <halcy0n@gentoo.org> lives-0.9.1.ebuild:
   Stable on x86; bug #95027
