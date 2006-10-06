@@ -1,0 +1,45 @@
+diff -Naur MPlayer-1.0pre8/libavcodec/amr_float/typedef.h MPlayer-1.0pre8-mod/libavcodec/amr_float/typedef.h
+--- MPlayer-1.0pre8/libavcodec/amr_float/typedef.h	2003-03-26 14:15:42.000000000 +0100
++++ MPlayer-1.0pre8-mod/libavcodec/amr_float/typedef.h	2006-07-17 09:43:14.000000000 +0200
+@@ -13,10 +13,12 @@
+ #ifndef _TYPEDEF_H
+ #define _TYPEDEF_H
+ 
+-typedef char Word8;
+-typedef unsigned char UWord8;
+-typedef short Word16;
+-typedef long Word32;
++#include <inttypes.h>
++
++typedef int8_t Word8;
++typedef uint8_t UWord8;
++typedef int16_t Word16;
++typedef int32_t Word32;
+ typedef float Float32;
+ typedef double Float64;
+ 
+diff -Naur MPlayer-1.0pre8/libavcodec/amrwb_float/typedef.h MPlayer-1.0pre8-mod/libavcodec/amrwb_float/typedef.h
+--- MPlayer-1.0pre8/libavcodec/amrwb_float/typedef.h	2003-02-18 00:00:02.000000000 +0100
++++ MPlayer-1.0pre8-mod/libavcodec/amrwb_float/typedef.h	2006-07-17 09:41:02.000000000 +0200
+@@ -7,12 +7,14 @@
+ #define typedef_h
+ 
+ /* change these typedef declarations to correspond with your platform */
+-typedef char Word8;
+-typedef unsigned char UWord8;
+-typedef short Word16;
+-typedef unsigned short UWord16;
+-typedef long Word32;
++#include <inttypes.h>
++
++typedef int8_t Word8;
++typedef uint8_t UWord8;
++typedef int16_t Word16;
++typedef uint16_t UWord16;
++typedef int32_t Word32;
+ typedef double Float64;
+ typedef float Float32;
+ 
+-#endif
+\ No newline at end of file
++#endif
