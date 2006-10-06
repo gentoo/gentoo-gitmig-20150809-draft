@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.52 2006/09/15 23:35:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.53 2006/10/06 12:35:34 blubb Exp $
+
+  06 Oct 2006; Simon Stelling <blubb@gentoo.org>
+  mozilla-firefox-bin-1.5.0.7.ebuild:
+  fix DEPEND to use 32bit libstdc++-v3; bug 141497
 
   15 Sep 2006; Olivier Crête <tester@gentoo.org>
   mozilla-firefox-bin-1.5.0.7.ebuild:
