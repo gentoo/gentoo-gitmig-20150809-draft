@@ -1,0 +1,117 @@
+diff -urNp xca-0.5.1.org/lib/asn1time.cpp xca-0.5.1/lib/asn1time.cpp
+--- xca-0.5.1.org/lib/asn1time.cpp	2003-12-14 21:11:33.000000000 +0200
++++ xca-0.5.1/lib/asn1time.cpp	2006-09-24 22:22:29.000000000 +0300
+@@ -250,7 +250,7 @@ unsigned char *a1time::d2i(unsigned char
+ 	unsigned char *mp = p;
+ 	if (time)
+ 		ASN1_TIME_free(time);
+-	time = d2i_ASN1_TIME(NULL, &mp, size);
++	time = d2i_ASN1_TIME(NULL, (const unsigned char **)&mp, size);
+ 	return mp;
+ }
+ 
+diff -urNp xca-0.5.1.org/lib/pki_crl.cpp xca-0.5.1/lib/pki_crl.cpp
+--- xca-0.5.1.org/lib/pki_crl.cpp	2004-04-20 00:19:35.000000000 +0300
++++ xca-0.5.1/lib/pki_crl.cpp	2006-09-24 22:49:05.000000000 +0300
+@@ -131,7 +131,7 @@ pki_crl::~pki_crl()
+ void pki_crl::fromData(unsigned char *p, int size)
+ {
+ 	X509_CRL *crl_sik = crl;
+-	crl = d2i_X509_CRL(NULL, &p, size);
++	crl = d2i_X509_CRL(NULL, (const unsigned char **)&p, size);
+ 	if (crl)
+ 		X509_CRL_free(crl_sik);
+ 	else
+diff -urNp xca-0.5.1.org/lib/pki_key.cpp xca-0.5.1/lib/pki_key.cpp
+--- xca-0.5.1.org/lib/pki_key.cpp	2004-02-18 02:03:06.000000000 +0200
++++ xca-0.5.1/lib/pki_key.cpp	2006-09-24 22:58:03.000000000 +0300
+@@ -107,7 +107,7 @@ pki_key::pki_key(const pki_key *pk) 
+ 	if (pk == NULL) return;
+ 	key->type = pk->key->type;
+ 	if (key->type == EVP_PKEY_RSA) {
+-		key->pkey.rsa=((RSA *)ASN1_dup( (int (*)())i2d_RSAPrivateKey, (char *(*)())d2i_RSAPrivateKey,(char *)pk->key->pkey.rsa));
++		key->pkey.rsa=ASN1_dup_of_const(RSA, i2d_RSAPrivateKey, d2i_RSAPrivateKey, pk->key->pkey.rsa);
+ 	}
+ 	// TODO add DSA support.....	
+ 	openssl_error();
+@@ -216,7 +216,7 @@ void pki_key::fromData(unsigned char *p,
+ 		rsakey = d2i_RSAPrivateKey(NULL, &pdec, decsize);
+ #endif
+ 		if (ign_openssl_error()) {
+-			rsakey = d2i_RSA_PUBKEY(NULL, &sik, decsize);
++			rsakey = d2i_RSA_PUBKEY(NULL, (const unsigned char **)&sik, decsize);
+ 		}
+ 		openssl_error(); 
+ 		if (rsakey) EVP_PKEY_assign_RSA(key, rsakey);
+diff -urNp xca-0.5.1.org/lib/pki_x509.cpp xca-0.5.1/lib/pki_x509.cpp
+--- xca-0.5.1.org/lib/pki_x509.cpp	2004-02-18 02:03:06.000000000 +0200
++++ xca-0.5.1/lib/pki_x509.cpp	2006-09-24 22:24:30.000000000 +0300
+@@ -276,7 +276,7 @@ void pki_x509::fromData(unsigned char *p
+ 	version = intFromData(&p1);
+ 	if (version >=1 || version <= 4) {
+ 		sCert = intFromData(&p1);
+-		cert = d2i_X509(NULL, &p1, sCert);
++		cert = d2i_X509(NULL, (const unsigned char **)&p1, sCert);
+ 		trust = intFromData(&p1);
+ 		sRev = intFromData(&p1);
+ 		if (sRev) {
+@@ -314,7 +314,7 @@ void pki_x509::fromData(unsigned char *p
+ 		// version 3 did save a recent date :-((
+ 	}
+ 	else { // old version
+-		cert = d2i_X509(NULL, &p, size);
++		cert = d2i_X509(NULL, (const unsigned char **)&p, size);
+ 		revoked = NULL;
+ 		trust = 1;
+ 		efftrust = 1;
+diff -urNp xca-0.5.1.org/lib/pki_x509req.cpp xca-0.5.1/lib/pki_x509req.cpp
+--- xca-0.5.1.org/lib/pki_x509req.cpp	2004-02-05 22:17:55.000000000 +0200
++++ xca-0.5.1/lib/pki_x509req.cpp	2006-09-24 22:51:19.000000000 +0300
+@@ -134,9 +134,9 @@ void pki_x509req::fromData(unsigned char
+ {
+ 	unsigned char *ps = p;
+ 	privkey = NULL;
+-	request = d2i_X509_REQ(&request, &ps, size);
++	request = d2i_X509_REQ(&request, (const unsigned char **)&ps, size);
+ 	if (ps - p < size)
+-		spki = d2i_NETSCAPE_SPKI(NULL, &ps , size + p - ps); 
++		spki = d2i_NETSCAPE_SPKI(NULL, (const unsigned char **)&ps , size + p - ps); 
+ 	openssl_error();
+ }
+ 
+@@ -257,7 +257,7 @@ void pki_x509req::setSPKIFromData(unsign
+ {
+ 	NETSCAPE_SPKI *spki = NULL;
+ 
+-	spki = d2i_NETSCAPE_SPKI(NULL,&p,size);
++	spki = d2i_NETSCAPE_SPKI(NULL,(const unsigned char **)&p,size);
+ 	if (spki == NULL) goto err;
+ 
+ 	set_spki (spki);
+diff -urNp xca-0.5.1.org/lib/x509name.cpp xca-0.5.1/lib/x509name.cpp
+--- xca-0.5.1.org/lib/x509name.cpp	2003-12-12 01:41:09.000000000 +0200
++++ xca-0.5.1/lib/x509name.cpp	2006-09-24 22:58:52.000000000 +0300
+@@ -149,7 +149,7 @@ unsigned char *x509name::d2i(unsigned ch
+ {
+ 	unsigned char *mp = p;
+ 	X509_NAME *xn_sik = xn;
+-	xn = d2i_X509_NAME(NULL, &mp, size);
++	xn = d2i_X509_NAME(NULL, (const unsigned char **)&mp, size);
+ 	if (xn == NULL)
+ 		xn = xn_sik;
+ 	else
+diff -urNp xca-0.5.1.org/lib/x509rev.cpp xca-0.5.1/lib/x509rev.cpp
+--- xca-0.5.1.org/lib/x509rev.cpp	2003-11-24 15:42:44.000000000 +0200
++++ xca-0.5.1/lib/x509rev.cpp	2006-09-24 22:20:09.000000000 +0300
+@@ -50,9 +50,8 @@
+ 
+ #include "x509rev.h"
+ 
+-#define X509_REVOKED_dup(x5r) (X509_REVOKED *)ASN1_dup((int (*)())i2d_X509_REVOKED, \
+-		(char *(*)())d2i_X509_REVOKED,(char *)x5r)
+-	
++#define X509_REVOKED_dup(x5r) ASN1_dup_of (X509_REVOKED, i2d_X509_REVOKED, d2i_X509_REVOKED, x5r)
++
+ x509rev::x509rev()
+ {
+ 	rev = X509_REVOKED_new();

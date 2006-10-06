@@ -1,0 +1,48 @@
+diff -urNp xca-0.5.1.org/lib/asn1time.h xca-0.5.1/lib/asn1time.h
+--- xca-0.5.1.org/lib/asn1time.h	2003-08-06 11:15:37.000000000 +0300
++++ xca-0.5.1/lib/asn1time.h	2006-09-24 21:56:09.000000000 +0300
+@@ -75,7 +75,7 @@ class a1time
+ 	QString toPlain() const;
+ 	QString toSortable() const;
+ 	int ymdg(int *y, int *m, int *d, int *g) const;
+-	int a1time::ymdg(int *y, int *m, int *d, int *h, int *M, int *s, int *g) const;
++	int ymdg(int *y, int *m, int *d, int *h, int *M, int *s, int *g) const;
+ 	ASN1_TIME *get() const;
+ 	ASN1_TIME *get_utc() const;
+ 	a1time &now(int delta = 0);
+diff -urNp xca-0.5.1.org/lib/db_crl.h xca-0.5.1/lib/db_crl.h
+--- xca-0.5.1.org/lib/db_crl.h	2004-04-16 01:31:31.000000000 +0300
++++ xca-0.5.1/lib/db_crl.h	2006-09-24 21:56:19.000000000 +0300
+@@ -69,7 +69,7 @@ class db_crl: public db_base
+ 	void preprocess();
+ 	void inToCont(pki_base *pki);
+ 	pki_base *insert(pki_base *item);
+-	void db_crl::deletePKI(pki_base *pki);
++	void deletePKI(pki_base *pki);
+     signals:
+ 	void updateCertView();
+ };
+diff -urNp xca-0.5.1.org/lib/db_x509.h xca-0.5.1/lib/db_x509.h
+--- xca-0.5.1.org/lib/db_x509.h	2004-02-18 02:03:05.000000000 +0200
++++ xca-0.5.1/lib/db_x509.h	2006-09-24 21:57:08.000000000 +0300
+@@ -84,7 +84,7 @@ class db_x509: public db_x509super
+ 	void writeAllCerts(const QString fname, bool onlyTrusted);
+ 	pki_x509 *getByIssSerial(const pki_x509 *issuer, const a1int &a);
+ 	pki_x509 *getBySubject(const x509name &xname, pki_x509 *last = NULL);
+-	pki_base *db_x509::insert(pki_base *item);
++	pki_base *insert(pki_base *item);
+     public slots:
+ 	void revokeCert(const x509rev &revok, const pki_x509 *issuer);
+     
+diff -urNp xca-0.5.1.org/lib/pki_key.h xca-0.5.1/lib/pki_key.h
+--- xca-0.5.1.org/lib/pki_key.h	2003-12-10 08:43:05.000000000 +0200
++++ xca-0.5.1/lib/pki_key.h	2006-09-24 21:56:30.000000000 +0300
+@@ -83,7 +83,7 @@ class pki_key: public pki_base
+ 	pki_key(const QString name = "", int type = EVP_PKEY_RSA);
+ 	pki_key(EVP_PKEY *pkey);
+ 	// copy constructor
+-	pki_key::pki_key(const pki_key *pk);
++	pki_key(const pki_key *pk);
+ 	/* destructor */
+ 	~pki_key();
+ 	
