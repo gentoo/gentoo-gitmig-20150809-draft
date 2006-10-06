@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rsstickerbar/desklet-rsstickerbar-0.15.ebuild,v 1.2 2006/07/10 01:54:07 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rsstickerbar/desklet-rsstickerbar-0.15.ebuild,v 1.3 2006/10/06 13:52:14 nixnut Exp $
 
 inherit gdesklets
 
@@ -17,6 +17,6 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~ia64 ~ppc ~x86"
+KEYWORDS="~alpha ~ia64 ppc ~x86"
 
 RDEPEND=">=gnome-extra/gdesklets-core-0.35"
