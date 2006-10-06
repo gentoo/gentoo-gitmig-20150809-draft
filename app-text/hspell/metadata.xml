@@ -2,13 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>alon.barlev@gmail.com</email>
+		<email>alonbl@gentoo.org</email>
 		<name>Alon Bar-Lev</name>
-		<description>proxy maintainer</description>
+		<description>Primary maintainer</description>
 	</maintainer>
-	<maintainer>
-		<email>genstef@gentoo.org</email>
-		<name>Stefan Schweizer</name>
-		<description>proxy for Alon Bar-Lev</description>
-	</maintainer>
+	<longdescription>
+		This package is required in order to spell check Hebrew
+		locale. It is also used by kdelibs in order to do so
+		in KDE environment.
+	</longdescription>
 </pkgmetadata>
