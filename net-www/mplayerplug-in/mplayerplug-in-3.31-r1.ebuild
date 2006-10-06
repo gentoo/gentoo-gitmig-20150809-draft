@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.6 2006/10/05 13:38:56 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-3.31-r1.ebuild,v 1.7 2006/10/06 22:02:17 wolf31o2 Exp $
 
 inherit eutils multilib nsplugins
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 -hppa ~ia64 ppc sparc ~x86"
+KEYWORDS="~alpha amd64 -hppa ~ia64 ppc sparc x86"
 IUSE="gtk divx gmedia realmedia quicktime wmp"
 
 DEPEND=">=media-video/mplayer-1.0_pre5
