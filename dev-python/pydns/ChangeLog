@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pydns
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.1 2006/10/06 22:01:09 sbriesen Exp $
+
+*pydns-2.3.0 (06 Oct 2006)
+
+  06 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org> +metadata.xml,
+  +pydns-2.3.0.ebuild:
+  initial commit.
+
