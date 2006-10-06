@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX baselayout-1.11.0-split-out-udev.patch 7413 RMD160 48eef541397ec0a21230de93518eed8a1ea63c16 SHA1 2dfa7e66c361459c8fce482b70d9e75ee51180bd SHA256 397221c066cbbb65d572df431b4babde766dc92d9177005e522e0df8faa25030
 MD5 8d10a229861f862fca52cd8e3bc655d9 files/baselayout-1.11.0-split-out-udev.patch 7413
 RMD160 48eef541397ec0a21230de93518eed8a1ea63c16 files/baselayout-1.11.0-split-out-udev.patch 7413
@@ -82,6 +85,10 @@ AUX baselayout-1.12.5-dmesg.patch 5202 RMD160 ce0b8e91590888fa6f9f0cc84ed29bd3a6
 MD5 05e23d7d8cd139821113afb7d6ef56cc files/baselayout-1.12.5-dmesg.patch 5202
 RMD160 ce0b8e91590888fa6f9f0cc84ed29bd3a6007156 files/baselayout-1.12.5-dmesg.patch 5202
 SHA256 837ed3be21597ae44de1debe5f48460945039cf1f4b7de9f067d5e78bb83a0c6 files/baselayout-1.12.5-dmesg.patch 5202
+AUX baselayout-1.13.0_alpha1-fbsddev.patch 592 RMD160 c025ae39cd8494dbc6f1dd8e116018a65b5274fc SHA1 961f5e0f6ee8a261be53cd1887bf41e0f9f791aa SHA256 18beefe1f27ba92ec4eb24d0e36af3d5581616fde29ca5579da20499adc7d950
+MD5 edcdc2284b19d5b41d4f5cb92a5decba files/baselayout-1.13.0_alpha1-fbsddev.patch 592
+RMD160 c025ae39cd8494dbc6f1dd8e116018a65b5274fc files/baselayout-1.13.0_alpha1-fbsddev.patch 592
+SHA256 18beefe1f27ba92ec4eb24d0e36af3d5581616fde29ca5579da20499adc7d950 files/baselayout-1.13.0_alpha1-fbsddev.patch 592
 AUX baselayout-1.13.0_alpha1-init-perms.patch 915 RMD160 3431cd28ce7ea8c3dc069222c74a016d716bdd6e SHA1 3feb7eabc8128d822fb5fe03cb57f4365f5babad SHA256 f873548f09ca94fd588a0c8d7472067d14b91b4fc9cb7b03528db316b5d2c48a
 MD5 76be19b7d38409068e6fe56f3e618702 files/baselayout-1.13.0_alpha1-init-perms.patch 915
 RMD160 3431cd28ce7ea8c3dc069222c74a016d716bdd6e files/baselayout-1.13.0_alpha1-init-perms.patch 915
@@ -116,14 +123,14 @@ EBUILD baselayout-1.12.5-r2.ebuild 19784 RMD160 24565a186298aa19350dc6f9ac37900a
 MD5 f280c19d2a5daed282e37801c59ebd79 baselayout-1.12.5-r2.ebuild 19784
 RMD160 24565a186298aa19350dc6f9ac37900ab6ac8e32 baselayout-1.12.5-r2.ebuild 19784
 SHA256 fbfd956d4b78544d79c667ac42135dc75bbc760199adb43234c191bbb858a9a9 baselayout-1.12.5-r2.ebuild 19784
-EBUILD baselayout-1.13.0_alpha1-r1.ebuild 9001 RMD160 584eb86a591256d4698d9c7ee236b54c26f2aec4 SHA1 d41366d9db53e511976b6be8271f559ceac7be2e SHA256 822be581d222691ad0fce299585f4f8719b93a12d85c42790d8499f48fe81c44
-MD5 6f68745daad4cf7e0cc3a8d45e9b8ec1 baselayout-1.13.0_alpha1-r1.ebuild 9001
-RMD160 584eb86a591256d4698d9c7ee236b54c26f2aec4 baselayout-1.13.0_alpha1-r1.ebuild 9001
-SHA256 822be581d222691ad0fce299585f4f8719b93a12d85c42790d8499f48fe81c44 baselayout-1.13.0_alpha1-r1.ebuild 9001
-MISC ChangeLog 80039 RMD160 19fb93783dc5dafb3aa7dfb110e31747cc22e1ff SHA1 bd37e9a6e0088f935688a5dad13edbe59ceb09e8 SHA256 73514285217be44a4e14cb323d2c3642dbca30f876cacbbee57210308f57d7c6
-MD5 e5ccab4680af63e847fffaa7e67ad24b ChangeLog 80039
-RMD160 19fb93783dc5dafb3aa7dfb110e31747cc22e1ff ChangeLog 80039
-SHA256 73514285217be44a4e14cb323d2c3642dbca30f876cacbbee57210308f57d7c6 ChangeLog 80039
+EBUILD baselayout-1.13.0_alpha1-r1.ebuild 9040 RMD160 94e54408a0db88b3a509f9abb0ce7b68596258fd SHA1 608f3dd3424dc15638b97304f38516a92cdeb472 SHA256 25304dc27eddec352a6c9ecfbdcf3fa6e43051b76dd4d8f72ff4cf7b39695fc9
+MD5 9d91ccd3a61ad222efd27e5f336eca11 baselayout-1.13.0_alpha1-r1.ebuild 9040
+RMD160 94e54408a0db88b3a509f9abb0ce7b68596258fd baselayout-1.13.0_alpha1-r1.ebuild 9040
+SHA256 25304dc27eddec352a6c9ecfbdcf3fa6e43051b76dd4d8f72ff4cf7b39695fc9 baselayout-1.13.0_alpha1-r1.ebuild 9040
+MISC ChangeLog 80249 RMD160 44d6b67f82dd6627258bf116939eb43677c6a159 SHA1 3a271c17d9b67ded2dfc8f0f6240a07652aa4d54 SHA256 786017d6da08f7553737bfd37b16cdb2c742aadd16423f7cbe92d3597d41c72d
+MD5 05232a35057c7854533a9299b6d40982 ChangeLog 80249
+RMD160 44d6b67f82dd6627258bf116939eb43677c6a159 ChangeLog 80249
+SHA256 786017d6da08f7553737bfd37b16cdb2c742aadd16423f7cbe92d3597d41c72d ChangeLog 80249
 MISC metadata.xml 164 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 SHA1 9c213f5803676c56439df3716be07d6692588856 SHA256 f5f2891f2a4791cd31350bb2bb572131ad7235cd0eeb124c9912c187ac10ce92
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 RMD160 f43cbec30b7074319087c9acffdb9354b17b0db3 metadata.xml 164
@@ -146,3 +153,10 @@ SHA256 e2664f4f2035a0dffe9e01dad95a8f05e30e9aa277c0c0df51febbe3f05bdc03 files/di
 MD5 402bbb67e4adaf854d7d905b6390c296 files/digest-baselayout-1.13.0_alpha1-r1 277
 RMD160 7da462e0ce05085dba1db5c50fbce4f91efe30c5 files/digest-baselayout-1.13.0_alpha1-r1 277
 SHA256 be59fd1488ef13ab615bf33bcbd3d49c5b41ce8505f587354641243670d83478 files/digest-baselayout-1.13.0_alpha1-r1 277
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFJt2MAiZjviIA2XgRAp9HAJ0X76kc6qIO3fZSw5+rAuUBFnvrRwCeJlpz
+mwy/4nasUQ+sF2mS95dAnGU=
+=vb3H
+-----END PGP SIGNATURE-----

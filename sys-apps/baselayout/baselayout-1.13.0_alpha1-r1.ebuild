@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha1-r1.ebuild,v 1.1 2006/10/02 18:57:52 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha1-r1.ebuild,v 1.2 2006/10/06 22:49:42 flameeyes Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -43,6 +43,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-init-perms.patch"
+	epatch "${FILESDIR}/${P}-fbsddev.patch"
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then
@@ -129,7 +130,7 @@ src_install() {
 	# actually different from the normal
 	if has_multilib_profile || [[ $(get_libdir) != "lib" || -n ${CONF_MULTILIBDIR} ]]; then
 		local libdirs="$(get_all_libdirs)" libdirs_env=
-		: ${libdirs:=lib}   # it isn't that we don't trust multilib.eclass...
+		: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 		for dir in ${libdirs}; do
 			libdirs_env=${libdirs_env:+$libdirs_env:}/${dir}:/usr/${dir}:/usr/local/${dir}
 		done
@@ -209,10 +210,10 @@ pkg_postinst() {
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"
-	einfo "else things might break at your next reboot!  You can use 'etc-update'"
+	einfo "else things might break at your next reboot!	 You can use 'etc-update'"
 	einfo "to accomplish this:"
 	einfo
-	einfo "  # etc-update"
+	einfo "	 # etc-update"
 	echo
 
 	local lo="net.lo0"
@@ -221,11 +222,11 @@ pkg_postinst() {
 		[[ -L ${f} ]] && continue
 		echo
 		einfo "WARNING: You have older net.* files in ${ROOT}etc/init.d/"
-		einfo "They need to be converted to symlinks to ${lo}.  If you haven't"
+		einfo "They need to be converted to symlinks to ${lo}.	If you haven't"
 		einfo "made personal changes to those files, you can update with the"
 		einfo "following command:"
 		einfo
-		einfo "  /bin/ls ${ROOT}etc/init.d/net.* | grep -v '/${lo}$' | xargs -n1 ln -sfvn ${lo}"
+		einfo "	 /bin/ls ${ROOT}etc/init.d/net.* | grep -v '/${lo}$' | xargs -n1 ln -sfvn ${lo}"
 		echo
 		break
 	done
