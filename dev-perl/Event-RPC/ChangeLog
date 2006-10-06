@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event-RPC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.22 2006/10/03 09:12:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/ChangeLog,v 1.23 2006/10/06 22:03:56 wolf31o2 Exp $
+
+  06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> Event-RPC-0.90.ebuild:
+  Stable on x86 wrt bug #149870.
 
   03 Oct 2006; <nixnut@gentoo.org> Event-RPC-0.90.ebuild:
   Stable on ppc wrt bug 149870
