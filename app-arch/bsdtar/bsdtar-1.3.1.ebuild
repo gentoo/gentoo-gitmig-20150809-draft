@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.3.1.ebuild,v 1.2 2006/09/24 17:43:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.3.1.ebuild,v 1.3 2006/10/06 12:57:12 flameeyes Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -22,9 +22,12 @@ RDEPEND="!dev-libs/libarchive
 	kernel_linux? (
 		acl? ( sys-apps/acl )
 		xattr? ( sys-apps/attr )
-	)"
-DEPEND="kernel_linux? ( sys-fs/e2fsprogs
-	virtual/os-headers )"
+	)
+	app-arch/bzip2
+	sys-libs/zlib"
+DEPEND="${RDEPEND}
+	kernel_linux? ( sys-fs/e2fsprogs
+		virtual/os-headers )"
 
 S="${WORKDIR}/${MY_P}"
 
