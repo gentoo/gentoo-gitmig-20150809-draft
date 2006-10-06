@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.23 2006/10/01 09:42:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.24 2006/10/06 17:14:16 swegener Exp $
+
+  06 Oct 2006; Sven Wegener <swegener@gentoo.org> -pan-0.107.ebuild,
+  -pan-0.109.ebuild, -pan-0.111.ebuild, -pan-0.112.ebuild,
+  -pan-0.113.ebuild, -pan-0.114.ebuild:
+  Cleanup.
 
 *pan-0.115 (01 Oct 2006)
 
