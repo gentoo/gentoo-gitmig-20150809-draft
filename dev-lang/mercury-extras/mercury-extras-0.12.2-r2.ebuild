@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.6 2006/10/06 22:58:23 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.7 2006/10/06 23:33:57 keri Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_unpack() {
 
 src_compile() {
 	mmake depend || die "mmake depend failed"
-	mmake || die "mmake failed"
+	mmake EXTRA_MLFLAGS=--no-strip || die "mmake failed"
 
 	if use opengl && use tcl && use tk ; then
 		cd "${S}"/graphics/mercury_opengl
