@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.73 2006/09/27 21:48:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.74 2006/10/06 23:08:35 alonbl Exp $
+
+*nss-3.11.3-r1 (06 Oct 2006)
+
+  06 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org> +nss-3.11.3-r1.ebuild:
+  Make nss respect CFLAGS thanks to Ed Catmur bug#143619
 
   27 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> nss-3.11.3.ebuild:
   Stable on ia64.
