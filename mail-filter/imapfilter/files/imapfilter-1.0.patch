@@ -8,7 +8,7 @@
 +DESTDIR = /usr
 +BINDIR = $(DESTDIR)/bin
 +SHAREDIR = $(DESTDIR)/share/imapfilter
-+MANDIR = $(DESTDIR)/man
++MANDIR = $(DESTDIR)/share/man
  
  INCDIRS = -I/usr/local/include
  LIBDIRS = -L/usr/local/lib
