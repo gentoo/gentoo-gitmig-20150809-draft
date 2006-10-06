@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-txt-client
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.11 2006/07/18 21:47:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ChangeLog,v 1.12 2006/10/06 22:39:45 nyhm Exp $
+
+  06 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  ggz-txt-client-0.0.13.ebuild:
+  Fix nls support
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   ggz-txt-client-0.0.13.ebuild:

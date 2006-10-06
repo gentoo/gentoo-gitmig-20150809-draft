@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ggz-txt-client-0.0.13.ebuild,v 1.5 2006/09/28 20:58:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ggz-txt-client-0.0.13.ebuild,v 1.6 2006/10/06 22:39:45 nyhm Exp $
 
-inherit eutils games
+inherit games
 
 DESCRIPTION="The textbased client for GGZ Gaming Zone"
 HOMEPAGE="http://www.ggzgamingzone.org/"
@@ -14,19 +14,27 @@ SLOT="0"
 KEYWORDS="-amd64 ppc x86"
 IUSE=""
 
-DEPEND="~dev-games/ggz-client-libs-${PV}
+RDEPEND="~dev-games/ggz-client-libs-${PV}
 	sys-libs/ncurses
-	sys-libs/readline"
+	sys-libs/readline
+	virtual/libintl"
+DEPEND="${RDEPEND}
+	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i 's:$(prefix)/share:/usr/share:' \
+		po/Makefile.in || die "sed failed"
+}
 
 src_compile() {
-	egamesconf || die
-	emake || die
+	egamesconf --datadir=/usr/share || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README* TODO
-	domenu ${D}/usr/share/games/applications/ggz-txt.desktop
-	rm -rf ${D}/usr/share/games
 	prepgamesdirs
 }
