@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/dnsproxy
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dnsproxy/ChangeLog,v 1.1 2006/10/06 04:59:02 mrness Exp $
+
+*dnsproxy-1.15 (06 Oct 2006)
+
+  06 Oct 2006; Alin Nastac <mrness@gentoo.org> +files/dnsproxy.confd,
+  +files/dnsproxy.initd, +metadata.xml, +dnsproxy-1.15.ebuild:
+  Initial import from sunrise overlay, thanks to Tomoyuki Sakurai
+  <trombik@gentoo.gr.jp> (#104208).
