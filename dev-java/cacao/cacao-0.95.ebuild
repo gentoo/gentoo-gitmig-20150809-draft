@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.95.ebuild,v 1.1 2006/03/25 07:08:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.95.ebuild,v 1.2 2006/10/06 14:25:54 caster Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,8 +11,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND=">=dev-java/gnu-classpath-0.19"
-DEPEND="${REPEND}"
+DEPEND=">=dev-java/gnu-classpath-0.19"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	# Upstream has patches this already so we just use this until the next 
