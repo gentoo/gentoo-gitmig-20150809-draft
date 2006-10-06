@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6021 2006/10/06 12:04:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6022 2006/10/06 18:27:09 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -443,6 +443,7 @@ games-arcade/tuxracer-demo
 # you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
 # to the unmasked drivers.
 ~x11-drivers/nvidia-drivers-1.0.9625
+~media-video/nvidia-settings-1.0.20060919
 
 # Markus Ullmann <jokey@gentoo.org> (24.09.2006)
 # masking kvirc cvs ebuild
