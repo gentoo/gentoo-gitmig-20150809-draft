@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.28 2006/08/21 07:58:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.29 2006/10/06 16:36:14 mr_bones_ Exp $
+
+  06 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -openttd-0.4.7.ebuild, -openttd-0.4.8_rc1.ebuild,
+  -openttd-0.4.8_rc2.ebuild:
+  clean out old crufty versions
 
   21 Aug 2006; Lars Weiler <pylon@gentoo.org> openttd-0.4.8.ebuild:
   Correct install of scenarios; bug #144301.
