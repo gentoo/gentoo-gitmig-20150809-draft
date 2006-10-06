@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.14 2006/06/24 05:06:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.15 2006/10/06 17:26:13 vapier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -18,19 +18,14 @@ IUSE="X qt3 gnome"
 RDEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r5
 	X? (
-		|| (
-			(
-				x11-libs/libXaw
-				x11-libs/libXpm
-				x11-libs/libXt )
-			virtual/x11 ) )
+		x11-libs/libXaw
+		x11-libs/libXpm
+		x11-libs/libXt
+	)
 	qt3? ( =x11-libs/qt-3* )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )"
 DEPEND="${RDEPEND}
-	X? (
-		|| (
-			x11-proto/xproto
-			virtual/x11 ) )"
+	X? ( x11-proto/xproto )"
 
 HACKDIR="${GAMES_DATADIR}/${PN}"
 
@@ -43,10 +38,10 @@ src_unpack() {
 	source setup.sh || die
 
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
-	epatch "${FILESDIR}/${PV}-default-options.patch"
-	epatch "${FILESDIR}/${PV}-bison.patch"
-	epatch "${FILESDIR}/${PV}-macos.patch"
+	epatch "${FILESDIR}"/${PV}-gentoo-paths.patch
+	epatch "${FILESDIR}"/${PV}-default-options.patch
+	epatch "${FILESDIR}"/${PV}-bison.patch
+	epatch "${FILESDIR}"/${PV}-macos.patch
 
 	sed -i \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h \
