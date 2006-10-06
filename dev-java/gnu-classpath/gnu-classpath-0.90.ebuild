@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.11 2006/07/18 21:52:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.90.ebuild,v 1.12 2006/10/06 18:13:03 caster Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ DEPEND="app-arch/zip
 					virtual/x11
 				  )
 			 )
-		${REPEND}"
+		${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

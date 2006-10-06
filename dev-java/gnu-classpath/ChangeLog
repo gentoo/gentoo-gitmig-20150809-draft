@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.64 2006/07/21 18:56:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.65 2006/10/06 18:13:03 caster Exp $
+
+  06 Oct 2006; Vlastimil Babka <caster@gentoo.org>
+  gnu-classpath-0.90.ebuild:
+  Fix RDEPEND wrt bug #150285.
 
   21 Jul 2006; Petteri Räty <betelgeuse@gentoo.org>
   -gnu-classpath-0.14.ebuild:
