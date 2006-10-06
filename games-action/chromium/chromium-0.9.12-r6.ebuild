@@ -1,36 +1,36 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r6.ebuild,v 1.6 2006/07/16 22:19:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r6.ebuild,v 1.7 2006/10/06 22:06:36 nyhm Exp $
 
-inherit flag-o-matic eutils games
+inherit eutils flag-o-matic qt3 toolchain-funcs versionator games
 
+MY_PV=$(get_version_component_range -2)
 DESCRIPTION="Chromium B.S.U. - an arcade game"
 HOMEPAGE="http://www.reptilelabour.com/software/chromium/"
-SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}.tar.gz
-	 http://www.reptilelabour.com/software/files/chromium/chromium-data-${PV}.tar.gz"
+SRC_URI="http://www.reptilelabour.com/software/files/${PN}/${PN}-src-${PV}.tar.gz
+	 http://www.reptilelabour.com/software/files/${PN}/${PN}-data-${PV}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="vorbis qt3 sdl"
+IUSE="sdl qt3 vorbis"
 
-DEPEND="|| ( x11-libs/libXext virtual/x11 )
-	|| (
-		sdl? ( media-libs/libsdl
-			media-libs/smpeg )
-		virtual/glut
-	)
+DEPEND="virtual/opengl
+	virtual/glu
+	x11-libs/libXmu
+	sdl? ( media-libs/libsdl
+		media-libs/smpeg )
+	!sdl? ( virtual/glut )
 	vorbis? ( media-libs/libvorbis )
-	qt3? ( =x11-libs/qt-3* )
-	~media-libs/openal-0.0.8
+	qt3? ( $(qt_min_version 3.3) )
+	media-libs/openal
 	media-libs/freealut"
 
-S=${WORKDIR}/Chromium-0.9
+S=${WORKDIR}/Chromium-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	cp data/png/hero.png "${T}/chromium.png" || die "cp failed"
 	epatch \
 		"${FILESDIR}"/${PV}-gcc3-gentoo.patch \
 		"${FILESDIR}"/${PV}-freealut.patch \
@@ -41,10 +41,10 @@ src_unpack() {
 	append-flags -DPKGDATADIR="'\"${GAMES_DATADIR}/${PN}\"'"
 	append-flags -DPKGBINDIR="'\"${GAMES_BINDIR}\"'"
 	sed -i \
-		-e "s:-O2 -DOLD_OPENAL:${CFLAGS}:" src/Makefile \
+		-e "s:-O2 -DOLD_OPENAL:${CXXFLAGS}:" src/Makefile \
 			|| die "sed src/Makefile failed"
 	sed -i \
-		-e "s:-g:${CFLAGS}:" src-setup/Makefile \
+		-e "s:-g:${CXXFLAGS}:" src-setup/Makefile \
 			|| die "sed src-setup/Makefile failed"
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" support/glpng/src/Makefile \
@@ -65,12 +65,15 @@ src_compile() {
 		|| export ENABLE_VORBIS="no"
 	if use qt3 ; then
 		export ENABLE_SETUP="yes"
-		export QTDIR=/usr/qt/3
 	else
 		export ENABLE_SETUP="no"
 	fi
 	./configure || die "configure failed"
-	emake -j1 || die "make failed"
+	emake -j1 \
+		CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) \
+		LINK=$(tc-getCXX) \
+		|| die "emake failed"
 }
 
 src_install() {
@@ -78,7 +81,7 @@ src_install() {
 	insinto "${GAMES_DATADIR}/${PN}"
 	rm -rf data/png/.xvpics
 	doins -r data || die "doins failed"
-	doicon "${T}"/chromium.png
+	newicon data/png/hero.png ${PN}.png
 	make_desktop_entry chromium "Chromium B.S.U"
 	prepgamesdirs
 }
