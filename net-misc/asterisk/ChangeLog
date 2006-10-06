@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.125 2006/10/03 18:54:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.126 2006/10/06 11:59:06 blubb Exp $
 
   03 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   asterisk-1.2.12.1.ebuild:
@@ -13,6 +13,9 @@
   -asterisk-1.0.9-r4.ebuild, -asterisk-1.0.10-r2.ebuild,
   -asterisk-1.2.9_p1.ebuild, +asterisk-1.2.12.1.ebuild:
   version bump from overlay
+
+  06 Oct 2006; Simon Stelling <blubb@gentoo.org> asterisk-1.2.11.ebuild:
+  fix wrt multilib-strict; bug 138242
 
   14 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   asterisk-1.2.11.ebuild:

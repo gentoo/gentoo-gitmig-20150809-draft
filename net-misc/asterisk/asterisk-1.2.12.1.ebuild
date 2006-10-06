@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.2 2006/10/03 18:54:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.3 2006/10/06 11:59:07 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 IUSE="alsa bri curl debug doc gtk genericjb h323 hardened lowmem mmx mysql \
 	nosamples odbc osp postgres pri speex sqlite ssl ukcid zaptel"
@@ -109,7 +109,7 @@ scan_modules() {
 	local modules_list=""
 	local n
 
-	for x in $(ls -1 ${ROOT}usr/lib/asterisk/modules/*.so); do
+	for x in $(ls -1 ${ROOT}usr/$(get_libdir)/asterisk/modules/*.so); do
 		echo -en "Scanning.... $(basename ${x})   \r"
 
 		# skip blacklisted modules
@@ -314,12 +314,12 @@ src_compile() {
 src_install() {
 
 	# install asterisk
-	make DESTDIR=${D} install || die "Make install failed"
-	make DESTDIR=${D} samples || die "Failed to create sample files"
+	make DESTDIR=${D} ASTLIBDIR="\$(INSTALL_PREFIX)/usr/$(get_libdir)/asterisk" install || die "Make install failed"
+	make DESTDIR=${D} ASTLIBDIR="\$(INSTALL_PREFIX)/usr/$(get_libdir)/asterisk" samples || die "Failed to create sample files"
 
 	# remove bristuff capi
 	use bri && \
-		rm -f ${D}usr/lib/asterisk/modules/{app,chan}_capi*.so 2>/dev/null
+		rm -f ${D}usr/$(get_libdir)/asterisk/modules/{app,chan}_capi*.so 2>/dev/null
 
 	# remove installed sample files if nosamples flag is set
 	if use nosamples; then
