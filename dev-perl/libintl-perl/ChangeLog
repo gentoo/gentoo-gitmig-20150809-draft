@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.22 2006/10/05 18:18:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.23 2006/10/06 21:59:14 wolf31o2 Exp $
+
+  06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  libintl-perl-1.16.ebuild:
+  Stable on x86 wrt bug #150165.
 
   05 Oct 2006; Brent Baude <ranger@gentoo.org> libintl-perl-1.16.ebuild:
   Marking libintl-perl-1.16 ppc64 stable for bug # 150165
