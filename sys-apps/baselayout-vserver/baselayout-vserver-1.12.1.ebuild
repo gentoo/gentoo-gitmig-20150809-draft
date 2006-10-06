@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.12.1.ebuild,v 1.2 2006/06/22 07:27:13 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.12.1.ebuild,v 1.3 2006/10/06 11:19:07 phreak Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -25,7 +25,8 @@ RDEPEND=">=sys-apps/sysvinit-2.86-r3
 	) )"
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.51"
-PROVIDE="virtual/baselayout"
+PROVIDE="virtual/baselayout
+	virtual/dev-manager"
 
 src_unpack() {
 	unpack ${A}
