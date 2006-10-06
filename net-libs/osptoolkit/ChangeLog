@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.4 2006/10/03 15:38:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.5 2006/10/06 22:53:41 wolf31o2 Exp $
+
+  06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  osptoolkit-3.3.4.ebuild:
+  Stable on x86 wrt bug #144941.
 
   03 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   -osptoolkit-3.3.1.ebuild, osptoolkit-3.3.4.ebuild:
