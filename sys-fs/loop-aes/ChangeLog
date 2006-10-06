@@ -1,9 +1,9 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.14 2006/10/06 22:36:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.15 2006/10/06 22:39:14 alonbl Exp $
 
   06 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
-  Ressigning to crypto herd, approved by dsd.
+  Reassigning to crypto herd, approved by dsd.
 
   04 Oct 2006; Stefan Schweizer <genstef@gentoo.org> loop-aes-3.1d.ebuild:
   padlock useflag thanks to Robert Kerr <LittleThor@xsw.terminator.net> and
