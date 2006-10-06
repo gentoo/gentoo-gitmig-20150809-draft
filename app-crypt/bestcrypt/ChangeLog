@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.45 2006/07/12 13:13:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.46 2006/10/06 16:00:37 blubb Exp $
+
+  06 Oct 2006; Simon Stelling <blubb@gentoo.org> bestcrypt-1.6_p5.ebuild:
+  fix wrt multilib-strict; bug 144588
 
   12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org> bestcrypt-1.6_p5.ebuild:
   QA: Added pcmcia to IUSE, as it is used by linux-mod.eclass.

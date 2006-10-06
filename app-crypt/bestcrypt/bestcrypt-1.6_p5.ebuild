@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p5.ebuild,v 1.4 2006/07/12 13:13:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p5.ebuild,v 1.5 2006/10/06 16:00:37 blubb Exp $
 
-inherit flag-o-matic eutils linux-mod toolchain-funcs
+inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
 MY_PN="bcrypt"
 DESCRIPTION="commercially licensed transparent filesystem encryption"
@@ -85,7 +85,7 @@ src_install() {
 	done
 
 	# bug 107392
-	insinto /usr/lib
+	insinto /usr/$(get_libdir)
 	doins lib/libkgsha{,256}.so
 
 	doman man/bctool.8
