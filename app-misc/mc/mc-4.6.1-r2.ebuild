@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r2.ebuild,v 1.2 2006/08/02 14:00:20 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.1-r2.ebuild,v 1.3 2006/10/06 15:58:59 exg Exp $
 
 inherit flag-o-matic eutils
 
@@ -107,7 +107,7 @@ src_install() {
 	 cat ${FILESDIR}/chdir-4.6.0.gentoo >>\
 		 ${S}/lib/mc-wrapper.sh
 
-	einstall || die
+	make install DESTDIR="${D}" || die
 
 	# install cons.saver setuid, to actually work
 	chmod u+s ${D}/usr/lib/mc/cons.saver
