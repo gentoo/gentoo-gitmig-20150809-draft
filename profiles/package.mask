@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6017 2006/10/06 00:01:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6018 2006/10/06 00:49:58 marineam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1067,10 +1067,6 @@ app-text/gpdf
 # Christian Heim <phreak@gentoo.org> (13 Jul 2006)
 # ieee80211-1.1.14 is breaking ABI and API!
 =net-wireless/ieee80211-1.1.14*
-
-# Michael Marineau <marineam@gentoo.org> (09 Jul 2006)
-# Beta, ok for ~arch but the stable version is also ~arch still :-P
-=www-apps/ampache-3.3.2*
 
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
