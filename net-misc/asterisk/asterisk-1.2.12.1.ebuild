@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.3 2006/10/06 11:59:07 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.4 2006/10/06 22:54:59 wolf31o2 Exp $
 
 inherit eutils multilib
 
@@ -33,7 +33,7 @@ S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc sparc x86"
 
 RDEPEND="dev-libs/newt
 	media-sound/sox
