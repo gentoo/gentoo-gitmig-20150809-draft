@@ -94,8 +94,6 @@ diff -urN CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +
 +AM_CFLAGS = -DADD_
 +
-+HEADERS = cblas.h
-+
 +ERRHAND_SOURCES = \
 +	cblas_globals.c \
 +	cblas_xerbla.c \
