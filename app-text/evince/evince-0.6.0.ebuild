@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.0.ebuild,v 1.1 2006/09/05 03:48:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.6.0.ebuild,v 1.2 2006/10/06 14:26:27 dang Exp $
 
-inherit eutils gnome2 autotools
+inherit eutils gnome2
 
 DESCRIPTION="Simple document viewer for GNOME"
 HOMEPAGE="http://www.gnome.org/projects/evince/"
@@ -74,10 +74,4 @@ src_unpack(){
 
 	# Fix .desktop file so menu item shows up
 	epatch ${FILESDIR}/${PN}-0.5.3-display-menu.patch
-
-	eautoreconf
-	#export WANT_AUTOMAKE=1.9
-	#automake || die "automake failed"
-	#autoconf || die "autoconf failed"
-	#libtoolize --copy --force || die "libtoolize failed"
 }

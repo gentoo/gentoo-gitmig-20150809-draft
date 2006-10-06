@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.3-r1.ebuild,v 1.8 2006/09/19 19:03:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.5.3-r1.ebuild,v 1.9 2006/10/06 14:26:27 dang Exp $
 
 inherit eutils gnome2
 
@@ -73,9 +73,4 @@ src_unpack(){
 
 	# Fix documents with links
 	epatch ${FILESDIR}/${P}-links.patch
-
-	export WANT_AUTOMAKE=1.9
-	automake || die "automake failed"
-	autoconf || die "autoconf failed"
-	libtoolize --copy --force || die "libtoolize failed"
 }

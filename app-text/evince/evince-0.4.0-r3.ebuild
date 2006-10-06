@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r3.ebuild,v 1.9 2006/04/22 22:10:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-0.4.0-r3.ebuild,v 1.10 2006/10/06 14:26:27 dang Exp $
 
 inherit eutils gnome2
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/pkgconfig-0.9
+	>=gnome-base/gnome-common-2
 	>=dev-util/intltool-0.28"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
