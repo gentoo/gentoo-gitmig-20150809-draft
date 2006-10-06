@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.2 2006/09/08 21:04:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.12.17.ebuild,v 1.3 2006/10/06 10:56:07 deathwing00 Exp $
 
 inherit kde eutils
 
@@ -47,7 +47,9 @@ need-kde 3.4
 I18N="${PN}-i18n-${PV}"
 
 # Supported languages and translated documentation
-LANGS="af bg bn br bs ca cs cy da de el en_GB es et eu fr ga he hi hu is it ja km lt mk ms nb nds nl nn pa pl pt pt_BR ro ru se sl sr sr@Latn sv ta tr uk zh_CN"
+LANGS="af bg bn br bs ca cs cy da de el en_GB es et eu fi fr ga he hi hu is it
+ja km lt mk ms nb nds nl nn pa pl pt pt_BR ro ru se sl sr sr@Latn sv ta tr uk
+zh_CN zh_TW"
 
 for X in ${LANGS}; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
