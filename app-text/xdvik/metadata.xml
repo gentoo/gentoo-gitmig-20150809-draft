@@ -7,6 +7,10 @@
   <email>usata@gentoo.org</email>
   <name>Mamoru KOMACHI</name>
 </maintainer>
+<maintainer>
+  <email>exg@gentoo.org</email>
+  <name>Emanuele Giaquinta</name>
+</maintainer>
 <longdescription>
 XDVIK is a dvi previewer on X with kpathsea support.  It also supports
 multibyte character rendering via Xft2 (or VFlib2).
