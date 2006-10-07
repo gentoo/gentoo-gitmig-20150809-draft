@@ -57,3 +57,7 @@ mysql
 samba
 dbus
 xpm
+ruby
+ocaml
+guile
+lua
