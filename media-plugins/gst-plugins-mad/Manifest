@@ -9,6 +9,10 @@ EBUILD gst-plugins-mad-0.10.3.ebuild 513 RMD160 1ac245f1430f6f26af967db19ff1d217
 MD5 e27db8922ad71c96ae601532d6a9c4fb gst-plugins-mad-0.10.3.ebuild 513
 RMD160 1ac245f1430f6f26af967db19ff1d2173062ea72 gst-plugins-mad-0.10.3.ebuild 513
 SHA256 73ed6213cfe7cbfa9a9ff34cd5b3065fb1e7751694b7cf53387a8aedd75d3cb4 gst-plugins-mad-0.10.3.ebuild 513
+EBUILD gst-plugins-mad-0.10.4-r1.ebuild 555 RMD160 75dce6b61ab7c0a89ad93960763f5719e1ff98ac SHA1 7bc4e65bfccb08a6aa7d48bc7943041ca14540a4 SHA256 77c3d72a0a90d715f01008e382ec3a936611f247f9d38ae816b16ca922cd066c
+MD5 0958d632d17ce67a27bac8b89a2ff11f gst-plugins-mad-0.10.4-r1.ebuild 555
+RMD160 75dce6b61ab7c0a89ad93960763f5719e1ff98ac gst-plugins-mad-0.10.4-r1.ebuild 555
+SHA256 77c3d72a0a90d715f01008e382ec3a936611f247f9d38ae816b16ca922cd066c gst-plugins-mad-0.10.4-r1.ebuild 555
 EBUILD gst-plugins-mad-0.10.4.ebuild 520 RMD160 c8f26e23fe80bb332402285dea78d20638222beb SHA1 0df91c316389a80b0f786fc253007c56d2de949a SHA256 15bf490660c04d0af4e9caa183d8228ffb52269d874e7049f6d029eacbe3d2f3
 MD5 e01f150e672ed2af0d1b40a0071c34d6 gst-plugins-mad-0.10.4.ebuild 520
 RMD160 c8f26e23fe80bb332402285dea78d20638222beb gst-plugins-mad-0.10.4.ebuild 520
@@ -33,10 +37,10 @@ EBUILD gst-plugins-mad-0.8.9.ebuild 444 RMD160 5dc7bba4b1e1aa914bfd03b7e697142d6
 MD5 26fac79b532f1ec230352f4c4876f8e4 gst-plugins-mad-0.8.9.ebuild 444
 RMD160 5dc7bba4b1e1aa914bfd03b7e697142d69a93990 gst-plugins-mad-0.8.9.ebuild 444
 SHA256 1901c01589f51da69e0d405e0f0ba29f2d1d060bd954f6b08af11fc87b9472f2 gst-plugins-mad-0.8.9.ebuild 444
-MISC ChangeLog 11455 RMD160 4cd0e85f54a6753c73b3563524bdf66baa3d0fa1 SHA1 2b88962485ead44ecf90e7d7efe6562bee7478a8 SHA256 edbd143774f256b7a31e0b74eb3783e268cffa1692da31c98eba07f284ff8cc9
-MD5 d84e3078ad63995ac732302d9ed3a6eb ChangeLog 11455
-RMD160 4cd0e85f54a6753c73b3563524bdf66baa3d0fa1 ChangeLog 11455
-SHA256 edbd143774f256b7a31e0b74eb3783e268cffa1692da31c98eba07f284ff8cc9 ChangeLog 11455
+MISC ChangeLog 11610 RMD160 0ac56d8c718ca57198e21939cbcbe97b7fb277a5 SHA1 f1088196ede19c76434b55d44792adf8c54aebd3 SHA256 f4e350c9ac749987760ed3b7f8889187e364e325a429686d2d13070d8d57ed1c
+MD5 ed9b641ef4554ed9523bcaf61bcbde56 ChangeLog 11610
+RMD160 0ac56d8c718ca57198e21939cbcbe97b7fb277a5 ChangeLog 11610
+SHA256 f4e350c9ac749987760ed3b7f8889187e364e325a429686d2d13070d8d57ed1c ChangeLog 11610
 MISC metadata.xml 181 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d SHA1 faf40c45bd66b0072b95556cf7ab097d3be19511 SHA256 22c215902ccdc7fd8cdb765750fb23ea9d9b6c9d3edb1b45325c3469f8f6ffc5
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 RMD160 51814fbdcf7f32cfe70018b3af7fc798e41ff90d metadata.xml 181
@@ -47,6 +51,9 @@ SHA256 cfe9c819ee2ccf7ad84b195685cb2976e912906830bd24d488b21b4ef690f472 files/di
 MD5 d935d4ce6cfdd13f1bbf5250ffd100b4 files/digest-gst-plugins-mad-0.10.4 274
 RMD160 dec1a476aa0df1f41f29c4641bfa7299cc9fb777 files/digest-gst-plugins-mad-0.10.4 274
 SHA256 7f432695e33fb8a908b0a2494e7b00fca2c66085160d120f8617cf8c31210151 files/digest-gst-plugins-mad-0.10.4 274
+MD5 d935d4ce6cfdd13f1bbf5250ffd100b4 files/digest-gst-plugins-mad-0.10.4-r1 274
+RMD160 dec1a476aa0df1f41f29c4641bfa7299cc9fb777 files/digest-gst-plugins-mad-0.10.4-r1 274
+SHA256 7f432695e33fb8a908b0a2494e7b00fca2c66085160d120f8617cf8c31210151 files/digest-gst-plugins-mad-0.10.4-r1 274
 MD5 eaba7cd988c45174c3c20aebd8c4a8bd files/digest-gst-plugins-mad-0.8.10 262
 RMD160 ee0674f71e5e46e925c101e8e5d76fb49260df19 files/digest-gst-plugins-mad-0.8.10 262
 SHA256 a93903467a58b51b55338d1dba64d4cea56cb0ab65884a9fd58798f44d4e9680 files/digest-gst-plugins-mad-0.8.10 262
