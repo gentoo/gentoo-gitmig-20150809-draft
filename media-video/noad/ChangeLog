@@ -1,6 +1,16 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.9 2006/08/01 19:43:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.10 2006/10/07 11:19:01 zzam Exp $
+
+*noad-0.6.0-r5 (07 Oct 2006)
+
+  07 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/0.6.0-r5/noad-reccmd, +files/noad-0.6.0-delete-while-scanning.diff,
+  +files/noad-0.6.0-framesize.diff, +files/0.6.0-r5/record-50-noad.sh,
+  +files/0.6.0-r5/confd_vdraddon.noad, +files/0.6.0-r5/reccmds.noad.conf,
+  +noad-0.6.0-r5.ebuild:
+  Added two bugfixes, see Bug #147267. Added option for more niceness of
+  noad-process.
 
   01 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to VDR-Project.
