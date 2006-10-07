@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.8 2006/10/05 17:40:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.12.2-r3.ebuild,v 1.9 2006/10/07 00:27:28 keri Exp $
 
 inherit eutils
 
@@ -58,7 +58,9 @@ src_compile() {
 		${myconf} \
 		BOOTSTRAP_STAGE="1" \
 		|| die "econf stage 1 failed"
-	emake || die "emake stage 1 failed"
+	emake \
+		EXTRA_MLFLAGS=--no-strip \
+		|| die "emake stage 1 failed"
 
 	einfo "Performing stage 2 bootstrap"
 	cp "${S}"/compiler/mercury_compile "${S}"/mercury_compile
@@ -71,6 +73,7 @@ src_compile() {
 		depend || die "emake stage 2 depend failed"
 	emake \
 		MERCURY_COMPILER="${S}"/mercury_compile \
+		EXTRA_MLFLAGS=--no-strip \
 		|| die "emake stage 2 failed"
 
 	einfo "Compiling libgrades"
