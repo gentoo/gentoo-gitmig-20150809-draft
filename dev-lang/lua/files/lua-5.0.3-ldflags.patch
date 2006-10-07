@@ -1,0 +1,35 @@
+--- lua-5.0.3/Makefile.old	2006-10-04 13:23:13.253194162 +0200
++++ lua-5.0.3/Makefile	2006-10-04 13:23:02.727331000 +0200
+@@ -38,8 +38,8 @@
+ 
+ # shared libraries (for Linux)
+ so:
+-	$(CC) -o lib/liblua.so.$V -shared -Wl,-soname,liblua.so.$V src/*.o
+-	$(CC) -o lib/liblualib.so.$V -shared -Wl,-soname,liblualib.so.$V src/lib/*.o
++	$(CC) $(LDFLAGS) -o lib/liblua.so.$V -shared -Wl,-soname,liblua.so.$V src/*.o
++	$(CC) $(LDFLAGS) -o lib/liblualib.so.$V -shared -Wl,-soname,liblualib.so.$V src/lib/*.o
+ 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
+ 
+ # binaries using shared libraries
+--- lua-5.0.3/src/lua/Makefile.old	2006-10-04 13:07:11.250700357 +0200
++++ lua-5.0.3/src/lua/Makefile	2006-10-04 13:22:29.323765252 +0200
+@@ -13,7 +13,7 @@
+ all:	$T
+ 
+ $T:	$(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
++	$(CC) -o $@ $(MYLDFLAGS) $(LDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
+ 
+ $(LIB)/liblua.a:
+ 	cd ..; $(MAKE)
+--- lua-5.0.3/src/luac/Makefile.old	2006-10-04 13:07:28.039482100 +0200
++++ lua-5.0.3/src/luac/Makefile	2006-10-04 13:22:45.059560684 +0200
+@@ -13,7 +13,7 @@
+ all:	$T
+ 
+ $T:	$(OBJS) $(LIB)/liblua.a $(LIB)/liblualib.a
+-	$(CC) -o $@ $(MYLDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
++	$(CC) -o $@ $(MYLDFLAGS) $(LDFLAGS) $(OBJS) -L$(LIB) -llua -llualib $(EXTRA_LIBS) $(DLLIB)
+ 
+ # print.c needs opcode names from lopcodes.c
+ lopcodes.o:	../lopcodes.c ../lopcodes.h

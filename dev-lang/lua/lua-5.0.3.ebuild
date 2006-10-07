@@ -1,0 +1,111 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.1 2006/10/07 11:31:48 exg Exp $
+
+inherit eutils portability
+
+DESCRIPTION="A powerful light-weight programming language designed for extending applications"
+HOMEPAGE="http://www.lua.org/"
+SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
+
+LICENSE="MIT"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="readline"
+
+RDEPEND="readline? ( sys-libs/readline )"
+DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-linking.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+
+	sed -i config \
+		-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
+		-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
+		-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS} -fPIC -DPIC:" \
+		-e 's:^\(INSTALL_ROOT= \)/usr/local:\1$(DESTDIR)/usr:' \
+		-e "s:^\(INSTALL_LIB= \$(INSTALL_ROOT)/\)lib:\1$(get_libdir):" \
+		-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
+
+	sed -i -e 's/^\(install: all\) strip/\1/' Makefile
+
+	[[ ${ELIBC} != *BSD ]] && sed -i -e 's:^#\(DLLIB= -ldl\):\1:' config
+
+	use ppc-macos || sed -i -e 's:^#\(MYLDFLAGS= -Wl,-E\):\1:' config
+
+	sed -i -e 's:\(/README\)\("\):\1.gz\2:g' doc/readme.html
+
+	if use readline ; then
+		sed -i config \
+			-e "s:^#\(USERCONF=-DLUA_USERCONFIG='\"\$(LUA)/etc/saconfig.c\"' -DUSE_READLINE\):\1:" \
+			-e 's:^#\(EXTRA_LIBS= -lm -ldl -lreadline\) # \(-lhistory -lcurses -lncurses\):\1 \2:'
+	fi
+
+	cat >etc/lua.pc <<EOF
+prefix=/usr
+exec_prefix=\${prefix}
+includedir=\${prefix}/include
+libdir=\${exec_prefix}/$(get_libdir)
+interpreter=\${exec_prefix}/bin/lua
+compiler=\${exec_prefix}/bin/luac
+
+Name: Lua
+Description: An extension programming language
+Version: ${PV}
+Cflags: -I\${includedir}
+Libs: -L\${libdir} -llua -llualib -lm $(dlopen_lib)
+EOF
+}
+
+src_compile() {
+	emake || die "emake failed"
+	if use ppc-macos; then
+		emake dylib || die "emake dylib failed"
+	else
+		emake so || die "emake so failed"
+	fi
+	mv bin/lua test/lua.static
+	emake sobin || die "emake sobin failed"
+}
+
+src_install() {
+	if use ppc-macos; then
+		make DESTDIR="${D}" install dylibinstall || die "make install dylibinstall failed"
+	else
+		make DESTDIR="${D}" install soinstall || die "make install soinstall failed"
+	fi
+
+	dodoc HISTORY UPDATE
+	dohtml doc/*.html doc/*.gif
+
+	for i in `find . -name README -exec dirname '{}' \;`; do
+		docinto ${i#.}
+		dodoc ${i}/README
+	done
+
+	insinto /usr/share/lua
+	doins etc/compat.lua
+	insinto /usr/share/pixmaps
+	doins etc/lua.xpm
+	insinto /usr/$(get_libdir)/pkgconfig
+	doins etc/lua.pc
+}
+
+src_test() {
+	local positive="bisect cf echo env factorial fib fibfor hello printf sieve sort trace-calls"
+	local negative="readonly undefined"
+	local test
+
+	for test in ${positive}; do
+		test/lua.static test/${test}.lua || die "test $test failed"
+	done
+
+	for test in ${negative}; do
+		test/lua.static test/${test}.lua && die "test $test failed"
+	done
+}

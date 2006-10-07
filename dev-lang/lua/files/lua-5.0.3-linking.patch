@@ -1,0 +1,13 @@
+--- lua-5.0.3/Makefile.old	2006-10-04 12:03:57.117024736 +0200
++++ lua-5.0.3/Makefile	2006-10-04 12:05:18.295969396 +0200
+@@ -38,8 +38,8 @@
+ 
+ # shared libraries (for Linux)
+ so:
+-	ld -o lib/liblua.so.$V -shared src/*.o
+-	ld -o lib/liblualib.so.$V -shared src/lib/*.o
++	$(CC) -o lib/liblua.so.$V -shared -Wl,-soname,liblua.so.$V src/*.o
++	$(CC) -o lib/liblualib.so.$V -shared -Wl,-soname,liblualib.so.$V src/lib/*.o
+ 	cd lib; ln -fs liblua.so.$V liblua.so; ln -fs liblualib.so.$V liblualib.so
+ 
+ # binaries using shared libraries
