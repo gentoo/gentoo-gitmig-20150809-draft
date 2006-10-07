@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r8.ebuild,v 1.4 2006/07/28 20:38:25 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r8.ebuild,v 1.5 2006/10/07 02:58:39 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils toolchain-funcs autotools
 
 DESCRIPTION="SDL MPEG Player Library"
@@ -19,12 +21,11 @@ DEPEND=">=media-libs/libsdl-1.2.0
 		virtual/opengl
 		virtual/glu )
 	gtk? ( =x11-libs/gtk+-1.2* )
-	X? ( || (
-		(
-			x11-libs/libXext
-			x11-libs/libXi
-			x11-libs/libX11 )
-		virtual/x11 ) )"
+	X? (
+		x11-libs/libXext
+		x11-libs/libXi
+		x11-libs/libX11
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -44,7 +45,7 @@ src_unpack() {
 	rm "${S}/acinclude.m4"
 
 	cd "${S}"
-	WANT_AUTOCONF="2.5" WANT_AUTOMAKE="1.9" AT_M4DIR="${S}/m4" eautoreconf
+	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_compile() {
@@ -65,6 +66,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc CHANGES README* TODO
 }
