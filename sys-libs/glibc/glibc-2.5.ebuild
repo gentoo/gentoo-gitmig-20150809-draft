@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.4 2006/10/07 04:42:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.5 2006/10/07 05:55:19 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -67,9 +67,12 @@ GLIBC_RELEASE_VER=$(get_version_component_range 1-3)
 BRANCH_UPDATE=${BRANCH_UPDATE-$(get_version_component_range 4)}
 GLIBC_PORTS_VER=${GLIBC_RELEASE_VER}
 #GLIBC_PORTS_VER="20060925"
+GLIBC_LT_VER=${GLIBC_RELEASE_VER}
+#GLIBC_LT_VER="20060605"
 
 # (Recent snapshots fails with 2.6.5 and earlier with NPTL)
 NPTL_KERNEL_VERSION=${NPTL_KERNEL_VERSION:-"2.6.9"}
+LT_KERNEL_VERSION=${LT_KERNEL_VERSION:-"2.4.1"}
 
 ### SRC_URI ###
 
@@ -143,6 +146,12 @@ get_glibc_src_uri() {
 			${GENTOO_TOOLCHAIN_DEV_URI//XXX/glibc-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2}"
 	fi
 
+	if [[ -n ${GLIBC_LT_VER} ]] ; then
+		GLIBC_SRC_URI="${GLIBC_SRC_URI}
+			mirror://gnu/glibc/glibc-linuxthreads-${GLIBC_LT_VER}.tar.bz2
+			ftp://sources.redhat.com/pub/glibc/snapshots/glibc-linuxthreads-${GLIBC_LT_VER}.tar.bz2"
+	fi
+
 	echo "${GLIBC_SRC_URI}"
 }
 
@@ -162,6 +171,7 @@ toolchain-glibc_src_unpack() {
 	unpack glibc-${GLIBC_RELEASE_VER}.tar.bz2
 
 	cd "${S}"
+	[[ -n ${GLIBC_LT_VER} ]] && unpack glibc-linuxthreads-${GLIBC_LT_VER}.tar.bz2
 	unpack_addon libidn
 	unpack_addon ports ${GLIBC_PORTS_VER}
 
@@ -217,9 +227,18 @@ toolchain-glibc_src_compile() {
 	done
 	echo
 
-	unset LD_ASSUME_KERNEL
-	glibc_do_configure nptl
-	make PARALLELMFLAGS="${MAKEOPTS}" || die "make for ${ABI} failed"
+	if want_linuxthreads ; then
+		glibc_do_configure linuxthreads
+		einfo "Building GLIBC with linuxthreads..."
+		make PARALLELMFLAGS="${MAKEOPTS}" || die "make for ${ABI} failed"
+	fi
+	if want_nptl ; then
+		# ... and then do the optional nptl build
+		unset LD_ASSUME_KERNEL
+		glibc_do_configure nptl
+		einfo "Building GLIBC with NPTL..."
+		make PARALLELMFLAGS="${MAKEOPTS}" || die "make for ${ABI} failed"
+	fi
 }
 
 toolchain-glibc_headers_compile() {
@@ -245,6 +264,12 @@ toolchain-glibc_headers_compile() {
 	"${S}"/configure ${myconf} || die "failed to configure glibc"
 }
 
+toolchain-glibc_src_test() {
+	cd "${WORKDIR}"/build-${ABI}-${CTARGET}-$1 || die "cd build-${ABI}-${CTARGET}-$1"
+	unset LD_ASSUME_KERNEL
+	make check || die "make check failed for ${ABI}-${CTARGET}-$1"
+}
+
 toolchain-glibc_pkg_preinst() {
 	# PPC64+others may want to eventually be added to this logic if they
 	# decide to be multilib compatible and FHS compliant. note that this
@@ -259,9 +284,9 @@ toolchain-glibc_pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [[ -d ${ROOT}/$(alt_libdir)/tls ]] ; then
+	if [[ -d ${ROOT}/$(alt_libdir)/tls ]] && ! { want_nptl && want_linuxthreads; }; then
 		addwrite "${ROOT}"/$(alt_libdir)/
-		ewarn "removing /${ROOT}$(alt_libdir)/tls..."
+		ewarn "nptlonly or -nptl in USE, removing /${ROOT}$(alt_libdir)/tls..."
 		rm -r "${ROOT}"/$(alt_libdir)/tls || die
 	fi
 
@@ -274,19 +299,76 @@ toolchain-glibc_src_install() {
 	# zoneinfo do not always get installed ...
 	unset LANGUAGE LANG LC_ALL
 
-	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}
+	local GBUILDDIR
+	if want_linuxthreads ; then
+		GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
+	else
+		GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-nptl
+	fi
 
 	local install_root=${D}
 	is_crosscompile && install_root="${install_root}/usr/${CTARGET}"
-	cd "${GBUILDDIR}"
-	make PARALLELMFLAGS="${MAKEOPTS}" \
-		install_root="${install_root}" \
-		install || die
+	if want_linuxthreads ; then
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-linuxthreads
+		einfo "Installing GLIBC ${ABI} with linuxthreads ..."
+		make PARALLELMFLAGS="${MAKEOPTS}" \
+			install_root="${install_root}" \
+			install || die
+	else # nptlonly
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
+		einfo "Installing GLIBC ${ABI} with NPTL ..."
+		make PARALLELMFLAGS="${MAKEOPTS}" \
+			install_root="${install_root}" \
+			install || die
+	fi
 
 	if is_crosscompile ; then
 		# punt all the junk not needed by a cross-compiler
 		cd "${D}"/usr/${CTARGET} || die
 		rm -rf ./{,usr/}{bin,etc,sbin,share} ./{,usr/}*/{gconv,misc}
+	fi
+
+	if want_linuxthreads && want_nptl ; then
+		einfo "Installing NPTL to $(alt_libdir)/tls/..."
+		cd "${WORKDIR}"/build-${ABI}-${CTARGET}-nptl
+		dodir $(alt_libdir)/tls $(alt_usrlibdir)/nptl
+
+		local l src_lib
+		for l in libc libm librt libpthread libthread_db ; do
+			# take care of shared lib first ...
+			l=${l}.so
+			if [[ -e ${l} ]] ; then
+				src_lib=${l}
+			else
+				src_lib=$(eval echo */${l})
+			fi
+			cp -a ${src_lib} "${D}"$(alt_libdir)/tls/${l} || die "copying nptl ${l}"
+			fperms a+rx $(alt_libdir)/tls/${l}
+			dosym ${l} $(alt_libdir)/tls/$(scanelf -qSF'%S#F' ${src_lib})
+
+			# then grab the linker script or the symlink ...
+			if [[ -L ${D}$(alt_usrlibdir)/${l} ]] ; then
+				dosym $(alt_libdir)/tls/${l} $(alt_usrlibdir)/nptl/${l}
+			else
+				sed \
+					-e "s:/${l}:/tls/${l}:g" \
+					-e "s:/${l/%.so/_nonshared.a}:/nptl/${l/%.so/_nonshared.a}:g" \
+					"${D}"$(alt_usrlibdir)/${l} > "${D}"$(alt_usrlibdir)/nptl/${l}
+			fi
+
+			# then grab the static lib ...
+			src_lib=${src_lib/%.so/.a}
+			[[ ! -e ${src_lib} ]] && src_lib=${src_lib/%.a/_pic.a}
+			cp -a ${src_lib} "${D}"$(alt_usrlibdir)/nptl/ || die "copying nptl ${src_lib}"
+			src_lib=${src_lib/%.a/_nonshared.a}
+			if [[ -e ${src_lib} ]] ; then
+				cp -a ${src_lib} "${D}"$(alt_usrlibdir)/nptl/ || die "copying nptl ${src_lib}"
+			fi
+		done
+
+		# use the nptl linker instead of the linuxthreads one as the linuxthreads
+		# one may lack TLS support and that can be really bad for business
+		cp -a elf/ld.so "${D}"$(alt_libdir)/$(scanelf -qSF'%S#F' elf/ld.so) || die "copying nptl interp"
 	fi
 
 	# We'll take care of the cache ourselves
@@ -425,6 +507,19 @@ toolchain-glibc_headers_install() {
 }
 
 toolchain-glibc_pkg_postinst() {
+	# Mixing nptlonly and -nptlonly glibc can prove dangerous if libpthread
+	# isn't removed in unmerge which happens sometimes.  See bug #87671
+	if ! is_crosscompile && want_linuxthreads && [[ ${ROOT} == "/" ]] ; then
+		for libdir in $(get_all_libdirs) ; do
+			for f in "${ROOT}"/${libdir}/libpthread-2.* "${ROOT}"/${libdir}/libpthread-0.6* ; do
+				if [[ -f ${f} ]] ; then
+					rm -f ${f}
+					ldconfig
+				fi
+			done
+		done
+	fi
+
 	if ! tc-is-cross-compiler && [[ -x ${ROOT}/usr/sbin/iconvconfig ]] ; then
 		# Generate fastloading iconv module configuration file.
 		"${ROOT}"/usr/sbin/iconvconfig --prefix="${ROOT}"
@@ -454,6 +549,13 @@ toolchain-glibc_pkg_postinst() {
 	einfo "Gentoo's glibc no longer includes mdns."
 	einfo "If you want mdns, emerge the sys-auth/nss-mdns package."
 	echo
+
+	if want_nptl && want_linuxthreads ; then
+		einfo "The default behavior of glibc on your system is to use NPTL.  If"
+		einfo "you want to use linuxthreads for a particular program, start it"
+		einfo "by executing 'LD_ASSUME_KERNEL=${LT_KERNEL_VERSION} <program> [<options>]'"
+		echo
+	fi
 }
 
 ### SUPPORT FUNCTIONS ###
@@ -656,6 +758,12 @@ want_nptl() {
 	return 0
 }
 
+want_linuxthreads() {
+	! use nptlonly && return 0
+	want_nptl || return 0
+	return 1
+}
+
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	case $(tc-arch) in
@@ -719,9 +827,29 @@ glibc_do_configure() {
 
 	[[ ${CTARGET//_/-} == *-softfloat-* ]] && myconf="${myconf} --without-fp"
 
-	myconf="${myconf} --with-tls --with-__thread"
-	myconf="${myconf} --enable-add-ons=nptl,ports${ADDONS}"
-	myconf="${myconf} --enable-kernel=${NPTL_KERNEL_VERSION}"
+	if [[ $1 == "linuxthreads" ]] ; then
+		if want_tls ; then
+			myconf="${myconf} --with-tls"
+
+			if ! want__thread || use glibc-compat20 || [[ ${LT_KERNEL_VERSION} == 2.[02].* ]] ; then
+				myconf="${myconf} --without-__thread"
+			else
+				myconf="${myconf} --with-__thread"
+			fi
+		else
+			myconf="${myconf} --without-tls --without-__thread"
+		fi
+
+		myconf="${myconf} --disable-sanity-checks"
+		myconf="${myconf} --enable-add-ons=ports,linuxthreads${ADDONS}"
+		myconf="${myconf} --enable-kernel=${LT_KERNEL_VERSION}"
+	elif [[ $1 == "nptl" ]] ; then
+		myconf="${myconf} --with-tls --with-__thread"
+		myconf="${myconf} --enable-add-ons=ports,nptl${ADDONS}"
+		myconf="${myconf} --enable-kernel=${NPTL_KERNEL_VERSION}"
+	else
+		die "invalid pthread option"
+	fi
 
 	# Since SELinux support is only required for nscd, only enable it if:
 	# 1. USE selinux
@@ -762,7 +890,7 @@ glibc_do_configure() {
 
 	has_version app-admin/eselect-compiler || export CC=$(tc-getCC ${CTARGET})
 
-	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}
+	local GBUILDDIR=${WORKDIR}/build-${ABI}-${CTARGET}-$1
 	mkdir -p "${GBUILDDIR}"
 	cd "${GBUILDDIR}"
 	einfo "Configuring GLIBC for $1 with: ${myconf// /\n\t\t}"
@@ -907,10 +1035,15 @@ pkg_setup() {
 		eerror "and tell them to release an update that isn't broken."
 		die "non-TLS symbol errno@glibc_2.0 not supported"
 	fi
-	if ! use nptl || ! use nptl ; then
-		ewarn "glibc-2.4 is nptl-only!"
+	if want_linuxthreads ; then
+		ewarn "glibc-2.5 is nptl-only!"
 		[[ ${CTARGET} == i386-* ]] && eerror "NPTL requires a CHOST of i486 or better"
 		die "please add USE='nptl nptlonly' to make.conf"
+	fi
+
+	if use nptlonly && ! use nptl ; then
+		eerror "If you want nptlonly, add nptl to your USE too ;p"
+		die "nptlonly without nptl"
 	fi
 
 	if [[ -e /proc/xen ]] && ! is-flag -mno-tls-direct-seg-refs ; then
@@ -1016,9 +1149,8 @@ src_test() {
 		return 0
 	fi
 
-	cd "${WORKDIR}"/build-${ABI}-${CTARGET} || die "cd build-${ABI}-${CTARGET}"
-	unset LD_ASSUME_KERNEL
-	make check || die "make check failed for ${ABI}-${CTARGET}"
+	want_linuxthreads && toolchain-glibc_src_test linuxthreads
+	want_nptl && toolchain-glibc_src_test nptl
 }
 
 src_strip() {
