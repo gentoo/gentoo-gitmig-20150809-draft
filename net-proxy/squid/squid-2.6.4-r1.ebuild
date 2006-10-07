@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.3.ebuild,v 1.7 2006/10/07 05:10:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.6.4-r1.ebuild,v 1.1 2006/10/07 05:10:25 mrness Exp $
 
 inherit eutils pam toolchain-funcs flag-o-matic autotools linux-info
 
@@ -14,12 +14,11 @@ PATCH_VERSION="20061007"
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
 SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz
-	zero-penalty-hit? ( mirror://gentoo/${S_PP}-patches-${PATCH_VERSION}.tar.gz )
-	!zero-penalty-hit? ( mirror://gentoo/${S_PP}-patches-20060819.tar.gz )"
+	mirror://gentoo/${S_PP}-patches-${PATCH_VERSION}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="pam ldap sasl nis ssl snmp selinux logrotate zero-penalty-hit \
 	pf-transparent ipf-transparent \
 	elibc_uclibc kernel_linux \
@@ -50,6 +49,7 @@ src_unpack() {
 	cd "${S}" || die "dir ${S} not found"
 
 	# Do bulk patching from squids bug fix list as well as our patches
+	use zero-penalty-hit || rm "${WORKDIR}"/patch/9*ToS_Hit*
 	EPATCH_SUFFIX="patch"
 	epatch "${WORKDIR}/patch"
 
@@ -120,7 +120,6 @@ src_compile() {
 		--enable-cache-digests \
 		--enable-delay-pools \
 		--enable-referer-log \
-		--enable-truncate \
 		--enable-arp-acl \
 		--with-pthreads \
 		--with-large-files \
@@ -192,4 +191,6 @@ pkg_postinst() {
 	ewarn "when there isn't sufficient traffic to keep squid reasonably busy."
 	ewarn "   If your traffic level is low to moderate, use 'aufs' or 'ufs'."
 	echo
+	ewarn "Squid can be configured to run in transparent mode like this:"
+	ewarn "   ${HILITE}http_port internal-addr:3128 transparent${NORMAL}"
 }
