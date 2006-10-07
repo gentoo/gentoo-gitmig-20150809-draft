@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/cal3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.19 2006/09/18 17:27:53 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.20 2006/10/07 20:36:42 kloeri Exp $
+
+*cal3d-0.11.0-r1 (07 Oct 2006)
+
+  07 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  +cal3d-0.11.0-r1.ebuild:
+  Add option for 16bit indices, bug 141630.
 
   18 Sep 2006; Roy Marples <uberlord@gentoo.org> cal3d-0.11.0.ebuild:
   Keyworded ~x86-fbsd.
