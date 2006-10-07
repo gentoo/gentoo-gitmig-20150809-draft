@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.82 2006/10/03 19:26:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.83 2006/10/07 13:26:08 ticho Exp $
+
+  07 Oct 2006; Andrej Kacian <ticho@gentoo.org> mpd-0.12.0.ebuild:
+  Depend on >=flac-1.1.1. Fixes bug #149738, reported by Bill Skellenger
+  <william at skellenger.net>.
 
   03 Oct 2006; Andrej Kacian <ticho@gentoo.org> files/mpd-0.12.rc6:
   Added optional dependency on pulseaudio to the init script. Suggested by
