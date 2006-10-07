@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.45 2006/10/07 11:31:48 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.46 2006/10/07 15:42:18 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> lua-5.0.3.ebuild:
+  Add ~x86-fbsd keyword.
 
 *lua-5.0.3 (07 Oct 2006)
 
