@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.99.3.ebuild,v 1.1 2006/05/13 17:11:21 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.99.3.ebuild,v 1.2 2006/10/07 23:36:25 eldad Exp $
 
 inherit eutils
 
@@ -45,19 +45,17 @@ src_compile() {
 	# Required for scons to "see" intermediate install location
 	mkdir -p ${D}
 
-	use altivec && ALTIVEC=1 || ALTIVEC=0
-	use debug && ARDOUR_DEBUG=1 || ARDOUR_DEBUG=0
-	use nls && NLS=1 || NLS=0
-	use sse && SSE=1 || SSE=0
+	(useq altivec || useq sse) && FPU_OPTIMIZATION=1 || FPU_OPTIMIZATION=0
+	useq debug && ARDOUR_DEBUG=1 || ARDOUR_DEBUG=0
+	useq nls && NLS=1 || NLS=0
 
 	cd ${S}
 	scons \
-		ALTIVEC=${ALTIVEC} \
 		DEBUG=${ARDOUR_DEBUG} \
+		FPU_OPTIMIZATION=${FPU_OPTIMIZATION} \
 		DESTDIR=${D} \
 		NLS=${NLS} \
 		PREFIX=/usr \
-		USE_SSE_EVERYWHERE=${SSE} \
 		KSI=0 \
 		-j2 || die "scons make failed"
 }

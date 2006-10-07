@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.56 2006/05/13 17:11:21 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.57 2006/10/07 23:36:25 eldad Exp $
+
+  07 Oct 2006; Eldad Zack <eldad@gentoo.org> ardour-0.99.3.ebuild:
+  Fixed scons flags for asm optimizations (altivec and sse now set
+  FPU_OPTIMIZATION instead of individual flags) and changed use to useq.
+  closes bug #139787.
 
 *ardour-0.99.3 (13 May 2006)
 
