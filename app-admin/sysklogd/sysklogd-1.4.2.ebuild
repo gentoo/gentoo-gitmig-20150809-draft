@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2.ebuild,v 1.2 2006/10/07 04:25:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2.ebuild,v 1.3 2006/10/07 12:56:49 blubb Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 RESTRICT="test"
 
