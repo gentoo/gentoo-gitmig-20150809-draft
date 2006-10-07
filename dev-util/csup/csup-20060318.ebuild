@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/csup-20060318.ebuild,v 1.2 2006/09/22 09:33:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/csup-20060318.ebuild,v 1.3 2006/10/07 15:12:56 ticho Exp $
 
 DESCRIPTION="C-based rewrite of CVSup (software for distributing and updating collections of files accross a network)"
 HOMEPAGE="http://www.mu.org/~mux/csup.html"
@@ -8,7 +8,7 @@ SRC_URI="http://mu.org/~mux/csup-snap-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=sys-devel/bison-2.1"
