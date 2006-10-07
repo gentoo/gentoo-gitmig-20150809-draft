@@ -4,6 +4,9 @@ Hash: SHA1
 - -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+- - -----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX ampache-webinstall.txt 1376 RMD160 27881bb17df0ec5a85f61e1e47eb8585511d3023 SHA1 70ec6a4b0d2248c0eede6750c44eccc63df575b2 SHA256 5a657218b21332823c3e12e91173073b116c842750e5d4b985fc3627e415ee4f
 MD5 bca60999fc1787d45fa77e621731126c files/ampache-webinstall.txt 1376
 RMD160 27881bb17df0ec5a85f61e1e47eb8585511d3023 files/ampache-webinstall.txt 1376
@@ -36,17 +39,24 @@ SHA256 6e6fc71ea925dc6ed063b68386c6aa7a1b2586b33f4372238a57660d3129945a files/di
 MD5 a81fd44e2baf0bfcda12e8c69f751615 files/digest-ampache-3.3.2 244
 RMD160 b2e19350ce9c3a0927d96df501469dc7c53e7e91 files/digest-ampache-3.3.2 244
 SHA256 f601b01fe9f883a5af14e51f937a6a964dfd1086cc91c17b18f0a41c2d20f609 files/digest-ampache-3.3.2 244
-- -----BEGIN PGP SIGNATURE-----
+- - -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.4 (GNU/Linux)
 
 iD8DBQFFJah5iP+LossGzjARAljpAKC65Iq5yLlj+06N0u6lpXvsZf1n/wCfSbUW
 N82jlcmOKY8Bbo2MXMcNkpw=
 =qIbq
-- -----END PGP SIGNATURE-----
------BEGIN PGP SIGNATURE-----
+- - -----END PGP SIGNATURE-----
+- -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
 iD8DBQFFJj5DI1lqEGTUzyQRAgC7AJ4+9sPwDyBCETRg9e80QEgC89B5nACfbQEM
 poKkrjQTlkzqzWi3/ddjp1A=
 =A/rW
+- -----END PGP SIGNATURE-----
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFFJ/FgiP+LossGzjARAnRtAJ9kA93Dv2Q7IbbIvCOTMZHJxwf1iACeNPIz
+2QTFx7V4JF8E0VtKTcd1N5Q=
+=DCj6
 -----END PGP SIGNATURE-----
