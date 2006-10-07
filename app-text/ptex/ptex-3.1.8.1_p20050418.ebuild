@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050418.ebuild,v 1.1 2005/04/19 07:51:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050418.ebuild,v 1.2 2006/10/07 04:23:26 matsuu Exp $
 
 TETEX_PV=3.0
 
@@ -31,7 +31,7 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
-IUSE="X motif lesstif Xaw3d neXt"
+IUSE="X"
 
 DEPEND="X? ( >=media-libs/freetype-2
 		>=media-fonts/kochi-substitute-20030809-r3
