@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.15 2006/09/08 10:44:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.8-r1.ebuild,v 1.16 2006/10/07 07:32:28 flameeyes Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -82,7 +82,8 @@ RESTRICT="test"
 
 DEPEND="!elibc_uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	elibc_FreeBSD? ( sys-freebsd/freebsd-mk-defs )"
 
 RDEPEND="
 	berkdb? ( sys-libs/db )
@@ -131,7 +132,7 @@ src_unpack() {
 	# we need the same @INC-inversion magic here we do in perl
 	cd ${S}; epatch ${FILESDIR}/${P}-reorder-INC.patch
 
-	# On PA7200, uname -a contains a single quote and we need to 
+	# On PA7200, uname -a contains a single quote and we need to
 	# filter it otherwise configure fails. See #125535.
 	epatch ${FILESDIR}/perl-hppa-pa7200-configure.patch
 
