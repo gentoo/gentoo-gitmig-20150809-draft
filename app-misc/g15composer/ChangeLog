@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/g15composer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.2 2006/10/07 13:36:36 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/ChangeLog,v 1.3 2006/10/07 17:06:42 genstef Exp $
+
+  07 Oct 2006; Stefan Schweizer <genstef@gentoo.org> g15composer-1.1.ebuild:
+  Fix newinitd ($P->${PN}-1.0), thanks rbu
 
 *g15composer-1.1 (07 Oct 2006)
 
