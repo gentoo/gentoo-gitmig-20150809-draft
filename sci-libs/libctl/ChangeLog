@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libctl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.3 2006/06/07 18:06:03 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.4 2006/10/07 17:20:20 pbienst Exp $
+
+  07 Oct 2006; <pbienst@gentoo.org> libctl-3.0.1.ebuild:
+  Add ~amd64.
 
 *libctl-3.0.1 (07 Jun 2006)
 

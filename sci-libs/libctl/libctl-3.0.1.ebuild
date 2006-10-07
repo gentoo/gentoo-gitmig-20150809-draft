@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.0.1.ebuild,v 1.1 2006/06/07 18:06:03 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.0.1.ebuild,v 1.2 2006/10/07 17:20:20 pbienst Exp $
 
 
 DESCRIPTION="Guile-based library implementing flexible control files for scientific simulations"
@@ -8,7 +8,7 @@ SRC_URI="http://ab-initio.mit.edu/libctl/${P}.tar.gz"
 HOMEPAGE="http://ab-initio.mit.edu/libctl/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 SLOT="0"
 IUSE=""
