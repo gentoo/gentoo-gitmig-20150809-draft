@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6025 2006/10/07 11:08:03 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6026 2006/10/07 15:52:43 mrness Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -852,11 +852,6 @@ net-misc/bcm4400
 # Joshua Jackson <tsunam@gentoo.org> (28 Aug 2006)
 # Masking net-misc/mico as its unmaintained and has an outstanding security bug # # 122141
 net-misc/mico
-
-# Alec Warner <antarus@gentoo.org> (27 Aug 2006)
-# Masking app-mobilephone/gtkesms for treecleaners and bug(s) # 142991
-# Sept 27th for removal
-app-mobilephone/gtkesms
 
 # Matthew Kennedy <mkennedy@gentoo.org> (24 Aug 2006)
 # Removing these bese project ebuilds in favour of darcs ebuilds.
