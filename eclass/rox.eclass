@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.13 2006/10/06 22:07:02 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.14 2006/10/07 16:34:30 lack Exp $
 
 # ROX eclass Version 2
 
@@ -52,15 +52,17 @@ rox_src_compile() {
 	#Some packages need to be compiled.
 	chmod 755 AppRun
 	if [ -d src/ ]; then
-		# Bug 150303: Compile with Rox-Clib will fail if the user has 0install
+		# Bug 150303: Check with Rox-Clib will fail if the user has 0install
 		# installed on their system somewhere, so remove the check for it in the
-		# configure script
+		# configure script, and adjust the path that the 'libdir' program uses
+		# to search for it:
 		if [ -f src/configure.in ]; then
 			cd src
 			sed -i.bak -e 's/ROX_CLIB_0LAUNCH/ROX_CLIB/' configure.in
 			autoconf
 			cd ..
 		fi
+		export LIBDIRPATH="/usr/lib/"
 
 		# Most rox self-compiles have a 'read' call to wait for the user to
 		# press return if the compile fails.
