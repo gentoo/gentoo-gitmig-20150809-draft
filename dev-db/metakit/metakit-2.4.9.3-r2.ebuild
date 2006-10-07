@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.19 2006/07/13 02:22:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.20 2006/10/07 13:19:32 blubb Exp $
 
-inherit python multilib
+inherit python multilib eutils
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -29,6 +29,8 @@ src_unpack() {
 	done
 	sed -i -e "s:python2.3:python${PYVER}:" unix/configure
 	sed -i -e "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS}:" unix/Makefile.in
+
+	epatch "${FILESDIR}"/${P}-64bit.patch
 }
 
 src_compile() {
