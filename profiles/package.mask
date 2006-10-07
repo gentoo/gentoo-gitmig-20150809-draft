@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6024 2006/10/07 02:02:21 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6025 2006/10/07 11:08:03 exg Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# <exg@gentoo.org> (07 Oct 2006)
+# Masked for testing
+>=dev-lang/lua-5.0.2-r1
 
 # Christian Heim <phreak@gentoo.org> (6 Oct 2006)
 # baselayout-vserver-1.12.3 needs some testing
@@ -1440,12 +1444,6 @@ www-apache/mod_csv
 # zlib interaction is badly broken. See bug #124733.
 =dev-util/cvs-1.12.13*
 
-# Tom Payne <twp@gentoo.org> (02 Mar 2006)
-# lua-5.1's build system is very primitive (no shared libraries for example)
-# so upgrading to it will probably break lots of things that rely on lua
-# import it into the tree anyhow for testing and development
-=dev-lang/lua-5.1
-
 # Chris White <chriswhite@gentoo.org> (26 Feb 2006)
 # Dead upstream, breaks with recent mono versions
 # No maintainer
@@ -1967,10 +1965,6 @@ kde-base/dcopjava
 # won't build for now
 dev-lisp/cl-rsm-gen-prog
 dev-lisp/cl-rsm-genetic-alg
-
-# <twp@gentoo.org> (06 Aug 2004)
-# Masked until linking problems are solved
-=dev-lang/lua-5.0.2-r1
 
 # <usata@gentoo.org> (02 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
