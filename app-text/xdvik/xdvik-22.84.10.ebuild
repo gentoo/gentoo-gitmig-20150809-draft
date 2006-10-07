@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.1 2006/10/07 17:02:22 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.2 2006/10/07 18:56:48 flameeyes Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/xdvi/${P}.tar.gz
 HOMEPAGE="http://sourceforge.net/projects/xdvi/
 	http://xdvi.sourceforge.jp/"
 
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2"
 
