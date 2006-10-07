@@ -4,3 +4,9 @@
 # in the lighttpd's configuration file - fixes bug#140349
 SHELL="/bin/bash"
 
+# Location of the lighttpd configuration file
+LIGHTTPD_CONF="/etc/lighttpd/lighttpd.conf"
+
+# Location of the lighttpd pid file
+LIGHTTPD_PID="/var/run/lighttpd.pid"
+

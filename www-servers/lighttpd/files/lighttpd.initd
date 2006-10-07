@@ -1,12 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.9 2006/06/01 21:56:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.10 2006/10/07 16:28:57 bangert Exp $
 
 opts="depend checkconfig start stop reload"
-
-LIGHTTPD_CONF="/etc/lighttpd/lighttpd.conf"
-LIGHTTPD_PID="/var/run/lighttpd.pid"
 
 depend() {
 	need net
