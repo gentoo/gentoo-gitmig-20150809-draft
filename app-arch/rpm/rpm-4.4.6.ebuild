@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6.ebuild,v 1.6 2006/10/01 19:38:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.6.ebuild,v 1.7 2006/10/07 21:45:47 vapier Exp $
 
 inherit eutils autotools distutils perl-module
 
@@ -10,8 +10,9 @@ SRC_URI="http://wraptastic.org/pub/rpm-4.4.x/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha -amd64 ~arm hppa ~ia64 ~mips ppc -ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="~alpha -amd64 arm hppa ~ia64 ~mips ppc -ppc64 s390 sh sparc x86"
 IUSE="nls python perl doc sqlite"
+
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
 	>=app-arch/bzip2-1.0.1
@@ -25,15 +26,14 @@ RDEPEND="=sys-libs/db-3.2*
 	nls? ( virtual/libintl )
 	sqlite? ( >=dev-db/sqlite-3.3.5 )
 	net-misc/neon"
-
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/rpm-4.4.6-with-sqlite.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/rpm-4.4.6-with-sqlite.patch
 
 	# the following are additional libraries that might be packaged with
 	# the rpm sources. grep for "test -d" in configure.ac
@@ -52,7 +52,8 @@ src_unpack() {
 
 src_compile() {
 	python_version
-	econf --enable-posixmutexes \
+	econf \
+		--enable-posixmutexes \
 		--without-javaglue \
 		--without-selinux \
 		$(use_with python python ${PYVER}) \
@@ -66,12 +67,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	mv ${D}/bin/rpm ${D}/usr/bin
-	rmdir ${D}/bin
+	mv "${D}"/bin/rpm "${D}"/usr/bin
+	rmdir "${D}"/bin
 
-	use nls || rm -rf ${D}/usr/share/man/??
+	use nls || rm -rf "${D}"/usr/share/man/??
 
 	keepdir /var/lib/rpm
 	keepdir /usr/src/rpm/{SRPMS,SPECS,SOURCES,RPMS/{noarch,i{3,4,5,6}86,athlon},BUILD}
@@ -84,12 +85,12 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -f ${ROOT}/var/lib/rpm/Packages ]; then
+	if [[ -f ${ROOT}/var/lib/rpm/Packages ]] ; then
 		einfo "RPM database found... Rebuilding database (may take a while)..."
-		${ROOT}/usr/bin/rpm --rebuilddb --root=${ROOT}
+		"${ROOT}"/usr/bin/rpm --rebuilddb --root=${ROOT}
 	else
 		einfo "No RPM database found... Creating database..."
-		${ROOT}/usr/bin/rpm --initdb --root=${ROOT}
+		"${ROOT}"/usr/bin/rpm --initdb --root=${ROOT}
 	fi
 
 	distutils_pkg_postinst
