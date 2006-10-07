@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lha
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.25 2005/10/30 20:14:52 grobian Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.26 2006/10/07 19:20:27 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/lha-114i-malloc.patch, lha-114i-r5.ebuild:
+  malloc.h should not be included, stdlib.h instead should.
 
   30 Oct 2005; Fabian Groffen <grobian@gentoo.org>
   files/lha-114i-build.patch, files/lha-114i-malloc.patch:
