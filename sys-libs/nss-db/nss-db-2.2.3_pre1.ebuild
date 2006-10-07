@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1.ebuild,v 1.1 2005/02/16 11:04:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-db/nss-db-2.2.3_pre1.ebuild,v 1.2 2006/10/07 00:29:27 robbat2 Exp $
 
 inherit eutils versionator
 
@@ -10,7 +10,7 @@ MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Allows important system files to be stored in a fast database file rather than plain text"
 HOMEPAGE="http://sources.redhat.com/glibc/"
-SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/${MY_P}.tar.gz
+SRC_URI="ftp://sources.redhat.com/pub/glibc/old-releases/${MY_P}.tar.gz
 		 mirror://gentoo/${MY_P}-external.patch.bz2
 		 mirror://gentoo/${MY_P}-dbupgrade.patch.bz2
 		 mirror://gentoo/${MY_P}-dbopen.patch.bz2"
