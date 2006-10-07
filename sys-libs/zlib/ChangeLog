@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.59 2006/03/30 14:12:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.60 2006/10/07 05:40:48 vapier Exp $
+
+*zlib-1.2.3-r1 (07 Oct 2006)
+
+  07 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/zlib-1.2.3-r1-bsd-soname.patch,
+  +files/zlib-1.2.3-visibility-support.patch, +zlib-1.2.3-r1.ebuild:
+  Use gcc visibility to handle exporting of symbols #149929 by galtgendo.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> zlib-1.2.3.ebuild:
   Add ~x86-fbsd keyword.
