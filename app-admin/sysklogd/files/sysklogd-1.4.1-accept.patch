@@ -1,0 +1,13 @@
+accept/recvfrom take pointers to socklen_t's
+
+--- syslogd.c
++++ syslogd.c
+@@ -841,7 +841,7 @@
+ 	int len, num_fds;
+ #else /* __GLIBC__ */
+ #ifndef TESTING
+-	size_t len;
++	socklen_t len;
+ #endif
+ 	int num_fds;
+ #endif /* __GLIBC__ */

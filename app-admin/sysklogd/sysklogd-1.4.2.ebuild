@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2.ebuild,v 1.1 2006/05/25 00:54:56 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.2.ebuild,v 1.2 2006/10/07 04:25:29 vapier Exp $
 
 inherit eutils
 
@@ -28,6 +28,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${MY_P}-accept.patch
+
 	# CVS patch / effectively version to 1.4.2
 	epatch "${WORKDIR}/${MY_P}-cvs-${CVS_DATE}.patch"
 
@@ -48,7 +50,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake LDFLAGS="" || die
+	emake LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
