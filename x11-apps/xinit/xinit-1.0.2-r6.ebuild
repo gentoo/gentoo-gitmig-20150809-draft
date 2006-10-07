@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.2-r6.ebuild,v 1.10 2006/09/10 09:06:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.2-r6.ebuild,v 1.11 2006/10/07 18:28:35 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -18,7 +18,8 @@ RDEPEND="x11-apps/xauth
 	x11-libs/libX11
 	!minimal? ( x11-wm/twm
 	x11-apps/xclock
-	x11-apps/xrdb )"
+	x11-apps/xrdb
+	x11-apps/xsm )"
 DEPEND="${RDEPEND}"
 PDEPEND="x11-terms/xterm"
 
