@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.10.ebuild,v 1.2 2005/10/20 23:40:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.10.ebuild,v 1.3 2006/10/07 17:24:46 pbienst Exp $
 
 inherit eutils autotools
 
@@ -9,7 +9,7 @@ SRC_URI="http://ab-initio.mit.edu/h5utils/${P}.tar.gz"
 HOMEPAGE="http://ab-initio.mit.edu/h5utils/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE="octave"
 SLOT="0"
