@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.42 2006/10/07 12:56:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.43 2006/10/07 15:00:07 ticho Exp $
+
+  07 Oct 2006; Andrej Kacian <ticho@gentoo.org> sysklogd-1.4.2.ebuild:
+  Stable on x86, bug #149692.
 
   07 Oct 2006; Simon Stelling <blubb@gentoo.org> sysklogd-1.4.2.ebuild:
   stable on amd64
