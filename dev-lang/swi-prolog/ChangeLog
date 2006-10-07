@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.41 2006/10/03 21:36:21 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.42 2006/10/07 08:07:14 keri Exp $
+
+  07 Oct 2006; keri <keri@gentoo.org>
+  +files/swi-prolog-SGML_CATALOG_FILES.patch, swi-prolog-5.6.17-r1.ebuild,
+  swi-prolog-5.6.18.ebuild, swi-prolog-5.6.19.ebuild,
+  swi-prolog-5.6.20.ebuild, swi-prolog-5.6.21.ebuild:
+  Handle SGML_CATALOG_FILES environment variable containing non-existent
+  catalogs. Thanks to Christian Faulhammer <gentoo@faulhammer.org> in #149662.
 
   03 Oct 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   swi-prolog-5.6.17-r1.ebuild:
