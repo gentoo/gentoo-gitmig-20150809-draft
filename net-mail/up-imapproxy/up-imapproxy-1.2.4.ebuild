@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.4.ebuild,v 1.2 2006/03/05 08:22:20 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/up-imapproxy-1.2.4.ebuild,v 1.3 2006/10/07 02:25:22 ticho Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 src_unpack() {
 	unpack ${A} && cd "${S}"
 	epatch "${FILESDIR}"/${PV}-string-format-fix.patch
+	epatch "${FILESDIR}"/${PV}-include-fix.patch
 	sed -i -e 's:in\.imapproxyd:imapproxyd:g'  \
 		README Makefile.in include/imapproxy.h || die "sed failed"
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.13 2006/04/27 22:01:36 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.14 2006/10/07 02:25:22 ticho Exp $
+
+  07 Oct 2006; Andrej Kacian <ticho@gentoo.org>
+  +files/1.2.4-include-fix.patch, up-imapproxy-1.2.4.ebuild:
+  Fix building against >=openssl-0.9.8b. Fix by Francisco Javier <ffelix at
+  sshinf.com>, bug #146473.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
