@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/rtcwmp-demo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/ChangeLog,v 1.4 2006/03/31 21:19:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcwmp-demo/ChangeLog,v 1.5 2006/10/07 13:00:36 wolf31o2 Exp $
+
+  07 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  rtcwmp-demo-1.1.ebuild:
+  Stable on amd64/x86.
 
   31 Mar 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   rtcwmp-demo-1.1.ebuild:
