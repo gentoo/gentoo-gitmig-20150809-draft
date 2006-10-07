@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.13 2006/09/03 23:10:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/neon-0.26.1.ebuild,v 1.14 2006/10/07 22:36:07 vapier Exp $
 
 inherit eutils libtool versionator
 
@@ -11,7 +11,8 @@ SRC_URI="http://www.webdav.org/neon/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ~hppa ia64 mips ppc ~ppc-macos ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="expat gnutls nls socks5 ssl static zlib"
+IUSE="expat gnutls nls socks5 ssl zlib"
+RESTRICT="test"
 
 DEPEND="expat? ( dev-libs/expat )
 	!expat? ( dev-libs/libxml2 )
@@ -19,8 +20,6 @@ DEPEND="expat? ( dev-libs/expat )
 	zlib? ( sys-libs/zlib )
 	gnutls? ( >=net-libs/gnutls-1.0.22 )
 	!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6f ) )"
-
-RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
@@ -56,13 +55,8 @@ src_compile() {
 	    myconf="${myconf} --disable-nls"
 	fi
 
-	if use static; then
-	    myconf="${myconf} --enable-static"
-	else
-	    myconf="${myconf} --disable-static --with-pic"
-	fi
-
 	econf \
+		--enable-static \
 		--enable-shared \
 		--without-gssapi \
 		$(use_with zlib) \
