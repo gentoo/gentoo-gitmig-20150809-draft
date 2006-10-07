@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.82 2006/07/06 21:25:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.83 2006/10/07 12:55:03 wolf31o2 Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -47,7 +47,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.82 2006/07/06 21:25:15 wolf31o2 Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.83 2006/10/07 12:55:03 wolf31o2 Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -112,7 +112,11 @@ else
 	export BOOTSTRAP_STAGE=0
 fi
 
-MYPROFILEDIR=$(readlink -f /etc/make.profile)
+if [[ -n $(type -p realpath) ]]; then
+    MYPROFILEDIR=$(realpath /etc/make.profile)
+else
+    MYPROFILEDIR=$(readlink -f /etc/make.profile)
+fi
 if [[ ! -d ${MYPROFILEDIR} ]] ; then
 	eerror "Error:  '${MYPROFILEDIR}' does not exist.  Exiting."
 	exit 1
@@ -256,7 +260,7 @@ done
 # that into a variable.
 
 eval $(pycmd 'import portage; print portage.settings.packages;' |
-sed 's/[][,]//g; s/ /\n/g; s/\*//g' | while read p; do n=${p##*/}; n=${n%\'};
+sed 's/[][,]//g; s/\*//g' | tr ' ' '\n' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # This stuff should never fail but will if not enough is installed.
