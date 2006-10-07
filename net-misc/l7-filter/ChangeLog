@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/l7-filter
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.35 2006/10/07 04:11:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/ChangeLog,v 1.36 2006/10/07 18:57:29 corsair Exp $
+
+  07 Oct 2006; Markus Rothe <corsair@gentoo.org> l7-filter-2.6.ebuild:
+  Added ~ppc64
 
   07 Oct 2006; Jeroen Roovers <jer@gentoo.org> l7-filter-2.6.ebuild:
   Marked ~hppa (bug #150343).
