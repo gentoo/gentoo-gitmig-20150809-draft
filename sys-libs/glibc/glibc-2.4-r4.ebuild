@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r4.ebuild,v 1.3 2006/10/06 16:15:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.4-r4.ebuild,v 1.4 2006/10/07 04:42:37 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -451,10 +451,11 @@ toolchain-glibc_src_install() {
 
 	# Make sure all the ABI's can find the locales and so we only
 	# have to generate one set
+	local a
 	keepdir /usr/$(get_libdir)/locale
-	for l in $(get_all_libdirs) ; do
-		if [[ ! -e ${D}/usr/${l}/locale ]] ; then
-			dosym /usr/$(get_libdir)/locale /usr/${l}/locale
+	for a in $(get_install_abis) ; do
+		if [[ ! -e ${D}/usr/$(get_abi_LIBDIR ${a})/locale ]] ; then
+			dosym /usr/$(get_libdir)/locale /usr/$(get_abi_LIBDIR ${a})/locale
 		fi
 	done
 
