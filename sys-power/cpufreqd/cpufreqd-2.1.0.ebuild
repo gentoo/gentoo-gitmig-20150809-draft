@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.1.0.ebuild,v 1.2 2006/07/13 18:59:16 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.1.0.ebuild,v 1.3 2006/10/07 06:45:42 phreak Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 IUSE="acpi apm lm_sensors nforce2 nvidia pmu"
-RDEPEND="sys-power/cpufrequtils
+RDEPEND=">=sys-power/cpufrequtils-002
 		lm_sensors? ( sys-apps/lm_sensors )"
 DEPEND="sys-apps/sed
 		${RDEPEND}"
