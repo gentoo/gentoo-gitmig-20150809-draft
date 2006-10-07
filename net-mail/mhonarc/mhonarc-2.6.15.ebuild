@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.15.ebuild,v 1.1 2005/12/29 18:37:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.15.ebuild,v 1.2 2006/10/07 23:35:08 kumba Exp $
 
 inherit perl-app
 
@@ -19,6 +19,6 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~amd64"
 S="${WORKDIR}/${P/mhonarc/MHonArc}"
 
 src_install() {
-	sed -e "s|\$(INSTALLPRG)|\$(INSTALLPRG) -prefix ${D}|g" -i Makefile
+	sed -e "s|-prefix |-prefix ${D}|g" -i Makefile
 	perl-module_src_install
 }
