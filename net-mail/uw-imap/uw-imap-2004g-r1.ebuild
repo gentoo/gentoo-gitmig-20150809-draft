@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r1.ebuild,v 1.9 2005/10/07 11:43:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2004g-r1.ebuild,v 1.10 2006/10/07 00:41:03 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -26,6 +26,9 @@ DEPEND="!net-mail/vimap
 	>=net-mail/mailbase-0.00-r8
 	ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )"
+
+RDEPEND="${DEPEND}
+	sys-apps/xinetd"
 
 pkg_setup() {
 	echo
