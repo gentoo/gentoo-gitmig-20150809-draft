@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.116 2006/10/03 21:12:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.117 2006/10/07 03:18:03 vapier Exp $
+
+*iptables-1.3.6-r1 (07 Oct 2006)
+
+  07 Oct 2006; Mike Frysinger <vapier@gentoo.org> +iptables-1.3.6-r1.ebuild:
+  Update l7-filter support #150124.
 
   03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   iptables-1.3.5-r4.ebuild:
