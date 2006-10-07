@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.10 2006/09/23 00:27:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3.ebuild,v 1.11 2006/10/07 15:41:01 eldad Exp $
 
 inherit eutils kde-functions autotools
 
@@ -60,7 +60,7 @@ src_compile() {
 
 	eautoconf
 	econf ${myconf} || die "Failed configuring hydrogen!"
-	emake || die "Failed making hydrogen!"
+	emake -j1 || die "Failed making hydrogen!"
 }
 
 src_install() {
@@ -75,7 +75,7 @@ src_install() {
 	popd
 
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README
 	dosym /usr/share/hydrogen/data/doc /usr/share/doc/${PF}/html
 	doman man/C/hydrogen.1
 
