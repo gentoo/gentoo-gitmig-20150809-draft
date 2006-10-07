@@ -1,3 +1,4 @@
+app-text/xdvik cjk
 dev-lang/ruby threads
 dev-libs/confuse test
 net-dns/avahi python
