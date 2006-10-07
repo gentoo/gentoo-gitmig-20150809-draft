@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/drkonqi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.57 2006/10/05 21:28:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/ChangeLog,v 1.58 2006/10/07 15:19:41 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest.
 
   05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-drkonqi-3.5.5, Manifest:

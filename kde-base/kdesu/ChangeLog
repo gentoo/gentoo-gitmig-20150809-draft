@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.47 2006/10/05 21:22:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.48 2006/10/07 15:15:33 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Regenerate digest.
 
   05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-kdesu-3.5.5, Manifest:

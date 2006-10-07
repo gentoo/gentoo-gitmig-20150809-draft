@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.365 2006/10/05 22:08:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.366 2006/10/07 15:06:26 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/digest-kdelibs-3.5.5, Manifest:
+  Regenerate digest.
 
   05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-kdelibs-3.5.5, Manifest:
