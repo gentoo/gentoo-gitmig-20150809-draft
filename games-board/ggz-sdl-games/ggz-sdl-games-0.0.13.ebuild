@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.4 2006/09/28 10:01:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.5 2006/10/07 00:40:12 nyhm Exp $
 
 inherit games
 
@@ -13,16 +13,28 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-amd64 ~ppc x86"
 IUSE=""
+RESTRICT="userpriv"
 
-DEPEND="~dev-games/libggz-0.0.13
-	~dev-games/ggz-client-libs-0.0.13
-	>=media-libs/libsdl-1.2.0
-	>=media-libs/sdl-image-1.2.0
-	>=media-libs/sdl-ttf-1.2.0"
+DEPEND="~dev-games/libggz-${PV}
+	~dev-games/ggz-client-libs-${PV}
+	media-libs/libsdl
+	media-libs/sdl-image
+	media-libs/sdl-mixer
+	media-libs/sdl-ttf
+	virtual/opengl
+	x11-libs/libXcursor"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e "s:[\]\${prefix}/share/ggz:${GAMES_DATADIR}/ggz:" \
+		-e "s:[\]\${prefix}/lib/ggz:${GAMES_LIBDIR}/ggz:" \
+		configure || die "sed failed"
+}
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README*
 	prepgamesdirs
 }
-
