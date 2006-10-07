@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.3 2005/10/08 23:07:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.64.ebuild,v 1.4 2006/10/07 16:41:12 grobian Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${P/-/}.tar.bz2
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc-macos ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="ssl ldap kerberos largeterminal pam passfile debug"
 
 DEPEND="virtual/libc
@@ -137,14 +137,10 @@ src_compile() {
 		myconf="${myconf} EXTRAAUTHENTICATORS=gss"
 	fi
 
-	if use ppc-macos; then
-		target=osx
+	if use pam ; then
+		target=lnp
 	else
-		if use pam ; then
-			target=lnp
-		else
-			target=slx
-		fi
+		target=slx
 	fi
 
 	./build ${myconf} ${target} || die "compile problem"
