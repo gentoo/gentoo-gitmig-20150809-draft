@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.15 2006/10/01 17:42:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.16 2006/10/07 04:06:05 beandog Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -9,7 +9,7 @@ PATCHLEVEL="4"
 IUSE="aalib alsa dv lirc mmx motif nls opengl quicktime X xv zvbi xext"
 
 MY_FONT=tv-fonts-1.1
-DESCRIPTION="TV application for the bttv driver"
+DESCRIPTION="Small suite of video4linux related software"
 HOMEPAGE="http://bytesex.org/xawtv/"
 SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
 	X? ( http://dl.bytesex.org/releases/tv-fonts/${MY_FONT}.tar.bz2 )
