@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.1-r2.ebuild,v 1.3 2006/09/29 19:19:03 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.1-r2.ebuild,v 1.4 2006/10/07 09:15:38 flameeyes Exp $
 
 inherit cron pam eutils
 
@@ -9,13 +9,13 @@ HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~mips ppc sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ppc sparc ~x86 ~x86-fbsd"
 IUSE="debug doc pam selinux"
 
 DEPEND="virtual/editor
 	doc? ( >=app-text/docbook-dsssl-stylesheets-1.77 )
 	selinux? ( sys-libs/libselinux )
-	pam? ( >=sys-libs/pam-0.77 )"
+	pam? ( virtual/pam )"
 
 pkg_setup() {
 	# sudo unsets EDITOR
