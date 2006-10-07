@@ -1,0 +1,24 @@
+diff -urNp ifd-gempc-1.0.1.org/GemPC410/Makefile ifd-gempc-1.0.1/GemPC410/Makefile
+--- ifd-gempc-1.0.1.org/GemPC410/Makefile	2005-06-17 13:58:23.000000000 +0300
++++ ifd-gempc-1.0.1/GemPC410/Makefile	2006-10-07 02:38:25.000000000 +0200
+@@ -47,7 +47,7 @@ libGemPC410.so: common $(targets)
+ 	rm -f $@
+ 	$(CC) -shared $(targets) $(common_targets) -o $@
+ 	chmod -x $@
+-	strip --strip-unneeded $@
++#	strip --strip-unneeded $@
+ 	mv $@ $@.$(version)
+ 
+ clean:
+diff -urNp ifd-gempc-1.0.1.org/GemPC430/Makefile ifd-gempc-1.0.1/GemPC430/Makefile
+--- ifd-gempc-1.0.1.org/GemPC430/Makefile	2006-02-08 21:43:47.000000000 +0200
++++ ifd-gempc-1.0.1/GemPC430/Makefile	2006-10-07 02:38:31.000000000 +0200
+@@ -45,7 +45,7 @@ ifd-GemPC430: common $(targets) main.o .
+ 
+ libGemPC430.so: common $(targets)
+ 	$(CC) -shared $(LDFLAGS) -o $@ $(targets) $(common_targets)
+-	strip $@
++#	strip $@
+ 
+ main.o: ../GemPC410/main.c
+ 	$(CC) $(CFLAGS) -c -o $@ $^
