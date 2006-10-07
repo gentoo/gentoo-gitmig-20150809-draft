@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.3 2006/09/05 04:54:57 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.4 2006/10/07 17:28:55 pbienst Exp $
 
 inherit eutils toolchain-funcs fortran
 
@@ -21,6 +21,7 @@ src_compile() {
 	local myconf
 	# ICC: if we've got it, use it
 	use icc && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
+	myconf="${myconf} --enable-shared"
 
 	export CC=$(tc-getCC) CXX=$(tc-getCXX)
 	econf ${myconf} || die "econf failed"

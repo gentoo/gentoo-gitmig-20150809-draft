@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.23 2006/09/05 04:54:57 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.24 2006/10/07 17:28:55 pbienst Exp $
+
+  07 Oct 2006; <pbienst@gentoo.org> blitz-0.9.ebuild:
+  Add --enable-shared.
 
   05 Sep 2006; Joshua Jackson <tsunam@gentoo.org> blitz-0.9.ebuild:
   Stable x86; bug #137372
