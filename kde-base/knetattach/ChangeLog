@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/knetattach
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.52 2006/10/07 15:25:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.53 2006/10/07 17:01:53 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  files/digest-knetattach-3.5.5, Manifest:
+  Regenerate digest (this time hopefully..).
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest.

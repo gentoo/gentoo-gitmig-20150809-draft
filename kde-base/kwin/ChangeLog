@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.67 2006/10/07 15:11:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.68 2006/10/07 16:48:38 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> Manifest:
+  Regenerate digest (this time hopefully..).
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest.

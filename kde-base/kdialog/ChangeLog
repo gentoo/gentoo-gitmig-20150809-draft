@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.48 2006/10/07 15:14:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.49 2006/10/07 16:51:41 flameeyes Exp $
+
+  07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> Manifest:
+  Regenerate digest (this time hopefully..).
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest.
