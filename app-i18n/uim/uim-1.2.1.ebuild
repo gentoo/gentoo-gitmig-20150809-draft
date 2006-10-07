@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.3 2006/10/05 15:58:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.2.1.ebuild,v 1.4 2006/10/07 04:17:07 matsuu Exp $
 
 inherit eutils kde-functions flag-o-matic multilib elisp-common
 
@@ -26,7 +26,7 @@ RDEPEND="X? ( || ( (
 			x11-libs/libXrender
 		)
 		<virtual/x11-7 ) )
-	anthy? ( app-i18n/anthy )
+	anthy? ( || ( app-i18n/anthy app-i18n/anthy-ss ) )
 	canna? ( app-i18n/canna )
 	eb? ( dev-libs/eb )
 	emacs? ( virtual/emacs )
