@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tuprolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.5 2006/10/06 22:15:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tuprolog/ChangeLog,v 1.6 2006/10/07 00:59:50 keri Exp $
+
+  07 Oct 2006; keri <keri@gentoo.org> +files/tuprolog-1.3.0-java1.4.patch,
+  tuprolog-1.3.0-r1.ebuild:
+  Add java1.4 patch
 
   06 Oct 2006; keri <keri@gentoo.org> files/tuprolog-1.3.0-javadocs.patch:
   Fix generation of javadocs.
