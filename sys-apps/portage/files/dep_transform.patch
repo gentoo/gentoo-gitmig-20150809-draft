@@ -1,0 +1,12 @@
+Index: pym/portage_update.py
+===================================================================
+--- pym/portage_update.py	(revision 4616)
++++ pym/portage_update.py	(revision 4617)
+@@ -214,4 +214,6 @@
+ 			continue
+ 
+ def dep_transform(mydep, oldkey, newkey):
+-	return mydep.replace(oldkey, newkey, 1)
++	if dep_getkey(mydep) == oldkey:
++		return mydep.replace(oldkey, newkey, 1)
++	return mydep
