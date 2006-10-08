@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060619.ebuild,v 1.2 2006/06/25 23:12:53 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20060619.ebuild,v 1.3 2006/10/08 17:38:32 malc Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -68,6 +68,7 @@ src_compile() {
 	`use_enable oss` \
 	`use_enable mmx` \
 	`use_enable 3dnow` \
+	--with-plugindir=/usr/$(get_libdir)/cinelerra \
 	|| die "configure failed"
 	make || die "make failed"
 }
