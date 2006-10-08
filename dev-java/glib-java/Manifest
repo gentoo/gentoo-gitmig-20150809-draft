@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX aclocal_voodoo.patch 749 RMD160 ae731fbbcb529dfb0231f85430aacb912d7040f3 SHA1 4d50db15a8bce78bc45019b98eb1c982d41f8c1e SHA256 5129cfd8bffc258fa132dd2a16a01d0f95c9bd16d437219e5b75e906e38e98ef
 MD5 6f1550893a37966aca2b2c7ceb220b71 files/aclocal_voodoo.patch 749
 RMD160 ae731fbbcb529dfb0231f85430aacb912d7040f3 files/aclocal_voodoo.patch 749
@@ -30,3 +33,10 @@ SHA256 780864c68aa4c69d8db86bc0bf78d2d79a20106b96ed62736ac678aa7637d8b0 files/di
 MD5 4bd770e9f2483962473c11153105b4d9 files/digest-glib-java-0.2.6 247
 RMD160 0d1576844d6407b6b56f60491328194be6603eb5 files/digest-glib-java-0.2.6 247
 SHA256 bb23cae689269e5290e3b483d8ff52bed431a5bbc60e4f452fce11dea9459288 files/digest-glib-java-0.2.6 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFKOyFI1lqEGTUzyQRAuYBAJ9SGQ4Z4+GtyqgRfpnSRPo+k81aQQCfZQ0H
+l1quxoek6cdYC9mxk2QF8uA=
+=EY57
+-----END PGP SIGNATURE-----
