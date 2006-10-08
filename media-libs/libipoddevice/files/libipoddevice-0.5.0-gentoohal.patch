@@ -1,0 +1,11 @@
+--- libipoddevice-0.5.0/data/20-ipod-info.fdi.orig	2006-09-18 14:42:48.000000000 +0100
++++ libipoddevice-0.5.0/data/20-ipod-info.fdi	2006-10-08 16:48:04.901441896 +0100
+@@ -4,7 +4,7 @@
+   <device>
+     <match key="@info.parent:storage.vendor" contains="Apple">
+       <match key="@info.parent:storage.model" contains="iPod">
+-        <match key="volume.policy.should_mount" bool="true"> 
++        <match key="volume.fsusage" contains="filesystem"> 
+           <append key="org.freedesktop.Hal.Device.Volume.method_names" type="strlist">WriteIpodInfo</append>
+           <append key="org.freedesktop.Hal.Device.Volume.method_signatures" type="strlist">as</append>
+           <append key="org.freedesktop.Hal.Device.Volume.method_execpaths" type="strlist">hal-ipod-info</append>
