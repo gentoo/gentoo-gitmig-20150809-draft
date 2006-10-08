@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nam
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/ChangeLog,v 1.10 2006/08/01 23:24:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/ChangeLog,v 1.11 2006/10/08 15:56:26 blubb Exp $
+
+  08 Oct 2006; Simon Stelling <blubb@gentoo.org> nam-1.11.ebuild:
+  marking -amd64; this is not 64bit save at all, doesn't even compile with
+  gcc4; bug 149880
 
   01 Aug 2006; Marcelo Goes <vanquirius@gentoo.org>
   +files/nam-1.11-gcc4.patch, nam-1.11.ebuild:

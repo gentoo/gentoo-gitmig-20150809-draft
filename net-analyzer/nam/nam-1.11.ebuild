@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.5 2006/08/01 23:24:39 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nam/nam-1.11.ebuild,v 1.6 2006/10/08 15:56:26 blubb Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI_BASE}/${MY_P}.tar.gz
 		${SRC_URI_BASE}/${P}.patch"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="-amd64 ~ppc ~sparc ~x86"
 IUSE="debug"
 need_tclver="8.4.4"
 valid_tclver="${need_tclver}"
