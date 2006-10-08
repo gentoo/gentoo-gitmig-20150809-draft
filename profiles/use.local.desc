@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2217 2006/10/08 12:51:40 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2218 2006/10/08 14:20:32 nichoj Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -459,6 +459,7 @@ dev-util/catalyst:ccache - Enables ccache support
 dev-util/cvs:server - Enable server support
 dev-util/debootstrap:nodpkg - Don't install dpkg (useful for building a non-debian system)
 dev-util/eclipse-sdk:atk - Enable atk (accessibility) support
+dev-util/eclipse-sdk:branding - Enable Gentoo branded splash screen
 dev-util/eclipse-sdk:cairo - adds cairo support
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
