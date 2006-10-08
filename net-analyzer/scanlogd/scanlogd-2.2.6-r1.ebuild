@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r1.ebuild,v 1.4 2006/09/17 11:53:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/scanlogd-2.2.6-r1.ebuild,v 1.5 2006/10/08 12:43:24 jokey Exp $
 
-inherit eutils flag-o-matic
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Scanlogd - detects and logs TCP port scans"
 SRC_URI="http://www.openwall.com/scanlogd/${P}.tar.gz"
@@ -22,27 +22,19 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-Makefile.patch"
 }
 
 src_compile() {
-	# flags used by upstream
-	if ! is-flag -fomit-frame-pointer ; then
-	    append-flags -fomit-frame-pointer
-	fi
-	if ! is-ldflag -s ; then
-	    append-ldflags -s
-	fi
-
-	make linux || die "make failed"
+	make CC="$(tc-getCC)" linux || die "make failed"
 }
 
 src_install() {
 	dosbin scanlogd
 	doman scanlogd.8
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/scanlogd.rc scanlogd
+	newinitd "${FILESDIR}"/scanlogd.rc scanlogd
 }
 
 pkg_postinst() {
