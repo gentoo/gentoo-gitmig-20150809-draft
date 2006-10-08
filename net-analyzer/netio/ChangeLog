@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netio
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.13 2006/03/10 00:00:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/ChangeLog,v 1.14 2006/10/08 16:48:57 malc Exp $
+
+  08 Oct 2006; <malc@gentoo.org> netio-1.26.ebuild:
+  Add ~amd64 - bug #150457
 
   10 Mar 2006; Michael Hanselmann <hansmi@gentoo.org> netio-1.26.ebuild:
   Stable on ppc.
