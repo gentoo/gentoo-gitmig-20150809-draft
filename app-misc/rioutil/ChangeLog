@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/rioutil
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.22 2005/07/21 17:25:30 dholm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.23 2006/10/08 11:15:11 jokey Exp $
+
+*rioutil-1.5.0 (08 Oct 2006)
+
+  08 Oct 2006; Markus Ullmann <jokey@gentoo.org>
+  -files/rioutil-1.5.0b-time.patch, +files/rioutil-gcc4.1.1.patch,
+  rioutil-1.4.4.ebuild, -rioutil-1.4.7.ebuild, +rioutil-1.5.0.ebuild,
+  -rioutil-1.5.0b.ebuild:
+  GCC 4.1 cleanup wrt bug #147240
 
   21 Jul 2005; David Holm <dholm@gentoo.org> rioutil-1.5.0b.ebuild:
   Added to ~ppc.

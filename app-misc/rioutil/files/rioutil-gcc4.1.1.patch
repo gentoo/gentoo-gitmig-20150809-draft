@@ -1,0 +1,11 @@
+--- rioutil-1.4.4.orig/librioutil/rio.c
++++ rioutil-1.4.4/librioutil/rio.c
+@@ -373,7 +373,7 @@
+     return ret;
+   }
+
+-  iptr = (u_int32_t *)read_buffer = (u_int8_t *) malloc (RIO_FTS);
++  iptr = (u_int32_t *)(read_buffer = (u_int8_t *) malloc (RIO_FTS));
+   if (read_buffer == NULL) {
+     rio_log (rio, errno, "Could not allocate read buffer\n");
+     return errno;
