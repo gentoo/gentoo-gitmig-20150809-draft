@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2213 2006/10/07 20:35:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2214 2006/10/08 00:35:51 sbriesen Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1058,6 +1058,10 @@ net-dialup/isdn4k-utils:isdnlog - Install the isdn log system
 net-dialup/isdn4k-utils:mschap - Enable Microsoft chap authentication for ipppd
 net-dialup/ivcall:softfax - Enables soft fax support
 net-dialup/mgetty:fidonet - Enables FidoNet support
+net-dialup/misdn:ecaggressive - Make the selected echo canceller a little more aggressive
+net-dialup/misdn:eckb1 - Use the KB1 echo canceller
+net-dialup/misdn:ecmark2 - Use the MARK2 echo canceller
+net-dialup/misdn:ecmg2 - Use the MG2 echo canceller (default)
 net-dialup/ppp:activefilter - Enables activefilter support
 net-dialup/ppp:atm - Enables support for PPP over ATM (PPPoA)
 net-dialup/ppp:dhcp - Enables the DHCP plugin
