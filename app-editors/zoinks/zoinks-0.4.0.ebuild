@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.0.ebuild,v 1.1 2006/01/22 20:56:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.0.ebuild,v 1.2 2006/10/08 17:39:42 genone Exp $
 
 inherit eutils
 
@@ -20,6 +20,11 @@ DEPEND="nls? ( sys-devel/gettext )
 		x11-libs/libXext
 		x11-libs/libXt )
 		virtual/x11 )"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-gcc-4.1-fix.diff
+}
 
 src_compile() {
 	econf \

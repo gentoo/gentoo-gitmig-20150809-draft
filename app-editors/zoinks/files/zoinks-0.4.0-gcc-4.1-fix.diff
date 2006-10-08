@@ -1,0 +1,11 @@
+--- zoinks-0.4.0/fw/TTextView.cpp.org	2006-10-08 19:04:24.278148250 +0200
++++ zoinks-0.4.0/fw/TTextView.cpp	2006-10-08 19:04:51.283836000 +0200
+@@ -462,7 +462,7 @@
+ 		{
+ 			if (offset < fSelectionAnchor)
+ 			{
+-				selectionStart = selectionStart = fLayout->GetLineOffset(fLayout->OffsetToLine(offset));
++				selectionStart = fLayout->GetLineOffset(fLayout->OffsetToLine(offset));
+ 				selectionEnd = fSelectionAnchorEnd;
+ 			}
+ 			else if (offset > fSelectionAnchorEnd)
