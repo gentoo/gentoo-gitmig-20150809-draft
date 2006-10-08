@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.7.ebuild,v 1.1 2006/05/29 08:01:09 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/taxbird-0.7.ebuild,v 1.2 2006/10/08 17:44:32 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.taxbird.de/"
 SRC_URI="http://www.taxbird.de/download/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
