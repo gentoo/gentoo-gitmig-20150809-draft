@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.115 2006/10/08 02:44:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.116 2006/10/08 15:04:43 nichoj Exp $
+
+  08 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  eclipse-sdk-3.2.1-r1.ebuild:
+  Made branded splash depend on branding use flag.
 
 *eclipse-sdk-3.2.1-r1 (08 Oct 2006)
 

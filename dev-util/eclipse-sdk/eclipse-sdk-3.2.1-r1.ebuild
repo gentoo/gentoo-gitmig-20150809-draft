@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.1 2006/10/08 02:44:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.2.1-r1.ebuild,v 1.2 2006/10/08 15:04:43 nichoj Exp $
 
 inherit eutils java-pkg-2 flag-o-matic check-reqs multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/eclipse/downloads/drops/R-${PV}-${DATESTAMP}/${MY_A}
 mirror://gentoo/${PF}-patches.tar.bz2"
-IUSE="seamonkey gnome cairo opengl"
+IUSE="branding cairo gnome opengl seamonkey "
 SLOT="3.2"
 LICENSE="EPL-1.0"
 # TODO might be able to have ia64 and ppc64 support
@@ -173,7 +173,7 @@ apply-patchset() {
 	# %patch24 -p0
 	epatch ${WORKDIR}/${P}-fileinitializer.patch
 	popd >/dev/null
-	
+
 	##
 	## FIXME: breaks!!
 	##
@@ -219,7 +219,7 @@ apply-patchset() {
 	# %patch46
 	# epatch ${WORKDIR}/${P}-libswt-xpcomgcc4.patch
 	popd >/dev/null
-	
+
 	# Because the launcher source is zipped up, we need to unzip, patch, and re-pack
 	mkdir launchertmp
 	unzip -qq -d launchertmp plugins/org.eclipse.platform/launchersrc.zip >/dev/null || die "unzip failed"
@@ -232,7 +232,7 @@ apply-patchset() {
 	popd >/dev/null
 	mv launchersrc.zip plugins/org.eclipse.platform
 	rm -rf launchertmp
-	
+
 	pushd features/org.eclipse.platform.launchers >/dev/null
 	# %patch47 -p1
 	epatch ${WORKDIR}/${P}-launcher-link.patch
@@ -245,32 +245,32 @@ apply-patchset() {
 		plugins/org.eclipse.jdt.doc.isv/jdtOptions.txt  \
 		plugins/org.eclipse.pde.doc.user/pdeOptions.txt \
 		plugins/org.eclipse.pde.doc.user/pdeOptions     \
-		plugins/org.eclipse.platform.doc.isv/platformOptions.txt 
+		plugins/org.eclipse.platform.doc.isv/platformOptions.txt
 	# Always generate debug info when building RPMs (Andrew Haley)
 	# %patch49 -p0
 	epatch ${WORKDIR}/${P}-ecj-rpmdebuginfo.patch
-	
+
 	# generic releng plugins that can be used to build plugins
-	# see this thread for deails: 
+	# see this thread for deails:
 	# https://www.redhat.com/archives/fedora-devel-java-list/2006-April/msg00048.html
 	pushd plugins/org.eclipse.pde.build >/dev/null
 	# %patch53
 	epatch ${WORKDIR}/${P}-pde.build-add-package-build.patch
 	sed --in-place "s:@eclipse_base@:%{_datadir}/%{name}:" templates/package-build/build.properties
 	popd >/dev/null
-	
+
 	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=191536
 	# https://bugs.eclipse.org/bugs/show_bug.cgi?id=142861
 	pushd plugins/org.eclipse.swt/Eclipse\ SWT >/dev/null
-	# %patch54 
+	# %patch54
 	epatch ${WORKDIR}/${P}-swt-rm-ON_TOP.patch
 	popd >/dev/null
-	
+
 	# We need to disable junit4 and apt until GCJ can handle Java5 code
 	# %patch55 -p0
 	epatch ${WORKDIR}/${P}-disable-junit4-apt.patch
 	rm plugins/org.junit4/junit-4.1.jar
-	
+
 	##
 	## FIXME: breaks!!
 	##
@@ -293,7 +293,7 @@ apply-patchset() {
 	#mv Eclipse_SWT_PI "Eclipse SWT PI"
 	#popd >/dev/null
 	#pushd plugins/org.eclipse.swt.tools >/dev/null
-	#mv "JNI Generation" JNI_Generation 
+	#mv "JNI Generation" JNI_Generation
 	## %patch60
 	#epatch ${WORKDIR}/${P}-swt-firefox.2.patch
 	#mv JNI_Generation "JNI Generation"
@@ -308,12 +308,14 @@ apply-patchset() {
 	# %patch100 -p0
 	epatch ${WORKDIR}/customBuildCallbacks.xml-add-pre.gather.bin.parts.patch
 	popd >/dev/null
-	
-	pushd plugins/org.eclipse.platform >/dev/null
-	cp ${WORKDIR}/splash.bmp .
-	popd >/dev/null
-	
-	# FIXME this should be patched upstream with a flag to turn on and off 
+
+	if use branding; then
+		pushd plugins/org.eclipse.platform >/dev/null
+		cp ${WORKDIR}/splash.bmp .
+		popd >/dev/null
+	fi
+
+	# FIXME this should be patched upstream with a flag to turn on and off
 	# all output should be directed to stdout
 	find -type f -name \*.xml -exec sed --in-place -r "s/output=\".*(txt|log).*\"//g" "{}" \;
 }
