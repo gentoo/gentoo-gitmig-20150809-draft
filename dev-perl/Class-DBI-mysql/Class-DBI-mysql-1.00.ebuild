@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-mysql/Class-DBI-mysql-1.00.ebuild,v 1.8 2006/08/17 21:11:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-mysql/Class-DBI-mysql-1.00.ebuild,v 1.9 2006/10/08 03:37:36 mcummings Exp $
 
 inherit perl-module
 
@@ -19,4 +19,3 @@ DEPEND="dev-perl/Class-DBI
 		virtual/perl-Test-Simple
 		dev-perl/DBD-mysql
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
