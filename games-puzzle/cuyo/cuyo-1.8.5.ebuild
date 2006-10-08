@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.5.ebuild,v 1.7 2006/08/15 14:24:21 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/cuyo/cuyo-1.8.5.ebuild,v 1.8 2006/10/08 22:22:59 nyhm Exp $
 
-inherit kde-functions games
+inherit toolchain-funcs qt3 games
 
 DESCRIPTION="highly addictive and remotely related to tetris"
 HOMEPAGE="http://www.karimmi.de/cuyo/"
@@ -13,10 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="=x11-libs/qt-3*
-	sys-libs/zlib"
+DEPEND="$(qt_min_version 3.3)"
 
-S="${WORKDIR}/${P/_}"
+S=${WORKDIR}/${P/_}
 
 src_unpack() {
 	unpack ${A}
@@ -28,17 +27,15 @@ src_unpack() {
 }
 
 src_compile() {
-	set-qtdir 3
-	export PATH="${QTDIR}/bin:${PATH}" # bug #70861
 	egamesconf \
-		--with-qt \
+		--with-qtdir="${QTDIR}" \
 		--with-x \
 		|| die
-	emake || die "emake failed"
+	emake CXX=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README TODO ChangeLog
 	prepgamesdirs
 }
