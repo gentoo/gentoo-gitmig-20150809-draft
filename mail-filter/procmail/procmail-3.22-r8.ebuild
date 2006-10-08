@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r8.ebuild,v 1.1 2006/05/12 07:04:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r8.ebuild,v 1.2 2006/10/08 00:38:39 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,13 +10,13 @@ SRC_URI="http://www.procmail.org/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="mbox selinux"
-PROVIDE="virtual/mda"
 
 DEPEND="virtual/libc virtual/mta"
 RDEPEND="virtual/libc
 	selinux? ( sec-policy/selinux-procmail )"
+PROVIDE="virtual/mda"
 
 src_compile() {
 	# -finline-functions (implied by -O3) leaves strstr() in an infinite loop.
@@ -50,25 +50,25 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
-	cd ${S}/new
+src_install() {
+	cd "${S}"/new
 	insinto /usr/bin
 	insopts -m 6755
-	doins procmail
+	doins procmail || die
 
 	insopts -m 2755
-	doins lockfile
+	doins lockfile || die
 
-	dobin formail mailstat
+	dobin formail mailstat || die
 	insopts -m 0644
 
 	doman *.1 *.5
 
-	cd ${S}
-	dodoc Artistic COPYING FAQ FEATURES HISTORY INSTALL KNOWN_BUGS README
+	cd "${S}"
+	dodoc Artistic FAQ FEATURES HISTORY INSTALL KNOWN_BUGS README
 
 	insinto /etc
-	doins procmailrc
+	doins procmailrc || die
 
 	docinto examples
 	dodoc examples/*
