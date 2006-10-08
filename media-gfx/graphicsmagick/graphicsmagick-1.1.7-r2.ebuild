@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7-r2.ebuild,v 1.1 2006/08/16 21:18:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.7-r2.ebuild,v 1.2 2006/10/08 00:02:20 kloeri Exp $
 
 inherit libtool flag-o-matic perl-app
 
@@ -58,6 +58,7 @@ src_compile() {
 		--with-threads \
 		--with-bzlib \
 		--without-perl \
+		--without-fpx \
 		$(use_with X x) \
 		$(use_with jbig) \
 		$(use_with jpeg2k) \
