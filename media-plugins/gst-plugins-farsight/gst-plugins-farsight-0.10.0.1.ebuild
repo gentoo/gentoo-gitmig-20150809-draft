@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.10.0.1.ebuild,v 1.1 2006/06/09 23:27:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/gst-plugins-farsight-0.10.0.1.ebuild,v 1.2 2006/10/08 18:04:46 blubb Exp $
 
 inherit gst-plugins10
 
@@ -13,7 +13,7 @@ PVP=(${PV//[-\._]/ })
 SLOT=${PVP[0]}.${PVP[1]}
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="jrtplib jpeg2k gsm jingle msn yahoo"
 
 RDEPEND="=media-libs/gstreamer-0.10*
