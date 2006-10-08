@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.11 2006/10/01 17:43:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.12 2006/10/08 11:40:12 flameeyes Exp $
 
 inherit font multilib autotools
 
@@ -132,12 +132,18 @@ extension_install() {
 src_unpack() {
 	unpack ${A}
 	# Disable font installation
-	sed -i -e '/^install:/,/^$/s:^\t:#:p' ${S}/font/Makefile.in
+	sed -i -e '/^install:/,/^$/s:^\t:#:p' "${S}"/font/Makefile.in
 	# Disable /usr/share/xdtv/icons/* installation
-	sed -i -e '/^install-data-local:/,${\:share/xdtv/icons:d}' ${S}/Makefile.in
+	sed -i -e '/^install-data-local:/,${\:share/xdtv/icons:d}' "${S}"/Makefile.in
 
 	cd ${S}
-	epatch ${WORKDIR}/${P}-gcc4-amd64.patch
+	epatch "${WORKDIR}/${P}-gcc4-amd64.patch"
+
+	has_version '<x11-base/xorg-x11-7.0' && \
+		appdefaultsdir="/etc/X11/app-defaults" || \
+		appdefaultsdir="/usr/share/X11/app-defaults"
+
+	sed -i -e 's:^app_defaults=""$:app_defaults="'${appdefaultsdir}'":' "${S}/configure.in"
 
 	eautoreconf
 }
