@@ -1,6 +1,20 @@
 # ChangeLog for dev-java/libgtk-java
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.22 2006/10/08 03:54:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.23 2006/10/08 04:21:30 nichoj Exp $
+
+  08 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  -files/libgtk-java-2.4.6_find_jni.patch,
+  -files/libgtk-java-2.4.6_gcj-autoconf-macro-fix.patch,
+  -files/libgtk-java-2.4.6_gentoo-PN-SLOT.patch,
+  -files/libgtk-java-2.4.6_install-doc.patch,
+  -files/libgtk-java-2.4.6_no-docbook-autoconf-macro.patch,
+  -files/libgtk-java-2.4.8.1_find-jni.patch,
+  -files/libgtk-java-2.4.8.1_fix-TextBuffer.patch,
+  -files/libgtk-java-2.4.8.1_gentoo-PN-SLOT.patch,
+  -libgtk-java-2.4.8.1.ebuild, -libgtk-java-2.4.9.ebuild,
+  -libgtk-java-2.6.2-r1.ebuild, -libgtk-java-2.8.1.ebuild,
+  -libgtk-java-2.8.2.ebuild, -libgtk-java-2.8.3.ebuild:
+  Pruned old revisions.
 
 *libgtk-java-2.8.7 (08 Oct 2006)
 
