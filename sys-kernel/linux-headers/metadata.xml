@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>toolchain</herd>
 <herd>kernel</herd>
-<maintainer>
-  <email>plasmaroo@gentoo.org</email>
-  <description>Primary maintainer of linux-headers-2.6</description>
-</maintainer>
-<maintainer>
-  <email>kumba@gentoo.org</email>
-  <description>Primary maintainer of linux-headers-2.4</description>
-</maintainer>
-<maintainer>
-  <email>x86-kernel@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
