@@ -11,7 +11,7 @@ plugin_pre_vdr_start() {
 
 plugin_pre_vdr_stop() {
 	if [[ ${SOFTDEVICE_VIDEO_OUT} == "shm" ]]; then
-		killall ShmClient
+		killall ShmClient 2>/dev/null
 	fi
 }
 
