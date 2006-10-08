@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-20050423.ebuild,v 1.3 2006/03/19 18:18:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/xar-20050423.ebuild,v 1.4 2006/10/08 16:08:18 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.opendarwin.org/projects/xar/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND="virtual/libc"
