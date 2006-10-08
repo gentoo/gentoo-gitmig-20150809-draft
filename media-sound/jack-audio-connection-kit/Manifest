@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX jack-audio-connection-kit-0.100.0-coreaudio.patch 13398 RMD160 2309f12bef00445dab5c52461e1e957e498bbf4e SHA1 509af453842e3f07212818f8b6cdd0f4adb90b0c SHA256 5abce05da2206f824b733d900378471f63a22ceee9553d632d05c37cb61ed71b
 MD5 464df562168e8de76000186ea43932b7 files/jack-audio-connection-kit-0.100.0-coreaudio.patch 13398
 RMD160 2309f12bef00445dab5c52461e1e957e498bbf4e files/jack-audio-connection-kit-0.100.0-coreaudio.patch 13398
@@ -59,14 +62,14 @@ EBUILD jack-audio-connection-kit-0.99.0-r3.ebuild 2271 RMD160 ea8ec47268d472e2d9
 MD5 3169635fb6706e22dde19c9dfdfd5ec7 jack-audio-connection-kit-0.99.0-r3.ebuild 2271
 RMD160 ea8ec47268d472e2d9e9b7af39714f59e3dfc428 jack-audio-connection-kit-0.99.0-r3.ebuild 2271
 SHA256 5ce1a5fad4a8c2a47a2bb9358be569ef5ba2c41b01835d4777af51ecab36e28b jack-audio-connection-kit-0.99.0-r3.ebuild 2271
-MISC ChangeLog 15045 RMD160 aa03ae2ee0a22f743c211e4c8105844bcb23f39d SHA1 f3f9240d8b327a8aa686733956b25812f92a00d8 SHA256 3981298f792c1ed45bcc02ec774e87729ae7746b0953d81000d76a324dd1d4b5
-MD5 f5911b8354e7ae64588bc83a5b218ec8 ChangeLog 15045
-RMD160 aa03ae2ee0a22f743c211e4c8105844bcb23f39d ChangeLog 15045
-SHA256 3981298f792c1ed45bcc02ec774e87729ae7746b0953d81000d76a324dd1d4b5 ChangeLog 15045
-MISC metadata.xml 218 RMD160 b0b0a0aaad9e84c4f9c4f1a02ac2b3b92b1faf26 SHA1 8fe3976f53975a3cde688bf5764fae3a1dbc816a SHA256 a6dd27c3e0546e9f77fd6e44a2d8349646bc8f82a29e7f19bd2b5b0fc3ca848a
-MD5 e9914343b13388692a7ed11361d53724 metadata.xml 218
-RMD160 b0b0a0aaad9e84c4f9c4f1a02ac2b3b92b1faf26 metadata.xml 218
-SHA256 a6dd27c3e0546e9f77fd6e44a2d8349646bc8f82a29e7f19bd2b5b0fc3ca848a metadata.xml 218
+MISC ChangeLog 15124 RMD160 75e629805510d97985cd3697fe9644c39ad3a253 SHA1 ad1ebe5f8c83bdac2e890a8a2dff2e545ae7ee9d SHA256 d65c193bb433696a08609925752b969f02f26245f891be8a61deecd8ed8604ee
+MD5 f28f0549be75d8edfc3a7c5cae25a63f ChangeLog 15124
+RMD160 75e629805510d97985cd3697fe9644c39ad3a253 ChangeLog 15124
+SHA256 d65c193bb433696a08609925752b969f02f26245f891be8a61deecd8ed8604ee ChangeLog 15124
+MISC metadata.xml 219 RMD160 7c971450acee367dfd576743077328e522a982dc SHA1 ec1d8eab4fee11c2086a21084b524d469e6d0cfa SHA256 dd0469dcffd4d616ef0e4ec7ef32c671b34dedc3c3a7cb483f51ee83e595e5e7
+MD5 3103176adc3a8955e78da40e62e109a9 metadata.xml 219
+RMD160 7c971450acee367dfd576743077328e522a982dc metadata.xml 219
+SHA256 dd0469dcffd4d616ef0e4ec7ef32c671b34dedc3c3a7cb483f51ee83e595e5e7 metadata.xml 219
 MD5 7182a5353b09d579a59b9f6d1551e0dc files/digest-jack-audio-connection-kit-0.100.7-r2 551
 RMD160 3882f3bcf8b519dea2d965981f81b2cda2c4c19a files/digest-jack-audio-connection-kit-0.100.7-r2 551
 SHA256 27e060bebeef7d7def2381ccdd992e768fad059f349dee1a1528637d187e5853 files/digest-jack-audio-connection-kit-0.100.7-r2 551
@@ -85,3 +88,10 @@ SHA256 488972326ad883aaff81ae045429f986515c0db45bc90c91a22f2e279d940eef files/di
 MD5 e1e0561e8f67b2f527014a57f5eb7a05 files/digest-jack-audio-connection-kit-0.99.0-r3 84
 RMD160 50b3c2bd1e9091937b776dbac651947ae1aa50c4 files/digest-jack-audio-connection-kit-0.99.0-r3 84
 SHA256 488972326ad883aaff81ae045429f986515c0db45bc90c91a22f2e279d940eef files/digest-jack-audio-connection-kit-0.99.0-r3 84
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFFKFqxT+MN7JbqCpMRAjjdAJ9IIwgD+3EGcn4jJ802Iure1/4NRgCdH4pM
+YaCvpdPkZIib3e+TmRCnUzQ=
+=3U/0
+-----END PGP SIGNATURE-----
