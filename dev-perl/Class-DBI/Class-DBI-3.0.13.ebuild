@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.13.ebuild,v 1.11 2006/08/04 23:10:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/Class-DBI-3.0.13.ebuild,v 1.12 2006/10/08 03:36:12 mcummings Exp $
 
 inherit perl-module
 
@@ -31,4 +31,3 @@ DEPEND="dev-perl/Class-Data-Inheritable
 		dev-perl/version
 		dev-perl/UNIVERSAL-moniker
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
