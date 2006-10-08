@@ -1,0 +1,6 @@
+# plugin-startup-skript for bitstreamout-plugin
+
+plugin_pre_vdr_start() {
+	[[ -n "${BITSTREAMOUT_MUTE}" ]] && add_plugin_param "--mute=${BITSTREAMOUT_MUTE}"
+}
+
