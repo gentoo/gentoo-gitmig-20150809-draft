@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/cohoba-0.0.4.ebuild,v 1.1 2006/10/08 19:09:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/cohoba-0.0.4.ebuild,v 1.2 2006/10/08 19:17:04 genstef Exp $
+
+inherit eutils
 
 DESCRIPTION="Gnome UI for Telepathy"
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -18,6 +20,14 @@ DEPEND="dev-python/gnome-python-desktop
 	x11-themes/gnome-themes"
 RDEPEND="${DEPEND}
 	gnome-base/control-center"
+
+pkg_setup() {
+	if ! built_with_use sys-apps/dbus python; then
+		eerror "you need to build dbus with USE=python"
+		die "dbus needs python bindings"
+	fi
+
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
