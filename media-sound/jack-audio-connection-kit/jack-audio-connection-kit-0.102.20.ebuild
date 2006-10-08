@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.101.1-r1.ebuild,v 1.4 2006/10/08 03:01:56 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.102.20.ebuild,v 1.1 2006/10/08 03:01:56 eldad Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	netjack? ( dev-util/scons )"
 
-
 pkg_setup() {
 	if ! use sndfile ; then
 		ewarn "sndfile not in USE flags. jack_rec will not be installed!"
@@ -51,19 +50,7 @@ src_unpack() {
 	use netjack && unpack ${NETJACK}.tar.bz2
 	cd ${S}
 
-	# the docs option is in upstream, I'll leave the pentium2 foobage
-	# for the x86 folks...... kito@gentoo.org
-
-	# Add doc option and fix --march=pentium2 in caps test
-	#epatch ${FILESDIR}/${PN}-doc-option.patch
-
-	# compile and install jackstart, see #92895, #94887
-	#if use caps ; then
-	#	epatch ${FILESDIR}/${PN}-0.99.0-jackstart.patch
-	#fi
-
 	epatch ${FILESDIR}/${PN}-transport.patch
-	epatch ${FILESDIR}/${PN}-mmap_complex.patch
 }
 
 src_compile() {
