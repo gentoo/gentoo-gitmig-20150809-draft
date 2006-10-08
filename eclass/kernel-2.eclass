@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.192 2006/09/06 18:14:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.193 2006/10/08 20:00:04 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -423,6 +423,10 @@ compile_headers() {
 		echo ">>> make oldconfig complete"
 		make dep ${xmakeopts}
 	elif kernel_is 2 6; then
+		# 2.6.18 introduces headers_install which means we dont need any
+		# of this crap anymore :D
+		kernel_is ge 2 6 18 && return 0
+
 		# autoconf.h isnt generated unless it already exists. plus, we have
 		# no guarantee that any headers are installed on the system...
 		[[ -f ${ROOT}/usr/include/linux/autoconf.h ]] \
@@ -479,6 +483,14 @@ install_universal() {
 }
 
 install_headers() {
+	# 2.6.18 introduces headers_install which means we dont need any
+	# of this crap anymore :D
+	if kernel_is ge 2 6 18 ; then
+		env_setup_xmakeopts
+		emake headers_install INSTALL_HDR_PATH="${D}"/usr ${xmakeopts} || die
+		return 0
+	fi
+
 	local ddir=$(kernel_header_destdir)
 
 	cd "${S}"
@@ -964,7 +976,7 @@ echo "#ifdef __arch64__
 
 headers___fix() {
 	# Voodoo to partially fix broken upstream headers.
-	# Issues with this function should go to plasmaroo.
+	# Issues with this function should go to toolchain.
 	sed -i \
 		-e '/^\#define.*_TYPES_H/{:loop n; bloop}' \
 		-e 's:\<\([us]\(8\|16\|32\|64\)\)\>:__\1:g' \
