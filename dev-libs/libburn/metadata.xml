@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-<email>metalgod@gentoo.org</email>
-<name>Luis Medinas</name>
-</maintainer>
 <longdescription lang="en">
 Libburn is an open-source library for reading, mastering and writing optical
 discs.
