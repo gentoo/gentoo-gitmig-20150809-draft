@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/exult
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.14 2006/05/05 06:21:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.15 2006/10/08 11:19:30 tupone Exp $
+
+  08 Oct 2006; <tupone@gentoo.org> +files/exult-1.2-x11link.patch,
+  exult-1.2.ebuild:
+  Fix linking with -lX11. Bug #143626 by koenigrollo@gmx.net
 
   05 May 2006; <Tupone@gentoo.org> +files/exult-1.2-gcc41.patch,
   exult-1.2.ebuild:
