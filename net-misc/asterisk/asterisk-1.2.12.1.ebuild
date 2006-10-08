@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.5 2006/10/08 00:38:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.6 2006/10/08 00:46:27 genstef Exp $
 
 inherit eutils multilib
 
@@ -408,12 +408,12 @@ src_install() {
 	# install asterisk-updater
 	dosbin ${FILESDIR}/1.2.0/asterisk-updater
 
-	# make sure misdn stuff is not installed, provided by asterisk-chan_misdn
-	rm -f ${D}/etc/asterisk/misdn.conf
-	rm -f ${D}/usr/lib/asterisk/modules/chan_misdn.so
-	rm -f ${D}/usr/share/doc/${PF}/configs/misdn.conf.sample.gz
-	rm -f ${D}/usr/share/doc/${PF}/README.misdn.gz
-	rm -f ${D}/usr/share/doc/${PF}/conf/misdn.conf
+	# make sure misdn/capi stuff is not installed, provided by asterisk-chan_..
+	rm -f ${D}/etc/asterisk/misdn.conf ${D}/usr/lib/asterisk/modules/chan_misdn.so \
+		${D}/usr/share/doc/${PF}/{conf/misdn.conf,configs/misdn.conf.sample.gz,README.misdn.gz}
+	rm -f ${D}/usr/include/asterisk/chan_capi{,_app}.h \
+		${D}/usr/share/doc/${PF}/{conf/capi.conf,configs/capi.conf.sample.gz}
+	
 }
 
 pkg_preinst() {
