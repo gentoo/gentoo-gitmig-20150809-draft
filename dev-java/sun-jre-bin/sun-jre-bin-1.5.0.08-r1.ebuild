@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.08-r1.ebuild,v 1.3 2006/09/23 01:09:07 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.5.0.08-r1.ebuild,v 1.4 2006/10/08 15:10:15 nichoj Exp $
 
 inherit java-vm-2 eutils
 
@@ -24,8 +24,6 @@ LICENSE="dlj-1.1"
 KEYWORDS="~amd64 ~x86 -*"
 RESTRICT="nostrip"
 IUSE="X alsa nsplugin"
-
-JAVA_VM_NO_GENERATION1=true
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	X? ( || ( ( x11-libs/libICE
@@ -151,10 +149,4 @@ pkg_postinst() {
 	echo
 	ewarn "Some parts of Sun's JDK require ${xwarn} virtual/lpr to be installed."
 	ewarn "Be careful which Java libraries you attempt to use."
-
-	echo
-	einfo " Be careful: ${P}'s Java compiler uses"
-	einfo " '-source 1.5' as default. Some keywords such as 'enum'"
-	einfo " are not valid identifiers any more in that mode,"
-	einfo " which can cause incompatibility with certain sources."
 }
