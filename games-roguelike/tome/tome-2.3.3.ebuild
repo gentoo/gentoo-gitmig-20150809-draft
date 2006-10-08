@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.3.ebuild,v 1.2 2006/03/07 19:28:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/tome-2.3.3.ebuild,v 1.3 2006/10/08 20:54:22 tupone Exp $
 
 inherit eutils flag-o-matic games
 
@@ -30,7 +30,9 @@ S="${WORKDIR}/tome-${MY_PV}-src"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}/src"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+	cd "src"
 	mv makefile.std makefile
 	epatch "${FILESDIR}/${PV}-gentoo-paths.patch"
 	sed -i \

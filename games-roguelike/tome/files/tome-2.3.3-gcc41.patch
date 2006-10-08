@@ -1,0 +1,18 @@
+--- src/main-gtk.c.old	2006-10-08 22:36:50.000000000 +0200
++++ src/main-gtk.c	2006-10-08 22:37:24.000000000 +0200
+@@ -4478,13 +4478,13 @@
+ 		strnfmt(buf, 64, "/Terms/%s", angband_term_name[i]);
+ 
+ 		/* XXX XXX Store it in the menu definition */
+-		(cptr)term_entry[i].path = string_make(buf);
++		term_entry[i].path = string_make(buf);
+ 
+ 		/* XXX XXX Build the real path name to the entry */
+ 		strnfmt(buf, 64, "/Options/Font/%s", angband_term_name[i]);
+ 
+ 		/* XXX XXX Store it in the menu definition */
+-		(cptr)font_entry[i].path = string_make(buf);
++		font_entry[i].path = string_make(buf);
+ 	}
+ }
+ 

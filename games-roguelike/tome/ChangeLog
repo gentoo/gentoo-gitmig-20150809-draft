@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/tome
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.23 2006/03/07 19:28:10 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.24 2006/10/08 20:54:22 tupone Exp $
+
+  08 Oct 2006; <tupone@gentoo.org> +files/tome-2.3.3-gcc41.patch,
+  tome-2.3.3.ebuild:
+  Failed emerging with gcc-4. Bug #145125 by Elmo Todurov
 
   07 Mar 2006; <Tupone@gentoo.org> tome-2.3.3.ebuild:
   using bindnow-flags and adding ~ppc-macosx
