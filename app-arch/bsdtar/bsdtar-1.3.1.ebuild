@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.3.1.ebuild,v 1.3 2006/10/06 12:57:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdtar/bsdtar-1.3.1.ebuild,v 1.4 2006/10/08 19:44:50 grobian Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -15,7 +15,7 @@ SRC_URI="http://people.freebsd.org/~kientzle/libarchive/src/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x86-fbsd"
 IUSE="build static acl xattr"
 
 RDEPEND="!dev-libs/libarchive
@@ -69,9 +69,7 @@ src_install() {
 		dosym bsdtar.1.gz /usr/share/man/man1/tar.1.gz
 	fi
 
-	if [[ ${CHOST} != *-darwin* ]]; then
-		dodir /$(get_libdir)
-		mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
-		gen_usr_ldscript libarchive.so
-	fi
+	dodir /$(get_libdir)
+	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)
+	gen_usr_ldscript libarchive.so
 }
