@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-DIST fortune-mod-futurama-0.2.tar.gz 19351 RMD160 14db336e43f6852420d6f3bb0b41fd466bb8243b SHA1 5e09946c4dc53c7a77ffeff37fe4edf5c2bb3c4e SHA256 e5d824c5a9a1a754c27e3bd56a98ec3912cb163761f95b1b632965ae7a217bd4
-EBUILD fortune-mod-futurama-0.2.ebuild 637 RMD160 44abc52b60c6d95ec935de56d045e0ae8131a90a SHA1 b4a6618cafe85e309fdf1edf47e2382bedca61e8 SHA256 c44eef4ac78dc84ffff09d238ca384e447db1093d6b710d2b492d15e8c398f06
-MD5 e3f7e17359808a078333d4737e2595d6 fortune-mod-futurama-0.2.ebuild 637
-RMD160 44abc52b60c6d95ec935de56d045e0ae8131a90a fortune-mod-futurama-0.2.ebuild 637
-SHA256 c44eef4ac78dc84ffff09d238ca384e447db1093d6b710d2b492d15e8c398f06 fortune-mod-futurama-0.2.ebuild 637
+DIST fortune-mod-futurama-0.2.tar.gz 19349 RMD160 b9967ab563d5fcf3afaf1c8f87a46346a74941b7 SHA1 ef4078f818142dd55befd75438a44daae7265b0b SHA256 e3076fdfa7f2e198df7adff06556597b87f7f5e0ab6facf850aed48c4d0ef2d2
+EBUILD fortune-mod-futurama-0.2.ebuild 652 RMD160 d55abf93249d537678c25ae1a2e6b6eee53ba717 SHA1 b59078aecf6695dbd679e33f50ff9863acd6cbdc SHA256 ac8d43c7a396cbf18b68067c284f5fbd69cddca43beb6d41ee31b94072260cd5
+MD5 5f8aa667e2364033e86a1fa2b6f4b730 fortune-mod-futurama-0.2.ebuild 652
+RMD160 d55abf93249d537678c25ae1a2e6b6eee53ba717 fortune-mod-futurama-0.2.ebuild 652
+SHA256 ac8d43c7a396cbf18b68067c284f5fbd69cddca43beb6d41ee31b94072260cd5 fortune-mod-futurama-0.2.ebuild 652
 MISC ChangeLog 1297 RMD160 0c66a645fed8034918cfac849b564432667785b9 SHA1 bfd7d9bd8f1bf21657158d749a728d21a7fde04c SHA256 6555c6ea3c14633ea003faf82b9906d47f54e1c9725009df26dc278647da1d81
 MD5 dba5796027df4e3f268f5a06b0914e6c ChangeLog 1297
 RMD160 0c66a645fed8034918cfac849b564432667785b9 ChangeLog 1297
@@ -14,13 +14,13 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 22640f4ca9149e33ec091969636859b1 files/digest-fortune-mod-futurama-0.2 271
-RMD160 06de6c607e443b75c9d26ebe95ca5e0c776fb79e files/digest-fortune-mod-futurama-0.2 271
-SHA256 752470beb166ebbdd70d07ab9a92a8f42508c8e134720169809daff9c324a85d files/digest-fortune-mod-futurama-0.2 271
+MD5 2d86ef723549da4f6582fac78f0e4c32 files/digest-fortune-mod-futurama-0.2 271
+RMD160 2631346fc19aa6e8294a60af3bd63a4eab77ef79 files/digest-fortune-mod-futurama-0.2 271
+SHA256 faca48e9dac327c1ff847c45bf2af063d920d3a85b43159286d3621fc22ea086 files/digest-fortune-mod-futurama-0.2 271
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEvoxzAiZjviIA2XgRAp6XAJ93Fq+lYhwjL7ab7aWS9VQ8UviDCgCgrEyr
-dNbbHR8Wvi/yRDl/oAem2EA=
-=ISHW
+iD8DBQFFKGClamhnQswr0vIRAv+LAJ9HlP7teix5ZsObcakeVdpxI/DD3QCgjUph
+LzUv9CXYD4Ybjd7mcadpIIA=
+=WP1/
 -----END PGP SIGNATURE-----
