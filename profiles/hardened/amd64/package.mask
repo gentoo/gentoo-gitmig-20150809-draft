@@ -1,0 +1,3 @@
+# Danny van Dyk <kugelfang@gentoo.org>
+# grub needs a 32bit gcc on amd64.
+sys-boot/grub
