@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.9.ebuild,v 1.2 2006/09/25 20:34:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.9.ebuild,v 1.3 2006/10/08 18:06:11 blubb Exp $
 
 inherit autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://tapioca-voip.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tapioca-voip/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="speex ilbc ortp"
 SLOT="0"
 
