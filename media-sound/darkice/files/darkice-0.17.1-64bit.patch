@@ -1,0 +1,28 @@
+diff -Naur darkice-0.17.1.orig/src/LameLibEncoder.cpp darkice-0.17.1/src/LameLibEncoder.cpp
+--- darkice-0.17.1.orig/src/LameLibEncoder.cpp	2006-05-19 21:35:25.000000000 +0900
++++ darkice-0.17.1/src/LameLibEncoder.cpp	2006-10-08 14:27:02.000000000 +0900
+@@ -79,10 +79,10 @@
+     lameGlobalFlags = lame_init();
+ 
+     // ugly lame returns -1 in a pointer on allocation errors
+-    if ( !lameGlobalFlags || ((int)lameGlobalFlags) == -1 ) {
++    if ( !lameGlobalFlags || ((long int)lameGlobalFlags) == -1 ) {
+         throw Exception( __FILE__, __LINE__,
+                          "lame lib init error",
+-                         (int) lameGlobalFlags);
++                         (long int) lameGlobalFlags);
+     }
+ 
+     if ( 0 > lame_set_num_channels( lameGlobalFlags, getInChannel()) ) {
+diff -Naur darkice-0.17.1.orig/src/TwoLameLibEncoder.cpp darkice-0.17.1/src/TwoLameLibEncoder.cpp
+--- darkice-0.17.1.orig/src/TwoLameLibEncoder.cpp	2006-01-26 07:49:59.000000000 +0900
++++ darkice-0.17.1/src/TwoLameLibEncoder.cpp	2006-10-08 14:26:29.000000000 +0900
+@@ -117,7 +117,7 @@
+     if ( !twolame_opts  ) {
+         throw Exception( __FILE__, __LINE__,
+                          "TwoLAME lib init error",
+-                         (int) twolame_opts);
++                         (long) twolame_opts);
+     }
+ 
+     if ( 0 > twolame_set_num_channels( twolame_opts, getInChannel()) ) {
