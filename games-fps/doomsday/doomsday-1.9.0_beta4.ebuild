@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta4.ebuild,v 1.4 2006/08/08 02:41:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta4.ebuild,v 1.5 2006/10/08 09:50:05 tupone Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE="openal"
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl
 	media-libs/sdl-mixer
@@ -22,6 +22,8 @@ DEPEND="virtual/opengl
 	media-libs/libpng
 	|| ( x11-libs/libXext virtual/x11 )
 	openal? ( media-libs/openal )"
+DEPEND="${RDEPEND}
+	app-arch/zip"
 
 S=${WORKDIR}/deng-${MY_PV}
 
