@@ -1,0 +1,8 @@
+# ChangeLog for dev-util/unifdef
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.1 2006/10/08 19:32:53 vapier Exp $
+
+*unifdef-1.0 (Oct 08 2006)
+
+  Oct 08 2006; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
