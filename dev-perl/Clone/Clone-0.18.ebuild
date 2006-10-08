@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/Clone-0.18.ebuild,v 1.9 2006/06/08 21:09:44 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/Clone-0.18.ebuild,v 1.10 2006/10/08 13:21:45 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,4 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND=""
+DEPEND="dev-lang/perl"
