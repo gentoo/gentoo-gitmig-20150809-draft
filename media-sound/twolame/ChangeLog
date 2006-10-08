@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/twolame
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/twolame/ChangeLog,v 1.1 2006/10/08 05:09:12 matsuu Exp $
+
+*twolame-0.3.8 (08 Oct 2006)
+
+  08 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> +twolame-0.3.8.ebuild:
+  Initial import, bug 120469.
+
