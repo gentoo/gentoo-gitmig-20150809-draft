@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.4 2006/10/06 22:54:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.12.1.ebuild,v 1.5 2006/10/08 00:38:34 genstef Exp $
 
 inherit eutils multilib
 
@@ -407,6 +407,13 @@ src_install() {
 
 	# install asterisk-updater
 	dosbin ${FILESDIR}/1.2.0/asterisk-updater
+
+	# make sure misdn stuff is not installed, provided by asterisk-chan_misdn
+	rm -f ${D}/etc/asterisk/misdn.conf
+	rm -f ${D}/usr/lib/asterisk/modules/chan_misdn.so
+	rm -f ${D}/usr/share/doc/${PF}/configs/misdn.conf.sample.gz
+	rm -f ${D}/usr/share/doc/${PF}/README.misdn.gz
+	rm -f ${D}/usr/share/doc/${PF}/conf/misdn.conf
 }
 
 pkg_preinst() {
