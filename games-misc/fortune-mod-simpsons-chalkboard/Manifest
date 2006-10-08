@@ -2,10 +2,10 @@
 Hash: SHA1
 
 DIST fortune-simpsons-chalkboard.tgz 5803 RMD160 3ccf53e02f31f4e0572938fc7ee88e308d47f341 SHA1 a3effee140c457d22873e87144c79e4811badc78 SHA256 8cfa7ecec784314b90b46531943d507c8f556c96008c8dc44089f016e5504b35
-EBUILD fortune-mod-simpsons-chalkboard-0.1.ebuild 796 RMD160 2890b4feccde482175f5173c8f5c8b520f5520bf SHA1 69f8ce021d64faa45fe1b5394098c46d602aa374 SHA256 25b26dca14612f4f36f6a478dd56d41c25120dad5be55969e9a8497d7db9012b
-MD5 7a0b634c34efd3bcae38f0a94a4cef64 fortune-mod-simpsons-chalkboard-0.1.ebuild 796
-RMD160 2890b4feccde482175f5173c8f5c8b520f5520bf fortune-mod-simpsons-chalkboard-0.1.ebuild 796
-SHA256 25b26dca14612f4f36f6a478dd56d41c25120dad5be55969e9a8497d7db9012b fortune-mod-simpsons-chalkboard-0.1.ebuild 796
+EBUILD fortune-mod-simpsons-chalkboard-0.1.ebuild 802 RMD160 c6a3d8dda19b651383e25f8bad1678a37f755ab2 SHA1 3b179c75681e97be7deadb680954145008aa971e SHA256 76d2576b7760413d3a83cd15ea868f46d39375ac742dccc02628737f1dbe89dd
+MD5 091b24bda63c739308d9e74b137c4902 fortune-mod-simpsons-chalkboard-0.1.ebuild 802
+RMD160 c6a3d8dda19b651383e25f8bad1678a37f755ab2 fortune-mod-simpsons-chalkboard-0.1.ebuild 802
+SHA256 76d2576b7760413d3a83cd15ea868f46d39375ac742dccc02628737f1dbe89dd fortune-mod-simpsons-chalkboard-0.1.ebuild 802
 MISC ChangeLog 1121 RMD160 45cf07ea2b06d5647b1dcb32603e8f82238c1827 SHA1 a1d1247d4d3581de0c029d578b7d4c5192e022ce SHA256 4b999be30cf4ff19f2f9ae43b12eaa7069877614bb16dba5ce62287f6e9893d4
 MD5 bb9ffc04731d9a9b0f1cd771a902ca1c ChangeLog 1121
 RMD160 45cf07ea2b06d5647b1dcb32603e8f82238c1827 ChangeLog 1121
@@ -18,9 +18,9 @@ MD5 9c0e6a5dfc5e8f3b184f93ff811df787 files/digest-fortune-mod-simpsons-chalkboar
 RMD160 7eb448dc1058e8affe005eebec31c922ac9f510e files/digest-fortune-mod-simpsons-chalkboard-0.1 268
 SHA256 deb2a30b75e5d1b3dcd05592192df066477e3caabf50b203e7c7ff92348e3ba9 files/digest-fortune-mod-simpsons-chalkboard-0.1 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEvo68AiZjviIA2XgRAtJ3AKDPqjX+Osx7Ag7nslEtoXixOF7qBACgqzTb
-t9vcg9FAGqvF9z5POobrHEY=
-=ukn8
+iD8DBQFFKGHWamhnQswr0vIRAk/xAKCN1yr0QL9w54gfTUBB14l/6wlzDACeJ/nj
+GHSy6nxk6BzhQysJ7JIXRfQ=
+=v5MD
 -----END PGP SIGNATURE-----

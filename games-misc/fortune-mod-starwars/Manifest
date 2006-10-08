@@ -2,10 +2,10 @@
 Hash: SHA1
 
 DIST fortune-starwars.tgz 5547 RMD160 3e16f93958af050cf7aff052fd8dea6d2bb95750 SHA1 8789528ac6787d32afc8451a17aefc88e015de41 SHA256 ccdbb357ebf547825717168261f543530ff613c232217d63ad66475e46006c78
-EBUILD fortune-mod-starwars-0.1.ebuild 744 RMD160 cffcd2d4e6ca55c1a806cdad03d856e3dc951486 SHA1 cf9063af9a05ab2a7f4241e54980e4d41e0e38c1 SHA256 88af786876d18e92fa4096c4d46446bba55ea73e248bda4f5a8c5c3b6c512b5b
-MD5 c67fcd9a8a55f478adb79d0f103ffb4e fortune-mod-starwars-0.1.ebuild 744
-RMD160 cffcd2d4e6ca55c1a806cdad03d856e3dc951486 fortune-mod-starwars-0.1.ebuild 744
-SHA256 88af786876d18e92fa4096c4d46446bba55ea73e248bda4f5a8c5c3b6c512b5b fortune-mod-starwars-0.1.ebuild 744
+EBUILD fortune-mod-starwars-0.1.ebuild 761 RMD160 5d233ea2ccdb22d88319a520264f2cb5995a138a SHA1 4d6d034488d819c71c43a1771a452eb993361e5e SHA256 f04e120e8abd8881fc41ee5df8fade77883897b720fdf180cee3b4e3368aff93
+MD5 bd9a1738829035e37c004595bb851195 fortune-mod-starwars-0.1.ebuild 761
+RMD160 5d233ea2ccdb22d88319a520264f2cb5995a138a fortune-mod-starwars-0.1.ebuild 761
+SHA256 f04e120e8abd8881fc41ee5df8fade77883897b720fdf180cee3b4e3368aff93 fortune-mod-starwars-0.1.ebuild 761
 MISC ChangeLog 1050 RMD160 11de8ad6c0ae999539e64b7480cc6f2fe15179c8 SHA1 1258e7e7a93242282cfab43a1d5c79dfa1b19d74 SHA256 ee2d4117a2afb26b2728daaab1cac189c623021e45dc8fcea55cbb798dfdd7d4
 MD5 1000899e58943aecd61becaf1913923d ChangeLog 1050
 RMD160 11de8ad6c0ae999539e64b7480cc6f2fe15179c8 ChangeLog 1050
@@ -18,9 +18,9 @@ MD5 a420fcceb93bef2c98713b19748621dc files/digest-fortune-mod-starwars-0.1 235
 RMD160 5cc05ecec866c04b7424c971d655886720ff5f0f files/digest-fortune-mod-starwars-0.1 235
 SHA256 8a0fdbb6fec8662edd6fc06b0fb27e2651e9f3b78ca0f738b74d3937c261a3f3 files/digest-fortune-mod-starwars-0.1 235
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEvo9cAiZjviIA2XgRAp4CAJ4iejSl05Pj7AenqjPqM+uvKMcdEwCfVQgo
-+K6y63bbxfh1BI8Zd7SPKxI=
-=gAGb
+iD8DBQFFKGI1amhnQswr0vIRAljDAJ9fDO/xkYvuZzd9NNxY5cEMnHn38QCffAfQ
+VyOKUj1SvtJZyFHAT5qObHw=
+=7GZo
 -----END PGP SIGNATURE-----
