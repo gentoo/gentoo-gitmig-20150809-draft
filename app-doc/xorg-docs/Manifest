@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.1-allow_manpages_only.patch 957 RMD160 57be7a6f8c6e2680d3beba76279501c88b12db40 SHA1 1ea1e9d0873d952f26ea96e799d524f22cb14ff3 SHA256 7f6f59c15acd9b6bdc17e208a2e2d936fb4b661bba55829f0978bb0a00299a2f
 MD5 37dab4b290e3447948e91778dd8dc0ea files/1.1-allow_manpages_only.patch 957
 RMD160 57be7a6f8c6e2680d3beba76279501c88b12db40 files/1.1-allow_manpages_only.patch 957
 SHA256 7f6f59c15acd9b6bdc17e208a2e2d936fb4b661bba55829f0978bb0a00299a2f files/1.1-allow_manpages_only.patch 957
 DIST xorg-docs-1.2.tar.bz2 8327208 RMD160 c9c076f79a586da51437b8b6c08376411bc65efa SHA1 867de1f1bc07faaf58fdc8bb7f8b215a7e272f61 SHA256 23648ac11d5cc57f3e1e747a73bd1c4f83c42a657969814af0d399fdd3d7beec
-EBUILD xorg-docs-1.2.ebuild 596 RMD160 82da1d7e04172df36d57d85ff0ae21662bca4b6e SHA1 50dffdb1acbf34662ba0f3e035530938c99839d0 SHA256 1118cabe1e0dec9f3ad9a34545c0ad0288df6ef962a4e6a22098474174ae7cb1
-MD5 1c1e095adadd9e5d85bef94f19cb9f09 xorg-docs-1.2.ebuild 596
-RMD160 82da1d7e04172df36d57d85ff0ae21662bca4b6e xorg-docs-1.2.ebuild 596
-SHA256 1118cabe1e0dec9f3ad9a34545c0ad0288df6ef962a4e6a22098474174ae7cb1 xorg-docs-1.2.ebuild 596
+EBUILD xorg-docs-1.2.ebuild 597 RMD160 f46f4cff1da5d98d09d3168a7bf01fcb9ca64188 SHA1 3c6ded709296bd3e073b2c1f3b8c5e30348cc534 SHA256 a860e839ddcc1fccf02d7baa740d5b845d9fc7b91b5ba0437a45536a85ae69a1
+MD5 c22f9bc7ebc6095934c18766dd826850 xorg-docs-1.2.ebuild 597
+RMD160 f46f4cff1da5d98d09d3168a7bf01fcb9ca64188 xorg-docs-1.2.ebuild 597
+SHA256 a860e839ddcc1fccf02d7baa740d5b845d9fc7b91b5ba0437a45536a85ae69a1 xorg-docs-1.2.ebuild 597
 MISC ChangeLog 3026 RMD160 026c65ae4d28b973e2d1b2827327d92eb5aa4ffc SHA1 d1fe774df3c0beff66088121f0f121b5c1e091b0 SHA256 9c248dda7ee6d09c1b2f7be45c53a32f7c52afd7dfa3eccab40e1425860f02b9
 MD5 38b510d8cd474c95c365107b835ce4eb ChangeLog 3026
 RMD160 026c65ae4d28b973e2d1b2827327d92eb5aa4ffc ChangeLog 3026
@@ -18,3 +21,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 08a42ac2decc3e51658baa15596a7272 files/digest-xorg-docs-1.2 247
 RMD160 ee5acddc33e1992e8c6effbc7c59782fef329e0f files/digest-xorg-docs-1.2 247
 SHA256 ded2eb90ba4a8834586c0d344d52f212c3673edc08e5b0728a16f1a7af9994f4 files/digest-xorg-docs-1.2 247
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFKEd9amhnQswr0vIRAjsVAJ4iHSY3rwjl9fZufKSNtV1zEFlqYACgjv/m
+B2laWh/+Wgt0m/fnGhRadDQ=
+=/ksK
+-----END PGP SIGNATURE-----
