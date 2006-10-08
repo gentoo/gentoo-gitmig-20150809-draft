@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5-r1.ebuild,v 1.8 2006/09/08 20:09:36 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5-r1.ebuild,v 1.9 2006/10/08 17:49:22 blubb Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 S=${WORKDIR}/js/src
