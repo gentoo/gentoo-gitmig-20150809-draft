@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/lastfm-ripper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/ChangeLog,v 1.2 2006/07/06 07:59:21 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-ripper/ChangeLog,v 1.3 2006/10/08 00:25:26 pclouds Exp $
+
+*lastfm-ripper-1.2.1-r1 (08 Oct 2006)
+
+  08 Oct 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  +files/HandleSlashCharFix.patch, -lastfm-ripper-1.2.1.ebuild,
+  +lastfm-ripper-1.2.1-r1.ebuild:
+  Bumped to 1.2.1-r1 to fix slash issue, #150424. Patch provided by Octavio
+  Ruiz (Ta^3) <tacvbo@tacvbo.net>. Removed 1.2.1
 
   06 Jul 2006; Simon Stelling <blubb@gentoo.org> lastfm-ripper-1.2.1.ebuild:
   added ~amd64 keyword

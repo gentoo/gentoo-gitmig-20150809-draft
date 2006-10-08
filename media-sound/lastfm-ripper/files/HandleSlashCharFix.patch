@@ -1,0 +1,10 @@
+--- /usr/bin/last.fm-ripper	2006-09-26 21:29:59.000000000 -0500
++++ last.fm-ripper	2006-10-07 18:36:12.000000000 -0500
+@@ -300,6 +300,7 @@
+         if ($track_info{'artist'} ne '')
+         {
+           my $mp3_file_name = "$track_info{'artist'}-$track_info{'album'}-$track_info{'track'}.mp3";
++          $mp3_file_name =~ s/\//_/g;
+           my $mp3_path = $output_directory."/".$mp3_file_name;
+           open(MP3,">$mp3_path");
+           print MP3 $mp3_data,substr($buffer,0,$length);
