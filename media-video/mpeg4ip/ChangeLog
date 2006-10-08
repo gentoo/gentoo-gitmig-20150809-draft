@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.41 2006/10/08 14:32:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.42 2006/10/08 20:24:05 nixnut Exp $
+
+  08 Oct 2006; <nixnut@gentoo.org> mpeg4ip-1.4.1.ebuild:
+  Stable on ppc wrt bug 133605
 
   08 Oct 2006; Olivier Crête <tester@gentoo.org> mpeg4ip-1.5.0.1.ebuild:
   Revert dep of libsdl to fix bug #150456, we check built-with-X anyways
