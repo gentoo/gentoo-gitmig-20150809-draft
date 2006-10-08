@@ -1,0 +1,18 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/sparc/sparc64/2006.1/use.mask,v 1.1 2006/10/08 18:37:25 pebenito Exp $
+
+# Java and java-related stuffs
+freetts
+java
+java-internal
+java-external
+netbeans
+
+# New stuff enabled
+-hal
+-ipod
+-alsa
+-ladcca
+-udev
+-pmount

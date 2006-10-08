@@ -116,6 +116,22 @@ ppc64		hardened/ppc64					dev
 x86		hardened/x86					stable
 x86		hardened/x86/2.6				stable
 
+# selinux profiles
+alpha		selinux/2005.1/alpha				stable
+amd64		selinux/2005.1/amd64				stable
+mips		selinux/2005.1/mips				stable
+ppc		selinux/2005.1/ppc				stable
+sparc		selinux/2005.1/sparc64				stable
+x86		selinux/2005.1/x86				stable
+x86		selinux/2005.1/x86/hardened			stable
+alpha		selinux/alpha/2006.1				dev
+amd64		selinux/amd64/2006.1				dev
+mips		selinux/mips/mips64/2006.1			dev
+ppc		selinux/ppc/ppc32/2006.1/G3			dev
+ppc		selinux/ppc/ppc32/2006.1/G4			dev
+sparc		selinux/sparc/sparc64/2006.1			dev
+x86		selinux/x86/2006.1				dev
+
 # uclibc/embedded multiarch profiles
 #amd64		uclibc/amd64					dev
 #arm		uclibc/arm					dev

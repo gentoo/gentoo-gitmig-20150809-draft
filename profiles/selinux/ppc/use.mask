@@ -1,0 +1,65 @@
+# These use-flags won't work neither on ppc32 nor on ppc64
+
+3dfx
+acpi
+afs
+avi
+fdftk
+lm_sensors
+rar
+
+#keep and eye on firebird and interbase as pair
+firebird
+interbase
+
+# Unmask our instruction sets
+-altivec
+-pbbuttonsd
+-ppcsha1
+
+# codec support
+-x264
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+pfpro
+solid
+sybase
+sybase-ct
+
+# Luca Longinotti <chtekk@gentoo.org>
+# mask Oracle
+oci8
+
+# cg is only provided by nvidia's binary only cg toolkit
+cg
+
+# dmi depends on PC BIOSes, we don't have those
+dmi
+
+# Masking mbrola for bug #84322, if a new version is released, remove this
+mbrola
+
+# Appears to be x86 only, feel free to remove if you disagree
+nvtv
+
+# new keyword zrtp related to
+# net-libs/libzrtpcpp package
+# masked pending testing - bug #149793
+zrtp
