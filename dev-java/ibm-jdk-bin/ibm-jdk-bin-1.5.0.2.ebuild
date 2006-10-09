@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.9 2006/09/27 03:41:56 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.10 2006/10/09 04:01:34 nichoj Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -151,6 +151,23 @@ QA_TEXTRELS_ppc="opt/${P}/jre/bin/classic/libjvm.so
 	opt/${P}/jre/bin/libjclscar_23.so
 	opt/${P}/jre/bin/libjsig.so
 "
+
+QA_TEXTRELS_ppc64="opt/${P}/jre/bin/libj9jextract.so
+	opt/${P}/jre/bin/libjsig.so
+	opt/${P}/jre/bin/libj9jitd23.so
+	opt/${P}/jre/bin/libj9ute23.so
+	opt/${P}/jre/bin/classic/libjvm.so
+	opt/${P}/jre/bin/libj9prt23.so
+	opt/${P}/jre/bin/libjclscar_23.so
+	opt/${P}/jre/bin/j9vm/libjvm.so
+	opt/${P}/jre/bin/libj9gc23.so
+	opt/${P}/jre/bin/libj9dbg23.so
+	opt/${P}/jre/bin/libj9thr23.so
+	opt/${P}/jre/bin/libj9jpi23.so
+	opt/${P}/jre/bin/libj9gcchk23.so
+	opt/${P}/jre/bin/libj9vm23.so
+	opt/${P}/jre/bin/libj9jit23.so"
+
 
 QA_TEXTRELS_x86="opt/${P}/jre/bin/lib*.so
 	opt/${P}/jre/bin/j9vm/libjvm.so
