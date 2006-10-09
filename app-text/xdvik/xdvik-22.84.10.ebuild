@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.2 2006/10/07 18:56:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.3 2006/10/09 18:17:38 exg Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -21,7 +21,8 @@ SLOT="0"
 LICENSE="GPL-2"
 
 RDEPEND=">=media-libs/t1lib-5.0.2
-	x11-libs/libXau
+	x11-libs/libXmu
+	x11-libs/libXp
 	x11-libs/libXpm
 	motif? ( lesstif? ( x11-libs/lesstif )
 		!lesstif? ( x11-libs/openmotif ) )

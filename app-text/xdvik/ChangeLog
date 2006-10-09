@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.25 2006/10/07 18:56:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.26 2006/10/09 18:17:38 exg Exp $
+
+  09 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> xdvik-22.84.10.ebuild:
+  Correct X11 deps.
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> xdvik-22.84.10.ebuild:
   Add ~x86-fbsd keyword.
