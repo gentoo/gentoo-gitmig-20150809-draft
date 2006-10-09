@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.7 2006/05/08 12:31:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-3.4.ebuild,v 1.8 2006/10/09 17:18:11 nyhm Exp $
 
 inherit qt3 eutils
 
@@ -13,16 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="x11-libs/qt
-	|| (
-		(
-			x11-proto/xextproto
-			x11-proto/xproto )
-		virtual/x11 )"
-RDEPEND="x11-libs/qt
-	|| (
-		x11-libs/libXtst
-		virtual/x11 )"
+RDEPEND="x11-libs/libXtst
+	$(qt_min_version 3.3)"
+DEPEND="${RDEPEND}
+	x11-proto/xextproto
+	x11-proto/xproto"
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +34,7 @@ src_unpack() {
 src_compile() {
 	cd src
 	./config --prefix=/usr || die "config failed"
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
