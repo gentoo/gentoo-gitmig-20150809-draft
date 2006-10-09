@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.37 2006/08/07 02:25:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.38 2006/10/09 20:58:16 gustavoz Exp $
+
+  09 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  ratpoison-1.4.0.ebuild:
+  Stable on sparc
 
   07 Aug 2006; Jeroen Roovers <jer@gentoo.org> ratpoison-1.4.0.ebuild:
   Stable for HPPA (bug #114474).
