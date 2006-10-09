@@ -1,0 +1,11 @@
+--- popt-1.10.4.orig/configure.ac	2006-10-09 20:27:18.326914000 +0200
++++ popt-1.10.4/configure.ac	2006-10-09 20:28:14.826914000 +0200
+@@ -101,7 +101,7 @@
+               [ : ] )
+ AM_CONDITIONAL(HAVE_LD_VERSION_SCRIPT, test "$have_ld_version_script" = "yes")
+ 
+-if test ! -f ../rpm.c
++if /bin/false
+ then
+   AC_MSG_CHECKING(for GNU xgettext)
+   xgettext --version 2>&1 | grep 'GNU gettext' >/dev/null 2>&1 || AC_MSG_ERROR([

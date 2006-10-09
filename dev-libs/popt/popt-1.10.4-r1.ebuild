@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r1.ebuild,v 1.8 2006/10/01 15:40:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r1.ebuild,v 1.9 2006/10/09 18:46:52 sanchan Exp $
 
 inherit flag-o-matic autotools
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-lib64.patch
+	use nls || epatch "${FILESDIR}"/${P}-nls.patch
 	eautoreconf
 }
 
