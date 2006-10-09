@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.9 2005/05/17 18:54:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.10 2006/10/09 11:10:11 nyhm Exp $
 
 inherit toolchain-funcs games
 
@@ -14,18 +14,14 @@ SRC_URI="http://www.cs.helsinki.fi/u/jpihlaja/cw/pmars-sdl/${MY_P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="sdl X svga"
 
-DEPEND="virtual/libc
-	|| (
-		sdl?  ( virtual/x11 media-libs/libsdl )
-		X?    ( virtual/x11 )
-		svga? ( media-libs/svgalib )
-		sys-libs/ncurses
-	)"
+DEPEND="sdl? ( x11-libs/libX11 media-libs/libsdl )
+	X? ( x11-libs/libX11 )
+	svga? ( media-libs/svgalib )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	CFLAGS="${CFLAGS} -DEXT94 -DPERMUTATE"
