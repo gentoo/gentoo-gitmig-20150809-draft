@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/libxcb
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.1 2006/10/09 01:51:05 dberkholz Exp $
+
+*libxcb-0.9.92 (09 Oct 2006)
+
+  09 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +libxcb-0.9.92.ebuild:
+  Add X C-language Bindings library.
+
