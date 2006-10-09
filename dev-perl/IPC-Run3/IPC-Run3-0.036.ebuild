@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/IPC-Run3-0.036.ebuild,v 1.1 2006/09/25 21:10:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/IPC-Run3-0.036.ebuild,v 1.2 2006/10/09 21:41:45 mcummings Exp $
 
 inherit perl-module
 
@@ -17,6 +17,3 @@ SRC_TEST="do"
 DEPEND=">=dev-perl/Test-Pod-1.00
 	>=dev-perl/Test-Pod-Coverage-1.04
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-
