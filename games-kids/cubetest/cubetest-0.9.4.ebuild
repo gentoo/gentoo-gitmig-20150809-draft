@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.2 2006/08/16 12:24:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.3 2006/10/09 11:34:36 nyhm Exp $
 
 inherit qt4 eutils games
 
@@ -25,5 +25,6 @@ src_unpack() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake DESTDIR="${D}" install || die "emake install failed"
+	prepgamesdirs
 }
