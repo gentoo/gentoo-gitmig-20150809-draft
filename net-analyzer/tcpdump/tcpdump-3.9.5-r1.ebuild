@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.5-r1.ebuild,v 1.1 2006/10/09 09:53:25 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.5-r1.ebuild,v 1.2 2006/10/09 10:00:28 jokey Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -57,7 +57,7 @@ src_compile() {
 
 	econf \
 		$(use_enable ipv6) \
-		$(use_with samba smb) \
+		$(use_enable samba smb) \
 		${myconf} || die "configure failed"
 
 	make CCOPT="$CFLAGS" || die "make failed"
