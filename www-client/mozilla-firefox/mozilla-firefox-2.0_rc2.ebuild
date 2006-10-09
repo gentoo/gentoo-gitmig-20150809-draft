@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.2 2006/10/09 09:52:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.3 2006/10/09 19:11:22 genstef Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
 PATCH="mozilla-firefox-2.0_rc1-patches-1.4"
 LANGS="ar be bg ca cs da de el en-GB es-AR es-ES eu fi fy-NL fr ga-IE gu-IN hu it ja ko
 lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
+NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
 MY_PV=${PV/_}
 
 DESCRIPTION="Firefox Web Browser"
@@ -31,8 +32,7 @@ for X in ${LANGS} ; do
 		linguas_${X/-/_}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
-	if [ "${#X}" == 5 ] && [ "${X}" != "en-GB" ] && [ "${X}" != "es-AR" ] && \
-		[ "${X}" != "pt-BR" ] && [ "${X}" != "zh-TW" ]; then
+	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		SRC_URI="${SRC_URI}
 			linguas_${X%%-*}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${P}-${X}.xpi )"
 		IUSE="${IUSE} linguas_${X%%-*}"
@@ -54,22 +54,24 @@ S="${WORKDIR}/mozilla"
 linguas() {
 	local LANG SLANG
 	for LANG in ${LINGUAS}; do
-		if hasq ${LANG} en en_US; then
-			hasq en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+		if has ${LANG} en en_US; then
+			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
 			continue
-		elif hasq ${LANG} ${LANGS//-/_}; then
-			hasq ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+		elif has ${LANG} ${LANGS//-/_}; then
+			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
 			continue
-		else
-			for SLANG in ${SHORTLANGS}; do
-				if [[ ${LANG} == "${SLANG%%-*}" ]]; then
-					hasq ${SLANG} ${linguas} || linguas="${linguas:+"${linguas} "}${SLANG}"
+		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
+			for X in ${LANGS}; do
+				if [[ "${X}" == "${LANG}-"* ]] && \
+					[[ "${NOSHORTLANGS}" != *"${X}"* ]]; then
+					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
 					continue 2
 				fi
 			done
 		fi
 		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
 	done
+	einfo "Selected language packs (first will be default): $linguas"
 }
 
 src_unpack() {
