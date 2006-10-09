@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Geo-IP
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.27 2006/08/05 04:10:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/ChangeLog,v 1.28 2006/10/09 15:08:31 mcummings Exp $
+
+  09 Oct 2006; Michael Cummings <mcummings@gentoo.org> -Geo-IP-1.23.ebuild,
+  Geo-IP-1.25.ebuild, Geo-IP-1.27.ebuild:
+  Keywording sparc, amd64; cleaning out stale ebuild
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org> Geo-IP-1.23.ebuild,
   Geo-IP-1.25.ebuild, Geo-IP-1.27.ebuild:
