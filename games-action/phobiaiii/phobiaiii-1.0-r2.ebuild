@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/phobiaiii-1.0-r2.ebuild,v 1.6 2006/09/15 19:52:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaiii/phobiaiii-1.0-r2.ebuild,v 1.7 2006/10/09 15:19:44 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Just a moment ago, you were safe inside your ship, behind five inch armour"
-HOMEPAGE="http://www.lynxlabs.com/phobiaIII/"
+HOMEPAGE="http://www.redlynx.com/phobiaIII/"
 SRC_URI="ftp://ftp.edome.net/demot/actionpelit/phobia3-linux.tar.bz2"
 
 LICENSE="as-is"
