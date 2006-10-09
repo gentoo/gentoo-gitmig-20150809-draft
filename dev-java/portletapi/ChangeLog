@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/portletapi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/ChangeLog,v 1.1 2006/10/09 01:08:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/ChangeLog,v 1.2 2006/10/09 01:52:04 nichoj Exp $
+
+  09 Oct 2006; Joshua Nichols <nichoj@gentoo.org> portletapi-1.0.ebuild:
+  Added ~ppc and ~ppc64. Changed dependency from ant-core to ant, because it
+  uses optional tasks.
 
 *portletapi-1.0 (09 Oct 2006)
 

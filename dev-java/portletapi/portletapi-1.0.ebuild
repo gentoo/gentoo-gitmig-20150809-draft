@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/portletapi-1.0.ebuild,v 1.1 2006/10/09 01:08:39 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/portletapi-1.0.ebuild,v 1.2 2006/10/09 01:52:04 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://apache/portals/jetspeed-2/sources/${JETSPEED_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc source"
 
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-core-1.5
+	>=dev-java/ant-1.5
 	source? ( app-arch/unzip )"
 RDEPEND=">=virtual/jre-1.4"
 
