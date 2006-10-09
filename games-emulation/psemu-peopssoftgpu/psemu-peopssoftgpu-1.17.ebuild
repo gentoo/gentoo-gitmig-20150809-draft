@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.4 2006/07/10 23:04:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.17.ebuild,v 1.5 2006/10/09 10:36:57 nyhm Exp $
 
 inherit eutils games
 
@@ -19,11 +19,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x86? ( dev-lang/nasm )
 	amd64? ( dev-lang/nasm )
-	|| ( ( x11-proto/xf86dgaproto
-			x11-proto/xf86vidmodeproto
-		)
-		virtual/x11
-	)"
+	x11-proto/xf86dgaproto
+	x11-proto/xf86vidmodeproto"
 
 S=${WORKDIR}
 
@@ -32,8 +29,8 @@ src_unpack() {
 	cd "${S}"
 	edos2unix src/makes/mk.fpse
 	epatch \
-		"${FILESDIR}"/${PN}-1.16-makefile-cflags.patch \
-		"${FILESDIR}"/${PN}-1.16-fix-noxf86vm.patch \
+		"${FILESDIR}"/${P}-makefile-cflags.patch \
+		"${FILESDIR}"/${P}-fix-noxf86vm.patch \
 		"${FILESDIR}"/${P}-gcc41.patch
 
 	if [[ ${ARCH} != "x86" ]] ; then
