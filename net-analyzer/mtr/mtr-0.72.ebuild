@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.69-r1.ebuild,v 1.11 2006/10/09 10:12:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.72.ebuild,v 1.1 2006/10/09 10:12:05 jokey Exp $
 
-inherit eutils flag-o-matic
+inherit flag-o-matic
 
 DESCRIPTION="My TraceRoute. Excellent network diagnostic tool."
 HOMEPAGE="http://www.bitwizard.nl/mtr/"
@@ -10,24 +10,14 @@ SRC_URI="ftp://ftp.bitwizard.nl/mtr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ~ppc-macos ~s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="gtk ipv6"
 
 DEPEND="dev-util/pkgconfig
 	sys-libs/ncurses
 	gtk? ( >=x11-libs/gtk+-2 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-ac-res_mkquery.patch"
-	# bug 104718
-	epatch "${FILESDIR}/${P}-debian.patch"
-}
-
 src_compile() {
-	autoconf || die "autoconf failed"
-
 	local myconf
 	use gtk || myconf="${myconf} --without-gtk"
 
