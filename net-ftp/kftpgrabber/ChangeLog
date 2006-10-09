@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.9 2006/02/25 22:25:31 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.10 2006/10/09 20:33:09 deathwing00 Exp $
+
+*kftpgrabber-0.8.0_alpha2 (09 Oct 2006)
+
+  09 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +kftpgrabber-0.8.0_alpha2.ebuild:
+  Version bump as requested in bug #149735. Added languages support to this
+  new version. Optional dependencies are still not clear and need to be fixed
+  (see kde bug #135369 for details).
 
   25 Feb 2006; Mark Loeser <halcy0n@gentoo.org>
   +files/kftpgrabber-0.6.0-gcc41.patch, kftpgrabber-0.6.0.ebuild:
