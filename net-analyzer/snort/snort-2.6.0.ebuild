@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.0.ebuild,v 1.2 2006/09/20 10:11:38 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.0.ebuild,v 1.3 2006/10/09 00:39:39 jokey Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
@@ -20,9 +22,9 @@ DEPEND="virtual/libc
 	>=dev-libs/libpcre-4.2-r1
 	virtual/libpcap
 	flexresp? ( ~net-libs/libnet-1.0.2a )
-	postgres? ( >=dev-db/postgresql-7.2 )
-	mysql? ( >=dev-db/mysql-3.23.26 )
-	ssl? ( >=dev-libs/openssl-0.9.6b )
+	postgres? ( || ( dev-db/postgresql dev-db/libpq ) )
+	mysql? ( dev-db/mysql )
+	ssl? ( dev-libs/openssl )
 	prelude? ( >=dev-libs/libprelude-0.9.0 )
 	odbc? ( dev-db/unixODBC )
 	>=sys-devel/libtool-1.4

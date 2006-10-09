@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.106 2006/09/20 10:11:38 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.107 2006/10/09 00:39:39 jokey Exp $
+
+  09 Oct 2006; Markus Ullmann <jokey@gentoo.org> snort-2.4.5.ebuild,
+  snort-2.6.0.ebuild:
+  Updating deps wrt bug #143033
 
   20 Sep 2006; Stefaan De Roeck <stefaan@gentoo.org> snort-2.6.0.ebuild:
   Keyworded ~alpha, as there seems to be no reason to keep -alpha
