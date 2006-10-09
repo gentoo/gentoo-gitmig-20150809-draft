@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.111 2006/07/15 10:35:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.112 2006/10/09 02:02:32 gothgirl Exp $
+
+*openbox-3.3.1 (09 Oct 2006)
+
+  09 Oct 2006; gothgirl <gothgirl@gentoo.org> +openbox-3.3.1.ebuild,
+  -openbox-20060509.ebuild, -openbox-20060509-r1.ebuild,
+  -openbox-20060509-r2.ebuild:
+  added revision 3.3.1 removed stale versions of snapshot
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove anarchy from metadata.xml as he's retired.
