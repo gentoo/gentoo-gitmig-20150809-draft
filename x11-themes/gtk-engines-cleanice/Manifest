@@ -1,11 +1,43 @@
-MD5 8fba350b5df6886ad261eb07386edc27 gtk-engines-cleanice-2.4.0.ebuild 948
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9658a9a6024b5e7720b1dda632beaa5c ChangeLog 3022
-MD5 501f3a3ccbc38a01621f9d9e2a8a23b1 gtk-engines-cleanice-0.8.5.ebuild 723
-MD5 327720353b78841847fb18d68bd7d5ed gtk-engines-cleanice-0.8.5-r1.ebuild 874
-MD5 cd455e9b39ac10ed897c1d74a3596d1f gtk-engines-cleanice-1.2.7.ebuild 743
+AUX cleanice-2-gtkrc 892 RMD160 7289685f48cb02b7237494299271a123a3de091f SHA1 38a5fba0b66f821edef35edf9e1a1b3c2e30aea3 SHA256 b15bdd48558b89e6d4b7a0a3b7087d0233604b85b6a7b14802c5ad6319b64546
 MD5 4a1ffe2ee72d4312aaec5e3521b5f24c files/cleanice-2-gtkrc 892
-MD5 f834b61f484838934e4d8197c06a2501 files/digest-gtk-engines-cleanice-1.2.7 72
+RMD160 7289685f48cb02b7237494299271a123a3de091f files/cleanice-2-gtkrc 892
+SHA256 b15bdd48558b89e6d4b7a0a3b7087d0233604b85b6a7b14802c5ad6319b64546 files/cleanice-2-gtkrc 892
+DIST cleanice-theme-1.2.7.tar.gz 237813
+DIST gtk-engines-cleanice-2.4.0.tar.gz 210165 RMD160 20a623ac7b9ef8aa66d94b99259226143f3b9e40 SHA1 8f90b26099f45b0335ea7c15409e1a8042e926d7 SHA256 47955f40c93cb1c4ed4f455efd7cab14bc9e18a146abbc90f761692bff19f819
+DIST gtk-engines-cleanice_0.8.5.orig.tar.gz 168797
+EBUILD gtk-engines-cleanice-0.8.5-r1.ebuild 874 RMD160 d9a396d0012e66d6f4f01dd0d9f770feaa6fccca SHA1 91956d1d904f76ac5f91d939530342ecad51ff19 SHA256 95429b0a40a06e9cca2dc79dc8811bbb227e502d48853ba216130fa37c5f1e17
+MD5 327720353b78841847fb18d68bd7d5ed gtk-engines-cleanice-0.8.5-r1.ebuild 874
+RMD160 d9a396d0012e66d6f4f01dd0d9f770feaa6fccca gtk-engines-cleanice-0.8.5-r1.ebuild 874
+SHA256 95429b0a40a06e9cca2dc79dc8811bbb227e502d48853ba216130fa37c5f1e17 gtk-engines-cleanice-0.8.5-r1.ebuild 874
+EBUILD gtk-engines-cleanice-0.8.5.ebuild 723 RMD160 9f11c151039e9ca1621c6c421f8eeab61d39fe0f SHA1 18488626b0206b6733c97c8057451f815b1f9c5e SHA256 162bca6abad51930081cbb53e08bd4a52706b033aa0bd89d3a85ae94f02d16db
+MD5 501f3a3ccbc38a01621f9d9e2a8a23b1 gtk-engines-cleanice-0.8.5.ebuild 723
+RMD160 9f11c151039e9ca1621c6c421f8eeab61d39fe0f gtk-engines-cleanice-0.8.5.ebuild 723
+SHA256 162bca6abad51930081cbb53e08bd4a52706b033aa0bd89d3a85ae94f02d16db gtk-engines-cleanice-0.8.5.ebuild 723
+EBUILD gtk-engines-cleanice-1.2.7.ebuild 743 RMD160 fd5d3c488e16947cf597c33ae59bc27b6af6cc35 SHA1 5cc6eadf951b979b1593421e475e88dab3db9fb9 SHA256 2cb6327fa72c70eda9327eb374284e7f50de4b066f2c0fdfd1d58246ee37d919
+MD5 cd455e9b39ac10ed897c1d74a3596d1f gtk-engines-cleanice-1.2.7.ebuild 743
+RMD160 fd5d3c488e16947cf597c33ae59bc27b6af6cc35 gtk-engines-cleanice-1.2.7.ebuild 743
+SHA256 2cb6327fa72c70eda9327eb374284e7f50de4b066f2c0fdfd1d58246ee37d919 gtk-engines-cleanice-1.2.7.ebuild 743
+EBUILD gtk-engines-cleanice-2.4.0.ebuild 958 RMD160 9240cebf211ba4db30c957a31db3af37fb62c6b7 SHA1 3432124f076ef0a9ef1a4b3b3f26365ebba3314e SHA256 298c025924f7f23420c13891a01fa7ee7140bb94fa2a1ed14160c5e12f2a15b4
+MD5 e606fe888a9aff5fbf5f53b07457dd25 gtk-engines-cleanice-2.4.0.ebuild 958
+RMD160 9240cebf211ba4db30c957a31db3af37fb62c6b7 gtk-engines-cleanice-2.4.0.ebuild 958
+SHA256 298c025924f7f23420c13891a01fa7ee7140bb94fa2a1ed14160c5e12f2a15b4 gtk-engines-cleanice-2.4.0.ebuild 958
+MISC ChangeLog 3141 RMD160 ef93ee32dcac09a3bd1c6898455c0ef33b8bb5d7 SHA1 be5f5288aac18e00801a54ff007b8a995773cb9d SHA256 7c5da05d502f9f50448a196ff40e5ed34f1270baa207755c33ac0f401a94f9aa
+MD5 67eed68106d2d57fca48812beb5edac1 ChangeLog 3141
+RMD160 ef93ee32dcac09a3bd1c6898455c0ef33b8bb5d7 ChangeLog 3141
+SHA256 7c5da05d502f9f50448a196ff40e5ed34f1270baa207755c33ac0f401a94f9aa ChangeLog 3141
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 9a7364c21bfa1d4c5756d5e4d3cfd7a9 files/digest-gtk-engines-cleanice-0.8.5 83
+RMD160 ac7e653643109501cf88e18671eace933f867b75 files/digest-gtk-engines-cleanice-0.8.5 83
+SHA256 201a3b92d4d0fb36c4e348b7f245c5f9e5d32b6a248b6c873db4055f316939cf files/digest-gtk-engines-cleanice-0.8.5 83
 MD5 9a7364c21bfa1d4c5756d5e4d3cfd7a9 files/digest-gtk-engines-cleanice-0.8.5-r1 83
-MD5 903ad3c09f45ddf5eade1052e2b6d9dc files/digest-gtk-engines-cleanice-2.4.0 78
+RMD160 ac7e653643109501cf88e18671eace933f867b75 files/digest-gtk-engines-cleanice-0.8.5-r1 83
+SHA256 201a3b92d4d0fb36c4e348b7f245c5f9e5d32b6a248b6c873db4055f316939cf files/digest-gtk-engines-cleanice-0.8.5-r1 83
+MD5 f834b61f484838934e4d8197c06a2501 files/digest-gtk-engines-cleanice-1.2.7 72
+RMD160 77f121fbeb637620436d21d876783a27c4c72fee files/digest-gtk-engines-cleanice-1.2.7 72
+SHA256 1b7ccc9cc6b565cddf2b6452bf11466677c126dc4c95839f159fbf6e8847d5a3 files/digest-gtk-engines-cleanice-1.2.7 72
+MD5 e92e949691d1df757614f989c9af8e38 files/digest-gtk-engines-cleanice-2.4.0 280
+RMD160 db8d5b6fcd2c3c1d1de482ff0f5c12357da03e0d files/digest-gtk-engines-cleanice-2.4.0 280
+SHA256 9d0d28e204bc13e986d6b3193553ca57ca1f05857e56eb8971339da1cc46cc34 files/digest-gtk-engines-cleanice-2.4.0 280

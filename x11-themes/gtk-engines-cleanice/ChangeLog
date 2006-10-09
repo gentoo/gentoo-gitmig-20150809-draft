@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-cleanice
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.20 2005/09/17 10:17:27 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-cleanice/ChangeLog,v 1.21 2006/10/09 17:50:29 the_paya Exp $
+
+  09 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  gtk-engines-cleanice-2.4.0.ebuild:
+  Keyworded ~x86-fbsd.
 
   17 Sep 2005; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-cleanice-2.4.0.ebuild:
