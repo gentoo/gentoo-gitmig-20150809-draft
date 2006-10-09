@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/portletapi
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/portletapi/ChangeLog,v 1.1 2006/10/09 01:08:39 nichoj Exp $
+
+*portletapi-1.0 (09 Oct 2006)
+
+  09 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/portletapi-1.0-build.xml, +metadata.xml, +portletapi-1.0.ebuild:
+  Initial commit. Ebuild by Miroslav Sulc <miroslav.sulc@startnet.cz>, bug
+  #148210.
+
