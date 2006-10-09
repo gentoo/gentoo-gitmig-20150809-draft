@@ -1,0 +1,13 @@
+# ChangeLog for games-board/freedoko
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.1 2006/10/09 17:04:33 wolf31o2 Exp $
+
+*freedoko-0.7.3 (09 Oct 2006)
+
+  09 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/Fix_Cardset_Make.patch, +files/nodoc.patch, +files/nonet.patch,
+  +files/portage-cxx.patch, +metadata.xml, +freedoko-0.7.3.ebuild:
+  Initial import. Ebuild by Dietrich Heise <dietrich@pegestorf.de> and edited
+  by Rafael Kolles <rafael@mondoria.de>, Mike Frysinger <vapier@gentoo.org>,
+  and me. Closing bug #113501.
+
