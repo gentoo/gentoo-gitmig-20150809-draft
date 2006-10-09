@@ -1,0 +1,16 @@
+--- po/lgeneral/Makefile.in.in.old	2006-10-09 22:55:07.000000000 +0200
++++ po/lgeneral/Makefile.in.in	2006-10-09 22:57:28.000000000 +0200
+@@ -99,11 +99,8 @@
+ 	$(XGETTEXT) $(XGETTEXTFLAGS) --default-domain=$(PACKAGE) \
+ 	  --directory=$(top_srcdir) --add-comments \
+ 	  --keyword=tr --keyword=TR_NOOP \
+-	  --files-from=$(srcdir)/POTFILES.in \
+-	&& test ! -f $(PACKAGE).po \
+-	   || ( rm -f $(srcdir)/$(PACKAGE).pot \
+-		&& $(MSGCONV) $(MSGCONVFLAGS) $(PACKAGE).po > $(srcdir)/$(PACKAGE).pot 2> /dev/null \
+-		&& rm -f $(PACKAGE).po )
++	  --files-from=$(srcdir)/POTFILES.in
++	$(MSGCONV) $(MSGCONVFLAGS) $(PACKAGE).po > $(srcdir)/$(PACKAGE).pot || true
+ 
+ $(srcdir)/cat-id-tbl.c: $(srcdir)/stamp-cat-id; @:
+ $(srcdir)/stamp-cat-id: $(srcdir)/$(PACKAGE).pot

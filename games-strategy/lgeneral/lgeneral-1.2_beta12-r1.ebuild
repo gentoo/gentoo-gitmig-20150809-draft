@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta12-r1.ebuild,v 1.1 2006/08/26 20:38:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/lgeneral-1.2_beta12-r1.ebuild,v 1.2 2006/10/09 21:46:05 tupone Exp $
 
 inherit eutils autotools games
 
@@ -25,9 +25,9 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gentoo-path.patch
+	epatch "${FILESDIR}/${P}"-gentoo-path.patch \
+		"${FILESDIR}"/${P}-gettext.patch
 	eautoreconf
-	touch po/lgeneral/lgeneral.pot
 	# Build a temporary lgc-pg that knows about /var/tmp/portage in work/lgc-pg:
 	cp -pPR "${S}" "${WORKDIR}/lgc-pg" || die "cp failed."
 	sed -i \
