@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/Ima-DBI-0.34.ebuild,v 1.9 2006/08/07 00:16:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/Ima-DBI-0.34.ebuild,v 1.10 2006/10/09 21:42:24 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ DEPEND="dev-perl/DBI
 		dev-perl/DBIx-ContextualFetch
 		virtual/perl-Test-Simple
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
