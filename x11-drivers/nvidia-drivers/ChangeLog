@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.15 2006/10/04 20:45:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.16 2006/10/09 13:37:04 wolf31o2 Exp $
+
+  09 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-drivers-1.0.8178.ebuild, -nvidia-drivers-1.0.8762.ebuild,
+  nvidia-drivers-1.0.8762-r1.ebuild, nvidia-drivers-1.0.8774.ebuild,
+  nvidia-drivers-1.0.9625.ebuild:
+  Removed virtual/x11 from dependencies, removed blocker on nvidia-kernel and
+  nvidia-glx, since they're no longer in the tree, changed nostrip to strip,
+  and added QA variables for TEXTRELS and EXECSTACK for amd64 and x86. Closing
+  bug #114894.
 
   04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   nvidia-drivers-1.0.8178.ebuild, nvidia-drivers-1.0.8762.ebuild,

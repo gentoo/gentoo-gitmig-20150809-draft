@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762-r1.ebuild,v 1.6 2006/10/04 20:45:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8762-r1.ebuild,v 1.7 2006/10/09 13:37:04 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -25,15 +25,44 @@ RESTRICT="nostrip multilib-pkg-force"
 
 DEPEND="kernel_linux? ( virtual/linux-sources )"
 RDEPEND="kernel_linux? ( virtual/modutils )
-	 || ( x11-base/xorg-server virtual/x11 )
-	 !>=x11-base/xorg-server-1.0.99
-	 || ( media-libs/mesa virtual/x11 )
-	 app-admin/eselect-opengl
-	 kernel_linux? ( !media-video/nvidia-kernel )
-	 kernel_FreeBSD? ( !media-video/nvidia-freebsd )
-	 !app-emulation/emul-linux-x86-nvidia
-	 !x11-drivers/nvidia-legacy-drivers
-	 !media-video/nvidia-glx"
+	x11-base/xorg-server
+	!>=x11-base/xorg-server-1.0.99
+	media-libs/mesa
+	app-admin/eselect-opengl
+	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
+	!app-emulation/emul-linux-x86-nvidia
+	!x11-drivers/nvidia-legacy-drivers"
+
+QA_TEXTRELS_x86="usr/lib/xorg/libXvMCNVIDIA.so.${PV}
+	usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib/opengl/nvidia/tls/libnvidia-tls.so.${PV}
+	usr/lib/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so"
+QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib/opengl/nvidia/extensions/libglx.so"
+
+
+QA_TEXTRELS_amd64="usr/lib64/xorg/libXvMCNVIDIA.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib64/opengl/nvidia/tls/libnvidia-tls.so.${PV}
+	usr/lib64/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
+	usr/lib64/opengl/nvidia/extensions/libglx.so
+	usr/lib32/xorg/libXvMCNVIDIA.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib32/opengl/nvidia/tls/libnvidia-tls.so.${PV}
+	usr/lib32/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
+	usr/lib32/opengl/nvidia/extensions/libglx.so"
+
+QA_EXECSTACK_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib64/opengl/nvidia/extensions/libglx.so
+	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
+	usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
+	usr/lib32/opengl/nvidia/extensions/libglx.so"
 
 export _POSIX2_VERSION="199209"
 
