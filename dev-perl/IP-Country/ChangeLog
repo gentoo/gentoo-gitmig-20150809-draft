@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IP-Country
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.22 2006/08/17 21:19:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IP-Country/ChangeLog,v 1.23 2006/10/09 15:47:12 mcummings Exp $
+
+  09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -IP-Country-2.17.ebuild, -IP-Country-2.18.ebuild, -IP-Country-2.19.ebuild,
+  IP-Country-2.20.ebuild, IP-Country-2.21.ebuild:
+  Keywording amd64 stable; cleaning up old ebuilds
 
   17 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   IP-Country-2.21.ebuild:
