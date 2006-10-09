@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.4.ebuild,v 1.1 2006/10/06 23:44:39 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.12.4.ebuild,v 1.2 2006/10/09 12:23:29 leio Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -42,7 +42,10 @@ src_unpack() {
 		fi
 	fi
 
-	epatch ${FILESDIR}/${PN}-2.8.3-macos.patch
+	epatch "${FILESDIR}/${PN}-2.8.3-macos.patch"
+
+	# Fix build for FreeBSD. This fix will be included in 2.12.5
+	epatch "${FILESDIR}/${P}-gtimer-fix.patch"
 }
 
 src_compile() {
