@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/Devel-Symdump-2.06.03.ebuild,v 1.1 2006/09/25 21:06:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/Devel-Symdump-2.06.03.ebuild,v 1.2 2006/10/09 14:14:03 mcummings Exp $
 
 inherit versionator perl-module
 
@@ -20,4 +20,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
