@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12.ebuild,v 1.2 2006/10/05 18:44:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/dopewars-1.5.12.ebuild,v 1.3 2006/10/09 15:03:27 nyhm Exp $
 
 inherit games
 
@@ -15,10 +15,7 @@ IUSE="nls ncurses gtk gnome esd sdl"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )
 	esd? ( media-sound/esound )
-	gtk? (
-		=x11-libs/gtk+-2*
-		dev-libs/glib
-	)
+	gtk? ( =x11-libs/gtk+-2* )
 	nls? ( virtual/libintl )
 	sdl? (
 		media-libs/libsdl
@@ -62,12 +59,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
+	dodir /usr/share
 	cd "${D}/${GAMES_DATADIR}"
-	use gnome && mv gnome ../ || rm -rf gnome
-	mv pixmaps ../
+	use gnome && mv gnome "${D}/usr/share" || rm -rf gnome
+	mv pixmaps "${D}/usr/share"
 	dohtml -r doc/*/*
 	rm -rf doc
 
