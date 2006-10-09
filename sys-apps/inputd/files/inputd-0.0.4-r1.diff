@@ -1,0 +1,32 @@
+Index: trunk/src/uinput.c
+===================================================================
+--- trunk/src/uinput.c	(revision 62)
++++ trunk/src/uinput.c	(working copy)
+@@ -130,6 +130,7 @@
+ 
+     g_io_channel_set_close_on_unref(inputdev->uinput, TRUE);
+     g_io_channel_set_encoding(inputdev->uinput, NULL, NULL);
++    g_io_channel_set_buffered(inputdev->uinput, FALSE);
+ 
+     fd = g_io_channel_unix_get_fd(inputdev->uinput);
+ 
+Index: trunk/src/brain.c
+===================================================================
+--- trunk/src/brain.c	(revision 62)
++++ trunk/src/brain.c	(working copy)
+@@ -167,10 +167,13 @@
+     wdata.activate = TRUE;
+     devmanager_foreach_dev(work, &wdata);
+ 
+-    /* FIXME: If we don't sleep here for a very short time, X.org gets the
++    /* FIXME: If we don't sleep here for a short time, X.org might get the
+      * events in the wrong order. Who knows a better solution?
++     *
++     * Update 2006-10-04: The problem lies in the X.org code. I don't know
++     * where exactly and how to fix it. Maybe it's some polling issue.
+      */
+-    usleep(1);
++    usleep(10 * 1000);
+ 
+     /* Press simulated key */
+     uinput_write_event(inputdev, EV_KEY, cfgtr->target.def->code, 1);
