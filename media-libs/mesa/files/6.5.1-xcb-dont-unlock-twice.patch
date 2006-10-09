@@ -1,0 +1,20 @@
+Index: src/glx/x11/glxext.c
+===================================================================
+RCS file: /cvs/mesa/Mesa/src/glx/x11/glxext.c,v
+retrieving revision 1.27
+diff -u -b -B -r1.27 glxext.c
+--- src/glx/x11/glxext.c	7 Oct 2006 02:52:18 -0000	1.27
++++ src/glx/x11/glxext.c	9 Oct 2006 00:54:05 -0000
+@@ -1016,11 +1016,11 @@
+ 	if (!_XReply(dpy, (xReply*) &reply, 0, False)) {
+ 	    /* Something is busted. Punt. */
+ 	    UnlockDisplay(dpy);
++	    SyncHandle();
+ 	    FreeScreenConfigs(priv);
+ 	    return GL_FALSE;
+ 	}
+ 
+-	UnlockDisplay(dpy);
+ 	if (!reply.numVisuals) {
+ 	    /* This screen does not support GL rendering */
+ 	    UnlockDisplay(dpy);

@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.117 2006/09/28 03:06:07 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.118 2006/10/09 02:01:41 dberkholz Exp $
+
+*mesa-6.5.1-r2 (09 Oct 2006)
+
+  09 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/6.5.1-use-new-xcb-naming.patch,
+  +files/6.5.1-xcb-dont-unlock-twice.patch, +mesa-6.5.1-r2.ebuild:
+  Add a masked, XCB-capable mesa.
 
   28 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; -mesa-6.5.1.ebuild:
   Clean out broken ebuild.
