@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.ebuild,v 1.3 2006/09/16 02:01:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.20.ebuild,v 1.4 2006/10/09 23:07:59 cardoe Exp $
 
 inherit mythtv-plugins
 
@@ -8,7 +8,7 @@ DESCRIPTION="DVD player module for MythTV."
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="transcode"
 
-RDEPEND="~media-plugins/mythvideo-${PV}
+RDEPEND="=media-plugins/mythvideo-${MY_PV}*
 	transcode? ( 	media-video/transcode
 			media-libs/libdvdread )
 	|| ( media-video/mplayer media-video/xine-ui media-video/ogle )"
