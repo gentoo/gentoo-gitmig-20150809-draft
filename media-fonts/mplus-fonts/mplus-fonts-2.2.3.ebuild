@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.2.3.ebuild,v 1.10 2006/09/03 06:42:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/mplus-fonts-2.2.3.ebuild,v 1.11 2006/10/09 16:29:13 matsuu Exp $
 
 IUSE="X"
 
@@ -10,7 +10,7 @@ DESCRIPTION="M+ Japanese bitmap fonts"
 HOMEPAGE="http://mplus-fonts.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/${PN}/5030/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="mplus-fonts"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 
