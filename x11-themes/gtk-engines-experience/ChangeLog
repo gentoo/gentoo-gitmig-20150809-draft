@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-experience
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.10 2006/08/26 20:51:17 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-experience/ChangeLog,v 1.11 2006/10/09 17:53:22 the_paya Exp $
+
+  09 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  gtk-engines-experience-0.10.3.ebuild:
+  Keyworded ~x86-fbsd.
 
 *gtk-engines-experience-0.10.3 (26 Aug 2006)
 

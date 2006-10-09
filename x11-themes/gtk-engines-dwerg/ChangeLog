@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-dwerg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-dwerg/ChangeLog,v 1.15 2006/02/02 17:16:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-dwerg/ChangeLog,v 1.16 2006/10/09 17:51:44 the_paya Exp $
+
+  09 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  gtk-engines-dwerg-0.8.ebuild:
+  Keyworded ~x86-fbsd.
 
   02 Feb 2006; Simon Stelling <blubb@gentoo.org>
   gtk-engines-dwerg-0.8.ebuild:

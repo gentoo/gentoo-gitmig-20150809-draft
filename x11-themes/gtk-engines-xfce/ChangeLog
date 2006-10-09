@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.52 2006/09/05 21:58:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.53 2006/10/09 17:56:38 the_paya Exp $
+
+  09 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  gtk-engines-xfce-2.2.8.ebuild:
+  Keyworded ~x86-fbsd.
 
   05 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   gtk-engines-xfce-2.2.8.ebuild:
