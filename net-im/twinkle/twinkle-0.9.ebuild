@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.9.ebuild,v 1.2 2006/10/09 08:37:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-0.9.ebuild,v 1.3 2006/10/09 18:38:01 dragonheart Exp $
 
 inherit eutils qt3
 
@@ -45,6 +45,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README THANKS
+	domenu twinkle.desktop
 }
 
 pkg_postinst() {
