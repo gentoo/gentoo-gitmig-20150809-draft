@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-Expr/HTML-Template-Expr-0.07.ebuild,v 1.6 2006/08/07 23:32:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-Expr/HTML-Template-Expr-0.07.ebuild,v 1.7 2006/10/09 15:35:52 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ DEPEND=">=dev-perl/HTML-Template-2.8
 		perl-core/Text-Balanced
 		virtual/perl-Test-Simple
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
