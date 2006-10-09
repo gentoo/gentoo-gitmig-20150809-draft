@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/IO-Tty-1.02-r1.ebuild,v 1.13 2006/08/05 04:46:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/IO-Tty-1.02-r1.ebuild,v 1.14 2006/10/09 15:45:30 mcummings Exp $
 
 inherit perl-module
 
@@ -17,4 +17,3 @@ mymake="/usr"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
