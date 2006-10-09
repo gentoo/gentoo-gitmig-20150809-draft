@@ -1,6 +1,11 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.22 2006/10/01 13:19:28 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.23 2006/10/09 00:17:22 jokey Exp $
+
+*texmaker-1.40 (09 Oct 2006)
+
+  09 Oct 2006; Markus Ullmann <jokey@gentoo.org> +texmaker-1.40.ebuild:
+  Version bump wrt bug #143363
 
   01 Oct 2006; Alexandre Buisse <nattfodd@gentoo.org>
   texmaker-1.11-r1.ebuild, texmaker-1.30.ebuild:
