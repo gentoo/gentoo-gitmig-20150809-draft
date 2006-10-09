@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.194 2006/10/02 18:07:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.195 2006/10/09 17:11:12 lu_zero Exp $
+
+  09 Oct 2006; Luca Barbato <lu_zero@gentoo.org> alsa-lib-1.0.12.ebuild:
+  Marked ppc
 
   02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml:
   Move maintainership over to new alsa herd.
