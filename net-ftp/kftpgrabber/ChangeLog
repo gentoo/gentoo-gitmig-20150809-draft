@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.10 2006/10/09 20:33:09 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.11 2006/10/09 21:48:11 deathwing00 Exp $
+
+  09 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kftpgrabber-0.8.0_alpha2.ebuild:
+  Upstream confirmed that there are no optional dependencies for this package.
+  Removed unnecessary lines.
 
 *kftpgrabber-0.8.0_alpha2 (09 Oct 2006)
 

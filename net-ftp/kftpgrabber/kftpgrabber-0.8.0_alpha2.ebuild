@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/kftpgrabber-0.8.0_alpha2.ebuild,v 1.1 2006/10/09 20:33:09 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/kftpgrabber-0.8.0_alpha2.ebuild,v 1.2 2006/10/09 21:48:11 deathwing00 Exp $
 
 inherit kde eutils
 
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="qsa howl"
 
 DEPEND="dev-libs/openssl"
-		#qsa? ( >=dev-libs/qsa-1.1.0 )
 
 RDEPEND="${DEPEND}"
 
