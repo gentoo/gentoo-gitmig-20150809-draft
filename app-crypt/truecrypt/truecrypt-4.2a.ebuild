@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a.ebuild,v 1.4 2006/08/22 13:18:47 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.2a.ebuild,v 1.5 2006/10/09 06:33:50 alonbl Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="virtual/linux-sources
 
 RDEPEND="sys-fs/device-mapper"
 
-BUILD_PARAMS="KSRC=${KV_DIR} NO_WARNINGS=1"
+BUILD_PARAMS="KERNEL_SRC=${KERNEL_DIR} NO_WARNINGS=1"
 BUILD_TARGETS="truecrypt"
 MODULE_NAMES="truecrypt(block:${S}/Linux/Kernel)"
 
@@ -30,10 +30,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch "${FILESDIR}/${P}"_kernel-2.6.18-rc1_fix.patch
 	cd "${S}"
-	linux-mod_pkg_setup
+	epatch "${FILESDIR}/${P}"_kernel-2.6.18-rc1_fix.patch
 	epatch "${FILESDIR}/${P}-makefile.patch"
+	linux-mod_pkg_setup
 }
 
 src_compile() {
@@ -43,7 +43,7 @@ src_compile() {
 	tc-export CC
 	# remove kernel linked crypt stuff
 	emake clean || die "make clean failed"
-	emake truecrypt || die "Compile and/or linking of TrueCrypt Linux CLI application failed."
+	emake truecrypt NO_STRIP=1 || die "Compile and/or linking of TrueCrypt Linux CLI application failed."
 }
 
 src_test() {
