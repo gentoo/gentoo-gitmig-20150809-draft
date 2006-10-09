@@ -1,28 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX psemu-peopssoftgpu-1.16-fix-noxf86vm.patch 463 RMD160 46471d8ca2c84bb692a61fb5789a612029490134 SHA1 a10662a8885b4e273b0964f4847bfaab464db2bd SHA256 2c992dd617eeac6cd6029407c3d22441eb8f898727595e4b55bdb6b6daf798eb
-MD5 f54e65dfac77ff2d214c40aef60db289 files/psemu-peopssoftgpu-1.16-fix-noxf86vm.patch 463
-RMD160 46471d8ca2c84bb692a61fb5789a612029490134 files/psemu-peopssoftgpu-1.16-fix-noxf86vm.patch 463
-SHA256 2c992dd617eeac6cd6029407c3d22441eb8f898727595e4b55bdb6b6daf798eb files/psemu-peopssoftgpu-1.16-fix-noxf86vm.patch 463
-AUX psemu-peopssoftgpu-1.16-makefile-cflags.patch 406 RMD160 f74f2c44d60d4cb6bcedc226bcb4d8811c70ef29 SHA1 8ac2c88942e8c2f35446a69f07ab85ad0cec4bbc SHA256 30bf5714b3a266d41acde581834cb3f882e41b457fca442f501227e60d3bdc4c
-MD5 c3c327560ff175c4d8813f5b3f68eee9 files/psemu-peopssoftgpu-1.16-makefile-cflags.patch 406
-RMD160 f74f2c44d60d4cb6bcedc226bcb4d8811c70ef29 files/psemu-peopssoftgpu-1.16-makefile-cflags.patch 406
-SHA256 30bf5714b3a266d41acde581834cb3f882e41b457fca442f501227e60d3bdc4c files/psemu-peopssoftgpu-1.16-makefile-cflags.patch 406
+AUX psemu-peopssoftgpu-1.17-fix-noxf86vm.patch 463 RMD160 46471d8ca2c84bb692a61fb5789a612029490134 SHA1 a10662a8885b4e273b0964f4847bfaab464db2bd SHA256 2c992dd617eeac6cd6029407c3d22441eb8f898727595e4b55bdb6b6daf798eb
+MD5 f54e65dfac77ff2d214c40aef60db289 files/psemu-peopssoftgpu-1.17-fix-noxf86vm.patch 463
+RMD160 46471d8ca2c84bb692a61fb5789a612029490134 files/psemu-peopssoftgpu-1.17-fix-noxf86vm.patch 463
+SHA256 2c992dd617eeac6cd6029407c3d22441eb8f898727595e4b55bdb6b6daf798eb files/psemu-peopssoftgpu-1.17-fix-noxf86vm.patch 463
 AUX psemu-peopssoftgpu-1.17-gcc41.patch 2212 RMD160 027708a724a67d31e2acdbb77f13d5e63d39cfd5 SHA1 227344fde6d4150209550c0c42dfa001380354f8 SHA256 2a2f4657757a97bf6ae37235aa29b96b553e052650412962db58b7351d8a7878
 MD5 29e28aa0b708711bb8c80e586ec0f9dd files/psemu-peopssoftgpu-1.17-gcc41.patch 2212
 RMD160 027708a724a67d31e2acdbb77f13d5e63d39cfd5 files/psemu-peopssoftgpu-1.17-gcc41.patch 2212
 SHA256 2a2f4657757a97bf6ae37235aa29b96b553e052650412962db58b7351d8a7878 files/psemu-peopssoftgpu-1.17-gcc41.patch 2212
-DIST PeopsSoftGpu116.tar.gz 642273
+AUX psemu-peopssoftgpu-1.17-makefile-cflags.patch 406 RMD160 f74f2c44d60d4cb6bcedc226bcb4d8811c70ef29 SHA1 8ac2c88942e8c2f35446a69f07ab85ad0cec4bbc SHA256 30bf5714b3a266d41acde581834cb3f882e41b457fca442f501227e60d3bdc4c
+MD5 c3c327560ff175c4d8813f5b3f68eee9 files/psemu-peopssoftgpu-1.17-makefile-cflags.patch 406
+RMD160 f74f2c44d60d4cb6bcedc226bcb4d8811c70ef29 files/psemu-peopssoftgpu-1.17-makefile-cflags.patch 406
+SHA256 30bf5714b3a266d41acde581834cb3f882e41b457fca442f501227e60d3bdc4c files/psemu-peopssoftgpu-1.17-makefile-cflags.patch 406
 DIST PeopsSoftGpu117.tar.gz 680025 RMD160 65fe7573125d62cab549e79b6ecba1d7ea6198e5 SHA1 47dae549895bd7dcaf5663ebad6258718463e9ee SHA256 eb41ca05bddfc81d6c42d978f1242da95b2c7d76ebe2c9b790100296108e5427
-EBUILD psemu-peopssoftgpu-1.16.ebuild 1745 RMD160 93c80b7fa113216ec448f3b8fce1979180165378 SHA1 dd3e5e823eb2dac91b9d57defff31a96ff2db7e0 SHA256 5226fbf2265f30636a41f367043f7cafbcb4b11dd788225a6f3563de0cbc7669
-MD5 30fa48f19560db9b3b08cb2dc9ee626e psemu-peopssoftgpu-1.16.ebuild 1745
-RMD160 93c80b7fa113216ec448f3b8fce1979180165378 psemu-peopssoftgpu-1.16.ebuild 1745
-SHA256 5226fbf2265f30636a41f367043f7cafbcb4b11dd788225a6f3563de0cbc7669 psemu-peopssoftgpu-1.16.ebuild 1745
-EBUILD psemu-peopssoftgpu-1.17.ebuild 1865 RMD160 45fb2b596552054933493f620c636528df88595e SHA1 6c0dc3964c8c0c5d3018055a56f418a376a9135b SHA256 0aa97ef16fce02b564d9f22a9171565ea3aecab5213590567c43952b1839a88e
-MD5 0642a016a498b5b3ae2d3f2e1f225e98 psemu-peopssoftgpu-1.17.ebuild 1865
-RMD160 45fb2b596552054933493f620c636528df88595e psemu-peopssoftgpu-1.17.ebuild 1865
-SHA256 0aa97ef16fce02b564d9f22a9171565ea3aecab5213590567c43952b1839a88e psemu-peopssoftgpu-1.17.ebuild 1865
+EBUILD psemu-peopssoftgpu-1.17.ebuild 1818 RMD160 5d61faef819db849a848ff8199463558a87df6b1 SHA1 1c0e47d44eea6fa7d7b73ce3d3eb01179626c482 SHA256 ca30315a51964ce0fb2867e32ab1b6bb4a9021f8c3825466236db564e5302665
+MD5 1ff89bf07a0c3cc6579a920d460defad psemu-peopssoftgpu-1.17.ebuild 1818
+RMD160 5d61faef819db849a848ff8199463558a87df6b1 psemu-peopssoftgpu-1.17.ebuild 1818
+SHA256 ca30315a51964ce0fb2867e32ab1b6bb4a9021f8c3825466236db564e5302665 psemu-peopssoftgpu-1.17.ebuild 1818
 MISC ChangeLog 2774 RMD160 9890ed3b838fdf4f78f584ca8ddfc976b464e900 SHA1 6233772153a5650a4d784029cf1773a0eccd5fc7 SHA256 0d5c285ce98dd213d1cc793e901ed76d2effe6828c2c66d2ea1f609cdab2d75a
 MD5 1fa99e5f9cb68f8bf580e6f3bd477c1b ChangeLog 2774
 RMD160 9890ed3b838fdf4f78f584ca8ddfc976b464e900 ChangeLog 2774
@@ -31,16 +23,6 @@ MISC metadata.xml 158 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea SHA1 be525
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 RMD160 cbd9984bb6b426c8c9cee5022fe0a26261612fea metadata.xml 158
 SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata.xml 158
-MD5 933706295eaebb39f5550e2b22a5481d files/digest-psemu-peopssoftgpu-1.16 67
-RMD160 7a10c2b01c19b2b16f20d6ea20e3cd0f598dcafb files/digest-psemu-peopssoftgpu-1.16 67
-SHA256 c6bc2b95757fe80152095071e5e03af8ffe9766296d3cc668beaa2c61fd456d6 files/digest-psemu-peopssoftgpu-1.16 67
 MD5 660b5dc5d209b89513b457245f877815 files/digest-psemu-peopssoftgpu-1.17 247
 RMD160 af8309bd9f0b2bdda032a4403c7920c59e14b956 files/digest-psemu-peopssoftgpu-1.17 247
 SHA256 28c61968f7a90b294c9bdffdf056d5ada9917df8568b96b611757b9d06e311bd files/digest-psemu-peopssoftgpu-1.17 247
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
-
-iD8DBQFEst0q9AbAhSK0CiwRArkRAJ9uKkl32Ae0uZrBehaAHk/NSY/R+ACdHlqA
-7SS+jJ1bPmTAGlQ8QEwqj9Q=
-=y5UZ
------END PGP SIGNATURE-----
