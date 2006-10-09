@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnu-netcat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.12 2006/08/16 00:50:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/ChangeLog,v 1.13 2006/10/09 19:24:44 drizzt Exp $
+
+  09 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> gnu-netcat-0.7.1.ebuild:
+  Added ~x86-fbsd keyword.
 
   16 Aug 2006; Jon Hood <squinky86@gentoo.org> gnu-netcat-0.7.1.ebuild:
   Stable on amd64, bug #143904. Thanks postmodern <brodigan@pdx.edu>.
