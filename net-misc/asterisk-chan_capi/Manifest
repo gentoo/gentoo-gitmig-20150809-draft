@@ -1,8 +1,41 @@
-MD5 7bf09a9535cbb46b2eab2c1fadf26ff0 asterisk-chan_capi-0.3.5.ebuild 1361
-MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 633e7fbee428216d108a124d9b73640c ChangeLog 1085
-MD5 b9a7eaa0a80f661af9d28d444ae32a42 asterisk-chan_capi-0.4.0_pre1.ebuild 1510
-MD5 5fb008e4edf8bc00ef1dc2d54d7e3f82 files/digest-asterisk-chan_capi-0.4.0_pre1 71
-MD5 e5aae4f4a5d2ebec655dcab65ef0fac4 files/chan_capi-0.4.0_pre1-fixstable.diff 500
+AUX chan_capi-0.3.5-gentoo.diff 1113 RMD160 aaae0451b28835cb8091813b8faccb3f9b16fa3c SHA1 130bbcd9c01beacca557f403098ac697b5c29185 SHA256 39a1debc3abddb12ec3d266d70cdaf71acc7721fb7c60f16b40fcb68e356243d
 MD5 20866dceae16bdac07ffa8b6f8aa2986 files/chan_capi-0.3.5-gentoo.diff 1113
+RMD160 aaae0451b28835cb8091813b8faccb3f9b16fa3c files/chan_capi-0.3.5-gentoo.diff 1113
+SHA256 39a1debc3abddb12ec3d266d70cdaf71acc7721fb7c60f16b40fcb68e356243d files/chan_capi-0.3.5-gentoo.diff 1113
+AUX chan_capi-0.4.0_pre1-fixstable.diff 500 RMD160 9e784a206c6fd1282204a8272f18047472dc2645 SHA1 5f0680672a24a0562ef53b9f2a0dbab9065ec60f SHA256 322a7964fabee08cd42b4a05488d6cddb9a7b3cb174d73bf4d745c217b1944ae
+MD5 e5aae4f4a5d2ebec655dcab65ef0fac4 files/chan_capi-0.4.0_pre1-fixstable.diff 500
+RMD160 9e784a206c6fd1282204a8272f18047472dc2645 files/chan_capi-0.4.0_pre1-fixstable.diff 500
+SHA256 322a7964fabee08cd42b4a05488d6cddb9a7b3cb174d73bf4d745c217b1944ae files/chan_capi-0.4.0_pre1-fixstable.diff 500
+DIST chan_capi-0.3.5-patch.tar.bz2 4263
+DIST chan_capi-0.4.0-PRE1.tar.gz 42647
+DIST chan_capi-0.7.1.tar.gz 258576 RMD160 ba6c5e97aec5d82e84f9dee2167f7debd7bbdc1d SHA1 6bf566671bf0df8472a508d4bf6abd30d65fbdf3 SHA256 3656e449b1d81024f3484b5980209cbc1acd12afe326957b14e241baeba8de60
+DIST chan_capi.0.3.5.tar.gz 40825
+EBUILD asterisk-chan_capi-0.3.5.ebuild 1361 RMD160 8349f3faa775c6521df0f75cdfa2d35bc659dbb1 SHA1 cd91cbb6478f441405f42280c2e6e7719fcab8c7 SHA256 a9f82997e4473b3bb9775e99dcc483b0dd8f9960f182a753987e1c2dd7d89688
+MD5 7bf09a9535cbb46b2eab2c1fadf26ff0 asterisk-chan_capi-0.3.5.ebuild 1361
+RMD160 8349f3faa775c6521df0f75cdfa2d35bc659dbb1 asterisk-chan_capi-0.3.5.ebuild 1361
+SHA256 a9f82997e4473b3bb9775e99dcc483b0dd8f9960f182a753987e1c2dd7d89688 asterisk-chan_capi-0.3.5.ebuild 1361
+EBUILD asterisk-chan_capi-0.4.0_pre1.ebuild 1510 RMD160 26df8d03926eef3878c6a9533960b154d518ad72 SHA1 e13e600d213b7e63b2e45e356d8d2552b57e616a SHA256 c0a9617fbc1d0c216b57b4cadb4c918fc2223a0063bbc74670609049f2e79daf
+MD5 b9a7eaa0a80f661af9d28d444ae32a42 asterisk-chan_capi-0.4.0_pre1.ebuild 1510
+RMD160 26df8d03926eef3878c6a9533960b154d518ad72 asterisk-chan_capi-0.4.0_pre1.ebuild 1510
+SHA256 c0a9617fbc1d0c216b57b4cadb4c918fc2223a0063bbc74670609049f2e79daf asterisk-chan_capi-0.4.0_pre1.ebuild 1510
+EBUILD asterisk-chan_capi-0.7.1.ebuild 1718 RMD160 8c9d22e86c889976d0e21c6c37cfbebcf56722e1 SHA1 09cb6eeebeba29d2984230f1726c8034c7dfcff0 SHA256 51f74f9f4e0707b370d3a68cd843bb982b3ea300ce943f8066a0a5149e754ef8
+MD5 55e77a408072b1d3013765593cf08a3e asterisk-chan_capi-0.7.1.ebuild 1718
+RMD160 8c9d22e86c889976d0e21c6c37cfbebcf56722e1 asterisk-chan_capi-0.7.1.ebuild 1718
+SHA256 51f74f9f4e0707b370d3a68cd843bb982b3ea300ce943f8066a0a5149e754ef8 asterisk-chan_capi-0.7.1.ebuild 1718
+MISC ChangeLog 1437 RMD160 744060870c263c9d023b105f4cfd625a1c0ab406 SHA1 98b2c7f7a694aa49d9a5260e4db9afb3ee218577 SHA256 209e49436685b5b152c7542ce1be910d4921e8271571dc87a00145861e307c45
+MD5 5929a4e2abc0a736f2be3fd8ccea0af8 ChangeLog 1437
+RMD160 744060870c263c9d023b105f4cfd625a1c0ab406 ChangeLog 1437
+SHA256 209e49436685b5b152c7542ce1be910d4921e8271571dc87a00145861e307c45 ChangeLog 1437
+MISC metadata.xml 217 RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 SHA1 7b349815d56d7d7e2d46968341228c5267c666eb SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+RMD160 275af641d8134ee438c8e2c9f89eb3b0a286a386 metadata.xml 217
+SHA256 c3eb09d27b1a9cf05b690524903c7faf096829ef1d19c0264769c277ac28d0a1 metadata.xml 217
 MD5 1e4bba4e8f386ad925da084174d4a5e2 files/digest-asterisk-chan_capi-0.3.5 138
+RMD160 42635c3cc4462ea930e6d47d0e8a4fb1b7e17675 files/digest-asterisk-chan_capi-0.3.5 138
+SHA256 d1c4fbf9d90046bd13bb5b36d73eb5c45f728bf5ff9376997fa226595975ac38 files/digest-asterisk-chan_capi-0.3.5 138
+MD5 5fb008e4edf8bc00ef1dc2d54d7e3f82 files/digest-asterisk-chan_capi-0.4.0_pre1 71
+RMD160 c13c2ea0724374df98f3592dcf94f5088409c004 files/digest-asterisk-chan_capi-0.4.0_pre1 71
+SHA256 dcefdfb15f0d291101dbcc658667ed2d6653e21c7eeb4f32d463902308754c0a files/digest-asterisk-chan_capi-0.4.0_pre1 71
+MD5 fd5f8380c95ef4e7fdeb80a9f24c0d1d files/digest-asterisk-chan_capi-0.7.1 247
+RMD160 9dcbc1b0309d84698da255b9e9fec9cbd4a0d121 files/digest-asterisk-chan_capi-0.7.1 247
+SHA256 0cf665daeb43e35c670c4c55fc042397639342e2e36761ba24bf10842ceeb3d3 files/digest-asterisk-chan_capi-0.7.1 247
