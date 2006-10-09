@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.5 2006/10/05 11:53:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/pcb-20060822.ebuild,v 1.6 2006/10/09 15:09:52 calchan Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pcb/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE=""
+IUSE="jpeg png"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	media-libs/gd"
@@ -29,7 +29,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --disable-dependency-tracking || die "Configuration failed"
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable jpeg ) \
+		$(use_enable png ) \
+		|| die "Configuration failed"
 	emake || die "Compilation failed"
 }
 
