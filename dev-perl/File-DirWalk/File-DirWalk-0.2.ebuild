@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/File-DirWalk-0.2.ebuild,v 1.8 2006/08/07 22:46:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/File-DirWalk-0.2.ebuild,v 1.9 2006/10/09 14:29:55 mcummings Exp $
 
 inherit perl-module
 
@@ -16,4 +16,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
