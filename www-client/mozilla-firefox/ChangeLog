@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.192 2006/10/07 22:21:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.193 2006/10/09 09:52:40 genstef Exp $
+
+  09 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  mozilla-firefox-2.0_rc2.ebuild:
+  Better handling of SHORTLANGS
 
   07 Oct 2006; Stefan Schweizer <genstef@gentoo.org> Manifest:
   fix digest, thanks brad

@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.1 2006/10/07 17:43:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.2 2006/10/09 09:52:40 genstef Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
 PATCH="mozilla-firefox-2.0_rc1-patches-1.4"
-LANGS="ar be bg ca cs da de el en-GB es-AR es-ES eu fi fr ga-IE gu-IN hu it ja ko
-lt mk mn nb-NO nl pa-IN pl pt-BR ru sk sl sv-SE tr zh-CN zh-TW"
-SHORTLANGS="fy-NL pt-PT nn-NO"
+LANGS="ar be bg ca cs da de el en-GB es-AR es-ES eu fi fy-NL fr ga-IE gu-IN hu it ja ko
+lt mk mn nb-NO nl nn-NO pa-IN pl pt-BR pt-PT ru sk sl sv-SE tr zh-CN zh-TW"
 MY_PV=${PV/_}
 
 DESCRIPTION="Firefox Web Browser"
@@ -31,11 +30,13 @@ for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
 		linguas_${X/-/_}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
-done
-for X in ${SHORTLANGS} ; do
-	SRC_URI="${SRC_URI}
-		linguas_${X%%-*}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${P}-${X}.xpi )"
-	IUSE="${IUSE} linguas_${X%%-*}"
+	# english is handled internally
+	if [ "${#X}" == 5 ] && [ "${X}" != "en-GB" ] && [ "${X}" != "es-AR" ] && \
+		[ "${X}" != "pt-BR" ] && [ "${X}" != "zh-TW" ]; then
+		SRC_URI="${SRC_URI}
+			linguas_${X%%-*}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${P}-${X}.xpi )"
+		IUSE="${IUSE} linguas_${X%%-*}"
+	fi
 done
 
 RDEPEND="java? ( virtual/jre )
