@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-2.1.ebuild,v 1.1 2005/09/25 14:08:58 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-2.1.ebuild,v 1.2 2006/10/09 14:28:30 wolf31o2 Exp $
 
-inherit eutils
+inherit multilib eutils
 
 DESCRIPTION="Light weight process library (used by Coda).  This is NOT libwww-perl."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
@@ -19,6 +19,8 @@ DEPEND="sys-apps/grep
 	sys-devel/gcc"
 
 RDEPEND=""
+
+QA_TEXTRELS="usr/$(get_libdir)/liblwp.so.2.0.5"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
