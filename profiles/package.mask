@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6029 2006/10/09 01:54:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6030 2006/10/09 01:58:20 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -26,8 +26,8 @@
 =media-libs/mesa-6.5.1-r2
 x11-proto/xcb-proto
 x11-libs/libxcb
-=x11-libs/libx11-1.1*
-=x11-libs/libx11-1.0.99*
+=x11-libs/libX11-1.1*
+=x11-libs/libX11-1.0.99*
 
 # <exg@gentoo.org> (07 Oct 2006)
 # Masked for testing
