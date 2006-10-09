@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/smokeping
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.3 2006/09/20 12:29:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/ChangeLog,v 1.4 2006/10/09 15:59:59 chtekk Exp $
+
+  09 Oct 2006; Luca Longinotti <chtekk@gentoo.org> smokeping-2.0.9.ebuild:
+  Fix bug #150559.
 
   20 Sep 2006; <blubb@gentoo.org> smokeping-2.0.9.ebuild:
   stable on amd64

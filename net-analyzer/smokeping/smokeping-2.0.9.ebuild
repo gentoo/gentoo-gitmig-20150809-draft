@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.3 2006/09/20 12:29:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/smokeping/smokeping-2.0.9.ebuild,v 1.4 2006/10/09 15:59:59 chtekk Exp $
 
 inherit perl-module eutils
 
@@ -21,6 +21,12 @@ DEPEND="dev-lang/perl
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
+	if ! built_with_use '>=net-analyzer/rrdtool-1.2' perl ; then
+		eerror "You must build net-analyzer/rrdtool with the"
+		eerror "'perl' USE flag turned on!"
+		die "net-analyzer/rrdtool installed with 'perl' USE flag disabled"
+	fi
+
 	enewgroup smokeping
 	enewuser smokeping -1 -1 /var/lib/smokeping smokeping
 }
