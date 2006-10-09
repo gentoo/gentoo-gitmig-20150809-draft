@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/package.mask,v 1.12 2006/10/05 18:45:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/2006.0/2.4/package.mask,v 1.13 2006/10/09 20:27:38 gustavoz Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # We mask core 2.6 stuff to avoid bootstrap issues
@@ -98,7 +98,6 @@ x11-drivers/xf86-input-evdev
 >=gnome-base/libbonobo-2.16.0
 >=gnome-base/libbonoboui-2.16.0
 >=gnome-base/libgnome-2.16.0
->=gnome-base/libgnomeui-2.15.1
 >=x11-libs/pango-1.14.3
 >=x11-misc/alacarte-0.10.0
 >=gnome-extra/bug-buddy-2.16.0
@@ -160,9 +159,9 @@ x11-drivers/xf86-input-evdev
 >=dev-python/pygobject-2.12.1
 >=dev-python/pygtk-2.10.1
 >=x11-libs/libxklavier-3.0
->=dev-cpp/glibmm-2.9.1
->=dev-cpp/libxmlpp-2.13.1
 >=www-client/epiphany-extensions-2.16.0
 >=x11-misc/icon-naming-utils-0.8.1
->=dev-libs/glib-2.12.0
->=x11-libs/gtk+-2.10.0
+>=gnome-base/gnome-2.16.0
+>=gnome-extra/gnome2-user-docs-2.16.0
+>=gnome-base/gconf-2.16.0
+>=gnome-base/gnome-light-2.16.0
