@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre011.ebuild,v 1.4 2006/10/09 16:41:20 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-outline-fonts/mplus-outline-fonts-0_pre012.ebuild,v 1.1 2006/10/09 16:41:20 matsuu Exp $
 
 inherit font
 
@@ -9,7 +9,7 @@ MY_IPAFONT="opfc-ModuleHP-1.1.1_withIPAFonts"
 
 DESCRIPTION="M+ Japanese outline fonts with IPA font"
 HOMEPAGE="http://mplus-fonts.sourceforge.jp/ https://sourceforge.jp/projects/opfc/"
-SRC_URI="http://downloads.sourceforge.jp/mplus-fonts/6650/${MY_P}.tar.gz
+SRC_URI="mirror://sourceforge.jp/mplus-fonts/6650/${MY_P}.tar.gz
 	mirror://sourceforge.jp/opfc/13897/${MY_IPAFONT}.tar.gz"
 
 LICENSE="mplus-fonts grass-ipafonts"
