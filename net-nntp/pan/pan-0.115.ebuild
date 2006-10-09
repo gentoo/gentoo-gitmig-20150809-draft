@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.115.ebuild,v 1.1 2006/10/01 09:42:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.115.ebuild,v 1.2 2006/10/09 22:44:04 swegener Exp $
+
+inherit eutils
 
 DESCRIPTION="A newsreader for the Gnome2 desktop"
 HOMEPAGE="http://pan.rebelbase.com/"
@@ -20,6 +22,13 @@ RDEPEND=">=dev-libs/glib-2.4.0
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/0.115-size_t.patch
+}
 
 src_compile() {
 	econf $(use_with spell gtkspell) || die "econf failed"
