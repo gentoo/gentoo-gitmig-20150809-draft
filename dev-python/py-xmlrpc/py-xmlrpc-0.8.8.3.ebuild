@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/py-xmlrpc-0.8.8.3.ebuild,v 1.10 2005/10/02 14:15:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/py-xmlrpc-0.8.8.3.ebuild,v 1.11 2006/10/09 19:19:49 tomk Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/py-xmlrpc/"
 DEPEND="virtual/python"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ia64 ppc sparc x86"
+KEYWORDS="alpha ~amd64 ia64 ppc sparc x86"
 
 src_install () {
 	mydoc="CHANGELOG COPYING INSTALL README"

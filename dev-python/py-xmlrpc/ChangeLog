@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-xmlrpc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.18 2005/10/02 14:15:09 agriffis Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.19 2006/10/09 19:19:49 tomk Exp $
+
+  09 Oct 2006; Tom Knight <tomk@gentoo.org> py-xmlrpc-0.8.8.3.ebuild:
+  Added ~amd64 KEYWORD
 
   02 Oct 2005; Aron Griffis <agriffis@gentoo.org> py-xmlrpc-0.8.8.3.ebuild:
   Mark 0.8.8.3 stable on ia64
