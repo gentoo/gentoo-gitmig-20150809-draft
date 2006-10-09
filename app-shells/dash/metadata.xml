@@ -6,4 +6,8 @@
 		<email>ka0ttic@gentoo.org</email>
 		<name>Aaron Walker</name>
 	</maintainer>
+	<maintainer>
+		<email>exg@gentoo.org</email>
+		<name>Emanuele Giaquinta</name>
+	</maintainer>
 </pkgmetadata>

@@ -1,0 +1,11 @@
+--- dash-0.5.3.orig/src/expand.c	2005-11-26 04:17:55.000000000 +0100
++++ dash-0.5.3/src/expand.c	2006-10-04 10:02:08.186753039 +0200
+@@ -1581,7 +1581,7 @@
+ 				if (c == '[') {
+ 					const char *r;
+ 
+-					found |= ccmatch(p, chr, &r);
++					found |= !!ccmatch(p, chr, &r);
+ 					if (r) {
+ 						p = r;
+ 						continue;
