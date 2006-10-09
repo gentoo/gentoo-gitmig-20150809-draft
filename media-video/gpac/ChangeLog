@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.26 2006/09/22 00:13:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.27 2006/10/09 21:42:59 aballier Exp $
+
+  09 Oct 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/gpac-0.4.2-ffmpeg-snapshots-compat.patch, gpac-0.4.2.ebuild:
+  Fix to compile against latest ffmpeg snapshots, bug #148939
 
   22 Sep 2006; Steve Dibb <beandog@gentoo.org>
   gpac-0.4.1_pre20060122-r1.ebuild, gpac-0.4.2.ebuild:

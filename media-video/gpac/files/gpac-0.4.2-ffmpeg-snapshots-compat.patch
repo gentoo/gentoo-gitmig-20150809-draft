@@ -1,0 +1,20 @@
+--- gpac/modules/ffmpeg_in/ffmpeg_decode.c.old	2006-10-09 21:33:37.000000000 +0200
++++ gpac/modules/ffmpeg_in/ffmpeg_decode.c	2006-10-09 21:34:20.000000000 +0200
+@@ -25,6 +25,17 @@
+ #include "ffmpeg_in.h"
+ #include <gpac/avparse.h>
+ 
++
++#ifndef STRINGIFY
++# define STRINGIFY(x)    STRINGIFY1(x)
++# define STRINGIFY1(x)   #x
++#endif
++
++#ifndef FFMPEG_VERSION
++#define FFMPEG_VERSION STRINGIFY(LIBAVCODEC_VERSION)
++#endif
++
++
+ static AVCodec *ffmpeg_get_codec(u32 codec_4cc)
+ {
+ 	char name[5];

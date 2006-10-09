@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2.ebuild,v 1.4 2006/09/22 00:13:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.2.ebuild,v 1.5 2006/10/09 21:42:59 aballier Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib
 
@@ -60,6 +60,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-static-defs.patch"
 	epatch "${FILESDIR}/${P}-nostrip.patch"
 	epatch "${FILESDIR}/${P}-soname.patch"
+	epatch "${FILESDIR}/${P}-ffmpeg-snapshots-compat.patch"
 	sed -ie '/ldconfig / d' "${S}/Makefile"
 
 	if use amr; then
