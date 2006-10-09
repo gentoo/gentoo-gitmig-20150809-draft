@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.6.ebuild,v 1.2 2006/06/09 02:01:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-1.6.ebuild,v 1.3 2006/10/09 12:33:56 gothgirl Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 DEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	x11-libs/startup-notification
-	>=x11-wm/openbox-20060509"
+	>=x11-wm/openbox-3.2"
 
 src_unpack () {
 	unpack ${A}
