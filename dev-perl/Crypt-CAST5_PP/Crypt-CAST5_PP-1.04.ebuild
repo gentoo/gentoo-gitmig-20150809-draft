@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-CAST5_PP/Crypt-CAST5_PP-1.04.ebuild,v 1.3 2006/08/07 01:19:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-CAST5_PP/Crypt-CAST5_PP-1.04.ebuild,v 1.4 2006/10/09 13:51:22 mcummings Exp $
 
 inherit perl-module
 
@@ -13,8 +13,5 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 sparc ~x86"
 IUSE=""
 
-# Tests disabled 6/24/6. The tests rely on a version of Crypt::CBC syntax
-# that is no longer valid.
 SRC_TEST="do"
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
