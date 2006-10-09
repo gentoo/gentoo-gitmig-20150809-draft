@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.13 2006/07/10 01:05:13 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.11-r1.ebuild,v 1.14 2006/10/09 18:33:11 malc Exp $
 
 inherit eutils
 
@@ -47,6 +47,7 @@ src_compile() {
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    --sysconfdir=/etc/unixODBC \
+			--libdir=/usr/$(get_libdir) \
 		    ${myconf} || die
 
 	make || die
@@ -62,6 +63,7 @@ src_compile() {
 				--with-odbc=${S} \
 				--prefix=/usr \
 				--x-libraries=/usr/lib \
+				--libdir=/usr/$(get_libdir) \
 				--sysconfdir=/etc/unixODBC \
 				${myconf} || die
 

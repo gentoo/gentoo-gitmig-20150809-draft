@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.57 2006/07/15 11:25:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.58 2006/10/09 18:33:11 malc Exp $
+
+  09 Oct 2006; <malc@gentoo.org> unixODBC-2.2.11-r1.ebuild:
+  Fix multilib-strict QA checks - bug #149983
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove rphillips from metadata.xml as he's retired.
