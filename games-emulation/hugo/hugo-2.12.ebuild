@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.12.ebuild,v 1.3 2006/05/02 18:35:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/hugo-2.12.ebuild,v 1.4 2006/10/09 21:43:56 nyhm Exp $
 
 inherit eutils games
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="x11-libs/gtk+
-		media-libs/libsdl
-		media-libs/libvorbis"
+DEPEND=">=x11-libs/gtk+-2
+	media-libs/libsdl
+	media-libs/libvorbis"
 
 src_unpack() {
 	unpack ${A}
