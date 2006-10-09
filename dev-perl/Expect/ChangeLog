@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Expect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.9 2006/08/19 17:24:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.10 2006/10/09 14:28:00 mcummings Exp $
+
+  09 Oct 2006; Michael Cummings <mcummings@gentoo.org> -Expect-1.15.ebuild,
+  -Expect-1.16.ebuild, -Expect-1.17.ebuild, -Expect-1.19.ebuild,
+  Expect-1.20.ebuild:
+  Cleaning out stale ebuilds
 
 *Expect-1.20 (19 Aug 2006)
 

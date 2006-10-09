@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-0.90.ebuild,v 1.9 2006/10/06 22:03:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event-RPC/Event-RPC-0.90.ebuild,v 1.10 2006/10/09 14:27:03 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ DEPEND="dev-perl/glib-perl
 		dev-perl/Net-SSLeay
 		dev-perl/Event
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
