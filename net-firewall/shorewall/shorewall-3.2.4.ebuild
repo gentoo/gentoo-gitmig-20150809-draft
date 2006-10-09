@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.2.4.ebuild,v 1.1 2006/10/08 19:58:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/shorewall-3.2.4.ebuild,v 1.2 2006/10/09 00:13:44 jokey Exp $
 
 MY_P_DOCS="${P/${PN}/${PN}-docs-html}"
 
@@ -62,8 +62,6 @@ pkg_postinst() {
 	einfo "* check that /etc/shorewall/rfc1918 does not contain non-RFC1918 private"
 	einfo "  addresses. If it does, rename it to rfc1918.old"
 	einfo "* remove /etc/shorewall/modules and use the one in /usr/share/shorewall/"
-	einfo "* if you want to use xtables (kernel 2.6.16+) then"
-	einfo "  cp -f /usr/share/shorewall/xmodules /etc/shorewall/modules"
 	einfo "* review IMAP LDAP NNTP POP3 SMTP and WEB macros as they have changed"
 	einfo
 	einfo "There is a new 'shorewall compile' command to generate scripts to run"
