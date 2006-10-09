@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.15-r2.ebuild,v 1.19 2006/08/05 03:17:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.15-r2.ebuild,v 1.20 2006/10/09 14:22:55 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

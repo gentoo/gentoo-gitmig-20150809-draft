@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.17.ebuild,v 1.6 2006/10/08 00:36:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.17.ebuild,v 1.7 2006/10/09 14:22:55 mcummings Exp $
 
 inherit versionator perl-module
 
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
