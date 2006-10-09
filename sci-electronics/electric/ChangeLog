@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/electric
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.18 2006/09/19 18:25:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.19 2006/10/09 17:23:43 calchan Exp $
+
+*electric-8.04 (09 Oct 2006)
+
+  09 Oct 2006; Denis Dupeyron <calchan@gentoo.org> +electric-8.04.ebuild:
+  Version bump.
 
   19 Sep 2006; Denis Dupeyron <calchan@gentoo.org>
   -files/6.08-fix-sandbox.patch, -files/6.08-fix-sandbox-r1.patch,
