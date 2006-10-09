@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/knifty-0.4.2.ebuild,v 1.8 2006/09/05 21:56:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/knifty-0.4.2.ebuild,v 1.9 2006/10/09 21:59:12 deathwing00 Exp $
 
 inherit kde
 
@@ -13,4 +13,11 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
+ARTS_REQUIRED="never"
+
+DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
+
+RDEPEND="${DEPEND}"
+
 need-kde 3.2
+
