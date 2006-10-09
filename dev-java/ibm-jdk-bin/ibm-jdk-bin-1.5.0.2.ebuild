@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.10 2006/10/09 04:01:34 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.2.ebuild,v 1.11 2006/10/09 21:35:25 nichoj Exp $
 
 inherit java-vm-2 versionator eutils rpm
 
@@ -43,7 +43,7 @@ DESCRIPTION="IBM Java Development Kit ${SLOT}"
 HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAGE}/linux/download.html"
 # bug #125178
-ALT_DOWNLOADPAGE="${HOMEPAGE}/older_download.html"
+ALT_DOWNLOADPAGE="${HOMEPAGE}/linux/older_download.html"
 
 SRC_URI="x86? ( ${X86_JDK_DIST} )
 	amd64? ( ${AMD64_JDK_DIST} )
