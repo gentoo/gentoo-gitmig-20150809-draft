@@ -1,18 +1,24 @@
-MD5 4521d0e86336e896a0c1a0d9a741115c ChangeLog 1944
-RMD160 b9da99d4dc1613f6ac6d1bb16d80329bb894435b ChangeLog 1944
-SHA256 78738254f869e46cf6f2c0348b7746f409d94755ee379aa3fb3897d97c375927 ChangeLog 1944
-MD5 3b74a906728f7e2bce341544377fa50a files/digest-gtk-engines-dwerg-0.6 69
-RMD160 1aa7f5ccfd66ce4dd6d14d6da2e9e7dbd79026e4 files/digest-gtk-engines-dwerg-0.6 69
-SHA256 1513a4a440178d739929b16bfbad742c64977e74e44cd96a0611f57ced3aa9a0 files/digest-gtk-engines-dwerg-0.6 69
-MD5 1a16bdea9dd766369b8e44941eca12e4 files/digest-gtk-engines-dwerg-0.8 69
-RMD160 431cab623eb48fa7cf2f72a3ccd6770e76ee7065 files/digest-gtk-engines-dwerg-0.8 69
-SHA256 398bd00640c22cba8deeb67f5745fb6563fd9121630f737c0fc87151323edbf6 files/digest-gtk-engines-dwerg-0.8 69
+DIST dwerg-default-0.6.tar.gz 125471
+DIST dwerg-default-0.8.tar.gz 288009 RMD160 c94db35ae4a513abe1c1d2a9c8da6e2ca77ee316 SHA1 1448e3b3bad77d02739de1e855f3566b86441932 SHA256 c0923556ada17f50658ead4c5890a05ca74b2eebd4d139041f1b1c65667f4bef
+EBUILD gtk-engines-dwerg-0.6.ebuild 775 RMD160 31d357a75064ff92f0c728ea5c7672091d03590e SHA1 b05b2e80540eb2b87bffc0d7ff7006dc1bc1d8a7 SHA256 e09d5220d1cfe991f8fa6b0b99cfe2a408142b49bdf3bc5cf163384939ed3b10
 MD5 ee5e504a2db4538b4ffa20912892cd64 gtk-engines-dwerg-0.6.ebuild 775
 RMD160 31d357a75064ff92f0c728ea5c7672091d03590e gtk-engines-dwerg-0.6.ebuild 775
 SHA256 e09d5220d1cfe991f8fa6b0b99cfe2a408142b49bdf3bc5cf163384939ed3b10 gtk-engines-dwerg-0.6.ebuild 775
-MD5 5f7744d62d6321abd0251bc851da5bf7 gtk-engines-dwerg-0.8.ebuild 800
-RMD160 a3e1c88dfabcd25308ebea7d3278f18cceee4b4b gtk-engines-dwerg-0.8.ebuild 800
-SHA256 bb915a08ca2f1fe5b8b75dbbcfeadfbac7df82ae41e42b5f3e7d289a333e0ee0 gtk-engines-dwerg-0.8.ebuild 800
+EBUILD gtk-engines-dwerg-0.8.ebuild 813 RMD160 01f75d8a2b4f6d369d481d04b42b6e1ea437780c SHA1 7c286468adc5ceda3aefd1482f60363e24678939 SHA256 6b758ffcbae6d46498b98a4c2952819cd22f9a0bf577d621696e0ceb184b2b55
+MD5 37f04808922ff9e7dea9a50f7cff7ad3 gtk-engines-dwerg-0.8.ebuild 813
+RMD160 01f75d8a2b4f6d369d481d04b42b6e1ea437780c gtk-engines-dwerg-0.8.ebuild 813
+SHA256 6b758ffcbae6d46498b98a4c2952819cd22f9a0bf577d621696e0ceb184b2b55 gtk-engines-dwerg-0.8.ebuild 813
+MISC ChangeLog 2061 RMD160 bcbbfe34fdd180d5748d308561b6e34ddc792483 SHA1 85a780f37130fe168ab2acacec61ec55359a23b6 SHA256 e0d7c2cbe5ad2ddab6becfbd29f906e9b44b40ea18ed7565c18aaefc78202276
+MD5 885085eeef0b9ab3224bb7bbd8ee3d4f ChangeLog 2061
+RMD160 bcbbfe34fdd180d5748d308561b6e34ddc792483 ChangeLog 2061
+SHA256 e0d7c2cbe5ad2ddab6becfbd29f906e9b44b40ea18ed7565c18aaefc78202276 ChangeLog 2061
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 3b74a906728f7e2bce341544377fa50a files/digest-gtk-engines-dwerg-0.6 69
+RMD160 1aa7f5ccfd66ce4dd6d14d6da2e9e7dbd79026e4 files/digest-gtk-engines-dwerg-0.6 69
+SHA256 1513a4a440178d739929b16bfbad742c64977e74e44cd96a0611f57ced3aa9a0 files/digest-gtk-engines-dwerg-0.6 69
+MD5 69eb7fa66573aa323e0120ace7c52694 files/digest-gtk-engines-dwerg-0.8 253
+RMD160 7e84a87873eecef179a590ed13449a0ca997e8b8 files/digest-gtk-engines-dwerg-0.8 253
+SHA256 eb1949b38840cf233dd2bc65bb561da96cb5bc7a55b47ed2028cbd08ec98a88a files/digest-gtk-engines-dwerg-0.8 253
