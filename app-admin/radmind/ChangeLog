@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/radmind
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.1 2006/10/09 20:24:49 jokey Exp $
+
+*radmind-1.7.0 (09 Oct 2006)
+
+  09 Oct 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/radmind-1.7.0-gentoo.patch, +metadata.xml, +radmind-1.7.0.ebuild:
+  Initial commit wrt bug #77567 thanks to Martin Vuk for providing an ebuild
+
