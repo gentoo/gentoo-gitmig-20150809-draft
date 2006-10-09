@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/silver-xcursors
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.20 2006/01/03 21:16:19 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/silver-xcursors/ChangeLog,v 1.21 2006/10/09 13:28:17 the_paya Exp $
+
+  09 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  silver-xcursors-0.4.ebuild:
+  Keyworded ~x86-fbsd.
 
   03 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   silver-xcursors-0.4.ebuild:
