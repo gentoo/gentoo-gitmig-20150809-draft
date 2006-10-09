@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.49 2006/09/29 02:39:05 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.50 2006/10/09 23:44:44 pebenito Exp $
+
+*selinux-base-policy-20061008 (08 Oct 2006)
+
+  08 Oct 2006; Chris PeBenito <pebenito@gentoo.org> -files/semanage.conf,
+  +selinux-base-policy-20061008.ebuild,
+  -selinux-base-policy-99999999.ebuild:
+  First mainstream reference policy testing release.
 
   29 Sep 2006; Chris PeBenito <pebenito@gentoo.org>
   selinux-base-policy-99999999.ebuild:
