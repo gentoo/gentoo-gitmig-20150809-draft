@@ -1,14 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/GD-SVG-0.28.ebuild,v 1.4 2006/09/05 13:13:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-SVG/GD-SVG-0.28.ebuild,v 1.5 2006/10/09 14:58:33 mcummings Exp $
 
 inherit perl-module
 
 DEPEND="dev-perl/GD
 	dev-perl/SVG
 	dev-lang/perl"
-
-RDEPEND="${DEPEND}"
 
 DESCRIPTION="Seamlessly enable SVG output from scripts written using GD"
 SRC_URI="mirror://cpan/authors/id/T/TW/TWH/${P}.tar.gz"
