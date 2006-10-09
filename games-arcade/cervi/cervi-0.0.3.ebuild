@@ -1,48 +1,47 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/cervi-0.0.3.ebuild,v 1.6 2005/05/01 17:14:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/cervi-0.0.3.ebuild,v 1.7 2006/10/09 16:23:11 nyhm Exp $
 
-inherit games
+inherit toolchain-funcs games
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="A multiplayer game where players drive a worm and try not to collide with anything"
 SRC_URI="http://tomi.nomi.cz/download/${P}.tar.bz2"
 HOMEPAGE="http://tomi.nomi.cz/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND="x11-libs/gtk+
+DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/esound
 	media-sound/timidity++"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	sed -i \
 		-e "/^CFLAGS/ s:-Wall:${CFLAGS}:" \
-		-e "/^CXXFLAGS/ s:-Wall:${CXXFLAGS}:" ${S}/Makefile || \
-			die "sed Makefile failed"
+		-e "/^CXXFLAGS/ s:-Wall:${CXXFLAGS}:" Makefile \
+			|| die "sed Makefile failed"
 }
 
 src_compile() {
 	emake \
-		prefix="/usr" \
+		CXX=$(tc-getCXX) \
 		bindir="${GAMES_BINDIR}" \
-		datadir="${GAMES_DATADIR}/${PN}" || \
-			die "emake failed"
+		datadir="${GAMES_DATADIR}/${PN}" \
+		|| die "emake failed"
 }
 
 src_install() {
-	dodir ${GAMES_BINDIR} || die "dodir failed"
-	make \
-		prefix=${D}/usr \
-		bindir="${D}${GAMES_BINDIR}" \
-		datadir="${D}${GAMES_DATADIR}/${PN}" install || \
-			die "make install failed"
-	dodoc AUTHORS COPYRIGHT README changelog || die "dodoc failed"
+	dodir "${GAMES_BINDIR}" || die "dodir failed"
+	emake \
+		bindir="${D}/${GAMES_BINDIR}" \
+		datadir="${D}/${GAMES_DATADIR}/${PN}" install \
+		|| die "emake install failed"
+	dodoc AUTHORS changelog README
 	prepgamesdirs
 }
