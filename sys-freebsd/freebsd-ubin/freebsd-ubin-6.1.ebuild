@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.11 2006/10/05 21:06:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.1.ebuild,v 1.12 2006/10/09 09:04:16 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -79,6 +79,8 @@ src_unpack() {
 
 	# Rename manpage for renamed cmp
 	mv ${S}/cmp/cmp.1 ${S}/cmp/bsdcmp.1
+	# Fix whereis(1) manpath search.
+	sed -i -e 's:"manpath -q":"manpath":' "${S}/whereis/pathnames.h"
 }
 
 src_install() {
