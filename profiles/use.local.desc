@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2219 2006/10/09 02:04:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2220 2006/10/09 19:32:06 deathwing00 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1111,6 +1111,7 @@ net-fs/samba:swat - Enables support for swat configuration gui
 net-fs/samba:syslog - Enables support for syslog
 net-fs/samba:winbind - Enables support for the winbind auth daemon
 net-fs/shfs:amd - Enable automounter support
+net-ftp/kftpgrabber:qsa - Enable QSA scripting toolkit support
 net-ftp/proftpd:authfile - Enable support for auth-file module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:noauthunix - Disable support for auth-unix module
