@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Config-Tiny
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.48 2006/10/08 13:30:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.49 2006/10/09 13:53:37 mcummings Exp $
+
+  09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  Config-Tiny-2.04.ebuild, Config-Tiny-2.06.ebuild, Config-Tiny-2.07.ebuild,
+  Config-Tiny-2.08.ebuild, Config-Tiny-2.10.ebuild:
+  More cleanup
 
   08 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -Config-Tiny-1.ebuild, -Config-Tiny-2.01.ebuild, -Config-Tiny-2.02.ebuild,

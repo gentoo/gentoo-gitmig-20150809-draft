@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/Config-Tiny-2.04.ebuild,v 1.10 2006/10/08 13:30:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/Config-Tiny-2.04.ebuild,v 1.11 2006/10/09 13:53:37 mcummings Exp $
 
 inherit perl-module
 
@@ -17,4 +17,3 @@ SRC_TEST="do"
 
 DEPEND="virtual/perl-Test-Simple
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
