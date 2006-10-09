@@ -1,12 +1,15 @@
 # ChangeLog for app-pda/syncekonnector
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.7 2006/10/09 02:28:50 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/syncekonnector/ChangeLog,v 1.8 2006/10/09 02:32:04 chriswhite Exp $
+
+  09 Oct 2006; Chris White <chriswhite@gentoo.org> ChangeLog, Manifest:
+  Wrong bug number.
 
 *syncekonnector-0.3.2 (09 Oct 2006)
 
   09 Oct 2006; Chris White <chriswhite@gentoo.org>
   +files/syncekonnector-gcc4.1.patch, +syncekonnector-0.3.2.ebuild:
-  Version update to fix bug #127094. Fixed gcc4.1 compiling. Depend on
+  Version update to fix bug #149468. Fixed gcc4.1 compiling. Depend on
   synce-kde-0.9.1 to prevent compile errors.
 
   19 Aug 2006; Chris White <chriswhite@gentoo.org>
