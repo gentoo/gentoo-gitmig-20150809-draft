@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.15 2005/05/13 21:32:08 josejx Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.16 2006/10/09 14:36:31 nyhm Exp $
+
+  09 Oct 2006; Tristan Heaven <nyhm@gentoo.org> hexxagon-1.0.ebuild:
+  Install desktop entry
 
   13 May 2005; Joseph Jezak <josejx@gentoo.org> hexxagon-1.0.ebuild:
   Marked ppc stable.
