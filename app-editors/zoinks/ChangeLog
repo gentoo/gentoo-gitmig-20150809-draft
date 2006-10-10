@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zoinks
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.17 2006/10/10 00:45:35 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.18 2006/10/10 18:14:30 nixnut Exp $
+
+  10 Oct 2006; <nixnut@gentoo.org> zoinks-0.4.0.ebuild:
+  Stable on ppc wrt bug 148861
 
   10 Oct 2006; Jason Huebel <jhuebel@gentoo.org> zoinks-0.4.0.ebuild:
   stable on amd64, bug #148861
