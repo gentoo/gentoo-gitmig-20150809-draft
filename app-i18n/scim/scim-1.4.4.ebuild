@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.4.ebuild,v 1.9 2006/10/10 01:11:27 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.4.ebuild,v 1.10 2006/10/10 10:54:37 matsuu Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -28,7 +28,8 @@ RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 DEPEND="${RDEPEND}
 	|| ( x11-libs/libXt virtual/x11 )
 	doc? ( app-doc/doxygen )
-	dev-lang/perl"
+	dev-lang/perl
+	>=dev-util/intltool-0.33"
 
 has_gtk() {
 	if has_version '>=x11-libs/gtk+-2' ; then
