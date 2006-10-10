@@ -1,0 +1,11 @@
+# ChangeLog for net-firewall/shorewall-lite
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.1 2006/10/10 12:21:23 jokey Exp $
+
+*shorewall-lite-3.2.4 (10 Oct 2006)
+
+  10 Oct 2006; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +shorewall-lite-3.2.4.ebuild:
+  Was forgotten to add during addition of Shorewall 3.2 Series, fixing bug
+  #140001
+
