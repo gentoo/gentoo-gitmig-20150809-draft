@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST refpolicy-20061008.tar.bz2 301484 RMD160 b079c1bad4f7122915e50390131c2091aad1dd9a SHA1 6d5d042724df988740e669f2779a84806b46aa87 SHA256 4aa8add76221e4e578eeb9bca2184e1a68c7007e46358f4b77f50a5f4af8a68f
 DIST selinux-courier-imap-20050417.tar.bz2 2026
 DIST selinux-courier-imap-20050607.tar.bz2 2007
@@ -38,3 +41,10 @@ SHA256 9f29484e387c76182f8b87d9b859491ef94895ab63a3785920e4e5a038cdda01 files/di
 MD5 ee5c4091cfebe8deda3555a372d34b84 files/digest-selinux-courier-imap-20061008 259
 RMD160 da6753a43cb7513f7a7d989a08936a6fc6249ef2 files/digest-selinux-courier-imap-20061008 259
 SHA256 9ef2f56df74624eedd2ba705b9215c1a1a0d4f36025070476db62c4091e9fbe5 files/digest-selinux-courier-imap-20061008 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFKwRy3gmyzsILbxIRAt2FAJsEv/rf0eWhccbMVkxhL8JhegbmfwCgvTor
+tbrPuy/T5kiyO25dhfEifrI=
+=E6Ja
+-----END PGP SIGNATURE-----

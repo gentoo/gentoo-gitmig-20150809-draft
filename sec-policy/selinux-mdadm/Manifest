@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST selinux-mdadm-20051029.tar.bz2 885
 EBUILD selinux-mdadm-20051029.ebuild 423 RMD160 3305c168a32eebcbbad573dda3608ddb39197d38 SHA1 83bbb9d07763a8f8eb4a419b2a15313302ed580e SHA256 d5c37233b5d7aae11e340c449d95b3d7c7d78c8548123b6cb8f511bbf3b92c93
 MD5 c1c24beaffb7a23d41e4625f287e0680 selinux-mdadm-20051029.ebuild 423
@@ -21,3 +24,10 @@ SHA256 3981613a3c4eee22090d3ce6324ea4aa061b2cae9fd12f1538a46d070b9f3a70 files/di
 MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-selinux-mdadm-20061008 1
 RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-selinux-mdadm-20061008 1
 SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-selinux-mdadm-20061008 1
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFKwRd3gmyzsILbxIRAq8jAJ9dYw8UhOxPBtEKpk1BIOWtOhW6IACfaFsx
+nk/UMRTNp759k/v47eiac7s=
+=WIv8
+-----END PGP SIGNATURE-----
