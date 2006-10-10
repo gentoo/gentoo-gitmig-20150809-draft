@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/linux-fusion
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.1 2006/10/09 22:58:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.2 2006/10/10 18:48:09 nixnut Exp $
+
+  10 Oct 2006; <nixnut@gentoo.org> linux-fusion-3.2.ebuild:
+  Added ~ppc wrt bug 150688
 
 *linux-fusion-3.2 (09 Oct 2006)
 
