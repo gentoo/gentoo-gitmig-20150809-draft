@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/patchutils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.32 2005/08/05 18:56:39 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.33 2006/10/10 14:32:07 seemant Exp $
+
+  10 Oct 2006; Seemant Kulleen <seemant@gentoo.org>
+  patchutils-0.2.30.ebuild:
+  add automake-1.8 dependency, closing bug #149755 by Patrick Lauer
 
   05 Aug 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   patchutils-0.2.30.ebuild:
