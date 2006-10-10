@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.20 2006/02/07 21:14:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.21 2006/10/10 07:59:54 s4t4n Exp $
+
+  10 Oct 2006; Michele Noberasco <blubb@gentoo.org> wmtimer-2.9.2.ebuild:
+  Added missing libXpm dependancy, closing bug #150656.
+  wmtimer-2.4.ebuild:
+  Autumn clean up.
 
   07 Feb 2006; Simon Stelling <blubb@gentoo.org> wmtimer-2.9.2.ebuild:
   stable on amd64

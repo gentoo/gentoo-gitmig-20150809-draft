@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.9.2.ebuild,v 1.6 2006/02/07 21:14:36 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.9.2.ebuild,v 1.7 2006/10/10 07:59:54 s4t4n Exp $
 
 IUSE=""
 
@@ -21,7 +21,8 @@ RDEPEND=">=x11-libs/gtk+-2.6.2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.15.0
-	>=sys-apps/sed-4.0.9"
+	>=sys-apps/sed-4.0.9
+	>=x11-libs/libXpm-3.5.5"
 
 src_unpack() {
 	unpack ${A}
