@@ -1,21 +1,0 @@
-diff -ur gweled-0.6-orig/src/sge_core.c gweled-0.6/src/sge_core.c
---- gweled-0.6-orig/src/sge_core.c	2005-09-13 10:47:05.000000000 -0400
-+++ gweled-0.6/src/sge_core.c	2005-09-13 10:54:45.000000000 -0400
-@@ -83,7 +83,7 @@
- 					    ((T_SGEObject *) object)->
- 					    height);
- 
--		(int) ((T_SGEObject *) object)->needs_drawing = 0;
-+		((T_SGEObject *) object)->needs_drawing = 0;
- 
- 		invalidate_objects_above ((T_SGEObject *) object);
- 	}
-@@ -99,7 +99,7 @@
- 		    ((T_SGEObject *) object)->vx;
- 		((T_SGEObject *) object)->y +=
- 		    ((T_SGEObject *) object)->vy;
--		(int) ((T_SGEObject *) object)->needs_drawing |= 0x02;
-+		((T_SGEObject *) object)->needs_drawing |= 0x02;
- 	}
- 
- 	if (((T_SGEObject *) object)->stop_condition)
