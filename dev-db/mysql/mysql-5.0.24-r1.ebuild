@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.24-r1.ebuild,v 1.1 2006/08/31 21:53:12 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.24-r1.ebuild,v 1.2 2006/10/10 21:21:30 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
 MYSQL_RERELEASE="a"
 # Set the patchset revision to use, must be either empty or a decimal number
-MYSQL_PATCHSET_REV="1"
+MYSQL_PATCHSET_REV="2"
 
 inherit mysql
 
