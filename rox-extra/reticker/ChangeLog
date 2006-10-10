@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/reticker
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/reticker/ChangeLog,v 1.1 2006/10/10 13:20:40 lack Exp $
+
+*reticker-0.4.5k (10 Oct 2006)
+
+  10 Oct 2006; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +reticker-0.4.5k.ebuild:
+  New package: RETicker-0.4.5k, imported form breakmygentoo.net. Big thanks to
+  Peter Hyman!
+
