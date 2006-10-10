@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.12.ebuild,v 1.4 2006/10/10 14:56:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.12.ebuild,v 1.5 2006/10/10 23:19:10 seemant Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -9,8 +9,9 @@ filter-flags -fomit-frame-pointer
 # gnucash uses GLIB_INLINE, this will break it
 filter-flags -fno-inline
 
-DOC_VER="1.8.5"
 IUSE="nls postgres ofx hbci quotes chipcard"
+
+DOC_VER="1.8.5"
 
 DESCRIPTION="A personal finance manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
