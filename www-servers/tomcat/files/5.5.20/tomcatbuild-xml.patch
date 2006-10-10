@@ -1,6 +1,6 @@
---- apache-tomcat-5.5.15-src/build/build.xml	2006-01-03 10:15:03.000000000 -0500
-+++ build/build.xml	2006-01-28 13:12:39.000000000 -0500
-@@ -140,6 +140,7 @@
+--- apache-tomcat-5.5.20-src/build/build.xml	2006-09-12 11:12:23.000000000 -0400
++++ build.xml	2006-10-09 21:43:43.000000000 -0400
+@@ -143,6 +143,7 @@
  
    <!-- ====================== DEPLOY: Copy Static Files =================== -->
    <target name="deploy-static" depends="init">
@@ -8,7 +8,7 @@
      <copy file="${jsp-api.jar}"  todir="${tomcat.build}/common/lib"/>
      <copy file="${servlet-api.jar}" todir="${tomcat.build}/common/lib"/>
  
-@@ -158,9 +159,9 @@
+@@ -161,9 +162,9 @@
      <copy tofile="${tomcat.build}/bin/tomcat-native.tar.gz"
              file="${tomcat-native.tar.gz}" />
  
@@ -20,7 +20,7 @@
    </target>
  
    <!-- ====================== Build all components =================== -->
-@@ -650,28 +651,8 @@
+@@ -653,28 +654,8 @@
  
      <!-- <antcall target="build-commons-modeler" /> -->
      <!-- <antcall target="build-commons-daemon"  /> -->
@@ -51,19 +51,7 @@
    </target>
  
    <target name="build-tomcat-dbcp">
-@@ -824,9 +805,10 @@
-     </ant>
- 
-     <!-- Precompiling and fixing webapps -->
-+    <!--
-     <antcall target="build-webapps-precompile" />
-     <antcall target="fix-webapps" />
--
-+    -->
-   </target>
- 
-   <target name="fix-webapps" depends="init" >
-@@ -1038,11 +1020,11 @@
+@@ -1041,11 +1022,11 @@
    <!-- ====================== Compat target =================== -->
  
    <target name="compat" description="Create compatibility binaries for JREs before 1.5" >
@@ -77,7 +65,7 @@
    </target>
  
    <!-- ====================== DEPLOY: Deploy Components =================== -->
-@@ -1089,8 +1071,9 @@
+@@ -1092,8 +1073,9 @@
      <!-- Copy Unix JSVC from commons-daemon -->
      <copy file="${commons-daemon.jsvc.tar.gz}"
          tofile="${tomcat.dist}/bin/jsvc.tar.gz" />
@@ -88,7 +76,7 @@
      <echo>Target: Webapps precompilation ...</echo>
  
      <antcall target="build-admin"/>
-@@ -1185,10 +1168,11 @@
+@@ -1188,10 +1170,11 @@
     description="Catalina Tests" depends="dist-tester">
  
      <!-- For Java 1.4 -->
@@ -101,7 +89,7 @@
      <parallel>
  
          <java classname="LauncherBootstrap" fork="yes">
-@@ -1827,10 +1811,10 @@
+@@ -1871,10 +1854,10 @@
  
      <!-- commons-digester needs ../LICENSE -->
      <!-- That is ugly XXX needs a review -->
@@ -113,7 +101,7 @@
      <antcall target="downloadgz">
        <param name="sourcefile" value="${commons-beanutils.loc}"/>
        <param name="destfile" value="${commons-beanutils.jar}"/>
-@@ -1872,7 +1856,6 @@
+@@ -1916,7 +1899,6 @@
      </antcall>
  
      <antcall target="downloadgz">
@@ -121,7 +109,7 @@
        <param name="sourcefile" value="${xerces.loc}"/>
        <param name="destfile" value="${xml-apis.jar}"/>
      </antcall>
-@@ -1893,7 +1876,6 @@
+@@ -1937,7 +1919,6 @@
        <param name="destfile" value="${commons-launcher.jar}"/>
      </antcall>
  
@@ -129,7 +117,7 @@
      <antcall target="downloadgz">
        <param name="sourcefile" value="${commons-pool.loc}"/>
        <param name="destfile" value="${commons-pool.jar}"/>
-@@ -1904,7 +1886,6 @@
+@@ -1948,7 +1929,6 @@
        <param name="destfile" value="${commons-dbcp.jar}"/>
        <param name="destdir" value="${base.path}"/>
      </antcall>
@@ -137,7 +125,7 @@
  
      <antcall target="downloadgz">
        <param name="sourcefile" value="${commons-httpclient.loc}"/>
-@@ -1932,7 +1913,7 @@
+@@ -1976,7 +1956,7 @@
        <param name="destfile" value="${tomcat-native.tar.gz}"/>
        <param name="destdir" value="${tomcat-native.home}"/>
      </antcall>
