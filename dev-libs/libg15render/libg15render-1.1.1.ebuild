@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.1.1.ebuild,v 1.1 2006/10/04 18:43:45 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.1.1.ebuild,v 1.2 2006/10/10 00:23:06 jokey Exp $
 
 DESCRIPTION="Small library for display text and graphics on a Logitech G15 keyboard"
 HOMEPAGE="http://g15tools.sourceforge.net/"
@@ -14,6 +14,8 @@ IUSE="truetype"
 
 DEPEND="dev-libs/libg15
 	truetype? ( media-libs/freetype )"
+
+RDEPEND=${DEPEND}
 
 src_compile() {
 	econf \

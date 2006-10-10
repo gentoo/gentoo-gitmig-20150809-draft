@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/libg15-1.0.ebuild,v 1.1 2006/10/04 18:09:05 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/libg15-1.0.ebuild,v 1.2 2006/10/10 00:21:10 jokey Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/libusb"
+RDEPEND=${DEPEND}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
