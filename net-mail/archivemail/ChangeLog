@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/archivemail
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.5 2004/09/03 16:48:34 slarti Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.6 2006/10/10 19:59:24 g2boojum Exp $
+
+*archivemail-0.6.2 (10 Oct 2006)
+
+  10 Oct 2006; Grant Goodyear <g2boojum@gentoo.org> +files/archivemail.1,
+  +archivemail-0.6.2.ebuild:
+  Version bump.  The setup.py file is quite broken here,
+  so I've ignored it.  The new ebuild also satisfies
+  bug #146686 (thanks to j.habenicht@gmx.de).
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> archivemail-0.6.1-r1.ebuild:
   Marked ~amd64.
