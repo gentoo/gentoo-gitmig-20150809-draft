@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/asmon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.14 2006/06/06 22:54:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asmon/ChangeLog,v 1.15 2006/10/10 19:35:24 kloeri Exp $
+
+*asmon-0.7 (10 Oct 2006)
+
+  10 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  +files/asmon-0.7.cflags.diff, +asmon-0.7.ebuild:
+  Modular X fixes, bug 132732.
 
   06 Jun 2006; Jason Wever <weeve@gentoo.org> asmon-0.65.ebuild:
   Stable on SPARC.
