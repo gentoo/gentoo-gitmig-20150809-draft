@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/cgilib-0.5.ebuild,v 1.16 2006/10/08 00:34:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/cgilib-0.5.ebuild,v 1.17 2006/10/10 13:29:34 jokey Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A programmers library for the CGI interface"
 HOMEPAGE="http://www.infodrom.org/projects/cgilib/"
@@ -13,17 +15,19 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e "s|^\(CFLAGS = -I. -Wall\).*$|\1 ${CFLAGS}|" \
-		Makefile \
-		|| die "sed Makefile failed"
+	cd ${S}
+	sed -i "s|^\(CFLAGS = -I. -Wall\).*$|\1 ${CFLAGS}|" Makefile || \
+		die "sed Makefile failed"
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) CFLAGS="-I. -Wall ${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
 	insinto /usr/include
-	doins cgi.h || die
-	dolib.a libcgi.a || die
+	doins cgi.h
+	dolib.a libcgi.a
 	doman *.[35]
 	dodoc CHANGES CREDITS readme cookies.txt
 }
