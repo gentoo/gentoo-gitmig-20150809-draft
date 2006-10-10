@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/paprefs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.2 2006/08/31 10:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.3 2006/10/10 04:40:14 tsunam Exp $
+
+  10 Oct 2006; Joshua Jackson <tsunam@gentoo.org> paprefs-0.9.5.ebuild:
+  adding ~x86 as they build per galtgendo
 
   31 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml:
   Add missing metadata I forgot.
