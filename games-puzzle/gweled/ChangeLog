@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gweled
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.10 2005/12/10 12:38:51 blubb Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/ChangeLog,v 1.11 2006/10/10 20:20:44 wolf31o2 Exp $
+
+  10 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/gweled-0.6-gcc4.patch, -gweled-0.5.ebuild, gweled-0.7.ebuild:
+  Removing older ebuild and adding append-ldflags for bug #150420.
 
   10 Dec 2005; Simon Stelling <blubb@gentoo.org> gweled-0.7.ebuild:
   stable on amd64

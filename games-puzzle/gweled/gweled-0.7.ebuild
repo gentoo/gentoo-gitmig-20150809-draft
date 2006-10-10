@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.7.ebuild,v 1.3 2005/12/10 12:38:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.7.ebuild,v 1.4 2006/10/10 20:20:44 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
@@ -32,6 +32,7 @@ src_unpack() {
 
 src_compile() {
 	filter-flags -fomit-frame-pointer
+	append-ldflags -Wl,--export-dynamic
 	econf --disable-setgid || die
 	emake || die "emake failed"
 }
