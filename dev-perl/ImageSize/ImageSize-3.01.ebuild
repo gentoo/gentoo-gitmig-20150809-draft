@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.01.ebuild,v 1.3 2006/10/02 07:08:57 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.01.ebuild,v 1.4 2006/10/10 19:17:59 mcummings Exp $
 
 inherit perl-module
 
@@ -20,4 +20,3 @@ mydoc="ToDo"
 DEPEND="dev-lang/perl
 	>=dev-perl/module-build-0.28
 	test? ( dev-perl/Test-Pod-Coverage )"
-RDEPEND="${DEPEND}"
