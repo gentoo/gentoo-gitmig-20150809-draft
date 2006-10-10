@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-ipsec-tools
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ipsec-tools/ChangeLog,v 1.8 2005/03/12 11:27:10 kaiowas Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ipsec-tools/ChangeLog,v 1.9 2006/10/10 02:24:17 pebenito Exp $
+
+*selinux-ipsec-tools-20061008 (10 Oct 2006)
+
+  10 Oct 2006; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-ipsec-tools-20061008.ebuild:
+  First mainstream reference policy testing release.
 
   12 Mar 2005; petre rodan <kaiowas@gentoo.org>
   -selinux-ipsec-tools-20050112.ebuild, selinux-ipsec-tools-20050308.ebuild:

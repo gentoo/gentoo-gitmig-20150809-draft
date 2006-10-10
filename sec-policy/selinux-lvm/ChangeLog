@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-lvm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-lvm/ChangeLog,v 1.7 2005/09/18 10:38:54 kaiowas Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-lvm/ChangeLog,v 1.8 2006/10/10 02:24:18 pebenito Exp $
+
+*selinux-lvm-20061008 (10 Oct 2006)
+
+  10 Oct 2006; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-lvm-20061008.ebuild:
+  First mainstream reference policy testing release.
 
   18 Sep 2005; petre rodan <kaiowas@gentoo.org>
   -selinux-lvm-20050605.ebuild, selinux-lvm-20050813.ebuild:

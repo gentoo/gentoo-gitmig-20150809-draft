@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-publicfile
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-publicfile/ChangeLog,v 1.8 2005/12/02 20:09:27 kaiowas Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-publicfile/ChangeLog,v 1.9 2006/10/10 02:24:18 pebenito Exp $
+
+*selinux-publicfile-20061008 (10 Oct 2006)
+
+  10 Oct 2006; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-publicfile-20061008.ebuild:
+  First mainstream reference policy testing release.
 
   02 Dec 2005; petre rodan <kaiowas@gentoo.org>
   selinux-publicfile-20051124.ebuild:
