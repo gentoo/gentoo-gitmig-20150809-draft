@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.5.ebuild,v 1.1 2006/08/23 19:15:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.5.ebuild,v 1.2 2006/10/10 12:01:13 deathwing00 Exp $
 
 inherit kde db-use
 
@@ -32,6 +32,7 @@ src_unpack() {
 	sed -i \
 		-e "s,-I/usr/include/db4,-I${dbincldir}," \
 		 "${S}"/src/Makefile.{am,in}
+	epatch "${FILESDIR}/${P}-gcc4.1.diff"
 }
 
 src_compile() {
