@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/packit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.20 2006/02/15 23:45:21 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.21 2006/10/10 13:20:22 jokey Exp $
+
+*packit-1.0-r1 (10 Oct 2006)
+
+  10 Oct 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/packit-1.0-noopt.patch, +files/packit-1.0-nostrip.patch,
+  -packit-1.0.ebuild, +packit-1.0-r1.ebuild:
+  Fix for segv bug #148094 thanks to Sergio Rubio for needed patch
 
   15 Feb 2006; Markus Ullmann <jokey@gentoo.org> packit-1.0.ebuild:
   Removing virtual/libpcap wrt bug #117898
