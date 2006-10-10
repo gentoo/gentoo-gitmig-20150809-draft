@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.5 2006/10/04 12:14:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.6 2006/10/10 20:51:44 aballier Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -70,13 +70,15 @@ src_unpack() {
 	epatch "${DISTDIR}/${PN}-types.patch.bz2"
 	epatch "${FILESDIR}/${P}-autoconf259d.patch"
 	epatch "${FILESDIR}/${P}-new-ffmpeg"
+	# Fix to compile against media-libs/libmpeg3-1.7
+	use mpeg && has_version '>=media-libs/libmpeg3-1.7' \
+		&& epatch "${FILESDIR}/${P}-libmpeg3-1.7.patch"
 
 	eautoreconf
 }
 
 src_compile() {
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
-	
 	#145849
 	use amd64 && filter-flags -fweb
 
