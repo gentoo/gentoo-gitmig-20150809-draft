@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/x86/make.defaults,v 1.1 2006/10/08 18:37:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/x86/make.defaults,v 1.2 2006/10/10 11:35:54 pebenito Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -15,3 +15,5 @@ CXXFLAGS="${CFLAGS}"
 FEATURES="sandbox sfperms"
 
 USE="berkdb crypt ipv6 ncurses nls pam python readline ssl tcpd zlib"
+
+PORTAGE_T="portage_t.merge"
