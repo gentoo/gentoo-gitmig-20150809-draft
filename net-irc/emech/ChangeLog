@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/emech
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.8 2006/06/22 02:32:23 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.9 2006/10/10 09:33:30 swegener Exp $
+
+  10 Oct 2006; Sven Wegener <swegener@gentoo.org> -emech-2.8.5.1.ebuild,
+  -emech-3.0.ebuild:
+  Cleanup, bug #140489.
 
   22 Jun 2006; Joshua Jackson <tsunam@gentoo.org> emech-3.0.2.ebuild:
   Stable x86; security bug #132749
