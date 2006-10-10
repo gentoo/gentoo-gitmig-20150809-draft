@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.3 2006/10/09 19:11:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.4 2006/10/10 19:00:42 truedfx Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -63,7 +63,7 @@ linguas() {
 		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
 			for X in ${LANGS}; do
 				if [[ "${X}" == "${LANG}-"* ]] && \
-					[[ "${NOSHORTLANGS}" != *"${X}"* ]]; then
+					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
 					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
 					continue 2
 				fi
