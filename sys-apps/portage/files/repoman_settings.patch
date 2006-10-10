@@ -1,0 +1,20 @@
+Index: bin/repoman
+===================================================================
+--- bin/repoman	(revision 4649)
++++ bin/repoman	(revision 4651)
+@@ -395,7 +395,6 @@
+ isCvs=False
+ myreporoot=None
+ if os.path.isdir("CVS"):
+-	repoman_settings["PORTDIR_OVERLAY"]=""
+ 	if "cvs" not in repoman_settings.features:
+ 		print
+ 		print
+@@ -477,7 +476,6 @@
+ # Now that PORTDIR_OVERLAY is properly overridden, create the portdb.
+ repoman_settings = portage.config(local_config=False,
+ 	config_incrementals=portage_const.INCREMENTALS)
+-repoman_settings.lock()
+ trees = portage.create_trees()
+ trees["/"]["porttree"].settings = repoman_settings
+ portdb = trees["/"]["porttree"].dbapi
