@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.17 2006/01/27 14:59:02 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.18 2006/10/10 15:47:34 pioto Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -71,7 +71,7 @@ vim-plugin_pkg_postrm() {
 # /usr/share/vim/vimfiles/after/* comprised of the snippets in
 # /usr/share/vim/vimfiles/after/*/*.d
 update_vim_afterscripts() {
-	local d f afterdir=/usr/share/vim/vimfiles/after
+	local d f afterdir=${ROOT}/usr/share/vim/vimfiles/after
 
 	# Nothing to do if the dir isn't there
 	[ -d ${afterdir} ] || return 0
