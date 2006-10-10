@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.19 2006/10/01 20:29:55 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.20 2006/10/10 13:08:46 calchan Exp $
+
+*gtkwave-3.0.13 (10 Oct 2006)
+
+  10 Oct 2006; Denis Dupeyron <calchan@gentoo.org> +gtkwave-3.0.13.ebuild:
+  Version bump. The documentation is back.
 
 *gtkwave-3.0.12 (01 Oct 2006)
 
