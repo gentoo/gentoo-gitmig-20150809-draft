@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.1.1.ebuild,v 1.1 2006/10/09 02:28:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-fileupload/commons-fileupload-1.1.1.ebuild,v 1.2 2006/10/10 20:39:41 caster Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/commons/fileupload/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-core-1.5
 	~dev-java/servletapi-2.3
-	=dev-java/commons-io-1*
+	>=dev-java/commons-io-1.1
 	=dev-java/portletapi-1*
 	source? ( app-arch/unzip )"
 RDEPEND=">=virtual/jre-1.3"
