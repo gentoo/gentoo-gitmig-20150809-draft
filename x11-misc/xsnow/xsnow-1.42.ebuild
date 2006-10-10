@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42.ebuild,v 1.17 2006/02/27 17:35:46 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/xsnow-1.42.ebuild,v 1.18 2006/10/10 11:12:01 nelchael Exp $
 
 DESCRIPTION="snow, reindeer, and santa on the root window"
 SRC_URI="http://www.euronet.nl/~rja/Xsnow/${P}.tar.gz"
@@ -20,6 +20,7 @@ RDEPEND="|| ( (
 DEPEND="${RDEPEND}
 	|| ( (
 		x11-misc/imake
+		x11-misc/gccmakedep
 		x11-proto/xextproto
 		x11-proto/xproto )
 	virtual/x11 )"
