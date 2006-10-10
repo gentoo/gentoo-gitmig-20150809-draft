@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6030 2006/10/09 01:58:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6031 2006/10/10 15:09:35 jokey Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Markus Ullmann <jokey@gentoo.org> (10 Oct 2006)
+# mask CVS snapshot ebuild
+=app-misc/lcdproc-0.5.1*
 
 # Donnie Berkholz <dberkholz@gentoo.org> (13 Sep 2006)
 # XCB testing
