@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/gnome-mud
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.19 2005/08/20 14:20:02 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.20 2006/10/10 17:03:56 nyhm Exp $
+
+  10 Oct 2006; Tristan Heaven <nyhm@gentoo.org> gnome-mud-0.10.7.ebuild:
+  Fix gettext dependency
 
   20 Aug 2005; Luis Medinas <metalgod@gentoo.org> gnome-mud-0.10.7.ebuild:
   Added ~amd64 keywords.
