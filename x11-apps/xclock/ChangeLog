@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xclock
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.25 2006/07/19 09:30:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.26 2006/10/10 23:55:19 dberkholz Exp $
+
+  10 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; xclock-1.0.2.ebuild:
+  Update description to be less generic.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> xclock-1.0.2.ebuild:
   Stable on hppa.

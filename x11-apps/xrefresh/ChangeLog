@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xrefresh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.14 2006/05/20 10:48:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrefresh/ChangeLog,v 1.15 2006/10/10 23:55:18 dberkholz Exp $
+
+  10 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xrefresh-1.0.2.ebuild:
+  Update description to be less generic.
 
   20 May 2006; Robin H. Johnson <robbat2@gentoo.org> xrefresh-1.0.2.ebuild:
   Added ~ppc after testing.
