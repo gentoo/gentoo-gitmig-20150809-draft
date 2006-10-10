@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jce-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/ChangeLog,v 1.1 2006/07/29 05:45:43 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/ChangeLog,v 1.2 2006/10/10 21:17:13 drizzt Exp $
+
+  10 Oct 2006; Timothy Redaelli <drizzt@gentoo.org>
+  sun-jce-bin-1.5.0.ebuild:
+  Added ~x86-fbsd keyword
 
 *sun-jce-bin-1.5.0 (29 Jul 2006)
 
