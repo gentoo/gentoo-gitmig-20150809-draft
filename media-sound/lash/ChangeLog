@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.5 2006/09/28 05:01:04 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/ChangeLog,v 1.6 2006/10/10 14:04:37 gustavoz Exp $
+
+  10 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> lash-0.5.1.ebuild:
+  Sparc stable directly, see #150398
 
   28 Sep 2006; Joshua Jackson <tsunam@gentoo.org> lash-0.5.1.ebuild:
   stable x86; for fluidsynth
