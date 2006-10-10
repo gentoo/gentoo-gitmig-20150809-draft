@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>kde</herd>
 <herd>net-p2p</herd>
+<maintainer>
+	<email>deathwing00@gentoo.org</email>
+	<name>deathwing00</name>
+</maintainer>	
 </pkgmetadata>
