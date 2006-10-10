@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/liquid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.8 2006/10/10 08:47:14 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/liquid/ChangeLog,v 1.9 2006/10/10 08:53:00 deathwing00 Exp $
+
+  10 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  liquid-0.9.7.ebuild:
+  Prevent unnecessary arts imports.
 
   10 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   liquid-0.9.7.ebuild:
