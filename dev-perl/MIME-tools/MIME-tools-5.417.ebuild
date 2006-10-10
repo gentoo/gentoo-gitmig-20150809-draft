@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.417.ebuild,v 1.16 2006/08/16 12:13:18 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/MIME-tools-5.417.ebuild,v 1.17 2006/10/10 20:03:17 mcummings Exp $
 
 inherit perl-module
 
@@ -25,5 +25,3 @@ DEPEND=">=dev-perl/IO-stringy-2.108
 	dev-perl/HTML-Parser
 	dev-perl/MailTools
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
