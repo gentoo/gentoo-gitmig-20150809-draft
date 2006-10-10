@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.17 2006/10/08 13:11:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.18 2006/10/10 00:21:23 dberkholz Exp $
+
+*eselect-opengl-1.0.5 (10 Oct 2006)
+
+  10 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +eselect-opengl-1.0.5.ebuild:
+  Bump to fix ROOT != /. Remove an unneeded sed from the ebuild as well.
 
   05 Oct 2006; Danny van Dyk <kugelfang@gentoo.org>
   eselect-opengl-1.0.3.ebuild, eselect-opengl-1.0.4.ebuild:
