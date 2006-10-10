@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.7 2006/10/06 23:33:57 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.8 2006/10/10 07:48:20 keri Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-parallel-mmake.patch
 	epatch "${FILESDIR}"/${P}-concurrency.patch
 	epatch "${FILESDIR}"/${P}-dynamic_linking.patch
 	epatch "${FILESDIR}"/${P}-lex.patch
@@ -60,26 +61,39 @@ src_unpack() {
 
 src_compile() {
 	mmake depend || die "mmake depend failed"
-	mmake EXTRA_MLFLAGS=--no-strip || die "mmake failed"
+	mmake \
+		MMAKEFLAGS="${MAKEOPTS}" \
+		EXTRA_MLFLAGS=--no-strip \
+		|| die "mmake failed"
 
 	if use opengl && use tcl && use tk ; then
 		cd "${S}"/graphics/mercury_opengl
 		cp ../mercury_tcltk/mtcltk.m ./
-		mmake -f Mmakefile.mtogl depend || die "mmake depend mtogl failed"
-		mmake -f Mmakefile.mtogl || die "mmake mtogl failed"
+		mmake \
+			-f Mmakefile.mtogl depend \
+			|| die "mmake depend mtogl failed"
+		mmake \
+			MMAKEFLAGS="${MAKEOPTS}" \
+			-f Mmakefile.mtogl \
+			|| die "mmake mtogl failed"
 	fi
 }
 
 src_install() {
 	cd "${S}"
-	mmake INSTALL_PREFIX="${D}"/usr install || die "mmake install failed"
+	mmake \
+		MMAKEFLAGS="${MAKEOPTS}" \
+		INSTALL_PREFIX="${D}"/usr install \
+		|| die "mmake install failed"
 
 	if use opengl && use tcl && use tk ; then
 		cd "${S}"/graphics/mercury_opengl
 		mv Mmakefile Mmakefile.opengl
 		mv Mmakefile.mtogl Mmakefile
-		mmake INSTALL_PREFIX="${D}"/usr \
-			install || die "mmake install mtogl failed"
+		mmake \
+			MMAKEFLAGS="${MAKEOPTS}" \
+			INSTALL_PREFIX="${D}"/usr install \
+			|| die "mmake install mtogl failed"
 	fi
 
 	find "${D}"/usr/lib/mercury-${PV} -type l | xargs rm

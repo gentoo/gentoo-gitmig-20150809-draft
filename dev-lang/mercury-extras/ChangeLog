@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.44 2006/10/06 23:33:57 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.45 2006/10/10 07:48:20 keri Exp $
+
+  10 Oct 2006; keri <keri@gentoo.org>
+  +files/mercury-extras-0.12.2-parallel-mmake.patch,
+  mercury-extras-0.12.2-r2.ebuild:
+  Parallelize mmake
 
   06 Oct 2006; keri <keri@gentoo.org> mercury-extras-0.12.2-r2.ebuild:
   Do not pre-strip binaries.
