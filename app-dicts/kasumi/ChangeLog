@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.28 2006/10/01 17:47:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.29 2006/10/10 00:18:21 jhuebel Exp $
+
+  10 Oct 2006; Jason Huebel <jhuebel@gentoo.org> kasumi-2.0.1.ebuild:
+  stable on amd64
 
   01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kasumi-0.8.ebuild,
   kasumi-0.10.ebuild, kasumi-1.0.1.ebuild, kasumi-2.0.1.ebuild:
