@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/aldo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.10 2006/09/29 20:51:35 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.11 2006/10/10 04:30:58 tsunam Exp $
+
+  10 Oct 2006; Joshua Jackson <tsunam@gentoo.org> aldo-0.7.0.ebuild:
+  Stable x86; for gcc4 fixes
 
   29 Sep 2006; <wormo@gentoo.org> aldo-0.6.7.ebuild:
   convert from libtermcap to ncurses (Bug #103105)
