@@ -1,1 +1,2 @@
 PORTAGE_T="portage_t.merge"
+FEATURES="loadpolicy"
