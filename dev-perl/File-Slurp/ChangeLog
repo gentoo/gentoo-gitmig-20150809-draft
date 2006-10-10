@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Slurp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.32 2006/10/09 14:54:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Slurp/ChangeLog,v 1.33 2006/10/10 21:09:04 mcummings Exp $
+
+  10 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  files/digest-File-Slurp-9999.09, Manifest:
+  Updating manifest, bug 150827
 
   09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   File-Slurp-9999.11.ebuild, File-Slurp-9999.12.ebuild:

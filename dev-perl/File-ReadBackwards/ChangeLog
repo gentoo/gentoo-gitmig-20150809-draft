@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-ReadBackwards
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-ReadBackwards/ChangeLog,v 1.23 2006/10/09 14:43:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-ReadBackwards/ChangeLog,v 1.24 2006/10/10 21:08:29 mcummings Exp $
+
+  10 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  files/digest-File-ReadBackwards-1.02, Manifest:
+  Updating manifest, bug 150827
 
   09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -File-ReadBackwards-1.03.ebuild, File-ReadBackwards-1.04.ebuild:
