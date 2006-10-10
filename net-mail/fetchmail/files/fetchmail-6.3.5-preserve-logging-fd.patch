@@ -1,0 +1,17 @@
+Don't close the logfile if you succeed in opening it.
+
+Signed-off-by: Brian Harring <ferringb@gmail.com>
+Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+
+--- fetchmail-6.3.5-old/daemon.c	2006-08-07 02:22:40.000000000 -0700
++++ fetchmail-6.3.5/daemon.c	2006-10-10 00:54:04.000000000 -0700
+@@ -218,8 +218,7 @@
+       if ((logfd = open(logfile, O_CREAT|O_WRONLY|O_APPEND, 0666)) < 0) {	/* stdout */
+ 	  report(stderr, "cannot open %s: %s\n", logfile, strerror(errno));
+ 	  return PS_IOERR;
+-      } else
+-	  logfd = 0;	/* use /dev/null */
++      }
+   } else
+       logfd = 0;    /* this is /dev/null */
+ 
