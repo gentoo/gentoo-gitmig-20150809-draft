@@ -1,19 +1,46 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a2ea55f4e12278d217365ac834fa23c ChangeLog 1602
-MD5 6411861e6d8dc62ff415049f9020aa72 files/digest-timemachine-0.2.4 69
-MD5 3612c32ded070a8dffc0296faa9ffebe files/digest-timemachine-0.3.0 69
-MD5 4a79c71399e84599dbaddbd02c3077d3 files/digest-timemachine-0.3.1 69
+AUX timemachine-0.2.4-ladcca-compile.patch 478 RMD160 8ab1ddea5f90a01b6d05d3d2f32a7bafa83140f5 SHA1 b05240d329a89d084c1ef2b21d643b96f02e2a45 SHA256 d15ec12dbc88176c1780a5a4914f73d34bd6d9abd574b1903039b23526b5c01e
 MD5 d36266bdc7ee0e2f641a99ea0c9747dd files/timemachine-0.2.4-ladcca-compile.patch 478
-MD5 2ea3a55dc8476a027082a9ae209a0d0d metadata.xml 361
+RMD160 8ab1ddea5f90a01b6d05d3d2f32a7bafa83140f5 files/timemachine-0.2.4-ladcca-compile.patch 478
+SHA256 d15ec12dbc88176c1780a5a4914f73d34bd6d9abd574b1903039b23526b5c01e files/timemachine-0.2.4-ladcca-compile.patch 478
+DIST timemachine-0.2.4.tar.gz 145027
+DIST timemachine-0.3.0.tar.gz 156274
+DIST timemachine-0.3.1.tar.gz 158344
+EBUILD timemachine-0.2.4.ebuild 905 RMD160 e3eca8700ba2da759626de165f4f1699b2e10e17 SHA1 a3eff42b4d64d4c718bf312b7f1b4dbfc9860e3a SHA256 62b5846b7167f0761eb8ca86fe40f68d6b02fe3a9d5d41c5e3415fa0f28ae6fe
 MD5 9e022edd9c740c306dd2b9755492e173 timemachine-0.2.4.ebuild 905
-MD5 3ecf28e51e3b503d5511c77401b6243c timemachine-0.3.0.ebuild 830
+RMD160 e3eca8700ba2da759626de165f4f1699b2e10e17 timemachine-0.2.4.ebuild 905
+SHA256 62b5846b7167f0761eb8ca86fe40f68d6b02fe3a9d5d41c5e3415fa0f28ae6fe timemachine-0.2.4.ebuild 905
+EBUILD timemachine-0.3.0.ebuild 827 RMD160 1a92f9a0a36710217d64b9fcef556da08c3aafc8 SHA1 4802485956e1e96e680f8628c1b18daace7ebdcf SHA256 18d0f551000d8277d3b21baeececa23254197c68beccb7521e6552f726c443c4
+MD5 ba4c5cd7bb90bb1822c91e66618152bd timemachine-0.3.0.ebuild 827
+RMD160 1a92f9a0a36710217d64b9fcef556da08c3aafc8 timemachine-0.3.0.ebuild 827
+SHA256 18d0f551000d8277d3b21baeececa23254197c68beccb7521e6552f726c443c4 timemachine-0.3.0.ebuild 827
+EBUILD timemachine-0.3.1.ebuild 816 RMD160 1a74573ccfea8973d0585f8b513d3367621cdbd3 SHA1 d4165a59ab5038237b2a293a8f9f86336d2b41f9 SHA256 65de8a4a242a9cf3c1857db7eff1b3f33eda4990013ccfa20c952b688b9deb80
 MD5 4d8edce00b2825dbae19d930d4eb01c1 timemachine-0.3.1.ebuild 816
+RMD160 1a74573ccfea8973d0585f8b513d3367621cdbd3 timemachine-0.3.1.ebuild 816
+SHA256 65de8a4a242a9cf3c1857db7eff1b3f33eda4990013ccfa20c952b688b9deb80 timemachine-0.3.1.ebuild 816
+MISC ChangeLog 1705 RMD160 e21d3c831dd588fdc197825ad21afcaf44863137 SHA1 4ed8f000ff170a5accdb0d6faeade72c2857f79f SHA256 a681bc4e71a2545ab48de0f9d63001aefb908551825d72db9647c2dc228bb511
+MD5 d3ae22600b367771791dc4b06898e518 ChangeLog 1705
+RMD160 e21d3c831dd588fdc197825ad21afcaf44863137 ChangeLog 1705
+SHA256 a681bc4e71a2545ab48de0f9d63001aefb908551825d72db9647c2dc228bb511 ChangeLog 1705
+MISC metadata.xml 361 RMD160 4dc1b5413a796795b329687aedc80a29c0f45da8 SHA1 cbe79eb0dcab221a792ae2c7124402607f0774c7 SHA256 04669c9e491fcb461572a8b3e40441d66f3c521441e7e40f0d0ee6050dadf15e
+MD5 2ea3a55dc8476a027082a9ae209a0d0d metadata.xml 361
+RMD160 4dc1b5413a796795b329687aedc80a29c0f45da8 metadata.xml 361
+SHA256 04669c9e491fcb461572a8b3e40441d66f3c521441e7e40f0d0ee6050dadf15e metadata.xml 361
+MD5 6411861e6d8dc62ff415049f9020aa72 files/digest-timemachine-0.2.4 69
+RMD160 2be8276a830bf0799558b97609e295aac0154914 files/digest-timemachine-0.2.4 69
+SHA256 2240c894bf4660bcadc36cc0b4dfd3e1de000f35076edf5ed46b76a7338079f1 files/digest-timemachine-0.2.4 69
+MD5 3612c32ded070a8dffc0296faa9ffebe files/digest-timemachine-0.3.0 69
+RMD160 0e6fdb01cfbe8a07e0b63fe33192473aa36f2c71 files/digest-timemachine-0.3.0 69
+SHA256 f609e4ae918a57f5972cc39e7b8025bcd66d250983a62e1e53f703365247a2c6 files/digest-timemachine-0.3.0 69
+MD5 4a79c71399e84599dbaddbd02c3077d3 files/digest-timemachine-0.3.1 69
+RMD160 db0c1913b5f7c93e702a96b7422b987b82dd58b2 files/digest-timemachine-0.3.1 69
+SHA256 bde759b232597334037432299d3a9dddcda8c5f3ed8f4145837d483fe58aec13 files/digest-timemachine-0.3.1 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFEYR1Ovpz1081QvMkRAleBAJ9MzhX4Y4IT5XfYO95kgUwZyaLrugCfeapF
-umG6xKeCcblvd1CZVqSQ5Rk=
-=g+nF
+iD8DBQFFK6kyKRy60XGEcJIRAmzgAJ0TgqbTrdupNWcMKuVZHG36r974fgCfQpk1
+MCjmfB8aLxhukt2fzBBEGUY=
+=0xew
 -----END PGP SIGNATURE-----
