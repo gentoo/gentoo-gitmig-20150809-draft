@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freecol
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.5 2006/10/08 01:34:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.6 2006/10/10 22:57:53 nyhm Exp $
+
+  10 Oct 2006; Tristan Heaven <nyhm@gentoo.org> freecol-0.5.1.ebuild:
+  Use java-pkg-2 eclass
 
 *freecol-0.5.1 (08 Oct 2006)
 
