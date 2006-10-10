@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/Jcode-2.03.ebuild,v 1.12 2006/08/05 04:59:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/Jcode-2.03.ebuild,v 1.13 2006/10/10 19:44:36 mcummings Exp $
 
 inherit perl-module
 
@@ -18,5 +18,3 @@ IUSE=""
 
 DEPEND=">=virtual/perl-MIME-Base64-2.1
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
