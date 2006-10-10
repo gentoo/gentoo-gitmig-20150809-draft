@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.2 2006/10/10 10:54:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.3 2006/10/10 16:31:29 matsuu Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
 HOMEPAGE="http://www.scim-im.org/"
@@ -29,11 +29,18 @@ PDEPEND="!alpha? ( !hppa? ( kde? ( app-i18n/skim ) ) )
 	!alpha? ( !hppa? ( !ppc64? ( !sparc? ( qt3? ( || ( app-i18n/scim-qtimm app-i18n/scim-bridge ) ) ) ) ) )"
 
 get_gtk_confdir() {
-	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
+	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
 		echo "/etc/gtk-2.0/${CHOST}"
 	else
 		echo "/etc/gtk-2.0"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-imengine.patch
 }
 
 src_compile() {
