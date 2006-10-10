@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/wmcalendar-0.5.0-r1.ebuild,v 1.4 2006/03/22 22:19:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/wmcalendar-0.5.0-r1.ebuild,v 1.5 2006/10/10 07:16:21 s4t4n Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ KEYWORDS="ppc ~sparc x86"
 DEPEND=">=dev-libs/libical-0.24_rc4
 	>=dev-util/pkgconfig-0.15.0
 	>=x11-libs/gtk+-2.2.1-r1
-	>=sys-apps/sed-4.0.9"
+	>=sys-apps/sed-4.0.9
+	>=x11-libs/libXpm-3.5.5"
 
 S=${WORKDIR}/${P}/Src
 
@@ -36,7 +37,6 @@ src_unpack()
 	# remove unneeded SYSTEM variable from Makefile, fixing bug #105730
 	cd ${S}
 	sed -i -e "s:\$(SYSTEM)::" Makefile
-
 }
 
 src_install()
