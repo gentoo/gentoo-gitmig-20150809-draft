@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.86 2006/10/06 01:33:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.87 2006/10/10 19:45:49 gustavoz Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -158,10 +158,6 @@ nforce2
 # Gustavo Zacarias <gustavoz@gentoo.org> - 02 May 2006
 # AIO is b0rked for now....
 aio
-
-# Jason Wever <weeve@gentoo.org> - 29 May 2006
-# Mask qt4 use flag in relation to KDE 3.5 stablization until QT 4 works better
-qt4
 
 # Patrick McLean <chutzpah@gentoo.org> - 02 Jun 2006
 # Mask bmpx USE flag since new versions don't work on sparc (comment #11 
