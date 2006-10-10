@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.0-r1.ebuild,v 1.3 2006/10/10 21:48:15 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2_rc1.ebuild,v 1.1 2006/10/10 21:48:15 g2boojum Exp $
 
 inherit eutils elisp-common
 
-MY_P="${P}.0"
+MY_P="${P/_/.}"
 
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
@@ -32,12 +32,12 @@ S=${WORKDIR}/${MY_P}
 
 E_SITEFILE="50gnuplot-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/header-order.patch
-	epatch ${FILESDIR}/pdflib-6-compat.patch
-}
+#src_unpack() {
+#	unpack ${A}
+#	cd ${S}
+#	epatch ${FILESDIR}/header-order.patch
+#	epatch ${FILESDIR}/pdflib-6-compat.patch
+#}
 
 src_compile() {
 	local myconf="--with-gihdir=/usr/share/${PN}/gih"

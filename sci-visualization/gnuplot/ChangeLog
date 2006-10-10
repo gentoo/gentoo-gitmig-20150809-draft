@@ -1,6 +1,13 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.4 2006/07/12 02:32:19 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.5 2006/10/10 21:48:15 g2boojum Exp $
+
+*gnuplot-4.2_rc1 (10 Oct 2006)
+
+  10 Oct 2006; Grant Goodyear <g2boojum@gentoo.org> gnuplot-4.0-r1.ebuild,
+  +gnuplot-4.2_rc1.ebuild:
+  Added 4.2 rc (masked) and added addwrite statements to
+  close bug #82940.
 
   12 Jul 2006; Grant Goodyear <g2boojum@gentoo.org> ChangeLog:
   Removed 3.x gnuplot builds.
