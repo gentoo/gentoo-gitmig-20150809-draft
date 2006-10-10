@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.273 2006/10/09 12:55:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.274 2006/10/10 19:03:08 gustavoz Exp $
+
+  10 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gtk+-1.2.10-r12.ebuild:
+  Stable on sparc wrt #150355
 
   09 Oct 2006; Jeroen Roovers <jer@gentoo.org> gtk+-1.2.10-r12.ebuild:
   Stable for HPPA (bug #150355).
