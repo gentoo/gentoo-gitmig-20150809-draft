@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/xcircuit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.24 2006/10/01 20:36:58 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.25 2006/10/10 09:20:13 calchan Exp $
+
+*xcircuit-3.6.59 (10 Oct 2006)
+
+  10 Oct 2006; Denis Dupeyron <calchan@gentoo.org> -xcircuit-3.6.58.ebuild,
+  +xcircuit-3.6.59.ebuild:
+  Development branch version bump.
 
   01 Oct 2006; Denis Dupeyron <calchan@gentoo.org> -xcircuit-3.4.21.ebuild,
   -xcircuit-3.6.41.ebuild:
