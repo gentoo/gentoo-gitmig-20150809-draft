@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libao-pulse/libao-pulse-0.9.2.ebuild,v 1.1 2006/07/17 21:57:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libao-pulse/libao-pulse-0.9.2.ebuild,v 1.2 2006/10/10 04:41:54 tsunam Exp $
 
 DESCRIPTION="libao output driver for PulseAudio"
 HOMEPAGE="http://0pointer.de/lennart/projects/libao-pulse/"
@@ -8,7 +8,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
