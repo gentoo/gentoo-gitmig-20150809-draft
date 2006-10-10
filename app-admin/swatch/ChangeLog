@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/swatch
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.17 2006/02/11 21:05:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.18 2006/10/10 21:23:54 g2boojum Exp $
+
+*swatch-3.2.1 (10 Oct 2006)
+
+  10 Oct 2006; Grant Goodyear <g2boojum@gentoo.org> -swatch-3.0.8.ebuild,
+  +swatch-3.2.1.ebuild:
+  Version bump, closes bug #147770 (thanks to Matsuu Takuto)
 
   11 Feb 2006; Michael Cummings <mcummings@gentoo.org> swatch-3.0.8.ebuild,
   swatch-3.1.ebuild, swatch-3.1.1.ebuild:
