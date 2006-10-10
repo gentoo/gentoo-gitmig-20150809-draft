@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.103 2006/08/30 19:26:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.104 2006/10/10 22:20:10 jer Exp $
+
+  10 Oct 2006; Jeroen Roovers <jer@gentoo.org> emacs-21.4-r4.ebuild:
+  Stable for HPPA (bug #136987).
 
   30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org> emacs-21.4-r4.ebuild:
   Stable on ppc.
