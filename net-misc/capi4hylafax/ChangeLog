@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/capi4hylafax
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.21 2006/10/04 04:39:40 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/ChangeLog,v 1.22 2006/10/10 08:24:16 blubb Exp $
+
+  10 Oct 2006; Simon Stelling <blubb@gentoo.org>
+  capi4hylafax-01.03.00.99.300.3-r1.ebuild:
+  stable on amd64 wrt bug 145982
 
   04 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   capi4hylafax-01.03.00.99.300.3-r1.ebuild:
