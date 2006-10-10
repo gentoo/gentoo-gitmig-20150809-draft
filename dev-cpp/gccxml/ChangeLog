@@ -1,6 +1,15 @@
 # ChangeLog for dev-cpp/gccxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.15 2006/07/21 02:28:40 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.16 2006/10/10 21:03:34 g2boojum Exp $
+
+*gccxml-0.7.0_pre20060311 (10 Oct 2006)
+
+  10 Oct 2006; Grant Goodyear <g2boojum@gentoo.org>
+  +gccxml-0.7.0_pre20060311.ebuild:
+  Version bump.  Since there has been no release since 2004, we're now
+  syncing w/ Debian.  Doesn't really satisfy bug #147976, since pyste
+  is broken w/ this version of gccxml (I think).  In reality, pyste 
+  is probably just broken, period.
 
   20 Jul 2006; <psi29a@gentoo.org> gccxml-0.6.0-r1.ebuild:
   stable on mips
