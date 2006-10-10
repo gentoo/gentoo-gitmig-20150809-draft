@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/coda-kernel
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-kernel/ChangeLog,v 1.4 2005/07/30 12:40:40 dsd Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-kernel/ChangeLog,v 1.5 2006/10/10 15:00:40 seemant Exp $
+
+*coda-kernel-6.4 (10 Oct 2006)
+
+  10 Oct 2006; Seemant Kulleen <seemant@gentoo.org> +coda-kernel-6.4.ebuild:
+  this version bump from MCF fixes bug #137346 by Sascha Silbe
 
   30 Jul 2005; Daniel Drake <dsd@gentoo.org> -coda-kernel-6.0.0.ebuild:
   Remove old and broken version
