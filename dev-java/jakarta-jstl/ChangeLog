@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jakarta-jstl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.8 2006/09/27 04:14:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/ChangeLog,v 1.9 2006/10/10 20:43:38 wltjr Exp $
+
+  10 Oct 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/jakarta-jstl-1.1.2-remove-bootclasspath.patch,
+  +files/build-xml.patch, -jakarta-jstl-1.1.2.ebuild,
+  jakarta-jstl-1.1.2-r1.ebuild:
+  Made new patch that adds xalan to classpath, since previous patch was
+  removing boot classpath. This one does both. Removed previous ebuild and
+  patch.
 
   27 Sep 2006; Joshua Nichols <nichoj@gentoo.org>
   jakarta-jstl-1.1.2-r1.ebuild:

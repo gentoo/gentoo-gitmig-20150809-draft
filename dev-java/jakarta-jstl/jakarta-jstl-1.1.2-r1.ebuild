@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.2 2006/09/27 04:14:05 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2-r1.ebuild,v 1.3 2006/10/10 20:43:38 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -34,7 +34,7 @@ src_unpack() {
 	# This allows compilation with  non-Sun JDKs
 	# See bug #134206
 	# TODO file upstream
-	epatch ${FILESDIR}/${P}-remove-bootclasspath.patch
+	epatch ${FILESDIR}/build-xml.patch
 
 	echo -e "base.dir=..\n" \
 		"build.dir = \${base.dir}/build\n" \
