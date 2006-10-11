@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.24 2006/10/09 14:09:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.25 2006/10/11 10:59:34 tcort Exp $
+
+  11 Oct 2006; Thomas Cort <tcort@gentoo.org> seamonkey-1.0.5.ebuild:
+  Stable on alpha wrt security Bug #147651.
 
   09 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   seamonkey-1.0.5.ebuild:
