@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.3 2006/10/05 10:24:53 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.4 2006/10/11 14:29:48 nelchael Exp $
 
 inherit autotools eutils versionator
 
@@ -75,6 +75,9 @@ src_install() {
 		-e 's,/var/jabberd/log/,/var/log/jabber/,g' \
 		-e 's,/var/jabberd/db,/var/spool/jabber/,g' \
 		*.xml *.xml.dist || die "sed failed"
+	sed -i \
+		-e 's,<module>mysql</module>,<module>db</module>,' \
+		c2s.xml*
 
 	dodoc AUTHORS PROTOCOL README
 	docinto tools

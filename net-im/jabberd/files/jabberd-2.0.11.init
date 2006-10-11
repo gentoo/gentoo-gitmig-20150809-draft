@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabberd-2.0.11.init,v 1.1 2006/10/04 20:48:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabberd-2.0.11.init,v 1.2 2006/10/11 14:29:48 nelchael Exp $
 
 depend() {
 	need net
@@ -9,16 +9,65 @@ depend() {
 	provide jabber-server
 }
 
+function stopJabberServices() {
+
+	eindent
+	for pidfile in /var/run/jabber/*.pid; do
+		if [[ -f "${pidfile}" ]]; then
+			service=$(basename ${pidfile/.pid/})
+			ebegin "Stopping ${service}"
+			start-stop-daemon \
+				--stop \
+				--pidfile ${pidfile}
+			eend $?
+		fi
+	done
+	eoutdent
+
+}
+
 start() {
-	ebegin "Starting Jabber Server"
-	start-stop-daemon --start -c jabber:jabber \
-		-b --make-pidfile --pidfile /var/run/jabber/jabberd.pid \
-		-q -x /usr/bin/jabberd
-	eend $?
+
+	einfo "Starting Jabber Server ..."
+	local services=$(grep -v ^# /etc/jabber/jabberd.cfg | grep '..*' | awk '{print $1}')
+	eindent
+	for service in ${services}; do
+
+		cfgfile="$(grep "^${service}" /etc/jabber/jabberd.cfg | awk '{print $2}')"
+		if [[ ! -f "${cfgfile}" ]]; then
+			if [[ -f "/etc/jabber/${service}.xml" ]]; then
+				cfgfile="/etc/jabber/${service}.xml"
+			else
+				eerror "Can't find: ${cfgfile} or default /etc/jabber/${service}.xml"
+				stopJabberServices
+				return 1
+			fi
+		fi
+
+		executable=/usr/bin/${service}
+
+		if [[ ! -f "${executable}" ]]; then
+			eerror "Can't find executable: ${executable}"
+			stopJabberServices
+			return 1
+		fi
+
+		ebegin "Starting ${service} (${cfgfile})"
+		start-stop-daemon \
+			--background \
+			--start  \
+			--chuid jabber:jabber \
+			--exec /usr/bin/${service} \
+			-- -c ${cfgfile}
+		eend $?
+
+	done
+	eoutdent
 }
 
 stop() {
-	ebegin "Stopping Jabber Server"
-	start-stop-daemon --stop -q --pidfile /var/run/jabber/jabberd.pid
-	eend $?
+
+	einfo "Stopping Jabber Server"
+	stopJabberServices
+
 }
