@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5.ebuild,v 1.2 2006/10/03 23:09:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5.ebuild,v 1.3 2006/10/11 09:59:54 deathwing00 Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -83,6 +83,12 @@ src_unpack() {
 	# TODO - kspell2 Xspell plugins are automagically detected.
 	#		 As nothing uses kspell2, don't install them.
 	sed -i -e "s:plugins::" "${S}/kspell2/Makefile.am" || die "sed failed"
+
+	# Apply the following patch on the next revision of kdelibs-3.5.5 (fixes kde
+	# bug #135409), which corrects a nasty regression in the cstyle indenter.
+	# Revision bump was not forced for this patch. If users want it before the
+	# next revision bump, they should simply reemerge kdelibs.
+	epatch "${FILESDIR}/${P}-kate-cstyle-indenter-fix.diff"
 }
 
 src_compile() {

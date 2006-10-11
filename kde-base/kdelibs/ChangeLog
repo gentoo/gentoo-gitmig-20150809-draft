@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.366 2006/10/07 15:06:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.367 2006/10/11 09:59:54 deathwing00 Exp $
+
+  11 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/kdelibs-3.5.5-kate-cstyle-indenter-fix.diff, kdelibs-3.5.5.ebuild:
+  Added a patch that fixes a nasty regression in the cstyle identifier of kate.
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-kdelibs-3.5.5, Manifest:
