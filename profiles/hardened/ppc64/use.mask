@@ -126,3 +126,6 @@ multilib
 # Someone tagged MythTV as ~ppc64 but media-tv/ivtv does not
 # work on ppc64 so I'm masking it's USE flag.
 ivtv
+
+#2006/10/11 - corsair - bug #150925
+graphlcd
