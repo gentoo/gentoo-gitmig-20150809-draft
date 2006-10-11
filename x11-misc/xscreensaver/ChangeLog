@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.151 2006/10/11 12:46:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.152 2006/10/11 13:33:06 nelchael Exp $
+
+  11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  xscreensaver-4.24.ebuild:
+  Add missing =sys-devel/automake-1.4* to DEPEND, see bug #150794.
 
 *xscreensaver-5.01 (11 Oct 2006)
 

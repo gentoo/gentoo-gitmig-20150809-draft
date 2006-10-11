@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.12 2006/09/05 04:49:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.24.ebuild,v 1.13 2006/10/11 13:33:06 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -41,6 +41,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xf86miscproto
 		xinerama? ( x11-proto/xineramaproto ) )
 	virtual/x11 )
+	=sys-devel/automake-1.4*
 	sys-devel/bc
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
