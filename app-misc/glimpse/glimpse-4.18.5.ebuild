@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.2 2006/10/11 19:48:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glimpse/glimpse-4.18.5.ebuild,v 1.3 2006/10/11 19:50:21 wolf31o2 Exp $
 
 inherit flag-o-matic eutils
 
@@ -33,6 +33,10 @@ src_unpack() {
 		Makefile.in \
 		libtemplate/{template,util}/Makefile.in \
 		|| die "inserting OPTIMIZEFLAGS failed"
+	sed -i \
+		-e 's:$(mandir):&/man1/:' \
+		Makefile.in agrep/Makefile.in \
+		|| die "adding man1 to man install dir failed"
 }
 
 src_compile() {
@@ -44,6 +48,4 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodir /usr/share/man/man1
-	mv ${D}/usr/share/man/*.1 ${D}/usr/share/man/man1/
 }
