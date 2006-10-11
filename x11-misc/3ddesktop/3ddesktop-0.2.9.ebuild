@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.7 2006/01/15 12:24:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/3ddesktop-0.2.9.ebuild,v 1.8 2006/10/11 11:13:30 nelchael Exp $
 
 inherit eutils
 
@@ -21,7 +21,8 @@ RDEPEND="|| ( (
 		x11-libs/libXxf86vm )
 	virtual/x11 )
 	media-libs/imlib2
-	virtual/glut"
+	virtual/glut
+	media-libs/freetype"
 
 DEPEND="${RDEPEND}
 	|| ( (
