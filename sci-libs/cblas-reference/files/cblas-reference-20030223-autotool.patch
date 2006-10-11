@@ -1,6 +1,6 @@
-diff -urN CBLAS.orig/configure.ac CBLAS/configure.ac
---- CBLAS.orig/configure.ac	1969-12-31 16:00:00.000000000 -0800
-+++ CBLAS/configure.ac	2006-05-17 00:06:17.000000000 -0700
+diff -Nur CBLAS.orig/configure.ac CBLAS/configure.ac
+--- CBLAS.orig/configure.ac	1970-01-01 01:00:00.000000000 +0100
++++ CBLAS/configure.ac	2006-10-10 17:20:23.000000000 +0100
 @@ -0,0 +1,65 @@
 +#                                               -*- Autoconf -*-
 +# Process this file with autoconf to produce a configure script.
@@ -64,12 +64,12 @@ diff -urN CBLAS.orig/configure.ac CBLAS/configure.ac
 +AC_SUBST(TESTING)
 +
 +AC_CONFIG_FILES([Makefile
-+                 src/Makefile
++		 src/Makefile
 +                 testing/Makefile])
 +AC_OUTPUT
-diff -urN CBLAS.orig/Makefile.am CBLAS/Makefile.am
---- CBLAS.orig/Makefile.am	1969-12-31 16:00:00.000000000 -0800
-+++ CBLAS/Makefile.am	2006-05-17 00:01:22.000000000 -0700
+diff -Nur CBLAS.orig/Makefile.am CBLAS/Makefile.am
+--- CBLAS.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ CBLAS/Makefile.am	2006-10-10 17:24:37.000000000 +0100
 @@ -0,0 +1,15 @@
 +SUBDIRS = src $(TESTING)
 +
@@ -86,11 +86,12 @@ diff -urN CBLAS.orig/Makefile.am CBLAS/Makefile.am
 +example2_SOURCES = cblas_example2.c
 +
 +EXTRA_DIST = README
-diff -urN CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
---- CBLAS.orig/src/Makefile.am	1969-12-31 16:00:00.000000000 -0800
-+++ CBLAS/src/Makefile.am	2006-05-16 23:05:41.000000000 -0700
-@@ -0,0 +1,240 @@
+diff -Nur CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
+--- CBLAS.orig/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ CBLAS/src/Makefile.am	2006-10-10 17:49:31.000000000 +0100
+@@ -0,0 +1,239 @@
 +lib_LTLIBRARIES = libcblas.la
++pkginclude_HEADERS = cblas.h
 +
 +AM_CFLAGS = -DADD_
 +
@@ -328,9 +329,9 @@ diff -urN CBLAS.orig/src/Makefile.am CBLAS/src/Makefile.am
 +	$(ZLEV3_SOURCES)
 +
 +libcblas_la_LIBADD = $(FLIBS)
-diff -urN CBLAS.orig/testing/Makefile.am CBLAS/testing/Makefile.am
---- CBLAS.orig/testing/Makefile.am	1969-12-31 16:00:00.000000000 -0800
-+++ CBLAS/testing/Makefile.am	2006-05-16 23:59:08.000000000 -0700
+diff -Nur CBLAS.orig/testing/Makefile.am CBLAS/testing/Makefile.am
+--- CBLAS.orig/testing/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ CBLAS/testing/Makefile.am	2006-10-10 17:35:55.000000000 +0100
 @@ -0,0 +1,73 @@
 +noinst_PROGRAMS = \
 +	xscblat1 \
