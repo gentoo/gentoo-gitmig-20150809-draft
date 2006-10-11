@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.2.ebuild,v 1.1 2006/10/11 09:54:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.0.2.ebuild,v 1.2 2006/10/11 20:46:28 seemant Exp $
 
 inherit eutils gnome2
 
@@ -43,11 +43,11 @@ RDEPEND=">=dev-libs/glib-2.4.0
 		dev-perl/HTML-TableExtract )
 	app-text/docbook-xsl-stylesheets
 	=app-text/docbook-xml-dtd-4.1.2*
-	nls? ( dev-util/intltool )
-	tetex? ( app-text/tetex )"
+	nls? ( dev-util/intltool )"
 
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
+	doc? ( app-doc/doxygen
+		app-text/tetex )
 	dev-util/pkgconfig"
 
 pkg_setup() {
@@ -60,7 +60,6 @@ src_compile() {
 	local myconf
 
 	if use doc ; then
-		myconf="$(use_enable graphviz dot)"
 		myconf="${myconf} $(use_enable tetex latex-docs)"
 	fi
 
@@ -69,6 +68,7 @@ src_compile() {
 		$(use_enable ofx) \
 		$(use_enable doc doxygen) \
 		$(use_enable doc html-docs) \
+		$(use_enable doc dot) \
 		$(use_enable hbci) \
 		--enable-locale-specific-tax \
 		${myconf} || die "econf failed"
