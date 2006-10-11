@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.3.ebuild,v 1.4 2006/10/02 11:53:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/graphlcd-base-0.1.3.ebuild,v 1.5 2006/10/11 20:18:11 corsair Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="Graphical LCD Driver"
 HOMEPAGE="http://graphlcd.berlios.de/"
 SRC_URI="http://download.berlios.de/graphlcd/${P}.tgz"
 
-KEYWORDS="~amd64 ~ppc64 x86"
+KEYWORDS="~amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="truetype"
