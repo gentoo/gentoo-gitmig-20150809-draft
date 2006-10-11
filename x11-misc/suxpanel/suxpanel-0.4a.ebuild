@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4a.ebuild,v 1.2 2005/11/03 13:10:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/suxpanel/suxpanel-0.4a.ebuild,v 1.3 2006/10/11 12:01:14 nelchael Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2
 		>=sys-apps/sed-4
-		x11-libs/libwnck"
+		x11-libs/libwnck
+		dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
