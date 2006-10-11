@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3.ebuild,v 1.2 2006/10/11 22:32:14 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3.ebuild,v 1.3 2006/10/11 23:14:36 jokey Exp $
 
 inherit eutils depend.php
 
@@ -19,7 +19,7 @@ DEPEND="net-www/apache
 	net-analyzer/rrdtool
 	media-libs/gd
 	dev-php/PEAR-PEAR
-	snmp? ( net-analyzer/net-snmp )
+	net-analyzer/net-snmp
 	sys-apps/diffutils
 	app-mobilephone/smsclient"
 
@@ -31,24 +31,23 @@ RDEPEND="${DEPEND}
 need_php_cli
 
 pkg_setup() {
-	require_gd
-	local DIE
-	local flags="wddx sockets session spl"
+	local flags="pcre session snmp sockets wddx"
 	use mysql && flags="${flags} mysql"
 	use postgres &&	flags="${flags} postgres"
 
-	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} ; then
-		DIE="yes"
-	fi
-
-	if [[ ${DIE} == "yes" ]] ; then
+	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} \
+		|| ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
 		eerror
 		eerror "${PHP_PKG} needs to be re-installed with all of the following"
 		eerror "USE flags enabled:"
 		eerror
 		eerror "${flags}"
 		eerror
-		die "Re-install ${PHP_PKG} with ${flags}"
+		eerror "as well as any of the following USE flags enabled:"
+		eerror
+		eerror "gd or gd-external"
+		eerror
+		die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
 	fi
 
 	enewgroup jffnms
@@ -63,7 +62,7 @@ src_install(){
 	chown -R jffnms:apache "${MY_DESTDIR}" || die
 	chmod -R ug+rw "${MY_DESTDIR}" || die
 
-	elog "JFFNMS has been partialy installed on your system. However you"
+	elog "${PN} has been partialy installed on your system. However you"
 	elog "still need proceed with final installation and configuration."
 	elog "You can visit http://www.gentoo.org/doc/en/jffnms.xml in order"
 	elog "to get detailed information on how to get jffnms up and running."
