@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lndir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/ChangeLog,v 1.6 2006/02/14 22:52:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lndir/ChangeLog,v 1.7 2006/10/11 00:30:50 dberkholz Exp $
+
+  11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; lndir-1.0.1.ebuild:
+  Update description to be less generic.
 
   14 Feb 2006; Markus Rothe <corsair@gentoo.org> lndir-1.0.1.ebuild:
   Added ~ppc64

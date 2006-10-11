@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.24 2006/07/19 08:54:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.25 2006/10/11 00:30:31 dberkholz Exp $
+
+  11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; imake-1.0.2.ebuild:
+  Update description to be less generic.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> imake-1.0.2.ebuild:
   Stable on hppa.
