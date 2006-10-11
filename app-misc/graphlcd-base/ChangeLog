@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/graphlcd-base
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.6 2006/10/02 11:53:31 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/graphlcd-base/ChangeLog,v 1.7 2006/10/11 18:36:49 hd_brummy Exp $
+
+*graphlcd-base-0.1.3-r1 (11 Oct 2006)
+
+  11 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/graphlcd-base-0.1.3_g15daemon_drv.patch,
+  +graphlcd-base-0.1.3-r1.ebuild:
+  added support for g15daemon driver, enabled by use-flag g15
 
   02 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   +files/graphlcd-base-0.1.3-nostrip.patch, graphlcd-base-0.1.3.ebuild:
