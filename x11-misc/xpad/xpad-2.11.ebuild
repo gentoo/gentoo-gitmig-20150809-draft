@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-2.11.ebuild,v 1.6 2006/05/04 01:34:54 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-2.11.ebuild,v 1.7 2006/10/11 12:02:57 ferdy Exp $
 
 DESCRIPTION="A GTK+ 2.0 based 'post-it' note system."
 HOMEPAGE="http://xpad.sourceforge.net/"
@@ -14,6 +14,7 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2.6.0"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 src_install () {
