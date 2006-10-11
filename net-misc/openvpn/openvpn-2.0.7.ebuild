@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7.ebuild,v 1.1 2006/06/29 09:34:46 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7.ebuild,v 1.2 2006/10/11 12:15:49 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -25,9 +25,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack "${A}"
-	gnuconfig_update
 	cd "${S}"
+
 	epatch "${FILESDIR}/${PN}"-2.0.4-darwin.patch
+	epatch "${FILESDIR}/${P}-pam.patch"
+
+	gnuconfig_update
 }
 
 src_compile() {
