@@ -1,6 +1,11 @@
 # ChangeLog for games-board/qgo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.21 2006/10/09 23:58:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.22 2006/10/11 22:10:00 nyhm Exp $
+
+*qgo-1.5.2 (11 Oct 2006)
+
+  11 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +qgo-1.5.2.ebuild:
+  Version bump
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> qgo-1.5.1.ebuild:
   Stable on ppc.
