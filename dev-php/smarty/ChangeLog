@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.63 2006/10/01 14:05:08 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.64 2006/10/11 19:42:17 corsair Exp $
+
+  11 Oct 2006; Markus Rothe <corsair@gentoo.org> smarty-2.6.13.ebuild,
+  smarty-2.6.14.ebuild:
+  Added ~ppc64; bug #150873
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   smarty-2.6.14.ebuild:
