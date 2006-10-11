@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.9 2006/04/14 15:52:25 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/xsnap-1.4.3-r1.ebuild,v 1.10 2006/10/11 11:43:00 nelchael Exp $
 
 inherit eutils
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.4-gentoo.patch
 	# i notified upstream about it... should be fixed soon
 	epatch ${FILESDIR}/${PN}-this-should-be-fixed-updstream.patch
+	sed -i -e 's,X11R6/,,g' "${S}/Imakefile"
 }
 
 src_compile() {
