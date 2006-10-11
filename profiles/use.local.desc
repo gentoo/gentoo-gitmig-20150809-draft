@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2226 2006/10/11 01:12:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2227 2006/10/11 15:25:41 nyhm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -499,6 +499,7 @@ games-board/freedoko:altenbugcards - Use the Altenburg card set
 games-board/freedoko:kdecards - Use the KDE card set
 games-board/freedoko:pysolcards - Use the PySol card set
 games-board/freedoko:xskatcards - Use the XSkat card set
+games-board/ggz-gtk-client:gaim - Install the Gaim plugin
 games-emulation/generator:sdlaudio - Enable SDL Audio
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
 games-emulation/mupen64:asm - Enable use of asm routines to improve performance
