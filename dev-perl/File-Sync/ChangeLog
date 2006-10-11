@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Sync
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sync/ChangeLog,v 1.13 2006/09/01 14:07:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sync/ChangeLog,v 1.14 2006/10/11 02:58:23 mcummings Exp $
+
+  11 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  File-Sync-0.09.ebuild:
+  Keywording amd64
 
   01 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   File-Sync-0.09.ebuild:
