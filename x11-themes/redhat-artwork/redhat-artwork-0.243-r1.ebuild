@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.2 2006/09/03 08:39:25 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.3 2006/10/11 12:55:08 nelchael Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/sou
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 IUSE="gtk kde xmms"
 
 # See end of src_install():
@@ -26,6 +26,7 @@ RDEPEND=">=x11-libs/gtk+-2.0
 DEPEND="${RDEPEND}
 	media-gfx/icon-slicer
 	dev-util/intltool
+	=sys-devel/automake-1.8*
 	|| ( x11-apps/xcursorgen virtual/x11 )"
 
 MY_SV=$(get_version_component_range 1-2)
