@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.12 2006/08/25 20:53:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5-r3.ebuild,v 1.13 2006/10/11 02:26:49 dberkholz Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -36,6 +36,7 @@ IUSE="${IUSE_VIDEO_CARDS}
 	motif
 	nptl"
 
+RESTRICT="stricter"
 RDEPEND="dev-libs/expat
 	x11-libs/libX11
 	x11-libs/libXext

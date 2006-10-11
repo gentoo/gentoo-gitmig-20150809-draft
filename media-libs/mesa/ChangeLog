@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.118 2006/10/09 02:01:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.119 2006/10/11 02:26:48 dberkholz Exp $
+
+  11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; mesa-6.4.2-r2.ebuild,
+  mesa-6.5-r3.ebuild, mesa-6.5-r4.ebuild, mesa-6.5.1-r1.ebuild,
+  mesa-6.5.1-r2.ebuild:
+  (#149248) Since upstream cares more about performance than textrels etc, add
+  a RESTRICT for the stricter FEATURES setting.
 
 *mesa-6.5.1-r2 (09 Oct 2006)
 
