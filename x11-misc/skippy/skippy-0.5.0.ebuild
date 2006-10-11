@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.10 2005/12/28 18:06:36 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/skippy-0.5.0.ebuild,v 1.11 2006/10/11 11:54:14 nelchael Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 		)
 		virtual/x11
 	)
+	dev-util/pkgconfig
 	>=media-libs/imlib2-1.1.0"
 
 src_unpack() {
