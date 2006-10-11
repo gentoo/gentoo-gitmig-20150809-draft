@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6039 2006/10/11 17:05:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6040 2006/10/11 18:01:24 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -84,10 +84,6 @@ media-video/jahshaka
 # Markus Ullmann <jokey@gentoo.org> (4 Oct 2006)
 # Needs testing according to upstream
 app-misc/g15composer
-
-# Krzysiek Pawlik <nelchael@gentoo.org> (4 Oct 2006)
-# Masked new version - needs testing!
-=net-im/jabberd-2.0.11-r1
 
 # Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
 # Masked pending deletion in 30 days
