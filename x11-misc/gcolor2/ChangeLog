@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gcolor2
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.10 2005/09/14 20:07:02 ka0ttic Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/ChangeLog,v 1.11 2006/10/11 13:19:39 nelchael Exp $
+
+  11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> gcolor2-0.4-r1.ebuild:
+  Stable on x86 - fixes bug #150675.
 
 *gcolor2-0.4-r1 (14 Sep 2005)
 
