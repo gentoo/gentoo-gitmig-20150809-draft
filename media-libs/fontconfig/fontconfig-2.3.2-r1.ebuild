@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2-r1.ebuild,v 1.15 2006/09/26 21:50:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.3.2-r1.ebuild,v 1.16 2006/10/11 19:54:52 dsd Exp $
 
+WANT_AUTOMAKE=1.9
 inherit eutils libtool autotools
 
 DESCRIPTION="A library for configuring and customizing font access"
@@ -15,6 +16,8 @@ IUSE="doc"
 
 DEPEND=">=media-libs/freetype-2.1.4
 	>=dev-libs/expat-1.95.3"
+# autotools.eclass RDEPEND overrides implicit DEPEND=RDEPEND
+RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +30,6 @@ src_unpack() {
 	# add docbook switch so we can disable it
 	epatch "${FILESDIR}"/${P}-docbook.patch
 
-	export WANT_AUTOMAKE=1.9
 	eautoreconf
 
 	# elibtoolize
