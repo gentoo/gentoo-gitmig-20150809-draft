@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.98 2006/10/11 20:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.99 2006/10/11 20:49:11 seemant Exp $
+
+  11 Oct 2006; Seemant Kulleen <seemant@gentoo.org> gnucash-1.8.11.ebuild,
+  gnucash-1.8.12.ebuild:
+  remove the bogus built_with_use check on virtual/x11, to fix bug #144909
 
   11 Oct 2006; Seemant Kulleen <seemant@gentoo.org> gnucash-2.0.2.ebuild:
   change the USE flag handling a little, to fix bug #143772

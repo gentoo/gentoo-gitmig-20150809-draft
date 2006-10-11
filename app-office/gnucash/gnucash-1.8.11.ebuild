@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.11.ebuild,v 1.11 2006/02/06 19:38:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.11.ebuild,v 1.12 2006/10/11 20:49:11 seemant Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -47,7 +47,9 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	quotes? ( dev-perl/DateManip
 		dev-perl/Finance-Quote
 		dev-perl/HTML-TableExtract )
-	postgres? ( dev-db/postgresql )"
+	postgres? ( dev-db/postgresql )
+	media-fonts/font-adobe-100dpi
+	media-fonts/font-adobe-75dpi"
 
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
@@ -59,19 +61,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
-
-pkg_setup() {
-	if built_with_use virtual/x11 bitmap-fonts
-	then
-		einfo "bitmap-fonts support is enabled in virtual/x11, continuing..."
-	else
-		eerror "Please rebuild virtual/x11 with bitmap font support!"
-		eerror "To do so: USE=\"bitmap-fonts\" emerge virtual/x11"
-		eerror "Or, add \"bitmap-fonts\" to your USE string in"
-		eerror "/etc/make.conf"
-		die "Will not build gnucash without bitmap-fonts support in virtual/x11"
-	fi
-}
 
 src_compile() {
 	elibtoolize
