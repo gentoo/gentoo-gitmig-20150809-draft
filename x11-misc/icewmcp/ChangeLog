@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/icewmcp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.8 2005/02/03 20:08:25 luckyduck Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.9 2006/10/11 13:24:35 nelchael Exp $
+
+*icewmcp-3.2-r1 (11 Oct 2006)
+
+  11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> -icewmcp-3.1.ebuild,
+  -icewmcp-3.2.ebuild, +icewmcp-3.2-r1.ebuild:
+  Fix bug #150336, remove old versions.
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> icewmcp-3.2.ebuild:
   added ~amd64 to KEYWORDS. fixes #75613
