@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/rox-tail
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/rox-tail/ChangeLog,v 1.1 2006/10/11 13:22:45 lack Exp $
+
+*rox-tail-2.1.4 (11 Oct 2006)
+
+  11 Oct 2006; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +rox-tail-2.1.4.ebuild:
+  New package - Tail application for Rox desktop, imported from
+  breakmygentoo.net (Thanks Peter Hyman)
+
