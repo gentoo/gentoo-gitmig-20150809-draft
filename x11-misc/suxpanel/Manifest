@@ -1,5 +1,30 @@
-MD5 337e2102e15d4efc5a0b2883ba898a7b ChangeLog 523
-MD5 0ad9da1ac14a3677d48697e442c4f9b6 files/digest-suxpanel-0.4a 65
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX suxpanel-0.4a-Makefile.in.patch 717 RMD160 5f2b818596884352147e00a73a96c8cfd7f78eeb SHA1 84447b42dfa95a177f0b0e33e7a249a7afab0dfb SHA256 c6fbbbfa39d2450aa5c5cc0567c13de4f1a37b77ccb3e35be4a80eaed1f6f011
 MD5 ad06f4819c00a115ee14ef95cd81416d files/suxpanel-0.4a-Makefile.in.patch 717
+RMD160 5f2b818596884352147e00a73a96c8cfd7f78eeb files/suxpanel-0.4a-Makefile.in.patch 717
+SHA256 c6fbbbfa39d2450aa5c5cc0567c13de4f1a37b77ccb3e35be4a80eaed1f6f011 files/suxpanel-0.4a-Makefile.in.patch 717
+DIST suxpanel-0.4a.tar.bz2 86321
+EBUILD suxpanel-0.4a.ebuild 779 RMD160 38e046b781c26fdfad8f8d2aad6e761825a6b36c SHA1 4efb896664b884374ae303c16e79911c5400e581 SHA256 dfc14b9cdde503d9cfa205453f0d564d0e5f1b73eb3fd0e335bc337cd5c4eba4
+MD5 e1e06806c7e8f8ac99bd112050967c73 suxpanel-0.4a.ebuild 779
+RMD160 38e046b781c26fdfad8f8d2aad6e761825a6b36c suxpanel-0.4a.ebuild 779
+SHA256 dfc14b9cdde503d9cfa205453f0d564d0e5f1b73eb3fd0e335bc337cd5c4eba4 suxpanel-0.4a.ebuild 779
+MISC ChangeLog 660 RMD160 d3bfa61b894b3d2dbeb8a2aee8ef1de40aaa9990 SHA1 c87dce7c5a60aa2788955bb932071d4515df10b9 SHA256 9b4fb0c1b622313e1c0d510e3f8f6f0395eabec437a1e16ee7cfaffa327d698d
+MD5 9c76c5bd22a9641f334a2b38b2a98b6d ChangeLog 660
+RMD160 d3bfa61b894b3d2dbeb8a2aee8ef1de40aaa9990 ChangeLog 660
+SHA256 9b4fb0c1b622313e1c0d510e3f8f6f0395eabec437a1e16ee7cfaffa327d698d ChangeLog 660
+MISC metadata.xml 166 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 SHA1 e6c6436c304a65b4a012a5b7be7ee264b228a645 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 7471c288d95674a44b76a932eaf0a4e0 suxpanel-0.4a.ebuild 758
+RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
+SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
+MD5 0ad9da1ac14a3677d48697e442c4f9b6 files/digest-suxpanel-0.4a 65
+RMD160 3a153c18abbdd95cd572b301467b3c58d7d16895 files/digest-suxpanel-0.4a 65
+SHA256 ceafb96909fa1221e30f753e37e4963256f74e0f47f9fa6bd2325fa6de1f3e1a files/digest-suxpanel-0.4a 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFLN0sgo/w9rxVVVERAua0AJ9e6IE67woUjnza5VywAvLN9dgWkgCgkUkf
+a5a/COBtVYU7TgguGkNsKFw=
+=u12c
+-----END PGP SIGNATURE-----

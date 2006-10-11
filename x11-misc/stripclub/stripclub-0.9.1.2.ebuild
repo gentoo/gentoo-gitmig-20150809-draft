@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2.ebuild,v 1.3 2005/11/03 12:54:52 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stripclub/stripclub-0.9.1.2.ebuild,v 1.4 2006/10/11 11:59:32 nelchael Exp $
 
 inherit eutils
 
@@ -18,7 +18,8 @@ IUSE=""
 DEPEND=">=x11-libs/fltk-1.1.4
 		>=dev-libs/libpcre-5.0
 		>=media-libs/libpng-1.2.8
-		>=media-libs/jpeg-6b-r4"
+		>=media-libs/jpeg-6b-r4
+		|| ( x11-libs/libXpm virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
@@ -33,6 +34,10 @@ src_compile() {
 }
 
 src_install() {
-	emake PREFIX=${D}/usr BINDIR=${D}/usr/bin MANDIR=${D}/usr/share/man DOCDIR=${D}/usr/share/doc/stripclub install || die
-	dodoc readme.txt FAQ
+	make \
+		PREFIX=${D}/usr \
+		BINDIR=${D}/usr/bin \
+		MANDIR=${D}/usr/share/man \
+		DOCDIR=${D}/usr/share/doc/${P} \
+		install || die
 }
