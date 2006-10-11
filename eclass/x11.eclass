@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.8 2005/07/11 15:08:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x11.eclass,v 1.9 2006/10/11 02:29:29 dberkholz Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -10,6 +10,7 @@
 # wishes to build support for.  Note, that this variable is only unlocked if
 # the USE variable "expertxfree" is switched on, at least for xfree.
 
+inherit linux-info
 
 vcards() {
 	has "$1" ${VIDEO_CARDS} && return 0
@@ -41,37 +42,34 @@ patch_exclude() {
 # This is to ease kernel checks for patching and other things. (spyderous)
 # Kernel checker is_kernel $1 $2 where $1 is KV_major and $2 is KV_minor.
 # is_kernel "2" "4" should map to a 2.4 kernel, etc.
+#
+# This function is DEPRECATED and should not be used anywhere in ebuilds!
+# Use kernel_is() from linux-info.eclas instead!
 
 check_version_h() {
-	if [ ! -f "${ROOT}/usr/src/linux/include/linux/version.h" ]
-	then
-		eerror "Please verify that your /usr/src/linux symlink is pointing"
-		eerror "to your current kernel sources, and that you did run:"
-		eerror
-		eerror "  # make dep"
-		die "/usr/src/linux symlink not setup!"
-	fi
+	check_kernel_built
 }
 
 get_KV_info() {
 	check_version_h
-
-	# Get the kernel version of sources in /usr/src/linux ...
-	export KV_full="$(awk '/UTS_RELEASE/ { gsub("\"", "", $3); print $3 }' \
-		"${ROOT}/usr/src/linux/include/linux/version.h")"
-	export KV_major="$(echo "${KV_full}" | cut -d. -f1)"
-	export KV_minor="$(echo "${KV_full}" | cut -d. -f2)"
-	export KV_micro="$(echo "${KV_full}" | cut -d. -f3 | sed -e 's:[^0-9].*::')"
+	get_version
+	
+	# Not used anywhere, leaving here just in case...
+	export KV_full="${KV_FULL}"
+	export KV_major="${KV_MAJOR}"
+	export KV_minor="${KV_MINOR}"
+	export KV_micro="${KV_PATCH}"
 }
 
 is_kernel() {
 	get_KV_info
 
-	if [ "${KV_major}" -eq "${1}" -a "${KV_minor}" -eq "${2}" ]
-	then
-		return 0
-	else
-		return 1
+	ewarn "QA Notice: Please upgrade your ebuild to use kernel_is()"
+	ewarn "QA Notice: from linux-info eclass instead."
+
+	if [[ $(type -t kernel_is) == "function" ]] ; then
+		kernel_is "$@"
+		return $?
 	fi
 }
 
