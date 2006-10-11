@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.11 2006/08/28 16:49:20 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.11.5-r2.ebuild,v 1.12 2006/10/11 12:39:37 ticho Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ upgrade_warning() {
 	ewarn "See http://bugs.gentoo.org/101877 for details."
 	echo
 	ewarn "Home directory of user mpd, as well as default locations in mpd.conf have"
-	ewarn "been changed to /var/lib/mpd, please bear that in mind while updating."
+	ewarn "been changed to /var/lib/mpd, please bear that in mind while updating"
 	ewarn "your mpd.conf file."
 	echo
 }
