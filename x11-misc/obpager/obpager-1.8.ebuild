@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/obpager-1.8.ebuild,v 1.7 2006/01/21 12:49:43 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/obpager-1.8.ebuild,v 1.8 2006/10/11 11:52:01 nelchael Exp $
 
 DESCRIPTION="Lightweight pager designed to be used with NetWM-compliant window manager"
 HOMEPAGE="http://obpager.sourceforge.net/"
@@ -27,6 +27,7 @@ src_unpack() {
 
 	# this makes it compile :-)
 	sed -i -e '18s/^.*$/#include <errno.h>/' src/main.cc
+	sed -i -e 's,X11R6/,,g' Makefile
 }
 
 src_compile() {
