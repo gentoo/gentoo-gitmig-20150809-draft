@@ -1,0 +1,11 @@
+# ChangeLog for rox-extra/weather
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.1 2006/10/11 13:17:25 lack Exp $
+
+*weather-0.2.3 (11 Oct 2006)
+
+  11 Oct 2006; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +weather-0.2.3.ebuild:
+  New package - Weather applet for rox desktop, imported from
+  breakmygentoo.net (Thanks Peter Hyman)
+
