@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/wmpager-1.2-r1.ebuild,v 1.9 2006/05/03 00:55:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/wmpager-1.2-r1.ebuild,v 1.10 2006/10/11 20:30:26 grobian Exp $
 
 IUSE=""
 DESCRIPTION="A simple pager docklet for the WindowMaker window manager."
@@ -11,13 +11,18 @@ SLOT="0"
 LICENSE="BSD"
 KEYWORDS="amd64 ~sparc x86"
 
-DEPEND=">=sys-apps/sed-4"
-
+DEPEND=">=sys-apps/sed-4
+	|| ( (
+			x11-libs/libX11
+			x11-libs/libXpm
+			x11-libs/libXext )
+		virtual/x11 )
+	virtual/libc"
 RDEPEND="|| ( (
-	x11-libs/libX11
-	x11-libs/libXpm
-	x11-libs/libXext )
-	virtual/x11 )
+			x11-libs/libX11
+			x11-libs/libXpm
+			x11-libs/libXext )
+		virtual/x11 )
 	virtual/libc"
 
 src_compile() {

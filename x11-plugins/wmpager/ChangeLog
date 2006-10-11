@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmpager
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/ChangeLog,v 1.8 2006/05/03 00:55:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpager/ChangeLog,v 1.9 2006/10/11 20:30:26 grobian Exp $
+
+  11 Oct 2006; Fabian Groffen <grobian@gentoo.org> wmpager-1.2-r1.ebuild:
+  Put X11 stuff in DEPEND too, you need it during compilation, thanks to
+  Patrick Lauer in bug #150653
 
   03 May 2006; Jason Wever <weeve@gentoo.org> wmpager-1.2-r1.ebuild:
   Added ~sparc keyword.
