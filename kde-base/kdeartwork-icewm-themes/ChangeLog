@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-icewm-themes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.39 2006/10/03 09:43:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.40 2006/10/11 19:29:33 flameeyes Exp $
+
+  11 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdeartwork-icewm-themes-3.5.5.ebuild:
+  Fix keywords.
 
 *kdeartwork-icewm-themes-3.5.5 (03 Oct 2006)
 
