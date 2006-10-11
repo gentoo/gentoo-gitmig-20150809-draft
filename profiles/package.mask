@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6037 2006/10/11 13:14:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6038 2006/10/11 16:28:11 ticho Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1009,10 +1009,6 @@ games-strategy/ufo2000
 =app-pda/synce-0.9.2
 =app-pda/synce-librapi2-0.9.2
 =app-pda/synce-libsynce-0.9.2
-
-# Tuấn Văn <langthang@gentoo.org> (25 Jul 2006)
-# Initial import. Masked for testing
-mail-filter/mimedefang
 
 # Luis Medinas <metalgod@gentoo.org> (23 Jul 2006)
 # Marked for removal see bug #132449
