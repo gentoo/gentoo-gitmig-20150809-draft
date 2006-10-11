@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/ncpufreqd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.9 2006/07/12 21:15:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.10 2006/10/11 21:48:44 nelchael Exp $
+
+  11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> ncpufreqd-2.0.ebuild,
+  ncpufreqd-2.1.ebuild:
+  Update SRC_URI, stable on x86.
 
   12 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> ncpufreqd-2.0.ebuild,
   ncpufreqd-2.1.ebuild:
