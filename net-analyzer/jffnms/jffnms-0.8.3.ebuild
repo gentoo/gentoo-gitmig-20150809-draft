@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3.ebuild,v 1.1 2006/10/08 23:02:06 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jffnms/jffnms-0.8.3.ebuild,v 1.2 2006/10/11 22:32:14 jokey Exp $
 
-inherit eutils
+inherit eutils depend.php
 
 DESCRIPTION="Network Management and Monitoring System."
 HOMEPAGE="http://www.jffnms.org/"
@@ -18,35 +18,41 @@ DEPEND="net-www/apache
 	postgres? ( dev-db/postgresql )
 	net-analyzer/rrdtool
 	media-libs/gd
-	=dev-lang/php-4*
 	dev-php/PEAR-PEAR
 	snmp? ( net-analyzer/net-snmp )
 	sys-apps/diffutils
-	media-gfx/graphviz
-	net-analyzer/nmap
-	net-analyzer/fping
 	app-mobilephone/smsclient"
 
+RDEPEND="${DEPEND}
+	media-gfx/graphviz
+	net-analyzer/nmap
+	net-analyzer/fping"
+
+need_php_cli
+
 pkg_setup() {
-	local flags="gd wddx sockets session spl cli"
+	require_gd
+	local DIE
+	local flags="wddx sockets session spl"
+	use mysql && flags="${flags} mysql"
+	use postgres &&	flags="${flags} postgres"
 
-	if use mysql ; then
-		flags="$flags mysql"
+	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} ; then
+		DIE="yes"
 	fi
 
-	if use postgres ; then
-		flags="$flags postgres"
+	if [[ ${DIE} == "yes" ]] ; then
+		eerror
+		eerror "${PHP_PKG} needs to be re-installed with all of the following"
+		eerror "USE flags enabled:"
+		eerror
+		eerror "${flags}"
+		eerror
+		die "Re-install ${PHP_PKG} with ${flags}"
 	fi
-
-	for flagname in $flags ; do
-		if ! built_with_use "=dev-lang/php-4*" $flagname; then
-			eerror "You need to build php with $flagname USE flag"
-			die "Jffnms requires php with $flagname USE flag"
-		fi
-	done
 
 	enewgroup jffnms
-	enewuser jffnms -1 /bin/bash /dev/null jffnms,apache
+	enewuser jffnms -1 /bin/bash -1 jffnms,apache
 }
 
 src_install(){
@@ -57,8 +63,8 @@ src_install(){
 	chown -R jffnms:apache "${MY_DESTDIR}" || die
 	chmod -R ug+rw "${MY_DESTDIR}" || die
 
-	einfo "JFFNMS has been partialy installed on your system. However you"
-	einfo "still need proceed with final installation and configuration."
-	einfo "You can visit http://www.gentoo.org/doc/en/jffnms.xml in order"
-	einfo "to get detailed information on how to get jffnms up and running."
+	elog "JFFNMS has been partialy installed on your system. However you"
+	elog "still need proceed with final installation and configuration."
+	elog "You can visit http://www.gentoo.org/doc/en/jffnms.xml in order"
+	elog "to get detailed information on how to get jffnms up and running."
 }
