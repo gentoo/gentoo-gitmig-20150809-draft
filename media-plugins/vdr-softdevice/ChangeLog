@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.21 2006/10/09 21:24:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.22 2006/10/11 10:29:00 zzam Exp $
+
+*vdr-softdevice-0.3.0-r1 (11 Oct 2006)
+
+  11 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-softdevice-0.3.0-YUY2-cut-segfault.diff,
+  +vdr-softdevice-0.3.0-r1.ebuild:
+  Added patch from softdevice-cvs to prevent a segfault when having nonzero
+  cutting parameter in combination with YUY2-pixelformat.
 
 *vdr-softdevice-0.3.0 (09 Oct 2006)
 
