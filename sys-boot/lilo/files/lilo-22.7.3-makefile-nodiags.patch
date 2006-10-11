@@ -1,0 +1,14 @@
+--- Makefile.orig	2006-10-02 22:10:39.000000000 +0200
++++ Makefile	2006-10-02 22:18:13.000000000 +0200
+@@ -153,10 +153,7 @@
+ #
+ # everything needed to run, just short of installation
+ #
+-all:	lilo bootsect.b diag1.img # OBSOLETE:  $(BOOTS) edit dparam.com activate
+-	if [ -x /usr/bin/bcc -o -x /usr/local/bin/bcc ]; then \
+-		make diagnostic; \
+-		make dosexe; fi
++all:	lilo
+ 
+ #
+ # everything above plus the statically linked version
