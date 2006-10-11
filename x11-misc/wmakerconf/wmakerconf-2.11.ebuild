@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.11.ebuild,v 1.8 2005/12/24 15:46:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/wmakerconf-2.11.ebuild,v 1.9 2006/10/11 12:06:01 nelchael Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE="nls imlib perl"
 
 DEPEND="=x11-libs/gtk+-2*
+	dev-util/pkgconfig
 	>=x11-wm/windowmaker-0.90.0
 	imlib? ( media-libs/imlib )"
 
