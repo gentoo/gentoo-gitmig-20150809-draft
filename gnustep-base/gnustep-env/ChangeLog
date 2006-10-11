@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.24 2006/08/16 00:56:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.25 2006/10/11 20:01:14 grobian Exp $
+
+*gnustep-env-0.1.8-r1 (11 Oct 2006)
+
+  11 Oct 2006; Fabian Groffen <grobian@gentoo.org>
+  +gnustep-env-0.1.8-r1.ebuild:
+  Fix for bug #149174, remove init.d script, but make sure it will be
+  installed by depending on gnustep-base-1.13.
 
   16 Aug 2006; Jason Wever <weeve@gentoo.org> gnustep-env-0.1.8.ebuild:
   Stable on SPARC wrt bug #139385.
