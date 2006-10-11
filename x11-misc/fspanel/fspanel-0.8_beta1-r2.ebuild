@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/fspanel-0.8_beta1-r2.ebuild,v 1.6 2006/01/21 12:03:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fspanel/fspanel-0.8_beta1-r2.ebuild,v 1.7 2006/10/11 11:17:53 nelchael Exp $
 
 S=${WORKDIR}/fspanel-0.8beta1
 DESCRIPTION="F***ing Small Panel. Good (and small) replacement for gnome-panel"
@@ -20,6 +20,13 @@ RDEPEND="|| ( (
 DEPEND="${RDEPEND}
 	|| ( x11-proto/xproto virtual/x11 )
 	dev-util/pkgconfig"
+
+src_unpack() {
+
+	unpack ${A}
+	sed -i -e 's,/X11R6,,g' "${S}/configure"
+
+}
 
 src_compile() {
 
