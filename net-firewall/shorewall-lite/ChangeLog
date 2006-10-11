@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.1 2006/10/10 12:21:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.2 2006/10/11 08:39:06 jokey Exp $
+
+  11 Oct 2006; Markus Ullmann <jokey@gentoo.org>
+  shorewall-lite-3.2.4.ebuild:
+  Missing IUSE
 
 *shorewall-lite-3.2.4 (10 Oct 2006)
 

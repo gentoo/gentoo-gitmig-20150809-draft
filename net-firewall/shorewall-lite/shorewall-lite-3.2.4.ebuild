@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.2.4.ebuild,v 1.1 2006/10/10 12:21:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/shorewall-lite-3.2.4.ebuild,v 1.2 2006/10/11 08:39:06 jokey Exp $
 
 MY_P="shorewall-${PV}"
 MY_P_DOCS="${P/${PN}/shorewall-docs-html}"
@@ -13,7 +13,7 @@ SRC_URI="http://shorewall.net/pub/shorewall/3.2/${MY_P}/${P}.tgz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="doc"
 
 DEPEND="net-firewall/iptables
 	sys-apps/iproute2"
