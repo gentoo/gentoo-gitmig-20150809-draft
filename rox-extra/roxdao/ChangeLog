@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/roxdao
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxdao/ChangeLog,v 1.1 2006/10/11 13:47:47 lack Exp $
+
+*roxdao-0.4 (11 Oct 2006)
+
+  11 Oct 2006; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +roxdao-0.4.ebuild:
+  New package - RoxDAO, imported from breakmygentoo.net (Thanks Peter Hyman)
+
