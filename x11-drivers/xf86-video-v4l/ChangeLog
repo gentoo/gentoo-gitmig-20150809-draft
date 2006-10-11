@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-v4l
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.21 2006/07/10 22:27:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-v4l/ChangeLog,v 1.22 2006/10/11 00:27:00 dberkholz Exp $
+
+  11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xf86-video-v4l-0.0.1.5.ebuild, xf86-video-v4l-0.1.1.ebuild:
+  Update description to be less generic.
 
   10 Jul 2006; Aron Griffis <agriffis@gentoo.org>
   xf86-video-v4l-0.1.1.ebuild:

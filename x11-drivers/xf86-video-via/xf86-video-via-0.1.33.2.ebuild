@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.1.33.2.ebuild,v 1.7 2006/06/30 15:32:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.1.33.2.ebuild,v 1.8 2006/10/11 00:27:00 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
 
 inherit x-modular
 
-DESCRIPTION="X.Org driver for via cards"
+DESCRIPTION="VIA unichrome graphics driver"
 KEYWORDS="amd64 ~ia64 ~sh x86 ~x86-fbsd"
 IUSE="dri"
 RDEPEND="x11-base/xorg-server
