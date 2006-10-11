@@ -1,6 +1,11 @@
 # ChangeLog for games-util/glbsp
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.5 2005/09/16 22:24:19 ciaranm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/glbsp/ChangeLog,v 1.6 2006/10/11 20:11:32 nyhm Exp $
+
+*glbsp-2.20 (11 Oct 2006)
+
+  11 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +glbsp-2.20.ebuild:
+  Version bump by Davide Cendron, bug #146732
 
   16 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
