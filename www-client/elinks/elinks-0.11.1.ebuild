@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.4 2006/10/04 21:23:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.5 2006/10/11 21:59:27 spock Exp $
 
-inherit eutils
+inherit eutils autotools
 
 MY_P=${P/_/}
 DESCRIPTION="Advanced and well-established text-mode web browser"
@@ -55,6 +55,8 @@ src_compile() {
 	# As GNUTLS is not yet 100% stable and its support in ELinks is not so well
 	# tested yet, it's recommended for users to give a strong preference to OpenSSL whenever possible.
 	local myconf=""
+
+	eautoreconf
 
 	if use debug ; then
 		myconf="--enable-debug"
