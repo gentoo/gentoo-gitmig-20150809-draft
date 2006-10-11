@@ -1,4 +1,9 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.17 2006/10/02 14:33:13 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.18 2006/10/11 22:43:20 pebenito Exp $
+
+# Chris PeBenito <pebenito@gentoo.org> (11 Oct 2006)
+# Requires old GDM, which will not work with SELinux.  All
+# other pieces of gnome 1.4 work.
+<gnome-base/gnome-2
 
 # Mike Frysinger <vapier@gentoo.org> (3 Sep 2006)
 # Masked until selinux is updated #144509
@@ -9,7 +14,3 @@
 # Chris PeBenito <pebenito@gentoo.org> (12 Jan 2006)
 # SELinux code won't compile
 =sys-fs/udev-079*
-
-# Chris PeBenito <pebenito@gentoo.org> (1 Feb 2006)
-# CVS ebuild for testing only.
-=sec-policy/selinux-base-policy-99999999
