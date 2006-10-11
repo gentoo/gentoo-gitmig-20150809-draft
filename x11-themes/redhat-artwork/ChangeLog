@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.81 2006/10/11 12:55:08 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.82 2006/10/11 15:52:32 dertobi123 Exp $
+
+  11 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  redhat-artwork-0.243-r1.ebuild:
+  ppc stable, bug #149305
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -redhat-artwork-0.243.ebuild, redhat-artwork-0.243-r1.ebuild:
