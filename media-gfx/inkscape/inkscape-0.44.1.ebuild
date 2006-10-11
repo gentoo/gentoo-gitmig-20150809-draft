@@ -1,17 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.43-r1.ebuild,v 1.4 2006/10/11 20:28:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.44.1.ebuild,v 1.1 2006/10/11 20:28:43 hanno Exp $
 
-inherit gnome2 eutils
+inherit gnome2
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="gnome mmx perl python bonobo inkjar jabber doc plugin effects spell"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
+IUSE="gnome mmx bonobo inkjar lcms boost doc plugin spell"
+RESTRICT="test"
 
 RDEPEND=">=x11-libs/gtk+-2.4.1
 	>=dev-libs/glib-2.6.5
@@ -20,28 +21,26 @@ RDEPEND=">=x11-libs/gtk+-2.4.1
 	>=x11-libs/pango-1.4.0
 	>=dev-libs/libxslt-1.0.15
 	dev-perl/XML-Parser
+	dev-perl/XML-XQL
+	dev-python/pyxml
 	virtual/xft
 	dev-libs/popt
 	media-libs/fontconfig
 	sys-libs/zlib
 	media-libs/libpng
 	>=sys-devel/gcc-3
-	>=dev-libs/libsigc++-2.0.3
+	>=dev-libs/libsigc++-2.0.12
 	>=dev-cpp/gtkmm-2.4
 	dev-cpp/glibmm
-	gnome? ( >=gnome-base/libgnomeprint-2.2
-		>=gnome-base/libgnomeprintui-2.2 )
 	>=dev-libs/boehm-gc-6.4
-	perl? ( dev-lang/perl )
-	python? ( dev-lang/python )
+	gnome? ( >=gnome-base/gnome-vfs-2.0 )
+	lcms? ( >=media-libs/lcms-1.14 )
+	boost? ( dev-libs/boost )
 	plugin? ( >=media-gfx/pstoedit-3.33
 	          >=media-gfx/skencil-0.6.16
 		  media-libs/libwmf
 		  app-office/dia )
-	effects? ( dev-python/pyxml
-		     dev-perl/XML-XQL )
-	spell? ( app-text/gtkspell )
-	jabber? ( >=net-libs/loudmouth-1.0 )"
+	spell? ( app-text/gtkspell )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -50,22 +49,10 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} --with-xft"
 G2CONF="${G2CONF} `use_with spell gtkspell`"
+#G2CONF="${G2CONF} `use_with jabber inkboard`"
 use mmx || G2CONF="${G2CONF} --disable-mmx"
 use inkjar || G2CONF="${G2CONF} --without-inkjar"
-use gnome && G2CONF="${G2CONF} --with-gnome-print"
-use perl && G2CONF="${G2CONF} --with-perl"
-use python && G2CONF="${G2CONF} --with-python"
-use jabber && G2CONF="${G2CONF} --enable-inkboard"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-
-	epatch ${FILESDIR}/inkscape-0.43-gcc41.patch
-
-	autoconf || die
-	libtoolize --copy --force || die
-}
+use gnome && G2CONF="${G2CONF} --with-gnome-vfs"
+use lcms || G2CONF="${G2CONF} --disable-lcms"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README"
