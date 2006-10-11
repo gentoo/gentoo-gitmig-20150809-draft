@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6035 2006/10/11 01:24:53 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6036 2006/10/11 10:16:37 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -686,10 +686,6 @@ www-apps/drupal
 # 1.5.x is a development branch, people should test 1.4.x by default
 =net-fs/openafs-1.5*
 =net-fs/openafs-kernel-1.5*
-
-# Matthias Schwarzott <zzam@gentoo.org> (08 Sep 2006)
-# Newest release crashes hard X11 some times.
-=media-plugins/vdr-xineliboutput-1.0.0_pre4
 
 # Roy Marples <uberlord@gentoo.org> (07 Sep 2006)
 # Mask dhcp alpha version
