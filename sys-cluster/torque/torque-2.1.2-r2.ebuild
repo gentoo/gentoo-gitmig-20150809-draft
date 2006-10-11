@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2-r2.ebuild,v 1.1 2006/09/28 05:48:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.1.2-r2.ebuild,v 1.2 2006/10/11 01:16:59 dberkholz Exp $
 
 
 inherit autotools flag-o-matic eutils
@@ -44,6 +44,7 @@ src_unpack() {
 	cd "${S}"
 	epatch ${FILESDIR}/${PN}-setuid-safety.patch
 	epatch ${FILESDIR}/${PV}-skip-dotnames.patch
+	epatch ${FILESDIR}/${PV}-queue-recov-freemem-fix.patch
 }
 
 

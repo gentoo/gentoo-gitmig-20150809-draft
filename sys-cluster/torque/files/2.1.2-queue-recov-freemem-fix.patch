@@ -1,0 +1,20 @@
+--- src/server/queue_recov.c	2006-07-27 18:53:53.000000000 -0400
++++ src/server/queue_recov.c	2006-09-27 13:34:33.000000000 -0400
+@@ -257,7 +257,7 @@
+     {
+     log_err(errno,"que_recov","open error");
+ 
+-    free((char *)pq);
++    que_free(pq);  /* free((char *)pq); */
+ 
+     return(NULL);
+     }
+@@ -267,7 +267,7 @@
+ 	if (read(fds, (char *)&pq->qu_qs, sizeof(struct queuefix)) !=
+ 	    sizeof(struct queuefix)) {
+ 		log_err(errno, "que_recov", "read error");
+-		free((char *)pq);
++		que_free(pq);  /* free((char *)pq); */
+ 		(void)close(fds);
+ 		return ((pbs_queue *)0);
+ 	}

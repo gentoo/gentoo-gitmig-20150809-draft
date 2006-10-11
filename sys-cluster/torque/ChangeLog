@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.36 2006/09/28 05:48:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.37 2006/10/11 01:16:59 dberkholz Exp $
+
+  11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/2.1.2-queue-recov-freemem-fix.patch, torque-2.1.2-r2.ebuild:
+  (#149327) Fix que_recov() by using que_free() rather than free() (Ian
+  Stakenvicius). Don't revbump because the common case of this, caused by
+  .keep files, is already fixed.
 
 *torque-2.1.2-r2 (28 Sep 2006)
 
