@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-rssgrab
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rssgrab/ChangeLog,v 1.5 2006/03/24 23:08:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-rssgrab/ChangeLog,v 1.6 2006/10/11 21:34:34 kloeri Exp $
+
+  11 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove obz from metadata due to retiring.
 
   24 Mar 2006; Aron Griffis <agriffis@gentoo.org>
   desklet-rssgrab-0.6.2.ebuild:
