@@ -1,15 +1,8 @@
-DIST lineak_defaultplugin-0.8.2.tar.gz 730901
-DIST lineak_defaultplugin-0.8.3.tar.gz 734986
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST lineak_defaultplugin-0.8.4.tar.gz 816045
 DIST lineak_defaultplugin-0.9.0-pre1.tar.gz 816063 RMD160 d410a3bcadafe28855d4746acdc93a03eed5d0cd SHA256 055d071536a780d345e2127f871d48dabf8e2582eed0de67a8630feb06afa83a
-EBUILD lineak-defaultplugin-0.8.2.ebuild 659 RMD160 f90eda8fa92827452eca092e7df2efd888125772 SHA1 cac5a686d44aba03d3e25860e6c40d89ed2270b9 SHA256 297f9d58f67ec6b5af2f9d9d1fc52782831902e0a5c1093ab636d7a53c297a17
-MD5 1b5635e8d76761e5a4c5605d5af6560e lineak-defaultplugin-0.8.2.ebuild 659
-RMD160 f90eda8fa92827452eca092e7df2efd888125772 lineak-defaultplugin-0.8.2.ebuild 659
-SHA256 297f9d58f67ec6b5af2f9d9d1fc52782831902e0a5c1093ab636d7a53c297a17 lineak-defaultplugin-0.8.2.ebuild 659
-EBUILD lineak-defaultplugin-0.8.3.ebuild 722 RMD160 dc21ebc8eb7327f4734c8919110f883deb950279 SHA1 a9e4c9bafba554d5e9070f1befdfc5e211e16150 SHA256 4eb4ed4fcfcbb5da6064254137db97b92204a22f94eae26d60db42a55c0c967d
-MD5 8d3029fe5a34cd43ebdc40b338789b28 lineak-defaultplugin-0.8.3.ebuild 722
-RMD160 dc21ebc8eb7327f4734c8919110f883deb950279 lineak-defaultplugin-0.8.3.ebuild 722
-SHA256 4eb4ed4fcfcbb5da6064254137db97b92204a22f94eae26d60db42a55c0c967d lineak-defaultplugin-0.8.3.ebuild 722
 EBUILD lineak-defaultplugin-0.8.4.ebuild 759 RMD160 fbeeb15741e6b749fa26e26ec51c7372e336353f SHA1 d8ac907159735e1d892da619f32891535fefedcc SHA256 35e37a7e17e56056d182f314c2a56cf66c8edd2db90a503f1cd0da55c051e704
 MD5 f3d06bd781902e96308dfd228e6e64ba lineak-defaultplugin-0.8.4.ebuild 759
 RMD160 fbeeb15741e6b749fa26e26ec51c7372e336353f lineak-defaultplugin-0.8.4.ebuild 759
@@ -18,23 +11,24 @@ EBUILD lineak-defaultplugin-0.9.0_pre1.ebuild 804 RMD160 9d98476c9642800b71caf3b
 MD5 7ca17a49b761ea69ca7ce1a8bd279d3c lineak-defaultplugin-0.9.0_pre1.ebuild 804
 RMD160 9d98476c9642800b71caf3b42eff49b82f255a0e lineak-defaultplugin-0.9.0_pre1.ebuild 804
 SHA256 49cc16f6d51eccb428ef1e1813e633bf7f06b5db8f6e2c8fac25a85b0b3f6d1d lineak-defaultplugin-0.9.0_pre1.ebuild 804
-MISC ChangeLog 2163 RMD160 f9a73a3d81baa32120d75dde6b613e6b8e35b68f SHA1 761dade571a57e21a0743d5680d0b2bdfbeb5d98 SHA256 d36936d2dd66449067fb020c3e36f3b1403c4b46f1cd90bb45d057a24b391231
-MD5 11dd240a197f4febdc7dcf8fa6151d09 ChangeLog 2163
-RMD160 f9a73a3d81baa32120d75dde6b613e6b8e35b68f ChangeLog 2163
-SHA256 d36936d2dd66449067fb020c3e36f3b1403c4b46f1cd90bb45d057a24b391231 ChangeLog 2163
+MISC ChangeLog 2317 RMD160 a7460f0a5f16cf66dd119e986f8145d961eabe0b SHA1 144700209b31b885d4acf85bb2b51d2d439cd1d2 SHA256 bca2905aa3d0e4ce86625ff02819667a2e8b2bdf5b2617235b81e83ce60c7cdc
+MD5 e8e316ef2ebd25b3c6cc340185ff9e2d ChangeLog 2317
+RMD160 a7460f0a5f16cf66dd119e986f8145d961eabe0b ChangeLog 2317
+SHA256 bca2905aa3d0e4ce86625ff02819667a2e8b2bdf5b2617235b81e83ce60c7cdc ChangeLog 2317
 MISC metadata.xml 270 RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 SHA1 301f7381dcf918a0ebf54528c56a7be2d0eb0ea9 SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16
 MD5 9a7c58529f54db6737913da568c57e4a metadata.xml 270
 RMD160 62420b04d07196d1617a3f300d7ec26e13bd17c5 metadata.xml 270
 SHA256 9f9f76a90432be25276e5c1a831efc9a202b2b97ea442a6bdd70777252cdff16 metadata.xml 270
-MD5 34528bbdd7513a34b86c7e0a8ad58cd9 files/digest-lineak-defaultplugin-0.8.2 78
-RMD160 c17c9bb81e91a5a66572b2cd1c3c71d80df7a40e files/digest-lineak-defaultplugin-0.8.2 78
-SHA256 8b6beb4b358ae9cc3f82ff196d327e18be8bb2b0f88b23c3c583da043f0a0fe0 files/digest-lineak-defaultplugin-0.8.2 78
-MD5 447ef50a2e6236436746bc3155758e7c files/digest-lineak-defaultplugin-0.8.3 78
-RMD160 3df23161285f6b9b4495efa38a0ddbce8785bbc9 files/digest-lineak-defaultplugin-0.8.3 78
-SHA256 13e415846babe478b452928430ed02ffcb105c6d5e4478007d89d8bc8509c004 files/digest-lineak-defaultplugin-0.8.3 78
 MD5 3f2052e7536d406e9993552978201ce1 files/digest-lineak-defaultplugin-0.8.4 78
 RMD160 935c56df0c43c40ec44b2b44fd616e5473e2b451 files/digest-lineak-defaultplugin-0.8.4 78
 SHA256 8617434cffc5448482ec55291d6ac02b5ce9db7a80914c21fcd1760c5a05ac9f files/digest-lineak-defaultplugin-0.8.4 78
 MD5 401c8dbd01ed3a2da0b893874e767f32 files/digest-lineak-defaultplugin-0.9.0_pre1 295
 RMD160 24ad9eb4d27b6b6e6071162c56b88bcc5a7e110f files/digest-lineak-defaultplugin-0.9.0_pre1 295
 SHA256 907dc3fa0e8e8a07b06c3960cc9f77260b0aee7db350753fd4630a757b7814dc files/digest-lineak-defaultplugin-0.9.0_pre1 295
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFLOqzgo/w9rxVVVERAnAvAJ0fmQibmnetL+v+e4VxCkb0KEIvjgCaA000
+4iQ9SDE+a9tNf0LYNlN6pHk=
+=Smhi
+-----END PGP SIGNATURE-----
