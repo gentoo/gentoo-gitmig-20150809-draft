@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/kyro-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/kyro-drivers/ChangeLog,v 1.4 2006/08/05 05:00:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/kyro-drivers/ChangeLog,v 1.5 2006/10/11 00:20:38 dberkholz Exp $
+
+  11 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  files/digest-kyro-drivers-2.01.21.7, Manifest:
+  Add some more digest types.
 
   05 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update my email address: spyderous -> dberkholz.
