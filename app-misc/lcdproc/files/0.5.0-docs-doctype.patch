@@ -1,0 +1,24 @@
+diff -Nuar lcdproc-0.5.0.orig/docs/lcdproc-dev/lcdproc-dev.docbook lcdproc-0.5.0/docs/lcdproc-dev/lcdproc-dev.docbook
+--- lcdproc-0.5.0.orig/docs/lcdproc-dev/lcdproc-dev.docbook	2006-03-28 16:01:37.000000000 +0200
++++ lcdproc-0.5.0/docs/lcdproc-dev/lcdproc-dev.docbook	2006-10-02 16:47:37.000000000 +0200
+@@ -1,6 +1,6 @@
+ <?xml version='1.0'?>
+-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1//EN"
+-                      "http://www.oasis-open.org/docbook/xml/4.1/docbookx.dtd" [
++<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
++                      "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+   <!ENTITY bookinfo SYSTEM "bookinfo.docbook">
+   <!ENTITY introduction SYSTEM "introduction.docbook">
+   <!ENTITY shared-files SYSTEM "shared-files.docbook">
+diff -Nuar lcdproc-0.5.0.orig/docs/lcdproc-user/lcdproc-user.docbook lcdproc-0.5.0/docs/lcdproc-user/lcdproc-user.docbook
+--- lcdproc-0.5.0.orig/docs/lcdproc-user/lcdproc-user.docbook	2006-04-06 09:36:14.000000000 +0200
++++ lcdproc-0.5.0/docs/lcdproc-user/lcdproc-user.docbook	2006-10-02 16:47:51.000000000 +0200
+@@ -1,6 +1,6 @@
+ <?xml version='1.0'?>
+-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1//EN"
+-                      "http://www.oasis-open.org/docbook/xml/4.1/docbookx.dtd" [
++<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
++                      "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+   <!ENTITY bookinfo SYSTEM "bookinfo.docbook">
+   <!ENTITY introduction SYSTEM "introduction.docbook">
+   <!ENTITY how-to-obtain SYSTEM "how-to-obtain.docbook">

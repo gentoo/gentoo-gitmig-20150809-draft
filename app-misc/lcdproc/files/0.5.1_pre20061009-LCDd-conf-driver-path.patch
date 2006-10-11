@@ -1,0 +1,11 @@
+--- LCDd.conf.orig	2006-09-22 07:26:02.069860250 +0200
++++ LCDd.conf	2006-09-22 07:26:12.458509500 +0200
+@@ -76,7 +76,7 @@
+ #            the driver modules and will thus not be able to
+ #            function properly.
+ # NOTE: Always place a slash as last character !
+-DriverPath=server/drivers/
++DriverPath=/usr/share/lcdproc/drivers/
+ 
+ # The "...Key=" lines define what the server does with keypresses that
+ # don't go to any client.

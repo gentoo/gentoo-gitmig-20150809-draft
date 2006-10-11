@@ -1,6 +1,19 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.33 2006/09/25 16:36:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.34 2006/10/11 21:16:26 jokey Exp $
+
+*lcdproc-0.5.1_pre20061009 (11 Oct 2006)
+*lcdproc-0.5.0-r2 (11 Oct 2006)
+
+  11 Oct 2006; Markus Ullmann <jokey@gentoo.org> +files/0.4.5-lcdproc.rc,
+  +files/0.5.0-docs-doctype.patch, +files/0.5.0-LCDd.rc,
+  +files/0.5.0-lcdproc.rc, +files/0.4.5-LCDd.rc,
+  +files/0.5.1_pre20061009-LCDd.rc,
+  +files/0.5.1_pre20061009-LCDd-conf-driver-path.patch,
+  +files/0.5.1_pre20061009-lcdproc.rc, -files/lcdproc,
+  -lcdproc-0.5.0-r1.ebuild, +lcdproc-0.5.0-r2.ebuild,
+  +lcdproc-0.5.1_pre20061009.ebuild:
+  Fixing doc generation, adding CVS snapshot and new dep: g15
 
   25 Sep 2006; <jokey@gentoo.org> lcdproc-0.4.5.ebuild,
   lcdproc-0.5.0-r1.ebuild:
