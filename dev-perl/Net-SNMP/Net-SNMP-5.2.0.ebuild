@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-5.2.0.ebuild,v 1.12 2006/08/05 19:30:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-5.2.0.ebuild,v 1.13 2006/10/11 03:17:26 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ DEPEND=">=virtual/perl-libnet-1.0703
 	>=dev-perl/Digest-HMAC-1.0
 	>=dev-perl/Crypt-DES-2.03
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
