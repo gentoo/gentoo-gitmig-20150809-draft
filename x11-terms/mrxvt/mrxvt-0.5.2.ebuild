@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2.ebuild,v 1.2 2006/10/04 20:55:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2.ebuild,v 1.3 2006/10/11 18:07:38 nelchael Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~x86"
 
-IUSE="debug png jpeg session truetype menubar xpm"
+LINGUAS_IUSE="linguas_el linguas_ja linguas_ko linguas_th linguas_zh_CN linguas_zh_TW"
+IUSE="debug png jpeg session truetype menubar xpm ${LINGUAS_IUSE}"
 
 RDEPEND="png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
