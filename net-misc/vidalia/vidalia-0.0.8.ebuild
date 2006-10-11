@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.0.7.ebuild,v 1.3 2006/10/11 14:03:45 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.0.8.ebuild,v 1.1 2006/10/11 14:03:45 humpback Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "To have vidalia starting tor you probably have to copy
-	/etc/tor/torrc.sample to the users HOME/.tor/torrc and comment the settings
+	/etc/tor/torrc.sample to the users $HOME/.tor/torrc and comment the settings
 	there and change the socks. Also in vidalia change the default user under
 	wich tor will run"
 }
