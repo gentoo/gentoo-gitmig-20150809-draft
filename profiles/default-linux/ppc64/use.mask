@@ -114,3 +114,6 @@ video_cards_voodoo
 
 #until netbeans is keyworded
 netbeans
+
+#2006/10/11 - corsair - bug #150925
+graphlcd
