@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.40 2006/09/17 07:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.41 2006/10/11 21:41:51 gustavoz Exp $
+
+*crossdev-0.9.17-r1 (11 Oct 2006)
+
+  11 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> files/crossdev,
+  -crossdev-0.9.17.ebuild, +crossdev-0.9.17-r1.ebuild:
+  Bump to fix AVR binutils version
 
 *crossdev-0.9.17 (17 Sep 2006)
 
