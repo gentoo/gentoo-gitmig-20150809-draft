@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/resin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.23 2006/10/07 11:05:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.24 2006/10/11 13:27:24 nelchael Exp $
+
+  11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> -files/2.1.14/21resin,
+  -files/2.1.14/resin.conf, -files/2.1.14/resin.diff,
+  -files/2.1.14/resin.init, -resin-2.1.14.ebuild:
+  Remove old version.
 
   07 Oct 2006; Vlastimil Babka <caster@gentoo.org>
   files/digest-resin-3.0.8-r1, Manifest:
