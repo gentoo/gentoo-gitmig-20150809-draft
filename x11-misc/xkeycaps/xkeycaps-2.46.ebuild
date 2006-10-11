@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.18 2006/01/21 17:41:12 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.19 2006/10/11 11:32:06 nelchael Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="|| ( (
+		x11-misc/xbitmaps
 		x11-libs/libX11
 		x11-libs/libXmu
 		x11-libs/libXt
