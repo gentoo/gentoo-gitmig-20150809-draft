@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.20 2005/12/13 00:17:12 metalgod Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.21 2006/10/11 21:06:40 kloeri Exp $
+
+  11 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove obz from metadata due to retiring.
 
   13 Dec 2005; Luis Medinas <metalgod@gentoo.org> drivel-2.0.2.ebuild:
   Added ~amd64 keyword.
