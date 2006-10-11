@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.138 2006/10/07 20:40:59 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.139 2006/10/11 17:27:16 dertobi123 Exp $
+
+  11 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> php-4.4.4-r6.ebuild,
+  php-5.1.6-r6.ebuild:
+  ppc stable, bug #150261
 
 *php-5.1.6-r6 (07 Oct 2006)
 *php-4.4.4-r6 (07 Oct 2006)
