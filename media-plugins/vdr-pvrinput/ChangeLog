@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pvrinput
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.7 2006/08/15 10:13:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.8 2006/10/11 20:53:40 zzam Exp $
+
+  11 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-pvrinput-0.1.1_pre1.ebuild, vdr-pvrinput-0.1.1.ebuild:
+  Apply include-order patch only conditional - ivtv-headers is a strange topic.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
