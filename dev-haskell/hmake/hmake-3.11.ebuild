@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.7 2006/10/05 03:31:50 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.11.ebuild,v 1.8 2006/10/11 18:18:00 dcoutts Exp $
 
 inherit base eutils fixheadtails ghc-package
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.haskell.org/hmake/${P}.tar.gz"
 
 LICENSE="nhc98"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/ghc
@@ -27,6 +27,7 @@ RDEPEND="virtual/ghc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch "${FILESDIR}/${P}-ghc66.patch"
 
 	# fix all head/tail declarations
 	sed -i 's/tail -1/tail  -n 1/' src/hmake/MkConfig.hs
@@ -38,7 +39,7 @@ src_unpack() {
 src_compile() {
 	# package uses non-standard configure, therefore econf does
 	# not work ...
-	./configure \
+	READLINE='-package readline' ./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man/man1 \
 		--buildwith="$(ghc-getghc)" \

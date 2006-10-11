@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.28 2006/10/05 03:31:50 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.29 2006/10/11 18:18:00 dcoutts Exp $
+
+  11 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
+  +files/hmake-3.11-ghc66.patch, hmake-3.11.ebuild:
+  Added patch to fix building with ghc-6.6
 
   05 Oct 2006; Chris Parrott <cparrott@gentoo.org> hmake-3.11.ebuild:
   marked stable for amd64 (bug 144678)
