@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.22 2006/10/05 03:54:36 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.23 2006/10/11 18:31:57 dcoutts Exp $
+
+  11 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
+  +files/happy-1.15-ghc66.patch, happy-1.15.ebuild:
+  Added patch to fix building with ghc-6.6
 
   05 Oct 2006; Chris Parrott <cparrott@gentoo.org> happy-1.15.ebuild:
   marked stable for amd64 (bug 144677)

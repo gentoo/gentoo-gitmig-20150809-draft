@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.14 2006/10/05 03:54:36 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.15.ebuild,v 1.15 2006/10/11 18:31:57 dcoutts Exp $
 
 inherit base eutils ghc-package
 
@@ -21,6 +21,9 @@ RDEPEND=""
 
 src_unpack() {
 	base_src_unpack
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-ghc66.patch"
 }
 
 src_compile() {
