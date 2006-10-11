@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-gtk-client
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.14 2006/07/18 21:48:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.15 2006/10/11 15:35:26 nyhm Exp $
+
+  11 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/ggz-gtk-client-0.0.13-gaim.patch, ggz-gtk-client-0.0.13.ebuild:
+  Add gaim use flag and fix install paths
 
   18 Jul 2006; Michael Hanselmann <hansmi@gentoo.org>
   ggz-gtk-client-0.0.13.ebuild:
