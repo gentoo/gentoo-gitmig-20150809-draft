@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.64 2006/09/25 03:17:55 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.65 2006/10/11 21:08:27 kloeri Exp $
+
+  11 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove obz from metadata due to retiring.
 
   25 Sep 2006; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.33.1.ebuild,
   gdesklets-core-0.34.3-r1.ebuild, gdesklets-core-0.35-r1.ebuild,
