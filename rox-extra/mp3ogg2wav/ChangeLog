@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/mp3ogg2wav
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/mp3ogg2wav/ChangeLog,v 1.1 2006/10/11 13:45:35 lack Exp $
+
+*mp3ogg2wav-1.0 (11 Oct 2006)
+
+  11 Oct 2006; Jim Ramsay <lack@gentoo.org> +metadata.xml,
+  +mp3ogg2wav-1.0.ebuild:
+  New package - Mp3Ogg2Wav, imported from breakmygentoo.net (Thanks Peter Hyman)
+
