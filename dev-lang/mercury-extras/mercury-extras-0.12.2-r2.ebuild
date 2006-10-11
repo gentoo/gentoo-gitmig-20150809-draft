@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.8 2006/10/10 07:48:20 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.12.2-r2.ebuild,v 1.9 2006/10/11 06:51:52 keri Exp $
 
 inherit eutils
 
@@ -82,7 +82,6 @@ src_compile() {
 src_install() {
 	cd "${S}"
 	mmake \
-		MMAKEFLAGS="${MAKEOPTS}" \
 		INSTALL_PREFIX="${D}"/usr install \
 		|| die "mmake install failed"
 
@@ -91,7 +90,6 @@ src_install() {
 		mv Mmakefile Mmakefile.opengl
 		mv Mmakefile.mtogl Mmakefile
 		mmake \
-			MMAKEFLAGS="${MAKEOPTS}" \
 			INSTALL_PREFIX="${D}"/usr install \
 			|| die "mmake install mtogl failed"
 	fi
