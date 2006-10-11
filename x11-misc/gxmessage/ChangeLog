@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.15 2006/05/27 17:55:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.16 2006/10/11 12:13:23 nelchael Exp $
+
+  11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> gxmessage-2.6.1.ebuild:
+  Add missing dev-util/pkgconfig to DEPEND, stable on x86. See bug #150821.
 
 *gxmessage-2.6.1 (27 May 2006)
 
