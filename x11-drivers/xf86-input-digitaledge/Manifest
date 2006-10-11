@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 DIST x11-driver-patches-1.tar.bz2 389 RMD160 0c57d4b235d83f3d7c46691c13857fd121ddec2d SHA1 6e2ac0cd255d3c4dc97d35092fe3ef64a71d7ac5 SHA256 64787d5b57d2845c0fa9297a9d924093ba191fc3551798239d9983f0bcca9b3e
 DIST xf86-input-digitaledge-1.0.1.3.tar.bz2 220891
 DIST xf86-input-digitaledge-1.1.0.tar.bz2 232925 RMD160 1fb82d898c567e84e9f597cc8a6e6807d622288b SHA1 3389b112b1e7fb0423d7547cc6b346045a61b352 SHA256 24001f19b46b5bc2fcf8212f04863e4efa90175fac797350525e14848ab98a38
@@ -26,10 +23,3 @@ SHA256 8928c4a3dc47c064002d11ed74f7c0ecaa944cd843ddd043bfb56e1f67ac9231 files/di
 MD5 393ea152a08dbd99107bdcf7343c0092 files/digest-xf86-input-digitaledge-1.1.0 545
 RMD160 0f34f3d0bf876c701eea95fd77e9c1e50a958b83 files/digest-xf86-input-digitaledge-1.1.0 545
 SHA256 8d1ab04191c10ac2dc7f5fb1bffa98352780c3e67bd1f07bb525f8e479cc41fb files/digest-xf86-input-digitaledge-1.1.0 545
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFFBvl0KRy60XGEcJIRAuBVAJwMu/IldAdHxYWthn/7rcTpOn6anACdGjbI
-h37wZB23+4uPE+tAazhl9wY=
-=Bpbv
------END PGP SIGNATURE-----
