@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-2.6.ebuild,v 1.10 2006/07/10 17:51:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvkbd/xvkbd-2.6.ebuild,v 1.11 2006/10/11 11:48:22 nelchael Exp $
 
 DESCRIPTION="virtual keyboard for X window system"
 HOMEPAGE="http://homepage3.nifty.com/tsato/xvkbd/"
@@ -19,6 +19,7 @@ RDEPEND="|| ( (
 
 DEPEND="${RDEPEND}
 	|| ( ( x11-misc/imake
+		x11-misc/gccmakedep
 		x11-proto/xproto
 		app-text/rman
 		x11-proto/xextproto
