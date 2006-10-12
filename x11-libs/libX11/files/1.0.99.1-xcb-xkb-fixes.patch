@@ -1,0 +1,106 @@
+diff --git a/src/xkb/XKBGeom.c b/src/xkb/XKBGeom.c
+index 02b03ba..fa652b2 100644
+--- a/src/xkb/XKBGeom.c
++++ b/src/xkb/XKBGeom.c
+@@ -632,21 +632,27 @@ XkbGetGeometry(Display *dpy,XkbDescPtr x
+ {
+ xkbGetGeometryReq	*req;
+ xkbGetGeometryReply	 rep;
++Status			 status;
+ 
+     if ( (!xkb) || (dpy->flags & XlibDisplayNoXkb) ||
+ 	(!dpy->xkb_info && !XkbUseExtension(dpy,NULL,NULL)))
+ 	return BadAccess;
+     
++    LockDisplay(dpy);
+     GetReq(kbGetGeometry, req);
+     req->reqType = dpy->xkb_info->codes->major_opcode;
+     req->xkbReqType = X_kbGetGeometry;
+     req->deviceSpec = xkb->device_spec;
+     req->name= None;
+     if (!_XReply(dpy, (xReply *)&rep, 0, xFalse))
+-	return BadImplementation;
+-    if (!rep.found)
+-	return BadName;
+-    return _XkbReadGetGeometryReply(dpy,&rep,xkb,NULL);
++	status = BadImplementation;
++    else if (!rep.found)
++	status = BadName;
++    else
++	status = _XkbReadGetGeometryReply(dpy,&rep,xkb,NULL);
++    UnlockDisplay(dpy);
++    SyncHandle();
++    return status;
+ }
+ 
+ Status
+@@ -654,20 +660,26 @@ XkbGetNamedGeometry(Display *dpy,XkbDesc
+ {
+ xkbGetGeometryReq	*req;
+ xkbGetGeometryReply	 rep;
++Status			 status;
+ 
+     if ( (name==None) || (dpy->flags & XlibDisplayNoXkb) ||
+ 	(!dpy->xkb_info && !XkbUseExtension(dpy,NULL,NULL)) )
+ 	return BadAccess;
+     
++    LockDisplay(dpy);
+     GetReq(kbGetGeometry, req);
+     req->reqType = dpy->xkb_info->codes->major_opcode;
+     req->xkbReqType = X_kbGetGeometry;
+     req->deviceSpec = xkb->device_spec;
+     req->name= (CARD32)name;
+     if ((!_XReply(dpy, (xReply *)&rep, 0, xFalse))||(!rep.found))
+-	return BadImplementation;
+-    if (!rep.found)
+-	return BadName;
+-    return _XkbReadGetGeometryReply(dpy,&rep,xkb,NULL);
++	status = BadImplementation;
++    else if (!rep.found)
++	status = BadName;
++    else
++	status = _XkbReadGetGeometryReply(dpy,&rep,xkb,NULL);
++    UnlockDisplay(dpy);
++    SyncHandle();
++    return status;
+ }
+ 
+diff --git a/src/xkb/XKBGetMap.c b/src/xkb/XKBGetMap.c
+index 777f7cc..59e9962 100644
+--- a/src/xkb/XKBGetMap.c
++++ b/src/xkb/XKBGetMap.c
+@@ -823,8 +823,8 @@ XkbGetMapChanges(Display *dpy,XkbDescPtr
+ 	req->firstVModMapKey = changes->first_vmodmap_key;
+ 	req->nVModMapKeys = changes->num_vmodmap_keys;
+ 	status= _XkbHandleGetMapReply(dpy, xkb);
+-	SyncHandle();
+ 	UnlockDisplay(dpy);
++	SyncHandle();
+ 	return status;
+     }
+     UnlockDisplay(dpy);
+diff --git a/src/xkb/XKBSetGeom.c b/src/xkb/XKBSetGeom.c
+index e070623..8e4d8b1 100644
+--- a/src/xkb/XKBSetGeom.c
++++ b/src/xkb/XKBSetGeom.c
+@@ -446,6 +446,7 @@ Status ret;
+ 	(!dpy->xkb_info && !XkbUseExtension(dpy,NULL,NULL)))
+ 	return BadAccess;
+     
++    LockDisplay(dpy);
+     GetReq(kbSetGeometry, req);
+     req->reqType = dpy->xkb_info->codes->major_opcode;
+     req->xkbReqType = X_kbSetGeometry;
+diff --git a/src/xkb/XKBleds.c b/src/xkb/XKBleds.c
+index 89ab2e9..865342c 100644
+--- a/src/xkb/XKBleds.c
++++ b/src/xkb/XKBleds.c
+@@ -228,6 +228,8 @@ XkbGetNamedDeviceIndicator(	Display *		d
+ 	SyncHandle();
+ 	return False;
+     }
++    UnlockDisplay(dpy);
++    SyncHandle();
+     if ((!rep.found)||(!rep.supported))
+ 	return False;
+     if (pNdxRtrn!=NULL)
