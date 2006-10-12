@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.159 2006/09/28 08:15:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.160 2006/10/12 14:30:17 blubb Exp $
+
+  12 Oct 2006; Simon Stelling <blubb@gentoo.org> cyrus-sasl-2.1.22.ebuild:
+  specify pgsql libdir for bug 133551
 
   28 Sep 2006; Fernando J. Pereda <ferdy@gentoo.org>
   cyrus-sasl-2.1.22.ebuild:

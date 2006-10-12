@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.14 2006/09/28 08:15:36 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.15 2006/10/12 14:30:17 blubb Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg multilib
 
@@ -124,7 +124,9 @@ src_compile() {
 	myconf="${myconf} `use_enable sample`"
 	myconf="${myconf} `use_enable kerberos gssapi`"
 	myconf="${myconf} `use_with mysql` `use_enable mysql`"
-	myconf="${myconf} `use_with postgres pgsql` `use_enable postgres`"
+	myconf="${myconf} `use_enable postgres`"
+	use postgres &&	myconf="${myconf} `use_with postgres pgsql $(pg_config --libdir)`"
+
 	# Add use srp. Bug #81970.
 	myconf="${myconf} `use_enable srp`"
 	myconf="${myconf} `use_enable java` `use_with java javahome ${JAVA_HOME}`"
