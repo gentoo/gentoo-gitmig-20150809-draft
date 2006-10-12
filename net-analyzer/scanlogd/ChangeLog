@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/scanlogd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.21 2006/10/08 12:57:20 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.22 2006/10/12 13:33:56 gustavoz Exp $
+
+  12 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  scanlogd-2.2.6-r1.ebuild:
+  Stable on sparc
 
 *scanlogd-2.2.6-r2 (08 Oct 2006)
 
