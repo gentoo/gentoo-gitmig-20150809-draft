@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.77 2006/10/11 12:11:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.78 2006/10/12 13:15:27 chainsaw Exp $
+
+*audacious-1.2.0_rc2 (12 Oct 2006)
+
+  12 Oct 2006; Tony Vroon <chainsaw@gentoo.org> +audacious-1.2.0_rc2.ebuild:
+  New release candidate. Improved skinning engine (freeform skins now
+  supported), see the included Osmosis skin for a demonstration. Bugfixes &
+  stability improvements, as usual.
 
   11 Oct 2006; Tony Vroon <chainsaw@gentoo.org> audacious-1.2.0_rc1.ebuild:
   Add taglib dependency (which will not be in 1.2 final; the configure script
