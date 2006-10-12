@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/buddha-1.2-r1.ebuild,v 1.1 2006/10/11 23:21:13 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/buddha-1.2-r1.ebuild,v 1.2 2006/10/12 12:00:52 dcoutts Exp $
 
 inherit base ghc-package multilib autotools
 
@@ -14,15 +14,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=virtual/ghc-6.4"
-
-DEPEND="${RDEPEND}"
+DEPEND=">=virtual/ghc-6.4"
+#will need dev-haskell/haskell-src for ghc-6.6
 
 src_unpack() {
 	base_src_unpack
 
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-ghc66.patch.gz"
+	epatch "${WORKDIR}/${P}-ghc66.patch"
 
 	# Get rid of those 100's of pointless one-line 'wise' files:
 	sed -i 's/advice//' "${S}/Makefile.am"
