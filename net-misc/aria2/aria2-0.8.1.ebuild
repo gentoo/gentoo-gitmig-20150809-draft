@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.8.1.ebuild,v 1.1 2006/10/01 23:02:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.8.1.ebuild,v 1.2 2006/10/12 10:45:47 dev-zero Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ares bittorrent gnutls metalink nls ssl"
+IUSE="ares bittorrent gnutls metalink nls ssl test"
 
 CDEPEND="ssl? (
 			gnutls? ( net-libs/gnutls )
@@ -22,7 +22,8 @@ CDEPEND="ssl? (
 		bittorrent? ( gnutls? ( dev-libs/libgcrypt ) )
 		metalink? ( >=dev-libs/libxml2-2.6.26 )"
 DEPEND="${CDEPEND}
-		nls? ( sys-devel/gettext )"
+		nls? ( sys-devel/gettext )
+		test? ( dev-util/cppunit )"
 RDEPEND="${CDEPEND}
 		nls? ( virtual/libiconv virtual/libintl )"
 
@@ -48,7 +49,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/aria2c
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README AUTHORS TODO NEWS
-	doman doc/aria2c.1
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.2 2006/10/01 23:02:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.3 2006/10/12 10:45:47 dev-zero Exp $
+
+  12 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Replaced dobin/doman with 'make install', solves bug #150979
 
   01 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Version bump. ~amd64 KEYWORD added.
