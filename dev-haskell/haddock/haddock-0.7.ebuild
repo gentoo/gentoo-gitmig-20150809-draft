@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.13 2006/08/28 16:50:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.7.ebuild,v 1.14 2006/10/12 23:48:31 dcoutts Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -21,6 +21,7 @@ KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
 LICENSE="as-is"
 
 DEPEND="virtual/ghc
+		!>=virtual/ghc-6.6
 	doc? (  ~app-text/docbook-xml-dtd-4.2
 		app-text/docbook-xsl-stylesheets
 		>=dev-libs/libxslt-1.1.2
