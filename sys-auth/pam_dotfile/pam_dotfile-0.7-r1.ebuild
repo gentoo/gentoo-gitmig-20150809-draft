@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7-r1.ebuild,v 1.3 2006/05/24 20:49:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_dotfile/pam_dotfile-0.7-r1.ebuild,v 1.4 2006/10/12 16:22:46 flameeyes Exp $
 
-inherit eutils pam
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit eutils pam autotools
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"
@@ -22,13 +25,11 @@ DEPEND="doc? ( www-client/lynx )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
-	sed -i -e 's:./configure:#./configure:' ${S}/bootstrap.sh
-	sed -i -e "s:aclocal:aclocal -I ${WORKDIR}/${PV}/m4:" ${S}/bootstrap.sh
 
-	sh bootstrap.sh
+	AT_M4DIR="${WORKDIR}/${PV}/m4" eautoreconf
 }
 
 src_compile() {
