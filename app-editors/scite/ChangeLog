@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.53 2006/10/12 05:13:49 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.54 2006/10/12 15:20:29 gustavoz Exp $
+
+  12 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> scite-1.71.ebuild:
+  Stable on sparc wrt #150913
 
   11 Oct 2006; Stephanie Lockwood-Childs <wormo@gentoo.org> scite-1.71.ebuild:
   stable on ppc (Bug #150913)
