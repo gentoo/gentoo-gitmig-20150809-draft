@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.27 2006/06/07 20:46:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.28 2006/10/12 16:26:12 flameeyes Exp $
+
+  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/pam_ldap-176-fix-referral-tls.patch, -pam_ldap-156.ebuild,
+  -pam_ldap-161.ebuild, -pam_ldap-164.ebuild, -pam_ldap-167.ebuild,
+  -pam_ldap-171.ebuild, -pam_ldap-176.ebuild, -pam_ldap-176-r1.ebuild,
+  -pam_ldap-178.ebuild, -pam_ldap-178-r1.ebuild:
+  Remove old versions.
 
   07 Jun 2006; Robin H. Johnson <robbat2@gentoo.org> pam_ldap-182.ebuild:
   Bug #135903, fix IUSE.
