@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.22 2006/10/07 09:19:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/use.mask,v 1.23 2006/10/12 09:42:18 flameeyes Exp $
 
 # Someone who knows kerberos is needed to make sure that this works
 kerberos
@@ -49,3 +49,5 @@ mzscheme
 snmp
 pyste
 pcsc-lite
+sametime
+sms
