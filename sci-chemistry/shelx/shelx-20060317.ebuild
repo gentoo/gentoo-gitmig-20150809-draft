@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.4 2006/10/12 19:03:20 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317.ebuild,v 1.5 2006/10/12 19:03:45 dberkholz Exp $
 
 inherit autotools eutils fortran
 
@@ -13,7 +13,7 @@ SRC_URI="${P}.tgz"
 RESTRICT="fetch"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
 IUSE="dosformat"
 RDEPEND=""
 DEPEND="${RDEPEND}"
