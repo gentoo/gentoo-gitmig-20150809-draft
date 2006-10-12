@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2228 2006/10/11 20:05:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2229 2006/10/12 00:19:01 spb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1501,6 +1501,7 @@ sys-apps/lm_sensors:sensord - Enable sensord
 sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
+sys-apps/paludis:glsa - Enable parsing of GLSA files
 sys-apps/paludis:pink - Use a less boring colourscheme than the default
 sys-apps/paludis:qa - Enable QA tools.
 sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
