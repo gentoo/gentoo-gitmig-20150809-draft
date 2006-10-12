@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.1.ebuild,v 1.3 2006/10/12 16:26:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-1.1.1-r1.ebuild,v 1.1 2006/10/12 16:26:07 chainsaw Exp $
 
-inherit eutils multilib ssl-cert versionator
+inherit eutils multilib versionator
 
 JABBER_ETC="/etc/jabber"
 JABBER_RUN="/var/run/jabber"
@@ -11,11 +11,11 @@ JABBER_LOG="/var/log/jabber"
 
 DESCRIPTION="The Erlang Jabber Daemon"
 HOMEPAGE="http://ejabberd.jabber.ru/"
-SRC_URI="http://process-one.net/en/projects/${PN}/download/${PV}/${P}.tar.gz"
+SRC_URI="http://process-one.net/en/projects/${PN}/download/${PV}/${P}.tar.gz mirror://gentoo/ejabberd-patchball-${PVR}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-IUSE="mod_irc mod_muc mod_pubsub ldap odbc ssl web"
+KEYWORDS="~x86"
+IUSE="mod_irc mod_muc mod_pubsub ldap odbc socks5 statsdx ssl web"
 
 DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/expat-1.95
@@ -25,6 +25,20 @@ DEPEND=">=net-im/jabber-base-0.01
 
 PROVIDE="virtual/jabber-server"
 S=${WORKDIR}/${P}/src
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if useq socks5 ; then
+		epatch ${WORKDIR}/patchball/${PVR}-socks5-proxy.patch
+	fi
+	if useq statsdx; then
+		epatch ${WORKDIR}/patchball/${PVR}-statsdx.patch
+		if useq web; then
+			epatch ${WORKDIR}/patchball/${PVR}-statsdx-web.patch
+		fi
+	fi
+}
 
 src_compile() {
 	econf ${myconf}                              \
@@ -48,6 +62,10 @@ src_install() {
 		LOGDIR=${D}${JABBER_LOG}                           \
 	    install \
 	    || die "install failed"
+
+	chown -R jabber:jabber "${D}${JABBER_ETC}"
+	chown -R jabber:jabber "${D}${JABBER_LOG}"
+	chown -R jabber:jabber "${D}/usr/$(get_libdir)/erlang/lib/${P}"
 
 	insinto /usr/share/doc/${PF}
 	cd ${S}/..
@@ -90,29 +108,28 @@ EOF
 	dobin ${T}/ejabberdctl
 	dobin ${T}/ejabberd
 
-	newinitd ${FILESDIR}/${P}.initd ${PN}
+	newinitd ${FILESDIR}/${PF}.initd ${PN}
 	newconfd ${FILESDIR}/${P}.confd ${PN}
 
 	insinto ${JABBER_ETC}
-	if use ssl; then
-		docert ssl
-		rm -f ${D}${JABBER_ETC}/ssl.{crt,csr,key}
-		fowners jabber:jabber ${JABBER_ETC}/ssl.pem
-	fi
 	doins ${FILESDIR}/inetrc
+	doins ${FILESDIR}/ssl.cnf
+	newins ${FILESDIR}/self-cert-v2.sh self-cert.sh
 }
 
 pkg_postinst() {
-	if [ ! -e ${JABBER_ETC}/ejabberd.cfg ]
-	then
-		einfo "Configuration file has been installed in ${JABBER_ETC}/ejabberd.cfg."
-		einfo "Edit it according to your needs. For configuration instructions,"
-		einfo "please see /usr/share/doc/${PF}/html/guide.html"
-	fi
+	einfo "For configuration instructions, please see /usr/share/doc/${PF}/html/guide.html"
+	einfo "or the online version at http://www.process-one.net/en/projects/ejabberd/docs/guide_en.html"
+	echo
 	if use ssl ; then
-		einfo "A script to generate a ssl key has been installed in"
-		einfo "${JABBER_ETC}/self-cert.sh . Use it and change the config file to"
-		einfo "point to the full path"
+		if [ ! -e /etc/jabber/ssl.pem ]; then
+			ebegin "Creating SSL key"
+			sh ${JABBER_ETC}/self-cert.sh &> /dev/null
+			eend $?
+		fi
+		chown jabber:jabber ${JABBER_ETC}/ssl.pem
+		ewarn "Please be sure that your ${JABBER_ETC}/ejabber.cfg points to ${JABBER_ETC}/ssl.pem"
+		ewarn "You may want to edit ${JABBER_ETC}/ssl.cnf and run ${JABBER_ETC}/self-cert.sh again"
 	fi
 	if ! use web ; then
 		einfo "The web USE flag is off, this will disable the web admin interface,"
