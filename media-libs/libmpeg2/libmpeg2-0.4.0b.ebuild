@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.31 2006/09/13 16:17:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.4.0b.ebuild,v 1.32 2006/10/12 10:12:02 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils flag-o-matic autotools libtool
 

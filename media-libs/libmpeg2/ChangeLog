@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.48 2006/09/13 16:17:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.49 2006/10/12 10:12:02 flameeyes Exp $
+
+  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> libmpeg2-0.4.0b.ebuild:
+  Force latest autotools to avoid failure, thanks to Patrick Lauer for
+  noticing in bug #150779.
 
   13 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/libmpeg2-0.4.0b-use-readelf-for-test.patch, libmpeg2-0.4.0b.ebuild:
