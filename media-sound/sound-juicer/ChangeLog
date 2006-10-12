@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.90 2006/09/28 09:40:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.91 2006/10/12 21:05:15 leio Exp $
+
+*sound-juicer-2.16.1 (12 Oct 2006)
+
+  12 Oct 2006; Mart Raudsepp <leio@gentoo.org> +sound-juicer-2.16.1.ebuild:
+  Version bump
 
   28 Sep 2006; Mart Raudsepp <leio@gentoo.org> sound-juicer-2.16.0.ebuild:
   Correct intltool dependency.
