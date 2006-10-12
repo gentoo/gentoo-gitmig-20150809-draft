@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.3 2006/10/10 16:31:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.4 2006/10/12 22:10:23 matsuu Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOMAKE=latest
+WANT_AUTOCONF=latest
+
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
 HOMEPAGE="http://www.scim-im.org/"
@@ -21,7 +24,8 @@ RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
 	!app-i18n/scim-cvs"
 DEPEND="${RDEPEND}
 	|| ( x11-libs/libXt virtual/x11 )
-	doc? ( app-doc/doxygen )
+	doc? ( app-doc/doxygen
+		app-text/docbook-xsl-stylesheets )
 	dev-lang/perl
 	>=dev-util/intltool-0.33"
 
@@ -41,18 +45,29 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-imengine.patch
+	if use doc ; then
+		local xsl=$(ls -1d /usr/share/sgml/docbook/xsl-stylesheets* | head -n 1)
+		sed -i -e "s:/usr/share/sgml/docbook/xsl-stylesheets:${xsl}:" configure.ac || die
+	fi
+	eautoreconf
 }
 
 src_compile() {
+	local myconf
 	# bug #83625
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
 
+	# We cannot use "use_enable"
+	if ! use gtk ; then
+		myconf="${myconf} --disable-panel-gtk"
+		myconf="${myconf} --disable-setup-ui"
+		myconf="${myconf} --disable-gtk2-immodule"
+	fi
+
 	econf \
 		$(use_with doc doxygen) \
-		$(use_enable gtk panel-gtk) \
-		$(use_enable gtk setup-ui) \
-		$(use_enable gtk gtk2-immodule) || die
+		${myconf} || die
 	emake || die
 }
 
@@ -91,10 +106,10 @@ pkg_postinst() {
 	ewarn
 	epause 10
 
-	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
+	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
 
 pkg_postrm() {
 
-	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
+	[ -x /usr/bin/gtk-query-immodules-2.0 ] && gtk-query-immodules-2.0 > "${ROOT}$(get_gtk_confdir)/gtk.immodules"
 }
