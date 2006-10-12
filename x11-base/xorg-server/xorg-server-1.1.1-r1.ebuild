@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.9 2006/10/12 02:53:25 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.10 2006/10/12 15:31:34 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -351,12 +351,10 @@ src_unpack() {
 	if use kdrive; then
 		einfo "Removing unused kdrive drivers ..."
 		for card in ${IUSE_VIDEO_CARDS}; do
-			# (bug #136370) Radeon needs fbdev and vesa
-			if use video_cards_radeon; then
-				if [[ ${card} = video_cards_fbdev ]] \
-					|| [[ ${card} = video_cards_vesa ]]; then
-					continue
-				fi
+			# Skip binary drivers
+			if [[ ${card} = video_cards_nvidia ]] \
+				|| [[ ${card} = video_cards_fglrx ]]; then
+				continue
 			fi
 
 			real_card=${card#video_cards_}
@@ -370,13 +368,20 @@ src_unpack() {
 
 			disable_card=0
 			if ! use ${card}; then
-				disable_card=1
-			elif ! use x86; then
-				# Bug #150052
-				if [[ ${vm86_devices/${card#video_cards_}/} != ${vm86_devices} ]]; then
-					ewarn "  $real_card does not work on your architecture; disabling."
-					disable_card=1
+				# (bug #136370) Radeon needs fbdev and vesa
+				if ! use x86 \
+					&& use video_cards_radeon; then
+					if [[ ${card} = fbdev ]] \
+						|| [[ ${card} = vesa ]]; then
+						continue
+					fi
 				fi
+				disable_card=1
+			# Bug #150052
+			elif ! use x86 &&
+				[[ ${vm86_devices/${card#video_cards_}/} != ${vm86_devices} ]]; then
+				ewarn "  $real_card does not work on your architecture; disabling."
+				disable_card=1
 			fi
 
 			if [[ $disable_card = 1 ]]; then

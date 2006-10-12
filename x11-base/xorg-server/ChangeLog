@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.174 2006/10/12 02:53:25 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.175 2006/10/12 15:31:34 joshuabaergen Exp $
+
+  12 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.1.1-r1.ebuild:
+  Really fix bug #150052.
 
   12 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   +files/xorg-conf-example.patch, xorg-server-1.1.1-r1.ebuild:
