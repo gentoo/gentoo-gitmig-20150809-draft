@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2.ebuild,v 1.4 2005/12/03 17:05:53 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ochusha-0.5.8.2.ebuild,v 1.5 2006/10/12 10:11:35 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -14,14 +14,17 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="ppc ppc64 x86"
 
-DEPEND="virtual/xft
+RDEPEND="virtual/xft
 	>=x11-libs/gtk+-2.2.4
 	>=dev-libs/glib-2.2.3
 	>=dev-libs/libxml2-2.5.0
 	>=gnome-base/libghttp-1.0.9
 	sys-libs/zlib
-	nls? ( sys-devel/gettext )
+	nls? ( virtual/libintl )
 	ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
 
