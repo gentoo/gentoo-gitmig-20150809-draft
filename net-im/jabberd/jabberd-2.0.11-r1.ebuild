@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.4 2006/10/11 14:29:48 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.5 2006/10/12 08:28:58 nelchael Exp $
 
 inherit autotools eutils versionator
 
@@ -55,6 +55,7 @@ src_compile() {
 		$(use_enable pipe) \
 		$(use_enable postgres pgsql) \
 		$(use_enable sqlite) \
+		$(use_enable ssl) \
 		|| die "econf failed"
 	emake || die "make failed"
 
