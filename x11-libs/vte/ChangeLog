@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.130 2006/09/13 21:14:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.131 2006/10/12 03:54:10 leio Exp $
+
+*vte-0.14.1 (12 Oct 2006)
+
+  12 Oct 2006; Mart Raudsepp <leio@gentoo.org> +vte-0.14.1.ebuild:
+  Version bump for Gnome 2.16 series
 
   13 Sep 2006; Aron Griffis <agriffis@gentoo.org> vte-0.12.2.ebuild:
   Mark 0.12.2 stable on ia64. #139612
