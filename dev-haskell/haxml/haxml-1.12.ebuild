@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.6 2006/02/27 14:57:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.7 2006/10/12 19:11:34 dcoutts Exp $
 
 inherit ghc-package fixheadtails
 
@@ -20,6 +20,7 @@ IUSE="doc"
 # actually, >=ghc-5.02 should be ok
 # hugs and nhc98 are ok too, somebody might want to add support for them
 DEPEND=">=virtual/ghc-6.0
+		!>=virtual/ghc-6.6
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
 
 S=${WORKDIR}/${MY_P}

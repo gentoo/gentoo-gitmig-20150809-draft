@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.18 2006/10/11 19:01:57 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.19 2006/10/12 19:11:34 dcoutts Exp $
+
+  12 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> haxml-1.12.ebuild,
+  haxml-1.13-r1.ebuild:
+  Block older versions on ghc-6.6, latest version is fine.
 
 *haxml-1.13.2 (11 Oct 2006)
 
