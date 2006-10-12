@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ci/ci-1.1.6.ebuild,v 1.1 2004/09/08 13:31:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ci/ci-1.1.6.ebuild,v 1.2 2006/10/12 10:13:35 flameeyes Exp $
 
 IUSE=""
 
@@ -23,10 +23,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=sys-apps/sed-4"
-RDEPEND="virtual/ruby
+DEPEND="virtual/ruby
 	=x11-libs/gtk+-1.2*
-	>=dev-ruby/ruby-gtk-0.28
+	>=dev-ruby/ruby-gtk-0.28"
+RDEPEND="${DEPEND}
 	media-fonts/monafont"
 
 S=${WORKDIR}/Ci-${MY_PV}
