@@ -214,29 +214,153 @@
  
  # installation rules
 --- mercury-compiler-0.13.0.orig/scripts/prepare_tmp_dir_fixed_part.in	2005-01-28 20:11:59.000000000 +1300
-+++ mercury-compiler-0.13.0/scripts/prepare_tmp_dir_fixed_part.in	2006-09-16 12:28:36.000000000 +1200
-@@ -12,7 +12,9 @@
++++ mercury-compiler-0.13.0/scripts/prepare_tmp_dir_fixed_part.in	2006-10-12 21:35:17.000000000 +1300
+@@ -12,18 +12,20 @@
  fi
  wd=`/bin/pwd`
  
 -mkdir tmp_dir
-+tmp_dir=libgrades/$1
+-cp Mmake* tmp_dir
+-cp Mercury.* tmp_dir
+-cp VERSION tmp_dir
+-cp config* tmp_dir
+-cp aclocal.m4 tmp_dir
+-mkdir tmp_dir/scripts
+-cp scripts/* tmp_dir/scripts
+-mkdir tmp_dir/tools
+-cp tools/* tmp_dir/tools
+-$ln_s $wd/compiler tmp_dir
+-$ln_s $wd/analysis tmp_dir
+-$ln_s $wd/robdd tmp_dir
+-$ln_s $wd/util tmp_dir
++libgrade_dir=libgrades/$1
 +
-+mkdir -p tmp_dir
- cp Mmake* tmp_dir
- cp Mercury.* tmp_dir
- cp VERSION tmp_dir
++mkdir -p $libgrade_dir
++cp Mmake* $libgrade_dir
++cp Mercury.* $libgrade_dir
++cp VERSION $libgrade_dir
++cp config* $libgrade_dir
++cp aclocal.m4 $libgrade_dir
++mkdir $libgrade_dir/scripts
++cp scripts/* $libgrade_dir/scripts
++mkdir $libgrade_dir/tools
++cp tools/* $libgrade_dir/tools
++$ln_s $wd/compiler $libgrade_dir
++$ln_s $wd/analysis $libgrade_dir
++$ln_s $wd/robdd $libgrade_dir
++$ln_s $wd/util $libgrade_dir
+ exit 0
 --- mercury-compiler-0.13.0.orig/scripts/prepare_tmp_dir_grade_part	2005-05-20 18:15:20.000000000 +1200
-+++ mercury-compiler-0.13.0/scripts/prepare_tmp_dir_grade_part	2006-09-16 12:30:47.000000000 +1200
-@@ -5,6 +5,8 @@
++++ mercury-compiler-0.13.0/scripts/prepare_tmp_dir_grade_part	2006-10-12 21:36:07.000000000 +1300
+@@ -5,55 +5,57 @@
  # Public License - see the file COPYING in the Mercury distribution.
  #---------------------------------------------------------------------------#
  
-+tmp_dir=libgrades/$1
+-rm -fr tmp_dir/boehm_gc
+-rm -fr tmp_dir/runtime
+-rm -fr tmp_dir/trace
+-rm -fr tmp_dir/library
+-rm -fr tmp_dir/mdbcomp
+-rm -fr tmp_dir/browser
+-mkdir tmp_dir/boehm_gc
+-mkdir tmp_dir/boehm_gc/Mac_files
+-mkdir tmp_dir/boehm_gc/cord
+-mkdir tmp_dir/boehm_gc/include
+-mkdir tmp_dir/boehm_gc/include/private
+-cp boehm_gc/Makefile* tmp_dir/boehm_gc
+-cp boehm_gc/Mmake* tmp_dir/boehm_gc
+-cp boehm_gc/ac* tmp_dir/boehm_gc
+-cp boehm_gc/*.[chsS] tmp_dir/boehm_gc
+-cp boehm_gc/Mac_files/*.[ch] tmp_dir/boehm_gc/Mac_files
+-cp boehm_gc/cord/*.[ch] tmp_dir/boehm_gc/cord
+-cp boehm_gc/include/*.[ch] tmp_dir/boehm_gc/include
+-cp boehm_gc/include/private/*.[ch] tmp_dir/boehm_gc/include/private
+-mkdir tmp_dir/runtime
+-mkdir tmp_dir/runtime/machdeps
+-cp runtime/Mmake* tmp_dir/runtime
+-cp runtime/.mgnuc* tmp_dir/runtime
+-cp runtime/*.in tmp_dir/runtime
+-cp runtime/*.[ch] tmp_dir/runtime
+-cp runtime/*.il tmp_dir/runtime
+-cp runtime/machdeps/*.h tmp_dir/runtime/machdeps
+-mkdir tmp_dir/trace
+-cp trace/Mmake* tmp_dir/trace
+-cp trace/.mgnuc* tmp_dir/trace
+-cp trace/*.[ch] tmp_dir/trace
+-mkdir tmp_dir/library
+-cp library/Mmake* tmp_dir/library
+-cp library/Mercury.* tmp_dir/library
+-cp library/.mgnuc* tmp_dir/library
+-cp library/*FLAGS* tmp_dir/library
+-cp library/print_extra_inits tmp_dir/library
+-cp library/library_strong_name.sn tmp_dir/library
+-cp library/*.m tmp_dir/library
+-mkdir tmp_dir/mdbcomp
+-cp mdbcomp/Mmake* tmp_dir/mdbcomp
+-cp mdbcomp/Mercury.* tmp_dir/mdbcomp
+-cp mdbcomp/.mgnuc* tmp_dir/mdbcomp
+-cp mdbcomp/*FLAGS* tmp_dir/mdbcomp
+-cp mdbcomp/*.m tmp_dir/mdbcomp
+-mkdir tmp_dir/browser
+-cp browser/Mmake* tmp_dir/browser
+-cp browser/Mercury.* tmp_dir/browser
+-cp browser/.mgnuc* tmp_dir/browser
+-cp browser/*FLAGS* tmp_dir/browser
+-cp browser/*.m tmp_dir/browser
++libgrade_dir=libgrades/$1
 +
- rm -fr tmp_dir/boehm_gc
- rm -fr tmp_dir/runtime
- rm -fr tmp_dir/trace
++rm -fr $libgrade_dir/boehm_gc
++rm -fr $libgrade_dir/runtime
++rm -fr $libgrade_dir/trace
++rm -fr $libgrade_dir/library
++rm -fr $libgrade_dir/mdbcomp
++rm -fr $libgrade_dir/browser
++mkdir $libgrade_dir/boehm_gc
++mkdir $libgrade_dir/boehm_gc/Mac_files
++mkdir $libgrade_dir/boehm_gc/cord
++mkdir $libgrade_dir/boehm_gc/include
++mkdir $libgrade_dir/boehm_gc/include/private
++cp boehm_gc/Makefile* $libgrade_dir/boehm_gc
++cp boehm_gc/Mmake* $libgrade_dir/boehm_gc
++cp boehm_gc/ac* $libgrade_dir/boehm_gc
++cp boehm_gc/*.[chsS] $libgrade_dir/boehm_gc
++cp boehm_gc/Mac_files/*.[ch] $libgrade_dir/boehm_gc/Mac_files
++cp boehm_gc/cord/*.[ch] $libgrade_dir/boehm_gc/cord
++cp boehm_gc/include/*.[ch] $libgrade_dir/boehm_gc/include
++cp boehm_gc/include/private/*.[ch] $libgrade_dir/boehm_gc/include/private
++mkdir $libgrade_dir/runtime
++mkdir $libgrade_dir/runtime/machdeps
++cp runtime/Mmake* $libgrade_dir/runtime
++cp runtime/.mgnuc* $libgrade_dir/runtime
++cp runtime/*.in $libgrade_dir/runtime
++cp runtime/*.[ch] $libgrade_dir/runtime
++cp runtime/*.il $libgrade_dir/runtime
++cp runtime/machdeps/*.h $libgrade_dir/runtime/machdeps
++mkdir $libgrade_dir/trace
++cp trace/Mmake* $libgrade_dir/trace
++cp trace/.mgnuc* $libgrade_dir/trace
++cp trace/*.[ch] $libgrade_dir/trace
++mkdir $libgrade_dir/library
++cp library/Mmake* $libgrade_dir/library
++cp library/Mercury.* $libgrade_dir/library
++cp library/.mgnuc* $libgrade_dir/library
++cp library/*FLAGS* $libgrade_dir/library
++cp library/print_extra_inits $libgrade_dir/library
++cp library/library_strong_name.sn $libgrade_dir/library
++cp library/*.m $libgrade_dir/library
++mkdir $libgrade_dir/mdbcomp
++cp mdbcomp/Mmake* $libgrade_dir/mdbcomp
++cp mdbcomp/Mercury.* $libgrade_dir/mdbcomp
++cp mdbcomp/.mgnuc* $libgrade_dir/mdbcomp
++cp mdbcomp/*FLAGS* $libgrade_dir/mdbcomp
++cp mdbcomp/*.m $libgrade_dir/mdbcomp
++mkdir $libgrade_dir/browser
++cp browser/Mmake* $libgrade_dir/browser
++cp browser/Mercury.* $libgrade_dir/browser
++cp browser/.mgnuc* $libgrade_dir/browser
++cp browser/*FLAGS* $libgrade_dir/browser
++cp browser/*.m $libgrade_dir/browser
+ exit 0
 --- mercury-compiler-0.13.0.orig/trace/Mmakefile	2006-04-04 19:42:03.000000000 +1200
 +++ mercury-compiler-0.13.0/trace/Mmakefile	2006-09-16 12:25:49.000000000 +1200
 @@ -204,6 +204,9 @@
