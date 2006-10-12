@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2229 2006/10/12 00:19:01 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2230 2006/10/12 09:34:34 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -615,7 +615,28 @@ kde-base/kdeutils:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
 kde-base/kicker:xcomposite - Support for the Xorg composite extension.
 kde-base/kig:kig-scripting - Support Python scripting.
 kde-base/kmilo:pbbuttonsd - Support for the Apple PMU daemon pbbuttonsd.
-kde-base/kopete:sametime - Support for the Sametime protocol for instant messaging.
+kde-base/kopete:addbookmarks - Builds Add Bookmarks plugin
+kde-base/kopete:alias - Builds Alias plugin
+kde-base/kopete:autoreplace - Builds Auto-Replace plugin
+kde-base/kopete:connectionstatus - Builds Connection Status plugin
+kde-base/kopete:contactnotes - Builds Contact Notes plugin
+kde-base/kopete:gadu - Builds GaduGadu protocol handler
+kde-base/kopete:groupwise - Builds Novell GroupWise protocol handler
+kde-base/kopete:highlight - Builds Highlight plugin
+kde-base/kopete:history - Builds history plugin
+kde-base/kopete:irc - Builds IRC protocol handler
+kde-base/kopete:jingle - Enables voice calls for jabber
+kde-base/kopete:latex - Builds LaTeX plugin
+kde-base/kopete:netmeeting - Builds netmeeting plugin (require gnomemeeting)
+kde-base/kopete:nowlistening - Builds Now Listening... plugin
+kde-base/kopete:sametime - Enables support for the Sametime protocol for instant messaging
+kde-base/kopete:sms - Builds SMS protocol handler
+kde-base/kopete:statistics - Builds statistics plugin
+kde-base/kopete:texteffect - Builds Text Effect plugin
+kde-base/kopete:translator - Builds Translator plugin
+kde-base/kopete:webpresence - Builds Web Presence plugin
+kde-base/kopete:winpopup - Builds WinPopUp protocol handler
+kde-base/kopete:xscreensaver - Enables support for XScreenSaver extension
 kde-base/krdc:rdesktop - Support for the remote desktop protocol.
 kde-base/ksysguard:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kttsd:akode - Support for the aKode audio-decoding frame-work.
