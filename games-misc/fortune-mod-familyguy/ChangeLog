@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/fortune-mod-familyguy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.4 2006/07/19 19:46:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-familyguy/ChangeLog,v 1.5 2006/10/12 15:03:05 nyhm Exp $
+
+*fortune-mod-familyguy-0.2 (12 Oct 2006)
+
+  12 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +fortune-mod-familyguy-0.2.ebuild:
+  Version bump
 
   19 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   fortune-mod-familyguy-0.1.ebuild:
