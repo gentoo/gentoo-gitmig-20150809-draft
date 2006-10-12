@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.80 2006/10/11 14:54:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.81 2006/10/12 09:31:19 flameeyes Exp $
+
+  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.5.5.ebuild:
+  Remove alpha and ia64 keywords as they need to keyword/mask gsmlib.
 
   11 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/kopete-0.12_alpha1-xscreensaver.patch,
