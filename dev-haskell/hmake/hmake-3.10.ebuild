@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.10.ebuild,v 1.7 2006/03/16 14:13:49 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.10.ebuild,v 1.8 2006/10/12 23:01:39 dcoutts Exp $
 
 inherit base eutils fixheadtails
 
@@ -14,11 +14,11 @@ KEYWORDS="~amd64 ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/ghc
-	sys-libs/readline"
-RDEPEND="sys-libs/readline
-	virtual/libc
-	dev-libs/gmp
-	>=sys-apps/sandbox-1.2.12"
+		!>=virtual/ghc-6.6
+		sys-libs/readline"
+RDEPEND="virtual/ghc
+		sys-libs/readline
+		>=sys-apps/sandbox-1.2.12"
 
 # sandbox dependency due to bug #97441, #101433
 

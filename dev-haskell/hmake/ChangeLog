@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.29 2006/10/11 18:18:00 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.30 2006/10/12 23:01:39 dcoutts Exp $
+
+  12 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> hmake-3.10.ebuild:
+  Block version 3.10 on ghc-6.6 and tidy deps.
 
   11 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/hmake-3.11-ghc66.patch, hmake-3.11.ebuild:
