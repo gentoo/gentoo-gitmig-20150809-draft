@@ -1,0 +1,18 @@
+--- cairo-1.0.2.orig/src/cairo-path-stroke.c	2005-10-03 21:44:43.000000000 +0100
++++ cairo-1.0.2/src/cairo-path-stroke.c	2006-01-27 01:50:06.000000000 +0000
+@@ -180,6 +180,7 @@
+     cairo_gstate_t	*gstate = stroker->gstate;
+     int		clockwise = _cairo_stroker_face_clockwise (out, in);
+     cairo_point_t	*inpt, *outpt;
++    cairo_polygon_t     polygon;
+ 
+     if (in->cw.x == out->cw.x
+ 	&& in->cw.y == out->cw.y
+@@ -271,7 +272,6 @@
+ 	    double		x1, y1, x2, y2;
+ 	    double		mx, my;
+ 	    double		dx1, dx2, dy1, dy2;
+-	    cairo_polygon_t	polygon;
+ 	    cairo_point_t	outer;
+ 
+ 	    /* 
