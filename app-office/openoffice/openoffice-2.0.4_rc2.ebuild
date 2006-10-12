@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc2.ebuild,v 1.1 2006/09/22 16:39:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4_rc2.ebuild,v 1.2 2006/10/12 15:23:33 suka Exp $
 
-inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions mono multilib toolchain-funcs
+inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
-IUSE="binfilter branding cairo cups dbus eds firefox gnome gstreamer gtk kde ldap mono sound odk pam webdav"
+IUSE="binfilter branding cairo cups dbus eds firefox gnome gstreamer gtk kde ldap sound odk pam webdav"
 
 MY_PV="${PV}"
 PATCHLEVEL="OOD680"
@@ -19,8 +19,6 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${SRC}.tar.gz
-	mono? ( http://go-oo.org/packages/SRC680/cli_types.dll
-		http://go-oo.org/packages/SRC680/cli_types_bridgetest.dll )
 	http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
 	http://go-oo.org/packages/SRC680/biblio.tar.bz2
@@ -103,7 +101,6 @@ DEPEND="${RDEPEND}
 		dev-java/ant-core )
 	dev-libs/libxslt
 	ldap? ( net-nds/openldap )
-	mono? ( >=dev-lang/mono-1.1.6 )
 	>=dev-libs/libxml2-2.0"
 
 PROVIDE="virtual/ooo"
@@ -254,10 +251,10 @@ src_compile() {
 		`use_enable cairo` \
 		`use_with cairo system-cairo` \
 		`use_enable gnome quickstart` \
-		`use_enable mono` \
 		`use_enable pam` \
 		`use_enable !debug strip` \
 		--disable-access \
+		--disable-mono \
 		--disable-post-install-scripts \
 		--enable-hunspell \
 		--with-system-hunspell \

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.14 2006/09/28 16:47:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.3.ebuild,v 1.15 2006/10/12 15:23:33 suka Exp $
 
-inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions mono toolchain-funcs
+inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg kde-functions toolchain-funcs
 
-IUSE="binfilter cairo eds firefox gnome gtk java kde ldap mono odk pam xml"
+IUSE="binfilter cairo eds firefox gnome gtk java kde ldap odk pam xml"
 
 MY_PV="${PV}.0"
 PATCHLEVEL="OOC680"
@@ -19,8 +19,6 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
 	http://go-oo.org/packages/libwpd/libwpd-0.8.3.tar.gz
-	mono? ( http://go-oo.org/packages/SRC680/cli_types.dll
-		http://go-oo.org/packages/SRC680/cli_types_bridgetest.dll )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
 	http://go-oo.org/packages/SRC680/hunspell_UNO_1.1.tar.gz
 	http://go-oo.org/packages/xt/xt-20051206-src-only.zip
@@ -102,7 +100,6 @@ DEPEND="${RDEPEND}
 	!java? ( dev-libs/libxslt
 		>=dev-libs/libxml2-2.0 )
 	ldap? ( net-nds/openldap )
-	mono? ( >=dev-lang/mono-1.1.6 )
 	xml? ( >=dev-libs/libxml2-2.0 )"
 
 PROVIDE="virtual/ooo"
@@ -252,10 +249,10 @@ src_compile() {
 		`use_enable cairo` \
 		`use_with cairo system-cairo` \
 		`use_enable gnome quickstart` \
-		`use_enable mono` \
 		`use_enable pam` \
 		`use_enable !debug strip` \
 		--disable-access \
+		--disable-mono \
 		--disable-post-install-scripts \
 		--enable-hunspell \
 		--with-system-hunspell \
