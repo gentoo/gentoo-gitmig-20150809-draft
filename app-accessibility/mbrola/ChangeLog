@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.32 2006/09/24 20:44:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.33 2006/10/12 16:38:28 gmsoft Exp $
+
+  12 Oct 2006; Guy Martin <gmsoft@gentoo.org> mbrola-3.0.1h-r4.ebuild:
+  Stable on hppa.
 
   24 Sep 2006; Markus Rothe <corsair@gentoo.org> mbrola-3.0.1h-r4.ebuild:
   Stable on ppc64; bug #148986

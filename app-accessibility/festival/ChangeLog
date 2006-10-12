@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.52 2006/09/26 23:43:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.53 2006/10/12 16:40:15 gmsoft Exp $
+
+  12 Oct 2006; Guy Martin <gmsoft@gentoo.org> festival-1.95_beta-r1.ebuild:
+  Stable on hppa.
 
   26 Sep 2006; Jason Wever <weeve@gentoo.org> festival-1.95_beta-r1.ebuild:
   Stable the right one for SPARC wrt bug #146897.
