@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.52 2006/10/12 08:52:52 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.53 2006/10/12 09:03:28 keri Exp $
+
+  12 Oct 2006; keri <keri@gentoo.org> mercury-0.13.0.ebuild:
+  Do not pre-strip binaries.
 
   12 Oct 2006; keri <keri@gentoo.org> files/mercury-0.13.0-libgrades.patch:
   Update libgrades compilation.
