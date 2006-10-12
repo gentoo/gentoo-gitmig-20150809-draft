@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mikachan-font-otf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.6 2006/10/12 23:18:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.7 2006/10/12 23:24:58 flameeyes Exp $
+
+  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mikachan-font-otf-9.1.ebuild:
+  Add ~arm ~s390 ~hppa ~sh with vapier's ack.
 
   12 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mikachan-font-otf-9.1.ebuild:
