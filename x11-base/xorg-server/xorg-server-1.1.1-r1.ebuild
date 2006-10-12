@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.8 2006/10/06 21:57:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.9 2006/10/12 02:53:25 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -23,7 +23,8 @@ PATCHES="${FILESDIR}/01-no-move-damage.patch
 	${FILESDIR}/xorg-x11-server-1.1.1-mesa-6.5.1.patch
 	${FILESDIR}/${P}-install-libxf86config-headers.patch
 	${FILESDIR}/${PV}-fix-xrandr-zoom-keys.patch
-	${FILESDIR}/${PV}-sparc64-ati-lockups.patch"
+	${FILESDIR}/${PV}-sparc64-ati-lockups.patch
+	${FILESDIR}/xorg-conf-example.patch"
 
 
 SRC_URI="${SRC_URI}
@@ -284,13 +285,6 @@ LICENSE="${LICENSE} MIT"
 pkg_setup() {
 	use minimal || ensure_a_server_is_building
 
-	# Bug #145274 - anything that uses vm86.h is broken on AMD64
-	if use kdrive && use amd64 && use video_cards_vesa; then
-		eerror "kdrive's VESA driver does not build on AMD64 because it uses"
-		eerror "vm86.h.  Please build kdrive without VIDEO_CARDS=\"vesa\"."
-		die "kdrive's VESA driver does not build on AMD64."
-	fi
-
 	# SDL only available in kdrive build
 	if use kdrive && use sdl; then
 		conf_opts="${conf_opts} --enable-xsdl"
@@ -323,7 +317,7 @@ pkg_setup() {
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
 		--enable-install-setuid
-		--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1
+		--with-fontdir=/usr/share/fonts
 		${conf_opts}"
 
 	local diemsg="You must build xorg-server and mesa with the same nptl USE setting."
@@ -349,6 +343,11 @@ src_unpack() {
 	x-modular_patch_source
 
 	# Set up kdrive servers to build
+	# Bug #150052 - anything that uses vm86.h is broken on non-x86 arches.
+	# That translates into the following set:
+	vm86_devices="chips epson glint i810 mach64 mga neomagic
+		nv r128 radeon siliconmotion vesa via"
+
 	if use kdrive; then
 		einfo "Removing unused kdrive drivers ..."
 		for card in ${IUSE_VIDEO_CARDS}; do
@@ -368,7 +367,19 @@ src_unpack() {
 			real_card=${real_card/%nv/nvidia}
 			real_card=${real_card/siliconmotion/smi}
 			real_card=${real_card/%sis/sis300}
+
+			disable_card=0
 			if ! use ${card}; then
+				disable_card=1
+			elif ! use x86; then
+				# Bug #150052
+				if [[ ${vm86_devices/${card#video_cards_}/} != ${vm86_devices} ]]; then
+					ewarn "  $real_card does not work on your architecture; disabling."
+					disable_card=1
+				fi
+			fi
+
+			if [[ $disable_card = 1 ]]; then
 				ebegin "  ${real_card}"
 				sed -i \
 					-e "s:\b${real_card}\b::g" \
@@ -409,6 +420,11 @@ src_install() {
 	insinto /usr/share/xorg
 	doins hw/xfree86/common/{extra,vesa}modes \
 		|| die "couldn't install extra modes"
+
+	# Install xorg.conf.example
+	insinto /etc/X11
+	doins hw/xfree86/xorg.conf.example \
+		|| die "couldn't install xorg.conf.example"
 }
 
 pkg_postinst() {

@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.173 2006/10/06 21:57:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.174 2006/10/12 02:53:25 joshuabaergen Exp $
+
+  12 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/xorg-conf-example.patch, xorg-server-1.1.1-r1.ebuild:
+  Install xorg.conf.example like 6.x did. (Bug #138623, requested by
+  Christopher Covington; patch written by Donnie and I) Don't build kdrive
+  servers that use vm86.h on non-x86 systems. (Bug #150052, Shvetsov Alex)
 
   06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-server-1.1.0-r1.ebuild, xorg-server-1.1.1.ebuild,
