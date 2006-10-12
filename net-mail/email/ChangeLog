@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/email
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.17 2006/10/04 12:16:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.18 2006/10/12 01:28:45 ferdy Exp $
+
+  12 Oct 2006; Fernando J. Pereda <ferdy@gentoo.org> email-2.5.0.ebuild:
+  Stable on alpha as per bug #149932
 
   04 Oct 2006; Simon Stelling <blubb@gentoo.org> email-2.5.0.ebuild:
   stable on amd64
