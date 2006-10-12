@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8178.ebuild,v 1.5 2006/10/09 13:37:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8178.ebuild,v 1.6 2006/10/12 17:02:44 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -159,6 +159,10 @@ src_unpack() {
 
 		# Patch the Makefile to not warn about nvidia-installer
 #		epatch ${FILESDIR}/NVIDIA_glx-makefile.patch
+
+		# Here, we apply patches from zander
+		EPATCH_SUFFIX="diff"
+		epatch "${FILESDIR}"/${PV} || die "patching"
 	fi
 }
 
