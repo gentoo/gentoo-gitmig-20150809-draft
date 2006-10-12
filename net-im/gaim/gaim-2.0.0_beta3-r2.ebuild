@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r2.ebuild,v 1.2 2006/09/08 02:58:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r2.ebuild,v 1.3 2006/10/12 23:37:28 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app
 
@@ -126,7 +126,7 @@ pkg_setup() {
 
 	if use avahi && ! built_with_use net-dns/avahi howl-compat ; then
 	eerror
-	eerror You need to rebuild net-dns/avavhi with USE=howl-compat in order
+	eerror You need to rebuild net-dns/avahi with USE=howl-compat in order
 	eerror to enable howl support for the bonjour protocol in gaim.
 	eerror
 	die "Configure failed"
