@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.26 2006/05/24 20:56:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.27 2006/10/12 18:32:41 gustavoz Exp $
+
+  12 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> lib-compat-1.4.ebuild,
+  lib-compat-1.4.1.ebuild:
+  Unkeyworded sparc - we don't really need these
 
   24 May 2006; Michael Hanselmann <hansmi@gentoo.org>
   lib-compat-1.4.1.ebuild:
