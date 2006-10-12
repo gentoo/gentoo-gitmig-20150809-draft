@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gBhed/gBhed-0.16.ebuild,v 1.4 2006/01/08 01:11:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gBhed/gBhed-0.16.ebuild,v 1.5 2006/10/12 00:03:14 nyhm Exp $
 
 inherit games
 
