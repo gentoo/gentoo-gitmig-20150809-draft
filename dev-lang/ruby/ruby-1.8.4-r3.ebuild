@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.9 2006/09/03 21:46:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.4-r3.ebuild,v 1.10 2006/10/12 11:10:12 flameeyes Exp $
 
 ONIGURUMA="onigd2_5_4"
 
-inherit flag-o-matic alternatives eutils gnuconfig multilib autotools debug
+inherit flag-o-matic alternatives eutils multilib autotools debug
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
@@ -46,9 +46,6 @@ src_unpack() {
 		make ${PV/./}
 		popd
 	fi
-
-	# Enable build on alpha EV67 (but run gnuconfig_update everywhere)
-	gnuconfig_update || die "gnuconfig_update failed"
 
 	cd ${S}
 
