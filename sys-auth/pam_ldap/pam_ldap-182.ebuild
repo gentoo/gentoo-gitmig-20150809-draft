@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-182.ebuild,v 1.2 2006/06/07 20:46:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/pam_ldap-182.ebuild,v 1.3 2006/10/12 16:30:36 flameeyes Exp $
 
-inherit eutils pam
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+
+inherit eutils pam autotools
 
 DESCRIPTION="PAM LDAP Module"
 HOMEPAGE="http://www.padl.com/OSS/pam_ldap.html"
@@ -21,11 +24,8 @@ src_unpack() {
 	unpack ${A}
 	#EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-176-fix-referral-tls.patch
 
-	cd ${S}
-	export WANT_AUTOCONF=2.5
-	aclocal || die "aclocal failed"
-	autoconf || die "autoconf failed"
-	automake --add-missing || die "automake failed"
+	cd "${S}"
+	eautoreconf
 }
 
 src_compile() {

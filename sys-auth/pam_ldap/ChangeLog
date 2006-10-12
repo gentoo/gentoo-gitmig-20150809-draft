@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_ldap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.28 2006/10/12 16:26:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.29 2006/10/12 16:30:36 flameeyes Exp $
+
+  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> pam_ldap-180.ebuild,
+  pam_ldap-182.ebuild:
+  Fix autotools regeneration and dependencies. Thanks to Patric Lauer for
+  reporting in bug #151034.
 
   12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/pam_ldap-176-fix-referral-tls.patch, -pam_ldap-156.ebuild,
