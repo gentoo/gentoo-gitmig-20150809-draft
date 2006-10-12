@@ -1,0 +1,33 @@
+--- Makefile	2006-10-03 23:01:36.000000000 +0200
++++ Makefile.new	2006-10-03 23:17:51.000000000 +0200
+@@ -3,10 +3,10 @@
+ PO = fr fr_BR en_GB it es hu pl de pt_BR pt nl
+ PREFIX ?= /usr
+ 
+-GTKMOZEMBED_PATH = `(pkg-config --libs-only-L mozilla-gtkmozembed 2>/dev/null || pkg-config --libs-only-L firefox-gtkmozembed 2>/dev/null) | sed -e "s/-L//"`
++GTKMOZEMBED_PATH = `(pkg-config --libs-only-L mozilla-gtkmozembed 2>/dev/null || pkg-config --libs-only-L firefox-gtkmozembed 2>/dev/null) | sed -e "s/-L//g"`
+ 
+ all: check mmkeys.so po-data
+-	docbook2x-man listen.1.docbook
++	#docbook2x-man listen.1.docbook
+ 	@echo "Done"
+ 	@echo "Type: make install now"
+ 
+@@ -15,7 +15,7 @@
+ 	@which python || ( echo "Not found." && /bin/false )
+ 	@./check.py
+ 	@echo "Checking for gtkmozembed path..."
+-	@if test -d $(GTKMOZEMBED_PATH) ; then echo "Found: $(GTKMOZEMBED_PATH)"; else echo "Not found, install mozilla-devel or firefox-devel"; exit 1;  fi
++	#@if test -d $(GTKMOZEMBED_PATH) ; then echo "Found: $(GTKMOZEMBED_PATH)"; else echo "Not found, install mozilla-devel or firefox-devel"; exit 1;  fi
+ 
+ daap.py:
+ 	cd daap && python ./setup.py build  && cd ..
+@@ -70,7 +70,7 @@
+ 	install -m 644 listen.desktop $(DESTDIR)$(PREFIX)/share/applications/
+ 	
+ 	GTKMOZEMBED_PATH=$(GTKMOZEMBED_PATH) && \
+-	/bin/echo -e '#!/bin/sh\n\nLD_LIBRARY_PATH='$$GTKMOZEMBED_PATH' $(PREFIX)/lib/listen/listen.py "$$@"'>listen ;
++	/bin/echo -e '#!/bin/sh\n\nLD_LIBRARY_PATH="'$$GTKMOZEMBED_PATH'" $(PREFIX)/lib/listen/listen.py "'$$@'"'>listen ;
+ 	install -m 755 listen $(DESTDIR)$(PREFIX)/bin/
+ 
+ install-po:
