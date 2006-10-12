@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.11 2006/10/11 15:01:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.12 2006/10/12 12:22:04 caster Exp $
+
+  12 Oct 2006; Vlastimil Babka <caster@gentoo.org> jgraph-5.9.2.0.ebuild:
+  Fixed typo for source USE flag, thanks to Matthias Langer <mlangc@gmx.at> in
+  bug #129638 for pointing out.
 
 *jgraph-5.9.2.0 (11 Oct 2006)
 
