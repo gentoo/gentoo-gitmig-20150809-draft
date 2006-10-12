@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2231 2006/10/12 10:54:51 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2232 2006/10/12 13:48:34 nyhm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -495,7 +495,7 @@ games-arcade/bomns:editor - enables building the level editor
 games-arcade/stepmania:force-oss - force using OSS
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
-games-board/freedoko:altenbugcards - Use the Altenburg card set
+games-board/freedoko:altenburgcards - Use the Altenburg card set
 games-board/freedoko:kdecards - Use the KDE card set
 games-board/freedoko:pysolcards - Use the PySol card set
 games-board/freedoko:xskatcards - Use the XSkat card set
