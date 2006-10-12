@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.3 2006/10/11 14:03:45 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.4 2006/10/12 01:08:08 weeve Exp $
+
+  12 Oct 2006; Jason Wever <weeve@gentoo.org> vidalia-0.0.8.ebuild:
+  Added ~sparc keyword.
 
 *vidalia-0.0.8 (11 Oct 2006)
 
