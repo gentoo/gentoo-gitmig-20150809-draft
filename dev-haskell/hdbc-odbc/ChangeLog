@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hdbc-odbc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.8 2006/07/02 19:09:02 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-odbc/ChangeLog,v 1.9 2006/10/12 18:34:43 dcoutts Exp $
+
+  12 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
+  -hdbc-odbc-0.99.0.0.ebuild, -hdbc-odbc-0.99.2.1.ebuild:
+  Remove old pre-1.0 versions.
 
 *hdbc-odbc-1.0.0.0 (02 Jul 2006)
 
