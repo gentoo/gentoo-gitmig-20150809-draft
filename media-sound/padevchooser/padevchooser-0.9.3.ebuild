@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/padevchooser-0.9.3.ebuild,v 1.3 2006/10/10 04:36:01 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/padevchooser-0.9.3.ebuild,v 1.4 2006/10/13 23:17:38 flameeyes Exp $
 
 inherit eutils
 
@@ -14,11 +14,13 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.0
+DEPEND=">=x11-libs/gtk+-2.0
 	>=gnome-base/libglade-2.0
 	>=gnome-base/gconf-2.0
 	x11-libs/libnotify
 	>=media-sound/pulseaudio-0.9.2"
+RDEPEND="${DEPEND}
+	x11-themes/gnome-icon-theme"
 
 pkg_setup() {
 	# See bug #145648
