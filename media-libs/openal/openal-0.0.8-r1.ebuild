@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r1.ebuild,v 1.2 2006/10/04 12:19:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-0.0.8-r1.ebuild,v 1.3 2006/10/13 16:32:28 wolf31o2 Exp $
 
 inherit eutils
 
@@ -30,6 +30,10 @@ src_unpack() {
 	cd "${S}"
 	EPATCH_SUFFIX="patch"
 	epatch ${FILESDIR}/${PV} || die
+
+	sed -i \
+		-e "/^Requires:/d" \
+		admin/pkgconfig/openal.pc.in || die "sed openal.pc.in failed"
 }
 
 src_compile() {
