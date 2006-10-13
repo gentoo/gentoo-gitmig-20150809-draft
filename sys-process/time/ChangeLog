@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/time
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.2 2005/03/03 19:49:34 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.3 2006/10/13 03:51:28 vapier Exp $
+
+  13 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/time-1.7-build.patch, time-1.7-r1.ebuild:
+  Cleanup autotools #151000.
 
 *time-1.7-r1 (03 Mar 2005)
 

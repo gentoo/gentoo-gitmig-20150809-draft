@@ -1,29 +1,31 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/time/time-1.7-r1.ebuild,v 1.2 2005/12/16 03:31:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/time/time-1.7-r1.ebuild,v 1.3 2006/10/13 03:51:28 vapier Exp $
 
-inherit eutils
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+inherit eutils autotools
 
 DESCRIPTION="displays info about resources used by a program"
 HOMEPAGE="http://www.gnu.org/directory/time.html"
-SRC_URI="ftp://ftp.gnu.org/pub/gnu/time/${P}.tar.gz"
+SRC_URI="mirror//gnu/time/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	WANT_AUTOMAKE=1.4 automake -a || die "automake"
-	autoconf || die "autoconf"
-	epatch ${FILESDIR}/${PV}-info-dir-entry.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${PV}-info-dir-entry.patch
+	eautoreconf
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die
 	dodoc ChangeLog README AUTHORS NEWS
 }
