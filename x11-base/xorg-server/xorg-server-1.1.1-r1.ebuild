@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.10 2006/10/12 15:31:34 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.11 2006/10/13 22:54:58 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -13,19 +13,6 @@ MESA_PN="Mesa"
 MESA_PV="6.5.1"
 MESA_P="${MESA_PN}-${MESA_PV}"
 MESA_SRC_P="${MESA_PN}Lib-${MESA_PV}"
-
-PATCHES="${FILESDIR}/01-no-move-damage.patch
-	${FILESDIR}/02-dont-backfill-bg-none.patch
-	${FILESDIR}/03-tfp-damage.patch
-	${FILESDIR}/04-mesa-copy-sub-buffer.patch
-	${FILESDIR}/05-offscreen-pixmaps.patch
-	${FILESDIR}/06-aiglx-happy-vt-switch.patch
-	${FILESDIR}/xorg-x11-server-1.1.1-mesa-6.5.1.patch
-	${FILESDIR}/${P}-install-libxf86config-headers.patch
-	${FILESDIR}/${PV}-fix-xrandr-zoom-keys.patch
-	${FILESDIR}/${PV}-sparc64-ati-lockups.patch
-	${FILESDIR}/xorg-conf-example.patch"
-
 
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2
@@ -120,6 +107,7 @@ IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
 	${IUSE_SERVERS}
 	3dfx
+	aiglx
 	dri ipv6 minimal nptl sdl xprint"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
@@ -284,6 +272,26 @@ LICENSE="${LICENSE} MIT"
 
 pkg_setup() {
 	use minimal || ensure_a_server_is_building
+
+	PATCHES="${FILESDIR}/xorg-x11-server-1.1.1-mesa-6.5.1.patch
+		${FILESDIR}/${P}-install-libxf86config-headers.patch
+		${FILESDIR}/${PV}-fix-xrandr-zoom-keys.patch
+		${FILESDIR}/${PV}-sparc64-ati-lockups.patch
+		${FILESDIR}/xorg-conf-example.patch"
+
+	# Patches required for compiz to work with AIGLX,
+	# but they slow EXA down (bug #147841).
+	if use aiglx; then
+		einfo "AIGLX patches will be applied."
+		ewarn "These patches are known to cause problems with EXA enabled."
+		PATCHES="${FILESDIR}/01-no-move-damage.patch
+			${FILESDIR}/02-dont-backfill-bg-none.patch
+			${FILESDIR}/03-tfp-damage.patch
+			${FILESDIR}/04-mesa-copy-sub-buffer.patch
+			${FILESDIR}/05-offscreen-pixmaps.patch
+			${FILESDIR}/06-aiglx-happy-vt-switch.patch
+			${PATCHES}"
+	fi
 
 	# SDL only available in kdrive build
 	if use kdrive && use sdl; then

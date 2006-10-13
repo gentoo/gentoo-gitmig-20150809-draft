@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.175 2006/10/12 15:31:34 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.176 2006/10/13 22:54:58 joshuabaergen Exp $
+
+  13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.1.1-r1.ebuild:
+  Hide AIGLX patches behind the "aiglx" USE flag, since the patches seem to
+  cause some EXA slowdowns (bug #147841, reported by Giacomo Perale).
 
   12 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.1-r1.ebuild:
