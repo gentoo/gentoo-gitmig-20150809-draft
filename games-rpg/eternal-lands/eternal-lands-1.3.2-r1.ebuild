@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.2-r1.ebuild,v 1.1 2006/09/05 08:02:15 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.3.2-r1.ebuild,v 1.2 2006/10/13 21:16:49 uberlord Exp $
 
 inherit eutils flag-o-matic games
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://gentoo/elc_${MY_PV}.tar.bz2
 LICENSE="eternal_lands"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc"
+IUSE="debug doc kernel_linux"
 
 RDEPEND="
 	|| ( (
@@ -42,7 +42,6 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	sys-apps/findutils
 	doc? ( >=app-doc/doxygen-1.3.8
 		>=media-gfx/graphviz-1.10 )"
 
@@ -96,10 +95,20 @@ src_unpack() {
 
 	# Framebuffer support is way buggy - remove it
 	sed -i -e '/OPTIONS=/ s/-DUSE_FRAMEBUFFER//' Makefile || die "sed failed"
+
+	# Support BSD in the Linux makefile - it's easier
+	use kernel_linux || sed -i -e 's/^CFLAGS=.*/& -DBSD/' Makefile || die "sed failed"
+
+	# Gah
+	sed -i -e 's/CXX=g++/CXX=gcc/' Makefile || die "sed failed"
+
+	# Finally, update the server
+	sed -i -e '/#server_address =/ s/.*/#server_address = game.eternal-lands.com/' \
+		el.ini || die "sed failed"
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake || die "make failed"
 	if use doc; then
 		emake docs || die "Failed to create documentation, try with USE=-doc"
 		mv ./docs/html/ ../client || die "Failed to move documentation directory"
