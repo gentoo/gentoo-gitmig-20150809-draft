@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r1.ebuild,v 1.2 2006/10/12 17:10:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.5-r1.ebuild,v 1.3 2006/10/13 02:16:51 weeve Exp $
 
 KMNAME=kdenetwork
 MAXKDEVER=$PV
@@ -13,7 +13,7 @@ SRC_URI="${SRC_URI}
 DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="jingle sametime ssl xmms xscreensaver slp kernel_linux latex crypt
 	  winpopup sms irc yahoo gadu groupwise netmeeting statistics autoreplace
 	  connectionstatus contactnotes translator webpresence texteffect highlight

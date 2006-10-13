@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.83 2006/10/12 17:10:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.84 2006/10/13 02:16:51 weeve Exp $
+
+  13 Oct 2006; Jason Wever <weeve@gentoo.org> kopete-3.5.5-r1.ebuild:
+  Added ~sparc keyword wrt bug #150982.
 
   12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kopete-3.5.5-r1.ebuild:
   Remove the correct files.
