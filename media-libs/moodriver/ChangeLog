@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/moodriver
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/moodriver/ChangeLog,v 1.1 2006/10/13 15:47:22 chutzpah Exp $
+
+*moodriver-0.09 (13 Oct 2006)
+
+  13 Oct 2006; Patrick McLean <chutzpah@gentoo.org> +metadata.xml,
+  +moodriver-0.09.ebuild:
+  Initial commit.
+
