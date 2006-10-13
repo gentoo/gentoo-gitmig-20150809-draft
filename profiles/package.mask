@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6042 2006/10/13 07:56:32 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6043 2006/10/13 12:36:00 bass Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# J. Alberto Suárez López <bass@gentoo.org> (13 Oct 2006)
+# Masked pending removal for 13 Nov 2006.
+# netraverse don't support gentoo more, and users can 
+# use the w4l installer.
+app-emulation/win4lin
 
 # Sebastian Bergmann <sebastian@gentoo.org> (13 Oct 2006)
 # See bug #151108.
@@ -1350,36 +1356,6 @@ media-gfx/zphoto
 # Michael Sterrett <mr_bones_@gentoo.org> (03 Dec 2005)
 # Doesn't work with newer allegro, buggy, no release since '02
 games-emulation/game-launcher
-
-# J. Alberto Suarez <bass@gentoo.org> (27 Nov 2005)
-# Pending removal, will be substituted by ebookmerge
-app-doc/ebook-autoconf
-app-doc/ebook-automake
-app-doc/ebook-binutils
-app-doc/ebook-bonobo
-app-doc/ebook-cpp
-app-doc/ebook-cvs
-app-doc/ebook-diff
-app-doc/ebook-find
-app-doc/ebook-flex
-app-doc/ebook-g77
-app-doc/ebook-gawk
-app-doc/ebook-gcc
-app-doc/ebook-gconf
-app-doc/ebook-gdk
-app-doc/ebook-gdk-pixbuf
-app-doc/ebook-ggad
-app-doc/ebook-glibc
-app-doc/ebook-gtk
-app-doc/ebook-libglade
-app-doc/ebook-libgnome
-app-doc/ebook-libgnomeui
-app-doc/ebook-make
-app-doc/ebook-pango
-app-doc/ebook-pygtk
-app-doc/ebook-python
-app-doc/ebook-sed
-app-doc/ebook-zvt
 
 # Wolfram Schlich <wschlich@gentoo.org> (26 Nov 2005)
 # has security issues and will be removed from portage
