@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.55 2006/08/19 18:54:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.56 2006/10/13 16:49:39 blubb Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -270,16 +270,9 @@ get_all_libdirs() {
 	local abi
 	local dir
 
-	# Remove when amd64's 2004.3 is purged.
-	if [[ -n "${CONF_LIBDIR}" ]]; then
-		for dir in ${CONF_LIBDIR} ${CONF_MULTILIBDIR:-lib32}; do
-			[ "${dir}" != "lib" ] && libdirs="${libdirs} ${dir}"
-		done
-	else
-		for abi in ${MULTILIB_ABIS}; do
-			[ "$(get_abi_LIBDIR ${abi})" != "lib" ] && libdirs="${libdirs} $(get_abi_LIBDIR ${abi})"
-		done
-	fi
+	for abi in ${MULTILIB_ABIS}; do
+		[ "$(get_abi_LIBDIR ${abi})" != "lib" ] && libdirs="${libdirs} $(get_abi_LIBDIR ${abi})"
+	done
 
 	echo "${libdirs}"
 }
