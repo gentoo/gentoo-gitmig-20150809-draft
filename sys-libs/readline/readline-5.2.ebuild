@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2.ebuild,v 1.2 2006/10/13 10:59:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.2.ebuild,v 1.3 2006/10/13 20:55:17 vapier Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -43,7 +43,7 @@ src_unpack() {
 		epatch "${DISTDIR}"/${PN}${MY_PV/\.}-$(printf '%03d' ${i})
 	done
 	epatch "${FILESDIR}"/${PN}-5.0-no_rpath.patch
-	#epatch "${FILESDIR}"/${PN}-5.1-rlfe-build.patch #116483
+	epatch "${FILESDIR}"/${PN}-5.2-rlfe-build.patch #151174
 	epatch "${FILESDIR}"/${PN}-5.1-rlfe-uclibc.patch
 	epatch "${FILESDIR}"/${PN}-5.1-fbsd-pic.patch
 
