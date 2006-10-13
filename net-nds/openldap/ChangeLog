@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.212 2006/10/13 20:48:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.213 2006/10/13 21:00:27 jer Exp $
+
+  13 Oct 2006; Jeroen Roovers <jer@gentoo.org>
+  files/digest-openldap-2.3.24-r1, files/digest-openldap-2.3.24-r2,
+  Manifest:
+  Fixed the openldap-2.3.24.tgz digest for real this time.
 
   13 Oct 2006; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Fixed digest
