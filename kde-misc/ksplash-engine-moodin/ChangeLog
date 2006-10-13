@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/ksplash-engine-moodin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ChangeLog,v 1.1 2006/05/30 20:11:52 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplash-engine-moodin/ChangeLog,v 1.2 2006/10/13 20:45:20 ticho Exp $
+
+  13 Oct 2006; <ticho@gentoo.org> ksplash-engine-moodin-0.4.2.ebuild:
+  Stable on x86, bug #151151.
 
   30 May 2006; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Initial import, closes bug #100189
