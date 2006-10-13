@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.56 2006/10/13 16:49:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.57 2006/10/13 16:50:53 blubb Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -566,7 +566,7 @@ multilib_env() {
 
 			export CFLAGS_amd64=${CFLAGS_amd64--m64}
 			export CHOST_amd64=${CTARGET}
-			export CTARGET_amd64=${CTARGET_amd64}
+			export CTARGET_amd64=${CHOST_amd64}
 			export CDEFINE_amd64="__x86_64__"
 			export LIBDIR_amd64="lib64"
 
