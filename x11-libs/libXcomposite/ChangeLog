@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.28 2006/10/01 16:59:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.29 2006/10/13 04:08:51 joshuabaergen Exp $
+
+*libXcomposite-0.3-r1 (13 Oct 2006)
+
+  13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/drop-extra-unlockdisplay.patch, +libXcomposite-0.3-r1.ebuild:
+  Add a fix from upstream that removes an unnecessary call to UnlockDisplay.
+  This fixes behaviour with xcb enabled in libX11.
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   libXcomposite-0.3.ebuild:
