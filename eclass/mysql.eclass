@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.33 2006/08/31 21:37:03 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.34 2006/10/13 12:36:08 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -410,10 +410,11 @@ mysql_src_compile() {
 	append-flags "-DHAVE_ERRNO_AS_DEFINE=1"
 
 	# The compiler flags are as their "official" spec says ;)
-	# CFLAGS="${CFLAGS/-O?/} -O3"
-	export CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-exceptions -fno-rtti"
+	append-flags "-fno-exceptions -fno-strict-aliasing"
+	CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-rtti"
 	mysql_version_is_at_least "5.00.00.00" \
-	&& export CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
+	&& CXXFLAGS="${CXXFLAGS} -fno-implicit-templates"
+	export CXXFLAGS="${CXXFLAGS}"
 
 	econf \
 		--libexecdir="/usr/sbin" \
