@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9625.ebuild,v 1.6 2006/10/12 17:02:44 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9625.ebuild,v 1.7 2006/10/13 16:26:22 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -163,6 +163,9 @@ src_unpack() {
 
 		# Patch the Makefile to not warn about nvidia-installer
 #		epatch ${FILESDIR}/NVIDIA_glx-makefile.patch
+
+		# Patch for kernel 2.6.19 from Daniel Drake <dsd@gentoo.org>
+		epatch ${FILESDIR}/NVIDIA_kernel-2.6.19.patch
 	fi
 }
 
@@ -395,6 +398,8 @@ pkg_postinst() {
 	elog "output of /usr/bin/nvidia-bug-report.sh included."
 	echo
 	elog "To work with compiz, you must enable the AddARGBGLXVisuals option."
+	echo
+	elog "If you are having resolution problems, try disabling DynamicTwinView."
 	echo
 }
 
