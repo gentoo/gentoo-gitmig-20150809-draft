@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.5 2006/10/13 15:21:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352-r1.ebuild,v 1.1 2006/10/13 15:21:18 chutzpah Exp $
 
 inherit eutils multilib flag-o-matic
 
@@ -56,6 +56,7 @@ src_compile() {
 	LDFLAGS="${LDFLAGS//-Wl/}"
 	LDFLAGS="${LDFLAGS//,/ }"
 
+	# -O3 seems to cause some miscompiles, this should fix #141925 and #133888
 	replace-flags -O? -O2
 
 	econf --enable-mred \
