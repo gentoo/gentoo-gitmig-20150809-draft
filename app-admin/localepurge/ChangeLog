@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.25 2006/07/18 20:55:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.26 2006/10/13 10:30:40 bass Exp $
+
+*localepurge-0.5.3 (13 Oct 2006)
+
+  13 Oct 2006; J. Alberto Suárez López <bass@gentoo.org>
+  -localepurge-0.5.1.ebuild, localepurge-0.5.2.ebuild,
+  +localepurge-0.5.3.ebuild:
+  New version. Added patch by Charlie Shepherd #150097
 
   18 Jul 2006; Jeroen Roovers <jer@gentoo.org> localepurge-0.5.2.ebuild:
   No bumping straight to stable please!
