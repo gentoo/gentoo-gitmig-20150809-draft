@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3.ebuild,v 1.20 2006/10/05 14:29:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3.ebuild,v 1.21 2006/10/13 14:40:53 caster Exp $
 
 inherit java-pkg
 
@@ -13,13 +13,14 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="doc"
 
+COMMON_DEPEND=">=dev-java/jython-2.1-r5"
 RDEPEND=">=virtual/jre-1.3
-	${RDEPEND}
-	>=dev-java/jython-2.1-r5"
+	${COMMON_DEPEND}"
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core"
+	dev-java/ant-core
+	${COMMON_DEPEND}"
 
-S=${WORKDIR}/${PN}-sources-${MY_PV}
+S="${WORKDIR}/${PN}-sources-${MY_PV}"
 
 src_compile() {
 	cd ${S}/src
