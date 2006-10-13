@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.2 2006/10/13 14:30:02 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.3 2006/10/13 21:06:17 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -38,7 +38,8 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-RDEPEND="!app-office/openoffice-bin
+RDEPEND="${RDEPEND}
+	!app-office/openoffice-bin
 	x11-libs/libXaw
 	x11-libs/libXinerama
 	virtual/libc
@@ -71,14 +72,15 @@ RDEPEND="!app-office/openoffice-bin
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
-	java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* )  )
+	java? ( || ( =virtual/jre-1.5* =virtual/jre-1.4* )  )
 	>=dev-libs/boost-1.33.1
 	>=dev-libs/icu-3.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
-DEPEND="${RDEPEND}
+DEPEND="${DEPEND}
+	${RDEPEND}
 	x11-libs/libXrender
 	x11-proto/printproto
 	x11-proto/xextproto
@@ -97,7 +99,7 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
 	>=app-admin/eselect-oodict-20060706
-	java? ( || ( =virtual/jre-1.4* =virtual/jre-1.5* )
+	java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
 		dev-java/ant-core )
 	dev-libs/libxslt
 	ldap? ( net-nds/openldap )
@@ -176,7 +178,6 @@ src_unpack() {
 	#Use flag checks
 	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
 	use branding && echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
-	use amd64 && echo "--with-system-boost" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
 
@@ -201,8 +202,6 @@ src_unpack() {
 
 	echo "`use_enable odk`" >> ${CONFFILE}
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
-
-	echo "--with-system-icu" >> ${CONFFILE}
 
 }
 
