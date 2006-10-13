@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.3 2006/10/09 18:17:38 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.4 2006/10/13 15:51:42 exg Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -34,8 +34,16 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 	!cjk? ( virtual/tetex )"
 DEPEND="${RDEPEND}"
 
-src_unpack () {
+pkg_setup () {
+	if has_version app-text/tetex && built_with_use app-text/tetex X ; then
+		eerror "tetex provides xdvik when built with the X flag."
+		eerror "To install this version of xdvik re-install tetex"
+		eerror "without the X flag."
+		die "xdvik collides with tetex built with the X flag"
+	fi
+}
 
+src_unpack () {
 	unpack ${P}.tar.gz
 	cd "${S}"
 	if use cjk ; then
@@ -67,11 +75,6 @@ src_compile () {
 
 	local TEXMF_PATH=$(kpsewhich --expand-var='$TEXMFMAIN')
 	local myconf toolkit
-
-	if use cjk ; then
-		 export CPPFLAGS="${CPPFLAGS} -I/usr/include/freetype2"
-		 myconf="${myconf} --with-vflib=vf2ft"
-	fi
 
 	if use motif ; then
 		if use lesstif ; then

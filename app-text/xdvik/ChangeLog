@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.26 2006/10/09 18:17:38 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.27 2006/10/13 15:51:42 exg Exp $
+
+  13 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> xdvik-22.84.10.ebuild:
+  Add a blocker on tetex built with X.
 
   09 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> xdvik-22.84.10.ebuild:
   Correct X11 deps.
