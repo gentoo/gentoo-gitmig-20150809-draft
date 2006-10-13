@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_keyring/pam_keyring-0.0.8.ebuild,v 1.1 2006/10/02 05:03:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_keyring/pam_keyring-0.0.8.ebuild,v 1.2 2006/10/13 23:48:09 tester Exp $
 
 inherit multilib eutils
 
@@ -38,6 +38,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "There is a example of a /etc/pam.d/gdm with pam_keyring"
-	einfo "at /usr/share/doc/${PF}/gdm.example.gz"
+	elog "There is a example of a /etc/pam.d/gdm with pam_keyring"
+	elog "at /usr/share/doc/${PF}/gdm.example.gz"
 }
