@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-6.4.ebuild,v 1.2 2005/12/31 16:46:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-6.4.ebuild,v 1.3 2006/10/13 19:39:26 wormo Exp $
 
 inherit libtool flag-o-matic eutils
 
