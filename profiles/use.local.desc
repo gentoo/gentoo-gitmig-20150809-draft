@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2236 2006/10/13 15:52:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2237 2006/10/13 15:54:22 chutzpah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -838,6 +838,7 @@ media-sound/bmpx:gaim - Enable support for sending songs over gaim
 media-sound/bmpx:libnotify - Enable libnotify popup balloons
 media-sound/bmpx:musepack - Support for musepack (mpc) files
 media-sound/bmpx:ofa - Build with ofa/PUID checking support for MusicBrainz metadata
+media-sound/bmpx:p2p - Enable support for downloading songs from the SoulSeek p2p network with museekd/mooseekd
 media-sound/bmpx:raptor - Enable usage of raptor for rlq container plugin
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
 media-sound/bmpx:stream - Build with support for streaming audio
