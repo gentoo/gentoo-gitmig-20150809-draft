@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.28 2006/08/05 04:56:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.29 2006/10/13 21:22:13 yuval Exp $
+
+  13 Oct 2006; Yuval Yaari <yuval@gentoo.org> Inline-0.44-r1.ebuild:
+  using File-Spec's and Digest-MD5's virtuals; bug #151201
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   Inline-0.44-r1.ebuild:
