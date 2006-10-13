@@ -1,0 +1,15 @@
+--- gaim-2.0.0beta3.1/src/gtkconv.c	2006-08-19 15:36:07.000000000 -0500
++++ gaim/gaim-2.0.0beta3/src/gtkconv.c	2006-10-12 16:51:52.654751430 -0500
+@@ -7313,12 +7313,6 @@
+ 
+ 	g_return_if_fail(conv != NULL);
+ 
+-	/*
+-	 * Only set "unseen" to "none" if the window has focus
+-	 */
+-	if (gaim_gtk_conv_window_has_focus(win))
+-		gtkconv_set_unseen(gtkconv, GAIM_UNSEEN_NONE);
+-
+ 	/* Update the menubar */
+ 
+ 	gtk_check_menu_item_set_active(GTK_CHECK_MENU_ITEM(gtkconv->win->menu.logging),

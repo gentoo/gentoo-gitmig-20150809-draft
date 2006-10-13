@@ -1,0 +1,12 @@
+--- ssi.c.old	2005-07-09 20:51:05.000000000 +0200
++++ ssi.c	2006-07-24 23:58:47.000000000 +0200
+@@ -918,8 +918,8 @@ faim_export int aim_ssi_deldeny(aim_sess
+ faim_export int aim_ssi_movebuddy(aim_session_t *sess, const char *oldgn, const char *newgn, const char *sn)
+ {
+ 	char *alias = aim_ssi_getalias(sess->ssi.local, oldgn, sn);
+-	aim_ssi_addbuddy(sess, sn, newgn, alias, NULL, NULL, aim_ssi_waitingforauth(sess->ssi.local, oldgn, sn));
+ 	aim_ssi_delbuddy(sess, sn, oldgn);
++	aim_ssi_addbuddy(sess, sn, newgn, alias, NULL, NULL, aim_ssi_waitingforauth(sess->ssi.local, oldgn, sn));
+ 	free(alias);
+ 	return 0;
+ }

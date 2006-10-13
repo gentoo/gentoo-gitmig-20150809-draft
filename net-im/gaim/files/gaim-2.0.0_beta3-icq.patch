@@ -1,0 +1,12 @@
+--- family_feedbag.c	2006-07-25 00:13:56.000000000 +0200
++++ family_feedbag.c.old	2006-07-25 00:13:46.000000000 +0200
+@@ -936,8 +936,8 @@ faim_export int aim_ssi_deldeny(OscarSes
+ faim_export int aim_ssi_movebuddy(OscarSession *sess, const char *oldgn, const char *newgn, const char *sn)
+ {
+ 	char *alias = aim_ssi_getalias(sess->ssi.local, oldgn, sn);
+-	aim_ssi_delbuddy(sess, sn, oldgn);
+ 	aim_ssi_addbuddy(sess, sn, newgn, alias, NULL, NULL, aim_ssi_waitingforauth(sess->ssi.local, oldgn, sn));
++	aim_ssi_delbuddy(sess, sn, oldgn);
+ 	free(alias);
+ 	return 0;
+ }
