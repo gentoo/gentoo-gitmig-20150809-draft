@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.20 2006/10/13 12:23:41 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.5.0.ebuild,v 1.21 2006/10/13 14:01:23 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib perl-module perl-app
 
@@ -25,8 +25,8 @@ RDEPEND=">=x11-libs/gtk+-2.0
 	silc? ( >=net-im/silc-toolkit-0.9.12-r3 )
 	eds? ( gnome-extra/evolution-data-server )
 	krb4? ( >=app-crypt/mit-krb5-1.3.6-r1 )
-	tcltk? ( dev-lang/tcl
-			dev-lang/tk )
+	tcl? ( dev-lang/tcl )
+	tk?  ( dev-lang/tk )
 	x11-libs/startup-notification"
 
 DEPEND="$RDEPEND
@@ -100,14 +100,6 @@ src_compile() {
 	[ "`gcc-version`" == "3.2" ] && filter-flags -msse2
 
 	local myconf
-	use debug && myconf="${myconf} --enable-debug"
-	use perl || myconf="${myconf} --disable-perl"
-	use spell || myconf="${myconf} --disable-gtkspell"
-	use nls  || myconf="${myconf} --disable-nls"
-	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
-	use eds || myconf="${myconf} --disable-gevolution"
-	use krb4 && myconf="${myconf} --with-krb4"
-	use tcltk || myconf="${myconf} --disable-tcl --disable-tk"
 
 	if use gnutls ; then
 		einfo "Disabling NSS, using GnuTLS"
@@ -124,7 +116,17 @@ src_compile() {
 	fi
 
 
-	econf ${myconf} || die "Configuration failed"
+	econf\
+		$(use_enable debug) \
+		$(use_enable perl) \
+		$(use_enable spell gtkspell) \
+		$(use_enable nls) \
+		$(use_enable nas) \
+		$(use_enable eds gevolution) \
+		$(use_enable krb4) \
+		$(use_enable tcl) \
+		$(use_enable tk) \
+		${myconf} || die "Configuration failed"
 
 	emake -j1 || die "Make failed"
 }
