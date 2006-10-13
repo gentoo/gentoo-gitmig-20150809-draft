@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.11 2006/09/10 21:10:30 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.12 2006/10/13 20:21:16 joem Exp $
+
+*f-spot-0.2.2 (13 Oct 2006)
+
+  13 Oct 2006; Joe McCann <joem@gentoo.org> +f-spot-0.2.2.ebuild:
+  New version with picasaweb album export, xmp importing, query features, and
+  lots of bugfixes. Also uses managed dbus-sharp code instead of bindings from
+  dbus pkg
 
 *f-spot-0.2.0 (10 Sep 2006)
 
