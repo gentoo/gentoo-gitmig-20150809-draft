@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.30 2006/09/07 21:34:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.31 2006/10/13 14:39:32 chutzpah Exp $
+
+  13 Oct 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/drscheme-352-destdir.patch, drscheme-352.ebuild:
+  Add patch from drscheme svn to fix weird problems with DESTDIR installs.
+  Fixes bug #146748.
 
   07 Sep 2006; Patrick McLean <chutzpah@gentoo.org> drscheme-352.ebuild:
   Add some processing of LDFLAGS to prevent compiliation errors if the user

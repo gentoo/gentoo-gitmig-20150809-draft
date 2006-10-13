@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.3 2006/09/07 21:34:02 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/drscheme-352.ebuild,v 1.4 2006/10/13 14:39:32 chutzpah Exp $
 
 inherit eutils multilib
 
@@ -38,6 +38,7 @@ src_unpack() {
 	cd "${WORKDIR}/plt"
 
 	epatch "${FILESDIR}/${PN}-350-fPIC.patch"
+	epatch "${FILESDIR}/${P}-destdir.patch"
 
 	if ! use opengl ; then
 		# move aside the opengl-dependent stuff or install will fail
