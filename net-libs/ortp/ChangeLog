@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.10 2006/10/10 23:48:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.11 2006/10/13 02:14:58 weeve Exp $
+
+  13 Oct 2006; Jason Wever <weeve@gentoo.org> ortp-0.7.1-r1.ebuild:
+  Added ~sparc keyword wrt bug #150982.
 
 *ortp-0.11.0 (10 Oct 2006)
 
