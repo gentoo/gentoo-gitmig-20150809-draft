@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.0.ebuild,v 1.2 2006/09/15 21:16:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.16.0.ebuild,v 1.3 2006/10/13 15:01:01 leio Exp $
 
 inherit multilib gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="doc gnome print zlib"
+IUSE="doc gnome zlib"
 
 RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=x11-libs/gtk+-2.6
@@ -21,10 +21,6 @@ RDEPEND=">=media-libs/fontconfig-1.0.1
 	>=dev-libs/libcroco-0.6.1
 	>=media-libs/freetype-2
 	gnome? ( >=gnome-base/gnome-vfs-2 )
-	print?	(
-				>=gnome-base/libgnomeprint-2.2.0
-				>=gnome-base/libgnomeprintui-2.2.0
-			)
 	zlib? ( >=gnome-extra/libgsf-1.6 )"
 
 DEPEND="${RDEPEND}
@@ -42,8 +38,8 @@ set_gtk_confdir() {
 pkg_setup() {
 	G2CONF="--enable-gtk-theme --enable-pixbuf-loader \
 			--disable-mozilla-plugin --with-croco \
+			--disable-gnome-print \
 			$(use_enable gnome gnome-vfs) \
-			$(use_enable print gnome-print) \
 			$(use_with zlib svgz)"
 
 	if ! built_with_use x11-libs/cairo png; then
