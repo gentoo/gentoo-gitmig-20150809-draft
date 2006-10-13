@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1_p4.ebuild,v 1.11 2006/08/19 15:43:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.1_p4.ebuild,v 1.12 2006/10/13 10:59:24 uberlord Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -48,6 +48,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${MY_P}-rlfe-build.patch #116483
 	epatch "${FILESDIR}"/${MY_P}-rlfe-uclibc.patch
 	epatch "${FILESDIR}"/${MY_P}-rlfe-libutil.patch
+	epatch "${FILESDIR}"/${MY_P}-fbsd-pic.patch
 
 	ln -s ../.. examples/rlfe/readline
 
