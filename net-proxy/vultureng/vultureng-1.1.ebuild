@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-1.1.ebuild,v 1.1 2006/02/28 21:00:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/vultureng/vultureng-1.1.ebuild,v 1.2 2006/10/13 15:55:57 mcummings Exp $
 
 inherit flag-o-matic eutils depend.php
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="dev-lang/perl
 	dev-perl/perl-ldap
 	dev-perl/Apache-Session
-	=dev-perl/DBD-SQLite-0.31
+	=dev-perl/DBD-SQLite-0.31*
 	dev-perl/DBD-Pg
 	dev-perl/libwww-perl
 	dev-perl/crypt-cbc
