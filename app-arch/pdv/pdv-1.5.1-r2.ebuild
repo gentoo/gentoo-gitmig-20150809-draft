@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.3 2006/09/20 04:13:32 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/pdv-1.5.1-r2.ebuild,v 1.4 2006/10/13 20:27:05 wormo Exp $
 
-inherit eutils
+WANT_AUTOCONF=2.5
+WANT_AUTOMAKE=1.4
+
+inherit eutils autotools
 
 DESCRIPTION="build a self-extracting and self-installing binary package"
 HOMEPAGE="http://pdv.sourceforge.net/"
@@ -13,9 +16,7 @@ SLOT="0"
 KEYWORDS="~hppa ppc x86"
 IUSE="nomotif"
 
-DEPEND=">=sys-devel/autoconf-2.58
-	sys-devel/automake
-	!nomotif? ( x11-libs/openmotif )
+DEPEND="!nomotif? ( x11-libs/openmotif )
 	!nomotif? ( || (
 	( >=x11-libs/libX11-1.0.0
 	>=x11-libs/libXt-1.0.0
@@ -41,10 +42,7 @@ src_unpack() {
 src_compile() {
 	# re-build configure script since patch was applied to configure.in
 	cd "${S}"/X11
-	export WANT_AUTOCONF=2.5
-	aclocal
-	automake -a -c
-	autoconf
+	eautoreconf
 
 	cd "${S}"
 	local myconf=""
