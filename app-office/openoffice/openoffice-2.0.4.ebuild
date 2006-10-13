@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.3 2006/10/13 21:06:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.4 2006/10/13 22:38:32 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
-	http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll
+	odk? ( java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
 	http://go-oo.org/packages/SRC680/biblio.tar.bz2
 	http://go-oo.org/packages/SRC680/hunspell_UNO_1.1.tar.gz
@@ -38,8 +38,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-RDEPEND="${RDEPEND}
-	!app-office/openoffice-bin
+COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXaw
 	x11-libs/libXinerama
 	virtual/libc
@@ -72,15 +71,16 @@ RDEPEND="${RDEPEND}
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
-	java? ( || ( =virtual/jre-1.5* =virtual/jre-1.4* )  )
 	>=dev-libs/boost-1.33.1
 	>=dev-libs/icu-3.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
-DEPEND="${DEPEND}
-	${RDEPEND}
+RDEPEND="java? ( || ( =virtual/jre-1.5* =virtual/jre-1.4* )  )
+	${COMMON_DEPEND}"
+
+DEPEND="${COMMON_DEPEND}
 	x11-libs/libXrender
 	x11-proto/printproto
 	x11-proto/xextproto
@@ -176,7 +176,7 @@ src_unpack() {
 	cp -f ${FILESDIR}/${PV}/system-icu.diff ${S}/patches/src680 || die
 
 	#Use flag checks
-	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE} || echo "--without-java" >> ${CONFFILE}
+	use java && echo "--with-jdk-home=${JAVA_HOME} --with-ant-home=${ANT_HOME}" >> ${CONFFILE}
 	use branding && echo "--with-intro-bitmaps=\\\"${S}/src/openintro_gentoo.bmp\\\"" >> ${CONFFILE}
 
 	echo "`use_enable binfilter`" >> ${CONFFILE}
@@ -200,7 +200,6 @@ src_unpack() {
 	echo "`use_with sound system-portaudio`" >> ${CONFFILE}
 	echo "`use_with sound system-sndfile`" >> ${CONFFILE}
 
-	echo "`use_enable odk`" >> ${CONFFILE}
 	echo "`use_enable debug crashdump`" >> ${CONFFILE}
 
 }
@@ -255,6 +254,8 @@ src_compile() {
 		`use_enable gnome quickstart` \
 		`use_enable pam` \
 		`use_enable !debug strip` \
+		`use_enable odk` \
+		`use_with java` \
 		--disable-access \
 		--disable-mono \
 		--disable-post-install-scripts \
