@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.17.ebuild,v 1.3 2006/09/05 05:41:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/File-Temp-0.17.ebuild,v 1.4 2006/10/13 17:10:22 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,3 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
