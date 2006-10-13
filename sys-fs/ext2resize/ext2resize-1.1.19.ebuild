@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.10 2006/02/15 00:18:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.19.ebuild,v 1.11 2006/10/13 03:53:01 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit flag-o-matic eutils autotools
 
 DESCRIPTION="EXT2 and EXT3 filesystem resizing utilities"
@@ -35,7 +37,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "Install failed"
+	emake install DESTDIR="${D}" || die "Install failed"
 	dodir /usr/sbin
 	dosym /sbin/ext2online /usr/sbin/ext2online
 	dosym /sbin/ext2prepare /usr/sbin/ext2prepare
