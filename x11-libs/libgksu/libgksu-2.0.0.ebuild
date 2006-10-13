@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.0.ebuild,v 1.3 2006/10/03 23:16:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.0.ebuild,v 1.4 2006/10/13 19:01:04 dang Exp $
 
 inherit gnome2
 
@@ -24,6 +24,7 @@ DEPEND="doc? ( >=dev-util/gtk-doc-1.2-r1 )
 	gnome-base/gnome-keyring
 	>=gnome-base/libgtop-2
 	>=gnome-base/libglade-2
+	>=dev-util/pkgconfig-0.19
 	x11-libs/startup-notification"
 
 RDEPEND="${DEPEND}
