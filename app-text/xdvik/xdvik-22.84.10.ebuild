@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.5 2006/10/13 18:22:12 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.6 2006/10/13 20:30:25 exg Exp $
 
 WANT_AUTOCONF=2.1
 
 inherit eutils flag-o-matic elisp-common autotools
 
-IUSE="cjk lesstif motif neXt Xaw3d emacs"
+IUSE="cjk motif neXt Xaw3d emacs"
 
 XDVIK_JP="${P}-j1.33.patch.gz"
 
@@ -24,8 +24,7 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 	x11-libs/libXmu
 	x11-libs/libXp
 	x11-libs/libXpm
-	motif? ( lesstif? ( x11-libs/lesstif )
-		!lesstif? ( x11-libs/openmotif ) )
+	motif? ( virtual/motif )
 	!motif? ( neXt? ( x11-libs/neXtaw )
 		!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
 	cjk? ( app-text/ptex
