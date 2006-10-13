@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.7.4.ebuild,v 1.4 2006/08/24 07:23:40 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.7.4.ebuild,v 1.5 2006/10/13 10:39:24 s4t4n Exp $
 
 DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/DirectFB-0.9.18
 	>=sys-libs/ncurses-5.4-r6
 	|| ( (
 		x11-libs/libX11
-		x11-libs/libXScrnSaver )
+		x11-libs/libXScrnSaver
+		x11-proto/scrnsaverproto )
 	virtual/x11 )"
 
 DEPEND="${RDEPEND}
