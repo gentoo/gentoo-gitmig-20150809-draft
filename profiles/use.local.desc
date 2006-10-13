@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2237 2006/10/13 15:54:22 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2238 2006/10/13 15:58:27 dang Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -645,6 +645,7 @@ kde-base/kwin:xcomposite - Support for Xorg composite extension.
 kde-misc/tellico:cddb - Access cddb servers to retrieve and submit information about compact discs.
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/evolution:bogofilter - Use bogofilter instead of spamassassin
+mail-client/evolution:networkmanager - Enable evolution networkmanager integration
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/evolution:widescreen - Enable widescreen support
 mail-client/mail-notification:evolution - Provide an Evolution plugin
