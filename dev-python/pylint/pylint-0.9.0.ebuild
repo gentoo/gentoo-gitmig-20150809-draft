@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.9.0.ebuild,v 1.3 2006/06/11 02:57:49 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.9.0.ebuild,v 1.4 2006/10/13 15:01:21 pythonhead Exp $
 
 inherit distutils eutils
 
-DESCRIPTION="PyLint is a tool to check if a Pyhon module satisfies a coding standard"
+DESCRIPTION="PyLint is a tool to check if a Python module satisfies a coding standard"
 SRC_URI="ftp://ftp.logilab.org/pub/pylint/${P}.tar.gz"
 HOMEPAGE="http://www.logilab.org/projects/pylint/"
 
