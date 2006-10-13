@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.20.ebuild,v 1.2 2006/09/13 20:41:00 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-0.20.ebuild,v 1.3 2006/10/13 16:58:24 mcummings Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://cpan/authors/id/T/TH/THALJEF/perlcritic/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
@@ -28,5 +28,3 @@ DEPEND="dev-perl/Module-Pluggable
 		dev-perl/perltidy
 		>=dev-perl/PPI-1.117
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
