@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.46 2006/10/13 00:29:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.47 2006/10/13 15:52:59 mcummings Exp $
+
+*DBD-SQLite-0.31-r1 (13 Oct 2006)
+
+  13 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -DBD-SQLite-0.31.ebuild, +DBD-SQLite-0.31-r1.ebuild:
+  Bumping 0.31 to overcome manifest/digest problems. Its cheap but works. See
+  bug 151123
 
   13 Oct 2006; Michael Cummings <mcummings@gentoo.org> ChangeLog:
   Updating digest for 0.31 from upstream (thanks nixnut)
