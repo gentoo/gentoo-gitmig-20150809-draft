@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5-r1.ebuild,v 1.10 2006/07/09 05:43:35 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.4.5-r1.ebuild,v 1.11 2006/10/13 14:34:29 swegener Exp $
 
 inherit flag-o-matic eutils versionator
 
 DESCRIPTION="Graphical IRC client"
 SRC_URI="http://www.xchat.org/files/source/$(get_version_component_range 1-2)/${P}.tar.bz2
 	mirror://sourceforge/${PN}/${P}.tar.bz2
-	mirror://gentoo/${PN}-dccserver-0.5.patch.bz2"
+	xchatdccserver? ( mirror://gentoo/${PN}-dccserver-0.5.patch.bz2 )"
 HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2"
