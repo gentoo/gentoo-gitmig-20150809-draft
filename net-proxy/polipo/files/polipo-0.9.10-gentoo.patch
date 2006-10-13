@@ -1,0 +1,28 @@
+diff -Nru polipo-0.9.10.orig/Makefile polipo-0.9.10/Makefile
+--- polipo-0.9.10.orig/Makefile	2006-09-02 17:33:44.000000000 +0000
++++ polipo-0.9.10/Makefile	2006-10-09 07:18:58.000000000 +0000
+@@ -82,11 +82,6 @@
+ 	cp -f localindex.html $(TARGET)$(LOCAL_ROOT)/index.html
+ 
+ install.man: all
+-	mkdir -p $(TARGET)$(MANDIR)/man1
+-	mkdir -p $(TARGET)$(INFODIR)
+-	cp -f polipo.man $(TARGET)$(MANDIR)/man1/polipo.1
+-	cp polipo.info $(TARGET)$(INFODIR)/
+-	install-info --info-dir=$(INFODIR) polipo.info
+ 
+ 
+ polipo.info: polipo.texi
+diff -Nru polipo-0.9.10.orig/polipo.h polipo-0.9.10/polipo.h
+--- polipo-0.9.10.orig/polipo.h	2006-09-02 17:33:44.000000000 +0000
++++ polipo-0.9.10/polipo.h	2006-10-09 07:16:39.000000000 +0000
+@@ -62,7 +62,9 @@
+ #if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
+ /* nothing */
+ #elif defined(__GNUC__)
++#ifndef inline
+ #define inline __inline
++#endif
+ #if  (__GNUC__ >= 3)
+ #define restrict __restrict
+ #else
