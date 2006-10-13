@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.211 2006/09/26 20:03:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.212 2006/10/13 14:24:37 swegener Exp $
+
+  13 Oct 2006; Sven Wegener <swegener@gentoo.org>
+  +files/xchat-2.6.6-suffix.patch, xchat-2.6.6.ebuild:
+  Include patch to make xchat-remote invoke the correct binary, should fix bug
+  #143688.
 
   26 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> xchat-2.6.6.ebuild:
   Stable on hppa wrt #134652

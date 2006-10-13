@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.6.ebuild,v 1.7 2006/09/26 20:03:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.6.6.ebuild,v 1.8 2006/10/13 14:24:37 swegener Exp $
 
 inherit eutils versionator gnome2
 
@@ -34,6 +34,7 @@ src_unpack() {
 	cd "${S}"
 
 	use xchatdccserver && epatch "${DISTDIR}"/xchat-dccserver-0.6.patch.bz2
+	epatch "${FILESDIR}"/xchat-2.6.6-suffix.patch
 
 	# use libdir/xchat/plugins as the plugin directory
 	if [ $(get_libdir) != "lib" ] ; then
