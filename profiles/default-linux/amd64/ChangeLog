@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.25 2006/10/06 19:01:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.26 2006/10/13 15:45:06 wolf31o2 Exp $
+
+  13 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  2005.0/no-multilib/package.mask, 2005.1/no-multilib/package.mask,
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
+  Added games-action/descent3-demo and games-action/heretic2 to mask.
 
   06 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> 2005.0/package.mask,
   2005.1/package.mask:

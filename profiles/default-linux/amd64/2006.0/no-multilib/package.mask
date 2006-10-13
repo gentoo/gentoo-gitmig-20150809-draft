@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.30 2006/10/05 20:51:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.0/no-multilib/package.mask,v 1.31 2006/10/13 15:45:07 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -52,6 +52,8 @@ app-text/acroread
 <dev-java/blackdown-jdk-1.4.2
 <dev-java/blackdown-jre-1.4.2
 games-action/descent3
+games-action/descent3-demo
+games-action/heretic2
 games-action/heretic2-demo
 games-action/lugaru-demo
 games-action/mutantstorm-demo
