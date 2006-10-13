@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.0.ebuild,v 1.4 2006/09/12 15:26:23 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.16.0.ebuild,v 1.5 2006/10/13 21:57:59 agriffis Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/GnomeScreensaver"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="debug doc xinerama opengl pam"
 
 RDEPEND=">=sys-apps/dbus-0.35.2
