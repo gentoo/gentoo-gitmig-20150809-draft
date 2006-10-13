@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.13-r1.ebuild,v 1.2 2006/04/22 14:39:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ieee80211/ieee80211-1.1.13-r1.ebuild,v 1.3 2006/10/13 12:22:10 phreak Exp $
 
 inherit eutils linux-mod
 
@@ -74,13 +74,13 @@ src_unpack() {
 
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-cflags.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-*.patch
 
 	use debug && debug="y"
 	sed -i \
 		-e "s:^\(CONFIG_IEEE80211_DEBUG\)=.*:\1=${debug}:" \
-		${S}/Makefile || die
+		"${S}"/Makefile || die
 }
 
 src_install() {
