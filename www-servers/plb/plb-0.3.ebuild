@@ -1,23 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/plb-0.3.ebuild,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/plb/plb-0.3.ebuild,v 1.3 2006/10/13 21:25:10 vapier Exp $
 
 DESCRIPTION="A free high-performance HTTP load balancer"
-SRC_URI="http://plb.sunsite.dk/files/${P}.tar.gz"
 HOMEPAGE="http://plb.sunsite.dk/"
+SRC_URI="http://plb.sunsite.dk/files/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86 ppc ~sparc alpha"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=dev-libs/libevent-0.6"
-
-src_compile() {
-	econf || die
-	emake || die "compile problem"
-}
+DEPEND=">=dev-libs/libevent-0.6"
 
 src_install() {
 	einstall || die
