@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2239 2006/10/13 15:59:21 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2240 2006/10/13 18:30:59 bass Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1315,6 +1315,7 @@ net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythm
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/hamachi:pentium - Add support for older Pentium based systems
+net-misc/htbinit:esfq - Add support for Enhanced Stochastic Fairness queueing discipline.
 net-misc/hylafax:faxonly - Don't depend on mgetty-fax
 net-misc/hylafax:html - Adds HTML documentation
 net-misc/hylafax:mgetty - Adds support for mgetty and vgetty
