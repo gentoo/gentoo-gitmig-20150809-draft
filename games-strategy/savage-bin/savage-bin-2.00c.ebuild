@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00c.ebuild,v 1.1 2006/10/05 20:41:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00c.ebuild,v 1.2 2006/10/13 11:19:07 nyhm Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ SEP_URI="http://www.notforidiots.com/autoupdater/"
 BASE_URI="http://downloads.s2games.com/online_orders/"
 
 DESCRIPTION="Unique mix of strategy and FPS"
-HOMEPAGE="http://savage.s2games.com/"
+HOMEPAGE="http://www.s2games.com/savage/"
 SRC_URI="${BASE_URI}/savage_linux.sh.gz
 		mirror://liflg/savage_${PV}-english.update.run
 		${SEP_URI}/SEP-3T.tar.gz
