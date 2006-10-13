@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.61 2006/10/03 12:55:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.62 2006/10/13 22:41:41 flameeyes Exp $
+
+*libkdepim-3.5.5-r1 (13 Oct 2006)
+
+  13 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +libkdepim-3.5.5-r1.ebuild:
+  Add -r1 with the missing icons in KOrganizer, thanks to Damien Gombault in
+  bug #151235.
 
 *libkdepim-3.5.5 (03 Oct 2006)
 
