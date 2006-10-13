@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.8 2006/10/12 16:26:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.9 2006/10/13 15:54:02 chainsaw Exp $
+
+*ejabberd-1.1.2 (13 Oct 2006)
+
+  13 Oct 2006; Tony Vroon <chainsaw@gentoo.org> +ejabberd-1.1.2.ebuild:
+  New upstream version. Patchball updated with mod_presence, all thanks to
+  Nikolaus Polak <nik@linuxlovers.at> in bug #137724.
 
 *ejabberd-1.1.1-r1 (12 Oct 2006)
 
