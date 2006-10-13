@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.2 2006/06/08 15:47:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.3 2006/10/13 23:45:03 agriffis Exp $
 
 # mercurial: Fetch sources from mercurial repositories, similar to cvs.eclass.
 # To use this from an ebuild, set EHG_REPO_URI in your ebuild.  Then either
@@ -34,7 +34,7 @@ function mercurial_fetch {
 		ebegin "create ${EHG_STORE_DIR}"
 		addwrite / &&
 			mkdir -p "${EHG_STORE_DIR}" &&
-			chmod -f o+rw "${EHG_STORE_DIR}" &&
+			chmod -f g+rw "${EHG_STORE_DIR}" &&
 			export SANDBOX_WRITE="${SANDBOX_WRITE%:/}"
 		eend $? || die
 	fi
@@ -47,7 +47,7 @@ function mercurial_fetch {
 		# first check out
 		ebegin "${EHG_CLONE_CMD} ${repo}"
 		mkdir -p "${EHG_PROJECT}" &&
-			chmod -f o+rw "${EHG_PROJECT}" &&
+			chmod -f g+rw "${EHG_PROJECT}" &&
 			cd "${EHG_PROJECT}" &&
 			${EHG_CLONE_CMD} "${repo}" "${module}" &&
 			cd "${module}"
@@ -57,7 +57,11 @@ function mercurial_fetch {
 		ebegin "${EHG_PULL_CMD} ${repo}"
 		cd "${EHG_PROJECT}/${module}" &&
 			${EHG_PULL_CMD}
-		eend $? || die
+		case $? in
+			# hg pull returns status 1 when there were no changes to pull
+			1) eend 0 ;;
+			*) eend $? || die ;;
+		esac
 	fi
 
 	# use rsync instead of cp for --exclude
