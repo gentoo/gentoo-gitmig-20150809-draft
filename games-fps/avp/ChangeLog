@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/avp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.6 2006/10/05 11:24:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/ChangeLog,v 1.7 2006/10/13 17:02:16 wolf31o2 Exp $
+
+  13 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/avp-20031110-cleanup.patch, +files/avp-20031110-gentoo.patch:
+  Added patches from Tristan Heaven <nyhm@gentoo.org> and Mike Frysinger
+  <vapier@gentoo.org> and closing bug #132389.
 
   05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> avp-20031110.ebuild:
   Remove nvidia-glx version check

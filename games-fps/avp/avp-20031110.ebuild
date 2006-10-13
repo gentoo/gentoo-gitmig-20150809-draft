@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.5 2006/10/05 11:24:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20031110.ebuild,v 1.6 2006/10/13 17:02:16 wolf31o2 Exp $
 
 #ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_PASS="anonymous"
@@ -31,12 +31,12 @@ src_unpack() {
 
 	cd "${S}"
 
-	sed -i '/alut.h/d' openal.c || die "sed openal.c failed"
 	sed -i \
-		-e "s:-lopenal:/usr/$(get_libdir)/libopenal.a:" \
 		-e "/^CFLAGS =/s:=.*:=${CFLAGS}:" Makefile \
 		|| die "sed Makefile failed"
 	epatch "${FILESDIR}/${P}-gcc34.patch"
+	epatch "${FILESDIR}/${P}-cleanup.patch"
+	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
 src_install() {
