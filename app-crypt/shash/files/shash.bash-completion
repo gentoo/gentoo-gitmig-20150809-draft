@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/files/shash.bash-completion,v 1.1 2004/09/27 00:49:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/files/shash.bash-completion,v 1.2 2006/10/13 15:00:13 swegener Exp $
 #
 # shash(1) completion.
 
@@ -12,17 +12,17 @@ _shash() {
 	cur=${COMP_WORDS[COMP_CWORD]}
 	prev=${COMP_WORDS[COMP_CWORD-1]}
 
-	case "$prev" in
+	case "${prev}" in
 	-c|--config)
 		_filedir
 		return 0 ;;
 	-o|--keymode)
 		COMPREPLY=( $( compgen -W "$( shash --listkeygen | tail -n +2 )" \
-			-- $cur ) )
+			-- ${cur} ) )
 		return ;;
 	-a|--algorithm)
 		COMPREPLY=( $( compgen -W "$( shash --list )" \
-			-- $cur ) )
+			-- ${cur} ) )
 		return ;;
 	*)
 		;;
@@ -33,9 +33,8 @@ _shash() {
 		--verbose --quiet --nosalt --time --hmac --doublecheck \
 		--check --binary --text --keymode --config --algorithm \
 		--list --key --listkeygen --help --version --license' \
-		-- $cur ) )
+		-- ${cur} ) )
 	_filedir
 	return 0
-}
-
-[ -n "${have:-}" ] && complete -F _shash $filenames shash
+} &&
+complete -F _shash ${filenames} shash
