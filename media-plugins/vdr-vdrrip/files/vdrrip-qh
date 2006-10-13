@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/files/vdrrip-qh,v 1.1 2006/10/13 20:11:50 zzam Exp $
+
+depend() {
+	need localmount
+}
+
+start() {
+	ebegin "Starting vdrrip queuehandler"
+	start-stop-daemon --start --background \
+	--make-pidfile \
+	--pidfile /var/run/vdrrip-qh.pid --user ${USER} \
+	--exec /usr/bin/vdrrip-qh -- ${QUEUE} ${TEMPDIR} >> ${LOGFILE} 2>&1
+	eend $? "Couldn't start vdrrip-qh"
+}
+
+stop() {
+	ebegin "Stopping vdrrip queuehandler"
+	start-stop-daemon --stop --pidfile /var/run/vdrrip-qh.pid \
+	--user ${USER} /usr/bin/vdrrip-qh
+	eend $? "Couldn't stop vdrrip-qh."
+}
