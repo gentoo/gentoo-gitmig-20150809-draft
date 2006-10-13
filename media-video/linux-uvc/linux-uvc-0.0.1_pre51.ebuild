@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.0.1_pre51.ebuild,v 1.3 2006/10/02 10:47:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linux-uvc/linux-uvc-0.0.1_pre51.ebuild,v 1.4 2006/10/13 12:30:27 blubb Exp $
 
 inherit eutils linux-mod
 
@@ -14,7 +14,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.bz2"
 
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="isight"
 DEPEND=">=dev-libs/libusb-0.1.12"
