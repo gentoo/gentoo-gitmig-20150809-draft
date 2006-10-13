@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2233 2006/10/12 16:25:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2234 2006/10/13 13:13:47 aross Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -114,6 +114,7 @@ app-emulation/qemu-softmmu:kqemu - Enables the kernel module acceleration on the
 app-emulation/uade:audacious - Enables support for media-sound/audacious
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-emulation/xen-tools:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
+app-emulation/xen-tools:pygrub - Install the pygrub boot loader
 app-emulation/xen-tools:screen - Enable support for running domain U consoles in a screen session
 app-emulation/xen-tools:vnc - Enable support for VNC as a video device for domainUs
 app-emulation/xen:custom-cflags - Use CFLAGS from /etc/make.conf rather than the default Xen CFLAGS (not supported)
