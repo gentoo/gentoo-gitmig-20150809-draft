@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.34 2006/10/13 12:36:08 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.35 2006/10/13 22:13:34 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -55,7 +55,7 @@ SRC_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/${P/_/-}${MYSQL_RERELEASE}.tar.
 if [[ -n "${MYSQL_PATCHSET_REV}" ]] ; then
 	MYSQL_PATCHSET_FILENAME="${PN}-patchset-${MY_FIXED_PV}-r${MYSQL_PATCHSET_REV}.tar.bz2"
 	# We add the Gentoo mirror here, as we only use primaryuri for the MySQL tarball
-	SRC_URI="${SRC_URI} mirror://gentoo/${MYSQL_PATCHSET_FILENAME} http://gentoo.longitekk.com/${MYSQL_PATCHSET_FILENAME}"
+	SRC_URI="${SRC_URI} http://gentoo.longitekk.com/${MYSQL_PATCHSET_FILENAME}"
 fi
 
 DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
@@ -63,7 +63,7 @@ HOMEPAGE="http://www.mysql.com/"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="big-tables berkdb debug embedded minimal perl selinux srvdir ssl static"
-RESTRICT="primaryuri confcache"
+RESTRICT="confcache"
 
 mysql_version_is_at_least "4.01.00.00" \
 && IUSE="${IUSE} latin1"
