@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r3.ebuild,v 1.1 2006/10/13 01:50:45 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r3.ebuild,v 1.2 2006/10/13 12:23:41 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app
 
@@ -141,7 +141,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/"${P}"-as-needed.patch
 	epatch "${FILESDIR}"/"${P}"-avahi-compat.patch
 	epatch "${FILESDIR}"/"${P}"-gtkconv.diff
-	epatch "${FILESDIR}"/"${P}"-icq.patch
 	eautoreconf || die "Failed running eautoreconf"
 }
 
