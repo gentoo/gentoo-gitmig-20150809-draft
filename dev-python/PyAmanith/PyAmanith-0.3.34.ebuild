@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyAmanith/PyAmanith-0.3.34.ebuild,v 1.1 2006/09/24 10:19:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyAmanith/PyAmanith-0.3.34.ebuild,v 1.2 2006/10/13 17:03:03 pythonhead Exp $
 
 inherit eutils distutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/python-2.3
 	>=media-libs/amanith-0.3
-	>=dev-lang/swig-1.3.25"
+	>=dev-lang/swig-1.3.29"
 
 src_unpack() {
 	unpack ${A}
