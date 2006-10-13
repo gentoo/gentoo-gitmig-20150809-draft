@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.12 2005/08/08 12:50:24 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0-r2.ebuild,v 1.13 2006/10/13 12:34:06 alonbl Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="nls"
 DEPEND=">=x11-libs/gtk+-2.0
 	>=app-crypt/gnupg-1.2
 	>=app-crypt/gpgme-0.9.0-r1
+	>=dev-util/pkgconfig-0.7
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
