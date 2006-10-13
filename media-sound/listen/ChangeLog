@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/listen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.9 2006/10/12 22:45:16 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.10 2006/10/13 13:15:24 blubb Exp $
+
+  13 Oct 2006; Simon Stelling <blubb@gentoo.org> listen-0.5_beta1.ebuild:
+  fix wrt multilib-strict and re-add ~amd64; bug 146613
 
 *listen-0.5_beta1 (12 Oct 2006)
 

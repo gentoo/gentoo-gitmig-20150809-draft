@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5_beta1.ebuild,v 1.1 2006/10/12 22:45:16 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5_beta1.ebuild,v 1.2 2006/10/13 13:15:24 blubb Exp $
 
 inherit eutils virtualx
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/${PN}-0.5b1"
 LICENSE="GPL-2"
 IUSE="aac cdr flac ipod mad vorbis musicbrainz"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.0
 	>=media-libs/gst-plugins-good-0.10.0
@@ -83,6 +83,7 @@ src_compile() {
 	addpredict /var/lib/cache/gstreamer-0.10
 	epatch "${FILESDIR}/check.patch"
 	epatch "${FILESDIR}/Makefile.patch"
+	sed -i "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):g" Makefile
 	Xemake -j1 || die "make failed"
 }
 
