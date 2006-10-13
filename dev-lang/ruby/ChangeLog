@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.224 2006/10/12 11:10:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.225 2006/10/13 11:36:15 flameeyes Exp $
+
+  13 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild,
+  ruby-1.8.4-r3.ebuild, ruby-1.8.5.ebuild, ruby-1.8.5-r1.ebuild,
+  ruby-1.8.5-r2.ebuild:
+  Remove autoconf dependencies, and leave them to autotools eclass.
 
   12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-1.8.4-r1.ebuild,
   ruby-1.8.4-r3.ebuild, ruby-1.8.5.ebuild, ruby-1.8.5-r1.ebuild,
