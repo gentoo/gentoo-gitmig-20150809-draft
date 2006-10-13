@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.5 2006/05/22 21:09:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.6 2006/10/13 15:45:21 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://lokigames/loki_demos/${PN}.run"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
@@ -18,11 +18,8 @@ DEPEND="games-util/loki_patch"
 RDEPEND="sys-libs/glibc
 	virtual/opengl
 	x86? (
-		|| (
-			(
-				x11-libs/libX11
-				x11-libs/libXext )
-			virtual/x11 )
+		x11-libs/libX11
+		x11-libs/libXext
 		=media-libs/libsdl-1.2* )
 	amd64? (
 		app-emulation/emul-linux-x86-xlibs
@@ -50,6 +47,10 @@ src_install() {
 
 	# Required directory
 	keepdir "${dir}"/missions
+
+	# Fix for 2.6 kernel crash
+	cd "${Ddir}"
+	ln -sf ppics.hog PPics.Hog
 
 	games_make_wrapper ${PN} "./${exe}" "${dir}"
 	newicon "${demo}"/launch/box.png ${PN}.png || die "newicon failed"
