@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.176 2006/10/13 22:54:58 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.177 2006/10/13 23:11:36 joshuabaergen Exp $
+
+  13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.1.1-r1.ebuild:
+  AMD64/x86 stable for bug #144549 (X7.1).
 
   13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.1.1-r1.ebuild:
