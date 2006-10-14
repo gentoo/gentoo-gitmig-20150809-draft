@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.3.ebuild,v 1.6 2006/10/01 15:12:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.3.ebuild,v 1.7 2006/10/14 09:07:23 mrness Exp $
 
 inherit autotools eutils gnuconfig
 
@@ -13,7 +13,9 @@ SLOT="0"
 IUSE="bluetooth debug irda syslog usb"
 KEYWORDS="~amd64 hppa ppc ppc64 sparc x86"
 
-DEPEND="usb? ( dev-libs/libusb )"
+RDEPEND="usb? ( dev-libs/libusb )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
