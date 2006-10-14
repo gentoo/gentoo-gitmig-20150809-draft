@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/canuum
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/ChangeLog,v 1.4 2005/01/01 14:26:26 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canuum/ChangeLog,v 1.5 2006/10/14 10:00:39 flameeyes Exp $
+
+  14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> canuum-3.7_p2.ebuild:
+  Add missing imake dependency, thanks to Patrick Lauer in bug #151269.
 
   15 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> canuum-3.7_p2.ebuild:
   Stable on x86. Added to ppc.
