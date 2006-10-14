@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.17 2006/10/14 01:26:00 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.18 2006/10/14 01:59:01 nichoj Exp $
+
+  14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  java-config-wrapper-0.12.ebuild:
+  Stabilizing on ppc64 as part of new Java system, bug #147254.
 
   14 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   java-config-wrapper-0.12.ebuild:
