@@ -1,22 +1,6 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-AUX 03.00.23/01-optional-filename.patch 4493 RMD160 cfdb3e135ba6afee43355fad471727edf7f1298d SHA1 c10ca04953885ad47765ee47fc76dce6062604aa SHA256 186dfd69840fc6959782e37744dfb1d4f8accd8f87e52d976d471d91a7edc40b
-MD5 7c5af810d26f0e9c10a5476a82c91fe1 files/03.00.23/01-optional-filename.patch 4493
-RMD160 cfdb3e135ba6afee43355fad471727edf7f1298d files/03.00.23/01-optional-filename.patch 4493
-SHA256 186dfd69840fc6959782e37744dfb1d4f8accd8f87e52d976d471d91a7edc40b files/03.00.23/01-optional-filename.patch 4493
-AUX 03.00.23/03-broken-postscript.patch 638 RMD160 3d7c1b5bde781b5bae99c20f4d17f847d2685fea SHA1 2a57b3d9dfb2be4882f7581bc5294889446f8da0 SHA256 df71783b460ae0a0fca01b0c6aadc26c83b446a8518397692d19e6a541da5c06
-MD5 d6c37960f3daba2f5aa9076d0eca4098 files/03.00.23/03-broken-postscript.patch 638
-RMD160 3d7c1b5bde781b5bae99c20f4d17f847d2685fea files/03.00.23/03-broken-postscript.patch 638
-SHA256 df71783b460ae0a0fca01b0c6aadc26c83b446a8518397692d19e6a541da5c06 files/03.00.23/03-broken-postscript.patch 638
-AUX 03.00.23/03-tkremind-no-newlines.patch 1013 RMD160 58006ef5c05a1043a9b7f86f0f1166d14f768d29 SHA1 8f1f92caf28e7885928d9b5a704c6e5865449dfe SHA256 2da4e3c324a1e75b4138f47d8ff59a503dbf617edd2d1e15f7f6ae2b3fbacef2
-MD5 9b1b590133c6c87a65a2c529b8e8db15 files/03.00.23/03-tkremind-no-newlines.patch 1013
-RMD160 58006ef5c05a1043a9b7f86f0f1166d14f768d29 files/03.00.23/03-tkremind-no-newlines.patch 1013
-SHA256 2da4e3c324a1e75b4138f47d8ff59a503dbf617edd2d1e15f7f6ae2b3fbacef2 files/03.00.23/03-tkremind-no-newlines.patch 1013
-AUX 03.00.23/04-rem-cmd.patch 419 RMD160 dabf04264dc8e99d9598a217cfa49cc11a626604 SHA1 4cbf66075d82c30d0fad1b146bcc1f742f93b4ad SHA256 d2022bbe9057ec1ff65e5f45a9dadc5036c17baf7f76c448050b955727a52ac9
-MD5 6ab181833e44d4f3a0d84fc6445bdd2a files/03.00.23/04-rem-cmd.patch 419
-RMD160 dabf04264dc8e99d9598a217cfa49cc11a626604 files/03.00.23/04-rem-cmd.patch 419
-SHA256 d2022bbe9057ec1ff65e5f45a9dadc5036c17baf7f76c448050b955727a52ac9 files/03.00.23/04-rem-cmd.patch 419
 AUX 03.00.24/01-optional-filename.patch 3902 RMD160 6d48bfead05c11de8da20e942fc5292b321881d5 SHA1 fe9fb83030d2eddc89fb8809d770c08a2ce3ed35 SHA256 d7c890fb48e09784ef611069ff44a37f784a20c49e7e553aa51b6fee3e9c2fc2
 MD5 b7701150bf46f3ec8d4fba40050fd70b files/03.00.24/01-optional-filename.patch 3902
 RMD160 6d48bfead05c11de8da20e942fc5292b321881d5 files/03.00.24/01-optional-filename.patch 3902
@@ -52,7 +36,7 @@ SHA256 dc819d5fb431b02444bda57aa8c067e2777d6ca2c226a81e4534e14bcba3df09 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFMRe2go/w9rxVVVERAlTwAJsE7WC5sY4luFmQB91nXrlyxExwvQCfbR4P
-oid4SEJ2NZeow6KXVSNQtxE=
-=jQVH
+iD8DBQFFMRgJgo/w9rxVVVERAmIjAKCuGzaLSxcXPPNOJ5/liPCMD7q6VQCeOibI
+6JdiQ49wvahzc4FWzbXzjsA=
+=1eQn
 -----END PGP SIGNATURE-----
