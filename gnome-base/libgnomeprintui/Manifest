@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libgnomeprintui-1-syntax_fix.patch 603 RMD160 9e1758c1ef58205d3700b11481139e25bc158f6c SHA1 14f2a57523b93c1364a8df0db717150cdc56f857 SHA256 0ee3da52efe127c904d29dbf20f6e9f95cd09454fcec314bd3bf7b6b38241060
 MD5 f007d30bd0ba486b3d83d47cd460b4c9 files/libgnomeprintui-1-syntax_fix.patch 603
 RMD160 9e1758c1ef58205d3700b11481139e25bc158f6c files/libgnomeprintui-1-syntax_fix.patch 603
 SHA256 0ee3da52efe127c904d29dbf20f6e9f95cd09454fcec314bd3bf7b6b38241060 files/libgnomeprintui-1-syntax_fix.patch 603
 DIST libgnomeprintui-1.116.0.tar.bz2 282845
-DIST libgnomeprintui-2.10.0.1.tar.bz2 625431
-DIST libgnomeprintui-2.10.2.tar.bz2 626042
+DIST libgnomeprintui-2.10.0.1.tar.bz2 625431 RMD160 aa3947d224ddc73f5f4472635b78ffd6a53dcfff SHA1 da2270bbb7ff19d859757c0dd06c8b683dcbbe7a SHA256 6d21753f1c830efa7c7f22b8c7bd5f0fdfb78a49618ffdd49772c62f960f28bf
+DIST libgnomeprintui-2.10.2.tar.bz2 626042 RMD160 b4e7254bf439984c0b4d1b24d7dd81fdacabb17b SHA1 0aeeeb8a25ac8489a036066ed632a05732bf5064 SHA256 27cccff2586d8fdff466edda32ce750630516eb93406e2c845db8bb3fb680fb3
 DIST libgnomeprintui-2.12.1.tar.bz2 646459 RMD160 8cc6fb413c53f0ea965203859362f8ef0762eaae SHA1 7ed05a789245fbee975a2010a0e2414169197ac0 SHA256 e898c0bc01b5eff6c04f0ec3ebbed95690fe7ffc971d42500b6b90bb723f1f6a
 EBUILD libgnomeprintui-1.116.0.ebuild 786 RMD160 0655d31b83d6232b13249942e4a74a1870a878a8 SHA1 9c2dc2a9538fd80d0a60436ebd96307966909af9 SHA256 18a9094ffa72390113b0dec598f082c92c5649bcb786e0067f497bceba2a7ca2
 MD5 d76f372ffdcd8fdea93ba790f92435e2 libgnomeprintui-1.116.0.ebuild 786
@@ -18,10 +21,10 @@ EBUILD libgnomeprintui-2.10.2.ebuild 721 RMD160 56e48a4d23bbc95f8d042c80b1bd2b79
 MD5 b47cb25e64b275359d10e4246b8194dc libgnomeprintui-2.10.2.ebuild 721
 RMD160 56e48a4d23bbc95f8d042c80b1bd2b7997ce639f libgnomeprintui-2.10.2.ebuild 721
 SHA256 59617fa8939ff50a205668ad34cb3d3bdd51607a217721d33cc6c53344f9e4cc libgnomeprintui-2.10.2.ebuild 721
-EBUILD libgnomeprintui-2.12.1.ebuild 723 RMD160 a1ac3a78881b8e8c6dfd309b66a4913b50cd6762 SHA1 02c72f6281c13033bea27289cef009e150bd6b10 SHA256 7202bbb5dc72450b40b61bcb33abbc8ddbda61b912656e97430b91fb1e65ec52
-MD5 50ee1e443c0b65665703727291e6dddf libgnomeprintui-2.12.1.ebuild 723
-RMD160 a1ac3a78881b8e8c6dfd309b66a4913b50cd6762 libgnomeprintui-2.12.1.ebuild 723
-SHA256 7202bbb5dc72450b40b61bcb33abbc8ddbda61b912656e97430b91fb1e65ec52 libgnomeprintui-2.12.1.ebuild 723
+EBUILD libgnomeprintui-2.12.1.ebuild 725 RMD160 c7678b2016e7bfafd51a8bd028cbae1f7bde9fb8 SHA1 9633a15504643f5bdc97a05af83ecfec6c82c3f2 SHA256 96143e9b3bd06ee4b340f3b5885a70d76ddd6a0d20a5afe0f9563a3e55aa94c0
+MD5 566965e47481a45565e70d0bec462714 libgnomeprintui-2.12.1.ebuild 725
+RMD160 c7678b2016e7bfafd51a8bd028cbae1f7bde9fb8 libgnomeprintui-2.12.1.ebuild 725
+SHA256 96143e9b3bd06ee4b340f3b5885a70d76ddd6a0d20a5afe0f9563a3e55aa94c0 libgnomeprintui-2.12.1.ebuild 725
 MISC ChangeLog 13522 RMD160 6dd33ba7887dc5a92fc8e8f47d96d4e518d6f015 SHA1 0ed1d09bf84c27facba8137b46786552a89f1062 SHA256 624765038cdaf96ab0138c0b9af4de034efad029e7f9270cc7cf648b76029b21
 MD5 4acaf8e0151b5de89fb91ad353138ee5 ChangeLog 13522
 RMD160 6dd33ba7887dc5a92fc8e8f47d96d4e518d6f015 ChangeLog 13522
@@ -33,12 +36,19 @@ SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata
 MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
 RMD160 062f0500ed49fbe126ce30c9b56445abde7e656d files/digest-libgnomeprintui-1.116.0 76
 SHA256 0b51b5c72349211eab24eb37c4771169dd53daf25fb86693b06d8d0af893b1fa files/digest-libgnomeprintui-1.116.0 76
-MD5 5aadfef02e83d41c0d594d1b54c166a0 files/digest-libgnomeprintui-2.10.0.1 77
-RMD160 8e166744349c96842058eaa2a0c8906800cec5a4 files/digest-libgnomeprintui-2.10.0.1 77
-SHA256 8f76fcd9cb2c6359965ff1d9cf07359933cf3b685b251df842f0244905e8b619 files/digest-libgnomeprintui-2.10.0.1 77
-MD5 10f031e0e10c3a162607bf3903f1c89c files/digest-libgnomeprintui-2.10.2 75
-RMD160 aad990521a1c14c64e7e56b1e27813af8f1c93fa files/digest-libgnomeprintui-2.10.2 75
-SHA256 def74977f19815011ce4762ed4a7c45f6c80b8e00afc542585278cecf8755efb files/digest-libgnomeprintui-2.10.2 75
+MD5 28d02b395e38253b7977103a2309dd53 files/digest-libgnomeprintui-2.10.0.1 277
+RMD160 df2d7dde1302ea56a8bdaad4f6dbf1fa9a83bcd6 files/digest-libgnomeprintui-2.10.0.1 277
+SHA256 3b9ae5836535cfe33f9e48b77b0f3755834fd21dcc9d15e631e4775facbb51af files/digest-libgnomeprintui-2.10.0.1 277
+MD5 f5dd0d9c56cb7e9e45037720daa5907d files/digest-libgnomeprintui-2.10.2 271
+RMD160 e08f79e4d22de6b7fc3f1f0d2ede1bc95b960b33 files/digest-libgnomeprintui-2.10.2 271
+SHA256 9101bed72daba8a6ff8b625452115d8185243baf948279da781d1bb7b50fa978 files/digest-libgnomeprintui-2.10.2 271
 MD5 4a4b6c592df15d70362b27cc7befcd82 files/digest-libgnomeprintui-2.12.1 271
 RMD160 e9d9e324ffb576f7d17e61fe1c37fe29a299fc8f files/digest-libgnomeprintui-2.12.1 271
 SHA256 2c27f5126589f3b60de7f691156329cb4849925a9d90dc4ab676e43cd10831fa files/digest-libgnomeprintui-2.12.1 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFMU0OamhnQswr0vIRAkkiAJ4nKpas2U6HI9bI22tyB2E8RKsllQCeJ1PT
+GZtc0PtZJIW61xcCPSgKo/8=
+=4lH+
+-----END PGP SIGNATURE-----
