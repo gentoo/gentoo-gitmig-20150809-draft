@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.177 2006/10/14 16:03:18 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.178 2006/10/14 18:05:27 tcort Exp $
+
+  14 Oct 2006; Thomas Cort <tcort@gentoo.org> db-1.85-r3.ebuild:
+  Stable on alpha wrt Bug #116177.
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org> db-3.2.9-r11.ebuild,
   db-4.2.52_p4-r2.ebuild:
