@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/Email-Address-1.87.0.ebuild,v 1.2 2006/10/09 14:17:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Address/Email-Address-1.87.0.ebuild,v 1.3 2006/10/14 16:47:41 agriffis Exp $
 
 inherit perl-module versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://cpan/authors/id/R/RJ/RJBS/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE="test"
 SRC_TEST="do"
 
