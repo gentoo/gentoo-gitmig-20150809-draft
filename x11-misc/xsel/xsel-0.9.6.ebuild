@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/xsel-0.9.6.ebuild,v 1.4 2006/09/13 22:35:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/xsel-0.9.6.ebuild,v 1.5 2006/10/14 16:16:55 kloeri Exp $
 
 inherit autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vergenet.net/~conrad/software/xsel/download/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ppc x86"
+KEYWORDS="~amd64 ia64 ppc x86"
 
 RDEPEND="|| ( (
 		x11-libs/libX11
