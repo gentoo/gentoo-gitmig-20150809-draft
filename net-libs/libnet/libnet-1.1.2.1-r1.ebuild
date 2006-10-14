@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1-r1.ebuild,v 1.4 2006/09/10 18:13:38 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.2.1-r1.ebuild,v 1.5 2006/10/14 19:24:14 vapier Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
+inherit eutils autotools
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
@@ -23,14 +25,11 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-fix-chksum.patch
 	epatch "${FILESDIR}"/${P}-autotools.patch
-	libtoolize --copy --force && \
-	aclocal && \
-	autoconf && \
-	automake || die "autotools failed"
+	eautoreconf
 }
 
 src_install(){
-	make DESTDIR="${D}" install || die "Failed to install"
+	emake DESTDIR="${D}" install || die "Failed to install"
 
 	doman doc/man/man3/*.3
 	dodoc VERSION README doc/*
