@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r1.ebuild,v 1.8 2006/10/14 13:51:42 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta2.ebuild,v 1.1 2006/10/14 13:51:42 malverian Exp $
 
 inherit eutils
 
-MY_P="${PN}${PV}"
+MY_P="${PN}${PV/_beta/b}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="NVIDIA Overclocking Utility"
 HOMEPAGE="http://www.linuxhardware.org/nvclock/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.linuxhardware.org/nvclock/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="gtk qt3"
 
 RDEPEND="virtual/libc
@@ -24,8 +24,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/configure.in.diff
-	epatch ${FILESDIR}/callbacks.patch
+
+	# Patch to fix broken autoconf macro "--with-qt-libs" needed below
+	# Submitted upstream, hopefully fixed in a later version
+	use qt3 && epatch ${FILESDIR}/nvclock_acinclude_qtlibs.patch
 }
 
 src_compile() {
@@ -36,7 +38,12 @@ src_compile() {
 	export QTDIR=/usr/qt/3
 	export MOC=${QTDIR}/bin/moc
 
-	./configure $(use_enable qt3 qt) $(use_enable gtk) || die
+	local myconf
+
+	# Qt3 package doesn't install symlinks from ${QTDIR}/lib64 to ${QTDIR}/lib
+	use amd64 && myconf="${myconf} --with-qt-libs=${QTDIR}/lib64"
+
+	./configure $(use_enable qt3 qt) $(use_enable gtk) ${myconf} || die
 
 	make || die
 }
