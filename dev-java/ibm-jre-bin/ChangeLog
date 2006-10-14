@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.49 2006/10/14 13:23:50 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.50 2006/10/14 15:44:23 nichoj Exp $
+
+  14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  ibm-jre-bin-1.4.2.6-r5.ebuild:
+  Stabilizing on amd64 as part of new Java system, bug #147254.
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   ibm-jre-bin-1.4.2.6-r5.ebuild:

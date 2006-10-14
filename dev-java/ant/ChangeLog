@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.97 2006/10/14 02:02:07 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.98 2006/10/14 15:58:09 nichoj Exp $
+
+  14 Oct 2006; Joshua Nichols <nichoj@gentoo.org> ant-1.6.5.ebuild:
+  Stabilizing on amd64 as part of new Java system, bug #147254.
 
   14 Oct 2006; Joshua Jackson <tsunam@gentoo.org> ant-1.6.5.ebuild:
   New java stable on x86; bug #147254
