@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0-r1.ebuild,v 1.1 2006/06/29 18:10:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0-r1.ebuild,v 1.2 2006/10/14 11:22:35 flameeyes Exp $
 
 inherit kde eutils
 
@@ -22,10 +22,3 @@ DEPEND=">=net-analyzer/nmap-2.54_beta36
 need-kde 3
 
 PATCHES="${FILESDIR}/${P}-desktop.diff"
-
-src_unpack() {
-	kde_src_unpack
-
-	rm -rf "${S}/admin" "${S}/configure"
-	ln -s "${WORKDIR}/admin" "${S}/admin"
-}
