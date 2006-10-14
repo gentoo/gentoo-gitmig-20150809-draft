@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.9 2004/06/25 03:12:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.10 2006/10/14 21:51:59 tester Exp $
 
 DESCRIPTION="SAFT implementation for UNIX and serves as a tool for asynchronous sending of files in the Internet"
 HOMEPAGE="http://www.belwue.de/projekte/saft/sendfile-us.html"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.belwue.de/pub/unix/sendfile/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 src_compile() {
