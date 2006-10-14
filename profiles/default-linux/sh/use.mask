@@ -34,6 +34,7 @@ fftw
 netjack
 mzscheme
 beagle
+eds
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
