@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6052 2006/10/14 16:27:45 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6053 2006/10/14 17:41:13 swegener Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Sven Wegener <swegener@gentoo.org> (14 Oct 2006)
+# QA: Sends verbose output to stdout, breaking tbz2 and more (bug #151239)
+=app-arch/tar-1.15.92
 
 # Christian Heim <phreak@gentoo.org> (14 Oct 2006)
 # masking media-radio/xastir for treecleaners, bug(s) 109695
