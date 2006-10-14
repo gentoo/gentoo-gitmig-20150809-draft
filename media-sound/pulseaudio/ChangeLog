@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.35 2006/10/02 04:14:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.36 2006/10/14 05:24:43 kloeri Exp $
+
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  pulseaudio-0.9.5-r4.ebuild:
+  Add ~alpha keyword.
 
 *pulseaudio-0.9.5-r4 (02 Oct 2006)
 
