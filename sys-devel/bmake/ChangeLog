@@ -1,0 +1,10 @@
+# ChangeLog for sys-devel/bmake
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.1 2006/10/14 14:22:13 drizzt Exp $
+
+*bmake-20060728 (14 Oct 2006)
+
+  14 Oct 2006; Timothy Redaelli <drizzt@gentoo.org>
+  +files/bmake-makefile.patch, +metadata.xml, +bmake-20060728.ebuild:
+  Initial import
+
