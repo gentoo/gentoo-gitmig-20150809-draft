@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/emerge-delta-webrsync
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.20 2006/10/10 18:18:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.21 2006/10/14 15:45:23 betelgeuse Exp $
+
+*emerge-delta-webrsync-3.5.1-r1 (14 Oct 2006)
+
+  14 Oct 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +files/3.5.1-md5sum.patch, +files/3.5.1-metadata.patch,
+  +emerge-delta-webrsync-3.5.1-r1.ebuild:
+  Fixed bugs #127021 and #149979. Thanks to <kdd@gmx.net> and Torsten Veller
+  <tove@gentoo.org> for the patches.
 
   10 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   emerge-delta-webrsync-3.5.1.ebuild:
