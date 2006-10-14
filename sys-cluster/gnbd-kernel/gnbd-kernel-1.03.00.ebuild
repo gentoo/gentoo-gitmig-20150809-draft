@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.1 2006/08/30 12:51:22 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.03.00.ebuild,v 1.2 2006/10/14 17:16:17 xmerlin Exp $
 
 inherit linux-mod
 
@@ -24,6 +24,8 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}/${PN}"
 
 pkg_setup() {
+	linux-mod_pkg_setup
+
 	if kernel_is 2 4; then
 		die "${P} supports only 2.6 kernels"
 	fi

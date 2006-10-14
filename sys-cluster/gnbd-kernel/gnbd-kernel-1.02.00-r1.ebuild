@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.1 2006/07/13 19:17:08 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.2 2006/10/14 17:16:17 xmerlin Exp $
 
 inherit linux-mod eutils
 
@@ -27,6 +27,8 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
+	linux-mod_pkg_setup
+
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die
