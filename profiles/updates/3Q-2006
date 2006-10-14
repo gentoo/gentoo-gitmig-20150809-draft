@@ -11,3 +11,4 @@ move rox-base/systemtray rox-base/systemtrayn
 move rox-extra/music-box rox-extra/musicbox
 slotmove =dev-libs/apr-1* 0 1
 slotmove =dev-libs/apr-util-1* 0 1
+move app-cdr/kover app-cdr/koverartist
