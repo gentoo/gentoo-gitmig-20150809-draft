@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.4 2006/10/12 22:10:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.5 2006/10/14 10:18:38 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		app-text/docbook-xsl-stylesheets )
 	dev-lang/perl
+	dev-util/pkgconfig
 	>=dev-util/intltool-0.33"
 
 PDEPEND="!alpha? ( !hppa? ( kde? ( app-i18n/skim ) ) )
