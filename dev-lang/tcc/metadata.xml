@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>lang-misc</herd>
-<maintainer>
-  <email>spider@gentoo.org</email>
-  <name>Spider</name>
-  <description>Barged in and took this for now, I needed tcc to work</description>
-</maintainer>
 </pkgmetadata>
