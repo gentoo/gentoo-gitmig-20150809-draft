@@ -37,6 +37,7 @@ beagle
 eds
 firefox
 nvtv
+xine
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
