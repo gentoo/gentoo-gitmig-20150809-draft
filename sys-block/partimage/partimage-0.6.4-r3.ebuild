@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.18 2006/10/05 03:02:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r3.ebuild,v 1.19 2006/10/14 17:07:41 xmerlin Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -51,6 +51,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-LP64-fixes.patch || die
 	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch || die
 	epatch ${FILESDIR}/${P}-datadir-path.patch || die
+	epatch ${FILESDIR}/${P}-gui.diff || die
 }
 
 src_compile() {
@@ -142,7 +143,6 @@ pkg_postinst() {
 		einfo "emerge  --config =${PF}"
 		# force a permmissions fixup
 		partimagesslperms
-		return 0
 	fi
-	chown partimag:0 /etc/partimaged/partimagedusers
+	chown partimag:0 /etc/partimaged/partimagedusers || die
 }
