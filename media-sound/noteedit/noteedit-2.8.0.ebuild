@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.0.ebuild,v 1.4 2006/10/02 22:57:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/noteedit-2.8.0.ebuild,v 1.5 2006/10/14 11:13:28 flameeyes Exp $
 
 IUSE=""
 
@@ -28,9 +28,6 @@ src_unpack() {
 	kde_src_unpack
 	epatch "${FILESDIR}/${PN}-gcc4.patch"
 	epatch "${FILESDIR}/${P}-qt-3.3.5.patch"
-
-	rm -rf "${S}/admin" "${S}/configure"
-	ln -s "${WORKDIR}/admin" "${S}/admin"
 }
 
 src_install() {
