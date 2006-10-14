@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.8 2006/09/29 13:36:56 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.70.1.ebuild,v 1.9 2006/10/14 11:12:16 flameeyes Exp $
 
 inherit kde
 
@@ -50,7 +50,9 @@ pkg_postinst() {
 }
 
 src_unpack() {
-	kde_src_unpack
+	# Don't use kde_src_unpack or the new admindir updating code
+	# will reset admindir before the configure.in.bot change is fixed.
+	unpack "${A}"
 
 	# Stupid thing to do, but upstream did it
 	mv "${S}/admin/configure.in.bot.end" "${S}/configure.in.bot"
