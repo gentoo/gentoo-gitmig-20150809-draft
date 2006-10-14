@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.28 2006/09/09 20:20:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.29 2006/10/14 15:48:55 xmerlin Exp $
+
+*newt-0.51.6-r2 (14 Oct 2006)
+
+  14 Oct 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/newt-0.51.6-assorted-fixes.patch,
+  +files/newt-0.51.6-do-not-ignore-EARLY-events-in-listbox--and-allow-textbo
+  x-to-take-focus.patch, +newt-0.51.6-r2.ebuild:
+  Merged some mdk patches.
 
 *newt-0.52.2 (09 Sep 2006)
 

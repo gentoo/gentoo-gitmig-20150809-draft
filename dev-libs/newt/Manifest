@@ -1,7 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266 RMD160 e4d6e663febfd5781267fec5db373e629700467f SHA1 4e3bacf0880fc221f26dd003adaa632abc35c86c SHA256 23af6c0ba7e968c37dc036fdb9341d3e5122a4d21edea69995e944921448be18
 MD5 27e2ae6e4d99b4a772f4520a89ce73f9 files/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266
 RMD160 e4d6e663febfd5781267fec5db373e629700467f files/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266
 SHA256 23af6c0ba7e968c37dc036fdb9341d3e5122a4d21edea69995e944921448be18 files/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266
+AUX newt-0.51.6-assorted-fixes.patch 2794 RMD160 a5c4aee71f56524afe06e363d871ee2803b9410c SHA1 d4af3262835f948d1938137c5693066d55a47625 SHA256 346a2158573e2bff6587d62b31b26c476f53827f00f9eac0c9bac361d7b7d1b0
+MD5 4fbcd83adb5e30c91c0747e61f5cdf3a files/newt-0.51.6-assorted-fixes.patch 2794
+RMD160 a5c4aee71f56524afe06e363d871ee2803b9410c files/newt-0.51.6-assorted-fixes.patch 2794
+SHA256 346a2158573e2bff6587d62b31b26c476f53827f00f9eac0c9bac361d7b7d1b0 files/newt-0.51.6-assorted-fixes.patch 2794
+AUX newt-0.51.6-do-not-ignore-EARLY-events-in-listbox--and-allow-textbox-to-take-focus.patch 645 RMD160 67e04c4ba98e67c7216fcf1a3169939b29839c25 SHA1 e4e81acd14784572bc794e353f43b9d37b70f4a8 SHA256 b0590b06a77516a4c72c24123a92fea05e2c66f8ea81ebee81a5a7996bdbfa27
+MD5 e7ba92d880747f86fb32cffb175003ad files/newt-0.51.6-do-not-ignore-EARLY-events-in-listbox--and-allow-textbox-to-take-focus.patch 645
+RMD160 67e04c4ba98e67c7216fcf1a3169939b29839c25 files/newt-0.51.6-do-not-ignore-EARLY-events-in-listbox--and-allow-textbox-to-take-focus.patch 645
+SHA256 b0590b06a77516a4c72c24123a92fea05e2c66f8ea81ebee81a5a7996bdbfa27 files/newt-0.51.6-do-not-ignore-EARLY-events-in-listbox--and-allow-textbox-to-take-focus.patch 645
 AUX newt-0.51.6-newttextbox-memoryleak.patch 391 RMD160 353e78aebc1d634b4f5f88796139569d1e2e756d SHA1 22c605638a0fb0034782152061a3c27fb4a1e994 SHA256 d361860448a069f01fa82dac061f23c6e7d8b25669f043c63154169027fcb92b
 MD5 e2afea648371131edd033fcc81b4a1d0 files/newt-0.51.6-newttextbox-memoryleak.patch 391
 RMD160 353e78aebc1d634b4f5f88796139569d1e2e756d files/newt-0.51.6-newttextbox-memoryleak.patch 391
@@ -51,7 +62,7 @@ MD5 9910bf0c9ea69bf046e7801c2c6958ea files/newt-gpm-fix.diff 177
 RMD160 454f9c72c883f0e59113a31e90d1ad1dacd0a13b files/newt-gpm-fix.diff 177
 SHA256 ad2dabadf0863313790cd9f8e41babd0ece230b08df735073d74b3cb7b20f291 files/newt-gpm-fix.diff 177
 DIST newt-0.50.35.tar.gz 106345
-DIST newt-0.51.6.tar.gz 155739
+DIST newt-0.51.6.tar.gz 155739 RMD160 88832ca74fa06ef30739c33e5c75b232b2b149e2 SHA1 6dc9dc3375f0d066187f829719856877342ec3c7 SHA256 b80f265cd204e03fe9f793ab5750269eec71caf9253d2df04792425d22a49375
 DIST newt-0.52.2-9.src.rpm 283433 RMD160 5e33ff2ea5da7e602d0b91287c578bf77c1f6e5b SHA1 eda1f3e1cfb7bed791654fa931c8e6d8904e11d1 SHA256 c28b81fd0464e9e8888c3e79a0fd5485cdfb4f2bb8327af373321735a7e9035b
 EBUILD newt-0.50.35-r2.ebuild 857 RMD160 dc47a7ecbbb30c058cf34ed902687cce7b2d4024 SHA1 f42af50233ce189be4d1668c0b1bff33cc10edec SHA256 252a1ad33f9c12c62c8b2696e1e816c448ca5340ed7e91c058e319bcd90ff515
 MD5 8343871eafa0db05268b394e8f313e97 newt-0.50.35-r2.ebuild 857
@@ -69,6 +80,10 @@ EBUILD newt-0.51.6-r1.ebuild 1988 RMD160 04508a31330b7524b2ec3aa8011103e3803a5a7
 MD5 092498850a91cd5dae321a869ab0c28d newt-0.51.6-r1.ebuild 1988
 RMD160 04508a31330b7524b2ec3aa8011103e3803a5a79 newt-0.51.6-r1.ebuild 1988
 SHA256 165901df486f34f2bdaad239bb2e2a92341c7bb8ed3b6b2d29c4adfaf97dab3c newt-0.51.6-r1.ebuild 1988
+EBUILD newt-0.51.6-r2.ebuild 2152 RMD160 d915f5992ad8842e91fb01e6ea634072d6b0911f SHA1 3a732c9635fe8d8a63b221591ae032e8fa1e25ff SHA256 7381df7757b8aa1e0900c4b3bde2bf81acc6a5ad342fd636ac808a59133a7047
+MD5 ec1b93883f6a942cb96e5e247a2d756b newt-0.51.6-r2.ebuild 2152
+RMD160 d915f5992ad8842e91fb01e6ea634072d6b0911f newt-0.51.6-r2.ebuild 2152
+SHA256 7381df7757b8aa1e0900c4b3bde2bf81acc6a5ad342fd636ac808a59133a7047 newt-0.51.6-r2.ebuild 2152
 EBUILD newt-0.51.6.ebuild 1918 RMD160 0d1a3f437ad54e52be1469f53d8a90fd8dbea2ed SHA1 16239c4cf788ae49d830a27802ff758207cd042d SHA256 da02d0a3cfc84709649df217c2a533b278413e6933ea71a1fa19889bb8a5b38b
 MD5 c853c0e52c8a5c4f1c100fa32efd39e1 newt-0.51.6.ebuild 1918
 RMD160 0d1a3f437ad54e52be1469f53d8a90fd8dbea2ed newt-0.51.6.ebuild 1918
@@ -77,10 +92,10 @@ EBUILD newt-0.52.2.ebuild 2131 RMD160 1e61448ebb4ad7345b61e32c233c456f0d761903 S
 MD5 c6487d366c1040f47cf4a24a6023f4fe newt-0.52.2.ebuild 2131
 RMD160 1e61448ebb4ad7345b61e32c233c456f0d761903 newt-0.52.2.ebuild 2131
 SHA256 d7703a69310a576e866d1f230024dcb7d0081f086f61a073ba92b471c40d6f6f newt-0.52.2.ebuild 2131
-MISC ChangeLog 4357 RMD160 dcd302dff6eef8933d7e02d97de38a7cc9fa7dec SHA1 1431f587ac6d442fc99268af9e55b09bbc86361f SHA256 1a115169e5d61b0961b25ff2ed82b87785c76fbcb127922318dd6150c2bb221e
-MD5 1bbbdee59e62c9f073abbed94f2ea158 ChangeLog 4357
-RMD160 dcd302dff6eef8933d7e02d97de38a7cc9fa7dec ChangeLog 4357
-SHA256 1a115169e5d61b0961b25ff2ed82b87785c76fbcb127922318dd6150c2bb221e ChangeLog 4357
+MISC ChangeLog 4637 RMD160 bc3e4991e12279cfac4f00e6d05e5f1c64b4f2a7 SHA1 eee82ce230edf00d9aa42effdfd75befdab67d1b SHA256 eb26621b5db9db93ca78d76cb01aa6b4c03f60f5ff449931eeea2edb74455359
+MD5 d49557a405bc3711560559c1e268fcd7 ChangeLog 4637
+RMD160 bc3e4991e12279cfac4f00e6d05e5f1c64b4f2a7 ChangeLog 4637
+SHA256 eb26621b5db9db93ca78d76cb01aa6b4c03f60f5ff449931eeea2edb74455359 ChangeLog 4637
 MISC metadata.xml 296 RMD160 d7a28e6b51fad1a08df2463a91ca67a01f1532cb SHA1 18c4543ffb5a19f961b1fb3a93f9dfb778ec4aec SHA256 f459d90a4ac8a519720141bb9fe29415d65805b03d8288537150350aef1abc3e
 MD5 917caa8876e58604c0e0f84dcb598380 metadata.xml 296
 RMD160 d7a28e6b51fad1a08df2463a91ca67a01f1532cb metadata.xml 296
@@ -94,12 +109,22 @@ SHA256 5f188dcf137ed88f05f94f864f73ab37b51847dc0546c495a6f0a512df52c52f files/di
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r4 64
 RMD160 e5aac86e932b306f79f5d963fe4e6cdcd7e49922 files/digest-newt-0.50.35-r4 64
 SHA256 5f188dcf137ed88f05f94f864f73ab37b51847dc0546c495a6f0a512df52c52f files/digest-newt-0.50.35-r4 64
-MD5 f6412dbeaf1b1f3d11fc8c0fc08c1ee2 files/digest-newt-0.51.6 63
-RMD160 ddfc3150f1a64cde0526caa699c2b29fcbbadfc8 files/digest-newt-0.51.6 63
-SHA256 1332033b81330f23b4043da6388ceb7b1dfbac335d8130ad4a1a5a592cb97b91 files/digest-newt-0.51.6 63
-MD5 f6412dbeaf1b1f3d11fc8c0fc08c1ee2 files/digest-newt-0.51.6-r1 63
-RMD160 ddfc3150f1a64cde0526caa699c2b29fcbbadfc8 files/digest-newt-0.51.6-r1 63
-SHA256 1332033b81330f23b4043da6388ceb7b1dfbac335d8130ad4a1a5a592cb97b91 files/digest-newt-0.51.6-r1 63
+MD5 0193f90ae9503e90848e6d1abf283f06 files/digest-newt-0.51.6 235
+RMD160 85e7d0264b50a9e59e63d0c1bd0cd1d678b01439 files/digest-newt-0.51.6 235
+SHA256 1eff2327aa92b622f5fbefd40f8ac16b1147f58a93674d3172f4bdc00348b2f4 files/digest-newt-0.51.6 235
+MD5 0193f90ae9503e90848e6d1abf283f06 files/digest-newt-0.51.6-r1 235
+RMD160 85e7d0264b50a9e59e63d0c1bd0cd1d678b01439 files/digest-newt-0.51.6-r1 235
+SHA256 1eff2327aa92b622f5fbefd40f8ac16b1147f58a93674d3172f4bdc00348b2f4 files/digest-newt-0.51.6-r1 235
+MD5 0193f90ae9503e90848e6d1abf283f06 files/digest-newt-0.51.6-r2 235
+RMD160 85e7d0264b50a9e59e63d0c1bd0cd1d678b01439 files/digest-newt-0.51.6-r2 235
+SHA256 1eff2327aa92b622f5fbefd40f8ac16b1147f58a93674d3172f4bdc00348b2f4 files/digest-newt-0.51.6-r2 235
 MD5 827dd53683a665bf48937f03274d9bd8 files/digest-newt-0.52.2 244
 RMD160 c54b1b7a1e612099311f9100c926830303f000e0 files/digest-newt-0.52.2 244
 SHA256 8d998fcafd2350671a1ae30371d3785a4750b7c3f41cafee6ef7f84adbf035c6 files/digest-newt-0.52.2 244
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.4 (GNU/Linux)
+
+iD8DBQFFMRZ5gMUyd/cdjWsRAuWCAJ9he/45qvdxz2yZhnhHvu/+xImEcwCfZ2vz
+mCTOdN/ApDPpaUK6EPGe5CQ=
+=PtxJ
+-----END PGP SIGNATURE-----
