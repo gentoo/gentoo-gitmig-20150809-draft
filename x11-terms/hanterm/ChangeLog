@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.17 2006/02/13 03:11:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.18 2006/10/14 10:50:07 flameeyes Exp $
+
+  14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  hanterm-3.1.6-r2.ebuild:
+  Add missing libXaw dependency (thanks to Patrick Lauer in bug #150624), this
+  does not solve building though.
 
   13 Feb 2006; Alastair Tse <liquidx@gentoo.org> hanterm-3.1.6-r2.ebuild:
   modular-x-ified
