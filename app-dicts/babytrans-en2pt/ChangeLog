@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/babytrans-en2pt
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.7 2005/05/27 18:31:07 angusyoung Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.8 2006/10/14 11:51:48 kloeri Exp $
+
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove angusyoung from metadata.xml due to retiring.
 
   27 May 2005; Otavio Piske <angusyoung@gentoo.org>
   babytrans-en2pt-0.2.ebuild:
