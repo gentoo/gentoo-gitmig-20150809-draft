@@ -15,19 +15,19 @@ RMD160 7afdb2a06645eb0c8e93b2c217214ca07820feaf files/desktop-file-utils-0.8-noe
 SHA256 af306f66e1396f2a187b8ffd26f95b389e7f88ce24c3ae2055bcafc0c2dadeab files/desktop-file-utils-0.8-noemacs.patch 417
 DIST desktop-file-utils-0.10.tar.gz 341508 RMD160 659b3ca496522f922fdc243a222f6ca81fc85ebe SHA1 e534223872b928ce4b58518d56a8bd883bb60a82 SHA256 d354b826014b27a338681c448b163d9d9c62d31e4691613514dbbdceab264e96
 DIST desktop-file-utils-0.11.tar.gz 340632 RMD160 c3f517e1a3207b3db1a61a98e29971f368a0f93a SHA1 785df1cac96cc46a43391b248e61349880afbcac SHA256 a556cc7f8813c038d746b2cae845ca57f9754d63ee3804268b3acdea59c6c443
-DIST desktop-file-utils-0.9.tar.gz 424432
-EBUILD desktop-file-utils-0.10-r1.ebuild 1025 RMD160 c95d040b1cbc2234a533b803923f733ac6fc70f3 SHA1 88e8cd1bf1856d0868fc7e0695c598cf75d4a74b SHA256 1a800ea261a2d2f4129c3f76007cd957d4b8e41fb87bc58cc659c4dbf030d9c1
-MD5 2c25a4cc1f76a37e5cee1e1c26818b13 desktop-file-utils-0.10-r1.ebuild 1025
-RMD160 c95d040b1cbc2234a533b803923f733ac6fc70f3 desktop-file-utils-0.10-r1.ebuild 1025
-SHA256 1a800ea261a2d2f4129c3f76007cd957d4b8e41fb87bc58cc659c4dbf030d9c1 desktop-file-utils-0.10-r1.ebuild 1025
-EBUILD desktop-file-utils-0.10.ebuild 923 RMD160 f7a67d1de372236aab22a43be1b794ace0392c3b SHA1 53b25a8f360eceed417d91b5cff719055f6d4f47 SHA256 7ffd0be53195ac69c5fcd38efa922b4c36a1018840e8ff97a162fae0bd4d986c
-MD5 8a5a56ffb7095f0a23207e68c5a8331d desktop-file-utils-0.10.ebuild 923
-RMD160 f7a67d1de372236aab22a43be1b794ace0392c3b desktop-file-utils-0.10.ebuild 923
-SHA256 7ffd0be53195ac69c5fcd38efa922b4c36a1018840e8ff97a162fae0bd4d986c desktop-file-utils-0.10.ebuild 923
-EBUILD desktop-file-utils-0.11.ebuild 1000 RMD160 df42a4bca5ca8f30406eb198705581d65174eba6 SHA1 6581efb8485c7239fc0404d783b5471e8d379caa SHA256 5b0e065c042f878c5d256860a9e0e698866be3120965804888d13a487bb8d53e
-MD5 2e2a536d502e724ab59ed2870318c995 desktop-file-utils-0.11.ebuild 1000
-RMD160 df42a4bca5ca8f30406eb198705581d65174eba6 desktop-file-utils-0.11.ebuild 1000
-SHA256 5b0e065c042f878c5d256860a9e0e698866be3120965804888d13a487bb8d53e desktop-file-utils-0.11.ebuild 1000
+DIST desktop-file-utils-0.9.tar.gz 424432 RMD160 bf8d1108d158bfe37012e20ffc825477b43bceb7 SHA1 5e8e282625179975fe5c0f96ac262aa853aa3814 SHA256 54227bee847ab2f001550532e06eb3c31e55dfc84b0eccc8ac9ac47544e06cb7
+EBUILD desktop-file-utils-0.10-r1.ebuild 1032 RMD160 749c1038c66134d1bf2f9a10229e049069589b3c SHA1 2dfb244e5cf85feb25daedbb71b1f96491c427ff SHA256 8d4fb2df9a9fb636f9e04845baf2700a540f3fcb0b7c0cfb45bf34a7362bf3db
+MD5 4a471c77235d69348533314aeabb2cbe desktop-file-utils-0.10-r1.ebuild 1032
+RMD160 749c1038c66134d1bf2f9a10229e049069589b3c desktop-file-utils-0.10-r1.ebuild 1032
+SHA256 8d4fb2df9a9fb636f9e04845baf2700a540f3fcb0b7c0cfb45bf34a7362bf3db desktop-file-utils-0.10-r1.ebuild 1032
+EBUILD desktop-file-utils-0.10.ebuild 925 RMD160 4cf0300e5d2d2c2348c252fdca4df801cfae6e07 SHA1 fa181957ed9cd348a1635dcba1fbc41699740092 SHA256 105b9dba2b3650fc2843aec5df69f46e1bdf4718a0a8e535f4b9743202a334b4
+MD5 d71073d1e323228d11ac91cf373863db desktop-file-utils-0.10.ebuild 925
+RMD160 4cf0300e5d2d2c2348c252fdca4df801cfae6e07 desktop-file-utils-0.10.ebuild 925
+SHA256 105b9dba2b3650fc2843aec5df69f46e1bdf4718a0a8e535f4b9743202a334b4 desktop-file-utils-0.10.ebuild 925
+EBUILD desktop-file-utils-0.11.ebuild 1008 RMD160 c757fe3ea6a1fdc75c006838841eeb94c626c9c0 SHA1 3da98fa62303bd4fc14fa16757812074de767567 SHA256 3ddb3550f143d20ac935d00c5667c6f1f905863a11d39be23c8beab7ad52999b
+MD5 7670ac69c1df30c96f1a2e5fc1e5883c desktop-file-utils-0.11.ebuild 1008
+RMD160 c757fe3ea6a1fdc75c006838841eeb94c626c9c0 desktop-file-utils-0.11.ebuild 1008
+SHA256 3ddb3550f143d20ac935d00c5667c6f1f905863a11d39be23c8beab7ad52999b desktop-file-utils-0.11.ebuild 1008
 EBUILD desktop-file-utils-0.9.ebuild 916 RMD160 6d18d338af1a09aacbc531434f72ef5708cb4af5 SHA1 05b6baff452eed28a31e176b2177f6c9a8833d30 SHA256 c16f92a1f7b83ff5b34d26e6df6f04246854540e1d1742928d05ee19ad65211d
 MD5 a14cfd2626eb7ec319b7489be271998a desktop-file-utils-0.9.ebuild 916
 RMD160 6d18d338af1a09aacbc531434f72ef5708cb4af5 desktop-file-utils-0.9.ebuild 916
@@ -49,13 +49,13 @@ SHA256 0a9c3c307db1625354257f848f4bf75c746b51f9e8a6fcbacd3ea36d41857cc7 files/di
 MD5 02a68d9dc78d5601ded487f3a6ec8416 files/digest-desktop-file-utils-0.11 271
 RMD160 8c15768e3c2aec00ed51422c6e7a79de82a2f1e1 files/digest-desktop-file-utils-0.11 271
 SHA256 f6b2f32e46676f41cbe43a4e9988a0e96677c94a979722aa1b3f534a47b34935 files/digest-desktop-file-utils-0.11 271
-MD5 f7113107af039bf8cf5156ecc74e62f5 files/digest-desktop-file-utils-0.9 74
-RMD160 0fdb29d29970b778e3b108576fda1a23652c1448 files/digest-desktop-file-utils-0.9 74
-SHA256 9ac5619fdb9b5a10babafa2810c2d5e057f1cb8f0065a124d19dcc827a5c6b3a files/digest-desktop-file-utils-0.9 74
+MD5 7d3fb517731a9f4cfab979c9e8f767e9 files/digest-desktop-file-utils-0.9 268
+RMD160 1e6927a823ed04a1be98c06245b3da0fc0000eca files/digest-desktop-file-utils-0.9 268
+SHA256 9adddd9e9368199946ed631fb9e918a08fbd259c86b79dfea17a774621b5da62 files/digest-desktop-file-utils-0.9 268
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFBr+PomPajV0RnrERAm2UAJ9eBytQ2jFXlCPLNo8+Zad+jTG3BgCfapEo
-KvDr3fnr5uCrD9/tOClI8dE=
-=oY/t
+iD8DBQFFMU+IamhnQswr0vIRAnc/AJ9XRsur6MWzPMpqnNZsIuhIAvbFDQCghPpO
+eg9lFWTH7FAHkUHeA37WJsI=
+=OfsT
 -----END PGP SIGNATURE-----
