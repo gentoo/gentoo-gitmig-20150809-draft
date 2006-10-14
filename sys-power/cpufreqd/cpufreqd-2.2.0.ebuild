@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.2.0.ebuild,v 1.1 2006/10/07 07:00:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/cpufreqd-2.2.0.ebuild,v 1.2 2006/10/14 15:02:35 phreak Exp $
 
 inherit eutils
 
-NVCLOCK_VERSION="0.8b2"
+NVCLOCK_VERSION="0.8b"
 
 DESCRIPTION="CPU Frequency Daemon"
 HOMEPAGE="http://cpufreqd.sourceforge.net"
