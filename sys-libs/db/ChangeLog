@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.175 2006/10/14 02:19:56 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.176 2006/10/14 02:45:55 nichoj Exp $
+
+  14 Oct 2006; Joshua Nichols <nichoj@gentoo.org> db-3.2.9-r11.ebuild,
+  db-4.2.52_p4-r2.ebuild:
+  Stabilizing on ppc64 as part of new Java system, bug #147254.
 
   14 Oct 2006; Joshua Jackson <tsunam@gentoo.org> db-3.2.9-r11.ebuild,
   db-4.2.52_p4-r2.ebuild:
