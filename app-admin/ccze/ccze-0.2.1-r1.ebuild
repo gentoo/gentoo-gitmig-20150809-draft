@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r1.ebuild,v 1.1 2006/10/14 18:15:15 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ccze/ccze-0.2.1-r1.ebuild,v 1.2 2006/10/14 18:27:14 drizzt Exp $
 
 inherit fixheadtails autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://bonehunter.rulez.org/pub/ccze/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
