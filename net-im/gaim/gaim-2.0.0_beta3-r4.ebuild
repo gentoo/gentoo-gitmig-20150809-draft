@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r4.ebuild,v 1.1 2006/10/14 04:46:20 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r4.ebuild,v 1.2 2006/10/14 15:22:30 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app
 
@@ -16,7 +16,8 @@ SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="avahi audiofile bonjour cjk dbus debug doc eds gadu gnutls meanwhile mono nas nls perl silc spell startup-notification tcl tk xscreensaver custom-flags ssl msn"
+IUSE="avahi audiofile bonjour cjk crypt dbus debug doc eds gadu gnutls meanwhile mono nas nls perl silc spell startup-notification tcl
+tk xscreensaver custom-flags ssl msn"
 
 RDEPEND="
 	audiofile? ( media-libs/libao
@@ -53,6 +54,7 @@ DEPEND="$RDEPEND
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
+PDEPEND="crypt? ( x11-plugins/gaim-encryption )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -141,7 +143,6 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/"${P}"-as-needed.patch
 	epatch "${FILESDIR}"/"${P}"-avahi-compat.patch
-	epatch "${FILESDIR}"/"${P}"-gtkconv.diff
 	epatch "${DISTDIR}"/"${P}"-dbus.patch.tar.bz2
 	eautoreconf || die "Failed running eautoreconf"
 }
