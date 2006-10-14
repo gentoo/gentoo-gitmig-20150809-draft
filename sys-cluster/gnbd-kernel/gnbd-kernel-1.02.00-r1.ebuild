@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.2 2006/10/14 17:16:17 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-1.02.00-r1.ebuild,v 1.3 2006/10/14 18:24:14 xmerlin Exp $
 
 inherit linux-mod eutils
 
@@ -44,12 +44,12 @@ src_compile() {
 	check_KV
 	set_arch_to_kernel
 
-	./configure --kernel_src=${KERNEL_DIR} --verbose || die
-	emake || die
+	./configure --kernel_src=${KERNEL_DIR} --verbose || die "configure problem"
+	emake || die "compile problem"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install problem"
 	rm -f ${D}/usr/include/linux/gnbd.h || die
 }
 

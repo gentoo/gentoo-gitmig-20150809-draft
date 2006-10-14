@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.03.00.ebuild,v 1.1 2006/08/30 13:06:36 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.03.00.ebuild,v 1.2 2006/10/14 18:31:38 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -23,12 +23,12 @@ DEPEND=">=sys-cluster/ccs-1.03.00
 S="${WORKDIR}/${MY_P}/${PN}"
 
 src_compile() {
-	./configure || die
-	emake || die
+	./configure || die "configure problem"
+	emake || die "compile problem"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install problem"
 
 	into /
 	dosbin ${FILESDIR}/${PN}_xen || die

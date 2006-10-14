@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/magma-1.02.00-r1.ebuild,v 1.3 2006/08/25 07:38:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma/magma-1.02.00-r1.ebuild,v 1.4 2006/10/14 18:26:35 xmerlin Exp $
 
 inherit eutils
 
@@ -31,11 +31,11 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure || die
-	emake || die
+	./configure || die "configure problem"
+	emake || die "compile problem"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install problem"
 	dodoc doc/*
 }
