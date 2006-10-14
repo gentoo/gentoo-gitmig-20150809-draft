@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r2.ebuild,v 1.8 2006/03/25 14:07:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/submount/submount-0.9-r2.ebuild,v 1.9 2006/10/14 13:56:56 dsd Exp $
 
 inherit linux-mod eutils
 
@@ -40,6 +40,9 @@ src_unpack() {
 
 	# Fix compile on 2.6.16, bug #119538
 	epatch ${FILESDIR}/${P}-sem2mutex.patch
+
+	# Fix compile on 2.6.18, bug #148381
+	epatch ${FILESDIR}/${P}-2.6.18.patch
 }
 
 src_compile() {
