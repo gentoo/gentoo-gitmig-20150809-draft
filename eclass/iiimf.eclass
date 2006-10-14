@@ -1,12 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.12 2005/07/06 20:23:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.13 2006/10/14 09:55:06 flameeyes Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
 # The IIIMF eclass is used for compilation and installation of IIIMF
 # libraries, servers, clients and modules within the Portage system.
 #
+
+WANT_AUTOMAKE="1.4"
+WANT_AUTOCONF="2.1"
+
+inherit autotools
 
 EXPORT_FUNCTIONS src_compile src_install
 
@@ -26,15 +31,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="debug"
 
-DEPEND="virtual/libc"
-
 S="${WORKDIR}/${IMSDK}/${PN}"
 
 iiimf_src_compile() {
 
 	if [ "${PV:0:2}" -eq 12 ] ; then
-		libtoolize --copy --force
-		./autogen.sh
+		eautoreconf
 	fi
 
 	econf --enable-optimize \
