@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.12 2006/04/22 05:52:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.13 2006/10/14 09:21:25 corsair Exp $
 
 inherit linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.5/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~s390 x86"
+KEYWORDS="~amd64 ~ppc64 ~s390 x86"
 IUSE=""
 
 DEPEND="virtual/linux-sources

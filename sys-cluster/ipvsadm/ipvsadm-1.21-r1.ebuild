@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.10 2005/09/16 09:36:14 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.11 2006/10/14 09:21:25 corsair Exp $
 
 inherit linux-info
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc
 SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.4/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~ppc ~ppc64 x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
