@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.11 2006/10/05 03:02:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.12 2006/10/14 16:01:37 xmerlin Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -61,6 +61,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-LP64-fixes.patch || die
 	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch || die
 	epatch ${FILESDIR}/${P}-datadir-path.patch || die
+	epatch ${FILESDIR}/${P}-dont-discard-error-message-in-batch-mode.patch || die
+	epatch ${FILESDIR}/${P}-save_file_and_rest_file_actions.patch || die
+	epatch ${FILESDIR}/${P}-varargs.patch || die
 }
 
 src_compile() {
