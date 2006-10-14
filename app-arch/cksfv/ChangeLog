@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cksfv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.23 2006/10/14 19:19:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cksfv/ChangeLog,v 1.24 2006/10/14 19:25:13 drizzt Exp $
+
+  14 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> cksfv-1.3.9.ebuild:
+  Added ~x86-fbsd keyword
 
 *cksfv-1.3.9 (14 Oct 2006)
 
