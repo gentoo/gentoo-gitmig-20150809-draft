@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.16.1.ebuild,v 1.1 2006/09/07 03:59:50 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.16.1.ebuild,v 1.2 2006/10/14 21:21:18 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="ipv6 mad ogg vorbis"
 
 RDEPEND=">=dev-libs/glib-1.3.7
@@ -31,7 +31,6 @@ RDEPEND=">=dev-libs/glib-1.3.7
 	vorbis? ( >=media-plugins/gst-plugins-vorbis-0.10 )
 	mad? ( >=media-plugins/gst-plugins-mad-0.10 )
 	>=media-plugins/gst-plugins-gconf-0.10.1"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=app-text/scrollkeeper-0.3.11
