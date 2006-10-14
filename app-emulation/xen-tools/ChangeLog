@@ -1,6 +1,46 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.17 2006/08/14 07:11:47 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.18 2006/10/14 00:00:03 aross Exp $
+
+*xen-tools-3.0.2-r4 (13 Oct 2006)
+
+  13 Oct 2006; <aross@gentoo.org>
+  +files/3.0.2-r4/pygrub-progsreiserfs-0.3.1.patch,
+  +files/3.0.2-r4/xc_ptrace.patch, +files/3.0.2-r4/xendomains.initd,
+  +files/3.0.2-r4/xend.initd, +xen-tools-3.0.2-r4.ebuild:
+  Fix a PTRACE_* compilation error, thanks to Thomas Veith <th_veith@web.de>
+  in #151014.
+  
+  Introduce the pygrub local USE flag and fix a compile error when
+  sys-fs/progsreiserfs is installed, thanks to M. Edward Borasky
+  <znmeb@cesmail.net> and Mauricio Zambrano <mauro@webdb.homelinux.net> in
+  #137137.
+  
+  Make ntp-client start after xend, thanks to Harris Landgarten
+  <harrisl@lhjonline.com> in #144057.
+  
+  Make /etc/init.d/xendomains correctly handle domains with numbers, periods
+  and/or hyphens, thanks to Robert S <robert_s@emailme.net.au> in #148628.
+  
+  Fix a compile error with python-2.5, thanks to Charlie Shepherd
+  <masterdriverz@gmail.com> and Marien Zwart <marienz@gentoo.org> in #149138.
+  
+  Fix a compilation error on AMD64 with a 64 bit kernel and 32 bit userland,
+  thanks to tonich <tonich@artparade.ru> and Sven Wegener
+  <swegener@gentoo.org> in #143999.
+  
+  Make /etc/init.d/xend fail gracefully when started in a non-privileged
+  domain or unmodified kernel, thanks to Christian Hesse <mail@earthworm.de>
+  and Robert S <robert_s@emailme.net.au> in #148486.
+  
+  Only warn instead of dying when python is build with stack smashing
+  protection (ssp), thanks to Tuan Van <langthang@gentoo.org>, Raimonds Cicans
+  <ray@apollo.lv>, Brad Plant <bplant@westnet.com.au> and Sven Wegener
+  <swegener@gentoo.org> in #141866.
+  
+  Replace the hardened USE flag with test-flag-CC from flag-o-matic.eclass to
+  avoid compile errors with gcc-4.1 and USE=hardened, thanks to Richard
+  Benjamin Voigt <bvoigt@kas.com> in #147876.
 
 *xen-tools-3.0.2-r3 (15 Aug 2006)
 
