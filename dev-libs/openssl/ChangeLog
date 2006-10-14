@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.205 2006/10/01 21:03:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.206 2006/10/14 04:02:27 weeve Exp $
+
+  14 Oct 2006; Jason Wever <weeve@gentoo.org> openssl-0.9.8d.ebuild:
+  Added fix from bug #149958 for ppc64.
 
   01 Oct 2006; Mike Frysinger <vapier@gentoo.org>
   +files/openssl-0.9.8-makedepend.patch, openssl-0.9.7l.ebuild,
