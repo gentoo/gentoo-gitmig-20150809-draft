@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.13 2006/04/21 17:00:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.10.2.ebuild,v 1.14 2006/10/14 20:24:27 truedfx Exp $
+
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 
 inherit eutils autotools
 
