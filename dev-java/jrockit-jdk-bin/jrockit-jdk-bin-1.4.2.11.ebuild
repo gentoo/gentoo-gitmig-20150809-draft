@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.11.ebuild,v 1.3 2006/10/14 01:39:03 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.4.2.11.ebuild,v 1.4 2006/10/14 13:27:43 nichoj Exp $
 
 IUSE=""
 
@@ -18,14 +18,13 @@ UPSTREAM_RELEASE="26.4.0"
 
 SRC_URI_BASE="jrockit-R${UPSTREAM_RELEASE}-jdk${PV_MAJOR}_${PV_EXTRA}-linux-"
 SRC_URI="ia64? ( ${SRC_URI_BASE}ipf.bin )
-		x86? ( ${SRC_URI_BASE}ia32.bin )
-		amd64? ( ${SRC_URI_BASE}ia32.bin )"
+		x86? ( ${SRC_URI_BASE}ia32.bin )"
 DESCRIPTION="BEA WebLogic's J2SE Development Kit, R${UPSTREAM_RELEASE}"
 
 HOMEPAGE="http://commerce.bea.com/products/weblogicjrockit/jrockit_prod_fam.jsp"
 LICENSE="jrockit"
 SLOT="1.4"
-KEYWORDS="~amd64 ~ia64 x86"
+KEYWORDS="-* ~ia64 x86"
 DEPEND=">=dev-java/java-config-0.2.5
 	>=app-arch/unzip-5.50-r1"
 
