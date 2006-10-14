@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sary
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.22 2006/03/05 05:34:33 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/ChangeLog,v 1.23 2006/10/14 09:22:17 flameeyes Exp $
+
+  14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> sary-1.1.0.ebuild,
+  sary-1.2.0.ebuild:
+  Add missing pkgconfig dependencies, thanks to Patrick Lauer in bug #151298.
 
   05 Mar 2006; MATSUU Takuto <matsuu@gentoo.org> sary-1.2.0.ebuild:
   Restricted test.
