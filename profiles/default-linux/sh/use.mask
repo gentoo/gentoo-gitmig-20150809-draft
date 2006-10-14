@@ -36,6 +36,7 @@ mzscheme
 beagle
 eds
 firefox
+nvtv
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
