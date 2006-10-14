@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.17 2006/05/26 20:44:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.18 2006/10/14 13:46:34 tove Exp $
+
+*pal-0.3.4-r1 (14 Oct 2006)
+
+  14 Oct 2006; Torsten Veller <tove@gentoo.org> +files/0.3.4-ldflags.patch,
+  +files/0.3.4-strip.patch, metadata.xml, -pal-0.3.3.ebuild,
+  pal-0.3.4.ebuild, +pal-0.3.4-r1.ebuild, pal-0.3.5_pre1.ebuild:
+  Removed old ebuild.  Added dev-util/pkgconfig to DEPEND (#151287).
+  Added 0.3.4-r1 to adjust CC, LDFLAGS, no strip, also added nls useflag.
 
   26 May 2006; Diego Pettenò <flameeyes@gentoo.org> pal-0.3.3.ebuild,
   pal-0.3.4.ebuild, pal-0.3.5_pre1.ebuild:

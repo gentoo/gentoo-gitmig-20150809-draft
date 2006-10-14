@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.3.4.ebuild,v 1.9 2006/05/26 20:44:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.3.4.ebuild,v 1.10 2006/10/14 13:46:34 tove Exp $
 
 DESCRIPTION="pal command-line calendar program"
 HOMEPAGE="http://palcal.sourceforge.net/"
@@ -16,6 +16,7 @@ RDEPEND=">=dev-libs/glib-2.0
 	virtual/libintl"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 S="${WORKDIR}/${P}/src"
