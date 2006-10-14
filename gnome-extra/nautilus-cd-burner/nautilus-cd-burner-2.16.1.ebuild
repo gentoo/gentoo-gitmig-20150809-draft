@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.16.1.ebuild,v 1.1 2006/10/12 08:17:46 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.16.1.ebuild,v 1.2 2006/10/14 21:04:28 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="cdr dvdr static"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.1.3.1
@@ -23,10 +23,8 @@ RDEPEND=">=gnome-base/gnome-vfs-2.1.3.1
 	>=gnome-base/gnome-mount-0.4
 	>=sys-apps/hal-0.5.7
 	>=sys-apps/dbus-0.6.0
-
 	cdr? ( virtual/cdrtools )
 	dvdr? ( >=app-cdr/dvd+rw-tools-6.1 )"
-
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
