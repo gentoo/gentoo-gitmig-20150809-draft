@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.53 2006/10/14 16:27:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.54 2006/10/14 21:31:11 agriffis Exp $
+
+  14 Oct 2006; Aron Griffis <agriffis@gentoo.org> -rep-gtk-0.18-r2.ebuild,
+  rep-gtk-0.18-r3.ebuild:
+  Mark 0.18-r3 stable on alpha.  Remove 0.18-r2
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> rep-gtk-0.18-r3.ebuild:
   Stable on ia64.
