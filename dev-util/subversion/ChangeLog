@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.234 2006/10/01 16:14:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.235 2006/10/14 02:14:19 tsunam Exp $
+
+  14 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
+  subversion-1.3.2-r3.ebuild:
+  New java stable on x86; bug #147254
 
   01 Oct 2006; Guy Martin <gmsoft@gentoo.org> subversion-1.3.2-r1.ebuild:
   Stable on hppa.
