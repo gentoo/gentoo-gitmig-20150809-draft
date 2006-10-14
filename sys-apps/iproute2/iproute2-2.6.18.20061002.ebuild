@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.18.20061002.ebuild,v 1.1 2006/10/14 01:33:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.18.20061002.ebuild,v 1.2 2006/10/14 19:35:12 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -39,6 +39,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-2.6.16.20060323-build.patch #137574
 	epatch "${FILESDIR}"/${PN}-2.6.16.20060323-routef-safe.patch #139853
+	epatch "${FILESDIR}"/${PN}-2.6.18.20061002-genl.patch #151307
 
 	#68948 - esfq/wrr patches
 	epatch "${FILESDIR}"/${PN}-051007-esfq-2.6.13.patch
@@ -61,12 +62,10 @@ src_compile() {
 		&& echo 'y' >> Config \
 		|| echo 'n' >> Config
 
-	local SUBDIRS="lib ip tc misc netem"
-	use minimal && SUBDIRS="lib tc"
+	use minimal && sed -i -e '/^SUBDIRS=/s:=.*:=lib tc:' Makefile
 	emake \
 		CC="$(tc-getCC)" \
 		AR="$(tc-getAR)" \
-		SUBDIRS="${SUBDIRS}" \
 		|| die "make"
 }
 
