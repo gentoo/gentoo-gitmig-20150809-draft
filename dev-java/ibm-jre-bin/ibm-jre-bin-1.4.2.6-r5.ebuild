@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r5.ebuild,v 1.3 2006/10/14 02:10:28 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.6-r5.ebuild,v 1.4 2006/10/14 13:23:50 nichoj Exp $
 
 inherit java-vm-2 eutils versionator rpm
 
@@ -58,6 +58,10 @@ QA_TEXTRELS_x86="opt/${P}/bin/lib*.so
 	opt/${P}/bin/javaplugin.so
 	opt/${P}/bin/classic/libjvm.so
 	opt/${P}/bin/classic/libcore.so"
+QA_TEXTRELS_amd64="
+	opt/${P}/bin/libj9jit22.so
+	opt/${P}/bin/libjclscar_22.so
+"
 
 pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"

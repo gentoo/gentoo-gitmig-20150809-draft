@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.48 2006/10/14 01:37:29 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.49 2006/10/14 13:23:50 nichoj Exp $
+
+  14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  ibm-jre-bin-1.4.2.6-r5.ebuild:
+  Added QA_TEXTRELS for amd64.
 
   14 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   ibm-jre-bin-1.4.2.6-r5.ebuild:
