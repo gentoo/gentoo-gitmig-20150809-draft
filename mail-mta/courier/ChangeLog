@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.81 2006/07/31 08:32:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.82 2006/10/14 11:32:09 kloeri Exp $
+
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove swtaylor from metadata.xml due to retiring.
 
   31 Jul 2006; Simon Stelling <blubb@gentoo.org> courier-0.53.2.ebuild:
   stable on amd64 wrt bug 135005

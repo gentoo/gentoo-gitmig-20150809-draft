@@ -3,9 +3,6 @@
 
 <pkgmetadata>
   <herd>no-herd</herd>
-  <maintainer>
-    <email>swtaylor@gentoo.org</email>
-  </maintainer>
   <longdescription>
       Complete email package consisting of pop, imap, smtp, and fax
       server and secure version of the above also
