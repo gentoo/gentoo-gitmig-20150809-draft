@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.31 2006/09/11 09:21:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.32 2006/10/14 21:06:35 pva Exp $
+
+*sussen-0.30 (14 Oct 2006)
+
+  14 Oct 2006; Peter Volkov <pva@gentoo.org> +sussen-0.30.ebuild:
+  Version bump. Thank upstream dev Loren Bandiera for report.
 
   11 Sep 2006; Peter Volkov <pva@gentoo.org> sussen-0.29.ebuild:
   Added -j1 to emake and thus fixed bug #147103 reported by Graham Murray:
