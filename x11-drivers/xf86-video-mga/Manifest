@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 1.4.1-fix_drilock.patch 3583 RMD160 fa145124c2eb35f7f4f1aa8d2f5f3e3c1ffe2268 SHA1 33bc837887ee5ed6975e8a613064785da65ca44c SHA256 b3098a2d97b7f3c48cc1110670738e6a1e783f649b56cb3519c1d759315e29c0
 MD5 6425baf8431bce1479632e97c429d550 files/1.4.1-fix_drilock.patch 3583
 RMD160 fa145124c2eb35f7f4f1aa8d2f5f3e3c1ffe2268 files/1.4.1-fix_drilock.patch 3583
@@ -15,10 +18,10 @@ EBUILD xf86-video-mga-1.2.1.3.ebuild 849 RMD160 b14ccf0e3014c6b8b0e08bf29937371b
 MD5 2361b4bd51d000f6c2cee55ee34c7a42 xf86-video-mga-1.2.1.3.ebuild 849
 RMD160 b14ccf0e3014c6b8b0e08bf29937371b983f051e xf86-video-mga-1.2.1.3.ebuild 849
 SHA256 73b9ded3a879cbcea404befbb3532d440a8c84a34bc1b24b17c3516d3ee2a3d3 xf86-video-mga-1.2.1.3.ebuild 849
-EBUILD xf86-video-mga-1.4.1-r1.ebuild 904 RMD160 83bf57a05e167afcf90da87b03c7e0e48bddd619 SHA1 5313d95a06b4d72b08e66d2385456290fb1d1caa SHA256 cb4c01086945640bb78fa4e51abc996fc368bd2dc2a92b34d104953b6558c00a
-MD5 a8ae07c7782ba961aa8c90b97d25b183 xf86-video-mga-1.4.1-r1.ebuild 904
-RMD160 83bf57a05e167afcf90da87b03c7e0e48bddd619 xf86-video-mga-1.4.1-r1.ebuild 904
-SHA256 cb4c01086945640bb78fa4e51abc996fc368bd2dc2a92b34d104953b6558c00a xf86-video-mga-1.4.1-r1.ebuild 904
+EBUILD xf86-video-mga-1.4.1-r1.ebuild 900 RMD160 f10a074cd16984fb9251862baa7c7cc80847880c SHA1 1adf2cbd0bfd423aa8fbed1b8eb021e939f33ccf SHA256 df3ddd032319b199a9515e6273392ac1fc9efcc7f3f4a4e14a5ba5d2362d6415
+MD5 ab55b071b3546cdf69005fc01053c979 xf86-video-mga-1.4.1-r1.ebuild 900
+RMD160 f10a074cd16984fb9251862baa7c7cc80847880c xf86-video-mga-1.4.1-r1.ebuild 900
+SHA256 df3ddd032319b199a9515e6273392ac1fc9efcc7f3f4a4e14a5ba5d2362d6415 xf86-video-mga-1.4.1-r1.ebuild 900
 EBUILD xf86-video-mga-1.4.1.ebuild 851 RMD160 1b1793c53732f9544decb4f06feaa5dd37eb0932 SHA1 3a9af2fca1d77d1fe6f4a0718e2309252364d082 SHA256 5f0980112dc583c62f0c7ccf68cb6b4f2278be5a00d3914a104fdffcc5395818
 MD5 b4ca75be9574c43db3e7c98aee5f7cf7 xf86-video-mga-1.4.1.ebuild 851
 RMD160 1b1793c53732f9544decb4f06feaa5dd37eb0932 xf86-video-mga-1.4.1.ebuild 851
@@ -47,3 +50,10 @@ SHA256 c836aca9dc79e8015db2157d549cef7d53a38cef3396e9d103dd538f5797cae7 files/di
 MD5 f9a6d65e2cb5a7892601aacbb547f96b files/digest-xf86-video-mga-1.4.2 521
 RMD160 e5448c516efb921fb06b31f63b0eda1177463c5e files/digest-xf86-video-mga-1.4.2 521
 SHA256 9c644a5f507e7a44c0fd0ac665a0436be2c8889d76adfeec5dffe3b7adcbf13f files/digest-xf86-video-mga-1.4.2 521
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFMUulamhnQswr0vIRAoRIAJwKI+1DskgcOUZDylycWTEEKJkQtwCfWuax
+kd4dA6x1IkrIEdR6IpgaeRc=
+=xnrC
+-----END PGP SIGNATURE-----
