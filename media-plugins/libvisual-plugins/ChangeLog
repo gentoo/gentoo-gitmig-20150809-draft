@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.16 2006/07/09 06:17:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.17 2006/10/14 04:08:26 weeve Exp $
+
+  14 Oct 2006; Jason Wever <weeve@gentoo.org>
+  libvisual-plugins-0.4.0.ebuild:
+  Stable on SPARC wrt bug #150988.
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   libvisual-plugins-0.2.0.ebuild, libvisual-plugins-0.4.0.ebuild:
