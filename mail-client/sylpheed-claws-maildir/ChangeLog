@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws-maildir
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.28 2006/10/03 14:49:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-maildir/ChangeLog,v 1.29 2006/10/14 04:08:34 genone Exp $
+
+  14 Oct 2006; Marius Mauch <genone@gentoo.org> metadata.xml:
+  update maintainer info
 
 *sylpheed-claws-maildir-0.24.2 (03 Oct 2006)
 

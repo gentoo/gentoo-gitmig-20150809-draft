@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws-vcalendar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.16 2006/10/03 10:46:07 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-vcalendar/ChangeLog,v 1.17 2006/10/14 04:13:50 genone Exp $
+
+  14 Oct 2006; Marius Mauch <genone@gentoo.org> metadata.xml:
+  update maintainer info
 
 *sylpheed-claws-vcalendar-1.89.1 (03 Oct 2006)
 

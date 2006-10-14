@@ -3,7 +3,10 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-  <email>ticho@gentoo.org</email>
-  <description>Primary maintainer</description>
+	<email>genone@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>ticho@gentoo.org</email>
+	<description>Upstream author</description>
 </maintainer>
 </pkgmetadata>
