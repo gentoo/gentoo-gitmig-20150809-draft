@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.16.1.ebuild,v 1.1 2006/10/09 10:56:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.16.1.ebuild,v 1.2 2006/10/14 21:30:45 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=x11-libs/gtk+-2.8
@@ -19,7 +19,6 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	>=gnome-base/gnome-vfs-2
 	>=x11-libs/startup-notification-0.5
 	!gnome-base/gnome-core"
-
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	sys-devel/gettext
