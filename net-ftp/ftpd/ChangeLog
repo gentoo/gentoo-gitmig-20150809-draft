@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftpd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.29 2006/10/12 18:26:12 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ChangeLog,v 1.30 2006/10/14 16:41:48 tcort Exp $
+
+  14 Oct 2006; Thomas Cort <tcort@gentoo.org> ftpd-0.17-r4.ebuild:
+  Stable on alpha and amd64 wrt security Bug #150292.
 
   12 Oct 2006; Paul Varner <fuzzyray@gentoo.org> ftpd-0.17-r4.ebuild:
   Stable on x86 - Bug #150292
