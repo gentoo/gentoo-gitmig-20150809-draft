@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6049 2006/10/14 15:35:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6050 2006/10/14 15:40:18 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -74,10 +74,6 @@ x11-libs/libxcb
 # <exg@gentoo.org> (07 Oct 2006)
 # Masked for testing
 >=dev-lang/lua-5.0.2-r1
-
-# Christian Heim <phreak@gentoo.org> (6 Oct 2006)
-# baselayout-vserver-1.12.3 needs some testing
-=sys-apps/baselayout-vserver-1.12.3
 
 # Luis Araujo <araujo@gentoo.org> (5 Oct 2006)
 # This is a release candidate version for testing
