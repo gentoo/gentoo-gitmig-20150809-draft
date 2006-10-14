@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.02.00-r1.ebuild,v 1.3 2006/08/24 18:58:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.02.00-r1.ebuild,v 1.4 2006/10/14 18:42:48 xmerlin Exp $
 
 inherit linux-mod eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=sys-cluster/gfs-headers-1.02.00-r1
-	>=sys-cluster/iddev-1.02.00
+	>=sys-cluster/iddev-1.02.00-r1
 	sys-fs/e2fsprogs
 	"
 
@@ -43,13 +43,13 @@ src_compile() {
 	check_KV
 	set_arch_to_kernel
 
-	./configure --kernel_src=${KERNEL_DIR} || die
-	emake || die
+	./configure --kernel_src=${KERNEL_DIR} || die "configure problem"
+	emake || die "compile problem"
 }
 
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install problem"
 
 	keepdir /etc/cluster || die
 
