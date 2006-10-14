@@ -1,14 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.13 2006/10/14 17:07:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/partimage-0.6.4-r4.ebuild,v 1.14 2006/10/14 22:45:43 xmerlin Exp $
 
 WANT_AUTOMAKE="1.8"
 
 inherit eutils flag-o-matic pam autotools
 
+MY_P="${PN}-${PV}-1"
 DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
 HOMEPAGE="http://www.partimage.org/"
-SRC_URI="mirror://sourceforge/partimage/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/partimage/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
@@ -41,6 +42,8 @@ PARTIMAG_USER_SH=-1
 PARTIMAG_USER_HOMEDIR=/var/log/partimage
 PARTIMAG_USER_GROUPS=partimag
 
+S="${WORKDIR}/${MY_P}"
+
 pkg_setup() {
 	# Now add users if needed
 	enewgroup ${PARTIMAG_GROUP_NAME} ${PARTIMAG_GROUP_GID}
@@ -56,15 +59,18 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-chown.patch || die
 	epatch ${FILESDIR}/${P}-not_install_info.patch || die
 	epatch ${FILESDIR}/${P}-fixserverargs.diff || die
-	epatch ${FILESDIR}/${P}-lib64.patch || die
+	epatch ${FILESDIR}/${P}-1-lib64.patch
 	epatch ${FILESDIR}/${P}-fflush-before-re-read-partition-table.patch || die
-	epatch ${FILESDIR}/${P}-LP64-fixes.patch || die
 	epatch ${FILESDIR}/${P}-save_all_and_rest_all_actions.patch || die
 	epatch ${FILESDIR}/${P}-datadir-path.patch || die
 	epatch ${FILESDIR}/${P}-dont-discard-error-message-in-batch-mode.patch || die
 	epatch ${FILESDIR}/${P}-save_file_and_rest_file_actions.patch || die
 	epatch ${FILESDIR}/${P}-varargs.patch || die
 	epatch ${FILESDIR}/${P}-gui.diff || die
+	epatch ${FILESDIR}/${P}-empty-salt.patch || die
+	epatch ${FILESDIR}/${P}-help.patch || die
+	epatch ${FILESDIR}/${P}-xfs.patch || die
+	epatch ${FILESDIR}/${P}-port.patch || die
 }
 
 src_compile() {
@@ -88,10 +94,10 @@ src_compile() {
 		|| die "econf failed"
 
 	emake || die "make failed"
-	if use pam
-	then
-		make pamfile || die  "couldn't create pam file"
-	fi
+	#if use pam
+	#then
+	#	make pamfile || die  "couldn't create pam file"
+	#fi
 }
 
 src_install() {
@@ -110,7 +116,10 @@ src_install() {
 	dodoc AUTHORS BUGS COPYING ChangeLog INSTALL README* TODO partimage.lsm
 
 	# pam
-	newpamd partimaged.pam partimaged
+	if use pam
+	then
+		newpamd ${FILESDIR}/partimaged.pam partimaged || die
+	fi
 }
 
 # vars for SSL stuff

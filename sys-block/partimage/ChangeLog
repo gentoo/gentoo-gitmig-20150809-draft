@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.25 2006/10/14 17:07:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.26 2006/10/14 22:45:43 xmerlin Exp $
+
+  14 Oct 2006; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/partimage-0.6.4-1-lib64.patch,
+  +files/partimage-0.6.4-empty-salt.patch,
+  +files/partimage-0.6.4-help.patch, +files/partimage-0.6.4-port.patch,
+  +files/partimage-0.6.4-xfs.patch, +files/partimaged.pam,
+  partimage-0.6.4-r4.ebuild:
+  Improved 64bit support, fixed doc/help, fixed misc bugs.
 
   14 Oct 2006; Christian Zoffoli <xmerlin@gentoo.org>
   +files/partimage-0.6.4-gui.diff, partimage-0.6.4-r3.ebuild,
