@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.13 2006/10/14 04:02:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8d.ebuild,v 1.14 2006/10/14 04:08:06 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,9 +44,11 @@ src_unpack() {
 		&& sed -i '/^install:/s:install_docs::' Makefile.org \
 		|| sed -i '/^MANDIR=/s:=.*:=/usr/share/man:' Makefile.org
 
-	# Try to derice users
-	[[ $(gcc-major-version) == "3" ]] \
-		&& filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
+	# Try to derice users and work around broken ass toolchains
+	if [[ $(gcc-major-version) == "3" ]] ; then
+		filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
+		[[ $(tc-arch) == "ppc64" ]] && replace-flags -O? -O
+	fi
 	[[ $(tc-arch) == ppc* ]] && append-flags -fno-strict-aliasing
 	append-flags -Wa,--noexecstack
 
@@ -87,8 +89,6 @@ src_compile() {
 		--openssldir=/etc/ssl \
 		shared threads \
 		|| die "Configure failed"
-
-	[[ ${ARCH} == "ppc64" && $(gcc-major-version) == "3" ]] && replace-flags -O? -O
 
 	# Clean out hardcoded flags that openssl uses
 	local CFLAG=$(grep ^CFLAG= Makefile | LC_ALL=C sed \
