@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/php-java-bridge-2.0.8.ebuild,v 1.12 2006/10/05 18:24:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/php-java-bridge/php-java-bridge-2.0.8.ebuild,v 1.13 2006/10/14 22:32:11 chtekk Exp $
 
 PHP_EXT_NAME="java"
 PHP_EXT_INI="yes"
@@ -42,6 +42,7 @@ pkg_setup() {
 
 src_compile() {
 	has_php
+	export WANT_AUTOMAKE=1.9 WANT_AUTOCONF=2.5
 	my_conf="--disable-servlet --with-java=`java-config --jdk-home`"
 	php-ext-source-r1_src_compile
 }
