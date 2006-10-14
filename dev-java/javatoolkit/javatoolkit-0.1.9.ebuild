@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.1.9.ebuild,v 1.7 2006/09/13 06:10:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.1.9.ebuild,v 1.8 2006/10/14 01:29:00 tsunam Exp $
 
 inherit eutils python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dev.gentoo.org/proj/en/java/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 DEPEND="virtual/python"
 RDEPEND="virtual/python"

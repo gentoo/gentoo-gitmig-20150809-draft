@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.2 2006/10/10 21:17:13 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.5.0.ebuild,v 1.3 2006/10/14 01:46:27 tsunam Exp $
 
 inherit java-pkg-2 eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://java.sun.com/j2se/1.5.0/"
 SRC_URI="${jcefile}"
 SLOT="1.5"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="~x86 ~amd64 ~x86-fbsd"
+KEYWORDS="~amd64 x86 ~x86-fbsd"
 RESTRICT="fetch"
 IUSE=""
 

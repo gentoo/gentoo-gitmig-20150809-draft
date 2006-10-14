@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jce-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/ChangeLog,v 1.2 2006/10/10 21:17:13 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/ChangeLog,v 1.3 2006/10/14 01:46:27 tsunam Exp $
+
+  14 Oct 2006; Joshua Jackson <tsunam@gentoo.org> sun-jce-bin-1.5.0.ebuild:
+  New java stable on x86; bug #147254
 
   10 Oct 2006; Timothy Redaelli <drizzt@gentoo.org>
   sun-jce-bin-1.5.0.ebuild:
