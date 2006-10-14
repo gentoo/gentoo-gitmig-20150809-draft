@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/im-canna
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.5 2005/01/01 14:29:50 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/ChangeLog,v 1.6 2006/10/14 09:18:10 flameeyes Exp $
+
+  14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  im-canna-0.3.2.2.ebuild:
+  Add missing pkgconfig dependencies, thanks to Patrick Lauer in bug #151265.
 
   07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> -im-canna-0.3.2.1.ebuild,
   im-canna-0.3.2.2.ebuild:

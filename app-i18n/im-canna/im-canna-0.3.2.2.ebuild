@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/im-canna-0.3.2.2.ebuild,v 1.3 2005/01/01 14:29:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-canna/im-canna-0.3.2.2.ebuild,v 1.4 2006/10/14 09:18:10 flameeyes Exp $
 
 DESCRIPTION="Japanese Canna input method module for GTK+2"
 HOMEPAGE="http://bonobo.gnome.gr.jp/~nakai/immodule/"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	app-i18n/canna"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf || die
