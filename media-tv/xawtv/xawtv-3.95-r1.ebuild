@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.16 2006/10/07 04:06:05 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.17 2006/10/14 20:20:32 agriffis Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="http://dl.bytesex.org/releases/xawtv/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc ~sparc x86"
 
 RDEPEND=">=sys-libs/ncurses-5.1
 	>=media-libs/jpeg-6b
