@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-1.7.2.ebuild,v 1.1 2006/10/14 02:04:14 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-1.7.2.ebuild,v 1.2 2006/10/14 20:41:44 vapier Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -9,8 +9,10 @@ XDPVER=3
 inherit x-modular
 
 DESCRIPTION="X.Org driver for Intel cards"
-KEYWORDS="~amd64 ~ia64 ~sh ~x86 ~x86-fbsd"
+
+KEYWORDS="~amd64 ~arm ~ia64 ~sh ~x86 ~x86-fbsd"
 IUSE="dri"
+
 RDEPEND=">=x11-base/xorg-server-1.0.99
 	x11-libs/libXvMC"
 DEPEND="${RDEPEND}
