@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.67 2006/10/13 22:44:49 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.68 2006/10/14 09:18:54 corsair Exp $
+
+  14 Oct 2006; Markus Rothe <corsair@gentoo.org> libwww-5.4.0-r7.ebuild:
+  Stable on ppc64; bug #150198
 
   13 Oct 2006; Stephanie Lockwood-Childs <wormo@gentoo.org>
   libwww-5.4.0-r7.ebuild:
