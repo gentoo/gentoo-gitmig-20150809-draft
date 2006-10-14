@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r3.ebuild,v 1.4 2006/03/22 06:32:55 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/velocity-1.4-r3.ebuild,v 1.5 2006/10/14 00:13:53 nichoj Exp $
 
 inherit java-pkg eutils
 
@@ -35,6 +35,7 @@ pkg_setup() {
 		eerror "flag turned on."
 		die "log4j not built with the javamail use flag"
 	fi
+	java-pkg_pkg_setup
 }
 
 src_unpack() {
