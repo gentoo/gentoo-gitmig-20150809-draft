@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kanjipad
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.10 2005/01/01 14:32:17 eradicator Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.11 2006/10/14 09:20:14 flameeyes Exp $
+
+  14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kanjipad-2.0.0.ebuild:
+  Add missing pkgconfig dependencies, thanks to Patrick Lauer in bug #151272.
 
   26 Oct 2004; Tom Gall <tgall@gentoo.org> kanjipad-2.0.0.ebuild:
   stable on ppc64, bug #66877
