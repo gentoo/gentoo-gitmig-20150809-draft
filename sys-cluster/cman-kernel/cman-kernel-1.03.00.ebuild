@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.03.00.ebuild,v 1.2 2006/10/14 17:25:38 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.03.00.ebuild,v 1.3 2006/10/14 17:52:06 xmerlin Exp $
 
 inherit linux-mod
 
@@ -35,12 +35,12 @@ src_compile() {
 	check_KV
 	set_arch_to_kernel
 
-	./configure --kernel_src=${KERNEL_DIR} --verbose || die
-	emake || die
+	./configure --kernel_src=${KERNEL_DIR} --verbose || die "configure error"
+	emake || die "compile error"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install error"
 	rm -f ${D}/usr/include/cluster/*
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.03.00.ebuild,v 1.1 2006/08/30 11:14:02 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm/dlm-1.03.00.ebuild,v 1.2 2006/10/14 17:55:35 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -20,14 +20,13 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}/${PN}"
 
 src_compile() {
-	./configure || die
-	emake || die
+	./configure || die "configure problem"
+	emake || die "compile problem"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install problem"
 
 	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
-
 	dodoc doc/*.txt
 }
