@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.4.0.ebuild,v 1.5 2006/10/14 03:58:34 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.5.5.ebuild,v 1.1 2006/10/14 03:58:34 genone Exp $
 
-IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
+IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification bogofilter"
 
 inherit eutils
 
@@ -19,20 +19,21 @@ fi
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 hppa ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-COMMONDEPEND=">=x11-libs/gtk+-2.4
+COMMONDEPEND=">=x11-libs/gtk+-2.6
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
-	crypt? ( >=app-crypt/gpgme-0.4 )
+	crypt? ( >=app-crypt/gpgme-1.1.1 )
 	dillo? ( www-client/dillo )
 	spell? ( virtual/aspell-dict )
 	clamav? ( app-antivirus/clamav )
 	kde? ( kde-base/kdelibs )
-	imap? ( >=net-libs/libetpan-0.45 )
+	imap? ( >=net-libs/libetpan-0.46 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
 	startup-notification? ( x11-libs/startup-notification )
+	bogofilter? ( mail-filter/bogofilter )
 	!mail-client/sylpheed-claws-pgpinline"	# included in the main package now
 
 DEPEND="${COMMONDEPEND}
@@ -41,7 +42,6 @@ DEPEND="${COMMONDEPEND}
 
 RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
-	net-mail/metamail
 	x11-misc/shared-mime-info"
 
 PROVIDE="virtual/sylpheed"
@@ -70,6 +70,7 @@ src_compile() {
 	myconf="${myconf} `use_enable crypt pgpcore-plugin`"
 	myconf="${myconf} `use_enable dillo dillo-viewer-plugin`"
 	myconf="${myconf} `use_enable spamassassin spamassassin-plugin`"
+	myconf="${myconf} `use_enable bogofilter bogofilter-plugin`"
 
 	econf \
 		--enable-trayicon-plugin \
