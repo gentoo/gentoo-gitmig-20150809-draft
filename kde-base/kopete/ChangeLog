@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.84 2006/10/13 02:16:51 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.85 2006/10/14 17:08:49 kloeri Exp $
+
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> kopete-3.5.5-r1.ebuild:
+  Add ~alpha keyword.
 
   13 Oct 2006; Jason Wever <weeve@gentoo.org> kopete-3.5.5-r1.ebuild:
   Added ~sparc keyword wrt bug #150982.
