@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX gnome-system-tools-1.0.2-ntp.patch 11173 RMD160 cad5ce5345305fb1279b3c5cbe58f85f898f2c67 SHA1 3f15901a8463d83debcbd17f854697eff44316bd SHA256 fd7047326d334c550c5c70f03d9c21a28716f4c88eacfeae3d52a52cf682ca6a
 MD5 d260438372974645549ff9e1490cc855 files/gnome-system-tools-1.0.2-ntp.patch 11173
 RMD160 cad5ce5345305fb1279b3c5cbe58f85f898f2c67 files/gnome-system-tools-1.0.2-ntp.patch 11173
@@ -26,10 +29,10 @@ EBUILD gnome-system-tools-1.4.1.ebuild 1493 RMD160 48fd3fb5e879b4c3a00b94ea620f2
 MD5 a5406401705a23be7554b6910c6dda51 gnome-system-tools-1.4.1.ebuild 1493
 RMD160 48fd3fb5e879b4c3a00b94ea620f2774d6a6c75a gnome-system-tools-1.4.1.ebuild 1493
 SHA256 3412030e7a840a24a7a413517cf721b0917d30cb488790c017bfbef0fdd5a4d9 gnome-system-tools-1.4.1.ebuild 1493
-EBUILD gnome-system-tools-2.14.0.ebuild 1327 RMD160 4aa35e5b4a6d073bcf45c80d06846f6605bc0587 SHA1 c346625ea0c03c584a85471ba3f24f774d397b80 SHA256 94dd22bddfbeeb91a44dd36fc4004dae7ffe8f7fba0df37b26e0fdb5a6b0bfd2
-MD5 a331429d65179c84e40c9655d8a698b4 gnome-system-tools-2.14.0.ebuild 1327
-RMD160 4aa35e5b4a6d073bcf45c80d06846f6605bc0587 gnome-system-tools-2.14.0.ebuild 1327
-SHA256 94dd22bddfbeeb91a44dd36fc4004dae7ffe8f7fba0df37b26e0fdb5a6b0bfd2 gnome-system-tools-2.14.0.ebuild 1327
+EBUILD gnome-system-tools-2.14.0.ebuild 1327 RMD160 84e65766f11e59f382fe82b0b9b7bf6b790ca3cc SHA1 26f3fe18cf25498f552bd36881ce6a6784c7aa8b SHA256 407f82cc59973091a6fb222fd20f76032432a5d5f31d5b36d66d55a52fcabd1c
+MD5 118700dfcedabd1644e07678a66ac8b4 gnome-system-tools-2.14.0.ebuild 1327
+RMD160 84e65766f11e59f382fe82b0b9b7bf6b790ca3cc gnome-system-tools-2.14.0.ebuild 1327
+SHA256 407f82cc59973091a6fb222fd20f76032432a5d5f31d5b36d66d55a52fcabd1c gnome-system-tools-2.14.0.ebuild 1327
 MISC ChangeLog 9344 RMD160 670889cda8e3642e80951d8f1d4b17468ff5366f SHA1 9df9896509a23eb5b9fba49fb3c1c94d9ad31afe SHA256 86f334d08b66b905f487f265b159f8a5e50b65ba7ef4643e52b9a9b6fba37b7e
 MD5 fb66bd35506e130f54d9a95e1b50f5ce ChangeLog 9344
 RMD160 670889cda8e3642e80951d8f1d4b17468ff5366f ChangeLog 9344
@@ -50,3 +53,10 @@ SHA256 2986ad25b3b11e46e8d6eb6bbac8154bef7ba15790262349e328526497ae4e97 files/di
 MD5 542a0eac894009bf09ea63d0e1806715 files/digest-gnome-system-tools-2.14.0 283
 RMD160 3d9dd09357ff86a4372c05b116399e06150e4d36 files/digest-gnome-system-tools-2.14.0 283
 SHA256 95c409cf23e603a8896faab1a27f694076a3951ac2ea72520bd644fb394786e2 files/digest-gnome-system-tools-2.14.0 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFMU5AamhnQswr0vIRAmG8AKCQ0BILFc3WcsJzUk6yi5hxUo6SKQCbBgMU
++ktF+PHZTRoGunKvPTas/Hg=
+=F8R5
+-----END PGP SIGNATURE-----
