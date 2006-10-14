@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.181 2006/09/23 21:20:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.182 2006/10/14 10:59:36 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -155,6 +155,13 @@ kde_src_unpack() {
 	if [ -n "$UIFILES" ]; then
 		debug-print "$FUNCNAME: touching .ui files..."
 		touch $UIFILES
+	fi
+
+	if [[ -d "${WORKDIR}/admin" ]] && [[ -d "${KDE_S}/admin" ]]; then
+		ebegin "Updating admin/ directory..."
+		rm -rf "${KDE_S}/admin" "${KDE_S}/configure" || die "Unable to remove old admin/ directory"
+		ln -s "${WORKDIR}/admin" "${KDE_S}/admin" || die "Unable to symlink the new admin/ directory"
+		eend 0
 	fi
 }
 
