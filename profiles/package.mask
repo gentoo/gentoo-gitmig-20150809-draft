@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6055 2006/10/14 18:14:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6056 2006/10/14 21:32:05 lu_zero Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -599,9 +599,9 @@ app-admin/eselect-compiler
 # Luca Barbato <lu_zero@gentoo.org> (12 Aug 2006)
 # x264 doesn't play nice with older version, temp mask for a better
 # transition
-=media-libs/x264-svn-20060810
-=media-video/mplayer-1.0_pre20060810
-=media-video/ffmpeg-0.4.9_p20060816
+>=media-libs/x264-svn-20060810
+>=media-video/mplayer-1.0_pre20060810
+>=media-video/ffmpeg-0.4.9_p20060816
 =media-libs/libquicktime-0.9.9-r1
 
 # Ioannis Aslanidis <deathwing00@gentoo.org> (11 Aug 2006)
