@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.06-r1.ebuild,v 1.3 2006/10/14 01:39:03 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/jrockit-jdk-bin-1.5.0.06-r1.ebuild,v 1.4 2006/10/14 14:28:19 nichoj Exp $
 
 # WARNING: This is the default VM on ia64, so treat this ebuild
 # with proper care.
@@ -25,12 +25,18 @@ HOMEPAGE="http://commerce.bea.com/products/weblogicjrockit/jrockit_prod_fam.jsp"
 
 LICENSE="jrockit"
 SLOT="1.5"
-# ia64 not provided yet
 KEYWORDS="~amd64 ~ia64 x86"
 IUSE=""
 
 DEPEND=">=app-arch/unzip-5.50-r1"
 JAVA_PROVIDE="jdbc-stdext jdbc-rowset"
+
+QA_TEXTRELS_amd64="opt/${P}/mercuryprofiler/lib/sparc-sunos/libprobejni.so
+	opt/${P}/mercuryprofiler/lib/x86-linux/libprobejni.so"
+
+# not working for some reason...
+QA_EXECSTACK_amd64="opt/${P}/mercuryprofiler/bin/sparc-sunos/systemmetrics
+	opt/${P}/mercuryprofiler/lib/sparc-sunos/libprobejni.so"
 
 pkg_nofetch() {
 	einfo "Please download ${A} from:"
