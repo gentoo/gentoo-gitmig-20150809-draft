@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.5 2006/10/03 21:57:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/pecl-apc/pecl-apc-3.0.12_p2.ebuild,v 1.6 2006/10/14 22:02:51 chtekk Exp $
 
 PHP_EXT_NAME="apc"
 PHP_EXT_PECL_PKG="APC"
@@ -15,8 +15,8 @@ LICENSE="PHP"
 SLOT="0"
 IUSE="mmap"
 
-DEPEND="${DEPEND}
-		!dev-php4/eaccelerator"
+DEPEND="!dev-php4/eaccelerator"
+RDEPEND="${DEPEND}"
 
 need_php_by_category
 
@@ -54,16 +54,17 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "apc.shm_segments" '"1"'
 	php-ext-base-r1_addtoinifiles "apc.shm_size" '"30"'
 	php-ext-base-r1_addtoinifiles "apc.optimization" '"0"'
-	php-ext-base-r1_addtoinifiles "apc.num_files_hint" '"1000"'
-	php-ext-base-r1_addtoinifiles "apc.ttl" '"0"'
+	php-ext-base-r1_addtoinifiles "apc.num_files_hint" '"1024"'
+	php-ext-base-r1_addtoinifiles "apc.ttl" '"7200"'
+	php-ext-base-r1_addtoinifiles "apc.user_ttl" '"7200"'
 	php-ext-base-r1_addtoinifiles "apc.gc_ttl" '"3600"'
 	php-ext-base-r1_addtoinifiles "apc.cache_by_default" '"1"'
-	php-ext-base-r1_addtoinifiles "apc.filters" '""'
-	php-ext-base-r1_addtoinifiles "apc.mmap_file_mask" '""'
-	php-ext-base-r1_addtoinifiles "apc.slam_defense" '"0"'
+	php-ext-base-r1_addtoinifiles ";apc.mmap_file_mask" '"/tmp/apc.XXXXXX"'
 	php-ext-base-r1_addtoinifiles "apc.file_update_protection" '"2"'
+	php-ext-base-r1_addtoinifiles "apc.enable_cli" '"0"'
+	php-ext-base-r1_addtoinifiles "apc.max_file_size" '"1M"'
 	php-ext-base-r1_addtoinifiles "apc.stat" '"1"'
-	php-ext-base-r1_addtoinifiles "apc.include_once_override" '"0"'
+	php-ext-base-r1_addtoinifiles "apc.write_lock" '"1"'
 
 	dodir "${PHP_EXT_SHARED_DIR}"
 	insinto "${PHP_EXT_SHARED_DIR}"
