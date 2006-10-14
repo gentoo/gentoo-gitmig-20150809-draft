@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-apple
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.2 2005/02/19 23:57:24 swegener Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.3 2006/10/14 12:05:21 kloeri Exp $
+
+  14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove kito from metadata.xml due to retiring.
 
   20 Feb 2005; Sven Wegener <swegener@gentoo.org> gcc-apple-1762.ebuild:
   Fixed invalid atoms in *DEPEND.
