@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haxml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.19 2006/10/12 19:11:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/ChangeLog,v 1.20 2006/10/14 13:51:04 kolmodin Exp $
+
+  14 Oct 2006; <kolmodin@gentoo.org> haxml-1.13-r1.ebuild:
+  Make haxml-1.13-r1 support profiling
 
   12 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> haxml-1.12.ebuild,
   haxml-1.13-r1.ebuild:

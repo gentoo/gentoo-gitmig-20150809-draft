@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13-r1.ebuild,v 1.10 2006/10/12 19:11:34 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.13-r1.ebuild,v 1.11 2006/10/14 13:51:04 kolmodin Exp $
 
-CABAL_FEATURES="lib bin haddock"
+CABAL_FEATURES="lib bin profile haddock"
 inherit base haskell-cabal
 
 MY_PN=HaXml
