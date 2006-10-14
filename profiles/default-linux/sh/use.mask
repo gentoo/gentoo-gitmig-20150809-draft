@@ -33,6 +33,7 @@ qdbm
 fftw
 netjack
 mzscheme
+beagle
 
 # Luca Longinotti <chtekk@gentoo.org>
 # mask Oracle
