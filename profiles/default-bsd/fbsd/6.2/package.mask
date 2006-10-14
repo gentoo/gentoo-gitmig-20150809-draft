@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.3 2006/10/05 10:41:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.4 2006/10/14 15:40:43 drizzt Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Make sure we don't get wrong versions
@@ -30,6 +30,8 @@
 >sys-freebsd/freebsd-contrib-6.2.99
 <sys-freebsd/boot0-6.2_alpha
 >sys-freebsd/boot0-6.2.99
+<sys-freebsd/freebsd-sources-6.2_alpha
+>sys-freebsd/freebsd-sources-6.2.99
 
 # Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
 # We want this unmasked as is the only baselayout usable here
