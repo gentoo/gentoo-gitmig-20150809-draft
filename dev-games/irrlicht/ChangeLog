@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.18 2006/09/16 11:29:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.19 2006/10/14 11:29:13 tupone Exp $
+
+*irrlicht-1.1-r1 (14 Oct 2006)
+
+  14 Oct 2006; <tupone@gentoo.org> +files/irrlicht-1.1-demoMake.patch,
+  +files/irrlicht-1.1-jpeg.patch, +irrlicht-1.1-r1.ebuild:
+  Fix jpeg library mismatch and demo Makefile. Bug #148593 by Jesper Saxtorph
 
 *irrlicht-1.1 (16 Sep 2006)
 
