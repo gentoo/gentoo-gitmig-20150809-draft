@@ -23,10 +23,10 @@ EBUILD java-sdk-docs-1.4.2.ebuild 874 RMD160 ebb875d253c06273ed9c5f13ddeeba2924c
 MD5 e65ffe845ead32c6c468ec63b0677eda java-sdk-docs-1.4.2.ebuild 874
 RMD160 ebb875d253c06273ed9c5f13ddeeba2924c9f718 java-sdk-docs-1.4.2.ebuild 874
 SHA256 f8eace8a030babce05491c8708f8151c8f0908d98b274a4bc5fe193a5a0522ec java-sdk-docs-1.4.2.ebuild 874
-EBUILD java-sdk-docs-1.5.0-r1.ebuild 1505 RMD160 8cc56c274a473d7424d5ae7cebe16c8ce9827b43 SHA1 052d24f7ca8f8cad203a109188159a9a4bc5b27d SHA256 6534bf45aa4f23bf4aa11edf83703ccc3baae1daf83593d50d7fcbf8d1add08a
-MD5 21a2b61bab0c865fca433bac43ecddf3 java-sdk-docs-1.5.0-r1.ebuild 1505
-RMD160 8cc56c274a473d7424d5ae7cebe16c8ce9827b43 java-sdk-docs-1.5.0-r1.ebuild 1505
-SHA256 6534bf45aa4f23bf4aa11edf83703ccc3baae1daf83593d50d7fcbf8d1add08a java-sdk-docs-1.5.0-r1.ebuild 1505
+EBUILD java-sdk-docs-1.5.0-r1.ebuild 1500 RMD160 2a3815ffd5917644cec850d5b81bc1f2a7f90131 SHA1 0b52c0aa6e6bfa0fe736425de198fff4c6b083a5 SHA256 491fa52b4c942696f850db21d66964431b0ecbbec3d08ccf342eb140520d8be2
+MD5 649961a9a890815d27836f1315c8ef24 java-sdk-docs-1.5.0-r1.ebuild 1500
+RMD160 2a3815ffd5917644cec850d5b81bc1f2a7f90131 java-sdk-docs-1.5.0-r1.ebuild 1500
+SHA256 491fa52b4c942696f850db21d66964431b0ecbbec3d08ccf342eb140520d8be2 java-sdk-docs-1.5.0-r1.ebuild 1500
 EBUILD java-sdk-docs-1.5.0.ebuild 940 RMD160 34ca62991dac7ca6072a25571a93ce9dd35a6beb SHA1 c6b79ca9d61a6ec0037b63b4ee60a37522b38287 SHA256 7b1b1cecc26985441d5c190f9f5f0b9d66f38b6cb7770a5eed6d92fe2c1df108
 MD5 ca9101e412259fcd15561bca9ee5db9a java-sdk-docs-1.5.0.ebuild 940
 RMD160 34ca62991dac7ca6072a25571a93ce9dd35a6beb java-sdk-docs-1.5.0.ebuild 940
@@ -60,7 +60,7 @@ SHA256 b7ca3108a4ee593d7c5edde3aeb020468e0395ee2334e586159010bf8348e872 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFMECX2ZWR0Jhg/EsRAq/LAJ0ZVu9gdNhTLBTb9DwCx/XMGxzRYgCfSdtI
-U4nc7hvM+w+45I+ck6jHvvQ=
-=wNut
+iD8DBQFFMED72ZWR0Jhg/EsRAnJJAJ0Xj5Ldxp6DsohGVe2Wn0G0yQnNCwCdEwRm
+J+je4dh25DQR0P1yRQo3858=
+=LxTJ
 -----END PGP SIGNATURE-----
