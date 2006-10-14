@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r14.ebuild,v 1.1 2006/09/20 21:01:49 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r14.ebuild,v 1.2 2006/10/14 00:07:04 nichoj Exp $
 
 inherit eutils java-pkg
 
@@ -53,6 +53,7 @@ pkg_setup() {
 	# new user for tomcat
 	enewgroup tomcat
 	enewuser tomcat -1 -1 /dev/null tomcat
+	java-pkg_pkg_setup
 }
 
 src_unpack() {
