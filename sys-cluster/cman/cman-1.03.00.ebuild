@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.03.00.ebuild,v 1.1 2006/08/30 12:49:02 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.03.00.ebuild,v 1.2 2006/10/14 17:45:38 xmerlin Exp $
 
 inherit eutils
 
@@ -30,12 +30,12 @@ src_unpack() {
 
 
 src_compile() {
-	./configure || die
-	emake -j1 || die
+	./configure || die "configure problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die "install problem"
 
 	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
 	newconfd ${FILESDIR}/${PN}.conf ${PN} || die

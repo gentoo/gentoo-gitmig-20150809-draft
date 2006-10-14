@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.2 2006/08/24 18:55:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/magma-plugins/magma-plugins-1.02.00-r1.ebuild,v 1.3 2006/10/14 17:41:15 xmerlin Exp $
 
 inherit eutils
 
@@ -39,14 +39,14 @@ src_compile() {
 	./configure || die
 
 	for i in cman dumb sm; do
-		emake -C ${i} all
+		emake -C ${i} all || die "compile problem"
 	done
 #	use nogulm || emake -C gulm all
 }
 
 src_install() {
 	for i in cman dumb sm; do
-		make -C ${i} DESTDIR=${D} install || die
+		make -C ${i} DESTDIR=${D} install || die "install problem"
 	done
 #	use nogulm || make -C gulm DESTDIR=${D} install || die
 }
