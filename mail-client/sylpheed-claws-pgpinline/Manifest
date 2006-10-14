@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX glib2-buildfix.patch 496 RMD160 d6a7c610cc25be05ff7699b4d89a11b279143854 SHA1 44830f85b4463b3a1608b7a4f84feb84f8d91ecc SHA256 ffab16b5f503ef92c5ef94dd6dc303506011581b93873122605046c2a9d5ce66
 MD5 abcc71c595357a8c9565de372117ae0d files/glib2-buildfix.patch 496
 RMD160 d6a7c610cc25be05ff7699b4d89a11b279143854 files/glib2-buildfix.patch 496
@@ -18,3 +21,10 @@ SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3 metadata
 MD5 4a2d952d9c3bec2d16394e166d357803 files/digest-sylpheed-claws-pgpinline-0.5 241
 RMD160 c958b5b6a52aa26f1151b35221c2d362e844974f files/digest-sylpheed-claws-pgpinline-0.5 241
 SHA256 e8452393f1c92387625f962ef29223bdd971d954cf5a6d9a8afc73d92f10a30a files/digest-sylpheed-claws-pgpinline-0.5 241
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFMGfq6J2i8a8J4okRAhCtAJ4+B8lxvLljF5stro0Lns1O/V3g6QCfW9Oa
+NmaP6r9TFaI0ZGMrtV/IYlQ=
+=ABGT
+-----END PGP SIGNATURE-----

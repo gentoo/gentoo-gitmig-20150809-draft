@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST sylpheed-claws-extra-plugins-2.5.2.tar.bz2 3991186 RMD160 8e59b11fdcf6dbee11ca2c28d7616593d420333a SHA1 467071349377b11ccdc2e3d758e29d7e5c7e1b04 SHA256 2ac9469dfb914ab20fd73b75388db6e3e0a305883c789e34a5c9458feb838349
 EBUILD sylpheed-claws-newmail-0.0.7.ebuild 878 RMD160 f922b16c0347f1cdc7af211a374fb61edabb580a SHA1 b788753343b14d2fcbddd1ca21fe556bd3865fc0 SHA256 7a531a3987452fff7bf4b298375cc9304c2436ab31a64c0b203ac6f34a434a16
 MD5 867f030d69b1870caa2d93f6b7dc7bb8 sylpheed-claws-newmail-0.0.7.ebuild 878
@@ -14,3 +17,10 @@ SHA256 148041720f922c4238c1c22d9e92d7438e1126b8875765f470e0d5b3914313c3 metadata
 MD5 7e925b8918ec759b988e3fea6ef3cbc2 files/digest-sylpheed-claws-newmail-0.0.7 310
 RMD160 06b04d1c3864a0f83909f8fc823a6fcb17795a03 files/digest-sylpheed-claws-newmail-0.0.7 310
 SHA256 df10007efdcea53dda92bab1f09fcc3820834993a2fd1678ef6041032a3d8522 files/digest-sylpheed-claws-newmail-0.0.7 310
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFMGaJ6J2i8a8J4okRAoC4AJwOYHmhUChU+SbXG3bPus1CUJSvEgCeNFGu
+ZlnvA+yGDA286PKmP6SidTk=
+=v9jK
+-----END PGP SIGNATURE-----
