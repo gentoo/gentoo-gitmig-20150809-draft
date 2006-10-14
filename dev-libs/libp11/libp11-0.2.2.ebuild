@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.2.ebuild,v 1.3 2006/09/13 13:54:22 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.2.ebuild,v 1.4 2006/10/14 06:04:35 kaiowas Exp $
 
 DESCRIPTION="Libp11 is a library implementing a small layer on top of PKCS#11 API
 to make using PKCS#11 implementations easier."
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-util/pkgconfig"
 RDEPEND="${DEPEND}"
 
 src_install() {
