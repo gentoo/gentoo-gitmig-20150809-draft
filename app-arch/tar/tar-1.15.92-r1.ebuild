@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.92-r1.ebuild,v 1.1 2006/10/14 18:12:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.92-r1.ebuild,v 1.2 2006/10/14 18:50:48 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/1.15.92-stderr.patch
+	epatch "${FILESDIR}"/tar-1.15.92-stderr.patch
 
 	if ! use userland_GNU ; then
 		sed -i \
