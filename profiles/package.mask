@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6053 2006/10/14 17:41:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6054 2006/10/14 18:08:27 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (14 Oct 2006)
+# masking app-misc/gpsdrive for treecleaners, bug(s) 142710
+# Pending removal 14th November 2006
+app-misc/gpsdrive
 
 # Sven Wegener <swegener@gentoo.org> (14 Oct 2006)
 # QA: Sends verbose output to stdout, breaking tbz2 and more (bug #151239)
