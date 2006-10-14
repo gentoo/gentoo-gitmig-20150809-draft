@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.4 2006/08/24 18:39:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.02.00-r1.ebuild,v 1.5 2006/10/14 17:25:38 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -27,6 +27,8 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
+	linux-mod_pkg_setup
+
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${PN}-${PV}-${CVS_RELEASE}-cvs.patch || die

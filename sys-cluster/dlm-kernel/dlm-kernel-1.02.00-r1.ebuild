@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.02.00-r1.ebuild,v 1.4 2006/08/24 18:45:18 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/dlm-kernel/dlm-kernel-1.02.00-r1.ebuild,v 1.5 2006/10/14 17:30:09 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -35,6 +35,8 @@ src_unpack() {
 }
 
 pkg_setup() {
+	linux-mod_pkg_setup
+
 	if kernel_is 2 4; then
 		die "${P} supports only 2.6 kernels"
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.3 2006/08/24 18:50:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.4 2006/10/14 17:32:00 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -47,6 +47,8 @@ src_unpack() {
 }
 
 pkg_setup() {
+	linux-mod_pkg_setup
+
 	if kernel_is 2 4; then
 		die "${P} supports only 2.6 kernels"
 	fi
