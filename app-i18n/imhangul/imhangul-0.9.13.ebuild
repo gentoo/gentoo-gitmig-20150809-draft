@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.13.ebuild,v 1.1 2005/12/04 03:15:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.13.ebuild,v 1.2 2006/10/14 09:16:30 flameeyes Exp $
 
 IUSE=""
 
@@ -12,7 +12,9 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
-DEPEND=">=x11-libs/gtk+-2.2.0"
+RDEPEND=">=x11-libs/gtk+-2.2.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 get_gtk_confdir() {
 	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
