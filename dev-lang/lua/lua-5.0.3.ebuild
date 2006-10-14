@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.2 2006/10/07 15:42:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.3 2006/10/14 10:44:03 exg Exp $
 
 inherit eutils portability
 
@@ -43,7 +43,7 @@ src_unpack() {
 	if use readline ; then
 		sed -i config \
 			-e "s:^#\(USERCONF=-DLUA_USERCONFIG='\"\$(LUA)/etc/saconfig.c\"' -DUSE_READLINE\):\1:" \
-			-e 's:^#\(EXTRA_LIBS= -lm -ldl -lreadline\) # \(-lhistory -lcurses -lncurses\):\1 \2:'
+			-e 's:^\(EXTRA_LIBS= -lm\)$:\1 -lreadline:'
 	fi
 
 	cat >etc/lua.pc <<EOF
