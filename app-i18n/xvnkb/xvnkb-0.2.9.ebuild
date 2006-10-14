@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9.ebuild,v 1.2 2006/01/03 09:33:00 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.9.ebuild,v 1.3 2006/10/14 10:43:31 flameeyes Exp $
 
 inherit eutils
 
@@ -26,9 +26,12 @@ src_compile() {
 	use spell || myconf="${myconf} --no-spellcheck"
 	use truetype || myconf="${myconf} --no-xft"
 
-	econf --use-extstroke ${myconf} || die
+	# *not* autotools
+	./configure \
+		--use-extstroke ${myconf} \
+		|| die "./configure failed"
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {

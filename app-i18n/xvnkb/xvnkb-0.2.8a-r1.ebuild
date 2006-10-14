@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.8a-r1.ebuild,v 1.2 2006/08/27 14:36:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.8a-r1.ebuild,v 1.3 2006/10/14 10:43:31 flameeyes Exp $
 
 inherit eutils
 
@@ -22,11 +22,13 @@ DEPEND="${RDEPEND} || ( ( x11-proto/xproto ) virtual/x11 )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}.patch
-	epatch ${FILESDIR}/${PV}-putenv.patch
-}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}.patch"
+	epatch "${FILESDIR}/${PV}-putenv.patch"
 
+	# Remove pregenerated dep file.
+	rm -f "${S}/tools/Makefile.dep"
+}
 
 src_compile() {
 	local myconf
@@ -34,9 +36,12 @@ src_compile() {
 	use spell || myconf="${myconf} --no-spellcheck"
 	use truetype || myconf="${myconf} --no-xft"
 
-	econf --use-extstroke ${myconf} || die
+	# *not* autotools
+	./configure \
+		--use-extstroke ${myconf} \
+		|| die "./configure failed"
 
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
