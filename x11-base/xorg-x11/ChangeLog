@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.575 2006/10/05 21:47:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.576 2006/10/14 00:48:22 joshuabaergen Exp $
+
+  14 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-x11-7.1.ebuild:
+  AMD64/x86 stable for bug #144549 (X7.1).
 
   05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   xorg-x11-7.0-r1.ebuild:
