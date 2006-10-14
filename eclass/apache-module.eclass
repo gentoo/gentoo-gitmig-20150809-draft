@@ -1,7 +1,7 @@
 # Copyright 2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Michael Tindal <urilith@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.16 2006/10/12 13:41:10 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-module.eclass,v 1.17 2006/10/14 20:27:20 swegener Exp $
 
 inherit depend.apache
 
@@ -107,10 +107,10 @@ apache_mod_file() {
 
 	if [ "${APACHE_VERSION}" == "1" ]; then
 		[ -n "${APACHE1_MOD_FILE}" ] && MOD_FILE="${APACHE1_MOD_FILE}"
-	    [ -z "${MOD_FILE}" ] && MOD_FILE="$(apache_cd_dir)/${PN}.so"
+		[ -z "${MOD_FILE}" ] && MOD_FILE="$(apache_cd_dir)/${PN}.so"
 	else
 		[ -n "${APACHE2_MOD_FILE}" ] && MOD_FILE="${APACHE2_MOD_FILE}"
-	    [ -z "${MOD_FILE}" ] && MOD_FILE="$(apache_cd_dir)/.libs/${PN}.so"
+		[ -z "${MOD_FILE}" ] && MOD_FILE="$(apache_cd_dir)/.libs/${PN}.so"
 	fi
 
 	debug-print apache_mod_file: MOD_FILE=${MOD_FILE}

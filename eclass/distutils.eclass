@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.35 2006/10/10 19:59:06 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.36 2006/10/14 20:27:21 swegener Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -46,7 +46,7 @@ distutils_src_install() {
 	# - liquidx (14/08/2006)
 	pylibdir="$(${python} -c 'from distutils.sysconfig import get_python_lib; print get_python_lib()')"
 	[ -n "${pylibdir}" ] && dodir "${pylibdir}"
-	
+
 	if has_version ">=dev-lang/python-2.3"; then
 		${python} setup.py install --root=${D} --no-compile "$@" || die
 	else

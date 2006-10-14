@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.12 2006/09/29 16:51:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.13 2006/10/14 20:27:21 swegener Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -62,16 +62,16 @@ java-vm-2_pkg_postinst() {
 			java-config-1 --set-system-vm=${P} 2>/dev/null
 		# dirty check to see if we are upgrading current generation-1 system vm
 		elif [[ "${systemvm1}" = ${VMHANDLE}* ]]; then
-		    einfo "Emerging the current generation-1 system-vm..."
+			einfo "Emerging the current generation-1 system-vm..."
 			einfo "Updating its config files."
-		    java-config-1 --set-system-vm=${P} 2>/dev/null
+			java-config-1 --set-system-vm=${P} 2>/dev/null
 		# dirty check to see if current system vm is a jre - replace it with
 		elif [[ "${systemvm1}" = *jre* ]]; then
-		    ewarn "Current generation-1 system-vm is a JRE"
+			ewarn "Current generation-1 system-vm is a JRE"
 			ewarn "For the new and old Java systems to coexist,"
 			ewarn "the generation-1 system-vm must be a JDK."
 			ewarn "Setting generation-1 system-vm to ${VMHANDLE}"
-		    java-config-1 --set-system-vm=${P} 2>/dev/null
+			java-config-1 --set-system-vm=${P} 2>/dev/null
 		fi
 		# else... some other VM is being updated, so we don't have to worry
 	else
@@ -141,7 +141,7 @@ set_java_env() {
 		> ${env_file} || die "sed failed"
 
 	echo "VMHANDLE=\"${VMHANDLE}\"" >> ${env_file}
-	
+
 	# generation-1 compatibility
 	# respect both variables for now...
 	if [[ ${JAVA_SUPPORTS_GENERATION_1} == 'true' && ${JAVA_VM_NO_GENERATION1} != 'true' ]]; then

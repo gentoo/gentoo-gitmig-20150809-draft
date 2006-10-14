@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.18 2006/09/20 03:43:24 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.19 2006/10/14 20:27:21 swegener Exp $
 #
 # Author: Doug Goldstein <cardoe@gentoo.org>
 #
@@ -14,7 +14,7 @@ MTVCONF=${MTVCONF:=""}
 SLOT="0"
 IUSE="${IUSE} debug mmx"
 
-RDEPEND="${RDEPEND} 
+RDEPEND="${RDEPEND}
 		=media-tv/mythtv-${MY_PV}*"
 DEPEND="${DEPEND}
 		=media-tv/mythtv-${MY_PV}*
@@ -37,7 +37,7 @@ mythtv-plugins_src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	mythtv-fixes_patch 
+	mythtv-fixes_patch
 
 	sed -e 's!PREFIX = /usr/local!PREFIX = /usr!' \
 	-i 'settings.pro' || die "fixing PREFIX to /usr failed"

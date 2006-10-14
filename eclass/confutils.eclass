@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.18 2005/09/04 10:54:53 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.19 2006/10/14 20:27:21 swegener Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -250,7 +250,7 @@ enable_extension_enable () {
 				my_shared="${my_shared},$4"
 			fi
 		elif [ "$4+" != "+" ]; then
-		  my_shared="=$4"
+			my_shared="=$4"
 		fi
 	else
 		if [ "$4+" != "+" ]; then
@@ -290,7 +290,7 @@ enable_extension_enableonly () {
 				my_shared="${my_shared},$4"
 			fi
 		elif [ "$4+" != "+" ]; then
-		  my_shared="=$4"
+			my_shared="=$4"
 		fi
 	else
 		if [ "$4+" != "+" ]; then
@@ -348,7 +348,7 @@ enable_extension_with () {
 				my_shared="${my_shared},$4"
 			fi
 		elif [ "$4+" != "+" ]; then
-		  my_shared="=$4"
+			my_shared="=$4"
 		fi
 	else
 		if [ "$4+" != "+" ]; then
@@ -387,7 +387,7 @@ enable_extension_withonly () {
 				my_shared="${my_shared},$4"
 			fi
 		elif [ "$4+" != "+" ]; then
-		  my_shared="=$4"
+			my_shared="=$4"
 		fi
 	else
 		if [ "$4+" != "+" ]; then

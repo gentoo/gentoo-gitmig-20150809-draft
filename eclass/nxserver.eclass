@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver.eclass,v 1.19 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver.eclass,v 1.20 2006/10/14 20:27:21 swegener Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -115,7 +115,7 @@ nxserver_pkg_postinst() {
 	cp -f /usr/NX/$l_szHome/.ssh/server.id_dsa.pub.key /usr/NX/$l_szHome/.ssh/authorized_keys2
 
 	if [ ! -f /usr/NX/var/broadcast.txt ]; then
-	    einfo "Creating NX user registration database"
+		einfo "Creating NX user registration database"
 		touch /usr/NX/var/broadcast.txt
 		chown nx:root /usr/NX/var/broadcast.txt
 

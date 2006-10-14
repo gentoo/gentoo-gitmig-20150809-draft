@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.31 2006/07/07 17:15:05 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.32 2006/10/14 20:27:21 swegener Exp $
 #
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
 
@@ -27,7 +27,7 @@ java_pkg_postinst() {
 		# installed. Installing a JRE over an existing JDK will result
 		# in major breakage, see #9289.
 		if [ ! -f "${JAVAC}" ]; then
-			 ewarn "Found no JDK, setting ${VMHANDLE} as default system VM"
+			ewarn "Found no JDK, setting ${VMHANDLE} as default system VM"
 			java_set_default_vm_
 	fi
 	fi
@@ -119,7 +119,7 @@ java_remove-libjsoundalsa() {
 	fi
 }
 
-# Symlinks i386 to i?86. Updates env file to then use i?86 
+# Symlinks i386 to i?86. Updates env file to then use i?86
 # for LD_LIBRARY_PATH. See bug #23579.
 #
 # Takes an argument, which is a directory living in ${D}
@@ -131,12 +131,12 @@ fix-i386-dir() {
 	if use x86; then
 		local host=${CTARGET:-${CHOST}}
 		host=${host%%-*}
-		
+
 		if [[ ${host} != i386 ]]; then
 			local orig_dir="${libdir}/i386"
 			local new_dir="${libdir}/${host}"
 			dosym i386 ${new_dir} || die "Failed to dosym"
-			
+
 
 			sed -i -e "s/i386/${host}/g" \
 				${D}/etc/env.d/java/20${VMHANDLE} || die "Failed to sed"

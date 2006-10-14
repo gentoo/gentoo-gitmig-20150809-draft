@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-gnome.eclass,v 1.1 2006/10/08 03:23:17 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-gnome.eclass,v 1.2 2006/10/14 20:27:21 swegener Exp $
 
 #
 # Original Author: Joshua Nichols <nichoj@gentoo.org>
@@ -27,11 +27,11 @@ DEPEND=">=virtual/jdk-1.4
 
 # Do some heuristics to figure out what bindings this package is for
 # This may be overriden when needed from each ebuild
-if [[ -z ${JAVA_GNOME_BINDINGS} ]]; then 
+if [[ -z ${JAVA_GNOME_BINDINGS} ]]; then
 	JAVA_GNOME_BINDINGS=${PN}
 	JAVA_GNOME_BINDINGS=${JAVA_GNOME_BINDINGS/-java/}
 	# skip over glib because it's too good for our heuristic
-	[[ ${JAVA_GNOME_BINDINGS} != "glib" ]] && 
+	[[ ${JAVA_GNOME_BINDINGS} != "glib" ]] &&
 		JAVA_GNOME_BINDINGS=${JAVA_GNOME_BINDINGS/lib/}
 fi
 
@@ -42,7 +42,7 @@ else
 	JAVA_GNOME_JARNAME="${JAVA_GNOME_BINDINGS}.jar"
 fi
 
-# Full path to installed jar 
+# Full path to installed jar
 JAVA_GNOME_JARPATH="${JAVA_PKG_JARDEST}/${JARNAME}"
 
 # pkgconfig file for the package

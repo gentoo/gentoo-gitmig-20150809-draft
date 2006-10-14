@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.21 2005/08/22 16:20:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.22 2006/10/14 20:27:21 swegener Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -66,37 +66,37 @@ DEPEND="${RDEPEND}
 
 xfce4_src_compile() {
 	if [[ "${DEBUG_OFF}" = "1" ]] && use debug; then
-	    XFCE_CONFIG="${XFCE_CONFIG}"
+		XFCE_CONFIG="${XFCE_CONFIG}"
 	elif use debug; then
-	    XFCE_CONFIG="${XFCE_CONFIG} --enable-debug=yes"
+		XFCE_CONFIG="${XFCE_CONFIG} --enable-debug=yes"
 	fi
 
 	if [[ ${XFCE_META} = "1" ]]; then
-	    einfo "Meta Build, Nothing to compile."
+		einfo "Meta Build, Nothing to compile."
 	else
-	    econf ${XFCE_CONFIG} || die
+		econf ${XFCE_CONFIG} || die
 
-	    if [[ "${SINGLE_MAKE}" = "1" ]]; then
-		emake -j1 || die
-	    else
-		emake || die
-	    fi
+		if [[ "${SINGLE_MAKE}" = "1" ]]; then
+			emake -j1 || die
+		else
+			emake || die
+		fi
 	fi
 }
 
 xfce4_src_install() {
 	if [[ ${XFCE_META} = "1" ]]; then
-	    einfo "Meta Build, Nothing to install."
+		einfo "Meta Build, Nothing to install."
 	else
-	    if [[ "${WANT_EINSTALL}" = "1" ]]; then
-		einstall || die
-	    else
-		make DESTDIR=${D} install || die
-	    fi
+		if [[ "${WANT_EINSTALL}" = "1" ]]; then
+			einstall || die
+		else
+				make DESTDIR=${D} install || die
+		fi
 
-	    if use doc; then
-		dodoc ${XFCE_DOCS} AUTHORS INSTALL README COPYING ChangeLog HACKING NEWS THANKS TODO
-	    fi
+		if use doc; then
+			dodoc ${XFCE_DOCS} AUTHORS INSTALL README COPYING ChangeLog HACKING NEWS THANKS TODO
+		fi
 	fi
 }
 

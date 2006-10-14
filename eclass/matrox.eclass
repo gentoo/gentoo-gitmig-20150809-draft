@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.14 2006/01/18 23:59:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.15 2006/10/14 20:27:21 swegener Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -98,7 +98,7 @@ matrox_base_pkg_postinst() {
 		if [ -f /dev/video ]
 		then
 			einfo "NOTE: To be able to use busmastering, you MUST have /dev/video as"
-		    einfo "a directory, which means you must remove anything there first"
+			einfo "a directory, which means you must remove anything there first"
 			einfo "(rm -f /dev/video), and mkdir /dev/video"
 		else
 			mkdir /dev/video

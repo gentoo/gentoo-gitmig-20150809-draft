@@ -38,9 +38,9 @@ java-pkg-opt-2_pkg_setup() {
 }
 
 # ------------------------------------------------------------------------------
-# @note 
+# @note
 #
-# We need to initialize the environment in every function because Portage 
+# We need to initialize the environment in every function because Portage
 # will source /etc/profile between phases and trample all over the env.
 # This is accomplished by phase hooks, which is available with newer versions of
 # portage.

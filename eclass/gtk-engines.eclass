@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.34 2005/08/02 10:31:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.35 2006/10/14 20:27:21 swegener Exp $
 
 # IMPORTANT:
 # This eclass is deprecated and should not be used in new ebuilds.
@@ -208,9 +208,9 @@ gtk-engines_src_install() {
 		if [ "$SLOT" -eq "2" ]
 		then
 			mv ${D}/usr/share/themes/Geramik/gtk/*png \
-			   ${D}/usr/share/themes/Geramik/gtk-2.0
+				${D}/usr/share/themes/Geramik/gtk-2.0
 			mv ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc-2.0 \
-			   ${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc
+				${D}/usr/share/themes/Geramik/gtk-2.0/gtkrc
 
 			rm -rf ${D}/usr/$(get_libdir)/gtk ${D}/usr/share/themes/Geramik/gtk
 		else

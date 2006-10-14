@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.14 2006/10/04 13:14:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware.eclass,v 1.15 2006/10/14 20:27:21 swegener Exp $
 
 # This eclass is for all vmware-* ebuilds in the tree and should contain all
 # of the common components across the multiple packages.
@@ -283,7 +283,7 @@ vmware_src_install() {
 
 	if [ "${product}" == "vmware" -o "${product}" == "vmware-tools" ]
 	then
-	
+
 		# We have to create a bunch of rc directories for the init script
 		vmware_create_initd || die "creating rc directories"
 

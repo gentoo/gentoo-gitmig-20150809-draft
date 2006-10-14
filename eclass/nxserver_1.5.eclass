@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver_1.5.eclass,v 1.3 2006/05/02 22:32:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver_1.5.eclass,v 1.4 2006/10/14 20:27:21 swegener Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -17,32 +17,32 @@ RESTRICT="nomirror strip fetch"
 
 SRC_URI="nxserver-${MY_PV}.i386.rpm"
 DEPEND="|| ( (
-		x11-proto/xproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/glproto
-		x11-proto/videoproto
-		x11-proto/xextproto
-		x11-proto/fontsproto
-		x11-libs/libX11
-		x11-libs/libFS
-		x11-libs/libXvMC
-		media-libs/mesa
-		x11-misc/xdialog
-	     )
+			x11-proto/xproto
+			x11-proto/xf86vidmodeproto
+			x11-proto/glproto
+			x11-proto/videoproto
+			x11-proto/xextproto
+			x11-proto/fontsproto
+			x11-libs/libX11
+			x11-libs/libFS
+			x11-libs/libXvMC
+			media-libs/mesa
+			x11-misc/xdialog
+		)
 		virtual/x11
 	)
 	sys-apps/shadow
 	net-misc/openssh
 	!prebuilt? (
-	  =net-misc/nxssh-1.5*
-	  =net-misc/nxproxy-1.5*
-	  =net-misc/nx-x11-1.5*
+		=net-misc/nxssh-1.5*
+		=net-misc/nxproxy-1.5*
+		=net-misc/nx-x11-1.5*
 	)
 	prebuilt? (
-	  !net-misc/nxssh
-	  !net-misc/nxproxy
-	  !net-misc/nx-x11
-	  !net-misc/nxcomp
+		!net-misc/nxssh
+		!net-misc/nxproxy
+		!net-misc/nx-x11
+		!net-misc/nxcomp
 	)"
 
 RDEPEND="media-libs/jpeg
@@ -83,7 +83,7 @@ nxserver_1.5_src_install() {
 	if ! useq prebuilt ; then
 		find usr/NX/lib -type l -exec rm {} \;
 
-	    for x in nxagent nxdesktop nxpasswd nxviewer ; do
+		for x in nxagent nxdesktop nxpasswd nxviewer ; do
 			if [ -f usr/NX/bin/$x ]; then
 				rm -f usr/NX/bin/$x
 			fi
@@ -219,7 +219,7 @@ nxserver_1.5_pkg_postinst() {
 	# TODO:
 	# what does the broadcast.txt file really do?
 	if [ ! -f /usr/NX/var/broadcast.txt ]; then
-	    einfo "Creating NX user registration database"
+		einfo "Creating NX user registration database"
 		touch /usr/NX/var/broadcast.txt
 		chown nx:root /usr/NX/var/broadcast.txt
 

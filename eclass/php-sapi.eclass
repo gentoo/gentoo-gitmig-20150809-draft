@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.89 2006/01/26 06:06:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.90 2006/10/14 20:27:21 swegener Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib libtool
@@ -62,10 +62,10 @@ esac
 # and then either of db3 or db4
 IUSE="${IUSE} berkdb"
 RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1*
-							  || ( >=sys-libs/db-4.0.14-r2
-								   >=sys-libs/db-3.2.9-r9
-							     )
-							)"
+						|| ( >=sys-libs/db-4.0.14-r2
+							>=sys-libs/db-3.2.9-r9
+						)
+					)"
 
 # Everything is in this list is dynamically linked agaist or needed at runtime
 # in some other way
@@ -293,17 +293,17 @@ php-sapi_src_compile() {
 	if use berkdb; then
 		einfo "Enabling NBDM"
 		myconf="${myconf} --with-ndbm=/usr"
-	 	#Hack to use db4
-	 	if has_version '=sys-libs/db-4*' && grep -q -- '--with-db4' configure; then
-	 		einfo "Enabling DB4"
-	 		myconf="${myconf} --with-db4=/usr"
+		#Hack to use db4
+		if has_version '=sys-libs/db-4*' && grep -q -- '--with-db4' configure; then
+			einfo "Enabling DB4"
+			myconf="${myconf} --with-db4=/usr"
 		elif has_version '=sys-libs/db-3*' && grep -q -- '--with-db3' configure; then
-	 		einfo "Enabling DB3"
-	 		myconf="${myconf} --with-db3=/usr"
+			einfo "Enabling DB3"
+			myconf="${myconf} --with-db3=/usr"
 		else
 			einfo "Enabling DB2"
 			myconf="${myconf} --with-db2=/usr"
-	 	fi
+		fi
 	else
 		einfo "Skipping DB2, DB3, DB4, NDBM support"
 		myconf="${myconf} --without-db3 --without-db4 --without-db2 --without-ndbm"

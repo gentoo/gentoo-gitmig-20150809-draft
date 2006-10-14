@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.25 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.26 2006/10/14 20:27:21 swegener Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -65,7 +65,7 @@ if [ "${DEVHELPROOT}" = "" ]; then
 fi
 if [ "${RDEPEND}" = "" ]; then
 	RDEPEND="kde? ( dev-util/kdevelop )
-	       !kde? ( >=dev-util/devhelp-0.6 )"
+			!kde? ( >=dev-util/devhelp-0.6 )"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
 	DESCRIPTION="${P} ebook based on $ECLASS eclass"

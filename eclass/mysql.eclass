@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.35 2006/10/13 22:13:34 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.36 2006/10/14 20:27:21 swegener Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -81,7 +81,7 @@ mysql_version_is_at_least "5.01.00.00" \
 && IUSE="${IUSE} innodb"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
-				 pkg_postinst pkg_config pkg_postrm
+				pkg_postinst pkg_config pkg_postrm
 
 # void mysql_init_vars()
 #

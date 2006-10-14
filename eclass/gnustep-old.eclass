@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-old.eclass,v 1.9 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-old.eclass,v 1.10 2006/10/14 20:27:21 swegener Exp $
 
 
 DESCRIPTION="Based on the gnustep eclass."
@@ -125,7 +125,7 @@ egnustepinstall() {
 				GNUSTEP_NETWORK_ROOT=${D}${GNUSTEP_NETWORK_ROOT} \
 				GNUSTEP_SYSTEM_ROOT=${D}${GNUSTEP_SYSTEM_ROOT} \
 				GNUSTEP_USER_ROOT=${D}${GNUSTEP_SYSTEM_ROOT} \
-		 		install || die "einstall failed"
+				install || die "einstall failed"
 		fi
 	else
 		die "no Makefile found"

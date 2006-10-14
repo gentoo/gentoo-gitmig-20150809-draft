@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.19 2005/08/23 14:55:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.20 2006/10/14 20:27:21 swegener Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
@@ -45,7 +45,7 @@ myth_src_unpack() {
 
 	if ! use nls ; then
 		sed -e "s:i18n::" \
-		    -i ${pkg_pro} || die "Disable i18n failed"
+			-i ${pkg_pro} || die "Disable i18n failed"
 	fi
 
 	if use debug ; then

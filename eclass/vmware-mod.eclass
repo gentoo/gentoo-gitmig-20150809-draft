@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.3 2006/09/27 12:59:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.4 2006/10/14 20:27:21 swegener Exp $
 
 
 # Ensure vmware comes before linux-mod since we want linux-mod's pkg_preinst and
@@ -27,7 +27,7 @@ S="${WORKDIR}"
 # VMWARE_VER)
 # RESTRICT="userpriv"
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_install 
+EXPORT_FUNCTIONS pkg_setup src_unpack src_install
 
 # Must define VMWARE_VER to make, otherwise it'll try and run getversion.pl
 BUILD_TARGETS="auto-build VMWARE_VER=${VMWARE_VER} KERNEL_DIR=${KERNEL_DIR} KBUILD_OUTPUT=${KV_OUT_DIR}"
@@ -84,7 +84,7 @@ vmware-mod_src_install() {
 		echo 'KERNEL=="vmmon*", GROUP="'$VMWARE_GROUP'" MODE=660' >> "${D}/etc/udev/rules.d/60-vmware.rules" || die
 		echo 'KERNEL=="vmnet*", GROUP="'$VMWARE_GROUP'" MODE=660' >> "${D}/etc/udev/rules.d/60-vmware.rules" || die
 	fi
-	
+
 	linux-mod_src_install
 }
 

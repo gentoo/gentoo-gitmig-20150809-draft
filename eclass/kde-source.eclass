@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.23 2005/07/11 15:08:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-source.eclass,v 1.24 2006/10/14 20:27:21 swegener Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -78,12 +78,12 @@ kde-source_src_unpack() {
 	# the other things are fetched later
 	# (kde-common/admin, <module>/doc/*, <module>/<files>)
 	if [ -n "$KCVS_SUBDIR" ]; then
-	    ECVS_MODULE="$KCVS_MODULE/$KCVS_SUBDIR"
+		ECVS_MODULE="$KCVS_MODULE/$KCVS_SUBDIR"
 	elif [ -n "$KCVS_MODULE" ]; then
-	    ECVS_MODULE="$KCVS_MODULE"
+		ECVS_MODULE="$KCVS_MODULE"
 	else
-	    # default for kde-base ebuilds
-	    ECVS_MODULE="$PN"
+		# default for kde-base ebuilds
+		ECVS_MODULE="$PN"
 	fi
 
 	cvs_src_unpack
@@ -100,8 +100,8 @@ kde-source_src_unpack() {
 	if [ -n "$KCVS_SUBDIR" ]; then
 
 		if [ -n "$KCVS_BRANCH" ]; then
-		    ECVS_BRANCH2="$ECVS_BRANCH"
-		    ECVS_BRANCH="$KCVS_BRANCH"
+			ECVS_BRANCH2="$ECVS_BRANCH"
+			ECVS_BRANCH="$KCVS_BRANCH"
 		fi
 
 		ECVS_MODULE="$KCVS_MODULE" ECVS_LOCAL=yes cvs_src_unpack
@@ -120,7 +120,7 @@ kde-source_src_unpack() {
 		fi
 
 		if [ -n "$KCVS_BRANCH" ]; then
-		    ECVS_BRANCH="$ECVS_BRANCH2"
+			ECVS_BRANCH="$ECVS_BRANCH2"
 		fi
 
 	fi

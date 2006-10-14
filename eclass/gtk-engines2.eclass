@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.14 2005/08/02 10:31:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines2.eclass,v 1.15 2006/10/14 20:27:21 swegener Exp $
 
 # IMPORTANT:
 # This eclass is deprecated and should not be used in new ebuilds.
@@ -93,12 +93,12 @@ gtk-engines2_src_compile() {
 			cd ${GTK2_S}
 			econf || die "gtk2 configure failed"
 			emake || die "gtk2 make failed"
-	    fi
+		fi
 		if [ -n "${HAS_GTK1}" ]; then
 			cd ${GTK1_S}
 			econf || die "gtk1 configure failed"
 			emake || die "gtk1 make failed"
-	    fi
+		fi
 	else
 		cd ${S}
 		econf ${@} || die "configure failed"
@@ -124,7 +124,7 @@ gtk-engines2_src_install() {
 			for x in ${DEFAULT_DOCS} ${DOCS}; do
 				newdoc ${x} ${x}.gtk1
 			done
-	    fi
+		fi
 	else
 		cd ${S}
 		make DESTDIR=${D} ${@} install || die "install failed"
