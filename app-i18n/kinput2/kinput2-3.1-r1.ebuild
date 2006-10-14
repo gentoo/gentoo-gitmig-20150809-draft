@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.15 2006/01/25 07:27:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.16 2006/10/14 11:03:15 flameeyes Exp $
 
 inherit eutils
 
@@ -14,16 +14,18 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ppc64"
 IUSE="canna freewnn"
 
-DEPEND="virtual/libc
-	canna? ( >=app-i18n/canna-3.5_beta2-r1 )
+RDEPEND="canna? ( >=app-i18n/canna-3.5_beta2-r1 )
+	!amd64? ( freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 ) )
+	!freewnn? ( >=app-i18n/canna-3.5_beta2-r1 )
+	|| ( x11-libs/libXaw <virtual/x11-7 )"
+
+DEPEND="${RDEPEND}
 	|| ( ( x11-misc/gccmakedep
 			x11-misc/imake
 			app-text/rman
 		)
-		virtual/x11
-	)
-	!amd64? ( freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 ) )
-	!freewnn? ( >=app-i18n/canna-3.5_beta2-r1 )"
+		<virtual/x11-7
+	)"
 
 S="${WORKDIR}/${MY_P}"
 
