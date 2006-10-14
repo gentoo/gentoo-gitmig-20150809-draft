@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-1.0_rc0.ebuild,v 1.2 2006/10/06 11:46:42 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-1.0_rc0.ebuild,v 1.3 2006/10/14 14:11:32 kolmodin Exp $
 
 CABAL_FEATURES="lib"
 
@@ -17,7 +17,9 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
+
 DEPEND="virtual/ghc
+	!>=virtual/ghc-6.6
 	>=dev-haskell/haskell-src-exts-0.2
 	dev-haskell/cabal"
 
@@ -25,10 +27,13 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	base_src_unpack
+
 	# use hsx
 	mv "${S}/plugins.cabal.hsx" "${S}/plugins.cabal"
+
 	# remove warning
 	sed -i -e "s/hs-source-dir/hs-source-dirs/" "${S}/plugins.cabal"
+
 	chmod +x "${S}/configure"
 }
 
@@ -42,5 +47,6 @@ src_compile() {
 
 src_install() {
 	haskell-cabal_src_install
+
 	dodoc README LICENSE AUTHORS
 }
