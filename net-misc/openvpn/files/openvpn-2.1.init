@@ -123,7 +123,8 @@ stop() {
 	fi
 
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --stop --exec /usr/sbin/openvpn --pidfile "${VPNPID}"
+	start-stop-daemon --stop --quiet \
+		--exec /usr/sbin/openvpn --pidfile "${VPNPID}"
 	eend $?
 }
 
