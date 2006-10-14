@@ -1,6 +1,12 @@
 # ChangeLog for x11-proto/xproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.40 2006/09/12 17:59:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xproto/ChangeLog,v 1.41 2006/10/14 01:57:48 joshuabaergen Exp $
+
+*xproto-7.0.8 (14 Oct 2006)
+
+  14 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xproto-7.0.8.ebuild:
+  Version bump.  Defines _X_INLINE, defines some new keysyms and adds an AIX fix.
 
   12 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> xproto-7.0.7.ebuild:
   Stable on hppa
