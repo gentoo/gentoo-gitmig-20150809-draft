@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/Task-Weaken-0.99.ebuild,v 1.2 2006/08/05 23:09:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Task-Weaken/Task-Weaken-0.99.ebuild,v 1.3 2006/10/14 00:58:45 mcummings Exp $
 
 inherit perl-module
 
@@ -13,10 +13,9 @@ IUSE=""
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 sparc ~x86"
 
 SRC_TEST="do"
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
