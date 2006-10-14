@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.8 2006/09/08 20:07:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.9 2006/10/14 07:47:43 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,6 +35,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-3.8.27-certs.diff
 	epatch ${FILESDIR}/${P}-lpq.diff
 	epatch ${FILESDIR}/${P}-make.diff
+	epatch ${FILESDIR}/${P}-krb.diff
 }
 
 src_compile() {

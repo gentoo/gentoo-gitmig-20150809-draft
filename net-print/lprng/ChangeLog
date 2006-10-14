@@ -1,6 +1,11 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.46 2006/09/08 20:07:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.47 2006/10/14 07:47:43 genstef Exp $
+
+  14 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/lprng-3.8.28-krb.diff, lprng-3.8.28.ebuild:
+  Apply patch to fix USE=kerberos build thanks to Ryan Hendrickson
+  <rhendric@mit.edu> in bug 151041 and Thomas Pfaff <tpfaff@gmx.net>
 
   08 Sep 2006; Markus Rothe <corsair@gentoo.org> lprng-3.8.28.ebuild:
   Added ~ppc64; bug #146851
