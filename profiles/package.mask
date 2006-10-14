@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6048 2006/10/14 15:30:35 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6049 2006/10/14 15:35:35 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Christian Heim <phreak@gentoo.org> (14 Oct 2006)
+# masking app-misc/linup for treecleaners, bug(s) 150740
+# Pending removal 14th November 2006
+app-misc/linup
 
 # Christian Heim <phreak@gentoo.org> (14 Oct 2006)
 # masking app-admin/sus for treecleaners, bug(s) 148901
