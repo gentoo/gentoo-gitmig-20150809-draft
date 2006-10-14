@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/dclock
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.9 2006/08/06 21:17:09 deltacow Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dclock/ChangeLog,v 1.10 2006/10/14 16:49:42 nelchael Exp $
+
+  14 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -dclock-2.1.2_p5.ebuild:
+  Remove old version.
 
   06 Aug 2006; Scott Stoddard <deltacow@gentoo.org> dclock-2.1.2_p8.ebuild:
   Stable on amd64 (re bug #61939)

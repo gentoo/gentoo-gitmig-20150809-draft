@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/treeline
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.25 2006/04/28 00:19:49 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.26 2006/10/14 17:02:58 nelchael Exp $
+
+  14 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -treeline-0.12.0.ebuild:
+  Remove old version.
 
   28 Apr 2006; Alec Warner <antarus@gentoo.org>
   files/digest-treeline-0.12.0, files/digest-treeline-0.13.1, Manifest:
