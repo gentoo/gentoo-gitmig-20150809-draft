@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1-r1.ebuild,v 1.6 2006/02/04 06:06:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1-r1.ebuild,v 1.7 2006/10/14 00:09:22 nichoj Exp $
 
 inherit eutils java-pkg multilib
 
@@ -48,6 +48,7 @@ pkg_setup() {
 			die "Firefox useflag enabled without mozilla support"
 		fi
 	fi
+	java-pkg_pkg_setup
 }
 
 src_unpack() {

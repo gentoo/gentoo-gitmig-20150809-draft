@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.3-r1.ebuild,v 1.4 2006/07/17 19:13:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/libgtk-java-2.8.3-r1.ebuild,v 1.5 2006/10/14 00:11:47 nichoj Exp $
 
 # Must be before the gnome.org inherit
 GNOME_TARBALL_SUFFIX="gz"
@@ -44,6 +44,7 @@ pkg_setup() {
 			die "No GCJ support found!"
 		fi
 	fi
+	java-pkg_pkg_setup
 }
 
 src_unpack() {
