@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.2.ebuild,v 1.1 2006/10/03 16:04:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.2.ebuild,v 1.2 2006/10/14 17:21:59 spock Exp $
 
-inherit eutils qt3
+inherit eutils qt3 linux-info
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
@@ -19,8 +19,6 @@ DEPEND=">=dev-libs/popt-1.7-r1
 	qt3? ( $(qt_min_version 3.3) )"
 
 src_compile() {
-	check_KV
-
 	local myconf=""
 
 	if use qt3
@@ -39,10 +37,10 @@ src_compile() {
 
 	myconf="${myconf} --with-x"
 
-	case $KV in
-	2.2.*|2.4.*) myconf="${myconf} --with-linux=/usr/src/linux";;
+	case ${KV_FULL} in
+	2.2.*|2.4.*) myconf="${myconf} --with-linux=${KV_DIR}";;
 	2.5.*|2.6.*) myconf="${myconf} --with-kernel-support";;
-	*) die "Kernel version '$KV' not supported";;
+	*) die "Kernel version '${KV_FULL}' not supported";;
 	esac
 	econf ${myconf} || die "econf failed"
 
@@ -55,7 +53,7 @@ src_compile() {
 src_install() {
 	local myinst=""
 
-	myinst="${myinst} MODINSTALLDIR=${D}/lib/modules/${KV}"
+	myinst="${myinst} MODINSTALLDIR=${D}/lib/modules/${KV_FULL}"
 	make DESTDIR=${D} ${myinst} install || die "make install failed"
 
 	dodoc ChangeLog* README TODO
