@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.2 2006/10/14 21:32:17 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.3 2006/10/14 22:07:22 chtekk Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -18,8 +18,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="contentcache debug disassembler session sharedmem"
 
-DEPEND="${DEPEND}
-		!dev-php5/pecl-apc"
+DEPEND="!dev-php5/pecl-apc"
+RDEPEND="${DEPEND}"
 
 # Webserver user and group, here for Apache.
 HTTPD_USER="apache"
