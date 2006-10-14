@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.30 2006/08/17 20:01:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.31 2006/10/14 14:26:15 drizzt Exp $
+
+  14 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> pmake-1.111.1.ebuild:
+  Added sys-devel/bmake blocker (both packages uses /usr/share/mk/)
 
   17 Aug 2006; Markus Rothe <corsair@gentoo.org> pmake-1.98.ebuild:
   Stable on ppc64
