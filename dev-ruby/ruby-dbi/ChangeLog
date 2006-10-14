@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.18 2006/10/06 11:49:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.19 2006/10/14 02:52:01 weeve Exp $
+
+  14 Oct 2006; Jason Wever <weeve@gentoo.org> ruby-dbi-0.1.1.ebuild:
+  Added ~sparc keyword wrt bug #150234.
 
   06 Oct 2006; <nixnut@gentoo.org> ruby-dbi-0.1.1.ebuild:
   Added ~ppc wrt bug 150234
