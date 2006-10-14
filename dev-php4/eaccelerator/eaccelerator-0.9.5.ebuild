@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.1 2006/10/11 14:02:16 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php4/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.2 2006/10/14 22:10:54 chtekk Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -16,10 +16,10 @@ HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="contentcache disassembler inode session sharedmem"
+IUSE="contentcache debug disassembler session sharedmem"
 
-DEPEND="${DEPEND}
-		!dev-php4/pecl-apc"
+DEPEND="!dev-php4/pecl-apc"
+RDEPEND="${DEPEND}"
 
 # Webserver user and group, here for Apache.
 HTTPD_USER="apache"
@@ -45,10 +45,10 @@ src_compile() {
 	my_conf="--enable-eaccelerator=shared"
 
 	use contentcache && my_conf="${my_conf} --with-eaccelerator-content-caching"
+	use debug && my_conf="${my_conf} --with-eaccelerator-debug"
 	use disassembler && my_conf="${my_conf} --with-eaccelerator-disassembler"
 	use session && my_conf="${my_conf} --with-eaccelerator-sessions"
 	use sharedmem && my_conf="${my_conf} --with-eaccelerator-shared-memory"
-	use !inode && my_conf="${my_conf} --without-eaccelerator-use-inode"
 
 	php-ext-source-r1_src_compile
 }
@@ -61,15 +61,16 @@ src_install() {
 	fperms 750 "${EACCELERATOR_CACHEDIR}"
 
 	insinto "/usr/share/${PN}"
-	doins doc/php/*
+	doins -r doc/php/
 	dodoc-php AUTHORS ChangeLog COPYING NEWS README README.eLoader
 
 	php-ext-base-r1_addtoinifiles "eaccelerator.shm_size" '"28"'
 	php-ext-base-r1_addtoinifiles "eaccelerator.cache_dir" "\"${EACCELERATOR_CACHEDIR}\""
 	php-ext-base-r1_addtoinifiles "eaccelerator.enable" '"1"'
 	php-ext-base-r1_addtoinifiles "eaccelerator.optimizer" '"1"'
-	php-ext-base-r1_addtoinifiles "eaccelerator.check_mtime" '"1"'
 	php-ext-base-r1_addtoinifiles "eaccelerator.debug" '"0"'
+	php-ext-base-r1_addtoinifiles ";eaccelerator.log_file" '"/var/log/eaccelerator_log"'
+	php-ext-base-r1_addtoinifiles "eaccelerator.check_mtime" '"1"'
 	php-ext-base-r1_addtoinifiles "eaccelerator.filter" '""'
 	php-ext-base-r1_addtoinifiles "eaccelerator.shm_max" '"0"'
 	php-ext-base-r1_addtoinifiles "eaccelerator.shm_ttl" '"0"'
