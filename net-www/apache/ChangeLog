@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.499 2006/09/20 05:11:34 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.500 2006/10/15 23:13:34 vericgar Exp $
+
+*apache-2.0.59-r1 (15 Oct 2006)
+
+  15 Oct 2006; Michael Stewart <vericgar@gentoo.org>
+  +apache-2.0.59-r1.ebuild:
+  Updated init script to use start-stop-daemon so that apache stops correctly
+  instead of just exiting after the signal is sent
 
   20 Sep 2006; Michael Stewart <vericgar@gentoo.org>
   apache-1.3.34-r10.ebuild, apache-1.3.34-r11.ebuild,
