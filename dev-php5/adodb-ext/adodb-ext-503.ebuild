@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/adodb-ext/adodb-ext-503.ebuild,v 1.1 2005/11/26 22:15:26 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/adodb-ext/adodb-ext-503.ebuild,v 1.2 2006/10/15 12:50:49 tcort Exp $
 
 PHP_EXT_NAME="adodb"
 PHP_EXT_INI="yes"
@@ -8,7 +8,7 @@ PHP_EXT_ZENDEXT="no"
 
 inherit php-ext-source-r1
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 DESCRIPTION="PHP extension providing up to 100% speedup by replacing parts of ADOdb with C code."
 HOMEPAGE="http://adodb.sourceforge.net/"
 SRC_URI="http://phplens.com/lens/dl/${P}.zip"
