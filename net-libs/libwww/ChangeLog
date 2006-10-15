@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libwww
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.69 2006/10/15 02:39:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.70 2006/10/15 10:05:54 dertobi123 Exp $
+
+  15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libwww-5.4.0-r7.ebuild:
+  hppa stable, bug #150198
 
   15 Oct 2006; Jason Wever <weeve@gentoo.org> libwww-5.4.0-r7.ebuild:
   Stable on SPARC wrt bug #150198.
