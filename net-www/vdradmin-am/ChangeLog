@@ -1,6 +1,10 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.2 2006/09/29 13:52:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.3 2006/10/15 12:44:52 hd_brummy Exp $
+
+  15 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdradmin-am-3.4.7.ebuild:
+  fixed unicode handling; tanks to L.Muresan on #151396
 
 *vdradmin-am-3.4.7 (29 Sep 2006)
 
