@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.0.ebuild,v 1.10 2006/07/25 09:27:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/pykde-3.5.0.ebuild,v 1.11 2006/10/15 20:04:47 corsair Exp $
 
 KMNAME=kdebindings
 KMMODULE=python
@@ -14,7 +14,7 @@ DESCRIPTION="PyKDE is a set of Python bindings for kdelibs."
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples"
 
 DEPEND="~dev-python/sip-4.2.1
