@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2246 2006/10/15 03:24:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2247 2006/10/15 16:18:40 kloeri Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1725,6 +1725,7 @@ www-client/elinks:gopher - Enable support for the gopher protocol
 www-client/elinks:nntp - Enable support for the NNTP
 www-client/kazehakase:hyperestraier - enable hyperestraier support for full-text search in history.
 www-client/kazehakase:thumbnail - enable thumbnail support.
+www-client/mozilla-firefox:branding - Enable official branding
 www-client/mozilla-firefox:mozcalendar - Enable mozilla calendar extension, http://mozilla.org/projects/calendar/
 www-client/mozilla-firefox:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/mozilla-firefox:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
