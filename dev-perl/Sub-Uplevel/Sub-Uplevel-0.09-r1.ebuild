@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/Sub-Uplevel-0.09-r1.ebuild,v 1.4 2006/08/05 23:07:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/Sub-Uplevel-0.09-r1.ebuild,v 1.5 2006/10/15 19:19:19 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/M/MS/MSCHWERN/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 src_unpack() {
@@ -21,4 +21,3 @@ src_unpack() {
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"
