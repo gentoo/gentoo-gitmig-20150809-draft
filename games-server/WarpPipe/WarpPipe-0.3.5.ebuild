@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/WarpPipe/WarpPipe-0.3.5.ebuild,v 1.3 2006/01/29 07:20:51 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/WarpPipe/WarpPipe-0.3.5.ebuild,v 1.4 2006/10/15 15:58:51 nyhm Exp $
+
+inherit qt3
 
 DESCRIPTION="connect gamecubes together over the network"
 HOMEPAGE="http://www.warppipe.com/"
@@ -10,11 +12,10 @@ LICENSE="WarpPipe"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
+RESTRICT="strip"
 
 DEPEND=""
-RDEPEND="virtual/libc
-	|| ( x11-libs/libXext virtual/x11 )
-	=x11-libs/qt-3*"
+RDEPEND="$(qt_min_version 3.3)"
 
 S=${WORKDIR}/${P}-linux
 
