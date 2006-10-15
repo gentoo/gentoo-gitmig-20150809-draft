@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.2 2004/11/14 17:22:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/nikibot/nikibot-0.8.ebuild,v 1.3 2006/10/15 15:36:57 exg Exp $
+
+inherit autotools
 
 DESCRIPTION="An IRC-Bot with lua script interface"
 HOMEPAGE="http://sourceforge.net/projects/nikibot/"
@@ -12,18 +14,17 @@ IUSE=""
 
 KEYWORDS="~x86"
 
-DEPEND="virtual/libc
-	>=dev-lang/lua-5.0"
+RDEPEND=">=dev-lang/lua-5.0"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-
-	# Hack around wrong timestamps to avoid running automake
-	touch ${S}/src/Makefile.in
+	cd "${S}"
+	eautoreconf
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc README test.lua || die "dodoc failed"
 	dohtml html/* || die "dohtml failed"
