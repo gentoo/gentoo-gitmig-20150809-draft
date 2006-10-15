@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p7.ebuild,v 1.1 2006/10/11 21:55:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.6_p7.ebuild,v 1.2 2006/10/15 19:07:34 alonbl Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs multilib
 
@@ -37,6 +37,7 @@ MODULE_NAMES="bc(block:"${S}"/mod)
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${PN}-1.6_p5-kernel-quotes.patch
 	epatch "${FILESDIR}"/${PN}-1.6_p5-makefile_fix.patch
 	epatch "${FILESDIR}"/${PN}-1.6_p5-gcc41.patch
 	epatch "${FILESDIR}"/${PN}-1.6_p2-path.patch

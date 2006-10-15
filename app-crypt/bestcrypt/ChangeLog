@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.47 2006/10/11 21:55:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.48 2006/10/15 19:07:34 alonbl Exp $
+
+  15 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/bestcrypt-1.6_p5-kernel-quotes.patch, bestcrypt-1.6_p5.ebuild,
+  bestcrypt-1.6_p7.ebuild:
+  Adding kernel-quotes patch, closes bug#148989
 
 *bestcrypt-1.6_p7 (11 Oct 2006)
 
