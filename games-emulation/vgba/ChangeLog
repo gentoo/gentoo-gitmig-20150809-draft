@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/vgba
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vgba/ChangeLog,v 1.6 2006/09/19 19:17:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vgba/ChangeLog,v 1.7 2006/10/15 23:12:31 nyhm Exp $
+
+*vgba-3.0 (15 Oct 2006)
+
+  15 Oct 2006; Tristan Heaven <nyhm@gentoo.org> +vgba-3.0.ebuild:
+  Version bump
 
   19 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org> vgba-2.1.ebuild:
   Adding strip to RESTRICT for bug #137819.
