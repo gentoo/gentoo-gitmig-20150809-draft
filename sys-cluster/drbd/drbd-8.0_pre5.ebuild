@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0_pre5.ebuild,v 1.1 2006/10/14 11:27:42 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.0_pre5.ebuild,v 1.2 2006/10/15 11:51:14 xmerlin Exp $
 
-inherit eutils versionator linux-mod
+inherit eutils versionator linux-mod linux-info
 
 LICENSE="GPL-2"
 KEYWORDS="~x86"
@@ -21,14 +21,11 @@ SLOT="0"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-#	epatch ${FILESDIR}/${PN}-${MY_MAJ_PV}-module-Makefile.patch || die
+pkg_setup() {
+	linux-mod_pkg_setup
 }
 
 src_compile() {
-	check_KV
 	set_arch_to_kernel
 
 	einfo ""
@@ -45,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	make PREFIX=${D} install || die "install problem"
+	emake PREFIX=${D} install || die "install problem"
 
 	# gentoo-ish init-script
 	newinitd ${FILESDIR}/${PN}-0.7.rc ${PN} || die
