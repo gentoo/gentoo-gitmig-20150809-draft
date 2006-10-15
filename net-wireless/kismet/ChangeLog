@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.88 2006/10/14 18:02:46 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.89 2006/10/15 11:14:39 phreak Exp $
+
+  15 Oct 2006; Christian Heim <phreak@gentoo.org> kismet-2006.04.1.ebuild:
+  Fixing a typo (made by me when ripping of the gpsdrive stuff), thanks to
+  Chris Frage in #151440 for reporting this issue.
 
   14 Oct 2006; Christian Heim <phreak@gentoo.org> kismet-2006.04.1.ebuild:
   Removing USE=gps, removing the DEPEND on app-misc/gpsdrive, which is going
