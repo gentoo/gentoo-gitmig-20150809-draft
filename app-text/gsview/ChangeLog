@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gsview
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.20 2006/10/09 12:59:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.21 2006/10/15 09:07:57 genstef Exp $
+
+  15 Oct 2006; Stefan Schweizer <genstef@gentoo.org> gsview-4.6.ebuild,
+  gsview-4.8.ebuild:
+  Add gtk+-1.2 to DEPEND thanks to patrick in bug 151420
 
   09 Oct 2006; Jeroen Roovers <jer@gentoo.org> gsview-4.8.ebuild:
   Marked ~hppa.
