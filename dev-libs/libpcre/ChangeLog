@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.79 2006/10/14 20:44:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.80 2006/10/15 17:29:08 tester Exp $
+
+  15 Oct 2006; Olivier Crête <tester@gentoo.org> libpcre-6.6.ebuild:
+  Stable on amd64 per bug #145409
 
   14 Oct 2006; Jason Wever <weeve@gentoo.org> libpcre-6.6.ebuild:
   Stable on SPARC wrt bug #145409.
