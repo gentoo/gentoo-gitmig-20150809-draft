@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/UNIVERSAL-require
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/ChangeLog,v 1.3 2006/08/28 00:37:50 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/ChangeLog,v 1.4 2006/10/15 23:07:34 mcummings Exp $
+
+  15 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  UNIVERSAL-require-0.10.ebuild:
+  Marking amd64 stable
 
   28 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   UNIVERSAL-require-0.10.ebuild:
