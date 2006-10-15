@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2245 2006/10/15 03:23:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2246 2006/10/15 03:24:37 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -983,7 +983,6 @@ media-video/mplayer:x264 - Enables h264 encoding using x264
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/ogmrip:srt - Support for SRT subtitle format
-media-video/ogmrip:subp - Subtitle ripping preliminary support
 media-video/oxine:polling - Enables support to automatically check the drive for a new disc
 media-video/qdvdauthor:mplayer - Enables video playback by mplayer
 media-video/totem:nvtv - Support for nvtv to use tv in on nvidia cards
