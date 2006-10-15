@@ -1,6 +1,11 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.22 2006/09/06 03:13:24 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.23 2006/10/15 01:55:49 agriffis Exp $
+
+  15 Oct 2006; Aron Griffis <agriffis@gentoo.org>
+  -abiword-plugins-2.4.1-r1.ebuild, -abiword-plugins-2.4.1-r2.ebuild,
+  -abiword-plugins-2.4.2.ebuild, abiword-plugins-2.4.5.ebuild:
+  Mark 2.4.5 stable on ia64.  Remove 2.4.2, 2.4.1-r2, 2.4.1-r1
 
   06 Sep 2006; Thomas Cort <tcort@gentoo.org> abiword-plugins-2.4.5.ebuild:
   Stable on alpha wrt Bug #144120.
