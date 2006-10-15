@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.21 2006/10/14 13:17:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.22 2006/10/15 01:03:57 weeve Exp $
+
+  15 Oct 2006; Jason Wever <weeve@gentoo.org> klamav-0.38.ebuild:
+  Stable on SPARC wrt bug #151141.
 
   14 Oct 2006; <nixnut@gentoo.org> klamav-0.38.ebuild:
   Stable on ppc wrt bug 151141
