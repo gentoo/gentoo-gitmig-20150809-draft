@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.0.3.ebuild,v 1.1 2006/10/10 19:41:13 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.0.3.ebuild,v 1.2 2006/10/15 18:08:02 deathwing00 Exp $
 
 inherit kde
 
@@ -30,7 +30,7 @@ src_unpack() {
 	local MAKE_LANGS
 	cd "${WORKDIR}/${P}/translations"
 	for X in ${LANGS} ; do
-		use linguas_${X} &&	MAKE_LANGS="${MAKE_LANGS} ${X}"
+		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X}"
 	done
 	rm -f ${S}/configure
 	sed -i -e "s:SUBDIRS=.*:SUBDIRS=${MAKE_LANGS}:" Makefile.am
