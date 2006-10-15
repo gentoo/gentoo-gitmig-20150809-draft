@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.20 2006/06/25 16:55:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.21 2006/10/15 16:07:25 exg Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 
 	epatch ${FILESDIR}/lua-${PV}-pic.patch
-	epatch ${FILESDIR}/lua-${PV}-LDFLAGS_and_as-needed.patch
+	#epatch ${FILESDIR}/lua-${PV}-LDFLAGS_and_as-needed.patch
 	use ppc-macos && epatch ${FILESDIR}/lua-ppc-macos-Makefile.patch
 
 	cd ${S}
