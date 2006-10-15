@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libchipcard
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.44 2006/10/14 18:45:36 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/ChangeLog,v 1.45 2006/10/15 12:50:13 agriffis Exp $
+
+  15 Oct 2006; Aron Griffis <agriffis@gentoo.org> libchipcard-2.1.8.ebuild:
+  Mark 2.1.8 stable on ia64
 
   14 Oct 2006; Hanno Boeck <hanno@gentoo.org> libchipcard-2.1.8.ebuild:
   Re-add init.d-script, got lost in one of the last updates.
