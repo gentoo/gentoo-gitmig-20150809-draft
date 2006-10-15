@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/vdr-channel-logos
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/ChangeLog,v 1.2 2006/09/24 20:32:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/ChangeLog,v 1.3 2006/10/15 14:09:24 hd_brummy Exp $
+
+  15 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-channel-logos-0.2.ebuild:
+  fixed install handling; reported by L.Muresan on #gentoo-vdr
 
 *vdr-channel-logos-0.2 (18 Sep 2006)
 

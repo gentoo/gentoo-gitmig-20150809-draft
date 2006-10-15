@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/vdr-channel-logos-0.2.ebuild,v 1.1 2006/09/18 19:58:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdr-channel-logos/vdr-channel-logos-0.2.ebuild,v 1.2 2006/10/15 14:09:24 hd_brummy Exp $
 
 inherit eutils
 
@@ -25,6 +25,6 @@ src_unpack() {
 src_install() {
 
 	insinto /usr/share/vdr/channel-logos
-	cp -a ${S}/*.xpm ${D}/usr/share/vdr/channel-logos/
+	find -maxdepth 1 -name "*.xpm" -print0|xargs -0 cp -a --target=${D}/usr/share/vdr/channel-logos/
 }
 
