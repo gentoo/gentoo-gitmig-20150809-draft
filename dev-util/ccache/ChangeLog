@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.48 2006/09/15 09:33:18 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.49 2006/10/15 01:13:08 agriffis Exp $
+
+  15 Oct 2006; Aron Griffis <agriffis@gentoo.org> ccache-2.4-r2.ebuild:
+  Mark 2.4-r2 stable on ia64
 
 *ccache-2.4-r6 (15 Sep 2006)
 
