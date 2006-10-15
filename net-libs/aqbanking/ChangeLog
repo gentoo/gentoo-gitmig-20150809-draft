@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.36 2006/10/10 17:05:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.37 2006/10/15 01:30:25 agriffis Exp $
+
+  15 Oct 2006; Aron Griffis <agriffis@gentoo.org> aqbanking-2.2.1.ebuild:
+  Mark 2.2.1 stable on ia64. #149970
 
   10 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   aqbanking-2.2.1.ebuild:
