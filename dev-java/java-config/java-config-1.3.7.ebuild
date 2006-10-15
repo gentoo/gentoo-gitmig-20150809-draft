@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.3.7.ebuild,v 1.5 2006/10/14 15:39:12 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.3.7.ebuild,v 1.6 2006/10/15 15:43:55 nichoj Exp $
 
 inherit base distutils eutils
 
@@ -30,7 +30,7 @@ pkg_postinst() {
 	elog "instructions available at:"
 	elog "\thttp://www.gentoo.org/proj/en/java/java-upgrade.xml"
 	elog
-	elog "While we moving towards the new Java system, we only allow"
+	elog "While we are moving towards the new Java system, we only allow"
 	elog "1.3 or 1.4 JDKs to be used with java-config-1 to ensure"
 	elog "backwards compatibility with the old system."
 	elog "For more details about this, please see:"
