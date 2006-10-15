@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.39 2006/10/15 09:16:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.40 2006/10/15 10:16:07 corsair Exp $
+
+  15 Oct 2006; Markus Rothe <corsair@gentoo.org>
+  ghostscript-esp-8.15.3.ebuild:
+  Stable on ppc64; bug #148945
 
   15 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   ghostscript-esp-8.15.1_p20060430.ebuild, ghostscript-esp-8.15.3.ebuild:
