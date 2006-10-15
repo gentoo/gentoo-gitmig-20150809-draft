@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.213 2006/10/13 14:34:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.214 2006/10/15 04:08:36 agriffis Exp $
+
+  15 Oct 2006; Aron Griffis <agriffis@gentoo.org> xchat-2.6.6.ebuild:
+  Mark 2.6.6 stable on ia64. #134652
 
   13 Oct 2006; Sven Wegener <swegener@gentoo.org> xchat-2.4.5.ebuild,
   xchat-2.4.5-r1.ebuild, xchat-2.6.4.ebuild, xchat-2.6.6.ebuild:
