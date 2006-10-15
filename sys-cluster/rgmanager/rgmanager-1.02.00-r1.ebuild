@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-1.02.00-r1.ebuild,v 1.3 2006/10/15 13:35:17 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/rgmanager/rgmanager-1.02.00-r1.ebuild,v 1.4 2006/10/15 13:50:05 xmerlin Exp $
 
 inherit eutils
 
 CVS_RELEASE="20060713"
-CLUSTER_VERSION="1.02.00"
+MY_P="cluster-${PV}"
 
 DESCRIPTION="Clustered resource group manager layered on top of Magma"
 HOMEPAGE="http://sources.redhat.com/cluster/"
-SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/cluster-${CLUSTER_VERSION}.tar.gz
+SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz
 	mirror://gentoo/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz
 	http://dev.gentoo.org/~xmerlin/gfs/${PN}-${PV}-${CVS_RELEASE}-cvs.patch.gz"
 
@@ -24,7 +24,7 @@ DEPEND=">=sys-cluster/magma-1.02.00-r1
 	dev-libs/libxml2
 	"
 
-S="${WORKDIR}/cluster-${CLUSTER_VERSION}/${PN}"
+S="${WORKDIR}/${MY_P}/${PN}"
 
 src_unpack() {
 	unpack ${A}
