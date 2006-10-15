@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r4.ebuild,v 1.2 2006/10/14 15:22:30 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r4.ebuild,v 1.3 2006/10/15 00:29:14 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app
 
@@ -54,7 +54,7 @@ DEPEND="$RDEPEND
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-PDEPEND="crypt? ( x11-plugins/gaim-encryption )"
+PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-3.0_beta4 )"
 
 S="${WORKDIR}/${MY_P}"
 
