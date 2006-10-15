@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.5 2006/10/14 14:47:37 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.6 2006/10/15 16:20:31 kloeri Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="java mozdevelop"
+IUSE="java mozdevelop branding"
 
 MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}"
 SRC_URI="${MOZ_URI}/source/firefox-${MY_PV}-source.tar.bz2
@@ -74,6 +74,14 @@ linguas() {
 	einfo "Selected language packs (first will be default): $linguas"
 }
 
+pkg_setup(){
+	if use branding; then
+		einfo "You are enabling official branding. You may not redistribute this build"
+		einfo "to any users on your network or the internet. Doing so puts yourself into"
+		einfo "a legal problem with mozilla foundation"
+	fi
+}
+
 src_unpack() {
 	unpack ${A%bz2*}bz2
 
@@ -112,7 +120,10 @@ src_compile() {
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
-	mozconfig_annotate '' --enable-official-branding
+
+	if use branding; then
+		mozconfig_annotate '' --enable-official-branding
+	fi
 
 	# Bug 60668: Galeon doesn't build without oji enabled, so enable it
 	# regardless of java setting.
