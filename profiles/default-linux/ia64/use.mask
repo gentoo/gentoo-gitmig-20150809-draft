@@ -101,3 +101,6 @@ mpe-sdk
 
 # mask nvtv as I don't have the hardware to test it (19 Aug 2006 kloeri)
 nvtv
+
+# linux-fusion doesn't seem to build right now
+fusion
