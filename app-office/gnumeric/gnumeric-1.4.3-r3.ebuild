@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.3-r3.ebuild,v 1.8 2006/08/21 15:39:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.3-r3.ebuild,v 1.9 2006/10/15 01:35:09 agriffis Exp $
 
 inherit virtualx eutils flag-o-matic gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 IUSE="gnome libgda python static"
 # bonobo gnomedb
@@ -25,9 +25,9 @@ RDEPEND=">=dev-libs/glib-2.4
 	>=gnome-base/libgnomeprint-2.5.2
 	>=gnome-base/libgnomeprintui-2.5.2
 	>=media-libs/libart_lgpl-2.3.11
+	>=gnome-base/gconf-2
 
 	gnome? (
-		>=gnome-base/gconf-2
 		>=gnome-base/libgnome-2
 		>=gnome-base/libgnomeui-2
 		>=gnome-base/libbonobo-2.2
