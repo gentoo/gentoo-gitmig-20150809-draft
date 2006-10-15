@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac-webadmin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.1 2006/03/18 12:19:09 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/ChangeLog,v 1.2 2006/10/15 14:24:17 tcort Exp $
+
+  15 Oct 2006; Thomas Cort <tcort@gentoo.org> trac-webadmin-0.1.1.ebuild:
+  Added ~amd64 keyword wrt Bug #146385.
 
 *trac-webadmin-0.1.1 (18 Mar 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/trac-webadmin-0.1.1.ebuild,v 1.1 2006/03/18 12:19:09 dju Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac-webadmin/trac-webadmin-0.1.1.ebuild,v 1.2 2006/10/15 14:24:17 tcort Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://projects.edgewall.com/trac/wiki/WebAdmin"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="trac"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 SLOT="0"
