@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.3 2006/10/01 12:37:40 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.4 2006/10/15 09:16:19 genstef Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -43,7 +43,7 @@ RDEPEND="${DEP}
 	media-fonts/gnu-gs-fonts-std"
 
 DEPEND="${DEP}
-	gtk? ( dev-util/pkgconfig )"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
