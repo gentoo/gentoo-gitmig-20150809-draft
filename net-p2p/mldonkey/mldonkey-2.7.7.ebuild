@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.7.ebuild,v 1.6 2006/09/26 20:56:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.7.7.ebuild,v 1.7 2006/10/15 13:37:52 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ~sparc x86"
 RESTRICT="nomirror"
 
 RDEPEND="dev-lang/perl
