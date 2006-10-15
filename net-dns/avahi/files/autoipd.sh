@@ -13,15 +13,15 @@ autoipd_depend() {
 # void autoipd_expose(void)
 #
 # Expose variables that can be configured
-dhcpcd_expose() {
+autoipd_expose() {
 	variables autoipd
 }
 
 # bool autoipd_start(char *iface)
 #
-# Tries to configures the interface via avahi-autoipd
+# Tries to configure the interface via avahi-autoipd
 autoipd_start() {
-	local iface="${1}" ifvar=$(bash_variable "${iface}") opts="autoipd_${ifvar}" addr=
+	local iface="${1}" ifvar="$(bash_variable "${iface}")" opts="autoipd_${ifvar}" addr=""
 
 	interface_exists "${iface}" true || return 1
 
@@ -29,7 +29,7 @@ autoipd_start() {
 	if /usr/sbin/avahi-autoipd --daemonize --syslog --wait ${!opts} "${iface}"
 	then
 			eend 0
-			addr=$(interface_get_address "${iface}")
+			addr="$(interface_get_address "${iface}")"
 			einfo "${iface} received address ${addr}"
 			return 0
 	fi
@@ -47,7 +47,7 @@ autoipd_stop() {
 
 	ebegin "Stopping avahi-autoipd"
 	/usr/sbin/avahi-autoipd --kill --syslog "${iface}"
-	eend "${?}"
+	eend "${?}" "Failed to stop running avahi-autoipd instance!"
 }
 
 # vim: set ts=4 :
