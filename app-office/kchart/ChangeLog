@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kchart
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.50 2006/10/11 08:30:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.51 2006/10/15 09:16:14 kloeri Exp $
+
+  15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> kchart-1.5.2.ebuild:
+  Stable on ia64.
 
   11 Oct 2006; Markus Rothe <corsair@gentoo.org> kchart-1.5.2.ebuild:
   Stable on ppc64
