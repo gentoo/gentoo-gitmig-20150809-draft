@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.03.00.ebuild,v 1.3 2006/10/14 17:52:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman-kernel/cman-kernel-1.03.00.ebuild,v 1.4 2006/10/15 10:45:24 xmerlin Exp $
 
 inherit linux-mod
 
@@ -25,10 +25,9 @@ S="${WORKDIR}/${MY_P}/${PN}"
 
 pkg_setup() {
 	linux-mod_pkg_setup
-
-	if kernel_is 2 4; then
-		die "${P} supports only 2.6 kernels"
-	fi
+	case ${KV_FULL} in
+		2.2.*|2.4.*) die "${P} supports only 2.6 kernels";;
+	esac
 }
 
 src_compile() {
