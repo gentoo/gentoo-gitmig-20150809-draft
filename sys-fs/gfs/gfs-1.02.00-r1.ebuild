@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.02.00-r1.ebuild,v 1.4 2006/10/14 18:42:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-1.02.00-r1.ebuild,v 1.5 2006/10/15 13:42:21 xmerlin Exp $
 
-inherit linux-mod eutils
+inherit eutils 
 
 CVS_RELEASE="20060713"
 MY_P="cluster-${PV}"
@@ -40,19 +40,14 @@ src_unpack() {
 }
 
 src_compile() {
-	check_KV
-	set_arch_to_kernel
-
-	./configure --kernel_src=${KERNEL_DIR} || die "configure problem"
+	./configure || die "configure problem"
 	emake || die "compile problem"
 }
-
 
 src_install() {
 	emake DESTDIR=${D} install || die "install problem"
 
 	keepdir /etc/cluster || die
-
 	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
 }
 
