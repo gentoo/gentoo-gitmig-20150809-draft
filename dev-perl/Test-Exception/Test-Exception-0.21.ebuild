@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.21.ebuild,v 1.12 2006/09/16 21:35:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.21.ebuild,v 1.13 2006/10/15 20:55:48 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,3 @@ DEPEND=">=virtual/perl-Test-Simple-0.62
 	>=dev-perl/module-build-0.28
 	dev-perl/Sub-Uplevel
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-
