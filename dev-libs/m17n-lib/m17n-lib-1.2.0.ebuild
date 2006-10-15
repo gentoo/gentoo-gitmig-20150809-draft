@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.2.0.ebuild,v 1.7 2006/02/10 22:43:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.2.0.ebuild,v 1.8 2006/10/15 20:04:06 matsuu Exp $
 
 inherit eutils
 
@@ -29,6 +29,14 @@ DEPEND="|| ( (
 	media-libs/gd
 	>=dev-libs/libotf-0.9.2
 	>=dev-db/m17n-db-${PV}"
+
+pkg_setup() {
+	if ! built_with_use media-libs/gd png ; then
+		eerror "m17n-lib requires GD to be built with png support. Please add"
+		eerror "'png' to your USE flags, and re-emerge media-libs/gd."
+		die "Missing USE flag."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
