@@ -62,6 +62,9 @@ update_routes()
 	while route del default dev "${interface}" 2>/dev/null ; do
 		:
 	done
+        
+	[[ -n "${PEER_ROUTERS}" ]] && [[ "${PEER_ROUTERS}" != "yes" ]] && return
+	
 	if [[ -n "${router}" ]] ; then
 		metric=
 		[[ -n "${IF_METRIC}" ]] && metric="metric ${IF_METRIC}"

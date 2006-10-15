@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.30 2006/10/01 21:01:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.31 2006/10/15 13:46:53 uberlord Exp $
+
+  15 Oct 2006; Roy Marples <uberlord@gentoo.org> files/udhcpc.sh:
+  Respect PEER_ROUTERS set by the nogateway option in conf.d/net, #151240.
+  Thanks to John Koleszar.
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   udhcp-0.9.9_pre20041216-r3.ebuild:
