@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.14.ebuild,v 1.13 2006/09/13 18:02:57 ian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.14.ebuild,v 1.14 2006/10/15 20:10:58 mcummings Exp $
 
 inherit perl-module
 
@@ -26,7 +26,6 @@ DEPEND="dev-perl/text-autoformat
 	dev-perl/DBD-Pg )
 	>=dev-perl/AppConfig-1.55
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 #The installer tries to install to /usr/local/tt2...,
 #and asks for user input, so we change myconf to ensure that

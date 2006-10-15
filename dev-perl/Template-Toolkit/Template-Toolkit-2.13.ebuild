@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.13.ebuild,v 1.8 2006/08/18 01:32:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/Template-Toolkit-2.13.ebuild,v 1.9 2006/10/15 20:10:58 mcummings Exp $
 
 inherit perl-module
 
@@ -14,7 +14,6 @@ KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc ~x86"
 
 DEPEND=">=dev-perl/AppConfig-1.52
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 #The installer tries to install to /usr/local/tt2...,
 #and asks for user input, so we change myconf to ensure that
