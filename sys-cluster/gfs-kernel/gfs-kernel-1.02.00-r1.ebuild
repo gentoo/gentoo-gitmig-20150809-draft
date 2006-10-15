@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.5 2006/10/14 18:15:26 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gfs-kernel/gfs-kernel-1.02.00-r1.ebuild,v 1.6 2006/10/15 13:20:33 xmerlin Exp $
 
-inherit eutils linux-mod
+inherit eutils linux-mod linux-info
 
 CVS_RELEASE="20060714"
 MY_P="cluster-${PV}"
@@ -33,6 +33,13 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P}/${PN}"
 
+pkg_setup() {
+	linux-mod_pkg_setup
+	case ${KV_FULL} in
+		2.2.*|2.4.*) die "${P} supports only 2.6 kernels";;
+	esac
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -46,16 +53,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN/headers/kernel}-${PV}-${CVS_RELEASE}-cvs-compile.patch || die
 }
 
-pkg_setup() {
-	linux-mod_pkg_setup
-
-	if kernel_is 2 4; then
-		die "${P} supports only 2.6 kernels"
-	fi
-}
-
 src_compile() {
-	check_KV
 	set_arch_to_kernel
 
 	./configure --kernel_src=${KERNEL_DIR} --verbose || die "configure problem"
