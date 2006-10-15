@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.20 2006/10/14 15:39:08 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.21 2006/10/15 15:59:46 nichoj Exp $
+
+  15 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  java-config-wrapper-0.12.ebuild:
+  Stabilizing on ia64 as part of new Java system, bug #147254.
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   java-config-wrapper-0.12.ebuild:
