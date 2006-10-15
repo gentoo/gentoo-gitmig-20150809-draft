@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.6 2006/10/15 13:09:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ghostscript-esp-8.15.3.ebuild,v 1.7 2006/10/15 19:54:02 genstef Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -63,17 +63,13 @@ src_unpack() {
 
 	# search path fix
 	sed -i -e "s:\$\(gsdatadir\)/lib:/usr/share/ghostscript/${PVM}/$(get_libdir):" \
-		src/Makefile.in || die "sed failed"
-	sed -i -e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
-		src/Makefile.in || die "sed failed"
-	sed -i -e "s:exdir=.*:exdir=/usr/share/doc/${PF}/examples:" \
+		-e 's:$(gsdir)/fonts:/usr/share/fonts/default/ghostscript/:' \
+		-e "s:exdir=.*:exdir=/usr/share/doc/${PF}/examples:" \
 		src/Makefile.in || die "sed failed"
 	sed -i -e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
 		src/Makefile.in src/*.mak || die "sed failed"
 
-	ln -s src/configure.ac .
-	ln -s src/Makefile.in .
 	cp /usr/share/automake-1.9/install-sh "${S}"
 	AT_NOELIBTOOLIZE="yes" eautoreconf
 	cd ijs
