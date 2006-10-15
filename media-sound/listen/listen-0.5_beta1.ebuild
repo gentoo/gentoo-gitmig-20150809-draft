@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5_beta1.ebuild,v 1.2 2006/10/13 13:15:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/listen-0.5_beta1.ebuild,v 1.3 2006/10/15 02:32:10 bass Exp $
 
 inherit eutils virtualx
 
@@ -9,7 +9,8 @@ HOMEPAGE="http://listengnome.free.fr"
 SRC_URI="mirror://sourceforge/listengnome/${PN}-0.5b1.tar.gz"
 S="${WORKDIR}/${PN}-0.5b1"
 LICENSE="GPL-2"
-IUSE="aac cdr flac ipod mad vorbis musicbrainz"
+IUSE="aac cdr flac ipod mad vorbis"
+#IUSE="aac cdr flac ipod mad vorbis musicbrainz libsexy"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
@@ -47,6 +48,7 @@ DEPEND="${RDEPEND}
 	>=media-libs/mutagen-1.6
 	dev-python/gnome-python
 	dev-python/gnome-python-extras"
+#	libsexy? ( dev-python/sexy-python )
 
 pkg_setup() {
 	if use ipod && ! built_with_use media-libs/libgpod python ; then
@@ -91,7 +93,10 @@ src_install() {
 	Xmake DESTDIR="${D}" PREFIX="/usr" install || die "Install failure"
 }
 
-pkg_install() {
-	sed -i 's/LD_LIBRARY_PATH=\([\/a-z-]*\) \([\/a-z]*\)/LD_LIBRARY_PATH="\1 \2"/' ${D}/usr/bin/listen
+pkg_postinst() {
+	echo "#!/bin/sh" > /usr/bin/listen
+	GTKMOZEMBED_PATH=$( pkg-config --libs-only-L mozilla-gtkmozembed 2>/dev/null || pkg-config --libs-only-L firefox-gtkmozembed 2>/dev/null | sed -e "s/-L//g" -e "s/[ ]/\,/" -e "s/[  ]//g" )
+	echo "LD_LIBRARY_PATH=\"${GTKMOZEMBED_PATH}\"" "/usr/lib/listen/listen.py \"\$@\"" >> /usr/bin/listen
+
 }
 
