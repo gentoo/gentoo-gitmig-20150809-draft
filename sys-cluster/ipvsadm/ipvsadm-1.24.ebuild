@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.13 2006/10/14 09:21:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.14 2006/10/15 11:43:26 xmerlin Exp $
 
 inherit linux-info
 
@@ -18,14 +18,13 @@ DEPEND="virtual/linux-sources
 
 pkg_setup() {
 	if kernel_is 2 4; then
-		die "${P} supports only 2.6 kernels, please try ${PN}-1.21 for 2.4 kernels"
+		eerror "${P} supports only 2.6 kernels, please try ${PN}-1.21 for 2.4 kernels"
+		die "wrong kernel version"
 	fi
 }
 
-
 src_compile() {
-	check_KV
-	make || die "error compiling source"
+	emake || die "error compiling source"
 }
 
 src_install() {
