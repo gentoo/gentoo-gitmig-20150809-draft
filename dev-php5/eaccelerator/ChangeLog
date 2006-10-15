@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.11 2006/10/15 01:37:20 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.12 2006/10/15 11:41:30 chtekk Exp $
+
+  15 Oct 2006; Luca Longinotti <chtekk@gentoo.org>
+  eaccelerator-0.9.5.ebuild:
+  Different cache dirs for PHP4/PHP5.
 
   15 Oct 2006; Luca Longinotti <chtekk@gentoo.org>
   eaccelerator-0.9.5.ebuild:
