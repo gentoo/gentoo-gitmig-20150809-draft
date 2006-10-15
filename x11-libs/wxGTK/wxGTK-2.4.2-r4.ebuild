@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.6 2006/02/13 06:51:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r4.ebuild,v 1.7 2006/10/15 03:49:51 agriffis Exp $
 
 inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
@@ -45,6 +45,11 @@ src_unpack() {
 
 	# gcc 4 compile patch ; bug #117357
 	epatch "${FILESDIR}"/${P}-gcc4.patch
+
+	# freetype-2.2.1 compile patch #150383
+	if has_version '>=media-libs/freetype-2.2.1'; then
+		epatch ${FILESDIR}/${PN}-2.4.2-noftinternals.patch
+	fi
 
 	gnuconfig_update
 }
