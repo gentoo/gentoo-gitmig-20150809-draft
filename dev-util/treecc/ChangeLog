@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/treecc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.23 2006/10/15 02:44:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/ChangeLog,v 1.24 2006/10/15 10:01:59 dertobi123 Exp $
+
+  15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> treecc-0.3.8.ebuild:
+  hppa stable, bug #150219
 
   15 Oct 2006; Jason Wever <weeve@gentoo.org> treecc-0.3.8.ebuild:
   Stable on SPARC wrt bug #150219.
