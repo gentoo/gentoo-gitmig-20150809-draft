@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/denemo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.16 2006/10/10 19:00:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.17 2006/10/15 04:57:26 matsuu Exp $
+
+  15 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> denemo-0.7.4.ebuild,
+  denemo-0.7.5.ebuild:
+  Added gnome-base/librsvg to RDEPEND, bug #146186.
 
   10 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> denemo-0.7.4.ebuild:
   Stable on sparc wrt #146186

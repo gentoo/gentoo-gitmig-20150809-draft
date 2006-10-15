@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.7.5.ebuild,v 1.2 2006/10/08 02:37:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.7.5.ebuild,v 1.3 2006/10/15 04:57:26 matsuu Exp $
 
 inherit flag-o-matic
 
@@ -15,6 +15,7 @@ IUSE="alsa"
 
 RDEPEND=">=x11-libs/gtk+-2.0.3
 	dev-libs/libxml2
+	gnome-base/librsvg
 	alsa? ( >=media-libs/alsa-lib-0.9.0 )"
 
 DEPEND="${RDEPEND}
