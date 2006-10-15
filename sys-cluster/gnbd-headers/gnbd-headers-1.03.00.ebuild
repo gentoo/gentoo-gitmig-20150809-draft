@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/gnbd-headers-1.03.00.ebuild,v 1.1 2006/08/30 11:04:45 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-headers/gnbd-headers-1.03.00.ebuild,v 1.2 2006/10/15 14:04:36 xmerlin Exp $
 
 MY_P="cluster-${PV}"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/cluster/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="!<sys-cluster/gnbd-kernel-1.03.00"
