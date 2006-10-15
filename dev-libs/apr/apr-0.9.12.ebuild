@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.12.ebuild,v 1.13 2006/09/03 22:01:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.12.ebuild,v 1.14 2006/10/15 20:15:33 vericgar Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -68,4 +68,9 @@ src_install() {
 	cp -p build/*.pl ${D}/usr/share/apr-0/build
 
 	dodoc CHANGES LICENSE NOTICE
+
+	# This file is only used on AIX systems, which gentoo is not,
+	# and causes collisions between the SLOTs, so kill it
+	rm ${D}/usr/$(get_libdir)/apr.exp
+
 }
