@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnetman
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.7 2006/07/11 19:13:32 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.8 2006/10/15 16:59:21 calchan Exp $
+
+  15 Oct 2006; Denis Dupeyron <calchan@gentoo.org>
+  -gnetman-0.0.1_pre20050429.ebuild:
+  Removed old ebuild.
 
 *gnetman-0.0.1_pre20060522 (11 Jul 2006)
 
