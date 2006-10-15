@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.18.ebuild,v 1.5 2006/08/04 22:47:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.18.ebuild,v 1.6 2006/10/15 09:41:58 kloeri Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/S/SS/SSORICHE/${P}.tar.gz"
 LICENSE="Artistic"
 #LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~ia64 sparc x86"
+KEYWORDS="ia64 sparc x86"
 IUSE=""
 
 # Disabled 

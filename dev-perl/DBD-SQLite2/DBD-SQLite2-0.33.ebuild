@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite2/DBD-SQLite2-0.33.ebuild,v 1.7 2006/10/05 21:51:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite2/DBD-SQLite2-0.33.ebuild,v 1.8 2006/10/15 10:02:23 kloeri Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/M/MS/MSERGEANT/${P}.tar.gz"
 LICENSE="Artistic"
 #LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 sparc x86"
+KEYWORDS="amd64 ia64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
