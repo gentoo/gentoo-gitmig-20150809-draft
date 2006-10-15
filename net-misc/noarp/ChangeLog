@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/noarp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/ChangeLog,v 1.7 2005/04/15 19:08:06 xmerlin Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/ChangeLog,v 1.8 2006/10/15 13:56:49 xmerlin Exp $
+
+  15 Oct 2006; Christian Zoffoli <xmerlin@gentoo.org> -noarp-1.2.3.ebuild,
+  noarp-1.2.3-r1.ebuild, noarp-2.0.2.ebuild:
+  Ebuild cleanup, removed check_KV, 1.2.3-r1 stable on x86.
 
   15 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org> noarp-2.0.2.ebuild:
   stable x86.

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/noarp-2.0.2.ebuild,v 1.3 2005/04/15 19:08:06 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/noarp-2.0.2.ebuild,v 1.4 2006/10/15 13:56:49 xmerlin Exp $
 
-inherit linux-mod
+inherit linux-mod linux-info
 
 DESCRIPTION="a kernel module and userspace tool for hiding network interfaces"
 HOMEPAGE="http://www.masarlabs.com/noarp/"
@@ -17,13 +17,13 @@ DEPEND="virtual/linux-sources"
 RDEPEND=""
 
 pkg_setup() {
+	linux-mod_pkg_setup
 	if kernel_is 2 4; then
 		die "${P} supports only 2.6 kernels"
 	fi
 }
 
 src_compile() {
-	check_KV
 	set_arch_to_kernel
 
 	econf --prefix=/ || die
