@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/Test-Base-0.50.ebuild,v 1.12 2006/09/16 22:09:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Base/Test-Base-0.50.ebuild,v 1.13 2006/10/15 20:20:58 mcummings Exp $
 
 inherit perl-module
 
@@ -17,4 +17,3 @@ SRC_TEST="do"
 DEPEND=">=virtual/perl-Test-Simple-0.62
 		>=dev-perl/Spiffy-0.30
 		>=dev-lang/perl-5.6.1"
-RDEPEND="${DEPEND}"
