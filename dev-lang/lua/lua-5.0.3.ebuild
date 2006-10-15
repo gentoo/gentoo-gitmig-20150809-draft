@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.3 2006/10/14 10:44:03 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.4 2006/10/15 15:54:10 exg Exp $
 
 inherit eutils portability
 
@@ -20,14 +20,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-linking.patch
+	epatch "${FILESDIR}"/${P}-shared.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 
 	sed -i config \
 		-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
 		-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
-		-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS} -fPIC -DPIC:" \
+		-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
 		-e 's:^\(INSTALL_ROOT= \)/usr/local:\1$(DESTDIR)/usr:' \
 		-e "s:^\(INSTALL_LIB= \$(INSTALL_ROOT)/\)lib:\1$(get_libdir):" \
 		-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
