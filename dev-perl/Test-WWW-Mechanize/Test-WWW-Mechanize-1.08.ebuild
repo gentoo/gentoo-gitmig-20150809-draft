@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.08.ebuild,v 1.7 2006/10/15 17:26:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-WWW-Mechanize/Test-WWW-Mechanize-1.08.ebuild,v 1.8 2006/10/15 20:52:47 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,6 @@ DEPEND=">=dev-perl/WWW-Mechanize-1.00
 	dev-perl/URI
 	>=dev-perl/Test-LongString-0.07
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "y" | perl-module_src_compile
