@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.13 2006/10/14 17:43:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.14 2006/10/15 15:01:24 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -434,10 +434,13 @@ src_install() {
 	doins hw/xfree86/common/{extra,vesa}modes \
 		|| die "couldn't install extra modes"
 
-	# Install xorg.conf.example
-	insinto /etc/X11
-	doins hw/xfree86/xorg.conf.example \
-		|| die "couldn't install xorg.conf.example"
+	# Bug #151421 - this file is not built with USE="minimal"
+	if ! use minimal; then
+		# Install xorg.conf.example
+		insinto /etc/X11
+		doins hw/xfree86/xorg.conf.example \
+			|| die "couldn't install xorg.conf.example"
+	fi
 }
 
 pkg_postinst() {
