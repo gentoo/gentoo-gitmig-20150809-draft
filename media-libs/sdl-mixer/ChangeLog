@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.47 2006/10/14 21:53:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.48 2006/10/15 13:05:29 dertobi123 Exp $
+
+  15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  sdl-mixer-1.2.7.ebuild:
+  hppa stable, bug #145217
 
   14 Oct 2006; Aron Griffis <agriffis@gentoo.org> sdl-mixer-1.2.7.ebuild:
   Mark 1.2.7 stable on ia64. #145217
