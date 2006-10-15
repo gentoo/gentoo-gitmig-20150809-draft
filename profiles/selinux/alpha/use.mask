@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.1 2006/10/08 18:37:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/alpha/use.mask,v 1.2 2006/10/15 02:58:47 agriffis Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -155,3 +155,6 @@ qa
 # disable until tested
 # # bug 148402
 pcsc-lite
+
+# Mask sms (for kopete-3.5.5)
+sms
