@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/conary
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary/ChangeLog,v 1.1 2006/10/15 18:35:41 smithj Exp $
+
+*conary-1.1.8 (15 Oct 2006)
+
+  15 Oct 2006; <smithj@gentoo.org> +metadata.xml, +conary-1.1.8.ebuild:
+  initial version
+
