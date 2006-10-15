@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.4 2006/10/14 22:52:39 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.ebuild,v 1.5 2006/10/15 01:37:20 chtekk Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -60,7 +60,7 @@ src_install() {
 	fowners ${HTTPD_USER}:${HTTPD_GROUP} "${EACCELERATOR_CACHEDIR}"
 	fperms 750 "${EACCELERATOR_CACHEDIR}"
 
-	insinto "/usr/share/${PN}"
+	insinto "/usr/share/${PN}-php5/"
 	doins -r doc/php/
 	dodoc-php AUTHORS ChangeLog COPYING NEWS README README.eLoader
 
@@ -95,7 +95,7 @@ pkg_postinst() {
 	fi
 
 	einfo
-	einfo "Please see the files in /usr/share/${PN} for some examples"
+	einfo "Please see the files in ${ROOT}/usr/share/${PN}-php5/ for some examples"
 	einfo "and information on how to use the functions that"
 	einfo "eAccelerator adds to PHP."
 	einfo
