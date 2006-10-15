@@ -63,11 +63,6 @@ mono
 # beagle depends on dev-dotnet/gnome-sharp.. masked for testing (19 Aug 2006 kloeri)
 beagle
 
-# need to wait for it jrockit to go stable
-java
-java-internal
-java-external
-
 emboss
 
 # lm_sensors not supported on ia64 hw, afaik
