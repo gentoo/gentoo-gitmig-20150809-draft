@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.70 2006/10/04 19:33:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.71 2006/10/15 13:09:41 dertobi123 Exp $
+
+  15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  libmatroska-0.8.0.ebuild:
+  hppa stable, bug #149908
 
   04 Oct 2006; <nixnut@gentoo.org> libmatroska-0.8.0.ebuild:
   Stable on ppc wrt bug 149908
