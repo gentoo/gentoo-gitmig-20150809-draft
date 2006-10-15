@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/Time-Duration-1.03.ebuild,v 1.8 2006/09/16 21:40:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/Time-Duration-1.03.ebuild,v 1.9 2006/10/15 23:03:49 mcummings Exp $
 
 inherit perl-module
 
@@ -15,4 +15,3 @@ IUSE=""
 
 
 DEPEND="dev-lang/perl"
-RDEPEND="${DEPEND}"

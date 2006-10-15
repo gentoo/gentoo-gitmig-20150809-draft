@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/Text-WikiFormat-0.78.ebuild,v 1.4 2006/08/06 00:32:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/Text-WikiFormat-0.78.ebuild,v 1.5 2006/10/15 23:01:43 mcummings Exp $
 
 inherit perl-module
 
@@ -10,13 +10,12 @@ HOMEPAGE="http://search.cpan.org/~chromatic/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc sparc ~x86"
 
 DEPEND="dev-perl/URI
 	virtual/perl-Scalar-List-Utils
 		>=dev-perl/module-build-0.28
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 IUSE=""
 
 SRC_TEST="do"
