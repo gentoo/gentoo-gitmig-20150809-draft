@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.02.00.ebuild,v 1.3 2006/10/15 13:46:58 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.02.00.ebuild,v 1.4 2006/10/15 21:52:53 xmerlin Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ IUSE=""
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 
 DEPEND=">=sys-cluster/ccs-1.02.00
