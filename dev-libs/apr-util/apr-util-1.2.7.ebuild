@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.7.ebuild,v 1.6 2006/09/10 17:32:36 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.2.7.ebuild,v 1.7 2006/10/15 20:22:29 vericgar Exp $
 
 inherit eutils flag-o-matic libtool db-use
 
@@ -60,4 +60,8 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
 	dodoc CHANGES NOTICE
+
+	# This file is only used on AIX systems, which gentoo is not,
+	# and causes collisions between the SLOTs, so kill it
+	rm ${D}/usr/$(get_libdir)/aprutil.exp
 }
