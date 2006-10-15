@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.30 2006/07/20 20:29:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.31 2006/10/15 21:05:55 jer Exp $
+
+  15 Oct 2006; Jeroen Roovers <jer@gentoo.org> traceroute-1.4_p12-r5.ebuild:
+  Stable for HPPA (bug #151501).
 
   20 Jul 2006; Diego Pettenò <flameeyes@gentoo.org>
   traceroute-1.4_p12-r5.ebuild:
