@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.10 2006/09/04 04:49:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r3.ebuild,v 1.11 2006/10/15 15:48:35 aballier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -49,6 +49,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-a52.patch"
 	epatch "${FILESDIR}/${P}-gnustack.patch"
 	epatch "${DISTDIR}/${P}-textrel-fix.patch.bz2"
+	epatch "${FILESDIR}/${P}-soname.patch"
 
 	if ! use mmx; then
 		sed -i -e 's:^NASM =.*:NASM =:' \
