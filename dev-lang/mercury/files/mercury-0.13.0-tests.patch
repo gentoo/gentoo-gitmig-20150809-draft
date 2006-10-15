@@ -72,8 +72,8 @@ diff -urN mercury-tests-0.13.0.orig/mdbrc mercury-tests-0.13.0/mdbrc
 +alias	e	exception
 +alias	EMPTY	step
 +alias	NUMBER	step
-+set xml_browser_cmd ''
-+set xml_tmp_filename ''
++xml_browser_cmd ''
++xml_tmp_filename ''
 diff -urN mercury-tests-0.13.0.orig/tabling/loopcheck.exp5 mercury-tests-0.13.0/tabling/loopcheck.exp5
 --- mercury-tests-0.13.0.orig/tabling/loopcheck.exp5	1970-01-01 12:00:00.000000000 +1200
 +++ mercury-tests-0.13.0/tabling/loopcheck.exp5	2006-09-16 12:41:44.000000000 +1200
