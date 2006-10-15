@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/koules
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.11 2006/09/25 20:11:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/ChangeLog,v 1.12 2006/10/15 14:39:21 tcort Exp $
+
+  15 Oct 2006; Thomas Cort <tcort@gentoo.org> koules-1.4-r2.ebuild:
+  Added ~alpha keyword wrt Bug #123886.
 
 *koules-1.4-r2 (25 Sep 2006)
 
