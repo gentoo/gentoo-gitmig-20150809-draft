@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.213 2006/10/13 21:00:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.214 2006/10/15 13:41:19 kloeri Exp $
+
+  15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  openldap-2.3.27-r2.ebuild:
+  Add back lost ~ia64 keyword.
 
   13 Oct 2006; Jeroen Roovers <jer@gentoo.org>
   files/digest-openldap-2.3.24-r1, files/digest-openldap-2.3.24-r2,
