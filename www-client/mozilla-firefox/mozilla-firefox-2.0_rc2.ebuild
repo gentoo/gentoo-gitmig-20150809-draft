@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.6 2006/10/15 16:20:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.7 2006/10/15 16:34:16 kloeri Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -144,9 +144,6 @@ src_compile() {
 	# -fstack-protector breaks us
 	gcc-specs-ssp && append-flags -fno-stack-protector-all
 	filter-flags -fstack-protector -fstack-protector-all
-
-	# required for official branding support
-	append-flags -freorder-blocks -fno-reorder-functions
 
 	#  Configure and build
 
