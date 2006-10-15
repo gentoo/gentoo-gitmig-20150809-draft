@@ -59,7 +59,7 @@ diff -u -B -r libquicktime-0.9.9/plugins/x264/x264.c libquicktime-0.9.9_new/plug
    fprintf(stderr, "    b_cbr:              %d\n", params->rc.b_cbr);
    fprintf(stderr, "    i_bitrate:          %d\n", params->rc.i_bitrate);
 -  fprintf(stderr, "    i_rf_constant:      %d\n", params->rc.i_rf_constant);
-+  fprintf(stderr, "    f_rf_constant:      %d\n", params->rc.f_rf_constant);
++  fprintf(stderr, "    f_rf_constant:      %f\n", params->rc.f_rf_constant);
    fprintf(stderr, "    f_rate_tolerance:   %f\n", params->rc.f_rate_tolerance);
    fprintf(stderr, "    i_vbv_max_bitrate:  %d\n", params->rc.i_vbv_max_bitrate);
    fprintf(stderr, "    i_vbv_buffer_size:  %d\n", params->rc.i_vbv_buffer_size);

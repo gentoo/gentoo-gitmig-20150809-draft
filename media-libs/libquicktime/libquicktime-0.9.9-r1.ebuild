@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.9-r1.ebuild,v 1.1 2006/08/20 16:40:10 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.9-r1.ebuild,v 1.2 2006/10/15 09:06:07 aballier Exp $
 
 inherit libtool eutils autotools
 
@@ -20,7 +20,7 @@ DEPEND="media-libs/libdv
 	media-libs/jpeg
 	media-libs/libvorbis
 	media-libs/libogg
-	media-libs/x264-svn
+	>=media-libs/x264-svn-20061014
 	X? ( || ( ( x11-libs/libXaw
 				x11-libs/libXv
 				x11-proto/xextproto
