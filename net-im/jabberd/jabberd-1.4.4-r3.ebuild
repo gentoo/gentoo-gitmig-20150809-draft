@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.6 2006/10/04 17:51:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.4-r3.ebuild,v 1.7 2006/10/15 10:09:53 nelchael Exp $
 
 inherit eutils
 
@@ -13,16 +13,12 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="debug ipv6 mysql postgres ssl"
 
-# Block against jabberd-2* is needed - both packages install the same files.
-# jabberd-2* needs to be back at SLOT="0"
 DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/pth-1.4.0
 	dev-libs/expat
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
-	ssl? ( >=dev-libs/openssl-0.9.6i )
-	!net-im/aim-transport
-	!=net-im/jabberd-2*"
+	ssl? ( >=dev-libs/openssl-0.9.6i )"
 
 pkg_setup() {
 
