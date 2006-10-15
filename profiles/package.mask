@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6056 2006/10/14 21:32:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6057 2006/10/15 16:12:53 nelchael Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1439,10 +1439,6 @@ www-apps/phpBB
 # Aaron Walker <ka0ttic@gentoo.org> (20 Jun 2005)
 # testing releases/cvs snaps
 =net-analyzer/net-snmp-5.3*
-
-# Jonathan Smith <smithj@gentoo.org> (15 Jun 2005)
-# masked for testing
-=x11-misc/xlockmore-5.19
 
 # David Holm <dholm@gentoo.org> (11 Jun 2005)
 # Masked since it is known to create broken partition
