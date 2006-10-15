@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2.ebuild,v 1.3 2006/03/19 23:51:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2.ebuild,v 1.4 2006/10/15 12:54:37 tcort Exp $
 
 inherit distutils eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/utidylib/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-lang/python-2.3
