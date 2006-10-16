@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.7 2006/10/15 16:34:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.8 2006/10/16 21:15:16 genstef Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -142,16 +142,29 @@ src_compile() {
 	mozconfig_final
 
 	# -fstack-protector breaks us
-	gcc-specs-ssp && append-flags -fno-stack-protector-all
-	filter-flags -fstack-protector -fstack-protector-all
+	if gcc-version ge 4 1; then
+		gcc-specs-ssp && append-flags -fno-stack-protector
+	else
+		gcc-specs-ssp && append-flags -fno-stack-protector-all
+	fi
+		filter-flags -fstack-protector -fstack-protector-all
 
-	#  Configure and build
-
-	CPPFLAGS="${CPPFLAGS} -DGENTOO_NSPLUGINS_DIR=\\\"/usr/$(get_libdir)/nsplugins\\\""
-	CPPFLAGS="${CPPFLAGS} -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/$(get_libdir)/nsbrowser/plugins\\\""
-	export CPPFLAGS
-	tc-export CC CXX LD
+	####################################
+	#
+ 	#  Configure and build
+	#
+	####################################
+ 
+	CPPFLAGS="${CPPFLAGS} -DARON_WAS_HERE" \
+	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	econf || die
+
+	# It would be great if we could pass these in via CPPFLAGS or CFLAGS prior
+	# to econf, but the quotes cause configure to fail.
+	sed -i -e \
+		's|-DARON_WAS_HERE|-DGENTOO_NSPLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsplugins\\\" -DGENTOO_NSBROWSER_PLUGINS_DIR=\\\"/usr/'"$(get_libdir)"'/nsbrowser/plugins\\\"|' \
+		${S}/config/autoconf.mk \
+		${S}/xpfe/global/buildconfig.html
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling

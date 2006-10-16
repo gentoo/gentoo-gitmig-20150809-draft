@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.195 2006/10/15 16:34:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.196 2006/10/16 21:15:16 genstef Exp $
+
+  16 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  mozilla-firefox-2.0_rc2.ebuild:
+  configure changes reverted and gcc-4.1 hardened support thanks to Bill
+  Skellenger in bug 150298
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-2.0_rc2.ebuild:
