@@ -1,8 +1,38 @@
---- beecrypt-4.1.2/configure.ac	2004-12-21 12:37:56.000000000 +0100
-+++ beecrypt-cvs/configure.ac	2006-01-07 09:48:07.000000000 +0100
-@@ -502,8 +513,7 @@
+Some updates from upstream to handle more/newer cpu types
+
+--- beecrypt-4.1.2/acinclude.m4
++++ beecrypt-4.1.2/acinclude.m4
+@@ -16,7 +16,7 @@
+   i[[3456]]86)
+     case $withval in
+     i[[3456]]86 | \
+-    pentium | pentium-mmx | pentiumpro | pentium[[234]] | \
++    pentium | pentium-m | pentium-mmx | pentiumpro | pentium[[234]] | \
+     athlon | athlon-tbird | athlon-4 | athlon-xp | athlon-mp)
+       ;;
+     *)
+@@ -80,9 +80,10 @@
+   case $target_cpu in
+   i[[3456]]86)
+     case $withval in
++    em64t | \
+     i[[3456]]86 | \
+-    pentium | pentium-mmx | pentiumpro | pentium[[234]] | \
+-    athlon | athlon-tbird | athlon-4 | athlon-xp | athlon-mp)
++    pentium | pentium-m | pentium-mmx | pentiumpro | pentium[[234]] | \
++    athlon | athlon-tbird | athlon-4 | athlon-xp | athlon-mp | athlon64 | k8)
+       if test "$ac_with_cpu" != yes; then
+         bc_target_cpu=$withval
+       fi
+--- beecrypt-4.1.2/configure.ac
++++ beecrypt-4.1.2/configure.ac
+@@ -502,9 +513,11 @@
+   arm*)
      CPPFLAGS="$CPPFLAGS -DOPTIMIZE_ARM"
      ;;
++  x86_64 | athlon64 | athlon-fx | em64t | k8)
++    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_X86_64"
++    ;;
    athlon*)
 -    CPPFLAGS="$CPPFLAGS -DOPTIMIZE_I386 -DOPTIMIZE_MMX"
 -    CFLAGS="$CFLAGS -mmmx"
