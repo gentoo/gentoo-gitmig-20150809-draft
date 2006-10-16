@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6064 2006/10/16 21:55:32 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6065 2006/10/16 23:32:25 tester Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Olivier Crete <tester@tester.ca> (16 Oct 2006)
+# Has been broken for a long time (see bug #67273)
+sys-devel/odinmp
 
 # Andrej Kacian <ticho@gentoo.org> (16 Oct 2006)
 # Release candidates, no unsuspecting users should use these.
