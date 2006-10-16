@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.8-r1.ebuild,v 1.2 2006/10/07 10:08:46 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.8-r1.ebuild,v 1.3 2006/10/16 22:08:53 cparrott Exp $
 
-inherit base
+inherit base autotools
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -16,7 +16,6 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND=">=net-misc/curl-7.10.2
-	virtual/mta
 	>=virtual/ghc-6.2.2
 	doc?  ( virtual/tetex
 			>=dev-tex/latex2html-2002.2.1_pre20041025-r1 )"
@@ -29,6 +28,9 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	base_src_unpack
 
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-ghc66.patch"
+
 	# If we're going to use the CFLAGS with GHC's -optc flag then we'd better
 	# use it with -opta too or it'll break with some CFLAGS, eg -mcpu on sparc
 	sed -i 's:\($(addprefix -optc,$(CFLAGS))\):\1 $(addprefix -opta,$(CFLAGS)):' \
@@ -40,6 +42,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Since we've patched the build system:
+	eautoreconf
+
 	econf $(use_with doc docs) \
 		|| die "configure failed"
 	emake all || die "make failed"
@@ -63,4 +68,11 @@ src_install() {
 		dodoc "${S}/darcs.ps"
 		dohtml -r "${S}/manual/"*
 	fi
+}
+
+pkg_postinst() {
+	ewarn "NOTE: in order for the darcs send command to work properly,"
+	ewarn "you must properly configure your mail transport agent to relay"
+	ewarn "outgoing mail.  For example, if you are using ssmtp, please edit"
+	ewarn "/etc/ssmtp/ssmtp.conf with appropriate values for your site."
 }
