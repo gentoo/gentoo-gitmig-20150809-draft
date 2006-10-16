@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.13 2006/08/05 23:55:29 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.14 2006/10/16 21:37:24 genstef Exp $
+
+*ltsp-4.2 (16 Oct 2006)
+
+  16 Oct 2006; Stefan Schweizer <genstef@gentoo.org> +ltsp-4.2.ebuild:
+  version bump thanks to Bret Towe <magnade@gmail.com> in bug 129513
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #136397
