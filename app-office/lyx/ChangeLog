@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.88 2006/09/25 08:31:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.89 2006/10/16 06:11:43 dberkholz Exp $
+
+  16 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; lyx-1.4.2.ebuild:
+  (#131524) Use font.eclass to avoid sandbox violations with >=fontconfig-2.4.
+  nattfodd says fine to commit.
 
   25 Sep 2006; Markus Rothe <corsair@gentoo.org> lyx-1.4.2.ebuild:
   Added ~ppc64; bug #149013

@@ -1,9 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.2.ebuild,v 1.2 2006/09/25 08:31:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.4.2.ebuild,v 1.3 2006/10/16 06:11:43 dberkholz Exp $
 
-inherit kde-functions fdo-mime eutils libtool flag-o-matic
+inherit kde-functions fdo-mime eutils libtool flag-o-matic font
 
+FONT_PN="latex-xft-fonts"
+FONT_S="${WORKDIR}/${FONT_PN}"
 CJK_PATCH="CJK-LyX-qt-${PV}-1.patch"
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -135,12 +137,7 @@ src_install() {
 	cd "${WORKDIR}"/latex-xft-fonts-0.1
 	emake DESTDIR="${D}" install || die "Font installation failed"
 
-	mkfontscale "${D}"/usr/share/fonts/latex-xft-fonts
-	mkfontdir -e /usr/share/fonts/encodings \
-		-e /usr/share/fonts/encodings/large \
-		-e /usr/X11R6/$(get_libdir)/X11/fonts/encodings \
-		"${D}"/usr/share/fonts/latex-xft-fonts
-	HOME=/root fc-cache -f "${D}"/usr/share/fonts/latex-xft-fonts
+	font_src_install
 
 	# bug #102310
 	if use gnome ; then
@@ -153,6 +150,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	font_pkg_postinst
+
 	# fix for bug 91108
 	texhash
 
