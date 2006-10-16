@@ -1,0 +1,73 @@
+diff -Nur gaim-2.0.0+beta3/configure.ac gaim-2.0.0+beta3.new/configure.ac
+--- gaim-2.0.0+beta3/configure.ac	2006-08-18 16:10:38.000000000 +0200
++++ gaim-2.0.0+beta3.new/configure.ac	2006-08-18 16:10:39.000000000 +0200
+@@ -587,7 +587,7 @@
+ AM_PATH_GLIB_2_0(2.0.0,,AC_MSG_ERROR([
+ *** GLib 2.0 is required to build Gaim; please make sure you have the GLib
+ *** development headers installed. The latest version of GLib is
+-*** always available at http://www.gtk.org/.]))
++*** always available at http://www.gtk.org/.]),gthread)
+ AM_PATH_GTK_2_0(2.0.0,,AC_MSG_ERROR([
+ *** GTK+ 2.0 is required to build Gaim; please make sure you have the GTK+
+ *** development headers installed. The latest version of GTK+ is
+diff -Nur gaim-2.0.0+beta3/src/dbus-server.c gaim-2.0.0+beta3.new/src/dbus-server.c
+--- gaim-2.0.0+beta3/src/dbus-server.c	2006-02-11 06:25:47.000000000 +0100
++++ gaim-2.0.0+beta3.new/src/dbus-server.c	2006-08-18 16:10:39.000000000 +0200
+@@ -710,6 +710,8 @@
+ 
+ gboolean gaim_dbus_init(void) 
+ {
++	if (g_thread_supported())
++		dbus_g_thread_init();
+     gaim_dbus_init_ids();
+     return gaim_dbus_dispatch_init() ;
+ }
+diff -Nur gaim-2.0.0+beta3/src/gtkmain.c gaim-2.0.0+beta3.new/src/gtkmain.c
+--- gaim-2.0.0+beta3/src/gtkmain.c	2006-03-07 05:45:22.000000000 +0100
++++ gaim-2.0.0+beta3.new/src/gtkmain.c	2006-08-18 16:10:39.000000000 +0200
+@@ -65,6 +65,7 @@
+ #include "gtkstock.h"
+ #include "gtkwhiteboard.h"
+ 
++#include <glib/gthread.h>
+ #ifdef HAVE_SIGNAL_H
+ # include <signal.h>
+ #endif
+@@ -643,6 +644,15 @@
+ 	gtk_rc_add_default_file(search_path);
+ 	g_free(search_path);
+ 
++#if (defined(G_THREADS_ENABLED) && !defined(G_THREADS_IMPL_NONE))
++	/* Since threads can be yanked in all unawares by other libraries,
++	 * and some libraries aren't smart enough to initialize the thread
++	 * subsystem when they need it, we need to do this here.  We also
++	 * threadify dbus when that gets initialized.  Ugh. */
++	if (!g_thread_supported())
++		g_thread_init(NULL);
++	gdk_threads_init();
++#endif /* Glib has threads */
+ 
+ 	gui_check = gtk_init_check(&argc, &argv);
+ 	if (!gui_check) {
+diff -Nur gaim-2.0.0+beta3/src/Makefile.am gaim-2.0.0+beta3.new/src/Makefile.am
+--- gaim-2.0.0+beta3/src/Makefile.am	2006-03-25 16:45:49.000000000 +0100
++++ gaim-2.0.0+beta3.new/src/Makefile.am	2006-08-18 16:10:39.000000000 +0200
+@@ -334,6 +334,7 @@
+ gaim_LDFLAGS = -export-dynamic
+ gaim_LDADD = \
+ 	@LIBOBJS@ \
++	$(GLIB_LIBS) \
+ 	$(GTK_LIBS) \
+ 	$(DBUS_LIBS) \
+ 	$(SOUND_LIBS) \
+diff -Nur gaim-2.0.0+beta3/src/Makefile.in gaim-2.0.0+beta3.new/src/Makefile.in
+--- gaim-2.0.0+beta3/src/Makefile.in	2006-03-29 00:39:14.000000000 +0200
++++ gaim-2.0.0+beta3.new/src/Makefile.in	2006-08-18 16:11:20.000000000 +0200
+@@ -772,6 +772,7 @@
+ gaim_LDFLAGS = -export-dynamic
+ gaim_LDADD = \
+ 	@LIBOBJS@ \
++	$(GLIB_LIBS) \
+ 	$(GTK_LIBS) \
+ 	$(DBUS_LIBS) \
+ 	$(SOUND_LIBS) \

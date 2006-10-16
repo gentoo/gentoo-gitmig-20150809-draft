@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r4.ebuild,v 1.3 2006/10/15 00:29:14 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta3-r4.ebuild,v 1.4 2006/10/16 23:34:32 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app
 
@@ -10,8 +10,7 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
-SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2
-	 mirror://gentoo/${P}-dbus.patch.tar.bz2"
+SRC_URI="mirror://sourceforge/gaim/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -54,7 +53,7 @@ DEPEND="$RDEPEND
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-3.0_beta4 )"
+PDEPEND="crypt? ( >=x11-plugins/gaim-encryption-3.0_beta5 )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -143,7 +142,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/"${P}"-as-needed.patch
 	epatch "${FILESDIR}"/"${P}"-avahi-compat.patch
-	epatch "${DISTDIR}"/"${P}"-dbus.patch.tar.bz2
+	epatch "${FILESDIR}"/"${P}"-dbus-1.patch
 	eautoreconf || die "Failed running eautoreconf"
 }
 
