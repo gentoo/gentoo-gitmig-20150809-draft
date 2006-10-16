@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.8 2006/10/16 21:15:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc2.ebuild,v 1.9 2006/10/16 21:34:33 genstef Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.mozilla.org/projects/firefox/"
 KEYWORDS="~alpha ~amd64 ~sparc ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
-IUSE="java mozdevelop branding"
+IUSE="java mozdevelop branding xform"
 
 MOZ_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}"
 SRC_URI="${MOZ_URI}/source/firefox-${MY_PV}-source.tar.bz2
@@ -115,11 +115,16 @@ src_compile() {
 	mozconfig_config
 
 	mozconfig_annotate '' --enable-application=browser
-	mozconfig_annotate '' --enable-extensions=default,typeaheadfind
 	mozconfig_annotate '' --enable-image-encoder=all
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
+
+	if use xform; then
+		mozconfig_annotate '' --enable-extensions=default,xforms,schema-validatalidation,typeaheadfind
+	else
+		mozconfig_annotate '' --enable-extensions=default,typeaheadfind
+	fi
 
 	if use branding; then
 		mozconfig_annotate '' --enable-official-branding
