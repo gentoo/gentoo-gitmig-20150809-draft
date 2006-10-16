@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.52 2006/10/14 11:12:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.53 2006/10/16 15:22:51 deathwing00 Exp $
+
+  16 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  krusader-1.70.1.ebuild:
+  Removed quotation marks in the unpack line of src_unpack. Fixes bug #151416.
+  Thanks to the users for reporting it.
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> krusader-1.70.1.ebuild:
   Don't let it use kde.eclass admindir update as this package is crazy.
