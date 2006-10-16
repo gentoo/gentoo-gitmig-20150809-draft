@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.68 2006/10/07 16:48:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.69 2006/10/16 22:28:50 flameeyes Exp $
+
+*kwin-3.5.5-r1 (16 Oct 2006)
+
+  16 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kwin-3.5.5-input-shape.patch, +kwin-3.5.5-r1.ebuild:
+  Add a patch from upstream to fix holes in the input shapes.
 
   07 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> Manifest:
   Regenerate digest (this time hopefully..).

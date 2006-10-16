@@ -1,0 +1,63 @@
+From l.lunak@kde.org Tue Oct 10 12:25:53 2006
+To: kde-commits@kde.org
+Subject: branches/KDE/3.5/kdebase/kwin
+Message-Id: <1160475953.522428.2616.nullmailer@svn.kde.org>
+Cc: kde-packager@kde.org,
+ 135250-done@bugs.kde.org
+Content-Type: text/plain;
+  charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+X-Length: 6070
+X-UID: 85
+
+SVN commit 594159 by lunakl:
+
+Build the input shape on a helper window instead of directly,
+this avoids having a hole in the shape temporarily. This seems
+to break non-click-to-focus mouse policies on some systems
+(works fine here though).
+BUG: 135250
+CCMAIL: kde-packager@kde.org
+
+
+
+ M  +19 -6     client.cpp  
+
+
+--- branches/KDE/3.5/kdebase/kwin/client.cpp #594158:594159
+@@ -477,16 +477,29 @@
+     // calls it or when the decoration is created/destroyed
+ 
+     if( Shape::version() >= 0x11 ) // 1.1, has input shape support
+-        { // there appears to be no way to find out if a window has input
+-          // shape set or not, so always set propagate the input shape
+-          // (it's the same like the bounding shape by default)
+-        XShapeCombineShape( qt_xdisplay(), frameId(), ShapeInput, 0, 0,
++        { // There appears to be no way to find out if a window has input
++          // shape set or not, so always propagate the input shape
++          // (it's the same like the bounding shape by default).
++          // Also, build the shape using a helper window, not directly
++          // in the frame window, because the sequence set-shape-to-frame,
++          // remove-shape-of-client, add-input-shape-of-client has the problem
++          // that after the second step there's a hole in the input shape
++          // until the real shape of the client is added and that can make
++          // the window lose focus (which is a problem with mouse focus policies)
++        static Window helper_window = None;
++        if( helper_window == None )
++            helper_window = XCreateSimpleWindow( qt_xdisplay(), qt_xrootwin(),
++                0, 0, 1, 1, 0, 0, 0 );
++        XResizeWindow( qt_xdisplay(), helper_window, width(), height());
++        XShapeCombineShape( qt_xdisplay(), helper_window, ShapeInput, 0, 0,
+                            frameId(), ShapeBounding, ShapeSet );
+-        XShapeCombineShape( qt_xdisplay(), frameId(), ShapeInput,
++        XShapeCombineShape( qt_xdisplay(), helper_window, ShapeInput,
+                            clientPos().x(), clientPos().y(),
+                            window(), ShapeBounding, ShapeSubtract );
+-        XShapeCombineShape( qt_xdisplay(), frameId(), ShapeInput,
++        XShapeCombineShape( qt_xdisplay(), helper_window, ShapeInput,
+                            clientPos().x(), clientPos().y(),
+                            window(), ShapeInput, ShapeUnion );
++        XShapeCombineShape( qt_xdisplay(), frameId(), ShapeInput, 0, 0,
++                           helper_window, ShapeInput, ShapeSet );
+         }
+     }
