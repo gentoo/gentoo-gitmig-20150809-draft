@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.2 2006/09/16 10:03:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/galago-sharp/galago-sharp-0.5.0.ebuild,v 1.3 2006/10/16 04:59:13 compnerd Exp $
 
 inherit eutils mono autotools
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.0
 		 >=sys-apps/dbus-0.36
-		 =dev-dotnet/gtk-sharp-1.0*
+		 =dev-dotnet/gtk-sharp-2*
 		 >=dev-libs/libgalago-0.5.0"
 DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.9"
