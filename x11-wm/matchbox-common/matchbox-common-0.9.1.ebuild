@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1.ebuild,v 1.1 2006/03/12 21:48:31 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1.ebuild,v 1.2 2006/10/16 21:33:09 yvasilev Exp $
 
 inherit versionator
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND=">=x11-libs/libmatchbox-1.1"
 
 src_compile() {
 	econf --disable-pda-folders \
