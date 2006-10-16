@@ -1,0 +1,58 @@
+fix problems on gcc-4.x
+https://bugs.gentoo.org/attachment.cgi?id=85864
+https://bugs.gentoo.org/show_bug.cgi?id=131831
+
+Joerg Bornkessel <hd_brummy@gentoo.org> 16 Oct 2006
+
+diff -Naur gephex-0.4.3.old/base/src/utils/structscanner.h gephex-0.4.3/base/src/utils/structscanner.h
+--- gephex-0.4.3.old/base/src/utils/structscanner.h	2006-04-30 18:05:29.000000000 -0400
++++ gephex-0.4.3/base/src/utils/structscanner.h	2006-04-30 18:06:08.000000000 -0400
+@@ -40,11 +40,11 @@
+ {
+  IStructTokenListener& m_listener;
+   
+-  void StructScanner::divideNameFromContent(const std::string& text,
++  void divideNameFromContent(const std::string& text,
+ 					    std::string& name,
+ 					    std::string& content) const;
+-  void StructScanner::processName(const std::string& name) const;
+-  void StructScanner::processContent(const std::string& content) const;
++  void processName(const std::string& name) const;
++  void processContent(const std::string& content) const;
+   std::string::size_type
+   findNextClosingBracket(const std::string& content,
+ 			 std::string::size_type n) const;
+diff -Naur gephex-0.4.3.old/engine/src/model/model.h gephex-0.4.3/engine/src/model/model.h
+--- gephex-0.4.3.old/engine/src/model/model.h	2006-04-30 18:05:29.000000000 -0400
++++ gephex-0.4.3/engine/src/model/model.h	2006-04-30 18:06:22.000000000 -0400
+@@ -235,7 +235,7 @@
+       void deleteModule(utils::AutoPtr<Graph>, int moduleID);
+ 
+ #ifndef NDEBUG
+-      void Model::checkGraphSerialisation();
++      void checkGraphSerialisation();
+ #endif
+ 
+     };
+diff -Naur gephex-0.4.3.old/qtgui/src/gui/graphnameview.cpp gephex-0.4.3/qtgui/src/gui/graphnameview.cpp
+--- gephex-0.4.3.old/qtgui/src/gui/graphnameview.cpp	2006-04-30 18:05:29.000000000 -0400
++++ gephex-0.4.3/qtgui/src/gui/graphnameview.cpp	2006-04-30 18:07:38.000000000 -0400
+@@ -266,7 +266,7 @@
+       m_textListener->textChanged(1,newStatus.c_str());
+     }
+ 
+-    virtual void GraphItem::propertySelected(int id)
++    virtual void propertySelected(int id)
+     {
+       switch(id)
+ 	{
+@@ -428,7 +428,7 @@
+       m_textListener->textChanged(1,newStatus.c_str());
+     }
+ 
+-    void SnapItem::propertySelected(int id)
++    void propertySelected(int id)
+     {
+       switch(id)
+ 	{
+

@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.8 2005/12/28 20:53:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gephex/gephex-0.4.3.ebuild,v 1.9 2006/10/16 19:50:24 hd_brummy Exp $
+
+inherit eutils
 
 DESCRIPTION="GePhex is a modular video effect framework."
 HOMEPAGE="http://www.gephex.org"
@@ -24,8 +26,14 @@ DEPEND="virtual/x11
 
 RDEPEND=${DEPEND}
 
-src_compile() {
+src_unpack() {
+	unpack ${A} || die
 	cd ${S}
+	
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
+
+src_compile() {
 
 	# qt wants to create lock files etc. in that directory
 	addwrite "${QTDIR}/etc/settings"
