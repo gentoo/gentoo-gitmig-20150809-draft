@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6062 2006/10/16 20:53:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6063 2006/10/16 21:53:59 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -212,6 +212,7 @@ games-arcade/tuxracer-demo
 # you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
 # to the unmasked drivers.
 ~x11-drivers/nvidia-drivers-1.0.9625
+~x11-drivers/nvidia-drivers-1.0.9626
 ~media-video/nvidia-settings-1.0.20060919
 
 # Markus Ullmann <jokey@gentoo.org> (24.09.2006)
