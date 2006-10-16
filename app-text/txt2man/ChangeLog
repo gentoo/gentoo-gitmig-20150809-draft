@@ -1,6 +1,11 @@
 # ChangeLog for app-text/txt2man
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.8 2005/08/25 03:19:54 agriffis Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.9 2006/10/16 21:39:28 flameeyes Exp $
+
+*txt2man-1.5 (16 Oct 2006)
+
+  16 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +txt2man-1.5.ebuild:
+  Version bump
 
   25 Aug 2005; Aron Griffis <agriffis@gentoo.org> txt2man-1.4.8-r1.ebuild:
   add ~alpha ~ia64
