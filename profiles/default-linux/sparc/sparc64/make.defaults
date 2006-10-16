@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/make.defaults,v 1.12 2006/10/05 21:18:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/make.defaults,v 1.13 2006/10/16 23:52:39 weeve Exp $
 
 # 64bit kernel, 32bit userland
 CHOST="sparc-unknown-linux-gnu"
@@ -9,6 +9,11 @@ PROFILE_ARCH="sparc64"
 # We need sparc64 binutils for linux-headers
 CTARGETS_BINUTILS="sparc-unknown-linux-gnu sparc64-unknown-linux-gnu"
 STAGE1_USE="gcc64"
+
+# The funky stuffs for handling different kernel compiler than userland compiler
+KERNEL_ABI="sparc64"
+CHOST_sparc64="sparc64-unknown-linux-gnu"
+LDFLAGS_sparc64="-m elf64_sparc"
 
 # Multilib stuff
 MULTILIB_ABIS="sparc32"
