@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.2-r1.ebuild,v 1.1 2006/10/16 00:01:22 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.16.2-r1.ebuild,v 1.2 2006/10/16 06:41:54 compnerd Exp $
 
 inherit autotools eutils multilib gnome2
 
@@ -129,6 +129,12 @@ src_unpack() {
 	# fixes for ff compiles.
 	if use nsplugin && ( use firefox || use sparc ); then
 		epatch ${FILESDIR}/${PN}-1.5.91-mozilla-firefox-include-fix.patch
+
+		# Patch borrowed from ubuntu (link xpcom)
+		epatch ${FILESDIR}/01_build_mozilla_plugin_with_firefox_xpcom.patch
+	elif use nsplugin ; then
+		# Patch borrowed from ubuntu (link xpcom)
+		epatch ${FILESDIR}/01_build_mozilla_plugin_with_seamonkey_xpcom.patch
 	fi
 }
 
