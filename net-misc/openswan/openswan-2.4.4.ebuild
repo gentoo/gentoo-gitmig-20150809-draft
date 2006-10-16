@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.4.ebuild,v 1.2 2005/11/29 14:49:12 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.4.4.ebuild,v 1.3 2006/10/16 02:46:58 dsd Exp $
 
-inherit eutils
+inherit eutils linux-info
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}
@@ -24,69 +24,27 @@ DEPEND="!net-misc/strongswan
 	sys-apps/iproute2"
 RDEPEND=""
 
-check_version_h() {
-	if [ ! -f "${ROOT}/usr/src/linux/include/linux/version.h" ]
-	then
-		eerror "Please verify that your /usr/src/linux symlink is pointing"
-		eerror "to your current kernel sources, and that you have a running kernel"
-		die "/usr/src/linux symlink not setup or kernel tree has not been configured!"
-	fi
-}
-
-get_KV_info() {
-	check_version_h
-
-	# Get the kernel version of sources in /usr/src/linux ...
-	export KV_full="$(awk '/UTS_RELEASE/ { gsub("\"", "", $3); print $3 }' \
-		"${ROOT}/usr/src/linux/include/linux/version.h")"
-	export KV_major="$(echo "${KV_full}" | cut -d. -f1)"
-	export KV_minor="$(echo "${KV_full}" | cut -d. -f2)"
-	export KV_micro="$(echo "${KV_full}" | cut -d. -f3 | sed -e 's:[^0-9].*::')"
-}
-
-is_kernel() {
-	[ -z "$1" -o -z "$2" ] && return 1
-
-	get_KV_info
-
-	if [ "${KV_major}" -eq "$1" -a "${KV_minor}" -eq "$2" ]
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
 pkg_setup() {
-	get_KV_info
+	linux-info_pkg_setup
 
-	einfo "Linux kernel is version ${KV_major}.${KV_minor}.${KV_micro}"
+	if kernel_is 2 6; then
+		einfo "This ebuild will set ${P} to use 2.6 native IPsec (KAME)."
+		einfo "KLIPS will not be compiled/installed."
+		export MYMAKE="programs"
 
-	if is_kernel 2 5
-	then
-	eerror "Kernel version ${KV_major}.${KV_minor}.${KV_micro} will not work with this ebuild."
-	die "Please install a 2.6.x version of the Linux kernel."
-	fi
+	elif kernel_is 2 4; then
+		if ! [ -d /usr/src/linux/net/ipsec ]; then
+			eerror "You need to have an IPsec enabled 2.4.x kernel."
+			eerror "Ensure you have one running and make a symlink to it in /usr/src/linux"
+			die
+		fi
 
-	if is_kernel 2 6
-	then
-	einfo "This ebuild will set ${P} to use 2.6 native IPsec (KAME)."
-	einfo "KLIPS will not be compiled/installed."
-	export MYMAKE="programs"
-
-	elif is_kernel 2 4
-	then
-		[ -d /usr/src/linux/net/ipsec ] || {
-		eerror "You need to have an IPsec enabled 2.4.x kernel."
-		eerror "Ensure you have one running and make a symlink to it in /usr/src/linux"
-		}
-	einfo "Using patched-in IPsec code for kernel 2.4"
-	einfo "Your kernel only supports KLIPS for kernel level IPsec."
-	export MYMAKE="confcheck programs"
+		einfo "Using patched-in IPsec code for kernel 2.4"
+		einfo "Your kernel only supports KLIPS for kernel level IPsec."
+		export MYMAKE="confcheck programs"
 
 	else
-	eerror "Sorry, no support for your kernel version ${KV_major}.${KV_minor}.${KV_micro}."
-	die "Install an IPsec enabled 2.4 or 2.6 kernel."
+		die "Unrecognised kernel version"
 	fi
 }
 
@@ -95,6 +53,9 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
+
+	# GCC4 compile fix
+	sed -i -e '/LIST_INSERT_HEAD/a ;' programs/pluto/server.c
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.29 2006/06/19 05:20:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.30 2006/10/16 02:46:58 dsd Exp $
+
+  16 Oct 2006; Daniel Drake <dsd@gentoo.org> openswan-2.4.4.ebuild:
+  Use linux-mod, to fix bug #149197 reported by DominikBuerkle
 
   19 Jun 2006; Alin Nastac <mrness@gentoo.org> files/ipsec:
   Start ipsec after dns.
