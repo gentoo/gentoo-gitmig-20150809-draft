@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.1.0-r6.ebuild,v 1.3 2006/08/06 00:56:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ice/ice-3.1.0-r6.ebuild,v 1.4 2006/10/16 13:00:02 caleb Exp $
 
 inherit eutils
 
@@ -15,13 +15,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="ncurses test debug"
 
-DEPEND="ncurses? ( sys-libs/ncurses
-				   sys-libs/readline )
-		test? ( >=dev-lang/python-2.2 )
-		~sys-libs/db-4.3.29
-		>=dev-libs/openssl-0.9.7"
+DEPEND="ncurses? ( sys-libs/ncurses sys-libs/readline )
+	test? ( >=dev-lang/python-2.2 )
+	~sys-libs/db-4.3.29
+	>=dev-libs/openssl-0.9.7"
 RDEPEND=">=dev-libs/expat-1.9
-		>=app-arch/bzip2-1.0"
+	>=app-arch/bzip2-1.0"
 
 S=${WORKDIR}/${MY_P}
 
