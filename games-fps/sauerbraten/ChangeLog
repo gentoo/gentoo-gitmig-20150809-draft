@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/sauerbraten
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.1 2006/09/19 05:57:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/sauerbraten/ChangeLog,v 1.2 2006/10/16 20:11:58 tupone Exp $
+
+  16 Oct 2006; <tupone@gentoo.org> sauerbraten-2006.09.12.ebuild:
+  Add menu entry. Bug #150362 by Marijn Schouten
 
 *sauerbraten-2006.09.12 (19 Sep 2006)
 
