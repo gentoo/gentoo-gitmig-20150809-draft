@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-vga
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vga/ChangeLog,v 1.26 2006/10/13 23:15:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-vga/ChangeLog,v 1.27 2006/10/16 16:03:47 corsair Exp $
+
+  16 Oct 2006; Markus Rothe <corsair@gentoo.org>
+  xf86-video-vga-4.1.0.ebuild:
+  Stable on ppc64
 
   13 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xf86-video-vga-4.1.0.ebuild:
