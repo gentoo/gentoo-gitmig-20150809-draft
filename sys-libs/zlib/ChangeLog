@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.60 2006/10/07 05:40:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.61 2006/10/16 20:46:53 uberlord Exp $
+
+  16 Oct 2006; Roy Marples <uberlord@gentoo.org> zlib-1.2.3-r1.ebuild:
+  Add ~sparc-fbsd keyword.
 
 *zlib-1.2.3-r1 (07 Oct 2006)
 
