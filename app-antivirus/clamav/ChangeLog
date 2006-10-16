@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.170 2006/10/16 17:21:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.171 2006/10/16 23:51:16 weeve Exp $
+
+  16 Oct 2006; Jason Wever <weeve@gentoo.org> clamav-0.88.5.ebuild:
+  Stable on SPARC wrt bug #151561.
 
   16 Oct 2006; Markus Rothe <corsair@gentoo.org> clamav-0.88.5.ebuild:
   Stable on ppc64; bug #151561
