@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.3 2005/07/16 17:33:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-java3d-bin/blackdown-java3d-bin-1.3.1-r1.ebuild,v 1.4 2006/10/16 23:10:58 nichoj Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="x86? ( mirror://blackdown.org/java3d/1.3.1/i386/fcs/java3d-sdk-${PV}-li
 	amd64? ( mirror://blackdown.org/java3d/1.3.1/amd64/fcs/java3d-sdk-${PV}-linux-amd64.bin )"
 HOMEPAGE="http://www.blackdown.org"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="x86 -sparc ~amd64"
+KEYWORDS="-* ~amd64 x86"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4.1
 	>=dev-java/java-config-1.2.6"
