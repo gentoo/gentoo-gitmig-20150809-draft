@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcdplay
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.4 2006/01/24 22:34:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcdplay/ChangeLog,v 1.5 2006/10/16 10:55:11 s4t4n Exp $
+
+  16 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmcdplay-1.0_beta1.ebuild:
+  Added missing imake dependancy, Closes bug #150641.
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   wmcdplay-1.0_beta1.ebuild:
