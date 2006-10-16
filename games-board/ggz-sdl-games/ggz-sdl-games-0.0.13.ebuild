@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.6 2006/10/16 13:41:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.7 2006/10/16 18:56:23 nyhm Exp $
 
 inherit games
 
@@ -24,16 +24,11 @@ DEPEND="~dev-games/libggz-${PV}
 	virtual/opengl
 	x11-libs/libXcursor"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i \
-		-e "s:[\]\${prefix}/share/ggz:${GAMES_DATADIR}/ggz:" \
-		-e "s:[\]\${prefix}/lib/ggz:${GAMES_LIBDIR}/ggz:" \
-		configure || die "sed failed"
-}
-
 src_install() {
+	if [[ -f "${ROOT}/${GAMES_SYSCONFDIR}"/ggz/ggz.modules ]] ; then
+		dodir "${GAMES_SYSCONFDIR}"/ggz
+		cp {"${ROOT}","${D}"}/"${GAMES_SYSCONFDIR}"/ggz/ggz.modules
+	fi
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README*
 	prepgamesdirs

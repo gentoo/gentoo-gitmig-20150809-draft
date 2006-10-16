@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ggz-txt-client-0.0.13.ebuild,v 1.6 2006/10/06 22:39:45 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-txt-client/ggz-txt-client-0.0.13.ebuild,v 1.7 2006/10/16 18:52:21 nyhm Exp $
 
 inherit games
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-amd64 ppc x86"
 IUSE=""
+RESTRICT="userpriv"
 
 RDEPEND="~dev-games/ggz-client-libs-${PV}
 	sys-libs/ncurses
@@ -29,11 +30,18 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf --datadir=/usr/share || die
+	egamesconf \
+		--disable-debug \
+		--datadir=/usr/share \
+		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
+	if [[ -f "${ROOT}/${GAMES_SYSCONFDIR}"/ggz/ggz.modules ]] ; then
+		dodir "${GAMES_SYSCONFDIR}"/ggz
+		cp {"${ROOT}","${D}"}/"${GAMES_SYSCONFDIR}"/ggz/ggz.modules
+	fi
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS QuickStart.GGZ README* TODO
 	prepgamesdirs
