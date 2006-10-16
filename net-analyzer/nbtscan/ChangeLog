@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nbtscan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.18 2006/10/16 00:29:41 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/ChangeLog,v 1.19 2006/10/16 02:05:59 weeve Exp $
+
+  16 Oct 2006; Jason Wever <weeve@gentoo.org> nbtscan-1.5.1-r1.ebuild:
+  Stable on SPARC wrt bug #151519.
 
   16 Oct 2006; Markus Ullmann <jokey@gentoo.org> -nbtscan-1.0.3.ebuild,
   nbtscan-1.5.1.ebuild, nbtscan-1.5.1-r1.ebuild:
