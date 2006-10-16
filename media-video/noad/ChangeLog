@@ -1,6 +1,12 @@
 # ChangeLog for media-video/noad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.10 2006/10/07 11:19:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/ChangeLog,v 1.11 2006/10/16 20:34:00 hd_brummy Exp $
+
+*noad-0.6.0-r6 (16 Oct 2006)
+
+  16 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/noad-0.6.0-fix-osd.patch, +noad-0.6.0-r6.ebuild:
+  add patch - Fixes problems with noad --OSD if vdr is not running
 
 *noad-0.6.0-r5 (07 Oct 2006)
 
