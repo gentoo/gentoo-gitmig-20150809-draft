@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90_rc1.ebuild,v 1.1 2006/10/16 10:55:53 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90_rc1.ebuild,v 1.2 2006/10/16 11:02:09 ticho Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -90,7 +90,7 @@ src_install() {
 	sed -i -e "s:^\(Example\):\# \1:" \
 		-e "s:.*\(PidFile\) .*:\1 /var/run/clamav/freshclam.pid:" \
 		-e "s:.*\(DatabaseOwner\) .*:\1 clamav:" \
-		-e "s:^\#\(UpdateLogFile\) .*:\1 /var/log/freshclam.log:" \
+		-e "s:^\#\(UpdateLogFile\) .*:\1 /var/log/clamav/freshclam.log:" \
 		${D}/etc/freshclam.conf
 
 	if use milter ; then
