@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.7 2006/10/15 08:56:31 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.2.ebuild,v 1.8 2006/10/16 14:00:57 blubb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -59,11 +59,7 @@ src_compile() {
 	elif use sparc; then
 		emake ${OPTIONS} linux-sparc  || die "Make failed"
 	elif use amd64; then
-		if use mmx; then
-			emake ${OPTIONS} linux-x86-64-mmx  || die "Make failed"
-		else
-			emake ${OPTIONS} linux-x86-64  || die "Make failed"
-		fi
+		emake ${OPTIONS} linux-x86-64  || die "Make failed"
 	elif use ppc-macos; then
 		if use altivec; then
 			emake ${OPTIONS} macosx-ppc32-altivec || die "Make failed"
