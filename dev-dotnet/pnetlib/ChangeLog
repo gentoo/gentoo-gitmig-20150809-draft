@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.29 2006/08/06 02:04:16 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.30 2006/10/16 23:40:24 tcort Exp $
+
+  16 Oct 2006; Thomas Cort <tcort@gentoo.org> pnetlib-0.6.10.ebuild,
+  pnetlib-0.6.12.ebuild, pnetlib-0.7.0.ebuild, pnetlib-0.7.2.ebuild,
+  pnetlib-0.7.4.ebuild:
+  Added automake dep wrt Bug #151564.
 
 *pnetlib-0.7.4 (06 Aug 2006)
 
