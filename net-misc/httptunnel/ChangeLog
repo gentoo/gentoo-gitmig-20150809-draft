@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/httptunnel
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.12 2005/08/13 23:14:57 hansmi Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.13 2006/10/16 10:54:15 tcort Exp $
+
+  16 Oct 2006; Thomas Cort <tcort@gentoo.org> httptunnel-3.3.ebuild:
+  Added ~amd64 keyword wrt Bug #148501.
 
   13 Aug 2005; Michael Hanselmann <hansmi@gentoo.org> httptunnel-3.3.ebuild:
   Stable on ppc.
