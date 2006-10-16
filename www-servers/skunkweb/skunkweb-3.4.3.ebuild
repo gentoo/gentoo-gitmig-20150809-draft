@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.3.ebuild,v 1.2 2006/06/04 19:10:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.3.ebuild,v 1.3 2006/10/16 19:49:13 malc Exp $
 
 inherit eutils apache-module
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://skunkweb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/skunkweb/${P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="apache2 doc"
 
 DEPEND=">=dev-lang/python-2.2
@@ -43,7 +43,7 @@ src_compile() {
 		--with-group=skunkweb \
 		--localstatedir=/var/lib/skunkweb \
 		--bindir=/usr/bin \
-		--libdir=/usr/lib/skunkweb \
+		--libdir=/usr/$(get_libdir)/skunkweb \
 		--sysconfdir=/etc/skunkweb \
 		--prefix=/usr/share/skunkweb \
 		--with-cache=/var/lib/skunkweb/cache \

@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/skunkweb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.13 2006/06/04 19:10:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.14 2006/10/16 19:49:13 malc Exp $
+
+  16 Oct 2006; <malc@gentoo.org> skunkweb-3.4.3.ebuild:
+  ~amd64 with multilib-strict patch, bug #117274, thanks to Christoph Mende
+  (angelos)
 
   04 Jun 2006; Michael Stewart <vericgar@gentoo.org>
   skunkweb-3.4.0-r1.ebuild, skunkweb-3.4.1.ebuild, skunkweb-3.4.3.ebuild:
