@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.4 2006/10/13 22:38:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.5 2006/10/16 09:30:38 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -185,6 +185,7 @@ src_unpack() {
 	echo "`use_with firefox system-mozilla`" >> ${CONFFILE}
 	echo "`use_with firefox`" >> ${CONFFILE}
 
+	echo "`use_enable cups`" >> ${CONFFILE}
 	echo "`use_enable ldap`" >> ${CONFFILE}
 	echo "`use_with ldap openldap`" >> ${CONFFILE}
 	echo "`use_enable eds evolution2`" >> ${CONFFILE}

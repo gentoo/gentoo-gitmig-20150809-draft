@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.262 2006/10/13 22:38:32 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.263 2006/10/16 09:30:38 suka Exp $
+
+  16 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.4.ebuild:
+  Fix missing cups-stuff, closes bug#151536
 
   13 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4.ebuild:
