@@ -1,6 +1,9 @@
 # ChangeLog for app-office/indeview
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.12 2005/08/26 13:30:49 kanaka Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.13 2006/10/16 15:49:20 kanaka Exp $
+
+  16 Oct 2006; Joel Martin <kanaka@gentoo.org> indeview-0.6.6.ebuild:
+  Move qt from RDEPEND to DEPEND since it uses qmake to build
 
   26 Aug 2005; Joel Martin <kanaka@gentoo.org> -indeview-0.6.5.ebuild,
   indeview-0.6.6.ebuild:
