@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6060 2006/10/16 11:29:37 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6061 2006/10/16 19:29:30 nyhm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1346,13 +1346,6 @@ dev-java/eclipse-jface
 # Jeremy Huddleston <eradicator@gentoo.org> (24 Sep 2005)
 # Not quite ready for prime time...
 www-apps/open-xchange
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (19 Sep 2005)
-# Adding new GGZ ebuilds to portage.  These are still masked simply because I
-# have been unable to make newer versions that actually work, and I'm not a KDE
-# guy.
->=games-board/ggz-kde-client-0.0.11
->=games-board/ggz-kde-games-0.0.11
 
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
