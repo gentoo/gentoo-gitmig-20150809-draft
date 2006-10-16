@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libsexy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.13 2006/10/16 20:36:16 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.14 2006/10/16 20:42:45 dev-zero Exp $
+
+  16 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Re-added 'doc' USE-flag for dependency. License fix.
 
   16 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Version bump, see bug #146302. Useless 'doc' USE-flag removed.
