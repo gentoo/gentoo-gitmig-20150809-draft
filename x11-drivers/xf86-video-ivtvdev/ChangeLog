@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ivtvdev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/ChangeLog,v 1.1 2006/10/12 15:15:23 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/ChangeLog,v 1.2 2006/10/16 23:17:21 je_fro Exp $
+
+  16 Oct 2006; Jeff Gardner <je_fro@gentoo.org>
+  xf86-video-ivtvdev-0.10.6.ebuild:
+  Disallow building with xorg-7.1
 
 *xf86-video-ivtvdev-0.10.6 (12 Oct 2006)
 

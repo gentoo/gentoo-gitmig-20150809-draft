@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/xf86-video-ivtvdev-0.10.6.ebuild,v 1.1 2006/10/12 15:15:23 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ivtvdev/xf86-video-ivtvdev-0.10.6.ebuild,v 1.2 2006/10/16 23:17:21 je_fro Exp $
 # SNAPSHOT="yes"
 
 inherit eutils x-modular
@@ -23,19 +23,22 @@ DEPEND="x11-proto/xextproto
 	x11-proto/videoproto
 	x11-proto/xproto
 	x11-misc/imake
-	x11-base/xorg-server"
+	=x11-base/xorg-server-1.0.2-r7"
+
+# This package is currently broken with xorg-7.1.
 
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/ivtv_xdriver-unified.patch
 	cd ${S}
-	sed -i -e "/DependTarget/a USRLIBDIR=\/usr\/$(get_libdir)/xorg" Imakefile
+	sed -i -e "/DependTarget/a USRLIBDIR=\/usr\/$(get_libdir)\/xorg" Imakefile
 
 }
 
 src_compile() {
 
 	xmkmf || die "Running xmkmf failed!"
+	x-modular_src_compile || die "make failed"
 
 }
 
