@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.2_alpha3.ebuild,v 1.1 2006/10/06 12:34:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.2_alpha3.ebuild,v 1.2 2006/10/16 10:06:57 flameeyes Exp $
 
 inherit eutils python
 
@@ -27,12 +27,14 @@ IUSE="doc firebird mysql odbc postgres sqlite sqlite3"
 
 # with mdb and xbase will be dealt in another revision
 
-DEPEND="firebird? ( dev-db/firebird )
+RDEPEND="firebird? ( dev-db/firebird )
 	mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	sqlite? ( =dev-db/sqlite-2* )
 	sqlite3? ( =dev-db/sqlite-3* )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	python_version

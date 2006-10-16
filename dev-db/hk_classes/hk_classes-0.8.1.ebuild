@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1.ebuild,v 1.1 2006/05/05 14:13:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.1.ebuild,v 1.2 2006/10/16 10:06:57 flameeyes Exp $
 
 inherit eutils python
 
@@ -22,10 +22,12 @@ LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc firebird mysql odbc postgres"
 
-DEPEND="firebird? ( dev-db/firebird )
+RDEPEND="firebird? ( dev-db/firebird )
 	mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-db/postgresql-7.3 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	python_version
