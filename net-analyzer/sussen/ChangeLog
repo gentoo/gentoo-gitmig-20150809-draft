@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.33 2006/10/14 22:37:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.34 2006/10/16 18:37:33 pva Exp $
+
+*sussen-0.31 (16 Oct 2006)
+
+  16 Oct 2006; Peter Volkov <pva@gentoo.org> metadata.xml,
+  sussen-0.30.ebuild, +sussen-0.31.ebuild:
+  Version bump. Thank upstream dev Loren Bandiera for report. Fixed
+  indentation. Added myself as maintainer and longdescription in metadata.
 
   14 Oct 2006; Olivier Crête <tester@gentoo.org> sussen-0.29.ebuild:
   Stable on amd64 per bug #151302

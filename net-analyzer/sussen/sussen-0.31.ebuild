@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.30.ebuild,v 1.2 2006/10/16 18:37:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.31.ebuild,v 1.1 2006/10/16 18:37:33 pva Exp $
 
 inherit eutils gnome2 mono
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://dev.mmgsecurity.com/projects/sussen/"
 SRC_URI="http://dev.mmgsecurity.com/downloads/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 # web interface now optional, but does not work.
-#IUSE="doc dbus gnome web"
-IUSE="doc dbus gnome"
+#IUSE="doc gnome web"
+IUSE="doc gnome"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 
@@ -19,8 +19,7 @@ RDEPEND=">=dev-lang/mono-1.1
 			 >=dev-dotnet/gnome-sharp-2.4
 			 >=dev-dotnet/gconf-sharp-2.4
 			 >=dev-dotnet/glade-sharp-2.4
-			 gnome-base/gnome-panel
-			 dbus? ( sys-apps/dbus ) )"
+			 gnome-base/gnome-panel )"
 
 DEPEND="${RDEPEND}
 	doc? ( >=dev-util/monodoc-1.1.8 )
@@ -30,16 +29,10 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog README TODO"
 
 pkg_setup() {
-	if use dbus ; then
-		if use gnome; then
-			built_with_use sys-apps/dbus mono || die \
-			"${PN} requires dbus build with mono support. Please, reemerge dbus with USE=\"mono\""
-		else
-			ewarn "dbus is only available and make sense when gnome is enabled."
-			ewarn "If you really want dbus support, please, add gnome to your USE flags."
-			ebeep 5
-		fi
-	fi
+	ewarn "dbus support has been removed from sussen until mono binding"
+	ewarn "issue will be resolved: http://www.j5live.com/?p=221"
+	ebeep 5
+
 	use gnome || { elog "You do not have gnome in your USE flags.";
 					elog "applet and editor will not be built." ; }
 }
@@ -63,7 +56,6 @@ src_compile () {
 	# $(use_enable web yes)
 	econf ${myconf} \
 		--enable-web=no \
-		$(use_enable dbus) \
 		$(use_enable gnome) || die "./configure failed."
 
 	emake -j1 || die "Compilation failed"
@@ -79,8 +71,9 @@ src_install () {
 		elog "the command line. Use GNOME panel to invoke it."
 		elog "You can also run it with the --tray-icon command line option."
 		echo
-		ewarn "sussen-editor is still work in progress. Just basic functionality is"
-		ewarn "working."
+		ewarn "sussen-editor is still work in progress... But 'new', 'save' and"
+		ewarn "'save as' operations are now implemented. Also it is possible to"
+		ewarn "execute definitions."
 		echo
 		ewarn "Beginning with sussen-0.24 default location for oval definitions changed."
 		ewarn "If you had previous versions installed, please, run the following"
