@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.19 2006/10/16 22:00:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.20 2006/10/16 22:03:59 wolf31o2 Exp $
+
+  16 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-drivers-1.0.9626.ebuild:
+  It looks like the i2c patch is still needed.
 
 *nvidia-drivers-1.0.9626 (16 Oct 2006)
 

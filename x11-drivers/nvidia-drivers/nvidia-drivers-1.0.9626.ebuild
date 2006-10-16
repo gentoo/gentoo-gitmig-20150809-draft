@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9626.ebuild,v 1.1 2006/10/16 22:00:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9626.ebuild,v 1.2 2006/10/16 22:03:59 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -146,6 +146,8 @@ src_unpack() {
 	if ! use x86-fbsd; then
 		# Zander kernel patches
 		# None yet.
+		# Zander i2c patch
+		epatch ${NV_PATCH_PREFIX}-i2c.diff
 
 		# Quiet down warnings the user do not need to see
 		sed -i \
