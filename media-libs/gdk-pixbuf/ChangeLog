@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gdk-pixbuf
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.43 2005/11/20 06:36:49 hardave Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/ChangeLog,v 1.44 2006/10/16 23:23:31 blubb Exp $
+
+  16 Oct 2006; Simon Stelling <blubb@gentoo.org>
+  gdk-pixbuf-0.22.0-r5.ebuild:
+  don't let the build system decide whether we use mmx or not
 
   20 Nov 2005; Hardave Riar <hardave@gentoo.org>
   gdk-pixbuf-0.22.0-r5.ebuild:

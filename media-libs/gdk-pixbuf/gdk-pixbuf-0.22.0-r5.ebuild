@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r5.ebuild,v 1.4 2006/07/05 05:35:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r5.ebuild,v 1.5 2006/10/16 23:23:31 blubb Exp $
 
 inherit virtualx libtool gnome.org eutils
 
@@ -40,12 +40,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf=""
-	use mmx || myconf="${myconf} --disable-mmx"
 	econf \
 		--sysconfdir=/etc/X11/gdk-pixbuf \
 		$(use_enable doc gtk-doc) \
-		${myconf} \
+		$(use_enable mmx) \
 		|| die
 
 	# build needs to be able to
