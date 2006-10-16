@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.5 2006/10/07 00:40:12 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-sdl-games/ggz-sdl-games-0.0.13.ebuild,v 1.6 2006/10/16 13:41:45 nyhm Exp $
 
 inherit games
 
-DESCRIPTION="These are the gtk versions of the games made by GGZ Gaming Zone"
+DESCRIPTION="These are the SDL versions of the games made by GGZ Gaming Zone"
 HOMEPAGE="http://www.ggzgamingzone.org/"
 SRC_URI="http://ftp.belnet.be/packages/ggzgamingzone/ggz/${PV}/${P}.tar.gz
 	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/${PV}/${P}.tar.gz"
