@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.3 2006/10/12 10:45:47 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.4 2006/10/16 17:29:35 corsair Exp $
+
+  16 Oct 2006; Markus Rothe <corsair@gentoo.org> aria2-0.8.1.ebuild:
+  Added ~ppc64; bug #149658
 
   12 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Replaced dobin/doman with 'make install', solves bug #150979
