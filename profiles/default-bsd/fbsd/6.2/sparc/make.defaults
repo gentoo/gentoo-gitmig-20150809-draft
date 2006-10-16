@@ -1,0 +1,11 @@
+# Copyright 2004-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/make.defaults,v 1.1 2006/10/16 19:42:36 uberlord Exp $
+# System-wide defaults for the G/FBSD 6.2 Portage system
+
+ARCH="sparc-fbsd"
+CHOST="sparc64-gentoo-freebsd6.2"
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+ACCEPT_KEYWORDS="~sparc-fbsd sparc-fbsd"

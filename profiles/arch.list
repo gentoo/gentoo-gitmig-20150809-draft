@@ -11,5 +11,6 @@ ppc-macos
 s390
 sh
 sparc
+sparc-fbsd
 x86
 x86-fbsd
