@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.3.ebuild,v 1.1 2006/10/15 23:23:38 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.3.ebuild,v 1.2 2006/10/16 15:30:15 compnerd Exp $
 
 inherit eutils toolchain-funcs
 
@@ -57,7 +57,7 @@ src_compile() {
 			-e 's:@make:@$(MAKE):' \
 			-e "s:\(BIN_DIR = \).*$:\1/usr/bin:" \
 			-e "s:\(MAN_DIR = \).*$:\1/usr/share/man:" \
-			-e "s:\(EXCEPTION_DIR = \).*$:\1/var/lib/spim/exceptions.s:" \
+			-e "s:\(EXCEPTION_DIR = \).*$:\1/var/lib/spim:" \
 			Makefile
 
 		emake CC="$(tc-getCC)" -j1 xspim || die
@@ -91,8 +91,4 @@ src_install() {
 
 	cd ${S}
 	dodoc README VERSION ChangeLog
-
-	# Set the default spim exception handler
-	insinto /etc/env.d
-	doins ${FILESDIR}/23spim
 }
