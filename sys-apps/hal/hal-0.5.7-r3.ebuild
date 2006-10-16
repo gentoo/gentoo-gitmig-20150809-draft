@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r3.ebuild,v 1.10 2006/08/29 04:20:49 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.7-r3.ebuild,v 1.11 2006/10/16 17:48:16 genstef Exp $
 
 inherit eutils linux-info debug
 
@@ -64,9 +64,9 @@ function notify_procfs() {
 }
 
 pkg_setup() {
-	linux-info_pkg_setup
+	get_version || eerror "Unable to calculate Linux Kernel version"
 
-	kernel_is ge 2 6 15 || die "HAL requires a kernel version 2.6.15 or newer"
+	kernel_is ge 2 6 15 || eerror "HAL requires a kernel version 2.6.15 or newer"
 
 	if kernel_is lt 2 6 16 ; then
 		linux_chkconfig_present KOBJECT_UEVENT || notify_uevent
