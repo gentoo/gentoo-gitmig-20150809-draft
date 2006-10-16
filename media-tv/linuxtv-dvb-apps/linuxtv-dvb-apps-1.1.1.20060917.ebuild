@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.1 2006/09/17 19:59:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/linuxtv-dvb-apps-1.1.1.20060917.ebuild,v 1.2 2006/10/16 19:13:31 malc Exp $
 
 
 inherit eutils versionator
@@ -34,6 +34,11 @@ src_unpack()
 
 	# do not compile test-progs
 	sed -i Makefile -e '/-C test/d'
+
+	# [QA] Fix library install paths on multilib aware platforms.
+	# (you'd think passing libdir=/usr/$(get_libdir) to emake would work, but
+	# no...)
+	sed -i Make.rules -e "s:\$(prefix)/lib:\$(prefix)/$(get_libdir):g"
 }
 
 src_compile()
