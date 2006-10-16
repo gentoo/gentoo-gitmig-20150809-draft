@@ -1,20 +1,21 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.5.1-r1.ebuild,v 1.2 2005/07/19 12:37:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.5.1-r1.ebuild,v 1.3 2006/10/16 00:29:41 jokey Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}a
 DESCRIPTION="NBTscan is a program for scanning IP networks for NetBIOS name information"
-SRC_URI="http://www.inetcat.org/software/${P}.tar.gz"
 HOMEPAGE="http://www.inetcat.org/software/nbtscan.html"
+SRC_URI="http://www.sourcefiles.org/Networking/Tools/Miscellanenous/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
+IUSE=""
 
 DEPEND="virtual/libc"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86"
-IUSE=""
+S=${WORKDIR}/${P}a
 
 src_unpack() {
 	unpack ${A}
@@ -29,5 +30,5 @@ src_compile() {
 
 src_install () {
 	dobin nbtscan
-	dodoc COPYING ChangeLog README
+	dodoc ChangeLog README
 }
