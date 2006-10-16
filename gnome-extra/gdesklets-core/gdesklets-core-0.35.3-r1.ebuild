@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3-r1.ebuild,v 1.2 2006/09/25 03:17:55 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.35.3-r1.ebuild,v 1.3 2006/10/16 01:41:39 nixphoeni Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -74,9 +74,9 @@ src_install() {
 	# Install the man page
 	doman ${S}/doc/man/*.1
 
-	# Remove conflicts with x11-misc/shared-mime-info
+	# Remove conflicts with x11-misc/shared-mime-info and auto-generated MIME info
 	rm -rf ${D}/usr/share/mime/aliases ${D}/usr/share/mime/magic ${D}/usr/share/mime/globs \
-		${D}/usr/share/mime/subclasses ${D}/usr/share/mime/XMLnamespaces
+		${D}/usr/share/mime/subclasses ${D}/usr/share/mime/XMLnamespaces ${D}/usr/share/mime/mime.cache
 
 }
 
