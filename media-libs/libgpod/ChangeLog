@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.18 2006/10/15 21:08:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.19 2006/10/16 20:10:37 tester Exp $
+
+  16 Oct 2006; Olivier Crête <tester@gentoo.org>
+  +files/libgpod-0.4.0-test-nogdk.patch, metadata.xml, libgpod-0.4.0.ebuild:
+  Fix compilation without gtk, bug #149018
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org> libgpod-0.4.0.ebuild:
   Mark 0.4.0 ~ia64

@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.3 2006/10/15 21:08:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.4 2006/10/16 20:10:37 tester Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Shared library to access the contents of an iPod"
 HOMEPAGE="http://www.gtkpod.org/libgpod.html"
@@ -22,6 +22,20 @@ DEPEND="${RDEPEND}
 		sys-devel/autoconf
 		sys-devel/libtool
 		>=dev-util/intltool-0.2.9"
+
+src_unpack() {
+	unpack ${A}
+
+	cd  ${S}
+	epatch ${FILESDIR}/libgpod-0.4.0-test-nogdk.patch
+
+	# Dont run aclocal, it breaks
+	eautomake
+	eautoconf
+	eautoheader
+	elibtoolize
+}
+
 src_compile() {
 
 	econf $(use_enable gtk gdk-pixbuf) \
