@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/XML-Dumper-0.79.ebuild,v 1.5 2006/08/06 01:20:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/XML-Dumper-0.79.ebuild,v 1.6 2006/10/16 01:56:44 mcummings Exp $
 
 inherit perl-module
 
@@ -16,5 +16,3 @@ SRC_TEST="do"
 
 DEPEND=">=dev-perl/XML-Parser-2.16
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-

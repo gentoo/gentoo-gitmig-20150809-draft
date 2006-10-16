@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Dumper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/ChangeLog,v 1.13 2006/09/05 13:36:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Dumper/ChangeLog,v 1.14 2006/10/16 01:56:44 mcummings Exp $
+
+  16 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  XML-Dumper-0.79.ebuild, XML-Dumper-0.81.ebuild:
+  Marking amd64 stable
 
   05 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   XML-Dumper-0.81.ebuild:
