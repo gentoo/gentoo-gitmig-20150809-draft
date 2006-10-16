@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.7 2006/10/08 11:19:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.8 2006/10/16 22:04:14 blubb Exp $
 
 inherit eutils autotools games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/exult/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
-IUSE="3dnow mmx timidity zlib"
+IUSE="timidity zlib"
 
 RDEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-mixer-1.2.4
@@ -54,8 +54,8 @@ src_compile() {
 		--disable-dependency-tracking \
 		--disable-tools \
 		--disable-opengl \
-		$(use_enable 3dnow) \
-		$(use_enable mmx) \
+		--disable-3dnow \
+		--disable-mmx \
 		$(use_enable timidity) \
 		$(use_enable zlib zip-support) \
 		|| die
