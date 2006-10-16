@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.49 2006/10/15 16:07:25 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.50 2006/10/16 11:26:53 exg Exp $
+
+  16 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
+  -files/lua-5.0.2-gentoo.patch, +files/lua-5.0.3-destdir.patch,
+  +files/lua-5.0.3-dylib.patch, -lua-5.0.2-r1.ebuild, lua-5.0.3.ebuild:
+  Add patch for ppc-macos. Cleanup.
 
   15 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
   files/lua-ppc-macos-Makefile.patch, lua-5.0.2.ebuild:

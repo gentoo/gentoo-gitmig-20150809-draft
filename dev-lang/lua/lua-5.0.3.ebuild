@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.4 2006/10/15 15:54:10 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.3.ebuild,v 1.5 2006/10/16 11:26:53 exg Exp $
 
 inherit eutils portability
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
 IUSE="readline"
 
 RDEPEND="readline? ( sys-libs/readline )"
@@ -20,6 +20,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}-destdir.patch
+	epatch "${FILESDIR}"/${P}-dylib.patch
 	epatch "${FILESDIR}"/${P}-shared.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-asneeded.patch
@@ -28,7 +30,7 @@ src_unpack() {
 		-e 's:^#\(LOADLIB= -DUSE_DLOPEN=1\):\1:' \
 		-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
 		-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
-		-e 's:^\(INSTALL_ROOT= \)/usr/local:\1$(DESTDIR)/usr:' \
+		-e 's:^\(INSTALL_ROOT= \)/usr/local:\1/usr:' \
 		-e "s:^\(INSTALL_LIB= \$(INSTALL_ROOT)/\)lib:\1$(get_libdir):" \
 		-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
 
