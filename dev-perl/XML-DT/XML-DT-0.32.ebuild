@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.32.ebuild,v 1.14 2006/08/06 01:19:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/XML-DT-0.32.ebuild,v 1.15 2006/10/16 01:55:59 mcummings Exp $
 
 inherit perl-module
 
@@ -22,7 +22,6 @@ DEPEND="dev-perl/libwww-perl
 	dev-perl/Test-Pod-Coverage
 	>=dev-perl/XML-Parser-2.31
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "" | perl-module_src_compile
