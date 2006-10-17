@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bnfc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.5 2006/10/11 21:52:53 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/ChangeLog,v 1.6 2006/10/17 20:46:42 dcoutts Exp $
+
+  17 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> bnfc-2.2.ebuild:
+  Need to inherit eutils eclass.
 
   11 Oct 2006; <kolmodin@gentoo.org> +files/bnfc-2.2-ghc66-utf8.patch,
   bnfc-2.1.2.ebuild, bnfc-2.2.ebuild:
