@@ -1,11 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8178.ebuild,v 1.7 2006/10/13 16:26:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.8178.ebuild,v 1.8 2006/10/17 13:48:46 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
-X86_PKG_V="pkg1"
-AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
 AMD64_NV_PACKAGE="NVIDIA-Linux-x86_64-${NV_V}"
@@ -13,8 +11,8 @@ X86_FBSD_NV_PACKAGE="NVIDIA-FreeBSD-x86-${NV_V}"
 
 DESCRIPTION="NVIDIA X11 driver and GLX libraries"
 HOMEPAGE="http://www.nvidia.com/"
-SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-${X86_PKG_V}.run )
-	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-${AMD64_PKG_V}.run )
+SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PACKAGE}-pkg0.run )
+	 amd64? ( http://download.nvidia.com/XFree86/Linux-x86_64/${NV_V}/${AMD64_NV_PACKAGE}-pkg0.run )
 	 x86-fbsd? ( http://download.nvidia.com/freebsd/${NV_V}/${X86_FBSD_NV_PACKAGE}.tar.gz )"
 
 LICENSE="NVIDIA"
@@ -67,10 +65,10 @@ QA_EXECSTACK_amd64="usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 export _POSIX2_VERSION="199209"
 
 if use x86; then
-	PKG_V="-${X86_PKG_V}"
+	PKG_V="-pkg0"
 	NV_PACKAGE="${X86_NV_PACKAGE}"
 elif use amd64; then
-	PKG_V="-${AMD64_PKG_V}"
+	PKG_V="-pkg0"
 	NV_PACKAGE="${AMD64_NV_PACKAGE}"
 elif use x86-fbsd; then
 	PKG_V=""

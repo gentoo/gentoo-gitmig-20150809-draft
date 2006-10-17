@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.21 2006/10/17 00:29:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.22 2006/10/17 13:48:46 wolf31o2 Exp $
+
+  17 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/1.0.9625/NVIDIA-1.0.9625-i2c.diff,
+  +files/1.0.9626/NVIDIA-1.0.9626-i2c.diff, nvidia-drivers-1.0.8178.ebuild,
+  nvidia-drivers-1.0.8774.ebuild, -nvidia-drivers-1.0.9625.ebuild,
+  nvidia-drivers-1.0.9626.ebuild:
+  Changed pkg1 and pkg2 to pkg0 for bug #146182.
 
   17 Oct 2006; Olivier Crête <tester@gentoo.org>
   nvidia-drivers-1.0.9626.ebuild:
