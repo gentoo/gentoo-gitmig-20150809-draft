@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.4 2006/08/15 14:50:18 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/mures-0.5.ebuild,v 1.5 2006/10/17 19:07:23 nyhm Exp $
 
-inherit eutils games
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+inherit autotools eutils games
 
 DESCRIPTION="A clone of Sega's Chu Chu Rocket"
 HOMEPAGE="http://mures.sourceforge.net/"
@@ -19,30 +21,31 @@ DEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	opengl? ( virtual/opengl )"
 
-dir="${GAMES_DATADIR}/${PN}"
+dir=${GAMES_DATADIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Disable OpenGL support if USE flag is not set
-	if use !opengl ; then
-		einfo "Disabling OpenGL"
+	if ! use opengl ; then
 		sed -i \
 			-e 's: -DHAVE_GL::' \
 			-e 's: -lGL::' \
-			configure.in || die "sed configure.in failed"
-		sed -i -e 's:./configure \$\*::' \
-			autogen.sh || die "sed autogen.sh failed"
+			configure.in || die "sed failed"
 	fi
+
+	sed -i '$ s/\\//' \
+		src/lua/Makefile.am \
+		src/maps/battle/Makefile.am \
+		|| die "sed failed"
+
+	eautoreconf
 
 	cd src
 
-	# Apply savegame patch. Game will be saved in ~/saved.mus
-	epatch ${FILESDIR}/${P}-save.patch
-
-	# Apply screenshot save patch. It will be saved as ~/mures_shot.bmp
-	epatch ${FILESDIR}/${P}-screenshot.patch
+	# Save to HOME
+	epatch "${FILESDIR}"/${P}-save.patch
 
 	# Modify game data & scrips path
 	sed -i \
@@ -74,18 +77,15 @@ src_unpack() {
 }
 
 src_compile() {
-	if use !opengl ; then
-		./autogen.sh
-	fi
-	egamesconf || die "egamesconf failed"
+	egamesconf || die
 	emake || die "emake failed"
 }
 
 src_install() {
 	# Remove makefiles before installation
 	rm -f src/*/Makefile* src/*/*/Makefile* || die "removing makefiles"
-	insinto ${dir}
-	doins -r src/gui src/images src/sounds src/textures src/maps src/*.lua \
+	insinto "${dir}"
+	doins -r src/{gui,images,sounds,textures,maps,*.lua} \
 		|| die "copying data files"
 	dodoc README TODO ChangeLog AUTHORS || die "dodoc failed"
 	dogamesbin src/mures || die "dogamesbin failed"
