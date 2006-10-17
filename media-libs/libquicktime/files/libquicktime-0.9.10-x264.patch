@@ -1,0 +1,77 @@
+--- libquicktime-0.9.10/plugins/x264/x264.c.old	2006-10-15 01:14:30.000000000 +0200
++++ libquicktime-0.9.10/plugins/x264/x264.c	2006-10-15 01:15:00.000000000 +0200
+@@ -91,7 +91,11 @@
+   fprintf(stderr, "    i_qp_step:          %d\n", params->rc.i_qp_step);
+   fprintf(stderr, "    b_cbr:              %d\n", params->rc.b_cbr);
+   fprintf(stderr, "    i_bitrate:          %d\n", params->rc.i_bitrate);
++#if X264_BUILD < 54
+   fprintf(stderr, "    i_rf_constant:      %d\n", params->rc.i_rf_constant);
++#else
++  fprintf(stderr, "    f_rf_constant:      %f\n", params->rc.f_rf_constant);
++#endif
+   fprintf(stderr, "    f_rate_tolerance:   %f\n", params->rc.f_rate_tolerance);
+   fprintf(stderr, "    i_vbv_max_bitrate:  %d\n", params->rc.i_vbv_max_bitrate);
+   fprintf(stderr, "    i_vbv_buffer_size:  %d\n", params->rc.i_vbv_buffer_size);
+@@ -493,7 +497,11 @@
+       {
+       /* Force ABR */
+       codec->params.rc.i_rc_method = X264_RC_ABR;
++#if X264_BUILD < 54
+       codec->params.rc.i_rf_constant = 0;
++#else
++      codec->params.rc.f_rf_constant = 0.;
++#endif
+       if(codec->pass == 1)
+         {
+         /* Strings will be made private by x264 */
+@@ -655,7 +663,11 @@
+   INTPARAM("x264_i_bitrate", codec->params.rc.i_bitrate);
+   
+   INTPARAM("x264_i_qp_constant", codec->params.rc.i_qp_constant);
++#if X264_BUILD < 54
+   INTPARAM("x264_i_rf_constant", codec->params.rc.i_rf_constant);
++#else
++  FLOATPARAM("x264_f_rf_constant", codec->params.rc.f_rf_constant);
++#endif
+   INTPARAM("x264_i_qp_min", codec->params.rc.i_qp_min);
+   INTPARAM("x264_i_qp_max", codec->params.rc.i_qp_max);
+   INTPARAM("x264_i_qp_step", codec->params.rc.i_qp_step);
+--- libquicktime-0.9.10/plugins/x264/lqt_x264.c.old	2006-10-15 01:14:38.000000000 +0200
++++ libquicktime-0.9.10/plugins/x264/lqt_x264.c	2006-10-15 01:15:00.000000000 +0200
+@@ -3,6 +3,9 @@
+ #include <quicktime/lqt_codecapi.h>
+ #include <quicktime/colormodels.h>
+ 
++/* To get X264_BUILD value */
++#include <x264.h>
++
+ void quicktime_init_codec_x264(quicktime_video_map_t *vtrack);
+ 
+ static char * fourccs_x264[]  = { "avc1", (char*)0 };
+@@ -95,6 +98,7 @@
+       val_default: { val_int: 0 },
+       help_string: "Bitrate in kbit/s. 0 means VBR (recommended)"
+     },
++#if X264_BUILD < 54
+     {
+       name:        "x264_i_rf_constant",
+       real_name:   "Nominal Quantizer parameter",
+@@ -105,6 +109,18 @@
+       help_string: "This selects the nominal quantizer to use (1 to 51). Lower values result in " \
+     "better fidelity, but higher bitrates. 26 is a good default value. 0 means lossless."
+     },
++#else
++    {
++      name:        "x264_f_rf_constant",
++      real_name:   "Nominal Quantizer parameter",
++      type:        LQT_PARAMETER_FLOAT,
++      val_default: { val_float: 26.0 },
++      val_min:     { val_float: 0.0 },
++      val_max:     { val_float: 51.0 },
++      help_string: "This selects the nominal quantizer to use (1 to 51). Lower values result in " \
++    "better fidelity, but higher bitrates. 26 is a good default value. 0 means lossless."
++    },
++#endif
+     {
+       name:        "x264_i_qp_constant",
+       real_name:   "Quantizer parameter",
