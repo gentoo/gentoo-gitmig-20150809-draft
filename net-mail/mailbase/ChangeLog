@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.68 2006/04/03 00:10:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.69 2006/10/17 11:00:11 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> mailbase-1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   03 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> mailbase-1.ebuild:
   Add ~x86-fbsd keyword.

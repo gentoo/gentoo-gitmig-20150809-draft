@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.32 2006/07/06 16:26:46 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.33 2006/10/17 10:56:50 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  mailwrapper-0.2.1-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   06 Jul 2006; Emanuele Giaquinta <exg@gentoo.org> mailwrapper-0.2.1.ebuild:
   Add ~ppc-macos keyword.
