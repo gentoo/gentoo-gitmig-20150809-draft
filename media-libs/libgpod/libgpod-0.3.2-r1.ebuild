@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.3.2-r1.ebuild,v 1.5 2006/07/08 22:29:10 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.3.2-r1.ebuild,v 1.6 2006/10/17 19:49:25 tester Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ RDEPEND=">=dev-libs/glib-2.4
 		virtual/eject"
 DEPEND="${RDEPEND}
 		sys-devel/autoconf
+		sys-devel/automake
+		dev-util/pkgconfig
 		sys-devel/libtool
 		>=dev-util/intltool-0.2.9"
 src_unpack() {

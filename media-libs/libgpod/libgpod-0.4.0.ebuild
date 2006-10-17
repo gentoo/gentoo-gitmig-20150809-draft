@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.4 2006/10/16 20:10:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.4.0.ebuild,v 1.5 2006/10/17 19:49:25 tester Exp $
 
 inherit eutils autotools
 
@@ -20,6 +20,8 @@ RDEPEND=">=dev-libs/glib-2.4
 			>=dev-python/eyeD3-0.6.6 )"
 DEPEND="${RDEPEND}
 		sys-devel/autoconf
+		sys-devel/automake
+		dev-util/pkgconfig
 		sys-devel/libtool
 		>=dev-util/intltool-0.2.9"
 
