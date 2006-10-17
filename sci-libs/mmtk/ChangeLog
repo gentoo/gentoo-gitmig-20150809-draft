@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mmtk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.4 2006/09/26 07:49:52 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmtk/ChangeLog,v 1.5 2006/10/17 03:49:02 dberkholz Exp $
+
+  17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; mmtk-2.4.6.ebuild:
+  Homepage update.
 
   26 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Change herd to sci-chemistry from sci.
