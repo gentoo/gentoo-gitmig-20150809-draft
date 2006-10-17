@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.55 2006/10/03 09:14:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.56 2006/10/17 09:25:25 flameeyes Exp $
+
+  17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> karm-3.5.2.ebuild,
+  karm-3.5.3.ebuild, karm-3.5.4.ebuild, karm-3.5.5.ebuild:
+  Add missing dependencies over XScrnSaver library/protocol. Closes bug #129377.
 
 *karm-3.5.5 (03 Oct 2006)
 
