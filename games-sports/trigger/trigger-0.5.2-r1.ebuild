@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2-r1.ebuild,v 1.5 2006/07/23 03:36:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/trigger-0.5.2-r1.ebuild,v 1.6 2006/10/17 01:39:31 nyhm Exp $
 
-inherit eutils games
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+inherit autotools eutils games
 
 DESCRIPTION="Free OpenGL rally car racing game"
 HOMEPAGE="http://www.positro.net/trigger/"
@@ -15,21 +17,17 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	|| (
-		( x11-libs/libX11 )
-		virtual/x11 )
-	>=media-libs/libsdl-1.2.5
-	>=media-libs/sdl-image-1.2
+	virtual/glu
+	x11-libs/libX11
+	x11-libs/libXt
+	media-libs/libsdl
+	media-libs/sdl-image
 	media-libs/sdl-mixer
-	~media-libs/openal-0.0.8
+	media-libs/openal
 	media-libs/freealut
 	dev-games/physfs"
 DEPEND="${RDEPEND}
-	|| (
-		( x11-libs/libXt
-			x11-proto/xproto )
-		virtual/x11
-	)
+	x11-proto/xproto
 	dev-util/jam"
 
 S=${WORKDIR}/${P}-src
@@ -46,11 +44,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-freealut.patch \
 		"${FILESDIR}/${P}"-gcc41.patch \
 		"${FILESDIR}/${P}"-physfs.patch
-
+	AT_M4DIR=mk/autoconf eautoreconf
 }
 
 src_compile() {
-	./autogen.sh
 	egamesconf --datadir="${GAMES_DATADIR}/${PN}" || die
 	jam || die "jam failed"
 }
@@ -60,7 +57,8 @@ src_install() {
 
 	cd ../${P}-data
 	insinto "${GAMES_DATADIR}/${PN}"
-	doins -r events maps plugins sounds textures vehicles trigger.config.defs
+	doins -r events maps plugins sounds textures vehicles trigger.config.defs \
+		|| die "doins failed"
 
 	dodoc README.txt README-stereo.txt
 	prepgamesdirs
@@ -68,7 +66,7 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	einfo "After running ${PN} for the first time, a config file is"
-	einfo "available in ~/.trigger/trigger.config"
+	elog "After running ${PN} for the first time, a config file is"
+	elog "available in ~/.trigger/trigger.config"
 	echo
 }
