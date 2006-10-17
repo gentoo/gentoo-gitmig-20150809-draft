@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.17 2006/10/14 20:20:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.95-r1.ebuild,v 1.18 2006/10/17 18:35:30 aballier Exp $
 
 inherit eutils font autotools flag-o-matic
 
@@ -74,6 +74,7 @@ src_unpack() {
 	cd "${S}"
 
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	epatch "${FILESDIR}/${P}-libquicktime-compat.patch"
 	eautoreconf
 }
 
