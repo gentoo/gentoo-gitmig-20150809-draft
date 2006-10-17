@@ -1,5 +1,5 @@
---- configure.ac.orig	2006-07-07 11:28:44.000000000 +0200
-+++ configure.ac	2006-07-07 11:29:09.000000000 +0200
+--- configure.ac
++++ configure.ac
 @@ -625,6 +625,9 @@
  WITH_SQLITE3_INCLUDE=
  WITH_SQLITE3_LIB=

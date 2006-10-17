@@ -1,6 +1,7 @@
-diff -Naur rpm-4.4.6.orig/build/Makefile.am rpm-4.4.6/build/Makefile.am
---- rpm-4.4.6.orig/build/Makefile.am	2005-09-16 19:43:35.000000000 +0400
-+++ rpm-4.4.6/build/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+Try and disable over-engineering in the rpm build system.
+
+--- rpm-4.4.6/build/Makefile.am
++++ rpm-4.4.6/build/Makefile.am
 @@ -24,10 +24,7 @@
  pkginc_HEADERS = rpmbuild.h rpmfc.h rpmfile.h rpmspec.h
  noinst_HEADERS = buildio.h
@@ -13,9 +14,8 @@ diff -Naur rpm-4.4.6.orig/build/Makefile.am rpm-4.4.6/build/Makefile.am
  librpmbuild_la_SOURCES = \
  	build.c expression.c files.c misc.c names.c pack.c \
  	parseBuildInstallClean.c parseChangelog.c parseDescription.c \
-diff -Naur rpm-4.4.6.orig/configure.ac rpm-4.4.6/configure.ac
---- rpm-4.4.6.orig/configure.ac	2006-10-17 17:02:14.000000000 +0400
-+++ rpm-4.4.6/configure.ac	2006-10-17 17:03:12.000000000 +0400
+--- rpm-4.4.6/configure.ac
++++ rpm-4.4.6/configure.ac
 @@ -117,7 +117,7 @@
  dnl
  with_selinuxval=no
@@ -69,9 +69,8 @@ diff -Naur rpm-4.4.6.orig/configure.ac rpm-4.4.6/configure.ac
  AC_DEFINE_UNQUOTED(RPMCONFIGDIR, "$RPMCONFIGDIR",
  	[Full path to rpm global configuration directory (usually /usr/lib/rpm)])
  AC_SUBST(RPMCONFIGDIR)
-diff -Naur rpm-4.4.6.orig/lib/Makefile.am rpm-4.4.6/lib/Makefile.am
---- rpm-4.4.6.orig/lib/Makefile.am	2006-04-06 23:37:07.000000000 +0400
-+++ rpm-4.4.6/lib/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/lib/Makefile.am
++++ rpm-4.4.6/lib/Makefile.am
 @@ -29,10 +29,7 @@
  mylibs = librpm.la
  LIBS =
@@ -84,9 +83,8 @@ diff -Naur rpm-4.4.6.orig/lib/Makefile.am rpm-4.4.6/lib/Makefile.am
  librpm_la_SOURCES = \
  	cpio.c depends.c formats.c fs.c fsm.c getdate.c \
  	manifest.c misc.c package.c \
-diff -Naur rpm-4.4.6.orig/python/Makefile.am rpm-4.4.6/python/Makefile.am
---- rpm-4.4.6.orig/python/Makefile.am	2006-02-12 20:16:50.000000000 +0300
-+++ rpm-4.4.6/python/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/python/Makefile.am
++++ rpm-4.4.6/python/Makefile.am
 @@ -4,8 +4,8 @@
  
  LINT = splint
@@ -98,9 +96,8 @@ diff -Naur rpm-4.4.6.orig/python/Makefile.am rpm-4.4.6/python/Makefile.am
  
  SUBDIRS = rpm
  
-diff -Naur rpm-4.4.6.orig/python/rpm/Makefile.am rpm-4.4.6/python/rpm/Makefile.am
---- rpm-4.4.6.orig/python/rpm/Makefile.am	2004-10-20 01:33:22.000000000 +0400
-+++ rpm-4.4.6/python/rpm/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/python/rpm/Makefile.am
++++ rpm-4.4.6/python/rpm/Makefile.am
 @@ -4,8 +4,8 @@
  
  PYVER = @WITH_PYTHON_VERSION@
@@ -112,9 +109,8 @@ diff -Naur rpm-4.4.6.orig/python/rpm/Makefile.am rpm-4.4.6/python/rpm/Makefile.a
  
  EXTRA_DIST = \
  	__init__.py
-diff -Naur rpm-4.4.6.orig/rpmdb/Makefile.am rpm-4.4.6/rpmdb/Makefile.am
---- rpm-4.4.6.orig/rpmdb/Makefile.am	2006-03-25 03:40:36.000000000 +0300
-+++ rpm-4.4.6/rpmdb/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/rpmdb/Makefile.am
++++ rpm-4.4.6/rpmdb/Makefile.am
 @@ -41,11 +41,7 @@
  # XXX watchout, ../db3/libdb.la created by this Makefile may surprise
  libdb_la = $(top_builddir)/$(WITH_DB_SUBDIR)/libdb.la
@@ -128,9 +124,8 @@ diff -Naur rpm-4.4.6.orig/rpmdb/Makefile.am rpm-4.4.6/rpmdb/Makefile.am
  librpmdb_la_SOURCES = \
  	dbconfig.c fprint.c \
  	hdrNVR.c header.c header_internal.c legacy.c merge.c \
-diff -Naur rpm-4.4.6.orig/rpmio/Makefile.am rpm-4.4.6/rpmio/Makefile.am
---- rpm-4.4.6.orig/rpmio/Makefile.am	2006-04-01 14:30:16.000000000 +0400
-+++ rpm-4.4.6/rpmio/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/rpmio/Makefile.am
++++ rpm-4.4.6/rpmio/Makefile.am
 @@ -26,10 +26,7 @@
  
  BEECRYPTLOBJS = $(shell test X"@WITH_BEECRYPT_SUBDIR@" != X && cat $(top_builddir)/@WITH_BEECTYPT_SUBDIR@/listobjs)
@@ -143,9 +138,8 @@ diff -Naur rpm-4.4.6.orig/rpmio/Makefile.am rpm-4.4.6/rpmio/Makefile.am
  librpmio_la_SOURCES = \
  	argv.c digest.c fts.c macro.c rmd128.c rmd160.c rpmdav.c \
  	rpmhook.c rpmio.c rpmlog.c rpmlua.c rpmmalloc.c \
-diff -Naur rpm-4.4.6.orig/scripts/Makefile.am rpm-4.4.6/scripts/Makefile.am
---- rpm-4.4.6.orig/scripts/Makefile.am	2005-11-14 16:29:48.000000000 +0300
-+++ rpm-4.4.6/scripts/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/scripts/Makefile.am
++++ rpm-4.4.6/scripts/Makefile.am
 @@ -25,7 +25,7 @@
  
  all:
@@ -155,9 +149,8 @@ diff -Naur rpm-4.4.6.orig/scripts/Makefile.am rpm-4.4.6/scripts/Makefile.am
  config_SCRIPTS = \
  	brp-compress brp-python-bytecompile brp-java-gcjcompile brp-redhat \
  	brp-strip brp-strip-comment-note brp-nobuildrootpath \
-diff -Naur rpm-4.4.6.orig/tools/Makefile.am rpm-4.4.6/tools/Makefile.am
---- rpm-4.4.6.orig/tools/Makefile.am	2005-11-17 23:18:01.000000000 +0300
-+++ rpm-4.4.6/tools/Makefile.am	2006-10-17 17:02:39.000000000 +0400
+--- rpm-4.4.6/tools/Makefile.am
++++ rpm-4.4.6/tools/Makefile.am
 @@ -49,10 +49,6 @@
  #rpmdeps_LDFLAGS =	$(staticLDFLAGS)
  rpmdeps_LDADD =		$(top_builddir)/build/librpmbuild.la

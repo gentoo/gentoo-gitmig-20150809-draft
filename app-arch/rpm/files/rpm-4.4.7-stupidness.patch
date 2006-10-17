@@ -1,6 +1,7 @@
-diff -Naur rpm-4.4.7.orig/build/Makefile.am rpm-4.4.7/build/Makefile.am
---- rpm-4.4.7.orig/build/Makefile.am	2005-09-16 19:43:35.000000000 +0400
-+++ rpm-4.4.7/build/Makefile.am	2006-10-16 23:07:13.000000000 +0400
+Try and disable over-engineering in the rpm build system.
+
+--- rpm-4.4.7/build/Makefile.am
++++ rpm-4.4.7/build/Makefile.am
 @@ -24,10 +24,7 @@
  pkginc_HEADERS = rpmbuild.h rpmfc.h rpmfile.h rpmspec.h
  noinst_HEADERS = buildio.h
@@ -13,15 +14,14 @@ diff -Naur rpm-4.4.7.orig/build/Makefile.am rpm-4.4.7/build/Makefile.am
  librpmbuild_la_SOURCES = \
  	build.c expression.c files.c misc.c names.c pack.c \
  	parseBuildInstallClean.c parseChangelog.c parseDescription.c \
-diff -Naur rpm-4.4.7.orig/configure.ac rpm-4.4.7/configure.ac
---- rpm-4.4.7.orig/configure.ac	2006-08-07 23:18:20.000000000 +0400
-+++ rpm-4.4.7/configure.ac	2006-10-17 16:30:50.000000000 +0400
+--- rpm-4.4.7/configure.ac
++++ rpm-4.4.7/configure.ac
 @@ -117,7 +117,9 @@
  dnl
  with_selinuxval=no
  AC_MSG_CHECKING(flag used by libtool to link rpm)
 -if test X"$GCC" = Xyes ; then
-+#We do not want static linking
++# We do not want static linking
 +#if test X"$GCC" = Xyes ; then
 +if false ; then
  	case "$target" in
@@ -33,7 +33,7 @@ diff -Naur rpm-4.4.7.orig/configure.ac rpm-4.4.7/configure.ac
  LDFLAGS_NPTL=
 -if test -f /usr/lib/nptl/libpthread.a ; then
 -    LDFLAGS_NPTL="-L/usr/lib/nptl"
-+#Also do not need static linking
++# Also do not need static linking
 +#if test -f /usr/lib/nptl/libpthread.a ; then
 +#    LDFLAGS_NPTL="-L/usr/lib/nptl"
  #    INCPATH="$INCPATH -I/usr/include/nptl"
@@ -49,20 +49,15 @@ diff -Naur rpm-4.4.7.orig/configure.ac rpm-4.4.7/configure.ac
  AC_SUBST(LDFLAGS_NPTL)
  
  dnl
-@@ -1306,13 +1309,6 @@
-     ln -s ${srcdir}/autodeps/none ./find-requires
- fi
+@@ -1306,6 +1309,8 @@
+ case "${target_cpu}" in
+ x86_64*|ppc64*|powerpc64*|sparc64*|s390x*)	MARK64=64 ;;
+ esac
++# We don't want this magic as portage handles it
++MARK64=ALL-SCREWED-UP
+ AC_SUBST(MARK64)
  
--dnl XXX Choose /usr/lib or /usr/lib64 for library installs.
--MARK64=
--case "${target_cpu}" in
--x86_64*|ppc64*|powerpc64*|sparc64*|s390x*)	MARK64=64 ;;
--esac
--AC_SUBST(MARK64)
--
  # For some systems we know that we have ld_version scripts.
- # Use it then as default.
- have_ld_version_script=no
 @@ -1388,13 +1384,16 @@
  else
      usrprefix=$prefix
@@ -81,109 +76,22 @@ diff -Naur rpm-4.4.7.orig/configure.ac rpm-4.4.7/configure.ac
  AC_DEFINE_UNQUOTED(RPMCONFIGDIR, "$RPMCONFIGDIR",
  	[Full path to rpm global configuration directory (usually /usr/lib/rpm)])
  AC_SUBST(RPMCONFIGDIR)
-diff -Naur rpm-4.4.7.orig/file/configure.ac rpm-4.4.7/file/configure.ac
---- rpm-4.4.7.orig/file/configure.ac	2005-10-31 23:08:36.000000000 +0300
-+++ rpm-4.4.7/file/configure.ac	2006-10-16 23:15:08.000000000 +0400
-@@ -133,12 +133,5 @@
- dnl See if we are cross-compiling
- AM_CONDITIONAL(IS_CROSS_COMPILE, test "$cross_compiling" = yes)
- 
--# XXX Choose /usr/lib or /usr/lib64 for library installs.
--MARK64=
--case "${target_cpu}" in
--x86_64*|powerpc64*|ppc64*|sparc64*|s390x*)        MARK64=64 ;;
--esac
--AC_SUBST(MARK64)
--
- AC_CONFIG_FILES([Makefile src/Makefile magic/Makefile doc/Makefile python/Makefile])
- AC_OUTPUT
-diff -Naur rpm-4.4.7.orig/file/src/Makefile.am rpm-4.4.7/file/src/Makefile.am
---- rpm-4.4.7.orig/file/src/Makefile.am	2005-11-01 01:51:41.000000000 +0300
-+++ rpm-4.4.7/file/src/Makefile.am	2006-10-16 23:14:27.000000000 +0400
-@@ -6,7 +6,7 @@
- # XXX Make sure compress.c links internal zlib
- INCLUDES = -I. -I ../../zlib
- 
--pkglibdir =  @prefix@/lib/rpm
-+pkglibdir =  $(libdir)/rpm
- MAGIC    = $(pkglibdir)/magic
- 
- AM_CPPFLAGS = -DMAGIC='"$(MAGIC)"'
-@@ -14,9 +14,6 @@
- include_HEADERS = # magic.h
- noinst_HEADERS = file.h magic.h names.h patchlevel.h readelf.h tar.h
- 
--#lib_LTLIBRARIES = libmagic.la
--#usrlibdir = $(libdir)@MARK64@
--#usrlib_LTLIBRARIES = libmagic.la
- noinst_LTLIBRARIES = libmagic.la
- 
- libmagic_la_SOURCES = magic.c apprentice.c softmagic.c ascmagic.c \
-diff -Naur rpm-4.4.7.orig/lib/Makefile.am rpm-4.4.7/lib/Makefile.am
---- rpm-4.4.7.orig/lib/Makefile.am	2006-04-06 23:37:07.000000000 +0400
-+++ rpm-4.4.7/lib/Makefile.am	2006-10-16 23:01:48.000000000 +0400
-@@ -29,10 +29,8 @@
+--- rpm-4.4.7/lib/Makefile.am
++++ rpm-4.4.7/lib/Makefile.am
+@@ -29,10 +29,7 @@
  mylibs = librpm.la
  LIBS =
  
 -LDFLAGS = -L$(RPM_BUILD_ROOT)$(usrlibdir) -L$(DESTDIR)$(usrlibdir)
- 
+-
 -usrlibdir = $(libdir)@MARK64@
 -usrlib_LTLIBRARIES = librpm.la
 +lib_LTLIBRARIES = librpm.la
  librpm_la_SOURCES = \
  	cpio.c depends.c formats.c fs.c fsm.c getdate.c \
  	manifest.c misc.c package.c \
-diff -Naur rpm-4.4.7.orig/popt/configure.ac rpm-4.4.7/popt/configure.ac
---- rpm-4.4.7.orig/popt/configure.ac	2006-04-09 22:19:27.000000000 +0400
-+++ rpm-4.4.7/popt/configure.ac	2006-10-16 23:16:00.000000000 +0400
-@@ -59,13 +59,6 @@
- fi
- AC_SUBST(TARGET)
- 
--dnl XXX Choose /usr/lib or /usr/lib64 for library installs.
--MARK64=
--case "${target_cpu}" in
--x86_64*|powerpc64*|ppc64*|sparc64*|s390x*)        MARK64=64 ;;
--esac
--AC_SUBST(MARK64)
--
- AC_CHECK_HEADERS(alloca.h float.h libintl.h mcheck.h unistd.h)
- AC_MSG_CHECKING(for /usr/ucblib in LIBS)
- if test -d /usr/ucblib ; then
-diff -Naur rpm-4.4.7.orig/popt/Makefile.am rpm-4.4.7/popt/Makefile.am
---- rpm-4.4.7.orig/popt/Makefile.am	2005-09-16 17:19:21.000000000 +0400
-+++ rpm-4.4.7/popt/Makefile.am	2006-10-16 23:16:59.000000000 +0400
-@@ -18,13 +18,13 @@
- noinst_PROGRAMS = test1 test2 test3
- test1_SOURCES = test1.c
- test1_LDFLAGS = 
--test1_LDADD = $(usrlib_LTLIBRARIES)
-+test1_LDADD = $(lib_LTLIBRARIES)
- test2_SOURCES = test2.c
- test2_LDFLAGS = 
--test2_LDADD = $(usrlib_LTLIBRARIES)
-+test2_LDADD = $(lib_LTLIBRARIES)
- test3_SOURCES = test3.c
- test3_LDFLAGS = 
--test3_LDADD = $(usrlib_LTLIBRARIES)
-+test3_LDADD = $(lib_LTLIBRARIES)
- 
- noinst_SCRIPTS = testit.sh
- 
-@@ -35,8 +35,7 @@
- 
- include_HEADERS = popt.h
- 
--usrlibdir = $(libdir)@MARK64@
--usrlib_LTLIBRARIES = libpopt.la
-+lib_LTLIBRARIES = libpopt.la
- 
- libpopt_la_SOURCES = popt.c findme.c poptparse.c poptconfig.c popthelp.c
- libpopt_la_LDFLAGS = -no-undefined @INTLLIBS@
-diff -Naur rpm-4.4.7.orig/python/Makefile.am rpm-4.4.7/python/Makefile.am
---- rpm-4.4.7.orig/python/Makefile.am	2006-02-12 20:16:50.000000000 +0300
-+++ rpm-4.4.7/python/Makefile.am	2006-10-16 23:10:17.000000000 +0400
+--- rpm-4.4.7/python/Makefile.am
++++ rpm-4.4.7/python/Makefile.am
 @@ -4,8 +4,8 @@
  
  LINT = splint
@@ -195,9 +103,8 @@ diff -Naur rpm-4.4.7.orig/python/Makefile.am rpm-4.4.7/python/Makefile.am
  
  SUBDIRS = rpm
  
-diff -Naur rpm-4.4.7.orig/python/rpm/Makefile.am rpm-4.4.7/python/rpm/Makefile.am
---- rpm-4.4.7.orig/python/rpm/Makefile.am	2004-10-20 01:33:22.000000000 +0400
-+++ rpm-4.4.7/python/rpm/Makefile.am	2006-10-16 23:09:56.000000000 +0400
+--- rpm-4.4.7/python/rpm/Makefile.am
++++ rpm-4.4.7/python/rpm/Makefile.am
 @@ -4,8 +4,8 @@
  
  PYVER = @WITH_PYTHON_VERSION@
@@ -209,9 +116,8 @@ diff -Naur rpm-4.4.7.orig/python/rpm/Makefile.am rpm-4.4.7/python/rpm/Makefile.a
  
  EXTRA_DIST = \
  	__init__.py
-diff -Naur rpm-4.4.7.orig/rpmdb/Makefile.am rpm-4.4.7/rpmdb/Makefile.am
---- rpm-4.4.7.orig/rpmdb/Makefile.am	2006-07-26 15:08:11.000000000 +0400
-+++ rpm-4.4.7/rpmdb/Makefile.am	2006-10-16 23:02:34.000000000 +0400
+--- rpm-4.4.7/rpmdb/Makefile.am
++++ rpm-4.4.7/rpmdb/Makefile.am
 @@ -41,11 +41,7 @@
  # XXX watchout, ../db3/libdb.la created by this Makefile may surprise
  libdb_la = $(top_builddir)/$(WITH_DB_SUBDIR)/libdb.la
@@ -225,9 +131,8 @@ diff -Naur rpm-4.4.7.orig/rpmdb/Makefile.am rpm-4.4.7/rpmdb/Makefile.am
  librpmdb_la_SOURCES = \
  	dbconfig.c fprint.c \
  	hdrNVR.c header.c header_internal.c legacy.c merge.c \
-diff -Naur rpm-4.4.7.orig/rpmio/Makefile.am rpm-4.4.7/rpmio/Makefile.am
---- rpm-4.4.7.orig/rpmio/Makefile.am	2006-06-18 20:47:24.000000000 +0400
-+++ rpm-4.4.7/rpmio/Makefile.am	2006-10-16 23:02:56.000000000 +0400
+--- rpm-4.4.7/rpmio/Makefile.am
++++ rpm-4.4.7/rpmio/Makefile.am
 @@ -28,10 +28,7 @@
  
  BEECRYPTLOBJS = $(shell test X"@WITH_BEECRYPT_SUBDIR@" != X && cat $(top_builddir)/@WITH_BEECTYPT_SUBDIR@/listobjs)
@@ -240,9 +145,8 @@ diff -Naur rpm-4.4.7.orig/rpmio/Makefile.am rpm-4.4.7/rpmio/Makefile.am
  librpmio_la_SOURCES = \
  	argv.c digest.c fts.c macro.c md2.c md4.c rmd128.c rmd160.c tiger.c \
  	rpmdav.c rpmhook.c rpmio.c rpmlog.c rpmlua.c rpmmalloc.c \
-diff -Naur rpm-4.4.7.orig/scripts/Makefile.am rpm-4.4.7/scripts/Makefile.am
---- rpm-4.4.7.orig/scripts/Makefile.am	2006-08-19 16:52:02.000000000 +0400
-+++ rpm-4.4.7/scripts/Makefile.am	2006-10-16 23:03:39.000000000 +0400
+--- rpm-4.4.7/scripts/Makefile.am
++++ rpm-4.4.7/scripts/Makefile.am
 @@ -24,7 +24,7 @@
  
  all:
@@ -252,9 +156,8 @@ diff -Naur rpm-4.4.7.orig/scripts/Makefile.am rpm-4.4.7/scripts/Makefile.am
  config_SCRIPTS = \
  	brp-compress brp-python-bytecompile brp-java-gcjcompile brp-redhat \
  	brp-strip brp-strip-comment-note brp-nobuildrootpath \
-diff -Naur rpm-4.4.7.orig/tools/Makefile.am rpm-4.4.7/tools/Makefile.am
---- rpm-4.4.7.orig/tools/Makefile.am	2006-09-03 23:25:46.000000000 +0400
-+++ rpm-4.4.7/tools/Makefile.am	2006-10-17 16:01:37.000000000 +0400
+--- rpm-4.4.7/tools/Makefile.am
++++ rpm-4.4.7/tools/Makefile.am
 @@ -54,10 +54,6 @@
  #rpmdeps_LDFLAGS =	$(staticLDFLAGS)
  rpmdeps_LDADD =		$(top_builddir)/build/librpmbuild.la
@@ -266,23 +169,3 @@ diff -Naur rpm-4.4.7.orig/tools/Makefile.am rpm-4.4.7/tools/Makefile.am
  rpmfile_SOURCES =	rpmfile.c
  rpmfile_CFLAGS =	-DMAGIC='"$(MAGIC)"' $(INCLUDES)
  rpmfile_LDADD =		$(top_builddir)/rpmio/librpmio.la
-diff -Naur rpm-4.4.7.orig/wnh/Makefile.in rpm-4.4.7/wnh/Makefile.in
---- rpm-4.4.7.orig/wnh/Makefile.in	2006-10-02 02:40:06.000000000 +0400
-+++ rpm-4.4.7/wnh/Makefile.in	2006-10-17 15:22:39.000000000 +0400
-@@ -186,7 +186,6 @@
- LT_REVISION = @LT_REVISION@
- MACROFILES = @MACROFILES@
- MAKEINFO = @MAKEINFO@
--MARK64 = @MARK64@
- MKDIR = @MKDIR@
- MKDIR_P = @MKDIR_P@
- MKINSTALLDIRS = @MKINSTALLDIRS@
-@@ -378,7 +377,7 @@
- 	tar.h
- 
- mylibs = libwnh.la
--usrlibdir = $(libdir)@MARK64@
-+usrlibdir = $(libdir)
- noinst_LTLIBRARIES = libwnh.la
- libwnh_la_SOURCES = \
- 	rpmxp.c \

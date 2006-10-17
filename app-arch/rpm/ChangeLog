@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.70 2006/10/17 14:04:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.71 2006/10/17 19:36:00 vapier Exp $
+
+  17 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  files/rpm-4.4.6-stupidness.patch, files/rpm-4.4.6-with-sqlite.patch,
+  files/rpm-4.4.7-stupidness.patch, rpm-4.4.6-r2.ebuild, rpm-4.4.7.ebuild:
+  Clean up patches and ebuilds.
 
 *rpm-4.4.7 (17 Oct 2006)
 

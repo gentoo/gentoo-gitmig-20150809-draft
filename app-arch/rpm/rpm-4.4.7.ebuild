@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.1 2006/10/17 14:04:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.2 2006/10/17 19:36:00 vapier Exp $
 
-WANT_AUTOCONF=2.5
-WANT_AUTOMAKE=1.9
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils autotools distutils perl-module
 
 DESCRIPTION="Red Hat Package Management Utils"
@@ -45,9 +45,8 @@ src_unpack() {
 
 	sed -i -e "s:intl ::" Makefile.am
 	sed -i -e "s:intl/Makefile ::" configure.ac
-	eautoconf
-	eautomake
-	# TODO Get rid of internal copies of file, lua, db and db3
+	AT_NO_RECURSIVE="yes" eautoreconf
+	# TODO Get rid of internal copies of lua, db and db3
 }
 
 src_compile() {
