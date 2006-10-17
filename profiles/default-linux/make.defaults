@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.23 2006/08/18 17:04:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.24 2006/10/17 14:19:43 dsd Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -44,3 +44,10 @@ USE="${USE} dlloader"
 # Lowest common denominator defaults for video drivers,
 # except hppa, which lacks v4l so removes it in the hppa profile
 VIDEO_CARDS="dummy fbdev v4l"
+
+# 2006/10/17 - Daniel Drake <dsd@gentoo.org>
+# cracklib is becoming optional in shadow (and removed from system) as of
+# today. However, cracklib is very standard across the Linux world so we
+# enable it by default.
+USE="${USE} cracklib"
+
