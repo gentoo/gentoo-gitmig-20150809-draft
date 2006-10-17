@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-pam-modules
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.10 2006/10/05 09:11:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.11 2006/10/17 09:45:02 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  freebsd-pam-modules-6.2_beta2.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *freebsd-pam-modules-6.2_beta2 (05 Oct 2006)
 
