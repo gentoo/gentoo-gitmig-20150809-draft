@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.35 2006/10/16 02:31:03 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.36 2006/10/17 20:56:07 gustavoz Exp $
+
+  17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> shfs-0.35-r3.ebuild:
+  Stable on sparc wrt #133613
 
   16 Oct 2006; <compnerd@gentoo.org>
   +files/0.35/shfs-0.35-2.6.18-dentry.patch:
