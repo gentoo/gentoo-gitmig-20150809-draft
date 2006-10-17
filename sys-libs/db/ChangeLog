@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.181 2006/10/17 07:52:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.182 2006/10/17 18:10:45 gustavoz Exp $
+
+  17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  db-4.2.52_p4-r2.ebuild:
+  Stable on sparc
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org> db-4.3.29-r2.ebuild:
   Added ~sparc-fbsd keyword.
