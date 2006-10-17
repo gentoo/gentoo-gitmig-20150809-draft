@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.11.1.ebuild,v 1.4 2006/01/13 12:43:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.11.1.ebuild,v 1.5 2006/10/17 19:25:24 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit eutils autotools libtool
 
