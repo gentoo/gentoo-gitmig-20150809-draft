@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.17 2006/04/02 21:00:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.18 2006/10/17 10:42:00 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> cronbase-0.3.2.ebuild:
+  Added ~sparc-fbsd keyword.
 
   02 Apr 2006; Diego Pettenò <flameeyes@gentoo.org> cronbase-0.3.2.ebuild:
   Add ~x86-fbsd keyword.
