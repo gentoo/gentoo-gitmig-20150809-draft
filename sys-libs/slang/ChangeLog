@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.57 2006/09/19 22:48:21 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.58 2006/10/17 12:30:14 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> slang-1.4.9-r2.ebuild:
+  Added ~sparc-fbsd keyword.
 
   19 Sep 2006; Alastair Tse <liquidx@gentoo.org> slang-2.0.6.ebuild:
   add -j1 to src_compile emakes (#141990)
