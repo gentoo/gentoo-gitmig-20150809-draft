@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta2-r1.ebuild,v 1.1 2006/10/16 15:02:03 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta2-r1.ebuild,v 1.2 2006/10/17 08:38:44 deathwing00 Exp $
 
 inherit kde autotools
 
@@ -27,14 +27,14 @@ RDEPEND="${DEPEND}
 	|| ( ( kde-base/kdialog kde-base/konqueror )  kde-base/kdebase )
 	net-wireless/bluez-utils"
 
+LANGS="bg br ca cs cy da de el en_GB es et fi fr ga gl hu is it ja ka lt
+mt nb nl nn pa pl pt pt_BR ro ru rw sk sr sr@Latn sv ta tr uk zh_CN"
+
 for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
 need-kde 3
-
-LANGS="bg br ca cs cy da de el en_GB es et fi fr ga gl hu is it ja ka lt
-mt nb nl nn pa pl pt pt_BR ro ru rw sk sr sr@Latn sv ta tr uk zh_CN"
 
 src_unpack() {
 	kde_src_unpack

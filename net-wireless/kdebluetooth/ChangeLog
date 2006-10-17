@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.53 2006/10/16 15:02:03 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.54 2006/10/17 08:38:44 deathwing00 Exp $
+
+  17 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  kdebluetooth-1.0_beta2-r1.ebuild:
+  Fixes LINGUAS support as detailed in bug #151646. Thanks to Rene Gass for
+  noticing.
 
 *kdebluetooth-1.0_beta2-r1 (16 Oct 2006)
 
