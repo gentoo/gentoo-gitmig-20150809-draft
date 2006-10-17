@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.50 2006/09/05 01:53:09 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.51 2006/10/17 11:32:50 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> pkgconfig-0.21.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *pkgconfig-0.21 (05 Sep 2006)
 
