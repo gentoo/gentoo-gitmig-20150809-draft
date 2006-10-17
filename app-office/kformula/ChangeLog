@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.50 2006/10/17 20:25:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.51 2006/10/17 20:36:45 kloeri Exp $
+
+  17 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> kformula-1.5.2.ebuild:
+  Stable on ia64.
 
   17 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> kformula-1.5.2.ebuild:
   Stable on Alpha.
