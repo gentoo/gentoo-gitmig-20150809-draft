@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.55 2006/09/25 13:12:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.56 2006/10/17 09:14:28 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> m4-1.4.7.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *m4-1.4.7 (25 Sep 2006)
 
