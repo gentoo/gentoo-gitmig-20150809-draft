@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/resolvconf-gentoo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.14 2006/09/13 00:02:12 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-gentoo/ChangeLog,v 1.15 2006/10/17 14:15:28 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  resolvconf-gentoo-1.1.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *resolvconf-gentoo-1.1 (13 Sep 2006)
 
