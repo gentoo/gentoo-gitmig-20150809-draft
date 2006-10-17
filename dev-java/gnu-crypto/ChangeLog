@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-crypto
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.18 2006/08/19 18:17:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-crypto/ChangeLog,v 1.19 2006/10/17 02:45:50 nichoj Exp $
+
+  17 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  gnu-crypto-2.0.1-r2.ebuild:
+  Keyworded ~ia64.
 
   19 Aug 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   gnu-crypto-2.0.1-r2.ebuild:
