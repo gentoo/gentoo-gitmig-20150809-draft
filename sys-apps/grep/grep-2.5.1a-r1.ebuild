@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a-r1.ebuild,v 1.2 2006/08/04 15:28:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1a-r1.ebuild,v 1.3 2006/10/17 11:24:47 uberlord Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nls pcre static"
 
 RDEPEND="nls? ( virtual/libintl )"
