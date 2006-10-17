@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/drscheme
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.32 2006/10/13 15:21:18 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/drscheme/ChangeLog,v 1.33 2006/10/17 21:12:44 chutzpah Exp $
+
+*drscheme-352-r2 (17 Oct 2006)
+
+  17 Oct 2006; Patrick McLean <chutzpah@gentoo.org> +drscheme-352-r2.ebuild:
+  New revision, fixes bug #151740.
 
 *drscheme-352-r1 (13 Oct 2006)
 
