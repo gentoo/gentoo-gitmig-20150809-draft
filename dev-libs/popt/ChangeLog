@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.36 2006/10/12 20:23:22 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.37 2006/10/17 11:36:32 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> popt-1.10.4-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   12 Oct 2006; Sandro Bonazzola <sanchan@gentoo.org>
   files/popt-1.10.4-lib64.patch:
