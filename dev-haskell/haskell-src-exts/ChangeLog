@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/haskell-src-exts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.8 2006/10/11 18:50:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.9 2006/10/17 20:42:54 dcoutts Exp $
+
+  17 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
+  haskell-src-exts-0.2.ebuild:
+  Need to inherit eutils eclass.
 
   11 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
   +files/haskell-src-exts-0.2-hiding-isSymbol.patch,

@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.8 2006/10/11 18:50:14 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/haskell-src-exts-0.2.ebuild,v 1.9 2006/10/17 20:42:54 dcoutts Exp $
 
 CABAL_FEATURES="lib happy"
-inherit base haskell-cabal
+inherit base haskell-cabal eutils
 
 DESCRIPTION="An extension to haskell-src that handles most common syntactic extensions to Haskell"
 HOMEPAGE="http://www.cs.chalmers.se/~d00nibro/haskell-src-exts/"

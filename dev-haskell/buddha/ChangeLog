@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/buddha
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/ChangeLog,v 1.9 2006/10/12 19:01:24 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/ChangeLog,v 1.10 2006/10/17 20:41:07 dcoutts Exp $
+
+  17 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> buddha-1.2-r1.ebuild:
+  Need to inherit eutils eclass.
 
   12 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> buddha-1.2.ebuild:
   Block buddha-1.2 on >=ghc-6.4. buddha-1.2-r1 now requires >=ghc-6.4.

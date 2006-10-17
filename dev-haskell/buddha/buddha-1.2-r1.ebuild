@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/buddha-1.2-r1.ebuild,v 1.2 2006/10/12 12:00:52 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/buddha-1.2-r1.ebuild,v 1.3 2006/10/17 20:41:07 dcoutts Exp $
 
-inherit base ghc-package multilib autotools
+inherit base ghc-package multilib autotools eutils
 
 DESCRIPTION="A declarative debugger for Haskell 98"
 HOMEPAGE="http://www.cs.mu.oz.au/~bjpop/buddha/"
