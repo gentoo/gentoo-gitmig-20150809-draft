@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.44 2006/10/17 05:29:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.45 2006/10/17 11:45:18 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> timezone-data-2006n.ebuild:
+  Added ~sparc-fbsd keyword.
 
   17 Oct 2006; Markus Rothe <corsair@gentoo.org> timezone-data-2006n.ebuild:
   Stable on ppc64; bug #151539
