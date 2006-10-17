@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-fchksum
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.30 2006/03/30 17:40:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/ChangeLog,v 1.31 2006/10/17 05:35:06 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  python-fchksum-1.7.1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org>
   python-fchksum-1.7.1.ebuild:
