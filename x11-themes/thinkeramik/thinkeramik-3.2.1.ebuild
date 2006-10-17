@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.12 2006/10/09 21:54:40 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/thinkeramik-3.2.1.ebuild,v 1.13 2006/10/17 12:30:02 flameeyes Exp $
+
+ARTS_REQUIRED="never"
 
 inherit kde
 
@@ -14,8 +16,6 @@ SLOT="0"
 IUSE=""
 
 KEYWORDS="x86 ppc ~amd64 ~sparc"
-
-ARTS_REQUIRED="never"
 
 DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
 

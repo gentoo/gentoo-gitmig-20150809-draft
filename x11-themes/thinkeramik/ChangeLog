@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/thinkeramik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.27 2006/10/09 21:54:40 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/thinkeramik/ChangeLog,v 1.28 2006/10/17 12:30:02 flameeyes Exp $
+
+  17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  thinkeramik-3.2.1.ebuild:
+  Move ARTS_REQUIRED above inherit line, to let it work.
 
   09 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
   thinkeramik-3.2.1.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/reinhardtstyle-0.8.2.ebuild,v 1.6 2006/10/14 11:31:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/reinhardtstyle/reinhardtstyle-0.8.2.ebuild,v 1.7 2006/10/17 12:32:06 flameeyes Exp $
+
+ARTS_REQUIRED="never"
 
 inherit kde
 
@@ -18,8 +20,6 @@ SLOT="0"
 IUSE=""
 
 KEYWORDS="x86 ~ppc sparc"
-
-ARTS_REQUIRED="never"
 
 DEPEND="|| ( kde-base/kwin kde-base/kdebase )"
 
