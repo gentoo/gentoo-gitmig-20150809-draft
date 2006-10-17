@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.119 2006/09/20 12:23:29 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.120 2006/10/17 13:30:01 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> dhcp-3.0.5_rc2.ebuild,
+  dhcp-3.1.0_alpha1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   20 Sep 2006; Roy Marples <uberlord@gentoo.org>
   +files/dhcp-3.0.5-bpf-nofallback.patch, dhcp-3.0.5_rc2.ebuild,
