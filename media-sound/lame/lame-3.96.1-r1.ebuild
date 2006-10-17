@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1-r1.ebuild,v 1.6 2006/07/05 06:52:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1-r1.ebuild,v 1.7 2006/10/17 18:55:53 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit flag-o-matic toolchain-funcs eutils autotools
 
