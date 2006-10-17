@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2249 2006/10/17 06:11:01 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2250 2006/10/17 14:16:23 dsd Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -13,7 +13,6 @@ app-accessibility/festival:mbrola - Adds support for mbrola voices
 app-accessibility/freetts:mbrola - Adds support for mbrola voices
 app-accessibility/gnome-speech:freetts - Adds support for the freetts speech driver
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
-app-admin/apg:cracklib - Support for cracklib strong password checking
 app-admin/conky:audacious - enable monitoring of audio tracks that are playing (media-sound/audacious)
 app-admin/conky:bmpx - enable monitoring of audio tracks that are playing (media-sound/bmpx)
 app-admin/conky:infopipe - enable monitoring of audio tracks that are playing (media-sound/xmms-infopipe)
@@ -1128,7 +1127,6 @@ net-firewall/ipsec-tools:rc5 - Enable support for the patented RC5 algorithm
 net-firewall/iptables:extensions - Enable support for 3rd patch-o-matic extensions
 net-firewall/iptables:imq - Enable support for intermediate queueing devices (http://www.linuximq.net)
 net-firewall/iptables:l7filter - Enable support for layer 7 filtering (http://l7-filter.sourceforge.net)
-net-fs/netatalk:cracklib - Support for cracklib strong password checking
 net-fs/netatalk:xfs - Enable support for XFS Quota
 net-fs/nfs-utils:nonfsv4 - Disable support for NFSv4
 net-fs/samba:async - Enables asynchronous input/output
@@ -1277,7 +1275,6 @@ net-mail/mailman:postfix - Build with delivery options for postfix
 net-mail/mailman:qmail - Build with delivery options for qmail
 net-mail/mailman:sendmail - Build with delivery options for sendmail
 net-mail/mailman:xmail - Build with delivery options for xmail
-net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/teapop:virtual - Enable teapop's virtual domain support.
