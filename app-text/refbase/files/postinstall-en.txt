@@ -17,6 +17,6 @@ You are almost done!
 	 entry fields to match your server setup and supply the MySQL admin
      password, then click the 'Install' button to install the database.
 
-  4. For further instructions, see /usr/share/doc/refbase-0.8.0/INSTALL
+  4. For further instructions, see /usr/share/doc/refbase-0.8.0/INSTALL.gz
 				 
   Enjoy!

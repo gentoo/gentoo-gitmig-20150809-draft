@@ -1,6 +1,11 @@
 # ChangeLog for app-text/refbase
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.1 2006/10/17 20:50:08 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.2 2006/10/17 20:50:52 dberkholz Exp $
+
+  17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  files/postinstall-en.txt:
+  See INSTALL.gz, not INSTALL. Also a note to change the version number in
+  files/postinstall-en.txt on bumps.
 
 *refbase-0.8.0 (17 Oct 2006)
 
