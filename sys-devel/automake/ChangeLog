@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.89 2006/10/16 01:41:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.90 2006/10/17 06:17:06 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> automake-1.9.6-r2.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *automake-1.10 (16 Oct 2006)
 
