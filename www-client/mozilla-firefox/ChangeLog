@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.198 2006/10/17 06:22:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.199 2006/10/17 16:55:19 gothgirl Exp $
+
+  17 Oct 2006; gothgirl <gothgirl@gentoo.org>
+  mozilla-firefox-2.0_rc3.ebuild:
+  added ~ppc back to firefox-2.0_rc3
 
 *mozilla-firefox-2.0_rc3 (17 Oct 2006)
 
