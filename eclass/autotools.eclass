@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.50 2006/10/17 18:59:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.51 2006/10/17 19:17:31 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -202,8 +202,8 @@ autotools_set_versions() {
 	if [[ -n ${WANT_AUTOMAKE} ]]; then
 		if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
 			# Consider starting from 1.9, as that is stable everywhere.
-			has_version '~sys-devel/automake-1.9' && WANT_AUTOMAKE="1.9"
-			has_version '~sys-devel/automake-1.10' && WANT_AUTOMAKE="1.10"
+			has_version '=sys-devel/automake-1.9*' && WANT_AUTOMAKE="1.9"
+			has_version '=sys-devel/automake-1.10*' && WANT_AUTOMAKE="1.10"
 		fi
 		export WANT_AUTOMAKE
 		einfo "Requested automake ${WANT_AUTOMAKE}"
