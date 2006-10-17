@@ -14,7 +14,7 @@
  # The following library will be built:
  CORE_LIB=$(CORE_PATH)/lib/libcore++${VAR}.a
 -CORE_SHARED_LIB=$(CORE_PATH)/lib/libcore++${VAR}.so
-+CORE_SHARED_LIB_NAME=lib${PN}++${VAR}.so
++CORE_SHARED_LIB_NAME=libcore++${VAR}.so
 +CORE_SHARED_LIB=$(CORE_PATH)/lib/$(CORE_SHARED_LIB_NAME)
  
  TARGET=$(CORE_LIB)
@@ -40,7 +40,7 @@
  MODULES := linearAlgebra geometry2d geometry3d
  
 @@ -29,9 +29,12 @@
- COREX_LIB_LEVEL3=${CORE_PATH}/lib/lib${PN}x++$(VAR)_level3.a
+ COREX_LIB_LEVEL3=${CORE_PATH}/lib/libcorex++$(VAR)_level3.a
  COREX_LIB_LEVEL2=${CORE_PATH}/lib/libcorex++$(VAR)_level2.a
  COREX_LIB_LEVEL1=${CORE_PATH}/lib/libcorex++$(VAR)_level1.a
 -COREX_SHARED_LIB_LEVEL3=${CORE_PATH}/lib/libcorex++$(VAR)_level3.so
