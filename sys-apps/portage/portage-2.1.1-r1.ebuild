@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r1.ebuild,v 1.5 2006/09/30 18:48:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.1-r1.ebuild,v 1.6 2006/10/17 13:52:46 agriffis Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="The Portage Package Management System. The primary package management and distribution system for Gentoo."
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ppc ~ppc-macos ppc64 s390 sh ~sparc ~x86 ~x86-fbsd"
 PROVIDE="virtual/portage"
 SLOT="0"
 # USE_EXPAND_HIDDEN hides ELIBC and USERLAND expansions from emerge output (see make.conf.5).
