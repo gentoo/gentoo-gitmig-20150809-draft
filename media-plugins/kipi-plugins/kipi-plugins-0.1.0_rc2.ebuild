@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc2.ebuild,v 1.1 2006/05/20 16:35:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.0_rc2.ebuild,v 1.2 2006/10/17 13:35:20 deathwing00 Exp $
 
 inherit kde
 
@@ -30,6 +30,12 @@ need-kde 3.1
 
 pkg_setup(){
 	slot_rebuild "media-libs/libkipi media-libs/libkexif" && die
+	if ! built_with_use media-libs/imlib2 X ; then
+		eerror "X support is required in media-libs/imlib2 in order to be able"
+		eerror "to compile media-plugins/kipi-plugins. Please, re-emerge"
+		eerror "media-libs/imlib2 with the 'X' USE flag enabled."
+		die
+	fi
 }
 
 src_compile() {
