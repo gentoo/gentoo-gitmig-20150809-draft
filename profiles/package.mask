@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6068 2006/10/17 09:15:47 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6069 2006/10/17 16:33:20 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -99,13 +99,6 @@ x11-libs/libxcb
 # This is a release candidate version for testing
 # purpose mainly.
 =dev-haskell/hs-plugins-1.0_rc0
-
-# Doug Goldstein <cardoe@gentoo.org> (5 Oct 2006)
-# masked for testing
-=media-tv/ivtv-0.4.7
-=media-tv/ivtv-0.6.4
-=media-tv/ivtv-0.7.1
-=media-tv/ivtv-0.8.0
 
 # Christian Heim <phreak@gentoo.org> (5 Oct 2006)
 # masking sys-apps/sal-client for treecleaners, bug(s) 67364
