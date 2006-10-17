@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta2.ebuild,v 1.2 2006/10/17 09:55:56 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta2.ebuild,v 1.3 2006/10/17 13:16:58 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -75,5 +75,12 @@ pkg_postinst() {
 			eerror "Couldn't create ${ROOT}/usr/src/sys symlink."
 		ln -sf "sys-${MY_PVR}" "${ROOT}/usr/src/sys-${RV}" || \
 			eerror "Couldn't create ${ROOT}/usr/src/sys-${RV} symlink."
+	fi
+
+	if use sparc-fbsd ; then
+		ewarn "WARNING: kldload currently causes kernel panics"
+		ewarn "on sparc64. This is probably a gcc-4.1 issue, but"
+		ewarn "we need gcc-4.1 to compile the kernel correctly :/"
+		ewarn "Please compile all modules you need into the kernel"
 	fi
 }
