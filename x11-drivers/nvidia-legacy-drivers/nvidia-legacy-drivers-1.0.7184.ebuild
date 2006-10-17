@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.5 2006/10/09 13:36:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/nvidia-legacy-drivers-1.0.7184.ebuild,v 1.6 2006/10/17 13:59:18 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -139,6 +139,9 @@ src_unpack() {
 
 	# If greater than 2.6.5 use M= instead of SUBDIR=
 	cd ${S}; convert_to_m Makefile.kbuild
+
+	# Patch for kernel 2.6.19 from Daniel Drake <dsd@gentoo.org>
+	epatch ${FILESDIR}/NVIDIA_kernel-2.6.19.patch
 }
 
 src_compile() {

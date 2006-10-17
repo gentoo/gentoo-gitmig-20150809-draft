@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-legacy-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.10 2006/10/09 13:36:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-legacy-drivers/ChangeLog,v 1.11 2006/10/17 13:59:18 wolf31o2 Exp $
+
+  17 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/NVIDIA_kernel-2.6.19.patch, nvidia-legacy-drivers-1.0.7184.ebuild:
+  Added patch for 2.6.19 kernel and closing bug #151317.
 
   09 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   nvidia-legacy-drivers-1.0.7184.ebuild:
