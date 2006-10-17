@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.26 2006/07/20 01:18:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.27 2006/10/17 09:26:10 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> gnuconfig-20060702.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *gnuconfig-20060702 (20 Jul 2006)
 
