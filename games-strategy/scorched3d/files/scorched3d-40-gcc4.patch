@@ -1,0 +1,215 @@
+diff -urN scorched.orig/src/client/ServerBrowser.cpp scorched/src/client/ServerBrowser.cpp
+--- scorched3d-40/work/scorched/src/client/ServerBrowser.cpp	2006-07-05 19:16:14.000000000 +0200
++++ scorched3d-40-long/work/scorched/src/client/ServerBrowser.cpp	2006-09-08 20:58:37.000000000 +0200
+@@ -79,7 +79,7 @@
+ 
+ int ServerBrowser::threadFunc(void *var)
+ {
+-	bool lan = (bool) (int(var)==1);
++	bool lan = (bool) (long(var)==1);
+ 	bool result = false;
+ 	if (lan) result = instance_->serverCollector_.fetchLANList();
+ 	else result = instance_->serverCollector_.fetchServerList();
+diff -urN scorched.orig/src/coms/NetServer.cpp scorched/src/coms/NetServer.cpp
+--- scorched3d-40/work/scorched/src/coms/NetServer.cpp	2006-02-13 18:54:26.000000000 +0100
++++ scorched3d-40-long/work/scorched/src/coms/NetServer.cpp	2006-09-08 21:03:27.000000000 +0200
+@@ -235,7 +235,7 @@
+ 		itor++)
+ 	{
+ 		TCPsocket sock = (*itor).first;
+-		disconnectClient((unsigned int) sock);
++		disconnectClient((unsigned long) sock);
+ 	}
+ 	SDL_UnlockMutex(setMutex_);
+ }
+@@ -247,7 +247,7 @@
+ 
+ 	NetMessage *message = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::DisconnectMessage, 
+-				(unsigned int) client,
++				(unsigned long) client,
+ 				getIpAddress(client));
+ 
+ 	if (delayed)
+@@ -264,7 +264,7 @@
+ 
+ void NetServer::sendMessage(NetBuffer &buffer)
+ {
+-	sendMessage(buffer, (unsigned int) firstDestination_);
++	sendMessage(buffer, (unsigned long) firstDestination_);
+ }
+ 
+ void NetServer::sendMessage(NetBuffer &buffer, unsigned int dest)
+@@ -276,7 +276,7 @@
+ 	// Get a new buffer from the pool
+ 	NetMessage *message = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::NoMessage, 
+-				(unsigned int) destination,
++				(unsigned long) destination,
+ 				getIpAddress(destination));
+ 
+ 	// Add message to new buffer
+@@ -305,7 +305,7 @@
+ 	{
+ 		NetMessagePool::instance()->addToPool(message);
+ 		Logger::log(formatString("Unknown sendMessage destination %i",
+-			(int) client));
++			(long) client));
+ 	}
+ 	SDL_UnlockMutex(setMutex_);
+ }
+diff -urN scorched.orig/src/coms/NetServerProtocol.cpp scorched/src/coms/NetServerProtocol.cpp
+--- scorched3d-40/work/scorched/src/coms/NetServerProtocol.cpp	2006-02-13 18:54:26.000000000 +0100
++++ scorched3d-40-long/work/scorched/src/coms/NetServerProtocol.cpp	2006-09-08 21:04:27.000000000 +0200
+@@ -125,7 +125,7 @@
+ 	// allocate the buffer memory
+ 	NetMessage *buffer = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::BufferMessage, 
+-				(unsigned int) socket,
++				(unsigned long) socket,
+ 				NetServer::getIpAddress(socket));
+ 	buffer->getBuffer().allocate(len);
+ 	buffer->getBuffer().setBufferUsed(len);
+@@ -161,7 +161,7 @@
+ 	// Allocate a new buffer
+ 	NetMessage *newMessage = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::BufferMessage, 
+-				(unsigned int) socket,
++				(unsigned long) socket,
+ 				NetServer::getIpAddress(socket));
+ 	NetBuffer &newBuffer = newMessage->getBuffer();
+ 	newBuffer.allocate(destLen);
+@@ -291,7 +291,7 @@
+ 	// allocate the buffer memory
+ 	NetMessage *netBuffer = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::BufferMessage,
+-				(unsigned int) socket,
++				(unsigned long) socket,
+ 				NetServer::getIpAddress(socket));
+ 	netBuffer->getBuffer().reset();
+ 
+@@ -354,7 +354,7 @@
+ 	// allocate the buffer memory
+ 	NetMessage *netBuffer = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::BufferMessage,
+-				(unsigned int) socket,
++				(unsigned long) socket,
+ 				NetServer::getIpAddress(socket));
+ 	netBuffer->getBuffer().reset();
+ 
+diff -urN scorched.orig/src/coms/NetServerRead.cpp scorched/src/coms/NetServerRead.cpp
+--- scorched3d-40/work/scorched/src/coms/NetServerRead.cpp	2006-02-13 18:54:26.000000000 +0100
++++ scorched3d-40-long/work/scorched/src/coms/NetServerRead.cpp	2006-09-08 21:05:53.000000000 +0200
+@@ -62,7 +62,7 @@
+ 	// Send the player connected notification
+ 	NetMessage *message = NetMessagePool::instance()->
+ 		getFromPool(NetMessage::ConnectMessage, 
+-		(unsigned int) socket_,
++		(unsigned long) socket_,
+ 		NetServer::getIpAddress(socket_));
+ 	messageHandler_->addMessage(message);
+ 
+@@ -94,7 +94,7 @@
+ 		sentDisconnect_ = true;
+ 		NetMessage *message = NetMessagePool::instance()->
+ 			getFromPool(NetMessage::DisconnectMessage, 
+-				(unsigned int) socket_,
++				(unsigned long) socket_,
+ 				NetServer::getIpAddress(socket_));
+ 		messageHandler_->addMessage(message);
+ 	}
+@@ -189,7 +189,7 @@
+ 			Logger::log(formatString(
+ 				"Warning: %s net loop took %.2f seconds, client %i", 
+ 				(send?"Send":"Recv"),
+-				timeDiff, (unsigned int) socket_));
++				timeDiff, (unsigned long) socket_));
+ 		}
+ 	}
+ 
+@@ -199,7 +199,7 @@
+ 		sentDisconnect_ = true;
+ 		NetMessage *message = NetMessagePool::instance()->
+ 			getFromPool(NetMessage::DisconnectMessage, 
+-				(unsigned int) socket_,
++				(unsigned long) socket_,
+ 				NetServer::getIpAddress(socket_));
+ 		messageHandler_->addMessage(message);
+ 	}
+diff -urN scorched.orig/src/dialogs/HelpButtonDialog.cpp scorched/src/dialogs/HelpButtonDialog.cpp
+--- scorched3d-40/work/scorched/src/dialogs/HelpButtonDialog.cpp	2006-04-30 13:56:33.000000000 +0200
++++ scorched3d-40-long/work/scorched/src/dialogs/HelpButtonDialog.cpp	2006-09-08 20:48:43.000000000 +0200
+@@ -127,7 +127,7 @@
+ void HelpButtonDialog::VolumeMenu::menuSelection(const char* menuName, 
+ 	const int position, GLMenuItem &item)
+ {
+-	int data = (int) item.getUserData();
++	long data = (long) item.getUserData();
+ 	if (data != -1)
+ 	{
+ 		int volume = int(float(data) * 12.8f);
+diff -urN scorched.orig/src/engine/ScorchedCollisionHandler.cpp scorched/src/engine/ScorchedCollisionHandler.cpp
+--- scorched3d-40/work/scorched/src/engine/ScorchedCollisionHandler.cpp	2006-04-07 01:08:28.000000000 +0200
++++ scorched3d-40-long/work/scorched/src/engine/ScorchedCollisionHandler.cpp	2006-09-08 20:50:43.000000000 +0200
+@@ -90,8 +90,8 @@
+ 	ScorchedCollisionInfo *info1, ScorchedCollisionInfo *info2, 
+ 	dContactGeom *contacts, int noContacts)
+ {
+-	unsigned int playerId1 = (unsigned int) info1->data;
+-	unsigned int playerId2 = (unsigned int) info2->data;
++	unsigned long playerId1 = (unsigned long) info1->data;
++	unsigned long playerId2 = (unsigned long) info2->data;
+ 	Target *target1 = context_->targetContainer->getTargetById(playerId1);
+ 	Target *target2 = context_->targetContainer->getTargetById(playerId2);
+ 	if (!target1 || !target2) return;
+@@ -136,7 +136,7 @@
+ 	}
+ 
+ 	ShotBounce *particle = (ShotBounce *) bounceInfo->data;
+-	unsigned int id = (unsigned int) otherInfo->data;
++	unsigned long id = (unsigned long) otherInfo->data;
+ 
+ 	// only collide with the ground, walls or landscape,
+ 	// or iteself
+@@ -257,7 +257,7 @@
+ 		otherInfo = (ScorchedCollisionInfo *) dGeomGetData(o1);
+ 	}
+ 
+-	unsigned int id = (unsigned int) otherInfo->data;
++	unsigned long id = (unsigned long) otherInfo->data;
+ 	ShotProjectile *shot = (ShotProjectile *) particleInfo->data;
+ 	shot->incLandedCounter();
+ 	Vector particlePositionV(
+diff -urN scorched.orig/src/ode/obstack.cpp scorched/src/ode/obstack.cpp
+--- scorched3d-40/work/scorched/src/ode/obstack.cpp	2004-09-14 15:18:26.000000000 +0200
++++ scorched3d-40-long/work/scorched/src/ode/obstack.cpp	2006-09-08 20:55:39.000000000 +0200
+@@ -29,7 +29,7 @@
+ // macros and constants
+ 
+ #define ROUND_UP_OFFSET_TO_EFFICIENT_SIZE(arena,ofs) \
+-  ofs = (size_t) (dEFFICIENT_SIZE( ((intP)(arena)) + ofs ) - ((intP)(arena)) );
++  ofs = (size_t) (dEFFICIENT_SIZE( ((long)(arena)) + ofs ) - ((long)(arena)) );
+ 
+ #define MAX_ALLOC_SIZE \
+   ((size_t)(dOBSTACK_ARENA_SIZE - sizeof (Arena) - EFFICIENT_ALIGNMENT + 1))
+diff -urN scorched.orig/src/tankgraph/GLWTankTip.cpp scorched/src/tankgraph/GLWTankTip.cpp
+--- scorched3d-40/work/scorched/src/tankgraph/GLWTankTip.cpp	2006-07-11 03:36:06.000000000 +0200
++++ scorched3d-40-long/work/scorched/src/tankgraph/GLWTankTip.cpp	2006-09-08 20:44:53.000000000 +0200
+@@ -68,7 +68,7 @@
+ 
+ void TankUndoMenu::itemSelected(GLWSelectorEntry *entry, int position)
+ {
+-	tank_->getPosition().revertSettings((unsigned int) entry->getUserData());
++	tank_->getPosition().revertSettings((unsigned long) entry->getUserData());
+ }
+ 
+ TankFuelTip::TankFuelTip(Tank *tank) : 
+@@ -236,7 +236,7 @@
+ void TankBatteryTip::itemSelected(GLWSelectorEntry *entry, int position)
+ {
+ 	TankAIHuman *tankAI = (TankAIHuman *) tank_->getTankAI();
+-	for (int i=1; i<=(int) entry->getUserData(); i++)
++	for (int i=1; i<=(long) entry->getUserData(); i++)
+ 	{
+ 		if (tank_->getLife().getLife() < 
+ 			tank_->getLife().getMaxLife())
