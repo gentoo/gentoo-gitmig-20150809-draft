@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.31 2006/09/29 21:29:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.32 2006/10/17 16:10:56 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> mpfr-2.2.0_p14.ebuild:
+  Added ~sparc-fbsd keyword.
 
   29 Sep 2006; Mike Frysinger <vapier@gentoo.org> mpfr-2.2.0_p8.ebuild,
   mpfr-2.2.0_p10.ebuild, mpfr-2.2.0_p12.ebuild, mpfr-2.2.0_p14.ebuild:
