@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r2.ebuild,v 1.1 2006/10/16 13:16:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r2.ebuild,v 1.2 2006/10/17 10:02:42 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.5"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl noutempter openexr spell ssl tiff
+IUSE="acl alsa arts cups doc jpeg2k kerberos legacyssl utempter openexr spell ssl tiff
 zeroconf kernel_linux fam lua"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -41,7 +41,7 @@ RDEPEND="$(qt_min_version 3.3.3)
 	zeroconf? ( net-misc/mDNSResponder )
 	fam? ( virtual/fam )
 	virtual/ghostscript
-	!noutempter? ( sys-libs/libutempter )
+	utempter? ( sys-libs/libutempter )
 	!kde-base/kde-env
 	lua? ( dev-lang/lua )"
 
@@ -60,15 +60,16 @@ RESTRICT="test"
 pkg_setup() {
 	if use legacyssl ; then
 		echo ""
-		ewarn "You have the legacyssl use flag enabled, which fixes issues with some broken"
-		ewarn "sites, but breaks others instead. It is strongly discouraged to use it."
-		ewarn "For more information, see bug #128922."
+		elog "You have the legacyssl use flag enabled, which fixes issues with some broken"
+		elog "sites, but breaks others instead. It is strongly discouraged to use it."
+		elog "For more information, see bug #128922."
 		echo ""
 	fi
-	if use noutempter ; then
+	if ! use utempter ; then
 		echo ""
-		ewarn "Not using utempter, KDE applications won't create login records. Don't remove"
-		ewarn "this functionality, unless you know exactly what you're doing."
+		elog "On some setups that relies on the correct update of utmp records, not using"
+		elog "utempter might not update them correctly. If you experience unexpected"
+		elog "behaviour, try to rebuild kde-base/kdelibs with utempter use-flag enabled."
 		echo ""
 	fi
 }
@@ -165,12 +166,10 @@ EOF
 pkg_postinst() {
 	if use zeroconf; then
 		echo
-		einfo "To make zeroconf support available in KDE"
-		einfo "make sure that the 'mdnsd' daemon is running."
-		einfo "Make sure also that multicast dns lookups are"
-		einfo "enabled by editing the 'hosts:' line in"
-		einfo "/etc/nsswitch.conf to include 'mdns', e.g.:"
-		einfo "hosts: files mdns dns"
+		elog "To make zeroconf support available in KDE make sure that the 'mdnsd' daemon"
+		elog "is running. Make sure also that multicast dns lookups are enabled by editing"
+		elog "the 'hosts:' line in /etc/nsswitch.conf to include 'mdns', e.g.:"
+		elog "  hosts: files mdns dns"
 		echo
 	fi
 }
