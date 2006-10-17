@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.10 2006/10/01 21:06:04 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.11 2006/10/17 22:44:53 sbriesen Exp $
+
+  17 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org> exiv2-0.9.1.ebuild,
+  exiv2-0.10-r1.ebuild, exiv2-0.11.ebuild:
+  added missing zlib dependency, solving bug #151708.
 
 *exiv2-0.11 (01 Oct 2006)
 
