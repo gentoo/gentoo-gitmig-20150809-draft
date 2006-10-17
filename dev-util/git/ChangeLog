@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.131 2006/10/17 18:05:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.132 2006/10/17 23:13:26 jer Exp $
+
+  17 Oct 2006; Jeroen Roovers <jer@gentoo.org> git-1.4.2.4.ebuild:
+  Stable for HPPA (bug #151669).
 
   17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> git-1.4.2.4.ebuild:
   Stable on sparc wrt #151669
