@@ -62,6 +62,13 @@ java-internal
 java-external
 freetts
 
+# need to keyword openjms-bin, sun-jms
+jms
+# need to keyword sun-jmx
+jmx
+# need to keyword sun-javamail-bin, sun-javamail
+javamail
+
 lirc
 
 # mono compiler doesn't build on ia64 (20 Jan 2005 agriffis)
