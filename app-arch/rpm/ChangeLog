@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.68 2006/10/16 03:18:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.69 2006/10/17 13:46:28 pva Exp $
+
+*rpm-4.4.6-r2 (17 Oct 2006)
+
+  17 Oct 2006; Peter Volkov <pva@gentoo.org>
+  files/rpm-4.4.6-stupidness.patch, metadata.xml, -rpm-4.4.6-r1.ebuild,
+  +rpm-4.4.6-r2.ebuild:
+  Hopefully bug #151025 is fixed. Also removed herd tag from metadata.xml
+  because we do not need to add herd tag if package does not belong to any
+  herd.
 
 *rpm-4.4.6-r1 (16 Oct 2006)
 
