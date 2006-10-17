@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.8 2006/10/04 20:58:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.9 2006/10/17 04:12:26 dberkholz Exp $
+
+  17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; virtuals:
+  Switch mpi to new-style virtual.
 
   04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   sparc64/2006.0/2.4/make.defaults, sparc64/2006.0/make.defaults,
