@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.79 2006/09/08 05:02:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.80 2006/10/17 06:36:10 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> autoconf-2.60.ebuild:
+  Added ~sparc-fbsd keyword.
 
   08 Sep 2006; Mike Frysinger <vapier@gentoo.org> autoconf-2.60.ebuild:
   Dont require help2man #146621 by Emanuel.
