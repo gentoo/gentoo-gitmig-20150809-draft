@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9626.ebuild,v 1.2 2006/10/16 22:03:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9626.ebuild,v 1.3 2006/10/17 00:29:52 tester Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -113,7 +113,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	local NV_PATCH_PREFIX="${FILESDIR}/${PV}/NVIDIA-${PV}"
+	local NV_PATCH_PREFIX="${FILESDIR}/1.0.9625/NVIDIA-1.0.9625"
 
 	if ! use x86-fbsd; then
 		if [[ ${KV_MINOR} -eq 6 && ${KV_PATCH} -lt 7 ]] ; then
