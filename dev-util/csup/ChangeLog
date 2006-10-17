@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/csup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/ChangeLog,v 1.3 2006/10/07 15:12:56 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/ChangeLog,v 1.4 2006/10/17 21:35:22 flameeyes Exp $
+
+  17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> csup-20060318.ebuild:
+  Add missing dependencies over zlib and openssl.
 
   07 Oct 2006; Andrej Kacian <ticho@gentoo.org> csup-20060318.ebuild:
   Added ~x86 keyword. Bug #150323, reported by Timothy Redaelli <drizzt at
