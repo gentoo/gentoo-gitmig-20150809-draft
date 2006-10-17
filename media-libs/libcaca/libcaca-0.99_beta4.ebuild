@@ -1,14 +1,14 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta4.ebuild,v 1.1 2006/09/13 18:51:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta4.ebuild,v 1.2 2006/10/17 16:57:57 aballier Exp $
 
 inherit eutils autotools libtool
 
 MY_P="${P/_beta/.beta}"
 
 DESCRIPTION="A library that creates colored ASCII-art graphics"
-HOMEPAGE="http://sam.zoy.org/libcaca"
-SRC_URI="http://sam.zoy.org/${PN}/${MY_P}.tar.gz"
+HOMEPAGE="http://libcaca.zoy.org/"
+SRC_URI="http://libcaca.zoy.org/files/${MY_P}.tar.gz"
 
 LICENSE="WTFPL-2 LGPL-2.1"
 SLOT="0"
