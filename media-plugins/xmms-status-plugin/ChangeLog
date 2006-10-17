@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-status-plugin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/ChangeLog,v 1.14 2006/09/24 09:06:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/ChangeLog,v 1.15 2006/10/17 20:29:32 gustavoz Exp $
+
+  17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  xmms-status-plugin-1.0-r1.ebuild:
+  Stable on sparc wrt #145989
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org>
   xmms-status-plugin-1.0-r1.ebuild:
