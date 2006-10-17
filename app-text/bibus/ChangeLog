@@ -1,0 +1,11 @@
+# ChangeLog for app-text/bibus
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.1 2006/10/17 06:39:20 dberkholz Exp $
+
+*bibus-1.2.0 (17 Oct 2006)
+
+  17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +bibus-1.2.0.ebuild:
+  New package: Bibliographic and reference management software, integrates
+  with OO.o and MS Word.
+
