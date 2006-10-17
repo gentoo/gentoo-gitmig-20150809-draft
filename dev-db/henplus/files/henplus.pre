@@ -1,0 +1,30 @@
+# starting at the current directory we look for additional
+# JDBC-drivers in .henplus/lib-directories up the path. 
+# if no directory like that has been found the one in the 
+# home directory will be used
+DIR=`pwd`
+CUSTOM_HENPLUSDIR=""
+
+while [ $DIR != "/" ] ; do
+        if [ -d $DIR"/.henplus/lib" ]; then
+            CUSTOM_HENPLUSDIR=$DIR"/.henplus/lib"
+            break
+        fi
+        DIR=`dirname $DIR`
+done
+
+if [ -z $CUSTOM_HENPLUSDIR ]; then
+     if [ -d "/.henplus/lib" ]; then
+         CUSTOM_HENPLUSDIR="/.henplus/lib"
+     else
+         CUSTOM_HENPLUSDIR=$HOME/.henplus/lib
+     fi
+fi
+
+for f in $CUSTOM_HENPLUSDIR/*.jar $CUSTOM_HENPLUSDIR/*.zip ; do
+    if [ -r "$f" ] ; then
+        CLASSPATH=$CLASSPATH:$f
+    fi
+done
+
+export CLASSPATH
