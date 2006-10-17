@@ -1,0 +1,84 @@
+diff -N -u djplay-0.3.0/cdlist.cpp djplay-0.3.0-new/cdlist.cpp
+--- djplay-0.3.0/cdlist.cpp	2004-12-07 20:32:12.000000000 +0100
++++ djplay-0.3.0-new/cdlist.cpp	2006-08-28 12:17:31.344450132 +0200
+@@ -184,7 +184,7 @@
+ 				++i;
+ 				VirList *list=(VirList *)obj;
+ 				int id=submenu->insertItem(list->getTitle(), this, SLOT(moveToList(int)));
+-				submenu->setItemParameter(id, (int)list);
++				submenu->setItemParameter(id, (long)list);
+ 			}
+ 			menu->insertItem("Send to", submenu);
+ 		}
+diff -N -u djplay-0.3.0/list.cpp djplay-0.3.0-new/list.cpp
+--- djplay-0.3.0/list.cpp	2005-07-14 11:21:48.000000000 +0200
++++ djplay-0.3.0-new/list.cpp	2006-08-28 12:18:26.844221734 +0200
+@@ -222,7 +222,7 @@
+ 				if(list->isA("PlayerList"))
+ 					autolist=list;
+ 				int id=submenu->insertItem(list->getTitle(), this, SLOT(moveToList(int)));
+-				submenu->setItemParameter(id, (int)list);
++				submenu->setItemParameter(id, (long)list);
+ 			}
+ 			menu->insertItem("Send to", submenu);
+ 		}
+@@ -230,7 +230,7 @@
+ 	if(autolist)
+ 	{
+ 		int id=menu->insertItem("Set Auto list", this, SLOT(setAutoList(int)));
+-		menu->setItemParameter(id, (int)autolist);
++		menu->setItemParameter(id, (long)autolist);
+ 	}
+ 	menu->insertItem("Select all", this, SLOT(selectAll()));
+ 	delete ch;
+diff -N -u djplay-0.3.0/mp3map.h djplay-0.3.0-new/mp3map.h
+--- djplay-0.3.0/mp3map.h	2005-07-14 11:21:50.000000000 +0200
++++ djplay-0.3.0-new/mp3map.h	2006-08-28 12:18:51.998679392 +0200
+@@ -1,10 +1,10 @@
+ class Mp3Map
+ {
+ public:
+-	Mp3Map::Mp3Map();
+-	Mp3Map::Mp3Map(int fd);
+-	Mp3Map::Mp3Map(const char *path);
+-	Mp3Map::~Mp3Map();
++	Mp3Map();
++	Mp3Map(int fd);
++	Mp3Map(const char *path);
++	~Mp3Map();
+ 
+ 	int offset_to_frame(unsigned long offset);
+ 	unsigned long frame_to_offset(int frame);
+diff -N -u djplay-0.3.0/playerlist.cpp djplay-0.3.0-new/playerlist.cpp
+--- djplay-0.3.0/playerlist.cpp	2003-11-09 19:52:03.000000000 +0100
++++ djplay-0.3.0-new/playerlist.cpp	2006-08-28 12:20:54.451699023 +0200
+@@ -149,7 +149,7 @@
+                 ++i;
+                 PlayerList *list=(PlayerList *)obj;
+                 int id=submenu->insertItem(list->getTitle(), this, SLOT(moveToList(int)));
+-                submenu->setItemParameter(id, (int)list);
++                submenu->setItemParameter(id, (long)list);
+             }
+             menu->insertItem("Send to", submenu);
+         }
+diff -N -u djplay-0.3.0/virlist.cpp djplay-0.3.0-new/virlist.cpp
+--- djplay-0.3.0/virlist.cpp	2003-11-10 11:42:29.000000000 +0100
++++ djplay-0.3.0-new/virlist.cpp	2006-08-28 12:21:24.005187431 +0200
+@@ -178,7 +178,7 @@
+ 				if(list->isA("PlayerList"))
+ 					autolist=list;
+                 int id=submenu->insertItem(list->getTitle(), this, SLOT(moveToList(int)));
+-                submenu->setItemParameter(id, (int)list);
++                submenu->setItemParameter(id, (long)list);
+             }
+             menu->insertItem("Send to", submenu);
+         }
+@@ -186,7 +186,7 @@
+ 	if(autolist)
+ 	{
+ 		int id=menu->insertItem("Set Auto list", this, SLOT(setAutoList(int)));
+-		menu->setItemParameter(id, (int)autolist);
++		menu->setItemParameter(id, (long)autolist);
+ 	}
+ 	menu->insertItem("Select all", this, SLOT(selectAll()));
+     delete ch;

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/djplay
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.2 2006/03/08 15:34:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/ChangeLog,v 1.3 2006/10/17 17:11:35 aballier Exp $
+
+  17 Oct 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/djplay-0.3.0-gcc4.patch, metadata.xml, djplay-0.3.0.ebuild:
+  Taking maintainance, adding gcc 4 patch wrt to bug #144889
 
   08 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
   djplay-0.3.0.ebuild:

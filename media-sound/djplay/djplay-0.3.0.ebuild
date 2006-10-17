@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.2 2006/03/08 15:34:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.3 2006/10/17 17:11:35 aballier Exp $
 
 IUSE=""
 
@@ -31,6 +31,7 @@ src_unpack() {
 	cd ${S}
 	sed -i "s/INCLUDES = -I\$(QTDIR)\/include/INCLUDES = -I\$(QTDIR)\/include -Iplugins\/bitmapbutton -Iplugins\/bitmapslider/" Makefile.am Makefile.in
 	rm moc_*.cpp
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 }
 
 src_install() {
