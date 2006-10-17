@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.129 2006/06/15 15:44:32 ehmsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.130 2006/10/17 20:44:38 kloeri Exp $
+
+  17 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> tetex-2.0.2-r9.ebuild:
+  Stable on Alpha.
 
   15 Jun 2006; Martin Ehmsen <ehmsen@gentoo.org> tetex-3.0_p1-r3.ebuild:
   Removed the *virtex symlinks, since they don't make any sense anymore. Use
