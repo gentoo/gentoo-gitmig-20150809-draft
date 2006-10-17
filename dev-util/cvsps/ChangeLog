@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsps
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/ChangeLog,v 1.14 2006/06/28 17:36:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsps/ChangeLog,v 1.15 2006/10/17 15:46:13 flameeyes Exp $
+
+  17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> cvsps-2.1.ebuild:
+  Add missing dependency over zlib.
 
   28 Jun 2006; Fabian Groffen <grobian@gentoo.org> cvsps-2.1.ebuild:
   Marked ~ppc-macos
