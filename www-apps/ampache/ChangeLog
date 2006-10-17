@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/ampache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.14 2006/10/06 00:50:57 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ChangeLog,v 1.15 2006/10/17 15:27:32 marineam Exp $
+
+*ampache-3.3.2.1 (17 Oct 2006)
+
+  17 Oct 2006; Michael Marineau <marineam@gentoo.org> -ampache-3.3.2.ebuild,
+  +ampache-3.3.2.1.ebuild:
+  Security release, if you have register_globals on you should upgrade.
+  (or better yet, turn register_globals off)
 
 *ampache-3.3.2 (06 Oct 2006)
 
