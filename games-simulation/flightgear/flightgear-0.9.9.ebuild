@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.9.ebuild,v 1.2 2006/08/29 13:47:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.9.ebuild,v 1.3 2006/10/17 18:06:42 wolf31o2 Exp $
 
 inherit eutils flag-o-matic games
 
@@ -19,9 +19,9 @@ IUSE=""
 
 RDEPEND="virtual/glut
 	~dev-games/simgear-0.3.9
-	>=media-libs/plib-1.8.4"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=media-libs/plib-1.8.4
+	media-libs/freealut"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.24 2006/08/29 13:47:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.25 2006/10/17 18:06:42 wolf31o2 Exp $
+
+  17 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -flightgear-0.9.4.ebuild, -flightgear-0.9.5.ebuild,
+  -flightgear-0.9.8.ebuild, flightgear-0.9.9.ebuild,
+  flightgear-0.9.10.ebuild:
+  Cleaned up older ebuilds and added media-libs/freealut to RDEPEND. Closing
+  bug #151512.
 
   29 Aug 2006; <tupone@gentoo.org> +files/flightgear-0.9.9-gcc41.patch,
   flightgear-0.9.9.ebuild:
