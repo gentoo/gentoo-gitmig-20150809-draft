@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/hanterm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.18 2006/10/14 10:50:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.19 2006/10/17 09:42:29 exg Exp $
+
+  17 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> hanterm-3.1.6-r2.ebuild:
+  Add missing dep on libutempter.
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   hanterm-3.1.6-r2.ebuild:
