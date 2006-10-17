@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.21 2006/10/17 00:19:15 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.22 2006/10/17 00:30:20 omp Exp $
+
+  17 Oct 2006; David Shakaryan <omp@gentoo.org> obconf-1.5-r1.ebuild,
+  obconf-1.6.ebuild:
+  Add pkgconfig to DEPEND. (bug #150809)
 
   17 Oct 2006; David Shakaryan <omp@gentoo.org> -obconf-1.5.ebuild:
   Remove old version.
