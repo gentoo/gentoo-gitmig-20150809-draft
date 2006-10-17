@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.3 2006/10/17 17:11:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.3.0.ebuild,v 1.4 2006/10/17 20:34:40 aballier Exp $
 
 IUSE=""
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="media-libs/alsa-lib
 	$(qt_min_version 3.2)
+	=dev-libs/glib-1.2*
 	media-libs/libsamplerate
 	media-libs/libmpeg3
 	media-libs/id3lib
@@ -35,5 +36,5 @@ src_unpack() {
 }
 
 src_install() {
-	einstall || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
