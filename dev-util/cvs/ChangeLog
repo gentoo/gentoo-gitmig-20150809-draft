@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.111 2006/10/01 19:59:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.112 2006/10/17 15:08:46 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> cvs-1.12.12-r4.ebuild,
+  cvs-1.12.13-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   01 Oct 2006; Robin H. Johnson <robbat2@gentoo.org> -cvs-1.12.13.1.ebuild:
   Remove 1.12.13.1, it's got larger issues are weirdness.
