@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.4 2006/10/14 20:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-mod.eclass,v 1.5 2006/10/17 09:15:07 ikelos Exp $
 
 
 # Ensure vmware comes before linux-mod since we want linux-mod's pkg_preinst and
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 # Provide vaguely sensible defaults
-VMWARE_VER="VME_V55"
+[[ -z "${VMWARE_VER}" ]] && VMWARE_VER="VME_V55"
 VMWARE_MOD_DIR="${ANY_ANY}"
 
 DEPEND=">=sys-apps/portage-2.0.54"
