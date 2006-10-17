@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-6.2_beta2.ebuild,v 1.1 2006/10/05 09:07:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-6.2_beta2.ebuild,v 1.2 2006/10/17 09:28:20 drizzt Exp $
 
 inherit bsdmk freebsd
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD /bin tools"
 SLOT="0"
 KEYWORDS="~x86-fbsd"
 
-IUSE="rcp nls"
+IUSE="nls"
 
 SRC_URI="mirror://gentoo/${BIN}.tar.bz2
 		mirror://gentoo/${SBIN}.tar.bz2
@@ -24,13 +24,13 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/bin
 
-PATCHES="${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
+PATCHES="${FILESDIR}/${PN}-6.0-flex-2.5.31.patch
+		${FILESDIR}/${PN}-6.2-mkdir-posix.patch"
 
 pkg_setup() {
-	use rcp || mymakeopts="${mymakeopts} NO_RCMDS= "
 	use nls || mymakeopts="${mymakeopts} NO_NLS= "
 
-	mymakeopts="${mymakeopts} NO_TCSH= NO_SENDMAIL= NO_OPENSSL= NO_CRYPT= "
+	mymakeopts="${mymakeopts} NO_TCSH= NO_SENDMAIL= NO_OPENSSL= NO_CRYPT= NO_RCMDS= "
 }
 
 # csh and tcsh are provided by tcsh package, rmail is sendmail stuff.

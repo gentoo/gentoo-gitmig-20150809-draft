@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.14 2006/10/05 09:07:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/ChangeLog,v 1.15 2006/10/17 09:28:20 drizzt Exp $
+
+  17 Oct 2006; Timothy Redaelli <drizzt@gentoo.org>
+  +files/freebsd-bin-6.2-mkdir-posix.patch, freebsd-bin-6.2_beta2.ebuild:
+  Add a patch from Alex Unleashed to fix bug #144594
+  Removed use rcp (it collided with netkit-rsh)
 
 *freebsd-bin-6.2_beta2 (05 Oct 2006)
 
