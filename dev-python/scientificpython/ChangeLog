@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.11 2006/10/17 04:13:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.12 2006/10/17 04:14:04 dberkholz Exp $
+
+  17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  scientificpython-2.6.ebuild:
+  Restore ~ia64 to keywords now that mpi is a new-style virtual.
 
   17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   -scientificpython-2.2-r1.ebuild, -scientificpython-2.4.3.ebuild,
