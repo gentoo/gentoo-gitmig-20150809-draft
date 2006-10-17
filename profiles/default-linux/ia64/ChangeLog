@@ -1,6 +1,10 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.4 2006/10/15 16:13:48 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.5 2006/10/17 01:52:38 nichoj Exp $
+
+  16 Oct 2006; Joshua Nichols <nichoj@gentoo.org> use.mask:
+  Reverting premature unmasking of java, java-internal and java-external.
+  Need to get dev-java/ant marked stable first.
 
   15 Oct 2006; Joshua Nichols <nichoj@gentoo.org> use.mask:
   Removing java and company from use.mask, since it is stable now.
