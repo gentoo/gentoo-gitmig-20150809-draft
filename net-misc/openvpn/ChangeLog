@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.97 2006/10/14 20:52:59 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.98 2006/10/17 14:55:03 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> openvpn-2.0.7.ebuild,
+  openvpn-2.1_beta15.ebuild:
+  Added ~sparc-fbsd keyword.
 
   14 Oct 2006; Roy Marples <uberlord@gentoo.org> files/openvpn-2.1.init:
   Quiet stopping.
