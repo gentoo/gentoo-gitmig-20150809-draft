@@ -1,0 +1,594 @@
+FreeBSD only works on Sparc64 and freeBSD code relies on the __sparc64__ define.
+gcc only defines __sparc64__ if -mcpu is not used.
+gcc-4 defaults to using -mcpu=ultrasparc on FreeBSD.
+
+This causes us a problem. Infact, FreeBSD developers sent gcc a patch to always
+define __sparc64__ when using -mcpu=ultrasparc, but this was rejected by most
+people including NetBSD developers.
+
+The correct solution is to use __sparc__.
+If platform detection is required, or the code is obviously 64 bit then we can
+use the __arch64__ define as well.
+This combination should be supported by all gcc versions:)
+
+diff -ur sys.orig/boot/ofw/libofw/ofw_net.c sys/boot/ofw/libofw/ofw_net.c
+--- sys.orig/boot/ofw/libofw/ofw_net.c	2005-03-02 20:12:27 +0000
++++ sys/boot/ofw/libofw/ofw_net.c	2006-10-11 11:08:26 +0100
+@@ -189,7 +189,7 @@
+ 	if ((ch = index(path, ':')) != NULL)
+ 		*ch = '\0';
+ 	netdev = OF_finddevice(path);
+-#ifdef __sparc64__
++#if defined(__sparc__)
+ 	if (OF_getprop(netdev, "mac-address", desc->myea, 6) == -1)
+ #else
+ 	if (OF_getprop(netdev, "local-mac-address", desc->myea, 6) == -1)
+@@ -207,7 +207,7 @@
+ 	printf("ofwn_init: Open Firmware instance handle: %08x\n", netinstance);
+ #endif
+ 
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	dmabuf = NULL;
+ 	if (OF_call_method("dma-alloc", netinstance, 1, 1, (64 * 1024), &dmabuf)
+ 	    < 0) {   
+diff -ur sys.orig/conf/ldscript.sparc64 sys/conf/ldscript.sparc64
+--- sys.orig/conf/ldscript.sparc64	2003-06-07 19:23:50 +0100
++++ sys/conf/ldscript.sparc64	2006-10-11 11:10:21 +0100
+@@ -1,6 +1,6 @@
+ /* $FreeBSD: src/sys/conf/ldscript.sparc64,v 1.4 2003/06/07 18:23:50 jake Exp $ */
+-OUTPUT_FORMAT("elf64-sparc", "elf64-sparc",
+-	      "elf64-sparc")
++OUTPUT_FORMAT("elf64-sparc-freebsd", "elf64-sparc-freebsd",
++	      "elf64-sparc-freebsd")
+ OUTPUT_ARCH(sparc:v9)
+ ENTRY(_start)
+ SEARCH_DIR(/usr/lib);
+diff -ur sys.orig/dev/atkbdc/atkbd.c sys/dev/atkbdc/atkbd.c
+--- sys.orig/dev/atkbdc/atkbd.c	2006-05-26 01:56:14 +0100
++++ sys/dev/atkbdc/atkbd.c	2006-10-11 11:08:26 +0100
+@@ -1031,7 +1031,7 @@
+ static void
+ atkbd_shutdown_final(void *v)
+ {
+-#ifdef __sparc64__
++#ifdef __sparc__
+ 	keyboard_t *kbd = v;
+ 	KBDC kbdc = ((atkbd_state_t *)kbd->kb_data)->kbdc;
+ 
+@@ -1330,7 +1330,7 @@
+ 		}
+ 	}
+ 
+-#if defined(__alpha__) || defined(__sparc64__)
++#if defined(__alpha__) || defined(__sparc__)
+ 	if (send_kbd_command_and_data(
+ 		kbdc, KBDC_SET_SCANCODE_SET, 2) != KBD_ACK) {
+ 		printf("atkbd: can't set translation.\n");
+diff -ur sys.orig/dev/atkbdc/atkbdc.c sys/dev/atkbdc/atkbdc.c
+--- sys.orig/dev/atkbdc/atkbdc.c	2006-09-22 02:05:30 +0100
++++ sys/dev/atkbdc/atkbdc.c	2006-10-11 11:08:26 +0100
+@@ -46,7 +46,7 @@
+ 
+ #include <dev/atkbdc/atkbdcreg.h>
+ 
+-#ifdef __sparc64__
++#ifdef __sparc__
+ #include <dev/ofw/openfirm.h>
+ #include <machine/bus_private.h>
+ #include <machine/ofw_machdep.h>
+@@ -93,7 +93,7 @@
+ 
+ static int verbose = KBDIO_DEBUG;
+ 
+-#ifdef __sparc64__
++#ifdef __sparc__
+ static struct bus_space_tag atkbdc_bst_store[MAXKBDC];
+ #endif
+ 
+@@ -157,7 +157,7 @@
+ 	volatile int i;
+ 	register_t flags;
+ #endif
+-#ifdef __sparc64__
++#ifdef __sparc__
+ 	char name[32];
+ 	phandle_t chosen, node;
+ 	ihandle_t stdin;
+@@ -178,13 +178,13 @@
+ 	tag = busspace_isa_io;
+ #elif defined(__ia64__)
+ 	tag = IA64_BUS_SPACE_IO;
+-#elif defined(__sparc64__)
++#elif defined(__sparc__)
+ 	tag = &atkbdc_bst_store[0];
+ #else
+ #error "define tag!"
+ #endif
+ 
+-#ifdef __sparc64__
++#if defined(__sparc__) && defined (__arch64__)
+ 	if ((chosen = OF_finddevice("/chosen")) == -1)
+ 		return 0;
+ 	if (OF_getprop(chosen, "stdin", &stdin, sizeof(stdin)) == -1)
+diff -ur sys.orig/dev/firewire/sbp.c sys/dev/firewire/sbp.c
+--- sys.orig/dev/firewire/sbp.c	2005-01-06 01:42:41 +0000
++++ sys/dev/firewire/sbp.c	2006-10-11 11:08:26 +0100
+@@ -160,7 +160,7 @@
+ #define NEED_RESPONSE 0
+ 
+ #define SBP_SEG_MAX rounddown(0xffff, PAGE_SIZE)
+-#ifdef __sparc64__ /* iommu */
++#if defined(__sparc__) && defined(__arch64__) /* iommu */
+ #define SBP_IND_MAX howmany(MAXPHYS, SBP_SEG_MAX)
+ #else
+ #define SBP_IND_MAX howmany(MAXPHYS, PAGE_SIZE)
+diff -ur sys.orig/dev/hme/if_hme_pci.c sys/dev/hme/if_hme_pci.c
+--- sys.orig/dev/hme/if_hme_pci.c	2005-07-10 11:36:45 +0100
++++ sys/dev/hme/if_hme_pci.c	2006-10-11 11:08:26 +0100
+@@ -44,7 +44,7 @@
+ #include <sys/socket.h>
+ 
+ #include <machine/bus.h>
+-#if defined(__powerpc__) || defined(__sparc64__)
++#if defined(__powerpc__) || defined(__sparc__)
+ #include <dev/ofw/openfirm.h>
+ #include <machine/ofw_machdep.h>
+ #endif
+@@ -140,7 +140,7 @@
+ 	struct hme_pci_softc *hsc = device_get_softc(dev);
+ 	struct hme_softc *sc = &hsc->hsc_hme;
+ 	int error = 0;
+-#if !(defined(__powerpc__) || defined(__sparc64__))
++#if !(defined(__powerpc__) || defined(__sparc__))
+ 	device_t *children, ebus_dev;
+ 	struct resource *ebus_rres;
+ 	bus_space_handle_t romh;
+@@ -221,7 +221,7 @@
+ 	bus_space_subregion(hsc->hsc_memt, hsc->hsc_memh, 0x7000, 0x1000,
+ 	    &sc->sc_mifh);
+ 
+-#if defined(__powerpc__) || defined(__sparc64__)
++#if defined(__powerpc__) || defined(__sparc__)
+ 	OF_getetheraddr(dev, sc->sc_enaddr);
+ #else
+ 	/*
+diff -ur sys.orig/dev/isp/isp_freebsd.h sys/dev/isp/isp_freebsd.h
+--- sys.orig/dev/isp/isp_freebsd.h	2006-09-01 06:55:13 +0100
++++ sys/dev/isp/isp_freebsd.h	2006-10-11 11:08:26 +0100
+@@ -78,7 +78,7 @@
+ /*
+  * Efficiency- get rid of SBus code && tests unless we need them.
+  */
+-#ifdef __sparc64__
++#ifdef __sparc__
+ #define	ISP_SBUS_SUPPORTED	1
+ #else
+ #define	ISP_SBUS_SUPPORTED	0
+diff -ur sys.orig/dev/sym/sym_hipd.c sys/dev/sym/sym_hipd.c
+--- sys.orig/dev/sym/sym_hipd.c	2005-05-29 05:42:26 +0100
++++ sys/dev/sym/sym_hipd.c	2006-10-11 11:08:26 +0100
+@@ -143,7 +143,7 @@
+ #define MEMORY_BARRIER()	__asm__ volatile("eieio; sync" : : : "memory")
+ #elif	defined	__ia64__
+ #define MEMORY_BARRIER()	__asm__ volatile("mf.a; mf" : : : "memory")
+-#elif	defined	__sparc64__
++#elif	defined	__sparc__ && defined __arch64__
+ #define MEMORY_BARRIER()	__asm__ volatile("membar #Sync" : : : "memory")
+ #else
+ #error	"Not supported platform"
+diff -ur sys.orig/dev/syscons/scgfbrndr.c sys/dev/syscons/scgfbrndr.c
+--- sys.orig/dev/syscons/scgfbrndr.c	2005-10-05 22:48:02 +0100
++++ sys/dev/syscons/scgfbrndr.c	2006-10-11 11:08:26 +0100
+@@ -213,7 +213,7 @@
+ 
+ static int pxlblinkrate = 0;
+ 
+-#if defined(__sparc64__) || defined(SC_OFWFB)
++#if defined(__sparc__) || defined(SC_OFWFB)
+ static void
+ gfb_cursor(scr_stat *scp, int at, int blink, int on, int flip)
+ {
+diff -ur sys.orig/dev/syscons/schistory.c sys/dev/syscons/schistory.c
+--- sys.orig/dev/syscons/schistory.c	2004-01-21 05:08:51 +0000
++++ sys/dev/syscons/schistory.c	2006-10-11 11:08:26 +0100
+@@ -42,7 +42,7 @@
+ #include <sys/kernel.h>
+ #include <sys/malloc.h>
+ 
+-#if __sparc64__ || __powerpc__
++#if __sparc__ || __powerpc__
+ #include <machine/sc_machdep.h>
+ #else
+ #include <machine/pc/display.h>
+diff -ur sys.orig/dev/syscons/scterm-dumb.c sys/dev/syscons/scterm-dumb.c
+--- sys.orig/dev/syscons/scterm-dumb.c	2004-01-21 05:08:51 +0000
++++ sys/dev/syscons/scterm-dumb.c	2006-10-11 11:08:26 +0100
+@@ -33,7 +33,7 @@
+ #include <sys/systm.h>
+ #include <sys/consio.h>
+ 
+-#if __sparc64__ || __powerpc__
++#if __sparc__ || __powerpc__
+ #include <machine/sc_machdep.h>
+ #else
+ #include <machine/pc/display.h>
+diff -ur sys.orig/dev/syscons/scterm-sc.c sys/dev/syscons/scterm-sc.c
+--- sys.orig/dev/syscons/scterm-sc.c	2004-05-30 21:08:42 +0100
++++ sys/dev/syscons/scterm-sc.c	2006-10-11 11:08:26 +0100
+@@ -36,7 +36,7 @@
+ #include <sys/module.h>
+ #include <sys/consio.h>
+ 
+-#if __sparc64__ || __powerpc__
++#if __sparc__ || __powerpc__
+ #include <machine/sc_machdep.h>
+ #else
+ #include <machine/pc/display.h>
+diff -ur sys.orig/dev/syscons/scvtb.c sys/dev/syscons/scvtb.c
+--- sys.orig/dev/syscons/scvtb.c	2005-05-21 21:28:15 +0100
++++ sys/dev/syscons/scvtb.c	2006-10-11 11:08:26 +0100
+@@ -74,7 +74,7 @@
+ 		}
+ 		vtb->vtb_flags |= VTB_VALID;
+ 		break;
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	case VTB_FRAMEBUFFER:
+ 		vtb->vtb_buffer = (vm_offset_t)buf;
+ 		vtb->vtb_flags |= VTB_VALID;
+@@ -119,7 +119,7 @@
+ int
+ sc_vtb_getc(sc_vtb_t *vtb, int at)
+ {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		return (readw(sc_vtb_pointer(vtb, at)) & 0x00ff);
+ 	else
+@@ -130,7 +130,7 @@
+ int
+ sc_vtb_geta(sc_vtb_t *vtb, int at)
+ {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		return (readw(sc_vtb_pointer(vtb, at)) & 0xff00);
+ 	else
+@@ -141,7 +141,7 @@
+ void
+ sc_vtb_putc(sc_vtb_t *vtb, int at, int c, int a)
+ {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		writew(sc_vtb_pointer(vtb, at), a | c);
+ 	else
+@@ -152,7 +152,7 @@
+ vm_offset_t
+ sc_vtb_putchar(sc_vtb_t *vtb, vm_offset_t p, int c, int a)
+ {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		writew(p, a | c);
+ 	else
+@@ -176,7 +176,7 @@
+ void
+ sc_vtb_clear(sc_vtb_t *vtb, int c, int attr)
+ {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		fillw_io(attr | c, sc_vtb_pointer(vtb, 0), vtb->vtb_size);
+ 	else
+@@ -187,7 +187,7 @@
+ void
+ sc_vtb_copy(sc_vtb_t *vtb1, int from, sc_vtb_t *vtb2, int to, int count)
+ {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	/* XXX if both are VTB_VRAMEBUFFER... */
+ 	if (vtb2->vtb_type == VTB_FRAMEBUFFER)
+ 		bcopy_toio(sc_vtb_pointer(vtb1, from),
+@@ -214,7 +214,7 @@
+ 
+ 	while (count > 0) {
+ 		len = imin(count, vtb2->vtb_size - vtb2->vtb_tail);
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 		if (vtb1->vtb_type == VTB_FRAMEBUFFER)
+ 			bcopy_fromio(sc_vtb_pointer(vtb1, from),
+ 				     sc_vtb_pointer(vtb2, vtb2->vtb_tail),
+@@ -241,7 +241,7 @@
+ {
+ 	if (at + count > vtb->vtb_size)
+ 		count = vtb->vtb_size - at;
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		fillw_io(attr | c, sc_vtb_pointer(vtb, at), count);
+ 	else
+@@ -258,7 +258,7 @@
+ 		count = vtb->vtb_size - to;
+ 	if (count <= 0)
+ 		return;
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		bcopy_io(sc_vtb_pointer(vtb, from),
+ 			 sc_vtb_pointer(vtb, to), count*sizeof(u_int16_t)); 
+@@ -277,7 +277,7 @@
+ 		count = vtb->vtb_size - at;
+ 	len = vtb->vtb_size - at - count;
+ 	if (len > 0) {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 		if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 			bcopy_io(sc_vtb_pointer(vtb, at + count),
+ 				 sc_vtb_pointer(vtb, at),
+@@ -288,7 +288,7 @@
+ 			      (void *)sc_vtb_pointer(vtb, at),
+ 			      len*sizeof(u_int16_t)); 
+ 	}
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		fillw_io(attr | c, sc_vtb_pointer(vtb, at + len),
+ 			 vtb->vtb_size - at - len);
+@@ -304,7 +304,7 @@
+ 	if (at + count > vtb->vtb_size)
+ 		count = vtb->vtb_size - at;
+ 	else {
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 		if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 			bcopy_io(sc_vtb_pointer(vtb, at),
+ 				 sc_vtb_pointer(vtb, at + count),
+@@ -315,7 +315,7 @@
+ 			      (void *)sc_vtb_pointer(vtb, at + count),
+ 			      (vtb->vtb_size - at - count)*sizeof(u_int16_t)); 
+ 	}
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (vtb->vtb_type == VTB_FRAMEBUFFER)
+ 		fillw_io(attr | c, sc_vtb_pointer(vtb, at), count);
+ 	else
+diff -ur sys.orig/dev/syscons/syscons.c sys/dev/syscons/syscons.c
+--- sys.orig/dev/syscons/syscons.c	2006-03-04 00:41:28 +0000
++++ sys/dev/syscons/syscons.c	2006-10-11 11:08:26 +0100
+@@ -58,7 +58,7 @@
+ #include <sys/power.h>
+ 
+ #include <machine/clock.h>
+-#if __sparc64__ || __powerpc__
++#if __sparc__ || __powerpc__
+ #include <machine/sc_machdep.h>
+ #else
+ #include <machine/pc/display.h>
+@@ -491,7 +491,7 @@
+     sc_softc_t *sc;
+     struct tty *tp;
+     scr_stat *scp;
+-#ifndef __sparc64__
++#ifndef __sparc__
+     keyarg_t key;
+ #endif
+     int error;
+@@ -508,7 +508,7 @@
+ 	tp->t_termios = tp->t_init_in;
+         /* Use the current setting of the <-- key as default VERASE. */  
+         /* If the Delete key is preferable, an stty is necessary     */
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	if (sc->kbd != NULL) {
+ 	    key.keynum = KEYCODE_BS;
+ 	    kbd_ioctl(sc->kbd, GIO_KEYMAPENT, (caddr_t)&key);
+@@ -564,7 +564,7 @@
+ 	}
+ 	else {
+ 	    sc_vtb_destroy(&scp->vtb);
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	    sc_vtb_destroy(&scp->scr);
+ #endif
+ 	    sc_free_history_buffer(scp, scp->ysize);
+@@ -2447,7 +2447,7 @@
+     if (sc->old_scp->mode != scp->mode || ISUNKNOWNSC(sc->old_scp))
+ #endif
+ 	set_mode(scp);
+-#ifndef __sparc64__
++#ifndef __sparc__
+     else
+ 	sc_vtb_init(&scp->scr, VTB_FRAMEBUFFER, scp->xsize, scp->ysize,
+ 		    (void *)sc->adp->va_window, FALSE);
+@@ -2724,7 +2724,7 @@
+ 	}
+ 	sc->cur_scp = scp;
+ 
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	/* copy screen to temporary buffer */
+ 	sc_vtb_init(&scp->scr, VTB_FRAMEBUFFER, scp->xsize, scp->ysize,
+ 		    (void *)scp->sc->adp->va_window, FALSE);
+@@ -3010,7 +3010,7 @@
+ 	}
+     }
+     sc_vtb_init(&scp->vtb, VTB_MEMORY, 0, 0, NULL, FALSE);
+-#ifndef __sparc64__
++#ifndef __sparc__
+     sc_vtb_init(&scp->scr, VTB_FRAMEBUFFER, 0, 0, NULL, FALSE);
+ #endif
+     scp->xoff = scp->yoff = 0;
+@@ -3455,7 +3455,7 @@
+     /* setup video hardware for the given mode */
+     (*vidsw[scp->sc->adapter]->set_mode)(scp->sc->adp, scp->mode);
+     scp->rndr->init(scp);
+-#ifndef __sparc64__
++#ifndef __sparc__
+     sc_vtb_init(&scp->scr, VTB_FRAMEBUFFER, scp->xsize, scp->ysize,
+ 		(void *)scp->sc->adp->va_window, FALSE);
+ #endif
+diff -ur sys.orig/dev/syscons/syscons.h sys/dev/syscons/syscons.h
+--- sys.orig/dev/syscons/syscons.h	2005-10-05 22:48:02 +0100
++++ sys/dev/syscons/syscons.h	2006-10-11 11:08:26 +0100
+@@ -92,11 +92,11 @@
+ 
+ #define DPRINTF(l, p)	if (SC_DEBUG_LEVEL >= (l)) printf p
+ 
+-#ifndef __sparc64__
++#ifndef __sparc__
+ #define SC_DRIVER_NAME	"sc"
+ #else
+ /*
+- * Use a different driver name on sparc64 so it does not get confused
++ * Use a different driver name on sparc so it does not get confused
+  * with the system controller devices which are also termed 'sc' in OFW.
+  */
+ #define SC_DRIVER_NAME	"syscons"
+@@ -269,7 +269,7 @@
+ 	int		index;			/* index of this vty */
+ 	struct sc_softc *sc;			/* pointer to softc */
+ 	struct sc_rndr_sw *rndr;		/* renderer */
+-#ifndef __sparc64__
++#ifndef __sparc__
+ 	sc_vtb_t	scr;
+ #endif
+ 	sc_vtb_t	vtb;
+diff -ur sys.orig/kern/kern_ktr.c sys/kern/kern_ktr.c
+--- sys.orig/kern/kern_ktr.c	2005-06-11 00:21:29 +0100
++++ sys/kern/kern_ktr.c	2006-10-11 11:08:26 +0100
+@@ -51,7 +51,7 @@
+ #include <sys/time.h>
+ 
+ #include <machine/cpu.h>
+-#ifdef __sparc64__
++#ifdef __sparc__
+ #include <machine/ktr.h>
+ #endif
+ 
+diff -ur sys.orig/kern/subr_param.c sys/kern/subr_param.c
+--- sys.orig/kern/subr_param.c	2005-10-17 01:16:54 +0100
++++ sys/kern/subr_param.c	2006-10-11 11:08:26 +0100
+@@ -51,7 +51,7 @@
+  */
+ 
+ #ifndef HZ
+-#  if defined(__amd64__) || defined(__i386__) || defined(__ia64__) || defined(__sparc64__)
++#  if defined(__amd64__) || defined(__i386__) || defined(__ia64__) || defined(__sparc__)
+ #    define	HZ 1000
+ #  else
+ #    define	HZ 100
+diff -ur sys.orig/kern/subr_witness.c sys/kern/subr_witness.c
+--- sys.orig/kern/subr_witness.c	2006-09-02 06:42:16 +0100
++++ sys/kern/subr_witness.c	2006-10-11 11:08:26 +0100
+@@ -391,7 +391,7 @@
+ #if defined(__i386__) || defined(__amd64__)
+ 	{ "tlb", &lock_class_mtx_spin },
+ #endif
+-#ifdef __sparc64__
++#ifdef __sparc__
+ 	{ "ipi", &lock_class_mtx_spin },
+ 	{ "rtc_mtx", &lock_class_mtx_spin },
+ #endif
+diff -ur sys.orig/kern/vfs_subr.c sys/kern/vfs_subr.c
+--- sys.orig/kern/vfs_subr.c	2006-09-27 01:36:10 +0100
++++ sys/kern/vfs_subr.c	2006-10-11 11:08:26 +0100
+@@ -110,7 +110,7 @@
+  * build.  Without mpsafevm the buffer cache can not run Giant free.
+  */
+ #if defined(__alpha__) || defined(__amd64__) || defined(__i386__) || \
+-	defined(__sparc64__)
++	defined(__sparc__)
+ int mpsafe_vfs = 1;
+ #else
+ int mpsafe_vfs;
+diff -ur sys.orig/net/if_loop.c sys/net/if_loop.c
+--- sys.orig/net/if_loop.c	2006-09-29 05:24:50 +0100
++++ sys/net/if_loop.c	2006-10-11 11:08:26 +0100
+@@ -289,7 +289,7 @@
+ 	/* Strip away media header */
+ 	if (hlen > 0) {
+ 		m_adj(m, hlen);
+-#if defined(__alpha__) || defined(__ia64__) || defined(__sparc64__)
++#if defined(__alpha__) || defined(__ia64__) || defined(__sparc__)
+ 		/* The alpha doesn't like unaligned data.
+ 		 * We move data down in the first mbuf */
+ 		if (mtod(m, vm_offset_t) & 3) {
+diff -ur sys.orig/pci/if_dc.c sys/pci/if_dc.c
+--- sys.orig/pci/if_dc.c	2006-06-21 22:06:07 +0100
++++ sys/pci/if_dc.c	2006-10-11 11:08:26 +0100
+@@ -134,7 +134,7 @@
+ 
+ #include <pci/if_dcreg.h>
+ 
+-#ifdef __sparc64__
++#ifdef __sparc__
+ #include <dev/ofw/openfirm.h>
+ #include <machine/ofw_machdep.h>
+ #endif
+@@ -2027,7 +2027,7 @@
+ 		break;
+ 	case DC_TYPE_DM9102:
+ 		dc_read_eeprom(sc, (caddr_t)&eaddr, DC_EE_NODEADDR, 3, 0);
+-#ifdef __sparc64__
++#ifdef __sparc__
+ 		/*
+ 		 * If this is an onboard dc(4) the station address read from
+ 		 * the EEPROM is all zero and we have to get it from the fcode.
+diff -ur sys.orig/sys/bus_dma.h sys/sys/bus_dma.h
+--- sys.orig/sys/bus_dma.h	2005-03-15 14:57:29 +0000
++++ sys/sys/bus_dma.h	2006-10-11 11:08:26 +0100
+@@ -216,7 +216,7 @@
+  *     <machine/bus_dma.h> for the sparc64 arch contains the equivalent
+  *     declarations.
+  */
+-#if !defined(__sparc64__)
++#if !(defined(__sparc__) && defined(__arch64__))
+ 
+ /*
+  * Allocate a handle for mapping from kva/uva/physical
+@@ -293,6 +293,6 @@
+ 			_bus_dmamap_unload(dmat, dmamap);	\
+ 	} while (0)
+ 
+-#endif /* __sparc64__ */
++#endif /* __sparc__ && __arch64__ */
+ 
+ #endif /* _BUS_DMA_H_ */
+diff -ur sys.orig/sys/linker.h sys/sys/linker.h
+--- sys.orig/sys/linker.h	2005-12-30 22:13:58 +0000
++++ sys/sys/linker.h	2006-10-11 11:08:26 +0100
+@@ -192,7 +192,7 @@
+ #define MODINFOMD_ESYM		0x0004		/* end of symbols */
+ #define MODINFOMD_DYNAMIC	0x0005		/* _DYNAMIC pointer */
+ /* These values are MD on these two platforms */
+-#if !defined(__sparc64__) && !defined(__powerpc__)
++#if !defined(__sparc__) && !defined(__powerpc__)
+ #define MODINFOMD_ENVP		0x0006		/* envp[] */
+ #define MODINFOMD_HOWTO		0x0007		/* boothowto */
+ #define MODINFOMD_KERNEND	0x0008		/* kernend */
+diff -ur sys.orig/sys/param.h sys/sys/param.h
+--- sys.orig/sys/param.h	2006-09-15 20:27:40 +0100
++++ sys/sys/param.h	2006-10-11 11:08:26 +0100
+@@ -300,7 +300,7 @@
+  * Constraints: PAGE_SIZE <= MAXALLOCSAVE <= 2 ** (MINBUCKET + 14), and
+  * MAXALLOCSIZE must be a power of two.
+  */
+-#if defined(__alpha__) || defined(__ia64__) || defined(__sparc64__)
++#if defined(__alpha__) || defined(__ia64__) || defined(__sparc__)
+ #define MINBUCKET	5		/* 5 => min allocation of 32 bytes */
+ #else
+ #define MINBUCKET	4		/* 4 => min allocation of 16 bytes */
+diff -ur sys.orig/sys/user.h sys/sys/user.h
+--- sys.orig/sys/user.h	2006-06-24 00:41:05 +0100
++++ sys/sys/user.h	2006-10-11 11:08:26 +0100
+@@ -100,7 +100,7 @@
+ #ifdef __powerpc__
+ #define	KINFO_PROC_SIZE	768
+ #endif
+-#ifdef __sparc64__
++#if defined __sparc__ && defined __arch64__
+ #define	KINFO_PROC_SIZE 1088
+ #endif
+ #ifndef KINFO_PROC_SIZE

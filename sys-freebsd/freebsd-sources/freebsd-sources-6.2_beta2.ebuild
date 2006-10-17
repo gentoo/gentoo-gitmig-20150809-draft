@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta2.ebuild,v 1.1 2006/10/05 09:15:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta2.ebuild,v 1.2 2006/10/17 09:55:56 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="${PVR}"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
 IUSE="symlink"
 
@@ -39,6 +39,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.0-werror.patch"
 	epatch "${FILESDIR}/${PN}-6.1-gcc41.patch"
 	epatch "${FILESDIR}/${PN}-6.1-intrcnt.patch"
+	epatch "${FILESDIR}/${PN}-6.2-sparc64.patch"
 
 	# This is to be able to use sandbox safely, see bug #146284
 	epatch "${FILESDIR}/${PN}-6.1-devfs-deadlock.patch"

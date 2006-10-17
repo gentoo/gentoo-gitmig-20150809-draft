@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-6.2_beta2.ebuild,v 1.1 2006/10/05 09:08:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-contrib/freebsd-contrib-6.2_beta2.ebuild,v 1.2 2006/10/17 10:09:37 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -8,7 +8,7 @@ GCC="freebsd-gcc-3.4.2"
 
 DESCRIPTION="Contributed sources for FreeBSD."
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~sparc-fbsd x86-fbsd"
 LICENSE="BSD GPL-2 as-is"
 
 IUSE="ssl kerberos"
@@ -41,7 +41,8 @@ REMOVE_SUBDIRS="lib/libg2c lib/libgcc lib/libgcc_r lib/libgcov lib/libiberty
 	usr.bin/gzip usr.bin/man usr.bin/rcs usr.bin/sdiff usr.bin/send-pr
 	usr.bin/tar usr.bin/texinfo"
 
-PATCHES="${FILESDIR}/${PN}-5.3-lib_csu-makefile.patch"
+PATCHES="${FILESDIR}/${PN}-5.3-lib_csu-makefile.patch
+	${FILESDIR}/${PN}-6.2-sparc64.patch"
 
 src_install() {
 	freebsd_src_install
