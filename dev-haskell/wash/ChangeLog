@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wash
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.8 2006/10/13 07:49:24 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/ChangeLog,v 1.9 2006/10/17 20:56:22 dcoutts Exp $
+
+  17 Oct 2006; Duncan Coutts <dcoutts@gentoo.org> wash-2.5.6.ebuild:
+  Wash's configure prog doesnt like ghc being specified with an absolute path
 
   13 Oct 2006; <kolmodin@gentoo.org> +files/wash-2.5.6-ghc66.patch,
   wash-2.5.6.ebuild:

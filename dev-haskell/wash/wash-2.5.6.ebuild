@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.5.6.ebuild,v 1.3 2006/10/13 07:49:24 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wash/wash-2.5.6.ebuild,v 1.4 2006/10/17 20:56:21 dcoutts Exp $
 
 inherit base eutils ghc-package check-reqs autotools
 
@@ -56,7 +56,6 @@ src_compile() {
 		--libdir="/usr/$(get_libdir)/${P}" \
 		$(use_enable postgres dbconnect) \
 		$(use_enable doc build-docs) \
-		--with-hc=$(ghc-getghc) \
 		--with-hcflags="+RTS -M${CHECKREQS_MEMORY}m -RTS" \
 		--enable-register-package="${S}/$(ghc-localpkgconf)" \
 		|| die "configure failed"
