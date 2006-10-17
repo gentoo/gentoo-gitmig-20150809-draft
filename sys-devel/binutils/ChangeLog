@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.267 2006/10/10 18:56:59 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.268 2006/10/17 23:55:26 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> binutils-2.17.ebuild:
+  Added ~sparc-fbsd keyword.
 
   10 Oct 2006; Joel Martin <kanaka@gentoo.org> binutils-2.17.ebuild:
   Add ~mips to binutils-2.17
