@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.4 2006/10/05 11:13:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.5 2006/10/17 09:31:16 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> openpam-20050616.ebuild:
+  Added ~sparc-fbsd keyword.
 
   05 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -openpam-20050201-r1.ebuild, openpam-20050616.ebuild:
