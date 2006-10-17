@@ -1,0 +1,11 @@
+--- src/Xdamage.c
++++ src/Xdamage.c
+@@ -305,8 +305,6 @@ XDamageQueryVersion (Display *dpy,
+ 
+     *major_versionp = info->major_version;
+     *minor_versionp = info->minor_version;
+-    UnlockDisplay (dpy);
+-    SyncHandle ();
+     return 1;
+ }
+ 

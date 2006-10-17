@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libXdamage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.26 2006/07/19 18:14:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.27 2006/10/17 01:56:46 joshuabaergen Exp $
+
+*libXdamage-1.0.3-r1 (17 Oct 2006)
+
+  17 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/fix-bad-unlock.patch, +libXdamage-1.0.3-r1.ebuild:
+  Remove an erroneous call to UnlockDisplay.  Fixes another XCB compatibility
+  issue.
 
   19 Jul 2006; Guy Martin <gmsoft@gentoo.org> libXdamage-1.0.3.ebuild:
   Stable on hppa.
