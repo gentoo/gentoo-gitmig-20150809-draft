@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.357 2006/10/15 21:43:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.358 2006/10/17 20:20:05 gustavoz Exp $
+
+  17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> qt-4.2.0.ebuild:
+  Fixed up and keyworded ~sparc wrt #150888
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> qt-3.3.6-r1.ebuild:
   Stable on ia64, bug 132887.
