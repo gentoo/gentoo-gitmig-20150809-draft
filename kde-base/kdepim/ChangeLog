@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.224 2006/10/13 18:06:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.225 2006/10/17 09:43:25 flameeyes Exp $
+
+  17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kdepim-3.5.2-r2.ebuild,
+  kdepim-3.5.2-r3.ebuild, kdepim-3.5.2-r4.ebuild, kdepim-3.5.3.ebuild,
+  kdepim-3.5.4.ebuild, kdepim-3.5.4-r1.ebuild, kdepim-3.5.4-r2.ebuild,
+  kdepim-3.5.5.ebuild, kdepim-3.5.5-r1.ebuild:
+  Add missing dependencies over XScrnSaver library/protocol. Closes bug #129377.
 
 *kdepim-3.5.5-r1 (13 Oct 2006)
 
