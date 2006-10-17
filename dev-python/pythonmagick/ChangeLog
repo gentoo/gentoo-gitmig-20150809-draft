@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythonmagick
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.5 2006/10/01 17:14:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/ChangeLog,v 1.6 2006/10/17 22:19:41 dev-zero Exp $
+
+  17 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Patch updated to make it compile on amd64 and with future boost-1.34,
+  thanks to Chris Mayo for pointing this out.
 
   01 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Version bump.
