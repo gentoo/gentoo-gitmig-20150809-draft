@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/itpp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.12 2006/10/12 21:07:56 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/itpp/ChangeLog,v 1.13 2006/10/17 00:34:14 markusle Exp $
+
+*itpp-3.10.6 (16 Oct 2006)
+
+  16 Oct 2006; Markus Dittrich <markusle@gentoo.org> -itpp-3.10.3.ebuild,
+  -itpp-3.10.4.ebuild, +itpp-3.10.6.ebuild:
+  Version bump and removed some of the old versions. Thanks much
+  to Adam Piatyszek <ediap@et.put.poznan.pl> for keeping us up
+  to date on new versions. This fixes bug #151487.
 
   12 Oct 2006; Jeff Gardner <je_fro@gentoo.org> itpp-3.10.5.ebuild:
   Keyword itpp-3.10.5 ~amd64 per bug #129809
