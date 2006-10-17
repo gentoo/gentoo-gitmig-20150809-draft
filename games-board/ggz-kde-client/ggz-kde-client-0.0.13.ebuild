@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ggz-kde-client-0.0.13.ebuild,v 1.1 2006/10/17 00:26:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-kde-client/ggz-kde-client-0.0.13.ebuild,v 1.2 2006/10/17 01:04:44 nyhm Exp $
 
 inherit eutils kde-functions multilib games
 
@@ -25,6 +25,8 @@ src_unpack() {
 	sed -i 's:$(prefix)/share:$(datadir):' \
 		ggz-kde/ggzcore++/doc/{,html/}Makefile.in \
 		|| die "sed failed"
+	sed -i "s:\${prefix}/share:/usr/share:" \
+		configure || die "sed failed"
 	epatch "${FILESDIR}"/${P}-defines.patch
 }
 
