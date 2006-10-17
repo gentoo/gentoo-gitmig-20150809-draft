@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX freebsd-libexec-5.3_rc1-ypxfr-makefile.patch 263 RMD160 40b586d5036d1456df7479339a3a11d82fae038e SHA1 4dee4c5dc1fff2262c91ef6c2eae30eea5267d4f SHA256 15903b83aff510790a8d3c18c3c34e352f35a5d8d07528ce0e243a07bf1cdb08
 MD5 5d5db03a0ec099511d480ed697158c2f files/freebsd-libexec-5.3_rc1-ypxfr-makefile.patch 263
 RMD160 40b586d5036d1456df7479339a3a11d82fae038e files/freebsd-libexec-5.3_rc1-ypxfr-makefile.patch 263
@@ -9,6 +6,10 @@ AUX freebsd-libexec-6.1-libfallback.patch 4230 RMD160 7e2905ffaa61b350b0ca86a642
 MD5 103d266b9b1790829f23b9ead2f2ea99 files/freebsd-libexec-6.1-libfallback.patch 4230
 RMD160 7e2905ffaa61b350b0ca86a6424f16271ed0acb8 files/freebsd-libexec-6.1-libfallback.patch 4230
 SHA256 5b9a764a6c65d1e2383cd05442771152c5ef7b6273b266e77b2c224fad068356 files/freebsd-libexec-6.1-libfallback.patch 4230
+AUX freebsd-libexec-6.2-sparc64.patch 1288 RMD160 d13df233cc0eb2df597e48f4096c5e718239471c SHA1 5784cb93076e6f45578008b781bbead6ca32241a SHA256 b5a8c95d81d6204777ac53e6a560fa43b48c120500e0377c08000704c2ba1df7
+MD5 c97b57e9295f5656e389eb08948ac0fa files/freebsd-libexec-6.2-sparc64.patch 1288
+RMD160 d13df233cc0eb2df597e48f4096c5e718239471c files/freebsd-libexec-6.2-sparc64.patch 1288
+SHA256 b5a8c95d81d6204777ac53e6a560fa43b48c120500e0377c08000704c2ba1df7 files/freebsd-libexec-6.2-sparc64.patch 1288
 AUX freebsd-libexec-nossp.patch 434 RMD160 7b63e750f7d1364b1a4cc8af139788d163899563 SHA1 93bc3197fa5dd5d857ec295ebc3c0ca2574c93e3 SHA256 8ee38006be649adf95dc9742a9356e337e769c11c48206566023d9c8e85c3364
 MD5 bcc8dbc9de7d1ce849ddd4d39b57ebd5 files/freebsd-libexec-nossp.patch 434
 RMD160 7b63e750f7d1364b1a4cc8af139788d163899563 files/freebsd-libexec-nossp.patch 434
@@ -50,14 +51,14 @@ EBUILD freebsd-libexec-6.2_beta1.ebuild 1656 RMD160 fb18f78b84098bea7dfa15b735b5
 MD5 fa19835ea033b131facedbaa097d6b9a freebsd-libexec-6.2_beta1.ebuild 1656
 RMD160 fb18f78b84098bea7dfa15b735b565ce0152c635 freebsd-libexec-6.2_beta1.ebuild 1656
 SHA256 4c85bb3fe39ce111ca791031b71f079b5731a241538eb00023276fdaac2875f2 freebsd-libexec-6.2_beta1.ebuild 1656
-EBUILD freebsd-libexec-6.2_beta2.ebuild 1656 RMD160 d8aea8a3788aa0ab775bf1774d3be41638a0dce0 SHA1 81a9f5899dc53e49b18a935a936b01a8f91136ef SHA256 beceb41023d6c2d3266fb18e5370d88a6139098b1bf2aad76e5984f573558e31
-MD5 06dea2f288a50e694b2f1c9237fd6d8d freebsd-libexec-6.2_beta2.ebuild 1656
-RMD160 d8aea8a3788aa0ab775bf1774d3be41638a0dce0 freebsd-libexec-6.2_beta2.ebuild 1656
-SHA256 beceb41023d6c2d3266fb18e5370d88a6139098b1bf2aad76e5984f573558e31 freebsd-libexec-6.2_beta2.ebuild 1656
-MISC ChangeLog 4559 RMD160 fe4cc808c071acaeb6cde8fafb16884e8bf5bd44 SHA1 62daa15bc3b34f606af8251ee4ffbfd33cf05500 SHA256 19d5c2a5948d15f3f897ca34098811e2307d4c16c0b643302b32b663f6686cdd
-MD5 3288d886dc3007864541b3a5399fd7df ChangeLog 4559
-RMD160 fe4cc808c071acaeb6cde8fafb16884e8bf5bd44 ChangeLog 4559
-SHA256 19d5c2a5948d15f3f897ca34098811e2307d4c16c0b643302b32b663f6686cdd ChangeLog 4559
+EBUILD freebsd-libexec-6.2_beta2.ebuild 1704 RMD160 200b160f59a69b8a61d72903cb71961e6c871028 SHA1 394c614dbefcb411c1e5c2885b1bd8218141d907 SHA256 ceed7740d13e67d4e3b6a0193c53d16f1ea2336e33109792da448625e8cff99c
+MD5 e235a2d5f0645de597ae11cd54837574 freebsd-libexec-6.2_beta2.ebuild 1704
+RMD160 200b160f59a69b8a61d72903cb71961e6c871028 freebsd-libexec-6.2_beta2.ebuild 1704
+SHA256 ceed7740d13e67d4e3b6a0193c53d16f1ea2336e33109792da448625e8cff99c freebsd-libexec-6.2_beta2.ebuild 1704
+MISC ChangeLog 4717 RMD160 d9ecf3859c4eda321eeade2e572ec2d3a172131c SHA1 06d7c8f4c424351b5acaf08278d4b0ba2120a8b2 SHA256 b80534c0c26cdfec6dc94caef4b04a20745e7f55a2f73db42fea433bd96a6c53
+MD5 e02ba0a7b0c54a591772e4f3e44c411d ChangeLog 4717
+RMD160 d9ecf3859c4eda321eeade2e572ec2d3a172131c ChangeLog 4717
+SHA256 b80534c0c26cdfec6dc94caef4b04a20745e7f55a2f73db42fea433bd96a6c53 ChangeLog 4717
 MISC metadata.xml 156 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 SHA1 d9d9d4f2b5afc58339ea3e562fca490156935f1f SHA256 30ab515d6ac492d3d6c36ac3c675511742c2149e56a6b3228c8d22ab8edb3ff7
 MD5 2bd48a5ae413433cbb36110b219ce97c metadata.xml 156
 RMD160 60b5820a08275f307e5bd936d78f5afd1f141086 metadata.xml 156
@@ -71,10 +72,3 @@ SHA256 01aa7eae3423ea341b060534b9440e6334b1c5d3d66a5ca9fd5d1a8954b98c9e files/di
 MD5 c1466c4e67aa8982174029bad1ce525a files/digest-freebsd-libexec-6.2_beta2 1924
 RMD160 d58402ace8f235d8926c0c0902ef8af3c57165a6 files/digest-freebsd-libexec-6.2_beta2 1924
 SHA256 1639fd500ccdf405c0c535bd29341698d197fd64086af0be42c0dc18424e4f20 files/digest-freebsd-libexec-6.2_beta2 1924
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFJMv5AiZjviIA2XgRAkPUAJ9zaLXtPFruLnv65+VuK/fLoem5xACghQ4O
-u/RDGkmuUZEytcM6B5qrLzc=
-=RSRx
------END PGP SIGNATURE-----
