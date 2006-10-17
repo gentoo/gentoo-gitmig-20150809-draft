@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3_pre2.ebuild,v 1.1 2006/10/10 20:55:19 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.3_pre2.ebuild,v 1.2 2006/10/17 14:20:15 uberlord Exp $
 
 inherit eutils python
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 DEPEND=">=sys-apps/portage-2.1.1_pre1
 	>=dev-lang/python-2.0

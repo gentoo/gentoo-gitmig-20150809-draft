@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.91 2006/10/10 20:55:19 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.92 2006/10/17 14:20:15 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  gentoolkit-0.2.3_pre2.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *gentoolkit-0.2.3_pre2 (10 Oct 2006)
 
