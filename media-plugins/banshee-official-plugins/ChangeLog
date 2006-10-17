@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/banshee-official-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-official-plugins/ChangeLog,v 1.1 2006/09/20 01:06:58 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-official-plugins/ChangeLog,v 1.2 2006/10/17 15:46:23 metalgod Exp $
+
+*banshee-official-plugins-0.11.1 (17 Oct 2006)
+
+  17 Oct 2006; Luis Medinas <metalgod@gentoo.org>
+  +banshee-official-plugins-0.11.1.ebuild:
+  Version Bump.
 
 *banshee-official-plugins-0.11.0 (20 Sep 2006)
 
