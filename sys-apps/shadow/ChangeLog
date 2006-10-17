@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.159 2006/08/04 13:14:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.160 2006/10/17 14:21:36 dsd Exp $
+
+  17 Oct 2006; Daniel Drake <dsd@gentoo.org> shadow-4.0.15-r2.ebuild,
+  shadow-4.0.16-r2.ebuild, shadow-4.0.17.ebuild, shadow-4.0.17-r1.ebuild,
+  shadow-4.0.18.1.ebuild:
+  Make cracklib support optional through USE flag
 
 *shadow-4.0.18.1 (04 Aug 2006)
 
