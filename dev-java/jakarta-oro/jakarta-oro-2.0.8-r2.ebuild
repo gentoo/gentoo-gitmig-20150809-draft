@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r2.ebuild,v 1.4 2006/10/05 17:19:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-oro/jakarta-oro-2.0.8-r2.ebuild,v 1.5 2006/10/17 02:28:37 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/jakarta/oro/source/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="2.0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc examples source"
 
 DEPEND=">=virtual/jdk-1.3
