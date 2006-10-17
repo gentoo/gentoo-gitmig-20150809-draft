@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/bouml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.5 2006/09/22 20:05:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.6 2006/10/17 18:37:44 flameeyes Exp $
+
+*bouml-2.17.2 (17 Oct 2006)
+
+  17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +bouml-2.17.2.ebuild:
+  Version bump, thanks to Bruno Pages (upstream of bouml) for the help on
+  getting the build system cleaned up so that the ebuild doesn't need to
+  replace it anymore. Also add icons in menus.
 
 *bouml-2.17.1 (22 Sep 2006)
 
