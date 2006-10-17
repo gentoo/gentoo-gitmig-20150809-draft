@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.32 2006/10/05 16:19:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.33 2006/10/17 22:09:43 tupone Exp $
+
+*ode-0.7 (17 Oct 2006)
+
+  17 Oct 2006; <tupone@gentoo.org> +files/ode-0.7-flags.patch,
+  +ode-0.7.ebuild:
+  Bumped to 0.7 . Bug #150857 by Christopher Mire
 
   05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> ode-0.6-r1.ebuild:
   Stable on amd64 wrt bug #146080.
