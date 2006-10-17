@@ -1,0 +1,34 @@
+FreeBSD only works on Sparc64 and freeBSD code relies on the __sparc64__ define.
+gcc only defines __sparc64__ if -mcpu is not used.
+gcc-4 defaults to using -mcpu=ultrasparc on FreeBSD.
+
+This causes us a problem. Infact, FreeBSD developers sent gcc a patch to always
+define __sparc64__ when using -mcpu=ultrasparc, but this was rejected by most
+people including NetBSD developers.
+
+The correct solution is to use __sparc__.
+If platform detection is required, or the code is obviously 64 bit then we can
+use the __arch64__ define as well.
+This combination should be supported by all gcc versions:)
+
+diff -ur libexec.orig/rtld-elf/rtld.c libexec/rtld-elf/rtld.c
+--- libexec.orig/rtld-elf/rtld.c	2006-10-10 08:16:56 +0100
++++ libexec/rtld-elf/rtld.c	2006-10-10 08:19:08 +0100
+@@ -2732,7 +2732,7 @@
+ 
+ #endif
+ 
+-#if defined(__i386__) || defined(__amd64__) || defined(__sparc64__) || \
++#if defined(__i386__) || defined(__amd64__) || defined(__sparc__) || \
+     defined(__arm__)
+ 
+ /*
+@@ -2897,7 +2897,7 @@
+ void
+ free_tls_offset(Obj_Entry *obj)
+ {
+-#if defined(__i386__) || defined(__amd64__) || defined(__sparc64__) || \
++#if defined(__i386__) || defined(__amd64__) || defined(__sparc__) || \
+     defined(__arm__)
+     /*
+      * If we were the last thing to allocate out of the static TLS

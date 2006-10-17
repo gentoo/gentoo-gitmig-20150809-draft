@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2_beta2.ebuild,v 1.2 2006/10/05 21:14:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-6.2_beta2.ebuild,v 1.3 2006/10/17 10:24:29 uberlord Exp $
 
 inherit flag-o-matic bsdmk freebsd
 
 DESCRIPTION="FreeBSD sbin utils"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 
 SRC_URI="mirror://gentoo/${SBIN}.tar.bz2

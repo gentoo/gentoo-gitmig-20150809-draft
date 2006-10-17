@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.5 2006/10/06 17:14:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.6 2006/10/17 10:16:05 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="6.0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
 IUSE="atm bluetooth ssl ipv6 kerberos nis gpib build bootstrap"
 
@@ -82,7 +82,8 @@ PATCHES="${FILESDIR}/${PN}-bsdxml.patch
 	${FILESDIR}/${PN}-6.0-binutils-asm.patch
 	${FILESDIR}/${PN}-6.0-ssp.patch
 	${FILESDIR}/${PN}-6.1-csu.patch
-	${FILESDIR}/${PN}-6.2-gcc41.patch"
+	${FILESDIR}/${PN}-6.2-gcc41.patch
+	${FILESDIR}/${PN}-6.2-sparc64.patch"
 
 # Here we disable and remove source which we don't need or want
 # In order:

@@ -1,0 +1,92 @@
+FreeBSD only works on Sparc64 and freeBSD code relies on the __sparc64__ define.
+gcc only defines __sparc64__ if -mcpu is not used.
+gcc-4 defaults to using -mcpu=ultrasparc on FreeBSD.
+
+This causes us a problem. Infact, FreeBSD developers sent gcc a patch to always
+define __sparc64__ when using -mcpu=ultrasparc, but this was rejected by most
+people including NetBSD developers.
+
+The correct solution is to use __sparc__.
+If platform detection is required, or the code is obviously 64 bit then we can
+use the __arch64__ define as well.
+This combination should be supported by all gcc versions:)
+
+diff -ur usr.bin.orig/getconf/progenv.gperf usr.bin/getconf/progenv.gperf
+--- usr.bin.orig/getconf/progenv.gperf	2005-02-18 21:53:05 +0000
++++ usr.bin/getconf/progenv.gperf	2006-10-10 09:51:19 +0100
+@@ -30,7 +30,7 @@
+  * be updated.  (We cheat here and define the supported environments
+  * statically.)
+  */
+-#if defined(__alpha__) || defined(__sparc64__) || defined(__amd64__)
++#if defined(__alpha__) || (defined(__sparc__) && defined(__arch64)) || defined(__amd64__)
+ #define	have_LP64_OFF64		NULL
+ #endif
+ 
+diff -ur usr.bin.orig/gprof/gprof.h usr.bin/gprof/gprof.h
+--- usr.bin.orig/gprof/gprof.h	2004-10-03 19:22:35 +0100
++++ usr.bin/gprof/gprof.h	2006-10-10 09:50:07 +0100
+@@ -59,7 +59,7 @@
+ #if __powerpc__
+ #   include "powerpc.h"
+ #endif
+-#if __sparc64__
++#if __sparc__ && __arch64__
+ #   include "sparc64.h"
+ #endif
+ 
+diff -ur usr.bin.orig/truss/extern.h usr.bin/truss/extern.h
+--- usr.bin.orig/truss/extern.h	2005-03-27 13:53:25 +0100
++++ usr.bin/truss/extern.h	2006-10-10 09:52:05 +0100
+@@ -54,7 +54,7 @@
+ extern void ia64_syscall_entry(struct trussinfo *, int);
+ extern long ia64_syscall_exit(struct trussinfo *, int);
+ #endif
+-#ifdef __sparc64__
++#if defined(__sparc__) && defined(__arch64__)
+ extern void sparc64_syscall_entry(struct trussinfo *, int);
+ extern long sparc64_syscall_exit(struct trussinfo *, int);
+ #endif
+diff -ur usr.bin.orig/truss/main.c usr.bin/truss/main.c
+--- usr.bin.orig/truss/main.c	2006-06-09 22:08:51 +0100
++++ usr.bin/truss/main.c	2006-10-10 09:53:10 +0100
+@@ -99,7 +99,7 @@
+ #ifdef __ia64__
+ 	{ "FreeBSD ELF64", ia64_syscall_entry, ia64_syscall_exit },
+ #endif
+-#ifdef __sparc64__
++#if defined(__sparc__) && defined(__arch64__)
+ 	{ "FreeBSD ELF64", sparc64_syscall_entry, sparc64_syscall_exit },
+ #endif
+ 	{ 0, 0, 0 },
+diff -ur usr.bin.orig/xlint/common/param.h usr.bin/xlint/common/param.h
+--- usr.bin.orig/xlint/common/param.h	2002-07-19 16:19:23 +0100
++++ usr.bin/xlint/common/param.h	2006-10-10 09:53:59 +0100
+@@ -69,7 +69,7 @@
+ /*
+  * And the sparc64 long double code generation is broken.
+  */
+-#if !defined(__sparc64__)
++#if !(defined(__sparc__) && defined(__arch64__))
+ typedef	long double ldbl_t;
+ #else
+ typedef	double	ldbl_t;
+diff -ur usr.bin.orig/xlint/lint1/param.h usr.bin/xlint/lint1/param.h
+--- usr.bin.orig/xlint/lint1/param.h	2004-05-14 14:44:36 +0100
++++ usr.bin/xlint/lint1/param.h	2006-10-10 09:55:06 +0100
+@@ -83,12 +83,12 @@
+ #elif __powerpc__
+ #define PTRDIFF_IS_LONG		0
+ #define SIZEOF_IS_ULONG		0
++#elif defined(__sparc__) && defined(__arch64__)
++#define PTRDIFF_IS_LONG		1
++#define SIZEOF_IS_ULONG		1
+ #elif __sparc__
+ #define PTRDIFF_IS_LONG		0
+ #define SIZEOF_IS_ULONG		0
+-#elif __sparc64__
+-#define PTRDIFF_IS_LONG		1
+-#define SIZEOF_IS_ULONG		1
+ #elif __vax__
+ #define PTRDIFF_IS_LONG         0
+ #define SIZEOF_IS_ULONG         0

@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.24 2006/10/12 14:59:48 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.25 2006/10/17 10:33:31 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  freebsd-usbin-6.2_beta2.ebuild:
+  Added ~sparc-fbsd keyword.
 
   12 Oct 2006; Roy Marples <uberlord@gentoo.org> files/powerd.confd:
   Don't annoy laptop users too much, default powerd to maximum in AC_MODE.

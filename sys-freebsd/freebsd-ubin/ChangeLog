@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.28 2006/10/09 09:04:16 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.29 2006/10/17 10:30:38 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  +files/freebsd-ubin-6.2-sparc64.patch, freebsd-ubin-6.2_beta2.ebuild:
+  Added ~sparc-fbsd keyword.
 
   09 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
   freebsd-ubin-6.1.ebuild, freebsd-ubin-6.2_beta1.ebuild,

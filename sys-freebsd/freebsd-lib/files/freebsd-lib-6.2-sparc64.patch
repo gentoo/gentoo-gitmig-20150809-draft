@@ -1,0 +1,106 @@
+FreeBSD only works on Sparc64 and freeBSD code relies on the __sparc64__ define.
+gcc only defines __sparc64__ if -mcpu is not used.
+gcc-4 defaults to using -mcpu=ultrasparc on FreeBSD.
+
+This causes us a problem. Infact, FreeBSD developers sent gcc a patch to always
+define __sparc64__ when using -mcpu=ultrasparc, but this was rejected by most
+people including NetBSD developers.
+
+The correct solution is to use __sparc__.
+If platform detection is required, or the code is obviously 64 bit then we can
+use the __arch64__ define as well.
+This combination should be supported by all gcc versions:)
+
+diff -ur lib.orig/libc/gen/tls.c lib/libc/gen/tls.c
+--- lib.orig/libc/gen/tls.c	2006-09-02 21:38:13 +0100
++++ lib/libc/gen/tls.c	2006-10-09 18:17:53 +0100
+@@ -61,7 +61,7 @@
+ #if defined(__ia64__) || defined(__alpha__) || defined(__powerpc__)
+ #define TLS_VARIANT_I
+ #endif
+-#if defined(__i386__) || defined(__amd64__) || defined(__sparc64__) || \
++#if defined(__i386__) || defined(__amd64__) || defined(__sparc__) || \
+     defined(__arm__)
+ #define TLS_VARIANT_II
+ #endif
+diff -ur lib.orig/libc/gmon/gmon.c lib/libc/gmon/gmon.c
+--- lib.orig/libc/gmon/gmon.c	2004-10-16 07:32:43 +0100
++++ lib/libc/gmon/gmon.c	2006-10-09 18:18:12 +0100
+@@ -53,7 +53,7 @@
+ 
+ #include "libc_private.h"
+ 
+-#if defined(__i386__) || defined(__sparc64__) || defined(__amd64__)
++#if defined(__i386__) || defined(__sparc__) || defined(__amd64__)
+ extern char *minbrk __asm (".minbrk");
+ #else
+ extern char *minbrk __asm ("minbrk");
+diff -ur lib.orig/libc/stdlib/malloc.c lib/libc/stdlib/malloc.c
+--- lib.orig/libc/stdlib/malloc.c	2005-09-18 04:45:24 +0100
++++ lib/libc/stdlib/malloc.c	2006-10-09 18:22:29 +0100
+@@ -55,7 +55,7 @@
+ #       define malloc_pageshift		13U
+ #       define malloc_minsize		16U
+ #   endif
+-#   if defined(__sparc64__)
++#   if defined(__sparc__) && defined(__arch64__)
+ #       define malloc_pageshift		13U
+ #       define malloc_minsize		16U
+ #   endif
+diff -ur lib.orig/libc/xdr/xdr_float.c lib/libc/xdr/xdr_float.c
+--- lib.orig/libc/xdr/xdr_float.c	2004-10-16 07:32:43 +0100
++++ lib/libc/xdr/xdr_float.c	2006-10-09 18:23:17 +0100
+@@ -64,7 +64,7 @@
+ #if defined(__m68k__) || defined(__sparc__) || defined(__i386__) || \
+     defined(__mips__) || defined(__ns32k__) || defined(__alpha__) || \
+     defined(__arm__) || defined(__ppc__) || defined(__ia64__) || \
+-    defined(__arm26__) || defined(__sparc64__) || defined(__amd64__)
++    defined(__arm26__) || defined(__amd64__)
+ #include <machine/endian.h>
+ #define IEEEFP
+ #endif
+diff -ur lib.orig/libc_r/uthread/pthread_private.h lib/libc_r/uthread/pthread_private.h
+--- lib.orig/libc_r/uthread/pthread_private.h	2005-05-31 20:57:23 +0100
++++ lib/libc_r/uthread/pthread_private.h	2006-10-09 18:24:55 +0100
+@@ -144,7 +144,7 @@
+ 	GET_BSP_JB(jb) = (long)(stk);			\
+ } while (0)
+ #define UPD_STACK_JB(jb, stk)	GET_STACK_JB(jb) = (long)(stk)
+-#elif	defined(__sparc64__)
++#elif	defined(__sparc__) && defined(__arch64__)
+ #include <machine/frame.h>
+ 
+ #define	CCFSZ	sizeof (struct frame)
+diff -ur lib.orig/libdisk/disk.c lib/libdisk/disk.c
+--- lib.orig/libdisk/disk.c	2006-05-10 16:26:46 +0100
++++ lib/libdisk/disk.c	2006-10-09 18:26:33 +0100
+@@ -42,7 +42,7 @@
+ 	p_i386
+ #elif defined(__alpha__)
+ 	p_alpha
+-#elif defined(__sparc64__)
++#elif defined(__sparc__) && defined(__arch64__)
+ 	p_sparc64
+ #elif defined(__ia64__)
+ 	p_ia64
+@@ -309,7 +309,7 @@
+ 	if (!d->boot1)
+ 		return -1;
+ 	memcpy(d->boot1, b1, 15 * 512);
+-#elif defined(__sparc64__)
++#elif defined(__sparc__) && defined(__arch64__)
+ 	if (d->boot1 != NULL)
+ 		free(d->boot1);
+ 	d->boot1 = malloc(16 * 512);
+diff -ur lib.orig/msun/src/math.h lib/msun/src/math.h
+--- lib.orig/msun/src/math.h	2005-04-16 22:12:47 +0100
++++ lib/msun/src/math.h	2006-10-09 18:27:09 +0100
+@@ -69,7 +69,7 @@
+ #define	math_errhandling	MATH_ERREXCEPT
+ 
+ /* XXX We need a <machine/math.h>. */
+-#if defined(__ia64__) || defined(__sparc64__)
++#if defined(__ia64__) || defined(__sparc__)
+ #define	FP_FAST_FMA
+ #endif
+ #ifdef __ia64__
