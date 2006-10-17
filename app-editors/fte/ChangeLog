@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.34 2006/08/27 15:14:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.35 2006/10/17 22:07:12 gustavoz Exp $
+
+  17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  fte-20020324-r2.ebuild, fte-20050108-r3.ebuild, fte-20051115.ebuild:
+  Going -sparc wrt #75250
 
   27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
   fte-20020324-r2.ebuild:
