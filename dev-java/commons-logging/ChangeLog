@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.39 2006/10/05 15:29:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.40 2006/10/17 03:40:44 nichoj Exp $
+
+  17 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  commons-logging-1.0.4-r2.ebuild:
+  Keyworded ~ia64.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   commons-logging-1.0.4-r1.ebuild, commons-logging-1.0.4-r2.ebuild:
