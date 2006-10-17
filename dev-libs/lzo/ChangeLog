@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.40 2006/09/22 23:57:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.41 2006/10/17 13:47:16 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> lzo-2.02-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   22 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> lzo-2.02-r1.ebuild:
   Stable on Alpha.
