@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.104 2006/03/30 14:10:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.105 2006/10/17 09:38:22 uberlord Exp $
+
+  17 Oct 2006; Roy Marples <uberlord@gentoo.org> libtool-1.5.22.ebuild:
+  Added ~sparc-fbsd keyword.
 
   30 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> libtool-1.5.22.ebuild:
   Add ~x86-fbsd keyword.
