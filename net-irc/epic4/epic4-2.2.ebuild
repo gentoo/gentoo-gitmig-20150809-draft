@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.12 2005/09/11 14:01:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.13 2006/10/18 21:20:33 jokey Exp $
 
 inherit flag-o-matic eutils
 
@@ -9,7 +9,8 @@ HELP_V="20050315"
 DESCRIPTION="Epic4 IRC Client"
 HOMEPAGE="http://epicsol.org/"
 SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
-	ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-${HELP_V}.tar.gz"
+	ftp://prbh.org/pub/epic/EPIC4-PRODUCTION/epic4-help-${HELP_V}.tar.gz
+	mirror://gentoo/epic4-local.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -68,15 +69,24 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "If /usr/share/epic/script/local does not exist, I will now"
-	einfo "create it.  If you do not like the look/feel of this file, or"
-	einfo "if you'd prefer to use your own script, simply remove this"
-	einfo "file.  If you want to prevent this file from being installed"
-	einfo "in the future, simply create an empty file with this name."
-
 	if [ ! -f ${ROOT}/usr/share/epic/script/local ]
 	then
-		cp ${FILESDIR}/local ${ROOT}/usr/share/epic/script/
+		einfo "/usr/share/epic/script/local does not exist, I will now"
+		einfo "create it. If you do not like the look/feel of this file, or"
+		einfo "if you'd prefer to use your own script, simply remove this"
+		einfo "file.  If you want to prevent this file from being installed"
+		einfo "in the future, simply create an empty file with this name."
+		cp ${WORKDIR}/epic4-local ${ROOT}/usr/share/epic/script/local
+		echo
+		einfo "This provided local startup script adds a number of nifty"
+		einfo "features to Epic including tab completion, a comprehensive set"
+		einfo "of aliases, and channel-by-channel logging.  To prevent"
+		einfo "unintentional conflicts with your own scripting, if either the"
+		einfo "~/.ircrc or ~/.epicrc script files exist, then the local script"
+		einfo "is *not* run.  If you like the script but want to make careful"
+		einfo "additions (such as selecting your usual servers or setting your"
+		einfo "nickname), simply copy /usr/share/epic/script/local to ~/.ircrc"
+		einfo "and then add your additions to the copy."
 	fi
 
 	# Fix for bug 59075
