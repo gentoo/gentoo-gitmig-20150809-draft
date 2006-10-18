@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmblob
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.8 2006/07/16 21:48:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/ChangeLog,v 1.9 2006/10/18 08:10:56 s4t4n Exp $
+
+  18 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmblob-1.0.1.ebuild:
+  Added missing libXpm dependancy. Closes bug #150646.
 
   16 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmblob-1.0.1.ebuild:
   Remove prepallman.

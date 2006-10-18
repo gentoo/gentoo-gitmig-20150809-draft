@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.1.ebuild,v 1.8 2006/07/16 21:48:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmblob/wmblob-1.0.1.ebuild,v 1.9 2006/10/18 08:10:56 s4t4n Exp $
 
 inherit eutils
 
@@ -12,7 +12,8 @@ HOMEPAGE="http://dockapps.org/file.php/id/155"
 
 DEPEND=">=x11-libs/pango-1.4.0
 	>=x11-libs/gtk+-2.4.1
-	>=dev-util/pkgconfig-0.15.0"
+	>=dev-util/pkgconfig-0.15.0
+	x11-libs/libXpm"
 
 SLOT="0"
 LICENSE="GPL-2"
