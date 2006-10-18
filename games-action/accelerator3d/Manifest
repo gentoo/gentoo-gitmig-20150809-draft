@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX accelerator3d-0.1.0-gentoo-paths.patch 307 RMD160 3ffe45858c23c9aeb157f2e2ecad797fb8341fdd SHA1 71140d16e0e99664b517edec03fda3949e0b6cee SHA256 4395bd156fe0bae0661f21e5f455c974b07addd0c7d654e6ce3aa0a16badd37d
 MD5 f5cf47ace8c11eed2413011837029027 files/accelerator3d-0.1.0-gentoo-paths.patch 307
 RMD160 3ffe45858c23c9aeb157f2e2ecad797fb8341fdd files/accelerator3d-0.1.0-gentoo-paths.patch 307
@@ -7,10 +10,10 @@ MD5 e8645f2372c5b7847bf53318c3aa4e53 files/accelerator3d-0.1.1-gentoo-paths.patc
 RMD160 92abdf0ed7b2011eba78ed4c92aa4f20775c5fa1 files/accelerator3d-0.1.1-gentoo-paths.patch 3073
 SHA256 ab2e24e8d482747715fd085d14d2b533d75876c7a819442b66a21b41bfd62d6c files/accelerator3d-0.1.1-gentoo-paths.patch 3073
 DIST accelerator-0.1.1.tar.bz2 1183838 RMD160 f04b6ecfc8cf3b7e34f6c1df57bb038b78d3b001 SHA1 55fd3bb122c007ca3b3ce9e176c56e6021fcb63b SHA256 02fac1b6fc9bb5708f53ef7bcf123f5a4a04261e2764f984d3e3c64e06a74712
-EBUILD accelerator3d-0.1.1.ebuild 1034 RMD160 b024dba83351901fb700c583502f66ccd01d4775 SHA1 3855cf46b746cbd081e6b252642be6fe1978bf30 SHA256 fb5ac4ffac5d4e3e2e47f92bc620699790e367499c7a5d3507f59f11896568a9
-MD5 fd3c03486eda45b5ebeebcb589e66948 accelerator3d-0.1.1.ebuild 1034
-RMD160 b024dba83351901fb700c583502f66ccd01d4775 accelerator3d-0.1.1.ebuild 1034
-SHA256 fb5ac4ffac5d4e3e2e47f92bc620699790e367499c7a5d3507f59f11896568a9 accelerator3d-0.1.1.ebuild 1034
+EBUILD accelerator3d-0.1.1.ebuild 1030 RMD160 8cb10d7000e692a29e1ccc2a95caea37c222715f SHA1 1488c948168c68dc5a855fdbb06dc17ab90b1975 SHA256 cc6817068d6157a78d5010eede282658ebaba2d1208c82ec4513bd96768245d8
+MD5 fa291d93f6dca7b052a47a53c72bb140 accelerator3d-0.1.1.ebuild 1030
+RMD160 8cb10d7000e692a29e1ccc2a95caea37c222715f accelerator3d-0.1.1.ebuild 1030
+SHA256 cc6817068d6157a78d5010eede282658ebaba2d1208c82ec4513bd96768245d8 accelerator3d-0.1.1.ebuild 1030
 MISC ChangeLog 706 RMD160 6e858d8ec82cae2dbfa36bb0e368aeba69b3cfa5 SHA1 79ffb5d30d1ce51c7111807dcc3867ed2d368f34 SHA256 3407d219aca92fe6f4f400ec791aafb29d9565ca0ea7391f6fec948680c765c6
 MD5 62ab8bd7bb666eb06b986bbbfa959766 ChangeLog 706
 RMD160 6e858d8ec82cae2dbfa36bb0e368aeba69b3cfa5 ChangeLog 706
@@ -22,3 +25,10 @@ SHA256 1423a4fdd4a79b1728a2056d9e300f7e1074253095d82726218d9e9b953888a3 metadata
 MD5 f7b32f3e41ca15a8d4984d2fc01bc652 files/digest-accelerator3d-0.1.1 259
 RMD160 e7ff13ef96b1c1d24fd480accdd5f41b5482bc0a files/digest-accelerator3d-0.1.1 259
 SHA256 53665c6e659c1879ed20dceb20e7056c47b55aa87a0127384ac4736d7d45c9c3 files/digest-accelerator3d-0.1.1 259
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFNYYNdz7hIScOURERAhNaAKDeIwXwy5KepKLFvt6OOxf4SadozwCg7pSQ
+LFcCJX2+k74KOqiwqcdVieI=
+=8mGY
+-----END PGP SIGNATURE-----
