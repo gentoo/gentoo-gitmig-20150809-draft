@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.8.2.1.ebuild,v 1.1 2006/10/18 00:53:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-0.8.2.1.ebuild,v 1.2 2006/10/18 02:21:59 nyhm Exp $
 
 inherit eutils java-ant-2 java-pkg-2 versionator games
 
@@ -33,6 +33,7 @@ src_unpack() {
 
 src_compile() {
 	eant || die
+	echo "triplea.saveGamesInHomeDir=true" > classes/triplea.properties
 }
 
 src_install() {

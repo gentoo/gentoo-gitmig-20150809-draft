@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/triplea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.22 2006/10/18 00:53:37 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.23 2006/10/18 02:21:59 nyhm Exp $
+
+  18 Oct 2006; Tristan Heaven <nyhm@gentoo.org> triplea-0.8.2.1.ebuild:
+  Save games to ~/.triplea
 
 *triplea-0.8.2.1 (18 Oct 2006)
 
