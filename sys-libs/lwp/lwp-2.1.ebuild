@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-2.1.ebuild,v 1.2 2006/10/09 14:28:30 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-2.1.ebuild,v 1.3 2006/10/18 04:57:42 tsunam Exp $
 
 inherit multilib eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.coda.cs.cmu.edu/pub/lwp/src/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/grep
