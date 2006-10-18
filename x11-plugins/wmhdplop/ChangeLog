@@ -1,10 +1,13 @@
 # ChangeLog for x11-plugins/wmhdplop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.10 2006/08/04 09:33:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.11 2006/10/18 08:49:28 s4t4n Exp $
 
-*wmhdplop-0.9.7-r1 (04 Aug 2005)
+  18 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmhdplop-0.9.7-r1.ebuild:
+  Added missing freetype dependancy. Closes bug #150651.
 
-  04 Aug 2005; Michele Noberasco <s4t4n@gentoo.org> wmhdplop-0.9.7-r1.ebuild:
+*wmhdplop-0.9.7-r1 (04 Aug 2006)
+
+  04 Aug 2006; Michele Noberasco <s4t4n@gentoo.org> wmhdplop-0.9.7-r1.ebuild:
   Revision bump, with patch to fix bug #139945. The patch is so trivial that
   I'm committing it directly to stable.
   wmhdplop-0.9.7.ebuild:

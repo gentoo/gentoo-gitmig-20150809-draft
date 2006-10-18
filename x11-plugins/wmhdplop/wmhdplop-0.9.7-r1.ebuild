@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.7-r1.ebuild,v 1.1 2006/08/04 09:33:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/wmhdplop-0.9.7-r1.ebuild,v 1.2 2006/10/18 08:49:28 s4t4n Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ RDEPEND="|| ( (
 		x11-libs/libXt
 		x11-libs/libXext )
 	virtual/x11 )
-	>=media-fonts/corefonts-1-r2"
+	>=media-fonts/corefonts-1-r2
+	>=media-libs/freetype-2.1.10-r2"
 DEPEND="${RDEPEND}
 	|| ( x11-proto/xextproto virtual/x11 )
 	>=media-libs/imlib2-1.2.0-r2
