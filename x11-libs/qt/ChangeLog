@@ -1,9 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.358 2006/10/17 20:20:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.359 2006/10/18 16:42:53 flameeyes Exp $
 
   17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> qt-4.2.0.ebuild:
   Fixed up and keyworded ~sparc wrt #150888
+
+*qt-3.3.6-r3 (18 Oct 2006)
+
+  18 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/qt-3.3.6-CVE-2006-4811.patch, +qt-3.3.6-r3.ebuild:
+  Add patch from RedHat to try fixing security bug #151838.
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> qt-3.3.6-r1.ebuild:
   Stable on ia64, bug 132887.
