@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2006.1_rc4.ebuild,v 1.1 2006/06/27 06:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bfin-toolchain/bfin-toolchain-2006.1_rc4.ebuild,v 1.2 2006/10/18 16:05:57 vapier Exp $
 
 inherit rpm
 
@@ -10,12 +10,11 @@ SRC_URI="http://blackfin.uclinux.org/frs/download.php/914/blackfin-toolchain-06r
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="strip"
 
 DEPEND=""
-#RDEPEND=""
 
 S=${WORKDIR}
 
