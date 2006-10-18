@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.1 2006/09/26 15:22:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.2 2006/10/18 13:03:26 corsair Exp $
+
+  18 Oct 2006; Markus Rothe <corsair@gentoo.org> scim-bridge-0.4.5.ebuild:
+  Added ~ppc64; bug #151413
 
 *scim-bridge-0.4.5 (26 Sep 2006)
 
