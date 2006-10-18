@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/ChangeLog,v 1.10 2006/01/24 22:53:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/ChangeLog,v 1.11 2006/10/18 08:55:32 s4t4n Exp $
+
+  18 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmcp-1.2.8.ebuild:
+  Shifted RDEPEND entried to DEPEND. Closes bug #150650.
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmcp-1.2.8.ebuild:
   Fixed DEPEND for modular X.
