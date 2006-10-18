@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.14 2006/10/18 16:29:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.15 2006/10/18 16:57:47 dev-zero Exp $
 
 KEYWORDS="x86 ppc amd64 s390"
 
 DESCRIPTION="library of C++ classes for flexible logging to files, syslog, IDSA and other destinations"
 HOMEPAGE="http://log4cpp.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-0.3.4b.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc threads"
@@ -22,7 +22,8 @@ src_unpack() {
 	cd "${S}/doc"
 	sed -i \
 		-e 's#$(man3dir)#$(DESTDIR)/$(man3dir)#' \
-		-e 's#$(docdir)#$(DESTDIR)/$(docdir)#' \
+		-e 's#$(docdir)#$(DESTDIR)/$(docdir)/html#' \
+		-e 's#$(prefix)#$(datadir)#' \
 		Makefile.in || die "sed failed"
 }
 
