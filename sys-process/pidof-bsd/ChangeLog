@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/pidof-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.3 2006/09/25 20:17:35 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.4 2006/10/18 11:23:38 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  pidof-bsd-20050501-r3.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *pidof-bsd-20050501-r3 (25 Sep 2006)
 

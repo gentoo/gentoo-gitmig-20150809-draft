@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/fuser-bsd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.3 2006/09/12 21:04:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fuser-bsd/ChangeLog,v 1.4 2006/10/18 11:22:08 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  fuser-bsd-1142334561.ebuild:
+  Added ~sparc-fbsd keyword.
 
   12 Sep 2006; Roy Marples <uberlord@gentoo.org> -files/fuser-return.patch,
   fuser-bsd-1142334561.ebuild:
