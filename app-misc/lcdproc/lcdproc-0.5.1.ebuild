@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1.ebuild,v 1.1 2006/10/16 21:51:47 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1.ebuild,v 1.2 2006/10/18 23:36:16 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,7 @@ RDEPEND=${DEPEND}
 USE_DRIVERS="curses g15 glcdlib irman lirc svga ula200 xosd"
 EXTRA_DRIVERS="bayrad CFontz CFontz633 CFontzPacket CwLnx EyeboxOne \
 	glk hd44780 icp_a106 imon IOWarrior joy lb216 lcdm001 \
-	lcterm ms6931 mtc_s16209x MtxOrb NoritakeVFD pyramid sed1330 \
+	lcterm MD8800 ms6931 mtc_s16209x MtxOrb NoritakeVFD pyramid sed1330 \
 	sed1520 serialVFD sli stv5730 t6963 text tyan "
 ALL_DRIVERS="${USE_DRIVERS} ${EXTRA_DRIVERS}"
 
@@ -61,10 +61,23 @@ pkg_setup() {
 	einfo "You can also set this variable in your make.conf."
 	echo
 	einfo "Possible choices for LCDPROC_DRIVERS are:"
-	einfo "     bayrad CFontz CFontz633 CFontzPacket CwLnx EyeboxOne glk "
-	einfo "     hd44780 icp_a106 imon IOWarrior joy lb216 lcdm001 lcterm "
-	einfo "     MD8800 ms6931 mtc_s16209x MtxOrb NoritakeVFD pyramid sed1330 "
-	einfo "     sed1520 serialVFD sli stv5730 t6963 text tyan"
+
+	# Nice Output of EXTRA_DRIVERS
+	local LINE="   "
+	local ELEM=0
+	for driver in ${EXTRA_DRIVERS}; do
+		ELEM=$((${ELEM}+1))
+		LINE="${LINE} ${driver}"
+		if [ "${ELEM}" = 8 ]; then
+			einfo "${LINE}"
+			ELEM=0
+			LINE="   "
+		fi
+	done
+	if [ ! "${ELEM}" = 0 ]; then
+		einfo "${LINE}"
+	fi
+
 	einfo "   'all' if you want to include all drivers (default)."
 	einfo "   'none' will not include any extra drivers."
 	echo
@@ -75,7 +88,7 @@ pkg_setup() {
 				FILTERED_DRIVERS="${FILTERED_DRIVERS} ${driver}"
 			else
 				eerror "The extra driver '${driver}' is not available or has to be enabled by a USE flag."
-				eerror "Please check your LCDPROC_DRIVERS-variable!"
+				eerror "Please check your LCDPROC_DRIVERS variable!"
 				echo
 		fi
 	done
