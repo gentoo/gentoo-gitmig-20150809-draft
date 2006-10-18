@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.199 2006/10/17 16:55:19 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.200 2006/10/18 14:44:11 joslwah Exp $
+
+  18 Oct 2006; Joslwah <joslwah@gentoo.org> ChangeLog:
+  Add a test for ppc64 host and advise users to use linux32
+  if they have forgotten to do so.  Ebuild only works for 
+  32 bit userland on ppc64 hardware anyway.
 
   17 Oct 2006; gothgirl <gothgirl@gentoo.org>
   mozilla-firefox-2.0_rc3.ebuild:
