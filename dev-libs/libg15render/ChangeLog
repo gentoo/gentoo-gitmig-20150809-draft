@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libg15render
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.3 2006/10/14 10:03:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.4 2006/10/18 23:59:48 jokey Exp $
+
+  18 Oct 2006; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Metadata update
 
   14 Oct 2006; Markus Rothe <corsair@gentoo.org> libg15render-1.1.ebuild,
   libg15render-1.1.1.ebuild:
