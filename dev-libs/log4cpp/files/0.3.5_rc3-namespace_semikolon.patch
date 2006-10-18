@@ -1,0 +1,9 @@
+--- log4cpp-0.3.5rc3/include/log4cpp/Manipulator.hh.orig	2006-10-18 22:13:48.000000000 +0200
++++ log4cpp-0.3.5rc3/include/log4cpp/Manipulator.hh	2006-10-18 22:13:52.000000000 +0200
+@@ -26,5 +26,5 @@
+ inline	tab(unsigned int i) : size(i) {}
+ friend LOG4CPP_EXPORT std::ostream& operator<< (std::ostream& os, const tab& w);
+ 	};
+-};
++}
+ #endif
