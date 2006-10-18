@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.38 2006/10/03 19:14:42 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.39 2006/10/18 13:18:19 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> eselect-1.0.6.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *eselect-1.0.6 (03 Oct 2006)
 
