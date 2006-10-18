@@ -1,0 +1,5 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/files/yate.confd,v 1.1 2006/10/18 19:57:28 genstef Exp $
+
+OPTS=""

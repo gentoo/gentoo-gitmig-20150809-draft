@@ -1,0 +1,11 @@
+# ChangeLog for net-voip/yate
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.1 2006/10/18 19:57:28 genstef Exp $
+
+*yate-1.1.0 (18 Oct 2006)
+
+  18 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/yate-0.9.0-gtk2.diff, +files/yate.confd, +files/yate.rc6,
+  +metadata.xml, +yate-1.1.0.ebuild:
+  version bump, net-misc -> net-voip
+

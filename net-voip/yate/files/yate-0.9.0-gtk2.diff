@@ -1,0 +1,12 @@
+--- yate/contrib/gtk2/Makefile.in.orig	2005-10-29 17:49:21.000000000 +0000
++++ yate/contrib/gtk2/Makefile.in	2005-10-29 17:29:40.000000000 +0000
+@@ -15,7 +15,9 @@
+ MODFLAGS:= @MODULE_LDFLAGS@
+ MODSTRIP:= @MODULE_SYMBOLS@
+ 
++ifeq (@HAVE_GTK2@,yes)
+ PROJECT = libgtk2client.a
++endif
+ SOURCES = gtk2client.cpp
+ OBJECTS = $(SOURCES:.cpp=.o)
+ 

@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/files/yate.rc6,v 1.1 2006/10/18 19:57:28 genstef Exp $
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting YATE"
+    start-stop-daemon --start --exec /usr/bin/yate -- -d -p /var/run/yate.pid ${OPTS}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping YATE"
+    start-stop-daemon --stop --pidfile=/var/run/yate.pid
+    eend $?
+}
