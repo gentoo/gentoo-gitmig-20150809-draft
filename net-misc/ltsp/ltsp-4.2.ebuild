@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.2.ebuild,v 1.1 2006/10/16 21:37:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.2.ebuild,v 1.2 2006/10/18 06:39:34 genstef Exp $
 
 inherit eutils
 
-IUSE="X debug nas esd audiofile snmp sane rdesktop vnc"
+IUSE="X debug nas esd audiofile snmp scanner rdesktop vnc"
 
 LTSP_KERNEL_VER="2.6.17.8-ltsp-1"
 
@@ -75,11 +75,11 @@ http://ltsp.mirrors.tds.net/pub/ltsp/ltsp-4.2/ltsp-ypbind-1.1-0-i386.tgz
 http://ltsp.mirrors.tds.net/pub/ltsp/ltsp-4.2/ltsp-zlib-1.0-1-i386.tgz
 http://ltsp.mirrors.tds.net/pub/ltsp/utils/ltsp-utils-0.25-0.tgz
 
-sane? (
+scanner? (
 http://ltsp.mirrors.tds.net/pub/ltsp/ltsp-4.2/ltsp-sane-1.4-1-i386.tgz )
 
 vnc? (
-http://ltsp.mirrors.tds.net/pub/ltsp/ltsp-4.2/ltsp-vnc-module-1.0-0-i386.tgz 
+http://ltsp.mirrors.tds.net/pub/ltsp/ltsp-4.2/ltsp-vnc-module-1.0-0-i386.tgz
 http://ltsp.mirrors.tds.net/pub/ltsp/ltsp-4.2/ltsp-libvncserver-1.1-0-i386.tgz )
 
 rdesktop? (

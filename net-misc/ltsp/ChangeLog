@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.14 2006/10/16 21:37:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.15 2006/10/18 06:39:34 genstef Exp $
+
+  18 Oct 2006; Stefan Schweizer <genstef@gentoo.org> ltsp-4.2.ebuild:
+  sane -> scanner, thanks to jakub in bug 151788
 
 *ltsp-4.2 (16 Oct 2006)
 
