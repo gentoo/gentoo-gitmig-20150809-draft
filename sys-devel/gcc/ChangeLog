@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.573 2006/09/19 02:39:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.574 2006/10/18 12:24:13 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> gcc-4.1.1-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   19 Sep 2006; Jason Wever <weeve@gentoo.org> gcc-4.1.1.ebuild,
   gcc-4.1.1-r1.ebuild:
