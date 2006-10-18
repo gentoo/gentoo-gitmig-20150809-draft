@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/abinit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.5 2006/10/18 04:55:28 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/abinit/ChangeLog,v 1.6 2006/10/18 05:08:42 dberkholz Exp $
+
+  18 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  -files/fix-64bit-detection.patch,
+  -files/5.1.3-fix-blas-lapack-check.patch,
+  -files/change-default-directories.patch, -files/fix-test-tarball.patch,
+  -abinit-5.1.3.ebuild:
+  Pull old version.
 
 *abinit-5.2.3 (18 Oct 2006)
 
