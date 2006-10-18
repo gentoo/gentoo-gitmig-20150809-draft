@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.32 2006/07/07 06:20:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.33 2006/10/18 10:02:01 flameeyes Exp $
+
+  18 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  scim-qtimm-0.9.4.ebuild:
+  Update kde admin directory, closes bug #142642.
 
   07 Jul 2006; Michael Sterrett <mr_bones_@gentoo.org>
   scim-qtimm-0.9.4.ebuild:

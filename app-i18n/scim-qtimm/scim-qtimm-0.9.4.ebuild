@@ -1,13 +1,17 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.4 2006/07/07 06:20:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4.ebuild,v 1.5 2006/10/18 10:02:01 flameeyes Exp $
 
-inherit kde-functions eutils
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
+
+inherit kde-functions eutils autotools
 
 DESCRIPTION="Qt immodules input method framework plugin for SCIM"
 HOMEPAGE="http://scim.freedesktop.org/"
 SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
-	http://freedesktop.org/~scim/${PN}/${P}.tar.bz2"
+	http://freedesktop.org/~scim/${PN}/${P}.tar.bz2
+	mirror://gentoo/kde-admindir-3.5.3.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,12 +36,16 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	rm -rf "${S}/admin"
+	ln -sf "${WORKDIR}/admin" "${S}/admin"
+
 	epatch "${FILESDIR}/${P}-qtimm-check.patch"
 
 	# Fix for autoconf 2.60
 	sed -i -e '/case $AUTO\(CONF\|HEADER\)_VERSION in/,+1 s/2\.5/2.[56]/g' \
 		admin/cvs.sh
 
+	export WANT_AUTOCONF WANT_AUTOMAKE
 	emake -j1 -f admin/Makefile.common || die "reautotooling failed"
 }
 
