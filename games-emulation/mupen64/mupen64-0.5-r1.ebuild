@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r1.ebuild,v 1.1 2006/09/17 18:15:57 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.5-r1.ebuild,v 1.2 2006/10/18 22:26:31 nyhm Exp $
 
-inherit eutils games flag-o-matic multilib
+inherit eutils flag-o-matic multilib games
 
 DESCRIPTION="A Nintendo 64 (N64) emulator"
 HOMEPAGE="http://mupen64.emulation64.com/"
