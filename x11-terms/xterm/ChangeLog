@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.174 2006/10/18 01:30:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.175 2006/10/18 03:33:40 jer Exp $
+
+  18 Oct 2006; Jeroen Roovers <jer@gentoo.org> xterm-220.ebuild:
+  Stable for HPPA (bug #151762).
 
   18 Oct 2006; Olivier Crête <tester@gentoo.org> xterm-220.ebuild:
   Stable on amd64, bug #151762
