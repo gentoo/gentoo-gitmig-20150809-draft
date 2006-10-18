@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/java-config-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.23 2006/10/15 18:26:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config-wrapper/ChangeLog,v 1.24 2006/10/18 03:37:56 nichoj Exp $
+
+*java-config-wrapper-0.12-r1 (18 Oct 2006)
+
+  18 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  +files/java-config-wrapper-0.12-generation_1_system_vm.patch,
+  +java-config-wrapper-0.12-r1.ebuild:
+  Direct to stable bump. Adds a patch to improve output of
+  java-check-environment, to help avoid stumbling blocks during an upgrade.
+  Specifically, when checking the generation-1 system-vm, we now see if
+  java-config-1 -L actually lists anything. If it doesn't, then we suggest to
+  emerge =virtual/jdk-1.4*. Otherwise, we list possible choices (from
+  java-config-1 -L), and prompt the user to select one.
 
   15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   java-config-wrapper-0.12.ebuild:

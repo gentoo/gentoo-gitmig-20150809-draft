@@ -1,0 +1,34 @@
+Index: src/shell/java-check-environment
+===================================================================
+--- src/shell/java-check-environment	(revision 2757)
++++ src/shell/java-check-environment	(working copy)
+@@ -182,18 +182,19 @@
+ 	local this_result=0
+ 	local env="/etc/env.d/20java"
+ 	# Make sure a generation-1 VM is set
+-	if [[ ! -f "${env}" ]]; then
++	if [[ ! -f "${env}" || -z $(java-config-1 -f) ]]; then
+ 		qeerror "No Generation-1 System VM is set! (no /etc/env.d/20java)"
+-		qeerror "Run 'java-config-1 -L' to see a list of available VMs"
+-		qeerror "Then run 'java-config-1 -S <VM choice>'"
+-		qeerror "Then run 'env-update && source /etc/profile"
++		local vm_list=$(java-config-1 -L)
++		if [[ ! ${vm_list} =~ "]" ]]; then
++			qeerror "It doesn't look like java-config-1 sees any installed VMs."
++			qeerror "It is most likely because you don't have a 1.4 JDK installed"
++			qeerror "This is required for generation-1 to work properly."
++			qeerror "You will want to emerge =virtual/jdk-1.4*"
++		else
++			java-config-1 -L
++			qeerror "Choose one, and run 'java-config-1 ---set-system-vm <VM choice>'"
++		fi
+ 		this_result=1
+-	elif [[ -z $(java-config-1 -f) ]]; then
+-		qeerror "No Generation-1 System VM is set! (no java-config-1 -f output)"
+-		qeerror "Run 'java-config-1 -L' to see a list of available VMs"
+-		qeerror "Then run 'java-config-1 -S <VM choice>'"
+-		qeerror "Then run 'env-update && source /etc/profile"
+-		this_result=1
+ 	# Make sure the generation-1 VM set is generation-2 compatible, not set long before migration
+ 	else
+ 		# We need to unset GENERATION, because this ends up being in 
