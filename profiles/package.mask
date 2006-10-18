@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6069 2006/10/17 16:33:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6070 2006/10/18 13:29:05 markusle Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Markus Dittrich <markusle@gentoo.org> (18 Oct 2006)
+# paraview is a new package and needs to be tested 
+# a bit more before we unleash it (see bug #118130)
+sci-visualization/paraview
 
 # Olivier Crete <tester@tester.ca> (16 Oct 2006)
 # Has been broken for a long time (see bug #67273)
