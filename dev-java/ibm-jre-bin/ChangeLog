@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.51 2006/10/15 18:31:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.52 2006/10/18 00:30:58 nichoj Exp $
+
+  18 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  -files/ibm-jre-bin-1.4.2.03, -files/ibm-jre-bin-1.4.2.04,
+  -files/ibm-jre-bin-1.4.2.6, -ibm-jre-bin-1.4.2.6-r1.ebuild:
+  Pruned old revisions.
 
   15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ibm-jre-bin-1.4.2.6-r5.ebuild:
