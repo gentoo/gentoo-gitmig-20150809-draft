@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.3 2006/02/02 16:34:12 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.4 2006/10/18 18:16:53 zzam Exp $
+
+*tvbrowser-2.2.1 (18 Oct 2006)
+
+  18 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/tvbrowser-2.2.1-makefiles.patch, +tvbrowser-2.2.1.ebuild:
+  Version bumped. This needs a load of new depends. Thanks to spiralvoice
+  <spiralvoice@hotmail.com> for noticing, Bug #135554. Removed amd64-keyword
+  until dependencies are keyworded.
 
   02 Feb 2006; Patrick McLean <chutzpah@gentoo.org> tvbrowser-2.1.ebuild:
   Add ~amd64 keyword (but #120087) and port to modular X. The dependencies for

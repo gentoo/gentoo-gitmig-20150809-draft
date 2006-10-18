@@ -1,0 +1,64 @@
+diff -uwNr ./tvbrowser-2.2.1-orig/deployment/x11/configure ./tvbrowser-2.2.1/deployment/x11/configure
+--- ./tvbrowser-2.2.1-orig/deployment/x11/configure	2006-07-18 19:52:50.000000000 +0200
++++ ./tvbrowser-2.2.1/deployment/x11/configure	2006-08-07 02:01:29.000000000 +0200
+@@ -19809,7 +19809,7 @@
+ 
+ 
+ 
+-                                        ac_config_files="$ac_config_files Makefile src/Makefile src/eclipse_java/Makefile src/logger/Makefile"
++                                        ac_config_files="$ac_config_files Makefile src/Makefile src/logger/Makefile"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -20368,7 +20368,6 @@
+   # Handling of arguments.
+   "Makefile" ) CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+   "src/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
+-  "src/eclipse_java/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/eclipse_java/Makefile" ;;
+   "src/logger/Makefile" ) CONFIG_FILES="$CONFIG_FILES src/logger/Makefile" ;;
+   "depfiles" ) CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+   "config.h" ) CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
+diff -uwNr ./tvbrowser-2.2.1-orig/deployment/x11/configure.in ./tvbrowser-2.2.1/deployment/x11/configure.in
+--- ./tvbrowser-2.2.1-orig/deployment/x11/configure.in	2006-07-18 19:52:50.000000000 +0200
++++ ./tvbrowser-2.2.1/deployment/x11/configure.in	2006-08-07 02:01:39.000000000 +0200
+@@ -7,4 +7,4 @@
+ AC_PROG_CC
+ AM_PROG_LIBTOOL
+ 
+-AC_OUTPUT(Makefile src/Makefile src/eclipse_java/Makefile src/logger/Makefile)
++AC_OUTPUT(Makefile src/Makefile src/logger/Makefile)
+diff -uwNr ./tvbrowser-2.2.1-orig/deployment/x11/src/jni_wrapper.c ./tvbrowser-2.2.1/deployment/x11/src/jni_wrapper.c
+--- ./tvbrowser-2.2.1-orig/deployment/x11/src/jni_wrapper.c	2006-07-18 19:52:36.000000000 +0200
++++ ./tvbrowser-2.2.1/deployment/x11/src/jni_wrapper.c	2006-08-07 02:01:56.000000000 +0200
+@@ -22,7 +22,6 @@
+ 
+ #include <jni.h>
+ 
+-#include "eclipse_java/com_gc_systray_X11SystrayManager.h"
+ #include "x11_systray_window.h"
+ 
+ #include "logger/logger.h"
+diff -uwNr ./tvbrowser-2.2.1-orig/deployment/x11/src/Makefile.am ./tvbrowser-2.2.1/deployment/x11/src/Makefile.am
+--- ./tvbrowser-2.2.1-orig/deployment/x11/src/Makefile.am	2006-07-18 19:52:36.000000000 +0200
++++ ./tvbrowser-2.2.1/deployment/x11/src/Makefile.am	2006-08-07 02:02:06.000000000 +0200
+@@ -7,7 +7,7 @@
+ noinst_PROGRAMS = libDesktopIndicator.so
+ libDesktopIndicator_so_SOURCES = jni_wrapper.c x11_systray_window.c
+ 
+-SUBDIRS = eclipse_java logger
++SUBDIRS = logger
+ noinst_HEADERS = x11_systray_window.h
+ libDesktopIndicator_so_LDADD = $(top_builddir)/src/logger/liblogger.a \
+ 	-L/usr/X11R6/lib -lX11 -lm -lc -L$(JAVA_HOME)/jre/lib/i386/ -ljawt
+diff -uwNr ./tvbrowser-2.2.1-orig/deployment/x11/src/Makefile.in ./tvbrowser-2.2.1/deployment/x11/src/Makefile.in
+--- ./tvbrowser-2.2.1-orig/deployment/x11/src/Makefile.in	2006-07-18 19:52:36.000000000 +0200
++++ ./tvbrowser-2.2.1/deployment/x11/src/Makefile.in	2006-08-07 02:02:15.000000000 +0200
+@@ -183,7 +183,7 @@
+ # the library search path.
+ libDesktopIndicator_so_LDFLAGS = -shared -Wl
+ libDesktopIndicator_so_SOURCES = jni_wrapper.c x11_systray_window.c
+-SUBDIRS = eclipse_java logger
++SUBDIRS = logger
+ noinst_HEADERS = x11_systray_window.h
+ libDesktopIndicator_so_LDADD = $(top_builddir)/src/logger/liblogger.a \
+ 	-L/usr/X11R6/lib -lX11 -lm -lc -L$(JAVA_HOME)/jre/lib/i386/ -ljawt
