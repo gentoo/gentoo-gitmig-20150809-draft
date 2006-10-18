@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.0.ebuild,v 1.1 2006/10/18 03:28:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.0.ebuild,v 1.2 2006/10/18 23:13:33 pebenito Exp $
 
-inherit subversion autotools
+inherit autotools
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux/selinux_policy_tools.shtml"
