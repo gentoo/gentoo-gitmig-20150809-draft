@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.11.ebuild,v 1.13 2006/10/14 20:34:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.11.ebuild,v 1.14 2006/10/18 05:26:39 tsunam Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -13,7 +13,7 @@ SRC_URI="mirror://alsaproject/plugins/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 arm hppa ia64 ppc ppc64 sh sparc ~x86"
+KEYWORDS="~amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE="jack ffmpeg libsamplerate"
 
 # It could support polypaudio if it was in portage
