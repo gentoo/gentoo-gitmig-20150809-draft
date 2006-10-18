@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/parrot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.16 2006/08/13 20:59:18 yuval Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/ChangeLog,v 1.17 2006/10/18 16:52:12 yuval Exp $
+
+*parrot-0.4.6 (18 Oct 2006)
+
+  18 Oct 2006; Yuval Yaari <yuval@gentoo.org> +parrot-0.4.6.ebuild:
+  Version bump, mainly to satisfy dev-lang/pugs-6.2.13
 
   13 Aug 2006; <yuval@gentoo.org> parrot-0.4.5.ebuild:
   Fixed a stupid problem - amd64 can emerge now :)
