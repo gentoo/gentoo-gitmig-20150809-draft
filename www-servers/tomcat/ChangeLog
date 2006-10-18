@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.72 2006/10/14 00:07:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.73 2006/10/18 03:21:19 wltjr Exp $
+
+*tomcat-5.5.20-r2 (18 Oct 2006)
+
+  18 Oct 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  -files/5.5.20/tomcat.env, files/5.5.20/tomcatbuild-xml.patch,
+  -files/5.5.20/tomcatbuild-xml-docs.patch,
+  -files/5.5.20/tomcatbuild-xml-examples.patch, +tomcat-5.5.20-r2.ebuild:
+  Created new patch re-writing some existing and adding a few new, ant targets
+  for admin/example webapps. Should resolve bug #150715
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org> tomcat-5.0.28-r14.ebuild:
   Added call to java-pkg_pkg_setup, for bug #142708

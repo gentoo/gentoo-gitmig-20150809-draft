@@ -1,5 +1,5 @@
---- apache-tomcat-5.5.20-src/build/build.xml	2006-09-12 11:12:23.000000000 -0400
-+++ build.xml	2006-10-09 21:43:43.000000000 -0400
+--- apache-tomcat-5.5.20-src/build/build.xml	2006-10-17 21:25:39.000000000 -0400
++++ build.xml	2006-10-17 21:59:38.000000000 -0400
 @@ -143,6 +143,7 @@
  
    <!-- ====================== DEPLOY: Copy Static Files =================== -->
@@ -20,7 +20,158 @@
    </target>
  
    <!-- ====================== Build all components =================== -->
-@@ -653,28 +654,8 @@
+@@ -395,15 +396,14 @@
+   <target name="build-webapps-precompile"
+           depends="init" description="Precompile webapps" >
+ 
++    <antcall target="build-webapp-precompile-admin" />
++    <antcall target="build-webapp-precompile-examples" />
++
+     <!-- JSPC -->
+-    <property name="admin.base" location="${tomcat.build}/server/webapps/admin" />
+     <property name="ROOT.base" location="${tomcat.build}/webapps/ROOT" />
+-    <property name="jsp-examples.base" location="${tomcat.build}/webapps/jsp-examples" />
+ 
+-    <mkdir dir="${admin.base}/WEB-INF/src/admin" />
+     <mkdir dir="${ROOT.base}/WEB-INF/src" />
+     <mkdir dir="${ROOT.base}/WEB-INF/classes" />
+-    <mkdir dir="${jsp-examples.base}/WEB-INF/src" />
+ 
+     <path id="jspc.classpath">
+       <pathelement location="${java.home}/../lib/tools.jar"/>
+@@ -437,23 +437,6 @@
+              addWebXmlMappings="true"
+              outputDir="${ROOT.base}/WEB-INF/src" />
+ 
+-    <jasper2
+-             compile="false"
+-             validateXml="false"
+-             uriroot="${jsp-examples.base}"
+-         webXmlFragment="${jsp-examples.base}/WEB-INF/generated_web.xml"
+-             addWebXmlMappings="true"
+-             outputDir="${jsp-examples.base}/WEB-INF/src" />
+-
+-    <jasper2
+-             package="admin"
+-             compile="false"
+-             validateXml="false"
+-             uriroot="${admin.base}"
+-             webXmlFragment="${admin.base}/WEB-INF/generated_web.xml"
+-             addWebXmlMappings="true"
+-             outputDir="${admin.base}/WEB-INF/src/admin" />
+-
+     <javac destdir="${ROOT.base}/WEB-INF/classes"
+            optimize="off"
+            debug="${compile.debug}"
+@@ -475,61 +458,90 @@
+       <include name="**" />
+     </javac>
+ 
+-    <mkdir dir="${jsp-examples.base}/WEB-INF/src/tags"/>
+-    <copy todir="${jsp-examples.base}/WEB-INF/classes">
+-      <fileset dir="${jsp-examples.base}/WEB-INF/src">
+-        <include name="**/*.class" />
+-      </fileset>
+-    </copy>
++  </target>
+ 
+-    <javac destdir="${jsp-examples.base}/WEB-INF/classes"
++  <target name="build-webapp-precompile-admin" unless="admin.precompile.notrequired">
++    <property name="admin.base" location="${tomcat.build}/server/webapps/admin" />
++    <mkdir dir="${admin.base}/WEB-INF/src/admin" />
++    <taskdef classname="org.apache.jasper.JspC" name="jasper2" >
++      <classpath refid="jspc.classpath"/>
++    </taskdef>
++    <jasper2
++             package="admin"
++             compile="false"
++             validateXml="false"
++             uriroot="${admin.base}"
++             webXmlFragment="${admin.base}/WEB-INF/generated_web.xml"
++             addWebXmlMappings="true"
++             outputDir="${admin.base}/WEB-INF/src/admin" />
++    <javac destdir="${admin.base}/WEB-INF/classes"
+            optimize="off"
+            debug="${compile.debug}"
+            deprecation="${compile.deprecation}"
+            source="${compile.source}"
+            failonerror="false"
+-           srcdir="${jsp-examples.base}/WEB-INF/src"
++           srcdir="${admin.base}/WEB-INF/src"
+        excludes="**/*.smap">
+       <classpath>
+         <pathelement location="${java.home}/../lib/tools.jar"/>
+         <fileset dir="${tomcat.build}/server/lib">
+           <include name="*.jar"/>
+         </fileset>
+-        <fileset dir="${jsp-examples.base}/WEB-INF/lib">
++        <fileset dir="${admin.base}/WEB-INF/lib">
+           <include name="*.jar"/>
+         </fileset>
+         <fileset dir="${tomcat.build}/common/lib">
+           <include name="*.jar"/>
+         </fileset>
+         <pathelement location="${tomcat.build}/classes"/>
+-        <pathelement location="${jsp-examples.base}/WEB-INF/classes"/>
+       </classpath>
+-      <include name="**" />
+-      <exclude name="tags/**" />
++      <include name="admin/**" />
+     </javac>
+-
+-    <javac destdir="${admin.base}/WEB-INF/classes"
++  </target>
++  
++  <target name="build-webapp-precompile-examples" unless="examples.precompile.notrequired">
++    <property name="jsp-examples.base" location="${tomcat.build}/webapps/jsp-examples" />
++    <mkdir dir="${jsp-examples.base}/WEB-INF/src" />
++    <taskdef classname="org.apache.jasper.JspC" name="jasper2" >
++      <classpath refid="jspc.classpath"/>
++    </taskdef>
++    <jasper2
++             compile="false"
++             validateXml="false"
++             uriroot="${jsp-examples.base}"
++         webXmlFragment="${jsp-examples.base}/WEB-INF/generated_web.xml"
++             addWebXmlMappings="true"
++             outputDir="${jsp-examples.base}/WEB-INF/src" />
++    <mkdir dir="${jsp-examples.base}/WEB-INF/src/tags"/>
++    <copy todir="${jsp-examples.base}/WEB-INF/classes">
++      <fileset dir="${jsp-examples.base}/WEB-INF/src">
++        <include name="**/*.class" />
++      </fileset>
++    </copy>
++    <javac destdir="${jsp-examples.base}/WEB-INF/classes"
+            optimize="off"
+            debug="${compile.debug}"
+            deprecation="${compile.deprecation}"
+            source="${compile.source}"
+            failonerror="false"
+-           srcdir="${admin.base}/WEB-INF/src"
++           srcdir="${jsp-examples.base}/WEB-INF/src"
+        excludes="**/*.smap">
+       <classpath>
+         <pathelement location="${java.home}/../lib/tools.jar"/>
+         <fileset dir="${tomcat.build}/server/lib">
+           <include name="*.jar"/>
+         </fileset>
+-        <fileset dir="${admin.base}/WEB-INF/lib">
++        <fileset dir="${jsp-examples.base}/WEB-INF/lib">
+           <include name="*.jar"/>
+         </fileset>
+         <fileset dir="${tomcat.build}/common/lib">
+           <include name="*.jar"/>
+         </fileset>
+         <pathelement location="${tomcat.build}/classes"/>
++        <pathelement location="${jsp-examples.base}/WEB-INF/classes"/>
+       </classpath>
+-      <include name="admin/**" />
++      <include name="**" />
++      <exclude name="tags/**" />
+     </javac>
+   </target>
+ 
+@@ -653,28 +665,8 @@
  
      <!-- <antcall target="build-commons-modeler" /> -->
      <!-- <antcall target="build-commons-daemon"  /> -->
@@ -51,7 +202,45 @@
    </target>
  
    <target name="build-tomcat-dbcp">
-@@ -1041,11 +1022,11 @@
+@@ -850,14 +842,7 @@
+         filtering="true" />
+ 
+     <!-- Build JARs for webapps classes -->
+-    <mkdir dir="${tomcat.build}/server/webapps/admin/WEB-INF/lib" />
+-    <jar jarfile="${tomcat.build}/server/webapps/admin/WEB-INF/lib/catalina-admin.jar"
+-         index="true">
+-       <fileset dir="${tomcat.build}/server/webapps/admin/WEB-INF/classes">
+-          <include name="**/*.class" />
+-          <include name="**/*.properties" />
+-       </fileset>
+-    </jar>
++    <antcall target="fix-admin-webapp" />
+     <mkdir dir="${tomcat.build}/server/webapps/manager/WEB-INF/lib" />
+     <jar jarfile="${tomcat.build}/server/webapps/manager/WEB-INF/lib/catalina-manager.jar"
+          index="true">
+@@ -896,9 +881,20 @@
+          todir="${tomcat.build}/conf/Catalina/localhost" />
+     <copy file="${tomcat.build}/server/webapps/host-manager/host-manager.xml"
+          todir="${tomcat.build}/conf/Catalina/localhost" />
++
++  </target>
++
++  <target name="fix-admin-webapp" unless="admin.build.notrequired">
++    <mkdir dir="${tomcat.build}/server/webapps/admin/WEB-INF/lib" />
++    <jar jarfile="${tomcat.build}/server/webapps/admin/WEB-INF/lib/catalina-admin.jar"
++         index="true">
++       <fileset dir="${tomcat.build}/server/webapps/admin/WEB-INF/classes">
++          <include name="**/*.class" />
++          <include name="**/*.properties" />
++       </fileset>
++    </jar>
+     <copy file="${tomcat.build}/server/webapps/admin/admin.xml"
+          todir="${tomcat.build}/conf/Catalina/localhost" />
+-
+   </target>
+ 
+   <!-- ====================== Embed target =================== -->
+@@ -1041,11 +1037,11 @@
    <!-- ====================== Compat target =================== -->
  
    <target name="compat" description="Create compatibility binaries for JREs before 1.5" >
@@ -65,7 +254,7 @@
    </target>
  
    <!-- ====================== DEPLOY: Deploy Components =================== -->
-@@ -1092,8 +1073,9 @@
+@@ -1092,8 +1088,9 @@
      <!-- Copy Unix JSVC from commons-daemon -->
      <copy file="${commons-daemon.jsvc.tar.gz}"
          tofile="${tomcat.dist}/bin/jsvc.tar.gz" />
@@ -76,7 +265,7 @@
      <echo>Target: Webapps precompilation ...</echo>
  
      <antcall target="build-admin"/>
-@@ -1188,10 +1170,11 @@
+@@ -1188,10 +1185,11 @@
     description="Catalina Tests" depends="dist-tester">
  
      <!-- For Java 1.4 -->
@@ -89,7 +278,7 @@
      <parallel>
  
          <java classname="LauncherBootstrap" fork="yes">
-@@ -1871,10 +1854,10 @@
+@@ -1871,10 +1869,10 @@
  
      <!-- commons-digester needs ../LICENSE -->
      <!-- That is ugly XXX needs a review -->
@@ -101,7 +290,7 @@
      <antcall target="downloadgz">
        <param name="sourcefile" value="${commons-beanutils.loc}"/>
        <param name="destfile" value="${commons-beanutils.jar}"/>
-@@ -1916,7 +1899,6 @@
+@@ -1916,7 +1914,6 @@
      </antcall>
  
      <antcall target="downloadgz">
@@ -109,7 +298,7 @@
        <param name="sourcefile" value="${xerces.loc}"/>
        <param name="destfile" value="${xml-apis.jar}"/>
      </antcall>
-@@ -1937,7 +1919,6 @@
+@@ -1937,7 +1934,6 @@
        <param name="destfile" value="${commons-launcher.jar}"/>
      </antcall>
  
@@ -117,7 +306,7 @@
      <antcall target="downloadgz">
        <param name="sourcefile" value="${commons-pool.loc}"/>
        <param name="destfile" value="${commons-pool.jar}"/>
-@@ -1948,7 +1929,6 @@
+@@ -1948,7 +1944,6 @@
        <param name="destfile" value="${commons-dbcp.jar}"/>
        <param name="destdir" value="${base.path}"/>
      </antcall>
@@ -125,7 +314,7 @@
  
      <antcall target="downloadgz">
        <param name="sourcefile" value="${commons-httpclient.loc}"/>
-@@ -1976,7 +1956,7 @@
+@@ -1976,7 +1971,7 @@
        <param name="destfile" value="${tomcat-native.tar.gz}"/>
        <param name="destdir" value="${tomcat-native.home}"/>
      </antcall>
