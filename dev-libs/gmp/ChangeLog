@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.82 2006/09/29 21:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.83 2006/10/18 12:08:15 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> gmp-4.2.1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   29 Sep 2006; Mike Frysinger <vapier@gentoo.org> gmp-4.1.4.ebuild,
   gmp-4.1.4-r1.ebuild, gmp-4.1.4-r2.ebuild, gmp-4.1.4-r3.ebuild,
