@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/wmwifi-0.5.ebuild,v 1.5 2006/01/15 14:40:42 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwifi/wmwifi-0.5.ebuild,v 1.6 2006/10/18 08:19:54 s4t4n Exp $
 
 IUSE=""
 HOMEPAGE="http://wmwifi.digitalssg.net"
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}
 	|| ( (
 		x11-proto/xextproto
 		x11-proto/xproto )
-	virtual/x11 )"
+	virtual/x11 )
+	sys-devel/automake"
 
 src_unpack()
 {
