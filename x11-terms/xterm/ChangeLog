@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.173 2006/10/18 01:13:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.174 2006/10/18 01:30:21 tester Exp $
+
+  18 Oct 2006; Olivier Crête <tester@gentoo.org> xterm-220.ebuild:
+  Stable on amd64, bug #151762
 
   18 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> xterm-220.ebuild:
   Stable on sparc wrt #151762
