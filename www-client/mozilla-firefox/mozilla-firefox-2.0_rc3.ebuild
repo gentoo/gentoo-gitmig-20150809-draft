@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc3.ebuild,v 1.2 2006/10/17 16:55:19 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0_rc3.ebuild,v 1.3 2006/10/18 13:59:36 joslwah Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -81,9 +81,14 @@ pkg_setup(){
 		einfo "to any users on your network or the internet. Doing so puts yourself into"
 		einfo "a legal problem with mozilla foundation"
 	fi
+
+	[[ `uname -m` = "ppc64" ]] && die "Building on a ppc64 host requires linux32."
+
+
 }
 
 src_unpack() {
+
 	unpack ${A%bz2*}bz2
 
 	linguas
