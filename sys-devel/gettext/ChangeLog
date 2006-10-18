@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.129 2006/10/14 21:25:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.130 2006/10/18 11:40:01 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> gettext-0.15-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   14 Oct 2006; Aron Griffis <agriffis@gentoo.org> gettext-0.15.ebuild:
   Mark 0.15 stable on ia64. #148798
