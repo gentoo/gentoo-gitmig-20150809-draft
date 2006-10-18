@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2253 2006/10/18 13:18:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2254 2006/10/18 13:54:16 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -597,6 +597,7 @@ kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it.
 kde-base/kdelibs:noutempter - Don't write login records. Don't use this flag, unless you know exactly what you do.
 kde-base/kdelibs:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
+kde-base/kdelibs:utempter - Records everytime a user logins in. Should be enabled.
 kde-base/kdelibs:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kdenetwork:rdesktop - support for the remote desktop protocol.
