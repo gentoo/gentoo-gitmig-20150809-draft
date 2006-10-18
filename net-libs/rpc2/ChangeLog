@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.24 2006/06/08 11:45:06 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.25 2006/10/18 04:59:08 tsunam Exp $
+
+  18 Oct 2006; Joshua Jackson <tsunam@gentoo.org> rpc2-2.0.ebuild:
+  Stable x86; bug #150382
 
 *rpc2-2.0 (05 Jun 2006)
 
