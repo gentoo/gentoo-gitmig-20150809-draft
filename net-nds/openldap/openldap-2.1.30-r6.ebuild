@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r6.ebuild,v 1.9 2006/05/06 13:18:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.30-r6.ebuild,v 1.10 2006/10/18 23:02:30 jokey Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ pkg_preinst() {
 }
 
 pkg_setup() {
-	if built_with_use dev-lang/perl minimal ; then
+	if has_version "<=dev-lang/perl-5.8.8_rc1" && built_with_use dev-lang/perl minimal ; then
 		die "You must have a complete (USE='-minimal') Perl install to use the perl backend!"
 	fi
 }

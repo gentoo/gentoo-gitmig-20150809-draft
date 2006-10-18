@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r3.ebuild,v 1.12 2006/04/29 22:47:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.28-r3.ebuild,v 1.13 2006/10/18 23:02:30 jokey Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -113,7 +113,7 @@ pkg_setup() {
 		die "Warning direct upgrade unsafe!"
 	fi
 	openldap_upgrade_warning
-	if built_with_use dev-lang/perl minimal ; then
+	if has_version "<=dev-lang/perl-5.8.8_rc1" && built_with_use dev-lang/perl minimal ; then
 		die "You must have a complete (USE='-minimal') Perl install to use the perl backend!"
 	fi
 }
