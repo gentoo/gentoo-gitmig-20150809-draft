@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/kannadic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.15 2006/04/27 09:42:28 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/ChangeLog,v 1.16 2006/10/18 10:26:06 flameeyes Exp $
+
+  18 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kannadic-1.7.0.ebuild,
+  kannadic-2.0.3.ebuild:
+  Make kannadic use kde.eclass, should solve bug #142824.
 
   27 Apr 2006; Alec Warner <antarus@gentoo.org> files/digest-kannadic-1.7.0,
   files/digest-kannadic-2.0.3, Manifest:
