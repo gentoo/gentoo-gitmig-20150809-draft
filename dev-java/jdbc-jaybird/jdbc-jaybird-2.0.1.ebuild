@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.3 2006/10/18 13:59:40 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.4 2006/10/18 20:17:50 wltjr Exp $
 
 inherit java-pkg-2
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples source test"
 
-RDEPEND=">=virtual/jre-1.4
+RDEPEND="|| ( =virtual/jre-1.4* =virtual/jre-1.5* )
 		dev-java/log4j"
-DEPEND=">=virtual/jdk-1.4
+DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
 		app-arch/unzip
 		dev-java/ant-core
 		dev-java/cpptasks
@@ -29,7 +29,11 @@ MY_PN="jaybird"
 
 src_unpack() {
 	unpack "${A}"
-	rm "${S}"/lib/*.jar
+
+	cd "${S}"/lib/
+	rm *.jar
+	use test && java-pkg_jar-from junit junit.jar
+
 	cd "${S}/src/lib/"
 	# the build.xml unpacks this and uses stuff
 	mv mini-j2ee.jar ${T} || die "Failed to move mini-j2ee.jar to ${T}"
@@ -42,16 +46,20 @@ src_unpack() {
 src_compile() {
 	local antflags="jars compile-native"
 	use doc && antflags="${antflags} javadocs"
-	ant ${antflags} || die "Building failed."
+        use test && antflags="${antflags} -Dtests=true"
+	JAVA_PKG_STRICT=true eant ${antflags}
 }
 
 src_install() {
 	cd "${S}"/output/lib/
 	java-pkg_newjar ${MY_PN}-${PV}.jar ${PN}.jar
 
-	for jar in full pool test; do
+	for jar in full pool; do
 		java-pkg_newjar ${MY_PN}-${jar}-${PV}.jar ${MY_PN}-${jar}.jar || die "java-pkg_newjar ${MY_PN}-${jar}.jar failed"
 	done
+	if use test; then
+		java-pkg_newjar ${MY_PN}-test-${PV}.jar ${MY_PN}-${jar}.jar || die "java-pkg_newjar ${MY_PN}-${jar}.jar failed"
+	fi
 
 	cd "${S}"/output/native
 	sodest="/usr/lib/"
