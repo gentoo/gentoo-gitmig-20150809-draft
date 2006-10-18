@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.22 2006/10/17 13:48:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.23 2006/10/18 22:06:27 wolf31o2 Exp $
+
+  18 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-drivers-1.0.8178.ebuild, nvidia-drivers-1.0.8774.ebuild,
+  nvidia-drivers-1.0.9626.ebuild:
+  Use pkg2 for AMD64 since the other ones don't ship the 32-bit libraries. How
+  lame is that? Closing bug #151759.
 
   17 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/1.0.9625/NVIDIA-1.0.9625-i2c.diff,
