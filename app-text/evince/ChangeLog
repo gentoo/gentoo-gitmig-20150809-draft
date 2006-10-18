@@ -1,6 +1,14 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.59 2006/10/06 14:26:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.60 2006/10/18 15:03:46 dang Exp $
+
+  18 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> +evince-0.6.1.ebuild:
+  New upstream version
+
+*evince-0.6.1 (18 Oct 2006)
+
+  18 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> +evince-0.6.1.ebuild:
+  Bump to 0.6.1
 
   06 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> evince-0.4.0-r3.ebuild,
   evince-0.5.0.ebuild, evince-0.5.1.ebuild, evince-0.5.3-r1.ebuild,
