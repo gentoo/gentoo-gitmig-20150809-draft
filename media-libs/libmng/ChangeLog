@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.44 2006/10/09 14:11:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.45 2006/10/18 19:24:23 corsair Exp $
+
+  18 Oct 2006; Markus Rothe <corsair@gentoo.org> libmng-1.0.9-r1.ebuild:
+  Stable on ppc64; bug #151838
 
   09 Oct 2006; Jeroen Roovers <jer@gentoo.org> libmng-1.0.8-r2.ebuild:
   Stable for HPPA (bug #150024).
