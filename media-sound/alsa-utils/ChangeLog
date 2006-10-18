@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.169 2006/10/14 19:21:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.170 2006/10/18 05:22:07 tsunam Exp $
+
+  18 Oct 2006; Joshua Jackson <tsunam@gentoo.org> alsa-utils-1.0.12.ebuild:
+  Stable x86;bug #150540
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   alsa-utils-1.0.12.ebuild:

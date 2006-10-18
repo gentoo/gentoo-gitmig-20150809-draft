@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.12.ebuild,v 1.5 2006/10/14 16:22:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.12.ebuild,v 1.6 2006/10/18 05:25:02 tsunam Exp $
 
 MY_P="${P/_rc/rc}"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://alsaproject/firmware/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ia64 ppc ppc64 sparc ~x86"
+KEYWORDS="~amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
