@@ -1,0 +1,12 @@
+# ChangeLog for sci-visualization/paraview
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.1 2006/10/18 17:45:29 markusle Exp $
+
+*paraview-2.4.4 (18 Oct 2006)
+
+  18 Oct 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/paraview-2.4.4-hdf5-zlib.patch, +files/paraview-2.4.4-png.patch,
+  +metadata.xml, +paraview-2.4.4.ebuild:
+  Initial import (fixes bug #118130). Many thanks to Daniel Tourde
+  <daniel.tourde@caelae.se> for his ebuild and testing.
+
