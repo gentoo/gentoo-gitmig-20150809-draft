@@ -1,0 +1,47 @@
+Index: Linux-PAM-0.99.6.3/libpam/Makefile.am
+===================================================================
+--- Linux-PAM-0.99.6.3.orig/libpam/Makefile.am
++++ Linux-PAM-0.99.6.3/libpam/Makefile.am
+@@ -8,7 +8,7 @@ if HAVE_LIBSELINUX
+   AM_CFLAGS += -D"WITH_SELINUX"
+ endif
+ 
+-AM_LDFLAGS = $(LIBPRELUDE_LIBS) @LIBDL@
++libpam_la_LIBADD = $(LIBPRELUDE_LIBS) @LIBDL@
+ 
+ CLEANFILES = *~
+ 
+Index: Linux-PAM-0.99.6.3/modules/pam_unix/Makefile.am
+===================================================================
+--- Linux-PAM-0.99.6.3.orig/modules/pam_unix/Makefile.am
++++ Linux-PAM-0.99.6.3/modules/pam_unix/Makefile.am
+@@ -17,8 +17,6 @@ secureconfdir = $(SCONFIGDIR)
+ AM_CFLAGS = -I$(top_srcdir)/libpam/include -I$(top_srcdir)/libpamc/include \
+ 	-DCHKPWD_HELPER=\"$(sbindir)/unix_chkpwd\"
+ 
+-AM_LDFLAGS = -L$(top_builddir)/libpam -lpam @LIBCRYPT@ @LIBSELINUX@
+-
+ if HAVE_LIBSELINUX
+   AM_CFLAGS += -D"WITH_SELINUX"
+ endif
+@@ -26,8 +24,8 @@ if HAVE_LIBCRACK
+   AM_CFLAGS += -D"USE_CRACKLIB"
+ endif
+ 
+-pam_unix_la_LDFLAGS = -no-undefined -avoid-version -module \
+-	@LIBCRACK@ @LIBNSL@
++pam_unix_la_LDFLAGS = -no-undefined -avoid-version -module
++pam_unix_la_LIBADD = @LIBCRACK@ @LIBNSL@ -L$(top_builddir)/libpam -lpam @LIBCRYPT@ @LIBSELINUX@
+ if HAVE_VERSIONING
+   pam_unix_la_LDFLAGS += -Wl,--version-script=$(srcdir)/../modules.map
+ endif
+@@ -46,7 +44,9 @@ pam_unix_la_SOURCES = bigcrypt.c pam_uni
+ 
+ bigcrypt_SOURCES = bigcrypt.c bigcrypt_main.c
+ bigcrypt_CFLAGS = $(AM_CFLAGS)
++bigcrypt_LDADD = @LIBCRACK@ @LIBNSL@ -L$(top_builddir)/libpam -lpam @LIBCRYPT@ @LIBSELINUX@
+ 
+ unix_chkpwd_SOURCES = unix_chkpwd.c md5_good.c md5_broken.c bigcrypt.c
+ unix_chkpwd_CFLAGS = $(AM_CFLAGS) @PIE_CFLAGS@
+ unix_chkpwd_LDFLAGS = @PIE_LDFLAGS@
++unix_chkpwd_LDADD = @LIBCRACK@ @LIBNSL@ -L$(top_builddir)/libpam -lpam @LIBCRYPT@ @LIBSELINUX@

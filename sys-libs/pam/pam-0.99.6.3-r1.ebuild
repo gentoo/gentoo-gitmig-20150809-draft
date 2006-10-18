@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.4 2006/10/04 08:44:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.5 2006/10/18 16:19:32 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -39,12 +39,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	mkdir -p doc/txts
 	for readme in modules/pam_*/README; do
 		cp -f "${readme}" doc/txts/README.$(dirname "${readme}" | \
 			sed -e 's|^modules/||')
 	done
 
 	epatch "${FILESDIR}/${MY_P}-berkdb.patch"
+	epatch "${FILESDIR}/${MY_P}-linking.patch"
+
 	AT_M4DIR="m4" eautoreconf
 
 	elibtoolize
