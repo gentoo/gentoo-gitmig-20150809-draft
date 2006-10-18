@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.9 2006/10/13 17:12:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/visualboyadvance/visualboyadvance-1.7.2-r1.ebuild,v 1.10 2006/10/18 23:19:44 nyhm Exp $
 
-inherit eutils games flag-o-matic
+inherit eutils flag-o-matic games
 
 DESCRIPTION="gameboy, gameboy color, and gameboy advance emulator"
 HOMEPAGE="http://vba.ngemu.com/"
@@ -24,7 +24,7 @@ RDEPEND="media-libs/libpng
 DEPEND="${RDEPEND}
 	mmx? ( dev-lang/nasm )"
 
-S="${WORKDIR}/VisualBoyAdvance-${PV}"
+S=${WORKDIR}/VisualBoyAdvance-${PV}
 
 src_unpack() {
 	unpack ${A}
