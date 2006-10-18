@@ -1,16 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.115 2006/10/17 23:09:19 vapier Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.116 2006/10/18 22:47:14 wolf31o2 Exp $
+
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
 # This is the games eclass for standardizing the install of games ...
 # you better have a *good* reason why you're *not* using games.eclass
-# in a games ebuild
+# in a games-* ebuild
 
-inherit eutils
+inherit multilib eutils
 
 EXPORT_FUNCTIONS pkg_preinst pkg_postinst src_compile pkg_setup
+
+[[ -z ${GAME} ]] && GAME=${PN%%-*}
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -21,7 +23,7 @@ export GAMES_DATADIR_BASE=${GAMES_DATADIR_BASE:-/usr/share} # some packages auto
 export GAMES_SYSCONFDIR=${GAMES_SYSCONFDIR:-/etc/games}
 export GAMES_STATEDIR=${GAMES_STATEDIR:-/var/games}
 export GAMES_LOGDIR=${GAMES_LOGDIR:-/var/log/games}
-export GAMES_LIBDIR=${GAMES_LIBDIR:-/usr/games/lib}
+export GAMES_LIBDIR=${GAMES_LIBDIR:-/usr/games/$(get_libdir)}
 export GAMES_BINDIR=${GAMES_BINDIR:-/usr/games/bin}
 export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
@@ -99,8 +101,25 @@ prepgamesdirs() {
 }
 
 gamesenv() {
+	# As much as I hate doing this, we need to be a bit more flexibility with
+	# our library directories.
+	if has_multilib_profile
+	then
+		GAMES_LIBDIRS=
+		for libdir in $(get_all_libdirs)
+		do
+			if [[ -z "${libdir}" ]]
+			then
+				GAMES_LIBDIRS=${GAMES_PREFIX}/${libdir}
+			else
+				GAMES_LIBDIRS="${GAMES_LIBDIR}:${GAMES_PREFIX}/${libdir}"
+			fi
+		done
+	else
+		GAMES_LIBDIRS=${GAMES_LIBDIR}
+	fi
 	cat <<-EOF > "${ROOT}"/etc/env.d/${GAMES_ENVD}
-	LDPATH="${GAMES_LIBDIR}"
+	LDPATH="${GAMES_LIBDIRS}"
 	PATH="${GAMES_BINDIR}"
 	EOF
 }
@@ -204,4 +223,19 @@ games_umod_unpack() {
 		|| die "uncompressing file ${umod}"
 	rm -f "${Ddir}"/System/{ucc-bin,{Manifest,Def{ault,User},User,UT200{3,4}}.ini,{Engine,Core,zlib,ogg,vorbis}.so,{Engine,Core}.int,ucc.log} &>/dev/null \
 		|| die "Removing temporary files"
+}
+
+# Link mods created by games-mods.eclass into the GAMES_PREFIX_OPT directories
+# so they can be found by binary versions of the games.
+games_link_mods() {
+	if [[ -e "${GAMES_DATADIR}"/"${GAME}" ]] ; then
+		cd "${GAMES_DATADIR}"/"${GAME}"
+		for mod in $(find . -type d | cut -b3-)
+		do
+			if [[ ! -e "${Ddir}"/"${mod}" ]] ; then
+				elog "Creating symlink for ${mod}"
+				dosym "${GAMES_DATADIR}"/${GAME}/${mod} "${dir}"/${mod} || die
+			fi
+		done
+	fi
 }
