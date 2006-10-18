@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.11 2006/10/11 10:14:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.12 2006/10/18 20:49:00 zzam Exp $
+
+*vdr-xineliboutput-1.0.0_pre5-r1 (18 Oct 2006)
+
+  18 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-xineliboutput-1.0.0_pre5-r1.ebuild:
+  Now install all compiled xine-plugins, thanks to riku@sdf-eu.org for
+  reporting, Bug #151719.
 
   11 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
   -vdr-xineliboutput-1.0.0_pre3.ebuild,
