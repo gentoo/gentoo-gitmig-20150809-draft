@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.220 2006/09/27 21:56:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.221 2006/10/18 10:40:28 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> python-2.4.3-r4.ebuild:
+  Added ~sparc-fbsd keyword.
 
   27 Sep 2006; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5-r3.ebuild,
   python-2.4.3-r4.ebuild:
