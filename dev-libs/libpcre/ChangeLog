@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.82 2006/10/17 11:29:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.83 2006/10/18 22:26:18 exg Exp $
+
+  18 Oct 2006; Emanuele Giaquinta <exg@gentoo.org>
+  -files/pcre-4.2-link.patch, -files/pcre-4.2-macos.patch,
+  -files/pcre-4.4-uclibc-tuple.patch, -files/pcre-5.0-uclibc-tuple.patch,
+  -files/pcre-6.1-link.patch, -libpcre-4.2-r1.ebuild, -libpcre-4.4.ebuild,
+  -libpcre-4.5.ebuild, -libpcre-5.0.ebuild, -libpcre-6.1.ebuild:
+  Security cleanup, bug #140528.
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org> libpcre-6.6.ebuild:
   Added ~sparc-fbsd keyword.
