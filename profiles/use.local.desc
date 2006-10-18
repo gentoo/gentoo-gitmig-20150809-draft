@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2250 2006/10/17 14:16:23 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2251 2006/10/18 01:00:40 caster Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -285,8 +285,6 @@ dev-java/antlr:script - Install a script to run antlr
 dev-java/aspectwerkz:java5 - Enable Java 5 specific features
 dev-java/avalon-logkit:javamail - Enable support for javamail
 dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
-dev-java/blackdown-jdk:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
-dev-java/blackdown-jre:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon - Add optional support for the avalon-framework
@@ -318,9 +316,7 @@ dev-java/quartz:servlet-2.3 - Enable servlet-2.3 support
 dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/sun-jaxp-bin:dom4j - Enable dom4j
-dev-java/sun-jdk:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
-dev-java/sun-jre-bin:browserplugin - Install netscape-compatible plugin (DEPRECATED, use global useflag 'nsplugin')
 dev-java/swt:cairo - Enable Cairo rendering backend
 dev-java/xstream:java5 - Enable Java 5 specific features
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
