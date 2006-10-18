@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.2.0.ebuild,v 1.1 2006/10/16 05:56:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.6.2.0.ebuild,v 1.2 2006/10/18 09:35:43 lu_zero Exp $
 
 inherit eutils
 
@@ -11,14 +11,14 @@ SRC_URI="mirror://sourceforge/k3d/${P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="expat gnome graphviz imagemagick jpeg nls openexr plib png python svg tiff truetype xml2"
+IUSE="expat gnome graphviz imagemagick jpeg nls openexr plib png python svg tiff truetype xml"
 
 DEPEND="virtual/opengl
 	virtual/glu
 	dev-libs/boost
 	expat? ( dev-libs/expat )
-	xml2? ( dev-libs/libxml2 )
-	!xml2? ( dev-libs/expat )
+	xml? ( dev-libs/libxml2 )
+	!xml? ( dev-libs/expat )
 	truetype? ( >=media-libs/freetype-2 )
 	gnome? ( gnome-base/libgnome )
 	imagemagick? ( media-gfx/imagemagick )
@@ -55,7 +55,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf="--with-ngui"
-	if use expat || ! use xml2 ; then
+	if use expat || ! use xml ; then
 		myconf="--without-libxml2"
 	else
 		myconf="--with-libxml2"

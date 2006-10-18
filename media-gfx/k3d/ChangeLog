@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.29 2006/10/16 05:56:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.30 2006/10/18 09:35:43 lu_zero Exp $
+
+  18 Oct 2006; Luca Barbato <lu_zero@gentoo.org> k3d-0.6.2.0.ebuild:
+  fix useflag
 
 *k3d-0.6.2.0 (16 Oct 2006)
 
