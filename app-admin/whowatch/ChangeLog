@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/whowatch
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.14 2006/10/17 19:23:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/ChangeLog,v 1.15 2006/10/18 04:41:46 tsunam Exp $
+
+  18 Oct 2006; Joshua Jackson <tsunam@gentoo.org> whowatch-1.5.2-r1.ebuild:
+  Stable x86; bug #149751
 
   17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   whowatch-1.5.2-r1.ebuild:
