@@ -1,0 +1,24 @@
+diff -urN abinit-5.2.3.orig/config/m4/init.m4 abinit-5.2.3/config/m4/init.m4
+--- abinit-5.2.3.orig/config/m4/init.m4	2006-10-17 21:09:23.000000000 -0700
++++ abinit-5.2.3/config/m4/init.m4	2006-10-17 21:09:12.000000000 -0700
+@@ -197,9 +197,9 @@
+ 
+   debian)
+    abinit_prefix="/usr"
+-   abinit_bindir="/usr/lib/abinit/${ABINIT_VERSION_BASE}/bin"
++   abinit_bindir="/usr/bin"
+    abinit_datdir="/usr/share/abinit"
+-   abinit_docdir="/usr/share/doc/abinit/${ABINIT_VERSION_BASE}"
++   abinit_docdir="/usr/share/doc/abinit-${ABINIT_VERSION_BASE}"
+    abinit_libdir="/usr/lib/abinit/${ABINIT_VERSION_BASE}/lib"
+    abinit_incdir="/usr/include/abinit/${ABINIT_VERSION_BASE}"
+    abinit_mandir="/usr/share/man"
+@@ -299,7 +299,7 @@
+  fi
+  ABINIT_VERSION_BUILD=`date '+%Y%m%d'`
+ 
+- ABINIT_VERSION_BASE="${ABINIT_VERSION_MAJOR}.${ABINIT_VERSION_MINOR}"
++ ABINIT_VERSION_BASE="${ABINIT_VERSION_MAJOR}.${ABINIT_VERSION_MINOR}.${ABINIT_VERSION_MICRO}"
+ 
+  dnl Make numbers available to source files
+  AC_DEFINE_UNQUOTED(ABINIT_VERSION,"${ABINIT_VERSION}",

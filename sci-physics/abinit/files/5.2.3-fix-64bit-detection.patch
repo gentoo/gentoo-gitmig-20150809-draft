@@ -1,0 +1,12 @@
+diff -urN abinit-5.2.3.orig/config/m4/init.m4 abinit-5.2.3/config/m4/init.m4
+--- abinit-5.2.3.orig/config/m4/init.m4	2006-10-17 21:05:17.000000000 -0700
++++ abinit-5.2.3/config/m4/init.m4	2006-10-17 21:07:10.000000000 -0700
+@@ -39,7 +39,7 @@
+   alpha*|powerpc*)
+    abi_cpu_model="${target_cpu}"
+    abi_cpu_64bits=`echo "${abi_cpu_model}" | grep '64$'`
+-   if test abi_cpu_64bits = ""; then
++   if test "${abi_cpu_64bits}" = ""; then
+     abi_cpu_64bits="no"
+     abi_cpu_bits="32"
+    else
