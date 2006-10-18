@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/comix
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.24 2006/10/15 16:46:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/comix/ChangeLog,v 1.25 2006/10/18 00:15:52 vanquirius Exp $
+
+*comix-3.6.1 (18 Oct 2006)
+
+  18 Oct 2006; Marcelo Goes <vanquirius@gentoo.org> -comix-3.6.ebuild,
+  +comix-3.6.1.ebuild:
+  3.6.1 version bump. Updates Brazilian Portuguese and Dutch translations.
 
 *comix-3.6 (15 Oct 2006)
 
