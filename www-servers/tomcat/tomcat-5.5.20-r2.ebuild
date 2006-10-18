@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r2.ebuild,v 1.1 2006/10/18 03:21:19 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.20-r2.ebuild,v 1.2 2006/10/18 13:34:42 wltjr Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -124,7 +124,7 @@ src_unpack() {
 }
 
 src_compile(){
-	local antflags="-Dbase.path=${T} $(use_doc javadoc examples)"
+	local antflags="-Dbase.path=${T}"
 
 	antflags="${antflags} -Dcommons-collections.jar=$(java-config -p commons-collections)"
 	antflags="${antflags} -Dcommons-daemon.jar=$(java-config -p commons-daemon)"

@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.73 2006/10/18 03:21:19 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.74 2006/10/18 13:34:42 wltjr Exp $
+
+  18 Oct 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  tomcat-5.5.20-r2.ebuild:
+  Fixed problem with ant calling targets that don't exist, like javadoc.
 
 *tomcat-5.5.20-r2 (18 Oct 2006)
 
