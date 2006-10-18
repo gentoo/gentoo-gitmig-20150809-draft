@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cpp
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.10 2005/09/19 22:30:08 halcy0n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.11 2006/10/18 16:29:48 dev-zero Exp $
+
+  18 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Fixed bug #84909. Added USE-flags 'doc' and 'threads' together with correct dependencies.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml:
   Adding to cpp herd
