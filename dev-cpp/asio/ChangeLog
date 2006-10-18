@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/asio
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.4 2006/07/15 11:10:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/asio/ChangeLog,v 1.5 2006/10/18 21:44:45 dev-zero Exp $
+
+  18 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Version bump.
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove rphillips from metadata.xml as he's retired.
