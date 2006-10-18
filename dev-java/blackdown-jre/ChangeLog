@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.85 2006/10/14 15:41:22 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.86 2006/10/18 00:40:12 nichoj Exp $
+
+  18 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  -files/blackdown-jre-1.4.2.03, -blackdown-jre-1.4.2.03.ebuild:
+  Pruned old revisions.
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   blackdown-jre-1.4.2.03-r13.ebuild:
