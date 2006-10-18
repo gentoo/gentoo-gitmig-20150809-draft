@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.5_pre1.ebuild,v 1.1 2006/10/18 00:09:22 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-1.5_pre1.ebuild,v 1.2 2006/10/18 12:59:45 deathwing00 Exp $
 
 inherit kde eutils
 
@@ -24,13 +24,10 @@ done
 
 src_unpack() {
 	kde_src_unpack
+	mv "${WORKDIR}/${MY_P}/po/ee.po" "${WORKDIR}/${MY_P}/po/et.po"
 	cd "${WORKDIR}/${MY_P}/po"
 	for X in ${LANGS} ; do
-		if [ ${X} != "et" ] ; then
-			use linguas_${X} || rm -f ${X}.*
-		else
-			use linguas_${X} || rm -f ee.po
-		fi
+		use linguas_${X} || rm -f "${X}."*
 	done
 	rm -f "${S}/configure"
 }
