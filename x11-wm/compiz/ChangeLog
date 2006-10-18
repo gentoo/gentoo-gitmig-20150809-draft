@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.5 2006/10/03 05:48:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.6 2006/10/18 04:01:44 tester Exp $
+
+  18 Oct 2006; Olivier Crête <tester@gentoo.org> compiz-0.2.0.ebuild:
+  Use gnome2 eclass to install schemas properly, bug #150535
 
 *compiz-0.2.0 (03 Oct 2006)
 

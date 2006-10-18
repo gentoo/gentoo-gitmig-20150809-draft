@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.2.0.ebuild,v 1.1 2006/10/03 05:48:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.2.0.ebuild,v 1.2 2006/10/18 04:01:44 tester Exp $
 
-inherit eutils
+inherit eutils gnome2
 
 DESCRIPTION="compiz 3D composite- and windowmanager"
 HOMEPAGE="http://en.opensuse.org/Compiz"
@@ -42,6 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
 	dobin ${FILESDIR}/compiz-{aiglx,xgl,nvidia}
+
+	gnome2_src_install
 }
