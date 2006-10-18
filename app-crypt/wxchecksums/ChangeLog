@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/wxchecksums
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/wxchecksums/ChangeLog,v 1.11 2006/10/15 13:48:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/wxchecksums/ChangeLog,v 1.12 2006/10/18 04:50:38 tsunam Exp $
+
+  18 Oct 2006; Joshua Jackson <tsunam@gentoo.org> wxchecksums-1.2.2.ebuild:
+  Stable x86;bug #149964
 
   15 Oct 2006; <nixnut@gentoo.org> wxchecksums-1.2.2.ebuild:
   Stable on ppc wrt bug 149964
