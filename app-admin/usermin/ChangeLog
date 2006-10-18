@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.97 2006/10/17 22:39:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.98 2006/10/18 02:36:06 weeve Exp $
+
+  18 Oct 2006; Jason Wever <weeve@gentoo.org> usermin-1.230.ebuild:
+  Stable on SPARC wrt security bug #145829.
 
   17 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> usermin-1.230.ebuild:
   Stable on x86 wrt bug #145829.
