@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/rudiments
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.8 2006/02/20 07:33:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.9 2006/10/18 06:56:34 dev-zero Exp $
+
+  18 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Version bump. Ebuild cleanup: new dependencies, USE-flags debug,ssl and pcre
+  added.
 
   20 Feb 2006; Mark Loeser <halcy0n@gentoo.org> rudiments-0.26.3.ebuild,
   rudiments-0.27.ebuild:
