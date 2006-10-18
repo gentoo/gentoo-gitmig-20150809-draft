@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.1.ebuild,v 1.1 2006/10/16 06:01:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-8.1.ebuild,v 1.2 2006/10/18 21:23:23 nyhm Exp $
 
 inherit eutils python games
 
@@ -40,6 +40,10 @@ src_unpack() {
 		-e '/^install-data-am/s/install-libgcomprisincludeHEADERS//' \
 		src/gcompris/Makefile.in \
 		|| die "sed failed"
+	sed -i \
+		-e 's/-Werror//' \
+		configure \
+		|| die "sed configure failed"
 }
 
 src_compile() {
