@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.75 2006/10/15 13:45:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.76 2006/10/18 14:36:19 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  cscope-15.5.20060927.ebuild:
+  Added ~sparc-fbsd keyword.
 
   15 Oct 2006; Guy Martin <gmsoft@gentoo.org> cscope-15.5.20060927.ebuild:
   Stable on hppa.
