@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.71 2006/10/15 20:15:33 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.72 2006/10/18 12:48:25 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> apr-1.2.7-r3.ebuild:
+  Added ~sparc-fbsd keyword.
 
   15 Oct 2006; Michael Stewart <vericgar@gentoo.org> apr-0.9.12.ebuild,
   apr-1.2.7-r3.ebuild:
