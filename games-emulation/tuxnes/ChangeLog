@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/tuxnes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/ChangeLog,v 1.7 2006/03/23 20:42:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/ChangeLog,v 1.8 2006/10/18 19:37:48 nyhm Exp $
+
+  18 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  files/tuxnes-0.75-configure.in.patch, tuxnes-0.75.ebuild:
+  Use autotools eclass
 
   23 Mar 2006; Michael Sterrett <mr_bones_@gentoo.org> tuxnes-0.75.ebuild:
   more dep fixing (bug #122168); use games eclass
