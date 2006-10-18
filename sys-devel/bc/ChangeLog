@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.26 2006/09/05 15:15:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.27 2006/10/18 11:13:56 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org> bc-1.06.95.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *bc-1.06.95 (05 Sep 2006)
 
