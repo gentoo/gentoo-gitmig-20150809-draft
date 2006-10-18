@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.1.19.ebuild,v 1.1 2006/04/01 02:11:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.1.19.ebuild,v 1.2 2006/10/18 07:28:09 mr_bones_ Exp $
 
 IUSE="truetype"
 inherit python multilib
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 	virtual/tetex
 	>=app-text/t1utils-1.25
 	|| ( >=media-gfx/autotrace-0.30 media-gfx/potrace )
-	truetype? ( || ( media-gfx/fontforge >=media-gfx/pfaedit-030512 ) )"
+	truetype? ( media-gfx/fontforge )"
 
 src_compile() {
 	python_version
