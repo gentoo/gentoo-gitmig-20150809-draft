@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.67 2006/09/06 21:46:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.68 2006/10/18 13:49:59 uberlord Exp $
+
+  18 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  gentoo-syntax-20051221-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *gentoo-syntax-20051221-r1 (06 Sep 2006)
 
