@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.177 2006/10/18 10:07:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.178 2006/10/18 12:49:22 plasmaroo Exp $
+
+  18 Oct 2006; Tim Yamin <plasmaroo@gentoo.org> xterm-220.ebuild:
+  Stable on IA64; bug #151762.
 
   18 Oct 2006; Seemant Kulleen <seemant@gentoo.org> xterm-220.ebuild:
   stabling arm, sh, s390 based on prior conversations with vapier about it
