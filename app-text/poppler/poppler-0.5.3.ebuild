@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.3.ebuild,v 1.13 2006/10/19 15:55:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.5.3.ebuild,v 1.14 2006/10/19 19:42:51 genstef Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -47,8 +47,4 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README AUTHORS ChangeLog NEWS README-XPDF TODO pdf2xml.dtd
-}
-
-pkg_postinst() {
-	ewarn "You need to rebuild everything depending on poppler, use revdep-rebuild"
 }
