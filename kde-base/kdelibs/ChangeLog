@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.371 2006/10/17 10:07:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.372 2006/10/19 05:01:42 flameeyes Exp $
+
+*kdelibs-3.5.5-r3 (19 Oct 2006)
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdelibs-3.5.5-noarts.patch, +files/kdelibs-3.5.5-noarts-2.patch,
+  +kdelibs-3.5.5-r3.ebuild:
+  Add patches to allow KNotify to work with arts disabled (see upstream bug
+  #99246), closes bug #79029. Enable mitshm, and sendfile on Linux, closes bug
+  #148299.
 
   17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdelibs-3.5.5-r2.ebuild:
