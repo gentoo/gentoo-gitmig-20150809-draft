@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.115 2006/10/09 00:13:44 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.116 2006/10/19 14:01:29 gustavoz Exp $
+
+  19 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  shorewall-3.2.4.ebuild:
+  Back to ~sparc and ~hppa wrt #151952
 
   09 Oct 2006; Markus Ullmann <jokey@gentoo.org> shorewall-3.2.4.ebuild:
   Updating info wrt bug #150525
