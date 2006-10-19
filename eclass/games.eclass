@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.116 2006/10/18 22:47:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.117 2006/10/19 22:41:57 vapier Exp $
 
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -23,8 +23,8 @@ export GAMES_DATADIR_BASE=${GAMES_DATADIR_BASE:-/usr/share} # some packages auto
 export GAMES_SYSCONFDIR=${GAMES_SYSCONFDIR:-/etc/games}
 export GAMES_STATEDIR=${GAMES_STATEDIR:-/var/games}
 export GAMES_LOGDIR=${GAMES_LOGDIR:-/var/log/games}
-export GAMES_LIBDIR=${GAMES_LIBDIR:-/usr/games/$(get_libdir)}
-export GAMES_BINDIR=${GAMES_BINDIR:-/usr/games/bin}
+export GAMES_LIBDIR=${GAMES_LIBDIR:-${GAMES_PREFIX}/$(get_libdir)}
+export GAMES_BINDIR=${GAMES_BINDIR:-${GAMES_PREFIX}/bin}
 export GAMES_ENVD="90games"
 # if you want to use a different user/group than games.games,
 # just add these two variables to your environment (aka /etc/profile)
@@ -103,21 +103,19 @@ prepgamesdirs() {
 gamesenv() {
 	# As much as I hate doing this, we need to be a bit more flexibility with
 	# our library directories.
-	if has_multilib_profile
-	then
-		GAMES_LIBDIRS=
-		for libdir in $(get_all_libdirs)
-		do
-			if [[ -z "${libdir}" ]]
-			then
-				GAMES_LIBDIRS=${GAMES_PREFIX}/${libdir}
+	local hasit=0 GAMES_LIBDIRS=""
+	if has_multilib_profile ; then
+		for libdir in $(get_all_libdirs) ; do
+			if [[ ${GAMES_LIBDIR} != ${GAMES_PREFIX}/${libdir} ]] ; then
+				GAMES_LIBDIRS="${GAMES_LIBDIRS}:${GAMES_PREFIX}/${libdir}"
 			else
-				GAMES_LIBDIRS="${GAMES_LIBDIR}:${GAMES_PREFIX}/${libdir}"
+				hasit=1
 			fi
 		done
-	else
-		GAMES_LIBDIRS=${GAMES_LIBDIR}
 	fi
+	[[ ${hasit} == "1" ]] \
+		&& GAMES_LIBDIRS=${GAMES_LIBDIRS:1} \
+		|| GAMES_LIBDIRS="${GAMES_LIBDIR}:${GAMES_LIBDIRS}"
 	cat <<-EOF > "${ROOT}"/etc/env.d/${GAMES_ENVD}
 	LDPATH="${GAMES_LIBDIRS}"
 	PATH="${GAMES_BINDIR}"
@@ -228,11 +226,10 @@ games_umod_unpack() {
 # Link mods created by games-mods.eclass into the GAMES_PREFIX_OPT directories
 # so they can be found by binary versions of the games.
 games_link_mods() {
-	if [[ -e "${GAMES_DATADIR}"/"${GAME}" ]] ; then
-		cd "${GAMES_DATADIR}"/"${GAME}"
-		for mod in $(find . -type d | cut -b3-)
-		do
-			if [[ ! -e "${Ddir}"/"${mod}" ]] ; then
+	if [[ -e ${GAMES_DATADIR}/${GAME} ]] ; then
+		cd "${GAMES_DATADIR}/${GAME}"
+		for mod in $(find . -type d -printf '%P ') ; do
+			if [[ ! -e ${Ddir}/${mod} ]] ; then
 				elog "Creating symlink for ${mod}"
 				dosym "${GAMES_DATADIR}"/${GAME}/${mod} "${dir}"/${mod} || die
 			fi
