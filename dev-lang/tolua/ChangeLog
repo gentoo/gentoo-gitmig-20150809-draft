@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tolua
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/ChangeLog,v 1.7 2006/10/19 09:25:28 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/ChangeLog,v 1.8 2006/10/19 09:55:33 exg Exp $
+
+  19 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> tolua-5.0.ebuild,
+  tolua-5.0-r1.ebuild:
+  Add missing dep on dev-lang/lua.
 
   19 Oct 2006; <twp@gentoo.org> metadata.xml:
   Now maintained by exg.

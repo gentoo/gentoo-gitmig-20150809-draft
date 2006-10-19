@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/tolua-5.0.ebuild,v 1.7 2005/05/18 11:41:32 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/tolua-5.0.ebuild,v 1.8 2006/10/19 09:55:33 exg Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 
-DEPEND=">=sys-apps/sed-4"
+DEPEND=">=dev-lang/lua-5.0"
 
 src_unpack() {
 	unpack ${A}
