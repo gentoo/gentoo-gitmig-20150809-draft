@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.35 2006/08/25 02:31:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.36 2006/10/19 18:56:45 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> scummvm-0.8.1.ebuild,
+  scummvm-0.9.0.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   25 Aug 2006; Jason Wever <weeve@gentoo.org> scummvm-0.9.0.ebuild:
   Stable on SPARC.
