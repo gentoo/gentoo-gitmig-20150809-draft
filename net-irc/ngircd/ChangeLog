@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.20 2006/02/15 16:17:04 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.21 2006/10/19 22:08:18 jokey Exp $
+
+*ngircd-0.10.0 (18 Oct 2006)
+
+  18 Oct 2006; Markus Ullmann <jokey@gentoo.org> -ngircd-0.8.3-r1.ebuild,
+  -ngircd-0.9.2.ebuild, +ngircd-0.10.0.ebuild:
+  Version bump wrt bug #149927 and cleanup
 
   15 Feb 2006; Alec Warner <antarus@gentoo.org> ngircd-0.9.2-r1.ebuild
   Fixed an error in IUSE reported by Ciaran <ciaranm@gentoo.org>
