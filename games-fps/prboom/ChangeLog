@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/prboom
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.22 2006/08/25 22:17:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.23 2006/10/19 03:13:31 mr_bones_ Exp $
+
+*prboom-2.4.6 (19 Oct 2006)
+
+  19 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/2.4.6-nvidia.patch, +files/2.4.6-nvidia-test.c,
+  +prboom-2.4.6.ebuild:
+  version bump
 
 *prboom-2.4.5 (25 Aug 2006)
 
