@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.127 2006/09/12 02:14:43 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.128 2006/10/19 15:42:28 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  libbonoboui-2.14.0.ebuild:
+  Stable on Alpha.
 
   12 Sep 2006; Daniel Gryniewicz <dang@gentoo.org>
   libbonoboui-2.16.0.ebuild:
