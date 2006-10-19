@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.26 2006/10/19 04:42:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.27 2006/10/19 23:11:02 the_paya Exp $
+
+  19 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  +files/freebsd-sources-6.1-ntfs.patch, freebsd-sources-6.1-r4.ebuild:
+  Fixes bug #151626, thanks to Simon Koenig for reporting and testing.
 
   19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Remove 6.2_beta1 ebuild.
