@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.38 2006/09/09 22:06:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.39 2006/10/19 20:15:46 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> tunepimp-0.5.0.ebuild,
+  tunepimp-0.5.1.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
 *tunepimp-0.5.1 (09 Sep 2006)
 

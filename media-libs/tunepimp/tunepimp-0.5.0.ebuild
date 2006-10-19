@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.0.ebuild,v 1.1 2006/08/27 14:42:25 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.0.ebuild,v 1.2 2006/10/19 20:15:46 flameeyes Exp $
 
 inherit eutils distutils perl-app
 
@@ -21,7 +21,7 @@ IUSE="python"
 RDEPEND="sys-libs/zlib
 	dev-libs/expat
 	net-misc/curl
-	media-libs/flac
+	~media-libs/flac-1.1.2
 	media-libs/libmad
 	>=media-libs/musicbrainz-2.1.0
 	media-libs/libofa
