@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.85 2006/10/11 12:39:37 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.86 2006/10/19 22:43:09 ticho Exp $
+
+  19 Oct 2006; Andrej Kacian <ticho@gentoo.org> mpd-0.11.5-r2.ebuild,
+  mpd-0.12.0.ebuild, mpd-0.12.1.ebuild:
+  Change flac dependency atom to ~media-libs/flac-1.1.2 to prevent using
+  currently broken flac-1.1.3 (bug #152007).
 
   11 Oct 2006; <ticho@gentoo.org> mpd-0.11.5-r2.ebuild,
   -mpd-0.12.0_rc1.ebuild, -mpd-0.12.0_rc2.ebuild, -mpd-0.12.0_rc3.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.1.ebuild,v 1.1 2006/10/11 00:24:12 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.12.1.ebuild,v 1.2 2006/10/19 22:43:09 ticho Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ DEPEND="dev-util/gperf
 	alsa? ( media-sound/alsa-utils )
 	ao? ( >=media-libs/libao-0.8.4 )
 	audiofile? ( media-libs/audiofile )
-	flac? ( >=media-libs/flac-1.1.1 )
+	flac? ( ~media-libs/flac-1.1.2 )
 	icecast? ( media-libs/libshout )
 	mp3? ( media-libs/libmad
 	       media-libs/libid3tag )
