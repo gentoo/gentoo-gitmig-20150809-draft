@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.215 2006/10/19 23:13:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.216 2006/10/19 23:25:24 jokey Exp $
+
+  19 Oct 2006; Markus Ullmann <jokey@gentoo.org> -files/2.6.1-fe-text.patch,
+  -files/xc1811fixststint.diff, -files/xc208-fixsocks5.diff,
+  -xchat-1.8.11-r1.ebuild, -xchat-2.4.3.ebuild, -xchat-2.4.5.ebuild,
+  -xchat-2.6.1.ebuild, -xchat-2.6.2.ebuild, -xchat-2.6.4.ebuild:
+  Cleanup
 
 *xchat-2.6.8 (19 Oct 2006)
 
