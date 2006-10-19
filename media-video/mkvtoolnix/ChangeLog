@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.60 2006/10/08 12:30:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.61 2006/10/19 23:44:16 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  mkvtoolnix-1.5.5.ebuild, mkvtoolnix-1.7.0.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   08 Oct 2006; Markus Rothe <corsair@gentoo.org> mkvtoolnix-1.7.0.ebuild:
   Added ~ppc64
