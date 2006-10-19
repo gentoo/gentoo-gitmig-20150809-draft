@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/musicbox-027.ebuild,v 1.2 2006/10/04 16:14:51 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/musicbox/musicbox-027.ebuild,v 1.3 2006/10/19 22:33:07 lack Exp $
 
 ROX_LIB_VER=2.0.0
 inherit rox eutils
@@ -22,7 +22,7 @@ DEPEND="
 		>=dev-python/pyid3lib-0.5.1 )
 	vorbis? ( >=dev-python/pyvorbis-1.1 )
 	flac? (
-		>=media-libs/flac-1.1.2
+		~media-libs/flac-1.1.2
 		>=dev-lang/swig-1.3.25 )"
 
 RDEPEND="
