@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.9 2006/07/16 22:11:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/sdsc-syslog-1.0.2.ebuild,v 1.10 2006/10/19 00:21:05 jokey Exp $
 
 DESCRIPTION="SDSC Secure Syslog provides RFC3080 and RFC3081 logging services"
 HOMEPAGE="http://security.sdsc.edu/software/sdsc-syslog/"
@@ -12,7 +12,7 @@ KEYWORDS="ppc x86"
 # beep		= support BEEP (through RoadRunner)
 # doc		= include documentation
 # static    = link with RoadRunner statically
-IUSE="beep debug doc static"
+IUSE="beep doc static"
 
 RDEPEND="beep? ( >=net-libs/roadrunner-0.9.1 )
 	virtual/libc

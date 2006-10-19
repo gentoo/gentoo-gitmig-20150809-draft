@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sdsc-syslog
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.8 2006/07/16 22:11:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.9 2006/10/19 00:21:05 jokey Exp $
+
+  19 Oct 2006; Markus Ullmann <jokey@gentoo.org> sdsc-syslog-1.0.2.ebuild:
+  minor QA: IUSE wrt bug #150083
 
   16 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   sdsc-syslog-1.0.2.ebuild:
