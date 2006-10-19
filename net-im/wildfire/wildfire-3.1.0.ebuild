@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.1.0.ebuild,v 1.1 2006/10/16 21:00:37 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/wildfire/wildfire-3.1.0.ebuild,v 1.2 2006/10/19 00:29:16 humpback Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -35,7 +35,7 @@ pkg_setup() {
 		ewarn "If this is an upgrade stop right ( CONTROL-C ) and run the command:"
 		ewarn "echo 'CONFIG_PROTECT=\"/opt/wildfire/resources/security/\"' > /etc/env.d/98wildfire "
 		ewarn "For more info see bug #139708"
-		sleep 10
+		sleep 11
 	fi
 }
 
