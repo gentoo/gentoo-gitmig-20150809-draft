@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.71 2006/09/13 22:54:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.72 2006/10/19 15:06:40 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-system-tools-2.14.0.ebuild:
+  Stable on Alpha.
 
   13 Sep 2006; Aron Griffis <agriffis@gentoo.org>
   gnome-system-tools-2.14.0.ebuild:

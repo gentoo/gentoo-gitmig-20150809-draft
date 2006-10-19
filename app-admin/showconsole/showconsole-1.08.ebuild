@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.11 2006/10/15 08:51:55 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/showconsole/showconsole-1.08.ebuild,v 1.12 2006/10/19 15:11:13 kloeri Exp $
 
 # This tarball is extracted from SuSe's sysvinit-2.86-#.src.rpm
 # You can find said src rpm via opensuse.org:
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
