@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.3 2006/10/19 07:01:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.4 2006/10/19 16:18:49 vapier Exp $
 
 WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="1.9"
+WANT_AUTOMAKE="latest"
 inherit eutils autotools distutils perl-module
 
 DESCRIPTION="Red Hat Package Management Utils"
@@ -37,6 +37,11 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/rpm-4.4.6-with-sqlite.patch
 	epatch "${FILESDIR}"/rpm-4.4.7-stupidness.patch
+	epatch "${FILESDIR}"/rpm-4.4.6-autotools.patch
+
+	# rpm uses AM_GNU_GETTEXT() but fails to actually
+	# include any of the required gettext files
+	cp /usr/share/gettext/config.rpath . || die
 
 	# the following are additional libraries that might be packaged with
 	# the rpm sources. grep for "test -d" in configure.ac
