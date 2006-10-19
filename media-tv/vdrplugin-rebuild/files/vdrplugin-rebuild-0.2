@@ -1,0 +1,282 @@
+#!/bin/bash
+#######################################
+# Inspiration from bug #34921
+# Thanks to Paul Varner
+
+# Distributed under the GPL v2
+# Written by John Mylchreest (johnm@gentoo.org)
+
+# This version is based on module-rebuild-0.5
+
+# Changed for vdrplugins by Matthias Schwarzott (zzam@gentoo.org)
+# Copyright Gentoo Linux
+
+# Changed to a new db-format with seperate files for each ebuild.
+
+if [[ `id -u` != 0 ]]; then
+	echo "This application must be ran as root."
+	exit 1
+fi
+
+R_VERSION="0.2"
+R_MODULES="${ROOT}/usr/share/vdr/vdrplugin-rebuild"
+R_PORTAGEQ="`which portageq 2>/dev/null`"
+if [[ -z ${R_PORTAGEQ} ]]; then
+	echo "** FATAL: Unable to find portageq."
+	exit 1
+fi
+R_PORTDIR=`${R_PORTAGEQ} portdir`
+R_VDBPATH=`${R_PORTAGEQ} vdb_path`
+R_OPTION_X=0;
+R_OPTION_C=0;
+
+package_valid() {
+	local package=${1}
+	[[ -z ${package} ]] && return 1
+	[[ -z ${package/*\/*} ]] && return 0 || return 1
+}
+
+package_valid_strict() {
+	local package=${1}
+	package_valid ${package} && [[ -z ${package%%*-[0-9]*} ]] && return 0 || return 1
+}
+
+package_exists() {
+	local package=${1}
+
+	package=${package%-[0-9]*}
+	if $(${R_PORTAGEQ} has_version / ${package}); then
+		return 0
+	else
+		return 1
+	fi
+}
+
+db_module_exists() {
+	local package=${1} dbfile
+
+	dbfile=${R_MODULES}/${package/\//-}
+
+	[[ -e ${dbfile} ]] && grep -q VDRPLUGIN_DB ${dbfile} && return 0
+	return 1
+}
+
+db_module_add() {
+	local package=${1}
+
+	if db_module_exists ${package}; then
+		echo -e "${C_BOLD}** Module ${package} already exists in vdrplugindb.${C_NORM}"
+		return 0
+	else
+		if package_exists ${package}; then
+			echo -e "${C_BOLD}${C_GREEN}** Adding ${package} to vdrplugindb.${C_NORM}"
+			local ebuild=${package%-[0-9]*}
+			local ebuild_v="${package#${ebuild}-}"
+			cat <<-EOT > ${R_MODULES}/${package/\//-}
+				VDRPLUGIN_DB=1
+				CREATOR=vdrplugin-rebuild-POPULATE
+				EBUILD=${ebuild}
+				EBUILD_V=${ebuild_v}
+			EOT
+			return 0
+		else
+			echo -e "${C_RED}** Unable to locate an available ebuild for ${package}.${C_NORM}"
+			echo "** Please manually emerge ${package} first."
+		fi
+	fi
+	return 1
+}
+
+db_module_del() {
+	local package=${1}
+	
+	if db_module_exists ${package}; then
+		echo "** Removing ${package} from vdrplugindb."
+		rm ${R_MODULES}/${package/\//-}
+		return 0
+	else
+		echo "** ${package} not found in vdrplugindb."
+		return 1
+	fi
+}
+
+db_module_list() {
+	local dbfile line auto pkg a=0 b=0 ebuild ebuild_v
+
+	for dbfile in $(find /usr/share/vdr/vdrplugin-rebuild/ -type f); do
+		grep -q VDRPLUGIN_DB=1 ${dbfile} || continue
+		eval $(source ${dbfile}; echo ebuild=${EBUILD}; echo ebuild_v=${EBUILD_V})
+
+		auto=1
+
+		if [[ ${R_OPTION_X} == 1 ]]; then
+			pkg=${ebuild}
+			package_valid ${pkg}
+		else
+			pkg=${ebuild}-${ebuild_v}
+			package_valid_strict ${pkg} && pkg="=${pkg}"
+		fi
+
+		if [[ ${auto} = 1 ]]; then
+			tomerge[${a}]=${pkg}
+			a=$((${a} + 1))
+		else
+			toignore[${b}]=${pkg}
+			b=$((${b} + 1))
+		fi
+	done
+
+	pkg="${tomerge[@]}${toignore[@]}"
+	if [[ -z ${pkg} ]]; then
+		echo -e "${C_BOLD}${C_RED}** There are no known modules. Quitting.${C_NORM}"
+		exit 1
+	fi
+
+	if [[ -n ${tomerge[@]} ]]; then
+		echo -e "${C_BOLD}${C_GREEN}** Packages which I will emerge are:${C_NORM}"
+		for pkg in ${tomerge[@]}; do
+			echo -e "\t${pkg}"
+		done
+	fi
+
+	if [[ -n ${toignore[@]} ]]; then
+		echo -e "${C_BOLD}${C_GREEN}** Packages which I will ignore are:${C_NORM}"
+		for pkg in ${toignore[@]}; do
+			echo -e "\t${pkg}"
+		done
+	fi
+}
+
+db_module_populate() {
+	local i x=0 pkg version list pad
+	
+	echo -e "${C_BOLD}${C_GREEN}** Populating database with installed Packages.${C_NORM}"
+	# Lets find them all
+	# chances are we will get a few dupes in here.
+	for pkg in `grep -i /usr/lib/vdr/plugins/libvdr ${R_VDBPATH}/*/*/CONTENTS`; do
+		pad=""; x=0;
+		
+		if [[ -z ${pkg//${R_VDBPATH}*} ]]; then
+			for((i=0;i<=${#pkg};i++)); do
+				[[ ${pkg:${i}:1} = / ]] && x=$((${x} + 1));
+				[[ ${x} == 4 ]] || [[ ${x} == 5 ]] && pad="${pad}${pkg:${i}:1}";
+			done
+			# Remove any dupes
+			list=${list//${pad:1}}
+			list="${list} ${pad:1}"
+		fi
+	done
+	
+	for pkg in ${list}; do
+		db_module_add ${pkg};
+	done
+}
+
+db_module_merge() {
+	local i pkg
+	
+	echo -e "${C_BOLD}** Preparing to merge modules:${C_NORM}"
+	db_module_list >/dev/null
+
+	if [[ -z ${tomerge[@]} ]]; then
+		echo -e "${C_BOLD}${C_RED}** No packages to merge. Quitting.${C_NORM}"
+		exit 1
+	fi
+
+	echo -e "${C_BOLD}${C_GREEN}** Packages which I will emerge are:"${C_NORM}
+	for pkg in ${tomerge[@]}; do
+		echo -e "\t${pkg}"
+	done
+	
+	for((i=1;i<6;i++)); do
+		echo -en "${C_BOLD}${C_RED}$((6 - ${i})) ${C_NORM}"
+		sleep 1
+	done
+	echo
+
+	emerge --oneshot --nodeps ${tomerge[@]}
+}
+
+phelp() {
+cat << EOF
+vdrplugin-rebuild [options] action [category/package]
+Version: ${R_VERSION}
+
+Where options are:
+	-X       - Emerge based on package names,
+	           not exact versions.
+	-C       - Disable all coloured output.
+
+Where action is one of:
+	add      - Add package to vdrplugindb.
+	del      - Delete a package from vdrplugindb.
+	list     - List packages to auto-rebuild.
+	rebuild  - Rebuild packages.
+	populate - Populate the database with any
+	           packages which currently install
+	           plugins for vdr.
+
+EOF
+
+}
+
+check_validity() {
+	local package=${1} strict=${2:-0} ret=1
+
+	[[ ${strict} = 0 ]] && package_valid ${package} && ret=0
+	[[ ${strict} = 1 ]] && package_valid_strict ${package} && ret=0
+	
+	if [[ ${ret} != 0 ]]; then
+		echo "** Please pass the fully qualified package. For example:"
+		echo "** media-plugins/vdr-femon-0.9.1"
+		exit 1
+	fi
+}
+
+while getopts "XC" options; do
+	case ${options} in
+		X) R_OPTION_X='1';;
+		C) R_OPTION_C='1';;
+		*) phelp; exit 1;;
+	esac
+done
+
+if [[ ${R_OPTION_C} == 0 ]]; then
+	C_BOLD='\e[1m'
+	C_NORM='\e[0m'
+	C_GREEN='\e[32m'
+	C_RED='\e[31m'
+else
+	C_BOLD=''
+	C_NORM=''
+	C_GREEN=''
+	C_RED=''
+fi
+
+x=0
+for i in ${@:${OPTIND}}; do
+	if [[ ${i:0:1} != - ]]; then
+		R_PARAMS[${x}]=${i}
+		x=$((${x} + 1))
+	fi
+done
+unset i x
+
+# If the vdrplugindb doesnt exist, lets populate it automatically.
+if [[ ! -d ${R_MODULES} ]]; then
+	echo -e "${C_BOLD}${C_RED}No vdrplugindb found...${C_NORM}"
+
+	mkdir -p ${R_MODULES}
+
+	echo -e "${C_BOLD}Populating vdrplugindb...${C_NORM}"
+	R_PARAMS[0]=populate
+fi
+
+case ${R_PARAMS[0]} in
+	add)		check_validity ${R_PARAMS[1]} 1; db_module_add ${R_PARAMS[1]};;
+	del)		check_validity ${R_PARAMS[1]}; db_module_del ${R_PARAMS[1]};;
+	list)		db_module_list;;
+	rebuild)	db_module_merge;;
+	populate)	db_module_populate;;
+	*)			phelp; exit 1;;
+esac

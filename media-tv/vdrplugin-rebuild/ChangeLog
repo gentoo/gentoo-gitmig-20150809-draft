@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/vdrplugin-rebuild
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/vdrplugin-rebuild/ChangeLog,v 1.8 2006/08/01 18:45:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/vdrplugin-rebuild/ChangeLog,v 1.9 2006/10/19 10:47:54 zzam Exp $
+
+*vdrplugin-rebuild-0.2 (19 Oct 2006)
+
+  19 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdrplugin-rebuild-0.2, +vdrplugin-rebuild-0.2.ebuild:
+  Added new version with new database format. pkg_postinst populates the new
+  database from looking at /var/db/pkg.
 
   01 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to VDR-Project.
