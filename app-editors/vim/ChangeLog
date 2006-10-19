@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.242 2006/10/18 18:32:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.243 2006/10/19 19:48:29 agriffis Exp $
+
+  19 Oct 2006; Aron Griffis <agriffis@gentoo.org> vim-7.0.91.ebuild:
+  Mark 7.0.91 stable on ia64
 
   18 Oct 2006; Aron Griffis <agriffis@gentoo.org> vim-7.0.91.ebuild:
   Mark 7.0.91 stable on alpha
