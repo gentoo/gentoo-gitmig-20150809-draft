@@ -17,10 +17,10 @@ AUX wildfire-3.0.1-for.patch 1385 RMD160 7d80ea715a68e9e899fd09a92336cfd83be014e
 MD5 ebd3a576709a1bfea3b129029d9fb166 files/wildfire-3.0.1-for.patch 1385
 RMD160 7d80ea715a68e9e899fd09a92336cfd83be014e9 files/wildfire-3.0.1-for.patch 1385
 SHA256 41c374944396ca83bfea30cafcaf0509951c96d9ddb56b973ce326d2abe419a8 files/wildfire-3.0.1-for.patch 1385
-AUX wildfire-3.1.0-for.patch 2433 RMD160 76ad8423c75a54fbfef26dc709247be2b13f0310 SHA1 91a532eefa3b31c18c401df960e2f515bb595212 SHA256 b510ed6d17fe079c7ae50e1317557f985cfdec0111fbaad00f3e4947d5a7543e
-MD5 ff32ee75423e0ca3898ee44a84bcf565 files/wildfire-3.1.0-for.patch 2433
-RMD160 76ad8423c75a54fbfef26dc709247be2b13f0310 files/wildfire-3.1.0-for.patch 2433
-SHA256 b510ed6d17fe079c7ae50e1317557f985cfdec0111fbaad00f3e4947d5a7543e files/wildfire-3.1.0-for.patch 2433
+AUX wildfire-3.1.0-for.patch 2148 RMD160 0462d33b2db9c2ce7e9d483ea2d84dfbac134f4f SHA1 55592bc0c0113a7b15c9e30fb368cf4c70537e2d SHA256 94d4baf07dec89c27ffe17f75dead744616a2279cff8823a9c57a38bab86eac5
+MD5 29de36fc3d1eabe20888e4783cf8e659 files/wildfire-3.1.0-for.patch 2148
+RMD160 0462d33b2db9c2ce7e9d483ea2d84dfbac134f4f files/wildfire-3.1.0-for.patch 2148
+SHA256 94d4baf07dec89c27ffe17f75dead744616a2279cff8823a9c57a38bab86eac5 files/wildfire-3.1.0-for.patch 2148
 DIST wildfire_src_2_6_2.tar.gz 11621818 RMD160 7cd86f5442f3fc4a01e1fdef8003b9e113804631 SHA256 9e8ff13c37934b56aee7f0471af4faa4a09e998cfec5f18a463d6282580fa1d0
 DIST wildfire_src_3_0_0.tar.gz 15861124 RMD160 4a94369be80e463cf3ababb6b3cb9313607e3ee2 SHA256 86ceba2e13979cb44ca9c508ac2cd08b1dc7d46c63b5fdf57ca06281c11cf5b6
 DIST wildfire_src_3_0_1.tar.gz 12048510 RMD160 3975f0d176f4eeeb91f8c24d022fa26efd8a8465 SHA256 efdd713e3d00699b19fff2ddb35278774fb1781d234153ee80380b94aca3e9a8
@@ -64,7 +64,7 @@ SHA256 6ef8f2b0ee3f1bd9b296bcdc739faf87c7be31495c6175f68cb2da14b57b2f8b files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFNivO8zY1VwezZiERAk9SAKCb0vyLvxG6k3cBA6NpcuoqvWBRrACfZV2q
-vy1Pmsh5+hmfHICeeoe6TOA=
-=5iMN
+iD8DBQFFNsQ48zY1VwezZiERAnyRAKCCx2u8s9uxMehM7N6raEV3ZcFdWACfVlTF
+PJXEKnk5lQsZuW1zIBzNKTU=
+=/3y1
 -----END PGP SIGNATURE-----

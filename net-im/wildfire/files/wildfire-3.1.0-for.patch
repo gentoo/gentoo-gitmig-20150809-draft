@@ -1,46 +1,42 @@
-diff -uNr wildfire_src-orig/build/build.xml wildfire_src/build/build.xml
---- wildfire_src-orig/build/build.xml	2006-10-09 11:58:12.000000000 -0700
-+++ wildfire_src/build/build.xml	2006-10-15 09:15:03.000000000 -0700
-@@ -278,7 +278,7 @@
-         <!-- Retrieve each plugin -->
+--- wildfire_src/build/build.xml.ori	2006-10-19 01:10:50.000000000 +0100
++++ wildfire_src/build/build.xml	2006-10-19 01:13:23.000000000 +0100
+@@ -279,7 +279,8 @@
          <!-- Get a list of subdirs of the main plugins dir. This tells us which plugins to make.
          <subdirinfo dir="${plugin.src.dir}" property="dirlist" ifexists="plugin.xml" except="admin"/>
--
+ 
+-        <for list="${dirlist}" param="plugin" trim="true">
 +        <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
-         <for list="${dirlist}" param="plugin" trim="true">
++	<for list="${dirlist}" param="plugin" trim="true">
              <sequential>
                  <xmltask source="${plugin.src.dir}/@{plugin}/plugin.xml" dest="${plugin.src.dir}/@{plugin}/plugins2.xml">
-@@ -688,7 +688,7 @@
-         <delete file="${release.out.dir}/bin/wildfire-dev.sh"/>
+                     <insert path="/plugin/minWildfireVersion[last()]"  position="after">
+@@ -689,7 +690,8 @@
  
          <!-- Pack200 processing on JAR files in lib dir -->
--
+ 
+-        <for param="jar">
 +        <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
-         <for param="jar">
++	<for param="jar">
              <path>
                  <fileset dir="${release.out.dir}/lib" includes="*.jar" excludes="startup.jar,jdic.jar,mail.jar,activation.jar,bouncycastle.jar" />
-@@ -902,6 +902,7 @@
+             </path>
+@@ -902,7 +904,8 @@
      <target name="-plugins-impl" if="dirlist">
  
          <!-- For each plugin in the main src dir, call the 'buildplugin' macro -->
+-        <for list="${dirlist}" param="plugin" trim="true">
 +        <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
-         <for list="${dirlist}" param="plugin" trim="true">
++	<for list="${dirlist}" param="plugin" trim="true">
              <sequential>
                  <buildplugin plugin="@{plugin}" pluginsrc="${plugin.src.dir}"/>
-@@ -920,6 +921,7 @@
-     <target name="-plugin-impl-dev-build" if="dirlist2">
- 
-         <!-- For each list of plugins in the dev dir call the 'buildplugin' macro -->
-+        <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
-         <for list="${dirlist2}" param="plugin" trim="true">
-             <sequential>
-                 <buildplugin plugin="@{plugin}" pluginsrc="${plugin.dev.dir}"/>
-@@ -1105,7 +1107,7 @@
-                  be manually added to this list.
+             </sequential>
+@@ -1106,7 +1109,8 @@
              -->
              <property name="pack200.excludes" value="gnujaxp.jar,mail.jar,activation.jar,bouncycastle.jar"/>
--
+ 
+-            <for param="jar">
 +            <taskdef classname="net.sf.antcontrib.logic.For" name="for"/>
-             <for param="jar">
++	    <for param="jar">
                  <path>
                      <fileset dir="${plugin.dev.dest.dir}/@{plugin}/target/lib" includes="*.jar" excludes="${pack200.excludes}"/>
+                 </path>
