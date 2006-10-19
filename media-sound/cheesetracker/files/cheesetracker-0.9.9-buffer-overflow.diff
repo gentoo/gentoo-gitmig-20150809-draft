@@ -1,0 +1,14 @@
+--- cheesetracker-0.9.9.orig/cheesetracker/loaders/loader_xm.cpp
++++ cheesetracker-0.9.9/cheesetracker/loaders/loader_xm.cpp
+@@ -494,7 +494,10 @@
+ 
+ 			if ((reader.get_file_pos()-p_cpos)<p_hsize) {
+ 
+-				Uint8 junkbuster[500];
++                                // allocate a buffer big enough for the data being read
++                                Uint8 *junkbuster = new Uint8 [p_hsize-(reader.get_file_pos()-p_cpos)];
++                                // return in error if it can't be allocated
++                                if (!junkbuster) return FILE_ERROR;
+ 
+ 				//printf("extra junk XM instrument in header! hsize is %i, extra junk: %i\n",p_hsize,(reader.get_file_pos()-p_cpos));
+ 

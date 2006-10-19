@@ -1,28 +1,45 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ef2952d736039b5a98ac6e5f85b418f9 ChangeLog 2585
-RMD160 c56b10f0af6f4d852363e5800e2ca6d5d5b59880 ChangeLog 2585
-SHA256 7da3ea8c91a005551e8986624ce040a974d9ef54034d4689924031b9188ee412 ChangeLog 2585
-MD5 ee64f7fb02219c8d2193160f04beed30 cheesetracker-0.9.9.ebuild 946
-RMD160 44b1a07f90fe11aec3a52ae7e1f18077a0925336 cheesetracker-0.9.9.ebuild 946
-SHA256 0a0fb2e8f0de2fb28c5fb1b3dd17edf1fd8eee92e7e61c26e1dbea052c8c95c7 cheesetracker-0.9.9.ebuild 946
+AUX cheesetracker-0.9.9-64bit-clean.diff 4677 RMD160 7225cad56b1cef3d0aac54d89f1b46d9bd42159f SHA1 6a41f6ba2ad1f0a6d4ce84f3b904c989a9426b1c SHA256 e02de0bcf144fd0b7d9b6423d5bb0752f91ab24730e2b5b3665195bfd0aebdd7
 MD5 c434058097d9333a5c15d70afd4d861c files/cheesetracker-0.9.9-64bit-clean.diff 4677
 RMD160 7225cad56b1cef3d0aac54d89f1b46d9bd42159f files/cheesetracker-0.9.9-64bit-clean.diff 4677
 SHA256 e02de0bcf144fd0b7d9b6423d5bb0752f91ab24730e2b5b3665195bfd0aebdd7 files/cheesetracker-0.9.9-64bit-clean.diff 4677
+AUX cheesetracker-0.9.9-buffer-overflow.diff 694 RMD160 37e8cbf346deb82b49ba46cf5ce65d12614562da SHA1 37edd1f7caefa4c0d9517f00b2a3c593341a5248 SHA256 96c758768373091bca6e1f0e287e42e7ddbaed951e134258958b8e5c1ee9dadb
+MD5 6b23477bbc2dd4af20f472ac7d7c9f3f files/cheesetracker-0.9.9-buffer-overflow.diff 694
+RMD160 37e8cbf346deb82b49ba46cf5ce65d12614562da files/cheesetracker-0.9.9-buffer-overflow.diff 694
+SHA256 96c758768373091bca6e1f0e287e42e7ddbaed951e134258958b8e5c1ee9dadb files/cheesetracker-0.9.9-buffer-overflow.diff 694
+AUX cheesetracker-0.9.9-gcc4.patch 9385 RMD160 312842506ea3481c6e65dc71e7a99525d1a3e957 SHA1 042a3e6fff57e70a1fa3f0daa6a9bffc7acfc8c6 SHA256 173bffe11cfa1cd4e7622b9841599b0ac03e56d2f0ef2607fd4424c961bbec6f
 MD5 8fd8f0f4fb5ef4915c63c76e19f2fd67 files/cheesetracker-0.9.9-gcc4.patch 9385
 RMD160 312842506ea3481c6e65dc71e7a99525d1a3e957 files/cheesetracker-0.9.9-gcc4.patch 9385
 SHA256 173bffe11cfa1cd4e7622b9841599b0ac03e56d2f0ef2607fd4424c961bbec6f files/cheesetracker-0.9.9-gcc4.patch 9385
-MD5 494c01057ccc3d858baac01aead9b270 files/digest-cheesetracker-0.9.9 71
-RMD160 b81b9d77d6729c0632edc251c9aa72d13b170bf1 files/digest-cheesetracker-0.9.9 71
-SHA256 4ce9d1fe343df19f729d4365d99a4aee8e707d60f4fc5dc32c76d5ca0a364368 files/digest-cheesetracker-0.9.9 71
+DIST cheesetracker-0.9.9.tar.gz 842246 RMD160 2fba963f614a2436088d1bb00a61379bcb3f4c79 SHA1 0f23430a24afde2fd4999af1bffe1f1c638e0180 SHA256 97ddb3a7e6959400c1f042b8661a43540b3d5790db39c18bb9ce413a76d41d55
+EBUILD cheesetracker-0.9.9-r1.ebuild 1012 RMD160 161d5d5e85c3d8e6e568ea1c2765158876704481 SHA1 25a10cbdb5b1fc434dd6977f66e0d1d289f668a5 SHA256 edaca29cb62a5a6c3d9ea08d80bb7082a0824708c39eb76e8e1d7a5f0f8fbfc3
+MD5 3413702bccb448bd080dc248aa53ad4d cheesetracker-0.9.9-r1.ebuild 1012
+RMD160 161d5d5e85c3d8e6e568ea1c2765158876704481 cheesetracker-0.9.9-r1.ebuild 1012
+SHA256 edaca29cb62a5a6c3d9ea08d80bb7082a0824708c39eb76e8e1d7a5f0f8fbfc3 cheesetracker-0.9.9-r1.ebuild 1012
+EBUILD cheesetracker-0.9.9.ebuild 946 RMD160 44b1a07f90fe11aec3a52ae7e1f18077a0925336 SHA1 92253613707135fcad24d336aa60b46bab9660e7 SHA256 0a0fb2e8f0de2fb28c5fb1b3dd17edf1fd8eee92e7e61c26e1dbea052c8c95c7
+MD5 ee64f7fb02219c8d2193160f04beed30 cheesetracker-0.9.9.ebuild 946
+RMD160 44b1a07f90fe11aec3a52ae7e1f18077a0925336 cheesetracker-0.9.9.ebuild 946
+SHA256 0a0fb2e8f0de2fb28c5fb1b3dd17edf1fd8eee92e7e61c26e1dbea052c8c95c7 cheesetracker-0.9.9.ebuild 946
+MISC ChangeLog 2795 RMD160 c4f2bd69625f747bc6617b29ade848eaf0665cd7 SHA1 03749735102d28b65a7ab80bd41420b16a1d5b78 SHA256 5b32e6e1c9fd32e2c67deda38dac25d8148f5edc248c3b49ce50b732ca4b67de
+MD5 39fc3d83ff6b5fc80eea95614bb9fba1 ChangeLog 2795
+RMD160 c4f2bd69625f747bc6617b29ade848eaf0665cd7 ChangeLog 2795
+SHA256 5b32e6e1c9fd32e2c67deda38dac25d8148f5edc248c3b49ce50b732ca4b67de ChangeLog 2795
+MISC metadata.xml 158 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e SHA1 703cea5a2109d41f7c87993c1f01d418a4c85174 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 RMD160 6842e2189a50bd8a98e84802c38180ac1421c00e metadata.xml 158
 SHA256 dfb5b47e6836db39fb187301dfcff1c2605e91d13d21db160806a563d8c75f9b metadata.xml 158
+MD5 68e53f62f12b5037ca9171d5b4ced3d0 files/digest-cheesetracker-0.9.9 259
+RMD160 77d97b3d25938c090c549fd98b1da9b0414c4d07 files/digest-cheesetracker-0.9.9 259
+SHA256 a47f7db06a400637c42336ce74f5a5103fcca7fb8d471a804edb1fcf9385ccca files/digest-cheesetracker-0.9.9 259
+MD5 68e53f62f12b5037ca9171d5b4ced3d0 files/digest-cheesetracker-0.9.9-r1 259
+RMD160 77d97b3d25938c090c549fd98b1da9b0414c4d07 files/digest-cheesetracker-0.9.9-r1 259
+SHA256 a47f7db06a400637c42336ce74f5a5103fcca7fb8d471a804edb1fcf9385ccca files/digest-cheesetracker-0.9.9-r1 259
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFERS5NAiZjviIA2XgRAkjPAKDrYbsVRWjJbnhPAkvjqU8qQSYpGwCgnJZd
-KO8Srcm8Wv/m6wNt6AqAXkY=
-=gy5g
+iD8DBQFFN5aXFdQwWVoAgN4RAv2pAJ4tdz5BWt4LigeUgFJasL1Mb3Tw1wCfVA53
+ku+8nuxCPW4+1rAeJUaJ1e8=
+=5MeE
 -----END PGP SIGNATURE-----
