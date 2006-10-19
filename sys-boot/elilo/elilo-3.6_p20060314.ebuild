@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.6_p20060314.ebuild,v 1.2 2006/09/02 04:36:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/elilo-3.6_p20060314.ebuild,v 1.3 2006/10/19 20:18:38 agriffis Exp $
 
 inherit toolchain-funcs eutils
 
@@ -19,7 +19,7 @@ SRC_URI="${SRC_URI} mirror://debian/pool/main/e/elilo/elilo_3.6-1.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64"
+KEYWORDS="ia64"
 IUSE=""
 
 # gnu-efi contains only static libs, so there's no run-time dep on it

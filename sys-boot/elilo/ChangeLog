@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/elilo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.17 2006/03/16 13:07:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.18 2006/10/19 20:18:38 agriffis Exp $
+
+  19 Oct 2006; Aron Griffis <agriffis@gentoo.org>
+  elilo-3.6_p20060314.ebuild:
+  Mark 3.6_p20060314 stable on ia64
 
 *elilo-3.6_p20060314 (16 Mar 2006)
 
