@@ -1,0 +1,62 @@
+diff -Nru gaim-2.0.0beta4-old/gtk/Makefile.am gaim-2.0.0beta4/gtk/Makefile.am
+--- gaim-2.0.0beta4-old/gtk/Makefile.am	2006-10-18 12:37:48.000000000 -0500
++++ gaim-2.0.0beta4/gtk/Makefile.am	2006-10-19 12:36:13.000000000 -0500
+@@ -161,6 +161,7 @@
+ gaim_LDFLAGS = -export-dynamic
+ gaim_LDADD = \
+ 	@LIBOBJS@ \
++	$(GLIB_LIBS) \
+ 	$(DBUS_LIBS) \
+ 	$(GSTREAMER_LIBS) \
+ 	$(STATIC_LINK_LIBS) \
+diff -Nru gaim-2.0.0beta4-old/gtk/Makefile.in gaim-2.0.0beta4/gtk/Makefile.in
+--- gaim-2.0.0beta4-old/gtk/Makefile.in	2006-10-18 15:00:12.000000000 -0500
++++ gaim-2.0.0beta4/gtk/Makefile.in	2006-10-19 12:37:26.000000000 -0500
+@@ -611,6 +611,7 @@
+ @ENABLE_GTK_TRUE@gaim_LDFLAGS = -export-dynamic
+ @ENABLE_GTK_TRUE@gaim_LDADD = \
+ @ENABLE_GTK_TRUE@	@LIBOBJS@ \
++@ENABLE_GTK_TRUE@	$(GLIB_LIBS) \
+ @ENABLE_GTK_TRUE@	$(DBUS_LIBS) \
+ @ENABLE_GTK_TRUE@	$(GSTREAMER_LIBS) \
+ @ENABLE_GTK_TRUE@	$(STATIC_LINK_LIBS) \
+diff -Nru gaim-2.0.0beta4-old/gtk/gtkmain.c gaim-2.0.0beta4/gtk/gtkmain.c
+--- gaim-2.0.0beta4-old/gtk/gtkmain.c	2006-10-18 12:37:48.000000000 -0500
++++ gaim-2.0.0beta4/gtk/gtkmain.c	2006-10-19 12:42:42.000000000 -0500
+@@ -65,6 +65,7 @@
+ #include "gtkutils.h"
+ #include "gaimstock.h"
+ #include "gtkwhiteboard.h"
++#include <glib/gthread.h>
+ 
+ #ifdef HAVE_SIGNAL_H
+ # include <signal.h>
+@@ -675,6 +676,16 @@
+ 	gtk_rc_add_default_file(search_path);
+ 	g_free(search_path);
+ 
++#if (defined(G_THREADS_ENABLED) && !defined(G_THREADS_IMPL_NONE))
++ /* Since threads can be yanked in all unawares by other libraries,
++  * and some libraries aren't smart enough to initialize the thread
++  * subsystem when they need it, we need to do this here.  We also
++  * threadify dbus when that gets initialized.  Ugh. */
++        if (!g_thread_supported())
++               g_thread_init(NULL);
++	gdk_threads_init();
++#endif /* Glib has threads */
++
+ 	gui_check = gtk_init_check(&argc, &argv);
+ 	if (!gui_check) {
+ 		char *display = gdk_get_display();
+diff -Nru gaim-2.0.0beta4-old/libgaim/dbus-server.c gaim-2.0.0beta4/libgaim/dbus-server.c
+--- gaim-2.0.0beta4-old/libgaim/dbus-server.c	2006-10-18 12:38:16.000000000 -0500
++++ gaim-2.0.0beta4/libgaim/dbus-server.c	2006-10-19 12:34:57.000000000 -0500
+@@ -758,6 +758,8 @@
+ void
+ gaim_dbus_init(void)
+ {
++        if(g_thread_supported())
++                dbus_g_thread_init();
+ 	gaim_dbus_init_ids();
+ 
+ 	g_free(init_error);

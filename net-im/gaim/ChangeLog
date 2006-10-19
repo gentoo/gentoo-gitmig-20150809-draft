@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.415 2006/10/16 23:34:32 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.416 2006/10/19 22:08:35 gothgirl Exp $
+
+*gaim-2.0.0_beta4 (19 Oct 2006)
+
+  19 Oct 2006; gothgirl <gothgirl@gentoo.org>
+  +files/gaim-2.0.0_beta4-dbus.patch, +gaim-2.0.0_beta4.ebuild:
+  Version bump thanks to Jory A. Pratt for the ebuild modifications
 
   16 Oct 2006; gothgirl <gothgirl@gentoo.org>
   +files/gaim-2.0.0_beta3-dbus-1.patch, gaim-2.0.0_beta3-r4.ebuild:
