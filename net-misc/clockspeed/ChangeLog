@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.18 2006/05/25 21:50:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.19 2006/10/19 10:04:22 bangert Exp $
+
+  19 Oct 2006; Thilo Bangert <bangert@gentoo.org> files/ntpclockset,
+  +metadata.xml, clockspeed-0.62-r3.ebuild, clockspeed-0.62-r4.ebuild:
+  - fix ntpclockset to resolve pool.ntp.org (bug #131182)
+  - RESTRICT=test (bug #150236)
+  - add metadata.xml and me as maintainer
+  - fix file collision with libowfat in -r4
 
 *clockspeed-0.62-r4 (25 May 2006)
 

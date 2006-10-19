@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r3.ebuild,v 1.10 2005/05/14 18:24:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r3.ebuild,v 1.11 2006/10/19 10:04:22 bangert Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,6 +12,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~mips x86"
 IUSE="static selinux"
+RESTRICT="test"
 
 DEPEND="sys-apps/groff"
 RDEPEND=" selinux? ( sec-policy/selinux-clockspeed )"
