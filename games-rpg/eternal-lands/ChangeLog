@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.27 2006/10/13 21:16:49 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.28 2006/10/19 14:31:00 uberlord Exp $
+
+  19 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  eternal-lands-1.3.2-r1.ebuild:
+  Fixed cal3d deps to exclude that silly snapshot, #150453.
 
   13 Oct 2006; Roy Marples <uberlord@gentoo.org>
   eternal-lands-1.3.2-r1.ebuild:
