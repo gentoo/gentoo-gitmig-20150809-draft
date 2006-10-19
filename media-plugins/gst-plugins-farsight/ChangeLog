@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-farsight
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.4 2006/10/08 18:04:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-farsight/ChangeLog,v 1.5 2006/10/19 20:32:24 genstef Exp $
+
+*gst-plugins-farsight-0.10.2 (19 Oct 2006)
+
+  19 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -gst-plugins-farsight-0.10.0.1.ebuild,
+  +gst-plugins-farsight-0.10.2.ebuild:
+  version bump
 
   07 Oct 2006; Simon Stelling <blubb@gentoo.org>
   gst-plugins-farsight-0.10.0.1.ebuild:
