@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.78 2006/07/09 00:48:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.79 2006/10/19 15:53:59 uberlord Exp $
+
+  19 Oct 2006; Roy Marples <uberlord@gentoo.org> libgcrypt-1.2.2-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> libgcrypt-1.2.2-r1.ebuild:
   Marked stable on mips.
