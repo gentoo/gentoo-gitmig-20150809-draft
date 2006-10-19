@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.7 2006/09/30 12:04:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.8 2006/10/19 01:15:51 flameeyes Exp $
+
+*tork-0.09 (19 Oct 2006)
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/tork-0.09-gcc41.patch, +tork-0.09.ebuild:
+  Version bump, use external GeoIP version now without patch; add instead a
+  patch for GCC 4.1 compatibility.
 
   30 Sep 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/tork-0.07-geoip.patch, -files/tork-0.07-qt335.patch,
