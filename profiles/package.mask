@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6074 2006/10/19 14:34:51 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6075 2006/10/19 17:02:42 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -349,26 +349,6 @@ media-gfx/alg
 # Long-awaited update for AxKit; requires testing, and may steal your
 # sheep and/or goats.
 >=dev-perl/AxKit-1.7
-
-# Carsten Lohrke <carlo@gentoo.org> (14 Sep 2006)
-# Koffice 1.6 pre-release ebuilds
->=app-office/karbon-1.6_beta1
->=app-office/kchart-1.6_beta1
->=app-office/kexi-1.6_beta1
->=app-office/kformula-1.6_beta1
->=app-office/kivio-1.6_beta1
->=app-office/koffice-data-1.6_beta1
->=app-office/koffice-1.6_beta1
->=app-office/koffice-libs-1.6_beta1
->=app-office/koffice-meta-1.6_beta1
->=app-office/koshell-1.6_beta1
->=app-office/kplato-1.6_beta1
->=app-office/kpresenter-1.6_beta1
->=app-office/krita-1.6_beta1
->=app-office/kspread-1.6_beta1
->=app-office/kugar-1.6_beta1
->=app-office/kword-1.6_beta1
->=app-i18n/koffice-i18n-1.6_rc1
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2006)
 # All versions in portage need <net-misc/upnp-1.1 which was removed
