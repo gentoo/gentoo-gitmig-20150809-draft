@@ -1,55 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-AUX README.transluceny 8910 RMD160 417b3416aef5ddd4b13672a2760d3736cac6f900 SHA1 c1cd348840df7774f62f67aa9e1b1e2ea78219de SHA256 0a4b3f143ee0b6fc32098cbd556b25fdc695a980bc8b4cf032b1dad4a4952ddb
-MD5 9e8e5c601353e0933820fc4f2f543c13 files/README.transluceny 8910
-RMD160 417b3416aef5ddd4b13672a2760d3736cac6f900 files/README.transluceny 8910
-SHA256 0a4b3f143ee0b6fc32098cbd556b25fdc695a980bc8b4cf032b1dad4a4952ddb files/README.transluceny 8910
-AUX centerplacement-2.5.10.diff 2431 RMD160 51d22a3adbdf459b79375e23f71816cfb4b34d47 SHA1 8c0b7448666fa2b7d534522518c3eac708fd1e02 SHA256 a53708857b330af65fb5a156a3792965ad3de080617929cceab74ef2bfc4bf83
-MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
-RMD160 51d22a3adbdf459b79375e23f71816cfb4b34d47 files/centerplacement-2.5.10.diff 2431
-SHA256 a53708857b330af65fb5a156a3792965ad3de080617929cceab74ef2bfc4bf83 files/centerplacement-2.5.10.diff 2431
-AUX disable-debug-statements.diff 419 RMD160 4a66f7eed0c64580ef58b7ef624857c00686575c SHA1 591f5f0b4e349972878ebc2ade2d75e2e7002881 SHA256 aa7e44928b2b14a5402d12129a28452eadbf5e3c8986ba5d61398991fd2ccede
-MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
-RMD160 4a66f7eed0c64580ef58b7ef624857c00686575c files/disable-debug-statements.diff 419
-SHA256 aa7e44928b2b14a5402d12129a28452eadbf5e3c8986ba5d61398991fd2ccede files/disable-debug-statements.diff 419
-AUX fvwm-menu-xlock-xlockmore-compat.diff 550 RMD160 72af6f306e5869581fcd48c84edfe00adea4a5b9 SHA1 0eccf83c3046e3822737c5facb23f547a062bff8 SHA256 5db8bc279f618096b23fed04b70b626c6ff50c104283d5ece505200db1e5a8af
-MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
-RMD160 72af6f306e5869581fcd48c84edfe00adea4a5b9 files/fvwm-menu-xlock-xlockmore-compat.diff 550
-SHA256 5db8bc279f618096b23fed04b70b626c6ff50c104283d5ece505200db1e5a8af files/fvwm-menu-xlock-xlockmore-compat.diff 550
-AUX fvwm-noxbell-grab-fail.diff 360 RMD160 f80b61033650a1145581e980e5ddb4efa498b78b SHA1 a85d12ba5cb2c7e7ee707f565c84053d0d847e09 SHA256 caa52d417736812829ed204522673e1bda42debeb92bca04ca118f358b9d9b07
-MD5 0dc5ddac8cf6767f4a753feef77e6c65 files/fvwm-noxbell-grab-fail.diff 360
-RMD160 f80b61033650a1145581e980e5ddb4efa498b78b files/fvwm-noxbell-grab-fail.diff 360
-SHA256 caa52d417736812829ed204522673e1bda42debeb92bca04ca118f358b9d9b07 files/fvwm-noxbell-grab-fail.diff 360
-AUX fvwm-translucent-menus.diff 12238 RMD160 363a20b92d8136c898ba577de2445b031ee0f814 SHA1 f2a4783e053d91dc5b5a8cd3210a966e1511d321 SHA256 a5b869fd078783c1c4d6ea0da033731bfd029b929b0973c6f7ddf583323fd64c
-MD5 086986f68eeafe8c662ced762dc17fe9 files/fvwm-translucent-menus.diff 12238
-RMD160 363a20b92d8136c898ba577de2445b031ee0f814 files/fvwm-translucent-menus.diff 12238
-SHA256 a5b869fd078783c1c4d6ea0da033731bfd029b929b0973c6f7ddf583323fd64c files/fvwm-translucent-menus.diff 12238
-AUX mini.happy.xpm 425 RMD160 bd6cacbb7838fece51b155b2fd8143c216d27dbd SHA1 80cb4d90e8ea663c20b891d9df0ed120289f66f1 SHA256 aa53d4a7575e40ee7122b62587a880ef9541f9a4c572f7775fbeef34d3d4166e
-MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
-RMD160 bd6cacbb7838fece51b155b2fd8143c216d27dbd files/mini.happy.xpm 425
-SHA256 aa53d4a7575e40ee7122b62587a880ef9541f9a4c572f7775fbeef34d3d4166e files/mini.happy.xpm 425
-DIST fvwm-2.5.16-translucent-menus.diff.gz 5022 RMD160 995c1dcd20bd5e4342cb0d2db442ef14490275e6 SHA256 ac57011a3211267ed7893001e6bc381230c2491526231efc2468991a9774f977
-DIST fvwm-2.5.16.tar.bz2 2018815 RMD160 2c0d9c3c1c452d970dbcd4ba4800944714d4c2d4 SHA256 9fb3f38dfd329b3de1cab0b4e500edd7a2d2fbe11357ef0ca11e052e4ee406d9
-EBUILD fvwm-2.5.16.ebuild 6159 RMD160 658af33bac1e80c4668835c55a8bb7bb5632c57c SHA1 0f4910541a82850fec8fd241de12bb0ad81746d6 SHA256 ad2cbe053ef104a72e908b64aa47b406a7b7b5da515a22ad55a943eeebf77812
 MD5 567f2456b8b933cc6971ff7731935a50 fvwm-2.5.16.ebuild 6159
-RMD160 658af33bac1e80c4668835c55a8bb7bb5632c57c fvwm-2.5.16.ebuild 6159
-SHA256 ad2cbe053ef104a72e908b64aa47b406a7b7b5da515a22ad55a943eeebf77812 fvwm-2.5.16.ebuild 6159
-MISC ChangeLog 19365 RMD160 fb103464dfbd9489c12e63e3441ec15677577260 SHA1 f68edf31323023fe94b8a8c71b72f97aad4a6b2f SHA256 e306a90b63e46cda641ac332f0c5b50ee2f71a585430fcf1d112f6323bf0ee14
-MD5 ef6fee2bee3f839995a9eba998b05156 ChangeLog 19365
-RMD160 fb103464dfbd9489c12e63e3441ec15677577260 ChangeLog 19365
-SHA256 e306a90b63e46cda641ac332f0c5b50ee2f71a585430fcf1d112f6323bf0ee14 ChangeLog 19365
-MISC metadata.xml 527 RMD160 e50357d85b1410cf8a00f1afad349ed77b986fd7 SHA1 30ccd6474c2e572a1758202aa2a8b5f8edaf843d SHA256 e22df6337e402284589214f91894a06fd29786e4412ffd70845fe1cf86bb1375
+MD5 f819efc3c9ca2f4dec68977eb702e84d fvwm-2.5.18.ebuild 6165
+MD5 27d098d6c46d28e76190efca9a952603 ChangeLog 19480
 MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
-RMD160 e50357d85b1410cf8a00f1afad349ed77b986fd7 metadata.xml 527
-SHA256 e22df6337e402284589214f91894a06fd29786e4412ffd70845fe1cf86bb1375 metadata.xml 527
+MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
 MD5 293a9b01b3bbdfc741ac4a6fe86d3a21 files/digest-fvwm-2.5.16 527
-RMD160 aa0272e67f38f6c8db6986ac2b54165e5ce42645 files/digest-fvwm-2.5.16 527
-SHA256 21ea20a2227a9ec115691056fdb382b440de63f2f1552567898dfcc780aadd33 files/digest-fvwm-2.5.16 527
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFD0/OoeSe8B0zEfwRAh3gAJ9TroBcylyIVRNWAWnhjrjIKmiTdwCfRhhz
-eWYrrh9YZC31B8h+0DoChDA=
-=BMng
------END PGP SIGNATURE-----
+MD5 822d2bf81d188a9312b3646d388e978f files/digest-fvwm-2.5.18 146
+MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
+MD5 086986f68eeafe8c662ced762dc17fe9 files/fvwm-translucent-menus.diff 12238
+MD5 0dc5ddac8cf6767f4a753feef77e6c65 files/fvwm-noxbell-grab-fail.diff 360
+MD5 9e8e5c601353e0933820fc4f2f543c13 files/README.transluceny 8910
+MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
+MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
