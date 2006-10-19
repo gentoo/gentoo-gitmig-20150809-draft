@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.37 2006/08/25 14:29:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.38 2006/10/19 16:05:00 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> libwpd-0.8.4.ebuild:
+  Stable on Alpha.
 
   25 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> libwpd-0.8.4.ebuild:
   Stable on sparc
