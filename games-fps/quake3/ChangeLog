@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/quake3
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.42 2006/10/03 15:28:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.43 2006/10/19 22:09:38 wolf31o2 Exp $
+
+*quake3-1.34_rc2 (19 Oct 2006)
+
+  19 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  quake3-1.34_alpha789.ebuild, +quake3-1.34_rc2.ebuild, quake3-9999.ebuild:
+  Version bump and fix filter-flags.  Blame zakk.
 
   03 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/quake3-1.34_alpha778-gfbsd.patch, -quake3-1.34_alpha778.ebuild,
