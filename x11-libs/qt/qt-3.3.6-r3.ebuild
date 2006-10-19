@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r3.ebuild,v 1.3 2006/10/19 05:47:02 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.6-r3.ebuild,v 1.4 2006/10/19 20:46:49 agriffis Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc-macos ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~mips ~ppc ~ppc-macos ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="cups debug doc examples firebird gif ipv6 mysql nas nis odbc opengl postgres sqlite xinerama immqt immqt-bc"
 
 DEPEND="|| ( ( x11-libs/libXcursor
