@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6072 2006/10/19 00:55:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6073 2006/10/19 05:48:00 tsunam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -369,11 +369,6 @@ media-gfx/alg
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Sep 2006)
 # All versions in portage need <net-misc/upnp-1.1 which was removed
 net-misc/linux-igd
-
-# Joshua Jackson <tsunam@gentoo.org> (14 Sep 2006)
-# Masking Rufus as upstream is dead and there are better alternatives in the tree, pending removal in october.
-
->=net-p2p/rufus-0.7.0
 
 # Diego Pettenò <flameeyes@gentoo.org> (14 Sep 2006)
 # Might be vulnerable to some FFmpeg issues.
