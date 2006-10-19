@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.41 2006/10/15 01:01:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.42 2006/10/19 15:50:05 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  ktoblzcheck-1.11.ebuild:
+  Stable on Alpha.
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org> ktoblzcheck-1.11.ebuild:
   Mark 1.11 stable on ia64. #149970
