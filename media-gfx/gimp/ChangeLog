@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.178 2006/09/12 00:41:44 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.179 2006/10/19 11:16:18 hanno Exp $
+
+*gimp-2.3.12 (19 Oct 2006)
+
+  19 Oct 2006; Hanno Boeck <hanno@gentoo.org> +gimp-2.3.12.ebuild:
+  Version bump, no more versioned bins (we no longer have gimp-1.x), cleanup.
 
 *gimp-2.3.11 (12 Sep 2006)
 
