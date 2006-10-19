@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.4 2006/09/17 07:25:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.5 2006/10/19 03:45:52 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -128,7 +128,7 @@ switch_profile() {
 	rm -rf "${dstlib}/ldscripts" "${BINPATH_LINKS}"/ldscripts
 	ln -sf "${LIBPATH}/ldscripts" "${BINPATH_LINKS}/ldscripts"
 	mkdir -p "${dstlib}"
-	find "${dstlib}" -xtype l -exec rm {} \;
+	find -L "${dstlib}" -type l -exec rm {} \;
 	for x in lib* ; do
 		ln -sf "${LIBPATH}/${x}" "${dstlib}/${x}"
 	done
@@ -221,7 +221,7 @@ uninstall_target() {
 	# Delete broken symlinks
 	local destdir="${ROOT}/usr/${HOST}/${TARGET}"
 	rm -f "${destdir}"/lib/ldscripts
-	find "${destdir}"/lib -xtype l -exec rm {} \;
+	find -L "${destdir}"/lib -type l -exec rm {} \;
 	rmdir "${destdir}"/lib "${destdir}" 2>/dev/null
 	rmdir "${destdir}"/{bin,include,lib,usr} "${destdir}" 2>/dev/null
 	rmdir "${ROOT}"/var/db/pkg/cross-${TARGET} 2>/dev/null
@@ -332,7 +332,7 @@ while [[ $# -gt 0 ]] ; do
 			exit 0
 			;;
 		-V|--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.4 2006/09/17 07:25:08 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-1.9,v 1.5 2006/10/19 03:45:52 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			bver=${cvsver%%,v *}
 			cvsver=${cvsver#* }
