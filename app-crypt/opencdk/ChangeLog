@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/opencdk
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.48 2006/10/15 08:56:22 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/ChangeLog,v 1.49 2006/10/19 15:14:57 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> opencdk-0.5.7.ebuild:
+  Stable on Alpha.
 
   15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   opencdk-0.5.7.ebuild:
