@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.180 2006/10/18 18:27:53 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.181 2006/10/19 13:30:24 agriffis Exp $
+
+  19 Oct 2006; Aron Griffis <agriffis@gentoo.org> xterm-220.ebuild:
+  Mark 220 stable on alpha
 
   18 Oct 2006; Joshua Jackson <tsunam@gentoo.org> xterm-220.ebuild:
   Stable x86; at seemant's request
