@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.62 2006/04/11 20:13:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.63 2006/10/19 20:17:19 grobian Exp $
+
+  19 Oct 2006; Fabian Groffen <grobian@gentoo.org>
+  +files/tcsh-6.14-makefile.patch, tcsh-6.14-r3.ebuild:
+  Added patch for bug #151951, thanks dev-zero for pointing out
 
   11 Apr 2006; Fabian Groffen <grobian@gentoo.org> tcsh-6.14-r3.ebuild:
   Adding USE-flag catalogs for NLS catalogs support. Thanks to Kouya Sakamoto

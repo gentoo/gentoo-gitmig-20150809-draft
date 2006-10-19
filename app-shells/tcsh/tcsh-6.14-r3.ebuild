@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.14 2006/09/17 07:36:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14-r3.ebuild,v 1.15 2006/10/19 20:17:19 grobian Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${MY_P}"-debian-dircolors.patch # bug #120792
 	epatch "${FILESDIR}/${P}"-r2.patch
+	epatch "${FILESDIR}/${P}"-makefile.patch # bug #151951
 
 	if use catalogs ;
 	then
