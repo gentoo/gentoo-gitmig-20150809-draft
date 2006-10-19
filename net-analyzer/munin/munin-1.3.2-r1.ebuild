@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.2-r1.ebuild,v 1.1 2006/09/08 01:08:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.2-r1.ebuild,v 1.2 2006/10/19 09:48:27 robbat2 Exp $
 
 inherit eutils
 
@@ -73,7 +73,7 @@ src_install() {
 
 	emake DESTDIR="${D}" install-main install-man install-node install-node-plugins || die "install failed"
 	fowners munin:munin ${dirs}
-	
+
 	if use doc; then
 		emake DESTDIR="${D}" install-doc install-man || die "install docs failed"
 	fi
@@ -97,14 +97,15 @@ pkg_config() {
 		die "Crontab already install for user munin. Not overwriting."
 	fi
 	einfo "Press enter to install the default crontab for the munin master"
-	einfo "installation from /var/lib/munin/crontab" 
+	einfo "installation from /var/lib/munin/crontab"
 	einfo "If you have a large site, you may wish to customize it."
 	read
 	crontab -u munin /var/lib/munin/crontab
 }
 
 pkg_postinst() {
-	einfo "Please start munin-node via /etc/init.d/munin-node."
+	einfo "Please follow the munin documentation to set up the plugins you"
+	einfo "need, afterwards start munin-node via /etc/init.d/munin-node."
 	einfo "To have munin's cronjob automatically configured for you if this is"
 	einfo "your munin master installation, please:"
 	einfo "emerge --config net-analyzer/munin"
