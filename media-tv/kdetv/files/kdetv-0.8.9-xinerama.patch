@@ -1,0 +1,39 @@
+diff -Naur kdetv-0.8.9-orig/kdetv/configure.in.in kdetv-0.8.9/kdetv/configure.in.in
+--- kdetv-0.8.9-orig/kdetv/configure.in.in	2006-07-09 20:30:45.000000000 +0200
++++ kdetv-0.8.9/kdetv/configure.in.in	2006-10-19 22:02:08.000000000 +0200
+@@ -15,13 +15,6 @@
+         -L/usr/X11R6/lib $X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS)
+ 
+ dnl ---------------------------------------------------------------------
+-dnl XVideo Motion Compensation extension
+-    KDE_CHECK_LIB(XvMC, XvMCQueryExtension, 
+-        KDETV_LIBS="-lXvMC $KDETV_LIBS",, 
+-        -L/usr/X11R6/lib $X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS)
+-
+-
+-dnl ---------------------------------------------------------------------
+ dnl Other X extensions
+ 
+     KDE_CHECK_LIB(Xxf86dga, XF86DGAQueryExtension, 
+@@ -46,10 +39,6 @@
+         KDETV_LIBS="-lXdpms $KDETV_LIBS",,
+         -L/usr/X11R6/lib $X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS)
+ 
+-    KDE_CHECK_LIB(Xinerama, XineramaQueryExtension,
+-        KDETV_LIBS="-lXinerama $KDETV_LIBS",,
+-        -L/usr/X11R6/lib $X_LIBS $X_PRE_LIBS -lXext -lX11 $X_EXTRA_LIBS)
+-
+ AC_SUBST(KDETV_LIBS)
+ 
+ if test $ac_cv_lib_Xxf86dga_XF86DGAQueryExtension = yes; then
+@@ -60,10 +49,6 @@
+   AC_DEFINE(HAVE_LIBXV, 1, [If we have the XVideo extension])
+ fi
+ 
+-if test $ac_cv_lib_XvMC_XvMCQueryExtension = yes; then
+-  AC_DEFINE(HAVE_LIBXVMC, 1, [If we have the XVideo Motion Compensation extension])
+-fi
+-
+ dnl ---------------------------------------------------------------------
+ dnl Check for Linux
+ AC_CHECK_HEADER(linux/vt.h,,DO_NOT_COMPILE="kdetv $DO_NOT_COMPILE")

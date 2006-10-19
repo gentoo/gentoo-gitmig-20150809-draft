@@ -1,0 +1,12 @@
+diff -Naur kdetv-0.8.9-orig/kdetv/kvideoio/kdetvv4lsetup/Makefile.am kdetv-0.8.9/kdetv/kvideoio/kdetvv4lsetup/Makefile.am
+--- kdetv-0.8.9-orig/kdetv/kvideoio/kdetvv4lsetup/Makefile.am	2006-10-19 22:04:43.000000000 +0200
++++ kdetv-0.8.9/kdetv/kvideoio/kdetvv4lsetup/Makefile.am	2006-10-19 22:05:40.000000000 +0200
+@@ -8,7 +8,7 @@
+ kdetvv4lsetup_CFLAGS = $(KDE_USE_FPIE)
+ 
+ # the library search path
+-kdetvv4lsetup_LDFLAGS = $(KDE_USE_PIE) $(all_libraries)
++kdetvv4lsetup_LDFLAGS = $(KDE_USE_PIE) $(all_libraries) $(BINDNOW_FLAGS)
+ 
+ # the libraries to link against. Be aware of the order. First the libraries,
+ # that depend on the following ones.
