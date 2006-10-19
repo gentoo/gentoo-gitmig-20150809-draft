@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r5.ebuild,v 1.7 2006/10/01 17:58:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.5-r5.ebuild,v 1.8 2006/10/19 17:25:26 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -50,7 +50,7 @@ RDEPEND="
 		mp3? ( media-libs/libmad )
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
 		dts? ( >=media-libs/libdts-0.0.2-r3 )
-		flac? ( media-libs/flac )
+		flac? ( ~media-libs/flac-1.1.2 )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
 		vorbis? ( media-libs/libvorbis )
 		theora? ( media-libs/libtheora )

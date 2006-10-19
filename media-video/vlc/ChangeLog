@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.187 2006/10/01 17:58:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.188 2006/10/19 17:25:26 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a-r1.ebuild,
+  vlc-0.8.5-r3.ebuild, vlc-0.8.5-r5.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   01 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.4a-r1.ebuild,
   vlc-0.8.5-r3.ebuild, vlc-0.8.5-r5.ebuild:
