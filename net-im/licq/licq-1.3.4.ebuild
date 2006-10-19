@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.4.ebuild,v 1.1 2006/10/18 14:42:23 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.4.ebuild,v 1.2 2006/10/19 09:37:22 voxus Exp $
 
 inherit eutils kde-functions multilib
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-http://dev.gentoo.org/~voxus/licq/licq-branch-update-20060203.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
