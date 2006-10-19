@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>no-herd</herd>
-<longdescription>Jive Messenger is a Java implementation of a complete Jabber
-server.  It includes a web based administration interface, and conference
-support.</longdescription>
-</pkgmetadata>
