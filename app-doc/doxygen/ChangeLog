@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.116 2006/09/15 02:36:00 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.117 2006/10/19 15:17:41 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> doxygen-1.4.7.ebuild:
+  Stable on Alpha.
 
   15 Sep 2006; Steve Arnold <nerdboy@gentoo.org> doxygen-1.4.7.ebuild:
   added fix for bug 147298 (using flag-o-matic), since -O3 still produces
