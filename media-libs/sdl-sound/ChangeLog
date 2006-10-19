@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-sound
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.21 2006/03/18 16:11:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/ChangeLog,v 1.22 2006/10/19 17:38:05 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> sdl-sound-1.0.1.ebuild,
+  sdl-sound-1.0.1-r1.ebuild, sdl-sound-1.0.1-r2.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   18 Mar 2006; Markus Rothe <corsair@gentoo.org> sdl-sound-1.0.1-r1.ebuild,
   sdl-sound-1.0.1-r2.ebuild:
