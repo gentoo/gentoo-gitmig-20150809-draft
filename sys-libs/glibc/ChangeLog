@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.483 2006/09/30 19:08:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.484 2006/10/19 20:29:13 corsair Exp $
+
+  19 Oct 2006; Markus Rothe <corsair@gentoo.org> glibc-2.3.6-r5.ebuild:
+  Stable on ppc64 (for binutils-2.17)
 
 *glibc-2.3.6-r5 (30 Sep 2006)
 
