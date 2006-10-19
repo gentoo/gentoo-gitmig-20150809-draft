@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.88 2006/09/13 22:36:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.89 2006/10/19 14:48:11 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gnopernicus-1.0.4.ebuild:
+  Stable on Alpha.
 
   13 Sep 2006; Aron Griffis <agriffis@gentoo.org> gnopernicus-1.0.4.ebuild:
   Mark 1.0.4 stable on ia64. #139612
