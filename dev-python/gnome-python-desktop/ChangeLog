@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-desktop
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.20 2006/10/14 00:27:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop/ChangeLog,v 1.21 2006/10/19 15:39:39 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-python-desktop-2.14.0.ebuild:
+  Stable on Alpha.
 
   14 Oct 2006; Mart Raudsepp <leio@gentoo.org>
   gnome-python-desktop-2.16.0.ebuild:
