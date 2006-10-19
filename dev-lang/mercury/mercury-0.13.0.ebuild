@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0.ebuild,v 1.6 2006/10/14 22:25:19 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0.ebuild,v 1.7 2006/10/19 07:20:11 keri Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ MY_P=${PN}-compiler-${PV}
 
 DESCRIPTION="Mercury is a modern general-purpose logic/functional programming language"
 HOMEPAGE="http://www.cs.mu.oz.au/research/mercury/index.html"
-SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/${MY_P}.tar.gz
-	ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/mercury-tests-${PV}.tar.gz"
+SRC_URI="ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/mercury-compiler-0.13.0.tar.gz
+	ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/mercury-tests-0.13.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
