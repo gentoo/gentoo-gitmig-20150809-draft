@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2.ebuild,v 1.2 2006/06/24 10:10:11 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/cuecue-0.2.2.ebuild,v 1.3 2006/10/19 19:15:22 flameeyes Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mp3 flac vorbis"
 
 DEPEND="mp3? ( media-libs/libmad )
-	flac? ( media-libs/flac )
+	flac? ( ~media-libs/flac-1.1.2 )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )"
 
 src_unpack() {
