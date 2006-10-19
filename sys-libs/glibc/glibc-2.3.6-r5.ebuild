@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r5.ebuild,v 1.6 2006/10/19 20:29:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r5.ebuild,v 1.7 2006/10/19 22:52:55 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -541,7 +541,7 @@ toolchain-glibc_pkg_postinst() {
 		fi
 		local x jobs
 		for x in ${MAKEOPTS} ; do [[ ${x} == -j* ]] && jobs=${x#-j} ; done
-		locale-gen -j ${jobs} --config "${locale_list}"
+		locale-gen -j ${jobs:-1} --config "${locale_list}"
 	fi
 
 	echo
