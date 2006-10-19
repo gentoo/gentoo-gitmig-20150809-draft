@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.361 2006/10/19 05:47:02 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.362 2006/10/19 16:08:50 flameeyes Exp $
+
+*qt-4.2.0-r1 (19 Oct 2006)
+*qt-4.1.4-r1 (19 Oct 2006)
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/qt-4.1.4-CVE-2006-4811.patch, +files/qt-4.2.0-CVE-2006-4811.patch,
+  +qt-4.1.4-r1.ebuild, +qt-4.2.0-r1.ebuild:
+  Add patches for Qt 4.x for the vulnerability reported lately.
 
   19 Oct 2006; Joshua Jackson <tsunam@gentoo.org> qt-3.3.6-r3.ebuild:
   Stable x86; Diego told me to do it, but I choose security as the reason
