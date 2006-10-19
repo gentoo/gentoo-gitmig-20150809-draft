@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.2 2006/09/02 10:57:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.17.ebuild,v 1.3 2006/10/19 17:29:44 flameeyes Exp $
 
 inherit eutils libtool
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE="sqlite flac alsa"
 RESTRICT="test"
 
-RDEPEND="flac? ( media-libs/flac )
+RDEPEND="flac? ( ~media-libs/flac-1.1.2 )
 	alsa? ( media-libs/alsa-lib )
 	sqlite? ( >=dev-db/sqlite-3.2 )"
 
