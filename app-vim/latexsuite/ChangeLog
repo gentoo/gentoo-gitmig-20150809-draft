@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/latexsuite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.23 2006/09/23 10:51:33 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.24 2006/10/19 16:08:55 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  latexsuite-1.5.20060124.ebuild:
+  Stable on Alpha.
 
   23 Sep 2006; Markus Rothe <corsair@gentoo.org> latexsuite-1.5_rc1.ebuild,
   latexsuite-1.5.ebuild, latexsuite-1.5.20060124.ebuild,
