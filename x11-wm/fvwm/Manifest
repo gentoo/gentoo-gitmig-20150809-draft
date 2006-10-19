@@ -5,9 +5,4 @@ MD5 4833e4d0685ef48988c0c5c4f9c6b377 metadata.xml 527
 MD5 d91fb7d2af57653fc93a70e6e1c0a0ea files/fvwm-menu-xlock-xlockmore-compat.diff 550
 MD5 293a9b01b3bbdfc741ac4a6fe86d3a21 files/digest-fvwm-2.5.16 527
 MD5 822d2bf81d188a9312b3646d388e978f files/digest-fvwm-2.5.18 146
-MD5 a580b9f394262307f85eae492bbd68d9 files/centerplacement-2.5.10.diff 2431
-MD5 086986f68eeafe8c662ced762dc17fe9 files/fvwm-translucent-menus.diff 12238
-MD5 0dc5ddac8cf6767f4a753feef77e6c65 files/fvwm-noxbell-grab-fail.diff 360
 MD5 9e8e5c601353e0933820fc4f2f543c13 files/README.transluceny 8910
-MD5 e9263b93f666293d0a1220ea3457efcd files/mini.happy.xpm 425
-MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
