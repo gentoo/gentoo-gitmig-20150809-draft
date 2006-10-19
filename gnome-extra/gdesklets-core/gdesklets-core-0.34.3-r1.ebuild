@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3-r1.ebuild,v 1.6 2006/10/16 01:41:39 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3-r1.ebuild,v 1.7 2006/10/19 19:25:10 agriffis Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="doc"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~sparc x86"
 
 RDEPEND=">=dev-lang/python-2.3
 	>=dev-libs/glib-2

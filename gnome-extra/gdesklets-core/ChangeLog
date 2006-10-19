@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.67 2006/10/16 01:41:39 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.68 2006/10/19 19:25:10 agriffis Exp $
+
+  19 Oct 2006; Aron Griffis <agriffis@gentoo.org>
+  gdesklets-core-0.34.3-r1.ebuild:
+  Stable 0.34.3-r1 on ia64 for the sake of x11-plugins/desklet-hypertail since
+  the version we had stable was whacked
 
   16 Oct 2006; Joe Sapp <nixphoeni@gentoo.org>
   -gdesklets-core-0.33.1.ebuild, gdesklets-core-0.34.3-r1.ebuild,
