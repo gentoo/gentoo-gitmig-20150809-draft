@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-jaybird
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.5 2006/10/18 20:20:39 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.6 2006/10/19 20:11:13 wltjr Exp $
+
+  19 Oct 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  jdbc-jaybird-2.0.1.ebuild, jdbc-jaybird-2.1.0.ebuild:
+  Got a little STRICT happy, oops
 
   18 Oct 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   jdbc-jaybird-2.0.1.ebuild:
