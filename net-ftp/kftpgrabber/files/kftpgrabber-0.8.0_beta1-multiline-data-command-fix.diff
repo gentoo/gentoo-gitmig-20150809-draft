@@ -1,0 +1,16 @@
+diff -Naur kftpgrabber-0.8.0-beta1-orig/kftpgrabber/src/engine/ftpsocket.cpp kftpgrabber-0.8.0-beta1/kftpgrabber/src/engine/ftpsocket.cpp
+--- kftpgrabber-0.8.0-beta1-orig/kftpgrabber/src/engine/ftpsocket.cpp	2006-10-19 20:46:51.000000000 +0200
++++ kftpgrabber-0.8.0-beta1/kftpgrabber/src/engine/ftpsocket.cpp	2006-10-19 20:47:23.000000000 +0200
+@@ -651,8 +651,10 @@
+             return;
+           }
+           
+-          socket()->checkTransferStart();
+-          currentState = WaitTransfer;
++	  if (!socket()->isMultiline()) {
++            socket()->checkTransferStart();
++            currentState = WaitTransfer;
++	  }
+           break;
+         }
+         case WaitTransfer: {

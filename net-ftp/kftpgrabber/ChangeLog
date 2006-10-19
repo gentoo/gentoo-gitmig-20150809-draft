@@ -1,6 +1,15 @@
 # ChangeLog for net-ftp/kftpgrabber
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.13 2006/10/19 10:27:41 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kftpgrabber/ChangeLog,v 1.14 2006/10/19 19:10:10 deathwing00 Exp $
+
+*kftpgrabber-0.8.0_beta1-r1 (19 Oct 2006)
+*kftpgrabber-0.8.0_alpha2-r1 (19 Oct 2006)
+
+  19 Oct 2006; Ioannis Aslanidis <deathwing00@gentoo.org>
+  +files/kftpgrabber-0.8.0_alpha2-multiline-data-command-fix.diff,
+  +files/kftpgrabber-0.8.0_beta1-multiline-data-command-fix.diff,
+  +kftpgrabber-0.8.0_alpha2-r1.ebuild, +kftpgrabber-0.8.0_beta1-r1.ebuild:
+  Fixes a major bug with pure-ftpd as reported in bug #151983.
 
 *kftpgrabber-0.8.0_beta1 (19 Oct 2006)
 
