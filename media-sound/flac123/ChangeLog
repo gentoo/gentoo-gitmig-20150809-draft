@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/flac123
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.10 2005/06/06 10:25:52 corsair Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.11 2006/10/19 20:26:28 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> flac123-0.0.7.ebuild,
+  flac123-0.0.8.ebuild, flac123-0.0.9.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> flac123-0.0.8.ebuild:
   stable on ppc64
