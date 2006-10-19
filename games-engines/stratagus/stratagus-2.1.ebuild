@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.11 2006/01/13 21:59:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.1.ebuild,v 1.12 2006/10/19 19:18:03 flameeyes Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ RDEPEND="app-arch/bzip2
 	media-libs/libpng
 	media-libs/libsdl
 	sys-libs/zlib
-	flac? ( media-libs/flac )
+	flac? ( ~media-libs/flac-1.1.2 )
 	mp3? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
 	ogg? ( vorbis? ( media-libs/libogg media-libs/libvorbis ) )"

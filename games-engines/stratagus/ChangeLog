@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/stratagus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.6 2006/01/13 21:59:23 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/ChangeLog,v 1.7 2006/10/19 19:18:03 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> stratagus-2.1.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   13 Jan 2006; Stefan Schweizer <genstef@gentoo.org> stratagus-2.1.ebuild:
   Add modular depends
