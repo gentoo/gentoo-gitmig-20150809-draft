@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.32 2006/10/19 03:45:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.33 2006/10/19 04:07:49 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  binutils-config-1.9-r2.ebuild:
+  Make findutils a dep only on GNU userland.
 
   19 Oct 2006; Mike Frysinger <vapier@gentoo.org> files/binutils-config-1.9,
   binutils-config-1.9-r2.ebuild:
