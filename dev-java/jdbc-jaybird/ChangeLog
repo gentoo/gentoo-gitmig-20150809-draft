@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-jaybird
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.6 2006/10/19 20:11:13 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.7 2006/10/19 21:39:35 caster Exp $
+
+  19 Oct 2006; Vlastimil Babka <caster@gentoo.org>
+  +files/archive-xml-2.0.1.patch, +files/compile-xml-2.0.1.patch,
+  +files/dist-xml-2.0.1.patch, metadata.xml, jdbc-jaybird-2.0.1.ebuild:
+  Cleaned up dependencies, make tests actually not compile when not needed,
+  remove jdk version autodetection and force -source 1.4 -target 1.4
+  everywhere, until somebody needs the 1.5 features.
 
   19 Oct 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   jdbc-jaybird-2.0.1.ebuild, jdbc-jaybird-2.1.0.ebuild:

@@ -5,13 +5,13 @@
 	<herd>java</herd>
 
 	<maintainer>
-        	<email>wltjr@gentoo.org</email>
+		<email>wltjr@gentoo.org</email>
 		<name>William L. Thomson Jr.</name>
 	</maintainer>
 
 	<longdescription>
 	Jaybird is a JCA/JDBC driver suite for the Firebird database server.
-	This package includes both a type 2 and 4 JDBC driver. 
+	This package includes both a type 2 and 4 JDBC driver.
 	</longdescription>
 
 </pkgmetadata>
