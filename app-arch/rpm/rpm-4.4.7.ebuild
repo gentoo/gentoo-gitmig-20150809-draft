@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.2 2006/10/17 19:36:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.3 2006/10/19 07:01:22 pva Exp $
 
 WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+WANT_AUTOMAKE="1.9"
 inherit eutils autotools distutils perl-module
 
 DESCRIPTION="Red Hat Package Management Utils"
