@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.217 2006/10/15 14:07:22 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.218 2006/10/19 15:21:22 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> glib-2.10.3.ebuild:
+  Stable on Alpha.
 
   15 Oct 2006; Mart Raudsepp <leio@gentoo.org>
   +files/glib-2.12.4-tests_pthread.patch, glib-2.12.4.ebuild:
