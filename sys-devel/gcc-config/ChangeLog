@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.132 2006/10/19 04:01:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.133 2006/10/19 12:53:54 uberlord Exp $
+
+  19 Oct 2006; Roy Marples <uberlord@gentoo.org> gcc-config-1.3.14.ebuild:
+  Added ~sparc-fbsd keyword.
 
 *gcc-config-1.3.14 (19 Oct 2006)
 
