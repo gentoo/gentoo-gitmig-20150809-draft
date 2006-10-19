@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.2 2006/08/05 17:44:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.20060720.ebuild,v 1.3 2006/10/19 16:38:08 vapier Exp $
 
 inherit eutils versionator autotools
 
@@ -12,7 +12,7 @@ SRC_URI="http://gentooexperimental.org/~genstef/dist/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="cups"
 
 RDEPEND="cups? ( >=net-print/cups-1.1.19 )
