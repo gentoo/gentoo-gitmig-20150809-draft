@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.55 2006/10/19 16:26:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.56 2006/10/19 16:27:50 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Update to 1.6.0 final.
 
   19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Update to 1.6.0 final.
