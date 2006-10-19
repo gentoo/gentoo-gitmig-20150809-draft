@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha2.ebuild,v 1.3 2006/10/19 09:29:43 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha2-r1.ebuild,v 1.1 2006/10/19 09:29:43 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -41,6 +41,8 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-ssd-bsd.patch"
 
 	# Setup unicode defaults for silly unicode users
 	if use unicode ; then

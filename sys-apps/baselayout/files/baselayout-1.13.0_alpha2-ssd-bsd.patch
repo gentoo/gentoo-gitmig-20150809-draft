@@ -1,0 +1,81 @@
+Index: src/start-stop-daemon.c
+===================================================================
+--- src/start-stop-daemon.c	(revision 2314)
++++ src/start-stop-daemon.c	(working copy)
+@@ -768,7 +768,7 @@
+ /* WTA: this  needs to be an autoconf check for /proc/pid existance.
+  */
+ 
+-#if defined(OSLinux) || defined (OSsunos) || defined(OSfreebsd)
++#if defined(OSLinux) || defined (OSsunos)
+ static void
+ do_procinit(void)
+ {
+@@ -814,16 +814,18 @@
+ #endif /* OSHURD */
+ 
+ 
+-#if defined(OSOpenBSD) || defined(OSFreeBSD) || defined(OSNetBSD)
++#if defined(OSFreeBSD) || defined(OSFreeBSD) || defined(OSOpenBSD)
+ 
+-# if defined(OSNetBSD)
+-#  define _KINFO_PROC2 kinfo_proc2
++# if defined(OSFreeBSD) || defined(OSOpenBSD)
++#  define _KINFO_PROC kinfo_proc
++#  define _GET_KINFO_UID(kp) (kp->ki_ruid)
++#  define _GET_KINFO_COMM(kp) (kp->ki_comm)
++#  define _GET_KINFO_PID(kp) (kp.ki_pid)
++# else
++#  define _KINFO_PROC kinfo_proc2
+ #  define _GET_KINFO_UID(kp) (kp->p_ruid)
+ #  define _GET_KINFO_COMM(kp) (kp->p_comm)
+-# else
+-#  define _KINFO_PROC2 kinfo_proc
+-#  define _GET_KINFO_UID(kp) (kp->ki_ruid)
+-#  define _GET_KINFO_COMM(kp) (kp->ki_comm)
++#  define _GET_KINFO_PID(kp) (kp.p_pid)
+ # endif
+ 
+ static int
+@@ -872,7 +874,7 @@
+ 	kvm_t *kd;
+ 	int nentries;   /* Value not used */
+ 	uid_t proc_uid;
+-	struct _KINFO_PROC2 *kp;
++	struct _KINFO_PROC *kp;
+ 	char  errbuf[_POSIX2_LINE_MAX];
+ 
+ 	kd = kvm_openfiles(NULL, NULL, NULL, O_RDONLY, errbuf);
+@@ -893,7 +895,7 @@
+ {
+ 	kvm_t *kd;
+ 	int nentries;
+-	struct _KINFO_PROC2 *kp;
++	struct _KINFO_PROC *kp;
+ 	char *pidexec;
+ 	char *bname = basename(name);
+ 
+@@ -911,10 +913,21 @@
+ static void
+ do_procinit(void)
+ {
+-	/* Nothing to do */
++	static kvm_t *kd = NULL;
++	struct _KINFO_PROC *kp;
++	int i, n_processes = 0; 
++
++	if ((kd = kvm_open("/dev/null", "/dev/null", "/dev/null", O_RDONLY, NULL)) == NULL)
++		errx(2, "%s", kvm_geterr(kd));
++
++	kp = kvm_getprocs(kd, KERN_PROC_PROC, 0, &n_processes);
++	for (i = 0; i < n_processes; i++)
++		check(_GET_KINFO_PID(kp[i]));
++	
++	kvm_close(kd);
+ }
+ 
+-#endif /* OSOpenBSD */
++#endif /* OSBSD */
+ 
+ #if defined(OSDarwin)
+ int
