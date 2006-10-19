@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.7.ebuild,v 1.2 2006/09/29 20:48:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-1.5.0.7.ebuild,v 1.3 2006/10/19 22:27:56 genstef Exp $
 
 inherit eutils mozilla-launcher multilib
 
@@ -29,6 +29,7 @@ RDEPEND="|| ( (	x11-libs/libXrender
 		>=app-emulation/emul-linux-x86-baselibs-2.1.1
 		>=app-emulation/emul-linux-x86-gtklibs-2.1
 	)
+	virtual/libstdc++
 	>=www-client/mozilla-launcher-1.41"
 
 S=${WORKDIR}/thunderbird

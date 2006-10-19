@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/mozilla-thunderbird-bin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.47 2006/09/29 20:48:20 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/ChangeLog,v 1.48 2006/10/19 22:27:56 genstef Exp $
+
+  19 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  -mozilla-thunderbird-bin-1.5.0.4.ebuild,
+  -mozilla-thunderbird-bin-1.5.0.5.ebuild,
+  mozilla-thunderbird-bin-1.5.0.7.ebuild:
+  Add virtual/libstdc++ to RDEPEND thanks to Timothy Redaelli
+  <drizzt@gentoo.org> in bug 149834
 
   29 Sep 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   mozilla-thunderbird-bin-1.5.0.7.ebuild:
