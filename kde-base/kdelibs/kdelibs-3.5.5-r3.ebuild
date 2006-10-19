@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r3.ebuild,v 1.1 2006/10/19 05:01:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.5-r3.ebuild,v 1.2 2006/10/19 11:46:31 flameeyes Exp $
 
 inherit kde flag-o-matic eutils multilib
 set-kdedir 3.5
@@ -114,7 +114,7 @@ src_compile() {
 			$(use_with jpeg2k jasper) $(use_with openexr)
 			$(use_enable cups) $(use_enable zeroconf dnssd)
 			$(use_with utempter) $(use_with lua)
-			$(use_enable kernel_linux sendmail) --enable-mitshm
+			$(use_enable kernel_linux sendfile) --enable-mitshm
 			--without-hspell --without-aspell"
 
 	if has_version x11-apps/rgb; then

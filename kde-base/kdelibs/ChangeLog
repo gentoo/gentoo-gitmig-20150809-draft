@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.372 2006/10/19 05:01:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.373 2006/10/19 11:46:31 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdelibs-3.5.5-r3.ebuild:
+  Fix typo sendmail->sendfile. Thanks to Samuele Kaplun for letting me know.
 
 *kdelibs-3.5.5-r3 (19 Oct 2006)
 
