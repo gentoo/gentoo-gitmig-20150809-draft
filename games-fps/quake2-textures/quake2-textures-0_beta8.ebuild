@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/quake2-textures-0_beta8.ebuild,v 1.1 2006/06/27 20:22:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/quake2-textures-0_beta8.ebuild,v 1.2 2006/10/19 20:58:18 tupone Exp $
 
 inherit eutils versionator games
 
@@ -13,7 +13,7 @@ SRC_URI="http://jdolan.dyndns.org/jaydolan/tmp/retexture/pak${MY_PV}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""

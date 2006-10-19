@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.2 2006/07/07 23:25:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.3 2006/10/19 21:00:14 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -15,7 +15,7 @@ SRC_URI="http://qudos.quakedev.com/linux/${MY_PN}/engines/QuDos/${FILE_STEM}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa cdinstall debug dedicated demo dga ipv6 joystick mods opengl qmax oss sdl textures xmms"
 
 UIDEPEND="alsa? ( media-libs/alsa-lib )

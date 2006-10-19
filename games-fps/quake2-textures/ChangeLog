@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake2-textures
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/ChangeLog,v 1.1 2006/06/27 20:22:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-textures/ChangeLog,v 1.2 2006/10/19 20:58:18 tupone Exp $
+
+  19 Oct 2006; <tupone@gentoo.org> quake2-textures-0_beta8.ebuild:
+  Added ~amd64 keyword. Bug #140726 by Michael Boone
 
 *quake2-textures-0_beta8 (27 Jun 2006)
 
