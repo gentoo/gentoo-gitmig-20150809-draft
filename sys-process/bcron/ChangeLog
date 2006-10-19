@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/bcron
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.2 2006/06/06 19:16:01 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.3 2006/10/19 09:11:05 bangert Exp $
+
+  19 Oct 2006; Thilo Bangert <bangert@gentoo.org> metadata.xml,
+  bcron-0.09.ebuild:
+  add to cron herd - add CRON_SYSTEM_CRONTAB (as per bug #89213) - minor
+  cleanups
 
   06 Jun 2006; Thilo Bangert <bangert@gentoo.org> bcron-0.09.ebuild:
   fix creation of trigger fifo
