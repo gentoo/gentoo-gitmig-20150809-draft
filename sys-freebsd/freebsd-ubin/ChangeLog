@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.29 2006/10/17 10:30:38 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.30 2006/10/19 04:43:51 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -freebsd-ubin-6.2_beta1.ebuild:
+  Remove 6.2_beta1 ebuild.
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org>
   +files/freebsd-ubin-6.2-sparc64.patch, freebsd-ubin-6.2_beta2.ebuild:
