@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.9 2006/10/19 22:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.5.ebuild,v 1.10 2006/10/19 23:26:41 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -688,20 +688,12 @@ setup_flags() {
 }
 
 check_kheader_version() {
-	local header="$(alt_build_headers)/linux/version.h"
-
-	[[ -z $1 ]] && return 1
-
-	if [[ -f ${header} ]] ; then
-		local version=$(grep 'LINUX_VERSION_CODE' ${header} | \
-			sed -e 's:^.*LINUX_VERSION_CODE[[:space:]]*::')
-
-		if [[ ${version} -ge "$1" ]] ; then
-			return 0
-		fi
-	fi
-
-	return 1
+	local version=$(
+		printf '#include <linux/version.h>\nLINUX_VERSION_CODE\n' | \
+		$(tc-getCPP ${CTARGET}) | \
+		tail -n 1
+	)
+	[[ ${version} -ge "$1" ]]
 }
 
 check_nptl_support() {
