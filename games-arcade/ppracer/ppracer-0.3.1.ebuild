@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.12 2006/09/29 21:59:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.13 2006/10/19 00:04:14 nyhm Exp $
 
-inherit flag-o-matic gnuconfig eutils multilib games
+inherit eutils flag-o-matic multilib games
 
 DESCRIPTION="take on the role of Tux, the Linux Penguin, as he races down steep, snow-covered mountains"
 HOMEPAGE="http://developer.berlios.de/projects/ppracer/"
@@ -11,36 +11,23 @@ SRC_URI="http://download.berlios.de/ppracer/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
-IUSE="X"
+IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
-	X? (
-		x11-libs/libXt
-		media-libs/mesa )
+	x11-libs/libX11
+	x11-libs/libXext
 	>=dev-lang/tcl-8.4
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/libpng
-	>=media-libs/freetype-2
-	sys-libs/zlib"
-
-RDEPEND="${DEPEND}
-	x11-libs/libICE
-	x11-libs/libSM
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXi
-	x11-libs/libXmu"
+	>=media-libs/freetype-2"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch ${FILESDIR}/ppracer-0.3.1-gcc41.patch
-
-	gnuconfig_update
-	autoconf || die "autoconf failed"
+	epatch "${FILESDIR}"/ppracer-0.3.1-gcc41.patch
 }
 
 src_compile() {
@@ -51,13 +38,14 @@ src_compile() {
 		--disable-dependency-tracking \
 		--with-data-dir="${GAMES_DATADIR}/${PN}" \
 		--with-tcl=/usr/$(get_libdir) \
-		$(use_with X x) \
 		|| die
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
+	newicon data/courses/themes/items/common/herring_standard.png ${PN}.png
+	make_desktop_entry ${PN} "PlanetPenguin Racer"
 	dodoc AUTHORS ChangeLog
 	dohtml -r html/*
 	prepgamesdirs
