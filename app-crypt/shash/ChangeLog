@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/shash
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.18 2006/10/13 15:00:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.19 2006/10/19 08:37:47 uberlord Exp $
+
+  19 Oct 2006; Roy Marples <uberlord@gentoo.org> shash-0.2.6-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   13 Oct 2006; Sven Wegener <swegener@gentoo.org>
   files/shash.bash-completion, shash-0.2.6-r1.ebuild:
