@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libirman
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.21 2006/09/25 11:03:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.22 2006/10/19 00:01:32 jokey Exp $
+
+  19 Oct 2006; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Metadata update
 
   25 Sep 2006; <jokey@gentoo.org> libirman-0.4.4.ebuild:
   Should be testing first...
