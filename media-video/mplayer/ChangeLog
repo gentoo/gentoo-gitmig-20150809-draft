@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.414 2006/10/06 12:43:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.415 2006/10/19 08:41:08 lu_zero Exp $
+
+  19 Oct 2006; Luca Barbato <lu_zero@gentoo.org>
+  files/digest-mplayer-1.0_pre8, files/digest-mplayer-1.0_pre8-r1,
+  files/digest-mplayer-1.0_pre20060810, Manifest:
+  Redigesting Blue-1.6 skin
 
   06 Oct 2006; Simon Stelling <blubb@gentoo.org>
   +files/mplayer-1.0_pre8-amr-64bit.patch, mplayer-1.0_pre8-r1.ebuild:
