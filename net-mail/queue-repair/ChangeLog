@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/queue-repair
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/ChangeLog,v 1.6 2006/09/29 23:13:08 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/ChangeLog,v 1.7 2006/10/19 11:20:24 kloeri Exp $
+
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  queue-repair-0.9.0.ebuild:
+  Add ~ia64 keyword, bug 145528.
 
   29 Sep 2006; Thomas Cort <tcort@gentoo.org> queue-repair-0.9.0.ebuild:
   Stable on alpha.
