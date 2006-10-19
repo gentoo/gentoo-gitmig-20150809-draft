@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/bastet-0.41.ebuild,v 1.7 2006/08/15 13:44:44 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/bastet/bastet-0.41.ebuild,v 1.8 2006/10/19 15:20:40 nyhm Exp $
 
-inherit games flag-o-matic
+inherit toolchain-funcs games
 
 DESCRIPTION="a simple, evil, ncurses-based Tetris(R) clone"
 HOMEPAGE="http://fph.altervista.org/prog/bastet.shtml"
@@ -20,9 +20,10 @@ src_unpack() {
 	cd "${S}"
 	sed -i \
 		-e '/^include/s/^/-/' \
-		-e '/^CC/d' \
+		-e "/^CC/s/gcc/$(tc-getCC)/" \
 		-e "/^DATA_PREFIX/s:=.*:=${GAMES_STATEDIR}/:" \
-		-e "s:-Wall:${CFLAGS}:" \
+		-e '/^CFLAGS/s/=/+=/' \
+		-e '/^LDFLAGS/s/=/+=/' \
 		Makefile \
 		|| die "sed failed"
 
@@ -34,6 +35,7 @@ src_unpack() {
 
 src_install() {
 	dogamesbin bastet || die "dogamesbin failed"
+	doman bastet.6
 	dodoc AUTHORS BUGS NEWS README* TODO
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}${GAMES_STATEDIR}/bastet.scores" || die "touch failed"
