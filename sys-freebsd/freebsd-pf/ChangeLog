@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.13 2006/10/19 04:33:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.14 2006/10/19 04:34:13 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Remove 6.2_beta1 ebuild.
 
   19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -freebsd-pf-6.2_beta1.ebuild:
