@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.4 2006/02/04 15:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/bossogg-0.13.6-r2.ebuild,v 1.5 2006/10/19 20:17:27 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 DEPEND=">=media-libs/libao-0.8.3
 	media-libs/libshout
-	flac? ( media-libs/flac )
+	flac? ( ~media-libs/flac-1.1.2 )
 	vorbis? ( media-libs/libvorbis )
 	mad? ( media-sound/madplay media-libs/id3lib )"
 

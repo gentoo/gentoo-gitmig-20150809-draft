@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.11.ebuild,v 1.5 2006/03/20 17:40:18 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.99.11.ebuild,v 1.6 2006/10/19 20:19:24 flameeyes Exp $
 
 DESCRIPTION="EasyTAG mp3/ogg ID3 tag editor"
 HOMEPAGE="http://easytag.sourceforge.net/"
@@ -13,7 +13,7 @@ IUSE="nls vorbis flac aac mp3"
 
 DEPEND=">=x11-libs/gtk+-2.4.1
 	mp3? ( >=media-libs/id3lib-3.8.2 )
-	flac? ( >=media-libs/flac-1.1.0 >=media-libs/libvorbis-1.0 )
+	flac? ( ~media-libs/flac-1.1.2 >=media-libs/libvorbis-1.0 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	aac? ( media-libs/libmp4v2 )"
 

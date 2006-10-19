@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bossogg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.18 2006/02/04 15:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bossogg/ChangeLog,v 1.19 2006/10/19 20:17:27 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  bossogg-0.13.6-r2.ebuild, bossogg-0.13.6-r3.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   04 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> -bossogg-0.13.6.ebuild,
   bossogg-0.13.6-r2.ebuild, bossogg-0.13.6-r3.ebuild:
