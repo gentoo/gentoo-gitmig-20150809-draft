@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/akode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.21 2006/10/04 12:48:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/ChangeLog,v 1.22 2006/10/19 19:25:49 flameeyes Exp $
+
+  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> akode-2.0_beta3.ebuild,
+  akode-2.0_rc1.ebuild, akode-2.0.1.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   04 Oct 2006; Simon Stelling <blubb@gentoo.org> akode-2.0.1.ebuild:
   stable on amd64

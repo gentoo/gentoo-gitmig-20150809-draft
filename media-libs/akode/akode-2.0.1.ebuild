@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.1.ebuild,v 1.7 2006/10/04 12:48:47 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/akode/akode-2.0.1.ebuild,v 1.8 2006/10/19 19:25:49 flameeyes Exp $
 
 MY_P=${P/_beta/b}
 S=${WORKDIR}/${MY_P}
@@ -18,7 +18,7 @@ IUSE="alsa jack flac mp3 oss speex vorbis"
 DEPEND="media-libs/libsamplerate
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
-	flac? ( media-libs/flac )
+	flac? ( ~media-libs/flac-1.1.2 )
 	mp3? ( media-libs/libmad )
 	vorbis? ( media-libs/libvorbis )
 	speex? ( media-libs/speex )"
