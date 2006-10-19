@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.13.ebuild,v 1.6 2006/10/16 19:05:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ggz-client-libs-0.0.13.ebuild,v 1.7 2006/10/19 20:28:48 nyhm Exp $
 
 inherit games
 
@@ -30,12 +30,14 @@ src_unpack() {
 
 	sed -i 's:${prefix}/include:/usr/include:' \
 		configure || die "sed failed"
+
+	echo "CONFIG_PROTECT_MASK=\"${GAMES_SYSCONFDIR}/ggz\"" > "${T}"/90ggz
 }
 
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
-		--sysconfdir=${GAMES_SYSCONFDIR}/ggz \
+		--sysconfdir="${GAMES_SYSCONFDIR}"/ggz \
 		|| die
 	emake || die "emake failed"
 }
@@ -43,5 +45,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS Quick* README*
+	doenvd "${T}"/90ggz || die "doenvd failed"
 	prepgamesdirs
 }
