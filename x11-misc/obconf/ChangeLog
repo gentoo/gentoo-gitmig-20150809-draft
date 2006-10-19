@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.22 2006/10/17 00:30:20 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.23 2006/10/19 23:33:22 omp Exp $
+
+  19 Oct 2006; David Shakaryan <omp@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   17 Oct 2006; David Shakaryan <omp@gentoo.org> obconf-1.5-r1.ebuild,
   obconf-1.6.ebuild:
