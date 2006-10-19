@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-i810
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.41 2006/10/14 18:25:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/ChangeLog,v 1.42 2006/10/19 00:22:58 joshuabaergen Exp $
+
+  19 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.6.5-fix_no_dri.patch, xf86-video-i810-1.6.5.ebuild:
+  Add upstream's patch to allow building without dri support.  This patch is
+  included in versions newer than 1.6.5 (1.7+).  (Bug #151347, Stan Behrens for
+  the report)
 
   14 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   xf86-video-i810-1.6.5.ebuild:
