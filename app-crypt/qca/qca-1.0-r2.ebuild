@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r2.ebuild,v 1.15 2006/04/07 11:51:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0-r2.ebuild,v 1.16 2006/10/19 00:14:00 jokey Exp $
 
 inherit eutils qt3
 
@@ -11,7 +11,7 @@ SRC_URI="http://delta.affinix.com/qca/qca-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="ssl"
+IUSE=""
 
 DEPEND="$(qt_min_version 3.3.0)"
 

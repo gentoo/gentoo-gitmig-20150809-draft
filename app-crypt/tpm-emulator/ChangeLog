@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/tpm-emulator
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.3 2006/07/12 13:27:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.4 2006/10/19 00:19:21 jokey Exp $
+
+  19 Oct 2006; Markus Ullmann <jokey@gentoo.org> tpm-emulator-0.2a.ebuild,
+  tpm-emulator-0.3.ebuild:
+  minor QA: IUSE wrt bug #150083
 
   12 Jul 2006; Danny van Dyk <kugelfang@gentoo.org>
   tpm-emulator-0.2a.ebuild, tpm-emulator-0.3.ebuild:
