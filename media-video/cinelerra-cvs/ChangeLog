@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.20 2006/10/08 17:38:32 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.21 2006/10/20 21:31:51 aballier Exp $
+
+*cinelerra-cvs-20061020 (20 Oct 2006)
+
+  20 Oct 2006; Alexis Ballier <aballier@gentoo.org>
+  +cinelerra-cvs-20061020.ebuild:
+  Version bump, bug #147597 and #143596
 
   08 Oct 2006; <malc@gentoo.org> cinelerra-cvs-20060619.ebuild:
   Make plugin path respect $(get_libdir) to fix QA checks on x86_64 platforms - bug #145027
