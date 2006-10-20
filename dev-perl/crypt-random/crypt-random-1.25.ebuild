@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/crypt-random-1.25.ebuild,v 1.11 2006/10/10 19:41:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/crypt-random-1.25.ebuild,v 1.12 2006/10/20 14:51:29 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,3 @@ SRC_TEST="do"
 DEPEND=">=dev-perl/math-pari-2.010603
 	dev-perl/class-loader
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
