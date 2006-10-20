@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.81 2006/10/12 15:27:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.82 2006/10/20 13:27:12 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> cairo-1.0.4-r1.ebuild:
+  Mark 1.0.4-r1 stable on alpha
 
 *cairo-1.0.4-r1 (12 Oct 2006)
 
