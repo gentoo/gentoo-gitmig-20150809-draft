@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r3.ebuild,v 1.1 2006/09/06 07:03:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r3.ebuild,v 1.2 2006/10/20 11:21:46 jokey Exp $
 
 inherit flag-o-matic eutils
 
@@ -50,6 +50,9 @@ src_unpack() {
 src_compile() {
 	replace-flags -O[3-9] -O2
 	append-flags -fno-strict-aliasing
+
+	# bug #147165
+	append-flags -I/usr/include/gnome-1.0
 
 	local myconf
 
