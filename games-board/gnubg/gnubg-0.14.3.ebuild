@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.9 2006/09/04 20:02:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3.ebuild,v 1.10 2006/10/20 07:04:53 nyhm Exp $
 
-inherit gnuconfig flag-o-matic eutils games
+inherit flag-o-matic eutils games
 
 WPV="0.14"
 DESCRIPTION="GNU BackGammon"
@@ -49,7 +49,6 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}/${P}"-gcc4.patch \
 		"${FILESDIR}/${P}"-as-needed.patch
-	gnuconfig_update
 }
 
 src_compile() {
