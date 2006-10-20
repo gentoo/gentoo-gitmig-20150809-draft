@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Sys-Syslog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.14 2006/10/20 20:30:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.15 2006/10/20 20:31:40 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  Sys-Syslog-0.18.ebuild:
+  Marking amd64 stable
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   Sys-Syslog-0.18.ebuild:
