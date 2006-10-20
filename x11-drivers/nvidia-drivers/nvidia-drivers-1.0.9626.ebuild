@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9626.ebuild,v 1.5 2006/10/18 22:06:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-1.0.9626.ebuild,v 1.6 2006/10/20 18:47:54 wolf31o2 Exp $
 
 inherit eutils multilib versionator linux-mod
 
@@ -434,5 +434,8 @@ want_tls() {
 }
 
 pkg_postrm() {
+	if ! use x86-fbsd; then
+		linux-mod_pkg_postrm
+	fi
 	eselect opengl set --use-old xorg-x11
 }

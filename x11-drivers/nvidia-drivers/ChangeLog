@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.24 2006/10/20 13:14:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.25 2006/10/20 18:47:54 wolf31o2 Exp $
+
+  20 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  nvidia-drivers-1.0.8774.ebuild, nvidia-drivers-1.0.8776.ebuild,
+  nvidia-drivers-1.0.9626.ebuild:
+  Added fix for bug #145968.
 
 *nvidia-drivers-1.0.8776 (20 Oct 2006)
 
