@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.58.ebuild,v 1.14 2006/09/16 22:10:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/yaml-0.58.ebuild,v 1.15 2006/10/20 18:07:23 mcummings Exp $
 
 inherit perl-module
 
@@ -18,7 +18,6 @@ IUSE="test"
 
 DEPEND="test? ( >=dev-perl/Test-Base-0.49 )
 	dev-lang/perl"
-RDEPEND="dev-lang/perl"
 
 SRC_TEST="do"
 
