@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.72 2006/10/15 14:03:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.73 2006/10/20 21:47:16 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  libmatroska-0.8.0.ebuild:
+  Stable on Alpha.
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org> libmatroska-0.8.0.ebuild:
   Mark 0.8.0 stable on ia64. #149908

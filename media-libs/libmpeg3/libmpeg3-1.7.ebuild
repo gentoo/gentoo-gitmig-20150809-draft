@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.4 2006/10/14 16:16:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.7.ebuild,v 1.5 2006/10/20 21:48:21 kloeri Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="mmx"
 
 RDEPEND="sys-libs/zlib

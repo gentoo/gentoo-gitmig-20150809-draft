@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.8 2006/10/03 17:51:13 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.2-r1.ebuild,v 1.9 2006/10/20 21:43:59 kloeri Exp $
 
 WANT_AUTOMAKE=1.4
 WANT_AUTOCONF=latest
@@ -12,7 +12,7 @@ SRC_URI="http://opengl.geek.nz/ftgl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/freetype-2.0.9
