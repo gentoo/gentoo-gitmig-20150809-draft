@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-002-init.d,v 1.3 2006/07/17 06:16:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-002-init.d,v 1.4 2006/10/20 19:21:25 phreak Exp $
 
 checkconfig() {
 	if [ -z "${GOVERNOR}" ]; then
@@ -39,5 +39,5 @@ start() {
 
 stop() {
 	checkconfig || return 1
-	affect_change "Disabling" "${RESTORED_GOVERNOR}"
+	affect_change "Disabling" "${GOVERNOR}"
 }

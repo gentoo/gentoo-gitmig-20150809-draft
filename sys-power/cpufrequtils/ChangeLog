@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.29 2006/07/17 06:16:55 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.30 2006/10/20 19:21:25 phreak Exp $
+
+  20 Oct 2006; Christian Heim <phreak@gentoo.org>
+  files/cpufrequtils-002-conf.d, files/cpufrequtils-002-init.d:
+  Fixing the Governor restore on stop(), fixing #152090 (thanks to Daniel
+  Franke). Tuning the conf.d entry a bit.
 
 *cpufrequtils-002-r2 (17 Jul 2006)
 
