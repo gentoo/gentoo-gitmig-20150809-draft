@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.18 2006/09/16 13:41:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.19 2006/10/20 15:03:41 tester Exp $
+
+*verbiste-0.1.16 (20 Oct 2006)
+
+  20 Oct 2006; Olivier Crête <tester@gentoo.org> +verbiste-0.1.16.ebuild:
+  Version bump
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   verbiste-0.1.14.ebuild:
