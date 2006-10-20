@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/basiliskII
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.18 2005/05/22 10:25:53 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.19 2006/10/20 19:44:32 genstef Exp $
+
+  20 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  basiliskII-1.0.0_pre20050412.ebuild:
+  ebuild fixes thanks to jakub, bug 151137
 
   22 May 2005; Simon Stelling <blubb@gentoo.org>
   basiliskII-1.0.0_pre20050412.ebuild:

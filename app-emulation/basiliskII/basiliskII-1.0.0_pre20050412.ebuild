@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20050412.ebuild,v 1.2 2005/05/22 10:25:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20050412.ebuild,v 1.3 2006/10/20 19:44:32 genstef Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="X gtk xv esd dga"
+IUSE="dga esd gtk nls sdl"
 
 ### We'll set $S Manually, it's version dependant, and nested strangely.
 S=${WORKDIR}/${P}/src/Unix
@@ -24,14 +24,38 @@ S=${WORKDIR}/${P}/src/Unix
 ### gtk and esd support are compile time options, we'll check the usual
 ### use variables here and set ./configure options accordingly
 
-DEPEND="esd? ( media-sound/esound )
-	gtk? ( =x11-libs/gtk+-1.2* )"
+RDEPEND="esd? ( media-sound/esound )
+	gtk? ( =x11-libs/gtk+-1.2* gnome-base/libgnomeui )
+	!sdl? ( dga? ( x11-libs/libXxf86dga ) )
+	sdl? ( media-libs/libsdl )
+	nls? ( virtual/libintl )
+	x11-libs/libSM
+	x11-libs/libXi
+	x11-libs/libXxf86vm
+	!app-emulation/basiliskII-jit"
 
+DEPEND="${RDEPEND}
+	!sdl? ( dga? ( x11-proto/xf86dgaproto ) )
+	nls? ( sys-devel/gettext )
+	x11-proto/xf86vidmodeproto
+	x11-proto/xextproto
+	x11-proto/xproto"
+
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	#prevent prestripped binary
+	sed -i -e '/^INSTALL_PROGRAM/s/-s//' Makefile.in
+	
+	if use sdl && use dga ; then
+		einfo "SDL support was requested, DGA will be disabled"
+	fi
+}
 
 src_compile() {
 	#fpu_x86 doesnt compile properly if -O3 or greater :(
 	replace-flags -O[3-9] -O2
-
 	strip-flags -mpowerpc-gfxopt
 
 	local myflags
@@ -39,11 +63,14 @@ src_compile() {
 ### Default ./configure options are all =yes by default. we'll check for
 ### and use -values and switch them accordingly
 
-	use X || myflags="${myflags} --with-x=no"
 	use esd || myflags="${myflags} --with-esd=no"
 	use gtk || myflags="${myflags} --with-gtk=no"
-	use dga || myflags="${myflags} --with-dga=no"
-	use xv || myflags="${myflags} --enable-xf86-vidmode=no"
+	use dga || myflags="${myflags} --enable-xf86-dga=no"
+	use nls || myflags="${myflags} --disable-nls"
+	use sdl && myflags="${myflags} \
+		--enable-sdl-video=yes \
+		--enable-sdl-audio=yes"
+
 
 	./configure \
 		--host=${CHOST} \
@@ -53,9 +80,7 @@ src_compile() {
 		${myflags} || die "BasiliskII ./configure Failed"
 
 	#hack to link against libstdc++ for gcc3.x compatibility
-	cp Makefile Makefile.old
-	sed -e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' \
-		Makefile.old > Makefile
+	sed -i -e 's:-o $(OBJ_DIR)/gencpu:-lstdc++ -o $(OBJ_DIR)/gencpu:' Makefile
 
 	emake -j1 || die "BasiliskII Make Failed"
 }
