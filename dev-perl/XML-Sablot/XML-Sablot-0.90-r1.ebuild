@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-0.90-r1.ebuild,v 1.12 2006/08/06 01:54:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-0.90-r1.ebuild,v 1.13 2006/10/20 13:18:27 mcummings Exp $
 
 inherit perl-module
 
@@ -18,6 +18,3 @@ IUSE=""
 
 DEPEND=">=app-text/sablotron-0.60
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
-
