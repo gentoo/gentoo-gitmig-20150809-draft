@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-mormon/fortune-mod-mormon-1.1.0.ebuild,v 1.1 2006/10/20 19:15:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-mormon/fortune-mod-mormon-1.1.0.ebuild,v 1.2 2006/10/20 19:35:28 beandog Exp $
 
 DESCRIPTION="Fortune modules from the LDS scriptures (KJV Bible, Book of Mormon,
 D&C, PGP)"
@@ -18,11 +18,13 @@ SLOT="0"
 src_install() {
 	dodoc ChangeLog README
 	insinto /usr/share/fortune
-	doins mods/dc mods/dc.dat mods/mormon mods/mormon.dat mods/pgp mods/scriptures.dat mods/scriptures
+	doins mods/dc mods/dc.dat mods/mormon mods/mormon.dat mods/pgp
+	doins mods/scriptures.dat mods/scriptures mods/aof.dat mods/aof
 }
 
 pkg_postinst() {
 	einfo "This package contains four fortune modules:"
+	einfo "aof - The Articles of Faith"
 	einfo "dc - Doctrine and Covenants"
 	einfo "mormon - The Book of Mormon"
 	einfo "pgp - The Pearl of Great Price"
