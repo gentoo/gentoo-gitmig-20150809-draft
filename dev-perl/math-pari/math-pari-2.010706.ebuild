@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010706.ebuild,v 1.7 2006/10/10 19:40:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010706.ebuild,v 1.8 2006/10/20 17:06:50 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/I/IL/ILYAZ/modules/${MY_P}.tar.gz
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
@@ -24,7 +24,6 @@ SRC_TEST="do"
 # DEPEND below
 DEPEND="~sci-mathematics/pari-2.1.7
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	# Unfortunately the assembly routines math-pari has for SPARC do not appear
