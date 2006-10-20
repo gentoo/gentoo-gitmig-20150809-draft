@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.0.3-r1.ebuild,v 1.8 2004/12/30 11:49:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/tuxtype-1.0.3-r1.ebuild,v 1.9 2006/10/20 07:03:02 nyhm Exp $
 
-inherit gnuconfig games
+inherit games
 
 DESCRIPTION="Typing tutorial with lots of eye-candy"
 HOMEPAGE="http://www.geekcomix.com/dm/tuxtype/"
@@ -18,7 +18,6 @@ DEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-image-1.2"
 
 src_compile() {
-	gnuconfig_update
 	egamesconf --disable-sdltest || die
 	emake || die
 }
