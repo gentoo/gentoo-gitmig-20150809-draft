@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.16 2006/10/13 05:26:54 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.17 2006/10/20 21:18:59 dang Exp $
+
+  20 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-power-manager-2.16.1.ebuild:
+  Warn user that suspend won't work without pam_console or a workaround. Bug
+  #152165
 
 *gnome-power-manager-2.16.1 (13 Oct 2006)
 
