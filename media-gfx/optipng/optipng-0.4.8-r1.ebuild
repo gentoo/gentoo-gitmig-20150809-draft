@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.8-r1.ebuild,v 1.4 2005/10/30 19:00:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.4.8-r1.ebuild,v 1.5 2006/10/20 15:58:19 taviso Exp $
 
 inherit eutils
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.5.ebuild,v 1.1 2006/01/28 19:31:48 reb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.5.4.ebuild,v 1.1 2006/10/20 15:58:19 taviso Exp $
 
 inherit eutils
 
 DESCRIPTION="Find the optimal compression settings for your png files"
-SRC_URI="http://www.cs.toronto.edu/~cosmin/pngtech/optipng/${P}.tar.gz"
-HOMEPAGE="http://www.cs.toronto.edu/~cosmin/pngtech/optipng/"
+SRC_URI="mirror://sourceforge/optipng/${P}.tar.gz"
+HOMEPAGE="http://optipng.sourceforge.net/"
 
 LICENSE="as-is"
 
@@ -28,6 +28,7 @@ src_compile() {
 
 src_install() {
 	dobin ${S}/src/optipng
-	dodoc ${S}/doc/{CAVEAT.txt,DESIGN.txt,FEATURES.txt,HISTORY.txt,LICENSE.txt,TODO.txt,USAGE.txt}
-	dohtml ${S}/doc/index.html
+	dodoc ${S}/doc/{CAVEAT.txt,HISTORY.txt,TODO.txt,USAGE.txt}
+	dohtml ${S}/doc/{design.html,features.html,guide.html,thanks.html}
+	doman ${S}/man/optipng.1
 }
