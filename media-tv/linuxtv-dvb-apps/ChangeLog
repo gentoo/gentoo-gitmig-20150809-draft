@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/linuxtv-dvb-apps
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.19 2006/10/16 19:13:31 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-apps/ChangeLog,v 1.20 2006/10/20 14:02:20 zzam Exp $
+
+  20 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  linuxtv-dvb-apps-1.1.1.20060917.ebuild:
+  Marked stable on x86.
 
   16 Oct 2006; <malc@gentoo.org> linuxtv-dvb-apps-1.1.1.20060917.ebuild:
   Small Make.rules sed-fu to fix multilib-strict QA checks
