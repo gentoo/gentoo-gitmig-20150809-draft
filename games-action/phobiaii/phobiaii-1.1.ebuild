@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.11 2006/09/15 19:52:50 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.12 2006/10/20 07:39:07 nyhm Exp $
 
 inherit games
 
@@ -19,22 +19,19 @@ DEPEND=""
 RDEPEND="media-libs/sdl-mixer
 	media-libs/libsdl
 	x86? ( sys-libs/lib-compat )
-	amd64? ( app-emulation/emul-linux-x86-compat )
-	virtual/libc"
+	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	dodoc README
-	rm setup-link.sh README
+	local dir=${GAMES_PREFIX_OPT}/${PN}
 
-	dodir "${GAMES_PREFIX_OPT}"/${PN}
-	mv * "${D}/${GAMES_PREFIX_OPT}"/${PN}/
+	games_make_wrapper ${PN/ii/II} ./linuxphobia "${dir}"
 
-	dosed "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" \
-		${GAMES_BINDIR}/phobiaII || die "sed"
+	insinto "${dir}"
+	doins -r * || die "doins failed"
 
-
-	dogamesbin "${FILESDIR}"/phobiaII || die "dogamesbin failed"
+	rm -rf "${D}/${dir}"/{*.desktop,*.sh,*.ico,/pics/.xvpics}
+	fperms 750 "${dir}"/linuxphobia
 	prepgamesdirs
 }
