@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.1 2006/10/18 18:16:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/tvbrowser-2.2.1.ebuild,v 1.2 2006/10/20 10:40:59 zzam Exp $
 
 inherit eutils java-pkg-2 java-ant-2 autotools flag-o-matic
 
 DESCRIPTION="Themeable and easy to use TV Guide - written in Java"
 HOMEPAGE="http://www.tvbrowser.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
+SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
+themes? ( http://www.tvbrowser.org/downloads/themepacks/allthemepacks.zip )"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -42,7 +43,7 @@ LICENSE="GPL-2"
 IUSE="doc jikes themes source"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}-src.zip
 
 	epatch ${FILESDIR}/${P}-makefiles.patch
 
@@ -113,11 +114,11 @@ src_install() {
 	cp -a plugins ${D}/${todir}
 	cp linux.properties ${D}/${todir}
 
-	mkdir "${D}/usr/share/${PN}-themepacks"
-	cp themepacks/themepack.zip "${D}/usr/share/${PN}-themepacks"
+	insinto "/usr/share/${PN}/themepacks"
+	doins themepacks/themepack.zip
 
 	if use themes; then
-		cd "${D}/usr/share/${PN}-themepacks"
+		cd "${D}/usr/share/${PN}/themepacks"
 		unpack allthemepacks.zip
 	fi
 

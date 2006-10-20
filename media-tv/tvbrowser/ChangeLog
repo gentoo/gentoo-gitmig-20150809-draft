@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvbrowser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.4 2006/10/18 18:16:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvbrowser/ChangeLog,v 1.5 2006/10/20 10:40:59 zzam Exp $
+
+  20 Oct 2006; Matthias Schwarzott <zzam@gentoo.org> tvbrowser-2.2.1.ebuild:
+  Readded the allthemes SRC_URI, due to Bernd Pachur <valirion@thybaria.de>,
+  Bug #151958.
 
 *tvbrowser-2.2.1 (18 Oct 2006)
 
