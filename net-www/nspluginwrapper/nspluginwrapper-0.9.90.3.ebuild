@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.90.3.ebuild,v 1.1 2006/10/20 01:20:16 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/nspluginwrapper-0.9.90.3.ebuild,v 1.2 2006/10/20 14:08:03 chutzpah Exp $
 
 inherit nsplugins flag-o-matic multilib
 
@@ -74,6 +74,11 @@ pkg_postinst() {
 	einfo "the future will first need to be setup with:"
 	einfo "  \"nspluginwrapper -i <path-to-32bit-plugin>\""
 	einfo "before they will function in a 64bit browser"
+	einfo
+	einfo "If you are using this with >=net-www/netscape-flash-9, sound won't"
+	einfo "work until you install app-emulation/emul-linux-x86-soundlibs."
+	einfo "   \"emerge app-emulation/emul-linux-x86-soundlibs\""
+	einfo
 }
 
 # this is terribly ugly, but without a way to query portage as to whether
