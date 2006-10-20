@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2259 2006/10/20 21:19:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2260 2006/10/20 23:51:32 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -597,7 +597,7 @@ kde-base/kdegraphics:povray - Install KPovModeler, which needs POV-Ray.
 kde-base/kdelibs:legacyssl - Support for some deprecated ciphers. Don't use this flag unless you really need it.
 kde-base/kdelibs:noutempter - Don't write login records. Don't use this flag, unless you know exactly what you do.
 kde-base/kdelibs:openexr - Support for the OpenEXR graphics file format (www.openexr.com).
-kde-base/kdelibs:utempter - Records everytime a user logins in. Should be enabled.
+kde-base/kdelibs:utempter - Records everytime a user logins in. Useful on multi-user systems.
 kde-base/kdelibs:zeroconf - Support for DNS Service Discovery (DNS-SD).
 kde-base/kdemultimedia:akode - Support for the aKode audio-decoding frame-work.
 kde-base/kdenetwork:rdesktop - support for the remote desktop protocol.
@@ -1812,6 +1812,7 @@ x11-terms/aterm:background - Enable background image support via libAfterImage
 x11-terms/aterm:xgetdefault - Enable resources via X instead of aterm small version
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
+x11-terms/hanterm:utempter - Records everytime a user logins in. Useful on multi-user systems.
 x11-terms/mlterm:scim - Enable scim support
 x11-terms/mlterm:uim - Enable uim support
 x11-terms/mrxvt:menubar - Enable mrxvt menubar
