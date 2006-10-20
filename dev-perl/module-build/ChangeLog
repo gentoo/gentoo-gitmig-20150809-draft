@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/module-build
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.51 2006/10/20 21:16:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/ChangeLog,v 1.52 2006/10/20 21:17:59 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  module-build-0.28.05.ebuild:
+  Marking amd64 stable
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   module-build-0.28.05.ebuild:
