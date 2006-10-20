@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.0-r1.ebuild,v 1.1 2006/10/19 23:48:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.6.0-r1.ebuild,v 1.2 2006/10/20 15:45:48 carlo Exp $
 
 inherit kde
 
@@ -72,6 +72,7 @@ src_unpack() {
 	# FIXME - disable broken tests for now
 	sed -i -e "s:TESTSDIR =.*:TESTSDIR=:" ${S}/krita/core/Makefile.am \
 		`ls ${S}/krita/colorspaces/*/Makefile.am`
+	sed -i -e "s:toolbar tests:toolbar:" ${S}/kplato/Makefile.am
 }
 
 src_compile() {
