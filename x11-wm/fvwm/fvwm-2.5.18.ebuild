@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18.ebuild,v 1.1 2006/10/19 22:06:14 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18.ebuild,v 1.2 2006/10/20 16:12:20 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -62,7 +62,6 @@ src_unpack() {
 src_compile() {
 	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm --enable-package-subdirs"
 
-
 	# use readline in FvwmConsole.
 	if ! use readline; then
 		myconf="${myconf} --without-readline-library"
@@ -81,65 +80,23 @@ src_compile() {
 		myconf="${myconf} --without-gnome"
 	fi
 
-	if ! use rplay; then
-		myconf="${myconf} --without-rplay-library"
-	fi
-
-	# Install perl bindings.
-	if use perl; then
-		myconf="${myconf} --enable-perllib"
-	else
-		myconf="${myconf} --disable-perllib"
-	fi
-
-	if use xinerama; then
-		myconf="${myconf} --enable-xinerama"
-	else
-		myconf="${myconf} --disable-xinerama"
-	fi
-
-	# bidirectional writing support
-	if use bidi; then
-		myconf="${myconf} --enable-bidi"
-	else
-		myconf="${myconf} --disable-bidi"
-	fi
-
-	# png image support
-	if ! use png; then
-		myconf="${myconf} --without-png-library"
-	fi
-
-	# native language support
-	if use nls; then
-		myconf="${myconf} --enable-nls --enable-iconv"
-	else
-		myconf="${myconf} --disable-nls --disable-iconv"
-	fi
-
-	# support for mouse gestures using libstroke (very very cool)
-	if ! use stroke; then
-		myconf="${myconf} --without-stroke-library"
-	fi
-
-	if use debug; then
-		myconf="${myconf} --enable-debug-msgs --enable-command-log"
-	fi
-
-	# Xft Anti Aliased text support
-	if use truetype; then
-		myconf="${myconf} --enable-xft"
-	else
-		myconf="${myconf} --disable-xft"
-	fi
-
 	# set the local maintainer for fvwm-bug.
 	export FVWM_BUGADDR="taviso@gentoo.org"
 
 	# reccommended by upstream
 	append-flags -fno-strict-aliasing
 
-	econf ${myconf} || die
+	econf ${myconf} `use_enable truetype xft` \
+					`use_with stroke stroke-library` \
+					`use_enable nls` \
+					`use_enable nls iconv` \
+					`use_enable png png-library` \
+					`use_enable bidi` \
+					`use_enable xinerama` \
+					`use_enable debug debug-msgs` \
+					`use_enable debug command-log` \
+					`use_enable perl perllib` \
+					`use_with rplay rplay-library` || die
 	emake || die
 }
 
