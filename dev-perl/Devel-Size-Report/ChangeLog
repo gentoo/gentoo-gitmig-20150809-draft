@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Size-Report
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/ChangeLog,v 1.10 2006/10/20 22:05:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/ChangeLog,v 1.11 2006/10/20 22:56:35 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
+  Devel-Size-Report-0.11.ebuild:
+  Mark 0.11 stable on ia64
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   Devel-Size-Report-0.11.ebuild:
