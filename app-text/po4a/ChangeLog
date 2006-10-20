@@ -1,6 +1,10 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.12 2006/10/11 12:02:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.13 2006/10/20 21:31:56 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org> po4a-0.21.ebuild,
+  po4a-0.25.ebuild:
+  Marking amd64 stable
 
   11 Oct 2006; Jeroen Roovers <jer@gentoo.org> po4a-0.25.ebuild:
   Marked ~hppa (bug #144414).
