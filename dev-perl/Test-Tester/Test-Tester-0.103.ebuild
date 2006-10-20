@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.103.ebuild,v 1.7 2006/10/15 12:56:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.103.ebuild,v 1.8 2006/10/20 20:09:30 kloeri Exp $
 
 inherit perl-module
 IUSE=""
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/~fdaly/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~alpha amd64 ~ia64 ppc sparc ~x86"
+KEYWORDS="alpha amd64 ~ia64 ppc sparc ~x86"
 
 SRC_TEST="do"
 
