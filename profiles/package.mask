@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6080 2006/10/20 03:43:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6081 2006/10/20 11:32:46 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Diego Pettenò <flameeyes@gentoo.org> (20 Oct 2006)
+# Does not compile with GCC4, no package depending on it, last release 2 years ago
+# Scheduled for removal in a month
+dev-ruby/rudl
 
 # Alec Warner <antarus@gentoo.org> (19 Oct 2006)
 # Masked app-editors/xwpe for treecleaners, bug # 124298
