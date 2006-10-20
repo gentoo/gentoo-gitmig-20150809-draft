@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.62 2006/09/22 19:05:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.63 2006/10/20 11:57:52 flameeyes Exp $
+
+  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  timidity++-2.13.2-r2.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   22 Sep 2006; <blubb@gentoo.org> timidity++-2.13.2-r2.ebuild:
   stable on amd64
