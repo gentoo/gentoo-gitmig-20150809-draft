@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/eject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.62 2006/10/16 02:08:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.63 2006/10/20 16:35:33 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> eject-2.1.5.ebuild:
+  Mark 2.1.5 stable on alpha
 
 *eject-2.1.5-r1 (16 Oct 2006)
 
