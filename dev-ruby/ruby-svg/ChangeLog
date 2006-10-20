@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-svg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.6 2006/03/30 03:54:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-svg/ChangeLog,v 1.7 2006/10/20 21:29:04 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-svg-1.0.3.ebuild:
+  Mark 1.0.3 stable on ia64
 
   30 Mar 2006; Aron Griffis <agriffis@gentoo.org> ruby-svg-1.0.3.ebuild:
   Mark 1.0.3 ~ia64
