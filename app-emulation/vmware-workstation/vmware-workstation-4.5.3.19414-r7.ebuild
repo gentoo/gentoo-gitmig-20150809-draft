@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r7.ebuild,v 1.1 2006/10/03 13:27:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.3.19414-r7.ebuild,v 1.2 2006/10/20 04:40:57 tsunam Exp $
 
 # Alter ebuild so that the metadata cache is invalidated.
 
@@ -23,7 +23,7 @@ SRC_URI="mirror://vmware/software/wkst/${MY_P}.tar.gz
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 # Even with all of the QA_* variables below, we still need this because there is
 # no QA variable for setXid lazy bindings.  Sorry, guys.
