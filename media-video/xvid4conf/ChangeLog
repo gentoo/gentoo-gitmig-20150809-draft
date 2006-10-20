@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xvid4conf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.13 2006/05/07 10:35:36 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.14 2006/10/20 21:54:24 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> xvid4conf-1.12.ebuild:
+  Stable on Alpha.
 
   07 May 2006; Markus Rothe <corsair@gentoo.org> xvid4conf-1.12.ebuild:
   Stable on ppc64
