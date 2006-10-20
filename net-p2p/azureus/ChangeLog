@@ -1,6 +1,20 @@
 # ChangeLog for net-p2p/azureus
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.33 2006/10/20 12:16:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/ChangeLog,v 1.34 2006/10/20 18:40:19 betelgeuse Exp $
+
+  20 Oct 2006; Petteri Räty <betelgeuse@gentoo.org>
+  -files/azureus-gentoo-2.3.0.6.sh,
+  -files/azureus-2.4.0.2-popup-hide-debian.patch,
+  -files/azureus-2.4.0.2-pre, -files/SWTThread.java,
+  -files/UpdaterPatcher.java, -files/fedora/azureus-cache-size.patch,
+  -files/fedora/azureus-no-restart.patch,
+  -files/fedora/azureus-remove-manifest-classpath.patch,
+  -files/fedora/azureus-remove-win32-PlatformManagerUpdateChecker.patch,
+  -files/fedora/azureus-remove-win32-osx-platforms.patch,
+  -azureus-2.3.0.6-r1.ebuild, -azureus-2.4.0.2-r2.ebuild,
+  -azureus-2.5.0.0.ebuild, -azureus-2.5.0.0-r1.ebuild,
+  azureus-2.5.0.0-r2.ebuild:
+  Removed old versions.
 
   20 Oct 2006; Simon Stelling <blubb@gentoo.org> azureus-2.5.0.0-r3.ebuild:
   stable on amd64

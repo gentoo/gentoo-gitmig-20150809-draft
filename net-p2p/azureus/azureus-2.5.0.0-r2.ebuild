@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.0-r2.ebuild,v 1.1 2006/09/10 14:36:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus/azureus-2.5.0.0-r2.ebuild,v 1.2 2006/10/20 18:40:19 betelgeuse Exp $
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="source"
 
-# >=swt-3.2 for bug 
+# >=swt-3.2 for bug
 # https://bugs.gentoo.org/show_bug.cgi?id=135835
 
 RDEPEND="
