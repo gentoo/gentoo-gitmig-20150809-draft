@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.227 2006/10/20 19:08:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.228 2006/10/20 21:00:15 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-1.8.5-r2.ebuild:
+  Mark 1.8.5-r2 stable on ia64
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-1.8.5-r2.ebuild:
   Mark 1.8.5-r2 stable on alpha
