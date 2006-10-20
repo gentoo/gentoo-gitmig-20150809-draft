@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.2.ebuild,v 1.8 2006/08/23 12:59:05 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-2.1.2.ebuild,v 1.9 2006/10/20 02:31:42 rl03 Exp $
 
 inherit webapp eutils depend.php
 
@@ -26,6 +26,8 @@ RDEPEND="virtual/httpd-php
 "
 
 S=${WORKDIR}/${PN}2
+
+need_php
 
 pkg_setup() {
 	webapp_pkg_setup
