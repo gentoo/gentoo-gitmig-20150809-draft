@@ -1,0 +1,21 @@
+--- qc-usb-0.6.4.old/qc-driver.c	2006-05-05 21:51:50.000000000 -0500
++++ qc-usb-0.6.4/qc-driver.c	2006-10-16 21:49:03.000000000 -0500
+@@ -867,7 +867,6 @@
+ 
+ 	out += sprintf(out, "\tGeneral driver status\n");
+ 	out += sprintf(out, "Driver version   : %s\n", VERSION);
+-	out += sprintf(out, "Kernel version   : %s\n", UTS_RELEASE);
+ 	if (qc->dev!=NULL) {
+ 	out += sprintf(out, "Device Id        : %04X:%04X\n", (int)GET_VENDORID(qc), (int)GET_PRODUCTID(qc));
+ 	out += sprintf(out, "USB bus number   : %i\n", qc->dev->bus->busnum);
+@@ -3266,8 +3265,8 @@
+ 
+ 	/* We found a QuickCam */
+ 	PRINTK(KERN_INFO,"QuickCam USB camera found (driver version %s)", VERSION);
+-	PRINTK(KERN_INFO,"Kernel:%s bus:%i class:%02X subclass:%02X vendor:%04X product:%04X",
+-		UTS_RELEASE, usbdev->bus->busnum, ifacedesc->bInterfaceClass, ifacedesc->bInterfaceSubClass,
++	PRINTK(KERN_INFO,"bus:%i class:%02X subclass:%02X vendor:%04X product:%04X",
++			usbdev->bus->busnum, ifacedesc->bInterfaceClass, ifacedesc->bInterfaceSubClass,
+ 		usbdev->descriptor.idVendor, usbdev->descriptor.idProduct);
+ 
+ 	/* The interface is claimed (bound) automatically to us when we return from this function (without error code) */

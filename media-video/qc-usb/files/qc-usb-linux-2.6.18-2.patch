@@ -1,0 +1,10 @@
+--- qc-usb-0.6.4.old/quickcam.h	2006-05-05 22:00:26.000000000 -0500
++++ qc-usb-0.6.4/quickcam.h	2006-10-16 21:49:39.000000000 -0500
+@@ -93,6 +93,7 @@
+ #endif
+ 
+ #include <linux/videodev.h>
++#include <media/v4l2-dev.h>
+ #include <linux/usb.h>
+ #include <asm/pgtable.h>		/* This is required for testing pte_offset_map */
+ #include <linux/spinlock.h>
