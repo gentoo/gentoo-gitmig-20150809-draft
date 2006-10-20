@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DBI-Shell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.9 2006/09/10 17:39:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI-Shell/ChangeLog,v 1.10 2006/10/20 22:02:40 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  DBI-Shell-11.93.ebuild:
+  Marking amd64 stable
 
   10 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   DBI-Shell-11.93.ebuild:
