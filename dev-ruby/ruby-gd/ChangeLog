@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.9 2006/07/09 21:05:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.10 2006/10/20 21:25:46 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-gd-0.7.4.ebuild:
+  Mark 0.7.4 stable on ia64
 
   09 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> ruby-gd-0.7.4.ebuild:
   Pinpoint virtual/x11 version to less than 7.
