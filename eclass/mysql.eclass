@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.39 2006/10/20 14:44:01 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.40 2006/10/20 15:22:24 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -271,7 +271,7 @@ configure_40_41_50() {
 }
 
 configure_51() {
-	# TODO : !!!!! readd --withouth-readline
+	# TODO: !!!! readd --without-readline
 	# the failure depend upon config/ac-macros/readline.m4 checking into
 	# readline.h instead of history.h
 	myconf="${myconf} $(use_with ssl)"
@@ -577,8 +577,8 @@ mysql_src_compile() {
 	mysql_version_is_at_least "5.01.05.00" \
 	&& myconf="${myconf} --with-row-based-replication"
 
-	# TODO: Rechek again later, there were problems with assembler enabled
-	#       and some combination of USE flags with MySQL 5.1
+	# TODO: Recheck again later, there were problems with assembler enabled
+	#       and some combinations of USE flags with MySQL 5.1
 	if mysql_check_version_range "5.01.00.00 to 5.01.08.99" ; then
 		myconf="${myconf} --disable-assembler"
 	else
