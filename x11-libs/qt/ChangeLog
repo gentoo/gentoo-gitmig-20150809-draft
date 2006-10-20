@@ -1,6 +1,18 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.365 2006/10/20 11:47:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.366 2006/10/20 18:17:18 flameeyes Exp $
+
+*qt-4.2.0-r2 (20 Oct 2006)
+*qt-4.1.4-r2 (20 Oct 2006)
+*qt-3.3.6-r4 (20 Oct 2006)
+
+  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/qt-3.3.6-CVE-2006-4811-bis.patch,
+  +files/qt-4.1.4-CVE-2006-4811-bis.patch,
+  +files/qt-4.2.0-CVE-2006-4811-bis.patch, +qt-3.3.6-r4.ebuild,
+  +qt-4.1.4-r2.ebuild, +qt-4.2.0-r2.ebuild:
+  Add new version of the patches for CVE-2006-4811 directly from Trolltech,
+  hopefully fixing the problems for good.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> qt-3.3.6-r3.ebuild:
   Stable on Alpha, bug 151838.
