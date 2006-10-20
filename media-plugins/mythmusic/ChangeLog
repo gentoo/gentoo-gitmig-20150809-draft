@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.47 2006/09/17 23:32:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.48 2006/10/20 22:15:31 flameeyes Exp $
+
+  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> mythmusic-0.19.ebuild,
+  mythmusic-0.20.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   17 Sep 2006; Doug Goldstein <cardoe@gentoo.org> mythmusic-0.19.ebuild,
   mythmusic-0.20.ebuild:
