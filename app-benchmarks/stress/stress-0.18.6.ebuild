@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-0.18.6.ebuild,v 1.5 2005/09/03 18:57:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-0.18.6.ebuild,v 1.6 2006/10/20 12:20:18 blubb Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://weather.ou.edu/~apw/projects/stress/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~mips ppc ppc64 ~sparc x86"
 IUSE="static"
 
 DEPEND="virtual/libc"
