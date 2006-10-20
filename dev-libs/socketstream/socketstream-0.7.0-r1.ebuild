@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.1 2005/07/05 21:46:34 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/socketstream-0.7.0-r1.ebuild,v 1.2 2006/10/20 21:34:19 kloeri Exp $
 
 DESCRIPTION="C++ Streaming sockets library"
 HOMEPAGE="http://socketstream.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/socketstream/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~hppa ~amd64"
+KEYWORDS="alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"

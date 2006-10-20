@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/socketstream
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.8 2005/09/19 22:33:39 halcy0n Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.9 2006/10/20 21:34:19 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  socketstream-0.7.0-r1.ebuild:
+  Stable on Alpha.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
