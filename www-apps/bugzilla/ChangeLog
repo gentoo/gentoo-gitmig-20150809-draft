@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.65 2006/10/20 01:59:50 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.66 2006/10/20 23:38:37 weeve Exp $
+
+  20 Oct 2006; Jason Wever <weeve@gentoo.org> bugzilla-2.18.6.ebuild:
+  Stable on SPARC wrt security bug #151563.
 
 *bugzilla-2.22.1 (20 Oct 2006)
 *bugzilla-2.20.3 (20 Oct 2006)
