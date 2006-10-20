@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20099999.ebuild,v 1.3 2006/10/07 19:50:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gnash/gnash-0.7.1_p20099999.ebuild,v 1.4 2006/10/20 19:35:37 genstef Exp $
 
 inherit nsplugins kde-functions autotools cvs
 
@@ -90,6 +90,10 @@ src_compile() {
 		myconf="${myconf} --enable-sound=sdl"
 	fi
 
+	if use kde; then
+		myconf="${myconf} --enable-gui=KDE"
+	fi
+
 	econf \
 		$(use_enable kde klash) \
 		$(use_enable mad mp3) \
@@ -97,7 +101,6 @@ src_compile() {
 		$(use_enable xml) \
 		$(use_enable video_cards_i810 i810-lod-bias) \
 		--without-gcc-arch \
-		--enable-visibility \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
