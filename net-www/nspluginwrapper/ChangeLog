@@ -1,0 +1,14 @@
+# ChangeLog for net-www/nspluginwrapper
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.1 2006/10/20 01:20:16 chutzpah Exp $
+
+*nspluginwrapper-0.9.90.3 (20 Oct 2006)
+
+  20 Oct 2006; Patrick McLean <chutzpah@gentoo.org>
+  +files/nspluginwrapper-0.9.90.3-gentoo.patch, +metadata.xml,
+  +nspluginwrapper-0.9.90.3.ebuild:
+  Initial version. Ebuild originally written by Herbie Hopkins
+  <herbs@gentoo.org>, also had contributions from Ahmed Ammar
+  <b33fc0d3@gmail.com> and Matsuu Takuto matsuu@gentoo.org. Closes bug
+  #138454.
+

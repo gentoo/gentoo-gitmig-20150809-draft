@@ -1,0 +1,50 @@
+diff -ur nspluginwrapper-0.9.90.1-orig/Makefile nspluginwrapper-0.9.90.1/Makefile
+--- nspluginwrapper-0.9.90.1-orig/Makefile	2006-10-19 09:33:49.000000000 -0400
++++ nspluginwrapper-0.9.90.1/Makefile	2006-10-19 09:34:11.000000000 -0400
+@@ -35,7 +35,7 @@
+ npviewer_LDFLAGS = -L/usr/X11R6/$(lib) -lX11 -lXext -lXt -ldl -lpthread
+ npviewer_LDFLAGS += $(GTK_LDFLAGS)
+ ifeq ($(ARCH),i386)
+-npviewer_LDFLAGS += -Wl,-shared
++npviewer_LDFLAGS += -Wl,-shared -L/emul/linux/x86/usr/lib
+ endif
+ 
+ npconfig_PROGRAM = npconfig
+diff -ur nspluginwrapper-0.9.90.1-orig/configure nspluginwrapper-0.9.90.1/configure
+--- nspluginwrapper-0.9.90.1-orig/configure	2006-10-19 09:33:49.000000000 -0400
++++ nspluginwrapper-0.9.90.1/configure	2006-10-19 10:15:31.000000000 -0400
+@@ -260,7 +260,7 @@
+ echo "VERSION=$VERSION" >>$config_mak
+ echo "#define NPW_VERSION \"$VERSION\"" >> $config_h
+ 
+-pkglibdir="$prefix/lib/$PACKAGE"
++pkglibdir="$prefix/$lib/$PACKAGE"
+ echo "pkglibdir=$pkglibdir" >> $config_mak
+ echo "#define NPW_LIBDIR \"$pkglibdir\"" >> $config_h
+ 
+diff -ur nspluginwrapper-0.9.90.1-orig/src/npw-config.c nspluginwrapper-0.9.90.1/src/npw-config.c
+--- nspluginwrapper-0.9.90.1-orig/src/npw-config.c	2006-10-19 09:33:49.000000000 -0400
++++ nspluginwrapper-0.9.90.1/src/npw-config.c	2006-10-19 09:34:11.000000000 -0400
+@@ -80,11 +80,11 @@
+ 
+ static const char *get_system_mozilla_plugin_dir(void)
+ {
+-  static const char default_dir[] = LIBDIR "/mozilla/plugins";
++  static const char default_dir[] = LIBDIR "/nsbrowser/plugins";
+   const char *dir;
+ 
+   if (access("/etc/SuSE-release", F_OK) == 0) {
+-	dir = LIBDIR "/firefox/plugins";			// new plugins location (10.1?)
++	dir = LIBDIR "/nsbrowser/plugins";			// new plugins location (10.1?)
+ 	if (access(dir, F_OK) != 0)
+ 	  dir = "/opt/MozillaFirefox/lib/plugins";	// XXX not lib64 aware?
+   }
+@@ -109,6 +109,8 @@
+ static const char **get_mozilla_plugin_dirs(void)
+ {
+   static const char *default_dirs[] = {
++	"/usr/lib32/nsbrowser/plugins",
++	"/usr/lib64/nsbrowser/plugins",
+ 	"/usr/lib/mozilla/plugins",
+ 	"/usr/lib64/mozilla/plugins",
+ 	"/usr/lib/browser-plugins",
