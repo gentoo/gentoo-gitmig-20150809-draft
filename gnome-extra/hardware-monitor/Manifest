@@ -1,9 +1,38 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9f1a09733675a6fe7b31e2b5198cc44 ChangeLog 2390
-RMD160 0286a213ccec8f8712b7f6c748da9336b17fb3ad ChangeLog 2390
-SHA256 2dd766371935488f81d7dfe0df46c52385a017a2d295fc43149c4e7aa6491f41 ChangeLog 2390
+AUX hardware-monitor-0.7-emptyconstructors.patch 634 RMD160 4a652f1f92fabeed2a6ac0a538114397d65b1534 SHA1 a33ffdabc833c72c8eeebd60c9b235ede0953da3 SHA256 2d553f71dfba0af78997ad3ab484f1c617a43d9fc5716736bbdc169b527d8fc9
+MD5 c7706e923220aca13c729c09652b53d2 files/hardware-monitor-0.7-emptyconstructors.patch 634
+RMD160 4a652f1f92fabeed2a6ac0a538114397d65b1534 files/hardware-monitor-0.7-emptyconstructors.patch 634
+SHA256 2d553f71dfba0af78997ad3ab484f1c617a43d9fc5716736bbdc169b527d8fc9 files/hardware-monitor-0.7-emptyconstructors.patch 634
+DIST hardware-monitor-0.7.tar.gz 207941
+DIST hardware-monitor-1.2.1.tar.bz2 297674 RMD160 40256f45bd918a444d15be37aff6e39333424b41 SHA256 d25e98819cce8fa2fe708a9423941a7cabcc6910142f5494d2ec830c70b1a0e7
+DIST hardware-monitor-1.2.tar.bz2 254305
+DIST hardware-monitor-1.3.tar.bz2 309565 RMD160 f564991c1479890077e4d4f4bcf4bee1d96f92dc SHA256 0604b39711a291159a97b41809071381d0ed9add2562c55704dee38b4510a280
+EBUILD hardware-monitor-0.7.ebuild 895 RMD160 afcf72a5e73ddf91465cd4fd497e8f24947401b0 SHA1 c1f38af14def19430729dc19b88195f09a5aab99 SHA256 c8b06691af50f8642a67b888c70d239cbf8c99ef947629d94b5125fa65be7672
+MD5 efa17895f9cd5d7e59dbbe68d4c557f5 hardware-monitor-0.7.ebuild 895
+RMD160 afcf72a5e73ddf91465cd4fd497e8f24947401b0 hardware-monitor-0.7.ebuild 895
+SHA256 c8b06691af50f8642a67b888c70d239cbf8c99ef947629d94b5125fa65be7672 hardware-monitor-0.7.ebuild 895
+EBUILD hardware-monitor-1.2.1.ebuild 808 RMD160 2b06941982b6ad656d43da63c73082137b5d2f05 SHA1 e8231243bbc8d21f766d2cddda36916a283a15aa SHA256 2b3f9a1e01b2f8137feda2125e425aa53e291efdfcf1e7a941646f348549d266
+MD5 1cfa673801798298e80e3881b54556aa hardware-monitor-1.2.1.ebuild 808
+RMD160 2b06941982b6ad656d43da63c73082137b5d2f05 hardware-monitor-1.2.1.ebuild 808
+SHA256 2b3f9a1e01b2f8137feda2125e425aa53e291efdfcf1e7a941646f348549d266 hardware-monitor-1.2.1.ebuild 808
+EBUILD hardware-monitor-1.2.ebuild 806 RMD160 d9a485492d6b1b38364db4263720dda348bb0490 SHA1 fa63d779e38d55c77428475fcaeface80142d29e SHA256 72f93ae40d32b237a710abd9a5334bddb4e363683aa0c8a1aa9b5f9482762e78
+MD5 59222103e6c4b3035978cfefeff2c6e7 hardware-monitor-1.2.ebuild 806
+RMD160 d9a485492d6b1b38364db4263720dda348bb0490 hardware-monitor-1.2.ebuild 806
+SHA256 72f93ae40d32b237a710abd9a5334bddb4e363683aa0c8a1aa9b5f9482762e78 hardware-monitor-1.2.ebuild 806
+EBUILD hardware-monitor-1.3.ebuild 772 RMD160 b08a96fdad4e4ffcba072618534a08e2ce7fc640 SHA1 accb79aad267c30bc058739c5113d1d3f3dd3883 SHA256 c1361850589053367fb19238737f748b78b76365a3c94a34b98d4f1a705a1656
+MD5 bb88c22cbf3497513cdf09e7cfb09100 hardware-monitor-1.3.ebuild 772
+RMD160 b08a96fdad4e4ffcba072618534a08e2ce7fc640 hardware-monitor-1.3.ebuild 772
+SHA256 c1361850589053367fb19238737f748b78b76365a3c94a34b98d4f1a705a1656 hardware-monitor-1.3.ebuild 772
+MISC ChangeLog 2496 RMD160 6ac5bb02edda40c511e120cb6fa33746ce31b55c SHA1 4f7bc37a094ebe9cbe4dcb48ed0efc7bde57d676 SHA256 7273e0ed44de879bd6f8f8daa512ca4609ee0f3004b6b46b7bed9fd3a8cef3ff
+MD5 125a9e821d9aa4b81b0747a93677f10a ChangeLog 2496
+RMD160 6ac5bb02edda40c511e120cb6fa33746ce31b55c ChangeLog 2496
+SHA256 7273e0ed44de879bd6f8f8daa512ca4609ee0f3004b6b46b7bed9fd3a8cef3ff ChangeLog 2496
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 03811bc4c3b3cb53501f99ce14bbcad7 files/digest-hardware-monitor-0.7 72
 RMD160 7e2fa2a6c0e56c556c9f79a62f20b15b97bd78fb files/digest-hardware-monitor-0.7 72
 SHA256 fb02367b93a2ac1e68a2408711c9df33a4f5f7bd85e4277bfe4893f64a6e1bd2 files/digest-hardware-monitor-0.7 72
@@ -16,28 +45,10 @@ SHA256 36871412353469bb2166a947134b0a1a86dab62f3ba0c7392c5a8ca0b6d41f30 files/di
 MD5 3e14a0beff86f83e92aeb8ae645dcd29 files/digest-hardware-monitor-1.3 265
 RMD160 d4534a3a6b87674615516a0d08d71b911e065704 files/digest-hardware-monitor-1.3 265
 SHA256 fcd44283217d4dd62c918ef3fa29ecdbc8ac12e9fdda04665492b8545bd78a71 files/digest-hardware-monitor-1.3 265
-MD5 c7706e923220aca13c729c09652b53d2 files/hardware-monitor-0.7-emptyconstructors.patch 634
-RMD160 4a652f1f92fabeed2a6ac0a538114397d65b1534 files/hardware-monitor-0.7-emptyconstructors.patch 634
-SHA256 2d553f71dfba0af78997ad3ab484f1c617a43d9fc5716736bbdc169b527d8fc9 files/hardware-monitor-0.7-emptyconstructors.patch 634
-MD5 efa17895f9cd5d7e59dbbe68d4c557f5 hardware-monitor-0.7.ebuild 895
-RMD160 afcf72a5e73ddf91465cd4fd497e8f24947401b0 hardware-monitor-0.7.ebuild 895
-SHA256 c8b06691af50f8642a67b888c70d239cbf8c99ef947629d94b5125fa65be7672 hardware-monitor-0.7.ebuild 895
-MD5 1cfa673801798298e80e3881b54556aa hardware-monitor-1.2.1.ebuild 808
-RMD160 2b06941982b6ad656d43da63c73082137b5d2f05 hardware-monitor-1.2.1.ebuild 808
-SHA256 2b3f9a1e01b2f8137feda2125e425aa53e291efdfcf1e7a941646f348549d266 hardware-monitor-1.2.1.ebuild 808
-MD5 59222103e6c4b3035978cfefeff2c6e7 hardware-monitor-1.2.ebuild 806
-RMD160 d9a485492d6b1b38364db4263720dda348bb0490 hardware-monitor-1.2.ebuild 806
-SHA256 72f93ae40d32b237a710abd9a5334bddb4e363683aa0c8a1aa9b5f9482762e78 hardware-monitor-1.2.ebuild 806
-MD5 09aa6612c7b6943b557065a2304083ba hardware-monitor-1.3.ebuild 775
-RMD160 68c344cd07678d297984fb2cb3cbab60d3e5ddc0 hardware-monitor-1.3.ebuild 775
-SHA256 7a95b883c8d4b954e1b1668ee9fb9accaf2970a1c63026274a720d93631d6070 hardware-monitor-1.3.ebuild 775
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFD/H7mJrHF4yAQTrARAj8sAJ95NkckKOYzzFcrfU2lqb/fuULtpQCgtAmr
-hC67N26jhT2DjlkBb6VBC/g=
-=LQyR
+iD8DBQFFOFje2ZWR0Jhg/EsRAhlCAJ44ekAEFDNe+pH7YU1Mz0ie9ACqIACfdk2/
+StQJXRlRQaQTzKJ9EYFXHPk=
+=sNen
 -----END PGP SIGNATURE-----
