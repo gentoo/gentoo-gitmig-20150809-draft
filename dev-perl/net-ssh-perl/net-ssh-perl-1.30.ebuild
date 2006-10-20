@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.30.ebuild,v 1.5 2006/09/01 15:11:51 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.30.ebuild,v 1.6 2006/10/20 17:51:18 mcummings Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/D/DB/DBROBINS/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Math-GMP-1.04
@@ -32,7 +32,6 @@ DEPEND=">=dev-perl/Math-GMP-1.04
 		dev-perl/crypt-rsa
 		dev-perl/digest-bubblebabble
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_compile() {
 	echo "" | perl-module_src_compile
