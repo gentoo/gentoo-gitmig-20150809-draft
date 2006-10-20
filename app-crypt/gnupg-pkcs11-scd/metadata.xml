@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>crypto</herd>
+	<maintainer>
+		<email>alonbl@gentoo.org</email>
+		<name>Alon Bar-Lev</name>
+	</maintainer>
+	<longdescription>
+		GnuPG scd replacement that enables the use of PKCS#11 tokens.
+	</longdescription>
+</pkgmetadata>

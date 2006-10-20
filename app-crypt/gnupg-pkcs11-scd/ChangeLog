@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/gnupg-pkcs11-scd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.1 2006/10/20 22:10:47 alonbl Exp $
+
+*gnupg-pkcs11-scd-0.02 (20 Oct 2006)
+
+  20 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org> +metadata.xml,
+  +gnupg-pkcs11-scd-0.02.ebuild:
+  Initial import
+
