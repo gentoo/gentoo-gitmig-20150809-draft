@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.30.ebuild,v 1.2 2006/10/20 21:39:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.30.ebuild,v 1.3 2006/10/20 21:40:40 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/P/PM/PMQS/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 
