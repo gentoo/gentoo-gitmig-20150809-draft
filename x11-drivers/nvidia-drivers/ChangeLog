@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.23 2006/10/18 22:06:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.24 2006/10/20 13:14:39 wolf31o2 Exp $
+
+*nvidia-drivers-1.0.8776 (20 Oct 2006)
+
+  20 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/1.0.8178/NVIDIA-1.0.8178-1423627.diff,
+  -files/1.0.8178/NVIDIA-1.0.8178-1427453.diff,
+  -files/1.0.8178/NVIDIA-1.0.8178-1435131.diff,
+  -files/1.0.8178/NVIDIA-1.0.8178-1450608.diff,
+  -files/1.0.8178/NVIDIA-1.0.8178-1453708.diff,
+  -files/1.0.8178/NVIDIA-1.0.8178-U012206.diff,
+  -nvidia-drivers-1.0.8178.ebuild, +nvidia-drivers-1.0.8776.ebuild:
+  Added 8776 for bug #151635 and removing 8178, since it is vulnerable.
 
   18 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   nvidia-drivers-1.0.8178.ebuild, nvidia-drivers-1.0.8774.ebuild,
