@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.26 2006/10/02 10:01:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.27 2006/10/20 11:24:26 flameeyes Exp $
+
+  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -narray-0.5.7-r1.ebuild, narray-0.5.7_p2.ebuild, -narray-0.5.8.ebuild:
+  Fix sandbox violation, remove old versions. Thanks to Patrick Lauer for
+  reporting in bug #152056.
 
   02 Oct 2006; Guy Martin <gmsoft@gentoo.org> narray-0.5.9.ebuild:
   Added ~hppa to KEYWORDS.
