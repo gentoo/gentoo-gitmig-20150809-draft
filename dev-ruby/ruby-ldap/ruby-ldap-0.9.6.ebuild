@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.6.ebuild,v 1.1 2006/08/07 11:54:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ruby-ldap-0.9.6.ebuild,v 1.2 2006/10/20 20:54:05 agriffis Exp $
 
 inherit ruby
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ruby-ldap.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ruby-ldap/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ia64 ppc ~sparc ~x86"
 IUSE="ssl"
 USE_RUBY="ruby18 ruby19"
 DEPEND=">=dev-lang/ruby-1.8.2
