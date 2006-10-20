@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/Tie-Array-Sorted-1.4.1.ebuild,v 1.2 2006/10/15 23:03:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/Tie-Array-Sorted-1.4.1.ebuild,v 1.3 2006/10/20 23:11:00 agriffis Exp $
 
 inherit perl-module versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://cpan/authors/id/T/TM/TMTM/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
