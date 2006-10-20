@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/misterhouse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/ChangeLog,v 1.7 2006/10/19 21:29:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/misterhouse/ChangeLog,v 1.8 2006/10/20 21:24:42 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  misterhouse-2.102.ebuild:
+  Marking amd64 stable
 
 *misterhouse-2.103 (19 Oct 2006)
 
