@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.131 2006/10/20 04:58:00 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.132 2006/10/20 18:42:45 gustavoz Exp $
+
+  20 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  asterisk-1.2.13.ebuild:
+  Stable on sparc wrt security #151881
 
   20 Oct 2006; Joshua Jackson <tsunam@gentoo.org> asterisk-1.2.13.ebuild:
   Stable x86; bug #151881
