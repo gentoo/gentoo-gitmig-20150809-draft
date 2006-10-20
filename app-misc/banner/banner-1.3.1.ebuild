@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/banner-1.3.1.ebuild,v 1.8 2006/09/16 13:59:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/banner/banner-1.3.1.ebuild,v 1.9 2006/10/20 05:31:19 nyhm Exp $
 
 DESCRIPTION="The well known banner program for linux"
 HOMEPAGE="http://cedar-solutions.com"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~mips ppc ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc
+	!games-misc/bsd-games"
 
 src_install() {
 	einstall || die
