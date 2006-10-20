@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.23 2006/10/18 05:43:28 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.24 2006/10/20 12:29:07 blubb Exp $
+
+  20 Oct 2006; Simon Stelling <blubb@gentoo.org> libvisual-0.4.0.ebuild:
+  stable on amd64
 
   18 Oct 2006; Joshua Jackson <tsunam@gentoo.org> libvisual-0.4.0.ebuild:
   Stable x86; for amarok
