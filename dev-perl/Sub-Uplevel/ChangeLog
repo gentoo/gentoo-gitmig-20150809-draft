@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.28 2006/10/15 19:19:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.29 2006/10/20 23:00:50 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> Sub-Uplevel-0.13.ebuild:
+  Mark 0.13 stable on ia64
 
   15 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   Sub-Uplevel-0.09.ebuild, Sub-Uplevel-0.09-r1.ebuild,
