@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/prefork-1.01.ebuild,v 1.2 2006/08/06 03:06:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/prefork-1.01.ebuild,v 1.3 2006/10/20 17:54:35 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADAMK/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
@@ -18,5 +18,4 @@ SRC_TEST="do"
 DEPEND=">=virtual/perl-File-Spec-0.80
 	>=virtual/perl-Scalar-List-Utils-1.10
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
