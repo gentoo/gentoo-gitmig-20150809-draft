@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6078 2006/10/20 03:00:02 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6079 2006/10/20 03:42:05 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Alec Warner <antarus@gentoo.org> (19 Oct 2006)
+# Masked app-editors/xwpe for treecleaners, bug # 124298
+app-editors/xwpe
 
 # Renat Lumpau <rl03@gentoo.org> (19 Oct 2006)
 # dead upstream, bug #152024
