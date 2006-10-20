@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/pike
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.27 2006/08/03 19:41:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.28 2006/10/20 21:43:36 araujo Exp $
+
+  20 Oct 2006; Luis F. Araujo <araujo@gentoo.org> -pike-7.4.44.ebuild,
+  -pike-7.6.6.ebuild, -pike-7.6.24.ebuild, -pike-7.6.50-r2.ebuild:
+  Cleaning up vulnerable pike versions. bug #152091
 
   03 Aug 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   pike-7.6.86-r1.ebuild:
