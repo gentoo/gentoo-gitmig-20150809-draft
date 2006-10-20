@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18.ebuild,v 1.2 2006/10/20 16:12:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18.ebuild,v 1.3 2006/10/20 21:10:27 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,20 +13,20 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bidi debug gtk imlib nls perl png readline rplay stroke tk truetype xinerama"
 
-RDEPEND="readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.3-r1 )
+RDEPEND="readline? ( sys-libs/readline sys-libs/ncurses )
 		gtk? ( =x11-libs/gtk+-1.2*
-				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
-						>=media-libs/imlib-1.9.14-r1 ) )
-		rplay? ( >=media-sound/rplay-3.3.2 )
-		bidi? ( >=dev-libs/fribidi-0.10.4 )
-		png? ( >=media-libs/libpng-1.0.12-r2 )
-		stroke? ( >=dev-libs/libstroke-0.4 )
-		perl? ( tk? ( >=dev-lang/tk-8.3.4
-						>=dev-perl/perl-tk-800.024-r2
-						>=dev-perl/X11-Protocol-0.52 ) )
-		truetype? ( virtual/xft >=media-libs/fontconfig-2.1-r1 )
-		>=dev-lang/perl-5.6.1-r10
-		>=sys-libs/zlib-1.1.4-r1
+				imlib? ( media-libs/gdk-pixbuf
+						media-libs/imlib ) )
+		rplay? ( media-sound/rplay )
+		bidi? ( dev-libs/fribidi )
+		png? ( media-libs/libpng )
+		stroke? ( dev-libs/libstroke )
+		perl? ( tk? ( dev-lang/tk
+						dev-perl/perl-tk
+						dev-perl/X11-Protocol ) )
+		truetype? ( virtual/xft media-libs/fontconfig )
+		dev-lang/perl
+		sys-libs/zlib
 		sys-apps/debianutils
 		|| ( (
 			x11-libs/libXpm
@@ -63,10 +63,8 @@ src_compile() {
 	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm --enable-package-subdirs"
 
 	# use readline in FvwmConsole.
-	if ! use readline; then
-		myconf="${myconf} --without-readline-library"
-	else
-		myconf="${myconf} --with-readline-library --without-termcap-library"
+	if use readline; then
+		myconf="${myconf} --without-termcap-library"
 	fi
 
 	# FvwmGtk can be built as a gnome application, or a Gtk+ application.
@@ -96,6 +94,7 @@ src_compile() {
 					`use_enable debug debug-msgs` \
 					`use_enable debug command-log` \
 					`use_enable perl perllib` \
+					`use_with readline readline-library` \
 					`use_with rplay rplay-library` || die
 	emake || die
 }
