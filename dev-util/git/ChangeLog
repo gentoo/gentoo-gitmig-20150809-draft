@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.134 2006/10/19 12:58:52 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.135 2006/10/20 06:51:38 ferdy Exp $
+
+  20 Oct 2006; Fernando J. Pereda <ferdy@gentoo.org> git-1.4.3.ebuild:
+  Add a needed fixlocalpod call to src_install spotted by Jakub Moc
+  <jakub@gentoo.org>
 
 *git-1.4.3 (19 Oct 2006)
 
