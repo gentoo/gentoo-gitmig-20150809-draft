@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>kumba@gentoo.org</email>
-		<name>Joshua Kinard</name>
+		<email>drizzt@gentoo.org</email>
+		<name>Timothy Redaelli</name>
 	</maintainer>
 	<herd>no-herd</herd>
 	<longdescription>Machine Emulator.  Supports emulation across several architectures.  Primarily for MIPS support, but other platform support coming soon.</longdescription>
