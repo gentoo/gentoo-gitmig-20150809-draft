@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.135 2006/10/16 06:41:54 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.136 2006/10/20 17:59:00 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> totem-1.4.2-r1.ebuild:
+  Mark 1.4.2-r1 stable on alpha
 
   16 Oct 2006; <compnerd@gentoo.org>
   +files/01_build_mozilla_plugin_with_firefox_xpcom.patch,
