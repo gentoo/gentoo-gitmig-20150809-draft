@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.39 2006/09/30 14:09:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.40 2006/10/20 14:56:18 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -dbix-searchbuilder-0.95.ebuild, -dbix-searchbuilder-1.01.ebuild,
+  -dbix-searchbuilder-1.27.ebuild, -dbix-searchbuilder-1.35.ebuild,
+  dbix-searchbuilder-1.38.ebuild, dbix-searchbuilder-1.43.ebuild,
+  dbix-searchbuilder-1.45.ebuild:
+  Marking amd64 stable; cleaning up old ebuilds
 
 *dbix-searchbuilder-1.45 (30 Sep 2006)
 
