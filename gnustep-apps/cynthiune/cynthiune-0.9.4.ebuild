@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.4.ebuild,v 1.7 2006/03/26 08:40:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.4.ebuild,v 1.8 2006/10/20 20:31:21 grobian Exp $
 
 inherit gnustep
 
@@ -24,7 +24,7 @@ DEPEND="${GS_DEPEND}
 	>=media-libs/libogg-1.1.2
 	>=media-libs/libvorbis-1.0.1-r2
 	~media-libs/libmodplug-0.7
-	>=media-libs/flac-1.1.0-r2
+	~media-libs/flac-1.1.2
 	media-sound/esound"
 RDEPEND="${GS_RDEPEND}
 	>=media-libs/libid3tag-0.15.0b
@@ -33,7 +33,7 @@ RDEPEND="${GS_RDEPEND}
 	>=media-libs/libogg-1.1.2
 	>=media-libs/libvorbis-1.0.1-r2
 	~media-libs/libmodplug-0.7
-	>=media-libs/flac-1.1.0-r2
+	~media-libs/flac-1.1.2
 	media-sound/esound"
 
 egnustep_install_domain "Local"

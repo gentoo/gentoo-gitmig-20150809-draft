@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.6 2006/04/27 20:22:47 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.7 2006/10/20 20:31:21 grobian Exp $
+
+  20 Oct 2006; Fabian Groffen <grobian@gentoo.org> cynthiune-0.9.4.ebuild:
+  Fixing flac dependency on 1.1.2 for bug #152007
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> Manifest:
   Fixing SHA256 digest, pass four
