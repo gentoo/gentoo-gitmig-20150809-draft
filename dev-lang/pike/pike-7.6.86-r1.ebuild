@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.86-r1.ebuild,v 1.6 2006/08/03 19:41:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.6.86-r1.ebuild,v 1.7 2006/10/20 21:48:16 araujo Exp $
 
 DESCRIPTION="Pike programming language and runtime"
 HOMEPAGE="http://pike.ida.liu.se/"
@@ -9,7 +9,7 @@ SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="bzip2 debug doc fftw gdbm gtk hardened jpeg kerberos mime mmx mysql opengl pcre pdf scanner sdl ssl svg tiff truetype zlib"
+IUSE="bzip2 debug doc fftw gdbm gtk hardened jpeg kerberos mime mysql opengl pcre pdf scanner sdl ssl svg tiff truetype zlib"
 
 DEPEND="dev-libs/nettle
 	dev-libs/gmp
@@ -62,7 +62,6 @@ src_compile() {
 			$(use_with jpeg jpeglib) \
 			$(use_with kerberos Kerberos) \
 			$(use_with mime MIME) \
-			$(use_with mmx) \
 			$(use_with mysql) \
 			$(use_with opengl GL) \
 			$(use_with opengl GLUT) \
