@@ -20,14 +20,3 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
---- patches/src680/apply 
-+++ patches/src680/apply 
-@@ -214,7 +214,7 @@
- [ Fixes ]
- # backport revision 1.31.61.1 from cws impress107 to fix crash on
- # the impress wizard
--sd-slideshowimpl-check-for-viewframe.diff, i#69530
-+#sd-slideshowimpl-check-for-viewframe.diff, i#69530
- 
- # let sd accept uri-list drop, n#183719
- sd-accept-uri-list-drop.diff, n#183719, rodo

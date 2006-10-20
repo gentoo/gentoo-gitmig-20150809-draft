@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.263 2006/10/16 09:30:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.264 2006/10/20 07:18:52 suka Exp $
+
+  20 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
+  -files/2.0.4/system-icu.diff, files/2.0.4/gentoo-2.0.4.diff,
+  openoffice-2.0.4.ebuild:
+  Silent bump to ooo-build-2.0.4.1, some bugfixes, also removes the need for
+  some of our fixes / workarounds.
 
   16 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4.ebuild:
