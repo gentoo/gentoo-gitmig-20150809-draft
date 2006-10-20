@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.0.ebuild,v 1.9 2006/09/03 21:40:30 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.0.ebuild,v 1.10 2006/10/20 21:30:52 kloeri Exp $
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${P%%_*}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.klografx.net/qiv/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="xinerama"
 
 DEPEND="media-libs/libpng

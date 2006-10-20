@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ebdftopcf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ebdftopcf/ChangeLog,v 1.7 2006/09/07 15:35:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ebdftopcf/ChangeLog,v 1.8 2006/10/20 21:28:53 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> ebdftopcf-2.ebuild:
+  Stable on Alpha.
 
   07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> ebdftopcf-2.ebuild:
   Stable on sparc
