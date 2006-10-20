@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/version
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.19 2006/08/20 01:29:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/version/ChangeLog,v 1.20 2006/10/20 17:58:43 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org> version-0.53.ebuild,
+  version-0.59.ebuild, -version-0.66.1.ebuild, version-0.67.01.ebuild:
+  Marking amd64, sparc stable; cleaning up ebuilds
 
 *version-0.67.01 (20 Aug 2006)
 
