@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_tcl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.10 2006/10/17 03:33:20 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_tcl/ChangeLog,v 1.11 2006/10/20 04:49:05 tsunam Exp $
+
+  20 Oct 2006; Joshua Jackson <tsunam@gentoo.org> mod_tcl-1.0.1.ebuild:
+  Stable x86; bug #151359
 
 *mod_tcl-1.0.1 (17 Oct 2006)
 
