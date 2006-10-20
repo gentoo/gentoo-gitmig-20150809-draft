@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.19 2006/10/20 12:07:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.20 2006/10/20 12:15:39 nelchael Exp $
+
+  20 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  -gxmessage-2.4.4.ebuild:
+  Remove old version.
 
   20 Oct 2006; Simon Stelling <blubb@gentoo.org> gxmessage-2.6.1.ebuild:
   stable on amd64
