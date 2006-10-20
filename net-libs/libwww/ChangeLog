@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.70 2006/10/15 10:05:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.71 2006/10/20 20:46:57 fuzzyray Exp $
+
+  20 Oct 2006; Paul Varner <fuzzyray@gentoo.org> libwww-5.4.0-r7.ebuild:
+  x86 stable - bug #150198
 
   15 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libwww-5.4.0-r7.ebuild:
