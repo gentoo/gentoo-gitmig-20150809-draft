@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.25 2006/04/27 23:30:54 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.26 2006/10/20 22:25:55 flameeyes Exp $
+
+  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> moc-2.2.0-r1.ebuild,
+  moc-2.3.0.ebuild, moc-2.3.2.ebuild, moc-2.3.3.ebuild, moc-2.4.0.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-moc-2.1.4-r1,
   files/digest-moc-2.2.0-r1, files/digest-moc-2.3.0, files/digest-moc-2.3.2,

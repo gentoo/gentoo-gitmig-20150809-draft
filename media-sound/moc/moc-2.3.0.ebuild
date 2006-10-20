@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.3.0.ebuild,v 1.2 2005/07/14 08:53:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.3.0.ebuild,v 1.3 2006/10/20 22:25:55 flameeyes Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="flac mad oss vorbis"
 DEPEND="media-libs/libao
 	media-libs/libsndfile
 	sys-libs/ncurses
-	flac? ( media-libs/flac )
+	flac? ( ~media-libs/flac-1.1.2 )
 	mad? ( media-libs/libmad sys-libs/zlib media-libs/libid3tag )
 	vorbis? ( media-libs/libvorbis )"
 
