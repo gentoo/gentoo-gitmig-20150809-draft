@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.37 2006/10/20 12:56:30 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.38 2006/10/20 13:14:21 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -203,7 +203,7 @@ configure_40_41_50() {
 	myconf="${myconf} --with-extra-tools"
 	myconf="${myconf} --with-innodb"
 	myconf="${myconf} --without-readline"
-	mysql_version_is_at_least "5.00.00.00" && myconf="${myconf} $(use_with raid)"
+	mysql_version_is_at_least "5.00.00.00" || myconf="${myconf} $(use_with raid)"
 
 	if useq "ssl" ; then
 		# --with-vio is not needed anymore, it's on by default and
