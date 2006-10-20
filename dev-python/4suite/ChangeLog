@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.30 2006/09/13 18:02:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.31 2006/10/20 20:33:40 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  4suite-1.0_beta3.ebuild:
+  Stable on Alpha.
 
   29 Aug 2006; <blubb@gentoo.org> 4suite-1.0_beta3.ebuild:
   fix to adhere multilib-strict; bug 145456 thanks to Michael Weyershaeuser

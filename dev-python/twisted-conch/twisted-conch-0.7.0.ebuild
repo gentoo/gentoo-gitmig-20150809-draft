@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-0.7.0.ebuild,v 1.5 2006/08/01 15:16:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/twisted-conch-0.7.0.ebuild,v 1.6 2006/10/20 20:36:58 kloeri Exp $
 
 MY_PACKAGE=Conch
 
@@ -8,7 +8,7 @@ inherit twisted eutils
 
 DESCRIPTION="Twisted SSHv2 implementation."
 
-KEYWORDS="~alpha amd64 ia64 ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ~sparc ~x86"
 
 DEPEND=">=dev-python/twisted-2.4
 	>=dev-python/pycrypto-1.9_alpha6"

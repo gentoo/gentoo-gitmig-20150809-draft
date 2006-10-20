@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.20 2006/07/21 02:32:05 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.21 2006/10/20 20:33:45 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  elementtree-1.2.6.ebuild:
+  Stable on Alpha.
 
   20 Jul 2006; <psi29a@gentoo.org> elementtree-1.2.6.ebuild:
   stable on mips
