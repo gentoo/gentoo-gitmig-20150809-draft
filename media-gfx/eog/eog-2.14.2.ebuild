@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.14.2.ebuild,v 1.10 2006/09/14 01:14:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.14.2.ebuild,v 1.11 2006/10/20 23:56:50 agriffis Exp $
 
 inherit eutils gnome2 autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="jpeg lcms"
 
 RDEPEND=">=gnome-base/gnome-vfs-2.5.91
