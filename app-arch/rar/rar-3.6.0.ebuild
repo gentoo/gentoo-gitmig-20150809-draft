@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.6.0.ebuild,v 1.2 2006/10/07 11:44:24 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-3.6.0.ebuild,v 1.3 2006/10/20 17:45:38 betelgeuse Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="RAR compressor/uncompressor"
 HOMEPAGE="http://www.rarsoft.com/"
@@ -30,4 +32,11 @@ src_install() {
 	dodir /opt/bin
 	dosym /opt/rar/bin/rar /opt/bin/rar
 	dosym /opt/rar/bin/unrar /opt/bin/unrar
+}
+
+pkg_postinst() {
+	if [[ $(gcc-major-version) = "3" && $(gcc-minor-version) -lt 4 ]]; then
+		ewarn "System gcc is too old to run $PN}."
+		ewarn "${PN} requires >=sys-devel/gcc-3.4 to run."
+	fi
 }
