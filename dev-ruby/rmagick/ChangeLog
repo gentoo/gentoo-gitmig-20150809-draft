@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.27 2006/04/27 19:23:13 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.28 2006/10/20 21:19:42 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> rmagick-1.9.3-r1.ebuild:
+  Mark 1.9.3-r1 stable on ia64
 
   27 Apr 2006; Marien Zwart <marienz@gentoo.org> files/digest-rmagick-1.3.2,
   files/digest-rmagick-1.7.3, files/digest-rmagick-1.9.2,
