@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/aww
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.16 2006/09/17 01:34:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.17 2006/10/20 21:38:26 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org> aww-0.34.ebuild:
+  Marking amd64 stable
 
   17 Sep 2006; Michael Cummings <mcummings@gentoo.org> aww-0.34.ebuild:
   Keywording ~amd64

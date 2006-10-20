@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Boulder
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Boulder/ChangeLog,v 1.8 2006/09/10 16:20:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Boulder/ChangeLog,v 1.9 2006/10/20 21:40:32 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org> Boulder-1.30.ebuild:
+  Marking amd64 stable
 
   10 Sep 2006; Michael Cummings <mcummings@gentoo.org> Boulder-1.30.ebuild:
   Keywording ~amd64

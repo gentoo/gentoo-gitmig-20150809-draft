@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Cache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/ChangeLog,v 1.3 2006/09/10 16:25:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/ChangeLog,v 1.4 2006/10/20 21:45:43 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org> Cache-2.04.ebuild:
+  Marking amd64 stable
 
   10 Sep 2006; Michael Cummings <mcummings@gentoo.org> Cache-2.04.ebuild:
   Keywording ~amd64
