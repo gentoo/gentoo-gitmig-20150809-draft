@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2257 2006/10/20 05:40:45 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2258 2006/10/20 20:11:51 drizzt Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -100,9 +100,6 @@ app-emulation/emul-linux-ppc-glibc:nptlonly - Disables installing the linuxthrea
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/emul-linux-x86-qtlibs:immqt-bc - Enable binary compatible version of immodule for Qt
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
-app-emulation/gxemul:cacheemu - Enables support for cache emulation
-app-emulation/gxemul:delays - Enables instruction latency/delay emulation
-app-emulation/gxemul:mips16 - Enables MIPS16 instruction support
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:pci - Experimental PCI proxy support
 app-emulation/mol:sheep - Support for the sheep net driver
