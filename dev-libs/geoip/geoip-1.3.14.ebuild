@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.3.14.ebuild,v 1.10 2006/10/15 09:25:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.3.14.ebuild,v 1.11 2006/10/20 00:18:45 kloeri Exp $
 
 inherit flag-o-matic libtool
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.maxmind.com/download/geoip/api/c/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc

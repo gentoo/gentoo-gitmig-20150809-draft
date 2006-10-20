@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xerces-c
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.45 2006/07/15 10:48:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.46 2006/10/20 00:31:59 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  xerces-c-2.7.0-r1.ebuild:
+  Stable on Alpha.
 
   15 Jul 2006; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove halcy0n from metadata.xml as he's retired.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vdk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.25 2006/09/06 06:23:25 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.26 2006/10/20 00:31:36 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> vdk-2.4.1.ebuild:
+  Stable on Alpha.
 
   06 Sep 2006; Joshua Jackson <tsunam@gentoo.org> vdk-2.4.1.ebuild:
   Stable x86; bug #144273
