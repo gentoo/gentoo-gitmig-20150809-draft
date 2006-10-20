@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r3.ebuild,v 1.1 2006/10/20 23:49:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r3.ebuild,v 1.2 2006/10/20 23:51:39 flameeyes Exp $
 
 IUSE="utempter"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.hanterm.org/"
 SRC_URI="http://download.kldp.net/hanterm/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~ppc ~ppc-macos ~x86"
+KEYWORDS="~ppc ~x86"
 LICENSE="X11"
 
 DEPEND="x11-libs/libXmu
@@ -26,9 +26,6 @@ src_unpack() {
 	sed -i -e "s:extern char \*malloc();::" \
 		-e "s:extern char \*realloc();::" \
 		button.c charproc.c
-	if use ppc-macos ; then
-		sed -i -e "s:extern int sys_nerr;::" misc.c
-	fi
 }
 
 src_compile() {
