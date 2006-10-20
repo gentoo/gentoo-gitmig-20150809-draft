@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Hierarchy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.22 2006/10/15 10:03:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.23 2006/10/20 19:16:27 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  Data-Hierarchy-0.22.ebuild:
+  Stable on Alpha.
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   Data-Hierarchy-0.22.ebuild:

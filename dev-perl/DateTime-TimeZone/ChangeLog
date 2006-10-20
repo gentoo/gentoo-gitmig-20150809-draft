@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.37 2006/10/09 14:10:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.38 2006/10/20 19:18:14 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  DateTime-TimeZone-0.48.ebuild:
+  Stable on Alpha.
 
   09 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -DateTime-TimeZone-0.44.ebuild, DateTime-TimeZone-0.45.ebuild,
