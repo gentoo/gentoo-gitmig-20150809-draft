@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.58-r1.ebuild,v 1.8 2006/08/06 01:34:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.58-r1.ebuild,v 1.9 2006/10/20 13:12:25 mcummings Exp $
 
 inherit perl-module eutils
 
@@ -17,7 +17,6 @@ DEPEND=">=dev-perl/XML-SAX-0.12
 	>=dev-libs/libxml2-2.6.6
 	>=dev-perl/XML-NamespaceSupport-1.07
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 SRC_TEST="do"
 
