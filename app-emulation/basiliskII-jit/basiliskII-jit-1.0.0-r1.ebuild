@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.5 2005/01/01 14:08:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII-jit/basiliskII-jit-1.0.0-r1.ebuild,v 1.6 2006/10/20 19:56:25 genstef Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,14 +17,28 @@ LICENSE="|| ( GPL-2 LGPL-2.1 )"
 KEYWORDS="x86 -ppc"
 SLOT="0"
 
-IUSE="X gtk xv esd dga"
+IUSE="dga esd gtk nls sdl xv"
 
 ### fbdev support in the stable release...  the cvs branch is broken, period!
 ### gtk and esd support are compile time options, we'll check the usual
 ### use variables here and set ./configure options accordingly
 
-DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
-	esd? ( media-sound/esound )
+RDEPEND="esd? ( media-sound/esound )
+	gtk? ( =x11-libs/gtk+-1.2* gnome-base/libgnomeui )
+	!sdl? ( dga? ( x11-libs/libXxf86dga ) )
+	sdl? ( media-libs/libsdl )
+	nls? ( virtual/libintl )
+	x11-libs/libSM
+	x11-libs/libXi
+	x11-libs/libXxf86vm
+	!app-emulation/basiliskII"
+
+DEPEND="${RDEPEND}
+	!sdl? ( dga? ( x11-proto/xf86dgaproto ) )
+	nls? ( sys-devel/gettext )
+	x11-proto/xf86vidmodeproto
+	x11-proto/xextproto
+	x11-proto/xproto
 	>=sys-apps/sed-4"
 
 src_unpack() {
@@ -35,6 +49,14 @@ src_unpack() {
 	sed -i \
 		-e "s/Mandrake/Gentoo/g" ${S}/keycodes || \
 			die "sed keycods failed"
+
+	#prevent prestripped binary
+	cd "${S}"
+	sed -i -e '/^INSTALL_PROGRAM/s/-s//' Makefile.in
+	
+	if use sdl && use dga ; then
+		einfo "SDL support was requested, DGA will be disabled"
+	fi
 }
 
 src_compile() {
@@ -46,10 +68,13 @@ src_compile() {
 ### Default ./configure options are all =yes by default. we'll check for
 ### and use -values and switch them accordingly
 
-	use X || myflags="${myflags} --with-x=no"
 	use esd || myflags="${myflags} --with-esd=no"
 	use gtk || myflags="${myflags} --with-gtk=no"
-	use dga || myflags="${myflags} --with-dga=no"
+	use dga || myflags="${myflags} --enable-xf86-dga=no"
+	use nls || myflags="${myflags} --disable-nls"
+	use sdl && myflags="${myflags} \
+		--enable-sdl-video=yes \
+		--enable-sdl-audio=yes"
 	use xv || myflags="${myflags} --enable-xf86-vidmode=no"
 
 	./configure \
@@ -79,7 +104,7 @@ src_install() {
 	mv ${D}/usr/share/man/man1/BasiliskII.1 \
 		${D}/usr/share/man/man1/BasiliskII-jit.1
 	cd ../..
-	dodoc ChangeLog INSTALL README TECH TODO TODO.JIT
+	dodoc ChangeLog README TECH TODO TODO.JIT
 
 ### Networking is _disabled_ in this revision,  hopefully -r2 will
 ### resolve the permissions issue / linux src compilation problem
