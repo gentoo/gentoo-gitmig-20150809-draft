@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.1.ebuild,v 1.1 2006/07/23 00:47:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.1.ebuild,v 1.2 2006/10/20 20:50:45 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND="app-arch/unzip
 	arts? ( kde-base/arts )
 	esd? ( >=media-sound/esound-0.2.30 )
 	flac? ( >=media-libs/libvorbis-1.0
-		>=media-libs/flac-1.1.2 )
+		~media-libs/flac-1.1.2 )
 	gnome? ( >=gnome-base/gconf-2.6.0 )
 	jack? ( >=media-libs/bio2jack-0.4
 		media-libs/libsamplerate
