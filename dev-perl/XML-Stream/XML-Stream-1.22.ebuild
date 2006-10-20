@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.22.ebuild,v 1.14 2006/08/06 01:56:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/XML-Stream-1.22.ebuild,v 1.15 2006/10/20 13:26:37 mcummings Exp $
 
 inherit perl-module
 
@@ -20,5 +20,3 @@ DEPEND="dev-perl/Authen-SASL
 	ssl? ( dev-perl/IO-Socket-SSL )
 	virtual/perl-MIME-Base64
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
