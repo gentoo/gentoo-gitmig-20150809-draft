@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/enigmail
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.37 2006/10/10 21:52:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/ChangeLog,v 1.38 2006/10/20 02:31:34 cardoe Exp $
+
+  20 Oct 2006; Doug Goldstein <cardoe@gentoo.org> enigmail-0.94.1.ebuild:
+  Fix for bug #143158 on AMD64. All work and credit goes to Anarchy who was
+  great with this.
 
   10 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> enigmail-0.94.1.ebuild:
   Stable on ia64.
