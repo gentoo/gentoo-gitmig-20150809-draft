@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.15 2006/10/20 13:50:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.16 2006/10/20 14:59:34 genstef Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
@@ -127,10 +127,10 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin /usr/share/man/man1
-	use server && dodir /usr/lib/xorg/modules/extensions
+	use server && dodir /usr/$(get_libdir)/xorg/modules/extensions
 
 	cd unix
-	./vncinstall "${D}"/usr/bin "${D}"/usr/share/man "${D}"/usr/lib/xorg/modules/extensions || die "failed to run vncinstall"
+	./vncinstall "${D}"/usr/bin "${D}"/usr/share/man "${D}"/usr/$(get_libdir)/xorg/modules/extensions || die "failed to run vncinstall"
 	cd ..
 	dodoc README
 
