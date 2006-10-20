@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.29 2006/09/17 19:04:33 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.30 2006/10/20 20:08:23 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-gconf2-0.14.1.ebuild:
+  Mark 0.14.1 stable on alpha
 
   17 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ruby-gconf2-0.14.1.ebuild:
