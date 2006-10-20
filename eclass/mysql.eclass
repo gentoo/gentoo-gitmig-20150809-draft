@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.40 2006/10/20 15:22:24 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.41 2006/10/20 18:53:45 chtekk Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -25,21 +25,23 @@ if [[ -z "${MYSQL_VERSION_ID}" ]] ; then
 	MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 fi
 
-DEPEND="${DEPEND}
-		>=sys-libs/readline-4.1
-		berkdb? ( sys-apps/ed )
-		ssl? ( >=dev-libs/openssl-0.9.6d )
+inherit eutils flag-o-matic gnuconfig autotools mysql_fx
+
+# Be warned, *DEPEND are version-dependant
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
 		userland_GNU? ( sys-process/procps )
-		>=sys-libs/zlib-1.2.3
+		>=sys-apps/sed-4
 		>=sys-apps/texinfo-4.7-r1
-		>=sys-apps/sed-4"
+		>=sys-libs/readline-4.1
+		>=sys-libs/zlib-1.2.3"
+
+mysql_version_is_at_least "5.01.00.00" \
+|| DEPEND="${DEPEND} berkdb? ( sys-apps/ed )"
 
 RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
 
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )"
-
-inherit eutils flag-o-matic gnuconfig autotools mysql_fx
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
@@ -288,7 +290,7 @@ configure_51() {
 	local plugins="csv,myisam,myisammrg,heap"
 	if useq "extraengine" ; then
 		# like configuration=max-no-ndb, archive and example removed in 5.1.11
-		plugins="${plugins},blackhole,federated,ftexample,partition"
+		plugins="${plugins},archive,blackhole,example,federated,ftexample,partition"
 
 		elog "Before using the Federated storage engine, please be sure to read"
 		elog "http://dev.mysql.com/doc/refman/5.1/en/federated-limitations.html"
@@ -341,7 +343,9 @@ mysql_pkg_setup() {
 		die "USE flags 'cluster' and 'extraengine' conflict with 'minimal' USE flag!"
 	fi
 
-	useq "berkdb" && elog "Berkeley DB support is deprecated and will be removed in future versions!"
+	mysql_check_version_range "4.00.00.00 to 5.00.99.99" \
+	&& useq "berkdb" \
+	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
 }
 
 mysql_src_unpack() {
@@ -400,9 +404,8 @@ mysql_src_unpack() {
 		popd &>/dev/null
 	done
 
-	# Berkeley DB has been removed in MySQL 5.1
-	if useq "berkdb" \
-	&& mysql_check_version_range "4.01.00.00 to 5.00.99.99" ; then
+	if mysql_check_version_range "4.01.00.00 to 5.00.99.99" \
+	&& useq "berkdb" ; then
 		[[ -w "${bdbdir}/ltmain.sh" ]] && cp -f "ltmain.sh" "${bdbdir}/ltmain.sh"
 		pushd "${bdbdir}" \
 		&& sh s_all \
@@ -751,7 +754,9 @@ mysql_pkg_postinst() {
 		mysql_version_is_at_least "5.01.00.00" \
 		|| elog "InnoDB is *not* optional as of MySQL-4.0.24, at the request of upstream."
 	fi
-	useq "berkdb" && elog "Berkeley DB support is deprecated and will be removed in future versions!"
+	mysql_check_version_range "4.00.00.00 to 5.00.99.99" \
+	&& useq "berkdb" \
+	&& elog "Berkeley DB support is deprecated and will be removed in future versions!"
 }
 
 mysql_pkg_config() {
