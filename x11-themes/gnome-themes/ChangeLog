@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.137 2006/10/09 10:22:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.138 2006/10/20 20:49:27 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-themes-2.14.2.ebuild:
+  Stable on Alpha.
 
 *gnome-themes-2.16.1.1 (09 Oct 2006)
 
