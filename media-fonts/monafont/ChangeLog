@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/monafont
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.25 2006/09/07 17:56:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.26 2006/10/20 21:25:56 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  monafont-2.90-r2.ebuild:
+  Stable on Alpha.
 
   07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   monafont-2.90-r2.ebuild:

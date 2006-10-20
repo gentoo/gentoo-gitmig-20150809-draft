@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vc-fonts
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.11 2006/09/07 18:01:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vc-fonts/ChangeLog,v 1.12 2006/10/20 21:27:46 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  vc-fonts-20020207-r1.ebuild:
+  Stable on Alpha.
 
   07 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   vc-fonts-20020207-r1.ebuild:
