@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.61 2006/10/16 22:08:53 cparrott Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.62 2006/10/20 00:29:27 dcoutts Exp $
+
+  20 Oct 2006; Duncan Coutts <dcoutts@gentoo.org>
+  +files/darcs-1.0.8-ghc66.patch:
+  Fix bug #150326 again, hopefully for good this time!
 
   16 Oct 2006; Chris Parrott <cparrott@gentoo.org> darcs-1.0.7.ebuild,
   darcs-1.0.8-r1.ebuild:
