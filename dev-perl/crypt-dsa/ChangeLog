@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-dsa
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.16 2006/08/07 02:17:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.17 2006/10/20 13:41:30 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -crypt-dsa-0.12.ebuild, crypt-dsa-0.13.ebuild, crypt-dsa-0.14.ebuild:
+  Marking amd64 stable
 
   07 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   crypt-dsa-0.14.ebuild:

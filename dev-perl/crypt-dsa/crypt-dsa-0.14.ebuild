@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-0.14.ebuild,v 1.4 2006/08/07 02:17:56 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/crypt-dsa-0.14.ebuild,v 1.5 2006/10/20 13:41:30 mcummings Exp $
 
 inherit perl-module
 
@@ -23,5 +23,3 @@ DEPEND="dev-perl/data-buffer
 	dev-perl/Digest-SHA1
 	dev-perl/convert-pem
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
-
