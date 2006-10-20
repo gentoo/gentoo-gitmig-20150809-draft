@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.44 2006/10/17 01:42:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.45 2006/10/20 16:41:57 nixnut Exp $
+
+  20 Oct 2006; <nixnut@gentoo.org> xlockmore-5.21-r1.ebuild:
+  Stable on ppc wrt bug 152070
 
   17 Oct 2006; Jeroen Roovers <jer@gentoo.org> xlockmore-5.21-r1.ebuild:
   Stable for HPPA (bug #109376).
