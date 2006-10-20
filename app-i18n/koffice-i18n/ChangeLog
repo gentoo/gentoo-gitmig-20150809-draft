@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/koffice-i18n
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.74 2006/10/11 08:35:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.75 2006/10/20 15:47:37 carlo Exp $
+
+*koffice-i18n-1.6.0 (20 Oct 2006)
+
+  20 Oct 2006; Carsten Lohrke <carlo@gentoo.org>
+  -koffice-i18n-1.6_rc1.ebuild, +koffice-i18n-1.6.0.ebuild:
+  Version bump.
 
   11 Oct 2006; Markus Rothe <corsair@gentoo.org> koffice-i18n-1.5.2.ebuild:
   Stable on ppc64
