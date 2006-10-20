@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/Class-Autouse-1.27.ebuild,v 1.4 2006/10/15 09:48:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Autouse/Class-Autouse-1.27.ebuild,v 1.5 2006/10/20 18:55:45 kloeri Exp $
 
 inherit perl-module
 DESCRIPTION="Runtime aspect loading of one or more classes"
@@ -9,7 +9,7 @@ HOMEPAGE="http://search.cpan.org/~adamk/${P}"
 IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ~hppa ia64 ~ppc sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ~ppc sparc ~x86"
 DEPEND="virtual/perl-Test-Simple
 		dev-perl/ExtUtils-AutoInstall
 		>=virtual/perl-Scalar-List-Utils-1.18
