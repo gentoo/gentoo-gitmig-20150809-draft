@@ -1,3 +1,0 @@
-#!/bin/sh
-cd GAMES_PREFIX_OPT/phobiaii
-exec ./linuxphobia "$@"
