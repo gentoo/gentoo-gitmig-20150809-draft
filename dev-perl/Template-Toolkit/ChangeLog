@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Template-Toolkit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.29 2006/10/15 20:10:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.30 2006/10/20 20:06:33 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  Template-Toolkit-2.15-r1.ebuild:
+  ~alpha keyword.
 
   15 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   Template-Toolkit-2.09.ebuild, Template-Toolkit-2.13.ebuild,

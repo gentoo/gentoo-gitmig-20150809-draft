@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-Graph3d
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.16 2006/08/05 04:07:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.17 2006/10/20 19:59:03 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> GD-Graph3d-0.63.ebuild:
+  ~alpha keyword.
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   GD-Graph3d-0.63.ebuild:
