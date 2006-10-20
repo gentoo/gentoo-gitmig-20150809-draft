@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/mecab-ipadic-2.7.0.20060707.ebuild,v 1.2 2006/07/12 12:21:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/mecab-ipadic-2.7.0.20060707.ebuild,v 1.3 2006/10/20 17:37:30 mcummings Exp $
 
 IUSE="unicode"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mecab.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/mecab/20904/${MY_P}.tar.gz"
 
 LICENSE="ipadic"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 S=${WORKDIR}/${MY_P}
 

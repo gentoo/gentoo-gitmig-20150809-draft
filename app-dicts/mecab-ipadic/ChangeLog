@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/mecab-ipadic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.3 2006/07/12 12:21:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/mecab-ipadic/ChangeLog,v 1.4 2006/10/20 17:37:30 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  mecab-ipadic-2.7.0.20060707.ebuild:
+  Marking amd64 stable
 
   12 Jul 2006; Akinori Hattori <hattya@gentoo.org>
   mecab-ipadic-2.7.0.20060408.ebuild, mecab-ipadic-2.7.0.20060707.ebuild:
