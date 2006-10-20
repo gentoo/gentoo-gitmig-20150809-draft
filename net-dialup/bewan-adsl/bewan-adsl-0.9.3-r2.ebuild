@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.1 2006/10/04 19:41:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/bewan-adsl-0.9.3-r2.ebuild,v 1.2 2006/10/20 19:46:41 mrness Exp $
 
 inherit eutils linux-mod
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.bewan.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="usb pcitimer slowpcibridge kt400"
 
 DEPEND="virtual/linux-sources"

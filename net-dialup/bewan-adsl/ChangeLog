@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/bewan-adsl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.13 2006/10/04 19:41:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/bewan-adsl/ChangeLog,v 1.14 2006/10/20 19:46:41 mrness Exp $
+
+  20 Oct 2006; Alin Nastac <mrness@gentoo.org> bewan-adsl-0.9.3-r2.ebuild:
+  Stable on x86.
 
 *bewan-adsl-0.9.3-r2 (04 Oct 2006)
 
