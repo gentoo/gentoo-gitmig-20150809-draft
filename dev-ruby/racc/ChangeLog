@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.32 2006/09/20 12:07:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.33 2006/10/20 19:20:48 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> racc-1.4.5.ebuild:
+  Mark 1.4.5 stable on alpha
 
   20 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> racc-1.4.5.ebuild:
   Marked stable on amd64 wrt bug #148323.
