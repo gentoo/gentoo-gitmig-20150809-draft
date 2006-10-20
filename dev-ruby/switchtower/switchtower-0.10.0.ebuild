@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/switchtower/switchtower-0.10.0.ebuild,v 1.5 2006/03/30 03:59:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/switchtower/switchtower-0.10.0.ebuild,v 1.6 2006/10/20 22:30:52 agriffis Exp $
 
 inherit ruby gems
 
@@ -11,7 +11,7 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~ia64 x86"
+KEYWORDS="ia64 x86"
 IUSE=""
 #RESTRICT="test"
 
