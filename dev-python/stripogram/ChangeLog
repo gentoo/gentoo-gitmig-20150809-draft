@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/stripogram
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stripogram/ChangeLog,v 1.7 2006/07/12 16:59:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stripogram/ChangeLog,v 1.8 2006/10/20 12:37:40 blubb Exp $
+
+  20 Oct 2006; Simon Stelling <blubb@gentoo.org> stripogram-1.4.ebuild:
+  added ~amd64
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> stripogram-1.4.ebuild:
   Mark 1.4 stable on ia64
