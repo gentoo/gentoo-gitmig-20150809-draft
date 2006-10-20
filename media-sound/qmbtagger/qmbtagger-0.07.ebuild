@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.8 2006/10/20 11:43:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.07.ebuild,v 1.9 2006/10/20 11:44:21 flameeyes Exp $
 
 inherit eutils kde-functions
 
@@ -15,7 +15,7 @@ IUSE="ogg debug"
 
 DEPEND="
 	=x11-libs/qt-3*
-	media-libs/flac
+	~media-libs/flac-1.1.2
 	media-libs/id3lib
 	media-libs/musicbrainz
 	media-libs/libmad
