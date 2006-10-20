@@ -1,0 +1,17 @@
+Index: cpufreqd-2.2.0/Makefile.am
+===================================================================
+--- cpufreqd-2.2.0.orig/Makefile.am
++++ cpufreqd-2.2.0/Makefile.am
+@@ -22,11 +22,7 @@ SUBDIRS = src utils manpages
+ #man5_MANS = manpages/cpufreqd.conf.5
+ 
+ install-data-local:
+-	if [ -f $(DESTDIR)/$(sysconfdir)/cpufreqd.conf ]; then \
+-	 echo "** preserving old configuration file **"; \
+-	else \
+-	 install -Dm 0644 $(top_srcdir)/cpufreqd.conf $(DESTDIR)/$(sysconfdir)/cpufreqd.conf; \
+-	fi;
++	 install -Dm 0644 $(top_srcdir)/cpufreqd.conf $(DESTDIR)/$(sysconfdir)/conf.d/cpufreqd
+ 
+ tags:
+ 	if [ -f ./tags ]; then \

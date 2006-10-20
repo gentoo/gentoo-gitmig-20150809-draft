@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.2.0-init.d,v 1.1 2006/10/16 18:12:29 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.2.0-init.d,v 1.2 2006/10/20 19:47:34 phreak Exp $
 
-CONFIGFILE=/etc/cpufreqd.conf
+CONFIGFILE=/etc/conf.d/cpufreqd
 
 depend() {
 	need localmount
@@ -18,6 +18,7 @@ checkconfig() {
 
 	if [[ ! -e /proc/cpufreq ]] && [[ ! -e /sys/devices/system/cpu/cpu0/cpufreq ]]; then
 		eerror "cpufreqd requires the kernel to be configured with CONFIG_CPU_FREQ"
+		eerror "Make sure that the appropiate drivers for your CPU are available."
 		return 1
 	fi
 }
