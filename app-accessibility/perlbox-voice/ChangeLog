@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/perlbox-voice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.4 2006/09/10 15:53:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/perlbox-voice/ChangeLog,v 1.5 2006/10/20 21:21:29 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  perlbox-voice-0.09-r1.ebuild:
+  Marking amd64 stable
 
   10 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   perlbox-voice-0.09-r1.ebuild:
