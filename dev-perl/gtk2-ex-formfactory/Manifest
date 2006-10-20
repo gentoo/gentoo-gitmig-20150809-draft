@@ -1,64 +1,26 @@
-DIST Gtk2-Ex-FormFactory-0.57.tar.gz 92188
-DIST Gtk2-Ex-FormFactory-0.58.tar.gz 96388
-DIST Gtk2-Ex-FormFactory-0.59.tar.gz 96490 RMD160 0159c90fd3c78d8bccabdfc539a62bf47ef53edd SHA1 89aade774798bdbf06b740b8e1567423a2d0f35f SHA256 694b0cba8d5a3507e41a82156723329adf76e73c9e83ba26bb113fce6fa23303
-DIST Gtk2-Ex-FormFactory-0.62.tar.gz 100933 RMD160 7192334d5fd5d547f80873986c37ce6df138223d SHA1 390641e7acb8cbb3e7e47bf9f71524d558f41645 SHA256 7ad8ffc2386a6aabbaa476bbcc8035d3eaa3b9fd8db487125437e33a1664b718
-DIST Gtk2-Ex-FormFactory-0.63.tar.gz 101014 RMD160 f109f6b21b745d8312bb4091c0b29a6ba146ce5d SHA1 1fad7daf2b141b9d6e3fddf1abcc4ab8a1b50248 SHA256 351cb845b6cf7bccaa8c447da6fe35e8b49b27f3b803d6bd1f4989f6a7002e14
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST Gtk2-Ex-FormFactory-0.64.tar.gz 101537 RMD160 fafd2c42d8f0174513bdfb5b23c48ad8ba54f30c SHA1 b89c799f74211203f388deba16d49f4c0cdeec0e SHA256 fee1053d54659a51c06a9f83ae8ea751d77da5e5cb47693a82393cdd3e3431cb
-DIST Gtk2-Ex-FormFactory-0.65.tar.gz 102039 RMD160 f64eada735392d6e483c1322cb08bbb251bfdbbf SHA1 ff98e55cc1a11c12b6e8874654506c03041fd711 SHA256 8f4d41cca69ce07998da43f18aec9de6a67093a7f8431a5c08e09568c96b760a
-EBUILD gtk2-ex-formfactory-0.57.ebuild 600 RMD160 5de74d12519c75bae091d39c841ca25761fc7c4b SHA1 50368ecd65dcbc935c85cefa45e974f45adec954 SHA256 139b0c112bb20f409d63d7a0b899443913a9213def6df653e6527d2e159cb602
-MD5 f4bab0ba6c2d42858c16600bae7139bb gtk2-ex-formfactory-0.57.ebuild 600
-RMD160 5de74d12519c75bae091d39c841ca25761fc7c4b gtk2-ex-formfactory-0.57.ebuild 600
-SHA256 139b0c112bb20f409d63d7a0b899443913a9213def6df653e6527d2e159cb602 gtk2-ex-formfactory-0.57.ebuild 600
-EBUILD gtk2-ex-formfactory-0.58.ebuild 598 RMD160 18c04809fd49e6d5a7e5aafa58a3567796bd4074 SHA1 13f4bd7b708b089b7efceec0c318057665e113a4 SHA256 fab346c1a4d737ad29c8ef4f4db8c66283b6f5d23ae4e7f8f863bfd0ddeadd70
-MD5 8efaaaad626fe567014de597a261f9eb gtk2-ex-formfactory-0.58.ebuild 598
-RMD160 18c04809fd49e6d5a7e5aafa58a3567796bd4074 gtk2-ex-formfactory-0.58.ebuild 598
-SHA256 fab346c1a4d737ad29c8ef4f4db8c66283b6f5d23ae4e7f8f863bfd0ddeadd70 gtk2-ex-formfactory-0.58.ebuild 598
-EBUILD gtk2-ex-formfactory-0.59.ebuild 608 RMD160 d5fa400ca135c621da97e11ca9e07f56e8b64cf5 SHA1 0107949fc472523f37822cef699ff8f42ff2cebd SHA256 27669e9edf3c8b681e3f6cf258e8a3387b4dccec6ef08d94dcff7de854ec9910
-MD5 9a1307aca615cbae3ea92c947c9470a7 gtk2-ex-formfactory-0.59.ebuild 608
-RMD160 d5fa400ca135c621da97e11ca9e07f56e8b64cf5 gtk2-ex-formfactory-0.59.ebuild 608
-SHA256 27669e9edf3c8b681e3f6cf258e8a3387b4dccec6ef08d94dcff7de854ec9910 gtk2-ex-formfactory-0.59.ebuild 608
-EBUILD gtk2-ex-formfactory-0.62.ebuild 626 RMD160 b09c91447ea35f5066bed97a704a3716ba4eccb4 SHA1 6a654a4d470daa259bc21efbc2fb89ece259b109 SHA256 951cd2e4d23f4343e0bc7cbbea295ef8600c62dece1e676e631869cb8600aa15
-MD5 edd94c97c1e80d5c03933084d7d9d46d gtk2-ex-formfactory-0.62.ebuild 626
-RMD160 b09c91447ea35f5066bed97a704a3716ba4eccb4 gtk2-ex-formfactory-0.62.ebuild 626
-SHA256 951cd2e4d23f4343e0bc7cbbea295ef8600c62dece1e676e631869cb8600aa15 gtk2-ex-formfactory-0.62.ebuild 626
-EBUILD gtk2-ex-formfactory-0.63.ebuild 626 RMD160 93f164d536ffe687b591b9af5e097991cef79c63 SHA1 f809e36354a84350efa782097a5288cb4ba505cd SHA256 5fdbbb7d4d87d95e28f3914f3693c3d8ed0e18f1f0b9206d6cae8b0152264362
-MD5 93a011be31a140895df2dd75ce148e52 gtk2-ex-formfactory-0.63.ebuild 626
-RMD160 93f164d536ffe687b591b9af5e097991cef79c63 gtk2-ex-formfactory-0.63.ebuild 626
-SHA256 5fdbbb7d4d87d95e28f3914f3693c3d8ed0e18f1f0b9206d6cae8b0152264362 gtk2-ex-formfactory-0.63.ebuild 626
-EBUILD gtk2-ex-formfactory-0.64.ebuild 626 RMD160 a8eef4e8fafdfee9503f2664ab6948a33250d63f SHA1 9f1bb972f2d5d27b9ae10b4d49d77aa7b337b38a SHA256 ad070993fba460f43258a15faa68c679757d66efa41709484bab1473ade17573
-MD5 06d887918b3b3cdf05142332d50a1afa gtk2-ex-formfactory-0.64.ebuild 626
-RMD160 a8eef4e8fafdfee9503f2664ab6948a33250d63f gtk2-ex-formfactory-0.64.ebuild 626
-SHA256 ad070993fba460f43258a15faa68c679757d66efa41709484bab1473ade17573 gtk2-ex-formfactory-0.64.ebuild 626
-EBUILD gtk2-ex-formfactory-0.65.ebuild 618 RMD160 c00ca109e4d82bf15c6a8aeb4d4ec49c4a693733 SHA1 99ecc437eee8906f52692c99f069ecd95fa58e4f SHA256 6bc92affb913f12ddb7527be01e93b54716cf39c1a3e99bedb52eb47a34e16ee
-MD5 745d11edf57b82bd6b7615e8fdb8ca4f gtk2-ex-formfactory-0.65.ebuild 618
-RMD160 c00ca109e4d82bf15c6a8aeb4d4ec49c4a693733 gtk2-ex-formfactory-0.65.ebuild 618
-SHA256 6bc92affb913f12ddb7527be01e93b54716cf39c1a3e99bedb52eb47a34e16ee gtk2-ex-formfactory-0.65.ebuild 618
-MISC ChangeLog 4062 RMD160 516903372928647d2be12b5e403bb40370490269 SHA1 6837e5a58fa742a363fb3977af9af52582236701 SHA256 b39971b907023a959a84baa32b877a83895b9ae13522ab61708a24e0e1df8dfc
-MD5 335a27a7c745f1565cc4180b32236412 ChangeLog 4062
-RMD160 516903372928647d2be12b5e403bb40370490269 ChangeLog 4062
-SHA256 b39971b907023a959a84baa32b877a83895b9ae13522ab61708a24e0e1df8dfc ChangeLog 4062
+EBUILD gtk2-ex-formfactory-0.64.ebuild 605 RMD160 a91e554e7c243d6e998aaa5fd545d8856ca814ff SHA1 f503a4682ff06808ce032bd839cc22dc00ff354d SHA256 d86e47b31f2ed9cd4b9172870736d50d0df55f5e6b55eb03f58f9b3c07003138
+MD5 462582e0fdcd60d1db521f6a9ea2c4ed gtk2-ex-formfactory-0.64.ebuild 605
+RMD160 a91e554e7c243d6e998aaa5fd545d8856ca814ff gtk2-ex-formfactory-0.64.ebuild 605
+SHA256 d86e47b31f2ed9cd4b9172870736d50d0df55f5e6b55eb03f58f9b3c07003138 gtk2-ex-formfactory-0.64.ebuild 605
+MISC ChangeLog 4388 RMD160 d739ce954de75d1674628ad04fce55ab9df1b929 SHA1 a02cba7bb6639d58058a84dc7ca5a44d3ca5b426 SHA256 1c9411a8c8cf01684386b14e6faf3cc6db54cc650599d0a45121ff5523ceddc0
+MD5 ba9a086cbb1f6ea29f34e5ea78f51b27 ChangeLog 4388
+RMD160 d739ce954de75d1674628ad04fce55ab9df1b929 ChangeLog 4388
+SHA256 1c9411a8c8cf01684386b14e6faf3cc6db54cc650599d0a45121ff5523ceddc0 ChangeLog 4388
 MISC metadata.xml 305 RMD160 647980838c590f54441a053916ea629e53e551c0 SHA1 99ef1deeae9a934fb6e46cf5fc4a5fcb8379a74a SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 RMD160 647980838c590f54441a053916ea629e53e551c0 metadata.xml 305
 SHA256 f05dbef15061919972882cab07057e102760a542beba17d131194091401cd7ca metadata.xml 305
-MD5 91ca1cbf784bf3a631251d6c3c7aeade files/digest-gtk2-ex-formfactory-0.57 75
-RMD160 b235561381e9328d3b8599c06a0df239850b6fd2 files/digest-gtk2-ex-formfactory-0.57 75
-SHA256 f4226f9e455297609c7c612d64481fd64d8b93d1b7a1d0fce0f88d239d566b73 files/digest-gtk2-ex-formfactory-0.57 75
-MD5 1f5d24af8b851b875fa6f3f62a04cc6e files/digest-gtk2-ex-formfactory-0.58 75
-RMD160 b60635e3a1320bf24241a46bb920b5d1303e18f0 files/digest-gtk2-ex-formfactory-0.58 75
-SHA256 6d523ed1973318998c5d25f0c324f1ab16fe9b254b3ec8810ed10a6e24b8639d files/digest-gtk2-ex-formfactory-0.58 75
-MD5 8351a685283e9f1381c97808a5a8172c files/digest-gtk2-ex-formfactory-0.59 271
-RMD160 adbf602ee3db243405012fc1b44a99721db4a013 files/digest-gtk2-ex-formfactory-0.59 271
-SHA256 bca76a286ddfefae9d3fb2d6651afc8c67ae13a4338bdbfe66bcde4fcccd1485 files/digest-gtk2-ex-formfactory-0.59 271
-MD5 39acec7eb7d7b0918e26ebc4f258c99a files/digest-gtk2-ex-formfactory-0.62 274
-RMD160 8c33388bc07d0d3ee45c5e05dd404c93249f2459 files/digest-gtk2-ex-formfactory-0.62 274
-SHA256 9db6b89ca8e86e2911aabee5610404bb4e5edc1f2e3c06fd22e5935f899facac files/digest-gtk2-ex-formfactory-0.62 274
-MD5 377e824a18524a6d33ad3d0c167f5212 files/digest-gtk2-ex-formfactory-0.63 274
-RMD160 31c43498b476588cdb8af616eefcaafad321fed1 files/digest-gtk2-ex-formfactory-0.63 274
-SHA256 7bc757da66a13bcf51aaa7d08c5d23faec172ea55f7cd8044f29dd9b6b820b4c files/digest-gtk2-ex-formfactory-0.63 274
 MD5 35c70b305e4b88dc2bcbaa4c77f807d8 files/digest-gtk2-ex-formfactory-0.64 274
 RMD160 43c62541a72ba064979a2497579abcfd933f251e files/digest-gtk2-ex-formfactory-0.64 274
 SHA256 3a62e72295ee07e300edccc6f7ed77d64ff8a9adda9c5d7cba56f0769d6facf9 files/digest-gtk2-ex-formfactory-0.64 274
-MD5 1f740661388780b29dba881aeda6beec files/digest-gtk2-ex-formfactory-0.65 274
-RMD160 39b890af8aaf5dedec1bea12582f20a30a528b78 files/digest-gtk2-ex-formfactory-0.65 274
-SHA256 4e7a99f07d120b77cff713a4cae7dda8c2209945435fd195a124088abf5e5227 files/digest-gtk2-ex-formfactory-0.65 274
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFOP9ftG5z4I8BtQoRAudRAJ0W0wQk+UOVO4WEtX89jcbnc50z4gCgidLI
+ye/Htgb83kJSuXZB101kzXo=
+=NKtg
+-----END PGP SIGNATURE-----
