@@ -5,10 +5,10 @@ AUX logilab-common-0.14.0-remove-broken-modutils-test.patch 760 RMD160 5a3aa1745
 MD5 bbf57c9fbfa420a2945ded153b5d4065 files/logilab-common-0.14.0-remove-broken-modutils-test.patch 760
 RMD160 5a3aa174592a14df5d8a2c1cb0c929a50279459d files/logilab-common-0.14.0-remove-broken-modutils-test.patch 760
 SHA256 de9210bea8acae9306d6ec3f60b297ca721c7db3f571dbfa9c2da87125ca4ae1 files/logilab-common-0.14.0-remove-broken-modutils-test.patch 760
-AUX logilab-common-setup.py.patch 623 RMD160 ac7c4b90d47d724843d6182a38d66927a16506a6 SHA1 198961cad33ecfdc5d9928e89f88ad64229c593c SHA256 4221b9becdcaca12aa2989ab2e7a8384d63a25fc576fedb680d2a155c727635d
-MD5 2ff3196fa9e5510d5b53819a82d51e9d files/logilab-common-setup.py.patch 623
-RMD160 ac7c4b90d47d724843d6182a38d66927a16506a6 files/logilab-common-setup.py.patch 623
-SHA256 4221b9becdcaca12aa2989ab2e7a8384d63a25fc576fedb680d2a155c727635d files/logilab-common-setup.py.patch 623
+AUX logilab-common-setup.py.patch 596 RMD160 dfcc88bd4adc347f6e9f675ed32642f62bdb7036 SHA1 7aa8124db4478c4982c9c33cc3961b28dcc0cd3c SHA256 e8fccb01d1199890b91a15f61ddf943a060cb9e68af277cead63d03a2516e6d7
+MD5 8ca540db591a30ee6966510ecc2bbcc7 files/logilab-common-setup.py.patch 596
+RMD160 dfcc88bd4adc347f6e9f675ed32642f62bdb7036 files/logilab-common-setup.py.patch 596
+SHA256 e8fccb01d1199890b91a15f61ddf943a060cb9e68af277cead63d03a2516e6d7 files/logilab-common-setup.py.patch 596
 DIST common-0.14.0.tar.gz 141789 RMD160 888db7ad239e9f30401901b5066bc13897a0b18d SHA1 ebef34c1ca0d3c47e565ea15eb5b9865c583f787 SHA256 ba762be2a9e62cd9b46a58f0a51c054047c2fc6371382b80dbdb6d81c0fff903
 DIST common-0.14.1.tar.gz 141856 RMD160 7fbb0b1f59131f1b55d68c6bc6a58ea51aadaec0 SHA1 2f173c22138c4631144f6e9452af3913f51546a6 SHA256 e29c14bd579229efb8840d7d4c0ef0b03f95869b0cae5ad7b32fd5ee73bdf5ba
 DIST common-0.15.0.tar.gz 140909 RMD160 c03fc7c7da4700c2320a78922ade833824d285a5 SHA1 5cb6df46c5bf47b1078885af636807fdf99cebd1 SHA256 c8bb306ec5dc7dfb9e6f3d61cf089bbac62e5e5fc22824ff41cb770fc8e8c2de
@@ -60,7 +60,7 @@ SHA256 884bbd4d867f675457c45148373d28eb305c977e1c240e76a59bda75d9b7b1b1 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFGcEXUElL7eJpfEQRAr0OAJ9e7ezWcpNlpzoTHMEbcnx0L+lGugCgsmGu
-t4XuYGzrYmGW5lgVwGL9LC4=
-=wpFw
+iD8DBQFFOSI2I1lqEGTUzyQRAsOnAJ4/8lREKK/rcACJ88QTUzy/99RMRgCeNEMg
+x5AN8oG/W9ee6ZkbMgetxkQ=
+=1bZp
 -----END PGP SIGNATURE-----
