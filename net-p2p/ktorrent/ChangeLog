@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.26 2006/10/20 12:32:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.27 2006/10/20 17:20:13 nixnut Exp $
+
+  20 Oct 2006; <nixnut@gentoo.org> ktorrent-2.0.2.ebuild:
+  Stable on ppc wrt bug 146038
 
   20 Oct 2006; Simon Stelling <blubb@gentoo.org> ktorrent-2.0.2.ebuild:
   stable on amd64
