@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/creole
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/creole/ChangeLog,v 1.6 2006/09/29 10:07:00 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/creole/ChangeLog,v 1.7 2006/10/20 17:29:32 sebastian Exp $
+
+  20 Oct 2006; Sebastian Bergmann <sebastian@gentoo.org>
+  creole-1.1.0.ebuild:
+  Update HOMEPAGE for bug #152125.
 
   29 Sep 2006; Sebastian Bergmann <sebastian@gentoo.org>
   creole-1.1.0.ebuild:
