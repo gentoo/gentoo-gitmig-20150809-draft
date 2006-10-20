@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/Test-Memory-Cycle-1.04.ebuild,v 1.2 2006/10/15 20:26:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/Test-Memory-Cycle-1.04.ebuild,v 1.3 2006/10/20 23:04:02 agriffis Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/P/PE/PETDANCE/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
