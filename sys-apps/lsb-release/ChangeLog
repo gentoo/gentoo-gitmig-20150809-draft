@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/lsb-release
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsb-release/ChangeLog,v 1.1 2006/10/20 03:46:33 pioto Exp $
+
+*lsb-release-1.4 (20 Oct 2006)
+
+  20 Oct 2006; Mike Kelly <pioto@pioto.org> +metadata.xml,
+  +lsb-release-1.4.ebuild:
+  Initial ebuild for the lsb_release command. It's needed by net-misc/ltsp.
+
