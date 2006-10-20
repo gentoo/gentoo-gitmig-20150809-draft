@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0.ebuild,v 1.4 2006/10/17 20:20:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.0.ebuild,v 1.5 2006/10/20 05:12:41 tsunam Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -14,7 +14,7 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 #KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="-* ~ppc64 ~sparc"
+KEYWORDS="-* ~ppc64 ~sparc ~x86"
 IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres sqlite xinerama zlib"
 
 # need glib and dbus
