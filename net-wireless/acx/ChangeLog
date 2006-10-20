@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/acx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.8 2006/08/07 20:22:59 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/ChangeLog,v 1.9 2006/10/20 02:24:29 dsd Exp $
+
+  20 Oct 2006; Daniel Drake <dsd@gentoo.org> +files/acx-0.3.35-2.6.18.patch,
+  +files/acx-0.3.35_p20060521-2.6.18.patch, acx-0.3.35.ebuild,
+  acx-0.3.35_p20060521.ebuild:
+  Fix compilation on 2.6.18 thanks to Fabio Erculiani in bug #148521
 
 *acx-0.3.35_p20060521 (07 Aug 2006)
 

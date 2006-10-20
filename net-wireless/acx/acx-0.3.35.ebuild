@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35.ebuild,v 1.3 2006/05/24 22:06:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx/acx-0.3.35.ebuild,v 1.4 2006/10/20 02:24:29 dsd Exp $
 
 inherit linux-mod
 
@@ -31,6 +31,9 @@ src_unpack() {
 	unpack ${A}
 	chmod ug+w . -R
 	sed -i 's:usr/share/acx:lib/firmware:' common.c || die "sed failed"
+
+	# fix 2.6.18 compilation
+	epatch ${FILESDIR}/${P}-2.6.18.patch
 }
 
 src_install() {
