@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.4.ebuild,v 1.5 2006/09/24 09:22:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/lineakd-0.8.4.ebuild,v 1.6 2006/10/20 08:56:49 nelchael Exp $
 
 inherit eutils
 
@@ -30,7 +30,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/lineakd-0.8.4-mandestdir.patch
+	epatch ${FILESDIR}/${P}-defconfig.patch
+	epatch ${FILESDIR}/${P}-mandestdir.patch
 }
 
 src_compile() {

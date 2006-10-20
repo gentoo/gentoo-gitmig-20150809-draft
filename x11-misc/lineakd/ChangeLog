@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/lineakd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.32 2006/09/24 09:22:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineakd/ChangeLog,v 1.33 2006/10/20 08:56:49 nelchael Exp $
+
+  20 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/lineakd-0.8.4-defconfig.patch, lineakd-0.8.4.ebuild:
+  Add patch for default config, see bug #151886.
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> lineakd-0.8.4.ebuild:
   Stable on ppc.
