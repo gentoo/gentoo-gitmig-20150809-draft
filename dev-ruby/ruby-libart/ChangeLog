@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-libart
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.16 2006/09/25 13:12:19 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.17 2006/10/20 11:18:34 flameeyes Exp $
+
+  20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -ruby-libart-0.30.ebuild, ruby-libart-0.34.ebuild:
+  Fix building, thanks to Patrick Lauer for reporting in bug #152053. Add
+  ~amd64 keyword. Remove old version.
 
   25 Sep 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   files/digest-ruby-libart-0.30, Manifest:
