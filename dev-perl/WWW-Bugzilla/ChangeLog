@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.19 2006/10/16 01:33:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.20 2006/10/20 23:15:55 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> WWW-Bugzilla-0.8.ebuild:
+  Mark 0.8 stable on ia64
 
   16 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -WWW-Bugzilla-0.2.ebuild, -WWW-Bugzilla-0.6.ebuild,
