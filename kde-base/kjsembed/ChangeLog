@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjsembed
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.55 2006/10/03 10:56:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjsembed/ChangeLog,v 1.56 2006/10/20 21:14:41 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> kjsembed-3.5.2.ebuild:
+  Stable on Alpha.
 
 *kjsembed-3.5.5 (03 Oct 2006)
 
