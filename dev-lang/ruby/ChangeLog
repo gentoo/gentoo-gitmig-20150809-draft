@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.226 2006/10/18 15:34:10 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.227 2006/10/20 19:08:14 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> ruby-1.8.5-r2.ebuild:
+  Mark 1.8.5-r2 stable on alpha
 
   18 Oct 2006; Roy Marples <uberlord@gentoo.org> ruby-1.8.5-r2.ebuild:
   Added ~sparc-fbsd keyword.
@@ -18,7 +21,7 @@
 *ruby-1.8.5-r2 (09 Oct 2006)
 
   09 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +ruby-1.8.5-r2.ebuild:
-  Mask again -fomit-frame-poointer as per bug #150413 and 148965.
+  Mask again -fomit-frame-poointer as per bug #150413 and #148965
 
 *ruby-1.8.5-r1 (06 Oct 2006)
 
