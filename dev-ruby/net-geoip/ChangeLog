@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-geoip
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.10 2006/10/09 22:06:50 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/ChangeLog,v 1.11 2006/10/20 21:11:28 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> net-geoip-0.06-r1.ebuild:
+  Mark 0.06-r1 stable on ia64
 
   09 Oct 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   -net-geoip-0.06.ebuild:
