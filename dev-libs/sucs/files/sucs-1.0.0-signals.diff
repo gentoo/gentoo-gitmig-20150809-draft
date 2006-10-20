@@ -1,0 +1,11 @@
+--- signals/signallistener.cpp.orig	2006-10-20 19:30:24.000000000 +0000
++++ signals/signallistener.cpp	2006-10-20 19:30:50.000000000 +0000
+@@ -29,6 +29,8 @@
+ namespace sucs
+ {
+ 
++void actualHandler(int signal);
++
+ SignalListener *SignalListener::theOne = NULL;
+ 
+ SignalListener::SignalListener()

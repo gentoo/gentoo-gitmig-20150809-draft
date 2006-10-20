@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/sucs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.7 2005/09/19 22:34:01 halcy0n Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.8 2006/10/20 19:37:30 dev-zero Exp $
+
+  20 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Added patches for bug #152045. Added ~amd64 keyword.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd

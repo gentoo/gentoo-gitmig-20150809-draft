@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-1.0.0.ebuild,v 1.3 2005/05/17 11:29:05 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-1.0.0.ebuild,v 1.4 2006/10/20 19:37:30 dev-zero Exp $
 
 inherit eutils
 
@@ -10,18 +10,23 @@ SRC_URI="mirror://sourceforge/sucs/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-libs/libpcre-3.9
 	>=dev-libs/expat-1.95.4"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gcc4.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc4.diff"
+	epatch "${FILESDIR}/${P}-thread.diff"
+	epatch "${FILESDIR}/${P}-signals.diff"
+	epatch "${FILESDIR}/${P}-xml.diff"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog README COPYING
+	emake DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog README
 }

@@ -1,0 +1,13 @@
+--- xml/xmlreader.cpp.orig	2006-10-20 19:34:49.000000000 +0000
++++ xml/xmlreader.cpp	2006-10-20 19:35:35.000000000 +0000
+@@ -24,6 +24,10 @@
+ 
+ using namespace sucs;
+ 
++void sucs::cStartElement(void *userdata, const char *name, const char **atts);
++void sucs::cEndElement(void *userdata, const char *name);
++void sucs::cCharData(void *userdata, const XML_Char *s, int len);
++
+ XMLReader::XMLReader(bool newStripWhite)
+ {
+ 	StripWhite = newStripWhite;

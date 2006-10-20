@@ -1,0 +1,12 @@
+--- thread/thread.cpp.orig	2006-10-20 19:32:13.000000000 +0000
++++ thread/thread.cpp	2006-10-20 19:33:16.000000000 +0000
+@@ -29,6 +29,9 @@
+ 
+ Sema sucs::__output;
+ 
++void *sucs::gameOn(void *arg);
++void sucs::cleanup(void *arg);
++
+ int Thread::theIdCount = 0, Thread::theCount = 0, Thread::theNowRunningCount = 0;
+ Sema Thread::theNowRunning;
+ pthread_t Thread::theMainId = (pthread_t)NULL;
