@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.3 2006/07/17 20:02:35 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.4 2006/10/20 19:01:59 phreak Exp $
 
 inherit eutils linux-mod
 
@@ -44,7 +44,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+
+	# New kernels only see .S files as asm
+	mv "${S}"/2.6/drivers/smapi_call.{s,S}
 
 	epatch "${FILESDIR}"/${PN}-5.9-remove-thinkpadapm-argument.patch
 	epatch "${FILESDIR}"/${PN}-5.9-remove-inter_module.patch
