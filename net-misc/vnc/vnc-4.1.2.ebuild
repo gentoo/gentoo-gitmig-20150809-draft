@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.14 2006/10/16 23:38:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.15 2006/10/20 13:50:44 genstef Exp $
 
 inherit eutils toolchain-funcs multilib autotools
 
@@ -62,6 +62,16 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
+	if ! use server;
+	then
+		echo
+		einfo "The 'server' USE flag will build vnc's server."
+		einfo "If '-server' is chosen only the client is built to save space."
+		einfo "Stop the build now if you need to add 'server' to USE flags.\n"
+		ebeep
+		epause 5
+	fi
+
 	unpack ${A}
 	cd "${S}"
 
@@ -117,10 +127,10 @@ src_compile() {
 
 src_install() {
 	dodir /usr/bin /usr/share/man/man1
-	use server && dodir /usr/$(get_libdir)/modules/extensions
+	use server && dodir /usr/lib/xorg/modules/extensions
 
 	cd unix
-	./vncinstall "${D}"/usr/bin "${D}"/usr/share/man "${D}"/usr/$(get_libdir)/modules/extensions || die
+	./vncinstall "${D}"/usr/bin "${D}"/usr/share/man "${D}"/usr/lib/xorg/modules/extensions || die "failed to run vncinstall"
 	cd ..
 	dodoc README
 
