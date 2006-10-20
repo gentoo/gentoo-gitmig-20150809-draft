@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.6 2006/09/23 12:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.7 2006/10/20 06:43:51 nyhm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,7 +20,7 @@ RDEPEND="dev-lang/python
 	media-libs/libsdl
 	media-libs/libvorbis
 	media-libs/libogg
-	sys-libs/zlib"
+	dev-lang/swig"
 DEPEND="${RDEPEND}
 	doc? (
 		media-gfx/graphviz
@@ -34,7 +34,8 @@ src_unpack() {
 	cd "${S}"
 	epatch \
 		"${FILESDIR}"/${PV}-configure.in.patch \
-		"${FILESDIR}"/${P}-gcc-41.patch
+		"${FILESDIR}"/${P}-gcc-41.patch \
+		"${FILESDIR}"/${P}-inline.patch
 	rm -f ac{local,include}.m4
 	AT_M4DIR="m4" eautoreconf
 }

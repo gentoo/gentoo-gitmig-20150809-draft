@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/adonthell
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.11 2006/09/23 12:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.12 2006/10/20 06:43:51 nyhm Exp $
+
+  20 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/adonthell-0.3.4a-inline.patch, files/0.3.4a-configure.in.patch,
+  adonthell-0.3.4a.ebuild:
+  Update configure.in patch to respect CXXFLAGS; Add patch for linking errors;
+  Depend on dev-lang/swig, bug #144257
 
   23 Sep 2006; Mike Frysinger <vapier@gentoo.org> adonthell-0.3.4a.ebuild:
   Cleanup autotools #148762 by David Philippi.

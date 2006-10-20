@@ -1,8 +1,17 @@
---- configure.in.orig	2005-03-12 18:01:25.000000000 -0500
-+++ configure.in	2005-03-13 00:12:26.000000000 -0500
-@@ -159,10 +159,8 @@
+--- configure.in
++++ configure.in
+@@ -13,7 +13,7 @@
+ AM_INIT_AUTOMAKE([])
+ AM_CONFIG_HEADER(config.h)
  
-    dnl Extract the version using Python, check against 1.5+
+-CFLAGS="-g -Wall -fno-exceptions"
++CXXFLAGS="$CXXFLAGS -Wall -fno-exceptions"
+ CPPFLAGS=""
+ DEFS=""
+ 
+@@ -163,10 +163,8 @@
+ 
+    dnl Extract the version using Python, check against 2.2+
  
 -   changequote(<<, >>)
 -   PYTHON_VERSION=`$PYPACKAGE -c 'import sys ; print (int(sys.version[0]) * 10 + int(sys.version[2]))'`
@@ -11,9 +20,9 @@
 +   PYTHON_VERSION=`$PYPACKAGE -c 'import sys ; print (int(sys.version@<:@0@:>@) * 10 + int(sys.version@<:@2@:>@))'`
 +   PY_VERSION=`$PYPACKAGE -c 'import sys ; print sys.version@<:@0:3@:>@'`
  
-    if test $PYTHON_VERSION -lt 15; then
- 	echo "Sorry, you need to have Python 1.5+ installed - update your version!"
-@@ -172,9 +170,7 @@
+    if test $PYTHON_VERSION -lt 22; then
+ 	echo "Sorry, you need to have Python 2.2+ installed - update your version!"
+@@ -176,9 +174,7 @@
     dnl Find the Python.h header file
  
     AC_MSG_CHECKING(for Python header files)
@@ -24,8 +33,8 @@
  
     if test -r "$PYINCLUDE/Python.h"; then
        PY_CFLAGS="-I$PYINCLUDE"
-@@ -188,10 +184,8 @@
- 
+@@ -191,10 +187,8 @@
+    dnl Find the Python library
     AC_MSG_CHECKING(for Python library)
     PYLIB=""
 -   changequote(<<, >>)
@@ -34,10 +43,10 @@
 -   changequote([, ])
 +   PYLIBVER=`$PYPACKAGE -c 'import sys; print sys.version@<:@:3@:>@'`
  
-    py_paths="$PYPREFIX/lib/python$PYLIBVER/config $PYPREFIX/lib"
-    py_suffix="$PYLIBVER.so $PYLIBVER.a .so .a"
-@@ -220,19 +214,9 @@
- 
+    dnl look for a framework build of python first
+    fw=`echo "$PYPREFIX" | sed 's/.*\(Python\.framework\).*/\1/;'`
+@@ -233,19 +227,9 @@
+    fi
     dnl Get the libraries that python depends on
  
 -   AC_PATH_PROG(haveldd, ldd)
@@ -57,7 +66,7 @@
  
     case $target in
         *-sun-solaris*)
-@@ -280,11 +264,9 @@
+@@ -293,11 +277,9 @@
  if test "$P_SWIG" != "no" ; then
      $P_SWIG -version &> swig.ver
  
@@ -72,3 +81,12 @@
  
      rm -f swig.ver
  
+@@ -387,7 +369,7 @@
+ dnl Generate our compiler arguements
+ dnl ********************************
+ 
+-CXXFLAGS="$CFLAGS $DEFS $INCLUDES"
++CXXFLAGS="$CXXFLAGS $DEFS $INCLUDES"
+ 
+ AC_SUBST(CXX) 
+ AC_SUBST(CXXFLAGS) 
