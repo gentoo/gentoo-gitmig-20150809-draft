@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-1.6.0.ebuild,v 1.1 2006/10/19 16:38:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/kplato-1.6.0.ebuild,v 1.2 2006/10/20 15:41:04 carlo Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -33,3 +33,8 @@ KMCOMPILEONLY=""
 KMEXTRA="kdgantt"
 
 need-kde 3.4
+
+src_unpack() {
+	kde-meta_src_unpack
+	sed -i -e "s:toolbar tests:toolbar:" ${S}/kplato/Makefile.am
+}
