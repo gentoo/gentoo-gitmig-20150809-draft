@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kscope
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.29 2006/08/24 16:52:47 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/ChangeLog,v 1.30 2006/10/20 16:38:53 carlo Exp $
+
+*kscope-1.4.2 (20 Oct 2006)
+
+  20 Oct 2006; Carsten Lohrke <carlo@gentoo.org> +kscope-1.4.2.ebuild:
+  Version bump.
 
 *kscope-1.4.1 (24 Aug 2006)
 
