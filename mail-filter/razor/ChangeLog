@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.76 2006/10/15 12:53:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.77 2006/10/20 21:19:49 kloeri Exp $
+
+  20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> razor-2.82.ebuild:
+  Stable on Alpha.
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org> razor-2.82.ebuild:
   Mark 2.82 stable on ia64. #143979
