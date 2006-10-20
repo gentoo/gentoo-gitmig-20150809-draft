@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.23 2006/09/24 09:16:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.24 2006/10/20 20:12:28 gustavoz Exp $
+
+  20 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> celestia-1.4.1.ebuild:
+  Stable on sparc
 
   24 Sep 2006; Michael Hanselmann <hansmi@gentoo.org> celestia-1.4.1.ebuild:
   Stable on ppc.
