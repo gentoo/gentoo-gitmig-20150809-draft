@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmenu/perlmenu-4.0.ebuild,v 1.2 2006/08/06 03:02:45 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmenu/perlmenu-4.0.ebuild,v 1.3 2006/10/20 17:51:54 mcummings Exp $
 
 inherit perl-module
 
@@ -13,14 +13,13 @@ HOMEPAGE="http://search.cpan.org/~skunz/${MY_P}/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
 
 DEPEND="dev-perl/Curses
 	dev-lang/perl"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
