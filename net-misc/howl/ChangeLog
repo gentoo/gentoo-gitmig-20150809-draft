@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.41 2006/08/05 23:18:32 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.42 2006/10/21 18:47:02 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> howl-1.0.0.ebuild:
+  ppc stable
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #135907
