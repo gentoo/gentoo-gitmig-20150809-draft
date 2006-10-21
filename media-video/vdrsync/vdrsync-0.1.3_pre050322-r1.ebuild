@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/vdrsync-0.1.3_pre050322-r1.ebuild,v 1.1 2006/06/28 12:34:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdrsync/vdrsync-0.1.3_pre050322-r1.ebuild,v 1.2 2006/10/21 19:48:54 zzam Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://vdrsync.vdr-portal.de/releases/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="dvdr"
 
 DEPEND=""
