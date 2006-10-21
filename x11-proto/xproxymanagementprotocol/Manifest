@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 DIST xproxymanagementprotocol-1.0.2.tar.bz2 37007 RMD160 c55bb82eb6d035a85a50aac2f377e27d4e6b6adb SHA256 c45176d002c85c142ac52774680f5325d330c5ecc32d4d6a056d85ee039a0cbc
-EBUILD xproxymanagementprotocol-1.0.2.ebuild 493 RMD160 d14f9ae72be4dd42943cf210cc7b3fc591406d32 SHA1 cd8e6855c7efe1698952758601ca978f9002df8e SHA256 45b668f59f4007c08516ad7b00007743d85857552b1df9bedc060a2b6d23b5c9
-MD5 b8850ebaca4dea3ecf3dc5ab981b43d2 xproxymanagementprotocol-1.0.2.ebuild 493
-RMD160 d14f9ae72be4dd42943cf210cc7b3fc591406d32 xproxymanagementprotocol-1.0.2.ebuild 493
-SHA256 45b668f59f4007c08516ad7b00007743d85857552b1df9bedc060a2b6d23b5c9 xproxymanagementprotocol-1.0.2.ebuild 493
+EBUILD xproxymanagementprotocol-1.0.2.ebuild 491 RMD160 f56cdc79a746e115bf78edd94c4d37bb39bfd669 SHA1 6e2b6b1b400b215f6ba1b35127d9fff7211bd4ff SHA256 5833ad40e38755e513baf1b287e064cc50b1435d67dc5889003ba851e1b5c384
+MD5 f259f67b5f753dccd7186b130aa46c6d xproxymanagementprotocol-1.0.2.ebuild 491
+RMD160 f56cdc79a746e115bf78edd94c4d37bb39bfd669 xproxymanagementprotocol-1.0.2.ebuild 491
+SHA256 5833ad40e38755e513baf1b287e064cc50b1435d67dc5889003ba851e1b5c384 xproxymanagementprotocol-1.0.2.ebuild 491
 MISC ChangeLog 2070 RMD160 b955645901934da2374b4a44c0545c3238e63498 SHA1 96d463c584770be8628823055d0c8a9aeb4ecbc9 SHA256 f2ca6740d25d404ccaab2b1c3240de711b9f25de83151c6eed36ba44b453018e
 MD5 6521178396bcc487c9ef964f5e737d13 ChangeLog 2070
 RMD160 b955645901934da2374b4a44c0545c3238e63498 ChangeLog 2070
@@ -14,3 +17,10 @@ SHA256 5101ab0d4cc8c7125eea733c44e86962769bd77acaf53b69223b9cadcdd29055 metadata
 MD5 55a3207cefc54f6b6b784b27c9d6bbad files/digest-xproxymanagementprotocol-1.0.2 292
 RMD160 a253f7cceffc838b003945b7a097a865e2a4d83d files/digest-xproxymanagementprotocol-1.0.2 292
 SHA256 52261361ddd3d517178f40470787fd46ea2b34414e331075b953cd4a2cd1ae76 files/digest-xproxymanagementprotocol-1.0.2 292
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFOqdFamhnQswr0vIRAqOzAJ97JiGX6LQ72mlYJUJ8ip2MMezKgACeLtew
+/Y6Ij4ifCrrfrU123TOenjw=
+=mDM+
+-----END PGP SIGNATURE-----
