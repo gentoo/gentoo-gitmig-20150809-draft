@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/resolution
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.3 2006/10/05 03:13:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/resolution/ChangeLog,v 1.4 2006/10/21 17:41:34 lack Exp $
+
+  21 Oct 2006; Jim Ramsay <lack@gentoo.org> resolution-0.2.ebuild:
+  Added proper dependency on x11-apps/xrandr
 
   05 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
   Updated copyright and accepted maintainer role.
