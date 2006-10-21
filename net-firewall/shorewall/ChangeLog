@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.116 2006/10/19 14:01:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.117 2006/10/21 17:27:02 kloeri Exp $
+
+  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> shorewall-3.0.8.ebuild,
+  shorewall-3.2.4.ebuild:
+  Bump stable and add back ~alpha keyword, bug 151952.
 
   19 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   shorewall-3.2.4.ebuild:
