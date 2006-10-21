@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/baghira
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.50 2006/10/10 20:50:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.51 2006/10/21 13:54:56 voxus Exp $
+
+*baghira-0.8 (21 Oct 2006)
+
+  21 Oct 2006; Konstantin V. Arkhipov <voxus@gentoo.org>
+  +baghira-0.8.ebuild:
+  Version bump.
 
   10 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> baghira-0.7.ebuild:
   Stable on ia64.
