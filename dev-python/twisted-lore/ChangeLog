@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.16 2006/10/20 20:37:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.17 2006/10/21 02:05:56 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> twisted-lore-0.2.0.ebuild:
+  Mark 0.2.0 stable on ia64
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   twisted-lore-0.2.0.ebuild:
