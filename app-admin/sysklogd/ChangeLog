@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.45 2006/10/19 14:03:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.46 2006/10/21 04:14:34 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> sysklogd-1.4.2.ebuild:
+  Mark 1.4.2 ~alpha/~ia64
 
   19 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> sysklogd-1.4.2.ebuild:
   Back to ~sparc
