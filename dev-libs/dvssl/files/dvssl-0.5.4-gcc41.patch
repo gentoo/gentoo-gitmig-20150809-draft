@@ -1,0 +1,20 @@
+--- dvssl/sslsocket.h.orig	2006-10-22 01:36:33.000000000 +0200
++++ dvssl/sslsocket.h	2006-10-22 01:37:19.000000000 +0200
+@@ -56,7 +56,7 @@
+   /*! The Dv::Ssl::SslContext parameter need not contain private key or
+       certificate file information since it is not used.
+   */
+-  SslSocket::SslSocket(SslContext& context,const std::string& host,int port,
++  SslSocket(SslContext& context,const std::string& host,int port,
+   	size_t bufsize = 1024, int msecs=0);
+   //! Destructor.
+   ~SslSocket();
+@@ -70,7 +70,7 @@
+ 
+ private:
+   //! Constructor version used by Dv::Ssl::SslSocket::fs2socket.
+-  SslSocket::SslSocket(SslContext& context,int fd,size_t bufsize=1024, int msecs = 0);
++  SslSocket(SslContext& context,int fd,size_t bufsize=1024, int msecs = 0);
+   //! Used internally by Dv::Ssl::SslServerSocket::accept.
+   static ref<SslSocket>	fd2sslsocket(SslContext&, int fd, size_t bufsz=1024, int msecs=0);
+ 

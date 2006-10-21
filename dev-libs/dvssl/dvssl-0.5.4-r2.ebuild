@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.4-r2.ebuild,v 1.3 2005/08/13 23:12:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/dvssl-0.5.4-r2.ebuild,v 1.4 2006/10/21 23:24:05 dev-zero Exp $
 
 inherit eutils
 
@@ -14,20 +14,23 @@ SLOT="0"
 IUSE="doc"
 
 DEPEND="dev-libs/openssl
-	dev-libs/dvnet"
+	dev-libs/dvnet
+	dev-libs/dvutil"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-fix-underquoted-m4.diff
+	epatch "${FILESDIR}/${P}-fix-underquoted-m4.diff"
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 
 	sed -i 's|^\(SUBDIRS =.*\)doc\(.*\)$|\1\2|' Makefile.in || \
 		die "sed Makefile.in failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 
 	if use doc ; then
