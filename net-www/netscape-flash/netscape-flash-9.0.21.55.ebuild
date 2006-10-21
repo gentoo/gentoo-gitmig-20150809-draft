@@ -1,17 +1,19 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.21.55.ebuild,v 1.1 2006/10/19 00:58:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/netscape-flash-9.0.21.55.ebuild,v 1.2 2006/10/21 11:03:33 genstef Exp $
 
 inherit nsplugins
 
 myPV=101806
 
 S=${WORKDIR}/flash-player-plugin-${PV}/
+SPLAYER=${WORKDIR}/flash-player-standalone-${PV}/
 DESCRIPTION="Adobe Flash Player"
-SRC_URI="http://download.macromedia.com/pub/labs/flashplayer9_update/FP9_plugin_beta_${myPV}.tar.gz"
+SRC_URI="http://download.macromedia.com/pub/labs/flashplayer9_update/FP9_plugin_beta_${myPV}.tar.gz
+         gtk? ( http://download.macromedia.com/pub/labs/flashplayer9_update/FP9_standalone_beta_${myPV}.tar.gz )"
 HOMEPAGE="http://www.adobe.com/"
 
-IUSE=""
+IUSE="gtk"
 SLOT="0"
 KEYWORDS="~amd64 -ppc -sparc ~x86"
 LICENSE="Macromedia"
@@ -45,4 +47,6 @@ src_install() {
 	inst_plugin /opt/netscape/plugins/libflashplayer.so
 
 	dodoc readme.txt
+
+	use gtk && dobin ${SPLAYER}/gflashplayer
 }
