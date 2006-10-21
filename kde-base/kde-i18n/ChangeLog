@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.110 2006/10/04 06:57:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.111 2006/10/21 15:35:20 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kde-i18n-3.5.5.ebuild:
+  Add ~x86-fbsd keyword.
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   files/digest-kde-i18n-3.5.5, Manifest:
