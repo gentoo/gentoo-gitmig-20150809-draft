@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speechd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/ChangeLog,v 1.17 2006/06/05 08:16:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/ChangeLog,v 1.18 2006/10/21 09:34:51 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  speechd-0.56-r2.ebuild:
+  ppc stable
 
   05 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   speechd-0.56-r2.ebuild:
