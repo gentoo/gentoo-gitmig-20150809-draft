@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/am-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.22 2006/05/01 19:42:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.23 2006/10/21 03:52:04 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> am-utils-6.1.4.ebuild:
+  Mark 6.1.4 stable on alpha/ia64
 
   01 May 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/am-utils-6.1.4-dbm_open-libc.patch, am-utils-6.1.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.1.4.ebuild,v 1.2 2006/05/01 19:42:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/am-utils-6.1.4.ebuild,v 1.3 2006/10/21 03:52:04 agriffis Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.am-utils.org/pub/am-utils/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~x86 ~x86-fbsd"
 IUSE="ldap"
 
 RDEPEND="ldap? ( >=net-nds/openldap-1.2 )"
