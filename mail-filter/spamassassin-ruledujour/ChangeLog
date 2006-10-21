@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin-ruledujour
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/ChangeLog,v 1.13 2006/10/14 09:30:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-ruledujour/ChangeLog,v 1.14 2006/10/21 17:42:53 kloeri Exp $
+
+  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  spamassassin-ruledujour-20051123.ebuild:
+  Add ~alpha keyword, bug 130931.
 
   14 Oct 2006; Markus Rothe <corsair@gentoo.org>
   spamassassin-ruledujour-20051123.ebuild:
