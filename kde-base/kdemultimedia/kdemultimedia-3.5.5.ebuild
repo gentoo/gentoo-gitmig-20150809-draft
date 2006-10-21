@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.5.ebuild,v 1.2 2006/10/21 11:42:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.5.ebuild,v 1.3 2006/10/21 19:46:37 flameeyes Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="~kde-base/kdebase-${PV}
 				 =media-libs/gst-plugins-0.8* )
 	encode? ( mp3? ( media-sound/lame )
 			  vorbis? ( media-sound/vorbis-tools )
-			  flac? ( ~media-libs/flac-1.1.2 ) )
+			  flac? ( >=media-libs/flac-1.1.2 ) )
 	!arts? ( !gstreamer? ( media-libs/akode ) )"
 
 RDEPEND="${DEPEND}
@@ -33,7 +33,8 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/juk-3.5.2-do_not_use_gstreamer-0.10.diff"
+PATCHES="${FILESDIR}/juk-3.5.2-do_not_use_gstreamer-0.10.diff
+	${FILESDIR}/kdemultimedia-${PV}+flac-1.1.3.patch"
 
 pkg_setup() {
 	kde_pkg_setup

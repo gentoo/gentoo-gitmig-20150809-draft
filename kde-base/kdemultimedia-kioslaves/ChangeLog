@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia-kioslaves
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.55 2006/10/21 11:49:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/ChangeLog,v 1.56 2006/10/21 19:41:56 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kdemultimedia-3.5.5+flac-1.1.3.patch,
+  kdemultimedia-kioslaves-3.5.5.ebuild:
+  Add patch from Josh Coalson to be able to build with flac 1.1.3.
 
   21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdemultimedia-kioslaves-3.5.2.ebuild,
