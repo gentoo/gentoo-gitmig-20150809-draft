@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta4.ebuild,v 1.1 2006/10/19 22:08:35 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta4.ebuild,v 1.2 2006/10/21 01:42:12 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/gaim/${MY_PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="avahi audiofile bonjour cjk crypt dbus debug doc eds gadu gnutls meanwhile mono nas nls perl silc spell startup-notification tcl tk xscreensaver custom-flags ssl qq msn"
+IUSE="avahi audiofile bonjour cjk crypt dbus debug doc eds gadu gnutls meanwhile mono nas nls perl silc spell startup-notification tcl tk xscreensaver custom-flags ssl qq msn gadu"
 
 RDEPEND="
 	audiofile? ( media-libs/libao
@@ -214,7 +214,12 @@ src_compile() {
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		${myconf} " || die "Configuration failed"
 
-	gnome2_src_compile || die "Make failed"
+	# This is a tempory fix until Makefile is fixed!!
+	if use mono; then
+		gnome2_src_compile -j1 || die "Make failed"
+	else
+		gnome2_src_compile || die "Make failed"
+	fi
 }
 
 src_install() {
