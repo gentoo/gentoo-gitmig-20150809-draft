@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-1.32.ebuild,v 1.1 2006/05/20 09:30:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kimera/kimera-1.32.ebuild,v 1.2 2006/10/21 11:37:38 flameeyes Exp $
 
-inherit kde-functions
+inherit kde-functions qt3
 
 IUSE="anthy"
 
@@ -14,7 +14,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="anthy? ( app-i18n/anthy )
+DEPEND="$(qt_min_version 3)
+	anthy? ( app-i18n/anthy )
 	!anthy? ( app-i18n/canna )"
 need-qt 3
 
@@ -24,12 +25,16 @@ src_compile(){
 		myconf="no_anthy=1"
 	fi
 
-	qmake ${myconf} kimera.pro || die
+	${QTDIR}/bin/qmake ${myconf} kimera.pro || die
+
+	# Avoid pre-stripping
+	sed -i -e '/strip/d' Makefile
+
 	emake || die
 }
 
 src_install(){
-	make INSTALL_ROOT="${D}" install || die
+	emake INSTALL_ROOT="${D}" install || die
 
 	dodoc AUTHORS INSTALL README*
 }
