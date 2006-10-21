@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.221 2006/10/03 14:24:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.222 2006/10/21 11:42:56 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  kdemultimedia-3.5.2-r2.ebuild, kdemultimedia-3.5.3.ebuild,
+  kdemultimedia-3.5.3-r1.ebuild, kdemultimedia-3.5.4.ebuild,
+  kdemultimedia-3.5.5.ebuild:
+  Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
 *kdemultimedia-3.5.5 (03 Oct 2006)
 
