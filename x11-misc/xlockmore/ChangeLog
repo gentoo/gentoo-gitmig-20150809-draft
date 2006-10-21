@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.47 2006/10/21 11:26:37 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.48 2006/10/21 14:48:32 exg Exp $
+
+  21 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> xlockmore-5.21-r1.ebuild:
+  Use unicode flag to enable multi-byte character support, not nls.
 
   21 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   xlockmore-5.21-r1.ebuild:
