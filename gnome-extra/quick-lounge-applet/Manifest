@@ -1,6 +1,31 @@
-MD5 e230b1d67a9bbae46fed9946b31c33f5 ChangeLog 3019
-RMD160 ff60e4570551711e7d97b7eca79a8a99ae2ad4a0 ChangeLog 3019
-SHA256 4ac2bf6d46637fcc166c5e2d0783b4b322042670629b76f4f8c5fc19e0d3ff0f ChangeLog 3019
+DIST quick-lounge-applet-2.1.1.tar.bz2 318343
+DIST quick-lounge-applet-2.12.0.tar.bz2 399555
+DIST quick-lounge-applet-2.12.1.tar.bz2 398230 RMD160 224e2bd3b1a48fb64ddd37977210074867a178ce SHA256 ea0d44229b4fa78e3fd0a417ac7dbebe6404c7753b7e8e77b612abd95d495179
+DIST quick-lounge-applet-2.2.0.tar.bz2 394853 RMD160 4adc37c8e8df6f486fd82a80465f65e61c768dc2 SHA1 7164ab0ab21b0144bc088a05814a1a29e0d7e9d4 SHA256 b8d4c8388139035a0a2d71773d5080d833486c3044eb0af8a0cff6f0c4d56baf
+EBUILD quick-lounge-applet-2.1.1.ebuild 754 RMD160 3b358b61fff0fe101e1ec8ba20032c1aec71a319 SHA1 9268bb03b6e7a9cef9f525ceb6070fee69889a80 SHA256 758febe252bacba8ca955725468230d8a99464ce26e43584668570e0a6bb5d06
+MD5 20bd2f676f04fdf358aed81e1cc8f190 quick-lounge-applet-2.1.1.ebuild 754
+RMD160 3b358b61fff0fe101e1ec8ba20032c1aec71a319 quick-lounge-applet-2.1.1.ebuild 754
+SHA256 758febe252bacba8ca955725468230d8a99464ce26e43584668570e0a6bb5d06 quick-lounge-applet-2.1.1.ebuild 754
+EBUILD quick-lounge-applet-2.12.0.ebuild 846 RMD160 02661df9e70af66209f5780ad24863d77bcd6284 SHA1 617eef0c3c93440bca4d088487e11877949a8b22 SHA256 abc288755d25b0a253597b388332dbdce36f3c7ad5d8b3c2e0c460cf3abc8f27
+MD5 3443f93eab66fab36f5576cbdf47d2d8 quick-lounge-applet-2.12.0.ebuild 846
+RMD160 02661df9e70af66209f5780ad24863d77bcd6284 quick-lounge-applet-2.12.0.ebuild 846
+SHA256 abc288755d25b0a253597b388332dbdce36f3c7ad5d8b3c2e0c460cf3abc8f27 quick-lounge-applet-2.12.0.ebuild 846
+EBUILD quick-lounge-applet-2.12.1.ebuild 867 RMD160 27867698ad67c7c1b4e6b71c39fe7cbb801a2a5c SHA1 2d018a8d0f61e1f336833fbc3f8f16ab9f69558a SHA256 550d95d3d14f0babc4c465d9330926f9381955b1207b35412a5ef0f72850ce40
+MD5 caa09995c64955e7fc98c826fc4f1765 quick-lounge-applet-2.12.1.ebuild 867
+RMD160 27867698ad67c7c1b4e6b71c39fe7cbb801a2a5c quick-lounge-applet-2.12.1.ebuild 867
+SHA256 550d95d3d14f0babc4c465d9330926f9381955b1207b35412a5ef0f72850ce40 quick-lounge-applet-2.12.1.ebuild 867
+EBUILD quick-lounge-applet-2.2.0.ebuild 772 RMD160 853fdc477b0024951f35b7b4f9c2775b19131925 SHA1 c0de8b3111b37c79a792912a294a95361ea9c662 SHA256 e6ba0d559a3c46bd339a8a0f5f1b9bc4b2885ba2905d5b7f896b023afb3f3336
+MD5 99e28c9e11b5416e25ddab4d1e5df979 quick-lounge-applet-2.2.0.ebuild 772
+RMD160 853fdc477b0024951f35b7b4f9c2775b19131925 quick-lounge-applet-2.2.0.ebuild 772
+SHA256 e6ba0d559a3c46bd339a8a0f5f1b9bc4b2885ba2905d5b7f896b023afb3f3336 quick-lounge-applet-2.2.0.ebuild 772
+MISC ChangeLog 3130 RMD160 d2c7111140be717d40c431b646fe2c44f295768c SHA1 59912ae6d94adc2c3b5051b8ff85b07a6b838d91 SHA256 1ee5fef24aa22fb2191ce35cf9ef0ef38d35340e64e3f09f97031afb30842434
+MD5 a0dcd639e9c11aa6e5ad7c34708d742e ChangeLog 3130
+RMD160 d2c7111140be717d40c431b646fe2c44f295768c ChangeLog 3130
+SHA256 1ee5fef24aa22fb2191ce35cf9ef0ef38d35340e64e3f09f97031afb30842434 ChangeLog 3130
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
 MD5 4c41c4372d9df0674f8f23288160d814 files/digest-quick-lounge-applet-2.1.1 78
 RMD160 21b178e7b6e1827725c92733cfcff76d604ecbc6 files/digest-quick-lounge-applet-2.1.1 78
 SHA256 968926c2ab2cff1bd5d73094eb56a1bf513c625f1bc7f234ef4ca1e138b3788a files/digest-quick-lounge-applet-2.1.1 78
@@ -10,21 +35,6 @@ SHA256 7119d6581667d2d7b065bf0bd75805660ea7ffc401ec3c3bc6861b0fcc9c1782 files/di
 MD5 2787c6f7e3c9caa7bbfedc16f5a81478 files/digest-quick-lounge-applet-2.12.1 283
 RMD160 3c8d1643b4d7be0b25ffb6c63316015c518c85a9 files/digest-quick-lounge-applet-2.12.1 283
 SHA256 26c24e29a08b2faa3e182eccbc3ebc35cc702fb8a95557e0bd6e309875406793 files/digest-quick-lounge-applet-2.12.1 283
-MD5 d9c7c910ff5bb92a4e87aaaf3d85c37f files/digest-quick-lounge-applet-2.2.0 78
-RMD160 e26e8b48fe6dc99e88ae64c57530f1da1dae2761 files/digest-quick-lounge-applet-2.2.0 78
-SHA256 58af39bb040b38a94e4ba6e2abdeaf673e9a44d20c8ba760b8f942ab8f05a840 files/digest-quick-lounge-applet-2.2.0 78
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
-SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
-MD5 20bd2f676f04fdf358aed81e1cc8f190 quick-lounge-applet-2.1.1.ebuild 754
-RMD160 3b358b61fff0fe101e1ec8ba20032c1aec71a319 quick-lounge-applet-2.1.1.ebuild 754
-SHA256 758febe252bacba8ca955725468230d8a99464ce26e43584668570e0a6bb5d06 quick-lounge-applet-2.1.1.ebuild 754
-MD5 3443f93eab66fab36f5576cbdf47d2d8 quick-lounge-applet-2.12.0.ebuild 846
-RMD160 02661df9e70af66209f5780ad24863d77bcd6284 quick-lounge-applet-2.12.0.ebuild 846
-SHA256 abc288755d25b0a253597b388332dbdce36f3c7ad5d8b3c2e0c460cf3abc8f27 quick-lounge-applet-2.12.0.ebuild 846
-MD5 caa09995c64955e7fc98c826fc4f1765 quick-lounge-applet-2.12.1.ebuild 867
-RMD160 27867698ad67c7c1b4e6b71c39fe7cbb801a2a5c quick-lounge-applet-2.12.1.ebuild 867
-SHA256 550d95d3d14f0babc4c465d9330926f9381955b1207b35412a5ef0f72850ce40 quick-lounge-applet-2.12.1.ebuild 867
-MD5 5571ec393041b9196e66c2d0a334165b quick-lounge-applet-2.2.0.ebuild 771
-RMD160 da589566f1c2553b15cb293242cb1a27e8aa523e quick-lounge-applet-2.2.0.ebuild 771
-SHA256 49f879f53531fd43bf267371afee87228f2983e9c6bb2ee5009aa9c754f974e0 quick-lounge-applet-2.2.0.ebuild 771
+MD5 cce39ef925ede97ead20059548993353 files/digest-quick-lounge-applet-2.2.0 280
+RMD160 077c231a81c662162610a1aef7f6ca5b326f2eda files/digest-quick-lounge-applet-2.2.0 280
+SHA256 709dceb664b73adbf1b8fcdb2bd742eda439633edeedf5a327f64dac54c62db0 files/digest-quick-lounge-applet-2.2.0 280

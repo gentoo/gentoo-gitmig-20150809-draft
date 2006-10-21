@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.2.0.ebuild,v 1.4 2005/04/08 13:29:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/quick-lounge-applet-2.2.0.ebuild,v 1.5 2006/10/21 16:04:10 dertobi123 Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 sparc"
+KEYWORDS="~amd64 ppc sparc ~x86"
 
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
