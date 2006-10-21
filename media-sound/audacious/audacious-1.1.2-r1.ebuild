@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.2-r1.ebuild,v 1.4 2006/10/20 20:50:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-1.1.2-r1.ebuild,v 1.5 2006/10/21 18:43:02 dertobi123 Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://audacious-media-player.org/release/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ppc ~ppc64 sparc x86"
 IUSE="aac alsa arts chardet esd flac gnome jack lirc mmx modplug mp3 musepack nls oss sid sndfile timidity vorbis wma"
 
 RDEPEND="app-arch/unzip
