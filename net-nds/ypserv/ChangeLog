@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.35 2006/07/13 18:11:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.36 2006/10/21 19:27:08 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> ypserv-2.19.ebuild:
+  ppc stable
 
   13 Jul 2006; Aron Griffis <agriffis@gentoo.org> ypserv-2.19.ebuild:
   Mark 2.19 stable on ia64
