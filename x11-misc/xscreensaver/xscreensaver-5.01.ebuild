@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01.ebuild,v 1.1 2006/10/11 12:46:44 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01.ebuild,v 1.2 2006/10/21 21:53:42 omp Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -14,12 +14,9 @@ LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 
-RDEPEND="|| ( (
-		x11-libs/libXxf86misc
-		x11-apps/xwininfo
-		x11-apps/appres
-		xinerama? ( x11-libs/libXinerama ) )
-	virtual/x11 )
+RDEPEND="x11-libs/libXxf86misc
+	x11-apps/xwininfo
+	x11-apps/appres
 	media-libs/netpbm
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/libxml2-2.5
@@ -30,19 +27,19 @@ RDEPEND="|| ( (
 	jpeg? ( media-libs/jpeg )
 	opengl? ( virtual/opengl
 	          >=media-libs/gle-3.0.1 )
+	xinerama? ( x11-libs/libXinerama )
 	!arm? ( new-login? ( gnome-base/gdm ) )"
 
 DEPEND="${RDEPEND}
-	|| ( ( x11-proto/xf86vidmodeproto
-		x11-proto/xextproto
-		x11-proto/scrnsaverproto
-		x11-proto/recordproto
-		x11-proto/xf86miscproto
-		xinerama? ( x11-proto/xineramaproto ) )
-	virtual/x11 )
+	x11-proto/xf86vidmodeproto
+	x11-proto/xextproto
+	x11-proto/scrnsaverproto
+	x11-proto/recordproto
+	x11-proto/xf86miscproto
 	sys-devel/bc
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	xinerama? ( x11-proto/xineramaproto )"
 
 pkg_setup() {
 
