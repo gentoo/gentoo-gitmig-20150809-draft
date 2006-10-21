@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/trigger
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.16 2006/10/20 22:57:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/trigger/ChangeLog,v 1.17 2006/10/21 22:52:08 mr_bones_ Exp $
+
+  21 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  trigger-0.5.2.1.ebuild:
+  MAKEOPTS to jam is a bad idea (bug #152187)
 
 *trigger-0.5.2.1 (20 Oct 2006)
 
