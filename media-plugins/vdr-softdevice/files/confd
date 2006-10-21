@@ -4,7 +4,7 @@
 
 # Video-Device to use
 #   allowed values: dummy shm dfb fb xv vidix ...
-#SOFTDEVICE_VIDEO_OUT="shm"
+SOFTDEVICE_VIDEO_OUT="shm"
 
 # Video-Suboptions
 # read vdr -P softdevice --help
