@@ -10,12 +10,12 @@ depend() {
 checkconfig() {
 	#set the location of log files, including startup.log created by check-radiusd-config
 	if ! cd /var/log/radius ; then
-		eeror "Failed to change current directory to /var/log/radius"
+		eerror "Failed to change current directory to /var/log/radius"
 		return 1
 	fi
 
 	if [[ ! -d /var/run/radiusd ]] ; then
-		eeror "Failed to create /var/run/radiusd"
+		eerror "Failed to create /var/run/radiusd"
 		return 1
 	fi
 	
