@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.18 2006/08/31 17:38:16 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.4.0.ebuild,v 1.19 2006/10/21 00:03:56 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/freeglut/${P}.tar.gz"
 
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 mips ppc ppc-macos ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.40 2006/10/12 17:32:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.41 2006/10/21 00:03:56 agriffis Exp $
+
+  20 Oct 2006; Aron Griffis <agriffis@gentoo.org> freeglut-2.4.0.ebuild:
+  Mark 2.4.0 stable on alpha
 
 *freeglut-2.4.0-r1 (12 Oct 2006)
 
