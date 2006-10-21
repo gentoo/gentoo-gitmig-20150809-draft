@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/ebookmerge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.8 2006/10/21 11:50:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.9 2006/10/21 17:06:46 kloeri Exp $
+
+  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  ebookmerge-0.9.3.ebuild:
+  Add ~alpha keyword, bug 152195.
 
   21 Oct 2006; Simon Stelling <blubb@gentoo.org> ebookmerge-0.9.3.ebuild:
   added ~amd64
