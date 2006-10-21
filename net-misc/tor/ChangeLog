@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.72 2006/10/09 10:56:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.73 2006/10/21 16:22:10 humpback Exp $
+
+  21 Oct 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  tor-0.1.0.18.ebuild, tor-0.1.1.23.ebuild, tor-0.1.1.24.ebuild:
+  Added ewarn about the needed dot in the privoxy integration. Closes bug
+  #152137.
 
 *tor-0.1.1.24 (09 Oct 2006)
 

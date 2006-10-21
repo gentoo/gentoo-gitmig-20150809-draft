@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.1.23.ebuild,v 1.6 2006/08/30 13:51:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.1.1.23.ebuild,v 1.7 2006/10/21 16:22:10 humpback Exp $
 
 inherit eutils
 
@@ -48,5 +48,6 @@ pkg_postinst() {
 	einfo "You must create /etc/tor/torrc, you can use the sample that is in that directory"
 	einfo "To have privoxy and tor working together you must add:"
 	einfo "forward-socks4a / localhost:9050 ."
+	ewarn "(notice the . at the end of the line)"
 	einfo "to /etc/privoxy/config"
 }
