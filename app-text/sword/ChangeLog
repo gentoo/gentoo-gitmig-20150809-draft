@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.29 2006/07/05 09:45:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.30 2006/10/21 17:09:55 squinky86 Exp $
+
+*sword-1.5.9 (21 Oct 2006)
+
+  21 Oct 2006; Jon Hood <squinky86@gentoo.org> +sword-1.5.9.ebuild:
+  Version bump to support bibletime-1.6.
 
   05 Jul 2006; <nixnut@gentoo.org> sword-1.5.8-r1.ebuild:
   Added ~ppc wrt bug #136709
