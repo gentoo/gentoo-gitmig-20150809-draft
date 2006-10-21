@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.90 2006/09/25 13:20:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.91 2006/10/21 15:24:57 squinky86 Exp $
+
+*bittorrent-4.26.0 (21 Oct 2006)
+
+  21 Oct 2006; Jon Hood <squinky86@gentoo.org> +bittorrent-4.26.0.ebuild:
+  Version bump, bug #137527. Fix dependencies on twisted modules, bug #141483.
 
   25 Sep 2006; Markus Rothe <corsair@gentoo.org> bittorrent-4.4.0.ebuild:
   Remove useless and wrong 'mv /usr/share/doc/ /usr/share/doc/'; bug #145047
