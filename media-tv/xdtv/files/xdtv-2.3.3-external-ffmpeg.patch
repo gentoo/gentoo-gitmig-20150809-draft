@@ -1,0 +1,63 @@
+--- xdtv-2.3.3/configure.in.old	2006-10-21 20:58:44.000000000 +0200
++++ xdtv-2.3.3/configure.in	2006-10-21 20:59:53.000000000 +0200
+@@ -151,6 +151,7 @@
+ AC_ARG_ENABLE(smallfont,
+   [  --enable-smallfont      enables AleVT Small Font
+   --disable-smallfont     disables AleVT Small Font (default)])
++AC_ARG_WITH([external-ffmpeg], AC_HELP_STRING([--with-external-ffmpeg], [use external ffmpeg library]))
+ 
+ dnl ---------------------------------------------------------------------
+ dnl Checks for programs.
+@@ -985,15 +986,20 @@
+     LIBDL="",)
+ AC_SUBST(LIBDL)
+ 
+-dnl --------------------------------------------------
+-dnl Checks for ffmpeg inside distribution
+-if test "$enable_ffmpeg" != "no"; then
+-  AC_MSG_CHECKING(for ffmpeg inside distribution)
+-  if test -f libavcodec/allcodecs.c; then
++ dnl --------------------------------------------------
++ dnl Checks for ffmpeg inside distribution
++ if test "$enable_ffmpeg" != "no"; then
++  if test "x$with_external_ffmpeg" = "xyes"; then
++     PKG_CHECK_MODULES([FFMPEG], [libavformat libavutil libpostproc libavcodec])
+      enable_ffmpeg=yes
+   else
+-     enable_ffmpeg=no
+-  fi
++     AC_MSG_CHECKING(for ffmpeg inside distribution)
++     if test -f libavcodec/allcodecs.c; then
++        enable_ffmpeg=yes
++     else
++        enable_ffmpeg=no
++     fi
++   fi
+   AC_MSG_RESULT($enable_ffmpeg)
+   if test "$enable_ffmpeg" = "no"; then
+     AC_MSG_WARN(*** xdtv compiled WITHOUT ffmpeg many capabilities are disabled !!)
+@@ -1413,11 +1419,19 @@
+     cp -f configure.make config.mak.in
+ 
+     dnl ---------xdtv flag--------------------------------------------
+-    AC_DEFINE(HAVE_FFMPEG,1,FFMPEG is inside XdTV now!)
+-    AC_DEFINE(HAVE_FFMPEG_AC3,1,FFMPEG is inside XdTV now!)
+-    FFMPEGFOLDER="libavutil libpostproc libavcodec libavformat"
+-    FFMPEGLINK="../libavformat/libavformat.a ../libavutil/libavutil.a ../libpostproc/libpostproc.a ../libavcodec/libavcodec.a"
+-    FFMPEGINC="-I../libavutil -I../libpostproc -I../libavformat -I../libavcodec"
++    if test "x$with_external_ffmpeg" = "xyes"; then
++       AC_DEFINE(HAVE_FFMPEG,1,FFMPEG is external)
++       AC_DEFINE(HAVE_FFMPEG_AC3,1,FFMPEG is external)
++       FFMPEGFOLDER=""
++       FFMPEGINC=$FFMPEG_CFLAGS
++       FFMPEGLINK=$FFMPEG_LIBS
++    else
++       AC_DEFINE(HAVE_FFMPEG,1,FFMPEG is inside XdTV now!)
++       AC_DEFINE(HAVE_FFMPEG_AC3,1,FFMPEG is inside XdTV now!)
++       FFMPEGFOLDER="libavutil libpostproc libavcodec libavformat"
++       FFMPEGLINK="../libavformat/libavformat.a ../libavutil/libavutil.a ../libpostproc/libpostproc.a ../libavcodec/libavcodec.a"
++       FFMPEGINC="-I../libavutil -I../libpostproc -I../libavformat -I../libavcodec"
++    fi
+     AC_SUBST(FFMPEGLINK)
+     AC_SUBST(FFMPEGINC)
+     AC_SUBST(FFMPEGFOLDER)

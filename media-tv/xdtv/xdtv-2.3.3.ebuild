@@ -1,11 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.4 2006/10/01 17:43:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.5 2006/10/21 19:17:29 aballier Exp $
 
 inherit font multilib autotools flag-o-matic
 
 IUSE="alsa jpeg encode ffmpeg xvid lirc xinerama neXt Xaw3d mmx zvbi aqua_theme
-carbone_theme xv debug dvb ogg png aac nls"
+carbone_theme xv debug x264 ogg png aac nls"
+# dvb support disabled, it might not work with external ffmpeg
 
 DESCRIPTION="TV viewer with support for AVI recording and plugins"
 HOMEPAGE="http://xawdecode.sourceforge.net/"
@@ -56,8 +57,8 @@ RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 			xinerama? ( x11-libs/libXinerama )
 		) <virtual/x11-7 )"
 
+#	dvb? ( media-tv/linuxtv-dvb-headers )
 DEPEND="${RDEPEND}
-	dvb? ( media-tv/linuxtv-dvb-headers )
 	nls? ( sys-devel/gettext )
 	|| ( ( x11-proto/videoproto
 			x11-apps/bdftopcf
@@ -105,6 +106,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.3.0-setXid.patch"
 	epatch "${FILESDIR}/${PN}-2.3.2-parallel-install.patch"
+	epatch "${FILESDIR}/${P}-external-ffmpeg.patch"
 
 	# ffmpeg doesn'g use libtool, so the condition for PIC code
 	# is __PIC__, not PIC.
@@ -113,7 +115,7 @@ src_unpack() {
 		libavcodec/msmpeg4.c \
 		|| die "sed failed (__PIC__)"
 
-	eautomake
+	eautoreconf
 }
 
 src_compile() {
@@ -147,12 +149,13 @@ src_compile() {
 		$(use_enable xv xvideo) \
 		$(use_enable encode lame) \
 		$(use_enable !debug nodebug) \
-		$(use_enable dvb) \
+		--disable-dvb \
+		--with-external-ffmpeg \
 		$(use_enable ogg) \
 		$(use_enable png) \
 		$(use_enable aac faac) \
 		$(use_enable nls) \
-		--disable-x264 \
+		$(use_enable x264) \
 		--enable-pixmaps \
 		--disable-cpu-detection \
 		--disable-divx4linux \

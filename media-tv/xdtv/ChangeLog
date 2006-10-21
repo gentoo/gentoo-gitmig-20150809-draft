@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.42 2006/10/10 18:59:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.43 2006/10/21 19:17:29 aballier Exp $
+
+  21 Oct 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/xdtv-2.3.3-external-ffmpeg.patch, xdtv-2.3.3.ebuild:
+  Adding a patch to link against ffmpeg rather than building it and linking
+  statically. Removing dvb support because it might break with that patch.
 
   10 Oct 2006; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   Updating metadata.xml, maintainance inherited from Flameeyes
