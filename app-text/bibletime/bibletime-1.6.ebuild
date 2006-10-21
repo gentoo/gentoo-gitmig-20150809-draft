@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.5.3.ebuild,v 1.6 2006/10/21 17:10:38 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/bibletime-1.6.ebuild,v 1.1 2006/10/21 17:10:38 squinky86 Exp $
 
-inherit kde eutils
+inherit kde eutils versionator
 
 DESCRIPTION="KDE Bible study application using the SWORD library."
 HOMEPAGE="http://www.bibletime.info/"
@@ -10,12 +10,13 @@ SRC_URI="mirror://sourceforge/bibletime/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="=app-text/sword-1.5.8*"
+DEPEND=">=app-text/sword-1.5.9
+	>=dev-cpp/clucene-0.9.15"
 
-LANGS_PKG=${PN}-i18n-1.5.1
+LANGS_PKG=${PN}-i18n-${PV}
 LANGS="af bg cs da de en_GB es fi fr hu it ko nl nn_NO no pl pt_BR ro ru sk ua"
 LANGS_DOC="bg cs de fi fr it ko nl pt_BR ru"
 
