@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.69 2006/10/15 16:54:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.70 2006/10/21 21:45:56 vapier Exp $
+
+*tar-1.16 (21 Oct 2006)
+
+  21 Oct 2006; Mike Frysinger <vapier@gentoo.org> +tar-1.16.ebuild:
+  Version bump.
 
   15 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> tar-1.15.92-r1.ebuild:
   Added ~x86-fbsd keyword
