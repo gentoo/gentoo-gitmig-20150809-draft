@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvutil
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.23 2005/09/28 19:49:18 pvdabeel Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/ChangeLog,v 1.24 2006/10/21 23:03:32 dev-zero Exp $
+
+  21 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Version bump. Cleaning out old versions.
 
   19 Sep 2005; Mark Loeser <halcy0n@gentoo.org> metadata.xml:
   Adding to cpp herd
