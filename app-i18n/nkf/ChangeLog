@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.32 2006/06/17 13:55:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.33 2006/10/21 13:30:57 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> files/nkf-python.patch:
+  Don't strip binary when linking, thanks to Patrick Lauer for reporting in
+  bug #152231.
 
 *nkf-2.0.7_beta1 (17 Jun 2006)
 
