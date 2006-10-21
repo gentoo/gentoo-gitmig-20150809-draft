@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6084 2006/10/20 22:58:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6085 2006/10/21 00:07:27 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Stefan Schweizer <genstef@gentoo.org> (21 Aug 2006)
+# beta psi, with jingle support
+>=net-im/psi-0.11_pre20061020
 
 # Diego Pettenò <flameeyes@gentoo.org> (21 Oct 2006)
 # Scheduled for removal for multiple bugs and no maintainer
