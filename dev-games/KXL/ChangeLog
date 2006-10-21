@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/KXL
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.6 2006/02/10 16:29:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.7 2006/10/21 00:18:23 nyhm Exp $
+
+  21 Oct 2006; Tristan Heaven <nyhm@gentoo.org> KXL-1.1.7.ebuild:
+  HOMEPAGE update
 
   10 Feb 2006; Chris Gianelloni <wolf31o2@gentoo.org> KXL-1.1.7.ebuild:
   Added modular X dependencies and closing bug #121359.
