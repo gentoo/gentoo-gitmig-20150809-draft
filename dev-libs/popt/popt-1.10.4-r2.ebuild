@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r1.ebuild,v 1.11 2006/10/21 11:45:40 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.10.4-r2.ebuild,v 1.1 2006/10/21 11:45:40 sanchan Exp $
 
 inherit flag-o-matic autotools
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc-macos ~ppc64 ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="nls"
 
 RDEPEND="nls? ( virtual/libintl )"
-DEPEND="sys-devel/gettext"
+DEPEND="nls? ( sys-devel/gettext )"
 
 #test fail. I can't figure out why.
 RESTRICT=test
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-lib64.patch
+	use nls || epatch "${FILESDIR}"/${P}-nls.patch
 	eautoreconf
 }
 
