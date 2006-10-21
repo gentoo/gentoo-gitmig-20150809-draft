@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6085 2006/10/21 00:07:27 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6086 2006/10/21 10:28:53 genstef Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -585,12 +585,6 @@ app-emacs/weather
 # Development versions of FWbuilder.
 >=net-libs/libfwbuilder-2.1.5
 >=net-firewall/fwbuilder-2.1.5
-
-# Stefan Schweizer <genstef@gentoo.org> (19 Aug 2006)
-# No new upstream release for a long time, unexplained
-# bugs for ex. #131189, #125285, #129321, #131189
-# Please use ghostscript-gpl or ghostscript-esp
-app-text/ghostscript-gnu
 
 # Steev Klimaszewski <steev@gentoo.org> (18 Aug 2006)
 # waiting for new mono bindings and some testing
