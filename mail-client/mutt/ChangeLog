@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.90 2006/10/02 17:08:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.91 2006/10/21 04:12:16 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> mutt-1.5.13-r1.ebuild:
+  Mark 1.5.13-r1 stable on alpha/ia64
 
   02 Oct 2006; Fabian Groffen <grobian@gentoo.org> mutt-1.5.11-r2.ebuild,
   mutt-1.5.12.ebuild, mutt-1.5.13.ebuild, mutt-1.5.13-r1.ebuild:
