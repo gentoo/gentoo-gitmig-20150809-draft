@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.83 2006/10/07 16:28:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.84 2006/10/21 21:34:41 tcort Exp $
+
+  21 Oct 2006; Thomas Cort <tcort@gentoo.org> lighttpd-1.4.11.ebuild:
+  Stable on alpha.
 
   07 Oct 2006; Thilo Bangert <bangert@gentoo.org> files/lighttpd.confd,
   files/lighttpd.initd:
