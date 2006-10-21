@@ -5,7 +5,7 @@
  
  if EXTRAS
 -libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@
-+libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@ @XML_LIBS@
++libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@ $(SSL_LIBS)
  libccext2_la_LDFLAGS = $(RELEASE) $(SHARED_FLAGS)
  
  if GETOPT_LONG
@@ -16,7 +16,7 @@
  	private.h nat.h
  
 -@EXTRAS_TRUE@libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@
-+@EXTRAS_TRUE@libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@ @XML_LIBS@
++@EXTRAS_TRUE@libccext2_la_LIBADD = @BASE_LIB@ @THREAD_LIBS@ $(SSL_LIBS)
  @EXTRAS_TRUE@libccext2_la_LDFLAGS = $(RELEASE) $(SHARED_FLAGS)
  @EXTRAS_TRUE@@GETOPT_LONG_TRUE@optincludedir = $(includedir)/cc++2
  @EXTRAS_TRUE@@GETOPT_LONG_TRUE@optinclude_HEADERS = getopt.h
