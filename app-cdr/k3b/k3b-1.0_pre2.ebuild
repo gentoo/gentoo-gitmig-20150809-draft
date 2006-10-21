@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_pre2.ebuild,v 1.3 2006/10/19 17:41:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0_pre2.ebuild,v 1.4 2006/10/21 21:05:57 flameeyes Exp $
 
 inherit kde eutils
 
@@ -24,7 +24,7 @@ DEPEND="kde? ( || ( kde-base/kdesu kde-base/kdebase ) )
 	>=media-sound/cdparanoia-3.9.8
 	sndfile? ( media-libs/libsndfile )
 	ffmpeg? ( media-video/ffmpeg )
-	flac? ( ~media-libs/flac-1.1.2 )
+	flac? ( media-libs/flac )
 	mp3? ( media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
 	vorbis? ( media-libs/libvorbis )
@@ -87,6 +87,11 @@ src_unpack() {
 		done
 		rm -f configure
 	fi
+
+	cd "${S}"
+	epatch "${FILESDIR}/${P}+flac-1.1.3.patch"
+	epatch "${FILESDIR}/${P}-flac-beta.patch"
+	rm -f "${S}/configure"
 }
 
 src_compile() {

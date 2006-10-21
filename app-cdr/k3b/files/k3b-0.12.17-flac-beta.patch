@@ -1,0 +1,19 @@
+Index: k3b-0.12.17/configure.in.in
+===================================================================
+--- k3b-0.12.17.orig/configure.in.in
++++ k3b-0.12.17/configure.in.in
+@@ -22,11 +22,11 @@ if test "$ac_cv_use_flac" = "yes"; then
+   # Hack to get the flac version since I was not able to handle the code from
+   # the flac guys. This is a strange usage of tr but I don't know too much about
+   # shell scripting and this works, so...
+   # BUT: this does not work if we want to use another flac version than the one installed
+   #      where the flac binary is found!
+-  K3B_FLAC_VERSION_MAJOR=`flac --version|tr -d "flac "|cut -d "." -f 1`
+-  K3B_FLAC_VERSION_MINOR=`flac --version|tr -d "flac "|cut -d "." -f 2`
+-  K3B_FLAC_VERSION_PATCHLEVEL=`flac --version|tr -d "flac "|cut -d "." -f 3`
++  K3B_FLAC_VERSION_MAJOR=`flac --version|tr -d "flac "|cut -d '-' -f 1|cut -d "." -f 1`
++  K3B_FLAC_VERSION_MINOR=`flac --version|tr -d "flac "|cut -d '-' -f 1|cut -d "." -f 2`
++  K3B_FLAC_VERSION_PATCHLEVEL=`flac --version|tr -d "flac "|cut -d '-' -f 1|cut -d "." -f 3`
+   if test \( "$K3B_FLAC_VERSION_MAJOR" -gt 1 -o \
+ 	\( "$K3B_FLAC_VERSION_MAJOR" -eq 1 -a \( "$K3B_FLAC_VERSION_MINOR" -gt 1 -o \
+ 				 \( "$K3B_FLAC_VERSION_MINOR" -eq 1 -a "$K3B_FLAC_VERSION_PATCHLEVEL" -gt 1 \) \

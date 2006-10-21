@@ -1,0 +1,17 @@
+Index: k3b-1.0pre2/plugins/decoder/flac/configure.in.in
+===================================================================
+--- k3b-1.0pre2.orig/plugins/decoder/flac/configure.in.in
++++ k3b-1.0pre2/plugins/decoder/flac/configure.in.in
+@@ -22,9 +22,9 @@ if test "$ac_cv_use_flac" = "yes"; then
+   AC_CHECK_PROG( have_flac_bin, flac, 1, 0 )
+ 
+   if test "$have_flac_bin" = "1"; then
+-    K3B_FLAC_VERSION_MAJOR=`flac --version|tr -d "flac "|cut -d "." -f 1`
+-    K3B_FLAC_VERSION_MINOR=`flac --version|tr -d "flac "|cut -d "." -f 2`
+-    K3B_FLAC_VERSION_PATCHLEVEL=`flac --version|tr -d "flac "|cut -d "." -f 3`
++    K3B_FLAC_VERSION_MAJOR=`flac --version|tr -d "flac "|cut -d '-' -f 1|cut -d "." -f 1`
++    K3B_FLAC_VERSION_MINOR=`flac --version|tr -d "flac "|cut -d '-' -f 1|cut -d "." -f 2`
++    K3B_FLAC_VERSION_PATCHLEVEL=`flac --version|tr -d "flac "|cut -d '-' -f 1|cut -d "." -f 3`
+     if test \( "$K3B_FLAC_VERSION_MAJOR" -gt 1 -o \
+ 	\( "$K3B_FLAC_VERSION_MAJOR" -eq 1 -a \( "$K3B_FLAC_VERSION_MINOR" -gt 1 -o \
+ 				 \( "$K3B_FLAC_VERSION_MINOR" -eq 1 -a "$K3B_FLAC_VERSION_PATCHLEVEL" -gt 1 \) \
