@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq/libapreq-1.3.ebuild,v 1.2 2005/05/29 16:08:59 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq/libapreq-1.3.ebuild,v 1.3 2006/10/21 19:30:04 dertobi123 Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.apache.org/dist/httpd/libapreq/${P}.tar.gz"
 
 LICENSE="Apache-1.1 as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ppc64 sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4
