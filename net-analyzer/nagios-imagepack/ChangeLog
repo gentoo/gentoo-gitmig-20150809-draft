@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-imagepack
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.10 2006/05/12 21:23:16 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-imagepack/ChangeLog,v 1.11 2006/10/21 22:08:00 tcort Exp $
+
+  21 Oct 2006; Thomas Cort <tcort@gentoo.org>
+  nagios-imagepack-1.0-r1.ebuild:
+  Added ~alpha keyword wrt Bug #110130.
 
 *nagios-imagepack-1.0-r1 (12 May 2006)
 
