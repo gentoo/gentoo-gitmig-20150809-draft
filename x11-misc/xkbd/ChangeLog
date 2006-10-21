@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkbd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/ChangeLog,v 1.10 2006/01/14 12:14:35 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/ChangeLog,v 1.11 2006/10/21 22:37:29 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xkbd-0.8.12.ebuild:
+  Remove monolithic X from dependencies, `` to $() and other minor cleanup.
 
   14 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> xkbd-0.8.12.ebuild:
   Removed sys-devel/libtool from RDEPEND.
