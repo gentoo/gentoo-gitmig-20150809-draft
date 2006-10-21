@@ -1,20 +1,40 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 790667f9af7e90c46f0bed74ab0c2f74 ximian-artwork-0.2.29.0.6.3.ebuild 2004
-MD5 c25340c60a84058ed20c5ffce4715b10 ChangeLog 3903
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 84970ce36f1fe781232f3b86c8ef7a2b ximian-artwork-0.2.32.1.ebuild 1973
-MD5 4f09d13cbbc85be041773d463dd83fc3 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
-MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
-MD5 f3b6233f881db50604d1cceebc2c2b40 files/digest-ximian-artwork-0.2.29.0.6.3 88
-MD5 658478d0857190dcb5b10e815bf0c704 files/digest-ximian-artwork-0.2.32.1 80
+AUX ximian-artwork-0.2.26-corruption_fix.patch 716 RMD160 dcb420c9b04c12577d6a54ca96f57d2eae4d50e0 SHA1 9339dc77a9f78201f59247dadb559187cadfd04a SHA256 b4b809081d5dd62ae1b5ab2244e3c68dd0b04bbea9919b16a5a909a939306b81
 MD5 481c98be012989222f01734d8c6e43e4 files/ximian-artwork-0.2.26-corruption_fix.patch 716
+RMD160 dcb420c9b04c12577d6a54ca96f57d2eae4d50e0 files/ximian-artwork-0.2.26-corruption_fix.patch 716
+SHA256 b4b809081d5dd62ae1b5ab2244e3c68dd0b04bbea9919b16a5a909a939306b81 files/ximian-artwork-0.2.26-corruption_fix.patch 716
+AUX ximian-artwork-0.2.26-gdm.patch 520 RMD160 57e2562ee6c500783267a209ba24eb59198c793d SHA1 3ba3a9b0a041e436ced7689b70fb56e4622a94bc SHA256 dd2131906f1478c9ffb7f4dd54fa1cadc09d5301c9888c35354740fa7e1322d4
+MD5 a733ce592710282d7d68dceedcf32d00 files/ximian-artwork-0.2.26-gdm.patch 520
+RMD160 57e2562ee6c500783267a209ba24eb59198c793d files/ximian-artwork-0.2.26-gdm.patch 520
+SHA256 dd2131906f1478c9ffb7f4dd54fa1cadc09d5301c9888c35354740fa7e1322d4 files/ximian-artwork-0.2.26-gdm.patch 520
+AUX ximian-artwork-0.2.29-disable_industrial.patch 2313 RMD160 57f8970b1573f93b2c60998800b893d242e392b7 SHA1 0d41cdbfa2893e5bb90491ac6475e7750644f4d8 SHA256 f31aba5f0f8388d37976fcf999c67346988ae28998c3d3b76bf707042bc16b30
+MD5 4f09d13cbbc85be041773d463dd83fc3 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
+RMD160 57f8970b1573f93b2c60998800b893d242e392b7 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
+SHA256 f31aba5f0f8388d37976fcf999c67346988ae28998c3d3b76bf707042bc16b30 files/ximian-artwork-0.2.29-disable_industrial.patch 2313
+AUX ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374 RMD160 b59808c7a823ebdbc925b1e0ef06f67a9e71f1a6 SHA1 65cf4fa89fbd80a3e0795e2112576597c8e2e6f4 SHA256 6c1a1d5a38cb731f50207ff7f9ac68a2f0b05cab0137479ac66c8e2f0632d1bc
 MD5 97a527cd1be3926af01ecbff0cc1311d files/ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFDHu5mKRy60XGEcJIRArx+AJwP1OZZoQKMdIjFJw7U8Ko9NSBV3wCfUcu7
-il+6IAcrDeTp5h2ZnQI1crM=
-=2xsL
------END PGP SIGNATURE-----
+RMD160 b59808c7a823ebdbc925b1e0ef06f67a9e71f1a6 files/ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374
+SHA256 6c1a1d5a38cb731f50207ff7f9ac68a2f0b05cab0137479ac66c8e2f0632d1bc files/ximian-artwork-0.2.32.1-disable_industrial_engine.patch 1374
+DIST ximian-artwork-0.2.29-0.ximian.6.3.src.rpm 3824967
+DIST ximian-artwork-0.2.32-1.rf.src.rpm 3958480 RMD160 83ba9fcbffced7396e34959f4a6d0cc522840db6 SHA1 8da4df6f5e6ec4683ac5a86ab1b7403f47db71da SHA256 bbb520faa99e08bc562a09bcf495291296f52f18a1323b228250d5fc5e3bfcff
+EBUILD ximian-artwork-0.2.29.0.6.3.ebuild 2004 RMD160 c055f5491f3f1b3b9db88d8fa05f52d2f68b9eb5 SHA1 ac918a98bedaa569fd1fca0e3c76d60dac49b581 SHA256 644e82502f367ae45a302e288f367839899fe599332e9d045babab9cc6fc2826
+MD5 790667f9af7e90c46f0bed74ab0c2f74 ximian-artwork-0.2.29.0.6.3.ebuild 2004
+RMD160 c055f5491f3f1b3b9db88d8fa05f52d2f68b9eb5 ximian-artwork-0.2.29.0.6.3.ebuild 2004
+SHA256 644e82502f367ae45a302e288f367839899fe599332e9d045babab9cc6fc2826 ximian-artwork-0.2.29.0.6.3.ebuild 2004
+EBUILD ximian-artwork-0.2.32.1.ebuild 1974 RMD160 943839b4912008ee35c37bcb8c711dc9d86abbbb SHA1 4eb4394ecdd82b4aede6bb7ec4e2a96a9d039f99 SHA256 47a2f5a257994064e8011ae57cb28a3c75cadc66293f472064ea06242508ca59
+MD5 de4c6755f97525769c8118017ca82b12 ximian-artwork-0.2.32.1.ebuild 1974
+RMD160 943839b4912008ee35c37bcb8c711dc9d86abbbb ximian-artwork-0.2.32.1.ebuild 1974
+SHA256 47a2f5a257994064e8011ae57cb28a3c75cadc66293f472064ea06242508ca59 ximian-artwork-0.2.32.1.ebuild 1974
+MISC ChangeLog 4009 RMD160 4857548b068a3fc28a896d78c9a9284f49acb080 SHA1 9d708e020272474be61d95d640c4ef1ac81a1c77 SHA256 9d26c6cc6e81e51d9e01945c7f7bbdbbb1c81ee19843a22da76aee24a49b60d0
+MD5 1b8b77df3a608635ce3e4daa68c974f4 ChangeLog 4009
+RMD160 4857548b068a3fc28a896d78c9a9284f49acb080 ChangeLog 4009
+SHA256 9d26c6cc6e81e51d9e01945c7f7bbdbbb1c81ee19843a22da76aee24a49b60d0 ChangeLog 4009
+MISC metadata.xml 219 RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 SHA1 aad05fa7d0ab2c9304502d4843d10f775afad2a8 SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138
+MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+RMD160 fd2bbaf1c19b4ad2d876f02846608907516e2403 metadata.xml 219
+SHA256 f39a99f0777bf9eac2d5a444a392d3b93da834a6de01613747bad25c84637138 metadata.xml 219
+MD5 f3b6233f881db50604d1cceebc2c2b40 files/digest-ximian-artwork-0.2.29.0.6.3 88
+RMD160 d8f9f65eaea3eff2f49b79229cf1d7b4c56c2942 files/digest-ximian-artwork-0.2.29.0.6.3 88
+SHA256 e0136d26523683bd81c0a57c202548ea94aa758b43482948d0bf30a73b402f88 files/digest-ximian-artwork-0.2.29.0.6.3 88
+MD5 f9969c019aa4a21e476f82f4a972afc3 files/digest-ximian-artwork-0.2.32.1 286
+RMD160 4d7c68cacfeb8a6c4ff65821da19102b3237a2c0 files/digest-ximian-artwork-0.2.32.1 286
+SHA256 00059478c2964f401e47c5fb0ad87902cc06c7b6f19c430d9446ad78cf175b4e files/digest-ximian-artwork-0.2.32.1 286
