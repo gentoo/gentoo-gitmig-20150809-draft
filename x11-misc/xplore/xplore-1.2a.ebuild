@@ -1,32 +1,29 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.9 2006/05/17 18:16:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.10 2006/10/21 21:35:00 omp Exp $
 
 inherit eutils
 
-IUSE=""
-
 DESCRIPTION="motif file manager for X."
-SRC_URI="http://www.musikwissenschaft.uni-mainz.de/~ag/xplore/${P}.tar.bz2"
 HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/xplore/"
+SRC_URI="http://www.musikwissenschaft.uni-mainz.de/~ag/${PN}/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 # its webpage states the lesstif does not fully work with xplore
 DEPEND="x11-libs/openmotif
-	|| ( (
-		x11-misc/gccmakedep
-		app-text/rman
-		x11-misc/imake )
-	virtual/x11 )"
+	x11-misc/gccmakedep
+	app-text/rman
+	x11-misc/imake"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-strerror.patch
-	epatch ${FILESDIR}/${P}-malloc.patch
-	epatch ${FILESDIR}/${P}-label.patch
+	epatch "${FILESDIR}/${P}-strerror.patch"
+	epatch "${FILESDIR}/${P}-malloc.patch"
+	epatch "${FILESDIR}/${P}-label.patch"
 }
 
 src_compile() {
@@ -44,6 +41,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Installation failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog README TODO
 }
