@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.5 2006/10/14 16:16:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.6 2006/10/21 22:29:19 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xsel-0.9.6.ebuild:
+  Remove monolithic X from dependencies and add IUSE.
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> xsel-0.9.6.ebuild:
   Stable on ia64.
