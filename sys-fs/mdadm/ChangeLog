@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.49 2006/10/21 04:17:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.50 2006/10/21 04:23:21 agriffis Exp $
+
+*mdadm-2.5.4 (21 Oct 2006)
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> +mdadm-2.5.4.ebuild:
+  Bump to 2.5.4 (from 2.5.3)
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org> mdadm-2.5.3.ebuild:
   Mark 2.5.3 stable on alpha
