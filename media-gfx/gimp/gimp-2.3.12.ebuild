@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.12.ebuild,v 1.1 2006/10/19 11:16:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.3.12.ebuild,v 1.2 2006/10/21 19:59:27 genstef Exp $
 
 inherit fdo-mime flag-o-matic
 
@@ -58,6 +58,9 @@ pkg_setup() {
 }
 
 src_compile() {
+	# workaround portage variable leakage
+	local AA=
+
 	# gimp uses inline functions (e.g. plug-ins/common/grid.c) (#23078)
 	# gimp uses floating point math, needs accuracy (#98685)
 	filter-flags "-fno-inline" "-ffast-math"

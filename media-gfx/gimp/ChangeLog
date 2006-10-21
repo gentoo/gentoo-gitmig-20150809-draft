@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.179 2006/10/19 11:16:18 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.180 2006/10/21 19:59:27 genstef Exp $
+
+  21 Oct 2006; Stefan Schweizer <genstef@gentoo.org> gimp-2.3.12.ebuild:
+  Fix build by unsetting AA like in 2.3.11, bug 151946
 
 *gimp-2.3.12 (19 Oct 2006)
 
