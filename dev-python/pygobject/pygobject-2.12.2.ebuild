@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.2.ebuild,v 1.1 2006/10/13 15:03:50 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.2.ebuild,v 1.2 2006/10/21 22:32:38 vapier Exp $
 
 inherit gnome2 python eutils
 
@@ -9,18 +9,17 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.3.5
 	>=dev-libs/glib-2.8
 	!<dev-python/pygtk-2.9"
-
 DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt >=app-text/docbook-xsl-stylesheets-1.70.1 )
 	>=dev-util/pkgconfig-0.12.0"
 
-DOCS="AUTHORS ChangeLog COPYING INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 pkg_setup() {
 	G2CONF="$(use_enable doc docs)"
