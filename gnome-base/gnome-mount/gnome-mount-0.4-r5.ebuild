@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r5.ebuild,v 1.1 2006/08/25 19:44:00 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.4-r5.ebuild,v 1.2 2006/10/21 22:40:22 vapier Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~david/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="debug"
 
 RDEPEND=">=gnome-base/libgnomeui-2.13
@@ -25,14 +25,14 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.29"
 
-DOCS="AUTHORS ChangeLog COPYING HACKING INSTALL NEWS README TODO"
+DOCS="AUTHORS ChangeLog HACKING INSTALL NEWS README TODO"
 
 src_unpack() {
 	gnome2_src_unpack
 
 	# fixes for bug #133549, bug #133880, bug #137211
-	epatch ${FILESDIR}/${PN}-hal-no-media-fstab.patch
+	epatch "${FILESDIR}"/${PN}-hal-no-media-fstab.patch
 
 	# add support for mounting with ntfs-3g
-	epatch ${FILESDIR}/${P}-ntfs3g.patch
+	epatch "${FILESDIR}"/${P}-ntfs3g.patch
 }
