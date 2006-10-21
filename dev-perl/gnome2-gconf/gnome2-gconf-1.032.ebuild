@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.032.ebuild,v 1.3 2006/10/20 16:26:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/gnome2-gconf-1.032.ebuild,v 1.4 2006/10/21 00:00:49 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/E/EB/EBASSI/${MY_P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~rmcfarla/${MY_P}/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 
