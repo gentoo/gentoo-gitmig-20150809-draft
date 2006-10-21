@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.5.ebuild,v 1.2 2006/10/20 20:15:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.5.ebuild,v 1.3 2006/10/21 10:41:55 drizzt Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -14,7 +14,7 @@ SRC_URI="http://unrealircd.funny4chat.de/downloads/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc sparc x86"
+KEYWORDS="~amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="hub ipv6 ssl zlib curl"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -77,7 +77,7 @@ src_compile() {
 		include/setup.h \
 		ircdcron/ircdchk
 
-	emake IRCDDIR=/etc/unrealircd || die "emake failed"
+	emake MAKE=make IRCDDIR=/etc/unrealircd || die "emake failed"
 }
 
 src_install() {
