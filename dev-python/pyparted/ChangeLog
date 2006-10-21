@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.26 2006/10/01 17:53:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.27 2006/10/21 01:23:12 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> pyparted-1.7.0.ebuild:
+  Mark 1.7.0 stable on ia64
 
   01 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   pyparted-1.7.0.ebuild:
