@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fcgi
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.21 2006/09/05 17:52:37 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fcgi/ChangeLog,v 1.22 2006/10/21 21:33:53 tcort Exp $
+
+  21 Oct 2006; Thomas Cort <tcort@gentoo.org> fcgi-2.4.0-r1.ebuild:
+  Stable on alpha.
 
   05 Sep 2006; Thomas Cort <tcort@gentoo.org> fcgi-2.4.0-r1.ebuild:
   Added ~alpha keyword.

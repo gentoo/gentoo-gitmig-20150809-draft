@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcache
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.11 2006/10/15 09:27:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.12 2006/10/21 21:32:50 tcort Exp $
+
+  21 Oct 2006; Thomas Cort <tcort@gentoo.org> libmemcache-1.2.4.ebuild:
+  Stable on alpha.
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   libmemcache-1.2.4.ebuild:
