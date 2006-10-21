@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.29 2006/04/14 18:27:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.30 2006/10/21 22:12:25 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xosview-1.8.2-r1.ebuild,
+  xosview-1.8.3.ebuild:
+  Remove monolithic X from dependencies and other minor changes.
 
 *xosview-1.8.3 (14 Apr 2006)
 
