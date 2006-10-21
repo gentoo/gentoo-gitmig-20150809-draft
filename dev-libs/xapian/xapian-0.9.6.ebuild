@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.6.ebuild,v 1.1 2006/05/25 01:32:16 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-0.9.6.ebuild,v 1.2 2006/10/21 12:00:57 nixnut Exp $
 
 DESCRIPTION="Xapian Probabilistic Information Retrieval library"
 HOMEPAGE="http://www.xapian.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.oligarchy.co.uk/xapian/${PV}/xapian-core-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
