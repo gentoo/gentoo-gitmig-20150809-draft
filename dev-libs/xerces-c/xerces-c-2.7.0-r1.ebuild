@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.8 2006/10/20 00:31:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.7.0-r1.ebuild,v 1.9 2006/10/21 22:37:28 vapier Exp $
 
 inherit eutils multilib
 
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	export XERCESCROOT="${S}"
 	cd src/xercesc
-	./runConfigure -plinux -P/usr
+	./runConfigure -plinux -P/usr ${EXTRA_ECONF}
 	emake -j1 || die
 }
 
