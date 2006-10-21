@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/ebookmerge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.7 2006/10/13 12:09:40 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.8 2006/10/21 11:50:13 blubb Exp $
+
+  21 Oct 2006; Simon Stelling <blubb@gentoo.org> ebookmerge-0.9.3.ebuild:
+  added ~amd64
 
 *ebookmerge-0.9.3 (13 Oct 2006)
 
