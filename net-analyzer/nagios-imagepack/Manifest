@@ -1,16 +1,30 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d4b6035ce71a7ab1fa65c2d2cb87a6aa ChangeLog 1309
-MD5 2cdc23c6aeec1949bbd70ffb1defa4a6 files/digest-nagios-imagepack-1.0 470
-MD5 105c847e7db30a8b8be7e799361a772f files/digest-nagios-imagepack-1.0-r1 537
-MD5 5fca464505216a223336866fea11a426 metadata.xml 244
-MD5 3bb8caf2c08d2927a88112e671f71867 nagios-imagepack-1.0-r1.ebuild 1068
+DIST imagepak-andrade.tar.gz 1242799
+DIST imagepak-base.tar.gz 154513
+DIST imagepak-bernhard.tar.gz 100585
+DIST imagepak-didier.tar.gz 51510
+DIST imagepak-gentoo.tar.bz2 18079
+DIST imagepak-remus.tar.gz 32691
+DIST imagepak-satrapa.tar.gz 28559
+DIST imagepak-werschler.tar.gz 38244
+EBUILD nagios-imagepack-1.0-r1.ebuild 1075 RMD160 a8192d4b09ab79188d65c8ae22647d3074b1a3e8 SHA1 9e6befac34e86ef464682b96866e4d9d679adadc SHA256 9275b72bac49bca4602eefd80e9f3acfce03d02ce1df24e13054ffb22ae0cdbd
+MD5 8aa53643b567c907a9b19c9122d7ed7d nagios-imagepack-1.0-r1.ebuild 1075
+RMD160 a8192d4b09ab79188d65c8ae22647d3074b1a3e8 nagios-imagepack-1.0-r1.ebuild 1075
+SHA256 9275b72bac49bca4602eefd80e9f3acfce03d02ce1df24e13054ffb22ae0cdbd nagios-imagepack-1.0-r1.ebuild 1075
+EBUILD nagios-imagepack-1.0.ebuild 1028 RMD160 8696da96c385b4c698635761116caa0294763700 SHA1 3380848cb6c385db9492b388665560ababee44a5 SHA256 637a75909d333ce08af5d429dc006f4513922988ed52c818119d0bf1ee8a16bd
 MD5 1ad6887f0e3624a3b4a0abf1bdd1ba5b nagios-imagepack-1.0.ebuild 1028
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2.2-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFEZPzTT+MN7JbqCpMRAqkxAJ4o7BoBruHFaUzuN0LxGCRETKmk5QCffLUC
-F1aQQ+poI+IGYpiTso/OnRw=
-=/XHN
------END PGP SIGNATURE-----
+RMD160 8696da96c385b4c698635761116caa0294763700 nagios-imagepack-1.0.ebuild 1028
+SHA256 637a75909d333ce08af5d429dc006f4513922988ed52c818119d0bf1ee8a16bd nagios-imagepack-1.0.ebuild 1028
+MISC ChangeLog 1430 RMD160 c8926cb5d76d8f74a87fdef0a027efb488372d3c SHA1 9ff2562644d665d979ebbbc0998ef4aec6887b36 SHA256 7042f8ec928ba258d7a1be41ea0879f3a3813721c8abcc7561aa70d80c751383
+MD5 7921c0feca362e2d76616340272fd2ff ChangeLog 1430
+RMD160 c8926cb5d76d8f74a87fdef0a027efb488372d3c ChangeLog 1430
+SHA256 7042f8ec928ba258d7a1be41ea0879f3a3813721c8abcc7561aa70d80c751383 ChangeLog 1430
+MISC metadata.xml 244 RMD160 69dc2a6547082ee7a4ce4847d817ec2b955327af SHA1 49c66107a974d1ecc591b4611681f4a3cbc82d57 SHA256 1c643d85b4dde50836d5cc0eb345e19e5be52bbaa496ef90023568e14ce434b3
+MD5 5fca464505216a223336866fea11a426 metadata.xml 244
+RMD160 69dc2a6547082ee7a4ce4847d817ec2b955327af metadata.xml 244
+SHA256 1c643d85b4dde50836d5cc0eb345e19e5be52bbaa496ef90023568e14ce434b3 metadata.xml 244
+MD5 2cdc23c6aeec1949bbd70ffb1defa4a6 files/digest-nagios-imagepack-1.0 470
+RMD160 57810fd72ddffd8b10784c0f74a7b2a8fc549c72 files/digest-nagios-imagepack-1.0 470
+SHA256 7011644e926addadd0a753aebcb7da3eb69c9f986dc9792c077e7b583ca348a9 files/digest-nagios-imagepack-1.0 470
+MD5 105c847e7db30a8b8be7e799361a772f files/digest-nagios-imagepack-1.0-r1 537
+RMD160 5e2c61f2a6074bfae1b80649bb63454cb60242e9 files/digest-nagios-imagepack-1.0-r1 537
+SHA256 2275566e2f654526234d1c03fb5aa456ed15b31067b556506b9de2eaf63156da files/digest-nagios-imagepack-1.0-r1 537
