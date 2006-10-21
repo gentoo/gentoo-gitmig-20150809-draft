@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/ipamonafont
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.6 2006/09/01 18:18:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.7 2006/10/21 10:18:31 flameeyes Exp $
+
+*ipamonafont-1.0.5 (21 Oct 2006)
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +ipamonafont-1.0.5.ebuild:
+  Version bump, thanks to Hiroki Kobayashi in bug #149820.
 
   01 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   ipamonafont-1.0.3.ebuild:
