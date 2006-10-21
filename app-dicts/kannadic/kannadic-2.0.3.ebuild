@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-2.0.3.ebuild,v 1.7 2006/10/18 10:26:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kannadic/kannadic-2.0.3.ebuild,v 1.8 2006/10/21 13:57:43 carlo Exp $
 
 inherit kde
 
@@ -13,10 +13,10 @@ SLOT="0"
 KEYWORDS="ppc ppc64 ~sparc x86"
 IUSE=""
 
-need-kde 3
-
 DEPEND="app-i18n/canna"
 RDEPEND="${DEPEND}"
+
+need-kde 3
 
 pkg_postinst() {
 	einfo
