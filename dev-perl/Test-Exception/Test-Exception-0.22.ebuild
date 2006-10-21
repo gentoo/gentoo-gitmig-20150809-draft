@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.22.ebuild,v 1.3 2006/10/15 20:55:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/Test-Exception-0.22.ebuild,v 1.4 2006/10/21 14:42:43 dertobi123 Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADIE/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ppc sparc ~x86"
 IUSE=""
 SRC_TEST="do"
 

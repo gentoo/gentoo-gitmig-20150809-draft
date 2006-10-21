@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28.05.ebuild,v 1.4 2006/10/20 23:39:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.28.05.ebuild,v 1.5 2006/10/21 14:51:14 dertobi123 Exp $
 
 inherit versionator perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://cpan/authors/id/K/KW/KWILLIAMS/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ia64 ~m68k ~mips ppc ~ppc64 sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 # Removing these as hard deps. They are listed as recommended in the Build.PL,

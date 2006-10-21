@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.40 2006/10/20 23:05:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.41 2006/10/21 14:44:20 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  Test-Pod-1.26.ebuild:
+  ppc stable
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> Test-Pod-1.26.ebuild:
   Mark 1.26 stable on ia64

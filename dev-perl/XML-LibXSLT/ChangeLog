@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.45 2006/10/20 23:20:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.46 2006/10/21 14:48:21 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  XML-LibXSLT-1.60.ebuild:
+  ppc stable
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> XML-LibXSLT-1.60.ebuild:
   Mark 1.60 stable on ia64

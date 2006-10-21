@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.21 2006/10/20 19:51:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.22 2006/10/21 14:20:02 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  MIME-Types-1.17.ebuild:
+  ppc stable
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> MIME-Types-1.17.ebuild:
   Stable on Alpha.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Tty
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.23 2006/10/20 19:48:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.24 2006/10/21 14:17:59 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
+  ppc stable
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> IO-Tty-1.07.ebuild:
   Stable on Alpha.

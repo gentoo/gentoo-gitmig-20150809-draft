@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Tabs+Wrap
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Tabs+Wrap/ChangeLog,v 1.17 2006/10/20 23:08:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Tabs+Wrap/ChangeLog,v 1.18 2006/10/21 14:46:05 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  Text-Tabs+Wrap-2006.0711.ebuild:
+  ppc stable
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   Text-Tabs+Wrap-2006.0711.ebuild:

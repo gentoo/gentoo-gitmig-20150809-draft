@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.49.ebuild,v 1.5 2006/10/20 19:12:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.49.ebuild,v 1.6 2006/10/21 14:00:25 dertobi123 Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/D/DB/DBDPG/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc ~x86"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ~ppc64 s390 sh sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/perl-Test-Simple
