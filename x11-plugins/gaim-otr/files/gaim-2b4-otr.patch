@@ -1,0 +1,12 @@
+diff -ur gaim-otr-3.0.0/gtk-dialog.c gaim-otr-3.0.0.new/gtk-dialog.c
+--- gaim-otr-3.0.0/gtk-dialog.c	2006-10-20 13:40:14.000000000 -0400
++++ gaim-otr-3.0.0.new/gtk-dialog.c	2006-10-20 13:45:11.000000000 -0400
+@@ -30,7 +30,7 @@
+ #if GAIM_MAJOR_VERSION < 2
+ #include "stock.h"
+ #else
+-#include "gtkstock.h"
++#include "gaimstock.h"
+ #endif
+ #include "plugin.h"
+ #include "notify.h"
