@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.8.ebuild,v 1.8 2006/09/06 12:04:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.8.ebuild,v 1.9 2006/10/21 22:59:50 aballier Exp $
 
 inherit eutils autotools
 
@@ -20,9 +20,10 @@ DEPEND="sys-libs/libavc1394
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/${P}-configure.patch
+	unpack "${A}"
+	epatch "${FILESDIR}/${P}-configure.patch"
 	cd ${S}
+	epatch "${FILESDIR}/${PN}-libquicktime-compat.patch"
 	eautoreconf
 }
 

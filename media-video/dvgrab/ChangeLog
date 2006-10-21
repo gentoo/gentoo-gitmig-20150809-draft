@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.16 2006/09/06 12:04:18 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.17 2006/10/21 22:59:50 aballier Exp $
+
+  21 Oct 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/dvgrab-libquicktime-compat.patch, dvgrab-1.8.ebuild:
+  Fixing libquicktime compatibility issue, bug #142107
 
   06 Sep 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/dvgrab-1.8-configure.patch, dvgrab-1.8.ebuild:

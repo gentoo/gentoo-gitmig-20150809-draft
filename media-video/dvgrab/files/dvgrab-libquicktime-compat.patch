@@ -1,0 +1,31 @@
+--- filehandler.cc	2005/04/18 16:36:07	1.13
++++ filehandler.cc	2006/03/04 05:29:38	1.14
+@@ -788,10 +788,9 @@
+ bool QtHandler::Create( const string& filename )
+ {
+ 	Init();
+-
+ 	fd = quicktime_open( const_cast<char*>( filename.c_str() ), 0, 1 );
++	this->filename = filename;
+ 
+-	//if (fd != NULL) FileTracker::GetInstance().Add(filename.c_str());
+ 	return ( fd != NULL );
+ }
+ 
+@@ -907,7 +906,7 @@
+ 	if ( fd )
+ 	{
+ 		struct stat file_status;
+-		fstat( fileno( fd->stream ), &file_status );
++		stat( filename.c_str(), &file_status );
+ 		return file_status.st_size;
+ 	}
+ 	else
+@@ -945,6 +944,7 @@
+ 		Close();
+ 		return false;
+ 	}
++	filename = s;
+ 
+ 	return true;
+ }
