@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dazuko
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.6 2006/10/18 01:16:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dazuko/ChangeLog,v 1.7 2006/10/21 19:48:07 kloeri Exp $
+
+  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> dazuko-2.3.1.ebuild:
+  Add ~alpha and ~ia64 keywords, bug 151630.
 
   18 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> dazuko-2.3.1.ebuild:
   Keyworded ~sparc wrt #151630
