@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/FileHandle-Deluxe
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Deluxe/ChangeLog,v 1.9 2006/09/11 21:40:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Deluxe/ChangeLog,v 1.10 2006/10/20 23:59:38 mcummings Exp $
+
+  20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  FileHandle-Deluxe-0.92.ebuild:
+  Marking amd64 stable
 
   11 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   FileHandle-Deluxe-0.92.ebuild:

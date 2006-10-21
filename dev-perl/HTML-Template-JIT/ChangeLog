@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Template-JIT
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/ChangeLog,v 1.7 2006/09/11 21:42:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Template-JIT/ChangeLog,v 1.8 2006/10/21 00:03:26 mcummings Exp $
+
+  21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  HTML-Template-JIT-0.05.ebuild:
+  Marking amd64 stable
 
   11 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   HTML-Template-JIT-0.05.ebuild:
