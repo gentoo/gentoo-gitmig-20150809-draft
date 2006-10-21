@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.3.ebuild,v 1.3 2005/05/06 00:22:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.3.ebuild,v 1.4 2006/10/21 23:38:32 kloeri Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/gkrellshoot/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~ppc"
+KEYWORDS="alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-2*

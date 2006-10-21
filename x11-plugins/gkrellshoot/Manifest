@@ -1,7 +1,28 @@
-MD5 b0f86d28973675a3d7a88e93782f1023 ChangeLog 2345
+DIST gkrellshoot-0.3.2.tar.gz 14929
+DIST gkrellshoot-0.4.1.tar.gz 15112
+DIST gkrellshoot-0.4.3.tar.gz 16213
+EBUILD gkrellshoot-0.3.2.ebuild 792 RMD160 5a1f5fb22f01a8a960888d2732f51995c77c2b38 SHA1 1235bf934727d12551406fd8960fa3d581196444 SHA256 a356c1a3fcd5cab386854525dd4192e4926c2ffccfbe14e73cb6c3c42506840b
 MD5 a4938b72df3a15af2f29b59bdb567aa4 gkrellshoot-0.3.2.ebuild 792
+RMD160 5a1f5fb22f01a8a960888d2732f51995c77c2b38 gkrellshoot-0.3.2.ebuild 792
+SHA256 a356c1a3fcd5cab386854525dd4192e4926c2ffccfbe14e73cb6c3c42506840b gkrellshoot-0.3.2.ebuild 792
+EBUILD gkrellshoot-0.4.1.ebuild 771 RMD160 e615eb742c807f160089a1cde33f90d40460e06c SHA1 1bcab8906ac632c3b24a28b6b858ca10e9c43798 SHA256 cb819fd99e69e7da88b2e2c073499fef7bc31bf7a10705d1f5fb15e4969ba2f6
 MD5 2119377f02c2abc59a4ed5227fd5c0da gkrellshoot-0.4.1.ebuild 771
-MD5 cc993fd4202c209eabcf314c62c3e617 gkrellshoot-0.4.3.ebuild 803
-MD5 f23fea3e8df4c393b9d16c4ccfbcf244 files/digest-gkrellshoot-0.4.3 68
+RMD160 e615eb742c807f160089a1cde33f90d40460e06c gkrellshoot-0.4.1.ebuild 771
+SHA256 cb819fd99e69e7da88b2e2c073499fef7bc31bf7a10705d1f5fb15e4969ba2f6 gkrellshoot-0.4.1.ebuild 771
+EBUILD gkrellshoot-0.4.3.ebuild 800 RMD160 153e0417e326c0450c73b2c3d4b1d928b20569c9 SHA1 e71451ce0acf5beb0f4bc45a9b0ceb3ad6dd6ae1 SHA256 b77040ffbbdf47622e3356f8d2084dd2a6387648c88de108e18c1ef2be0e5883
+MD5 4be66d463e4cc038416535d91f30ba32 gkrellshoot-0.4.3.ebuild 800
+RMD160 153e0417e326c0450c73b2c3d4b1d928b20569c9 gkrellshoot-0.4.3.ebuild 800
+SHA256 b77040ffbbdf47622e3356f8d2084dd2a6387648c88de108e18c1ef2be0e5883 gkrellshoot-0.4.3.ebuild 800
+MISC ChangeLog 2456 RMD160 ed7961fd77116c33e294e0068938e57e2a27e696 SHA1 ef18db6d69b4ebd6163e8a2097f4bc566d456191 SHA256 cd73de140fa6a4d5dddd1507394d1f0f5700b38dda16addfbd35ec6966ae0c07
+MD5 756d6068cbb71b99d1aae21bd3ec30e3 ChangeLog 2456
+RMD160 ed7961fd77116c33e294e0068938e57e2a27e696 ChangeLog 2456
+SHA256 cd73de140fa6a4d5dddd1507394d1f0f5700b38dda16addfbd35ec6966ae0c07 ChangeLog 2456
 MD5 1b94315da93e6a9ea08d07f726fccc58 files/digest-gkrellshoot-0.3.2 68
+RMD160 fb693ecce7fc62766f31436a732de081a4562462 files/digest-gkrellshoot-0.3.2 68
+SHA256 7acfcc8e91b47cb61c9df7fa61f170b207d7aa2afb909cd1f3f99cc3d159c3c4 files/digest-gkrellshoot-0.3.2 68
 MD5 2ddc84839a8d815f0163cd6cf58992f4 files/digest-gkrellshoot-0.4.1 68
+RMD160 f2a27f56279e81d51698adf3d398f23ae7cbc2a8 files/digest-gkrellshoot-0.4.1 68
+SHA256 481e91e7f0c9761ea8bb94418f663811b2c9190ff3f69dcf08a75f5e67a264b9 files/digest-gkrellshoot-0.4.1 68
+MD5 f23fea3e8df4c393b9d16c4ccfbcf244 files/digest-gkrellshoot-0.4.3 68
+RMD160 4733d1e91c2b4624224c0cf51f58f7054e12260d files/digest-gkrellshoot-0.4.3 68
+SHA256 fb75f2cb5063ea144ba715e4455493d85fec70008952a2237edead0780f62f5d files/digest-gkrellshoot-0.4.3 68
