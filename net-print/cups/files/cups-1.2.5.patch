@@ -1,0 +1,33 @@
+diff -ur cups-1.2.5.orig/scheduler/ipp.c cups-1.2.5/scheduler/ipp.c
+--- cups-1.2.5.orig/scheduler/ipp.c	2006-10-21 02:35:26.000000000 +0200
++++ cups-1.2.5/scheduler/ipp.c	2006-10-21 02:35:41.000000000 +0200
+@@ -4020,14 +4020,14 @@
+     if ((!strcmp(system_paper, "Letter") && have_letter) ||
+         (!strcmp(system_paper, "A4") && have_a4))
+     {
+-      num_defaults = ppd_add_default("PageSize", system_paper, 
+-				     num_defaults, &defaults);
+-      num_defaults = ppd_add_default("PageRegion", system_paper, 
+-				     num_defaults, &defaults);
+-      num_defaults = ppd_add_default("PaperDimension", system_paper, 
+-				     num_defaults, &defaults);
+-      num_defaults = ppd_add_default("ImageableArea", system_paper, 
+-				     num_defaults, &defaults);
++      num_defaults = cupsAddOption("PageSize", system_paper, 
++				   num_defaults, &defaults);
++      num_defaults = cupsAddOption("PageRegion", system_paper, 
++				   num_defaults, &defaults);
++      num_defaults = cupsAddOption("PaperDimension", system_paper, 
++				   num_defaults, &defaults);
++      num_defaults = cupsAddOption("ImageableArea", system_paper, 
++				   num_defaults, &defaults);
+     }
+   }
+ #endif /* HAVE_LIBPAPER */
+@@ -9158,5 +9158,5 @@
+ 
+ 
+ /*
+- * End of "$Id: cups-1.2.5.patch,v 1.1 2006/10/21 00:45:55 genstef Exp $".
++ * End of "$Id: cups-1.2.5.patch,v 1.1 2006/10/21 00:45:55 genstef Exp $".
+  */
