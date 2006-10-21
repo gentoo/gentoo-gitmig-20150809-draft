@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.28 2006/10/10 17:46:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.29 2006/10/21 09:37:06 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> ghex-2.8.1.ebuild:
+  ppc stable
 
   10 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> ghex-2.8.1.ebuild:
   Stable on sparc
