@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/xcut-0.2-r1.ebuild,v 1.3 2006/09/08 22:39:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/xcut-0.2-r1.ebuild,v 1.4 2006/10/21 03:23:43 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xcut.sourceforge.net"
 SRC_URI="mirror://sourceforge/xcut/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ia64 ~ppc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc x86"
 
 RDEPEND="|| ( x11-libs/libX11 virtual/x11 )"
 DEPEND="${RDEPEND}
