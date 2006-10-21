@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/mafft
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.1 2006/10/21 05:29:23 dberkholz Exp $
+
+*mafft-5.861 (21 Oct 2006)
+
+  21 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; +metadata.xml,
+  +mafft-5.861.ebuild:
+  New package: Multiple sequence alignments using a variety of algorithms.
+
