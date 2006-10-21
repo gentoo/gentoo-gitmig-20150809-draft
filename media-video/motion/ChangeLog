@@ -1,6 +1,11 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.8 2006/10/21 20:44:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.9 2006/10/21 21:11:45 aballier Exp $
+
+*motion-3.2.7 (21 Oct 2006)
+
+  21 Oct 2006; Alexis Ballier <aballier@gentoo.org> +motion-3.2.7.ebuild:
+  Version bump, thanks to Nathan Sullivan & Gunnar Skjold, bug #144000
 
   21 Oct 2006; Alexis Ballier <aballier@gentoo.org>
   +files/motion-3.2.4-ffmpeg-compat.patch, motion-3.2.4.ebuild:
