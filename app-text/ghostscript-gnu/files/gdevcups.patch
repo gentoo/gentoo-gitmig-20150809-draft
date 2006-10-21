@@ -1,0 +1,432 @@
+--- aaa/ghostscript-8.53/pstoraster/gdevcups.c  2005-01-24 14:17:24.016026784 +0100
++++ bbb/ghostscript-8.53/pstoraster/gdevcups.c  2005-01-24 14:16:53.037736200 +0100
+408c408
+<   fprintf(stderr, "DEBUG2: cups_close(%p)\n", pdev);
+---
+>   dpf("DEBUG2: cups_close(%p)\n", pdev);
+561c561
+<   fprintf(stderr, "DEBUG2: cups_get_matrix(%p, %p)\n", pdev, pmat);
+---
+>   dpf("DEBUG2: cups_get_matrix(%p, %p)\n", pdev, pmat);
+575,576c575,576
+<   fprintf(stderr, "DEBUG: cups->header.Duplex = %d\n", cups->header.Duplex);
+<   fprintf(stderr, "DEBUG: cups->page = %d\n", cups->page);
+---
+>   dpf("DEBUG: cups->header.Duplex = %d\n", cups->header.Duplex);
+>   dpf("DEBUG: cups->page = %d\n", cups->page);
+580,581c580,581
+<     fprintf(stderr, "DEBUG: cupsPPD = %p\n", cupsPPD);
+<     fprintf(stderr, "DEBUG: cupsPPD->flip_duplex = %d\n", cupsPPD->flip_duplex);
+---
+>     dpf("DEBUG: cupsPPD = %p\n", cupsPPD);
+>     dpf("DEBUG: cupsPPD->flip_duplex = %d\n", cupsPPD->flip_duplex);
+632c632
+<   fprintf(stderr, "DEBUG: width = %d, height = %d\n", cups->width,
+---
+>   dpf("DEBUG: width = %d, height = %d\n", cups->width,
+634c634
+<   fprintf(stderr, "DEBUG: PageSize = [ %d %d ], HWResolution = [ %d %d ]\n",
+---
+>   dpf("DEBUG: PageSize = [ %d %d ], HWResolution = [ %d %d ]\n",
+637c637
+<   fprintf(stderr, "DEBUG: HWMargins = [ %.3f %.3f %.3f %.3f ]\n",
+---
+>   dpf("DEBUG: HWMargins = [ %.3f %.3f %.3f %.3f ]\n",
+640c640
+<   fprintf(stderr, "DEBUG: matrix = [ %.3f %.3f %.3f %.3f %.3f %.3f ]\n",
+---
+>   dpf("DEBUG: matrix = [ %.3f %.3f %.3f %.3f %.3f %.3f ]\n",
+663c663
+<   fprintf(stderr, "DEBUG2: cups_get_params(%p, %p)\n", pdev, plist);
+---
+>   dpf("DEBUG2: cups_get_params(%p, %p)\n", pdev, plist);
+671c671
+<   fputs("DEBUG2: before gdev_prn_get_params()\n", stderr);
+---
+>   dputs("DEBUG2: before gdev_prn_get_params()\n");
+678c678
+<   fputs("DEBUG2: after gdev_prn_get_params()\n", stderr);
+---
+>   dputs("DEBUG2: after gdev_prn_get_params()\n");
+686c686
+<   fputs("DEBUG2: Adding MediaClass\n", stderr);
+---
+>   dputs("DEBUG2: Adding MediaClass\n");
+694c694
+<   fputs("DEBUG2: Adding AdvanceDistance\n", stderr);
+---
+>   dputs("DEBUG2: Adding AdvanceDistance\n");
+702c702
+<   fputs("DEBUG2: Adding AdvanceDistance\n", stderr);
+---
+>   dputs("DEBUG2: Adding AdvanceDistance\n");
+710c710
+<   fputs("DEBUG2: Adding Collate\n", stderr);
+---
+>   dputs("DEBUG2: Adding Collate\n");
+718c718
+<   fputs("DEBUG2: Adding CutMedia\n", stderr);
+---
+>   dputs("DEBUG2: Adding CutMedia\n");
+726c726
+<   fputs("DEBUG2: Adding InsertSheet\n", stderr);
+---
+>   dputs("DEBUG2: Adding InsertSheet\n");
+734c734
+<   fputs("DEBUG2: Adding Jog\n", stderr);
+---
+>   dputs("DEBUG2: Adding Jog\n");
+742c742
+<   fputs("DEBUG2: Adding LeadingEdge\n", stderr);
+---
+>   dputs("DEBUG2: Adding LeadingEdge\n");
+750c750
+<   fputs("DEBUG2: Adding ManualFeed\n", stderr);
+---
+>   dputs("DEBUG2: Adding ManualFeed\n");
+758c758
+<   fputs("DEBUG2: Adding MediaPosition\n", stderr);
+---
+>   dputs("DEBUG2: Adding MediaPosition\n");
+766c766
+<   fputs("DEBUG2: Adding MirrorPrint\n", stderr);
+---
+>   dputs("DEBUG2: Adding MirrorPrint\n");
+774c774
+<   fputs("DEBUG2: Adding NegativePrint\n", stderr);
+---
+>   dputs("DEBUG2: Adding NegativePrint\n");
+782c782
+<   fputs("DEBUG2: Adding OutputFaceUp\n", stderr);
+---
+>   dputs("DEBUG2: Adding OutputFaceUp\n");
+790c790
+<   fputs("DEBUG2: Adding Separations\n", stderr);
+---
+>   dputs("DEBUG2: Adding Separations\n");
+798c798
+<   fputs("DEBUG2: Adding TraySwitch\n", stderr);
+---
+>   dputs("DEBUG2: Adding TraySwitch\n");
+806c806
+<   fputs("DEBUG2: Adding Tumble\n", stderr);
+---
+>   dputs("DEBUG2: Adding Tumble\n");
+814c814
+<   fputs("DEBUG2: Adding cupsWidth\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsWidth\n");
+822c822
+<   fputs("DEBUG2: Adding cupsHeight\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsHeight\n");
+830c830
+<   fputs("DEBUG2: Adding cupsMediaType\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsMediaType\n");
+838c838
+<   fputs("DEBUG2: Adding cupsBitsPerColor\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsBitsPerColor\n");
+846c846
+<   fputs("DEBUG2: Adding cupsBitsPerPixel\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsBitsPerPixel\n");
+854c854
+<   fputs("DEBUG2: Adding cupsBytesPerLine\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsBytesPerLine\n");
+862c862
+<   fputs("DEBUG2: Adding cupsColorOrder\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsColorOrder\n");
+870c870
+<   fputs("DEBUG2: Adding cupsColorSpace\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsColorSpace\n");
+878c878
+<   fputs("DEBUG2: Adding cupsCompression\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsCompression\n");
+886c886
+<   fputs("DEBUG2: Adding cupsRowCount\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsRowCount\n");
+894c894
+<   fputs("DEBUG2: Adding cupsRowFeed\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsRowFeed\n");
+902c902
+<   fputs("DEBUG2: Adding cupsRowStep\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsRowStep\n");
+911c911
+<   fputs("DEBUG2: Adding cupsNumColors\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsNumColors\n");
+919c919
+<   fputs("DEBUG2: Adding cupsInteger\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsInteger\n");
+931c931
+<   fputs("DEBUG2: Adding cupsReal\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsReal\n");
+943c943
+<   fputs("DEBUG2: Adding cupsString\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsString\n");
+955c955
+<   fputs("DEBUG2: Adding cupsMarkerType\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsMarkerType\n");
+963c963
+<   fputs("DEBUG2: Adding cupsRenderingIntent\n", stderr);
+---
+>   dputs("DEBUG2: Adding cupsRenderingIntent\n");
+972c972
+<   fputs("DEBUG2: Leaving cups_get_params()\n", stderr);
+---
+>   dputs("DEBUG2: Leaving cups_get_params()\n");
+995c995
+<   fprintf(stderr, "DEBUG2: cups_get_space_params(%p, %p)\n", pdev, space_params);
+---
+>   dpf("DEBUG2: cups_get_space_params(%p, %p)\n", pdev, space_params);
+1023c1023
+<   fprintf(stderr, "DEBUG: cache_size = %.0f\n", cache_size);
+---
+>   dpf("DEBUG: cache_size = %.0f\n", cache_size);
+1071c1071
+<   fprintf(stderr, "DEBUG2: cups_map_cmyk(%p, %d, %d, %d, %d, %p)\n",
+---
+>   dpf("DEBUG2: cups_map_cmyk(%p, %d, %d, %d, %d, %p)\n",
+1434c1434
+<         fprintf(stderr, "DEBUG2:   \\=== COLOR %d\n", out[0]);
+---
+>         dpf("DEBUG2:   \\=== COLOR %d\n", out[0]);
+1440c1440
+<         fprintf(stderr, "DEBUG2:   \\=== COLOR %d, %d, %d\n",
+---
+>         dpf("DEBUG2:   \\=== COLOR %d, %d, %d\n",
+1447c1447
+<         fprintf(stderr, "DEBUG2:   \\=== COLOR %d, %d, %d, %d\n",
+---
+>         dpf("DEBUG2:   \\=== COLOR %d, %d, %d, %d\n",
+1465c1465
+<   fprintf(stderr, "DEBUG2: cups_map_gray(%p, %d, %p)\n",
+---
+>   dpf("DEBUG2: cups_map_gray(%p, %d, %p)\n",
+1496c1496
+<   fprintf(stderr, "DEBUG2: cups_map_rgb(%p, %p, %d, %d, %d, %p)\n",
+---
+>   dpf("DEBUG2: cups_map_rgb(%p, %p, %d, %d, %d, %p)\n",
+1586c1586
+<   fprintf(stderr, "DEBUG2: cups_map_cmyk_color(%p, %d, %d, %d, %d)\n", pdev,
+---
+>   dpf("DEBUG2: cups_map_cmyk_color(%p, %d, %d, %d, %d)\n", pdev,
+1701c1701
+<   fprintf(stderr, "DEBUG2: CMYK (%d,%d,%d,%d) -> CMYK %08x (%d,%d,%d,%d)\n",
+---
+>   dpf("DEBUG2: CMYK (%d,%d,%d,%d) -> CMYK %08x (%d,%d,%d,%d)\n",
+1731c1731
+<   fprintf(stderr, "DEBUG2: cups_map_color_rgb(%p, %d, %p)\n", pdev,
+---
+>   dpf("DEBUG2: cups_map_color_rgb(%p, %d, %p)\n", pdev,
+1743c1743
+<   fprintf(stderr, "DEBUG2: COLOR %08x = ", (unsigned)color);
+---
+>   dpf("DEBUG2: COLOR %08x = ", (unsigned)color);
+1921c1921
+<   fprintf(stderr, "%d,%d,%d\n", prgb[0], prgb[1], prgb[2]);
+---
+>   dpf("%d,%d,%d\n", prgb[0], prgb[1], prgb[2]);
+1953c1953
+<   fprintf(stderr, "DEBUG2: cups_map_rgb_color(%p, %d, %d, %d)\n", pdev, r, g, b);
+---
+>   dpf("DEBUG2: cups_map_rgb_color(%p, %d, %d, %d)\n", pdev, r, g, b);
+2162c2162
+< 	fprintf(stderr, "DEBUG2: CMY (%d,%d,%d) -> CMYK %08x (%d,%d,%d,%d)\n",
+---
+> 	dpf("DEBUG2: CMY (%d,%d,%d) -> CMYK %08x (%d,%d,%d,%d)\n",
+2406c2406
+<   fprintf(stderr, "DEBUG2: RGB %d,%d,%d = %08x\n", r, g, b, (unsigned)i);
+---
+>   dpf("DEBUG2: RGB %d,%d,%d = %08x\n", r, g, b, (unsigned)i);
+2425c2425
+<   fprintf(stderr, "DEBUG2: cups_open(%p)\n", pdev);
+---
+>   dpf("DEBUG2: cups_open(%p)\n", pdev);
+2432c2432
+<     fputs("INFO: Processing page 1...\n", stderr);
+---
+>     dpf("INFO: Processing page 1...\n");
+2468c2468
+<   fprintf(stderr, "DEBUG2: cups_print_pages(%p, %p, %d)\n", pdev, fp,
+---
+>   dpf("DEBUG2: cups_print_pages(%p, %p, %d)\n", pdev, fp,
+2507c2507
+<   fprintf(stderr, "DEBUG2: cupsBitsPerPixel = %d, cupsWidth = %d, cupsBytesPerLine = %d, srcbytes = %d\n",
+---
+>   dpf("DEBUG2: cupsBitsPerPixel = %d, cupsWidth = %d, cupsBytesPerLine = %d, srcbytes = %d\n",
+2512c2512
+<   src = (unsigned char *)gs_malloc(srcbytes, 1, "cups_print_pages");
+---
+>   src = (unsigned char *)gs_malloc(pdev->memory, srcbytes, 1, "cups_print_pages");
+2521c2521
+<   dst = (unsigned char *)gs_malloc(cups->header.cupsBytesPerLine, 2,
+---
+>   dst = (unsigned char *)gs_malloc(pdev->memory, cups->header.cupsBytesPerLine, 2,
+2537c2537
+<       gs_exit(0);
+---
+>       gs_exit(pdev->memory, 0);
+2555c2555
+<   fprintf(stderr, "DEBUG2: cupsWidth = %d, cupsHeight = %d, cupsBytesPerLine = %d\n",
+---
+>   dpf("DEBUG2: cupsWidth = %d, cupsHeight = %d, cupsBytesPerLine = %d\n",
+2585,2586c2585,2586
+<   gs_free((char *)src, srcbytes, 1, "cups_print_pages");
+<   gs_free((char *)dst, cups->header.cupsBytesPerLine, 1, "cups_print_pages");
+---
+>   gs_free(pdev->memory, (char *)src, srcbytes, 1, "cups_print_pages");
+>   gs_free(pdev->memory, (char *)dst, cups->header.cupsBytesPerLine, 1, "cups_print_pages");
+2589c2589
+<   fprintf(stderr, "INFO: Processing page %d...\n", cups->page);
+---
+>   dpf("INFO: Processing page %d...\n", cups->page);
+2623c2623
+<   fprintf(stderr, "DEBUG2: cups_put_params(%p, %p)\n", pdev, plist);
+---
+>   dpf("DEBUG2: cups_put_params(%p, %p)\n", pdev, plist);
+2651c2651
+<     fprintf(stderr, "DEBUG: Setting %s to %d...\n", sname, intval); \
+---
+>     dpf("DEBUG: Setting %s to %d...\n", sname, intval); \
+2790c2790
+<     fprintf(stderr, "DEBUG: Updating PageSize to [%.0f %.0f]...\n",
+---
+>     dpf("DEBUG: Updating PageSize to [%.0f %.0f]...\n",
+2816c2816
+< 	fprintf(stderr, "DEBUG: size = %s\n", size->name);
+---
+> 	dpf("DEBUG: size = %s\n", size->name);
+2845c2845
+< 	  fprintf(stderr, "DEBUG: landscape size = %s\n", size->name);
+---
+> 	  dpf("DEBUG: landscape size = %s\n", size->name);
+2862c2862
+< 	  fputs("DEBUG: size = Custom\n", stderr);
+---
+> 	  dputs("DEBUG: size = Custom\n");
+2869c2869
+<       fprintf(stderr, "DEBUG: margins[] = [ %f %f %f %f ]\n",
+---
+>       dpf("DEBUG: margins[] = [ %f %f %f %f ]\n",
+2934c2934
+<       fprintf(stderr, "DEBUG: Reallocating memory, [%.0f %.0f] = %dx%d pixels...\n",
+---
+>       dpf("DEBUG: Reallocating memory, [%.0f %.0f] = %dx%d pixels...\n",
+2948c2948
+<       fprintf(stderr, "DEBUG: Setting initial media size, [%.0f %.0f] = %dx%d pixels...\n",
+---
+>       dpf("DEBUG: Setting initial media size, [%.0f %.0f] = %dx%d pixels...\n",
+2957,2958c2957,2958
+<   fprintf(stderr, "DEBUG2: ppd = %p\n", cupsPPD);
+<   fprintf(stderr, "DEBUG2: PageSize = [ %.3f %.3f ]\n",
+---
+>   dpf("DEBUG2: ppd = %p\n", cupsPPD);
+>   dpf("DEBUG2: PageSize = [ %.3f %.3f ]\n",
+2960c2960
+<   fprintf(stderr, "DEBUG2: margins = [ %.3f %.3f %.3f %.3f ]\n",
+---
+>   dpf("DEBUG2: margins = [ %.3f %.3f %.3f %.3f ]\n",
+2962c2962
+<   fprintf(stderr, "DEBUG2: HWResolution = [ %.3f %.3f ]\n",
+---
+>   dpf("DEBUG2: HWResolution = [ %.3f %.3f ]\n",
+2964c2964
+<   fprintf(stderr, "DEBUG2: width = %d, height = %d\n",
+---
+>   dpf("DEBUG2: width = %d, height = %d\n",
+2966c2966
+<   fprintf(stderr, "DEBUG2: HWMargins = [ %.3f %.3f %.3f %.3f ]\n",
+---
+>   dpf("DEBUG2: HWMargins = [ %.3f %.3f %.3f %.3f ]\n",
+2992c2992
+<   fprintf(stderr, "DEBUG2: cups_set_color_info(%p)\n", pdev);
+---
+>   dpf("DEBUG2: cups_set_color_info(%p)\n", pdev);
+3216c3216
+<       fprintf(stderr, "DEBUG2: cupsEncodeLUT[%d] = %d\n", i, cupsEncodeLUT[i]);
+---
+>       dpf("DEBUG2: cupsEncodeLUT[%d] = %d\n", i, cupsEncodeLUT[i]);
+3223c3223
+<   fprintf(stderr, "DEBUG: num_components = %d, depth = %d\n",
+---
+>   dpf("DEBUG: num_components = %d, depth = %d\n",
+3225c3225
+<   fprintf(stderr, "DEBUG: cupsColorSpace = %d, cupsColorOrder = %d\n",
+---
+>   dpf("DEBUG: cupsColorSpace = %d, cupsColorOrder = %d\n",
+3227c3227
+<   fprintf(stderr, "DEBUG: cupsBitsPerPixel = %d, cupsBitsPerColor = %d\n",
+---
+>   dpf("DEBUG: cupsBitsPerPixel = %d, cupsBitsPerColor = %d\n",
+3229c3229
+<   fprintf(stderr, "DEBUG: max_gray = %d, dither_grays = %d\n",
+---
+>   dpf("DEBUG: max_gray = %d, dither_grays = %d\n",
+3231c3231
+<   fprintf(stderr, "DEBUG: max_color = %d, dither_colors = %d\n",
+---
+>   dpf("DEBUG: max_color = %d, dither_colors = %d\n",
+3246c3246
+<     fprintf(stderr, "DEBUG: Using user-defined profile \"%s\"...\n", cupsProfile);
+---
+>     dpf("DEBUG: Using user-defined profile \"%s\"...\n", cupsProfile);
+3252c3252
+<       fputs("DEBUG: User-defined profile does not contain 11 integers!\n", stderr);
+---
+>       dputs("DEBUG: User-defined profile does not contain 11 integers!\n");
+3301c3301
+<       fputs("DEBUG: Using color profile in PPD file!\n", stderr);
+---
+>       dputs("DEBUG: Using color profile in PPD file!\n");
+3322c3322
+<             fprintf(stderr, "DEBUG2: cupsMatrix[%d][%d][%d] = %d\n",
+---
+>             dpf("DEBUG2: cupsMatrix[%d][%d][%d] = %d\n",
+3336c3336
+<         fprintf(stderr, "DEBUG2: cupsDensity[%d] = %d\n", k, cupsDensity[k]);
+---
+>         dpf("DEBUG2: cupsDensity[%d] = %d\n", k, cupsDensity[k]);
+3355c3355
+<   fprintf(stderr, "INFO: Processing page %d...\n", cups->page);
+---
+>   dpf("INFO: Processing page %d...\n", cups->page);
+3388c3388
+<   fprintf(stderr, "DEBUG: cups_print_chunked - flip = %d, height = %d\n",
+---
+>   dpf("DEBUG: cups_print_chunked - flip = %d, height = %d\n",
+3404,3405c3404,3405
+<       fprintf(stderr, "ERROR: Unable to get scanline %d!\n", y);
+<       gs_exit(1);
+---
+>       dpf("ERROR: Unable to get scanline %d!\n", y);
+>       gs_exit(pdev->memory, 1);
+3541c3541
+<   fprintf(stderr, "DEBUG: cups_print_banded - flip = %d, height = %d\n",
+---
+>   dpf("DEBUG: cups_print_banded - flip = %d, height = %d\n",
+3559,3560c3559,3560
+<       fprintf(stderr, "ERROR: Unable to get scanline %d!\n", y);
+<       gs_exit(1);
+---
+>       dpf("ERROR: Unable to get scanline %d!\n", y);
+>       gs_exit(pdev->memory, 1);
+4144,4145c4144,4145
+< 	fprintf(stderr, "ERROR: Unable to get scanline %d!\n", y);
+< 	gs_exit(1);
+---
+> 	dpf("ERROR: Unable to get scanline %d!\n", y);
+> 	gs_exit(pdev->memory, 1);
