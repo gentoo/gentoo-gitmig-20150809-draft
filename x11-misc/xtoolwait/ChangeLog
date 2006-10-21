@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtoolwait
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/ChangeLog,v 1.27 2006/10/14 17:13:57 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtoolwait/ChangeLog,v 1.28 2006/10/21 22:42:49 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xtoolwait-1.3-r1.ebuild:
+  Remove monolithic X from dependencies and fix quotes.
 
   14 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> -xtoolwait-1.3.ebuild:
   Remove old version.
