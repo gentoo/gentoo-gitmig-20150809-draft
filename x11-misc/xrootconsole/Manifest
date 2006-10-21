@@ -1,10 +1,50 @@
-MD5 57c80ff86762f01a89cd2d01300c91ec ChangeLog 2282
-MD5 33a1c8a9645fbd7f65d7d85a8fb207cd files/digest-xrootconsole-0.4-r1 67
-MD5 f2e59d47ba386ca64ee01f606b94a4a0 files/digest-xrootconsole-0.6 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+AUX xrootconsole-0.4.parse-color.patch 840 RMD160 87c1776701f22a9e6003c1432aed18952b13debe SHA1 f416cecc899405adce99d75246c1e29716579021 SHA256 3c65a902ef7ae2036045d35ac19310df8a57048566b486b4e7db5319e433e488
 MD5 9130183d87016da6b4a53355f5c130d9 files/xrootconsole-0.4.parse-color.patch 840
+RMD160 87c1776701f22a9e6003c1432aed18952b13debe files/xrootconsole-0.4.parse-color.patch 840
+SHA256 3c65a902ef7ae2036045d35ac19310df8a57048566b486b4e7db5319e433e488 files/xrootconsole-0.4.parse-color.patch 840
+AUX xrootconsole-0.6.makefile.patch 323 RMD160 19f2f2251f423680e56ac694a336286381569d1d SHA1 711a1e553f5ce066c3c8560feab3078505777360 SHA256 ed96f37e0c5446a03b98bbfd3d508cb061689ef11422452a3c589d21ea88b173
 MD5 aa887531767ed413d4aa78621cfab147 files/xrootconsole-0.6.makefile.patch 323
+RMD160 19f2f2251f423680e56ac694a336286381569d1d files/xrootconsole-0.6.makefile.patch 323
+SHA256 ed96f37e0c5446a03b98bbfd3d508cb061689ef11422452a3c589d21ea88b173 files/xrootconsole-0.6.makefile.patch 323
+AUX xrootconsole-0.6.manpage.patch 1034 RMD160 35cdbf17a85911c2ae5372bc3cc9e94631696cb7 SHA1 42ccb182ea6fd0e6776cf27f6983922594109fc7 SHA256 e9bb10b38b5b84f04906309428b84ffb4f7bc26f613a2ec9baec60140d15c629
 MD5 1957c49e36945b871087b5a57cc48dc6 files/xrootconsole-0.6.manpage.patch 1034
+RMD160 35cdbf17a85911c2ae5372bc3cc9e94631696cb7 files/xrootconsole-0.6.manpage.patch 1034
+SHA256 e9bb10b38b5b84f04906309428b84ffb4f7bc26f613a2ec9baec60140d15c629 files/xrootconsole-0.6.manpage.patch 1034
+AUX xrootconsole-0.6.noversion.patch 1776 RMD160 7937db54ad8d38773cafafbfae33e68a247c0c04 SHA1 68229cdeb434ea95bac67853296e0185e61209a2 SHA256 609d3952c207159bd701d0f637896d958c08c0e332527c940f00bf70c8a46042
 MD5 c2c648b90b678a3fd48da14587c19ff2 files/xrootconsole-0.6.noversion.patch 1776
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+RMD160 7937db54ad8d38773cafafbfae33e68a247c0c04 files/xrootconsole-0.6.noversion.patch 1776
+SHA256 609d3952c207159bd701d0f637896d958c08c0e332527c940f00bf70c8a46042 files/xrootconsole-0.6.noversion.patch 1776
+DIST xrootconsole-0.4.tar.gz 15397
+DIST xrootconsole-0.6.tar.gz 15951
+EBUILD xrootconsole-0.4-r1.ebuild 787 RMD160 902387d3a3a80ee7c6f6969d923744b383a116cf SHA1 3e1e67110417cda4df5d52705f54b953497911c3 SHA256 4b8ae3cf2a9d01acd03e3116dd00aa148c233fe63499c32cd2d22f2085651f50
 MD5 45cc49770632eb1cd80b9bff7f9b1724 xrootconsole-0.4-r1.ebuild 787
-MD5 05cf1738c35c52bd1c612f3f544674e6 xrootconsole-0.6.ebuild 922
+RMD160 902387d3a3a80ee7c6f6969d923744b383a116cf xrootconsole-0.4-r1.ebuild 787
+SHA256 4b8ae3cf2a9d01acd03e3116dd00aa148c233fe63499c32cd2d22f2085651f50 xrootconsole-0.4-r1.ebuild 787
+EBUILD xrootconsole-0.6.ebuild 903 RMD160 e149a2293f7324699602bce6d17aa212939bada2 SHA1 3cd84ad374dae2cbdec895f3e019bfdf174fb1fb SHA256 a248425b316c5bb3d6f0ab18c2774066605debe48c0c9ffcaf18c7e9376d5e71
+MD5 c0a159374d171ee8ecc2de33f9bd0544 xrootconsole-0.6.ebuild 903
+RMD160 e149a2293f7324699602bce6d17aa212939bada2 xrootconsole-0.6.ebuild 903
+SHA256 a248425b316c5bb3d6f0ab18c2774066605debe48c0c9ffcaf18c7e9376d5e71 xrootconsole-0.6.ebuild 903
+MISC ChangeLog 2428 RMD160 2aa0790daafbcbbae1d4a376135223feca6fcd5b SHA1 3537fd259393f1b74ce0f7d235326b6bfa9740e2 SHA256 c6dcdc559130d8e2af5e2bbbbfc3be3fc6acd14593ff6f6475bde73c4483d770
+MD5 2833d6805857aa808add298451d259c3 ChangeLog 2428
+RMD160 2aa0790daafbcbbae1d4a376135223feca6fcd5b ChangeLog 2428
+SHA256 c6dcdc559130d8e2af5e2bbbbfc3be3fc6acd14593ff6f6475bde73c4483d770 ChangeLog 2428
+MISC metadata.xml 166 RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 SHA1 e6c6436c304a65b4a012a5b7be7ee264b228a645 SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+RMD160 7b80226659bf40e97050b1ffce1858d5f20b3c60 metadata.xml 166
+SHA256 8e7de0a7f7c15840474de373a3ce36adcc5dd658b2e4d18366fcb63b964a0826 metadata.xml 166
+MD5 33a1c8a9645fbd7f65d7d85a8fb207cd files/digest-xrootconsole-0.4-r1 67
+RMD160 40a1f2e3ef58476b5ffa9fc31af355128b8aaf9f files/digest-xrootconsole-0.4-r1 67
+SHA256 410a4342898ba35b468513178ef133173c11de22a6729241e61b4b23d65edea4 files/digest-xrootconsole-0.4-r1 67
+MD5 f2e59d47ba386ca64ee01f606b94a4a0 files/digest-xrootconsole-0.6 67
+RMD160 c10228fcded4dbe8f51bc797fc8ce958d8e9b515 files/digest-xrootconsole-0.6 67
+SHA256 f40b340d57b06c18af996290274aeb09743ee7f5dc2ba205165ae6306bf53ad7 files/digest-xrootconsole-0.6 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFOpBqvSApE0uP4UsRAgggAJ0cC1168yXaxrezAc/LG8WRfU/gTACfbDZe
+mNx2GwmhfNY4Yh9sAkMQrCE=
+=spnu
+-----END PGP SIGNATURE-----
