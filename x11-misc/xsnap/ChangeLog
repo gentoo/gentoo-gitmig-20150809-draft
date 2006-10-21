@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnap
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.23 2006/10/11 11:43:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnap/ChangeLog,v 1.24 2006/10/21 21:30:02 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xsnap-1.4.3-r1.ebuild:
+  Remove monolithic X from dependencies and fix quotes.
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> xsnap-1.4.3-r1.ebuild:
   Fix Imakefile to use /usr/include/X11, see bug #150797.
