@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/librpcsecgss
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.3 2006/09/06 05:25:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.4 2006/10/21 04:05:44 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org>
+  librpcsecgss-0.14-r1.ebuild:
+  Mark 0.14-r1 stable on alpha/ia64
 
 *librpcsecgss-0.14-r1 (06 Sep 2006)
 
