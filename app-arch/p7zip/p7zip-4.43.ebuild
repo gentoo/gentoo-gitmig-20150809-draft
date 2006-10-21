@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.43.ebuild,v 1.2 2006/10/21 17:48:55 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.43.ebuild,v 1.3 2006/10/21 17:57:23 radek Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -34,7 +34,7 @@ src_unpack() {
 	elif use x86-fbsd; then
 		# FreeBSD needs this special makefile, because it hasn't -ldl
 		sed -e 's/-lc_r/-pthread/' makefile.freebsd > makefile.machine
- 	fi
+	fi
 	use static && sed -i -e '/^LOCAL_LIBS=/s/LOCAL_LIBS=/&-static /' makefile.machine
 }
 
