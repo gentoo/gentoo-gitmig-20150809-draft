@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/filer
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.21 2006/09/06 14:39:34 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/filer/ChangeLog,v 1.22 2006/10/21 15:01:03 mcummings Exp $
+
+  21 Oct 2006; Michael Cummings <mcummings@gentoo.org> filer-0.0.12.ebuild:
+  amd64 stable
 
   06 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   +files/filer-0.0.12-trash.patch, filer-0.0.12.ebuild:
