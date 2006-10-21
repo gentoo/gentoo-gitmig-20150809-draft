@@ -14,7 +14,7 @@ checkconfig() {
 		return 1
 	fi
 
-	if [[ ! -d /var/run/radiusd ]] ; then
+	if [[ ! -d /var/run/radiusd ]] && ! mkdir /var/run/radiusd ; then
 		eerror "Failed to create /var/run/radiusd"
 		return 1
 	fi
