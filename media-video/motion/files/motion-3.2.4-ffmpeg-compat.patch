@@ -1,0 +1,11 @@
+--- motion-3.2.4/Makefile.in.old	2006-10-21 22:27:48.000000000 +0200
++++ motion-3.2.4/Makefile.in	2006-10-21 22:28:56.000000000 +0200
+@@ -31,7 +31,7 @@
+ # install.                                                                     #
+ ################################################################################
+ CFLAGS       = @CFLAGS@ -Wall -DVERSION=\"$(VERSION)\" -D_REENTRANT \
+-	       -Dsysconfdir=\"$(sysconfdir)\"
++	       -DFFMPEG_AVWRITEFRAME_NEWAPI -Dsysconfdir=\"$(sysconfdir)\"
+ LDFLAGS      = @LDFLAGS@
+ LIBS         = @LIBS@ 
+ VIDEO_OBJ    = @VIDEO@

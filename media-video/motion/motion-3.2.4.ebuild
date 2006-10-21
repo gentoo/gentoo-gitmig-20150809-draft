@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.4.ebuild,v 1.2 2006/09/04 12:44:24 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/motion-3.2.4.ebuild,v 1.3 2006/10/21 20:44:37 aballier Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ DEPEND="virtual/libc
 		postgres? ( dev-db/postgresql )"
 
 src_compile() {
+	epatch "${FILESDIR}/${P}-ffmpeg-compat.patch"
 	econf \
 	  $(use_with v4l) \
 	  $(use_with mysql) \
