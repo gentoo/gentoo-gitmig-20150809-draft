@@ -24,10 +24,3 @@ diff -ur cups-1.2.5.orig/scheduler/ipp.c cups-1.2.5/scheduler/ipp.c
      }
    }
  #endif /* HAVE_LIBPAPER */
-@@ -9158,5 +9158,5 @@
- 
- 
- /*
-- * End of "$Id: cups-1.2.5.patch,v 1.1 2006/10/21 00:45:55 genstef Exp $".
-+ * End of "$Id: cups-1.2.5.patch,v 1.1 2006/10/21 00:45:55 genstef Exp $".
-  */
