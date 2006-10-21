@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.47 2006/10/21 17:06:28 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.48 2006/10/21 17:48:55 radek Exp $
+
+  21 Oct 2006; Radoslaw Stachowiak <radek@gentoo.org> p7zip-4.43.ebuild:
+  arghh, wrongly commited stable keywords after version bump. shame on me.
 
 *p7zip-4.43 (21 Oct 2006)
 
