@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.51 2006/10/15 20:24:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.52 2006/10/21 14:21:37 pebenito Exp $
+
+  21 Oct 2006; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20061015.ebuild:
+  Fix xml generation failure to die.
 
 *selinux-base-policy-20061015 (15 Oct 2006)
 

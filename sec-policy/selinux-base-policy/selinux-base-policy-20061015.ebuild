@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20061015.ebuild,v 1.1 2006/10/15 20:24:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20061015.ebuild,v 1.2 2006/10/21 14:21:37 pebenito Exp $
 
 IUSE=""
 
@@ -38,7 +38,7 @@ src_compile() {
 
 	make ${OPTS} generate || die "Failed to create generated module files"
 
-	make ${OPTS} xml || "XML generation failed."
+	make ${OPTS} xml || die "XML generation failed."
 
 	for i in ${POLICY_TYPES}; do
 #		make ${OPTS} TYPE=${i} NAME=${i} LOCAL_ROOT=${S}/${i} conf \
