@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.118 2006/10/14 21:35:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.119 2006/10/21 21:37:22 tcort Exp $
+
+  21 Oct 2006; Thomas Cort <tcort@gentoo.org> iptables-1.3.5-r4.ebuild:
+  Stable on alpha wrt Bug #149643.
 
   14 Oct 2006; Aron Griffis <agriffis@gentoo.org> iptables-1.3.5-r4.ebuild:
   Mark 1.3.5-r4 stable on ia64. #149643
