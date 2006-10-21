@@ -520,10 +520,13 @@ java-pkg_dosrc() {
 # Make a wrapper script to lauch/start this package
 # If necessary, the wrapper will switch to the appropriate VM.
 #
+# Can be called without parameters if the package installs only one jar
+# that has the Main-class attribute set. The wrapper will be named ${PN}.
+#
 # @param $1 - filename of launcher to create
 # @param $2 - options, as follows:
 #  --main the.main.class.too.start
-#  --jar /the/jar/too/launch.jar
+#  --jar /the/jar/too/launch.jar or just <name>.jar
 #  --java_args 'Extra arguments to pass to java'
 #  --pkg_args 'Extra arguments too pass to the package'
 #  --pwd
@@ -534,23 +537,27 @@ java-pkg_dolauncher() {
 	debug-print-function ${FUNCNAME} $*
 
 	java-pkg_check-phase install
-
-	[[ ${#} -lt 1 ]] && die "Need at least one argument"
-
 	java-pkg_init_paths_
 
-	local name="${1}"
+	if [[ ${#} = 0 ]]; then
+		local name="${PN}"
+	else
+		local name="${1}"
+		shift
+	fi
+
 	# TODO rename to launcher
 	local target="${T}/${name}"
 	local var_tmp="${T}/launcher_variables_tmp"
 	local target_dir pre
-	shift
 
 	# Process the other the rest of the arguments
 	while [[ -n "${1}" && -n "${2}" ]]; do
 		local var=${1} value=${2}
 		if [[ "${var:0:2}" == "--" ]]; then
-			echo "gjl_${var:2}=\"${value}\"" >> "${var_tmp}"
+			local var=${var:2}
+			echo "gjl_${var}=\"${value}\"" >> "${var_tmp}"
+			local gjl_${var}=${value}
 		elif [[ "${var}" == "-into" ]]; then
 			target_dir="${value}"
 		elif [[ "${var}" == "-pre" ]]; then
@@ -558,6 +565,20 @@ java-pkg_dolauncher() {
 		fi
 		shift 2
 	done
+
+	# Test if no --jar and --main arguments were given and
+	# in that case check if the package only installs one jar
+	# and use that jar.
+	if [[ -z "${gjl_jar}" && -z "${gjl_main}" ]]; then
+		local cp="${JAVA_PKG_CLASSPATH}"
+		if [[ "${cp/:}" = "${cp}" && "${cp%.jar}" != "${cp}" ]]; then
+			echo "gjl_jar=\"${JAVA_PKG_CLASSPATH}\"" >> "${var_tmp}"
+		else
+			local msg="Not enough information to create a launcher given."
+			msg="${msg} Please give --jar or --main argument to ${FUNCNAME}."
+			die "${msg}"
+		fi
+	fi
 
 	# Write the actual script
 	echo "#!/bin/bash" > "${target}"
