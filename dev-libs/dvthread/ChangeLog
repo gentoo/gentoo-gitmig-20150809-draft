@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvthread
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.13 2005/11/22 12:53:51 ka0ttic Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.14 2006/10/21 22:18:28 dev-zero Exp $
+
+  21 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Version bump to fix bug 137302. Cleaning out old versions.
 
   22 Nov 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml:
   Add to cpp herd.
