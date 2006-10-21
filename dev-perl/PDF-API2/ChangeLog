@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDF-API2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.1 2006/10/20 16:42:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/ChangeLog,v 1.2 2006/10/21 11:34:55 nixnut Exp $
+
+  21 Oct 2006; <nixnut@gentoo.org> PDF-API2-0.55.ebuild:
+  Added ~ppc wrt bug 152023
 
 *PDF-API2-0.55 (20 Oct 2006)
 

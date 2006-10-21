@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/PDF-API2-0.55.ebuild,v 1.1 2006/10/20 16:42:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-API2/PDF-API2-0.55.ebuild,v 1.2 2006/10/21 11:34:55 nixnut Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~areibens/"
 
 SLOT="0"
 LICENSE="|| ( Artistic LGPL-2 )"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 SRC_TEST="do"
