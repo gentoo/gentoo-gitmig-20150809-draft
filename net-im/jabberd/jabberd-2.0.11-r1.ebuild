@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.5 2006/10/12 08:28:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0.11-r1.ebuild,v 1.6 2006/10/21 11:42:20 nelchael Exp $
 
 inherit autotools eutils versionator
 
@@ -13,7 +13,7 @@ SRC_URI="http://jabberstudio.2nw.net/${PN}2/${PN}-${MY_PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug ipv6 ldap mysql pam pipe postgres sqlite ssl"
+IUSE="debug memdebug ipv6 ldap mysql pam pipe postgres sqlite ssl"
 
 DEPEND=">=net-im/jabber-base-0.01
 	dev-libs/openssl
@@ -34,14 +34,23 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-configure.in.patch"
 
+	eautoreconf
+
 }
 
 src_compile() {
 
-	eautoreconf
-
 	local localconf=
-	use debug && localconf="${localconf} --enable-debug --enable-nad-debug --enable-pool-debug"
+	if use debug; then
+		localconf="${localconf} --enable-debug"
+		use memdebug && localconf="${localconf} --enable-nad-debug --enable-pool-debug"
+	else
+		if use memdebug; then
+			ewarn
+			ewarn '"memdebug" requires "debug" enabled.'
+			ewarn
+		fi
+	fi
 
 	econf \
 		--localstatedir=/var \
