@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-pinyin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.16 2006/10/16 18:30:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-pinyin/ChangeLog,v 1.17 2006/10/21 00:40:53 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  scim-pinyin-0.5.91-r1.ebuild:
+  USe m4 directory when rebuilding autotools support. Thanks to Zhang Le in
+  bug #144930.
 
   16 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   scim-pinyin-0.5.91.ebuild:
