@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/canna-zipcode-20021021-r2.ebuild,v 1.5 2005/01/01 12:48:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-zipcode/canna-zipcode-20021021-r2.ebuild,v 1.6 2006/10/21 00:12:53 flameeyes Exp $
 
 inherit cannadic
 
@@ -16,12 +16,11 @@ SRC_URI="http://bonobo.gnome.gr.jp/~nakai/canna/${MY_P}.tar.bz2
 LICENSE="GPL-2 public-domain"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE="canna"
 
-DEPEND="canna? ( >=app-i18n/canna-3.6_p3-r1
+DEPEND=">=app-i18n/canna-3.6_p3-r1
 	dev-lang/perl
 	app-i18n/nkf
-	app-arch/lha )"
+	app-arch/lha"
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
@@ -36,9 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if use canna ; then
-		make all || die
-		mkbindic zipcode.t || die
-		mkbindic jigyosyo.t || die
-	fi
+	make all || die
+	mkbindic zipcode.t || die
+	mkbindic jigyosyo.t || die
 }

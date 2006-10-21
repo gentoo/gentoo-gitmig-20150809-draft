@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/canna-cannadic
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.24 2006/10/11 02:01:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.25 2006/10/21 00:18:50 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  canna-cannadic-0.95a.ebuild, canna-cannadic-0.95b.ebuild,
+  canna-cannadic-0.95c.ebuild:
+  Remove canna useflag, it's mandatory for this package.
 
   11 Oct 2006; Seemant Kulleen <seemant@gentoo.org>
   canna-cannadic-0.95c.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-canada-med
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/ChangeLog,v 1.6 2005/01/01 12:47:39 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/ChangeLog,v 1.7 2006/10/21 00:16:46 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  canna-canada-med-20030309.ebuild:
+  Remove canna useflag, it's mandatory for this package.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org>
   canna-canada-med-20030309.ebuild:

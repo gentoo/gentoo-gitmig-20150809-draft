@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-2ch
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/ChangeLog,v 1.9 2005/01/01 12:47:25 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/ChangeLog,v 1.10 2006/10/21 00:14:47 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  canna-2ch-20030827.ebuild:
+  Remove canna useflag, it's mandatory for this package.
 
   01 Sep 2004; Tom Gall <tgall@gentoo.org> canna-2ch-20030827.ebuild:
   stable on ppc64, bug #61777

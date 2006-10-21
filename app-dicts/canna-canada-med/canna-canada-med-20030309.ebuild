@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/canna-canada-med-20030309.ebuild,v 1.6 2005/01/01 12:47:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-canada-med/canna-canada-med-20030309.ebuild,v 1.7 2006/10/21 00:16:46 flameeyes Exp $
 
 inherit cannadic
 
-IUSE="canna"
+IUSE=""
 
 DESCRIPTION="Set of medical dictionaries for Canna"
 HOMEPAGE="http://spica.onh.go.jp/med_dic/"
@@ -15,7 +15,7 @@ LICENSE="canada-med"
 SLOT="0"
 KEYWORDS="x86 alpha ppc ppc64"
 
-DEPEND="canna? ( >=app-i18n/canna-3.6_p4 )"
+DEPEND=">=app-i18n/canna-3.6_p4"
 
 S="${WORKDIR}/canada_med"
 
