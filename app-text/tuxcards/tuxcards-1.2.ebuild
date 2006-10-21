@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.15 2006/08/19 18:46:27 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/tuxcards-1.2.ebuild,v 1.16 2006/10/21 23:50:38 ticho Exp $
 
 inherit kde-functions
 
@@ -34,6 +34,10 @@ src_compile() {
 
 	# Use qt3's qmake (bug #96201)
 	/usr/qt/3/bin/qmake tuxcards.pro
+
+	# Remove the strip command from Makefile, let portage strip if it wants to.
+	# (bug #152264)
+	sed -i -e 's/	-strip.*//' Makefile
 
 	emake || die
 }
