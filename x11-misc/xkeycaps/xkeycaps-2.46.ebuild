@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.19 2006/10/11 11:32:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/xkeycaps-2.46.ebuild,v 1.20 2006/10/21 21:43:29 omp Exp $
 
 inherit eutils
 
@@ -13,25 +13,21 @@ KEYWORDS="x86 sparc ppc ~amd64 ppc64"
 SLOT="0"
 IUSE=""
 
-RDEPEND="|| ( (
-		x11-misc/xbitmaps
-		x11-libs/libX11
-		x11-libs/libXmu
-		x11-libs/libXt
-		x11-libs/libXaw
-		x11-libs/libXext )
-	virtual/x11 )"
+RDEPEND="x11-misc/xbitmaps
+	x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/libXt
+	x11-libs/libXaw
+	x11-libs/libXext"
 DEPEND="${RDEPEND}
-	|| ( (
-		x11-proto/xproto
-		x11-misc/imake )
-	virtual/x11 )
+	x11-proto/xproto
+	x11-misc/imake
 	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/Imakefile.patch
+	cd "${S}"
+	epatch "${FILESDIR}/Imakefile.patch"
 }
 
 src_compile() {

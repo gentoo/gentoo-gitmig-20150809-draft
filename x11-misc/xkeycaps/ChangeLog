@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeycaps
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.17 2006/10/11 11:32:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeycaps/ChangeLog,v 1.18 2006/10/21 21:43:29 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xkeycaps-2.46.ebuild:
+  Remove monolithic X from dependencies and fix quotes.
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> xkeycaps-2.46.ebuild:
   Add missing x11-misc/xbitmaps to DEPEND, see bug #150787.
