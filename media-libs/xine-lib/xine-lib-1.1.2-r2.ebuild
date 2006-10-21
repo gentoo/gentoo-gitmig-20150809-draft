@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.19 2006/10/19 19:00:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.2-r2.ebuild,v 1.20 2006/10/21 10:20:57 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool autotools
 
@@ -30,7 +30,7 @@ IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via video_cards_i810"
 
 IUSE="aalib libcaca arts esd win32codecs nls dvd X directfb vorbis alsa
 gnome sdl speex theora ipv6 altivec opengl aac fbcon xv xvmc
-samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mad imagemagick dts asf
+samba dxr3 vidix mng flac oss v4l xinerama vcd a52 mp3 imagemagick dts asf
 debug modplug ${IUSE_VIDEO_CARDS}"
 
 RDEPEND="vorbis? ( media-libs/libvorbis )
@@ -65,7 +65,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	mng? ( media-libs/libmng )
 	vcd? ( media-video/vcdimager )
 	a52? ( >=media-libs/a52dec-0.7.4-r5 )
-	mad? ( media-libs/libmad )
+	mp3? ( media-libs/libmad )
 	imagemagick? ( media-gfx/imagemagick )
 	dts? ( media-libs/libdts )
 	>=media-video/ffmpeg-0.4.9_p20051120
@@ -192,7 +192,7 @@ src_compile() {
 		$(use_with vorbis ogg) $(use_with vorbis) \
 		$(use_enable speex) \
 		$(use_enable a52) --with-external-a52dec \
-		$(use_enable mad) --with-external-libmad \
+		$(use_enable mp3 mad) --with-external-libmad \
 		$(use_enable dts) --with-external-libdts \
 		\
 		$(use_with X x) \
