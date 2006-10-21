@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Interface
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.7 2006/10/21 00:06:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.8 2006/10/21 00:12:47 mcummings Exp $
+
+  21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  IO-Interface-1.02.ebuild:
+  Marking stable sparc
 
   21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   IO-Interface-1.02.ebuild:
