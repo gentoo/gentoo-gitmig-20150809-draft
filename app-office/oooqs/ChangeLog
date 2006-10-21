@@ -1,6 +1,10 @@
 # ChangeLog for app-office/oooqs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.30 2006/09/19 19:57:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.31 2006/10/21 13:59:38 carlo Exp $
+
+  21 Oct 2006; Carsten Lohrke <carlo@gentoo.org> oooqs-2.1.0.ebuild,
+  oooqs-2.1.0.1.ebuild:
+  QA: need-kde() has to be called after setting R/DEPEND.
 
 *oooqs-2.1.0.1 (20 Sep 2006)
 

@@ -1,10 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.1.0.1.ebuild,v 1.1 2006/09/19 19:57:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/oooqs-2.1.0.1.ebuild,v 1.2 2006/10/21 13:59:38 carlo Exp $
 
 inherit kde eutils
-
-need-kde 3
 
 MY_P="${PN}2-1.0.1"
 DESCRIPTION="OpenOffice.org Quickstarter, runs in the KDE SystemTray"
@@ -19,6 +17,7 @@ SLOT="0"
 
 RDEPEND=">=virtual/ooo-2.0.0
 	|| ( kde-base/ksysguard kde-base/kdebase )"
+need-kde 3
 
 src_unpack() {
 	unpack ${A}
