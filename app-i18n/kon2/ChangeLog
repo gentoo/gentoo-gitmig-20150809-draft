@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/kon2
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/ChangeLog,v 1.10 2005/04/21 18:55:04 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/ChangeLog,v 1.11 2006/10/21 00:26:49 flameeyes Exp $
+
+  21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/kon2-0.3.9b-gcc4.patch, kon2-0.3.9b-r1.ebuild:
+  Add patch to build with GCC 4.x, thanks to Patrick Lauer for reporting in
+  bug #151276.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> kon2-0.3.9b-r1.ebuild:
   stable on amd64
