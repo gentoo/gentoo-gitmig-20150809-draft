@@ -1,12 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX libnfsidmap-0.16-optional-ldap.patch 812 RMD160 1433013411100a5009a89a287a10f2ed8ef2d586 SHA1 dc575929b0673b99184bc8b5231f5bea51b0a5ca SHA256 52cc4c80b7a80b9d3e1eaa6f11e475df9b6cd6e6a1c0fd9e5a54eb7e08ca3783
 MD5 15251cf0840e56703cbe76cc7061bc83 files/libnfsidmap-0.16-optional-ldap.patch 812
 RMD160 1433013411100a5009a89a287a10f2ed8ef2d586 files/libnfsidmap-0.16-optional-ldap.patch 812
 SHA256 52cc4c80b7a80b9d3e1eaa6f11e475df9b6cd6e6a1c0fd9e5a54eb7e08ca3783 files/libnfsidmap-0.16-optional-ldap.patch 812
 DIST libnfsidmap-0.17.tar.gz 325467 RMD160 819a7485b05bfa7de911bd5e50e7cc1c9b10c359 SHA1 2e2f58caf753ad12f67536009bee968affe93831 SHA256 6b3b0ffcad93f1b80f66f69330c0a8d43a5c927f7505d8086e48c831cbf7fdea
-EBUILD libnfsidmap-0.17.ebuild 920 RMD160 980fd90348515fe6a22ff01d4e8d0bcffee77fdd SHA1 4776beead5e5a43b693eaf1a96a0003995bdc8b6 SHA256 0d1658cd62ef2f2c7d8df266efba5ed11bed3770009f305125b1349c205fdc4f
-MD5 e4ca7f730a28bd4e2a49f5a8fa1a7ebe libnfsidmap-0.17.ebuild 920
-RMD160 980fd90348515fe6a22ff01d4e8d0bcffee77fdd libnfsidmap-0.17.ebuild 920
-SHA256 0d1658cd62ef2f2c7d8df266efba5ed11bed3770009f305125b1349c205fdc4f libnfsidmap-0.17.ebuild 920
+EBUILD libnfsidmap-0.17.ebuild 914 RMD160 b3ce467ad4195eb567926a2c471106f1b7bcfb53 SHA1 9b34c1975d26a0388c9d3de4763433387163c29f SHA256 8d28f736b286e00f1118c1c0bf0a1a3a20b9cd08bc0a08d09eec6f86a72760e8
+MD5 a992773bfbd1b2a21bd7979bbe49213b libnfsidmap-0.17.ebuild 914
+RMD160 b3ce467ad4195eb567926a2c471106f1b7bcfb53 libnfsidmap-0.17.ebuild 914
+SHA256 8d28f736b286e00f1118c1c0bf0a1a3a20b9cd08bc0a08d09eec6f86a72760e8 libnfsidmap-0.17.ebuild 914
 MISC ChangeLog 1079 RMD160 121e89c8fb201c47ede6617e49c2d79bea2d954e SHA1 c474966ac6587980dfbe86c489f89323def516a1 SHA256 fee8ff261d27d58024c54f43ebaa4af43b8881aba62d72a16a9b70320664b7c1
 MD5 858cf4bdfcb6c8c1d37f0caa267ede6b ChangeLog 1079
 RMD160 121e89c8fb201c47ede6617e49c2d79bea2d954e ChangeLog 1079
@@ -18,3 +21,10 @@ SHA256 562c59615c028ffa088de789b3a792fd4cbbbfe71628ddd6a55d3b176becbc6b metadata
 MD5 a4ec8bbeacb6e26a1f07d6321f7c46e6 files/digest-libnfsidmap-0.17 250
 RMD160 9a2df927d7690661ef60655fc2f0c64c8a6e2ff1 files/digest-libnfsidmap-0.17 250
 SHA256 8ca7b3fe187bfbc224242d51be297f8df11f8853b90dd552e3bc19b5e5334fdf files/digest-libnfsidmap-0.17 250
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFOqU/amhnQswr0vIRAv/UAKC2hiDJF2qL3QG+TiTb+4TMnXzxegCfcIxu
+6f1ofKXxfO1+o6r/4NLnDwc=
+=nJAS
+-----END PGP SIGNATURE-----
