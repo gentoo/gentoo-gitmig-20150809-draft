@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20050616.ebuild,v 1.4 2006/10/17 09:31:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20050616.ebuild,v 1.5 2006/10/21 15:27:13 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ IUSE="debug"
 RDEPEND="!virtual/pam"
 DEPEND="sys-devel/make
 	dev-lang/perl"
-PDEPEND="sys-freebsd/freebsd-pam-modules"
+PDEPEND="|| ( sys-freebsd/freebsd-pam-modules sys-netbsd/netbsd-pam-modules )"
 
 PROVIDE="virtual/pam"
 
