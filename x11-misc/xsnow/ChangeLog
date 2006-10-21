@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsnow
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.16 2006/10/10 11:12:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsnow/ChangeLog,v 1.17 2006/10/21 21:40:00 omp Exp $
+
+  21 Oct 2006; David Shakaryan <omp@gentoo.org> xsnow-1.42.ebuild:
+  Remove monolithic X from dependencies.
 
   10 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> xsnow-1.42.ebuild:
   Added missing gccmakedep to DEPEND. Bug #150575.
