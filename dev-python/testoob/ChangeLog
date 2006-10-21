@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testoob
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.13 2006/09/20 14:01:32 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.14 2006/10/21 01:47:30 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> testoob-1.12.ebuild:
+  Mark 1.12 stable on ia64
 
   20 Sep 2006; Lukasz Strzygowski <lucass@gentoo.org> testoob-1.12.ebuild:
   Fixed setup.py to skip setcolor.exe.
