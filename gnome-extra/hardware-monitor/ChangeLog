@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/hardware-monitor
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.16 2006/10/20 05:03:30 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/ChangeLog,v 1.17 2006/10/21 08:17:18 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
+  hardware-monitor-1.3.ebuild:
+  ppc stable, bug #147708
 
   20 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   hardware-monitor-1.3.ebuild:

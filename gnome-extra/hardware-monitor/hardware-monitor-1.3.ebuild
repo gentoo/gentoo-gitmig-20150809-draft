@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.3.ebuild,v 1.3 2006/10/20 05:03:30 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.3.ebuild,v 1.4 2006/10/21 08:17:18 dertobi123 Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cs.auc.dk/~olau/hardware-monitor/source/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 # can add lmsensor stuff
 IUSE=""
 
