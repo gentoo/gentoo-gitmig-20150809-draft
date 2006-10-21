@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.50 2006/10/20 19:05:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.51 2006/10/21 01:18:14 agriffis Exp $
+
+  21 Oct 2006; Aron Griffis <agriffis@gentoo.org> libmng-1.0.8-r2.ebuild:
+  Mark 1.0.8-r2 stable on alpha
 
   20 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libmng-1.0.9-r1.ebuild:
