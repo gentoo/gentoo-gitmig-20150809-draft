@@ -1,22 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4332881e17b6196f297cd7a0b8152191 ChangeLog 1621
-MD5 fa5ea15e402e10d9ca9ce22041fd4c1b dvthread-0.4.4.ebuild 686
-MD5 ffc31a022a8fe75dbb78edf5d89d655b dvthread-0.4.6a.ebuild 798
-MD5 47d58ceda3d008efefed56b72e92e939 dvthread-0.4.7-r1.ebuild 667
-MD5 9f9dbb7f160c9fe5e7942dcdfbe3696a dvthread-0.4.7-r2.ebuild 973
-MD5 0100eb4b5b9ee8ac729a91249f1b2c38 files/digest-dvthread-0.4.4 66
-MD5 1036571cc334c77e6a509266a62c61fa files/digest-dvthread-0.4.6a 67
-MD5 7592bd7aac99ef4889ad5741ab5782cb files/digest-dvthread-0.4.7-r1 66
-MD5 7592bd7aac99ef4889ad5741ab5782cb files/digest-dvthread-0.4.7-r2 66
+AUX dvthread-0.4.7-fix-underquoted-m4.diff 440 RMD160 eaecc969d010b6f449cfcbc4d1cf83ed46965090 SHA1 ed47e7be456b560b0b4608a2731695380c3e1b0e SHA256 bc073958c50c2467f2750d2bda60b8a68e8b64bfc9555d55001e277a6c572151
 MD5 215740d574e28bb8cb7d7b9cfe1bce3f files/dvthread-0.4.7-fix-underquoted-m4.diff 440
-MD5 82b1906ac74ced204768ddfe7e8ef9e6 files/gentoo-0.4.4.patch 397
+RMD160 eaecc969d010b6f449cfcbc4d1cf83ed46965090 files/dvthread-0.4.7-fix-underquoted-m4.diff 440
+SHA256 bc073958c50c2467f2750d2bda60b8a68e8b64bfc9555d55001e277a6c572151 files/dvthread-0.4.7-fix-underquoted-m4.diff 440
+DIST dvthread-0.4.7.tar.gz 325491
+DIST dvthread-0.5.0.tar.gz 419264 RMD160 71e5c1747985fd2526c38897e3efee907fca4f99 SHA1 f86c787aee78bd3af6ac5fae55f0baa7143695ec SHA256 1531140896a84b291ab10c67ee9a8da0bfdb124de838e5893c1ac69e00e72b86
+EBUILD dvthread-0.4.7-r2.ebuild 973 RMD160 4a214b6c49fda6dec03b0698845c619500c24bea SHA1 bfdf3180d8ad8696aca2c727ecf5116fde357fd5 SHA256 66ed59fb525d17b0b75a9e1d44270cd6e0a3720ab3ebc989b08aadc2e09b1a9b
+MD5 9f9dbb7f160c9fe5e7942dcdfbe3696a dvthread-0.4.7-r2.ebuild 973
+RMD160 4a214b6c49fda6dec03b0698845c619500c24bea dvthread-0.4.7-r2.ebuild 973
+SHA256 66ed59fb525d17b0b75a9e1d44270cd6e0a3720ab3ebc989b08aadc2e09b1a9b dvthread-0.4.7-r2.ebuild 973
+EBUILD dvthread-0.5.0.ebuild 949 RMD160 561ced0692ab770e4b2ce8c7cac727fdac620dbb SHA1 09d812e45b0fd6e4c50e9c811a748f6ec21671dc SHA256 f020c05c69743e3cdb3194c38051eabb36e046fd11b43fe43f83f5aea2c9fee2
+MD5 7268c259c02f6d97daf810ae2c9cb328 dvthread-0.5.0.ebuild 949
+RMD160 561ced0692ab770e4b2ce8c7cac727fdac620dbb dvthread-0.5.0.ebuild 949
+SHA256 f020c05c69743e3cdb3194c38051eabb36e046fd11b43fe43f83f5aea2c9fee2 dvthread-0.5.0.ebuild 949
+MISC ChangeLog 1748 RMD160 988cb1351567b09e9af397da2b8ed95b34024a66 SHA1 4326b1c5c96bce439f8ab978a6312b98cf063fc4 SHA256 fbc90504f47d096adf3fdeb1bd288bedbaf4e4755ffc78ce116926cd816c79fe
+MD5 5e701fc04d763ef93322f6bf8d5862e3 ChangeLog 1748
+RMD160 988cb1351567b09e9af397da2b8ed95b34024a66 ChangeLog 1748
+SHA256 fbc90504f47d096adf3fdeb1bd288bedbaf4e4755ffc78ce116926cd816c79fe ChangeLog 1748
+MISC metadata.xml 250 RMD160 f09dbc5c28b68506941290eb88604bb34263f9b3 SHA1 2767ee6f12723fd137105fa223fa42da7aa654d3 SHA256 12297b46fbf69581b2b1994ae8f17d803614d0fd088e4b28a81788b1c73024e9
 MD5 baecda85db8f2f90e495be668d7108a8 metadata.xml 250
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
-
-iD8DBQFDgxUMEZCkKN40op4RAo05AKCWIm2SurJousFurACUNG3YN9hTpACZAaeY
-qEix54tSBGn/yyTS9tA/4HY=
-=hYmS
------END PGP SIGNATURE-----
+RMD160 f09dbc5c28b68506941290eb88604bb34263f9b3 metadata.xml 250
+SHA256 12297b46fbf69581b2b1994ae8f17d803614d0fd088e4b28a81788b1c73024e9 metadata.xml 250
+MD5 7592bd7aac99ef4889ad5741ab5782cb files/digest-dvthread-0.4.7-r2 66
+RMD160 1abd17527594c95c0731e80b1fa77841806bc68f files/digest-dvthread-0.4.7-r2 66
+SHA256 5539f9a3847771ce95385457d3bdccb9c15f1754db3bd780b709b33d5fb37375 files/digest-dvthread-0.4.7-r2 66
+MD5 2c02e398227903e40fa995f3c55b3dc0 files/digest-dvthread-0.5.0 244
+RMD160 13a451c4b474b154f64755640c5e5ccaaa649843 files/digest-dvthread-0.5.0 244
+SHA256 f3d0bb7c2ca50b544b04159e8fd5526ff0c16c69839c4e70edc5aa6d28041e3f files/digest-dvthread-0.5.0 244
