@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.57 2006/09/05 19:47:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.58 2006/10/21 19:40:23 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails flag-o-matic
 
@@ -76,6 +76,11 @@ else
 fi
 
 src_unpack() {
+	ewarn "The ${CATEGORY}/${PN} ebuild is superseded by ${CATEGORY}/netqmail."
+	ewarn "Do not use ${CATEGORY}/${PN} anymore for new installations."
+	ewarn "${CATEGORY}/netqmail will become the default for virtual/qmail soon."
+	ebeep
+
 	# unpack the initial stuff
 	unpack ${P}.tar.gz
 
