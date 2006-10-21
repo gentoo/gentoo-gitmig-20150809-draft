@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5.2.ebuild,v 1.9 2006/09/03 10:20:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kioslaves/kdemultimedia-kioslaves-3.5.2.ebuild,v 1.10 2006/10/21 11:49:03 flameeyes Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=kioslave
@@ -15,7 +15,7 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkcddb)
 	media-sound/cdparanoia
 	media-libs/taglib
 	encode? ( vorbis? ( media-libs/libvorbis )
-	          flac? ( media-libs/flac ) )"
+	          flac? ( ~media-libs/flac-1.1.2 ) )"
 RDEPEND="${DEPEND}
 	encode? ( mp3? ( media-sound/lame ) )"
 
