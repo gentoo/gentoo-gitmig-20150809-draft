@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.47 2006/10/21 19:44:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.48 2006/10/21 19:46:41 mcummings Exp $
+
+  21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -bins-1.1.26-r2.ebuild, -bins-1.1.27.ebuild, bins-1.1.29.ebuild:
+  Cleaning out old ebuilds
 
   21 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -bins-1.1.23-r1.ebuild, -bins-1.1.23-r2.ebuild, -bins-1.1.26-r1.ebuild,
