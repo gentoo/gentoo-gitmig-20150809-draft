@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.64 2006/10/20 19:58:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.65 2006/10/21 18:45:43 dertobi123 Exp $
+
+  21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> avahi-0.6.12.ebuild:
+  ppc stable
 
   20 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> avahi-0.6.12.ebuild:
   Stable on sparc wrt #150540
