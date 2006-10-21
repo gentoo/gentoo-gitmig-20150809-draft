@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.11 2005/11/23 01:16:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.12 2006/10/21 13:38:27 stefaan Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mindspring.com/~jamoyers/software/colorgcc/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ~mips ppc ~ppc-macos sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~mips ppc ~ppc-macos sparc x86"
 
 DEPEND="dev-lang/perl"
 
