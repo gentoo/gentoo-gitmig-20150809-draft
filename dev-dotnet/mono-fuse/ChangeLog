@@ -1,6 +1,9 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/ChangeLog,v 1.1 2006/10/22 10:31:52 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-fuse/ChangeLog,v 1.2 2006/10/22 11:34:17 jurek Exp $
+
+  22 Oct 2006; Jurek Bartuszek <koxta@gentoo.org> mono-fuse-0.4.0.ebuild:
+  Added a required >=dev-util/monodoc-1.1.13 dependency
 
 *mono-fuse-0.4.0 (21 Oct 2006)
 
