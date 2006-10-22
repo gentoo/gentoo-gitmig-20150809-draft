@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-irclib
+# Copyright 2000-2006 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.1 2006/10/22 20:28:52 radek Exp $
+
+*python-irclib-0.4.6 (22 Oct 2006)
+
+  22 Oct 2006; Radoslaw Stachowiak <radek@gentoo.org> +python-irclib-0.4.6.ebuild:
+  Initial import. Ebuild submitted by Steingrim Dovland and Conrad Kostecki.
+  Closes bug #43826
+
