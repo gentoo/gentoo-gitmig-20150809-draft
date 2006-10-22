@@ -1,0 +1,13 @@
+--- spca5xx/drivers/usb/spca5xx.h	2006-05-08 07:01:40.000000000 -0400
++++ spca5xx.new/drivers/usb/spca5xx.h	2006-09-05 13:42:26.000000000 -0400
+@@ -14,6 +14,10 @@
+ #include <linux/usb.h>
+ #include <linux/version.h>
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,18)
++#include <media/v4l2-common.h>
++#endif
++
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,4,20) && LINUX_VERSION_CODE < KERNEL_VERSION(2,5,0)
+ 
+ #define urb_t struct urb

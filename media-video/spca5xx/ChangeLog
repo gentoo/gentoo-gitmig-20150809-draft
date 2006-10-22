@@ -1,6 +1,13 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.24 2006/07/16 22:56:24 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.25 2006/10/22 15:04:58 kingtaco Exp $
+
+*spca5xx-20060501-r1 (22 Oct 2006)
+
+  22 Oct 2006; Mike Doty <kingtaco@gentoo.org>
+  +files/spca-20060501-2.6.18.patch, +spca5xx-20060501-r1.ebuild:
+  Added 20060501-r1 for support of >2.6.17 kernels. see bug 148425. spca5xx
+  will soon be replaced by gspca.
 
   16 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   +files/spca-20060501-defines.patch, spca5xx-20060501.ebuild:
