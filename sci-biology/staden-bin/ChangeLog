@@ -1,10 +1,14 @@
 # ChangeLog for sci-biology/staden-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden-bin/ChangeLog,v 1.1 2006/10/22 16:37:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden-bin/ChangeLog,v 1.2 2006/10/22 16:49:50 ribosome Exp $
+
+  22 Oct 2006; Olivier Fisette <ribosome@gentoo.org>
+  staden-bin-1.7.0.ebuild:
+  Explicitely removed all arches (-*) except ~x86.
 
 *staden-bin-1.7.0 (22 Oct 2006)
 
   22 Oct 2006; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
   +staden-bin-1.7.0.ebuild:
-  Initial import.
+  Initial import. Fixes bug #120446.
 
