@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9-r1.ebuild,v 1.9 2006/10/20 21:38:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9-r1.ebuild,v 1.10 2006/10/22 21:33:03 flameeyes Exp $
+
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 
 inherit fixheadtails eutils autotools multilib
 
@@ -26,7 +29,7 @@ src_unpack() {
 
 	for d in $(find "${S}" \( -name configure.ac -o -name configure.in \) -exec dirname {} \;); do
 		pushd ${d} &>/dev/null
-		WANT_AUTOCONF="2.5" AT_NOELIBTOOLIZE="yes" eautoreconf
+		AT_NOELIBTOOLIZE="yes" eautoreconf
 		popd &>/dev/null
 	done
 
