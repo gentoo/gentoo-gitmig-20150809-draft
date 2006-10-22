@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0.ebuild,v 1.6 2006/10/19 07:28:27 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/mercury-extras-0.13.0.ebuild,v 1.7 2006/10/22 23:13:39 keri Exp $
 
 inherit eutils
 
@@ -43,7 +43,6 @@ src_unpack() {
 	sed -i	-e "s:curs:concurrency curs:" \
 		-e "s:posix:posix quickcheck:" \
 		-e "s:windows_installer_generator ::" Mmakefile
-	sed -i  -e "s:lib/mercury:lib/mercury-${PV}:" posix/Mmakefile
 
 	if built_with_use dev-lang/mercury minimal; then
 		sed -i -e "s:references::" Mmakefile

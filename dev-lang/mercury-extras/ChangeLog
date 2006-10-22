@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.51 2006/10/22 22:55:33 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.52 2006/10/22 23:13:39 keri Exp $
+
+  22 Oct 2006; keri <keri@gentoo.org> mercury-extras-0.13.0.ebuild:
+  Copy additional posix headers to correct inc directory.
 
   22 Oct 2006; keri <keri@gentoo.org> files/mercury-extras-0.12.2-lex.patch,
   files/mercury-extras-0.13.0-lex.patch:
