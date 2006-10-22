@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6098 2006/10/22 16:59:06 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6099 2006/10/22 17:13:17 peper Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -19,7 +19,11 @@
 #=media-video/mplayer-0.90_pre5-r1
 ##
 ##   End example
-##
+## 
+
+# Piotr Jaroszyński <peper@gentoo.org> (22 Oct 2006)
+# telepathy-gabble has masked dep(net-libs/loudmouth)
+net-voip/telepathy-gabble
 
 # Mike Doty <kingtaco@gentoo.org> (22 Oct 2006)
 # gspca is beta
