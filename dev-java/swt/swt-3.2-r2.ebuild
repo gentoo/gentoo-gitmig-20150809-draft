@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r2.ebuild,v 1.4 2006/10/21 08:42:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.2-r2.ebuild,v 1.5 2006/10/22 16:24:11 dertobi123 Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -15,7 +15,7 @@ SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/${MY_DMF}/swt-${MY_V
 
 SLOT="3"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE="cairo gnome seamonkey opengl"
 COMMON=">=dev-libs/glib-2.6
