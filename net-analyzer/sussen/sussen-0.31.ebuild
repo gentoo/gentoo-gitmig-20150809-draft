@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.31.ebuild,v 1.1 2006/10/16 18:37:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/sussen-0.31.ebuild,v 1.2 2006/10/22 11:33:24 pva Exp $
 
-inherit eutils gnome2 mono
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.8"
+inherit eutils gnome2 mono autotools
 
 DESCRIPTION="Sussen is a tool that checks for vulnerabilities and configuration issues on computer systems"
 HOMEPAGE="http://dev.mmgsecurity.com/projects/sussen/"
@@ -43,6 +45,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch "${FILESDIR}"/sussen-0.31--as-needed.patch
+	eautoreconf
 
 	use gnome && gnome2_omf_fix
 }
