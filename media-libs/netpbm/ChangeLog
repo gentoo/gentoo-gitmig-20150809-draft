@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.131 2006/10/19 00:37:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.132 2006/10/22 09:14:04 vapier Exp $
+
+  22 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.34-ppmtompeg.patch, netpbm-10.34.ebuild,
+  netpbm-10.36.0.ebuild:
+  Fixes from Alun Jones for bugs in ppmtompeg #150063.
 
 *netpbm-10.26.32 (19 Oct 2006)
 

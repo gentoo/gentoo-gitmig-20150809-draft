@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.34.ebuild,v 1.12 2006/09/04 04:13:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.34.ebuild,v 1.13 2006/10/22 09:14:04 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils multilib
 
@@ -53,6 +53,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/netpbm-10.33-memmem.patch
 	epatch "${FILESDIR}"/netpbm-10.34-xml2.patch #137871
 	epatch "${FILESDIR}"/netpbm-10.34-rgb-paths.patch #139423
+	epatch "${FILESDIR}"/netpbm-10.34-ppmtompeg.patch #150063
 
 	rm -f configure
 	cp Makefile.config.in Makefile.config

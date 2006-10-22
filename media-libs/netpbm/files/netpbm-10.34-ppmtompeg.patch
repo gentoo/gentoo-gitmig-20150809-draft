@@ -1,0 +1,23 @@
+http://bugs.gentoo.org/150063
+
+--- converter/ppm/ppmtompeg/mpeg.c
++++ converter/ppm/ppmtompeg/mpeg.c
+@@ -1150,7 +1150,7 @@ GenMPEGStream(struct inputSource * const
+     if (showBitRatePerFrame)
+         OpenBitRateFile();  /* May modify showBitRatePerFrame */
+ 
+-    if (context == CONTEXT_WHOLESTREAM)
++    if (context == CONTEXT_WHOLESTREAM || context == CONTEXT_GOP)
+         bbP = Bitio_New(ofP);
+     else
+         bbP = NULL;
+--- converter/ppm/ppmtompeg/combine.c
++++ converter/ppm/ppmtompeg/combine.c
+@@ -110,7 +110,6 @@ appendSpecifiedGopFiles(struct inputSour
+              nAttempts < READ_ATTEMPTS && !ifP;
+              ++nAttempts) {
+ 
+-            FILE * ifP;
+             ifP = fopen(fileName, "rb");
+             if (ifP == NULL) {
+                 pm_message("ERROR:  Couldn't read file '%s'.  retry %u", 
