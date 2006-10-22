@@ -1,6 +1,6 @@
-# ChangeLog for sci-libs/core
+# ChangeLog for sci-libs/libcore
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/ChangeLog,v 1.1 2006/10/17 15:02:56 djay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/ChangeLog,v 1.2 2006/10/22 16:35:30 swegener Exp $
 
 *libcore-1.7 (17 Oct 2006)
 
