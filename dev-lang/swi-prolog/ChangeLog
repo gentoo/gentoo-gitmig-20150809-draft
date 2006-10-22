@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.45 2006/10/20 00:07:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.46 2006/10/22 04:28:36 keri Exp $
+
+  22 Oct 2006; keri <keri@gentoo.org> -files/swi-prolog-CFLAGS.patch,
+  -files/swi-prolog-PLBASE.patch, -files/swi-prolog-packages-cppproxy.patch,
+  -files/swi-prolog-packages-db-db4.patch,
+  -files/swi-prolog-packages-jpl-arch.patch,
+  -files/swi-prolog-packages-ltx2htm.patch,
+  -files/swi-prolog-packages-portage.patch,
+  -files/swi-prolog-packages-test.patch, -files/swi-prolog-test.patch,
+  -swi-prolog-5.6.8.ebuild, -swi-prolog-5.6.17.ebuild:
+  Remove old versions.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   swi-prolog-5.6.17-r1.ebuild:
