@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obpager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.7 2006/10/11 11:52:01 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obpager/ChangeLog,v 1.8 2006/10/22 00:08:14 omp Exp $
+
+  22 Oct 2006; David Shakaryan <omp@gentoo.org> obpager-1.8.ebuild:
+  Remove monolithic X from dependencies and fix quotes.
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> obpager-1.8.ebuild:
   Fix Makefile to use /usr/ instead of /usr/X11R6, see bug #150810.
