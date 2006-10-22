@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.18 2006/08/27 06:11:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.19 2006/10/22 01:09:50 omp Exp $
+
+  22 Oct 2006; David Shakaryan <omp@gentoo.org> fbdesk-1.2.1.ebuild:
+  Use tabs instead of spaces.
 
   27 Aug 2006; Michael Sterrett <mr_bones_@gentoo.org>
   -files/fbdesk-1.1.5-gcc34.patch, -fbdesk-1.1.5.ebuild:

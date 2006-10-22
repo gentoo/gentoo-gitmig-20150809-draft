@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.154 2006/10/21 21:53:42 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.155 2006/10/22 01:06:57 omp Exp $
+
+  22 Oct 2006; David Shakaryan <omp@gentoo.org> xscreensaver-4.24.ebuild,
+  xscreensaver-5.00-r1.ebuild, xscreensaver-5.01.ebuild:
+  Use tabs instead of spaces.
 
   21 Oct 2006; David Shakaryan <omp@gentoo.org> xscreensaver-4.24.ebuild,
   xscreensaver-5.00-r1.ebuild, xscreensaver-5.01.ebuild:

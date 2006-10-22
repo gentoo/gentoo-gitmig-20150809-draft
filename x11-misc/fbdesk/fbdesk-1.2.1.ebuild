@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.2.1.ebuild,v 1.7 2006/05/02 00:49:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.2.1.ebuild,v 1.8 2006/10/22 01:09:50 omp Exp $
 
 inherit eutils
 
@@ -27,8 +27,8 @@ src_unpack() {
 
 src_compile() {
 	econf \
-	    $(use_enable debug) \
-	    $(use_enable png) || die "econf failed"
+		$(use_enable debug) \
+		$(use_enable png) || die "econf failed"
 
 	emake || die "emake failed"
 }
