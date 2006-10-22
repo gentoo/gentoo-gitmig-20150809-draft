@@ -1,6 +1,13 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.69 2006/10/21 17:59:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.70 2006/10/22 16:25:47 dang Exp $
+
+  22 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
+  -files/evince-0.4.0-display-menu.patch, -files/evince-0.4.0-no-tiff.patch,
+  -files/evince-0.4.0-t1lib_is_t1.patch, -evince-0.4.0-r3.ebuild,
+  -evince-0.5.0.ebuild, -evince-0.5.1.ebuild, -evince-0.5.4.ebuild,
+  -evince-0.5.5.ebuild:
+  Cleanup old versions
 
   21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> evince-0.6.0.ebuild:
   Stable on ia64, bug 151835.
