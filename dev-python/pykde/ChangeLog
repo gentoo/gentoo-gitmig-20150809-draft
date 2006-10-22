@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pykde
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.26 2005/12/09 22:16:45 carlo Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykde/ChangeLog,v 1.27 2006/10/22 15:40:05 carlo Exp $
+
+*pykde-3.16.0 (22 Oct 2006)
+
+  22 Oct 2006; Carsten Lohrke <carlo@gentoo.org> +pykde-3.16.0.ebuild:
+  Version bump.
 
 *pykde-3.12_pre20051013 (09 Dec 2005)
 
