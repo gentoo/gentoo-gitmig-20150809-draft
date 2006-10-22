@@ -1,0 +1,41 @@
+Index: doc/Makefile
+===================================================================
+--- doc/Makefile	(revision 0)
++++ doc/Makefile	(revision 0)
+@@ -0,0 +1,11 @@
++.PHONY: install uninstall
++
++install:
++	install -d -m 0755 $(DOCDIR)
++	find . -type d -exec install -d -m 0755 $(DOCDIR)/{} \;
++	find . -type f -not -name Makefile -exec install -m 0644 {} $(DOCDIR)/{} \;
++
++uninstall:
++	find . -type f -exec rm -f $(DOCDIR)/{} \;
++	find . -depth -type d -exec rmdir $(DOCDIR)/{} \;
++	rmdir $(DOCDIR) || true
+Index: Makefile
+===================================================================
+--- Makefile	(revision 524)
++++ Makefile	(working copy)
+@@ -18,6 +18,7 @@
+ SYSCONFDIR	=	$(PREFIX)/etc
+ MANDIR	=	$(PREFIX)/man
+ LOCALEDIR	=	$(DATADIR)/locale
++DOCDIR	=	$(DATADIR)/doc
+ PERL_INSTALLDIRS	=	
+ 
+ TARBALL	=	$(NAME)-$(VERSION)
+@@ -106,3 +107,12 @@
+ 
+ uninstall-po:
+ 	$(MAKE) -C $(PO_SUBDIR) uninstall LOCALEDIR=$(DESTDIR)$(LOCALEDIR)
++
++# Install the doc, only called on-demand by distrib-specific Makefile
++.PHONY: install-doc uninstall-doc
++
++install-doc:
++	$(MAKE) -C $(DOC_SUBDIR) install DOCDIR=$(DESTDIR)$(DOCDIR)
++
++uninstall-doc:
++	$(MAKE) -C $(DOC_SUBDIR) uninstall DOCDIR=$(DESTDIR)$(DOCDIR)
