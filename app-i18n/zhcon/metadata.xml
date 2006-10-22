@@ -2,6 +2,18 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>cjk</herd>
+<maintainer>
+  <email>robert.zhangle@gmail.com</email>
+  <name>Zhang Le, Robert</name>
+  <description>Proxied maintainer</description>
+</maintainer>
+
+<maintainer>
+  <email>flameeyes@gentoo.org</email>
+  <name>Diego Pettenò</name>
+  <description>Proxying maintainer</description>
+</maintainer>
+
 <longdescription>zhcon is a Fast double-byte virtual console for
 Chinese/Japanese/Korean (CJK) running under GNU/Linux and FreeBSD.
 It adds the ability of displaying and inputting CJK double-byte
