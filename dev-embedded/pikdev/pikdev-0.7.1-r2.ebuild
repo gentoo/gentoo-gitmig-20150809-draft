@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r2.ebuild,v 1.2 2006/06/14 00:09:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.7.1-r2.ebuild,v 1.3 2006/10/22 14:04:49 peper Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://pikdev.free.fr/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 # restrict at Authors request
 # RESTRICT="nomirror"
