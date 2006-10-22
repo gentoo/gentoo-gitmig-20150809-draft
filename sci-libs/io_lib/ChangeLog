@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/io_lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.8 2006/09/30 03:49:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/io_lib/ChangeLog,v 1.9 2006/10/22 16:36:50 ribosome Exp $
+
+*io_lib-1.10.1 (22 Oct 2006)
+
+  22 Oct 2006; Olivier Fisette <ribosome@gentoo.org> +io_lib-1.10.1.ebuild:
+  New upstream version.
 
   30 Sep 2006; Jason Wever <weeve@gentoo.org> io_lib-1.8.12b-r1.ebuild:
   Added ~sparc keyword wrt bug #149577.
