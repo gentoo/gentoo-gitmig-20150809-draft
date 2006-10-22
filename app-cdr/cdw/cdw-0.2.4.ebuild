@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.6 2006/10/22 21:36:51 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.4.ebuild,v 1.7 2006/10/22 22:03:44 mr_bones_ Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE="encode gtk mysql nls vorbis sqlite"
 
 RDEPEND="virtual/cdrtools
-	dev-perl/XML-Parser
+	>=dev-util/intltool-0.21
 	gtk? ( >=x11-libs/gtk+-2
 			>=dev-libs/glib-2 )
 	sys-libs/ncurses
