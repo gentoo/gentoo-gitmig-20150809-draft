@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/sqlgrey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.1 2006/10/04 10:58:21 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.2 2006/10/22 13:49:57 vivo Exp $
+
+  22 Oct 2006; Francesco Riosa <vivo@gentoo.org> sqlgrey-1.6.7.ebuild,
+  sqlgrey-1.7.4.ebuild:
+  Added DEPEND to virtual/mailx it need mail program to reach admin
 
   04 Oct 2006; Francesco Riosa <vivo@gentoo.org> ChangeLog:
   Initial import.  Ebuild submitted by Lionel Bouton <lionel-dev AT bouton.name>
