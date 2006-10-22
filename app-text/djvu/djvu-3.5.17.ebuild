@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.13 2006/10/19 15:52:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.14 2006/10/22 20:20:38 genstef Exp $
 
 inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
 
@@ -25,7 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch "${FILESDIR}/${P}-dont-prestrip-bins.patch" || die "patch failed"
+	epatch "${FILESDIR}/${P}-dont-prestrip-bins.patch"
+	epatch "${FILESDIR}/djvulibre-3.5.17-pthread-flag.patch"
 
 	# Replace autochecking acdesktop.m4 with a gentoo-specific one
 	cp "${FILESDIR}/gentoo-acdesktop.m4" "${S}/gui/desktop/acdesktop.m4"

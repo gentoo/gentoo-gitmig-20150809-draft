@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.51 2006/10/19 15:52:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.52 2006/10/22 20:20:38 genstef Exp $
+
+  22 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  +files/djvulibre-3.5.17-pthread-flag.patch, djvu-3.5.17.ebuild:
+  Add as-needed patch thanks to TGL <degrenier@easyconnect.fr> in bug 132473
 
   19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> djvu-3.5.17.ebuild:
   Stable on Alpha.
