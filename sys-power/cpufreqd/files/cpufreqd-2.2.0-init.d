@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.2.0-init.d,v 1.3 2006/10/22 08:24:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.2.0-init.d,v 1.4 2006/10/22 23:14:03 peper Exp $
 
-CONFIGFILE=/etc/pufreqd.conf
+CONFIGFILE=/etc/cpufreqd.conf
 
 depend() {
 	need localmount
