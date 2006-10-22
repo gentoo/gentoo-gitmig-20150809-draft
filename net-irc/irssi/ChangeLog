@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.99 2006/10/20 22:47:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.100 2006/10/22 12:19:29 swegener Exp $
+
+  22 Oct 2006; Sven Wegener <swegener@gentoo.org>
+  -files/irssi-socks-fix.patch, -irssi-0.8.10.ebuild:
+  Cleanup.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> irssi-0.8.10-r4.ebuild:
   Stable on Alpha.
