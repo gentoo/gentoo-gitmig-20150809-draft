@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.2.ebuild,v 1.4 2006/10/21 14:36:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.2.ebuild,v 1.5 2006/10/22 19:41:36 kugelfang Exp $
 
 DESCRIPTION="display-oriented editor for binary files, based on the vi texteditor"
 HOMEPAGE="http://bvi.sourceforge.net/"
@@ -13,18 +13,24 @@ KEYWORDS="~amd64 ppc ~ppc-macos ~x86"
 
 DEPEND="sys-libs/ncurses"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e 's:(INSTALL_PROGRAM) -s:(INSTALL_PROGRAM):g' \
+		Makefile.in || die "sed failed in Makefile.in"
+}
+
 src_compile() {
 	econf --with-ncurses=/usr || die "econf failed"
 
-	cp bmore.h bmore.h.old
-	sed -e 's:ncurses/term.h:term.h:g' bmore.h.old > bmore.h
+	sed -i -e 's:ncurses/term.h:term.h:g' bmore.h || die "sed failed in bmore.h"
 
 	emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die "make install failed"
-	rm -rf ${D}/usr/share/bmore.help
+	rm -rf "${D}"/usr/lib/bmore.help
 	dodoc README CHANGES CREDITS bmore.help
 	dohtml -r html/*
 }
