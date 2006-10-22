@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/udept
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.6 2006/08/30 03:10:25 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/udept/ChangeLog,v 1.7 2006/10/22 10:15:39 hansmi Exp $
+
+  22 Oct 2006; Michael Hanselmann <hansmi@gentoo.org>
+  udept-0.5.99.0.2.95.ebuild:
+  Added to ~sparc. Tested by Frank Schmitt.
 
 *udept-0.5.99.0.2.95 (30 Aug 2006)
 
