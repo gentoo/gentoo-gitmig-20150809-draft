@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.18 2006/02/14 18:38:33 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.19 2006/10/22 21:04:24 vivo Exp $
+
+  22 Oct 2006; <vivo@gentoo.org> tpop3d-1.5.3.ebuild:
+  added dev-util/efence to DEPEND as it is for  tpop3d-1.5.3-r1
 
   13 Feb 2006; Maurice van der Pot <griffon26@gentoo.org>
   -tpop3d-1.4.2.ebuild, tpop3d-1.5.3-r1.ebuild:
