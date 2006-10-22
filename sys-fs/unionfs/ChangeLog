@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.26 2006/09/25 02:31:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.27 2006/10/22 18:05:00 swegener Exp $
+
+  22 Oct 2006; Sven Wegener <swegener@gentoo.org> unionfs-1.3.ebuild:
+  Set UNIONFS_OPT_CFLAG to CFLAGS.
 
   25 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/1.3-64bit_compile_fix.diff, unionfs-1.3.ebuild:

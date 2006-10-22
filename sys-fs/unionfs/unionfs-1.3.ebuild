@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.3.ebuild,v 1.2 2006/09/25 02:31:59 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.3.ebuild,v 1.3 2006/10/22 18:05:00 swegener Exp $
 
 inherit eutils linux-mod
 
@@ -55,6 +55,8 @@ src_unpack() {
 
 	echo "EXTRACFLAGS=${EXTRACFLAGS}" >> ${user_Makefile}
 	einfo EXTRACFLAGS: ${EXTRACFLAGS}
+
+	echo "UNIONFS_OPT_CFLAG=${CFLAGS}" >> ${user_Makefile}
 
 	epatch "${FILESDIR}"/${PV}-64bit_compile_fix.diff
 }
