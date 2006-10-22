@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6096 2006/10/22 15:18:20 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6097 2006/10/22 15:38:58 carlo Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -983,9 +983,10 @@ net-misc/asterisk-app_authenticate_ldap
 =sys-devel/gcc-4.2*
 
 # Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
-# Masked, since there's no compatible pykde version, yet.
+# Masked, since incompatible to Python 2.5.
 >=dev-python/sip-4.4.1
 >=dev-python/PyQt-3.16
+>=dev-python/pykde-3.16.0
 dev-python/PyQt4
 
 # Carsten Lohrke <carlo@gentoo.org> (10 Apr 2006)
