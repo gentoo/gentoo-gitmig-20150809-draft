@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.6 2006/10/07 10:57:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.7 2006/10/22 00:04:17 flameeyes Exp $
 
 FEATURES="-sandbox"
 
@@ -34,3 +34,7 @@ USE="${USE} dlloader"
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
 VIDEO_CARDS="dummy fbdev vmware"
+
+# 2006/10/22 - Diego Pettenò <flameeyes@gentoo.org>
+# FreeBSD only uses Open Sound System, so enable it even if Linux defaults for it to off.
+USE="${USE} oss"
