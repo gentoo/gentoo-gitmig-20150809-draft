@@ -1,0 +1,6 @@
+# This file requires >=portage-2.1.1
+
+dev-java/sun-jdk -nsplugin
+dev-java/sun-jre-bin -nsplugin
+dev-java/ibm-jdk-bin -nsplugin 
+dev-java/ibm-jre-bin -nsplugin
