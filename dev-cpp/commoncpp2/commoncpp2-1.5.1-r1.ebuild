@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.5.1-r1.ebuild,v 1.1 2006/10/22 15:59:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.5.1-r1.ebuild,v 1.2 2006/10/22 16:39:39 dev-zero Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/commoncpp/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug doc ipv6 gnutls"
+IUSE="debug doc examples ipv6 gnutls"
 
 RDEPEND="gnutls? ( dev-libs/libgcrypt
 		net-libs/gnutls )
@@ -53,4 +53,10 @@ src_install () {
 	# Only install html docs
 	# man and latex available, but seems a little wasteful
 	use doc && dohtml doc/html/*
+
+	if use examples ; then
+		insinto /usr/share/doc/${PF}/examples
+		cd demo
+		doins *.cpp *.h *.xml README
+	fi
 }

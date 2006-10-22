@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.23 2006/10/22 15:59:12 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.24 2006/10/22 16:39:39 dev-zero Exp $
+
+  22 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  'examples' USE-flag added: bug #139999
 
   22 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   'debug' and 'gnutls' USE-flags added. Dependencies corrected.
