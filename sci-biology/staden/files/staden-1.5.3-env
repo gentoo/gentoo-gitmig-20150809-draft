@@ -1,6 +1,0 @@
-STADENROOT=/opt/staden
-MACHINE=linux
-STADTABL=/opt/staden/tables
-STADLIB=/opt/staden/lib
-PATH=/opt/staden/linux-bin
-LD_LIBRARY_PATH=/opt/staden/lib/linux-binaries
