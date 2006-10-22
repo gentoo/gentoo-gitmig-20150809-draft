@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.1 2006/10/22 19:04:52 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.61.ebuild,v 1.2 2006/10/22 19:09:49 genstef Exp $
 
 DESCRIPTION="Real Time mp3 player"
 HOMEPAGE="http://www.mpg123.de/"
@@ -30,6 +30,8 @@ src_compile() {
 	  audiodev="sdl"
 	 elif use esd; then
 	  audiodev="esd"
+	 elif use ppc-macos; then
+	  audiodev="macosx";
 	 elif use nas; then
 	  audiodev="nas"
 	 else die "no audio device selected"
