@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Abstract
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.8 2006/08/05 20:22:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.9 2006/10/22 19:57:04 vivo Exp $
+
+  22 Oct 2006; <vivo@gentoo.org> SQL-Abstract-1.21.ebuild:
+  stable on amd64 to fix bug #43824
 
   05 Aug 2006; Michael Cummings <mcummings@gentoo.org>
   SQL-Abstract-1.20.ebuild, SQL-Abstract-1.21.ebuild:
