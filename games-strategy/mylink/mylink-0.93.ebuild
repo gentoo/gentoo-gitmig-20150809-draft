@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/mylink-0.93.ebuild,v 1.10 2006/02/13 14:29:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/mylink/mylink-0.93.ebuild,v 1.11 2006/10/22 01:39:36 tcort Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.as-netz.de/gblech/klasse10/misc/mylink/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.8.0
