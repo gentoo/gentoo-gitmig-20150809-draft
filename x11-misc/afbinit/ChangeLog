@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.17 2006/08/11 19:50:56 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.18 2006/10/22 00:42:31 omp Exp $
+
+  22 Oct 2006; David Shakaryan <omp@gentoo.org> -afbinit-1.0.1-r3.ebuild:
+  Remove older version.
 
   11 Aug 2006; Ferris McCormick <fmccor@gentoo.org>
   -afbinit-1.0.1-r2.ebuild:
