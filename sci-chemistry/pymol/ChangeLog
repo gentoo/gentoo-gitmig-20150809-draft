@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.16 2006/09/20 05:09:00 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.17 2006/10/22 18:41:55 ribosome Exp $
+
+  22 Oct 2006; Olivier Fisette <ribosome@gentoo.org>
+  pymol-0.99_rc6-r2.ebuild:
+  Added build-time Python Tkinter dependency check.
 
   20 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   (#148281) Change herd to sci-chemistry from sci.

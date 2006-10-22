@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc6-r2.ebuild,v 1.2 2006/09/19 13:42:16 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.99_rc6-r2.ebuild,v 1.3 2006/10/22 18:41:55 ribosome Exp $
 
 inherit distutils eutils multilib
 
@@ -8,6 +8,7 @@ MY_PV=${PV/_}
 MY_S_P="${PN}-${MY_PV}"
 MY_PV=${MY_PV/./_}
 MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pymol/${MY_P}-src.tgz"
@@ -24,7 +25,12 @@ DEPEND="dev-lang/python
 	media-libs/libpng
 	sys-libs/zlib
 	media-libs/glut"
+
 S="${WORKDIR}/${MY_S_P}"
+
+pkg_setup() {
+	distutils_python_tkinter
+}
 
 src_unpack() {
 	unpack ${A}
