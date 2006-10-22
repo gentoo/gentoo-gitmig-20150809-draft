@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/3ddesktop
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.35 2006/10/11 11:13:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/3ddesktop/ChangeLog,v 1.36 2006/10/22 00:18:33 omp Exp $
+
+  22 Oct 2006; David Shakaryan <omp@gentoo.org> 3ddesktop-0.2.9.ebuild:
+  Remove monolithic X from dependencies.
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> 3ddesktop-0.2.9.ebuild:
   Add missing media-libs/freetype to DEPEND, see bug #150671.
