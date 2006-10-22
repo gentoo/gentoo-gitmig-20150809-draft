@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6092 2006/10/22 07:28:36 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6093 2006/10/22 08:27:28 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1179,14 +1179,6 @@ sys-kernel/openblocks-sources
 # http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
 =app-crypt/mhash-0.9.3*
 
-# Chris Bainbridge <chrb@gentoo.org> (23 Feb 2006)
-# This is a snapshot from the xen-unstable tree. If you find any bugs in Xen
-# itself, please report them to bugzilla.xensource.com. Only report bugs to
-# bugs.gentoo.org if they are related to the ebuild or otherwise Gentoo
-# spefific. Any bug reports to the Gentoo bugzilla that are not Gentoo specific
-# will be resolved as "UPSTREAM".
->=app-emulation/xen-8885
-
 # Paul Varner <fuzzyray@gentoo.org> (21 Dec 2005)
 # porthole-0.5.0 being added to the tree for testing.
 =app-portage/porthole-0.5.0*
@@ -1204,7 +1196,6 @@ dev-php5/pecl-pdo-firebird
 # Kathryn Kulick <gothgirl@gentoo.org> (20 Dec 2005)
 # Gaim 2.0.0 beta1 plugins.
 >=x11-plugins/gaim-encryption-3.0_beta1
->=x11-plugins/slashexec-1.1_beta1
 >=x11-plugins/gaim-xmms-remote-1.9_beta1
 >=x11-plugins/guifications-2.13_beta1
 
