@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.8.ebuild,v 1.1 2006/10/12 22:54:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.8.ebuild,v 1.2 2006/10/22 13:58:52 peper Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.freeuk.com/cpdrummond/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.6"
