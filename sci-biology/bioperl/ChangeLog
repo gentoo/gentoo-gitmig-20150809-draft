@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.25 2006/09/30 03:57:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.26 2006/10/22 17:25:15 ribosome Exp $
+
+  22 Oct 2006; Olivier Fisette <ribosome@gentoo.org> bioperl-1.4.ebuild,
+  -bioperl-1.5.1.ebuild, bioperl-1.5.1-r1.ebuild:
+  Fixed description. Removed old ebuild.
 
   30 Sep 2006; Jason Wever <weeve@gentoo.org> bioperl-1.5.1.ebuild,
   bioperl-1.5.1-r1.ebuild:

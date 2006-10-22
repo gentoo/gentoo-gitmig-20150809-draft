@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.3 2006/09/30 03:57:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.5.1-r1.ebuild,v 1.4 2006/10/22 17:25:15 ribosome Exp $
 
 inherit perl-module eutils
 
-DESCRIPTION="collection of tools for bioinformatics, genomics and life science research"
+DESCRIPTION="Perl tools for bioinformatics - Core modules"
 HOMEPAGE="http://www.bioperl.org/"
 SRC_URI="http://www.bioperl.org/DIST/${P}.tar.bz2"
 
