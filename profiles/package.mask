@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6090 2006/10/22 05:25:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6091 2006/10/22 07:11:44 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -311,10 +311,6 @@ dev-util/xmingw-runtime
 dev-util/xmingw-w32api
 dev-libs/wxactivex
 
-# Olivier Fisette <ribosome@gentoo.org> (22 Sep 2006)
-# Broken dependencies, does not build with GCC 4.1, generaly broken.
-sci-biology/staden
-
 # Joe Sapp <nixphoeni@gentoo.org> (20 Sep 2006)
 # Upstream is dead and it fails to build with the version of
 # x11-libs/cairo in the tree.  Masked pending someone fixing
@@ -549,10 +545,6 @@ media-libs/tunepimp
 # speak up now!
 net-misc/bcm4400
 
-# Markus Dittrich <markusle@gentoo.org> (29 Aug 2006)
-# masked for further testing (see bug #144314)
-=sci-libs/lapack-atlas-3.7.15
-
 # Luca Longinotti <chtekk@gentoo.org> (29 Aug 2006)
 # Masking media-libs/ming-0.3.0, breaks PHP compilation and ships its own
 # PHP bindings the wrong way
@@ -571,10 +563,6 @@ dev-lisp/cl-icu
 dev-lisp/cl-fiveam
 dev-lisp/cl-ucw
 dev-lisp/cl-rfc2109
-
-# Markus Dittrich <markusle@gentoo.org> (22 Aug 2006)
-# masked for further testing (see bug #144314)
-=sci-libs/blas-atlas-3.7.15
 
 # Michael Sterrett <mr_bones_@gentoo.org> (20 Aug 2006)
 # Don't even think of filing bugs about these versions.
@@ -731,11 +719,6 @@ media-video/piave
 # masking snapshot version, official release is out
 =media-libs/mlt-20051209
 
-# Alec Warner <antarus@gentoo.org> (16 Jul 2006)
-# net-news/rol Dead upstream, broken package bug 120920
-# Keeping a bit longer as I had the mask wrong :x
-net-news/rol
-
 # Alastair Tse <liquidx@gentoo.org> (15 Jul 2006)
 # Python 2.1 and 2.2 have reported vunerabilities. Masked pending
 # removal, along with net-zope/zope-2.6. (GLSA: 200509-08, 200502-09,
@@ -758,10 +741,6 @@ mail-client/mahogany
 # old, unsupported upstream.  Use evince.
 # possible security problems in the future.
 app-text/gpdf
-
-# Christian Heim <phreak@gentoo.org> (13 Jul 2006)
-# ieee80211-1.1.14 is breaking ABI and API!
-=net-wireless/ieee80211-1.1.14*
 
 # Matthew Kennedy <mkennedy@gentoo.org>
 # libecl.so linking problem
@@ -820,10 +799,6 @@ net-wireless/aircrack
 # Still masked wildfire because needs testing of new Java systemJava 2. If you unmask and have problems building please file a bug to me and add java@gentoo.org to the CC list
 net-im/wildfire
 
-# Gustavo Felisberto <humpback@gentoo.org> (4 Jul 2006)
-# This is now net-im/wildfire
-net-im/jive-messenger
-
 # Diego Pettenò <flameeyes@gentoo.org> (30 Jun 2006)
 # beta versions.
 >=dev-util/kdevelop-3.3.90
@@ -853,12 +828,6 @@ dev-util/confcache
 # removes internal API headers, breaks stuff that depends on internals
 >=media-libs/freetype-2.2
 
-# Doug Goldstein <cardoe@gentoo.org> (17 Jun 2006)
-# Retiring these packages... masking them so depends
-# can be fixed first... see bug #137084
-<sys-apps/dbus-0.60
-<sys-apps/hal-0.5.0
-
 # Michael Sterrett <mr_bones_@gentoo.org> (17 Jun 2006)
 # Needs newer linux-headers.  masked until then
 >=sys-process/audit-1.1.6
@@ -886,10 +855,6 @@ dev-libs/libvc
 mail-client/mutt-vc-query
 app-misc/rolo
 
-# Carsten Lohrke <carlo@gentoo.org> (31 May 2006)
-# Masked pending removal, use kde-base/superkaramba instead
-x11-misc/superkaramba
-
 # Luca Longinotti <chtekk@gentoo.org> (30 May 2006)
 # awstats 6.6 is completely unusable - bug #134296
 =net-www/awstats-6.6
@@ -898,10 +863,6 @@ x11-misc/superkaramba
 # Masked pending removal.  Dead upstream, doesn't compile with gcc-3.4
 # bug #120303
 media-libs/nurbs++
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (29 May 2006)
-# Masked for security reasons.  See bug #131010 for more info.
-~games-simulation/openttd-0.4.7
 
 # Leonardo Boshell <leonardop@gentoo.org> (28 May 2006)
 # Waiting for a stable release after libgda/libgnomedb 2.0 are out.
@@ -1030,10 +991,6 @@ dev-python/PyQt4
 >=dev-lang/mercury-0.13.0_beta
 >=dev-lang/mercury-extras-0.13.0_beta
 
-# Markus Ullmann <jokey@gentoo.org> (06 Apr 2006)
-# adding language pack builder, needs testing
-=app-text/acroread-7.0.5-r3
-
 # Michael Sterrett <mr_bones_@gentoo.org> (02 Apr 2006)
 # masked pending unresolved security issues #122845
 games-rpg/daimonin-client
@@ -1114,11 +1071,6 @@ www-apache/mod_csv
 # zlib interaction is badly broken. See bug #124733.
 =dev-util/cvs-1.12.13*
 
-# Chris White <chriswhite@gentoo.org> (26 Feb 2006)
-# Dead upstream, breaks with recent mono versions
-# No maintainer
-media-video/mvideo
-
 # John N. Laliberte <allanonjl@gentoo.org> (24 Feb 2006)
 # old gtk+-1 edit
 dev-util/glimmer
@@ -1135,7 +1087,6 @@ net-libs/libpcap-ringbuffer
 # Guillaume Destuynder <kang@gentoo.org> (16 Feb 2006)
 # Masked SVN ebuilds
 =sys-kernel/rsbac-sources-2.6.99
-=sys-kernel/rsbac-sources-2.4.99
 =sys-apps/rsbac-admin-1.2.99
 
 # Robin H. Johnson <robbat2@gentoo.org> (11 Feb 2006)
@@ -1173,12 +1124,6 @@ net-print/hpoj
 # older versions have problems, leaving only the last in series,
 # now that 3.45 is stable
 <=dev-lang/gnat-3.15p-r4
-
-# George Shapovalov (19 Jan 2006)
-# Matching version of gcc is no longer in portage.
-# New gpc I issued recently avoids this problem (no gcc dep anymore).
-# Older versions will be removed upon stabilization of gpc-20051104
-<=dev-lang/gpc-20050331
 
 # Thierry Carrez <koon@gentoo.org> (18 Jan 2006)
 # Package contains insecure tmpfile handling, bug #108072
@@ -1230,12 +1175,6 @@ sys-kernel/openblocks-sources
 # http://sourceforge.net/tracker/index.php?func=detail&aid=1390988&group_id=4286&atid=104286
 =app-crypt/mhash-0.9.3*
 
-# Chris Bainbridge <chrb@gentoo.org> (26 Dec 2005)
-# Security problems. Tim Yamin provided a list of around 25-30 security related
-# bugs affecting pre-2.6.14 kernel. Xen upstream is expected to move to 2.6.14
-# soon.
-<sys-kernel/xen-sources-2.6.14
-
 # Chris Bainbridge <chrb@gentoo.org> (23 Feb 2006)
 # This is a snapshot from the xen-unstable tree. If you find any bugs in Xen
 # itself, please report them to bugzilla.xensource.com. Only report bugs to
@@ -1243,14 +1182,6 @@ sys-kernel/openblocks-sources
 # spefific. Any bug reports to the Gentoo bugzilla that are not Gentoo specific
 # will be resolved as "UPSTREAM".
 >=app-emulation/xen-8885
-
-# Chris Bainbridge <chrb@gentoo.org> (23 Feb 2006)
-# This is a snapshot from the xen-unstable tree. If you find any bugs in Xen
-# itself, please report them to bugzilla.xensource.com. Only report bugs to
-# bugs.gentoo.org if they are related to the ebuild or otherwise Gentoo
-# spefific. Any bug reports to the Gentoo bugzilla that are not Gentoo specific
-# will be resolved as "UPSTREAM".
-<sys-kernel/xen-sources-2.6.16
 
 # Paul Varner <fuzzyray@gentoo.org> (21 Dec 2005)
 # porthole-0.5.0 being added to the tree for testing.
@@ -1337,10 +1268,6 @@ app-backup/mondo-rescue
 =app-portage/flagedit-0.0.3
 =app-portage/flagedit-0.0.4
 
-# Akinori Hattori <hattya@gentoo.org> (06 Oct 2005)
-# development branch
-=mail-client/sylpheed-2.1*
-
 # Marcelo Goes <vanquirius@gentoo.org> (01 Oct 2005)
 # Masking because of bug 107240 (exporting PDF/Latex)
 =media-gfx/xfig-3.2.5_alpha5
@@ -1358,14 +1285,6 @@ www-apps/open-xchange
 # Tom Payne <twp@gentoo.org> (18 Sep 2005)
 # Causes problems with several packages. See bug # 99243 and bug # 102301.
 =dev-util/scons-0.96.90
-
-# Bryan Østergaard <kloeri@gentoo.org> (12 Sep 2005)
-# Masked for security reasons, bug 103524
-<dev-python/py2play-0.1.9
-
-# Gustavo Felisberto <humpback@gentoo.org> (03 Sep 2005)
-# Beta code
-=net-im/psi-0.10_rc2
 
 # Luis F. Araujo <araujo@gentoo.org> (24 Aug 2005)
 # This is a binary package version.
@@ -1387,10 +1306,6 @@ media-video/toxine
 # Rob Cakebread <pythonhead@gentoo.org> (04 Aug 2005)
 # Needs testing, in particular svn, cvs and darcs control
 dev-util/pida
-
-# Luca Barbato <lu_zero@gentoo.org> (03 Aug 2005)
-# First experimental ebuild with dlloader support, should be fixed
-=media-video/ati-drivers-8.14.13-r3
 
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
@@ -1482,11 +1397,6 @@ media-video/dirac
 # it's not tested. If you want it, please unmask.
 >=net-nntp/leafnode-2.0.0_alpha0
 
-# Peter Johanson <latexer@gentoo.org> (02 May 2005)
-# Masking as it is broken against newer wine versions,
-# and completely abandoned upstream
-dev-dotnet/winelib
-
 # Fernando J. Pereda <ferdy@gentoo.org> (25 April 2005)
 # mask these until the new mailwrapper/mailer-config scheme is ready
 # it is secure to unmask them to test
@@ -1503,9 +1413,6 @@ net-mail/mailer-config
 =mail-mta/postfix-2.2.10-r1
 =mail-mta/postfix-2.3.0-r1
 =mail-mta/postfix-2.3.2-r1
-=mail-mta/sendmail-8.13.4-r1
-=mail-mta/sendmail-8.13.5
-=mail-mta/exim-4.50-r999
 
 # Rob Cakebread <pythonhead@gentoo.org> (22 Apr 2005)
 # Versions in portage no longer supported. Abeni 1.0 will be in portage soon after wxGTK-2.6.0
@@ -1524,23 +1431,13 @@ app-portage/abeni
 # and waiting on implementing virtual/postgresql.
 dev-db/pgcluster
 
-# Matthew Kennedy <mkennedy@gentoo.org> (17 Feb 2005)
-# moving to bese-2004@common-lisp.net/arnesi--dev--1.2 patch scheme
-=dev-lisp/cl-arnesi-1.2.0
-=dev-lisp/cl-arnesi-1.2.3*
-
 # <pylon@gentoo.org> (13 Feb 2005)
 # From website: "We know that 0.4.x is a bit buggy on trades :), for people who
 # wish to play a stable game, please use 0.3.2"
 =games-board/gtkatlantic-0.4.1
 
-# Matthew Kennedy <mkennedy@gentoo.org> (10 Feb 2005)
-# Masked while waiting on apache module refresh
-dev-lisp/tbnl
-
 # Aron Griffis <agriffis@gentoo.org> (07 Feb 2005)
 # Mask offlineimap testing versions
-=net-irc/ctrlproxy-2.7*
 =net-irc/ctrlproxy-3.0*
 
 #Gustavo Felisberto <humpback@gentoo.org> (04 Feb 2005)
@@ -1555,10 +1452,6 @@ dev-lisp/cl-imho
 # <mkennedy@gentoo.org> (Jan 12 2005)
 # no longer needed for the time being; use app-emacs/slime instead
 # app-emacs/slime-cvs
-
-# <ribosome@gentoo.org> (09 Jan 2005)
-# Beta release
-=sci-biology/vienna-rna-1.5_beta
 
 # <danarmak@gentoo.org> (11 Dec 2004)
 # Considered broken by upstream; future to be decided
@@ -1576,15 +1469,6 @@ kde-base/dcopjava
 # probably very unstable.
 =net-mail/bincimap-1.3*
 
-# Robert Coie <rac@gentoo.org> (28 Sep 2004)
-# FEATURES=maketest is still dodgy, and even when I got the whole
-# shebang to actually build and install, it was segfaulting on me, so
-# there are some deep-seated issues here.  The Mason ebuild will go
-# in, but without the apache2 USE.  Also must decide whether or not to
-# depend on ApacheHandler2.
-=www-apache/mod_perl-1.99.16
-#www-apache/libapreq2
-
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
 =sys-apps/mindi-1.10
@@ -1598,7 +1482,6 @@ dev-lisp/cl-rsm-genetic-alg
 # <usata@gentoo.org> (02 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
 # is incomplete. info directory handling should be reconsidered.
-=app-editors/emacs-cvs-22.0.0*
 =app-editors/emacs-cvs-23.0.0*
 
 # <klieber@gentoo.org> (01 Apr 2004)
