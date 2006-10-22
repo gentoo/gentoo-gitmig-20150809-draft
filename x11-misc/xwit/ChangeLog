@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xwit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.7 2006/10/21 22:47:22 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwit/ChangeLog,v 1.8 2006/10/22 01:43:00 tcort Exp $
+
+  22 Oct 2006; Thomas Cort <tcort@gentoo.org> xwit-3.4.ebuild:
+  Added ~amd64 wrt Bug #151022.
 
   21 Oct 2006; David Shakaryan <omp@gentoo.org> xwit-3.4.ebuild:
   Remove monolithic X from dependencies, fix HOMEPAGE and fix quotes.
