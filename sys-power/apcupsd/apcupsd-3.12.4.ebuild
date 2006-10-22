@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.2 2006/09/05 17:56:33 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.12.4.ebuild,v 1.3 2006/10/22 19:49:01 tantive Exp $
 
 inherit eutils webapp
 
@@ -68,7 +68,7 @@ src_compile() {
 		$(use_enable nls) \
 		${myconf} \
 		|| die
-	make || die
+	emake || die "emake failed"
 
 	if use doc; then
 		einfo "Building full documentation..."

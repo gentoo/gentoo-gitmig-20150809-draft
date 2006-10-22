@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.2 2005/05/05 02:31:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.3 2006/10/22 19:49:01 tantive Exp $
 
 inherit eutils
 
@@ -61,7 +61,7 @@ src_compile() {
 		--enable-cgi \
 		${myconf} \
 		|| die
-	make || die
+	emake || die "emake failed"
 }
 
 src_install () {

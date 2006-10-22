@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.18-r1.ebuild,v 1.5 2006/04/16 22:59:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.18-r1.ebuild,v 1.6 2006/10/22 19:49:01 tantive Exp $
 
 inherit eutils depend.apache
 
@@ -62,7 +62,7 @@ src_compile() {
 		$(use_enable nls) \
 		${myconf} \
 		|| die
-	make || die
+	emake || die "emake failed"
 }
 
 src_install() {
