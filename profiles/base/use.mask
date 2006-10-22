@@ -64,6 +64,9 @@ input_devices_wacom
 # beep-media-player is in package.mask
 bmp
 
+# xmms is going away
+xmms
+
 # psyco only works on x86
 psyco
 
