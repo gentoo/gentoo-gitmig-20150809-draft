@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6093 2006/10/22 08:27:28 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6094 2006/10/22 08:52:09 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -285,7 +285,6 @@ games-arcade/tuxracer-demo
 # add AddARGBGLXVisuals to the driver options.  If this causes a lockup for
 # you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
 # to the unmasked drivers.
-~x11-drivers/nvidia-drivers-1.0.9625
 ~x11-drivers/nvidia-drivers-1.0.9626
 ~media-video/nvidia-settings-1.0.20060919
 
