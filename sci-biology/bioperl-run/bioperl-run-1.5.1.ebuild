@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.5.1.ebuild,v 1.3 2006/10/22 17:28:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.5.1.ebuild,v 1.4 2006/10/22 17:38:22 ribosome Exp $
 
 inherit perl-app eutils
 
@@ -19,7 +19,7 @@ RDEPEND="
 	virtual/perl-File-Temp
 	dev-perl/IO-String
 	dev-perl/XML-Parser
-	sci-biology/bioperl"
+	=sci-biology/bioperl-1.5*"
 
 DEPEND=""
 
