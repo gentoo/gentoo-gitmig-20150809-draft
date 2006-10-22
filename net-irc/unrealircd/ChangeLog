@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.46 2006/10/21 10:41:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.47 2006/10/22 21:35:29 swegener Exp $
+
+  22 Oct 2006; Sven Wegener <swegener@gentoo.org> ChangeLog:
+  Cleanup.
 
   21 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> unrealircd-3.2.5.ebuild:
   Applied patch for bug 152212 to make it compile on g/fbsd (authorized by
