@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdi/cdi-2.0.0.ebuild,v 1.1 2006/05/07 17:42:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdi/cdi-2.0.0.ebuild,v 1.2 2006/10/22 02:15:15 mr_bones_ Exp $
 
 inherit elisp
 
@@ -15,6 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="${DEPEND}
-	|| ( media-sound/cdcd media-sound/xmcd )"
+	media-sound/cdcd"
 
 SITEFILE=50cdi-gentoo.el
