@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-dotnet/jscall-sharp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.1 2006/10/22 12:10:51 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.2 2006/10/22 14:18:51 jurek Exp $
 
 *jscall-sharp-0.0.2_pre20060925 (22 Oct 2006)
 
