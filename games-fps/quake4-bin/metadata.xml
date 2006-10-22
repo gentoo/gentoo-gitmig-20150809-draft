@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
+<maintainer>
+  <email>wolf31o2@gentoo.org</email>
+  <name>Chris Gianelloni</name>
+</maintainer>
 <longdescription>
 In a desparate war for Earth's survival against and unrelenting alient enemy,
 the only way to defeat them is to become one of them.
