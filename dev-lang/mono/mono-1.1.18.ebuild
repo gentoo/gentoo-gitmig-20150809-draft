@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.18.ebuild,v 1.1 2006/10/15 23:57:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.18.ebuild,v 1.2 2006/10/22 18:42:50 jurek Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -20,7 +20,7 @@ RDEPEND="!<dev-dotnet/pnet-0.6.12
 					>=sys-devel/gcc-3.2.3-r4
 					>=sys-libs/glibc-2.3.3_pre20040420
 				)
-		 X? ( >=dev-dotnet/libgdiplus-1.1.17 )"
+		 X? ( >=dev-dotnet/libgdiplus-1.1.18 )"
 DEPEND="${RDEPEND}
 		  sys-devel/bc
 		>=dev-util/pkgconfig-0.19"
