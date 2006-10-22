@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6099 2006/10/22 17:13:17 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6100 2006/10/22 17:15:16 swegener Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -24,6 +24,10 @@
 # Piotr Jaroszyński <peper@gentoo.org> (22 Oct 2006)
 # telepathy-gabble has masked dep(net-libs/loudmouth)
 net-voip/telepathy-gabble
+
+# Sven Wegener <swegener@gentoo.org> (22 Oct 2006)
+# Needs =dev-cpp/glibmm-2.12* and =dev-cpp/gtkmm-2.10*
+dev-db/mysql-gui-tools
 
 # Mike Doty <kingtaco@gentoo.org> (22 Oct 2006)
 # gspca is beta
