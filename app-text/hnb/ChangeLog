@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hnb
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.15 2006/09/04 11:24:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hnb/ChangeLog,v 1.16 2006/10/22 01:37:10 tcort Exp $
+
+  22 Oct 2006; Thomas Cort <tcort@gentoo.org> hnb-1.9.18.ebuild:
+  Added ~amd64 wrt Bug #140115.
 
   04 Sep 2006; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml:
   Added metadata.xml assigning package to maintainer-needed.
