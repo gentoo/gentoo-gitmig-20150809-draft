@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.2.ebuild,v 1.6 2006/10/22 19:57:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.2.ebuild,v 1.7 2006/10/22 20:14:36 kugelfang Exp $
+
+inherit multilib
 
 DESCRIPTION="display-oriented editor for binary files, based on the vi texteditor"
 HOMEPAGE="http://bvi.sourceforge.net/"
@@ -30,7 +32,7 @@ src_compile() {
 
 src_install() {
 	einstall || die "make install failed"
-	rm -rf "${D}"/usr/lib/bmore.help
+	rm -rf "${D}"/usr/$(get_libdir)/bmore.help
 	dodoc README CHANGES CREDITS bmore.help
 	dohtml -r html/*
 }
