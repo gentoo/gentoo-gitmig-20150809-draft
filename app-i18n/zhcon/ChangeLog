@@ -1,13 +1,13 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.7 2006/10/22 20:49:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.8 2006/10/22 20:51:26 flameeyes Exp $
 
 *zhcon-0.2.6 (22 Oct 2006)
 
   22 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   +files/zhcon-0.2.5.make-fix.patch, +files/zhcon-0.2.6.configure.in.patch,
   +files/zhcon-0.2.6.sysconfdir.patch, metadata.xml, +zhcon-0.2.6.ebuild:
-  Version bump for zhcon, thanks to Zhang Lee (bug #144944) who's also going
+  Version bump for zhcon, thanks to Zhang Le (bug #144944) who's also going
   to be the proxied maintainer for this package.
 
 *zhcon-0.2.3-r1 (25 Jan 2005)
