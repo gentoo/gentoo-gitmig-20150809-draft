@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ocaml-doc-3.09.ebuild,v 1.1 2006/01/21 23:59:08 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ocaml-doc-3.09.ebuild,v 1.2 2006/10/22 15:34:55 peper Exp $
 
 DESCRIPTION="Ocaml reference manual (html)"
 HOMEPAGE="http://caml.inria.fr/pub/docs/manual-ocaml/"
 SRC_URI="http://caml.inria.fr/pub/distrib/ocaml-${PV}/ocaml-${PV}-refman.html.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-doc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.1 2006/01/21 23:59:08 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-doc/ChangeLog,v 1.2 2006/10/22 15:34:55 peper Exp $
+
+  22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> ocaml-doc-3.09.ebuild:
+  Add ~amd64 keyword. Bug #149799.
 
 *ocaml-doc-3.09 (22 Jan 2006)
 
