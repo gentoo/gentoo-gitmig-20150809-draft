@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/beryl-settings
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/beryl-settings/ChangeLog,v 1.1 2006/10/22 22:18:46 tsunam Exp $
+
+*beryl-settings-0.1.1 (22 Oct 2006)
+
+  22 Oct 2006; Joshua Jackson <tsunam@gentoo.org> +metadata.xml,
+  +beryl-settings-0.1.1.ebuild:
+  Initial import of beryl-settings, thank to Alex Heck
+
