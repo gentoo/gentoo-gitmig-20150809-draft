@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.8 2006/10/22 20:51:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.9 2006/10/22 22:40:27 tsunam Exp $
+
+  22 Oct 2006; Joshua Jackson <tsunam@gentoo.org> zhcon-0.2.3.ebuild,
+  zhcon-0.2.3-r1.ebuild:
+  Moving back to ~x86, as nothing depends on it from searching and it doesn't
+  build on x86
 
 *zhcon-0.2.6 (22 Oct 2006)
 
