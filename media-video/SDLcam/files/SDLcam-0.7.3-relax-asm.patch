@@ -1,0 +1,74 @@
+fix build errors:
+
+SDL_v4l_filters_thomas.c: In function 'MMX_add_sub_shr':
+SDL_v4l_filters_thomas.c:50: error: memory input 3 is not directly addressable
+SDL_v4l_filters_thomas.c: In function 'yuv420p_to_rgb32':
+SDL_v4l_filters_thomas.c:154: error: memory input 4 is not directly addressable
+SDL_v4l_filters_thomas.c:154: error: memory input 5 is not directly addressable
+SDL_v4l_filters_thomas.c: In function 'yuv420p_to_bgr32':
+SDL_v4l_filters_thomas.c:256: error: memory input 4 is not directly addressable
+SDL_v4l_filters_thomas.c:256: error: memory input 5 is not directly addressable
+
+filter/Bluebox.c: In function 'Apply':
+filter/Bluebox.c:57: error: memory input 2 is not directly addressable
+
+filter/Trashmask.c: In function 'Apply':
+filter/Trashmask.c:58: error: memory input 2 is not directly addressable
+
+http://bugs.gentoo.org/152002
+
+--- SDL_v4l_filters_thomas.c
++++ SDL_v4l_filters_thomas.c
+@@ -94,7 +94,7 @@
+ 		: "=m"  (bild)		// %0
+ 		:"m"    (buf),		// %1
+ 		 "m"	(summe),	// %2
+-		 "m"	(SHIFT),	// %3
++		 "g"	(SHIFT),	// %3
+ 		 "m"	(len)		// %4
+ 		);
+ 	return 1;
+@@ -226,8 +226,8 @@
+ 			:  "m"  (u),		//%1
+ 			   "m"  (v),		//%2
+ 			   "m"  (d),		//%3
+-			   "m"  (ng_clip),	//%4
+-			   "m"	(ng_yuv_g2)	//%5
++			   "g"  (ng_clip),	//%4
++			   "g"	(ng_yuv_g2)	//%5
+ 				     );
+ 			d+=8;
+ 			y+=2; 
+@@ -328,8 +328,8 @@
+ 			:  "m"  (u),		//%1
+ 			   "m"  (v),		//%2
+ 			   "m"  (d),		//%3
+-			   "m"  (ng_clip),	//%4
+-			   "m"	(ng_yuv_g2)	//%5
++			   "g"  (ng_clip),	//%4
++			   "g"	(ng_yuv_g2)	//%5
+ 				     );
+ 			d+=8;
+ 			y+=2; 
+--- filter/Bluebox.c
++++ filter/Bluebox.c
+@@ -120,7 +120,7 @@
+ 	"	pop		%%ebx				\n"
+ 		: "=m"  (buf)		// %0
+ 		:"m"    (dat),		// %1
+-		 "m"	(MASK),		// %2
++		 "g"	(MASK),		// %2
+ 		 "m"	(len)		// %3
+ 		);
+ 	/* }}} */
+--- filter/Trashmask.c
++++ filter/Trashmask.c
+@@ -96,7 +96,7 @@
+ 	"	pop		%%ecx			\n"
+ 		: "=m"  (src)		// %0
+ 		: "m"	(dst),		// %1 
+-		 "m"    (MASK),         // %2
++		 "g"    (MASK),         // %2
+ 		 "m"	(len)		// %3
+ 		);
+ 	/* }}} */

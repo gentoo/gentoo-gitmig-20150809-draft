@@ -30,3 +30,26 @@
  	int diry = image->w;
  	int xinc = 1;
  	int yinc = 1;
+--- SDL_v4l_image.h
++++ SDL_v4l_image.h
+@@ -1,5 +1,10 @@
+ #ifndef SDL_V4L_IMAGE_H
+ #define	SDL_V4L_IMAGE_H
++
++#include <string.h>
++#include <stdio.h>
++#include <unistd.h>
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+--- filter/Barcode.c
++++ filter/Barcode.c
+@@ -22,6 +22,7 @@
+ // TODO: Add support for UPC_E, EAN_13, EAN_8 and CODE_39
+ // TODO: Add vertical and diagonal scanning
+ 
++#include <stdio.h>
+ #include <string.h>
+ #include <math.h>
+ 

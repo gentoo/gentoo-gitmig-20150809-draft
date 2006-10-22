@@ -1,0 +1,14 @@
+make sure we always include jpeglib.h
+
+--- dump_thomas.c
++++ dump_thomas.c
+@@ -29,8 +29,8 @@
+ 
+ #ifdef __cplusplus
+ extern "C" {
+-#include <jpeglib.h>
+ #endif
++#include <jpeglib.h>
+ 
+ int write_file_jpeg (char *file_name, unsigned char *data, int width, int height) {{{
+   struct jpeg_compress_struct jpeg;

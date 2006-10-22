@@ -1,6 +1,13 @@
 # ChangeLog for media-video/SDLcam
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.7 2006/09/30 19:04:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.8 2006/10/22 05:36:10 vapier Exp $
+
+  22 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  files/SDLcam-0.7.3-build.patch, +files/SDLcam-0.7.3-jpeg.patch,
+  files/SDLcam-0.7.3-prototypes.patch, +files/SDLcam-0.7.3-relax-asm.patch,
+  SDLcam-0.7.3-r2.ebuild:
+  Cleanup the build system some more and fix asm build errors in mmx code
+  #152002 by Thomas Tuttle.
 
   30 Sep 2006; Mike Frysinger <vapier@gentoo.org>
   +files/SDLcam-0.7.3-build.patch, -files/0.7.3-no-divx.patch,

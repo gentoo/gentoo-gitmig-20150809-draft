@@ -21,7 +21,7 @@
  
  
  OBJS = main.o init.o SDL_v4l.o SDL_v4l_filters.o webcam.o interface.o configuration.o config_file.o SDL_v4l_filters_thomas.o dump_thomas.o capture.o ftp-upload.o logo.o parser.o misc.o xml_theme.o dyn_misc.o
-@@ -31,28 +32,28 @@
+@@ -31,32 +32,30 @@
  	./install
  
  %.o: %.cpp
@@ -57,4 +57,9 @@
 +	$(CXX) $(CXXFLAGS) -fPIC -shared -o $@ $? $(LDFLAGS)
  
  SDLcam: $(OBJS)
- 	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) 
+-	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) 
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(OBJS) -o $(PROG) 
+ #	$(LD) $(LDFLAGS) $(OBJS) -o $(PROG) -laviplay
+ 
+-SDL_v4l_filters_thomas.o: SDL_v4l_filters_thomas.c
+-	$(CC) $(MMXFLAGS) -c SDL_v4l_filters_thomas.c
