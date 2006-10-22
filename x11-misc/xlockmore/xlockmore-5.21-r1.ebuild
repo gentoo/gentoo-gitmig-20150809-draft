@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.21-r1.ebuild,v 1.7 2006/10/21 14:48:32 exg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.21-r1.ebuild,v 1.8 2006/10/22 09:41:01 corsair Exp $
 
 inherit gnuconfig eutils pam flag-o-matic
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.tux.org/~bagleyd/xlockmore.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 hppa ppc ppc64 sparc x86"
 
 RDEPEND="|| ( (
 		media-libs/mesa
