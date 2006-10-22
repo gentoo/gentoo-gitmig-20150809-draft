@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.9 2006/10/06 21:59:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.10 2006/10/22 18:10:34 ribosome Exp $
 
 inherit flag-o-matic multilib
 
@@ -65,6 +65,7 @@ src_compile() {
 	#it might be needed if it is decided that lam is an optional dependence
 
 	cd "${S}-single"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 	econf \
 		--enable-shared \
 		--enable-threads \
@@ -76,6 +77,7 @@ src_compile() {
 
 	#the only difference here is no --enable-float
 	cd "${S}-double"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 	econf \
 		--enable-shared \
 		--enable-threads \

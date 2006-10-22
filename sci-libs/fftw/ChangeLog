@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.40 2006/10/06 21:59:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.41 2006/10/22 18:10:34 ribosome Exp $
+
+  22 Oct 2006; Olivier Fisette <ribosome@gentoo.org>
+  +files/fftw-2.1.5-as-needed.patch, fftw-2.1.5-r1.ebuild:
+  Fix --as-needed (patch by Alexis Ballier <aballier@gentoo.org>; fixes bug
+  #152393).
 
   06 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; fftw-2.1.5-r1.ebuild:
   Revert accidental commit; not yet ready to allow virtual/mpi, amd64 doesn't
