@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.24 2006/09/18 14:13:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.25 2006/10/22 06:02:10 vapier Exp $
+
+*syslinux-3.31 (22 Oct 2006)
+
+  22 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/syslinux-3.31-nossp.patch, +syslinux-3.31.ebuild:
+  Version bump #151529 by Jesse Adelman.
 
 *syslinux-3.20 (18 Sep 2006)
 
