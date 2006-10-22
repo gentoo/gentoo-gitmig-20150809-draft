@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/xcalib-0.6.ebuild,v 1.1 2006/09/13 07:40:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalib/xcalib-0.6.ebuild,v 1.2 2006/10/22 21:25:30 malc Exp $
 
 DESCRIPTION="xcalib is a tiny monitor calibration loader for X.org"
 HOMEPAGE="http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.etg.e-technik.uni-erlangen.de/web/doe/xcalib/xcalib-source-$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 DEPEND="
