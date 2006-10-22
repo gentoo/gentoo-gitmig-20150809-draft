@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.4.ebuild,v 1.2 2006/10/15 03:01:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.4.ebuild,v 1.3 2006/10/22 07:41:59 chriswhite Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://librdf.org/dist/source/${P}.tar.gz"
 
 LICENSE="LGPL-2 Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ppc ~x86"
 IUSE="berkdb mysql sqlite ssl threads"
 
 DEPEND="mysql? ( dev-db/mysql )
