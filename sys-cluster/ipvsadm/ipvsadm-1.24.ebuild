@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.14 2006/10/15 11:43:26 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.24.ebuild,v 1.15 2006/10/22 20:08:48 swegener Exp $
 
 inherit linux-info
 
@@ -24,7 +24,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake || die "error compiling source"
+	emake -j1 || die "error compiling source"
 }
 
 src_install() {
