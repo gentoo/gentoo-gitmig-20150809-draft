@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/pykde
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.11 2006/10/15 20:04:47 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde/ChangeLog,v 1.12 2006/10/22 15:13:43 carlo Exp $
+
+*pykde-3.5.5-r1 (22 Oct 2006)
+
+  22 Oct 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/pykde-3.5.5-python-2.5-compat.diff, +pykde-3.5.5-r1.ebuild:
+  Python 2.5 compatibility.
 
   15 Oct 2006; Markus Rothe <corsair@gentoo.org> pykde-3.5.0.ebuild,
   pykde-3.5.5.ebuild:
