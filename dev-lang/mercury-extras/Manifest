@@ -10,10 +10,10 @@ AUX mercury-extras-0.12.2-gcc4.patch 9480 RMD160 3167a1b7597cfa13523515a238489d3
 MD5 bccd57017e292abe8dd823550d84e6dd files/mercury-extras-0.12.2-gcc4.patch 9480
 RMD160 3167a1b7597cfa13523515a238489d3537e06a39 files/mercury-extras-0.12.2-gcc4.patch 9480
 SHA256 29aad4705fc0454eddb5f4db2bde04c4458bb6e97c1a7bd122c21750b6ac8b29 files/mercury-extras-0.12.2-gcc4.patch 9480
-AUX mercury-extras-0.12.2-lex.patch 636 RMD160 05e4b59060eedabf5ef12538cb84104acb2daa40 SHA1 58e66334f190f6c8b170873f471ab7418aa78d18 SHA256 07a67e38ed96e3c9fd93b66a1c286c449f729d8b62a11da8d87e3b63c0fe95a3
-MD5 e4e1c52481e18cc1720327a2eab4b5b9 files/mercury-extras-0.12.2-lex.patch 636
-RMD160 05e4b59060eedabf5ef12538cb84104acb2daa40 files/mercury-extras-0.12.2-lex.patch 636
-SHA256 07a67e38ed96e3c9fd93b66a1c286c449f729d8b62a11da8d87e3b63c0fe95a3 files/mercury-extras-0.12.2-lex.patch 636
+AUX mercury-extras-0.12.2-lex.patch 736 RMD160 4eb93eaba483d70e0da28b404549bcce2e8bebe7 SHA1 8f7bdc2e70aba47a7a60b00013f7f1258d691276 SHA256 de36e905e64db6f0c6aa912e8f4bfdeb136b7c234be9fccbadc3f0c05d194fcf
+MD5 62789d878c3ab8d5f67d8ccee93243e9 files/mercury-extras-0.12.2-lex.patch 736
+RMD160 4eb93eaba483d70e0da28b404549bcce2e8bebe7 files/mercury-extras-0.12.2-lex.patch 736
+SHA256 de36e905e64db6f0c6aa912e8f4bfdeb136b7c234be9fccbadc3f0c05d194fcf files/mercury-extras-0.12.2-lex.patch 736
 AUX mercury-extras-0.12.2-mercury_glut.patch 772 RMD160 b6a25522462d184a5ba1a9d24c9b02b36c881f8d SHA1 a548fd6e62478038e41bbab3b422e0dc815aa423 SHA256 3c2ceb61501858b91c1d849b2d5ee5584aa195eaaa1b08bdd8d2a9b06a5d1148
 MD5 dea6a8e8e35df61d139d6cd53c854b4b files/mercury-extras-0.12.2-mercury_glut.patch 772
 RMD160 b6a25522462d184a5ba1a9d24c9b02b36c881f8d files/mercury-extras-0.12.2-mercury_glut.patch 772
@@ -54,10 +54,10 @@ AUX mercury-extras-0.13.0-dynamic_linking.patch 376 RMD160 7cd32d8de92f2607c8b9b
 MD5 dbff60394d8726d13a32fbe9e8ce7079 files/mercury-extras-0.13.0-dynamic_linking.patch 376
 RMD160 7cd32d8de92f2607c8b9bcf1ce9362c4dfac840a files/mercury-extras-0.13.0-dynamic_linking.patch 376
 SHA256 f8c3a54852f487f0e034e3ed57e986c9001b2bd66854cd4c320385915aaa47ff files/mercury-extras-0.13.0-dynamic_linking.patch 376
-AUX mercury-extras-0.13.0-lex.patch 503 RMD160 95c12c7bd3516f5c96ec28fe4a3368b3101491a2 SHA1 a964bc655c81030f3f38de8f97c5af5f98b5dc10 SHA256 c3e4997a5fb564b8156227fc610b5a5835e62b2c8c88d1e1f2556ec9cbdc9b4c
-MD5 427bde560a8eb80b3a4c5f76198f4230 files/mercury-extras-0.13.0-lex.patch 503
-RMD160 95c12c7bd3516f5c96ec28fe4a3368b3101491a2 files/mercury-extras-0.13.0-lex.patch 503
-SHA256 c3e4997a5fb564b8156227fc610b5a5835e62b2c8c88d1e1f2556ec9cbdc9b4c files/mercury-extras-0.13.0-lex.patch 503
+AUX mercury-extras-0.13.0-lex.patch 736 RMD160 67d70a38b65fdcbcc6f53223f45ce6b55e99c1f0 SHA1 4d2b53919668e2230bd6de04c4d9769357aa0b05 SHA256 e50334d5dcc9ebb735d65b2cbf67826caa92c40203725165fd0c9a7bead8ab43
+MD5 b2c295bda0cd217e1c52e89f629a740a files/mercury-extras-0.13.0-lex.patch 736
+RMD160 67d70a38b65fdcbcc6f53223f45ce6b55e99c1f0 files/mercury-extras-0.13.0-lex.patch 736
+SHA256 e50334d5dcc9ebb735d65b2cbf67826caa92c40203725165fd0c9a7bead8ab43 files/mercury-extras-0.13.0-lex.patch 736
 AUX mercury-extras-0.13.0-mercury_glut.patch 758 RMD160 fc46c65ad4758d92d3c6bd29980cc3798742f0d9 SHA1 b9916c3fe4070c2cdbedcc0e7ff3c0e6baaa2b5c SHA256 0432122dd6d14cac2115c5df5988ff2719446456da387b2add8de3cd2107a99d
 MD5 f694863b7c5e2946a4d0fa8983da2ab2 files/mercury-extras-0.13.0-mercury_glut.patch 758
 RMD160 fc46c65ad4758d92d3c6bd29980cc3798742f0d9 files/mercury-extras-0.13.0-mercury_glut.patch 758
@@ -104,10 +104,10 @@ EBUILD mercury-extras-0.13.0.ebuild 3585 RMD160 bea0709c7e0891e4434376284bb23222
 MD5 809ef60e6d346716359cc2b50789c9c6 mercury-extras-0.13.0.ebuild 3585
 RMD160 bea0709c7e0891e4434376284bb2322226e9fb67 mercury-extras-0.13.0.ebuild 3585
 SHA256 242b5d2ff50ad2b4db74bb7c2b41b5ae25d6c077eb7ae5b186638cb5d3abb6f4 mercury-extras-0.13.0.ebuild 3585
-MISC ChangeLog 13753 RMD160 e18dd70e08aa48e85fe372d9db62061e3ce563c8 SHA1 859c971e0304a21023b72f37c9f78f5f8d603aa2 SHA256 c940146d0ebeb95b39d14966fbe3dbe21cfe5b33b6dedec5e003e56253376a7b
-MD5 75816a01936e1a2db2c77c599df5b1d4 ChangeLog 13753
-RMD160 e18dd70e08aa48e85fe372d9db62061e3ce563c8 ChangeLog 13753
-SHA256 c940146d0ebeb95b39d14966fbe3dbe21cfe5b33b6dedec5e003e56253376a7b ChangeLog 13753
+MISC ChangeLog 13917 RMD160 3bd7b650beea26f40c05a4b2451d3b8a2f054348 SHA1 e60df2e0821cbcf098e604fd9a1b0f733a4a3c03 SHA256 4377cbe44ecde647e77904b044781c5e991c780142b49303a209ad7d0152485b
+MD5 4f23b27cf1d2aee511757ca9e3a249a6 ChangeLog 13917
+RMD160 3bd7b650beea26f40c05a4b2451d3b8a2f054348 ChangeLog 13917
+SHA256 4377cbe44ecde647e77904b044781c5e991c780142b49303a209ad7d0152485b ChangeLog 13917
 MISC metadata.xml 247 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 SHA1 7b705a8a3368abab6ad31ea2fcb5e5db865d92b1 SHA256 2768d0688d443184194068497dcafb2e5d67521980cb46b7e8efc07d3900bcaa
 MD5 6fca20d17d6d55a28537204aa9bb626f metadata.xml 247
 RMD160 1b3df3c501d9a3b2e2651668be405677e8416397 metadata.xml 247

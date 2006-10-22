@@ -1,12 +1,6 @@
 --- mercury-extras-0.12.2.orig/lex/Mmakefile	2002-12-03 17:48:31.000000000 +1300
-+++ mercury-extras-0.12.2/lex/Mmakefile	2006-04-01 15:14:41.000000000 +1200
-@@ -20,12 +20,12 @@
- # necessary, and everything put there.
- #
- #INSTALL_PREFIX := $(INSTALL_PREFIX)/extras
--INSTALL_PREFIX = .
-+#INSTALL_PREFIX = .
- 
++++ mercury-extras-0.12.2/lex/Mmakefile	2006-10-23 11:49:12.000000000 +1300
+@@ -25,7 +25,7 @@
  # Omit this line if you want to install the default grades.
  # Edit this line if you want to install with different grades.
  #
@@ -15,3 +9,14 @@
  
  # Any application using these libraries will also need the following
  # in its Mmakefile:
+@@ -47,7 +47,9 @@
+ 
+ depend: lex.depend regex.depend
+ 
+-install: liblex.install libregex.install
++install:
++	$(MMAKE) $(MMAKEFLAGS) liblex.install
++	$(MMAKE) $(MMAKEFLAGS) libregex.install
+ 
+ check: install
+ 	(cd tests; mmake check)
