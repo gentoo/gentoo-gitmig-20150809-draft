@@ -1,6 +1,6 @@
 # Copyright 2006-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/pftop-0.5.ebuild,v 1.2 2006/05/01 01:28:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/pftop-0.5.ebuild,v 1.3 2006/10/22 21:17:41 the_paya Exp $
 
 inherit bsdmk
 DESCRIPTION="Pftop: curses-based utility for real-time display of active states and rule statistics for pf"
@@ -27,7 +27,7 @@ src_compile() {
 			OSLEVEL=${obsdver//.}
 			;;
 		*-freebsd5.[34])	OSLEVEL=35 ;;
-		*-freebsd6.[01])	OSLEVEL=37 ;;
+		*-freebsd6.[012])	OSLEVEL=37 ;;
 		*)
 			die "Your OS/Version is not supported (${CHOST}), please report."
 			;;
