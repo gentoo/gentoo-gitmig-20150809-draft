@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/grpn
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.7 2006/01/21 11:30:17 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grpn/ChangeLog,v 1.8 2006/10/22 01:23:32 omp Exp $
+
+  22 Oct 2006; David Shakaryan <omp@gentoo.org> grpn-1.1.2.ebuild:
+  Remove src_compile.
 
   21 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> grpn-1.1.2.ebuild:
   Fixed DEPEND for modular X.
