@@ -1,5 +1,6 @@
 # Masking this since it requires nptl
 ~sys-libs/glibc-2.4
+>=sys-libs/glibc-2.6
 
 app-cdr/bonfire
 media-sound/banshee
