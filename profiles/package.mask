@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6091 2006/10/22 07:11:44 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6092 2006/10/22 07:28:36 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -310,6 +310,10 @@ dev-util/xmingw-gcc
 dev-util/xmingw-runtime
 dev-util/xmingw-w32api
 dev-libs/wxactivex
+
+# Olivier Fisette <ribosome@gentoo.org> (22 Sep 2006)
+# Broken dependencies, does not build with GCC 4.1, generaly broken.
+sci-biology/staden
 
 # Joe Sapp <nixphoeni@gentoo.org> (20 Sep 2006)
 # Upstream is dead and it fails to build with the version of
