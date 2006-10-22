@@ -1,6 +1,12 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.193 2006/10/22 00:19:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.194 2006/10/22 16:37:13 carlo Exp $
+
+*koffice-1.6.0-r2 (22 Oct 2006)
+
+  22 Oct 2006; Carsten Lohrke <carlo@gentoo.org>
+  +files/krita-1.6.0-corrupt_png_save.diff, +koffice-1.6.0-r2.ebuild:
+  Don't save corrupt png files.
 
   22 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   koffice-1.6.0-r1.ebuild:
