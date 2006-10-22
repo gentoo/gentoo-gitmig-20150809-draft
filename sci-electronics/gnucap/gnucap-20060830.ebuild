@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060830.ebuild,v 1.3 2006/09/23 12:38:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/gnucap-20060830.ebuild,v 1.4 2006/10/22 23:48:16 plasmaroo Exp $
 
 MY_PV="${PV:0:4}-${PV:4:2}-${PV:6}"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="doc? ( app-text/tetex )"
+DEPEND="doc? ( virtual/tetex )"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_unpack() {
