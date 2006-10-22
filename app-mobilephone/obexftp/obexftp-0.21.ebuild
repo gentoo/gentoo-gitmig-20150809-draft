@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.4 2006/09/22 10:27:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.21.ebuild,v 1.5 2006/10/22 19:46:11 mrness Exp $
 
 inherit eutils perl-module flag-o-matic autotools
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://triq.net/obex"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="bluetooth debug perl python swig tcltk"
+IUSE="bluetooth debug perl python swig tcl"
 
 DEPEND=">=dev-libs/openobex-1.1
 	bluetooth? ( >=net-wireless/bluez-libs-2.19 )
 	perl? ( >=dev-lang/perl-5.8.6 )
 	python? ( >=dev-lang/python-2.4.2 )
-	tcltk? ( >=dev-lang/tcl-8.4.9 )
+	tcl? ( >=dev-lang/tcl-8.4.9 )
 	swig? ( >=dev-lang/swig-1.3.7 )"
 
 src_unpack() {
@@ -40,7 +40,7 @@ src_compile() {
 		$(use_enable bluetooth) \
 		$(use_enable perl) \
 		$(use_enable python) \
-		$(use_enable tcltk tcl) || die "econf failed"
+		$(use_enable tcl) || die "econf failed"
 	emake || die "emake failed"
 }
 
