@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.43 2006/10/17 10:53:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.44 2006/10/22 00:37:51 ticho Exp $
+
+  22 Oct 2006; Andrej Kacian <ticho@gentoo.org> -files/starttls.diff,
+  -ssmtp-2.60.7-r1.ebuild, -ssmtp-2.60.9.ebuild, ssmtp-2.61.ebuild,
+  ssmtp-2.61-r2.ebuild, ssmtp-2.61-r30.ebuild, ssmtp-2.61-r31.ebuild:
+  Modified Makefile to respect LDFLAGS, bug #152197 by Fabian Groffen <grobian
+  at gentoo.org>. Removed old ebuilds.
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org> ssmtp-2.61-r2.ebuild,
   ssmtp-2.61-r30.ebuild, ssmtp-2.61-r31.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.16 2006/04/02 20:59:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61.ebuild,v 1.17 2006/10/22 00:37:52 ticho Exp $
 
 inherit eutils
 
@@ -24,6 +24,9 @@ PROVIDE="virtual/mta"
 S=${WORKDIR}/ssmtp-2.61
 
 src_compile() {
+	# Respect LDFLAGS (bug #152197)
+	sed -i -e 's:$(CC) -o:$(CC) @LDFLAGS@ -o:' Makefile.in
+
 	econf \
 		--sysconfdir=/etc/ssmtp \
 		$(use_enable ssl) \

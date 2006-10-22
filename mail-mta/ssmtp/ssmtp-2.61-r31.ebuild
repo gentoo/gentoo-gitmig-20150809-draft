@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r31.ebuild,v 1.3 2006/10/17 10:53:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r31.ebuild,v 1.4 2006/10/22 00:37:52 ticho Exp $
 
 inherit eutils toolchain-funcs mailer
 
@@ -22,6 +22,9 @@ src_unpack() {
 	unpack "${A}" ; cd "${S}"
 
 	epatch "${FILESDIR}"/ssmtp-2.61-bug127592.patch
+
+	# Respect LDFLAGS (bug #152197)
+	sed -i -e 's:$(CC) -o:$(CC) @LDFLAGS@ -o:' Makefile.in
 }
 
 src_compile() {

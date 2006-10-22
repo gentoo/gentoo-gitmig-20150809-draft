@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r30.ebuild,v 1.2 2006/10/17 10:53:06 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ssmtp-2.61-r30.ebuild,v 1.3 2006/10/22 00:37:52 ticho Exp $
 
 inherit eutils mailer
 
@@ -17,6 +17,9 @@ DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
+	# Respect LDFLAGS (bug #152197)
+	sed -i -e 's:$(CC) -o:$(CC) @LDFLAGS@ -o:' Makefile.in
+
 	econf \
 		--sysconfdir=/etc/ssmtp \
 		$(use_enable ssl) \
