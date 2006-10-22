@@ -1,0 +1,11 @@
+--- gmyclient-0.3.orig/plugins/exporter/html/html.c	2006-10-22 16:02:31.000000000 +0000
++++ gmyclient-0.3/plugins/exporter/html/html.c	2006-10-22 16:39:34.000000000 +0000
+@@ -1001,7 +1001,7 @@
+ 
+   while (rows_selection)
+     {
+-      row = (epd->stype != ALL_ROWS)?GPOINTER_TO_INT (rows_selection->data):row = absolut_row_counter;
++      row = (epd->stype != ALL_ROWS)?GPOINTER_TO_INT (rows_selection->data):absolut_row_counter;
+       if (!row && epd->ignore_first_row)
+         {
+           rows_selection = rows_selection->next;

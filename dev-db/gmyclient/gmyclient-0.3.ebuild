@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.17 2006/04/18 12:13:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.18 2006/10/22 16:49:03 vivo Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-fix.patch || die "patch failed"
+	epatch ${FILESDIR}/${PV}-gcc41.patch || die "patch failed"
 }
 
 src_compile() {
