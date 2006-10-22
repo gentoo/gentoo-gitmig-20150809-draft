@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/esound
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.85 2006/10/22 14:09:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.86 2006/10/22 14:17:51 tcort Exp $
+
+  22 Oct 2006; Thomas Cort <tcort@gentoo.org> esound-0.2.36-r2.ebuild:
+  Added ~alpha wrt Bug #141223.
 
   22 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   esound-0.2.36-r2.ebuild:
