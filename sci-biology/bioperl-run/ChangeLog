@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl-run
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.10 2006/09/13 01:48:57 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.11 2006/10/22 17:28:19 ribosome Exp $
+
+  22 Oct 2006; Olivier Fisette <ribosome@gentoo.org> bioperl-run-1.4.ebuild,
+  bioperl-run-1.5.1.ebuild:
+  Fixed description.
 
   13 Sep 2006; Olivier Fisette <ribosome@gentoo.org>
   bioperl-run-1.5.1.ebuild:
