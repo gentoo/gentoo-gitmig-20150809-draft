@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.124 2006/10/22 09:47:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.125 2006/10/22 10:09:44 hansmi Exp $
+
+  22 Oct 2006; Michael Hanselmann <hansmi@gentoo.org>
+  -files/gkrellm-2.1.24-mail.patch, -files/slit_gtk+-2.4.0.patch,
+  -files/gkrellm-dotkeep.patch, -gkrellm-2.1.25.ebuild,
+  -gkrellm-2.1.28-r1.ebuild, -gkrellm-2.2.4.ebuild, -gkrellm-2.2.6.ebuild,
+  -gkrellm-2.2.7.ebuild, -gkrellm-2.2.9.ebuild, gkrellm-2.2.9-r1.ebuild:
+  Stable on hppa, ppc and remove old versions, bug 140955.
 
   22 Oct 2006; Markus Rothe <corsair@gentoo.org> gkrellm-2.2.9-r1.ebuild:
   Stable on ppc64; bug #140955
