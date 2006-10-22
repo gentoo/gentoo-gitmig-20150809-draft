@@ -1,0 +1,97 @@
+--- gnubg.c.old	2006-10-21 09:42:47.000000000 +0200
++++ gnubg.c	2006-10-21 09:45:19.000000000 +0200
+@@ -8971,7 +8971,8 @@
+ #if HAVE_ICONV
+ 
+   iconv_t id;
+-  int lIn, lOut, l, rc, nUsed;
++  size_t  lIn, lOut, l;
++  int rc, nUsed;
+ #if WIN32
+   const char *pchIn;
+ #else
+--- renderprefs.c.old	2006-10-21 09:51:22.000000000 +0200
++++ renderprefs.c	2006-10-21 10:13:00.000000000 +0200
+@@ -158,11 +158,13 @@
+ #endif /* USE_GTK */
+ 
+ #if USE_BOARD3D
+-static int SetMaterialCommon(Material* pMat, char *sz)
++static int SetMaterialCommon(Material* pMat, char **newsz)
+ {
++	char *sz;
+ 	float opac;
+ 	char* pch;
+ 
++	sz = *newsz;
+ 	if (SetColourF(pMat->ambientColour, sz) != 0)
+ 		return -1;
+ 	sz += strlen(sz) + 1;
+@@ -206,38 +208,43 @@
+ 	{
+ 		sz += strlen(sz) + 1;
+ 		if (sz && *sz)
+-			return (int)sz;
++		{
++			*newsz = sz;
++			return 1;
++		}
+ 	}
+ 	return 0;
+ }
+ 
+ static int SetMaterial(Material* pMat, char *sz)
+ {
++	int status = (sz != NULL);
+ 	if (fX)
+ 	{
+-		sz = (char*)SetMaterialCommon(pMat, sz);
++		status = SetMaterialCommon(pMat, &sz);
+ 		pMat->textureInfo = 0;
+ 		pMat->pTexture = 0;
+-		if (sz > 0)
++		if (status > 0)
+ 		{
+ 			FindTexture(&pMat->textureInfo, sz);
+-			sz = 0;
++			status = 0;
+ 		}
+ 	}
+-	return (int)sz;
++	return status;
+ }
+ 
+ static int SetMaterialDice(Material* pMat, char *sz, int* flag)
+ {
+-	sz = (char*)SetMaterialCommon(pMat, sz);
++	int status;
++	status = SetMaterialCommon(pMat, &sz);
+ 	/* die colour same as chequer colour */
+ 	*flag = TRUE;
+-	if (sz > 0)
++	if (status > 0)
+ 	{
+ 		*flag = (toupper(*sz) == 'Y');
+-		sz = 0;
++		status = 0;
+ 	}
+-	return (int)sz;
++	return status;
+ }
+ 
+ #endif
+--- board3d/misc3d.c.old	2006-10-21 10:16:16.000000000 +0200
++++ board3d/misc3d.c	2006-10-21 10:16:36.000000000 +0200
+@@ -787,10 +787,10 @@
+ float ***Alloc3d(int x, int y, int z)
+ {	/* Allocate 3d array */
+ 	int i, j;
+-	float ***array = (float ***)malloc(sizeof(float) * x);
++	float ***array = (float ***)malloc(sizeof(float **) * x);
+ 	for (i = 0; i < x; i++)
+ 	{
+-		array[i] = (float **)malloc(sizeof(float) * y);
++		array[i] = (float **)malloc(sizeof(float *) * y);
+ 		for (j = 0; j < y; j++)
+ 			array[i][j] = (float *)malloc(sizeof(float) * z);
+ 	}

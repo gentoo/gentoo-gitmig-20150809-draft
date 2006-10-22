@@ -1,0 +1,11 @@
+--- lib/neuralnet.c.old	2006-10-22 12:12:20.000000000 +0200
++++ lib/neuralnet.c	2006-10-22 12:13:05.000000000 +0200
+@@ -39,7 +39,7 @@
+ 
+ #if HAVE_LIBATLAS
+ #warning "LIBATLAS processing..."
+-#include <cblas.h>
++#include <atlas/cblas.h>
+ #endif /* HAVE_LIBATLAS */
+ 
+ #if SIGMOID_BAUR
