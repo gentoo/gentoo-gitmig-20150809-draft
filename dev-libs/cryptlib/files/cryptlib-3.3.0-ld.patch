@@ -1,0 +1,13 @@
+--- ./tools/buildsharedlib.sh.old	2006-10-22 15:24:29.000000000 +0200
++++ ./tools/buildsharedlib.sh	2006-10-22 15:25:49.000000000 +0200
+@@ -98,7 +98,8 @@ case $OSNAME in
+ 		strip $LIBNAME ;;
+ 
+ 	*)
+-		$LD -shared -o $LIBNAME `cat $LINKFILE` `./tools/getlibs.sh autodetect` ;
+-		strip $LIBNAME ;;
++		$LD -shared -Wl,-soname,$LIBNAME -o $LIBNAME `cat $LINKFILE` `./tools/getlibs.sh autodetect` ;
++#		strip $LIBNAME
++	;;
+ esac
+ rm -f $LINKFILE

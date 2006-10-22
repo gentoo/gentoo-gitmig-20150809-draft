@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cryptlib
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.11 2005/11/02 03:38:45 sbriesen Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.12 2006/10/22 13:49:00 alonbl Exp $
+
+*cryptlib-3.3.0 (22 Oct 2006)
+
+  22 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/cryptlib-3.3.0-ld.patch, +cryptlib-3.3.0.ebuild:
+  Version bump, fixed QA issues by removing assembly parts, adds odbc use flag
+  (Thanks to Daniel Plaza), closes bug#105954.
 
 *cryptlib-3.2.2 (02 Nov 2005)
 
