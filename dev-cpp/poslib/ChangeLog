@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/poslib
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.18 2006/10/21 10:55:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.19 2006/10/22 20:25:34 kugelfang Exp $
+
+  22 Oct 2006; Danny van Dyk <kugelfang@gentoo.org> poslib-1.0.6.ebuild:
+  Marked stable on amd64.
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> poslib-1.0.6.ebuild:
   ppc stable
