@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6095 2006/10/22 15:14:37 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6096 2006/10/22 15:18:20 kingtaco Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -23,7 +23,7 @@
 
 # Mike Doty <kingtaco@gentoo.org> (22 Oct 2006)
 # gspca is beta
-media-video/gspca
+media-video/gspcav1
 
 # Keri Harris <keri@gentoo.org> (22 Oct 2006)
 # Masked for removal 22 Nov 2006.
