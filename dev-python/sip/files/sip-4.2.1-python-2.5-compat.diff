@@ -1,0 +1,356 @@
+--- sipgen/gencode.c	2005/08/25 21:02:16	453320
++++ sipgen/gencode.c	2006/10/11 22:54:45	594670
+@@ -3043,13 +3043,17 @@
+ 
+ 	if (isNumberSlot(md) || isInplaceNumberSlot(md))
+ 		prcode(fp,
++"#if PY_VERSION_HEX >= 0x02050000\n"
++"	if (!PyType_IsSubtype(sipSelf -> ob_type,&sipClass_%C -> super.ht_type))\n"
++"#else\n"
+ "	if (!PyType_IsSubtype(sipSelf -> ob_type,&sipClass_%C -> super.type))\n"
++"#endif\n"
+ "	{\n"
+ "		Py_INCREF(Py_NotImplemented);\n"
+ "		return Py_NotImplemented;\n"
+ "	}\n"
+ "\n"
+-			,classFQCName(cd));
++			,classFQCName(cd),classFQCName(cd));
+ 
+ 	prcode(fp,
+ "	%S *sipCpp = reinterpret_cast<%S *>(sipGetCppPtr((sipWrapper *)sipSelf,sipClass_%C));\n"
+--- siplib/objmap.c	2005/08/25 21:02:16	453320
++++ siplib/objmap.c	2006/09/28 06:39:22	589485
+@@ -114,8 +114,13 @@
+ 		 * of it, or vice versa, then we assume it is the same C++
+ 		 * object.
+ 		 */
++#if PY_VERSION_HEX >= 0x02050000
++		if (PyObject_TypeCheck(w,&type -> super.ht_type) ||
++		    PyType_IsSubtype(&type -> super.ht_type,w -> ob_type))
++#else
+ 		if (PyObject_TypeCheck(w,&type -> super.type) ||
+ 		    PyType_IsSubtype(&type -> super.type,w -> ob_type))
++#endif
+ 			return w;
+ 	}
+ 
+--- siplib/qtlib.cpp	2005/08/25 21:02:16	453320
++++ siplib/qtlib.cpp	2006/09/28 06:39:22	589485
+@@ -1232,7 +1232,7 @@
+ 				// specified the slot at "obj, SLOT('meth()')"
+ 				// rather than "obj.meth" (see below).
+ 
+-				char *meth;
++				const char *meth;
+ 
+ 				// Get the method name.
+ 				meth = ((PyCFunctionObject *)rxObj) -> m_ml -> ml_name;
+--- siplib/sip.h	2005/08/25 21:02:16	453320
++++ siplib/sip.h	2006/10/11 14:34:14	594517
+@@ -47,6 +47,12 @@
+ #define	SIP_VERSION_STR		"4.2.1"
+ #define	SIP_BUILD		"297"
+ 
++/* Some internal compatibility stuff. */
++#if PY_VERSION_HEX >= 0x02050000
++#define _SIP_SSIZE_T        Py_ssize_t
++#else
++#define _SIP_SSIZE_T        int
++#endif
+ 
+ /*
+  * Define the current API version number.  SIP must handle modules with the
+@@ -535,12 +541,12 @@
+ 	 * The following are part of the public API.
+ 	 */
+ 	void (*api_bad_catcher_result)(PyObject *method);
+-	void (*api_bad_length_for_slice)(int seqlen,int slicelen);
++	void (*api_bad_length_for_slice)(_SIP_SSIZE_T seqlen,_SIP_SSIZE_T slicelen);
+ 	PyObject *(*api_build_result)(int *isErr,char *fmt,...);
+ 	PyObject *(*api_call_method)(int *isErr,PyObject *method,char *fmt,...);
+ 	PyObject *(*api_class_name)(PyObject *self);
+ 	PyObject *(*api_connect_rx)(PyObject *txObj,const char *sig,PyObject *rxObj,const char *slot);
+-	int (*api_convert_from_sequence_index)(int idx,int len);
++	_SIP_SSIZE_T (*api_convert_from_sequence_index)(_SIP_SSIZE_T idx,_SIP_SSIZE_T len);
+ 	void *(*api_convert_to_cpp)(PyObject *sipSelf,sipWrapperType *type,int *iserrp);
+ 	PyObject *(*api_disconnect_rx)(PyObject *txObj,const char *sig,PyObject *rxObj,const char *slot);
+ 	int (*api_emit_signal)(PyObject *self,const char *sig,PyObject *sigargs);
+--- siplib/siplib.c	2005/08/25 21:02:16	453320
++++ siplib/siplib.c	2006/10/11 14:34:14	594517
+@@ -28,12 +28,12 @@
+  * These are the functions that make up the public and private SIP API.
+  */
+ static void sip_api_bad_catcher_result(PyObject *method);
+-static void sip_api_bad_length_for_slice(int seqlen,int slicelen);
++static void sip_api_bad_length_for_slice(_SIP_SSIZE_T seqlen,_SIP_SSIZE_T slicelen);
+ static PyObject *sip_api_build_result(int *isErr,char *fmt,...);
+ static PyObject *sip_api_call_method(int *isErr,PyObject *method,char *fmt,
+ 				     ...);
+ static PyObject *sip_api_class_name(PyObject *self);
+-static int sip_api_convert_from_sequence_index(int idx,int len);
++static _SIP_SSIZE_T sip_api_convert_from_sequence_index(_SIP_SSIZE_T idx, _SIP_SSIZE_T len);
+ static void *sip_api_convert_to_cpp(PyObject *sipSelf,sipWrapperType *type,
+ 				    int *iserrp);
+ static PyObject *sip_api_get_wrapper(void *cppPtr,sipWrapperType *type);
+@@ -302,8 +302,11 @@
+ 
+ 	if (PyType_Ready(&sipWrapperType_Type) < 0)
+ 		Py_FatalError("sip: Failed to initialise sip.wrappertype type");
+-
++#if PY_VERSION_HEX >= 0x02050000
++	if (PyType_Ready(&sipWrapper_Type.super.ht_type) < 0)
++#else
+ 	if (PyType_Ready(&sipWrapper_Type.super.type) < 0)
++#endif
+ 		Py_FatalError("sip: Failed to initialise sip.wrapper type");
+ 
+ 	if (PyType_Ready(&sipVoidPtr_Type) < 0)
+@@ -671,7 +674,11 @@
+ 		sipWrapperType *wt;
+ 
+ 		while ((wt = *mw++) != NULL)
++#if PY_VERSION_HEX >= 0x02050000
++			if (addInstances(wt -> super.ht_type.tp_dict,&wt -> type -> td_instances) < 0)
++#else
+ 			if (addInstances(wt -> super.type.tp_dict,&wt -> type -> td_instances) < 0)
++#endif
+ 				return -1;
+ 	}
+ 
+@@ -1568,7 +1575,11 @@
+ 				type = va_arg(va,sipWrapperType *);
+ 				va_arg(va,void **);
+ 
++#if PY_VERSION_HEX >= 0x02050000
++				if (arg != Py_None && !PyObject_TypeCheck(arg,&type -> super.ht_type))
++#else
+ 				if (arg != Py_None && !PyObject_TypeCheck(arg,&type -> super.type))
++#endif
+ 					valid = PARSE_TYPE;
+ 
+ 				/* Handle the sub-format. */
+@@ -1662,7 +1673,11 @@
+ #if defined(SIP_QT_SUPPORT)
+ 				/* Sub-class of QObject. */
+ 
++#if PY_VERSION_HEX >= 0x02050000
++				if (PyObject_TypeCheck(arg,&sipQObjectClass -> super.ht_type))
++#else
+ 				if (PyObject_TypeCheck(arg,&sipQObjectClass -> super.type))
++#endif
+ 					*va_arg(va,PyObject **) = arg;
+ 				else
+ 					valid = PARSE_TYPE;
+@@ -2325,7 +2340,7 @@
+  * Convert a sequence index.  Return the index or a negative value if there was
+  * an error.
+  */
+-static int sip_api_convert_from_sequence_index(int idx,int len)
++static _SIP_SSIZE_T sip_api_convert_from_sequence_index(_SIP_SSIZE_T idx,_SIP_SSIZE_T len)
+ {
+ 	/* Negative indices start from the other end. */
+ 	if (idx < 0)
+@@ -2405,7 +2420,11 @@
+ 
+ 	/* Get the dictionary into which the type will be placed. */
+ 	if (type -> td_scope >= 0)
++#if PY_VERSION_HEX >= 0x02050000
++		dict = client -> em_types[type -> td_scope] -> super.ht_type.tp_dict;
++#else
+ 		dict = client -> em_types[type -> td_scope] -> super.type.tp_dict;
++#endif
+ 	else
+ 		dict = mod_dict;
+ 
+@@ -2474,7 +2493,11 @@
+ 
+ 	/* Get the dictionary into which the type will be placed. */
+ 	if (ed -> e_scope >= 0)
++#if PY_VERSION_HEX >= 0x02050000
++		dict = client -> em_types[ed -> e_scope] -> super.ht_type.tp_dict;
++#else
+ 		dict = client -> em_types[ed -> e_scope] -> super.type.tp_dict;
++#endif
+ 	else
+ 		dict = mod_dict;
+ 
+@@ -2597,7 +2620,11 @@
+ 
+ 	self = PyTuple_GET_ITEM(args,argnr);
+ 
++#if PY_VERSION_HEX >= 0x02050000
++	if (!PyObject_TypeCheck(self,&type -> super.ht_type))
++#else
+ 	if (!PyObject_TypeCheck(self,&type -> super.type))
++#endif
+ 		return PARSE_UNBOUND;
+ 
+ 	*selfp = (sipWrapper *)self;
+@@ -2700,7 +2727,11 @@
+ 		if ((attr = createEnumMember(in, enm)) == NULL)
+ 			return NULL;
+ 
++#if PY_VERSION_HEX >= 0x02050000
++		if (PyDict_SetItem(in -> super.ht_type.tp_dict,nameobj,attr) < 0)
++#else
+ 		if (PyDict_SetItem(in -> super.type.tp_dict,nameobj,attr) < 0)
++#endif
+ 		{
+ 			Py_DECREF(attr);
+ 			return NULL;
+@@ -2903,9 +2934,15 @@
+ /*
+  * Report a sequence length that does not match the length of a slice.
+  */
+-static void sip_api_bad_length_for_slice(int seqlen,int slicelen)
++static void sip_api_bad_length_for_slice(_SIP_SSIZE_T seqlen,_SIP_SSIZE_T slicelen)
+ {
+-	PyErr_Format(PyExc_ValueError,"attempt to assign sequence of size %d to slice of size %d",seqlen,slicelen);
++	PyErr_Format(PyExc_ValueError,
++#if PY_VERSION_HEX >= 0x02050000
++            "attempt to assign sequence of size %zd to slice of size %zd",
++#else
++            "attempt to assign sequence of size %d to slice of size %d",
++#endif
++             seqlen,slicelen);
+ }
+ 
+ 
+@@ -3329,7 +3366,11 @@
+ {
+ 	/* If this is a wrapped type then get the type dictionary. */
+ 	if (sipWrapperType_Check(dict))
++#if PY_VERSION_HEX >= 0x02050000
++		dict = ((sipWrapperType *)dict) -> super.ht_type.tp_dict;
++#else
+ 		dict = ((sipWrapperType *)dict) -> super.type.tp_dict;
++#endif
+ 
+ 	return addSingleClassInstance(dict,name,cppPtr,wt,SIP_SIMPLE);
+ }
+@@ -3620,7 +3661,11 @@
+ 			 * convertor might be able to convert the target type
+ 			 * to something more specific.
+ 			 */
++#if PY_VERSION_HEX >= 0x02050000
++			if (PyType_IsSubtype(&type -> super.ht_type,&scc -> scc_basetype -> super.ht_type))
++#else
+ 			if (PyType_IsSubtype(&type -> super.type,&scc -> scc_basetype -> super.type))
++#endif
+ 			{
+ 				sipWrapperType *subtype;
+ 
+@@ -4036,7 +4081,7 @@
+ /*
+  * The type alloc slot.
+  */
+-static PyObject *sipWrapperType_alloc(PyTypeObject *self, int nitems)
++static PyObject *sipWrapperType_alloc(PyTypeObject *self, _SIP_SSIZE_T nitems)
+ {
+ 	PyObject *o;
+ 
+@@ -4077,8 +4122,11 @@
+ 	 * super-type.
+ 	 */
+ 	if (self -> type == NULL)
++#if PY_VERSION_HEX >= 0x02050000
++		self -> type = ((sipWrapperType *)self -> super.ht_type.tp_base) -> type;
++#else
+ 		self -> type = ((sipWrapperType *)self -> super.type.tp_base) -> type;
+-
++#endif
+ 	return 0;
+ }
+ 
+@@ -4107,8 +4155,11 @@
+ 		PyObject *dict, *tmpdict, *proxy;
+ 		PyMethodDef *pmd;
+ 
++#if PY_VERSION_HEX >= 0x02050000
++		dict = wt -> super.ht_type.tp_dict;
++#else
+ 		dict = wt -> super.type.tp_dict;
+-
++#endif
+ 		/* The base type doesn't have any type information. */
+ 		if ((td = wt -> type) == NULL)
+ 			return PyDictProxy_New(dict);
+@@ -4304,7 +4355,11 @@
+ 	}
+ 
+ 	/* Call the standard super-type new. */
++#if PY_VERSION_HEX >= 0x02050000
++	return PyBaseObject_Type.tp_new(&wt -> super.ht_type,args,kwds);
++#else
+ 	return PyBaseObject_Type.tp_new(&wt -> super.type,args,kwds);
++#endif
+ }
+ 
+ 
+@@ -4744,8 +4799,13 @@
+ 		switch (slots++ -> psd_type)
+ 		{
+ 		case str_slot:
++#if PY_VERSION_HEX >= 0x02050000
++			if (sp -> ht_type.tp_str == NULL)
++				sp -> ht_type.tp_str = (reprfunc)f;
++#else
+ 			if (sp -> type.tp_str == NULL)
+ 				sp -> type.tp_str = (reprfunc)f;
++#endif
+ 			break;
+ 
+ 		case int_slot:
+@@ -4891,8 +4951,13 @@
+ 			break;
+ 
+ 		case call_slot:
++#if PY_VERSION_HEX >= 0x02050000
++			if (sp -> ht_type.tp_call == NULL)
++				sp -> ht_type.tp_call = sipWrapper_call;
++#else
+ 			if (sp -> type.tp_call == NULL)
+ 				sp -> type.tp_call = sipWrapper_call;
++#endif
+ 			break;
+ 
+ 		case getitem_slot:
+@@ -4916,13 +4981,23 @@
+ 		case ne_slot:
+ 		case gt_slot:
+ 		case ge_slot:
++#if PY_VERSION_HEX >= 0x02050000
++			if (sp -> ht_type.tp_richcompare == NULL)
++				sp -> ht_type.tp_richcompare = sipWrapper_richcompare;
++#else
+ 			if (sp -> type.tp_richcompare == NULL)
+ 				sp -> type.tp_richcompare = sipWrapper_richcompare;
++#endif
+ 			break;
+ 
+ 		case cmp_slot:
++#if PY_VERSION_HEX >= 0x02050000
++			if (sp -> ht_type.tp_compare == NULL)
++				sp -> ht_type.tp_compare = (cmpfunc)f;
++#else
+ 			if (sp -> type.tp_compare == NULL)
+ 				sp -> type.tp_compare = (cmpfunc)f;
++#endif
+ 			break;
+ 
+ 		case nonzero_slot:
+@@ -4936,8 +5011,13 @@
+ 			break;
+ 
+ 		case repr_slot:
++#if PY_VERSION_HEX >= 0x02050000
++			if (sp -> ht_type.tp_repr == NULL)
++				sp -> ht_type.tp_repr = (reprfunc)f;
++#else
+ 			if (sp -> type.tp_repr == NULL)
+ 				sp -> type.tp_repr = (reprfunc)f;
++#endif
+ 			break;
+ 		}
+ }

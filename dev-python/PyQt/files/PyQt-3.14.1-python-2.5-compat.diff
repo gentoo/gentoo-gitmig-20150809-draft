@@ -1,0 +1,87 @@
+--- sip/qt/qdir.sip.orig	2006-10-12 17:28:37.000000000 +0200
++++ sip/qt/qdir.sip	2006-10-12 17:29:43.000000000 +0200
+@@ -238,7 +238,7 @@
+ 
+ 	QString operator[](int) const;
+ %MethodCode
+-		int len;
++		ssize_t len;
+ 
+ 		Py_BEGIN_ALLOW_THREADS
+ 		len = sipCpp -> count();
+@@ -256,7 +256,7 @@
+ 
+ 	QStringList operator[](SIP_PYSLICE) const;
+ %MethodCode
+-		int len, start, stop, step, slicelength;
++		ssize_t len, start, stop, step, slicelength;
+ 
+ 		Py_BEGIN_ALLOW_THREADS
+ 		len = sipCpp -> count();
+--- sip/qt/qstring.sip	2005/09/29 14:33:08	465369
++++ sip/qt/qstring.sip	2006/10/11 22:54:45	594670
+@@ -746,7 +746,7 @@
+ 
+ 	QString operator[](SIP_PYSLICE) const;
+ %MethodCode
+-		int len, start, stop, step, slicelength;
++		ssize_t len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> length();
+ 
+--- sip/qt/qstringlist.sip	2005/09/29 14:33:08	465369
++++ sip/qt/qstringlist.sip	2006/10/11 22:54:45	594670
+@@ -99,7 +99,7 @@
+ 
+ 	void __setitem__(int,const QString &);
+ %MethodCode
+-		int len;
++		ssize_t len;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -111,7 +111,7 @@
+ 
+ 	void __setitem__(SIP_PYSLICE,const QStringList &);
+ %MethodCode
+-		int len, start, stop, step, slicelength;
++		ssize_t len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -142,7 +142,7 @@
+ 
+ 	void __delitem__(int);
+ %MethodCode
+-		int len;
++		ssize_t len;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -154,7 +154,7 @@
+ 
+ 	void __delitem__(SIP_PYSLICE);
+ %MethodCode
+-		int len, start, stop, step, slicelength;
++		ssize_t len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -170,7 +170,7 @@
+ 
+ 	QString operator[](int);
+ %MethodCode
+-		int len;
++		ssize_t len;
+ 
+ 		len = sipCpp -> count();
+ 
+@@ -182,7 +182,7 @@
+ 
+ 	QStringList operator[](SIP_PYSLICE);
+ %MethodCode
+-		int len, start, stop, step, slicelength;
++		ssize_t len, start, stop, step, slicelength;
+ 
+ 		len = sipCpp -> count();
+ 
