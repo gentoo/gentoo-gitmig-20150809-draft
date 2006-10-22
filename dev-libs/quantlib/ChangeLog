@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.24 2006/08/22 11:58:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.25 2006/10/22 19:01:40 dev-zero Exp $
+
+  22 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> +quantlib-0.3.13.ebuild:
+  Version bump. Added 'doc','emacs' and 'examples' USE-flag. Complete rework
+  of the ebuild.
 
   22 Aug 2006; Jason Wever <weeve@gentoo.org> quantlib-0.3.10.ebuild:
   Stable on SPARC.
