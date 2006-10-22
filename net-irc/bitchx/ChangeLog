@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.56 2006/10/20 22:57:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.57 2006/10/22 15:21:27 weeve Exp $
+
+  22 Oct 2006; Jason Wever <weeve@gentoo.org> bitchx-1.1-r3.ebuild:
+  Stable on SPARC wrt bug #149851.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> bitchx-1.1-r3.ebuild:
   Stable on Alpha.
