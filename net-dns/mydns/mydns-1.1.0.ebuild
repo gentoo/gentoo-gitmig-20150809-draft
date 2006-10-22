@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.5 2006/04/27 03:07:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0.ebuild,v 1.6 2006/10/22 18:52:44 vivo Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-m4.patch
+	#epatch "${FILESDIR}"/${P}-gcc41.patch
 	autoconf || die
 }
 
