@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/jscall-sharp/ChangeLog,v 1.1 2006/10/22 12:10:51 jurek Exp $
+
+*jscall-sharp-0.0.2_pre20060925 (22 Oct 2006)
+
+  22 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> jscall-sharp-0.0.2_pre20060925:
+  Initial import. This ebuild uses a svn snapshot. Ebuild provided by SchAmane
+  with corrections introduced by me and Peter Johanson <latexer@gentoo.org>
+  (bug #147845).

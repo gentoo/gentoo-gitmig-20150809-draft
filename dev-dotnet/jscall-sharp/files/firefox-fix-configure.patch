@@ -1,0 +1,11 @@
+--- a/configure.ac	2006-09-15 21:25:52.000000000 +0200
++++ b/configure.ac	2006-09-15 22:25:26.000000000 +0200
+@@ -107,6 +107,8 @@
+                                $mozpackage-xpcom >= $mozpackage_required_version
+                                gtk+-2.0                >= gtk_required_version])
+ 
++JSGLUEDEPS_CFLAGS+=" -I${MOZILLA_HOME}/include/dom -I${MOZILLA_HOME}/include/webbrwsr"
++AC_SUBST(JSGLUEDEPS_CFLAGS)
+ AC_OUTPUT([
+ Makefile
+ jscall-sharp.pc
