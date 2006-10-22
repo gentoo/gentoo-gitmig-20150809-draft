@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.6 2006/09/09 09:39:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.18.ebuild,v 1.7 2006/10/22 17:09:46 swegener Exp $
 
 inherit gnome2 eutils
 
@@ -23,6 +23,8 @@ RDEPEND=">=dev-db/mysql-4.0
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	>=app-text/scrollkeeper-0.3.11"
+RDEPEND="${RDEPEND}
+	!dev-db/mysql-gui-tools"
 
 src_unpack() {
 	unpack ${A}
