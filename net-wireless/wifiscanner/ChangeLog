@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wifiscanner
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.6 2006/07/25 08:45:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/ChangeLog,v 1.7 2006/10/22 13:56:43 peper Exp $
+
+  22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org>
+  wifiscanner-1.0.1-r1.ebuild:
+  Add ~amd64 keyword. Bug #133248.
 
   25 Jul 2006; Daniel Black <dragonheart@gentoo.org>
   -wifiscanner-1.0.1.ebuild:
