@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6102 2006/10/22 19:08:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6103 2006/10/22 21:28:02 mattm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1351,10 +1351,6 @@ media-sound/ipodder
 # Aaron Walker <ka0ttic@gentoo.org> (30 Jun 2005)
 # Masked due to constant security bugs.
 www-apps/phpBB
-
-# Aaron Walker <ka0ttic@gentoo.org> (20 Jun 2005)
-# testing releases/cvs snaps
-=net-analyzer/net-snmp-5.3*
 
 # David Holm <dholm@gentoo.org> (11 Jun 2005)
 # Masked since it is known to create broken partition
