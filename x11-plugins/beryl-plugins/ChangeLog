@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/beryl-plugins
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/beryl-plugins/ChangeLog,v 1.1 2006/10/22 22:28:35 tsunam Exp $
+
+*beryl-plugins-0.1.1 (22 Oct 2006)
+
+  22 Oct 2006; Joshua Jackson <tsunam@gentoo.org> +metadata.xml,
+  +beryl-plugins-0.1.1.ebuild:
+  Initial import of Beryl, thanks to Alex Heck
+
