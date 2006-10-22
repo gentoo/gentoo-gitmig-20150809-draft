@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.6 2006/10/17 10:16:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2_beta2.ebuild,v 1.7 2006/10/22 11:36:19 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -233,13 +233,21 @@ src_install() {
 	# install libstand files
 	dodir /usr/include/libstand
 	insinto /usr/include/libstand
-	doins ${S}/libstand/*.h
+	doins "${S}"/libstand/*.h
 
-	cd ${WORKDIR}/etc/
+	cd "${WORKDIR}/etc/"
 	insinto /etc
 	doins auth.conf nls.alias mac.conf netconfig
 
 	# Install ttys file
 	doins "etc.$(tc-arch-kernel)"/*
+
+	dodir /etc/sandbox.d
+	cat - > "${D}"/etc/sandbox.d/00freebsd <<EOF
+# /dev/crypto is used mostly by OpenSSL on *BSD platforms
+# leave it available as packages might use OpenSSL commands
+# during compile or install phase.
+SANDBOX_PREDICT="/dev/crypto"
+EOF
 }
 
