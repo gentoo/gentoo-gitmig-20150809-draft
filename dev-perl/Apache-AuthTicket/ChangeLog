@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-AuthTicket
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.8 2006/09/10 16:16:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-AuthTicket/ChangeLog,v 1.9 2006/10/22 20:04:12 vivo Exp $
+
+  22 Oct 2006; <vivo@gentoo.org> Apache-AuthTicket-0.40.ebuild:
+  stabled on amd64 to fix bug #43824
 
   10 Sep 2006; Michael Cummings <mcummings@gentoo.org>
   Apache-AuthTicket-0.40.ebuild:
