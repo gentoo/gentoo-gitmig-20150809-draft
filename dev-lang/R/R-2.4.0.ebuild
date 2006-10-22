@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.0.ebuild,v 1.1 2006/10/05 00:41:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.0.ebuild,v 1.2 2006/10/22 18:26:25 markusle Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -46,6 +46,10 @@ pkg_setup() {
 	fortran_pkg_setup
 
 	filter-ldflags -Wl,-Bdirect -Bdirect
+
+	# this is needed to properly compile additional R packages
+	# (see bug #152379)
+	append-flags -std=gnu99
 }
 
 src_unpack() {

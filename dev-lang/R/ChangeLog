@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.78 2006/10/05 00:41:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.79 2006/10/22 18:26:25 markusle Exp $
+
+  22 Oct 2006; Markus Dittrich <markusle@gentoo.org> R-2.4.0.ebuild:
+  Append -std=gnu99 to CFLAGS since it is needed to compile
+  several additional R packages via its custom makefile 
+  (this fixes bug #152379). Thanks to Aarre Laakso <aarre@pair.com>
+  for pointing this out.
 
 *R-2.4.0 (05 Oct 2006)
 
