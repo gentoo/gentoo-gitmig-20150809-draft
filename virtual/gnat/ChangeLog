@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnat
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.6 2006/08/31 19:55:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.7 2006/10/22 15:17:16 mabi Exp $
+
+  22 Oct 2006; Matti Bickel <mabi@gentoo.org> gnat-4.1.ebuild:
+  ~ppc wrt bug #130509
 
   31 Aug 2006; George Shapovalov <george@gentoo.org> gnat-4.1.ebuild:
   fixed SLOT (#145733), thanks to Timothy Stotts for spotting
