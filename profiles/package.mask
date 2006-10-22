@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6089 2006/10/22 04:52:13 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6090 2006/10/22 05:25:04 dberkholz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1066,10 +1066,6 @@ games-roguelike/noegnud-nethack
 # Jeremy Huddleston <eradicator@gentoo.org> (21 Mar 2006)
 # Development version of squirrelmail
 >=mail-client/squirrelmail-1.5
-
-# Donnie Berkholz <dberkholz@gentoo.org>
-# Keeping masked so ~arch/arch users move from 6.8.2 to 7.0
-=x11-base/xorg-x11-6.9*
 
 # Michael Sterrett <mr_bones_@gentoo.org> (12 Mar 2006)
 # masked due to security issues: bug #125990
