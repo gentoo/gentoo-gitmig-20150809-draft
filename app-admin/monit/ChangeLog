@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.22 2006/10/21 14:33:18 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.23 2006/10/22 08:25:20 chriswhite Exp $
+
+  22 Oct 2006; Chris White <chriswhite@gentoo.org> monit-4.8.1.ebuild:
+  Marked 4.8.1 stable for ppc per bug #152220.
 
   21 Oct 2006; Konstantin V. Arkhipov <voxus@gentoo.org> monit-4.8.1.ebuild:
   Applied Jakub's patch wrt bug #152220, goes stable on amd64.
