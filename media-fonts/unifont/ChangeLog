@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unifont
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.19 2006/10/20 21:27:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.20 2006/10/22 22:29:42 mabi Exp $
+
+  22 Oct 2006; Matti Bickel <mabi@gentoo.org> unifont-1.0-r3.ebuild:
+  Stable on ppc wrt bug #152333
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> unifont-1.0-r3.ebuild:
   Stable on Alpha.
