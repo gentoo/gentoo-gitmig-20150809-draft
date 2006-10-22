@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netpipes
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.3 2006/08/06 00:03:25 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.4 2006/10/22 01:32:37 tcort Exp $
+
+  22 Oct 2006; Thomas Cort <tcort@gentoo.org> netpipes-4.2.ebuild:
+  Added ~amd64 keyword wrt Bug #138357.
 
   05 Aug 2006; Chris White <chriswhite@gentoo.org> metadata.xml:
   metadata.xml translation by Yoshino-san in bug #136639
