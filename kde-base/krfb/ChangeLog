@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.52 2006/10/03 11:59:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.53 2006/10/22 10:02:31 flameeyes Exp $
+
+  22 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> krfb-3.5.2.ebuild,
+  krfb-3.5.3.ebuild, krfb-3.5.4.ebuild, krfb-3.5.5.ebuild:
+  Add missing libXtst dependency, thanks to Patrick Lauer in bug #152337.
 
 *krfb-3.5.5 (03 Oct 2006)
 
