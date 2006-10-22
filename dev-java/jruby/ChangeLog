@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.8 2006/09/30 02:25:15 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.9 2006/10/22 08:17:08 betelgeuse Exp $
+
+  22 Oct 2006; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Fixed metadata.xml by changing the herd from jruby to java.
 
 *jruby-0.9.0 (30 Sep 2006)
 
