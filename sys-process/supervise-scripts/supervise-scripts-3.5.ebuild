@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.4 2006/10/22 06:34:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/supervise-scripts-3.5.ebuild,v 1.5 2006/10/22 12:36:02 vapier Exp $
 
-inherit fixheadtails toolchain-funcs
+inherit eutils fixheadtails toolchain-funcs
 
 DESCRIPTION="Starting and stopping daemontools managed services"
 HOMEPAGE="http://untroubled.org/supervise-scripts/"
@@ -26,6 +26,7 @@ src_unpack() {
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	ht_fix_file svscan-add-to-inittab.in Makefile
+	epatch "${FILESDIR}"/${P}-head-tails-syntax.patch #152307
 }
 
 src_compile() {

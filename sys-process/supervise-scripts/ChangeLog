@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/supervise-scripts
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.4 2006/06/06 01:34:30 eradicator Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/supervise-scripts/ChangeLog,v 1.5 2006/10/22 12:36:02 vapier Exp $
+
+  22 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/supervise-scripts-3.5-head-tails-syntax.patch,
+  supervise-scripts-3.5.ebuild:
+  Fixup head/tail stuff missed by the eclass #152307 by Richard Scott.
 
   06 Jun 2006; Jeremy Huddleston <eradicator@gentoo.org>
   supervise-scripts-3.5.ebuild:
