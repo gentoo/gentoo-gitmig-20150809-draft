@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/fluxbox-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.13 2006/04/07 22:00:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fluxbox-syntax/ChangeLog,v 1.14 2006/10/22 05:10:55 jer Exp $
+
+  22 Oct 2006; Jeroen Roovers <jer@gentoo.org> fluxbox-syntax-1.5.ebuild:
+  Stable for HPPA.
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:
   Remove ciaranm from metadata.xml.
