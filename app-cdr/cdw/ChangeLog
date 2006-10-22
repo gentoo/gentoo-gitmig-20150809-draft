@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.17 2006/08/05 21:35:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.18 2006/10/22 21:36:51 vivo Exp $
+
+  22 Oct 2006; <vivo@gentoo.org> cdw-0.2.4.ebuild:
+  added DEPEND upon dev-perl/XML-Parser
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> cdw-0.2.4.ebuild:
   Stable on SPARC wrt bug #142570.
