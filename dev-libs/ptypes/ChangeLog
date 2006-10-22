@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ptypes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.11 2006/02/08 05:22:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptypes/ChangeLog,v 1.12 2006/10/22 19:46:22 dev-zero Exp $
+
+  22 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Added patch for gcc-4*, thanks to James Hutton, fixes bug #148599. Added
+  'debug' USE-flag. Patched to respect our CXXFLAGS and CXX.
 
   08 Feb 2006; Mark Loeser <halcy0n@gentoo.org> ptypes-2.0.2.ebuild:
   Fix ebuild to install things properly, thanks to Richard Whitty <rlw26 AT
