@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/ebookmerge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.10 2006/10/21 17:11:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/ebookmerge/ChangeLog,v 1.11 2006/10/22 09:42:48 corsair Exp $
+
+  22 Oct 2006; Markus Rothe <corsair@gentoo.org> ebookmerge-0.9.3.ebuild:
+  Added ~ppc64; bug #152195
 
   21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   ebookmerge-0.9.3.ebuild:
