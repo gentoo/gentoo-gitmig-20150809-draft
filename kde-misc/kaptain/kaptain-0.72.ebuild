@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/kaptain-0.72.ebuild,v 1.4 2006/09/12 02:43:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kaptain/kaptain-0.72.ebuild,v 1.5 2006/10/22 01:38:20 tcort Exp $
 
 inherit kde-functions eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="ppc ~sparc x86"
+KEYWORDS="~amd64 ppc ~sparc x86"
 
 need-qt 3
 
