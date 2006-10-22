@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.2 2006/10/21 07:11:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.3 2006/10/22 15:19:49 mabi Exp $
+
+  22 Oct 2006; Matti Bickel <mabi@gentoo.org> vlgothic-20061021.ebuild:
+  ~ppc added
 
 *vlgothic-20061021 (21 Oct 2006)
 
