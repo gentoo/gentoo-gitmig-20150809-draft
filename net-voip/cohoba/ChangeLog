@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/cohoba
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/ChangeLog,v 1.4 2006/10/08 19:17:04 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/cohoba/ChangeLog,v 1.5 2006/10/22 18:41:19 peper Exp $
+
+  22 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> metadata.xml,
+  cohoba-0.0.4.ebuild:
+  Add missing telepathy-python dep. Remove ~ppc(b/c of the new dep), add ~amd64.
 
   08 Oct 2006; Stefan Schweizer <genstef@gentoo.org> cohoba-0.0.4.ebuild:
   add an ugly built_with_use check for dbus python, bug 150497 thanks dsd
