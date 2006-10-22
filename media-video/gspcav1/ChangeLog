@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gspcav1/ChangeLog,v 1.1 2006/10/22 15:25:45 kingtaco Exp $
+
+*gspcav1-20060925 (22 Oct 2006)
+
+  22 Oct 2006; Mike Doty <kingtaco@gentoo.org> +metadata.xml,
+  +gspcav1-20060925.ebuild:
+  Inital import thanks to Conrad Kostecki <ConiKost@gmx.de>  bug 149161
+
