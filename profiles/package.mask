@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6103 2006/10/22 21:28:02 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6104 2006/10/22 22:37:09 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,89 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (23 Oct 2006)
+# Pending removal 23 November for multiple bugs
+dev-perl/Xmms-Perl
+dev-python/pyxmms
+gnome-extra/gxmms
+media-plugins/dumb-xmms
+media-plugins/efxmms
+media-plugins/eq-xmms
+media-plugins/modplugxmms
+media-plugins/xalbumlist
+media-plugins/xmmplayer
+media-plugins/xmms-adplug
+media-plugins/xmms-alarm
+media-plugins/xmms-arts
+media-plugins/xmms-blursk
+media-plugins/xmms-btexmms
+media-plugins/xmms-cdcover
+media-plugins/xmms-cdread
+media-plugins/xmms-coverviewer
+media-plugins/xmms-crossfade
+media-plugins/xmms-crystality
+media-plugins/xmms-dflowers
+media-plugins/xmms-dscope
+media-plugins/xmms-dspectogram
+media-plugins/xmms-dspectral
+media-plugins/xmms-extra
+media-plugins/xmms-fc
+media-plugins/xmms-find
+media-plugins/xmms-finespectrum
+media-plugins/xmms-fmradio
+media-plugins/xmms-gdancer
+media-plugins/xmms-goom
+media-plugins/xmms-idcin
+media-plugins/xmms-imms
+media-plugins/xmms-infinity
+media-plugins/xmms-infopipe
+media-plugins/xmms-iris
+media-plugins/xmms-itouch
+media-plugins/xmms-jack
+media-plugins/xmms-jess
+media-plugins/xmms-kde
+media-plugins/xmms-kjofol
+media-plugins/xmms-ladspa
+media-plugins/xmms-libvisual
+media-plugins/xmms-lirc
+media-plugins/xmms-liveice
+media-plugins/xmms-liveplugin
+media-plugins/xmms-lyrc
+media-plugins/xmms-mad
+media-plugins/xmms-midi
+media-plugins/xmms-morestate
+media-plugins/xmms-mp3cue
+media-plugins/xmms-musepack
+media-plugins/xmms-nas
+media-plugins/xmms-nebulus
+media-plugins/xmms-null
+media-plugins/xmms-oggre
+media-plugins/xmms-outpost
+media-plugins/xmms-pipe
+media-plugins/xmms-realrandom
+media-plugins/xmms-repeatit
+media-plugins/xmms-scrobbler
+media-plugins/xmms-shell
+media-plugins/xmms-shn
+media-plugins/xmms-sid
+media-plugins/xmms-smpeg
+media-plugins/xmms-sndfile
+media-plugins/xmms-spc
+media-plugins/xmms-speex
+media-plugins/xmms-tfmx
+media-plugins/xmms-volnorm
+media-plugins/xmms-wakeup
+media-plugins/xmms-wma
+media-plugins/xmms-wmdiscotux
+media-plugins/xmms-xf86audio
+media-plugins/xmms-xmmsd
+media-plugins/xmms-xmmsmplayer
+media-sound/ctrlxmms
+media-sound/longplayer
+media-sound/madman
+x11-plugins/gaim-xmms-remote
+x11-themes/xmms-themes
 
 # Piotr Jaroszyński <peper@gentoo.org> (22 Oct 2006)
 # telepathy-gabble has masked dep(net-libs/loudmouth)
