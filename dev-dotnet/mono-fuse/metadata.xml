@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dotnet</herd>
+<maintainer>
+	<email>jurek@gentoo.org</email>
+	<name>Jurek Bartuszek</name>
+</maintainer>
 </pkgmetadata>
