@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.11 2006/09/04 08:43:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.12 2006/10/22 05:55:19 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -13,18 +13,19 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sh sparc x86"
 IUSE="X gtk ggi gpm"
 
-RDEPEND="X? ( || ( ( x11-libs/libXpm x11-libs/libX11 ) virtual/x11 ) )
+RDEPEND="X? ( x11-libs/libXpm x11-libs/libX11 )
 	ggi? ( >=media-libs/libggi-1.9 )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	>=sys-libs/ncurses-5.2"
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/xproto ) virtual/x11 ) )"
+	X? ( x11-proto/xproto )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-gcc.patch
 	ht_fix_file configure
 }
@@ -59,17 +60,17 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 
 	if use X ; then
 		insinto /usr/lib/X11/fonts/misc
 		doins fonts/vga.pcf.gz
 	fi
 
-	rm -rf ${D}/usr/share/twin/{BUGS,docs,COP*,READ*,Change*,INSTALL*}
+	rm -rf "${D}"/usr/share/twin/{BUGS,docs,COP*,READ*,Change*,INSTALL*}
 
 	dodoc BUGS Change* README* TODO/TODO TODO/twin-thoughts
-	doman docs/twin.1; rm -rf docs/twin.1
+	doman docs/twin.1
 	dodoc docs/*
-
+	rm -f "${D}"/usr/share/doc/${PF}/twin.1*
 }

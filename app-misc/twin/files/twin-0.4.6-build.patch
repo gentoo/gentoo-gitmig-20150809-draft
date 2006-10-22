@@ -1,0 +1,31 @@
+just respect the settings from portage, local strip stuff be damned
+
+--- makerules
++++ makerules
+@@ -27,25 +27,7 @@
+ #
+ # compile/link flags. Used if no CFLAGS/LDFLAGS given in `make' command line
+ #
+-ifdef DEBUG
+- CFLAGS+=-g -DINLINE=static
+- LDFLAGS+=-g
+-else
+- ifdef PROFILE
+-   CFLAGS+=-p -pg
+-   LDFLAGS+=-p -pg
+- else
+-   ifeq ($(CC),gcc)
+-     CFLAGS+=-O2 -fomit-frame-pointer
+-     LDFLAGS+=-s
+-   else
+-     # detected by `./configure' :
+-     CFLAGS+=$(CC_AC_FLAGS)
+-   endif
+-   # strip installed binaries
+-   INSTALLFLAGS+=-s
+- endif
+-endif
++CFLAGS+=$(CC_AC_FLAGS)
+ 
+ #
+ # how picky should your compiler be? uncomment for paranoid gcc settings.

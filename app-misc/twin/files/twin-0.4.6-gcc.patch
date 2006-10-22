@@ -17,3 +17,24 @@
      s_tw_errno *E;
      byte *q;
      int i;
+--- server/HW/hw_tty.c
++++ server/HW/hw_tty.c
+@@ -389,8 +389,9 @@
+ 	
+ static byte xterm_MouseData[10] = "\033[M#!!!!";
+ 
++static void xterm_MouseEvent(int fd, display_hw hw);
++
+ static void stdin_KeyboardEvent(int fd, display_hw hw) {
+-    static void xterm_MouseEvent(int, display_hw);
+     static byte *match;
+     byte got, chunk, buf[SMALLBUFF], *s, *sret;
+     udat Code, ShiftFlags;
+@@ -574,7 +575,6 @@
+  */
+ 
+ static void xterm_QuitMouse(void);
+-static void xterm_MouseEvent(int fd, display_hw hw);
+ 
+ 
+ /* return FALSE if failed */
