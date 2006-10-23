@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.92 2006/10/04 10:48:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.93 2006/10/23 19:25:43 dev-zero Exp $
+
+  23 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  'static' USE-flag removed (was broken). Patch added for bug #146112. Fixing
+  bug #137638. Adding symlink from *thread-mt.so -> *thread.so which solves
+  problems with other packages.
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> boost-1.33.1.ebuild:
   Add ~x86-fbsd keyword.
