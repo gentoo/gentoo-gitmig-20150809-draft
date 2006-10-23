@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.138 2006/10/22 22:28:20 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.139 2006/10/23 13:04:29 mattm Exp $
+
+*net-snmp-5.3.1-r1 (23 Oct 2006)
+
+  23 Oct 2006; Matthew Marlowe <mattm@gentoo.org>
+  +files/net-snmp-5.3.1-retrans-time.patch,
+  +files/net-snmp-5.3.1-tcp-udp-mib-byteorder.patch,
+  +net-snmp-5.3.1-r1.ebuild:
+  Adding several critical patches (source: redhat/fedora) for net-snmp 5.3.1 and
+  modifying the net-snmp-5.3.1-r1 ebuild to automatically apply them.
+  Hopefully, the patches will fix some amd64 and possibly sun issues.
 
   22 Oct 2006; Matthew Marlowe <mattm@gentoo.org> ChangeLog:
   version bump (5.3.1), fixed bugs #120412 and #152166.

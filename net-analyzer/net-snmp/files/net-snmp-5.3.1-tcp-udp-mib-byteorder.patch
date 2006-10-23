@@ -1,0 +1,233 @@
+Index: agent/mibgroup/tcp-mib/data_access/tcpConn_linux.c
+===================================================================
+RCS file: /cvsroot/net-snmp/net-snmp/agent/mibgroup/tcp-mib/data_access/tcpConn_linux.c,v
+retrieving revision 1.5.2.1
+diff -u -p -u -r1.5.2.1 tcpConn_linux.c
+--- agent/mibgroup/tcp-mib/data_access/tcpConn_linux.c	17 Aug 2006 08:52:15 -0000	1.5.2.1
++++ agent/mibgroup/tcp-mib/data_access/tcpConn_linux.c	1 Sep 2006 17:15:23 -0000
+@@ -169,11 +169,20 @@ _load4(netsnmp_container *container, u_i
+             break;
+         }
+ 
+-        entry->loc_port = htons((unsigned short) local_port);
+-        entry->rmt_port = htons((unsigned short) remote_port);
++        /** oddly enough, these appear to already be in network order */
++        entry->loc_port = (unsigned short) local_port;
++        entry->rmt_port = (unsigned short) remote_port;
+         entry->tcpConnState = state;
++        
++        /** the addr string may need work */
+         buf_len = strlen(local_addr);
+-        netsnmp_assert(8 == buf_len);
++        if ((8 != buf_len) ||
++            (-1 == netsnmp_addrstr_hton(local_addr, 8))) {
++            DEBUGMSGT(("verbose:access:tcpconn:container",
++                       " error processing local address\n"));
++            netsnmp_access_tcpconn_entry_free(entry);
++            continue;
++        }
+         offset = 0;
+         tmp_ptr = entry->loc_addr;
+         rc = netsnmp_hex_to_binary(&tmp_ptr, &buf_len,
+@@ -188,8 +197,15 @@ _load4(netsnmp_container *container, u_i
+             continue;
+         }
+ 
+-        buf_len = strlen(remote_addr);
+-        netsnmp_assert(8 == buf_len);
++        /** the addr string may need work */
++        buf_len = strlen((char*)remote_addr);
++        if ((8 != buf_len) ||
++            (-1 == netsnmp_addrstr_hton(remote_addr, 8))) {
++            DEBUGMSGT(("verbose:access:tcpconn:container",
++                       " error processing remote address\n"));
++            netsnmp_access_tcpconn_entry_free(entry);
++            continue;
++        }
+         offset = 0;
+         tmp_ptr = entry->rmt_addr;
+         rc = netsnmp_hex_to_binary(&tmp_ptr, &buf_len,
+@@ -244,6 +260,8 @@ _load6(netsnmp_container *container, u_i
+     fgets(line, sizeof(line), in); /* skip header */
+ 
+     /*
++     * Note: PPC (big endian)
++     *
+      *   sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode
+      *  0: 00000000000000000000000000000001:1466 00000000000000000000000000000000:0000 0A 00000000:00000000 00:00000000 00000000   500        0 326699 1 efb81580 3000 0 0 2 -1
+      */
+@@ -291,11 +309,20 @@ _load6(netsnmp_container *container, u_i
+             break;
+         }
+ 
+-        entry->loc_port = htons((unsigned short) local_port);
+-        entry->rmt_port = htons((unsigned short) remote_port);
++        /** oddly enough, these appear to already be in network order */
++        entry->loc_port = (unsigned short) local_port;
++        entry->rmt_port = (unsigned short) remote_port;
+         entry->tcpConnState = state;
+ 
+-        buf_len = strlen(local_addr);
++        /** the addr string may need work */
++        buf_len = strlen((char*)local_addr);
++        if ((32 != buf_len) ||
++            (-1 == netsnmp_addrstr_hton(local_addr, 32))) {
++            DEBUGMSGT(("verbose:access:tcpconn:container",
++                       " error processing local address\n"));
++            netsnmp_access_tcpconn_entry_free(entry);
++            continue;
++        }
+         offset = 0;
+         tmp_ptr = entry->loc_addr;
+         rc = netsnmp_hex_to_binary(&tmp_ptr, &buf_len,
+@@ -310,7 +337,14 @@ _load6(netsnmp_container *container, u_i
+             continue;
+         }
+ 
+-        buf_len = strlen(remote_addr);
++        buf_len = strlen((char*)remote_addr);
++        if ((32 != buf_len) ||
++            (-1 == netsnmp_addrstr_hton(remote_addr, 32))) {
++            DEBUGMSGT(("verbose:access:tcpconn:container",
++                       " error processing remote address\n"));
++            netsnmp_access_tcpconn_entry_free(entry);
++            continue;
++        }
+         offset = 0;
+         tmp_ptr = entry->rmt_addr;
+         rc = netsnmp_hex_to_binary(&tmp_ptr, &buf_len,
+Index: agent/mibgroup/udp-mib/data_access/udp_endpoint_linux.c
+===================================================================
+RCS file: /cvsroot/net-snmp/net-snmp/agent/mibgroup/udp-mib/data_access/udp_endpoint_linux.c,v
+retrieving revision 1.2.2.1
+diff -u -p -u -r1.2.2.1 udp_endpoint_linux.c
+--- agent/mibgroup/udp-mib/data_access/udp_endpoint_linux.c	25 Jan 2006 16:27:40 -0000	1.2.2.1
++++ agent/mibgroup/udp-mib/data_access/udp_endpoint_linux.c	1 Sep 2006 17:15:23 -0000
+@@ -112,9 +112,9 @@ _process_line_udp_ep(netsnmp_line_info *
+                      struct netsnmp_line_process_info_s* lpi)
+ {
+     netsnmp_udp_endpoint_entry *ep = (netsnmp_udp_endpoint_entry *)mem;
+-    char                 *ptr;
++    char                 *ptr, *sep;
+     u_char               *u_ptr;
+-    size_t                u_ptr_len, offset;
++    size_t                u_ptr_len, offset, len;
+ 
+     /*
+      * skip 'sl'
+@@ -135,10 +135,22 @@ _process_line_udp_ep(netsnmp_line_info *
+     /*
+      * get local address. ignore error on hex conversion, since that
+      * function doesn't like the ':' between address and port. check the
+-     * offset to see if it worked.
++     * offset to see if it worked. May need to flip string too.
+      */
+     u_ptr = ep->loc_addr;
+     u_ptr_len = sizeof(ep->loc_addr);
++    sep = strchr(ptr, ':');
++    if (NULL == sep) {
++        DEBUGMSGTL(("text:util:tvi", "no ':' '%s'\n",
++                    line_info->start));
++        return PMLP_RC_MEMORY_UNUSED;
++    }
++    len = (sep - ptr);
++    if (-1 == netsnmp_addrstr_hton(ptr, len)) {
++        DEBUGMSGTL(("text:util:tvi", "bad length %d for loc addr '%s'\n",
++                    u_ptr_len, line_info->start));
++        return PMLP_RC_MEMORY_UNUSED;
++    }
+     offset = 0;
+     netsnmp_hex_to_binary(&u_ptr, &u_ptr_len, &offset, 0, ptr, NULL);
+     if ((4 != offset) && (16 != offset)) {
+@@ -159,14 +171,26 @@ _process_line_udp_ep(netsnmp_line_info *
+     /*
+      * get remote address. ignore error on hex conversion, since that
+      * function doesn't like the ':' between address and port. check the
+-     * offset to see if it worked.
++     * offset to see if it worked. May need to flip string too.
+      */
+     u_ptr = ep->rmt_addr;
+     u_ptr_len = sizeof(ep->rmt_addr);
++    sep = strchr(ptr, ':');
++    if (NULL == sep) {
++        DEBUGMSGTL(("text:util:tvi", "no ':' '%s'\n",
++                    line_info->start));
++        return PMLP_RC_MEMORY_UNUSED;
++    }
++    len = (sep - ptr);
++    if (-1 == netsnmp_addrstr_hton(ptr, len)) {
++        DEBUGMSGTL(("text:util:tvi", "bad length %d for rmt addr '%s'\n",
++                    u_ptr_len, line_info->start));
++        return PMLP_RC_MEMORY_UNUSED;
++    }
+     offset = 0;
+     netsnmp_hex_to_binary(&u_ptr, &u_ptr_len, &offset, 0, ptr, NULL);
+     if ((4 != offset) && (16 != offset)) {
+-        DEBUGMSGTL(("text:util:tvi", "bad offset %d for loc addr '%s'\n",
++        DEBUGMSGTL(("text:util:tvi", "bad offset %d for rmt addr '%s'\n",
+                     offset, line_info->start));
+         return PMLP_RC_MEMORY_UNUSED;
+     }
+Index: include/net-snmp/library/tools.h
+===================================================================
+RCS file: /cvsroot/net-snmp/net-snmp/include/net-snmp/library/tools.h,v
+retrieving revision 5.8.2.2
+diff -u -p -u -r5.8.2.2 tools.h
+--- include/net-snmp/library/tools.h	13 Jun 2006 12:50:36 -0000	5.8.2.2
++++ include/net-snmp/library/tools.h	1 Sep 2006 17:15:24 -0000
+@@ -198,7 +198,9 @@ extern          "C" {
+     int             marker_tticks(marker_t pm);
+     int             timeval_tticks(struct timeval *tv);
+     char            *netsnmp_getenv(const char *name);
+-    
++
++    int             netsnmp_addrstr_hton(char *ptr, size_t len);
++
+ #ifdef __cplusplus
+ }
+ #endif
+Index: snmplib/tools.c
+===================================================================
+RCS file: /cvsroot/net-snmp/net-snmp/snmplib/tools.c,v
+retrieving revision 5.10.2.2
+diff -u -p -u -r5.10.2.2 tools.c
+--- snmplib/tools.c	25 Jul 2006 08:04:35 -0000	5.10.2.2
++++ snmplib/tools.c	1 Sep 2006 17:15:26 -0000
+@@ -1042,3 +1042,35 @@ char *netsnmp_getenv(const char *name)
+ #endif
+ }
+ 
++/*
++ * swap the order of an inet addr string
++ */
++int
++netsnmp_addrstr_hton(char *ptr, size_t len)
++{
++#ifndef WORDS_BIGENDIAN
++    char tmp[8];
++    
++    if (8 == len) {
++        tmp[0] = ptr[6];
++        tmp[1] = ptr[7];
++        tmp[2] = ptr[4];
++        tmp[3] = ptr[5];
++        tmp[4] = ptr[2];
++        tmp[5] = ptr[3];
++        tmp[6] = ptr[0];
++        tmp[7] = ptr[1];
++        memcpy (ptr, &tmp, 8);
++    }
++    else if (32 == len) {
++        netsnmp_addrstr_hton(ptr   , 8);
++        netsnmp_addrstr_hton(ptr+8 , 8);
++        netsnmp_addrstr_hton(ptr+16, 8);
++        netsnmp_addrstr_hton(ptr+24, 8);
++    }
++    else
++        return -1;
++#endif
++
++    return 0;
++}
+
+
