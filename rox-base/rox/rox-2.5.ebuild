@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.5.ebuild,v 1.1 2006/08/15 23:14:16 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.5.ebuild,v 1.2 2006/10/23 14:27:45 lack Exp $
 
 inherit eutils
 
@@ -20,6 +20,13 @@ DEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.2
 	>=dev-libs/libxml2-2.4.23
 	>=x11-misc/shared-mime-info-0.14
+	>=dev-util/pkgconfig-0.20
+	svg? ( gnome-base/librsvg )"
+
+RDEPEND=">=x11-libs/gtk+-2.4
+	>=dev-libs/glib-2.2
+	>=dev-libs/libxml2-2.4.23
+	>=x11-misc/shared-mime-info-0.14
 	svg? ( gnome-base/librsvg )"
 
 IUSE="svg"
@@ -30,10 +37,19 @@ MIMECONFDIR="/etc/xdg/rox.sourceforge.net"
 src_compile() {
 
 	cd ROX-Filer
+
+	# Most rox self-compiles have a 'read' call to wait for the user to
+	# press return if the compile fails.
+	# Find and remove this:
+	sed -i.bak -e 's/\<read WAIT\>/#read/' AppRun
+
 	./AppRun --compile || die "make failed"
 	(cd src; make clean) > /dev/null
 	# don't need this directory anymore
 	rm -fr build
+
+	# Restore the original AppRun
+	mv AppRun.bak AppRun
 }
 
 # new streamlined install
