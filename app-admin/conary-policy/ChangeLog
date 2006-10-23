@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/conary-policy
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conary-policy/ChangeLog,v 1.1 2006/10/23 14:12:33 smithj Exp $
+
+*conary-policy-1.0.9 (23 Oct 2006)
+
+  23 Oct 2006; <smithj@gentoo.org> +conary-policy-1.0.9.ebuild:
+  initial version, needed for app-admin/conary
+
