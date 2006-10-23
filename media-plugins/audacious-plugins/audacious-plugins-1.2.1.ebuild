@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.2.1.ebuild,v 1.3 2006/10/20 19:52:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.2.1.ebuild,v 1.4 2006/10/23 14:55:11 blubb Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://audacious-media-player.org/release/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="aac alsa arts esd flac jack lirc mmx modplug mp3 musepack nls oss sid sndfile timidity vorbis wma pulseaudio"
+IUSE="aac alsa arts esd flac jack lirc modplug mp3 musepack nls oss sid sndfile timidity vorbis wma pulseaudio"
 
 RDEPEND="app-arch/unzip
 	dev-libs/libxml2
@@ -63,7 +63,6 @@ src_compile() {
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
-		$(use_enable mmx simd) \
 		$(use_enable vorbis) \
 		$(use_enable esd) \
 		$(use_enable mp3) \
