@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.19.ebuild,v 1.3 2006/10/23 18:54:55 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.19.ebuild,v 1.4 2006/10/23 19:16:34 peper Exp $
 
 inherit multilib
 
 DESCRIPTION="OpenSync synchronisation framework library"
 HOMEPAGE="http://www.opensync.org/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
