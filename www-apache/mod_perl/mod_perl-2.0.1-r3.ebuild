@@ -1,19 +1,20 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.2.ebuild,v 1.6 2006/10/23 19:45:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.1-r3.ebuild,v 1.1 2006/10/23 19:45:37 mcummings Exp $
 
 inherit apache-module perl-module eutils multilib
 DESCRIPTION="An embedded Perl interpreter for Apache2"
-SRC_URI="mirror://cpan/authors/id/P/PG/PGOLLUCCI/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/G/GO/GOZER/${P}.tar.gz"
 HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ia64 ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 SLOT="1"
 
 # see bug 30087 for why sudo is in here
 DEPEND=">=dev-perl/Apache-Test-1.27
+	dev-lang/perl
 	>=virtual/perl-CGI-3.08
 	>=dev-perl/Compress-Zlib-1.09
 	app-admin/sudo"
@@ -76,7 +77,7 @@ src_unpack() {
 	# getting through via SetEnv.  sneak it through here.
 
 	# rendhalver - this got redone for 2.0.1 and seems to fix the make test problems
-	epatch ${FILESDIR}/mod_perl-2.0.1-sneak-tmpdir.patch
+	epatch ${FILESDIR}/${P}-sneak-tmpdir.patch
 }
 
 src_compile() {
