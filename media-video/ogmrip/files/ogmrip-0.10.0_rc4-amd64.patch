@@ -1,0 +1,125 @@
+Index: libogmrip/ogmrip-backend.c
+===================================================================
+--- libogmrip/ogmrip-backend.c	(révision 843)
++++ libogmrip/ogmrip-backend.c	(copie de travail)
+@@ -406,8 +406,7 @@
+ gdouble
+ ogmrip_backend_dvdcpy_watch (OGMJobExec *exec, const gchar *buffer, OGMRipVideo *video)
+ {
+-  size_t bytes, total;
+-  guint percent;
++  guint bytes, total, percent;
+ 
+   if (sscanf (buffer, "%u/%u blocks written (%u%%)", &bytes, &total, &percent) == 3)
+     return percent / 100.;
+@@ -1378,8 +1377,12 @@
+   GPtrArray *argv;
+ 
+   const gchar *device;
+-  gint vid, sstep;
++  gint vid;
+ 
++#if MPLAYER_PRE >= 8
++  gint sstep;
++#endif
++
+   g_return_val_if_fail (OGMRIP_IS_VIDEO (video), NULL);
+ 
+   title = ogmrip_codec_get_input (OGMRIP_CODEC (video));
+Index: libogmrip/ogmrip-container.c
+===================================================================
+--- libogmrip/ogmrip-container.c	(révision 843)
++++ libogmrip/ogmrip-container.c	(copie de travail)
+@@ -563,12 +563,15 @@
+ ogmrip_container_get_audio_overhead (OGMRipContainer *container, OGMRipContainerChild *child)
+ {
+   glong length;
+-  gint samples_per_frame, bitrate = 0;
++  gint samples_per_frame, sample_rate;
++  guint numerator, denominator;
+ 
+   length = ogmrip_codec_get_length (child->codec, NULL);
++  sample_rate = ogmrip_audio_get_sample_rate (OGMRIP_AUDIO (child->codec));
+   samples_per_frame = ogmrip_audio_get_samples_per_frame (OGMRIP_AUDIO (child->codec));
++  ogmrip_codec_get_framerate (OGMRIP_CODEC (child->codec), &numerator, &denominator);
+ 
+-  return (gint64) length * bitrate * container->priv->overhead / (gdouble) samples_per_frame;
++  return (gint64) length * sample_rate * denominator * container->priv->overhead / (gdouble) (samples_per_frame * numerator);
+ }
+ 
+ static gint64
+Index: src/ogmrip-main.c
+===================================================================
+--- src/ogmrip-main.c	(révision 843)
++++ src/ogmrip-main.c	(copie de travail)
+@@ -690,8 +690,10 @@
+    * The mp4 container's implementation in mencoder does not support b frames
+    * This should be automated in libogmrip
+    */
++#ifdef HAVE_LAVF_SUPPORT
+   if (encode->container == OGMRIP_TYPE_MP4)
+     ogmrip_video_set_max_b_frames (OGMRIP_VIDEO (spawn), 0);
++#endif
+ 
+   if (encode->passes == 0)
+     result = ogmrip_main_extract_video_stream_pass (data, spawn, encode->title, 0, error);
+Index: ChangeLog
+===================================================================
+--- ChangeLog	(révision 843)
++++ ChangeLog	(copie de travail)
+@@ -1,3 +1,28 @@
++09 Oct 2006 Olivier Rolland <billl@users.sf.net>
++
++	* libogmrip/ogmrip-backend.c
++	* dvdcpy/dvdcpy.c
++
++	Fixed compilation on amd64
++
++	* libogmrip/ogmrip-backend.c
++
++	Fixed compilation with mplayer < 1.0pre8
++
++	* libogmrip/ogmrip-container.c
++
++	Fixed audio overhead
++
++	* src/ogmrip-main.c
++
++	Fixed compilation when mp4 is not available
++
++08 Oct 2006 Olivier Rolland <billl@users.sf.net>
++
++	* configure.in
++
++	Released OGMRip-0.10.0-rc4
++
+ 05 Oct 2006 Olivier Rolland <billl@users.sf.net>
+ 
+ 	* configure.in
+Index: dvdcpy/dvdcpy.c
+===================================================================
+--- dvdcpy/dvdcpy.c	(révision 843)
++++ dvdcpy/dvdcpy.c	(copie de travail)
+@@ -286,11 +286,11 @@
+     }
+ 
+     current_size += count;
+-    fprintf (stdout, "\r%d/%d blocks written (%d%%)", current_size, total_size, current_size * 100 / total_size);
++    fprintf (stdout, "\r%zd/%zd blocks written (%zd%%)", current_size, total_size, current_size * 100 / total_size);
+     fflush (stdout);
+   }
+ 
+-  fprintf (stdout, "\r%d/%d blocks written (%d%%)", current_size, total_size, current_size * 100 / total_size);
++  fprintf (stdout, "\r%zd/%zd blocks written (%zd%%)", current_size, total_size, current_size * 100 / total_size);
+   fflush (stdout);
+ 
+   return size;
+@@ -801,7 +801,7 @@
+ 
+   if (total_size > get_space_left (output))
+   {
+-    fprintf (stderr, "Error: Not enough space left on device (%d bytes needed)\n", total_size);
++    fprintf (stderr, "Error: Not enough space left on device (%zd bytes needed)\n", total_size);
+     ifoClose (vmg_file);
+     DVDClose (reader);
+     return EXIT_FAILURE;
