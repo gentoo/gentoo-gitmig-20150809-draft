@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r3.ebuild,v 1.2 2006/09/11 12:18:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.1-r3.ebuild,v 1.3 2006/10/23 19:09:52 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -65,15 +65,10 @@ src_compile() {
 		myconf="${myconf} --with-kdessconfigdir=/usr/share/applications/"
 	fi
 
-	# Hardenable SIMD extensions on amd64
-	if use amd64 ; then
-		myconf="${myconf} --enable-sse --enable-3dnow"
-	elif use x86 ; then
-		myconf="${myconf} $(use_enable sse) $(use_enable 3dnow)"
-	fi
-
 	econf \
 		$(use_enable openal sound) \
+		$(use_enable sse) \
+		$(use_enable 3dnow) \
 		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }

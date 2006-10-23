@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.50 2006/09/11 12:18:27 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.51 2006/10/23 19:09:52 blubb Exp $
+
+  23 Oct 2006; Simon Stelling <blubb@gentoo.org> rss-glx-0.8.1-r3.ebuild:
+  no longer hard-enable asm flags on amd64
 
   11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   rss-glx-0.8.1-r3.ebuild:
