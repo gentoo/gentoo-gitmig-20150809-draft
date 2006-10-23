@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/socket++
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.12 2006/08/28 20:26:26 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.13 2006/10/23 18:44:01 dev-zero Exp $
+
+  23 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Added autotools inheritance, replaced autogen with eautoreconf: bug #152492.
+  Cleaning out old versions.
 
   28 Aug 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   socket++-1.12.12-r1.ebuild:

@@ -1,6 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.5 2006/08/28 20:26:26 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.6 2006/10/23 18:44:01 dev-zero Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
+
+inherit autotools
 
 DESCRIPTION="C++ Socket Library"
 HOMEPAGE="http://www.linuxhacker.at/socketxx/"
@@ -11,16 +16,17 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips x86"
 IUSE="debug doc"
 
-DEPEND="sys-devel/automake
-	sys-devel/autoconf
-	sys-devel/libtool
+DEPEND="sys-devel/libtool
 	sys-apps/texinfo"
 RDEPEND=""
 
-src_compile() {
-	einfo "Running autogen"
-	WANT_AUTOMAKE=1.7 ./autogen || die "autogen failed"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	eautoreconf
+}
 
+src_compile() {
 	econf $(use_enable debug) || die "econf failed"
 	emake || die "emake failed"
 
