@@ -1,0 +1,10 @@
+# ChangeLog for app-pda/libopensync
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.1 2006/10/23 14:15:49 peper Exp $
+
+*libopensync-0.19 (23 Oct 2006)
+
+  23 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
+  +libopensync-0.19.ebuild:
+  New package.
+
