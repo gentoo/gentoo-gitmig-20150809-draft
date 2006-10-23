@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.7.ebuild,v 1.6 2006/10/10 14:06:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.7.ebuild,v 1.7 2006/10/23 21:50:16 blubb Exp $
 
-IUSE="alsa jack sse lash static"
+IUSE="alsa jack lash static"
 
 inherit flag-o-matic eutils
 
@@ -30,18 +30,6 @@ src_compile() {
 		myconf="${myconf} --enable-alsa `use_enable lash`"
 	else
 		myconf="${myconf} --disable-alsa --disable-lash"
-	fi
-
-	if use sse; then
-		myconf="--enable-SSE ${myconf}"
-		# If your CFLAGS include optimizations for sse, ie:
-		# -march=pentium4 -mfpmath=sse -msse2
-		# AND your USE flags include sse, ie: USE=sse,
-		# the sounds with fluidsynth will be distorted. 
-		if [ `is-flag "-march=pentium4"` ]; then
-			filter-flags "-msse2"
-			filter-flags "-mfpmath=sse"
-		fi
 	fi
 
 	econf ${myconf} || die "./configure failed"
