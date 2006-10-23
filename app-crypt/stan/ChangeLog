@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/stan
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/stan/ChangeLog,v 1.1 2006/10/23 06:07:24 beandog Exp $
+
+*stan-0.4.1 (23 Oct 2006)
+
+  23 Oct 2006; Steve Dibb <beandog@gentoo.org>
+  +files/stan-0.4.1-errno.patch, +metadata.xml, +stan-0.4.1.ebuild:
+  Moving from media-video to app-crypt, see bug 138006
+
