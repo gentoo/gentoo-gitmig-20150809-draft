@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.42 2006/10/21 14:32:21 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.43 2006/10/23 12:26:45 vivo Exp $
 
 # Author: Francesco Riosa <vivo@gentoo.org>
 # Maintainer: Luca Longinotti <chtekk@gentoo.org>
@@ -169,7 +169,7 @@ configure_common() {
 	myconf="${myconf} --with-extra-charsets=all"
 	myconf="${myconf} --with-mysqld-user=mysql"
 	myconf="${myconf} --with-server"
-	myconf="${myconf} --with-unix-socket-path='/var/run/mysqld/mysqld.sock'"
+	myconf="${myconf} --with-unix-socket-path=/var/run/mysqld/mysqld.sock"
 	myconf="${myconf} --without-libwrap"
 
 	if useq "static" ; then
