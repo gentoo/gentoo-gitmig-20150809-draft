@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.41 2006/06/27 17:40:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.42 2006/10/23 05:13:02 je_fro Exp $
+
+  23 Oct 2006; Jeff Gardner <je_fro@gentoo.org> ncbi-tools-20060507.ebuild:
+  Stable on sparc - bug #152292
 
   27 Jun 2006; Brent Baude <ranger@gentoo.org> ncbi-tools-20060507.ebuild:
   Keywording ncbi-tools-20060507 ~ppc64 for bug #138082
