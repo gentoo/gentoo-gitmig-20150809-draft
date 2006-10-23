@@ -1,0 +1,13 @@
+# assembler-section
+
+# Oct 23th 2006; blubb@gentoo.org
+# upstream forces sse2 for amd64; mmx flag does nothing
+app-crypt/johntheripper mmx
+
+# Oct 23th 2006; blubb@gentoo.org
+# x86 asm only:
+games-emulation/xmame mmx
+games-emulation/xmess mmx
+media-gfx/inkscape mmx
+media-libs/allegro mmx sse
+media-libs/gdk-pixbuf mmx
