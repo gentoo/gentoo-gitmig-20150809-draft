@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Want
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.21 2006/10/21 14:47:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Want/ChangeLog,v 1.22 2006/10/23 18:51:05 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> Want-0.12.ebuild:
+  Stable on hppa
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> Want-0.12.ebuild:
   ppc stable

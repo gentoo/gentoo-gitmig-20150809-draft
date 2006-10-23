@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.46 2006/10/21 14:49:01 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.47 2006/10/23 18:56:43 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  XML-Writer-0.601.ebuild:
+  Stable on hppa
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   XML-Writer-0.601.ebuild:
