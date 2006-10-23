@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/quake3-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.20 2006/10/05 12:08:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/ChangeLog,v 1.21 2006/10/23 18:56:54 wolf31o2 Exp $
+
+*quake3-bin-1.32c-r1 (23 Oct 2006)
+
+  23 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake3-bin-1.32c-r1.ebuild:
+  New revision of quake3-bin that creates symlinks in GAMES_PREFIX_OPT/quake3
+  for any mods in GAMES_DATADIR/quake3 to work with the games-mods eclass.
 
   05 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-bin-1.32c.ebuild:
