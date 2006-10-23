@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20061020.ebuild,v 1.1 2006/10/20 21:31:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20061020.ebuild,v 1.2 2006/10/23 06:09:06 aballier Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -22,6 +22,7 @@ RDEPEND="media-libs/libpng
 	media-libs/faac
 	media-libs/a52dec
 	media-video/ffmpeg
+	media-sound/lame
 	>=sci-libs/fftw-3.0.1
 	>=media-libs/x264-svn-20060302
 	ieee1394? ( media-libs/libiec61883 >=sys-libs/libraw1394-1.2.0 \
