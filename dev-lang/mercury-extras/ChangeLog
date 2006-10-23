@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.54 2006/10/23 04:12:53 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.55 2006/10/23 09:37:42 keri Exp $
+
+  23 Oct 2006; keri <keri@gentoo.org> mercury-extras-0.12.2-r2.ebuild,
+  mercury-extras-0.13.0.ebuild:
+  Parallelize mmake depend and mmake install targets. This will significantly
+  speed up compilation on multi-way boxes.
 
   23 Oct 2006; keri <keri@gentoo.org>
   +files/mercury-extras-0.12.2-curs.patch,
