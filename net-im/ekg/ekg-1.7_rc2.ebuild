@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7_rc2.ebuild,v 1.1 2006/10/23 18:59:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.7_rc2.ebuild,v 1.2 2006/10/23 19:14:53 spock Exp $
 
 inherit eutils autotools
 
@@ -27,6 +27,7 @@ RDEPEND="net-libs/libgadu
 	jpeg? ( media-libs/jpeg )"
 
 DEPEND=">=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.50
 	${RDEPEND}"
 
 src_unpack() {

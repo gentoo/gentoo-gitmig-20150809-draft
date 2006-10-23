@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6.ebuild,v 1.3 2006/07/07 20:34:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6.ebuild,v 1.4 2006/10/23 19:14:53 spock Exp $
 
 inherit eutils
 
@@ -16,13 +16,17 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 
 S="${WORKDIR}/${P/_/}"
 
-DEPEND="net-libs/libgadu
+RDEPEND="net-libs/libgadu
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	ncurses? ( sys-libs/ncurses )
 	readline? ( sys-libs/readline )
 	zlib? ( sys-libs/zlib )
 	python? ( dev-lang/python )
 	spell? ( >=app-text/aspell-0.50.3 )"
+
+DEPEND=">=sys-devel/automake-1.7
+	>=sys-devel/autoconf-2.50
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
