@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squirm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.3 2006/09/20 13:18:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.4 2006/10/23 18:18:07 mrness Exp $
+
+  23 Oct 2006; Alin Nastac <mrness@gentoo.org> squirm-1.23.ebuild:
+  Make net-proxy/squid compile-time dependency (#152467).
 
   20 Sep 2006; Alin Nastac <mrness@gentoo.org> squirm-1.23.ebuild:
   Update info message displayed in postinst.
