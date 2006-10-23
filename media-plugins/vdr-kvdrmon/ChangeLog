@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/vdr-kvdrmon
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-kvdrmon/ChangeLog,v 1.1 2006/10/23 18:56:19 hd_brummy Exp $
+
+*vdr-kvdrmon-0.6 (23 Oct 2006)
+
+  23 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/vdr-kvdrmon-0.6-remove-menu-entry.diff, +metadata.xml,
+  +vdr-kvdrmon-0.6.ebuild:
+  initial ebuild; moved from vdr-testing/gentoo.de overlay
+
