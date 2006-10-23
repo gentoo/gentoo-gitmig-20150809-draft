@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.18 2006/10/11 22:43:20 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.19 2006/10/23 14:47:18 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (11 Oct 2006)
 # Requires old GDM, which will not work with SELinux.  All
@@ -10,6 +10,7 @@
 =sys-apps/coreutils-6.1*
 =sys-apps/coreutils-6.2*
 =sys-apps/coreutils-6.3*
+=sys-apps/coreutils-6.4*
 
 # Chris PeBenito <pebenito@gentoo.org> (12 Jan 2006)
 # SELinux code won't compile
