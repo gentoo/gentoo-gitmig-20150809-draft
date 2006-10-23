@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.7 2005/12/10 16:58:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.8 2006/10/23 19:37:22 spock Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/bootsplash-gcc4-fix.patch
+	epatch ${FILESDIR}/bootsplash-nostrip.patch
 }
 
 src_compile() {

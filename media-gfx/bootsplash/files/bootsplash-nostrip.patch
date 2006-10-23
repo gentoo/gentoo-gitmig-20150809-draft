@@ -1,0 +1,35 @@
+diff -Naurp boot-orig/utils/fbmngplay/Makefile boot/utils/fbmngplay/Makefile
+--- boot-orig/utils/fbmngplay/Makefile	2004-03-06 10:41:30.000000000 +0100
++++ boot/utils/fbmngplay/Makefile	2006-10-23 21:32:15.000000000 +0200
+@@ -11,7 +11,7 @@
+ ARCH     = $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/)
+ SHELL    = /bin/sh
+ CC       = gcc
+-STRIP	 = strip
++STRIP	 = true
+ 
+ # Triggering lib64 path from spec file.
+ ifeq ($(PREFIX)x,x)
+diff -Naurp boot-orig/utils/fbtruetype/Makefile boot/utils/fbtruetype/Makefile
+--- boot-orig/utils/fbtruetype/Makefile	2003-04-21 03:07:56.000000000 +0200
++++ boot/utils/fbtruetype/Makefile	2006-10-23 21:32:27.000000000 +0200
+@@ -11,7 +11,7 @@
+ ARCH     = $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/)
+ SHELL    = /bin/sh
+ CC       = gcc
+-STRIP	 = strip
++STRIP	 = true
+ 
+ # Triggering lib64 path from spec file.
+ PREFIX   ?= /usr
+diff -Naurp boot-orig/utils/splashutils/Makefile boot/utils/splashutils/Makefile
+--- boot-orig/utils/splashutils/Makefile	2004-08-05 13:25:46.000000000 +0200
++++ boot/utils/splashutils/Makefile	2006-10-23 21:32:01.000000000 +0200
+@@ -5,7 +5,6 @@ CFLAGS = -Os -Wall
+ # CFLAGS := $(CFLAGS) -DFBMNGDEBUG
+ 
+ all: $(PROGRAMS)
+-	strip $(PROGRAMS)
+ 
+ .SUFFIXES:
+ .SUFFIXES: .c .o
