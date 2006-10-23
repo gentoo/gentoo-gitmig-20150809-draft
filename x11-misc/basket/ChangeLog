@@ -1,20 +1,27 @@
 # ChangeLog for x11-misc/basket
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.20 2006/10/18 18:47:14 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.21 2006/10/23 21:18:39 troll Exp $
+
+*basket-0.6.0 (23 Oct 2006)
+
+  23 Oct 2006; PrzemysÅaw MaciÄg <troll@gentoo.org>
+  -basket-0.6.0_beta2-r2.ebuild, -basket-0.6.0_rc1.ebuild,
+  +basket-0.6.0.ebuild:
+  Version bump (0.6.0). Removing rc version
 
 *basket-0.6.0_rc1 (18 Oct 2006)
 
-  18 Oct 2006; Przemysław Maciąg <troll@gentoo.org>
+  18 Oct 2006; PrzemysÅaw MaciÄg <troll@gentoo.org>
   +basket-0.6.0_rc1.ebuild:
   Bumping to 0.6.0 rc version - probable filename collision, fixed with
   temporary mirror. Deleting last beta.
 
-  30 Sep 2006; Przemysław Maciąg <troll@gentoo.org> basket-0.5.0.ebuild:
+  30 Sep 2006; PrzemysÅaw MaciÄg <troll@gentoo.org> basket-0.5.0.ebuild:
   Fixed digest problem for 0.5.0 (see #134602)
 
 *basket-0.6.0_beta2-r2 (28 Sep 2006)
 
-  28 Sep 2006; Przemysław Maciąg <troll@gentoo.org>
+  28 Sep 2006; PrzemysÅaw MaciÄg <troll@gentoo.org>
   -basket-0.6.0_beta2.ebuild, -basket-0.6.0_beta2-r1.ebuild, 
   -files/digest-basket-0.6.0_beta2, -files/digest-basket-0.6.0_beta2-r1, 
   +basket-0.6.0_beta2-r2.ebuild: 
