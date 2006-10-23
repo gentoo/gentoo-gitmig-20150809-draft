@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Filter
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Filter/ChangeLog,v 1.10 2006/10/21 23:34:37 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Filter/ChangeLog,v 1.11 2006/10/23 19:07:27 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> Filter-1.32.ebuild:
+  Stable on hppa
 
   21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> Filter-1.32.ebuild:
   Stable on Alpha + ia64.
