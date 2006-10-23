@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.16 2006/10/15 09:24:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22.ebuild,v 1.17 2006/10/23 10:00:31 flameeyes Exp $
 
-inherit eutils gnuconfig flag-o-matic java-pkg multilib
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.9"
+
+inherit eutils gnuconfig flag-o-matic java-pkg multilib autotools
 
 ntlm_patch=${P}-ntlm_impl-spnego.patch.gz
 SASLAUTHD_CONF_VER=2.1.21
@@ -35,10 +38,7 @@ RDEPEND="berkdb? ( >=sys-libs/db-3.2 )
 	java? ( =virtual/jdk-1.4* )
 	ntlm_unsupported_patch? ( >=net-fs/samba-3.0.9 )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	>=sys-devel/autoconf-2.58
-	sys-devel/automake
-	sys-devel/libtool"
+	>=sys-apps/sed-4"
 
 pkg_setup() {
 
@@ -97,21 +97,9 @@ src_unpack() {
 	sed -i 's:^sasldir = .*$:sasldir = $(plugindir):' "${S}"/plugins/Makefile.{am,in}
 
 	# Recreate configure.
-	export WANT_AUTOCONF="2.5"
-	rm -rf configure config.h.in autom4te.cache
-	ebegin "Recreating configure"
-	aclocal -I "${S}/cmulocal" -I "${S}/config" && autoheader && autoconf || \
-	 	die "recreate configure failed"
-	eend $?
-
-	# Recreate configure in saslauthd.
-	cd "${S}/saslauthd" || die "cd ${S}/saslauthd failed"
-	rm -rf configure config.h.in autom4te.cache
-	ebegin "Recreating configure in saslauthd"
-	aclocal -I "${S}/cmulocal" -I "${S}/config" && autoheader && autoconf || \
-	 	die "recreate configure failed"
-	eend $?
-
+	cd "${S}"
+	rm "${S}/config/libtool.m4"
+	AT_M4DIR="${S}/cmulocal ${S}/config" eautoreconf
 }
 
 src_compile() {
