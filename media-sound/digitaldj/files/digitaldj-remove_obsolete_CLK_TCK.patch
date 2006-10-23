@@ -1,0 +1,25 @@
+--- digitaldj-0.7.3.orig/src/ddj.c	2006-10-23 09:03:37.000000000 +0000
++++ digitaldj-0.7.3/src/ddj.c	2006-10-23 09:04:04.000000000 +0000
+@@ -948,11 +948,11 @@
+   clock_t curr_time;
+   struct tms t;
+ 
+-  if(!clock_ticking) return elapsed_time/CLK_TCK;
++  if(!clock_ticking) return elapsed_time/CLOCKS_PER_SEC;
+   else {
+     curr_time=times(&t);
+ 
+-    return (elapsed_time+(curr_time-init_time))/CLK_TCK;
++    return (elapsed_time+(curr_time-init_time))/CLOCKS_PER_SEC;
+   }
+ }
+ 
+@@ -2327,7 +2327,7 @@
+     end_time=times(&t);
+ 
+     bpm=rint((gfloat)(num_beats-1)/
+-      (((gfloat)(end_time-start_time))/(gfloat)(CLK_TCK*60)));
++      (((gfloat)(end_time-start_time))/(gfloat)(CLOCKS_PER_SEC*60)));
+ 
+     gtk_spin_button_set_value(GTK_SPIN_BUTTON(beat_spin),bpm);
+   }

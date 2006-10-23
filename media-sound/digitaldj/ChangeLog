@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/digitaldj
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/ChangeLog,v 1.13 2006/10/04 19:53:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/ChangeLog,v 1.14 2006/10/23 11:11:01 vivo Exp $
+
+  23 Oct 2006; <vivo@gentoo.org>
+  +files/digitaldj-remove_obsolete_CLK_TCK.patch, digitaldj-0.7.3-r1.ebuild,
+  digitaldj-0.7.5.ebuild:
+  replaced CLK_TCK with CLOCKS_PER_SEC in sources
 
   04 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   digitaldj-0.7.3-r1.ebuild, digitaldj-0.7.5.ebuild:
