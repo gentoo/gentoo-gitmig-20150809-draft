@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.16 2006/10/22 20:42:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.17 2006/10/23 19:01:28 dev-zero Exp $
+
+  23 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
+  Fixed possible automake/autoconf dependency bug. Corrected libiodbc dependency.
 
   22 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Added gcc-4* patch, thanks to Mike Auty, fixes bug #145244. Added 'iodbc'

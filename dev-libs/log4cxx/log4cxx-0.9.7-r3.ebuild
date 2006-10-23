@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r3.ebuild,v 1.1 2006/10/22 20:42:42 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.9.7-r3.ebuild,v 1.2 2006/10/23 19:01:28 dev-zero Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOCONF="2.5"
+WANT_AUTOMAKE="latest"
+
+inherit autotools eutils flag-o-matic
 
 KEYWORDS="~amd64 ~x86"
 
@@ -16,7 +19,7 @@ IUSE="doc iodbc unicode odbc smtp threads"
 RDEPEND="dev-libs/boost
 		dev-libs/libxml2
 		odbc? (
-			iodbc? ( dev-db/libiodbc )
+			iodbc? ( >=dev-db/libiodbc-3.52.4 )
 			!iodbc? ( dev-db/unixODBC ) )
 		smtp? ( dev-libs/libsmtp )"
 DEPEND="${RDEPEND}
@@ -42,11 +45,11 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+
+	eautoreconf
 }
 
 src_compile() {
-	"${S}/autogen.sh" || die "autogen.sh failed"
-
 	# has cppunit support, but make check builds nothing...
 	local myconf="--disable-cppunit"
 	use doc && myconf="${myconf} --enable-doxygen --enable-dot
