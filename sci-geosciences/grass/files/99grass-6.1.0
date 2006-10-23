@@ -1,0 +1,2 @@
+GRASS_LD_LIBRARY_PATH="/usr/grass-6.1.0/lib"
+LDPATH="/usr/grass-6.1.0/lib"

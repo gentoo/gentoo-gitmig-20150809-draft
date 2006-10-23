@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.20 2006/09/06 05:24:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.21 2006/10/23 16:18:10 nerdboy Exp $
+
+*grass-6.1.0 (23 Oct 2006)
+
+  23 Oct 2006; Steve Arnold <nerdboy@gentoo.org> +files/99grass-6.1.0,
+  +grass-6.1.0.ebuild:
+  version bump for updated Grass (still has a minor math lib issue if built
+  without Blas/Lapack support).
 
   06 Sep 2006; Steve Arnold <nerdboy@gentoo.org> -grass-5.0.2.ebuild:
   removing old version due to dep cleanup issues (requested by dberkholz)
