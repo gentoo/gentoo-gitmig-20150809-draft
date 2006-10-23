@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6109 2006/10/23 10:08:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6110 2006/10/23 15:32:07 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -139,6 +139,7 @@ media-plugins/xmms-stereo
 media-plugins/xmms-tonegen
 media-plugins/xmms-voice
 media-plugins/xmms-wav
+app-misc/livetools
 # This is an extra one
 media-sound/noxmms
 
