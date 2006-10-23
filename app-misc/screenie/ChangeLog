@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.4 2006/04/19 16:29:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.5 2006/10/23 03:51:37 chriswhite Exp $
+
+  23 Oct 2006; Chris White <chriswhite@gentoo.org> ChangeLog:
+  Signed manifest test for new gnupg
 
 *screenie-1.30.0 (19 Apr 2006)
 
