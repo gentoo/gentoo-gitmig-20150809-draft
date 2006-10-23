@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.47 2006/04/14 18:18:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.48 2006/10/23 11:38:00 blubb Exp $
+
+  23 Oct 2006; Simon Stelling <blubb@gentoo.org> imlib2-1.2.2.001.ebuild:
+  fix mmx logic for amd64
 
   14 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   imlib2-1.2.1.009.ebuild:

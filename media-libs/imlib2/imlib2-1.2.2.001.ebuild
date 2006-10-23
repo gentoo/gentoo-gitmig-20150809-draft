@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.2.001.ebuild,v 1.2 2006/07/16 05:17:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.2.001.ebuild,v 1.3 2006/10/23 11:38:00 blubb Exp $
 
 inherit enlightenment toolchain-funcs libtool
 
@@ -22,11 +22,11 @@ DEPEND="=media-libs/freetype-2*
 
 src_compile() {
 	local mymmx=""
-#	if [[ $(tc-arch) == "amd64" ]] ; then
-#		mymmx="--enable-amd64 --disable-mmx"
-#	else
+	if [[ $(tc-arch) == "amd64" ]] ; then
+		mymmx="$(use_enable mmx amd64) --disable-mmx"
+	else
 		mymmx="--disable-amd64 $(use_enable mmx)"
-#	fi
+	fi
 
 	elibtoolize
 
