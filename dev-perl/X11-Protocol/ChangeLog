@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.29 2006/10/20 20:14:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.30 2006/10/23 21:00:57 taviso Exp $
+
+*X11-Protocol-0.56 (23 Oct 2006)
+
+  23 Oct 2006; Tavis Ormandy <taviso@gentoo.org> +X11-Protocol-0.56.ebuild:
+  version bump, required by FvwmTabs (x11-wm/fvwm)
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   X11-Protocol-0.55.ebuild:
