@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.5 2006/10/23 09:48:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.1.2-r1.ebuild,v 1.6 2006/10/23 20:26:54 alonbl Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -33,12 +33,11 @@ src_unpack() {
 		configure.ac || die "sed failed"
 
 	# upstream patches from CVS
-	epatch "${FILESDIR}"/${P}-python-Makefile-am.patch
-	epatch "${FILESDIR}"/${P}-python-debug-py-c.patch
-	epatch "${FILESDIR}"/${P}-configure-ac.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch
-	epatch "${FILESDIR}"/${P}-asm.patch
-	epatch "${FILESDIR}"/${P}-threads.patch
+	epatch "${FILESDIR}/${P}-python-Makefile-am.patch"
+	epatch "${FILESDIR}/${P}-python-debug-py-c.patch"
+	epatch "${FILESDIR}/${P}-build.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
+	epatch "${FILESDIR}/${P}-threads.patch"
 	eautoreconf
 }
 
