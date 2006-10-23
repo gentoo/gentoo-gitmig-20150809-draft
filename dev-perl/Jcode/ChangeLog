@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.39 2006/10/21 14:19:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.40 2006/10/23 19:42:07 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> Jcode-2.06.ebuild:
+  Stable on hppa
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> Jcode-2.06.ebuild:
   ppc stable
