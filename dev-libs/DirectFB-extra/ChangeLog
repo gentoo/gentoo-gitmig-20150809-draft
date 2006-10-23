@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/DirectFB-extra
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.14 2006/10/10 18:53:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB-extra/ChangeLog,v 1.15 2006/10/23 11:13:24 blubb Exp $
+
+  23 Oct 2006; Simon Stelling <blubb@gentoo.org>
+  DirectFB-extra-0.9.25.ebuild:
+  stable on amd64
 
   10 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   DirectFB-extra-0.9.25.ebuild:
