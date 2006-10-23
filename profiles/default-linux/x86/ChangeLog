@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.32 2006/10/22 19:30:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.33 2006/10/23 18:43:18 blubb Exp $
+
+  23 Oct 2006; Simon Stelling <blubb@gentoo.org> package.use.mask:
+  mask sse2 flag for x11-terms/eterms as it is amd64-only asm
 
   22 Oct 2006; Petteri Räty <betelgeuse@gentoo.org> +package.use.mask:
   Added package.use.mask to handle jdk/jre nsplugin use flag that is not

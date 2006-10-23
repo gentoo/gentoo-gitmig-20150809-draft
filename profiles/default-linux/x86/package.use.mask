@@ -4,3 +4,4 @@ dev-java/sun-jdk -nsplugin
 dev-java/sun-jre-bin -nsplugin
 dev-java/ibm-jdk-bin -nsplugin 
 dev-java/ibm-jre-bin -nsplugin
+x11-terms/eterm sse2
