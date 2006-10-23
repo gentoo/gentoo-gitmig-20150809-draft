@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.19 2006/10/20 19:56:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.20 2006/10/23 18:59:06 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> perl-CGI-3.23.ebuild:
+  Stable on hppa
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -perl-CGI-3.07.ebuild, -perl-CGI-3.09.ebuild, perl-CGI-3.19.ebuild,
