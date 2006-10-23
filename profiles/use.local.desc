@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2270 2006/10/23 16:30:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2271 2006/10/23 18:16:24 wolf31o2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -543,6 +543,11 @@ games-strategy/wesnoth:editor - Enable compilation editor
 games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
+games-strategy/x2:bonusscripts - Add bonus scripts
+games-strategy/x2:dynamic - Use dynamic binaries instead of static
+games-strategy/x2:german - Enable German as default language
+games-strategy/x2:langpacks - Install additional language packs
+games-strategy/x2:modkit - Install the modkit
 games-util/glbsp:fltk - Install the FLTK GUI
 gnome-base/gnome-session:branding - Enable a custom gentoo branded splashscreen
 gnome-base/gnome-vfs:avahi - Support for avahi mdns daemon.
