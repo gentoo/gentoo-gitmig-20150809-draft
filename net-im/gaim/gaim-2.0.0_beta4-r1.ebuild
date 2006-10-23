@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta4-r1.ebuild,v 1.1 2006/10/23 01:24:14 gothgirl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-2.0.0_beta4-r1.ebuild,v 1.2 2006/10/23 04:25:37 gothgirl Exp $
 
 inherit flag-o-matic eutils toolchain-funcs debug multilib mono autotools perl-app gnome2
 
@@ -218,7 +218,7 @@ src_compile() {
 
 	# This is a tempory fix until Makefile is fixed!!
 	if use mono; then
-		gnome2_src_compile -j1 || die "Make failed"
+	MAKEOPTS="-j1"	gnome2_src_compile || die "Make failed"
 	else
 		gnome2_src_compile || die "Make failed"
 	fi
