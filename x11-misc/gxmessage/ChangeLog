@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.20 2006/10/20 12:15:39 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.21 2006/10/23 06:58:42 omp Exp $
+
+  23 Oct 2006; David Shakaryan <omp@gentoo.org> gxmessage-2.6.1.ebuild:
+  RDEPEND should not include dev-util/pkgconfig.
 
   20 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   -gxmessage-2.4.4.ebuild:
