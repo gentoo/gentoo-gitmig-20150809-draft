@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.38 2006/10/14 19:22:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.39 2006/10/23 18:38:32 blubb Exp $
+
+  23 Oct 2006; Simon Stelling <blubb@gentoo.org> eterm-0.9.4.ebuild:
+  make usage of sse2 optimizations optional on amd64
 
   14 Oct 2006; Mike Frysinger <vapier@gentoo.org> eterm-0.9.3-r4.ebuild,
   eterm-0.9.4.ebuild:
