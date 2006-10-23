@@ -1,6 +1,10 @@
 # ChangeLog for net-www/nspluginwrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.3 2006/10/22 17:15:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nspluginwrapper/ChangeLog,v 1.4 2006/10/23 17:47:08 chutzpah Exp $
+
+  23 Oct 2006; Patrick McLean <chutzpah@gentoo.org> ChangeLog:
+  Remove flash9 soundlibs einfo since net-www/netscape-flash-9* depends on it
+  now.
 
   22 Oct 2006; Patrick McLean <chutzpah@gentoo.org>
   nspluginwrapper-0.9.90.3.ebuild:
