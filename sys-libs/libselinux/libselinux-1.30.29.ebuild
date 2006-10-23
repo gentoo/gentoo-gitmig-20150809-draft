@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.30.29.ebuild,v 1.2 2006/10/09 22:58:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.30.29.ebuild,v 1.3 2006/10/23 23:54:12 pebenito Exp $
 
 IUSE=""
 
@@ -17,7 +17,11 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="alpha amd64 mips ppc sparc x86"
 
-DEPEND="=sys-libs/libsepol-${SEPOL_VER}*"
+# Need TLS.  Glibc 2.4 is completely broken on alpha, but
+# does have TLS in glibc 2.3.6.
+DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
+	alpha? ( >=sys-libs/glibc-2.3.6 )
+	!alpha? ( >=sys-libs/glibc-2.4 )"
 
 src_unpack() {
 	unpack ${A}
