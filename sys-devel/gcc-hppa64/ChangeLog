@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-hppa64
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.13 2006/08/14 17:03:34 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/ChangeLog,v 1.14 2006/10/23 15:41:46 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gcc-hppa64-3.3.2.ebuild, gcc-hppa64-3.3.2-r1.ebuild,
+  gcc-hppa64-3.4.5.ebuild:
+  Add block against kgcc64
 
   14 Aug 2006; Christian Heim <phreak@gentoo.org> gcc-hppa64-3.3.2.ebuild,
   gcc-hppa64-3.3.2-r1.ebuild, gcc-hppa64-3.4.5.ebuild:

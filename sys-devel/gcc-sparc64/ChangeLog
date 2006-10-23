@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc-sparc64
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.39 2006/10/05 22:07:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/ChangeLog,v 1.40 2006/10/23 15:39:57 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gcc-sparc64-3.4.6.ebuild, gcc-sparc64-4.0.3.ebuild,
+  gcc-sparc64-4.1.1.ebuild:
+  Add block against kgcc64
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   -files/gcc-3.3.5-gentoo-branding.patch,

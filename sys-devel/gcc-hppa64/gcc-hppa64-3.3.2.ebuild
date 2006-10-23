@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.3.2.ebuild,v 1.9 2006/08/14 17:03:34 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-hppa64/gcc-hppa64-3.3.2.ebuild,v 1.10 2006/10/23 15:41:46 gustavoz Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ KEYWORDS="-* hppa"
 IUSE="build"
 
 DEPEND="virtual/libc
+	!sys-devel/kgcc64
 	>=sys-devel/binutils-hppa64-2.14.90.0.7
 	>=sys-devel/binutils-2.14.90.0.7
 	|| ( >=sys-devel/gcc-config-1.3.1 app-admin/eselect-compiler )"
