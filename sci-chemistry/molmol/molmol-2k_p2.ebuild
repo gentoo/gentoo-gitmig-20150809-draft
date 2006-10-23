@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.7 2006/07/09 07:12:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.8 2006/10/23 04:29:39 je_fro Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 DEPEND="virtual/motif
 	|| ( x11-libs/libXpm virtual/x11 )
-	virtual/opengl
+	media-libs/mesa
 	media-libs/jpeg
 	media-libs/tiff
 	media-libs/libpng
@@ -30,12 +30,10 @@ S=${WORKDIR}
 MMDIR="/usr/$(get_libdir)/molmol"
 
 src_unpack() {
-	if best_version virtual/opengl | grep mesa; then
-		if ! built_with_use media-libs/mesa motif; then
-			msg="Build media-libs/mesa with USE=motif"
-			eerror "${msg}"
-			die "${msg}"
-		fi
+	if ! built_with_use media-libs/mesa motif; then
+		msg="Build media-libs/mesa with USE=motif"
+		eerror "${msg}"
+		die "${msg}"
 	fi
 
 	unpack ${A}
