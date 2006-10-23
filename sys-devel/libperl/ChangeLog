@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.120 2006/10/17 08:16:42 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.121 2006/10/23 19:34:34 mcummings Exp $
+
+  23 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  -libperl-5.8.7.ebuild:
+  Removing old libperl
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org> libperl-5.8.8-r1.ebuild:
   Added ~sparc-fbsd keyword.
