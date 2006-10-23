@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/avrdude
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.25 2006/08/10 18:49:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.26 2006/10/23 14:35:33 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> avrdude-5.1.ebuild:
+  DEP on virtual/tetex rather than app-text/tetex, thanks to David Klempner in
+  #152413
 
   10 Aug 2006; Gustavo Zacarias <gustavoz@gentoo.org> metadata.xml:
   metadata s/brix/gustavoz/
