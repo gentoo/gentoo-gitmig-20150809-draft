@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.4 2006/02/11 17:09:33 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.5 2006/10/23 21:25:24 blubb Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.terminatorx.org/dist/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~sparc"
-IUSE="3dnow alsa mad vorbis sox"
+IUSE="alsa mad vorbis sox"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	mad? ( media-sound/madplay )
@@ -46,7 +46,6 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_enable 3dnow) \
 		$(use_enable alsa) \
 		$(use_enable mad) \
 		$(use_enable vorbis) \
