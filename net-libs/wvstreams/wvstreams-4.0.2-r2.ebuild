@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2-r2.ebuild,v 1.8 2006/08/28 05:33:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2-r2.ebuild,v 1.9 2006/10/23 07:46:37 mrness Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.csclub.uwaterloo.ca/~ja2morri/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
-IUSE="gtk qt3 vorbis speex fam qdbm pam slp doc fftw tcltk debug"
+IUSE="gtk qt3 vorbis speex fam qdbm pam slp doc fftw tcl debug"
 
 RDEPEND="virtual/libc
 	>=sys-libs/db-3
@@ -28,7 +28,7 @@ RDEPEND="virtual/libc
 	slp? ( >=net-libs/openslp-1.0.9a )
 	doc? ( app-doc/doxygen )
 	fftw? ( sci-libs/fftw )
-	tcltk? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
+	tcl? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -42,12 +42,12 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-wireless-user.patch
 	epatch ${FILESDIR}/${P}-speex-const.patch
 
-	if useq tcltk; then
+	if useq tcl; then
 		epatch ${FILESDIR}/${P}-tcl_8_4.patch
 	fi
 
 	epatch ${FILESDIR}/${P}-external-xplc.patch
-	local XPLC_VER=`best_version dev-libs/xplc`
+	local XPLC_VER=$(best_version dev-libs/xplc)
 	XPLC_VER=${XPLC_VER#*/*-} #reduce it to ${PV}-${PR}
 	XPLC_VER=${XPLC_VER%%[_-]*} # main version without beta/pre/patch/revision
 	sed -i -e "s:^xplc_version=.*:xplc_version='${XPLC_VER}':" "${S}/configure.ac" \
@@ -67,17 +67,17 @@ src_compile() {
 		myconf="--without-qt"
 	fi
 	econf ${myconf} \
-		`use_with gtk` \
-		`use_with vorbis ogg` \
-		`use_with vorbis` \
-		`use_with speex` \
-		`use_with fam` \
-		`use_with qdbm` \
-		`use_with pam` \
-		`use_with fftw` \
-		`use_with slp openslp` \
-		`use_with tcltk tcl` \
-		`use_enable debug` \
+		$(use_with gtk) \
+		$(use_with vorbis ogg) \
+		$(use_with vorbis) \
+		$(use_with speex) \
+		$(use_with fam) \
+		$(use_with qdbm) \
+		$(use_with pam) \
+		$(use_with fftw) \
+		$(use_with slp openslp) \
+		$(use_with tcl) \
+		$(use_enable debug) \
 		--enable-verbose \
 		--with-bdb \
 		--with-zlib \

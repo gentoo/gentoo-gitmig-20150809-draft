@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2-r1.ebuild,v 1.3 2006/08/28 05:33:52 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.2.2-r1.ebuild,v 1.4 2006/10/23 07:46:37 mrness Exp $
 
 inherit eutils fixheadtails
 
@@ -11,7 +11,7 @@ SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="gtk qt3 qdbm pam slp doc tcltk debug"
+IUSE="gtk qt3 qdbm pam slp doc tcl debug"
 
 RDEPEND=">=sys-libs/db-3
 	>=sys-libs/zlib-1.1.4
@@ -22,7 +22,7 @@ RDEPEND=">=sys-libs/db-3
 	pam? ( >=sys-libs/pam-0.75 )
 	slp? ( >=net-libs/openslp-1.0.9a )
 	doc? ( app-doc/doxygen )
-	tcltk? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
+	tcl? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -36,12 +36,12 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-wireless-user.patch"
 	epatch "${FILESDIR}/${P}-uniconfd-ini.patch"
 
-	if use tcltk; then
+	if use tcl; then
 		epatch "${FILESDIR}/${P}-tcl_8_4.patch"
 	fi
 
 	epatch "${FILESDIR}/${P}-external-xplc.patch"
-	local XPLC_VER=`best_version dev-libs/xplc`
+	local XPLC_VER=$(best_version dev-libs/xplc)
 	XPLC_VER=${XPLC_VER#*/*-} #reduce it to ${PV}-${PR}
 	XPLC_VER=${XPLC_VER%%[_-]*} # main version without beta/pre/patch/revision
 	sed -i -e "s:^xplc_version=.*:xplc_version='${XPLC_VER}':" "${S}/configure.ac" \
@@ -67,11 +67,11 @@ src_compile() {
 		myconf="--without-qt"
 	fi
 	econf ${myconf} \
-		`use_with qdbm` \
-		`use_with pam` \
-		`use_with slp openslp` \
-		`use_with tcltk tcl` \
-		`use_enable debug` \
+		$(use_with qdbm) \
+		$(use_with pam) \
+		$(use_with slp openslp) \
+		$(use_with tcl) \
+		$(use_enable debug) \
 		--with-xplc \
 		--enable-verbose \
 		--with-bdb \
