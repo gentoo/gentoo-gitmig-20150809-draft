@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Time-Duration
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/ChangeLog,v 1.20 2006/10/21 14:46:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/ChangeLog,v 1.21 2006/10/23 18:03:51 gustavoz Exp $
+
+  23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Time-Duration-1.04.ebuild:
+  Stable on hppa
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   Time-Duration-1.04.ebuild:
