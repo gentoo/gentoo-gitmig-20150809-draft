@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta2.ebuild,v 1.3 2006/10/17 13:16:58 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-6.2_beta2.ebuild,v 1.4 2006/10/23 22:05:40 the_paya Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -40,6 +40,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-6.1-gcc41.patch"
 	epatch "${FILESDIR}/${PN}-6.1-intrcnt.patch"
 	epatch "${FILESDIR}/${PN}-6.2-sparc64.patch"
+	epatch "${FILESDIR}/${PN}-6.1-ntfs.patch"
 
 	# This is to be able to use sandbox safely, see bug #146284
 	epatch "${FILESDIR}/${PN}-6.1-devfs-deadlock.patch"
