@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.10.ebuild,v 1.2 2006/10/21 04:06:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.10.ebuild,v 1.3 2006/10/23 22:26:54 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nonfsv4 tcpd kerberos"
 
 # kth-krb doesn't provide the right include
@@ -36,6 +36,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${DISTDIR}"/nfs-utils-${PV}-CITI_NFS4_ALL-1.dif
 	epatch "${FILESDIR}"/${PN}-1.0.7-man-pages.patch #107991
+	epatch "${FILESDIR}"/${P}-uts-release.patch
 }
 
 src_compile() {

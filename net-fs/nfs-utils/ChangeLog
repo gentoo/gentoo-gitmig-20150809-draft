@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.77 2006/10/21 04:06:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.78 2006/10/23 22:26:54 vapier Exp $
+
+  23 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/nfs-utils-1.0.10-uts-release.patch, nfs-utils-1.0.10.ebuild:
+  Fix building with linux-headers-2.6.18+.
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org> nfs-utils-1.0.10.ebuild:
   Mark 1.0.10 stable on alpha/ia64

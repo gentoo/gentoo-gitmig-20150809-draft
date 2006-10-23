@@ -1,0 +1,11 @@
+--- tools/getkversion/getkversion.c
++++ tools/getkversion/getkversion.c
+@@ -14,6 +14,8 @@
+ int
+ main(void)	/* This is for Dan Popp ;) */
+ {
++#ifdef UTS_RELEASE
+ 	printf("%s\n", UTS_RELEASE);
++#endif
+ 	return 0;
+ }
