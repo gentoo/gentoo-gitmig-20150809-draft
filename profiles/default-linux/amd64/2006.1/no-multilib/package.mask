@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.10 2006/10/20 14:07:14 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2006.1/no-multilib/package.mask,v 1.11 2006/10/23 13:55:48 blubb Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -166,10 +166,13 @@ net-www/nspluginwrapper
 sci-biology/foldingathome
 sys-apps/memtest86
 sys-apps/memtest86+
-sys-boot/grub
 sys-libs/lib-compat-loki
 www-client/opera
 www-client/mozilla-bin
 www-client/mozilla-firefox-bin
 x11-misc/googleearth
 x11-misc/qcomicbook
+
+# AMD64 Team; <amd64@gentoo.org>
+# grub is not available on no-multilib-profiles; use sys-boot/grub-static
+sys-boot/grub

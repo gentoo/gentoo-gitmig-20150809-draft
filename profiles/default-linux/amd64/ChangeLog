@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.28 2006/10/23 10:00:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.29 2006/10/23 13:55:48 blubb Exp $
+
+  23 Oct 2006; Simon Stelling <blubb@gentoo.org>
+  2006.1/no-multilib/package.mask:
+  add a note to use grub-static on no-multilib-profiles
 
   23 Oct 2006; Simon Stelling <blubb@gentoo.org> +package.use.force,
   +package.use.mask:
