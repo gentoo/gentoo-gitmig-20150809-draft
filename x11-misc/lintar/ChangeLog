@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lintar
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lintar/ChangeLog,v 1.2 2005/10/31 16:28:26 nelchael Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lintar/ChangeLog,v 1.3 2006/10/23 07:02:55 omp Exp $
+
+  23 Oct 2006; David Shakaryan <omp@gentoo.org> lintar-0.6.2.ebuild:
+  Better DEPEND, RDEPEND should not include dev-util/pkgconfig.
 
   31 Oct 2005; Krzysiek Pawlik <nelchael@gentoo.org> lintar-0.6.2.ebuild:
   Stable on x86.
