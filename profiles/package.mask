@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6107 2006/10/23 08:38:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6108 2006/10/23 09:30:26 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -111,6 +111,34 @@ media-plugins/xmms-ir
 x11-plutins/desklet-cornerxmms
 media-plugins/mpg123
 media-plugins/xmms-crossfade
+media-plugins/xmms-nsf
+media-plugins/xmms-status-plugin
+media-sound/xmmsctrl
+x11-plugins/gkrellmms
+x11-plugins/wmalbum
+x11-plugins/wmusic
+x11-plugins/wmxmms
+rox-extra/roxmms
+media-plugins/xmms-cdaudio
+media-plugins/xmms-mpg123
+media-plugins/xmms-opengl-spectrum
+media-plugins/xmms-vorbis
+media-plugins/xmms-alsa
+media-plugins/xmms-blur-scope
+media-plugins/xmms-disk-writer
+media-plugins/xmms-echo
+media-plugins/xmms-esd
+media-plugins/xmms-joystick
+media-plugins/xmms-mikmod
+media-plugins/xmms-oss
+media-plugins/xmms-sanalyzer
+media-plugins/xmms-song-change
+media-plugins/xmms-stereo
+media-plugins/xmms-tonegen
+media-plugins/xmms-voice
+media-plugins/xmms-wav
+# This is an extra one
+media-sound/noxmms
 
 # Piotr Jaroszyński <peper@gentoo.org> (22 Oct 2006)
 # telepathy-gabble has masked dep(net-libs/loudmouth)
