@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20060728.ebuild,v 1.2 2006/10/22 21:19:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/bmake-20060728.ebuild,v 1.3 2006/10/23 13:33:40 exg Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://void.crufty.net/ftp/pub/sjg/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
