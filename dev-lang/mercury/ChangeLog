@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.59 2006/10/19 07:20:11 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.60 2006/10/23 03:13:04 keri Exp $
+
+  23 Oct 2006; keri <keri@gentoo.org>
+  +files/mercury-0.12.2-parallel-install_grades.patch,
+  +files/mercury-0.13.0-parallel-install_grades.patch,
+  mercury-0.12.2-r3.ebuild, mercury-0.13.0.ebuild:
+  Parallelize install_grades target in Mmake.rules.
 
   19 Oct 2006; keri <keri@gentoo.org> mercury-0.12.2.ebuild,
   mercury-0.12.2-r1.ebuild, mercury-0.12.2-r2.ebuild,

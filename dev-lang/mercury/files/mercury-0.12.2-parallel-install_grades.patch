@@ -1,0 +1,14 @@
+--- mercury-compiler-0.12.2.orig/scripts/Mmake.rules	2005-01-28 20:11:58.000000000 +1300
++++ mercury-compiler-0.12.2/scripts/Mmake.rules	2006-10-23 15:56:28.000000000 +1300
+@@ -509,9 +509,9 @@
+ 		*.a *.so tmp_dir || true; } && \
+ 	for grade in $(ALL_LIBGRADES); do \
+ 		if [ "$$grade" != "$(GRADE)" ]; then \
+-			$(MMAKE) GRADE=$$grade $*.depend || \
++			$(MMAKE) $(MMAKEFLAGS) GRADE=$$grade $*.depend || \
+ 				exit 1; \
+-			$(MMAKE) GRADE=$$grade lib$*.install_library || \
++			$(MMAKE) $(MMAKEFLAGS) GRADE=$$grade lib$*.install_library || \
+ 				exit 1; \
+ 			for file in x $$grade_files; do \
+ 				if [ "$$file" != "x" ]; then \
