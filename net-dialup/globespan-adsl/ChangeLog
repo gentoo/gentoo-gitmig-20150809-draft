@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/globespan-adsl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.18 2006/03/12 12:34:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.19 2006/10/23 07:53:06 mrness Exp $
+
+  23 Oct 2006; Alin Nastac <mrness@gentoo.org> globespan-adsl-0.10.ebuild,
+  globespan-adsl-0.11.ebuild:
+  Replace deprecated tcltk USE flag with tk (#17808).
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> globespan-adsl-0.10.ebuild,
   -globespan-adsl-0.11_beta1.ebuild, globespan-adsl-0.11.ebuild:

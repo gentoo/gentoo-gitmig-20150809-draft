@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.0.ebuild,v 1.7 2006/03/13 05:53:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.0.ebuild,v 1.8 2006/10/23 07:57:53 mrness Exp $
 
 MY_P=${P/client}
 MY_CMD=pptp-command-20050401
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge/pptpclient/${MY_P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ppc ppc64 x86"
-IUSE="tcltk"
+IUSE="tk"
 
 DEPEND=">=net-dialup/ppp-2.4.2
 	dev-lang/perl
-	tcltk? ( dev-perl/perl-tk )"
+	tk? ( dev-perl/perl-tk )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -38,5 +38,5 @@ src_install() {
 	doins "${FILESDIR}/options.pptp"
 	newsbin "${WORKDIR}/${MY_CMD}" pptp-command
 	dosbin "${FILESDIR}/pptp_fe.pl"
-	use tcltk && dosbin "${FILESDIR}/xpptp_fe.pl"
+	use tk && dosbin "${FILESDIR}/xpptp_fe.pl"
 }

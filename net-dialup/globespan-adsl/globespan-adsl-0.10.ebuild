@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.10.ebuild,v 1.6 2006/03/12 12:34:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.10.ebuild,v 1.7 2006/10/23 07:53:06 mrness Exp $
 
 inherit fixheadtails
 
@@ -13,11 +13,11 @@ HOMEPAGE="http://eciadsl.flashtux.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
-IUSE="tcltk"
+IUSE="tk"
 
 DEPEND="net-dialup/ppp"
 RDEPEND="${DEPEND}
-	tcltk? ( >=dev-lang/tk-8.3.4 )"
+	tk? ( >=dev-lang/tk-8.3.4 )"
 
 S="${WORKDIR}/${MY_PN}"
 
