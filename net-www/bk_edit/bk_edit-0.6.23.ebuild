@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/bk_edit-0.6.23.ebuild,v 1.1 2004/10/31 16:59:42 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/bk_edit-0.6.23.ebuild,v 1.2 2006/10/23 22:10:27 kloeri Exp $
 
 inherit eutils
 DESCRIPTION="bk_edit is an easy to use bookmark manager and editor."
-HOMEPAGE="http://www2.fht-esslingen.de/~clfuit00/sasnt/bk_edit/"
+HOMEPAGE="http://www.allesdurcheinander.de/nettools/bk_edit/"
 SRC_URI="http://www.allesdurcheinander.de/nettools/bk_edit/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/bk_edit
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/ChangeLog,v 1.2 2005/04/19 10:35:20 beu Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/ChangeLog,v 1.3 2006/10/23 22:10:27 kloeri Exp $
+
+  23 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> bk_edit-0.6.23.ebuild:
+  Fix HOMEPAGE, bug 99872.
 
   19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
