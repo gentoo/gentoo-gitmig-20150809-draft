@@ -1,7 +1,8 @@
+app-text/crm114 mew mimencode test
 app-text/xdvik cjk
 dev-lang/ruby threads
 dev-libs/confuse test
+dev-libs/cyrus-sasl crypt
 net-dns/avahi python
 net-irc/rbot spell
 x11-misc/xscreensaver new-login
-app-text/crm114 mew mimencode test
