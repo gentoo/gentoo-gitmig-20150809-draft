@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.9 2006/10/01 22:40:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.10 2006/10/23 16:22:27 alonbl Exp $
+
+  23 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org> aircrack-ng-0.5-r1.ebuild,
+  aircrack-ng-0.6.ebuild, aircrack-ng-0.6.1.ebuild,
+  aircrack-ng-0.6.2.ebuild:
+  Modify test to be protected by interactive shell, so signal will not be
+  catched by sandbox, closes bug#138362
 
 *aircrack-ng-0.6.2 (01 Oct 2006)
 

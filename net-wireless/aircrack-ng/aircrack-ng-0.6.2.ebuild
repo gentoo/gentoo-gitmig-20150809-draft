@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.6.2.ebuild,v 1.1 2006/10/01 22:40:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.6.2.ebuild,v 1.2 2006/10/23 16:22:27 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -14,6 +14,15 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap"
+
+src_test() {
+	#./makeivs wep.ivs 11111111111111111111111111 || die 'generating ivs file failed'
+	#./aircrack-ng wep.ivs || die 'cracking WEP key failed'
+
+	# Upstream uses signal in order to quit,
+	# So protect busybox with interactive shell.
+	/bin/sh -ci "./aircrack-ng test/wpa.cap -w test/password.lst" || die 'cracking WPA key failed'
+}
 
 src_compile() {
 	emake -e CC="$(tc-getCC)" || die "emake failed"

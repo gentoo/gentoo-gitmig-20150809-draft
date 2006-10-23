@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.41-r1.ebuild,v 1.4 2006/03/01 17:08:15 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack/aircrack-2.41-r1.ebuild,v 1.5 2006/10/23 16:25:19 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -31,7 +31,10 @@ src_compile() {
 }
 
 src_test() {
-	 ./aircrack test/wpa.cap -w test/password.lst || die 'first selftest failed'
+	# Upstream uses signal in order to quit,
+	# So protect busybox with interactive shell.
+	/bin/sh -ci "./aircrack test/wpa.cap -w test/password.lst" || die 'cracking WPA key failed'
+
 	#cd test
 	#$(tc-getCC) $(CFLAGS) kstats.c  -o kstats
 	#$(tc-getCC) $(CFLAGS)  makeivs.c -o makeivs
