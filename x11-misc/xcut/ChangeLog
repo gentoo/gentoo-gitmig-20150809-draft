@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcut
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.9 2006/10/21 03:23:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcut/ChangeLog,v 1.10 2006/10/23 08:33:40 exg Exp $
+
+  23 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> xcut-0.2-r1.ebuild:
+  Stable on ppc.
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org> -xcut-0.2.ebuild,
   xcut-0.2-r1.ebuild:
