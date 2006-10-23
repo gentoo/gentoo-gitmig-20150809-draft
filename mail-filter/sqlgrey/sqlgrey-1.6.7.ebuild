@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation# Distributed under the terms of the GNU General Public License v2
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.6.7.ebuild,v 1.2 2006/10/22 13:49:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.6.7.ebuild,v 1.3 2006/10/23 20:12:26 vivo Exp $
 
 inherit eutils
 
 DESCRIPTION="SQLgrey is a postfix policy service implementing a grey-listing policy"
-SRC_URI="mirror://sourceforge/sqlgrey/${PN}-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/sqlgrey/${P}.tar.bz2"
 HOMEPAGE="http://sqlgrey.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
@@ -54,10 +54,12 @@ pkg_postinst() {
 	einfo
 	echo
 	einfo "To setup SQLgrey to run out-of-the-box on your system, run:"
-	einfo "emerge --config ${PF}"
+	einfo "emerge --config ${PN}"
 	echo
 	ewarn "Read the documentation for more info (perldoc sqlgrey) or the"
 	ewarn "included howto /usr/share/doc/${PF}/HOWTO.gz"
+	ewarn "If you are using MySQL >= 4.1 use \"latin1\" as charset for"
+	ewarn "the SQLgrey db"
 	echo
 	ebeep 2
 	epause 5
@@ -222,7 +224,7 @@ pkg_config () {
 
 		einfo "Creating SQLgrey MySQL database \"${SQLgrey_DB_NAME}\" and user \"${SQLgrey_DB_USER_NAME}\""
 		echo -ne "     "
-		/usr/bin/mysql -u root -h ${SQLgrey_DB_HOST} -p -e "CREATE DATABASE IF NOT EXISTS ${SQLgrey_DB_NAME}; GRANT ALL ON ${SQLgrey_DB_NAME}.* TO ${SQLgrey_DB_USER_NAME}@${SQLgrey_DB_HOST} IDENTIFIED BY '${SQLgrey_DB_USER_PWD}';FLUSH PRIVILEGES;" -D mysql
+		/usr/bin/mysql -u root -h ${SQLgrey_DB_HOST} -p -e "CREATE DATABASE IF NOT EXISTS ${SQLgrey_DB_NAME} CHARACTER SET latin1; GRANT ALL ON ${SQLgrey_DB_NAME}.* TO ${SQLgrey_DB_USER_NAME}@${SQLgrey_DB_HOST} IDENTIFIED BY '${SQLgrey_DB_USER_PWD}';FLUSH PRIVILEGES;" -D mysql
 		echo
 
 		einfo "Changing SQLgrey configuration in sqlgrey.conf"

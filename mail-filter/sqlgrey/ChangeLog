@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/sqlgrey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.2 2006/10/22 13:49:57 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.3 2006/10/23 20:12:26 vivo Exp $
+
+  23 Oct 2006; <vivo@gentoo.org> sqlgrey-1.6.7.ebuild, sqlgrey-1.7.4.ebuild:
+  Added warning to use "latin1" in MySQL as default charset
 
   22 Oct 2006; Francesco Riosa <vivo@gentoo.org> sqlgrey-1.6.7.ebuild,
   sqlgrey-1.7.4.ebuild:
