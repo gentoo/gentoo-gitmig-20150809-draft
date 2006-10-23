@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub-static
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.9 2006/09/16 11:13:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub-static/ChangeLog,v 1.10 2006/10/23 23:11:36 dsd Exp $
+
+*grub-static-0.97 (23 Oct 2006)
+
+  23 Oct 2006; Daniel Drake <dsd@gentoo.org> +grub-static-0.97.ebuild:
+  New version, generated from sys-boot/grub-0.97-r3
 
   16 Sep 2006; <blubb@gentoo.org> -grub-static-0.93.20030118.ebuild:
   version cleanups
