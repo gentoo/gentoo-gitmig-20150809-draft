@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ghostscript-esp
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.47 2006/10/21 22:22:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-esp/ChangeLog,v 1.48 2006/10/23 00:08:43 genstef Exp $
+
+*ghostscript-esp-8.15.3-r1 (23 Oct 2006)
+
+  23 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
+  +ghostscript-esp-8.15.3-r1.ebuild:
+  Add gsdjvu support, thanks to Timothy Stotts <devel@tstotts.net> and E.
+  Scaglione <erm67@yahoo.it> in bug 107342
 
   21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   ghostscript-esp-8.15.3.ebuild:
