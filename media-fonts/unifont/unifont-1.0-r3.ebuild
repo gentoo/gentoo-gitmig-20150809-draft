@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r3.ebuild,v 1.6 2006/10/22 22:29:42 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r3.ebuild,v 1.7 2006/10/23 19:09:32 corsair Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/u/unifont/${P/-/_}.orig.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ia64 ppc ~ppc64 s390 sh sparc ~x86"
+KEYWORDS="alpha ~amd64 arm ia64 ppc ppc64 s390 sh sparc ~x86"
 
 DEPEND="dev-lang/perl
 		|| ( x11-apps/bdftopcf virtual/x11 )
