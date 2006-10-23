@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.13 2006/07/16 10:38:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.10.ebuild,v 1.14 2006/10/23 18:25:28 swegener Exp $
 
 inherit eutils qt3 mono python
 
@@ -52,6 +52,7 @@ RDEPEND=">=dev-libs/libdaemon-0.5
 	)
 	"
 DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.9.0
 	doc? (
 		app-doc/doxygen
 		mono? ( >=dev-util/monodoc-1.1.8 )
