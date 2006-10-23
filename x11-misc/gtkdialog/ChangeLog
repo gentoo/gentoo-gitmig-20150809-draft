@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtkdialog
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.13 2006/10/11 11:25:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.14 2006/10/23 06:56:33 omp Exp $
+
+  23 Oct 2006; David Shakaryan <omp@gentoo.org> gtkdialog-0.59.8.ebuild:
+  Better DEPEND, RDEPEND should not include dev-util/pkgconfig.
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org>
   gtkdialog-0.59.8.ebuild:
