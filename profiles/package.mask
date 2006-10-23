@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6119 2006/10/23 21:41:35 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6120 2006/10/23 22:22:22 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -141,8 +141,8 @@ x11-themes/xmms-themes
 # These weren't rdepending on xmms at all
 media-plugins/xmms-synaesthesia
 media-plugins/xmms-ir
-x11-plutins/desklet-cornerxmms
-media-plugins/mpg123
+x11-plugins/desklet-cornerxmms
+media-plugins/xmms-mpg123
 media-plugins/xmms-crossfade
 media-plugins/xmms-nsf
 media-plugins/xmms-status-plugin
