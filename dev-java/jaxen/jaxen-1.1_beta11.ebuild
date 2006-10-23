@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.1 2006/10/12 05:00:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.2 2006/10/23 07:47:13 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -21,8 +21,11 @@ RDEPEND=">=virtual/jre-1.3
 	dev-java/xom"
 
 DEPEND=">=virtual/jdk-1.3
-	dev-java/ant-core
-	test? ( dev-java/ant-tasks )
+	!test? ( dev-java/ant-core )
+	test? (
+		dev-java/ant
+		dev-java/junit
+	)
 	source? ( app-arch/zip )
 	${RDEPEND}"
 
@@ -38,6 +41,7 @@ src_unpack() {
 	java-pkg_jar-from dom4j-1
 	java-pkg_jar-from jdom-1.0
 	java-pkg_jar-from xom
+	use test && java-pkg_jar-from --build-only junit
 
 	cd ${S}
 	# Make tests non-compuslatory

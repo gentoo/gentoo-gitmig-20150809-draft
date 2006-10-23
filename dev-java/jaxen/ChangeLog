@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.28 2006/10/12 05:00:26 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.29 2006/10/23 07:47:13 caster Exp $
+
+  23 Oct 2006; Vlastimil Babka <caster@gentoo.org> jaxen-1.1_beta11.ebuild:
+  Added missing junit dependency.
 
 *jaxen-1.1_beta11 (12 Oct 2006)
 
