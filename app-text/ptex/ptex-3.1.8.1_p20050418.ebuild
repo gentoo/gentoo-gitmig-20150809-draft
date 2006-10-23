@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050418.ebuild,v 1.2 2006/10/07 04:23:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050418.ebuild,v 1.3 2006/10/23 12:03:36 usata Exp $
 
 TETEX_PV=3.0
 
@@ -69,6 +69,7 @@ src_unpack() {
 	if use X ; then
 		cd ${S}
 		epatch ${WORKDIR}/${PTETEX}/archive/xdvik-*.diff.gz
+		epatch ${FILESDIR}/xdvi-xorg-7.0.patch
 		cat >>${S}/texk/xdvik/vfontmap.sample<<-EOF
 
 		# TrueType fonts

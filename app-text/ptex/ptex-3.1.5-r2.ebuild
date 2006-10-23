@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5-r2.ebuild,v 1.1 2006/04/28 18:50:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.5-r2.ebuild,v 1.2 2006/10/23 12:03:36 usata Exp $
 
 PTEX_TEXMF_PV=2.3
 TETEX_PV=2.0.2
@@ -68,6 +68,7 @@ src_unpack() {
 		epatch ${WORKDIR}/${PTETEX}/archive/xdvik-22.40y1-j1.21.patch.gz
 		epatch ${WORKDIR}/${PTETEX}/archive/tetex-src-2.0.2-xdvik-y1-j1.19.patch.gz
 		epatch ${WORKDIR}/${PTETEX}/archive/xdvik-22.40y1-waitpid.patch
+		epatch ${FILESDIR}/xdvi-xorg-7.0.patch
 		sed -i -e "/\/usr\/local/s:^:%:g" \
 			-e "/kochi-.*-subst/s:%::g" \
 			-e "s:/usr/local:/usr:g" \

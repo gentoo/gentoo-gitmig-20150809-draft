@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.59 2006/10/07 04:23:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.60 2006/10/23 12:03:36 usata Exp $
+
+  23 Oct 2006; Mamoru KOMACHI <usata@gentoo.org> +files/xdvi-xorg-7.0.patch,
+  ptex-3.1.5-r2.ebuild, ptex-3.1.8.1_p20050418.ebuild:
+  Added xdvi-cjk patch. See
+  http://developer.momonga-linux.org/wiki/?StatusReport-20060408 for detail.
 
   07 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> -ptex-3.1.4-r2.ebuild,
   -ptex-3.1.5.ebuild, ptex-3.1.8.1_p20050418.ebuild:
