@@ -1,19 +1,19 @@
 # Config file for /etc/init.d/mod-mono-server
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/mod-mono-server.confd,v 1.1 2005/02/17 05:30:33 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/mod-mono-server.confd,v 1.2 2006/10/23 23:03:15 jurek Exp $
 
 # Configuration directives for mod-mono-server.exe. For more information on
 # these variables, see the man page for xsp(1).
 
 # This is the document root; trailing slash is not necessary
-#MonoServerRootDir="/usr/share/doc/xsp/test"
+#MonoServerRootDir="/usr/lib/xsp/test"
 
 # Directory to search for files with an `.webapp' extension.
-#MonoApplicationsConfigDir="/usr/share/doc/xsp/test"
+#MonoApplicationsConfigDir="/usr/lib/xsp/test"
 
 # Comma separated list of directories (in the form virtual:real) for all
 # applications managed by the server. For example:
 #   /app1:/var/www/localhost/htdocs/app1,/app2:/var/www/localhost/htdocs/app2
-MonoApplications="/mono:/usr/share/doc/xsp/test"
+MonoApplications="/mono:/usr/lib/xsp/test"
 
 # The communication channel used between mod-mono-server and mod_mono.
 #   unix - A unix socket

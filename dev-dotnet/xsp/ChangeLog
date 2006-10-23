@@ -1,6 +1,15 @@
 # ChangeLog for dev-dotnet/xsp
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.28 2005/11/20 05:12:25 ramereth Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.29 2006/10/23 23:03:15 jurek Exp $
+
+*xsp-1.1.10-r1 (23 Oct 2006)
+
+  23 Oct 2006; Jurek Bartuszek <jurek@gentoo.org>
+  files/mod-mono-server.confd, files/mod-mono-server.initd, files/xsp.confd,
+  files/xsp.initd, -xsp-1.0.8.ebuild, -xsp-1.0.9.ebuild, -xsp-1.1.10.ebuild,
+  +xsp-1.1.10-r1.ebuild:
+  * Cleaned out old ebuilds (<=1.1.10)
+  * Fixed all path references to the test application (bug 92338)
 
 *xsp-1.1.10 (20 Nov 2005)
 
