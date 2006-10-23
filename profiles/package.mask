@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6118 2006/10/23 21:23:47 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6119 2006/10/23 21:41:35 peper Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Piotr Jaroszyński <peper@gentoo.org> (23 Oct 2006)
+# Masking alpha version of mozilla-thunderbird-2.0 and enigmail for it.
+=x11-plugins/enigmail-0.94.1-r1
+>=mail-client/mozilla-thunderbird-2.0_alpha1
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (23 Oct 2006)
 # Masked pending removal on Nov 23. Use games-fps/tremulous instead.
