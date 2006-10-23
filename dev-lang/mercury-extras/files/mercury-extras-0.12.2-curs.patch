@@ -1,0 +1,637 @@
+diff -urN mercury-extras-0.12.2.orig/curs/curs.m mercury-extras-0.12.2/curs/curs.m
+--- mercury-extras-0.12.2.orig/curs/curs.m	2006-10-10 19:42:19.000000000 +1300
++++ mercury-extras-0.12.2/curs/curs.m	2006-10-10 20:06:42.000000000 +1300
+@@ -30,7 +30,7 @@
+ 
+ :- import_module bool, io, string, char, int.
+ 
+-
++:- include_module curs__panel.
+ 
+     % Start a curses session (colour, unbuffered input, no echoing, 
+     % invisible cursor if possible, scrolling on when output past
+@@ -220,104 +220,6 @@
+ :- func cyan = colour.
+ :- func white = colour.
+ 
+-    % ------------------------------------------------------------------------ %
+-    % ------------------------------------------------------------------------ %
+-
+-        % Panels are windows over the main display; they may be
+-        % stacked, moved, ordered and hidden.  Contents of panels
+-        % closer to the top of the stack obscure the parts of panels
+-        % they overlap that are lower in the stack.
+-        %
+-    :- module panel.
+-
+-    :- interface.
+-
+-
+-
+-    :- type panel.
+-
+-        % new(Rows, Cols, Row, Col, Attr, Panel) creates a new panel
+-        % Panel whose size is given by (Rows, Cols) and whose position
+-        % on the display is given by (Row, Col).  The new panel starts
+-        % visible and at the top of the stack.  The default attributes
+-        % for the panel are set to Attr.
+-        %
+-    :- pred new(int::in, int::in, int::in, int::in, attr::in, panel::out,
+-                io__state::di, io__state::uo) is det.
+-
+-        % Destroy a panel.
+-        %
+-    :- pred delete(panel::in, io__state::di, io__state::uo) is det.
+-
+-        % Raise/lower a panel to the top/bottom of the stack.
+-        %
+-    :- pred raise(panel::in, io__state::di, io__state::uo) is det.
+-
+-    :- pred lower(panel::in, io__state::di, io__state::uo) is det.
+-
+-        % Hide/reveal a panel (revealing places it at the top of the stack).
+-        %
+-    :- pred hide(panel::in, io__state::di, io__state::uo) is det.
+-
+-    :- pred reveal(panel::in, io__state::di, io__state::uo) is det.
+-
+-        % Move a panel to (Row, Col) on the display.
+-        %
+-    :- pred relocate(panel::in, int::in, int::in,
+-                io__state::di, io__state::uo) is det.
+-
+-        % Clear a panel.
+-        %
+-    :- pred clear(panel::in, io__state::di, io__state::uo) is det.
+-
+-        % Move the virtual cursor to given row and column; (0, 0) are the
+-        % coordinates for the upper left hand corner of the panel.
+-        %
+-    :- pred move(panel::in, int::in, int::in,
+-                io__state::di, io__state::uo) is det.
+-
+-        % Add a char/string to a panel with the given attributes.
+-        % Note that char codes are passed rather than plain chars.
+-        %
+-    :- pred addch(panel::in, attr::in, int::in,
+-                io__state::di, io__state::uo) is det.
+-
+-    :- pred addstr(panel::in, attr::in, string::in,
+-                io__state::di, io__state::uo) is det.
+-
+-        % Turn on/off or set attributes that will be applied by default.
+-        %
+-    :- pred attr_on(panel::in, attr::in, io__state::di, io__state::uo) is det.
+-    :- pred attr_off(panel::in, attr::in, io__state::di, io__state::uo) is det.
+-    :- pred attr_set(panel::in, attr::in, io__state::di, io__state::uo) is det.
+-
+-        % Update the display (also calls doupdate).
+-        % NOTE that doupdate does not call update_panels.
+-        %
+-    :- pred update_panels(io__state::di, io__state::uo) is det.
+-
+-
+-
+-        % Draws a border around the inside edge of the display.
+-        %
+-    :- pred border(panel::in, io__state::di, io__state::uo) is det.
+-
+-        % Draws an horizontal line of length N moving to the right.
+-        %
+-    :- pred hline(panel::in, int::in, int::in,
+-                io__state::di, io__state::uo) is det.
+-
+-        % Draws a vertical line of length N moving down.
+-        %
+-    :- pred vline(panel::in, int::in, int::in,
+-                io__state::di, io__state::uo) is det.
+-
+-    :- end_module panel.
+-
+-    % ------------------------------------------------------------------------ %
+-    % ------------------------------------------------------------------------ %
+-
+-% ---------------------------------------------------------------------------- %
+ % ---------------------------------------------------------------------------- %
+ 
+ :- implementation.
+@@ -936,219 +838,4 @@
+ 
+ ").
+ 
+-    % ------------------------------------------------------------------------ %
+-    % ------------------------------------------------------------------------ %
+-
+-    :- module panel.
+-
+-    :- implementation.
+-
+-    :- type panel == c_pointer.
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma c_header_code("
+-
+-    #include <ncurses.h>
+-    #include <panel.h>
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", new(Rows::in, Cols::in, Row::in, Col::in, Attr::in,
+-                            Panel::out, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        WINDOW *w = newwin(Rows, Cols, Row, Col);
+-        scrollok(w, TRUE);
+-        wattrset(w, Attr);
+-        wcolor_set(w, Attr, NULL);
+-        wclear(w);
+-        (*(PANEL**)&(Panel)) = new_panel(w);
+-
+-        IO = IO0;
+-    
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", delete(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        delwin(panel_window((PANEL *)Panel));
+-        del_panel((PANEL *)Panel);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", raise(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        top_panel((PANEL *)Panel);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", lower(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        bottom_panel((PANEL *)Panel);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", hide(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        hide_panel((PANEL *)Panel);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", reveal(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        show_panel((PANEL *)Panel);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", relocate(Panel::in, Row::in, Col::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        move_panel((PANEL *)Panel, Row, Col);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", clear(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wclear(panel_window((PANEL *)Panel));
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", move(Panel::in, Row::in, Col::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wmove(panel_window((PANEL *)Panel), Row, Col);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", addch(Panel::in, Attr::in, CharCode::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        waddch(panel_window((PANEL *)Panel), (chtype)Attr | (chtype)CharCode);
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    addstr(Panel, Attr, Str) -->
+-        string__foldl(
+-            ( pred(Char::in, di, uo) is det -->
+-                addch(Panel, Attr, char__to_int(Char))
+-            ),
+-            Str
+-        ).
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", attr_on(Panel::in, Attr::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wattron(panel_window((PANEL *)Panel), Attr);
+-        IO = IO0;
+-
+-    ").
+-    :- pragma foreign_proc("C", attr_off(Panel::in, Attr::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wattroff(panel_window((PANEL *)Panel), Attr);
+-        IO = IO0;
+-
+-    ").
+-    :- pragma foreign_proc("C", attr_set(Panel::in, Attr::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wattrset(panel_window((PANEL *)Panel), Attr);
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", update_panels(IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        update_panels();
+-        doupdate();
+-
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- pragma foreign_proc("C", border(Panel::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wborder(panel_window((PANEL *)Panel), 0, 0, 0, 0, 0, 0, 0, 0);
+-        IO = IO0;
+-
+-    ").
+-
+-    :- pragma foreign_proc("C", hline(Panel::in, C::in, N::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        whline(panel_window((PANEL *)Panel), C, N);
+-        IO = IO0;
+-
+-    ").
+-
+-    :- pragma foreign_proc("C", vline(Panel::in, C::in, N::in, IO0::di, IO::uo),
+-        [will_not_call_mercury, promise_pure], "
+-
+-        wvline(panel_window((PANEL *)Panel), C, N);
+-        IO = IO0;
+-
+-    ").
+-
+-    % ------------------------------------------------------------------------ %
+-
+-    :- end_module panel.
+-
+-    % ------------------------------------------------------------------------ %
+-    % ------------------------------------------------------------------------ %
+-
+-% ---------------------------------------------------------------------------- %
+ % ---------------------------------------------------------------------------- %
+diff -urN mercury-extras-0.12.2.orig/curs/curs.panel.m mercury-extras-0.12.2/curs/curs.panel.m
+--- mercury-extras-0.12.2.orig/curs/curs.panel.m	1970-01-01 12:00:00.000000000 +1200
++++ mercury-extras-0.12.2/curs/curs.panel.m	2006-10-10 20:07:35.000000000 +1300
+@@ -0,0 +1,296 @@
++% ------------------------------------------------------------------------ %
++
++    % Panels are windows over the main display; they may be
++    % stacked, moved, ordered and hidden.  Contents of panels
++    % closer to the top of the stack obscure the parts of panels
++    % they overlap that are lower in the stack.
++    %
++:- module curs__panel.
++
++:- interface.
++
++
++
++:- type panel.
++
++    % new(Rows, Cols, Row, Col, Attr, Panel) creates a new panel
++    % Panel whose size is given by (Rows, Cols) and whose position
++    % on the display is given by (Row, Col).  The new panel starts
++    % visible and at the top of the stack.  The default attributes
++    % for the panel are set to Attr.
++    %
++:- pred new(int::in, int::in, int::in, int::in, attr::in, panel::out,
++            io__state::di, io__state::uo) is det.
++
++    % Destroy a panel.
++    %
++:- pred delete(panel::in, io__state::di, io__state::uo) is det.
++
++    % Raise/lower a panel to the top/bottom of the stack.
++    %
++:- pred raise(panel::in, io__state::di, io__state::uo) is det.
++
++:- pred lower(panel::in, io__state::di, io__state::uo) is det.
++
++    % Hide/reveal a panel (revealing places it at the top of the stack).
++    %
++:- pred hide(panel::in, io__state::di, io__state::uo) is det.
++
++:- pred reveal(panel::in, io__state::di, io__state::uo) is det.
++
++    % Move a panel to (Row, Col) on the display.
++    %
++:- pred relocate(panel::in, int::in, int::in,
++            io__state::di, io__state::uo) is det.
++
++    % Clear a panel.
++    %
++:- pred clear(panel::in, io__state::di, io__state::uo) is det.
++
++    % Move the virtual cursor to given row and column; (0, 0) are the
++    % coordinates for the upper left hand corner of the panel.
++    %
++:- pred move(panel::in, int::in, int::in,
++            io__state::di, io__state::uo) is det.
++
++    % Add a char/string to a panel with the given attributes.
++    % Note that char codes are passed rather than plain chars.
++    %
++:- pred addch(panel::in, attr::in, int::in,
++            io__state::di, io__state::uo) is det.
++
++:- pred addstr(panel::in, attr::in, string::in,
++            io__state::di, io__state::uo) is det.
++
++    % Turn on/off or set attributes that will be applied by default.
++    %
++:- pred attr_on(panel::in, attr::in, io__state::di, io__state::uo) is det.
++:- pred attr_off(panel::in, attr::in, io__state::di, io__state::uo) is det.
++:- pred attr_set(panel::in, attr::in, io__state::di, io__state::uo) is det.
++
++    % Update the display (also calls doupdate).
++    % NOTE that doupdate does not call update_panels.
++    %
++:- pred update_panels(io__state::di, io__state::uo) is det.
++
++
++
++    % Draws a border around the inside edge of the display.
++    %
++:- pred border(panel::in, io__state::di, io__state::uo) is det.
++
++    % Draws an horizontal line of length N moving to the right.
++    %
++:- pred hline(panel::in, int::in, int::in,
++            io__state::di, io__state::uo) is det.
++
++    % Draws a vertical line of length N moving down.
++    %
++:- pred vline(panel::in, int::in, int::in,
++            io__state::di, io__state::uo) is det.
++
++% ------------------------------------------------------------------------ %
++
++:- implementation.
++
++:- type panel == c_pointer.
++
++% ------------------------------------------------------------------------ %
++
++:- pragma c_header_code("
++
++#include <ncurses.h>
++#include <panel.h>
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", new(Rows::in, Cols::in, Row::in, Col::in, Attr::in,
++                        Panel::out, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    WINDOW *w = newwin(Rows, Cols, Row, Col);
++    scrollok(w, TRUE);
++    wattrset(w, Attr);
++    wcolor_set(w, Attr, NULL);
++    wclear(w);
++    (*(PANEL**)&(Panel)) = new_panel(w);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", delete(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    delwin(panel_window((PANEL *)Panel));
++    del_panel((PANEL *)Panel);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", raise(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    top_panel((PANEL *)Panel);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", lower(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    bottom_panel((PANEL *)Panel);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", hide(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    hide_panel((PANEL *)Panel);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", reveal(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    show_panel((PANEL *)Panel);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", relocate(Panel::in, Row::in, Col::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    move_panel((PANEL *)Panel, Row, Col);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", clear(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wclear(panel_window((PANEL *)Panel));
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", move(Panel::in, Row::in, Col::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wmove(panel_window((PANEL *)Panel), Row, Col);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", addch(Panel::in, Attr::in, CharCode::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    waddch(panel_window((PANEL *)Panel), (chtype)Attr | (chtype)CharCode);
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++addstr(Panel, Attr, Str) -->
++    string__foldl(
++        ( pred(Char::in, di, uo) is det -->
++            addch(Panel, Attr, char__to_int(Char))
++        ),
++        Str
++    ).
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", attr_on(Panel::in, Attr::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wattron(panel_window((PANEL *)Panel), Attr);
++    IO = IO0;
++
++").
++:- pragma foreign_proc("C", attr_off(Panel::in, Attr::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wattroff(panel_window((PANEL *)Panel), Attr);
++    IO = IO0;
++
++").
++:- pragma foreign_proc("C", attr_set(Panel::in, Attr::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wattrset(panel_window((PANEL *)Panel), Attr);
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", update_panels(IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    update_panels();
++    doupdate();
++
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
++
++:- pragma foreign_proc("C", border(Panel::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wborder(panel_window((PANEL *)Panel), 0, 0, 0, 0, 0, 0, 0, 0);
++    IO = IO0;
++
++").
++
++:- pragma foreign_proc("C", hline(Panel::in, C::in, N::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    whline(panel_window((PANEL *)Panel), C, N);
++    IO = IO0;
++
++").
++
++:- pragma foreign_proc("C", vline(Panel::in, C::in, N::in, IO0::di, IO::uo),
++    [will_not_call_mercury, promise_pure], "
++
++    wvline(panel_window((PANEL *)Panel), C, N);
++    IO = IO0;
++
++").
++
++% ------------------------------------------------------------------------ %
