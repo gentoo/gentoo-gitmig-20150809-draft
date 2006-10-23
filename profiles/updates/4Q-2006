@@ -1,1 +1,2 @@
 move net-misc/yate net-voip/yate
+move media-video/stan app-crypt/stan
