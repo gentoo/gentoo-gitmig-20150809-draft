@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/enemy-territory-fortress
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.9 2006/10/02 07:27:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.10 2006/10/23 18:41:01 wolf31o2 Exp $
+
+*enemy-territory-fortress-1.6-r2 (23 Oct 2006)
+
+  23 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +enemy-territory-fortress-1.6-r2.ebuild:
+  Added new revision for testing which uses the brand-spankin-new
+  games-mods.eclass to reduce ebuild code.
 
   02 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
   enemy-territory-fortress-1.6-r1.ebuild:
