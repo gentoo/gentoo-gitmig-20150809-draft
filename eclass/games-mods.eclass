@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.1 2006/10/23 18:33:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.2 2006/10/23 19:15:28 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -82,6 +82,7 @@ KEYWORDS="-* amd64 x86"
 IUSE="dedicated opengl"
 RESTRICT="mirror strip"
 
+DEPEND="app-arch/unzip"
 #RDEPEND="${CATEGORY}/${GAME}"
 
 S=${WORKDIR}
