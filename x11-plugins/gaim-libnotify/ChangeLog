@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-libnotify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/ChangeLog,v 1.2 2006/08/08 16:56:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-libnotify/ChangeLog,v 1.3 2006/10/23 22:39:39 gothgirl Exp $
+
+*gaim-libnotify-0.12 (23 Oct 2006)
+
+  23 Oct 2006; gothgirl <gothgirl@gentoo.org> +gaim-libnotify-0.12.ebuild:
+  version bump re:bug#152121
 
   08 Aug 2006; Michael Hanselmann <hansmi@gentoo.org>
   gaim-libnotify-0.11.ebuild:
