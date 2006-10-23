@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.3.ebuild,v 1.1 2006/09/23 23:53:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.3.ebuild,v 1.2 2006/10/23 15:58:20 chtekk Exp $
 
 inherit eutils
 
@@ -15,11 +15,13 @@ SLOT="0"
 
 IUSE="debug doc"
 
-DEPEND=">=gnome-base/libglade-2.0
+RDEPEND=">=gnome-base/libglade-2.0
 		sys-libs/zlib
 		virtual/fam
 		>=x11-libs/gtk+-2.0"
-RDEPEND="${DEPEND}"
+
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig"
 
 src_compile() {
 	local myconf=""

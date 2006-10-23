@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pureadmin
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.10 2006/09/23 23:53:49 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/ChangeLog,v 1.11 2006/10/23 15:58:20 chtekk Exp $
+
+  23 Oct 2006; Luca Longinotti <chtekk@gentoo.org> pureadmin-0.2.2.ebuild,
+  pureadmin-0.3.ebuild:
+  Fix bug #152526.
 
 *pureadmin-0.3 (23 Sep 2006)
 
