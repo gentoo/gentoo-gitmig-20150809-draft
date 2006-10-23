@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/beryl-core-0.1.1.ebuild,v 1.1 2006/10/22 22:31:31 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/beryl-core-0.1.1.ebuild,v 1.2 2006/10/23 00:56:57 tsunam Exp $
 
 inherit autotools
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND=">=x11-base/xorg-server-1.1.1-r1
 	>=x11-libs/gtk+-2.8.0
+	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXrandr
 	x11-libs/startup-notification"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/beryl-core
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/ChangeLog,v 1.1 2006/10/22 22:31:31 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl-core/ChangeLog,v 1.2 2006/10/23 00:56:57 tsunam Exp $
+
+  23 Oct 2006; Joshua Jackson <tsunam@gentoo.org> beryl-core-0.1.1.ebuild:
+  Adding composite as a direct depend as someone might not install via the
+  xorg meta
 
 *beryl-core-0.1.1 (22 Oct 2006)
 
