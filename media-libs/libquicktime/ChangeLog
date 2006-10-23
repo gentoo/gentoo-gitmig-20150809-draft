@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.66 2006/10/20 21:48:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.67 2006/10/23 20:35:39 zzam Exp $
+
+  23 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  libquicktime-0.9.7-r1.ebuild:
+  Added a tarball with the missing aclocal-m4-files, solving Bug #140516.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   libquicktime-0.9.7-r1.ebuild, libquicktime-0.9.10.ebuild:

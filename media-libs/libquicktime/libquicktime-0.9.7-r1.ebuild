@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.17 2006/10/20 21:48:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.18 2006/10/23 20:35:39 zzam Exp $
 
 inherit libtool eutils autotools
 
 DESCRIPTION="A library based on quicktime4linux with extensions"
 HOMEPAGE="http://libquicktime.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	mirror://gentoo/${PN}-m4-1.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -48,6 +49,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-dv.patch"
 	epatch "${FILESDIR}/${P}-unrice.patch"
 
+	cp ${WORKDIR}/m4/* m4/
 	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }
