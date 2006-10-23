@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DCOP
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP/ChangeLog,v 1.1 2006/10/23 21:52:54 mcummings Exp $
+
+*DCOP-0.036 (23 Oct 2006)
+
+  23 Oct 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +DCOP-0.036.ebuild:
+  Initial import, bug 152600, ebuild supplied by rbu
+
