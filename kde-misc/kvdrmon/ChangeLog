@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kvdrmon
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvdrmon/ChangeLog,v 1.1 2006/10/23 18:49:54 hd_brummy Exp $
+
+*kvdrmon-0.6-r1 (23 Oct 2006)
+
+  23 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +files/kvdrmon-0.6-noarts.diff, +metadata.xml, +kvdrmon-0.6-r1.ebuild:
+  initial ebuild; moved from vdr-testing/gentoo.de overlay;set B.Juraschek as
+  co maintainer
+
