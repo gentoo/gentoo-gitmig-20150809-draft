@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.29 2006/10/23 13:55:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.30 2006/10/23 18:14:11 wolf31o2 Exp $
+
+  23 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  2005.0/no-multilib/package.mask, 2005.1/no-multilib/package.mask,
+  2006.0/no-multilib/package.mask, 2006.1/no-multilib/package.mask:
+  Added games-strategy/coldwar and games-strategy/x2 to package.mask for
+  no-multilib.
 
   23 Oct 2006; Simon Stelling <blubb@gentoo.org>
   2006.1/no-multilib/package.mask:
