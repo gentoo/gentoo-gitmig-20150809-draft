@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-2.21.030604.ebuild,v 1.3 2006/08/09 16:19:38 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/reduce-2.21.030604.ebuild,v 1.4 2006/10/23 03:55:16 dberkholz Exp $
 
 # If you want to fix the warnings about friend declaration 'foo' declared as
 # a non-template function, see http://gcc.gnu.org/faq.html#friend.
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 RDEPEND=""
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 S="${WORKDIR}/${MY_P}.source"
 
 src_unpack() {
