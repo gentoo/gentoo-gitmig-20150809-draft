@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_keyring/pam_keyring-0.0.8.ebuild,v 1.2 2006/10/13 23:48:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_keyring/pam_keyring-0.0.8.ebuild,v 1.3 2006/10/23 23:56:38 ticho Exp $
 
 inherit multilib eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hekanetworks.com/opensource/pam_keyring/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-libs/pam
