@@ -1,6 +1,6 @@
 diff -urNp beecrypt-4.1.2.org/acinclude.m4 beecrypt-4.1.2/acinclude.m4
 --- beecrypt-4.1.2.org/acinclude.m4	2004-12-19 22:16:35.000000000 +0200
-+++ beecrypt-4.1.2/acinclude.m4	2006-10-23 22:04:59.000000000 +0200
++++ beecrypt-4.1.2/acinclude.m4	2006-10-23 23:28:38.000000000 +0200
 @@ -16,7 +16,7 @@ AC_DEFUN([BEECRYPT_WITH_CPU],[
    i[[3456]]86)
      case $withval in
@@ -23,6 +23,15 @@ diff -urNp beecrypt-4.1.2.org/acinclude.m4 beecrypt-4.1.2/acinclude.m4
        if test "$ac_with_cpu" != yes; then
          bc_target_cpu=$withval
        fi
+@@ -906,7 +907,7 @@ AC_DEFUN([BEECRYPT_NOEXECSTACK],[
+       # convert conftest.c to conftest.s
+       $CCAS $CFLAGS -S conftest.c
+       # use egrep to find GNU-stack in in the output assembler
+-      bc_gnu_stack=`$EGREP -e '\.section[[:space:]]+\.note\.GNU-stack' conftest.s`
++      bc_gnu_stack=`$EGREP -e '\.section.*GNU-stack' conftest.s`
+       ],[
+       CFLAGS=$CFLAGS_save
+       CXXFLAGS=$CXXFLAGS_save
 @@ -1126,6 +1127,8 @@ AC_DEFUN([BEECRYPT_ASM_SOURCES],[
          m4 $srcdir/gas/mpopt.alpha.m4 > mpopt.s
          ])
