@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6114 2006/10/23 19:59:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6115 2006/10/23 20:00:43 mcummings Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Michael Cummings <mcummings@gentoo.org> (23 Oct 2006)
+# Masking dev-perl/rpm since the app-arch/rpm package it depended on has been
+# removed from the tree anyway.
+dev-perl/rpm
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (23 Oct 2006)
 # I am masking all of this so it can all be unmasked at once.  All of the new
