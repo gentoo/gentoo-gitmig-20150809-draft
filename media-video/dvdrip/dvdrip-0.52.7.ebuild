@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7.ebuild,v 1.4 2006/10/23 04:49:49 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.7.ebuild,v 1.5 2006/10/23 05:42:46 beandog Exp $
 
 inherit perl-module eutils flag-o-matic
 
@@ -41,12 +41,18 @@ RDEPEND="${DEPEND}
 	dev-perl/libintl-perl"
 
 pkg_setup() {
-	built_with_use media-video/transcode dvdread \
-		|| die "transcode needs dvdread support builtin.  Please re-emerge transcode with the dvdread USE flag."
-
-	built_with_use media-video/transcode extrafilters \
-		&& die  "Please remerge transcode with -extrafilters in USE=, " \
-				"you have filters installed not compatible with dvdrip."
+	if ! built_with_use media-video/transcode dvdread; then
+		eerror "Please re-emerge media-video/transcode with the dvdread"
+		eerror "USE flag."
+	fi
+	if built_with_use media-video/transcode extrafilters; then
+		eerror "Please re-emerge media-video/transcode without the"
+		eerror "extrafilters USE flag."
+	fi
+	if ! built_with_use media-video/transcode dvdread || \
+		built_with_use media-video/transcode extrafilters; then
+		die "Fix media-video/transcode USE flags and re-emerge."
+	fi
 }
 
 src_unpack() {
