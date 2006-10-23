@@ -8,14 +8,18 @@ EBUILD enemy-territory-truecombat-0.48.ebuild 519 RMD160 23d36f7808764bfbe658c2c
 MD5 9a727a08092419911799f2e476c1135e enemy-territory-truecombat-0.48.ebuild 519
 RMD160 23d36f7808764bfbe658c2c2fee7488b2d4567dc enemy-territory-truecombat-0.48.ebuild 519
 SHA256 80e91e3dd6890e1b322b4686eaf28a620217dbca39cc3b7773c9fa59dde93ff6 enemy-territory-truecombat-0.48.ebuild 519
+EBUILD enemy-territory-truecombat-0.49-r1.ebuild 604 RMD160 474d6fcfd98d15ee4683876c99ae423dbdf47aad SHA1 d4d566e841e3cd9cdbe28bfc951877c3f128328d SHA256 f43e542b0b216d3958f980bf2e6d31dca40e2629bc6a5ca7ced031788be35774
+MD5 e91fa0ce11f10c82fefbbc8f177fe720 enemy-territory-truecombat-0.49-r1.ebuild 604
+RMD160 474d6fcfd98d15ee4683876c99ae423dbdf47aad enemy-territory-truecombat-0.49-r1.ebuild 604
+SHA256 f43e542b0b216d3958f980bf2e6d31dca40e2629bc6a5ca7ced031788be35774 enemy-territory-truecombat-0.49-r1.ebuild 604
 EBUILD enemy-territory-truecombat-0.49.ebuild 599 RMD160 3fcde4f9d790cd75423ba82bcc1ccaac1518be2c SHA1 32ecafeee85b69d081967f77cc818ed6a9af50d4 SHA256 4ccca98eff0a9334358f018c178858f6d32d7fa49416ced809deb19868191b04
 MD5 f180dd945320662223488bae9f1e60fa enemy-territory-truecombat-0.49.ebuild 599
 RMD160 3fcde4f9d790cd75423ba82bcc1ccaac1518be2c enemy-territory-truecombat-0.49.ebuild 599
 SHA256 4ccca98eff0a9334358f018c178858f6d32d7fa49416ced809deb19868191b04 enemy-territory-truecombat-0.49.ebuild 599
-MISC ChangeLog 1741 RMD160 e53587afaacd40743e8d951ecd10847afd4f8b39 SHA1 d3f8c11151ec21de97d09dd1234f53bd4fe6de45 SHA256 eb9a1fb1e7d19019be925688d1f45636872dc63a1860b5c71d06ee0e48551a0e
-MD5 8f87767b34ad7e6ff4552a77f453cf6f ChangeLog 1741
-RMD160 e53587afaacd40743e8d951ecd10847afd4f8b39 ChangeLog 1741
-SHA256 eb9a1fb1e7d19019be925688d1f45636872dc63a1860b5c71d06ee0e48551a0e ChangeLog 1741
+MISC ChangeLog 2002 RMD160 765c047148d38180ae12bed3eb92310c084d0ab6 SHA1 036bad934c7decfd6435944477941e4d97497347 SHA256 2f4f6c167820d12cec0d7408de82450029e2c14adbe5ff6897997936d630f627
+MD5 838c3a6d1cd31cce941d146172188de5 ChangeLog 2002
+RMD160 765c047148d38180ae12bed3eb92310c084d0ab6 ChangeLog 2002
+SHA256 2f4f6c167820d12cec0d7408de82450029e2c14adbe5ff6897997936d630f627 ChangeLog 2002
 MISC metadata.xml 254 RMD160 877a1dc36df2be58926bc51041093feafdefe429 SHA1 45f0334cd127c4a1b4ece41f7098ab70046e378a SHA256 2916aab684ec3908fffb515065eeb2c481cde563380b682646add582bed5f535
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
 RMD160 877a1dc36df2be58926bc51041093feafdefe429 metadata.xml 254
@@ -26,10 +30,13 @@ SHA256 d8f02ee5aa4bc9086be0c02bf300496ad7b0fc688abf31886a41b46f30c082eb files/di
 MD5 5052e5f6ea0751dc251fef0cf5def256 files/digest-enemy-territory-truecombat-0.49 232
 RMD160 cb6228987387d7a8be32c754666185257cda72d5 files/digest-enemy-territory-truecombat-0.49 232
 SHA256 3e782c4998d852216e8742b4a5623dc3b0fb0e29eead4778144537166593b387 files/digest-enemy-territory-truecombat-0.49 232
+MD5 5052e5f6ea0751dc251fef0cf5def256 files/digest-enemy-territory-truecombat-0.49-r1 232
+RMD160 cb6228987387d7a8be32c754666185257cda72d5 files/digest-enemy-territory-truecombat-0.49-r1 232
+SHA256 3e782c4998d852216e8742b4a5623dc3b0fb0e29eead4778144537166593b387 files/digest-enemy-territory-truecombat-0.49-r1 232
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFIuMKkT4lNIS36YERAghUAKCnxe256il/NoKCbesYkRord/TOfACfR//3
-UJ6+lMOsGmOquT5fm4TIceA=
-=SIZm
+iD8DBQFFPQ8UkT4lNIS36YERAqCwAKC5Ge8IiLZYDoZSud7RXxu2ptaHugCfRCNs
+9FrM4dZxbL7GsDSvyU6R9kM=
+=y9YU
 -----END PGP SIGNATURE-----
