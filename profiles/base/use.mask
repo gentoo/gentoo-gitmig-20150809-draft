@@ -66,6 +66,8 @@ bmp
 
 # xmms is going away
 xmms
+# app-admin/conky deps on xmms with this flag
+infopipe
 
 # psyco only works on x86
 psyco
