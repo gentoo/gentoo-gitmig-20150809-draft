@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r2.ebuild,v 1.3 2006/01/02 19:21:17 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0-r2.ebuild,v 1.4 2006/10/23 22:02:23 kloeri Exp $
 
 inherit eutils mozconfig flag-o-matic multilib
 
@@ -81,7 +81,7 @@ src_install() {
 pkg_postinst() {
 	einfo "If you choose to setup the webbrowser feature to execute urls"
 	einfo "under the HELP section please refer to"
-	einfo "http://www.nvu.com/Building_From_Source.html#tipsandhints ."
+	einfo "http://www.nvu.com/Building_From_Source.php#tipsandhints ."
 	einfo "Make sure you follow the instructions to the letter if you have"
 	einfo "any problems email me at anarchy@gentoo.org I will be more then"
 	einfo "happy to assist you. DO NOT file a bug report on this issue."
