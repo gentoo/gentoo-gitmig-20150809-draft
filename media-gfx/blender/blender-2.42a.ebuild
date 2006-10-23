@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a.ebuild,v 1.4 2006/09/08 20:13:31 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.42a.ebuild,v 1.5 2006/10/23 20:10:55 lu_zero Exp $
 
 inherit multilib flag-o-matic eutils python
 
@@ -104,8 +104,9 @@ src_install() {
 	insinto /usr/include/blender/
 	doins ${WORKDIR}/install/linux2/plugins/include/*.h
 	use nls && \
-	cp -pPR ${WORKDIR}/install/linux2/.blender/* \
+	cp -pPR ${WORKDIR}/install/linux2/.blender/{.Blanguages,.bfont.ttf,locale}\
 		${D}/usr/share/${PN}
+	cp -pPR ${WORKDIR}/install/linux2/.blender/scripts ${D}/usr/share/${PN}
 
 	mv ${D}/usr/share/${PN}/locale ${D}/usr/share
 
