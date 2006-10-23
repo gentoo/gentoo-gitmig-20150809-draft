@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-kvdrmon
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-kvdrmon/ChangeLog,v 1.1 2006/10/23 18:56:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-kvdrmon/ChangeLog,v 1.2 2006/10/23 21:20:47 hd_brummy Exp $
+
+  23 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org> metadata.xml:
+  added 2nd Maintainer
 
 *vdr-kvdrmon-0.6 (23 Oct 2006)
 
