@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/Sys-Syslog-0.18.ebuild,v 1.5 2006/10/21 14:05:32 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/Sys-Syslog-0.18.ebuild,v 1.6 2006/10/23 19:44:05 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/S/SA/SAPER/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~mips ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~mips ppc ~ppc64 sparc ~x86"
 IUSE=""
 
 # Tests disabled - they attempt to verify on the live system
