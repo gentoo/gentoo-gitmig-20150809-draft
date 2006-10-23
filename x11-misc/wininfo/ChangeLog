@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wininfo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.9 2006/10/11 12:04:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wininfo/ChangeLog,v 1.10 2006/10/23 05:03:22 omp Exp $
+
+  23 Oct 2006; David Shakaryan <omp@gentoo.org> wininfo-0.7.ebuild:
+  RDEPEND should not have dev-util/pkgconfig.
 
   11 Oct 2006; Krzysiek Pawlik <nelchael@gentoo.org> wininfo-0.7.ebuild:
   Add missing dev-util/pkgconfig to DEPEND, see bug #150816.
