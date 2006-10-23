@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.7 2006/10/21 10:08:46 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.8 2006/10/23 09:01:17 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-core.tar.bz2
 	http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-lang.tar.bz2
 	binfilter? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-binfilter.tar.bz2 )
 	http://go-oo.org/packages/${PATCHLEVEL}/ooo-build-${MY_PV}.tar.gz
-	odk? ( http://go-oo.org/packages/OOD680/${SRC}-sdk_oo.tar.bz2
+	odk? ( http://go-oo.org/packages/${PATCHLEVEL}/${SRC}-sdk_oo.tar.bz2
 		java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
 	http://go-oo.org/packages/SRC680/extras-2.tar.bz2
 	http://go-oo.org/packages/SRC680/biblio.tar.bz2
@@ -100,13 +100,20 @@ DEPEND="${COMMON_DEPEND}
 	!dev-util/dmake
 	>=dev-lang/python-2.3.4
 	>=app-admin/eselect-oodict-20060706
-	java? ( || ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
+	java? ( || ( =virtual/jdk-1.4* !amd64? ( =virtual/jdk-1.5* ) )
 		dev-java/ant-core )
 	dev-libs/libxslt
 	ldap? ( net-nds/openldap )
 	>=dev-libs/libxml2-2.0"
 
 PROVIDE="virtual/ooo"
+
+if use amd64; then
+	# All available Java 1.5 JDKs are broken, in one way or another, on amd64.
+	# Thus we force the use of a Java 1.4 JDK on amd64 (and amd64 only).
+	export JAVA_PKG_NV_DEPEND="=virtual/jdk-1.4*"
+fi
+
 
 # FIXME executable stacks should be addressed upstream!
 QA_EXECSTACK_x86="usr/lib/openoffice/program/libgcc3_uno.so"

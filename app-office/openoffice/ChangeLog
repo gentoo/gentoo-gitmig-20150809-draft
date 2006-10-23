@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.265 2006/10/21 10:08:46 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.266 2006/10/23 09:01:17 suka Exp $
+
+  23 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-2.0.4.ebuild:
+  Force jdk-1.4 on AMD64 to prevent build breakages. Thanks to Jon 
+  Severinsson <jon@severinsson.net> for the fix in bug #151225
 
   21 Oct 2006; Andreas Proschofsky <suka@gentoo.org>
   openoffice-2.0.4.ebuild:
