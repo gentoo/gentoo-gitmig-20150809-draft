@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-1.1.ebuild,v 1.3 2006/10/14 10:05:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15composer/g15composer-1.1.ebuild,v 1.4 2006/10/24 07:41:11 jokey Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	newinitd "${FILESDIR}/${PN}-1.0.rc" ${PN}
+	newinitd "${FILESDIR}/${PN}-1.1.initd" g15composer
 
 	dodoc AUTHORS README ChangeLog
 }
