@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/efont-unicode
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.18 2006/10/23 19:06:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/efont-unicode/ChangeLog,v 1.19 2006/10/24 00:14:16 ticho Exp $
+
+  24 Oct 2006; Andrej Kacian <ticho@gentoo.org>
+  efont-unicode-0.4.2-r1.ebuild:
+  Stable on x86, bug #152336.
 
   23 Oct 2006; Markus Rothe <corsair@gentoo.org>
   efont-unicode-0.4.2-r1.ebuild:
