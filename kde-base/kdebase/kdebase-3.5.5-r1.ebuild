@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r1.ebuild,v 1.1 2006/10/16 22:36:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.5-r1.ebuild,v 1.2 2006/10/24 12:13:00 flameeyes Exp $
 
 inherit kde-dist eutils flag-o-matic
 
@@ -61,6 +61,7 @@ RDEPEND="${DEPEND}
 			x11-apps/xinit
 			|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
 			x11-apps/setxkbmap
+			x11-apps/xprop
 		) <virtual/x11-7 )"
 
 DEPEND="${DEPEND}
