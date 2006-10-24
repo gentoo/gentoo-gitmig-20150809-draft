@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.91 2006/10/21 04:12:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.92 2006/10/24 16:54:53 corsair Exp $
+
+  24 Oct 2006; Markus Rothe <corsair@gentoo.org> mutt-1.5.13-r1.ebuild:
+  Stable on ppc64; bug #152657
 
   21 Oct 2006; Aron Griffis <agriffis@gentoo.org> mutt-1.5.13-r1.ebuild:
   Mark 1.5.13-r1 stable on alpha/ia64
