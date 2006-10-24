@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.1 2006/10/23 23:49:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.2 2006/10/24 12:32:33 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -349,8 +349,8 @@ src_compile() {
 	# Advanced Options #
 	#################
 	# Platform specific flags, hardcoded on amd64 (see below)
-	use x86 && myconf="${myconf} $(use_enable 3dnow)"
-	use x86 && myconf="${myconf} $(use_enable 3dnowext)";
+	myconf="${myconf} $(use_enable 3dnow)"
+	myconf="${myconf} $(use_enable 3dnowext)";
 	use x86 && myconf="${myconf} $(use_enable sse)"
 	use x86 && myconf="${myconf} $(use_enable sse2)"
 	use x86 && myconf="${myconf} $(use_enable mmx)"
@@ -361,7 +361,7 @@ src_compile() {
 	# AMD64 Team decided to hardenable SIMD assembler for all users
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/11
 	if use amd64; then
-		myconf="${myconf} --enable-3dnow --enable-3dnowext --enable-sse --enable-sse2 --enable-mmx --enable-mmxext"
+		myconf="${myconf} --enable-sse --enable-sse2 --enable-mmx --enable-mmxext"
 	fi
 
 	if use ppc64
