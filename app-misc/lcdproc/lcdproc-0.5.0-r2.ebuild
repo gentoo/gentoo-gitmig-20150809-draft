@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.0-r2.ebuild,v 1.1 2006/10/11 21:16:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.0-r2.ebuild,v 1.2 2006/10/24 08:14:35 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -166,8 +166,8 @@ src_install() {
 	doins LCDd.conf
 	doins scripts/lcdproc.conf
 
-	newinitd "${FILESDIR}/${PV}-LCDd.rc" LCDd
-	newinitd "${FILESDIR}/${PV}-lcdproc.rc" lcdproc
+	newinitd "${FILESDIR}/${PV}-LCDd.initd" LCDd
+	newinitd "${FILESDIR}/${PV}-lcdproc.initd" lcdproc
 
 	doman docs/*.1 docs/*.8
 	dodoc README CREDITS ChangeLog INSTALL

@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.37 2006/10/18 23:57:29 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.38 2006/10/24 08:14:35 jokey Exp $
+
+  24 Oct 2006; Markus Ullmann <jokey@gentoo.org> -files/0.4.5-LCDd.rc,
+  -files/0.5.0-LCDd.rc, +files/0.4.5-lcdproc.initd,
+  +files/0.5.0-lcdproc.initd, +files/0.4.5-LCDd.initd,
+  -files/0.4.5-lcdproc.rc, +files/0.5.0-LCDd.initd, -files/0.5.0-lcdproc.rc,
+  +files/0.5.1-LCDd.initd, -files/0.5.1-LCDd.rc, +files/0.5.1-lcdproc.initd,
+  -files/0.5.1-lcdproc.rc, lcdproc-0.4.5.ebuild, lcdproc-0.5.0-r2.ebuild,
+  lcdproc-0.5.1.ebuild:
+  QA and init.d fix
+
+  24 Oct 2006; Markus Ullmann <jokey@gentoo.org> lcdproc-0.5.1.ebuild:
+  Adding autotools
 
   18 Oct 2006; Markus Ullmann <jokey@gentoo.org> metadata.xml:
   Metadata update
