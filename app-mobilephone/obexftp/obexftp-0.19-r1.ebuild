@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.19-r1.ebuild,v 1.3 2006/10/22 19:49:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.19-r1.ebuild,v 1.4 2006/10/24 07:18:51 mrness Exp $
 
 inherit perl-module flag-o-matic eutils
 
@@ -13,12 +13,14 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="bluetooth debug perl python swig tcl"
 
-DEPEND=">=dev-libs/openobex-1.1
+RDEPEND=">=dev-libs/openobex-1.1
 	bluetooth? ( >=net-wireless/bluez-libs-2.19 )
 	perl? ( >=dev-lang/perl-5.8.6 )
 	python? ( >=dev-lang/python-2.4.2 )
 	tcl? ( >=dev-lang/tcl-8.4.9 )
 	swig? ( >=dev-lang/swig-1.3.7 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
