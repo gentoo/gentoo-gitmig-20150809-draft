@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6125 2006/10/24 15:05:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6126 2006/10/24 20:19:48 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (24 Oct 2006)
+# pam_console on its own ebuild, so that it can be used with PAM 0.99
+# even without patching it with RedHat patches.
+sys-auth/pam_console
 
 # Markus Ullmann <jokey@gentoo.org> (24 Oct 2006)
 # package doesn't compile currently, upstream is going to
