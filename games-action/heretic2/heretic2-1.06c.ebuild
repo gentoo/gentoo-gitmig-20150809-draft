@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.1 2006/10/03 22:32:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.2 2006/10/24 22:08:54 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,13 +24,11 @@ RDEPEND="virtual/opengl"
 S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
-
-pkg_setup() {
-	games_pkg_setup
-	cdrom_get_cds bin/x86/glibc-2.1/${PN}
-}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 src_unpack() {
+	cdrom_get_cds bin/x86/glibc-2.1/${PN}
 	mkdir ${A}
 
 	local f
@@ -42,7 +40,6 @@ src_unpack() {
 
 src_install() {
 	cd "${CDROM_ROOT}"
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	insinto "${dir}"
 	doins -r base help Manual.html README README.more || die "doins failed"
@@ -50,11 +47,11 @@ src_install() {
 	exeinto "${dir}"
 	doexe bin/x86/glibc-2.1/${PN} || die "doexe failed"
 
-	games_make_wrapper ${PN} ./${PN} "${dir}" .
+	games_make_wrapper ${PN} ./${PN} "${dir}" "${dir}"
 	newicon icon.xpm ${PN}.xpm
 	make_desktop_entry ${PN} "Heretic II" ${PN}.xpm
 
-	cd "${D}/${dir}"
+	cd "${Ddir}"
 	ln -s "${CDROM_ROOT}"/*.gz .
 	unpack ./*.gz
 	rm -f *.gz
@@ -62,12 +59,12 @@ src_install() {
 	local d
 	for d in "${S}"/* ; do
 		cd "${d}"
-		loki_patch patch.dat "${D}/${dir}" || die "loki_patch ${d} failed"
+		loki_patch patch.dat "${Ddir}" || die "loki_patch ${d} failed"
 	done
 
-	rmdir "${D}/${dir}"/gl_drivers
+	rmdir "${Ddir}"/gl_drivers
 	sed -i '128i set gl_driver "/usr/lib/libGL.so"' \
-		"${D}/${dir}"/base/default.cfg || die "sed failed"
+		"${Ddir}"/base/default.cfg || die "sed failed"
 
 	prepgamesdirs
 }

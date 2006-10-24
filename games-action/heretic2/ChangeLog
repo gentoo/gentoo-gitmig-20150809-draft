@@ -1,6 +1,10 @@
 # ChangeLog for games-action/heretic2
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.1 2006/10/03 22:32:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/ChangeLog,v 1.2 2006/10/24 22:08:54 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> heretic2-1.06c.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install as well as some general cleanup.
 
 *heretic2-1.06c (03 Oct 2006)
 
