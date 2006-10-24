@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.3 2006/10/14 10:04:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.4 2006/10/24 07:57:04 jokey Exp $
+
+*g15daemon-1.2.1-r2 (24 Oct 2006)
+
+  24 Oct 2006; Markus Ullmann <jokey@gentoo.org>
+  +files/g15daemon-1.2.1.initd, -files/g15daemon-1.2.1.rc, metadata.xml,
+  -g15daemon-1.2.1-r1.ebuild, +g15daemon-1.2.1-r2.ebuild:
+  Revbump to clean up xmms deps
+
+  18 Oct 2006; Markus Ullmann <jokey@gentoo.org> metadata.xml:
+  Metadata update
 
   14 Oct 2006; Markus Rothe <corsair@gentoo.org> g15daemon-1.2.1-r1.ebuild:
   Added ~ppc64; bug #150934
