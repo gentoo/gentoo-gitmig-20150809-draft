@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/shttpd
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.7 2005/08/23 13:56:47 ka0ttic Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/shttpd/ChangeLog,v 1.8 2006/10/24 07:23:30 stuart Exp $
+
+*shttpd-1.35 (24 Oct 2006)
+
+  24 Oct 2006; Stuart Herbert <stuart@gentoo.org> +shttpd-1.35.ebuild:
+  Version bump; for security bug #150748
 
   23 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> shttpd-1.25.ebuild:
   Use -1 instead of /bin/false, bug #103421.
