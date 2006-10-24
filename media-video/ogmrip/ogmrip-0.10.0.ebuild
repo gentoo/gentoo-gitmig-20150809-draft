@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0.ebuild,v 1.2 2006/10/23 14:27:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.10.0.ebuild,v 1.3 2006/10/24 15:30:34 beandog Exp $
 
 inherit gnome2 eutils
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2.1"
 
 SLOT="0"
 IUSE="aac debug gtk hal matroska spell srt theora"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND=">=dev-libs/glib-2.6
 	>=dev-libs/libxml2-2
