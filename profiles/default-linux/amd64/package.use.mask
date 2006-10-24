@@ -27,3 +27,38 @@ net-misc/asterisk mmx
 x11-terms/eterm mmx
 media-tv/xawtv mmx
 media-sound/mpg123 mmx 3dnow
+
+# Oct 24th 2006; blubb@gentoo.org
+# bug 152646
+x11-themes/polymer mmx sse2
+
+# Oct 24th 2006; blubb@gentoo.org
+# working asm; drop this list once the flags are unmasked globally (2007.0)
+>=dev-libs/DirectFB-0.9.25.1 -mmx -sse
+>=dev-libs/DirectFB-extra-0.9.25 -mmx
+games-engines/exult -mmx -3dnow
+media-gfx/gimp -mmx -sse
+media-gfx/optipng -mmx
+media-libs/libmpeg -mmx
+media-libs/flac -sse -3dnow
+media-libs/imlib2 -mmx
+media-libs/libggi -mmx
+media-libs/libquicktime -mmx
+media-libs/speex -sse
+media-sound/audacious -mmx
+media-sound/fluidsynth -sse
+media-tv/mythtv -mmx
+media-video/ogle -mmx
+media-video/transcode -3dnow -mmx -sse -sse2
+sci-libs/fftw -sse -sse2
+x11-libs/evas -mmx -sse
+x11-libs/libast -mmx
+x11-misc/rss-glx -sse -3dnow
+x11-misc/eterm -sse2
+x11-wm/afterstep -mmx
+media-video/ffmpeg -mmx
+media-video/mplayer -3dnow -3dnowext -mmx -mmxext -sse -sse2
+media-tv/xdtv -mmx
+media-plugins/vdr-softdevice -mmx -mmxext
+dev-libs/openssl -sse2
+media-libs/libsoundtouch -sse
