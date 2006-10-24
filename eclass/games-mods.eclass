@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.2 2006/10/23 19:15:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.3 2006/10/24 20:53:32 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -217,7 +217,13 @@ games-mods_src_install() {
 		then
 			for binary in ${MOD_BINS}
 			do
-				if [[ -e "${S}"/bin/"${binary}" ]]
+				if [[ -n "${MOD_DIR}" ]]
+				then
+					games_make_wrapper "${GAME_EXE}-${MOD_BINS}" \
+						"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
+					make_desktop_entry "${GAME_EXE}-${MOD_BINS}" \
+						"${GAME_TITLE} - ${MOD_NAME}" "${MOD_ICON}"
+				elif [[ -e "${S}"/bin/"${binary}" ]]
 				then
 					exeinto "${dir}"
 					newexe bin/${binary} ${GAME_EXE}-${binary} \
@@ -249,8 +255,10 @@ games-mods_src_install() {
 		# We don't want to leave the binary directory around
 		rm -rf bin
 		else
-			games_make_wrapper "${GAME_EXE}-${MOD_DIR}" "${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
-			make_desktop_entry "${GAME_EXE}-${MOD_DIR}" "${GAME_TITLE} - ${MOD_NAME}" "${MOD_ICON}"
+			games_make_wrapper "${GAME_EXE}-${MOD_DIR}" \
+				"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
+			make_desktop_entry "${GAME_EXE}-${MOD_DIR}" \
+				"${GAME_TITLE} - ${MOD_NAME}" "${MOD_ICON}"
 			# Since only quake3 has both a binary and a source-based install,
 			# we only look for quake3 here.
 			case "${GAME_EXE}" in
