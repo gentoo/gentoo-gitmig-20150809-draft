@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0-r1.ebuild,v 1.1 2005/11/13 05:40:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0-r1.ebuild,v 1.2 2006/10/24 03:12:02 tsunam Exp $
 
 inherit eutils fortran
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.netlib.org/lapack/${MyPN}.tgz
 
 SLOT="0"
 IUSE="ifc"
-KEYWORDS="~x86 amd64"
+KEYWORDS="amd64 x86"
 
 DEPEND="sys-devel/libtool
 	sci-libs/lapack-config
