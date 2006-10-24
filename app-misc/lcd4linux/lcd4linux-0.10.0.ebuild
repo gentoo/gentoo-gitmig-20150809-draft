@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.1 2006/05/25 09:18:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0.ebuild,v 1.2 2006/10/24 07:20:46 jokey Exp $
 
 #inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 # contains x86 asm, upstream is working on a portable version
-KEYWORDS="-* ~x86"
+KEYWORDS="~x86"
 IUSE="kde png X usb mysql python"
 
 DEPEND="png? ( media-libs/libpng
