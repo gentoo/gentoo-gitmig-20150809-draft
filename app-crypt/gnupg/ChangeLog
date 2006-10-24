@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.239 2006/10/24 03:24:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.240 2006/10/24 04:00:29 tsunam Exp $
+
+  24 Oct 2006; Joshua Jackson <tsunam@gentoo.org> gnupg-1.4.5-r2.ebuild:
+  Stable x86; bug #136665
 
   24 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> gnupg-1.4.5-r2.ebuild:
   Marked stable on amd64 for bug #136665
