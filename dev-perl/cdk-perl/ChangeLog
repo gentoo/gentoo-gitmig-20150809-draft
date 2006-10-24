@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/cdk-perl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.16 2006/10/20 23:25:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/ChangeLog,v 1.17 2006/10/24 16:10:06 mcummings Exp $
+
+  24 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  cdk-perl-20031210.ebuild:
+  sparc stable
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> cdk-perl-20031210.ebuild:
   Mark 20031210 stable on ia64
