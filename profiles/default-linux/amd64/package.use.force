@@ -1,3 +1,13 @@
 # Oct 23th 2006; blubb@gentoo.org
 # upstream forces sse2 on regardless of what the use flag is
 dev-libs/openssl sse2
+media-libs/libsoundtouch sse
+
+# Oct 23th 2006; blubb@gentoo.org
+# List of currently hard-enabled by us; once the use flags are out of global
+# mask, edit the ebuilds for these packages
+media-video/ffmpeg mmx
+media-video/mplayer 3dnow 3dnowext mmx mmxext sse sse2
+media-video/transcode 3dnow mmx sse sse2
+media-tv/xdtv mmx
+media-plugins/vdr-softdevice mmx mmxext

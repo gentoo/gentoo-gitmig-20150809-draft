@@ -1,6 +1,10 @@
 # assembler-section
 
 # Oct 23th 2006; blubb@gentoo.org
+# the asm is 64bit save, but it doesn't compile anyway
+games-emulation/visualboyadvance
+
+# Oct 23th 2006; blubb@gentoo.org
 # upstream forces sse2 for amd64; mmx flag does nothing
 app-crypt/johntheripper mmx
 
@@ -11,3 +15,15 @@ games-emulation/xmess mmx
 media-gfx/inkscape mmx
 media-libs/allegro mmx sse
 media-libs/gdk-pixbuf mmx
+media-libs/libfame mmx
+media-libs/libmovtar mmx
+media-libs/sdl-gfx mmx
+media-libs/smpeg mmx
+media-video/mjpegtools mmx
+media-video/mpeg4ip mmx
+net-irc/xchat mmx
+net-irc/xchat-gnome mmx
+net-misc/asterisk mmx
+x11-terms/eterm mmx
+media-tv/xawtv mmx
+media-sound/mpg123 mmx 3dnow
