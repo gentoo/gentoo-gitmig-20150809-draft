@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.25 2006/10/11 20:01:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.26 2006/10/24 15:33:23 blubb Exp $
+
+  24 Oct 2006; Simon Stelling <blubb@gentoo.org> gnustep-env-0.1.8.ebuild:
+  stable on amd64
 
 *gnustep-env-0.1.8-r1 (11 Oct 2006)
 
