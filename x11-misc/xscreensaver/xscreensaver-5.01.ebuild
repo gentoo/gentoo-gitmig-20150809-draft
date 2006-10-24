@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01.ebuild,v 1.3 2006/10/22 01:06:57 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.01.ebuild,v 1.4 2006/10/24 08:51:58 nelchael Exp $
 
 inherit eutils flag-o-matic pam fixheadtails autotools
 
@@ -142,6 +142,11 @@ src_install() {
 	dodir /usr/share/man/man6x
 	mv "${D}/usr/share/man/man6/worm.6" \
 		"${D}/usr/share/man/man6x/worm.6x"
+
+	# Fix bug #152250:
+	dodir "/usr/share/X11/app-defaults"
+	mv "${D}/usr/$(get_libdir)/X11/app-defaults/XScreenSaver" \
+		"${D}/usr/share/X11/app-defaults/XScreenSaver" || die "mv failed"
 
 }
 
