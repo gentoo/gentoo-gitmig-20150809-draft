@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.1 2006/08/14 06:40:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.33-r1.ebuild,v 1.2 2006/10/24 00:43:07 nerdboy Exp $
 
 inherit eutils libtool distutils
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="dbus ntp static usb X"
+IUSE="dbus ntp static tntc usb X"
 
 RDEPEND="X? ( || (
 		( x11-libs/libXmu
@@ -70,8 +70,8 @@ src_compile() {
 	    my_conf="${my_conf} --disable-ntpshm"
 	fi
 
-	econf ${my_conf} $(use_with X x) $(use_enable dbus) \
-	    || die "econf failed"
+	econf ${my_conf} $(use_enable dbus) $(use_enable tntc tnt) \
+	    $(use_with X x) || die "econf failed"
 
 	emake LDFLAGS="${LDFLAGS} -lm" || die "emake failed"
 }
