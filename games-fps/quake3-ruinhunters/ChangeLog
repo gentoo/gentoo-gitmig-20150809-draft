@@ -1,7 +1,14 @@
 # ChangeLog for games-fps/quake3-ruinhunters
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/ChangeLog,v 1.5 2004/06/24 22:45:28 agriffis Exp $
-  
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/ChangeLog,v 1.6 2006/10/24 21:34:10 wolf31o2 Exp $
+
+*quake3-ruinhunters-1.0a-r1 (24 Oct 2006)
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake3-ruinhunters-1.0a-r1.ebuild:
+  Added new revision for testing which uses the brand-spankin-new
+  games-mods.eclass to reduce ebuild code.
+
 *quake3-ruinhunters-1.0a (20 Mar 2003)
 
   16 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
