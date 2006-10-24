@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.4.2.ebuild,v 1.2 2006/10/24 10:14:00 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.4.2.ebuild,v 1.3 2006/10/24 10:36:24 drizzt Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://gavare.se/gxemul/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~sparc ~x86 ~ppc"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="X"
 
 RDEPEND="X? ( || ( ( x11-libs/libX11
