@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r5.ebuild,v 1.9 2006/10/24 20:20:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.6-r5.ebuild,v 1.10 2006/10/24 23:43:24 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -198,6 +198,10 @@ toolchain-glibc_src_unpack() {
 		EPATCH_SUFFIX="patch" \
 		ARCH=$(tc-arch) \
 		epatch "${WORKDIR}"/patches
+
+		# tag, glibc is it
+		[[ -e csu/Banner ]] && die "need new banner location"
+		echo "Gentoo patchset ${PATCH_VER}" > csu/Banner
 	fi
 
 	gnuconfig_update
