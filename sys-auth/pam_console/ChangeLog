@@ -1,0 +1,11 @@
+# ChangeLog for sys-auth/pam_console
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.1 2006/10/24 20:23:46 flameeyes Exp $
+
+*pam_console-0.99.6.2.3.6 (24 Oct 2006)
+
+  24 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam_console-configure.ac, +metadata.xml,
+  +pam_console-0.99.6.2.3.6.ebuild:
+  Add pam_console split ebuild. Untested, needs to be re-keyworded too.
+
