@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.277 2006/10/22 21:24:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.278 2006/10/24 20:28:54 zmedico Exp $
+
+*portage-2.1.2_pre3-r8 (24 Oct 2006)
+
+  24 Oct 2006; Zac Medico <zmedico@gentoo.org>
+  -portage-2.1.2_pre3-r7.ebuild, +portage-2.1.2_pre3-r8.ebuild:
+  2.1.2_pre3-r8 revbump. This release disables ACCEPT_LICENSE support since the
+  details of license groups still need to be decided and implemented.  See bugs
+  #17367 and #152593 for more information.
 
 *portage-2.1.2_pre3-r7 (22 Oct 2006)
 
