@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.6 2006/10/10 20:51:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.2-r3.ebuild,v 1.7 2006/10/24 12:19:24 blubb Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -91,14 +91,14 @@ src_compile() {
 
 	# Hardenable SIMD extensions on amd64
 	if use amd64; then
-		myconf="${myconf} --enable-mmx --enable-3dnow \
+		myconf="${myconf} --enable-mmx \
 				--enable-sse --enable-sse2"
 	elif use x86; then
 		myconf="${myconf} $(use_enable mmx) \
-				$(use_enable 3dnow) \
 				$(use_enable sse) \
 				$(use_enable sse2)"
 	fi
+	myconf="${myconf} $(use_enable 3dnow)"
 
 	append-flags -DDCT_YUV_PRECISION=1
 	econf \
