@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.1.ebuild,v 1.1 2006/09/17 16:49:18 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.2.1.ebuild,v 1.2 2006/10/24 16:07:36 griffon26 Exp $
 
 inherit autotools eutils flag-o-matic toolchain-funcs
 
@@ -35,6 +35,9 @@ src_unpack() {
 
 	# Fix undefined reference to @VG_PLATFORM@ (bug #147904)
 	epatch "${FILESDIR}/${P}-pkg-config.patch"
+
+	# Don't reject glibc-2.5
+	epatch "${FILESDIR}/${P}-glibc-2.5.patch"
 
 	# Remove defaulting to ppc32-linux on ppc64 without multilib
 	# "valgrind: failed to start tool 'memcheck' for platform 'ppc32-linux': 
