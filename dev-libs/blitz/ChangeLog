@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.24 2006/10/07 17:28:55 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.25 2006/10/24 19:04:32 dev-zero Exp $
+
+*blitz-0.9-r1 (24 Oct 2006)
+
+  24 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> -files/blitz-0.7.diff,
+  -files/blitz-0.8-makefile.patch, -blitz-0.6.ebuild, -blitz-0.7.ebuild,
+  -blitz-0.8.ebuild, +blitz-0.9-r1.ebuild:
+  Dependencies fixed. Added USE-flags 'doc', 'debug' and 'examples'. Fixed bug
+  #149479.
 
   07 Oct 2006; <pbienst@gentoo.org> blitz-0.9.ebuild:
   Add --enable-shared.
