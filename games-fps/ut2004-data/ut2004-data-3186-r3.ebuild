@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.9 2006/09/28 21:23:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.10 2006/10/24 22:54:40 wolf31o2 Exp $
 
 inherit eutils games games-ut2k4mod
 
@@ -42,6 +42,9 @@ pkg_setup() {
 	ewarn "This is a huge package.  If you do not have at least 7GB of free"
 	ewarn "disk space in ${PORTAGE_TMPDIR} and also in ${GAMES_PREFIX_OPT} then"
 	ewarn "you should abort this installation now and free up some space."
+}
+
+src_unpack() {
 	check_dvd
 
 	if [[ "${USE_DVD}" -eq 1 ]]
@@ -76,9 +79,6 @@ pkg_setup() {
 			Speech/ons.xml \
 			Sounds/TauntPack.det_uax.uz2
 	fi
-}
-
-src_unpack() {
 	unpack_makeself "${CDROM_ROOT}"/linux-installer.sh \
 		|| die "unpacking linux installer"
 	use x86 && unpack ./linux-x86.tar

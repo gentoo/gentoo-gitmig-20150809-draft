@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.10 2006/05/24 23:26:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-data/quake3-data-1.32b.ebuild,v 1.11 2006/10/24 23:03:58 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -18,12 +18,8 @@ RDEPEND=""
 S=${WORKDIR}
 dir=${GAMES_DATADIR}/quake3
 
-pkg_setup() {
-	games_pkg_setup
-	use cdinstall && cdrom_get_cds baseq3/pak0.pk3:Quake3/baseq3/pak0.pk3
-}
-
 src_unpack() {
+	use cdinstall && cdrom_get_cds baseq3/pak0.pk3:Quake3/baseq3/pak0.pk3
 	unpack_makeself
 }
 

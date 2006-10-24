@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.10 2006/10/09 23:31:49 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/ChangeLog,v 1.11 2006/10/24 23:00:00 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> unreal-226.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install.
 
   14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> unreal-226.ebuild:
   Moved games_pkg_setup to beginning of pkg_setup and ported to modular X.

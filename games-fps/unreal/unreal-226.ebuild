@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.13 2006/04/14 11:57:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.14 2006/10/24 23:00:00 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -33,14 +33,10 @@ RDEPEND="!amd64? (
 
 S="${WORKDIR}"
 
-pkg_setup() {
-	games_pkg_setup
+src_unpack() {
 	export CDROM_NAME_1="Unreal CD"
 	export CDROM_NAME_2="Unreal Tournament CD"
 	cdrom_get_cds System/Unreal.ini System/UnrealTournament.ini
-}
-
-src_unpack() {
 	unpack_makeself unreali-install.run
 	mkdir ut
 	cd ut

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2.ebuild,v 1.1 2006/10/03 14:59:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2.ebuild,v 1.2 2006/10/24 22:49:02 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,20 +22,14 @@ RDEPEND="x11-libs/libXext
 		app-emulation/emul-linux-x86-xlibs
 		app-emulation/emul-linux-x86-soundlibs
 		app-emulation/emul-linux-x86-sdl
-		app-emulation/emul-linux-x86-compat
-	)"
+		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
 
-pkg_setup() {
-	games_pkg_setup
-
-	cdrom_get_cds postal2_eula.txt
-}
-
 src_unpack() {
+	cdrom_get_cds postal2_eula.txt
 	mkdir ${A}
 
 	local f

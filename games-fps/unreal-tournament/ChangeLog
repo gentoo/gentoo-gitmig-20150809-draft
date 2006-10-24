@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/unreal-tournament
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.14 2006/04/14 11:50:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.15 2006/10/24 22:59:23 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install.
 
   14 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:

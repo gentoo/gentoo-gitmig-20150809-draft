@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.6 2006/03/31 21:24:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-data/ut2003-data-2107.ebuild,v 1.7 2006/10/24 23:04:38 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,11 +27,11 @@ Ddir="${D}/${dir}"
 pkg_setup() {
 	games_pkg_setup
 	ewarn "The installed game takes about 2.7GB of space!"
-	cdrom_get_cds System/Packages.md5 StaticMeshes/AWHardware.usx.uz2 \
-		Extras/MayaPLE/Maya4PersonalLearningEditionEpic.exe
 }
 
 src_unpack() {
+	cdrom_get_cds System/Packages.md5 StaticMeshes/AWHardware.usx.uz2 \
+		Extras/MayaPLE/Maya4PersonalLearningEditionEpic.exe
 	unzip ${DISTDIR}/UT2003CrashFix.zip \
 		|| die "unpacking crash-fix"
 }

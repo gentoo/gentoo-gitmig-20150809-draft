@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.12 2006/08/19 22:21:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake1-data/quake1-data-2.40.ebuild,v 1.13 2006/10/24 22:46:08 wolf31o2 Exp $
 
 # TODO: if installing off of the 1.01 cd, need to fetch the
 #       quake shareware and use that pak0
@@ -31,12 +31,11 @@ pkg_setup() {
 		eerror "The symlink for the demo data conflicts with the cdinstall data"
 		die "Unmerge games-fps/quake1-demodata to remove the conflict"
 	fi
-
-	export CDROM_NAME_SET=("Existing Install" "Quake CD (1.01)" "Ultimate Quake Collection" "Quake CD (newer)")
-	cdrom_get_cds id1:q101_int.1:Setup/ID1:resource.1
 }
 
 src_unpack() {
+	export CDROM_NAME_SET=("Existing Install" "Quake CD (1.01)" "Ultimate Quake Collection" "Quake CD (newer)")
+	cdrom_get_cds id1:q101_int.1:Setup/ID1:resource.1
 	if [[ ${CDROM_SET} == "1" ]] ; then
 		echo ">>> Unpacking q101_int.lha to ${PWD}"
 		cat "${CDROM_ROOT}"/q101_int.1 "${CDROM_ROOT}"/q101_int.2 > \

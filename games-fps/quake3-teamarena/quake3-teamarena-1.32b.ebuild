@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.4 2006/05/24 23:25:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-teamarena/quake3-teamarena-1.32b.ebuild,v 1.5 2006/10/24 22:52:46 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,12 +19,8 @@ RDEPEND="|| (
 
 S=${WORKDIR}
 
-pkg_setup() {
-	games_pkg_setup
-	use cdinstall && cdrom_get_cds Setup/missionpack/PAK0.PK3
-}
-
 src_unpack() {
+	use cdinstall && cdrom_get_cds Setup/missionpack/PAK0.PK3
 	unpack_makeself
 }
 

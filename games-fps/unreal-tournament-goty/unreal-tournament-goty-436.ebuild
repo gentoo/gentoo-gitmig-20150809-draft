@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.10 2006/04/14 11:49:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.11 2006/10/24 22:58:44 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,12 +27,8 @@ RDEPEND="opengl? ( virtual/opengl )
 
 S=${WORKDIR}
 
-pkg_setup() {
-	games_pkg_setup
-	cdrom_get_cds System/ Help/chaosut
-}
-
 src_unpack() {
+	cdrom_get_cds System/ Help/chaosut
 	unpack_makeself ut-install-${PV}-GOTY.run
 	unpack IpDrv-${PV}-Linux-08-20-02.zip
 }

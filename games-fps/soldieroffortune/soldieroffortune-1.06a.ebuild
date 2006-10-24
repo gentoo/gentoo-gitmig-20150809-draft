@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.18 2006/10/07 13:02:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.19 2006/10/24 22:53:31 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -43,10 +43,10 @@ Ddir=${D}/${dir}
 pkg_setup() {
 	games_pkg_setup
 	ewarn "The installed game takes about 725MB of space!"
-	cdrom_get_cds sof.xpm
 }
 
 src_unpack() {
+	cdrom_get_cds sof.xpm
 	unpack_makeself
 	tar xzf ${CDROM_ROOT}/paks.tar.gz -C ${T} \
 		|| die "uncompressing data"

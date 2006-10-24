@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.22 2006/08/05 22:54:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.23 2006/10/24 22:47:29 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -20,18 +20,16 @@ S=${WORKDIR}
 
 pkg_setup() {
 	games_pkg_setup
-
 	if has_version games-fps/quake2-demodata && \
 	   built_with_use "games-fps/quake2-demodata" symlink ; then
 		eerror "The symlink for the demo data conflicts with the cdinstall data"
 		die "Unmerge games-fps/quake2-demodata to remove the conflict"
 	fi
-
-	export CDROM_NAME_SET=("Existing Install" "Ultimate Quake Edition" "Quake2 CD" "Quake4 Bonus DVD")
-	cdrom_get_cds baseq2:Install/patch:Install:Movies
 }
 
 src_unpack() {
+	export CDROM_NAME_SET=("Existing Install" "Ultimate Quake Edition" "Quake2 CD" "Quake4 Bonus DVD")
+	cdrom_get_cds baseq2:Install/patch:Install:Movies
 	# The .exe is just a self-extracting .zip
 	echo ">>> Unpacking ${A} to ${PWD}"
 	unzip -qo "${DISTDIR}/${A}" || die "Failed to unpack ${A}"

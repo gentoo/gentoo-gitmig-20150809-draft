@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.6 2006/10/05 12:05:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/doom3-roe-1.ebuild,v 1.7 2006/10/24 22:48:24 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -22,12 +22,8 @@ GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/doom3
 Ddir=${D}/${dir}
 
-pkg_setup() {
-	games_pkg_setup
-	cdrom_get_cds Setup/Data/d3xp/pak000.pk4
-}
-
 src_unpack() {
+	cdrom_get_cds Setup/Data/d3xp/pak000.pk4
 	# Change from showing "d3xp" in the "mods" menu within Doom 3
 	# The ^1 changes the text to red
 	echo '^1Resurrection of Evil' > description.txt
