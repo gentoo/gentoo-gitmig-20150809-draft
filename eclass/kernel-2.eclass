@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.195 2006/10/24 23:43:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.196 2006/10/24 23:45:35 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -494,6 +494,10 @@ install_headers() {
 	if kernel_is ge 2 6 18 ; then
 		env_setup_xmakeopts
 		emake headers_install INSTALL_HDR_PATH="${D}"/${ddir}/.. ${xmakeopts} || die
+
+		# let other packages install some of these headers
+		rm -rf "${D}"/${ddir}/sound #alsa-headers
+		rm -rf "${D}"/${ddir}/scsi  #glibc/uclibc/etc...
 		return 0
 	fi
 
