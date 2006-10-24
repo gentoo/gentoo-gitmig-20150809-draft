@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.60 2006/10/22 16:34:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.61 2006/10/24 15:22:42 blubb Exp $
+
+  24 Oct 2006; Simon Stelling <blubb@gentoo.org> krita-1.5.2-r1.ebuild:
+  stable on amd64
 
 *krita-1.6.0-r1 (22 Oct 2006)
 
