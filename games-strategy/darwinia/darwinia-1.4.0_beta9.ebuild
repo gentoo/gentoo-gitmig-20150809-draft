@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.1 2006/09/30 19:37:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.2 2006/10/24 23:07:19 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,12 +25,8 @@ S=${WORKDIR}
 GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 
-pkg_setup() {
-	games_pkg_setup
-	use cdinstall && cdrom_get_cds gamefiles/main.dat
-}
-
 src_unpack() {
+	use cdinstall && cdrom_get_cds gamefiles/main.dat
 	unpack_makeself
 }
 

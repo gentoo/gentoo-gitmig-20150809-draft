@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.9 2006/04/17 13:30:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/smac-6.0a.ebuild,v 1.10 2006/10/24 23:08:25 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -35,12 +35,8 @@ RDEPEND="sys-libs/glibc
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
-pkg_setup() {
-	games_pkg_setup
-	cdrom_get_cds Alien_Crossfire_Manual.pdf
-}
-
 src_unpack() {
+	cdrom_get_cds Alien_Crossfire_Manual.pdf
 	mkdir -p ${S}/a
 	cd ${S}/a
 	unpack_makeself ${P}-x86.run

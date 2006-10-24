@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/smac
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.8 2006/04/17 13:30:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/smac/ChangeLog,v 1.9 2006/10/24 23:08:25 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> smac-6.0a.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install.
 
   17 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> smac-6.0a.ebuild:
   Moved games_pkg_setup to beginning of pkg_setup.

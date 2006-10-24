@@ -1,6 +1,6 @@
 # Copyright 2004-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.4 2006/04/17 13:32:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus/wargus-2.1-r1.ebuild,v 1.5 2006/10/24 23:06:43 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -19,12 +19,8 @@ DEPEND="media-libs/libpng
 	sys-libs/zlib"
 RDEPEND="=games-engines/stratagus-${PV:0:3}*"
 
-pkg_setup() {
-	games_pkg_setup
-	cdrom_get_cds data/rezdat.war
-}
-
 src_unpack() {
+	cdrom_get_cds data/rezdat.war
 	unpack ${A/wargus.png}
 	cd "${S}"
 	epatch "${FILESDIR}"/wargus-2.1-humanbasespell.patch \
