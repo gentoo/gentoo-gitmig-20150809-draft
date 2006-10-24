@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.1.ebuild,v 1.4 2006/10/22 13:54:18 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/freecol-0.5.1.ebuild,v 1.5 2006/10/24 22:03:00 mr_bones_ Exp $
 
 inherit eutils java-ant-2 java-pkg-2 games
 
@@ -41,7 +41,7 @@ src_install () {
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins -r FreeCol.jar data/ jars/ || die "doins failed"
 
-	games_make_wrapper ${PN} "java -Xmx256M -jar FreeCol.jar" \
+	games_make_wrapper ${PN} "java -Xmx512M -jar FreeCol.jar" \
 		"${GAMES_DATADIR}"/${PN}
 
 	dodoc README
