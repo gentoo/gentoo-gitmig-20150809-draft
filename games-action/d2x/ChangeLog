@@ -1,6 +1,10 @@
 # ChangeLog for games-action/d2x
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.15 2006/04/13 19:43:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.16 2006/10/24 22:31:42 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> d2x-0.2.5-r2.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install as well as some general cleanup.
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> -d2x-0.2.5-r1.ebuild:
   Removing old ebuild.

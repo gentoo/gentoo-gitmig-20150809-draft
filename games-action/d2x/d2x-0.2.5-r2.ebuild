@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r2.ebuild,v 1.4 2006/01/03 20:53:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/d2x-0.2.5-r2.ebuild,v 1.5 2006/10/24 22:31:42 wolf31o2 Exp $
 
 inherit flag-o-matic eutils games
 
@@ -24,36 +24,29 @@ RDEPEND="media-libs/libsdl
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
-pkg_setup() {
-	games_pkg_setup
-
+src_unpack() {
+	unpack ${A}
 	if use cdinstall ; then
-		if [[ ! -e ${DISTDIR}/descent2.sow ]] ; then
+		if [[ ! -e "${DISTDIR}"/descent2.sow ]] ; then
 			cdrom_get_cds d2data
 			if [ -e ${CDROM_ROOT}/d2data/descent2.sow ] ; then
 				export CDROM_ROOT=${CDROM_ROOT}/d2data
 				einfo "Found the original Descent2 CD"
 				einfo "Copying descent2.sow to ${DISTDIR}"
-				cp ${CDROM_ROOT}/descent2.sow ${DISTDIR}/descent2.sow
+				cp ${CDROM_ROOT}/descent2.sow "${DISTDIR}"/descent2.sow
 			else
 				die "You need the original Descent2 CD"
 			fi
 		fi
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	if use cdinstall ; then
-		cd ${WORKDIR}
+		cd "${WORKDIR}"
 		mkdir SOW
 		cd SOW
-		unarj e ${DISTDIR}/descent2.sow
+		unarj e "${DISTDIR}"/descent2.sow
 	fi
 	rm *.{exe,bat}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-shellscripts.patch
-	epatch ${FILESDIR}/${P}-dofpcalcs-macro.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-shellscripts.patch
+	epatch "${FILESDIR}"/${P}-dofpcalcs-macro.patch
 }
 
 src_compile() {
@@ -87,13 +80,13 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dogamesbin my-bins/*
-	dodir ${GAMES_DATADIR}/${PN}
+	dodir "${GAMES_DATADIR}"/${PN}
 	if use cdinstall ; then
-		cp -r ${WORKDIR}/SOW/* ${D}/${GAMES_DATADIR}/${PN}/
+		cp -r "${WORKDIR}"/SOW/* "${D}/${GAMES_DATADIR}"/${PN}/
 	else
-		cp -r ${WORKDIR}/${DATAFILE}/* ${D}/${GAMES_DATADIR}/${PN}/
+		cp -r "${WORKDIR}"/${DATAFILE}/* "${D}/${GAMES_DATADIR}"/${PN}/
 	fi
 	dodoc AUTHORS ChangeLog NEWS README* TODO readme.txt
 	prepgamesdirs
