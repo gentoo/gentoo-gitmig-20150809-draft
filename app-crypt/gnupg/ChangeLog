@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.240 2006/10/24 04:00:29 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.241 2006/10/24 18:32:17 grobian Exp $
+
+  24 Oct 2006; Fabian Groffen <grobian@gentoo.org> gnupg-1.4.2.2.ebuild,
+  gnupg-1.4.4.ebuild, gnupg-1.4.5.ebuild, gnupg-1.4.5-r1.ebuild,
+  gnupg-1.4.5-r2.ebuild:
+  Dropped ppc-macos keyword, see you in prefix.
 
   24 Oct 2006; Joshua Jackson <tsunam@gentoo.org> gnupg-1.4.5-r2.ebuild:
   Stable x86; bug #136665
