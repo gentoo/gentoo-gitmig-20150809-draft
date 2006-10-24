@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.30.30.ebuild,v 1.3 2006/10/09 23:38:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.30.30.ebuild,v 1.4 2006/10/24 00:12:29 pebenito Exp $
 
 IUSE="nls pam"
 
@@ -22,7 +22,6 @@ SLOT="0"
 KEYWORDS="alpha amd64 mips ppc sparc x86"
 
 RDEPEND=">=sys-libs/libselinux-${SELNX_VER}
-	>=sys-libs/glibc-2.4
 	pam? ( sys-libs/pam )
 	=sys-libs/libsemanage-${SEMNG_VER}*"
 
@@ -66,6 +65,11 @@ src_unpack() {
 		|| die "fixfiles sed 1 failed"
 	sed -i -e '/fixfiles/d' ${S}/scripts/Makefile \
 		|| die "fixfiles sed 2 failed"
+
+	if ! has_version '>=sys-libs/glibc-2.4'; then
+		ewarn "Glibc 2.4 or newer is not available.  Disabling restorecond."
+		sed -i -e '/^SUBDIRS/s/restorecond//' ${S}/Makefile
+	fi
 
 	if ! useq pam; then
 		# disable pam
