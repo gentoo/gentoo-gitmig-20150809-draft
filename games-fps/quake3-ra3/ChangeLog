@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/quake3-ra3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ra3/ChangeLog,v 1.6 2004/08/18 22:27:48 wolf31o2 Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ra3/ChangeLog,v 1.7 2006/10/24 21:18:21 wolf31o2 Exp $
+
+*quake3-ra3-1.76-r1 (24 Oct 2006)
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake3-ra3-1.76-r1.ebuild:
+  Added new revision for testing which uses the brand-spankin-new
+  games-mods.eclass to reduce ebuild code.
 
 *quake3-ra3-1.76 (18 Aug 2004)
 
