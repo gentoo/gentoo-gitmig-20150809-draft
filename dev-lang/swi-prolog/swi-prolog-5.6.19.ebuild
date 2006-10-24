@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.19.ebuild,v 1.5 2006/10/07 08:07:14 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-5.6.19.ebuild,v 1.6 2006/10/24 19:13:37 grobian Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://gollem.science.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.t
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="berkdb doc gmp java minimal odbc readline ssl static tetex threads X"
 
 DEPEND="!dev-lang/swi-prolog-lite
