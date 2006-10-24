@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/tork
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.9 2006/10/20 23:34:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tork/ChangeLog,v 1.10 2006/10/24 19:57:54 flameeyes Exp $
+
+*tork-0.10 (24 Oct 2006)
+
+  24 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +tork-0.10.ebuild:
+  Version bump.
 
   20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -files/tork-0.09-gcc41.patch, tork-0.09.ebuild:
