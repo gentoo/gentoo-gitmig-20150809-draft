@@ -8,6 +8,10 @@ EBUILD avalon-logkit-1.2-r1.ebuild 1907 RMD160 29f8e0e60cde6739468f5c7f6fc9efce7
 MD5 9b08c2d52e60f78db8abaf2a45ee4cc7 avalon-logkit-1.2-r1.ebuild 1907
 RMD160 29f8e0e60cde6739468f5c7f6fc9efce742c9325 avalon-logkit-1.2-r1.ebuild 1907
 SHA256 9e296d27129bd1ea2dbb6597fa07dd554e7f18bc871ba73cb85a814282b9c7e2 avalon-logkit-1.2-r1.ebuild 1907
+EBUILD avalon-logkit-1.2-r2.ebuild 1424 RMD160 a70b215599ed1881a09e1eed7d29a297bbb49d47 SHA1 5f3f933378b8b964f7aa7793a3ad6d14f4655623 SHA256 62071143f63122fc2114939bc14f6837a77b7eb3e5cb3262c628f430787f240d
+MD5 506b304ccae69a3b751092ee48cfb2b9 avalon-logkit-1.2-r2.ebuild 1424
+RMD160 a70b215599ed1881a09e1eed7d29a297bbb49d47 avalon-logkit-1.2-r2.ebuild 1424
+SHA256 62071143f63122fc2114939bc14f6837a77b7eb3e5cb3262c628f430787f240d avalon-logkit-1.2-r2.ebuild 1424
 EBUILD avalon-logkit-1.2.ebuild 1909 RMD160 eba7da65a939d261c6a48b2a69825037341c37d8 SHA1 afc9d4b557f7816f14c000267d943c72371e3c7c SHA256 6240da872f1c898d68fd1af8c1eb113264c2d1a39d9a810fee21517adbcaf62b
 MD5 97d2897ca1deaae96f7f7e10bee1558e avalon-logkit-1.2.ebuild 1909
 RMD160 eba7da65a939d261c6a48b2a69825037341c37d8 avalon-logkit-1.2.ebuild 1909
@@ -16,14 +20,18 @@ EBUILD avalon-logkit-2.0-r1.ebuild 2314 RMD160 58b3bfc23e5f69f33d50e4a616f9c123c
 MD5 3ba853eb785cb9f836696c2f4c45a74a avalon-logkit-2.0-r1.ebuild 2314
 RMD160 58b3bfc23e5f69f33d50e4a616f9c123c57d52d8 avalon-logkit-2.0-r1.ebuild 2314
 SHA256 f7e2a1e636494dbe983e8d8fd15bb26901a807426a5d5824c3e3a2ee7374f0b7 avalon-logkit-2.0-r1.ebuild 2314
+EBUILD avalon-logkit-2.0-r2.ebuild 1786 RMD160 9565dd05782d1c5ad96001c663c06b008b2953dd SHA1 1e93f74abd73ace68ee23388cec3f4c77a2edcf4 SHA256 f5e07dbb9ffe3c3f1ec52983fea26ed45f668ecddcf66feebc219a1e3cb122b8
+MD5 0ca89c1c6073a6958cbfeb3948e7d75e avalon-logkit-2.0-r2.ebuild 1786
+RMD160 9565dd05782d1c5ad96001c663c06b008b2953dd avalon-logkit-2.0-r2.ebuild 1786
+SHA256 f5e07dbb9ffe3c3f1ec52983fea26ed45f668ecddcf66feebc219a1e3cb122b8 avalon-logkit-2.0-r2.ebuild 1786
 EBUILD avalon-logkit-2.0.ebuild 2363 RMD160 715bc16b1581009e28c1e8d45941fb3eb537d46d SHA1 b4b211ec306f62f6b7367d855bb10b39c3f6aa72 SHA256 cc6bbd1dc3620ca828db7506b1520ef90301398a590165d11d6fe9beaf3a29ae
 MD5 12ed0d54677c5ae19389db59edbf884d avalon-logkit-2.0.ebuild 2363
 RMD160 715bc16b1581009e28c1e8d45941fb3eb537d46d avalon-logkit-2.0.ebuild 2363
 SHA256 cc6bbd1dc3620ca828db7506b1520ef90301398a590165d11d6fe9beaf3a29ae avalon-logkit-2.0.ebuild 2363
-MISC ChangeLog 3118 RMD160 1c82c2cb8d0ce0c5758917a78bfb87d8dcc87fb4 SHA1 8acaf45f96df3012b3bdc793554284e4a306ae1b SHA256 6cb5ec3fd8a4d3fcc9984fc4aa135bcbe2f767c468caa8ed98d65c8de1d95e54
-MD5 4aed20b4d123b1ff26cf3451c1b40c0c ChangeLog 3118
-RMD160 1c82c2cb8d0ce0c5758917a78bfb87d8dcc87fb4 ChangeLog 3118
-SHA256 6cb5ec3fd8a4d3fcc9984fc4aa135bcbe2f767c468caa8ed98d65c8de1d95e54 ChangeLog 3118
+MISC ChangeLog 3556 RMD160 aa64fe34d31f1b6ccfcb520427d1c8e8c7740b43 SHA1 995affe21210aba764b049305543c4515cd52ce3 SHA256 96043f759973e9cb16fa3126c1b173d8ae511c5fe61491ce073e52c8c68ad253
+MD5 1b1f8840f52cdd945fa593c13aaff680 ChangeLog 3556
+RMD160 aa64fe34d31f1b6ccfcb520427d1c8e8c7740b43 ChangeLog 3556
+SHA256 96043f759973e9cb16fa3126c1b173d8ae511c5fe61491ce073e52c8c68ad253 ChangeLog 3556
 MISC metadata.xml 157 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 SHA1 c37a6b9922aef61b5b3387655bccb6e3b16e0e26 SHA256 295d02c5805b0257938eb80314b371daac94b8d6ea85629a902de7a824adc0c9
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 RMD160 ab0b3741457dee7531f59c4da0f0e9e8399af084 metadata.xml 157
@@ -34,9 +42,15 @@ SHA256 37328c380c7e2d18c1a9125d84a4c3b0471276cb6d56f8484f081b5f3c72d7e0 files/di
 MD5 859fcf425f41b844a5286d23efe3db74 files/digest-avalon-logkit-1.2-r1 244
 RMD160 570f9d7bfd46c872bf09ad08288c30be547fda88 files/digest-avalon-logkit-1.2-r1 244
 SHA256 37328c380c7e2d18c1a9125d84a4c3b0471276cb6d56f8484f081b5f3c72d7e0 files/digest-avalon-logkit-1.2-r1 244
+MD5 859fcf425f41b844a5286d23efe3db74 files/digest-avalon-logkit-1.2-r2 244
+RMD160 570f9d7bfd46c872bf09ad08288c30be547fda88 files/digest-avalon-logkit-1.2-r2 244
+SHA256 37328c380c7e2d18c1a9125d84a4c3b0471276cb6d56f8484f081b5f3c72d7e0 files/digest-avalon-logkit-1.2-r2 244
 MD5 7cbd49bfbba70d98bf56698822227c97 files/digest-avalon-logkit-2.0 280
 RMD160 d974eca7896af7f551f5eafb530d23da24a5e8b4 files/digest-avalon-logkit-2.0 280
 SHA256 02c6398115ffb6a9dd0427bc508d45afe4652ad590b34f01393cd76538a930a2 files/digest-avalon-logkit-2.0 280
 MD5 7cbd49bfbba70d98bf56698822227c97 files/digest-avalon-logkit-2.0-r1 280
 RMD160 d974eca7896af7f551f5eafb530d23da24a5e8b4 files/digest-avalon-logkit-2.0-r1 280
 SHA256 02c6398115ffb6a9dd0427bc508d45afe4652ad590b34f01393cd76538a930a2 files/digest-avalon-logkit-2.0-r1 280
+MD5 7cbd49bfbba70d98bf56698822227c97 files/digest-avalon-logkit-2.0-r2 280
+RMD160 d974eca7896af7f551f5eafb530d23da24a5e8b4 files/digest-avalon-logkit-2.0-r2 280
+SHA256 02c6398115ffb6a9dd0427bc508d45afe4652ad590b34f01393cd76538a930a2 files/digest-avalon-logkit-2.0-r2 280
