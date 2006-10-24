@@ -3,6 +3,11 @@ app-text/crm114 mew mimencode test
 # ptex isn't tested yet
 app-text/xdvik cjk
 
+# Threaded Postgres is a total no go - initdb hands and psql
+# segfaults when result set requires a pager
+dev-db/libpq threads
+dev-db/postgresql threads
+
 # Threaded Ruby (1.8) on FreeBSD segfaults
 dev-lang/ruby threads
 
