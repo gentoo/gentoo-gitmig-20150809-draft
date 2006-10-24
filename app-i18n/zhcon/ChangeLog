@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.9 2006/10/22 22:40:27 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.10 2006/10/24 08:49:30 flameeyes Exp $
+
+  24 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/zhcon-0.2.3-CAN-2005-0072.patch,
+  -files/zhcon-0.2.3-assert-gentoo.diff, -files/zhcon-0.2.3-gcc34.patch,
+  -files/zhcon-0.2.3-gentoo.diff, -zhcon-0.2.3.ebuild,
+  -zhcon-0.2.3-r1.ebuild, zhcon-0.2.6.ebuild:
+  Use -j1 for make install, thanks Zhang Le in bug #144944. Remove old
+  versions, that don't work anyway.
 
   22 Oct 2006; Joshua Jackson <tsunam@gentoo.org> zhcon-0.2.3.ebuild,
   zhcon-0.2.3-r1.ebuild:
