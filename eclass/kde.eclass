@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.182 2006/10/14 10:59:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.183 2006/10/24 08:39:31 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -315,6 +315,9 @@ EOF
 					einfo "Removing the dummy ltconfig file."
 					rm "${KDE_S}/admin/ltconfig"
 				fi
+
+				use elibc_FreeBSD && myconf="${myconf} --disable-pie"
+
 				elibtoolize
 				econf \
 					${myconf} \
