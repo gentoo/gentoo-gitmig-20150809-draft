@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.24 2006/10/24 09:13:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.25 2006/10/24 18:29:24 flameeyes Exp $
+
+  24 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  freebsd-sbin-6.1.ebuild, freebsd-sbin-6.2_beta2.ebuild:
+  Fix mirror:// uri, thanks Brian.
 
   24 Oct 2006; Roy Marples <uberlord@gentoo.org>
   freebsd-sbin-6.2_beta2.ebuild:
