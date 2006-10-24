@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.6 2006/04/13 19:41:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x/d1x-20040118.ebuild,v 1.7 2006/10/24 22:42:18 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -24,12 +24,8 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-pkg_setup() {
-	games_pkg_setup
-	cdrom_get_cds descent
-}
-
 src_unpack() {
+	cdrom_get_cds descent
 	unpack ${A}
 
 	mkdir "${WORKDIR}/descent1-data" || die
