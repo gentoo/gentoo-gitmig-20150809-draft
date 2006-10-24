@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/popt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.38 2006/10/21 11:45:40 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.39 2006/10/24 19:16:50 grobian Exp $
+
+  24 Oct 2006; Fabian Groffen <grobian@gentoo.org> popt-1.7-r1.ebuild,
+  popt-1.10.4-r1.ebuild, popt-1.10.4-r2.ebuild:
+  Dropped ppc-macos keyword, see you in prefix.
 
 *popt-1.10.4-r2 (21 Oct 2006)
 
