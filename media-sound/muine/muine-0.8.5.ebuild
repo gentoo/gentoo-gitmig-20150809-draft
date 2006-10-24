@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.5.ebuild,v 1.2 2006/07/02 18:03:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.5.ebuild,v 1.3 2006/10/24 01:16:12 latexer Exp $
 
 inherit gnome2 mono eutils multilib autotools
 
@@ -43,7 +43,7 @@ RDEPEND=">=dev-lang/mono-1.1
 	>=x11-libs/gtk+-2.6.0
 	>=dev-util/intltool-0.29
 	>=sys-apps/dbus-0.23.2-r1
-	media-libs/flac"
+	~media-libs/flac-1.1.2"
 
 DEPEND="${RDEPEND}
 	gnome-base/gnome-common
