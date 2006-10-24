@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.0.ebuild,v 1.2 2006/10/22 18:26:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.4.0.ebuild,v 1.3 2006/10/24 03:24:26 markusle Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -55,6 +55,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	sed -i -e "s:-fpic:-fPIC:g" ${S}/configure
+	epatch "${FILESDIR}"/${P}-as-needed-gentoo.patch
 }
 
 src_compile() {
