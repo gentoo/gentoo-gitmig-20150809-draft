@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/jimmac-xcursors-0.0.1.ebuild,v 1.11 2006/01/31 14:57:12 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/jimmac-xcursors/jimmac-xcursors-0.0.1.ebuild,v 1.12 2006/10/24 00:48:53 gothgirl Exp $
 
 MY_P="6550-Jimmac.tar.gz"
 DESCRIPTION="A high quality set of Xfree 4.3.0 animated mouse cursors"
@@ -41,7 +41,7 @@ pkg_postinst() {
 	einfo "To globally use this set of mouse cursors edit the file:"
 	einfo "	  /etc/env.d/99xcursors"
 	einfo "and change add the line:"
-	einfo "	  XCURSORS_THEME="Jimmac""
+	einfo "	  XCURSOR_THEME="Jimmac""
 	einfo "Note this will be overruled by a user's ~/.Xdefaults file."
 	einfo ""
 	ewarn "If you experience flickering, try setting the following line in"
