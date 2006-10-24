@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DCOP-Amarok-Player
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok-Player/ChangeLog,v 1.1 2006/10/24 00:36:08 mcummings Exp $
+
+*DCOP-Amarok-Player-0.036 (24 Oct 2006)
+
+  24 Oct 2006; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +DCOP-Amarok-Player-0.036.ebuild:
+  Initial import, bug 152600, ebuild supplied by rbu
+
