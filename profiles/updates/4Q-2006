@@ -1,2 +1,3 @@
 move net-misc/yate net-voip/yate
 move media-video/stan app-crypt/stan
+move sys-power/sispm_ctl sys-power/sispmctl
