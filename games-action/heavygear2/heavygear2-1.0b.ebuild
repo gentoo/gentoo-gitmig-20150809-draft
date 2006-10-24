@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.14 2006/04/13 19:46:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heavygear2/heavygear2-1.0b.ebuild,v 1.15 2006/10/24 22:25:17 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -27,7 +27,6 @@ Ddir=${D}/${dir}
 
 pkg_setup() {
 	games_pkg_setup
-	cdrom_get_cds shell/movies/asteroid.mpg
 	if use videos ; then
 		ewarn "The installed game takes about 500MB of space!"
 	else
@@ -36,6 +35,7 @@ pkg_setup() {
 }
 
 src_unpack() {
+	cdrom_get_cds shell/movies/asteroid.mpg
 	unpack_makeself
 }
 
