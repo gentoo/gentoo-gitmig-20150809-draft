@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.78 2006/10/03 13:10:53 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.79 2006/10/24 03:33:36 dang Exp $
+
+  24 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> openh323-1.18.0.ebuild:
+  Marked stable on amd64 for bug #145783
 
   03 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   -openh323-1.12.0-r1.ebuild, -openh323-1.12.2-r2.ebuild,
