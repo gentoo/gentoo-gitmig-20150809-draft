@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/quake4-data-1.0.2147.12.ebuild,v 1.7 2006/09/27 22:24:34 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-data/quake4-data-1.0.2147.12.ebuild,v 1.8 2006/10/24 23:03:20 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -25,15 +25,11 @@ GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/quake4
 Ddir=${D}/${dir}
 
-pkg_setup() {
-	games_pkg_setup
+src_install() {
 	cdrom_get_cds Setup/Data/q4base/pak012.pk4 \
 		Setup/Data/q4base/pak001.pk4 \
 		Setup/Data/q4base/pak004.pk4 \
 		Setup/Data/q4base/pak007.pk4
-}
-
-src_install() {
 	insinto "${dir}"/q4base
 	einfo "Copying files from Disk 1..."
 	doins ${CDROM_ROOT}/Setup/Data/q4base/pak01{0,1,2}.pk4 \
