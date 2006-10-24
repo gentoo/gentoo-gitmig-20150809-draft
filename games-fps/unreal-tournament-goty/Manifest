@@ -1,18 +1,35 @@
-MD5 2b878bbec314264f1e9063884dc5e2a8 ChangeLog 1811
-RMD160 cf5f0936effbe3f818d02932be9f39fd8c32f228 ChangeLog 1811
-SHA256 b6a3595fb1016072a38788fdee6083417aa287ca35db91f76e68df79f48295fe ChangeLog 1811
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST IpDrv-436-Linux-08-20-02.zip 105435
+DIST UTPGPatch451.tar.bz2 3064473
+DIST ut-install-436-GOTY.run 6340417
+EBUILD unreal-tournament-goty-436.ebuild 4922 RMD160 99e4b9fa59c93da49a2086c9631eaf148dda471b SHA1 0fd64a4a6ec708680519c5b0d47770fbc6252ad7 SHA256 6cf5f27092b857d591c79c375c536ee4bd8dd1f268ecbcb43d9cb305d2932c34
+MD5 b6c2ab706d9fc8826aa29e12a2e8743c unreal-tournament-goty-436.ebuild 4922
+RMD160 99e4b9fa59c93da49a2086c9631eaf148dda471b unreal-tournament-goty-436.ebuild 4922
+SHA256 6cf5f27092b857d591c79c375c536ee4bd8dd1f268ecbcb43d9cb305d2932c34 unreal-tournament-goty-436.ebuild 4922
+EBUILD unreal-tournament-goty-451.ebuild 5224 RMD160 ae50096434fcf931667ef83644edf359413d3a08 SHA1 ac64ae80f7b168df36a3603ce033665bea0419bd SHA256 0c3f563e9e3b2a14456468a3c4ad4e2390ab06411409edd78db7dff9215c30ac
+MD5 43774fd16d14ae20e789f71108091bca unreal-tournament-goty-451.ebuild 5224
+RMD160 ae50096434fcf931667ef83644edf359413d3a08 unreal-tournament-goty-451.ebuild 5224
+SHA256 0c3f563e9e3b2a14456468a3c4ad4e2390ab06411409edd78db7dff9215c30ac unreal-tournament-goty-451.ebuild 5224
+MISC ChangeLog 2043 RMD160 8b8be24f7914e1611a364b8341a623111b3871e9 SHA1 4a41d61c56fcd0bae9babffd52b2a4a21b14eb94 SHA256 a9c0cda6e6958deaae21f6d511120de017226b7d1710a6e8145d1d5ce08b58f0
+MD5 d6932595bb2c97bd743eeb6568b4960f ChangeLog 2043
+RMD160 8b8be24f7914e1611a364b8341a623111b3871e9 ChangeLog 2043
+SHA256 a9c0cda6e6958deaae21f6d511120de017226b7d1710a6e8145d1d5ce08b58f0 ChangeLog 2043
+MISC metadata.xml 1595 RMD160 a9bda1a65c1cb4e838f67668fc809573b3b205ff SHA1 f0692b562be5d1928561edc508c56f36bb444584 SHA256 6ec59eb7898c952781cb079f5b9cde51907c94de0b075df3550c108aba61a9bf
+MD5 745cf2302a475c4f92c2aae453c20c14 metadata.xml 1595
+RMD160 a9bda1a65c1cb4e838f67668fc809573b3b205ff metadata.xml 1595
+SHA256 6ec59eb7898c952781cb079f5b9cde51907c94de0b075df3550c108aba61a9bf metadata.xml 1595
 MD5 9410f0d78776e5b045bf0f47226a7cd7 files/digest-unreal-tournament-goty-436 142
 RMD160 f7efee8270e229c0d84c3fed158f7ebee9da6d66 files/digest-unreal-tournament-goty-436 142
 SHA256 d04c527285586de4d464abf45c0f7b88cbd21403508ce365cb47897c99eed048 files/digest-unreal-tournament-goty-436 142
 MD5 1cbaec035f9fd4841f609ff9edbe9959 files/digest-unreal-tournament-goty-451 135
 RMD160 834e8e14f0a63e6a0b9ebe9aa418d9b223ad1294 files/digest-unreal-tournament-goty-451 135
 SHA256 2c4b3917ce15fee21c33c901143afe4eed1ed12e053dceda785834dbfa835c2e files/digest-unreal-tournament-goty-451 135
-MD5 745cf2302a475c4f92c2aae453c20c14 metadata.xml 1595
-RMD160 a9bda1a65c1cb4e838f67668fc809573b3b205ff metadata.xml 1595
-SHA256 6ec59eb7898c952781cb079f5b9cde51907c94de0b075df3550c108aba61a9bf metadata.xml 1595
-MD5 9980a9a58e0704ca088c579176156090 unreal-tournament-goty-436.ebuild 4956
-RMD160 ac27ec772f83dc6f889e4a1978ca0329b005a661 unreal-tournament-goty-436.ebuild 4956
-SHA256 a6b92b1262fb0c5078787286bdd6f6077b86dbd9e72558c651bd566a6b7bffb5 unreal-tournament-goty-436.ebuild 4956
-MD5 8f67fbab537fb3b05f1aadf06d94d380 unreal-tournament-goty-451.ebuild 5258
-RMD160 1ceb316ad3e8be6489dbf672baaaae4e5599b3da unreal-tournament-goty-451.ebuild 5258
-SHA256 53083350adf657686aacb1e3c00b8d93618840142ef2b379f4c6f5eba9a9a1d8 unreal-tournament-goty-451.ebuild 5258
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFPpq9kT4lNIS36YERAh/rAJ4zpSFK//OTr/cO3jHCUy0lbNd7lQCfTVnJ
+RtcwDj+rMjzq2FTA5uW3eek=
+=Dmsq
+-----END PGP SIGNATURE-----
