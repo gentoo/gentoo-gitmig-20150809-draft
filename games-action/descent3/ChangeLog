@@ -1,6 +1,11 @@
 # ChangeLog for games-action/descent3
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.21 2006/10/13 15:41:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/ChangeLog,v 1.22 2006/10/24 22:41:03 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  descent3-1.4.0b-r1.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install as well as some general cleanup.
 
   13 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   descent3-1.4.0b-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/fakk2
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.14 2006/04/13 19:45:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/ChangeLog,v 1.15 2006/10/24 22:43:18 wolf31o2 Exp $
+
+  24 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> fakk2-1.02.ebuild:
+  Moved cdrom_get_cds to src_unpack since binary packages don't require the
+  original media to install as well as some general cleanup.
 
   13 Apr 2006; Chris Gianelloni <wolf31o2@gentoo.org> fakk2-1.02.ebuild:
   Moved games_pkg_setup to the beginning of pkg_setup and changed to use

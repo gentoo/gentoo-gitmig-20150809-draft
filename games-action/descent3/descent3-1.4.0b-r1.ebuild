@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.9 2006/10/13 15:41:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r1.ebuild,v 1.10 2006/10/24 22:41:03 wolf31o2 Exp $
 
 inherit eutils multilib games
 
@@ -36,11 +36,7 @@ pkg_setup() {
 	games_pkg_setup
 	if use videos ; then
 		ewarn "The installed game takes about 1.2GB of space!"
-		cdrom_get_cds missions/d3.mn3 movies/level1.mve
-	else
-		cdrom_get_cds missions/d3.mn3
-	fi
-	if use nocd ; then
+	elif use nocd ; then
 		ewarn "The installed game takes about 510MB of space!"
 	else
 		ewarn "The installed game takes about 220MB of space!"
@@ -48,24 +44,29 @@ pkg_setup() {
 }
 
 src_unpack() {
+	if use videos ; then
+		cdrom_get_cds missions/d3.mn3 movies/level1.mve
+	else
+		cdrom_get_cds missions/d3.mn3
+	fi
 	mkdir -p ${S}/{a,b}
-	cd ${S}/a
+	cd "${S}"/a
 	unpack_makeself ${PN}-1.4.0a-x86.run
-	cd ${S}/b
+	cd "${S}"/b
 	unpack_makeself ${P}-x86.run
 }
 
 src_install() {
-	dodir ${dir}
 	einfo "Copying files... this may take a while..."
-	exeinto ${dir}
+	exeinto "${dir}"
 	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{${PN},nettest} \
 		|| die "copying executables"
-	insinto ${dir}
+	insinto "${dir}"
 	doins ${CDROM_ROOT}/{FAQ.txt,README{,.mercenary},d3.hog,icon.{bmp,xpm}} \
 		|| die "copying files"
 
-	cd ${Ddir}
+	cd "${Ddir}"
+	# TODO: move this to src_unpack where it belongs
 	tar xzf ${CDROM_ROOT}/data.tar.gz || die "uncompressing data"
 	tar xzf ${CDROM_ROOT}/shared.tar.gz || die "uncompressing shared"
 
@@ -78,29 +79,29 @@ src_install() {
 		doins -r ${CDROM_ROOT}/movies || die "copying movies"
 	fi
 
-	cd ${S}/a
+	cd "${S}"/a
 	bin/Linux/x86/loki_patch --verify patch.dat
-	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching a"
-	cd ${S}/b
+	bin/Linux/x86/loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching a"
+	cd "${S}"/b
 	bin/Linux/x86/loki_patch --verify patch.dat
-	bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null || die "patching b"
+	bin/Linux/x86/loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching b"
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
-	find ${Ddir} -exec touch '{}' \
+	find "${Ddir}" -exec touch '{}' \
 
 	if use amd64
 	then
 		dosym /usr/$(get_libdir)/loki_libsmpeg-0.4.so.0 \
-		${dir}/libsmpeg-0.4.so.0 || die "failed compatibility symlink"
+			"${dir}"/libsmpeg-0.4.so.0 || die "failed compatibility symlink"
 	fi
 
 	games_make_wrapper descent3 ./descent3.dynamic "${dir}" "${dir}"
 	newicon ${CDROM_ROOT}/icon.xpm ${PN}.xpm
 
 	# Fix for 2.6 kernel crash
-	cd ${Ddir}
+	cd "${Ddir}"
 	ln -sf ppics.hog PPics.Hog
 
 	prepgamesdirs
