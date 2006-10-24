@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/bemused
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.4 2006/06/28 17:51:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.5 2006/10/24 08:43:00 mrness Exp $
+
+*bemused-1.73-r1 (24 Oct 2006)
+
+  24 Oct 2006; Alin Nastac <mrness@gentoo.org>
+  +files/bemused-1.73-audacious.patch, -bemused-1.73.ebuild,
+  +bemused-1.73-r1.ebuild:
+  Use audacious instead xmms (#152477).
 
   28 Jun 2006; Alin Nastac <mrness@gentoo.org>
   +files/bemused-1.73-gcc41.patch, bemused-1.73.ebuild:
