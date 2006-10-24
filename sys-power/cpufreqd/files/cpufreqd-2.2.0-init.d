@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.2.0-init.d,v 1.4 2006/10/22 23:14:03 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/files/cpufreqd-2.2.0-init.d,v 1.5 2006/10/24 12:39:53 peper Exp $
 
 CONFIGFILE=/etc/cpufreqd.conf
 
@@ -16,17 +16,14 @@ checkconfig() {
 		return 1
 	fi
 
-	if [ ! -e /proc/cpufreq ] ; then
+	if [[ ! -e /proc/cpufreq ]] ; then
 		for cpu in /sys/devices/system/cpu/cpu[0-9]* ; do
-			n=${cpu##*/}
-			n=${n/cpu/}
-
-			if [ ! -e /sys/devices/system/cpu/cpu${n}/cpufreq ] ; then
-				eerror "cpufreqd requires the kernel to be configured with CONFIG_CPU_FREQ"
-				eerror "Make sure that the appropiate drivers for your CPU are available."
-				return 1
-			fi
+                        # We need just one cpu supporting freq scaling.
+                        [[ -e ${cpu}/cpufreq ]] && return 0
 		done
+		eerror "cpufreqd requires the kernel to be configured with CONFIG_CPU_FREQ"
+		eerror "Make sure that the appropiate drivers for your CPU are available."
+		return 1
 	fi
 }
 

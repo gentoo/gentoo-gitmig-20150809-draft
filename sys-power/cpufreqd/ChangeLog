@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufreqd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.40 2006/10/22 08:24:58 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.41 2006/10/24 12:39:53 peper Exp $
+
+  24 Oct 2006; Piotr Jaroszyński <peper@gentoo.org>
+  files/cpufreqd-2.2.0-init.d:
+  Fixed the init script to start if at least one cpu supports freq scaling.
 
 *cpufreqd-2.2.0-r2 (22 Oct 2006)
 
