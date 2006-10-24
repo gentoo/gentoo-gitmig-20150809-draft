@@ -111,6 +111,16 @@ diff -urNp beecrypt-4.1.2.org/configure.ac beecrypt-4.1.2/configure.ac
      ;;
    x86_64)
      CPPFLAGS="$CPPFLAGS -DOPTIMIZE_X86_64"
+@@ -612,7 +612,7 @@
+ case $target_os in
+ linux*)
+   case $bc_target_arch in
+-  powerpc64 | s390x | x86_64)
++  powerpc64 | s390x | x86_64 | athlon64 | athlon-fx | em64t | k8)
+     bc_libalt="64"
+     ;;
+   esac
+
 diff -urNp beecrypt-4.1.2.org/gas/x86.m4 beecrypt-4.1.2/gas/x86.m4
 --- beecrypt-4.1.2.org/gas/x86.m4	2004-06-13 14:37:28.000000000 +0300
 +++ beecrypt-4.1.2/gas/x86.m4	2006-10-23 22:05:14.000000000 +0200
