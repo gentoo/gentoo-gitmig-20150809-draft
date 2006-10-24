@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.218 2006/10/19 15:21:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.219 2006/10/24 08:03:24 uberlord Exp $
+
+  24 Oct 2006; Roy Marples <uberlord@gentoo.org> glib-2.12.4.ebuild:
+  Added ~sparc-fbsd keyword.
 
   19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> glib-2.10.3.ebuild:
   Stable on Alpha.
