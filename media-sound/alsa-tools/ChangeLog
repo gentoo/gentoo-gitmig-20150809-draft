@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.121 2006/10/22 09:15:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.122 2006/10/24 09:03:25 blubb Exp $
+
+  24 Oct 2006; Simon Stelling <blubb@gentoo.org> alsa-tools-1.0.13.ebuild:
+  stable on amd64
 
   22 Oct 2006; Markus Rothe <corsair@gentoo.org> alsa-tools-1.0.13.ebuild:
   Stable on ppc64; bug #150540
