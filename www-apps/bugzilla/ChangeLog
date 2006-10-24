@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.70 2006/10/22 09:25:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.71 2006/10/24 02:45:50 tsunam Exp $
+
+  24 Oct 2006; Joshua Jackson <tsunam@gentoo.org> bugzilla-2.18.6.ebuild:
+  Stable x86; bug #151563
 
   22 Oct 2006; Markus Rothe <corsair@gentoo.org> bugzilla-2.18.6.ebuild:
   Stable on ppc64; bug #151563
