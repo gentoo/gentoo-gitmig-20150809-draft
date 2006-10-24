@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # this is a script which is executed after disconnecting the ppp interface.
 # look at man pppd for details
@@ -12,26 +12,29 @@
 # $6 = ipparam
 
 if [ "$USEPEERDNS" ]; then
+	if [ -x /sbin/resolvconf ]; then
+		resolvconf -d "$1"
+	else
+		# taken from debian's 0000usepeerdns
+		# follow any symlink to find the real file
+		REALRESOLVCONF=$(readlink --canonicalize /etc/resolv.conf)
 
-	# taken from debian's 0000usepeerdns
-	# follow any symlink to find the real file
-	REALRESOLVCONF=$(readlink --canonicalize /etc/resolv.conf)
+		if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
 
-	if [ "$REALRESOLVCONF" != "/etc/ppp/resolv.conf" ]; then
+			# if an old resolv.conf file exists, restore it
+			if [ -e $REALRESOLVCONF.pppd-backup ]; then
+				mv $REALRESOLVCONF.pppd-backup $REALRESOLVCONF
+			fi
 
-		# if an old resolv.conf file exists, restore it
-		if [ -e $REALRESOLVCONF.pppd-backup ]; then
-			mv $REALRESOLVCONF.pppd-backup $REALRESOLVCONF
 		fi
-
 	fi
-
 fi
 
-# Recreate the default route so autodial works
-[ -s /etc/conf.d/net ] && . /etc/conf.d/net
-if [ -n "${gateway}" ] && [ "${gateway%/*}" = "$1" ]; then
-	/sbin/route add default dev ${gateway%/*}
+if [ -x /etc/init.d/net.$1 ]; then
+	if /etc/init.d/net.$1 --quiet status ; then
+		export IN_BACKGROUND="true"
+		/etc/init.d/net.$1 --quiet stop
+	fi
 fi
 
 [ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local "$@"

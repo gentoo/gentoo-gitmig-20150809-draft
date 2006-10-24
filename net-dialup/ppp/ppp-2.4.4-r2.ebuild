@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r2.ebuild,v 1.1 2006/10/05 07:28:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r2.ebuild,v 1.2 2006/10/24 09:12:14 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -152,8 +152,8 @@ src_install() {
 	doins etc.ppp/options
 
 	insopts -m0755
-	newins "${FILESDIR}/ip-up.baselayout" ip-up
-	newins "${FILESDIR}/ip-down.baselayout" ip-down
+	doins "${FILESDIR}/ip-up"
+	doins "${FILESDIR}/ip-down"
 
 	if use pam; then
 		insinto /etc/pam.d
