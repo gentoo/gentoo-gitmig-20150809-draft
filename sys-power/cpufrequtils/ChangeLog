@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.31 2006/10/21 13:11:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.32 2006/10/24 04:06:36 tsunam Exp $
+
+  24 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
+  cpufrequtils-002-r2.ebuild:
+  Stable x86; bug #152155
 
   21 Oct 2006; <nixnut@gentoo.org> cpufrequtils-002-r2.ebuild:
   Stable on ppc wrt bug 152155
