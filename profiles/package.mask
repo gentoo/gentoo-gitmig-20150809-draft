@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6132 2006/10/25 06:21:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6133 2006/10/25 15:39:00 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -64,6 +64,7 @@ dev-perl/rpm
 >=games-fps/quake3-ruinhunters-1.0a-r1
 >=games-fps/quake3-threewave-1.7-r1
 >=games-fps/quake3-urbanterror-3.7-r1
+>=games-fps/quake3-wop-1.0_beta1-r2
 
 # Fabian Groffen <grobian@gentoo.org> (23 Oct 2006)
 # MonetDB doesn't compile any more.  Waiting for next release (soon) 
