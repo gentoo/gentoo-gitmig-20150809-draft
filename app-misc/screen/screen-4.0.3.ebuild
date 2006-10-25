@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r5.ebuild,v 1.12 2006/10/25 17:07:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.3.ebuild,v 1.1 2006/10/25 17:07:52 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs pam autotools
 
 DESCRIPTION="Screen is a full-screen window manager that multiplexes a physical terminal between several processes"
 HOMEPAGE="http://www.gnu.org/software/screen/"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug nethack pam selinux multiuser"
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -41,23 +41,23 @@ src_unpack() {
 
 	# uclibc doesnt have sys/stropts.h
 	if ! (echo '#include <sys/stropts.h>' | $(tc-getCC) -E - &>/dev/null) ; then
-		epatch "${FILESDIR}"/${PV}-no-pty.patch
+		epatch "${FILESDIR}"/4.0.2-no-pty.patch
 	fi
 
 	# Don't use utempter even if it is found on the system
-	epatch "${FILESDIR}"/${PV}-no-utempter.patch
+	epatch "${FILESDIR}"/4.0.2-no-utempter.patch
 
 	# Don't link against libelf even if it is found on the system
-	epatch "${FILESDIR}"/${PV}-no-libelf.patch
+	epatch "${FILESDIR}"/4.0.2-no-libelf.patch
 
 	# Patch for time function on 64bit systems
-	epatch "${FILESDIR}"/${PV}-64bit-time.patch
+	epatch "${FILESDIR}"/4.0.2-64bit-time.patch
 
 	# Patch that makes %u work for windowlist -b formats
-	epatch "${FILESDIR}"/${PV}-windowlist-multiuser-fix.patch
+	epatch "${FILESDIR}"/4.0.2-windowlist-multiuser-fix.patch
 
 	# Open tty in non-blocking mode
-	epatch "${FILESDIR}"/${PV}-nonblock.patch
+	epatch "${FILESDIR}"/4.0.2-nonblock.patch
 
 	# Fix manpage.
 	sed -i \
