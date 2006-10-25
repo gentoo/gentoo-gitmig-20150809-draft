@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.18 2006/10/25 07:18:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.19 2006/10/25 18:25:24 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -353,6 +353,12 @@ src_unpack() {
 	# Set up kdrive servers to build
 	if use kdrive; then
 		einfo "Removing unused kdrive drivers ..."
+
+		# Some kdrive servers require fbdev and vesa
+		local kdrive_fbdev="radeon neomagic sis siliconmotion"
+		# Some kdrive servers require just vesa
+		local kdrive_vesa="chips mach64 mga nv glint r128 via"
+
 		for card in ${IUSE_VIDEO_CARDS}; do
 			real_card=${card#video_cards_}
 
@@ -372,13 +378,25 @@ src_unpack() {
 			fi
 
 			if ! use ${card}; then
-				# (bug #136370) Radeon needs fbdev and vesa
-				if use x86 \
-					&& use video_cards_radeon; then
-					if [[ ${real_card} = fbdev ]] \
-						|| [[ ${real_card} = vesa ]]; then
-						continue
-					fi
+				if use x86; then
+					# Some kdrive servers require fbdev and vesa
+					for i in ${kdrive_fbdev}; do
+						if use video_cards_${i}; then
+							if [[ ${real_card} = fbdev ]] \
+								|| [[ ${real_card} = vesa ]]; then
+								continue 2 # Don't disable
+							fi
+						fi
+					done
+
+					# Some kdrive servers require just vesa
+					for i in ${kdrive_vesa}; do
+						if use video_cards_${i}; then
+							if [[ ${real_card} = vesa ]]; then
+								continue 2 # Don't disable
+							fi
+						fi
+					done
 				fi
 				disable_card=1
 			# Bug #150052
