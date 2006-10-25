@@ -1,13 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27.ebuild,v 1.3 2006/10/05 17:32:08 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/rox-session-0.27.ebuild,v 1.4 2006/10/25 18:48:07 lack Exp $
 
 # ROX-Session-0.27 now is compatible with dbus >=0.3
 # This version is all python, no more compiling
 
-MY_PN="ROX-Session"
-APPNAME=${MY_PN}
-
+ROX_LIB_VER="2.0.0"
 inherit eutils rox
 
 DESCRIPTION="Rox-Session is a really simple session manager"
@@ -16,10 +14,13 @@ SRC_URI="mirror://sourceforge/rox/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~sparc x86"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/dbus-0.2"
+
+MY_PN="ROX-Session"
+APPNAME=${MY_PN}
 
 pkg_setup() {
 	if ! built_with_use sys-apps/dbus python
