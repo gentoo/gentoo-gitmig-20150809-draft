@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/orsa
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.13 2006/10/25 16:01:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.14 2006/10/25 18:37:45 markusle Exp $
+
+*orsa-0.7.0 (25 Oct 2006)
+
+  25 Oct 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/orsa-0.7.0-gcc41.patch, +orsa-0.7.0.ebuild:
+  Version bump. Thanks to Sebastien Fabbro <seb@ist.utl.pt>
+  for preparing the ebuild and patch in the sci-overlay.
 
   25 Oct 2006; Markus Dittrich <markusle@gentoo.org>
   +files/orsa-0.6.1-as-needed.patch, +files/orsa-0.6.1-gcc4.patch,
