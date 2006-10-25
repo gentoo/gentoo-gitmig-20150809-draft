@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.14.ebuild,v 1.8 2006/10/15 08:40:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/conserver-8.1.14.ebuild,v 1.9 2006/10/25 23:52:10 weeve Exp $
 
 inherit ssl-cert eutils
 
@@ -17,6 +17,13 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	pam? ( virtual/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	!amd64? ( debug? ( dev-libs/dmalloc ) )"
+
+src_unpack() {
+	unpack ${P}.tar.gz
+
+	# Apply patch to prevent package from stripping binaries
+	cd ${S} && epatch ${FILESDIR}/${PN}-prestrip.patch
+}
 
 src_compile() {
 	use amd64 && \

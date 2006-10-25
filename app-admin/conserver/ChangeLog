@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conserver
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.53 2006/10/15 08:40:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.54 2006/10/25 23:52:10 weeve Exp $
+
+  25 Oct 2006; Jason Wever <weeve@gentoo.org>
+  +files/conserver-prestrip.patch, -conserver-8.1.5.ebuild,
+  -conserver-8.1.11.ebuild, -conserver-8.1.11-r1.ebuild,
+  -conserver-8.1.13.ebuild, conserver-8.1.14.ebuild:
+  Fixed pre-strip issue to resolve bug #152223. Also did some old version
+  cleanup.
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   conserver-8.1.14.ebuild:
