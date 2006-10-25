@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2.ebuild,v 1.4 2006/04/08 10:51:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2.ebuild,v 1.5 2006/10/25 19:15:03 tupone Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${MY_PN}-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="joystick"
 
 RDEPEND="|| (
