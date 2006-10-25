@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.23 2006/10/25 11:19:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre8.ebuild,v 1.24 2006/10/25 23:46:35 beandog Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd dv
 dvdread encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
 lirc live livecd lzo mad matrox mmx mmxext musepack nas nvidia unicode vorbis
 opengl openal oss png real rtc samba sdl speex sse sse2 svga tga theora
-truetype v4l v4l2 win32codecs X x264 xanim xinerama xmms xv xvid xvmc"
+truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid xvmc"
 
 LANGS="bg cs de da el en es fr hu ja ko mk nl no pl pt_BR ro ru sk tr uk zh_CN
 zh_TW"
@@ -95,7 +95,6 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 			<virtual/x11-7
 		)
 	)
-	xmms? ( media-sound/xmms )
 	xanim? ( >=media-video/xanim-2.80.1-r4 )
 	sys-libs/ncurses
 	xv? ( || ( ( x11-libs/libXv
@@ -272,7 +271,6 @@ src_compile() {
 	myconf="${myconf} $(use_enable vorbis)"
 	myconf="${myconf} $(use_enable theora)"
 	use speex || myconf="${myconf} --disable-speex"
-	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	use x86 && myconf="${myconf} $(use_enable real)"
 	! use livecd && ! use bindist && \
@@ -397,8 +395,6 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-linux-devfs"
 	fi
-
-	use xmms && myconf="${myconf} --with-xmmslibdir=/usr/$(get_libdir)"
 
 	use live && myconf="${myconf} --with-livelibdir=/usr/$(get_libdir)/live"
 
