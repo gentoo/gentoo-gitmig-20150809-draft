@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.55 2006/10/25 03:50:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.56 2006/10/25 04:58:49 gothgirl Exp $
+
+  25 Oct 2006; gothgirl <gothgirl@gentoo.org>
+  mozilla-firefox-bin-2.0.ebuild:
+  fixed URI for language packs, Thanks Tester
 
 *mozilla-firefox-bin-2.0 (25 Oct 2006)
 

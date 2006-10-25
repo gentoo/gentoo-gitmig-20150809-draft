@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.ebuild,v 1.1 2006/10/25 03:50:55 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-2.0.ebuild,v 1.2 2006/10/25 04:58:49 gothgirl Exp $
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -20,12 +20,12 @@ IUSE=""
 
 for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI}
-		linguas_${X/-/_}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${MY_P}-${X}.xpi )"
+		linguas_${X/-/_}? ( http://gentooexperimental.org/~genstef/dist/${MY_P}-xpi/${MY_P}-${X}.xpi )"
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		SRC_URI="${SRC_URI}
-			linguas_${X%%-*}? ( http://gentooexperimental.org/~genstef/dist/${P}-xpi/${MY_P}-${X}.xpi )"
+			linguas_${X%%-*}? ( http://gentooexperimental.org/~genstef/dist/${MY_P}-xpi/${MY_P}-${X}.xpi )"
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
