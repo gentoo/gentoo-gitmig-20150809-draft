@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rmake
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.1 2006/10/16 00:11:59 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rmake/ChangeLog,v 1.2 2006/10/25 15:45:15 smithj Exp $
+
+*rmake-0.9.7 (25 Oct 2006)
+
+  25 Oct 2006; <smithj@gentoo.org> +rmake-0.9.7.ebuild:
+  version bump
 
 *rmake-0.9.6 (16 Oct 2006)
 
