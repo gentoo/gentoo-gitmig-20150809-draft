@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.1 2006/10/09 23:48:24 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.2 2006/10/25 11:27:36 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules
@@ -24,9 +24,10 @@ DEPEND="${RDEPEND}
 	>=sys-apps/checkpolicy-1.30.12"
 
 selinux-policy-2_src_unpack() {
-	unpack ${A}
-
 	local modfiles
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
+
+	unpack ${A}
 
 	for i in ${MODS}; do
 		modfiles="`find ${S}/refpolicy/policy/modules -iname $i.te` $modfiles"
@@ -43,13 +44,16 @@ selinux-policy-2_src_unpack() {
 }
 
 selinux-policy-2_src_compile() {
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
+
 	for i in ${POLICY_TYPES}; do
 		make NAME=$i -C ${S}/${i} || die "${i} compile failed"
 	done
 }
 
 selinux-policy-2_src_install() {
-	BASEDIR="/usr/share/selinux"
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
+	local BASEDIR="/usr/share/selinux"
 
 	for i in ${POLICY_TYPES}; do
 		for j in ${MODS}; do
@@ -66,6 +70,7 @@ selinux-policy-2_pkg_postinst() {
 	for i in ${MODS}; do
 		COMMAND="-i ${i}.pp ${COMMAND}"
 	done
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
 	if has "loadpolicy" $FEATURES ; then
 		for i in ${POLICY_TYPES}; do
