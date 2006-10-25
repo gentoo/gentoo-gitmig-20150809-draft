@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/monit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.24 2006/10/23 03:06:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.25 2006/10/25 04:30:19 tsunam Exp $
+
+  25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> monit-4.8.1.ebuild:
+  Stable x86; bug #152220
 
   23 Oct 2006; Jason Wever <weeve@gentoo.org> monit-4.8.1.ebuild:
   Stable on SPARC wrt bug #152220.
