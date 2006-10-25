@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.3 2006/10/24 20:53:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.4 2006/10/25 16:24:19 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -111,6 +111,14 @@ games-mods_pkg_setup() {
 		if use dedicated && ! built_with_use ${CATEGORY}/${GAME} dedicated
 		then
 			die "You must merge ${CATEGORY}/${GAME} with USE=dedicated!"
+		fi
+		if has_version ${CATEGORY}/${GAME}-bin
+		then
+			if use dedicated && \
+			! built_with_use ${CATEGORY}/${GAME}-bin dedicated
+			then
+				die "You must merge ${CATEGORY}/${GAME}-bin with USE=dedicated!"
+			fi
 		fi
 	elif has_version ${CATEGORY}/${GAME}-bin
 	then
@@ -263,9 +271,12 @@ games-mods_src_install() {
 			# we only look for quake3 here.
 			case "${GAME_EXE}" in
 				"quake3")
-					games_make_wrapper "${GAME_EXE}-bin-${MOD_DIR}" \
-						"${GAME_EXE}-bin ${SELECT_MOD}${MOD_DIR}" \
-						"${dir}" "${dir}"
+					if has_version games-fps/quake3-bin
+					then
+						games_make_wrapper "${GAME_EXE}-bin-${MOD_DIR}" \
+							"${GAME_EXE}-bin ${SELECT_MOD}${MOD_DIR}" \
+							"${dir}" "${dir}"
+					fi
 					make_desktop_entry "${GAME_EXE}-bin-${MOD_DIR}" \
 						"${GAME_TITLE} - ${MOD_NAME} (binary)" \
 						"${MOD_ICON}"
@@ -348,6 +359,34 @@ games-mods_src_install() {
 
 	if use dedicated
 	then
+		dodir "${GAMES_STATEDIR}"
+		if [[ -e ${FILESDIR}/server.cfg ]]
+		then
+			insinto "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}
+			doins ${FILESDIR}/server.cfg || die "Copying server config"
+			case ${GAME} in
+				doom3)
+					dodir "${GAMES_PREFIX}"/.doom3/${MOD_DIR}
+					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
+						"${GAMES_PREFIX}"/.doom3/${MOD_DIR}
+					;;
+				enemy-territory)
+					dodir "${GAMES_PREFIX}"/.etwolf/${MOD_DIR}
+					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
+						"${GAMES_PREFIX}"/.etwolf/${MOD_DIR}
+					;;
+				quake3)
+					dodir "${GAMES_PREFIX}"/.q3a/${MOD_DIR}
+					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
+						"${GAMES_PREFIX}"/.q3a/${MOD_DIR}
+					;;
+				quake4)
+					dodir "${GAMES_PREFIX}"/.quake4/${MOD_DIR}
+					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
+						"${GAMES_PREFIX}"/.quake4/${MOD_DIR}
+					;;
+			esac
+		fi
 		games-mods_make_ded_exec
 		newgamesbin "${T}"/${GAME_EXE}-${MOD_DIR}-ded.bin \
 			${GAME_EXE}-${MOD_DIR}-ded || die "dedicated"
@@ -397,30 +436,30 @@ games-mods_make_ded_exec() {
 }
 
 games-mods_make_init.d() {
-	cat <<-EOF > "${T}"/${GAME_EXE}-${MOD_DIR}-ded.init.d
-	#!/sbin/runscript
-	$(<${PORTDIR}/header.txt)
-	
-	depend() {
-		need net
-	}
-	
-	start() {
-		ebegin "Starting ${GAME_TITLE} - ${MOD_NAME} dedicated server"
-		start-stop-daemon --start --quiet --background --chuid \\
-			${GAMES_USER_DED}:games --env HOME="/usr/games" --exec \\
-			${GAMES_BINDIR}/${GAME_EXE}-${MOD_DIR}-ded \\
-			\${${GAME_EXE}_${MOD_DIR}_OPTS}
-		eend \$?
-	}
-	
-	stop() {
-		ebegin "Stopping ${GAME_TITLE} - ${MOD_NAME} dedicated server"
-		start-stop-daemon --stop --quiet --exec \\
-			${GAMES_BINDIR}/${GAME_EXE}-${MOD_DIR}-ded
-		eend \$?
-	}
-	EOF
+	cat <<EOF > "${T}"/${GAME_EXE}-${MOD_DIR}-ded.init.d
+#!/sbin/runscript
+$(<${PORTDIR}/header.txt)
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting ${GAME_TITLE} - ${MOD_NAME} dedicated server"
+	start-stop-daemon --start --quiet --background --chuid \\
+		${GAMES_USER_DED}:games --env HOME="${GAMES_PREFIX}" --exec \\
+		${GAMES_BINDIR}/${GAME_EXE}-${MOD_DIR}-ded \\
+		\${${GAME_EXE}_${MOD_DIR}_OPTS}
+	eend \$?
+}
+
+stop() {
+	ebegin "Stopping ${GAME_TITLE} - ${MOD_NAME} dedicated server"
+	start-stop-daemon --stop --quiet --exec \\
+		${GAMES_BINDIR}/${GAME_EXE}-${MOD_DIR}-ded
+	eend \$?
+}
+EOF
 }
 
 games-mods_make_conf.d() {
