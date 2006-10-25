@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.19 2006/10/25 18:25:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.20 2006/10/25 18:59:31 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -352,79 +352,7 @@ src_unpack() {
 
 	# Set up kdrive servers to build
 	if use kdrive; then
-		einfo "Removing unused kdrive drivers ..."
-
-		# Some kdrive servers require fbdev and vesa
-		local kdrive_fbdev="radeon neomagic sis siliconmotion"
-		# Some kdrive servers require just vesa
-		local kdrive_vesa="chips mach64 mga nv glint r128 via"
-
-		for card in ${IUSE_VIDEO_CARDS}; do
-			real_card=${card#video_cards_}
-
-			# Differences between VIDEO_CARDS name and kdrive server name
-			real_card=${real_card/glint/pm2}
-			real_card=${real_card/radeon/ati}
-			real_card=${real_card/%nv/nvidia}
-			real_card=${real_card/siliconmotion/smi}
-			real_card=${real_card/%sis/sis300}
-
-			disable_card=0
-
-			# Check whether it's a valid kdrive server before we waste time
-			# on the rest of this
-			if ! grep -q -o "\b${real_card}\b" ${S}/hw/kdrive/Makefile.am; then
-				continue
-			fi
-
-			if ! use ${card}; then
-				if use x86; then
-					# Some kdrive servers require fbdev and vesa
-					for i in ${kdrive_fbdev}; do
-						if use video_cards_${i}; then
-							if [[ ${real_card} = fbdev ]] \
-								|| [[ ${real_card} = vesa ]]; then
-								continue 2 # Don't disable
-							fi
-						fi
-					done
-
-					# Some kdrive servers require just vesa
-					for i in ${kdrive_vesa}; do
-						if use video_cards_${i}; then
-							if [[ ${real_card} = vesa ]]; then
-								continue 2 # Don't disable
-							fi
-						fi
-					done
-				fi
-				disable_card=1
-			# Bug #150052
-			# fbdev is the only VIDEO_CARDS setting that works on non-x86
-			elif ! use x86 \
-				&& [[ ${real_card} != fbdev ]]; then
-				ewarn "  $real_card does not work on your architecture; disabling."
-				disable_card=1
-			fi
-
-			if [[ $disable_card = 1 ]]; then
-				ebegin "  ${real_card}"
-				sed -i \
-					-e "s:\b${real_card}\b::g" \
-					${S}/hw/kdrive/Makefile.am \
-					|| die "sed of ${real_card} failed"
-				eend
-			fi
-
-		done
-
-		# smi and via are the only things on line 2. If line 2 ends up blank,
-		# we need to get rid of the backslash at the end of line 1.
-		if ! use video_cards_siliconmotion && ! use video_cards_via; then
-			sed -i \
-				-e "s:^\(VESA_SUBDIRS.*\)\\\:\1:g" \
-				${S}/hw/kdrive/Makefile.am
-		fi
+		kdrive_setup
 	fi
 
 	# Make sure eautoreconf gets run if we need the autoconf/make
@@ -475,6 +403,84 @@ pkg_postrm() {
 		if [ -e ${ROOT}/usr/$(get_libdir)/xorg/modules ]; then
 			rm -rf ${ROOT}/usr/$(get_libdir)/xorg/modules
 		fi
+	fi
+}
+
+kdrive_setup() {
+	local card real_card disable_card kdrive_fbdev kdrive_vesa
+
+	einfo "Removing unused kdrive drivers ..."
+
+	# Some kdrive servers require fbdev and vesa
+	kdrive_fbdev="radeon neomagic sis siliconmotion"
+	# Some kdrive servers require just vesa
+	kdrive_vesa="chips mach64 mga nv glint r128 via"
+
+	for card in ${IUSE_VIDEO_CARDS}; do
+		real_card=${card#video_cards_}
+
+		# Differences between VIDEO_CARDS name and kdrive server name
+		real_card=${real_card/glint/pm2}
+		real_card=${real_card/radeon/ati}
+		real_card=${real_card/%nv/nvidia}
+		real_card=${real_card/siliconmotion/smi}
+		real_card=${real_card/%sis/sis300}
+
+		disable_card=0
+
+		# Check whether it's a valid kdrive server before we waste time
+		# on the rest of this
+		if ! grep -q -o "\b${real_card}\b" ${S}/hw/kdrive/Makefile.am; then
+			continue
+		fi
+
+		if ! use ${card}; then
+			if use x86; then
+				# Some kdrive servers require fbdev and vesa
+				for i in ${kdrive_fbdev}; do
+					if use video_cards_${i}; then
+						if [[ ${real_card} = fbdev ]] \
+							|| [[ ${real_card} = vesa ]]; then
+							continue 2 # Don't disable
+						fi
+						fi
+				done
+
+				# Some kdrive servers require just vesa
+				for i in ${kdrive_vesa}; do
+					if use video_cards_${i}; then
+						if [[ ${real_card} = vesa ]]; then
+							continue 2 # Don't disable
+						fi
+					fi
+				done
+			fi
+			disable_card=1
+		# Bug #150052
+		# fbdev is the only VIDEO_CARDS setting that works on non-x86
+		elif ! use x86 \
+			&& [[ ${real_card} != fbdev ]]; then
+			ewarn "  $real_card does not work on your architecture; disabling."
+			disable_card=1
+		fi
+
+		if [[ $disable_card = 1 ]]; then
+			ebegin "  ${real_card}"
+			sed -i \
+				-e "s:\b${real_card}\b::g" \
+				${S}/hw/kdrive/Makefile.am \
+				|| die "sed of ${real_card} failed"
+			eend
+		fi
+
+	done
+
+	# smi and via are the only things on line 2. If line 2 ends up blank,
+	# we need to get rid of the backslash at the end of line 1.
+	if ! use video_cards_siliconmotion && ! use video_cards_via; then
+		sed -i \
+			-e "s:^\(VESA_SUBDIRS.*\)\\\:\1:g" \
+			${S}/hw/kdrive/Makefile.am
 	fi
 }
 

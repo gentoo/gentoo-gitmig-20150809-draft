@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.184 2006/10/25 18:25:24 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.185 2006/10/25 18:59:31 dberkholz Exp $
+
+  25 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.1.1-r1.ebuild:
+  Unbreaking kdrive, part 4: Move all the kdrive setup code out to a separate
+  function kdrive_setup(). Make variables local to that function.
 
   25 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.1-r1.ebuild:
