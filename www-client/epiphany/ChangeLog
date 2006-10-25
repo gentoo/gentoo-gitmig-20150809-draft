@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.87 2006/10/24 14:26:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.88 2006/10/25 15:58:03 leio Exp $
+
+  25 Oct 2006; Mart Raudsepp <leio@gentoo.org> -epiphany-1.8.4.1.ebuild:
+  Remove old revision that depends on old mozilla suite
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   epiphany-2.14.2.1-r1.ebuild:
