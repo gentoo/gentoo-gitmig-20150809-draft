@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/string-crc32
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/ChangeLog,v 1.23 2006/10/20 17:55:59 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/string-crc32/ChangeLog,v 1.24 2006/10/25 12:08:47 uberlord Exp $
+
+  25 Oct 2006; Roy Marples <uberlord@gentoo.org> string-crc32-1.4.ebuild:
+  Added ~sparc-fbsd keyword
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   string-crc32-1.2.ebuild, -string-crc32-1.3.ebuild,
