@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/infones
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/infones/ChangeLog,v 1.9 2006/01/10 01:29:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/infones/ChangeLog,v 1.10 2006/10/25 23:35:03 nyhm Exp $
+
+  25 Oct 2006; Tristan Heaven <nyhm@gentoo.org> infones-0.97.ebuild:
+  Use mirror://sourceforge.jp/ in SRC_URI
 
 *infones-0.97 (10 Jan 2006)
 
