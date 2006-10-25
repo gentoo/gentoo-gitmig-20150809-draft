@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3-r1.ebuild,v 1.9 2006/10/23 11:11:01 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/digitaldj/digitaldj-0.7.3-r1.ebuild,v 1.10 2006/10/25 08:51:17 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="A SQL-based mp3-player frontend designed to work with Grip"
 HOMEPAGE="http://www.nostatic.org/ddj/"
@@ -16,8 +18,6 @@ DEPEND="dev-db/mysql
 	media-libs/gdk-pixbuf
 	media-sound/grip
 	>=x11-libs/gtk+-1.2"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
