@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.40 2006/10/17 00:04:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.41 2006/10/25 18:17:07 alonbl Exp $
+
+*fontforge-20061014-r1 (25 Oct 2006)
+
+  25 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/fontforge-20061014-build.patch, +fontforge-20061014-r1.ebuild:
+  Fixed lib prefix issues, closes bug#151736
 
 *fontforge-20061014 (17 Oct 2006)
 
