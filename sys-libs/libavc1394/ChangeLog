@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libavc1394
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.29 2006/10/17 19:33:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/ChangeLog,v 1.30 2006/10/25 05:08:58 tsunam Exp $
+
+  25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> libavc1394-0.5.3.ebuild:
+  Stable x86; bug #146794
 
   17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   libavc1394-0.5.3.ebuild:
