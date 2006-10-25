@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.1 2006/10/23 18:56:54 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.2 2006/10/25 16:03:24 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -48,6 +48,16 @@ QA_TEXTRELS="${dir:1}/pb/pbag.so
 	${dir:1}/pb/pbcl.so
 	${dir:1}/pb/pbsv.so"
 
+default_client() {
+	if use opengl || ! use dedicated
+	then
+		# Use opengl by default
+		return 0
+	else
+		return 1
+	fi
+}
+
 pkg_setup() {
 	if use cdinstall
 	then
@@ -63,25 +73,24 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}/{baseq3,missionpack}
+	dodir "${dir}"/{baseq3,missionpack}
 	if use cdinstall ; then
-		dosym ${GAMES_DATADIR}/quake3/baseq3/pak0.pk3 ${dir}/baseq3/pak0.pk3
-		use teamarena && dosym ${GAMES_DATADIR}/quake3/missionpack/pak0.pk3 \
-			${dir}/missionpack/pak0.pk3
+		dosym "${GAMES_DATADIR}"/quake3/baseq3/pak0.pk3 "${dir}"/baseq3/pak0.pk3
+		use teamarena && dosym "${GAMES_DATADIR}"/quake3/missionpack/pak0.pk3 \
+			"${dir}"/missionpack/pak0.pk3
 	fi
 	for pk3 in baseq3/*.pk3 missionpack/*.pk3 ; do
-		dosym ${GAMES_DATADIR}/quake3/${pk3} ${dir}/${pk3}
+		dosym "${GAMES_DATADIR}"/quake3/${pk3} "${dir}"/${pk3}
 	done
 
-	insinto ${dir}
+	insinto "${dir}"
 	doins -r Docs pb || die "ins docs/pb"
 
-	exeinto ${dir}
-	insinto ${dir}
-	doexe "Quake III Arena 1.32c"/linux/quake3*.x86 || die "doexe"
+	exeinto "${dir}"
 	doins quake3.xpm README* Q3A_EULA.txt
-	if use opengl || ! use dedicated
+	if default_client
 	then
+		doexe "Quake III Arena 1.32c"/linux/quake3*.x86 || die "doexe"
 		games_make_wrapper ${PN} ./quake3.x86 "${dir}" "${dir}"
 		newicon quake3.xpm ${PN}.xpm
 		make_desktop_entry ${PN} "Quake III Arena (binary)" ${PN}.xpm
@@ -96,9 +105,9 @@ src_install() {
 	if use dedicated
 	then
 		doexe "Quake III Arena 1.32c"/linux/q3ded || die "doexe q3ded"
-		games_make_wrapper q3ded-bin ./q3ded "${dir}" "${dir}"
-		newinitd "${FILESDIR}"/q3ded.rc q3ded
-		newconfd "${FILESDIR}"/q3ded.conf.d q3ded
+		games_make_wrapper quake3-ded ./q3ded "${dir}" "${dir}"
+		newinitd "${FILESDIR}"/q3ded.rc quake3-ded
+		newconfd "${FILESDIR}"/q3ded.conf.d quake3-ded
 	fi
 
 	games_link_mods
@@ -114,7 +123,7 @@ pkg_postinst() {
 	if use dedicated; then
 		echo
 		einfo "To start a dedicated server, run"
-		einfo "  /etc/init.d/q3ded start"
+		einfo "  /etc/init.d/quake3-ded start"
 		echo
 		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account."
 	fi
