@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvthread
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.15 2006/10/25 05:06:03 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.16 2006/10/25 20:06:40 pylon Exp $
+
+  25 Oct 2006; Lars Weiler <pylon@gentoo.org> ChangeLog:
+  Stable on ppc; bug #137302.
 
   25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> dvthread-0.5.0.ebuild:
   Stable x86; bug #137302
