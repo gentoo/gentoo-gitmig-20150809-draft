@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Crypt_CHAP
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_CHAP/ChangeLog,v 1.10 2006/10/15 21:27:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Crypt_CHAP/ChangeLog,v 1.11 2006/10/25 21:38:49 beandog Exp $
+
+  25 Oct 2006; Steve Dibb <beandog@gentoo.org> PEAR-Crypt_CHAP-1.0.0.ebuild:
+  Stable for amd64 (bug #147698)
 
   15 Oct 2006; Jeroen Roovers <jer@gentoo.org> PEAR-Crypt_CHAP-1.0.0.ebuild:
   Stable for HPPA (bug #147698).
