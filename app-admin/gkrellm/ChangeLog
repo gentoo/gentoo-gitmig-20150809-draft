@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.126 2006/10/24 03:04:24 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.127 2006/10/25 14:42:33 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellm-2.2.9-r1.ebuild:
+  Stable on sparc
 
   24 Oct 2006; Joshua Jackson <tsunam@gentoo.org> gkrellm-2.2.9-r1.ebuild:
   Stable x86; bug #140955
