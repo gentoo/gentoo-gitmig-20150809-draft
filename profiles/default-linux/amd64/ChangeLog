@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.32 2006/10/24 16:22:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/ChangeLog,v 1.33 2006/10/25 09:01:31 blubb Exp $
+
+  25 Oct 2006; Simon Stelling <blubb@gentoo.org> package.use.mask:
+  only unmask asm flags for sci-libs/fftw 3.1.2 or higher
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org> make.defaults:
   enable mmx{,ext}, sse{,2} by default
