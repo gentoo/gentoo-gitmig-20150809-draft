@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.63 2006/10/23 23:49:55 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.64 2006/10/25 01:16:54 weeve Exp $
+
+  25 Oct 2006; Jason Wever <weeve@gentoo.org> zlib-1.2.3-r1.ebuild:
+  Stable on SPARC wrt bug #152573.
 
   23 Oct 2006; Andrej Kacian <ticho@gentoo.org> zlib-1.2.3-r1.ebuild:
   Stable on x86, bug #152573.
