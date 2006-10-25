@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libgeda
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.18 2006/09/30 11:51:11 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/ChangeLog,v 1.19 2006/10/25 13:52:03 blubb Exp $
+
+  25 Oct 2006; Simon Stelling <blubb@gentoo.org> libgeda-20060123.ebuild:
+  stable on amd64
 
 *libgeda-20060906 (30 Sep 2006)
 
