@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.30 2006/10/23 23:07:52 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.31 2006/10/25 11:10:43 jurek Exp $
+
+  25 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> xsp-1.1.10-r1.ebuild:
+  Since mono-1.1.17 breaks xsp versions prior to 1.1.17 a new dependency has
+  been added
 
   23 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> xsp-1.1.10-r1.ebuild:
   Now xsp requires at least mono-1.1.10 to be installed
