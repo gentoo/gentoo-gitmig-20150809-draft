@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r2.ebuild,v 1.1 2006/10/22 13:46:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r2.ebuild,v 1.2 2006/10/25 16:45:07 aballier Exp $
 
 inherit eutils autotools
 
@@ -87,4 +87,6 @@ src_install() {
 
 	docinto code
 	dodoc docs/code/*
+	newicon src/images/icon_logo_32.gif rezound.gif
+	make_desktop_entry rezound Rezound rezound.gif AudioVideo
 }
