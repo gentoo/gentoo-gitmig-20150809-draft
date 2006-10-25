@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.35 2006/10/17 22:07:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.36 2006/10/25 18:44:47 voxus Exp $
+
+  25 Oct 2006; Konstantin V. Arkhipov <voxus@gentoo.org>
+  fte-20051115.ebuild:
+  20051115 goes stable on amd64, closing bug #142835.
 
   17 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   fte-20020324-r2.ebuild, fte-20050108-r3.ebuild, fte-20051115.ebuild:
