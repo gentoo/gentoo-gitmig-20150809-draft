@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.419 2006/10/24 12:32:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.420 2006/10/25 10:15:32 lu_zero Exp $
+
+  25 Oct 2006; Luca Barbato <lu_zero@gentoo.org>
+  files/digest-mplayer-1.0_pre8, files/digest-mplayer-1.0_pre8-r1,
+  files/digest-mplayer-1.0_pre20060810,
+  files/digest-mplayer-1.0_pre20061019, files/digest-mplayer-1.0_rc1,
+  Manifest:
+  Redigest
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org> mplayer-1.0_rc1.ebuild:
   don't hard-enable 3dnow(ext) on amd64 as EM64T doesn't have it
