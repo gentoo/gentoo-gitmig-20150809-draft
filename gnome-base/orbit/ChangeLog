@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.80 2006/10/21 16:04:24 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.81 2006/10/25 15:35:15 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> orbit-2.14.2.ebuild:
+  Stable on sparc
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> orbit-2.14.2.ebuild:
   ppc stable
