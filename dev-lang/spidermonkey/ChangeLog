@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.25 2006/10/08 17:49:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.26 2006/10/25 21:09:35 aballier Exp $
+
+*spidermonkey-1.5-r2 (25 Oct 2006)
+
+  25 Oct 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/spidermonkey-1.5-header.diff,
+  +files/spidermonkey-1.5-threadsafe.diff, +metadata.xml,
+  +spidermonkey-1.5-r2.ebuild:
+  Adding threadsafe support, thanks to Ben de Groot for the patches, bug #129222
 
   08 Oct 2006; Simon Stelling <blubb@gentoo.org> spidermonkey-1.5-r1.ebuild:
   stable on amd64
