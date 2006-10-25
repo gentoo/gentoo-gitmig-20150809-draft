@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.26 2006/10/15 08:27:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.27 2006/10/25 04:04:06 tsunam Exp $
+
+  25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> seamonkey-1.0.5.ebuild:
+  Adding new patch for bug #146357
 
   15 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> seamonkey-1.0.5.ebuild:
   Stable on ia64, bug 147651.
