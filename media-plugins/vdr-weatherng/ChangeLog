@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-weatherng
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.9 2006/08/15 09:49:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/ChangeLog,v 1.10 2006/10/25 14:17:35 hd_brummy Exp $
+
+  25 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org> files/confd-0.0.8,
+  files/vdr-weatherng-0.0.8_pre2-gentoo.diff:
+  fixed URL to find out regional weather ID, addapted to actuell
+  gentoo-vdr-scripts, fixed DL URL for german weather preview pics
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.

@@ -1,5 +1,5 @@
 Joerg Bornkessel <hd_brummy@gentoo.org>
-Version 2 ( 19 Mar 2006 )
+Version 3 ( 25 Oct 2006 )
 
 diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/examples/weatherng.sh
 --- weatherng-0.0.8-pre2.orig/examples/weatherng.sh	2006-03-19 18:35:48.897789250 +0100
@@ -11,7 +11,7 @@ diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/
 +source /etc/conf.d/vdr.weatherng
 +
 +SCRIPT_API=2
-+source /usr/lib/vdr/rcscript/plugin-weatherng.sh
++source /usr/share/vdr/rcscript/plugin-weatherng.sh
 +
  # Change SETUPDIR if you need.
  SETUPDIR=/etc/vdr
@@ -26,10 +26,10 @@ diff -Naur weatherng-0.0.8-pre2.orig/examples/weatherng.sh weatherng-0.0.8-pre2/
 -#		http://www.wetter24.de/automatic/brd_tag_tt00002.jpg \
 -#		http://www.wetter24.de/automatic/brd_tag_rr00002.jpg \
 +		http://www.dwd.de/scripts/getimg.php?src=/wundk/Wetter.jpg \
-+		http://www.wetter24.de/automatic/brd_tag_n+ww00002.jpg \
-+		http://www.wetter24.de/automatic/brd_tag_dd00002.jpg \
-+		http://www.wetter24.de/automatic/brd_tag_tt00002.jpg \
-+		http://www.wetter24.de/automatic/brd_tag_rr00002.jpg \
++       http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,355,00.jpg \
++       http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,110,00.jpg \
++       http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,267,00.jpg \
++       http://www.zdf.de/ZDFde/wetter/showpicture/0,2236,346,00.jpg \
  		)
  	;;
  	7) MESG='Téléchargement des données Météo OK'
