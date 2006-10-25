@@ -1,0 +1,10 @@
+# ChangeLog for net-news/yarssr
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/yarssr/ChangeLog,v 1.1 2006/10/25 04:18:03 beandog Exp $
+
+*yarssr-0.2.2 (25 Oct 2006)
+
+  25 Oct 2006; Steve Dibb <beandog@gentoo.org>
+  +files/yarssr-0.2.2-makefile.patch, +metadata.xml, +yarssr-0.2.2.ebuild:
+  Initial import, see bug 74644
+
