@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.9 2006/01/24 22:32:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.4.ebuild,v 1.10 2006/10/25 10:44:52 s4t4n Exp $
 
 inherit eutils
 
@@ -11,13 +11,11 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ppc ppc64 ~sparc"
 
-RDEPEND="|| ( (
+DEPEND="
+	|| ( (
 		x11-libs/libX11
 		x11-libs/libXext
-		x11-libs/libXpm )
-	virtual/x11 )"
-DEPEND="${RDEPEND}
-	|| ( (
+		x11-libs/libXpm
 		x11-proto/xproto
 		x11-proto/xextproto )
 	virtual/x11 )"

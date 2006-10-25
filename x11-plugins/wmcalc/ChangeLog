@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcalc
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.15 2006/01/24 22:32:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/ChangeLog,v 1.16 2006/10/25 10:44:52 s4t4n Exp $
+
+  25 Oct 2006; Michele Noberasco <s4t4n@gentoo.org> wmcalc-0.4.ebuild:
+  Fixed modular X dependancies. Closes bug #150644.
 
   24 Jan 2006; Krzysiek Pawlik <nelchael@gentoo.org> wmcalc-0.4.ebuild:
   Fixed DEPEND for modular X.
