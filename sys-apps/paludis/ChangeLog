@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.22 2006/10/21 12:42:52 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.23 2006/10/25 21:26:06 kugelfang Exp $
+
+*paludis-0.8.2 (25 Oct 2006)
+
+  25 Oct 2006; Danny van Dyk <kugelfang@gentoo.org> +paludis-0.8.2.ebuild:
+  Version bump.
 
 *paludis-0.8.1 (21 Oct 2006)
 
