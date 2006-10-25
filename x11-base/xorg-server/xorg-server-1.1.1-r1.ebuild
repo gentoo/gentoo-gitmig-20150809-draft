@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.16 2006/10/18 16:02:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.17 2006/10/25 06:35:02 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -359,12 +359,6 @@ src_unpack() {
 	if use kdrive; then
 		einfo "Removing unused kdrive drivers ..."
 		for card in ${IUSE_VIDEO_CARDS}; do
-			# Skip binary drivers
-			if [[ ${card} = video_cards_nvidia ]] \
-				|| [[ ${card} = video_cards_fglrx ]]; then
-				continue
-			fi
-
 			real_card=${card#video_cards_}
 
 			# Differences between VIDEO_CARDS name and kdrive server name
@@ -377,10 +371,10 @@ src_unpack() {
 			disable_card=0
 			if ! use ${card}; then
 				# (bug #136370) Radeon needs fbdev and vesa
-				if ! use x86 \
+				if use x86 \
 					&& use video_cards_radeon; then
-					if [[ ${card} = fbdev ]] \
-						|| [[ ${card} = vesa ]]; then
+					if [[ ${real_card} = fbdev ]] \
+						|| [[ ${real_card} = vesa ]]; then
 						continue
 					fi
 				fi

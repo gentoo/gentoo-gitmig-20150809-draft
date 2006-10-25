@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.181 2006/10/18 16:02:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.182 2006/10/25 06:35:02 dberkholz Exp $
+
+  25 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  xorg-server-1.1.1-r1.ebuild:
+  Unbreaking kdrive, part 1: Fix logic and variable names when forcing
+  fbdev/vesa on for Xati; Don't skip binary drivers, it needlessly complicates
+  the code for no useful end result.
 
   18 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   xorg-server-1.1.1-r1.ebuild:
