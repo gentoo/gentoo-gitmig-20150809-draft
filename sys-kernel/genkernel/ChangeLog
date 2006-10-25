@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.153 2006/10/23 16:11:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.154 2006/10/25 22:56:37 wolf31o2 Exp $
+
+*genkernel-3.4.4 (25 Oct 2006)
+
+  25 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +genkernel-3.4.4.ebuild:
+  Version bump. Closes bug #151500 (again), bug #151609, bug #152299, and bug
+  #152441.
 
 *genkernel-3.4.3 (23 Oct 2006)
 
