@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20061015.ebuild,v 1.2 2006/10/21 14:21:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-20061015.ebuild,v 1.3 2006/10/25 11:29:41 pebenito Exp $
 
 IUSE=""
 
@@ -23,6 +23,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/
 
 src_unpack() {
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
+
 	unpack ${A}
 
 	for i in ${POLICY_TYPES}; do
@@ -33,6 +35,7 @@ src_unpack() {
 
 src_compile() {
 	local OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y"
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
 	cd ${S}/refpolicy
 
@@ -51,6 +54,7 @@ src_compile() {
 
 src_install() {
 	local OPTS="MONOLITHIC=n DISTRO=gentoo QUIET=y DESTDIR=${D}"
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
 
 	cd ${S}/refpolicy
 
@@ -76,6 +80,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	[ -z "${POLICY_TYPES}" ] && local POLICY_TYPES="strict targeted"
+
 	if has "loadpolicy" $FEATURES ; then
 		for i in ${POLICY_TYPES}; do
 			einfo "Inserting base module into ${i} module store."
