@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.ebuild,v 1.4 2006/10/25 22:49:40 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.ebuild,v 1.5 2006/10/25 22:55:17 zmedico Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -233,11 +233,8 @@ src_install() {
 
 	# Install files necessary for applications to build against firefox
 	einfo "Installing includes and idl files..."
-	dodir "${MOZILLA_FIVE_HOME}"/idl "${MOZILLA_FIVE_HOME}"/include
-	cp -LfR "${S}"/dist/include/* "${D}"/"${MOZILLA_FIVE_HOME}"/include/ || \
-		die "cp failed"
-	cp -LfR "${S}"/dist/idl/* "${D}"/"${MOZILLA_FIVE_HOME}"/idl || \
-		die "cp failed"
+	cp -LfR "${S}"/dist/include "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
+	cp -LfR "${S}"/dist/idl "${D}"/"${MOZILLA_FIVE_HOME}" || die "cp failed"
 
 	# Dirty hack to get some applications using this header running
 	dosym "${MOZILLA_FIVE_HOME}"/include/necko/nsIURI.h \
