@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r2.ebuild,v 1.9 2006/10/24 00:06:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r2.ebuild,v 1.10 2006/10/25 02:47:42 jer Exp $
 
 inherit font
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="truetype"
 
 DEPEND="|| ( ( x11-apps/bdftopcf x11-apps/mkfontdir ) <virtual/x11-7 )

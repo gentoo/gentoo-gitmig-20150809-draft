@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/monafont
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.28 2006/10/24 00:06:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.29 2006/10/25 02:47:42 jer Exp $
+
+  25 Oct 2006; Jeroen Roovers <jer@gentoo.org> monafont-2.90-r2.ebuild:
+  Stable for HPPA (bug #152334).
 
   24 Oct 2006; Andrej Kacian <ticho@gentoo.org> monafont-2.90-r2.ebuild:
   Stable on x86, bug #152334.
