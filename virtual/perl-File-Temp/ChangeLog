@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.11 2006/10/23 19:03:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.12 2006/10/25 02:30:35 mcummings Exp $
+
+  25 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-File-Temp-0.16.ebuild:
+  Cleaning up dep
 
   23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   perl-File-Temp-0.17.ebuild:
