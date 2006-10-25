@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_console
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.1 2006/10/24 20:23:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.2 2006/10/25 09:07:51 flameeyes Exp $
+
+  25 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  pam_console-0.99.6.2.3.6.ebuild:
+  Fix typo, thanks Opfer.
 
 *pam_console-0.99.6.2.3.6 (24 Oct 2006)
 

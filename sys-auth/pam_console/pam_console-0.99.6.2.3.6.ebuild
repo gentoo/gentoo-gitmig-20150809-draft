@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.1 2006/10/24 20:23:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.2 2006/10/25 09:07:51 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -24,7 +24,7 @@ IUSE=""
 
 RDEPEND=">=sys-libs/pam-0.99"
 DEPEND="${RDEPEND}
-	dev-util/pkg-config"
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/modules/pam_console"
 
