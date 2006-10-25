@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Calendar-Simple
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.8 2006/10/21 15:59:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.9 2006/10/25 14:53:09 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  Calendar-Simple-1.14.ebuild:
+  Stable on sparc
 
 *Calendar-Simple-1.17 (21 Oct 2006)
 
