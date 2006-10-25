@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.1 2006/10/23 16:18:10 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.2 2006/10/25 08:50:21 mr_bones_ Exp $
 
 inherit eutils autotools
 
@@ -44,8 +44,8 @@ RDEPEND=">=sys-devel/make-3.80
 	proj? ( sci-libs/proj )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite )
-	tcl? >=dev-lang/tcl-8.3
-	tk? >=dev-lang/tk-8.3
+	tcl? ( >=dev-lang/tcl-8.3 )
+	tk? ( >=dev-lang/tk-8.3 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
 	X? ( || (
 	    ( x11-libs/libXmu
