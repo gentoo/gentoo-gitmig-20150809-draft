@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-eggtimer
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-eggtimer/ChangeLog,v 1.3 2006/09/28 20:44:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-eggtimer/ChangeLog,v 1.4 2006/10/25 09:13:35 zzam Exp $
+
+  25 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -vdr-eggtimer-0.9.4.ebuild:
+  Cleanup of old version.
 
 *vdr-eggtimer-0.9.5 (28 Sep 2006)
 
