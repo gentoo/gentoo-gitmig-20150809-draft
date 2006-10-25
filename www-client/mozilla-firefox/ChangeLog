@@ -1,6 +1,16 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.202 2006/10/25 11:39:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.203 2006/10/25 15:27:27 cardoe Exp $
+
+  25 Oct 2006; Doug Goldstein <cardoe@gentoo.org>
+  -files/1.5/mozilla-firefox-1.5-history.patch, -files/10MozillaFirefox,
+  -files/1.5/mozilla-firefox-1.5-mork.patch,
+  -files/mozilla-1.7.12-gtk2xft-link-pangoxft.patch,
+  -files/firefox-bus-error.patch, -mozilla-firefox-1.0.7-r4.ebuild,
+  mozilla-firefox-1.5.0.7.ebuild, -mozilla-firefox-2.0_rc3.ebuild,
+  mozilla-firefox-2.0.ebuild:
+  Anarchy's Changes: Fixed bug #152641 for 1.5.0.7 & 2.0. Removed 1.0.x
+  series. Removed 2.x RCs. Cleaned up old files.
 
   25 Oct 2006; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-2.0.ebuild:
   Marked ~hppa (bug #152738).

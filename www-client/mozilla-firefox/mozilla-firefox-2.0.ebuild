@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.ebuild,v 1.2 2006/10/25 11:39:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.ebuild,v 1.3 2006/10/25 15:27:27 cardoe Exp $
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-2 mozilla-launcher makeedit multilib fdo-mime mozextension autotools
 
@@ -75,6 +75,12 @@ linguas() {
 }
 
 pkg_setup(){
+	if ! built_with_use x11-libs/cairo X; then
+		eerror "Cairo is not built with X useflag."
+		eerror "Please add 'X' to your USE flags, and re-emerge cairo."
+		die "Cairo needs X"
+	fi
+
 	if use mozbranding; then
 		einfo "You are enabling official branding. You may not redistribute this build"
 		einfo "to any users on your network or the internet. Doing so puts yourself into"
