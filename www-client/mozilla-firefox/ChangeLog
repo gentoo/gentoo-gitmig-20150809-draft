@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.201 2006/10/25 02:18:18 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.202 2006/10/25 11:39:50 jer Exp $
+
+  25 Oct 2006; Jeroen Roovers <jer@gentoo.org> mozilla-firefox-2.0.ebuild:
+  Marked ~hppa (bug #152738).
 
 *mozilla-firefox-2.0 (25 Oct 2006)
 
