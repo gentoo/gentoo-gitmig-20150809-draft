@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.2.ebuild,v 1.7 2006/10/22 20:14:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bvi/bvi-1.3.2.ebuild,v 1.8 2006/10/25 04:26:00 tsunam Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bvi/${P}.src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 ppc ~ppc-macos ~x86"
+KEYWORDS="amd64 ppc ~ppc-macos x86"
 
 DEPEND="sys-libs/ncurses"
 
