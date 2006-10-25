@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0.ebuild,v 1.1 2006/09/06 22:19:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0.ebuild,v 1.2 2006/10/25 13:55:55 hansmi Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip
 LICENSE="GPL-2
 	CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dedicated openal opengl vorbis"
 
 UIDEPEND="openal? ( media-libs/openal )
