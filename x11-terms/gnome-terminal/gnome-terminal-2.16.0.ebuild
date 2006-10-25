@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.16.0.ebuild,v 1.2 2006/09/12 13:59:26 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.16.0.ebuild,v 1.3 2006/10/25 00:59:55 leio Exp $
 
 inherit eutils gnome2
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
+	>=app-text/gnome-doc-utils-0.3.2
 	>=app-text/scrollkeeper-0.3.11"
 # gnome-core overwrite /usr/bin/gnome-terminal
 
