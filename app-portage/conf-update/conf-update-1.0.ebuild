@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.1 2006/10/09 11:35:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/conf-update/conf-update-1.0.ebuild,v 1.2 2006/10/25 20:48:15 blubb Exp $
 
 inherit toolchain-funcs
 
 DESCRIPTION="${PN} is a ncurses-based config management utility"
-HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~blubb/${P}.tar.bz2"
+HOMEPAGE="gopher://blubb.ch/11/software/conf-update"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
