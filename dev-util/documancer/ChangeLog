@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/documancer
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/ChangeLog,v 1.9 2006/05/02 00:22:52 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/documancer/ChangeLog,v 1.10 2006/10/25 17:33:52 leio Exp $
+
+  25 Oct 2006; Mart Raudsepp <leio@gentoo.org> -files/documancer.backend,
+  -documancer-0.1.7.ebuild:
+  Drop old version
 
   02 May 2006; Mark Loeser <halcy0n@gentoo.org> documancer-0.2.6.ebuild:
   Fix depend.  Depending on non-existant packages is not cool
