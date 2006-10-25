@@ -7,7 +7,7 @@ media-libs/libsoundtouch sse
 # List of currently hard-enabled by us; once the use flags are out of global
 # mask, edit the ebuilds for these packages
 media-video/ffmpeg mmx
-media-video/mplayer mmx mmxext sse sse2
+media-video/mplayer mmx sse sse2
 media-video/transcode mmx sse sse2
 media-tv/xdtv mmx
 media-plugins/vdr-softdevice mmx mmxext
