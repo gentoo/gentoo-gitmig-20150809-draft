@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.60 2006/10/23 19:26:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.61 2006/10/25 05:20:06 tsunam Exp $
+
+  25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> m4-1.4.6.ebuild:
+  Stable x86; bug #149046
 
   23 Oct 2006; Markus Rothe <corsair@gentoo.org> m4-1.4.6.ebuild:
   Stable on ppc64; bug #149046
