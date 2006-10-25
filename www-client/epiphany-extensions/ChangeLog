@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.42 2006/10/13 12:59:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.43 2006/10/25 15:52:49 leio Exp $
+
+  25 Oct 2006; Mart Raudsepp <leio@gentoo.org>
+  -epiphany-extensions-1.8.1.ebuild:
+  Remove old revision that depends on old mozilla suite
 
 *epiphany-extensions-2.16.1 (13 Oct 2006)
 
