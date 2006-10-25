@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.51 2006/10/24 22:40:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.52 2006/10/25 16:00:48 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  colordiff-1.0.6.ebuild:
+  Stable on sparc
 
   24 Oct 2006; Aron Griffis <agriffis@gentoo.org> colordiff-1.0.6.ebuild:
   Remove the color and banner hacks I introduced for the older versions; 1.0.6
