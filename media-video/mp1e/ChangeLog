@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mp1e
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/ChangeLog,v 1.1 2006/08/16 11:28:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mp1e/ChangeLog,v 1.2 2006/10/25 09:05:11 zzam Exp $
+
+  25 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  mp1e-0.5.2.20040909.ebuild:
+  Marked stable on x86.
 
 *mp1e-0.5.2.20040909 (16 Aug 2006)
 
