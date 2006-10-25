@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.4 2006/10/17 21:09:45 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.5 2006/10/25 00:01:01 steev Exp $
+
+  24 Oct 2006; Steev Klimaszewski <steev@gentoo.org> last-exit-2.0.ebuild:
+  Add dbus > .60 dep, since that is what the configure script looks for - really
+  this needs to be fixed for modular depps.  Partially fixes a bug reported by
+  Jakub.
 
 *last-exit-3.0 (17 Oct 2006)
 
