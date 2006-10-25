@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.8 2006/06/23 23:59:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/orsa-0.6.1.ebuild,v 1.9 2006/10/25 16:01:19 markusle Exp $
 
 inherit base flag-o-matic qt3
 
@@ -27,6 +27,13 @@ DEPEND="fftw? ( =sci-libs/fftw-2.1* )
 replace-flags k6-3 i586
 replace-flags k6-2 i586
 replace-flags k6 i586
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+}
 
 src_compile() {
 	if ! use mpi; then
@@ -60,7 +67,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR=${D} || die "install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS
 	dodoc src/test/*
 }
