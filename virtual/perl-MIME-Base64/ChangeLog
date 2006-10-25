@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-MIME-Base64
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.14 2006/10/20 20:12:28 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.15 2006/10/25 02:36:32 mcummings Exp $
+
+  25 Oct 2006; Michael Cummings <mcummings@gentoo.org>
+  perl-MIME-Base64-3.05.ebuild:
+  Cleaning up deps
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   -perl-MIME-Base64-2.12.ebuild, -perl-MIME-Base64-2.20.ebuild,
