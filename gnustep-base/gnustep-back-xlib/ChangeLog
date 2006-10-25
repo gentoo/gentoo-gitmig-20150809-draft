@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-xlib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.18 2006/08/16 00:58:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/ChangeLog,v 1.19 2006/10/25 04:48:22 tsunam Exp $
+
+  25 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
+  gnustep-back-xlib-0.10.3.ebuild:
+  Stable x86; bug #139385
 
   16 Aug 2006; Jason Wever <weeve@gentoo.org>
   gnustep-back-xlib-0.10.3.ebuild:
