@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgroups
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.13 2006/09/14 19:50:08 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/ChangeLog,v 1.14 2006/10/25 03:09:24 nichoj Exp $
+
+  25 Oct 2006; Joshua Nichols <nichoj@gentoo.org> jgroups-2.2.7-r2.ebuild:
+  Fixed failure with USE=doc, bug #152281. Cleanups for how it was migrated.
 
   14 Sep 2006; Joshua Nichols <nichoj@gentoo.org> jgroups-2.2.7-r1.ebuild:
   Removed unnecessary pkg_setup.

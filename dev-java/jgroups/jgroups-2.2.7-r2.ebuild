@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r2.ebuild,v 1.1 2006/08/15 10:01:18 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7-r2.ebuild,v 1.2 2006/10/25 03:09:24 nichoj Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -22,14 +22,17 @@ DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}
 	>=dev-java/ant-core-1.5
 	app-arch/unzip
-	junit? ( dev-java/ant-tasks )"
+	test? ( dev-java/ant )"
 
-IUSE="doc junit source"
+IUSE="doc source test "
 
 S=${WORKDIR}/JGroups-${PV}.src
 
 pkg_setup() {
-	use junit && ewarn "WARNING: Running unit tests can take a long time."
+	java-pkg-2_pkg_setup
+	if use test; then
+		ewarn "WARNING: Running unit tests can take a very long time."
+	fi
 }
 
 src_unpack() {
@@ -51,19 +54,17 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="compile-1.4 jgroups-core.jar"
-	use doc && antflags="${antflags} javadoc"
-	use junit && antflags="${antflags} unittests"
-	eant ${antflags} || die "build failed"
+	eant compile-1.4 jgroups-core.jar $(use_doc)
 }
 
 src_install() {
 	java-pkg_dojar dist/jgroups-core.jar
 	dodoc doc/* CREDITS README
 
-	if use doc ; then
-		cd dist
-		java-pkg_dohtml -r javadoc
-	fi
+	use doc && java-pkg_dojavadoc dist/javadoc
 	use source && java-pkg_dosrc src/*
+}
+
+src_test() {
+	eant unittests
 }
