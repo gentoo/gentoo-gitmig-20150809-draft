@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libxsettings-client
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.11 2006/08/07 16:59:30 yvasilev Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.12 2006/10/25 05:04:20 dberkholz Exp $
+
+  25 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
+  +files/0.10-as-needed.patch, libxsettings-client-0.10.ebuild:
+  Fix for --as-needed: libXsettings-client needs to link against libX11.
 
   07 Aug 2006; <yvasilev@gentoo.org> libxsettings-client-0.10.ebuild:
   Added ~arm keyword.
