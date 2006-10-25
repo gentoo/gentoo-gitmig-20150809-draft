@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Cache-Memcached
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.29 2006/10/20 18:52:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Memcached/ChangeLog,v 1.30 2006/10/25 11:43:23 uberlord Exp $
+
+  25 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  Cache-Memcached-1.18.ebuild:
+  Added ~sparc-fbsd keyword
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   Cache-Memcached-1.18.ebuild:
