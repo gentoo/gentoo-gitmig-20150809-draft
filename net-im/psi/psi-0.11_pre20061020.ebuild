@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20061020.ebuild,v 1.1 2006/10/21 00:10:13 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.11_pre20061020.ebuild,v 1.2 2006/10/25 20:05:47 genstef Exp $
 
 inherit eutils qt4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http:/psi-im.org/"
 SRC_URI="http://psi-im.org/files/snapshot/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~x86"
 
 S="${WORKDIR}/${MY_P}"
 
