@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6134 2006/10/25 16:26:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6135 2006/10/25 16:59:02 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Doug Goldstein <cardoe@gentoo.org> (25 Oct 2006)
+# Masked pending removal on 25 Nov 2006. See bug #134621
+net-www/netscape-plugger
 
 # Diego Pettenò <flameeyes@gentoo.org> (24 Oct 2006)
 # pam_console on its own ebuild, so that it can be used with PAM 0.99
@@ -1511,8 +1515,6 @@ media-sound/ipodder
 
 # Markus Nigbur <pYrania@gentoo.org> (01 Jul 2005)
 # Masked due to a pretty big bug with crosscompile support.
-=sys-devel/distcc-2.18.3-r8
-
 # Colin Kingsley <tercel@gentoo.org> (30 Jun 2005)
 # Major revisions. Masked for testing.
 =sys-devel/distcc-2.18.3-r8
@@ -1609,10 +1611,6 @@ net-im/mercury-bin
 # be broken out of it
 dev-lisp/cl-imho
 
-# <mkennedy@gentoo.org> (Jan 12 2005)
-# no longer needed for the time being; use app-emacs/slime instead
-# app-emacs/slime-cvs
-
 # <danarmak@gentoo.org> (11 Dec 2004)
 # Considered broken by upstream; future to be decided
 kde-base/qtsharp
@@ -1682,10 +1680,3 @@ net-im/gabber
 # <lu_zero@gentoo.org> (16 Mar 2003)
 # to be tested, seems unstable
 net-dialup/hcfusbmodem
-
-# <phoenix@gentoo.org> (21 Nov 2002)
-# The huge nsplugins mask. These plugins use
-# the new layout (/usr/lib/nsbrowser/plugins)
-# and should work in both mozilla and phoenix.
-=net-www/netscape-plugger-4.0-r2
-
