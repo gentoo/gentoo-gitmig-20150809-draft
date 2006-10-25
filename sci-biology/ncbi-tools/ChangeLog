@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.45 2006/10/24 19:01:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.46 2006/10/25 19:46:02 grobian Exp $
+
+  25 Oct 2006; Fabian Groffen <grobian@gentoo.org>
+  ncbi-tools-20050605.ebuild, ncbi-tools-20050605-r2.ebuild:
+  Dropped ppc-macos, see you in prefix.
 
   24 Oct 2006; Fabian Groffen <grobian@gentoo.org>
   ncbi-tools-20060507.ebuild:
