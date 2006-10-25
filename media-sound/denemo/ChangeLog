@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/denemo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.17 2006/10/15 04:57:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.18 2006/10/25 14:15:26 blubb Exp $
+
+  25 Oct 2006; Simon Stelling <blubb@gentoo.org> denemo-0.5.9.ebuild,
+  denemo-0.7.2.ebuild:
+  0.7.2 doesn't compile with gcc 4.1; 0.7.4 crashes right upon start; 0.7.5
+  fails to play anything and has buggy keybindings -> back to ~amd64
 
   15 Oct 2006; MATSUU Takuto <matsuu@gentoo.org> denemo-0.7.4.ebuild,
   denemo-0.7.5.ebuild:

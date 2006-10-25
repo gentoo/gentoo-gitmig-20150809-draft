@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.7.2.ebuild,v 1.7 2004/09/14 07:35:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.7.2.ebuild,v 1.8 2006/10/25 14:15:26 blubb Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/denemo/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 sparc amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-1.2*
