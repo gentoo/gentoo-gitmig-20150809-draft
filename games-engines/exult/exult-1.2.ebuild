@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.8 2006/10/16 22:04:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.9 2006/10/25 20:18:34 tupone Exp $
 
 inherit eutils autotools games
 
@@ -36,6 +36,7 @@ src_unpack() {
 	unpack U7MusicOGG_{1,2}of2.zip
 	cd "${S}"
 	epatch "${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}"/${P}-64bits.patch \
 		"${FILESDIR}/${P}"-x11link.patch
 	sed -i \
 		-e "s/u7siinstrics.data/u7siintrinsics.data/" \
