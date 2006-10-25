@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellshoot
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/ChangeLog,v 1.18 2006/10/24 03:01:09 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/ChangeLog,v 1.19 2006/10/25 14:44:29 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gkrellshoot-0.4.3.ebuild:
+  Stable on sparc
 
   24 Oct 2006; Joshua Jackson <tsunam@gentoo.org> gkrellshoot-0.4.3.ebuild:
   Stable x86; bug #111813
