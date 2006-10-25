@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.17 2006/10/25 06:35:02 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.1.1-r1.ebuild,v 1.18 2006/10/25 07:18:47 dberkholz Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -351,11 +351,6 @@ src_unpack() {
 	x-modular_patch_source
 
 	# Set up kdrive servers to build
-	# Bug #150052 - anything that uses vm86.h is broken on non-x86 arches.
-	# That translates into the following set:
-	vm86_devices="chips epson glint i810 mach64 mga neomagic
-		nv r128 radeon siliconmotion vesa via"
-
 	if use kdrive; then
 		einfo "Removing unused kdrive drivers ..."
 		for card in ${IUSE_VIDEO_CARDS}; do
@@ -369,6 +364,13 @@ src_unpack() {
 			real_card=${real_card/%sis/sis300}
 
 			disable_card=0
+
+			# Check whether it's a valid kdrive server before we waste time
+			# on the rest of this
+			if ! grep -q -o "\b${real_card}\b" ${S}/hw/kdrive/Makefile.am; then
+				continue
+			fi
+
 			if ! use ${card}; then
 				# (bug #136370) Radeon needs fbdev and vesa
 				if use x86 \
@@ -380,8 +382,9 @@ src_unpack() {
 				fi
 				disable_card=1
 			# Bug #150052
-			elif ! use x86 &&
-				[[ ${vm86_devices/${card#video_cards_}/} != ${vm86_devices} ]]; then
+			# fbdev is the only VIDEO_CARDS setting that works on non-x86
+			elif ! use x86 \
+				&& [[ ${real_card} != fbdev ]]; then
 				ewarn "  $real_card does not work on your architecture; disabling."
 				disable_card=1
 			fi
