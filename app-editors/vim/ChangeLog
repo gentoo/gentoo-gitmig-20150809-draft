@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.245 2006/10/24 17:00:56 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.246 2006/10/25 16:53:58 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> vim-7.0.91.ebuild:
+  Stable on sparc
 
   24 Oct 2006; Mike Kelly <pioto@pioto.org> vim-7.0.146.ebuild:
   Dropping ppc-macos keyword, since eselect-1.0.6 isn't keyworded for it,
