@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.3 2006/10/25 11:19:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.4 2006/10/25 19:20:41 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -134,7 +134,7 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2 \
 		font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-2.tar.bz2 \
 		font-arial-cp1250.tar.bz2
-
+	epatch "${FILESDIR}/mplayer-undefined-reference-fix.patch"
 	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
 	use gtk && unpack Blue-${BLUV}.tar.bz2
