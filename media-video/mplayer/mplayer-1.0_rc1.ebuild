@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.2 2006/10/24 12:32:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.3 2006/10/25 11:19:29 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -354,14 +354,14 @@ src_compile() {
 	use x86 && myconf="${myconf} $(use_enable sse)"
 	use x86 && myconf="${myconf} $(use_enable sse2)"
 	use x86 && myconf="${myconf} $(use_enable mmx)"
-	use x86 && myconf="${myconf} $(use_enable mmxext)"
+	myconf="${myconf} $(use_enable mmxext)"
 	use debug && myconf="${myconf} --enable-debug=3"
 
 	# mplayer now contains SIMD assembler code for amd64
 	# AMD64 Team decided to hardenable SIMD assembler for all users
 	# Danny van Dyk <kugelfang@gentoo.org> 2005/01/11
 	if use amd64; then
-		myconf="${myconf} --enable-sse --enable-sse2 --enable-mmx --enable-mmxext"
+		myconf="${myconf} --enable-sse --enable-sse2 --enable-mmx"
 	fi
 
 	if use ppc64
