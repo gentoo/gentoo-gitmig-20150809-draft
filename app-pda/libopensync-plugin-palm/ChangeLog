@@ -1,0 +1,12 @@
+# ChangeLog for app-pda/libopensync-plugin-palm
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-palm/ChangeLog,v 1.1 2006/10/25 16:21:34 peper Exp $
+
+*libopensync-plugin-palm-0.19 (25 Oct 2006)
+
+  25 Oct 2006; Piotr Jaroszyński <peper@gentoo.org>
+  +files/libopensync-plugin-palm-0.19-include_pisock.patch, +metadata.xml,
+  +libopensync-plugin-palm-0.19.ebuild:
+  New package. Thanks to Pierre Cassimans <kammicazze@hotmail.com> and Søren
+  F. Nielsen <cthulhu@mail.dk>. Bug #112801.
+
