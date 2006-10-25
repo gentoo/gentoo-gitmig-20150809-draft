@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-gconf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.19 2006/10/21 16:54:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.20 2006/10/25 15:09:48 gustavoz Exp $
+
+  25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome2-gconf-1.032.ebuild:
+  Stable on sparc
 
 *gnome2-gconf-1.043 (21 Oct 2006)
 
