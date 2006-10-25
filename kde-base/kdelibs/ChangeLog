@@ -1,6 +1,20 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.373 2006/10/19 11:46:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.374 2006/10/25 20:29:22 flameeyes Exp $
+
+*kdelibs-3.5.5-r5 (25 Oct 2006)
+*kdelibs-3.5.5-r4 (25 Oct 2006)
+*kdelibs-3.5.4-r4 (25 Oct 2006)
+*kdelibs-3.5.4-r3 (25 Oct 2006)
+
+  25 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -kdelibs-3.5.4-r1.ebuild, -kdelibs-3.5.4-r2.ebuild,
+  +kdelibs-3.5.4-r3.ebuild, +kdelibs-3.5.4-r4.ebuild,
+  -kdelibs-3.5.5-r1.ebuild, -kdelibs-3.5.5-r2.ebuild,
+  -kdelibs-3.5.5-r3.ebuild, +kdelibs-3.5.5-r4.ebuild,
+  +kdelibs-3.5.5-r5.ebuild:
+  Version bump to fix the KSpell2 debacle, bug #152417. Keywording on 3.5.4-r4
+  and 3.5.5-r5 was limited to the arches having hspell-1.0 available.
 
   19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   kdelibs-3.5.5-r3.ebuild:
