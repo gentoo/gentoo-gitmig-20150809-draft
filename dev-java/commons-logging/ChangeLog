@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.40 2006/10/17 03:40:44 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.41 2006/10/25 13:31:57 nichoj Exp $
+
+*commons-logging-1.1-r2 (25 Oct 2006)
+
+  25 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
+  +commons-logging-1.1-r2.ebuild:
+  Version bump. Now has use flags for all possible logger backends.
 
   17 Oct 2006; Joshua Nichols <nichoj@gentoo.org>
   commons-logging-1.0.4-r2.ebuild:
