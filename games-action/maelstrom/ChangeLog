@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.17 2005/08/15 19:03:08 mr_bones_ Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.18 2006/10/25 20:54:31 tupone Exp $
+
+  25 Oct 2006; <tupone@gentoo.org> +files/maelstrom-3.0.6-64bits.patch,
+  maelstrom-3.0.6-r1.ebuild:
+  Fix for fail to compile on a 64 bits CPU. Bug #146153 by Randall Nortman
 
   15 Aug 2005; Michael Sterrett <mr_bones_@gentoo.org>
   maelstrom-3.0.6-r1.ebuild:

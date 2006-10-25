@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.8 2005/08/15 19:03:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/maelstrom-3.0.6-r1.ebuild,v 1.9 2006/10/25 20:54:31 tupone Exp $
 
 inherit eutils games
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	epatch \
 		"${FILESDIR}"/${PF}-security.patch \
+		"${FILESDIR}"/${P}-64bits.patch \
 		"${FILESDIR}"/${PN}-gcc34.patch
 
 	# Install the data into $(datadir)/..., not $(prefix)/games/...
