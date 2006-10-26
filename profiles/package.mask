@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6143 2006/10/26 15:24:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6144 2006/10/26 15:26:12 george Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# George Shapovalov <george@gentoo.org> (26 Oct 2006)
+# Masked for removal - "proper" versions have been added under asis-gcc and asis-gpl
+=dev-ada/asis-3.4.6
+# Masked for removal as old style gnat is going to be masked soon. 
+=dev-ada/asis-3.44
 
 # Matthias Schwarzott <zzam@gentoo.org> (26 Oct 2006)
 # Masked for removal (will be moved to vdr-testing overlay)
