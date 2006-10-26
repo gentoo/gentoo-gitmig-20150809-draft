@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/portfwd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.16 2006/10/26 09:39:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.17 2006/10/26 09:44:30 pva Exp $
+
+  26 Oct 2006; Peter Volkov <pva@gentoo.org> +metadata.xml:
+  Added metadata.xml.
 
   26 Oct 2006; Peter Volkov <pva@gentoo.org> portfwd-0.28.ebuild:
   Use autoools.eclass to take care of autotools dependecies. Fixed bug
