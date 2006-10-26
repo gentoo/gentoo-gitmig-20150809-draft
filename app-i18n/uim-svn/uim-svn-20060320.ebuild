@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.8 2006/09/06 12:40:53 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20060320.ebuild,v 1.9 2006/10/26 16:11:03 hattya Exp $
 
 inherit elisp-common flag-o-matic kde-functions multilib subversion
 
@@ -20,6 +20,7 @@ SLOT="0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.31
+	gnome-base/librsvg
 	X? ( || ( (
 				x11-proto/xextproto
 				x11-proto/xproto
@@ -65,6 +66,7 @@ src_compile() {
 		`use_with qt3 qt` \
 		`use_with gtk gtk2` \
 		`use_with m17n-lib m17nlib` \
+		--enable-maintainer-mode \
 		|| die
 	emake || die
 
@@ -76,8 +78,8 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog* NEWS README*
 
-	docinto doc
 	rm doc/Makefile*
+	docinto doc
 	dodoc doc/*
 
 	local u
