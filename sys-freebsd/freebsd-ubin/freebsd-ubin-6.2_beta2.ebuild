@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_beta2.ebuild,v 1.4 2006/10/17 10:30:38 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-6.2_beta2.ebuild,v 1.5 2006/10/26 11:29:10 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic pam
 
@@ -104,4 +104,13 @@ src_install() {
 
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}/locate-updatedb-cron" locate.updatedb
+}
+
+pkg_postinst() {
+	# We need to ensure that login.conf.db is up-to-date.
+	if [[ -e ${ROOT}etc/login.conf ]] ; then
+		einfo "Updating ${ROOT}etc/login.conf.db"
+		${ROOT}usr/bin/cap_mkdb	-f ${ROOT}etc/login.conf ${ROOT}etc/login.conf
+		einfo "Remember to run cap_mkdb /etc/login.conf after making changes to it"
+	fi
 }
