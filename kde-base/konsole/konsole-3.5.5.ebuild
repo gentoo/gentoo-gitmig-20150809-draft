@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-3.5.5.ebuild,v 1.1 2006/10/03 11:34:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/konsole-3.5.5.ebuild,v 1.2 2006/10/26 10:55:53 flameeyes Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -25,3 +25,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	|| ( x11-apps/bdftopcf <virtual/x11-7 )"
 
+# For kcm_konsole module
+RDEPEND="${RDEPEND}
+	kde-base/kcontrol"
