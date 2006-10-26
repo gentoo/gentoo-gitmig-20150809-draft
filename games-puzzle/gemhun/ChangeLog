@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gemhun
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.7 2006/03/23 19:47:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.8 2006/10/26 22:50:03 nyhm Exp $
+
+  26 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/gemhun-20040529-srand.patch, gemhun-20040529.ebuild:
+  Fix autotools stuff and an arithmetic exception, bug #125374
 
   23 Mar 2006; Michael Hanselmann <hansmi@gentoo.org>
   gemhun-20040529.ebuild:

@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.3 2006/03/23 19:47:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.4 2006/10/26 22:50:03 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit eutils autotools games
 
 DESCRIPTION="A puzzle game about grouping gems of a chosen amount together"
@@ -16,9 +18,8 @@ KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="dev-games/kyra
-	>=media-libs/sdl-mixer-1.2.1
+	media-libs/sdl-mixer
 	virtual/opengl
-	sys-libs/ncurses
 	media-libs/sdl-net
 	media-libs/libpng"
 
@@ -30,13 +31,20 @@ src_unpack() {
 	# Fix to comply with gentoo-path
 	# and to remove a nasty violation by commenting a network calls
 	# Until upstream fix, that is
-	epatch "${FILESDIR}/${PV}-gentoo.patch"
-	eautoreconf || die "eautoreconf failed"
+	epatch \
+		"${FILESDIR}/${PV}-gentoo.patch" \
+		"${FILESDIR}"/${P}-srand.patch
+	AT_M4DIR=m4 eautoreconf
+}
+
+src_compile() {
+	egamesconf --disable-nls || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed"
-	dodoc AUTHORS ChangeLog README README.Install TODO
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS ChangeLog README TODO
 	insinto "${GAMES_DATADIR}/GemHunters/pax/"
 	doins -r ../fairylands ../stars_in_the_night || die "doins failed"
 	doicon pixmaps/${PN}.png
