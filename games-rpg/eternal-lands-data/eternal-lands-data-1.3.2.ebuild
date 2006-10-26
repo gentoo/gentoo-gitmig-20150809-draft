@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.2.ebuild,v 1.2 2006/10/26 15:40:54 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.2.ebuild,v 1.3 2006/10/26 16:26:35 uberlord Exp $
 
 inherit games
 
@@ -24,8 +24,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="music"
 
-DEPEND="app-arch/unzip
-	sys-apps/findutils"
+DEPEND="app-arch/unzip"
 
 src_unpack() {
 	cd "${WORKDIR}"
