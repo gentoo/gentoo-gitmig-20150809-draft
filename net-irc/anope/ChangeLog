@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/anope
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.1 2006/08/29 22:54:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.2 2006/10/26 20:47:46 jokey Exp $
+
+*anope-1.7.17 (26 Oct 2006)
+
+  26 Oct 2006; Markus Ullmann <jokey@gentoo.org> +anope-1.7.17.ebuild:
+  Security version bump
 
 *anope-1.7.15 (29 Aug 2006)
 
