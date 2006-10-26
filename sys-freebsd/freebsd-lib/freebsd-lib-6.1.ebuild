@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.13 2006/10/06 16:47:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.1.ebuild,v 1.14 2006/10/26 18:21:14 flameeyes Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -20,8 +20,6 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2
 		mirror://gentoo/${INCLUDE}.tar.bz2
 		nis? ( mirror://gentoo/${USBIN}.tar.bz2 )
-		!kernel_FreeBSD? (
-			mirror://gentoo/${SYS}.tar.bz2 )
 		build? (
 			mirror://gentoo/${SYS}.tar.bz2 )"
 
@@ -36,6 +34,10 @@ if [[ ${CATEGORY/cross-} == ${CATEGORY} ]]; then
 
 	PROVIDE="virtual/libc
 		virtual/os-headers"
+
+else
+	SRC_URI="${SRC_URI}
+			mirror://gentoo/${SYS}.tar.bz2"
 fi
 
 DEPEND="${DEPEND}

@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.37 2006/10/22 11:36:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.38 2006/10/26 18:21:14 flameeyes Exp $
+
+  26 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> freebsd-lib-6.1.ebuild,
+  freebsd-lib-6.2_beta2.ebuild:
+  Require the SYS package when crosscompiling, it's irrelevant which kernel
+  one is using.
 
   22 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   freebsd-lib-6.2_beta2.ebuild:
