@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.5 2006/07/25 09:29:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.6 2006/10/26 17:19:46 peper Exp $
 
 inherit eutils
 
@@ -14,22 +14,24 @@ SRC_URI="http://www.hpl.hp.com/personal/Jean_Tourrilhes/IrDA/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-
 IUSE="gtk"
+
 RDEPEND="=dev-libs/glib-2*
-		gtk? ( =x11-libs/gtk+-1.2* )"
-DEPEND="${RDEPEND} sys-apps/sed"
+	=sys-devel/autoconf-2.5*
+	gtk? ( =x11-libs/gtk+-1.2* )"
+DEPEND="${RDEPEND}
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/irda-utils-rh1.patch
+	cd "${S}"
+	epatch "${FILESDIR}/irda-utils-rh1.patch"
 
 	sed -i \
 		-e "s:^\(CFLAGS\)=.*:\1=${CFLAGS}:" \
 		-e "s:^\(DIRS =.*\):\1 irsockets:" \
-		${S}/Makefile
+		"${S}/Makefile"
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16-r1.ebuild,v 1.5 2006/02/07 20:53:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16-r1.ebuild,v 1.6 2006/10/26 17:19:46 peper Exp $
 
 inherit eutils
 
@@ -13,17 +13,18 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="gtk"
 
-DEPEND="virtual/libc
-	=dev-libs/glib-1.2*
+DEPEND="=dev-libs/glib-1.2*
+	=sys-devel/automake-1.4*
+	=sys-devel/autoconf-2.5*
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
-	epatch ${FILESDIR}/irda-utils-rh1.patch
-	epatch ${FILESDIR}/irda-utils-gcc3.4-fix.patch
-	epatch ${FILESDIR}/${P}-irkbd.patch
+	cd "${S}"
+	epatch "${FILESDIR}/irda-utils-rh1.patch"
+	epatch "${FILESDIR}/irda-utils-gcc3.4-fix.patch"
+	epatch "${FILESDIR}/${P}-irkbd.patch"
 }
 
 src_compile() {
