@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.21 2006/10/23 16:18:10 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.22 2006/10/26 02:08:03 nerdboy Exp $
+
+  26 Oct 2006; Steve Arnold <nerdboy@gentoo.org> grass-6.1.0.ebuild:
+  use flag clean-up (fix for bug 152784, caused by brain-fart)
 
 *grass-6.1.0 (23 Oct 2006)
 

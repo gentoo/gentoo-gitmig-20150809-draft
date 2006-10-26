@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.2 2006/10/25 08:50:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.3 2006/10/26 02:08:03 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 # To-do: get ppc64 gdal deps fixed up
 
-IUSE="ncurses ffmpeg fftw truetype glw gmath jpeg largefile motif mysql nls odbc opengl png postgres proj readline sqlite tcl tk tiff X"
+IUSE="ffmpeg fftw glw gmath jpeg largefile motif mysql ncurses nls odbc opengl png postgres proj readline sqlite tcl tk tiff truetype X"
 
 RESTRICT="nostrip"
 
@@ -25,13 +25,12 @@ RDEPEND=">=sys-devel/make-3.80
 	>=sys-libs/gdbm-1.8.0
 	>=sys-devel/gcc-3.2.2
 	sys-apps/man
-	>=sci-libs/proj-4.4.7
 	sci-libs/gdal
+	>=sci-libs/proj-4.4.7
 	ffmpeg? ( media-video/ffmpeg )
 	fftw? ( =sci-libs/fftw-2* )
 	gmath? ( virtual/blas
 	    virtual/lapack )
-	freetype? ( >=media-libs/freetype-2.0 )
 	jpeg? ( media-libs/jpeg )
 	motif? ( x11-libs/openmotif )
 	mysql? ( dev-db/mysql )
@@ -47,6 +46,7 @@ RDEPEND=">=sys-devel/make-3.80
 	tcl? ( >=dev-lang/tcl-8.3 )
 	tk? ( >=dev-lang/tk-8.3 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
+	truetype? ( >=media-libs/freetype-2.0 )
 	X? ( || (
 	    ( x11-libs/libXmu
 	    x11-libs/libXext
@@ -104,7 +104,7 @@ src_compile() {
 		myconf="${myconf} --without-ffmpeg"
 	fi
 
-	if use freetype; then
+	if use truetype; then
 		myconf="${myconf} --with-freetype --with-freetype-includes=/usr/include/freetype2"
 	fi
 
