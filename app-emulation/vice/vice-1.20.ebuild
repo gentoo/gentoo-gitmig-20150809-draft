@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.1 2006/10/12 23:39:55 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.20.ebuild,v 1.2 2006/10/26 00:26:20 nyhm Exp $
 
 inherit games
 
@@ -35,6 +35,8 @@ RDEPEND="media-libs/giflib
 	readline? ( sys-libs/readline )
 	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
+	x11-apps/bdftopcf
+	x11-apps/mkfontdir
 	x11-proto/xproto
 	x11-proto/xf86vidmodeproto
 	x11-proto/xextproto
