@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn-templates/vdr-burn-templates-0.0.1.ebuild,v 1.3 2006/04/24 20:47:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn-templates/vdr-burn-templates-0.0.1.ebuild,v 1.4 2006/10/26 08:33:43 zzam Exp $
 
-DESCRIPTION="VDR DVD Burn Plugin Templates"
+DESCRIPTION="DVD-themes (background and menu) for vdr-burn"
 HOMEPAGE="No Homepage available"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
