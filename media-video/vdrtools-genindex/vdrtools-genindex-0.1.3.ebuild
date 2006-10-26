@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdrtools-genindex/vdrtools-genindex-0.1.3.ebuild,v 1.1 2006/06/09 20:09:07 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdrtools-genindex/vdrtools-genindex-0.1.3.ebuild,v 1.2 2006/10/26 09:20:15 zzam Exp $
 
 SCRIPT="genindex"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.muempf.de/down/${SCRIPT}-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
