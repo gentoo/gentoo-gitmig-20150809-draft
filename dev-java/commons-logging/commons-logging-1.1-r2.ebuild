@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.1 2006/10/25 13:31:57 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.1-r2.ebuild,v 1.2 2006/10/26 11:17:39 caster Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	eant compile
+	eant compile $(use_doc)
 }
 
 src_install() {
