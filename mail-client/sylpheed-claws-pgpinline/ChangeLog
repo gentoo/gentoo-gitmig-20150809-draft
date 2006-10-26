@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed-claws-pgpinline
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.21 2006/10/14 04:11:53 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.22 2006/10/26 23:51:09 ticho Exp $
+
+  26 Oct 2006; Andrej Kacian <ticho@gentoo.org>
+  sylpheed-claws-pgpinline-0.5.ebuild:
+  Added dependency on pkgconfig. Closes bug #152324 by "Evil Compile Person"
+  <bugs at dev.gentooexperimental.org>.
 
   14 Oct 2006; Marius Mauch <genone@gentoo.org> metadata.xml:
   update maintainer info
