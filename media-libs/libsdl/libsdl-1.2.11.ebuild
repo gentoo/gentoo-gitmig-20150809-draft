@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.18 2006/10/03 20:07:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.11.ebuild,v 1.19 2006/10/26 00:22:38 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
@@ -38,7 +38,7 @@ RDEPEND="!noaudio? ( >=media-libs/audiofile-0.1.9 )
 	svga? ( >=media-libs/svgalib-1.4.2 )
 	aalib? ( media-libs/aalib )
 	libcaca? ( >=media-libs/libcaca-0.9-r1 )
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl virtual/glu )"
 DEPEND="${RDEPEND}
 	nas? (
 		x11-proto/xextproto
