@@ -1,9 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.12.5.ebuild,v 1.1 2006/10/08 03:53:04 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgnome-java/libgnome-java-2.12.5.ebuild,v 1.2 2006/10/26 02:40:04 mr_bones_ Exp $
 
 inherit java-gnome
 
+DESCRIPTION="Java bindings for GNOME"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
 
 SLOT="2.12"
