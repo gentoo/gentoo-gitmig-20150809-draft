@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.5.ebuild,v 1.6 2006/10/26 18:53:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.9.98.1.ebuild,v 1.1 2006/10/26 18:53:13 jokey Exp $
 
 inherit eutils
 
@@ -12,19 +12,13 @@ HOMEPAGE="http://www.scrollz.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ~ppc-macos x86"
-IUSE="ipv6 socks5 ssl"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc-macos ~x86"
+IUSE="ipv6 socks5 ssl gnutls"
 
 DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
-
+	ssl? ( dev-libs/openssl )
+	gnutls? ( net-libs/gnutls )"
 S="${WORKDIR}"/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	# Darwin/OSX has GCC4 and needs this
-	epatch ${FILESDIR}/${P}-gcc4.patch
-}
 
 src_compile() {
 	econf \
@@ -32,6 +26,7 @@ src_compile() {
 		$(use_enable ipv6) \
 		$(use_enable socks5) \
 		$(use_with ssl) \
+		$(use_with gnutls) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
