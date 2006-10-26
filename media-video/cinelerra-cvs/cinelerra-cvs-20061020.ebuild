@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20061020.ebuild,v 1.2 2006/10/23 06:09:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20061020.ebuild,v 1.3 2006/10/26 16:56:09 aballier Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="3dnow alsa esd mmx oss static freetype2 ieee1394 css altivec opengl"
+IUSE="3dnow alsa esd mmx oss static truetype ieee1394 css altivec opengl"
 RDEPEND="media-libs/libpng
 	>=media-libs/libdv-1.0.0
 	media-libs/faad2
@@ -29,7 +29,7 @@ RDEPEND="media-libs/libpng
 		>=sys-libs/libavc1394-0.5.0 )
 	media-video/mjpegtools
 	esd? ( >=media-sound/esound-0.2.34 )
-	freetype2? ( >=media-libs/freetype-2.1.10 )
+	truetype? ( >=media-libs/freetype-2.1.10 )
 	opengl? ( virtual/opengl )
 	>=media-libs/openexr-1.2.2
 	>=media-libs/libvorbis-1.1.0
@@ -65,7 +65,7 @@ src_compile() {
 	`use_enable mmx` \
 	`use_enable 3dnow` \
 	--with-plugindir=/usr/$(get_libdir)/cinelerra \
-	`use_enable freetype2` \
+	`use_enable truetype freetype2` \
 	`use_enable ieee1394 firewire` \
 	`use_enable css` \
 	`use_enable opengl` \
