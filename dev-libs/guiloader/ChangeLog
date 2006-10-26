@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/guiloader
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.2 2006/09/07 11:31:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/guiloader/ChangeLog,v 1.3 2006/10/26 17:44:58 pva Exp $
+
+*guiloader-2.8.1 (26 Oct 2006)
+
+  26 Oct 2006; Peter Volkov <pva@gentoo.org> +guiloader-2.8.1.ebuild:
+  Version bump. License changed on LGPL, commercial usage is possible.
 
   07 Sep 2006; Peter Volkov <pva@gentoo.org> guiloader-2.8.0.ebuild:
   Added ~amd64 keyword, as noted by upstream developer Maxim Udushlivy.
