@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.95 2006/10/25 15:14:31 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.96 2006/10/26 02:35:30 weeve Exp $
+
+  26 Oct 2006; Jason Wever <weeve@gentoo.org> mutt-1.5.13-r1.ebuild:
+  Stable on SPARC wrt bug #152657.
 
   25 Oct 2006; Chris White <chriswhite@gentoo.org> mutt-1.5.13-r1.ebuild:
   ppc stable for bug #152657.
