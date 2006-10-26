@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.6 2006/10/24 23:51:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.7 2006/10/26 19:41:24 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -101,6 +101,9 @@ src_install() {
 	for x in "${FILESDIR}/pam.d-0.99/"*; do
 		[[ -f "${x}" ]] && dopamd "${x}"
 	done
+
+	# Remove the wrongly isntalled manpage
+	rm -f "${D}"/usr/share/man/man8/pam_userdb.8.gz
 }
 
 pkg_postinst() {
