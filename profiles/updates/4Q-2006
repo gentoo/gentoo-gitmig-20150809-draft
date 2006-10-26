@@ -2,3 +2,4 @@ move net-misc/yate net-voip/yate
 move media-video/stan app-crypt/stan
 move sys-power/sispm_ctl sys-power/sispmctl
 slotmove dev-libs/boost 1 0
+move dev-util/gideon dev-util/crow-designer
