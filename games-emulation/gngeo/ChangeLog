@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/gngeo
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.15 2006/09/02 06:27:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/ChangeLog,v 1.16 2006/10/26 20:13:08 tupone Exp $
+
+  26 Oct 2006; <tupone@gentoo.org> +files/gngeo-0.7-concurrentMake.patch,
+  gngeo-0.7.ebuild:
+  Added ~amd64 keyword. Bug #149785 by Shiro Ikkakujyu
+  Fixed parallelized make
 
 *gngeo-0.7 (02 Sep 2006)
 

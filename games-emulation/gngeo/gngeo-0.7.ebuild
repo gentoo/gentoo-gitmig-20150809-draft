@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.1 2006/09/02 06:27:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gngeo/gngeo-0.7.ebuild,v 1.2 2006/10/26 20:13:08 tupone Exp $
 
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="A NeoGeo emulator"
 HOMEPAGE="http://m.peponas.free.fr/gngeo/"
@@ -10,7 +10,7 @@ SRC_URI="http://download.berlios.de/gngeo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
@@ -25,7 +25,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-execstacks.patch"
+	epatch "${FILESDIR}/${P}-execstacks.patch" \
+		"${FILESDIR}"/${P}-concurrentMake.patch
+	autoreconf
 }
 
 src_install() {
