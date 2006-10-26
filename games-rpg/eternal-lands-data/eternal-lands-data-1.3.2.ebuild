@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.2.ebuild,v 1.1 2006/09/03 17:00:40 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands-data/eternal-lands-data-1.3.2.ebuild,v 1.2 2006/10/26 15:40:54 uberlord Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.other-life.com/el/el_${MY_PV}_linux_full.zip
 
 LICENSE="eternal_lands"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="music"
 
 DEPEND="app-arch/unzip
