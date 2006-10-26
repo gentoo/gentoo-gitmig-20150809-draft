@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python-extras
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.42 2006/10/26 19:50:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-extras/ChangeLog,v 1.43 2006/10/26 20:37:54 dang Exp $
+
+  26 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
+  -gnome-python-extras-2.14.0.ebuild:
+  2.14.0 deps on mozilla too...
 
   26 Oct 2006; Daniel Gryniewicz <dang@gentoo.org>
   -files/gnome-python-extras-nogda.patch,
