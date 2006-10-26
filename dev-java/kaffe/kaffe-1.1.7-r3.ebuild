@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r3.ebuild,v 1.5 2006/10/15 18:32:20 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.7-r3.ebuild,v 1.6 2006/10/26 07:42:42 nichoj Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit base eutils java-vm-2 flag-o-matic
 
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"
-SRC_URI="ftp://ftp.kaffe.org/pub/${PN}/v1.1.x-development/${P}.tar.gz"
+SRC_URI="ftp://ftp.kaffe.org/pub/${PN}/v1.1.x-development/${P}.tar.bz2"
 HOMEPAGE="http://www.kaffe.org/"
 
 #robilad recommended in bug 103978 that we leave the X and QT
