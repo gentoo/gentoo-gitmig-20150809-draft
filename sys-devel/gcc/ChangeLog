@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.575 2006/10/22 01:56:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.576 2006/10/26 23:57:01 blubb Exp $
+
+  26 Oct 2006; <blubb@gentoo.org> gcc-3.3.2-r7.ebuild, gcc-3.4.1-r3.ebuild:
+  remove unused emul-linux-x86 use flag
 
 *gcc-4.2.0_alpha20061014 (22 Oct 2006)
 
