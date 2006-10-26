@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.3.ebuild,v 1.3 2006/01/05 04:31:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.6.3.ebuild,v 1.4 2006/10/26 23:50:50 blubb Exp $
 
 inherit eutils
 
-IUSE="emul-linux-x86"
+IUSE=""
 
 MY_P="fp-linux-ws-${PV}"
 S=${WORKDIR}/${PN}
@@ -17,7 +17,7 @@ DEPEND=""
 RDEPEND=">=app-arch/unzip-5.42-r1
 	dev-lang/perl
 	dev-perl/libwww-perl
-	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
 PROVIDE="virtual/antivirus"
 
 SLOT="0"
