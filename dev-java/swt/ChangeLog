@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.49 2006/10/22 16:24:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.50 2006/10/26 22:36:50 caster Exp $
+
+  26 Oct 2006; Vlastimil Babka <caster@gentoo.org>
+  -files/SWTMessages.properties, -swt-3.1-r1.ebuild, -swt-3.2.ebuild:
+  Remove old versions/revisions that were using obsolete firefox/mozilla USE
+  flag to comply with bug #137665.
 
   22 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org> swt-3.2-r2.ebuild:
   Revert ppc keyword to ~ppc, bug #151358
