@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.11 2006/04/04 17:56:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.12 2006/10/26 21:37:27 nyhm Exp $
 
 inherit eutils
 
@@ -13,16 +13,18 @@ SLOT="0"
 KEYWORDS="~amd64 ppc sparc x86"
 IUSE="doc opengl"
 
-DEPEND=">=media-libs/libsdl-1.2
-	>=media-libs/sdl-image-1.2
+DEPEND="media-libs/libsdl
+	media-libs/sdl-image
 	opengl? ( virtual/opengl )"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc41.patch
+	epatch \
+		"${FILESDIR}/${P}"-gcc41.patch \
+		"${FILESDIR}"/${P}-sdl.patch
 }
 
 src_compile() {
