@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/portfwd
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.15 2006/08/05 21:58:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portfwd/ChangeLog,v 1.16 2006/10/26 09:39:00 pva Exp $
+
+  26 Oct 2006; Peter Volkov <pva@gentoo.org> portfwd-0.28.ebuild:
+  Use autoools.eclass to take care of autotools dependecies. Fixed bug
+  #152516. Thank Evil Compile Person for report. Cleaning old versions.
 
   05 Aug 2006; Jason Wever <weeve@gentoo.org> portfwd-0.28.ebuild:
   Added ~sparc keyword wrt bug #139848.
