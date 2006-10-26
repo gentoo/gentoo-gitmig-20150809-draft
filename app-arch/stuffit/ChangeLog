@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/stuffit
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.14 2005/04/21 17:50:18 blubb Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.15 2006/10/26 23:53:15 blubb Exp $
+
+  26 Oct 2006; <blubb@gentoo.org> stuffit-5.2.0.611.ebuild:
+  remove emul-linux-x86 use flag
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> stuffit-5.2.0.611.ebuild:
   stable on amd64
