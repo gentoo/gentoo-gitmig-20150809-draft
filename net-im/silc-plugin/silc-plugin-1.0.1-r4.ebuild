@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.4 2006/01/08 15:39:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1-r4.ebuild,v 1.5 2006/10/26 19:47:24 ticho Exp $
 
 inherit eutils perl-module
 
@@ -19,7 +19,8 @@ IUSE="debug"
 
 # All necessary dependencies are pulled in by irssi.
 DEPEND="virtual/libc
-	=dev-libs/glib-1.2*"
+	=dev-libs/glib-1.2*
+	www-client/lynx"    # this is for .html -> .txt docs convert
 RDEPEND=">=net-irc/irssi-${IRSSI_PV}
 	>=dev-perl/MIME-tools-5.413
 	dev-perl/File-MMagic
