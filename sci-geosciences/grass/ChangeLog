@@ -1,15 +1,20 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.22 2006/10/26 02:08:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.23 2006/10/26 02:15:34 nerdboy Exp $
 
   26 Oct 2006; Steve Arnold <nerdboy@gentoo.org> grass-6.1.0.ebuild:
-  use flag clean-up (fix for bug 152784, caused by brain-fart)
+  more use flag changes (trying to keep up with the Jones...) to take
+  advantage of the global ncurses flag
+
+  26 Oct 2006; Steve Arnold <nerdboy@gentoo.org> grass-6.1.0.ebuild:
+  use flag clean-up (fix for bug 152784, caused by brain-fart) for 
+  truetype
 
 *grass-6.1.0 (23 Oct 2006)
 
   23 Oct 2006; Steve Arnold <nerdboy@gentoo.org> +files/99grass-6.1.0,
   +grass-6.1.0.ebuild:
-  version bump for updated Grass (still has a minor math lib issue if built
+  Version bump for updated Grass (still has a minor math lib issue if built
   without Blas/Lapack support).
 
   06 Sep 2006; Steve Arnold <nerdboy@gentoo.org> -grass-5.0.2.ebuild:

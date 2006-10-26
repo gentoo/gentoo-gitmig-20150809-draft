@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.3 2006/10/26 02:08:03 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.1.0.ebuild,v 1.4 2006/10/26 02:15:34 nerdboy Exp $
 
 inherit eutils autotools
 
@@ -21,7 +21,6 @@ RDEPEND=">=sys-devel/make-3.80
 	>=sys-libs/zlib-1.1.4
 	>=sys-devel/flex-2.5.4a
 	>=sys-devel/bison-1.35
-	>=sys-libs/ncurses-5.3
 	>=sys-libs/gdbm-1.8.0
 	>=sys-devel/gcc-3.2.2
 	sys-apps/man
@@ -34,6 +33,7 @@ RDEPEND=">=sys-devel/make-3.80
 	jpeg? ( media-libs/jpeg )
 	motif? ( x11-libs/openmotif )
 	mysql? ( dev-db/mysql )
+	ncurses? >=sys-libs/ncurses-5.3
 	nls? ( x11-terms/mlterm )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
 	opengl? ( ( virtual/opengl )
@@ -137,7 +137,7 @@ src_compile() {
 	export LD_LIBRARY_PATH="/${WORKDIR}/image/usr/${P}/$(get_libdir):${LD_LIBRARY_PATH}"
 	econf ${myconf} \
 		`use_enable amd64 64bit` \
-		`use_with curses` \
+		`use_with ncurses curses` \
 		`use_with fftw` \
 		`use_with gmath blas` \
 		`use_with gmath lapack` \
