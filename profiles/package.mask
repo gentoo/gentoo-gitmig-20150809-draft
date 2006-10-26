@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6141 2006/10/26 14:13:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6142 2006/10/26 14:33:44 zzam Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Matthias Schwarzott <zzam@gentoo.org> (26 Oct 2006)
+# Masked for removal (will be moved to vdr-testing overlay)
+# as it does not work in its current state.
+media-plugins/vdr-adzap
 
 # Doug Goldstein <cardoe@gentoo.org> (25 Oct 2006)
 # Masked pending removal on 25 Nov 2006. See bug #134621
