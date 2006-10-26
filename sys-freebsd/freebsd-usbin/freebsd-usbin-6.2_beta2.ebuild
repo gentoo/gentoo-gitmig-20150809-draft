@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta2.ebuild,v 1.4 2006/10/17 10:33:31 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-6.2_beta2.ebuild,v 1.5 2006/10/26 11:45:45 uberlord Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -155,6 +155,18 @@ EOS
 }
 
 pkg_postinst() {
+	# We need to run pwd_mkdb if key files are not present
+	# If they are, then there is no need to run pwd_mkdb
+	if [[ ! -e ${ROOT}etc/passwd || ! -e ${ROOT}etc/pwd.db || ! -e ${ROOT}etc/spwd.db ]] ; then
+		if [[ -e ${ROOT}etc/master.passwd ]] ; then
+			einfo "Generating passwd files from ${ROOT}etc/master.passwd"
+			${ROOT}usr/sbin/pwd_mkdb -p -d ${ROOT}etc ${ROOT}etc/master.passwd
+		else
+			eerror "${ROOT}etc/master.passwd does not exist!"
+			eerror "You will no be able to log into your system!"
+		fi
+	fi
+
 	for logfile in messages security auth.log maillog lpd-errs xferlog cron \
 		debug.log slip.log ppp.log; do
 		[[ -f ${ROOT}/var/log/${logfile} ]] || touch ${ROOT}/var/log/${logfile}

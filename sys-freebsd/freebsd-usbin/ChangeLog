@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.27 2006/10/19 04:46:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.28 2006/10/26 11:45:45 uberlord Exp $
+
+  26 Oct 2006; Roy Marples <uberlord@gentoo.org>
+  freebsd-usbin-6.2_beta2.ebuild:
+  Create /etc/{passwd,pwd.db,spwd.db} from /etc/master.passwd
+  if any do not exist, #152856.
 
   19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Remove 6.2_beta1 ebuild.
