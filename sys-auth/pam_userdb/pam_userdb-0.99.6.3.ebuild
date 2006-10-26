@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.4 2006/10/26 19:34:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.6.3.ebuild,v 1.5 2006/10/26 19:37:54 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -113,12 +113,12 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	cd "${S}/modules/pam_userdb"
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	cd "${S}/modules/pam_userdb"
-	emake -j1 DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	# No, we don't really need .la files for PAM modules.
 	rm -f "${D}/$(get_libdir)/security/"*.la
