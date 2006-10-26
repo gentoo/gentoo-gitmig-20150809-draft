@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.120 2006/10/26 13:20:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.121 2006/10/26 15:56:18 dang Exp $
+
+  26 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> screen-4.0.3.ebuild:
+  Marked stable on amd64 for bug #152770
 
   26 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> screen-4.0.3.ebuild:
   Stable on sparc wrt security #152770
