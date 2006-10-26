@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cblas-reference
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.12 2006/10/11 01:01:39 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/ChangeLog,v 1.13 2006/10/26 03:24:36 tsunam Exp $
+
+  26 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
+  cblas-reference-20030223-r1.ebuild:
+  Stable x86; bug #137033
 
 *cblas-reference-20030223-r3 (11 Oct 2006)
 
