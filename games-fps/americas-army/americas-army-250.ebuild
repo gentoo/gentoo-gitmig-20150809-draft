@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.12 2006/10/05 11:53:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-250.ebuild,v 1.13 2006/10/26 13:59:12 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -11,8 +11,8 @@ SRC_URI="http://treefort.icculus.org/armyops/${MY_P}
 	http://0day.icculus.org/armyops/${MY_P}
 	mirror://3dgamers/${PN/-/}/${MY_P}
 	dedicated? (
-		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
-		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
+		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.2.tar.bz2
+		mirror://gentoo/${PN}-all-0.2.tar.bz2 )"
 
 LICENSE="Army-EULA"
 SLOT="0"
@@ -20,8 +20,6 @@ KEYWORDS="amd64 x86"
 RESTRICT="strip mirror"
 
 IUSE="opengl dedicated"
-
-DEPEND="app-arch/unzip"
 
 RDEPEND="sys-libs/glibc
 	opengl? (
@@ -39,9 +37,7 @@ RDEPEND="sys-libs/glibc
 			x11-libs/libX11 ) )
 	amd64? (
 			app-emulation/emul-linux-x86-compat )
-	x86? ( =virtual/libstdc++-3.3 )
-	dedicated? (
-		app-misc/screen )"
+	x86? ( =virtual/libstdc++-3.3 )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
