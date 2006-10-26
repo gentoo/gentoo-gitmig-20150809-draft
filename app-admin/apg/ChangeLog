@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.18 2006/10/25 17:48:26 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apg/ChangeLog,v 1.19 2006/10/26 03:28:03 tsunam Exp $
+
+  26 Oct 2006; Joshua Jackson <tsunam@gentoo.org> apg-2.3.0b-r2.ebuild:
+  Stable x86; bug #146094
 
   25 Oct 2006; Konstantin V. Arkhipov <voxus@gentoo.org>
   apg-2.3.0b-r2.ebuild:
