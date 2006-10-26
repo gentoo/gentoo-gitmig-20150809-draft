@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libunicall
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.1 2006/10/26 18:26:16 gustavoz Exp $
+
+*libunicall-0.0.3 (26 Oct 2006)
+
+  26 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> +metadata.xml,
+  +libunicall-0.0.3.ebuild:
+  New support lib for asterisk chan_unicall
+
