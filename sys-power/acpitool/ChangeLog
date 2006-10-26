@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acpitool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.1 2006/10/26 19:16:37 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpitool/ChangeLog,v 1.2 2006/10/26 21:21:03 wolf31o2 Exp $
+
+  26 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> acpitool-0.4.6.ebuild:
+  Stable on amd64/x86 wrt bug #152887.
 
   26 Oct 2006; Piotr Jaroszyński <peper@gentoo.org> +metadata.xml,
   +acpitool-0.2.5.ebuild, +acpitool-0.4.6.ebuild:
