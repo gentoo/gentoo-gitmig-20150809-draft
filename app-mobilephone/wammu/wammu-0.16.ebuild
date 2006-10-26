@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.16.ebuild,v 1.1 2006/10/13 20:38:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.16.ebuild,v 1.2 2006/10/26 18:58:28 peper Exp $
 
 inherit distutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-python/wxpython-2.6
 	>=dev-python/python-gammu-0.15
 	bluetooth? (
 		net-wireless/gnome-bluetooth
-		!amd64? ( dev-python/pybluez )
+		dev-python/pybluez
 	)"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
