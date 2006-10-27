@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.8 2006/10/23 09:01:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.9 2006/10/27 12:06:33 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -115,9 +115,6 @@ if use amd64; then
 fi
 
 
-# FIXME executable stacks should be addressed upstream!
-QA_EXECSTACK_x86="usr/lib/openoffice/program/libgcc3_uno.so"
-
 pkg_setup() {
 
 	ewarn
@@ -178,6 +175,7 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
+	cp -a ${FILESDIR}/${PV}/libgcc3_uno_noexecstack.diff ${S}/patches/src680 || die
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks

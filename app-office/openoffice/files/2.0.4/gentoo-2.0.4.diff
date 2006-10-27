@@ -20,3 +20,14 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
+--- patches/src680/apply 
++++ patches/src680/apply 
+@@ -1069,6 +1069,8 @@
+ 64bit-jdk-server-paths.diff, i#65974, hmth
+ # use IBM j9vm over IBM classic JVM
+ ibm-j9vm.diff, hmth
++# Fix for some execstacks in libgcc3_uno.so, i#70845, aprosky
++libgcc3_uno_noexecstack.diff
+ 
+ [ DebianBaseOnly ]
+ SectionOwner => rengelha
