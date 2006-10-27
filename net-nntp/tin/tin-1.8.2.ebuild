@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.2.ebuild,v 1.4 2006/10/26 19:16:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.8.2.ebuild,v 1.5 2006/10/27 13:27:29 gustavoz Exp $
 
 inherit versionator eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc-macos ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc-macos sparc x86"
 IUSE="crypt debug ipv6 ncurses nls"
 
 DEPEND="ncurses? ( sys-libs/ncurses )
