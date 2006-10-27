@@ -1,12 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20060816.ebuild,v 1.2 2006/10/15 00:44:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.20060816.ebuild,v 1.3 2006/10/27 14:17:41 truedfx Exp $
 
 # detect cvs snapshots; fex. 1.3.20040120
 [[ $PV == *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] ]]
 (( snapshot = !$? ))
 
-inherit eutils
+if (( snapshot )); then
+	WANT_AUTOCONF=latest
+	WANT_AUTOMAKE=latest
+	inherit eutils autotools
+else
+	inherit eutils
+fi
 
 DESCRIPTION="Extensible window manager using a Lisp-based scripting language"
 HOMEPAGE="http://sawmill.sourceforge.net/"
@@ -31,9 +37,6 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 RDEPEND="${DEPEND}"
 
 if (( snapshot )); then
-	DEPEND="${DEPEND}
-		sys-devel/automake
-		sys-devel/autoconf"
 	S="${WORKDIR}/${PN}"
 fi
 
@@ -48,6 +51,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/sawfish-xft-menu-utf8.patch
 	# Fix KDE menus
 	epatch "${FILESDIR}"/sawfish-kde-menus.patch
+
+	if (( snapshot )); then
+		eaclocal || die
+		eautoconf || die
+	fi
 }
 
 src_compile() {
@@ -55,12 +63,6 @@ src_compile() {
 	# else Xft2 borks, <azarah@gentoo.org> (13 Dec 2002)
 	export C_INCLUDE_PATH="${C_INCLUDE_PATH}:/usr/include/freetype2"
 	export CPLUS_INCLUDE_PATH="${CPLUS_INCLUDE_PATH}:/usr/include/freetype2"
-
-	# If this is a snapshot then we need to create the autoconf stuff
-	if (( snapshot )); then
-		aclocal || die "aclocal failed"
-		autoconf || die "autoconf failed"
-	fi
 
 	set -- \
 		--disable-themer \
