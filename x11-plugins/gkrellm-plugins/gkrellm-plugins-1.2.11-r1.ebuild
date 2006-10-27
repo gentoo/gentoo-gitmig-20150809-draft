@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-1.2.11-r1.ebuild,v 1.10 2005/07/10 18:56:16 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/gkrellm-plugins-1.2.11-r1.ebuild,v 1.11 2006/10/27 00:09:56 flameeyes Exp $
 
 IUSE="gnome"
 
@@ -21,7 +21,6 @@ DEPEND="=app-admin/gkrellm-1.2*
 		x11-plugins/gkrellm-volume
 		x11-plugins/gkrellmitime
 		x11-plugins/gkrellmlaunch
-		x11-plugins/gkrellmms
 		x11-plugins/gkrellmoon
 		x11-plugins/gkrellmouse
 		x11-plugins/gkrellmwho

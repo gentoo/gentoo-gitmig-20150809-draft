@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.7 2005/07/10 18:56:16 brix Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.8 2006/10/27 00:09:56 flameeyes Exp $
+
+  27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  gkrellm-plugins-1.2.11-r1.ebuild:
+  Remove plugin depending on masked xmms. Thanks to Jorge Vargas in bug #152936.
 
   10 Jul 2005; <brix@gentoo.org> gkrellm-plugins-1.2.11-r1.ebuild:
   gkrellmwireless is now ~sparc, excluding.
