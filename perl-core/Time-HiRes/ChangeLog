@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Time-HiRes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.24 2006/10/23 19:11:44 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-HiRes/ChangeLog,v 1.25 2006/10/27 16:19:58 ian Exp $
+
+*Time-HiRes-1.94 (27 Oct 2006)
+
+  27 Oct 2006; Christian Hartmann <ian@gentoo.org> +Time-HiRes-1.94.ebuild:
+  Version bump
 
   23 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   Time-HiRes-1.90.ebuild:
