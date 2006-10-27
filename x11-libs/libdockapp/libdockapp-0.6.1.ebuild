@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.6 2006/02/20 18:13:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.7 2006/10/27 09:14:10 s4t4n Exp $
 
 inherit eutils autotools
 
@@ -24,7 +24,9 @@ DEPEND="${RDEPEND}
 	|| ( (
 		x11-proto/xextproto
 		x11-proto/xproto )
-	virtual/x11 )"
+	virtual/x11 )
+	sys-devel/autoconf
+	sys-devel/automake"
 
 S=${WORKDIR}/${P/lib/}
 FONTDIR="/usr/share/fonts/${PN}-fonts"
