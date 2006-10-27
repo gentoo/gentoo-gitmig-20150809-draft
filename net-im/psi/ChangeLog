@@ -1,6 +1,10 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.101 2006/10/25 20:05:47 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.102 2006/10/27 15:27:06 humpback Exp $
+
+  27 Oct 2006; Gustavo Felisberto <humpback@gentoo.org>;
+  files/digest-psi-0.10, files/digest-psi-0.10-r1, Manifest:
+  Re-fixed the bug that genstef re-introduced in the digest.
 
   25 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   psi-0.11_pre20061020.ebuild:
