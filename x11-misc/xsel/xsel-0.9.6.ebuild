@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/xsel-0.9.6.ebuild,v 1.6 2006/10/21 22:29:19 omp Exp $
-
-inherit autotools
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/xsel-0.9.6.ebuild,v 1.7 2006/10/27 22:25:19 swegener Exp $
 
 DESCRIPTION="XSel is a command-line program for getting and setting the contents of the X selection."
 HOMEPAGE="http://www.vergenet.net/~conrad/software/xsel"
@@ -18,10 +16,9 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	eautoconf
+src_compile() {
+	econf || die "econf failed"
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
