@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r2.ebuild,v 1.2 2006/10/11 02:26:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-6.5.1-r2.ebuild,v 1.3 2006/10/27 06:30:40 josejx Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic portability
 
@@ -107,7 +107,7 @@ src_unpack() {
 	[[ ${CHOST} == *-freebsd6.* ]] && sed -i -e "s/-DHAVE_POSIX_MEMALIGN//" configs/freebsd{,-dri}
 
 	# Fixes for fd.o bug #8521
-	epatch "${FILESDIR}"/${PV}-xcb-dont-unlock-twice.patch 
+	epatch "${FILESDIR}"/${PV}-xcb-dont-unlock-twice.patch
 
 	# Use XCB API as of 1.0RC2
 	epatch "${FILESDIR}"/${PV}-use-new-xcb-naming.patch
