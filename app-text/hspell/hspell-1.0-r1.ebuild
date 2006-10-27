@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/hspell-1.0-r1.ebuild,v 1.1 2006/10/27 01:46:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/hspell-1.0-r1.ebuild,v 1.2 2006/10/27 12:36:12 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ivrix.org.il/projects/spell-checker/"
 SRC_URI="http://ivrix.org.il/projects/spell-checker/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5.6.1"
