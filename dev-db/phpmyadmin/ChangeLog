@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.209 2006/10/15 14:56:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.210 2006/10/27 01:35:55 rl03 Exp $
+
+*phpmyadmin-2.9.0.2-r1 (27 Oct 2006)
+
+  27 Oct 2006; Renat Lumpau <rl03@gentoo.org> +files/common.lib.php.diff,
+  -phpmyadmin-2.8.2.ebuild, +phpmyadmin-2.9.0.2-r1.ebuild:
+  Fix for PHP segfault, bug #152933.
 
   15 Oct 2006; Markus Rothe <corsair@gentoo.org> phpmyadmin-2.9.0.2.ebuild:
   Stable on ppc64
