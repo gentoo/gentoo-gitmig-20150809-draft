@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.15 2006/09/20 16:54:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.16 2006/10/27 01:00:11 nyhm Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=media-libs/allegro-4.0.3
-	>=media-libs/allegttf-2.0"
+DEPEND="media-libs/allegro"
 
 S=${WORKDIR}/${PN}
 
