@@ -1,11 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.9 2005/06/09 00:31:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.12.1.ebuild,v 1.10 2006/10/27 14:52:02 gustavoz Exp $
 
 inherit gnome2 fdo-mime
 
 DESCRIPTION="Project manager for Gnome2"
-HOMEPAGE="http://planner.imendio.org/"
+HOMEPAGE="http://live.gnome.org/Planner/"
 
 SLOT="0"
 LICENSE="GPL-2"

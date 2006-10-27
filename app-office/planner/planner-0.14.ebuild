@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.13.ebuild,v 1.3 2006/10/27 14:52:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.ebuild,v 1.1 2006/10/27 14:52:02 gustavoz Exp $
 
 inherit gnome2 fdo-mime
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Planner/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="doc libgda python"
 
 RDEPEND=">=dev-libs/glib-2.4
@@ -46,3 +46,9 @@ G2CONF="${G2CONF} \
 	--disable-update-mimedb"
 #	$(use_enable eds) \
 #	$(use_enable eds eds-backend) \
+
+src_install() {
+	gnome2_src_install \
+		sampledir="\$(datadir)/doc/${PF}/examples" \
+		sqldocdir="\$(datadir)/doc/${PF}"
+}

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/planner
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.22 2005/06/04 18:37:06 foser Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.23 2006/10/27 14:52:02 gustavoz Exp $
+
+*planner-0.14 (27 Oct 2006)
+
+  27 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> planner-0.12.1.ebuild,
+  planner-0.13.ebuild, +planner-0.14.ebuild:
+  HOMEPAGE changed, revbump wrt #138872, fix doc installation #117009, should
+  fix #119454 too
 
 *planner-0.13 (04 Jun 2005)
 
