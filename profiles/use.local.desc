@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2279 2006/10/26 16:58:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2280 2006/10/27 05:34:55 beandog Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -978,6 +978,7 @@ media-video/mplayer:musepack - Enables support for the musepack audio codec
 media-video/mplayer:nvidia - Enables support for the nvidia xvmc video driver
 media-video/mplayer:real - Adds real video support
 media-video/mplayer:rtc - Enables usage of the linux real time clock.  The alternative is software emulation of rtc
+media-video/mplayer:subtitles - Enables support for SSA/ASS subtitles
 media-video/mplayer:tga - Enables tga output support
 media-video/mplayer:v4l2 - Enables video4linux2 support
 media-video/mplayer:x264 - Enables h264 encoding using x264
