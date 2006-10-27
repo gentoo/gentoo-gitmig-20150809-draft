@@ -1,6 +1,12 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.22 2006/05/13 21:24:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.23 2006/10/27 17:15:02 gustavoz Exp $
+
+*grisbi-0.5.9 (27 Oct 2006)
+
+  27 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> grisbi-0.5.7.ebuild,
+  grisbi-0.5.8.ebuild, +grisbi-0.5.9.ebuild:
+  Revbump wrt #139930, 0.5.8 sparc stable, fix DEPs wrt #151284
 
   13 May 2006; Olivier Crête <tester@gentoo.org> grisbi-0.5.8.ebuild:
   Stable on amd64

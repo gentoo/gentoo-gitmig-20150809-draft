@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.8.ebuild,v 1.3 2006/10/27 17:15:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.9.ebuild,v 1.1 2006/10/27 17:15:02 gustavoz Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/grisbi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="dev-libs/libxml2
 	>=dev-util/pkgconfig-0.20
@@ -48,7 +48,6 @@ src_unpack() {
 				sed -i "s;doc/grisbi/help;doc/${PF}/help;g" ${i}
 			done
 	eend 0
-	epatch ${FILESDIR}/${PN}-0.5.6-latex-unicode.patch
 }
 
 src_compile() {
