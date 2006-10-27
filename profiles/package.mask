@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6157 2006/10/27 21:52:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6158 2006/10/27 23:09:32 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -650,11 +650,6 @@ dev-cpp/cairomm
 # Saleem Abdulrasool <compnerd@gentoo.org> (07 Aug 2006)
 # New Galago Release
 >=x11-plugins/gaim-galago-0.5.0
-
-# Alec Warner <antarus@gentoo.org> (06 Sep 2006)
-# Masked by treecleaners for bug(s) # 50661
-# Dead upstream, broken.
-net-im/universalkopete
 
 # Luis Medinas <metalgod@gentoo.org> (06 Sep 2006)
 # Mask Brasero development releases until 0.5.0
