@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.374 2006/10/25 09:09:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.375 2006/10/27 16:38:03 killerfox Exp $
+
+  27 Oct 2006; René Nussbaumer <killerfox@gentoo.org> qt-3.3.6-r4.ebuild,
+  qt-4.1.4-r2.ebuild:
+  Stable on hppa. See bug #151838.
 
   25 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> files/digest-qt-4.1.4,
   files/digest-qt-4.1.4-r1, files/digest-qt-4.1.4-r2, Manifest:
