@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.18 2006/10/26 19:13:30 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.19 2006/10/27 01:21:22 vapier Exp $
 
 WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils toolchain-funcs multilib autotools
 
 XSERVER_VERSION="1.1.1"
@@ -83,29 +84,34 @@ src_unpack() {
 		rm -f "${WORKDIR}"/patch/*vnc-server*
 	fi
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
+	cd unix
+	eautoreconf
+	cd ../common
+	eautoreconf
 
 	if use server ; then
-		cp -a "${S}"/unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
-			"${S}"/unix/xc/programs/Xserver/Xvnc.man \
-			"${S}"/unix/xc/programs/Xserver/vnc/*.{h,cc} \
-			"${S}"/unix/xorg-server-*/hw/vnc
-		cp -a "${S}"/unix/xorg-server-*/{cfb/cfb.h,hw/vnc}
-		cp -a "${S}"/unix/xorg-server-*/{fb/fb.h,hw/vnc}
-		cp -a "${S}"/unix/xorg-server-*/{fb/fbrop.h,hw/vnc}
+		cd "${S}"
+		cp -a unix/xc/programs/Xserver/vnc/Xvnc/xvnc.cc \
+			unix/xc/programs/Xserver/Xvnc.man \
+			unix/xc/programs/Xserver/vnc/*.{h,cc} \
+			unix/xorg-server-*/hw/vnc
+		cp -a unix/xorg-server-*/{cfb/cfb.h,hw/vnc}
+		cp -a unix/xorg-server-*/{fb/fb.h,hw/vnc}
+		cp -a unix/xorg-server-*/{fb/fbrop.h,hw/vnc}
 		sed -i -e 's,xor,c_xor,' -e 's,and,c_and,' \
-			"${S}"/unix/xorg-server*/hw/vnc/{cfb,fb,fbrop}.h
+			unix/xorg-server*/hw/vnc/{cfb,fb,fbrop}.h
+		cd xorg-server-*
+		eautoreconf
 	fi
 }
 
 src_compile() {
 	cd unix
-	eautoreconf
 	econf --with-installed-zlib --with-fb || die "econf failed"
 	emake || die "emake failed"
 
-	if use server; then
+	if use server ; then
 		cd xorg-server-*
-		eautoreconf
 		econf \
 			--enable-xorg \
 			--disable-dependency-tracking \
@@ -137,11 +143,12 @@ src_install() {
 	dodoc README
 
 	if ! use server ; then
-		rm "${D}"/usr/bin/vncserver
-		rm "${D}"/usr/bin/x0vncserver
-		rm "${D}"/usr/share/man/man1/vnc{passwd,config,server}.1
-		rm "${D}"/usr/share/man/man1/x0vncserver.1
-		rm "${D}"/usr/bin/vncpasswd
-		rm "${D}"/usr/bin/vncconfig
+		cd "${D}"
+		rm usr/bin/vncserver
+		rm usr/bin/x0vncserver
+		rm usr/share/man/man1/vnc{passwd,config,server}.1
+		rm usr/share/man/man1/x0vncserver.1
+		rm usr/bin/vncpasswd
+		rm usr/bin/vncconfig
 	fi
 }
