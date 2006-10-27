@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6151 2006/10/27 16:05:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6152 2006/10/27 18:32:15 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (27 Oct 2006)
+# Masked pre-release
+>=media-sound/amarok-1.4.4
 
 # Daniel Gryniewicz <dang@gentoo.org> (27 Oct 2006)
 # Needs dbus-0.92
