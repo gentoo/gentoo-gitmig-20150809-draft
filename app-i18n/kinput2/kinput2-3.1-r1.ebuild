@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.16 2006/10/14 11:03:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/kinput2-3.1-r1.ebuild,v 1.17 2006/10/27 18:18:22 flameeyes Exp $
 
 inherit eutils
 
@@ -12,20 +12,20 @@ SRC_URI="ftp://ftp.sra.co.jp/pub/x11/${PN}/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64 ppc64"
-IUSE="canna freewnn"
+IUSE="freewnn"
 
-RDEPEND="canna? ( >=app-i18n/canna-3.5_beta2-r1 )
-	!amd64? ( freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 ) )
+RDEPEND="freewnn? ( >=app-i18n/freewnn-1.1.1_alpha19 )
 	!freewnn? ( >=app-i18n/canna-3.5_beta2-r1 )
-	|| ( x11-libs/libXaw <virtual/x11-7 )"
+	x11-libs/libX11
+	x11-libs/libXaw
+	x11-libs/libXmu
+	x11-libs/libXp
+	x11-libs/libXt"
 
 DEPEND="${RDEPEND}
-	|| ( ( x11-misc/gccmakedep
-			x11-misc/imake
-			app-text/rman
-		)
-		<virtual/x11-7
-	)"
+	x11-misc/gccmakedep
+	x11-misc/imake
+	app-text/rman"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -33,34 +33,27 @@ src_unpack() {
 	local mysed=""
 
 	unpack ${A}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	epatch "${FILESDIR}/${PF}-gentoo.diff"
 
-	use canna \
-		&& mysed="${mysed} -e 's:/\* \(\#define UseCanna\) \*/:\\1:'"
-	use freewnn \
-		&& mysed="${mysed} -e 's:/\* \(\#define UseWnn\) \*/:\\1:'"
-
-	#use sj3 \
-	#	&& mysed="${mysed} -e 's:/\* \(\#Define UseSj3\) \*/:\\1:'"
-	#use atok \
-	#	&& mysed="${mysed} -e 's:/\* \(\#Define UseAtok\) \*/:\\1:'"
-	#use wnn6 \
-	#	&& mysed="${mysed} -e 's:/\* \(\#Define UseWnn6\) \*/:\\1:'"
-
-	use canna || use freewnn \
-		|| mysed="${mysed} -e 's:/\* \(\#define UseCanna\) \*/:\\1:'"
-
-	cp ${S}/Kinput2.conf ${T}
-	eval sed ${mysed} ${T}/Kinput2.conf > ${S}/Kinput2.conf || die
+	if use freewnn; then
+		sed -i -e '/\/\* #define UseWnn/s:^:#define UseWnn\n:' "${S}/Kinput2.conf"
+	else
+		sed -i -e '/\/\* #define UseCanna/s:^:#define UseCanna\n:' "${S}/Kinput2.conf"
+	fi
 }
 
 src_compile() {
 	xmkmf -a || die
-	make CDEBUGFLAGS="${CFLAGS}" || die
+	emake \
+		XAPPLOADDIR="/usr/share/X11/app-defaults/" \
+		CDEBUGFLAGS="${CFLAGS}" \
+		LOCAL_LDFLAGS="${LDFLAGS}" \
+		|| die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake XAPPLOADDIR="/usr/share/X11/app-defaults/" DESTDIR="${D}" install || die
+	rm -rf "${D}/usr/lib/X11"
 
 	dodoc README NEWS doc/*
 	newman cmd/${PN}.man ${PN}.1

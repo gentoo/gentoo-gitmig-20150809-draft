@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kinput2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.22 2006/10/14 11:03:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kinput2/ChangeLog,v 1.23 2006/10/27 18:18:22 flameeyes Exp $
+
+  27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kinput2-3.1-r1.ebuild:
+  Ebuild cleanup, fix for modular X support only (thanks Patrick Lauer for
+  reporting bug #153008). Remove canna useflag as canna is the default.
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> kinput2-3.1-r1.ebuild:
   Fix DEPEND/RDEPEND and add missing dependency over libXaw. Thanks to Patrick
