@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r2.ebuild,v 1.4 2006/08/07 03:17:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.17-r2.ebuild,v 1.5 2006/10/27 20:15:00 nyhm Exp $
 
 inherit eutils games
 
@@ -51,6 +51,11 @@ src_unpack() {
 src_compile() {
 	./configure || die
 	emake OPTIMIZE="${CFLAGS}" || die "emake failed"
+}
+
+src_test() {
+	addwrite /dev/full
+	emake -j1 check || die "make check failed"
 }
 
 build_game() {
