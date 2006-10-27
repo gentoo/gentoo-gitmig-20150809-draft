@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.10.ebuild,v 1.2 2006/10/22 17:08:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-administrator/mysql-administrator-1.1.10.ebuild,v 1.3 2006/10/27 16:51:07 swegener Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="MySQL Administrator"
 HOMEPAGE="http://www.mysql.com/products/tools/administrator/"
@@ -35,6 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# mysql has -fno-exceptions, but we need exceptions
+	append-flags -fexceptions
+
 	cd "${S}"/mysql-gui-common
 	econf --with-commondirname=common/administrator || die "econf failed"
 	emake -j1 || die "emake failed"
