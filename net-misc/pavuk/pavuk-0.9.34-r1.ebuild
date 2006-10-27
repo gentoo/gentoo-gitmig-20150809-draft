@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34-r1.ebuild,v 1.1 2006/10/26 22:57:20 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.34-r1.ebuild,v 1.2 2006/10/27 13:23:04 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE="gnome gtk nls ssl"
 
 DEPEND=">=sys-apps/sed-4
