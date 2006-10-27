@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2280 2006/10/27 05:34:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2281 2006/10/27 09:40:19 metalgod Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -146,6 +146,7 @@ app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
 app-misc/beagle:ole - Enable ole support
+app-misc/beagle:galago - Enable desktop presence via galago
 app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/g15composer:amarok - Enable display of titles played in Amarok
 app-misc/graphlcd-base:g15 - Add support for g15daemon driver ( e.g Logitech G15 Keybord )
