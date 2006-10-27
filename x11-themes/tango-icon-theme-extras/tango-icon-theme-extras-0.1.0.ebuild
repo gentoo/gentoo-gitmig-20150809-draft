@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0.ebuild,v 1.8 2006/06/02 12:52:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0.ebuild,v 1.9 2006/10/27 17:00:06 metalgod Exp $
 
 DESCRIPTION="This is an extension to the Tango Icon Theme. It includes Tango icons for iPod Digital Audio Player (DAP) devices and the Dell Pocket DJ DAP."
 HOMEPAGE="http://tango-project.org/"
@@ -12,7 +12,8 @@ KEYWORDS="amd64 ~ppc ppc64 sparc x86"
 IUSE="png"
 
 RDEPEND=">=x11-themes/tango-icon-theme-0.6.3"
-DEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	if use png; then

@@ -1,4 +1,26 @@
-MD5 24fdcb417ded5f5076433c46922fc3f4 ChangeLog 1222
-MD5 47152e230c2e28e38b2b4f96c95e0ed2 files/digest-tango-icon-theme-extras-0.1.0 81
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+DIST tango-icon-theme-extras-0.1.0.tar.gz 228375 RMD160 7c301bbe6748fc770bc52f91624ce676624d00e3 SHA1 1bed3023139187c36e851df19506f4942bf2d1c1 SHA256 b9252179ea2c546e6bb065281d51373f0ae06081e5a98d4255249af4fa8b33db
+EBUILD tango-icon-theme-extras-0.1.0.ebuild 931 RMD160 415aaf1ffa2230cb3ceafd162c050d539ffc995e SHA1 1b3e90e53d81daa2be33c55454254d32742b3e2f SHA256 0dffc07fd1f74cfb2a2617f714e121aaff2c49aef74271419f471d2f61dfe3ad
+MD5 2caeb22a864f4bfc428def65b0e19ae4 tango-icon-theme-extras-0.1.0.ebuild 931
+RMD160 415aaf1ffa2230cb3ceafd162c050d539ffc995e tango-icon-theme-extras-0.1.0.ebuild 931
+SHA256 0dffc07fd1f74cfb2a2617f714e121aaff2c49aef74271419f471d2f61dfe3ad tango-icon-theme-extras-0.1.0.ebuild 931
+MISC ChangeLog 1360 RMD160 9301ac81344a5e8be3f02109d6626fc06c7c744e SHA1 f8c79f05b9c93c5167f60d4c31cf06c59da2ffc9 SHA256 c5a168453777b3bce5f59a4491bbafbf2980c976a8138d9f22227d036ebce0da
+MD5 87dd9d0e6006b15ac14a7d1ec026b8d0 ChangeLog 1360
+RMD160 9301ac81344a5e8be3f02109d6626fc06c7c744e ChangeLog 1360
+SHA256 c5a168453777b3bce5f59a4491bbafbf2980c976a8138d9f22227d036ebce0da ChangeLog 1360
+MISC metadata.xml 248 RMD160 507fd60616d5d14e274ac0628255acdddc90e4d4 SHA1 4d78cd97e61086b3fd8ae5d7333b0baec5a151d9 SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a
 MD5 870a91577a60ccb6ea581e99f879e9b8 metadata.xml 248
-MD5 8fe57b7d2453cfd48e3d9da93f203bd5 tango-icon-theme-extras-0.1.0.ebuild 910
+RMD160 507fd60616d5d14e274ac0628255acdddc90e4d4 metadata.xml 248
+SHA256 0d544700457efe5f7c24489f30572dd20c81a6d8879bf833f7d050408a79f36a metadata.xml 248
+MD5 736932857c86d0ce2d09bee96eda052e files/digest-tango-icon-theme-extras-0.1.0 289
+RMD160 9fa371e33b678125626ccca189c9eead53d13f10 files/digest-tango-icon-theme-extras-0.1.0 289
+SHA256 ce71b05ec497383f15884d3bb51e54ad2c17b7aa10934bef862fd1254ac49f35 files/digest-tango-icon-theme-extras-0.1.0 289
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFQjsqwUpWvClEHQoRAidqAJwJ647bRocWLSCNy4fkXaZ790H+rACfXulT
+DoE8LFhZBAysoseqBmV8v3k=
+=gk07
+-----END PGP SIGNATURE-----
