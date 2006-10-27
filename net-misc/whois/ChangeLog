@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.60 2006/10/27 15:35:21 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.61 2006/10/27 16:59:55 flameeyes Exp $
+
+  27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> whois-4.7.19-r1.ebuild:
+  Restore ~amd64 keyword.
 
 *whois-4.7.19-r1 (27 Oct 2006)
 
