@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bsdwhois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.4 2006/10/27 17:17:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.5 2006/10/27 19:09:26 uberlord Exp $
+
+  27 Oct 2006; Roy Marples <uberlord@gentoo.org> bsdwhois-1.43.2.1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   bsdwhois-1.43.2.1.ebuild:
