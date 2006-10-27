@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/quake3-osp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.6 2004/12/29 00:05:26 ciaranm Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-osp/ChangeLog,v 1.7 2006/10/27 16:06:54 wolf31o2 Exp $
+
+*quake3-osp-1.03a-r1 (27 Oct 2006)
+
+  27 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  +quake3-osp-1.03a-r1.ebuild:
+  Added new revision for testing which uses the brand-spankin-new
+  games-mods.eclass to reduce ebuild code.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
