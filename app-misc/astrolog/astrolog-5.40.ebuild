@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.9 2005/11/07 12:03:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.10 2006/10/27 20:59:14 george Exp $
 
 DESCRIPTION="A many featured astrology chart calculation program"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"
@@ -13,14 +13,22 @@ KEYWORDS="x86 ppc64 ppc amd64"
 
 IUSE="X"
 
-DEPEND="X? ( x11-base/xorg-x11 )"
+DEPEND="X? ( || ( x11-libs/libX11 virtual/x11 ) )"
 
 S="${WORKDIR}"
 
 src_unpack() {
 	bash ${DISTDIR}/ast54unx.shr
+	cd ${S}
+
+	# remove stripping of created binary and substituce CFLAGS
+	sed -i -e "s:strip:#strip:" -e "s:= -O:= ${CFLAGS}:" Makefile
+
+	# we use /usr/share/astrolog for config and (optional) ephemeris-data-files
+	sed -i -e "s:~/astrolog:/usr/share/astrolog:g" astrolog.h
+
 	# if we use X, we need to add -L/usr/X11R6/lib to compile succesful
-	use X && sed -i -e "s:-lm -lX11:-lm -lX11 -L/usr/X11R6/lib:g" Makefile
+	#use X && sed -i -e "s:-lm -lX11:-lm -lX11 -L/usr/X11R6/lib:g" Makefile
 
 	# if we do NOT use X, we disable it by removing the -lX11 from the Makefile
 	# and remove the "#define X11" and "#define MOUSE" from astrolog.h
@@ -28,14 +36,8 @@ src_unpack() {
 		   sed -i -e "s:#define X11:/*#define X11:g" astrolog.h
 		   sed -i -e "s:#define MOUSE:/*#define MOUSE:g" astrolog.h )
 
-	# we use /usr/share/astrolog for config and (optional) ephemeris-data-files
-	sed -i -e "s:~/astrolog:/usr/share/astrolog:g" astrolog.h
-
 	# any user may have an own astrolog configfile
-	sed -i -e "s:astrolog.dat:astrolog.dat:g" astrolog.h
-
-	# include users CFLAGS
-	sed -i -e "s:= -O:= ${CFLAGS}":g Makefile
+	#sed -i -e "s:astrolog.dat:astrolog.dat:g" astrolog.h
 }
 
 src_compile() {

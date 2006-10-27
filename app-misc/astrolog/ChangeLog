@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/astrolog
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.9 2005/11/07 12:03:20 george Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/ChangeLog,v 1.10 2006/10/27 20:59:14 george Exp $
+
+  27 Oct 2006; George Shapovalov <george@gentoo.org> astrolog-5.40.ebuild:
+  fixed the prestripping issue (#152259). Cleaned up src_unpack (removed
+  unnecessary seds), adjusted DEPEND so that it plays nicely with the modular
+  X.
 
   07 Nov 2005; George Shapovalov <george@gentoo.org> astrolog-5.40.ebuild:
   fixed missing DEPEND on (optional) X (#109227)
