@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.3.ebuild,v 1.2 2006/10/27 07:11:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6.ebuild,v 1.1 2006/10/27 07:11:46 jokey Exp $
 
 inherit eutils ssl-cert
 
