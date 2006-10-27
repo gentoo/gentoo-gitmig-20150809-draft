@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.2 2006/10/23 07:47:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/jaxen-1.1_beta11.ebuild,v 1.3 2006/10/27 00:33:58 caster Exp $
 
 inherit java-pkg-2 eutils java-ant-2
 
@@ -34,6 +34,10 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
+	# TODO file upstream
+	epatch ${FILESDIR}/${P}-fix-jdk14-tests.patch
 
 	mkdir -p ${S}/target/lib
 	cd ${S}/target/lib
