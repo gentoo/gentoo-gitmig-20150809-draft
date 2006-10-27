@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-subtitles
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/ChangeLog,v 1.5 2006/08/01 20:41:54 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-subtitles/ChangeLog,v 1.6 2006/10/27 07:40:39 zzam Exp $
+
+*vdr-subtitles-0.4.0 (27 Oct 2006)
+
+  27 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-subtitles-0.4.0.ebuild:
+  Version bumped.
 
   01 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned package to VDR-Project.
