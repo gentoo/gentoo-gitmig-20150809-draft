@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6152 2006/10/27 18:32:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6153 2006/10/27 18:49:00 gustavoz Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ## 
+
+# Gustavo Zacarias <gustavoz@gentoo.org> (27 Oct 2006)
+# Masked for removal, bugs #101983, #150032 and almost dead upstream
+net-misc/minisip
+net-misc/libmutil
+net-misc/libmnetutil
+net-misc/libmikey
+net-misc/libmsip
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 Oct 2006)
 # Masked pre-release
