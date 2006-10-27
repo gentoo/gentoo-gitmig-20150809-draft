@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.18.ebuild,v 1.2 2006/10/22 18:42:50 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.18.ebuild,v 1.3 2006/10/27 06:10:03 latexer Exp $
 
 inherit eutils flag-o-matic multilib autotools
 
@@ -37,6 +37,11 @@ function get-memory-total() {
 
 src_unpack() {
 	unpack ${A}
+
+	# Fix mcs crasher
+	cd ${S}/mcs
+	epatch ${FILESDIR}/${P}-mcs-crasher-fix.diff
+
 	cd ${S}
 
 	# Fix the install path, install into $(libdir)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.92 2006/10/22 18:42:50 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.93 2006/10/27 06:10:03 latexer Exp $
+
+  27 Oct 2006; Peter Johanson <latexer@gentoo.org>
+  +files/mono-1.1.18-mcs-crasher-fix.diff, mono-1.1.18.ebuild:
+  Fix nasty bug in mcs cause banshee not to compile. See bug #152843.
 
   22 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> mono-1.1.18.ebuild:
   Updated dependency for libgdiplus (was >=1.1.17, is >=1.1.18).
