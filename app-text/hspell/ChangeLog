@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.21 2006/10/27 12:50:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.22 2006/10/27 12:51:24 corsair Exp $
+
+  27 Oct 2006; Markus Rothe <corsair@gentoo.org> hspell-1.0-r1.ebuild:
+  Added ~ppc64; bug #152274
 
   27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> hspell-1.0-r1.ebuild:
   Add ~x86-fbsd keyword.
