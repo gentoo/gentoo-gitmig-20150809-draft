@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.367 2006/10/25 11:32:24 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.368 2006/10/27 07:16:40 uberlord Exp $
+
+  27 Oct 2006; Roy Marples <uberlord@gentoo.org> mysql-5.0.26-r1.ebuild:
+  Added ~sparc-fbsd keyword.
 
   25 Oct 2006; Francesco Riosa <vivo@gentoo.org> mysql-5.0.26-r1.ebuild:
   Fix "trigger" test
