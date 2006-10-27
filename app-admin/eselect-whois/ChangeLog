@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-whois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-whois/ChangeLog,v 1.1 2006/10/27 15:26:25 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-whois/ChangeLog,v 1.2 2006/10/27 16:59:37 flameeyes Exp $
+
+  27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  eselect-whois-1.0.0.ebuild:
+  Add ~amd64 keyword.
 
 *eselect-whois-1.0.0 (27 Oct 2006)
 
