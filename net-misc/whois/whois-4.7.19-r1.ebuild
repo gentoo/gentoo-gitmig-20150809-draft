@@ -1,0 +1,63 @@
+# Copyright 1999-2006 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.7.19-r1.ebuild,v 1.1 2006/10/27 15:35:21 drizzt Exp $
+
+inherit eutils toolchain-funcs
+
+MY_P=${P/-/_}
+DESCRIPTION="improved Whois Client"
+HOMEPAGE="http://www.linux.it/~md/software/"
+SRC_URI="mirror://debian/pool/main/w/whois/${MY_P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="nls"
+RESTRICT="test" #59327
+
+RDEPEND="net-dns/libidn
+	app-admin/eselect-whois"
+DEPEND="net-dns/libidn
+	>=dev-lang/perl-5"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-4.7.19-gentoo-security.patch
+	epatch "${FILESDIR}"/${PN}-4.7.2-config-file.patch
+
+	if use nls ; then
+		cd po
+		sed -i -e "s:/usr/bin/install:install:" Makefile
+	else
+		sed -i -e '/ENABLE_NLS/s:define:undef:' config.h
+		sed -i -e "s:cd po.*::" Makefile
+	fi
+}
+
+src_compile() {
+	tc-export CC
+	emake OPTS="${CFLAGS}" HAVE_LIBIDN=1 || die
+}
+
+src_install() {
+	dodir /usr/bin /usr/share/man/man1
+	make BASEDIR="${D}" prefix=/usr install || die
+	insinto /etc
+	doins whois.conf
+	dodoc README
+
+	mv ${D}/usr/share/man/man1/{whois,mdwhois}.1
+	mv ${D}/usr/bin/{whois,mdwhois}
+}
+
+pkg_postinst() {
+	einfo "Setting /usr/bin/whois symlink"
+	eselect whois update --if-unset
+}
+
+pkg_postrm() {
+	einfo "Updating /usr/bin/whois symlink"
+	eselect whois update
+}
+
