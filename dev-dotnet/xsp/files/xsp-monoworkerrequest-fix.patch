@@ -1,0 +1,19 @@
+--- trunk/xsp/src/Mono.WebServer/MonoWorkerRequest.cs	2005/09/07 05:09:32	49611
++++ trunk/xsp/src/Mono.WebServer/MonoWorkerRequest.cs	2006/04/25 20:16:19	59868
+@@ -223,10 +223,14 @@
+ 			if (path.StartsWith (HostVPath) && (path.Length == len || path [len] == '/'))
+ 				path = path.Substring (len + 1);
+ 
+-			if (path.Length > 0 && path [0] == '/')
++			while (path.Length > 0 && path [0] == '/') {
+ 				path = path.Substring (1);
++			}
++
++			if (Path.DirectorySeparatorChar != '/')
++				path = path.Replace ('/', Path.DirectorySeparatorChar);
+ 
+-			return Path.Combine (HostPath, path.Replace ('/', Path.DirectorySeparatorChar));
++			return Path.Combine (HostPath, path);
+ 		}
+ 
+ 		protected abstract bool GetRequestData ();

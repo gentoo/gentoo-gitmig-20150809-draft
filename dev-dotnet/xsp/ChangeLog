@@ -1,6 +1,31 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.31 2006/10/25 11:10:43 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.32 2006/10/27 13:40:33 jurek Exp $
+
+*xsp-1.1.18 (27 Oct 2006)
+*xsp-1.1.13.7 (27 Oct 2006)
+*xsp-1.1.10-r2 (27 Oct 2006)
+
+  27 Oct 2006; Jurek Bartuszek <jurek@gentoo.org>
+  +files/1.1.10/mod-mono-server.confd, +files/1.1.10/xsp.initd,
+  +files/1.1.10/mod-mono-server.initd, +files/1.1.13/mod-mono-server.confd,
+  +files/1.1.10/xsp.confd, +files/1.1.13/mod-mono-server.initd,
+  +files/1.1.13/xsp.confd, +files/1.1.13/xsp.initd,
+  +files/1.1.18/mod-mono-server.confd, +files/1.1.18/mod-mono-server.initd,
+  +files/1.1.18/xsp.confd, +files/1.1.18/xsp.initd,
+  -files/mod-mono-server.confd, -files/mod-mono-server.initd,
+  -files/xsp.confd, -files/xsp.initd,
+  +files/xsp-monoworkerrequest-fix.patch, -xsp-1.1.10-r1.ebuild,
+  +xsp-1.1.10-r2.ebuild, +xsp-1.1.13.7.ebuild, +xsp-1.1.18.ebuild:
+  - Added patch against xsp-1.1.10 that fixes a possible path disclosure
+  security issue (bug #135002).
+  - Added new xsp versions 1.1.13.7 and 1.1.18
+  - Added possibility to host ASP.NET 2.0 applications
+  - Fixed bugs #146763, #122683, #147393, #135002
+  - Addressed bugs #77169, #91791, #132854
+  Credit goes to: Sune Kloppenborg Jeppesen <jaervosz@gentoo.org> for
+  notifying us about the security bug and Toffanin [WiredTEK]
+  <info@wiredtek.info> for providing the ebuilds.
 
   25 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> xsp-1.1.10-r1.ebuild:
   Since mono-1.1.17 breaks xsp versions prior to 1.1.17 a new dependency has
