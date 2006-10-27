@@ -1,0 +1,11 @@
+--- knetscan/whois.cpp.old	2006-10-27 17:45:59.000000000 +0200
++++ knetscan/whois.cpp	2006-10-27 17:46:12.000000000 +0200
+@@ -48,7 +48,7 @@
+     }
+ 
+     whoisURL = WObjectCombo->currentText();
+-    whoisCmd<<"whois"<<whoisURL ;
++    whoisCmd<<"mdwhois"<<whoisURL ;
+ 
+     if( WServerCombo->currentText() !="" ) {
+ 

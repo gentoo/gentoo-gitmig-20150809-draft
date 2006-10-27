@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/knetscan
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.19 2006/10/14 11:22:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.20 2006/10/27 15:50:50 drizzt Exp $
+
+*knetscan-1.0-r2 (27 Oct 2006)
+
+  27 Oct 2006; Timothy Redaelli <drizzt@gentoo.org>
+  +files/knetscan-1.0-mdwhois.diff, +knetscan-1.0-r2.ebuild:
+  Version bump, addition of support for eselect-whois.
+  Authorized by Diego Pettenò
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> knetscan-1.0-r1.ebuild:
   Use kde.eclass admindir updating.
