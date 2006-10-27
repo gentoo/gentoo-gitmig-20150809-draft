@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.6 2006/10/26 10:53:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.7 2006/10/27 05:54:36 beandog Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,9 +9,8 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec amr arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd
 dv dvdread enca encode esd fbcon gif ggi gtk iconv ipv6 jack joystick jpeg
 libcaca lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode
-vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
-theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid
-xvmc"
+vorbis opengl openal oss png real rtc samba sdl speex sse sse2 subtitles svga
+tga theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid xvmc"
 
 LANGS="bg cs de da el en es fr hu ja ko mk nl no pl pt_BR ro ru sk tr uk zh_CN
 zh_TW"
@@ -125,6 +124,15 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 pkg_setup() {
 	if use real && use x86; then
 		REALLIBDIR="/opt/RealPlayer/codecs"
+	fi
+
+	if use subtitles && ! ( use iconv && use truetype ); then
+		ewarn "If you want to enable support for SSA/ASS subtitles, then"
+		ewarn "you will need to enable both the 'truetype' and the 'iconv'"
+		ewarn "USE flags for this package."
+	elif use truetype && ! use iconv; then
+		ewarn "You enabled the 'truetype' USE flag, but support will be"
+		ewarn "disabled unless you also use 'iconv'."
 	fi
 }
 
@@ -262,6 +270,7 @@ src_compile() {
 	use v4l  || myconf="${myconf} --disable-tv-v4l1"
 	use v4l2 || myconf="${myconf} --disable-tv-v4l2"
 	use jack || myconf="${myconf} --disable-jack"
+	use subtitles || myconf="${myconf} --disable-ass"
 
 	#########
 	# Codecs #
