@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.0.0_rc1.ebuild,v 1.2 2006/10/24 07:50:15 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/xdebug/xdebug-2.0.0_rc1.ebuild,v 1.3 2006/10/27 19:02:30 sebastian Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="xdebug"
 
 inherit php-ext-source-r1
 
-IUSE="libedit"
 DESCRIPTION="A PHP Debugging and Profiling extension."
 HOMEPAGE="http://www.xdebug.org/"
 SLOT="0"
@@ -17,23 +16,11 @@ S="${WORKDIR}/xdebug-2.0.0RC1"
 LICENSE="Xdebug"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND="${DEPEND} libedit? ( || ( dev-libs/libedit sys-freebsd/freebsd-lib ) )"
-RDEPEND="${RDEPEND} !dev-php5/ZendOptimizer"
+RDEPEND="${RDEPEND}
+	!dev-php5/ZendOptimizer
+	dev-php/xdebug-client"
 
 need_php_by_category
-
-src_compile() {
-	php-ext-source-r1_src_compile
-
-	cd "${S}/debugclient"
-	chmod +x configure
-
-	econf \
-		$(use_with libedit ) \
-		|| die "Configure of debug client failed!"
-
-	emake || die "Build of debug client failed!"
-}
 
 src_install() {
 	php-ext-source-r1_src_install
@@ -83,7 +70,4 @@ src_install() {
 	php-ext-base-r1_addtoinifiles "xdebug.idekey" '""'
 	php-ext-base-r1_addtoinifiles "xdebug.var_display_max_data" '"512"'
 	php-ext-base-r1_addtoinifiles "xdebug.var_display_max_depth" '"2"'
-
-	cd "${S}/debugclient"
-	newbin debugclient xdebug
 }
