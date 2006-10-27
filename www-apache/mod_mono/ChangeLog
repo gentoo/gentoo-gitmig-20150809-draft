@@ -1,6 +1,19 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.23 2006/10/23 23:13:41 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.24 2006/10/27 13:57:30 jurek Exp $
+
+*mod_mono-1.1.17 (27 Oct 2006)
+*mod_mono-1.1.13.5 (27 Oct 2006)
+
+  27 Oct 2006; Jurek Bartuszek <jurek@gentoo.org>
+  +files/1.1.17/70_mod_mono.conf,
+  +files/mod_mono-1.1.13.5-configure-apr-config.patch,
+  +files/1.1.13/70_mod_mono.conf, +mod_mono-1.1.13.5.ebuild,
+  +mod_mono-1.1.17.ebuild:
+  - Added new mod_mono versions 1.1.13.5 and 1.1.17
+  - Added possibility to host ASP.NET 2.0 applications
+  - Fixed bugs #146763, #122683, #147393, #135002
+  - Addressed bugs #77169, #91791, #132854
 
   23 Oct 2006; Jurek Bartuszek <jurek@gentoo.org> mod_mono-1.1.10-r2.ebuild:
   Removed direct dev-lang/mono dependency
