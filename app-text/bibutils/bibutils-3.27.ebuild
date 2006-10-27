@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-3.27.ebuild,v 1.1 2006/10/15 23:51:05 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/bibutils-3.27.ebuild,v 1.2 2006/10/27 16:13:26 chriswhite Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.scripps.edu/~cdputnam/software/bibutils/bibutils.html"
 SRC_URI="http://www.scripps.edu/~cdputnam/software/bibutils/${MY_P}_src.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 RDEPEND=""
 DEPEND="${RDEPEND}"

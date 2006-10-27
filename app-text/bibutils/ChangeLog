@@ -1,6 +1,9 @@
 # ChangeLog for app-text/bibutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/ChangeLog,v 1.2 2006/10/17 20:51:26 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibutils/ChangeLog,v 1.3 2006/10/27 16:13:26 chriswhite Exp $
+
+  27 Oct 2006; Chris White <chriswhite@gentoo.org> bibutils-3.27.ebuild:
+  Adding ~ppc keywords per bug #152979.
 
   17 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Slide into sci herd.
