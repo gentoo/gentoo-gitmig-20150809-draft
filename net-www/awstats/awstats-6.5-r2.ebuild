@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.5-r2.ebuild,v 1.2 2006/07/09 20:37:49 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.5-r2.ebuild,v 1.3 2006/10/27 01:28:34 rl03 Exp $
 
 inherit eutils webapp versionator depend.apache
 
@@ -34,7 +34,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-6.3-gentoo.diff
 
-	# change AWStats default installation directory to installation directory of Gentoo
+	# change default installation directory
 	for file in tools/* wwwroot/cgi-bin/*; do
 	    if [[ -f "${file}" ]]; then
 	        sed -i -e "s#/usr/local/awstats/wwwroot/cgi-bin#${MY_CGIBINDIR}#g" \
@@ -67,11 +67,6 @@ src_unpack() {
 
 src_install() {
 	webapp_src_preinst
-
-	# handle documentation files
-	#
-	# NOTE that doc files go into /usr/share/doc as normal; they do NOT
-	# get installed per vhost!
 
 	dohtml -r docs/*.html docs/*.xml docs/*.css docs/*.js docs/images
 	dodoc README.TXT docs/COPYING.TXT docs/LICENSE.TXT
@@ -118,10 +113,6 @@ src_install() {
 		maillogconvert.pl awstats_configure.pl
 	newbin urlaliasbuilder.pl awstats_urlaliasbuilder.pl
 
-	# all done
-	#
-	# now we let the eclass strut its stuff ;-)
-
 	webapp_src_install
 }
 
@@ -133,7 +124,4 @@ pkg_postinst() {
 	elog
 	ewarn "Copy the /etc/awstats/awstats.model.conf to"
 	ewarn "/etc/awstats/awstats.<yourdomain>.conf and edit it."
-	ewarn "Use the command"
-	ewarn "    webapp-config"
-	ewarn "to install AWStats for each virtual host. See the proper man page."
 }
