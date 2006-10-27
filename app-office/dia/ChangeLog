@@ -1,6 +1,15 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.92 2006/10/15 01:09:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.93 2006/10/27 17:24:45 gustavoz Exp $
+
+  27 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/dia-0.94-db2man.patch, -files/dia-0.94-help.patch,
+  -files/0.94-disable_python_gtk_import.patch, -files/dia-0.94-gcc4.patch,
+  -files/dia-0.94-no_font_cache.patch, -files/dia-0.94-pkgconfig.patch,
+  -files/dia-0.94-png.patch, -files/dia-0.94-secure-eval.patch,
+  -files/dia-0.94_xfigoverflowfix.patch, -dia-0.94-r3.ebuild,
+  -dia-0.94-r4.ebuild, -dia-0.94-r5.ebuild:
+  Cleanup wrt #140499
 
   15 Oct 2006; Aron Griffis <agriffis@gentoo.org> dia-0.95.1.ebuild:
   Mark 0.95.1 stable on ia64. #140499
