@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6156 2006/10/27 19:54:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6157 2006/10/27 21:52:55 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ## 
+
+# Diego Pettenò <flameeyes@gentoo.org> (27 Oct 2006)
+# Masked pending removal, bug #149007
+media-libs/libaudiooss
+
+# Diego Pettenò <flameeyes@gentoo.org> (27 Oct 2006)
+# Masked pending removal, bug #153050
+media-libs/daaplib
 
 # Gustavo Zacarias <gustavoz@gentoo.org> (27 Oct 2006)
 # Masked for removal, bugs #101983, #150032 and almost dead upstream
