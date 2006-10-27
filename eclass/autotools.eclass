@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.54 2006/10/26 22:39:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.55 2006/10/27 14:19:07 peper Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -14,7 +14,7 @@ inherit eutils libtool
 
 _automake_atom="sys-devel/automake"
 _autoconf_atom="sys-devel/autoconf"
-if [[ -n ${WANT_AUTOMAKE} ]] && [[ ${WANT_AUTOMAKE} != "latest" ]]; then
+if [[ -n ${WANT_AUTOMAKE} ]]; then
 	case ${WANT_AUTOMAKE} in
 		# workaround while we have different versions of automake in arch and ~arch
 		latest) _automake_atom="|| ( =sys-devel/automake-1.10* =sys-devel/automake-1.9* )" ;;
