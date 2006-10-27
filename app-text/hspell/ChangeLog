@@ -1,6 +1,13 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.18 2006/10/06 13:49:45 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.19 2006/10/27 01:46:05 alonbl Exp $
+
+*hspell-1.0-r1 (27 Oct 2006)
+
+  27 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/hspell-1.0-shared.patch, +hspell-1.0-r1.ebuild:
+  Made hspell be shared library, thanks for KDE herd for the help, as part of
+  bug#152818
 
   05 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml:
   Adding my-self as primary maintainer to metadata.xml (see bug#77751).
