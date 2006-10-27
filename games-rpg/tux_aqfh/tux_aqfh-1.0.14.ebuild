@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.8 2006/10/18 18:19:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/tux_aqfh-1.0.14.ebuild,v 1.9 2006/10/27 20:38:46 mr_bones_ Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
-inherit autotools eutils games
+inherit autotools debug eutils games
 
 DESCRIPTION="A puzzle game starring Tux, the linux penguin"
 HOMEPAGE="http://tuxaqfh.sourceforge.net/"
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="virtual/glut
+# fails with glut, works with freeglut.  no whining. bug #149871
+RDEPEND="media-libs/freeglut
 	x11-libs/libXmu
 	x11-libs/libXi
 	virtual/glu

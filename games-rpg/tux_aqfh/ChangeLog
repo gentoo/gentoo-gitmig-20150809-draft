@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/tux_aqfh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/ChangeLog,v 1.9 2006/10/18 18:19:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tux_aqfh/ChangeLog,v 1.10 2006/10/27 20:38:46 mr_bones_ Exp $
+
+  27 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  tux_aqfh-1.0.14.ebuild:
+  force freeglut since it doesn't work with glut (bug #149871)
 
   18 Oct 2006; Tristan Heaven <nyhm@gentoo.org> tux_aqfh-1.0.14.ebuild:
   Use autotools eclass
