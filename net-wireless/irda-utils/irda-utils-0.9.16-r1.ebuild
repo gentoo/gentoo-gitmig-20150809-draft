@@ -1,8 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16-r1.ebuild,v 1.6 2006/10/26 17:19:46 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.16-r1.ebuild,v 1.7 2006/10/27 10:29:33 aballier Exp $
 
-inherit eutils
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.4"
+
+inherit eutils autotools
 
 DESCRIPTION="IrDA utilities for infrared communication"
 HOMEPAGE="http://irda.sourceforge.net/"
@@ -14,9 +17,8 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gtk"
 
 DEPEND="=dev-libs/glib-1.2*
-	=sys-devel/automake-1.4*
-	=sys-devel/autoconf-2.5*
 	gtk? ( =x11-libs/gtk+-1.2* )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
