@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.170 2006/10/21 17:51:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.171 2006/10/27 18:41:01 flameeyes Exp $
+
+*amarok-1.4.4 (27 Oct 2006)
+
+  27 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  -files/amarok-1.4.0a-strict-aliasing.patch, -amarok-1.3.8.ebuild,
+  -amarok-1.4.0a-r1.ebuild, +amarok-1.4.4.ebuild:
+  Remove old versions, and add the new 1.4.4 not released yet.
 
   21 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> amarok-1.4.3-r1.ebuild:
   Allow using libgpod 0.4 with 1.4.3 version.
