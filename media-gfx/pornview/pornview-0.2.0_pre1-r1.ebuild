@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.1 2006/09/19 13:56:02 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r1.ebuild,v 1.2 2006/10/27 23:03:52 antarus Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ DEPEND="media-libs/libpng
 	mplayer? ( media-video/mplayer )
 	jpeg? ( media-libs/jpeg )
 	>=x11-libs/gtk+-2.0
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
