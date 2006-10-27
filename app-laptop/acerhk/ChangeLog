@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.16 2006/05/14 23:43:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.17 2006/10/27 17:41:03 jurek Exp $
+
+*acerhk-0.5.34 (27 Oct 2006)
+
+  27 Oct 2006; Jurek Bartuszek <jurek@gentoo.org>
+  -files/acerhk-0.5.22-redef-wireless.patch, -acerhk-0.5.22.ebuild,
+  +acerhk-0.5.34.ebuild:
+  - Version bump (bug #144855)
+  - Cleaning out old ebuild
 
   14 May 2006; Mark Loeser <halcy0n@gentoo.org> acerhk-0.5.31.ebuild:
   Stable on x86; bug #133179
