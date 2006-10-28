@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.9 2006/05/12 14:33:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.10 2006/10/28 12:24:54 swegener Exp $
 
 inherit eutils
 
@@ -138,5 +138,5 @@ EOF
 	einfo "Congratulations, freenet is configured and up to date"
 	einfo "use '/etc/init.d/freenet start' to start it"
 	einfo "You can always re-update/reconfigure  your freenet with:"
-	einfo "# ebuild ${EBUILD} config"
+	einfo "# emerge --config =${CATEGORY}/${PF}"
 }
