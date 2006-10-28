@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sussen
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.35 2006/10/22 11:33:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.36 2006/10/28 10:49:45 opfer Exp $
+
+  28 Oct 2006; Christian Faulhammer <opfer@gentoo.org> sussen-0.29.ebuild:
+  x86 stable wrt bug #151302
 
   22 Oct 2006; Peter Volkov <pva@gentoo.org>
   +files/sussen-0.31--as-needed.patch, sussen-0.31.ebuild:
