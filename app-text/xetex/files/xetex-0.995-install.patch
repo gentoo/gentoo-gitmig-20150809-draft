@@ -1,0 +1,23 @@
+--- install-xetex	2006-08-23 03:41:00.000000000 +0800
++++ install-xetex.gentoo	2006-10-28 18:15:12.000000000 +0800
+@@ -30,9 +30,10 @@
+ if [ -L ${texbin} ]; then
+ 	texbin=`readlink ${texbin}`
+ fi
+-texbindir=`dirname ${texbin}`
++texbindir=${D}`dirname ${texbin}`
+ 
+ # copy the xetex binary to the same dir as standard tex
++mkdir -p ${texbindir}
+ cp -pf Work/texk/web2c/xetex ${texbindir}/xetex
+ echo ${texbindir}/xetex >> ${filelist}
+ if [ -e Work/texk/xdv2pdf/xdv2pdf ]; then
+@@ -48,7 +49,7 @@
+ fi
+ 
+ # copy our texmf additions into the local texmf tree
+-texmflocal=`kpsewhich --var-value TEXMFLOCAL`
++texmflocal=${D}usr/share/texmf
+ if [ "x${texmflocal}" == "x" ]; then
+ 	# if --var-value didn't work, try to find the definition in the texmf.cnf file
+ 	CNF=`kpsewhich texmf.cnf`

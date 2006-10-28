@@ -1,0 +1,45 @@
+--- rebuild-formats	2006-08-23 03:41:00.000000000 +0800
++++ rebuild-formats.gentoo	2006-10-28 18:15:12.000000000 +0800
+@@ -6,8 +6,9 @@
+ 
+ # ensure our entries are present in fmtutil.cnf
+ fmtutil_cnf=`kpsewhich --format="web2c files" fmtutil.cnf`
++cp ${fmtutil_cnf} ${D}${fmtutil_cnf}
+ if [ "`fgrep -c xetex ${fmtutil_cnf}`" == "0" ]; then
+-	cat >> ${fmtutil_cnf} <<-__EOT__;
++	cat >>${D}${fmtutil_cnf} <<-__EOT__;
+ 
+ 	# XeTeX formats
+ 	xetex	xetex	-	*xetex.ini
+@@ -21,7 +22,7 @@
+ if [ -L ${texbin} ]; then
+ 	texbin=`readlink ${texbin}`
+ fi
+-texbindir=`dirname ${texbin}`
++texbindir=${D}`dirname ${texbin}`
+ 
+ # ensure ${texbindir} is in the PATH so that fmtutil can find new xetex
+ # (normal usage may rely on a symlink, which doesn't yet exist)
+@@ -29,7 +30,8 @@
+ 
+ # patch fmtutil from teTeX 2.x so it doesn't confuse xetex with an etex engine
+ # (discarding any error message in case we have teTeX 3 or an already-patched teTeX 2)
+-patch -N -r /tmp/fmtutilpatch.rej -p0 `which fmtutil` < fmtutil.tetex-2.patch >/dev/null 2>&1
++cp `which fmtutil` .
++patch -N -r /tmp/fmtutilpatch.rej -p0 fmtutil < fmtutil.tetex-2.patch >/dev/null 2>&1
+ 
+ # use system-wide setup if available
+ fmtutil=`type -p fmtutil-sys` || fmtutil=`type -p fmtutil`
+@@ -37,9 +39,9 @@
+ formats="xetex xelatex"
+ for f in ${formats}; do
+ # enable our entries if necessary (in case of pre-existing disabled ones)
+-	${fmtutil} --enablefmt ${f}
+-	${fmtutil} --byfmt ${f}
++	TEXMFLOCAL=${D}usr/share/texmf ./fmtutil --fmtdir ${D}usr/share/texmf/web2c --cnffile ${D}${fmtutil_cnf} --enablefmt ${f}
++	TEXMFLOCAL=${D}usr/share/texmf ./fmtutil --fmtdir ${D}usr/share/texmf/web2c --cnffile ${D}${fmtutil_cnf} --byfmt ${f}
+ done
+ 
+ # create symlinks for the newly-built formats
+-texlinks --silent
++texlinks --silent --cnffile ${D}${fmtutil_cnf} ${D}usr/share/texmf/web2c
