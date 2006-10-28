@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.5 2006/07/24 00:26:46 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.15-r1.ebuild,v 1.6 2006/10/28 23:36:28 flameeyes Exp $
 
 IUSE="alsa oss ladcca"
 
@@ -26,10 +26,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
+pkg_setup() {
 	TCL_VERSION=`echo 'puts [info tclversion]' | tclsh`
 
-	local myconf="PREFIX=/usr"
+	myconf="PREFIX=/usr"
 
 	#vkeybd requires at least one of its USE_ variable to be set
 	if use alsa ; then
@@ -41,17 +41,17 @@ src_compile() {
 
 	if use ladcca ; then
 		myconf="${myconf} USE_LADCCA=1"
-		sed -i "s/USE_LADCCA *=.*$/USE_LADCCA = 1/" ${S}/Makefile || \
-			die "Error altering Makefile"
 	fi
 
-	make ${myconf} TCL_VERSION=$TCL_VERSION || die "Make failed."
+	myconf="${myconf} TCL_VERSION=${TCL_VERSION}"
+}
+
+src_compile() {
+	emake ${myconf} || die "Make failed."
 }
 
 src_install() {
-	make DESTDIR=${D} TCL_VERSION=$TCL_VERSION PREFIX=/usr install || \
-		die "Installation Failed"
-	make DESTDIR=${D} TCL_VERSION=$TCL_VERSION PREFIX=/usr install-man || \
-		die "Man-Page Installation Failed"
+	emake DESTDIR="${D}" install || die "Installation Failed"
+	emake DESTDIR="${D}" install-man || die "Man-Page Installation Failed"
 	dodoc README
 }
