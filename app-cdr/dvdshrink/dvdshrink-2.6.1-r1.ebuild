@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.3 2006/07/05 20:27:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1-r1.ebuild,v 1.4 2006/10/28 11:38:47 pylon Exp $
 
 inherit eutils
 
@@ -22,7 +22,8 @@ RDEPEND=">=media-video/transcode-1.0.2-r2
 	>=media-video/dvdauthor-0.6.11
 	>=app-cdr/dvd+rw-tools-6.1
 	X? ( >=dev-perl/gtk2-perl-1.104 )
-	>=app-text/gocr-0.40"
+	>=app-text/gocr-0.40
+	virtual/cdrtools"
 
 pkg_setup() {
 	if ! built_with_use media-video/transcode dvdread; then
@@ -34,7 +35,7 @@ pkg_setup() {
 src_install() {
 
 	dobin ./usr/bin/dvdshrink || die "Install of dvdshrink failed"
-	use X && dobin ./usr/bin/xdvdshrink.pl || die "Install of xdvdshrink.pl failed"
+	use X && ( dobin ./usr/bin/xdvdshrink.pl || die "Install of xdvdshrink.pl failed" )
 
 	dobin ./usr/bin/dvdsfunctions || die "Install of dvdsfunctions failed"
 	dobin ./usr/bin/batchrip.sh || die "Install of batchrip.sh failed"
