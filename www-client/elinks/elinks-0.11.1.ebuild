@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.5 2006/10/11 21:59:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.6 2006/10/28 12:05:25 swegener Exp $
 
 inherit eutils autotools
 
@@ -31,6 +31,7 @@ DEPEND=">=dev-libs/expat-1.95.4
 	ruby? ( dev-lang/ruby )
 	!hppa? ( !mips? ( !alpha? ( javascript? ( dev-lang/spidermonkey ) ) ) )
 	samba? ( net-fs/samba )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
