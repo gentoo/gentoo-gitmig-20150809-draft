@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/beryl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/ChangeLog,v 1.4 2006/10/26 03:15:18 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/beryl/ChangeLog,v 1.5 2006/10/28 20:16:38 tsunam Exp $
+
+  28 Oct 2006; Joshua Jackson <tsunam@gentoo.org> beryl-0.1.1-r1.ebuild:
+  modify the check to avoid a redirect  thanks to betelgeuse
 
   26 Oct 2006; Joshua Jackson <tsunam@gentoo.org> beryl-0.1.1-r1.ebuild:
   Add a additional check for cairo version
