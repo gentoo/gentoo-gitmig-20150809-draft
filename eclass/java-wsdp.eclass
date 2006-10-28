@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-wsdp.eclass,v 1.3 2006/09/09 20:32:30 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-wsdp.eclass,v 1.4 2006/10/28 22:29:14 swegener Exp $
 
 #
 # Original Author: Krzysiek Pawlik <nelchael@gentoo.org>
@@ -8,9 +8,6 @@
 #
 
 inherit java-pkg-2
-
-ECLASS="java-wsdp"
-INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_unpack src_install pkg_nofetch pkg_setup
 

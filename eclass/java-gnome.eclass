@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-gnome.eclass,v 1.2 2006/10/14 20:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-gnome.eclass,v 1.3 2006/10/28 22:29:14 swegener Exp $
 
 #
 # Original Author: Joshua Nichols <nichoj@gentoo.org>
@@ -12,9 +12,6 @@
 GNOME_TARBALL_SUFFIX=${GNOME_TARBALL_SUFFIX:=gz}
 inherit java-pkg-2 eutils gnome.org
 
-
-ECLASS="java-gnome"
-INHERITED="${INHERITED} ${ECLASS}"
 
 HOMEPAGE="http://java-gnome.sourceforge.net/"
 LICENSE="LGPL-2.1"
