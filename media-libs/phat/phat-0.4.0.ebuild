@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.0.ebuild,v 1.1 2006/08/06 04:58:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/phat-0.4.0.ebuild,v 1.2 2006/10/28 01:10:37 flameeyes Exp $
 
 IUSE="debug doc"
 
@@ -12,7 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND=">=x11-libs/gtk+-2.4"
+RDEPEND=">=x11-libs/gtk+-2.4"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf $(use_enable debug) \
