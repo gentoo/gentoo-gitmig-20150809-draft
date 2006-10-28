@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.9 2006/03/07 14:45:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.10 2006/10/28 12:46:07 swegener Exp $
 
 MY_P="${PN}-0.60rc1"
 S="${WORKDIR}/${MY_P}/src"
@@ -75,7 +75,7 @@ pkg_postinst() {
 	einfo
 	einfo "Execute:"
 	einfo
-	einfo " \"ebuild /var/db/pkg/media-sound/${P}/${P}.ebuild config\""
+	einfo " \"emerge --config =${CATEGORY}/${PF}\""
 	einfo
 	einfo "to create the USB VB devices in /dev/vbc[0-3] and /dev/vbv[0-3]."
 	einfo
@@ -84,4 +84,3 @@ pkg_postinst() {
 	einfo "to /etc/modules.autoload"
 	einfo
 }
-
