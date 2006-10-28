@@ -1,8 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/urlgfe-1.0.ebuild,v 1.5 2006/10/04 08:29:56 blubb Exp $
-
-inherit eutils autotools
+# $Header: /var/cvsroot/gentoo-x86/www-client/urlgfe/urlgfe-1.0.ebuild,v 1.6 2006/10/28 22:07:25 swegener Exp $
 
 DESCRIPTION="Download manager using gtk+ and libcurl"
 HOMEPAGE="http://urlget.sourceforge.net/"
@@ -10,7 +8,7 @@ SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="nls"
 
 RDEPEND=">=net-misc/curl-7.10
@@ -20,16 +18,6 @@ RDEPEND=">=net-misc/curl-7.10
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/1.0-as-needed.patch
-
-	autopoint -f
-	AT_M4DIR="m4" eautoreconf
-}
 
 src_compile() {
 	econf $(use_enable nls) || die "econf failed"
