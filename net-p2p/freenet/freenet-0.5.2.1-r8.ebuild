@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.10 2006/10/28 12:24:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.11 2006/10/28 13:59:34 swegener Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ pkg_postinst() {
 	fi
 	chown -R freenet:freenet /var/freenet
 	einfo "Congratulations on merging freenet, please run"
-	einfo "# ebuild ${EBUILD} config"
+	einfo "# emerge --config =${CATEGORY}/${PF}"
 	einfo "to update freenet to the latest jars and seednodes."
 	einfo "This step is also necessary to configure freenet for"
 	einfo "first use.  You may also run this step again at any time"
