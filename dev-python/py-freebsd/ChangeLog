@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/py-freebsd
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/ChangeLog,v 1.1 2006/10/28 00:53:14 flameeyes Exp $
+
+*py-freebsd-0.9.3 (28 Oct 2006)
+
+  28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +py-freebsd-0.9.3.ebuild:
+  Initial import, py-freebsd is a module that allows accessing FreeBSD
+  specific features like chflags support. Maintenance shared between bsd and
+  python herds.
+
