@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reswrap
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.1 2005/05/07 19:43:22 rphillips Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.2 2006/10/28 23:41:02 mabi Exp $
+
+  28 Oct 2006; Matti Bickel <mabi@gentoo.org> reswrap-3.2.0.ebuild:
+  Stable on ppc (bug #145046)
 
 *reswrap-1.0.4 (07 May 2005)
 
