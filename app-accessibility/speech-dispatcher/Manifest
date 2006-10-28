@@ -1,9 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9ae02b3cc459c0587866baae57b3bbc5 ChangeLog 2625
-RMD160 f6cfafbc2c97468836d8d28f93d4c06f33d901f7 ChangeLog 2625
-SHA256 0b71d5afda297f66d1c5354f991c213bb8130cd5bdfb2faf5efd348792f27dd3 ChangeLog 2625
+AUX speech-dispatcher 659 RMD160 7d6662377f51e9b5bef295ea00e7482be984195c SHA1 ff2411802b348fd1ba72d5f644aa16d50c118f8b SHA256 62bc140b46d832a973c061bf5852047bb22d1fe626594616c413b358bd6887a8
+MD5 3e45fdd04782c2de16ac91398f6ce204 files/speech-dispatcher 659
+RMD160 7d6662377f51e9b5bef295ea00e7482be984195c files/speech-dispatcher 659
+SHA256 62bc140b46d832a973c061bf5852047bb22d1fe626594616c413b358bd6887a8 files/speech-dispatcher 659
+AUX speech-dispatcher-0.3-gentoo.patch 2891 RMD160 c3484bb8cdedde5c04444883a1bb3734da421ce5 SHA1 d0932d6409b0cb6f614a1a75271228b480dc7f44 SHA256 736d6e8c0d4c132dc89d2d9323fa05ae4cf272be8abf7c6023b63460b5030c8e
+MD5 0b47aa388bba472bb4dc934c1d99a47f files/speech-dispatcher-0.3-gentoo.patch 2891
+RMD160 c3484bb8cdedde5c04444883a1bb3734da421ce5 files/speech-dispatcher-0.3-gentoo.patch 2891
+SHA256 736d6e8c0d4c132dc89d2d9323fa05ae4cf272be8abf7c6023b63460b5030c8e files/speech-dispatcher-0.3-gentoo.patch 2891
+DIST speech-dispatcher-0.3.tar.gz 746005
+DIST speech-dispatcher-0.4.1.tar.gz 687198
+DIST speech-dispatcher-0.5.tar.gz 772680
+DIST speech-dispatcher-0.6.tar.gz 834161 RMD160 abb9413dfd13d91a9014e56330a88308e402bd09 SHA256 b073713e90573925f7baec6463a100eb8158b47cb2c2d136fb0f3a8febe6dd55
+EBUILD speech-dispatcher-0.3.ebuild 1359 RMD160 7d48959e625d1a13cc07a4aee28751cfeee2e295 SHA1 8fb763316b9135cd41c938b3bdcd4abea05c2ad4 SHA256 4a6e56014edc4e9a0cdd03850bc212afc29a30cca982d21b8ba34f4df65e3997
+MD5 26afe6cc89cb02e28d67e6ba2a98790d speech-dispatcher-0.3.ebuild 1359
+RMD160 7d48959e625d1a13cc07a4aee28751cfeee2e295 speech-dispatcher-0.3.ebuild 1359
+SHA256 4a6e56014edc4e9a0cdd03850bc212afc29a30cca982d21b8ba34f4df65e3997 speech-dispatcher-0.3.ebuild 1359
+EBUILD speech-dispatcher-0.4.1.ebuild 921 RMD160 6fef555d68531952bd4e78092b697da85e8561d2 SHA1 a7aa9ba0d313b4a4b3957f755d5a42cc300226d1 SHA256 6a69ee3526258442db1436cb6375bc1ee2de2851e56c972f065c6c403f9ed4a4
+MD5 fa41da9050b677f5e1170107cb630937 speech-dispatcher-0.4.1.ebuild 921
+RMD160 6fef555d68531952bd4e78092b697da85e8561d2 speech-dispatcher-0.4.1.ebuild 921
+SHA256 6a69ee3526258442db1436cb6375bc1ee2de2851e56c972f065c6c403f9ed4a4 speech-dispatcher-0.4.1.ebuild 921
+EBUILD speech-dispatcher-0.5.ebuild 922 RMD160 9cdf0dda47659d86dc09d56dce32046db656b930 SHA1 10b5e6de39e9b716439d70aa48ad6ab1c9450f92 SHA256 5f99c4d1d3cb495bd58124e56d7dd0b618afb0270b62103f40ab190114503ca4
+MD5 50ee7c41bac9c82499c2491f733134fc speech-dispatcher-0.5.ebuild 922
+RMD160 9cdf0dda47659d86dc09d56dce32046db656b930 speech-dispatcher-0.5.ebuild 922
+SHA256 5f99c4d1d3cb495bd58124e56d7dd0b618afb0270b62103f40ab190114503ca4 speech-dispatcher-0.5.ebuild 922
+EBUILD speech-dispatcher-0.6.ebuild 922 RMD160 5f986c7ac4861927adc2a0329591f685940deb38 SHA1 06780071009f3666febfeea3da0e076203b9ab3f SHA256 38f4ae7b93c970d3539cdb718b8ae3bbd79844d368c213a6b826311dd639a169
+MD5 94f602bfa22ae92feef05c8680acd974 speech-dispatcher-0.6.ebuild 922
+RMD160 5f986c7ac4861927adc2a0329591f685940deb38 speech-dispatcher-0.6.ebuild 922
+SHA256 38f4ae7b93c970d3539cdb718b8ae3bbd79844d368c213a6b826311dd639a169 speech-dispatcher-0.6.ebuild 922
+MISC ChangeLog 2852 RMD160 e1b808775f76c9388efb63d761f0d9cff61aec94 SHA1 9679e4c39afaad03df2479f782468c46589090ed SHA256 af450760b3ddcdd9ab4116959d6bcfa2a235eb148ad382d1aa68b00082f7dc54
+MD5 be0b634bee1e181ba1560eadd5594988 ChangeLog 2852
+RMD160 e1b808775f76c9388efb63d761f0d9cff61aec94 ChangeLog 2852
+SHA256 af450760b3ddcdd9ab4116959d6bcfa2a235eb148ad382d1aa68b00082f7dc54 ChangeLog 2852
+MISC metadata.xml 248 RMD160 ba4734da964d3d5db60feb339d3e89de2eb87ab6 SHA1 bdd70f0d466d7bea88716581054941113ce22a16 SHA256 b40271c6a99e7610d9df3544a98da28417f406b82a48b04f1a8a9bb474cd04cc
+MD5 dd298b30a3c1071fdfd33569480dcfd3 metadata.xml 248
+RMD160 ba4734da964d3d5db60feb339d3e89de2eb87ab6 metadata.xml 248
+SHA256 b40271c6a99e7610d9df3544a98da28417f406b82a48b04f1a8a9bb474cd04cc metadata.xml 248
 MD5 71d875960a2c5f4bb45b4bb4a18bbcb2 files/digest-speech-dispatcher-0.3 73
 RMD160 6a9c5e0b6c76bb7aa15a34a3cc00c204671c1c03 files/digest-speech-dispatcher-0.3 73
 SHA256 e26a13a794211806a10be820838684545c4cbb8eb2936024bb3ec234954e7420 files/digest-speech-dispatcher-0.3 73
@@ -16,31 +49,10 @@ SHA256 3cbaf2b1ec951c304956d8b825ad6873921e907af17f53482c91b7fa503218dc files/di
 MD5 bbbfb3e3d7863e07d9af9ce14da5038e files/digest-speech-dispatcher-0.6 265
 RMD160 51bf33a594cc869d4b02729c2c7b58ab6d731a27 files/digest-speech-dispatcher-0.6 265
 SHA256 17c5947529c3035dde0b058164be6efdf01cef8ca97ec0a6cb1c92e822ab0474 files/digest-speech-dispatcher-0.6 265
-MD5 3e45fdd04782c2de16ac91398f6ce204 files/speech-dispatcher 659
-RMD160 7d6662377f51e9b5bef295ea00e7482be984195c files/speech-dispatcher 659
-SHA256 62bc140b46d832a973c061bf5852047bb22d1fe626594616c413b358bd6887a8 files/speech-dispatcher 659
-MD5 0b47aa388bba472bb4dc934c1d99a47f files/speech-dispatcher-0.3-gentoo.patch 2891
-RMD160 c3484bb8cdedde5c04444883a1bb3734da421ce5 files/speech-dispatcher-0.3-gentoo.patch 2891
-SHA256 736d6e8c0d4c132dc89d2d9323fa05ae4cf272be8abf7c6023b63460b5030c8e files/speech-dispatcher-0.3-gentoo.patch 2891
-MD5 dd298b30a3c1071fdfd33569480dcfd3 metadata.xml 248
-RMD160 ba4734da964d3d5db60feb339d3e89de2eb87ab6 metadata.xml 248
-SHA256 b40271c6a99e7610d9df3544a98da28417f406b82a48b04f1a8a9bb474cd04cc metadata.xml 248
-MD5 26afe6cc89cb02e28d67e6ba2a98790d speech-dispatcher-0.3.ebuild 1359
-RMD160 7d48959e625d1a13cc07a4aee28751cfeee2e295 speech-dispatcher-0.3.ebuild 1359
-SHA256 4a6e56014edc4e9a0cdd03850bc212afc29a30cca982d21b8ba34f4df65e3997 speech-dispatcher-0.3.ebuild 1359
-MD5 00540dcac13262a6d8329eb5555745b7 speech-dispatcher-0.4.1.ebuild 881
-RMD160 b8416406f402f36e60b9f34bad787a8e790467e4 speech-dispatcher-0.4.1.ebuild 881
-SHA256 147e8b74ff4a69d334ebcef620a8dd571315684f111941c1baa77bb4539c357c speech-dispatcher-0.4.1.ebuild 881
-MD5 f15e8e1083dd12db8b5b0289dc2a7ddc speech-dispatcher-0.5.ebuild 880
-RMD160 18061d8d4ef864f0a5128ddc63353fed43c7658f speech-dispatcher-0.5.ebuild 880
-SHA256 07b8ec5349a8ad2867447d59943d4af9ffc73413b62bbba3fb7ffa31216195eb speech-dispatcher-0.5.ebuild 880
-MD5 affcab3398f69106c5fb550744efd7c6 speech-dispatcher-0.6.ebuild 880
-RMD160 64c90a623402531f94a188c472b5fa150b5a966e speech-dispatcher-0.6.ebuild 880
-SHA256 9db20dc2652644722dc47f49d79659779ccd0b904566d7bdeedb7498128cedcf speech-dispatcher-0.6.ebuild 880
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFD5OfjJrHF4yAQTrARAoY6AJwN4x6mo9etQFcrdhLy5MDHiCd+ewCfYN6P
-LHuk9DrzRW7t35AlV/C8bG0=
-=k8Dm
+iD8DBQFFQra+AiZjviIA2XgRAhHlAKCXpdfJHiIfvE//ey3BqFd22IgkxgCeJTJR
+cNa9nuiOQxNJBagdBLAnAwY=
+=rAgr
 -----END PGP SIGNATURE-----
