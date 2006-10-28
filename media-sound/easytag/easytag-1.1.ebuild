@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.1.ebuild,v 1.11 2006/10/19 20:19:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-1.1.ebuild,v 1.12 2006/10/28 00:59:45 flameeyes Exp $
 
 inherit eutils
 
@@ -17,6 +17,8 @@ RDEPEND=">=media-libs/id3lib-3.8.2
 	=x11-libs/gtk+-1.2*
 	flac? ( ~media-libs/flac-1.1.2 >=media-libs/libvorbis-1.0 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf \
