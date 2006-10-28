@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.4.ebuild,v 1.2 2006/07/15 03:11:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/libiodbc-3.52.4.ebuild,v 1.3 2006/10/28 08:02:17 opfer Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.iodbc.org/downloads/iODBC/${P}.tar.gz"
 
 LICENSE="LGPL-2 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="gtk"
 
 # upstream does weird stuff in their configure
