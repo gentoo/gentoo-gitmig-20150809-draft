@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.7 2006/08/26 19:36:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2.ebuild,v 1.8 2006/10/28 11:40:33 zzam Exp $
+
+WANT_AUTOMAKE=1.7
+WANT_AUTOCONF=2.5
 
 inherit eutils autotools
 
