@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31.ebuild,v 1.5 2005/07/09 18:12:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cxx/cxx-6.5.9.31.ebuild,v 1.6 2006/10/28 13:54:36 swegener Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -161,7 +161,7 @@ pkg_postinst () {
 	fi
 	ewarn
 	ewarn "you _MUST_ now run:"
-	ewarn "ebuild /var/db/pkg/dev-lang/${PF}/${PF}.ebuild config"
+	ewarn "emerge --config =${CATEGORY}/${PF}"
 	ewarn "to complete the installation"
 	ewarn
 	einfo "Hopefullly soon we will get a ccc USE flag"

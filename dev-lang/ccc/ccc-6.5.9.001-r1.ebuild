@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001-r1.ebuild,v 1.4 2005/07/09 18:11:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001-r1.ebuild,v 1.5 2006/10/28 13:58:37 swegener Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -145,7 +145,7 @@ src_install() {
 #!/bin/sh
 echo "Error: ccc must be configured before compiling!" >&2
 echo "The system administrator must run the following command:" >&2
-echo "  ebuild /var/db/pkg/dev-lang/${PF}/${PF}.ebuild config" >&2
+echo "  emerge --config =${CATEGORY}/${PF}" >&2
 exit 1
 EOF
 	chmod 0755 ${D}/usr/bin/ccc
@@ -210,7 +210,7 @@ pkg_postinst () {
 	echo
 	ewarn
 	ewarn "You _MUST_ now run:"
-	ewarn "ebuild /var/db/pkg/dev-lang/${PF}/${PF}.ebuild config"
+	ewarn "emerge --config =${CATEGORY}/${PF}"
 	ewarn "to complete the installation"
 	ewarn
 
