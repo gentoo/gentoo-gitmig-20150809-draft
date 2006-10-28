@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha18.ebuild,v 1.1 2006/10/28 10:59:51 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha18.ebuild,v 1.2 2006/10/28 15:16:01 pylon Exp $
 
 inherit eutils gnuconfig toolchain-funcs flag-o-matic
 
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-2.01.01a01-scanbus.patch
 	epatch "${FILESDIR}"/${PN}-2.01.01a18-rezero.patch
 
-	use unicode && epatch "${FILESDIR}"/mkisofs-iconv-18.patch
+	#use unicode && epatch "${FILESDIR}"/mkisofs-iconv-18.patch
 
 	# ppc-macos support
 	cd "${S}"/DEFAULTS
@@ -90,7 +90,7 @@ src_install() {
 
 	cd "${S}"
 	insinto /usr/include/scsilib
-	doins include/*.h
+	doins include/schily/*.h
 	insinto /usr/include/scsilib/scg
 	doins include/scg/*.h
 
