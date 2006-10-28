@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.3.ebuild,v 1.7 2004/09/14 07:23:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.3.ebuild,v 1.8 2006/10/28 01:07:55 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="Aylet plays music files in the .ay format"
 HOMEPAGE="http://rus.members.beeb.net/aylet.html"
@@ -12,6 +14,12 @@ IUSE="gtk"
 
 DEPEND="sys-libs/ncurses
 	gtk? ( =x11-libs/gtk+-1.2* )"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
+}
 
 src_compile() {
 	emake CFLAGS="${CFLAGS} -DDRIVER_OSS" aylet || die
