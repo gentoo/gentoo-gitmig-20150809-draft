@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.7 2005/08/15 16:51:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.8 2006/10/28 12:42:55 swegener Exp $
 
 inherit eutils
 
@@ -59,8 +59,8 @@ pkg_postinst() {
 	/opt/win4lin/postinst_rpm.sh
 	echo "LICENSE_CODE=1w5e055x-n0ca34-xjhx-xx3c-4c3c-73" > /var/win4lin/install/license.lic
 	einfo "If this is a new Win4Lin Install you will need to run the following command"
-	einfo "ebuild  /var/db/pkg/app-emulation/${PF}/${PF}.ebuild config"
-	einfo "to install the windows setup files. You will need your Windows cdrom in the "
+	einfo "emerge --config =${CATEGORY}/${PF}"
+	einfo "to install the windows setup files. You will need your Windows cdrom in the"
 	einfo "drive in order to complete this step."
 	einfo
 	einfo "If this is an upgrade 4.x to 5.x the trial license code isn't valid,"
@@ -83,8 +83,8 @@ pkg_config() {
 
 	#put debugging stuff here
 	if [ ${?} -eq "0" ]; then
-		einfo "You can now run the command \"installwindows\" from an xterm "
-		einfo "as a non-root user to install a personal copy of Windows that Win4Lin "
+		einfo "You can now run the command \"installwindows\" from an xterm"
+		einfo "as a non-root user to install a personal copy of Windows that Win4Lin"
 		einfo "will use for that user."
 		einfo
 		einfo "Win4Lin is a commercial product, you now are using a evaluation-license"
