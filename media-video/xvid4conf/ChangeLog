@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xvid4conf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.14 2006/10/20 21:54:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/ChangeLog,v 1.15 2006/10/28 12:54:57 zzam Exp $
+
+  28 Oct 2006; Matthias Schwarzott <zzam@gentoo.org> xvid4conf-1.12.ebuild:
+  Added pkgconfig-DEPEND due to Bug #153077.
 
   20 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> xvid4conf-1.12.ebuild:
   Stable on Alpha.

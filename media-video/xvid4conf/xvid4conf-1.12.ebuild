@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/xvid4conf-1.12.ebuild,v 1.15 2006/10/20 21:54:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvid4conf/xvid4conf-1.12.ebuild,v 1.16 2006/10/28 12:54:57 zzam Exp $
 
 DESCRIPTION="GTK2-configuration dialog for xvid4"
 HOMEPAGE="none"
@@ -11,7 +11,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2.2.4"
+RDEPEND=">=x11-libs/gtk+-2.2.4"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	dodir /usr/{include,lib}
