@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta7.ebuild,v 1.2 2006/10/17 16:57:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta7.ebuild,v 1.3 2006/10/28 00:38:30 flameeyes Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit eutils autotools libtool
 
@@ -33,7 +36,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-0.99_beta4-deoptimise.patch"
-	epatch ${FILESDIR}/${P}-gcc41.diff
+	epatch "${FILESDIR}/${P}-gcc41.diff"
 
 	eautoreconf
 	elibtoolize
