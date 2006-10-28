@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/py-freebsd-0.9.3.ebuild,v 1.1 2006/10/28 00:53:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/py-freebsd-0.9.3.ebuild,v 1.2 2006/10/28 12:22:11 uberlord Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://freebsd/ports/local-distfiles/perky/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86-fbsd"
+KEYWORDS="~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND="sys-freebsd/freebsd-lib
