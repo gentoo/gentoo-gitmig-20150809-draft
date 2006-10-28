@@ -36,10 +36,10 @@
  # enable our entries if necessary (in case of pre-existing disabled ones)
 -	${fmtutil} --enablefmt ${f}
 -	${fmtutil} --byfmt ${f}
-+	TEXMFLOCAL=${D}usr/share/texmf ./fmtutil --fmtdir ${D}usr/share/texmf/web2c --cnffile ${D}${fmtutil_cnf} --enablefmt ${f}
-+	TEXMFLOCAL=${D}usr/share/texmf ./fmtutil --fmtdir ${D}usr/share/texmf/web2c --cnffile ${D}${fmtutil_cnf} --byfmt ${f}
++	TEXMFLOCAL=${D}usr/share/texmf ./fmtutil --fmtdir `dirname ${D}${fmtutil_cnf}` --cnffile ${D}${fmtutil_cnf} --enablefmt ${f}
++	TEXMFLOCAL=${D}usr/share/texmf ./fmtutil --fmtdir `dirname ${D}${fmtutil_cnf}` --cnffile ${D}${fmtutil_cnf} --byfmt ${f}
  done
  
  # create symlinks for the newly-built formats
 -texlinks --silent
-+texlinks --silent --cnffile ${D}${fmtutil_cnf} ${D}usr/share/texmf/web2c
++texlinks --silent --cnffile ${D}${fmtutil_cnf} `dirname ${D}${fmtutil_cnf}`
