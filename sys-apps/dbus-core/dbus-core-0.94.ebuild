@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/dbus-core-0.94.ebuild,v 1.1 2006/10/28 00:40:38 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/dbus-core-0.94.ebuild,v 1.2 2006/10/28 01:36:10 steev Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils multilib debug autotools
@@ -8,7 +8,7 @@ inherit eutils multilib debug autotools
 MY_P=${PN/-core/}-${PV}
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
-SRC_URI="http://dbus.freedesktop.org/releases/${MY_P}.tar.gz"
+SRC_URI="http://dbus.freedesktop.org/releases/dbus/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"

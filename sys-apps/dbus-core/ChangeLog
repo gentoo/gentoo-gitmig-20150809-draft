@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus-core
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/ChangeLog,v 1.8 2006/10/28 00:40:38 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus-core/ChangeLog,v 1.9 2006/10/28 01:36:10 steev Exp $
+
+  28 Oct 2006; Steev Klimaszewski <steev@gentoo.org> dbus-core-0.94.ebuild:
+  Fix the tarball download url.  Thanks TFKyle
 
 *dbus-core-0.94 (28 Oct 2006)
 
