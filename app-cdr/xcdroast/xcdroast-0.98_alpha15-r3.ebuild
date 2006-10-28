@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.20 2006/07/08 12:42:22 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.21 2006/10/28 14:56:25 pylon Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.0.3"
+DEPEND=">=x11-libs/gtk+-2.0.3
+	dev-util/pkgconfig"
 
 RDEPEND="virtual/cdrtools"
 
