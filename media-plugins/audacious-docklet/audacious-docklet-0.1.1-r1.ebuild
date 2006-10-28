@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.4 2006/07/05 19:53:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-docklet/audacious-docklet-0.1.1-r1.ebuild,v 1.5 2006/10/28 01:48:57 flameeyes Exp $
 
 inherit eutils
 
@@ -16,6 +16,7 @@ IUSE="nls"
 RDEPEND=">=media-sound/audacious-0.2"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( dev-util/intltool )"
 
 src_unpack() {
