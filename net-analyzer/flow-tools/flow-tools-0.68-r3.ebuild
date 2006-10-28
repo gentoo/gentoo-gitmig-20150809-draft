@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r3.ebuild,v 1.5 2006/09/27 17:06:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.68-r3.ebuild,v 1.6 2006/10/28 21:27:16 pva Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOMAKE="1.6"
+WANT_AUTOCONF="latest"
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="Flow-tools is a package for collecting and processing NetFlow data"
 HOMEPAGE="http://www.splintered.net/sw/flow-tools/"
@@ -52,8 +54,8 @@ src_unpack() {
 }
 
 src_compile() {
-	einfo "Running autoreconf"
-	autoreconf -f -i || die "autoreconf failed"
+	AM_OPTS="-f -i"
+	eautoreconf || die "autoreconf failed"
 
 	use mysql && append-flags "-L/usr/lib/mysql -I/usr/include/mysql"
 	use postgres && append-flags "-L/usr/lib/postgres -I/usr/include/postgres"
