@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/xmlsysd-0.1.5.ebuild,v 1.5 2004/10/18 12:31:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/xmlsysd/xmlsysd-0.1.5.ebuild,v 1.6 2006/10/28 12:40:08 swegener Exp $
 
 DESCRIPTION="A beowulf monitor daemon."
 SRC_URI="http://www.phy.duke.edu/~rgb/Beowulf/xmlsysd/${PN}.tgz"
@@ -25,7 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	into /usr
 	dosbin xmlsysd
 	doman xmlsysd.8
 
@@ -37,15 +36,14 @@ src_install() {
 
 pkg_postinst() {
 	einfo "If you havent done so already please execute the following command"
-	einfo "\"ebuild /var/db/pkg/sys-cluster/${PF}/${PF}.ebuild config\""
+	einfo "\"emerge --config =${CATEGORY}/${PF}\""
 	einfo "to add xmlsysd to /etc/services."
-	einfo ""
+	einfo
 	einfo "Be sure to edit /etc/xinetd.d/xmylsysd to suit your own options."
-	einfo ""
+	einfo
 }
 
 pkg_config() {
 	echo "xmlsysd		7887/tcp	# xmlsysd remote system stats" >> /etc/services
 	einfo "Added xmlsysd to /etc/services"
 }
-
