@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.7 2006/01/27 02:52:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopex3/zopex3-3.0.0.ebuild,v 1.8 2006/10/28 12:36:53 swegener Exp $
 
 inherit eutils
 
@@ -58,7 +58,7 @@ src_install() {
 pkg_postinst() {
 
 	einfo
-	einfo "This release ($PN) can create default instance using command: ebuild  --config =${PV}"
+	einfo "This release ($PN) can create default instance using command: emerge --config =${CATEGORY}/${PF}"
 	einfo
 }
 
