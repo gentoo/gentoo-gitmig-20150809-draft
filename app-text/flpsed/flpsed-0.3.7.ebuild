@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.3.7.ebuild,v 1.1 2006/06/08 14:27:29 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/flpsed-0.3.7.ebuild,v 1.2 2006/10/28 09:09:33 opfer Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ecademix.com/JohannesHofmann/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="|| ( ( x11-libs/libX11
