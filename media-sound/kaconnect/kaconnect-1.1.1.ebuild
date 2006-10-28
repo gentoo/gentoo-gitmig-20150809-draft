@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/kaconnect-1.1.1.ebuild,v 1.10 2005/07/25 15:55:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kaconnect/kaconnect-1.1.1.ebuild,v 1.11 2006/10/28 01:55:17 flameeyes Exp $
 
-inherit qt3
+inherit qt3 toolchain-funcs eutils
 
 IUSE=""
 
@@ -23,11 +23,15 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} || die
 
-	sed -i 's:/usr/lib/qt3:/usr/qt/3:g' ${S}/make_kaconnect
+	sed -i -e 's:/usr/lib/qt3:/usr/qt/3:g' \
+		's:gcc:${CC} ${CFLAGS} ${LDFLAGS}:g' \
+		"${S}/make_kaconnect"
+
+	epatch "${FILESDIR}/${P}-gcc41.patch"
 }
 
 src_compile() {
-	make -f make_kaconnect || die "Make failed."
+	emake CC="$(tc-getCC)" -f make_kaconnect || die "Make failed."
 }
 
 src_install () {

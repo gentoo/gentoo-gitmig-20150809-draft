@@ -1,0 +1,13 @@
+Index: kaconnect-1.1.1/connector.h
+===================================================================
+--- kaconnect-1.1.1.orig/connector.h
++++ kaconnect-1.1.1/connector.h
+@@ -24,7 +24,7 @@ class ConnectorWidget : public QWidget {
+         void arrow(int x1, int y1, int x2, int y2); 
+    
+     public:
+-        ConnectorWidget::ConnectorWidget(QWidget *parent, snd_seq_t *pseq); 
++        ConnectorWidget(QWidget *parent, snd_seq_t *pseq); 
+         void set_r_listBox(PortListBox *p_r_portlist);
+         void set_w_listBox(PortListBox *p_w_portlist);
+                    
