@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.7.ebuild,v 1.2 2006/06/10 11:52:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.7.ebuild,v 1.3 2006/10/28 12:27:56 swegener Exp $
 
 inherit webapp eutils
 
@@ -66,7 +66,7 @@ pkg_postinst() {
 	webapp_pkg_postinst
 	einfo
 	einfo "You might want to run:"
-	einfo "\"emerge --config =${PF} \""
+	einfo "\"emerge --config =${CATEGORY}/${PF}\""
 	einfo "if this is a new install."
 	einfo
 }
