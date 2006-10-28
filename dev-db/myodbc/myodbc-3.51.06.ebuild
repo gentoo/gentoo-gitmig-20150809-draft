@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.06.ebuild,v 1.8 2005/07/27 20:55:49 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/myodbc-3.51.06.ebuild,v 1.9 2006/10/28 12:19:30 swegener Exp $
 
 MY_PN="MyODBC"
 MY_P="${MY_PN}-${PV}"
@@ -83,5 +83,5 @@ pkg_config() {
 pkg_postinst() {
 	einfo "If this is a new install, please run the following command"
 	einfo "to configure the MySQL ODBC drivers and sources:"
-	einfo "ebuild ${PORTDIR}/${CATEGORY}/${PN}/${PF}.ebuild config"
+	einfo "emerge --config =${CATEGORY}/${PF}"
 }
