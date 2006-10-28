@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pal
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.20 2006/10/23 21:36:48 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.21 2006/10/28 08:19:11 opfer Exp $
+
+  28 Oct 2006; Christian Faulhammer <opfer@gentoo.org> pal-0.3.4-r1.ebuild:
+  x86 stable wrt bug #152254
 
   23 Oct 2006; Chris White <chriswhite@gentoo.org> pal-0.3.4-r1.ebuild:
   amd64 stable for bug #152254.
