@@ -1,6 +1,10 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.39 2006/10/25 20:02:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.40 2006/10/28 09:05:14 opfer Exp $
+
+  28 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  opensp-1.5.2-r1.ebuild:
+  x86 stable wrt bug #152364
 
   25 Oct 2006; Lars Weiler <pylon@gentoo.org> opensp-1.5.2-r1.ebuild:
   Stable on ppc; bug #152364
