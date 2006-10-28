@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/log4cxx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.17 2006/10/23 19:01:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/ChangeLog,v 1.18 2006/10/28 08:06:39 opfer Exp $
+
+  28 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  log4cxx-0.9.7-r3.ebuild:
+  x86 stable wrt bug #145244
 
   23 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> ChangeLog:
   Fixed possible automake/autoconf dependency bug. Corrected libiodbc dependency.
