@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/glurp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.20 2006/03/12 21:38:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.21 2006/10/28 01:22:14 flameeyes Exp $
+
+  28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> glurp-0.11.5.ebuild,
+  glurp-0.11.6.ebuild, glurp-0.11.6-r1.ebuild:
+  Add missing pkgconfig dependency, thanks to Patrick Lauer in bug #153095.
 
 *glurp-0.11.6-r1 (12 Mar 2006)
 
