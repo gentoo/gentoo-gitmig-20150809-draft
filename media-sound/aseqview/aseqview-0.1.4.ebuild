@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.1.4.ebuild,v 1.7 2005/09/04 11:05:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/aseqview-0.1.4.ebuild,v 1.8 2006/10/28 01:17:31 flameeyes Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.alsa-project.org/~iwai/alsa.html"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/alsa-lib-0.5.0
-	x11-libs/gtk+"
+	=x11-libs/gtk+-1.2*"
 
 SLOT="0"
 KEYWORDS="x86"

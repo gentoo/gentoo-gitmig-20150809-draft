@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/aseqview
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.12 2005/09/04 11:05:03 flameeyes Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aseqview/ChangeLog,v 1.13 2006/10/28 01:17:31 flameeyes Exp $
+
+  28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> aseqview-0.1.4.ebuild,
+  aseqview-0.2.1.ebuild:
+  Fix missing dependency on 1.2 version of GTK+. Thanks to Patrick Lauer in
+  bug #153085.
 
   04 Sep 2005; Diego Pettenò <flameeyes@gentoo.org> aseqview-0.1.4.ebuild,
   aseqview-0.2.1.ebuild:
