@@ -2,11 +2,9 @@
 #
 # starts Armagetron Advanced Dedicated Server from the installation directory
 
-	GAME_CONFDIR=/etc/games/armagetronad-ded
-	GAME_LIBDIR=/usr/games/lib/armagetronad-ded
-	GAME_DATADIR=/usr/share/games/armagetronad-ded
-	USER_DATADIR=/etc/games/armagetronad-ded
-	CONFIGDIR=/etc/games/armagetronad-ded
+	GAME_CONFDIR=@GAMES_SYSCONFDIR@/armagetronad
+	GAME_LIBDIR=@GAMES_LIBDIR@/armagetronad
+	GAME_DATADIR=@GAMES_DATADIR@/armagetronad
 
 	NO=$'\x1b[0;0m'
 	RD=$'\x1b[31;01m'

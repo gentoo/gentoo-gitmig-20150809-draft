@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.2 2006/09/08 05:49:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.3 2006/10/28 07:40:37 tupone Exp $
 
 
 inherit flag-o-matic eutils games
@@ -35,6 +35,14 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-security-1.patch
+	if use dedicated; then
+		cp "${FILESDIR}"/${PN}-ded .
+		sed -i \
+			-e "s:@GAMES_SYSCONFDIR@:${GAMES_SYSCONFDIR}:" \
+			-e "s:@GAMES_LIBDIR@:${GAMES_LIBDIR}:" \
+			-e "s:@GAMES_DATADIR@:${GAMES_DATADIR}:" \
+			${PN}-ded
+	fi
 }
 
 src_compile() {
@@ -68,7 +76,7 @@ src_install() {
 	insinto "${GAMES_SYSCONFDIR}/${PN}"
 	doins -r config/* || die "copying files"
 	if use dedicated; then
-		dogamesbin "${FILESDIR}/${PN}-ded"
+		dogamesbin ${PN}-ded
 	fi
 	cd "${S}"
 	insinto "${GAMES_DATADIR}/${PN}"

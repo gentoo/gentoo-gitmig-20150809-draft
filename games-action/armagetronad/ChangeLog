@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetronad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.9 2006/09/08 05:49:06 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.10 2006/10/28 07:40:37 tupone Exp $
+
+  28 Oct 2006; <tupone@gentoo.org> files/armagetronad-ded,
+  -armagetronad-0.2.7.1.ebuild, armagetronad-0.2.7.1-r1.ebuild:
+  Fixing armagetronad dedicated. Bug #119351 by Matthew Gleed
 
   08 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   armagetronad-0.2.7.1-r1.ebuild:
