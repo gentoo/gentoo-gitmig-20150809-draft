@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.2.ebuild,v 1.2 2006/06/05 07:24:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/open-xchange/open-xchange-0.8.2.ebuild,v 1.3 2006/10/28 12:23:56 swegener Exp $
 
 inherit eutils autotools webapp ssl-cert toolchain-funcs java-pkg versionator depend.apache
 
@@ -500,10 +500,10 @@ pkg_postinst() {
 	einfo
 	einfo "Execute the following command"
 
-	if has_version '<=sys-apps/portage-2.0.51*' ; then
+	if has_version '<=sys-apps/portage-2.0.51' ; then
 	    einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	else
-	    einfo "emerge --config =${CATEGORY}/${PN}-${PV}"
+	    einfo "emerge --config =${CATEGORY}/${PF}"
 	fi
 
 	einfo "to setup the initial open-xchange environment."
@@ -655,4 +655,3 @@ pkg_config() {
 		einfo "For this to work, php needs to be built with: USE=\"imap\""
 	fi
 }
-
