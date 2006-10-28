@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.27 2006/10/28 17:14:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.28 2006/10/28 17:15:57 dberkholz Exp $
 
 inherit gnuconfig eutils
 
@@ -10,7 +10,8 @@ DESCRIPTION="A Type 1 Font Rasterizer Library for UNIX/X11"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 HOMEPAGE="ftp://metalab.unc.edu/pub/Linux/libs/graphics"
 
-DEPEND="X? ( virtual/x11 )"
+RDEPEND="X? ( x11-libs/libXaw )"
+DEPEND="${RDEPEND}"
 
 SLOT="1"
 LICENSE="LGPL-2 GPL-2"
