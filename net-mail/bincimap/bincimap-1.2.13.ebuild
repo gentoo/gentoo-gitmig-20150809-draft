@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.1 2005/07/22 23:26:19 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.2 2006/10/28 12:45:07 swegener Exp $
 
 inherit eutils
 
@@ -24,15 +24,19 @@ PROVIDE="virtual/imapd"
 
 S="${WORKDIR}/${P}final"
 
-src_compile() {
-	cd ${S}
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
 	epatch ${FILESDIR}/${P}-gentoo.diff
-	econf `use_enable ssl ssl` --sysconfdir=/etc/bincimap || die
+}
+
+src_compile() {
+	econf $(use_enable ssl) --sysconfdir=/etc/bincimap || die
 	emake localstatedir=/etc/bincimap || die
 }
 
 src_install () {
-	cd ${S}
 	make DESTDIR=${D} localstatedir=/etc/bincimap prefix=/usr install || die
 	keepdir /var/log/bincimap || die
 	if use ssl; then
@@ -51,20 +55,20 @@ pkg_postinst() {
 	einfo "To start bicimap at boot you have to enable the /etc/init.d/svscan rc file"
 	einfo "and create the following link:"
 	einfo "ln -s /etc/bincimap/service/bincimap /service/bincimap"
-	einfo ""
+	einfo
 
 	if use ssl; then
-		einfo "If you want to use ssl connections, create the following link: "
+		einfo "If you want to use ssl connections, create the following link:"
 		einfo "ln -s /etc/bincimap/service/bincimaps /service/bincimaps"
-		einfo ""
+		einfo
 		einfo "And this command will setup bincimap-ssl on your system."
-		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
-		einfo ""
+		einfo "emerge --config =${CATEGORY}/${PF}"
+		einfo
 	fi
 
-	einfo "NOTE: Default Maildir path is '~/.maildir'. If you want to modify it, "
+	einfo "NOTE: Default Maildir path is '~/.maildir'. If you want to modify it,"
 	einfo "edit /etc/bincimap/bincimap.conf"
-	einfo ""
+	einfo
 }
 
 pkg_config() {
