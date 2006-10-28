@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.2 2006/04/09 13:17:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.3 2006/10/28 22:05:42 spock Exp $
+
+  28 Oct 2006; Michał Januszewski <spock@gentoo.org>
+  man-pages-pl-20051024.ebuild:
+  Don't install manpages provided by vim-core (bug #152946).
 
 *man-pages-pl-20051024 (09 Apr 2006)
 
