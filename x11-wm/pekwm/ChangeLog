@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.25 2006/10/28 21:51:47 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.26 2006/10/28 22:15:59 omp Exp $
+
+  28 Oct 2006; David Shakaryan <omp@gentoo.org> pekwm-0.1.5.ebuild:
+  Remove monolithic X support, move USE checking to pkg_setup(), change make
+  to emake and use cleaner code.
 
   28 Oct 2006; David Shakaryan <omp@gentoo.org> -pekwm-0.1.4_pre2.ebuild,
   -pekwm-0.1.4.ebuild:
