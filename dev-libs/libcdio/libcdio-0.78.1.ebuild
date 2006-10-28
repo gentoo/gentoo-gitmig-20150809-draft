@@ -1,11 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.15 2006/10/28 19:31:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.78.1.ebuild,v 1.1 2006/10/28 19:31:13 flameeyes Exp $
 
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
-
-inherit eutils libtool autotools
+inherit eutils libtool
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control"
 HOMEPAGE="http://www.gnu.org/software/libcdio/"
@@ -13,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="cddb minimal nls nocxx"
 
 RDEPEND="cddb? ( >=media-libs/libcddb-1.0.1 )
@@ -26,11 +23,7 @@ RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-nocxx.patch"
-
-	eautoreconf
+	elibtoolize
 }
 
 src_compile() {
