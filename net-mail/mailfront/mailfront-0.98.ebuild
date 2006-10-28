@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.1 2006/02/20 21:46:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.2 2006/10/28 12:38:48 swegener Exp $
 
 inherit toolchain-funcs
 
@@ -57,8 +57,8 @@ pkg_config() {
 
 pkg_postinst() {
 	echo
-	einfo "Run "
-	einfo "emerge --config =${PF}"
+	einfo "Run"
+	einfo "emerge --config =${CATEGORY}/${PF}"
 	einfo "to update your run files (backups are created) in"
 	einfo "		/var/qmail/supervise/qmail-pop3d and"
 	einfo "		/var/qmail/supervise/qmail-smtpd"

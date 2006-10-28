@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.10 2006/10/05 16:03:02 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.88.ebuild,v 1.11 2006/10/28 12:38:48 swegener Exp $
 
 inherit fixheadtails toolchain-funcs
 
@@ -62,8 +62,8 @@ pkg_config() {
 }
 
 pkg_postinst() {
-	einfo ""
-	einfo "Run ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+	einfo
+	einfo "Run emerge --config =${CATEGORY}/${PF}"
 	einfo "to update you run files (backup are created) in"
 	einfo "		/var/qmail/supervise/qmail-pop3d and"
 	einfo "		/var/qmail/supervise/qmail-smtpd"
