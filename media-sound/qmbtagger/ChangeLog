@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmbtagger
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.16 2006/10/20 11:44:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/ChangeLog,v 1.17 2006/10/28 00:57:36 flameeyes Exp $
+
+  28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> qmbtagger-0.07.ebuild:
+  Update admindir with a 3.5.5 version to fix autotools dependencies. Thanks
+  to Patrick Lauer in bug #153098.
 
   20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> qmbtagger-0.07.ebuild:
   Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
