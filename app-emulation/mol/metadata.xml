@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>ppc</herd>
 	<longdescription>
-		mac-on-linux -- Running Mac OS (X) from within Linux
+		Mac-On-Linux - Allows the virtualization of MacOS or MacOS X from within Linux
 	</longdescription>
 	<maintainer><email>josejx@gentoo.org</email><name>Joseph Jezak</name></maintainer>
 </pkgmetadata>
