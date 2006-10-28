@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/kylixlibs3-borqt-3.0.ebuild,v 1.6 2005/07/28 21:10:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/kylixlibs3-borqt-3.0.ebuild,v 1.7 2006/10/28 12:22:08 swegener Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Kylix 3 OE libraries"
@@ -29,7 +29,7 @@ src_install () {
 pkg_postinst() {
 	einfo "If is the first install of ${P}"
 	einfo "you need to run:"
-	einfo "ebuild /var/db/pkg/x11-libs/${P}/${P}.ebuild config"
+	einfo "emerge --config =${CATEGORY}/${PF}"
 }
 
 pkg_config() {
