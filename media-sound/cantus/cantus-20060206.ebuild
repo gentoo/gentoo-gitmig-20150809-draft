@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-20060206.ebuild,v 1.5 2006/10/20 20:09:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-20060206.ebuild,v 1.6 2006/10/28 01:39:59 flameeyes Exp $
 
 inherit eutils multilib
 
@@ -15,10 +15,12 @@ KEYWORDS="~amd64 ~ppc sparc ~x86"
 
 IUSE=""
 
-DEPEND="media-libs/libvorbis
+RDEPEND="media-libs/libvorbis
 	media-libs/libogg
 	>=dev-cpp/gtkmm-2.4.0
 	>=dev-cpp/libglademm-2.4.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}

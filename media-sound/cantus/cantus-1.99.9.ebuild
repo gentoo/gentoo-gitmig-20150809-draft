@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.12 2006/08/30 20:25:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.99.9.ebuild,v 1.13 2006/10/28 01:39:59 flameeyes Exp $
 
 IUSE="vorbis"
 
@@ -12,9 +12,11 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="amd64 ~ppc sparc x86"
 
-DEPEND="vorbis? ( media-libs/libvorbis media-libs/libogg )
+RDEPEND="vorbis? ( media-libs/libvorbis media-libs/libogg )
 	>=x11-libs/gtk+-2.2
 	>=gnome-base/libglade-2.0.1"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}-2-${PV}"
 
