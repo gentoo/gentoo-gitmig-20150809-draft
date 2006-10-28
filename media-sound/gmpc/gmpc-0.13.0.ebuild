@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.13.0.ebuild,v 1.2 2006/06/09 10:59:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.13.0.ebuild,v 1.3 2006/10/28 01:36:45 flameeyes Exp $
 
 IUSE="gnome"
 
@@ -12,11 +12,13 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2.3
 	gnome? ( >=gnome-base/gnome-vfs-2.6 )
 	dev-perl/XML-Parser
 	>=media-libs/libmpd-0.12.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf || die "configure failed"
