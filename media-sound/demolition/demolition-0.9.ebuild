@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/demolition/demolition-0.9.ebuild,v 1.6 2006/02/16 09:22:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/demolition/demolition-0.9.ebuild,v 1.7 2006/10/28 01:01:08 flameeyes Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc sparc"
 
-RDEPEND=">=dev-libs/glib-1.2.0
+RDEPEND="=dev-libs/glib-1.2*
 	 media-libs/ladspa-sdk"
 
 src_compile() {
