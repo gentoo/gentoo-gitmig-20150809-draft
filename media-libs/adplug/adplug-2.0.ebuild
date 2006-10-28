@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.0.ebuild,v 1.1 2006/06/06 11:42:01 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/adplug-2.0.ebuild,v 1.2 2006/10/28 01:45:08 flameeyes Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND=">=dev-cpp/libbinio-1.4"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_install() {
 	make DESTDIR="${D}" install || die
