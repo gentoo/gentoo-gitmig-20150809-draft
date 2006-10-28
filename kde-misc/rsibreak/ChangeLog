@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.18 2006/10/13 20:27:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.19 2006/10/28 23:56:10 flameeyes Exp $
+
+  28 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> rsibreak-0.8.0.ebuild:
+  Add ~x86-fbsd keyword.
 
 *rsibreak-0.8.0 (13 Oct 2006)
 
