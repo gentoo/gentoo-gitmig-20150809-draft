@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.18 2006/10/23 20:35:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.7-r1.ebuild,v 1.19 2006/10/28 12:00:01 zzam Exp $
+
+WANT_AUTOMAKE=1.9
+WANT_AUTOCONF=2.5
 
 inherit libtool eutils autotools
 
@@ -15,8 +18,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 IUSE="gtk jpeg mmx vorbis png dv ieee1394 X"
 
-DEPEND=">=sys-apps/sed-4.0.5
-	dv? ( media-libs/libdv )
+RDEPEND="dv? ( media-libs/libdv )
 	gtk? ( >=x11-libs/gtk+-2.4.0 )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
@@ -33,6 +35,11 @@ DEPEND=">=sys-apps/sed-4.0.5
 		)
 	)
 	!virtual/quicktime"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4.0.5
+	dev-util/pkgconfig"
+
 PROVIDE="virtual/quicktime"
 
 pkg_setup() {
