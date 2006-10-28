@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/net6
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/ChangeLog,v 1.18 2006/10/22 13:06:11 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/ChangeLog,v 1.19 2006/10/28 14:42:02 mabi Exp $
+
+  28 Oct 2006; Matti Bickel <mabi@gentoo.org> net6-1.2.2-r1.ebuild:
+  Stable on ppc (bug #115113)
 
 *net6-1.3.2 (22 Oct 2006)
 
