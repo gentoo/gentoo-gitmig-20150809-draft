@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.03.ebuild,v 1.2 2006/09/16 16:28:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-2.03.ebuild,v 1.3 2006/10/28 19:17:58 spock Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ RDEPEND="media-libs/libao
 	xmms? ( >=media-sound/xmms-1.2.2 )
 	audacious? ( >=media-sound/audacious-0.2 )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_compile() {
 	./configure \
