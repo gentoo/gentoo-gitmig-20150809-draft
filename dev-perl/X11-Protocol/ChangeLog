@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.31 2006/10/25 14:35:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.32 2006/10/28 13:13:09 opfer Exp $
+
+  28 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  X11-Protocol-0.56.ebuild:
+  x86 stable wrt bug #153127, blocker for security bug #152758
 
   25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
   X11-Protocol-0.56.ebuild:
