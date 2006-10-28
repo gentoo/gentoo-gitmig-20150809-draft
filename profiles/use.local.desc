@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2285 2006/10/28 22:30:29 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2286 2006/10/28 23:06:48 vericgar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -797,6 +797,7 @@ media-libs/xine-lib:vidix - Support for vidix video output
 media-libs/xine-lib:xvmc - Support for XVideo Motion Compensation (accelerated mpeg playback)
 media-plugins/alsa-plugins:libsamplerate - Build with libsamplerate support
 media-plugins/alsa-plugins:pulseaudio - Enable support for PulseAudio output plugin
+media-plugins/audacious-crossfade:libsamplerate - Build with libsamplerate support
 media-plugins/audacious-plugins:modplug - Build with modplug support
 media-plugins/audacious-plugins:musepack - Build with musepack support
 media-plugins/audacious-plugins:pulseaudio - Enable support for PulseAudio output plugin
