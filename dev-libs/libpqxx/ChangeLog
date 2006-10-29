@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.31 2006/09/16 20:23:35 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.32 2006/10/29 21:59:40 dev-zero Exp $
+
+*libpqxx-2.6.8 (29 Oct 2006)
+
+  29 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> -libpqxx-1.5.1.ebuild,
+  -libpqxx-2.4.3.ebuild, -libpqxx-2.4.4.ebuild, -libpqxx-2.5.0.ebuild,
+  +libpqxx-2.6.8.ebuild:
+  Version bump. Cleaning out old versions.
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   libpqxx-2.5.5.ebuild:
