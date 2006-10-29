@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.12 2006/10/08 11:40:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.2.0-r1.ebuild,v 1.13 2006/10/29 23:06:14 aballier Exp $
+
+WANT_AUTOMAKE="1.7"
+WANT_AUTOCONF="2.5"
 
 inherit font multilib autotools
 

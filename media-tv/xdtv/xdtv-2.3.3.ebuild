@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.5 2006/10/21 19:17:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.3.3.ebuild,v 1.6 2006/10/29 23:06:14 aballier Exp $
+
+WANT_AUTOMAKE="1.7"
+WANT_AUTOCONF="2.5"
 
 inherit font multilib autotools flag-o-matic
 
