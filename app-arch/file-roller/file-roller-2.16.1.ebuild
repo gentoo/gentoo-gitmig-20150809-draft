@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.16.1.ebuild,v 1.1 2006/10/12 20:10:41 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.16.1.ebuild,v 1.2 2006/10/29 05:06:32 compnerd Exp $
 
 inherit eutils gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="gnome"
 
 RDEPEND=">=dev-libs/glib-2.12
 	>=x11-libs/gtk+-2.10
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.12
 	>=gnome-base/libglade-2.4
 	>=gnome-base/libbonobo-2.6
 	>=gnome-base/libbonoboui-2.6
-	>=gnome-base/nautilus-2.10
+	gnome? ( >=gnome-base/nautilus-2.10 )
 	>=gnome-base/gconf-2"
 
 DEPEND="${RDEPEND}
@@ -33,6 +33,10 @@ DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper"
+
+	if ! use gnome ; then
+		G2CONF="${G2CONF} --disable-nautilus-actions"
+	fi
 }
 
 src_unpack() {
