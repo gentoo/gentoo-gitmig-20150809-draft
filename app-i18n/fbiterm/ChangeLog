@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fbiterm
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.5 2005/12/25 14:46:24 flameeyes Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fbiterm/ChangeLog,v 1.6 2006/10/29 15:50:00 flameeyes Exp $
+
+  29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> fbiterm-0.5.ebuild:
+  Port to Modular X. Closes bug #153194.
 
   25 Dec 2005; Diego Pettenò <flameeyes@gentoo.org> fbiterm-0.5.ebuild:
   Use bindnow-flags function instead of -Wl,-z,now.
