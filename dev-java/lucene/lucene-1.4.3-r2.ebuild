@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.6 2006/10/17 03:56:18 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3-r2.ebuild,v 1.7 2006/10/29 21:42:12 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -12,8 +12,8 @@ SLOT="1"
 KEYWORDS="~amd64 ~ia64 ppc x86"
 IUSE="doc test source"
 DEPEND=">=virtual/jdk-1.2
-	>=dev-java/ant-1.5
-	test? ( dev-java/junit )"
+	>=dev-java/ant-core-1.5
+	test? ( dev-java/junit dev-java/ant-tasks )"
 RDEPEND=">=virtual/jdk-1.2"
 
 pkg_setup() {
