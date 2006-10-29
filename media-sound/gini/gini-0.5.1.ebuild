@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gini/gini-0.5.1.ebuild,v 1.7 2004/09/14 08:08:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gini/gini-0.5.1.ebuild,v 1.8 2006/10/29 22:10:00 flameeyes Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SLOT="0"
 
 KEYWORDS="x86 sparc amd64"
 
-DEPEND="dev-libs/glib"
+DEPEND="=dev-libs/glib-1.2*"
 
 src_install() {
 	einstall || die
