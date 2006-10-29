@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.7 2006/10/26 19:41:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.8 2006/10/29 16:19:57 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -103,14 +103,12 @@ src_install() {
 	done
 
 	# Remove the wrongly isntalled manpage
-	rm -f "${D}"/usr/share/man/man8/pam_userdb.8.gz
+	rm -f "${D}"/usr/share/man/man8/pam_userdb.8*
 }
 
 pkg_postinst() {
-	ewarn " "
-	ewarn "Pay attention! This ebuild is still highly experimental. Don't use"
-	ewarn "in production environments. We don't guarrantee it's working at all."
-	ewarn "Please also note that RedHat patches are not applied, thus stuff"
-	ewarn "like pam_stack is not present at this time."
-	ewarn " "
+	elog "Since version 0.99 we don't apply RedHat patches anymore, thus stuff"
+	elog "like pam_stack is not present (replaced by the 'include' directive)."
+	elog "The pam_userdb module is now moved in sys-auth/pam_userdb."
+	elog "The pam_console module is now moved in sys-auth/pam_console."
 }
