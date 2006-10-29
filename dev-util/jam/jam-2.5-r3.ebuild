@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.5 2006/05/21 18:27:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/jam-2.5-r3.ebuild,v 1.6 2006/10/29 20:20:14 dev-zero Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc-macos ppc64 sparc ~x86"
 IUSE=""
 
-DEPEND="sys-devel/bison
-	!dev-util/boost-jam"
+DEPEND="sys-devel/bison"
 
 src_unpack() {
 	unpack ${A}
