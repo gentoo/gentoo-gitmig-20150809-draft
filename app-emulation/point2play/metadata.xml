@@ -2,12 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>wine</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
-</maintainer>
 <longdescription>
-Point2Play, a new intuitive user interface, debuts with this release to help novice users 
-easily deal with configuration issues and experienced users gain greater system control. 
+Point2Play, a new intuitive user interface, debuts with this release to help
+novice users easily deal with configuration issues and experienced users gain
+greater system control. 
 </longdescription>
 </pkgmetadata>
