@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.49 2006/04/10 07:27:36 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.50 2006/10/29 21:01:21 omp Exp $
+
+  29 Oct 2006; David Shakaryan <omp@gentoo.org>
+  -files/blackbox-0.65.0-gcc34.patch,
+  -files/blackbox-0.65.0-mousewheel_focus-workspace.patch,
+  -files/blackbox-gcc.patch, -files/disable_rootcommand.patch,
+  -blackbox-0.65.0-r3.ebuild, -blackbox-0.65.0-r4.ebuild:
+  Remove older versions.
 
   10 Apr 2006; <pyrania@gentoo.org> blackbox-0.70.0.ebuild:
   LICENCE change. See bug #123375.
