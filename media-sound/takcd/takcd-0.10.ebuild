@@ -1,6 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.10 2005/09/15 19:59:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/takcd-0.10.ebuild,v 1.11 2006/10/29 22:40:11 flameeyes Exp $
+
+WANT_AUTOMAKE="1.4"
+WANT_AUTOCONF="2.5"
+
+inherit autotools
 
 IUSE=""
 
@@ -12,15 +17,14 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ~ppc sparc x86"
 
-RDEPEND="virtual/libc"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
-DEPEND="sys-devel/autoconf
-	sys-devel/automake"
+	eautoreconf
+}
 
 src_compile() {
-	export WANT_AUTOMAKE=1.4
-	export WANT_AUTOCONF=2.5
-	./autogen.sh
 	emake || die
 }
 
