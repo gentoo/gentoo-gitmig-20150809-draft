@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.184 2006/10/29 00:22:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.185 2006/10/29 00:23:30 flameeyes Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -13,7 +13,7 @@ WANT_AUTOMAKE="1.9"
 inherit base eutils kde-functions flag-o-matic libtool autotools
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
-IUSE="debug xinerama"
+IUSE="debug xinerama elibc_FreeBSD"
 
 if [[ ${ARTS_REQUIRED} != "yes" && ${ARTS_REQUIRED} != "never" && ${PN} != "arts" ]]; then
 	IUSE="${IUSE} arts"
