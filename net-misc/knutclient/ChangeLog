@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.24 2006/10/29 20:14:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.25 2006/10/29 20:17:05 flameeyes Exp $
+
+  29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  knutclient-0.9.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   knutclient-0.9.1.ebuild:
