@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.11.ebuild,v 1.1 2006/09/20 15:55:18 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hx/hx-0.4.11.ebuild,v 1.2 2006/10/29 13:04:40 kang Exp $
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 MY_P=mhxd-${PV}
 
 DESCRIPTION="This is a Hotline 1.5+ compatible *nix Hotline Client in CLI. It supports IRC compatibility. See http://www.hotspringsinc.com/"
