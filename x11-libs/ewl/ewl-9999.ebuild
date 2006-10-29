@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-9999.ebuild,v 1.11 2006/08/08 15:32:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ewl/ewl-9999.ebuild,v 1.12 2006/10/29 03:22:49 vapier Exp $
 
 inherit enlightenment
 
@@ -13,7 +13,7 @@ RDEPEND=">=media-libs/edje-0.5.0
 	>=x11-libs/evas-0.9.9
 	>=x11-libs/ecore-0.9.9"
 DEPEND="${RDEPEND}
-	doc? ( app-text/tetex )"
+	doc? ( virtual/tetex )"
 
 pkg_setup() {
 	if ! built_with_use x11-libs/evas png ; then
