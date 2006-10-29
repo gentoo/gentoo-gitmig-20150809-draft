@@ -1,0 +1,10 @@
+# ChangeLog for games-simulation/kfreeflight
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/ChangeLog,v 1.1 2006/10/29 20:23:13 tupone Exp $
+
+*kfreeflight-0.2.1_rc1 (29 Oct 2006)
+
+  29 Oct 2006; <tupone@gentoo.org> +metadata.xml,
+  +kfreeflight-0.2.1_rc1.ebuild:
+  New ebuild. Bug #125381 by Toffanin [WiredTEK]
+
