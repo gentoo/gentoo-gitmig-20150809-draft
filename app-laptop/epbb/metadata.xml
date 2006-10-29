@@ -4,9 +4,8 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
- <longdescription>
+<longdescription>
 a pbbuttonsd client using Enlightenment Libraries
- </longdescription>
+</longdescription>
 </pkgmetadata>
