@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.41 2006/08/02 08:35:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.42 2006/10/29 04:06:49 nattfodd Exp $
+
+  29 Oct 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  -files/wv2-0.2.2-respectflags.patch, -wv2-0.2.ebuild, -wv2-0.2.1.ebuild,
+  -wv2-0.2.2.ebuild:
+  Security cleanup (bug #140507).
 
   02 Aug 2006; Diego Pettenò <flameeyes@gentoo.org> wv2-0.2.3.ebuild:
   Add ~x86-fbsd keyword.
