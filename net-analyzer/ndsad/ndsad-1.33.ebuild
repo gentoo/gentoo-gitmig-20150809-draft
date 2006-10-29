@@ -1,6 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.4 2006/06/27 18:13:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ndsad/ndsad-1.33.ebuild,v 1.5 2006/10/29 17:02:11 pva Exp $
+
+WANT_AUTOCONF=2.5
+WANT_AUTOMAKE=1.9
+inherit autotools
 
 DESCRIPTION="Cisco netflow probe from libpcap, ULOG, tee/divert sources."
 HOMEPAGE="http://sourceforge.net/projects/ndsad"
@@ -14,15 +18,10 @@ IUSE=""
 DEPEND=">=net-libs/libpcap-0.8"
 
 src_unpack() {
-	einfo "Regenerating autotools files..."
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.7
-
 	unpack ${A}
-
 	cd ${S}
 
-	# Puttind ndsad binary in sbin.
+	# Put ndsad binary in sbin.
 	sed -i "s/bin_PROGRAMS = ndsad/sbin_PROGRAMS = ndsad/" Makefile.am || \
 	die	"Can not change bin->sbin in Makefile.am... sed failed"
 
@@ -33,7 +32,9 @@ src_unpack() {
 	sed -i "s:log /tmp/ndsad.log:log /var/log/ndsad.log:" ndsad.conf || \
 	die "Can not fix logging path in ndsad.conf... sed failed"
 
-	./preconf
+	aclocal
+	eautomake
+	eautoconf
 }
 
 src_compile() {
