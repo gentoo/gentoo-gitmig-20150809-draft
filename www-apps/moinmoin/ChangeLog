@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.20 2006/09/22 00:07:09 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.21 2006/10/29 12:01:20 rl03 Exp $
+
+*moinmoin-1.5.6 (29 Oct 2006)
+
+  29 Oct 2006; Renat Lumpau <rl03@gentoo.org> -moinmoin-1.5.4.ebuild,
+  -moinmoin-1.5.5a.ebuild, +moinmoin-1.5.6.ebuild:
+  Version bump; Fix homepage (bug #153106).
 
 *moinmoin-1.5.5a (22 Sep 2006)
 
