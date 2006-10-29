@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mping
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.9 2006/10/29 16:08:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.10 2006/10/29 21:10:43 ticho Exp $
+
+  29 Oct 2006; Andrej Kacian <ticho@gentoo.org> mping-2.01.ebuild:
+  Stable on x86, bug #153301.
 
   29 Oct 2006; Mike Frysinger <vapier@gentoo.org>
   +files/mping-2.01-RFC3542.patch, mping-2.01.ebuild:
