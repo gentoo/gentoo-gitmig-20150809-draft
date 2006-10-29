@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.4.0.ebuild,v 1.6 2006/10/20 21:16:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-2.4.0.ebuild,v 1.7 2006/10/29 22:46:17 ticho Exp $
 
 IUSE="gnome dillo crypt spell ssl ldap ipv6 pda clamav xface kde imap spamassassin doc startup-notification"
 
@@ -37,7 +37,8 @@ COMMONDEPEND=">=x11-libs/gtk+-2.4
 
 DEPEND="${COMMONDEPEND}
 	xface? ( >=media-libs/compface-1.4 )
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	dev-util/pkgconfig"
 
 RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
