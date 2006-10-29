@@ -4,9 +4,8 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
- <longdescription>
+<longdescription>
 Evidence - file-manager
 * Sports different views so whatever you are doing, you'll have the most 
   intuitive grasp on your files:
@@ -53,5 +52,5 @@ Evidence - file-manager
       Attributes.
     o Plugins can be built/added at a later date without having to rebuild 
       the main application.
- </longdescription>
+</longdescription>
 </pkgmetadata>
