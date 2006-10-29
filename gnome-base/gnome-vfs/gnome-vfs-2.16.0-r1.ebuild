@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0-r1.ebuild,v 1.5 2006/10/29 16:46:40 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.16.0-r1.ebuild,v 1.6 2006/10/29 17:10:01 cardoe Exp $
 
 inherit eutils gnome2 autotools
 
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gconf-2
 	virtual/fam
 	gnome-base/gnome-mime-data
 	>=x11-misc/shared-mime-info-0.14
-	|| ( >=dev-libs/dbus-glib-0.71 >=sys-apps/dbus-0.32 )
+	|| ( ( >=sys-apps/dbus-core-0.91 >=dev-libs/dbus-glib-0.71 ) >=sys-apps/dbus-0.32 )
 	samba? ( >=net-fs/samba-3 )
 	gnutls?	(
 				net-libs/gnutls
