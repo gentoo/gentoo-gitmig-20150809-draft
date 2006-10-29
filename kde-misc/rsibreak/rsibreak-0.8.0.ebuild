@@ -1,10 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.8.0.ebuild,v 1.2 2006/10/28 23:56:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.8.0.ebuild,v 1.3 2006/10/29 00:23:05 flameeyes Exp $
 
-USE_KEG_PACKAGING="yes"
+USE_KEG_PACKAGING="1"
 
 LANGS="ar bg br ca cs da de el en_GB es et fr ga gl it ja ka nl pl pt pt_BR ru sk sr sr@Latn sv tr"
+LANGS_DOC="da nl pt sv"
+DOC_DIR_SUFFIX="_rsibreak"
 
 inherit kde
 
