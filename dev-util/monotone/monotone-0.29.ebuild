@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.1 2006/09/04 13:33:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.29.ebuild,v 1.2 2006/10/29 05:18:06 dragonheart Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -19,7 +19,6 @@ RDEPEND=">=dev-libs/boost-1.32.1
 	emacs? ( virtual/emacs )"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/gcc-3.2
 	nls? ( >=sys-devel/gettext-0.11.5 )
 	doc? ( sys-apps/texinfo )"
 
@@ -27,6 +26,9 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	enewgroup monotone
 	enewuser monotone -1 -1 /var/lib/monotone monotone
+	if [[ "$(gcc-version)" == "3.3" ]]; then
+		die 'requires >=gcc-3.4'
+	fi
 }
 
 src_compile() {
