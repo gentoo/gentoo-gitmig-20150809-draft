@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.1-r1.ebuild,v 1.9 2006/09/05 14:16:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/gerbv-1.0.1-r1.ebuild,v 1.10 2006/10/29 21:11:56 plasmaroo Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="=x11-libs/gtk+-2*
-	png? ( media-libs/libpng
-		media-libs/gdk-pixbuf )"
+	png? ( media-libs/libpng )"
 
 src_compile() {
 	local confOptions
