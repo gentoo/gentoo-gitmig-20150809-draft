@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pstotext
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.28 2006/05/21 04:31:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.29 2006/10/29 03:40:47 nattfodd Exp $
+
+  29 Oct 2006; Alexandre Buisse <nattfodd@gentoo.org> -pstotext-1.8g.ebuild:
+  Security cleanup (bug #140507).
 
   21 May 2006; Mark Loeser <halcy0n@gentoo.org> pstotext-1.9-r2.ebuild:
   Stable on x86; bug #132662
