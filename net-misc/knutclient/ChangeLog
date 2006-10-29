@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.23 2006/10/29 17:15:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.24 2006/10/29 20:14:15 flameeyes Exp $
+
+  29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  knutclient-0.9.1.ebuild:
+  Update admindir to avoid the unrequested autotools regeneration.
 
 *knutclient-0.9.1 (29 Oct 2006)
 
