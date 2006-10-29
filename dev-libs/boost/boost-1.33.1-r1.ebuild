@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.1 2006/10/23 19:25:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.33.1-r1.ebuild,v 1.2 2006/10/29 20:17:09 dev-zero Exp $
 
 inherit eutils distutils multilib python versionator
 
@@ -16,7 +16,6 @@ IUSE="bcp bjam debug doc pyste threads threadsonly"
 
 DEPEND="sys-libs/zlib"
 RDEPEND="${DEPEND}
-		!dev-util/boost-jam
 		pyste? ( dev-cpp/gccxml dev-python/elementtree )"
 
 S=${WORKDIR}/${MY_P}
