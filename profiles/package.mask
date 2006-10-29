@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6165 2006/10/29 20:12:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6166 2006/10/29 20:23:25 omp Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ## 
+
+# David Shakaryan <omp@gentoo.org> (29 Oct 2006)
+# Masking x11-misc/commonbox-utils as upstream is dead
+# and many alternative *box configuration tools exist.
+# Pending removal on 29 Nov 2006.
+x11-misc/commonbox-utils
 
 # Alec Warner <antarus@gentoo.org> (28 Oct 2006)
 # Mask the following packages for removal by treecleaners:
