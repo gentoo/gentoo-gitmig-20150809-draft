@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6161 2006/10/29 02:43:11 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6162 2006/10/29 03:21:19 vapier Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1007,10 +1007,6 @@ net-im/wildfire
 # Stefan Schweizer <genstef@gentoo.org> (29 Jun 2006)
 # 1.0.* is the stable version, we do not want to break any users
 >=net-libs/loudmouth-1.1.0
-
-# Mike Frysinger <vapier@gentoo.org> (27 Jun 2006)
-# Package is obsolete, use the bundled wine setup code #120575
-app-emulation/winesetuptk
 
 # Diego Pettenò <flameeyes@gentoo.org> (25 Jun 2006)
 # confcache really needs more work before prime-time
