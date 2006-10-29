@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.8.1.ebuild,v 1.3 2006/10/16 17:29:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-0.8.1.ebuild,v 1.4 2006/10/29 13:43:02 dev-zero Exp $
 
 inherit eutils
 
@@ -13,7 +13,10 @@ HOMEPAGE="http://aria2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ares bittorrent gnutls metalink nls ssl test"
+IUSE="ares bittorrent gnutls metalink nls ssl"
+
+# Tests exist but are not up-to-date
+RESTRICT="test"
 
 CDEPEND="ssl? (
 			gnutls? ( net-libs/gnutls )
@@ -22,8 +25,7 @@ CDEPEND="ssl? (
 		bittorrent? ( gnutls? ( dev-libs/libgcrypt ) )
 		metalink? ( >=dev-libs/libxml2-2.6.26 )"
 DEPEND="${CDEPEND}
-		nls? ( sys-devel/gettext )
-		test? ( dev-util/cppunit )"
+		nls? ( sys-devel/gettext )"
 RDEPEND="${CDEPEND}
 		nls? ( virtual/libiconv virtual/libintl )"
 
