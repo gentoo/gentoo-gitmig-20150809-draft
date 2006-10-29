@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.3 2006/09/09 20:30:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.4 2006/10/29 09:24:35 dragonheart Exp $
 
 inherit eutils
 
@@ -65,8 +65,8 @@ src_install () {
 }
 
 pkg_postinst () {
-	echo ">>> You will need the Universal TUN/TAP driver compiled into"
-	echo ">>> your kernel or as a module to use the associated tunnel"
-	echo ">>> modes in vtun. 2.2 users will need to download and install"
-	echo ">>> the driver from http://vtun.sourceforge.net/tun"
+	einfo ">>> You will need the Universal TUN/TAP driver compiled into"
+	einfo ">>> your kernel or as a module to use the associated tunnel"
+	einfo ">>> modes in vtun. 2.2 users will need to download and install"
+	einfo ">>> the driver from http://vtun.sourceforge.net/tun"
 }
