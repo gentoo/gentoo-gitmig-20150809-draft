@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/tin
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.13 2006/10/27 13:27:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.14 2006/10/29 19:40:54 kloeri Exp $
+
+  29 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> tin-1.8.2.ebuild:
+  Stable on ia64, bug 150229.
 
   27 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> tin-1.8.2.ebuild:
   Stable on sparc wrt security #150229
