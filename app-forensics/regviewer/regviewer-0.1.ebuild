@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/regviewer/regviewer-0.1.ebuild,v 1.4 2005/07/07 08:58:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/regviewer/regviewer-0.1.ebuild,v 1.5 2006/10/29 09:42:37 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="RegViewer is GTK 2.2 based GUI Windows registry file navigator"
 
@@ -33,6 +35,11 @@ RDEPEND="dev-libs/atk
 DEPEND="${RDEPEND}
 	sys-devel/automake
 	sys-devel/autoconf"
+
+src_unpack() {
+	unpack "${A}"
+	epatch "${FILESDIR}/"${P}-gcc4.patch
+}
 
 src_compile() {
 	./autogen.sh --prefix=/usr || die
