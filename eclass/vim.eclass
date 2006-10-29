@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.154 2006/10/09 22:26:46 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.155 2006/10/29 16:07:00 pioto Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -127,6 +127,7 @@ fi
 # eselect-vi support
 if version_is_at_least 7.0.109 ; then
 	DEPEND="${DEPEND} >=app-admin/eselect-vi-1.1"
+	RDEPEND="${RDEPEND} >=app-admin/eselect-vi-1.1"
 fi
 
 HOMEPAGE="http://www.vim.org/"
