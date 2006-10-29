@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.14.ebuild,v 1.9 2005/10/18 13:14:16 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.14.ebuild,v 1.10 2006/10/29 22:12:59 flameeyes Exp $
 
 IUSE=""
 
@@ -15,7 +15,6 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc x86"
 
 need-kde 3
-#RDEPEND="media-libs/alsa-lib"
 
 src_compile() {
 	emake || die

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.16.ebuild,v 1.1 2005/10/17 15:17:53 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.16.ebuild,v 1.2 2006/10/29 22:12:59 flameeyes Exp $
 
 inherit kde-functions
 
@@ -13,7 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=kde-base/kdelibs-3"
+RDEPEND=">=kde-base/kdelibs-3
+	x11-libs/libXmu"
+DEPEND="${RDEPEND}"
 
 set-kdedir 3
 
