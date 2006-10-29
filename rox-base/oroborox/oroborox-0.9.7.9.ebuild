@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.3 2006/04/16 14:13:11 svyatogor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/oroborox-0.9.7.9.ebuild,v 1.4 2006/10/29 18:08:26 lack Exp $
 
 MY_PN="OroboROX"
 
@@ -8,15 +8,45 @@ DESCRIPTION="OroboROX is a small window manager for the ROX Desktop."
 HOMEPAGE="http://rox.sourceforge.net/"
 SRC_URI="http://roxos.sunsite.dk/dev-contrib/guido/${MY_PN}-${PV}.tar.bz2"
 
-
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="xinerama"
 
-DEPEND="virtual/x11
-		virtual/xft
-		>=media-libs/freetype-2.0"
+
+DEPEND="
+	>=media-libs/freetype-2.0
+	virtual/xft
+	|| ( (
+		x11-proto/xproto
+		x11-proto/xextproto
+		x11-proto/xf86vidmodeproto
+		x11-libs/libXpm
+		x11-libs/libXrandr
+		x11-libs/libXrender
+		x11-libs/libXcomposite
+		x11-libs/libXdamage
+		xinerama? ( x11-proto/xineramaproto )
+	)
+		virtual/x11
+	)
+	"
+
+RDEPEND="
+	>=media-libs/freetype-2.0
+	virtual/xft
+	|| ( (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXpm
+		x11-libs/libXrandr
+		x11-libs/libXrender
+		x11-libs/libXxf86vm
+		xinerama? ( x11-libs/libXinerama )
+	)
+		virtual/x11
+	)
+	"
 
 S=${WORKDIR}
 ROX_LIB_VER=1.9.14
