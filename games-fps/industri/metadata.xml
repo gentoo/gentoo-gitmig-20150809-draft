@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
-</maintainer>
 <longdescription>
 industri is a Quake based, single player game using a modified version of the 
 Tenebrae 1.x engine. The Tenebrae engine is an Open Source (GNU GPL) modification 

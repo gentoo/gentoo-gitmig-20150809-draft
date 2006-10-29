@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
-</maintainer>
 <longdescription>
 Non-PhotoRealistic Rendering (npr) is often considered the task of taking a 3d 
 environment and displaying it as if it were (for example) hand-drawn. Stylization is 

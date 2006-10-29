@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
-</maintainer>
 <longdescription>
 QuakeForge is a 3D graphics game engine based on id Software's legendary 
 Quake and QuakeWorld game engine. Our purpose? To improve the state of 

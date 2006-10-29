@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
-</maintainer>
 <longdescription>
 The third chapter in the series, and the first with a 3D perspective 
 (the original Duke Nukem and the sequel, Duke Nukem II, are side 

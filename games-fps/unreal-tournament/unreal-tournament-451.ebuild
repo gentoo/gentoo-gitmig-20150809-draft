@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.21 2006/10/24 22:59:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.22 2006/10/29 03:48:31 vapier Exp $
 
 inherit eutils games
 
@@ -27,11 +27,10 @@ RDEPEND="!amd64? (
 	amd64? ( app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs )"
-
 DEPEND="${RDEPEND}
 	!games-fps/unreal-tournament-goty"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	cdrom_get_cds System/
@@ -81,7 +80,7 @@ src_install() {
 	# first apply any patch remaints loki has for us
 	cd setup.data
 	./bin/Linux/x86/loki_patch patch.dat ${Ddir} >& /dev/null
-	cd ${S}
+	cd "${S}"
 
 	# finally, unleash the UTPG patch
 	cp -rf UTPG/* ${Ddir}/
@@ -94,7 +93,7 @@ src_install() {
 	cd ${Ddir}
 	export HOME=${T}
 	export UT_DATA_PATH=${Ddir}/System
-	for f in `find ${CDROM_ROOT}/Maps/ -name '*.uz' -printf '%f '` ; do
+	for f in $(find ${CDROM_ROOT}/Maps/ -name '*.uz' -printf '%f ') ; do
 		./ucc decompress ${CDROM_ROOT}/Maps/${f} -nohomedir || die "uncompressing map ${f}"
 		mv System/${f:0:${#f}-3} Maps/ || die "copy map ${f}"
 	done

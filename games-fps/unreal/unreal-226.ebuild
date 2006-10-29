@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.14 2006/10/24 23:00:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal/unreal-226.ebuild,v 1.15 2006/10/29 03:48:04 vapier Exp $
 
 inherit eutils games
 
@@ -31,7 +31,7 @@ RDEPEND="!amd64? (
 		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs )"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	export CDROM_NAME_1="Unreal CD"
@@ -56,7 +56,7 @@ src_install() {
 
 	cp -rf "${CDROM_ROOT}"/{Maps,Music,Sounds} "${D}/${dir}/"
 	for f in "${D}/${dir}"/Maps/Dm*.unr ; do
-		mv ${f} ${f/Dm/DM-}
+		mv "${f}" "${f/Dm/DM-}"
 	done
 	dosym Maps "${dir}"/maps
 
