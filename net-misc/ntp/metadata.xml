@@ -4,7 +4,6 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
 NTP is a protocol designed to synchronize the clocks of computers over a network. NTP 
