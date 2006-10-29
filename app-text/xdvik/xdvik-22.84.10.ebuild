@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.7 2006/10/14 12:58:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.10.ebuild,v 1.8 2006/10/29 18:14:42 exg Exp $
 
 WANT_AUTOCONF=2.1
 
@@ -34,7 +34,7 @@ RDEPEND=">=media-libs/t1lib-5.0.2
 DEPEND="${RDEPEND}"
 
 pkg_setup () {
-	if has_version app-text/tetex && built_with_use app-text/tetex X ; then
+	if has_version virtual/tetex && built_with_use virtual/tetex X ; then
 		eerror "tetex provides xdvik when built with the X flag."
 		eerror "To install this version of xdvik re-install tetex"
 		eerror "without the X flag."
