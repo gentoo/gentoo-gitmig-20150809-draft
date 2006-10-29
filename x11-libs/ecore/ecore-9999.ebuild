@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.13 2006/04/27 04:53:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.14 2006/10/29 03:27:50 vapier Exp $
 
 inherit enlightenment
 
@@ -9,7 +9,7 @@ DESCRIPTION="core event abstraction layer and X abstraction layer (nice convenie
 IUSE="X directfb fbcon opengl ssl curl threads dbus"
 
 RDEPEND=">=x11-libs/evas-0.9.9
-	X? ( || ( x11-libs/libXcursor virtual/x11 ) )
+	X? ( x11-libs/libXcursor )
 	ssl? ( dev-libs/openssl )
 	curl? ( net-misc/curl )
 	dbus? ( sys-apps/dbus )
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/evas-0.9.9
 #		x11-libs/libXp
 
 DEPEND="${RDEPEND}
-	X? ( || ( ( x11-proto/xproto x11-proto/xextproto ) virtual/x11 ) )"
+	X? ( x11-proto/xproto x11-proto/xextproto )"
 
 src_compile() {
 	export MY_ECONF="
