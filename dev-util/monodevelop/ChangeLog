@@ -1,6 +1,23 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.42 2006/04/20 07:28:28 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.43 2006/10/29 16:56:45 latexer Exp $
+
+*monodevelop-0.12 (29 Oct 2006)
+
+  29 Oct 2006; Peter Johanson <latexer@gentoo.org>
+  -files/monodevelop-0.7-boo-0.6.0-compat.diff,
+  -files/monodevelop-0.7-gtksharp-update.diff,
+  -files/monodevelop-0.7-mcs-path-fix.diff,
+  -files/monodevelop-0.8-iso-api-update.diff,
+  -files/monodevelop-0.9-boo-0.7.5-api.diff,
+  -files/monodevelop-0.9-mono-unix.diff, +files/monodevelop-0.12-fixes.diff,
+  -monodevelop-0.7-r1.ebuild, -monodevelop-0.7-r2.ebuild,
+  -monodevelop-0.8.ebuild, -monodevelop-0.9.ebuild,
+  -monodevelop-0.9-r1.ebuild, monodevelop-0.10.ebuild,
+  +monodevelop-0.12.ebuild:
+  Bump (finally). No ASP.NET support yet, need to get this in now to handle
+  the gecko-sharp issue (bug #137665). Mostly fixes bug #132457. Do some overdue
+  cleanup while I'm at it.
 
 *monodevelop-0.10 (20 Apr 2006)
 
