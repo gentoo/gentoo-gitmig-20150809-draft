@@ -1,21 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.8 2006/10/05 08:39:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-1.2.ebuild,v 1.9 2006/10/29 18:08:37 flameeyes Exp $
 
 ARTS_REQUIRED="yes"
 inherit kde
 
 DESCRIPTION="MP3/Ogg/Wav-Manager and Jukebox"
 HOMEPAGE="http://yammi.sourceforge.net/"
-SRC_URI="mirror://sourceforge/yammi/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/yammi/${P}.tar.gz
+	mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 sparc ~ppc"
-IUSE="cdr encode kde vorbis xmms"
+IUSE="cdr encode kde vorbis"
 
-DEPEND=">=media-libs/taglib-1.3
-	xmms? ( media-sound/xmms )"
+DEPEND=">=media-libs/taglib-1.3"
 
 RDEPEND="${DEPEND}
 	kde? ( || ( kde-base/noatun kde-base/kdemultimedia ) )
@@ -32,9 +32,14 @@ RDEPEND="${DEPEND}
 
 need-kde 3
 
+src_unpack() {
+	kde_src_unpack
+
+	sed -i -e '/AM_PATH_XMMS/s:^:dnl :' "${S}/configure.in.in"
+}
+
 src_compile() {
-	rm -f "${S}/configure"
-	myconf="$(use_enable xmms)"
+	myconf="--disable-xmms"
 
 	kde_src_compile
 }
