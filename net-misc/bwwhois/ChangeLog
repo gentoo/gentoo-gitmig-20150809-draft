@@ -1,11 +1,6 @@
 # ChangeLog for net-misc/bwwhois
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.14 2006/10/27 19:39:41 drizzt Exp $
-
-*bwwhois-3.4-r1 (27 Oct 2006)
-
-  27 Oct 2006; Timothy Redaelli <drizzt@gentoo.org> +bwwhois-3.4-r1.ebuild:
-  Version bump, addition of support for eselect-whois.
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.15 2006/10/29 11:23:02 drizzt Exp $
 
   02 May 2006; Jason Wever <weeve@gentoo.org> bwwhois-3.4.ebuild:
   Stable on SPARC.
