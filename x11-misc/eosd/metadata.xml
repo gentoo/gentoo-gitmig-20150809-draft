@@ -4,7 +4,6 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
 eOSD is the "enlightened on-screen display" library. It's based on Ecore, Ecore X 

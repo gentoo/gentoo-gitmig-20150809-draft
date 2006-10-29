@@ -4,9 +4,8 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
- <longdescription>
+<longdescription>
 This is a standalone keybindings editor for enlightenment version 0.16.
- </longdescription>
+</longdescription>
 </pkgmetadata>
