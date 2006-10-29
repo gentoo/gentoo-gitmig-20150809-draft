@@ -4,7 +4,6 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
 What is Ecore? It is the core event abstraction layer and X abstraction layer that 

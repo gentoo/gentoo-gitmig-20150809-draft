@@ -4,7 +4,6 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
 The Enlightenment Widget Library, a simple-to-use general purpose widget library 
