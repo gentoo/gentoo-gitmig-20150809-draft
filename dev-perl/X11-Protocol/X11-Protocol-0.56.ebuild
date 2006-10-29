@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.56.ebuild,v 1.6 2006/10/29 15:53:47 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/X11-Protocol-0.56.ebuild,v 1.7 2006/10/29 19:33:32 kloeri Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/S/SM/SMCCAM/${P}.tar.gz"
 
 LICENSE="Artistic X11"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="|| ( ( x11-libs/libXrender
