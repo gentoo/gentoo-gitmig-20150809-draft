@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jmax
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.12 2005/07/25 12:40:14 dholm Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/ChangeLog,v 1.13 2006/10/29 22:29:58 flameeyes Exp $
+
+  29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> jmax-4.1.0.ebuild:
+  Fix autotools rebuilding, thanks to Patrick Lauer in bug #153347.
 
   25 Jul 2005; David Holm <dholm@gentoo.org> jmax-4.1.0.ebuild:
   Added to ~ppc.

@@ -1,10 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.6 2005/07/25 12:40:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jmax/jmax-4.1.0.ebuild,v 1.7 2006/10/29 22:29:58 flameeyes Exp $
+
+WANT_AUTOMAKE="1.4"
+WANT_AUTOCONF="2.5"
 
 IUSE="alsa jack doc"
 
-inherit eutils libtool
+inherit eutils libtool autotools
 
 DESCRIPTION="jMax is a visual programming environment for building interactive real-time music and multimedia applications."
 HOMEPAGE="http://freesoftware.ircam.fr/rubrique.php3?id_rubrique=2"
@@ -29,21 +32,14 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	cd ${S}
+	cd "${S}"
 	unpack jmax-m4-1.0.tar.bz2
-	epatch ${FILESDIR}/${P}-otherArch.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch "${FILESDIR}/${P}-otherArch.patch"
+	epatch "${FILESDIR}/${P}-gcc34.patch"
 	# fixed 57691
-	epatch ${FILESDIR}/${P}-fix-java-check.patch
+	epatch "${FILESDIR}/${P}-fix-java-check.patch"
 
-	export WANT_AUTOMAKE=1.6
-	export WANT_AUTOCONF=2.5
-	touch INSTALL NEWS
-	aclocal -I m4 || die
-	automake # this will fail because of bad upstream Makefile.am
-	autoconf || die
-
-	libtoolize --copy --force
+	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_compile() {
