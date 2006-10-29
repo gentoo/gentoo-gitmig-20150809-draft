@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.12 2005/07/09 15:52:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/frodo-4.1.ebuild,v 1.13 2006/10/29 15:48:21 tcort Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://iphcip1.physik.uni-mainz.de/~cbauer/FrodoV4_1b.Src.tar.gz"
 
 LICENSE="Frodo"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2
