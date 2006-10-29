@@ -14,20 +14,20 @@ MISC ChangeLog 351 RMD160 54afc56f92eaf1fe197095edbcfd2c8c8c19757f SHA1 25e77f03
 MD5 4d8ab4a2e24f2b2c033badc506e144ce ChangeLog 351
 RMD160 54afc56f92eaf1fe197095edbcfd2c8c8c19757f ChangeLog 351
 SHA256 0dc2ea3e1381df4be71c80a9695da421c252a582f457715f55ec890aeec5fab7 ChangeLog 351
-MISC metadata.xml 331 RMD160 234bad46959edaea90cbe46e6d3f1b70aa68abc0 SHA1 6dd757a4c5dd1cc0dc30b812c1f3fc24eda0e877 SHA256 b8470c76211ba72751ec3eacf3c8533e5fe960e3f3f285baf734212c67bf9cb6
-MD5 8f9bf5eb8132bca3e8d10cb57a7d37b1 metadata.xml 331
-RMD160 234bad46959edaea90cbe46e6d3f1b70aa68abc0 metadata.xml 331
-SHA256 b8470c76211ba72751ec3eacf3c8533e5fe960e3f3f285baf734212c67bf9cb6 metadata.xml 331
+MISC metadata.xml 302 RMD160 31ca7f546be9890b6b7ebf36559303902e685ea2 SHA1 1f00dcbb51f029969274142e4af81f87858be761 SHA256 a2a187bcca44b0946ba003630817a672b3b136613a8abb2a4e64a1d2e094ac30
+MD5 ce2c16f28df23244cdc3f18bc49b0b67 metadata.xml 302
+RMD160 31ca7f546be9890b6b7ebf36559303902e685ea2 metadata.xml 302
+SHA256 a2a187bcca44b0946ba003630817a672b3b136613a8abb2a4e64a1d2e094ac30 metadata.xml 302
 MD5 099f0bfadd1c253ac43fb7eff6259cf5 files/digest-imlib2_loaders-1.2.2.001 274
 RMD160 48d1d8ebac0a0654c01964d6c728c5d38cddec66 files/digest-imlib2_loaders-1.2.2.001 274
 SHA256 5272c9f511d752b9b59842fee00a8dcabfc4067dab5365046c1385cec062b359 files/digest-imlib2_loaders-1.2.2.001 274
-MD5 68b329da9893e34099c7d8ad5cb9c940 files/digest-imlib2_loaders-9999 1
-RMD160 c0da025038ed83c687ddc430da9846ecb97f3998 files/digest-imlib2_loaders-9999 1
-SHA256 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b files/digest-imlib2_loaders-9999 1
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-imlib2_loaders-9999 0
+RMD160 9c1185a5c5e9fc54612808977ee8f548b2258d31 files/digest-imlib2_loaders-9999 0
+SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 files/digest-imlib2_loaders-9999 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.4 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFEucq+amhnQswr0vIRAuxVAJwNTV0od3FkkUI4XuYvTAA6Tg6MpwCeN5yy
-6LOrI/zUsnYE7hbROvKAnyA=
-=oGDn
+iD8DBQFFRCEcamhnQswr0vIRAj6BAKCCJO2AszmofuxQS0+ciYwR1F9BDACfag9D
+7Avo2aOOkSTT68mgZq+LBiw=
+=ArkK
 -----END PGP SIGNATURE-----
