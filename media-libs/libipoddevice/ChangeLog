@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libipoddevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.8 2006/10/17 15:41:05 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.9 2006/10/29 17:54:15 cardoe Exp $
+
+  29 Oct 2006; Doug Goldstein <cardoe@gentoo.org>
+  libipoddevice-0.4.5.ebuild, libipoddevice-0.5.0.ebuild,
+  libipoddevice-0.5.0-r1.ebuild, libipoddevice-0.5.1.ebuild:
+  Updating dbus depends to depend on specific bindings needed
 
 *libipoddevice-0.5.1 (17 Oct 2006)
 
