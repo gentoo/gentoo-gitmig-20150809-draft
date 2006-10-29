@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.6 2006/09/23 07:56:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.7 2006/10/29 03:28:09 nattfodd Exp $
 
 inherit latex-package
 
@@ -18,7 +18,7 @@ RESTRICT="test"
 DEPEND=">=app-text/openjade-1.3.1"
 
 has_tetex_3() {
-	if has_version '>=app-text/tetex-2.96' || has_version '>=app-text/ptex-3.1.4.20041026' ; then
+	if has_version '>=app-text/tetex-2.96' || has_version '>=app-text/ptex-3.1.4.20041026' || has_version '>=app-text/texlive-2005' ; then
 		true
 	else
 		false
