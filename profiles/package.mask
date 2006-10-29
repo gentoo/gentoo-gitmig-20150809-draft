@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6160 2006/10/28 22:12:20 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6161 2006/10/29 02:43:11 antarus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,45 @@
 ##
 ##   End example
 ## 
+
+# Alec Warner <antarus@gentoo.org> (28 Oct 2006)
+# Mask the following packages for removal by treecleaners:
+# app-emulation/uae for bug(s) 153191, 112675, 140707, 137018
+# app-laptop/xpmumon for bug(s) 153198, 112675, 117782
+# media-gfx/radiance for bug(s) 106158, 112675
+# net-mail/cvm-vmailmgr for bug(s) 113245
+# app-cdr/cdrx for bug(s) 108072 
+# app-emacs/liece for bug(s) 152911, use riece
+# net-analyzer/tptest for bug(s) 152549
+# net-wireless/aircrack for bug(s) 152806 Use aircrack-ng
+# net-misc/aesop for bug(s) 152505 
+# app-crypt/outguess for bug(s) 143897
+# dev-util/sashxb for bug(s) 138848
+# app-editors/cute for bug(s) 128270, 117482
+# x11-plugins/gkrellm-newsticker for bug(s) 102695
+# app-misc/pms for bug(s) 102314
+# app-misc/largorecipes for bug(s) 101536
+# x11-plugins/gkrellm-giFT for bug(s) 97869
+# media-video/winki for bug(s) 94902
+# net-misc/qadsl for bug(s) 94295
+# app-emulation/uae -> Don't mask this quite yet
+app-laptop/xpmumon
+media-gfx/radiance
+net-mail/cvm-vmailmgr
+app-cdr/cdrx
+app-emacs/liece
+net-analyzer/tptest
+net-wireless/aircrack
+net-misc/aesop
+app-crypt/outguess
+dev-util/sashxb
+app-editors/cute
+x11-plugins/gkrellm-newsticker
+app-misc/pms
+app-misc/largorecipes
+media-video/winki
+x11-plugins/gkrellm-giFT
+net-misc/qadsl
 
 # Luis Medinas <metalgod@gentoo.org> (28 Oct 2006)
 # Mask dhcdbd in preparation for NetworkManager
