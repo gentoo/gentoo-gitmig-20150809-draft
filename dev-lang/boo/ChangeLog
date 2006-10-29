@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/boo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.11 2006/01/19 05:40:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/ChangeLog,v 1.12 2006/10/29 16:56:27 latexer Exp $
+
+*boo-0.7.6.2237 (29 Oct 2006)
+
+  29 Oct 2006; Peter Johanson <latexer@gentoo.org> +boo-0.7.6.2237.ebuild:
+  Bump. Now builds against the 2.0 profile
 
   19 Jan 2006; Peter Johanson <latexer@gentoo.org> -boo-0.5.3.1544.ebuild,
   -boo-0.5.4.1629.ebuild, -boo-0.5.5.1651.ebuild, -boo-0.6.0.1858.ebuild,
