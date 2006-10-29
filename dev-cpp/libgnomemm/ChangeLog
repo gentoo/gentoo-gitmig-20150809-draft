@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libgnomemm
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.53 2006/08/16 15:02:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/ChangeLog,v 1.54 2006/10/29 01:36:55 allanonjl Exp $
+
+*libgnomemm-2.16.0 (29 Oct 2006)
+
+  29 Oct 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +libgnomemm-2.16.0.ebuild:
+  new version.  bump gtkmm version dep.
 
   16 Aug 2006; Markus Rothe <corsair@gentoo.org> libgnomemm-2.12.2.ebuild:
   Stable on ppc64
