@@ -1,9 +1,10 @@
---- rebuild-formats	2006-08-23 03:41:00.000000000 +0800
-+++ rebuild-formats.gentoo	2006-10-28 18:15:12.000000000 +0800
-@@ -6,8 +6,9 @@
+--- rebuild-formats	2006-10-29 14:49:00.451130216 +0800
++++ rebuild-formats.gentoo	2006-10-29 15:32:28.929331049 +0800
+@@ -6,8 +6,10 @@
  
  # ensure our entries are present in fmtutil.cnf
  fmtutil_cnf=`kpsewhich --format="web2c files" fmtutil.cnf`
++mkdir -p `dirname ${D}${fmtutil_cnf}`
 +cp ${fmtutil_cnf} ${D}${fmtutil_cnf}
  if [ "`fgrep -c xetex ${fmtutil_cnf}`" == "0" ]; then
 -	cat >> ${fmtutil_cnf} <<-__EOT__;
@@ -11,7 +12,7 @@
  
  	# XeTeX formats
  	xetex	xetex	-	*xetex.ini
-@@ -21,7 +22,7 @@
+@@ -21,7 +23,7 @@
  if [ -L ${texbin} ]; then
  	texbin=`readlink ${texbin}`
  fi
@@ -20,7 +21,7 @@
  
  # ensure ${texbindir} is in the PATH so that fmtutil can find new xetex
  # (normal usage may rely on a symlink, which doesn't yet exist)
-@@ -29,7 +30,8 @@
+@@ -29,7 +31,8 @@
  
  # patch fmtutil from teTeX 2.x so it doesn't confuse xetex with an etex engine
  # (discarding any error message in case we have teTeX 3 or an already-patched teTeX 2)
@@ -30,7 +31,7 @@
  
  # use system-wide setup if available
  fmtutil=`type -p fmtutil-sys` || fmtutil=`type -p fmtutil`
-@@ -37,9 +39,9 @@
+@@ -37,9 +40,9 @@
  formats="xetex xelatex"
  for f in ${formats}; do
  # enable our entries if necessary (in case of pre-existing disabled ones)
