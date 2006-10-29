@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/prefuse
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/ChangeLog,v 1.4 2006/02/18 15:08:02 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/ChangeLog,v 1.5 2006/10/29 21:46:51 betelgeuse Exp $
+
+*prefuse-20060715_beta (29 Oct 2006)
+
+  29 Oct 2006; Petteri Räty <betelgeuse@gentoo.org>
+  +prefuse-20060715_beta.ebuild:
+  Version bump. Fixes bug #150587. Uses generation 2 and adds support for the
+  examples and source use flags. Does not compile using jikes so filtering it.
 
   18 Feb 2006; Karl Trygve Kalleberg <karltk@gentoo.org>
   files/digest-prefuse-20050114_alpha, Manifest:
