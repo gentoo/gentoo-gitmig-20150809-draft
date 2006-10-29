@@ -1,6 +1,13 @@
 # ChangeLog for www-client/ochusha
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.20 2006/10/29 16:26:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/ochusha/ChangeLog,v 1.21 2006/10/29 19:41:51 flameeyes Exp $
+
+*ochusha-0.5.8.2-r2 (29 Oct 2006)
+
+  29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +ochusha-0.5.8.2-r2.ebuild:
+  Move .desktop file in the correct directory so that it appears on menus, and
+  install icons in the right place. Add ~x86-fbsd keyword.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -ochusha-0.5.8.2.ebuild:
