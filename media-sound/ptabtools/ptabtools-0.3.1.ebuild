@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ptabtools-0.3.1.ebuild,v 1.5 2005/02/20 19:19:11 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ptabtools-0.3.1.ebuild,v 1.6 2006/10/29 22:35:33 flameeyes Exp $
 
 IUSE=""
 
@@ -13,8 +13,13 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~ppc sparc x86"
-DEPEND="dev-libs/popt
-	dev-libs/libxml2"
+
+RDEPEND="dev-libs/popt
+	dev-libs/libxml2
+	=dev-libs/glib-2*"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}-${PV%.*}
 

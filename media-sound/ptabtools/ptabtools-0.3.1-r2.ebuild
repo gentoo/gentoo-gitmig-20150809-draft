@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ptabtools-0.3.1-r2.ebuild,v 1.1 2006/03/15 01:26:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ptabtools-0.3.1-r2.ebuild,v 1.2 2006/10/29 22:35:33 flameeyes Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -17,7 +17,8 @@ IUSE=""
 
 RDEPEND="dev-libs/popt
 	dev-libs/libxml2
-	dev-libs/libxslt"
+	dev-libs/libxslt
+	=dev-libs/glib-2*"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
