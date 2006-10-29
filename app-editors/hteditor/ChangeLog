@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.23 2006/05/22 10:09:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.24 2006/10/29 08:50:30 dragonheart Exp $
+
+*hteditor-0.9.4 (29 Oct 2006)
+
+  29 Oct 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/hteditor-0.9.4-asneeded.patch, +hteditor-0.9.4.ebuild:
+  version bump with fix for ldflags as-needed - bug #148040. thanks to
+  Krzysztof Mi&#261;sko
 
   22 May 2006; Daniel Black <dragonheart@gentoo.org>
   +files/hteditor-gcc41.patch, -hteditor-0.8.0-r2.ebuild,
