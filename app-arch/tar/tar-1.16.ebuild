@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.16.ebuild,v 1.1 2006/10/21 21:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.16.ebuild,v 1.2 2006/10/29 10:07:35 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,10 +13,9 @@ SRC_URI="http://ftp.gnu.org/gnu/tar/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="nls static build bzip2"
+IUSE="nls static"
 
-RDEPEND="app-arch/gzip
-	bzip2? ( app-arch/bzip2 )"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.35 )"
 
@@ -48,22 +47,19 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	# a nasty yet required symlink
 	local p=""
 	use userland_GNU || p=g
+
+	emake DESTDIR="${D}" install || die "make install failed"
+
+	# a nasty yet required symlink
 	dodir /etc
 	dosym /usr/sbin/${p}rmt /etc/${p}rmt
-	if use build ; then
-		rm -r "${D}"/usr
-	else
-		dodir /usr/bin
-		dosym /bin/${p}tar /usr/bin/${p}tar
-		dodoc AUTHORS ChangeLog* NEWS README* PORTS THANKS
-		newman "${FILESDIR}"/tar.1 ${p}tar.1
-		mv "${D}"/usr/sbin/${p}backup{,-tar}
-		mv "${D}"/usr/sbin/${p}restore{,-tar}
-	fi
 
-	rm -f ${D}/usr/$(get_libdir)/charset.alias
+	dodoc AUTHORS ChangeLog* NEWS README* PORTS THANKS
+	newman "${FILESDIR}"/tar.1 ${p}tar.1
+	mv "${D}"/usr/sbin/${p}backup{,-tar}
+	mv "${D}"/usr/sbin/${p}restore{,-tar}
+
+	rm -f "${D}"/usr/$(get_libdir)/charset.alias
 }
