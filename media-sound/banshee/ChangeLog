@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.35 2006/10/17 15:44:43 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.36 2006/10/29 18:25:14 metalgod Exp $
+
+*banshee-0.11.2 (29 Oct 2006)
+
+  29 Oct 2006; Luis Medinas <metalgod@gentoo.org> +banshee-0.11.2.ebuild:
+  Version Bump. This release fixes problems with mono 1.1.18. From now on this
+  needs mono 1.1.17 or higher to work with the new dbus sharp. Fixes bug
+  #151716, #152643 and #151803.
 
 *banshee-0.11.1 (17 Oct 2006)
 
