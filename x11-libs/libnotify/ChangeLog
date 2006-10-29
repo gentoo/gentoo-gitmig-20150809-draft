@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.21 2006/10/29 17:31:05 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.22 2006/10/29 17:37:02 compnerd Exp $
+
+  29 Oct 2006; Saleem Abdulrasool <compnerd@gentoo.org> libnotify-0.4.0.ebuild,
+  libnotify-0.4.2.ebuild, libnotify-0.4.3.ebuild:
+  Tweak dbus deps for the upcoming dbus release
 
   29 Oct 2006; Saleem Abdulrasool <compnerd@gentoo.org> -libnotify-0.3.2.ebuild:
   prune older version
