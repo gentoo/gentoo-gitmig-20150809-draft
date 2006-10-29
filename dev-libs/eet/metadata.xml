@@ -4,7 +4,6 @@
 <herd>no-herd</herd>
 <maintainer>
  <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
 </maintainer>
 <longdescription>
 EET is a tiny library designed to write an arbitary set of chunks of data to a file 
