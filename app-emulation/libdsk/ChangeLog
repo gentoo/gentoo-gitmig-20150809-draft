@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libdsk
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.15 2006/09/02 16:10:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libdsk/ChangeLog,v 1.16 2006/10/29 03:00:40 dragonheart Exp $
+
+  29 Oct 2006; Daniel Black <dragonheart@gentoo.org> libdsk-1.1.10.ebuild:
+  added java-config compatibility - bug #145930 thanks to Robin
+  Bankhead/Vlastimil Babka/Nicolai Guido Klausen
 
   02 Sep 2006; <blubb@gentoo.org> libdsk-1.1.5.ebuild:
   stable on amd64
