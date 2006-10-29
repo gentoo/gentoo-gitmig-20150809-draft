@@ -1,18 +1,17 @@
 --- rebuild-formats	2006-10-29 14:49:00.451130216 +0800
-+++ rebuild-formats.gentoo	2006-10-29 15:32:28.929331049 +0800
-@@ -6,8 +6,10 @@
++++ rebuild-formats.gentoo	2006-10-29 18:59:03.162120413 +0800
+@@ -6,8 +6,9 @@
  
  # ensure our entries are present in fmtutil.cnf
  fmtutil_cnf=`kpsewhich --format="web2c files" fmtutil.cnf`
-+mkdir -p `dirname ${D}${fmtutil_cnf}`
-+cp ${fmtutil_cnf} ${D}${fmtutil_cnf}
++cp --parents ${fmtutil_cnf} ${D}
  if [ "`fgrep -c xetex ${fmtutil_cnf}`" == "0" ]; then
 -	cat >> ${fmtutil_cnf} <<-__EOT__;
 +	cat >>${D}${fmtutil_cnf} <<-__EOT__;
  
  	# XeTeX formats
  	xetex	xetex	-	*xetex.ini
-@@ -21,7 +23,7 @@
+@@ -21,7 +22,7 @@
  if [ -L ${texbin} ]; then
  	texbin=`readlink ${texbin}`
  fi
@@ -21,7 +20,7 @@
  
  # ensure ${texbindir} is in the PATH so that fmtutil can find new xetex
  # (normal usage may rely on a symlink, which doesn't yet exist)
-@@ -29,7 +31,8 @@
+@@ -29,17 +30,29 @@
  
  # patch fmtutil from teTeX 2.x so it doesn't confuse xetex with an etex engine
  # (discarding any error message in case we have teTeX 3 or an already-patched teTeX 2)
@@ -31,7 +30,17 @@
  
  # use system-wide setup if available
  fmtutil=`type -p fmtutil-sys` || fmtutil=`type -p fmtutil`
-@@ -37,9 +40,9 @@
+ 
++# Remove magyar, russian and serbian from hyphenation patterns, 
++# because they don't currently work with xelatex.
++# Make a local copy without them.
++
++sed -e 's/magyar/% magyar/' \
++    -e 's/russian/% russian/' \
++    -e 's/serbian/% serbian/' \
++    `kpsewhich language.dat` \
++    > language.dat
++
  formats="xetex xelatex"
  for f in ${formats}; do
  # enable our entries if necessary (in case of pre-existing disabled ones)
@@ -44,3 +53,4 @@
  # create symlinks for the newly-built formats
 -texlinks --silent
 +texlinks --silent --cnffile ${D}${fmtutil_cnf} `dirname ${D}${fmtutil_cnf}`
++
