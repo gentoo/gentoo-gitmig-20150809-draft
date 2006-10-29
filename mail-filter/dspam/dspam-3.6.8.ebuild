@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.8.ebuild,v 1.1 2006/10/29 09:55:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.6.8.ebuild,v 1.2 2006/10/29 16:55:40 mrness Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -72,7 +72,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--enable-long-username --enable-syslog"
+	local myconf="--enable-long-usernames --enable-syslog"
 
 	use large-domain && myconf="${myconf} --enable-large-scale" ||\
 			    myconf="${myconf} --enable-domain-scale"
@@ -129,7 +129,6 @@ src_compile() {
 	fi
 
 	econf ${myconf} --with-storage-driver=${STORAGE} \
-			--enable-long-usernames \
 			--with-dspam-home=${HOMEDIR} \
 			--sysconfdir=${CONFDIR} \
 			$(use_enable daemon) \
