@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.11 2006/10/17 09:21:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.12 2006/10/30 15:44:07 wolf31o2 Exp $
+
+  30 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-modules-1.0.0.8.ebuild:
+  Removed verion 0.0.8 since we have removed the only VMware product (VMware
+  Workstation 3.2.1) that used it.
 
 *vmware-modules-1.0.0.15-r1 (17 Oct 2006)
 *vmware-modules-1.0.0.13-r1 (17 Oct 2006)
