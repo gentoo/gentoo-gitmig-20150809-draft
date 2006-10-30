@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.16 2006/10/27 01:00:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.17 2006/10/30 18:20:05 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -18,14 +18,15 @@ DEPEND="media-libs/allegro"
 S=${WORKDIR}/${PN}
 
 src_unpack() {
+	DATA_DIR="${GAMES_DATADIR}/${PN}"
+
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PV}-gentoo.patch"
+	epatch \
+		"${FILESDIR}/${PV}-gentoo.patch" \
+		"${FILESDIR}/${P}-gcc4.patch"
 
-	epatch "${FILESDIR}/${P}-gcc4.patch"
-
-	DATA_DIR="${GAMES_DATADIR}/${PN}"
 	sed -i \
 		-e "s:DATA_DIR=.*:DATA_DIR=\\\\\"${DATA_DIR}\\\\\":" \
 		src/Makefile \
@@ -34,9 +35,8 @@ src_unpack() {
 
 src_install() {
 	dogamesbin atanks || die "dogamesbin failed"
-	dodir "${DATA_DIR}"
-	cp {credits,gloat,instr,revenge}.txt *dat "${D}${DATA_DIR}" \
-		|| die "cp failed"
+	insinto "${DATA_DIR}"
+	doins {credits,gloat,instr,revenge}.txt *dat || die "doins failed"
 	dodoc BUGS Changelog Help.txt tanks.txt README TODO
 	prepgamesdirs
 }
