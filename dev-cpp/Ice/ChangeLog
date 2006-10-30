@@ -1,0 +1,80 @@
+# ChangeLog for dev-cpp/ice
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.1 2006/10/30 13:31:47 caleb Exp $
+
+*Ice-3.1.1 (30 Oct 2006)
+
+  30 Oct 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/Ice-3.1.1-Makefile.patch, +files/ice-makefile-speedup.patch,
+  +metadata.xml, +Ice-3.1.1.ebuild:
+  Move dev-cpp/ice to dev-cpp/Ice
+
+*ice-3.1.1 (16 Oct 2006)
+
+  16 Oct 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1.1-makefile.patch, +ice-3.1.1.ebuild:
+  version bump
+
+  05 Aug 2006; Chris White <chriswhite@gentoo.org> ice-3.1.0-r6.ebuild:
+  Fixed sys-libs/db dep atom for bug #142045.
+
+  03 Aug 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1-patches/ice-makefile-speedup.patch, ice-3.1.0-r6.ebuild:
+  Remove building of test and demos during normal compilation. Speeds things
+  up tremendously
+
+*ice-3.1.0-r6 (31 Jul 2006)
+
+  31 Jul 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1-patches/Gen.cpp, +files/ice-3.1-patches/ice310-3.patch,
+  +files/ice-3.1-patches/patch.icegrid.txt,
+  +files/ice-3.1-patches/patch.icegrid-5.txt,
+  +files/ice-3.1-patches/patch.slice2cpp.txt, +ice-3.1.0-r6.ebuild:
+  This adds the first 6 patches that have been released since Ice 3.1.0 was
+  released. I bumped it to -r6 to signify this
+
+*ice-3.1.0-r1 (14 Jul 2006)
+
+  14 Jul 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1-patches/GCCountMap.h, +files/ice-3.1-patches/GCShared.h,
+  +files/ice-3.1-patches/ObjectF.h, +ice-3.1.0-r1.ebuild:
+  Revbump to include the first patch release
+
+*ice-3.1.0 (13 Jul 2006)
+
+  13 Jul 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.1.0-makefile.patch, +ice-3.1.0.ebuild:
+  new version
+
+  01 May 2006; Chris White <chriswhite@gentoo.org> ice-3.0.1.ebuild:
+  Slotted depend for bug #131554.  Thanks to Tiziano Muller for reporting.
+
+  25 Jan 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.0.1-makefile.patch, +ice-3.0.1.ebuild:
+  fix makefile patch
+
+*ice-3.0.1 (25 Jan 2006)
+
+  25 Jan 2006; Caleb Tennis <caleb@gentoo.org> +ice-3.0.1.ebuild:
+  version bump
+
+  19 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org> ice-3.0.0-r1.ebuild:
+  Fixed readline->ncurses USE flag move.
+
+  19 Jan 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  files/ice-3.0.0-makefile.patch, ice-3.0.0-r1.ebuild:
+  Changed readline USE in ncurses and added debug, moved the
+  -I/usr/include/db4.3 in the makefile patch.
+
+*ice-3.0.0-r1 (19 Jan 2006)
+
+  19 Jan 2006; Caleb Tennis <caleb@gentoo.org>
+  +files/ice-3.0.0-makefile.patch, +metadata.xml, +ice-3.0.0-r1.ebuild:
+  Moved package from dev-libs/cpp and bumped with new rev
+
+*ice-3.0.0 (18 Jan 2006)
+
+  18 Jan 2006; Chris White <chriswhite@gentoo.org>
+  +files/ice-3.0.0-makefile.patch, +metadata.xml, +ice-3.0.0.ebuild:
+  Initial import into the tree.  Masked because of sys-libs/db depend.
+
