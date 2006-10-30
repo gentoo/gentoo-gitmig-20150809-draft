@@ -2,47 +2,31 @@
 #
 # starts Armagetron Advanced Dedicated Server from the installation directory
 
-	GAME_CONFDIR=@GAMES_SYSCONFDIR@/armagetronad
-	GAME_LIBDIR=@GAMES_LIBDIR@/armagetronad
-	GAME_DATADIR=@GAMES_DATADIR@/armagetronad
+GAME_CONFDIR="@GAMES_SYSCONFDIR@/armagetronad"
+GAME_LIBDIR="@GAMES_LIBDIR@/armagetronad"
+GAME_DATADIR="@GAMES_DATADIR@/armagetronad"
 
-	NO=$'\x1b[0;0m'
-	RD=$'\x1b[31;01m'
-	GR=$'\x1b[32;01m'
-	YL=$'\x1b[33;01m'
+echo "Checking Configuration"
+if test ! -r "${HOME}"/.armagetronad-ded ; then
+	mkdir -p "${HOME}"/.armagetronad-ded
 
-		echo "${GR} *${NO} Checking Configuration."
-	if test ! -r $HOME/.armagetronad-ded ; then
-		mkdir $HOME/.armagetronad-ded
-
-	if test -r $HOME/.ArmageTronrc ; then
-		echo "${YL} *${NO} Migrating very old configuration."
-	cp $HOME/.ArmageTronrc $HOME/.armagetronad-ded/user.cfg 
+	if test -r "${HOME}"/.ArmageTronrc ; then
+		echo "Migrating very old configuration"
+		cp "${HOME}"/.ArmageTronrc "${HOME}"/.armagetronad-ded/user.cfg 
 	fi
 fi
-	if test ! -r $HOME/.armagetronad-ded/var ; then
-	        files=$( ls $HOME/.armagetronad-ded )
-		mkdir $HOME/.armagetronad-ded/var
-		echo "${GR} *${NO} Testing configuration."
-	test "$files" != "" && mv $files $HOME/.armagetronad-ded/var
-	fi
-	
-		echo "${GR} *${NO} Done."
-	
-	
-	if test "x$1" = "x-h" ; then
-		echo "${RD} *${NO} Please uninstall Armagetron Advanced via Portage."
+
+if test ! -r "${HOME}"/.armagetronad-ded/var ; then
+	files=$(ls "${HOME}"/.armagetronad-ded)
+	mkdir "${HOME}"/.armagetronad-ded/var
+	echo "Testing configuration"
+	test "$files" != "" && mv $files "${HOME}"/.armagetronad-ded/var
 fi
 
-	if test  "x$1" = "x--uninstall" ; then
-        	echo "${RD} *${NO} Please uninstall Armagetron Advanced via Portage."
-	 else
-	 
-	while true; do
-	
-	$GAME_LIBDIR/armagetronad-dedicated \
-	--datadir $GAME_DATADIR \
-	--configdir $GAME_CONFDIR \
-	--userdatadir $HOME/.armagetronad-ded
-done
-fi
+echo "Done"
+
+exec \
+"${GAME_LIBDIR}"/armagetronad-dedicated \
+	--datadir "${GAME_DATADIR}" \
+	--configdir "${GAME_CONFDIR}" \
+	--userdatadir "${HOME}"/.armagetronad-ded

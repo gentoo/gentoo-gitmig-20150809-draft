@@ -1,6 +1,10 @@
 # ChangeLog for games-action/armagetronad
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.10 2006/10/28 07:40:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/ChangeLog,v 1.11 2006/10/30 03:38:24 vapier Exp $
+
+  30 Oct 2006; Mike Frysinger <vapier@gentoo.org> files/armagetronad,
+  files/armagetronad-ded, armagetronad-0.2.7.1-r1.ebuild:
+  Make the wrapper scripts less sucky #153338 by Richard Freeman.
 
   28 Oct 2006; <tupone@gentoo.org> files/armagetronad-ded,
   -armagetronad-0.2.7.1.ebuild, armagetronad-0.2.7.1-r1.ebuild:
