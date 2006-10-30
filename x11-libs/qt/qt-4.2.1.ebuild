@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.2 2006/10/30 17:49:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.3 2006/10/30 18:18:37 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -71,14 +71,33 @@ qt_use() {
 }
 
 qt_mkspecs_dir() {
-	# Allows us to define which mkspecs dir we want to use.  Currently we only use
-	# linux-g++ or linux-g++-64, but others could be used for various platforms.
+	 # Allows us to define which mkspecs dir we want to use.
+	local spec
 
-	if [[ $(get_libdir) == "lib" ]]; then
-		echo "linux-g++"
+	case ${CHOST} in
+		*-freebsd*|*-dragonfly*)
+			spec="freebsd" ;;
+		*-openbsd*)
+			spec="openbsd" ;;
+		*-netbsd*)
+			spec="netbsd" ;;
+		*-darwin*)
+			spec="darwin" ;;
+		*-linux-*|*-linux)
+			spec="linux" ;;
+		*)
+			die "Unknown CHOST, no platform choosed."
+	esac
+
+	CXX=$(tc-getCXX)
+	if [[ ${CXX/g++/} != ${CXX} ]]; then
+		spec="${spec}-g++"
+	elif [[ ${CXX/icpc/} != ${CXX} ]]; then
+		spec="${spec}-icc"
 	else
-		echo "linux-g++-64"
+		die "Unknown compiler ${CXX}."
 	fi
+
 }
 
 src_unpack() {
