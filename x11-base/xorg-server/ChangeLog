@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.185 2006/10/25 18:59:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.186 2006/10/30 03:42:00 joshuabaergen Exp $
+
+*xorg-server-1.1.99.901 (30 Oct 2006)
+
+  30 Oct 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +xorg-server-1.1.99.901.ebuild:
+  Add 7.2RC1 server snapshot.  xorgcfg is broken (probably minorly), and compiz
+  compatibility patches are also broken.  Loads of fixes and changes since 7.1.
 
   25 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   xorg-server-1.1.1-r1.ebuild:
