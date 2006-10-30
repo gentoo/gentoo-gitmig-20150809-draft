@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.52 2006/10/28 06:54:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.53 2006/10/30 00:10:19 mkennedy Exp $
+
+*emacs-cvs-23.0.0-r1 (30 Oct 2006)
+
+  30 Oct 2006; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/emacs.desktop.in, emacs-cvs-22.0.90.ebuild,
+  +emacs-cvs-23.0.0-r1.ebuild:
+  Merge emacs-22 ebuild to emacs-23 ebuild; Correct desktop file slotting;
+  Resolves Bug #153174.
 
 *emacs-cvs-22.0.90 (28 Oct 2006)
 

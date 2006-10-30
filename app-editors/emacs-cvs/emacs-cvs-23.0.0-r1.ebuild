@@ -1,15 +1,15 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-22.0.90.ebuild,v 1.2 2006/10/30 00:10:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0-r1.ebuild,v 1.1 2006/10/30 00:10:19 mkennedy Exp $
 
 ECVS_AUTH="pserver"
 ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
 ECVS_MODULE="emacs"
-ECVS_BRANCH="HEAD"
+ECVS_BRANCH="emacs-unicode-2"
 
 inherit elisp-common cvs alternatives flag-o-matic eutils
 
-IUSE="X Xaw3d aqua gif gtk jpeg png spell tiff source gzip-el toolkit-scroll-bars"
+IUSE="X Xaw3d aqua gif gtk jpeg nls png spell tiff source gzip-el toolkit-scroll-bars xft"
 
 S=${WORKDIR}/emacs
 
@@ -29,15 +29,16 @@ DEPEND=">=sys-libs/ncurses-5.3
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		png? ( >=media-libs/libpng-1.2.5 )
 		gtk? ( =x11-libs/gtk+-2* )
-		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
+		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) )
+		xft? ( media-libs/fontconfig virtual/xft >=dev-libs/libotf-0.9.4 ) )
 	sys-libs/zlib
 	>=sys-apps/portage-2.0.51_rc1"
 
 PROVIDE="virtual/emacs virtual/editor"
 
-SLOT="22.0.90"
+SLOT="23.0.0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc-macos ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
 
 DFILE=emacs-${SLOT}.desktop
 
@@ -62,6 +63,9 @@ src_compile() {
 		myconf="${myconf} --with-x"
 		myconf="${myconf} --with-xpm"
 		myconf="${myconf} $(use_with toolkit-scroll-bars)"
+		myconf="${myconf} $(use_enable xft font-backend)"
+		myconf="${myconf} $(use_with xft freetype)"
+		myconf="${myconf} $(use_with xft)"
 		myconf="${myconf} $(use_with jpeg) $(use_with tiff)"
 		myconf="${myconf} $(use_with gif) $(use_with png)"
 		if use gtk; then
@@ -78,15 +82,16 @@ src_compile() {
 	fi
 	if use aqua; then
 		einfo "Configuring to build with Carbon Emacs"
-		econf \
+		econf --enable-debug \
 			--enable-carbon-app=/Applications/Gentoo \
 			--without-x \
 			$(use_with jpeg) $(use_with tiff) \
 			$(use_with gif) $(use_with png) \
+			$(use_enable xft font-backend) \
 			 || die "econf carbon emacs failed"
 		make bootstrap || die "make carbon emacs bootstrap failed"
 	else
-		econf \
+		econf --enable-debug \
 			--program-suffix=.emacs-${SLOT} \
 			--without-carbon \
 			${myconf} || die "econf emacs failed"
@@ -144,10 +149,11 @@ EOF
 		elisp-site-file-install 00emacs-cvs-${SLOT}-gentoo.el
 	fi
 
+
 	if ! use gzip-el; then
 		find ${D} -type f -name \*.el.gz -print0 |xargs -0 gunzip
 	fi
-	dodoc BUGS ChangeLog README
+	dodoc BUGS ChangeLog ChangeLog.unicode README README.unicode
 	insinto /usr/share/applications
 	cp ${FILESDIR}/emacs.desktop.in ${DFILE}
 	sed -i -e "s,@PV@,${SLOT},g" ${DFILE}
