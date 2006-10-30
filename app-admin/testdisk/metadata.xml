@@ -7,6 +7,7 @@
     </maintainer>
     <maintainer>
         <email>robbat2@gentoo.org</email>
-        <name>Robin H. Johnson</name>
+		<name>Robin H. Johnson</name>
+		<description>Primary maintainer</description>
     </maintainer>
 </pkgmetadata>
