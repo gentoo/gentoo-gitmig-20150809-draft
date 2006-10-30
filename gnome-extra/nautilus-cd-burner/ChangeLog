@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nautilus-cd-burner
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.144 2006/10/20 17:55:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/ChangeLog,v 1.145 2006/10/30 19:31:44 allanonjl Exp $
+
+*nautilus-cd-burner-2.16.1-r1 (30 Oct 2006)
+
+  30 Oct 2006; John N. Laliberte <allanonjl@gentoo.org>
+  +files/nautilus-cd-burner-2.16.1-make_iso_c.patch,
+  -nautilus-cd-burner-2.16.1.ebuild, +nautilus-cd-burner-2.16.1-r1.ebuild:
+  remove static useflag, backport patch from upstream to fix #152798
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   nautilus-cd-burner-2.14.2.ebuild:
