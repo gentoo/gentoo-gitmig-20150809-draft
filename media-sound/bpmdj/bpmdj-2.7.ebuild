@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.7.ebuild,v 1.5 2006/10/02 07:07:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/bpmdj-2.7.ebuild,v 1.6 2006/10/30 09:36:27 flameeyes Exp $
 
 IUSE="mp3 vorbis"
 
@@ -18,11 +18,12 @@ KEYWORDS="-amd64 ~x86 ~ppc"
 DEPEND="=x11-libs/qt-3*"
 
 RDEPEND="${DEPEND}
-	 mp3? ( dev-perl/MP3-Tag )
-	 vorbis? ( media-sound/vorbis-tools )
-	 media-sound/alsamixergui
-	 virtual/mpg123
-	 >=sci-libs/fftw-3"
+	mp3? ( dev-perl/MP3-Tag )
+	vorbis? ( media-sound/vorbis-tools )
+	media-sound/alsamixergui
+	virtual/mpg123
+	>=sci-libs/fftw-3
+	media-libs/alsa-lib"
 
 src_unpack() {
 	unpack ${A}
@@ -48,6 +49,6 @@ src_install () {
 	use mp3 && doexe bpmdj-import-mp3.pl
 	use vorbis && doexe bpmdj-import-ogg.pl
 	dodoc authors changelog copyright readme todo || die "dodoc failed"
-	mkdir -p ${D}/usr/share/bpmdj
-	cp -pPR sequences ${D}/usr/share/bpmdj/ || die "cp failed"
+	mkdir -p "${D}"/usr/share/bpmdj
+	cp -pPR sequences "${D}"/usr/share/bpmdj/ || die "cp failed"
 }
