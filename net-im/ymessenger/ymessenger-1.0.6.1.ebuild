@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.4 2005/09/07 08:11:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-1.0.6.1.ebuild,v 1.5 2006/10/30 05:11:36 tester Exp $
 
 inherit rpm eutils
 
@@ -12,9 +12,14 @@ DESCRIPTION="Yahoo's instant messenger client"
 HOMEPAGE="http://public.yahoo.com/~mmk/index.html"
 SRC_URI="http://public.yahoo.com/~mmk/rh9.${MY_P}.i386.rpm"
 
-RDEPEND="virtual/x11
-	media-libs/gdk-pixbuf
-	dev-libs/openssl
+RDEPEND="x86?  ( dev-libs/openssl
+		media-libs/gdk-pixbuf
+		=x11-libs/gtk+-1.2*
+		|| ( ( x11-libs/libXi
+			x11-libs/libXmu
+			x11-libs/libXdmcp
+			x11-libs/libXau )
+		    virtual/x11 ) )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
 			>=app-emulation/emul-linux-x86-gtklibs-2.2 )"
 
