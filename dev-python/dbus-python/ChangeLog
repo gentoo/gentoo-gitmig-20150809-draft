@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.3 2006/09/18 17:51:30 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.4 2006/10/30 19:49:01 steev Exp $
+
+  30 Oct 2006; Steev Klimaszewski <steev@gentoo.org>
+  dbus-python-0.71.ebuild:
+  Fix the dependency from dbus-core to be dbus
 
   18 Sep 2006; Steev Klimaszewski <steev@gentoo.org>
   dbus-python-0.71.ebuild:
