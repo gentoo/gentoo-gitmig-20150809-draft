@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.6 2006/08/30 19:33:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.7 2006/10/30 01:11:54 vapier Exp $
 
-inherit flag-o-matic games
+inherit games
 
 DESCRIPTION="unique multiplayer wargame"
 HOMEPAGE="http://www.ufoot.org/liquidwar/"
@@ -37,8 +37,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# Fixes build problem with gcc3 and -march=pentium4
-	replace-cpu-flags pentium4 pentium3
 	egamesconf \
 		--disable-doc-ps \
 		--disable-doc-pdf \
