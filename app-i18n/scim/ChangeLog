@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.103 2006/10/14 10:18:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.104 2006/10/30 14:09:38 flameeyes Exp $
+
+  30 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/scim-1.4.5-fbsd.patch, scim-1.4.5.ebuild:
+  Add a patch to build on FreeBSD.
 
   14 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> scim-1.4.4.ebuild,
   scim-1.4.5.ebuild:

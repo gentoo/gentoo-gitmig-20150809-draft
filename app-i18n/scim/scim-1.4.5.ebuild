@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.5 2006/10/14 10:18:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.4.5.ebuild,v 1.6 2006/10/30 14:09:38 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -46,6 +46,8 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-imengine.patch
+	epatch "${FILESDIR}"/${P}-fbsd.patch
+
 	if use doc ; then
 		local xsl=$(ls -1d /usr/share/sgml/docbook/xsl-stylesheets* | head -n 1)
 		sed -i -e "s:/usr/share/sgml/docbook/xsl-stylesheets:${xsl}:" configure.ac || die
