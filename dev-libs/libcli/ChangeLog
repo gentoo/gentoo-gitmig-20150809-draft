@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libcli
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcli/ChangeLog,v 1.1 2006/10/30 12:46:43 aross Exp $
+
+*libcli-1.8.6 (30 Oct 2006)
+
+  30 Oct 2006; Andrew Ross <aross@gentoo.org> +metadata.xml,
+  +libcli-1.8.6.ebuild:
+  Add new package dev-libs/libcli (bug #140616).
+
