@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.3 2006/10/30 10:09:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.4 2006/10/30 19:07:40 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -20,8 +20,8 @@ COMMON_DEPEND="
 	>=dev-libs/pth-1.3.7
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.15
-	>=dev-libs/libgpg-error-1.3
-	>=dev-libs/libassuan-0.9.2
+	>=dev-libs/libgpg-error-1.4
+	>=dev-libs/libassuan-0.9.3
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
 	openct? ( >=dev-libs/openct-0.5.0 )
 	ldap? ( net-nds/openldap )"
