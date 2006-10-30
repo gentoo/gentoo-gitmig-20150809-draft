@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.77 2006/10/30 05:44:33 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.78 2006/10/30 05:57:41 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -25,9 +25,7 @@
 #
 # Pretty much everything else should be automatic.
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
-
-inherit eutils libtool multilib toolchain-funcs flag-o-matic autotools
+inherit eutils libtool multilib toolchain-funcs flag-o-matic autotools font
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -379,6 +377,7 @@ x-modular_pkg_postinst() {
 x-modular_pkg_postrm() {
 	if [[ -n "${FONT}" ]]; then
 		cleanup_fonts
+		font_pkg_postrm
 	fi
 }
 
@@ -533,12 +532,7 @@ fix_font_permissions() {
 }
 
 create_font_cache() {
-	# danarmak found out that fc-cache should be run AFTER all the above
-	# stuff, as otherwise the cache is invalid, and has to be run again
-	# as root anyway
-	if [[ -x ${ROOT}/usr/bin/fc-cache ]]; then
-		ebegin "Creating FC font cache"
-			HOME="/root" ${ROOT}/usr/bin/fc-cache
-		eend 0
-	fi
+	font_pkg_postinst
 }
+
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst pkg_postrm
