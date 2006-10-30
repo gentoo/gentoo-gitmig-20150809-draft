@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.376 2006/10/29 19:59:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.377 2006/10/30 17:23:13 caleb Exp $
+
+*qt-4.2.1 (30 Oct 2006)
+
+  30 Oct 2006; Caleb Tennis <caleb@gentoo.org>
+  -files/qt-4.2.0-CVE-2006-4811-bis.patch,
+  -files/qt-4.2.0-CVE-2006-4811.patch, -qt-4.2.0.ebuild,
+  -qt-4.2.0-r1.ebuild, -qt-4.2.0-r2.ebuild, +qt-4.2.1.ebuild:
+  Bump to qt-4.2.1 which has the security fixes as 4.2.0-r2, and fixes the
+  dbus dep
 
   29 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> qt-3.3.6-r4.ebuild,
   qt-4.1.4-r2.ebuild:
