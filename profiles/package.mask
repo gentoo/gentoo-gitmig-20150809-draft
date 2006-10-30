@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6167 2006/10/29 22:26:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6168 2006/10/30 03:17:27 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -68,7 +68,7 @@ net-misc/qadsl
 
 # Luis Medinas <metalgod@gentoo.org> (28 Oct 2006)
 # Mask dhcdbd in preparation for NetworkManager
-net-misc/dhcddb
+net-misc/dhcdbd
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 Oct 2006)
 # Masked pending removal, bug #149007
