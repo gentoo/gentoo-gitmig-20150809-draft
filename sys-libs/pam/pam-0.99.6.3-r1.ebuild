@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.9 2006/10/29 19:49:56 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.99.6.3-r1.ebuild,v 1.10 2006/10/30 17:19:41 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -71,6 +71,7 @@ src_compile() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable selinux) \
+		--libdir=/usr/$(get_libdir) \
 		--disable-berkdb \
 		--enable-securedir=/$(get_libdir)/security \
 		--enable-isadir=/$(get_libdir)/security \
