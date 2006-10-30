@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.2 2006/10/29 12:35:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.3 2006/10/30 00:55:21 joslwah Exp $
 
 inherit eutils
 
@@ -28,27 +28,21 @@ src_compile() {
 }
 
 src_install() {
-	# Short term hack instead of patching.  Change to a patch later.
-#	sed -e 's/texbindir=`/texbindir=${D}`/' \
-#		-e '/cp -pf Work\/texk\/web2c\/xetex ${texbindir}\/xetex/i mkdir -p ${texbindir}' \
-#		-e 's/texmflocal=`kpsewhich --var-value TEXMFLOCAL`/texmflocal=${D}usr\/share\/texmf/' \
-#		-e 's/.\/rebuild-formats/-x .\/rebuild-formats.gentoo/' install-xetex >install-xetex.gentoo
-#	sed -e '/ fmtutil.cnf`/a cp ${fmtutil_cnf} ${D}${fmtutil_cnf}' \
-#		-e 's/cat >> ${fmtutil_cnf}/cat >>${D}${fmtutil_cnf}/' \
-#		-e 's/texbindir=`/texbindir=${D}`/' \
-#		-e '/patch -N -r/i cp `which fmtutil` .' \
-#		-e 's/-p0 `which fmtutil`/-p0 fmtutil/' \
-#		-e 's/${fmtutil} --enablefmt ${f}/TEXMFLOCAL=${D}usr\/share\/texmf .\/fmtutil --fmtdir ${D}usr\/share\/texmf\/web2c --cnffile ${D}${fmtutil_cnf} --enablefmt ${f}/' \
-#		-e 's/${fmtutil} --byfmt ${f}/TEXMFLOCAL=${D}usr\/share\/texmf .\/fmtutil --fmtdir ${D}usr\/share\/texmf\/web2c --cnffile ${D}${fmtutil_cnf} --byfmt ${f}/' \
-#		-e 's/texlinks --silent/texlinks --silent --cnffile ${D}${fmtutil_cnf} ${D}usr\/share\/texmf\/web2c/' rebuild-formats >rebuild-formats.gentoo
 	sh -x install-xetex || die
 
 	# Need to softlink xelatex to xetex.
 	cd ${D}/usr/bin
 	ln -s xetex xelatex
+}
 
-	# Do we need to worry about /usr/share/texmf being explicit?  
-	# What happens if this doesn't match the tex install place?
+pkg_preinst()
+{
+	fmtutil=`kpsewhich --format="web2c files" fmtutil.cnf`
+	if [ -L $fmtutil ] ; then
+		fmtutil_real=`readlink "${fmtutil}"`
+		mkdir -p ${D}`dirname "${fmtutil_real}"`
+		mv "${D}${fmtutil}" "${D}${fmtutil_real}"
+	fi
 }
 
 pkg_postinst()
