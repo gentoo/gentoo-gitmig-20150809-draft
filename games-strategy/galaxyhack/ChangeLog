@@ -1,0 +1,10 @@
+# ChangeLog for games-strategy/galaxyhack
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/galaxyhack/ChangeLog,v 1.1 2006/10/30 20:01:32 tupone Exp $
+
+*galaxyhack-1.69 (30 Oct 2006)
+
+  30 Oct 2006; <tupone@gentoo.org> +files/galaxyhack-1.69-destdirs.patch,
+  +files/galaxyhack.png, +metadata.xml, +galaxyhack-1.69.ebuild:
+  New ebuild. Bug #87565 by Christian Mandery
+
