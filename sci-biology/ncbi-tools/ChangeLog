@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.47 2006/10/25 21:19:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.48 2006/10/30 19:49:22 opfer Exp $
+
+  30 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  ncbi-tools-20060507.ebuild:
+  stable x86 as requested in bug #152292
 
   25 Oct 2006; Lars Weiler <pylon@gentoo.org> ncbi-tools-20060507.ebuild:
   Stable on ppc; bug #152292.
