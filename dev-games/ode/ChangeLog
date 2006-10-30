@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ode
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.33 2006/10/17 22:09:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.34 2006/10/30 10:11:06 nyhm Exp $
+
+  30 Oct 2006; Tristan Heaven <nyhm@gentoo.org> ode-0.6-r1.ebuild,
+  ode-0.7.ebuild:
+  Needs opengl and glu to build examples, bug #153033
 
 *ode-0.7 (17 Oct 2006)
 

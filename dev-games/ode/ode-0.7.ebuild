@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.7.ebuild,v 1.1 2006/10/17 22:09:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.7.ebuild,v 1.2 2006/10/30 10:11:06 nyhm Exp $
 
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
 inherit eutils autotools
 
 DESCRIPTION="Open Dynamics Engine SDK"
@@ -19,9 +21,11 @@ RDEPEND="examples? (
 		x11-libs/libXmu
 		x11-libs/libXi
 	)"
-
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="app-arch/unzip
+	virtual/opengl
+	virtual/glu
+	x11-libs/libXmu
+	x11-libs/libXi"
 
 src_unpack() {
 	unpack ${A}
@@ -41,13 +45,13 @@ src_compile() {
 		$(use_enable !noopcode opcode) \
 		$(use_enable !nogyroscopic gyroscopic) \
 		--enable-release \
-		|| die "ODE configuration failed"
+		|| die
 
 	emake || die "ODE compile failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed!"
+	emake DESTDIR="${D}" install || die "Install failed!"
 	dodoc CHANGELOG.txt README.txt
 	# Install API docs
 	dohtml docs/*

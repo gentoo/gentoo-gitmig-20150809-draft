@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.6-r1.ebuild,v 1.5 2006/10/05 16:19:58 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ode-0.6-r1.ebuild,v 1.6 2006/10/30 10:11:06 nyhm Exp $
 
 inherit eutils autotools
 
@@ -16,17 +16,14 @@ IUSE="double-precision examples nogyroscopic noopcode"
 RDEPEND="examples? (
 		virtual/opengl
 		virtual/glu
-		|| (
-			(
-				x11-libs/libXmu
-				x11-libs/libXi
-			)
-			virtual/x11
-		)
+		x11-libs/libXmu
+		x11-libs/libXi
 	)"
-
-DEPEND="${RDEPEND}
-	app-arch/unzip"
+DEPEND="app-arch/unzip
+	virtual/opengl
+	virtual/glu
+	x11-libs/libXmu
+	x11-libs/libXi"
 
 src_unpack() {
 	unpack ${A}
