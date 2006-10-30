@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.2 2006/08/21 05:05:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r5.ebuild,v 1.3 2006/10/30 19:02:01 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -143,8 +143,8 @@ src_install() {
 	done
 
 	einfo "Fixing permissions..."
-	find ${D} -perm 664 |xargs chmod 644
-	find ${D} -type d |xargs chmod 755
+	find ${D} -perm 664 |xargs chmod -f 644 2>/dev/null
+	find ${D} -type d |xargs chmod -f 755 2>/dev/null
 
 	keepdir /usr/share/emacs/${PV}/leim
 	keepdir /usr/share/emacs/site-lisp
