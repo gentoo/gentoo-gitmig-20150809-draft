@@ -1,6 +1,13 @@
 # ChangeLog for rox-extra/ripper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.4 2006/10/05 18:27:09 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.5 2006/10/30 17:40:11 lack Exp $
+
+*ripper-007 (30 Oct 2006)
+*ripper-004 (30 Oct 2006)
+
+  30 Oct 2006; Jim Ramsay <lack@gentoo.org> -ripper-0.0.3.ebuild,
+  +ripper-004.ebuild, +ripper-007.ebuild:
+  Updated to two latest versions 004 (stable) and 007 (testing)
 
   05 Oct 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
   Accepting maintainer role
