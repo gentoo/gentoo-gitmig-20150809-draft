@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.2 2006/10/29 19:23:52 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.3 2006/10/30 22:50:49 mabi Exp $
+
+  30 Oct 2006; Matti Bickel <mabi@gentoo.org> adie-1.2.15.ebuild,
+  adie-1.4.12.ebuild, adie-1.5.4.ebuild:
+  Killed ranged deps, set DEPEND (bug #153328)
 
   29 Oct 2006; Matti Bickel <mabi@gentoo.org> -adie-1.0.53.ebuild:
   Removing stale ebuild (bug #153234)
