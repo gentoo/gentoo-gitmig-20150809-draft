@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.46 2006/10/25 05:15:43 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.47 2006/10/30 08:04:25 redhatter Exp $
+
+  30 Oct 2006; Stuart Longland <redhatter@gentoo.org> icu-3.4.1.ebuild:
+  Tested successfully (using inbuilt testkit) -- ~mips keyword added on
+  request of bug #148659.
 
   25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> icu-3.4.1.ebuild:
   Stable x86; bug #148658
