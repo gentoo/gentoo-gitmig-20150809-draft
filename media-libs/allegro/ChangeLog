@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.58 2006/08/28 02:09:59 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.59 2006/10/30 07:37:28 nyhm Exp $
+
+*allegro-4.2.0-r2 (30 Oct 2006)
+
+  30 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/allegro-4.2.0-exec-stack.patch, +files/allegro-4.2.0-flags.patch,
+  +allegro-4.2.0-r2.ebuild:
+  No more exec stacks; always install static lib; let portage strip binaries
 
   28 Aug 2006; Luis Medinas <metalgod@gentoo.org> allegro-4.2.0-r1.ebuild:
   Stable on amd64. Bug #145148.
