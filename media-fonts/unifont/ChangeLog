@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unifont
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.21 2006/10/23 19:09:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.22 2006/10/30 11:53:01 blubb Exp $
+
+  30 Oct 2006; Simon Stelling <blubb@gentoo.org> unifont-1.0-r3.ebuild:
+  stable on amd64
 
   23 Oct 2006; Markus Rothe <corsair@gentoo.org> unifont-1.0-r3.ebuild:
   Stable on ppc64; bug #152333
