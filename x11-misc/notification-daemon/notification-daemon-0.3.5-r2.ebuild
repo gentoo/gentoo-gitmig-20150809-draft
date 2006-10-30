@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.3.5-r2.ebuild,v 1.3 2006/10/29 17:22:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.3.5-r2.ebuild,v 1.4 2006/10/30 18:16:06 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -17,7 +17,10 @@ DEPEND=">=dev-libs/glib-2.4.0
 		>=x11-libs/gtk+-2.4.0
 		>=gnome-base/gconf-2.4.0
 		>=x11-libs/libsexy-0.1.3
-		|| ( ( >=sys-apps/dbus-core-0.91 >=dev-libs/dbus-glib-0.71 ) >=sys-apps/dbus-0.36 )
+		||	(
+				>=dev-libs/dbus-glib-0.71
+				( <sys-apps/dbus-0.90 >=sys-apps/dbus-0.36 )
+			)
 		x11-libs/libwnck
 		dev-libs/popt"
 RDEPEND="${DEPEND}
