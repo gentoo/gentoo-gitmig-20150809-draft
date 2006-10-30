@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.1 2006/10/30 17:23:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.2 2006/10/30 17:49:15 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -14,7 +14,11 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres sqlite xinerama zlib"
+
+IUSE_INPUT_DEVICES="input_devices_wacom"
+
+IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres sqlite xinerama zlib ${IUSE_INPUT_DEVICES}"
+
 
 # need glib and dbus
 
@@ -40,7 +44,8 @@ DEPEND="x11-libs/libXrandr
 	postgres? ( dev-db/libpq )
 	cups? ( net-print/cups )
 	zlib? ( sys-libs/zlib )
-	glib? ( dev-libs/glib )"
+	glib? ( dev-libs/glib )
+	input_devices_wacom? ( x11-drivers/linuxwacom )"
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
@@ -142,7 +147,9 @@ src_compile() {
 
 	use pch		&& myconf="${myconf} -pch"
 
-	myconf="${myconf} -tablet -xrender -xrandr -xkb -xshape -sm"
+	use input_devices_wacom	&& myconf="${myconf} -tablet" || myconf="${myconf} -no-tablet"
+
+	myconf="${myconf} -xrender -xrandr -xkb -xshape -sm"
 
 	./configure -stl -verbose -largefile \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
