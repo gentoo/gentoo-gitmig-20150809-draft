@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.79 2006/10/30 06:13:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.80 2006/10/30 18:40:58 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -24,8 +24,6 @@
 # IMPORTANT: Both SNAPSHOT and FONT_DIR must be set _before_ the inherit.
 #
 # Pretty much everything else should be automatic.
-
-inherit eutils libtool multilib toolchain-funcs flag-o-matic autotools font
 
 # Directory prefix to use for everything
 XDIR="/usr"
@@ -86,12 +84,16 @@ if [[ -n "${SNAPSHOT}" ]]; then
 fi
 
 # If we're a font package, but not the font.alias one
+FONT_ECLASS=""
 if [[ "${PN/#font-}" != "${PN}" ]] \
 	&& [[ "${CATEGORY}" = "media-fonts" ]] \
 	&& [[ "${PN}" != "font-alias" ]] \
 	&& [[ "${PN}" != "font-util" ]]; then
 	# Activate font code in the rest of the eclass
 	FONT="yes"
+
+	# Whether to inherit the font eclass
+	FONT_ECLASS="font"
 
 	RDEPEND="${RDEPEND}
 		media-fonts/encodings
@@ -170,6 +172,8 @@ RDEPEND="${RDEPEND}
 	!<=x11-base/xorg-x11-6.9"
 # Provides virtual/x11 for temporary use until packages are ported
 #	x11-base/x11-env"
+
+inherit eutils libtool multilib toolchain-funcs flag-o-matic autotools ${FONT_ECLASS}
 
 x-modular_specs_check() {
 	if [[ ${PN:0:11} = "xorg-server" ]] || [[ -n "${DRIVER}" ]]; then
