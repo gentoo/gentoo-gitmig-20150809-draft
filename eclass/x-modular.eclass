@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.76 2006/10/11 02:31:47 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.77 2006/10/30 05:44:33 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -366,9 +366,8 @@ x-modular_src_install() {
 }
 
 x-modular_pkg_preinst() {
-	if [[ -n "${FONT}" ]]; then
-		discover_font_dirs
-	fi
+	# We no longer do anything here, but we can't remove it from the API
+	:
 }
 
 x-modular_pkg_postinst() {
@@ -419,8 +418,8 @@ cleanup_fonts() {
 }
 
 setup_fonts() {
-	if [[ ! -n "${FONT_DIRS}" ]]; then
-		msg="FONT_DIRS is empty. The ebuild should set it to at least one subdir of /usr/share/fonts."
+	if [[ ! -n "${FONT_DIR}" ]]; then
+		msg="FONT_DIR is empty. The ebuild should set it to at least one subdir of /usr/share/fonts."
 		eerror "${msg}"
 		die "${msg}"
 	fi
@@ -457,17 +456,14 @@ install_driver_hwdata() {
 }
 
 discover_font_dirs() {
-	pushd ${IMAGE}/usr/share/fonts
-	FONT_DIRS="$(find . -maxdepth 1 -mindepth 1 -type d)"
-	FONT_DIRS="$(echo ${FONT_DIRS} | sed -e 's:./::g')"
-	popd
+	FONT_DIRS="${FONT_DIR}"
 }
 
 create_fonts_scale() {
 	ebegin "Creating fonts.scale files"
 		local x
-		for FONT_DIR in ${FONT_DIRS}; do
-			x=${ROOT}/usr/share/fonts/${FONT_DIR}
+		for DIR in ${FONT_DIR}; do
+			x=${ROOT}/usr/share/fonts/${DIR}
 			[[ -z "$(ls ${x}/)" ]] && continue
 			[[ "$(ls ${x}/)" = "fonts.cache-1" ]] && continue
 
@@ -511,8 +507,8 @@ create_fonts_scale() {
 
 create_fonts_dir() {
 	ebegin "Generating fonts.dir files"
-		for FONT_DIR in ${FONT_DIRS}; do
-			x=${ROOT}/usr/share/fonts/${FONT_DIR}
+		for DIR in ${FONT_DIR}; do
+			x=${ROOT}/usr/share/fonts/${DIR}
 			[[ -z "$(ls ${x}/)" ]] && continue
 			[[ "$(ls ${x}/)" = "fonts.cache-1" ]] && continue
 
@@ -529,8 +525,8 @@ create_fonts_dir() {
 
 fix_font_permissions() {
 	ebegin "Fixing permissions"
-		for FONT_DIR in ${FONT_DIRS}; do
-			find ${ROOT}/usr/share/fonts/${FONT_DIR} -type f -name 'font.*' \
+		for DIR in ${FONT_DIR}; do
+			find ${ROOT}/usr/share/fonts/${DIR} -type f -name 'font.*' \
 				-exec chmod 0644 {} \;
 		done
 	eend 0
