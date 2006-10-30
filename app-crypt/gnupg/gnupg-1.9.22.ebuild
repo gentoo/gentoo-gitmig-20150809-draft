@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.22.ebuild,v 1.4 2006/10/30 09:50:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.22.ebuild,v 1.5 2006/10/30 10:09:21 robbat2 Exp $
+
+WANT_AUTOMAKE='latest'
 
 inherit eutils flag-o-matic autotools
 
@@ -37,8 +39,6 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/mta
 	selinux? ( sec-policy/selinux-gnupg )
 	nls? ( virtual/libintl )"
-
-WANT_AUTOMAKE='latest'
 
 src_unpack() {
 	unpack ${A}
