@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/dbus-qt3-old-0.70.ebuild,v 1.1 2006/08/20 21:19:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/dbus-qt3-old-0.70.ebuild,v 1.2 2006/10/30 19:35:30 steev Exp $
 
 inherit qt3
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE=""
 
-RDEPEND="sys-apps/dbus-core"
-DEPEND="sys-apps/dbus-core
+RDEPEND=">=sys-apps/dbus-0.91"
+DEPEND=">=sys-apps/dbus-0.91
 	=x11-libs/qt-3*"
 S=${WORKDIR}/${P/-old}
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-qt3-old
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.1 2006/08/20 21:19:56 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-qt3-old/ChangeLog,v 1.2 2006/10/30 19:35:30 steev Exp $
+
+  30 Oct 2006; Steev Klimaszewski <steev@gentoo.org>
+  dbus-qt3-old-0.70.ebuild:
+  Update the dependency to dbus instead of dbus-core
 
 *dbus-qt3-old-0.70 (20 Aug 2006)
 
