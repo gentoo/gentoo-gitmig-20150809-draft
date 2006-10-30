@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.9.6.ebuild,v 1.1 2006/10/29 20:22:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.9.6.ebuild,v 1.2 2006/10/30 19:38:04 alonbl Exp $
 
 DESCRIPTION="DirMngr is a daemon to handle CRL and certificate requests for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#dirmngr"
@@ -12,10 +12,10 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND=">=net-nds/openldap-2.1.26
-	>=dev-libs/libgpg-error-0.7
-	>=dev-libs/libgcrypt-1.1.94
+	>=dev-libs/libgpg-error-1.0
+	>=dev-libs/libgcrypt-1.2.0
 	>=dev-libs/libassuan-0.6.8
-	>=dev-libs/libksba-0.9.11
+	>=dev-libs/libksba-1.0
 	>=dev-libs/pth-1.3.7
 	nls? ( virtual/libintl )"
 
