@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.17 2006/10/27 17:41:03 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.18 2006/10/30 19:40:54 opfer Exp $
+
+  30 Oct 2006; Christian Faulhammer <opfer@gentoo.org> acerhk-0.5.33.ebuild:
+  stable x86 as requested in bug #153000
 
 *acerhk-0.5.34 (27 Oct 2006)
 
