@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.6 2006/10/13 15:03:50 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.7 2006/10/30 09:57:16 robbat2 Exp $
+
+  30 Oct 2006; Robin H. Johnson <robbat2@gentoo.org>
+  pygobject-2.12.2.ebuild:
+  Fix bug #147285, eautomake invocation needed, see ebuild for full details.
 
 *pygobject-2.12.2 (13 Oct 2006)
 

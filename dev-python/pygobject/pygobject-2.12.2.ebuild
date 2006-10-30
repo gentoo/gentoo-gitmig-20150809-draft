@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.2.ebuild,v 1.2 2006/10/21 22:32:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.2.ebuild,v 1.3 2006/10/30 09:57:16 robbat2 Exp $
 
-inherit gnome2 python eutils
+inherit gnome2 python eutils autotools
 
 DESCRIPTION="GNOME 2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
@@ -21,12 +21,21 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
+
 pkg_setup() {
 	G2CONF="$(use_enable doc docs)"
 }
 
+WANT_AUTOMAKE=1.8
+
 src_unpack() {
 	gnome2_src_unpack
+
+	# fix bug #147285 - Robin H. Johnson <robbat2@gentoo.org>
+	# this is caused by upstream's automake-1.8 lacking some Gentoo-specific
+	# patches (for tmpfs amongst other things). Upstreams hit by this should
+	# move to newer automake versions ideally.
+	eautomake
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
