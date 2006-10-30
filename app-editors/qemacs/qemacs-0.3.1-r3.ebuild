@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.4 2006/08/09 15:54:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1-r3.ebuild,v 1.5 2006/10/30 19:12:48 opfer Exp $
 
-inherit eutils
+inherit eutils versionator
 
 DESCRIPTION="QEmacs (for Quick Emacs) is a very small but powerful UNIX editor."
 HOMEPAGE="http://fabrice.bellard.free.fr/qemacs/"
@@ -55,7 +55,7 @@ src_unpack() {
 
 src_compile() {
 	# when using any other CFLAGS than -O0, qemacs will segfault on startup, see bug #92011
-	CFLAGS="-O0"
+	replace-flags -O? -O0
 	econf $(use_enable X x11) \
 		$(use_enable png) \
 		$(use_enable xv) \
