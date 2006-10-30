@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/cdrw-1.2.ebuild,v 1.9 2005/09/29 05:15:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/cdrw/cdrw-1.2.ebuild,v 1.10 2006/10/30 16:17:07 opfer Exp $
 
 inherit elisp
 
@@ -17,7 +17,7 @@ DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
 	dev-perl/MP3-Info
 	media-sound/mpg321
-	app-cdr/cdrtools"
+	virtual/cdrtools"
 
 SITEFILE=50cdrw-gentoo.el
 
