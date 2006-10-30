@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/tlf-0.9.23.ebuild,v 1.4 2006/07/06 23:39:07 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/tlf-0.9.23.ebuild,v 1.5 2006/10/30 10:31:36 flameeyes Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,8 @@ RDEPEND="virtual/libc
 	sys-libs/ncurses
 	media-libs/hamlib"
 
-DEPEND="sys-apps/gawk"
+DEPEND="${RDEPEND}
+	sys-apps/gawk"
 
 src_compile() {
 	append-flags -L/usr/lib/hamlib
