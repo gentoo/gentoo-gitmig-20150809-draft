@@ -1,6 +1,10 @@
 # ChangeLog for games-action/bzflag
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.26 2006/06/06 20:08:03 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.27 2006/10/30 09:38:45 the_paya Exp $
+
+  30 Oct 2006; Javier Villavicencio <the_paya@gentoo.org>
+  bzflag-2.0.8.ebuild:
+  Keyworded ~x86-fbsd.
 
 *bzflag-2.0.8 (06 Jun 2006)
 
