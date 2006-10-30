@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.143 2006/10/24 09:37:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.144 2006/10/30 15:39:22 wolf31o2 Exp $
+
+  30 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/3.2.1.2242/vmware-glibc-2.3.2-compat.c,
+  -files/3.2.1.2242/90vmware-workstation, -files/3.2.1.2242/vmware,
+  -files/3.2.1.2242/vmware-config.pl-gcc-generalized.patch,
+  -vmware-workstation-3.2.1.2242-r12.ebuild:
+  Removing VMware 3.2.1 as it is unmaintainable due to my being unable to test
+  fixes on it and upstream has abandoned support for it, so new patches are no
+  longer made for this product.
 
   24 Oct 2006; Simon Stelling <blubb@gentoo.org>
   vmware-workstation-4.5.3.19414-r7.ebuild,
