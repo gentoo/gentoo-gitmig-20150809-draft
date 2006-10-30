@@ -1,0 +1,10 @@
+# ChangeLog for games-action/rafkill
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/rafkill/ChangeLog,v 1.1 2006/10/30 07:52:05 nyhm Exp $
+
+*rafkill-1.2.2 (30 Oct 2006)
+
+  30 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/rafkill-1.2.2-build.patch, +metadata.xml, +rafkill-1.2.2.ebuild:
+  Version bump (name change from games-action/raptor2)
+
