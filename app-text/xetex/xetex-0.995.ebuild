@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.3 2006/10/30 00:55:21 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.4 2006/10/30 13:56:54 joslwah Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~ppc64 ~sparc"
 IUSE=""
 
-RDEPEND="app-text/xdvipdfmx app-text/tetex"
-DEPEND="app-text/tetex"
+RDEPEND="app-text/xdvipdfmx >=app-text/tetex-3.0"
+DEPEND=">=app-text/tetex-3.0"
 
 src_unpack() {
 	unpack ${A}
@@ -33,16 +33,29 @@ src_install() {
 	# Need to softlink xelatex to xetex.
 	cd ${D}/usr/bin
 	ln -s xetex xelatex
+	mkdir -p ${D}usr/share/texmf-site/tex/generic
+	mv ${D}usr/share/texmf/tex/generic/hyphen ${D}usr/share/texmf-site/tex/generic
+
 }
 
 pkg_preinst()
 {
+	pwd
+	cd ${S}
+	ln -sf ${D}usr/share/texmf-site/tex/generic/hyphen ${D}usr/share/texmf/tex/generic/hyphen
+	texhash "${D}usr/share/texmf"
+	sh ./rebuild-formats
+
+	# And tidy up fmtutil's location.
 	fmtutil=`kpsewhich --format="web2c files" fmtutil.cnf`
 	if [ -L $fmtutil ] ; then
 		fmtutil_real=`readlink "${fmtutil}"`
 		mkdir -p ${D}`dirname "${fmtutil_real}"`
 		mv "${D}${fmtutil}" "${D}${fmtutil_real}"
 	fi
+
+	rm ${D}usr/share/texmf/tex/generic/hyphen
+
 }
 
 pkg_postinst()
