@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-femon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.13 2006/10/30 14:05:43 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.14 2006/10/30 14:09:05 zzam Exp $
+
+  30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -vdr-femon-0.9.1.ebuild, -vdr-femon-0.9.4.ebuild, -vdr-femon-0.9.6.ebuild,
+  -vdr-femon-0.9.8.ebuild, -vdr-femon-1.0.0.ebuild, -vdr-femon-1.0.1.ebuild:
+  General cleanup of old ebuilds.
 
   30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org> vdr-femon-1.1.0.ebuild:
   Marked stable on x86.
