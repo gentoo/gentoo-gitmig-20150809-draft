@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mping
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.11 2006/10/30 03:02:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.12 2006/10/30 17:53:01 nixnut Exp $
+
+  30 Oct 2006; nixnut <nixnut@gentoo.org> mping-2.01.ebuild:
+  Stable on ppc wrt bug 153301
 
   30 Oct 2006; Jason Wever <weeve@gentoo.org> mping-2.01.ebuild:
   Stable on SPARC wrt bug #153301.
