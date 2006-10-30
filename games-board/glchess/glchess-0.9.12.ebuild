@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-0.9.12.ebuild,v 1.1 2006/10/19 02:25:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/glchess/glchess-0.9.12.ebuild,v 1.2 2006/10/30 19:53:39 mr_bones_ Exp $
 
-inherit distutils games
+inherit python distutils games
 
 DESCRIPTION="A 3D OpenGL based chess game"
 HOMEPAGE="http://glchess.sourceforge.net/"
@@ -30,11 +30,12 @@ src_unpack() {
 }
 
 src_install() {
+	python_version
 	distutils_src_install
 	if use nls ; then
 		emake DESTDIR="${D}" install || die "emake install failed"
 	fi
-	dogamesbin "build/scripts-2.4/glchess" || die "installing the binary failed"
+	dogamesbin "build/scripts-${PYVER}/glchess" || die "installing the binary failed"
 	rm -rf ${D}usr/bin
 	rm -rf "${D}"usr/bin "${D}"usr/share/doc/${PF}/{MANIFEST.in,PKG-INFO}.gz
 	mv "${D}"usr/share/games/${PN} "${D}${GAMES_DATADIR}"
