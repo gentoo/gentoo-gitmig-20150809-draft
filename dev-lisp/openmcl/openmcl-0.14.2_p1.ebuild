@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/openmcl-0.14.2_p1.ebuild,v 1.2 2005/08/24 07:06:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/openmcl/openmcl-0.14.2_p1.ebuild,v 1.3 2006/10/30 00:06:33 mkennedy Exp $
 
 inherit eutils common-lisp-common-2
 
@@ -34,6 +34,7 @@ src_unpack() {
 		> debian/run-bootstrap.lisp
 	cp debian/Makefile .
 	cp -RP /usr/lib/openmcl/{PPCCL-orig,headers} .
+	epatch "${FILESDIR}/prototype_print_lisp_object.diff"
 	popd
 }
 
