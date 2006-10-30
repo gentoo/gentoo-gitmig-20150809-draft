@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r2.ebuild,v 1.3 2006/10/22 05:36:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r2.ebuild,v 1.4 2006/10/30 00:56:10 vapier Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="dev-libs/libxml2
+	media-libs/jpeg
+	media-libs/libpng
 	media-libs/libfame
 	media-libs/libsdl
 	media-libs/sdl-image
@@ -30,7 +32,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-relax-asm.patch #152002
 	epatch "${FILESDIR}"/${P}-jpeg.patch
-	sed -i "/#include/s:avifile/::" capture/divx2.cpp
 
 	# Don't you love hardcoded vars?
 	sed -i \
