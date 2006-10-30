@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6177 2006/10/30 16:04:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6178 2006/10/30 16:11:56 wolf31o2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -551,7 +551,7 @@ net-mail/quotient
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (25 Sep 2006)
 # Masking this version of the drivers since it is BETA. This driver version
-# adds GLX_EXT_texture_from_pixmap, so it works with AIGLX.  You will need to
+# adds GLX_EXT_texture_from_pixmap, so it works with compiz.  You will need to
 # add AddARGBGLXVisuals to the driver options.  If this causes a lockup for
 # you, read http://www.nvnews.net/vbulletin/showthread.php?t=77021 and revert
 # to the unmasked drivers.
@@ -1350,13 +1350,6 @@ dev-tex/mpm
 # Testing release.
 >=net-mail/cyrus-imapd-2.3
 >=net-mail/cyrus-imap-admin-2.3
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (05 Jan 2006)
-# Masked due to problems with vmware-nat.  This package is still safe to use if
-# you do not use NAT, but rather use bridged networking.  This mask will be
-# removed if/when a patch is made available to this code.  See bug #116238 for
-# more information.
-~app-emulation/vmware-workstation-3.2.1.2242
 
 # <plasmaroo@gentoo.org> (30 Dec 2005)
 # Lots of outstanding security bugs, no updates from upstream yet.
