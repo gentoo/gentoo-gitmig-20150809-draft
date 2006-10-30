@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.1 2006/10/11 10:29:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.3.0-r1.ebuild,v 1.2 2006/10/30 13:27:41 zzam Exp $
 
 inherit vdr-plugin
 
@@ -38,7 +38,8 @@ DEPEND="${RDEPEND}
 			)
 			virtual/x11
 	) )
-	fbcon? ( sys-kernel/linux-headers )"
+	fbcon? ( sys-kernel/linux-headers )
+	dev-util/pkgconfig"
 
 
 PATCHES="

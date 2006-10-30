@@ -1,8 +1,8 @@
 # ChangeLog for media-plugins/vdr-softdevice
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.24 2006/10/30 12:57:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/ChangeLog,v 1.25 2006/10/30 13:27:41 zzam Exp $
 
-  30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+    30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
   -files/vdr-softdevice-0.2.3-picture-settings-use-defaults.diff,
   -files/vdr-softdevice-0.2.3-shm-contrast.diff,
   -files/vdr-softdevice-0.2.3-shm-key-init.diff,
@@ -15,6 +15,10 @@
   -vdr-softdevice-0.2.3.20060908.ebuild,
   -vdr-softdevice-0.2.3.20060912.ebuild, -vdr-softdevice-0.3.0.ebuild:
   Cleanup of old ebuilds.
+
+  30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-softdevice-0.3.0-r1.ebuild:
+  Added missing dependency to pkgconfig.
 
   21 Oct 2006; Matthias Schwarzott <zzam@gentoo.org> files/confd:
   Enable shm-video-out in default conffile.
