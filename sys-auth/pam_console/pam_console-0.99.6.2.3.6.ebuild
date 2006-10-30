@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.3 2006/10/26 19:38:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.4 2006/10/30 11:09:47 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -37,7 +37,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --libdir=$(getpam_mod_dir) || die "econf failed"
+	econf --libdir=/$(get_libdir) || die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
