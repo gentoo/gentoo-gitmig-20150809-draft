@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.379 2006/10/30 18:18:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.380 2006/10/30 18:20:20 caleb Exp $
+
+  30 Oct 2006; Caleb Tennis <caleb@gentoo.org> qt-3.3.6-r4.ebuild:
+  Fix icc detection per bug #152366
 
   30 Oct 2006; Caleb Tennis <caleb@gentoo.org> qt-4.1.4-r2.ebuild,
   qt-4.2.1.ebuild:
