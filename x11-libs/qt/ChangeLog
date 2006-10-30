@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.377 2006/10/30 17:23:13 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.378 2006/10/30 18:08:14 caleb Exp $
+
+  30 Oct 2006; Caleb Tennis <caleb@gentoo.org> -qt-4.0.1.ebuild:
+  Remove 4.0 series that was put back for sparc reasons.  Now have a 4.1 stable
 
 *qt-4.2.1 (30 Oct 2006)
 
