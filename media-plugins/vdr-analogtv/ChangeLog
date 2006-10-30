@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-analogtv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.8 2006/10/25 09:07:03 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-analogtv/ChangeLog,v 1.9 2006/10/30 13:56:38 zzam Exp $
+
+  30 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/vdr-analogtv-0.9.37-asm-fpic.diff,
+  -files/vdr-analogtv-0.9.37-gcc-3.4.diff,
+  -files/vdr-analogtv-0.9.37-includes.diff,
+  -files/vdr-analogtv-0.9.37-kpes_to_ts.patch, -vdr-analogtv-0.9.37.ebuild,
+  -vdr-analogtv-0.9.37-r1.ebuild:
+  Cleanup of old ebuilds.
 
   25 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-analogtv-1.0.00.ebuild:
