@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/rxtx
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.2 2005/05/17 18:15:44 luckyduck Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.3 2006/10/30 00:33:13 sbriesen Exp $
+
+*rxtx-2.1.7.2 (30 Oct 2006)
+
+  30 Oct 2006; Stefan Briesenick <sbriesen@gentoo.org>
+  +files/rxtx-2.1-7r2-lfd.diff, +files/rxtx-2.1-7r2-nouts.diff,
+  +files/lockfiled.xinetd, +rxtx-2.1.7.2.ebuild:
+  version bump, migrated to java-pkg-2, added lockfileserver support, solving
+  bugs #120962 and #149787.
 
   17 May 2005; Jan Brinkmann <luckyduck@gentoo.org> rxtx-2.1.7_pre17.ebuild:
   stable on amd64 and x86
