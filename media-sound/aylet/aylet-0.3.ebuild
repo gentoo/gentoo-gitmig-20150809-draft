@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.3.ebuild,v 1.8 2006/10/28 01:07:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.3.ebuild,v 1.9 2006/10/30 09:28:09 flameeyes Exp $
 
 inherit eutils
 
@@ -23,7 +23,9 @@ src_unpack() {
 
 src_compile() {
 	emake CFLAGS="${CFLAGS} -DDRIVER_OSS" aylet || die
-	use gtk && emake CFLAGS="${CFLAGS} -DDRIVER_OSS" xaylet || die
+	if use gtk; then
+		emake CFLAGS="${CFLAGS} -DDRIVER_OSS" xaylet || die
+	fi
 }
 
 src_install() {
