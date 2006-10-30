@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.2 2006/01/20 19:07:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9.ebuild,v 1.3 2006/10/30 02:23:50 weeve Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.fu-berlin.de/unix/X11/apps/plan/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~ppc sparc ~x86"
 IUSE=""
 
 DEPEND="x11-libs/openmotif"
