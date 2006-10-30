@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/liquidwar
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.16 2006/08/30 19:33:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/ChangeLog,v 1.17 2006/10/30 10:47:38 nyhm Exp $
+
+  30 Oct 2006; Tristan Heaven <nyhm@gentoo.org>
+  +files/liquidwar-5.6.3-exec-stack.patch, liquidwar-5.6.3.ebuild:
+  No exec stack and let portage strip binaries
 
   30 Aug 2006; Michael Hanselmann <hansmi@gentoo.org>
   liquidwar-5.6.3.ebuild:

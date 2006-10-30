@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.7 2006/10/30 01:11:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.3.ebuild,v 1.8 2006/10/30 10:47:38 nyhm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="unique multiplayer wargame"
 HOMEPAGE="http://www.ufoot.org/liquidwar/"
@@ -19,6 +19,7 @@ DEPEND=">=media-libs/allegro-4.2"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-exec-stack.patch
 	sed -i \
 		-e 's:/games::' \
 		-e '/^MANDIR/ s:=.*:= $(mandir)/man6:' \
@@ -26,6 +27,7 @@ src_unpack() {
 		-e '/^DESKTOPDIR/ s:=.*:= /usr/share/applnk/Games/:' \
 		-e '/^INFODIR/ s/=.*/= $(infodir)/' \
 		-e '/^GAMEDIR/ s/exec_prefix/bindir/' \
+		-e '/install/s:-s ::' \
 		-e 's:$(DOCDIR)/txt:$(DOCDIR):g' \
 		-e 's:$(GMAKE):$(MAKE):' \
 		-e '/^DOCDIR/ s:=.*:= /usr/share/doc/$(PF):' Makefile.in \
@@ -46,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install_nolink || die "make install failed"
+	emake DESTDIR="${D}" install_nolink || die "emake install failed"
 	rm -f "${D}"/usr/share/doc/${PF}/COPYING
 	use nls || rm -f "${D}"/usr/share/doc/${PF}/README.*
 	prepalldocs
