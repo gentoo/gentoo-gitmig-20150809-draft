@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.2.ebuild,v 1.3 2006/10/30 09:57:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.12.2.ebuild,v 1.4 2006/10/30 10:07:29 robbat2 Exp $
+
+WANT_AUTOMAKE=1.8
 
 inherit gnome2 python eutils autotools
 
@@ -25,8 +27,6 @@ DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 pkg_setup() {
 	G2CONF="$(use_enable doc docs)"
 }
-
-WANT_AUTOMAKE=1.8
 
 src_unpack() {
 	gnome2_src_unpack
