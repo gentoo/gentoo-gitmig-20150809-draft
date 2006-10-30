@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mecab
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.26 2006/10/20 17:37:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.27 2006/10/30 12:17:08 hattya Exp $
+
+*mecab-0.93 (30 Oct 2006)
+
+  30 Oct 2006; Akinori Hattori <hattya@gentoo.org> +mecab-0.93.ebuild:
+  new upstream release.
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org> mecab-0.92.ebuild:
   Marking amd64 stable
