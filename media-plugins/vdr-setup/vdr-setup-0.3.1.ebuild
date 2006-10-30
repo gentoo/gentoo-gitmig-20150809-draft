@@ -1,16 +1,16 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.5 2006/06/15 13:58:29 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-setup/vdr-setup-0.3.1.ebuild,v 1.6 2006/10/30 15:03:30 zzam Exp $
 
 inherit vdr-plugin
 
-DESCRIPTION="Video Disk Recorder Plugin - Create Submenus, Configure VDR on OSD"
+DESCRIPTION="VDR plugin: Create Submenus, Configure VDR on OSD"
 HOMEPAGE="http://www.vdrtools.de/vdrsetup.html"
 SRC_URI="http://www.vdrtools.de/download/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.3.36"
