@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/ebdftopcf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ebdftopcf/ChangeLog,v 1.11 2006/10/25 22:15:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ebdftopcf/ChangeLog,v 1.12 2006/10/30 12:13:21 blubb Exp $
+
+  30 Oct 2006; Simon Stelling <blubb@gentoo.org> ebdftopcf-2.ebuild:
+  stable on amd64
 
   25 Oct 2006; Matti Bickel <mabi@gentoo.org> ebdftopcf-2.ebuild:
   Stable on ppc, needed for bug #152336
