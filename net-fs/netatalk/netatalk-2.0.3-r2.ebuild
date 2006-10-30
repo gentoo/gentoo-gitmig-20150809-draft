@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.12 2006/09/23 13:29:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r2.ebuild,v 1.13 2006/10/30 11:20:08 flameeyes Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
@@ -25,6 +25,7 @@ RDEPEND=">=sys-libs/db-4.2.52
 	cups? ( net-print/cups )
 	kerberos? ( virtual/krb5 )
 	krb4? ( virtual/krb5 )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
