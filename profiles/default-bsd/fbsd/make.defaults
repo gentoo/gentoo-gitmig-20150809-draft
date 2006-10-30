@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.7 2006/10/22 00:04:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/make.defaults,v 1.8 2006/10/30 17:10:22 flameeyes Exp $
 
 FEATURES="-sandbox"
 
@@ -38,3 +38,8 @@ VIDEO_CARDS="dummy fbdev vmware"
 # 2006/10/22 - Diego Pettenò <flameeyes@gentoo.org>
 # FreeBSD only uses Open Sound System, so enable it even if Linux defaults for it to off.
 USE="${USE} oss"
+
+# 2006/10/30 - Diego Pettenò <flameeyes@gentoo.org>
+# Enable iconv by default for mplayer upon Luca's request
+USE="${USE} iconv"
+
