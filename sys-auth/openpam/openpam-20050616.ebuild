@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20050616.ebuild,v 1.5 2006/10/21 15:27:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20050616.ebuild,v 1.6 2006/10/30 09:54:57 flameeyes Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -14,18 +14,19 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
-IUSE="debug"
+IUSE="debug vim-syntax"
 
 RDEPEND="!virtual/pam"
 DEPEND="sys-devel/make
 	dev-lang/perl"
-PDEPEND="|| ( sys-freebsd/freebsd-pam-modules sys-netbsd/netbsd-pam-modules )"
+PDEPEND="|| ( sys-freebsd/freebsd-pam-modules sys-netbsd/netbsd-pam-modules )
+	vim-syntax? ( app-vim/pam-syntax )"
 
 PROVIDE="virtual/pam"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-20050201-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-20050201-nbsd.patch"
@@ -47,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	emake -j1 DESTDIR="${D}" install
 
 	dodoc CREDITS HISTORY MANIFEST RELNOTES README
 }
