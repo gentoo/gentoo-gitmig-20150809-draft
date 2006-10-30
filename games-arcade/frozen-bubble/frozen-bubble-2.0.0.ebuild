@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.0.0.ebuild,v 1.2 2006/10/29 23:05:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.0.0.ebuild,v 1.3 2006/10/30 00:45:37 vapier Exp $
 
 inherit eutils multilib perl-module games
 
 DESCRIPTION="A Puzzle Bubble clone written in perl (now with network support)"
 HOMEPAGE="http://www.frozen-bubble.org/"
-SRC_URI="http://www.frozen-bubble.org/data/${P}.tar.bz2"
+SRC_URI="http://www.frozen-bubble.org/data/${P}.tar.bz2
+	mirror://gentoo/${P}-colourblind-mini-balls.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
