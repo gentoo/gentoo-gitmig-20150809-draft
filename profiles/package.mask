@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6168 2006/10/30 03:17:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6169 2006/10/30 03:22:07 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,27 @@
 ##
 ##   End example
 ## 
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2006)
+# Masked pending removal on 2006-11-28.
+# Doesn't work with latest libvorbis and occasionally segfaults
+# even with the work-around for the libvorbis issue.  Binary game
+# so there's not much to do about it either.
+# see http://bugs.gentoo.org/show_bug.cgi?id=150431
+games-action/phobiaiii
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2006)
+# Masked pending removal on 2006-11-28.
+# Doesn't work with latest build environment and unused
+# by any package in portage.
+# see http://bugs.gentoo.org/show_bug.cgi?id=136513
+media-libs/allegttf
+
+# Michael Sterrett <mr_bones_@gentoo.org> (29 Oct 2006)
+# Masked pending removal on 2006-11-28.
+# Doesn't work with stratagus-2.1 which is the only version in portage
+# see http://bugs.gentoo.org/show_bug.cgi?id=110542
+games-strategy/magnant
 
 # David Shakaryan <omp@gentoo.org> (29 Oct 2006)
 # Masking x11-misc/commonbox-utils as upstream is dead
