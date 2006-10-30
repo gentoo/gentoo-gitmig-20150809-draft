@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.4 2006/10/30 19:07:40 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.5 2006/10/30 20:09:31 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -18,8 +18,8 @@ IUSE="X gpg2-experimental doc ldap nls openct pcsc-lite smartcard selinux"
 COMMON_DEPEND="
 	virtual/libc
 	>=dev-libs/pth-1.3.7
-	>=dev-libs/libgcrypt-1.1.94
-	>=dev-libs/libksba-0.9.15
+	>=dev-libs/libgcrypt-1.2.0
+	>=dev-libs/libksba-1.0.0
 	>=dev-libs/libgpg-error-1.4
 	>=dev-libs/libassuan-0.9.3
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.3.0 )
@@ -49,6 +49,7 @@ src_unpack() {
 	sed -i -e '/AM_CFLAGS/s!-Wno-pointer-sign!!g' ${S}/g10/Makefile.am
 	sed -i -e '/AM_CFLAGS/s!-Wno-pointer-sign!!g' ${S}/g10/Makefile.in
 
+	epatch "${FILESDIR}/${P}-make.patch"
 	epatch "${FILESDIR}/${P}-fbsd.patch"
 	AT_M4DIR="m4 gl/m4" eautoreconf
 }
