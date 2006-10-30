@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.6 2006/10/22 17:19:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.7 2006/10/30 19:29:10 opfer Exp $
+
+  30 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  xalan-c-1.10.0.ebuild:
+  keyworded x86 as requested in bug #152042
 
   22 Oct 2006; Jason Wever <weeve@gentoo.org> xalan-c-1.10.0.ebuild:
   Stable on SPARC wrt bug #152042.
