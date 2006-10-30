@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.4.ebuild,v 1.1 2006/09/25 17:42:37 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.4.ebuild,v 1.2 2006/10/30 18:18:26 marienz Exp $
 
 inherit distutils eutils
 
@@ -37,7 +37,8 @@ src_unpack() {
 src_compile() {
 	distutils_src_compile
 	if use doc; then
-		"${python}" docs/epyrun -o docs/reference || die "epyrun failed"
+		PYTHONPATH=. "${python}" docs/epyrun -o docs/reference || \
+			die "epyrun failed"
 	fi
 }
 
@@ -46,7 +47,7 @@ src_test() {
 	if ! has_version ">=dev-python/twisted-2.2"; then
 		trialopts=-R
 	fi
-	trial ${trialopts} buildbot || die "tests failed!"
+	PYTHONPATH=. trial ${trialopts} buildbot || die "tests failed!"
 }
 
 src_install() {
