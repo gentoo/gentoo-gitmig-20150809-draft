@@ -7,3 +7,4 @@ move app-laptop/acpitool sys-power/acpitool
 move app-emulation/winex-transgaming app-emulation/cedega
 move dev-cpp/ice dev-cpp/Ice
 move games-fps/quake3-truecombat games-fps/enemy-territory-truecombat
+move sys-apps/dbus-core sys-apps/dbus
