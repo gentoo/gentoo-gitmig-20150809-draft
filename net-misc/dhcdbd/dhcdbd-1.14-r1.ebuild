@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-1.14-r1.ebuild,v 1.1 2006/10/28 22:06:35 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcdbd/dhcdbd-1.14-r1.ebuild,v 1.2 2006/10/30 22:08:42 metalgod Exp $
 
 inherit eutils
 
@@ -30,4 +30,10 @@ src_install() {
 	dodoc README dhcp_options.h
 	newinitd ${FILESDIR}/dhcdbd.init dhcdbd
 	newconfd ${FILESDIR}/dhcdbd.confd dhcdbd
+}
+
+pkg_postinst() {
+	einfo "dhcddb is used by NetworkManager in order to use it"
+	einfo "you can add it to runlevels by writing on your terminal"
+	einfo "rc-update add dhcdbd default"
 }
