@@ -6,3 +6,4 @@ move dev-util/gideon dev-util/crow-designer
 move app-laptop/acpitool sys-power/acpitool
 move app-emulation/winex-transgaming app-emulation/cedega
 move dev-cpp/ice dev-cpp/Ice
+move games-fps/quake3-truecombat games-fps/enemy-territory-truecombat
