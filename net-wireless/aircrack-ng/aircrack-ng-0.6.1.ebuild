@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.6.1.ebuild,v 1.2 2006/10/23 16:22:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-0.6.1.ebuild,v 1.3 2006/10/30 21:31:15 alonbl Exp $
 
 inherit toolchain-funcs eutils
 
@@ -20,8 +20,9 @@ src_test() {
 	#./aircrack-ng wep.ivs || die 'cracking WEP key failed'
 
 	# Upstream uses signal in order to quit,
-	# So protect busybox with interactive shell.
-	/bin/sh -ci "./aircrack-ng test/wpa.cap -w test/password.lst" || die 'cracking WPA key failed'
+	# So protect busybox with process group leader.
+	${CHOST}-gcc -o process-group-leader "${FILESDIR}/process-group-leader.c"
+	./process-group-leader ./aircrack-ng test/wpa.cap -w test/password.lst || die 'cracking WPA key failed'
 }
 
 src_compile() {
