@@ -3,6 +3,7 @@ Hash: SHA1
 
 DIST banshee-official-plugins-0.11.0.tar.gz 453238 RMD160 8c0d328948ac707d3255c094a919605520806f99 SHA1 c3ff97343469a3b1ae5b0710ca87f8a32c86e367 SHA256 9909d8df058d88c1b8189b394b48b3dd3ec7e2f60f36202f44fb18e9d7b9e723
 DIST banshee-official-plugins-0.11.1.tar.gz 453754 RMD160 802aae7458adc2c1b2c1c91cd8b51472d38794b5 SHA1 34b10c126c1fb85a428f93fc7c8e388a52e9197d SHA256 0df8c9d2781ead0a5d53ba74d8f9c763f52de3ab75867f081c9f0ddca816a145
+DIST banshee-official-plugins-0.11.2.tar.gz 452035 RMD160 f1c8a139eb937b364bab961689e76df7d078ef8b SHA1 7d5f052b27e9b56e2d3bd5808aca7a7802d30075 SHA256 8cc5cd5780dcfccb1688b5618200c7cf5f2fe428b1bac091b2e93d6e5b1039a5
 EBUILD banshee-official-plugins-0.11.0.ebuild 655 RMD160 aeaa1d8e564a911ae3aae38970595f334ce0251a SHA1 2e8146b4d212530fc40c714d81b59c903944a933 SHA256 70f500049ec99762f9f9555740b58700ce4d09e97aee10919654f8665b33f775
 MD5 64189e312c3e5c3d2ecb93f875b20bcd banshee-official-plugins-0.11.0.ebuild 655
 RMD160 aeaa1d8e564a911ae3aae38970595f334ce0251a banshee-official-plugins-0.11.0.ebuild 655
@@ -11,10 +12,14 @@ EBUILD banshee-official-plugins-0.11.1.ebuild 655 RMD160 b6674cb055b932eb13739bb
 MD5 344d876717c167d55d54553a1598a7c9 banshee-official-plugins-0.11.1.ebuild 655
 RMD160 b6674cb055b932eb13739bb0312d97d311ea3bcb banshee-official-plugins-0.11.1.ebuild 655
 SHA256 4bffde94b8348fa8e85908b1029c521c74d971d00b79e5adf0c32bb0ef19ebf6 banshee-official-plugins-0.11.1.ebuild 655
-MISC ChangeLog 584 RMD160 32aeec79477d749f0b498b1635b436a5023ad42f SHA1 3288525164ce693bb3ee5a9ae9497fde84de4013 SHA256 7bc55195a72a85a3decf18bc88b0251bbc13846b76a700320e6ed8afa6ae342d
-MD5 b6845de03d3cb0c6405fb8207be0f878 ChangeLog 584
-RMD160 32aeec79477d749f0b498b1635b436a5023ad42f ChangeLog 584
-SHA256 7bc55195a72a85a3decf18bc88b0251bbc13846b76a700320e6ed8afa6ae342d ChangeLog 584
+EBUILD banshee-official-plugins-0.11.2.ebuild 657 RMD160 a9fd19fdb3ab9d1c294da2fab2bf05dbf7222b22 SHA1 6c1486657a713f30a6d3ade4e4e534cea11a78c6 SHA256 3b7558ab4b834479c666b096aa259b53de7f8e72e57e81b1fcc234017f035efb
+MD5 228ad5e02b6db80327ac23eabc87be6f banshee-official-plugins-0.11.2.ebuild 657
+RMD160 a9fd19fdb3ab9d1c294da2fab2bf05dbf7222b22 banshee-official-plugins-0.11.2.ebuild 657
+SHA256 3b7558ab4b834479c666b096aa259b53de7f8e72e57e81b1fcc234017f035efb banshee-official-plugins-0.11.2.ebuild 657
+MISC ChangeLog 742 RMD160 5e08aee5ebe67e6226467bee500d4cfe7cd6afe7 SHA1 605568dc1d3083676b453af584e1269b77a612e7 SHA256 8f037c83ba0af18b36b13d4735a09d2b0ef1e98d3499e8b3670b45ddfa02ba90
+MD5 875f0c3abcb942b4a003a06ec5ef89b9 ChangeLog 742
+RMD160 5e08aee5ebe67e6226467bee500d4cfe7cd6afe7 ChangeLog 742
+SHA256 8f037c83ba0af18b36b13d4735a09d2b0ef1e98d3499e8b3670b45ddfa02ba90 ChangeLog 742
 MISC metadata.xml 294 RMD160 a0ecd559d8ebff0b2e91aac31e12dd1fb9074c7e SHA1 a82bcefd597a8ca762a169dd8b2895d1347dcdfb SHA256 50e382a1cdc9b8d5bd7a6e62bae3e8b57cf36e157f70d0136b57d50edf2e8041
 MD5 46261388ca1ae057f1d8590a23834c49 metadata.xml 294
 RMD160 a0ecd559d8ebff0b2e91aac31e12dd1fb9074c7e metadata.xml 294
@@ -25,10 +30,13 @@ SHA256 bfd792161df7b5b6db4f144525b6b9e1d7b18a19865bb4fe8ade4a04570d57b9 files/di
 MD5 2bd5d6c239757e0ff406148e13bc889a files/digest-banshee-official-plugins-0.11.1 295
 RMD160 9540a646c67ef7e8ff23793745f8fe18776e6c43 files/digest-banshee-official-plugins-0.11.1 295
 SHA256 4b8cf01b5bebce4bdaaa9d1ea5ea9df20b8ec4bad0d4183ca8368be7ca130b05 files/digest-banshee-official-plugins-0.11.1 295
+MD5 b3b93593044f4341f1bf3b873584b884 files/digest-banshee-official-plugins-0.11.2 295
+RMD160 8606ba0201efc3a6cb9a6ec226b19a9c0596c24b files/digest-banshee-official-plugins-0.11.2 295
+SHA256 d65fcb1fcc7d68327fbf48bcfe491f9e40045ffd3c7d8ca1bd0f432b7517ffe3 files/digest-banshee-official-plugins-0.11.2 295
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFNPsKwUpWvClEHQoRAgFBAJ4qX6ZEEqbw07bbcBcOgMU9Ko6C7ACfaYRP
-4N/4DLcdrw5VcPy5WqcyN2s=
-=hSZ/
+iD8DBQFFRXUxwUpWvClEHQoRAlbPAJ9BhPihp4uw9PISOYh5xUinx9MnFgCffgYk
+hDavEW1opgwshkKYnvzpJwQ=
+=S2BK
 -----END PGP SIGNATURE-----
