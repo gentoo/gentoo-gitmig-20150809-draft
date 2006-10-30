@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.78 2006/10/30 05:57:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/x-modular.eclass,v 1.79 2006/10/30 06:13:48 dberkholz Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -469,34 +469,11 @@ create_fonts_scale() {
 			# Only generate .scale files if truetype, opentype or type1
 			# fonts are present ...
 
-			# First truetype (ttf,ttc)
-			# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
-			# Also, there is no way to regenerate Speedo/CID fonts.scale
+			# NOTE: There is no way to regenerate Speedo/CID fonts.scale
 			# <spyderous@gentoo.org> 2 August 2004
 			if [[ "${x/encodings}" = "${x}" ]] \
-				&& [[ -n "$(find ${x} -iname '*.tt[cf]' -print)" ]]; then
-				if [[ -x ${ROOT}/usr/bin/ttmkfdir ]]; then
-					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
-					${ROOT}/usr/bin/ttmkfdir -x 2 \
-						-e ${ROOT}/usr/share/fonts/encodings/encodings.dir \
-						-o ${x}/fonts.scale -d ${x}
-					# ttmkfdir fails on some stuff, so try mkfontscale if it does
-					local ttmkfdir_return=$?
-				else
-					# We didn't use ttmkfdir at all
-					local ttmkfdir_return=2
-				fi
-				if [[ ${ttmkfdir_return} -ne 0 ]]; then
-					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
-					${ROOT}/usr/bin/mkfontscale \
-						-a /usr/share/fonts/encodings/encodings.dir \
-						-- ${x}
-				fi
-			# Next type1 and opentype (pfa,pfb,otf,otc)
-			elif [[ "${x/encodings}" = "${x}" ]] \
-				&& [[ -n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]]; then
-				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
-				${ROOT}/usr/bin/mkfontscale \
+				&& [[ -n "$(find ${x} -iname '*.[pot][ft][abcf]' -print)" ]]; then
+				mkfontscale \
 					-a ${ROOT}/usr/share/fonts/encodings/encodings.dir \
 					-- ${x}
 			fi
@@ -512,8 +489,7 @@ create_fonts_dir() {
 			[[ "$(ls ${x}/)" = "fonts.cache-1" ]] && continue
 
 			if [[ "${x/encodings}" = "${x}" ]]; then
-				LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/$(get_libdir)" \
-				${ROOT}/usr/bin/mkfontdir \
+				mkfontdir \
 					-e ${ROOT}/usr/share/fonts/encodings \
 					-e ${ROOT}/usr/share/fonts/encodings/large \
 					-- ${x}

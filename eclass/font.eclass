@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.20 2006/10/30 05:56:11 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.21 2006/10/30 06:13:48 dberkholz Exp $
 
 # Author: foser <foser@gentoo.org>
 
