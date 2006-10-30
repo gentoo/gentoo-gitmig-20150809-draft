@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kleansweep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleansweep/ChangeLog,v 1.1 2006/09/20 22:39:35 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kleansweep/ChangeLog,v 1.2 2006/10/30 21:06:56 troll Exp $
+
+*kleansweep-0.2.9 (30 Oct 2006)
+
+  30 Oct 2006; Przemysław Maciąg <troll@gentoo.org>
+  +kleansweep-0.2.9.ebuild:
+  Version bump (0.2.9)
 
   20 Sep 2006; Przemysław Maciąg <troll@gentoo.org> ChangeLog:
   Initial import, thanks to ph for the ebuild submission this is based on.
