@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.32 2006/03/26 13:56:30 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.33 2006/10/30 13:55:24 pva Exp $
+
+WANT_AUTOMAKE="1.5"
+inherit autotools
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
@@ -11,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc-macos ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND=">=sys-devel/automake-1.6"
+DEPEND=""
 RDEPEND=""
 
 src_unpack() {
@@ -20,7 +23,8 @@ src_unpack() {
 	# variable, and puts quotes around the CATALOG files.
 	cp "${FILESDIR}/${P}-install-catalog.in" "${S}/bin/install-catalog.in"
 	cd "${S}"
-	automake -a
+
+	eautomake
 }
 
 src_install() {

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.40 2006/10/24 10:08:33 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.41 2006/10/30 13:55:24 pva Exp $
+
+  30 Oct 2006; Peter Volkov <pva@gentoo.org> sgml-common-0.6.3-r4.ebuild,
+  sgml-common-0.6.3-r5.ebuild:
+  Depend on autoools eclass in stable version. Raised automake depend version
+  to 1.5. Removed automake from DEPEND as autotools eclass takes care about
+  this. Fixed bug #148273. Thank Ross and many others for report.
 
   24 Oct 2006; Roy Marples <uberlord@gentoo.org>
   sgml-common-0.6.3-r5.ebuild:
