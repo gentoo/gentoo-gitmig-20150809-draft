@@ -10,6 +10,7 @@ media-plugins/banshee-official-plugins
 # but this keeps repoman happy since they require >=glibc-2.4
 # 20061009 pebenito
 >=sys-libs/libselinux-1.30.29 
+>=sys-libs/libsemanage-1.6.17
 >=sys-apps/policycoreutils-1.30.30
 >=sec-policy/selinux-apache-20060101
 >=sec-policy/selinux-arpwatch-20060101
