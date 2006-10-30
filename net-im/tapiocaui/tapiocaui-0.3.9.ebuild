@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tapiocaui/tapiocaui-0.3.9.ebuild,v 1.3 2006/10/08 18:04:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tapiocaui/tapiocaui-0.3.9.ebuild,v 1.4 2006/10/30 16:56:23 peper Exp $
 
 inherit eutils
 
@@ -26,6 +26,9 @@ RDEPEND="net-im/tapiocad
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2"
 
+# Test is not ready yet, but it's ready enough to crash :]
+RESTRICT="test"
+
 pkg_setup() {
 	if ! built_with_use media-plugins/gst-plugins-farsight jingle ; then
 		eerror "In order to use tapioca core and client, you need to have"
@@ -39,6 +42,14 @@ pkg_setup() {
 		eerror "add that flag, re-emerge farsight and then tapiocaui"
 		die "media-libs/farsight is missing jingle"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Naive fix due to farsight ABI change.
+	epatch "${FILESDIR}/${P}-farsight.patch"
 }
 
 src_install() {
