@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.0.0.ebuild,v 1.5 2006/10/31 02:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.0.0.ebuild,v 1.6 2006/10/31 20:29:44 vapier Exp $
 
 inherit eutils multilib perl-module games
 
@@ -41,11 +41,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
-
-	sed -i \
-		-e 's:INSTALLDIRS=.*:PREFIX=$(DESTDIR)/usr:' \
-		c_stuff/Makefile \
-		|| die 'sed failed'
 	sed -i \
 		-e '/^PREFIX /s:=.*:=/usr:' \
 		-e "/^BINDIR /s:=.*:=${GAMES_BINDIR}:" \
