@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.173 2006/10/29 03:46:42 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.174 2006/10/31 14:40:13 allanonjl Exp $
+
+*gnome-games-2.16.1-r1 (31 Oct 2006)
+
+  31 Oct 2006; John N. Laliberte <allanonjl@gentoo.org>
+  -gnome-games-2.16.0.ebuild, -gnome-games-2.16.1.ebuild,
+  +gnome-games-2.16.1-r1.ebuild:
+  use games eclass pkg_setup to add games user/group.  fixes #153485
 
   29 Oct 2006; John N. Laliberte <allanonjl@gentoo.org>
   gnome-games-2.16.1.ebuild:
