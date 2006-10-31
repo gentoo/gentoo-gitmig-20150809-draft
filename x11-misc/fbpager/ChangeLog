@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fbpager
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/ChangeLog,v 1.6 2006/01/30 19:46:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/ChangeLog,v 1.7 2006/10/31 05:42:58 omp Exp $
+
+  31 Oct 2006; David Shakaryan <omp@gentoo.org>
+  +files/fbpager-0.1.4-gcc41.patch, fbpager-0.1.4.ebuild:
+  Add patch for GCC 4.1 compatibility, thanks to Ryan Hill. (bug #135504)
 
   30 Jan 2006; Robin H. Johnson <robbat2@gentoo.org> fbpager-0.1.4.ebuild:
   Modular-X fixes.
