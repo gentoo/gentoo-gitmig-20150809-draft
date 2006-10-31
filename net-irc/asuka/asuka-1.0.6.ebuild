@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.11 2005/09/11 14:01:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.12 2006/10/31 23:18:29 ticho Exp $
 
 inherit eutils
 
