@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.11-r1.ebuild,v 1.1 2006/10/29 17:06:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.11-r1.ebuild,v 1.2 2006/10/31 18:23:01 nixnut Exp $
 
 inherit mono multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.go-mono.com/sources/${PN}-2.0/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
