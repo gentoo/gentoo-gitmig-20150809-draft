@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.206 2006/10/31 15:46:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.207 2006/10/31 20:32:08 kloeri Exp $
+
+  31 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-firefox-2.0.ebuild:
+  Update warning about removing old installs.
 
   31 Oct 2006; Doug Goldstein <cardoe@gentoo.org>
   +files/icon/mozillafirefox-1.5-unbranded.desktop,
