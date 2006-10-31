@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.9 2006/10/31 11:48:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.10 2006/10/31 14:32:57 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,8 +9,8 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec amr arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd
 dv dvdread enca encode esd fbcon gif ggi gtk iconv ipv6 jack joystick jpeg
 libcaca lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode
-vorbis opengl openal oss png real rtc samba sdl speex sse sse2 subtitles svga
-tga theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid xvmc"
+vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga 
+theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid xvmc"
 
 LANGS="bg cs de da el en es fr hu ja ko mk nl no pl pt_BR ro ru sk tr uk zh_CN
 zh_TW"
@@ -27,9 +27,9 @@ MY_P="MPlayer-${PV/_/}"
 S="${WORKDIR}/${MY_P}"
 AMR_URI="http://www.3gpp.org/ftp/Specs/archive"
 SRC_URI="mirror://mplayer/releases/${MY_P}.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
+	!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+				 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+				 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
 	amr? ( ${AMR_URI}/26_series/26.104/26104-510.zip
@@ -126,11 +126,7 @@ pkg_setup() {
 		REALLIBDIR="/opt/RealPlayer/codecs"
 	fi
 
-	if use subtitles && ! ( use iconv && use truetype ); then
-		ewarn "If you want to enable support for SSA/ASS subtitles, then"
-		ewarn "you will need to enable both the 'truetype' and the 'iconv'"
-		ewarn "USE flags for this package."
-	elif use truetype && ! use iconv; then
+	if use truetype && ! use iconv; then
 		ewarn "You enabled the 'truetype' USE flag, but support will be"
 		ewarn "disabled unless you also use 'iconv'."
 	fi
@@ -138,9 +134,11 @@ pkg_setup() {
 
 src_unpack() {
 
-	unpack ${MY_P}.tar.bz2 \
-		font-arial-iso-8859-1.tar.bz2 font-arial-iso-8859-2.tar.bz2 \
-		font-arial-cp1250.tar.bz2
+	unpack ${MY_P}.tar.bz2
+
+	use truetype || unpack font-arial-iso-8859-1.tar.bz2 \
+							font-arial-iso-8859-2.tar.bz2 \
+							font-arial-cp1250.tar.bz2
 
 	use svga && unpack svgalib_helper-${SVGV}-mplayer.tar.bz2
 
@@ -270,7 +268,6 @@ src_compile() {
 	use v4l  || myconf="${myconf} --disable-tv-v4l1"
 	use v4l2 || myconf="${myconf} --disable-tv-v4l2"
 	use jack || myconf="${myconf} --disable-jack"
-	use subtitles || myconf="${myconf} --disable-ass"
 
 	#########
 	# Codecs #
@@ -466,8 +463,8 @@ src_install() {
 
 	# Install the default Skin and Gnome menu entry
 	if use gtk; then
-		dodir /usr/share/mplayer/Skin
-		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/Skin/default || die
+		dodir /usr/share/mplayer/skin
+		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/skin/default || die
 
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
@@ -478,18 +475,20 @@ src_install() {
 		insinto /usr/share/applications
 		doins ${FILESDIR}/mplayer.desktop
 	fi
-
-	dodir /usr/share/mplayer/fonts
-	local x=
-	# Do this generic, as the mplayer people like to change the structure
-	# of their zips ...
-	for x in $(find ${WORKDIR}/ -type d -name 'font-arial-*')
-	do
-		cp -pPR ${x} ${D}/usr/share/mplayer/fonts
-	done
-	# Fix the font symlink ...
-	rm -rf ${D}/usr/share/mplayer/font
-	dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
+	if ! use truetype
+	then
+		dodir /usr/share/mplayer/fonts
+		local x=
+		# Do this generic, as the mplayer people like to change the structure
+		# of their zips ...
+		for x in $(find ${WORKDIR}/ -type d -name 'font-arial-*')
+		do
+			cp -pPR ${x} ${D}/usr/share/mplayer/fonts
+		done
+		# Fix the font symlink ...
+		rm -rf ${D}/usr/share/mplayer/font
+		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
+	fi
 
 	insinto /etc
 	newins ${S}/etc/example.conf mplayer.conf
