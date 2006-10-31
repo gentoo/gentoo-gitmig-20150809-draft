@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/NetworkManager/NetworkManager-0.6.4_pre20061028.ebuild,v 1.1 2006/10/31 00:54:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/NetworkManager/NetworkManager-0.6.4_pre20061028.ebuild,v 1.2 2006/10/31 09:18:53 metalgod Exp $
 
 inherit gnome2 debug eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=sys-apps/dbus-0.60
 	sys-apps/iproute2
 	>=dev-libs/libnl-1.0_pre6
 	net-misc/dhcdbd
-	>=sys-auth/pam_console-0.99*
+	>=sys-auth/pam_console-0.99.6
 	>=net-wireless/wireless-tools-28_pre9
 	>=net-wireless/wpa_supplicant-0.4.8
 	>=dev-libs/glib-2.8
