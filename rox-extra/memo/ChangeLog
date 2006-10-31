@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/memo
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.7 2006/10/31 00:07:37 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.8 2006/10/31 03:47:17 lack Exp $
+
+  31 Oct 2006; Jim Ramsay <lack@gentoo.org> memo-1.9.7.ebuild:
+  Added optional libnotify dependency
 
 *memo-1.9.7 (31 Oct 2006)
 *memo-1.9.6 (31 Oct 2006)
