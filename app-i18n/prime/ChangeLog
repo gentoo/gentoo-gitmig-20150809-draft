@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.59 2006/06/18 06:31:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.60 2006/10/31 04:16:27 weeve Exp $
+
+  31 Oct 2006; Jason Wever <weeve@gentoo.org> prime-1.0.0.1.ebuild:
+  Added ~sparc keyword wrt bug #152265.
 
   18 Jun 2006; MATSUU Takuto <matsuu@gentoo.org> -prime-0.8.6.1.ebuild:
   Removed old version

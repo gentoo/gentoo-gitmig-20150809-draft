@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.142 2006/10/23 18:53:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.143 2006/10/31 04:19:40 weeve Exp $
+
+  31 Oct 2006; Jason Wever <weeve@gentoo.org> uim-1.2.1.ebuild:
+  Added ~sparc keyword wrt bug #152265.
 
   23 Oct 2006; Markus Rothe <corsair@gentoo.org> uim-1.2.1.ebuild:
   Added ~ppc64; bug #152265
