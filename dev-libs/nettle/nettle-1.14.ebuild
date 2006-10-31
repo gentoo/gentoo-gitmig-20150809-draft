@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.14.ebuild,v 1.1 2006/10/31 19:49:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-1.14.ebuild,v 1.2 2006/10/31 19:55:55 alonbl Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="cryptographic library that is designed to fit easily in any context"
 HOMEPAGE="http://www.lysator.liu.se/~nisse/nettle/"
@@ -23,7 +23,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-make-as-needed.patch"
 	sed -i \
 		-e '/CFLAGS/s:-ggdb3::' \
-		configure || die
+		configure.ac || die
+	eautoreconf
 }
 
 src_compile() {
