@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre20060810.ebuild,v 1.9 2006/10/30 17:26:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre20060810.ebuild,v 1.10 2006/10/31 11:48:39 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -490,7 +490,6 @@ src_install() {
 	chmod a+x ${D}/usr/bin/midentify
 
 	insinto /usr/share/mplayer
-	doins ${S}/etc/codecs.conf
 	doins ${S}/etc/input.conf
 	doins ${S}/etc/menu.conf
 }
