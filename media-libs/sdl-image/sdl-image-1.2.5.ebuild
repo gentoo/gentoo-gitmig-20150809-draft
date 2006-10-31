@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5.ebuild,v 1.3 2006/08/15 23:08:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-image/sdl-image-1.2.5.ebuild,v 1.4 2006/10/31 01:00:06 nyhm Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="image file loading library"
