@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.4 2006/10/30 20:30:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.5 2006/10/31 13:42:34 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -98,6 +98,7 @@ qt_mkspecs_dir() {
 		die "Unknown compiler ${CXX}."
 	fi
 
+	echo "${spec}"
 }
 
 src_unpack() {
