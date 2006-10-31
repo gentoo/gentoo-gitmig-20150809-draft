@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.6 2006/10/30 17:55:57 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/pam_console-0.99.6.2.3.6.ebuild,v 1.7 2006/10/31 00:36:33 metalgod Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,7 +19,7 @@ SRC_URI="mirror://fedora/development/source/SRPMS/pam-${MY_PV}.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-libs/pam-0.99"

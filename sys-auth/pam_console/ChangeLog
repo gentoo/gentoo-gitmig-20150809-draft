@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_console
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.7 2006/10/30 17:55:57 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_console/ChangeLog,v 1.8 2006/10/31 00:36:33 metalgod Exp $
+
+  31 Oct 2006; Luis Medinas <metalgod@gentoo.org>
+  pam_console-0.99.6.2.3.6.ebuild:
+  Added ~amd64 keyword. Bug #152713.
 
   30 Oct 2006; Steev Klimaszewski <steev@gentoo.org> +files/gdm,
   +files/gdm-autologin, +files/login, +files/pam_console.dev,
