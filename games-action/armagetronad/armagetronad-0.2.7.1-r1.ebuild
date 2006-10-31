@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.4 2006/10/30 03:38:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetronad/armagetronad-0.2.7.1-r1.ebuild,v 1.5 2006/10/31 04:39:48 vapier Exp $
 
 inherit eutils games
 
@@ -35,14 +35,12 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 	epatch "${FILESDIR}"/${P}-security-1.patch
-	if use dedicated ; then
-		cp "${FILESDIR}"/${PN}-ded "${FILESDIR}"/${PN} . || die
-		sed -i \
-			-e "s:@GAMES_SYSCONFDIR@:${GAMES_SYSCONFDIR}:" \
-			-e "s:@GAMES_LIBDIR@:${GAMES_LIBDIR}:" \
-			-e "s:@GAMES_DATADIR@:${GAMES_DATADIR}:" \
-			${PN}-ded ${PN}
-	fi
+	cp "${FILESDIR}"/${PN}-ded "${FILESDIR}"/${PN} . || die
+	sed -i \
+		-e "s:@GAMES_SYSCONFDIR@:${GAMES_SYSCONFDIR}:" \
+		-e "s:@GAMES_LIBDIR@:${GAMES_LIBDIR}:" \
+		-e "s:@GAMES_DATADIR@:${GAMES_DATADIR}:" \
+		${PN}-ded ${PN}
 }
 
 src_compile() {
