@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.52.ebuild,v 1.3 2006/10/31 15:13:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/mozilla-launcher-1.54.ebuild,v 1.1 2006/10/31 15:13:02 agriffis Exp $
 
 inherit eutils
 
@@ -11,11 +11,11 @@ SRC_URI="mirror://gentoo/${P}.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86 x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( x11-apps/xdpyinfo virtual/x11 )"
+RDEPEND=""
 
 S=${WORKDIR}
 
