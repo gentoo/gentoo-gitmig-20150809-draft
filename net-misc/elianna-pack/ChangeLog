@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/elianna-pack
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/ChangeLog,v 1.2 2006/09/21 18:35:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/ChangeLog,v 1.3 2006/10/31 19:12:18 gustavoz Exp $
+
+  31 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  elianna-pack-1.0.ebuild:
+  Fix sounds/digits path
 
   21 Sep 2006; Gustavo Zacarias <gustavoz@gentoo.org> +metadata.xml:
   How about some metadata? Silly me

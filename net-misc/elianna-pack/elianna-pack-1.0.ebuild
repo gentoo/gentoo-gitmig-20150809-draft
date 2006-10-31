@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/elianna-pack-1.0.ebuild,v 1.1 2006/09/21 17:58:32 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/elianna-pack/elianna-pack-1.0.ebuild,v 1.2 2006/10/31 19:12:18 gustavoz Exp $
 
 DESCRIPTION="Argentinean spanish sounds for asterisk"
 HOMEPAGE="http://www.ip-flow.com.ar/elianna_pack.html"
@@ -18,9 +18,9 @@ src_install() {
 	dodoc LICENCIA.txt README.txt
 	insinto /var/lib/asterisk/sounds/ar
 	doins *.gsm
-	insinto /var/lib/asterisk/ar/digits
+	insinto /var/lib/asterisk/sounds/ar/digits
 	doins digits/*.gsm
-	insinto /var/lib/asterisk/ar/letters
+	insinto /var/lib/asterisk/sounds/ar/letters
 	doins letters/*.gsm
 
 	# fix permissions
