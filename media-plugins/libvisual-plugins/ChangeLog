@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.21 2006/10/20 12:29:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.22 2006/10/31 07:55:12 flameeyes Exp $
+
+  31 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
+  libvisual-plugins-0.4.0.ebuild:
+  Add ~x86-fbsd keyword.
 
   20 Oct 2006; Simon Stelling <blubb@gentoo.org>
   libvisual-plugins-0.4.0.ebuild:
