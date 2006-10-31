@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r5.ebuild,v 1.1 2006/10/28 22:37:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12r-r5.ebuild,v 1.2 2006/10/31 07:43:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -116,6 +116,8 @@ src_unpack() {
 
 	# fix mips n32 (no llseek syscall)
 	epatch "${FILESDIR}"/${PN}-2.12-mips-lseek.patch
+
+	epatch "${FILESDIR}"/${PN}-2.12r-no-_syscall.patch #150852
 
 	# Enable random features
 	local mconfigs="MCONFIG"
