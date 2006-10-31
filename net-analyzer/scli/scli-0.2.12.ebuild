@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.2.12.ebuild,v 1.6 2006/10/02 21:55:17 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/scli-0.2.12.ebuild,v 1.7 2006/10/31 21:04:47 jokey Exp $
 
-inherit eutils flag-o-matic
+WANT_AUTOCONF="latest"
+inherit eutils flag-o-matic autotools
 
 DESCRIPTION="SNMP Command Line Interface"
 HOMEPAGE="http://www.ibr.cs.tu-bs.de/projects/scli/"
@@ -30,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
+	eautoconf
 
 	append-flags -I/usr/include/libxml2
 
