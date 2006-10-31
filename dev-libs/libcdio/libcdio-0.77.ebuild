@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.15 2006/10/28 19:31:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.77.ebuild,v 1.16 2006/10/31 05:22:25 aballier Exp $
 
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="2.5"
 
 inherit eutils libtool autotools
 
