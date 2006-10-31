@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-3.0.ebuild,v 1.1 2006/10/17 21:09:45 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-3.0.ebuild,v 1.2 2006/10/31 00:58:18 cardoe Exp $
 
 inherit mono gnome2 eutils
 
@@ -24,7 +24,8 @@ DEPEND=">=gnome-base/gconf-2.0
 		>=dev-dotnet/gtk-sharp-1.9.2
 		>=dev-dotnet/gnome-sharp-1.9.2
 		>=dev-dotnet/glade-sharp-1.9.2
-		>=dev-dotnet/gconf-sharp-1.9.2"
+		>=dev-dotnet/gconf-sharp-1.9.2
+		|| ( >=dev-libs/dbus-glib-0.71 <sys-apps/dbus-0.90 )"
 
 S=${WORKDIR}/"${PN}-3"
 
@@ -34,7 +35,7 @@ pkg_setup() {
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install
 }
 
 pkg_postinst() {

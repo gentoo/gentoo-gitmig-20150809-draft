@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-1.0.ebuild,v 1.1 2006/07/11 02:35:58 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-1.0.ebuild,v 1.2 2006/10/31 00:58:18 cardoe Exp $
 
 inherit mono gnome2 eutils
 
@@ -32,7 +32,7 @@ pkg_setup() {
 }
 
 src_install() {
-	make DESTDIR=${D} install
+	make DESTDIR="${D}" install
 }
 
 pkg_postinst() {

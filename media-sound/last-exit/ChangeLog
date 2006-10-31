@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/last-exit
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.5 2006/10/25 00:01:01 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/ChangeLog,v 1.6 2006/10/31 00:58:18 cardoe Exp $
+
+  31 Oct 2006; Doug Goldstein <cardoe@gentoo.org> last-exit-1.0.ebuild,
+  last-exit-2.0.ebuild, last-exit-3.0.ebuild:
+  Fixed dbus depends
 
   24 Oct 2006; Steev Klimaszewski <steev@gentoo.org> last-exit-2.0.ebuild:
   Add dbus > .60 dep, since that is what the configure script looks for - really
