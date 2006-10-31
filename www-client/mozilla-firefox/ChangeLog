@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.205 2006/10/25 22:55:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.206 2006/10/31 15:46:21 cardoe Exp $
+
+  31 Oct 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/icon/mozillafirefox-1.5-unbranded.desktop,
+  +files/icon/firefox-icon-unbranded.png, mozilla-firefox-2.0.ebuild:
+  Mozilla Branding fixes committed on behalf of Anarchy. Fixes bug #153291
 
   25 Oct 2006; Zac Medico <zmedico@gentoo.org> mozilla-firefox-2.0.ebuild:
   Fix "cp: Argument list too long" error for bug #150687. Thanks to Anarchy

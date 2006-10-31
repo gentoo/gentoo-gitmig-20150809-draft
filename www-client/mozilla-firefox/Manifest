@@ -9,10 +9,18 @@ AUX gentoo-default-prefs.js 281 RMD160 0802f29dfa652f3776fc9b685ad6a2a03c7d0b81 
 MD5 9afab9469fd1d8af3d674a07ab0a0128 files/gentoo-default-prefs.js 281
 RMD160 0802f29dfa652f3776fc9b685ad6a2a03c7d0b81 files/gentoo-default-prefs.js 281
 SHA256 ec1826aa93ac90b079efca7efb112f232287cc66b7bf515192095da88f62557c files/gentoo-default-prefs.js 281
+AUX icon/firefox-icon-unbranded.png 2963 RMD160 4244d088d65b03d34ee7a66ed9145064d930013a SHA1 0b4ed3d1bb9be7ba8278eac49f465afb39b89b6e SHA256 a3413e62d6d7088f5ca5be575cb1af933187d828a8dfb4e49552a2441958d6a8
+MD5 b87a28f52a9768e94b07eaa39d584cc7 files/icon/firefox-icon-unbranded.png 2963
+RMD160 4244d088d65b03d34ee7a66ed9145064d930013a files/icon/firefox-icon-unbranded.png 2963
+SHA256 a3413e62d6d7088f5ca5be575cb1af933187d828a8dfb4e49552a2441958d6a8 files/icon/firefox-icon-unbranded.png 2963
 AUX icon/firefox-icon.png 3979 RMD160 7d8f39974e9853dcdd4af05142c9b57ae187ab45 SHA1 4f009c0be2fb48bb2d95422bbde96d8e10e6dd9d SHA256 064ddf97649424540df1d4a4727ee4c08d6b2b7389621855601aec58241ac67e
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/firefox-icon.png 3979
 RMD160 7d8f39974e9853dcdd4af05142c9b57ae187ab45 files/icon/firefox-icon.png 3979
 SHA256 064ddf97649424540df1d4a4727ee4c08d6b2b7389621855601aec58241ac67e files/icon/firefox-icon.png 3979
+AUX icon/mozillafirefox-1.5-unbranded.desktop 262 RMD160 3b86a4131d08534f8d5172efe327cc4002ebddf0 SHA1 9a53e878f0aeff1e11549095331d3e7ee07c546b SHA256 4f59dc18a8f6f9e252311b17691e366ed53b387698fa017b52fd7697a6bc791b
+MD5 937225b0fb23378e1a08e8761ce034a7 files/icon/mozillafirefox-1.5-unbranded.desktop 262
+RMD160 3b86a4131d08534f8d5172efe327cc4002ebddf0 files/icon/mozillafirefox-1.5-unbranded.desktop 262
+SHA256 4f59dc18a8f6f9e252311b17691e366ed53b387698fa017b52fd7697a6bc791b files/icon/mozillafirefox-1.5-unbranded.desktop 262
 AUX icon/mozillafirefox-1.5.desktop 259 RMD160 7b2c3de5bb2e1d136bd6ecfc968dd9f00db04747 SHA1 8d5864b3a4476f9f345422c9f336927d2c145f26 SHA256 3c77e8c9261cfb863b9fdd290122f4f14de5302854bd21a450f85f2da68ca15c
 MD5 22c0657f6cced2344a1848a5d0566928 files/icon/mozillafirefox-1.5.desktop 259
 RMD160 7b2c3de5bb2e1d136bd6ecfc968dd9f00db04747 files/icon/mozillafirefox-1.5.desktop 259
@@ -136,14 +144,14 @@ EBUILD mozilla-firefox-1.5.0.7.ebuild 9727 RMD160 bb174a191604e8abd8988d4eda031a
 MD5 2d0bc16945f9f364a2b544f97b0908c6 mozilla-firefox-1.5.0.7.ebuild 9727
 RMD160 bb174a191604e8abd8988d4eda031a404d2c17dd mozilla-firefox-1.5.0.7.ebuild 9727
 SHA256 93470c8bd57949f25f37bd11641f22af9fa7a6d014566ce7a5099ef0b151f273 mozilla-firefox-1.5.0.7.ebuild 9727
-EBUILD mozilla-firefox-2.0.ebuild 8731 RMD160 9088d4fbaa18634ffee325cbbe47f09ee20847a3 SHA1 f67be07a024211a099cd7c37859a9d783586e493 SHA256 69840805f2807e5e0c3e28b56af4d5958916331f444be5c893fdef4fe0f4e8d5
-MD5 f4277f2facd8f3ef4ff146c0b7e520b0 mozilla-firefox-2.0.ebuild 8731
-RMD160 9088d4fbaa18634ffee325cbbe47f09ee20847a3 mozilla-firefox-2.0.ebuild 8731
-SHA256 69840805f2807e5e0c3e28b56af4d5958916331f444be5c893fdef4fe0f4e8d5 mozilla-firefox-2.0.ebuild 8731
-MISC ChangeLog 53811 RMD160 7845c82603f2709ad5f52d3e36222cc8d5f23a10 SHA1 4bf4caea9bed87323cfc96b7b0c8dec4b3887c47 SHA256 b64b92b802d904185d7e1feed9ecfe412a7474bdb3694ec32b01facd2c9b7aae
-MD5 005951d4e97f0a32c296e4d42c84b275 ChangeLog 53811
-RMD160 7845c82603f2709ad5f52d3e36222cc8d5f23a10 ChangeLog 53811
-SHA256 b64b92b802d904185d7e1feed9ecfe412a7474bdb3694ec32b01facd2c9b7aae ChangeLog 53811
+EBUILD mozilla-firefox-2.0.ebuild 8922 RMD160 9d34e4ce0555c45c0f5d4da7f8c1d9ad132e1ce0 SHA1 24c69dca9f28d5c29d06424bb1f7f27ec18a83c9 SHA256 4068cdafdeea7eb28a7f43d4079080b97ed6e2d7bae95cf62d71be25bed24c8f
+MD5 3849bb997a6f8399e4a06af8c676abf7 mozilla-firefox-2.0.ebuild 8922
+RMD160 9d34e4ce0555c45c0f5d4da7f8c1d9ad132e1ce0 mozilla-firefox-2.0.ebuild 8922
+SHA256 4068cdafdeea7eb28a7f43d4079080b97ed6e2d7bae95cf62d71be25bed24c8f mozilla-firefox-2.0.ebuild 8922
+MISC ChangeLog 54058 RMD160 2efe34bf3194831e642e127b307f0014dfa69e4f SHA1 3d9ed1724dea677ff0e27939ab908c46751976e9 SHA256 54dd035b2e4b0931569c4807e63a9bf6aadb886b081a353f297dbb85c8351758
+MD5 3cf55c93eb9a184927293f995566f188 ChangeLog 54058
+RMD160 2efe34bf3194831e642e127b307f0014dfa69e4f ChangeLog 54058
+SHA256 54dd035b2e4b0931569c4807e63a9bf6aadb886b081a353f297dbb85c8351758 ChangeLog 54058
 MISC metadata.xml 160 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 SHA1 5015c07af2083f20f9552d7fb11afb5ea69af345 SHA256 0cc5126362a12cee42ec1197c528a804cf36859329dd2c6d9225726831d14b8b
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 RMD160 d5a9f0bf8989621c2bde30facb53bcae00aba709 metadata.xml 160
@@ -160,7 +168,7 @@ SHA256 fbf540ed72bf42162150028e2f3e6aba2aa20d7487fce59c75f871aea4d19515 files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFP+tU/ejvha5XGaMRAkrEAJ47cAvhV8m5cx8qrRbD4yGGmiEv8QCaAh+V
-eDmDr+A/tGq0+zRz/rInCHc=
-=uooM
+iD8DBQFFR3CnoeSe8B0zEfwRAhBeAJ46aBZwy5bZGdPRgYMFB3EQV70mTACfV5Xq
+vQZCQlBedDXAEb/ZLshrosU=
+=mfnB
 -----END PGP SIGNATURE-----
