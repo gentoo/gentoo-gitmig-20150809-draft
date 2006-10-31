@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6179 2006/10/30 18:01:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6180 2006/10/31 00:53:31 metalgod Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -100,8 +100,9 @@ x11-plugins/gkrellm-giFT
 net-misc/qadsl
 
 # Luis Medinas <metalgod@gentoo.org> (28 Oct 2006)
-# Mask dhcdbd in preparation for NetworkManager
+# Mask dhcdbd and NetworkManager for testing
 net-misc/dhcdbd
+net-misc/NetworkManager
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 Oct 2006)
 # Masked pending removal, bug #149007
