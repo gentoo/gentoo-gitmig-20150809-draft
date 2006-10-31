@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.0.ebuild,v 1.3 2006/10/09 00:39:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.6.0.ebuild,v 1.4 2006/10/31 19:58:42 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -52,11 +52,10 @@ src_unpack() {
 	fi
 
 	sed -i "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort/rules:" \
-		etc/snort.conf || die "sed snort.conf failed"
+		etc/snort.conf
 
 	if use prelude ; then
-		sed -i -e "s:AC_PROG_RANLIB:AC_PROG_LIBTOOL:" configure.in \
-			|| die "sed configure.in failed"
+		sed -i -e "s:AC_PROG_RANLIB:AC_PROG_LIBTOOL:" configure.in
 	fi
 
 	if use sguil ; then
@@ -84,11 +83,11 @@ src_compile() {
 	use inline && append-flags -I/usr/include/libipq
 
 	econf \
+		--without-oracle \
 		$(use_with postgres postgresql) \
 		$(use_with mysql) \
 		$(use_with ssl openssl) \
 		$(use_with odbc) \
-		--without-oracle \
 		$(use_enable prelude) \
 		$(use_with sguil) \
 		$(use_enable inline) \
@@ -96,9 +95,10 @@ src_compile() {
 		$(use_enable timestats) \
 		$(use_enable perfprofiling) \
 		$(use_enable linux-smp-stats) \
-		${myconf} || die "bad ./configure"
+		${myconf} || die "econf failed"
 
-	emake || die "compile problem"
+	# limit to single as reported by jforman on irc
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
