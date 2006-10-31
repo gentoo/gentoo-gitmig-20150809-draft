@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.6 2006/04/25 00:04:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/libjsw-1.5.5.ebuild,v 1.7 2006/10/31 19:36:31 nyhm Exp $
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="provide a uniform API and user configuration for joysticks and game controllers"
 HOMEPAGE="http://wolfpack.twu.net/libjsw/"
