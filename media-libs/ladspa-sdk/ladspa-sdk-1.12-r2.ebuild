@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.16 2006/01/18 00:16:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12-r2.ebuild,v 1.17 2006/10/31 22:24:13 the_paya Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ppc ppc64 ppc-macos sparc x86"
+KEYWORDS="alpha amd64 hppa ppc ppc-macos ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="virtual/libc"
@@ -24,6 +24,7 @@ S=${WORKDIR}/${MY_PN}/src
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${P}-fbsd.patch
 	sed -i \
 		-e "/^CFLAGS/ s:-O3:${CFLAGS}:" \
 		${S}/makefile || die "sed makefile failed (CFLAGS)"
