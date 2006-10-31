@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.29 2006/06/05 17:44:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.30 2006/10/31 23:18:10 jokey Exp $
+
+*netperf-2.4.2 (01 Nov 2006)
+
+  01 Nov 2006; Markus Ullmann <jokey@gentoo.org> netperf-2.2.4.ebuild,
+  netperf-2.3.ebuild, -netperf-2.4.0_rc2.ebuild, -netperf-2.4.0_rc3.ebuild,
+  -netperf-2.4.0.ebuild, -netperf-2.4.0-r1.ebuild, +netperf-2.4.2.ebuild:
+  Version bump and SRC_URI udate wrt bug #152704 thanks to Francisco Javier
+  for reporting
 
   05 Jun 2006; Peter Volkov <pva@gentoo.org> netperf-2.4.0-r1.ebuild:
   Fixed eutils inheritance as we use epatch.

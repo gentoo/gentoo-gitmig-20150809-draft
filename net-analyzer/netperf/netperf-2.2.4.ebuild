@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.17 2005/07/16 19:42:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.4.ebuild,v 1.18 2006/10/31 23:18:10 jokey Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ else
 fi
 
 DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets, ATM and more."
-SRC_URI="ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.netperf.org/netperf/archive/${MY_P}.tar.gz"
 HOMEPAGE="http://www.netperf.org/"
 LICENSE="netperf"
 SLOT="0"
