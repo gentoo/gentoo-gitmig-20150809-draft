@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.1 2006/09/09 20:20:41 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.2 2006/10/31 17:20:27 peper Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -53,8 +53,7 @@ src_compile() {
 	python_version
 
 	econf \
-		$(use_with gpm gpm-support) \
-		|| die
+		$(use_with gpm gpm-support)
 
 	# not parallel safe
 	emake \
@@ -70,11 +69,13 @@ src_install () {
 	# not parallel safe
 	emake \
 		prefix="${D}/usr" \
+		libdir="${D}/usr/$(get_libdir)" \
 		PYTHONVERS="python${PYVER}" \
 		RPM_OPT_FLAGS="ERROR" \
 		install || die "make install failed"
-	dodoc CHANGES peanuts.py popcorn.py tutorial.sgml
+	dodoc peanuts.py popcorn.py tutorial.sgml
 	doman whiptail.1
-	SOMINOR=$(get_version_component_range 2 ${PV})
-	dosym libnewt.so.${PV} /usr/$(get_libdir)/libnewt.so.0.${SOMINOR}
+
+	# Don't know if it's needed but it was here before so leaving /peper 
+	dosym libnewt.so.0.52.1 /usr/$(get_libdir)/libnewt.so.0.52
 }
