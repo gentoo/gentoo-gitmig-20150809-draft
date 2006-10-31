@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/eb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.22 2006/10/26 16:07:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eb/ChangeLog,v 1.23 2006/10/31 04:17:39 weeve Exp $
+
+  31 Oct 2006; Jason Wever <weeve@gentoo.org> eb-4.2.2.ebuild:
+  Added ~sparc keyword wrt bug #152265.
 
   26 Oct 2006; Brent Baude <ranger@gentoo.org> eb-4.2.ebuild:
   Marking eb-4.2 ~ppc64 to satisfy a broken dep from uim keywording per Mr Bones
