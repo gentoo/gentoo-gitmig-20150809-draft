@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.0.0.ebuild,v 1.3 2006/10/30 00:45:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.0.0.ebuild,v 1.4 2006/10/31 00:43:18 vapier Exp $
 
 inherit eutils multilib perl-module games
 
@@ -43,30 +43,21 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-build.patch
 
 	sed -i \
-		-e 's:INSTALLDIRS=.*:PREFIX=${D}/usr:' \
+		-e 's:INSTALLDIRS=.*:PREFIX=$(DESTDIR)/usr:' \
 		c_stuff/Makefile \
 		|| die 'sed failed'
-}
-
-src_compile() {
-	emake \
-		PREFIX=/usr \
-		BINDIR="${GAMES_BINDIR}" \
-		DATADIR="${GAMES_DATADIR}" \
-		LIBDIR="${GAMES_LIBDIR}" \
-		MANDIR=/usr/share/man \
-		|| die "emake game failed"
+	sed -i \
+		-e '/^PREFIX /s:=.*:=/usr:' \
+		-e "/^BINDR /s:=.*:=${GAMES_BINDIR}:" \
+		-e "/^DATADIR /s:=.*:=${GAMES_DATADIR}:" \
+		-e "/^LIBDIR /s:=.*:=${GAMES_LIBDIR}:" \
+		-e '/^LOCALEDIR /s:=.*:=/usr/share/locale:' \
+		-e "/^MANDIR /s:=.*:=/usr/share/man:" \
+		Makefile po/Makefile server/Makefile || die "sed failed"
 }
 
 src_install() {
-	emake \
-		PREFIX="${D}/usr" \
-		BINDIR="${D}/${GAMES_BINDIR}" \
-		DATADIR="${D}/${GAMES_DATADIR}" \
-		LIBDIR="${D}/${GAMES_LIBDIR}" \
-		MANDIR="${D}/usr/share/man" \
-		install \
-		|| die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dosed /usr/games/bin/frozen-bubble
 	dodoc AUTHORS NEWS README TIPS
 	newicon icons/frozen-bubble-icon-48x48.png ${PN}.png
