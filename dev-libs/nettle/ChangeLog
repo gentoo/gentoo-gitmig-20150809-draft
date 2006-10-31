@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nettle
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.11 2005/10/14 22:39:29 vapier Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.12 2006/10/31 19:49:00 alonbl Exp $
+
+*nettle-1.14 (31 Oct 2006)
+
+  31 Oct 2006; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/nettle-1.14-make-as-needed.patch, +nettle-1.14.ebuild:
+  Version bump, fix LDFLAGS="-Wl,--as-needed", closes bug#153138
 
   14 Oct 2005; Mike Frysinger <vapier@gentoo.org> nettle-1.13-r1.ebuild:
   Add support for gmp/ssl USE flags.
