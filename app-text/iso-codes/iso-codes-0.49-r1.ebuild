@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49-r1.ebuild,v 1.4 2006/10/14 21:01:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-0.49-r1.ebuild,v 1.5 2006/10/31 20:33:03 allanonjl Exp $
 
 inherit eutils autotools
 
@@ -19,7 +19,7 @@ DEPEND="sys-devel/gettext
 	>=sys-devel/automake-1.9"
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
 	cd "${S}"
 
 	# patch to fix up version reporting (bug #118240)
@@ -35,8 +35,11 @@ src_unpack() {
 	eautomake
 }
 
-src_install() {
+src_compile() {
 	econf || die "configure failed"
+}
+
+src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 
 	dodoc ChangeLog README TODO
