@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rovclock
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.1 2006/01/13 20:51:34 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rovclock/ChangeLog,v 1.2 2006/10/31 13:34:23 opfer Exp $
+
+  31 Oct 2006; Christian Faulhammer <opfer@gentoo.org> rovclock-0.6e.ebuild:
+  stabled x86, bug #152753
 
 *rovclock-0.6e (13 Jan 2006)
 
