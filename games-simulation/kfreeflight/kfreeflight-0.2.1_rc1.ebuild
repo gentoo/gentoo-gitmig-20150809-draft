@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/kfreeflight-0.2.1_rc1.ebuild,v 1.1 2006/10/29 20:23:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/kfreeflight/kfreeflight-0.2.1_rc1.ebuild,v 1.2 2006/10/31 06:51:59 tupone Exp $
 
 inherit eutils kde games
 
@@ -20,6 +20,13 @@ RDEPEND="games-simulation/flightgear"
 S=${WORKDIR}/${PN}-${PV%_*}
 
 need-kde 3.5.2
+
+src_compile() {
+	local myconf
+	kde_src_compile myconf
+	egamesconf $myconf || die "egamesconf failed"
+	emake || die "emake failed"
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
