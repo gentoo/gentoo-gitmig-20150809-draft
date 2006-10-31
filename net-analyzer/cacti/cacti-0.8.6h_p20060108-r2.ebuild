@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h_p20060108-r2.ebuild,v 1.7 2006/05/23 19:58:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6h_p20060108-r2.ebuild,v 1.8 2006/10/31 23:31:07 jokey Exp $
 
 inherit eutils webapp depend.apache
 
@@ -22,19 +22,19 @@ LICENSE="GPL-2"
 KEYWORDS="alpha ~amd64 ~hppa ~ppc ppc64 sparc x86"
 IUSE="snmp"
 
-DEPEND=""
+DEPEND="virtual/php
+	virtual/httpd-php"
 
 want_apache
 
 # alpha doesn't have lighttpd keyworded yet
 # sparc doesn't have a stable keyword for lighttpd yet
-RDEPEND="!alpha? ( !sparc? ( !apache? ( !apache2? ( www-servers/lighttpd ) ) ) )
+RDEPEND="${DEPEND}
+	!alpha? ( !sparc? ( !apache? ( !apache2? ( www-servers/lighttpd ) ) ) )
 	snmp? ( net-analyzer/net-snmp )
 	net-analyzer/rrdtool
 	dev-db/mysql
-	virtual/cron
-	virtual/php
-	virtual/httpd-php"
+	virtual/cron"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz ; mv ${MY_P} ${P}
