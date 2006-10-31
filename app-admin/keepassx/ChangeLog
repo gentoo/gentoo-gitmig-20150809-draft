@@ -1,0 +1,13 @@
+# ChangeLog for app-admin/keepassx
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.1 2006/10/31 09:00:53 opfer Exp $
+
+*keepassx-0.2.2 (31 Oct 2006)
+
+  31 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  +files/keepassx.desktop, +metadata.xml, +keepassx-0.2.2.ebuild:
+  initial import: Taken from Sunrise overlay, provided in the first place by
+  Luca Rosellini <luca.rosellini@libero.it>, Michael Mauch
+  <michael.mauch@gmx.de>, Arthur Koziel <arthur.koziel@dkh-multigaming.de> and
+  Torsten Krah <tkrah@fachschaft.imn.htwk-leipzig.de> in bug #119907
+
