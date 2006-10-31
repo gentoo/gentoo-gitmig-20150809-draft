@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.1 2006/10/20 15:03:41 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/verbiste-0.1.16.ebuild,v 1.2 2006/10/31 21:43:43 tester Exp $
 
 inherit autotools eutils
 
@@ -20,15 +20,15 @@ RDEPEND=">=dev-libs/libxml2-2.4.0
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
-	
+
 
 #from enlightenment eclass
 gettext_modify() {
 #        use nls || return 0
-        cp $(which gettextize) "${T}"/ || die "could not copy gettextize"
-        sed -i \
-                -e 's:read dummy < /dev/tty::' \
-                "${T}"/gettextize
+	cp $(which gettextize) "${T}"/ || die "could not copy gettextize"
+	sed -i \
+		-e 's:read dummy < /dev/tty::' \
+		"${T}"/gettextize
 }
 
 
