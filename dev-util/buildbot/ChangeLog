@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.2 2006/10/30 18:18:26 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.3 2006/10/31 01:04:42 marienz Exp $
+
+  31 Oct 2006; Marien Zwart <marienz@gentoo.org> buildbot-0.7.4.ebuild:
+  Add test USE flag and ~amd64 keyword.
 
   30 Oct 2006; Marien Zwart <marienz@gentoo.org> buildbot-0.7.4.ebuild:
   Use the workdir copy of buildbot for epydoc and trial, not the installed
