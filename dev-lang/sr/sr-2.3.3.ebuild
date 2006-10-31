@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.3.ebuild,v 1.2 2005/12/14 14:42:43 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.3.ebuild,v 1.3 2006/10/31 13:48:50 opfer Exp $
 
 inherit eutils versionator
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cs.arizona.edu/sr/${PN}${MY_PV}.tar.Z"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/ssh"

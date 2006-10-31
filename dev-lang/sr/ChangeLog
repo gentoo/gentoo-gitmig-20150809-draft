@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/sr
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.5 2005/12/14 14:42:43 griffon26 Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/ChangeLog,v 1.6 2006/10/31 13:48:50 opfer Exp $
+
+  31 Oct 2006; Christian Faulhammer <opfer@gentoo.org> sr-2.3.3.ebuild:
+  stabled x86, bug #151917
 
   14 Dec 2005; Maurice van der Pot <griffon26@gentoo.org> sr-2.3.3.ebuild:
   Removed awk from global scope (QA violation, bug #115527)
