@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/reiserfsprogs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.37 2005/09/17 00:42:25 ciaranm Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.38 2006/10/31 07:18:04 vapier Exp $
+
+*reiserfsprogs-3.6.20 (31 Oct 2006)
+
+  31 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +reiserfsprogs-3.6.20.ebuild:
+  Version bump #153494 by Patrick Guimond.
 
   17 Sep 2005; Ciaran McCreesh <ciaranm@gentoo.org> ChangeLog:
   Converted to UTF-8, fixed encoding screwups
