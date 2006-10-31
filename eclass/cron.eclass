@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.9 2005/09/06 04:20:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.10 2006/10/31 17:20:38 wschlich Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -24,7 +24,7 @@ DEPEND=">=sys-apps/sed-4.0.5"
 
 RDEPEND="!virtual/cron
 	virtual/mta
-	>=sys-process/cronbase-0.2.1-r3"
+	>=sys-process/cronbase-0.3.2"
 
 PROVIDE="virtual/cron"
 
