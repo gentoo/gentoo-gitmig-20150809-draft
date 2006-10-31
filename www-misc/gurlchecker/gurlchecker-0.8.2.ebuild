@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.8.2.ebuild,v 1.3 2005/07/17 13:17:29 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.8.2.ebuild,v 1.4 2006/10/31 22:10:29 leonardop Exp $
 
 inherit gnome2
 
@@ -19,9 +19,11 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=net-libs/gnet-2
 	gnutls? ( >=net-libs/gnutls-1 )"
 
+# docbook-sgml-utils used to build the man page
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
+	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.30
+	app-text/docbook-sgml-utils
 	doc? ( >dev-util/gtk-doc-1.1 )"
 
 DOCS="ABOUT-NLS AUTHORS ChangeLog FAQ NEWS README THANKS TODO"
