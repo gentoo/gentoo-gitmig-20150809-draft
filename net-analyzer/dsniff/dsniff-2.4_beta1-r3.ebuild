@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.2 2006/05/02 02:11:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.4_beta1-r3.ebuild,v 1.3 2006/10/31 21:28:37 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,12 +8,13 @@ DESCRIPTION="A collection of tools for network auditing and penetration testing"
 HOMEPAGE="http://monkey.org/~dugsong/dsniff/"
 SRC_URI="http://monkey.org/~dugsong/dsniff/beta/${P/_beta/b}.tar.gz
 	mirror://gentoo/${PN}-2.4_beta1-debian-r1.patch.bz2"
+
 LICENSE="DSNIFF"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="X"
 
-RDEPEND="net-libs/libpcap
+DEPEND="net-libs/libpcap
 	>=net-libs/libnet-1.1.2.1-r1
 	=net-libs/libnids-1.18
 	>=dev-libs/openssl-0.9.6e
@@ -22,6 +23,7 @@ RDEPEND="net-libs/libpcap
 	X? (
 		|| ( virtual/x11 x11-libs/libXmu )
 	)"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P/_beta1/}"
 
