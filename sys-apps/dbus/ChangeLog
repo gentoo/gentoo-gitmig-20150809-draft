@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.137 2006/10/30 16:16:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.138 2006/10/31 00:16:26 cardoe Exp $
+
+  31 Oct 2006; Doug Goldstein <cardoe@gentoo.org> -files/dbus.init-0.60,
+  -files/dbus-0.60-gcj.patch, -files/dbus-0.60-gcj-2.patch,
+  -files/dbus-0.60-mono-arguments.patch, -files/dbus-0.60-mono-docs.patch,
+  -files/dbus-0.60-qdbusmarshall.patch, -files/dbus-0.60-qt.patch,
+  -dbus-0.60-r4.ebuild, -dbus-0.62.ebuild:
+  Removed previous versions and old patches
 
   30 Oct 2006; Doug Goldstein <cardoe@gentoo.org> -dbus-0.91.ebuild:
   Removing dbus 0.91 since it's for dbus-core
