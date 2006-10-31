@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.4 2006/10/30 20:25:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.5 2006/10/31 11:27:20 opfer Exp $
+
+  31 Oct 2006; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  marked ~x86 as requested in bug #153132
 
   30 Oct 2006; Jeroen Roovers <jer@gentoo.org> xdvipdfmx-0.3.ebuild:
   Marked ~hppa (bug #153132).
