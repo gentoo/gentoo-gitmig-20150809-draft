@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.2 2006/09/22 00:12:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.3 2006/10/31 00:35:01 cardoe Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils mono python multilib debug qt3 autotools
@@ -133,11 +133,15 @@ pkg_preinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/dbus
+	if [ -d "${ROOT}"/usr/lib/python*/site-packages/dbus ]; then
+		python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/dbus
+	fi
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/dbus
+	if [ -d "${ROOT}"/usr/lib/python*/site-packages/dbus ]; then
+		python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/dbus
+	fi
 
 	einfo "To start the DBUS system-wide messagebus by default"
 	einfo "you should add it to the default runlevel :"

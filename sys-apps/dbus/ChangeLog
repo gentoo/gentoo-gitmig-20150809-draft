@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.138 2006/10/31 00:16:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.139 2006/10/31 00:35:01 cardoe Exp $
+
+  31 Oct 2006; Doug Goldstein <cardoe@gentoo.org> dbus-0.62-r1.ebuild:
+  Fixing bug #149656
 
   31 Oct 2006; Doug Goldstein <cardoe@gentoo.org> -files/dbus.init-0.60,
   -files/dbus-0.60-gcj.patch, -files/dbus-0.60-gcj-2.patch,
