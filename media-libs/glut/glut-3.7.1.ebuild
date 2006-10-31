@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.31 2006/10/03 14:33:55 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.1.ebuild,v 1.32 2006/10/31 19:22:01 nyhm Exp $
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
-inherit autotools eutils
+inherit autotools eutils multilib
 
 MESA_VER="5.0"
 DESCRIPTION="The OpenGL Utility Toolkit (GLUT)"
