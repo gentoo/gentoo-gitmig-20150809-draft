@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/minicom
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.39 2006/07/08 23:28:01 kumba Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.40 2006/10/31 07:03:03 vapier Exp $
+
+*minicom-2.2 (31 Oct 2006)
+
+  31 Oct 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/minicom-2.2-gentoo-runscript.patch,
+  +files/minicom-2.2-one-off.patch, +minicom-2.2.ebuild:
+  Version bump.
 
   09 Jul 2006; Joshua Kinard <kumba@gentoo.org> minicom-2.1-r2.ebuild:
   Marked stable on mips.
