@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha4.ebuild,v 1.1 2006/10/31 09:01:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.13.0_alpha4.ebuild,v 1.2 2006/10/31 14:57:54 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -160,13 +160,6 @@ pkg_postinst() {
 				PATH="${ROOT}"/sbin:${PATH} make -C "${T}" $(make_opts) \
 					dev || die "failed to create /dev nodes"
 			fi
-		elif [[ -w ${ROOT} ]] ; then
-			# Ensure that we have /dev/null and /dev/console at least
-			einfo "Ensuring that /dev/null and /dev/console exist on ${ROOT}dev"
-			mkdir "${T}"/dev
-			mount -o bind / "${T}/dev"
-			make -C "${T}" DESTDIR="${T}/dev" ARCH="$(tc-arch)" basedev &>/dev/null
-			umount "${T}/dev"
 		fi
 	fi
 
