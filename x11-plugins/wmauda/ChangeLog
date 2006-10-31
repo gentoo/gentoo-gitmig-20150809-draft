@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmauda
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.1 2006/10/30 00:48:29 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.2 2006/10/31 05:03:51 vericgar Exp $
+
+*wmauda-0.3 (31 Oct 2006)
+
+  31 Oct 2006; Michael Stewart <vericgar@gentoo.org> +wmauda-0.3.ebuild:
+  Version bump. Fixes segfaults in option processing and install location of
+  pixmaps.
 
 *wmauda-0.2 (30 Oct 2006)
 
