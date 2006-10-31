@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r2.ebuild,v 1.8 2005/01/01 15:21:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7-r2.ebuild,v 1.9 2006/10/31 12:43:34 opfer Exp $
+
+inherit eutils
 
 DESCRIPTION="Command line tools for transfering mp3s to and from a Rio500"
 HOMEPAGE="http://rio500.sourceforge.net/"
@@ -12,6 +14,12 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="=dev-libs/glib-1.2*"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"/src/
+	epatch "${FILESDIR}"/${P}_gcc34.patch
+}
 
 src_compile() {
 	econf \
