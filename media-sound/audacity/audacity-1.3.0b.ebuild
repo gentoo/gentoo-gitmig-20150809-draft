@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.0b.ebuild,v 1.6 2006/09/06 14:33:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.0b.ebuild,v 1.7 2006/10/31 16:12:11 matsuu Exp $
 
 inherit wxwidgets eutils
 
@@ -55,7 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" INSTALL_PATH="${D}" install || die
 
 	# Remove bad doc install
 	rm -rf ${D}/usr/share/doc
