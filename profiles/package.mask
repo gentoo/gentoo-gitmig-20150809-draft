@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6181 2006/10/31 08:02:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6182 2006/10/31 09:09:17 aross Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ## 
+
+# Andrew Ross <aross@gentoo.org> (31 Oct 2006)
+# pre-testing of new xen release (bug #151764)
+# they really should have called it 3.1 instead of 3.0.3
+~app-emulation/xen-tools-3.0.3
+~app-emulation/xen-3.0.3
+~sys-kernel/xen-sources-2.6.16.29
 
 # Olivier Fisette <ribosome@gentoo.org> (30 Oct 2006)
 # Masked until bugs #153325 and #54607 are fixed.
