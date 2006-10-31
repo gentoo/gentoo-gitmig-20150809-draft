@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.30 2006/10/03 19:52:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.31 2006/10/31 14:29:55 markusle Exp $
+
+*lapack-atlas-3.7.19 (31 Oct 2006)
+
+  31 Oct 2006; Markus Dittrich <markusle@gentoo.org>
+  -lapack-atlas-3.7.17.ebuild, +lapack-atlas-3.7.19.ebuild:
+  Version bump to latest development snapshot. Ebuild now uses
+  atlas' build system to select compiler and flags (see bug #144314).
 
   03 Oct 2006; Markus Dittrich <markusle@gentoo.org>
   +files/atlas-asm-gentoo.patch, lapack-atlas-3.7.17.ebuild:
