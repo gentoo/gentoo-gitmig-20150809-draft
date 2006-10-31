@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.94.ebuild,v 1.1 2006/10/30 16:13:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.94.ebuild,v 1.2 2006/10/31 00:43:22 cardoe Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils multilib debug autotools
@@ -89,7 +89,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elog "Adding the machine uuid"
-	${D}/usr/bin/dbus-uuidgen --ensure
+	"${ROOT}"/usr/bin/dbus-uuidgen --ensure
 	elog "To start the DBUS system-wide messagebus by default"
 	elog "you should add it to the default runlevel :"
 	elog "\`rc-update add dbus default\`"
