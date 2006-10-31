@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.107 2006/10/31 08:31:00 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.108 2006/10/31 17:33:55 opfer Exp $
+
+  31 Oct 2006; Christian Faulhammer <opfer@gentoo.org> emacs-21.4-r4.ebuild,
+  emacs-21.4-r5.ebuild:
+  removed dependency on sys-libs/gdbm as reported in bug #103382 by Marien
+  Zwart <marienz@gentoo.org>
 
   31 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
   +files/40aspell-gentoo.el:

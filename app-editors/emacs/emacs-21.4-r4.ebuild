@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.10 2006/10/15 08:48:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r4.ebuild,v 1.11 2006/10/31 17:33:55 opfer Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -15,7 +15,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X Xaw3d leim lesstif motif nls nosendmail"
 
 RDEPEND="sys-libs/ncurses
-	sys-libs/gdbm
 	X? ( || ( ( x11-libs/libXext
 				x11-libs/libICE
 				x11-libs/libSM
