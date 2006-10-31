@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/vdr-cdda-0.1.0-r1.ebuild,v 1.1 2006/04/12 20:12:58 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/vdr-cdda-0.1.0-r1.ebuild,v 1.2 2006/10/31 18:33:47 zzam Exp $
 
 inherit vdr-plugin
 
@@ -16,7 +16,10 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.3.22
 	>=dev-libs/libcdio-0.75
 	"
+RDEPEND="${DEPEND}"
 
-PATCHES="${FILESDIR}/${P}.patch ${FILESDIR}/${P}-cdspeed.diff"
+PATCHES="${FILESDIR}/${P}.patch
+	${FILESDIR}/${P}-cdspeed.diff
+	${FILESDIR}/${P}-linking-order.diff"
 
 

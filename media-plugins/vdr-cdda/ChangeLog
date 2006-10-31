@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-cdda
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.6 2006/08/02 19:20:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cdda/ChangeLog,v 1.7 2006/10/31 18:33:47 zzam Exp $
+
+  31 Oct 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/vdr-cdda-0.1.0-linking-order.diff, vdr-cdda-0.1.0-r1.ebuild:
+  Make plugin also link with as-needed and similar flags.
 
   02 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned package to VDR-Project.
