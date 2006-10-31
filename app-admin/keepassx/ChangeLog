@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/keepassx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.1 2006/10/31 09:00:53 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/ChangeLog,v 1.2 2006/10/31 10:39:12 opfer Exp $
+
+  31 Oct 2006; Christian Faulhammer <opfer@gentoo.org>
+  keepassx-0.2.2.ebuild:
+  added braces around used DEPEND variable, just a cosmetic change
 
 *keepassx-0.2.2 (31 Oct 2006)
 
