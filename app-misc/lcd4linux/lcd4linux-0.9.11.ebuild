@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.10 2006/10/24 07:20:46 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.9.11.ebuild,v 1.11 2006/10/31 22:20:25 jokey Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
 inherit eutils autotools
 
-DESCRIPTION="system and ISDN information is shown on an external display or in a X11 window"
+DESCRIPTION="Shows system and ISDN information on an external display or in a X11 window"
 HOMEPAGE="http://lcd4linux.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lcd4linux/${P}.tar.gz"
 
@@ -34,7 +34,7 @@ src_compile() {
 
 	use png || myconf=",!PNG"
 	use pda || myconf="${myconf},!PalmPilot"
-	use X || myconf="${myconf},!X11"
+	use X   || myconf="${myconf},!X11"
 	use usb || myconf="${myconf},!USBLCD"
 
 	econf \
@@ -49,9 +49,8 @@ src_install() {
 	einstall
 
 	insinto /etc/lcd4linux
-	cp lcd4linux.conf.sample lcd4linux.conf
+	newins lcd4linux.conf.sample lcd4linux.conf
 	insopts -o root -g root -m 0600
-	doins lcd4linux.conf
 	dodoc README* NEWS TODO CREDITS FAQ
 	dodoc lcd4linux.conf.sample lcd4linux.kdelnk lcd4linux.xpm
 
