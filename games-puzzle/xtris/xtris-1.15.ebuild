@@ -1,33 +1,37 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/xtris-1.15.ebuild,v 1.6 2006/02/14 04:17:57 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/xtris-1.15.ebuild,v 1.7 2006/10/31 19:08:23 nyhm Exp $
 
-inherit games
+inherit eutils toolchain-funcs games
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="a networked Tetris-like game"
 HOMEPAGE="http://www.iagora.com/~espel/xtris/xtris.html"
 SRC_URI="http://www.iagora.com/~espel/xtris/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="|| ( x11-libs/libX11 virtual/x11 )"
+DEPEND="x11-libs/libX11"
+
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	emake \
+		CC=$(tc-getCC) \
 		BINDIR="${GAMES_BINDIR}" \
 		MANDIR=/usr/share/man \
-		XLIBDIR=-L/usr/X11R6/lib \
 		CFLAGS="${CFLAGS}" \
-			|| die "emake failed"
+		EXTRALIBS="${LDFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
-	dogamesbin xtris xtserv xtbot   || die "dogamesbin failed"
-	doman xtris.6 xtserv.6 xtbot.6  || die "doman failed"
-	dodoc ChangeLog PROTOCOL README || die "dodoc failed"
+	dogamesbin xtris xtserv xtbot || die "dogamesbin failed"
+	doicon "${FILESDIR}"/${PN}.xpm
+	make_desktop_entry ${PN} xtris ${PN}.xpm
+	doman xtris.6 xtserv.6 xtbot.6
+	dodoc ChangeLog PROTOCOL README
 	prepgamesdirs
 }
