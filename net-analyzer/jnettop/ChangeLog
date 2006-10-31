@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/jnettop
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.16 2006/07/09 22:49:49 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.17 2006/10/31 23:01:12 jokey Exp $
+
+  01 Nov 2006; Markus Ullmann <jokey@gentoo.org> jnettop-0.11.0.ebuild,
+  jnettop-0.13.0.ebuild:
+  Fixing deps wrt bug #153250
 
 *jnettop-0.13.0 (09 Jul 2006)
 
