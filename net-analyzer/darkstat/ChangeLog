@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.21 2006/08/09 17:34:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.22 2006/10/31 13:31:00 pva Exp $
+
+*darkstat-3.0.540-r1 (31 Oct 2006)
+
+  31 Oct 2006; Peter Volkov <pva@gentoo.org> +files/darkstat-confd3,
+  +files/darkstat-init3, metadata.xml, darkstat-2.6-r1.ebuild,
+  +darkstat-3.0.540-r1.ebuild:
+  Cleaned ebuild as requested by Cédric Krier in bug #153451. Modified
+  runscript for darkstat-3.0.540-r1 and later to allow running different
+  instances on different interfaces as requested by Yevgen Gorshkov in bug
+  #153114.
 
   09 Aug 2006; Simon Stelling <blubb@gentoo.org> darkstat-3.0.540.ebuild:
   added ~amd64 keyword
