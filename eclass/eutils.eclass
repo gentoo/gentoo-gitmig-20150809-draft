@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.255 2006/10/24 17:27:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.256 2006/10/31 19:29:12 agriffis Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -456,7 +456,7 @@ enewuser() {
 	fi
 
 	# lets see if the username already exists
-	if [[ ${euser} == $(egetent passwd "${euser}" | cut -d: -f1) ]] ; then
+	if [[ -n $(egetent passwd "${euser}") ]] ; then
 		return 0
 	fi
 	einfo "Adding user '${euser}' to your system ..."
@@ -466,9 +466,9 @@ enewuser() {
 
 	# handle uid
 	local euid=$1; shift
-	if [[ ! -z ${euid} ]] && [[ ${euid} != "-1" ]] ; then
+	if [[ -n ${euid} && ${euid} != -1 ]] ; then
 		if [[ ${euid} -gt 0 ]] ; then
-			if [[ ! -z $(egetent passwd ${euid}) ]] ; then
+			if [[ -n $(egetent passwd ${euid}) ]] ; then
 				euid="next"
 			fi
 		else
@@ -479,7 +479,7 @@ enewuser() {
 		euid="next"
 	fi
 	if [[ ${euid} == "next" ]] ; then
-		for euid in $(seq 101 999) ; do
+		for ((euid = 101; euid <= 999; euid++)); do
 			[[ -z $(egetent passwd ${euid}) ]] && break
 		done
 	fi
@@ -664,8 +664,7 @@ enewgroup() {
 	fi
 
 	# see if group already exists
-	if [ "${egroup}" == "`egetent group \"${egroup}\" | cut -d: -f1`" ]
-	then
+	if [[ -n $(egetent group "${egroup}") ]]; then
 		return 0
 	fi
 	einfo "Adding group '${egroup}' to your system ..."
@@ -718,8 +717,8 @@ enewgroup() {
 		# If we need the next available
 		case ${egid} in
 		*[!0-9]*) # Non numeric
-			for egid in $(seq 101 999); do
-				[ -z "`egetent group ${egid}`" ] && break
+			for ((egid = 101; egid <= 999; egid++)); do
+				[[ -z $(egetent group ${egid}) ]] && break
 			done
 		esac
 		dscl . create /groups/${egroup} gid ${egid}
@@ -729,8 +728,8 @@ enewgroup() {
 	*-freebsd*|*-dragonfly*)
 		case ${egid} in
 			*[!0-9]*) # Non numeric
-				for egid in $(seq 101 999); do
-					[ -z "`egetent group ${egid}`" ] && break
+				for ((egid = 101; egid <= 999; egid++)); do
+					[[ -z $(egetent group ${egid}) ]] && break
 				done
 		esac
 		pw groupadd ${egroup} -g ${egid} || die "enewgroup failed"
@@ -739,8 +738,8 @@ enewgroup() {
 	*-netbsd*)
 		case ${egid} in
 		*[!0-9]*) # Non numeric
-			for egid in $(seq 101 999); do
-				[ -z "`egetent group ${egid}`" ] && break
+			for ((egid = 101; egid <= 999; egid++)); do
+				[[ -z $(egetent group ${egid}) ]] && break
 			done
 		esac
 		groupadd -g ${egid} ${egroup} || die "enewgroup failed"
