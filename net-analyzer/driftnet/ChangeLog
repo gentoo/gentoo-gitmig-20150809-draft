@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.26 2006/07/30 17:28:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.27 2006/10/31 21:18:00 jokey Exp $
+
+  31 Oct 2006; Markus Ullmann <jokey@gentoo.org> driftnet-0.1.6.ebuild,
+  driftnet-0.1.6-r3.ebuild:
+  fixing pkg-config dep wrt bug #153246
 
   30 Jul 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   driftnet-0.1.6-r3.ebuild:

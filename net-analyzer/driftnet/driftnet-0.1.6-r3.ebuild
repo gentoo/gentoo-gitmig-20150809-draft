@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r3.ebuild,v 1.3 2006/07/30 17:28:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r3.ebuild,v 1.4 2006/10/31 21:18:00 jokey Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,17 +15,18 @@ KEYWORDS="~amd64 ppc ~sparc x86"
 SLOT="0"
 IUSE="gtk"
 
-DEPEND="${RDEPEND}
-	|| (
-	( >=x11-misc/makedepend-1.0.0 )
-	virtual/x11
-	)"
-
 RDEPEND="media-libs/jpeg
 	media-libs/giflib
 	media-libs/libpng
 	net-libs/libpcap
 	gtk? ( >=x11-libs/gtk+-2.0.0 )"
+
+DEPEND="${RDEPEND}
+	|| (
+	( >=x11-misc/makedepend-1.0.0 )
+	virtual/x11
+	)
+	dev-util/pkgconfig"
 
 S="${WORKDIR}/${P}.orig"
 
