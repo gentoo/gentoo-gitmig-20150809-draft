@@ -11,18 +11,19 @@
  #endif /* linux */
  
  #if (defined(__Lynx__) || defined(Lynx)) && (defined(i386) || defined(__i386__) || defined(__x86__) || defined(__powerpc__) || defined(__sparc__) || defined(sparc))
---- vnc_unixsrc/Xvnc/config/cf/linux.cf.x86_64	2003-03-04 15:30:01.000000000 +0100
-+++ vnc_unixsrc/Xvnc/config/cf/linux.cf	2003-03-04 15:37:07.000000000 +0100
-@@ -43,7 +43,7 @@
+--- vnc_unixsrc/Xvnc/config/cf/linux.cf	2002-03-20 11:49:23.000000000 +0100
++++ vnc_unixsrc/Xvnc/config/cf/linux.cf	2006-11-01 00:46:39.000000000 +0100
+@@ -43,7 +43,8 @@
  #if defined(AlphaArchitecture) || defined(PowerPCArchitecture) || \
      defined(SparcArchitecture) || defined(ArmArchitecure) || \
      defined(i386Architecture) || defined(s390Architecture) || \
 -    defined(s390xArchitecture)
-+    defined(s390xArchitecture) || defined(x86_64Architecture)
++    defined(s390xArchitecture) || defined(x86_64Architecture) || \
++    defined(HPArchitecture)
  #define DefaultLinuxCLibMajorVersion	6
  #else
  #define DefaultLinuxCLibMajorVersion	5
-@@ -290,6 +290,14 @@
+@@ -290,6 +291,22 @@
  #define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
  #endif /* PowerPCArchitecture */
  
@@ -34,6 +35,14 @@
 +#define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
 +#endif /* x86_64PCArchitecture */
 +
++#ifdef HPArchitecture
++#define DefaultCCOptions
++#define OptimizedCDebugFlags	-O2
++#define LinuxMachineDefines 	-D__hppa__
++#define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME -DPART_NET
++#define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++#endif /* HPArchitecture */
++
  #ifdef ArmArchitecture
- #define DefaultCCOptions        -fsigned-char
- #define OptimizedCDebugFlags   -O2
+ #define DefaultCCOptions	-fsigned-char
+ #define OptimizedCDebugFlags	-O2
