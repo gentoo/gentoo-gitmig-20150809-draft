@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.9.37.ebuild,v 1.3 2006/01/25 00:32:22 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.9.37.ebuild,v 1.4 2006/11/01 20:04:40 wolf31o2 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.limewire.com"
 SRC_URI="http://dev.gentoo.org/~sekretarz/distfiles/LimeWireOther-${PV}.zip"
 LICENSE="GPL-2 Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~ppc amd64"
+KEYWORDS="amd64 ~ppc x86"
 DEPEND="app-arch/unzip
 	gtk? ( >=x11-libs/gtk+-2.4 )"
 
