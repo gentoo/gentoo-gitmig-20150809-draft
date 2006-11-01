@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.214 2006/10/31 19:45:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.215 2006/11/01 01:43:23 vapier Exp $
+
+  01 Nov 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/openssh-4.4_p1-x509-hpn-glue.patch, openssh-4.4_p1-r5.ebuild:
+  Tweak X509 a little so HPN can apply at the sametime #151527 by Bob Reveley.
 
   31 Oct 2006; Danny van Dyk <kugelfang@gentoo.org>
   openssh-4.4_p1-r5.ebuild:

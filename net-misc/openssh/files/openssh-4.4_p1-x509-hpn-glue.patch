@@ -1,0 +1,38 @@
+move things around so hpn applies cleanly when using X509
+
+--- servconf.c
++++ servconf.c
+@@ -329,6 +329,16 @@
+ 	/* Portable-specific options */
+ 	sUsePAM,
+ 	/* Standard Options */
++	sHostbasedAlgorithms,
++	sPubkeyAlgorithms,
++	sX509KeyAlgorithm,
++	sAllowedClientCertPurpose,
++	sKeyAllowSelfIssued, sMandatoryCRL,
++	sCACertificateFile, sCACertificatePath,
++	sCARevocationFile, sCARevocationPath,
++	sCAldapVersion, sCAldapURL,
++	sVAType, sVACertificateFile,
++	sVAOCSPResponderURL,
+ 	sPort, sHostKeyFile, sServerKeyBits, sLoginGraceTime, sKeyRegenerationTime,
+ 	sPermitRootLogin, sLogFacility, sLogLevel,
+ 	sRhostsRSAAuthentication, sRSAAuthentication,
+@@ -351,16 +361,6 @@
+ 	sGssAuthentication, sGssCleanupCreds, sAcceptEnv, sPermitTunnel,
+ 	sMatch, sPermitOpen, sForceCommand,
+ 	sUsePrivilegeSeparation,
+-	sHostbasedAlgorithms,
+-	sPubkeyAlgorithms,
+-	sX509KeyAlgorithm,
+-	sAllowedClientCertPurpose,
+-	sKeyAllowSelfIssued, sMandatoryCRL,
+-	sCACertificateFile, sCACertificatePath,
+-	sCARevocationFile, sCARevocationPath,
+-	sCAldapVersion, sCAldapURL,
+-	sVAType, sVACertificateFile,
+-	sVAOCSPResponderURL,
+ 	sDeprecated, sUnsupported
+ } ServerOpCodes;
+ 

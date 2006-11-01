@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.4_p1-r5.ebuild,v 1.4 2006/10/31 19:45:29 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.4_p1-r5.ebuild,v 1.5 2006/11/01 01:43:23 vapier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -75,7 +75,7 @@ src_unpack() {
 	# fix autoconf lib checking for SELinux
 	epatch "${FILESDIR}/openssh-4.4p1-selinux-ac.diff"
 
-	use X509 && epatch "${DISTDIR}"/${X509_PATCH}
+	use X509 && epatch "${DISTDIR}"/${X509_PATCH} "${FILESDIR}"/${P}-x509-hpn-glue.patch
 	use chroot && epatch "${FILESDIR}"/openssh-4.3_p1-chroot.patch
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch
 	if ! use X509 ; then
