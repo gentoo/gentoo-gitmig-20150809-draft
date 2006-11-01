@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.18 2006/10/13 19:01:04 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.19 2006/11/01 00:17:29 dang Exp $
+
+  01 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> libgksu-1.9.2.ebuild:
+  Add missing deps; bug #153581
 
   13 Oct 2006; Daniel Gryniewicz <dang@gentoo.org> libgksu-1.9.2.ebuild,
   libgksu-2.0.0.ebuild:
