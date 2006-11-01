@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.10 2006/10/19 14:55:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r1.ebuild,v 1.11 2006/11/01 22:50:44 nyhm Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
 # http://bugs.gentoo.org/show_bug.cgi?id=93097
 
-inherit eutils flag-o-matic multilib games
+WANT_AUTOCONF=latest
+inherit autotools eutils flag-o-matic multilib games
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -15,24 +16,21 @@ SRC_URI="http://www.lysator.liu.se/snes9x/${PV}/snes9x-${PV}-src.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="opengl joystick zlib dga debug"
+IUSE="debug dga joystick opengl zlib"
 
-RDEPEND="|| ( ( x11-libs/libXext
-				dga? ( x11-libs/libXxf86dga
-					   x11-libs/libXxf86vm ) )
-			  virtual/x11 )
+RDEPEND="x11-libs/libXext
+	dga? ( x11-libs/libXxf86dga
+	   x11-libs/libXxf86vm )
 	media-libs/libpng
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
-	opengl? (
-		virtual/opengl
+	opengl? ( virtual/opengl
 		virtual/glu )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
-	|| ( ( x11-proto/xextproto
-		   x11-proto/xproto
-		   dga? ( x11-proto/xf86dgaproto
-		   		  x11-proto/xf86vidmodeproto ) )
-		 virtual/x11 )"
+	x11-proto/xextproto
+	x11-proto/xproto
+	dga? ( x11-proto/xf86dgaproto
+		x11-proto/xf86vidmodeproto )"
 
 S=${WORKDIR}/${P}-src
 
@@ -55,7 +53,7 @@ src_unpack() {
 		-e '/X_LDFLAGS=/d' \
 		configure.in || die "sed failed"
 
-	autoconf || die
+	eautoconf
 }
 
 src_compile() {
