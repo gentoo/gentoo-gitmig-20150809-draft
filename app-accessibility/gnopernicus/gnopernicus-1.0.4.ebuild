@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-1.0.4.ebuild,v 1.10 2006/10/19 14:48:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-1.0.4.ebuild,v 1.11 2006/11/01 04:29:17 leonardop Exp $
 
-inherit gnome2
+WANT_AUTOMAKE=1.8
+
+inherit autotools gnome2
 
 DESCRIPTION="Software tools for blind and visually impaired"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
@@ -33,6 +35,16 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Add gdk-2.0 to the list of dependencies for libke (bug #150120)
+	epatch "${FILESDIR}"/${P}-libke_deps.patch
+
+	eautoreconf
+}
 
 pkg_setup() {
 	G2CONF="$(use_enable ipv6) \
