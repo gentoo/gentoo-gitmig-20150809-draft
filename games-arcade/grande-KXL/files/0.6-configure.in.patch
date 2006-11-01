@@ -1,16 +1,17 @@
---- configure.in	2003-01-14 23:17:08.000000000 -0500
-+++ /configure.in	2003-03-04 16:59:02.000000000 -0500
-@@ -17,10 +17,10 @@
+--- configure.in
++++ configure.in
+@@ -17,12 +17,8 @@
  AC_CHECK_HEADERS(unistd.h)
  
  dnl installation & score path
 -if test "x${prefix}" = "xNONE"; then
 -  inst_path="${ac_default_prefix}/games/grande"
-+if test "x${datadir}" = "xNONE"; then
-+  inst_path="${ac_default_datadir}/games/grande"
- else
+-else
 -  inst_path="${prefix}/games/grande"
-+  inst_path="${datadir}/games/grande"
- fi
- score_path="/var/games"
+-fi
+-score_path="/var/games"
++inst_path="${datadir}/grande"
++score_path="${localstatedir}"
  
+ dnl check if installation was disabled
+ AC_ARG_ENABLE( install,

@@ -1,11 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.6 2005/05/12 23:39:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.7 2006/11/01 22:31:40 nyhm Exp $
 
-inherit eutils games
+WANT_AUTOCONF=latest
+WANT_AUTOMAKE=latest
+inherit autotools eutils games
 
 DESCRIPTION="ZANAC type game"
-HOMEPAGE="http://kxl.hn.org/"
+HOMEPAGE="http://kxl.orz.hm/"
 SRC_URI="http://kxl.hn.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -19,21 +21,12 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-configure.in.patch
-	aclocal && \
-	automake -c -a && \
-	autoconf || die "autotools failed"
-}
-
-src_compile() {
-	egamesconf \
-		--datadir="${GAMES_DATADIR_BASE}" \
-		|| die
-	emake || die
+	eautoreconf
 }
 
 src_install() {
 	dodir "${GAMES_STATEDIR}"
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README
 	prepgamesdirs
 }
