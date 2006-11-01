@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.7 2006/10/30 04:03:21 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.243-r1.ebuild,v 1.8 2006/11/01 20:18:10 kloeri Exp $
 
 inherit eutils rpm versionator kde-functions
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/sou
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc sparc x86"
 IUSE="gtk kde xmms"
 
 # See end of src_install():
