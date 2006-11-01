@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.5 2006/10/30 20:09:31 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.6 2006/11/01 16:58:39 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -44,10 +44,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c || die "PIC patching failed"
-
-	# this warning is only available on gcc4!
-	sed -i -e '/AM_CFLAGS/s!-Wno-pointer-sign!!g' ${S}/g10/Makefile.am
-	sed -i -e '/AM_CFLAGS/s!-Wno-pointer-sign!!g' ${S}/g10/Makefile.in
 
 	epatch "${FILESDIR}/${P}-make.patch"
 	epatch "${FILESDIR}/${P}-fbsd.patch"
