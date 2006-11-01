@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.6.ebuild,v 1.1 2005/09/19 03:32:52 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.6.ebuild,v 1.2 2006/11/01 13:43:45 aballier Exp $
+
+inherit eutils
 
 MY_P="${P/x/X}"
 S="${WORKDIR}/${MY_P}"
@@ -20,7 +22,14 @@ DEPEND="=x11-libs/gtk+-1.2*
 	media-libs/id3lib
 	media-libs/flac"
 
-src_install () {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+}
+
+src_install() {
 	dodoc CHANGES FAQ README* TODO
 
 	into /usr
