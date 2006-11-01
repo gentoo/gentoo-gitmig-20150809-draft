@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.180 2006/10/23 00:43:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.181 2006/11/01 20:14:42 wolf31o2 Exp $
+
+  01 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> coreutils-6.4.ebuild:
+  Stable on amd64/x86 wrt bug #144467.
 
 *coreutils-6.4 (23 Oct 2006)
 
