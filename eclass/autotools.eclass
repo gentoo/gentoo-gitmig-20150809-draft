@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.55 2006/10/27 14:19:07 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.56 2006/11/01 10:58:46 flameeyes Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 # Enhancements: Martin Schlemmer <azarah@gentoo.org>
@@ -200,14 +200,16 @@ autotools_set_versions() {
 	fi
 
 	if [[ -n ${WANT_AUTOMAKE} ]]; then
+		local latest_automake
 		if [[ ${WANT_AUTOMAKE} == "latest" ]]; then
+			latest_automake="latest: "
 			for amver in 1.10 1.9 1.8 1.7 1.6; do
 				WANT_AUTOMAKE="${amver}"
 				ROOT=/ has_version =sys-devel/automake-${amver}* && break
 			done
 		fi
 		export WANT_AUTOMAKE
-		einfo "Requested automake ${WANT_AUTOMAKE}"
+		einfo "Requested automake ${latest_automake}${WANT_AUTOMAKE}"
 		einfo "Using $(automake --version 2>/dev/null | head -n 1)"
 		einfo "Using $(aclocal --version 2>/dev/null | head -n 1)"
 	fi
