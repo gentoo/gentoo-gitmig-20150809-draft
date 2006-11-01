@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.2 2006/08/07 10:19:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.3 2006/11/01 18:53:41 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,13 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="BSD"
 
-DEPEND="gtk? ( >=x11-libs/gtk+-2 )
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
 	!gtk? ( imlib? ( >=media-libs/imlib-1.9.14 ) )
 	truetype? ( =media-libs/freetype-2* )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
 	nls? ( sys-devel/gettext )
 	uim? ( >=app-i18n/uim-0.3.4.2 )
-	scim? ( || ( >=app-i18n/scim-1.4 app-i18n/scim-cvs ) )"
+	scim? ( || ( >=app-i18n/scim-1.4 app-i18n/scim-cvs ) )
+	virtual/utempter
+	x11-libs/libX11
+	x11-libs/libICE
+	x11-libs/libSM"
+DEPEND="${RDEPEND}"
 #	m17n-lib? ( >=dev-libs/m17n-lib-1.2.0 )
 
 src_unpack() {
