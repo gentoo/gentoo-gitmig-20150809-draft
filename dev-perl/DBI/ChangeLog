@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.75 2006/11/01 00:13:39 vivo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBI/ChangeLog,v 1.76 2006/11/01 07:31:18 ian Exp $
+
+  01 Nov 2006; Christian Hartmann <ian@gentoo.org> Manifest:
+  Fix broken digest
 
   01 Nov 2006; Francesco Riosa <vivo@gentoo.org> DBI-1.52.ebuild:
   added ~sparc-fbsd to satisfy MySQL deps
