@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.26-r1.ebuild,v 1.3 2006/10/27 07:16:41 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.26-r1.ebuild,v 1.4 2006/11/01 00:24:14 vivo Exp $
 
 # Leave this empty
 MYSQL_VERSION_ID=""
@@ -10,6 +10,7 @@ MYSQL_PATCHSET_REV="3"
 
 inherit mysql
 
+#REMEMBER!!!: update also eclass/mysql*.eclass prior to commit
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 
 src_test() {

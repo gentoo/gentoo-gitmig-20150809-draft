@@ -1,10 +1,17 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.369 2006/10/27 11:11:10 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.370 2006/11/01 00:24:14 vivo Exp $
+
+  01 Nov 2006; Francesco Riosa <vivo@gentoo.org> mysql-4.0.25-r2.ebuild,
+  mysql-4.0.27.ebuild, mysql-4.1.21.ebuild, mysql-5.0.26-r1.ebuild,
+  mysql-5.1.13_alpha20061018.ebuild:
+  - Added warn to ARCHs to remember them to cvs update the eclasses too
+  - converted 4.0.25 to use eclasses.
+  - added "~sparc-fbsd" keywords to two dependancies
 
   27 Oct 2006; Luca Longinotti <chtekk@gentoo.org>
   files/digest-mysql-5.1.13_alpha20061018, Manifest:
-  Fix digest... ECLASSES UPDATE YOUR ECLASSES!
+  Fix digest... Eclasses, please update YOUR ECLASSES!
 
   27 Oct 2006; Roy Marples <uberlord@gentoo.org> mysql-5.0.26-r1.ebuild:
   Added ~sparc-fbsd keyword.
