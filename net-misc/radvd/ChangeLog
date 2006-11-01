@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.31 2006/07/19 13:02:36 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.32 2006/11/01 17:29:29 uberlord Exp $
+
+  01 Nov 2006; Roy Marples <uberlord@gentoo.org> ChangeLog:
+  New version.
 
   19 Jul 2006; Roy Marples <uberlord@gentoo.org> +files/radvd.conf,
   +files/radvd.init, metadata.xml, radvd-0.9.1.ebuild:
