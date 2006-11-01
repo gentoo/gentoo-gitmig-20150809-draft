@@ -15,10 +15,10 @@ NS=
 DOMAIN=
 for var in ${!foreign_option_*} ; do
 	opt="${!var}"
-	if [[ ${opt} =~ "dhcp-option DOMAIN (.*)" ]] ; then
-		DOMAIN="${DNS}domain ${BASH_REMATCH[1]}\n"
-	elif [[ ${opt} =~ "dhcp-option DNS (.*)" ]] ; then
-		NS="${DNS}nameserver ${BASH_REMATCH[1]}\n"
+	if [[ ${opt} != "${opt#dhcp-option DOMAIN *}" ]] ; then
+		DOMAIN="${DNS}domain ${opt#dhcp-option DOMAIN *}\n"
+	elif [[ ${opt} != "${opt#dhcp-option DNS *}" ]] ; then
+		NS="${DNS}nameserver ${opt#dhcp-option DNS *}\n"
 	fi
 done
 

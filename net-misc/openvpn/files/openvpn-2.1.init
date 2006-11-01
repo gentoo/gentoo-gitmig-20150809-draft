@@ -37,16 +37,14 @@ checkconfig() {
 
 	# Other OS's don't, so we rely on a pre-configured interface
 	# per vpn instance
-	local ifname=
-	if [[ ! $'\n'$(<"${VPNCONF}") =~ \
-	$'\n'"[[:space:]]*dev[[:space:]]*([^[[:space:]]*)" ]] ; then
+	local ifname=$(sed -n -e 's/[[:space:]]*dev[[:space:]][[:space:]]*\([^[:space:]]*\).*/\1/p' "${VPNCONF}")
+	if [[ -z ${ifname} ]] ; then
 		eerror "You need to specify the interface that this openvpn" \
 			"instance should use" \
 			"by using the dev option in ${VPNCONF}"
 		return 1
 	fi
 
-	ifname="${BASH_REMATCH[1]}"
 	if ! ifconfig "${ifname}" &>/dev/null ; then
 		# Try and create it
 		echo > /dev/"${ifname}" &>/dev/null
