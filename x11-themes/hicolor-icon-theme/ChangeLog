@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.31 2006/04/28 00:00:14 marienz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.32 2006/11/01 11:39:31 flameeyes Exp $
+
+  01 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  hicolor-icon-theme-0.9-r1.ebuild:
+  Add ~x86-fbsd keyword.
 
   28 Apr 2006; Marien Zwart <marienz@gentoo.org>
   files/digest-hicolor-icon-theme-0.5, files/digest-hicolor-icon-theme-0.8,
