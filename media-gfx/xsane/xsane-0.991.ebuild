@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.991.ebuild,v 1.8 2006/03/07 18:17:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.991.ebuild,v 1.9 2006/11/01 11:35:59 phosphan Exp $
 
 inherit eutils
 
@@ -13,12 +13,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE="nls jpeg png tiff gimp"
 
-DEPEND="media-gfx/sane-backends
+RDEPEND="media-gfx/sane-backends
 	>=x11-libs/gtk+-2.0
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
 	gimp? ( media-gfx/gimp )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	export OLDXSANE
