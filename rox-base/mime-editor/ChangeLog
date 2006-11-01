@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/mime-editor
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.5 2006/10/04 14:08:04 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/mime-editor/ChangeLog,v 1.6 2006/11/01 17:20:44 lack Exp $
+
+  01 Nov 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Now owned by new rox herd
 
   04 Oct 2006; Jim Ramsay <lack@gentoo.org> mime-editor-0.5.ebuild:
   Fixed order of version variables for 'include rox'

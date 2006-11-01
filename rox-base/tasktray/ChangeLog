@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/tasktray
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.2 2006/10/11 16:01:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.3 2006/11/01 17:20:44 lack Exp $
+
+  01 Nov 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Now owned by new rox herd
 
 *tasktray-0.3.6 (11 Oct 2006)
 

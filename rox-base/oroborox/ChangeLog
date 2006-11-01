@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/oroborox
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.9 2006/10/30 14:30:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/oroborox/ChangeLog,v 1.10 2006/11/01 17:20:45 lack Exp $
+
+  01 Nov 2006; Jim Ramsay <lack@gentoo.org> metadata.xml:
+  Now owned by new rox herd
 
   30 Oct 2006; Jim Ramsay <lack@gentoo.org> -oroborox-0.9.5.ebuild:
   REALLY removed 0.9.5 (Bug 153409)
