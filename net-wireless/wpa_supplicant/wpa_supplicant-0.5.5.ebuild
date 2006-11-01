@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.9 2006/11/01 08:20:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.5.5.ebuild,v 1.10 2006/11/01 22:04:39 uberlord Exp $
 
 inherit eutils toolchain-funcs
 
@@ -103,8 +103,8 @@ src_unpack() {
 	if use kernel_linux ; then
 		# Linux specific drivers
 		echo "CONFIG_DRIVER_ATMEL=y"       >> .config
-		echo "CONFIG_DRIVER_BROADCOM=y"	   >> .config
-		echo "CONFIG_DRIVER_HERMES=y"	   >> .config
+		#echo "CONFIG_DRIVER_BROADCOM=y"   >> .config
+		#echo "CONFIG_DRIVER_HERMES=y"	   >> .config
 		echo "CONFIG_DRIVER_HOSTAP=y"      >> .config
 		echo "CONFIG_DRIVER_IPW=y"         >> .config
 		echo "CONFIG_DRIVER_NDISWRAPPER=y" >> .config
