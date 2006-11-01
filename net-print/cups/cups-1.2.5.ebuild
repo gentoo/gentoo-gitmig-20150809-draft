@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.5.ebuild,v 1.1 2006/10/21 00:45:55 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.2.5.ebuild,v 1.2 2006/11/01 04:34:23 cardoe Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -19,7 +19,7 @@ IUSE="ssl slp pam php samba nls dbus tiff png ppds jpeg X"
 DEP="pam? ( virtual/pam )
 	ssl? ( net-libs/gnutls )
 	slp? ( >=net-libs/openslp-1.0.4 )
-	dbus? ( || ( sys-apps/dbus-core sys-apps/dbus ) )
+	dbus? ( sys-apps/dbus )
 	png? ( >=media-libs/libpng-1.2.1 )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -31,8 +31,8 @@ RDEPEND="${DEP}
 	nls? ( virtual/libintl )
 	!virtual/lpr
 	>=app-text/poppler-0.4.3-r1
-	X? ( x11-misc/xdg-utils )
-	"
+	X? ( x11-misc/xdg-utils )"
+
 PDEPEND="
 	ppds? ( || (
 		(
