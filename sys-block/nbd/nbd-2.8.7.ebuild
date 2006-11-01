@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.8.7.ebuild,v 1.1 2006/10/17 20:16:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.8.7.ebuild,v 1.2 2006/11/01 01:45:29 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/glib-2.0"
+RDEPEND=">=dev-libs/glib-2.0"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
