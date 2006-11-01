@@ -6,5 +6,9 @@
   <email>tcltk@gentoo.org</email>
   <description>TCL / TK herd</description>
 </maintainer>
+<maintainer>
+  <email>jokey@gentoo.org</email>
+  <description>Markus Ullmann (interim)</description>
+</maintainer>
 <longdescription>Extended TCL</longdescription>
 </pkgmetadata>
