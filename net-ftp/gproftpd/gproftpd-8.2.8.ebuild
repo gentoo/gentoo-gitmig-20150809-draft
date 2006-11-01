@@ -1,26 +1,28 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.1.9.ebuild,v 1.3 2006/11/01 18:54:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/gproftpd-8.2.8.ebuild,v 1.1 2006/11/01 18:54:41 dertobi123 Exp $
 
 
 DESCRIPTION="GTK frontend to proftpd"
 HOMEPAGE="http://mange.dynup.net/linux.html"
 SRC_URI="http://mange.dynup.net/linux/gproftpd/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 
 IUSE="gnome ssl"
 
 # Requiring ProFTPD 1.2.9 due to security fixes
-DEPEND=">=net-ftp/proftpd-1.2.9
-	>=x11-libs/gtk+-2.0
+DEPEND=">=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
 	>=x11-libs/pango-1.0
 	>=dev-libs/atk-1.0
 	dev-util/pkgconfig
 	>=media-libs/freetype-2.0
 	ssl? ( >=dev-libs/openssl-0.9.6f )"
+
+RDEPEND="${DEPEND}
+	>=net-ftp/proftpd-1.2.9"
 
 src_compile() {
 	local modules includes myconf
@@ -36,13 +38,14 @@ src_compile() {
 	fi
 
 	econf --sysconfdir=${myconf} \
+		--localstatedir=/var \
 		--with-modules=${modules} \
 		--with-includes=${includes} || die "./configure failed"
 	emake || die "Build failure"
 }
 
 src_install () {
-	einstall || die "Installation failure"
+	emake DESTDIR=${D} install || die "Installation failure"
 
 #         Add the Gnome menu entry
 	if use gnome; then
