@@ -1,5 +1,5 @@
 # /lib/rcscripts/addons/dm-start.sh:  Setup DM volumes at boot
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/dm-start.sh,v 1.2 2005/05/20 03:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/dm-start.sh,v 1.3 2006/11/01 19:02:56 dsd Exp $
 
 # char **get_new_dm_volumes(void)
 #
@@ -30,12 +30,20 @@ dmvolume_exists() {
 	/sbin/dmsetup ls 2>/dev/null | \
 	while read line ; do
 		for x in ${line} ; do
-			[[ ${x} == "${volume}" ]] && return 0
+			# the following conditonal return only breaks out
+			# of the while loop, as it is running in a pipe.
+			[[ ${x} == "${volume}" ]] && return 1
 			# We only want to check the volume name
 			break
 		done
 	done
 
+	# if 1 was returned from the above loop, then indicate that
+	# volume exists
+	[[ $? == 1 ]] && return 0
+
+	# otherwise the loop exited normally and the volume does not
+	# exist
 	return 1
 }
 
