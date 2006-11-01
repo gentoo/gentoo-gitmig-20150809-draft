@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.22 2006/11/01 20:04:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.23 2006/11/01 20:06:19 wolf31o2 Exp $
+
+  01 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/limewire.desktop, -limewire-4.0.8.ebuild, -limewire-4.2.3.ebuild,
+  -limewire-4.6.0.ebuild, -limewire-4.8.1.ebuild:
+  Cleaning up older ebuilds which are not ported to modular X.
 
   01 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   limewire-4.9.37.ebuild:
