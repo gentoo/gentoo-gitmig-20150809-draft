@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.18.ebuild,v 1.1 2006/10/31 21:10:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.18.ebuild,v 1.2 2006/11/01 01:16:38 vapier Exp $
 
 inherit eutils distutils libtool
 
@@ -13,6 +13,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="python"
+RESTRICT="mirror" #let upstream tarballs settle first
 
 DEPEND=""
 
