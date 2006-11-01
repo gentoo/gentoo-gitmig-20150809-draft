@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmpx-themes/bmpx-themes-0.0.3-r1.ebuild,v 1.1 2006/08/30 15:30:04 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bmpx-themes/bmpx-themes-0.0.3-r1.ebuild,v 1.2 2006/11/01 19:37:29 chutzpah Exp $
 
 
 DESCRIPTION="Collection of XMMS themes for BMPx"
@@ -105,7 +105,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="media-sound/bmpx"
+RDEPEND="=media-sound/bmpx-0.2*"
 
 src_unpack() {
 	local bn
