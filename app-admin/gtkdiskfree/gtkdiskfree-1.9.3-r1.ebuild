@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3-r1.ebuild,v 1.7 2006/02/04 21:11:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/gtkdiskfree-1.9.3-r1.ebuild,v 1.8 2006/11/01 19:07:00 dertobi123 Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ IUSE="nls"
 
 DEPEND=">=x11-libs/gtk+-2
 	>=dev-libs/glib-2
+	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
