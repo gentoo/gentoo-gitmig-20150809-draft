@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.14.1.ebuild,v 1.12 2006/10/19 15:31:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.14.1.ebuild,v 1.13 2006/11/01 06:32:20 leonardop Exp $
 
-inherit eutils gnome2
+WANT_AUTOMAKE=1.7
+
+inherit autotools gnome2
 
 DESCRIPTION="Essential Gnome Libraries"
 HOMEPAGE="http://www.gnome.org/"
@@ -17,7 +19,8 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=gnome-base/libbonobo-2.13
 	>=gnome-base/gnome-vfs-2.5.3
 	>=dev-libs/popt-1.5
-	esd? ( >=media-sound/esound-0.2.26
+	esd? (
+		>=media-sound/esound-0.2.26
 		>=media-libs/audiofile-0.2.3 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.28
@@ -26,15 +29,16 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
+
 pkg_setup() {
-	G2CONF="${G2CONF} --disable-schemas-install $(use_enable static) $(use_enable esd)"
+	G2CONF="${G2CONF} --disable-schemas-install \
+		$(use_enable static) \
+		$(use_enable esd)"
 }
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	export WANT_AUTOMAKE=1.7
+	gnome2_src_unpack
+
 	cp aclocal.m4 old_macros.m4
-	aclocal -I . || die "aclocal failed"
-	autoconf || die "autoconf failed"
+	AT_M4DIR="." eautoreconf
 }
