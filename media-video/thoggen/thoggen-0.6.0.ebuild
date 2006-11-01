@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.6.0.ebuild,v 1.1 2006/10/19 20:24:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/thoggen/thoggen-0.6.0.ebuild,v 1.2 2006/11/01 16:49:06 hanno Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ DEPEND=">=gnome-base/libglade-2.4.0
 	>=media-libs/gst-plugins-good-0.10.4
 	>=media-libs/gst-plugins-ugly-0.10.4
 	>=media-plugins/gst-plugins-mpeg2dec-0.10.4
-	>=media-plugins/gst-plugins-a52dec-0.10.4
+	>=media-plugins/gst-plugins-a52dec-0.10.4-r1
 	>=media-plugins/gst-plugins-dvdread-0.10.4
 	>=media-plugins/gst-plugins-theora-0.10.10
 	>=media-plugins/gst-plugins-vorbis-0.10.10
