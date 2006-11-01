@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/doom3-dungeon
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/ChangeLog,v 1.1 2006/11/01 15:29:52 wolf31o2 Exp $
+
+*doom3-dungeon-8.01 (01 Nov 2006)
+
+  01 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +doom3-dungeon-8.01.ebuild:
+  Initial import. Original ebuild by Paul Bredbury <brebs@sent.com> and ported
+  to the games-mods eclass by me. Closing bug #127147.
+
