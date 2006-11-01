@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.40.ebuild,v 1.6 2006/11/01 15:38:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.41.ebuild,v 1.1 2006/11/01 15:38:15 agriffis Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -10,12 +10,13 @@ SRC_URI="mirror://sourceforge/dump/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="readline static"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="readline static ermt"
 
 RDEPEND=">=sys-fs/e2fsprogs-1.27
 	>=app-arch/bzip2-1.0.2
 	>=sys-libs/zlib-1.1.4
+	ermt? ( dev-libs/openssl )
 	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
@@ -32,6 +33,7 @@ src_compile() {
 		--with-{bin,man}owner=root \
 		--with-{bin,man}grp=root \
 		--enable-largefile \
+		$(use_enable ermt) \
 		$(use_enable static) \
 		$(use_enable readline) \
 		|| die
@@ -43,6 +45,7 @@ src_install() {
 	einstall MANDIR="${D}"/usr/share/man/man8 || die
 	mv "${D}"/usr/sbin/{,dump-}rmt
 	mv "${D}"/usr/share/man/man8/{,dump-}rmt.8
+	use ermt && newsbin rmt/ermt dump-ermt
 
 	dodoc CHANGES KNOWNBUGS MAINTAINERS README REPORTING-BUGS THANKS TODO
 	cd examples
@@ -54,6 +57,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "Dump now installs 'rmt' as 'dump-rmt'."
-	ewarn "This is to avoid conflicts with tar's 'rmt'."
+	ewarn "app-arch/dump installs 'rmt' as 'dump-rmt'."
+	ewarn "This is to avoid conflicts with app-arch/tar 'rmt'."
 }
