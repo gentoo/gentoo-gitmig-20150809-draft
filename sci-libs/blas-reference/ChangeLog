@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.20 2006/09/13 18:08:34 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.21 2006/11/01 00:48:06 dberkholz Exp $
+
+  01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update for my nick change spyderous -> dberkholz.
 
   13 Sep 2006; Danny van Dyk <kugelfang@gentoo.org>
   -blas-reference-19940131.ebuild, blas-reference-19940131-r3.ebuild,
@@ -37,7 +40,7 @@
 
 *blas-reference-19940131-r4 (03 Jul 2006)
 
-  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +blas-reference-19940131-r4.ebuild:
   Bumps to switch to new eselect modules.
 
@@ -47,13 +50,13 @@
 
 *blas-reference-19940131-r3 (29 May 2006)
 
-  29 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  29 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/blas-reference-19940131-autotool.patch,
   +blas-reference-19940131-r3.ebuild:
   Bump to autotool the package, which makes the build work much better in
   parallel and with gcc4.
 
-  15 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  15 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   blas-reference-19940131-r2.ebuild:
   Keyword ~ppc.
 

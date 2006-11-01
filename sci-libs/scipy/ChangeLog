@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.13 2006/09/24 07:38:30 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.14 2006/11/01 00:51:46 dberkholz Exp $
+
+  01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update for my nick change spyderous -> dberkholz.
 
   24 Sep 2006; Donnie Berkholz <dberkholz@gentoo.org>; scipy-0.5.1.ebuild:
   Drop pkg_setup() and use default fortran one. This gets rid of the forced
@@ -29,23 +32,23 @@
 
 *scipy-0.4.9 (14 Jun 2006)
 
-  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>; +scipy-0.4.9.ebuild:
+  14 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>; +scipy-0.4.9.ebuild:
   Bump. Incorporates many changes from the science overlay, mainly from bicatali.
 
-  14 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  14 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   scipy-0.4.8-r1.ebuild:
   Remove =gcc-3* dep.
 
-  13 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   scipy-0.4.8-r1.ebuild:
   Keyword ~ppc.
 
-  13 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   scipy-0.4.8-r1.ebuild:
   (#134248) Fix for gcc4, and stop appending -O3 -funroll-loops at the end of
   our compiler flags by specifying --opt.
 
-  13 Jun 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  13 Jun 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   scipy-0.4.8-r1.ebuild:
   When checking for ATLAS, do it case-insensitively. Future planning for
   blas-config and lapack-config as eselect wrappers.

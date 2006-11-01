@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/lapack-atlas
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.31 2006/10/31 14:29:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-atlas/ChangeLog,v 1.32 2006/11/01 00:55:41 dberkholz Exp $
+
+  01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update for my nick change spyderous -> dberkholz.
 
 *lapack-atlas-3.7.19 (31 Oct 2006)
 
@@ -98,7 +101,7 @@
 *lapack-atlas-3.7.11-r1 (03 Jul 2006)
 *lapack-atlas-3.6.0-r2 (03 Jul 2006)
 
-  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +lapack-atlas-3.6.0-r2.ebuild, +lapack-atlas-3.7.11-r1.ebuild:
   Bumps to switch to new eselect modules.
 
@@ -106,7 +109,7 @@
   lapack-atlas-3.7.11.ebuild:
   Mark 3.7.11 ~ia64
 
-  21 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  21 Mar 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/3.7.11-allow-any-gcc-version.patch, lapack-atlas-3.7.11.ebuild:
   (#121855) Allow compilation with gcc-4. Also at least partially fix
   compilation with non-gcc compilers (e.g. ifc). You will now need to pass FC

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/acml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.15 2006/08/27 19:48:04 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/acml/ChangeLog,v 1.16 2006/11/01 00:47:34 dberkholz Exp $
+
+  01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update for my nick change spyderous -> dberkholz.
 
   27 Aug 2006; Donnie Berkholz <dberkholz@gentoo.org>; files/eselect.cblas:
   (#141127) acml.h isn't compatible with cblas.h, so don't symlink it as if it
@@ -18,11 +21,11 @@
 
 *acml-3.1.0-r1 (03 Jul 2006)
 
-  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +acml-3.1.0-r1.ebuild:
   Bumps to switch to new eselect modules.
 
-  15 May 2006; Donnie Berkholz <spyderous@gentoo.org>; acml-2.5.0.ebuild:
+  15 May 2006; Donnie Berkholz <dberkholz@gentoo.org>; acml-2.5.0.ebuild:
   Update homepage to match the others. Some programs cache the first one they
   find, so they get the oldest homepage.
 

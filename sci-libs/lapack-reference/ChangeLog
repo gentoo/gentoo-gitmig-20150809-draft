@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.13 2006/10/24 03:12:02 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.14 2006/11/01 00:56:21 dberkholz Exp $
+
+  01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
+  Update for my nick change spyderous -> dberkholz.
 
   24 Oct 2006; Joshua Jackson <tsunam@gentoo.org>
   lapack-reference-3.0-r1.ebuild:
@@ -21,7 +24,7 @@
 
 *lapack-reference-3.0-r4 (03 Jul 2006)
 
-  03 Jul 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  03 Jul 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +lapack-reference-3.0-r4.ebuild:
   Bumps to switch to new eselect modules.
 
@@ -31,14 +34,14 @@
 
 *lapack-reference-3.0-r3 (29 May 2006)
 
-  29 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  29 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   +files/lapack-reference-3.0-autotool.patch,
   +lapack-reference-3.0-r3.ebuild:
   Bump to autotool the package, which makes the build work much better in
   parallel and with gcc4. Thanks to Adam Piątyszek for catching an initial
   problem; a couple of files cannot be compiled with optimization.
 
-  15 May 2006; Donnie Berkholz <spyderous@gentoo.org>;
+  15 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
   lapack-reference-3.0-r2.ebuild:
   Keyword ~ppc.
 
