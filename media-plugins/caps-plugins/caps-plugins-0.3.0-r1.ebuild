@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.3.0-r1.ebuild,v 1.1 2006/04/23 18:30:34 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.3.0-r1.ebuild,v 1.2 2006/11/01 22:30:39 wolf31o2 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://quitte.de/dsp/caps.html"
 SRC_URI="http://quitte.de/dsp/caps_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 
 DEPEND="media-libs/ladspa-sdk"
 
