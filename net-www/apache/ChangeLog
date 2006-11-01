@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.500 2006/10/15 23:13:34 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.501 2006/11/01 17:38:42 vericgar Exp $
+
+  01 Nov 2006; Michael Stewart <vericgar@gentoo.org>
+  apache-2.0.59-r1.ebuild:
+  New tarball that fixes a typo with environment handling in the init script.
 
 *apache-2.0.59-r1 (15 Oct 2006)
 
