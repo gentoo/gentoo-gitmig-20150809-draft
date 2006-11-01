@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.87 2006/10/30 20:20:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.88 2006/11/01 12:19:01 flameeyes Exp $
+
+  01 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> audacious-1.2.1.ebuild:
+  Add ~x86-fbsd keyword.
 
   30 Oct 2006; Jeroen Roovers <jer@gentoo.org> audacious-1.2.1.ebuild:
   Marked ~hppa (bug #153433).
