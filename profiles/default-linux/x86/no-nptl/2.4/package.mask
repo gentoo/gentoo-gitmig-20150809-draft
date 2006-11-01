@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.27 2006/10/09 19:43:19 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/no-nptl/2.4/package.mask,v 1.28 2006/11/01 12:24:07 hanno Exp $
 
 #Joshua Jackson <tsunam@gentoo.org>
 #Gnome-2.16 is not supported in 2.4 kernels as per bug #147707
@@ -79,6 +79,10 @@
 >=x11-misc/icon-naming-utils-0.8.1
 >=gnome-base/gconf-2.16.0
 >=gnome-base/gnome-light-2.16.0
+
+# Hanno Boeck <hanno@gentoo.org>
+# Needs gnome 2.16
+x11-wm/compiz
 
 # Andrej Kacian <ticho@gentoo.org>
 # Depends on >=2.6.11 headers
