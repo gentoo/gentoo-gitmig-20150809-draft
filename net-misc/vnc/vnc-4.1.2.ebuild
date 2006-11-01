@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.19 2006/10/27 01:21:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.1.2.ebuild,v 1.20 2006/11/01 03:48:18 jer Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -100,7 +100,7 @@ src_unpack() {
 		cp -a unix/xorg-server-*/{fb/fbrop.h,hw/vnc}
 		sed -i -e 's,xor,c_xor,' -e 's,and,c_and,' \
 			unix/xorg-server*/hw/vnc/{cfb,fb,fbrop}.h
-		cd xorg-server-*
+		cd unix/xorg-server-*
 		eautoreconf
 	fi
 }
