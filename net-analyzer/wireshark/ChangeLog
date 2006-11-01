@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.32 2006/09/18 11:08:08 strerror Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.33 2006/11/01 10:17:59 dragonheart Exp $
+
+*wireshark-0.99.4 (01 Nov 2006)
+
+  01 Nov 2006; Daniel Black <dragonheart@gentoo.org>
+  +wireshark-0.99.4.ebuild:
+  version bump as per security bug #152951. Also fixes dead symlink - bug
+  #145067, wifiscanner & wireshark: File collision /usr/lib/libwiretap.la bug
+  #146286
 
   18 Sep 2006; Benjamin Smee <strerror@gentoo.org> wireshark-0.99.3.ebuild:
   Small change for bug #147814
