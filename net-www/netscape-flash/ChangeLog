@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.43 2006/10/23 17:44:36 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.44 2006/11/01 01:54:03 tester Exp $
+
+  01 Nov 2006; Olivier Crête <tester@gentoo.org>
+  netscape-flash-9.0.21.55.ebuild:
+  Remove meaninless use flag, bug #153185
 
   23 Oct 2006; Patrick McLean <chutzpah@gentoo.org>
   netscape-flash-9.0.21.55.ebuild:
