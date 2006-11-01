@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.68 2006/10/25 05:53:32 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.69 2006/11/01 05:02:22 cardoe Exp $
+
+  01 Nov 2006; Doug Goldstein <cardoe@gentoo.org> avahi-0.6.14.ebuild:
+  Fixing dbus depends
 
   25 Oct 2006; Joshua Jackson <tsunam@gentoo.org> avahi-0.6.12.ebuild:
   Stable x86; bug #150540
