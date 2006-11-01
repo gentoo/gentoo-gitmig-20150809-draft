@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.7 2006/09/02 16:10:30 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.7.0.ebuild,v 1.8 2006/11/01 06:13:55 vapier Exp $
 
 inherit eutils
 
@@ -21,10 +21,10 @@ RDEPEND="dev-lang/perl
 	png? ( media-libs/libpng )
 	>=app-emulation/libspectrum-0.2.2
 	|| (
+		gtk? ( >=x11-libs/gtk+-2 )
 		sdl? ( media-libs/libsdl )
 		svga? ( media-libs/svgalib )
 		fbcon? ( virtual/linux-sources )
-		gtk? ( >=x11-libs/gtk+-2 )
 		!svga? ( !fbcon? ( !sdl? (
 			|| ( ( x11-libs/libX11
 			x11-libs/libXext )
@@ -36,7 +36,7 @@ RDEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${A}
-
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc4.patch
 }
 
@@ -64,6 +64,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS README THANKS hacking/*.txt
 }
