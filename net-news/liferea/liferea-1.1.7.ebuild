@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.1.7.ebuild,v 1.1 2006/10/24 19:40:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.1.7.ebuild,v 1.2 2006/11/01 00:10:40 dang Exp $
 
 inherit gnome2 flag-o-matic eutils autotools
 
@@ -30,7 +30,8 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	gnutls? ( net-libs/gnutls )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	=sys-devel/automake-1.7*"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

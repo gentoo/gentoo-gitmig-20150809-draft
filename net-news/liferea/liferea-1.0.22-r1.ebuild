@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.22-r1.ebuild,v 1.1 2006/09/14 05:07:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.22-r1.ebuild,v 1.2 2006/11/01 00:10:40 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -27,7 +27,8 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 # libgnome dep is for gnome-open; it's not in configure.ac
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	=sys-devel/automake-1.7*"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
