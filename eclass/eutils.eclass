@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.256 2006/10/31 19:29:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.257 2006/11/01 23:46:17 vapier Exp $
 #
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
@@ -1165,7 +1165,7 @@ unpack_makeself() {
 	eval ${exe} 2>/dev/null | head -c 512 > "${tmpfile}"
 	local filetype="$(file -b "${tmpfile}")"
 	case ${filetype} in
-		*tar\ archive)
+		*tar\ archive*)
 			eval ${exe} | tar --no-same-owner -xf -
 			;;
 		bzip2*)
