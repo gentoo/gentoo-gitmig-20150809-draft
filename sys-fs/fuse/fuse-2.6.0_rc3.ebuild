@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.0_rc3.ebuild,v 1.1 2006/10/16 18:24:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.6.0_rc3.ebuild,v 1.2 2006/11/01 06:17:18 vapier Exp $
 
 inherit linux-mod eutils libtool
 
@@ -29,20 +29,23 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/fuse-fix-lazy-binding.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/fuse-fix-lazy-binding.patch
+	epatch "${FILESDIR}"/${P}-no-mknod.patch #152032
 	elibtoolize
 }
 
 src_compile() {
-	einfo "Preparing fuse userland"
-	econf --disable-kernel-module --disable-example || \
-		die "econf failed for fuse userland"
+	econf \
+		--disable-kernel-module \
+		--disable-example \
+		|| die "econf failed for fuse userland"
 	emake || die "emake failed"
 
-	if use kernel_linux; then
-		sed -i -e 's/.*depmod.*//g' ${S}/kernel/Makefile.in
-		convert_to_m ${S}/kernel/Makefile.in
+	if use kernel_linux ; then
+		cd "${S}"
+		sed -i -e 's/.*depmod.*//g' kernel/Makefile.in
+		convert_to_m kernel/Makefile.in
 		linux-mod_src_compile
 	fi
 }
@@ -55,7 +58,7 @@ src_install() {
 	docinto example
 	dodoc example/*
 
-	if use kernel_linux; then
+	if use kernel_linux ; then
 		linux-mod_src_install
 	else
 		insinto /usr/include/fuse
