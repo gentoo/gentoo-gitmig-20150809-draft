@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.44 2006/10/23 18:14:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-multilib/package.mask,v 1.45 2006/11/01 15:30:50 wolf31o2 Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -75,6 +75,7 @@ games-fps/doom3-chextrek
 games-fps/doom3-data
 games-fps/doom3-demo
 games-fps/doom3-ducttape
+games-fps/doom3-dungeon
 games-fps/doom3-hellcampaign
 games-fps/doom3-inhell
 games-fps/doom3-lms
