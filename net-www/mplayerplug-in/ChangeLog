@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.79 2006/10/25 18:23:00 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.80 2006/11/01 20:07:27 josejx Exp $
+
+  01 Nov 2006; Joseph Jezak <josejx@gentoo.org>
+  mplayerplug-in-3.31-r1.ebuild:
+  Fixed pkgconfig dependency for bug #153622.
 
   25 Oct 2006; Joseph Jezak <josejx@gentoo.org> -files/fix-cflags.patch,
   -mplayerplug-in-3.25.ebuild, -mplayerplug-in-3.25-r1.ebuild,
