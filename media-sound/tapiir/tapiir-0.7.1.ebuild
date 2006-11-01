@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.1.ebuild,v 1.14 2005/07/25 19:13:59 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/tapiir-0.7.1.ebuild,v 1.15 2006/11/01 13:24:01 aballier Exp $
 
 inherit eutils
 
@@ -20,9 +20,10 @@ DEPEND="media-sound/jack-audio-connection-kit
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gcc3.patch
+	epatch "${FILESDIR}/${P}-gcc3.patch"
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" src/alsaio.cxx
 }
 
