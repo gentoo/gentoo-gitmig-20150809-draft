@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r2.ebuild,v 1.2 2006/10/25 16:45:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.2_beta-r2.ebuild,v 1.3 2006/11/01 10:06:51 aballier Exp $
+
+WANT_AUTOMAKE=1.9
+WANT_AUTOCONF=2.5
 
 inherit eutils autotools
 
@@ -35,8 +38,6 @@ RDEPEND="=sci-libs/fftw-2*
 # app-cdr/cdrdao
 
 DEPEND="${RDEPEND}
-	sys-devel/autoconf
-	sys-devel/automake
 	sys-devel/bison
 	sys-devel/flex"
 
@@ -47,6 +48,7 @@ src_unpack() {
 	EPATCH_SOURCE="${WORKDIR}" EPATCH_SUFFIX="patch"\
 	EPATCH_FORCE="yes" epatch
 
+	epatch "${FILESDIR}/${P}-foxinclude.patch"
 	AT_M4DIR="config/m4" eautoreconf
 	elibtoolize
 }

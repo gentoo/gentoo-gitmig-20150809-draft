@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.32 2006/10/25 16:45:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.33 2006/11/01 10:06:51 aballier Exp $
+
+  01 Nov 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/rezound-0.12.2_beta-foxinclude.patch,
+  rezound-0.12.2_beta-r2.ebuild:
+  Small patch so that fox 1.6 include path is not appended to cflags
+  automatically; better autotools dep handling
 
   25 Oct 2006; Alexis Ballier <aballier@gentoo.org>
   rezound-0.12.2_beta-r2.ebuild:
