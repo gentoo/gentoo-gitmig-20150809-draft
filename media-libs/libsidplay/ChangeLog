@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsidplay
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.30 2006/09/13 17:53:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.31 2006/11/01 15:24:35 flameeyes Exp $
+
+  01 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +files/libsidplay-2.1.1-fbsd.patch, libsidplay-2.1.1.ebuild:
+  Add ~x86-fbsd keyword, with patch from bug #153680.
 
   28 Aug 2006; Joshua Kinard <kumba@gentoo.org> libsidplay-2.1.1.ebuild:
   Marked stable on mips.

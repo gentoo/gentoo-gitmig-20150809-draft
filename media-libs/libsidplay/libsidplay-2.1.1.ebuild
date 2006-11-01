@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1.ebuild,v 1.12 2006/08/28 02:02:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1.ebuild,v 1.13 2006/11/01 15:24:35 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/sidplay2/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -24,6 +24,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/libsidplay2-gcc41.patch
+	epatch "${FILESDIR}/${P}-fbsd.patch"
 
 	elibtoolize
 }
