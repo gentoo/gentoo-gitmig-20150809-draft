@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/proofgeneral
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.9 2005/08/28 02:21:25 tester Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/ChangeLog,v 1.10 2006/11/02 20:23:00 opfer Exp $
+
+*proofgeneral-3.5-r1 (02 Nov 2006)
+
+  02 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  +files/proofgeneral-3.5_isabelle-non-interactive.patch,
+  +proofgeneral-3.5-r1.ebuild:
+  removed question for executable, so this ebuild is not interactive anymore.
+  Reporte in bug #148857 by Patrick Lauer <patrick@gentoo.org>
 
   28 Aug 2005; Olivier Crête <tester@gentoo.org> proofgeneral-3.5.ebuild:
   Marked ~amd64, thanks to AT AJ Armstrong <aja@gentoo.org> for testing
