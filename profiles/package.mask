@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6185 2006/11/01 20:43:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6186 2006/11/02 02:39:56 nixphoeni Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ## 
+
+# Joe Sapp <nixphoeni@gentoo.org) (1 Nov 2006)
+# Testing of some patches to bring kahakai up to date.
+# Hopefully one of them will fix bug #132845.
+=x11-wm/kahakai-0.6.2_p20040306-r1
 
 # Diego Pettenò <flameeyes@gentoo.org> (1 Nov 2006)
 # Fails to build, mask till I can find why
