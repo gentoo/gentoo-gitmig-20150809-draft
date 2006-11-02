@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.7 2006/10/20 06:43:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a.ebuild,v 1.8 2006/11/02 23:49:40 nyhm Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -20,12 +20,14 @@ RDEPEND="dev-lang/python
 	media-libs/libsdl
 	media-libs/libvorbis
 	media-libs/libogg
-	dev-lang/swig"
+	dev-lang/swig
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	doc? (
 		media-gfx/graphviz
 		app-doc/doxygen
-	)"
+	)
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${PV/a/}
 
