@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bsdwhois
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.7 2006/11/01 17:53:11 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bsdwhois/ChangeLog,v 1.8 2006/11/02 16:38:03 drizzt Exp $
+
+  02 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
+  bsdwhois-1.43.2.1.ebuild:
+  Used [[]] instead of [].
 
   01 Nov 2006; Timothy Redaelli <drizzt@gentoo.org>
   bsdwhois-1.43.2.1.ebuild:
