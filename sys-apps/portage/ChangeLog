@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.285 2006/11/02 23:42:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.286 2006/11/02 23:59:06 zmedico Exp $
+
+  02 Nov 2006; <zmedico@gentoo.org> portage-2.0.51.22-r3.ebuild,
+  portage-2.1-r2.ebuild, portage-2.1.1.ebuild, portage-2.1.1-r1.ebuild,
+  portage-2.1.2_rc1-r1.ebuild, portage-2.1.2_rc1-r2.ebuild,
+  portage-2.1.2_rc1-r3.ebuild:
+  s:sys-apps/sandbox:>=sys-apps/sandbox-1.2.17:g for bug #153788
 
 *portage-2.1.2_rc1-r3 (02 Nov 2006)
 

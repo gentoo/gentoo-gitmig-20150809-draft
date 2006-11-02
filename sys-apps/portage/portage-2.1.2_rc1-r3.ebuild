@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2_rc1-r3.ebuild,v 1.1 2006/11/02 23:42:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2_rc1-r3.ebuild,v 1.2 2006/11/02 23:59:06 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -20,8 +20,8 @@ RDEPEND=">=dev-lang/python-2.3
 	!build? ( >=sys-apps/sed-4.0.5
 		dev-python/python-fchksum
 		!userland_Darwin? ( >=app-shells/bash-3.0 ) )
-	elibc_glibc? ( sys-apps/sandbox )
-	elibc_uclibc? ( sys-apps/sandbox )
+	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 )
 	!userland_Darwin? ( >=app-misc/pax-utils-0.1.13 )
 	selinux? ( >=dev-python/python-selinux-2.16 )
 	doc? ( app-portage/portage-manpages )
