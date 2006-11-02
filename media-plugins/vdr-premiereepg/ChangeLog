@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-premiereepg
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.4 2006/08/25 19:20:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-premiereepg/ChangeLog,v 1.5 2006/11/02 09:21:10 zzam Exp $
+
+*vdr-premiereepg-0.0.7 (02 Nov 2006)
+
+  02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  -files/libsi_include-0.0.5.patch, -vdr-premiereepg-0.0.5.ebuild,
+  +vdr-premiereepg-0.0.7.ebuild:
+  Version bumped. Old version removed.
 
 *vdr-premiereepg-0.0.6-r1 (25 Aug 2006)
 
