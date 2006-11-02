@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.135 2006/11/02 19:26:02 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.136 2006/11/02 20:51:37 mr_bones_ Exp $
+
+*syslog-ng-2.0.0 (02 Nov 2006)
+
+  02 Nov 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/syslog-ng.confd, files/syslog-ng.rc6, +syslog-ng-2.0.0.ebuild:
+  new code base version bump; includes initial conf.d support for bug #101387
+  with modified patch from Miguel Sousa Filipe
 
   02 Nov 2006; Joel Martin <kanaka@gentoo.org> syslog-ng-1.6.11.ebuild:
   Add ROOT to with-libol configure switch.

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.17 2004/12/14 23:16:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.18 2006/11/02 20:51:37 mr_bones_ Exp $
 
 opts="depend checkconfig start stop reload"
 
@@ -29,7 +29,8 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 	ebegin "Starting syslog-ng"
-	start-stop-daemon --start --quiet --exec /usr/sbin/syslog-ng
+	[[ -n ${SYSLOG_NG_OPTS} ]] && SYSLOG_NG_OPTS="-- ${SYSLOG_NG_OPTS}"
+	start-stop-daemon --start --quiet --exec /usr/sbin/syslog-ng ${SYSLOG_NG_OPTS}
 	eend $? "Failed to start syslog-ng"
 }
 
