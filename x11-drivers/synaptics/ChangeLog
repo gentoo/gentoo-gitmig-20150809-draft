@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.17 2006/10/27 06:34:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.18 2006/11/02 23:40:05 seemant Exp $
+
+  02 Nov 2006; Seemant Kulleen <seemant@gentoo.org>
+  -synaptics-0.14.2.ebuild, -synaptics-0.14.3.ebuild,
+  -synaptics-0.14.4-r2.ebuild:
+  remove cruft ebuilds
 
   27 Oct 2006; Joseph Jezak <josejx@gentoo.org> synaptics-0.14.5-r1.ebuild:
   Marked ppc stable.
