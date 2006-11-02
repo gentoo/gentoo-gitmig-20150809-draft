@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/prosite
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.86 2006/11/02 00:50:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/ChangeLog,v 1.87 2006/11/02 20:49:51 grobian Exp $
+
+  02 Nov 2006; Fabian Groffen <grobian@gentoo.org> prosite-19.18.ebuild,
+  prosite-19.22.ebuild, prosite-19.25.ebuild, prosite-19.29.ebuild,
+  prosite-19.35.ebuild, prosite-19.36.ebuild, prosite-19.37.ebuild:
+  Dropped ppc-macos, see you in prefix.
 
   02 Nov 2006; Olivier Fisette <ribosome@gentoo.org> prosite-19.36.ebuild:
   Added to x86.
