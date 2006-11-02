@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.2.1-r3.ebuild,v 1.1 2005/03/04 23:24:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/cronbase-0.2.1-r3.ebuild,v 1.2 2006/11/02 22:33:11 bangert Exp $
 
 IUSE=""
 
@@ -23,6 +23,4 @@ src_install() {
 	diropts -m0750 -o root -g cron; keepdir /var/spool/cron
 
 	diropts -m0750; keepdir /var/spool/cron/lastrun
-
-	dodoc ${FILESDIR}/README
 }
