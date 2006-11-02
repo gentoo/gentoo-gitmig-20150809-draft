@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.52 2006/11/01 16:21:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.53 2006/11/02 18:22:52 chrb Exp $
+
+*ati-drivers-8.30.3-r1 (02 Nov 2006)
+
+  02 Nov 2006; Chris Bainbridge <chrb@gentoo.org>
+  +ati-drivers-8.30.3-r1.ebuild:
+  Config files installed to /etc/ati, bug #153780
 
 *ati-drivers-8.30.3 (01 Nov 2006)
 
