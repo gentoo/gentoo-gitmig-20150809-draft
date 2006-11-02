@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-0.10.2.ebuild,v 1.1 2006/10/04 06:33:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-0.10.2.ebuild,v 1.2 2006/11/02 23:30:40 nyhm Exp $
 
 inherit eutils gnome2
 
@@ -16,18 +16,17 @@ IUSE="nls"
 RDEPEND=">=dev-libs/glib-2.6
 	>=gnome-base/libgnome-2.10
 	>=x11-libs/gtk+-2.6
-	>=app-text/scrollkeeper-0.3.8"
-
+	>=app-text/scrollkeeper-0.3.8
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	export G2CONF="${G2CONF} $(use_enable nls)"
-	gnome2_src_compile
+	gnome2_src_compile $(use_enable nls)
 }
 
 src_install() {
-	DOCS="AUTHORS ChangeLog README TODO NEWS"
-	USE_DESTDIR=1
+	DOCS="AUTHORS ChangeLog README TODO NEWS" \
 	gnome2_src_install scrollkeeper_localstate_dir="${D}"/var/lib/scrollkeeper/
 }
