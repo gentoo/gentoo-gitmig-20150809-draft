@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/tinysvm-0.09-r1.ebuild,v 1.2 2006/06/19 23:45:41 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/tinysvm/tinysvm-0.09-r1.ebuild,v 1.3 2006/11/02 17:47:07 usata Exp $
 
 inherit perl-module flag-o-matic eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://chasen.org/~taku/software/TinySVM/src/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE="perl"
 #IUSE="java ruby python"
