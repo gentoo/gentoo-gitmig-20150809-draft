@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4.ebuild,v 1.1 2006/10/27 18:41:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.4.ebuild,v 1.2 2006/11/02 08:41:40 flameeyes Exp $
 
 LANGS="af ar az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it
 ja ka km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sk sl sq sr sr@Latn sv ta tg
@@ -51,6 +51,8 @@ DEPEND="${DEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 
 need-kde 3.3
+
+PATCHES="${FILESDIR}/${P}-podcast-fix.patch"
 
 src_compile() {
 	append-flags -fno-inline
