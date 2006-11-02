@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6189 2006/11/02 20:47:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6190 2006/11/02 20:59:49 opfer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1461,10 +1461,6 @@ www-apps/open-xchange
 # This is a binary package version.
 # Masked for more testing.
 =dev-lang/smalltalkx-5.2.6
-
-# vapier@gentoo.org (23 Aug 2005)
-# Mask since it breaks wings #97798
-=dev-lang/erlang-10.2.6
 
 # Diego Pettenò <flameeyes@gentoo.org> (22 Aug 2005)
 # Pre-release heavy patched
