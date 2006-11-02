@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.576 2006/10/26 23:57:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.577 2006/11/02 06:40:14 vapier Exp $
+
+  02 Nov 2006; Mike Frysinger <vapier@gentoo.org>
+  +files/4.1.0/gcc-4.1.0-fast-math-i386-Os-workaround.patch,
+  gcc-4.1.1.ebuild, gcc-4.1.1-r1.ebuild:
+  Apply a hackish workaround for uClibc/-Os until 4.1.2 is released.
 
   26 Oct 2006; <blubb@gentoo.org> gcc-3.3.2-r7.ebuild, gcc-3.4.1-r3.ebuild:
   remove unused emul-linux-x86 use flag
