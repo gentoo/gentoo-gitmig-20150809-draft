@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.5 2006/10/22 00:02:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.6 2006/11/02 16:50:11 uberlord Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Make sure we don't get wrong versions
@@ -35,7 +35,10 @@
 
 # Diego Pettenò <flameeyes@gentoo.org> (4 Oct 2006)
 # We want this unmasked as is the only baselayout usable here
+# It now requires bash-3.2_p3-r1 too.
 ->=sys-apps/baselayout-1.13.0_alpha1
+-=app-shells/bash-3.2*
+
 # And this masked as we cannot use this anymore
 sys-freebsd/freebsd-baselayout
 <sys-apps/baselayout-1.13.0_alpha1
