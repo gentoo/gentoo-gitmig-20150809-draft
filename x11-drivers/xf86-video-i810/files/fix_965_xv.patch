@@ -1,0 +1,22 @@
+--- src/packed_yuv_wm.g4a
++++ src/packed_yuv_wm.g4a
+@@ -144,7 +144,7 @@ mac.sat (8) m8<1>F g15<8,8,1>F 1F { alig
+     */
+ mov (8) m1<1>UD g1<8,8,1>UD { align1 mask_disable };
+    /* Send framebuffer write message: XXX: acc0? */
+-send (16) 0 null g0<8,8,1>UW write (
++send (16) 0 acc0<1>UW g0<8,8,1>UW write (
+ 	0, /* binding table index 0 */
+ 	8, /* pixel scoreboard clear */
+ 	4, /* render target write */
+--- src/wm_prog.h
++++ src/wm_prog.h
+@@ -71,7 +71,7 @@
+    { 0x00600041, 0x20007fbc, 0x008d0220, 0x40011687 },
+    { 0x80600048, 0x21007fbe, 0x008d01e0, 0x3f800000 },
+    { 0x00600201, 0x20200022, 0x008d0020, 0x00000000 },
+-   { 0x00800031, 0x20001d3c, 0x008d0000, 0x85a04800 },
++   { 0x00800031, 0x24001d28, 0x008d0000, 0x85a04800 },
+    { 0x0000007e, 0x00000000, 0x00000000, 0x00000000 },
+    { 0x0000007e, 0x00000000, 0x00000000, 0x00000000 },
+    { 0x0000007e, 0x00000000, 0x00000000, 0x00000000 },
