@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.13 2006/08/07 00:40:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r3.ebuild,v 1.14 2006/11/02 20:15:44 usata Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -36,6 +36,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-line-scroll.patch
+	epatch ${FILESDIR}/${P}-asneeded.patch
 	use motif && epatch ${FILESDIR}/${P}-azz4.diff
 	if use cjk ; then
 		epatch ${DISTDIR}/${P}-xim-fix.patch.gz
