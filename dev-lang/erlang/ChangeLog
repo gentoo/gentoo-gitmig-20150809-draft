@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.32 2006/11/02 20:37:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.33 2006/11/02 20:43:28 opfer Exp $
+
+  02 Nov 2006; Christian Faulhammer <opfer@gentoo.org> -erlang-9c-r3.ebuild:
+  remove that version, as it has no keywords
 
 *erlang-11.2.1 (02 Nov 2006)
 
