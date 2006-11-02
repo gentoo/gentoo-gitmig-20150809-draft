@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ldvd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.4 2006/11/02 15:40:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.5 2006/11/02 15:48:52 zzam Exp $
+
+  02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> ldvd-1.9.4.ebuild:
+  Add forgotten dependency to libdvdread.
 
   02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/ldvd-1.9.4-libdvdread-0.9.6.diff, ldvd-1.9.4.ebuild:
