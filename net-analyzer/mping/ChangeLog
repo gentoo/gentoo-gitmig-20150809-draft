@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mping
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.12 2006/10/30 17:53:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mping/ChangeLog,v 1.13 2006/11/02 02:57:16 tester Exp $
+
+  02 Nov 2006; Olivier Crête <tester@gentoo.org> mping-2.01.ebuild:
+  Stable on amd64. bug #153301
 
   30 Oct 2006; nixnut <nixnut@gentoo.org> mping-2.01.ebuild:
   Stable on ppc wrt bug 153301
