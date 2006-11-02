@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yamcha/yamcha-0.33-r1.ebuild,v 1.1 2006/06/29 19:38:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yamcha/yamcha-0.33-r1.ebuild,v 1.2 2006/11/02 17:52:04 usata Exp $
 
-inherit perl-module
+inherit perl-module eutils
 # inherit distutils
 
 DESCRIPTION="Yet Another Multipurpose CHunk Annotator"
@@ -11,7 +11,7 @@ SRC_URI="http://chasen.org/~taku/software/yamcha/src/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64"
 
 IUSE="perl"
 #IUSE="python ruby"
@@ -19,6 +19,12 @@ IUSE="perl"
 DEPEND="sci-misc/tinysvm
 	dev-lang/perl"
 #RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-pm.patch
+}
 
 src_compile() {
 	econf || die
