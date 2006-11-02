@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.37 2006/09/06 17:02:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.38 2006/11/02 13:54:44 pva Exp $
+
+  02 Nov 2006; Peter Volkov <pva@gentoo.org> -etherape-0.9.6.ebuild,
+  etherape-0.9.6-r1.ebuild:
+  Added scrollkeeper dependency. Fixed bug #153772. Thank Clark Cgable2003 at
+  gmail.com for report. Added inherit on autotools eclass and let it to handle
+  autotools stuff. Removed broken version.
 
 *etherape-0.9.6-r1 (06 Sep 2006)
 
