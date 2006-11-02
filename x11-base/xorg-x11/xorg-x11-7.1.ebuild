@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.1.ebuild,v 1.8 2006/10/14 00:48:22 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.1.ebuild,v 1.9 2006/11/02 05:15:05 dberkholz Exp $
 
 inherit eutils
 
@@ -62,13 +62,13 @@ src_install() {
 
 pkg_preinst() {
 	# Check for /usr/X11R6 -> /usr symlink
-	if [[ -e "/usr/X11R6" ]] &&
-		[[ $(readlink "/usr/X11R6") != "../usr" ]]; then
-			eerror "/usr/X11R6 isn't a symlink to ../usr. Please delete it."
+	if [[ -e "${ROOT}usr/X11R6" ]] &&
+		[[ $(readlink "${ROOT}usr/X11R6") != "../usr" ]]; then
+			eerror "${ROOT}usr/X11R6 isn't a symlink to ../usr. Please delete it."
 			ewarn "First, save a list of all the packages installing there:"
-			ewarn "		equery belongs /usr/X11R6 > usr-x11r6-packages"
+			ewarn "		equery belongs ${ROOT}usr/X11R6 > usr-x11r6-packages"
 			ewarn "This requires gentoolkit to be installed."
-			die "/usr/X11R6 is not a symlink to ../usr."
+			die "${ROOT}usr/X11R6 is not a symlink to ../usr."
 	fi
 
 	# Filter out ModulePath line since it often holds a now-invalid path
@@ -87,16 +87,16 @@ pkg_postinst() {
 	# x-modular_pkg_postinst
 
 	echo
-	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}."
+	einfo "Please note that the xcursors are in ${ROOT}usr/share/cursors/${PN}."
 	einfo "Any custom cursor sets should be placed in that directory."
 	echo
 	einfo "If you wish to set system-wide default cursors, please create"
-	einfo "/usr/local/share/cursors/${PN}/default/index.theme"
+	einfo "${ROOT}usr/local/share/cursors/${PN}/default/index.theme"
 	einfo "with content: \"Inherits=theme_name\" so that future"
 	einfo "emerges will not overwrite those settings."
 	echo
 	einfo "Listening on TCP is disabled by default with startx."
-	einfo "To enable it, edit /usr/bin/startx."
+	einfo "To enable it, edit ${ROOT}usr/bin/startx."
 	echo
 
 	ewarn "Please read the modular X migration guide at"
@@ -104,11 +104,11 @@ pkg_postinst() {
 	echo
 	einfo "If you encounter any non-configuration issues, please file a bug at"
 	einfo "http://bugs.gentoo.org/enter_bug.cgi?product=Gentoo%20Linux"
-	einfo "and attach /etc/X11/xorg.conf, /var/log/Xorg.0.log and emerge info"
+	einfo "and attach ${ROOT}etc/X11/xorg.conf, ${ROOT}var/log/Xorg.0.log and emerge info"
 	echo
 	einfo "You can now choose which drivers are installed with the VIDEO_CARDS"
 	einfo "and INPUT_DEVICES settings. Set these like any other Portage"
-	einfo "variable in /etc/make.conf or on the command line."
+	einfo "variable in ${ROOT}etc/make.conf or on the command line."
 	echo
 
 	# (#76985)
