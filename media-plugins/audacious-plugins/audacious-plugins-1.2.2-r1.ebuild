@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.2.2-r1.ebuild,v 1.3 2006/11/01 12:18:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-1.2.2-r1.ebuild,v 1.4 2006/11/02 17:25:52 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -34,7 +34,7 @@ RDEPEND="app-arch/unzip
 	lirc? ( app-misc/lirc )
 	modplug? ( media-libs/libmodplug )
 	musepack? ( media-libs/libmpcdec )
-	notify? ( x11-libs/libnotify )
+	libnotify? ( x11-libs/libnotify )
 	sid? ( media-libs/libsidplay )
 	sndfile? ( media-libs/libsndfile )
 	timidity? ( media-sound/timidity++ )
