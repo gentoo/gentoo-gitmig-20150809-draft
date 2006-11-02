@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.31 2006/07/24 20:10:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.32 2006/11/02 10:55:38 zzam Exp $
+
+  02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  libdvb-0.5.5.1-r3.ebuild:
+  Added depend to latest automake/autoconf.
 
   24 Jul 2006; Matthias Schwarzott <zzam@gentoo.org>
   +files/libdvb-0.5.5.1-autotools.patch,
