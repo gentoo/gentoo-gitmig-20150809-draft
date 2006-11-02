@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.2 2006/09/08 19:01:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powersave/powersave-0.14.0.ebuild,v 1.3 2006/11/02 21:04:44 genstef Exp $
 
 inherit eutils libtool kde-functions autotools
 
@@ -16,7 +16,7 @@ IUSE="pam_console doc"
 RDEPEND="|| ( dev-libs/dbus-glib >=sys-apps/dbus-0.30 )
 	>=sys-apps/hal-0.5.3
 	>=sys-power/cpufrequtils-001
-	pam_console? ( sys-libs/pam )"
+	pam_console? ( || ( sys-auth/pam_console <sys-libs/pam-0.99 ) )"
 DEPEND="${RDEPEND}
 	doc? (
 		app-doc/doxygen
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	)"
 
 pkg_setup() {
-	if use pam_console && ! built_with_use sys-libs/pam pam_console ; then
+	if use pam_console && has_version <sys-libs/pam-0.99 && ! built_with_use sys-libs/pam pam_console ; then
 		eerror "You need to build pam with pam_console support"
 		eerror "Please remerge sys-libs/pam with USE=pam_console"
 		die "pam without pam_console detected"
