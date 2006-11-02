@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r1.ebuild,v 1.3 2006/10/03 23:18:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.31-r1.ebuild,v 1.4 2006/11/02 07:07:43 genstef Exp $
 
 inherit eutils gnome2 flag-o-matic
 
@@ -45,11 +45,15 @@ DOCS="ChangeLog NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
-	cd ${S}
+	# exclude ubuntu branding
+	mkdir ${WORKDIR}/ubuntu
+	cd ${WORKDIR}/ubuntu
+	cp -r ${S}/{po,ChangeLog,gnome-cups-manager} .
 	epatch ${WORKDIR}/gnome-cups-manager_0.31-1.1ubuntu14.diff
 	# gksudo does not always work
 	sed -i "s:gksudo:gksu:" debian/patches/change-su-command.patch
-	epatch debian/patches/*
+	cd ${S}
+	epatch ${WORKDIR}/ubuntu/debian/patches/*
 
 	# bug 141929
 	use amd64 && replace-flags -O* -O0
