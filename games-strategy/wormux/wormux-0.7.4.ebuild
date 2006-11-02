@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.4.ebuild,v 1.1 2006/10/04 14:29:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wormux/wormux-0.7.4.ebuild,v 1.2 2006/11/02 04:44:19 josejx Exp $
 
 inherit eutils debug games
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/wormux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug nls"
 
 RDEPEND=">=media-libs/libsdl-1.2.6
