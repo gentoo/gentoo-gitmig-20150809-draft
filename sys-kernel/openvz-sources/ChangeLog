@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.43 2006/11/02 17:55:33 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.44 2006/11/02 18:47:11 phreak Exp $
+
+*openvz-sources-026.020 (02 Nov 2006)
+
+  02 Nov 2006; Christian Heim <phreak@gentoo.org>
+  openvz-sources-022.077.ebuild, -openvz-sources-022.078-r2.ebuild,
+  -openvz-sources-022.078-r3.ebuild, openvz-sources-026.015-r2.ebuild,
+  openvz-sources-026.017.ebuild, openvz-sources-026.018.ebuild,
+  +openvz-sources-026.020.ebuild:
+  Doing some major ebuild cleanups, removing 022.078-r*, adding 026.020. The
+  ebuilds now directly fetch the combined patchtarball from OpenVZ and
+  directly use that.
 
 *openvz-sources-023.030 (02 Nov 2006)
 
