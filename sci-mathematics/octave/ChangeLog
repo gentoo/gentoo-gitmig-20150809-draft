@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.39 2006/10/04 16:58:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.40 2006/11/02 16:29:22 markusle Exp $
+
+*octave-2.1.73-r1 (02 Nov 2006)
+
+  02 Nov 2006; Markus Dittrich <markusle@gentoo.org>
+  +files/octave-2.1.73-f2c-fix.patch, +octave-2.1.73-r1.ebuild:
+  New revision allows f2c to be used as fortran compiler. This
+  fixes bug #152727.
 
   04 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org> octave-2.1.73.ebuild:
   Stable on x86 wrt bug #141446.
