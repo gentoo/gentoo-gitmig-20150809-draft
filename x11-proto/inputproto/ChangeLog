@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.28 2006/11/02 23:11:57 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.29 2006/11/02 23:13:00 joshuabaergen Exp $
+
+  02 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  inputproto-1.4.ebuild:
+  Remove unneeded mirror restriction from 1.4.
 
 *inputproto-1.4 (02 Nov 2006)
 
