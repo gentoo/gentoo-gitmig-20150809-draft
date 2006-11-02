@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2293 2006/11/01 15:36:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2294 2006/11/02 16:37:36 lack Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1469,7 +1469,14 @@ net-www/mplayerplug-in:wmp - Windows Media Playback Support
 net-www/pwauth:domain-aware - Ignore leading domain names in username (Windows compat)
 net-www/pwauth:faillog - Log failed login attempts
 net-www/pwauth:ignore-case - Ignore string case in username (mostly Windows compat)
-rox-extra/memo:libnotify - Enable libnotify support for alarm notifications.
+rox-extra/archive:compress - Enable tar.Z and *.Z via ncompress package
+rox-extra/archive:rar - Enable .rar support via rar package
+rox-extra/archive:uuencode - Enable .uue compression/decompression via sharutils package
+rox-extra/archive:zip - Enable .zip support via zip and unzip packages
+rox-extra/archive:ace - Enable .ace support via unace package
+rox-extra/archive:rpm - Enable .rpm extraction via rpm2cpio from the rpm package
+rox-extra/archive:cpio - Enable .cpio extraction via cpio package
+rox-extra/memo:libnotify - Enable libnotify support for alarm notifications
 sci-astronomy/orsa:cln - Use the Class Library for Numbers for calculations
 sci-astronomy/orsa:gsl - Use the GNU scientific library for calculations
 sci-astronomy/predict:xforms - Add a "map" client which uses the xforms library for its GUI
