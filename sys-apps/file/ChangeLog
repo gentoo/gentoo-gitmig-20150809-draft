@@ -1,10 +1,6 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.108 2006/11/02 19:58:21 kanaka Exp $
-
-  02 Nov 2006; Joel Martin <kanaka@gentoo.org> file-4.18.ebuild:
-  To cross-compile, we need to build a native version of the 'file'
-  executable and then use that to build to magic data.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.109 2006/11/02 20:39:54 kanaka Exp $
 
 *file-4.18 (31 Oct 2006)
 
