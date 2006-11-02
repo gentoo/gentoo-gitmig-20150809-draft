@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lha
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.29 2006/11/02 13:00:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.30 2006/11/02 14:36:15 wolf31o2 Exp $
+
+  02 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> lha-114i-r6.ebuild:
+  Stable on x86 wrt bug #151252.
 
   02 Nov 2006; Ferris McCormick <fmccor@gentoo.org> lha-114i-r6.ebuild:
   Stable on sparc --- security bug #151252 --- builds, runs all tests, and
