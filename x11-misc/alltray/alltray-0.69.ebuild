@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.69.ebuild,v 1.1 2006/07/29 22:35:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.69.ebuild,v 1.2 2006/11/02 02:30:06 tester Exp $
 
 DESCRIPTION="Dock any application into the system tray/notification area"
 HOMEPAGE="http://alltray.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="gnome"
 
 RDEPEND=">=x11-libs/gtk+-2.4
