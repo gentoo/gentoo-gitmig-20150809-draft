@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-2.0.7.ebuild,v 1.2 2005/10/10 14:22:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-2.0.7.ebuild,v 1.3 2006/11/02 02:51:30 jer Exp $
 
 DESCRIPTION="Library and front-end for retrieving information about a system's hardware"
 HOMEPAGE="http://alioth.debian.org/projects/pkg-discover/"
@@ -8,7 +8,7 @@ SRC_URI="http://archive.progeny.com/progeny/discover/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc -sparc ~x86"
 IUSE="pcmcia"
 
 DEPEND="pcmcia? ( virtual/linux-sources )

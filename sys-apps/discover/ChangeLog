@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/discover
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.11 2005/03/09 01:00:37 vapier Exp $
+# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/ChangeLog,v 1.12 2006/11/02 02:51:30 jer Exp $
+
+  02 Nov 2006; Jeroen Roovers <jer@gentoo.org> discover-2.0.7.ebuild:
+  Stable for HPPA (bug #153612).
 
 *discover-2.0.7 (08 Mar 2005)
 
