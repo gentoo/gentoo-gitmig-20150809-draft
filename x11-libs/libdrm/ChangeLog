@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.37 2006/10/14 16:31:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.38 2006/11/02 23:49:33 joshuabaergen Exp $
+
+*libdrm-2.2.0 (02 Nov 2006)
+
+  02 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +libdrm-2.2.0.ebuild:
+  Version bump with a large amount of changes.  Notables: Mach64 work and
+  support for the new memory manager.
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> libdrm-2.0.2.ebuild:
   Stable on ia64.
