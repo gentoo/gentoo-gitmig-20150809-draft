@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r4.ebuild,v 1.1 2006/06/24 08:58:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/noad/noad-0.6.0-r4.ebuild,v 1.2 2006/11/02 11:05:41 zzam Exp $
+
+WANT_AUTOMAKE="1.7"
+WANT_AUTOCONF="latest"
 
 inherit eutils autotools
 
