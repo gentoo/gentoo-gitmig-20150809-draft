@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.6 2006/07/07 12:05:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r7.ebuild,v 1.7 2006/11/02 16:16:12 phosphan Exp $
 
 inherit eutils python
 
@@ -46,6 +46,10 @@ src_unpack() {
 		cd ${S}
 		epatch ${WORKDIR}/${MYPYTHONPATCH}
 	fi
+	cd ${S}/xgui/sources
+	for file in *.c; do
+		sed -e "s:X11/Xaw/:X11/Xaw3d/:g" -i "${file}"
+	done
 }
 
 src_compile() {
