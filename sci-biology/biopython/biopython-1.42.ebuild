@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.42.ebuild,v 1.1 2006/09/12 04:48:13 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/biopython-1.42.ebuild,v 1.2 2006/11/02 04:25:32 weeve Exp $
 
 inherit distutils
 
@@ -17,7 +17,7 @@ DEPEND=">=dev-lang/python-2.2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha ~ppc ~sparc ~x86 ~amd64"
+KEYWORDS="~alpha ~amd64 ~ppc sparc ~x86"
 
 src_compile() {
 	distutils_src_compile
