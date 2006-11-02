@@ -1,5 +1,5 @@
 # /etc/zsh/zprofile
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/files/zprofile,v 1.1 2003/07/23 17:48:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/files/zprofile,v 1.2 2006/11/02 19:49:32 usata Exp $
 
 [[ -e "/etc/profile.env" ]] && source /etc/profile.env
 
@@ -7,8 +7,8 @@
 umask 022
 
 if [[ "$USER" == root ]]; then
-	export PATH="/bin:/sbin:/usr/bin:/usr/sbin:${ROOTPATH}"
+	export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${ROOTPATH}"
 else
-	export PATH="/bin:/usr/bin:${PATH}"
+	export PATH="/usr/local/bin:/usr/bin:/bin:${PATH}"
 fi
 unset ROOTPATH

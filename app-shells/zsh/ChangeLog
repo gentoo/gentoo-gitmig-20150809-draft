@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.98 2006/09/18 17:43:08 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.99 2006/11/02 19:49:32 usata Exp $
+
+  02 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> files/zprofile,
+  -files/zsh-strncmp.diff, -zsh-4.0.9-r4.ebuild, -zsh-4.2.4.ebuild,
+  -zsh-4.2.6.ebuild, -zsh-4.3.2.ebuild:
+  Updated zprofile to contain /usr/local/bin in PATH. Thanks to Stephen Floor
+  <snf@extrospective.net>. This closes bug #145383. Removed old ebuilds.
 
   18 Sep 2006; Steev Klimaszewski <steev@gentoo.org> zsh-4.3.2-r1.ebuild:
   Add ~x86-fbsd keyword
