@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.11 2006/08/28 02:14:27 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.7-r1.ebuild,v 1.12 2006/11/02 00:58:35 nyhm Exp $
 
-inherit eutils
+WANT_AUTOCONF=latest
+inherit autotools eutils
 
 DESCRIPTION="DevIL image library"
 HOMEPAGE="http://www.imagelib.org/"
@@ -18,13 +19,13 @@ RDEPEND="gif? ( media-libs/giflib )
 	mng? ( media-libs/libmng )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	xpm? ( || ( x11-libs/libXpm virtual/x11 ) )
+	xpm? ( x11-libs/libXpm )
 	allegro? ( media-libs/allegro )
 	opengl? ( virtual/glu )
 	sdl? ( media-libs/libsdl )
-	X? ( || ( x11-libs/libXext virtual/x11 ) )"
+	X? ( x11-libs/libXext )"
 DEPEND="${RDEPEND}
-	X? ( || ( x11-proto/xextproto virtual/x11 ) )"
+	X? ( x11-proto/xextproto )"
 
 S=${WORKDIR}/DevIL-${PV}
 
@@ -34,7 +35,7 @@ src_unpack() {
 	epatch \
 		"${FILESDIR}"/${P}-png-types.patch \
 		"${FILESDIR}"/${P}-sdl-checks.patch
-	autoconf || die
+	eautoconf
 }
 
 src_compile() {
