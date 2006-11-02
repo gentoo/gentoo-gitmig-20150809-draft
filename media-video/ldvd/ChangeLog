@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ldvd
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.3 2006/01/01 18:20:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ldvd/ChangeLog,v 1.4 2006/11/02 15:40:27 zzam Exp $
+
+  02 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
+  +files/ldvd-1.9.4-libdvdread-0.9.6.diff, ldvd-1.9.4.ebuild:
+  Now depend on virtual/cdrtools, Bug #147880. Added patch to compile with
+  >=libdvdread-0.9.6. Prevent stripping of binary.
 
   01 Jan 2006; Chris White <chriswhite@gentoo.org> ldvd-1.9.4.ebuild:
   Fixed bug #117188 regarding incorrect HOMEPAGE/SRC_URI.
