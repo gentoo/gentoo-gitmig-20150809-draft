@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.2.0/asterisk.rc6,v 1.1 2006/04/16 01:04:44 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.2.0/asterisk.rc6,v 1.2 2006/11/02 15:05:39 mrness Exp $
 
 opts="${opts} forcestop reload"
 
@@ -212,16 +212,32 @@ forcestop() {
 }
 
 stop() {
-
-	if is_running; then
-		ebegin "Stopping asterisk PBX gracefully"
-		/usr/sbin/asterisk -r -x "stop gracefully" &>/dev/null
-		[[ $? -eq 0 ]] && svc_stop
-		eend
-	else
-
+	if ! is_running; then
 		eerror "Asterisk is not running!"
+		return 0
 	fi
+
+	ebegin "Stopping asterisk PBX gracefully"
+	/usr/sbin/asterisk -r -x "stop gracefully" &>/dev/null
+	# Now we have to wait until asterisk has _really_ stopped.
+	sleep 1
+	if is_running; then
+		einfon "Waiting for asterisk to shutdown ."
+		local cnt=0
+		while is_running; do
+			cnt=`expr $cnt + 1`
+			if [ $cnt -gt 60 ] ; then
+				# Waited 120 seconds now. Fail.
+				echo
+				eend 1 "Failed."
+				return
+			fi
+			sleep 2
+			echo -n "."
+		done
+		echo
+	fi
+	eend 0
 }
 
 reload() {
