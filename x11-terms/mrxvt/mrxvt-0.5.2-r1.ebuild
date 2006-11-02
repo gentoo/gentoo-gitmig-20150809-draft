@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2-r1.ebuild,v 1.1 2006/10/16 09:02:46 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.5.2-r1.ebuild,v 1.2 2006/11/02 18:47:13 usata Exp $
 
 inherit eutils
 
@@ -13,9 +13,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc-macos ~x86"
 
 LINGUAS_IUSE="linguas_el linguas_ja linguas_ko linguas_th linguas_zh_CN linguas_zh_TW"
-IUSE="debug png jpeg session truetype menubar xpm ${LINGUAS_IUSE}"
+IUSE="debug png jpeg session truetype menubar utempter xpm ${LINGUAS_IUSE}"
 
-RDEPEND="png? ( media-libs/libpng )
+RDEPEND="!ppc-macos? (
+		png? ( media-libs/libpng )
+		utempter? ( sys-libs/libutempter ) )
 	jpeg? ( media-libs/jpeg )
 	truetype? ( virtual/xft
 		media-libs/fontconfig
@@ -83,6 +85,7 @@ src_compile() {
 		$(use_enable xpm) \
 		$(use_enable session sessionmgr) \
 		$(use_enable truetype xft) \
+		$(use_enable utempter) \
 		$(use_enable menubar) \
 		${myconf} || die
 
@@ -93,6 +96,9 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} docdir=/usr/share/doc/${PF} install || die
+	# Give mrxvt perms to update utmp
+	fowners root:utmp /usr/bin/mrxvt
+	fperms g+s /usr/bin/mrxvt
 	dodoc AUTHORS CREDITS ChangeLog FAQ NEWS README* TODO
 
 }
