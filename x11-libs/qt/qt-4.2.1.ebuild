@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.5 2006/10/31 13:42:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.6 2006/11/02 13:54:50 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -13,14 +13,12 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV}
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
-KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE_INPUT_DEVICES="input_devices_wacom"
 
-IUSE="accessibility cups debug dbus doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres sqlite xinerama zlib ${IUSE_INPUT_DEVICES}"
-
-
-# need glib and dbus
+IUSE="accessibility cups debug doc examples firebird gif glib jpeg mng mysql nas nis odbc opengl pch png postgres sqlite xinerama zlib ${IUSE_INPUT_DEVICES}"
+#IUSE removed dbus from iuse
 
 DEPEND="x11-libs/libXrandr
 	x11-libs/libXcursor
@@ -32,7 +30,6 @@ DEPEND="x11-libs/libXrandr
 	xinerama? ( x11-proto/xineramaproto x11-libs/libXinerama )
 	virtual/xft
 	>=media-libs/freetype-2
-	dbus? ( >=sys-apps/dbus-0.93 )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	mng? ( >=media-libs/libmng-1.0.9 )
@@ -46,6 +43,7 @@ DEPEND="x11-libs/libXrandr
 	zlib? ( sys-libs/zlib )
 	glib? ( dev-libs/glib )
 	input_devices_wacom? ( x11-drivers/linuxwacom )"
+#	dbus? ( >=sys-apps/dbus-0.93 )
 
 pkg_setup() {
 	QTBASEDIR=/usr/$(get_libdir)/qt4
@@ -162,7 +160,8 @@ src_compile() {
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 
-	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
+#	use dbus	&& myconf="${myconf} -qdbus" || myconf="${myconf} -no-qdbus"
+	myconf="${myconf} -no-qdbus"
 	use glib	&& myconf="${myconf} -glib" || myconf="${myconf} -no-glib"
 
 	use pch		&& myconf="${myconf} -pch"
