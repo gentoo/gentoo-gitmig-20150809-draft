@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/bioruby-1.0.0.ebuild,v 1.1 2006/09/13 03:06:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/bioruby-1.0.0.ebuild,v 1.2 2006/11/02 02:48:11 ribosome Exp $
 
 inherit ruby
 
@@ -11,4 +11,4 @@ SRC_URI="http://www.${PN}.org/archive/${P}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~ppc x86"
