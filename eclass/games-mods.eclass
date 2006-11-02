@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.5 2006/10/25 22:46:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.6 2006/11/02 19:11:15 wolf31o2 Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -237,8 +237,17 @@ games-mods_src_install() {
 						|| die "newexe failed"
 					new_bin_name=
 					bin_name=$(echo ${binary} | sed -e 's:[-_.]: :g')
+					# We want our wrapper to use the libraries/starting
+					# directory of our game.  If the game is in
+					# GAMES_PREFIX_OPT, then we want to start there.
+					if [[ -d "${GAMES_PREFIX_OPT}"/${GAME} ]]
+					then
+						GAME_DIR="${GAMES_PREFIX_OPT}/${GAME}"
+					else
+						GAME_DIR="${dir}"
+					fi
 					games_make_wrapper "${GAME_EXE}-${binary}" \
-						"${GAME_EXE}-${binary}" "${dir}" "${dir}"
+						./"${GAME_EXE}-${binary}" "${GAME_DIR}" "${GAME_DIR}"
 					if [[ "${bin_name}" == "${binary}" ]]
 					then
 						bin_name=${MOD_NAME}
@@ -341,7 +350,7 @@ games-mods_src_install() {
 				if [ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]
 				then
 				# Why don´t we use symlinks? Because these use ./$bin when they
-				# run and that doesn work if the binary is in GAMES_PREFIX_OPT
+				# run and that doesn't work if the binary is in GAMES_PREFIX_OPT
 				# but the mod is in GAMES_DATADIR.
 				#	dosym "${INS_DIR}"/${i} \
 				#		"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
