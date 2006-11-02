@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.18.ebuild,v 1.3 2006/11/02 19:58:21 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.18.ebuild,v 1.4 2006/11/02 20:12:35 kanaka Exp $
 
 inherit eutils distutils libtool toolchain-funcs
 
@@ -40,7 +40,7 @@ src_unpack() {
 src_compile() {
 	local mymake=
 
-	# To cross-compile we need to create a native build version of the 'file'
+	# To cross-compile we create a native build version of the 'file'
 	# executable first and use it during the real build.
 	if tc-is-cross-compiler; then
 		cd ${S}-native
