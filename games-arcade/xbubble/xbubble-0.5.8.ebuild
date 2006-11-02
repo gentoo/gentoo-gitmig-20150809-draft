@@ -1,22 +1,24 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.10 2006/05/09 15:42:16 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.11 2006/11/02 22:54:59 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="a Puzzle Bobble clone similar to Frozen-Bubble"
 HOMEPAGE="http://www.nongnu.org/xbubble/"
-SRC_URI="http://www.ibiblio.org/pub/mirrors/gnu/ftp/savannah/files/xbubble/${P}.tar.gz"
+SRC_URI="http://www.ibiblio.org/pub/mirrors/gnu/ftp/savannah/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND="|| ( x11-libs/libX11 virtual/x11 )
-	media-libs/libpng"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXt
+	media-libs/libpng
+	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
-	|| ( x11-libs/libXt virtual/x11 )"
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +41,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS NetworkProtocol README TODO
 	prepgamesdirs
 }
