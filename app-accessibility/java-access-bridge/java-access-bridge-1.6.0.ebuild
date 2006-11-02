@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0.ebuild,v 1.2 2006/10/05 14:26:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/java-access-bridge-1.6.0.ebuild,v 1.3 2006/11/02 00:15:26 leonardop Exp $
 
-inherit java-pkg gnome2
+inherit java-pkg-2 gnome2
 
 DESCRIPTION="Gnome Java Accessibility Bridge"
 HOMEPAGE="http://developer.gnome.org/projects/gap/"
@@ -26,7 +26,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 
 pkg_setup() {
-	java-pkg_pkg_setup
+	java-pkg-2_pkg_setup
 
 	G2CONF="--with-java-home=${JDK_HOME}"
 }
