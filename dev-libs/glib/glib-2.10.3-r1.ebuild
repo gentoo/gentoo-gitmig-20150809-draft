@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.3-r1.ebuild,v 1.1 2006/11/03 03:47:48 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.10.3-r1.ebuild,v 1.2 2006/11/03 12:12:02 allanonjl Exp $
 
 inherit gnome.org libtool eutils flag-o-matic debug
 
@@ -64,7 +64,7 @@ src_compile() {
 	econf \
 		$(use_enable doc gtk-doc) \
 		${myconf} \
-		--with-threads=posix
+		--with-threads=posix \
 		--enable-static || die "configure failed"
 
 	emake || die "make failed"
