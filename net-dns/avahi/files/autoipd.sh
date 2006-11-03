@@ -7,7 +7,6 @@
 # Sets up the dependencies for the module
 autoipd_depend() {
 	after interface
-	functions interface_exists interface_get_address
 }
 
 # void autoipd_expose(void)

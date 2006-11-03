@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.69 2006/11/01 05:02:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.70 2006/11/03 02:11:50 swegener Exp $
+
+  03 Nov 2006; Sven Wegener <swegener@gentoo.org> files/autoipd.sh,
+  avahi-0.6.14.ebuild:
+  Drop the functions dependency.
+
+  03 Nov 2006; Sven Wegener <swegener@gentoo.org> files/autoipd.sh:
+  Drop the functions dependency.
 
   01 Nov 2006; Doug Goldstein <cardoe@gentoo.org> avahi-0.6.14.ebuild:
   Fixing dbus depends
