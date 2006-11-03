@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.94.ebuild,v 1.2 2006/10/31 00:43:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.94.ebuild,v 1.3 2006/11/03 02:14:41 swegener Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils multilib debug autotools
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	local myconf=""
 
-	hasq ${FEATURES} test && myconf="${myconf} --enable-tests=yes"
+	hasq test ${FEATURES} && myconf="${myconf} --enable-tests=yes"
 
 	econf \
 		$(use_with X x) \

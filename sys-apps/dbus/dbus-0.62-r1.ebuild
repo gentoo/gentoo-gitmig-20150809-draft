@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.4 2006/11/02 14:08:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.62-r1.ebuild,v 1.5 2006/11/03 02:14:41 swegener Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils mono python multilib debug qt3 autotools
@@ -54,7 +54,7 @@ src_compile() {
 	# Only enable mono-docs if both mono and doc is defined
 	use mono && myconf="${myconf} $(use_enable doc mono-docs)"
 
-	hasq ${FEATURES} test && myconf="${myconf} --enable-tests=yes"
+	hasq test ${FEATURES} && myconf="${myconf} --enable-tests=yes"
 
 	if use qt3; then
 		myconf="${myconf} --enable-qt3=${QTDIR} --with-qt3-moc=${QTDIR}/bin/moc "

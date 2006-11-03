@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.140 2006/11/02 14:08:38 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.141 2006/11/03 02:14:41 swegener Exp $
+
+  03 Nov 2006; Sven Wegener <swegener@gentoo.org> dbus-0.62-r1.ebuild,
+  dbus-0.94.ebuild:
+  Fixup the hasq check.
 
   02 Nov 2006; Caleb Tennis <caleb@gentoo.org> dbus-0.62-r1.ebuild:
   Modify ebuild to build only against Qt-4.1, as it fails against Qt-4.2 -
