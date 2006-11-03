@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6190 2006/11/02 20:59:49 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6191 2006/11/03 06:13:43 joshuabaergen Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ## 
+
+# Joshua Baergen <joshuabaergen@gentoo.org> (02 Nov 2006)
+# X input hotplug and related packages
+# Some of these may already be covered by other masks - please leave them
+# anyway
+>=media-libs/mesa-6.5.2_pre0
+>=x11-base/xorg-server-1.2.99
+>=x11-drivers/xf86-input-keyboard-1.2
 
 # Michael Sterrett <mr_bones_@gentoo.org> (01 Nov 2006)
 # Brand new code base and deps.  Masked for testing.
