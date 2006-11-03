@@ -1,6 +1,13 @@
 # ChangeLog for net-im/twinkle
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.21 2006/10/09 18:38:01 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/ChangeLog,v 1.22 2006/11/03 07:42:05 dragonheart Exp $
+
+*twinkle-0.9-r1 (03 Nov 2006)
+
+  03 Nov 2006; Daniel Black <dragonheart@gentoo.org>
+  +files/twinkle-0.9-dtmf.patch, +files/twinkle-0.9-invite4xx.patch,
+  +twinkle-0.9-r1.ebuild:
+  upstream patch as per bug #153857 thanks to Christopher Covington
 
   09 Oct 2006; Daniel Black <dragonheart@gentoo.org> twinkle-0.9.ebuild:
   added desktop entry - bug #147999 thanks to Michiel de Bruijne
