@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.21 2006/11/03 16:07:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.22 2006/11/03 16:27:53 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -19,8 +19,7 @@ IUSE="gtk dv quicktime sdl X yv12 3dnow mmx sse v4l dga png"
 
 RDEPEND="media-libs/jpeg
 	x86? ( mmx? ( >=media-libs/jpeg-mmx-0.1.6 ) )
-	gtk? ( =x11-libs/gtk+-1.2*
-		=dev-libs/glib-1.2* )
+	gtk? ( >=x11-libs/gtk+-2.0 )
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )
 	png? ( media-libs/libpng )
@@ -100,7 +99,7 @@ src_compile() {
 		$(use_with v4l) \
 		$(use_with gtk) \
 		$(use_with sdl) \
-		$(use_with dv dv /usr) \
+		$(use_with dv libdv /usr) \
 		--enable-largefile \
 		${myconf} || die "configure failed"
 
