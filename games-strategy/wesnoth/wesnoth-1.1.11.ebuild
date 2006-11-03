@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.1.11.ebuild,v 1.1 2006/10/06 02:05:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.1.11.ebuild,v 1.2 2006/11/03 02:47:27 nyhm Exp $
 
-inherit autotools eutils toolchain-funcs flag-o-matic games
+inherit eutils toolchain-funcs flag-o-matic games
 
 MY_PV=${PV/_/}
 DESCRIPTION="Battle for Wesnoth - A fantasy turn-based strategy game"
@@ -14,14 +14,16 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="dedicated editor gnome kde lite nls server tools"
 
-DEPEND=">=media-libs/libsdl-1.2.7
+RDEPEND=">=media-libs/libsdl-1.2.7
 	!dedicated? (
 		x11-libs/libX11
 		>=media-libs/freetype-2 )
 	>=media-libs/sdl-mixer-1.2
 	>=media-libs/sdl-image-1.2
 	media-libs/sdl-net
-	sys-libs/zlib"
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
