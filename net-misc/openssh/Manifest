@@ -129,10 +129,10 @@ AUX openssh-4.4_p1-ldap-hpn-glue.patch 1538 RMD160 eba0400a328f23b9329429d2da65b
 MD5 92fc9d4dc7c7dbc67eabe2e98bde325f files/openssh-4.4_p1-ldap-hpn-glue.patch 1538
 RMD160 eba0400a328f23b9329429d2da65b80ead546d4d files/openssh-4.4_p1-ldap-hpn-glue.patch 1538
 SHA256 63e9f729fbb40babdf5cd2b4d87f4d1cb5a9aaed60bf7a8c072c22f9a6fb36ab files/openssh-4.4_p1-ldap-hpn-glue.patch 1538
-AUX openssh-4.4_p1-x509-hpn-glue.patch 1150 RMD160 2611c11db0da936ec5a0e688f6d765cb4f332a80 SHA1 7adebc924a8ae72e14783f5ca7d77378cd227cb6 SHA256 3020a88840e17a269a6943f9bc5636110248a66c55dd8d7254cc9ed8596ba97f
-MD5 a40fa969555fb5713b9b2a14fe46d302 files/openssh-4.4_p1-x509-hpn-glue.patch 1150
-RMD160 2611c11db0da936ec5a0e688f6d765cb4f332a80 files/openssh-4.4_p1-x509-hpn-glue.patch 1150
-SHA256 3020a88840e17a269a6943f9bc5636110248a66c55dd8d7254cc9ed8596ba97f files/openssh-4.4_p1-x509-hpn-glue.patch 1150
+AUX openssh-4.4_p1-x509-hpn-glue.patch 2371 RMD160 e1b6dc359f9852fe149afe185e3f4705576d3332 SHA1 8c801e5aba86b157d00f93d26b51ef3350258511 SHA256 151142fa966108ff5b1bb4ea2c1e1c9bcb5fc305da04c6c7d32a6b7f9abcbda7
+MD5 9a4decc63a1d76da331cbe632aa8c4b3 files/openssh-4.4_p1-x509-hpn-glue.patch 2371
+RMD160 e1b6dc359f9852fe149afe185e3f4705576d3332 files/openssh-4.4_p1-x509-hpn-glue.patch 2371
+SHA256 151142fa966108ff5b1bb4ea2c1e1c9bcb5fc305da04c6c7d32a6b7f9abcbda7 files/openssh-4.4_p1-x509-hpn-glue.patch 2371
 AUX openssh-4.4p1-selinux-ac.diff 525 RMD160 3cd79bd33f6b54afc943c641f83120f78c703f65 SHA1 00798d6db943d92d1839853b53fa25a034945f57 SHA256 fc7d2f252fc19864c1b5b5cb6b506018580495605e36dad7e370fbc16b3f276e
 MD5 acfb71370d090c620e71fcf7e4ede1c4 files/openssh-4.4p1-selinux-ac.diff 525
 RMD160 3cd79bd33f6b54afc943c641f83120f78c703f65 files/openssh-4.4p1-selinux-ac.diff 525
@@ -277,7 +277,7 @@ SHA256 81ff3d47e3f63ad4d4c31f6208d7926654b98b6a7cf6d3b937847faae6117d0e files/di
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFSrxwamhnQswr0vIRAlBWAKCuiXtQypeFv0eZzPRhZYHipq5UbgCguSiF
-5eiziM+Ufxv4ucTmgUVSVaY=
-=SoMa
+iD8DBQFFSuL1amhnQswr0vIRAj42AJ9EEX+cCsp7oZlsv61nOIE5ngDIcQCgp8ps
+j26hKOrFqmd9ytrga616vlg=
+=hZi0
 -----END PGP SIGNATURE-----
