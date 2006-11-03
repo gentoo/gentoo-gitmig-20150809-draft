@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.67 2006/10/24 16:07:36 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.68 2006/11/03 18:58:36 caleb Exp $
+
+  03 Nov 2006; Caleb Tennis <caleb@gentoo.org>
+  -files/valgrind-3.1.0-amd64-nomultilib-fix.patch, -valgrind-3.1.1.ebuild:
+  remove old version
 
   24 Oct 2006; Maurice van der Pot <griffon26@gentoo.org>
   +files/valgrind-3.2.1-glibc-2.5.patch, valgrind-3.2.1.ebuild:
