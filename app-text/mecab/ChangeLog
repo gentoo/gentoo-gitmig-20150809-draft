@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mecab
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.28 2006/10/30 12:25:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.29 2006/11/03 10:17:30 hattya Exp $
+
+  03 Nov 2006; Akinori Hattori <hattya@gentoo.org> files/digest-mecab-0.92,
+  Manifest:
+  fixes bug #153907.
 
   30 Oct 2006; Akinori Hattori <hattya@gentoo.org> -mecab-0.81.ebuild,
   -mecab-0.91.ebuild, mecab-0.92.ebuild:
