@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.24 2006/11/03 17:02:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.25 2006/11/03 18:02:55 nixnut Exp $
+
+  03 Nov 2006; nixnut <nixnut@gentoo.org> libdvbpsi-0.1.5.ebuild:
+  Stable on ppc wrt bug 153929
 
   03 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> libdvbpsi-0.1.5.ebuild:
   Added warning to use revdep-rebuild after updating, suggested by Gustavo
