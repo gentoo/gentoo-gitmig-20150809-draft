@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.4 2006/11/03 14:38:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.5 2006/11/03 17:02:07 zzam Exp $
 
 IUSE="doc"
 
@@ -42,3 +42,14 @@ src_install () {
 	cd ${S}
 	dodoc AUTHORS INSTALL README NEWS
 }
+
+pkg_postinst() {
+	if has_version "<${CATEGORY}/${P}"; then
+		ewarn
+		ewarn "Updating libdvbpsi requires you to recompile"
+		ewarn "every program using libdvbpsi."
+		ewarn "You should run 'revdep-rebuild --library libdvbpsi.so.*' asap."
+		ewarn
+	fi
+}
+
