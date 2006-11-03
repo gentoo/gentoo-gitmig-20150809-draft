@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sexypsf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.18 2006/10/31 19:44:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sexypsf/ChangeLog,v 1.19 2006/11/03 21:25:21 opfer Exp $
+
+  03 Nov 2006; Christian Faulhammer <opfer@gentoo.org> sexypsf-0.4.7.ebuild:
+  stabled x86, bug #153356
 
   31 Oct 2006; Luca Barbato <lu_zero@gentoo.org> sexypsf-0.4.7.ebuild:
   Bigendian fix for oss and cleanup, goodbye xmms
