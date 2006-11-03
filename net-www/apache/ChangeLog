@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.501 2006/11/01 17:38:42 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.502 2006/11/03 01:33:32 vericgar Exp $
+
+*apache-2.0.59-r2 (02 Nov 2006)
+
+  02 Nov 2006; Michael Stewart <vericgar@gentoo.org>
+  -apache-2.0.59-r1.ebuild, +apache-2.0.59-r2.ebuild:
+  Fix the init script so that is works with older versions of baselayout.
+  Removed 2.0.59-r1 because it needed a newer baselayout and it's environment
+  handling was buggy.
 
   01 Nov 2006; Michael Stewart <vericgar@gentoo.org>
   apache-2.0.59-r1.ebuild:
