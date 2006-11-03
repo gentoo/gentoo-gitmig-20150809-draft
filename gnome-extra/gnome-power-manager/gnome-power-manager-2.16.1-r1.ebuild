@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.1-r1.ebuild,v 1.1 2006/10/31 14:24:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.1-r1.ebuild,v 1.2 2006/11/03 18:16:45 dang Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -50,7 +50,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	einfo "You will need the masked pam_console to be able to"
-	einfo "suspend/hibernate, and you will need to:"
+	einfo "suspend/hibernate, or you will need to:"
 	einfo "touch /var/run/console/<USERNAME>"
 	einfo "after each boot"
 }

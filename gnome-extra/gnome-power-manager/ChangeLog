@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.18 2006/10/31 14:24:01 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.19 2006/11/03 18:16:45 dang Exp $
+
+  03 Nov 2006; Daniel Gryniewicz <dang@gentoo.org>
+  gnome-power-manager-2.16.1-r1.ebuild:
+  or touch /var/run/console/username, not and
 
 *gnome-power-manager-2.16.1-r1 (31 Oct 2006)
 
