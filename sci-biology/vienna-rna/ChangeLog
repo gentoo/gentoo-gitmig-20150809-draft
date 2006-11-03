@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/vienna-rna
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.10 2006/09/14 02:20:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/ChangeLog,v 1.11 2006/11/03 03:05:44 ribosome Exp $
+
+  03 Nov 2006; Olivier Fisette <ribosome@gentoo.org> -vienna-rna-1.6.ebuild:
+  Pruned old version.
 
   14 Sep 2006; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Stepping down from maintaining this package.

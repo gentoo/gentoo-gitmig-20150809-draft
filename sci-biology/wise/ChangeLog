@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/wise
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/ChangeLog,v 1.9 2006/09/14 02:21:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/ChangeLog,v 1.10 2006/11/03 03:08:09 ribosome Exp $
+
+  03 Nov 2006; Olivier Fisette <ribosome@gentoo.org> -wise-2.1.23c.ebuild:
+  Pruned old version.
 
   14 Sep 2006; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Stepping down from maintaining this package.
