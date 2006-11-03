@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.219 2006/10/24 08:03:24 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.220 2006/11/03 03:01:48 allanonjl Exp $
+
+*glib-2.12.4-r1 (03 Nov 2006)
+
+  03 Nov 2006; John N. Laliberte <allanonjl@gentoo.org> -glib-2.12.0.ebuild,
+  -glib-2.12.1.ebuild, -glib-2.12.2.ebuild, -glib-2.12.3.ebuild,
+  -glib-2.12.4.ebuild, +glib-2.12.4-r1.ebuild:
+  add --enable-static so we always build static libs.  fixes #153807
 
   24 Oct 2006; Roy Marples <uberlord@gentoo.org> glib-2.12.4.ebuild:
   Added ~sparc-fbsd keyword.
