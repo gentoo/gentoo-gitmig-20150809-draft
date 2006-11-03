@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-signature
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-signature/ChangeLog,v 1.8 2006/11/02 22:32:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-signature/ChangeLog,v 1.9 2006/11/03 09:13:15 je_fro Exp $
+
+  03 Nov 2006; Jeff Gardner <je_fro@gentoo.org>
+  embassy-signature-0.1.0-r1.ebuild:
+  Added ~sparc
 
   02 Nov 2006; Fabian Groffen <grobian@gentoo.org>
   embassy-signature-0.1.0.ebuild, embassy-signature-0.1.0-r1.ebuild:

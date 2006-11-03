@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.22 2006/11/03 07:19:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.23 2006/11/03 09:16:12 je_fro Exp $
+
+  03 Nov 2006; Jeff Gardner <je_fro@gentoo.org> embassy-4.0.0.ebuild:
+  Added ~sparc
 
   03 Nov 2006; Fabian Groffen <grobian@gentoo.org> embassy-3.0.0.ebuild,
   embassy-4.0.0.ebuild:
