@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX mplayer-1.0_pre8-amr-64bit.patch 1438 RMD160 c0848ae29590b5cc011d252798115cc66af37335 SHA1 515a041a951cd1ee8e569f3899a2f0cafe69dbd5 SHA256 7bcc9351707571a80c6a8c52381ad8f3f980e2e570091196df61880d019c9d51
 MD5 7c7e0313f90c399e78c4496b07bb5f82 files/mplayer-1.0_pre8-amr-64bit.patch 1438
 RMD160 c0848ae29590b5cc011d252798115cc66af37335 files/mplayer-1.0_pre8-amr-64bit.patch 1438
@@ -48,3 +51,10 @@ SHA256 54f039e1745cbbfbf2195d810d2f089b229523b76012d96a186563f684b5a176 files/di
 MD5 d0be0211a136a46aa1a3d62db8b338cb files/digest-mplayer-1.0_rc1 1997
 RMD160 c4405eb322da0468f4aa2be5cbf68fe5b8c58ec6 files/digest-mplayer-1.0_rc1 1997
 SHA256 31562c898adca2151ae31a9d49b3199b1c16e046e67532e26b7a5c37a24cce18 files/digest-mplayer-1.0_rc1 1997
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFS5YXWt/XSf2CZdkRAqo0AJ4ryY6rogoFFgQEuycQhl30mP6GJgCfQuvA
+CwapcZ1OxBxRTrlLegPfhgc=
+=XRnU
+-----END PGP SIGNATURE-----
