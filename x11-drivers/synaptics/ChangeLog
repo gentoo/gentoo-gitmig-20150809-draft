@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/synaptics
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.18 2006/11/02 23:40:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/synaptics/ChangeLog,v 1.19 2006/11/03 00:00:12 seemant Exp $
+
+*synaptics-0.14.6 (02 Nov 2006)
+
+  02 Nov 2006; Seemant Kulleen <seemant@gentoo.org>
+  +synaptics-0.14.6.ebuild:
+  version bump, which renders the prior patches unnecessary, sinceupstream
+  fixed the compile issues with xorg-7.1. Also, the manpage installation
+  location is actually finally fixed (closing bug #14112 by KIMURA Masaru /
+  hiyuh). Closes bug #144308 where Pietro Franchi provided the new version
 
   02 Nov 2006; Seemant Kulleen <seemant@gentoo.org>
   -synaptics-0.14.2.ebuild, -synaptics-0.14.3.ebuild,
