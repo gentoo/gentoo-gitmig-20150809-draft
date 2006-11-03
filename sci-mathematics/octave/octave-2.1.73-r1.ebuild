@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r1.ebuild,v 1.1 2006/11/02 16:29:22 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r1.ebuild,v 1.2 2006/11/03 15:44:39 markusle Exp $
 
 inherit flag-o-matic fortran autotools
 
@@ -15,6 +15,7 @@ IUSE="emacs static readline zlib doc hdf5 mpi blas"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="virtual/libc
+	dev-util/dejagnu
 	>=sys-libs/ncurses-5.2-r3
 	>=sci-visualization/gnuplot-3.7.1-r3
 	>=sci-libs/fftw-2.1.3
@@ -37,6 +38,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-gcc4.1-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-example-fix.patch
 	epatch "${FILESDIR}"/${P}-f2c-fix.patch
 	eautoconf
 }
