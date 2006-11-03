@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.14 2006/10/07 02:25:22 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.15 2006/11/03 19:22:24 blubb Exp $
+
+  03 Nov 2006; <blubb@gentoo.org> up-imapproxy-1.2.4.ebuild:
+  stable on amd64
 
   07 Oct 2006; Andrej Kacian <ticho@gentoo.org>
   +files/1.2.4-include-fix.patch, up-imapproxy-1.2.4.ebuild:
