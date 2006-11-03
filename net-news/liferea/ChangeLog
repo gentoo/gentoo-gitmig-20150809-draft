@@ -1,6 +1,16 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.59 2006/11/01 00:10:39 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.60 2006/11/03 16:16:29 dang Exp $
+
+  03 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 1.1.8
+  
+  - Bug fixes
+  
+  - New item age dependant date column format as used in other news/email
+  clients as Evolution.
+  
+  - Simple Bloglines support with a new feed list source type.
 
   01 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> liferea-1.0.16.ebuild,
   liferea-1.0.22-r1.ebuild, liferea-1.0.23.ebuild, liferea-1.0.24.ebuild,
