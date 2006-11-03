@@ -8,17 +8,17 @@ dm-crypt-execute-checkfs() {
 	local red='\x1b[31;01m' green='\x1b[32;01m' off='\x1b[0;0m'
 
 	if [ -n "$target" ]; then
-			# let user set options, otherwise leave empty
-			: ${options:=' '}
-		elif [ -n "$swap" ]; then
-			target=${swap}
-			# swap contents do not need to be preserved between boots, luks not required.
-			# suspend2 users should have initramfs's init handling their swap partition either way.
-			: ${options:='-c aes -h sha1 -d /dev/urandom'}
-			: ${pre_mount:='mkswap ${dev}'}
-		else
-			return
-		fi
+		# let user set options, otherwise leave empty
+		: ${options:=' '}
+	elif [ -n "$swap" ]; then
+		target=${swap}
+		# swap contents do not need to be preserved between boots, luks not required.
+		# suspend2 users should have initramfs's init handling their swap partition either way.
+		: ${options:='-c aes -h sha1 -d /dev/urandom'}
+		: ${pre_mount:='mkswap ${dev}'}
+	else
+		return
+	fi
 	if [ -z "$source" ] && [ ! -e "$source" ]; then
 		ewarn "source \"${source}\" for ${target} missing, skipping..."
 		return
@@ -31,8 +31,8 @@ dm-crypt-execute-checkfs() {
 	fi
 
 	# cryptsetup:
-		# luksOpen <device> <name>      # <device> is $source
-		# create   <name>   <device>    # <name>   is $target
+	# luksOpen <device> <name>      # <device> is $source
+	# create   <name>   <device>    # <name>   is $target
 	local arg1="create" arg2="$target" arg3="$source" luks=0
 
 	cryptsetup isLuks ${source} 2>/dev/null && { arg1="luksOpen"; arg2="$source"; arg3="$target"; luks=1; }
@@ -57,13 +57,13 @@ dm-crypt-execute-checkfs() {
 				do
 					[ ! -d "$mntrem" ] && mkdir -p ${mntrem} 2>/dev/null >/dev/null
 					if mount -n -o ro ${remdev} ${mntrem} 2>/dev/null >/dev/null ; then
-					sleep 2
-					# keyfile exists?
+						sleep 2
+						# keyfile exists?
 						if [ ! -e "${mntrem}${key}" ]; then
-						umount -n ${mntrem} 2>/dev/null >/dev/null
-						rmdir ${mntrem} 2>/dev/null >/dev/null
-						einfo "Cannot find ${key} on removable media."
-						echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console	
+							umount -n ${mntrem} 2>/dev/null >/dev/null
+							rmdir ${mntrem} 2>/dev/null >/dev/null
+							einfo "Cannot find ${key} on removable media."
+							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console	
 							read ans </dev/console
 							echo	>/dev/console
 							[ "$ans" != "yes" ] && { i=0; c=0; } || return 
@@ -80,8 +80,8 @@ dm-crypt-execute-checkfs() {
 							rmdir ${mntrem} 2>/dev/null >/dev/null
 							einfo "Removable device for ${target} not present."
 							echo -n -e " ${green}*${off}  Abort?(${red}yes${off}/${green}no${off})" >/dev/console
-                                                        read ans </dev/console
-                                                        echo  >/dev/console
+							read ans </dev/console
+							echo  >/dev/console
 							[ "$ans" != "yes" ] && { i=0; c=0; } || return
 						fi
 					fi
@@ -99,12 +99,12 @@ dm-crypt-execute-checkfs() {
 			einfo "Reason: mode ${mode} is invalid."
 			return
 			;;
-	esac
+		esac
 	else
 		mode=none
 	fi
-		splash svc_input_begin checkfs
-		ebegin "dm-crypt map ${target}"
+	splash svc_input_begin checkfs
+	ebegin "dm-crypt map ${target}"
 	einfo "cryptsetup will be called with : ${options} ${arg1} ${arg2} ${arg3}"
 	if [ "$mode" == "gpg" ]; then
 		: ${gpg_options:='-q -d'}
@@ -143,7 +143,7 @@ dm-crypt-execute-checkfs() {
 	fi
 	if [ -d "$mntrem" ]; then
 		umount -n ${mntrem} 2>/dev/null >/dev/null
-                rmdir ${mntrem} 2>/dev/null >/dev/null
+		rmdir ${mntrem} 2>/dev/null >/dev/null
 	fi
 	splash svc_input_end checkfs
 

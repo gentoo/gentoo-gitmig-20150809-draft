@@ -21,16 +21,16 @@
 
 # Arguments:
 #-----------
-# target=<name>				== Mapping name for partition. 
-# swap=<name>				== Mapping name for swap partition.
-# source='<dev>'			== Real device for partition.
-# key='</path/to/keyfile>[:<mode>]'	== Fullpath from / or from inside removable media.
-# remdev='<dev>'			== Device that will be assigned to removable media. 
-# gpg_options='<opts>'			== Default are --quiet --decrypt
-# options='<opts>'			== cryptsetup, for LUKS you can only use --readonly
-# loop_file='<file>'			== Loopback file.
-# pre_mount='cmds'			== commands to execute before mounting partition.
-# post_mount='cmds'			== commands to execute after mounting partition.
+# target=<name>                      == Mapping name for partition.
+# swap=<name>                        == Mapping name for swap partition.
+# source='<dev>'                     == Real device for partition.
+# key='</path/to/keyfile>[:<mode>]'  == Fullpath from / or from inside removable media.
+# remdev='<dev>'                     == Device that will be assigned to removable media.
+# gpg_options='<opts>'               == Default are --quiet --decrypt
+# options='<opts>'                   == cryptsetup, for LUKS you can only use --readonly
+# loop_file='<file>'                 == Loopback file.
+# pre_mount='cmds'                   == commands to execute before mounting partition.
+# post_mount='cmds'                  == commands to execute after mounting partition.
 #-----------
 # Supported Modes
 # gpg					== decrypt and pipe key into cryptsetup.
