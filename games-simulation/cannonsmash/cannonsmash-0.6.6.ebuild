@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.11 2006/04/10 22:47:52 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.12 2006/11/03 03:03:09 nyhm Exp $
 
 inherit eutils games
 
@@ -15,13 +15,16 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="vorbis nls"
 
-DEPEND="|| ( x11-libs/libXmu virtual/x11 )
+RDEPEND="x11-libs/libXmu
 	virtual/opengl
 	virtual/glu
 	>=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-mixer-1.2.3
 	>=media-libs/sdl-image-1.2.2
-	=x11-libs/gtk+-2*"
+	=x11-libs/gtk+-2*
+	nls? ( virtual/libintl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/csmash-${PV}
 
@@ -51,10 +54,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	if use vorbis ; then
 		insinto "${GAMES_DATADIR}"/csmash
-		doins ${MY_OGG}
+		doins ${MY_OGG} || die "doins failed"
 	fi
 	dodoc AUTHORS CREDITS README*
 	prepgamesdirs
