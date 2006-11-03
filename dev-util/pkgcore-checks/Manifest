@@ -5,15 +5,23 @@ AUX pkgcore-checks-0.1-missing-glsa-dir.patch 629 RMD160 256ad056bc2c6e1411cbecb
 MD5 1e80c91f0b531ed10371197f0cfde3af files/pkgcore-checks-0.1-missing-glsa-dir.patch 629
 RMD160 256ad056bc2c6e1411cbecbb92d1abda81931337 files/pkgcore-checks-0.1-missing-glsa-dir.patch 629
 SHA256 12054196059b5821f56cf1c74859526a716c1946a7521f6978f682c60529f38c files/pkgcore-checks-0.1-missing-glsa-dir.patch 629
+AUX pkgcore-checks-0.1-optimization.patch 840 RMD160 ac9cca61d2769d1be1ce83137411ef2f4587661a SHA1 919444fe51b6ba5f6c65acb20c7a9e0cf31cc543 SHA256 0992772fc4ea4b7fe788a9a6e5ebe2c3f0263581586aca9a31c574a9b12db8cc
+MD5 c603d83a039d2b22b910f5a0f28db272 files/pkgcore-checks-0.1-optimization.patch 840
+RMD160 ac9cca61d2769d1be1ce83137411ef2f4587661a files/pkgcore-checks-0.1-optimization.patch 840
+SHA256 0992772fc4ea4b7fe788a9a6e5ebe2c3f0263581586aca9a31c574a9b12db8cc files/pkgcore-checks-0.1-optimization.patch 840
 DIST pkgcore-checks-0.1.tar.bz2 22299 RMD160 58fc49672bbbae610bda742506943eb7340da8a0 SHA1 429a681bf0dcd789813a17fee388b368bf678a97 SHA256 a408a881fd42020eb2fd73991599e0825d7f58f27686906c3ce90767e28f3b94
 EBUILD pkgcore-checks-0.1-r1.ebuild 697 RMD160 7c9885c6ac4d8baf929430284b3b175989b7cf24 SHA1 c1fa7648841e8cc43cbde5cfcbebcc0b1c0696fc SHA256 50b846f8e708e51b6fe79aed24bd650a4ab9196ef4b4b17f0ca2628dac59fd79
 MD5 ff5740f7fe94b7a2b1cb50cabd8f9e71 pkgcore-checks-0.1-r1.ebuild 697
 RMD160 7c9885c6ac4d8baf929430284b3b175989b7cf24 pkgcore-checks-0.1-r1.ebuild 697
 SHA256 50b846f8e708e51b6fe79aed24bd650a4ab9196ef4b4b17f0ca2628dac59fd79 pkgcore-checks-0.1-r1.ebuild 697
-MISC ChangeLog 969 RMD160 478b8b4f050400a86f69240845ac3a7d6e780c56 SHA1 de4b1f9030a41724a5130c208935eab59c98c086 SHA256 971b9fab2f09c3534429fcefba7f6c4f0ad073a208adf1ae4822a7e79e1d002b
-MD5 f8220ac0f824472fd8c4e10aa0f379c0 ChangeLog 969
-RMD160 478b8b4f050400a86f69240845ac3a7d6e780c56 ChangeLog 969
-SHA256 971b9fab2f09c3534429fcefba7f6c4f0ad073a208adf1ae4822a7e79e1d002b ChangeLog 969
+EBUILD pkgcore-checks-0.1-r2.ebuild 743 RMD160 6f8354be8b8c7459433e7e1221e80fcde399d925 SHA1 f966fcb28c2ce58f2c62ff6d53cef10400daa595 SHA256 0e5cdd378934fc178449388c3a89ded9dcaf911e405db459573c1d138cac3aa0
+MD5 ef42afceca93fd736a6abc45e8f778b0 pkgcore-checks-0.1-r2.ebuild 743
+RMD160 6f8354be8b8c7459433e7e1221e80fcde399d925 pkgcore-checks-0.1-r2.ebuild 743
+SHA256 0e5cdd378934fc178449388c3a89ded9dcaf911e405db459573c1d138cac3aa0 pkgcore-checks-0.1-r2.ebuild 743
+MISC ChangeLog 1171 RMD160 f06f6f17964d640c239ae94ab7f0bd3e028994ba SHA1 46b9adb2190fd8fc845515f7077af368179af156 SHA256 61d6e2c202b32ef82a1da846a9cf12520cd77e4b2706b18ba7e2b106005147cb
+MD5 ade329ba433b0ae3307f06d719e7521b ChangeLog 1171
+RMD160 f06f6f17964d640c239ae94ab7f0bd3e028994ba ChangeLog 1171
+SHA256 61d6e2c202b32ef82a1da846a9cf12520cd77e4b2706b18ba7e2b106005147cb ChangeLog 1171
 MISC metadata.xml 222 RMD160 01bd2c9180f544353de73063bede0dd6b8ca6152 SHA1 95963907e0f22bc3795213303a68a2155b1ba78a SHA256 6e5dda05386711c829057f65bfd0e3ae693232628949c1612163ce9915963a63
 MD5 5dff6cc33967055cfde969cbcb7b6d5d metadata.xml 222
 RMD160 01bd2c9180f544353de73063bede0dd6b8ca6152 metadata.xml 222
@@ -21,10 +29,13 @@ SHA256 6e5dda05386711c829057f65bfd0e3ae693232628949c1612163ce9915963a63 metadata
 MD5 db27f370cd3ff83303546b9e1c1378f2 files/digest-pkgcore-checks-0.1-r1 256
 RMD160 2e49263a5becaabbc27fad53b1bc815a4d2f49fc files/digest-pkgcore-checks-0.1-r1 256
 SHA256 86b1db0ec916f6a5a35025e2fe9427af1b2dc9c968b6fbb228f8827d73bdbf3b files/digest-pkgcore-checks-0.1-r1 256
+MD5 db27f370cd3ff83303546b9e1c1378f2 files/digest-pkgcore-checks-0.1-r2 256
+RMD160 2e49263a5becaabbc27fad53b1bc815a4d2f49fc files/digest-pkgcore-checks-0.1-r2 256
+SHA256 86b1db0ec916f6a5a35025e2fe9427af1b2dc9c968b6fbb228f8827d73bdbf3b files/digest-pkgcore-checks-0.1-r2 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFFLkCmUElL7eJpfEQRAptOAJwOdTiaFxV7tOy0PUuuCkYsYYvTRgCfYK5p
-MXV7p/MN+mDuiRVGJlc9Xto=
-=LcaH
+iD8DBQFFSt9wUElL7eJpfEQRAplmAKC6NYNw73/rzWE+M1DcxUWEzA6VQQCeMjdD
+RylhUHCoJPVBsA69oNbEQl0=
+=whUr
 -----END PGP SIGNATURE-----
