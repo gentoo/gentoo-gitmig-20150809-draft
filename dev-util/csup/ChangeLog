@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/csup
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/ChangeLog,v 1.4 2006/10/17 21:35:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/ChangeLog,v 1.5 2006/11/03 08:36:16 drizzt Exp $
+
+  03 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> csup-20060318.ebuild:
+  Added ~ppc keyword.
 
   17 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> csup-20060318.ebuild:
   Add missing dependencies over zlib and openssl.
