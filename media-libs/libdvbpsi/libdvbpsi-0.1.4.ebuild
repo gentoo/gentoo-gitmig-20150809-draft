@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.4.ebuild,v 1.5 2004/06/24 23:07:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.4.ebuild,v 1.6 2006/11/03 14:02:37 zzam Exp $
 
 IUSE=""
 
@@ -15,7 +15,9 @@ SLOT="0"
 # doxygen missing: ~ia64
 KEYWORDS="~x86 ~ppc ~sparc amd64 ~alpha"
 
-DEPEND=">=app-doc/doxygen-1.2.16"
+DEPEND=">=app-doc/doxygen-1.2.16
+	media-gfx/graphviz"
+RDEPEND=""
 
 src_compile() {
 	econf --enable-release || die "econf failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.2 2006/05/08 13:30:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.3 2006/11/03 14:02:36 zzam Exp $
 
 IUSE="doc"
 
@@ -15,15 +15,23 @@ SLOT="0"
 # doxygen missing: ~ia64
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
-DEPEND="doc? ( >=app-doc/doxygen-1.2.16 )"
+DEPEND="doc? (
+		>=app-doc/doxygen-1.2.16
+		media-gfx/graphviz
+	)"
+RDEPEND=""
 
 src_compile() {
 	econf --enable-release || die "econf failed"
 
 	emake || die "emake failed"
 
-	use doc && ewarn "Attempting to build documentation"
-	use doc && make doc || ewarn "Documentation was not built"
+	if use doc; then
+		ewarn "Attempting to build documentation"
+		make doc || die "Could not build documentation."
+	else
+		ewarn "Documentation was not built"
+	fi
 }
 
 src_install () {
