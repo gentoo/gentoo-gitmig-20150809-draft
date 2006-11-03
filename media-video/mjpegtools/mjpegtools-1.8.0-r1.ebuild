@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.20 2006/11/03 15:27:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.21 2006/11/03 16:07:48 zzam Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -18,9 +18,7 @@ KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="gtk dv quicktime sdl X yv12 3dnow mmx sse v4l dga png"
 
 RDEPEND="media-libs/jpeg
-	x86? ( media-libs/libmovtar
-		mmx? ( >=media-libs/jpeg-mmx-0.1.6 )
-	)
+	x86? ( mmx? ( >=media-libs/jpeg-mmx-0.1.6 ) )
 	gtk? ( =x11-libs/gtk+-1.2*
 		=dev-libs/glib-1.2* )
 	dv? ( >=media-libs/libdv-0.99 )
