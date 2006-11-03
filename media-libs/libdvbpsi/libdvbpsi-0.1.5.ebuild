@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.3 2006/11/03 14:02:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.5.ebuild,v 1.4 2006/11/03 14:38:03 gustavoz Exp $
 
 IUSE="doc"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.videolan.org/pub/${PN}/${PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # doxygen missing: ~ia64
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 sparc ~x86"
 
 DEPEND="doc? (
 		>=app-doc/doxygen-1.2.16
