@@ -1,6 +1,6 @@
 # Copyright 2000-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.12.ebuild,v 1.12 2006/10/25 05:53:32 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.12.ebuild,v 1.13 2006/11/03 11:08:31 swegener Exp $
 
 inherit eutils qt3 qt4 mono python
 
@@ -136,9 +136,9 @@ src_install() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_cleanup "${ROOT}"/usr/lib/python*/site-packages/avahi
 }
 
 pkg_postinst() {
-	python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/avahi
+	use python && python_mod_optimize "${ROOT}"/usr/lib/python*/site-packages/avahi
 }
