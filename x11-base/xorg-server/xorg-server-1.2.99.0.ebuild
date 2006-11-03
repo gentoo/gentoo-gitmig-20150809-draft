@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.4 2006/11/03 17:23:18 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.5 2006/11/03 23:51:32 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -110,6 +110,7 @@ IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_SERVERS}
 	3dfx
 	aiglx
+	dbus
 	dri ipv6 minimal nptl sdl xprint"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
@@ -304,10 +305,12 @@ pkg_setup() {
 		$(use_enable !minimal xnest)
 		$(use_enable !minimal xorgcfg)
 		$(use_enable !minimal install-libxf86config)
+		$(use_enable dbus)
 		$(use_enable dri)
 		$(use_enable xorg)
 		$(use_enable xprint)
 		$(use_enable nptl glx-tls)
+		--disable-dmx
 		--sysconfdir=/etc/X11
 		--localstatedir=/var
 		--enable-install-setuid
