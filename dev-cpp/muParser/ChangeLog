@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/muParser
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.3 2006/02/23 13:59:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.4 2006/11/03 15:46:12 caleb Exp $
+
+  03 Nov 2006; Caleb Tennis <caleb@gentoo.org> muParser-1.25.ebuild:
+  Use new muParser build from gentooscience overlay, per bug #153851
 
   23 Feb 2006; Caleb Tennis <caleb@gentoo.org> muParser-1.25.ebuild:
   Change license to MIT from GPL-2
