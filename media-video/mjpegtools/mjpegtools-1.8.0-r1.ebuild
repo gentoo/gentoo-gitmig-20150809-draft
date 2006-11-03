@@ -1,6 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.19 2006/09/06 16:32:23 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.20 2006/11/03 15:27:59 zzam Exp $
+
+WANT_AUTOMAKE="latest"
+WANT_AUTOCONF="latest"
 
 inherit flag-o-matic toolchain-funcs eutils libtool autotools
 
@@ -36,7 +39,8 @@ DEPEND="${RDEPEND}
 		3dnow? ( dev-lang/nasm )
 		sse? ( dev-lang/nasm )
 		)
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
