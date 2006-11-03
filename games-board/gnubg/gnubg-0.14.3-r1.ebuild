@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.2 2006/10/22 22:46:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.3 2006/11/03 00:41:24 nyhm Exp $
 
 inherit flag-o-matic eutils games
 
@@ -21,11 +21,9 @@ IUSE="arts esd gdbm gtk guile nas nls opengl python readline X"
 RESTRICT="test"
 
 # FIXME does this need to DEPEND on netpbm?
-DEPEND="dev-libs/glib
-	>=media-libs/freetype-2
+RDEPEND=">=media-libs/freetype-2
 	media-libs/libpng
 	dev-libs/libxml2
-	sys-libs/zlib
 	arts? ( kde-base/arts )
 	esd? ( media-sound/esound )
 	gdbm? ( sys-libs/gdbm )
@@ -37,15 +35,22 @@ DEPEND="dev-libs/glib
 	)
 	guile? ( dev-util/guile )
 	nas? ( media-libs/nas )
+	nls? ( virtual/libintl )
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	X? ( x11-libs/libXmu )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	mv ../${PN}.weights-${WPV} "${S}/${PN}.weights"
 	mv ../*bd .
+	sed -i 's:$(localedir):/usr/share/locale:' \
+		$(find . -name 'Makefile.in*') \
+		|| die "sed failed"
 	epatch \
 		"${FILESDIR}/${P}"-gcc4.patch \
 		"${FILESDIR}/${P}"-64bits.patch \
@@ -99,7 +104,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins ${PN}.weights *bd || die "doins failed"
 	dodoc AUTHORS README NEWS

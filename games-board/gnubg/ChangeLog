@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.27 2006/10/22 22:46:38 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.28 2006/11/03 00:41:24 nyhm Exp $
+
+  03 Nov 2006; Tristan Heaven <nyhm@gentoo.org> gnubg-0.14.3-r1.ebuild:
+  Add nls dependencies
 
   22 Oct 2006; <tupone@gentoo.org> gnubg-0.14.3-r1.ebuild:
   Meant to put ~all in previous commit. So x86 and ppc64 -> testing
