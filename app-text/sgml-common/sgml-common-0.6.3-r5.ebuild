@@ -1,8 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.8 2006/10/30 13:55:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r5.ebuild,v 1.9 2006/11/03 02:57:31 leonardop Exp $
 
-WANT_AUTOMAKE="1.5"
+WANT_AUTOCONF=2.1
+WANT_AUTOMAKE=1.5
+
 inherit autotools eutils
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
@@ -18,12 +20,15 @@ DEPEND=""
 RDEPEND=""
 
 src_unpack() {
-	unpack ${A}
+	unpack "${A}"
+
 	# We use a hacked version of install-catalog that supports the ROOT
 	# variable, and puts quotes around the CATALOG files.
 	cp "${FILESDIR}/${P}-install-catalog.in" "${S}/bin/install-catalog.in"
-	cd ${S}
-	epatch ${FILESDIR}/${P}-configure.in.patch
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-configure.in.patch
+
 	eautoreconf
 }
 
