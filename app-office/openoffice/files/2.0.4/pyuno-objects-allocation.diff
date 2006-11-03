@@ -1,0 +1,70 @@
+diff -urN pyuno.orig/source/module/pyuno_callable.cxx pyuno/source/module/pyuno_callable.cxx
+--- pyuno.orig/source/module/pyuno_callable.cxx	2006-06-20 07:03:27.000000000 +0200
++++ pyuno/source/module/pyuno_callable.cxx	2006-11-01 15:51:33.000000000 +0100
+@@ -74,7 +74,7 @@
+   
+     me = (PyUNO_callable*) self;
+     delete me->members;
+-    PyMem_DEL (self);
++    PyObject_Del (self);
+   
+     return;
+ }
+@@ -261,7 +261,7 @@
+ {
+     PyUNO_callable* self;
+   
+-    self = PyObject_NEW (PyUNO_callable, &PyUNO_callable_Type);
++    self = PyObject_New (PyUNO_callable, &PyUNO_callable_Type);
+     if (self == NULL)
+         return NULL; //NULL == Error!
+ 
+diff -urN pyuno.orig/source/module/pyuno.cxx pyuno/source/module/pyuno.cxx
+--- pyuno.orig/source/module/pyuno.cxx	2006-06-20 07:03:05.000000000 +0200
++++ pyuno/source/module/pyuno.cxx	2006-11-01 15:51:42.000000000 +0100
+@@ -78,7 +78,7 @@
+ {
+     PyUNO* me = reinterpret_cast< PyUNO* > (self);
+     delete me->members;
+-    PyMem_DEL (self);
++    PyObject_Del (self);
+ }
+ 
+ 
+@@ -727,7 +727,7 @@
+     Sequence<Any> arguments (1);
+     Reference<XInterface> tmp_interface;
+ 
+-    self = PyObject_NEW (PyUNO, &PyUNOType);
++    self = PyObject_New (PyUNO, &PyUNOType);
+     if (self == NULL)
+         return NULL; //NULL == error
+     self->members = new PyUNOInternals();
+diff -urN pyuno.orig/source/module/pyuno_runtime.cxx pyuno/source/module/pyuno_runtime.cxx
+--- pyuno.orig/source/module/pyuno_runtime.cxx	2006-08-28 17:46:54.000000000 +0200
++++ pyuno/source/module/pyuno_runtime.cxx	2006-11-01 15:50:53.000000000 +0100
+@@ -242,13 +242,13 @@
+ PyRef stRuntimeImpl::create( const Reference< XComponentContext > &ctx )
+     throw( com::sun::star::uno::RuntimeException )
+ {
+-    RuntimeImpl *me = PyObject_NEW (RuntimeImpl, &RuntimeImpl_Type);
++    RuntimeImpl *me = PyObject_New (RuntimeImpl, &RuntimeImpl_Type);
+     if( ! me )
+         throw RuntimeException(
+             OUString( RTL_CONSTASCII_USTRINGPARAM( "cannot instantiate pyuno::RuntimeImpl" ) ),
+             Reference< XInterface > () );
+     me->cargo = 0;
+-    // must use a different struct here, as the PyObject_NEW macro
++    // must use a different struct here, as the PyObject_New
+     // makes C++ unusable
+     RuntimeCargo *c = new RuntimeCargo();
+     readLoggingConfig( &(c->logLevel) , &(c->logFile) );
+@@ -324,7 +324,7 @@
+     if( me->cargo->logFile )
+         fclose( me->cargo->logFile );
+     delete me->cargo;
+-    PyMem_DEL (self);
++    PyObject_Del (self);
+ }
+ 
+ 

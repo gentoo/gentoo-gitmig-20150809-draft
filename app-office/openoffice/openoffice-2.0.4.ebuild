@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.9 2006/10/27 12:06:33 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.10 2006/11/03 19:12:48 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
@@ -72,7 +72,6 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
 	dev-libs/expat
-	>=dev-libs/boost-1.33.1
 	>=dev-libs/icu-3.4
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
@@ -93,6 +92,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-perl/Compress-Zlib
 	dev-util/pkgconfig
 	dev-util/intltool
+	>=dev-libs/boost-1.33.1
 	>=net-misc/curl-7.9.8
 	sys-libs/zlib
 	sys-apps/coreutils
@@ -176,6 +176,7 @@ src_unpack() {
 	#Some fixes for our patchset
 	cd ${S}
 	cp -a ${FILESDIR}/${PV}/libgcc3_uno_noexecstack.diff ${S}/patches/src680 || die
+	cp -a ${FILESDIR}/${PV}/pyuno-objects-allocation.diff ${S}/patches/src680 || die
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks
