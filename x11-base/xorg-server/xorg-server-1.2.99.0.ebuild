@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.1 2006/11/03 06:26:23 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.2 2006/11/03 15:07:54 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -137,12 +137,14 @@ RDEPEND="x11-libs/libXfont
 	x11-libs/libXpm
 	x11-libs/libXxf86misc
 	x11-libs/libXxf86vm
-	dmx? ( x11-libs/libdmx )
 	!minimal? ( x11-libs/libXtst
 		x11-libs/libXres )
 	>=x11-libs/libxkbui-1.0.2
 	x11-libs/liblbxutil
 	kdrive? ( sdl? ( media-libs/libsdl ) )"
+	# dmx is currently broken
+	# dmx? ( x11-libs/libdmx )
+
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
 	# Xaw is dmx- and xorgcfg-dependent
 	# Xpm is dmx- and xorgcfg-dependent, pulls in Xt
@@ -174,13 +176,14 @@ DEPEND="${RDEPEND}
 	x11-proto/bigreqsproto
 	x11-proto/xcmiscproto
 	>=x11-proto/glproto-1.4.8
-	dmx? ( x11-proto/dmxproto )
 	dri? ( x11-proto/xf86driproto
 		>=x11-libs/libdrm-2 )
 	xprint? ( x11-proto/printproto
 		x11-apps/mkfontdir
 		x11-apps/mkfontscale
 		x11-apps/xplsprinters )"
+	#dmx is currently broken
+	# dmx? ( x11-proto/dmxproto )
 
 # Drivers
 PDEPEND="
@@ -292,9 +295,10 @@ pkg_setup() {
 	# from ebuild.sh
 	# sysconfdir is used for the xorg.conf location; same applies
 	# --enable-install-setuid needed because sparcs default off
+	# dmx is currently broken
+	#	$(use_enable dmx)
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
-		$(use_enable dmx)
 		$(use_enable kdrive)
 		$(use_enable !minimal xvfb)
 		$(use_enable !minimal xnest)
