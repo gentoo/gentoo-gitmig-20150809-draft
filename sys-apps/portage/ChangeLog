@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.286 2006/11/02 23:59:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.287 2006/11/03 11:01:00 zmedico Exp $
 
-  02 Nov 2006; <zmedico@gentoo.org> portage-2.0.51.22-r3.ebuild,
+  03 Nov 2006; Zac Medico <zmedico@gentoo.org> portage-2.1.2_rc1-r3.ebuild:
+  Add /usr/lib/portage/bin to the list of directories to clean *.pyo files
+  from during the preinst phase. This fixes bug #153905.
+
+  02 Nov 2006; Zac Medico <zmedico@gentoo.org> portage-2.0.51.22-r3.ebuild,
   portage-2.1-r2.ebuild, portage-2.1.1.ebuild, portage-2.1.1-r1.ebuild,
   portage-2.1.2_rc1-r1.ebuild, portage-2.1.2_rc1-r2.ebuild,
   portage-2.1.2_rc1-r3.ebuild:
@@ -10,7 +14,7 @@
 
 *portage-2.1.2_rc1-r3 (02 Nov 2006)
 
-  02 Nov 2006; <zmedico@gentoo.org> +portage-2.1.2_rc1-r3.ebuild:
+  02 Nov 2006; Zac Medico <zmedico@gentoo.org> +portage-2.1.2_rc1-r3.ebuild:
   2.1.2_rc1-r3 revbump.  This fixes bugs #42115, #116616, #129670, and #153764.
 
 *portage-2.1.2_rc1-r2 (01 Nov 2006)

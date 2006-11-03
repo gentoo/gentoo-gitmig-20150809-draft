@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2_rc1-r3.ebuild,v 1.2 2006/11/02 23:59:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.2_rc1-r3.ebuild,v 1.3 2006/11/03 11:01:00 zmedico Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -174,7 +174,7 @@ pkg_preinst() {
 		rm -rf "${IMAGE}"/${portage_base}/bin/*
 		mv "${T}"/tbz2tool "${IMAGE}"/${portage_base}/bin/
 	else
-		for mydir in pym pym/cache pym/elog_modules; do
+		for mydir in bin pym pym/cache pym/elog_modules; do
 			rm "${ROOT}"/${portage_base}/${mydir}/*.pyc >& /dev/null
 			rm "${ROOT}"/${portage_base}/${mydir}/*.pyo >& /dev/null
 		done
