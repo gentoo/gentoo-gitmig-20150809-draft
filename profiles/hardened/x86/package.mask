@@ -122,4 +122,5 @@ x11-drivers/xf86-input-evdev
 >=x11-misc/icon-naming-utils-0.8.1
 >=gnome-base/gconf-2.16.0
 >=gnome-base/gnome-light-2.16.0
+>=app-accessibility/orca-1
 x11-wm/compiz
