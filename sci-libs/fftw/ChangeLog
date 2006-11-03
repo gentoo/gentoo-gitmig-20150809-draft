@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.42 2006/11/01 00:54:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.43 2006/11/03 14:59:37 ribosome Exp $
+
+*fftw-2.1.5-r2 (03 Nov 2006)
+
+  03 Nov 2006; Olivier Fisette <ribosome@gentoo.org> -fftw-2.1.5-r1.ebuild,
+  +fftw-2.1.5-r2.ebuild:
+  Fixed "--as-needed" brokenness in the stable branch. Adding a new revision
+  to force unknowingly affected users to recompile.
 
   01 Nov 2006; Donnie Berkholz <dberkholz@gentoo.org>; ChangeLog:
   Update for my nick change spyderous -> dberkholz.
