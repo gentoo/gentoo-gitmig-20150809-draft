@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.26 2006/10/15 22:20:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.27 2006/11/03 15:28:30 cryos Exp $
+
+*boinc-5.4.11 (03 Nov 2006)
+
+  03 Nov 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  -files/boinc-4.72.20050813-gcc4-fix.patch, -boinc-4.72.20050813-r3.ebuild,
+  +boinc-5.4.11.ebuild:
+  Version bump to add latest stable, bug 151556. Removed old version.
 
   15 Oct 2006; Marcus D. Hanwell <cryos@gentoo.org> ChangeLog:
   Redigesting, should fix bug 151389.
