@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-1.0.ebuild,v 1.1 2006/09/28 03:00:38 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-1.0.ebuild,v 1.2 2006/11/03 18:14:22 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -14,6 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
@@ -28,6 +29,12 @@ src_unpack() {
 
 	# Fix bad build.xml (used to be the sed)
 	epatch "${FILESDIR}/${P}-build_xml.patch"
+	epatch "${FILESDIR}/${PN}-0.9.8-javadoc.patch"
+	# jdictrayapi and tritonus are here
+	#rm -fr org
+	# apple stuff and pat stuff
+	#rm -rf com
+	#rm -fr javazoom
 }
 
 src_compile() {
