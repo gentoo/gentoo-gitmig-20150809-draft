@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.14 2006/10/22 20:20:38 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.17.ebuild,v 1.15 2006/11/03 16:04:11 nattfodd Exp $
 
 inherit nsplugins flag-o-matic fdo-mime eutils multilib toolchain-funcs
 
@@ -20,6 +20,15 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b-r2 )
 	qt3? ( <x11-libs/qt-4 )"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if ! use qt3; then
+		ewarn
+		ewarn "The standalone djvu viewer, djview, will not be compiled."
+		ewarn "Add \"qt3\" to your USE flags if you want it."
+		ewarn
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
