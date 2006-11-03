@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4-r1.ebuild,v 1.3 2006/05/28 21:41:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegrogl/allegrogl-0.2.4-r1.ebuild,v 1.4 2006/11/03 03:01:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc x86"
 IUSE="doc"
 
-DEPEND=">=media-libs/allegro-4.0.0"
+DEPEND="virtual/opengl
+	>=media-libs/allegro-4.0.0"
 
 S=${WORKDIR}/${MY_PN}
 
@@ -35,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc *txt
 	use doc && dodoc examp/*
 }
