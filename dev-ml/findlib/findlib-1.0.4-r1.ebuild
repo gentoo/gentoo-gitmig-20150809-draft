@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.12 2006/09/06 03:07:29 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.0.4-r1.ebuild,v 1.13 2006/11/03 10:43:42 nattfodd Exp $
 
-IUSE="tcltk"
+IUSE="tk"
 
 DESCRIPTION="OCaml tool to find/use non-standard packages."
 HOMEPAGE="http://www.ocaml-programming.de/packages/"
@@ -20,7 +20,7 @@ stublibs=${ocamlfind_destdir}/stublibs
 
 pkg_setup()
 {
-	if ( use tcltk && which ocaml && ! which labltk ); then
+	if ( use tk && which ocaml && ! which labltk ); then
 		eerror "It seems you don't have ocaml compiled with tk support"
 		eerror ""
 		eerror "The findlib toolbox requires ocaml be built with tk support."
