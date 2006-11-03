@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.10 2006/10/31 14:32:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc1.ebuild,v 1.11 2006/11/03 19:18:14 chutzpah Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec amr arts bidi bl bindist
 cpudetection custom-cflags debug dga doc dts dvb cdparanoia directfb dvd
 dv dvdread enca encode esd fbcon gif ggi gtk iconv ipv6 jack joystick jpeg
 libcaca lirc live livecd lzo mad matrox mmx mmxext musepack nas unicode
-vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga 
+vorbis opengl openal oss png real rtc samba sdl speex sse sse2 svga tga
 theora truetype v4l v4l2 win32codecs X x264 xanim xinerama xv xvid xvmc"
 
 LANGS="bg cs de da el en es fr hu ja ko mk nl no pl pt_BR ro ru sk tr uk zh_CN
@@ -405,9 +405,9 @@ src_compile() {
 	strip-flags
 	# ugly optimizations cause MPlayer to cry on x86 systems!
 		if use x86 ; then
-			replace-flags -O0 -O2
-			replace-flags -O3 -O2
+			replace-flags -O* -O2
 			filter-flags -fPIC -fPIE
+			use debug || append-flags -fomit-frame-pointer
 		fi
 	append-flags -D__STDC_LIMIT_MACROS
 	else
