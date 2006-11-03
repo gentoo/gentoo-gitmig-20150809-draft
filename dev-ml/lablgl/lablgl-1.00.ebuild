@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.22 2006/04/01 06:55:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.23 2006/11/03 10:51:45 nattfodd Exp $
 
 inherit multilib eutils
 
-IUSE="tcltk glut doc"
+IUSE="tk glut doc"
 
 DESCRIPTION="Objective CAML interface for OpenGL"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
@@ -13,9 +13,9 @@ LICENSE="as-is"
 DEPEND=">=dev-lang/ocaml-3.05
 	virtual/opengl
 	glut? ( virtual/glut )
-	tcltk? (
+	tk? ( 
 		>=dev-lang/tcl-8.3
-		>=dev-lang/tk-8.3
+		>=dev-lang/tk-8.3 
 	)"
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
@@ -24,16 +24,16 @@ KEYWORDS="x86 ppc sparc alpha ia64 amd64 hppa"
 
 pkg_setup()
 {
-	if ( use tcltk )
+	if ( use tk )
 	then
 		#lablgl requires ocaml compiled with tk support while ocaml has it as an optional dependency
-		if ( ! built_with_use dev-lang/ocaml tcltk )
+		if ( ! built_with_use dev-lang/ocaml tk )
 		then
 			eerror "You don't have ocaml compiled with tk support"
 			eerror ""
 			eerror "lablgl requires ocaml be built with tk support."
 			eerror ""
-			eerror "Please recompile ocaml with tcltk useflag enabled."
+			eerror "Please recompile ocaml with tk useflag enabled."
 			epause 5
 			die "Ocaml is missing tk support";
 		fi
@@ -48,7 +48,7 @@ src_compile() {
 		sed -i "s/-lglut//" Makefile.config
 	fi
 
-	if use tcltk; then
+	if use tk; then
 		make togl toglopt
 	fi
 
@@ -73,7 +73,7 @@ src_install () {
 
 	dodoc README CHANGES COPYRIGHT
 
-	if ( use doc && use tcltk ) then
+	if ( use doc && use tk ) then
 	    DIR=usr/share/doc/${PF}
 	    cp -R Togl/examples/ ${D}/${DIR}/examples.togl
 	fi

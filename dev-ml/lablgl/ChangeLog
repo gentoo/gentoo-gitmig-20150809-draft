@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.37 2006/04/01 06:55:13 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.38 2006/11/03 10:51:45 nattfodd Exp $
+
+  03 Nov 2006; Alexandre Buisse <nattfodd@gentoo.org> lablgl-1.00.ebuild:
+  Change tcltk USE to tk (bug #17808).
 
   01 Apr 2006; Alec Warner <antarus@gentoo.org> lablgl-1.00.ebuild:
   QA issue bug 124326, sleep -> epause
