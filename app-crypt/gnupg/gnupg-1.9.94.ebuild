@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.6 2006/11/01 16:58:39 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.94.ebuild,v 1.7 2006/11/03 19:32:17 alonbl Exp $
 
 WANT_AUTOMAKE='latest'
 
@@ -43,7 +43,6 @@ RDEPEND="${COMMON_DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e 's/PIC/__PIC__/g' intl/relocatable.c || die "PIC patching failed"
 
 	epatch "${FILESDIR}/${P}-make.patch"
 	epatch "${FILESDIR}/${P}-fbsd.patch"
