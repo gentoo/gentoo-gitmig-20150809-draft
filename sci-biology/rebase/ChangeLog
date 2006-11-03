@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.74 2006/11/02 20:19:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.75 2006/11/03 00:20:40 ribosome Exp $
+
+*rebase-611 (03 Nov 2006)
+
+  03 Nov 2006; Olivier Fisette <ribosome@gentoo.org> +rebase-611.ebuild:
+  New upstream version.
 
   02 Nov 2006; Fabian Groffen <grobian@gentoo.org> rebase-601-r1.ebuild,
   rebase-603.ebuild, rebase-604.ebuild, rebase-606.ebuild,
