@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.2 2006/11/03 06:33:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.3 2006/11/03 12:01:31 flameeyes Exp $
+
+  03 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> libxcb-0.9.93.ebuild:
+  Remove ~x86-fbsd keyword as this release does not work correctly.
 
 *libxcb-0.9.93 (03 Nov 2006)
 
