@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.16.ebuild,v 1.2 2006/10/29 22:12:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.16.ebuild,v 1.3 2006/11/03 21:17:11 opfer Exp $
 
 inherit kde-functions
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.bytesex.org/releases/krecord/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=kde-base/kdelibs-3
