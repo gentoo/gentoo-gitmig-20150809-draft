@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/gtk-chtheme-0.3.1.ebuild,v 1.7 2005/06/12 12:16:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-chtheme/gtk-chtheme-0.3.1.ebuild,v 1.8 2006/11/03 03:08:53 allanonjl Exp $
 
 DESCRIPTION="GTK-2.0 Theme Switcher"
 HOMEPAGE="http://plasmasturm.org/programs/gtk-chtheme/"
@@ -12,7 +12,8 @@ KEYWORDS="x86 ~ppc ~sparc ~amd64"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		dev-util/pkgconfig"
 
 src_compile() {
 		emake || die
