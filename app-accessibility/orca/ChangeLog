@@ -1,0 +1,9 @@
+# ChangeLog for app-accessibility/orca
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.1 2006/11/03 04:35:32 leonardop Exp $
+
+*orca-1.0.0 (03 Nov 2006)
+
+  03 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
+  +orca-1.0.0.ebuild:
+  Initial import, requested in bug #153769.
