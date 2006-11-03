@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/caml-light
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/ChangeLog,v 1.2 2005/02/18 10:29:29 mattam Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/ChangeLog,v 1.3 2006/11/03 10:10:11 nattfodd Exp $
+
+  03 Nov 2006; Alexandre Buisse <nattfodd@gentoo.org>
+  caml-light-0.75.ebuild:
+  Change tcltk USE to tk (bug #17808).
 
   18 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> caml-light-0.75.ebuild:
   Fix path bug.

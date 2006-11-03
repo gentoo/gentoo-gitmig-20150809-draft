@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.4.ebuild,v 1.9 2006/03/18 15:56:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.4.ebuild,v 1.10 2006/11/03 10:07:38 nattfodd Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -12,10 +12,10 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-3.08/${P}.tar.bz2"
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc-macos ~ppc64 -s390 sparc ~x86"
-IUSE="tcltk latex"
+IUSE="tk latex"
 
 DEPEND="virtual/libc
-	tcltk? ( >=dev-lang/tk-3.3.3 )"
+	tk? ( >=dev-lang/tk-3.3.3 )"
 
 pkg_setup() {
 	ewarn
@@ -30,7 +30,7 @@ src_compile() {
 	replace-flags "-O?" -O2
 
 	local myconf
-	use tcltk || myconf="-no-tk"
+	use tk || myconf="-no-tk"
 
 	# Fix for bug #23767.
 	if [ "${ARCH}" = "sparc" ]; then

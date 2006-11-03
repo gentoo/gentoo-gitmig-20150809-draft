@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/caml-light-0.75.ebuild,v 1.2 2005/02/18 10:29:29 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/caml-light/caml-light-0.75.ebuild,v 1.3 2006/11/03 10:10:11 nattfodd Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,10 +12,10 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/caml-light/cl75unix.tar.gz"
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="tcltk"
+IUSE="tk"
 
 DEPEND="virtual/libc
-	tcltk? ( >=dev-lang/tk-3.3.3 )"
+	tk? ( >=dev-lang/tk-3.3.3 )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3.ebuild,v 1.3 2006/11/02 12:10:47 nattfodd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.09.3.ebuild,v 1.4 2006/11/03 10:07:38 nattfodd Exp $
 
 inherit flag-o-matic eutils multilib
 
@@ -12,10 +12,10 @@ SRC_URI="http://caml.inria.fr/distrib/ocaml-3.09/${P}.tar.bz2"
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 sparc ~x86"
-IUSE="tcltk latex"
+IUSE="tk latex"
 
 DEPEND="virtual/libc
-	tcltk? ( >=dev-lang/tk-3.3.3 )"
+	tk? ( >=dev-lang/tk-3.3.3 )"
 
 pkg_setup() {
 	ewarn
@@ -30,7 +30,7 @@ src_compile() {
 	replace-flags "-O?" -O2
 
 	local myconf
-	use tcltk || myconf="-no-tk"
+	use tk || myconf="-no-tk"
 
 	# Fix for kernel_arch != system_ach (bug #135641)
 	myconf="${myconf} -host ${CHOST}"
