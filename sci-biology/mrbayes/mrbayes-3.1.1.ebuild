@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.1.ebuild,v 1.5 2006/09/12 20:48:24 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mrbayes/mrbayes-3.1.1.ebuild,v 1.6 2006/11/03 14:22:28 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}_src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc-macos x86"
+KEYWORDS="x86"
 IUSE="mpi"
 
 DEPEND="mpi? ( virtual/mpi )"
