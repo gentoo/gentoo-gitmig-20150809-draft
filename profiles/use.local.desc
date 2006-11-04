@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2297 2006/11/04 15:23:51 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2298 2006/11/04 17:22:18 phreak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -371,6 +371,7 @@ dev-libs/cyrus-sasl:ntlm_unsupported_patch - Adds NTLM samba NOT supported patch
 dev-libs/cyrus-sasl:sample - Build sample client and server
 dev-libs/cyrus-sasl:srp - Enables SRP in cyrus-sasl
 dev-libs/cyrus-sasl:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/fcgi:html - Adds HTML documentation.
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland.
 dev-libs/libcdio:cddb - Access cddb servers to retrieve and submit information about compact disks.
 dev-libs/libjit:interpreter - Enable the libjit interpreter
