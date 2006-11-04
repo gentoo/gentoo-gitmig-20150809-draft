@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.99 2006/11/02 19:49:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.100 2006/11/04 19:23:29 usata Exp $
+
+*zsh-4.3.2-r2 (04 Nov 2006)
+
+  04 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> zsh-4.3.2-r1.ebuild,
+  +zsh-4.3.2-r2.ebuild:
+  Added examples USE flag. Thanks to Johannes Weiner <hnazfoo@gmail.com>
+  for the suggestion. This closes bug #146923. Fixed Doc files path.
 
   02 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> files/zprofile,
   -files/zsh-strncmp.diff, -zsh-4.0.9-r4.ebuild, -zsh-4.2.4.ebuild,

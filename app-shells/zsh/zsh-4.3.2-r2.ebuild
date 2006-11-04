@@ -1,18 +1,23 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r1.ebuild,v 1.6 2006/11/04 19:23:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.3.2-r2.ebuild,v 1.1 2006/11/04 19:23:29 usata Exp $
 
 inherit eutils multilib
+
+LOVERS_PV=0.5
+LOVERS_P=zsh-lovers-${LOVERS_PV}
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.bz2
+	examples? (
+	http://www.grml.org/repos/zsh-lovers_${LOVERS_PV}.orig.tar.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc-macos ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="maildir ncurses static doc pcre caps unicode"
+IUSE="maildir ncurses static doc examples pcre caps unicode"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
 	caps? ( sys-libs/libcap )
@@ -22,8 +27,7 @@ DEPEND="sys-apps/groff
 	${RDEPEND}"
 
 src_unpack() {
-	unpack ${P}.tar.bz2
-	use doc && unpack ${P}-doc.tar.bz2
+	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-init.d-gentoo.diff
 	cd ${S}/Doc
@@ -117,6 +121,18 @@ src_install() {
 		dohtml Doc/*
 		insinto /usr/share/doc/${PF}
 		doins Doc/zsh.{dvi,pdf}
+	fi
+
+	if use examples; then
+		cd ${WORKDIR}/${LOVERS_P}
+		doman  zsh-lovers.1    || die "doman zsh-lovers failed"
+		dohtml zsh-lovers.html || die "dohtml zsh-lovers failed"
+		docinto zsh-lovers
+		dodoc zsh.vim README
+		insinto /usr/share/doc/${PF}/zsh-lovers
+		doins zsh-lovers.{ps,pdf} refcard.{dvi,ps,pdf}
+		doins -r zsh_people || die "doins zsh_people failed"
+		cd -
 	fi
 
 	docinto StartupFiles
