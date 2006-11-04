@@ -1,6 +1,11 @@
 # ChangeLog for games-util/xqf
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.24 2006/10/05 21:02:56 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.25 2006/11/04 19:10:01 nyhm Exp $
+
+*xqf-1.0.5 (04 Nov 2006)
+
+  04 Nov 2006; Tristan Heaven <nyhm@gentoo.org> +xqf-1.0.5.ebuild:
+  Version bump
 
   05 Oct 2006; Tristan Heaven <nyhm@gentoo.org> xqf-1.0.4-r1.ebuild:
   Fix gettext dependency
@@ -127,7 +132,7 @@
   fix sourceforge mirroring.
 	  
   13 April 2002; Bart Verwilst <verwilst@gentoo.org>: just added a 
-  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.24 2006/10/05 21:02:56 nyhm Exp $
+  description, and cleaned up the $Header: /var/cvsroot/gentoo-x86/games-util/xqf/ChangeLog,v 1.25 2006/11/04 19:10:01 nyhm Exp $
 
 *xqf-0.9.8 (6 Apr 2002)
 
