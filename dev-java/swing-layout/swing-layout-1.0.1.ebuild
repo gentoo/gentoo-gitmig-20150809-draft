@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/swing-layout-1.0.1.ebuild,v 1.1 2006/11/04 04:45:01 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/swing-layout-1.0.1.ebuild,v 1.2 2006/11/04 09:55:08 wltjr Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -14,7 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-core-1.5"
+		>=dev-java/ant-core-1.5
+		app-arch/unzip"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}

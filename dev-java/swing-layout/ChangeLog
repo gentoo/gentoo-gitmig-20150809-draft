@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swing-layout
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.2 2006/11/04 09:44:11 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swing-layout/ChangeLog,v 1.3 2006/11/04 09:55:08 wltjr Exp $
+
+  04 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  swing-layout-1.0.1.ebuild:
+  Added missing dep of app-arch/unzip
 
 *swing-layout-1.0.1 (04 Nov 2006)
 
