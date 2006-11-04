@@ -1,16 +1,18 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/nmbscan-1.2.4.ebuild,v 1.7 2006/04/19 04:20:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/nmbscan-1.2.4.ebuild,v 1.8 2006/11/04 11:28:58 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="netbios scanner"
 HOMEPAGE="http://gbarbier.free.fr/prj/dev/#nmbscan"
 SRC_URI="http://gbarbier.free.fr/prj/dev/down/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ppc64 s390 sparc x86"
 IUSE=""
+
 DEPEND=""
 RDEPEND="app-shells/bash
 	net-dns/bind-tools
@@ -24,8 +26,8 @@ RDEPEND="app-shells/bash
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch "${FILESDIR}/${P}-head.diff"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-head.diff
 }
 
 src_compile() {
@@ -33,5 +35,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin nmbscan
+	dobin nmbscan || die
 }
