@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5-r2.ebuild,v 1.6 2006/10/20 21:00:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.5-r2.ebuild,v 1.7 2006/11/04 10:37:10 vapier Exp $
 
 ONIGURUMA="onigd2_5_4"
 
@@ -13,12 +13,11 @@ SRC_URI="ftp://ftp.ruby-lang.org/pub/ruby/${P}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc-macos ~ppc64 s390 sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="debug socks5 tk cjk doc threads examples ipv6"
 RESTRICT="confcache"
 
-RDEPEND="virtual/libc
-	>=sys-libs/gdbm-1.8.0
+RDEPEND=">=sys-libs/gdbm-1.8.0
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	socks5? ( >=net-proxy/dante-1.1.13 )
@@ -27,7 +26,6 @@ RDEPEND="virtual/libc
 	!=dev-lang/ruby-cvs-1.8*
 	!dev-ruby/rdoc
 	!dev-ruby/rexml"
-
 DEPEND="${RDEPEND}"
 PROVIDE="virtual/ruby"
 
@@ -59,7 +57,7 @@ src_compile() {
 	filter-flags -fomit-frame-pointer
 
 	# Socks support via dante
-	if use socks5; then
+	if use socks5 ; then
 		# Socks support can't be disabled as long as SOCKS_SERVER is
 		# set and socks library is present, so need to unset
 		# SOCKS_SERVER in that case.
@@ -69,11 +67,6 @@ src_compile() {
 	# Increase GC_MALLOC_LIMIT if set (default is 8000000)
 	if [ -n "${RUBY_GC_MALLOC_LIMIT}" ] ; then
 		append-flags "-DGC_MALLOC_LIMIT=${RUBY_GC_MALLOC_LIMIT}"
-	fi
-
-	# On ia64 we need to build without optimization #48824
-	if use ia64; then
-		replace-flags '-O*' -O0
 	fi
 
 	econf --program-suffix=${SLOT/./} --enable-shared \
