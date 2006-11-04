@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-2.34.ebuild,v 1.1 2006/11/03 00:20:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-2.34.ebuild,v 1.2 2006/11/04 02:30:46 flameeyes Exp $
 
 inherit versionator
 
@@ -23,14 +23,14 @@ src_compile() {
 }
 
 src_install() {
-	doman man*/*
+	doman -i18n=it man*/*
 
 	dodoc \
 		readme CHANGELOG HOWTOHELP POSIX-COPYRIGHT \
 		|| die "dodoc failed"
 
 	cd "${WORKDIR}/${EXTRA_P}"
-	doman man*/*
+	doman -i18n=it man*/*
 
 	newdoc readme readme.extra
 }
