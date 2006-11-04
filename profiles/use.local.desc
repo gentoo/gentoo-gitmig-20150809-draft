@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2296 2006/11/02 19:00:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2297 2006/11/04 15:23:51 eroyf Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -441,6 +441,7 @@ dev-python/ipython:gnuplot - enable gnuplot support
 dev-python/ldaptor:web - enable the web front end for ldaptor (uses dev-python/nevow)
 dev-python/pycairo:numeric - enable Numeric support
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
+dev-python/pyzor:pyzord - enable support for pyzord
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-python/twisted:serial - include serial port support
 dev-python/visual:numarray - enable support for numarray
