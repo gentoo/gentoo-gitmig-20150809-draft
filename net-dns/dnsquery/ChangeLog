@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnsquery
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsquery/ChangeLog,v 1.9 2006/11/04 11:36:05 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsquery/ChangeLog,v 1.10 2006/11/04 23:30:38 matsuu Exp $
+
+  04 Nov 2006; MATSUU Takuto <matsuu@gentoo.org> -dnsquery-0.60.2.ebuild,
+  -dnsquery-0.60.4.ebuild:
+  Removed old versions.
 
   04 Nov 2006; <blubb@gentoo.org> dnsquery-0.60.6.ebuild:
   stable on amd64
