@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.13 2006/10/19 00:04:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ppracer/ppracer-0.3.1.ebuild,v 1.14 2006/11/04 05:06:29 nyhm Exp $
 
 inherit eutils flag-o-matic multilib games
 
@@ -44,7 +44,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	newicon data/courses/themes/items/common/herring_standard.png ${PN}.png
+	newicon data/courses/themes/items/herrings/star.png ${PN}.png
 	make_desktop_entry ${PN} "PlanetPenguin Racer"
 	dodoc AUTHORS ChangeLog
 	dohtml -r html/*
