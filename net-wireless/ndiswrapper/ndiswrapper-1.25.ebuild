@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.25.ebuild,v 1.1 2006/10/14 11:22:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.25.ebuild,v 1.2 2006/11/04 00:37:28 opfer Exp $
 
 inherit eutils linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ndiswrapper.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 x86"
 
 IUSE="debug usb"
 DEPEND="sys-apps/pciutils"
