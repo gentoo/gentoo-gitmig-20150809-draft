@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.7 2006/05/11 12:35:07 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.16.ebuild,v 1.8 2006/11/04 11:31:12 vapier Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -13,10 +13,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc sparc x86"
+KEYWORDS="amd64 arm hppa ppc sparc x86"
 IUSE="mysql ipalias clearpasswd"
 # vpopmail will NOT build if non-root.
 RESTRICT="nouserpriv"
+
 DEPEND_COMMON="virtual/qmail
 	mysql? ( >=dev-db/mysql-3.23 )"
 DEPEND="sys-apps/sed
