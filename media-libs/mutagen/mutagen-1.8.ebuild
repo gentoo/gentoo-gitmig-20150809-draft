@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.8.ebuild,v 1.1 2006/10/05 00:27:36 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.8.ebuild,v 1.2 2006/11/04 20:13:23 tcort Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sacredchao.net/~piman/software/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~ppc ~sparc ~x86"
 IUSE="test"
 
 DEPEND="test? (
