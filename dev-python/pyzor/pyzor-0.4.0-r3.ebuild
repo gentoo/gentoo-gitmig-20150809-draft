@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.4.0-r3.ebuild,v 1.1 2006/11/04 16:34:39 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/pyzor-0.4.0-r3.ebuild,v 1.2 2006/11/04 17:12:40 eroyf Exp $
 
 inherit distutils eutils
 
@@ -37,7 +37,6 @@ src_install () {
 	distutils_src_install
 	dohtml docs/usage.html
 	rm -rf "${D}/usr/share/doc/pyzor"
-	fperms 755 /usr/bin/pyzor*
 
 	if use pyzord ; then
 		dodir /usr/sbin
