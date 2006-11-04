@@ -1,0 +1,31 @@
+--- gpsim-0.21.11.orig/cli/Makefile.am	2005-04-27 10:55:13.000000000 +1000
++++ gpsim-0.21.11/cli/Makefile.am	2006-11-04 14:00:26.000000000 +1100
+@@ -46,6 +46,7 @@
+ 	cmd_version.h misc.h cmd_disasm.h  cmd_list.h  cmd_quit.h \
+ 	cmd_stimulus.h cmd_x.h symbol_t.h cmd_frequency.h cmd_icd.h \
+ 	cmd_macro.h ui_gpsim.h
++libgpsimcli_la_LIBADD = $(LIBREADLINE) ../eXdbm/libgpsim_eXdbm.la
+ 
+ 
+ AM_YFLAGS = -dvt
+--- gpsim-0.21.11.orig/gui/Makefile.am	2005-09-19 23:54:21.000000000 +1000
++++ gpsim-0.21.11/gui/Makefile.am	2006-11-04 14:02:02.000000000 +1100
+@@ -17,6 +17,7 @@
+ 	preferences.cc preferences.h \
+ 	settings.h settings_exdbm.h
+ 
++libgpsimgui_la_LDADD = ../eXdbm/libgpsim_eXdbm.la
+ libgpsimgui_la_LDFLAGS = @X_LDFLAGS@ @Y_LDFLAGS@
+ 
+ pixmapdir = $(datadir)/gpsim
+--- gpsim-0.21.11/gpsim/Makefile.am.orig	2006-11-04 14:57:41.000000000 +1100
++++ gpsim-0.21.11/gpsim/Makefile.am	2006-11-04 14:58:03.000000000 +1100
+@@ -9,6 +9,6 @@
+ gpsim_SOURCES = main.cc
+ 
+ gpsim_LDFLAGS =  $(shell gtk-config --cflags)
+-gpsim_LDADD = ../src/libgpsim.la ../cli/libgpsimcli.la ../gui/libgpsimgui.la \
+-  ../eXdbm/libgpsim_eXdbm.la @GTK@ @GDK@ @GLIB@ -lstdc++ -lpopt \
++gpsim_LDADD = ../src/libgpsim.la ../eXdbm/libgpsim_eXdbm.la ../cli/libgpsimcli.la ../gui/libgpsimgui.la \
++  @GTK@ @GDK@ @GLIB@ -lstdc++ -lpopt \
+   @X_LDFLAGS@ @Y_LDFLAGS@ @LIBREADLINE@

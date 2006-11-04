@@ -1,6 +1,15 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.22 2006/09/12 18:39:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.23 2006/11/04 05:14:23 dragonheart Exp $
+
+*gpsim-0.21.11-r1 (04 Nov 2006)
+
+  04 Nov 2006; Daniel Black <dragonheart@gentoo.org>
+  -files/gpsim-0.20.14-gcc2_fix.patch, +files/gpsim-0.21.11-eXdbm.patch,
+  +files/gpsim-0.21.11-gtk2.diff, +files/gpsim-0.21.11-ktechlab.patch,
+  +files/gpsim-0.21.11-nogui.patch, -gpsim-0.20.14-r1.ebuild,
+  -gpsim-0.21.2-r1.ebuild, +gpsim-0.21.11-r1.ebuild:
+  patches as per bug #144008 thanks to Carsten. old versions removed
 
   12 Sep 2006; Markus Rothe <corsair@gentoo.org> gpsim-0.21.11.ebuild:
   Added ~ppc64
