@@ -1,14 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.5 2006/09/22 21:50:39 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.0.0.1_p2113.ebuild,v 1.6 2006/11/04 20:58:19 genstef Exp $
 
-inherit eutils subversion versionator
+inherit eutils versionator
 
 DESCRIPTION="The player allows you to listen to last.fm radio streams"
 HOMEPAGE="http://www.last.fm/help/player"
-SRC_URI=""
-ESVN_REPO_URI="svn://svn.audioscrobbler.net/LastFM_client/trunk"
-ESVN_OPTIONS="--revision ${PV#*_p}"
+SRC_URI="http://gentooexperimental.org/~genstef/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
