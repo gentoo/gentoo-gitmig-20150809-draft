@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.13 2006/03/19 22:14:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.14 2006/11/04 01:34:20 dragonheart Exp $
+
+*tigcc-0.96_beta8 (04 Nov 2006)
+
+  04 Nov 2006; Daniel Black <dragonheart@gentoo.org>
+  +tigcc-0.96_beta8.ebuild:
+  version bump as per bug #82335 thanks to Christian Helbling for the ebuild
 
   19 Mar 2006; Mark Loeser <halcy0n@gentoo.org> tigcc-0.96_beta2.ebuild:
   Add DEPEND on app-arch/unzip
