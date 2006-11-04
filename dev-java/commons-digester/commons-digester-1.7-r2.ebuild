@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.7-r2.ebuild,v 1.2 2006/10/05 15:22:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.7-r2.ebuild,v 1.3 2006/11/04 15:12:23 betelgeuse Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc examples source test"
 
-# 1.3 support might be possible by adding an additional depend on 
+# 1.3 support might be possible by adding an additional depend on
 # xml-commons[-external, but 1.3 is gone anyway
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/commons-beanutils-1.6*
@@ -28,18 +28,18 @@ DEPEND=">=virtual/jdk-1.4
 
 S="${WORKDIR}/${P}-src"
 
-# don't rewrite build.xml in examples 
+# don't rewrite build.xml in examples
 JAVA_PKG_BSFIX_ALL="no"
 
 src_unpack() {
 	unpack ${A}
-	cd  "${S}"
+	cd "${S}"
 	epatch "${FILESDIR}/${PV}-build.xml-jar-target.patch"
 
 	# this build.xml honours build.properties so we use it for common depends
 	# needed for both compile and test, so getjar is called only once
 	echo "commons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.6 \
-		 commons-beanutils.jar)" > build.properties
+		commons-beanutils.jar)" > build.properties
 	echo "commons-collections.jar=$(java-pkg_getjar commons-collections \
 		commons-collections.jar)" >> build.properties
 	echo "commons-logging.jar=$(java-pkg_getjar commons-logging \
