@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.7.ebuild,v 1.1 2006/10/22 15:56:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.7.ebuild,v 1.2 2006/11/04 02:37:36 matsuu Exp $
 
-inherit qt3
+inherit eutils qt3
 
 DESCRIPTION="Yet another IM-client of SCIM"
 HOMEPAGE="http://www.scim-im.org/projects/scim_bridge"
@@ -28,6 +28,12 @@ get_gtk_confdir() {
 		echo "/etc/gtk-2.0/${CHOST}"
 	else
 		echo "/etc/gtk-2.0"
+	fi
+}
+
+pkg_setup() {
+	if use qt3 && ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
+		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
 	fi
 }
 
