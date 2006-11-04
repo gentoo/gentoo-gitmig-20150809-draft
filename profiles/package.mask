@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6198 2006/11/04 18:36:44 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6199 2006/11/04 18:45:22 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -549,11 +549,6 @@ media-sound/mpd-svn
 # Pending removal Oct 29th
 # Still used by media-radio/xastir so commented for now.
 #media-radio/ax25-tools
-
-# Christian Heim <phreak@gentoo.org> (01 Oct 2006)
-# masking x11-libs/buffy for treecleaners, bug(s) 103143
-# Pending removal Oct 29th
-x11-libs/buffy
 
 # Tiziano Müller <dev-zero@gentoo.org> (01 Nov 2006)
 # preparing for new versions, masking snapshot
