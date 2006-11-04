@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.50 2006/10/27 16:41:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.51 2006/11/04 23:42:33 vapier Exp $
+
+  04 Nov 2006; Mike Frysinger <vapier@gentoo.org>
+  files/timezone-data-2005n-makefile.patch, timezone-data-2006n.ebuild:
+  Add support for USE=nls #154070 by Benno Schulenberg.
 
   27 Oct 2006; Chris Gianelloni <wolf31o2@gentoo.org>
   timezone-data-2006n.ebuild:

@@ -58,13 +58,16 @@
 +AWK=		awk
  
  # The path where SGML DTDs are kept.
-@@ -241,8 +241,7 @@
+@@ -241,8 +241,10 @@
  
  ###############################################################################
  
 -cc=		cc
 -CC=		$(cc) -DTZDIR=\"$(TZDIR)\"
 +CC+=		-DTZDIR=\"$(TZDIR)\"
++ifeq ($(NLS),1)
++CC += -DHAVE_GETTEXT=1 -DTZ_DOMAIN=\"libc\"
++endif
  
  TZCSRCS=	zic.c localtime.c asctime.c scheck.c ialloc.c
  TZCOBJS=	zic.o localtime.o asctime.o scheck.o ialloc.o
