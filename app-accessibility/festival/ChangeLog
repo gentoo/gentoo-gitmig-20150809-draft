@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/festival
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.55 2006/10/19 14:42:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/ChangeLog,v 1.56 2006/11/04 20:55:06 williamh Exp $
+
+*festival-1.95_beta-r2 (04 Nov 2006)
+
+  04 Nov 2006; William Hubbs <williamh@gentoo.org> files/server.scm,
+  +festival-1.95_beta-r2.ebuild:
+  This revision fixes bug #118404, now libfestival.a will be installed.
+  Also, I revised server.scm so that it only contains  server settings.
 
   19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   festival-1.95_beta-r1.ebuild:
