@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.27 2006/07/12 16:58:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.28 2006/11/04 16:34:39 eroyf Exp $
+
+*pyzor-0.4.0-r3 (04 Nov 2006)
+
+  04 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org>
+  +pyzor-0.4.0-r3.ebuild:
+  Minor changes in the ebuild:
+   - Dependency cleanup.
+   - New local USE flag (pyzord) which enables or disables the pyzor daemon.
 
   12 Jul 2006; Aron Griffis <agriffis@gentoo.org> pyzor-0.4.0-r2.ebuild:
   Mark 0.4.0-r2 stable on ia64
