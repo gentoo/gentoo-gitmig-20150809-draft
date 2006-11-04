@@ -1,0 +1,11 @@
+# ChangeLog for mail-filter/libsieve
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsieve/ChangeLog,v 1.1 2006/11/04 15:24:11 bangert Exp $
+
+*libsieve-2.2.1 (04 Nov 2006)
+
+  04 Nov 2006; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
+  +libsieve-2.2.1.ebuild:
+  libsieve - A library for parsing, sorting and filtering your mail. bug #149770
+  dep for DBMail (bug #22331) - thanks go to Aaron.
+
