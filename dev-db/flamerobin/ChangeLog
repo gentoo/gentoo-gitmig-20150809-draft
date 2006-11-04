@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/flamerobin
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.1 2006/11/04 06:18:49 wltjr Exp $
+
+*flamerobin-0.7.5 (04 Nov 2006)
+
+  04 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/FlameRobin.desktop, +metadata.xml, +flamerobin-0.7.5.ebuild:
+  Initial ebuild for FlameRobin
+
