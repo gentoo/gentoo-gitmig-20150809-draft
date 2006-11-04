@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.66 2006/09/24 12:26:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.67 2006/11/04 10:14:35 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -44,8 +44,8 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 	fi
 	ECVS_SERVER=${E17_ECVS_SERVER:-${ECVS_SERVER:-${E17_DEFAULT_CVS}}}
 	ECVS_STATE="live"
-	WANT_AUTOCONF="latest"
-	WANT_AUTOMAKE="latest"
+	WANT_AUTOCONF=${E17_WANT_AUTOCONF:-latest}
+	WANT_AUTOMAKE=${E17_WANT_AUTOMAKE:-latest}
 	inherit cvs autotools
 elif [[ ${PV/.200[3-9][0-1][0-9][0-3][0-9]/} != ${PV} ]] ; then
 	ECVS_STATE="snap"
