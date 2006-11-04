@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.30 2006/11/02 18:53:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.31 2006/11/04 00:30:41 opfer Exp $
+
+  04 Nov 2006; Christian Faulhammer <opfer@gentoo.org> alltray-0.69.ebuild:
+  stabled x86, bug #153598
 
   02 Nov 2006; nixnut <nixnut@gentoo.org> alltray-0.69.ebuild:
   Stable on ppc wrt bug 153598
