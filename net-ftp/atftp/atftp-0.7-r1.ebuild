@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r1.ebuild,v 1.6 2006/08/19 19:02:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/atftp-0.7-r1.ebuild,v 1.7 2006/11/04 11:29:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,19 +10,19 @@ DEBIAN_A="${PN}_${PV}-${DEBIAN_PV}.diff.gz"
 DESCRIPTION="Advanced TFTP implementation client/server"
 HOMEPAGE="ftp://ftp.mamalinux.com/pub/atftp/"
 SRC_URI="ftp://ftp.mamalinux.com/pub/atftp/${P}.tar.gz
-		http://ftp.debian.org/debian/pool/main/a/${PN}/${DEBIAN_A}"
+	http://ftp.debian.org/debian/pool/main/a/${PN}/${DEBIAN_A}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 sparc x86"
+KEYWORDS="amd64 arm ppc ppc64 sparc x86"
 IUSE="selinux tcpd readline pcre"
 
 RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
-		selinux? ( sec-policy/selinux-tftpd )
-		readline? ( sys-libs/readline )
-		pcre? ( dev-libs/libpcre )"
+	selinux? ( sec-policy/selinux-tftpd )
+	readline? ( sys-libs/readline )
+	pcre? ( dev-libs/libpcre )"
 DEPEND="${RDEPEND}
-		!virtual/tftp"
+	!virtual/tftp"
 PROVIDE="virtual/tftp"
 
 src_unpack() {
