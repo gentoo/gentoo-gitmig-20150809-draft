@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.6.ebuild,v 1.4 2005/01/01 12:51:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.6.ebuild,v 1.5 2006/11/04 16:53:27 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,9 @@ src_unpack() {
 
 	unpack ${A}
 
+	cd ${S}
 	epatch ${FILESDIR}/${P}-destdir.diff
+	epatch ${FILESDIR}/${P}-gtk28.diff
 	if has_version '>=sys-devel/gettext-0.12' ; then
 		cd ${S}/po
 		epatch ${FILESDIR}/${PN}-gettext-0.12-gentoo.diff

@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/ebview
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.19 2005/01/01 12:51:15 eradicator Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ChangeLog,v 1.20 2006/11/04 16:53:27 usata Exp $
+
+  04 Nov 2006; Mamoru KOMACHI <usata@gentoo.org>
+  +files/ebview-0.3.6-gtk28.diff, ebview-0.3.6.ebuild:
+  Fix for GTK+-2.8.x. Thanks to Hiroyuki Ikezoe <poincare@ikezoe.net> for
+  providing a patch. This closes bug #109654.
 
   23 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/ebview-0.3.6-destdir.diff, -files/ebview-eb4-gentoo.diff,
