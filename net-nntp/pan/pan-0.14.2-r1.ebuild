@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2-r1.ebuild,v 1.2 2006/03/17 19:19:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.14.2-r1.ebuild,v 1.3 2006/11/04 01:19:52 swegener Exp $
 
 inherit eutils libtool
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.0.4
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 pkg_setup() {
