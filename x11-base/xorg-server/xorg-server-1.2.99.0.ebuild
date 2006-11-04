@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.6 2006/11/04 06:39:27 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.7 2006/11/04 23:43:13 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -105,13 +105,15 @@ IUSE_VIDEO_CARDS="
 # dmx doesn't currently work
 # dmx
 IUSE_SERVERS="kdrive xorg"
+# xprint is broken too
+# xprint
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
 	${IUSE_SERVERS}
 	3dfx
 	aiglx
 	dbus
-	dri ipv6 minimal nptl sdl xprint"
+	dri ipv6 minimal nptl sdl"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -179,11 +181,12 @@ DEPEND="${RDEPEND}
 	x11-proto/xcmiscproto
 	>=x11-proto/glproto-1.4.8
 	dri? ( x11-proto/xf86driproto
-		>=x11-libs/libdrm-2.2 )
-	xprint? ( x11-proto/printproto
-		x11-apps/mkfontdir
-		x11-apps/mkfontscale
-		x11-apps/xplsprinters )"
+		>=x11-libs/libdrm-2.2 )"
+	# xprint is currently broken
+#	xprint? ( x11-proto/printproto
+#		x11-apps/mkfontdir
+#		x11-apps/mkfontscale
+#		x11-apps/xplsprinters )"
 	#dmx is currently broken
 	# dmx? ( x11-proto/dmxproto )
 
@@ -280,6 +283,8 @@ LICENSE="${LICENSE} MIT"
 pkg_setup() {
 	use minimal || ensure_a_server_is_building
 
+	PATCHES="${FILESDIR}/${PV}-fix-sysconfdir-references.patch"
+
 	# SDL only available in kdrive build
 	if use kdrive && use sdl; then
 		conf_opts="${conf_opts} --enable-xsdl"
@@ -295,10 +300,10 @@ pkg_setup() {
 
 	# localstatedir is used for the log location; we need to override the default
 	# from ebuild.sh
-	# sysconfdir is used for the xorg.conf location; same applies
 	# --enable-install-setuid needed because sparcs default off
-	# dmx is currently broken
+	# broken:
 	#	$(use_enable dmx)
+	#	$(use_enable xprint)
 	CONFIGURE_OPTIONS="
 		$(use_enable ipv6)
 		$(use_enable kdrive)
@@ -309,10 +314,9 @@ pkg_setup() {
 		$(use_enable dbus)
 		$(use_enable dri)
 		$(use_enable xorg)
-		$(use_enable xprint)
 		$(use_enable nptl glx-tls)
 		--disable-dmx
-		--sysconfdir=/etc/X11
+		--disable-xprint
 		--localstatedir=/var
 		--enable-install-setuid
 		--with-fontdir=/usr/share/fonts
@@ -348,7 +352,8 @@ src_unpack() {
 	# Make sure eautoreconf gets run if we need the autoconf/make
 	# changes.
 	if [[ ${SNAPSHOT} != "yes" ]]; then
-		if use kdrive || use xprint; then
+#		if use kdrive || use xprint; then
+		if use kdrive; then
 			eautoreconf
 		fi
 	fi
@@ -497,7 +502,7 @@ dynamic_libgl_install() {
 }
 
 server_based_install() {
-	use xprint && xprint_src_install
+#	use xprint && xprint_src_install
 
 	if ! use xorg; then
 		rm ${D}/usr/share/man/man1/Xserver.1x \
