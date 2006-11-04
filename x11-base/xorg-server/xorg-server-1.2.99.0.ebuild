@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.5 2006/11/03 23:51:32 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.6 2006/11/04 06:39:27 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -142,7 +142,8 @@ RDEPEND="x11-libs/libXfont
 		x11-libs/libXres )
 	>=x11-libs/libxkbui-1.0.2
 	x11-libs/liblbxutil
-	kdrive? ( sdl? ( media-libs/libsdl ) )"
+	kdrive? ( sdl? ( media-libs/libsdl ) )
+	dbus? ( sys-apps/dbus )"
 	# dmx is currently broken
 	# dmx? ( x11-libs/libdmx )
 
@@ -198,15 +199,15 @@ PDEPEND="
 		input_devices_dynapro? ( >=x11-drivers/xf86-input-dynapro-1.1.0 )
 		input_devices_elo2300? ( >=x11-drivers/xf86-input-elo2300-1.1.0 )
 		input_devices_elographics? ( >=x11-drivers/xf86-input-elographics-1.1.0 )
-		input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-1.1.1 )
+		input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-1.1.4 )
 		input_devices_fpit? ( >=x11-drivers/xf86-input-fpit-1.1.0 )
 		input_devices_hyperpen? ( >=x11-drivers/xf86-input-hyperpen-1.1.0 )
 		input_devices_jamstudio? ( >=x11-drivers/xf86-input-jamstudio-1.1.0 )
 		input_devices_joystick? ( >=x11-drivers/xf86-input-joystick-1.1.0 )
-		input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.1.0 )
+		input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.2.0 )
 		input_devices_magellan? ( >=x11-drivers/xf86-input-magellan-1.1.0 )
 		input_devices_microtouch? ( >=x11-drivers/xf86-input-microtouch-1.1.0 )
-		input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.1.0 )
+		input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.2.0 )
 		input_devices_mutouch? ( >=x11-drivers/xf86-input-mutouch-1.1.0 )
 		input_devices_palmax? ( >=x11-drivers/xf86-input-palmax-1.1.0 )
 		input_devices_penmount? ( >=x11-drivers/xf86-input-penmount-1.1.0 )

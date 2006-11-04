@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.191 2006/11/03 23:51:32 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.192 2006/11/04 06:39:27 joshuabaergen Exp $
+
+  04 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.2.99.0.ebuild:
+  Add DBUS dependency.  Bump dependencies on evdev, keyboard and mouse drivers
+  to enforce input hotplug-compatible versions.
 
   03 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.2.99.0.ebuild:
