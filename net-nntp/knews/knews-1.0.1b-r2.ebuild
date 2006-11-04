@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/knews-1.0.1b-r2.ebuild,v 1.2 2006/11/04 02:07:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/knews/knews-1.0.1b-r2.ebuild,v 1.3 2006/11/04 03:46:18 swegener Exp $
 
 inherit eutils
 
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 	|| (
 		(
 			x11-proto/xproto
+			x11-misc/gccmakedep
 			x11-misc/imake
 		)
 		virtual/x11
