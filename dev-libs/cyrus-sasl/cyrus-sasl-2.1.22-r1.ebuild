@@ -1,11 +1,11 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r1.ebuild,v 1.6 2006/10/31 18:11:59 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.22-r1.ebuild,v 1.7 2006/11/04 10:42:00 vapier Exp $
 
 WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="1.7.9"
+WANT_AUTOMAKE="1.7"
 
-inherit eutils gnuconfig flag-o-matic java-pkg multilib autotools
+inherit eutils flag-o-matic java-pkg multilib autotools
 
 ntlm_patch=${P}-ntlm_impl-spnego.patch.gz
 SASLAUTHD_CONF_VER=2.1.21
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 # Removed 'static' USE flag because it is broken upstream, Bug #94137
 IUSE="berkdb crypt gdbm ldap mysql postgres kerberos ssl java pam authdaemond sample urandom srp ntlm_unsupported_patch"
 
@@ -41,7 +41,6 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-
 	use java && java-pkg_pkg_setup
 
 	if use gdbm && use berkdb; then
@@ -66,7 +65,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-
 
 	# Fix default port name for rimap auth mechanism.
 	sed -e '/define DEFAULT_REMOTE_SERVICE/s:imap:imap2:' \
@@ -150,9 +148,6 @@ src_compile() {
 	# Use /dev/urandom instead of /dev/random. Bug #46038
 	use urandom && myconf="${myconf} --with-devrandom=/dev/urandom"
 
-	# Detect mips systems properly.
-	gnuconfig_update
-
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
 		--with-pwcheck=/var/lib/sasl2 \
@@ -180,9 +175,8 @@ src_compile() {
 	emake testsaslauthd || die "failed to make"
 }
 
-src_install () {
-	#einstall
-	make DESTDIR=${D} install || die "failed to install."
+src_install() {
+	make DESTDIR="${D}" install || die "failed to install."
 	keepdir /var/lib/sasl2 /etc/sasl2
 
 	# Install everything necessary so user can build sample client/server
@@ -217,12 +211,12 @@ src_install () {
 	fi
 
 	docinto ""
-	dodoc AUTHORS COPYING ChangeLog NEWS README doc/TODO doc/*.txt
+	dodoc AUTHORS ChangeLog NEWS README doc/TODO doc/*.txt
 	newdoc pwcheck/README README.pwcheck
 	dohtml doc/*.html
 
 	docinto saslauthd
-	dodoc saslauthd/{AUTHORS,COPYING,ChangeLog,LDAP_SASLAUTHD,NEWS,README}
+	dodoc saslauthd/{AUTHORS,ChangeLog,LDAP_SASLAUTHD,NEWS,README}
 
 	newpamd "${FILESDIR}/saslauthd.pam-include" saslauthd
 	newinitd "${FILESDIR}/pwcheck.rc6" pwcheck || \
@@ -232,7 +226,7 @@ src_install () {
 	newconfd "${FILESDIR}/saslauthd-${SASLAUTHD_CONF_VER}.conf" saslauthd || \
 		die "failed to install /etc/conf.d/saslauthd"
 
-	exeinto "${ROOT}/usr/sbin"
+	exeinto /usr/sbin
 	newexe "${S}/saslauthd/testsaslauthd" testsaslauthd || \
 		die "failed to install testsaslauthd."
 }
