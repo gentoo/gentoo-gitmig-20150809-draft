@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.22-r1.ebuild,v 1.2 2006/11/01 00:10:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.0.22-r1.ebuild,v 1.3 2006/11/04 22:02:37 dang Exp $
 
 inherit gnome2 eutils autotools
 
@@ -56,7 +56,7 @@ pkg_setup() {
 
 src_unpack() {
 	gnome2_src_unpack
-	
+
 	# Fix add-feed check; bug #147521
 	epatch "${FILESDIR}/${P}-add-feed.patch"
 }

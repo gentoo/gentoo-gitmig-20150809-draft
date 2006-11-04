@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.1.9.ebuild,v 1.1 2006/11/04 21:59:40 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.1.9.ebuild,v 1.2 2006/11/04 22:02:37 dang Exp $
 
 inherit gnome2 flag-o-matic eutils autotools
 
@@ -42,7 +42,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch "${FILESDIR}/${PN}-1.1.0-libnotify.patch"
-	
+
 	eautoreconf || die "Autoreconf failed"
 }
 
