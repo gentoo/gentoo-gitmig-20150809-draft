@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.7 2006/10/28 23:34:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.11.1.ebuild,v 1.8 2006/11/04 13:08:12 spock Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.4"
@@ -40,6 +40,7 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/${PN}-0.10.4.conf-syscharset.diff
 	mv "${PN}-0.10.4.conf" "${PN}.conf"
 	if ! use ftp ; then
 		sed -i -e 's/\(.*protocol.ftp.*\)/# \1/' ${PN}.conf
