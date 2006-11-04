@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.13.ebuild,v 1.2 2006/11/04 18:06:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-3.6.14.ebuild,v 1.1 2006/11/04 18:06:12 usata Exp $
 
 inherit libtool eutils
 
@@ -36,6 +36,12 @@ DEPEND="${RDEPEND}
 	virtual/tetex"
 
 S=${WORKDIR}/${MY_P}
+
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+	epatch "${FILESDIR}/${P}-install-info.diff"
+}
 
 src_compile () {
 	elibtoolize

@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/vflib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.6 2004/10/23 12:28:51 usata Exp $
+# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/ChangeLog,v 1.7 2006/11/04 18:06:12 usata Exp $
+
+*vflib-3.6.14 (04 Nov 2006)
+
+  04 Nov 2006; Mamoru KOMACHI <usata@gentoo.org>
+  -files/vflib-2.25.6-gcc3.diff, -files/vflib-2.25.6-r1-gentoo.diff,
+  +files/vflib-3.6.14-install-info.diff, -vflib-2.25.6-r1.ebuild,
+  vflib-3.6.13.ebuild, +vflib-3.6.14.ebuild:
+  Version bumped. Reflected URI change. Fix modular X dependencies (bug
+  #153203). Added a patch to avoid build hang. Removed old ebuild.
 
 *vflib-3.6.13 (23 Oct 2004)
 
