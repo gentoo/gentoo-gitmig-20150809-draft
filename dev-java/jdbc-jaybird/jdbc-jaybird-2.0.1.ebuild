@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.7 2006/10/19 21:39:35 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/jdbc-jaybird-2.0.1.ebuild,v 1.8 2006/11/04 23:45:48 opfer Exp $
 
 inherit eutils java-pkg-2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jaybirdwiki.firebirdsql.org/"
 SRC_URI="mirror://sourceforge/firebird/${At}.zip"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="doc examples source test"
 
 COMMON_DEPEND="dev-java/log4j"
