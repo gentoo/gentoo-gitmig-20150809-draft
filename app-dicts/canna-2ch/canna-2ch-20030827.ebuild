@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.13 2006/10/21 00:14:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.14 2006/11/04 18:27:56 usata Exp $
 
 inherit cannadic eutils
 
@@ -12,9 +12,10 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ppc64"
-IUSE=""
+IUSE="canna"
 
-DEPEND=""
+DEPEND="canna? ( app-i18n/canna )"
+RDPEND=""
 # You cannot use 2ch.cbd as its name. Canna doesn't load dictionaries
 # if the name begins with number. (I don't know why ...)
 CANNADICS="2ch"
@@ -28,5 +29,8 @@ src_unpack() {
 }
 
 src_compile() {
-	mkbindic nichan.ctd || die
+	# Anthy users do not need binary dictionary
+	if use canna ; then
+		mkbindic nichan.ctd || die
+	fi
 }
