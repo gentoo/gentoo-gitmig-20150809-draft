@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.7 2006/11/04 23:43:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.2.99.0.ebuild,v 1.8 2006/11/04 23:54:49 joshuabaergen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -107,13 +107,15 @@ IUSE_VIDEO_CARDS="
 IUSE_SERVERS="kdrive xorg"
 # xprint is broken too
 # xprint
+# so is sdl...
+# sdl
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
 	${IUSE_SERVERS}
 	3dfx
 	aiglx
 	dbus
-	dri ipv6 minimal nptl sdl"
+	dri ipv6 minimal nptl"
 RDEPEND="x11-libs/libXfont
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -144,10 +146,11 @@ RDEPEND="x11-libs/libXfont
 		x11-libs/libXres )
 	>=x11-libs/libxkbui-1.0.2
 	x11-libs/liblbxutil
-	kdrive? ( sdl? ( media-libs/libsdl ) )
 	dbus? ( sys-apps/dbus )"
 	# dmx is currently broken
 	# dmx? ( x11-libs/libdmx )
+	# and so is sdl
+	# kdrive? ( sdl? ( media-libs/libsdl ) )
 
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
 	# Xaw is dmx- and xorgcfg-dependent
@@ -286,11 +289,12 @@ pkg_setup() {
 	PATCHES="${FILESDIR}/${PV}-fix-sysconfdir-references.patch"
 
 	# SDL only available in kdrive build
-	if use kdrive && use sdl; then
-		conf_opts="${conf_opts} --enable-xsdl"
-	else
+	# SDL broken!
+#	if use kdrive && use sdl; then
+#		conf_opts="${conf_opts} --enable-xsdl"
+#	else
 		conf_opts="${conf_opts} --disable-xsdl"
-	fi
+#	fi
 
 	# Only Xorg and Xgl support this, and we won't build Xgl
 	# until it merges to trunk

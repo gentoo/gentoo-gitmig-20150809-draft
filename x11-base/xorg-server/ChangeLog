@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.193 2006/11/04 23:43:13 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.194 2006/11/04 23:54:49 joshuabaergen Exp $
+
+  04 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xorg-server-1.2.99.0.ebuild:
+  SDL is also currently broken in 1.2.99.0 according to Daniel Stone.
 
   04 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.2.99.0.ebuild:
