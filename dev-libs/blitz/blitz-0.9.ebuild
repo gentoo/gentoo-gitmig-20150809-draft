@@ -1,13 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.4 2006/10/07 17:28:55 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.9.ebuild,v 1.5 2006/11/04 00:59:42 dragonheart Exp $
 
 inherit eutils toolchain-funcs fortran
 
 DESCRIPTION="High-performance C++ numeric library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.oonumerics.org/blitz"
-DEPEND="virtual/tetex
+DEPEND="doc? ( virtual/tetex )
 	icc? ( dev-lang/icc )"
 IUSE="icc"
 
@@ -21,6 +21,7 @@ src_compile() {
 	local myconf
 	# ICC: if we've got it, use it
 	use icc && myconf="--with-cxx=icc" || myconf="--with-cxx=gcc"
+	use doc && myconf="$myconf --enable-latex-docs"
 	myconf="${myconf} --enable-shared"
 
 	export CC=$(tc-getCC) CXX=$(tc-getCXX)
