@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/mfedit
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mfedit/ChangeLog,v 1.9 2006/11/04 11:35:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mfedit/ChangeLog,v 1.10 2006/11/04 23:17:16 matsuu Exp $
+
+  04 Nov 2006; MATSUU Takuto <matsuu@gentoo.org> -mfedit-0.60.2.ebuild,
+  -mfedit-0.60.4.ebuild:
+  Removed old versions.
 
   04 Nov 2006; <blubb@gentoo.org> mfedit-0.60.6.ebuild:
   stable on amd64
