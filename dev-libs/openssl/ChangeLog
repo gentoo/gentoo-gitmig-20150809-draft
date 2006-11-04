@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.210 2006/11/03 23:04:16 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.211 2006/11/04 00:37:17 iluxa Exp $
+
+  04 Nov 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  openssl-0.9.8d.ebuild:
+  0.9.8 builds on mips now, so add mips back to keywords
 
   03 Nov 2006; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   openssl-0.9.7l.ebuild:
