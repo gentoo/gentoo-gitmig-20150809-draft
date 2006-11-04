@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 AUX 0.0.9-duplicate-prototypes.patch 697 RMD160 e4c025d7ea24ae825e53d03ee997270aea0cfd70 SHA1 4656850c5ce04bc30f1031149528977b35173314 SHA256 161429f802897343ba2dfa8f28b826c3afcb912233ca32b821c050a3445cbdad
 MD5 23cbf7e56fed5e7283f6b88bf62050e4 files/0.0.9-duplicate-prototypes.patch 697
 RMD160 e4c025d7ea24ae825e53d03ee997270aea0cfd70 files/0.0.9-duplicate-prototypes.patch 697
@@ -30,3 +33,10 @@ SHA256 77c6a157f7f3ec295fbd9b53d8d5f918c03e890b3371aee6eca00093f25afb7d files/di
 MD5 4adc091701525d57a18269a39536cc11 files/digest-ggz-gtk-client-0.0.9 262
 RMD160 b18b909249066502bc5fc7e009ac2d72787ddedd files/digest-ggz-gtk-client-0.0.9 262
 SHA256 6b74b7da8f09b4af2e1f9c9453fc8530e9c7f026d9edbb360d8412cda352d3a4 files/digest-ggz-gtk-client-0.0.9 262
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.5 (GNU/Linux)
+
+iD8DBQFFTCwXdz7hIScOURERAt3iAKC8xTWM02786xd4Ry10AtJgmqJjOACg5plU
+g1XM1Y1r42vS+7U4s24RoJw=
+=+6fZ
+-----END PGP SIGNATURE-----
