@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.2.ebuild,v 1.5 2006/10/21 18:42:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/tagtool-0.12.2.ebuild,v 1.6 2006/11/04 20:05:24 aballier Exp $
 
 
 DESCRIPTION="Audio Tag Tool Ogg/Mp3 Tagger"
@@ -15,6 +15,7 @@ IUSE="vorbis mp3"
 
 DEPEND=">=x11-libs/gtk+-2.4.0-r1
 	>=gnome-base/libglade-2.4.0
+	dev-util/pkgconfig
 	mp3? ( >=media-libs/id3lib-3.8.3-r3 )
 	vorbis? ( >=media-libs/libvorbis-1.0.1 )"
 

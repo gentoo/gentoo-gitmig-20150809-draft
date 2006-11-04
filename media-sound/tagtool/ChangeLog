@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tagtool
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.17 2006/10/21 18:42:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.18 2006/11/04 20:05:24 aballier Exp $
+
+  04 Nov 2006; Alexis Ballier <aballier@gentoo.org> tagtool-0.11.1.ebuild,
+  tagtool-0.12.1.ebuild, tagtool-0.12.2.ebuild:
+  Adding pkgconfig deps wrt to bug #153861
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   tagtool-0.12.2.ebuild:
