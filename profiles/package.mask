@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6196 2006/11/04 14:17:09 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6197 2006/11/04 18:36:03 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -774,10 +774,6 @@ net-misc/bcm4400
 # Masking media-libs/ming-0.3.0, breaks PHP compilation and ships its own
 # PHP bindings the wrong way
 =media-libs/ming-0.3.0
-
-# Joshua Jackson <tsunam@gentoo.org> (28 Aug 2006)
-# Masking net-misc/mico as its unmaintained and has an outstanding security bug # # 122141
-net-misc/mico
 
 # Matthew Kennedy <mkennedy@gentoo.org> (24 Aug 2006)
 # Removing these bese project ebuilds in favour of darcs ebuilds.
