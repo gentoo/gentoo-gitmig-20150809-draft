@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/mtaskbar
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/mtaskbar/ChangeLog,v 1.3 2006/10/13 20:43:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/mtaskbar/ChangeLog,v 1.4 2006/11/04 18:04:57 kugelfang Exp $
+
+  04 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> mtaskbar-0.7.ebuild:
+  Marked stable on amd64.
 
   13 Oct 2006; <ticho@gentoo.org> mtaskbar-0.7.ebuild:
   Stable on x86, bug #151176.
