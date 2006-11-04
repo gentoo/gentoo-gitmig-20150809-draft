@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.39 2006/10/05 18:52:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.40 2006/11/04 10:01:54 wltjr Exp $
+
+*netbeans-5.5 (04 Nov 2006)
+
+  04 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/5.5/deps-txt.patch, +files/5.5/files-layout-txt.patch,
+  +files/5.5/mdr_extras_jdbcstorage_build.xml.patch,
+  +files/5.5/mdr_extras_mdrant_build.xml.patch,
+  +files/5.5/modules-txt.patch, +files/5.5/public-packages-txt.patch,
+  +files/5.5/startscript.sh, +netbeans-5.5.ebuild:
+  Initial ebuild for Netbeans 5.5. Contributions from ali_bush & fordfrog on
+  runtime issues & making packages for deps. Still uses some bundled stuff,
+  but uses as much of the system resources as feasible.
 
   05 Oct 2006; Aron Griffis <agriffis@gentoo.org> netbeans-3.6-r1.ebuild:
   Mark 3.6-r1 stable on ia64
