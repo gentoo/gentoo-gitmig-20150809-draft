@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.91.ebuild,v 1.1 2006/08/27 20:01:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/gphpedit-0.9.91.ebuild,v 1.2 2006/11/04 19:26:13 compnerd Exp $
 
 inherit gnome2 eutils
 
@@ -24,6 +24,9 @@ DEPEND="${RDEPEND}
 		>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS ChangeLog README TODO"
+
+# Parallel build unhappy (bug #145351)
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	gnome2_src_unpack
