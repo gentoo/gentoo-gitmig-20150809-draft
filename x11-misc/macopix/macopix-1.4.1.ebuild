@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.2.1.ebuild,v 1.7 2006/11/04 17:13:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.4.1.ebuild,v 1.1 2006/11/04 17:13:23 usata Exp $
 
 inherit eutils
 
@@ -12,17 +12,24 @@ SRC_URI="${BASE_URI}/${P}.tar.bz2"
 
 # NOTE: These mascots are not redistributable on commercial CD-ROM.
 # The author granted to use them under Gentoo Linux.
-MY_MASCOTS="cosmos-ja mizuiro-ja pia2-ja tsukihime-ja triangle_heart-ja comic_party-ja kanon-ja one-ja"
+MY_MASCOTS="macopix-mascot-cosmos-ja-1.00
+	macopix-mascot-mizuiro-ja-1.00
+	macopix-mascot-pia2-ja-1.00
+	macopix-mascot-tsukihime-ja-1.00
+	macopix-mascot-triangle_heart-ja-1.00
+	macopix-mascot-comic_party-ja-1.00
+	macopix-mascot-kanon-ja-1.00
+	macopix-mascot-one-ja-1.00
+	macopix-mascot-marimite-euc-ja-2.20
+	macopix-mascot-HxB-euc-ja-0.10"
 for i in ${MY_MASCOTS} ; do
-	SRC_URI="${SRC_URI} ${BASE_URI}/${PN}-mascot-${i}-1.00.tar.gz"
+	SRC_URI="${SRC_URI} ${BASE_URI}/${i}.tar.gz"
 done
-MY_MASCOTS="${MY_MASCOTS} marimite-euc-ja-2.10"
-SRC_URI="${SRC_URI} ${BASE_URI}/${PN}-mascot-marimite-euc-ja-2.10.tar.gz"
 
 # programme itself is GPL-2, and mascots are free-noncomm
 LICENSE="GPL-2 free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="nls"
 
@@ -35,8 +42,7 @@ DEPEND=">=x11-libs/gtk+-2.0.0
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-	epatch ${FILESDIR}/${P}-nls.diff
+	epatch ${FILESDIR}/${PN}-1.2.1-nls.diff
 }
 
 src_compile() {
@@ -52,7 +58,7 @@ src_install() {
 
 	# install mascots
 	for d in ${MY_MASCOTS} ; do
-		cd ${WORKDIR}/${PN}-mascot-${d}
+		cd ${WORKDIR}/${d/-1.00/}
 		insinto /usr/share/${PN}
 		# please ignore doins errors ...
 		doins *.mcpx *.menu
