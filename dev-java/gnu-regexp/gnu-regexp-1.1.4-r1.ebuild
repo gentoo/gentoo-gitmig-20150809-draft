@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/gnu-regexp-1.1.4-r1.ebuild,v 1.3 2005/09/03 15:39:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/gnu-regexp-1.1.4-r1.ebuild,v 1.4 2006/11/04 11:31:16 blubb Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.tralfamadore.com/pub/java/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.2"
