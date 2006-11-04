@@ -1,6 +1,9 @@
 # ChangeLog for games-action/heroes
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.13 2006/09/20 12:26:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/ChangeLog,v 1.14 2006/11/04 05:36:43 nyhm Exp $
+
+  04 Nov 2006; Tristan Heaven <nyhm@gentoo.org> heroes-0.21-r1.ebuild:
+  Add nls dependencies
 
   20 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> heroes-0.21-r1.ebuild:
   Marked stable on amd64 wrt bug #148335.

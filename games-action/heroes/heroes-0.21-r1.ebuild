@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.6 2006/09/20 12:26:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.7 2006/11/04 05:36:43 nyhm Exp $
 
 inherit eutils games
 
@@ -20,22 +20,27 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="sdl nls ggi"
 
-DEPEND="nls? ( sys-devel/gettext )
+RDEPEND="nls? ( virtual/libintl )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )
 	ggi? ( media-libs/libggi media-libs/libgii media-libs/libmikmod )
 	!sdl? ( !ggi? ( media-libs/libsdl media-libs/sdl-mixer ) )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}/${P}
-	epatch ${FILESDIR}/${PV}-cvs-segfault-fix.patch #56118
+	cd "${WORKDIR}"/${P}
+	epatch "${FILESDIR}"/${PV}-cvs-segfault-fix.patch #56118
 	epatch "${FILESDIR}/${P}"-gcc4.patch
+	sed -i 's:$(localedir):/usr/share/locale:' \
+		$(find . -name 'Makefile.in*') \
+		|| die "sed failed"
 }
 
 src_compile() {
-	local myconf="--disable-heroes-debug $(use_enable nls)"
+	local myconf
 
 	if use sdl || ! use ggi ; then
 		myconf="${myconf} --with-sdl --with-sdl-mixer"
@@ -43,17 +48,24 @@ src_compile() {
 		myconf="${myconf} --with-ggi --with-mikmod"
 	fi
 
+	local pkg
 	for pkg in ${A//.tar.bz2} ; do
-		cd ${S}/${pkg}
-		egamesconf ${myconf}
-		make || die "unable to compile ${pkg}"
+		cd "${S}"/${pkg}
+		egamesconf \
+			--disable-heroes-debug \
+			--disable-optimizations \
+			$(use_enable nls) \
+			${myconf} \
+			|| die
+		emake || die "unable to compile ${pkg}"
 	done
 }
 
 src_install() {
+	local pkg
 	for pkg in ${A//.tar.bz2} ; do
-		cd ${S}/${pkg}
-		make DESTDIR=${D} install || die
+		cd "${S}"/${pkg}
+		emake DESTDIR="${D}" install || die "emake install failed"
 	done
 	prepgamesdirs
 }
