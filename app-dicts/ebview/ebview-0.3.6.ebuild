@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.6.ebuild,v 1.5 2006/11/04 16:53:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.6.ebuild,v 1.6 2006/11/04 17:24:56 usata Exp $
 
 inherit eutils
 
@@ -14,9 +14,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ppc"
 
-DEPEND=">=dev-libs/eb-3.3.4
-	>=x11-libs/gtk+-2.2
-	sys-devel/gettext"
+RDEPEND=">=dev-libs/eb-3.3.4
+	>=x11-libs/gtk+-2.2"
+DEPEND="${RDEPEND}
+	sys-devel/gettext
+	dev-util/pkgconfig"
 
 src_unpack() {
 
