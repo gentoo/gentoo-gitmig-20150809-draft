@@ -72,7 +72,7 @@ main() {
 		try mount -n ${mntcmd}
 	else
 		# This is bash only, but saves on using grep
-		if [[ $(</proc/filesystems)$'\n' =~ '[[:space:]]tmpfs'$'\n' ]] ; then
+		if [[ $(</proc/filesystems)$'\n' =~ [[:space:]]tmpfs$'\n' ]] ; then
 			mntcmd="tmpfs"
 		else
 			mntcmd="ramfs"
