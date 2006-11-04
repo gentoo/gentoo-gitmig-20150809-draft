@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r6.ebuild,v 1.1 2006/09/15 09:33:18 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.4-r6.ebuild,v 1.2 2006/11/04 11:23:13 vapier Exp $
 
+WANT_AUTOCONF="latest"
 inherit eutils autotools
 
 DESCRIPTION="fast compiler cache"
@@ -10,7 +11,7 @@ SRC_URI="http://samba.org/ftp/ccache/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 # Note: this version is designed to be auto-detected and used if
@@ -18,9 +19,9 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/ccache-2.4-respectflags.patch
-	epatch ${FILESDIR}/ccache-2.4-utimes.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/ccache-2.4-respectflags.patch
+	epatch "${FILESDIR}"/ccache-2.4-utimes.patch
 	eautoconf
 }
 
@@ -42,8 +43,7 @@ src_install() {
 	dodir /usr/lib/ccache/bin
 	keepdir /usr/lib/ccache/bin
 
-	exeinto /usr/bin
-	doexe ${FILESDIR}/ccache-config
+	dobin "${FILESDIR}"/ccache-config || die
 
 	diropts -m0700
 	if use ppc-macos; then
