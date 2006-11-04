@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6197 2006/11/04 18:36:03 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6198 2006/11/04 18:36:44 phreak Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -592,11 +592,6 @@ media-plugins/gst-plugins-swfdec
 # Markus Ullmann <jokey@gentoo.org> (24.09.2006)
 # masking kvirc cvs ebuild
 =net-irc/kvirc-9999
-
-# Christian Heim <phreak@gentoo.org> (24 Sep 2006)
-# masked app-crypt/hashsum for treecleaners, bug(s) 148530
-# Pending removal Oct 22th
-app-crypt/hashsum
 
 # Mike Frysinger <vapier@gentoo.org> (23 Sep 2006)
 # Use `emerge crossdev && crossdev mingw32`
