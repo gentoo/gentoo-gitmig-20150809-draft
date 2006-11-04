@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.60 2006/11/03 16:16:29 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.61 2006/11/04 21:59:40 dang Exp $
+
+  04 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
+  Bump to 1.1.9
+  	- Assorted bug and crash fixes
 
   03 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> ChangeLog:
   Bump to 1.1.8
