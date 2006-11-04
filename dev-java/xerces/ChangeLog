@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.66 2006/10/14 02:24:25 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.67 2006/11/04 06:54:11 wltjr Exp $
+
+*xerces-2.8.1 (04 Nov 2006)
+
+  04 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  +files/xerces-2.8.1-gentoo.patch, +files/xerces-2.8.1-no_dom3.patch,
+  +xerces-2.8.1.ebuild:
+  New version of xerces from java-migration-packages overlay
 
   14 Oct 2006; Joshua Nichols <nichoj@gentoo.org> xerces-2.7.1-r2.ebuild:
   Stabilizing on ppc64 as part of new Java system, bug #147254.
