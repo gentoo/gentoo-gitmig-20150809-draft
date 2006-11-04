@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/tigcc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.14 2006/11/04 01:34:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/ChangeLog,v 1.15 2006/11/04 13:07:05 dragonheart Exp $
+
+*tigcc-0.96_beta7 (04 Nov 2006)
+
+  04 Nov 2006; Daniel Black <dragonheart@gentoo.org>
+  +tigcc-0.96_beta7.ebuild, -tigcc-0.96_beta8.ebuild:
+  wrong version name on file - should have been tigcc-0.96_beta7 before.
+  Thanks helch
 
 *tigcc-0.96_beta8 (04 Nov 2006)
 
