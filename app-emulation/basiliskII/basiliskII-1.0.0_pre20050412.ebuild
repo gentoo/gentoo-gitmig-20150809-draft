@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20050412.ebuild,v 1.4 2006/10/28 08:51:14 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/basiliskII-1.0.0_pre20050412.ebuild,v 1.5 2006/11/05 11:22:26 mabi Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="dga esd gtk nls sdl"
 
 ### We'll set $S Manually, it's version dependant, and nested strangely.
