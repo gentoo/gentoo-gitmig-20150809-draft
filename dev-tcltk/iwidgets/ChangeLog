@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/iwidgets
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.13 2006/09/14 18:21:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.14 2006/11/05 15:23:31 kloeri Exp $
+
+  05 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> iwidgets-4.0.1.ebuild:
+  Add ~alpha keyword.
 
   14 Sep 2006; Danny van Dyk <kugelfang@gentoo.org> iwidgets-4.0.1.ebuild:
   Added DEPEND on >=dev-tcltk/itk-3.3-r1 as suggested in bug #115177. Dropped
