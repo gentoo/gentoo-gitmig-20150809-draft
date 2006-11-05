@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.45 2006/11/04 09:31:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.46 2006/11/05 11:06:27 phreak Exp $
+
+  05 Nov 2006; Christian Heim <phreak@gentoo.org>
+  openvz-sources-022.077.ebuild, openvz-sources-023.030.ebuild,
+  openvz-sources-023.032.ebuild, openvz-sources-026.018.ebuild,
+  openvz-sources-026.020.ebuild, openvz-sources-028.002.ebuild:
+  Fixing CKV, 028.002 is based on 2.6.18. Also adding a note for the next
+  releases.
 
 *openvz-sources-028.002 (04 Nov 2006)
 *openvz-sources-023.032 (04 Nov 2006)

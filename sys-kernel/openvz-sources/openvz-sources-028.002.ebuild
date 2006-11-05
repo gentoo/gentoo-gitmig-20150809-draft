@@ -1,9 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-028.002.ebuild,v 1.1 2006/11/04 09:31:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-028.002.ebuild,v 1.2 2006/11/05 11:06:27 phreak Exp $
 
 ETYPE="sources"
-CKV="2.6.16"
+CKV="2.6.18"
 
 K_USEPV=1
 K_NOSETEXTRAVERSION=1
@@ -21,6 +21,10 @@ DESCRIPTION="Full sources including OpenVZ patchset for the ${KV_MAJOR}.${KV_MIN
 HOMEPAGE="http://www.openvz.org"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}
 	mirror://openvz/kernel/devel/${OVZ_KERNEL}.${OVZ_REV}/patches/patch-ovz${OVZ_KERNEL}-combined.gz"
+# Next release should look like this:
+#	mirror://openvz/kernel/devel/${OVZ_KERNEL}.${OVZ_REV}/patches/patch-ovz${OVZ_KERNEL}.${OVZ_REV}-combined.gz"
 
 UNIPATCH_STRICTORDER=1
 UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KERNEL}-combined.gz"
+# Next release should look like this:
+#UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KERNEL}.${OVZ_REV}-combined.gz"
