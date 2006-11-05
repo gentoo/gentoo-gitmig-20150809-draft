@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/xemacs-packages-sumo
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-sumo/ChangeLog,v 1.8 2006/05/07 00:04:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-sumo/ChangeLog,v 1.9 2006/11/05 13:58:24 graaff Exp $
+
+  05 Nov 2006; Hans de Graaff <graaff@gentoo.org> metadata.xml,
+  -xemacs-packages-sumo-2003.04.14.ebuild,
+  -xemacs-packages-sumo-2003.06.29.ebuild:
+  Remove old versions. Update metadata.
 
   07 May 2006; Jason Wever <weeve@gentoo.org>
   xemacs-packages-sumo-2003.08.31.ebuild:
