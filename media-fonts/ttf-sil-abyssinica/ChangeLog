@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-abyssinica
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-abyssinica/ChangeLog,v 1.5 2006/11/05 19:48:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-abyssinica/ChangeLog,v 1.6 2006/11/05 20:25:54 opfer Exp $
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  ttf-sil-abyssinica-1.0.ebuild:
+  keyworded ~x86, bug #154084
 
   05 Nov 2006; Jeroen Roovers <jer@gentoo.org>
   ttf-sil-abyssinica-1.0.ebuild:
