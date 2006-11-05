@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.19 2006/10/30 04:04:54 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.20 2006/11/05 16:46:35 joshuabaergen Exp $
+
+  05 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  xcompmgr-1.1.ebuild:
+  Fix automake/autoconf deps.  (Evil Compile Person, bug #153599)
 
   30 Oct 2006; Luis Medinas <metalgod@gentoo.org> xcompmgr-1.1.3.ebuild:
   Stable on amd64.

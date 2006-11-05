@@ -1,8 +1,11 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-1.1.ebuild,v 1.5 2005/08/07 13:15:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-1.1.ebuild,v 1.6 2006/11/05 16:46:35 joshuabaergen Exp $
 
-inherit eutils
+WANT_AUTOCONF=2.5
+WANT_AUTOMAKE=1.7
+
+inherit eutils autotools
 
 IUSE=""
 
@@ -17,13 +20,9 @@ KEYWORDS="amd64 ppc x86"
 RDEPEND=">=x11-base/xorg-x11-6.8.0"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.5
 	dev-util/pkgconfig"
 
 src_compile() {
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.7
 	./autogen.sh || die
 	econf || die
 	emake || die "emake failed"
