@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnu-smalltalk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.17 2006/11/05 16:24:57 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.18 2006/11/05 17:14:22 araujo Exp $
+
+  05 Nov 2006; Luis F. Araujo <araujo@gentoo.org> -gnu-smalltalk-2.2.ebuild:
+  Removing broken version.
 
 *gnu-smalltalk-2.2-r1 (05 Nov 2006)
 
