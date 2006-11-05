@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.1 2006/09/30 18:14:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.2 2006/11/05 19:36:09 dang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://libodbcxx.sourceforge.net/"
 LICENSE="LGPL-2.1"
 DEPEND="dev-db/unixODBC
 		sys-libs/ncurses"
-KEYWORDS="~x86 ~ppc ~hppa ~alpha ~amd64"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~x86"
 IUSE="qt3"
 SLOT=0
 
