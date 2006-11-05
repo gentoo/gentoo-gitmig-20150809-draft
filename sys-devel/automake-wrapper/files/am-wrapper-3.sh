@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-3.sh,v 1.1 2006/11/05 08:11:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-3.sh,v 1.2 2006/11/05 08:22:46 vapier Exp $
 
 # Based on the am-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -79,6 +79,7 @@ fi
 if [ -n "${WANT_AUTOMAKE}" ] ; then
 	for v in ${vers} x ; do
 		if [ "${v}" = "x" ] ; then
+			echo "am-wrapper: warning: invalid WANT_AUTOMAKE '${WANT_AUTOMAKE}'; ignoring." >&2
 			unset WANT_AUTOMAKE
 			break
 		fi
