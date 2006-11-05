@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libzrtpcpp
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.1 2006/10/02 00:11:40 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.2 2006/11/05 14:10:34 peper Exp $
+
+  05 Nov 2006; Piotr Jaroszyński <peper@gentoo.org>
+  libzrtpcpp-0.9.0.ebuild:
+  Add ~amd64 wrt bug #149793.
 
 *libzrtpcpp-0.9.0 (02 Oct 2006)
 
