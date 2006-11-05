@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.94 2006/10/29 20:17:09 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.95 2006/11/05 00:22:09 dev-zero Exp $
+
+  05 Nov 2006; Tiziano Müller <dev-zero@gentoo.org> boost-1.33.1-r1.ebuild:
+  Added python version override to fix bug 149250
 
   29 Oct 2006; Tiziano Müller <dev-zero@gentoo.org> boost-1.33.1.ebuild,
   boost-1.33.1-r1.ebuild, boost-1.34_pre20060930.ebuild:
