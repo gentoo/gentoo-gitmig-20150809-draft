@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.3 2006/06/09 01:19:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16-r1.ebuild,v 1.4 2006/11/05 01:12:06 nyhm Exp $
 
 inherit perl-module toolchain-funcs
 
@@ -12,12 +12,12 @@ SRC_URI="http://umodpack.sourceforge.net/${MY_P}-allinone.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="tcltk"
+IUSE="tk"
 
 DEPEND="dev-lang/perl
 	dev-perl/Archive-Zip
 	dev-perl/Tie-IxHash
-	tcltk? ( dev-perl/perl-tk )"
+	tk? ( dev-perl/perl-tk )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -39,7 +39,7 @@ src_install() {
 	mydoc="Changes"
 	perl-module_src_install
 	dobin umod umr-0.3/umr || die "umod/umr failed"
-	if use tcltk ; then
+	if use tk ; then
 		dobin xumod || die "xumod failed"
 	fi
 }
