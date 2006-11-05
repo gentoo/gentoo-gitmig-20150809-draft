@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.3 2006/11/01 18:53:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.4 2006/11/05 16:01:10 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -33,6 +33,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}/xwindow
 	epatch ${FILESDIR}/mlterm-2.9.1-gentoo.diff
+	epatch ${FILESDIR}/${P}-asneeded.diff
 }
 
 src_compile() {
