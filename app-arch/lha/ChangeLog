@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lha
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.35 2006/11/05 03:53:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/ChangeLog,v 1.36 2006/11/05 18:03:20 killerfox Exp $
+
+  05 Nov 2006; René Nussbaumer <killerfox@gentoo.org> lha-114i-r6.ebuild:
+  Stable on hppa. See bug #151252.
 
   05 Nov 2006; Brent Baude <ranger@gentoo.org> lha-114i-r6.ebuild:
   Marking lha-114i-r6 ppc64 stable for bug #151252
