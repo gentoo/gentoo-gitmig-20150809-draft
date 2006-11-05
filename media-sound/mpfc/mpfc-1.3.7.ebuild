@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.7.ebuild,v 1.1 2006/03/04 07:15:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.7.ebuild,v 1.2 2006/11/05 20:37:11 aballier Exp $
 
 inherit eutils multilib
 
@@ -27,6 +27,7 @@ src_unpack() {
 		xargs grep ^libdir |
 		cut -f1 -d: |
 		xargs sed -i "s:^\(libdir.*\)/lib/\(.*\)$:\1/$(get_libdir)/\2:" || die
+	epatch "${FILESDIR}/${PN}-gcc4.patch"
 }
 
 src_compile() {

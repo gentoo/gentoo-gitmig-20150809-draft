@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.5.ebuild,v 1.4 2005/08/07 13:37:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.5.ebuild,v 1.5 2006/11/05 20:37:11 aballier Exp $
 
 inherit eutils
 
