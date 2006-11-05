@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.33 2006/07/05 05:36:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.34 2006/11/05 06:03:14 leio Exp $
 
+WANT_AUTOCONF=2.1
 inherit eutils libtool multilib autotools flag-o-matic
 
 DESCRIPTION="GNOME Core Libraries"
