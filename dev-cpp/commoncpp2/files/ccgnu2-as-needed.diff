@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2006-11-05 20:29:10.000000000 +0100
++++ src/Makefile.in	2006-11-05 20:29:25.000000000 +0100
+@@ -313,7 +313,7 @@
+ aclocal_DATA = ost_check2.m4
+ scriptdir = $(bindir)
+ script_DATA = ccgnu2-config
+-libccgnu2_la_LIBADD = @THREAD_LIBS@
++libccgnu2_la_LIBADD = @THREAD_LIBS@ @DYN_LOADER@
+ libccgnu2_la_LDFLAGS = $(RELEASE) $(SHARED_FLAGS)
+ noinst_DATA = @STAGE2@
+ libccgnu2_la_SOURCES = thread.cpp mutex.cpp semaphore.cpp threadkey.cpp \
