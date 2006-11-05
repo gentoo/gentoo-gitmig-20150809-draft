@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.177 2006/11/05 20:06:14 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.178 2006/11/05 20:09:17 ticho Exp $
+
+  05 Nov 2006; Andrej Kacian <ticho@gentoo.org> clamav-0.90_rc1.ebuild,
+  clamav-0.90_rc2.ebuild:
+  Depend on either libmilter or sendmail also in 0.90 RC ebuilds. Bug #152541
+  by Milan Holzäpfel <public at mjh.name>.
 
 *clamav-0.88.6 (05 Nov 2006)
 
