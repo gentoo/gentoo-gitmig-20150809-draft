@@ -9,3 +9,4 @@ move dev-cpp/ice dev-cpp/Ice
 move games-fps/quake3-truecombat games-fps/enemy-territory-truecombat
 move sys-apps/dbus-core sys-apps/dbus
 move net-misc/NetworkManager net-misc/networkmanager
+move net-www/bugport www-apps/bugport
