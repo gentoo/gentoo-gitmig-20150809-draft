@@ -1,12 +1,13 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.57.ebuild,v 1.1 2006/03/10 05:10:08 antarus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.57.ebuild,v 1.2 2006/11/05 22:23:08 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
 DESCRIPTION="ChanServ, NickServ & MemoServ with support for several IRC daemons"
 HOMEPAGE="http://www.ircservices.za.net/"
-SRC_URI="ftp://ftp.esper.net/${PN}/${P}.tar.gz
+SRC_URI="http://www.ircservices.za.net/download/${P}.tar.gz
+	ftp://ftp.esper.net/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,6 +15,12 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
+
+pkg_setup() {
+	enewgroup ircservices
+	enewuser ircservices -1 -1 -1 ircservices
+}
 
 src_unpack() {
 	unpack ${A}
@@ -23,7 +30,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/5.0.53-fPIC-configure.patch
 
 	ht_fix_file configure
-	sed -i -e "s/HEAD -1/HEAD -n 1/" configure
+	sed -i \
+		-e "s/HEAD -1/HEAD -n 1/" \
+		-e "s/-m 750/-m 755/" \
+		-e "s/-m 640/-m 644/" \
+		configure
 }
 
 src_compile() {
@@ -31,6 +42,7 @@ src_compile() {
 	# configure fails with -O higher than 2
 	replace-flags "-O[3-9s]" "-O2"
 
+	RUNGROUP="ircservices" \
 	./configure \
 		-cc "$(tc-getCC)" \
 		-cflags "${CFLAGS}" \
@@ -43,7 +55,6 @@ src_compile() {
 src_install() {
 	dodir /usr/bin /{etc,usr/{$(get_libdir),share},var/lib}/ircservices || die "dodir failed"
 	keepdir /var/log/ircservices || die "keepdir failed"
-	fperms 700 /{etc,var/lib}/ircservices || die "fperms failed"
 
 	make \
 		BINDEST="${D}"/usr/bin \
@@ -67,6 +78,11 @@ src_install() {
 	dosym /usr/share/ircservices/helpfiles /var/lib/ircservices/helpfiles || die "mv failed"
 	dosym /usr/share/ircservices/languages /var/lib/ircservices/languages || die "dosym failed"
 
+	fperms 750 /var/{lib,log}/ircservices /etc/ircservices
+	fperms 640 /etc/ircservices/{ircservices,modules}.conf
+	fowners ircservices:ircservices /var/{lib,log}/ircservices
+	fowners root:ircservices /etc/ircservices{,/{ircservices,modules}}.conf
+
 	newinitd "${FILESDIR}"/ircservices.init.d ircservices || die "newinitd failed"
 	newconfd "${FILESDIR}"/ircservices.conf.d ircservices || die "newconfd failed"
 
@@ -74,10 +90,4 @@ src_install() {
 	newman docs/convert-db.8 ircservices-convert-db.8 || die "newman failed"
 	dohtml docs/*.html || die "dohtml failed"
 	dodoc KnownBugs Changes README TODO WhatsNew || die "dodoc failed"
-}
-
-pkg_postinst() {
-	enewuser ircservices
-	chown ircservices "${ROOT}"/var/lib/ircservices
-	chown -R ircservices "${ROOT}"/etc/ircservices
 }
