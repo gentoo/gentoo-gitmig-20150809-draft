@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.143 2006/11/05 09:07:13 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.144 2006/11/05 17:54:22 cardoe Exp $
+
+  05 Nov 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/dbus-0.95-pass-context.patch, dbus-0.62-r1.ebuild,
+  dbus-0.95.ebuild:
+  Apply patch from FreeDesktop.org bug #8298 for FreeBSD support. Removed an
+  unnecessary patch and comment from 0.62 since we switched to expat from
+  libxml.
 
 *dbus-0.95 (05 Nov 2006)
 
