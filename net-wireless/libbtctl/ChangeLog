@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.30 2006/11/04 08:47:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.31 2006/11/05 00:11:43 peper Exp $
+
+  05 Nov 2006; Piotr Jaroszyński <peper@gentoo.org>
+  -files/libbtctl-0.8.1-libdir.patch, libbtctl-0.8.1.ebuild:
+  Fix multilib wrt bug #154057.
 
 *libbtctl-0.8.1 (04 Nov 2006)
 

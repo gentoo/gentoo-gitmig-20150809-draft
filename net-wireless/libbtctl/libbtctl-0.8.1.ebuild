@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.8.1.ebuild,v 1.1 2006/11/04 08:39:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.8.1.ebuild,v 1.2 2006/11/05 00:11:43 peper Exp $
 
-inherit gnome2 eutils multilib mono
+inherit gnome2 multilib mono autotools
 
 DESCRIPTION="A GObject wrapper for Bluetooth functionality"
 HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
@@ -36,10 +36,11 @@ USE_DESTDIR="yes"
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-libdir.patch"
-	sed -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):" -i src/Makefile.am
+
+	# Fix multilib
+	sed -e "s:\/lib\/:\/$(get_libdir)\/:" -i src/Makefile.am
+	eautoreconf
 }
 
 src_compile() {
