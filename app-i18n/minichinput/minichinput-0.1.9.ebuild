@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.6 2005/01/01 14:35:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/minichinput/minichinput-0.1.9.ebuild,v 1.7 2006/11/05 17:37:56 usata Exp $
 
 inherit eutils
 
@@ -16,21 +16,27 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	virtual/xft
+DEPEND="|| ( x11-libs/libX11 virtual/x11 )
+	|| ( x11-libs/libXft virtual/xft )
 	media-libs/fontconfig
 	>=media-libs/imlib-1.9.13
 	!app-i18n/chinput"
+RDEPEND="${DEPEND}
+	|| ( media-fonts/font-sony-misc virtual/x11 )"
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	epatch ${DISTDIR}/${MY_P}-rxvt.patch
+	epatch ${FILESDIR}/${P}-xorg-x11.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
-	econf || die "configure failed"
+	econf \
+		--x-includes=/usr/include \
+		--x-libraries=/usr/lib || die "configure failed"
 	emake || die "make failed"
 	emake data || die "make data failed"
 }
