@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11626.ebuild,v 1.1 2006/11/05 20:06:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.20_p11626.ebuild,v 1.2 2006/11/05 23:07:01 cardoe Exp $
 
 inherit mythtv flag-o-matic multilib eutils debug qt3
 
@@ -100,10 +100,6 @@ src_unpack() {
 	# As needed fix since they don't know how to write qmake let alone a real
 	# make system
 	epatch "${FILESDIR}"/${PN}-${MY_PV}-as-needed.patch
-
-	# Seriously... testing.. or maybe seeing if the OpenGL spec says these are
-	# public... or checking mesa before assuming they're there
-	epatch "${FILESDIR}"/${PN}-${MY_PV}-vsync.patch
 }
 
 src_compile() {
