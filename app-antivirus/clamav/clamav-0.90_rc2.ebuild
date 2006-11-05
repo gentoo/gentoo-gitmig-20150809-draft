@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90_rc2.ebuild,v 1.2 2006/11/05 20:09:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.90_rc2.ebuild,v 1.3 2006/11/05 21:44:06 zmedico Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -16,7 +16,7 @@ IUSE="crypt milter selinux mailwrapper"
 
 DEPEND="virtual/libc
 	crypt? ( >=dev-libs/gmp-4.1.2 )
-	milter? || ( mail-filter/libmilter mail-mta/sendmail )
+	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
 	>=sys-libs/zlib-1.2.1-r3
 	>=net-misc/curl-7.10.0
 	>=sys-apps/sed-4"

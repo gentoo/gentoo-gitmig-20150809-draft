@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.178 2006/11/05 20:09:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.179 2006/11/05 21:44:06 zmedico Exp $
+
+  05 Nov 2006; Zac Medico <zmedico@gentoo.org> clamav-0.88.6.ebuild,
+  clamav-0.90_rc1.ebuild, clamav-0.90_rc2.ebuild:
+  Fix missing ( ) for milter? in DEPEND.
 
   05 Nov 2006; Andrej Kacian <ticho@gentoo.org> clamav-0.90_rc1.ebuild,
   clamav-0.90_rc2.ebuild:
