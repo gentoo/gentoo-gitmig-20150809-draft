@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.280 2006/11/01 20:44:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.281 2006/11/05 05:46:22 leio Exp $
+
+  05 Nov 2006; Mart Raudsepp <leio@gentoo.org> gtk+-1.2.10-r12.ebuild:
+  Fix automake dependency, bug #150503
 
   01 Nov 2006; Bryan Østergaard <kloeri@gentoo.org> gtk+-1.2.10-r12.ebuild:
   Stable on Alpha, bug 150355.

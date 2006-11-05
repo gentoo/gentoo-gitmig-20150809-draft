@@ -1,8 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.9 2006/11/01 20:44:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r12.ebuild,v 1.10 2006/11/05 05:46:22 leio Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
+WANT_AUTOMAKE=1.4
 inherit gnome.org eutils toolchain-funcs autotools
 
 DESCRIPTION="The GIMP Toolkit"
