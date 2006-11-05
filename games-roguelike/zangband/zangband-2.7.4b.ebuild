@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4b.ebuild,v 1.3 2006/02/21 23:29:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4b.ebuild,v 1.4 2006/11/05 01:31:22 nyhm Exp $
 
 inherit games
 
@@ -11,14 +11,14 @@ SRC_URI="ftp://clockwork.dementia.org/angband/Variant/ZAngband/${P}.tar.gz"
 LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="gtk tcltk"
+IUSE="gtk tk"
 
 # Dropping X use keyword: 
 #  it had to be $(use_with X x11)
 #  but ebuild fails to link without-x11
 RDEPEND=">=sys-libs/ncurses-5
 	sys-libs/zlib
-	tcltk? (
+	tk? (
 		dev-lang/tcl
 		dev-lang/tk
 	)
@@ -34,7 +34,7 @@ src_compile() {
 		--datadir="${GAMES_DATADIR_BASE}" \
 		"--with-setgid=${GAMES_GROUP}" \
 		`use_with gtk` \
-		`use_with tcltk` \
+		`use_with tk tcltk` \
 		|| die "configure failed"
 	emake || die "emake failed"
 }
