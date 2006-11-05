@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.9.0.ebuild,v 1.1 2006/07/15 05:19:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.9.0.ebuild,v 1.2 2006/11/05 22:30:36 mr_bones_ Exp $
 
 inherit games
 
@@ -31,8 +31,8 @@ src_unpack() {
 
 src_install() {
 	local f
-	for f in $(find -type f -perm +1 -printf '%f ') ; do
-		newgamesbin $f ${PN}-$f || die "newgamesbin $f failed"
+	for f in $(find . -type f -perm +1 -print); do
+		newgamesbin $f ${PN}-${f##*/} || die "newgamesbin $f failed"
 	done
 	dodoc README
 	prepgamesdirs

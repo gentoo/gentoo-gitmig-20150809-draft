@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/scummvm-tools
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.9 2006/07/15 05:19:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.10 2006/11/05 22:30:36 mr_bones_ Exp $
+
+  05 Nov 2006; Michael Sterrett <mr_bones_@gentoo.org>
+  -scummvm-tools-0.8.0.ebuild, scummvm-tools-0.9.0.ebuild:
+  clean out old ebuild; bsd fixup reported by Javier Villavicencio via
+  bug #154130
 
 *scummvm-tools-0.9.0 (15 Jul 2006)
 
