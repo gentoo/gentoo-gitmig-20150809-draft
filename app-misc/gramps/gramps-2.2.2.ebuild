@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.2.ebuild,v 1.1 2006/11/05 04:59:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-2.2.2.ebuild,v 1.2 2006/11/05 17:28:02 metalgod Exp $
 
 inherit gnome2 eutils
 
@@ -18,6 +18,7 @@ RDEPEND=">=gnome-base/gconf-2.8
 		 >=dev-python/pygtk-2.4
 		 >=dev-python/gnome-python-2.6
 		 >=gnome-base/gnome-vfs-2.8
+		 >=app-text/gnome-doc-utils-0.6.1
 		 media-gfx/graphviz
 		 >=dev-python/reportlab-1.11"
 DEPEND="${RDEPEND}
