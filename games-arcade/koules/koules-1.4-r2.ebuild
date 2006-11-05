@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.2 2006/10/15 14:39:21 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r2.ebuild,v 1.3 2006/11/05 00:55:04 nyhm Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.ucw.cz/~hubicka/koules/packages/koules${PV}-src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ppc x86"
-IUSE="svga joystick tcltk"
+IUSE="svga joystick tk"
 
 RDEPEND="|| (
 	svga? ( media-libs/svgalib )
@@ -23,7 +23,7 @@ RDEPEND="|| (
 		media-fonts/font-schumacher-misc )
 	)
 	|| (
-		tcltk? ( dev-lang/tk dev-lang/tcl )
+		tk? ( dev-lang/tk dev-lang/tcl )
 		dev-util/dialog )"
 
 DEPEND="${RDEPEND}
@@ -54,7 +54,7 @@ src_unpack() {
 	sed -i \
 		-e "s:/usr/local/bin:${GAMES_BINDIR}:" koules \
 			|| die "sed koules failed"
-	if use tcltk ; then
+	if use tk ; then
 		sed -i \
 			-e "s:/usr/bin/X11:${GAMES_BINDIR}:" \
 			-e "s:/usr/local/bin:${GAMES_BINDIR}:" \
@@ -92,7 +92,7 @@ src_install() {
 	dogamesbin koules bins/* || die "dogamesbin failed"
 	exeinto "${GAMES_DATADIR}/${PN}"
 	doexe koules.sndsrv.linux || die "doexe failed"
-	if use tcltk ; then
+	if use tk ; then
 		dogamesbin koules.tcl || die "dogamebin failed (tcl)"
 	fi
 	insinto "${GAMES_DATADIR}/${PN}"
