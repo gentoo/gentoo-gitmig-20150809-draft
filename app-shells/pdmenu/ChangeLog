@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/pdmenu
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/ChangeLog,v 1.3 2006/11/05 19:57:02 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/ChangeLog,v 1.4 2006/11/05 20:09:26 eroyf Exp $
+
+  05 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org> pdmenu-1.2.89.ebuild:
+  marked ~alpha
 
   05 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org> pdmenu-1.2.89.ebuild:
   Added RESTRICT="test", since the test does not work.
