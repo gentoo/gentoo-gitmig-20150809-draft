@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.1 2006/10/24 14:57:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis-gcc/asis-gcc-3.4.6.ebuild,v 1.2 2006/11/05 15:13:11 george Exp $
 
 inherit eutils flag-o-matic gnatbuild
 
@@ -14,7 +14,7 @@ Gnat_Name="gnat-gcc"
 My_PN="asis"
 My_PV="3.4.4"
 
-SRC_URI="http://dev.gentoo.org/~george/src/${My_PN}-${My_PV}.tar.bz2"
+SRC_URI="http://mirrors/gentoo/${My_PN}-${My_PV}.tar.bz2"
 
 IUSE="doc"
 RDEPEND="=dev-lang/gnat-gcc-${PV}*"
