@@ -1,18 +1,21 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.2 2006/11/05 19:36:09 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.3 2006/11/05 20:17:28 dev-zero Exp $
 
 inherit eutils
+
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~x86"
 
 DESCRIPTION="Libodbc++ is a c++ class library that provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC."
 SRC_URI="mirror://sourceforge/libodbcxx/${P}.tar.gz"
 HOMEPAGE="http://libodbcxx.sourceforge.net/"
 LICENSE="LGPL-2.1"
+SLOT=0
+IUSE="qt3"
+
 DEPEND="dev-db/unixODBC
 		sys-libs/ncurses"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~x86"
-IUSE="qt3"
-SLOT=0
+RDEPEND="${DEPEND}"
 
 SB="${S}-build"
 SB_MT="${S}-build-mt"
@@ -27,7 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-typecast.patch
 
 	# Fix configure to use ncurses instead of termcap (bug #103105)
-	cd ${S}
+	cd "${S}"
 	sed -i -e 's~termcap~ncurses~g' configure
 }
 
@@ -67,13 +70,13 @@ src_compile() {
 }
 
 src_install () {
-	cd ${S}
-	dodoc AUTHORS BUGS ChangeLog COPYING INSTALL NEWS README THANKS TODO
+	cd "${S}"
+	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 
 	buildlist="${SB} ${SB_MT}"
 	use qt3 && buildlist="${buildlist} $SB_QT $SB_QT_MT"
 	for sd in ${buildlist}; do
 		cd ${sd}
-		make DESTDIR=${D} install || die "make install failed"
+		emake DESTDIR="${D}" install || die "make install failed"
 	done
 }
