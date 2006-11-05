@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.10 2006/09/22 17:45:26 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.11 2006/11/05 19:24:59 dang Exp $
+
+  05 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> mod_jk-1.2.19.ebuild:
+  Marked stable on amd64 for bug #151748
 
   22 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org>
   mod_jk-1.2.18-r1.ebuild:
