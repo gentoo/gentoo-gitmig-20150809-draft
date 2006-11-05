@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ttf-sil-padauk
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-padauk/ChangeLog,v 1.1 2006/11/05 00:02:26 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-padauk/ChangeLog,v 1.2 2006/11/05 02:36:58 tester Exp $
+
+  05 Nov 2006; Olivier Crête <tester@gentoo.org> ttf-sil-padauk-2.1.ebuild:
+  Mark ~amd64, bug #154089
 
 *ttf-sil-padauk-2.1 (04 Nov 2006)
 
