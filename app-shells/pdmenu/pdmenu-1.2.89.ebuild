@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.89.ebuild,v 1.2 2006/08/20 10:22:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdmenu/pdmenu-1.2.89.ebuild,v 1.3 2006/11/05 19:57:02 eroyf Exp $
 
 DESCRIPTION="A simple console menu program"
 HOMEPAGE="http://www.kitenet.net/programs/pdmenu/"
@@ -10,6 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 mips"
 IUSE="nls gpm examples"
+RESTRICT="test"
 
 DEPEND="sys-libs/slang
 		gpm? ( sys-libs/gpm )
