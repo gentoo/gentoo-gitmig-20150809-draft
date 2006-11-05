@@ -71,6 +71,7 @@ lesspipe() {
 	*.ps|*.pdf) ps2ascii "$1" || pstotext "$1" || pdftotext "$1" ;;
 	*.doc)      antiword "$1" || catdoc "$1" ;;
 	*.rtf)      unrtf --nopict --text "$1" ;;
+	*.conf|*.txt|*.log) ;; # force less to work on these directly #150256
 
 	### URLs ###
 	ftp://*|http://*|*.htm|*.html)
@@ -186,7 +187,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.18 2006/11/05 09:11:45 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.19 2006/11/05 21:58:50 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2005 Gentoo Foundation
