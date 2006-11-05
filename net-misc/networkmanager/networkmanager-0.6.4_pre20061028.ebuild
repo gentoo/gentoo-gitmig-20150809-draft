@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.4_pre20061028.ebuild,v 1.1 2006/11/05 01:21:45 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.6.4_pre20061028.ebuild,v 1.2 2006/11/05 01:36:44 steev Exp $
 
 inherit gnome2 debug eutils
 
@@ -51,11 +51,11 @@ src_unpack () {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/NetworkManager-0.6.4-Gentoo-checklo.patch
-	epatch ${FILESDIR}/NetworkManager-use-kernel-headers.patch
-	epatch ${FILESDIR}/NetworkManager-resolvconf-perms.patch
-	epatch ${FILESDIR}/NetworkManager-0.6.4-gentooinitscript.patch
-	epatch ${FILESDIR}/NetworkManager-0.6.4-confchanges.patch
+	epatch ${FILESDIR}/networkmanager-0.6.4-Gentoo-checklo.patch
+	epatch ${FILESDIR}/networkmanager-use-kernel-headers.patch
+	epatch ${FILESDIR}/networkmanager-resolvconf-perms.patch
+	epatch ${FILESDIR}/networkmanager-0.6.4-gentooinitscript.patch
+	epatch ${FILESDIR}/networkmanager-0.6.4-confchanges.patch
 }
 
 src_install() {
