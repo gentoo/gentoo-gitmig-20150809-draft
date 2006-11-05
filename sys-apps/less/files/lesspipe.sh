@@ -67,7 +67,6 @@ lesspipe() {
 				;;
 		esac
 		;;
-	*.conf|*.log|*.txt) cat -- "$1" ;;
 	*.dvi)      dvi2tty "$1" ;;
 	*.ps|*.pdf) ps2ascii "$1" || pstotext "$1" || pdftotext "$1" ;;
 	*.doc)      antiword "$1" || catdoc "$1" ;;
@@ -187,7 +186,7 @@ if [[ -z $1 ]] ; then
 	echo "Usage: lesspipe.sh <file>"
 elif [[ $1 == "-V" ]] ; then
 	Id="cvsid"
-	cvsid="$Id: lesspipe.sh,v 1.17 2006/10/07 03:20:39 vapier Exp $"
+	cvsid="$Id: lesspipe.sh,v 1.18 2006/11/05 09:11:45 vapier Exp $"
 	cat <<-EOF
 		$cvsid
 		Copyright 2001-2005 Gentoo Foundation
