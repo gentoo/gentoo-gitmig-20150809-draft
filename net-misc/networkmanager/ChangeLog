@@ -1,0 +1,32 @@
+# ChangeLog for net-misc/NetworkManager
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.1 2006/11/05 01:21:45 steev Exp $
+
+*networkmanager-0.6.4_pre20061028 (05 Nov 2006)
+
+  05 Nov 2006; Steev Klimaszewski <steev@gentoo.org>
+  +files/networkmanager-0.6.4-Gentoo-checklo.patch,
+  +files/networkmanager-0.6.4-confchanges.patch,
+  +files/networkmanager-0.6.4-gentooinitscript.patch,
+  +files/networkmanager-resolvconf-perms.patch,
+  +files/networkmanager-use-kernel-headers.patch, +metadata.xml,
+  +networkmanager-0.6.4_pre20061028.ebuild:
+  Moved from net-misc/NetworkManager to net-misc/networkmanager.
+
+  04 Nov 2006; Luis Medinas <metalgod@gentoo.org>
+  NetworkManager-0.6.4_pre20061028.ebuild:
+  Remove pam_console from dependencies since our patch makes it work with
+  hal/dbus instead of pam_console.
+
+*NetworkManager-0.6.4_pre20061028 (31 Oct 2006)
+
+  31 Oct 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/NetworkManager-0.6.4-Gentoo-checklo.patch,
+  +files/NetworkManager-0.6.4-confchanges.patch,
+  +files/NetworkManager-0.6.4-gentooinitscript.patch,
+  +files/NetworkManager-resolvconf-perms.patch,
+  +files/NetworkManager-use-kernel-headers.patch, +metadata.xml,
+  +NetworkManager-0.6.4_pre20061028.ebuild:
+  Initial import. This ebuild was made by Luis Medinas <metalgod@gentoo.org>
+  and Stephen Klimaszewski <steev@gentoo.org>.
+
