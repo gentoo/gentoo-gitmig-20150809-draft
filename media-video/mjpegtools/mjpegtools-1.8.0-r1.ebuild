@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.22 2006/11/03 16:27:53 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r1.ebuild,v 1.23 2006/11/05 10:28:01 vapier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -10,15 +10,14 @@ inherit flag-o-matic toolchain-funcs eutils libtool autotools
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
-		mirror://gentoo/${PN}-m4-1.tar.bz2"
+	mirror://gentoo/${PN}-m4-1.tar.bz2"
 
 LICENSE="as-is"
 SLOT="1"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="gtk dv quicktime sdl X yv12 3dnow mmx sse v4l dga png"
+IUSE="gtk dv quicktime sdl X yv12 3dnow sse v4l dga png mmx"
 
 RDEPEND="media-libs/jpeg
-	x86? ( mmx? ( >=media-libs/jpeg-mmx-0.1.6 ) )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	dv? ( >=media-libs/libdv-0.99 )
 	quicktime? ( virtual/quicktime )
@@ -32,10 +31,10 @@ RDEPEND="media-libs/jpeg
 	)"
 
 DEPEND="${RDEPEND}
-	x86? ( mmx? ( dev-lang/nasm )
+	x86? (
 		3dnow? ( dev-lang/nasm )
 		sse? ( dev-lang/nasm )
-		)
+	)
 	>=sys-apps/sed-4
 	dev-util/pkgconfig"
 
@@ -72,9 +71,6 @@ src_compile() {
 	if use x86; then
 		if use mmx || use 3dnow || use sse; then
 			myconf="${myconf} --enable-simd-accel"
-		fi
-		if use mmx; then
-			myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"
 		fi
 
 		if [[ ${CHOST/i686/} != ${CHOST} ]] || [[ ${CHOST/x86_64/} != ${CHOST} ]]; then
