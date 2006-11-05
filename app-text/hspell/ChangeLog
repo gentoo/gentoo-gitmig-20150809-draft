@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hspell
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.23 2006/10/27 13:47:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hspell/ChangeLog,v 1.24 2006/11/05 18:01:50 jer Exp $
+
+  05 Nov 2006; Jeroen Roovers <jer@gentoo.org> hspell-1.0-r1.ebuild:
+  Marked ~hppa (bug #152274).
 
   27 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> hspell-1.0-r1.ebuild:
   To ~sparc wrt #152274
