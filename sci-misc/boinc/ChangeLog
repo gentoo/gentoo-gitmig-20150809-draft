@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.27 2006/11/03 15:28:30 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.28 2006/11/05 11:48:52 cryos Exp $
+
+  05 Nov 2006; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/boinc-4.72.20050813-gcc4-fix.patch, +boinc-4.72.20050813-r3.ebuild:
+  Ressurect until new setiathome version is in the tree.
 
 *boinc-5.4.11 (03 Nov 2006)
 
