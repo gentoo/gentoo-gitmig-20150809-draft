@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.123 2006/10/06 14:55:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.124 2006/11/05 20:06:01 cardoe Exp $
+
+*mythtv-0.20_p11626 (05 Nov 2006)
+
+  05 Nov 2006; Doug Goldstein <cardoe@gentoo.org> +files/bash_profile,
+  +files/xinitrc, +mythtv-0.20_p11626.ebuild:
+  rev bump. Change the mythtv user to be loginable. Added my MythFrontend
+  autostart scripts to mythtv user. Added configfiles to be installed.
 
   05 Oct 2006; Steve Dibb <beandog@gentoo.org> mythtv-0.20_p11444.ebuild:
   Add ivtv USE flag
