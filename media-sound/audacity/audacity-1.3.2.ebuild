@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2.ebuild,v 1.1 2006/10/31 16:12:11 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.3.2.ebuild,v 1.2 2006/11/05 23:53:00 matsuu Exp $
 
-inherit eutils
+inherit eutils autotools
 
 IUSE="flac ladspa libsamplerate mp3 unicode vorbis"
 
@@ -35,6 +35,8 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-no-msse.patch
+	eautoreconf || die
 }
 
 src_compile() {
