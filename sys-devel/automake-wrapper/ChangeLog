@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.16 2006/11/04 21:23:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.17 2006/11/05 08:11:18 vapier Exp $
+
+*automake-wrapper-3 (05 Nov 2006)
+
+  05 Nov 2006; Mike Frysinger <vapier@gentoo.org> +files/am-wrapper-3.sh,
+  +automake-wrapper-3.ebuild:
+  Make default automake selection more flexible and allow WANT_AUTOMAKE to
+  contain a list of versions.
 
   04 Nov 2006; Danny van Dyk <kugelfang@gentoo.org>
   automake-wrapper-2.ebuild:
