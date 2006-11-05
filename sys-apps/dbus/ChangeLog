@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.141 2006/11/03 02:14:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.142 2006/11/05 07:07:26 cardoe Exp $
+
+*dbus-0.95 (05 Nov 2006)
+
+  05 Nov 2006; Doug Goldstein <cardoe@gentoo.org> +files/dbus.init-0.95,
+  +dbus-0.95.ebuild:
+  rev bump. Changed init script to generate machine id as per new upstream
+  recommendation. Cleaned up initscript.
 
   03 Nov 2006; Sven Wegener <swegener@gentoo.org> dbus-0.62-r1.ebuild,
   dbus-0.94.ebuild:
