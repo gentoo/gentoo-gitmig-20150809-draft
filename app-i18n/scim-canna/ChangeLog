@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-canna
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.6 2006/03/04 16:23:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.7 2006/11/05 18:22:33 opfer Exp $
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  scim-canna-1.0.0.ebuild:
+  stabled x86, bug #153986
 
 *scim-canna-1.0.0 (04 Mar 2006)
 
