@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-padauk/ttf-sil-padauk-2.1.ebuild,v 1.3 2006/11/05 10:53:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-padauk/ttf-sil-padauk-2.1.ebuild,v 1.4 2006/11/05 13:53:53 fmccor Exp $
 
 inherit font versionator
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://scripts.sil.org/padauk"
 SRC_URI="mirror://gentoo/${P}.tgz"
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc"
 IUSE="X doc"
 
 DOCS="FONTLOG OFL OFL-FAQ local.conf"
