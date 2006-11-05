@@ -1,6 +1,11 @@
 # ChangeLog for app-text/yudit
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.17 2006/05/08 15:56:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/ChangeLog,v 1.18 2006/11/05 18:38:49 opfer Exp $
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org> +metadata.xml,
+  yudit-2.8.1_beta7.ebuild:
+  added metadata.xml
+  stabled x86, bug #154049
 
 *yudit-2.8.1_beta7 (08 May 2006)
 

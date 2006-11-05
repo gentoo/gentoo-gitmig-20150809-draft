@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.8.1_beta7.ebuild,v 1.1 2006/05/08 15:56:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yudit/yudit-2.8.1_beta7.ebuild,v 1.2 2006/11/05 18:38:49 opfer Exp $
 
 inherit versionator
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.yudit.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 IUSE=""
 
 DEPEND="|| ( x11-libs/libX11 virtual/x11 )
