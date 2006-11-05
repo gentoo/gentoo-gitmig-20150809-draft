@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.39 2006/10/02 00:30:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.40 2006/11/05 14:12:50 peper Exp $
 
 # SECTION: Unmask
 
@@ -113,9 +113,3 @@ pfpro
 solid
 sybase
 sybase-ct
-
-
-# new keyword zrtp related to 
-# net-libs/libzrtpcpp package
-# masked pending testing - bug #149793
-zrtp
