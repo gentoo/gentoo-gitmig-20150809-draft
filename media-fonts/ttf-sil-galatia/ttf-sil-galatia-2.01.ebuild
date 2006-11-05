@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-galatia/ttf-sil-galatia-2.01.ebuild,v 1.1 2006/11/05 00:03:27 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-galatia/ttf-sil-galatia-2.01.ebuild,v 1.2 2006/11/05 02:35:59 tester Exp $
 
 inherit font versionator
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://scripts.sil.org/SILgrkuni"
 SRC_URI="mirror://gentoo/${P}.tgz"
 LICENSE="SIL-freeware"
 SLOT="0"
-KEYWORDS="~ppc64"
+KEYWORDS="~amd64 ~ppc64"
 IUSE="X doc"
 
 DOCS="GalatiaTest.txt"
