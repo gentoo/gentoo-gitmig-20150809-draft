@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/wnn7sdk
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.2 2005/02/11 15:10:18 usata Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/ChangeLog,v 1.3 2006/11/05 16:36:07 usata Exp $
+
+  05 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> +files/wnn7sdk-gcc4.patch,
+  wnn7sdk-20011017.ebuild:
+  Fixed build error with gcc-4 and modular X dependencies. Thanks to Gilles
+  Dartiguelongue <dartigug@esiee.fr>. This closes bug #148961.
 
   12 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> wnn7sdk-20011017.ebuild:
   Marked as stable.

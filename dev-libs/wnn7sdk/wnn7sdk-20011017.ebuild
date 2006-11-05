@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/wnn7sdk-20011017.ebuild,v 1.2 2005/02/11 15:10:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wnn7sdk/wnn7sdk-20011017.ebuild,v 1.3 2006/11/05 16:36:07 usata Exp $
 
 inherit eutils
 
@@ -15,8 +15,11 @@ KEYWORDS="x86"
 IUSE=""
 
 # x11 is required for imake
-DEPEND="virtual/x11
-	virtual/libc"
+DEPEND="|| (
+			x11-misc/imake
+			virtual/x11
+	)"
+RDEPEND=""
 
 S="${WORKDIR}/src"
 
@@ -25,6 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-malloc.patch
 	epatch ${FILESDIR}/${PN}-gentoo.patch
+	epatch ${FILESDIR}/${PN}-gcc4.patch
 }
 
 src_compile() {
