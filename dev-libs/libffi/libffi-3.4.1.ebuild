@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.14 2006/08/14 16:51:18 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1.ebuild,v 1.15 2006/11/05 01:02:38 peper Exp $
 
 IUSE="nls nptl"
 SLOT="0"
@@ -220,14 +220,14 @@ src_install() {
 
 	# we want the headers...
 	mkdir -p ${D}/${LOC}/include/${PN}
-	mv ${D}/${LOC}/lib/gcc-lib/${CCHOST}/${PV}/include/* ${D}/${LOC}/include/${PN}
+	mv ${D}/${LOC}/$(get_libdir)/gcc-lib/${CCHOST}/${PV}/include/* ${D}/${LOC}/include/${PN}
 	mv ${D}/${LOC}/lib/gcc/${CCHOST}/${PV}/include/libffi/* ${D}/${LOC}/include/${PN}
 	# remove now useless directory...
-	rm -Rf ${D}/${LOC}/lib/gcc-lib/
+	rm -Rf ${D}/${LOC}/$(get_libdir)/gcc-lib/
 	rm -Rf ${D}/${LOC}/lib/gcc
 
 	mkdir -p ${D}/${LOC}/$(get_libdir)/${PN}/
-	mv ${D}/${LOC}/{lib,lib64}/* ${D}/${LOC}/$(get_libdir)/${PN}/
+	mv ${D}/${LOC}/$(get_libdir)/* ${D}/${LOC}/$(get_libdir)/${PN}/
 
 	mkdir -p ${D}/etc/env.d/
 	echo "LDPATH=\"${LOC}/$(get_libdir)/${PN}\"" >> ${D}/etc/env.d/99libffi
