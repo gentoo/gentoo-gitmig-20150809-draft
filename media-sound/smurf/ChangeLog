@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/smurf
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/ChangeLog,v 1.10 2006/02/15 13:35:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/ChangeLog,v 1.11 2006/11/05 20:54:26 aballier Exp $
+
+  05 Nov 2006; Alexis Ballier <aballier@gentoo.org>
+  +files/smurf-0.52.6-gcc4.patch, smurf-0.52.6.ebuild:
+  Gcc 4 patch wrt to bug #147793
 
   15 Feb 2006; Diego Pettenò <flameeyes@gentoo.org> smurf-0.52.6.ebuild:
   Fix gettext/libintl dependencies.

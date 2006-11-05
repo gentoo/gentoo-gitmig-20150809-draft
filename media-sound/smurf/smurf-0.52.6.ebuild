@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/smurf-0.52.6.ebuild,v 1.10 2006/02/15 13:35:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/smurf/smurf-0.52.6.ebuild,v 1.11 2006/11/05 20:54:26 aballier Exp $
+
+inherit eutils
 
 DESCRIPTION="The Smurf Sound Font Editor"
 HOMEPAGE="http://smurf.sourceforge.net/"
@@ -21,6 +23,7 @@ DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.5-r1 )"
 
 src_compile() {
+	epatch "${FILESDIR}/${P}-gcc4.patch"
 	local myconf="--with-audiofile"
 	use nls || myconf="${myconf} --disable-nls"
 	use debug || myconf="${myconf} --disable-debug"
