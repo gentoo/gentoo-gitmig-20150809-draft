@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.222 2006/11/03 15:04:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.223 2006/11/05 20:18:05 allanonjl Exp $
+
+  05 Nov 2006; John N. Laliberte <allanonjl@gentoo.org> -glib-2.6.5.ebuild:
+  remove older glib, fixes #153930
 
   03 Nov 2006; Fabian Groffen <grobian@gentoo.org> glib-1.2.10-r5.ebuild,
   glib-2.6.5.ebuild, glib-2.8.4.ebuild, glib-2.8.5.ebuild,
