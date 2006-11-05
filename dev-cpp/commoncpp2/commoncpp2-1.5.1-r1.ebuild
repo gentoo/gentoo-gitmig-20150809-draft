@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.5.1-r1.ebuild,v 1.4 2006/11/05 19:20:25 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.5.1-r1.ebuild,v 1.5 2006/11/05 22:49:57 lu_zero Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnu.org/software/commoncpp/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc examples ipv6 gnutls"
 
 RDEPEND="gnutls? ( dev-libs/libgcrypt
