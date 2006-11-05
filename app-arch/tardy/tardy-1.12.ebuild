@@ -1,6 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.12.ebuild,v 1.7 2006/01/12 19:35:33 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.12.ebuild,v 1.8 2006/11/05 07:34:52 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A tar post-processor"
 HOMEPAGE="http://tardy.sourceforge.net/"
@@ -15,6 +17,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i '/^CFLAGS/d' Makefile.in
+	epatch "${FILESDIR}"/${P}-sort.patch
+}
+
+src_test() {
+	make sure || die "test failed"
 }
 
 src_install() {
