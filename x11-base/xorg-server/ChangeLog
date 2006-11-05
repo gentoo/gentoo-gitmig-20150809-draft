@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.194 2006/11/04 23:54:49 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.195 2006/11/05 00:20:01 joshuabaergen Exp $
+
+  05 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.2.99.0-fix-sysconfdir-references.patch:
+  Add missing patch.
 
   04 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xorg-server-1.2.99.0.ebuild:
