@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.8 2004/06/24 23:36:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.9 2006/11/05 05:30:02 leio Exp $
 
 DESCRIPTION="Some nice themes for Nautilus"
 S=${WORKDIR}
@@ -21,11 +21,11 @@ SRC_URI="${THEME_URI}Nautilus-Blue-Ripped.tar.bz2
 HOMEPAGE="http://art.gnome.org/theme_list.php?category=nautilus"
 
 DEPEND=""
-RDEPEND="gnome-base/nautilus"
+RDEPEND="<gnome-base/nautilus-2"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 sparc ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 
 src_unpack() {
