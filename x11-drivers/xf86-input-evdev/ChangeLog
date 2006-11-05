@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.45 2006/11/02 23:35:43 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.46 2006/11/05 16:34:28 joshuabaergen Exp $
+
+*xf86-input-evdev-1.1.4-r1 (05 Nov 2006)
+
+  05 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
+  +files/1.1.4-fix_compatibility.patch, -xf86-input-evdev-1.1.4.ebuild,
+  +xf86-input-evdev-1.1.4-r1.ebuild:
+  Fix evdev compatibility with non-input-hotplug servers.  (Bug #154075, Marien
+  Zwart)
 
   02 Nov 2006; Joshua Baergen <joshuabaergen@gentoo.org>
   xf86-input-evdev-1.1.4.ebuild:
