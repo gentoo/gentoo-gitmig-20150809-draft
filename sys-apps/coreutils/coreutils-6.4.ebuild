@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.4.ebuild,v 1.5 2006/11/04 13:41:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-6.4.ebuild,v 1.6 2006/11/05 08:54:10 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils flag-o-matic toolchain-funcs autotools
 
 PATCH_VER="1.0"
@@ -17,6 +19,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="acl nls selinux static"
+RESTRICT="confcache"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl sys-apps/attr )
@@ -28,8 +31,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59d
 	>=sys-devel/m4-1.4-r1
 	sys-apps/help2man"
-
-RESTRICT="confcache"
 
 pkg_setup() {
 	# fixup expr for #123342
