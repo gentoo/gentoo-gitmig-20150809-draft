@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.0_beta3.ebuild,v 1.1 2006/10/31 18:15:05 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.0_beta3.ebuild,v 1.2 2006/11/05 01:04:32 deathwing00 Exp $
 
 inherit kde
 
@@ -17,13 +17,13 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nfs doc kdehiddenvisibility"
 
-DEPEND="=media-libs/libgphoto2-2.1.6*
+DEPEND=">=media-libs/libgphoto2-2
 	>=dev-db/sqlite-3
 	>=media-libs/libkipi-0.1.1
 	media-libs/tiff
 	sys-libs/gdbm
 	media-gfx/dcraw
-	media-gfx/exiv2
+	>=media-gfx/exiv2-0.11
 	media-libs/lcms"
 
 RDEPEND="${DEPEND}
