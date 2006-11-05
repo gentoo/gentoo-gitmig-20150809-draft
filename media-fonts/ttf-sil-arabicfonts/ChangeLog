@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/ttf-sil-arabicfonts
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-arabicfonts/ChangeLog,v 1.1 2006/11/05 00:06:31 joslwah Exp $
+
+*ttf-sil-arabicfonts-1.0 (04 Nov 2006)
+
+  04 Nov 2006; Joshua <joslwah@gentoo.org> +metadata.xml,
+  +ttf-sil-arabicfonts-1.0.ebuild:
+  Initial commit of SIL Arabic Fonts.
+
