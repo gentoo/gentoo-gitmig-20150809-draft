@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.3 2006/11/04 20:59:10 wltjr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.4 2006/11/05 00:49:50 wltjr Exp $
+
+  05 Nov 2006; William L. Thomson Jr. <wltjr@gentoo.org>
+  -flamerobin-0.7.5.ebuild:
+  Removed previous version with invalid atom
 
 *flamerobin-0.7.5-r1 (04 Nov 2006)
 
