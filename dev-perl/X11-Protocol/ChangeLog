@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X11-Protocol
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.36 2006/10/29 19:33:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.37 2006/11/05 03:37:38 ranger Exp $
+
+  05 Nov 2006; Brent Baude <ranger@gentoo.org> X11-Protocol-0.56.ebuild:
+  Marking X11-Protocol-0.56 ppc64 stable to support bug 152758 (fvwm)
 
   29 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   X11-Protocol-0.56.ebuild:
