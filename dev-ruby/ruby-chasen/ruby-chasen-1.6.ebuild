@@ -1,10 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ruby-chasen-1.6.ebuild,v 1.4 2005/04/24 10:16:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ruby-chasen-1.6.ebuild,v 1.5 2006/11/05 16:53:10 usata Exp $
 
 inherit ruby
 
-MY_P="${PN/ruby-}${PV}"
+MY_P="chasen${PV}"
 DESCRIPTION="ChaSen module for Ruby"
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=ruby-chasen"
 SRC_URI="http://www.itlb.te.noda.sut.ac.jp/~ikarashi/ruby/${MY_P}.tar.gz"
@@ -17,10 +17,6 @@ IUSE=""
 DEPEND="virtual/ruby
 	>=app-text/chasen-2.3.3-r2"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
-src_compile() {
-	econf -L/usr/lib
-	sed -i -e '/^LIBS/s/$/ -lstdc++/' Makefile || die
-	emake
-}
+RUBY_ECONF="${RUBY_ECONF} -L/usr/lib"
