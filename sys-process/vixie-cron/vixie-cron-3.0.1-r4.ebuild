@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-3.0.1-r4.ebuild,v 1.2 2006/01/28 18:53:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-3.0.1-r4.ebuild,v 1.3 2006/11/05 11:35:50 bangert Exp $
 
 inherit eutils
 
@@ -27,6 +27,9 @@ RDEPEND="!virtual/cron
 	 selinux? ( sys-libs/libselinux )"
 
 PROVIDE="virtual/cron"
+
+#vixie-cron supports /etc/crontab
+CRON_SYSTEM_CRONTAB="yes"
 
 src_unpack() {
 	unpack ${A}

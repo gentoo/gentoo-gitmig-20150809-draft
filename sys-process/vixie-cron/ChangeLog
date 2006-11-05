@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.38 2006/10/17 10:46:05 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.39 2006/11/05 11:35:50 bangert Exp $
+
+  05 Nov 2006; Thilo Bangert <bangert@gentoo.org>
+  vixie-cron-3.0.1-r4.ebuild, vixie-cron-3.0.1-r5.ebuild,
+  vixie-cron-4.1-r7.ebuild, vixie-cron-4.1-r8.ebuild,
+  vixie-cron-4.1-r9.ebuild:
+  add CRON_SYSTEM_CRONTAB="yes" - to support more generic eclass
+  see bug #89213
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org> vixie-cron-4.1-r9.ebuild:
   Added ~sparc-fbsd keyword.

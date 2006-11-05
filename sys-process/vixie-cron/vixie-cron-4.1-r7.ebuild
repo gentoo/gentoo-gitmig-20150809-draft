@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r7.ebuild,v 1.13 2005/06/28 05:12:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r7.ebuild,v 1.14 2006/11/05 11:35:50 bangert Exp $
 
 inherit cron toolchain-funcs debug pam
 
@@ -24,6 +24,9 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	 pam? ( sys-libs/pam )"
+
+#vixie-cron supports /etc/crontab
+CRON_SYSTEM_CRONTAB="yes"
 
 src_unpack() {
 	unpack ${A}
