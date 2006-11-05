@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.6 2006/10/29 22:23:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.4.2.ebuild,v 1.7 2006/11/05 21:59:07 aballier Exp $
 
 IUSE="alsa jack"
 
@@ -53,8 +53,12 @@ src_compile() {
 }
 
 src_install() {
-	make COPY_FILE="cp -fpr" \
-	     INSTALL_ROOT="${D}" install || die "make install failed"
+	insinto /usr/share/mixxx
+	doins -r skins midi keyboard
+
+	insopts -m0755
+	insinto /usr/bin
+	doins mixxx
 
 	dodoc ../README ../README.ALSA ../Mixxx-Manual.pdf
 }

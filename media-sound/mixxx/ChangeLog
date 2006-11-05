@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mixxx
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.32 2006/10/29 22:23:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/ChangeLog,v 1.33 2006/11/05 21:59:07 aballier Exp $
+
+  05 Nov 2006; Alexis Ballier <aballier@gentoo.org> mixxx-1.4.2.ebuild:
+  Manually installing files to prevent sandbox violation wrt bug #132390,
+  thanks to sam <noadresszesam@yahoo.fr> for the fix
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> mixxx-1.2.1.ebuild,
   mixxx-1.4.1.ebuild, mixxx-1.4.2.ebuild:
