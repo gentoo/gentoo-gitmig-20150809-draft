@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.7 2006/04/02 17:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/jumpnbump/jumpnbump-1.50-r1.ebuild,v 1.8 2006/11/05 00:45:53 nyhm Exp $
 
 inherit eutils games
 
@@ -12,19 +12,17 @@ SRC_URI="http://www.jumpbump.mine.nu/port/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
-IUSE="X tcltk svga fbcon kde"
+IUSE="X fbcon kde svga tk"
 
-DEPEND="X? (
-		|| (
-			x11-libs/libXext
-			virtual/x11 )
-		kde? ( || ( kde-base/kdialog kde-base/kdebase ) )
-	)
-	>=media-libs/sdl-mixer-1.2
-	>=media-libs/libsdl-1.2
-	>=media-libs/sdl-net-1.2"
+DEPEND="X? ( x11-libs/libXext )
+	kde? ( || (
+		kde-base/kdialog
+		kde-base/kdebase ) )
+	media-libs/sdl-mixer
+	media-libs/libsdl
+	media-libs/sdl-net"
 RDEPEND="${DEPEND}
-	tcltk? (
+	tk? (
 		dev-lang/tcl
 		dev-lang/tk )"
 
@@ -40,12 +38,12 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	# clean up a bit.  It leave a dep on Xdialog but ignore that.
 	use fbcon || rm -f "${D}${GAMES_BINDIR}/jumpnbump.fbcon"
 	use kde || rm -f "${D}${GAMES_BINDIR}/jumpnbump-kdialog"
 	use svga || rm -f "${D}${GAMES_BINDIR}/jumpnbump.svgalib"
-	use tcltk || rm -f "${D}${GAMES_BINDIR}/jnbmenu.tcl"
+	use tk || rm -f "${D}${GAMES_BINDIR}/jnbmenu.tcl"
 	newicon sdl/jumpnbump64.xpm ${PN}.xpm
 	make_desktop_entry jumpnbump "Jump n Bump" ${PN}.xpm
 	prepgamesdirs
