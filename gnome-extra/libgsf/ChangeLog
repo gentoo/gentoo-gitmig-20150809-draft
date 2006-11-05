@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.81 2006/10/14 17:11:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.82 2006/11/05 17:24:23 metalgod Exp $
+
+*libgsf-1.14.2 (05 Nov 2006)
+
+  05 Nov 2006; Luis Medinas <metalgod@gentoo.org> +libgsf-1.14.2.ebuild:
+  Version Bump. Drop libwmf dependency closes bug #150874.
 
   14 Oct 2006; Bryan Østergaard <kloeri@gentoo.org> libgsf-1.14.0.ebuild:
   Stable on ia64.
