@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbacpi
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbacpi/ChangeLog,v 1.6 2006/04/10 19:23:19 smithj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbacpi/ChangeLog,v 1.7 2006/11/05 21:54:11 dirtyepic Exp $
+
+  05 Nov 2006; <dirtyepic@gentoo.org> +files/bbacpi-0.1.5-noextraquals.diff,
+  bbacpi-0.1.5.ebuild:
+  Fix gcc 4.1 build error.  Thanks to William Keaney in bug #141032.
 
   10 Apr 2006; <smithj@gentoo.org> -bbacpi-0.1.3.ebuild,
   bbacpi-0.1.5.ebuild:
