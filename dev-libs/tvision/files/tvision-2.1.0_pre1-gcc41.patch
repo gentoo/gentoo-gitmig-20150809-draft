@@ -1,6 +1,5 @@
-diff -ur tvision.orig/include/compatlayer.h tvision/include/compatlayer.h
---- tvision.orig/include/compatlayer.h	2006-08-28 15:21:46.000000000 +0200
-+++ tvision/include/compatlayer.h	2006-08-28 15:22:06.000000000 +0200
+--- tvision/include/compatlayer.h
++++ tvision/include/compatlayer.h
 @@ -812,10 +812,6 @@
     #define _GNU_SOURCE
     #define CLY_getline getline
@@ -12,9 +11,8 @@ diff -ur tvision.orig/include/compatlayer.h tvision/include/compatlayer.h
   #endif
  
   /* Solaris using gcc but not glibc */
-diff -ur tvision.orig/include/tv/inputln.h tvision/include/tv/inputln.h
---- tvision.orig/include/tv/inputln.h	2006-08-28 15:21:46.000000000 +0200
-+++ tvision/include/tv/inputln.h	2006-08-28 15:23:07.000000000 +0200
+--- tvision/include/tv/inputln.h
++++ tvision/include/tv/inputln.h
 @@ -201,7 +201,7 @@
       { return name; }
  
@@ -24,3 +22,21 @@ diff -ur tvision.orig/include/tv/inputln.h tvision/include/tv/inputln.h
     TInputLineBaseT<char,TDrawBuffer>(streamableInit) {}
  
  public:
+--- tvision/classes/tinputli.cc
++++ tvision/classes/tinputli.cc
+@@ -75,9 +75,6 @@
+  modeOptions=defaultModeOptions;
+ }
+ 
+-template class TInputLineBaseT<char,TDrawBuffer>;
+-template class TInputLineBaseT<uint16,TDrawBufferU16>;
+-
+ template <typename T, typename D>
+ TInputLineBaseT<T,D>::TInputLineBaseT(const TRect& bounds, int aMaxLen, TValidator *aValid) :
+   TInputLineBase(bounds,aMaxLen,aValid)
+@@ -656,3 +653,5 @@
+  return True;
+ }
+ 
++template class TInputLineBaseT<char,TDrawBuffer>;
++template class TInputLineBaseT<uint16,TDrawBufferU16>;
