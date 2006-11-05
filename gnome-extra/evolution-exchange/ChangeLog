@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.21 2006/10/13 20:04:08 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.22 2006/11/05 18:19:17 opfer Exp $
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  evolution-exchange-2.6.2-r1.ebuild:
+  stabled x86, bug #153698
 
 *evolution-exchange-2.8.1 (13 Oct 2006)
 
