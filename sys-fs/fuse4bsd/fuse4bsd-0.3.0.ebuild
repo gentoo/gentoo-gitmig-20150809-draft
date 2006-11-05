@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.2 2006/05/23 16:55:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse4bsd/fuse4bsd-0.3.0.ebuild,v 1.3 2006/11/05 13:49:20 drizzt Exp $
 
-inherit portability toolchain-funcs
+inherit portability toolchain-funcs eutils
 
 DESCRIPTION="Fuse for FreeBSD"
 HOMEPAGE="http://fuse4bsd.creo.hu/"
@@ -25,6 +25,8 @@ src_unpack() {
 	cd "${S}"
 	cp "${ROOT}/usr/include/fuse/fuse_kernel.h" fuse_module/
 	cp "${WORKDIR}/sbin/mount/getmntopts.c" mount_fusefs/
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-ports.patch
 }
 
 src_compile() {
