@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.62 2006/11/04 22:02:37 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.63 2006/11/05 03:39:16 dang Exp $
+
+  05 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> -liferea-1.1.9.ebuild,
+  liferea-1.1.9-r1.ebuild:
+  Bump to 1.1.9-r1
+  	- Fix message selection bug
 
   04 Nov 2006; Daniel Gryniewicz <dang@gentoo.org> liferea-1.0.22-r1.ebuild,
   liferea-1.0.23.ebuild, liferea-1.0.24.ebuild, -liferea-1.1.6.ebuild,
