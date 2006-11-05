@@ -1,0 +1,21 @@
+# ChangeLog for x11-libs/agg
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/agg/ChangeLog,v 1.1 2006/11/05 20:34:59 genstef Exp $
+
+*agg-2.5 (05 Nov 2006)
+
+  05 Nov 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +agg-2.5.ebuild:
+  New ebuild: Version bump from science overlay and bug 91120 because it will
+  optionally be used by new net-www/gnash
+
+*agg-2.4 (01 Jun 2006)
+
+  01 Jun 2006; Sebastien Fabbro <seb@ist.utl.pt> +agg-2.4.ebuild:
+  Version bump, fixes to adapt new build style, fix for X modular.
+	
+*agg-2.3 (21 Apr 2006)
+
+  21 Apr 2006; Sebastien Fabbro <seb@ist.utl.pt> +agg-2.3.ebuild,
+  +metadata.xml: Initial import. Closes bug #91120. Thanks
+  Hanno Meyer-Thurow <h.mth@web.de>, and everyone in the bug.
