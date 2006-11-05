@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.2.18-r1.ebuild,v 1.4 2006/10/31 10:16:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.2.18-r1.ebuild,v 1.5 2006/11/05 18:51:24 dang Exp $
 
 inherit eutils toolchain-funcs flag-o-matic fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 ~sparc x86"
 IUSE="bzip2 cups jpeg opengl png threads tiff truetype zlib"
 
 RDEPEND="x11-libs/libXrandr
