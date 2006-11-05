@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-3.sh,v 1.2 2006/11/05 08:22:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-3.sh,v 1.3 2006/11/05 10:22:00 vapier Exp $
 
 # Based on the am-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -88,12 +88,16 @@ if [ -n "${WANT_AUTOMAKE}" ] ; then
 			if [ "${wx}" = "${v}" ] ; then
 				binary="binary_${v/./_}"
 				binary="${!binary}"
-				break
+				v="x"
 			fi
 		done
+		[ "${v}" = "x" ] && break
 	done
 fi
 
+#
+# autodetect helpers
+#
 do_awk() {
 	local file=$1 ; shift
 	local arg=$1 ; shift
