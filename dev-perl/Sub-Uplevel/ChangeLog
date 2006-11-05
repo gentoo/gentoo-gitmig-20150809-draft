@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Uplevel
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.30 2006/10/21 14:31:40 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.31 2006/11/05 17:17:41 opfer Exp $
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  Sub-Uplevel-0.13.ebuild:
+  stabled x86, bug #153488
 
   21 Oct 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   Sub-Uplevel-0.13.ebuild:
