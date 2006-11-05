@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.35 2006/10/05 15:09:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.36 2006/11/05 22:01:52 betelgeuse Exp $
+
+  05 Nov 2006; Petteri Räty <betelgeuse@gentoo.org> batik-1.6-r1.ebuild:
+  Added missing dependency on dev-java/jython.
 
   05 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> batik-1.5.ebuild,
   batik-1.5-r1.ebuild, batik-1.5.1-r4.ebuild, batik-1.5.1-r5.ebuild,

@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r1.ebuild,v 1.2 2006/10/05 15:09:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r1.ebuild,v 1.3 2006/11/05 22:01:52 betelgeuse Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
-DESCRIPTION="Java based toolkit for applications or applets that want to use images in the Scalable Vector Graphics (SVG) format for various purposes, such as viewing, generation or manipulation."
+DESCRIPTION="Java based SVG toolkit"
 HOMEPAGE="http://xml.apache.org/batik/"
 SRC_URI="mirror://apache/xml/batik/${PN}-src-${PV}.zip"
 
@@ -15,7 +15,8 @@ IUSE="doc"
 
 CDEPEND="=dev-java/rhino-1.5*
 	>=dev-java/xerces-2.7.1
-	=dev-java/xml-commons-external-1.3*"
+	=dev-java/xml-commons-external-1.3*
+	dev-java/jython"
 DEPEND="=virtual/jdk-1.4*
 	dev-java/ant-core
 	app-arch/unzip
@@ -37,6 +38,7 @@ src_unpack() {
 	java-pkg_jar-from xml-commons-external-1.3
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from rhino-1.5
+	java-pkg_jar-from jython
 }
 
 src_compile() {
