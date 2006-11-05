@@ -3,7 +3,11 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>ka0ttic@gentoo.org</email>
-	<name>Aaron Walker</name>
+	<email>masterdriverz@gmail.com</email>
+	<name>Charlie Shepherd</name>
+</maintainer>
+<maintainer>
+    <email>genstef@gentoo.org</email>
+    <name>Stefan Schweizer</name>
 </maintainer>
 </pkgmetadata>
