@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11-r1.ebuild,v 1.1 2006/08/01 19:34:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11-r1.ebuild,v 1.2 2006/11/05 09:52:38 dertobi123 Exp $
 
 inherit gnome.org libtool eutils
 
@@ -18,7 +18,7 @@ IUSE="ssl doc"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~hppa ppc ~sparc ~x86"
 
 src_unpack() {
 
