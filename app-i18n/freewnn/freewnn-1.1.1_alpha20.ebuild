@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20.ebuild,v 1.12 2006/02/10 18:58:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha20.ebuild,v 1.13 2006/11/05 16:12:47 usata Exp $
 
 MY_P="FreeWnn-${PV/_alpha/-a0}"
 
@@ -36,7 +36,7 @@ src_compile() {
 		`use_with X x` \
 		`use_with ipv6` || die "./configure failed"
 
-	emake || die
+	emake -j1 || die
 	#make || die
 }
 
