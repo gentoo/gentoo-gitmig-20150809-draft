@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.2 2006/10/17 14:21:36 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.1.ebuild,v 1.3 2006/11/05 09:15:27 vapier Exp $
 
 inherit eutils libtool toolchain-funcs flag-o-matic autotools pam
 
@@ -16,6 +16,7 @@ IUSE="nls pam selinux skey nousuid cracklib"
 RDEPEND="cracklib? ( >=sys-libs/cracklib-2.7-r3 )
 	pam? ( virtual/pam )
 	!sys-apps/pam-login
+	!app-admin/nologin
 	skey? ( app-admin/skey )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	nls? ( virtual/libintl )"
