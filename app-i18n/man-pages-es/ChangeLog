@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-es
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.6 2006/04/30 12:57:54 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-es/ChangeLog,v 1.7 2006/11/05 20:17:03 ferdy Exp $
+
+  05 Nov 2006; Fernando J. Pereda <ferdy@gentoo.org>
+  man-pages-es-1.55-r1.ebuild:
+  Remove man-pages provided by other packages, fix for bug #154140. Spotted by
+  Jesus de Santos Garcia <icg_ent@bigfoot.com>
 
   30 Apr 2006; Fernando J. Pereda <ferdy@gentoo.org>
   -man-pages-es-1.55.ebuild, man-pages-es-1.55-r1.ebuild:
