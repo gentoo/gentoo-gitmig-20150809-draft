@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.36 2006/11/02 00:15:26 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.37 2006/11/05 01:03:18 opfer Exp $
+
+  05 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  java-access-bridge-1.6.0.ebuild:
+  stabled x86, bug #153762
 
   01 Nov 2006; Leonardo Boshell <leonardop@gentoo.org>
   java-access-bridge-1.6.0.ebuild:
