@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-abyssinica/ttf-sil-abyssinica-1.0.ebuild,v 1.2 2006/11/05 02:31:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-abyssinica/ttf-sil-abyssinica-1.0.ebuild,v 1.3 2006/11/05 10:35:32 nixnut Exp $
 
 inherit font versionator
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://scripts.sil.org/AbyssinicaSIL"
 SRC_URI="mirror://gentoo/${P}.tgz"
 LICENSE="OFL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE="X doc"
 
 DOCS="FONTLOG.txt OFL.txt OFL-FAQ.txt README.txt"
