@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-4.sh,v 1.1 2006/11/05 08:44:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-4.sh,v 1.2 2006/11/05 10:24:37 vapier Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -35,10 +35,7 @@ vers="2.60:2.5 2.59:2.5 2.13:2.1"
 
 binary=""
 for v in ${vers} ; do
-	auto_ver=${v%:*} # aka 2.60
-	want_ver=${v#*:} # aka 2.5
-	eval binary_${want_ver/./_}="${0}-${auto_ver}"
-
+	auto_ver=${v%:*}
 	if [ -z "${binary}" ] && [ -x "${0}-${auto_ver}" ] ; then
 		binary="${0}-${auto_ver}"
 	fi
@@ -62,14 +59,15 @@ if [ -n "${WANT_AUTOCONF}" ] ; then
 			break
 		fi
 
+		auto_ver=${v%:*}
 		want_ver=${v#*:}
 		for wx in ${WANT_AUTOCONF} ; do
-			if [ "${wx}" = "${want_ver}" ] ; then
-				binary="binary_${want_ver/./_}"
-				binary="${!binary}"
-				break
+			if [ "${wx}" = "${want_ver}" ] && [ -x "${0}-${auto_ver}" ] ; then
+				binary="${0}-${auto_ver}"
+				v="x"
 			fi
 		done
+		[ "${v}" = "x" ] && break
 	done
 fi
 
@@ -125,7 +123,7 @@ if [[ ${WANT_AUTOCONF} != "2.5" ]] && [[ -n ${WANT_AUTOMAKE} ]] ; then
 			&& confversion=$(generated_version configure)
 
 		if [[ ${confversion} == "2.1" && ! -f "configure.ac" ]] ; then
-			binary="${binary_2_1}"
+			binary="${0}-2.13"
 		fi
 	esac
 fi
@@ -141,9 +139,9 @@ fi
 # for further consistency
 #
 for v in ${vers} ; do
+	auto_ver=${v%:*}
 	want_ver=${v#*:}
-	mybin="binary_${want_ver/./_}"
-	if [ "${binary}" = "${!mybin}" ] ; then
+	if [ "${binary}" = "${0}-${auto_ver}" ] ; then
 		export WANT_AUTOMAKE="${want_ver}"
 	fi
 done
