@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/libzrtpcpp-0.9.0.ebuild,v 1.4 2006/11/05 21:53:45 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/libzrtpcpp-0.9.0.ebuild,v 1.5 2006/11/05 22:45:48 drizzt Exp $
 
 DESCRIPTION="GNU RTP stack for the zrtp protocol specification developed by Phil Zimmermen"
 HOMEPAGE="http://www.gnu.org/software/ccrtp/"
@@ -11,6 +11,7 @@ IUSE=""
 SLOT="0"
 
 RDEPEND=">=net-libs/ccrtp-1.5.0
+	>=dev-cpp/commoncpp2-1.5.1
 	|| ( dev-libs/libgcrypt
 		>=dev-libs/openssl-0.9.8 )"
 DEPEND="${RDEPEND}
@@ -20,4 +21,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc README AUTHORS
 }
-
