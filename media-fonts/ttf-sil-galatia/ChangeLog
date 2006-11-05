@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ttf-sil-galatia
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-galatia/ChangeLog,v 1.3 2006/11/05 10:51:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-sil-galatia/ChangeLog,v 1.4 2006/11/05 14:02:29 fmccor Exp $
+
+  05 Nov 2006; Ferris McCormick <fmccor@gentoo.org>
+  ttf-sil-galatia-2.01.ebuild:
+  Add ~sparc keyword --- Bug #154088
 
   05 Nov 2006; nixnut <nixnut@gentoo.org> ttf-sil-galatia-2.01.ebuild:
   Added ~ppc keyword wrt bug 154088
