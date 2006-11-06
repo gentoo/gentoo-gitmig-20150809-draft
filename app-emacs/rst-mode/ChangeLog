@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/rst-mode
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst-mode/ChangeLog,v 1.1 2005/07/11 05:55:14 mkennedy Exp $
+# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rst-mode/ChangeLog,v 1.2 2006/11/06 06:37:51 mkennedy Exp $
+
+*rst-mode-0.2.9 (06 Nov 2006)
+
+  06 Nov 2006; Matthew Kennedy <mkennedy@gentoo.org> +rst-mode-0.2.9.ebuild:
+  New upstream version.
 
 *rst-mode-0.2.6 (11 Jul 2005)
 
