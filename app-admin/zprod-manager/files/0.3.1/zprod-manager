@@ -2,9 +2,9 @@
 # Gentoo Zope Product selection tool.
 # Copyright 2003 Jason Shoemaker <kutsuya@gentoo.org>
 # Distributed under GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/files/0.2/zprod-manager,v 1.2 2006/11/06 05:28:09 aross Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zprod-manager/files/0.3.1/zprod-manager,v 1.1 2006/11/06 05:28:09 aross Exp $
 
-VERSION="0.2"
+VERSION="0.3.1"
 COMMAND_LIST="add del"
 ZS_DIR="/usr/share/zope/"
 ZI_DIR="/var/lib/zope/"
@@ -28,6 +28,7 @@ E_FAILURE=1
 E_ZPLIST=20
 E_ZILIST=22
 E_COMMAND=24
+E_OVERWRITE=26
 
 ## copied from zope-config
 
@@ -121,6 +122,9 @@ mode_interactive()
 		CTAGS=$(echo "${CTAGS}" | sed -e "s:\"::g")
 		if [[ ${RESULT} -eq 0 && "${CTAGS}" ]] ; then 
 		    for N in ${CTAGS} ; do
+                        # as this is empty Products directory in instance if-case, we can safely ignore
+                        # RESULT returned from prod_add in case of overwrite error. It can not happen
+                        # when ZI_PLIST is empty, right? ;) <radek@gentoo.org>
 			prod_add ${ZPROD_DIR}/${N} ${ZINST_DIR}
 		    done
 		fi
@@ -198,13 +202,26 @@ zinst_default_get()
 #    $1 = /path/to/zproduct
 #    $2 = /path/to/zinstance
 
+# be warned, using this function you have to immediately fail if functionss returns error.
+
 prod_add()
 {
     local RESULT=
     local  N=
 
+    # checks if some products components are already installed,
+    # if yes, we have to break with error, as overwrites are DANGEROUS!
+    for N in $(cat "${1}/${ZPROD_FLIST_FNAME}")
+    do
+        if [ -d ${2}/Products/${N} ]
+        then
+            echo "ZPROD-MANAGER WARNING: Overwrite possiblity detected at ${N}"
+            return ${E_OVERWRITE}
+        fi
+    done
+
     for N in $(cat "${1}/${ZPROD_FLIST_FNAME}") ; do
-#	ln -fs ${1}/${N} ${2}/Products
+        # we do copy instead of link, because its much safer, and zope-development-way compliant
 	cp -Ra ${1}/${N} ${2}/Products
     done
     RESULT=$?
@@ -310,13 +327,17 @@ mode_explicit()
 
 ### MAIN
 
-case "${#}" in
-    0) mode_help ;;
-    1) mode_interactive ${1} ;;
-    2) mode_defaultZinst ${1} ${2} ;;
-    3) mode_explicit ${1} ${2} ${3} ;;
-    *) mode_help "Error: Too many parameters" ;;
-esac
+if [ ${!#} = "--help" ] ; then
+    mode_help
+else
+    case "${#}" in
+        0) mode_help ;;
+        1) mode_interactive ${1} ;;
+        2) mode_defaultZinst ${1} ${2} ;;
+        3) mode_explicit ${1} ${2} ${3} ;;
+        *) mode_help "Error: Too many parameters" ;;
+    esac
+fi
 
 RESULT=$?
 
