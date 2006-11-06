@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.1 2006/11/02 19:01:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ace-5.5-r1.ebuild,v 1.2 2006/11/06 20:47:30 dragonheart Exp $
 
 inherit eutils
 
@@ -52,6 +52,8 @@ src_test() {
 src_install() {
 	cd build
 	make ACE_ROOT="${S}" DESTDIR="${D}" install || die "failed to install"
+	# punt gperf stuff
+	rm -rf "${D}"/usr/bin/gperf "${D}"/usr/share
 }
 
 
