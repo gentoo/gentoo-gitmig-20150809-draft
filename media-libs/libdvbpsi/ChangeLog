@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.26 2006/11/04 11:51:30 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.27 2006/11/06 12:20:10 opfer Exp $
+
+  06 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  libdvbpsi-0.1.5.ebuild:
+  stable x86, bug #153929
 
   04 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> libdvbpsi-0.1.5.ebuild:
   Marked stable on amd64.
