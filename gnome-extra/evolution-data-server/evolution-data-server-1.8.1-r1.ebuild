@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.1-r1.ebuild,v 1.1 2006/11/01 15:50:07 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.8.1-r1.ebuild,v 1.2 2006/11/06 00:48:35 allanonjl Exp $
 
+WANT_AUTOMAKE="1.9"
+WANT_AUTOCONF="latest"
 inherit eutils gnome2 autotools
 
 DESCRIPTION="Evolution groupware backend"
