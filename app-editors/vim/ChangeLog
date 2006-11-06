@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.248 2006/11/06 07:27:04 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.249 2006/11/06 08:05:34 pioto Exp $
 
   25 Oct 2006; Fabian Groffen <grobian@gentoo.org> vim-7.0.17.ebuild,
   vim-7.0.91.ebuild:
@@ -1061,3 +1061,4 @@ vim-6.1-r8.ebuild (06 Jul 2002)
   details about writing correct changelogs are explained in the
   skel.ChangeLog file which you can find in the root directory of the
   portage repository.
+

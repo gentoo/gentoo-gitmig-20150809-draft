@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.210 2006/11/06 07:27:04 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.211 2006/11/06 08:04:11 pioto Exp $
 
   25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> gvim-7.0.91.ebuild:
   Stable on sparc
@@ -879,4 +879,5 @@
 
   12 Sep 2002; Hannes Mehnert <hannes@gentoo.org> gvim-6.1.ebuild:
   splitted vim into gvim, vim-core and vim
+
 
