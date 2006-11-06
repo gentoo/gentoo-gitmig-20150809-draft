@@ -1,6 +1,15 @@
 # ChangeLog for net-www/vdradmin-am
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.3 2006/10/15 12:44:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/vdradmin-am/ChangeLog,v 1.4 2006/11/06 20:18:41 zzam Exp $
+
+*vdradmin-am-3.4.7-r1 (06 Nov 2006)
+
+  06 Nov 2006; Matthias Schwarzott <zzam@gentoo.org> +files/confd-2,
+  +files/vdradmin-2, +files/vdradmin-am-3.4.7_opera-search.diff,
+  +files/vdradmin-am-config-autoflush.diff, +vdradmin-am-3.4.7-r1.ebuild:
+  Copied revision from vdr-testing overlay. Contains patch for problem with
+  opera-browser. Init-script disables utf8 for non utf8-enabled vdr. Ebuild
+  now generates a good initial-configuration with correct pathes.
 
   15 Oct 2006; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdradmin-am-3.4.7.ebuild:

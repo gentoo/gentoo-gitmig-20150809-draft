@@ -1,0 +1,11 @@
+# Settings for vdradmin-am
+
+# Enable this when you know that your
+# vdr-binary does support utf8
+#
+#VDR_CAN_HANDLE_UTF8=yes
+
+
+# Run vdradmin-am as this user:
+#
+VDRADMIN_USER="vdradmin"
