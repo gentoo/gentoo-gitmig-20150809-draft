@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.2 2006/11/05 01:08:28 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.3 2006/11/06 00:53:24 opfer Exp $
+
+  06 Nov 2006; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
+  tools-portage herd added
 
   05 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> elogv-0.4.1.ebuild:
   Add ~amd64 wrt bug #154026.
