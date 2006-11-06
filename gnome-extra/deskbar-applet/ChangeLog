@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.27 2006/10/20 19:10:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.28 2006/11/06 10:35:04 metalgod Exp $
+
+*deskbar-applet-2.16.1 (06 Nov 2006)
+
+  06 Nov 2006; Luis Medinas <metalgod@gentoo.org>
+  +files/deskbar-applet-2.16-fix_encoding.patch,
+  +deskbar-applet-2.16.1.ebuild:
+  Version Bump. Added a patch from John N. Laliberte <allanonjl@gentoo.org> to
+  fix crash with python 2.5. Fixes bug #148545.
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   deskbar-applet-2.14.2.ebuild:
