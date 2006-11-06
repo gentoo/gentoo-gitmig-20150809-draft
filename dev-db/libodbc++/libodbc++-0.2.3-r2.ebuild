@@ -1,10 +1,10 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.3 2006/11/05 20:17:28 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.3-r2.ebuild,v 1.4 2006/11/06 01:17:40 opfer Exp $
 
 inherit eutils
 
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc x86"
 
 DESCRIPTION="Libodbc++ is a c++ class library that provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC."
 SRC_URI="mirror://sourceforge/libodbcxx/${P}.tar.gz"
