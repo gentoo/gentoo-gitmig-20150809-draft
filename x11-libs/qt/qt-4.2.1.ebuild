@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.9 2006/11/06 14:03:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.10 2006/11/06 21:43:15 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -64,7 +64,7 @@ pkg_setup() {
 
 	# If the user current has qt4 bindings for dbus, we can't let them upgrade since they aren't
 	# yet supported for Qt4.2
-	if [ ! -z $(best version =sys-apps/dbus-0.62*) ]; then
+	if [ ! -z $(best_version =sys-apps/dbus-0.62*) ]; then
 		if built_with_use =sys-apps/dbus-0.62* qt4; then
 			eerror "You currently have dbus-0.62 installed with Qt4 bindings support."  
 			eerror
