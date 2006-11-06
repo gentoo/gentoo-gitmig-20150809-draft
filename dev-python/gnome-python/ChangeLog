@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.74 2006/10/20 18:23:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.75 2006/11/06 12:19:54 leio Exp $
+
+*gnome-python-2.16.2 (06 Nov 2006)
+
+  06 Nov 2006; Mart Raudsepp <leio@gentoo.org> +gnome-python-2.16.2.ebuild:
+  Version bump - includes python2.5 compatibility
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org>
   gnome-python-2.12.4.ebuild:
