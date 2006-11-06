@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.51 2006/10/17 11:32:50 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.52 2006/11/06 22:38:14 flameeyes Exp $
+
+*pkgconfig-0.21-r1 (06 Nov 2006)
+
+  06 Nov 2006; Diego Pettenò <flameeyes@gentoo.org>
+  +pkgconfig-0.21-r1.ebuild:
+  Revision bump: enable indirect dependencies for FreeBSD as it's needed
+  because of the way pthreads are linked there.
 
   17 Oct 2006; Roy Marples <uberlord@gentoo.org> pkgconfig-0.21.ebuild:
   Added ~sparc-fbsd keyword.
