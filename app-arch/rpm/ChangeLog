@@ -1,13 +1,17 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.76 2006/11/06 20:58:28 sanchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.77 2006/11/06 21:11:24 sanchan Exp $
 
-  06 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org>
-  +files/rpm-4.4.6-buffer-overflow.patch, metadata.xml, rpm-4.4.6-r2.ebuild,
-  rpm-4.4.7.ebuild:
+*rpm-4.4.7-r1 (06 Nov 2006)
+*rpm-4.4.6-r3 (06 Nov 2006)
+
+  06 Nov 2006; Sandro Bonazzola <sanchan@gentoo.org> -rpm-4.4.6-r2.ebuild,
+  +rpm-4.4.6-r3.ebuild, -rpm-4.4.7.ebuild, +rpm-4.4.7-r1.ebuild,
+  +files/rpm-4.4.6-buffer-overflow.patch, metadata.xml:
   Security fix from upstream, patch from
   https://bugzilla.redhat.com/bugzilla/attachment.cgi?id=139715. Should fix
   bug #154218.
+  Re-taking over maintainership.
 
   26 Oct 2006; Peter Volkov <pva@gentoo.org> metadata.xml:
   herd tag in metadata.xml is required. Returning it back.
