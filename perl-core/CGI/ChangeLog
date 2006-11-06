@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/CGI
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.32 2006/10/25 01:53:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.33 2006/11/06 17:04:21 mcummings Exp $
+
+*CGI-3.25 (06 Nov 2006)
+
+  06 Nov 2006; Michael Cummings <mcummings@gentoo.org> +CGI-3.25.ebuild:
+  Version bump
 
   25 Oct 2006; Michael Cummings <mcummings@gentoo.org> -CGI-3.10.ebuild:
   Cleaning out stale ebuild
