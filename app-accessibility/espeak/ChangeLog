@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.1 2006/10/29 22:37:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.2 2006/11/06 16:50:27 peper Exp $
+
+  06 Nov 2006; Piotr Jaroszyński <peper@gentoo.org> espeak-1.16.ebuild:
+  Add ~amd64 wrt bug #154245.
 
 *espeak-1.16 (29 Oct 2006)
 
