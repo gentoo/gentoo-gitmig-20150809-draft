@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.10 2006/11/03 19:12:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-2.0.4.ebuild,v 1.11 2006/11/06 08:30:35 suka Exp $
 
 inherit check-reqs debug eutils fdo-mime flag-o-matic java-pkg-opt-2 kde-functions multilib toolchain-funcs
 
 IUSE="binfilter branding cairo cups dbus eds firefox gnome gstreamer gtk kde ldap sound odk pam webdav"
 
-MY_PV="${PV}.1"
+MY_PV="${PV}.2"
 PATCHLEVEL="OOD680"
 SRC="OOO_2_0_4"
 S="${WORKDIR}/ooo"
@@ -175,8 +175,6 @@ src_unpack() {
 
 	#Some fixes for our patchset
 	cd ${S}
-	cp -a ${FILESDIR}/${PV}/libgcc3_uno_noexecstack.diff ${S}/patches/src680 || die
-	cp -a ${FILESDIR}/${PV}/pyuno-objects-allocation.diff ${S}/patches/src680 || die
 	epatch ${FILESDIR}/${PV}/gentoo-${PV}.diff
 
 	#Use flag checks

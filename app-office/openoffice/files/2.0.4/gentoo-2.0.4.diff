@@ -20,27 +20,3 @@
  # And here we go.
  exec "$SystemInstallDir/program/$Binary", @ooo_argv
  
---- patches/src680/apply 
-+++ patches/src680/apply 
-@@ -243,6 +243,12 @@
- wizards-crasher-fix.diff, i#68079, michael
- # update pyuno docs from www.oo.o
- pyuno-update-docs.diff, i#63846, michael
-+# replace PyMem_DEL() with PyObject_Del() on object dealloc functions to free
-+# objects the right way (regcomp segfaulted on openSUSE-10.2)
-+# replace PyObject_NEW with PyObject_New because the macro version most
-+# probably does not preserve binary compatibility across Python versions
-+# and is therefore deprecated in extension modules.
-+pyuno-objects-allocation.diff, i#71078, pmladek
- # disable font management dialog in padmin
- padmin-nofontconfig.diff, michael
- # Improve the web bullet export / export to png not gif.
-@@ -1069,6 +1069,8 @@
- 64bit-jdk-server-paths.diff, i#65974, hmth
- # use IBM j9vm over IBM classic JVM
- ibm-j9vm.diff, hmth
-+# Fix for some execstacks in libgcc3_uno.so, i#70845, aprosky
-+libgcc3_uno_noexecstack.diff
- 
- [ DebianBaseOnly ]
- SectionOwner => rengelha
