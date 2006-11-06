@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/autoalign
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.21 2006/11/06 07:27:05 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/ChangeLog,v 1.22 2006/11/06 07:54:41 pioto Exp $
 
   19 Sep 2006; Mike Kelly <pioto@gentoo.org> autoalign-4.ebuild,
   autoalign-5.ebuild, autoalign-6.ebuild, autoalign-8.ebuild:
@@ -71,4 +71,5 @@
 
   21 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> +autoalign-3.ebuild:
   New package.
+
 
