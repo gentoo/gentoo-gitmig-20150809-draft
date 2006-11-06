@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-LongString
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.13 2006/09/16 21:37:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LongString/ChangeLog,v 1.14 2006/11/06 16:53:26 mcummings Exp $
+
+*Test-LongString-0.10 (06 Nov 2006)
+
+  06 Nov 2006; Michael Cummings <mcummings@gentoo.org>
+  Test-LongString-0.07.ebuild, Test-LongString-0.09.ebuild,
+  +Test-LongString-0.10.ebuild:
+  New dep for Test-Class - requires newer version than shipped with perl
 
   16 Sep 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   Test-LongString-0.09.ebuild:
