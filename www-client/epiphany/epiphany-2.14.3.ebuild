@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.3.ebuild,v 1.2 2006/08/16 01:40:33 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.14.3.ebuild,v 1.3 2006/11/06 20:26:36 dang Exp $
 
 inherit eutils gnome2 multilib autotools
 
@@ -33,13 +33,13 @@ RDEPEND=">=dev-libs/glib-2.8
 	>=gnome-base/orbit-2
 	>=gnome-base/gconf-2
 	>=app-text/iso-codes-0.35
-	sparc? ( >=www-client/mozilla-firefox-1.0.5 )
-	ia64? ( >=www-client/mozilla-firefox-1.0.5 )
+	sparc? ( =www-client/mozilla-firefox-1* )
+	ia64? ( =www-client/mozilla-firefox-1* )
 	ppc64? ( www-client/seamonkey )
 	!sparc? ( !ia64? (
 		!firefox? ( www-client/seamonkey )
 		) )
-	firefox? ( >=www-client/mozilla-firefox-1.0.5 )
+	firefox? ( =www-client/mozilla-firefox-1* )
 	>=sys-apps/dbus-0.35
 	python? (
 		>=dev-lang/python-2.3

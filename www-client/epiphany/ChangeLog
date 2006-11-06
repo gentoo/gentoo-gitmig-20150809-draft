@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.88 2006/10/25 15:58:03 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.89 2006/11/06 20:26:36 dang Exp $
+
+  06 Nov 2006; Daniel Gryniewicz <dang@gentoo.org>
+  epiphany-2.14.2.1-r1.ebuild, epiphany-2.14.3.ebuild:
+  Make 2.14.x dep on firefox 1.x only; bug #154163
 
   25 Oct 2006; Mart Raudsepp <leio@gentoo.org> -epiphany-1.8.4.1.ebuild:
   Remove old revision that depends on old mozilla suite
