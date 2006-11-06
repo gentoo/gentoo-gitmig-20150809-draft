@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xetex
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.11 2006/11/06 00:59:18 joslwah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/ChangeLog,v 1.12 2006/11/06 13:47:48 fmccor Exp $
+
+  06 Nov 2006; Ferris McCormick <fmccor@gentoo.org> xetex-0.995.ebuild:
+  Add ~amd64 keyword --- Bug #153132 --- xetex and xelatex are working very well
+  for me on amd64 (with utf-8 fonts).
 
   06 Nov 2006; Joshua <joslwah@gentoo.org> xetex-0.995.ebuild:
   Fix possible installation bug for amd64.
