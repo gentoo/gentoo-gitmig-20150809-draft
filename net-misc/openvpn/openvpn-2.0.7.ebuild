@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7.ebuild,v 1.3 2006/10/17 14:55:03 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.7.ebuild,v 1.4 2006/11/06 09:52:22 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -22,6 +22,16 @@ RDEPEND=">=dev-libs/lzo-1.07
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 DEPEND="${RDEPEND}
 	virtual/os-headers"
+
+pkg_setup() {
+	if use iproute2 ; then
+		if built_with_use sys-apps/iproute2 minimal ; then
+			eerror "iproute2 support requires that sys-apps/iproute2 was not"
+			eerror "built with the minimal USE flag"
+			die "iproute2 support not available"
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack "${A}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc1.ebuild,v 1.1 2006/11/02 11:09:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc1.ebuild,v 1.2 2006/11/06 09:52:22 uberlord Exp $
 
 inherit eutils gnuconfig multilib
 
@@ -20,6 +20,16 @@ DEPEND=">=dev-libs/lzo-1.07
 	!minimal? ( pam? ( virtual/pam ) )
 	selinux? ( sec-policy/selinux-openvpn )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
+
+pkg_setup() {
+	if use iproute2 ; then
+		if built_with_use sys-apps/iproute2 minimal ; then
+			eerror "iproute2 support requires that sys-apps/iproute2 was not"
+			eerror "built with the minimal USE flag"
+			die "iproute2 support not available"
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -140,5 +150,12 @@ pkg_postinst() {
 	if ! use minimal ; then
 		einfo ""
 		einfo "plugins have been installed into /usr/$(get_libdir)/${PN}"
+	fi
+
+	if use userland_BSD ; then
+		ewarn ""
+		ewarn "If you run any kind of firewall on BSD and use IPv6 acrosss"
+		ewarn "OpenVPN then you'll probably have to lower the MTU to 1420"
+		ewarn "using the tun-mtu statement (even for tap devices)"
 	fi
 }
