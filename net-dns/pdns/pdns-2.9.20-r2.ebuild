@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r2.ebuild,v 1.1 2006/10/15 01:21:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.20-r2.ebuild,v 1.2 2006/11/06 20:15:50 swegener Exp $
 
 inherit multilib eutils autotools
 
@@ -10,12 +10,13 @@ HOMEPAGE="http://www.powerdns.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc ldap mysql postgres sqlite static tdb"
+IUSE="debug doc ldap mysql postgres sqlite static tdb opendbx"
 
 DEPEND="mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )
 	sqlite? ( =dev-db/sqlite-2.8* )
+	opendbx? ( dev-db/opendbx )
 	tdb? ( dev-libs/tdb )
 	>=dev-libs/boost-1.31"
 
@@ -40,6 +41,7 @@ src_compile() {
 	use mysql && modules="${modules} gmysql"
 	use postgres && modules="${modules} gpgsql"
 	use sqlite && modules="${modules} gsqlite"
+	use opendbx && modules="${modules} opendbx"
 	use ldap && modules="${modules} ldap"
 	use tdb && modules="${modules} xdb"
 	use debug && myconf="${myconf} --enable-verbose-logging"
@@ -71,10 +73,13 @@ src_install () {
 	mv "${D}"/etc/powerdns/pdns.conf{-dist,}
 
 	# set defaults: setuid=pdns, setgid=pdns
-	sed -i -e 's/^# set\([ug]\)id=$/set\1id=pdns/g' \
+	sed -i \
+		-e 's/^# set\([ug]\)id=$/set\1id=pdns/g' \
 		"${D}"/etc/powerdns/pdns.conf
 
 	doinitd "${FILESDIR}"/pdns
+
+	keepdir /var/emtpy
 
 	dodoc ChangeLog README TODO
 	use doc && dohtml -r codedocs/html/.
