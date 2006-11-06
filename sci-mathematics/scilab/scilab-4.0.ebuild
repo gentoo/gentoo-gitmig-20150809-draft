@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.6 2006/09/17 01:50:25 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.0.ebuild,v 1.7 2006/11/06 03:57:08 markusle Exp $
 
-inherit eutils fortran toolchain-funcs multilib autotools
+inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 LICENSE="scilab"
@@ -28,7 +28,8 @@ RDEPEND="virtual/blas
 	tcltk? ( >=dev-lang/tk-8.4
 		>=dev-lang/tcl-8.4 )
 	Xaw3d? ( x11-libs/Xaw3d )
-	ocaml? ( dev-lang/ocaml )"
+	ocaml? ( dev-lang/ocaml )
+	java? ( >=virtual/jdk-1.4 )"
 
 DEPEND="${RDEPEND}
 	app-text/sablotron"
@@ -39,7 +40,7 @@ pkg_setup() {
 		eerror 'scilab must be built with either USE="gtk" or USE="tcltk"'
 		die
 	fi
-
+	java-pkg-opt-2_pkg_setup
 	need_fortran gfortran g77
 }
 
