@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.2.1.ebuild,v 1.5 2006/11/04 11:39:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-2.2.1.ebuild,v 1.6 2006/11/06 20:59:27 hanno Exp $
 
 inherit kde-functions
 
@@ -23,10 +23,9 @@ S=${WORKDIR}/${P}
 MAKEOPTS="${MAKEOPTS} -j1"
 RESTRICT="test"
 
-use qt3 && need-qt 3.1
-use kde && need-kde 3.1
-
 src_compile() {
+	set-kdedir
+
 	local FRONTENDS="cbanking"
 	(use qt3 || use kde) && FRONTENDS="${FRONTENDS} qbanking"
 	use kde && FRONTENDS="${FRONTENDS} kbanking"
