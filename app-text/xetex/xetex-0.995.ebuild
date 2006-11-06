@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.7 2006/10/31 11:32:54 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xetex/xetex-0.995.ebuild,v 1.8 2006/11/06 00:59:18 joslwah Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ pkg_preinst()
 {
 	pwd
 	cd ${S}
-	ln -sf ${D}usr/share/texmf-site/tex/generic/hyphen ${D}usr/share/texmf/tex/generic/hyphen
+	mv ${D}usr/share/texmf-site/tex/generic/hyphen ${D}usr/share/texmf/tex/generic/hyphen
 	texhash "${D}usr/share/texmf"
 	sh ./rebuild-formats
 
@@ -54,7 +54,12 @@ pkg_preinst()
 		mv "${D}${fmtutil}" "${D}${fmtutil_real}"
 	fi
 
-	rm ${D}usr/share/texmf/tex/generic/hyphen
+	mv ${D}usr/share/texmf/tex/generic/hyphen ${D}usr/share/texmf-site/tex/generic/hyphen
+
+	### Add xetex to the search path for xelatex, if not already done.
+	mkdir -p ${D}etc/texmf/web2c
+	egrep -q 'TEXINPUTS.xelatex = .;\$TEXMF/tex/{xelatex,latex,generic,}//' /etc/texmf/web2c/texmf.cnf || \
+		sed -e 's/TEXINPUTS.xelatex = .;$TEXMF\/tex\/{latex,generic,}\/\//TEXINPUTS.xelatex = .;$TEXMF\/tex\/{xelatex,latex,generic,}\/\//' /etc/texmf/web2c/texmf.cnf > ${D}etc/texmf/web2c/texmf.cnf
 
 }
 

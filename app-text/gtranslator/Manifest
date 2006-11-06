@@ -1,18 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4e97f10466bc0844f05fdee94242cd25 ChangeLog 1934
-MD5 8ab7e18e98059400689660486529bda0 files/digest-gtranslator-0.43 69
-MD5 00eda9fae5836cdc3191a63edc477f7b files/digest-gtranslator-1.1.5 70
-MD5 506f5ff5e458171cbeaa1e6aa2c1112d files/digest-gtranslator-1.1.6 70
+DIST gtranslator-0.43.tar.gz 1328997
+DIST gtranslator-1.1.5.tar.gz 1401286
+DIST gtranslator-1.1.6.tar.gz 1443119 RMD160 42f6104dbc30bed06c172e292431e76cbd88cacd SHA1 0499c2efc08fe52132a5868e82f1000182c57873 SHA256 15af61a307c6cb1d460f2c139d9a9cd2c4cae5b49cfe8e2481d8a910187cbf16
+EBUILD gtranslator-0.43.ebuild 1432 RMD160 4559fc2e8343a06e71029e0a3cca151847fb8ac1 SHA1 512c345cdb62291a1d8c40b097b50c210eded558 SHA256 8d9936d34aec10efdaba54878f13b9dba467bbcd5abdde136df56971437de388
 MD5 9c29168529e9e6b1286b1833b4ac3f5e gtranslator-0.43.ebuild 1432
+RMD160 4559fc2e8343a06e71029e0a3cca151847fb8ac1 gtranslator-0.43.ebuild 1432
+SHA256 8d9936d34aec10efdaba54878f13b9dba467bbcd5abdde136df56971437de388 gtranslator-0.43.ebuild 1432
+EBUILD gtranslator-1.1.5.ebuild 776 RMD160 217d89d5d5ef4444d1eb50787afc26d96d1f513d SHA1 c6b7842bd3af67d75d57bef1cc005ecc1d4ffd48 SHA256 d3f23e6f3cc4bb849301da18f15da9605353e7902e9a3cc87e07c0a4b9d289ad
 MD5 817eb3bb852e16074e6adf1ffa8248b6 gtranslator-1.1.5.ebuild 776
-MD5 02d6517dbf5988119f7aa797284e0a9d gtranslator-1.1.6.ebuild 856
+RMD160 217d89d5d5ef4444d1eb50787afc26d96d1f513d gtranslator-1.1.5.ebuild 776
+SHA256 d3f23e6f3cc4bb849301da18f15da9605353e7902e9a3cc87e07c0a4b9d289ad gtranslator-1.1.5.ebuild 776
+EBUILD gtranslator-1.1.6.ebuild 856 RMD160 891ab8552cdbe2fcb5a3b03a4b7bb3601bc54c65 SHA1 8498d3858e52b3a3e107a634da29ddac8164a1bd SHA256 64d6cf2c24fc96c8aca5fc73d44dffaa87cf4de0458c26f281d8a38bdddb9b79
+MD5 a8e0698776eafbfb518196fad79f9a9a gtranslator-1.1.6.ebuild 856
+RMD160 891ab8552cdbe2fcb5a3b03a4b7bb3601bc54c65 gtranslator-1.1.6.ebuild 856
+SHA256 64d6cf2c24fc96c8aca5fc73d44dffaa87cf4de0458c26f281d8a38bdddb9b79 gtranslator-1.1.6.ebuild 856
+MISC ChangeLog 2045 RMD160 65759dbff690fed45b4a48a1dc2316a1228b22ef SHA1 480c23d6cf9db34698426ee827d0acf563298ebe SHA256 71e5bf6a37f6bf41014f0d1009cba33ff0e9cf4ae7e12e30d71b5d091142c098
+MD5 5a3b3b2d54bc42b77c134e2324f01c01 ChangeLog 2045
+RMD160 65759dbff690fed45b4a48a1dc2316a1228b22ef ChangeLog 2045
+SHA256 71e5bf6a37f6bf41014f0d1009cba33ff0e9cf4ae7e12e30d71b5d091142c098 ChangeLog 2045
+MISC metadata.xml 158 RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e SHA1 38f78e9790bcd4382b4a49aa226aa6dda1d3a3d7 SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+RMD160 c0e2bae8e91bb6be8922bac5e4f597302e06587e metadata.xml 158
+SHA256 3a7dbca0fdc557de69783e0663e2d76ddab129ea8a19b2d0ef6d3e5d1b947ce1 metadata.xml 158
+MD5 8ab7e18e98059400689660486529bda0 files/digest-gtranslator-0.43 69
+RMD160 e094034d52a3c4e92b9906854fff67d467b76407 files/digest-gtranslator-0.43 69
+SHA256 12728a4e7f89e41498389f5df6fddc995423be7d03f04b78fa175f451b90d798 files/digest-gtranslator-0.43 69
+MD5 00eda9fae5836cdc3191a63edc477f7b files/digest-gtranslator-1.1.5 70
+RMD160 d9c9b6c1a0a7ee0c5afe80c957abcdee62598f8a files/digest-gtranslator-1.1.5 70
+SHA256 5a23d6852216f20a3b5770c7ad74da173c359ccc5225861e8ba05a7b769beb14 files/digest-gtranslator-1.1.5 70
+MD5 deb2ad85e2b285cfb6a77da5bd39e071 files/digest-gtranslator-1.1.6 256
+RMD160 a5e98ccd4280f23396aab0a09004d1322ca1814d files/digest-gtranslator-1.1.6 256
+SHA256 d85a479bbc5d4e4e0166da47d37891eec95df05233f88b25d20001a72e6031f8 files/digest-gtranslator-1.1.6 256
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.2 (GNU/Linux)
+Version: GnuPG v1.4.5 (GNU/Linux)
 
-iD8DBQFDf7SlomPajV0RnrERAp7CAJ9CDOs5Scy31cE2RFpMyLe0PYM26wCeI+E4
-e4vsRLlN/JH9j0569eXWXr4=
-=x9kx
+iD8DBQFFTol+NQqtfCuFneMRAoOOAJ92KxI5HjlPxS/1NsIID9xwNZlfsQCgmpF9
+ZKMSFsx/Vu5/ZuEPEQ687Wk=
+=60u3
 -----END PGP SIGNATURE-----
