@@ -41,7 +41,6 @@ media-gfx/gimp -mmx -sse
 media-gfx/optipng -mmx
 media-libs/libmpeg -mmx
 media-libs/flac -sse -3dnow
->=media-libs/imlib2-1.2.2.001 -mmx
 media-libs/libggi -mmx
 media-libs/libquicktime -mmx
 media-libs/speex -sse
