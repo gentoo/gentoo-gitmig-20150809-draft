@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.7.ebuild,v 1.2 2006/11/04 02:37:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.7.ebuild,v 1.3 2006/11/06 19:49:47 usata Exp $
 
 inherit eutils qt3
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE="gtk qt3"
+IUSE="doc gtk qt3"
 
 DEPEND=">=app-i18n/scim-1.4.0
 	gtk? (
@@ -21,7 +21,8 @@ DEPEND=">=app-i18n/scim-1.4.0
 	qt3? (
 		$(qt_min_version 3.3.4)
 		>=x11-libs/pango-1.1
-	)"
+	)
+	doc? ( app-doc/doxygen )"
 
 get_gtk_confdir() {
 	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
@@ -40,7 +41,8 @@ pkg_setup() {
 src_compile() {
 	econf \
 		$(use_enable gtk gtk2-immodule) \
-		$(use_enable qt3 qt3-immodule) || die
+		$(use_enable qt3 qt3-immodule) \
+		$(use_enable doc documents) || die
 	emake || die
 }
 
