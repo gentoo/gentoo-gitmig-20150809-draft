@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.8.ebuild,v 1.2 2006/11/04 20:13:23 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/mutagen-1.8.ebuild,v 1.3 2006/11/06 11:37:16 tcort Exp $
 
 inherit distutils
 
@@ -22,6 +22,12 @@ DEPEND="test? (
 	>=virtual/python-2.4"
 
 RDEPEND=">=virtual/python-2.4"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-test.patch
+}
 
 src_test() {
 	python setup.py test || die "src_test failed."
