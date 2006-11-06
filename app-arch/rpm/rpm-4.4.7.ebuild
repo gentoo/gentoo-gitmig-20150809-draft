@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.4 2006/10/19 16:18:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7.ebuild,v 1.5 2006/11/06 20:58:28 sanchan Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/rpm-4.4.6-with-sqlite.patch
 	epatch "${FILESDIR}"/rpm-4.4.7-stupidness.patch
 	epatch "${FILESDIR}"/rpm-4.4.6-autotools.patch
+	epatch "${FILESDIR}"/rpm-4.4.6-buffer-overflow.patch
 
 	# rpm uses AM_GNU_GETTEXT() but fails to actually
 	# include any of the required gettext files
