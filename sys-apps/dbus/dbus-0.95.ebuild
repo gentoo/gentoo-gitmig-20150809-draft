@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.95.ebuild,v 1.2 2006/11/05 17:54:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.95.ebuild,v 1.3 2006/11/06 22:13:50 drizzt Exp $
 
 WANT_AUTOCONF=2.5
 inherit eutils multilib debug autotools
@@ -11,7 +11,7 @@ SRC_URI="http://dbus.freedesktop.org/releases/dbus/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 AFL-2.1 )"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc selinux X"
 
 RDEPEND="X? ( x11-libs/libXt x11-libs/libX11 )
