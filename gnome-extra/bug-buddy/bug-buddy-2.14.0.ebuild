@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.14.0.ebuild,v 1.10 2006/10/20 22:03:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/bug-buddy-2.14.0.ebuild,v 1.11 2006/11/06 04:49:18 allanonjl Exp $
 
 inherit gnome2
 
@@ -29,6 +29,7 @@ RDEPEND=">=gnome-base/gconf-2
 
 DEPEND=${RDEPEND}"
 	>=app-text/gnome-doc-utils-0.3.2
+	=app-text/docbook-xml-dtd-4.2-r1
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.8"
