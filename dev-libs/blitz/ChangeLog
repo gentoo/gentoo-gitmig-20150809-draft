@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.26 2006/11/04 00:59:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.27 2006/11/06 18:38:55 dragonheart Exp $
+
+  06 Nov 2006; Daniel Black <dragonheart@gentoo.org> blitz-0.9.ebuild:
+  -m added doc to IUSE - thanks Jakub
 
   04 Nov 2006; Daniel Black <dragonheart@gentoo.org> blitz-0.9.ebuild:
   made doc optional dependency in blitz-0.9 - bug #88042 thanks Roman Stanchak
