@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3-r1.ebuild,v 1.8 2006/10/21 17:51:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.3-r1.ebuild,v 1.9 2006/11/06 22:44:29 flameeyes Exp $
 
 LANGS="az bg br ca cs cy da de el en_GB es et fi fr ga gl he hi hu is it ja ka
 km ko lt ms nb nl nn pa pl pt pt_BR ro ru rw sl sr sr@Latn sv ta tg th tr uk uz
@@ -25,7 +25,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="aac kde mysql noamazon opengl postgres
-xmms visualization ipod ifp real njb"
+visualization ipod ifp real njb"
 # kde: enables compilation of the konqueror sidebar plugin
 
 DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
@@ -34,7 +34,6 @@ DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
 	mysql? ( >=dev-db/mysql-4.0.16 )
 	postgres? ( dev-db/postgresql )
 	opengl? ( virtual/opengl )
-	xmms? ( >=media-sound/xmms-1.2 )
 	visualization? ( media-libs/libsdl
 					 =media-plugins/libvisual-plugins-0.4* )
 	ipod? ( >=media-libs/libgpod-0.3 )
@@ -58,7 +57,7 @@ src_compile() {
 
 	# Extra, unsupported engines are forcefully disabled.
 	local myconf="$(use_enable mysql) $(use_enable postgres postgresql)
-				  $(use_with opengl) $(use_with xmms)
+				  $(use_with opengl) --without-xmms
 				  $(use_with visualization libvisual)
 				  $(use_enable !noamazon amazon)
 				  $(use_with ipod libgpod)
