@@ -35,7 +35,7 @@ Index: korganizer-import.desktop
 ===================================================================
 --- korganizer/korganizer-import.desktop	(revision 0)
 +++ korganizer/korganizer-import.desktop	(revision 0)
-@@ -0,0 +1,137 @@
+@@ -0,0 +1,138 @@
 +[Desktop Entry]
 +Encoding=UTF-8
 +MimeType=text/calendar;text/x-vcalendar;
@@ -173,3 +173,4 @@ Index: korganizer-import.desktop
 +X-KDE-StartupNotify=true
 +X-DCOP-ServiceType=Unique
 +X-DCOP-ServiceName=korganizer
++Hidden=true
