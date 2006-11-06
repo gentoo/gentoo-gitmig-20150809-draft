@@ -1,6 +1,11 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.47 2006/10/14 07:47:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.48 2006/11/06 23:45:43 genstef Exp $
+
+  06 Nov 2006; Stefan Schweizer <genstef@gentoo.org> metadata.xml,
+  lprng-3.8.28.ebuild:
+  lprng has problems with parallel make, remove current maintainer tpfaff
+  because he no longer uses the software. Thanks for his maintainance
 
   14 Oct 2006; Stefan Schweizer <genstef@gentoo.org>
   +files/lprng-3.8.28-krb.diff, lprng-3.8.28.ebuild:

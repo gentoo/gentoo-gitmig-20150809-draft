@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.9 2006/10/14 07:47:43 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.28.ebuild,v 1.10 2006/11/06 23:45:43 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -55,7 +55,7 @@ src_compile() {
 		--sysconfdir=/etc/lprng \
 		--disable-strip || die "econf failed"
 
-	emake || die "printer on fire!"
+	emake -j1 || die "printer on fire!"
 }
 
 src_install() {
