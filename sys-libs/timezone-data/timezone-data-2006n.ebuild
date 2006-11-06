@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006n.ebuild,v 1.11 2006/11/04 23:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2006n.ebuild,v 1.12 2006/11/06 14:17:38 uberlord Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -29,7 +29,12 @@ src_unpack() {
 src_compile() {
 	tc-export CC
 	use elibc_FreeBSD && append-flags -DSTD_INSPIRED #138251
-	use nls && export NLS=1 || export NLS=0
+	if use nls ; then
+		use elibc_glibc || append-ldflags -lintl #154181
+		export NLS=1
+	else
+		export NLS=0
+	fi
 	emake || die "emake failed"
 	if tc-is-cross-compiler ; then
 		make -C "${S}"-native CC=$(tc-getBUILD_CC) zic || die
