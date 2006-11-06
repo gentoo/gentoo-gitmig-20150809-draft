@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn-cep
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.5 2006/10/05 17:52:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn-cep/ChangeLog,v 1.6 2006/11/06 18:44:09 wolf31o2 Exp $
+
+  06 Nov 2006; Chris Gianelloni <wolf31o2@gentoo.org> nwn-cep-1.68.ebuild:
+  Added hou/sou to IUSE.
 
 *nwn-cep-1.68 (05 Oct 2006)
 
