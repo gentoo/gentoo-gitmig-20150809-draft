@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.95 2006/11/05 18:35:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.96 2006/11/06 01:23:40 opfer Exp $
+
+  06 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  libsigc++-1.0.4-r3.ebuild:
+  stable x86, bug #138112
 
   05 Nov 2006; Daniel Gryniewicz <dang@gentoo.org>
   libsigc++-1.0.4-r3.ebuild:
