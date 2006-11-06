@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.383 2006/11/03 14:33:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.384 2006/11/06 10:59:32 eroyf Exp $
+
+  06 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org> qt-3.3.6-r4.ebuild:
+  Stable on Alpha. Bug #151838
 
   03 Nov 2006; Caleb Tennis <caleb@gentoo.org> qt-4.2.1.ebuild:
   Add a dbus build error for people who have the qt4 bindings already on their
