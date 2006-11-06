@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0.ebuild,v 1.8 2006/10/23 03:13:04 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-0.13.0.ebuild,v 1.9 2006/11/06 09:28:41 keri Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 	local myconf
 	myconf="--disable-gcc-back-end \
 		--enable-aditi-back-end \
-		--enable-deep-profiler \
+		--disable-deep-profiler \
 		--disable-dotnet-grades \
 		--disable-java-grades \
 		$(use_enable debug debug-grades) \
