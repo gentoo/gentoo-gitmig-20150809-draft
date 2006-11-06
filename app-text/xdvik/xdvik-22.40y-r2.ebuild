@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.13 2005/01/01 16:42:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.40y-r2.ebuild,v 1.14 2006/11/06 16:23:10 usata Exp $
 
 inherit eutils
 
@@ -20,16 +20,27 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/t1lib-1.3
-	virtual/x11
+	|| (
+		(
+			x11-libs/libXpm
+			x11-libs/libXmu
+		)
+		virtual/x11
+	)
 	virtual/tetex
 	cjk? ( >=media-libs/freetype-2 )
-	libwww? ( >=net-libs/libwww-5.3.2-r1 )"
+	libwww? ( >=net-libs/libwww-5.3.2-r1 )
+	!app-text/texlive"
 
 src_unpack () {
 
 	unpack ${MY_P}.tar.gz
+	cd ${S}
+	epatch ${FILESDIR}/xdvi-xorg-7.0.patch
+	epatch ${FILESDIR}/xdvizilla.patch
 	if use cjk ; then
 		epatch ${DISTDIR}/${XDVIK_JP}.patch.gz
+		epatch ${FILESDIR}/${P}-dvi-draw-conflicting-types.patch
 		sed -i -e "/\/usr\/local/s:^:%:g" \
 			-e "/kochi-.*-subst/s:%::g" \
 			-e "s:/usr/local:/usr:g" \

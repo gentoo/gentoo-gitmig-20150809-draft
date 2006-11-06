@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.3 2005/06/12 22:33:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/xdvik-22.84.5.ebuild,v 1.4 2006/11/06 16:23:10 usata Exp $
 
 inherit eutils flag-o-matic elisp-common
 
@@ -19,7 +19,13 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/t1lib-5.0.2
-	virtual/x11
+	|| (
+		(
+			x11-libs/libXmu
+			x11-libs/libXpm
+		)
+		virtual/x11
+	)
 	motif? ( lesstif? ( x11-libs/lesstif )
 		!lesstif? ( x11-libs/openmotif ) )
 	!motif? ( neXt? ( x11-libs/neXtaw )
@@ -28,7 +34,8 @@ DEPEND=">=media-libs/t1lib-5.0.2
 	cjk? ( app-text/ptex
 		>=media-libs/freetype-2
 		>=media-fonts/kochi-substitute-20030809-r3 )
-	!cjk? ( virtual/tetex )"
+	!cjk? ( virtual/tetex )
+	!app-text/texlive"
 
 src_unpack () {
 

@@ -1,0 +1,17 @@
+diff -urN texk.orig/xdvik/xdvi.h texk/xdvik/xdvi.h
+--- texk.orig/xdvik/xdvi.h	2006-10-23 18:12:27.000000000 +0900
++++ texk/xdvik/xdvi.h	2006-10-23 18:20:51.000000000 +0900
+@@ -236,6 +236,13 @@
+ /* only use definitions with prototypes now */
+ #define	ARGS(x)	x
+ 
++/* Since xorg-7.0, NeedWidePrototypes in X11/Xfoncproto.h has been
++ * undefined by default. However, xdvi needs to be built with 
++ * NeedWidePrototypes to display Japanese. Then we defined it in
++ * texk/xdvi/xdvi.h
++ */
++#define NeedWidePrototypes	1
++
+ #ifndef	NeedWidePrototypes
+ #define	NeedWidePrototypes	NeedFunctionPrototypes
+ #endif
