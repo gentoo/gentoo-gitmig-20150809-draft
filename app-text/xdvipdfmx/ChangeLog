@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.6 2006/10/31 11:29:40 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.7 2006/11/06 13:46:39 fmccor Exp $
+
+  06 Nov 2006; Ferris McCormick <fmccor@gentoo.org> xdvipdfmx-0.3.ebuild:
+  Add ~amd64 keyword --- Bug #153132
 
   31 Oct 2006; Christian Faulhammer <opfer@gentoo.org> xdvipdfmx-0.3.ebuild::
   marked ~x86 as requested in bug #153132
