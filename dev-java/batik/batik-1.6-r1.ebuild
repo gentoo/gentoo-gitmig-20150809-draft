@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r1.ebuild,v 1.3 2006/11/05 22:01:52 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r1.ebuild,v 1.4 2006/11/06 14:21:40 opfer Exp $
 
 inherit java-pkg-2 java-ant-2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/xml/batik/${PN}-src-${PV}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="1.6"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc"
 
 CDEPEND="=dev-java/rhino-1.5*

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.37 2006/11/05 22:38:32 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.38 2006/11/06 14:21:40 opfer Exp $
+
+  06 Nov 2006; Christian Faulhammer <opfer@gentoo.org> batik-1.5-r1.ebuild,
+  batik-1.5.1-r5.ebuild, batik-1.6-r1.ebuild:
+  stable x86, bug #154185
 
 *batik-1.6-r2 (05 Nov 2006)
 
