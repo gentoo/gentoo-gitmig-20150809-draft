@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.231 2006/11/06 07:27:05 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.232 2006/11/06 07:53:53 pioto Exp $
 
   25 Oct 2006; Fabian Groffen <grobian@gentoo.org> vim-core-7.0.17.ebuild,
   vim-core-7.0.91.ebuild:
@@ -959,4 +959,5 @@
   12 Sep 2002; Hannes Mehnert <hannes@gentoo.org> vim-core-6.1.ebuild:
 
   splitted vim into gvim, vim and vim-core
+
 
