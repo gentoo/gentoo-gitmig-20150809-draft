@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.12 2006/10/31 19:11:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.8-r1.ebuild,v 1.13 2006/11/06 11:26:10 opfer Exp $
 
 LANGS="bg ca br da de cs cy el es et fi ga fr gl hu is it lt nb mt nl pa pl pt ro ru rw ta sr sv tr en_GB pt_BR zh_CN sr@Latn"
 LANGS_DOC="da et fr it nl pt ru sv"
@@ -15,7 +15,7 @@ SRC_URI="http://dziegel.free.fr/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="arts lirc zvbi opengl"
 
 RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
