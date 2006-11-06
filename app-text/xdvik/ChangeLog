@@ -1,12 +1,13 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.32 2006/11/06 16:23:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.33 2006/11/06 16:33:29 usata Exp $
 
   06 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> +files/xdvi-xorg-7.0.patch,
   +files/xdvik-22.40y-dvi-draw-conflicting-types.patch,
   +files/xdvizilla.patch, xdvik-22.40y-r2.ebuild, xdvik-22.84.5.ebuild,
   xdvik-22.84.10.ebuild:
-  Fixed modular X dependency. Block app-text/texlive. This closes bug #143851.
+  Fixed modular X dependency. Block app-text/texlive. This closes bug #143851
+  and bug #139741. Thanks to Aurelien Francillon and Sebastian Volke.
 
   29 Oct 2006; Emanuele Giaquinta <exg@gentoo.org> xdvik-22.84.10.ebuild:
   Block on virtual/tetex, not just app-text/tetex.
