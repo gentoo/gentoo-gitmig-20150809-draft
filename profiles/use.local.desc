@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2300 2006/11/05 14:02:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2301 2006/11/06 19:43:25 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -149,8 +149,8 @@ app-laptop/tp_smapi:hdaps - Install a compatible HDAPS module
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 app-misc/bbgallery:gimp - Engables support for the gimp via extra libraries
 app-misc/beagle:chm - Enable indexing of MS HTML Help files (.chm)
-app-misc/beagle:ole - Enable ole support
 app-misc/beagle:galago - Enable desktop presence via galago
+app-misc/beagle:ole - Enable ole support
 app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/g15composer:amarok - Enable display of titles played in Amarok
 app-misc/graphlcd-base:g15 - Add support for g15daemon driver ( e.g Logitech G15 Keybord )
@@ -291,8 +291,8 @@ dev-java/avalon-logkit:jms - Enable support for JMS (Java Message Service)
 dev-java/bsf:jython - Enable Jython support
 dev-java/bsf:rhino - Enable Rhino support
 dev-java/commons-logging:avalon - Add optional support for the avalon-framework
-dev-java/commons-logging:avalon-logkit - Add optional support for avalon-logkit
 dev-java/commons-logging:avalon-framework - Add optional support for avalon-framework
+dev-java/commons-logging:avalon-logkit - Add optional support for avalon-logkit
 dev-java/commons-logging:log4j - Add optional support for log4j
 dev-java/commons-logging:servletapi - Add optional support for servletapi
 dev-java/diablo-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
@@ -330,7 +330,7 @@ dev-java/xstream:java5 - Enable Java 5 specific features
 dev-lang/gdl:hdf - Adds support for the Hierarchical Data Format
 dev-lang/gdl:hdf5 - Adds support for the Hierarchical Data Format v 5
 dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly large performance gains
-dev-lang/icon:iplsrc  - install the icon programming library source
+dev-lang/icon:iplsrc - install the icon programming library source
 dev-lang/mono:icu - Enable internationalization support via ICU lib.
 dev-lang/ocaml:latex - Add ocamldoc support for latex
 dev-lang/perl:ithreads - Enable Perl threads, has some compatibility problems
@@ -454,7 +454,7 @@ dev-ruby/nitro:xslt - enable xslt support
 dev-ruby/og:kirbybase - enable Kirbybase support
 dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
-dev-ruby/ruby-sdl:sge   - enable sdl-sge support
+dev-ruby/ruby-sdl:sge - enable sdl-sge support
 dev-scheme/drscheme:backtrace - support GC backtrace dumps
 dev-scheme/drscheme:cairo - Enable cairo support.
 dev-scheme/drscheme:sgc - use Senora GC instead of the Boehm GC
@@ -700,7 +700,7 @@ mail-filter/dspam:maildrop - Build with delivery options for maildrop
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
 mail-filter/dspam:user-homedirs - Build with user homedir support
-mail-filter/dspam:virtual-users  - Build with virtual-users support
+mail-filter/dspam:virtual-users - Build with virtual-users support
 mail-filter/maildrop:authlib - Add courier-authlib suport
 mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-filter/spamassassin:qmail - Build qmail functionality and docs
@@ -711,7 +711,7 @@ mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain na
 mail-mta/exim:exiscan - Patch providing support for content scanning backward-compatibility
 mail-mta/exim:exiscan-acl - Patch providing support for content scanning
 mail-mta/exim:lmtp - Adds support for lmtp
-mail-mta/exim:mbx - Adds support for  UW's mbx format 
+mail-mta/exim:mbx - Adds support for UW's mbx format
 mail-mta/exim:spf - Adds support for Sender Policy Framework
 mail-mta/exim:srs - Adds support for Sender Rewriting Scheme
 mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
@@ -816,7 +816,7 @@ media-plugins/audacious-plugins:sid - Build with SID (Commodore 64 Audio) suppor
 media-plugins/audacious-plugins:timidity - Build with Timidity++ (MIDI sequencer) support
 media-plugins/audacious-plugins:wma - Build with WMA (Windows Media Audio) support
 media-plugins/eq-xmms:sse-filters - Enable SSE-based equalizer's implementation
-media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library 
+media-plugins/gst-plugins-farsight:gsm - Support for the gsm lossy speech compression library
 media-plugins/gst-plugins-farsight:jingle - Enables voice calls for jabber
 media-plugins/gst-plugins-farsight:jrtplib - Support for the Real-time Transport Protocol (RTP) library
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
@@ -936,7 +936,7 @@ media-tv/xmltv:es_laguiatv - Spain alternative grabber
 media-tv/xmltv:fi - Finland tv listing grabber
 media-tv/xmltv:fr - France tv listing grabber
 media-tv/xmltv:huro - Hungarian tv listing grabber
-media-tv/xmltv:il - Israel  tv listing grabber
+media-tv/xmltv:il - Israel tv listing grabber
 media-tv/xmltv:is - Iceland tv listing grabber
 media-tv/xmltv:it - Italy tv listing grabber
 media-tv/xmltv:jp - Japan tv listing grabber
@@ -1136,6 +1136,7 @@ net-dns/djbdns:multipleip - enables multi-IP patch
 net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/djbdns:semanticfix - makes tinydns-data handle more semantic errors
 net-dns/dnsmasq:resolvconf - enable support for net-dns/resolvconf
+net-dns/pdns:opendbx - Enable the OpenDBX backend
 net-dns/pdns:tdb - Enable the Trivial Database (xdb) backend
 net-dns/pdnsd:isdn - Enable ISDN features
 net-dns/pdnsd:underscores - Enable support for domain names containing underscores
@@ -1197,7 +1198,7 @@ net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enable X idle time support instead of gaim idle time.
 net-im/gaim:qq - Enable QQ protocol support.
 net-im/gajim:libnotify - Enable libnotify popup balloons
-net-im/gajim:srv -  SRV capabilities
+net-im/gajim:srv - SRV capabilities
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/gossip:libnotify - Enable libnotify popup balloons
 net-im/jabberd:memdebug - Enable nad and pool debug
@@ -1336,8 +1337,8 @@ net-misc/hylafax:mgetty - Adds support for mgetty and vgetty
 net-misc/icecast:yp - Build support for yp public directory listings
 net-misc/linphone:ilbc - Build ILBC codec plugin
 net-misc/ltsp:floppyd - Enable local floppy access on LTSP terminals via mtools
-net-misc/ltsp:vnc - Enable vnc support
 net-misc/ltsp:rdesktop - Add support for the remote desktop protocol.
+net-misc/ltsp:vnc - Enable vnc support
 net-misc/ntp:logrotate - Install support files for logrotate
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
@@ -1358,7 +1359,7 @@ net-misc/openssh:sftplogging - Enables sftplogging patch
 net-misc/openvpn:iproute2 - Enabled iproute2 support instead of net-tools
 net-misc/openvpn:passwordsave - Enables openvpn to save passwords
 net-misc/partysip:syslog - Enable syslog support
-net-misc/quagga:bgpclassless - Enable classless prefixes for BGP 
+net-misc/quagga:bgpclassless - Enable classless prefixes for BGP
 net-misc/quagga:fix-connected-rt - Remove interface connected routes from kernel table on link loss so that no packets get routed to downed interface
 net-misc/quagga:multipath - Enable multipath routes support for any number of routes
 net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessing the OSPF link state database
@@ -1532,8 +1533,8 @@ sci-mathematics/drgeo:no-helpbrowser - Do not install the default help browser
 sci-mathematics/maxima:auctex - enable auctex in maxima
 sci-mathematics/maxima:clisp - adds clisp support to maxima
 sci-mathematics/maxima:cmucl - adds cmucl (lisp) support to maxima
-sci-mathematics/maxima:gcl   - adds gcl (lisp) support to maxima
-sci-mathematics/maxima:sbcl   - adds sbcl (lisp) support to maxima
+sci-mathematics/maxima:gcl - adds gcl (lisp) support to maxima
+sci-mathematics/maxima:sbcl - adds sbcl (lisp) support to maxima
 sci-mathematics/mupad:mupad-noscilab - Disable scilab that comes with MuPAD package. Use system-wide instead.
 sci-mathematics/nusmv:minisat - Enable support for MiniSat.
 sci-mathematics/octave-forge:qhull - Adds media-libs/qhull (geometric extensions) support
@@ -1729,7 +1730,7 @@ www-apps/bugzilla:extras - optional Perl modules
 www-apps/dspam-web:large-domain - Builds for large domain rather than for domain scale
 www-apps/dspam-web:logrotate - Build logrotate support for dspam
 www-apps/dspam-web:neural - Build neural support for dspam
-www-apps/dspam-web:virtual-users  - Build with virtual-users support
+www-apps/dspam-web:virtual-users - Build with virtual-users support
 www-apps/egroupware:jpgraph - Add jpgraph support
 www-apps/gallery:dcraw - Add dcraw support
 www-apps/gallery:netpbm - Add NetPBM support
@@ -1744,10 +1745,10 @@ www-apps/lxr:freetext - Adds support for freetext search using swish-e
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/moinmoin:rss - Add RSS support
 www-apps/open-xchange:sieve - Install Smartsieve-OX
-www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.  
+www-apps/open-xchange:webdav - Enable WebDav (Web-based Distributed Authoring and Versioning) support.
 www-apps/rt:lighttpd - Add lighttpd support
 www-apps/trac:cgi - Add CGI script support
-www-apps/trac:enscript -  Add enscript support to colourize code stored in the repository
+www-apps/trac:enscript - Add enscript support to colourize code stored in the repository
 www-apps/trac:silvercity - Add SilverCity support to colourize code stored in the repository
 www-apps/viewcvs:cvsgraph - Add cvsgraph support to show graphical views of revisions and branches
 www-apps/viewcvs:enscript - Add enscript support to colourize code stored in the repository
