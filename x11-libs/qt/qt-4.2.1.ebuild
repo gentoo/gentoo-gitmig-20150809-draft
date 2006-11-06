@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.7 2006/11/03 14:33:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.8 2006/11/06 13:54:50 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -62,12 +62,16 @@ pkg_setup() {
 
 	PLATFORM=$(qt_mkspecs_dir)
 
-	if built_with_use =sys-apps/dbus-0.62* qt4; then
-		eerror "You have built the dbus-0.62 bindings installed with Qt4 support."  
-		eerror "Unfortunately, Qt-4.2 is not supported for these bindings. For now,"
-		eerror "you will need to package.mask =x11-libs/qt-4.2*.  Soon, we hope to provide"
-		eerror "built in dbus support for Qt-4.2.  See Gentoo bug #150888 for details"
-		die
+	# If the user current has qt4 bindings for dbus, we can't let them upgrade since they aren't
+	# yet supported for Qt4.2
+	if [ ! -z $(best version =sys-apps/dbus-0.62*) ]; then
+		if built_with_use =sys-apps/dbus-0.62* qt4; then
+			eerror "You have built the dbus-0.62 bindings installed with Qt4 support."  
+			eerror "Unfortunately, Qt-4.2 is not supported for these bindings. For now,"
+			eerror "you will need to package.mask =x11-libs/qt-4.2*.  Soon, we hope to provide"
+			eerror "built in dbus support for Qt-4.2.  See Gentoo bug #150888 for details"
+			die
+		fi
 	fi
 }
 
