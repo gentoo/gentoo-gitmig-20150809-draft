@@ -1,17 +1,17 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.209 2006/10/25 16:55:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.210 2006/11/06 07:27:04 pioto Exp $
 
   25 Oct 2006; Gustavo Zacarias <gustavoz@gentoo.org> gvim-7.0.91.ebuild:
   Stable on sparc
 
-  24 Oct 2006; Mike Kelly <pioto@pioto.org> gvim-7.0.146.ebuild:
+  24 Oct 2006; Mike Kelly <pioto@gentoo.org> gvim-7.0.146.ebuild:
   Dropping ppc-macos keyword, since eselect-1.0.6 isn't keyworded for it,
   either.
 
 *gvim-7.0.146 (23 Oct 2006)
 
-  23 Oct 2006; Mike Kelly <pioto@pioto.org> -gvim-7.0.109.ebuild,
+  23 Oct 2006; Mike Kelly <pioto@gentoo.org> -gvim-7.0.109.ebuild,
   +gvim-7.0.146.ebuild:
   Version bump.
 
@@ -29,7 +29,7 @@
 
 *gvim-7.0.109 (20 Sep 2006)
 
-  20 Sep 2006; Mike Kelly <pioto@pioto.org> +gvim-7.0.109.ebuild:
+  20 Sep 2006; Mike Kelly <pioto@gentoo.org> +gvim-7.0.109.ebuild:
   Version bump, addition of support for eselect-vim (currently masked).
 
 *gvim-7.0.91 (08 Sep 2006)

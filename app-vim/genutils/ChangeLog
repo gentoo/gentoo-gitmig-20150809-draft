@@ -1,16 +1,16 @@
 # ChangeLog for app-vim/genutils
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.18 2006/09/09 16:04:23 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.19 2006/11/06 07:27:05 pioto Exp $
 
 *genutils-2.3 (09 Sep 2006)
 
-  09 Sep 2006; Mike Kelly <pioto@pioto.org> +genutils-2.3.ebuild:
+  09 Sep 2006; Mike Kelly <pioto@gentoo.org> +genutils-2.3.ebuild:
   Add genutils 2.3. This is currently p.masked, as it changes how it operates
   and may not work with all existing plugins that depend upon it.
 
 *genutils-1.20 (09 Sep 2006)
 
-  09 Sep 2006; Mike Kelly <pioto@pioto.org> +genutils-1.20.ebuild:
+  09 Sep 2006; Mike Kelly <pioto@gentoo.org> +genutils-1.20.ebuild:
   Bump genutils to version 1.20, thanks to Joseph Monti (Bug #133531).
 
   07 Apr 2006; Bryan Østergaard <kloeri@gentoo.org metadata.xml:

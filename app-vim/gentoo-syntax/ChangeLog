@@ -1,14 +1,14 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.70 2006/11/06 06:44:13 pioto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.71 2006/11/06 07:27:05 pioto Exp $
 
 *gentoo-syntax-20061106 (06 Nov 2006)
 
-  06 Nov 2006; Mike Kelly <pioto@pioto.org> +gentoo-syntax-20061106.ebuild:
+  06 Nov 2006; Mike Kelly <pioto@gentoo.org> +gentoo-syntax-20061106.ebuild:
   Version bump. Fixes: Bug #122890 and Bug #145999. See Bug #148985 for more
   details.
 
-  05 Nov 2006; Mike Kelly <pioto@pioto.org>
+  05 Nov 2006; Mike Kelly <pioto@gentoo.org>
   -files/gentoo-syntax-20050211-fix-escapes.patch,
   -files/gentoo-syntax-20050211-fix-xml.patch,
   -gentoo-syntax-20050325.ebuild, -gentoo-syntax-20050515.ebuild,

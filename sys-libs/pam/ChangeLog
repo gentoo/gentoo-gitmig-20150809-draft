@@ -1,11 +1,11 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.131 2006/10/30 17:19:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.132 2006/11/06 07:27:05 pioto Exp $
 
   30 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.6.3-r1.ebuild:
   Use /usr/lib directory even on non-multilib systems.
 
-  29 Oct 2006; Mike Kelly <pioto@pioto.org> pam-0.99.6.3-r1.ebuild:
+  29 Oct 2006; Mike Kelly <pioto@gentoo.org> pam-0.99.6.3-r1.ebuild:
   Add support for the vim-syntax USE flag. Bug #152275.
 
   29 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> pam-0.99.6.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.23 2006/10/25 21:26:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.24 2006/11/06 07:27:05 pioto Exp $
 
 *paludis-0.8.2 (25 Oct 2006)
 
@@ -37,7 +37,7 @@
   14 Sep 2006; Joshua Nichols <nichoj@gentoo.org> paludis-0.6.2.ebuild:
   Added ~ppc.
 
-  13 Sep 2006; Mike Kelly <pioto@pioto.org> paludis-0.6.0.ebuild,
+  13 Sep 2006; Mike Kelly <pioto@gentoo.org> paludis-0.6.0.ebuild,
   paludis-0.6.1.ebuild, paludis-0.6.2.ebuild:
   Remove a --disable-qa argument to econf, since we're using $(use_enable qa)
   now...

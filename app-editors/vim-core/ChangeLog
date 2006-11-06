@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.230 2006/10/25 20:51:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.231 2006/11/06 07:27:05 pioto Exp $
 
   25 Oct 2006; Fabian Groffen <grobian@gentoo.org> vim-core-7.0.17.ebuild,
   vim-core-7.0.91.ebuild:
@@ -10,13 +10,13 @@
   vim-core-7.0.91.ebuild:
   Stable on sparc
 
-  24 Oct 2006; Mike Kelly <pioto@pioto.org> vim-core-7.0.146.ebuild:
+  24 Oct 2006; Mike Kelly <pioto@gentoo.org> vim-core-7.0.146.ebuild:
   Dropping ppc-macos keyword, since eselect-1.0.6 isn't keyworded for it,
   either.
 
 *vim-core-7.0.146 (22 Oct 2006)
 
-  22 Oct 2006; Mike Kelly <pioto@pioto.org> -vim-core-7.0.109.ebuild,
+  22 Oct 2006; Mike Kelly <pioto@gentoo.org> -vim-core-7.0.109.ebuild,
   +vim-core-7.0.146.ebuild:
   Version bump. Includes a patch to the German translation, Bug #134448).
 
@@ -36,7 +36,7 @@
 
 *vim-core-7.0.109 (20 Sep 2006)
 
-  20 Sep 2006; Mike Kelly <pioto@pioto.org> +vim-core-7.0.109.ebuild:
+  20 Sep 2006; Mike Kelly <pioto@gentoo.org> +vim-core-7.0.109.ebuild:
   Version bump, addition of support for eselect-vim (currently masked).
 
 *vim-core-7.0.91 (08 Sep 2006)
