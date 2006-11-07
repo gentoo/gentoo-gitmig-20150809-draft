@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.59 2006/10/30 04:17:28 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.60 2006/11/07 14:32:04 jer Exp $
+
+  07 Nov 2006; Jeroen Roovers <jer@gentoo.org> bitchx-1.1-r3.ebuild:
+  Stable for HPPA (bug #149851).
 
   30 Oct 2006; Luis Medinas <metalgod@gentoo.org> bitchx-1.1-r3.ebuild:
   Stable on amd64 see bug #149851.
