@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2304 2006/11/07 19:35:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2305 2006/11/07 20:24:16 zzam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1019,6 +1019,7 @@ media-video/vdr:dvbplayer - Use some special mpeg-repacker features. Most usable
 media-video/vdr:dxr3-audio-denoise - Mutes audio noise occurring with dxr3-cards using analog audio-out when e.g. cutting
 media-video/vdr:jumpplay - Enables automatic jumping over cut marks while watching a recording
 media-video/vdr:lnbsharing - Enables support for two or more dvb cards sharing the cable to the lnb
+media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
 media-video/vdr:rcu - Enables support for a special type of remote control unit
 media-video/vdr:rds-timeout - Enables vdr to shutdown despite the rds-decoder of plugin vdr-radio being open.
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
