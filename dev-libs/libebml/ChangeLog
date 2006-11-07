@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.75 2006/11/07 08:21:54 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.76 2006/11/07 14:10:49 gustavoz Exp $
+
+  07 Nov 2006; Gustavo Zacarias <gustavoz@gentoo.org>
+  libebml-0.7.7-r1.ebuild:
+  Stable on sparc wrt #154055
 
   07 Nov 2006; Timothy Redaelli <drizzt@gentoo.org> libebml-0.7.7-r1.ebuild:
   Stable on ppc. Bug #154055
