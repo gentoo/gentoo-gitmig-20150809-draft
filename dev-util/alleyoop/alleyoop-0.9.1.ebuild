@@ -1,13 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.1.ebuild,v 1.1 2006/06/30 14:04:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.1.ebuild,v 1.2 2006/11/07 10:59:58 dragonheart Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="A Gtk+ front-end to the Valgrind memory checker for x86 GNU/ Linux."
 HOMEPAGE="http://alleyoop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/alleyoop/${P}.tar.gz"
-RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc -sparc -alpha"
