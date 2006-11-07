@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2302 2006/11/07 07:55:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2303 2006/11/07 16:33:20 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -216,6 +216,7 @@ app-text/crm114:mimencode - Adds support for using the mimencode mime
 app-text/crm114:normalizemime - Add support for using the normalizemime
 app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
+app-text/ghostscript-esp:djvu - Enable gsdjvu support
 app-text/evince:djvu - Enable djvu viewer support for Evince
 app-text/evince:dvi - Enable the built-in DVI viewer for Evince
 app-text/evince:nautilus - Enable the nautilus plugin
@@ -1464,6 +1465,7 @@ net-www/apache:mpm-worker - Worker MPM - hybrid multi-process multi-thread MPM
 net-www/apache:no-suexec - Don't install suexec with apache
 net-www/apache:static-modules - Build modules into apache instead of having them load at run time
 net-www/gentoo-webroot-default:no-htdocs - Don't install anything in the default webroot (/var/www/localhost)
+net-www/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
 net-www/gplflash:nosound - Disable support for sound
 net-www/mod_auth_ldap:disk-cache - Enables support for disk cache.
 net-www/mod_auth_ldap:mem-cache - Enables support for memory cache.
