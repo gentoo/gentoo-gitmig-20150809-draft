@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/ati-drivers-extra
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ChangeLog,v 1.19 2006/09/25 14:19:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ati-drivers-extra/ChangeLog,v 1.20 2006/11/07 19:30:44 lu_zero Exp $
+
+*ati-drivers-extra-8.30.3 (07 Nov 2006)
+
+  07 Nov 2006; Luca Barbato <lu_zero@gentoo.org>
+  +ati-drivers-extra-8.30.3.ebuild:
+  New version, thanks to HumpBack for the patch and for reminding me.
 
 *ati-drivers-extra-8.29.6 (25 Sep 2006)
 
