@@ -1,8 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.2 2006/09/27 09:37:32 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.7.1062.ebuild,v 1.3 2006/11/07 03:54:27 nyhm Exp $
 
-inherit flag-o-matic games
+inherit toolchain-funcs games
 
 DESCRIPTION="Free multiplayer remake of X-COM (UFO: Enemy Unknown)"
 HOMEPAGE="http://ufo2000.sourceforge.net/"
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ppc x86"
 IUSE="vorbis"
+RESTRICT="test"
 
 RDEPEND="dev-libs/expat
 	>=dev-games/hawknl-1.66
@@ -30,10 +31,8 @@ src_unpack() {
 
 	cd "${S}"
 	sed -i \
-		-e "s/\bCX\b/CXX/g" \
-		-e "/^CXX/d" \
-		-e "/^CC/d" \
-		-e 's/\^ \$(LIBS)/^ -Wl,-z,noexecstack $(LIBS)/' \
+		-e "/^CX/s/g++/$(tc-getCXX)/" \
+		-e "/^CC/s/gcc/$(tc-getCC)/" \
 		makefile \
 		|| die "sed failed"
 
@@ -44,16 +43,11 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="no_dumbogg=1"
-
-	use vorbis && myconf=""
-
-	append-flags -Wa,--noexecstack
-	append-ldflags -Wl,-z,noexecstack
 	emake \
 		DATA_DIR="${GAMES_DATADIR}/${PN}" \
 		OPTFLAGS="${CXXFLAGS}" \
-		${myconf} \
+		UFO_SVNVERSION=exported \
+		$(use vorbis || echo no_dumbogg=1) \
 		|| die "emake failed"
 }
 
