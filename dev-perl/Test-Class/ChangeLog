@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.25 2006/11/06 16:44:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.26 2006/11/07 06:36:16 opfer Exp $
+
+  07 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  Test-Class-0.21.ebuild:
+  keyworded ~x86, bug #154253
 
 *Test-Class-0.21 (06 Nov 2006)
 
