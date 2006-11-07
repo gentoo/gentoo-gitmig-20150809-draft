@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.36 2006/11/03 14:03:33 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.37 2006/11/07 10:12:09 twp Exp $
+
+*scons-0.96.92-r2 (07 Nov 2006)
+
+  07 Nov 2006; <twp@gentoo.org> -scons-0.96.92.ebuild,
+  -scons-0.96.92-r1.ebuild, +scons-0.96.92-r2.ebuild:
+  Move clean-up code to pkg_postinst. Remove old versions. Bug # 153915.
+  Thanks jakub.
 
 *scons-0.96.92-r1 (03 Nov 2006)
 
