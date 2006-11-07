@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.7.0_pre20050719.ebuild,v 1.1 2006/10/09 19:50:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.7.0_pre20050719.ebuild,v 1.2 2006/11/07 22:24:54 gustavoz Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~sekretarz/distfiles/${PN}-${VER}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 
 IUSE="ssl threads"
 
