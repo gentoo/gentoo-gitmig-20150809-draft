@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.230 2006/11/07 15:42:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.231 2006/11/07 18:53:20 fmccor Exp $
+
+  07 Nov 2006; Ferris McCormick <fmccor@gentoo.org> ruby-1.8.5-r3.ebuild:
+  Stable on sparc --- security Bug #153497 --- builds and runs my verification
+  programs.
 
 *ruby-1.8.5-r3 (07 Nov 2006)
 
