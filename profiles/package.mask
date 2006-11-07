@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6213 2006/11/07 11:00:35 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.6214 2006/11/07 14:29:07 beandog Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -548,11 +548,6 @@ sys-apps/sal-client
 # Masked pending removal on Oct 30. No longer developed upstream
 # and doesn't build.  Will be eventually replaced by qmc2.
 games-emulation/qmamecat
-
-# Steve Dibb <beandog@gentoo.org> (4 Oct 2006)
-# masking media-video/jahshaka for treecleaners, bug(s) 150116
-# Pending removal Nov 4th
-media-video/jahshaka
 
 # Markus Ullmann <jokey@gentoo.org> (4 Oct 2006)
 # Needs testing according to upstream
