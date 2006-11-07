@@ -1,6 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.23.ebuild,v 1.4 2004/12/19 05:42:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.23.ebuild,v 1.5 2006/11/07 17:29:41 aballier Exp $
+
+WANT_AUTOMAKE=1.9
+WANT_AUTOCONF=2.5
+
+inherit eutils autotools
 
 IUSE="nls"
 
@@ -20,8 +25,11 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/po
+	cd "${S}/po"
 	sed -i "/mkinstalldirs =/s%.*%mkinstalldirs = ../mkinstalldirs%" Makefile.in.in
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-amd64.patch"
+	eautoreconf
 }
 
 src_install() {
