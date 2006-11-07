@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.22 2006/10/30 20:10:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.23 2006/11/07 08:24:02 cardoe Exp $
+
+*notification-daemon-0.3.6-r1 (07 Nov 2006)
+
+  07 Nov 2006; Doug Goldstein <cardoe@gentoo.org>
+  +files/notification-daemon-0.3.6-binding-tool.patch,
+  notification-daemon-0.3.6.ebuild, +notification-daemon-0.3.6-r1.ebuild:
+  Patch from upstream to fix incorrect usage of dbus-binding-tool
 
   30 Oct 2006; Jeroen Roovers <jer@gentoo.org>
   notification-daemon-0.3.6.ebuild:
