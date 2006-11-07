@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.1-r1.ebuild,v 1.2 2006/11/03 18:16:45 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.16.1-r1.ebuild,v 1.3 2006/11/07 17:38:51 dang Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 					)"
 DEPEND="${RDEPEND}
 		sys-devel/gettext
+		app-text/xmlto
 		dev-util/pkgconfig
 		>=dev-util/intltool-0.35
 		doc? (
