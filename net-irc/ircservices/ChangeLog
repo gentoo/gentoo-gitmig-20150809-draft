@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.25 2006/11/05 22:23:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.26 2006/11/07 22:10:33 swegener Exp $
+
+  07 Nov 2006; Sven Wegener <swegener@gentoo.org> ircservices-5.0.53.ebuild,
+  ircservices-5.0.54.ebuild, ircservices-5.0.57.ebuild,
+  ircservices-5.0.59.ebuild:
+  Fix typo, resulting in wrong permissions, bug #154346.
 
 *ircservices-5.0.59 (05 Nov 2006)
 
