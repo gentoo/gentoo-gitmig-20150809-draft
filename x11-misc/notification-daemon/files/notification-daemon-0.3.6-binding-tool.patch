@@ -1,17 +1,17 @@
-Index: trunk/notification-daemon/AUTHORS
+Index: AUTHORS
 ===================================================================
---- trunk/notification-daemon/AUTHORS (revision 2880)
-+++ trunk/notification-daemon/AUTHORS (revision 2938)
+--- AUTHORS (revision 2880)
++++ AUTHORS (revision 2938)
 @@ -7,4 +7,5 @@
  	felix@hsgheli.de
  	Ed Catmur <ed@catmur.co.uk>
 +	Pawel Worach <pawel.worach@gmail.com>
  
  Translators:
-Index: trunk/notification-daemon/ChangeLog
+Index: ChangeLog
 ===================================================================
---- trunk/notification-daemon/ChangeLog (revision 2928)
-+++ trunk/notification-daemon/ChangeLog (revision 2938)
+--- ChangeLog (revision 2928)
++++ ChangeLog (revision 2938)
 @@ -1,2 +1,9 @@
 +Sun Nov 05 12:12:35 PST 2006  Christian Hammond <chipx86@chipx86.com>
 +
@@ -22,10 +22,10 @@ Index: trunk/notification-daemon/ChangeLog
 +
  Sun Oct 08 17:10:57 EDT 2006  Christian Hammond <chipx86@chipx86.com>
  
-Index: trunk/notification-daemon/src/daemon/Makefile.am
+Index: src/daemon/Makefile.am
 ===================================================================
---- trunk/notification-daemon/src/daemon/Makefile.am (revision 2927)
-+++ trunk/notification-daemon/src/daemon/Makefile.am (revision 2938)
+--- src/Makefile.am (revision 2927)
++++ src/Makefile.am (revision 2938)
 @@ -14,5 +14,5 @@
  
  notificationdaemon-dbus-glue.h: notificationdaemon.xml
@@ -33,16 +33,14 @@ Index: trunk/notification-daemon/src/daemon/Makefile.am
 +	dbus-binding-tool --mode=glib-server --prefix=notification_daemon \
  		$(srcdir)/notificationdaemon.xml > notificationdaemon-dbus-glue.h
  
-Index: trunk/notification-daemon/src/daemon/daemon.c
+Index: src/daemon/daemon.c
 ===================================================================
---- trunk/notification-daemon/src/daemon/daemon.c (revision 2927)
-+++ trunk/notification-daemon/src/daemon/daemon.c (revision 2938)
+--- src/daemon.c (revision 2927)
++++ src/daemon.c (revision 2938)
 @@ -1090,5 +1090,5 @@
  
  	dbus_g_object_type_install_info(NOTIFY_TYPE_DAEMON,
 -									&dbus_glib__object_info);
-+									
-&dbus_glib_notification_daemon_object_info);
++									&dbus_glib_notification_daemon_object_info);
  
  	bus_proxy = dbus_g_proxy_new_for_name(connection,
-

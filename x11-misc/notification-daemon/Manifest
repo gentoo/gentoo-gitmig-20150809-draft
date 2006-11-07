@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 AUX notification-daemon-0.3.5-icon-data.patch 1968 RMD160 c782a6dc51e407b15192d80d6a2ce7badd84e76f SHA1 7eac5ffe153f9a68daffb91f9e4a32f8b0ee6f30 SHA256 089ffbc7032a8c747ca9b0044bb2359fe3d114eca0fab43f01815ba114e6c9b3
 MD5 fad34100a2397e2115ed59b29237d93c files/notification-daemon-0.3.5-icon-data.patch 1968
 RMD160 c782a6dc51e407b15192d80d6a2ce7badd84e76f files/notification-daemon-0.3.5-icon-data.patch 1968
@@ -9,10 +6,10 @@ AUX notification-daemon-0.3.5-unrealize-in-destroy.patch 398 RMD160 2721edbc1489
 MD5 e3cd7b2268b5f4e27e6974ead91381e7 files/notification-daemon-0.3.5-unrealize-in-destroy.patch 398
 RMD160 2721edbc148944188b42ac437a0b60482582ddc1 files/notification-daemon-0.3.5-unrealize-in-destroy.patch 398
 SHA256 17090a40d6a4e8dbc5d426c982701e218e1a629e5e3fcc82b28b5d745eab55b3 files/notification-daemon-0.3.5-unrealize-in-destroy.patch 398
-AUX notification-daemon-0.3.6-binding-tool.patch 1904 RMD160 82fd153e000d9d29341a13225b8c9eed2fe769d5 SHA1 7882f1d49fd6b4693a990dce91aa4e4a25e65741 SHA256 fc72f8cdda98bd8c357602f98d2abc0c04420293ed0d76930ba1d0d44447382f
-MD5 098ba66c3631865f26bf1361d0713e09 files/notification-daemon-0.3.6-binding-tool.patch 1904
-RMD160 82fd153e000d9d29341a13225b8c9eed2fe769d5 files/notification-daemon-0.3.6-binding-tool.patch 1904
-SHA256 fc72f8cdda98bd8c357602f98d2abc0c04420293ed0d76930ba1d0d44447382f files/notification-daemon-0.3.6-binding-tool.patch 1904
+AUX notification-daemon-0.3.6-binding-tool.patch 1562 RMD160 40d290931cd7027784f9f1cb64e987c9ee2b0542 SHA1 5c1e98c7c81702c5e4b421d18c29b696880f1949 SHA256 c1334df4dc7ec53f806f030a4edc15ca608fb703cb0931cdb2050a0b9e9fac59
+MD5 c1ee2a9533c4bd60a31e83964728cdd4 files/notification-daemon-0.3.6-binding-tool.patch 1562
+RMD160 40d290931cd7027784f9f1cb64e987c9ee2b0542 files/notification-daemon-0.3.6-binding-tool.patch 1562
+SHA256 c1334df4dc7ec53f806f030a4edc15ca608fb703cb0931cdb2050a0b9e9fac59 files/notification-daemon-0.3.6-binding-tool.patch 1562
 DIST notification-daemon-0.3.5.tar.gz 383582 RMD160 5251ce4dcc2ae3cc637077ea71eb65a17c9102b4 SHA1 c8aa3b601db6d8b00cd9f4227fff146b8259eb71 SHA256 83a15eb99bb7a895d52e31be1c1548789a8bc29e83d30e758cf034a6627a1184
 DIST notification-daemon-0.3.6.tar.gz 402426 RMD160 f673127a3724cebbf9c91a1e457b15288cd86cce SHA1 fe222006e246036250d8a3d29ad3ea4ea6e8b1c4 SHA256 a187976c1957a7a0e17014ed97cbb4341f6898d5f60301f1b0c37e52188ebd13
 EBUILD notification-daemon-0.3.5-r2.ebuild 978 RMD160 69ab79bbb2d30668304b3bec43ca77cae04ad789 SHA1 c995aa454ca42f596fe91287155cefdd5bca35af SHA256 c3949b038a0c23e14ddcb1a8c60e92f89215b0efb1fea1828fc056aa3d065748
@@ -31,10 +28,10 @@ EBUILD notification-daemon-0.3.6.ebuild 1074 RMD160 8e497c3d0451cade7b72585b69dc
 MD5 2ab629ae94b0cf72f04824cabc3295f9 notification-daemon-0.3.6.ebuild 1074
 RMD160 8e497c3d0451cade7b72585b69dccf75b82577ea notification-daemon-0.3.6.ebuild 1074
 SHA256 8fed224163f8c0b1f8f5c688fbbd0e26b8e43da4baed28082903d3d125cacacb notification-daemon-0.3.6.ebuild 1074
-MISC ChangeLog 3720 RMD160 9fbabf58777a3aa821636af04be7298c1491014b SHA1 7fdc2d3167be4ac0489013886503f3ad7efbde13 SHA256 f9bb22718ef85c70c755cca0a24ecb05a33518dac93769937280c1bb9aa76120
-MD5 a2c465cc2f48a60d831a7708ea8bbdf0 ChangeLog 3720
-RMD160 9fbabf58777a3aa821636af04be7298c1491014b ChangeLog 3720
-SHA256 f9bb22718ef85c70c755cca0a24ecb05a33518dac93769937280c1bb9aa76120 ChangeLog 3720
+MISC ChangeLog 3948 RMD160 865686c1e1a3b0433138b8cfb5dc3c7ae1e24f89 SHA1 353e278698e3193986d29139021fbfd0f3cb7ce9 SHA256 dbd55347c269032cb082b186c5658655c12acdfe6d2e23d57e6c434cf18b529e
+MD5 76f08ec717e45770621696aee89a5e4c ChangeLog 3948
+RMD160 865686c1e1a3b0433138b8cfb5dc3c7ae1e24f89 ChangeLog 3948
+SHA256 dbd55347c269032cb082b186c5658655c12acdfe6d2e23d57e6c434cf18b529e ChangeLog 3948
 MISC metadata.xml 309 RMD160 41a011e8c4aa3b21a2dd17d07d4169816141fb8a SHA1 49d26a613994ed1e423d9200bf3b66592c0760c5 SHA256 37dfe8555749481a6f02759a7ad6c2961e71283013c9c9be94f57aa6e1358bfb
 MD5 d16211c4cb4eb6ad762a7b3481d04417 metadata.xml 309
 RMD160 41a011e8c4aa3b21a2dd17d07d4169816141fb8a metadata.xml 309
@@ -51,10 +48,3 @@ SHA256 58241ee9626d375cd855a74b73765d666319ecbfe5adad9228f5b3ba05c1eaa5 files/di
 MD5 1170966f2057c18f09abfc08ae657b93 files/digest-notification-daemon-0.3.6-r1 277
 RMD160 bec7dd41bcad36894ba9ebb7f30d5be68f66b9a7 files/digest-notification-daemon-0.3.6-r1 277
 SHA256 58241ee9626d375cd855a74b73765d666319ecbfe5adad9228f5b3ba05c1eaa5 files/digest-notification-daemon-0.3.6-r1 277
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (GNU/Linux)
-
-iD8DBQFFUEKkoeSe8B0zEfwRAuoGAJ40lt/mkH8frf9G8lac/uTXnrR8HQCgiCC5
-cQtYtqB5aZMAtuObJPqvuaI=
-=SmNd
------END PGP SIGNATURE-----

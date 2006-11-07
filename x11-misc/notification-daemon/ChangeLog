@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.23 2006/11/07 08:24:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.24 2006/11/07 16:34:45 genstef Exp $
+
+  07 Nov 2006; Stefan Schweizer <genstef@gentoo.org>
+  files/notification-daemon-0.3.6-binding-tool.patch:
+  Fix patch thanks to brad walker <bradmwalker@cableone.net> and Jule
+  Slootbeek <jslootbeek@gmail.com> in bug 154370
 
 *notification-daemon-0.3.6-r1 (07 Nov 2006)
 
