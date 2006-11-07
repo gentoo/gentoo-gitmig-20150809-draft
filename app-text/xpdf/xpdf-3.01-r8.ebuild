@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.14 2006/09/26 13:45:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.01-r8.ebuild,v 1.15 2006/11/07 23:20:24 genstef Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,7 +31,8 @@ RDEPEND=">=app-text/poppler-0.5.1
 		( x11-libs/libX11 x11-libs/libXpm )
 		virtual/x11
 	)"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P}-poppler
 
