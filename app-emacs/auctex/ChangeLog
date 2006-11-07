@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.41 2006/08/08 04:36:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.42 2006/11/07 06:51:34 opfer Exp $
+
+  07 Nov 2006; Christian Faulhammer <opfer@gentoo.org> auctex-11.83.ebuild:
+  stable x86, bug #154240
 
   08 Aug 2006; Matthew Kennedy <mkennedy@gentoo.org> -auctex-11.54.ebuild,
   -auctex-11.81.ebuild:

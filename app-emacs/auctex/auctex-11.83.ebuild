@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.83.ebuild,v 1.2 2006/06/25 12:18:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.83.ebuild,v 1.3 2006/11/07 06:51:34 opfer Exp $
 
 inherit elisp eutils latex-package autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="preview-latex"
 
 DEPEND="preview-latex? ( !dev-tex/preview-latex app-text/dvipng )"
