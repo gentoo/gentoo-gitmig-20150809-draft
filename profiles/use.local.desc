@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2303 2006/11/07 16:33:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.2304 2006/11/07 19:35:43 caleb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -1830,7 +1830,7 @@ x11-libs/libX11:xcb - Support the X C-language Binding, a replacement for Xlib
 x11-libs/qt:glib - Enable glib eventloop support
 x11-libs/qt:immqt - Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
-x11-libs/qt:pch - Enable precompiled header support (gcc >3.4, faster compilation times)
+x11-libs/qt:pch - Enable precompiled header support for faster compilation times (gcc >3.4 only)
 x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gtk2unicode
 x11-misc/adesklets:ctrlmenu - force CTRL to be pressed to fire context menu
 x11-misc/linuxwacom:dlloader - Installs dynamically linked linuxwacom Xorg driver
