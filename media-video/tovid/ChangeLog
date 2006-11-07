@@ -1,6 +1,11 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.3 2006/10/23 05:59:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.4 2006/11/07 14:47:31 beandog Exp $
+
+*tovid-0.29 (07 Nov 2006)
+
+  07 Nov 2006; Steve Dibb <beandog@gentoo.org> +tovid-0.29.ebuild:
+  Version bump, bug 101346
 
 *tovid-0.28-r1 (23 Oct 2006)
 
