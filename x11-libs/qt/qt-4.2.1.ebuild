@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.10 2006/11/06 21:43:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.2.1.ebuild,v 1.11 2006/11/07 12:54:45 caleb Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -223,16 +223,14 @@ src_install() {
 	# Install the translations.  This may get use flagged later somehow
 	make INSTALL_ROOT=${D} install_translations || die
 
-	# The private header files of QTestLib aren't installed, but are needed by the test library.
-	# This is supposedly fixed in Qt 4.1.1, so this can probably be removed when it is released
-	# dodir ${QTHEADERDIR}/QtTest/private
-	# cp -pPR ${S}/tools/qtestlib/src/*_p.h ${D}/${QTHEADERDIR}/QtTest/private
-
 	keepdir "${QTSYSCONFDIR}"
 
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.la
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.prl
 	sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${D}/${QTLIBDIR}/*.pc
+
+	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations.  Fix:
+	sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${D}/${QTBINDIR}/*.pc
 
 	# Move .pc files into the pkgconfig directory
 	dodir ${QTPCDIR}

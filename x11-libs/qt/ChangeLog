@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.385 2006/11/06 13:54:50 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.386 2006/11/07 12:54:45 caleb Exp $
+
+  07 Nov 2006; Caleb Tennis <caleb@gentoo.org> qt-4.2.1.ebuild:
+  Fix pkgconfig files
 
   06 Nov 2006; Caleb Tennis <caleb@gentoo.org> qt-4.2.1.ebuild:
   update the check for the qt4 bindings based on comments from bug #150888
