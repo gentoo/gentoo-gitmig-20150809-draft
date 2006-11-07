@@ -1,7 +1,9 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.7.ebuild,v 1.12 2006/11/05 23:10:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.7.ebuild,v 1.13 2006/11/07 08:02:43 vapier Exp $
 
+WANT_AUTOCONF="latest"
+WANT_AUTOMAKE="latest"
 inherit eutils
 
 MY_P=${P/sdl-/SDL_}
@@ -30,7 +32,7 @@ src_unpack() {
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
 		timidity/config.h \
 		|| die "sed timidity/config.h failed"
-	aclocal && autoconf || die "autotools failed"
+	eautoreconf
 }
 
 src_compile() {
