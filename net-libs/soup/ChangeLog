@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.26 2006/11/05 09:52:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.27 2006/11/07 06:54:53 opfer Exp $
+
+  07 Nov 2006; Christian Faulhammer <opfer@gentoo.org>
+  soup-0.7.11-r1.ebuild:
+  stable x86, bug #152491
 
   05 Nov 2006; Tobias Scherbaum <dertobi123@gentoo.org>
   soup-0.7.11-r1.ebuild:
